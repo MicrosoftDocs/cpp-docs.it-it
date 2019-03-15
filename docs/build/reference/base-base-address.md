@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc6380903af0be2e6696ca3589813c249f71dd05
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416748"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812278"
 ---
 # <a name="base-base-address"></a>/BASE (indirizzo di base)
 
@@ -38,9 +38,9 @@ Specifica l'indirizzo di base per un programma.
 ## <a name="remarks"></a>Note
 
 > [!NOTE]
-> Per motivi di sicurezza, Microsoft consiglia di utilizzare il [/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md) opzione invece di specificare gli indirizzi di base per i file eseguibili. Questo genera un'immagine eseguibile che può essere riassegnata in modo casuale in fase di caricamento usando la funzionalità indirizzi dello spazio layout randomization (ASLR) di Windows. L'opzione /DYNAMICBASE è attiva per impostazione predefinita.
+> Per motivi di sicurezza, Microsoft consiglia di utilizzare il [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md) opzione invece di specificare gli indirizzi di base per i file eseguibili. Questo genera un'immagine eseguibile che può essere riassegnata in modo casuale in fase di caricamento usando la funzionalità indirizzi dello spazio layout randomization (ASLR) di Windows. L'opzione /DYNAMICBASE è attiva per impostazione predefinita.
 
-Il/opzione di BASE consente di impostare un indirizzo di base per il programma, il percorso predefinito per un .exe o un file DLL viene sottoposto a override. L'indirizzo di base predefinito per un file .exe è 0x400000 per immagini a 32 bit o 0x140000000 per le immagini a 64 bit. Per una DLL, l'indirizzo di base predefinita è 0x10000000 per immagini a 32 bit o 0x180000000 per le immagini a 64 bit. Nei sistemi operativi che non supportano ASLR (ASLR) o quando è stata impostata l'opzione /DYNAMICBASE: No, il sistema operativo innanzitutto tenta di caricare un programma relativo specifico o un indirizzo di base predefinito. Se non è presente disponibile spazio sufficiente, il sistema consente di rilocare il programma. Per impedire la rilocazione, utilizzare il [/fixed](../../build/reference/fixed-fixed-base-address.md) opzione.
+Il/opzione di BASE consente di impostare un indirizzo di base per il programma, il percorso predefinito per un .exe o un file DLL viene sottoposto a override. L'indirizzo di base predefinito per un file .exe è 0x400000 per immagini a 32 bit o 0x140000000 per le immagini a 64 bit. Per una DLL, l'indirizzo di base predefinita è 0x10000000 per immagini a 32 bit o 0x180000000 per le immagini a 64 bit. Nei sistemi operativi che non supportano ASLR (ASLR) o quando è stata impostata l'opzione /DYNAMICBASE: No, il sistema operativo innanzitutto tenta di caricare un programma relativo specifico o un indirizzo di base predefinito. Se non è presente disponibile spazio sufficiente, il sistema consente di rilocare il programma. Per impedire la rilocazione, utilizzare il [/fixed](fixed-fixed-base-address.md) opzione.
 
 Il linker genera un errore se *indirizzo* non è un multiplo di 64 K. È facoltativamente possibile specificare le dimensioni del programma; il linker genera un avviso se il programma non rientra nelle dimensioni specificate.
 
@@ -62,11 +62,11 @@ Se il file che contiene le righe seguenti viene chiamato DLLs. txt, il comando s
 link dlltwo.obj /dll /base:@dlls.txt,two
 ```
 
-Un altro modo per impostare l'indirizzo di base consiste nell'usare la *BASE* argomento in un [nome](../../build/reference/name-c-cpp.md) oppure [libreria](../../build/reference/library.md) istruzione. Opzione /BASE e [/DLL](../../build/reference/dll-build-a-dll.md) equivale al **libreria** istruzione.
+Un altro modo per impostare l'indirizzo di base consiste nell'usare la *BASE* argomento in un [nome](name-c-cpp.md) oppure [libreria](library.md) istruzione. Opzione /BASE e [/DLL](dll-build-a-dll.md) equivale al **libreria** istruzione.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **avanzate** pagina delle proprietà.
 
@@ -78,5 +78,5 @@ Un altro modo per impostare l'indirizzo di base consiste nell'usare la *BASE* ar
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

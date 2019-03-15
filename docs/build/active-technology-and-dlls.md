@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Active technology [C++]
 - MFC DLLs [C++], Active Technology
 ms.assetid: 3ed27f8d-164a-4562-ad61-9f2333404cc7
-ms.openlocfilehash: 82e18efe66350349c8cbef7f47b7d1fb226674f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9633d60520a2a634ffe78d0fb9d48f6dd2ca7333
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420167"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817452"
 ---
 # <a name="active-technology-and-dlls"></a>Tecnologia Active e DLL
 
@@ -27,4 +27,4 @@ Se si sta scrivendo un server di automazione e il server non dispone di alcuna i
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL in Visual C++](dlls-in-visual-cpp.md)

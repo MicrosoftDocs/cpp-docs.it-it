@@ -1,16 +1,16 @@
 ---
 title: Gestione delle eccezioni ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176679"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816152"
 ---
 # <a name="arm64-exception-handling"></a>Gestione delle eccezioni ARM64
 
-Windows su ARM64 Usa la stessa gestione strutturata delle eccezioni meccanismo per le eccezioni asincrone generate da hardware ed eccezioni sincrone generate da software. I gestori di eccezioni specifici del linguaggio sono costruiti sulla base della gestione strutturata delle eccezioni di Windows mediante le funzioni helper del linguaggio. Questo documento descrive in Windows su ARM64 e gli helper del linguaggio utilizzati dal codice generato dal compilatore Visual C++ e dell'assembler ARM Microsoft di gestione delle eccezioni.
+Windows su ARM64 Usa la stessa gestione strutturata delle eccezioni meccanismo per le eccezioni asincrone generate da hardware ed eccezioni sincrone generate da software. I gestori di eccezioni specifici del linguaggio sono costruiti sulla base della gestione strutturata delle eccezioni di Windows mediante le funzioni helper del linguaggio. Questo documento descrive gestione delle eccezioni in Windows su ARM64 e gli helper del linguaggio usati dal codice generato per l'assembler ARM Microsoft e il compilatore MSVC.
 
 ## <a name="goals-and-motivation"></a>Gli obiettivi generali e motivazione
 
@@ -44,7 +44,7 @@ Queste sono le ipotesi nella descrizione di gestione delle eccezioni:
 
 1. Non è presente codice condizionale nell'epilogo di una funzione.
 
-1. Registro dei puntatori frame dedicato: se la stored procedure sp viene salvata in un altro registro (r29) nel prologo, che si registrano rimane invariati in tutta la funzione, in modo che il sp di origine può essere recuperato in qualsiasi momento.
+1. Registro dei puntatori frame dedicato: Se la stored procedure sp viene salvata in un altro registro (r29) nel prologo, che registra rimane invariata in tutta la funzione, in modo che il sp di origine può essere recuperato in qualsiasi momento.
 
 1. A meno che il Service Pack viene salvato in un altro registro, tutte le relative modifiche del puntatore dello stack avviene esclusivamente all'interno di prologo ed epilogo.
 
@@ -52,7 +52,7 @@ Queste sono le ipotesi nella descrizione di gestione delle eccezioni:
 
 ## <a name="arm64-stack-frame-layout"></a>Layout dello stack frame ARM64
 
-![layout dello stack frame](../build/media/arm64-exception-handling-stack-frame.png "layout dello stack frame")
+![layout dello stack frame](media/arm64-exception-handling-stack-frame.png "layout dello stack frame")
 
 Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in qualsiasi posizione nell'area di variabile locale in base a considerazioni di ottimizzazione. L'obiettivo è ottimizzare il numero di variabili locali che può essere raggiunto da una singola istruzione basata su puntatore ai frame (r29) o il puntatore dello stack (sp). Tuttavia per `alloca` funzioni, deve essere collegato e r29 deve puntare alla parte inferiore dello stack. Per consentire una migliore copertura di register-coppia-addressing-modalità, non volatile registrare aave aree sono posizionate nella parte superiore dello stack dell'area locale. Ecco alcuni esempi che illustrano alcune delle sequenze di prologo della query più efficiente. Per ragioni di semplicità e migliore località della cache, l'ordine di archiviazione dei registri salvati dal chiamato in tutti i prologhi canonici è in ordine "in continua crescita di". `#framesz` di seguito rappresenta la dimensione dell'intero stack (escluso alloca area). `#localsz` e `#outsz` indicano le dimensioni di rete locale (tra cui Salva area per il \<r29, lr > coppia) e in uscita di dimensioni del parametro, rispettivamente.
 
@@ -187,7 +187,7 @@ I record. pdata sono una matrice ordinata di elementi a lunghezza fissa che desc
 
 Ogni record. pdata per ARM64 è 8 byte in lunghezza. Il formato generale di avviare il RVA a 32 bit della funzione nella prima parola, seguita da un secondo con cui ogni posizioni record contiene un puntatore a un blocco. XData a lunghezza variabile oppure una parola compressa che descrive una sequenza di rimozione (funzione canonica).
 
-![layout di record. pdata](../build/media/arm64-exception-handling-pdata-record.png "layout di record. pdata")
+![.pdata record layout](media/arm64-exception-handling-pdata-record.png ".pdata record layout")
 
 I campi sono come segue:
 
@@ -203,7 +203,7 @@ I campi sono come segue:
 
 Quando il formato di rimozione compresso non è sufficiente per descrivere la rimozione di una funzione, è necessario creare un record .xdata a lunghezza variabile. L'indirizzo di questo record è archiviato nella seconda parola del record .pdata. Il formato di. XData è un set a lunghezza variabile compresso di parole:
 
-![layout di record. XData](../build/media/arm64-exception-handling-xdata-record.png "layout di record. XData")
+![.xdata record layout](media/arm64-exception-handling-xdata-record.png ".xdata record layout")
 
 Questi dati viene suddiviso in quattro sezioni:
 
@@ -305,7 +305,7 @@ I codici di rimozione sono codificati in base alla tabella riportata di seguito.
 |`nop`|            11100011: nessuna rimozione operazione è necessaria. |
 |`end`|            11100100: fine del codice di rimozione. Implica ret nell'epilogo. |
 |`end_c`|        11100101: fine del codice di rimozione nell'ambito corrente concatenata. |
-|`save_next`|        11100110: salvare successivo Int non volatile o FP registrare coppia. |
+|`save_next`|        11100110: save next non-volatile Int or FP register pair. |
 |`arithmetic(add)`|    11100111' 000zxxxx: aggiungere reg(z) cookie a lr (0 = x28, 1 = sp); aggiungere lr, lr, reg(z) |
 |`arithmetic(sub)`|    11100111' 001zxxxx: sub reg(z) cookie da lr (0 = x28, 1 = sp); Sub lr, lr, reg(z) |
 |`arithmetic(eor)`|    11100111' 010zxxxx: eor lr con cookie reg(z) (0 = x28, 1 = sp); EOR lr, lr, reg(z) |
@@ -313,9 +313,9 @@ I codici di rimozione sono codificati in base alla tabella riportata di seguito.
 |`arithmetic(ror)`|    11100111' 100zxxxx: ror lr con cookie reg(z) (0 = x28, 1 = sp); ROR lr, lr, reg(z) |
 | |            11100111: xxxz---:---riservato |
 | |              11101xxx: riservato per casi di stack personalizzata riportati di seguito vengono generati solo per le routine di asm |
-| |              11101001: personalizzato stack per MSFT_OP_TRAP_FRAME |
-| |              11101010: personalizzato stack per MSFT_OP_MACHINE_FRAME |
-| |              11101011: personalizzato stack per MSFT_OP_CONTEXT |
+| |              11101001: Stack personalizzato per MSFT_OP_TRAP_FRAME |
+| |              11101010: Stack personalizzato per MSFT_OP_MACHINE_FRAME |
+| |              11101011: Stack personalizzato per MSFT_OP_CONTEXT |
 | |              1111xxxx: riservato |
 
 Nelle istruzioni con valori di grandi dimensioni che coprono più byte, i bit più significativi vengono archiviati prima di tutto. I codici di rimozione sopra sono progettati in modo che cercando semplicemente il primo byte del codice, è possibile conoscere le dimensioni totali in byte del codice di rimozione. Dato che ogni codice di rimozione è mappato esattamente a un'istruzione di prologo/epilogo, per calcolare la dimensione del prologo o epilogo, deve essere eseguita è sufficiente scorrere dall'inizio della sequenza alla fine, usando una tabella di ricerca o un dispositivo simile per determinare quanto tempo il cor opcode risponde è.
@@ -334,7 +334,7 @@ Per le funzioni cui prologhi ed epiloghi seguire la forma canonica descritta sot
 
 Il formato di un record. pdata con compresso di rimozione ha un aspetto dei dati simile al seguente:
 
-![dati di rimozione di record. pdata con compressi](../build/media/arm64-exception-handling-packed-unwind-data.png "dati di rimozione di record. pdata con compresso")
+![dati di rimozione di record. pdata con compressi](media/arm64-exception-handling-packed-unwind-data.png "dati di rimozione di record. pdata con compresso")
 
 I campi sono come segue:
 
@@ -372,15 +372,15 @@ Passaggio 5: Allocare stack restante, tra cui LAN, \<r29, lr > di associazione e
 Passaggio &|Valori di flag|n. di istruzioni|Codice operativo|Codice di rimozione
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**= = 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** = = 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** = = 11 & & #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** = = 11 &AMP; &AMP;<br/>512 < #locsz < = 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5C|**CR** = = 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5E|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
+3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2)|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** == 11 &&<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
+5E|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Se **CR** = = 01 e **RegI** è un numero dispari, il passaggio 2 e ultimo save_rep nel passaggio 1 viene unito in uno save_regp.
 
@@ -531,7 +531,7 @@ Se un frammento ha nessun prologo della query e nessun epilogo, necessita di un 
 
 ## <a name="examples"></a>Esempi
 
-### <a name="example-1-frame-chained-compact-form"></a>Esempio 1: Frame concatenati, compact-modulo
+### <a name="example-1-frame-chained-compact-form"></a>Esempio 1: Formato compatto, concatenate frame
 
 ```asm
 |Foo|     PROC
@@ -549,7 +549,7 @@ Se un frammento ha nessun prologo della query e nessun epilogo, necessita di un 
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Esempio 2: Frame-concatenate, in forma completa con mirror prologo della query & epilogo
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Esempio 2: Concatenate frame, forma completa con mirror prologo della query & epilogo
 
 ```asm
 |Bar|     PROC
@@ -583,7 +583,7 @@ Se un frammento ha nessun prologo della query e nessun epilogo, necessita di un 
 
 Si noti che EpilogStart indice [0] punta per la stessa sequenza di codice di rimozione prologo della query.
 
-### <a name="example-3-variadic-unchained-function"></a>Esempio 3: Variadic ai (funzione)
+### <a name="example-3-variadic-unchained-function"></a>Esempio 3: Ai Variadic (funzione)
 
 ```asm
 |Delegate| PROC
@@ -622,9 +622,9 @@ Si noti che EpilogStart indice [0] punta per la stessa sequenza di codice di rim
     ;end
 ```
 
-Nota: EpilogStart indice [4] punta al centro del codice di rimozione prologo (parzialmente riutilizzo rimozione array).
+Nota: Indice EpilogStart [4] punta al centro del codice di rimozione prologo (parzialmente riutilizzo rimozione array).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica delle convenzioni ABI ARM64](arm64-windows-abi-conventions.md)<br/>
-[Gestione delle eccezioni ARM](../build/arm-exception-handling.md)
+[Gestione delle eccezioni ARM](arm-exception-handling.md)

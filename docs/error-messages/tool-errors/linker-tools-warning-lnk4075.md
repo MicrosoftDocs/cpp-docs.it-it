@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4075
 ms.assetid: f39ad3f9-c263-4cf0-9d70-259fc56ac96d
-ms.openlocfilehash: bba0fa85a3f2590c84cbb6f78fac7e49386d35a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf22e7c78dce6949c357d7ad4a0c76209c88eef3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548252"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809899"
 ---
 # <a name="linker-tools-warning-lnk4075"></a>Avviso degli strumenti del linker LNK4075
 
@@ -21,7 +21,7 @@ La seconda opzione sostituisce il primo.
 
 Vengono specificate le opzioni del linker si escludono a vicenda.  Esaminare le opzioni del linker.  In cui vengono specificate le opzioni del linker dipende dal modo in cui si sta compilando il progetto.
 
-- Se si sta compilando nell'ambiente di sviluppo, esaminare le pagine delle proprietà del linker per il progetto e in cui vengono specificate entrambe le opzioni del linker.  Visualizzare [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md) per altre informazioni.
+- Se si sta compilando nell'ambiente di sviluppo, esaminare le pagine delle proprietà del linker per il progetto e in cui vengono specificate entrambe le opzioni del linker.  Visualizzare [impostare del compilatore e proprietà di compilazione](../../build/working-with-project-properties.md) per altre informazioni.
 
 - Se si compila dalla riga di comando, esaminare le opzioni del linker specificate non esiste.
 

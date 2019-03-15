@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-ms.openlocfilehash: ee0d01ef43cae4128180e0c32c8dc6d00d4c2400
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 62784933cbecd4f312c52ae98cab7d232b893f35
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425692"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822340"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (L'immagine ha gestori delle eccezioni sicuri)
 
@@ -25,7 +25,7 @@ Quando **/SAFESEH** viene specificato, il linker produrrà solo un'immagine, se 
 
 **/SAFESEH** è valida solo quando si collegano x86 a destinazioni. **/SAFESEH** non è supportata per le piattaforme che hanno già i gestori delle eccezioni. Ad esempio, su ARM e x64, tutti i gestori di eccezioni sono indicati nella sezione PDATA. Ml64.exe è supportata l'aggiunta di annotazioni che generano le informazioni di gestione delle eccezioni Strutturata (XDATA e PDATA) nell'immagine, consentendo di funzioni ml64. Visualizzare [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) per altre informazioni.
 
-Se **/SAFESEH** non viene specificato, il linker produrrà un'immagine con una tabella dei gestori eccezioni sicuri se tutti i moduli siano compatibili con la funzionalità di gestione sicura delle eccezioni. Se tutti i moduli non sono compatibili con funzionalità di gestione delle eccezioni sicuri, l'immagine risultante non conterrà una tabella di gestori eccezioni sicuri. Se [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) specifica WINDOWSCE o una delle opzioni di EFI _ *, il linker non tenterà di produrre un'immagine con una tabella dei gestori eccezioni sicuri, poiché nessuno di questi sottosistemi possono usare le informazioni.
+Se **/SAFESEH** non viene specificato, il linker produrrà un'immagine con una tabella dei gestori eccezioni sicuri se tutti i moduli siano compatibili con la funzionalità di gestione sicura delle eccezioni. Se tutti i moduli non sono compatibili con funzionalità di gestione delle eccezioni sicuri, l'immagine risultante non conterrà una tabella di gestori eccezioni sicuri. Se [/SUBSYSTEM](subsystem-specify-subsystem.md) specifica WINDOWSCE o una delle opzioni di EFI _ *, il linker non tenterà di produrre un'immagine con una tabella dei gestori eccezioni sicuri, poiché nessuno di questi sottosistemi possono usare le informazioni.
 
 Se **/SAFESEH:NO** viene specificato, il linker non produrrà un'immagine con una tabella dei gestori eccezioni sicuri anche se tutti i moduli siano compatibili con la funzionalità di gestione sicura delle eccezioni.
 
@@ -35,7 +35,7 @@ Il motivo più comune per il linker non deve essere in grado di produrre un'imma
 
 Non è possibile contrassegnare un oggetto esistente binario con gestori eccezioni sicuri (o nessun gestore eccezioni); in fase di compilazione è necessario aggiungere informazioni sulla gestione delle eccezioni sicuri.
 
-La capacità del linker per compilare una tabella di gestori eccezioni sicuri dipende dall'applicazione usando la libreria di runtime C. Se si collega con [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) e si vuole una tabella di gestori eccezioni sicuri, è necessario fornire una struttura di configurazione di caricamento (ad esempio può essere trovata nel file di origine CRT loadcfg. c) che contiene tutte le voci definite per Visual C++. Ad esempio:
+La capacità del linker per compilare una tabella di gestori eccezioni sicuri dipende dall'applicazione usando la libreria di runtime C. Se si collega con [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) e si vuole una tabella di gestori eccezioni sicuri, è necessario fornire una struttura di configurazione di caricamento (ad esempio può essere trovata nel file di origine CRT loadcfg. c) che contiene tutte le voci definite per Visual C++. Ad esempio:
 
 ```
 #include <windows.h>
@@ -98,7 +98,7 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **Linker** cartella.
 
@@ -112,5 +112,5 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

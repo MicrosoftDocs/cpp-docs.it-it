@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-ms.openlocfilehash: fb9ab3152efe565501e91fbad5ebb279c4396968
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7090dda72868ad7ee4d5f8e4f1ba6a0ad121c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652426"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822464"
 ---
 # <a name="command-line-warning-d9025"></a>Avviso della riga di comando D9025
 
@@ -23,7 +23,7 @@ Se due opzioni di specificano delle direttive incompatibili o contraddittorie, v
 
 Se visualizzato questo messaggio di avviso durante la compilazione dall'ambiente di sviluppo e non è certi di provengano le opzioni in conflitto, considerare quanto segue:
 
-- Nel codice o nelle impostazioni del progetto del progetto, è possibile specificare un'opzione. Se si esamina il compilatore [pagine delle proprietà della riga di comando](../../ide/command-line-property-pages.md) e se vengono visualizzate le opzioni in conflitto nel **tutte le opzioni** campo quindi le opzioni sono impostate nelle pagine delle proprietà del progetto, in caso contrario, le opzioni vengono impostati nel codice sorgente.
+- Nel codice o nelle impostazioni del progetto del progetto, è possibile specificare un'opzione. Se si esamina il compilatore [pagine delle proprietà della riga di comando](../../build/reference/command-line-property-pages.md) e se vengono visualizzate le opzioni in conflitto nel **tutte le opzioni** campo quindi le opzioni sono impostate nelle pagine delle proprietà del progetto, in caso contrario, le opzioni vengono impostati nel codice sorgente.
 
    Se le opzioni sono impostate nelle pagine delle proprietà del progetto, cercare nella pagina delle proprietà per il preprocessore del compilatore (con il nodo del progetto selezionato in Esplora soluzioni).  Se non viene visualizzata l'opzione set non esiste, verificare le impostazioni di pagina delle proprietà per il preprocessore per ogni file di codice sorgente (in Esplora soluzioni) che non viene aggiunto non esiste.
 

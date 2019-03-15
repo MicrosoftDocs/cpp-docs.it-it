@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -HEAP editbin option
 - /HEAP editbin option
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
-ms.openlocfilehash: 24470c00afce54bab0a15dd08e03cef6dfee63fc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fcf557b467ba5bd04352ba2f2702659a1eb2948d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415253"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810354"
 ---
 # <a name="heap"></a>/HEAP
 
@@ -28,7 +28,7 @@ reserve[,commit]
 
 ## <a name="remarks"></a>Note
 
-L'argomento `reserve` specifica l'allocazione totale iniziale per l'heap nella memoria virtuale. Per impostazione predefinita, la dimensione dell'heap è 1 MB. [Riferimenti a EDITBIN](../../build/reference/editbin-reference.md) viene arrotondato per eccesso il valore specificato al multiplo più vicino di 4 byte.
+L'argomento `reserve` specifica l'allocazione totale iniziale per l'heap nella memoria virtuale. Per impostazione predefinita, la dimensione dell'heap è 1 MB. [Riferimenti a EDITBIN](editbin-reference.md) viene arrotondato per eccesso il valore specificato al multiplo più vicino di 4 byte.
 
 L'opzione facoltativa `commit` argomento è soggetto a interpretazione dal sistema operativo. In un sistema operativo Windows, specifica la quantità iniziale di memoria fisica da allocare e la quantità di memoria aggiuntiva da allocare quando l'heap deve essere espanso. Memoria virtuale vincolata fa sì che lo spazio da riservare nel file di paging. Un valore `commit` superiore consente al sistema di allocare la memoria meno spesso quando l'applicazione richiede più spazio nell'heap ma incrementa i requisiti di memoria ed eventualmente la durata di avvio dell'applicazione. Il valore `commit` deve essere minore di o uguale al valore `reserve`.
 
@@ -36,4 +36,4 @@ Specificare i valori `reserve` e `commit` in notazione decimale o esadecimale de
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+[Opzioni di EDITBIN](editbin-options.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enable exception handling compiler option [C++]
 - GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-ms.openlocfilehash: 4ac2b86c19845a092c743c484ad48d0cd0b6fb35
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 43be8f6d0f080f0d85568ce5b089751fc68f0e8e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416033"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815463"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (Attiva gestione eccezioni)
 
@@ -30,7 +30,7 @@ Deprecato. Abilita la gestione delle eccezioni sincrona con il presupposto che l
 
 ## <a name="remarks"></a>Note
 
-**/GX** è deprecata. Usare l'equivalente [/EHsc](../../build/reference/eh-exception-handling-model.md) opzione. Per un elenco di opzioni del compilatore deprecate, vedere la **deprecate o rimosse le opzioni del compilatore** sezione [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+**/GX** è deprecata. Usare l'equivalente [/EHsc](eh-exception-handling-model.md) opzione. Per un elenco di opzioni del compilatore deprecate, vedere la **deprecate o rimosse le opzioni del compilatore** sezione [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
 Per impostazione predefinita **/EHsc**, l'equivalente **/GX**, è attiva quando esegue la compilazione con l'ambiente di sviluppo di Visual Studio. Quando si usano gli strumenti da riga di comando, non viene specificata alcuna gestione delle eccezioni. Questo è l'equivalente di **/GX-**.
 
@@ -38,7 +38,7 @@ Per altre informazioni, vedere [gestione delle eccezioni C++](../../cpp/cpp-exce
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Nel riquadro di spostamento, scegliere **le proprietà di configurazione**, **C/C++**, **riga di comando**.
 
@@ -50,6 +50,6 @@ Per altre informazioni, vedere [gestione delle eccezioni C++](../../cpp/cpp-exce
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[/EH (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/EH (modello di gestione delle eccezioni)](eh-exception-handling-model.md)

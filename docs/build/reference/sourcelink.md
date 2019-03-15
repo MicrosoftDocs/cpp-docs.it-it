@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978283"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816607"
 ---
 # <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (file includono il collegamento all'origine nel file PDB)
 
@@ -32,7 +32,7 @@ Collegamento all'origine è un sistema indipendenti dal controllo del codice sor
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Per impostare l'opzione del linker /SOURCELINK in Visual Studio
 
-1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
@@ -44,5 +44,5 @@ Collegamento all'origine è un sistema indipendenti dal controllo del codice sor
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

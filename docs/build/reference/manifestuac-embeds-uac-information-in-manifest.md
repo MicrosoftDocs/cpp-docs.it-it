@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 8ae9d18bb0fe2172886ef24250d53cf76851bbba
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ecc30baabdcb60a030418e9643e2fcffe5ba8281
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420427"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813266"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (incorporazione delle informazioni sul controllo dell'account utente nel manifesto)
 
@@ -62,7 +62,7 @@ Come indicato di seguito sono riportate le opzioni disponibili per /MANIFESTUAC:
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -78,5 +78,5 @@ Come indicato di seguito sono riportate le opzioni disponibili per /MANIFESTUAC:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

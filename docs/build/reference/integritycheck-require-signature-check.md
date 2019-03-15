@@ -2,12 +2,12 @@
 title: /INTEGRITYCHECK (richiede controllo della firma)
 ms.date: 11/04/2016
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
-ms.openlocfilehash: ad4420847be7c8bbcaa9fda4c5b7dfda818e7f27
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 446ebe3afc06b8db8cc9f36b289c1e5c3ef5f117
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419598"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813682"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (richiede controllo della firma)
 
@@ -25,7 +25,7 @@ Il **/INTEGRITYCHECK** set di opzioni, ovvero nell'intestazione PE del file DLL 
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -37,8 +37,8 @@ Il **/INTEGRITYCHECK** set di opzioni, ovvero nell'intestazione PE del file DLL 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)<br/>
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)<br/>
 [File di forzato l'integrità di firma di Portable Executable (PE)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
 [Procedura dettagliata di firma codice in modalità kernel](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
 [DLL di AppInit in Windows 7 e Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

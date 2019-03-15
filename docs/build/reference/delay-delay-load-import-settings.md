@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /DELAY linker option
 - -DELAY linker option
 ms.assetid: 9334b332-cc58-4dae-b10f-a4c75972d50c
-ms.openlocfilehash: 56f019e99eb9a54b83f6b070d769efa2b94f5621
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d3c32ba04cbad509ff2819020a35102698d6ceb3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426377"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821339"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (Impostazioni dell'importazione a caricamento ritardato)
 
@@ -28,23 +28,23 @@ ms.locfileid: "57426377"
 
 ## <a name="remarks"></a>Note
 
-L'opzione /DELAY controlla [caricamento ritardato](../../build/reference/linker-support-for-delay-loaded-dlls.md) di DLL:
+L'opzione /DELAY controlla [caricamento ritardato](linker-support-for-delay-loaded-dlls.md) di DLL:
 
 - Il qualificatore UNLOAD indica alla funzione dell'helper di caricamento ritardato di supportare lo scaricamento esplicito della DLL. Viene ripristinato il formato originale della tabella di indirizzi di importazione. Ciò rende non validi i puntatori alla tabella e ne provoca la riscrittura.
 
-   Se non si seleziona UNLOAD, qualsiasi chiamata a [FUnloadDelayLoadedDLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md) avrà esito negativo.
+   Se non si seleziona UNLOAD, qualsiasi chiamata a [FUnloadDelayLoadedDLL](explicitly-unloading-a-delay-loaded-dll.md) avrà esito negativo.
 
-- Il qualificatore NOBIND indica al linker di non includere una tabella di indirizzi di importazione nell'immagine finale. L'impostazione predefinita prevede la creazione della tabella di indirizzi di importazione associabile per DLL di caricamento ritardato. L'immagine risultante non può essere associata in modo statico. È possibile che le immagini con tabelle di indirizzi di importazione associabili siano associate in modo statico prima dell'esecuzione. Visualizzare [/Bind](../../build/reference/bind.md).
+- Il qualificatore NOBIND indica al linker di non includere una tabella di indirizzi di importazione nell'immagine finale. L'impostazione predefinita prevede la creazione della tabella di indirizzi di importazione associabile per DLL di caricamento ritardato. L'immagine risultante non può essere associata in modo statico. È possibile che le immagini con tabelle di indirizzi di importazione associabili siano associate in modo statico prima dell'esecuzione. Visualizzare [/Bind](bind.md).
 
    Se la DLL è associata, la funzione dell'helper proverà a usare le informazioni associate invece di chiamare [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) su ciascuna delle importazioni a cui viene fatto riferimento. Se il timestamp o l'indirizzo preferito non corrisponde ai valori presenti nel file DLL caricato, la funzione dell'helper presupporrà che la tabella di indirizzi di importazione sia obsoleta e procederà come se la tabella di indirizzi di importazione non esistesse.
 
    NOBIND provoca la creazione di immagini di programma di dimensioni superiori, ma può velocizzare il tempo di caricamento del file DLL. Se non si prevede di associare il file DLL, NOBIND impedirà la generazione della tabella di indirizzi di importazione associata.
 
-Per specificare le DLL di cui ritardare il caricamento, usare il [/DELAYLOAD fa](../../build/reference/delayload-delay-load-import.md) opzione.
+Per specificare le DLL di cui ritardare il caricamento, usare il [/DELAYLOAD fa](delayload-delay-load-import.md) opzione.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere **le proprietà di configurazione**, **Linker**, quindi selezionare **avanzate**.
 
@@ -56,5 +56,5 @@ Per specificare le DLL di cui ritardare il caricamento, usare il [/DELAYLOAD fa]
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

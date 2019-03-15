@@ -1,12 +1,12 @@
 ---
 title: Panoramica delle convenzioni ABI ARM64
 ms.date: 07/11/2018
-ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599784"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816542"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -57,12 +57,12 @@ L'architettura AArch64 supporta 32 registri integer, riepilogati di seguito:
 
 |Registrazione|Volatile?|Ruolo|
 |-|-|-|
-X0|Volatile|Parametro/zero registrare 1, registrare risultati
-x1 x7|Volatile|Register/zero parametro 2 a 8
-x8 x15|Volatile|Registri temporanei
-x16 x17|Volatile|Registri temporanei intra-procedure-chiamata
+x0|Volatile|Parametro/zero registrare 1, registrare risultati
+x1-x7|Volatile|Register/zero parametro 2 a 8
+x8-x15|Volatile|Registri temporanei
+x16-x17|Volatile|Registri temporanei intra-procedure-chiamata
 x18|Non volatile|Registro di piattaforma: in modalità kernel, punta a KPCR l'utilizzo del processore corrente; in modalità utente, punta a TEB
-x19 x28|Non volatile|Registri temporanei
+x19-x28|Non volatile|Registri temporanei
 x29/fp|Non volatile|Puntatori ai frame
 X30/lr|Non volatile|Registri di collegamento
 
@@ -80,10 +80,10 @@ L'architettura AArch64 supporta anche 32 registri di virgola mobile/SIMD, riepil
 
 Registrazione|Volatile?|Ruolo
 |-|-|-|
-V0|Volatile|Parametro/zero registrare 1, registrare risultati
-V1-v7|Volatile|Parametro/zero registra 2 a 8
-v8-versione 15|Non volatile|Registri (si noti che solo i 64 bit bassi sono non volatile) dei file temporanei
-V16 v31|Volatile|Registri temporanei
+v0|Volatile|Parametro/zero registrare 1, registrare risultati
+v1-v7|Volatile|Parametro/zero registra 2 a 8
+v8-v15|Non volatile|Registri (si noti che solo i 64 bit bassi sono non volatile) dei file temporanei
+v16-v31|Volatile|Registri temporanei
 
 Ogni registratore di cassa è possibile accedere come un valore a 128 bit completo (tramite v0 v31 o q0 q31), come valore a 64 bit (tramite d0-d31), come un valore a 32 bit (tramite s0-s31), come un valore a 16 bit (tramite h0-h31) o come un valore a 8 bit (tramite b0-b31). Gli accessi inferiori a 128 bit accedere solo i bit inferiori del registro completo a 128 bit e lasciare invariati i bit rimanenti non diversamente specificato. Si noti che questo è molto diverso dalla AArch32, in cui sono stati compressi registri più piccoli all'inizio di registri più capaci.
 
@@ -95,7 +95,7 @@ BITS|Significato|Volatile?|Ruolo
 25|DN|Non Volatile|Controllo modalità NaN predefinito
 24|FZ|Non volatile|Controllo modalità scaricamento fino ad azzeramento
 23-22|RMode|Non volatile|Controllo modalità di arrotondamento
-15,12-8|IDE/IXE/e così via|Non Volatile|Bit abilitazione trap eccezioni, deve sempre essere 0
+15,12-8|IDE/IXE/etc|Non Volatile|Bit abilitazione trap eccezioni, deve sempre essere 0
 
 ## <a name="system-registers"></a>Registri di sistema
 
@@ -171,7 +171,7 @@ Per ogni argomento nell'elenco le seguenti regole vengono applicate a sua volta,
 
 1. L'argomento viene copiato nella memoria in corrispondenza dell'indirizzo NSAA. L'indirizzo NSAA viene incrementato della dimensione dell'argomento. L'argomento a questo punto è stato allocato.
 
-### <a name="addendum-variadic-functions"></a>Supplemento: Le funzioni Variadic
+### <a name="addendum-variadic-functions"></a>appendice: Funzioni Variadic
 
 Le funzioni che accettano un numero variabile di argomenti vengono gestite in modo diverso rispetto di sopra, come indicato di seguito:
 
@@ -203,7 +203,7 @@ Lo stack in modalità kernel predefinito in Windows è sei pagine (24k). Prestar
 
 ## <a name="stack-walking"></a>Analisi dello stack
 
-Codice all'interno di Windows viene compilato con puntatori ai frame abilitati ([/Oy-](../build/reference/oy-frame-pointer-omission.md)) per abilitare l'analisi rapida dello stack. Il risultato è che x29 (fp) in genere fa riferimento al collegamento successivo nella catena, ovvero un {fp, lr} coppia che indica il puntatore al frame precedente nello stack e l'indirizzo del mittente. Codice di terze parti è consigliabile abilitare i puntatori ai frame anche per consentire di traccia e profilatura migliorata.
+Codice all'interno di Windows viene compilato con puntatori ai frame abilitati ([/Oy-](reference/oy-frame-pointer-omission.md)) per abilitare l'analisi rapida dello stack. Il risultato è che x29 (fp) in genere fa riferimento al collegamento successivo nella catena, ovvero un {fp, lr} coppia che indica il puntatore al frame precedente nello stack e l'indirizzo del mittente. Codice di terze parti è consigliabile abilitare i puntatori ai frame anche per consentire di traccia e profilatura migliorata.
 
 ## <a name="exception-unwinding"></a>Rimozione delle eccezioni
 
@@ -221,5 +221,5 @@ Si noti che il contatore di cicli di seguito è un contatore di cicli true, non 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Gestione delle eccezioni ARM64](../build/arm64-exception-handling.md)
+[Problemi comuni relativi alla migrazione di Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
+[Gestione delle eccezioni ARM64](arm64-exception-handling.md)

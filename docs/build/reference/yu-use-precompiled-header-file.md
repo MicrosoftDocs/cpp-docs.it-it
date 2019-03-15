@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-ms.openlocfilehash: 49cc7a67a8b25e515d352d481b6ede8d521e51e1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424119"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810118"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (Utilizza il file di intestazione precompilata)
 
@@ -45,7 +45,7 @@ Il compilatore considera tutto il codice che si verificano prima il file con est
 
 Nella riga di comando, è consentito alcuno spazio tra **/Yu** e `filename`.
 
-Quando si specifica la **/Yu** opzione senza fornire un nome di file, il programma di origine deve contenere un [hdrstop #pragma](../../preprocessor/hdrstop.md) pragma che specifica il nome del file di intestazione precompilata, il file pch. In questo caso, il compilatore userà l'intestazione precompilata (specifica file PCH) denominato da [/Fp (nome. File PCH)](../../build/reference/fp-name-dot-pch-file.md). Il compilatore passa alla posizione del pragma, Ripristina lo stato compilato dal file di intestazione precompilata specificato dal pragma e quindi compila solo il codice che segue il pragma. Se **hdrstop #pragma** non specifica un nome di file, il compilatore cerca un file con un nome derivato dal nome di base del file di origine con estensione pch. È anche possibile usare la **/Fp** opzione per specificare un file con estensione pch diversi.
+Quando si specifica la **/Yu** opzione senza fornire un nome di file, il programma di origine deve contenere un [hdrstop #pragma](../../preprocessor/hdrstop.md) pragma che specifica il nome del file di intestazione precompilata, il file pch. In questo caso, il compilatore userà l'intestazione precompilata (specifica file PCH) denominato da [/Fp (nome. File PCH)](fp-name-dot-pch-file.md). Il compilatore passa alla posizione del pragma, Ripristina lo stato compilato dal file di intestazione precompilata specificato dal pragma e quindi compila solo il codice che segue il pragma. Se **hdrstop #pragma** non specifica un nome di file, il compilatore cerca un file con un nome derivato dal nome di base del file di origine con estensione pch. È anche possibile usare la **/Fp** opzione per specificare un file con estensione pch diversi.
 
 Se si specifica la **/Yu** l'opzione senza un nome di file e non è possibile specificare una **hdrstop** pragma, viene generato un messaggio di errore e la compilazione ha esito negativo.
 
@@ -55,15 +55,15 @@ Perché i file con estensione PCH contengono informazioni sull'ambiente del comp
 
 Per altre informazioni sulle intestazioni precompilate, vedere:
 
-- [/Y (intestazioni precompilate)](../../build/reference/y-precompiled-headers.md)
+- [/Y (intestazioni precompilate)](y-precompiled-headers.md)
 
-- [Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)
+- [File di intestazione precompilata](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Specificare [/Yc (Crea precompilati o meno File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md) su un file con estensione cpp nel progetto.
+1. Specificare [/Yc (Crea precompilati o meno File di intestazione)](yc-create-precompiled-header-file.md) su un file con estensione cpp nel progetto.
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -88,7 +88,7 @@ Se il codice seguente:
 
 viene compilato con la riga di comando `CL /YuMYAPP.H PROG.CPP`, il compilatore non elabora i tre includono le istruzioni, ma utilizza codice precompilato da MyApp, in tal modo risparmio di tempo nella pre-elaborazione di tutte e tre i file (e tutti i file possono includere).
 
-È possibile usare il [/Fp (nome. File PCH)](../../build/reference/fp-name-dot-pch-file.md) con il **/Yu** possibilità di specificare il nome del file con estensione pch se il nome è diverso da degli argomenti nome file per **/Yc** o il nome di base del file di origine, come nel seguenti:
+È possibile usare il [/Fp (nome. File PCH)](fp-name-dot-pch-file.md) con il **/Yu** possibilità di specificare il nome del file con estensione pch se il nome è diverso da degli argomenti nome file per **/Yc** o il nome di base del file di origine, come nel seguenti:
 
 ```
 CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
@@ -98,5 +98,5 @@ Questo comando specifica un file di intestazione precompilata denominato MYPCH. 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

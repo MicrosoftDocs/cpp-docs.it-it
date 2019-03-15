@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 2bc9e924656b9e1cb914255780adc4ae50220275
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb9a4f8468a9cb57af711cdca36ee343e5092493
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618192"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816490"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc: ternary (Applica regole di operatore condizionale)
 
@@ -151,7 +151,7 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
@@ -159,4 +159,4 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ## <a name="see-also"></a>Vedere anche
 
-[/Zc (conformità)](../../build/reference/zc-conformance.md)
+[/Zc (conformità)](zc-conformance.md)

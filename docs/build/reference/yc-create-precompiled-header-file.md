@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: 35b8bfb30a49efa35a3af3d3b76e75f8dede9fd7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418971"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821430"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Crea il file di intestazione precompilato)
 
@@ -40,23 +40,23 @@ Specifica un file di intestazione (h). Quando viene usato in questo argomento, i
 
 Quando **/Yc** viene specificata senza un argomento, il compilatore compila tutto il codice fino alla fine del file di origine di base o al punto nel file di base in cui un [hdrstop](../../preprocessor/hdrstop.md) direttiva si verifica. Il file con estensione pch risultante ha lo stesso nome di base del file di origine di base solo se si specifica un nome di file diverso usando il **hdrstop** pragma o il **/Fp** opzione.
 
-Il codice precompilato viene salvato in un file con un nome creato dal nome di base del file specificato con il **/Yc** opzione ed estensione pch. È anche possibile usare il [/Fp (nome. File PCH)](../../build/reference/fp-name-dot-pch-file.md) opzione per specificare un nome per il file di intestazione precompilata.
+Il codice precompilato viene salvato in un file con un nome creato dal nome di base del file specificato con il **/Yc** opzione ed estensione pch. È anche possibile usare il [/Fp (nome. File PCH)](fp-name-dot-pch-file.md) opzione per specificare un nome per il file di intestazione precompilata.
 
-Se si usa __/Yc__*filename*, il compilatore compila tutto il codice fino alla versione nel file specificato per un utilizzo successivo con il [/Yu (Usa intestazione File precompilata)](../../build/reference/yu-use-precompiled-header-file.md) opzione.
+Se si usa __/Yc__*filename*, il compilatore compila tutto il codice fino alla versione nel file specificato per un utilizzo successivo con il [/Yu (Usa intestazione File precompilata)](yu-use-precompiled-header-file.md) opzione.
 
 Se le opzioni __/Yc__*filename* e __/Yu__*filename* si verificano nella stessa riga di comando ed entrambe fanno riferimento a o implicano, lo stesso nome di file, __/Yc__*filename* ha la precedenza. Questa funzionalità semplifica la scrittura di makefile.
 
 Per altre informazioni sulle intestazioni precompilate, vedere:
 
-- [/Y (intestazioni precompilate)](../../build/reference/y-precompiled-headers.md)
+- [/Y (intestazioni precompilate)](y-precompiled-headers.md)
 
-- [Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)
+- [File di intestazione precompilata](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
 1. Selezionare un file con estensione cpp. Il file con estensione cpp necessario #include il file con estensione h che contiene le informazioni di intestazione precompilata. Il progetto **/Yc** impostazione può essere sottoposto a override a livello di file.
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Aprire il **le proprietà di configurazione**, **C/C++**, **intestazioni precompilate** pagina delle proprietà.
 
@@ -85,6 +85,6 @@ Quando questo codice viene compilato con il comando `CL /YcMYAPP.H PROG.CPP`, il
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[File di intestazione precompilata](../creating-precompiled-header-files.md)
