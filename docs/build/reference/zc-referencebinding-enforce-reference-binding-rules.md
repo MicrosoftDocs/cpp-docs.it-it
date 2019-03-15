@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
-ms.openlocfilehash: baf2106f015a4e8557cb8469d300709694e06d84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9dfe8f5b4713d9567f6e98af6685c552fb51160e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428327"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57822158"
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc: referencebinding (Applica le regole di associazione riferimento)
 
@@ -24,7 +24,7 @@ Quando la **/Zc: referencebinding** opzione è specificata, il compilatore non c
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Zc: referencebinding**[**-**]
+> **/Zc:referenceBinding**[**-**]
 
 ## <a name="remarks"></a>Note
 
@@ -59,7 +59,7 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
@@ -67,6 +67,6 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (conformità)](../../build/reference/zc-conformance.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (conformità)](zc-conformance.md)<br/>

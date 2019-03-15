@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472176"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816425"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Del compilatore (livello 3) avviso C4996
 
@@ -45,7 +45,7 @@ Per risolvere questo problema, è generalmente consigliabile che modificare il c
 
 Per disabilitare l'avviso per un intero progetto nell'IDE di Visual Studio:
 
-- Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per informazioni su come usare la finestra di dialogo Pagine delle proprietà, vedere [pagine delle proprietà](../../ide/property-pages-visual-cpp.md).
+- Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per informazioni su come usare la finestra di dialogo Pagine delle proprietà, vedere [pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md).
 - Selezionare il **le proprietà di configurazione**, **C/C++**, **avanzate** pagina.
 - Modificare il **Disabilita avvisi specifici** proprietà da aggiungere `4996`. Scegli **OK** per applicare le modifiche.
 
@@ -53,7 +53,7 @@ Per disabilitare l'avviso per un intero progetto nell'IDE di Visual Studio:
 
 Per definire una macro del preprocessore in Visual Studio:
 
-- Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per informazioni su come usare la finestra di dialogo Pagine delle proprietà, vedere [pagine delle proprietà](../../ide/property-pages-visual-cpp.md).
+- Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per informazioni su come usare la finestra di dialogo Pagine delle proprietà, vedere [pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md).
 - Espandere **le proprietà di configurazione > C/C++ > preprocessore**.
 - Nel **definizioni preprocessore** proprietà, aggiungere il nome della macro. Scegliere **OK** per salvare e ricompilare il progetto.
 
@@ -81,7 +81,7 @@ Microsoft ha deprecato alcune funzioni della libreria Standard C++ e CRT e funzi
 
 Per risolvere questo problema, è consigliabile usare la funzione o variabile *safe_version* invece. Se si è verificato che non è possibile che una sovrascrittura buffer o overread presenti nel codice ed è possibile modificare il codice per motivi di portabilità, è possibile disattivare l'avviso.
 
-Per disattivare gli avvisi di deprecazione per queste funzioni in CRT, definire  **\_CRT\_SECURE\_NO\_avvisi**. Per disattivare gli avvisi sulle variabili globali deprecate, definire  **\_CRT\_SECURE\_NO\_avvisi\_GLOBALS**. Per altre informazioni su queste funzioni deprecate e variabili globali, vedere [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) e [librerie protette: libreria Standard C++](../../standard-library/safe-libraries-cpp-standard-library.md).
+Per disattivare gli avvisi di deprecazione per queste funzioni in CRT, definire  **\_CRT\_SECURE\_NO\_avvisi**. Per disattivare gli avvisi sulle variabili globali deprecate, definire  **\_CRT\_SECURE\_NO\_avvisi\_GLOBALS**. Per altre informazioni su queste funzioni deprecate e variabili globali, vedere [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) e [librerie protette: Libreria Standard C++](../../standard-library/safe-libraries-cpp-standard-library.md).
 
 ### <a name="unsafe-standard-library-functions"></a>Funzioni della libreria Standard non sicure
 

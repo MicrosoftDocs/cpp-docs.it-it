@@ -57,12 +57,12 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 4842e845013bf69a7bc033ba7b6abf5ecc7d5079
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 997a73541ab95a393bda4ebf5412c11f025b03a3
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441743"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820689"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w, /W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, /Wall, /wd, / we, /wo, /Wv, /WX (livello avviso)
 
@@ -97,14 +97,14 @@ Nella tabella seguente sono descritte le opzioni di avviso e argomenti correlati
 |**/w**|Elimina tutti gli avvisi del compilatore.|
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Specifica il livello degli avvisi deve essere generato dal compilatore. I livelli di avviso valido compreso tra 0 e 4:<br />**/ W0** Elimina tutti gli avvisi. Ciò equivale a **/w**.<br />**/ W1** vengono visualizzati avvisi di livello 1 (gravità). **/ W1** è l'impostazione predefinita nel compilatore della riga di comando.<br />**/ W2** consente di visualizzare il livello 1 e avvisi di livello 2 (significativi).<br />**/ W3** consente di visualizzare il livello 1, livello 2 e avvisi di livello 3 (qualità di produzione). **/ W3** è l'impostazione predefinita nell'IDE.<br />**/ W4** consente di visualizzare il livello 1, livello 2 e avvisi di livello 3 e tutto il livello 4 (informativi) gli avvisi non sono stati disabilitate per impostazione predefinita. È consigliabile utilizzare questa opzione per l'utente viene avvisato lint simile. Per un nuovo progetto, potrebbe essere preferibile usare **/W4** in tutte le compilazioni; Ciò garantirà i minor numero di codice difficile da trovare possibili difetti.|
 |**/Wall**|Visualizza tutti gli avvisi visualizzati dal **/W4** e tutti gli altri avvisi che **/W4** non include, ad esempio avvisi disattivati per impostazione predefinita. Per altre informazioni, vedere [del compilatore avvisi che sono disattivata per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|**/WV**\[**:**_versione_]|Consente di visualizzare solo gli avvisi introdotti nella versione del compilatore *versione* e versioni precedenti. È possibile usare questa opzione per non visualizzare nuovi avvisi nel codice quando esegue la migrazione a una versione più recente del compilatore e per gestire il processo di compilazione esistente mentre correggerli. Il parametro facoltativo *versione* assume la forma *nn*[. *mm*[. *bbbbb*]] in cui *nn* è il numero di versione principale *mm* è il numero di versione secondario facoltativo, e *bbbbb* è il numero di build facoltativo il compilatore. Ad esempio, usare */Wv:17* per visualizzare gli avvisi introdotti in Visual Studio 2012 (vale a dire, qualsiasi versione del compilatore che ha un numero di versione principale di 17) o versioni precedenti, ma non visualizzare gli avvisi introdotti in Visual Studio 2013 (versione principale 18) e versioni successive. Per impostazione predefinita **/Wv** Usa il numero di versione del compilatore corrente e non gli avvisi vengono soppressi. Per informazioni su quali avvisi vengono soppressi dalla versione del compilatore, vedere [gli avvisi del compilatore dalla versione del compilatore](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
-|**/WX**|Considera tutti gli avvisi del compilatore come errori. Per un nuovo progetto, potrebbe essere preferibile usare **/WX** in tutte le compilazioni; la risoluzione di tutti gli avvisi assicura i minor numero di codice difficile da trovare possibili difetti.<br /><br /> Il linker ha anche un **/WX** opzione. Per altre informazioni, vedere [/WX (Considera gli avvisi del linker come errori)](../../build/reference/wx-treat-linker-warnings-as-errors.md).|
-|**/ W1**_nnnn_<br /><br /> **/ W2**_nnnn_<br /><br /> **/ w3**_nnnn_<br /><br /> **/ W4**_nnnn_|Imposta il livello di avviso per il numero di avviso specificato da _nnnn_. Ciò consente di modificare il comportamento del compilatore per questo avviso quando è impostato un livello di avviso specifico. È possibile usare queste opzioni in combinazione con altre opzioni di avviso per imporre il proprio codice standard per gli avvisi, anziché quelli predefiniti forniti da Visual Studio.<br /><br /> Ad esempio, **/w34326** provoca C4326 venga generato come un avviso di livello 3 anziché a livello 1. Se esegue la compilazione utilizzando sia la **/w34326** opzione e il **/W2** opzione, l'avviso C4326 non viene generato.|
+|**/Wv**\[**:**_version_]|Consente di visualizzare solo gli avvisi introdotti nella versione del compilatore *versione* e versioni precedenti. È possibile usare questa opzione per non visualizzare nuovi avvisi nel codice quando esegue la migrazione a una versione più recente del compilatore e per gestire il processo di compilazione esistente mentre correggerli. Il parametro facoltativo *versione* assume la forma *nn*[. *mm*[. *bbbbb*]] in cui *nn* è il numero di versione principale *mm* è il numero di versione secondario facoltativo, e *bbbbb* è il numero di build facoltativo il compilatore. Ad esempio, usare */Wv:17* per visualizzare gli avvisi introdotti in Visual Studio 2012 (vale a dire, qualsiasi versione del compilatore che ha un numero di versione principale di 17) o versioni precedenti, ma non visualizzare gli avvisi introdotti in Visual Studio 2013 (versione principale 18) e versioni successive. Per impostazione predefinita **/Wv** Usa il numero di versione del compilatore corrente e non gli avvisi vengono soppressi. Per informazioni su quali avvisi vengono soppressi dalla versione del compilatore, vedere [gli avvisi del compilatore dalla versione del compilatore](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
+|**/WX**|Considera tutti gli avvisi del compilatore come errori. Per un nuovo progetto, potrebbe essere preferibile usare **/WX** in tutte le compilazioni; la risoluzione di tutti gli avvisi assicura i minor numero di codice difficile da trovare possibili difetti.<br /><br /> Il linker ha anche un **/WX** opzione. Per altre informazioni, vedere [/WX (Considera gli avvisi del linker come errori)](wx-treat-linker-warnings-as-errors.md).|
+|**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/w4**_nnnn_|Imposta il livello di avviso per il numero di avviso specificato da _nnnn_. Ciò consente di modificare il comportamento del compilatore per questo avviso quando è impostato un livello di avviso specifico. È possibile usare queste opzioni in combinazione con altre opzioni di avviso per imporre il proprio codice standard per gli avvisi, anziché quelli predefiniti forniti da Visual Studio.<br /><br /> Ad esempio, **/w34326** provoca C4326 venga generato come un avviso di livello 3 anziché a livello 1. Se esegue la compilazione utilizzando sia la **/w34326** opzione e il **/W2** opzione, l'avviso C4326 non viene generato.|
 |**/wd**_nnnn_|Elimina l'avviso del compilatore specificato da _nnnn_.<br /><br /> Ad esempio, **/wd4326** Disattiva avviso C4326 del compilatore.|
 |**/we**_nnnn_|Considera l'avviso del compilatore specificato da _nnnn_ come errore.<br /><br /> Ad esempio, **/we4326** fa sì che il numero di avviso C4326 per essere considerato come errore dal compilatore.|
 |**/wo**_nnnn_|I report di avviso del compilatore che è specificato da _nnnn_ una sola volta.<br /><br /> Ad esempio, **/wo4326** cause avviso C4326 siano riportati solo una volta, la prima volta che viene rilevata dal compilatore.|
 
-Se si utilizza una delle opzioni di avviso quando si crea un'intestazione precompilata usando il [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opzione, qualsiasi utilizzo dell'intestazione precompilata usando la [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opzione fa in modo che le stesse opzioni di avviso siano validi anche in questo caso. È possibile ignorare le opzioni di avviso impostate nell'intestazione precompilata usando un'altra opzione di avviso della riga di comando.
+Se si utilizza una delle opzioni di avviso quando si crea un'intestazione precompilata usando il [/Yc](yc-create-precompiled-header-file.md) opzione, qualsiasi utilizzo dell'intestazione precompilata usando la [/Yu](yu-use-precompiled-header-file.md) opzione fa in modo che le stesse opzioni di avviso siano validi anche in questo caso. È possibile ignorare le opzioni di avviso impostate nell'intestazione precompilata usando un'altra opzione di avviso della riga di comando.
 
 È possibile usare una [#pragma avviso](../../preprocessor/warning.md) direttiva per controllare il livello di avviso segnalato in fase di compilazione nei file di origine specifico.
 
@@ -114,7 +114,7 @@ Il [documentazione sugli errori di compilazione](../../error-messages/compiler-e
 
 ### <a name="to-set-the-compiler-options-in-the-visual-studio-development-environment"></a>Per impostare le opzioni del compilatore nell'ambiente di sviluppo Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Per impostare il **/W0**, **/W1**, **/W2**, **/w3**, **/W4**, **/Wall**m **/Wv**, **/WX** oppure **/WX-** opzioni, selezionare il **le proprietà di configurazione** > **C / C++** > **generali** pagina delle proprietà.
 
@@ -132,7 +132,7 @@ Il [documentazione sugli errori di compilazione](../../error-messages/compiler-e
 
 1. Per impostare il **/wo** opzione, selezionare la **delle proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà. Immettere l'opzione del compilatore nel **opzioni aggiuntive** casella.
 
-1. Scegli **OK** per salvare le modifiche.
+1. Scegliere **OK** per salvare le modifiche.
 
 ### <a name="to-set-the-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
@@ -140,5 +140,5 @@ Il [documentazione sugli errori di compilazione](../../error-messages/compiler-e
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

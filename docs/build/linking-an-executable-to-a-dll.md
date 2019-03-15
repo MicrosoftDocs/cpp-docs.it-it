@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418808"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818362"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Collegare un eseguibile a una DLL
 
@@ -30,7 +30,7 @@ Un file eseguibile può utilizzare uno dei due metodi di collegamento per colleg
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>Determinare quale metodo di collegamento da utilizzare
+## <a name="link-an-executable-to-a-dll"></a>Collegare un eseguibile a una DLL
 
 Se si desidera utilizzare il collegamento implicito o esplicito di collegamento è una decisione dell'architettura che è necessario apportare per l'applicazione. Esistono vantaggi e svantaggi di ogni metodo.
 
@@ -70,13 +70,13 @@ Ecco due rischi relativi al collegamento esplicito da tenere presenti:
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>Come collegare in modo implicito in una DLL
+## <a name="link-an-executable-to-a-dll"></a>Collegare un eseguibile a una DLL
 
 Per utilizzare una DLL mediante il collegamento implicito, gli eseguibili del client devono ottenere questi file dal provider della DLL:
 
 - Uno o più file di intestazione (file con estensione h) contenenti le dichiarazioni di dati esportati, funzioni e/o le classi C++ nella DLL. Le classi, funzioni e i dati esportati da DLL devono essere contrassegnati `__declspec(dllimport)` nel file di intestazione. Per altre informazioni, vedere [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-- Una libreria di importazione per collegare nell'eseguibile. Il linker crea la libreria di importazione quando la DLL è compilata. Per altre informazioni, vedere [. File LIB](../build/reference/dot-lib-files-as-linker-input.md).
+- Una libreria di importazione per collegare nell'eseguibile. Il linker crea la libreria di importazione quando la DLL è compilata. Per altre informazioni, vedere [. File LIB](reference/dot-lib-files-as-linker-input.md).
 
 - Il file DLL effettivo.
 
@@ -139,10 +139,10 @@ A differenza in questo esempio, nella maggior parte dei casi è necessario chiam
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
-- [Uso di librerie di importazione e file di esportazione](../build/reference/working-with-import-libraries-and-export-files.md)
+- [Uso di librerie di importazione e file di esportazione](reference/working-with-import-libraries-and-export-files.md)
 
 - [Ordine di ricerca di libreria a collegamento dinamico](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL in Visual C++](dlls-in-visual-cpp.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 77f6f05029ec4480afb2180eab0bb57838d643a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462946"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57822535"
 ---
 # <a name="disasm"></a>/DISASM
 
@@ -20,11 +20,11 @@ Stampare il disassemblaggio delle sezioni di codice nell'output di DUMPBIN.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/DISASM**{**:**\[**BYTE**|**NOBYTES**]}
+> **/DISASM**{**:**\[**BYTES**|**NOBYTES**]}
 
 ### <a name="arguments"></a>Argomenti
 
-**BYTE**<br/>
+**BYTES**<br/>
 Include i byte di istruzione con gli argomenti e i codici operativi interpretati nell'output disassembly. Questa è l'opzione predefinita.
 
 **NOBYTES**<br/>
@@ -36,8 +36,8 @@ Il **opzione /DISASM** opzione Visualizza disassembly delle sezioni di codice ne
 
 **/DISASM** deve essere usato solo su immagini non gestite e native. Lo strumento equivalente per il codice gestito viene [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
 
-Solo le [/HEADERS](../../build/reference/headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati dalle [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md) opzione del compilatore.
+Solo le [/HEADERS](headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati dalle [/GL (Ottimizzazione intero programma)](gl-whole-program-optimization.md) opzione del compilatore.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opzioni di DUMPBIN](dumpbin-options.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850298"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57808391"
 ---
 # <a name="application-information-and-management"></a>Informazioni sull'applicazione e gestione
 
@@ -711,7 +711,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Prima di Windows Vista, applicazioni che accedono al Registro di sistema in genere usato il **HKEY_CLASSES_ROOT** nodo. Tuttavia, con Windows Vista o versioni successive, è necessario eseguire un'applicazione con privilegi elevati in cui scrivere HKCR.
 
-Questo metodo consente all'applicazione leggere e scrivere nel Registro di sistema senza eseguire con privilegi elevati, reindirizzando l'accesso del Registro di sistema da HKCR in HKCU. Per altre informazioni, vedere [Linker Property Pages](../../ide/linker-property-pages.md).
+Questo metodo consente all'applicazione leggere e scrivere nel Registro di sistema senza eseguire con privilegi elevati, reindirizzando l'accesso del Registro di sistema da HKCR in HKCU. Per altre informazioni, vedere [Linker Property Pages](../../build/reference/linker-property-pages.md).
 
 Se si abilita il reindirizzamento del Registro di sistema, il framework reindirizza l'accesso da HKCR **HKEY_CURRENT_USER\Software\Classes**. Solo i framework MFC e ATL sono interessati dal reindirizzamento.
 

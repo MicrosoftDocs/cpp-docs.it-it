@@ -11,22 +11,22 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.openlocfilehash: b68ec42db9c927fe8f56dad8f5670059359a1843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665790"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57809470"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Allineamento sezione)
 
 ## <a name="syntax"></a>Sintassi
 
-> **/ALIGN**[**:**_numero_]
+> **/ALIGN**[**:**_number_]
 
 ### <a name="arguments"></a>Argomenti
 
-*Numero*<br/>
+*number*<br/>
 Il valore di allineamento in byte.
 
 ## <a name="remarks"></a>Note
@@ -35,13 +35,13 @@ Il **/align** opzione specifica l'allineamento di ogni sezione nello spazio degl
 
 A meno che non si scrive un'applicazione, ad esempio un driver di dispositivo, non è necessario modificare l'allineamento.
 
-È possibile modificare l'allineamento di una particolare sezione con il parametro di allineamento per il [/Section](../../build/reference/section-specify-section-attributes.md) opzione.
+È possibile modificare l'allineamento di una particolare sezione con il parametro di allineamento per il [/Section](section-specify-section-attributes.md) opzione.
 
 Il valore di allineamento specificato non può essere minore al maggiore allineamento sezione.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
@@ -53,5 +53,5 @@ Il valore di allineamento specificato non può essere minore al maggiore allinea
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

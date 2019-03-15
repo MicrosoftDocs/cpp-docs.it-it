@@ -8,18 +8,18 @@ helpviewer_keywords:
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-ms.openlocfilehash: dae3238f24fc1ac4898aee0b23c3f1899f2e25fc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9810f7b4308eab2b47a068072039335e59e19f5f
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420076"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816074"
 ---
 # <a name="cl-command-files"></a>File di comando di CL
 
-Un file di comando è un file di testo che contiene le opzioni e nomi di file in caso contrario, si digiterà il [riga di comando](../../build/reference/compiler-command-line-syntax.md) oppure specificare tramite il [variabile di ambiente CL](../../build/reference/cl-environment-variables.md). CL accetta un file di comando del compilatore come argomento nella variabile di ambiente CL o sulla riga di comando. A differenza della riga di comando o della variabile di ambiente CL, un file di comando consente di utilizzare più righe di opzioni e nomi file.
+Un file di comando è un file di testo che contiene le opzioni e nomi di file in caso contrario, si digiterà il [riga di comando](compiler-command-line-syntax.md) oppure specificare tramite il [variabile di ambiente CL](cl-environment-variables.md). CL accetta un file di comando del compilatore come argomento nella variabile di ambiente CL o sulla riga di comando. A differenza della riga di comando o della variabile di ambiente CL, un file di comando consente di utilizzare più righe di opzioni e nomi file.
 
-Opzioni e nomi file in un file di comando vengono elaborati in base alla posizione di un nome di file di comando all'interno della variabile di ambiente CL o sulla riga di comando. Tuttavia, se l'opzione /Link. viene visualizzato nel file di comando, tutte le opzioni nel resto della riga vengono passate al linker. Opzioni presente nelle righe successive nel file di comando e opzioni della riga di comando dopo la chiamata di file di comando sono comunque accettate come opzioni del compilatore. Per altre informazioni sul modo in cui l'ordine delle opzioni influisce sulla loro interpretazione, vedere [ordine delle opzioni CL](../../build/reference/order-of-cl-options.md).
+Opzioni e nomi file in un file di comando vengono elaborati in base alla posizione di un nome di file di comando all'interno della variabile di ambiente CL o sulla riga di comando. Tuttavia, se l'opzione /Link. viene visualizzato nel file di comando, tutte le opzioni nel resto della riga vengono passate al linker. Opzioni presente nelle righe successive nel file di comando e opzioni della riga di comando dopo la chiamata di file di comando sono comunque accettate come opzioni del compilatore. Per altre informazioni sul modo in cui l'ordine delle opzioni influisce sulla loro interpretazione, vedere [ordine delle opzioni CL](order-of-cl-options.md).
 
 Un file di comando non deve contenere il comando CL. Ogni opzione deve iniziare e terminare sulla stessa riga; non è possibile usare la barra rovesciata (**\\**) per combinare un'opzione tra due righe.
 
@@ -47,5 +47,5 @@ Si noti che la riga di comando e i comandi del file di comando vengono combinati
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)

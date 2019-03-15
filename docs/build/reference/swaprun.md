@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SWAPRUN editbin option
 - SWAPRUN editbin option
 ms.assetid: 6eefd7f3-ca47-48e3-8509-323d27cf4ae7
-ms.openlocfilehash: 45a682c911a090bd176054e96882904d3bc68269
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ff11e64ae8ec0eb5236369e8322e051ee40b26bd
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421259"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820117"
 ---
 # <a name="swaprun"></a>/SWAPRUN
 
@@ -35,4 +35,4 @@ Questa opzione Modifica l'immagine per indicare al sistema operativo di copiare 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+[Opzioni di EDITBIN](editbin-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - checksum setting
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-ms.openlocfilehash: 9192768f711da721cfef65314573d78caa8c2442
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1dc09b38beeb763733f8fa6a8ffa972059b30e03
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426641"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819467"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE (Imposta checksum)
 
@@ -29,11 +29,11 @@ L'opzione /RELEASE imposta il Checksum nell'intestazione di un file .exe.
 
 Il sistema operativo richiede il valore di Checksum per i driver di dispositivo. Impostare il valore di Checksum per le versioni dei driver di dispositivo per garantire la compatibilità con sistemi operativi in futuro.
 
-L'opzione /RELEASE è impostata per impostazione predefinita quando il [/SUBSYSTEM: native](../../build/reference/subsystem-specify-subsystem.md) opzione specificata.
+L'opzione /RELEASE è impostata per impostazione predefinita quando il [/SUBSYSTEM: native](subsystem-specify-subsystem.md) opzione specificata.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -47,5 +47,5 @@ L'opzione /RELEASE è impostata per impostazione predefinita quando il [/SUBSYST
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

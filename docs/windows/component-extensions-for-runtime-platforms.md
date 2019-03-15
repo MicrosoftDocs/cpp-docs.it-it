@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9586244c9e2293ba6b484efb158fc3a2529c0ea
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432359"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814488"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Estensioni componenti per .NET e UWP
 
@@ -43,20 +43,20 @@ Nella tabella seguente sono elencate le parole chiave nell'estensione del lingua
 |**classe di valori**<br /><br /> **struct di valore**|No|Dichiara una classe di valori.|[Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)|
 |**classe di interfaccia**<br /><br /> **struct di interfaccia**|No|Dichiara un'interfaccia.|[classe di interfaccia](../windows/interface-class-cpp-component-extensions.md)|
 |**classe di enumerazione**<br /><br /> **enum struct**|No|Dichiara un'enumerazione.|[classe di enumerazione](../windows/enum-class-cpp-component-extensions.md)|
-|**proprietà**|Yes|Dichiara una proprietà.|[proprietà](../windows/property-cpp-component-extensions.md)|
+|**proprietà**|Sì|Dichiara una proprietà.|[proprietà](../windows/property-cpp-component-extensions.md)|
 |**delegate**|Yes|Dichiara un delegato.|[delegate (C++/CLI e C++/CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Yes|Dichiara un evento.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Identificatori di override
 
-È possibile usare le parole chiave seguenti per qualificare il comportamento di override per la derivazione. Anche se il **nuovo** parola chiave non è un'estensione di C++, viene elencata qui perché può essere usato in un contesto aggiuntivo. Alcuni identificatori sono validi anche per la programmazione nativa. Per altre informazioni, vedere [procedura: dichiarare gli identificatori di Override nelle compilazioni Native (C + + / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+È possibile usare le parole chiave seguenti per qualificare il comportamento di override per la derivazione. Anche se il **nuovo** parola chiave non è un'estensione di C++, viene elencata qui perché può essere usato in un contesto aggiuntivo. Alcuni identificatori sono validi anche per la programmazione nativa. Per altre informazioni, vedere [Procedura: Dichiarare gli identificatori di Override nelle compilazioni Native (C + + CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Parola chiave|Sensibile al contesto|Scopo|Riferimenti|
 |-------------|-----------------------|-------------|---------------|
-|**abstract**|Yes|Indica che le funzioni o classi sono astratte.|[abstract](../windows/abstract-cpp-component-extensions.md)|
+|**abstract**|Sì|Indica che le funzioni o classi sono astratte.|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |**new**|No|Indica che una funzione non è un override di una versione della classe di base.|[New (nuovo slot in vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|
-|**override**|Yes|Indica che un metodo deve essere un override di una versione della classe base.|[override](../windows/override-cpp-component-extensions.md)|
-|**sealed**|Yes|Impedisce l'uso delle classi come classi base.|[sealed](../windows/sealed-cpp-component-extensions.md)|
+|**override**|Sì|Indica che un metodo deve essere un override di una versione della classe base.|[override](../windows/override-cpp-component-extensions.md)|
+|**sealed**|Sì|Impedisce l'uso delle classi come classi base.|[sealed](../windows/sealed-cpp-component-extensions.md)|
 
 ## <a name="keywords-for-generics"></a>Parole chiave per i generics
 
@@ -64,7 +64,7 @@ Le parole chiave seguenti sono state aggiunte per supportare tipi generici. Per 
 
 |Parola chiave|Sensibile al contesto|Scopo|
 |-------------|-----------------------|-------------|
-|**Generica**|No|Dichiara un tipo generico.|
+|**generic**|No|Dichiara un tipo generico.|
 |**where**|Yes|Specifica i vincoli che vengono applicati a un parametro di tipo generico.|
 
 ## <a name="miscellaneous-keywords"></a>Varie parole chiave
@@ -73,10 +73,10 @@ Le parole chiave seguenti sono state aggiunte alle estensioni di C++.
 
 |Parola chiave|Sensibile al contesto|Scopo|Riferimenti|
 |-------------|-----------------------|-------------|---------------|
-|**finally**|Yes|Indica il comportamento di gestione delle eccezioni predefinito.|[Gestione delle eccezioni](../windows/exception-handling-cpp-component-extensions.md)|
+|**finally**|Sì|Indica il comportamento di gestione delle eccezioni predefinito.|[Gestione delle eccezioni](../windows/exception-handling-cpp-component-extensions.md)|
 |**for each, in**|No|Enumera gli elementi di una raccolta.|[for each, in](../dotnet/for-each-in.md)|
 |**gcnew**|No|Alloca tipi sull'heap sottoposto a Garbage Collection. Usare invece **nuove** e **eliminare**.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
-|**nuovo riferimento**|Yes|Alloca un tipo Windows Runtime. Usare invece **nuove** e **eliminare**.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
+|**ref new**|Sì|Alloca un tipo Windows Runtime. Usare invece **nuove** e **eliminare**.|[ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|Yes|Indica che un membro può essere inizializzato solo in fase di dichiarazione o in un costruttore statico.|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
 |**literal**|Yes|Crea una variabile letterale.|[literal](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|No|Indica che un handle o un puntatore non punta a un oggetto.|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
@@ -111,7 +111,7 @@ In questa sezione vengono elencati i costrutti di programmazione aggiuntivi e gl
 |[__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)|(Windows Runtime e CLR) Consente l'utilizzo delle parole chiave come identificatori.|
 |[Elenchi di argomenti variabili (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime e CLR) Consente a una funzione perché accetti un numero variabile di argomenti.|
 |[Equivalenti di .NET Framework a tipi nativi C++ (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Elenca i tipi CLR usati al posto dei tipi integrali di C++.|
-|[AppDomain](../cpp/appdomain.md) **declspec** modificatore|**declspec** modificatore che esistano variabili globali e statiche per appdomain.|
+|[appdomain](../cpp/appdomain.md) **__declspec** modifier|**declspec** modificatore che esistano variabili globali e statiche per appdomain.|
 |[Cast di tipo C con /clr (C + + CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)|Descrive come vengono interpretati i cast di tipo C.|
 |[clrcall](../cpp/clrcall.md) convenzione di chiamata|Indica la convenzione di chiamata conforme a CLR.|
 |`__cplusplus_cli`|[Macro predefinite](../preprocessor/predefined-macros.md)|
@@ -128,7 +128,7 @@ In questa sezione vengono elencati i costrutti di programmazione aggiuntivi e gl
 |[Inoltro del tipo (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Consente lo spostamento di un tipo in un assembly di distribuzione a un altro assembly in modo che il codice client non debba essere ricompilato.|
 |[Attributi definiti dall'utente](../windows/user-defined-attributes-cpp-component-extensions.md)|Illustra gli attributi definiti dall'utente.|
 |[Direttiva #using](../preprocessor/hash-using-directive-cpp.md)|Importa gli assembly esterni.|
-|[Documentazione di XML](../ide/xml-documentation-visual-cpp.md)|Illustra la documentazione di codice basato su XML tramite [/doc (elaborazione documentazione dei commenti) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|[Documentazione di XML](../build/reference/xml-documentation-visual-cpp.md)|Illustra la documentazione di codice basato su XML tramite [/doc (elaborazione documentazione dei commenti) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>Vedere anche
 
