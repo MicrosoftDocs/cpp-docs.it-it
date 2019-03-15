@@ -1,126 +1,133 @@
+items:
 - name: Docs
   tocHref: /
   topicHref: /
   items:
-    - name: Visual C++
+  - name: Visual C++
+    tocHref: /cpp/
+    topicHref: /cpp
+    items:
+    - name: Documentazione
       tocHref: /cpp/
-      topicHref: /cpp
+      topicHref: /cpp/visual-cpp-in-visual-studio
       items:
-        - name: Documentazione
-          tocHref: /cpp/
-          topicHref: /cpp/visual-cpp-in-visual-studio
+      - name: Linguaggio C++
+        tocHref: /cpp/cpp/
+        topicHref: /cpp/cpp/cpp-language-reference
+      - name: Linguaggio C
+        tocHref: /cpp/c-language/
+        topicHref: /cpp/c-language/c-language-reference
+      - name: Preprocessore C/C++
+        tocHref: /cpp/preprocessor/
+        topicHref: /cpp/c-cpp-preprocessor-reference
+      - name: Intrinseci del compilatore e linguaggio dell'assembly
+        tocHref: /cpp/intrinsics/
+        topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
+        items:
+        - name: ARM
+          tocHref: /cpp/assembler/arm/
+          topicHref: /cpp/assembler/arm/arm-assembler-reference
+        - name: Assembler inline
+          tocHref: /cpp/assembler/inline/
+          topicHref: /cpp/assembler/inline-assembler
+        - name: MASM
+          tocHref: /cpp/assembler/masm/
+          topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
+      - name: Libreria di runtime C
+        tocHref: /cpp/c-runtime-library/
+        topicHref: /cpp/c-runtime-library/c-run-time-library-reference
+        items:
+        - name: Riferimenti
+          tocHref: /cpp/c-runtime-library/reference/
+          topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
+      - name: Libreria standard C++
+        tocHref: /cpp/standard-library/
+        topicHref: /cpp/standard-library/cpp-standard-library-reference
+      - name: WINDOWS
+        tocHref: /cpp/windows/
+        topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
+        items:
+        - name: ATL
+          tocHref: /cpp/atl/
+          topicHref: /cpp/atl/atl-com-desktop-components
           items:
-            - name: Linguaggio C++
-              tocHref: /cpp/cpp/
-              topicHref: /cpp/cpp/cpp-language-reference
-            - name: Linguaggio C
-              tocHref: /cpp/c-language/
-              topicHref: /cpp/c-language/c-language-reference
-            - name: Preprocessore C/C++
-              tocHref: /cpp/preprocessor/
-              topicHref: /cpp/c-cpp-preprocessor-reference
-            - name: Libreria di runtime C
-              tocHref: /cpp/c-runtime-library/
-              topicHref: /cpp/c-runtime-library/c-run-time-library-reference
-              items:
-                - name: Riferimenti
-                  tocHref: /cpp/c-runtime-library/reference/
-                  topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
-            - name: Libreria standard C++
-              tocHref: /cpp/standard-library/
-              topicHref: /cpp/standard-library/cpp-standard-library-reference
-            - name: WINDOWS
-              tocHref: /cpp/windows/
-              topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
-              items:
-                - name: ATL
-                  tocHref: /cpp/atl/
-                  topicHref: /cpp/atl/atl-com-desktop-components
-                  items:
-                    - name: Riferimenti
-                      tocHref: /cpp/atl/reference/
-                      topicHref: /cpp/atl/reference/atl-classes
-                - name: MFC
-                  tocHref: /cpp/mfc/
-                  topicHref: /cpp/mfc/mfc-desktop-applications
-                  items:
-                    - name: Riferimenti
-                      tocHref: /cpp/mfc/reference/
-                      topicHref: /cpp/mfc/reference/mfc-classes
-                - name: Classi condivise ATL/MFC
-                  tocHref: /cpp/atl-mfc-shared/
-                  topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
-                  items:
-                    - name: Riferimenti
-                      tocHref: /cpp/atl-mfc-shared/reference/
-                      topicHref: /cpp/atl-mfc/shared/reference/classes-shared-by-mfc-and-atl
-                - name: C++/CX
-                  tocHref: /cpp/cppcx/
-                  topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
-            - name: Linux
-              tocHref: /cpp/linux/
-              topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
-            - name: .NET
-              tocHref: /cpp/dotnet/
-              topicHref: /cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp
-            - name: Programmazione parallela
-              tocHref: /cpp/parallel/
-              topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
-            - name: Accesso ai dati
-              tocHref: /cpp/data/
-              topicHref: /cpp/data/
-              items:
-                - name: OLEDB
-                  tocHref: /cpp/data/oledb/
-                  topicHref: /cpp/data/oledb/ole-db-programming
-                - name: ODBC
-                  tocHref: /cpp/data/odbc/
-                  topicHref: /cpp/data/odbc/open-database-connectivity-odbc
-            - name: IDE e strumenti
-              tocHref: /cpp/ide/
-              topicHref: /cpp/ide/ide-and-tools-for-visual-cpp-development
-              items:
-                - name: IDE
-                  tocHref: /cpp/ide/
-                  topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
-                - name: Compilazione
-                  tocHref: /cpp/build/building-c-cpp-programs
-                  items:
-                    - name: Riferimento alla compilazione
-                      tocHref: /cpp/build/reference/
-                      topicHref: /cpp/build/reference/c-cpp-building-reference
-                      items:
-                        - name: Errori del compilatore
-                          tocHref: /cpp/error-messages/compiler-errors-1/
-                          topicHref: /cpp/compiler-errors-1/c-cpp-build-errors
-                        - name: Avvisi del compilatore
-                          tocHref: /cpp/compiler-warnings/
-                          topicHref: /cpp/compiler-warnings/compiler-warnings-c4000-through-C4199
-                        - name: Altri strumenti
-                          tocHref: /cpp/error-messages/tool-errors/
-                          topicHref: /cpp/error-messages/tool-errors/vectorizer-and-parallelizer-messages
-                - name: Intrinseci del compilatore e linguaggio dell'assembly
-                  tocHref: /cpp/intrinsics/
-                  topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
-                  items:
-                    - name: ARM
-                      tocHref: /cpp/assembler/arm/
-                      topicHref: /cpp/assembler/arm/arm-assembler-reference
-                    - name: Assembler inline
-                      tocHref: /cpp/assembler/inline/
-                      topicHref: /cpp/assembler/inline-assembler
-                    - name: MASM
-                      tocHref: /cpp/assembler/masm/
-                      topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
-            - name: porting e aggiornamento
-              tocHref: /cpp/porting/
-              topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
-            - name: Testo e stringhe
-              tocHref: /cpp/text/
-              topicHref: /cpp/text/text-and-strings-in-visual-cpp
-            - name: Sicurezza
-              tocHref: /cpp/security
-              topicHref: /cpp/security/security-best-practices-for-cpp
-            - name: Cloud e Web
-              tocHref: /cpp/cloud
-              topicHref: /cpp/cloud/cloud-and-web-programming-in-visual-cpp
+          - name: Riferimenti
+            tocHref: /cpp/atl/reference/
+            topicHref: /cpp/atl/reference/atl-classes
+        - name: MFC
+          tocHref: /cpp/mfc/
+          topicHref: /cpp/mfc/mfc-desktop-applications
+          items:
+          - name: Riferimenti
+            tocHref: /cpp/mfc/reference/
+            topicHref: /cpp/mfc/reference/mfc-classes
+        - name: Classi condivise ATL/MFC
+          tocHref: /cpp/atl-mfc-shared/
+          topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
+          items:
+          - name: Riferimenti
+            tocHref: /cpp/atl-mfc-shared/reference/
+            topicHref: /cpp/atl-mfc/shared/reference/classes-shared-by-mfc-and-atl
+        - name: C++/CX
+          tocHref: /cpp/cppcx/
+          topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
+      - name: Linux
+        tocHref: /cpp/linux/
+        topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
+      - name: .NET
+        tocHref: /cpp/dotnet/
+        topicHref: /cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp
+      - name: Programmazione parallela
+        tocHref: /cpp/parallel/
+        topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
+      - name: Accesso ai dati
+        tocHref: /cpp/data/
+        topicHref: /cpp/data/
+        items:
+        - name: OLEDB
+          tocHref: /cpp/data/oledb/
+          topicHref: /cpp/data/oledb/ole-db-programming
+        - name: ODBC
+          tocHref: /cpp/data/odbc/
+          topicHref: /cpp/data/odbc/open-database-connectivity-odbc
+      - name: Modificare, esplorare ed effettuare il refactoring del codice
+        tocHref: /cpp/ide/
+        topicHref: /cpp/ide/ide-and-tools-for-visual-cpp-development
+        items:
+        - name: IDE
+          tocHref: /cpp/ide/
+          topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
+      - name: Compilazione di progetti C/C++
+        tocHref: /cpp/build/building-c-cpp-programs
+        items:
+        - name: Riferimento alla compilazione
+          tocHref: /cpp/build/reference/
+          topicHref: /cpp/build/reference/c-cpp-building-reference
+          items:
+          - name: Errori del compilatore
+            tocHref: /cpp/error-messages/compiler-errors-1/
+            topicHref: /cpp/compiler-errors-1/c-cpp-build-errors
+          - name: Avvisi del compilatore
+            tocHref: /cpp/compiler-warnings/
+            topicHref: /cpp/compiler-warnings/compiler-warnings-c4000-through-C4199
+          - name: Altri strumenti
+            tocHref: /cpp/error-messages/tool-errors/
+            topicHref: /cpp/error-messages/tool-errors/vectorizer-and-parallelizer-messages
+      - name: porting e aggiornamento
+        tocHref: /cpp/porting/
+        topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
+      - name: Testo e stringhe
+        tocHref: /cpp/text/
+        topicHref: /cpp/text/text-and-strings-in-visual-cpp
+      - name: Sicurezza
+        tocHref: /cpp/security
+        topicHref: /cpp/security/security-best-practices-for-cpp
+      - name: Cloud e Web
+        tocHref: /cpp/cloud
+        topicHref: /cpp/cloud/cloud-and-web-programming-in-visual-cpp
+ms.openlocfilehash: 4c353d1f7e1d4e03a9dc86f24c95251e5dc12eac
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816412"
