@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: b590d852e8139aa7a12d7a7913915cd7a3bdccc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 45f6b9c71eaea93597e90de93c704d2ea260235e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416358"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821380"
 ---
 # <a name="dumpbin-reference"></a>Riferimenti a DUMPBIN
 
@@ -24,12 +24,12 @@ Microsoft COFF Binary File Dumper (DUMPBIN. Con estensione EXE) consente di visu
 > [!NOTE]
 >  È possibile avviare questo strumento solo dal prompt dei comandi di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.
 
-Solo le [/HEADERS](../../build/reference/headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) opzione del compilatore.
+Solo le [/HEADERS](headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](gl-whole-program-optimization.md) opzione del compilatore.
 
-- [Riga di comando DUMPBIN](../../build/reference/dumpbin-command-line.md)
+- [Riga di comando DUMPBIN](dumpbin-command-line.md)
 
-- [Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)
+- [Opzioni di DUMPBIN](dumpbin-options.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Strumenti per la compilazione in C/C++](../../build/reference/c-cpp-build-tools.md)
+[Strumenti di compilazione MSVC aggiuntive](c-cpp-build-tools.md)

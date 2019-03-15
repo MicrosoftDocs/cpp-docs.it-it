@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Fo compiler option [C++]
 - -Fo compiler option [C++]
 ms.assetid: 0e6d593e-4e7f-4990-9e6e-92e1dcbcf6e6
-ms.openlocfilehash: bcb0f96eba277b65e3478843ca0e1666f9c404aa
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a8f2c1a196f18e6d310fd41d4dbed751440a4c20
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418360"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819663"
 ---
 # <a name="fo-object-file-name"></a>/Fo (Nome file oggetto)
 
@@ -34,7 +34,7 @@ Se non si usa questa opzione, il file oggetto Usa il nome base del file di origi
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -56,7 +56,7 @@ CL /FoB:\OBJECT\ THIS.C
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del file di output (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)
+[Opzioni del file di output (/F)](output-file-f-options.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Specifica del nome del percorso](specifying-the-pathname.md)

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298061"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808352"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Classi Frame-Window create dalla Creazione guidata applicazione
 
-Quando si usa la [Creazione guidata applicazione](../ide/creating-desktop-projects-by-using-application-wizards.md) per creare uno scheletro di applicazione, oltre all'applicazione, documenti e classi di visualizzazione, la creazione guidata applicazione crea una classe derivata frame-window per finestra cornice principale dell'applicazione. La classe è detta `CMainFrame` per impostazione predefinita e i file che lo contengono sono denominati MAINFRM. H e MAINFRM. CPP.
+Quando è possibile creare un nuovo MFC dal progetto di **nuovo progetto** finestra di dialogo, oltre all'applicazione, documenti e le classi di visualizzazione, la creazione guidata applicazione crea una classe derivata frame-window per finestra cornice principale dell'applicazione. La classe è detta `CMainFrame` per impostazione predefinita e i file che lo contengono sono denominati MAINFRM. H e MAINFRM. CPP.
 
 Se l'applicazione SDI, il `CMainFrame` classe è derivata dalla classe [CFrameWnd](../mfc/reference/cframewnd-class.md).
 
@@ -36,4 +36,5 @@ Queste classi frame-window funzionano come creato, ma per migliorare le proprie 
 ## <a name="see-also"></a>Vedere anche
 
 [Classi di finestre cornice](../mfc/frame-window-classes.md)<br/>
-[File di intestazione e di origine di un controllo o programma MFC](../ide/mfc-program-or-control-source-and-header-files.md)
+[File di intestazione e di origine di un controllo o programma MFC](../build/reference/mfc-program-or-control-source-and-header-files.md)
+

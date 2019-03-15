@@ -2,16 +2,16 @@
 title: Configurazione di programmi per Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582741"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814293"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurazione di programmi per Windows XP
 
-Poiché Visual Studio supporta più set di strumenti della piattaforma, è possibile includere i sistemi operativi e librerie di runtime che non sono supportate dal set di strumenti predefinito. Passando il set di strumenti della piattaforma, ad esempio, è possibile utilizzare c++11, c++14 e miglioramenti di C + + 17 lingue supportati dal compilatore Visual C++ in Visual Studio per creare le app destinate a Windows XP e Windows Server 2003. È possibile anche usare set di strumenti della piattaforma meno recenti per mantenere il codice legacy compatibili con file binario e comunque sfruttare le funzionalità più recenti dell'IDE di Visual Studio.
+Poiché Visual Studio supporta più set di strumenti della piattaforma, è possibile includere i sistemi operativi e librerie di runtime che non sono supportate dal set di strumenti predefinito. Passando il set di strumenti della piattaforma, ad esempio, è possibile utilizzare c++11, c++14 e miglioramenti di C + + 17 lingue supportati dal compilatore MSVC in Visual Studio per creare le app destinate a Windows XP e Windows Server 2003. È possibile anche usare set di strumenti della piattaforma meno recenti per mantenere il codice legacy compatibili con file binario e comunque sfruttare le funzionalità più recenti dell'IDE di Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installare il set di strumenti della piattaforma Windows XP
 
@@ -35,10 +35,10 @@ Queste librerie sono supportate dal set di strumenti della piattaforma installat
 
 |Libreria|Set di strumenti della piattaforma predefinito per il supporto delle app desktop Windows|Piattaforma del set di strumenti targeting Store App predefinite|Set strumenti della piattaforma Windows XP come destinazione Windows XP, Windows Server 2003|
 |---|---|---|---|
-|CRT|X|X|x|
-|Libreria standard C++|x|X|X|
-|ATL|X|X|X|
-|ConCRT/PPL|X|X|X|
+|CRT|X|x|x|
+|Libreria standard C++|x|x|X|
+|ATL|X|x|X|
+|ConCRT/PPL|X|x|X|
 |MFC|X||X|
 |C++ AMP|X|x||
 

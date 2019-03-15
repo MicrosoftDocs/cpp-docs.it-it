@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: 1ad46a1a3006cbca52336bf65bcfbafd37e59752
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607662"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814423"
 ---
 # <a name="cc-preprocessor-reference"></a>Riferimenti al preprocessore C/C++
 Il *riferimenti al preprocessore C/C++* viene illustrato il preprocessore come viene implementato in Microsoft C/C++. Il preprocessore esegue alcune operazioni preliminari sui file C e C++ prima che siano passati al compilatore. È possibile utilizzare il preprocessore per compilare in modo condizionale il codice, inserire file, specificare i messaggi di errore in fase di compilazione e applicare le regole specifiche del computer alle sezioni di codice.
@@ -40,5 +40,5 @@ Viene fornito materiale di riferimento per l'implementazione Microsoft del lingu
 [Compilazione di programmi C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Vengono forniti collegamenti agli argomenti relativi alle opzioni del compilatore e del linker.
 
-[Creazione e gestione di progetti Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)<br/>
+[Creazione e gestione di progetti Visual C++](../build/creating-and-managing-visual-cpp-projects.md)<br/>
 Viene descritta l'interfaccia utente di Visual Studio che consente di specificare le directory che il sistema del progetto cercherà per individuare i file per il progetto C++.

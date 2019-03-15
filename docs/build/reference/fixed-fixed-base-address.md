@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -FIXED linker option
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
-ms.openlocfilehash: ccb89b7dfed78ddebf73aaf6e2a1a8529b065042
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6cc89df76e48ee258a7c6608aab12573ab11729b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423040"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811524"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (Indirizzo di base fisso)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57423040"
 
 ## <a name="remarks"></a>Note
 
-Comunica al sistema operativo di caricare il programma solo all'indirizzo di base preferito. Se l'indirizzo di base preferito non è disponibile, il sistema operativo non viene caricato il file. Per altre informazioni, vedere [/BASE (indirizzo di base)](../../build/reference/base-base-address.md).
+Comunica al sistema operativo di caricare il programma solo all'indirizzo di base preferito. Se l'indirizzo di base preferito non è disponibile, il sistema operativo non viene caricato il file. Per altre informazioni, vedere [/BASE (indirizzo di base)](base-base-address.md).
 
 /FIXED:NO è l'impostazione predefinita per una DLL e /FIXED è l'impostazione predefinita per qualsiasi altro tipo di progetto.
 
@@ -35,7 +35,7 @@ Specificare l'opzione /FIXED: No per generare una sezione di rilocazione nel pro
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **Linker** cartella.
 
@@ -49,5 +49,5 @@ Specificare l'opzione /FIXED: No per generare una sezione di rilocazione nel pro
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadataFile
 ms.assetid: 062b41b3-14d6-432c-a361-fdb66e918931
-ms.openlocfilehash: 5532046f4284100c60bb82c12b4d47c721fc275e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5d24d1d1aad8442f549dcb1aa4bd6414070c282c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413082"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815983"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (specificare il file winmd)
 
-Specifica il nome di file per il file di output di metadati di Windows Runtime (winmd) generato dal [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) l'opzione del linker.
+Specifica il nome di file per il file di output di metadati di Windows Runtime (winmd) generato dal [/WINMD](winmd-generate-windows-metadata.md) l'opzione del linker.
 
 ```
 /WINMDFILE:filename
@@ -25,7 +25,7 @@ Utilizzare il valore specificato in `filename` per eseguire l'override del nome 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **Linker** cartella.
 
@@ -35,6 +35,6 @@ Utilizzare il valore specificato in `filename` per eseguire l'override del nome 
 
 ## <a name="see-also"></a>Vedere anche
 
-[/WINMD (genera metadati di Windows)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[/WINMD (genera metadati di Windows)](winmd-generate-windows-metadata.md)<br/>
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

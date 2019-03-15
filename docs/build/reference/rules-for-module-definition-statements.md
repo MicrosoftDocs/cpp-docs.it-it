@@ -7,12 +7,12 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: 6d6528b81777711e52153e19a656619a2895b0d6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6269ad2d5bf3952e485f2ca5e5d1f411c5f1e0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424756"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821274"
 ---
 # <a name="rules-for-module-definition-statements"></a>Regole relative alle istruzioni di definizione dei moduli
 
@@ -34,8 +34,8 @@ Le regole di sintassi seguenti si applicano a tutte le istruzioni in un file def
 
 - Argomenti numerici vengono specificati in base 10 o esadecimale.
 
-- Se un argomento di stringa corrisponde a un [parola riservata](../../build/reference/reserved-words.md), deve essere racchiuso tra virgolette doppie (").
+- Se un argomento di stringa corrisponde a un [parola riservata](reserved-words.md), deve essere racchiuso tra virgolette doppie (").
 
 ## <a name="see-also"></a>Vedere anche
 
-[File Module-Definition (.Def)](../../build/reference/module-definition-dot-def-files.md)
+[File Module-Definition (.Def)](module-definition-dot-def-files.md)

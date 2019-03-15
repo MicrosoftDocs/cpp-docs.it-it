@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494978"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807508"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Supporto Unicode nel compilatore e nel linker
 
@@ -45,8 +45,8 @@ File di risposta e i file DEF possono essere entrambi UTF-16 con un BOM o ANSI.
 
 ## <a name="asm-and-cod-dumps"></a>dump asm e Cod
 
-dump asm e Cod sono in formato ANSI per impostazione predefinita per la compatibilità con MASM. Uso [l'opzione /FAu](../../build/reference/fa-fa-listing-file.md) per l'output UTF-8. Si noti che se si specifica **/FAs**, il codice sorgente, verrà stampato direttamente e potrebbe avere un aspetto confuso, ad esempio se il codice sorgente è UTF-8 e non è stato specificato **/FAsu**.
+dump asm e Cod sono in formato ANSI per impostazione predefinita per la compatibilità con MASM. Uso [l'opzione /FAu](fa-fa-listing-file.md) per l'output UTF-8. Si noti che se si specifica **/FAs**, il codice sorgente, verrà stampato direttamente e potrebbe avere un aspetto confuso, ad esempio se il codice sorgente è UTF-8 e non è stato specificato **/FAsu**.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Compilare codice C/C++ nella riga di comando](../../build/building-on-the-command-line.md)
+[Usare il set di strumenti MSVC dalla riga di comando](../building-on-the-command-line.md)

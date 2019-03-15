@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 47d23ac6f9234e095a1733a8d4078840318cce4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3495de3ec72bcac78cdee2f5f3265864e7a2932
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512398"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807754"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (utilizzo della funzionalità ASLR)
 
@@ -21,7 +21,7 @@ Specifica se generare un'immagine eseguibile che può essere riassegnata in modo
 
 ## <a name="syntax"></a>Sintassi
 
-> **/ DYNAMICBASE**[**: NO**]
+> **/DYNAMICBASE**[**:NO**]
 
 ## <a name="remarks"></a>Note
 
@@ -31,7 +31,7 @@ Per impostazione predefinita **/DYNAMICBASE** è abilitata. Per disabilitare que
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **avanzate** pagina delle proprietà.
 
@@ -43,7 +43,7 @@ Per impostazione predefinita **/DYNAMICBASE** è abilitata. Per disabilitare que
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)
-- [Opzioni del linker](../../build/reference/linker-options.md)
+- [Informazioni di riferimento sul linker MSVC](linking.md)
+- [Opzioni del linker MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
 - [Difese di sicurezza Software ISV di Windows](https://msdn.microsoft.com/library/bb430720.aspx)

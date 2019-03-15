@@ -1,5 +1,5 @@
 ---
-title: '/Zc: noexcepttypes (c + + regole noexcept c++17)'
+title: /Zc:noexceptTypes (C++17 noexcept rules)
 ms.date: 11/14/2017
 f1_keywords:
 - /Zc:noexceptTypes
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: f5f2fa3ef85e7ff15b28188e45a4ec397878873c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e06f54049d36262134b6be7eadb0e6e5349a45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462231"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812109"
 ---
-# <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc: noexcepttypes (c + + regole noexcept c++17)
+# <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (C++17 noexcept rules)
 
 Rende nello standard c++17 `throw()` come alias per `noexcept`, rimuove `throw(<type list>)` e `throw(...)`e consente di includere determinati tipi `noexcept`. Ciò può causare numerosi problemi di compatibilità di origine nel codice conforme a c++14 o versione precedente. Il **/Zc: noexcepttypes** opzione possa specificare la conformità a c++17 standard o consentire il C + + 14 e versioni precedente il comportamento durante la compilazione di codice in modalità c++17.
 
@@ -73,7 +73,7 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
@@ -81,6 +81,6 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ## <a name="see-also"></a>Vedere anche
 
-[/Zc (conformità)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (conformità)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Specifiche di eccezione (generazione)](../../cpp/exception-specifications-throw-cpp.md)

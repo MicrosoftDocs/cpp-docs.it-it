@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f4aa8b1be7cd9ad32b10f12c5d1dfd3ae86adc1d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424808"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820286"
 ---
 # <a name="kinds-of-dlls"></a>Tipi di DLL
 
@@ -31,13 +31,13 @@ La libreria MFC stessa è disponibile, in librerie a collegamento statico o in a
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
-- [DLL non MFC: panoramica](../build/non-mfc-dlls-overview.md)
+- [DLL non MFC: panoramica](non-mfc-dlls-overview.md)
 
-- [DLL MFC regolari collegate in modo statico a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [DLL MFC regolari collegate in modo statico a MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [DLL MFC regolari collegate in modo dinamico a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [DLL MFC regolari collegate in modo dinamico a MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC (DLL di estensione): panoramica](../build/extension-dlls-overview.md)
+- [MFC (DLL di estensione): panoramica](extension-dlls-overview.md)
 
 - [Delle DLL da usare](#_core_which_kind_of_dll_to_use)
 
@@ -59,14 +59,14 @@ Prima della versione 4.0, Visual C++ supporta solo due tipi di DLL che utilizzav
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
-- [DLL non MFC: panoramica](../build/non-mfc-dlls-overview.md)
+- [DLL non MFC: panoramica](non-mfc-dlls-overview.md)
 
-- [DLL MFC regolari collegate in modo statico a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [DLL MFC regolari collegate in modo statico a MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [DLL MFC regolari collegate in modo dinamico a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [DLL MFC regolari collegate in modo dinamico a MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC (DLL di estensione): panoramica](../build/extension-dlls-overview.md)
+- [MFC (DLL di estensione): panoramica](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL in Visual C++](dlls-in-visual-cpp.md)

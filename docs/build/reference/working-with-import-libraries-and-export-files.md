@@ -8,12 +8,12 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-ms.openlocfilehash: fa759482d6949b27f5076643d83e92cddc1d8fac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f6f2d5c48c63ba6d8a8a7f67a98b949b32a8afa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416566"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810108"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Utilizzo di librerie di importazione e file di esportazione
 
@@ -27,4 +27,4 @@ Tuttavia, quando si esporta un programma che importa anche da una DLL, se dirett
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a LIB](../../build/reference/lib-reference.md)
+[Riferimento a LIB](lib-reference.md)

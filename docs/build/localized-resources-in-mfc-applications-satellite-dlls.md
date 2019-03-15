@@ -12,16 +12,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: d479599acceac29f0f2ee54857c663c81a919acf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c593d0bae6fc23cfd765116c44b07caa2a6d8ccf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420401"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821326"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>Risorse localizzate in applicazioni MFC: DLL satellite
 
-Versione MFC 7.0 e versioni successive offre supporto avanzato per le DLL satellite, una funzionalità che aiuta nella creazione di applicazioni localizzate in più lingue. Una DLL satellite è una [DLL di sole risorse](../build/creating-a-resource-only-dll.md) che contiene le risorse di un'applicazione localizzate per una determinata lingua. Quando l'applicazione inizia l'esecuzione, MFC carica automaticamente la risorsa localizzata più appropriata per l'ambiente. Ad esempio, hai un'applicazione con le risorse di lingua inglese con due DLL satellite, una che contiene una traduzione in francese di risorse e l'altro che contiene una traduzione in tedesco. Quando l'applicazione viene eseguita in un sistema in lingua inglese, Usa le risorse in lingua inglese. Se eseguito in un sistema francese, Usa le risorse francesi. Se eseguito in un sistema tedesco, Usa le risorse in tedesco.
+Versione MFC 7.0 e versioni successive offre supporto avanzato per le DLL satellite, una funzionalità che aiuta nella creazione di applicazioni localizzate in più lingue. Una DLL satellite è una [DLL di sole risorse](creating-a-resource-only-dll.md) che contiene le risorse di un'applicazione localizzate per una determinata lingua. Quando l'applicazione inizia l'esecuzione, MFC carica automaticamente la risorsa localizzata più appropriata per l'ambiente. Ad esempio, hai un'applicazione con le risorse di lingua inglese con due DLL satellite, una che contiene una traduzione in francese di risorse e l'altro che contiene una traduzione in tedesco. Quando l'applicazione viene eseguita in un sistema in lingua inglese, Usa le risorse in lingua inglese. Se eseguito in un sistema francese, Usa le risorse francesi. Se eseguito in un sistema tedesco, Usa le risorse in tedesco.
 
 Per supportare le risorse localizzate in un'applicazione MFC, MFC tenta di caricare una DLL satellite che contiene risorse localizzate per una lingua specifica. Le DLL satellite sono denominate *NomeApplicazioneXXX*. dll, dove *ApplicationName* è il nome di .exe o DLL utilizza MFC, e *XXX* è riportato il codice di tre lettere per la lingua le risorse (ad esempio, "ENU" o "DEU").
 
@@ -53,5 +53,5 @@ Se nessuna di queste DLL vengono trovata, MFC Usa le risorse in LangExample.exe.
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[DLL in Visual C++](dlls-in-visual-cpp.md)<br/>
 [TN057: Localizzazione di componenti MFC](../mfc/tn057-localization-of-mfc-components.md)

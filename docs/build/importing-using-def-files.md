@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424778"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815333"
 ---
 # <a name="importing-using-def-files"></a>Importazione tramite i file DEF
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 L'utilizzo di costante è più rischioso perché se si dimentica di utilizzare un livello supplementare di riferimento indiretto, si potrebbe accedere puntatore della tabella IAT a variabile, ovvero non la variabile stessa. Questo tipo di problema può risolversi spesso una violazione di accesso perché la tabella IAT è attualmente impostata in sola lettura dal compilatore e linker.
 
-Il linker corrente di Visual C++ genera un avviso se rileva costante nel file def per tenere conto per questo case. L'unico vero motivo per utilizzare costante è se non è possibile ricompilare alcuni file oggetto in cui il file di intestazione non elenca **declspec** nel prototipo.
+Il linker MSVC corrente genera un avviso se rileva costante nel file def per tenere conto per questo case. L'unico vero motivo per utilizzare costante è se non è possibile ricompilare alcuni file oggetto in cui il file di intestazione non elenca **declspec** nel prototipo.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Importazione in un'applicazione](../build/importing-into-an-application.md)
+[Importazione in un'applicazione](importing-into-an-application.md)

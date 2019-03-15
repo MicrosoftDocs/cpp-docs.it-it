@@ -1,13 +1,13 @@
 ---
-title: Ottimizzazione virgola mobile Microsoft Visual C++
+title: Ottimizzazione virgola mobile MSVC
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504299"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814371"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Ottimizzazione a virgola mobile di Microsoft Visual C++
 
@@ -40,7 +40,7 @@ Un compilatore C++ Naive potrebbe supporre che aritmetica a virgola mobile segue
 
 Vale a dire che il valore percepito del C è sempre un costante zero. Se questo valore costante viene quindi propagato nelle espressioni successive, il corpo del ciclo viene ridotto a una somma semplice. Per essere precisi,
 
-> Y = [i] - C = = > Y = [i]<br/>T = somma + Y = = > T = somma + [i]<br/>somma = T = = > SOMMA = somma + [i]
+> Y = A[i] - C ==> Y = A[i]<br/>T = sum + Y ==> T = sum + A[i]<br/>sum = T ==> sum = sum + A[i]
 
 Di conseguenza, al compilatore Naive, una trasformazione logico del `KahanSum` funzione sarebbe:
 
@@ -952,11 +952,11 @@ Le opzioni della riga di comando sono infatti sintassi abbreviata per impostare 
 ||||||
 |-|-|-|-|-|
 ||float_control(precise)|float_control(except)|fp_contract|fenv_access|
-|/fp: strict|attivo|attivo|Off|attivo|
-|/fp: strict /fp: tranne:|attivo|Off|Off|attivo|
-|/fp: precise|attivo|Off|attivo|Off|
-|/fp: precise /fp: tranne|attivo|attivo|attivo|Off|
-|/fp: fast|Off|Off|attivo|Off|
+|/fp:strict|attivo|attivo|Off|attivo|
+|/fp:strict /fp:except-|attivo|Off|Off|attivo|
+|/fp:precise|attivo|Off|attivo|Off|
+|/fp:precise /fp:except|attivo|attivo|attivo|Off|
+|/fp:fast|Off|Off|attivo|Off|
 
 Ad esempio, il seguente Abilita in modo esplicito /fp: fast semantica.
 
@@ -1088,4 +1088,4 @@ catch(float_exception)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Ottimizzazione del codice](optimizing-your-code.md)<br/>
+[Ottimizzazione del codice](../optimizing-your-code.md)<br/>

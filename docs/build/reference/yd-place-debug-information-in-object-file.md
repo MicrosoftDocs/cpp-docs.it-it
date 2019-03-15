@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: 55bb8197cd15243f65c90d7fbd2724f91fce23b4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414876"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820156"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (Inserisce le informazioni di debug nel file oggetto)
 
-Pazi completa in tutti i file oggetto informazioni di debug creato da un file di intestazione precompilata (PCH) se usato con il [/Yc](../../build/reference/yc-create-precompiled-header-file.md) e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opzioni. Deprecato.
+Pazi completa in tutti i file oggetto informazioni di debug creato da un file di intestazione precompilata (PCH) se usato con il [/Yc](yc-create-precompiled-header-file.md) e [/Z7](z7-zi-zi-debug-information-format.md) opzioni. Deprecato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,9 +28,9 @@ Pazi completa in tutti i file oggetto informazioni di debug creato da un file di
 
 ## <a name="remarks"></a>Note
 
-**/Yd** è deprecato. Visual C++ supporta ora più oggetti, la scrittura in un unico file PDB, usare **/Zi** invece. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+**/Yd** è deprecato. Visual C++ supporta ora più oggetti, la scrittura in un unico file PDB, usare **/Zi** invece. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
-A meno che non è necessario distribuire le informazioni di debug contenente una libreria, usare il [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opzione invece **/Z7** e **/Yd**.
+A meno che non è necessario distribuire le informazioni di debug contenente una libreria, usare il [/Zi](z7-zi-zi-debug-information-format.md) opzione invece **/Z7** e **/Yd**.
 
 L'archiviazione delle informazioni di debug complete in tutti i file con estensione obj è necessaria solo per distribuire le librerie che contengono informazioni di debug. Rallenta la compilazione e richiede spazio su disco considerevole. Quando **/Yc** e **/Z7** vengono usate senza **/Yd**, il compilatore archivia le informazioni di debug comuni nel primo file con estensione obj creato dal file con estensione pch. Il compilatore non inserire queste informazioni in file con estensione obj creati successivamente dal file pch. Inserisce riferimenti incrociati per le informazioni. Indipendentemente dal numero di file con estensione obj Usa il file con estensione pch, un solo file con estensione obj contiene le informazioni di debug comuni.
 
@@ -38,13 +38,13 @@ Sebbene questo comportamento predefinito determini più velocemente i tempi di c
 
 Per altre informazioni sulle intestazioni precompilate, vedere:
 
-- [/Y (intestazioni precompilate)](../../build/reference/y-precompiled-headers.md)
+- [/Y (intestazioni precompilate)](y-precompiled-headers.md)
 
-- [Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)
+- [File di intestazione precompilata](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -83,5 +83,5 @@ Se l'intestazione precompilata non è stato compilato con **/Z7**, è comunque p
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

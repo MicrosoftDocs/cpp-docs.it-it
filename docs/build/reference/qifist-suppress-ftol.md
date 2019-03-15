@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422208"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816594"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Elimina _ftol)
 
@@ -42,16 +42,16 @@ Oltre alla conversione dal tipo a virgola mobile a tipo integrale, il `_ftol` fu
 
 È possibile usare la [_control87, controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) funzione C Run-Time per modificare la modalità di arrotondamento dell'unità FPU. La modalità dell'unità FPU predefinita è "Round verso più vicino." Usando **/QIfist** può migliorare le prestazioni dell'applicazione, ma non è esente da rischi. È consigliabile verificare attentamente le parti del codice che sono sensibili alle modalità di arrotondamento, prima di fare affidamento sul codice compilato con **/QIfist** negli ambienti di produzione.
 
-[/arch (x86)](../../build/reference/arch-x86.md) e **/QIfist** non può essere utilizzato nello stesso compilando.
+[/arch (x86)](arch-x86.md) e **/QIfist** non può essere utilizzato nello stesso compilando.
 
 > [!NOTE]
 >  **/QIfist** è non attivo per impostazione predefinita perché l'arrotondamento di bit a virgola mobile mobile influiscono anche punto arrotondamento (che si verifica dopo ogni operazione di calcolo), in modo che quando si impostano i flag per l'arrotondamento di tipo C (verso zero), della virgola i calcoli potrebbero essere diversi. **/QIfist** non deve essere usato se codice dipende dalla fase il comportamento previsto di troncare la parte frazionaria del numero a virgola mobile. Se si è certi, non utilizzare **/QIfist**.
 
-Il **/QIfist** opzione è deprecata a partire da Visual Studio 2005. Il compilatore è stati introdotti miglioramenti significativi in float a int velocità di conversione. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+Il **/QIfist** opzione è deprecata a partire da Visual Studio 2005. Il compilatore è stati introdotti miglioramenti significativi in float a int velocità di conversione. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -65,6 +65,6 @@ Il **/QIfist** opzione è deprecata a partire da Visual Studio 2005. Il compilat
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /Q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni /Q (operazioni di basso livello)](q-options-low-level-operations.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

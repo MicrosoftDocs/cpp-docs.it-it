@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: c85379cf1a514cafcd2f840673fc9c7b2d415ba4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425666"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812317"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Elimina stringhe duplicate)
 
@@ -45,16 +45,16 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  Il [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) opzione, utilizzata per la modifica e continuazione, imposta automaticamente il **/GF** opzione.
+>  Il [/ZI](z7-zi-zi-debug-information-format.md) opzione, utilizzata per la modifica e continuazione, imposta automaticamente il **/GF** opzione.
 
 > [!NOTE]
->  Il **/GF** opzione del compilatore crea una sezione indirizzabile per ogni stringa univoca. E per impostazione predefinita, un file di oggetti può contenere fino a 65.536 sezioni indirizzabili. Se il programma contiene più di 65.536 stringhe, usare il [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) opzione del compilatore per creare altre sezioni.
+>  Il **/GF** opzione del compilatore crea una sezione indirizzabile per ogni stringa univoca. E per impostazione predefinita, un file di oggetti può contenere fino a 65.536 sezioni indirizzabili. Se il programma contiene più di 65.536 stringhe, usare il [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) opzione del compilatore per creare altre sezioni.
 
-**/GF** è attiva quando [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oppure **/O2** viene usato.
+**/GF** è attiva quando [/O1](o1-o2-minimize-size-maximize-speed.md) oppure **/O2** viene usato.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -68,5 +68,5 @@ char *t = "This is a character buffer";
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

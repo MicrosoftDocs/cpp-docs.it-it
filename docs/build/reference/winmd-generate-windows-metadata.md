@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 83d22a0114b26f53fa9df9d2470c71cd80465d64
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426686"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810367"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (generare metadati di Windows)
 
@@ -32,11 +32,11 @@ Il linker genera solo il file con estensione winmd, ma non un file eseguibile bi
 
 Il **/WINMD** l'opzione del linker viene utilizzato per le app UWP e di componenti Windows runtime per controllare la creazione di un file di metadati (con estensione winmd) di Windows Runtime. Un file con estensione winmd è un tipo di DLL che contiene i metadati per i tipi Windows runtime e, nel caso di componenti di runtime, le implementazioni di tali tipi. I metadati seguono il [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
 
-Per impostazione predefinita, il nome del file di output ha il formato *binaryname*. winmd. Per specificare un nome file diverso, usare il [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) opzione.
+Per impostazione predefinita, il nome del file di output ha il formato *binaryname*. winmd. Per specificare un nome file diverso, usare il [/WINMDFILE](winmdfile-specify-winmd-file.md) opzione.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **metadati Windows** pagina delle proprietà.
 
@@ -50,5 +50,5 @@ Per impostazione predefinita, il nome del file di output ha il formato *binaryna
 [/WINMDKEYFILE (specifica il file di chiave winmd)](winmdkeyfile-specify-winmd-key-file.md)<br/>
 [/WINMDKEYCONTAINER (specifica il contenitore di chiavi)](winmdkeycontainer-specify-key-container.md)<br/>
 [/WINMDDELAYSIGN (firma parzialmente un winmd)](winmddelaysign-partially-sign-a-winmd.md)<br/>
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

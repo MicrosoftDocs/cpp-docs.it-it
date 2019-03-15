@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-ms.openlocfilehash: 8d3793b11e7bd0430c94d89f9d40ec3627c4eb20
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413355"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821313"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (Assegna un nome alla libreria di importazione)
 
@@ -32,15 +32,15 @@ L'opzione /IMPLIB sostituisce il nome predefinito per la libreria di importazion
 
 - Il [dllexport](../../cpp/dllexport-dllimport.md) parola chiave nel codice sorgente
 
-- [ESPORTAZIONI](../../build/reference/exports.md) istruzione in un file def
+- [ESPORTAZIONI](exports.md) istruzione in un file def
 
-- Un' [/Export](../../build/reference/export-exports-a-function.md) specifica in un comando LINK
+- Un' [/Export](export-exports-a-function.md) specifica in un comando LINK
 
-COLLEGAMENTO /IMPLIB viene ignorata quando non sia stata creata una libreria di importazione. Se viene specificata alcuna esportazione, non verrà creata una libreria di importazione. Se un file di esportazione viene usato nella compilazione, collegamento si presuppone che esista già una libreria di importazione e non crearne uno. Per informazioni sulle librerie di importazione e file di esportazione, vedere [riferimenti a LIB](../../build/reference/lib-reference.md).
+COLLEGAMENTO /IMPLIB viene ignorata quando non sia stata creata una libreria di importazione. Se viene specificata alcuna esportazione, non verrà creata una libreria di importazione. Se un file di esportazione viene usato nella compilazione, collegamento si presuppone che esista già una libreria di importazione e non crearne uno. Per informazioni sulle librerie di importazione e file di esportazione, vedere [riferimenti a LIB](lib-reference.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -54,5 +54,5 @@ COLLEGAMENTO /IMPLIB viene ignorata quando non sia stata creata una libreria di 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

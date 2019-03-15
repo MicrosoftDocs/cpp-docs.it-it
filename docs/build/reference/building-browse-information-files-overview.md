@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413017"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820617"
 ---
 # <a name="building-browse-information-files-overview"></a>File di informazioni: Panoramica
 
@@ -20,18 +20,18 @@ Per creare informazioni di visualizzazione per l'esplorazione di simbolo, il com
 
 Generazione di file sbr e BSC richiede tempo, in modo che Visual C++ consente di disattivare queste funzioni per impostazione predefinita. Se si desidera visualizzare le informazioni correnti, è necessario attivare le opzioni di ricerca e generare nuovamente il progetto.
 
-Uso [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) oppure [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) per indicare al compilatore di creare i file SBR. Per creare i file con estensione bsc, è possibile chiamare [BSCMAKE](../../build/reference/bscmake-command-line.md) dalla riga di comando. Mediante l'utilità BSCMAKE dalla riga di comando offre un controllo più preciso sulla manipolazione dei file di informazioni. Visualizzare [riferimenti a BSCMAKE](../../build/reference/bscmake-reference.md) per altre informazioni.
+Uso [/FR](fr-fr-create-dot-sbr-file.md) oppure [/Fr](fr-fr-create-dot-sbr-file.md) per indicare al compilatore di creare i file SBR. Per creare i file con estensione bsc, è possibile chiamare [BSCMAKE](bscmake-command-line.md) dalla riga di comando. Mediante l'utilità BSCMAKE dalla riga di comando offre un controllo più preciso sulla manipolazione dei file di informazioni. Visualizzare [riferimenti a BSCMAKE](bscmake-reference.md) per altre informazioni.
 
 > [!TIP]
 >  È possibile attivare la generazione dei file SBR ma lasciare la generazione del file con estensione bsc disattivata. In questo modo fast compilazioni ma consente inoltre di creare rapidamente un nuovo file BSC attivando la generazione del file con estensione bsc e compilazione del progetto.
 
 È possibile ridurre il tempo, memoria e spazio su disco necessario per compilare un file BSC riducendo le dimensioni del file con estensione bsc.
 
-Visualizzare [General Property Page (Project)](../../ide/general-property-page-project.md) per informazioni su come creare un file del browser nell'ambiente di sviluppo.
+Visualizzare [General Property Page (Project)](general-property-page-project.md) per informazioni su come creare un file del browser nell'ambiente di sviluppo.
 
 ### <a name="to-create-a-smaller-bsc-file"></a>Per creare un file BSC più piccolo
 
-1. Uso [opzioni della riga di comando di BSCMAKE](../../build/reference/bscmake-options.md) per escludere informazioni dal file di informazioni di visualizzazione.
+1. Uso [opzioni della riga di comando di BSCMAKE](bscmake-options.md) per escludere informazioni dal file di informazioni di visualizzazione.
 
 1. Ometti i simboli locali in uno o più file SBR durante la compilazione o l'assemblaggio.
 
@@ -45,5 +45,5 @@ Visualizzare [General Property Page (Project)](../../ide/general-property-page-p
 
 ## <a name="see-also"></a>Vedere anche
 
-[Strumenti per la compilazione in C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[Riferimento a BSCMAKE](../../build/reference/bscmake-reference.md)
+[Strumenti di compilazione MSVC aggiuntive](c-cpp-build-tools.md)<br/>
+[Riferimento a BSCMAKE](bscmake-reference.md)

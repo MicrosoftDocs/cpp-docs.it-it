@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 9a116f41efc791ed90fbac8065bc339172c9ea9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6530045870573921cf626ceeec4c1dca10cdbfb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572386"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816178"
 ---
 # <a name="project-build-error-prj0003"></a>Errore di compilazione progetto PRJ0003
 
@@ -27,7 +27,7 @@ Possibili cause di questo errore includono:
 
 - Privilegi di sicurezza insufficienti. Verificare di disporre di privilegi di sicurezza.
 
-- I percorsi di file eseguibile specificati nel **directory di VC + +** non includono il percorso per lo strumento che si sta provando a eseguire. Per informazioni, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md)
+- I percorsi di file eseguibile specificati nel **directory di VC + +** non includono il percorso per lo strumento che si sta provando a eseguire. Per informazioni, vedere [impostare del compilatore e proprietà di compilazione](../../build/working-with-project-properties.md)
 
 - Per progetti makefile, non sono presenti un comando da eseguire in uno **riga di comando di compilazione** oppure **ricompilazione della riga di comando**.
 

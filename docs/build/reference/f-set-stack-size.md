@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 31d694c176afd3c79cde172248bfcd93d1346b54
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414447"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820416"
 ---
 # <a name="f-set-stack-size"></a>/F (Imposta la dimensione dello stack)
 
@@ -38,13 +38,13 @@ Potrebbe essere necessario aumentare la dimensione dello stack se il programma r
 
 È anche possibile impostare la dimensione dello stack:
 
-- Usando il **/stack** l'opzione del linker. Per altre informazioni, vedere [/stack](../../build/reference/stack.md).
+- Usando il **/stack** l'opzione del linker. Per altre informazioni, vedere [/stack](stack.md).
 
-- Utilizzo di EDITBIN sul file .exe. Per altre informazioni, vedere [riferimenti a EDITBIN](../../build/reference/editbin-reference.md).
+- Utilizzo di EDITBIN sul file .exe. Per altre informazioni, vedere [riferimenti a EDITBIN](editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
@@ -56,5 +56,5 @@ Potrebbe essere necessario aumentare la dimensione dello stack se il programma r
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

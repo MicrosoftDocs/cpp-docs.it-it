@@ -5,12 +5,12 @@ f1_keywords:
 - /Qspectre
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: af04a905fdb3b509a90249c6d55a28ccdaa39318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507315"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812460"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,7 +28,7 @@ Il **/Qspectre** opzione è disattivata per impostazione predefinita.
 
 Nella versione iniziale, il **/Qspectre** opzione funzionava solo nel codice ottimizzato. In Visual Studio 2017 versione 15.7 e successive, il **/Qspectre** opzione è supportata in tutti i livelli di ottimizzazione.
 
-Sono disponibili nelle versioni con mitigazione Spectre anche le librerie di Microsoft Visual C++. Le librerie mitigate di Spectre per Visual Studio 2017 possono essere scaricate in Visual Studio Installer. Vengono trovati nel **singoli componenti** disponibile nella scheda **compilatori, strumenti di compilazione e runtime**, e il nome include "Libs per Spectre". DLL e librerie di runtime statica con mitigazione attivata sono entrambe disponibili per un subset dei runtime Visual C++: codice di avvio di VC + +, vcruntime140, msvcp140, concrt140 e vcamp140. Le DLL sono supportate per la distribuzione dell'applicazione locale di sola lettura. il contenuto di Visual C++ 2017 Runtime librerie Redistributable non è stato modificato. È anche possibile installare le librerie mitigate di Spectre per MFC e ATL, disponibili nel **singoli componenti** disponibile nella scheda **SDK, librerie e Framework**.
+Sono disponibili nelle versioni con mitigazione Spectre anche le librerie di Microsoft Visual C++. Le librerie mitigate di Spectre per Visual Studio 2017 possono essere scaricate in Visual Studio Installer. Vengono trovati nel **singoli componenti** disponibile nella scheda **compilatori, strumenti di compilazione e runtime**, e il nome include "Libs per Spectre". Sono disponibili per un subset dei runtime Visual C++ sia DLL e librerie di runtime statica con mitigazione abilitata: Codice di avvio di VC + +, vcruntime140, msvcp140, concrt140 e vcamp140. Le DLL sono supportate per la distribuzione dell'applicazione locale di sola lettura. il contenuto di Visual C++ 2017 Runtime librerie Redistributable non è stato modificato. È anche possibile installare le librerie mitigate di Spectre per MFC e ATL, disponibili nel **singoli componenti** disponibile nella scheda **SDK, librerie e Framework**.
 
 ### <a name="applicability"></a>Applicabilità
 
@@ -36,7 +36,7 @@ Se il codice viene eseguito sui dati che attraversa un limite di trust, è consi
 
 ### <a name="availability"></a>Disponibilità
 
-Il **/Qspectre** opzione è disponibile in Visual Studio 2017 versione 15.5.5 e in tutti gli aggiornamenti ai compilatori di Microsoft Visual C++ (MSVC) effettuati a partire dal 23 gennaio 2018. Usare l'installazione di Visual Studio per aggiornare il compilatore e installare le librerie mitigate di Spectre come singoli componenti. Il **/Qspectre** opzione è disponibile anche in Visual Studio 2015 Update 3 tramite una patch. Per altre informazioni, vedere [4338871 KB](https://support.microsoft.com/help/4338871).
+Il **/Qspectre** opzione è disponibile in Visual Studio 2017 versione 15.5.5 e in tutti gli aggiornamenti per i compilatori Microsoft MSVC (MSVC) effettuati a partire dal 23 gennaio 2018. Usare l'installazione di Visual Studio per aggiornare il compilatore e installare le librerie mitigate di Spectre come singoli componenti. Il **/Qspectre** opzione è disponibile anche in Visual Studio 2015 Update 3 tramite una patch. Per altre informazioni, vedere [4338871 KB](https://support.microsoft.com/help/4338871).
 
 Tutte le versioni di Visual Studio 2017 versione 15.5 e tutte le anteprime di Visual Studio 2017 versione 15.6 includono un'opzione, non documentata **/d2guardspecload**, equivalente al comportamento iniziale della **/Qspectre**. È possibile usare **/d2guardspecload** applicare attenuazioni stesso al codice in queste versioni del compilatore. Aggiornare la compilazione da usare **/Qspectre** nei compilatori che supportano l'opzione; le **/Qspectre** opzione può supportare anche nuove soluzioni di attenuazione nelle versioni più recenti del compilatore.
 
@@ -58,7 +58,7 @@ Il **/Qspectre** opzione del compilatore genera il codice che si collega in modo
 - ATL Visual C++ per \[(x86 o x64) | ARM | ARM64] con Mitigazioni Spectre
 - MFC Visual C++ per \[x86 o x64 | ARM | ARM64] con Mitigazioni Spectre
 
-Se si compila il codice usando **/Qspectre** e tali librerie non sono installati, i report di sistema di compilazione **avviso MSB8038: mitigazione Spectre è abilitata, ma le librerie mitigate di Spectre non sono state trovate**. Se non è possibile compilare codice MFC o ATL e il linker segnala un errore, ad esempio **errore irreversibile LNK1104: Impossibile aprire il file 'OLDNAMES. lib'**, potrebbero trattarsi di queste librerie sono mancante.
+Se si compila il codice usando **/Qspectre** e tali librerie non sono installati, i report di sistema di compilazione **avviso MSB8038: Mitigazione Spectre è abilitata, ma le librerie mitigate di Spectre non sono state trovate**. Se non è possibile compilare codice MFC o ATL e il linker segnala un errore, ad esempio **errore irreversibile LNK1104: Impossibile aprire il file 'OLDNAMES. lib'**, potrebbero trattarsi di queste librerie sono mancante.
 
 ### <a name="additional-information"></a>Informazioni aggiuntive
 
@@ -66,7 +66,7 @@ Per altre informazioni, vedere ufficiale [Microsoft Security Advisory ADV180002,
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
@@ -78,6 +78,6 @@ Per altre informazioni, vedere ufficiale [Microsoft Security Advisory ADV180002,
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /Q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni /Q (operazioni di basso livello)](q-options-low-level-operations.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

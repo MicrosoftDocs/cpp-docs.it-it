@@ -7,16 +7,16 @@ helpviewer_keywords:
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-ms.openlocfilehash: b1ca214d8c840d9e993d5a89823b63868a664bec
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2b6737abd76c03186881e83bbd2bf286be6ffe2f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424886"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813227"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Specifica delle DLL per il caricamento ritardato
 
-È possibile specificare le DLL di ritardo caricare con il [/DELAYLOAD fa](../../build/reference/delayload-delay-load-import.md):`dllname` l'opzione del linker. Se non si intende usare una versione personalizzata di una funzione di supporto, è necessario anche collegare il programma a delayimp.lib (per le applicazioni desktop) o a dloadhelper.lib (per le app dello Store).
+È possibile specificare le DLL di ritardo caricare con il [/DELAYLOAD fa](delayload-delay-load-import.md):`dllname` l'opzione del linker. Se non si intende usare una versione personalizzata di una funzione di supporto, è necessario anche collegare il programma a delayimp.lib (per le applicazioni desktop) o a dloadhelper.lib (per le app dello Store).
 
 Di seguito è riportato un esempio semplice di caricamento ritardato di una DLL:
 
@@ -37,4 +37,4 @@ Compilare la versione DEBUG del progetto. Eseguire il codice un'istruzione alla 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Supporto per le DLL a caricamento ritardato nel linker](linker-support-for-delay-loaded-dlls.md)

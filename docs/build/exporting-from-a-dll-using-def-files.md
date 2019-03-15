@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: bed47c2c69b154c6bab996299eaeb4173c8298f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416553"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816997"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Esportazione da una DLL tramite i file DEF
 
@@ -21,7 +21,7 @@ Un file DEF minimo deve contenere le istruzioni di definizione moduli seguenti:
 
 - La prima istruzione nel file deve essere l'istruzione LIBRARY. Questa istruzione identifica il file DEF come appartenente a una DLL. L'istruzione LIBRARY è seguita dal nome della DLL. Il linker colloca questo nome nella libreria di importazione della DLL.
 
-- L'istruzione EXPORTS Elenca i nomi e, facoltativamente, i valori ordinali delle funzioni esportate dalla DLL. Funzione viene assegnato un valore ordinale seguendo il nome della funzione con un simbolo di chiocciola (@) e un numero. Quando si specificano valori ordinali, devono essere compresi nell'intervallo da 1 a N, dove N è il numero delle funzioni esportate dalla DLL. Se si desidera esportare funzioni tramite ordinale, vedere [esportazione di funzioni da una DLL per ordinale anziché al nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) insieme a questo argomento.
+- L'istruzione EXPORTS Elenca i nomi e, facoltativamente, i valori ordinali delle funzioni esportate dalla DLL. Funzione viene assegnato un valore ordinale seguendo il nome della funzione con un simbolo di chiocciola (@) e un numero. Quando si specificano valori ordinali, devono essere compresi nell'intervallo da 1 a N, dove N è il numero delle funzioni esportate dalla DLL. Se si desidera esportare funzioni tramite ordinale, vedere [esportazione di funzioni da una DLL per ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) insieme a questo argomento.
 
 Una DLL che contiene il codice per implementare una struttura di ricerca binario, ad esempio, potrebbe essere simile al seguente:
 
@@ -56,32 +56,32 @@ Si noti che MFC Usa i file DEF per esportare funzioni e classi da MFCx0.dll.
 
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
 
-- [Esportazione da una DLL tramite dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Esportazione da una DLL tramite dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Esportazione e importazione utilizzando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Esportazione e importazione utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Determinare quale metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)
+- [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
-- [Importare in un'applicazione che usa declspec](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inizializzare una DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
-- [DEF (file)](../build/reference/module-definition-dot-def-files.md)
+- [DEF (file)](reference/module-definition-dot-def-files.md)
 
-- [Regole relative alle istruzioni di definizione moduli](../build/reference/rules-for-module-definition-statements.md)
+- [Regole relative alle istruzioni di definizione moduli](reference/rules-for-module-definition-statements.md)
 
-- [Nomi decorati](../build/reference/decorated-names.md)
+- [Nomi decorati](reference/decorated-names.md)
 
-- [Importazione ed esportazione di funzioni inline](../build/importing-and-exporting-inline-functions.md)
+- [Importazione ed esportazione di funzioni inline](importing-and-exporting-inline-functions.md)
 
-- [Importazioni reciproche](../build/mutual-imports.md)
+- [Importazioni reciproche](mutual-imports.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esportazione da una DLL](../build/exporting-from-a-dll.md)
+[Esportazione da una DLL](exporting-from-a-dll.md)

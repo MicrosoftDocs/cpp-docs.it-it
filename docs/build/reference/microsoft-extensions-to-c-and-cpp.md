@@ -29,12 +29,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: b4025413fcf6389249fc011da020c0cd7c6f4519
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447437"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813890"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Estensioni Microsoft a C e C++
 
@@ -268,21 +268,21 @@ Sotto **/Ze**, è necessario includere lt;iso646.h&gt Se si desidera utilizzare 
 
 - & (bitand)
 
-- &#124;(bitor)
+- &#124; (bitor)
 
 - ~ (compl)
 
 - ! (not)
 
-- ! = (not_eq)
+- != (not_eq)
 
-- &#124;&#124;(o)
+- &#124;&#124; (or)
 
 - &#124;= (or_eq)
 
 - ^ (xor)
 
-- ^ = (xor_eq)
+- ^= (xor_eq)
 
 ## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>Indirizzo del valore letterale stringa è di tipo const char [], non const char (*)]
 
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-- [/Za, /Ze (disabilita le estensioni del linguaggio)](../../build/reference/za-ze-disable-language-extensions.md)
-- [Opzioni del compilatore](../../build/reference/compiler-options.md)
-- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+- [/Za, /Ze (disabilita le estensioni del linguaggio)](za-ze-disable-language-extensions.md)
+- [Opzioni del compilatore MSVC](compiler-options.md)
+- [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

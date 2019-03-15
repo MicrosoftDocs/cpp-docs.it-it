@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258632"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822665"
 ---
 # <a name="mfc-application-wizard"></a>Creazione guidata applicazione MFC
 
 La creazione guidata applicazione MFC genera un'applicazione che, quando viene compilato, implementa la funzionalità di base di un'applicazione eseguibile (.exe) di Windows. L'applicazione di starter MFC include i file di origine (. cpp) di C++, i file di risorse (RC), i file di intestazione (h) e un file di progetto (vcxproj). Il codice che viene generato in questi file di avvio è basato su MFC.
 
 > [!NOTE]
->  A seconda delle opzioni selezionato, la procedura guidata crea i file aggiuntivi nel progetto. Ad esempio, se si seleziona **della Guida sensibile al contesto** nel [funzionalità avanzate](../../mfc/reference/advanced-features-mfc-application-wizard.md) pagina, la procedura guidata crea i file che sono necessari per compilare i file della Guida del progetto. Per altre informazioni sui file creati nella procedura guidata, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)e vedere il file Readme. txt nel progetto.
+>  A seconda delle opzioni selezionato, la procedura guidata crea i file aggiuntivi nel progetto. Ad esempio, se si seleziona **della Guida sensibile al contesto** nel [funzionalità avanzate](../../mfc/reference/advanced-features-mfc-application-wizard.md) pagina, la procedura guidata crea i file che sono necessari per compilare i file della Guida del progetto. Per altre informazioni sui file creati nella procedura guidata, vedere [tipi di File creati per i progetti Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)e vedere il file Readme. txt nel progetto.
 
 ## <a name="overview"></a>Panoramica
 

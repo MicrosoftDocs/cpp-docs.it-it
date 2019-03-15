@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PDBPATH dumpbin option
 - PDB files, path
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
-ms.openlocfilehash: e59f36905bcb9eb379e2bc17c9041b81fd98a535
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f29b8e61fbfbdb0f373e3e7510cb3f1fe0b9cc2a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420037"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809210"
 ---
 # <a name="pdbpath"></a>/PDBPATH
 
@@ -51,5 +51,5 @@ Quando si usa il debugger di Visual Studio, è possibile che si verifichi un pro
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)<br/>
-[/PDBALTPATH (usa percorso PDB alternativo)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)
+[Opzioni di DUMPBIN](dumpbin-options.md)<br/>
+[/PDBALTPATH (usa percorso PDB alternativo)](pdbaltpath-use-alternate-pdb-path.md)

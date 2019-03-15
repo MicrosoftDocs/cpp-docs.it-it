@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612368"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822626"
 ---
 # <a name="import-directive-c"></a>Direttiva #import (C++)
 
@@ -72,7 +72,7 @@ Uno o più [#import attributi](#_predir_the_23import_directive_import_attributes
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-o -
+\-oppure-
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -121,16 +121,16 @@ Le seguenti ottimizzazioni del compilatore forniti con il **#import** direttiva:
 
 - Quando **#import** viene elaborato, il compilatore controlla innanzitutto se l'intestazione esiste ed è aggiornata. In caso affermativo, non è necessario ricrearla.
 
-Il **#import** direttiva anche partecipa alla ricompilazione minima e può essere inserita in un file di intestazione precompilata. Visualizzare [creazione di file di intestazione precompilato](../build/reference/creating-precompiled-header-files.md) per altre informazioni.
+Il **#import** direttiva anche partecipa alla ricompilazione minima e può essere inserita in un file di intestazione precompilata. Visualizzare [creazione di file di intestazione precompilato](../build/creating-precompiled-header-files.md) per altre informazioni.
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> File di intestazione della libreria di tipi primaria
 Il file di intestazione principale della libreria dei tipi è costituito da sette sezioni:
 
-- Boilerplate di intestazione: include i commenti, l'istruzione `#include` per COMDEF.H (che definisce alcune macro standard utilizzate nell'intestazione) e altre informazioni varie sull'installazione.
+- Boilerplate di intestazione: È costituito da commenti, `#include` informativa per COMDEF. H (che definisce alcune macro standard utilizzate nell'intestazione) e altre informazioni varie sull'installazione.
 
-- Riferimenti in avanti e typedef: includono le dichiarazioni di struttura come `struct IMyInterface` e typedef.
+- I riferimenti in avanti e typedef: Include ad esempio le dichiarazioni di struttura `struct IMyInterface` e typedef.
 
-- Dichiarazioni del puntatore intelligente: la classe modello `_com_ptr_t` è un'implementazione di puntatore intelligente che incapsula i puntatori di interfaccia ed elimina la necessità di chiamare `AddRef`, `Release`, `QueryInterface` funzioni. Nasconde inoltre la chiamata a `CoCreateInstance` durante la creazione di un nuovo oggetto COM. In questa sezione viene utilizzata istruzione macro `_COM_SMARTPTR_TYPEDEF` per definire i typedef delle interfacce COM come specializzazioni di modello il [com_ptr_t](../cpp/com-ptr-t-class.md) classe modello. Ad esempio, per l'interfaccia `IMyInterface`, il. File TLH conterrà:
+- Dichiarazioni del puntatore intelligente: La classe modello `_com_ptr_t` è un'implementazione di puntatore intelligente che incapsula i puntatori di interfaccia ed elimina la necessità di chiamare `AddRef`, `Release`, `QueryInterface` funzioni. Nasconde inoltre la chiamata a `CoCreateInstance` durante la creazione di un nuovo oggetto COM. In questa sezione viene utilizzata istruzione macro `_COM_SMARTPTR_TYPEDEF` per definire i typedef delle interfacce COM come specializzazioni di modello il [com_ptr_t](../cpp/com-ptr-t-class.md) classe modello. Ad esempio, per l'interfaccia `IMyInterface`, il. File TLH conterrà:
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -144,13 +144,13 @@ Il file di intestazione principale della libreria dei tipi è costituito da sett
 
    Il tipo `IMyInterfacePtr` può essere quindi utilizzato al posto del puntatore a interfaccia raw `IMyInterface*`. Di conseguenza, non è necessario chiamare le varie `IUnknown` funzioni membro
 
-- Dichiarazioni TypeInfo: principalmente costituite da definizioni di classi e altri elementi che espongono i singoli elementi typeinfo restituiti da `ITypeLib:GetTypeInfo`. In questa sezione, ogni elemento typeinfo della libreria dei tipi si riflette nell'intestazione in un formato che dipende dalle informazioni `TYPEKIND`.
+- Dichiarazioni TypeInfo: È costituito principalmente da definizioni di classi e altri elementi che espongono i singoli elementi typeinfo restituiti da `ITypeLib:GetTypeInfo`. In questa sezione, ogni elemento typeinfo della libreria dei tipi si riflette nell'intestazione in un formato che dipende dalle informazioni `TYPEKIND`.
 
-- Definizione di GUID obsoleta facoltativa: contiene le inizializzazioni delle costanti GUID denominate. Si tratta di nomi nel formato `CLSID_CoClass` e `IID_Interface`, simili a quelli generati dal compilatore MIDL.
+- Definizione di GUID obsoleta facoltativa: Contiene le inizializzazioni delle costanti GUID denominate. Si tratta di nomi nel formato `CLSID_CoClass` e `IID_Interface`, simili a quelli generati dal compilatore MIDL.
 
 - Istruzione `#include` per l'intestazione secondaria della libreria dei tipi.
 
-- Boilerplate del piè di pagina: attualmente include `#pragma pack(pop)`.
+- Boilerplate del piè di pagina: Include attualmente `#pragma pack(pop)`.
 
 Tutte le sezioni, tranne la sezione di boilerplate boilerplate e nel piè di pagina intestazione, sono racchiusi in uno spazio dei nomi con il nome specificato per il `library` istruzione nel file IDL originale. È possibile utilizzare i nomi dell'intestazione della libreria dei tipi mediante una qualificazione esplicita con il nome dello spazio dei nomi oppure includendo la seguente istruzione:
 

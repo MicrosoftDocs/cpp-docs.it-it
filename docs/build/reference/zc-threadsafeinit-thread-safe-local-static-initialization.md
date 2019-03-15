@@ -1,5 +1,5 @@
 ---
-title: '/Zc: threadsafeinit (inizializzazione thread-safe locale statico)'
+title: /Zc:threadSafeInit (Thread-safe Local Static Initialization)
 ms.date: 03/14/2018
 f1_keywords:
 - threadSafeInit
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: a0fc4b34-2cf0-45a7-a642-b8afc4ca19f2
-ms.openlocfilehash: a0a5edda3d0d178a03fa98cf689b257cd5ab3f53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92a1bfa5ec3bab2814397d51e35e617b7666c706
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605829"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808339"
 ---
-# <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc: threadsafeinit (inizializzazione thread-safe locale statico)
+# <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc:threadSafeInit (Thread-safe Local Static Initialization)
 
 Il **/Zc: threadsafeinit** opzione del compilatore indica al compilatore per inizializzare le variabili locali statiche (ambito funzione) in modo thread-safe, eliminando la necessità di una sincronizzazione manuale. Solo l'inizializzazione è thread-safe. Uso e la modifica delle variabili locali statiche da più thread devono ancora essere sincronizzati manualmente. Questa opzione è disponibile a partire da Visual Studio 2015. Per impostazione predefinita, Visual Studio abilita questa opzione.
 
@@ -40,7 +40,7 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Dal **configurazioni** dal menu a discesa, scegliere **tutte le configurazioni**.
 
@@ -50,6 +50,6 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonsta
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (conformità)](../../build/reference/zc-conformance.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (conformità)](zc-conformance.md)<br/>

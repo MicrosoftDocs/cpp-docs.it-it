@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: b0af9fa0cc61b82853e64808897b30aaf2fa887d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3c18a5310646ea39c0599f709e9fddc3990b7a2b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415162"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813058"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr (Enable extern constexpr variables)
 
@@ -30,7 +30,7 @@ Se un file di intestazione contiene una variabile dichiarata `extern constexpr`,
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Per impostare questa opzione del compilatore in Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
@@ -38,5 +38,5 @@ Se un file di intestazione contiene una variabile dichiarata `extern constexpr`,
 
 ## <a name="see-also"></a>Vedere anche
 
-[/Zc (conformità)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (conformità)](zc-conformance.md)<br/>
 [Auto (parola chiave)](../../cpp/auto-keyword.md)

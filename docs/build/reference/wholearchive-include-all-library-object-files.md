@@ -2,12 +2,12 @@
 title: /WHOLEARCHIVE (Include tutti i file oggetto della raccolta)
 ms.date: 11/04/2016
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: cc260f139a9312bbac7fed34471481401db770d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: db99816b18110b424647603196040997044e7fbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412913"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808651"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE (Include tutti i file oggetto della raccolta)
 
@@ -27,7 +27,7 @@ L'opzione /WHOLEARCHIVE è stata introdotta in Visual Studio 2015 Update 2.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **riga di comando** pagina delle proprietà sotto **delle proprietà di configurazione**, **Linker**.
 
@@ -35,5 +35,5 @@ L'opzione /WHOLEARCHIVE è stata introdotta in Visual Studio 2015 Update 2.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

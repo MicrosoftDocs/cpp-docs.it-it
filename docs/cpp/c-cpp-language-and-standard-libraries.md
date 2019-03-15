@@ -2,12 +2,12 @@
 title: Linguaggio C/C++ e librerie Standard
 ms.date: 11/04/2016
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: c071db1dcc6363e29f5dd7ca895330d738e021cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ec50a055db07514d10ac078030dd1878d033cc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614422"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816386"
 ---
 # <a name="cc-language-and-standard-libraries"></a>Linguaggio C/C++ e librerie Standard
 
@@ -24,5 +24,5 @@ In questa sezione della documentazione include le linee guida e documentazione d
 |[Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)|Contenuto di riferimento per l'implementazione Microsoft del runtime C (CRT).|
 |[Libreria SafeInt](../windows/safeint-library.md)|Contenuto di riferimento per una libreria di funzioni che gestiscono i valori integer senza il rischio di overflow.|
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Descrive le funzionalità principali di Visual C++ in Visual Studio e i collegamenti al resto della documentazione di Visual C++.|
-|[IDE e strumenti di sviluppo](../ide/ide-and-tools-for-visual-cpp-development.md)|Collegamenti ad altri articoli che contengono informazioni su come usare Visual Studio e relativi strumenti per creare, compilare e distribuire le app C++.|
+|[Cenni preliminari sullo sviluppo di C++ in Visual Studio](../overview-of-cpp-development.md)|Collegamenti ad altri articoli che contengono informazioni su come usare Visual Studio e relativi strumenti per creare, compilare e distribuire le app C++.|
 |[Novità di Visual C++](../what-s-new-for-visual-cpp-in-visual-studio.md)|Descrive le nuove funzionalità e miglioramenti in questa versione.|

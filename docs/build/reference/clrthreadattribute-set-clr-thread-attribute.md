@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: f1a637f74cf1da608149779821a25340d35f8739
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417151"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57806779"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Imposta l'attributo thread CLR)
 
@@ -41,7 +41,7 @@ Impostare l'attributo thread è valida solo quando si compila un .exe, poiché i
 
 Se si usa il punto di ingresso predefinito (main o wmain, ad esempio) specificare il modello di threading utilizzando /CLRTHREADATTRIBUTE o posizionando l'attributo threading (STAThreadAttribute o MTAThreadAttribute) sulla funzione voce predefinita.
 
-Se si usa un punto di ingresso non predefinito, specificare il modello di threading utilizzando /CLRTHREADATTRIBUTE. oppure inserendo il threading nella funzione di ingresso non predefinito dell'attributo e quindi specificare il punto di ingresso non predefinite con [/ENTRY](../../build/reference/entry-entry-point-symbol.md) .
+Se si usa un punto di ingresso non predefinito, specificare il modello di threading utilizzando /CLRTHREADATTRIBUTE. oppure inserendo il threading nella funzione di ingresso non predefinito dell'attributo e quindi specificare il punto di ingresso non predefinite con [/ENTRY](entry-entry-point-symbol.md) .
 
 Se il modello di threading specificato nel codice sorgente non concorda con il modello di threading specificato con /CLRTHREADATTRIBUTE, il linker verrà ignorato e applicare il modello di threading specificato nel codice sorgente.
 
@@ -49,7 +49,7 @@ Sarà necessario per l'utilizzo thread singolo, ad esempio, se il programma CLR 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -65,5 +65,5 @@ Sarà necessario per l'utilizzo thread singolo, ad esempio, se il programma CLR 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

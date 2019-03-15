@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414755"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816451"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (crea file binario in modalità Kernel)
 
@@ -46,7 +46,7 @@ La tabella seguente elenca le modifiche nel comportamento del compilatore quando
 |RTTI|Disabilitato. Tutte le istanze delle parole chiave `dynamic_cast` e `typeid` generano un errore del compilatore, a meno che `dynamic_cast` venga utilizzata in modo statico.|
 |`new` e `delete`|È necessario definire in modo esplicito l'operatore `new()` o `delete()`, né il tipo né il runtime fornirà una definizione predefinita.|
 
-Custom convenzioni di chiamata, il [/GS](../../build/reference/gs-buffer-security-check.md) opzione di compilazione e tutte le ottimizzazioni sono consentite quando si utilizza il **/kernel** opzione. L'inline in gran parte non è influenzato **/kernel**, con la stessa semantica rispettata dal compilatore. Se si desidera assicurarsi che il `__forceinline` qualificatore di inline è rispettato, è necessario assicurarsi che l'avviso [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) è abilitata in modo da sapere quando una particolare `__forceinline` funzione non resa inline.
+Custom convenzioni di chiamata, il [/GS](gs-buffer-security-check.md) opzione di compilazione e tutte le ottimizzazioni sono consentite quando si utilizza il **/kernel** opzione. L'inline in gran parte non è influenzato **/kernel**, con la stessa semantica rispettata dal compilatore. Se si desidera assicurarsi che il `__forceinline` qualificatore di inline è rispettato, è necessario assicurarsi che l'avviso [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) è abilitata in modo da sapere quando una particolare `__forceinline` funzione non resa inline.
 
 Quando viene passato al compilatore il **/kernel** switch, viene predefinita una macro del preprocessore denominata `_KERNEL_MODE` e ha il valore **1**. È possibile utilizzare questo metodo per compilare in modo condizionale il codice basato sul fatto che l'ambiente di esecuzione sia in modalità utente o in modalità kernel. Ad esempio, il codice seguente specifica che la classe deve trovarsi in un segmento di memoria non divisibile in pagine quando viene compilata per l'esecuzione in modalità kernel.
 
@@ -88,7 +88,7 @@ Il **/kernel** opzione e il **/driver** opzione funzionano in modo indipendente 
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Impostare l'opzione /kernel del compilatore in Visual Studio
 
-1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **C/C++** cartella.
 
@@ -98,5 +98,5 @@ Il **/kernel** opzione e il **/driver** opzione funzionano in modo indipendente 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

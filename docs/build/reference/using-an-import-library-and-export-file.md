@@ -6,12 +6,12 @@ helpviewer_keywords:
 - import libraries, using
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
-ms.openlocfilehash: 75a93d97478050718b3f6c32fa83d7320a38954b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 030b792d4bbebecef9d9303238657a564a142ecf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412978"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810952"
 ---
 # <a name="using-an-import-library-and-export-file"></a>Utilizzo di una libreria di importazione e di un file di esportazione
 
@@ -29,4 +29,4 @@ Infine, collegare il programma che è iniziato con. Il comando di collegamento, 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di librerie di importazione e file di esportazione](../../build/reference/working-with-import-libraries-and-export-files.md)
+[Uso di librerie di importazione e file di esportazione](working-with-import-libraries-and-export-files.md)

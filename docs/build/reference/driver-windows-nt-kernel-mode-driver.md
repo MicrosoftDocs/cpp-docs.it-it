@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 596566c357dd78d656e5e564a9b0f9097d20637e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423911"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811680"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Driver in modalità kernel di Windows NT)
 
@@ -33,13 +33,13 @@ Se **/DRIVER** non viene specificato, questi bit non sono impostati dal linker.
 
 Se **/DRIVER** specificato:
 
-- **/Fixed: No** è attiva. Per altre informazioni, vedere [/FIXED (Indirizzo di base fisso)](../../build/reference/fixed-fixed-base-address.md).
+- **/Fixed: No** è attiva. Per altre informazioni, vedere [/FIXED (Indirizzo di base fisso)](fixed-fixed-base-address.md).
 
-- L'estensione del file di output è impostato su Sys. Uso **/out** per modificare il nome file predefinito e l'estensione. Per altre informazioni, vedere [/OUT (nome file di output)](../../build/reference/out-output-file-name.md).
+- L'estensione del file di output è impostato su Sys. Uso **/out** per modificare il nome file predefinito e l'estensione. Per altre informazioni, vedere [/OUT (nome file di output)](out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -53,5 +53,5 @@ Se **/DRIVER** specificato:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

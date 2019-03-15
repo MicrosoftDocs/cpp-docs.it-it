@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422117"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811888"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Genera funzioni intrinseche)
 
@@ -41,7 +41,7 @@ Visualizzare [intrinseco](../../preprocessor/intrinsic.md) per altre informazion
 
 Le funzioni a virgola mobile intrinseche non esegue alcun controllo speciali su valori di input e quindi funzionano in intervalli di input limitati e hanno condizioni limite le routine di libreria con lo stesso nome e la gestione delle eccezioni diverse. Usando i formati intrinseci reali implica la perdita di gestione delle eccezioni IEEE e dei `_matherr` e `errno` funzionalità; quest'ultimo comporta la perdita della conformità ANSI. Tuttavia, intrinseci possono velocizzare notevolmente la virgola mobile cospicuo della virgola programmi e per molti programmi, i problemi di conformità sono di scarso valore pratico.
 
-È possibile usare la [Za](../../build/reference/za-ze-disable-language-extensions.md) opzione del compilatore per eseguire l'override della generazione delle opzioni a virgola mobile intrinseche true. In tal caso le funzioni vengono generate come routine della libreria che passano gli argomenti direttamente al chip a virgola mobile anziché inserirli nello stack del programma.
+È possibile usare la [Za](za-ze-disable-language-extensions.md) opzione del compilatore per eseguire l'override della generazione delle opzioni a virgola mobile intrinseche true. In tal caso le funzioni vengono generate come routine della libreria che passano gli argomenti direttamente al chip a virgola mobile anziché inserirli nello stack del programma.
 
 **FINE x86 specifico**
 
@@ -49,7 +49,7 @@ Utilizziamo inoltre [intrinseco](../../preprocessor/intrinsic.md) per creare le 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -63,7 +63,7 @@ Utilizziamo inoltre [intrinseco](../../preprocessor/intrinsic.md) per creare le 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
+[Opzioni /O (ottimizza codice)](o-options-optimize-code.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
 [Intrinseci del compilatore](../../intrinsics/compiler-intrinsics.md)

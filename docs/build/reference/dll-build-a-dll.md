@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: edad85b2890679e4247c7d34b4e19534e871f4dd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420063"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820507"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (compilazione di una DLL)
 
@@ -29,9 +29,9 @@ L'opzione /DLL compila una DLL come file di output principale. Una DLL contiene 
 
 1. [dllexport](../../cpp/dllexport-dllimport.md) nel codice sorgente
 
-1. Un' [esportazioni](../../build/reference/exports.md) istruzione in un file def
+1. Un' [esportazioni](exports.md) istruzione in un file def
 
-1. Un' [/Export](../../build/reference/export-exports-a-function.md) specifica in un comando LINK
+1. Un' [/Export](export-exports-a-function.md) specifica in un comando LINK
 
 Un programma può utilizzare più di un metodo.
 
@@ -43,7 +43,7 @@ Si noti che se si crea la libreria di importazione in un passaggio preliminare, 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **le proprietà di configurazione** cartella.
 
@@ -57,5 +57,5 @@ Si noti che se si crea la libreria di importazione in un passaggio preliminare, 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1853
 ms.assetid: ceb9b4a5-92bf-4573-8a9f-3109cc7743ce
-ms.openlocfilehash: 30cf003cc81cb27f7c68b7f0a38529e2d9c88ef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec2d6bf6bac46cca8bdc2e3b8fe7cc6b7799d78a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677825"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820728"
 ---
 # <a name="fatal-error-c1853"></a>Errore irreversibile C1853
 
@@ -21,4 +21,4 @@ Possibili cause:
 
 - L'intestazione precompilata è stato compilato con una versione precedente del compilatore. Provare a ricompilare l'intestazione con il compilatore corrente.
 
-- L'intestazione precompilata è C++ e in uso da C. provare a ricompilare l'intestazione per l'uso con C specificando uno dei [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) opzioni del compilatore o modifica il suffisso del file di origine a "c". Per altre informazioni, vedere [due opzioni per la precompilazione di codice](../../build/reference/creating-precompiled-header-files.md#two-choices-for-precompiling-code).
+- L'intestazione precompilata è C++ e in uso da C. provare a ricompilare l'intestazione per l'uso con C specificando uno dei [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) opzioni del compilatore o modifica il suffisso del file di origine a "c". Per altre informazioni, vedere [due opzioni per la precompilazione di codice](../../build/creating-precompiled-header-files.md#two-choices-for-precompiling-code).

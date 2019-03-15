@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-ms.openlocfilehash: 14d2f66401b7b7ed324b79b12b6de26c7ee450b2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420258"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822516"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Supporta archiviazione locale di thread indipendente da fiber)
 
@@ -33,11 +33,11 @@ Supporta l'indipendenza da fiber per i dati allocati mediante l'archiviazione th
 
 Dati dichiarato con `__declspec(thread)` viene fatto riferimento tramite un array di archiviazione thread-local (TLS). La matrice TLS è una matrice di indirizzi che il sistema mantiene per ogni thread. Ogni indirizzo di questa matrice fornisce la posizione dei dati di archiviazione thread-local.
 
-Un fiber è un oggetto semplice che è costituito da uno stack e un contesto di registro e può essere pianificato in thread diversi. Un fiber può eseguire in qualsiasi thread. Poiché un fiber può essere scambiato e riavviato in un secondo momento su un thread diverso, l'indirizzo della matrice di TLS non deve essere memorizzati nella cache o ottimizzato come una sottoespressione comune in una chiamata di funzione (vedere la [/Og (ottimizzazioni globali)](../../build/reference/og-global-optimizations.md) opzione Dettagli). **/GT** impedisce che tali ottimizzazioni.
+Un fiber è un oggetto semplice che è costituito da uno stack e un contesto di registro e può essere pianificato in thread diversi. Un fiber può eseguire in qualsiasi thread. Poiché un fiber può essere scambiato e riavviato in un secondo momento su un thread diverso, l'indirizzo della matrice di TLS non deve essere memorizzati nella cache o ottimizzato come una sottoespressione comune in una chiamata di funzione (vedere la [/Og (ottimizzazioni globali)](og-global-optimizations.md) opzione Dettagli). **/GT** impedisce che tali ottimizzazioni.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -51,5 +51,5 @@ Un fiber è un oggetto semplice che è costituito da uno stack e un contesto di 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

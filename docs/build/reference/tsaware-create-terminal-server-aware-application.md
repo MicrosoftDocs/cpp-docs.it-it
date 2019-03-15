@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: fe31763c5da21a724f0c9242e6eb8429a2379ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421493"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816945"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Crea un'applicazione con supporto Terminal Server)
 
@@ -34,15 +34,15 @@ Se un'applicazione è supporto Terminal Server, è necessario né si basano sui 
 
 Se si usa /TSAWARE e l'applicazione usa ancora i file con estensione INI, i file verranno condivisi da tutti gli utenti del sistema. Se è accettabile, è comunque possibile collegare l'applicazione con /TSAWARE; in caso contrario, è necessario usare /TSAWARE: No.
 
-L'opzione /TSAWARE è abilitato per impostazione predefinita per Windows e applicazioni console. Visualizzare [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) e [/VERSION](../../build/reference/version-version-information.md) per informazioni.
+L'opzione /TSAWARE è abilitato per impostazione predefinita per Windows e applicazioni console. Visualizzare [/SUBSYSTEM](subsystem-specify-subsystem.md) e [/VERSION](version-version-information.md) per informazioni.
 
 / TSAWARE non è valida per i driver, VxDs o DLL.
 
-Se un'applicazione è stata collegata a /TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) verranno visualizzate le informazioni in tal senso.
+Se un'applicazione è stata collegata a /TSAWARE, DUMPBIN [/HEADERS](headers.md) verranno visualizzate le informazioni in tal senso.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -56,7 +56,7 @@ Se un'applicazione è stata collegata a /TSAWARE, DUMPBIN [/HEADERS](../../build
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)<br/>
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)<br/>
 [L'archiviazione delle informazioni specifiche dell'utente](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [Applicazioni legacy in un ambiente Servizi Terminal](https://msdn.microsoft.com/library/aa382957.aspx)

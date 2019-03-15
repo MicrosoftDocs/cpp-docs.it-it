@@ -1,7 +1,8 @@
 ---
-title: Compilare codice C/C++ nella riga di comando
+title: Usare il set di strumenti MSVC dalla riga di comando - Visual Studio
+description: Usare la toolchain del compilatore Microsoft C++ (MSVC) dalla riga di comando all'esterno di IDE di Visual Studio.
 ms.custom: conceptual
-ms.date: 06/21/2018
+ms.date: 12/10/2018
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -9,28 +10,30 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: bc5080ff14cf8629c98077bf1e3e39e4b824b48b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452039"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812122"
 ---
-# <a name="build-cc-code-on-the-command-line"></a>Compilare codice C/C++ nella riga di comando
+# <a name="use-the-msvc-toolset-from-the-command-line"></a>Usare il set di strumenti MSVC dalla riga di comando
 
-È possibile compilare applicazioni C e C++ nella riga di comando usando gli strumenti inclusi in Visual Studio.
+È possibile compilare applicazioni C e C++ nella riga di comando usando gli strumenti inclusi in Visual Studio. È anche possibile scaricare il set di strumenti del compilatore come pacchetto autonomo dal [Build Tools per Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
 
-## <a name="how-to-get-the-command-line-tools"></a>Come ottenere gli strumenti da riga di comando
+## <a name="how-to-use-the-command-line-tools"></a>Come usare gli strumenti da riga di comando
 
 Quando si sceglie uno dei carichi di lavoro di C++ in Visual Studio Installer, l'installazione di Visual Studio *set strumenti della piattaforma*. Un set di strumenti della piattaforma include tutti i C e C++ gli strumenti per una specifica versione di Visual Studio, tra cui i compilatori C/C++, ai linker, gli assembler e altri strumenti di compilazione, nonché le librerie corrispondente. È possibile usare tutti questi strumenti dalla riga di comando e vengono inoltre utilizzati internamente dall'IDE di Visual Studio. Esistono compilatori ospitati da x86 e x64 ospitati separati e strumenti per compilare il codice per x86, x64, ARM e ARM64 destinazioni. Ogni set di strumenti per una particolare architettura di host e la destinazione build viene archiviato nella directory di Litware.
 
-Per funzionare correttamente, gli strumenti richiedono diverse variabili di ambiente specifiche da impostare. Questi vengono usati per aggiungerli al percorso e impostare includono file, file di libreria e percorsi SDK. Per renderlo semplice impostare queste variabili di ambiente, il programma di installazione crea personalizzato *file di comando*, o file batch, durante l'installazione. È possibile eseguire uno di questi file di comando in una finestra del prompt dei comandi per impostare un host specifico e architettura di destinazione build, versione di Windows SDK, piattaforma di destinazione e set strumenti della piattaforma. Per praticità, il programma di installazione crea anche i collegamenti nel menu di avvio (o alla pagina iniziale su Windows 8.x) windows il prompt dei comandi per gli sviluppatori che iniziano con questi file di comando, in modo che tutte le variabili di ambiente necessarie sono impostata e pronte all'uso.
+I set di strumenti del compilatore installati dipendono dal processore del computer e le opzioni selezionate durante l'installazione. Come minimo, vengono installati gli strumenti ospitati da x86 a 32 bit che compilare codice x86 nativo a 32 bit e strumenti di compilazione a 64 bit nativi x64 codice multipiattaforma. Se si dispone di Windows a 64 bit, vengono installati anche gli strumenti basati su x64 a 64 bit che compilano il codice nativo a 64 bit e tra gli strumenti di compilazione codice nativo a 32 bit. Se si sceglie di installare gli strumenti (Universal Windows Platform) C++ facoltativi, vengono installati anche gli strumenti nativi a 32 e 64 bit che creano codice ARM. Altri carichi di lavoro può installare altri strumenti.
 
-Le variabili di ambiente necessarie sono specifiche per l'installazione e l'architettura di compilazione scegliere e potrebbero essere modificate da aggiornamenti del prodotto. Pertanto, è consigliabile usare uno dei collegamenti al prompt dei comandi installati o file di comando invece di impostare le variabili di ambiente nel Windows manualmente. Per altre informazioni, vedere [impostare il percorso e le variabili di ambiente per compilazioni da riga di comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+## <a name="environment-variables-and-developer-command-prompts"></a>Prompt dei comandi per gli sviluppatori e le variabili di ambiente
 
-Il set di strumenti della riga di comando, i file di comando e tasti di scelta rapida del prompt dei comandi installati dipendono dal processore del computer e le opzioni selezionate durante l'installazione. Come minimo, vengono installati gli strumenti ospitati da x86 a 32 bit che compilare codice x86 nativo a 32 bit e strumenti di compilazione a 64 bit nativi x64 codice multipiattaforma. Se si dispone di Windows a 64 bit, vengono installati anche gli strumenti basati su x64 a 64 bit che compilano il codice nativo a 64 bit e tra gli strumenti di compilazione codice nativo a 32 bit. Se si sceglie di installare gli strumenti (Universal Windows Platform) C++ facoltativi, vengono installati anche gli strumenti nativi a 32 e 64 bit che creano codice ARM. Altri carichi di lavoro può installare altri strumenti.
+Per funzionare correttamente, gli strumenti richiedono diverse variabili di ambiente specifiche da impostare. Questi vengono usati per aggiungerli al percorso e impostare includono file, file di libreria e percorsi SDK. Per renderlo semplice impostare queste variabili di ambiente, il programma di installazione crea personalizzato *file di comando*, o file batch, durante l'installazione. È possibile eseguire uno di questi file di comando in una finestra del prompt dei comandi per impostare un host specifico e architettura di destinazione build, versione di Windows SDK, piattaforma di destinazione e set strumenti della piattaforma. Per praticità, il programma di installazione crea anche i collegamenti nel menu di avvio che avviano windows il prompt dei comandi per sviluppatori usando questi file di comando, in modo che tutte le variabili di ambiente necessarie sono impostate e pronte all'uso.
 
-## <a name="developer-command-prompt-shortcuts"></a>Tasti di scelta rapida del prompt dei comandi per gli sviluppatori
+Le variabili di ambiente necessarie sono specifiche per l'installazione e l'architettura di compilazione scegliere e potrebbero essere modificate da aggiornamenti del prodotto. Pertanto, è consigliabile usare uno dei collegamenti al prompt dei comandi installati o file di comando invece di impostare le variabili di ambiente nel Windows manualmente. Per altre informazioni, vedere [impostare il percorso e le variabili di ambiente per compilazioni da riga di comando](setting-the-path-and-environment-variables-for-command-line-builds.md).
+
+## <a name="developer_command_prompt_shortcuts"></a> Tasti di scelta rapida del prompt dei comandi per gli sviluppatori
 
 I tasti di scelta rapida del prompt dei comandi vengono installati in una cartella specifica della versione Visual Studio nel menu Start. Ecco un elenco di tasti di scelta rapida i prompt dei comandi di base e le architetture di compilazione che supportano:
 
@@ -44,8 +47,7 @@ I nomi effettivi di scelta rapida e cartella dello menu avvio variano a seconda 
 
 Se sono stati installati il [Build Tools per Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (che include anche il set di strumenti del compilatore di Visual Studio 2015 Update 3), solo di specifici dell'architettura nativa o cross prompt dei comandi per gli sviluppatori vengono installate le opzioni degli strumenti e non generali **prompt dei comandi sviluppatore** scelta rapida.
 
-<a name="developer_command_prompt"></a>
-### <a name="to-open-a-developer-command-prompt-window"></a>Per aprire una finestra del prompt dei comandi per gli sviluppatori
+## <a name="developer_command_prompt"></a> Per aprire una finestra del prompt dei comandi per gli sviluppatori
 
 1. Sul desktop, aprire il Windows **avviare** dal menu e quindi scorrere per trovare e aprire la cartella per la versione di Visual Studio, ad esempio **Visual Studio 2017**. In alcune versioni precedenti di Visual Studio, i tasti di scelta rapida sono nella sottocartella **strumenti di Visual Studio**.
 
@@ -53,7 +55,7 @@ Se sono stati installati il [Build Tools per Visual Studio 2017](https://go.micr
 
 È un modo più veloce per aprire una finestra del prompt dei comandi per gli sviluppatori immettere *prompt dei comandi sviluppatore* nella casella di ricerca desktop, quindi scegliere il risultato desiderato.
 
-## <a name="developer-command-files-and-locations"></a>Percorsi e i file di comando per gli sviluppatori
+## <a name="developer_command_file_locations"></a> Percorsi dei file di comando per gli sviluppatori
 
 Se si preferisce impostare l'ambiente di architettura di compilazione in una finestra del prompt dei comandi esistente, è possibile usare uno dei file di comando (file batch) creato dal programma di installazione per impostare l'ambiente obbligatorio. È consigliabile solo per eseguire questa operazione in una nuova finestra del prompt dei comandi e non è consigliabile si successive cambiare ambiente, nella stessa finestra di comando. Il percorso di questi file dipende dal, la versione di Visual Studio installata e sul percorso e denominazione scelte effettuate durante l'installazione. Per Visual Studio 2017, il percorso di installazione tipica in un computer a 64 bit è \Microsoft Visual Studio\2017 file (x86) \Programmi\\*edition*, dove *edition* potrebbe essere Community, Professional, Enterprise, BuildTools o un altro nome fornito. Per Visual Studio 2015, il percorso di installazione tipico è in \Programmi file (x86) \Microsoft Visual Studio 14.0.
 
@@ -84,10 +86,10 @@ Il modo più semplice per specificare un'architettura di build specifica in un p
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
 
-*Architettura*<br/>
+*architecture*<br/>
 Questo argomento facoltativo specifica l'architettura di host e di destinazione da usare. Se *architettura* viene omesso, viene usato l'ambiente di compilazione predefinito. Questi argomenti sono supportati:
 
-|*Architettura*|Compilatore|Architettura del computer host|Compilare l'architettura dell'output (destinazione)|
+|*architecture*|Compilatore|Architettura del computer host|Compilare l'architettura dell'output (destinazione)|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 nativo a 32 bit|x86, x64|x86|
 |**x86\_amd64** oppure **x86\_x64**|x64 su x86 (incrociato)|x86, x64|X64|
@@ -132,20 +134,20 @@ Set di file batch specifici dell'architettura la *architettura* parametro e chia
 
 Per compilare un progetto C/C++ nella riga di comando, Visual Studio fornisce questi strumenti da riga di comando:
 
-[CL](../build/reference/compiling-a-c-cpp-program.md)<br/>
+[CL](reference/compiling-a-c-cpp-program.md)<br/>
 Usare il compilatore (cl.exe) per compilare e collegare file del codice sorgente in app, librerie e DLL.
 
-[Collegamento](../build/reference/linking.md)<br/>
+[Collegamento](reference/linking.md)<br/>
 Usare il linker (link.exe) per collegare file oggetto e librerie compilati in app e DLL.
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-Usare MSBuild (msbuild.exe) per creare soluzioni di Visual Studio e progetti di Visual C++. Ciò equivale all'esecuzione di **compilare** progetto oppure **Compila soluzione** comando nell'IDE di Visual Studio.
+[MSBuild](msbuild-visual-cpp.md)<br/>
+Usare MSBuild (msbuild.exe) e un file di progetto (vcxproj) per configurare una compilazione e richiamare indirettamente il set di strumenti. Ciò equivale all'esecuzione di **compilare** progetto oppure **Compila soluzione** comando nell'IDE di Visual Studio. Esecuzione di MSBuild dalla riga di comando è uno scenario avanzato e in genere sconsigliato.
 
 [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-Usare DEVENV (devenv.exe) combinato con un'opzione della riga di comando, ad esempio, **/Build** o **/Clean**, ovvero per eseguire determinati comandi di compilazione senza visualizzare l'IDE di Visual Studio.
+Usare DEVENV (devenv.exe) combinato con un'opzione della riga di comando, ad esempio, **/Build** o **/Clean**, ovvero per eseguire determinati comandi di compilazione senza visualizzare l'IDE di Visual Studio. In genere questo è preferibile rispetto all'uso di MSBuild direttamente in quanto è possibile consentire a Visual Studio gestisca la complessità di MSBuild.
 
-[NMAKE](../build/nmake-reference.md)<br/>
-Usare NMAKE (nmake.exe) per automatizzare le attività di compilazione di progetti Visual C++ usando un makefile tradizionale.
+[NMAKE](reference/nmake-reference.md)<br/>
+Usare NMAKE (nmake.exe) in Windows per compilare progetti C++ basati su un makefile tradizionale.
 
 Quando si compila dalla riga di comando, il comando F1 non è disponibile per il supporto immediato. In alternativa, è possibile usare un motore di ricerca per ottenere informazioni su avvisi, errori e messaggi oppure è possibile usare i file della Guida offline. Usare la ricerca nella [docs.microsoft.com](https://docs.microsoft.com/cpp/), immettere la stringa di ricerca nella casella di ricerca nella parte superiore della pagina.
 
@@ -153,41 +155,41 @@ Quando si compila dalla riga di comando, il comando F1 non è disponibile per il
 
 Negli articoli inclusi in questa sezione della documentazione viene illustrato come compilare app nella riga di comando, viene descritto come personalizzare l'ambiente di compilazione da riga di comando per usare i set di strumenti a 64 bit e le piattaforme x86, x64 e ARM e vengono fornite informazioni su come usare gli strumenti di sviluppo da riga di comando MSBuild e NMAKE.
 
-[Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+[Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 Presenta un esempio in cui viene illustrato come creare e compilare un semplice programma C++ nella riga di comando.
 
-[Procedura dettagliata: Compilare un programma C nella riga di comando](../build/walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+[Procedura dettagliata: Compilare un programma in C dalla riga di comando](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 Descrive come compilare un programma nel linguaggio di programmazione C.
 
-[Procedura dettagliata: Compilazione di un programma in C++/CLI dalla riga di comando](../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
+[Procedura dettagliata: Compilazione di un programma in C++/CLI dalla riga di comando](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
 Descrive come creare e compilare un programma C++/CLI che usa .NET Framework.
 
-[Procedura dettagliata: Compilazione di un programma in C++/CX dalla riga di comando](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
+[Procedura dettagliata: Compilazione di un programma in C++/CX dalla riga di comando](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
 Descrive come creare e compilare un programma C++/CX che usa Windows Runtime.
 
-[Impostare le variabili di percorso e di ambiente per le compilazioni da riga di comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
+[Impostare le variabili di percorso e di ambiente per le compilazioni da riga di comando](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
 Viene descritto come avviare una finestra del prompt dei comandi con le variabili di ambiente necessarie impostato per le compilazioni da riga di comando che hanno come destinazione x86, x64 e ARM piattaforme usando un set di strumenti a 32 o 64 bit.
 
-[Riferimenti a NMAKE](../build/nmake-reference.md)<br/>
+[Riferimenti a NMAKE](reference/nmake-reference.md)<br/>
 Fornisce collegamenti ad articoli in cui viene descritta l'utilità Microsoft Program Maintenance Utility (NMAKE.EXE).
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-Fornisce collegamenti ad articoli in cui vengono descritte le modalità di utilizzo di MSBuild.exe.
+[MSBuild dalla riga di comando - C++](msbuild-visual-cpp.md)<br/>
+Fornisce collegamenti ad articoli che illustrano come usare msbuild.exe dalla riga di comando.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[/MD, /MT, /LD (uso della libreria di runtime)](../build/reference/md-mt-ld-use-run-time-library.md)<br/>
+[/MD, /MT, /LD (uso della libreria di runtime)](reference/md-mt-ld-use-run-time-library.md)<br/>
 Descrive come usare queste opzioni del compilatore per l'utilizzo di una libreria di runtime di debug o di rilascio.
 
-[Opzioni del compilatore C/C++](../build/reference/compiler-options.md)<br/>
+[Opzioni del compilatore C/C++](reference/compiler-options.md)<br/>
 Fornisce collegamenti ad articoli in cui vengono descritte le opzioni del compilatore C e C++ e fornite informazioni su CL.exe.
 
-[Opzioni del linker](../build/reference/linker-options.md)<br/>
+[Opzioni del linker MSVC](reference/linker-options.md)<br/>
 Fornisce collegamenti ad articoli in cui vengono descritte le opzioni del linker e fornite informazioni su CL.exe.
 
-[Strumenti per la compilazione in C/C++](../build/reference/c-cpp-build-tools.md)<br/>
+[Strumenti di compilazione MSVC aggiuntive](reference/c-cpp-build-tools.md)<br/>
 Offre gli strumenti inclusi in Visual Studio per creare collegamenti a C/C++.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Compilazione di programmi C/C++](../build/building-c-cpp-programs.md)
+[Progetti e sistemi di compilazione](projects-and-build-systems-cpp.md)

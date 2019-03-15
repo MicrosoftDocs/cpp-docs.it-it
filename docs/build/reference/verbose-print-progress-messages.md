@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 290d2e5c5c5a87042ee805cdaed90cce4418a389
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423751"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809145"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (stampa di messaggi sullo stato)
 
@@ -33,16 +33,16 @@ Il linker invia le informazioni sullo stato di avanzamento della sessione di col
 |Opzione|Descrizione|
 |------------|-----------------|
 |/VERBOSE|Visualizza i dettagli sul processo di collegamento.|
-|/VERBOSE:ICF|Visualizzare le informazioni sull'attività del linker risultante dall'utilizzo di [/OPT: ICF](../../build/reference/opt-optimizations.md).|
+|/VERBOSE:ICF|Visualizzare le informazioni sull'attività del linker risultante dall'utilizzo di [/OPT: ICF](opt-optimizations.md).|
 |/VERBOSE:INCR|Visualizza informazioni sul processo di collegamento incrementale.|
 |/VERBOSE:LIB|Visualizza messaggi di stato che indicano solo le librerie in cui viene eseguita la ricerca.<br /><br /> Le informazioni visualizzate includono il processo di ricerca libreria ed elenca ogni nome di oggetto e di libreria (con il percorso completo), il simbolo in fase di risoluzione della libreria di e un elenco di oggetti che fanno riferimento al simbolo.|
-|/VERBOSE:REF|Visualizza le informazioni sull'attività del linker risultante dall'utilizzo di [/OPT: ref](../../build/reference/opt-optimizations.md).|
-|/VERBOSE:SAFESEH|Consente di visualizzare informazioni sui moduli che non sono compatibili con quando gestione sicura delle eccezioni [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) non è specificato.|
+|/VERBOSE:REF|Visualizza le informazioni sull'attività del linker risultante dall'utilizzo di [/OPT: ref](opt-optimizations.md).|
+|/VERBOSE:SAFESEH|Consente di visualizzare informazioni sui moduli che non sono compatibili con quando gestione sicura delle eccezioni [/SAFESEH](safeseh-image-has-safe-exception-handlers.md) non è specificato.|
 |/VERBOSE:UNUSEDLIBS|Visualizza informazioni su tutti i file di libreria che non sono stati utilizzati quando l'immagine è stata creata.|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere la **Linker** cartella.
 
@@ -56,5 +56,5 @@ Il linker invia le informazioni sullo stato di avanzamento della sessione di col
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

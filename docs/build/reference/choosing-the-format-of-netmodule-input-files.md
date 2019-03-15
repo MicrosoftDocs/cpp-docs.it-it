@@ -2,16 +2,16 @@
 title: Scelta del formato dei file di input con estensione netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420050"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807326"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Scelta del formato dei file di input con estensione netmodule
 
-Un file di codice MSIL con estensione obj (compilato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md)) può essere utilizzato anche come file con estensione netmodule.  file con estensione obj contengono i metadati e i simboli nativi.  I file con estensione netmodule contengono solo metadati.
+Un file di codice MSIL con estensione obj (compilato con [/clr](clr-common-language-runtime-compilation.md)) può essere utilizzato anche come file con estensione netmodule.  file con estensione obj contengono i metadati e i simboli nativi.  I file con estensione netmodule contengono solo metadati.
 
 È possibile passare un file di codice MSIL con estensione obj per qualsiasi altro compilatore di Visual Studio tramite l'opzione del compilatore /addmodule (ma tenere presente che il file con estensione obj diventa parte dell'assembly risultante e deve essere spedito all'assembly).  Ad esempio, Visual c# e Visual Basic hanno l'opzione del compilatore /addmodule.
 
@@ -22,11 +22,11 @@ I file con estensione obj, con i file con estensione h associati, a cui si fa ri
 
 Altri compilatori di Visual Studio possono usare solo tipi gestiti da un modulo.
 
-Utilizzare il seguente per determinare se è necessario utilizzare un file con estensione netmodule oppure obj come modulo di input per il linker di Visual C++:
+Per determinare se è necessario usare un file con estensione obj o netmodule come input del modulo al linker MSVC, usare quanto segue:
 
 - Se si compila con un compilatore di Visual Studio diverso da Visual C++, viene generato un file con estensione netmodule che viene utilizzato come input del linker.
 
-- Se si utilizza il compilatore Visual C++ per creare moduli che verranno utilizzati per compilare un oggetto diverso da una libreria, utilizzare come input di modulo del linker i file con estensione obj creati dal compilatore; non usare come input il file con estensione netmodule.
+- Se si usa il compilatore MSVC per generare moduli e se il verranno utilizzati per creare qualcosa di diverso da una libreria, usare i file con estensione obj generati dal compilatore come input del modulo al linker. non utilizzare il file con estensione netmodule come input.
 
 - Se i moduli verranno utilizzati per compilare una libreria nativa (non gestito), usare i file obj come input del modulo al linker e generare un file di libreria con estensione LIB.
 
@@ -36,4 +36,4 @@ Utilizzare il seguente per determinare se è necessario utilizzare un file con e
 
 ## <a name="see-also"></a>Vedere anche
 
-[File con estensione netmodule come input del linker](../../build/reference/netmodule-files-as-linker-input.md)
+[File con estensione netmodule come input del linker](netmodule-files-as-linker-input.md)

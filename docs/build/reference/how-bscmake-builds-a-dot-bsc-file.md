@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-ms.openlocfilehash: e691e6ee2dcda0fb04735705078f1ed2ff139301
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f721641e021396f112bfe4c075ca0f524100d1f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425588"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821235"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Modalità di compilazione di un file bsc in BSCMAKE
 
@@ -25,4 +25,4 @@ Ricerca un file BSC con il nome specificato con l'opzione /o BSCMAKE. Se non vie
 
 ## <a name="see-also"></a>Vedere anche
 
-[Compilazione di un file BSC](../../build/reference/building-a-dot-bsc-file.md)
+[Compilazione di un file BSC](building-a-dot-bsc-file.md)

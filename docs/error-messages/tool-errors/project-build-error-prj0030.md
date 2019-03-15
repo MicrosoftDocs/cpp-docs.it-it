@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0030
 ms.assetid: c48b3727-e166-46e7-bcd7-3e5b2ac5c1d4
-ms.openlocfilehash: 2a6cde4ca48acb9aadfe3109084483dbb554e1e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa1c8539247287f7644742857c3cb7de321a20a2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488075"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811476"
 ---
 # <a name="project-build-error-prj0030"></a>Errore di compilazione progetto PRJ0030
 
 Errore di espansione di macro. Valutazione della ricorsione superata i 32 livelli per $(macro).
 
-Questo errore è causato da nelle macro di ricorsione. Ad esempio, se si imposta la **Directory intermedia** proprietà (vedere [General Property Page (Project)](../../ide/general-property-page-project.md)) $ (IntDir), si otterrà una ricorsione.
+Questo errore è causato da nelle macro di ricorsione. Ad esempio, se si imposta la **Directory intermedia** proprietà (vedere [General Property Page (Project)](../../build/reference/general-property-page-project.md)) $ (IntDir), si otterrà una ricorsione.
 
 Per risolvere questo errore, non definire macro o proprietà in termini di macro che vengono usate per definire.

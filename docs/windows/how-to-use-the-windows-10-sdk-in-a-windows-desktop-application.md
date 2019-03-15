@@ -1,16 +1,16 @@
 ---
-title: "Procedura: Usare Windows 10 SDK in un'applicazione di Windows Desktop"
+title: "Procedura: Usare Windows 10 SDK in un'applicazione Desktop di Windows"
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669118"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809925"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedura: Usare Windows 10 SDK in un'applicazione di Windows Desktop
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedura: Usare Windows 10 SDK in un'applicazione Desktop di Windows
 
 Quando si crea un progetto desktop di Windows classico in Visual Studio 2017, si è configurare per impostazione predefinita per compilare con la versione di Windows 10 SDK che è stato installato quando il carico di lavoro di applicazioni Desktop C++ è stato installato o aggiornato. Questa versione di Windows SDK è compatibile con Windows 7 e versioni successive. Visualizzare [uso delle intestazioni di Windows](/windows/desktop/WinProg/using-the-windows-headers) per ulteriori informazioni sulla destinazione specifiche versioni di Windows.
 
@@ -24,11 +24,11 @@ A partire da Visual Studio 2015 e Windows 10 SDK, la libreria CRT è stata separ
 
 2. Aprire il menu di scelta rapida per il nodo del progetto e scegliere **Ridestina versione SDK**.
 
-   ![Ridestina versione SDK](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
+   ![Retarget SDK Version](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
 
    Viene visualizzata la finestra di dialogo **Esamina azioni della soluzione** .
 
-   ![Esamina azioni della soluzione](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
+   ![Review Solution Actions](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
 
 3. Nel **versione piattaforma di destinazione** elenco a discesa scegliere la versione di Windows 10 SDK di destinazione. Scegliere il pulsante OK per applicare la modifica.
 
@@ -38,7 +38,7 @@ A partire da Visual Studio 2015 e Windows 10 SDK, la libreria CRT è stata separ
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. Aprire le proprietà del progetto e nella sezione **Proprietà di configurazione, Generale** , tenere presenti i valori della **versione della piattaforma di destinazione di Windows**. La modifica del valore in questa situazione ha lo stesso effetto che seguendo questa procedura. Vedere [General Property Page (Project)](../ide/general-property-page-project.md).
+4. Aprire le proprietà del progetto e nella sezione **Proprietà di configurazione, Generale** , tenere presenti i valori della **versione della piattaforma di destinazione di Windows**. La modifica del valore in questa situazione ha lo stesso effetto che seguendo questa procedura. Vedere [General Property Page (Project)](../build/reference/general-property-page-project.md).
 
    ![Versione piattaforma di destinazione](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
@@ -48,7 +48,7 @@ A partire da Visual Studio 2015 e Windows 10 SDK, la libreria CRT è stata separ
 
    Scegliere il **macro >>** pulsante e scorrere verso il basso l'elenco delle macro per le macro di Windows SDK per visualizzare tutti i nuovi valori.
 
-   ![Macro di Windows SDK](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")
+   ![Windows SDK Macros](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")
 
 5. Ripetere l'operazione per altri progetti, in base alle necessità, e ricompilare la soluzione.
 

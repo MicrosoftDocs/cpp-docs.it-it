@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-ms.openlocfilehash: f0fbc0b943865e4c6b4145618689a267224045bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c8edfd26fc6abdcef1cbb2cfa93d88f9a37cde
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299284"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822704"
 ---
 # <a name="mfc-dll-wizard"></a>Procedura guidata DLL MFC
 
@@ -40,9 +40,9 @@ Dopo aver creato un progetto DLL MFC, è possibile aggiungere controlli o gli og
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione e gestione di progetti Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)<br/>
-[Utilizzo di Proprietà del progetto](../../ide/working-with-project-properties.md)<br/>
+[Creazione e gestione di progetti Visual C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md)<br/>
+[Impostare il compilatore e le proprietà di compilazione](../../build/working-with-project-properties.md)<br/>
 [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Aggiunta di una funzione membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Implementazione di un'interfaccia](../../ide/implementing-an-interface-visual-cpp.md)<br/>

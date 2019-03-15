@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416449"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813968"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: Creare e usare il proprio libreria a collegamento dinamico (C++)
 
@@ -29,11 +29,11 @@ In questa procedura dettagliata vengono illustrate le seguenti attività:
 
 - Eseguire l'app completata.
 
-Ad esempio una libreria collegata staticamente, una DLL _esportazioni_ variabili, funzioni e le risorse di base al nome e l'app _Importa_ tali nomi per usare queste variabili, funzioni e le risorse. A differenza di una libreria collegata staticamente, Windows si connette le importazioni nell'app per le esportazioni in una DLL in fase di caricamento o in fase di esecuzione, invece che li connettono in fase di collegamento. Windows richiede informazioni aggiuntive che non fa parte del modello di compilazione di C++ standard per stabilire queste connessioni. Il compilatore Visual C++ implementa alcune estensioni specifiche di Microsoft per C++ per fornire queste informazioni aggiuntive. Illustra queste estensioni man mano che si procede.
+Ad esempio una libreria collegata staticamente, una DLL _esportazioni_ variabili, funzioni e le risorse di base al nome e l'app _Importa_ tali nomi per usare queste variabili, funzioni e le risorse. A differenza di una libreria collegata staticamente, Windows si connette le importazioni nell'app per le esportazioni in una DLL in fase di caricamento o in fase di esecuzione, invece che li connettono in fase di collegamento. Windows richiede informazioni aggiuntive che non fa parte del modello di compilazione di C++ standard per stabilire queste connessioni. Il compilatore MSVC implementa alcune estensioni specifiche di Microsoft per C++ per fornire queste informazioni aggiuntive. Illustra queste estensioni man mano che si procede.
 
 Questa procedura dettagliata crea due soluzioni di Visual Studio. uno che compila la DLL e uno che compila l'app client. La DLL utilizza la convenzione di chiamata C in modo che può essere chiamata dalle App compilata con altri linguaggi, purché la piattaforma e la chiamata e il collegamento convenzioni corrispondano. L'app client usa _collegamento implicito_, in cui Windows collega l'app per la DLL in fase di caricamento. Questo collegamento consente all'app di chiamare le funzioni DLL fornito dal proprio come le funzioni in una libreria collegata staticamente.
 
-Questa procedura dettagliata non copre alcune situazioni comuni. Non visualizza l'uso di DLL c / C++ da altri linguaggi di programmazione. Non viene illustrato come creare una DLL di sole risorse. Non mostra neanche l'uso di un collegamento esplicito per caricare le DLL in fase di esecuzione anziché in fase di caricamento. Goditi, è possibile usare Visual C++ per eseguire tutte queste operazioni. Per collegamenti a ulteriori informazioni sulle DLL, vedere [DLL in Visual C++](../build/dlls-in-visual-cpp.md). Per altre informazioni sul collegamento implicito ed esplicito, vedere [determinazione del metodo di collegamento da utilizzare](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Per informazioni sulla creazione di DLL c / C++ per l'uso con linguaggi di programmazione che usano convenzioni di collegamento del linguaggio C, vedere [esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md). Per informazioni su come creare DLL da usare con i linguaggi .NET, vedere [chiamata di funzioni DLL dalle applicazioni Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md).
+Questa procedura dettagliata non copre alcune situazioni comuni. Non visualizza l'uso di DLL c / C++ da altri linguaggi di programmazione. Non viene illustrato come creare una DLL di sole risorse. Non mostra neanche l'uso di un collegamento esplicito per caricare le DLL in fase di esecuzione anziché in fase di caricamento. Goditi, è possibile usare Visual C++ per eseguire tutte queste operazioni. Per collegamenti a ulteriori informazioni sulle DLL, vedere [DLL in Visual C++](dlls-in-visual-cpp.md). Per altre informazioni sul collegamento implicito ed esplicito, vedere [determinazione del metodo di collegamento da utilizzare](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Per informazioni sulla creazione di DLL c / C++ per l'uso con linguaggi di programmazione che usano convenzioni di collegamento del linguaggio C, vedere [esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md). Per informazioni su come creare DLL da usare con i linguaggi .NET, vedere [chiamata di funzioni DLL dalle applicazioni Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 Questa procedura dettagliata Usa Visual Studio 2017, ma il codice e la maggior parte delle istruzioni si applicano a versioni precedenti. I passaggi per creare nuovi progetti modificati a partire da Visual Studio 2017 versione 15.3. Questa procedura dettagliata descrive come creare progetti per le versioni meno recenti e più recenti. Cercare i passaggi che corrispondano alla versione di Visual Studio.
 
@@ -400,7 +400,4 @@ Quando si distribuisce l'app, è necessario distribuire anche le DLL Usa. Il mod
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Procedura dettagliata: Distribuzione di un programma (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-[Chiamata di funzioni DLL da applicazioni Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Chiamata di funzioni DLL da applicazioni Visual Basic](calling-dll-functions-from-visual-basic-applications.md)

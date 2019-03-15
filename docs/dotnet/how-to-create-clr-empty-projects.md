@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-ms.openlocfilehash: 3779887a91b69848d767c15af4a53ff2e87b760c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 068b1328925c2e5040316d197b80076549aea321
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740489"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818219"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Procedura: Creare progetti CLR vuoti
 
@@ -36,5 +36,5 @@ Per creare un progetto CLR vuoto, usare il **progetto CLR vuoto** modello, che Ã
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tipi di progetto Visual C++](../ide/visual-cpp-project-types.md)<br/>
-[Tipi di progetto Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+[Tipi di progetto Visual C++](../build/reference/visual-cpp-project-types.md)<br/>
+[Debug di progetti C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: 955ae0ed8feac22da19eb13218e2332849477e29
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421381"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817992"
 ---
 # <a name="understanding-the-helper-function"></a>Informazioni sulla funzione di supporto
 
@@ -53,16 +53,16 @@ Il codice helper predefinito è reperibile nel cpp e Delayimp. h (in vc\include)
 
 Gli argomenti seguenti descrivono la funzione di supporto:
 
-- [Modifiche della funzione di supporto del caricamento ritardato delle DLL introdotte a partire da Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Modifiche della funzione di supporto del caricamento ritardato delle DLL introdotte a partire da Visual C++ 6.0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
-- [Convenzioni di chiamata, parametri e tipo restituito](../../build/reference/calling-conventions-parameters-and-return-type.md)
+- [Convenzioni di chiamata, parametri e tipo restituito](calling-conventions-parameters-and-return-type.md)
 
-- [Struttura e definizioni di costanti](../../build/reference/structure-and-constant-definitions.md)
+- [Struttura e definizioni di costanti](structure-and-constant-definitions.md)
 
-- [Calcolo dei valori necessari](../../build/reference/calculating-necessary-values.md)
+- [Calcolo dei valori necessari](calculating-necessary-values.md)
 
-- [Scaricamento di una DLL a caricamento ritardato](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [Scaricamento di una DLL a caricamento ritardato](explicitly-unloading-a-delay-loaded-dll.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Supporto per le DLL a caricamento ritardato nel linker](linker-support-for-delay-loaded-dlls.md)

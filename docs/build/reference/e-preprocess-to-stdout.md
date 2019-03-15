@@ -9,12 +9,12 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: f0a0d692cd7eaf59aa0c53ecf4436b4c507439a3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 710be7e1dfc4de89bc1eed3e23e4803c561da10c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425484"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817356"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (Pre-elabora in stdout)
 
@@ -28,15 +28,15 @@ Pre-elabora i file di origine C e C++ e copia i file pre-elaborati per il dispos
 
 ## <a name="remarks"></a>Note
 
-In questo processo, vengono eseguite tutte le direttive del preprocessore, espansioni della macro vengono eseguite e vengono rimossi i commenti. Per mantenere i commenti nell'output pre-elaborato, usare il [/C (mantenere i commenti durante la pre-elaborazione)](../../build/reference/c-preserve-comments-during-preprocessing.md) anche l'opzione del compilatore.
+In questo processo, vengono eseguite tutte le direttive del preprocessore, espansioni della macro vengono eseguite e vengono rimossi i commenti. Per mantenere i commenti nell'output pre-elaborato, usare il [/C (mantenere i commenti durante la pre-elaborazione)](c-preserve-comments-during-preprocessing.md) anche l'opzione del compilatore.
 
 **/E** aggiunge `#line` direttive nell'output a inizio e alla fine di ogni file incluso e attorno alle righe rimosse dalle direttive del preprocessore per la compilazione condizionale. Queste direttive rinumerano le righe del file pre-elaborato. Di conseguenza, gli errori generati durante le fasi successive dell'elaborazione di fare riferimento ai numeri di riga del file di origine originale anziché alle righe del file pre-elaborato.
 
-Il **/E** opzione disattiva la compilazione. È necessario eseguire nuovamente il file pre-elaborato per la compilazione. **/E** elimina anche i file di output dal **/FA**, **/Fa**, e **/Fm** opzioni. Per altre informazioni, vedere [/FA, /Fa (File di listato)](../../build/reference/fa-fa-listing-file.md) e [/Fm (specifica file MAP)](../../build/reference/fm-name-mapfile.md).
+Il **/E** opzione disattiva la compilazione. È necessario eseguire nuovamente il file pre-elaborato per la compilazione. **/E** elimina anche i file di output dal **/FA**, **/Fa**, e **/Fm** opzioni. Per altre informazioni, vedere [/FA, /Fa (File di listato)](fa-fa-listing-file.md) e [/Fm (specifica file MAP)](fm-name-mapfile.md).
 
-Per sopprimere `#line` direttive, usare il [/EP (pre-elabora in stdout senza direttive #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) opzione.
+Per sopprimere `#line` direttive, usare il [/EP (pre-elabora in stdout senza direttive #line)](ep-preprocess-to-stdout-without-hash-line-directives.md) opzione.
 
-Per inviare l'output pre-elaborato in un file anziché al `stdout`, usare il [/P (pre-elabora in un File)](../../build/reference/p-preprocess-to-a-file.md) opzione.
+Per inviare l'output pre-elaborato in un file anziché al `stdout`, usare il [/P (pre-elabora in un File)](p-preprocess-to-a-file.md) opzione.
 
 Per sopprimere `#line` direttive e invia l'output pre-elaborato in un file, usare **/P** e **/EP** tra loro.
 
@@ -62,7 +62,7 @@ cl -E test.cpp > test2.cpp
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -84,5 +84,5 @@ CL /E /C ADD.C
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

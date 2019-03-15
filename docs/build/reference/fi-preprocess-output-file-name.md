@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-ms.openlocfilehash: 02d2a27f0a3d6b6aee6c2cd6f7161c9de718446d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 990c48a72c3f6017d893ddf9b46bcbb737bfb634
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414025"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820195"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (pre-elaborazione nome file di output)
 
-Specifica il nome del file di output a cui il [/P (pre-elabora in un File)](../../build/reference/p-preprocess-to-a-file.md) opzione del compilatore scrive l'output pre-elaborato.
+Specifica il nome del file di output a cui il [/P (pre-elabora in un File)](p-preprocess-to-a-file.md) opzione del compilatore scrive l'output pre-elaborato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -48,6 +48,6 @@ CL /P /FiMYPROCESS.I PROGRAM.CPP
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[/P (pre-elabora in un file)](../../build/reference/p-preprocess-to-a-file.md)<br/>
-[Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[/P (pre-elabora in un file)](p-preprocess-to-a-file.md)<br/>
+[Specifica del nome del percorso](specifying-the-pathname.md)

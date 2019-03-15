@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 18bbdb980c63b3c04b432602afb2402c5e2c42e7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424678"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812083"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definizioni preprocessore)
 
@@ -62,7 +62,7 @@ CL /DTEST=%% TEST.C
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Nel riquadro sinistro, selezionare **le proprietà di configurazione**, **C/C++**, **preprocessore**.
 
@@ -97,8 +97,8 @@ TEST defined 1
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[/U, /u (annulla la definizione dei simboli)](../../build/reference/u-u-undefine-symbols.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/U, /u (annulla la definizione dei simboli)](u-u-undefine-symbols.md)<br/>
 [Direttiva #undef (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>
 [Direttiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

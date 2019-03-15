@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 6406b604ab74d29d8bc6c9bc0920fd0cf0bd055b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426147"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807498"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (Espansione funzioni inline)
 
@@ -50,7 +50,7 @@ Consente l'espansione solo delle funzioni contrassegnate [inline](../../cpp/inli
 **2**<br/>
 Il valore predefinito. Consente l'espansione delle funzioni contrassegnate come `inline`, `__inline`, o `__forceinline` e di qualsiasi altra funzione scelta dal compilatore.
 
-**/ Ob2** è attiva quando [/O1, / O2 (riduce dimensione, Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) oppure [/Ox (Abilita più ottimizzazioni della velocità)](../../build/reference/ox-full-optimization.md) viene usato.
+**/ Ob2** è attiva quando [/O1, / O2 (riduce dimensione, Ottimizza velocità)](o1-o2-minimize-size-maximize-speed.md) oppure [/Ox (Abilita più ottimizzazioni della velocità)](ox-full-optimization.md) viene usato.
 
 Questa opzione richiede l'abilitazione delle ottimizzazioni mediante **/O1**, **/O2**, **/Ox**, oppure **/Og**.
 
@@ -61,11 +61,11 @@ Il compilatore considera come suggerimenti le opzioni di espansione inline e le 
 È possibile usare la `#pragma` [auto_inline](../../preprocessor/auto-inline.md) direttiva per escludere funzioni dalla considerazione come candidati per l'espansione inline. Vedere anche il `#pragma` [intrinseco](../../preprocessor/intrinsic.md) direttiva.
 
 > [!NOTE]
-> Informazioni raccolte dalle esecuzioni dei test di profilatura sostituiscono le ottimizzazioni che verrebbero altrimenti effetto se si specifica **/Ob**, **/Os**, o **/Ot**. Per altre informazioni, vedere [le ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md).
+> Informazioni raccolte dalle esecuzioni dei test di profilatura sostituiscono le ottimizzazioni che verrebbero altrimenti effetto se si specifica **/Ob**, **/Os**, o **/Ot**. Per altre informazioni, vedere [le ottimizzazioni PGO](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere **le proprietà di configurazione**, **C/C++** e selezionare **ottimizzazione**.
 
@@ -77,6 +77,6 @@ Il compilatore considera come suggerimenti le opzioni di espansione inline e le 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni /O (ottimizza codice)](o-options-optimize-code.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

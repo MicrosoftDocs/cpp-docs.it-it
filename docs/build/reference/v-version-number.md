@@ -10,12 +10,12 @@ helpviewer_keywords:
 - V compiler option [C++]
 - -V compiler option [C++]
 ms.assetid: 3e93fb7a-5dfd-49a6-bd49-3dca8052e0f3
-ms.openlocfilehash: 7cae4e75bb2459ff45b02f20d5643deb756261d0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7bebd3ab9677bb340203bbf857e4ee9f287e36e6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413264"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817608"
 ---
 # <a name="v-version-number"></a>/V (Numero versione)
 
@@ -38,11 +38,11 @@ L'etichetta stringcan un file con estensione obj con un numero di versione o un 
 
 È anche possibile usare [comment (C/C++)](../../preprocessor/comment-c-cpp.md) con l'argomento del tipo di commento del compilatore a inserire il nome e numero di versione del compilatore nel file con estensione obj.
 
-Il **/V** opzione è deprecata a partire da Visual Studio 2005. **/V** è principalmente usato per supportare la creazione di driver di dispositivo virtuali (VxDs) e funzione non è più supportata dal set di strumenti Visual C++. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+Il **/V** opzione è deprecata a partire da Visual Studio 2005. **/V** è principalmente usato per supportare la creazione di driver di dispositivo virtuali (VxDs) e funzione non è più supportata dal set di strumenti Visual C++. Per un elenco di opzioni del compilatore deprecate, vedere **deprecate o rimosse le opzioni del compilatore** nelle [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -56,5 +56,5 @@ Il **/V** opzione è deprecata a partire da Visual Studio 2005. **/V** è princi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

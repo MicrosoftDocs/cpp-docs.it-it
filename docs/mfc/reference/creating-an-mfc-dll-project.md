@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 21173582f68b1d50fefbe22250546fcce63730b4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ddc32ac3a2de5993e6755df0cd9fc7d3546094e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278834"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814150"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Creazione di un progetto DLL MFC
 
@@ -25,7 +25,7 @@ Una DLL MFC è un file binario che agisce come una libreria condivisa di funzion
 
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Per creare un progetto di DLL MFC mediante la creazione guidata DLL MFC
 
-1. Attenersi alla procedura illustrata nell'argomento della Guida [Creazione di un progetto con una creazione guidata applicazione Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Seguire le istruzioni nell'argomento della Guida [creare un progetto di app console C++](../../get-started/tutorial-console-cpp.md).
 
 **Nota** nella **nuovo progetto** della finestra di dialogo Seleziona il `MFC DLL` icona nel riquadro dei modelli per aprire la creazione guidata DLL MFC.
 
@@ -36,10 +36,11 @@ Una DLL MFC è un file binario che agisce come una libreria condivisa di funzion
 
 1. Fare clic su **Finish** per chiudere la procedura guidata e aprire il nuovo progetto nella **Esplora soluzioni**.
 
-Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Tipi di progetto Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)
+[Pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md)
+
