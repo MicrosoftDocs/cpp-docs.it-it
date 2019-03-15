@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412731"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821483"
 ---
 # <a name="cl-invokes-the-linker"></a>CL richiama il linker
 
@@ -28,7 +28,7 @@ CL richiama automaticamente il linker dopo aver compilato a meno che non viene u
 |/Zg|Genera i prototipi di funzione|
 |/Zs|Controllare la sintassi|
 
-Per ulteriori informazioni sul collegamento, vedere [opzioni del Linker](../../build/reference/linker-options.md).
+Per ulteriori informazioni sul collegamento, vedere [opzioni del Linker MSVC](linker-options.md).
 
 ## <a name="example"></a>Esempio
 
@@ -46,7 +46,7 @@ Per compilare questo programma, la compilazione con la riga di comando seguente:
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-CL innanzitutto compila i file di origine C e crea i file oggetto /all Main. obj e MOD1 MOD2. Il compilatore inserisce il nome della libreria standard in ogni file con estensione obj. Per altre informazioni, vedere [utilizzo della libreria Run-Time](../../build/reference/md-mt-ld-use-run-time-library.md).
+CL innanzitutto compila i file di origine C e crea i file oggetto /all Main. obj e MOD1 MOD2. Il compilatore inserisce il nome della libreria standard in ogni file con estensione obj. Per altre informazioni, vedere [utilizzo della libreria Run-Time](md-mt-ld-use-run-time-library.md).
 
 CL i nomi dei file con estensione obj, insieme al nome MYGRAPH, vengono passati al linker. Il linker risolve i riferimenti esterni come indicato di seguito:
 
@@ -58,5 +58,5 @@ CL i nomi dei file con estensione obj, insieme al nome MYGRAPH, vengono passati 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Impostazione delle opzioni del compilatore](compiler-command-line-syntax.md)

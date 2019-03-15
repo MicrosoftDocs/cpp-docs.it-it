@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PDB files, creating
 - .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
-ms.openlocfilehash: 6a57e4eb23d40355094f4c8274a42ccb7e1b0e20
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ddcf83cafd5f499158f3116f04e40397b7f8d0a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420635"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821508"
 ---
 # <a name="pdb-use-program-database"></a>/PDB (Usa database di programma)
 
@@ -31,17 +31,17 @@ Un nome specificato dall'utente per il database di programma (PDB) creato dal li
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita, quando [/debug](../../build/reference/debug-generate-debug-info.md) viene specificato, il linker crea un database di programma (PDB) contenente le informazioni di debug. Il nome file predefinito per il file PDB è il nome di base del programma e dall'estensione pdb.
+Per impostazione predefinita, quando [/debug](debug-generate-debug-info.md) viene specificato, il linker crea un database di programma (PDB) contenente le informazioni di debug. Il nome file predefinito per il file PDB è il nome di base del programma e dall'estensione pdb.
 
 Usare l'opzione /PDB:*filename* per specificare il nome del file PDB. Se non viene specificato /DEBUG, l'opzione /PDB viene ignorato.
 
 Un file PDB può essere fino a 2GB.
 
-Per altre informazioni, vedere [file con estensione PDB come Input del Linker](../../build/reference/dot-pdb-files-as-linker-input.md).
+Per altre informazioni, vedere [file con estensione PDB come Input del Linker](dot-pdb-files-as-linker-input.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -55,5 +55,5 @@ Per altre informazioni, vedere [file con estensione PDB come Input del Linker](.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

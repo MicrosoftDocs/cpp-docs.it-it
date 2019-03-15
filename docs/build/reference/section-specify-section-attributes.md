@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543698"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816555"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Specifica attributi di sezione)
 
@@ -33,29 +33,29 @@ Non utilizzare i nomi seguenti, perché sono in conflitto con nomi standard. Ad 
 
 - BSS
 
-- . Data
+- .data
 
 - .edata
 
-- .IData
+- .idata
 
-- . pdata
+- .pdata
 
-- rdata
+- .rdata
 
-- sezione. reloc
+- .reloc
 
 - .rsrc
 
-- sbss
+- .sbss
 
-- . sdata
+- .sdata
 
 - .srdata
 
-- . Text
+- .text
 
-- . XData
+- .xdata
 
 Specificare uno o più attributi per la sezione. I caratteri di attributo, elencati di seguito non sono tra maiuscole e minuscole. È necessario specificare tutti gli attributi che si desidera che la sezione. un carattere di attributo viene omesso fa in modo che tale bit attributo debba essere spenta. Se non si specifica scrittura R, W o E, di lettura esistente, o stato eseguibile rimane invariato.
 
@@ -71,15 +71,15 @@ Per negare a un attributo, anteporre il carattere con un punto esclamativo (!). 
 |K|Inseribili nella cache|Contrassegna la sezione come non memorizzabile nella cache|
 |P|Paginabile|Contrassegna la sezione come non paginabile|
 
-K e P sono insolito in quanto i flag di sezione che corrispondono a essi sono utilizzati nel senso negativo. Se si specifica uno di questi caratteri nella sezione utilizzando il **/Section:. Text, K** seleziona l'opzione, non c'è alcuna differenza nei flag di sezione quando si esegue [DUMPBIN](../../build/reference/dumpbin-options.md) con il [/HEADERS](../../build/reference/headers.md)opzione; la sezione già in modo implicito è stato memorizzato nella cache. Per rimuovere l'impostazione predefinita, specificare **/Section:,. Text. K** invece. DUMPBIN rivela le caratteristiche della sezione, tra cui "Non memorizzato nella cache."
+K e P sono insolito in quanto i flag di sezione che corrispondono a essi sono utilizzati nel senso negativo. Se si specifica uno di questi caratteri nella sezione utilizzando il **/Section:. Text, K** seleziona l'opzione, non c'è alcuna differenza nei flag di sezione quando si esegue [DUMPBIN](dumpbin-options.md) con il [/HEADERS](headers.md)opzione; la sezione già in modo implicito è stato memorizzato nella cache. Per rimuovere l'impostazione predefinita, specificare **/Section:,. Text. K** invece. DUMPBIN rivela le caratteristiche della sezione, tra cui "Non memorizzato nella cache."
 
 Una sezione nel file PE che è privo di E, R o W impostata è probabilmente non è valida.
 
-Il **ALIGN =**_numero_ argomento consente di specificare un valore di allineamento per una particolare sezione. Il _numero_ argomento è espresso in byte e deve essere una potenza di due. Visualizzare [/align](../../build/reference/align-section-alignment.md) per altre informazioni.
+Il **ALIGN =**_numero_ argomento consente di specificare un valore di allineamento per una particolare sezione. Il _numero_ argomento è espresso in byte e deve essere una potenza di due. Visualizzare [/align](align-section-alignment.md) per altre informazioni.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
@@ -91,5 +91,5 @@ Il **ALIGN =**_numero_ argomento consente di specificare un valore di allineamen
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

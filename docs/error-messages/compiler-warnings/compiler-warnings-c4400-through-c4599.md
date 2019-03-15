@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,12 +138,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491299"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816620"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 gli avvisi del compilatore C4599
 
@@ -173,7 +171,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|«*funzione*': funzione firma contiene il tipo '*tipo*'; Gli oggetti di C++ sono non è sicuro passare tra codice pure e misto o nativo.|
 |Genera un avviso C4413|'classname::member': membro di riferimento viene inizializzato come elemento temporaneo che non viene mantenuto dopo la chiusura del costruttore|
 |[Avviso del compilatore (livello 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|«*funzione*': salto short a funzione convertito in near|
-|Avviso del compilatore (livello 1) C4415|duplicato declspec (code_seg ('*name*'))|
+|Avviso del compilatore (livello 1) C4415|duplicate __declspec(code_seg('*name*'))|
 |Avviso del compilatore (livello 1) C4416|__declspec(code_seg(...)) contiene una stringa vuota: ignorato|
 |Avviso del compilatore (livello 1) C4417|creazione di un'istanza di modello espliciti non possono avere __declspec(code_seg(...)): ignorato|
 |Avviso del compilatore (livello 1) C4418|__declspec(code_seg(...)) ignorato per un'enumerazione|
@@ -187,9 +185,9 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1) C4427|«*operatore*': overflow nella divisione delle costanti. comportamento indefinito|
 |[Avviso del compilatore (livello 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|possibili incompleto o formato non corretto-nomi di caratteri universali|
 |[Avviso (errore) del compilatore C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|identificatore di tipo mancante, verrà utilizzato int. Nota: C++ non supporta l'impostazione predefinita-int|
-|[Avviso del compilatore (livello 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++|
+|[Avviso del compilatore (livello 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|identificatore di tipo mancante, verrà utilizzato int. Nota: Default-int non è più supportato in C|
 |[Avviso del compilatore (livello 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|un costruttore statico deve avere accessibilità privata; conversione in accesso privato|
-|[Avviso del compilatore (livello 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|«*derived_class*': layout dell'oggetto in/vd2 verrà modificato a causa di base virtuale '*base_class*»|
+|[Avviso del compilatore (livello 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|«*derived_class*': Layout dell'oggetto in/vd2 verrà modificato a causa di base virtuale '*base_class*'|
 |[Avviso del compilatore (livello 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|Dynamic\_eseguire il cast da base virtuale '*base_class*'a'*derived_class*' nel costruttore o distruttore potrebbe non riuscire con oggetti parzialmente costruiti|
 |[Avviso del compilatore (livello 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|Dynamic\_eseguire il cast da base virtuale '*base_class*'a'*derived_class*' potrebbe non riuscire in alcuni contesti|
 |Genera un avviso C4438|«*funzione*': non può essere chiamato in modo sicuro in /Await: clrcompat modalità. Se '*funzione*' chiamate in CLR può comportare una danneggiamento dell'intestazione CLR|
@@ -205,9 +203,9 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Genera un avviso C4448|«*tipo*1' non è un'interfaccia predefinita specificata nei metadati. Prelievo: '*type2*', che potrebbe non riuscire in fase di esecuzione.|
 |Genera un avviso C4449|«*tipo*' un tipo unsealed deve essere contrassegnato come '[WebHostHidden]'|
 |Genera un avviso C4450|«*type1*'deve essere contrassegnato come '[WebHostHidden]' perché deriva da'*type2*»|
-|Avviso del compilatore (livello 4) C4451|'classname1::member': utilizzo della classe di riferimento 'classname2::member' all'interno di questo contesto può portare al marshalling non valido dell'oggetto tra contesti|
+|Avviso del compilatore (livello 4) C4451|'classname1::member': Utilizzo della classe di riferimento 'classname2::member' all'interno di questo contesto può portare al marshalling non valido dell'oggetto tra contesti|
 |Avviso del compilatore (livello 1) C4452|«*identificatore*': tipo pubblico non può essere in ambito globale. Deve essere in uno spazio dei nomi figlio del nome del file con estensione winmd di output.|
-|Avviso del compilatore (livello 1) C4453|«*tipo*': un tipo '[WebHostHidden]' non deve essere utilizzato sulla superficie pubblicata di un tipo pubblico che non è '[WebHostHidden]'|
+|Avviso del compilatore (livello 1) C4453|«*tipo*': Un tipo '[WebHostHidden]' non deve essere utilizzato sulla superficie pubblicata di un tipo pubblico che non è '[WebHostHidden]'|
 |Avviso del compilatore (livello 1) C4454|«*funzione*' è in overload per maggiore del numero di parametri di input senza specificato [DefaultOverload]. Selezione di '*dichiarazione*' come overload predefinito|
 |Avviso del compilatore (livello 1) C4455|' operator *operatore*': gli identificatori di suffisso letterale che non iniziano con un carattere di sottolineatura sono riservati|
 |[Avviso del compilatore (livello 4) C4456](compiler-warning-level-4-c4456.md)|dichiarazione di '*identificatore*' nasconde la dichiarazione locale precedente|
@@ -242,7 +240,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1) C4491|«*nome*': è un formato di versione IDL non valido|
 |Avviso del compilatore (livello 1, errore) C4492|'*function1*': metodo di classe di riferimento di base corrisponde a '*function2*', ma non è contrassegnato 'override'|
 |Avviso del compilatore (livello 3, errore) C4493|Espressione DELETE non ha alcun effetto poiché il distruttore di '*tipo*' non dispone di accessibilità 'public'|
-|Avviso del compilatore (livello 1) C4494|«*funzione*': ignorato __declspec(allocator) perché la funzione di tipo restituito non è un puntatore o riferimento|
+|Avviso del compilatore (livello 1) C4494|«*funzione*': Verrà ignorato __declspec(allocator) perché la funzione di tipo restituito non è un puntatore o riferimento|
 |Genera un avviso C4495|utilizzata estensione non standard super': sostituire con il nome di classe di base esplicito|
 |Genera un avviso C4496|utilizzata estensione non standard 'for each': sostituire con l'istruzione ranged-for|
 |Genera un avviso C4497|utilizzata estensione non standard 'sealed': sostituirla con 'final'|
@@ -306,7 +304,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 3) C4569|«*funzione*': nessun membro corrisponde alla firma dell'override esplicito|
 |[Avviso del compilatore (livello 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|«*tipo*': non è dichiarato in modo esplicito come abstract ma ha funzioni astratte|
 |[Avviso del compilatore (livello 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Messaggio informativo: catch è cambiata dopo Visual C++ 7.1; le eccezioni strutturate (SEH) non vengono più rilevate|
-|[Avviso del compilatore (livello 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|Attributo [ParamArray] deprecato in /clr, utilizzare '.' invece|
+|[Avviso del compilatore (livello 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|Attributo [ParamArray] deprecato in /clr, utilizzare '.' In alternativa|
 |Avviso del compilatore (livello 1) C4573|l'utilizzo di '*funzione lambda*' richiede il compilatore deve acquisire 'this' ma la modalità di acquisizione predefinita corrente non lo consente|
 |Avviso del compilatore (livello 4) C4574|«*Identificatore*'è definito come ' 0': si intendeva usare '#if identifier'?|
 |Avviso del compilatore (livello 1) C4575|vectorcall' incompatibile con il ' o clr' opzione: conversione da stdcall'|
@@ -318,7 +316,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 4) C4582|«*tipo*': costruttore non viene chiamato in modo implicito|
 |Avviso del compilatore (livello 4) C4583|«*tipo*': un distruttore non viene chiamato in modo implicito|
 |[Avviso del compilatore (livello 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|«*class1*': classe di base*class2*'è già una classe di base di'*class3*»|
-|Avviso del compilatore (livello 1, errore) C4585|«*classe*': WinRT A 'public ref class' deve essere sealed o derivare da una classe unsealed|
+|Avviso del compilatore (livello 1, errore) C4585|«*classe*': Un WinRT 'public ref class' deve essere sealed o derivare da una classe unsealed esistente|
 |Avviso del compilatore (livello 1, errore) C4586|«*tipo*': Impossibile dichiarare un tipo pubblico in un spazio dei nomi di primo livello chiamato 'Windows'|
 |Avviso del compilatore (livello 1) C4587|«*anonymous_structure*': modifica del comportamento: costruttore viene chiamato non è più in modo implicito|
 |Avviso del compilatore (livello 1) C4588|«*anonymous_structure*': modifica del comportamento: distruttore viene chiamato non è più in modo implicito|

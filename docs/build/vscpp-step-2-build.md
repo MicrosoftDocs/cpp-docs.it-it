@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977732"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813547"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilare ed eseguire un progetto di app console C++
 
@@ -19,23 +19,23 @@ Dopo aver creato un progetto di app console C++ e ha immesso il codice, è possi
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Con il carico di lavoro di C++ installato e in esecuzione nel computer è installato Visual Studio con lo sviluppo Desktop. Se non si è ancora installato, seguire i passaggi descritti in [supporto di installazione di C++ in Visual Studio](../build/vscpp-step-0-installation.md).
+- Con il carico di lavoro di C++ installato e in esecuzione nel computer è installato Visual Studio con lo sviluppo Desktop. Se non si è ancora installato, seguire i passaggi descritti in [supporto di installazione di C++ in Visual Studio](vscpp-step-0-installation.md).
 
-- Creare un "Hello, World!" progetto e immettere il codice sorgente. Se non è ancora stato fatto, seguire i passaggi descritti in [creare un progetto di app console C++](../build/vscpp-step-1-create.md).
+- Creare un "Hello, World!" progetto e immettere il codice sorgente. Se non è ancora stato fatto, seguire i passaggi descritti in [creare un progetto di app console C++](vscpp-step-1-create.md).
 
 Se Visual Studio è simile a ciò, si è pronti per compilare ed eseguire l'app:
 
-   ![Pronti a compilare il nuovo progetto](../build/media/vscpp-ready-to-build.png "pronti a compilare il nuovo progetto")
+   ![Pronti a compilare il nuovo progetto](media/vscpp-ready-to-build.png "pronti a compilare il nuovo progetto")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Compilare ed eseguire il codice in Visual Studio
 
 1. Per compilare il progetto, scegliere **Compila soluzione** dalle **compilazione** menu. Il **Output** finestra Mostra i risultati del processo di compilazione.
 
-   ![Compilare il progetto](../build/media/vscpp-build-solution.gif "compilare il progetto")
+   ![Compilare il progetto](media/vscpp-build-solution.gif "compilare il progetto")
 
 1. Per eseguire il codice, nella barra dei menu, scegliere **Debug**, **Avvia senza eseguire debug**.
 
-   ![Avviare il progetto](../build/media/vscpp-start-without-debugging.gif "avviare il progetto")
+   ![Avviare il progetto](media/vscpp-start-without-debugging.gif "avviare il progetto")
 
    Una finestra della console si apre e viene quindi eseguita l'app. Quando si avvia un'app console in Visual Studio, viene eseguito il codice, quindi stampa "preme un tasto qualsiasi per continuare. . ." per fornire possibilità di visualizzare l'output.
 
@@ -55,7 +55,7 @@ In genere, si esegue l'App console al prompt dei comandi, non in Visual Studio. 
 
 1. Nella finestra del prompt dei comandi del pulsante destro del mouse per incollare il percorso all'app nel prompt dei comandi. Premere INVIO per eseguire l'app.
 
-   ![Eseguire l'app al prompt dei comandi](../build/media/vscpp-run-in-cmd.gif "eseguire l'app al prompt dei comandi")
+   ![Eseguire l'app al prompt dei comandi](media/vscpp-run-in-cmd.gif "eseguire l'app al prompt dei comandi")
 
 Complimenti, è stata compilata ed eseguita un'app console in Visual Studio.
 

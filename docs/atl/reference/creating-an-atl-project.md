@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: f83e56e3e9b8468b71534d225080ff5874731b74
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d44434a36c8d757fb8f79d36a672c4c77de64ade
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268889"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820325"
 ---
 # <a name="creating-an-atl-project"></a>Creazione di un progetto ATL
 
@@ -22,7 +22,7 @@ Il modo più semplice per creare un progetto ATL è utilizzare la procedura guid
 
 ## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Per creare un progetto ATL mediante la creazione guidata progetto ATL
 
-1. Seguire le istruzioni nell'argomento [creazione di un progetto con una procedura guidata dell'applicazione di Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. In Visual Studio, scegliere **File > Nuovo > progetto** dal menu principale.
 
 1. Selezionare il **progetto ATL** icona nel **modelli** riquadro per aprire il **Creazione guidata progetto ATL**.
 
@@ -33,9 +33,9 @@ Il modo più semplice per creare un progetto ATL è utilizzare la procedura guid
 
 1. Fare clic su **fine** per chiudere la procedura guidata e aprire il nuovo progetto nell'ambiente di sviluppo.
 
-Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md). Per altre informazioni sulle configurazioni per il nuovo progetto ATL e come modificarle, vedere [configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md).
+Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md). Per altre informazioni sulle configurazioni per il nuovo progetto ATL e come modificarle, vedere [configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Pagine delle proprietà](../../ide/property-pages-visual-cpp.md)
+[Pagine delle proprietà](../../build/reference/property-pages-visual-cpp.md)

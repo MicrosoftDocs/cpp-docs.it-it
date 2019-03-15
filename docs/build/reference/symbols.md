@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /SYMBOLS dumpbin option
 - -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-ms.openlocfilehash: 4aa6702cfa13523d64553041af4a18270d9babb3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a47b7da9f0b01353ef15e8b5c070c19e7c521c37
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421477"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822548"
 ---
 # <a name="symbols"></a>/SYMBOLS
 
@@ -66,8 +66,8 @@ La descrizione seguente, per le righe che iniziano con un numero di simboli, ven
 
 L'ultima colonna in una riga di codice è il nome del simbolo, entrambi decorati e non decorati.
 
-Solo le [/HEADERS](../../build/reference/headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) opzione del compilatore.
+Solo le [/HEADERS](headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati con la [/GL](gl-whole-program-optimization.md) opzione del compilatore.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opzioni di DUMPBIN](dumpbin-options.md)

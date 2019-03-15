@@ -5,25 +5,25 @@ f1_keywords:
 - CWindowImpl
 - ATLWIN/ATL::CWindowImpl
 - ATLWIN/ATL::CWindowImpl::Create
-- ATLWIN/ATL::DefWindowProc
-- ATLWIN/ATL::GetCurrentMessage
-- ATLWIN/ATL::GetWindowProc
-- ATLWIN/ATL::OnFinalMessage
-- ATLWIN/ATL::SubclassWindow
-- ATLWIN/ATL::UnsubclassWindow
-- ATLWIN/ATL::GetWndClassInfo
-- ATLWIN/ATL::WindowProc
-- ATLWIN/ATL::m_pfnSuperWindowProc
+- ATLWIN/ATL::CWindowImpl::DefWindowProc
+- ATLWIN/ATL::CWindowImpl::GetCurrentMessage
+- ATLWIN/ATL::CWindowImpl::GetWindowProc
+- ATLWIN/ATL::CWindowImpl::OnFinalMessage
+- ATLWIN/ATL::CWindowImpl::SubclassWindow
+- ATLWIN/ATL::CWindowImpl::UnsubclassWindow
+- ATLWIN/ATL::CWindowImpl::GetWndClassInfo
+- ATLWIN/ATL::CWindowImpl::WindowProc
+- ATLWIN/ATL::CWindowImpl::m_pfnSuperWindowProc
 helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 96807debc7a3af5eca5d7a0c17a7728431733325
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f835f2869af20a1cb22595837c317eb165ef5fe9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417931"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820351"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 

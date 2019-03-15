@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Qfast_transcendentals
 - Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
-ms.openlocfilehash: d96b2c93e9fc8be73ef43f63fc0a6328661df442
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 383a915721d627367ca2ca035957df947996bbe2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414200"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818349"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (forzare funzioni trascendenti veloci)
 
@@ -28,11 +28,11 @@ Genera il codice inline per le funzioni trascendenti.
 
 Questa opzione del compilatore forza funzioni trascendenti da convertire in codice inline per migliorare la velocità di esecuzione. Questa opzione ha effetto solo se abbinato **/fp: tranne** oppure **/fp: precise**. Generazione di codice inline per le funzioni trascendenti è già il comportamento predefinito in **/fp: fast**.
 
-Questa opzione non è compatibile con **/fp: strict**. Visualizzare [/fp (specifica il comportamento della virgola mobile)](../../build/reference/fp-specify-floating-point-behavior.md) per altre informazioni sulle opzioni del compilatore a virgola mobile.
+Questa opzione non è compatibile con **/fp: strict**. Visualizzare [/fp (specifica il comportamento della virgola mobile)](fp-specify-floating-point-behavior.md) per altre informazioni sulle opzioni del compilatore a virgola mobile.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -46,6 +46,6 @@ Questa opzione non è compatibile con **/fp: strict**. Visualizzare [/fp (specif
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /Q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni /Q (operazioni di basso livello)](q-options-low-level-operations.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

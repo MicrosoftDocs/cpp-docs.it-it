@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434983"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815879"
 ---
 # <a name="attribute-programming-faq"></a>Domande frequenti sulla programmazione con attributi
 
@@ -40,10 +40,10 @@ Questo argomento sono incluse le seguenti domande frequenti:
 
 Un valore HRESULT è un tipo di dati semplice che viene spesso utilizzato come valore restituito da attributi e ATL in generale. La tabella seguente descrive i diversi valori. Altri valori sono contenuti nel file Winerror. h file di intestazione.
 
-|nome|Descrizione|Valore|
+|nome|Descrizione|Value|
 |----------|-----------------|-----------|
 |S_OK|Operazione riuscita|0x00000000|
-|E_UNEXPECTED|Errore imprevisto|0x8000ffff|
+|E_UNEXPECTED|Errore imprevisto|0x8000FFFF|
 |E_NOTIMPL|Non implementato|0x80004001|
 |E_OUTOFMEMORY|Non è riuscito ad allocare sufficiente memoria|0x8007000E|
 |E_INVALIDARG|Uno o più argomenti non sono validi|0x80070057|
@@ -122,7 +122,7 @@ Potrebbe essere un progetto ATL senza attributo, che dispone di un file con este
 
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Come è possibile usare un file con estensione idl in un progetto con attributo?
 
-Potrebbe essere un file con estensione idl che si desidera utilizzare nel progetto ATL con attributi. In questo caso, si utilizzerebbe il [importidl](importidl.md) dell'attributo, compilare il file con estensione idl in un file con estensione h (vedere la [MIDL Property Pages](../../ide/midl-property-pages.md) del progetto **pagine delle proprietà** nella finestra di dialogo), e quindi includere il file con estensione h nel progetto.
+Potrebbe essere un file con estensione idl che si desidera utilizzare nel progetto ATL con attributi. In questo caso, si utilizzerebbe il [importidl](importidl.md) dell'attributo, compilare il file con estensione idl in un file con estensione h (vedere la [MIDL Property Pages](../../build/reference/midl-property-pages.md) del progetto **pagine delle proprietà** nella finestra di dialogo), e quindi includere il file con estensione h nel progetto.
 
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> È possibile modificare il codice che viene inserito da un attributo?
 

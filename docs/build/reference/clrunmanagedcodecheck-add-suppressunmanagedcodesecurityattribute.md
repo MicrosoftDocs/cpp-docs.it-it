@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 3cefe34eef1a30274ba2e9e362e2f61458f10e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565919"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822600"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (rimuovere SuppressUnmanagedCodeSecurityAttribute)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50565919"
 
 ## <a name="syntax"></a>Sintassi
 
-> **/CLRUNMANAGEDCODECHECK**[**: NO**]
+> **/CLRUNMANAGEDCODECHECK**[**:NO**]
 
 ## <a name="remarks"></a>Note
 
@@ -39,7 +39,7 @@ Visualizzare [Secure linee guida di codifica per il codice non gestito](/dotnet/
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -55,5 +55,5 @@ Visualizzare [Secure linee guida di codifica per il codice non gestito](/dotnet/
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)
-- [Opzioni del linker](../../build/reference/linker-options.md)
+- [Riferimento del linker MSVC](linking.md)
+- [Opzioni del Linker MSVC](linker-options.md)

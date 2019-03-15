@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /BIND editbin option
 - import address table
 ms.assetid: 3772b330-1868-4c90-857d-c31faa867982
-ms.openlocfilehash: eb364f951e97da6a3c4950290669d835e4c24be4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e8ba0a5f0235c8771567e4e43172bdf8c81c99a2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418919"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818479"
 ---
 # <a name="bind"></a>/BIND
 
@@ -34,4 +34,4 @@ Per impostazione predefinita, il caricatore di programma imposta gli indirizzi d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+[Opzioni di EDITBIN](editbin-options.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: e435b48359a708408ff8659e53c9e7c4f7e80261
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ee51c858c9f90440cf0c2b21799ef7473cf6da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619115"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813864"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Specifica il tipo di file di origine)
 
@@ -29,9 +29,9 @@ Il **/Tc** opzione specifica che il relativo argomento filename è un file di or
 
 ## <a name="syntax"></a>Sintassi
 
-> **/TC** _filename_
+> **/Tc** _filename_
 >  **/Tp** _filename_
->  **/TC** 
+>  **/TC**
 >  **/TP**
 
 ## <a name="arguments"></a>Argomenti
@@ -43,11 +43,11 @@ Un file di origine C o C++.
 
 Per impostazione predefinita **CL** si presuppone che i file con estensione c sono file di origine C e i file con estensione cpp o l'estensione. cxx sono file di origine C++.
 
-Quando entrambi i **TC** o **Tc** opzioni viene specificata, qualsiasi specifica del [/Zc: wchar_t (wchar_t Is tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opzione viene ignorata.
+Quando entrambi i **TC** o **Tc** opzioni viene specificata, qualsiasi specifica del [/Zc: wchar_t (wchar_t Is tipo nativo)](zc-wchar-t-wchar-t-is-native-type.md) opzione viene ignorata.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **avanzate** pagina delle proprietà.
 
@@ -69,5 +69,5 @@ Questa riga di comando di CL specifica Test1, TEST2.cxx, TEST3.huh e TEST4 vengo
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

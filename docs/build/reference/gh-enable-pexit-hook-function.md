@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-ms.openlocfilehash: 21649838ba81f3affdda3f3833de23e4d9e33746
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 077096cc296f2aa2128127493a84a91da9a067c5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422529"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822171"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Attiva funzione hook _pexit)
 
@@ -36,11 +36,11 @@ A meno che non si intende chiamare in modo esplicito `_pexit`, non è necessario
 void __declspec(naked) __cdecl _pexit( void );
 ```
 
-`_pexit` è simile a `_penter`; vedere [/Gh (Abilita funzione Hook nella penter)](../../build/reference/gh-enable-penter-hook-function.md) per un esempio di come scrivere un `_pexit` (funzione).
+`_pexit` è simile a `_penter`; vedere [/Gh (Abilita funzione Hook nella penter)](gh-enable-penter-hook-function.md) per un esempio di come scrivere un `_pexit` (funzione).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -54,5 +54,5 @@ void __declspec(naked) __cdecl _pexit( void );
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

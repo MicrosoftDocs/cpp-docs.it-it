@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: ee0796260ac17613568912f0de235e9a1fd0702e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513893"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821365"
 ---
 # <a name="fatal-error-c1001"></a>Errore irreversibile C1001
 
@@ -19,7 +19,7 @@ ms.locfileid: "50513893"
 
 Il compilatore non è possibile generare il codice corretto per un costrutto, spesso dovuti alla combinazione di una particolare espressione e un'opzione di ottimizzazione o un problema durante l'analisi. Se il file del compilatore elencato dispone di un'ora utc o segmento di percorso C2, è probabilmente un errore di ottimizzazione. Se il file contiene un segmento di percorso cxxfe o c1xx, oppure è msc1.cpp, è probabilmente un errore del parser. Se il file denominato cl.exe, non sono disponibili altre informazioni.
 
-È spesso possibile risolvere un problema di ottimizzazione tramite la rimozione di uno o più opzioni di ottimizzazione. Per determinare quale opzione causa l'errore, rimuovere le opzioni uno alla volta e recompile fino a quando non andrà a sparire il messaggio di errore. Sono le opzioni più comunemente [/Og (ottimizzazioni globali)](../../build/reference/og-global-optimizations.md) e [/Oi (genera funzioni intrinseche)](../../build/reference/oi-generate-intrinsic-functions.md). Dopo aver determinato quale opzione di ottimizzazione è responsabile, è possibile disabilitarlo per la funzione in cui si verifica l'errore utilizzando la [ottimizzare](../../preprocessor/optimize.md) pragma e continuare a usare l'opzione per il resto del modulo. Per altre informazioni sulle opzioni di ottimizzazione, vedere [consigliate di ottimizzazione](../../build/reference/optimization-best-practices.md).
+È spesso possibile risolvere un problema di ottimizzazione tramite la rimozione di uno o più opzioni di ottimizzazione. Per determinare quale opzione causa l'errore, rimuovere le opzioni uno alla volta e recompile fino a quando non andrà a sparire il messaggio di errore. Sono le opzioni più comunemente [/Og (ottimizzazioni globali)](../../build/reference/og-global-optimizations.md) e [/Oi (genera funzioni intrinseche)](../../build/reference/oi-generate-intrinsic-functions.md). Dopo aver determinato quale opzione di ottimizzazione è responsabile, è possibile disabilitarlo per la funzione in cui si verifica l'errore utilizzando la [ottimizzare](../../preprocessor/optimize.md) pragma e continuare a usare l'opzione per il resto del modulo. Per altre informazioni sulle opzioni di ottimizzazione, vedere [consigliate di ottimizzazione](../../build/optimization-best-practices.md).
 
 Se le ottimizzazioni non sono responsabile dell'errore, provare a riscrivere la riga in cui viene segnalato l'errore, o più righe di codice che circonda tale riga. Per visualizzare il codice nello stesso modo il compilatore visualizzati dopo la pre-elaborazione, è possibile usare la [/P (pre-elabora in un file)](../../build/reference/p-preprocess-to-a-file.md) opzione.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413043"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822488"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (Annulla la definizione dei simboli)
 
@@ -46,18 +46,18 @@ Per impostazione predefinita, il compilatore definisce i simboli seguenti specif
 
 |Simbolo|Funzione|
 |------------|--------------|
-|_CHAR_UNSIGNED|Tipo char predefinito è senza segno. Definita se la [/J](../../build/reference/j-default-char-type-is-unsigned.md) opzione specificata.|
-|_CPPRTTI|Definita per il codice compilato con il [/GR](../../build/reference/gr-enable-run-time-type-information.md) opzione.|
-|_CPPUNWIND|Definita per il codice compilato con il [/EHsc](../../build/reference/eh-exception-handling-model.md) opzione.|
-|_DLL|Definita se la [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) opzione specificata.|
+|_CHAR_UNSIGNED|Tipo char predefinito è senza segno. Definita se la [/J](j-default-char-type-is-unsigned.md) opzione specificata.|
+|_CPPRTTI|Definita per il codice compilato con il [/GR](gr-enable-run-time-type-information.md) opzione.|
+|_CPPUNWIND|Definita per il codice compilato con il [/EHsc](eh-exception-handling-model.md) opzione.|
+|_DLL|Definita se la [/MD](md-mt-ld-use-run-time-library.md) opzione specificata.|
 |_M_IX86|Per impostazione predefinita, definito a 600 x86 a destinazioni.|
 |_MSC_VER|Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md).|
 |_WIN32|Definita per le applicazioni WIN32. Sempre definita.|
-|_MT|Definita se la [/MD o /MT](../../build/reference/md-mt-ld-use-run-time-library.md) opzione specificata.|
+|_MT|Definita se la [/MD o /MT](md-mt-ld-use-run-time-library.md) opzione specificata.|
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -71,9 +71,9 @@ Per impostazione predefinita, il compilatore definisce i simboli seguenti specif
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[/J (il tipo char predefinito è senza segno)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
-[/GR (abilita informazioni sui tipi in fase di esecuzione)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
-[/EH (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md)<br/>
-[/MD, /MT, /LD (uso della libreria di runtime)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/J (il tipo char predefinito è senza segno)](j-default-char-type-is-unsigned.md)<br/>
+[/GR (abilita informazioni sui tipi in fase di esecuzione)](gr-enable-run-time-type-information.md)<br/>
+[/EH (modello di gestione delle eccezioni)](eh-exception-handling-model.md)<br/>
+[/MD, /MT, /LD (uso della libreria di runtime)](md-mt-ld-use-run-time-library.md)

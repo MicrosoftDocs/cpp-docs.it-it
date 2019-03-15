@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 85439598ae4c3e0f9ef923f21e701e0399aefa70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619297"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820793"
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(conformità agli standard)
 
@@ -29,21 +29,21 @@ Specificare la modalità di conformità agli standard del compilatore. Usare que
 
 Questa opzione è supportata in Visual Studio 2017 e versioni successive.
 
-È possibile usare la **/PERMISSIVE--** opzione del compilatore per specificare il comportamento del compilatore conforme agli standard. Questa opzione Disabilita permissivi dei comportamenti e imposta il [/Zc](../../build/reference/zc-conformance.md) opzioni del compilatore per la conformità ai rigidi. Nell'IDE, questa opzione rende inoltre il codice non conforme di IntelliSense motore sottolineato.
+È possibile usare la **/PERMISSIVE--** opzione del compilatore per specificare il comportamento del compilatore conforme agli standard. Questa opzione Disabilita permissivi dei comportamenti e imposta il [/Zc](zc-conformance.md) opzioni del compilatore per la conformità ai rigidi. Nell'IDE, questa opzione rende inoltre il codice non conforme di IntelliSense motore sottolineato.
 
 Per impostazione predefinita, il **/PERMISSIVE--** opzione è impostata in nuovi progetti creati da Visual Studio 2017 versione 15.5 e versioni successive. Non è impostata per impostazione predefinita nelle versioni precedenti. Quando l'opzione è impostata, il compilatore genera errori di diagnostica o nel codice vengono rilevati avvisi durante la costrutti di linguaggio non standard, inclusi alcuni bug comuni in pre-C + + 11 codice.
 
 Il **/PERMISSIVE--** opzione è compatibile con quasi tutti i file di intestazione da Kit di Windows più recenti, ad esempio il Software Development Kit (SDK) o Windows Driver Kit (WDK), a partire da Windows Fall Creators SDK (10.0.16299.0). Le versioni precedenti del SDK potrebbero non riuscire per la compilazione sotto **/PERMISSIVE--** per vari motivi di conformità di codice di origine. Il compilatore e la spedizione di SDK su sequenze temporali di versione diverso, pertanto sono presenti alcuni problemi rimanenti. Per problemi di file di intestazione specifici, vedere [problemi intestazione Windows](#windows-header-issues) sotto.
 
-Il **/PERMISSIVE--** set di opzioni di [/Zc: strictstrings](../../build/reference/zc-conformance.md) e [/Zc: rvaluecast](../../build/reference/zc-conformance.md) opzioni per comportamento conforme. Per impostazione predefinita al comportamento non conforme. È possibile passare specifici **/Zc** opzioni dopo **/PERMISSIVE--** nella riga di comando per eseguire l'override di questo comportamento.
+Il **/PERMISSIVE--** set di opzioni di [/Zc: strictstrings](zc-conformance.md) e [/Zc: rvaluecast](zc-conformance.md) opzioni per comportamento conforme. Per impostazione predefinita al comportamento non conforme. È possibile passare specifici **/Zc** opzioni dopo **/PERMISSIVE--** nella riga di comando per eseguire l'override di questo comportamento.
 
-Nelle versioni di inizio del compilatore in Visual Studio 2017 versione 15.3, il **/PERMISSIVE--** set di opzioni di [/Zc: ternary](../../build/reference/zc-ternary.md) opzione. Il compilatore implementa anche più i requisiti per la ricerca nome in due fasi. Quando la **/PERMISSIVE--** opzione è impostata, il compilatore analizza definizioni di modello di funzione e di classe, che identifica i nomi dei dipendenti e non dipendente usati nei modelli. In questa versione, viene eseguita solo analisi delle dipendenze di nome.
+Nelle versioni di inizio del compilatore in Visual Studio 2017 versione 15.3, il **/PERMISSIVE--** set di opzioni di [/Zc: ternary](zc-ternary.md) opzione. Il compilatore implementa anche più i requisiti per la ricerca nome in due fasi. Quando la **/PERMISSIVE--** opzione è impostata, il compilatore analizza definizioni di modello di funzione e di classe, che identifica i nomi dei dipendenti e non dipendente usati nei modelli. In questa versione, viene eseguita solo analisi delle dipendenze di nome.
 
 Le estensioni specifiche dell'ambiente e le aree di linguaggio che lascia lo standard dall'implementazione non sono interessate dal **/PERMISSIVE--**. Ad esempio, le specifiche di Microsoft `__declspec`, convenzione di chiamata e structured exception handling attributi e le direttive pragma del compilatore specifiche o parole chiave, non sono contrassegnate dal compilatore in **/PERMISSIVE--** modalità.
 
-Il **/PERMISSIVE--** opzione Usa il supporto della conformità nella versione corrente del compilatore per determinare i costrutti di linguaggio sono non conforme. L'opzione non determina se il codice sia conforme a una versione specifica di C++ standard. Per consentire tutto il supporto del compilatore implementate per lo standard bozza più recente, usare il [/std:latest](../../build/reference/std-specify-language-standard-version.md) opzione. Per limitare il supporto del compilatore per l'attuale implementazione standard c++17, usare il [/std: c + + 17](../../build/reference/std-specify-language-standard-version.md) opzione. Per limitare il supporto del compilatore in modo che corrisponda maggiormente il standard c++14, usare il [/std: c + + 14](../../build/reference/std-specify-language-standard-version.md) opzione, ovvero l'impostazione predefinita.
+Il **/PERMISSIVE--** opzione Usa il supporto della conformità nella versione corrente del compilatore per determinare i costrutti di linguaggio sono non conforme. L'opzione non determina se il codice sia conforme a una versione specifica di C++ standard. Per consentire tutto il supporto del compilatore implementate per lo standard bozza più recente, usare il [/std:latest](std-specify-language-standard-version.md) opzione. Per limitare il supporto del compilatore per l'attuale implementazione standard c++17, usare il [/std: c + + 17](std-specify-language-standard-version.md) opzione. Per limitare il supporto del compilatore in modo che corrisponda maggiormente il standard c++14, usare il [/std: c + + 14](std-specify-language-standard-version.md) opzione, ovvero l'impostazione predefinita.
 
-Non tutti c++11, c++14 o c++17 conforme agli standard codice è supportato dal compilatore Visual C++ in Visual Studio 2017. A seconda della versione di Visual Studio, il **/PERMISSIVE--** opzione potrebbe non rilevare i problemi per quanto riguarda alcuni aspetti della ricerca del nome in due fasi, un riferimento non const a una posizione temporanea di associazione, considerando init copia come init diretto, consentendo più conversioni definite dall'utente nell'inizializzazione, o token alternativo per gli operatori logici e ad altre aree non supportate della conformità. Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md). Per sfruttare al meglio **/PERMISSIVE--**, l'aggiornamento di Visual Studio alla versione più recente.
+Non tutti c++11, c++14 o c++17 conforme agli standard codice è supportato dal compilatore MSVC in Visual Studio 2017. A seconda della versione di Visual Studio, il **/PERMISSIVE--** opzione potrebbe non rilevare i problemi per quanto riguarda alcuni aspetti della ricerca del nome in due fasi, un riferimento non const a una posizione temporanea di associazione, considerando init copia come init diretto, consentendo più conversioni definite dall'utente nell'inizializzazione, o token alternativo per gli operatori logici e ad altre aree non supportate della conformità. Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md). Per sfruttare al meglio **/PERMISSIVE--**, l'aggiornamento di Visual Studio alla versione più recente.
 
 ### <a name="how-to-fix-your-code"></a>Come correggere il codice
 
@@ -425,7 +425,7 @@ Questi problemi sono specifici per le intestazioni in modalità utente di Window
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   La dichiarazione con prototipo di enumerazione senza ambito è un'estensione Microsoft. Per risolvere questo problema, compilare i file che includono cellularapi_oem.h senza il **/PERMISSIVE--** , oppure utilizzare il [/wd](../../build/reference/compiler-option-warning-level.md) opzione per ignorare l'avviso C4471.
+   La dichiarazione con prototipo di enumerazione senza ambito è un'estensione Microsoft. Per risolvere questo problema, compilare i file che includono cellularapi_oem.h senza il **/PERMISSIVE--** , oppure utilizzare il [/wd](compiler-option-warning-level.md) opzione per ignorare l'avviso C4471.
 
 - Rilasciare in um/omscript.h
 
@@ -464,5 +464,5 @@ Nelle versioni precedenti di Visual Studio 2017 versione 15.5, utilizzare questa
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore](../../build/reference/compiler-options.md)
-- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+- [Opzioni del compilatore MSVC](compiler-options.md)
+- [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

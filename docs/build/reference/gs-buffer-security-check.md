@@ -14,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 6681ff09b846011af1b500f88a535c208d0bc1c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417591"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820234"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (Controllo sicurezza buffer)
 
@@ -96,7 +96,7 @@ Il compilatore non esegue copie dei parametri esposti nelle situazioni seguenti:
 
 - Funzioni che non contengono un buffer GS.
 
-- Le ottimizzazioni ([Opzioni /O](../../build/reference/o-options-optimize-code.md)) non sono abilitati.
+- Le ottimizzazioni ([Opzioni /O](o-options-optimize-code.md)) non sono abilitati.
 
 - Funzioni che hanno un elenco di argomenti variabili (...).
 
@@ -116,7 +116,7 @@ Anche se si usa **/GS**, tentano sempre di scrivere codice protetto che non disp
 
 1. Nelle **Esplora soluzioni**, fare clic sul progetto e quindi fare clic su **proprietà**.
 
-   Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+   Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Nel **pagine delle proprietà** finestra di dialogo, fare clic sul **C/C++** cartella.
 
@@ -157,5 +157,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

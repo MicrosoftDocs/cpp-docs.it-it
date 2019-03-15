@@ -3,12 +3,12 @@ title: / POGOSAFEMODE (PGO eseguito in modalità provvisoria thread)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544430"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821287"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (PGO eseguito in modalità provvisoria thread)
 
@@ -26,11 +26,11 @@ Il **/POGOSAFEMODE** opzione imposta la compilazione instrumentata per utilizzar
 
 Per impostazione predefinita, profilazione PGO viene eseguita in modalità veloce. **/ POGOSAFEMODE** è necessaria solo se si desidera utilizzare la modalità provvisoria.
 
-Per eseguire la profilazione PGO in modalità provvisoria, è necessario utilizzare **/GENPROFILE: esatto** (scelta consigliata), oppure usare la variabile di ambiente [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) o l'opzione del linker **/POGOSAFEMODE**, a seconda del sistema. Se si sta eseguendo la profilatura su un x64 computer, è necessario usare l'opzione del linker. Se si sta eseguendo la profilatura su un x86 computer, è possibile usare l'opzione del linker o definire la variabile di ambiente su un valore qualsiasi prima di iniziare il processo di strumentazione PGO.
+Per eseguire la profilazione PGO in modalità provvisoria, è necessario utilizzare **/GENPROFILE: esatto** (scelta consigliata), oppure usare la variabile di ambiente [PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md) o l'opzione del linker **/POGOSAFEMODE**, a seconda del sistema. Se si sta eseguendo la profilatura su un x64 computer, è necessario usare l'opzione del linker. Se si sta eseguendo la profilatura su un x86 computer, è possibile usare l'opzione del linker o definire la variabile di ambiente su un valore qualsiasi prima di iniziare il processo di strumentazione PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **ottimizzazione** pagina delle proprietà.
 
@@ -38,7 +38,7 @@ Per eseguire la profilazione PGO in modalità provvisoria, è necessario utilizz
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
-1. Immettere il **/POGOSAFEMODE** opzione nel **opzioni aggiuntive** casella. Scegli **OK** per salvare le modifiche.
+1. Immettere il **/POGOSAFEMODE** opzione nel **opzioni aggiuntive** casella. Scegliere **OK** per salvare le modifiche.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
@@ -48,5 +48,5 @@ Per eseguire la profilazione PGO in modalità provvisoria, è necessario utilizz
 
 [/ GENPROFILE e /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
-[Ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md)<br/>
-[Variabili d'ambiente per le ottimizzazioni GPO](../../build/reference/environment-variables-for-profile-guided-optimizations.md)<br/>
+[Ottimizzazioni PGO](../profile-guided-optimizations.md)<br/>
+[Variabili d'ambiente per le ottimizzazioni GPO](../environment-variables-for-profile-guided-optimizations.md)<br/>

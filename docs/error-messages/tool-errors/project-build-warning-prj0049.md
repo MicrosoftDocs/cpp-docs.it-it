@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: a451b7fe7b2f7cd89f8898232badf0d3b7e9f138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447216"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816230"
 ---
 # <a name="project-build-warning-prj0049"></a>Avviso di compilazione progetto PRJ0049
 
@@ -21,7 +21,7 @@ Le applicazioni create con Visual Studio 2008 è possono specificare quale versi
 
 1. Effettuare una delle seguenti operazioni:
 
-   - Modificare il framework di destinazione del progetto **pagine delle proprietà** finestra di dialogo, in modo che sia successiva o uguale alla versione minima framework di tutti i riferimenti di assembly e progetti. Per altre informazioni, vedere [aggiunta di riferimenti](../../ide/adding-references-in-visual-cpp-projects.md).
+   - Modificare il framework di destinazione del progetto **pagine delle proprietà** finestra di dialogo, in modo che sia successiva o uguale alla versione minima framework di tutti i riferimenti di assembly e progetti. Per altre informazioni, vedere [aggiunta di riferimenti](../../build/adding-references-in-visual-cpp-projects.md).
 
    - Rimuovere il riferimento all'assembly o un progetto con una versione minima del framework successiva a quella di framework di destinazione. Questi elementi verranno contrassegnati con un'icona di avviso del progetto **pagine delle proprietà**.
 

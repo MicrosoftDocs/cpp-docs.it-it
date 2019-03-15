@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 Application Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 1b89ae1c91536956924090f4a5eafa883053ed7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 639834c8d723b65b894e6d216cbeb3b7f4dc37ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526156"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822691"
 ---
 # <a name="win32-application-wizard"></a>Creazione guidata applicazione Win32
 
@@ -23,8 +23,8 @@ La creazione guidata applicazione Win32 di Visual C++ consente di creare uno dei
 |**Progetto vuoto**|Yes|Yes|Yes|No|
 |**Simboli di esportazione**|No|No|Sì|No|
 |**Intestazione precompilata**|No|No|No|Yes|
-|**Supporto ATL**|Yes|No|No|No|
-|**Supporto MFC**|Yes|No|No|Yes|
+|**Supporto ATL**|Sì|No|No|No|
+|**Supporto MFC**|Sì|No|No|Sì|
 
 ## <a name="overview"></a>Panoramica
 
@@ -47,9 +47,9 @@ Dopo aver creato un'applicazione desktop di Windows, è possibile aggiungere cla
 > [!NOTE]
 > Non è possibile aggiungere classi ATL ed è possibile aggiungere classi MFC solo a quei tipi di applicazioni desktop di Windows che supportano MFC (vedere la tabella precedente).
 
-È possibile visualizzare i file creati per il progetto con la procedura guidata in **Esplora soluzioni**. Per altre informazioni sui file che verrà creato il progetto, vedere il file di progetto creato, `ReadMe.txt`. Per altre informazioni sui tipi di file, vedere [Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md).
+È possibile visualizzare i file creati per il progetto con la procedura guidata in **Esplora soluzioni**. Per altre informazioni sui file che verrà creato il progetto, vedere il file di progetto creato, `ReadMe.txt`. Per altre informazioni sui tipi di file, vedere [Tipi di file creati per i progetti di Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione di un'applicazione desktop di Windows vuota](../windows/creating-an-empty-windows-desktop-application.md)<br/>
-[Tipi di progetto Visual C++](../ide/visual-cpp-project-types.md)
+[Tipi di progetto Visual C++](../build/reference/visual-cpp-project-types.md)

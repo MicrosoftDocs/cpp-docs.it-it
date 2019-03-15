@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628007"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822197"
 ---
 # <a name="fatal-error-c1083"></a>Errore irreversibile C1083
 
@@ -67,15 +67,15 @@ Se viene visualizzato questo errore quando si tenta di configurare una libreria 
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>Il file è nel progetto, ma non il percorso di ricerca
 
-Anche quando i file di intestazione sono elencati nel **Esplora soluzioni** come parte di un progetto, si trovano i file solo dal compilatore quando si fa riferimento un' `#include` o `#import` direttiva in un'origine di file e si trovano in un includere il percorso di ricerca. Tipi diversi di compilazioni possono usare percorsi di ricerca diversi. Il **/X** opzione del compilatore può essere usata per escludere directory dal percorso di ricerca di inclusione. In questo modo, compilazioni diverse possono utilizzare file di inclusione diversi con lo stesso nome, ma archiviati in directory diverse. Si tratta di un'alternativa alla compilazione condizionale utilizzando i comandi del preprocessore. Per altre informazioni sul **/X** l'opzione del compilatore, vedere [/X (Ignora a percorsi di inclusione Standard)](../../build/reference/x-ignore-standard-include-paths.md).
+Anche quando i file di intestazione sono elencati nel **Esplora soluzioni** come parte di un progetto, si trovano i file solo dal compilatore quando si fa riferimento un' `#include` o `#import` direttiva in un'origine di file e si trovano in un includere il percorso di ricerca. Tipi diversi di compilazioni possono utilizzare percorsi di ricerca diversi. Il **/X** opzione del compilatore può essere usata per escludere directory dal percorso di ricerca di inclusione. In questo modo, compilazioni diverse possono utilizzare file di inclusione diversi con lo stesso nome, ma archiviati in directory diverse. Si tratta di un'alternativa alla compilazione condizionale utilizzando i comandi del preprocessore. Per altre informazioni sul **/X** l'opzione del compilatore, vedere [/X (Ignora a percorsi di inclusione Standard)](../../build/reference/x-ignore-standard-include-paths.md).
 
 Per risolvere il problema, correggere il percorso usato dal compilatore per trovare il file importato o incluso. Nuovo progetto Usa predefinito includono i percorsi di ricerca. È possibile modificare il percorso di ricerca di inclusione per aggiungere una directory per il progetto. Se si esegue la compilazione dalla riga di comando, aggiungere il percorso per il **inclusione** variabile di ambiente o il **/I** opzione del compilatore per specificare il percorso del file.
 
-Per impostare il percorso di directory di inclusione in Visual Studio, aprire il progetto **pagine delle proprietà** nella finestra di dialogo. Selezionare **directory di VC + +** sotto **delle proprietà di configurazione** nel riquadro a sinistra e quindi modificare il **directory di inclusione** proprietà. Per altre informazioni sulle directory per ogni utente e al progetto cercati dal compilatore in Visual Studio, vedere [VC + + Directories Property Page](../../ide/vcpp-directories-property-page.md). Per altre informazioni sul **/I** l'opzione del compilatore, vedere [/I (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md).
+Per impostare il percorso di directory di inclusione in Visual Studio, aprire il progetto **pagine delle proprietà** nella finestra di dialogo. Selezionare **directory di VC + +** sotto **delle proprietà di configurazione** nel riquadro a sinistra e quindi modificare il **directory di inclusione** proprietà. Per altre informazioni sulle directory per ogni utente e al progetto cercati dal compilatore in Visual Studio, vedere [VC + + Directories Property Page](../../build/reference/vcpp-directories-property-page.md). Per altre informazioni sul **/I** l'opzione del compilatore, vedere [/I (directory di inclusione aggiuntive)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>La riga di comando di inclusione o l'ambiente LIB non è impostato
 
-Quando il compilatore viene richiamato sulla riga di comando, vengono spesso usate variabili di ambiente per specificare i percorsi di ricerca. Se il percorso di ricerca descritto dal **inclusione** oppure **LIB** variabile di ambiente non è impostata correttamente, può essere generato un errore C1083. Si consiglia di compilazioni usando un collegamento prompt dei comandi per gli sviluppatori per impostare l'ambiente di base per la riga di comando. Per altre informazioni, vedere [compilare C/C++ nella riga di comando](../../build/building-on-the-command-line.md). Per altre informazioni su come usare le variabili di ambiente, vedere [procedura: usare variabili di ambiente in una compilazione](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
+Quando il compilatore viene richiamato sulla riga di comando, vengono spesso utilizzate variabili di ambiente per specificare i percorsi di ricerca. Se il percorso di ricerca descritto dal **inclusione** oppure **LIB** variabile di ambiente non è impostata correttamente, può essere generato un errore C1083. Si consiglia di compilazioni usando un collegamento prompt dei comandi per gli sviluppatori per impostare l'ambiente di base per la riga di comando. Per altre informazioni, vedere [compilare C/C++ nella riga di comando](../../build/building-on-the-command-line.md). Per altre informazioni su come usare le variabili di ambiente, vedere [come: Usare le variabili di ambiente in una compilazione](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>Il file potrebbe essere bloccato o in uso
 
@@ -87,7 +87,7 @@ L'errore C1083 può anche indicare che è stata inclusa la versione non corretta
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Le intestazioni precompilate non sono ancora precompilate
 
-Quando un progetto è configurato per l'utilizzo di intestazioni precompilate, è necessario creare i file pch corrispondenti in modo da poter compilare i file che utilizzano il contenuto dell'intestazione. Ad esempio, il file stdafx. cpp viene creato automaticamente nella directory del progetto per i nuovi progetti. Compilare innanzitutto il file per creare i file di intestazione precompilata. La progettazione del processo di compilazione, questa operazione viene eseguita automaticamente. Per altre informazioni, vedere [creazione di file di intestazione precompilato](../../build/reference/creating-precompiled-header-files.md).
+Quando un progetto è configurato per l'uso di intestazioni precompilate, è necessario creare i file pch corrispondenti in modo da poter compilare i file che usano il contenuto delle intestazioni. Ad esempio, il file stdafx. cpp viene creato automaticamente nella directory del progetto per i nuovi progetti. Compilare innanzitutto il file per creare i file di intestazione precompilati. La progettazione del processo di compilazione, questa operazione viene eseguita automaticamente. Per altre informazioni, vedere [creazione di file di intestazione precompilato](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Cause aggiuntive
 
@@ -116,7 +116,7 @@ L'esempio seguente genera l'errore C1083 quando il file di intestazione `"test.h
 #include "stdio.h"  // OK
 ```
 
-Per informazioni su come compilare progetti C/C++ nell'IDE o sulla riga di comando e le informazioni sull'impostazione delle variabili di ambiente, vedere [compilazione di programmi C/C++](../../build/building-c-cpp-programs.md).
+Per informazioni su come compilare progetti C/C++ nell'IDE o sulla riga di comando e le informazioni sull'impostazione delle variabili di ambiente, vedere [progetti e i sistemi di compilazione](../../build/projects-and-build-systems-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

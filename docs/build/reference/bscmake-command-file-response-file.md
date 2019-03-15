@@ -9,12 +9,12 @@ helpviewer_keywords:
 - response files
 - command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-ms.openlocfilehash: 43f5a886dd41941a0675e31bc8c9d3f23c607023
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: beb3d5696957f6b1af8168e3194e3943a1574be8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426238"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820312"
 ---
 # <a name="bscmake-command-file-response-file"></a>File di comando di BSCMAKE (file di risposta)
 
@@ -45,4 +45,4 @@ file1.sbr file2.sbr file3.sbr file4.sbr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a BSCMAKE](../../build/reference/bscmake-reference.md)
+[Riferimento a BSCMAKE](bscmake-reference.md)
