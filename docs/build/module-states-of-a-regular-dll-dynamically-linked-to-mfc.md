@@ -8,12 +8,12 @@ helpviewer_keywords:
 - module states [C++], regular MFC DLLs dynamically linked to
 - DLLs [C++], module states
 ms.assetid: b4493e79-d25e-4b7f-a565-60de5b32c723
-ms.openlocfilehash: a47b2a11db9dfc08b84cc9cba07a62a91ac1a805
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ab51ca8097bd5ec27e8e7cfd8b8f19d76195664
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420180"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822145"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>Stato dei moduli di una DLL MFC regolari collegate in modo dinamico a MFC
 
@@ -37,10 +37,10 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 - [Gestione dei dati dello stato dei moduli MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [DLL MFC regolari collegate in modo dinamico a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [DLL MFC regolari collegate in modo dinamico a MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC (DLL di estensione)](../build/extension-dlls-overview.md)
+- [MFC (DLL di estensione)](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL in Visual C++](dlls-in-visual-cpp.md)

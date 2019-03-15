@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Od compiler option [C++]
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
-ms.openlocfilehash: 386113c7926085aa7e82e23768556372014a8cc8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 83ece0865eb74a4e9e292b78733df9d24602fe1d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426251"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57806766"
 ---
 # <a name="od-disable-debug"></a>/Od (Disabilita (Debug))
 
@@ -31,11 +31,11 @@ Consente di disattivare tutte le ottimizzazioni del programma e velocizza la com
 
 ## <a name="remarks"></a>Note
 
-Questa opzione è il valore predefinito. In quanto **/Od** Elimina lo spostamento di codice, semplifica il processo di debug. Per altre informazioni sulle opzioni del compilatore per il debug, vedere [/Z7, /Zi, /ZI (formato informazioni di Debug)](../../build/reference/z7-zi-zi-debug-information-format.md).
+Questa opzione è il valore predefinito. In quanto **/Od** Elimina lo spostamento di codice, semplifica il processo di debug. Per altre informazioni sulle opzioni del compilatore per il debug, vedere [/Z7, /Zi, /ZI (formato informazioni di Debug)](z7-zi-zi-debug-information-format.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -49,7 +49,7 @@ Questa opzione è il valore predefinito. In quanto **/Od** Elimina lo spostament
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[/Z7, /Zi, /ZI (Formato informazioni di debug)](../../build/reference/z7-zi-zi-debug-information-format.md)
+[Opzioni /O (ottimizza codice)](o-options-optimize-code.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/Z7, /Zi, /ZI (Formato informazioni di debug)](z7-zi-zi-debug-information-format.md)

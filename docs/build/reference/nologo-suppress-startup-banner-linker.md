@@ -13,12 +13,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-ms.openlocfilehash: 1b966c1f7af556a85aadcafaa8ed43da5b3f75df
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422156"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812499"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (Non visualizza il messaggio di avvio) (Linker)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57422156"
 
 L'opzione /NOLOGO evita la visualizzazione del numero di messaggi e la versione del copyright.
 
-Questa opzione impedisce anche l'eco dei file di comando. Per informazioni dettagliate, vedere [file di comando LINK](../../build/reference/link-command-files.md).
+Questa opzione impedisce anche l'eco dei file di comando. Per informazioni dettagliate, vedere [file di comando LINK](linking.md).
 
 Per impostazione predefinita, queste informazioni vengono inviate dal linker per la finestra di Output. Nella riga di comando, viene inviato all'output standard e può essere reindirizzato a un file.
 
@@ -44,5 +44,5 @@ Per impostazione predefinita, queste informazioni vengono inviate dal linker per
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /NOLOGO editbin option
 - NOLOGO editbin option
 ms.assetid: 909a1909-0c99-4bce-8013-bf161d645f19
-ms.openlocfilehash: 50b4300ba86cdcc9050972be22762b97f7e292a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 994b896172725873d69120262f045764b278f17d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415214"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820478"
 ---
 # <a name="nologo-editbin"></a>/NOLOGO (EDITBIN)
 
@@ -27,4 +27,4 @@ Questa opzione evita la visualizzazione del messaggio di copyright EDITBIN e il 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+[Opzioni di EDITBIN](editbin-options.md)

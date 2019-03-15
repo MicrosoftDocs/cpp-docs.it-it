@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: 71718aed7853e7d09b15734bad6a350f9a19fd5e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1db1dbdba4829ccf939cdc4f07ccfefe2474a35d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422832"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812304"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (Disabilita estensioni linguaggio)
 
@@ -51,7 +51,7 @@ Per altre informazioni sui problemi di conformità in Visual C++, vedere [compor
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Nel riquadro di spostamento, scegliere **le proprietà di configurazione** > **C/C++** > **lingua**.
 
@@ -64,7 +64,6 @@ Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLang
 ## <a name="see-also"></a>Vedere anche
 
 [Opzioni del compilatore](compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](setting-compiler-options.md)<br/>
 [/Zc (conformità)](zc-conformance.md)<br/>
 [/permissive/ (conformità agli standard)](permissive-standards-conformance.md)<br/>
 [/std (specifica la versione standard del linguaggio)](std-specify-language-standard-version.md)<br/>

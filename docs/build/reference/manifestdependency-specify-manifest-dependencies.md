@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: debff86b506545862ce4054bf4e210cdb8a29185
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418399"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812226"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Specifica le dipendenze tra manifesti)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57418399"
 
 /MANIFESTDEPENDENCY consente di specificare gli attributi che verranno inseriti nella \<dipendenza > sezione del file manifesto.
 
-Visualizzare [/MANIFEST (Crea Side-by-Side manifesto dell'Assembly)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) per informazioni su come creare un file manifesto.
+Visualizzare [/MANIFEST (Crea Side-by-Side manifesto dell'Assembly)](manifest-create-side-by-side-assembly-manifest.md) per informazioni su come creare un file manifesto.
 
 Per altre informazioni sul \<dipendenza > sezione del file manifesto, vedere [Publisher Configuration Files](/windows/desktop/SbsCs/publisher-configuration-files).
 
@@ -61,7 +61,7 @@ Il linker verrà raccogliere commenti /MANIFESTDEPENDENCY, eliminare le voci dup
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **File manifesto** pagina delle proprietà.
 
@@ -73,5 +73,5 @@ Il linker verrà raccogliere commenti /MANIFESTDEPENDENCY, eliminare le voci dup
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

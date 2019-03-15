@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447243"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818024"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Segnala gli errori interni del linker)
 
@@ -42,7 +42,7 @@ L'opzione **/errorreport: Send** invia automaticamente le informazioni sugli err
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Aprire il **le proprietà di configurazione** > **Linker** > **avanzate** pagina delle proprietà.
 
@@ -54,6 +54,6 @@ L'opzione **/errorreport: Send** invia automaticamente le informazioni sugli err
 
 ## <a name="see-also"></a>Vedere anche
 
-[/errorReport (segnala gli errori interni del compilatore)](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[/errorReport (segnala gli errori interni del compilatore)](errorreport-report-internal-compiler-errors.md)<br/>
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

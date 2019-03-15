@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-ms.openlocfilehash: c4888b8f9b6dba4b826f2ee7dda7529a4bdf1586
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d0813befc622db72e095c449794405fc5d58465b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414499"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812187"
 ---
 # <a name="name-cc"></a>NAME (C/C++)
 
@@ -23,10 +23,10 @@ NAME [application][BASE=address]
 
 ## <a name="remarks"></a>Note
 
-È un modo equivalente per specificare un nome di file di output con il [/out](../../build/reference/out-output-file-name.md) è l'opzione del linker e un modo equivalente per impostare l'indirizzo di base con il [/base](../../build/reference/base-base-address.md) l'opzione del linker. Se vengono specificati entrambi, / OUT esegue l'override **nome**.
+È un modo equivalente per specificare un nome di file di output con il [/out](out-output-file-name.md) è l'opzione del linker e un modo equivalente per impostare l'indirizzo di base con il [/base](base-base-address.md) l'opzione del linker. Se vengono specificati entrambi, / OUT esegue l'override **nome**.
 
 Se si compila una DLL, nome influiranno solo il nome della DLL.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)
+[Regole relative alle istruzioni di definizione dei moduli](rules-for-module-definition-statements.md)

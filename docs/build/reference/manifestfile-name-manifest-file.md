@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -MANIFESTFILE linker option
 - /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
-ms.openlocfilehash: b30e0239eaca365e738ae6568f159715673fd139
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e75c6d8171aae22312ba6aaa2d4304d831ec6d0f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424548"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813838"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (Assegna un nome al file manifesto)
 
@@ -25,11 +25,11 @@ ms.locfileid: "57424548"
 
 /MANIFESTFILE consente di modificare il nome predefinito del file manifesto.  Il nome predefinito del file manifesto è il nome del file con estensione manifest aggiunto.
 
-/MANIFESTFILE avrà alcun effetto se non si collega anche con [/manifest](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).
+/MANIFESTFILE avrà alcun effetto se non si collega anche con [/manifest](manifest-create-side-by-side-assembly-manifest.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -45,5 +45,5 @@ ms.locfileid: "57424548"
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894094"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818167"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (specifica il comportamento a virgola mobile)
 
@@ -51,7 +51,7 @@ Sotto **/fp: strict**, il compilatore genera codice che consente al programma in
 
 #### <a name="fast"></a>Fast
 
-Il **/fp: fast** opzione consente al compilatore di riordinare, combinare o semplificare le operazioni a virgola mobile e per ottimizzare il codice a virgola mobile e per velocità e spazio. Il compilatore può omettere l'arrotondamento in istruzioni di assegnazione, typecast o chiamate di funzione. Può riordinare le operazioni o eseguire, ad esempio, trasformazioni algebriche, mediante l'utilizzo di leggi associative e distributive, anche se tali trasformazioni comportano il comportamento di arrotondamento diverso impatta in maniera visibile. A causa di questa ottimizzazione avanzata, il risultato di alcuni calcoli a virgola mobile può differire da quelle generate da altri **/fp** opzioni. Valori speciali (NaN, + infinity, - infinity, -0,0) non possono essere propagati o si comportano esattamente in base allo standard IEEE 754. Riduzioni a virgola mobile possono essere generate sotto **/fp: fast**. Il compilatore è ancora associato per l'architettura sottostante sotto **/fp: fast**, e ottimizzazioni aggiuntive potrebbero essere disponibili tramite l'uso delle [/arch](../../build/reference/arch-minimum-cpu-architecture.md) opzione.
+Il **/fp: fast** opzione consente al compilatore di riordinare, combinare o semplificare le operazioni a virgola mobile e per ottimizzare il codice a virgola mobile e per velocità e spazio. Il compilatore può omettere l'arrotondamento in istruzioni di assegnazione, typecast o chiamate di funzione. Può riordinare le operazioni o eseguire, ad esempio, trasformazioni algebriche, mediante l'utilizzo di leggi associative e distributive, anche se tali trasformazioni comportano il comportamento di arrotondamento diverso impatta in maniera visibile. A causa di questa ottimizzazione avanzata, il risultato di alcuni calcoli a virgola mobile può differire da quelle generate da altri **/fp** opzioni. Valori speciali (NaN, + infinity, - infinity, -0,0) non possono essere propagati o si comportano esattamente in base allo standard IEEE 754. Riduzioni a virgola mobile possono essere generate sotto **/fp: fast**. Il compilatore è ancora associato per l'architettura sottostante sotto **/fp: fast**, e ottimizzazioni aggiuntive potrebbero essere disponibili tramite l'uso delle [/arch](arch-minimum-cpu-architecture.md) opzione.
 
 Sotto **/fp: fast**, il compilatore genera il codice deve essere eseguita nell'ambiente a virgola mobile predefinito e si presuppone che l'ambiente a virgola mobile non è accessibile o modificato in fase di esecuzione. Vale a dire, si presuppone che il codice non annullare il mascheramento delle eccezioni a virgola mobile, leggere o scrivere i registri di stato a virgola mobile o modificare le modalità di arrotondamento.
 
@@ -67,7 +67,7 @@ Si noti che **/fp: tranne** non abilita tutte le eccezioni a virgola mobile da s
 
 Più **/fp** possono specificare le opzioni nella riga di comando del compilatore stesso. Solo uno dei **/fp: strict**, **/fp: fast**, e **/fp: precise** opzioni possono essere attiva alla volta. Se più di una di queste opzioni viene specificata nella riga di comando, l'opzione successiva ha la precedenza e il compilatore genera un avviso. Il **/fp: strict** e **/fp: eccetto** non sono compatibili con le opzioni **/clr**.
 
-Il [/Za](../../build/reference/za-ze-disable-language-extensions.md) opzione (compatibilità ANSI) non è compatibile con **/fp**.
+Il [/Za](za-ze-disable-language-extensions.md) opzione (compatibilità ANSI) non è compatibile con **/fp**.
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Utilizzando i pragma per controllare il comportamento a virgola mobile
 
@@ -256,7 +256,7 @@ Sotto **/O2** **/fp: fast** viene semplificato il codice generato, perché tutti
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **Code Generation** pagina delle proprietà.
 
@@ -268,6 +268,6 @@ Sotto **/O2** **/fp: fast** viene semplificato il codice generato, perché tutti
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](setting-compiler-options.md)<br/>
-[Microsoft Visual C++ ottimizzazione virgola mobile](floating-point-optimization.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Ottimizzazione virgola mobile MSVC](floating-point-optimization.md)<br/>

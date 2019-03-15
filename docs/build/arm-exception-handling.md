@@ -2,16 +2,16 @@
 title: Gestione delle eccezioni ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694348"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814540"
 ---
 # <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
-Windows su architetture ARM usa lo stesso meccanismo di gestione strutturata delle eccezioni sia per le eccezioni sincrone generate da hardware che per le eccezioni sincrone generate da software. I gestori di eccezioni specifici del linguaggio sono costruiti sulla base della gestione strutturata delle eccezioni di Windows mediante le funzioni helper del linguaggio. Questo documento descrive in Windows su ARM e gli helper del linguaggio utilizzati dal codice generato dal compilatore Visual C++ e dell'assembler ARM Microsoft di gestione delle eccezioni.
+Windows su architetture ARM usa lo stesso meccanismo di gestione strutturata delle eccezioni sia per le eccezioni sincrone generate da hardware che per le eccezioni sincrone generate da software. I gestori di eccezioni specifici del linguaggio sono costruiti sulla base della gestione strutturata delle eccezioni di Windows mediante le funzioni helper del linguaggio. Questo documento descrive gestione delle eccezioni in Windows su ARM e gli helper del linguaggio usati dal codice generato per l'assembler ARM Microsoft e il compilatore MSVC.
 
 ## <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
@@ -104,7 +104,7 @@ I prologhi per le funzioni canoniche possono contenere fino a 5 istruzioni (tene
 
 |Istruzione|Opcode è considerato presente se:|Dimensione|Opcode|Codici di rimozione|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*= = 1|16|`push {r0-r3}`|04|
+|1|*H*==1|16|`push {r0-r3}`|04|
 |2|*C*= = 1 o *L*= = 1 o *R*= = 0 o PF==1 = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*= = 1 e (*L*= = 0 e *R*= = 1 e PF==0 = = 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*= = 1 e (*L*= = 1 o *R*= = 0 o PF==1 = = 1)|32|`add r11,sp,#xx`|FC|
@@ -121,22 +121,22 @@ Le istruzioni 2 e 4 sono impostate in base alla necessità o meno di un'operazio
 
 |C|L|R|PF|Registri Integer sottoposti a push|Registri VFP sottoposti a push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r*N*|none|
-|0|0|0|1|r*S*- r*N*|none|
-|0|0|1|0|none|D8-d*E*|
-|0|0|1|1|r*S*-r3|D8-d*E*|
-|0|1|0|0|R4-r*N*, LR|none|
-|0|1|0|1|r*S*- r*N*, LR|none|
-|0|1|1|0|LR|D8-d*E*|
-|0|1|1|1|r*S*-r3, LR|D8-d*E*|
-|1|0|0|0|R4-r*N*, r11|none|
-|1|0|0|1|r*S*- r*N*, r11|none|
-|1|0|1|0|r11|D8-d*E*|
-|1|0|1|1|r*S*-r3, r11|D8-d*E*|
+|0|0|0|0|r4-r*N*|none|
+|0|0|0|1|r*S*-r*N*|none|
+|0|0|1|0|none|d8-d*E*|
+|0|0|1|1|r*S*-r3|d8-d*E*|
+|0|1|0|0|r4-r*N*, LR|none|
+|0|1|0|1|r*S*-r*N*, LR|none|
+|0|1|1|0|LR|d8-d*E*|
+|0|1|1|1|r*S*-r3, LR|d8-d*E*|
+|1|0|0|0|r4-r*N*, r11|none|
+|1|0|0|1|r*S*-r*N*, r11|none|
+|1|0|1|0|r11|d8-d*E*|
+|1|0|1|1|r*S*-r3, r11|d8-d*E*|
 |1|1|0|0|R4-r*N*, r11, LR|none|
-|1|1|0|1|r*S*- r*N*, r11, LR|none|
-|1|1|1|0|r11, LR|D8-d*E*|
-|1|1|1|1|r*S*-r3, r11, LR|D8-d*E*|
+|1|1|0|1|r*S*-r*N*, r11, LR|none|
+|1|1|1|0|r11, LR|d8-d*E*|
+|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
 
 Gli epiloghi per le funzioni canoniche hanno un formato analogo, ma in ordine inverso e con alcune opzioni aggiuntive. L'epilogo può contenere fino a 5 istruzioni e la sua forma dipende strettamente dalla forma del prologo.
 
@@ -147,8 +147,8 @@ Gli epiloghi per le funzioni canoniche hanno un formato analogo, ma in ordine in
 |8|*C*= = 1 o (*L*= = 1 e *H*= = 0) o *R*= = 0 o *EF*= = 1|16/32|`pop   {registers}`|
 |9a|*H*= = 1 e *L*= = 0|16|`add   sp,sp,#0x10`|
 |9b|*H*= = 1 e *L*= = 1|32|`ldr   pc,[sp],#0x14`|
-|10a|*RET*= = 1|16|`bx    reg`|
-|10b|*RET*= = 2|32|`b     address`|
+|10a|*Ret*==1|16|`bx    reg`|
+|10b|*Ret*==2|32|`b     address`|
 
 L'istruzione 6 è la regolazione dello stack esplicita se viene specificata una regolazione non ridotta. In quanto *PF* indipendenti *EF*, è possibile eseguire il presente senza l'istruzione 6 l'istruzione 5 o viceversa.
 
@@ -410,7 +410,7 @@ Se dopo gli epiloghi a istruzione singola ignorati non restano altri epiloghi, p
 
 In questi esempi, la base dell'immagine è in 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Esempio 1: funzione foglia, nessuna variabile locale
+### <a name="example-1-leaf-function-no-locals"></a>Esempio 1: Funzione foglia, nessuna variabile locale
 
 ```asm
 Prologue:
@@ -444,7 +444,7 @@ Epilogue:
 
    - *Stack Adjust* = 0, che indica nessun regolazione dello stack
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Esempio 2: funzione annidata con allocazione locale
+### <a name="example-2-nested-function-with-local-allocation"></a>Esempio 2: Funzione annidata con allocazione locale
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Stack regolare* = 3 (0x0C/4 =)
 
-### <a name="example-3-nested-variadic-function"></a>Esempio 3: funzione variadic annidata
+### <a name="example-3-nested-variadic-function"></a>Esempio 3: Funzione Variadic annidata
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Stack Adjust* = 0, che indica nessun regolazione dello stack
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Esempio 4: funzione con più epiloghi
+### <a name="example-4-function-with-multiple-epilogues"></a>Esempio 4: Funzione con più epiloghi
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - Codice di rimozione 2 = 0xFF: end
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Esempio 5: funzione con stack dinamico e prologo interno
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Esempio 5: Funzione con Stack dinamico e prologo interno
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Codice parole* = 0x01, che indica una parola a 32 bit di codici di rimozione
 
-- Parola 1: ambito di epilogo all'offset 0xC6 (= 0x18C/2), con inizio indice dei codici di rimozione in 0x00 e con la condizione 0x0E (sempre)
+- Word 1: Ambito di epilogo all'offset 0xC6 (= 0x18c/2), avvio indice codice di rimozione in 0x00 e con la condizione 0x0E (sempre)
 
 - Codici di rimozione, a partire dalla parola 2: (condivisi tra prologo/epilogo)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - Codice di rimozione 3 = 0xFD: end, conta come istruzione a 16 bit per l'epilogo
 
-### <a name="example-6-function-with-exception-handler"></a>Esempio 6: funzione con gestore di eccezioni
+### <a name="example-6-function-with-exception-handler"></a>Esempio 6: Funzione con gestore di eccezioni
 
 ```asm
 Prologue:
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)
+[Panoramica delle convenzioni ABI ARM](overview-of-arm-abi-conventions.md)<br/>
+[Problemi comuni relativi alla migrazione di Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)

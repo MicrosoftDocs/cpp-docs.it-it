@@ -13,12 +13,12 @@ helpviewer_keywords:
 - suppress frame pointer creation
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-ms.openlocfilehash: 7eb30a758f6888aa866620e8b419c9b4124475b0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7884f52cc22766c6b1a864fc01abcd73f92cfabb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418115"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817959"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (Omissione dei puntatori ai frame)
 
@@ -36,13 +36,13 @@ Questa opzione consente di velocizzare l'esecuzione delle chiamate di funzione i
 
 Se il codice richiede l'indirizzamento basato sul fotogramma, è possibile specificare il **/Oy-** opzione dopo la **/Ox** oppure utilizzare [ottimizzare](../../preprocessor/optimize.md) con il "**y**"e **disattivare** argomenti per ottenere la massima ottimizzazione con indirizzamento basato sul fotogramma. Il compilatore rileva la maggior parte dei casi in cui è richiesto l'indirizzamento basato su frame (ad esempio, con la `_alloca` e `setjmp` funzioni e con gestione strutturata delle eccezioni).
 
-Il [/Ox (Abilita più ottimizzazioni della velocità)](../../build/reference/ox-full-optimization.md) e [/O1, / O2 (riduce dimensione, Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opzioni implicano **/Oy**. Che specifica **/Oy-** dopo il **/Ox**, **/O1**, oppure **/O2** opzione Disabilita **/Oy**, che si tratti esplicita o implicita.
+Il [/Ox (Abilita più ottimizzazioni della velocità)](ox-full-optimization.md) e [/O1, / O2 (riduce dimensione, Ottimizza velocità)](o1-o2-minimize-size-maximize-speed.md) opzioni implicano **/Oy**. Che specifica **/Oy-** dopo il **/Ox**, **/O1**, oppure **/O2** opzione Disabilita **/Oy**, che si tratti esplicita o implicita.
 
-Il **/Oy** rende l'opzione del compilatore uso del debugger più difficile perché il compilatore Sopprime le informazioni sul puntatore di frame. Se si specifica un'opzione del compilatore debug ([/Z7, /Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), è consigliabile specificare le **/Oy-** opzione dopo eventuali altre opzioni di ottimizzazione del compilatore.
+Il **/Oy** rende l'opzione del compilatore uso del debugger più difficile perché il compilatore Sopprime le informazioni sul puntatore di frame. Se si specifica un'opzione del compilatore debug ([/Z7, /Zi, /ZI](z7-zi-zi-debug-information-format.md)), è consigliabile specificare le **/Oy-** opzione dopo eventuali altre opzioni di ottimizzazione del compilatore.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **ottimizzazione** pagina delle proprietà.
 
@@ -54,6 +54,6 @@ Il **/Oy** rende l'opzione del compilatore uso del debugger più difficile perch
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni /O (ottimizza codice)](../../build/reference/o-options-optimize-code.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
+[Opzioni /O (ottimizza codice)](o-options-optimize-code.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>

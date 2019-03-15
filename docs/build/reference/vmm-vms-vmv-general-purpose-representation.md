@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-ms.openlocfilehash: 3c11572880a0b58a1ba82f2e794c9dbfbd521c44
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425211"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810042"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Rappresentazione generale)
 
-Quando [/vmb, /vmg (metodo di rappresentazione)](../../build/reference/vmb-vmg-representation-method.md) sia selezionato come il [metodo di rappresentazione](../../build/reference/vmb-vmg-representation-method.md). Queste opzioni indicano il modello di ereditarietà della definizione di classe non ancora specificate.
+Quando [/vmb, /vmg (metodo di rappresentazione)](vmb-vmg-representation-method.md) sia selezionato come il [metodo di rappresentazione](vmb-vmg-representation-method.md). Queste opzioni indicano il modello di ereditarietà della definizione di classe non ancora specificate.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -52,7 +52,7 @@ Quando si specifica una di queste opzioni di modello di ereditarietà, tale mode
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -66,6 +66,6 @@ Quando si specifica una di queste opzioni di modello di ereditarietà, tale mode
 
 ## <a name="see-also"></a>Vedere anche
 
-[/vmb, /vmg (metodo di rappresentazione)](../../build/reference/vmb-vmg-representation-method.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[/vmb, /vmg (metodo di rappresentazione)](vmb-vmg-representation-method.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

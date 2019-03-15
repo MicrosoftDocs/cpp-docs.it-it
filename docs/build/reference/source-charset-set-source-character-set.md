@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: ec5ac314f73c49b47f4132583d7651681b6b0545
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 54f8d4d0edaa310384d19a9c9a188f96ec895eac
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413056"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811654"
 ---
 # <a name="source-charset-set-source-character-set"></a>/Source-CharSet (Imposta origine Set di caratteri)
 
@@ -44,7 +44,7 @@ Se si desidera impostare il set di caratteri di origine e il set di caratteri di
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere la **le proprietà di configurazione**, **C/C++**, **riga di comando** cartella.
 
@@ -54,8 +54,8 @@ Se si desidera impostare il set di caratteri di origine e il set di caratteri di
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[/Execution-CharSet (set esecuzione Set di caratteri)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/utf/8 (imposta i set di caratteri eseguibili e di origine su UTF/8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
-[/validate/charset (convalida per i caratteri compatibili)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[/Execution-CharSet (set esecuzione Set di caratteri)](execution-charset-set-execution-character-set.md)<br/>
+[/utf/8 (imposta i set di caratteri eseguibili e di origine su UTF/8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate/charset (convalida per i caratteri compatibili)](validate-charset-validate-for-compatible-characters.md)

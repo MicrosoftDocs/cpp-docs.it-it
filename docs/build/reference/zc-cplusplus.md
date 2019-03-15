@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
-ms.openlocfilehash: 8e73d93ae0618a04bdcc8476fadb6cc2aab595b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623990"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810094"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/Zc:__cplusplus (Abilita cplusplus aggiornato macro)
 
@@ -29,11 +29,11 @@ Quando la **/Zc:__cplusplus** opzione è abilitata, il valore restituito dal  **
 
 |Commutatore /Zc:__cplusplus|commutatore /std:c++|valore cplusplus|
 |-|-|-|
-Zc:__cplusplus|/std: c + + 14 (impostazione predefinita)|L 201402
-Zc:__cplusplus|/std: c + + 17|L 201703
-Zc:__cplusplus|/std: c + + più recente|L 201704
-Zc:__cplusplus-(disabilitato)|Qualsiasi valore|L 199711
-Non è specificato|Qualsiasi valore|L 199711
+Zc:__cplusplus|/std:c++14 (default)|201402L
+Zc:__cplusplus|/std:c++17|201703L
+Zc:__cplusplus|/std: c + + più recente|201704L
+Zc:__cplusplus-(disabilitato)|Qualsiasi valore|199711L
+Non è specificato|Qualsiasi valore|199711L
 
 Il compilatore non supporta parametri standard per c++98, c++03 o linguaggio c++11.
 
@@ -41,7 +41,7 @@ Per il rilevamento delle modifiche per il set di strumenti del compilatore granu
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Per impostare questa opzione del compilatore in Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 

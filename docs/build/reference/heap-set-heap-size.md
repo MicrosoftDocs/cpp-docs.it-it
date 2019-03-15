@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 500e1eca9385697829edca46e5e703a5238684a7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422371"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813294"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Imposta la dimensione dell'heap)
 
@@ -34,11 +34,11 @@ L'opzione facoltativa `commit` argomento specifica la quantità di memoria fisic
 
 Specificare il *riservare* e `commit` valori in notazione decimale o del linguaggio C.
 
-Questa funzionalità è anche disponibile tramite un file di definizione moduli con [HEAPSIZE](../../build/reference/heapsize.md).
+Questa funzionalità è anche disponibile tramite un file di definizione moduli con [HEAPSIZE](heapsize.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -52,5 +52,5 @@ Questa funzionalità è anche disponibile tramite un file di definizione moduli 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

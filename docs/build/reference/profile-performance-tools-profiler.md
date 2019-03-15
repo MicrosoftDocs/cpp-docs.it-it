@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: a0fda47497ffc247dd9678ece7aac76291aed1ff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419153"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810003"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler strumenti di prestazioni)
 
@@ -28,13 +28,13 @@ Produce un file di output che può essere usato con il profiler di Strumenti per
 
 / PROFILE implica le seguenti opzioni del linker:
 
-- [/OPT:REF](../../build/reference/opt-optimizations.md)
+- [/OPT:REF](opt-optimizations.md)
 
 - /OPT:NOICF
 
-- [/INCREMENTAL:NO](../../build/reference/incremental-link-incrementally.md)
+- [/INCREMENTAL:NO](incremental-link-incrementally.md)
 
-- [/FIXED:NO](../../build/reference/fixed-fixed-base-address.md)
+- [/FIXED:NO](fixed-fixed-base-address.md)
 
 O il profilo indica al linker generare una sezione di rilocazione nell'immagine del programma.  Una sezione di rilocazione consente al profiler di trasformare l'immagine del programma per ottenere i dati del profilo.
 
@@ -42,7 +42,7 @@ O il profilo indica al linker generare una sezione di rilocazione nell'immagine 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Espandere il nodo **Proprietà di configurazione**.
 
@@ -58,5 +58,5 @@ O il profilo indica al linker generare una sezione di rilocazione nell'immagine 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

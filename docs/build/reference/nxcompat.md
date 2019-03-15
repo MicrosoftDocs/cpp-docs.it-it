@@ -8,12 +8,12 @@ helpviewer_keywords:
 - NXCOMPAT editbin option
 - /NXCOMPAT editbin option
 ms.assetid: 30e6b9bb-1189-4e27-b7c3-587e239437b7
-ms.openlocfilehash: 50ba953d48b58908e5d556f54589c2efba0559e3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a5e18795c7d90f3517a1a780161f1811f7aba07d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422182"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816048"
 ---
 # <a name="nxcompat"></a>/NXCOMPAT
 
@@ -25,8 +25,8 @@ ms.locfileid: "57422182"
 
 Indica che un file eseguibile è stato testato per essere compatibile con la funzionalità Protezione esecuzione programmi Windows.
 
-Per altre informazioni, vedere [/NXCOMPAT (compatibile con Protezione esecuzione programmi)](../../build/reference/nxcompat-compatible-with-data-execution-prevention.md).
+Per altre informazioni, vedere [/NXCOMPAT (compatibile con Protezione esecuzione programmi)](nxcompat-compatible-with-data-execution-prevention.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni di EDITBIN](../../build/reference/editbin-options.md)
+[Opzioni di EDITBIN](editbin-options.md)

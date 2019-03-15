@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 5ebc18d6d895928b1deec392cbb0bd91f48a96ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425705"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807858"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Simbolo del punto di ingresso)
 
@@ -42,17 +42,17 @@ Per impostazione predefinita, l'indirizzo iniziale è il nome di una funzione de
 |**WinMainCRTStartup** (o **wWinMainCRTStartup**)|Un'applicazione che usa /SUBSYSTEM:**WINDOWS**; le chiamate `WinMain` (o `wWinMain`), che deve essere definito da usare `__stdcall`|
 |**_DllMainCRTStartup**|UNA DLL. le chiamate `DllMain` se presente, che deve essere definito da usare `__stdcall`|
 
-Se il [/DLL](../../build/reference/dll-build-a-dll.md) oppure [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) viene omesso, il linker un sottosistema e punto di ingresso a seconda che la selezione `main` o `WinMain` è definito.
+Se il [/DLL](dll-build-a-dll.md) oppure [/SUBSYSTEM](subsystem-specify-subsystem.md) viene omesso, il linker un sottosistema e punto di ingresso a seconda che la selezione `main` o `WinMain` è definito.
 
 Le funzioni `main`, `WinMain`, e `DllMain` rappresentano le tre forme del punto di ingresso definito dall'utente.
 
 Quando si crea un'immagine gestita, la funzione specificata a /ENTRY deve avere una firma di (LPVOID *var1*, valore DWORD *var2*, LPVOID *var3*).
 
-Per informazioni su come definire il proprio `DllMain` punto di ingresso, vedere [Visual C++ e DLL comportamento libreria run-time](../../build/run-time-library-behavior.md) .
+Per informazioni su come definire il proprio `DllMain` punto di ingresso, vedere [Visual C++ e DLL comportamento libreria run-time](../run-time-library-behavior.md) .
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -66,5 +66,5 @@ Per informazioni su come definire il proprio `DllMain` punto di ingresso, vedere
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

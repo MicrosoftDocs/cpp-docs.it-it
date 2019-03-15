@@ -15,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: 28954ff1c77b7dcc530392fce095ed9df5c29cbf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414564"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820442"
 ---
 # <a name="mfc-extension-dlls"></a>DLL di estensione MFC
 
@@ -116,7 +116,7 @@ Se la DLL di estensione MFC deve mantenere dati aggiuntivi per ogni applicazione
 
 ### <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
 
-- [Inizializzare una DLL di estensione MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Inizializzare una DLL di estensione MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
@@ -124,12 +124,12 @@ Se la DLL di estensione MFC deve mantenere dati aggiuntivi per ogni applicazione
 
 - [Versione DLL di MFC](../mfc/tn033-dll-version-of-mfc.md)
 
-- [DLL MFC regolari collegate in modo statico a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [DLL MFC regolari collegate in modo statico a MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [DLL MFC regolari collegate in modo dinamico a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [DLL MFC regolari collegate in modo dinamico a MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Uso di DLL MFC di estensione per database, OLE e Sockets nelle DLL MFC regolari](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Uso di DLL MFC di estensione per database, OLE e Sockets nelle DLL MFC regolari](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL in Visual C++](dlls-in-visual-cpp.md)

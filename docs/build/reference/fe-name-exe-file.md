@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-ms.openlocfilehash: cac4dc0908c86574ef5b57c4436f734f94c0bb49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473411"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818050"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Specifica file EXE)
 
@@ -23,11 +23,11 @@ Specifica un nome e una directory per il file .exe o DLL creata dal compilatore.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/FE**[_pathname_] **/Fe:** _pathname_
+> **/Fe**[_pathname_] **/Fe:** _pathname_
 
 ### <a name="arguments"></a>Argomenti
 
-*nome del percorso*<br/>
+*pathname*<br/>
 Il percorso relativo o assoluto e nome file di base oppure un percorso relativo o assoluto per una directory o un nome di file di base da utilizzare per il file eseguibile generato.
 
 ## <a name="remarks"></a>Note
@@ -40,11 +40,11 @@ Se si specifica la [/c (compila senza collegamenti)](c-compile-without-linking.m
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Aprire il **le proprietà di configurazione** > **Linker** > **generale** pagina delle proprietà.
 
-1. Modificare il **File di Output** proprietà. Scegli **OK** per salvare le modifiche.
+1. Modificare il **File di Output** proprietà. Scegliere **OK** per salvare le modifiche.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
@@ -68,7 +68,7 @@ CL /FeC:\BIN\ *.C
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del file di output (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)<br/>
+[Opzioni del file di output (/F)](output-file-f-options.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Specifica del nome del percorso](specifying-the-pathname.md)<br/>

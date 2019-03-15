@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4627
 ms.assetid: 8840f3e6-b496-423a-8635-eb55d5f854a2
-ms.openlocfilehash: e833141020de1aef51a1ea3823dea86b024e077d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef00d6691195fa5fb925448dce9513d1ecb08b6d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542389"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809951"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>Avviso del compilatore (livello 1) C4627
 
@@ -36,4 +36,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)
+[Creazione di file di intestazione precompilata](../../build/creating-precompiled-header-files.md)

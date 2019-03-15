@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424795"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815827"
 ---
 # <a name="importing-and-exporting"></a>Importazione ed esportazione
 
@@ -27,7 +27,7 @@ ms.locfileid: "57424795"
 
 Un file di definizione moduli (def) è un file di testo contenente uno o più istruzioni di modulo che descrivono alcuni attributi di una DLL. Se non si usa **declspec** oppure **dllexport** per esportare le funzioni della DLL, è necessario un file def.
 
-È possibile usare file con estensione def [importare in un'applicazione](../build/importing-using-def-files.md) o su [esportare da una DLL](../build/exporting-from-a-dll-using-def-files.md).
+È possibile usare file con estensione def [importare in un'applicazione](importing-using-def-files.md) o su [esportare da una DLL](exporting-from-a-dll-using-def-files.md).
 
 ## <a name="using-declspec"></a>Utilizzando declspec
 
@@ -41,10 +41,10 @@ Il formato di file eseguibile portabile Win32 è progettato per ridurre al minim
 
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
 
-- [Importazione in un'applicazione](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importazione in un'applicazione](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Esportazione da una DLL](../build/exporting-from-a-dll.md)
+- [Esportazione da una DLL](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL in Visual C++](dlls-in-visual-cpp.md)

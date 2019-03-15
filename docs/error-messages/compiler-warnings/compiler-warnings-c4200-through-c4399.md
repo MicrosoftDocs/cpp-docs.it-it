@@ -31,14 +31,13 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455994"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810510"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Del compilatores C4200 a C4399
 
@@ -104,7 +103,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|«*identificatore*': dati automatici 'const' inizializzati con un costruttore predefinito generato dal compilatore producono risultati inaffidabili|
 |[Avviso del compilatore (livello 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|«*funzione*': è contrassegnato come declspec; è necessario specificare convenzione di chiamata nativa quando si importa una funzione.|
 |[Avviso del compilatore (livello 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|«*funzione*': collegamento dll non coerente|
-|Avviso del compilatore (livello 1) C4274|#ident ignorati. vedere la documentazione di #pragma comment (exestr, 'string')|
+|Avviso del compilatore (livello 1) C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[Avviso del compilatore (livello 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|interfaccia non dll '*classkey*' '*identifier1*'utilizzato come base per un'interfaccia dll'*classkey*' '*identifier2*'|
 |[Avviso del compilatore (livello 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|«*funzione*': nessun prototipo fornito; verrà utilizzato senza parametri|
 |Avviso del compilatore (livello 1) C4277|elemento importato '*NomeClasse*::*membro*' esiste come membro dei dati sia membro di funzione; membro dati ignorato|
@@ -153,7 +152,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 1) C4326](../../error-messages/compiler-warnings/compiler-warning-level-1-c4326.md)|tipo restituito di '*funzione*'deve essere'*type1*'invece di'*type2*'|
 |Genera un avviso C4327|«*assegnazione*': allineamento del riferimento indiretto di LHS ('*alignment1*') è maggiore di RHS ('*alignment2*')|
 |Genera un avviso C4328:|«*funzione*': allineamento del riferimento indiretto del parametro formale *numero_parametro* (*parameter_alignment*) è maggiore di allineamento dell'argomento effettivo (*argument_alignment*)|
-|[Avviso del compilatore (livello 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(Align()) viene ignorato nell'enumerazione|
+|[Avviso del compilatore (livello 1) C4329](../../error-messages/compiler-warnings/compiler-warning-level-1-c4329.md)|__declspec(align()) is ignored on enum|
 |Avviso del compilatore (livello 1) C4330|attributo '*attributo*'per la sezione'*sezione*' ignorato|
 |[Avviso del compilatore (livello 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|«*shift_operator*': spostamento a destra da eccessiva. perdita di dati|
 |[Avviso del compilatore (livello 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|«*shift_operator*': risultato dello shift a 32 bit convertito in modo implicito a 64 bit (si intendeva eseguire lo shift a 64 bit?)|
@@ -175,7 +174,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|«*membro*': membro dati statici non possa essere inizializzato tramite classi derivate|
 |[Avviso del compilatore (livello 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|argomento di matrice param trovato nell'elenco di argomenti formali per delegato '*delegare*'ignorato durante la generazione'*funzione*'|
 |[Avviso del compilatore (livello 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|«*operatore*': tipo restituito di delegati combinati non 'void', valore restituito è indefinito|
-|[Avviso del compilatore (livello 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|«*tipo*': identificatore di allineamento è inferiore all'allineamento effettivo ('*allineamento*') e verrà ignorato.|
+|[Avviso del compilatore (livello 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|«*tipo*': L'identificatore di allineamento è inferiore all'allineamento effettivo ('*allineamento*') e verrà ignorato.|
 |Avviso del compilatore (livello 2) C4362|«*tipo*': allineamento maggiore di 8 byte non è supportato da CLR|
 |[Avviso del compilatore (livello 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using per l'assembly '*assieme*'visualizzato in precedenza in'*posizione*' ('*line_number*') senza come\_attributo friend; come\_friend non applicato|
 |[Avviso del compilatore (livello 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|«*espressione*': conversione da '*type1*'a'*type2*', mancata corrispondenza tra signed e unsigned|
@@ -192,7 +191,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|i tipi nativi sono privati per impostazione predefinita. -d1PrivateNativeTypes è deprecato|
 |[Avviso del compilatore (livello 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|È necessario ottenere i puntatori a funzione per eseguire gli inizializzatori; prendere in considerazione System::ModuleHandle::ResolveMethodHandle|
 |[Avviso del compilatore (livello 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Versione '*version_number*' di common language runtime non è supportato da questo compilatore. Utilizzo di questa versione potrebbe provocare risultati imprevisti|
-|Avviso del compilatore (livello 1, errore) C4380|«*classe*': non è possibile deprecare un costruttore predefinito|
+|Avviso del compilatore (livello 1, errore) C4380|«*classe*': Non è possibile deprecare un costruttore predefinito|
 |[Avviso del compilatore (livello 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|«*function1*': metodo di interfaccia non essere implementato dal metodo non pubblico '*function2*»|
 |[Avviso del compilatore (livello 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|generazione di '*tipo*': un tipo con distruttore clrcall o costruttore di copia può essere rilevato solo in /clr: pura modulo|
 |[Avviso del compilatore (livello 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|«*operatore_dereferenziazione_istanza*': il significato della dereferenziazione di un handle può variare quando definito dall'utente '*operatore_dereferenziazione_istanza*' operatore esiste; scrivere l'operatore come statico funzione definire esplicito dell'operando|

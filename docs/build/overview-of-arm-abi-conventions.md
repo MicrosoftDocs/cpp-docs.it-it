@@ -2,12 +2,12 @@
 title: Panoramica delle convenzioni ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436023"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810458"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Panoramica delle convenzioni ABI ARM32
 
@@ -23,7 +23,7 @@ Il supporto per la divisione di numeri interi (UDIV/SDIV) è fortemente consigli
 
 ## <a name="endianness"></a>Ordine dei byte
 
-Windows su ARM viene eseguito in modalità little endian. Sia il compilatore Visual C++ che Windows Runtime prevedono sempre dati little endian. Anche se l'istruzione SETEND nell'architettura ISA (Instruction Set Architecture) ARM consente anche al codice in modalità utente di cambiare l'ordine dei byte corrente, è sconsigliato farlo perché è pericoloso per un'applicazione. Se viene generata un'eccezione in modalità big endian, il comportamento non è prevedibile e può provocare un errore dell'applicazione in modalità utente o un controllo errori in modalità kernel.
+Windows su ARM viene eseguito in modalità little endian. Il compilatore MSVC sia il runtime di Windows prevede dati little-endian in qualsiasi momento. Anche se l'istruzione SETEND nell'architettura ISA (Instruction Set Architecture) ARM consente anche al codice in modalità utente di cambiare l'ordine dei byte corrente, è sconsigliato farlo perché è pericoloso per un'applicazione. Se viene generata un'eccezione in modalità big endian, il comportamento non è prevedibile e può provocare un errore dell'applicazione in modalità utente o un controllo errori in modalità kernel.
 
 ## <a name="alignment"></a>Allineamento
 
@@ -137,7 +137,7 @@ La maggior parte dell'hardware ARM non supporta le eccezioni a virgola mobile IE
 
 Per le funzioni non variadic, l'interfaccia ABI di Windows su ARM segue le regole ARM per il passaggio dei parametri, tra cui le estensioni SIMD avanzate e VFP. Queste regole seguono il [Procedure Standard delle chiamate per l'architettura ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), consolidato con le estensioni VFP. Per impostazione predefinita, i primi quattro argomenti Integer e fino a otto argomenti vettoriali o a virgola mobile vengono passati nei registri e gli argomenti aggiuntivi vengono passati nello stack. Gli argomenti vengono assegnati ai registri o allo stack con questa procedura:
 
-### <a name="stage-a-initialization"></a>Inizializzazione di r: fase
+### <a name="stage-a-initialization"></a>Fase r: Inizializzazione
 
 L'inizializzazione viene eseguita una sola volta, prima dell'elaborazione degli argomenti:
 
@@ -149,7 +149,7 @@ L'inizializzazione viene eseguita una sola volta, prima dell'elaborazione degli 
 
 1. Se viene chiamata una funzione che restituisce un risultato in memoria, l'indirizzo per il risultato viene inserito in r0 e il numero NCRN viene impostato su r1.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fase b: pre-spaziatura interna e l'estensione di argomenti
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fase b: Pre-spaziatura interna e l'estensione di argomenti
 
 Per ogni argomento nell'elenco, viene applicata la prima regola corrispondente dell'elenco seguente:
 
@@ -159,7 +159,7 @@ Per ogni argomento nell'elenco, viene applicata la prima regola corrispondente d
 
 1. Se l'argomento è un tipo composito, la dimensione viene arrotondata per eccesso al più vicino multiplo di 4.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fase c: assegnazione di argomenti ai registri e allo stack
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fase c: Assegnazione di argomenti ai registri e allo stack
 
 Per ogni argomento nell'elenco, vengono applicate una alla volta le regole seguenti finché l'argomento non viene allocato:
 
@@ -205,13 +205,13 @@ Le enumerazioni sono tipi Integer a 32 bit a meno che almeno un valore nell'enum
 
 ## <a name="stack-walking"></a>Analisi dello stack
 
-Codice di Windows viene compilato con puntatori ai frame abilitati ([/Oy (omissione dei puntatori ai Frame)](../build/reference/oy-frame-pointer-omission.md)) per abilitare l'analisi rapida dello stack. In genere, il registro r11 punta al collegamento successivo nella catena, che è una coppia {r11, lr} che specifica il puntatore al frame precedente nello stack e l'indirizzo restituito. È consigliabile che anche il codice abiliti i puntatori ai frame per una profilatura e un'analisi migliori.
+Codice di Windows viene compilato con puntatori ai frame abilitati ([/Oy (omissione dei puntatori ai Frame)](reference/oy-frame-pointer-omission.md)) per abilitare l'analisi rapida dello stack. In genere, il registro r11 punta al collegamento successivo nella catena, che è una coppia {r11, lr} che specifica il puntatore al frame precedente nello stack e l'indirizzo restituito. È consigliabile che anche il codice abiliti i puntatori ai frame per una profilatura e un'analisi migliori.
 
 ## <a name="exception-unwinding"></a>Rimozione delle eccezioni
 
 Lo svuotamento dello stack durante la gestione delle eccezioni è abilitato dall'uso di codici di rimozione. I codici di rimozione sono sequenze di byte memorizzate nella sezione .xdata dell'immagine eseguibile. Descrivono il funzionamento del codice di prologo ed epilogo della funzione in modo astratto, per annullare gli effetti del prologo di una funzione in previsione della rimozione fino allo stack frame del chiamante.
 
-L'interfaccia EABI ARM specifica un modello di rimozione delle eccezioni che usa codici di rimozione. Questa specifica non è tuttavia sufficiente per la rimozione in Windows, che deve gestire casi in cui il processore è al centro del prologo o dell'epilogo di una funzione. Per altre informazioni su Windows su ARM eccezione dati e per la rimozione, vedere [gestione delle eccezioni ARM](../build/arm-exception-handling.md).
+L'interfaccia EABI ARM specifica un modello di rimozione delle eccezioni che usa codici di rimozione. Questa specifica non è tuttavia sufficiente per la rimozione in Windows, che deve gestire casi in cui il processore è al centro del prologo o dell'epilogo di una funzione. Per altre informazioni su Windows su ARM eccezione dati e per la rimozione, vedere [gestione delle eccezioni ARM](arm-exception-handling.md).
 
 È consigliabile che il codice generato in modo dinamico venga descritto con tabelle di funzioni dinamiche nelle Chiamate a `RtlAddFunctionTable` e le funzioni associate, in modo che il codice generato possa partecipare alla gestione delle eccezioni.
 
@@ -223,5 +223,5 @@ Il contatore è un vero e proprio contatore di cicli, non un orologio, e quindi 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Problemi comuni relativi alla migrazione di Visual C++ ARM](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Gestione delle eccezioni ARM](../build/arm-exception-handling.md)
+[Problemi comuni relativi alla migrazione di Visual C++ ARM](common-visual-cpp-arm-migration-issues.md)<br/>
+[Gestione delle eccezioni ARM](arm-exception-handling.md)

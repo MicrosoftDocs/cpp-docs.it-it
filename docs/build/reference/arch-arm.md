@@ -2,16 +2,16 @@
 title: /arch (ARM)
 ms.date: 11/04/2016
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-ms.openlocfilehash: 7fd396f4ed9c02daff5363342d7c851d022919ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b732a74d5fe223fdaf3b161d4ae92093ab5df407
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424990"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807871"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
-Specifica l'architettura per la generazione di codice in ARM. Vedere anche [/arch (x86)](../../build/reference/arch-x86.md) e [/arch (x64)](../../build/reference/arch-x64.md).
+Specifica l'architettura per la generazione di codice in ARM. Vedere anche [/arch (x86)](arch-x86.md) e [/arch (x64)](arch-x64.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,11 +31,11 @@ Consente l'utilizzo di istruzioni ARM VFPv4. Se questa opzione non è specificat
 
 Il `_M_ARM_FP` macro (per ARM) indica che, se presente, **/arch** è stata usata l'opzione del compilatore. Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md).
 
-Quando si usa [/clr](../../build/reference/clr-common-language-runtime-compilation.md) per compilare, **/arch** non ha alcun effetto sulla generazione di codice per le funzioni gestite. **/arch** solo interessa generare il codice per le funzioni native.
+Quando si usa [/clr](clr-common-language-runtime-compilation.md) per compilare, **/arch** non ha alcun effetto sulla generazione di codice per le funzioni gestite. **/arch** solo interessa generare il codice per le funzioni native.
 
 ### <a name="to-set-the-archarmv7ve-or-archvfpv4-compiler-option-in-visual-studio"></a>Impostare l'opzione del compilatore /arch:ARMv7VE o /arch:VFPv4 in Visual Studio
 
-1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **C/C++** cartella.
 
@@ -49,6 +49,6 @@ Quando si usa [/clr](../../build/reference/clr-common-language-runtime-compilati
 
 ## <a name="see-also"></a>Vedere anche
 
-[/arch (architettura minima della CPU)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[/arch (architettura minima della CPU)](arch-minimum-cpu-architecture.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

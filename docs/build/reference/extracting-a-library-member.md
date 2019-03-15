@@ -11,12 +11,12 @@ helpviewer_keywords:
 - extracting library members
 - /EXTRACT library manager option
 ms.assetid: a2c5c2a1-9b7e-489a-a9a4-1dec694e1fc5
-ms.openlocfilehash: 4d7629707d99130551401fdda39a972ab2447480
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6c577300f747d6f546b7caa3c66bddd6a516e16b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412887"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818063"
 ---
 # <a name="extracting-a-library-member"></a>Estrazione di membri dalle librerie
 
@@ -30,4 +30,4 @@ Questo comando crea un file con estensione obj denominato *oggetto estratto sovr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a LIB](../../build/reference/lib-reference.md)
+[Riferimento a LIB](lib-reference.md)

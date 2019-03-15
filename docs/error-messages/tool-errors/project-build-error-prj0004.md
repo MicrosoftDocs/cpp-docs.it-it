@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0004
 ms.assetid: 1858769f-0be4-40ed-ab70-2cee550488c7
-ms.openlocfilehash: 94752f16b40f3026967eefc836a95b797f48b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad11e5b81ec31e1ac8a47a0a0ffa31a443f1a107
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502479"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808196"
 ---
 # <a name="project-build-error-prj0004"></a>Errore di compilazione progetto PRJ0004
 
@@ -23,4 +23,4 @@ Sono state specificate una o più proprietà in modo da rendere la sintassi dell
 
 - Il computer potrebbe essere insufficiente spazio su disco.
 
-Si consiglia di rivedere le impostazioni per lo strumento, esaminare i [pagina delle proprietà della riga di comando](../../ide/command-line-property-pages.md).
+Si consiglia di rivedere le impostazioni per lo strumento, esaminare i [pagina delle proprietà della riga di comando](../../build/reference/command-line-property-pages.md).

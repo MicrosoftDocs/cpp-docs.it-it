@@ -11,16 +11,16 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 1451b452c5e2dc62e83e5b8f473248fa7c231877
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421194"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821222"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Esportazione e importazione tramite AFX_EXT_CLASS
 
-[DLL di estensione MFC](../build/extension-dlls-overview.md) usare la macro **AFX_EXT_CLASS** per esportare classi; i file eseguibili che si collegano alla DLL di estensione MFC utilizzano la macro per importare le classi. Con il **AFX_EXT_CLASS** (macro), gli stessi file di intestazione utilizzati per compilare la DLL può essere utilizzata con i file eseguibili che si collegano alla DLL di estensione MFC.
+[DLL di estensione MFC](extension-dlls-overview.md) usare la macro **AFX_EXT_CLASS** per esportare classi; i file eseguibili che si collegano alla DLL di estensione MFC utilizzano la macro per importare le classi. Con il **AFX_EXT_CLASS** (macro), gli stessi file di intestazione utilizzati per compilare la DLL può essere utilizzata con i file eseguibili che si collegano alla DLL di estensione MFC.
 
 Nel file di intestazione per la DLL, aggiungere il **AFX_EXT_CLASS** una parola chiave per la dichiarazione della classe come indicato di seguito:
 
@@ -104,28 +104,28 @@ Poiché MFC Usa sempre il `AFX_DATA` simbolo per elementi di dati viene definita
 
 ### <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
 
-- [Esportazione da una DLL tramite i file def](../build/exporting-from-a-dll-using-def-files.md)
+- [Esportazione da una DLL tramite i file def](exporting-from-a-dll-using-def-files.md)
 
-- [Esportazione da una DLL tramite dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Esportazione da una DLL tramite dllexport](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Determinare quale metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)
+- [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
-- [Importare in un'applicazione che usa declspec](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importare in un'applicazione che usa declspec](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inizializzare una DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
-- [Nomi decorati](../build/reference/decorated-names.md)
+- [Nomi decorati](reference/decorated-names.md)
 
-- [Importazione ed esportazione di funzioni inline](../build/importing-and-exporting-inline-functions.md)
+- [Importazione ed esportazione di funzioni inline](importing-and-exporting-inline-functions.md)
 
-- [Importazioni reciproche](../build/mutual-imports.md)
+- [Importazioni reciproche](mutual-imports.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esportazione da una DLL](../build/exporting-from-a-dll.md)
+[Esportazione da una DLL](exporting-from-a-dll.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: 762c95c3ecc60995e8d0e6f9e4f7bc95d179c26f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747501"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813929"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Assembly con nome sicuro (firma degli assembly) (C++/CLI)
 
@@ -34,7 +34,7 @@ I motivi per non utilizzare gli attributi includono il fatto che il nome della c
 
 Se si compilazione dalla riga di comando, usano le opzioni del linker per firmare l'assembly e quindi eseguirà uno strumento di post-elaborazione (ad esempio mt.exe), è necessario firmare nuovamente l'assembly con sn.exe. In alternativa, è possibile compilare e ritardare la firma dell'assembly e dopo l'esecuzione di strumenti di post-elaborazione, completare la firma.
 
-Se si usano gli attributi della firma durante la compilazione nell'ambiente di sviluppo, è possibile effettuare l'accesso all'assembly in modo esplicito chiamando sn.exe ([Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool)) in un evento di post-compilazione. Per altre informazioni, vedere [Specifica di eventi di compilazione](../ide/specifying-build-events.md). Tempi di compilazione possono essere inferiore se si usano gli attributi e un evento di post-compilazione, rispetto alle opzioni del linker.
+Se si usano gli attributi della firma durante la compilazione nell'ambiente di sviluppo, è possibile effettuare l'accesso all'assembly in modo esplicito chiamando sn.exe ([Sn.exe (Strong Name Tool)](/dotnet/framework/tools/sn-exe-strong-name-tool)) in un evento di post-compilazione. Per altre informazioni, vedere [Specifica di eventi di compilazione](../build/specifying-build-events.md). Tempi di compilazione possono essere inferiore se si usano gli attributi e un evento di post-compilazione, rispetto alle opzioni del linker.
 
 Le seguenti opzioni del linker supportano la firma degli assembly:
 

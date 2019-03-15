@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-ms.openlocfilehash: 368bd469a303222ef4d5177677de4940e402b6de
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413108"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817972"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Attiva collegamento a livello di funzione)
 
@@ -34,18 +34,18 @@ Consente al compilatore di assemblare le singole funzioni sotto forma di funzion
 
 Il linker richiede che le funzioni essere fornite separatamente come COMDAT per escludere o ordinare le singole funzioni in un file DLL o .exe.
 
-È possibile usare l'opzione del linker [/OPT (ottimizzazioni)](../../build/reference/opt-optimizations.md) per escludere le funzioni di package dal file .exe.
+È possibile usare l'opzione del linker [/OPT (ottimizzazioni)](opt-optimizations.md) per escludere le funzioni di package dal file .exe.
 
-È possibile usare l'opzione del linker [/ORDER (inserire le funzioni in ordine)](../../build/reference/order-put-functions-in-order.md) includere funzioni incluse nel pacchetto in un ordine specifico nel file .exe.
+È possibile usare l'opzione del linker [/ORDER (inserire le funzioni in ordine)](order-put-functions-in-order.md) includere funzioni incluse nel pacchetto in un ordine specifico nel file .exe.
 
 Funzioni inline sono sempre inclusi se le relative istanze vengono create come chiamate (che si verifica, ad esempio, se l'incorporamento è disattivato o richiedere un indirizzo della funzione). Inoltre, le funzioni membro C++ definite nella dichiarazione di classe vengono automaticamente inserite; altre funzioni non sono e se si seleziona questa opzione è necessario per la compilazione come funzioni incluse nel pacchetto.
 
 > [!NOTE]
->  Il [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) opzione, utilizzata per la modifica e continuazione, imposta automaticamente il **/Gy** opzione.
+>  Il [/ZI](z7-zi-zi-debug-information-format.md) opzione, utilizzata per la modifica e continuazione, imposta automaticamente il **/Gy** opzione.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -59,5 +59,5 @@ Funzioni inline sono sempre inclusi se le relative istanze vengono create come c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
-ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
+ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56418692"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809847"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (compatibile con la tecnologia di imposizione del flusso di controllo)
 
@@ -36,7 +36,7 @@ Il **/CETCOMPAT** opzione è disponibile a partire il set di strumenti di Visual
 
 ### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Per impostare l'opzione del linker /CETCOMPAT in Visual Studio
 
-1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
@@ -48,5 +48,4 @@ Questa opzione non ha un equivalente a livello di codice.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Opzioni del linker](linker-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nologo compiler option [C++]
 - banners, suppressing startup
 ms.assetid: 75930d8b-b11c-4db8-99e5-b52f97da0693
-ms.openlocfilehash: 7e157caa2c05f4e6283a19b993e415cf36ceb9fe
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1e48989a8e433296856ae58560823e601e36008f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419634"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812265"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (Non visualizza il messaggio di avvio) (C/C++)
 
@@ -31,7 +31,7 @@ Disattiva la visualizzazione delle informazioni sul copyright all'avvio il compi
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -45,5 +45,5 @@ Disattiva la visualizzazione delle informazioni sul copyright all'avvio il compi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

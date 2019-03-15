@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MAPINFO linker option
 - -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
-ms.openlocfilehash: 57cbe3fa10e504d29dc9f72d7a5f1b3d0d8dc18d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 491df211856a9d7ceb02b6a401270f15b9da3b96
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425562"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812369"
 ---
 # <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (Include informazioni in file MAP)
 
@@ -26,11 +26,11 @@ ms.locfileid: "57425562"
 
 ## <a name="remarks"></a>Note
 
-L'opzione /MAPINFO indica al linker di includere le informazioni specificate in un file di mapping, che viene creato se si specifica la [/Map](../../build/reference/map-generate-mapfile.md) opzione.  EXPORTS indica al linker di includere le funzioni esportate.
+L'opzione /MAPINFO indica al linker di includere le informazioni specificate in un file di mapping, che viene creato se si specifica la [/Map](map-generate-mapfile.md) opzione.  EXPORTS indica al linker di includere le funzioni esportate.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -44,5 +44,5 @@ L'opzione /MAPINFO indica al linker di includere le informazioni specificate in 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

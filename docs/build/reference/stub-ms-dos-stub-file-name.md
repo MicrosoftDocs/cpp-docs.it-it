@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows API [C++], attaching MS-DOS stub program
 - -STUB linker option
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
-ms.openlocfilehash: d349151654d9699bcf00aa3848798acb5104ba53
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7150d4ff8f35b00d96caa21fd5ea3754fec76030
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421545"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822405"
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (nome file stub MS-DOS)
 
@@ -48,7 +48,7 @@ Durante la creazione di un driver di dispositivo virtuale *filename* consente al
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -62,5 +62,5 @@ Durante la creazione di un driver di dispositivo virtuale *filename* consente al
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

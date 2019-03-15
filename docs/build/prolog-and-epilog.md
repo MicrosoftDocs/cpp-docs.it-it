@@ -2,12 +2,12 @@
 title: x64 prologo ed epilogo
 ms.date: 12/17/2018
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-ms.openlocfilehash: be6a344b75fdc0cbc1876a250d0cc326bae43ccc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a225786853fcc2eb7b6a21de29f1ccf4901e4377
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418594"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809986"
 ---
 # <a name="x64-prolog-and-epilog"></a>x64 prologo ed epilogo
 
@@ -95,4 +95,4 @@ Seguendo queste regole consente il codice di rimozione per determinare che un ep
 
 ## <a name="see-also"></a>Vedere anche
 
-[Convenzioni del software x64](../build/x64-software-conventions.md)
+[Convenzioni del software x64](x64-software-conventions.md)

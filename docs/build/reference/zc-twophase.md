@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: d5a53db5a5c0ae9c4cfec76e57f628499c8955c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebd577bc25a2789e3a6b328a4c9cd2e1596d04da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648760"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821402"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(disabilita la ricerca del nome in due fasi)
 
@@ -162,7 +162,7 @@ Per altre informazioni sui problemi di conformità, vedere [miglioramenti della 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
@@ -170,4 +170,4 @@ Per altre informazioni sui problemi di conformità, vedere [miglioramenti della 
 
 ## <a name="see-also"></a>Vedere anche
 
-[/Zc (conformità)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (conformità)](zc-conformance.md)<br/>

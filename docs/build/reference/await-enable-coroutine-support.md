@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-ms.openlocfilehash: f84ba6297c61a78a8870100125887b450849a087
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0c8c0183c356900ba8f95d39e427d56eb1ec96b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424054"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809522"
 ---
 # <a name="await-enable-coroutine-support"></a>/Await (Abilita il supporto di coroutine)
 
@@ -44,5 +44,5 @@ Il **/Await** opzione è disponibile a partire da Visual Studio 2015.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

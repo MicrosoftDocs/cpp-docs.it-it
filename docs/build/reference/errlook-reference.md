@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: 598e3d938645e3d024b2409d97b4b8f082ee2d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621468"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813370"
 ---
 # <a name="errlook-reference"></a>Riferimento a ERRLOOK
 
@@ -20,19 +20,19 @@ I tasti di scelta per la copia (CTRL + C), le operazioni Taglia (CTRL + X) e Inc
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Controllo Value Edit](../../build/reference/value-edit-control.md)<br/>
+[Controllo Value Edit](value-edit-control.md)<br/>
 Descrive il controllo Value Edit nel ERRLOOK.
 
-[Controllo modifica messaggio di errore](../../build/reference/error-message-edit-control.md)<br/>
+[Controllo modifica messaggio di errore](error-message-edit-control.md)<br/>
 Descrive il controllo Modifica messaggio di errore in ERRLOOK.
 
-[Pulsante Moduli](../../build/reference/modules-button.md)<br/>
+[Pulsante Moduli](modules-button.md)<br/>
 Descrive i moduli (pulsante) in ERRLOOK.
 
-[Pulsante Cerca](../../build/reference/look-up-button.md)<br/>
+[Pulsante Cerca](look-up-button.md)<br/>
 Descrive il pulsante Cerca in a ERRLOOK.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Strumenti per la compilazione in C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Strumenti di compilazione MSVC aggiuntive](c-cpp-build-tools.md)<br/>
 Offre gli strumenti forniti in Visual C++ per creare i collegamenti ad argomenti che illustrano C/C++.

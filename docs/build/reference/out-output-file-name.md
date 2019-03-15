@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /OUT C++ linker option
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
-ms.openlocfilehash: 395a2475ec572476f80b17cc5ffab7c2724e6b02
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418048"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812421"
 ---
 # <a name="out-output-file-name"></a>/OUT (nome file di output)
 
@@ -35,11 +35,11 @@ L'opzione /OUT sostituisce il nome predefinito e il percorso del programma creat
 
 Per impostazione predefinita, il linker costituisce il nome del file usando il nome base del primo file con estensione obj specificato e l'estensione appropriata (.exe o DLL).
 
-Questa opzione il nome di base predefinito per una libreria di importazione o file MAP. Per informazioni dettagliate, vedere [genera file map](../../build/reference/map-generate-mapfile.md) (/Map) e [/IMPLIB](../../build/reference/implib-name-import-library.md).
+Questa opzione il nome di base predefinito per una libreria di importazione o file MAP. Per informazioni dettagliate, vedere [genera file map](map-generate-mapfile.md) (/Map) e [/IMPLIB](implib-name-import-library.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -53,5 +53,5 @@ Questa opzione il nome di base predefinito per una libreria di importazione o fi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

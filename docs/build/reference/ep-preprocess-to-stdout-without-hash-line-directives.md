@@ -11,12 +11,12 @@ helpviewer_keywords:
 - EP compiler option [C++]
 - /EP compiler option [C++]
 ms.assetid: 6ec411ae-e33d-4ef5-956e-0054635eabea
-ms.openlocfilehash: ad64d39ee6e617556b9210086139c75a246cb63f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 49745b644234c0e5ce92661f14304531aaca5c69
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422752"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807336"
 ---
 # <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (Pre-elabora in stdout senza direttive #line)
 
@@ -30,13 +30,13 @@ Pre-elabora i file di origine C e C++ e copia i file pre-elaborati per il dispos
 
 ## <a name="remarks"></a>Note
 
-Nel processo, vengono eseguite tutte le direttive del preprocessore, espansioni della macro vengono eseguite e vengono rimossi i commenti. Per mantenere i commenti nell'output pre-elaborato, usare il [(mantenere i commenti durante la pre-elaborazione) /C](../../build/reference/c-preserve-comments-during-preprocessing.md) opzione con **/EP**.
+Nel processo, vengono eseguite tutte le direttive del preprocessore, espansioni della macro vengono eseguite e vengono rimossi i commenti. Per mantenere i commenti nell'output pre-elaborato, usare il [(mantenere i commenti durante la pre-elaborazione) /C](c-preserve-comments-during-preprocessing.md) opzione con **/EP**.
 
-Il **/EP** opzione disattiva la compilazione. È necessario eseguire nuovamente il file pre-elaborato per la compilazione. **/EP** elimina anche i file di output dal **/FA**, **/Fa**, e **/Fm** opzioni. Per altre informazioni, vedere [/FA, /Fa (File di listato)](../../build/reference/fa-fa-listing-file.md) e [/Fm (specifica file MAP)](../../build/reference/fm-name-mapfile.md).
+Il **/EP** opzione disattiva la compilazione. È necessario eseguire nuovamente il file pre-elaborato per la compilazione. **/EP** elimina anche i file di output dal **/FA**, **/Fa**, e **/Fm** opzioni. Per altre informazioni, vedere [/FA, /Fa (File di listato)](fa-fa-listing-file.md) e [/Fm (specifica file MAP)](fm-name-mapfile.md).
 
-Gli errori generati durante le fasi successive dell'elaborazione di fare riferimento ai numeri di riga del file pre-elaborato anziché il file di origine. Se si desidera che i numeri di riga per fare riferimento al file di origine originale, usare [/E (pre-elabora in stdout)](../../build/reference/e-preprocess-to-stdout.md) invece. Il **/E** opzione aggiunge `#line` direttive all'output per questo scopo.
+Gli errori generati durante le fasi successive dell'elaborazione di fare riferimento ai numeri di riga del file pre-elaborato anziché il file di origine. Se si desidera che i numeri di riga per fare riferimento al file di origine originale, usare [/E (pre-elabora in stdout)](e-preprocess-to-stdout.md) invece. Il **/E** opzione aggiunge `#line` direttive all'output per questo scopo.
 
-Per inviare l'output pre-elaborato, con `#line` direttive, in un file, usano il [/P (pre-elabora in un File)](../../build/reference/p-preprocess-to-a-file.md) opzione.
+Per inviare l'output pre-elaborato, con `#line` direttive, in un file, usano il [/P (pre-elabora in un File)](p-preprocess-to-a-file.md) opzione.
 
 Per inviare l'output pre-elaborato in stdout, con `#line` direttive, utilizzare **/P** e **/EP** tra loro.
 
@@ -44,7 +44,7 @@ Non è possibile usare le intestazioni precompilate con il **/EP** opzione.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -66,5 +66,5 @@ CL /EP /C ADD.C
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

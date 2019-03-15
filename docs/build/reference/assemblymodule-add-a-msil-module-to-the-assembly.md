@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /ASSEMBLYMODULE linker option
 - -ASSEMBLYMODULE linker option
 ms.assetid: 67357da8-e4b6-49fd-932c-329a5777f143
-ms.openlocfilehash: 567ec4b1e773e8aa4ff248c7bb110cfb594f089e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 728e8a84ff8d1afac99f99dbb975c7fd9360bcc1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416696"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815255"
 ---
 # <a name="assemblymodule-add-a-msil-module-to-the-assembly"></a>/ASSEMBLYMODULE (Aggiunge un modulo MSIL all'assembly)
 
@@ -37,7 +37,7 @@ Uso [#using](../../preprocessor/hash-using-directive-cpp.md) per aggiungere un r
 
 Prendere ad esempio in considerazione i seguenti scenari:
 
-1. Creare un modulo con [/LN](../../build/reference/ln-create-msil-module.md).
+1. Creare un modulo con [/LN](ln-create-msil-module.md).
 
 1. Usare /ASSEMBLYMODULE in un progetto diverso per includere il modulo nella compilazione corrente, che creerà un assembly. Questo progetto non verrà fatto riferimento il modulo con `#using`.
 
@@ -45,25 +45,25 @@ Prendere ad esempio in considerazione i seguenti scenari:
 
 Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+- [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
-- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+- [/DELAYSIGN](delaysign-partially-sign-an-assembly.md)
 
-- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [/NOASSEMBLY](noassembly-create-a-msil-module.md)
 
-- [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-Il linker di Visual C++ accetta i file con estensione netmodule come input e il file di output generato dal linker sarà un assembly o un file netmodule senza dipendenza di runtime dai file netmodule che sono stati introdotti nel linker.  Per altre informazioni, vedere [File con estensione netmodule come input del linker](../../build/reference/netmodule-files-as-linker-input.md).
+Il linker MSVC accetta file con estensione netmodule come input e il file di output generato dal linker sarà un assembly o file con estensione netmodule con alcuna dipendenza dalla fase di esecuzione in uno qualsiasi dei netmodule che sono stati introdotti nel linker.  Per altre informazioni, vedere [File con estensione netmodule come input del linker](netmodule-files-as-linker-input.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -77,5 +77,5 @@ Il linker di Visual C++ accetta i file con estensione netmodule come input e il 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

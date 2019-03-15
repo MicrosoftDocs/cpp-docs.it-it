@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-ms.openlocfilehash: 34d764f88b1dccb60c7d9a006be119e3800ac2d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412770"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813799"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Allocazioni stack)
 
@@ -35,11 +35,11 @@ Il `reserve` valore consente di specificare l'allocazione totale dello stack nel
 
 Specificare i valori `reserve` e `commit` in notazione decimale o in linguaggio C.
 
-Un altro modo per impostare le dimensioni dello stack è con il [STACKSIZE](../../build/reference/stacksize.md) istruzione in un file di definizione moduli (def). **STACKSIZE** sostituisce le allocazioni di Stack (/stack) se vengono specificati entrambi. È possibile modificare la dimensione dello stack dopo che il file .exe viene compilato con il [EDITBIN](../../build/reference/editbin-reference.md) dello strumento.
+Un altro modo per impostare le dimensioni dello stack è con il [STACKSIZE](stacksize.md) istruzione in un file di definizione moduli (def). **STACKSIZE** sostituisce le allocazioni di Stack (/stack) se vengono specificati entrambi. È possibile modificare la dimensione dello stack dopo che il file .exe viene compilato con il [EDITBIN](editbin-reference.md) dello strumento.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **Linker** cartella.
 
@@ -57,5 +57,5 @@ Un altro modo per impostare le dimensioni dello stack è con il [STACKSIZE](../.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-ms.openlocfilehash: 9bb355635181c3db53e1171aaf18cd665e6504ae
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eac41de04ec883e7b5acf26596647f912b0b1d20
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426355"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808482"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Metodo di rappresentazione)
 
@@ -41,7 +41,7 @@ Uso **/vmg** per dichiarare un puntatore a un membro di una classe prima della d
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -55,5 +55,5 @@ Uso **/vmg** per dichiarare un puntatore a un membro di una classe prima della d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

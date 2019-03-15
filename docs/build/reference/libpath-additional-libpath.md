@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -LIBPATH linker option
 - library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
-ms.openlocfilehash: 0495081fb108b2b0a60de1b7782dc92717367ec6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab586c788825a854e7d3cb3760da6e4e5558de3a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413121"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819883"
 ---
 # <a name="libpath-additional-libpath"></a>/LIBPATH (Percorso LIB aggiuntivo)
 
@@ -36,7 +36,7 @@ Usare l'opzione /LIBPATH per eseguire l'override del percorso della libreria di 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -50,5 +50,5 @@ Usare l'opzione /LIBPATH per eseguire l'override del percorso della libreria di 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

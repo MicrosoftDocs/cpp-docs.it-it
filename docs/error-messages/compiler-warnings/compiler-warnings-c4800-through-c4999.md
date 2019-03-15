@@ -97,13 +97,12 @@ f1_keywords:
 - C5043
 - C5044
 - C5045
-- C5046
-ms.openlocfilehash: 672aa1b0e298be3b6754b1706e721ad6798230ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a0eee4e0a7774c1c92a44ad1e8eaa480ce84d3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642858"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816347"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Del compilatore C4800 avvisi tramite C5999
 
@@ -144,7 +143,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 4) C4840](compiler-warning-level-4-c4840.md)|uso non portabile della classe*tipo*' come argomento per una funzione variadic|
 |Avviso del compilatore (livello 4) C4841|estensione non standard: indicatore di membro composto usato in offsetof|
 |Avviso del compilatore (livello 4) C4842|il risultato di 'offsetof' applicato a un tipo mediante ereditarietà multipla non è garantito a essere coerente tra versioni diverse del compilatore|
-|Genera un avviso C4843|«*type1*': un gestore di eccezioni del riferimento al tipo di matrice o una funzione non è raggiungibile, usare '*type2*' invece|
+|Genera un avviso C4843|'*type1*': Un gestore di eccezioni del riferimento al tipo di matrice o una funzione non è raggiungibile, usare '*type2*' invece|
 |Genera un avviso C4844|' export module *module_name*;' è ora la sintassi preferita per dichiarare un'interfaccia del modulo|
 |[Avviso del compilatore (livello 4) C4866](c4866.md)| compilatore non può imporre l'ordine di valutazione da sinistra a destra per la chiamata a *nome_operatore*|
 |[Avviso (errore) del compilatore C4867](compiler-warning-c4867.md)|«*funzione*': chiamata di funzione senza elenco di argomenti; utilizzare '*chiamare*' per creare un puntatore a membro|
@@ -176,7 +175,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1) C4935|Identificatore di accesso assembly modificato da '*accesso*'|
 |Avviso del compilatore (livello 1, errore) C4936|questo __declspec è supportato solo con la compilazione con /clr o /clr:pure|
 |Avviso del compilatore (livello 4) C4937|«*text1*'e'*text2*'sono indistinguibili come argomenti per'*direttiva*»|
-|Avviso del compilatore (livello 4) C4938|«*var*': variabile di riduzione a virgola mobile può causare risultati incoerenti in /fp: strict o #pragma fenv_access|
+|Avviso del compilatore (livello 4) C4938|'*var*': Variabile di riduzione a virgola mobile può causare risultati incoerenti in /fp: strict o #pragma fenv_access|
 |Genera un avviso C4939|#pragma vtordisp è deprecato e verrà rimosso in una futura versione di Visual C++|
 |Avviso del compilatore (livello 1) C4944|«*simbolo*': non è possibile importare il simbolo da '*assembly1*': come*simbolo*' esiste già nell'ambito corrente|
 |[Avviso del compilatore (livello 1) C4945](compiler-warning-level-1-c4945.md)|«*simbolo*': non è possibile importare il simbolo da '*assembly1*': come*simbolo*'è già stato importato da un altro assembly'*assembly2* '|
@@ -196,7 +195,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1, errore) C4959|non è possibile definire il tipo non gestito '*tipo*' in /CLR: safe perché l'accesso ai membri produce codice non verificabile|
 |Avviso del compilatore (livello 4) C4960|«*funzione*' è troppo grande per la profilatura|
 |Avviso del compilatore (livello 1) C4961|Dati di profilo non sottoposti a merge in '.pgd file', ottimizzazioni PGO disabilitate|
-|Avviso del compilatore (livello 4) C4962|«*funzione*': ottimizzazioni PGO disabilitate perché le ottimizzazioni provocano l'incoerenza dei dati del profilo|
+|Avviso del compilatore (livello 4) C4962|«*funzione*': Ottimizzazioni PGO disabilitate perché le ottimizzazioni provocano l'incoerenza dei dati del profilo|
 |Avviso del compilatore (livello 1) C4963|«*descrizione*': nessun dato di profilo trovati; nella compilazione instrumentata sono state utilizzate opzioni del compilatore diverse|
 |[Avviso del compilatore (livello 1) C4964](compiler-warning-level-1-c4964.md)|Nessuna opzione di ottimizzazione specificata; info del profilo non verrà raccolti|
 |[Avviso del compilatore (livello 1) C4965](compiler-warning-level-1-c4965.md)|casella implicita dell'intero 0. usare un cast esplicito o nullptr|
@@ -226,7 +225,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 4) C5025|«*tipo*': sposta l'operatore di assegnazione è stato definito in modo implicito come eliminato|
 |Avviso del compilatore (livello 1 e livello 4) C5026|«*tipo*': spostare costruttore è stato definito in modo implicito come eliminato|
 |Avviso del compilatore (livello 1 e livello 4) C5027|«*tipo*': sposta l'operatore di assegnazione è stato definito in modo implicito come eliminato|
-|Avviso del compilatore (livello 1) C5028|'*name*': l'allineamento specificato nella dichiarazione precedente (*numero*) non specificato nella definizione|
+|Avviso del compilatore (livello 1) C5028|«*nome*': L'allineamento specificato nella dichiarazione precedente (*numero*) non specificato nella definizione|
 |Avviso del compilatore (livello 4) C5029|utilizzata estensione non standard: gli attributi di allineamento in C++ si applicano a variabili, membri dati e solo i tipi di tag|
 |Avviso del compilatore (livello 3) C5030|attributo '*attributo*' non è riconosciuto|
 |Avviso del compilatore (livello 4) C5031|#pragma warning (POP): probabile mancata corrispondenza, si estraggono lo stato di avviso inserito nel file diverso|
@@ -244,4 +243,4 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 2) C5043|«*specification*': specifica di eccezione non corrisponde alla dichiarazione precedente|
 |Avviso del compilatore (livello 4) C5044|Un argomento all'opzione della riga di comando *opzione* punta a un percorso '*percorso*' che non esiste|
 |[C5045 avviso del compilatore](c5045.md)|Compilatore inserirà la mitigazione Spectre per il carico di memoria se l'opzione /Qspectre specificato|
-|[Avviso del compilatore (livello 2) C5046](c5046.md)|«*funzione*': simbolo relative a tipi con collegamento interno non definito|
+|[Avviso del compilatore (livello 2) C5046](c5046.md)|«*funzione*': Tipo che interessa di simboli con collegamento interno non definito|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: bd6c4a3464762a24c9079bb79318ad3b0f05b74a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a5eb6a10f3c4833ecc3e9d9c8451894788ebd938
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420713"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817384"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Ottimizza per applicazione Windows)
 
@@ -35,7 +35,7 @@ Usando **/GA** per una DLL può comportare la generazione di codice errato.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -49,5 +49,5 @@ Usando **/GA** per una DLL può comportare la generazione di codice errato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

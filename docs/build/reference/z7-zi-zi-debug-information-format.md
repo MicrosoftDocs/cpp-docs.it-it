@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421437"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816321"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Formato informazioni di debug)
 
@@ -50,15 +50,15 @@ Per impostazione predefinita, se viene specificata alcuna opzione di formato inf
 
 Il **/Z7** opzione produce file oggetto che contengono anche informazioni di debug complete sui simboli per l'uso con il debugger. Questi file oggetto e il file eseguibile compilato può essere notevolmente superiore rispetto ai file che non dispone di alcuna informazione di debug. Le informazioni sul debug simbolico includono i nomi e i tipi di variabili, nonché le funzioni e i numeri di riga. Viene prodotto alcun file PDB.
 
-Per i server di distribuzione di versioni di debug delle librerie di terze parti, è disponibile un vantaggio alla mancanza di un file PDB. Tuttavia, i file oggetto per eventuali intestazioni precompilate sono necessari durante la fase di collegamento della libreria, nonché per il debug. Se sono presenti solo tipi di informazioni (e nessun codice) nel file oggetto con estensione pch, è necessario usare anche il [/Yl (inserisce il riferimento PCH per la libreria di Debug)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) opzione, che è abilitato per impostazione predefinita, quando si compila la libreria.
+Per i server di distribuzione di versioni di debug delle librerie di terze parti, è disponibile un vantaggio alla mancanza di un file PDB. Tuttavia, i file oggetto per eventuali intestazioni precompilate sono necessari durante la fase di collegamento della libreria, nonché per il debug. Se sono presenti solo tipi di informazioni (e nessun codice) nel file oggetto con estensione pch, è necessario usare anche il [/Yl (inserisce il riferimento PCH per la libreria di Debug)](yl-inject-pch-reference-for-debug-library.md) opzione, che è abilitato per impostazione predefinita, quando si compila la libreria.
 
-Il [/Gm (Abilita ricompilazione minima)](../../build/reference/gm-enable-minimal-rebuild.md) opzione non è disponibile quando **/Z7** è specificato.
+Il [/Gm (Abilita ricompilazione minima)](gm-enable-minimal-rebuild.md) opzione non è disponibile quando **/Z7** è specificato.
 
 ### <a name="zi"></a>/ZI
 
 Il **/Zi** opzione produce un file PDB separato che contiene tutte le informazioni sul debug simbolici per l'uso con il debugger. Le informazioni di debug non sono incluso nei file oggetto o file eseguibile, in modo molto più piccolo.
 
-Sfrutta **/Zi** non influisce sulle ottimizzazioni. Tuttavia **/Zi** implica **/debug**; vedere [/DEBUG (Generate Debug Info)](../../build/reference/debug-generate-debug-info.md) per altre informazioni.
+Sfrutta **/Zi** non influisce sulle ottimizzazioni. Tuttavia **/Zi** implica **/debug**; vedere [/DEBUG (Generate Debug Info)](debug-generate-debug-info.md) per altre informazioni.
 
 Quando si specificano entrambe **/Zi** e **/clr**, il <xref:System.Diagnostics.DebuggableAttribute> attributo non viene inserito nei metadati dell'assembly. Se si vuole, è necessario specificarlo nel codice sorgente. Questo attributo potrà avere effetto sulle prestazioni di runtime dell'applicazione. Per altre informazioni sul modo in cui **attributo Debuggable** attributo influisce sulle prestazioni e su come è possibile modificare l'impatto sulle prestazioni, vedere [semplificazione del Debug di un'immagine](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
 
@@ -70,16 +70,16 @@ Se si crea una raccolta di oggetti che sono stati compilati usando **/Zi**, il f
 
 Il **/ZI** ed è simile al **/Zi**, ma produce un file PDB in un formato che supporta il [modifica e continuazione](/visualstudio/debugger/edit-and-continue-visual-cpp) funzionalità. Per usare modifica e continuazione le funzionalità di debug, è necessario utilizzare questa opzione. La funzionalità Modifica e continuazione è utile per la produttività degli sviluppatori, ma può causare problemi in conformità di dimensioni, le prestazioni e del compilatore di codice. Poiché la maggior parte delle ottimizzazioni non sono compatibili con modifica e continuazione, usando **/ZI** disabilita qualsiasi `#pragma optimize` istruzioni nel codice. Il **/ZI** opzione è anche compatibile con l'uso del [ &#95; &#95;LINE&#95; &#95; la macro predefinita](../../preprocessor/predefined-macros.md); codice compilato con **/ZI** non è possibile usare **&#95; &#95;Riga&#95; &#95;** come argomento di modello non di tipo, sebbene **&#95; &#95;riga&#95; &#95;** può essere usato in espansioni della macro.
 
-Il **/ZI** opzione impone entrambi le [/Gy (Attiva collegamento a livello di funzione)](../../build/reference/gy-enable-function-level-linking.md) e [/FC (percorso completo dell'origine codice File nella diagnostica)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) le opzioni da utilizzare nella compilazione.
+Il **/ZI** opzione impone entrambi le [/Gy (Attiva collegamento a livello di funzione)](gy-enable-function-level-linking.md) e [/FC (percorso completo dell'origine codice File nella diagnostica)](fc-full-path-of-source-code-file-in-diagnostics.md) le opzioni da utilizzare nella compilazione.
 
-**/Zi** non è compatibile con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+**/Zi** non è compatibile con [/clr (compilazione Common Language Runtime)](clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
 > Il **/ZI** opzione disponibile solo nei compilatori destinati a processori x86 e x64; questa opzione del compilatore non è disponibile nei compilatori destinati a processori ARM.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Aprire il **le proprietà di configurazione** > **C/C++** > **generale** pagina delle proprietà.
 
@@ -91,5 +91,6 @@ Il **/ZI** opzione impone entrambi le [/Gy (Attiva collegamento a livello di fun
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+

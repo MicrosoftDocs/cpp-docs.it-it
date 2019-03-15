@@ -2,7 +2,6 @@
 title: Utilizzo dei tipi di dati di TCHAR.H con il codice _MBCS
 ms.date: 11/04/2016
 f1_keywords:
-- tchar.h
 - TCHAR
 helpviewer_keywords:
 - mapping generic-text
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 62801cfc2386cf2aee7fd35a5e589d73b4f91918
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0e26aefd8b9099a2ca5e76ce9e2b7d1def2f9854
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742025"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813825"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilizzo dei tipi di dati di TCHAR.H con il codice _MBCS
 

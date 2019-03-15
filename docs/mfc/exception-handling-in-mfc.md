@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260543"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818635"
 ---
 # <a name="exception-handling-in-mfc"></a>Gestione delle eccezioni in MFC
 
@@ -55,7 +55,7 @@ Se si sta scrivendo una nuova applicazione utilizzando MFC, è consigliabile usa
 Se è già stata sviluppata un'applicazione che usa la macro eccezioni MFC, è possibile continuare a usare queste macro nel codice esistente, le eccezioni C++ nel nuovo codice. L'articolo [alle eccezioni: Modifiche alle macro eccezioni nella versione 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) offre linee guida per questa operazione.
 
 > [!NOTE]
->  Per abilitare la gestione del codice delle eccezioni C++, selezionare Abilita eccezioni C++ nella pagina generazione di codice nella cartella del progetto C/C++ [pagine delle proprietà](../ide/property-pages-visual-cpp.md) finestra di dialogo oppure utilizzare il [/EHsc](../build/reference/eh-exception-handling-model.md) opzione del compilatore.
+>  Per abilitare la gestione del codice delle eccezioni C++, selezionare Abilita eccezioni C++ nella pagina generazione di codice nella cartella del progetto C/C++ [pagine delle proprietà](../build/reference/property-pages-visual-cpp.md) finestra di dialogo oppure utilizzare il [/EHsc](../build/reference/eh-exception-handling-model.md) opzione del compilatore.
 
 Questo articolo illustra gli argomenti seguenti:
 

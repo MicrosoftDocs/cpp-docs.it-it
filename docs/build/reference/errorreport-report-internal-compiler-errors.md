@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 70df0f99ccac91ef8b7651faf3c93bb2971fb904
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 52909cb42180bf8b778d73fd709be05faf3f5714
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414551"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811238"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (Segnala gli errori interni del compilatore)
 
@@ -49,7 +49,7 @@ La capacità di un utente di inviare report dipende dalle autorizzazioni relativ
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -63,5 +63,5 @@ La capacità di un utente di inviare report dipende dalle autorizzazioni relativ
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

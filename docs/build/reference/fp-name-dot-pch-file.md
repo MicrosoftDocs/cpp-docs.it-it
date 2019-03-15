@@ -15,12 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 8384aa1ee27fee0bc42e023b78b948d9acd384e8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414096"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820390"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Specifica file pch)
 
@@ -32,7 +32,7 @@ Fornisce un nome di percorso per un'intestazione precompilata anziché usare il 
 
 ## <a name="remarks"></a>Note
 
-Usare questa opzione con [/Yc (Crea precompilati o meno File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md) oppure [/Yu (Usa il File intestazione precompilata)](../../build/reference/yu-use-precompiled-header-file.md) per fornire un nome di percorso per un'intestazione precompilata anziché usare il nome del percorso predefinito. È anche possibile usare **/Fp** con **/Yc** per specificare l'uso di un file di intestazione precompilata che differisce dal **/Yc**<em>filename</em> argomento e dal nome di base del file di origine.
+Usare questa opzione con [/Yc (Crea precompilati o meno File di intestazione)](yc-create-precompiled-header-file.md) oppure [/Yu (Usa il File intestazione precompilata)](yu-use-precompiled-header-file.md) per fornire un nome di percorso per un'intestazione precompilata anziché usare il nome del percorso predefinito. È anche possibile usare **/Fp** con **/Yc** per specificare l'uso di un file di intestazione precompilata che differisce dal **/Yc**<em>filename</em> argomento e dal nome di base del file di origine.
 
 Se non si specifica un'estensione come parte del nome del percorso, viene utilizzata un'estensione di PCH. Se si specifica una directory senza un nome di file, il nome file predefinito è VC*x*0.pch, dove *x* è la versione principale di Visual C++ in uso.
 
@@ -40,7 +40,7 @@ Se non si specifica un'estensione come parte del nome del percorso, viene utiliz
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -70,7 +70,7 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del file di output (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)
+[Opzioni del file di output (/F)](output-file-f-options.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Specifica del nome del percorso](specifying-the-pathname.md)

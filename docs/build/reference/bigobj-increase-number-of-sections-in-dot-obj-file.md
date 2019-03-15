@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: 051eaeb568418a8a01d25f738617fa171039f27d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a9685834fc3e1de246c9d9d60d206538b744ce3e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416488"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809860"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Aumenta il numero di sezioni nel file obj)
 
@@ -35,7 +35,7 @@ Linker fornita prima di Visual C++ 2005 non è in grado di leggere i file con es
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -49,5 +49,5 @@ Linker fornita prima di Visual C++ 2005 non è in grado di leggere i file con es
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

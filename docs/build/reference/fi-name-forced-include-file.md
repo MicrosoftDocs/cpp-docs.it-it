@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: b91ca1ba6cc97157be0ab16fc18e065dc501d5fd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422468"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809223"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Specifica il file di inclusione da utilizzare)
 
@@ -35,7 +35,7 @@ Questa opzione ha lo stesso effetto che specifica il file con le virgolette dopp
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -49,7 +49,7 @@ Questa opzione ha lo stesso effetto che specifica il file con le virgolette dopp
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del file di output (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)
+[Opzioni del file di output (/F)](output-file-f-options.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Specifica del nome del percorso](specifying-the-pathname.md)

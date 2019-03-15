@@ -57,14 +57,13 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553154"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810081"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Del compilatore avvisi C4600 a C4799
 
@@ -147,7 +146,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 4) C4681|'class': la coclasse non specifica un'interfaccia predefinita che è un'origine evento|
 |Avviso del compilatore (livello 4) C4682|'parameter': nessun attributo di parametro direzionali specificato, verrà utilizzato [in]|
 |[Avviso del compilatore (livello 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'function': origine evento è un 'out'-parametro. Prestare attenzione nello stabilire associazioni a più gestori eventi|
-|[Avviso del compilatore (livello 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': avviso!! attributo può comportare la generazione di codice non valido: utilizzare con cautela|
+|[Avviso del compilatore (livello 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': AVVISO IMPORTANTE! attributo può comportare la generazione di codice non valido: utilizzare con cautela|
 |Avviso del compilatore (livello 1) C4685|previsto '> >', trovato '>>' durante l'analisi dei parametri di modello|
 |[Avviso del compilatore (livello 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'tipo-definito dall'utente': possibile modifica del comportamento. Modifica nella convenzione di chiamata per il valore restituito del tipo definito dall'utente.|
 |[Avviso (errore) del compilatore C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': una classe astratta sealed non può implementare un'interfaccia 'interface'|
@@ -194,7 +193,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' ha una diversa dimensione in "file1" e "file2": numero e il numero di byte|
 |[Avviso del compilatore (livello 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' ha un tipo diverso in "file1" e "file2": 'type1' e 'type2'|
 |[Avviso del compilatore C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|accesso volatile di '*espressione*' è soggetto a /volatile:\<iso&#124;ms > configurazione; è consigliabile usare le funzioni intrinseche iso_volatile_load/store|
-|[Avviso del compilatore (livello 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|La chiamata gestita 'punto di ingresso': il codice gestito potrebbe non essere eseguito in blocco del caricatore, inclusi il punto di ingresso DLL e le chiamate raggiunte dal punto di ingresso DLL|
+|[Avviso del compilatore (livello 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Chiamare il metodo gestito 'punto di ingresso': Codice gestito potrebbe non essere eseguito in blocco del caricatore, inclusi il punto di ingresso DLL e le chiamate raggiunte dal punto di ingresso DLL|
 |Avviso del compilatore (livello 4) C4749|supporto condizionale: offsetof applicato al tipo di layout non standard '*tipo*'|
 |Avviso del compilatore (livello 1) C4750|'identifier': funzione con _alloca() resa inline in un ciclo|
 |Avviso del compilatore (livello 4) C4751|/arch: AVX non si applica a Intel (r) Streaming SIMD Extensions nell'assembly inline|

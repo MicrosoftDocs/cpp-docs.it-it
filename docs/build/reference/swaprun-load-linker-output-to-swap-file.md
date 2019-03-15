@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /SWAPRUN linker option
 - SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-ms.openlocfilehash: 085be83bf73288871c71bef00378ddd494cd6f8d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd0b3a46f52ec9b5a292e2f45671523d8c5cdf5e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424873"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817491"
 ---
 # <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN (caricamento dell'output del linker nel file di scambio)
 
@@ -36,7 +36,7 @@ Se si specifica NET, il sistema operativo verrà innanzitutto copiare l'immagine
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **Linker** cartella.
 
@@ -54,5 +54,5 @@ Se si specifica NET, il sistema operativo verrà innanzitutto copiare l'immagine
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

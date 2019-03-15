@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: 815719468e7dcf9325d19efe879b8f4ace040094
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8550337189f9c92a1c8a8d86f2f9b2b829bbc3e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490493"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813318"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatibile con Protezione esecuzione programmi)
 
@@ -20,7 +20,7 @@ Indica che un file eseguibile è compatibile con la funzionalità Protezione ese
 
 ## <a name="syntax"></a>Sintassi
 
-> **/NXCOMPAT**[**: NO**]
+> **/NXCOMPAT**[**:NO**]
 
 ## <a name="remarks"></a>Note
 
@@ -38,7 +38,7 @@ Per altre informazioni sulla protezione esecuzione programmi, vedere questi arti
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Scegliere il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
@@ -50,5 +50,5 @@ Per altre informazioni sulla protezione esecuzione programmi, vedere questi arti
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

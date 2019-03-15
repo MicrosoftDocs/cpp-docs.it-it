@@ -10,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 48592fd6162ee354d82e73228e8b144ef0f354ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420584"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810237"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Esportazione da una DLL tramite __declspec(dllexport)
 
@@ -49,7 +49,7 @@ Quando si compila la DLL, si crea in genere un file di intestazione che contiene
 #define DllExport   __declspec( dllexport )
 ```
 
-**dllexport** archivia i nomi nella tabella di esportazione della DLL delle funzioni. Se si desidera ottimizzare le dimensioni della tabella, vedere [esportazione di funzioni da una DLL per ordinale anziché al nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+**dllexport** archivia i nomi nella tabella di esportazione della DLL delle funzioni. Se si desidera ottimizzare le dimensioni della tabella, vedere [esportazione di funzioni da una DLL per ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
 > [!NOTE]
 >  Durante il porting del codice sorgente della DLL da Win16 a Win32, sostituire ogni istanza di **Export** con **dllexport**.
@@ -58,28 +58,28 @@ Come riferimento, eseguire ricerche in file di intestazione Winbase Win32. Che c
 
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
 
-- [Esportazione da una DLL tramite i file def](../build/exporting-from-a-dll-using-def-files.md)
+- [Esportazione da una DLL tramite i file def](exporting-from-a-dll-using-def-files.md)
 
-- [Esportazione e importazione utilizzando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Esportazione e importazione utilizzando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Determinare quale metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)
+- [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
-- [Importare in un'applicazione che usa declspec](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importare in un'applicazione che usa declspec](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inizializzare una DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 
 - [La parola chiave declspec](../cpp/declspec.md)
 
-- [Importazione ed esportazione di funzioni inline](../build/importing-and-exporting-inline-functions.md)
+- [Importazione ed esportazione di funzioni inline](importing-and-exporting-inline-functions.md)
 
-- [Importazioni reciproche](../build/mutual-imports.md)
+- [Importazioni reciproche](mutual-imports.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esportazione da una DLL](../build/exporting-from-a-dll.md)
+[Esportazione da una DLL](exporting-from-a-dll.md)

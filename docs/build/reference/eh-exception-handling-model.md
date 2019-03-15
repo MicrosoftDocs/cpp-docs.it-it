@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329300"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808260"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modello di gestione delle eccezioni)
 
@@ -25,7 +25,7 @@ Specifica il tipo di gestione delle eccezioni usato dal compilatore, quando otti
 
 ## <a name="syntax"></a>Sintassi
 
-> **/EH**{**s**|**un**} [**c**] [**r**] [**-**]
+> **/EH**{**s**|**a**}[**c**][**r**][**-**]
 
 ## <a name="arguments"></a>Argomenti
 
@@ -43,7 +43,7 @@ Indica al compilatore di generare sempre controlli di terminazione di runtime pe
 
 ## <a name="remarks"></a>Note
 
-L'opzione del compilatore **/EHa** viene usata per supportare la gestione delle eccezioni strutturate asincrone (SEH) con la clausola `catch(...)` C++ nativa. Per implementare SEH senza specificare **/EHa**, è possibile utilizzare il **try**, **except**, e **finally** sintassi. Sebbene Windows e Visual C++ supportino SEH, è vivamente consigliabile usare la gestione delle eccezioni C++ conforme allo standard ISO (**/EHs** o **/EHsc**) perché rende il codice più portabile e flessibile. Tuttavia, nel codice esistente o per alcuni tipi di programmi, ad esempio, nel codice compilato per il supporto common language runtime ([/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)), potrebbe ancora essere necessario usare SEH. Per altre informazioni, vedere [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
+L'opzione del compilatore **/EHa** viene usata per supportare la gestione delle eccezioni strutturate asincrone (SEH) con la clausola `catch(...)` C++ nativa. Per implementare SEH senza specificare **/EHa**, è possibile utilizzare il **try**, **except**, e **finally** sintassi. Sebbene Windows e Visual C++ supportino SEH, è vivamente consigliabile usare la gestione delle eccezioni C++ conforme allo standard ISO (**/EHs** o **/EHsc**) perché rende il codice più portabile e flessibile. Tuttavia, nel codice esistente o per alcuni tipi di programmi, ad esempio, nel codice compilato per il supporto common language runtime ([/clr (compilazione Common Language Runtime)](clr-common-language-runtime-compilation.md)), potrebbe ancora essere necessario usare SEH. Per altre informazioni, vedere [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
 
 L'uso di **/EHa** e il tentativo di gestire tutte le eccezioni con `catch(...)` potrebbero comportare dei rischi. Nella maggior parte dei casi, le eccezioni asincrone sono irreversibili e devono essere gestite come tali. Il tentativo di intercettarle per procedere potrebbe causare il danneggiamento del processo ed errori difficili da trovare e risolvere.
 
@@ -94,11 +94,11 @@ L'opzione può essere cancellata usando il simbolo **-**. Ad esempio, **/EHsc-**
 
 Il **/EHr** l'opzione del compilatore impone controlli di terminazione di runtime in tutte le funzioni che hanno una **noexcept** attributo. Per impostazione predefinita, è possibile ottimizzare i controlli di runtime se il back-end del compilatore determina che una funzione chiama solo funzioni *non generanti* . Le funzioni non generanti sono quelle che hanno un attributo che specifica l'impossibilità di generare eccezioni. Ciò include le funzioni contrassegnate **noexcept**, `throw()`, `__declspec(nothrow)`e, quando **/EHc** viene specificata, **extern "C"** funzioni. Le funzioni non generanti includono anche qualsiasi attributo determinato come non generante dal compilatore dopo un'ispezione. È possibile impostare in modo esplicito il valore predefinito usando **/EHr-**.
 
-Tuttavia, l'attributo non generante non garantisce che non possono essere generate eccezioni da una funzione. A differenza del comportamento di un **noexcept** funzione, il compilatore Visual C++ considera un'eccezione generata da una funzione dichiarata con `throw()`, `__declspec(nothrow)`, o **extern "C"** come non definito comportamento. Le funzioni che usano questi tre attributi di dichiarazione non applicano i controlli di terminazione di runtime per le eccezioni. È possibile usare la **/EHr** opzione che consente di identificare questo comportamento, non definito, forzando il compilatore a generare controlli di runtime per le eccezioni non gestite che effettuano l'escape una **noexcept** (funzione).
+Tuttavia, l'attributo non generante non garantisce che non possono essere generate eccezioni da una funzione. A differenza del comportamento di un **noexcept** funzione, il compilatore MSVC considera un'eccezione generata da una funzione dichiarata con `throw()`, `__declspec(nothrow)`, o **extern "C"** come un comportamento indefinito. Le funzioni che usano questi tre attributi di dichiarazione non applicano i controlli di terminazione di runtime per le eccezioni. È possibile usare la **/EHr** opzione che consente di identificare questo comportamento, non definito, forzando il compilatore a generare controlli di runtime per le eccezioni non gestite che effettuano l'escape una **noexcept** (funzione).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare **le proprietà di configurazione** > **C/C++** > **generazione del codice**.
 
@@ -112,8 +112,8 @@ Tuttavia, l'attributo non generante non garantisce che non possono essere genera
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
 [Gli errori e la gestione delle eccezioni](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Specifiche di eccezione (generazione)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Gestione strutturata delle eccezioni (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435675"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814137"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -28,7 +28,7 @@ Il primo *definition* può essere sulla stessa riga come la `EXPORTS` parola chi
 
 La sintassi per un'esportazione *definizione* è:
 
-> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[ **\@** _ordinale_ \[ **NONAME**]] \[ \[ **privato**] | \[ **Dati**]]
+> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_ordinal_ \[**NONAME**] ] \[ \[**PRIVATE**] | \[**DATA**] ]
 
 *entryname* è il nome di funzione o variabile che si desidera esportare. ed è obbligatorio. Se il nome da esportare è diverso dal nome nella DLL, specificare il nome dell'esportazione nella DLL usando *internal_name*. Se ad esempio la DLL esporta una funzione `func1` e si vuole che i chiamanti la usino come `func2`, specificare:
 
@@ -51,9 +51,9 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Poiché il compilatore Visual C++ Usa la decorazione per le funzioni C++, è necessario usare il nome decorato *internal_name* definire le funzioni esportate tramite `extern "C"` nel codice sorgente. Il compilatore decora anche le funzioni C che usano il [stdcall](../../cpp/stdcall.md) con un carattere di sottolineatura convenzione di chiamata (\_) prefisso e un suffisso composto il simbolo di chiocciola (\@) seguito dal numero di byte (in decimali) nel elenco di argomenti.
+Poiché il compilatore MSVC utilizza decorazione dei nomi per le funzioni C++, è necessario usare il nome decorato *internal_name* definire le funzioni esportate tramite `extern "C"` nel codice sorgente. Il compilatore decora anche le funzioni C che usano il [stdcall](../../cpp/stdcall.md) con un carattere di sottolineatura convenzione di chiamata (\_) prefisso e un suffisso composto il simbolo di chiocciola (\@) seguito dal numero di byte (in decimali) nel elenco di argomenti.
 
-Per trovare i nomi decorati creati dal compilatore, usare il [DUMPBIN](../../build/reference/dumpbin-reference.md) dello strumento o il linker [/Map](../../build/reference/map-generate-mapfile.md) opzione. I nomi decorati sono specifici del compilatore. Se si esportano i nomi decorati nel file .DEF, gli eseguibili che si collegano alla DLL devono essere anch'essi compilati usando la stessa versione del compilatore. Questo garantisce che i nomi decorati nel chiamante corrispondano ai nomi esportati nel file .DEF.
+Per trovare i nomi decorati creati dal compilatore, usare il [DUMPBIN](dumpbin-reference.md) dello strumento o il linker [/Map](map-generate-mapfile.md) opzione. I nomi decorati sono specifici del compilatore. Se si esportano i nomi decorati nel file .DEF, gli eseguibili che si collegano alla DLL devono essere anch'essi compilati usando la stessa versione del compilatore. Questo garantisce che i nomi decorati nel chiamante corrispondano ai nomi esportati nel file .DEF.
 
 È possibile usare \@ *ordinale* per specificare che un numero e non il nome della funzione, esamina la tabella di esportazione DLL. Molte DLL Windows esportano ordinali per supportare il codice legacy. In precedenza, era pratica comune usare ordinali nel codice Windows a 16 bit, perché ciò può aiutare a ridurre le dimensioni di una DLL. Si sconsiglia di esportare funzioni in base a ordinali a meno che i destinatari della DLL non necessitino di tale funzione a scopo di supporto della legacy. Dato che il file .LIB file conterrà il mapping tra l'ordinale e la funzione, è possibile usare il nome della funzione come si farebbe normalmente nei progetti che usano la DLL.
 
@@ -74,7 +74,7 @@ Vi sono quattro metodi per esportare una definizione, elencati di seguito in ord
 
 1. Un'istruzione `EXPORTS` in un file .DEF
 
-1. Un' [/Export](../../build/reference/export-exports-a-function.md) specifica in un comando LINK
+1. Un' [/Export](export-exports-a-function.md) specifica in un comando LINK
 
 1. Oggetto [commento](../../preprocessor/comment-c-cpp.md) direttiva nel codice sorgente, del form `#pragma comment(linker, "/export: definition ")`. L'esempio seguente mostra una direttiva di commento #pragma prima di una dichiarazione di funzione, in cui `PlainFuncName` è il nome non decorato, e `_PlainFuncName@4` è il nome decorato della funzione:
 
@@ -102,4 +102,4 @@ Quando si esporta una variabile da una DLL usando un file .DEF, non è necessari
 
 ## <a name="see-also"></a>Vedere anche
 
-[Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)
+[Regole relative alle istruzioni di definizione dei moduli](rules-for-module-definition-statements.md)

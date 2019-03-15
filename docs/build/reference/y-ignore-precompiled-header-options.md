@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -Y- compiler option [C++]
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-ms.openlocfilehash: 7a823457b0d372527488e646f0d2fa83bd7a4740
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c56c25d587d84e599718d2e1a74d469def3501f7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421519"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812356"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignora le opzioni dell'intestazione precompilata)
 
@@ -29,13 +29,13 @@ Tutte le altre cause `/Y` compilatore opzioni deve essere ignorata (e non è pos
 
 Per altre informazioni sulle intestazioni precompilate, vedere:
 
-- [/Y (intestazioni precompilate)](../../build/reference/y-precompiled-headers.md)
+- [/Y (intestazioni precompilate)](y-precompiled-headers.md)
 
-- [Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)
+- [File di intestazione precompilata](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -49,5 +49,5 @@ Per altre informazioni sulle intestazioni precompilate, vedere:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

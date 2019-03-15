@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-ms.openlocfilehash: 59a4b48e412cee6b2a90608747aa6fb3e1b79ca7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326386"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815957"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Specifica la libreria predefinita)
 
@@ -23,26 +23,26 @@ Specificare una raccolta predefinita per eseguire una ricerca per risolvere rife
 
 ## <a name="syntax"></a>Sintassi
 
-> **/DEFAULTLIB**:_libreria_
+> **/DEFAULTLIB**:_library_
 
 ### <a name="arguments"></a>Argomenti
 
-*Libreria*<br/>
+*library*<br/>
 Il nome di una libreria per la ricerca durante la risoluzione di riferimenti esterni.
 
 ## <a name="remarks"></a>Note
 
 Il **/DEFAULTLIB** opzione consente di aggiungere uno *libreria* all'elenco di librerie che collegamento Cerca la risoluzione dei riferimenti. Una libreria specificata con **/DEFAULTLIB** viene eseguita la ricerca dopo le librerie specificate in modo esplicito nella riga di comando e prima delle librerie predefinite specificate nei file obj.
 
-Quando usata senza argomenti, il [/NODEFAULTLIB (Ignora tutte le librerie predefinite)](../../build/reference/nodefaultlib-ignore-libraries.md) opzione esegue l'override di tutti **/DEFAULTLIB**:*libreria* opzioni. Il **/NODEFAULTLIB**:*libreria* opzione sostituzioni **/DEFAULTLIB**:*libreria* quando lo stesso *libreria*nome è specificato in entrambi.
+Quando usata senza argomenti, il [/NODEFAULTLIB (Ignora tutte le librerie predefinite)](nodefaultlib-ignore-libraries.md) opzione esegue l'override di tutti **/DEFAULTLIB**:*libreria* opzioni. Il **/NODEFAULTLIB**:*libreria* opzione sostituzioni **/DEFAULTLIB**:*libreria* quando lo stesso *libreria*nome è specificato in entrambi.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
-1. Nelle **opzioni aggiuntive**, immettere una **/DEFAULTLIB**:*libreria* opzione per ogni libreria per la ricerca. Scegli **OK** per salvare le modifiche.
+1. Nelle **opzioni aggiuntive**, immettere una **/DEFAULTLIB**:*libreria* opzione per ogni libreria per la ricerca. Scegliere **OK** per salvare le modifiche.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 
@@ -50,5 +50,5 @@ Quando usata senza argomenti, il [/NODEFAULTLIB (Ignora tutte le librerie predef
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)
-- [Opzioni del linker](../../build/reference/linker-options.md)
+- [Riferimento del linker MSVC](linking.md)
+- [Opzioni del Linker MSVC](linker-options.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 86e2dadbfcdc31d5d5f5fe3121c33f9011c14ab5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414383"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819854"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Esporta una funzione)
 
@@ -36,7 +36,7 @@ Sono disponibili quattro metodi per l'esportazione di una definizione, elencati 
 
 1. [dllexport](../../cpp/dllexport-dllimport.md) nel codice sorgente
 
-1. Un' [esportazioni](../../build/reference/exports.md) istruzione in un file def
+1. Un' [esportazioni](exports.md) istruzione in un file def
 
 1. Una specifica dell'opzione /EXPORT in un comando LINK
 
@@ -44,7 +44,7 @@ Sono disponibili quattro metodi per l'esportazione di una definizione, elencati 
 
 Tutti questi metodi possono essere usati nello stesso programma. Quando LINK compila un programma che contiene esportazioni, crea anche una libreria di importazione, a meno che non viene usato un file. exp nella compilazione.
 
-COLLEGAMENTO Usa decorati form degli identificatori. Il compilatore decora un identificatore quando crea il file con estensione obj. Se *entryname* è specificato per il linker nel relativo non decorato formano (così come appare nel codice sorgente), un tentativo di corrispondere al nome. Se non trova una corrispondenza univoca, collegamento genera un messaggio di errore. Usare la [DUMPBIN](../../build/reference/dumpbin-reference.md) dello strumento per ottenere il [nome decorato](../../build/reference/decorated-names.md) sotto forma di identificatore quando è necessario specificarlo al linker.
+COLLEGAMENTO Usa decorati form degli identificatori. Il compilatore decora un identificatore quando crea il file con estensione obj. Se *entryname* è specificato per il linker nel relativo non decorato formano (così come appare nel codice sorgente), un tentativo di corrispondere al nome. Se non trova una corrispondenza univoca, collegamento genera un messaggio di errore. Usare la [DUMPBIN](dumpbin-reference.md) dello strumento per ottenere il [nome decorato](decorated-names.md) sotto forma di identificatore quando è necessario specificarlo al linker.
 
 > [!NOTE]
 > Non si specifica il formato decorato di C identificatori dichiarati `__cdecl` o `__stdcall`.
@@ -58,7 +58,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **della riga di comando** pagina delle proprietà.
 
@@ -70,5 +70,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)<br/>
-[Opzioni del linker](../../build/reference/linker-options.md)
+[Riferimento del linker MSVC](linking.md)<br/>
+[Opzioni del Linker MSVC](linker-options.md)

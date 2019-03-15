@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: 74c57ee8e79da039796f28b9517e1ef41007cef0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d23662d6dd6d2f241c48e0c83f2fa5ed9532c3f7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413732"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807949"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Risoluzione dei problemi relativi alle applicazioni isolate C/C++ e agli assembly side-by-side
 
@@ -102,5 +102,5 @@ Per altre informazioni sul modo in cui il caricatore Cerca gli assembly dipenden
 
 ## <a name="see-also"></a>Vedere anche
 
-[Concetti di applicazioni isolate e assembly side-by-side](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
-[Compilazione di applicazioni isolate C/C++ e di assembly side-by-side](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Concetti di applicazioni isolate e assembly side-by-side](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
+[Compilazione di applicazioni isolate C/C++ e di assembly side-by-side](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

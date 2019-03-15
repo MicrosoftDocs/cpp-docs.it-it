@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-ms.openlocfilehash: 055edf4efc066695abb60a09b84cb1b13302af9c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8635cf5d389f72972f471a4fd53ed56c3497bfe9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423963"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811732"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importazione di chiamate di funzione tramite __declspec(dllimport)
 
@@ -74,4 +74,4 @@ D'altra parte, per le chiamate di funzione all'interno di una DLL, si preferisce
 
 ## <a name="see-also"></a>Vedere anche
 
-[Importazione in un'applicazione](../build/importing-into-an-application.md)
+[Importazione in un'applicazione](importing-into-an-application.md)

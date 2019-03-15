@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b78704ea12365d9e10222d75c6807517f7cdb893
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420908"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812512"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (File di listato)
 
@@ -75,7 +75,7 @@ Un file di listato denominato *filename. Extension* viene inserito nell'oggetto 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **i file di Output** pagina delle proprietà.
 
@@ -97,7 +97,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del file di output (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
-[Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)
+[Opzioni del file di output (/F)](output-file-f-options.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
+[Specifica del nome del percorso](specifying-the-pathname.md)

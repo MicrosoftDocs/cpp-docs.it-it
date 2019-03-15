@@ -13,12 +13,12 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: da2d981d9fcca6be66a7fd495e7c76670ed8e3ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02871622242930d7419fda16f4d106fccb2056f0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502518"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819493"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (interpretazione della parole chiave volatile)
 
@@ -33,7 +33,7 @@ Specifica come il [volatile](../../cpp/volatile-cpp.md) parola chiave deve esser
 **/volatile:iso**<br/>
 Seleziona strict `volatile` la semantica di base a quanto definito dal linguaggio C++ conforme allo standard ISO. Semantica di acquisizione/rilascio non è garantita negli accessi volatili. Se il compilatore è destinata a ARM, si tratta dell'interpretazione predefinita di `volatile`.
 
-**/volatile: MS**<br/>
+**/volatile:ms**<br/>
 Seleziona estese Microsoft `volatile` semantica che aggiunta memoria di là del linguaggio C++ conforme allo standard ISO garanzia di ordinamento. Semantica di acquisizione/rilascio è garantita negli accessi volatili. Tuttavia, questa opzione forza anche il compilatore a generare barriere di memoria hardware, che potrebbero aggiungere un sovraccarico su ARM e ad altre architetture di memoria a ordinamento debole. Se il compilatore è destinato a qualsiasi piattaforma tranne quella ARM, si tratta dell'interpretazione predefinita di `volatile`.
 
 ## <a name="remarks"></a>Note
@@ -46,7 +46,7 @@ Se il porting del codice esistente o si modifica questa opzione nel corso di un 
 
 ### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>Per impostare il /volatile opzione del compilatore in Visual Studio
 
-1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [Uso delle proprietà del progetto](../../ide/working-with-project-properties.md).
+1. Aprire il **pagine delle proprietà** finestra di dialogo per il progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
 
@@ -55,5 +55,5 @@ Se il porting del codice esistente o si modifica questa opzione nel corso di un 
 ## <a name="see-also"></a>Vedere anche
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

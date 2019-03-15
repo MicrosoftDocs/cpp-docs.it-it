@@ -11,12 +11,12 @@ helpviewer_keywords:
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-ms.openlocfilehash: a2d87039e2195c96e4209c7b5098473a6f52c486
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3633cfe34a4f9c627f84cf401cb559f02f8c8229
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424444"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810211"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Specifica le directory di metadati)
 
@@ -37,7 +37,7 @@ Una sola directory può essere passata a un **/AI** chiamata. Specificare una **
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **generale** pagina delle proprietà.
 
@@ -49,6 +49,6 @@ Una sola directory può essere passata a un **/AI** chiamata. Specificare una **
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
 [Direttiva #using](../../preprocessor/hash-using-directive-cpp.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-ms.openlocfilehash: e83c7ed142b85e0d8369545ae8085bfce85bd162
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4a66dda37b84119a4b8bc23f7fc719d50e8786f9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426732"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808209"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (Attiva ricompilazione minima)
 
@@ -32,18 +32,18 @@ Deprecato. Abilita la ricompilazione minima, che determina se è necessario rico
 
 ## <a name="remarks"></a>Note
 
-**/Gm** è deprecata. Questa operazione potrebbe non attivare una compilazione per determinati tipi di modifiche ai file di intestazione. È possibile rimuovere questa opzione in modo sicuro dai progetti. Per migliorare i tempi di compilazione, è consigliabile si usano intestazioni precompilate e parallele e incrementali opzioni di compilazione invece. Per un elenco di opzioni del compilatore deprecate, vedere la **deprecate o rimosse le opzioni del compilatore** sezione [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).
+**/Gm** è deprecata. Questa operazione potrebbe non attivare una compilazione per determinati tipi di modifiche ai file di intestazione. È possibile rimuovere questa opzione in modo sicuro dai progetti. Per migliorare i tempi di compilazione, è consigliabile si usano intestazioni precompilate e parallele e incrementali opzioni di compilazione invece. Per un elenco di opzioni del compilatore deprecate, vedere la **deprecate o rimosse le opzioni del compilatore** sezione [opzioni del compilatore elencate per categoria](compiler-options-listed-by-category.md).
 
 Il compilatore archivia le informazioni sulla dipendenza tra i file di origine e le definizioni delle classi nel file con estensione idb del progetto durante la prima compilazione. (Informazioni sulla dipendenza indicano quale file di origine dipende dalla definizione di classe, e il file h la definizione si trova in). Le compilazioni successive usano le informazioni archiviate nel file con estensione IDB per determinare se un file di origine deve essere compilata, anche se include un file con estensione h modificato.
 
 > [!NOTE]
 > La ricompilazione minima richiede che le definizioni delle classi non vengano modificate nei file di inclusione. Le definizioni delle classi devono essere globali per un progetto (dovrebbe esistere una sola definizione di una determinata classe) perché le informazioni sulla dipendenza nel file con estensione idb vengono create per l'intero progetto. Se esiste più di una definizione per una classe nel progetto, disabilitare la ricompilazione minima.
 
-Poiché il linker incrementale non supporta i metadati di Windows inclusi nei file obj usando il [/ZW (compilazione di Windows Runtime)](../../build/reference/zw-windows-runtime-compilation.md) opzione, il **/Gm** opzione non è compatibile con  **/ZW**.
+Poiché il linker incrementale non supporta i metadati di Windows inclusi nei file obj usando il [/ZW (compilazione di Windows Runtime)](zw-windows-runtime-compilation.md) opzione, il **/Gm** opzione non è compatibile con  **/ZW**.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **C/C++** > **Code Generation** pagina delle proprietà.
 
@@ -55,5 +55,5 @@ Poiché il linker incrementale non supporta i metadati di Windows inclusi nei fi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

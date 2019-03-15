@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d1821d8dc5eab202a918893a1e7895151629b551
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627527"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807689"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Allineamento membri struct)
 
@@ -24,7 +24,7 @@ Controlla come vengono compressi i membri di una struttura in memoria e consente
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Zp**[**1**|**2**|**4**|**8** | **16**]
+> **/Zp**[**1**|**2**|**4**|**8**|**16**]
 
 ## <a name="remarks"></a>Note
 
@@ -53,11 +53,11 @@ I valori di compressione disponibili sono descritti nella tabella seguente:
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [Esempi di allineamento di strutture](../../build/x64-software-conventions.md#examples-of-structure-alignment) (specifico per x64)
+- [/ALIGN (allineamento sezione)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **C/C++** > **generazione di codice** pagina delle proprietà.
 
@@ -69,5 +69,5 @@ I valori di compressione disponibili sono descritti nella tabella seguente:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore](../../build/reference/compiler-options.md)
-- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+- [Opzioni del compilatore MSVC](compiler-options.md)
+- [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

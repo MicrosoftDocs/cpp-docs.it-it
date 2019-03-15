@@ -1,31 +1,50 @@
 ---
-title: Compilazione di un programma C/C++
-ms.date: 11/04/2016
+title: Riferimenti al compilatore MSVC. C/C++ - Visual Studio
+description: Opzioni set di strumenti del compilatore MSVC.
+ms.date: 12/10/2018
 helpviewer_keywords:
 - cl.exe compiler
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
-ms.openlocfilehash: 3e3767739c1f08403829c7e9840b51c0b5a19c79
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414512"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810302"
 ---
-# <a name="compiling-a-cc-program"></a>Compilazione di un programma C/C++
+# <a name="compiling-a-cc-project"></a>Quando si compila un progetto C/C++
 
-Per informazioni sull'utilizzo del compilatore, vedere le sezioni seguenti:
+Nell'IDE di Visual Studio o dalla riga di comando, è possono impostare le opzioni del compilatore C e C++. 
 
-- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+## <a name="in-visual-studio"></a>In Visual Studio
 
-- [Opzioni del compilatore](../../build/reference/compiler-options.md)
+È possibile impostare le opzioni del compilatore per ogni progetto nella relativa Visual Studio **pagine delle proprietà** nella finestra di dialogo. Nel riquadro sinistro, selezionare **le proprietà di configurazione**, **C/C++** e quindi scegliere la categoria di opzioni del compilatore. Nell'argomento relativo a ciascuna opzione del compilatore viene descritto come impostarla e dove reperirla nell'ambiente di sviluppo. Visualizzare [opzioni del compilatore MSVC](compiler-options.md) per un elenco completo.
 
-- [Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)
+## <a name="from-the-command-line"></a>Dalla riga di comando
 
-- [Supporto Unicode nel compilatore e nel linker](../../build/reference/unicode-support-in-the-compiler-and-linker.md)
+È possibile impostare le opzioni del compilatore (CL.exe):
 
-Per informazioni su come scegliere l'architettura di host e di destinazione del compilatore, vedere [configurare Visual C++ a 64 bit x64 destinazioni](../../build/configuring-programs-for-64-bit-visual-cpp.md).
+- [Nella riga di comando](compiler-command-line-syntax.md)
+
+- [Nei file di comando](cl-command-files.md)
+
+- [Nella variabile di ambiente CL](cl-environment-variables.md)
+
+Le opzioni specificate nella variabile di ambiente CL vengono utilizzate ogni volta che viene richiamato CL. Se un file di comando viene denominato nella variabile di ambiente CL o sulla riga di comando, vengono utilizzate le opzioni specificate nel file di comando. A differenza della riga di comando o della variabile di ambiente CL, un file di comando consente di utilizzare più righe di opzioni e nomi file.
+
+Le opzioni del compilatore vengono elaborate "da sinistra a destra" e quando viene rilevato un conflitto, prevale l'ultima opzione, ovvero quella all'estrema destra. La variabile di ambiente CL viene elaborata prima della riga di comando in modo che al verificarsi di un conflitto tra CL e la riga di comando, quest'ultima abbia la precedenza.
+
+## <a name="additional-compiler-topics"></a>Ulteriori argomenti relativi al compilatore
+
+- [Opzioni del compilatore MSVC](compiler-options.md)
+
+- [File di intestazione precompilata](../creating-precompiled-header-files.md)
+
+- [CL richiama il linker](cl-invokes-the-linker.md)
+
+Per informazioni su come scegliere l'architettura di host e di destinazione del compilatore, vedere [C++ configurare progetti per 64 bit, x64 destinazioni](../configuring-programs-for-64-bit-visual-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti alla compilazione in C/C++](../../build/reference/c-cpp-building-reference.md)
+[Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)

@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677331"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814449"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errori del compilatore irreversibili da C999 a C1999
 
@@ -224,7 +223,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Errore irreversibile C1063|limite del compilatore: overflow dello stack del compilatore|
 |[Errore irreversibile C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|limite del compilatore: un token ha causato l'overflow del buffer interno|
 |[Errore irreversibile C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|limite del compilatore: tag esauriti|
-|[Errore irreversibile C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limite del compilatore: il limite di dimensione di 64 KB di un record di tipo è stato superato|
+|[Errore irreversibile C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|limite del compilatore: È stato superato il limite di 64 KB per dimensioni di un record di tipo|
 |Errore irreversibile C1068|impossibile aprire il file '*file*'|
 |Errore irreversibile C1069|impossibile leggere la riga di comando del compilatore|
 |Errore irreversibile C1070|coppia #if/#endif non corrispondente nel file '*file*'|
@@ -234,7 +233,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore irreversibile C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|alla fine del file l'elemento *token* di sinistra è senza corrispondenza|
 |[Errore irreversibile C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|limite del compilatore: raggiunto limite interno dell'heap. Usare /Zm per specificare un limite maggiore|
 |Errore irreversibile C1077|limite del compilatore: impossibile avere più di *number* opzioni nella riga di comando|
-|[Errore irreversibile C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite del compilatore: superato limite della dimensione del file PCH|
+|[Errore irreversibile C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|limite del compilatore: Superato il limite delle dimensioni file PCH|
 |[Errore irreversibile C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|limite del compilatore: superato limite di *number* caratteri per le opzioni della riga di comando|
 |[Errore irreversibile C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*': nome di file troppo lungo|
 |Errore irreversibile C1082|impossibile chiudere il file *type* : '*file*': *message*|
@@ -265,7 +264,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Errore irreversibile C1111|troppi parametri di modello/generici|
 |Errore irreversibile C1112|limite del compilatore: `'number`' troppi argomenti di macro, solo *numero* consentiti|
 |[Errore irreversibile C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using non riuscito in '*file*'|
-|Errore irreversibile C1114|'*file*': WinRT non supporta #using di un assembly gestito|
+|Errore irreversibile C1114|«*file*': WinRT non supporta #using di un assembly gestito|
 |[Errore irreversibile C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|chiamata a GetProcAddress non riuscita per '*function*'|
 |[Errore irreversibile C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|chiamata a CryptoAPI non riuscita|
 |[Errore irreversibile C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|l'allocazione automatica supera *size*|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: d0a3e50ca75535d505e46c0e454a8e0902b1ffb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562084"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808456"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (compilazione con più processi)
 
@@ -50,10 +50,10 @@ La tabella seguente elenca le opzioni del compilatore e le funzionalità del lin
 |Opzione o funzionalità del linguaggio|Descrizione|
 |--------------------------------|-----------------|
 |Direttiva del preprocessore[#import](../../preprocessor/hash-import-directive-cpp.md) |Converte i tipi in una libreria dei tipi in classi C++ e quindi scrive tali classi in un file di intestazione.|
-|[/E](../../build/reference/e-preprocess-to-stdout.md), [/EP](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia l'output del preprocessore nello standard output (**stdout**).|
-|[/Gm](../../build/reference/gm-enable-minimal-rebuild.md)|Consente una ricompilazione incrementale.|
-|[/showIncludes](../../build/reference/showincludes-list-include-files.md)|Scrive un elenco dei file di inclusione nello standard error (**stderr**).|
-|[/Yc](../../build/reference/yc-create-precompiled-header-file.md)|Scrive un file di intestazione precompilato.|
+|[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia l'output del preprocessore nello standard output (**stdout**).|
+|[/Gm](gm-enable-minimal-rebuild.md)|Consente una ricompilazione incrementale.|
+|[/showIncludes](showincludes-list-include-files.md)|Scrive un elenco dei file di inclusione nello standard error (**stderr**).|
+|[/Yc](yc-create-precompiled-header-file.md)|Scrive un file di intestazione precompilato.|
 
 ## <a name="diagnostic-messages"></a>Messaggi di diagnostica
 
@@ -61,7 +61,7 @@ Se si specifica un'opzione o una funzionalità del linguaggio che non è compati
 
 |Messaggio di diagnostica|Descrizione|Comportamento del compilatore|
 |------------------------|-----------------|-----------------------|
-|**C2813**|La direttiva **#import** non è compatibile con l'opzione **/MP** .|La compilazione termina, a meno che un'opzione relativa al [livello di avviso del compilatore](../../build/reference/compiler-option-warning-level.md) non specifichi diversamente.|
+|**C2813**|La direttiva **#import** non è compatibile con l'opzione **/MP** .|La compilazione termina, a meno che un'opzione relativa al [livello di avviso del compilatore](compiler-option-warning-level.md) non specifichi diversamente.|
 |**D9014**|Viene specificato un valore non valido per il *processMax* argomento.|Il compilatore ignora il valore non valido e presuppone che il valore sia 1.|
 |**D9030**|L'opzione specificata non è compatibile con **/MP**.|Il compilatore ignora l'opzione **/MP** .|
 
@@ -99,7 +99,7 @@ In questo caso, poiché il sistema operativo segnala la presenza di due processo
 
 Un file di origine viene compilato quando è disponibile un processo per la compilazione. Se il numero di file supera quello dei processi, il primo set di file viene compilato dai processi disponibili. I file rimanenti vengono elaborati quando un processo termina la gestione di un file precedente e diventa disponibile per gestire uno dei file rimanenti.
 
-Non specificare lo stesso file di origine più volte su una riga di comando. Ciò può verificarsi, ad esempio, se uno strumento crea automaticamente un [makefile](../../build/contents-of-a-makefile.md) in base alle informazioni sulle dipendenze in un progetto. Se non si specifica l'opzione **/MP** , il compilatore elabora l'elenco di file in sequenza e ricompila ogni occorrenza del file. Se tuttavia si specifica l'opzione **/MP** , è possibile che diversi compilatori compilino contemporaneamente lo stesso file, tentando quindi di scrivere contemporaneamente nello stesso file di output. Un compilatore acquisirà l'accesso in scrittura esclusivo al file di output e l'operazione avrà esito positivo, mentre gli altri compilatori non riusciranno a completare l'operazione e verrà generato un errore di accesso al file.
+Non specificare lo stesso file di origine più volte su una riga di comando. Ciò può verificarsi, ad esempio, se uno strumento crea automaticamente un [makefile](contents-of-a-makefile.md) in base alle informazioni sulle dipendenze in un progetto. Se non si specifica l'opzione **/MP** , il compilatore elabora l'elenco di file in sequenza e ricompila ogni occorrenza del file. Se tuttavia si specifica l'opzione **/MP** , è possibile che diversi compilatori compilino contemporaneamente lo stesso file, tentando quindi di scrivere contemporaneamente nello stesso file di output. Un compilatore acquisirà l'accesso in scrittura esclusivo al file di output e l'operazione avrà esito positivo, mentre gli altri compilatori non riusciranno a completare l'operazione e verrà generato un errore di accesso al file.
 
 ### <a name="using-type-libraries-import"></a>Uso delle librerie dei tipi (#import)
 

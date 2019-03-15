@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-ms.openlocfilehash: 6c3d3b51691247ddef5614cae113ffa9ded576e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: df353eb255c731478863ed6088cafa1cc38053fb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425237"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807429"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (thread di generazione di codice)
 
@@ -33,13 +33,13 @@ Numero massimo di thread per l'uso da parte di cl.exe, nell'intervallo compreso 
 
 ## <a name="remarks"></a>Note
 
-Il **/cgthreads** opzione specifica il numero massimo di thread cl.exe utilizza in parallelo per l'ottimizzazione e codice le fasi di generazione della compilazione. Si noti che non possono esistere alcun spazio tra **/cgthreads** e il `number` argomento. Per impostazione predefinita, cl.exe utilizza quattro thread, come se **/cgthreads4** sono state specificate. Se sono disponibili più core del processore, un valore `number` maggiore può accelerare i tempi di compilazione. Questa opzione è particolarmente utile quando viene combinato con [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md).
+Il **/cgthreads** opzione specifica il numero massimo di thread cl.exe utilizza in parallelo per l'ottimizzazione e codice le fasi di generazione della compilazione. Si noti che non possono esistere alcun spazio tra **/cgthreads** e il `number` argomento. Per impostazione predefinita, cl.exe utilizza quattro thread, come se **/cgthreads4** sono state specificate. Se sono disponibili più core del processore, un valore `number` maggiore può accelerare i tempi di compilazione. Questa opzione è particolarmente utile quando viene combinato con [/GL (Ottimizzazione intero programma)](gl-whole-program-optimization.md).
 
-È possibile specificare più livelli di parallelismo per una compilazione. Il commutatore msbuild.exe **/maxcpucount** specifica il numero di processi di MSBuild che può essere eseguito in parallelo. Il [/MP (compilazione con più processi)](../../build/reference/mp-build-with-multiple-processes.md) flag del compilatore specifica il numero di processi cl.exe che compilano simultaneamente i file di origine. Il **/cgthreads** opzione specifica il numero di thread usati da ogni processo cl.exe. Dato che il processore può eseguire solo tanti thread simultanei quanti sono i core del processore, non è utile specificare valori maggiori per tutte queste opzioni simultaneamente e potrebbe risultare controproducente. Per altre informazioni su come compilare progetti in parallelo, vedere [compilazione di più progetti in parallelo](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
+È possibile specificare più livelli di parallelismo per una compilazione. Il commutatore msbuild.exe **/maxcpucount** specifica il numero di processi di MSBuild che può essere eseguito in parallelo. Il [/MP (compilazione con più processi)](mp-build-with-multiple-processes.md) flag del compilatore specifica il numero di processi cl.exe che compilano simultaneamente i file di origine. Il **/cgthreads** opzione specifica il numero di thread usati da ogni processo cl.exe. Dato che il processore può eseguire solo tanti thread simultanei quanti sono i core del processore, non è utile specificare valori maggiori per tutte queste opzioni simultaneamente e potrebbe risultare controproducente. Per altre informazioni su come compilare progetti in parallelo, vedere [compilazione di più progetti in parallelo](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione**, **C/C++** cartella.
 
@@ -53,5 +53,5 @@ Il **/cgthreads** opzione specifica il numero massimo di thread cl.exe utilizza 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

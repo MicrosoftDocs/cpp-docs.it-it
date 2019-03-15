@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /RANGE dumpbin option
 - -RANGE dumpbin option
 ms.assetid: 7eeba266-32be-49cc-a350-96bdf541f98a
-ms.openlocfilehash: 011a8f9b2c8d0722e9aff98d52bb47dc549cc769
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c631057e47e1a52a58d2b1304133dfdfc008ae14
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421636"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810965"
 ---
 # <a name="range"></a>/RANGE
 
@@ -46,4 +46,4 @@ dumpbin /disasm /range:4219334,0x004061CD t.exe
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opzioni di DUMPBIN](dumpbin-options.md)

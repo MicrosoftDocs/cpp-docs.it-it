@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-ms.openlocfilehash: 2cd691ed4514ac4073f90691ed731670fbd22477
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fc22ae77d729868adbf8c37d40e450e35a8e866
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417944"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811992"
 ---
 # <a name="failure-hooks"></a>Hook di errore
 
-L'hook di errore è abilitata in modo analogo i [hook di notifica](../../build/reference/notification-hooks.md). La routine di hook deve restituire un valore appropriato in modo che l'elaborazione può continuare (HINSTANCE o FARPROC) oppure 0 per indicare che deve essere generata un'eccezione.
+L'hook di errore è abilitata in modo analogo i [hook di notifica](notification-hooks.md). La routine di hook deve restituire un valore appropriato in modo che l'elaborazione può continuare (HINSTANCE o FARPROC) oppure 0 per indicare che deve essere generata un'eccezione.
 
 La variabile puntatore che fa riferimento alla funzione definita dall'utente è:
 
@@ -39,4 +39,4 @@ Se la notifica viene **dliFailGetProc**, la funzione hook può restituire:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione e notifica degli errori](../../build/reference/error-handling-and-notification.md)
+[Gestione e notifica degli errori](error-handling-and-notification.md)

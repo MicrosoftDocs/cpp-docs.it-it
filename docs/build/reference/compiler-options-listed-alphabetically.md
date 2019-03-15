@@ -3,12 +3,12 @@ title: Opzioni del compilatore elencate in ordine alfabetico
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415877"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811940"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -164,6 +164,5 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti alla compilazione in C/C++](c-cpp-building-reference.md)<br/>
-[Opzioni del compilatore](compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](setting-compiler-options.md)
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)

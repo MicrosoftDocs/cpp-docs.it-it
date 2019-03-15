@@ -25,12 +25,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 31570b1e6680b5af5f0a774c290eba20f3b5fdb0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 37c3169b66e1120dbfdb3a69379430e9bc8a1586
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413186"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813487"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilazione di una libreria di importazione e di un file di esportazione
 
@@ -68,4 +68,4 @@ Si noti che se si crea la libreria di importazione in un passaggio preliminare, 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di librerie di importazione e file di esportazione](../../build/reference/working-with-import-libraries-and-export-files.md)
+[Uso di librerie di importazione e file di esportazione](working-with-import-libraries-and-export-files.md)
