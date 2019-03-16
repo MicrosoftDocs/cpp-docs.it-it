@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424613"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815892"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Controlli di runtime)
 
@@ -75,7 +75,7 @@ Abilita verifica dello stack frame errore di run-time, come indicato di seguito:
 
 - Inizializzazione di variabili locali su un valore diverso da zero. Ciò consente di identificare gli errori che non vengono visualizzati durante l'esecuzione in modalità di debug. È probabile che le variabili dello stack rimarrà uguale a zero in una build di debug rispetto a una build di rilascio a causa delle ottimizzazioni del compilatore di variabili dello stack in una build di rilascio. Una volta che un programma ha utilizzato un'area del relativo stack, non viene mai reimpostata su 0 dal compilatore. Di conseguenza, le variabili dello stack non inizializzato e successive che si utilizza la stessa area dello stack possono restituire valori rimasti dall'uso precedente di tale memoria dello stack.
 
-- Rilevamento di sovraccarichi e sottocarichi delle variabili locali, ad esempio matrici. **/RTC** `s` non rileverà i sovraccarichi del quando si accede alla memoria risultante da una struttura di spaziatura interna del compilatore. Spaziatura interna potrebbe verificarsi tramite [allineare](../../cpp/align-cpp.md), [/Zp (Allineamento membri Struct)](../../build/reference/zp-struct-member-alignment.md), o [pack](../../preprocessor/pack.md), o se si ordinano gli elementi della struttura in modo da richiedere al compilatore di aggiungere spaziatura interna.
+- Rilevamento di sovraccarichi e sottocarichi delle variabili locali, ad esempio matrici. **/RTC** `s` non rileverà i sovraccarichi del quando si accede alla memoria risultante da una struttura di spaziatura interna del compilatore. Spaziatura interna potrebbe verificarsi tramite [allineare](../../cpp/align-cpp.md), [/Zp (Allineamento membri Struct)](zp-struct-member-alignment.md), o [pack](../../preprocessor/pack.md), o se si ordinano gli elementi della struttura in modo da richiedere al compilatore di aggiungere spaziatura interna.
 
 - Verifica del puntatore dello stack, che consente di rilevare errori del puntatore dello stack. Danneggiamento del puntatore dello stack può essere causato da una mancata corrispondenza della convenzione di chiamata. Ad esempio, usando un puntatore a funzione, si chiama una funzione in una DLL che viene esportata come [stdcall](../../cpp/stdcall.md) ma viene dichiarato il puntatore alla funzione come [cdecl](../../cpp/cdecl.md).
 
@@ -95,17 +95,17 @@ Se una variabile è stata inizializzata, non essere segnalato in fase di esecuzi
 
 ## <a name="remarks"></a>Note
 
-Controlli degli errori di runtime sono un modo per trovare i problemi nel codice in esecuzione. per altre informazioni, vedere [come: Usare i controlli runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Controlli degli errori di runtime sono un modo per trovare i problemi nel codice in esecuzione. per altre informazioni, vedere [come: Usare i controlli di runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Se si compila il programma dalla riga di comando usando uno dei **/RTC** le opzioni del compilatore, qualsiasi pragma [ottimizzare](../../preprocessor/optimize.md) istruzioni nel codice avrà esito negativo. Infatti, il controllo degli errori di run-time non è valido in una build di rilascio (ottimizzato).
 
-È consigliabile usare **/RTC** delle generazioni di sviluppo. **/RTC** non deve essere utilizzato per una build finale. **/RTC** non può essere usato con le ottimizzazioni del compilatore ([Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)). Immagine di un programma compilato con **/RTC** sarà leggermente superiore e leggermente più lento rispetto a un'immagine compilata con **/Od** (fino al 5% più lento rispetto a un **/Od** compilazione).
+È consigliabile usare **/RTC** delle generazioni di sviluppo. **/RTC** non deve essere utilizzato per una build finale. **/RTC** non può essere usato con le ottimizzazioni del compilatore ([Opzioni /O (Ottimizza codice)](o-options-optimize-code.md)). Immagine di un programma compilato con **/RTC** sarà leggermente superiore e leggermente più lento rispetto a un'immagine compilata con **/Od** (fino al 5% più lento rispetto a un **/Od** compilazione).
 
-La direttiva del preprocessore MSVC_RUNTIME_CHECKS verrà definita quando si usa uno **/RTC** opzione oppure [/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).
+La direttiva del preprocessore MSVC_RUNTIME_CHECKS verrà definita quando si usa uno **/RTC** opzione oppure [/GZ](gz-enable-stack-frame-run-time-error-checking.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
@@ -119,6 +119,6 @@ La direttiva del preprocessore MSVC_RUNTIME_CHECKS verrà definita quando si usa
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore](../../build/reference/compiler-options.md)<br/>
-[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)<br/>
+[Opzioni del compilatore MSVC](compiler-options.md)<br/>
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
 [Procedura: Usare i controlli di runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks)
