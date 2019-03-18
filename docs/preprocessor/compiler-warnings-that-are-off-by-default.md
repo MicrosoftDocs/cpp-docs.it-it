@@ -5,15 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651373"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142559"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avvisi del compilatore disattivati per impostazione predefinita
-Il compilatore include avvisi che sono stati disabilitate per impostazione predefinita, in quanto la maggior parte degli sviluppatori non desiderano visualizzarli. In alcuni casi, essi rappresentano una scelta stilistiche, sono idiomi comuni nel codice precedente o usufruire di un'estensione Microsoft del linguaggio. In altri casi, questi indicano un'area in cui i programmatori spesso si basano su presupposti non corretti, che possono causare un comportamento imprevisto o non definito. Alcuni di questi avvisi siano molto poco significativi nelle intestazioni della libreria. Librerie di runtime C e le librerie standard C++ sono destinate a non generare alcun avviso solo a livello di avviso [/W4](../build/reference/compiler-option-warning-level.md).
+
+Il compilatore supporta gli avvisi che sono stati disabilitate per impostazione predefinita, in quanto la maggior parte degli sviluppatori non risultino utili. In alcuni casi, è un avviso su una scelta stilistiche o su idiomi comuni nel codice precedente. Gli altri avvisi sono relative all'utilizzo di un'estensione Microsoft del linguaggio. In altri casi, questi indicano un'area in cui i programmatori spesso si basano su presupposti non corretti, che possono causare un comportamento imprevisto o non definito. Se abilitata, alcuni di questi avvisi potrebbero apparire più volte nelle intestazioni della libreria. Librerie di runtime C e le librerie standard C++ sono destinate a non generare alcun avviso solo a livello di avviso [/W4](../build/reference/compiler-option-warning-level.md).
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>Abilita avvisi disattivati per impostazione predefinita
 
@@ -33,7 +34,7 @@ Il compilatore include avvisi che sono stati disabilitate per impostazione prede
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   In questo modo avviso *nnnn* a livello *L*.
+   Questa opzione Abilita avviso *nnnn* a livello *L*.
 
 ## <a name="warnings-that-are-off-by-default"></a>Avvisi disattivati per impostazione predefinita
 
@@ -43,7 +44,8 @@ Gli avvisi seguenti sono stati disabilitate per impostazione predefinita in Visu
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (livello 4)|enumeratore '*identifier*'in un'istruzione switch dell'enum'*enumerazione*' non è gestito in modo esplicito da un'etichetta case|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (livello 4)|enumeratore '*identifier*'in un'istruzione switch dell'enum'*enumerazione*' non è gestito|
-|C4191 (livello 3)|«*operator*': conversione non affidabile da '*type_of_expression*'a'*type_required*»|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) (livello 1) | 'HRESULT' viene convertito in 'bool'; continuare che questo è ciò che si desidera? |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) (livello 3)|«*operator*': conversione non affidabile da '*type_of_expression*'a'*type_required*»|
 |[Avviso C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (livello 4)|'*identifier*': conversione da '*type1*'a'*type2*', perdita di dati|
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) (livello 4)|'*operator*': conversione da '*type1*'a'*type2*', perdita di dati|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (livello 4)|«*funzione*': nessun prototipo di funzione dato: conversione (')' in '(void)'|
@@ -64,7 +66,7 @@ Gli avvisi seguenti sono stati disabilitate per impostazione predefinita in Visu
 |C4388 (livello 4)|errata corrispondenza tra signed e unsigned|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (livello 2)|«*funzione*': funzione firma contiene il tipo '*tipo*'; Gli oggetti di C++ sono non è sicuro passare tra codice pure e mista o nativa|
 |C4426 (livello 1)|flag di ottimizzazione modificati dopo l'inclusione dell'intestazione, probabilmente a causa di optimize () #pragma <sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (livello 4)|«*class1*': layout dell'oggetto in/vd2 verrà modificato a causa di base virtuale '*class2*»|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (livello 4)|«*class1*': Layout dell'oggetto in/vd2 verrà modificato a causa di base virtuale '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (livello 4)|dynamic_cast dalla base virtuale '*class1*'a'*class2*' potrebbe non riuscire in alcuni contesti|
 |C4444 (livello 3)|'__unaligned' di livello superiore non implementato nel contesto|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (livello 4)|percorso di inclusione relativo contiene '.. '|
@@ -97,6 +99,7 @@ Gli avvisi seguenti sono stati disabilitate per impostazione predefinita in Visu
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (livello 4)|'classe derivata': impossibile generare l'operatore di assegnazione poiché un operatore di assegnazione della classe base è inaccessibile|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (livello 1)|digraph non supportati con -Ze. Sequenza di caratteri '*digraph*'non interpretata come token alternativo per'*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (livello 3)|«*istanza*': la costruzione di oggetti statici locali non è thread-safe|
+| C4643 (livello 4) | Inoltrare la dichiarazione di '*identificatore*' nello spazio dei nomi std non è consentita dallo Standard C++. <sup>15.8</sup> |
 |C4647 (livello 3)|modifica del comportamento: is_pod (*tipo*) ha valore diversi nelle versioni precedenti|
 |C4654 (livello 4)|Includere codice inserito prima dell'intestazione precompilata riga verrà ignorata. Aggiungere codice all'intestazione precompilata. <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (livello 4)|«*simbolo*'non è definito come una macro del preprocessore. sostituzione con '0' per'*direttive*»|
@@ -112,7 +115,9 @@ Gli avvisi seguenti sono stati disabilitate per impostazione predefinita in Visu
 |C4774 (livello 4)|«*stringa*': prevista nell'argomento stringa di formato *numero* non è una stringa letterale|
 |C4777 (livello 4)|'*funzione*': stringa di formato '*stringa*'richiede un argomento di tipo'*type1*', ma l'argomento variadic *numero* ha tipo '*type2*'|
 |C4786 (livello 3)|«*simbolo*': nome oggetto troncato a '*numero*' caratteri nelle informazioni di debug|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (livello 4) | La conversione implicita da '*tipo*' in bool. Possibile perdita di informazioni <sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (livello 4)|«*byte*'byte di spaziatura interna aggiunti dopo costrutto'*member_name*»|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (livello 1) | «*membro*': funzione membro della classe locale non ha un corpo |
 |C4826 (livello 2)|Conversione da '*type1*'a'*type2*' è con segno esteso. Ciò potrebbe causare un comportamento di runtime imprevisto.|
 |C4837 (livello 4)|rilevato trigramma: '?? *carattere*'sostituito da'*carattere*'|
 |C4841 (livello 4)|estensione non standard: indicatore di membro composto usato in offsetof|
@@ -141,7 +146,7 @@ Gli avvisi seguenti sono stati disabilitate per impostazione predefinita in Visu
 |C5035|uso di funzionalità '*caratteristica*' determina la funzione *funzione* deve essere compilato come codice guest <sup>15.3</sup>|
 |C5036 (livello 1)|conversione del puntatore a funzione varargs durante la compilazione con/Hybrid:x86arm64»*type1*'a'*type2*' <sup>15.3</sup>|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (livello 4)|membro dati '*membro1*'verrà inizializzato dopo il membro dati'*membro2*' <sup>15.3</sup>|
-|C5039 (livello 4)|«*funzione*': puntatore o riferimento alla funzione che potrebbe generare passato alla funzione extern C in - EHc. Se questa funzione genera un'eccezione, può verificarsi un comportamento indefinito. <sup>versione 15.5</sup>|
+|C5039 (livello 4)|«*funzione*': puntatore o riferimento alla funzione che potrebbe generare passato alla funzione extern C in - EHc. Se questa funzione genera un'eccezione, può verificarsi un comportamento indefinito. <sup>15.5</sup>|
 |C5042 (livello 3)|«*funzione*': le dichiarazioni di funzione nell'ambito del blocco non possono essere specificato 'inline' in C++ standard, rimuovere l'identificatore 'inline' <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Compilatore inserirà la mitigazione Spectre per il carico di memoria se è specificata l'opzione /Qspectre <sup>15.7</sup>|
 
@@ -150,6 +155,10 @@ Gli avvisi seguenti sono stati disabilitate per impostazione predefinita in Visu
 <sup>15.3</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.3.<br/>
 <sup>15.5</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.5.<br/>
 <sup>Versione 15.7</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.7.<br/>
+<sup>15.8</sup> questo avviso non è disponibile a partire da Visual Studio 2017 versione 15.8.<br/>
+::: moniker range=">= vs-2019"
+<sup>16.0</sup> questo avviso non è disponibile a partire da Visual Studio 2019 RTM.<br/>
+::: moniker-end
 <sup>Perm</sup> questo avviso è disattivato, a meno che il [/PERMISSIVE--](../build/reference/permissive-standards-conformance.md) è impostata l'opzione del compilatore.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avvisi disattivata per impostazione predefinita nelle versioni precedenti
@@ -167,7 +176,7 @@ Questo avviso è disattivato per impostazione predefinita nelle versioni del com
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (livello 4)|identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (livello 4)|identificatore di tipo mancante, verrà utilizzato int. Nota: Default-int non è più supportato in C|
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -4,16 +4,16 @@ ms.date: 10/24/2018
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: ae5d1957694abe09d1e04fba5ccfd2cd87d36940
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79cf78de865f480530df89c778e9fe432b0bbf33
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530182"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142532"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore dalla versione del compilatore
 
-Il compilatore può eliminare gli avvisi introdotti dopo una versione specificata utilizzando il [/Wv](../../build/reference/compiler-option-warning-level.md) opzione del compilatore. Ciò è utile per la gestione del processo di compilazione quando si introduce una nuova versione del set di strumenti e per eliminare temporaneamente gli avvisi di nuovo. Questa opzione non elimina i messaggi di errore. Non è consigliabile eliminare tutti gli avvisi di nuovo in modo permanente. È consigliabile sempre si compila con il massimo livello di avviso regolare, __/W4__e rimuovere le __/Wv__ opzione nella compilazione appena possibile.
+Il compilatore può eliminare gli avvisi introdotti dopo una versione specificata utilizzando il [/Wv](../../build/reference/compiler-option-warning-level.md) opzione del compilatore. Questa opzione è utile per la gestione del processo di compilazione quando si introduce una nuova versione del set di strumenti e per eliminare temporaneamente gli avvisi di nuovo. Questa opzione non elimina i messaggi di errore. Non è consigliabile eliminare tutti gli avvisi di nuovo in modo permanente. È consigliabile sempre si compila con il massimo livello di avviso regolare, __/W4__e rimuovere le __/Wv__ opzione nella compilazione appena possibile.
 
 Queste versioni del compilatore introdotti nuovi avvisi:
 
@@ -36,10 +36,26 @@ Queste versioni del compilatore introdotti nuovi avvisi:
 | Visual C++ 2017 versione 15.6 | 19.13.26128.0 |
 | Visual C++ 2017 versione 15.7 | 19.14.26428.0 |
 | Visual C++ 2017 versione 15.8 | 19.15.26726.0 |
+| Visual C++ 2017 versione 15.9 | 19.16.26926.0 |
+| Visual C++ 2019 RTM | 19.20.27004.0 |
 
 È possibile specificare solo il numero principale, i numeri di principali e secondari o principale, secondario e compilare i numeri per il __/Wv__ opzione. Il compilatore segnala tutti gli avvisi che corrispondono alle versioni che iniziano con il numero specificato ed Elimina tutti gli avvisi per le versioni superiori rispetto al numero specificato. Ad esempio, __/Wv:17__ segnala tutti gli avvisi introdotti in o prima di qualsiasi versione di Visual Studio 2012 ed Elimina tutti gli avvisi introdotti da qualsiasi compilatore da Visual Studio 2013 (versione 18) o versione successiva. Per eliminare gli avvisi introdotti in Visual Studio 2015 update 2 e versioni successive, è possibile usare __/Wv:19.00.23506__. Uso __/Wv:19.11__ per segnalare tutti gli avvisi introdotti nelle versioni di Visual Studio precedenti a Visual Studio 2017 versione 15.5, ma elimina gli avvisi introdotti in Visual Studio 2017 versione 15.5 e versioni successive.
 
 Le sezioni seguenti elencano gli avvisi introdotti dalle singole versioni di Visual C++ che è possibile eliminare usando il __/Wv__ opzione del compilatore. Il __/Wv__ opzione non è possibile eliminare gli avvisi che non sono elencati, che sono precedenti alle versioni del compilatore specificate.
+
+::: moniker range=">= vs-2019"
+
+## <a name="warnings-introduced-in-visual-c-2019-rc-compiler-version-1920270040"></a>Avvisi introdotti in Visual C++ 2019 RC (versione del compilatore 19.20.27004.0)
+
+Tutti gli avvisi nelle versioni più recenti e questi avvisi vengono soppressi usando l'opzione del compilatore __/Wv:19.15__.
+
+|||
+|-|-|
+C4848 | supporto per l'attributo standard ' Nessun\_univoco\_indirizzo in C + + 17 e versioni precedenti è un'estensione del fornitore
+
+::: moniker-end
+::: moniker range=">= vs-2017"
+
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Avvisi introdotti in Visual C++ 2017 versione 15.8 (versione del compilatore 19.15.26726.0)
 
@@ -47,7 +63,25 @@ Tutti gli avvisi nelle versioni più recenti e questi avvisi vengono soppressi u
 
 |||
 |-|-|
-C5046|«*funzione*': simbolo relative a tipi con collegamento interno non definito|
+C4643 | Inoltrare la dichiarazione di '*identificatore*' nello spazio dei nomi std non è consentita dallo Standard C++.
+C4644 | utilizzo del modello basato sulle macro offsetof nelle espressioni costanti non è standard; usare offsetof invece definita nella libreria standard C++
+C4845 | «\_\_declspec (no\_init\_all)' viene ignorato se ' / d1initall\[0\|1\|2\|3]' non è stato specificato nella riga di comando
+C4846 | «*valore*' non è un argomento valido per ' / d1initall': il flag della riga di comando ignorato
+C4847 | «\_\_declspec (no\_init\_all)' può essere applicato solo a una funzione, un tipo di classe o una variabile locale: ignorato
+C4866 | compilatore non può imporre l'ordine di valutazione da sinistra a destra per la chiamata a '*funzione*'
+C5046 | «*funzione*': Tipo che interessa di simboli con collegamento interno non definito
+C5047 | usare conforme allo standard \_ \_se\_esistente con i moduli non è supportato
+C5048 | Utilizzo della macro '*nomemacro*' può comportare l'output non deterministico
+C5049 | '*string*': Incorporamento di un percorso completo può comportare output dipende dal computer
+C5050 | Ambiente incompatibili possibili durante l'importazione del modulo '*module_name*': *problema*
+C5100 | \_\_Valutazione della vulnerabilità\_ARGS\_ \_ è riservato per l'uso nelle macro variadic
+C5101 | utilizzo della direttiva del preprocessore nell'elenco di argomenti di macro di funzione è un comportamento non definito
+C5102 | verrà ignorata una definizione di macro della riga di comando non valido '*valore*'
+C5103 | operazione Incolla '*token1*'e'*token2*' non restituisce un token di pre-elaborazione valido
+C5104 | trovato '*string1*#*string2*'nell'elenco di sostituzione di macro, si intendeva'*string1*"" &*string2*'?
+C5105 | espansione della macro producendo 'defined' produce un comportamento indefinito
+C5106 | ridefinito con nomi di parametro diversi (macro)
+C5107 | Missing irreversibile '*char*' carattere
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Avvisi introdotti in Visual C++ 2017 versione 15.7 (versione del compilatore 19.14.26428.0)
 
@@ -72,7 +106,7 @@ Tutti gli avvisi nelle versioni più recenti e questi avvisi vengono soppressi u
 
 |||
 |-|-|
-C4843|«*type1*': un gestore di eccezioni del riferimento al tipo di matrice o una funzione non è raggiungibile, usare '*type2*' invece
+C4843|'*type1*': Un gestore di eccezioni del riferimento al tipo di matrice o una funzione non è raggiungibile, usare '*type2*' invece
 C4844|' export module *module_name*;' è ora la sintassi preferita per dichiarare un'interfaccia del modulo
 C5039|«*funzione*': puntatore o riferimento alla funzione che potrebbe generare passato alla funzione extern C in - EHc. Se questa funzione genera un'eccezione, può verificarsi un comportamento indefinito.
 C5040|le specifiche di eccezione dinamiche sono valide solo in c++14 e versioni precedenti; considerando come noexcept (false)
@@ -111,6 +145,8 @@ C4468|'fallthrough': attributo deve essere seguito da un'etichetta case o un'eti
 C4698|«*funzionalità*' è di valutazione a solo scopo e è soggette a modifiche o rimosso in aggiornamenti futuri.
 C4839|uso non standard della classe*classe*' come argomento per una funzione variadic
 C4840|uso non portabile della classe*classe*' come argomento per una funzione variadic
+
+::: moniker-end
 
 ## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Avvisi introdotti in Visual C++ 2015 Update 3 (versione del compilatore 19.00.24215.1)
 
@@ -166,7 +202,7 @@ C4475|«*funzione*': modificatore di lunghezza '*modificatore*'non può essere u
 C4476|«*funzione*': caratteri di campo di tipo sconosciuto '*carattere*' nell'identificatore di formato
 C4477|'*funzione*': stringa di formato '*stringa*'richiede un argomento di tipo'*tipo*', ma l'argomento variadic *numero* ha tipo '*tipo*'
 C4478|«*funzione*': non è possibile combinare i segnaposto posizionali e non posizionali nella stessa stringa di formato
-C4494|«*tipo*': ignorato __declspec(allocator) perché la funzione di tipo restituito non è un puntatore o riferimento
+C4494|«*tipo*': Verrà ignorato __declspec(allocator) perché la funzione di tipo restituito non è un puntatore o riferimento
 C4495|utilizzata estensione non standard super': sostituire con il nome di classe di base esplicito
 C4496|utilizzata estensione non standard 'for each': sostituire con l'istruzione ranged-for
 C4497|utilizzata estensione non standard 'sealed': sostituirla con 'final'
@@ -200,7 +236,7 @@ C5024|«*dichiarazione*': spostare costruttore è stato definito in modo implici
 C5025|«*dichiarazione*': sposta l'operatore di assegnazione è stato definito in modo implicito come eliminato
 C5026|«*tipo*': spostare costruttore è stato definito in modo implicito come eliminato
 C5027|«*tipo*': sposta l'operatore di assegnazione è stato definito in modo implicito come eliminato
-C5028|'*name*': l'allineamento specificato nella dichiarazione precedente (*numero*) non specificato nella definizione
+C5028|«*nome*': L'allineamento specificato nella dichiarazione precedente (*numero*) non specificato nella definizione
 C5029|utilizzata estensione non standard: gli attributi di allineamento in C++ si applicano a variabili, membri dati e solo i tipi di tag
 C5030|attributo '*attributo*' non è riconosciuto
 
@@ -212,7 +248,7 @@ Tutti gli avvisi nelle versioni più recenti e questi avvisi vengono soppressi u
 |-|-|
 C4301|«*tipo*': funzione virtual in override differisce da solo '*dichiarazione*' da un qualificatore const/volatile
 C4316|«*tipo*': oggetto allocato nell'heap non può essere allineato *numero*
-C4380|«*tipo*': non è possibile deprecare un costruttore predefinito
+C4380|«*tipo*': Non è possibile deprecare un costruttore predefinito
 C4388|«*token*': mancata corrispondenza tra signed e unsigned
 C4423|'std:: bad_alloc': verrà rilevato dalla classe ('*tipo*') nella riga *numero*
 C4424|catch per '*tipo*'preceduto da'*tipo*' nella riga *numero*; imprevedibile se viene generata un'eccezione di 'std:: bad_alloc', potrebbe verificarsi un comportamento
@@ -240,12 +276,12 @@ Tutti gli avvisi nelle versioni più recenti e questi avvisi vengono soppressi u
 |||
 |-|-|
 C4330|attributo '*attributo*'per la sezione'*sezione*' ignorato
-C4415|duplicato declspec (code_seg ('*name*'))
+C4415|duplicate __declspec(code_seg('*name*'))
 C4416|__declspec(code_seg(...)) contiene una stringa vuota: ignorato
 C4417|creazione di un'istanza di modello espliciti non possono avere __declspec(code_seg(...)): ignorato
 C4418|__declspec(code_seg(...)) ignorato per un'enumerazione
 C4419|«*name*'non ha alcun effetto se applicato alla classe ref privata'*tipo*'.
-C4435|«*tipo*': layout dell'oggetto in/vd2 verrà modificato a causa di base virtuale '*tipo*»
+C4435|«*tipo*': Layout dell'oggetto in/vd2 verrà modificato a causa di base virtuale '*tipo*'
 C4436|dynamic_cast dalla base virtuale '*tipo*'a'*tipo*' nel costruttore o distruttore potrebbe non riuscire con oggetti parzialmente costruiti
 C4437|dynamic_cast dalla base virtuale '*tipo*'a'*tipo*' potrebbe non riuscire in alcuni contesti
 C4443|parametro pragma previsto: '0', '1' o '2'
@@ -254,15 +290,15 @@ C4447|firma di 'main' trovata senza modello di threading. Si consiglia di utiliz
 C4448|«*tipo*' non è un'interfaccia predefinita specificata nei metadati. Prelievo: '*tipo*', che potrebbe non riuscire in fase di esecuzione.
 C4449|«*tipo*' un tipo unsealed deve essere contrassegnato come '[WebHostHidden]'
 C4450|«*tipo*'deve essere contrassegnato come '[WebHostHidden]' perché deriva da'*tipo*»
-C4451|'*tipo*': utilizzo della classe di ref*tipo*' all'interno di questo contesto può portare al marshalling non valido dell'oggetto tra contesti
+C4451|«*tipo*': Utilizzo della classe di ref*tipo*' all'interno di questo contesto può portare al marshalling non valido dell'oggetto tra contesti
 C4452|«*tipo*': tipo pubblico non può essere in ambito globale. Deve essere in uno spazio dei nomi figlio del nome del file con estensione winmd di output.
-C4453|«*tipo*': un tipo '[WebHostHidden]' non deve essere utilizzato sulla superficie pubblicata di un tipo pubblico che non è '[WebHostHidden]'
+C4453|«*tipo*': Un tipo '[WebHostHidden]' non deve essere utilizzato sulla superficie pubblicata di un tipo pubblico che non è '[WebHostHidden]'
 C4454|«*tipo*' è in overload per maggiore del numero di parametri di input senza specificato [DefaultOverload]. Selezione di '*dichiarazione*' come overload predefinito
 C4471|«*nome*': una dichiarazione con prototipo di un'enumerazione senza ambita deve presentare un tipo sottostante (presupposto int)
 C4472|«*nome*' è un'enumerazione nativa: aggiungere un identificatore di accesso (privato/pubblico) per dichiarare un'enumerazione gestita o WinRT
 C4492|«*tipo*': metodo di classe di riferimento di base corrisponde a '*tipo*', ma non è contrassegnato 'override'
 C4493|Espressione DELETE non ha alcun effetto poiché il distruttore di '*tipo*' non dispone di accessibilità 'public'
-C4585|«*tipo*': WinRT A 'public ref class' deve essere sealed o derivare da una classe unsealed
+C4585|«*tipo*': Un WinRT 'public ref class' deve essere sealed o derivare da una classe unsealed esistente
 C4586|«*tipo*': Impossibile dichiarare un tipo pubblico in un spazio dei nomi di primo livello chiamato 'Windows'
 C4695|#pragma execution_character_set: '*argomento*' non è un argomento supportato: è supportata attualmente solo 'UTF-8'
 C4703|variabile puntatore locale potenzialmente non inizializzata '*nome*' usato
@@ -303,7 +339,7 @@ C4413|«*dichiarazione*': membro di riferimento viene inizializzato come element
 C4491|«*descrizione*': è un formato di versione IDL non valido
 C4603|«*nome*': non è definita macro o definizione è diversa dopo l'utilizzo di un'intestazione precompilata
 C4627|«*descrizione*': ignorato durante la ricerca utilizzo di intestazione precompilata
-C4750|«*descrizione*': funzione con alloca () resa inline in un ciclo
+C4750|'*description*': function with _alloca() inlined into a loop
 C4910|«*tipo*': 'dllexport' e 'extern' sono incompatibili in una creazione esplicita di istanza
 C4985|«*dichiarazione*': attributi non presenti nella dichiarazione precedente.
 
@@ -322,7 +358,7 @@ C4342|modifica del comportamento: '*tipo*' chiamato, ma un operatore membro è s
 C4350|modifica del comportamento: '*dichiarazione*'chiamato al posto di'*dichiarazione*'
 C4357|argomento di matrice param trovato nell'elenco di argomenti formali per delegato '*dichiarazione*'ignorato durante la generazione'*tipo*'
 C4358|«*espressione*': tipo restituito di delegati combinati non 'void', valore restituito è indefinito
-C4359|«*tipo*': identificatore di allineamento è inferiore all'allineamento effettivo (*numero*) e verrà ignorato.
+C4359|«*tipo*': L'identificatore di allineamento è inferiore all'allineamento effettivo (*numero*) e verrà ignorato.
 C4362|«*tipo*': allineamento maggiore di 8 byte non è supportato da CLR
 C4364|#using per l'assembly '*name*' osservati precedentemente *descrizione*(*numero*) senza l'attributo as_friend; as_friend non applicato
 C4365|«*espressione*': conversione da '*tipo*'a'*tipo*', mancata corrispondenza tra signed e unsigned
@@ -350,7 +386,7 @@ C4400|«*tipo*': qualificatori const/volatile su questo tipo non sono supportati
 C4412|«*dichiarazione*': funzione firma contiene il tipo '*tipo*'; Gli oggetti di C++ sono non è sicuro passare tra codice pure e misto o nativo.
 C4429|possibili incompleto o formato non corretto-nomi di caratteri universali
 C4430|identificatore di tipo mancante, verrà utilizzato int. Nota: C++ non supporta l'impostazione predefinita-int
-C4431|identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++
+C4431|identificatore di tipo mancante, verrà utilizzato int. Nota: Default-int non è più supportato in C
 C4434|un costruttore statico deve avere accessibilità privata; conversione in accesso privato
 C4439|«*tipo*': definizione di funzione con un tipo gestito nella firma deve avere un clrcall convenzione di chiamata
 C4441|convenzione di chiamata di '*convenzione*' ignorato. «*convenzione*' invece utilizzato
@@ -377,18 +413,18 @@ C4568|«*tipo*': nessun membro corrisponde alla firma dell'override esplicito
 C4569|«*tipo*': nessun membro corrisponde alla firma dell'override esplicito
 C4570|«*tipo*': non è dichiarato in modo esplicito come abstract ma ha funzioni astratte
 C4571|Messaggio informativo: catch è cambiata dopo Visual C++ 7.1; le eccezioni strutturate (SEH) non vengono più rilevate
-C4572|Attributo [ParamArray] deprecato in /clr, utilizzare '.' invece
+C4572|Attributo [ParamArray] deprecato in /clr, utilizzare '.' In alternativa
 C4580|[attribute] è deprecata. Specificare invece *specificato*attributo come una classe di base
 C4581|comportamento deprecato: ' "*name*"' sostituito con '*nome*' per elaborare l'attributo
 C4606|avviso #pragma: '*numero*' ignorato. Avvisi dell'analisi codice non sono associati livelli di avviso
 C4631|MSXML o XPath non disponibile, i commenti ai documenti XML non verranno elaborati. *description*
 C4632|Commento al documento XML: *description* -accesso negato: *descrizione*
-C4633|Commento al documento XML*description*: errore: *descrizione*
-C4634|Commento al documento XML*description*: non è possibile applicare: *descrizione*
-C4635|Commento al documento XML*description*:-il formato XML errato: *descrizione*
-C4636|Commento al documento XML*description*: il tag richiesto non vuota '*descrizione*' attributo.
-C4637|Commento al documento XML*description*: \<includono > tag rimossi. *description*
-C4638|Commento al documento XML*description*: riferimento al simbolo sconosciuto '*descrizione*'.
+C4633|Commento al documento XML *description*: errore: *descrizione*
+C4634|Commento al documento XML *description*: non è possibile applicare: *descrizione*
+C4635|Commento al documento XML *description*:-il formato XML errato: *descrizione*
+C4636|Commento al documento XML *description*: il tag richiesto non vuota '*descrizione*' attributo.
+C4637|Commento al documento XML *description*: \<includono > tag rimossi. *description*
+C4638|Commento al documento XML *description*: riferimento al simbolo sconosciuto '*descrizione*'.
 C4639|Errore MSXML, documento XML non verranno elaborati i commenti. *description*
 C4641|Commento al documento XML con riferimento incrociato ambiguo:
 C4678|classe di base*dichiarazione*'è meno accessibile di'*nome*'
@@ -417,7 +453,7 @@ C4740|flusso interno o all'esterno di codice dell'assembly inline impedisce l'ot
 C4742|'*variabile*'ha un diverso allineamento '*posizione*"e"*posizione*': *numero* e *numero*
 C4743|'*name*'ha una diversa dimensione '*posizione*"e"*posizione*': *numero* e *numero* byte
 C4744|'*name*'ha un tipo diverso '*posizione*'e'*posizione*': '*tipo*'e'*tipo*'
-C4747|La chiamata gestita '*tipo*': il codice gestito potrebbe non essere eseguito in blocco del caricatore, inclusi il punto di ingresso DLL e le chiamate raggiunte dal punto di ingresso DLL
+C4747|La chiamata gestita '*tipo*': Codice gestito potrebbe non essere eseguito in blocco del caricatore, inclusi il punto di ingresso DLL e le chiamate raggiunte dal punto di ingresso DLL
 C4761|dimensione integrale non corrispondente nell'argomento. meccanismo di conversione
 C4764|Non è possibile allineare oggetti catch a un numero di byte maggiore di 16
 C4788|«*identifier*': identificatore troncato a '*numero*' caratteri
@@ -430,7 +466,7 @@ C4835|«*tipo*': l'inizializzatore di dati esportati non verrà eseguita fino a 
 C4867|«*tipo*': sintassi non standard; utilizzare '&' per creare un puntatore a membro
 C4936|questo __declspec è supportato solo con la compilazione con /clr o /clr:pure
 C4937|«*name*'e'*name*'sono indistinguibili come argomenti per'*opzione*»
-C4938|«*tipo*': variabile di riduzione a virgola mobile può causare risultati incoerenti in /fp: strict o #pragma fenv_access
+C4938|«*tipo*': Variabile di riduzione a virgola mobile può causare risultati incoerenti in /fp: strict o #pragma fenv_access
 C4939|#pragma vtordisp è deprecato e verrà rimosso in una futura versione di Visual C++
 C4947|«*tipo*': contrassegnato come obsoleto
 C4949|pragma 'managed' e 'unmanaged' sono significativi solo quando viene compilato con ' / /CLR [: opzione]'
@@ -442,7 +478,7 @@ C4958|«*espressione*': aritmetica dei puntatori non verificabile
 C4959|non è possibile definire non gestito *classe* '*tipo*' in /CLR: safe perché l'accesso ai membri produce codice non verificabile
 C4960|«*descrizione*' è troppo grande per la profilatura
 C4961|Dati di profilo non sottoposti a merge in '*posizione*', ottimizzazioni PGO disabilitate
-C4962|«*descrizione*': ottimizzazioni PGO disabilitate perché le ottimizzazioni provocano l'incoerenza dei dati del profilo
+C4962|«*descrizione*': Ottimizzazioni PGO disabilitate perché le ottimizzazioni provocano l'incoerenza dei dati del profilo
 C4963|«*descrizione*': nessun dato di profilo trovati; nella compilazione instrumentata sono state utilizzate opzioni del compilatore diverse
 C4964|Nessuna opzione di ottimizzazione specificata; info del profilo non verrà raccolti
 C4965|casella implicita dell'intero 0. usare un cast esplicito o nullptr
@@ -505,7 +541,7 @@ C4264|«*dichiarazione*': override non disponibile per la funzione membro virtua
 C4265|«*tipo*': classe ha funzioni virtuali, ma il distruttore non virtuale istanze di questa classe non possono essere eliminate correttamente
 C4266|«*dichiarazione*': override non disponibile per la funzione membro virtuale dalla base '*classe*'; la funzione è nascosta
 C4267|«*espressione*': conversione da 'size_t' a '*tipo*', possibile perdita di dati
-C4274|#ident ignorati. vedere la documentazione di #pragma comment (exestr, 'string')
+C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')
 C4277|elemento importato '*tipo*::*nome*' esiste come membro dei dati sia membro di funzione; membro dati ignorato
 C4278|«*name*': identificatore nella libreria dei tipi '*descrizione*' è già una macro; utilizzare il qualificatore 'rename'
 C4279|«*name*': identificatore nella libreria dei tipi '*descrizione*' è una parola chiave, utilizzare il qualificatore 'rename'
@@ -584,7 +620,7 @@ C4680|«*tipo*': la coclasse non specifica un'interfaccia predefinita
 C4681|«*tipo*': la coclasse non specifica un'interfaccia predefinita che è un'origine evento
 C4682|«*tipo*': nessun attributo di parametro direzionali specificato, verrà utilizzato [in]
 C4683|«*dichiarazione*': origine evento è un 'out'-parametro; prestare attenzione nello stabilire associazioni a più gestori eventi
-C4684|«*descrizione*': avviso!! attributo può comportare la generazione di codice non valido: utilizzare con cautela
+C4684|«*descrizione*': AVVISO IMPORTANTE! attributo può comportare la generazione di codice non valido: utilizzare con cautela
 C4685|previsto '> >', trovato '>>' durante l'analisi dei parametri di modello
 C4700|variabile locale non inizializzata '*nome*' usato
 C4701|variabile locale potenzialmente non inizializzata '*nome*' usato
