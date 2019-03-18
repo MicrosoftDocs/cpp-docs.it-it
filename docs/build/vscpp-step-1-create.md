@@ -6,36 +6,36 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5722dcc06f5141818910e44a6160d12bcd4eaecd
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977758"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817725"
 ---
 # <a name="create-a-c-console-app-project"></a>Creare un progetto di app console C++
 
-Il normale punto iniziale per un programmatore C++ è un "Hello, world!" applicazione che viene eseguita nella riga di comando. Questo è ciò che si creerà in Visual Studio in questo passaggio.
+In genere il punto di partenza per un programmatore C++ è un'applicazione "Hello, world!" eseguita sulla riga di comando. Questo è ciò che si creerà in Visual Studio in questo passaggio.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Con il carico di lavoro di C++ installato e in esecuzione nel computer è installato Visual Studio con lo sviluppo Desktop. Se non si è ancora installato, vedere [supporto di installazione di C++ in Visual Studio 2017](../build/vscpp-step-0-installation.md).
+- Visual Studio con il carico di lavoro Sviluppo di applicazioni desktop con C++ deve essere installato e in esecuzione nel computer. Se non è ancora installato, vedere l'articolo relativo all'[installazione del supporto per C++ in Visual Studio 2017](vscpp-step-0-installation.md).
 
-## <a name="create-your-app-project"></a>Creare il progetto dell'app
+## <a name="create-your-app-project"></a>Creare il progetto di app
 
-Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e le *soluzioni* per organizzare i progetti. Un progetto contiene tutte le opzioni, configurazioni e le regole utilizzate per compilare le App e gestisce la relazione tra tutti i file del progetto e i file esterni. Per creare l'app, in primo luogo, si creerà un nuovo progetto e soluzione.
+Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e le *soluzioni* per organizzare i progetti. Un progetto contiene tutte le opzioni, le configurazioni e le regole usate per compilare le app e gestisce la relazione tra tutti i file del progetto e i file esterni. Per creare l'applicazione, per prima cosa creare un nuovo progetto e una soluzione.
 
 1. In Visual Studio, aprire il **File** dal menu e scegliere **nuovo > progetto** per aprire il **nuovo progetto** finestra di dialogo.
 
-   ![Aprire la finestra di dialogo Nuovo progetto](../build/media/vscpp-file-new-project.gif "aprire la finestra di dialogo Nuovo progetto")
+   ![Aprire la finestra di dialogo Nuovo progetto](media/vscpp-file-new-project.gif "aprire la finestra di dialogo Nuovo progetto")
 
 1. Nel **nuovo progetto** finestra di dialogo, seleziona **installati**, **Visual C++** se non è già selezionato e quindi scegliere il **progetto vuoto** modello. Nel **Name** immettere *HelloWorld*. Scegli **OK** per creare il progetto.
 
-   ![Assegnare un nome e creare un nuovo progetto](../build/media/vscpp-concierge-project-name-callouts.png "nome e creare un nuovo progetto")
+   ![Assegnare un nome e creare un nuovo progetto](media/vscpp-concierge-project-name-callouts.png "nome e creare un nuovo progetto")
 
 Visual Studio crea un nuovo progetto vuoto, pronto per specializzare per il tipo di app che si desidera creare e aggiungere i file del codice sorgente. Verranno eseguite più avanti.
 
-[È verificato un problema.](#create-your-app-project-issues)
+[Si è verificato un problema.](#create-your-app-project-issues)
 
 ## <a name="make-your-project-a-console-app"></a>Rendere il progetto di un'app console
 
@@ -43,13 +43,13 @@ Visual Studio è possibile creare tutti i tipi di componenti e App per Windows e
 
 1. In Visual Studio, aprire il **progetto** menu e scegliere **delle proprietà** per aprire il **pagine delle proprietà HelloWorld** finestra di dialogo.
 
-1. Nel **pagine delle proprietà** finestra di dialogo, sotto **le proprietà di configurazione**, selezionare **Linker**, **sistema**e quindi scegliere la casella di modifica accanto a il **sottosistema** proprietà. Nel menu a discesa visualizzato, selezionare **Console (/ /SUBSYSTEM: CONSOLE)**. Scegli **OK** per salvare le modifiche.
+1. Nel **pagine delle proprietà** finestra di dialogo, sotto **le proprietà di configurazione**, selezionare **Linker**, **sistema**e quindi scegliere la casella di modifica accanto a il **sottosistema** proprietà. Nel menu a discesa visualizzato, selezionare **Console (/ /SUBSYSTEM: CONSOLE)**. Scegliere **OK** per salvare le modifiche.
 
-   ![Aprire la finestra di dialogo Pagine delle proprietà](../build/media/vscpp-properties-linker-subsystem.gif "aprire la finestra di dialogo Pagine delle proprietà")
+   ![Aprire la finestra di dialogo Pagine delle proprietà](media/vscpp-properties-linker-subsystem.gif "aprire la finestra di dialogo Pagine delle proprietà")
 
 Visual Studio riconosce automaticamente a questo punto compilare il progetto per l'esecuzione in una finestra della console. Si verrà successivamente, aggiungere un file di codice sorgente e immettere il codice per l'app.
 
-[È verificato un problema.](#make-your-project-a-console-app-issues)
+[Si è verificato un problema.](#make-your-project-a-console-app-issues)
 
 ## <a name="add-a-source-code-file"></a>Aggiungere un file di codice sorgente
 
@@ -57,11 +57,11 @@ Visual Studio riconosce automaticamente a questo punto compilare il progetto per
 
 1. Nel **Aggiungi nuovo elemento** finestra di dialogo, seleziona **Visual C++** sotto **Installed** se non è già selezionata. Nel riquadro centrale, selezionare **file di C++ (. cpp)**. Modifica il **Name** al *HelloWorld.cpp*. Scegli **Add** per chiudere la finestra di dialogo e creare il file.
 
-   ![Aggiungere un file di origine per HelloWorld.cpp](../build/media/vscpp-add-new-item.gif "aggiungere un file di origine per HelloWorld.cpp")
+   ![Aggiungere un file di origine per HelloWorld.cpp](media/vscpp-add-new-item.gif "aggiungere un file di origine per HelloWorld.cpp")
 
 Visual studio crea un file di codice sorgente nuovo e vuoto e viene aperta in una finestra dell'editor, pronta per immettere il codice sorgente.
 
-[È verificato un problema.](#add-a-source-code-file-issues)
+[Si è verificato un problema.](#add-a-source-code-file-issues)
 
 ## <a name="add-code-to-the-source-file"></a>Aggiungere codice al file di origine
 
@@ -79,11 +79,11 @@ Visual studio crea un file di codice sorgente nuovo e vuoto e viene aperta in un
 
    Il codice dovrebbe essere simile al seguente nella finestra dell'editor:
 
-   ![Il codice nell'editor del codice World Hello](../build/media/vscpp-hello-world-editor.png "codice Hello World nell'editor")
+   ![Il codice nell'editor del codice World Hello](media/vscpp-hello-world-editor.png "codice Hello World nell'editor")
 
 Quando il codice di aspetto simile al seguente nell'editor, si è pronti per andare al passaggio successivo e compilare l'app.
 
-[È verificato un problema.](#add-a-source-code-file-issues)
+[Si è verificato un problema.](#add-a-source-code-file-issues)
 
 ## <a name="next-steps"></a>Passaggi successivi
 
