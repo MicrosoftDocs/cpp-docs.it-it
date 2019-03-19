@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740253"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808040"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Come segnalare un problema con il set di strumenti Visual C++ o la documentazione
 
@@ -43,7 +43,7 @@ Continuare a leggere per sapere dove trovare le informazioni specifiche necessar
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Per segnalare la versione completa del compilatore in uso
 
-1. Aprire il **prompt dei comandi per gli sviluppatori** corrispondente alla versione di Visual Studio e all'architettura di configurazione usata per compilare il progetto. Ad esempio, se si usa Visual Studio 2017 in computer x64 per computer di destinazione x64, scegliere **Prompt dei comandi degli strumenti nativi x64 per VS 2017**. Per altre informazioni, vedere [Collegamenti al prompt dei comandi per gli sviluppatori](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
+1. Aprire il **prompt dei comandi per gli sviluppatori** corrispondente alla versione di Visual Studio e all'architettura di configurazione usata per compilare il progetto. Ad esempio, se si usa Visual Studio 2017 in computer x64 per computer di destinazione x64, scegliere **Prompt dei comandi degli strumenti nativi x64 per VS 2017**. Per altre informazioni, vedere [Collegamenti al prompt dei comandi per gli sviluppatori](build/building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
 1. Nella finestra della console del prompt dei comandi per gli sviluppatori immettere il comando **cl /Bv**.
 

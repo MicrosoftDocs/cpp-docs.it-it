@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0a1ceddca3234ead7d10cc839d41a6d644ec1866
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741358"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57812031"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Procedura dettagliata: Debug di un progetto (C++)
 
@@ -59,4 +59,4 @@ In questa procedura dettagliata si modifica il programma per risolvere il proble
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
-[Compilazione di programmi C/C++](../build/building-c-cpp-programs.md)<br/>
+[Progetti e sistemi di compilazione](../build/projects-and-build-systems-cpp.md)<br/>
