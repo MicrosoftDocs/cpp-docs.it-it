@@ -1,18 +1,18 @@
 ---
 title: Oggetti funzione della libreria standard C++
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 7af56f52b59b03dfed9e1233473239274a0dcbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437119"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172959"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Oggetti funzione della libreria standard C++
 
@@ -33,9 +33,17 @@ public:
         return a < b;
     }
 };
+
+int main()
+{
+    Functor f;
+    int a = 5;
+    int b = 7;
+    int ans = f(a, b);
+}
 ```
 
-L'ultima riga della funzione `main` mostra come chiamare l'oggetto function. Questa chiamata è simile a una chiamata a una funzione, ma in realtà chiama operator() del tipo Functor. Questa somiglianza tra la chiamata a un oggetto funzione e una funzione rappresenta il modo in cui è stato coniato il termine oggetto funzione.
+L'ultima riga della funzione `main` mostra come chiamare l'oggetto function. Questa chiamata è simile a una chiamata a una funzione, ma è in realtà chiamata Operator () del tipo Functor. Questa somiglianza tra la chiamata a un oggetto funzione e una funzione rappresenta il modo in cui è stato coniato il termine oggetto funzione.
 
 ## <a name="function-objects-and-containers"></a>Oggetti funzione e contenitori
 
@@ -48,7 +56,7 @@ template <class Key,
 class set
 ```
 
-Il secondo argomento di modello è l'oggetto funzione `less`. Questo oggetto funzione restituisce **true** se il primo parametro passato è minore del secondo parametro passato. Siccome alcuni contenitori ordinano i relativi elementi, il contenitore necessita di un modo per confrontare due elementi, che in questo caso è l'uso dell'oggetto funzione. È possibile definirne i propri criteri di ordinamento per i contenitori creando un oggetto funzione e specificandolo nell'elenco di modelli del contenitore.
+Il secondo argomento di modello è l'oggetto funzione `less`. Questo oggetto funzione restituisce **true** se il primo parametro è minore del secondo parametro. Siccome alcuni contenitori ordinano i relativi elementi, il contenitore deve un modo per confrontare due elementi. Il confronto viene eseguito utilizzando l'oggetto della funzione. È possibile definirne i propri criteri di ordinamento per i contenitori creando un oggetto funzione e specificandolo nell'elenco di modelli del contenitore.
 
 ## <a name="function-objects-and-algorithms"></a>Oggetti funzione e algoritmi
 
