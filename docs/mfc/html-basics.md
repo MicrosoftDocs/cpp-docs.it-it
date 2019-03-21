@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 7617216f8fd9a0e4b62ac8b5f12314d38027d836
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 63a866786abc3b1eaa87a06492b43b1c9e354882
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263364"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278385"
 ---
 # <a name="html-basics"></a>Nozioni fondamentali su HTML
 
@@ -107,7 +107,7 @@ Life is good.
 
 Per una descrizione completa dei tag, attributi e le estensioni, vedere la specifica del linguaggio HTML (Hypertext Markup):
 
-[http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)
+[Versione pubblicata più recente del codice HTML](https://www.w3.org/TR/html/) in W3C.org.
 
 ## <a name="see-also"></a>Vedere anche
 
