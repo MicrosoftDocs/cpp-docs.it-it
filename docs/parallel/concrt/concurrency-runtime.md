@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258333"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278554"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 
@@ -99,7 +99,6 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 |||
 |-|-|
 |[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni sull'uso del Runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app di Windows Runtime scritte in C++ e XAML.|
-|[Esempi di codice per la libreria di modelli in parallelo e di runtime di concorrenza in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornisce le applicazioni di esempio e utilità che illustrano il runtime di concorrenza.|
 |[Blog relativo alla programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|
 |[Forum relativo all'elaborazione parallela in C++ e codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|
 |[Programmazione parallela](/dotnet/standard/parallel-programming/index)|Illustra il modello di programmazione parallelo che è disponibile in .NET Framework.|

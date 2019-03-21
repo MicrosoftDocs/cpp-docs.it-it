@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 984a20d701b159820a94483fe9d3743f015b71f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741967"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278398"
 ---
 # <a name="double-thunking-c"></a>Doppio thunk (C++)
 
@@ -27,7 +27,7 @@ Una possibile soluzione consiste nell'indicare al compilatore di non generare un
 
 Analogamente, se si esportano ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) una funzione non gestita, viene generato un punto di ingresso nativo e qualsiasi funzione che importa e chiama tale funzione chiamerà tramite il punto di ingresso nativo. Per evitare il doppio thunk in questo caso, non usare la semantica di esportazione/importazione nativa; è sufficiente fare riferimento ai metadati tramite `#using` (vedere [# direttiva using](../preprocessor/hash-using-directive-cpp.md)).
 
-Il compilatore è stato aggiornato in modo da ridurre il doppio thunk non necessari. Ad esempio, qualsiasi funzione con un tipo gestito nella firma (incluso il tipo restituito) in modo implicito essere contrassegnato come `__clrcall`. Per altre informazioni sull'eliminazione del doppio thunk, vedere [ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).
+Il compilatore è stato aggiornato in modo da ridurre il doppio thunk non necessari. Ad esempio, qualsiasi funzione con un tipo gestito nella firma (incluso il tipo restituito) in modo implicito essere contrassegnato come `__clrcall`.
 
 ## <a name="example"></a>Esempio
 

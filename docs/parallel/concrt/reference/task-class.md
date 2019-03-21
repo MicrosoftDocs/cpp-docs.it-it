@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289299"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278536"
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (runtime di concorrenza)
 
@@ -112,7 +112,7 @@ Risultato dell'attività.
 Se l'attività viene annullata, una chiamata a `get` genererà un [task_canceled](task-canceled-class.md) eccezione. Se l'attività ha rilevato un'eccezione diversa o un'eccezione è stata propagata a essa da un'attività precedente, una chiamata a `get` genererà questa eccezione.
 
 > [!IMPORTANT]
->  In un'app Universal Windows Platform (UWP), non chiamare [concurrency::task::wait](#wait) oppure `get` ( `wait` chiamate `get`) nel codice eseguito nel STA. In caso contrario, il runtime genera un'eccezione [Concurrency:: invalid_operation](invalid-operation-class.md) perché questi metodi bloccano il thread corrente e può provocare la mancata risposta da parte dell'app. Tuttavia, è possibile chiamare il `get` metodo per ricevere il risultato dell'attività antecedente in una continuazione basata su attività perché il risultato è immediatamente disponibile.
+>  In un'app Universal Windows Platform (UWP), non chiamare [concurrency::task::wait](#wait) oppure `get` ( `wait` chiamate `get`) nel codice in esecuzione sul thread dell'interfaccia utente. In caso contrario, il runtime genera un'eccezione [Concurrency:: invalid_operation](invalid-operation-class.md) perché questi metodi bloccano il thread corrente e può provocare la mancata risposta da parte dell'app. Tuttavia, è possibile chiamare il `get` metodo per ricevere il risultato dell'attività antecedente in una continuazione basata su attività perché il risultato è immediatamente disponibile.
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -344,7 +344,7 @@ Valore `task_status` che potrebbe essere `completed` o `canceled`. Se l'attivit�
 ### <a name="remarks"></a>Note
 
 > [!IMPORTANT]
->  In un'app Universal Windows Platform (UWP), non chiamare `wait` nel codice eseguito nel STA. In caso contrario, il runtime genera [concurrency::invalid_operation](invalid-operation-class.md) poiché questo metodo blocca il thread corrente e può provocare la mancata risposta da parte dell'app. È tuttavia possibile chiamare il metodo [concurrency::task::get](#get) per ricevere il risultato dell'attività antecedente in una continuazione basata su attività.
+>  In un'app Universal Windows Platform (UWP), non chiamare `wait` nel codice in esecuzione sul thread dell'interfaccia utente. In caso contrario, il runtime genera [concurrency::invalid_operation](invalid-operation-class.md) poiché questo metodo blocca il thread corrente e può provocare la mancata risposta da parte dell'app. È tuttavia possibile chiamare il metodo [concurrency::task::get](#get) per ricevere il risultato dell'attività antecedente in una continuazione basata su attività.
 
 ## <a name="see-also"></a>Vedere anche
 

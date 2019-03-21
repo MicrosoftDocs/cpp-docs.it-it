@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: 509686556bd06a6ec9d059593be46d0fc6a3876d
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 4a3786e65873d6837389ad4fa5e7d06a14d66460
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54336659"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278359"
 ---
 # <a name="deferrableeventargs-class"></a>Classe DeferrableEventArgs
 
@@ -43,14 +43,14 @@ La classe che implementa *TEventArgsInterface*.
 
 Nome                                                         | Descrizione
 ------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------
-[DeferrableEventArgs::GetDeferral](#getdeferral)             | Ottiene un riferimento per la [differimento](http://go.microsoft.com/fwlink/p/?linkid=526520) oggetto che rappresenta un evento posticipato.
+[DeferrableEventArgs::GetDeferral](#getdeferral)             | Ottiene un riferimento per la [differimento](/uwp/api/windows.foundation.deferral) oggetto che rappresenta un evento posticipato.
 [DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Chiamato per indicare il completamento dell'elaborazione per la gestione di un evento posticipato.
 
 ## <a name="remarks"></a>Note
 
 Istanze di questa classe vengono passate ai gestori eventi per eventi posticipati. I parametri del modello rappresentano un'interfaccia che definisce i dettagli degli argomenti dell'evento per un tipo specifico di evento posticipato e una classe che implementa tale interfaccia.
 
-La classe viene visualizzata come primo argomento a un gestore eventi per un evento posticipato. È possibile chiamare il [GetDeferral](#getdeferral) metodo per ottenere il [differimento](http://go.microsoft.com/fwlink/p/?linkid=526520) oggetto da cui è possibile ottenere tutte le informazioni sull'evento posticipato. Dopo aver completato la gestione degli eventi, è necessario chiamare Complete sull'oggetto Deferral. È quindi necessario chiamare [InvokeAllFinished](#invokeallfinished) alla fine del metodo del gestore eventi, che assicura che il completamento di tutti gli eventi posticipati sia comunicato correttamente.
+La classe viene visualizzata come primo argomento a un gestore eventi per un evento posticipato. È possibile chiamare il [GetDeferral](#getdeferral) metodo per ottenere il [differimento](/uwp/api/windows.foundation.deferral) oggetto da cui è possibile ottenere tutte le informazioni sull'evento posticipato. Dopo aver completato la gestione degli eventi, è necessario chiamare Complete sull'oggetto Deferral. È quindi necessario chiamare [InvokeAllFinished](#invokeallfinished) alla fine del metodo del gestore eventi, che assicura che il completamento di tutti gli eventi posticipati sia comunicato correttamente.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -60,7 +60,7 @@ La classe viene visualizzata come primo argomento a un gestore eventi per un eve
 
 ## <a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
 
-Ottiene un riferimento per la [differimento](http://go.microsoft.com/fwlink/p/?linkid=526520) oggetto che rappresenta un evento posticipato.
+Ottiene un riferimento per la [differimento](/uwp/api/windows.foundation.deferral) oggetto che rappresenta un evento posticipato.
 
 ```cpp
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
@@ -69,7 +69,7 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ### <a name="parameters"></a>Parametri
 
 *result*<br/>
-Un puntatore che farà riferimento il [differimento](http://go.microsoft.com/fwlink/p/?linkid=526520) al completamento della chiamata dell'oggetto.
+Un puntatore che farà riferimento il [differimento](/uwp/api/windows.foundation.deferral) al completamento della chiamata dell'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 

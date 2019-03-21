@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e047ecc5266a898f2c6dc24be3c204f8ddf94386
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809223"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278372"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Specifica il file di inclusione da utilizzare)
 
@@ -41,7 +41,7 @@ Questa opzione ha lo stesso effetto che specifica il file con le virgolette dopp
 
 1. Scegliere il **avanzate** pagina delle proprietà.
 
-1. Modificare il **Imponi inclusioni** proprietà.
+1. Modificare il **il File di inclusione** proprietà.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 

@@ -1,6 +1,6 @@
 ---
 title: Classe locale
-ms.date: 11/04/2016
+ms.date: 03/19/2019
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677916"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278515"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -403,8 +403,14 @@ The previous locale was: C
 
 La classe di membro fornisce un'identificazione dei facet univoca utilizzata come indice per cercare i facet nelle impostazioni locali.
 
-class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };
-
+```cpp
+class id 
+{
+   protected:    id();
+   private:      id(const id&)
+   void operator=(const id&)  // not defined    
+};
+```
 ### <a name="remarks"></a>Note
 
 La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Si noti che non è possibile copiare o assegnare un oggetto della classe `id`.
@@ -440,7 +446,7 @@ Impostazioni locali da cui selezionare una categoria.
 *Cat*<br/>
 Categoria da sostituire nelle impostazioni locali costruite.
 
-*FAc*<br/>
+*Fac*<br/>
 Facet da sostituire nelle impostazioni locali costruite.
 
 ### <a name="remarks"></a>Note

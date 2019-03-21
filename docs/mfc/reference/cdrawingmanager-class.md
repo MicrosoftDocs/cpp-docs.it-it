@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293446"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278534"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 
@@ -617,7 +617,7 @@ La rappresentazione RGB dei colori HLS forniti.
 
 ### <a name="remarks"></a>Note
 
-Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](/windows/desktop/uxguide/vis-color).
 
 Questo metodo e il `CDrawingManager::HLStoRGB_TWO` metodo eseguono la stessa operazione, ma vengono richiesti valori diversi per il *H* parametro. In questo metodo, *H* è una percentuale del cerchio. Nel `CDrawingManager::HLStoRGB_TWO` metodo *H* è un valore compreso tra 0 e 360, che rappresentano rosso. Ad esempio, con `HLStoRGB_ONE`, un valore di 0,25 per *H* equivale a un valore pari a 90 con `HLStoRGB_TWO`.
 
@@ -649,7 +649,7 @@ La rappresentazione RGB dei colori HLS forniti.
 
 ### <a name="remarks"></a>Note
 
-Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](/windows/desktop/uxguide/vis-color).
 
 Questo metodo e il [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metodo eseguono la stessa operazione, ma vengono richiesti valori diversi per il *H* parametro. In questo metodo, *H* è un valore compreso tra 0 e 360, che rappresentano rosso. Nel [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) metodo *H* è una percentuale del cerchio. Ad esempio, con `HLStoRGB_ONE`, un valore di 0,25 per *H* equivale a un valore pari a 90 con `HLStoRGB_TWO`.
 
@@ -679,7 +679,7 @@ La rappresentazione RGB dei colori HSV forniti.
 
 ### <a name="remarks"></a>Note
 
-Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](/windows/desktop/uxguide/vis-color).
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
@@ -864,7 +864,7 @@ static void __stdcall RGBtoHSL(
 
 ### <a name="remarks"></a>Note
 
-Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](/windows/desktop/uxguide/vis-color).
 
 Il valore restituito per *H* viene rappresentata come frazione tra 0 e 1 dove sia 0 e 1 rappresentano rosso. I valori restituiti relativi *S* e *L* sono numeri compresi tra 0 e 1.
 
@@ -896,7 +896,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="remarks"></a>Note
 
-Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un colore può essere rappresentato come HSV (tonalità, saturazione e valore), HSL (hue, saturazione e luminosità) o RGB (rosso, verde e blu). Per altre informazioni sulle diverse rappresentazioni di colore, vedere [colore](/windows/desktop/uxguide/vis-color).
 
 Il valore restituito per *H* è un numero compreso tra 0 e 360, in cui sia 0 e 360 indicano rosso. I valori per la restituzione *S* e *V* sono numeri compresi tra 0 e 1.
 
