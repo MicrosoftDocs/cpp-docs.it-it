@@ -3,12 +3,12 @@ title: Configurare un progetto CMake per Linux in Visual Studio
 description: Come configurare un progetto CMake per Linux in Visual Studio
 ms.date: 11/01/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: f2186c14fbe2eb1273fceb4a378b359564eae327
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 22de2f7a7b5374f781a032f5152610d7a97feb16
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750598"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57815866"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurare un progetto CMake per Linux
 
@@ -22,7 +22,7 @@ Assicurarsi innanzitutto di aver installato il carico di lavoro **Sviluppo di ap
 
 Il supporto CMake in Visual Studio richiede il supporto della modalità server introdotta in CMake 3.8. Per una variante di CMake fornita da Microsoft, scaricare la versione più recente dei file binari precompilati all'indirizzo [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
-Questo argomento presuppone la lettura di [CMake Tools per Visual Studio](../ide/cmake-tools-for-visual-cpp.md). 
+Questo argomento presuppone la lettura di [CMake Tools per Visual Studio](../build/cmake-projects-in-visual-studio.md). 
 
 > [!NOTE]
 > Il supporto CMake in Visual Studio richiede il supporto della modalità server introdotta in CMake 3.8. Per una variante di CMake fornita da Microsoft, scaricare la versione più recente dei file binari precompilati all'indirizzo [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). In Visual Studio 2019 i file binari precompilati possono essere distribuiti automaticamente (vedere [Scaricare i file binari CMake precompilati](#download-prebuilt-cmake-binaries)).
@@ -67,11 +67,11 @@ Per rendere disponibile il supporto IntelliSense per le intestazioni remote, Vis
 
 Per eseguire il debug del codice nel sistema remoto, impostare un punto di interruzione, selezionare la destinazione CMake come elemento di avvio dal menu della barra degli strumenti accanto all'impostazione del progetto e scegliere **&#x23f5; Avvia** sulla barra degli strumenti o premere F5.
 
-Per personalizzare gli argomenti della riga di comando del programma, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e selezionare **Impostazioni per debug e avvio**. Verrà aperto o creato un file di configurazione launch.vs.json che contiene informazioni sul programma. Per specificare argomenti aggiuntivi, aggiungerli nella matrice JSON `args`. Per altre informazioni, vedere [Progetti Apri cartella in Visual C++](../ide/non-msbuild-projects.md) e [Configurare le sessioni di debug di CMake](../ide/configure-cmake-debugging-sessions.md).
+Per personalizzare gli argomenti della riga di comando del programma, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e selezionare **Impostazioni per debug e avvio**. Verrà aperto o creato un file di configurazione launch.vs.json che contiene informazioni sul programma. Per specificare argomenti aggiuntivi, aggiungerli nella matrice JSON `args`. Per altre informazioni, vedere [Progetti Apri cartella per C++](../build/open-folder-projects-cpp.md) e [Configurare le sessioni di debug di CMake](../build/configure-cmake-debugging-sessions.md).
 
 ## <a name="configure-cmake-settings-for-linux"></a>Configurare le impostazioni di CMake per Linux
 
-Un file CMakeSettings.json in un progetto CMake per Linux può specificare tutte le proprietà elencate in [Personalizzare le impostazioni di CMake](../ide/customize-cmake-settings.md) e altre proprietà che controllano le impostazioni di compilazione nel computer Linux remoto. Per modificare le impostazioni di CMake predefinite, scegliere **CMake | Modifica impostazioni di CMake | CMakeLists.txt** dal menu principale o fare clic con il pulsante destro del mouse su CMakeSettings.txt in **Esplora soluzioni** e scegliere **Modifica impostazioni di CMake**. Visual Studio crea quindi un nuovo file `CMakeSettings.json` nella cartella dei progetti radice. È possibile aprire il file usando l'**Editor impostazioni CMake** o modificare il file direttamente. 
+Un file CMakeSettings.json in un progetto CMake per Linux può specificare tutte le proprietà elencate in [Personalizzare le impostazioni di CMake](../build/customize-cmake-settings.md) e altre proprietà che controllano le impostazioni di compilazione nel computer Linux remoto. Per modificare le impostazioni di CMake predefinite, scegliere **CMake | Modifica impostazioni di CMake | CMakeLists.txt** dal menu principale o fare clic con il pulsante destro del mouse su CMakeSettings.txt in **Esplora soluzioni** e scegliere **Modifica impostazioni di CMake**. Visual Studio crea quindi un nuovo file `CMakeSettings.json` nella cartella dei progetti radice. È possibile aprire il file usando l'**Editor impostazioni CMake** o modificare il file direttamente. 
 
 L'esempio seguente illustra la configurazione predefinita per Linux-Debug basata sull'esempio di codice precedente:
 
@@ -102,7 +102,7 @@ L'esempio seguente illustra la configurazione predefinita per Linux-Debug basata
 ```
 La tabella seguente riepiloga le impostazioni:
 
-|Impostazione|Descrizione|
+|Impostazione|Description|
 |-----------|-----------------|
 |`name`|È possibile usare qualsiasi valore.|
 |`remoteMachineName`|Specifica il sistema remoto di destinazione, se sono presenti più sistemi. Per poter selezionare il sistema appropriato, per questo campo è abilitato IntelliSense.|
@@ -138,10 +138,10 @@ Se non viene trovato un file CMake valido nel computer remoto, verrà visualizza
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)<br/>
-[CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md) (Strumenti di CMake per Visual C++)<br/>
+[Utilizzo di Proprietà del progetto](../build/working-with-project-properties.md)<br/>
+[Progetti CMake in Visual Studio](../build/cmake-projects-in-visual-studio.md)<br/>
 [Connettersi al computer Linux remoto](connect-to-your-remote-linux-computer.md)<br/>
-[Personalizzare le impostazioni di CMake](../ide/customize-cmake-settings.md)<br/>
-[Configurare le sessioni di debug di CMake](../ide/configure-cmake-debugging-sessions.md)<br/>
+[Personalizzare le impostazioni di CMake](../build/customize-cmake-settings.md)<br/>
+[Configurare le sessioni di debug di CMake](../build/configure-cmake-debugging-sessions.md)<br/>
 [Distribuire, eseguire e sottoporre a debug il progetto Linux](deploy-run-and-debug-your-linux-project.md)<br/>
-[Informazioni di riferimento sulle configurazioni predefinite CMake](../ide/cmake-predefined-configuration-reference.md)<br/>
+[Informazioni di riferimento sulle configurazioni predefinite CMake](../build/cmake-predefined-configuration-reference.md)<br/>

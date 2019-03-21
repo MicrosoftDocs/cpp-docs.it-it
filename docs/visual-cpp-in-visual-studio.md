@@ -1,5 +1,5 @@
 ---
-title: Visual C++ in Visual Studio
+title: C++ in Visual Studio
 description: Visual C++ è il nome del compilatore Microsoft C++, dell'editor di codice e degli strumenti correlati nell'IDE di Visual Studio. Usare Visual C++ per sviluppare programmi per Windows, Linux, Android e iOS.
 ms.date: 09/26/2018
 ms.technology: cpp-ide
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 475f9394d9a12d05c95bc73ec451fbfe6fc4b052
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809648"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57814410"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 
@@ -71,11 +71,14 @@ Informazioni sugli esempi.
 
 ## <a name="c-development-tools"></a>Strumenti di sviluppo C++
 
-[IDE e strumenti di sviluppo](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+[Panoramica dello sviluppo con C++ in Visual Studio](overview-of-cpp-development.md)<br/>
 Come usare l'IDE di Visual Studio per creare progetti, modificare il codice, collegare librerie, compilare, eseguire il debug, creare unit test, eseguire analisi statiche, distribuire e altro ancora.
 
-[Compilatori e strumenti di compilazione](build/building-c-cpp-programs.md)<br/>
-Opzioni del compilatore e del linker Microsoft C++, messaggi di errore, esempi di riga di comando, configurazione per piattaforme diverse e argomenti di riferimento per la compilazione.
+[Progetti e sistemi di compilazione](build/projects-and-build-systems-cpp.md)<br/>
+Come creare e configurare progetti di Visual Studio C++, progetti CMake e altri tipi di progetti con le opzioni del compilatore e del linker MSVC.
+
+[Scrittura e refactoring del codice C++](ide/writing-and-refactoring-code-cpp.md)<br/>
+Come usare le funzionalità di produttività nell'editor di C++ per eseguire il refactoring, esplorare e scrivere codice.
 
 [Debug del codice nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Usare il debugger di Visual Studio con i progetti C++.

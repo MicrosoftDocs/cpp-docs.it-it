@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b75a1903b3e0767f8aa009134a2b37a7d1a8e0d0
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809789"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57810471"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Novità di Visual C++ in Visual Studio 2017
 
@@ -315,7 +315,7 @@ C++ supporta ora Ctrl+ clic **Vai a definizione**, semplificando lo spostamento 
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>Progetti non MSBuild con Apri cartella
 
-Visual Studio 2017 introduce la funzionalità **Apri cartella**, che consente di scrivere codice, compilarlo ed eseguire il debug in una cartella contenente il codice sorgente senza dover creare soluzioni o progetti. Questo rende molto più semplice iniziare a usare Visual Studio anche se il progetto non è un progetto basato su MSBuild. Con **Apri cartella** è possibile accedere alle funzionalità avanzate per la comprensione, la modifica, la compilazione e il debug del codice già offerte da Visual Studio per i progetti MSBuild. Per altre informazioni, vedere [Open Folder projects in Visual C++](ide/non-msbuild-projects.md) (Aprire una cartella di progetti in Visual C++).
+Visual Studio 2017 introduce la funzionalità **Apri cartella**, che consente di scrivere codice, compilarlo ed eseguire il debug in una cartella contenente il codice sorgente senza dover creare soluzioni o progetti. Questo rende molto più semplice iniziare a usare Visual Studio anche se il progetto non è un progetto basato su MSBuild. Con **Apri cartella** è possibile accedere alle funzionalità avanzate per la comprensione, la modifica, la compilazione e il debug del codice già offerte da Visual Studio per i progetti MSBuild. Per altre informazioni, vedere [Progetti Apri cartella per C++](build/open-folder-projects-cpp.md).
 
 - Sono stati apportati miglioramenti all'esperienza Apri cartella. È possibile personalizzare l'esperienza usando i file con estensione json seguenti:
   - CppProperties.json per personalizzare l'esperienza IntelliSense e di esplorazione.
@@ -330,7 +330,7 @@ Visual Studio 2017 introduce la funzionalità **Apri cartella**, che consente di
 
 ## <a name="cmake-support-via-open-folder"></a>Supporto CMake con Apri cartella
 
-Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la conversione in file di progetto di MSBuild (con estensione vcxproj). Per altre informazioni, vedere [Progetti CMake in Visual C++](ide/cmake-tools-for-visual-cpp.md). Se si aprono progetti CMake con **Apri cartella**, l'ambiente viene automaticamente configurato per la modifica, la compilazione e il debug in C++.
+Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la conversione in file di progetto di MSBuild (con estensione vcxproj). Per altre informazioni, vedere [Progetti CMake in Visual C++](build/cmake-projects-in-visual-studio.md). Se si aprono progetti CMake con **Apri cartella**, l'ambiente viene automaticamente configurato per la modifica, la compilazione e il debug in C++.
 
 - IntelliSense C++ funziona senza alcuna necessità di creare un file CppProperties.json nella cartella radice. È stato anche aggiunto un nuovo elenco a discesa per consentire agli utenti di passare facilmente tra le configurazioni fornite dai file CMake e CppProperties.json.
 
@@ -342,7 +342,7 @@ Visual Studio 2017 introduce il supporto per l'uso dei progetti CMake senza la c
 
 **Visual Studio 2017 versione 15.5**: è stato aggiunto il supporto per l'importazione di cache CMake esistenti.
 
-**Visual Studio 2017 versione 15.7**: è stato aggiunto il supporto per CMake 3.11, analisi del codice nei progetti CMake, visualizzazione Destinazioni in Esplora soluzioni, opzioni per la generazione della cache e la compilazione di singoli file. Per altre informazioni, vedere il blog sul [supporto CMake in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) e l'articolo relativo ai [progetti CMake in Visual C++](ide/cmake-tools-for-visual-cpp.md).
+**Visual Studio 2017 versione 15.7**: è stato aggiunto il supporto per CMake 3.11, analisi del codice nei progetti CMake, visualizzazione Destinazioni in Esplora soluzioni, opzioni per la generazione della cache e la compilazione di singoli file. Per altre informazioni, vedere il blog sul [supporto CMake in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) e l'articolo relativo ai [progetti CMake in Visual C++](build/cmake-projects-in-visual-studio.md).
 
 ## <a name="windows-desktop-development-with-c"></a>Sviluppo per Windows Desktop con C++
 

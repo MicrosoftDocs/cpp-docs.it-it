@@ -3,15 +3,15 @@ title: 'vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux
 description: vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifica notevolmente l'acquisizione e installazione delle librerie C++ open source in Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 02/22/2019
+ms.date: 03/18/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 2ca1b88f492d96f8a08d296cab7f35f3b72409c9
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809711"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58172881"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux e MacOS
 
@@ -19,7 +19,7 @@ vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifi
 
 ## <a name="simple-yet-flexible"></a>Semplice ma flessibile
 
-Basta un unico comando per scaricare le origini e compilare una libreria. vcpkg è a sua volta un progetto open source, disponibile in GitHub. È possibile personalizzare i cloni privati nel modo preferito, ad esempio specificando librerie diverse o versioni diverse di librerie, rispetto a quelle disponibili nel catalogo pubblico. È possibile creare più cloni di vcpkg in un singolo computer e ognuno potrà produrre set personalizzati di librerie e/o opzioni di compilazione e così via. Ogni clone è un ambiente indipendente che è possibile gestire con Xcopy e contiene una copia propria di vcpkg.exe che opera solo sulla gerarchia specifica. vcpkg non viene aggiunto ad alcuna variabile di ambiente e non ha dipendenze dal Registro di sistema di Windows o da Visual Studio.
+Basta un unico comando per scaricare le origini e compilare una libreria. vcpkg è a sua volta un progetto open source, disponibile in GitHub. È possibile personalizzare i cloni privati nel modo preferito, ad esempio specificando librerie diverse o versioni diverse di librerie, rispetto a quelle disponibili nel catalogo pubblico. È possibile creare più cloni di vcpkg in un singolo computer e ognuno potrà produrre set personalizzati di librerie e/o opzioni di compilazione e così via. Ogni clone è un ambiente indipendente che contiene una copia propria di vcpkg.exe che opera solo sulla gerarchia specifica. vcpkg non viene aggiunto ad alcuna variabile di ambiente e non ha dipendenze dal Registro di sistema di Windows o da Visual Studio.
 
 ## <a name="sources-not-binaries"></a>Origini e non file binari
 
