@@ -14,18 +14,18 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: c05dd9da5dd17b0e06ace750d34f2c5abcf94380
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827529"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327581"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipi di file creati per i progetti C++ di Visual Studio
 
 Questo argomento descrive tutti i tipi di file che sono associati i progetti di Visual Studio per le applicazioni desktop classiche. I file effettivamente inclusi nel progetto dipendono dal tipo di progetto e dalle opzioni selezionate nella procedura guidata.
 
-- [File di soluzioni e di progetto]()
+- [File di soluzioni e di progetto](project-and-solution-files.md)
 
 - [Progetti CLR](files-created-for-clr-projects.md)
 
@@ -54,7 +54,7 @@ Nella tabella seguente illustra i file comuni in un progetto di Visual Studio e 
 |atp|Progetto|File di progetto del modello di applicazione.|
 |bmp, dib, gif, jpg, jpe, png|Risorsa|File di immagine generali.|
 |bsc|Compilazione|File di codice del browser.|
-|cpp; c|Origine|File di codice sorgente principali per l'applicazione.|
+|.cpp, .c|Origine|File di codice sorgente principali per l'applicazione.|
 |cur|Risorsa|File grafico bitmap di cursore.|
 |dbp|Progetto|File di progetto di database.|
 |disco|Origine|File di documento di individuazione dinamica. Gestisce l'individuazione di servizi Web XML.|
@@ -78,8 +78,8 @@ Nella tabella seguente illustra i file comuni in un progetto di Visual Studio e 
 |vap|Progetto|File di progetto di Visual Studio Analyzer.|
 |vbg|Soluzione|File del gruppo di progetti compatibili.|
 |vbp, vip, vbproj|Progetto|File di progetto Visual Basic.|
-|.vcxitems|Progetto|Progetto elementi condivisi per condividere file tra più progetti di C++. Per altre informazioni, vedere [Makefile e file di progetto]() .|
-|vcxproj|Progetto|Il file di progetto di Visual Studio. Per altre informazioni, vedere [Makefile e file di progetto]() .|
+|.vcxitems|Progetto|Progetto elementi condivisi per condividere file tra più progetti di C++. Visualizzare [file di progetto e soluzione](project-and-solution-files.md) per altre informazioni.|
+|vcxproj|Progetto|Il file di progetto di Visual Studio. Visualizzare [file di progetto e soluzione](project-and-solution-files.md) per altre informazioni.|
 |vcxproj.filters|Progetto|Quando si usa Esplora soluzioni per aggiungere un file a un progetto, il file dei filtri definisce la posizione nella visualizzazione albero di Esplora soluzioni in cui viene aggiunto il file, in base alla relativa estensione.|
 |vdproj|Progetto|File di progetto di distribuzione Visual Studio.|
 |vmx|Progetto|File di progetto macro.|

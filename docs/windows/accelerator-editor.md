@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562940"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328402"
 ---
 # <a name="accelerator-editor-c"></a>Accelerator Editor (C++)
 
@@ -84,7 +84,7 @@ Il **chiave** proprietà imposta il tasto effettivo da usare come tasto di scelt
 
 Di seguito sono le voci legali per la **chiave** proprietà nella tabella di tasti di scelta rapida:
 
-   |Value|Descrizione|
+   |Valore|Descrizione|
    |-----------|-----------------|
    |Numero intero compreso tra 0 e 255 in formato decimale.|Il valore determina se il valore viene trattato come ASCII o ANSI come indicato di seguito:<br/><br/>   -Cifra numeri vengono sempre interpretati come la chiave corrispondente, anziché come valori ASCII o ANSI.<br/>   -I valori da 1 a 26, preceduti da zero, vengono interpretati come ^ dalla alla ^ Z, che rappresenta il valore ASCII delle lettere dell'alfabeto se premuto con il **Ctrl** tasto mantenuto premuto.<br/>   -I valori da 27 a 32 vengono sempre interpretati come valori decimali a tre cifre 027 e 032.<br/>   -I valori da 033 a 255, preceduto da 0 o non vengono interpretati come valori ANSI.|
    |Un singolo carattere della tastiera.|Caratteri maiuscoli A - Z o i numeri da 0 - 9 può essere ASCII o i valori di chiave virtuali. Qualsiasi altro carattere è solo ASCII.|
@@ -116,7 +116,7 @@ Le procedure seguenti si riferiscono all'uso delle pagine delle proprietà stand
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Per eseguire una modifica in una tabella dei tasti di scelta rapida
 
-1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selezionare una voce nella tabella e selezionare questa opzione per attivare la modifica sul posto.
 
@@ -132,7 +132,7 @@ Le procedure seguenti si riferiscono all'uso delle pagine delle proprietà stand
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Per cercare una voce in una tabella dei tasti di scelta rapida aperta
 
-1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selezionare un'intestazione di colonna per ordinare il contenuto della colonna in ordine alfabetico. Ad esempio, selezionare **ID** per visualizzare tutti gli ID della tabella dei tasti di scelta rapida in ordine alfabetico.
 
@@ -140,7 +140,7 @@ Le procedure seguenti si riferiscono all'uso delle pagine delle proprietà stand
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Per aggiungere una voce a una tabella dei tasti di scelta rapida
 
-1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Fare doppio clic all'interno della tabella di tasti di scelta rapida e scegliere **nuovo Accelerator**, oppure selezionare la voce di riga vuota nella parte inferiore della tabella.
 
@@ -155,7 +155,7 @@ Le procedure seguenti si riferiscono all'uso delle pagine delle proprietà stand
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Per eliminare una voce da una tabella dei tasti di scelta rapida
 
-1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selezionare la voce che si desidera eliminare oppure tenere premuto il **Ctrl** oppure **MAIUSC** mentre si seleziona per scegliere più voci.
 
@@ -177,7 +177,7 @@ Le procedure seguenti si riferiscono all'uso delle pagine delle proprietà stand
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Per modificare le proprietà di più tasti di scelta rapida
 
-1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona nel [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Selezionare i tasti di scelta rapida che si desidera modificare, tenere premuti i **Ctrl** della chiave per la selezione di ognuno di essi.
 

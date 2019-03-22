@@ -3,12 +3,12 @@ title: Personalizzare le impostazioni di compilazione di CMake in Visual Studio
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: aa840dd41ee6843afae80343e42ba62741bbcd80
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825326"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328298"
 ---
 # <a name="customize-cmake-build-settings"></a>Personalizzare le impostazioni di compilazione di CMake
 
@@ -53,19 +53,19 @@ IntelliSense JSON consente di modificare il file `CMakeSettings.json`:
 
 - **generator**: esegue il mapping all'opzione **-G** di CMake e specifica il generatore da usare. Questa proprietà può essere usata anche come macro, `${generator}`, durante la composizione di altri valori di proprietà. Visual Studio supporta attualmente i generatori CMake seguenti:
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+  - "Ninja"
+  - "Visual Studio 14 2015"
+  - "Visual Studio 14 2015 ARM"
+  - "Visual Studio 14 2015 Win64"
+  - "Visual Studio 15 2017"
+  - "Visual Studio 15 2017 ARM"
+  - "Visual Studio 15 2017 Win64"
 
-    Poiché Ninja è progettato per velocità di configurazione rapide anziché per flessibilità e funzionalità, è impostato come predefinito. Tuttavia, alcuni progetti CMake potrebbero non essere in grado di eseguire una compilazione corretta usando Ninja. In questo caso, è possibile istruire CMake a generare un progetto Visual Studio.
+  Poiché Ninja è progettato per velocità di configurazione rapide anziché per flessibilità e funzionalità, è impostato come predefinito. Tuttavia, alcuni progetti CMake potrebbero non essere in grado di eseguire una compilazione corretta usando Ninja. In questo caso, è possibile istruire CMake a generare un progetto Visual Studio.
 
-    Per specificare un generatore Visual Studio, aprire `CMakeSettings.json` dal menu principale scegliendo **CMake | Modifica impostazioni di CMake**. Eliminare "Ninja" e digitare "V". Questa operazione attiva IntelliSense, che consente di scegliere il generatore desiderato.
+  Per specificare un generatore Visual Studio, aprire `CMakeSettings.json` dal menu principale scegliendo **CMake | Modifica impostazioni di CMake**. Eliminare "Ninja" e digitare "V". Questa operazione attiva IntelliSense, che consente di scegliere il generatore desiderato.
 
-    Quando la configurazione attiva specifica un generatore Visual Studio, per impostazione predefinita viene richiamato MSBuild.exe con gli argomenti `-m -v:minimal`. Per personalizzare la compilazione, all'interno del file `CMakeSettings.json` è possibile specificare altri [argomenti della riga di comando di MSBuild](../build/msbuild-visual-cpp-overview.md) da passare al sistema di compilazione tramite la proprietà `buildCommandArgs`:
+  Quando la configurazione attiva specifica un generatore Visual Studio, per impostazione predefinita viene richiamato MSBuild.exe con gli argomenti `-m -v:minimal`. Per personalizzare la compilazione, all'interno del file `CMakeSettings.json` è possibile specificare altri [argomenti della riga di comando di MSBuild](../build/reference/msbuild-visual-cpp-overview.md) da passare al sistema di compilazione tramite la proprietà `buildCommandArgs`:
     
     ```json
     "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -132,7 +132,7 @@ usage: ninja [options] [targets...]
 |   -n       | esecuzione (non esegue i comandi ma agisce come se fossero stati eseguiti correttamente)|
 |   -v       | mostra tutte le righe di comando durante la compilazione|
 |   -d MODE  | abilita il debug (usare le modalità da elenco -d a elenco)|
-|   -t TOOL  | esegue uno strumento secondario (usare gli strumenti secondari da elenco -t a elenco). termina le opzioni di livello superiore; i flag ulteriori vengono passati allo strumento|
+|   -t TOOL  | esegue uno strumento secondario (usare gli strumenti secondari da elenco -t a elenco). Termina le opzioni di livello superiore ulteriori flag vengono passati allo strumento|
 |   -w FLAG  | modifica gli avvisi (usare gli avvisi da elenco -w a elenco)|
 
 ## <a name="inherited-environments"></a>Ambienti ereditati

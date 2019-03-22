@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: c9c060bda4198c199ea86f0e2a33adc3275b353b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ceb0b93f37133ccbbf89ed659f74b632e45bcb1
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555051"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328935"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -25,7 +25,7 @@ Associa una colonna specificata a una variabile nel set di righe.
 
 #### <a name="parameters"></a>Parametri
 
-*Numero ordinale*<br/>
+*ordinal*<br/>
 Il numero ordinale di colonna (`DBCOLUMNINFO` ordinale) o nome di colonna (stringa ANSI o Unicode) corrispondente a un campo nel set di righe a cui associare i dati. Se si utilizzano numeri, è possibile ignorare gli ordinali consecutivi (ad esempio: 1, 2, 3, 5). Se il provider OLE DB che è usare lo supporta, il nome può contenere spazi. Ad esempio, è possibile usare uno dei formati seguenti:
 
 ```cpp
@@ -33,24 +33,24 @@ Il numero ordinale di colonna (`DBCOLUMNINFO` ordinale) o nome di colonna (strin
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*DbType*<br/>
-(Facoltativo) OLE DB [indicatore del tipo](/previous-versions/windows/desktop/ms711251) per la voce di colonna.
+*dbtype*<br/>
+(Facoltativo) OLE DB [indicatore del tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) per la voce di colonna.
 
 *precision*<br/>
-(Facoltativo) La precisione da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bPrecision` elemento del [struttura DBBINDING](/previous-versions/windows/desktop/ms716845)
+(Facoltativo) La precisione da utilizzare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bPrecision` elemento del [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*Scalabilità*<br/>
-(Facoltativo) La scala da usare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bScale` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845)
+*scale*<br/>
+(Facoltativo) La scala da usare per la voce di colonna. Per informazioni dettagliate, vedere la descrizione del `bScale` dell'elemento di [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-(Facoltativo) Una variabile membro usata per mantenere lo stato di questa colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio valori NULL. Per i valori possibili, vedere [lo stato](/previous-versions/windows/desktop/ms722617) nel *riferimento per programmatori OLE DB*.
+(Facoltativo) Una variabile membro usata per mantenere lo stato di questa colonna. Lo stato indica se il valore della colonna è un valore di dati o un altro valore, ad esempio valori NULL. Per i valori possibili, vedere [lo stato](/previous-versions/windows/desktop/ms722617(v=vs.85)) nel *riferimento per programmatori OLE DB*.
 
 *length*<br/>
 (Facoltativo) Una variabile membro usata per contenere le dimensioni della colonna in byte.
 
 ## <a name="remarks"></a>Note
 
-**db_column** associa la colonna della tabella specificato a una variabile nel set di righe. Delimita i dati dei membri che può far parte di OLE DB `IAccessor`-associazione basata su. Questo attributo consente di impostare la mappa delle colonne in genere definita usando le macro di consumer OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), e [COLUMN_ENTRY](../../data/oledb/column-entry.md). Questi manipolare OLE DB [struttura DBBINDING](/previous-versions/windows/desktop/ms716845) da associare alla colonna specificata. Ogni membro è contrassegnare con il **db_column** attributo occupa una voce nella mappa colonna sotto forma di una voce di colonna. Pertanto, si chiama questo attributo in cui inserire la mappa delle colonne, vale a dire, nella classe di comando o di tabella.
+**db_column** associa la colonna della tabella specificato a una variabile nel set di righe. Delimita i dati dei membri che può far parte di OLE DB `IAccessor`-associazione basata su. Questo attributo consente di impostare la mappa delle colonne in genere definita usando le macro di consumer OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), e [COLUMN_ENTRY](../../data/oledb/column-entry.md). Questi manipolare OLE DB [struttura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) da associare alla colonna specificata. Ogni membro è contrassegnare con il **db_column** attributo occupa una voce nella mappa colonna sotto forma di una voce di colonna. Pertanto, si chiama questo attributo in cui inserire la mappa delle colonne, vale a dire, nella classe di comando o di tabella.
 
 Uso **db_column** in combinazione con la [db_table](db-table.md) oppure [db_command](db-command.md) attributi.
 

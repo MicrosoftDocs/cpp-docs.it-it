@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259932"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328649"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Creazione guidata consumer ODBC MFC (C++)
 
@@ -25,13 +25,13 @@ Questa procedura guidata per impostare una classe recordset ODBC e le associazio
 
 - **Origine dati**
 
-  Il **Zdroj dat** pulsante configurare l'origine dati specificata tramite il driver ODBC specificato. Per altre informazioni sui file di origine dati (DSN), vedere [origini dati dei File](/previous-versions/windows/desktop/ms715401) nel SDK di ODBC.
+  Il **Zdroj dat** pulsante configurare l'origine dati specificata tramite il driver ODBC specificato. Per altre informazioni sui file di origine dati (DSN), vedere [origini dati dei File](/sql/odbc/reference/file-data-sources) nel SDK di ODBC.
 
   Il **selezionare un'origine dati** nella finestra di dialogo è disponibili due schede:
 
   - **Origine dati file** scheda:
 
-     Il **Cerca in** finestra specifica la directory in cui si desidera selezionare i file da utilizzare come origini dati. Il valore predefinito è \Programmi\Common Files\ODBC\Data Sources. Le origini di dati di file esistente (file DSN) vengono visualizzati nella casella di riepilogo principale. È possibile impostare le origini dati in anticipo usando il **DSN su File** scheda le [Amministrazione origine dati ODBC](/previous-versions/windows/desktop/ms714024), o crearne uno nuovo tramite questa finestra di dialogo.
+     Il **Cerca in** finestra specifica la directory in cui si desidera selezionare i file da utilizzare come origini dati. Il valore predefinito è \Programmi\Common Files\ODBC\Data Sources. Le origini di dati di file esistente (file DSN) vengono visualizzati nella casella di riepilogo principale. È possibile impostare le origini dati in anticipo usando il **DSN su File** scheda le [Amministrazione origine dati ODBC](/sql/odbc/admin/odbc-data-source-administrator), o crearne uno nuovo tramite questa finestra di dialogo.
 
      Per creare una nuova origine dati file dalla finestra di dialogo, fare clic su `New` per specificare un nome DSN; la **Crea nuova origine dati** verrà visualizzata la finestra di dialogo. Nel **Crea nuova origine dati** finestra di dialogo, selezionare un driver appropriato e scegliere `Next`; fare clic su **Sfoglia**e selezionare il nome del file da utilizzare come origine dati (è necessario selezionare "Tutti i file" per visualizzazione non DSN file, ad esempio file con estensione xls). Fare clic su `Next`, quindi fare clic su **fine**. (Se si seleziona un file non DSN, si otterrà una finestra di dialogo specifiche del driver, ad esempio "Configurazione ODBC per Microsoft Excel," che convertirà il file in un DSN.)
 
@@ -40,13 +40,13 @@ Questa procedura guidata per impostare una classe recordset ODBC e le associazio
 
      Il **nome DSN** consente di specificare un nome per l'origine dati di file. È necessario assicurarsi che il nome DSN termina con l'estensione di file appropriato, ad esempio file con estensione xls per i file di Excel o file con estensione mdb per accedere ai file.
 
-     Per altre informazioni sul DSN, vedere [origini dati dei File](/previous-versions/windows/desktop/ms715401) nel SDK di ODBC.
+     Per altre informazioni sul DSN, vedere [origini dati dei File](/sql/odbc/reference/file-data-sources) nel SDK di ODBC.
 
   - **Origine dati del computer** scheda:
 
-     Questa scheda sono elencate origini di sistema e dati utente. Le origini dati utente sono specifiche di un utente in questo computer. Origini dati di sistema sono utilizzabile da tutti gli utenti in questo computer o su un servizio a livello di sistema. Visualizzare [Machine Zdroje dat](/previous-versions/windows/desktop/ms710952) nel SDK di ODBC
+     Questa scheda sono elencate origini di sistema e dati utente. Le origini dati utente sono specifiche di un utente in questo computer. Origini dati di sistema sono utilizzabile da tutti gli utenti in questo computer o su un servizio a livello di sistema. Visualizzare [Machine Zdroje dat](/sql/odbc/reference/machine-data-sources) nel SDK di ODBC
 
-     Per altre informazioni sulle origini dati ODBC, vedere [Zdroje dat](/previous-versions/windows/desktop/ms711688) nel SDK di ODBC.
+     Per altre informazioni sulle origini dati ODBC, vedere [Zdroje dat](/sql/odbc/reference/data-sources) nel SDK di ODBC.
 
   Fare clic su **OK** alla fine. Il **Seleziona oggetto di Database** verrà visualizzata la finestra di dialogo. Da questa finestra di dialogo, selezionare la tabella o vista che verranno utilizzate dal consumer. Si noti che è possibile selezionare più tabelle e viste tenendo premuto il tasto CTRL mentre si fa clic sugli elementi. Fare clic su **OK** alla fine.
 

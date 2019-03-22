@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 364f29406b2c00d26ecc4cc69060ed8ec21b743b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60c50eb25132a38c72be762ab96d8ee262f5b349
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291282"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328831"
 ---
 # <a name="mfc-desktop-applications"></a>Applicazioni desktop MFC
 
@@ -85,7 +85,7 @@ Fornisce collegamenti a esempi che dimostrano come utilizzare MFC.
 [Riferimento alle librerie di Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
 Vengono forniti collegamenti alle diverse librerie disponibili in Visual C++, ad esempio ATL, MFC, modelli OLE DB, la libreria di runtime del linguaggio C e la libreria standard C++.
 
-[Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio.md)<br/>
+[Debug in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Vengono forniti collegamenti relativi all'utilizzo del debugger di Visual Studio per la correzione di errori logici nell'applicazione o nelle stored procedure.
 
 ## <a name="see-also"></a>Vedere anche

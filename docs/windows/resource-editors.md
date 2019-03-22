@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563017"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328805"
 ---
 # <a name="resource-editors-c"></a>Editor di risorse (C++)
 
@@ -63,13 +63,13 @@ Le risorse possono anche essere modificato all'esterno del progetto senza un pro
 > [!NOTE]
 > Proprietà di una risorsa può essere modificata usando il **proprietà** finestra.
 
-- Per modificare le proprietà di una risorsa, in [visualizzazione di risorse](/windows/how-to-create-a-resource-script-file#create-resources), fare doppio clic la risorsa che si desidera modificare e scegliere **proprietà**.  Quindi, nella [finestra proprietà](/visualstudio/ide/reference/properties-window), modificare le proprietà della risorsa.
+- Per modificare le proprietà di una risorsa, in [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources), fare doppio clic la risorsa che si desidera modificare e scegliere **proprietà**.  Quindi, nella [finestra proprietà](/visualstudio/ide/reference/properties-window), modificare le proprietà della risorsa.
 
 - Per annullare una modifica apportata alle proprietà di una risorsa, verificare che la risorsa abbia lo stato attivo **visualizzazione di risorse** e scegliere **Annulla** dal **modifica** menu.
 
 ### <a name="win32-resources"></a>Risorse Win32
 
-È possibile accedere alle risorse Win32 nel [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources) riquadro.
+È possibile accedere alle risorse Win32 nel [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources) riquadro.
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Per visualizzare una risorsa Win32 in un editor di risorse
 
@@ -113,7 +113,7 @@ Le risorse seguenti non forniscono un'anteprima: Tasti di scelta rapida, informa
 
 ### <a name="to-preview-resources"></a>Per visualizzare in anteprima le risorse
 
-1. Nelle [visualizzazione di risorse](/windows/how-to-create-a-resource-script-file#create-resources) o una finestra del documento, selezionare la risorsa, ad esempio **IDD_ABOUTBOX**.
+1. Nelle [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources) o una finestra del documento, selezionare la risorsa, ad esempio **IDD_ABOUTBOX**.
 
 1. Nel [finestra delle proprietà](/visualstudio/ide/reference/properties-window), selezionare la **pagine delle proprietà** pulsante.
 

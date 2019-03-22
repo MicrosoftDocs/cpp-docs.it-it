@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563056"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328493"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Procedura: Creare un'icona o un'altra immagine
 
@@ -167,7 +167,7 @@ Usare la **apre &lt;dispositivo&gt; immagine** finestra di dialogo per aprire im
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>Per creare una nuova icona o cursore
 
-1. In [visualizzazione di risorse](/windows/how-to-create-a-resource-script-file#create-resources), fare doppio clic sui *RC* del file, quindi scegliere **Inserisci risorsa**. Se si dispone già di una risorsa immagine esistente *RC* file, ad esempio un cursore, è possibile fare doppio clic il **cursore** cartella e selezionare **cursore inserire**.
+1. In [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources), fare doppio clic sui *RC* del file, quindi scegliere **Inserisci risorsa**. Se si dispone già di una risorsa immagine esistente *RC* file, ad esempio un cursore, è possibile fare doppio clic il **cursore** cartella e selezionare **cursore inserire**.
 
 1. Nel [finestra di dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md), selezionare **icona** oppure **cursore** e scegliere **New**. Per le icone, questa azione crea una risorsa icona con un 32 × 32, un'icona a 16 colori. Per i cursori, a 32 × 32, viene creata l'immagine monocromatica (2-colore).
 
@@ -228,7 +228,7 @@ Usando il **Editor di immagini**, icone e cursori possono essere con dimensioni 
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>Per creare un cursore o l'icona a 256 colori
 
-1. In [visualizzazione di risorse](/windows/how-to-create-a-resource-script-file#create-resources), fare doppio clic sui *RC* del file, quindi scegliere **Inserisci risorsa**. Se si dispone già di una risorsa immagine esistente *RC* file, ad esempio un cursore, è possibile fare doppio clic il **cursore** cartella e selezionare **cursore inserire**.
+1. In [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources), fare doppio clic sui *RC* del file, quindi scegliere **Inserisci risorsa**. Se si dispone già di una risorsa immagine esistente *RC* file, ad esempio un cursore, è possibile fare doppio clic il **cursore** cartella e selezionare **cursore inserire**.
 
 1. Nel [finestra di dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md), selezionare **icona** oppure **cursore** e scegliere **New**.
 
@@ -295,7 +295,7 @@ Quando si crea una bitmap, viene creata l'immagine in formato bitmap (bmp). È p
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>Per aggiungere una nuova risorsa di immagine a un progetto C++ non gestito
 
-1. In [visualizzazione di risorse](/windows/how-to-create-a-resource-script-file#create-resources), fare doppio clic sui *RC* del file, quindi scegliere **Inserisci risorsa**. Se hai già una risorsa immagine esistente *RC* file, ad esempio un cursore, è possibile semplicemente fare doppio clic il **cursore** cartella e selezionare **inserire cursore**.
+1. In [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources), fare doppio clic sui *RC* del file, quindi scegliere **Inserisci risorsa**. Se hai già una risorsa immagine esistente *RC* file, ad esempio un cursore, è possibile semplicemente fare doppio clic il **cursore** cartella e selezionare **inserire cursore**.
 
 1. Nel [finestra di dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md), selezionare il tipo di risorsa immagine si vuole creare (**Bitmap**, ad esempio) quindi scegliere **New**.
 

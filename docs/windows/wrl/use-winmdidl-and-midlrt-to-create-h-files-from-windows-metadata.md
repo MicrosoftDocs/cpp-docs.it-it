@@ -3,12 +3,12 @@ title: 'Procedura: Usare winmdidl.exe e midlrt.exe per creare file con estension
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54336563"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328714"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Procedura: Usare winmdidl.exe e midlrt.exe per creare file con estensione h dai metadati di windows
 
@@ -18,7 +18,7 @@ Questi strumenti possono essere usati in due scenari principali:
 
 - Creazione di file IDL e di intestazione personalizzati, in modo che un'app C++ scritta usando la libreria di modelli per Windows Runtime possa usare un componente Windows Runtime personalizzato.
 
-- Generazione di file proxy e stub per tipi di evento definiti dall'utente in un componente Windows Runtime. Per altre informazioni, vedere [eventi personalizzati e funzioni di accesso agli eventi nei componenti di Windows Runtime](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Generazione di file proxy e stub per tipi di evento definiti dall'utente in un componente Windows Runtime. Per altre informazioni, vedere [eventi personalizzati e funzioni di accesso agli eventi nei componenti di Windows Runtime](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
 Questi strumenti sono necessari solo per l'analisi di file winmd personalizzati. I file con estensione h e idl per i componenti del sistema operativo Windows vengono generati automaticamente. Per impostazione predefinita in Windows 8.1, si trovano in \Programmi file (x86) \Windows Kits\8.1\Include\winrt\\.
 
@@ -75,4 +75,4 @@ Successivamente, midlrt viene eseguito sul file IDL generato. Si noti che il **/
 
 Il file di output di un'operazione di winmdidl ha lo stesso nome del file di input, ma con estensione idl.
 
-Se si sviluppa un componente Windows Runtime a cui verrà eseguito l'accesso dalla Libreria Windows Runtime, è possibile specificare che winmdidl.exe e midlrt.exe devono essere eseguiti come passaggi di post-compilazione, in modo che per ogni compilazione vengano generati automaticamente i file IDL e H.  Per un esempio, vedere [generazione di eventi nei componenti di Windows Runtime](/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Se si sviluppa un componente Windows Runtime a cui verrà eseguito l'accesso dalla Libreria Windows Runtime, è possibile specificare che winmdidl.exe e midlrt.exe devono essere eseguiti come passaggi di post-compilazione, in modo che per ogni compilazione vengano generati automaticamente i file IDL e H.  Per un esempio, vedere [generazione di eventi nei componenti di Windows Runtime](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

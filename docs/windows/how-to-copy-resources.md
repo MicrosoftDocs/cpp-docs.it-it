@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563043"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328623"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedura: Gestire le risorse (C++)
 
@@ -52,7 +52,7 @@ ms.locfileid: "57563043"
 
 ### <a name="to-copy-resources"></a>Per copiare risorse
 
-1. Aprire entrambi i file (vedere come [per aprire un file di script di risorsa](/how-to-create-a-resource-script-file#use-resource-script-files)). Ad esempio, aprire *Origine1.rc* e *Origine2.rc*.
+1. Aprire entrambi i file di risorsa in modo autonomo. (Vedere [usano i file di script di risorsa](how-to-create-a-resource-script-file.md#use-resource-script-files)). Ad esempio, aprire *Origine1.rc* e *Origine2.rc*.
 
 1. All'interno del primo file RC, ovvero:
 
@@ -88,7 +88,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Per copiare una risorsa esistente e modificarne la lingua e la condizione
 
-Nel *RC* file o nel [visualizzazione risorse](../windows/resource-view-window.md) finestra, la risorsa a cui si desidera copiare e scegliere destro **Inserisci copia**. Quindi impostare quanto segue:
+Nel *RC* file o nel [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources) finestra, la risorsa a cui si desidera copiare e scegliere destro **Inserisci copia**. Quindi impostare quanto segue:
 
 - Per il **linguaggio** elenco a discesa, selezionare la lingua.
 
@@ -107,7 +107,7 @@ File di risorse gestite (con estensione resx) sono file XML. Quando si aggiunge 
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>Per importare una risorsa nel file di script della risorsa
 
-1. Nelle [visualizzazione di risorse](../windows/resource-view-window.md) pulsante destro del mouse il nodo del file di script (RC) di risorse a cui si desidera aggiungere una risorsa e selezionare **importazione**.
+1. Nelle [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources) pulsante destro del mouse il nodo del file di script (RC) di risorse a cui si desidera aggiungere una risorsa e selezionare **importazione**.
 
 1. Individuare e scegliere il nome del file di icona (ico), la bitmap (bmp), cursore (cur), file html (htm) o altri file da importare.
 
@@ -118,7 +118,7 @@ File di risorse gestite (con estensione resx) sono file XML. Quando si aggiunge 
 
 ### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Per esportare una risorsa per l'utilizzo di fuori di Visual C++
 
-1. Nelle [visualizzazione di risorse](../windows/resource-view-window.md), fare doppio clic la risorsa che si desidera esportare e scegliere **esportare**. È possibile accettare il nome del file corrente o digitarne uno nuovo.
+1. Nelle [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources), fare doppio clic la risorsa che si desidera esportare e scegliere **esportare**. È possibile accettare il nome del file corrente o digitarne uno nuovo.
 
 1. Passare alla cartella in cui si desidera salvare il file e selezionare **esportare**.
 

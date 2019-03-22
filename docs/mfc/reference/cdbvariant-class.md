@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 41ea20bcddc53142773d474af41021e9c71af1aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289859"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328948"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant (classe)
 
@@ -55,19 +55,19 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|nome|Descrizione|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Costruisce un oggetto `CDBVariant`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|nome|Descrizione|
 |----------|-----------------|
 |[CDBVariant::Clear](#clear)|Cancella il `CDBVariant` oggetto.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|nome|Descrizione|
 |----------|-----------------|
 |[CDBVariant::m_dwType](#m_dwtype)|Contiene il tipo di dati del valore attualmente archiviato. Digitare `DWORD`.|
 
@@ -216,7 +216,7 @@ Archivia un puntatore a un oggetto di tipo TIMESTAMP_STRUCT.
 
 Il `m_pdate` membro dati appartiene a un'unione. Prima di accedere al `m_pdate`, controllare innanzi tutto il valore di [CDBVariant::m_dwType](#m_dwtype). Se `m_dwType` è impostata su DBVT_DATE, quindi `m_pdate` contiene un puntatore valido; in caso contrario, l'accesso a `m_pdate` produrrà risultati inaffidabili.
 
-Per altre informazioni sul tipo di dati TIMESTAMP_STRUCT, vedere l'argomento [tipi di dati C](/previous-versions/windows/desktop/ms714556) nell'appendice D le *riferimento per programmatori ODBC* nel SDK di Windows.
+Per altre informazioni sul tipo di dati TIMESTAMP_STRUCT, vedere l'argomento [tipi di dati C](/sql/odbc/reference/appendixes/c-data-types) nell'appendice D le *riferimento per programmatori ODBC* nel SDK di Windows.
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

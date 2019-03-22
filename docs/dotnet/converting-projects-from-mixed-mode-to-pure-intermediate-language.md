@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559675"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328584"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Conversione di progetti da modalità mista a linguaggio intermedio puro
 
@@ -80,7 +80,7 @@ Se si usa una versione precedente del set di strumenti del compilatore Visual C+
    |[Boolean](/dotnet/api/system.boolean)|Rappresenta un valore booleano.|
    |[Byte](/dotnet/api/system.byte)|Rappresenta un numero intero senza segno a 8 bit.|
    |[Char](/dotnet/api/system.char)|Rappresenta un carattere Unicode.|
-   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Rappresenta un istante di tempo, in genere espresso come data e ora del giorno.|
+   |[DateTime](/dotnet/api/system.datetime)|Rappresenta un istante di tempo, in genere espresso come data e ora del giorno.|
    |[Decimal](/dotnet/api/system.decimal)|Rappresenta un numero decimale.|
    |[Double](/dotnet/api/system.double)|Rappresenta un numero a virgola mobile a precisione doppia.|
    |[Guid](/dotnet/api/system.guid)|Rappresenta un identificatore univoco globale (GUID).|
@@ -88,11 +88,11 @@ Se si usa una versione precedente del set di strumenti del compilatore Visual C+
    |[Int32](/dotnet/api/system.int32)|Rappresenta un intero con segno a 32 bit.|
    |[Int64](/dotnet/api/system.int64)|Rappresenta un intero con segno a 64 bit.|
    |[IntPtr](/dotnet/api/system.intptr)|Tipo specifico per la piattaforma usato per rappresentare un puntatore o un handle.|
-   |[SByte](/dotnet/api/system.byte.aspx)|Rappresenta un intero con segno a 8 bit.|
-   |[Single](/dotnet/api/system.single.aspx)|Rappresenta un numero a virgola mobile a precisione singola.|
+   |[SByte](/dotnet/api/system.byte)|Rappresenta un intero con segno a 8 bit.|
+   |[Single](/dotnet/api/system.single)|Rappresenta un numero a virgola mobile a precisione singola.|
    |[TimeSpan](/dotnet/api/system.timespan)|Rappresenta un intervallo di tempo.|
    |[UInt16](/dotnet/api/system.uint16)|Rappresenta un intero senza segno a 16 bit.|
    |[UInt32](/dotnet/api/system.uint32)|Rappresenta un intero senza segno a 32 bit.|
    |[UInt64](/dotnet/api/system.uint64)|Rappresenta un intero senza segno a 64 bit.|
    |[UIntPtr](/dotnet/api/system.uintptr)|Tipo specifico per la piattaforma usato per rappresentare un puntatore o un handle.|
-   |[void](/dotnet/api/system.void)|Indica un metodo che non restituisce un valore. vale a dire, il metodo ha il tipo restituito void.|
+   |[Void](/dotnet/api/system.void)|Indica un metodo che non restituisce un valore. vale a dire, il metodo ha il tipo restituito void.|

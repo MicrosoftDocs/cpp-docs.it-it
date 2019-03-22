@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0adcefe2af9d17a1c42f64f25636e220f53706fc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562861"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328753"
 ---
 # <a name="binary-editor-c"></a>Editor binario (C++)
 
@@ -53,7 +53,7 @@ Il **Editor binario** consente di:
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Per aprire una risorsa desktop di Windows per la modifica binaria
 
-1. In [Visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources)selezionare il file di risorse che si vuole modificare.
+1. In [Visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources)selezionare il file di risorse che si vuole modificare.
 
 1. La risorsa destro e selezionare **Apri dati binari**.
 

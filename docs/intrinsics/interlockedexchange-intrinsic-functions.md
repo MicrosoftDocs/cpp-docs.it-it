@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627176"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328519"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchange
 
@@ -164,7 +164,7 @@ Restituisce il valore iniziale a cui punta `Target`.
 
 ## <a name="remarks"></a>Note
 
-`_InterlockedExchange` fornisce il supporto intrinseco del compilatore per il SDK di Windows Win32 [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange) (funzione).
+`_InterlockedExchange` fornisce il supporto intrinseco del compilatore per il SDK di Windows Win32 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange) (funzione).
 
 Ci sono diverse varianti di `_InterlockedExchange` che variano in base ai tipi di dati interessati e all'uso della semantica di acquisizione o di rilascio specifica del processore.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: 6b77efffca127c79c665cb8dedb916b0874de038
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2ec83fc320d65f5f51c14f9523544972cd69c66c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290729"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328688"
 ---
 # <a name="ccommultithreadmodel-class"></a>Classe CComMultiThreadModel
 
@@ -35,7 +35,7 @@ class CComMultiThreadModel
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|nome|Descrizione|
 |----------|-----------------|
 |[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Fa riferimento alla classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).|
 |[CComMultiThreadModel::CriticalSection](#criticalsection)|Fa riferimento alla classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).|
@@ -43,7 +43,7 @@ class CComMultiThreadModel
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|nome|Descrizione|
 |----------|-----------------|
 |[CComMultiThreadModel::Decrement](#decrement)|(Statico) Decrementa il valore della variabile specificata in modo thread-safe.|
 |[CComMultiThreadModel::Increment](#increment)|(Statico) Incrementa il valore della variabile specificata in modo thread-safe.|
@@ -157,7 +157,7 @@ Visualizzare [CComMultiThreadModel::AutoCriticalSection](#autocriticalsection).
 
 ##  <a name="decrement"></a>  CComMultiThreadModel::Decrement
 
-Questa funzione statica chiama la funzione Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), che decrementa il valore della variabile a cui punta *p*.
+Questa funzione statica chiama la funzione Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement), che decrementa il valore della variabile a cui punta *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -178,7 +178,7 @@ Se il risultato del decremento è 0, quindi `Decrement` restituisce 0. Se il ris
 
 ##  <a name="increment"></a>  CComMultiThreadModel::Increment
 
-Questa funzione statica chiama la funzione Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), il quale viene incrementato il valore della variabile a cui punta *p*.
+Questa funzione statica chiama la funzione Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement), il quale viene incrementato il valore della variabile a cui punta *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();

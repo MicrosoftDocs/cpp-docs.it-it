@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563251"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328857"
 ---
 # <a name="toolbar-editor-c"></a>Toolbar Editor (C++)
 
@@ -128,7 +128,7 @@ Il **sulla barra degli strumenti Editor** consente di:
 
 #### <a name="to-create-a-new-toolbar-button"></a>Per creare un nuovo pulsante della barra degli strumenti
 
-1. In [visualizzazione di risorse](../windows/resource-view-window.md) espandere la cartella delle risorse (ad esempio *Progetto1.rc*).
+1. In [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources) espandere la cartella delle risorse (ad esempio *Progetto1.rc*).
 
 1. Espandere la **sulla barra degli strumenti** cartella e selezionare una barra degli strumenti per modificare, quindi eseguire una delle operazioni seguenti:
 
@@ -138,7 +138,7 @@ Il **sulla barra degli strumenti Editor** consente di:
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Per aggiungere un'immagine da una barra degli strumenti come un pulsante
 
-1. Nelle [visualizzazione risorse](../windows/resource-view-window.md), aprire la barra degli strumenti facendovi doppio clic.
+1. Nelle [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources), aprire la barra degli strumenti facendovi doppio clic.
 
 1. Successivamente, aprire l'immagine da aggiungere alla barra degli strumenti.
 

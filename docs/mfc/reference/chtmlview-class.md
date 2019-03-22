@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 251a1f9f6773363955ac374aa8714bc616137a31
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 07f942e6582eb9fabe6001c4823ec9e2b1a83bf6
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425003"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328974"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (classe)
 
@@ -215,7 +215,7 @@ class CHtmlView : public CFormView
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|nome|Descrizione|
 |----------|-----------------|
 |[CHtmlView::Create](#create)|Crea il controllo WebBrowser.|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Overridable usato per creare un'istanza del sito del controllo per ospitare un controllo nel form.|
@@ -1376,7 +1376,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Parametri
 
 *pInfo*<br/>
-Indirizzo di un [DOCHOSTUIINFO](/previous-versions/aa770044\(v=vs.85\)) struttura che riceve le funzionalità dell'interfaccia utente dell'host.
+Indirizzo di un [DOCHOSTUIINFO](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa770044\(v=vs.85\)) struttura che riceve le funzionalità dell'interfaccia utente dell'host.
 
 ### <a name="return-value"></a>Valore restituito
 

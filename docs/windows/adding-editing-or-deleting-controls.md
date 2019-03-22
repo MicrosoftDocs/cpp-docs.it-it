@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: f27e325a8d766fbaf95037db669e0829671cb104
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 217bde10ea1b7f6457d141c3006c8c8fb2efaadf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562913"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328506"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Procedura: Aggiungere, modificare o eliminare i controlli (C++)
 
@@ -153,7 +153,7 @@ Dopo aver aggiunto un controllo comune o un controllo rich edit, una finestra di
 
 1. Creare un progetto Win32, modificare le impostazioni dell'applicazione in modo da creare un'applicazione Windows (non un'app console).
 
-1. In [visualizzazione di risorse](/windows/how-to-create-a-resource-script-file#create-resources), fare doppio clic sulla *RC* file.
+1. In [visualizzazione di risorse](how-to-create-a-resource-script-file.md#create-resources), fare doppio clic sulla *RC* file.
 
 1. Sotto l'opzione di finestra di dialogo, fare doppio clic il **sulle** casella.
 

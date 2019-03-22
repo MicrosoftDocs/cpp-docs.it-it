@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 8382371acfd423f8c6864e816b0357e3ef11718e
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 7cfb2b5426a65298c01c61541020a0f30b673f9c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210978"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328818"
 ---
 # <a name="version-information-editor-c"></a>Editor di informazioni sulla versione (C++)
 
@@ -60,7 +60,7 @@ Quando si modifica il `FILEFLAGS` chiavi nel **Editor di informazioni sulla vers
 
 ### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>Per aggiungere le informazioni sulla versione per un'altra lingua (nuovo blocco di informazioni sulla versione)
 
-1. Aprire una risorsa di informazioni sulla versione facendo doppio clic in [Visualizzazione risorse](../windows/resource-view-window.md).
+1. Aprire una risorsa di informazioni sulla versione facendo doppio clic in [Visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Fare doppio clic all'interno della tabella di informazioni di versione e scegliere **nuovo blocco informazioni sulla versione**.
 
@@ -70,7 +70,7 @@ Quando si modifica il `FILEFLAGS` chiavi nel **Editor di informazioni sulla vers
 
 ### <a name="to-delete-a-version-information-block"></a>Per eliminare un blocco di informazioni sulla versione
 
-1. Aprire la risorsa di informazioni sulla versione facendo doppio clic sull'icona in [Visualizzazione risorse](../windows/resource-view-window.md).
+1. Aprire la risorsa di informazioni sulla versione facendo doppio clic sull'icona in [Visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Fare doppio clic su intestazione del blocco da eliminare e scegliere **Elimina blocco informazioni sulla versione**.
 

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562835"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328389"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Procedura: Includere le risorse in fase di compilazione (C++)
 
@@ -48,7 +48,7 @@ Se si dispone di sezioni nel file RC esistenti che soddisfano una di queste cond
 
 È possibile aggiungere di risorse da altri file al progetto in fase di compilazione elencandoli nella **direttive in fase di compilazione** nella casella il **Inclusioni risorsa** nella finestra di dialogo. Usare la **Inclusioni risorsa** finestra di dialogo per modificare normale disposizione di lavoro tutte le risorse vengono archiviate nel file RC del progetto e tutte le dell'ambiente del progetto [simboli](../windows/symbols-resource-identifiers.md) in `Resource.h`.
 
-Per iniziare, aprire il **Inclusioni risorsa** finestra di dialogo facendo clic su un file RC [visualizzazione risorse](/windows/how-to-create-a-resource-script-file#create-resources), selezionare **Inclusioni risorsa** e prendere nota delle proprietà seguenti:
+Per iniziare, aprire il **Inclusioni risorsa** finestra di dialogo facendo clic su un file RC [visualizzazione risorse](how-to-create-a-resource-script-file.md#create-resources), selezionare **Inclusioni risorsa** e prendere nota delle proprietà seguenti:
 
 | Proprietà | Descrizione |
 |---|---|
@@ -65,7 +65,7 @@ Una volta che vengono apportate modifiche al file di risorse usando il **Inclusi
 
 1. Inserire le risorse in un file script di risorsa con un nome file univoco. Non usare *projectname.rc*, poiché si tratta del nome del file utilizzato per il file di script di risorsa principale.
 
-1. Fare doppio clic sui *RC* del file in [Resource View](/windows/how-to-create-a-resource-script-file#create-resources) e selezionare **Inclusioni risorsa**.
+1. Fare doppio clic sui *RC* del file in [Resource View](how-to-create-a-resource-script-file.md#create-resources) e selezionare **Inclusioni risorsa**.
 
 1. Nel **direttive in fase di compilazione** , aggiungere il [#include](../preprocessor/hash-include-directive-c-cpp.md) direttiva del compilatore di includere il nuovo file di risorse nel file di risorse principale nell'ambiente di sviluppo.
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563082"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328428"
 ---
 # <a name="image-editor-for-icons-c"></a>Image Editor for Icons (C++)
 
@@ -60,7 +60,7 @@ Le risorse grafiche sono le immagini definite per l'applicazione. È possibile d
 
 È anche possibile usare la **Editor di immagini** e il [Editor binario](binary-editor.md) per lavorare con i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. L'editor di risorse di Visual Studio non supporta la modifica di risorse incorporate.
 
-Oltre a creare nuove risorse grafiche, è possibile [importare immagini esistenti](/windows/how-to-copy-resources#import-and-export-resources) per la modifica e quindi aggiungerli al progetto. È anche possibile aprire e modificare le immagini che non fanno parte di un progetto per [modifica delle immagini autonome](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+Oltre a creare nuove risorse grafiche, è possibile [importare immagini esistenti](../windows/how-to-copy-resources.md#import-and-export-resources) per la modifica e quindi aggiungerli al progetto. È anche possibile aprire e modificare le immagini che non fanno parte di un progetto per [modifica delle immagini autonome](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
 
 Per informazioni sul **Editor di immagini**, vedere come [crea un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [modificare un'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [usare uno strumento di disegno](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Utilizzare i colori](../windows/working-with-color-image-editor-for-icons.md), e [tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md).
 
@@ -151,7 +151,7 @@ Per accedere a questa finestra di dialogo, selezionare la **Font** pulsante il *
 
 Ecco un esempio di come aggiungere testo a un'icona in un'applicazione Windows e modificare il tipo di carattere del testo.
 
-1. Creare un'applicazione di moduli di Windows C++. Per informazioni dettagliate, vedere [creazione di un progetto di applicazione Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). Un' *app. ico* file viene aggiunto al progetto per impostazione predefinita.
+1. Creare un'applicazione di moduli di Windows C++. Per informazioni dettagliate, vedere [Procedura: Creare applicazioni di Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Un' *app. ico* file viene aggiunto al progetto per impostazione predefinita.
 
 1. Nelle **Esplora soluzioni**, fare doppio clic sul file *app. ico*. Il **Editor di immagini** verrà aperto.
 
