@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295019"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328532"
 ---
 # <a name="cdbexception-class"></a>Classe CDBException
 
@@ -33,7 +33,7 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|nome|Descrizione|
 |----------|-----------------|
 |[CDBException::m_nRetCode](#m_nretcode)|Contiene un codice restituito Open Database Connectivity (ODBC), di tipo RETCODE.|
 |[CDBException::m_strError](#m_strerror)|Contiene una stringa che descrive l'errore in termini di caratteri alfanumerici.|
@@ -132,7 +132,7 @@ Contiene una stringa che descrive l'errore che ha causato l'eccezione.
 
 Il formato della stringa è il modulo "stato: % s, nativo: % ld, origine: % s", in cui i codici di formato, in ordine, vengono sostituiti dai valori che descrivono:
 
-- Il valore SQLSTATE, una stringa con terminazione null che contiene un codice di errore di cinque caratteri restituiti nella *szSqlState* parametro della funzione ODBC `SQLError`. I valori SQLSTATE sono elencati nell'appendice a [codici di errore ODBC](/previous-versions/windows/desktop/ms714687), nella *riferimento per programmatori ODBC*. Esempio: "S0022".
+- Il valore SQLSTATE, una stringa con terminazione null che contiene un codice di errore di cinque caratteri restituiti nella *szSqlState* parametro della funzione ODBC `SQLError`. I valori SQLSTATE sono elencati nell'appendice a [codici di errore ODBC](/previous-versions/windows/desktop/ms714687(v=vs.85)), nella *riferimento per programmatori ODBC*. Esempio: "S0022".
 
 - Il codice di errore nativo, specifico per l'origine dati, restituito nella *pfNativeError* parametro del `SQLError` (funzione). Esempio: 207.
 
@@ -140,13 +140,13 @@ Il formato della stringa è il modulo "stato: % s, nativo: % ld, origine: % s", 
 
 Il framework interpreta la stringa di errore e inserisce i relativi componenti in `m_strStateNativeOrigin`; se `m_strStateNativeOrigin` contiene informazioni per più di un errore, gli errori sono separati da caratteri di nuova riga. Il framework inserisce il testo dell'errore alfanumerici in `m_strError`.
 
-Per altre informazioni sui codici di usato per effettuare questa stringa, vedere la [SQLError](/previous-versions/windows/desktop/ms716312) funzionare nel *riferimento per programmatori ODBC*.
+Per altre informazioni sui codici di usato per effettuare questa stringa, vedere la [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85)) funzionare nel *riferimento per programmatori ODBC*.
 
 ### <a name="example"></a>Esempio
 
-  Da ODBC: "Stato: S0022, nativo: 207, origine: nome di colonna non valido [Microsoft] [SQL Server Driver ODBC] [SQL Server] 'ColName'"
+  Da ODBC: "Stato: S0022, nativo: 207, origine:\[Microsoft]\[Driver ODBC di SQL Server]\[SQL Server] nome della colonna non valido 'ColName'"
 
-In `m_strStateNativeOrigin`: "State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server]"
+In `m_strStateNativeOrigin`: "Stato: S0022, nativo: 207, origine:\[Microsoft]\[Driver ODBC SQL Server]\[SQL Server]"
 
 In `m_strError`: "Nome colonna non valido 'ColName'"
 
