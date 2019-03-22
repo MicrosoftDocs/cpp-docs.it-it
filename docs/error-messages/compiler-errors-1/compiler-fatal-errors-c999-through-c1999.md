@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 6809ef1640c324e247bd20c83d4622fe27987ae6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328246"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356218"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errori del compilatore irreversibili da C999 a C1999
 
@@ -70,7 +70,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Error|Messaggio|
 |-----------|-------------|
 |[Errore irreversibile C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|ERRORE SCONOSCIUTO Per altre informazioni, scegliere Supporto tecnico dal menu ? di Visual C++ o aprire il file della Guida relativo al supporto tecnico|
-|[Errore irreversibile C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Si è verificato un errore interno del compilatore.<br /><br /> (file del compilatore '*file*', riga *number*)<br /><br /> Per evitare il problema, provare a semplificare o modificare le parti del programma indicate sopra. Per altre informazioni, scegliere Supporto tecnico dal menu ? di Visual C++ o aprire il file della Guida relativo al supporto tecnico|
+|[Errore irreversibile C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|Si è verificato un errore interno del compilatore.<br /> (file del compilatore '*file*', riga *number*)<br /> Per evitare il problema, provare a semplificare o modificare le parti del programma indicate sopra. Per altre informazioni, scegliere Supporto tecnico dal menu ? di Visual C++ o aprire il file della Guida relativo al supporto tecnico|
 |[Errore irreversibile C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|Il compilatore ha esaurito lo spazio dell'heap durante il passaggio 2|
 |[Errore irreversibile C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|il conteggio degli errori supera *number*. Interruzione della compilazione|
 |[Errore irreversibile C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|fine del file imprevista|
@@ -78,7 +78,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore irreversibile C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|'*string*' di contrassegno non riconosciuto in '*option*'|
 |[Errore irreversibile C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|nessun file di input specificato|
 |[Errore irreversibile C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|limite del compilatore: macro eccessivamente annidate|
-|[Errore irreversibile C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fine file imprevista durante la ricerca dell'intestazione precompilata. Si è omesso di aggiungere ' #include <*file*>' all'origine?|
+|[Errore irreversibile C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|fine file imprevista durante la ricerca dell'intestazione precompilata. Si è omesso di aggiungere ' #include \< *file*>' all'origine?|
 |[Errore irreversibile C1012](fatal-error-c1012.md)|parentesi non corrispondenti: '*character*'' mancante|
 |[Errore irreversibile C1013](fatal-error-c1013.md)|limite del compilatore: troppe parentesi aperte|
 |[Errore irreversibile C1014](fatal-error-c1014.md)|troppi file di inclusione: profondità = *number*|

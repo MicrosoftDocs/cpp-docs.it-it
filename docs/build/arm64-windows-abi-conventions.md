@@ -1,12 +1,12 @@
 ---
 title: Panoramica delle convenzioni ABI ARM64
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816542"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356192"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -191,7 +191,7 @@ Per restituire in base al valore che non può essere passato tramite registri, i
 
 In seguito l'ABI da ARM, lo stack deve rimanere a 16 byte sempre l'allineamento. AArch64 contiene una funzionalità hardware che genera l'errore di allineamento dello stack errori ogni volta che viene eseguito un carico di SP relativo o l'archivio e stored procedure è di 16 byte non allineati. Windows esegue con questa funzionalità è abilitata in qualsiasi momento.
 
-Funzioni che allocano 4 KB o più importante dello stack devono garantire che ogni pagina prima che la pagina finale sia elaborata in ordine, non garantendo così nessun codice può "andare oltre" i guard page che Windows utilizza per espandere lo stack. In genere questa operazione viene eseguita `__chkstk` helper, che usa una convenzione di chiamata personalizzata che supera l'allocazione totale dello stack diviso per 16 in x8.
+Funzioni che allocano 4 KB o più importante dello stack devono garantire che ogni pagina prima che la pagina finale sia elaborata in ordine, non garantendo così nessun codice può "andare oltre" i guard page che Windows utilizza per espandere lo stack. In genere questa operazione viene eseguita `__chkstk` helper, che usa una convenzione di chiamata personalizzata che supera l'allocazione totale dello stack diviso per 16 in x15.
 
 ## <a name="red-zone"></a>Zona rossa
 

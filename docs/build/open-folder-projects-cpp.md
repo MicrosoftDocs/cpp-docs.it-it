@@ -1,15 +1,15 @@
 ---
 title: Supporto per Apri cartella per i sistemi di compilazione C++ in Visual Studio
-ms.date: 01/21/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: a7e352d7978ba5c973d779224639006fa984e4f0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827219"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356088"
 ---
 # <a name="open-folder-projects-for-c"></a>Progetti Apri cartella per C++
 
@@ -49,7 +49,7 @@ Il comportamento di IntelliSense e dell'esplorazione dipendono in parte dalla co
       "includePath": [ "include" ],
       "defines": [ "_DEBUG" ],
       "compilerSwitches": "/std:c++17",
-      "intelliSenseMode": "msvc-x64",
+      "intelliSenseMode": "windows-msvc-x64",
       "forcedInclude": [ "pch.h" ],
       "undefines": []
     }
@@ -64,7 +64,7 @@ Per altre informazioni, vedere [Riferimento allo schema CppProperties](cppproper
 
 ![Configura attività di Apri cartella](media/open-folder-config-tasks.png)
 
-Viene creato o aperto il file `tasks.vs.json` nella cartella .vs creata da Visual Studio nella cartella di progetto radice. È possibile definire un'attività arbitraria in questo file, quindi chiamarla usando il nome specificato dal menu di scelta rapida **Esplora soluzioni**. L'esempio seguente visualizza un file tasks.vs.json che definisce una singola attività. `taskName` definisce il nome visualizzato nel menu di scelta rapida. `appliesTo` definisce i file sui quali può essere eseguito il comando. La proprietà `command` fa riferimento alla variabile di ambiente COMSPEC, che identifica il percorso per la console (cmd.exe in Windows). È anche possibile fare riferimento a variabili di ambiente che vengono dichiarate in CppProperties.json o CMakeSettings.json. La proprietà `args` specifica la riga di comando da chiamare. La macro `${file}` recupera il file selezionato in **Esplora soluzioni**. Nell'esempio seguente viene visualizzato il nome del file con estensione cpp attualmente selezionato.
+Ciò consente di creare (o aperto) il **Tasks** file nella cartella. VS che Visual Studio crea nella cartella radice del progetto. È possibile definire un'attività arbitraria in questo file, quindi chiamarla usando il nome specificato dal menu di scelta rapida **Esplora soluzioni**. L'esempio seguente visualizza un file tasks.vs.json che definisce una singola attività. `taskName` definisce il nome visualizzato nel menu di scelta rapida. `appliesTo` definisce i file sui quali può essere eseguito il comando. La proprietà `command` fa riferimento alla variabile di ambiente COMSPEC, che identifica il percorso per la console (cmd.exe in Windows). È anche possibile fare riferimento a variabili di ambiente che vengono dichiarate in CppProperties.json o CMakeSettings.json. La proprietà `args` specifica la riga di comando da chiamare. La macro `${file}` recupera il file selezionato in **Esplora soluzioni**. Nell'esempio seguente viene visualizzato il nome del file con estensione cpp attualmente selezionato.
 
 ```json
 {
@@ -87,7 +87,7 @@ Per altre informazioni, vedere [Riferimento allo schema Tasks.vs.json](tasks-vs-
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurare i parametri di debug con launch.vs.json
 
-Per personalizzare gli argomenti della riga di comando del programma, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e selezionare **Impostazioni per debug e avvio**. Viene aperto un file `launch.vs.json` esistente o se non esiste nessun file di questo tipo viene creato un nuovo file, popolato con le informazioni sul programma selezionato.
+Per personalizzare gli argomenti della riga di comando del programma, fare clic con il pulsante destro del mouse sul file eseguibile in **Esplora soluzioni** e selezionare **Impostazioni per debug e avvio**. Verrà aperto un oggetto esistente **Launch** file, o se ne esiste alcuno, creato un nuovo file di pre-popolato con le informazioni sul programma è stato selezionato.
 
 Per specificare argomenti aggiuntivi, aggiungerli alla matrice JSON `args`, come illustrato nell'esempio seguente:
 

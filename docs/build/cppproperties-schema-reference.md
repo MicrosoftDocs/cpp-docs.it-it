@@ -1,14 +1,14 @@
 ---
 title: Informazioni di riferimento sullo schema CppProperties.json
-ms.date: 03/05/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake in Visual C++
-ms.openlocfilehash: fd655de3313dd95eb3fcefaeba21e703d32e860a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 43ffa0e92649fe233c6a743d4b64a2749cb28f5a
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826970"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356101"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Informazioni di riferimento sullo schema CppProperties.json
 
@@ -115,7 +115,9 @@ Una configurazione può avere una delle proprietà seguenti:
 |`compilerSwitches`|Una o più opzioni aggiuntive che possono influire sul comportamento di IntelliSense|
 |`forcedInclude`|L'intestazione da includere automaticamente in ogni unità di compilazione (con mapping a /FI per MSVC o -include per Clang)|
 |`undefines`|L'elenco delle macro la cui definizione deve essere rimossa (con mapping a /U per MSVC)|
-|`intelliSenseMode`|Il motore IntelliSense da usare. È possibile specificare varianti di architettura specifiche per MSVC, gcc o Clang:<br/><br/>- msvc-x86 (predefinito)<br/>- msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|Il motore IntelliSense da usare. È possibile specificare varianti di architettura specifiche per MSVC, gcc o Clang:<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+
+Nota: I valori `msvc-x86` e `msvc-x64` sono supportati per motivi di compatibilità solo. Usare il `windows-msvc*` varianti.
 
 ## <a name="custom-configurations"></a>Configurazioni personalizzate
 
@@ -186,7 +188,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "inheritEnvironments": [
@@ -199,7 +201,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }
@@ -227,7 +229,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "environments": [
@@ -246,7 +248,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }

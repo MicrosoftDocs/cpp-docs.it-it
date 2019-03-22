@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 101181e72aaf30ca8bc1d0e4191649fcc4155a64
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328343"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356257"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Del compilatore C4800 avvisi tramite C5999
 
@@ -169,7 +169,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 ## <a name="warning-messages"></a>Messaggi di avviso
 
 |Avviso|Messaggio|
-|-------------|-------------|
+|-------------|------------|
 |[Avviso (livello 4) del compilatore C4800](compiler-warning-level-3-c4800.md)| La conversione implicita da '*tipo*' in bool. Possibile perdita di informazioni |
 |[Avviso del compilatore (livello 1) C4803](compiler-warning-level-1-c4803.md)|«*metodo*': il metodo raise ha una classe di archiviazione diverso da quello dell'evento, '*evento*»|
 |[Avviso del compilatore (livello 1) C4804](compiler-warning-level-1-c4804.md)|«*operazione*': utilizzo non affidabile del tipo 'bool' nell'operazione|

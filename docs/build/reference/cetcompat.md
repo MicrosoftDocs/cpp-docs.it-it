@@ -1,21 +1,21 @@
 ---
-title: / CETCOMPAT (compatibile con la tecnologia di imposizione del flusso di controllo)
+title: / CETCOMPAT (CET Shadow Stack compatibile)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809847"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356015"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (compatibile con la tecnologia di imposizione del flusso di controllo)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT (CET Shadow Stack compatibile)
 
-Specifica se contrassegnare un'immagine eseguibile come compatibile con tecnologia di imposizione del flusso di controllo (CET).
+Specifica se contrassegnare un'immagine eseguibile come compatibile con la tecnologia di imposizione (CET) Shadow Stack di flusso di controllo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,13 +24,13 @@ Specifica se contrassegnare un'immagine eseguibile come compatibile con tecnolog
 ## <a name="arguments"></a>Argomenti
 
 **NO**<br/>
-Specifica che il file eseguibile non deve essere contrassegnato compatibile con CET.
+Specifica che il file eseguibile non deve essere contrassegnato compatibile con CET Shadow Stack.
 
 ## <a name="remarks"></a>Note
 
-La tecnologia di imposizione del flusso di controllo (CET) è una funzionalità del processore del computer che fornisce funzionalità per difendersi da determinati tipi di attacchi malware. Per altre informazioni, vedere [Intel del flusso di controllo imposizione Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
+Flusso di controllo la tecnologia di imposizione (CET) Shadow Stack è una funzionalità del processore del computer che fornisce funzionalità per difendersi da programmatori orientati restituito (ROP) base attacchi malware. Per altre informazioni, vedere [Intel del flusso di controllo imposizione Technology Preview](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
-Il **/CETCOMPAT** l'opzione del linker indica al linker di contrassegnare il file binario come CET compatibili. **/CETCOMPAT:No** contrassegna il file binario come non compatibile con CET. Se entrambe le opzioni vengono specificate nella riga di comando, viene utilizzato il penultimo specificato. Questa opzione è attualmente applicabile solo alle architetture x86 e x64.
+Il **/CETCOMPAT** l'opzione del linker indica al linker di contrassegnare il file binario come compatibile con CET Shadow Stack. **/CETCOMPAT:No** contrassegna il file binario come non compatibile con CET Shadow Stack. Se entrambe le opzioni vengono specificate nella riga di comando, viene utilizzato il penultimo specificato. Questa opzione è attualmente applicabile solo alle architetture x86 e x64.
 
 Il **/CETCOMPAT** opzione è disponibile a partire il set di strumenti di Visual Studio 2019 Preview 3.
 

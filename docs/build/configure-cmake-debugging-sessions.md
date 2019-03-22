@@ -1,14 +1,14 @@
 ---
-title: Configurare CMake in Visual Studio sessioni di debug
-ms.date: 03/05/2019
+title: Configurare le sessioni di debug di CMake in Visual Studio
+ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 9a4dd009544a4590c336697ba2162eec45718869
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827929"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356166"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurare le sessioni di debug di CMake
 
@@ -20,7 +20,7 @@ Tutte le destinazioni CMake eseguibili sono visualizzate nell'elenco a discesa *
 
 ## <a name="customize-debugger-settings"></a>Personalizzare le impostazioni del debugger
 
-Per personalizzare le impostazioni del debugger per qualsiasi destinazione CMake eseguibile nel progetto, fare clic con il pulsante destro del mouse sul file CMakeLists.txt specifico e selezionare **Impostazioni per debug e avvio**. Quando si seleziona una destinazione CMake nel sottomenu, un file denominato `launch.vs.json` viene creato. Questo file viene prepopolato con informazioni sulla destinazione CMake selezionata e consente di specificare parametri aggiuntivi, come argomenti del programma o tipo di debugger. Fare riferimento a qualsiasi chiave in un `CMakeSettings.json` file, con anteporre `cmake.` in `launch.vs.json`. L'esempio seguente illustra un semplice `launch.vs.json` file che esegue il pull nel valore della `remoteCopySources` chiave nel `CMakeSettings.json` file per la configurazione attualmente selezionata:
+Per personalizzare le impostazioni del debugger per qualsiasi destinazione CMake eseguibile nel progetto, fare clic con il pulsante destro del mouse sul file CMakeLists.txt specifico e selezionare **Impostazioni per debug e avvio**. (Oppure selezionare una destinazione nel **visualizzazione di destinazioni** nelle **Esplora soluzioni**.) Quando si seleziona una destinazione CMake nel sottomenu, un file denominato **Launch** viene creato. Questo file viene prepopolato con informazioni sulla destinazione CMake selezionata e consente di specificare parametri aggiuntivi, come argomenti del programma o tipo di debugger. Fare riferimento a qualsiasi chiave in un **Cmakesettings** file, anteporre con `cmake.` nelle **Launch**. L'esempio seguente illustra un semplice **Launch** file che estrae il valore del `remoteCopySources` chiave nel **Cmakesettings** file per la configurazione attualmente selezionata:
 
 ```json
 {
@@ -38,11 +38,11 @@ Per personalizzare le impostazioni del debugger per qualsiasi destinazione CMake
 }
 ```
 
-Non appena si salva il `launch.vs.json` file, in cui viene creata una voce di **elemento di avvio** elenco a discesa con il nuovo nome. Modificando il `launch.vs.json` file, è possibile creare molte configurazioni di debug nel modo desiderato per qualsiasi numero di destinazioni CMake.
+Non appena si salva il **Launch** file, in cui viene creata una voce il **elemento di avvio** elenco a discesa con il nuovo nome. Modificando la **Launch** file, è possibile creare molte configurazioni di debug nel modo desiderato per qualsiasi numero di destinazioni CMake.
 
-## <a name="support-for-cmakesettings-variables"></a>Supporto per le variabili CMakeSettings
+## <a name="support-for-cmakesettings-variables"></a>Supporto delle variabili CMakeSettings
 
- `Launch.vs.json` supporta le variabili dichiarate in `CMakeSettings.json` (vedere sotto) e che sono applicabili per la configurazione attualmente selezionato. Include anche una chiave denominata `currentDir`, che imposta la directory corrente dell'app che avvia l'operazione:
+ **Launch** supporta le variabili dichiarate in **Cmakesettings** (vedere sotto) e che sono applicabili per la configurazione attualmente selezionato. Include anche una chiave denominata `currentDir` che imposta la directory corrente dell'applicazione di avvio:
 
 ```json
 {
@@ -67,4 +67,4 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 [Personalizzare le impostazioni di compilazione di CMake](customize-cmake-settings.md)<br/>
 [Configurare le sessioni di debug di CMake](configure-cmake-debugging-sessions.md)<br/>
 [Distribuire, eseguire e sottoporre a debug il progetto Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
-[Riferimento di configurazione CMake predefinite](cmake-predefined-configuration-reference.md)<br/>
+[Informazioni di riferimento sulle configurazioni predefinite CMake](cmake-predefined-configuration-reference.md)<br/>

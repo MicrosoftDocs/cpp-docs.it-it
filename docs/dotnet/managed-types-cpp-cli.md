@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746917"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356179"
 ---
 # <a name="managed-types-ccli"></a>Tipi gestiti (C++/CLI)
 
@@ -46,19 +46,21 @@ La tabella seguente illustra le parole chiave per i tipi incorporati di Visual C
 
 |Tipo di Visual C++|Tipo .NET Framework|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**char con segno** (vedere [/J](../build/reference/j-default-char-type-is-unsigned.md) per altre informazioni)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**doppie** e **long double**|**System.Double**|
-|**float**|**System.Single**|
-|**int**, **tipo signed int**, **long**, e **lungo firmato**|**System.Int32**|
-|**int senza segno** e **long senza segno**|**System.UInt32**|
-|**__int64** e **firmato __int64**|**System.Int64**|
-|**unsigned __int64**|**System.UInt64**|
-|**brevi** e **short con segno**|**System.Int16**|
-|**unsigned short**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**char con segno** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**brevi** e **short con segno**|<xref:System.Int16?displayProperty=nameWithType>|
+|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**, **tipo signed int**, **long**, e **lungo firmato**|<xref:System.Int32?displayProperty=nameWithType>|
+|**int senza segno** e **long senza segno**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**__int64** e **firmato __int64**|<xref:System.Int64?displayProperty=nameWithType>|
+|**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**doppie** e **long double**|<xref:System.Double?displayProperty=nameWithType>|
+
+Per altre informazioni sull'opzione del compilatore sul valore predefinito di a con o senza segno **char**, vedere [/J (il tipo char predefinito è unsigned)](../build/reference/j-default-char-type-is-unsigned.md).
 
 ## <a name="version_issues"></a> Problemi di versione per tipi di valore annidati in tipi nativi
 
