@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289962"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417001"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|nome|Descrizione|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Costruisce un `CEdit` oggetto controllo.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|nome|Descrizione|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Determina se un'operazione di controllo di modifica può essere annullata.|
 |[CEdit::CharFromPos](#charfrompos)|Recupera gli indici di riga e il carattere del carattere più vicino in una posizione specificata.|
@@ -570,11 +570,11 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il limite testo corrente, espressa in byte, per questo `CEdit` oggetto.
+Il limite testo corrente, in TCHARs, per questo `CEdit` oggetto.
 
 ### <a name="remarks"></a>Note
 
-Il limite di testo è la quantità massima di testo, in byte, che può accettare il controllo di modifica.
+Il limite di testo è la quantità massima di testo in TCHARs, che può accettare il controllo di modifica.
 
 > [!NOTE]
 >  Questa funzione membro è disponibile a partire da Windows 95 e Windows NT 4.0.
@@ -606,14 +606,14 @@ int GetLine(
 Specifica il numero di riga da recuperare da un'istruzione di controllo di modifica. Numeri di riga sono in base zero. un valore pari a 0 specifica la prima riga. Questo parametro viene ignorato da un controllo di modifica a riga singola.
 
 *lpszBuffer*<br/>
-Punta al buffer che riceve una copia della riga. La prima parola del buffer deve specificare il numero massimo di caratteri che può essere copiato nel buffer.
+Punta al buffer che riceve una copia della riga. La prima parola del buffer deve specificare il numero massimo di TCHARs che può essere copiato nel buffer.
 
 *nMaxLength*<br/>
-Specifica il numero massimo di byte che può essere copiato nel buffer. `GetLine` Questo valore viene inserito nella prima parola del *lpszbuffer viene* prima di effettuare la chiamata a Windows.
+Specifica il numero massimo di caratteri TCHAR che può essere copiato nel buffer. `GetLine` Questo valore viene inserito nella prima parola del *lpszbuffer viene* prima di effettuare la chiamata a Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di byte attualmente copiati. Il valore restituito è 0 se il numero di riga specificato da *nIndex* è maggiore del numero di righe nel controllo di modifica.
+Numero di caratteri attualmente copiati. Il valore restituito è 0 se il numero di riga specificato da *nIndex* è maggiore del numero di righe nel controllo di modifica.
 
 ### <a name="remarks"></a>Note
 
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>Parametri
 
 *nChars*<br/>
-Specifica la lunghezza, in byte, del testo che l'utente può immettere. Se questo parametro è 0, lunghezza del testo è impostata su UINT_MAX byte. Comportamento predefinito.
+Specifica la lunghezza (in TCHARs) del testo che l'utente può immettere. Se questo parametro è 0, lunghezza del testo è impostata su UINT_MAX byte. Comportamento predefinito.
 
 ### <a name="remarks"></a>Note
 
