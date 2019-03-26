@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 325cdb86f61f658776c69057022c005c389492d3
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 3146c94879532a5c58208369bb6d131a3a027c33
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57813903"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278476"
 ---
 # <a name="porting-from-unix-to-win32"></a>Porting da UNIX a Win32
 
@@ -38,12 +38,6 @@ L'elenco seguente include le risorse Microsoft e di terze parti per il porting e
 La [UNIX Custom Application Migration Guide](https://technet.microsoft.com/library/bb656290.aspx) (Guida per la migrazione di applicazioni personalizzate UNIX) include informazioni tecniche sulla migrazione del codice da UNIX all'ambiente Win32.
 
 La [Unix Migration Project Guide](https://technet.microsoft.com/library/bb656287.aspx) (Guida per i progetti di migrazione UNIX) costituisce un'integrazione della guida per la migrazione di applicazioni personalizzate UNIX e include informazioni di carattere generale sulla migrazione di progetti sostanziali da UNIX a Win32. Fornisce inoltre consigli sugli aspetti da considerare nelle diverse fasi della migrazione dei progetti.
-
-### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows Services for UNIX (SFU)
-
-Microsoft Windows Services for UNIX (SFU) offre una gamma completa di servizi multipiattaforma per integrare Windows in ambienti esistenti basati su UNIX. Services for UNIX include condivisione file, amministrazione e accesso remoto, sincronizzazione delle password, gestione delle directory comuni, un set comune di utilità e una shell.
-
-[Servizi Windows per UNIX](http://www.microsoft.com/downloads/details.aspx?FamilyID=896c9688-601b-44f1-81a4-02878ff11778&displaylang=en)
 
 ### <a name="interopsystemscom"></a>InteropSystems.com
 

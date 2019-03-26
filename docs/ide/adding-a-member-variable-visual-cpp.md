@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694413"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328961"
 ---
 # <a name="add-a-member-variable"></a>Aggiungere una variabile membro
 
-È possibile aggiungere una variabile membro a una classe usando la Visualizzazione classi. Le variabili membro possono essere per [lo scambio di dati e la convalida di dati](../mfc/dialog-data-exchange-and-validation.md) oppure possono essere generiche. L'aggiunta guidata variabile membro è progettata per ottenere le informazioni rilevanti e usarle per l'inserimento di elementi nei file di origine nei percorsi appropriati. È possibile aggiungere una variabile membro dall'[Editor di finestre](../windows/dialog-editor.md) in [Visualizzazione risorse](../windows/resource-view-window.md) o dalla [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code).
+È possibile aggiungere una variabile membro a una classe usando la Visualizzazione classi. Le variabili membro possono essere per [lo scambio di dati e la convalida di dati](../mfc/dialog-data-exchange-and-validation.md) oppure possono essere generiche. L'aggiunta guidata variabile membro è progettata per ottenere le informazioni rilevanti e usarle per l'inserimento di elementi nei file di origine nei percorsi appropriati. È possibile aggiungere una variabile membro dall'[Editor di finestre](../windows/dialog-editor.md) in [Visualizzazione risorse](../windows/how-to-create-a-resource-script-file.md#create-resources) o dalla [Visualizzazione classi](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 > Quando si progetta e implementa una finestra di dialogo, può essere utile usare l'Editor di finestre per aggiungere i controlli della finestra di dialogo e quindi implementare le variabili membro dei controlli.
@@ -104,7 +104,7 @@ Questa procedura guidata consente di aggiungere una dichiarazione di variabile m
 
   Imposta l'ID della variabile di controllo da aggiungere. Selezionare dall'elenco l'ID per il tipo di controllo per cui aggiungere la variabile membro. L'elenco è attivo solo quando la casella **Control variable** (Variabile di controllo) è selezionata ed è limitato agli ID per i controlli già aggiunti alla finestra di dialogo. Ad esempio, per il pulsante **OK** standard, l'ID controllo è **IDOK**.
 
-  |Opzione|Descrizione|
+  |Opzione|Description|
   |------------|-----------------|
   |**Controllo**|Questa opzione è impostata per impostazione predefinita per il tipo di controllo. Gestisce il controllo e non lo stato o il contenuto del controllo (come è possibile fare con una casella di riepilogo, una casella combinata o una casella di modifica).|
   |**Valore**|Questa opzione è disponibile per i tipi di controllo che possono contenere un valore o visualizzare uno stato, ad esempio una casella di modifica o una casella di controllo. È anche disponibile per i tipi di controllo per i quali si può gestire un intervallo, dei contenuti o lo stato. Per altre informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](#dialog-box-controls-and-variable-types).|
@@ -163,7 +163,7 @@ La tabella seguente descrive tutti i tipi di controllo di finestra di dialogo su
 |Controllo Rich Edit 2|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|N. max caratteri|
 |Controllo Rich Edit|RICHEDIT|`CRichEditCtrl`|`CString`|N. max caratteri|
 |Barra di scorrimento (verticale o orizzontale|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Valore min/valore max|
-|Dispositivo di scorrimento|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valore min/valore max|
+|Slider (controllo)|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valore min/valore max|
 |Controllo Spin|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Nessuno; solo controllo|N/D|
 |Controllo Tab|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Nessuno; solo controllo|N/D|
 |Controllo Tree|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Nessuno; solo controllo|N/D|
