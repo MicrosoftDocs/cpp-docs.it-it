@@ -1,15 +1,15 @@
 ---
 title: Sintassi delle espressioni lambda
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 030960cf8a301575396231cec1a37ff7bed2667f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577471"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476864"
 ---
 # <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda
 
@@ -19,11 +19,11 @@ In questo argomento vengono descritti la sintassi e gli elementi strutturali del
 
 Quando si scrive codice, è probabilmente utilizzare puntatori a funzione e gli oggetti funzione per risolvere i problemi ed eseguire calcoli, specialmente quando si usa [algoritmi della libreria Standard C++](../cpp/algorithms-modern-cpp.md). I puntatori a funzione e gli oggetti funzione presentano vantaggi e svantaggi: i puntatori a funzione, ad esempio, presentano un sovraccarico sintattico minimo, ma non mantengono lo stato interno a un ambito, mentre gli oggetti funzione possono mantenere lo stato, ma richiedono il sovraccarico sintattico di una definizione di classe.
 
-Un'espressione lambda combina i vantaggi dei puntatori a funzione e degli oggetti funzione, ma non gli svantaggi. Analogamente a un oggetto funzione, un'espressione lambda è flessibile e può mantenere lo stato, ma a differenza di un oggetto funzione, la sua sintassi compressa non richiede una definizione di classe esplicita. Usando le espressioni lambda, è possibile scrivere codice meno complesso e meno soggetto agli errori del codice per un oggetto funzione equivalente.
+Un'espressione lambda combina i vantaggi dei puntatori a funzione e degli oggetti funzione, ma non gli svantaggi. Analogamente a un oggetto funzione, un'espressione lambda è flessibile e può mantenere lo stato, ma a differenza di un oggetto funzione, la sua sintassi compressa non richiede una definizione di classe esplicita. Utilizzando le espressioni lambda, è possibile scrivere codice meno complesso e meno soggetto agli errori del codice per un oggetto funzione equivalente.
 
 Negli esempi seguenti viene confrontato l'utilizzo di un'espressione lambda all'utilizzo di un oggetto funzione. Nel primo esempio viene usata un'espressione lambda per mostrare sulla console se ogni elemento di un oggetto `vector` è pari o dispari. Nel secondo esempio viene usato un oggetto funzione per eseguire la stessa attività.
 
-## <a name="example-1-using-a-lambda"></a>Esempio 1: Utilizzo di un'espressione lambda
+## <a name="example-1-using-a-lambda"></a>Esempio 1: Tramite una funzione Lambda
 
 Questo esempio passa un'espressione lambda per il **for_each** (funzione). L'espressione lambda stampa un risultato che indica se ogni elemento in un oggetto `vector` è pari o dispari.
 
@@ -39,7 +39,7 @@ using namespace std;
 
 int main()
 {
-   // Create a vector object that contains 10 elements.
+   // Create a vector object that contains 9 elements.
    vector<int> v;
    for (int i = 1; i < 10; ++i) {
       v.push_back(i);
@@ -64,8 +64,6 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
-
 ```Output
 1 is odd
 2 is even
@@ -83,7 +81,7 @@ There are 4 even numbers in the vector.
 
 Nell'esempio, il terzo argomento per il **for_each** funzione è un'espressione lambda. La parte `[&evenCount]` specifica la clausola di acquisizione dell'espressione, `(int n)` specifica l'elenco di parametri, mentre la parte rimanente specifica il corpo dell'espressione.
 
-## <a name="example-2-using-a-function-object"></a>Esempio 2: Utilizzo di un oggetto funzione
+## <a name="example-2-using-a-function-object"></a>Esempio 2: Uso di un oggetto (funzione)
 
 Talvolta un'espressione lambda potrebbe risultare troppo complessa da gestire per ampliare l'esempio precedente. L'esempio seguente usa un oggetto funzione, anziché un'espressione lambda, in combinazione con il **for_each** funzione per produrre gli stessi risultati di esempio 1. In entrambi gli esempi viene memorizzato il conteggio dei numeri pari in un oggetto `vector`. Per mantenere lo stato dell'operazione, la classe `FunctorClass` archivia la variabile `m_evenCount` per riferimento come variabile membro. Per eseguire l'operazione `FunctorClass` implementa l'operatore di chiamata di funzione, **Operator ()**. Il compilatore di Visual C++ genera codice analogo per dimensioni e prestazioni al codice dell'espressione lambda dell'Esempio 1. Per un problema di base simile a quello presentato in questo articolo, la progettazione più semplice delle espressioni lambda è probabilmente preferibile alla progettazione dell'oggetto funzione. Se tuttavia si prevede che la funzionalità possa richiedere un'espansione significativa in futuro, usare la progettazione dell'oggetto funzione in modo che la manutenzione del codice risulti più facile.
 
@@ -129,7 +127,7 @@ private:
 
 int main()
 {
-    // Create a vector object that contains 10 elements.
+    // Create a vector object that contains 9 elements.
     vector<int> v;
     for (int i = 1; i < 10; ++i) {
         v.push_back(i);
@@ -145,8 +143,6 @@ int main()
         << " even numbers in the vector." << endl;
 }
 ```
-
-## <a name="output"></a>Output
 
 ```Output
 1 is odd

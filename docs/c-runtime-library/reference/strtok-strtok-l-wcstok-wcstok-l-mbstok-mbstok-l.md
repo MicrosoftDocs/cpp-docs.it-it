@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _mbstok_l
 - _mbstok
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416962"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476916"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -81,11 +81,11 @@ wchar_t *wcstok_l(
    _locale_t locale
 );
 unsigned char *_mbstok(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit
 );
 unsigned char *_mbstok_l(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit,
    _locale_t locale
 );
@@ -104,7 +104,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore al successivo token trovato *strToken*. Restituiscono **NULL** quando non vengono trovati più alcun token. Ogni chiamata Modifica *strToken* sostituendo un carattere null per il primo delimitatore che si verifica dopo che il token restituito.
+Restituisce un puntatore al successivo token trovato *strToken*. Le funzioni restituiscono **NULL** quando non vengono trovati più alcun token. Ogni chiamata Modifica *strToken* sostituendo un carattere null per il primo delimitatore che si verifica dopo che il token restituito.
 
 ## <a name="remarks"></a>Note
 
@@ -115,7 +115,9 @@ Il **strtok** funzione trova il token successivo nella *strToken*. Il set di car
 
 La prima chiamata a **strtok**, la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token nel *strToken*, il token con un carattere null di terminazione. Ulteriori token può essere interrotta dal resto di *strToken* da una serie di chiamate a **strtok**. Ogni chiamata a **strtok** modificato *strToken* inserendo un carattere null dopo la **token** restituito dalla chiamata. Il token successivo da leggere *strToken*, chiamare **strtok** con un **NULL** value per il *strToken* argomento. Il **NULL** *strToken* argomento cause **strtok** per cercare il token successivo nella versione modificata *strToken*. Il *strDelimit* argomento può accettare qualsiasi valore da una chiamata a quella successiva in modo che il set di delimitatori può variare.
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md).
+
+Le versioni di queste funzioni senza il **l** suffisso usare le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Ogni funzione usa una variabile statica thread-local per la suddivisione della stringa in token. Più thread possono quindi chiamare contemporaneamente queste funzioni senza effetti indesiderati. Tuttavia, all'interno di un singolo thread, è molto probabile che l'esecuzione interleaved di chiamate a una di queste funzioni causi il danneggiamento dei dati e risultati non accurati. Quando si analizzano stringhe diverse, completare l'analisi di una stringa prima di iniziare ad analizzare la successiva. Tenere anche conto del potenziale pericolo quando si chiama una di queste funzioni da un ciclo in cui viene chiamata un'altra funzione. Se l'altra funzione usa una di queste funzioni, ne risulterà una sequenza interleaved di chiamate con conseguente danneggiamento dei dati.

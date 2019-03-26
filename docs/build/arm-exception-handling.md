@@ -2,12 +2,12 @@
 title: Gestione delle eccezioni ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814540"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476942"
 ---
 # <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
@@ -57,7 +57,7 @@ I record .pdata in un'immagine in formato PE sono una matrice ordinata di elemen
 
 Ogni record .pdata per ARM è lungo 8 byte. Il formato generale di un record posiziona l'indirizzo RVA (Relative Virtual Address) dell'inizio della funzione nella prima parola a 32 bit, seguita da una seconda parola che contiene un puntatore a un blocco .xdata di lunghezza variabile oppure una parola compressa che descrive una sequenza di rimozione di una funzione canonica, come mostrato in questa tabella:
 
-|Offset parola|Bit|Scopo|
+|Offset parola|BITS|Scopo|
 |-----------------|----------|-------------|
 |0|0-31|*Funzione avviare RVA* è il RVA a 32 bit dell'inizio della funzione. Se la funzione contiene codice Thumb, è necessario impostare il bit inferiore di questo indirizzo.|
 |1|0-1|*Flag* è un campo a 2 bit che indica come interpretare i restanti 30 bit della seconda parola. pdata. Se *Flag* è 0, quindi i bit restanti formano un' *RVA informazioni eccezione* (con i due bit inferiori implicitamente 0). Se *Flag* è diverso da zero, i bit restanti formano una *Data di rimozione compressi* struttura.|
@@ -69,7 +69,7 @@ Per le funzioni i cui prologhi ed epiloghi seguono la forma canonica descritta s
 
 Questa tabella mostra il formato di un record .pdata che contiene dati di rimozione compressi:
 
-|Offset parola|Bit|Scopo|
+|Offset parola|BITS|Scopo|
 |-----------------|----------|-------------|
 |0|0-31|*Funzione avviare RVA* è il RVA a 32 bit dell'inizio della funzione. Se la funzione contiene codice Thumb, è necessario impostare il bit inferiore di questo indirizzo.|
 |1|0-1|*Flag* è un campo a 2 bit che ha i seguenti significati:<br /><br />-00 = compresso di rimozione dei dati non utilizzati; bit restanti punti al record. xdata.<br />-01 = compresso dei dati di rimozione.<br />-10 = compresso dei dati in cui la funzione si presuppone che non abbia un prologo di rimozione. Si rivela utile per la descrizione dei frammenti di funzione non contigui all'inizio della funzione.<br />-11 = riservato.|
@@ -102,7 +102,7 @@ Ai fini della discussione seguente, due pseudo flag vengono ricavati *Stack rego
 
 I prologhi per le funzioni canoniche possono contenere fino a 5 istruzioni (tenere presente che 3a e 3b si escludono a vicenda):
 
-|Istruzione|Opcode è considerato presente se:|Dimensione|Opcode|Codici di rimozione|
+|Istruzione|Il codice operativo è considerato presente se:|Dimensione|Codice operativo|Codici di rimozione|
 |-----------------|-----------------------------------|----------|------------|------------------|
 |1|*H*==1|16|`push {r0-r3}`|04|
 |2|*C*= = 1 o *L*= = 1 o *R*= = 0 o PF==1 = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
@@ -140,7 +140,7 @@ Le istruzioni 2 e 4 sono impostate in base alla necessità o meno di un'operazio
 
 Gli epiloghi per le funzioni canoniche hanno un formato analogo, ma in ordine inverso e con alcune opzioni aggiuntive. L'epilogo può contenere fino a 5 istruzioni e la sua forma dipende strettamente dalla forma del prologo.
 
-|Istruzione|Opcode è considerato presente se:|Dimensione|Opcode|
+|Istruzione|Il codice operativo è considerato presente se:|Dimensione|Codice operativo|
 |-----------------|-----------------------------------|----------|------------|
 |6|*Regolazione dello stack*! = 0 e *EF*= = 0|16/32|`add   sp,sp,#xx`|
 |7|*R*= = 1 e *Reg*! = 7|32|`vpop  {d8-dE}`|
@@ -164,7 +164,7 @@ Quando il formato di rimozione compresso non è sufficiente per descrivere la ri
 
 1. Un'intestazione da 1 o 2 parole che descrive la dimensione complessiva della struttura .xdata e fornisce dati di funzione chiave. La seconda parola è presente solo se il *conteggio di epilogo* e *parole di codice* campi vengono impostati entrambi su 0. I campi sono illustrati in dettaglio in questa tabella:
 
-   |Parola|Bit|Scopo|
+   |Word|BITS|Scopo|
    |----------|----------|-------------|
    |0|0-17|*Funzione lunghezza* è un campo a 18 bit che indica la lunghezza totale della funzione in byte diviso 2. Se una funzione è maggiore di 512 KB, è necessario usare più record .pdata e .xdata per descrivere la funzione. Per maggiori dettagli, vedere la sezione Funzioni di grandi dimensioni più avanti in questo documento.|
    |0|18-19|*Vers=2.1* è un campo a 2 bit che descrive la versione degli xdata rimanenti. Attualmente è definita solo la versione 0; i valori 1-3 sono riservati.|
@@ -179,7 +179,7 @@ Quando il formato di rimozione compresso non è sufficiente per descrivere la ri
 
 1. I dati (se il *elettronica* bit nell'intestazione è stato impostato su 0) è un elenco di informazioni sugli ambiti di epilogo, compresse una per una parola e archiviate in ordine di inizio offset crescente. Ogni ambito contiene i campi seguenti:
 
-   |Bit|Scopo|
+   |BITS|Scopo|
    |----------|-------------|
    |0-17|*Offset di avviare epilogo* è un campo a 18 bit che descrive l'offset dell'epilogo, in byte diviso 2, rispetto all'inizio della funzione.|
    |18-19|*Res* è un campo a 2 bit riservato per l'espansione futura. Il suo valore deve essere 0.|
@@ -226,33 +226,33 @@ Anche se il prologo e ogni epilogo è indicizzato nei codici di rimozione, la ta
 
 La matrice di codici di rimozione è un pool di sequenze di istruzione che descrive esattamente come annullare gli effetti del prologo, nell'ordine in cui le operazioni devono essere annullate. I codici di rimozione sono un mini set di istruzioni, codificato come stringa di byte. Al termine dell'esecuzione, l'indirizzo mittente della funzione di chiamata è nel registro LR e vengono ripristinati i valori di tutti i registri non volatili al momento della chiamata della funzione.
 
-Se fosse garantito che le eccezioni possono verificarsi solo nel corpo di una funzione e mai all'interno di un prologo o epilogo, sarebbe necessaria una sola sequenza di rimozione. Il modello di rimozione di Windows, invece, richiede la possibilità di rimozione da un prologo o un epilogo parzialmente eseguito. Per tenere conto di questo requisito, i codici di rimozione sono stati progettati accuratamente in modo da includere un mapping uno a uno non ambiguo a ogni opcode pertinente nel prologo e nell'epilogo. Questo ha diverse implicazioni:
+Se fosse garantito che le eccezioni possono verificarsi solo nel corpo di una funzione e mai all'interno di un prologo o epilogo, sarebbe necessaria una sola sequenza di rimozione. Il modello di rimozione di Windows, invece, richiede la possibilità di rimozione da un prologo o un epilogo parzialmente eseguito. Per tenere conto di questo requisito, i codici di rimozione sono stati progettati accuratamente in modo da includere un mapping uno a uno non ambiguo a ogni codice operativo pertinente nel prologo e nell'epilogo. Questo ha diverse implicazioni:
 
-- È possibile calcolare la lunghezza del prologo e dell'epilogo contando il numero di codici di rimozione. Questo è possibile anche con istruzioni Thumb-2 a lunghezza variabile perché ci sono mapping distinti per gli opcode a 16 e 32 bit.
+- È possibile calcolare la lunghezza del prologo e dell'epilogo contando il numero di codici di rimozione. Questo è possibile anche con istruzioni Thumb-2 a lunghezza variabile perché ci sono mapping distinti per i codici operativi a 16 e 32 bit.
 
 - Contando il numero di istruzioni dopo l'inizio dell'ambito di un epilogo, è possibile saltare il numero equivalente di codici di rimozione ed eseguire il resto di una sequenza per completare la rimozione parziale che l'epilogo stava eseguendo.
 
 - Contando il numero di istruzioni prima della fine del prologo, è possibile saltare il numero equivalente di codici di rimozione ed eseguire il resto della sequenza per annullare solo le parti di prologo già eseguite completamente.
 
-La tabella seguente illustra il mapping dai codici di rimozione agli opcode. I codici più comuni includono un solo byte, mentre quelli meno comuni richiedono due, tre o persino quattro byte. Ogni codice è archiviato dal byte più significativo a quello meno significativo. La struttura di codici di rimozione è diversa rispetto alla codifica descritta in nell'interfaccia EABI ARM perché questi codici di rimozione sono progettati per disporre di un mapping uno a uno agli opcode nel prologo e nell'epilogo per consentire la rimozione di prologhi ed epiloghi parzialmente eseguiti.
+La tabella seguente illustra il mapping dai codici di rimozione ai codici operativi. I codici più comuni includono un solo byte, mentre quelli meno comuni richiedono due, tre o persino quattro byte. Ogni codice è archiviato dal byte più significativo a quello meno significativo. La struttura di codici di rimozione è diversa rispetto alla codifica descritta in nell'interfaccia EABI ARM perché questi codici di rimozione sono progettati per disporre di un mapping uno a uno agli opcode nel prologo e nell'epilogo per consentire la rimozione di prologhi ed epiloghi parzialmente eseguiti.
 
 |Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Descrizione|
 |------------|------------|------------|------------|------------|-----------------|
 |00-7F||||16|`add   sp,sp,#X`<br /><br /> dove X è (Code & 0x7F) \* 4|
-|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> dove LR è estratto se Code & 0x2000 e r0-r12 sono estratti se il bit corrispondente è impostato in Code & 0x1FFF|
+|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> dove LR è estratto se Code & 0x2000 e r0-r12 sono estratti se il bit corrispondente viene impostato in Code & 0x1FFF|
 |C0-CF||||16|`mov   sp,rX`<br /><br /> dove X è Code & 0x0F|
 |D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> dove X è (Code & 0x03) + 4 e LR è estratto se Code & 0x04|
 |D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> dove X è (Code & 0x03) + 8 e LR è estratto se Code & 0x04|
 |E0-E7||||32|`vpop  {d8-dX}`<br /><br /> dove X è (Code & 0x07) + 8|
 |E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> dove X è (Code & 0x03FF) \* 4|
-|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> dove LR è estratto se Code & 0x0100 e r0-r7 sono estratti se il bit corrispondente è impostato in Code & 0x00FF|
+|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> dove LR è estratto se Code & 0x0100 e r0-r7 sono estratti se il bit corrispondente viene impostato in Code & 0x00FF|
 |EE|00-0F|||16|Specifico di Microsoft|
 |EE|10-FF|||16|Disponibile|
 |EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> dove X è (Code & 0x000F) \* 4|
 |EF|10-FF|||32|Disponibile|
 |F0-F4||||-|Disponibile|
-|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> dove S è (Code & 0x00F0) >> 4 e E è Code & 0x000F|
-|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> dove S è ((Code & 0x00F0) >> 4) + 16 e E è (Code & 0x000F) + 16|
+|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> dove S è (Code & 0x00F0) >> 4 ed E è Code & 0x000F|
+|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> dove S è ((Code & 0x00F0) >> 4) + 16 ed E è (Code & 0x000F) + 16|
 |F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> dove X è (Code & 0x00FFFF) \* 4|
 |F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> dove X è (Code & 0x00FFFFFF) \* 4|
 |F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> dove X è (Code & 0x00FFFF) \* 4|
@@ -267,13 +267,13 @@ Mostra l'intervallo di valori esadecimali per ogni byte in un codice di rimozion
 
 I codici di rimozione sono progettati in modo tale che il primo byte del codice indica sia la dimensione totale in byte del codice, sia la dimensione dell'opcode corrispondente nel flusso di istruzioni. Per calcolare la dimensione del prologo o epilogo, scorrere i codici di rimozione dall'inizio della sequenza fino alla fine e usare una tabella di ricerca o un metodo analogo per determinare la lunghezza dell'opcode corrispondente.
 
-I codici di rimozione 0xFD e 0xFE sono equivalenti al codice finale normale 0xFF, ma prevedono un opcode nop supplementare nel caso dell'epilogo, a 16 o 32 bit. Per i prologhi, i codici 0xFD, 0xFE e 0xFF sono perfettamente equivalenti. Questo tiene conto delle comuni terminazioni di epilogo `bx lr` o `b <tailcall-target>`, che non hanno un'istruzione di prologo equivalente. In questo modo aumentano le possibilità di condivisione delle sequenze di rimozione tra il prologo e gli epiloghi.
+I codici di rimozione 0xFD e 0xFE sono equivalenti al codice finale normale 0xFF, ma prevedono un codice operativo nop supplementare nel caso dell'epilogo, a 16 o 32 bit. Per i prologhi, i codici 0xFD, 0xFE e 0xFF sono perfettamente equivalenti. Questo tiene conto delle comuni terminazioni di epilogo `bx lr` o `b <tailcall-target>`, che non hanno un'istruzione di prologo equivalente. In questo modo aumentano le possibilità di condivisione delle sequenze di rimozione tra il prologo e gli epiloghi.
 
 In molti casi dovrebbe essere possibile usare lo stesso set di codici di rimozione per il prologo e tutti gli epiloghi. Per gestire la rimozione di prologhi ed epiloghi parzialmente eseguiti, tuttavia, possono essere necessarie più sequenze di codici di rimozione che variano per ordine e comportamento. Per questo motivo ogni epilogo ha un indice proprio nella matrice di rimozione per specificare l'inizio dell'esecuzione.
 
 ### <a name="unwinding-partial-prologues-and-epilogues"></a>Rimozione di prologhi ed epiloghi parziali
 
-Il caso di rimozione più comune è quando l'eccezione si verifica nel corpo della funzione, lontano dal prologo e da tutti gli epiloghi. In questo caso, l'agente di rimozione esegue il codice nella matrice di rimozione iniziando dall'indice 0 e prosegue fino a quando non viene rilevato un opcode finale.
+Il caso di rimozione più comune è quando l'eccezione si verifica nel corpo della funzione, lontano dal prologo e da tutti gli epiloghi. In questo caso, l'agente di rimozione esegue il codice nella matrice di rimozione iniziando dall'indice 0 e prosegue fino a quando non viene rilevato un codice operativo finale.
 
 Quando si verifica un'eccezione durante l'esecuzione di un prologo o epilogo, lo stack frame viene costruito solo parzialmente e l'agente di rimozione deve determinare esattamente quali operazioni sono state eseguite per poterle annullare correttamente.
 
@@ -290,7 +290,7 @@ Si consideri ad esempio questo prologo ed epilogo:
 0148:   bx    lr
 ```
 
-Accanto a ogni opcode è presente il codice di rimozione appropriato per descrivere l'operazione. La sequenza dei codici di rimozione per il prologo è un'immagine speculare dei codici di rimozione per l'epilogo, senza contare l'istruzione finale. Si tratta di un caso comune ed è il motivo per cui i codici di rimozione per il prologo si presumono sempre archiviati in ordine inverso rispetto all'ordine di esecuzione del prologo. Ecco quindi un set comune di codici di rimozione:
+Accanto a ogni codice operativo è presente il codice di rimozione appropriato per descrivere l'operazione. La sequenza dei codici di rimozione per il prologo è un'immagine speculare dei codici di rimozione per l'epilogo, senza contare l'istruzione finale. Si tratta di un caso comune ed è il motivo per cui i codici di rimozione per il prologo si presumono sempre archiviati in ordine inverso rispetto all'ordine di esecuzione del prologo. Ecco quindi un set comune di codici di rimozione:
 
 ```asm
 0xc7, 0xdd, 0x04, 0xfd
@@ -304,7 +304,7 @@ Una logica simile è applicabile al contrario per il prologo. In caso di rimozio
 
 I codici di rimozione di prologo ed epilogo non sempre corrispondono esattamente. In questo caso, può essere necessario che la matrice di codici di rimozione contenga più sequenze di codice. Per determinare l'offset per l'inizio dell'elaborazione dei codici, usare la logica seguente:
 
-1. Per la rimozione dall'interno del corpo della funzione, iniziare l'esecuzione dei codici di rimozione all'indice 0 e proseguire fino a quando non viene raggiunto un opcode finale.
+1. Per la rimozione dall'interno del corpo della funzione, iniziare l'esecuzione dei codici di rimozione all'indice 0 e proseguire fino a quando non viene raggiunto un codice operativo finale.
 
 2. Per la rimozione dall'interno di un epilogo, usare l'indice di inizio specifico dell'epilogo fornito dall'ambito dell'epilogo. Calcolare il numero di byte di distanza tra PC e l'inizio dell'epilogo. Procedere nei codici di rimozione fino a quando non sono state considerate tutte le istruzioni già eseguite. Eseguire la sequenza di rimozione iniziando da tale punto.
 
@@ -366,7 +366,7 @@ La funzione con wrapping di riduzione di esempio deve essere suddivisa in tre ar
 
 L'area B intermedia ottiene il proprio record .pdata o .xdata che descrive un frammento privo di prologo ed epilogo. I codici di rimozione per quest'area devono comunque essere presenti perché è considerata un corpo di funzione. I codici devono descrivere un prologo composito che rappresenta sia i registri originali salvati nel prologo dell'area A, sia i registri aggiuntivi salvati prima di entrare nell'area B, come se fossero prodotti da una sequenza di operazioni.
 
-I salvataggi di registri per l'area B non possono essere considerati un "prologo interno" perché il prologo composito descritto per l'area B deve descrivere sia il prologo dell'area A, sia i registri aggiuntivi salvati. Se il frammento B fosse descritto come dotato di prologo, i codici di rimozione presupporrebbero anche le dimensioni di tale prologo e non è possibile in alcun modo descrivere il prologo composito in maniera tale da prevedere il mapping uno a uno con gli opcode che salvano solo i registri aggiuntivi.
+I salvataggi di registri per l'area B non possono essere considerati un "prologo interno" perché il prologo composito descritto per l'area B deve descrivere sia il prologo dell'area A, sia i registri aggiuntivi salvati. Se il frammento B fosse descritto come dotato di prologo, i codici di rimozione presupporrebbero anche le dimensioni di tale prologo e non è possibile in alcun modo descrivere il prologo composito in maniera tale da prevedere il mapping uno a uno con i codici operativi che salvano solo i registri aggiuntivi.
 
 I salvataggi dei registri aggiuntivi devono essere considerati parte dell'area A perché, finché non sono completi, il prologo composito non descrive con precisione lo stato dello stack.
 
@@ -396,7 +396,7 @@ L'ottimizzazione più importante consiste nel prestare attenzione a non confonde
 
 Questa stessa regola vale per la lunghezza della funzione. Se dopo un epilogo in una funzione sono presenti dati, ad esempio un pool di valori letterali, questi non devono essere inclusi nella lunghezza della funzione. Riducendo la funzione al solo codice che fa parte della funzione, aumentano notevolmente le probabilità che l'epilogo si trovi alla fine e che sia possibile usare un record .pdata compatto.
 
-In un prologo, quando il puntatore allo stack viene salvato in un altro registro, in genere non è necessario registrare ulteriori opcode. Per rimuovere la funzione, la prima operazione che viene eseguita è il recupero di SP dal registro salvato, per cui ulteriori operazioni non hanno alcun impatto sulla rimozione.
+In un prologo, quando il puntatore allo stack viene salvato in un altro registro, in genere non è necessario registrare ulteriori codici operativi. Per rimuovere la funzione, la prima operazione che viene eseguita è il recupero di SP dal registro salvato, per cui ulteriori operazioni non hanno alcun impatto sulla rimozione.
 
 Gli epiloghi a istruzione singola non devono essere codificati, come ambiti o come codici di rimozione. Se la rimozione avviene prima dell'esecuzione dell'istruzione, è presumibile che sia dall'interno del corpo della funzione ed è sufficiente eseguire i codici di rimozione del prologo. Se la rimozione avviene dopo l'esecuzione dell'unica istruzione, per definizione avviene in un'altra area.
 
@@ -570,7 +570,7 @@ Epilogues:
 
 - Codici di rimozione, a partire dalla parola 5: (condivisi tra prologo/epilogo)
 
-   - Codice di rimozione 0 = 0x06: sp += (6 << 2)
+   - Codice di rimozione 0 = 0x06: sp + = (6 << 2)
 
    - Codice di rimozione 1 = 0xDE: pop {r4-r10, lr}
 
@@ -634,7 +634,7 @@ Epilogue:
 
    - Codice di rimozione 1 = 0xDC: pop {r4-r8, lr}
 
-   - Codice di rimozione 2 = 0x04: sp += (4 << 2)
+   - Codice di rimozione 2 = 0x04: sp + = (4 << 2)
 
    - Codice di rimozione 3 = 0xFD: end, conta come istruzione a 16 bit per l'epilogo
 
@@ -688,7 +688,7 @@ Epilogue:
 
    - Codice di rimozione 0 = 0xC7: sp = r7
 
-   - Codice di rimozione 1 = 0x05: sp += (5 << 2)
+   - Codice di rimozione 1 = 0x05: sp + = (5 << 2).
 
    - Codice di rimozione 2 = 0xED/0x90: pop {r4, r7, lr}
 

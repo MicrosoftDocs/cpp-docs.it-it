@@ -1,6 +1,6 @@
 ---
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 0020d4944ffb379584a044023bc34169b4a5c983
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: e2c237927aa133d33085be40b88789c1024d6b34
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416975"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476890"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -137,13 +137,15 @@ Se *str* viene **NULL** ma *contesto* è un puntatore a un puntatore di contesto
 
 Il **strtok_s** famiglia di funzioni consente di trovare il token successivo nella *str*. Il set di caratteri in *delimitatori* specifica i possibili delimitatori del token da trovare nel *str* per la chiamata corrente. **wcstok_s** e **mbstok_s** sono versioni a caratteri wide e caratteri multibyte di **strtok_s**. Gli argomenti e valori restituiti dei **wcstok_s** e **wcstok_s_l** sono caratteri "wide", mentre quelli di stringhe **mbstok_s** e **mbstok_s_l**sono stringhe a caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico.
 
-Questa funzione convalida i relativi parametri. Se si verifica una condizione di errore, come nella tabella delle condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **NULL**.
+Questa funzione convalida i relativi parametri. Quando si verifica una condizione di errore, come indicato nella tabella di condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **NULL**.
 
-La prima chiamata a **strtok_s** la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token nel *str*, il token con un carattere null di terminazione. Ulteriori token può essere interrotta dal resto di *str* da una serie di chiamate a **strtok_s**. Ogni chiamata a **strtok_s** modificato *str* inserendo un carattere null dopo il token restituito dalla chiamata. Il *contesto* puntatore tiene traccia di quali stringa letta e in cui nella stringa di token successivo deve essere letto. Il token successivo da leggere *str*, chiamare **strtok_s** con un **NULL** value per il *str* argomento e passare lo stesso  *contesto* parametro. Il **NULL** *str* argomento cause **strtok_s** per cercare il token successivo nella versione modificata *str*. Il *delimitatori* argomento può accettare qualsiasi valore da una chiamata a quella successiva in modo che il set di delimitatori può variare.
+La prima chiamata a **strtok_s**, la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token nel *str*, il token con un carattere null di terminazione. Ulteriori token può essere interrotta dal resto di *str* da una serie di chiamate a **strtok_s**. Ogni chiamata a **strtok_s** modificato *str* inserendo un carattere null dopo il token restituito dalla chiamata. Il *contesto* puntatore tiene traccia di quali stringa letta e in cui nella stringa di token successivo deve essere letto. Il token successivo da leggere *str*, chiamare **strtok_s** con un **NULL** value per il *str* argomento e passare lo stesso  *contesto* parametro. Il **NULL** *str* argomento cause **strtok_s** per cercare il token successivo nella versione modificata *str*. Il *delimitatori* argomento può accettare qualsiasi valore da una chiamata a quella successiva in modo che il set di delimitatori può variare.
 
 Poiché il *contesto* parametro sostituisce i buffer statici usati nelle **strtok** e **strtok_l**, è possibile analizzare due stringhe contemporaneamente nello stesso thread.
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso utilizzare impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali. Le versioni con il **l** suffisso sono identiche ma usano le *delle impostazioni locali* parametro. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md).
+
+Le versioni di queste funzioni senza il **l** suffisso utilizzare impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali. Le versioni con il **l** suffisso sono identiche ma usano le impostazioni locali specificate per il *delle impostazioni locali* parametro. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

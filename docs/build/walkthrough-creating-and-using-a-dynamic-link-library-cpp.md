@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813968"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476929"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: Creare e usare il proprio libreria a collegamento dinamico (C++)
 
@@ -296,9 +296,11 @@ Successivamente, per chiamare le funzioni MathLibrary nel codice sorgente, il pr
 
 1. Fare doppio clic nella parte superiore della **directory di inclusione aggiuntive** finestra di dialogo per abilitare un controllo di modifica.
 
-1. Nel controllo di modifica, specificare il percorso dei **MathLibrary.h** file di intestazione. In questo caso, è possibile usare un percorso relativo:
+1. Nel controllo di modifica, specificare il percorso dei **MathLibrary.h** file di intestazione. In questo caso, è possibile usare un percorso relativo dalla cartella che contiene i file con estensione cpp nel progetto client per la cartella che contiene il file con estensione h nel progetto DLL. Se il progetto client è in una soluzione separata nella stessa cartella della soluzione di DLL, il percorso relativo dovrebbe essere simile al seguente:
 
    `..\..\MathLibrary\MathLibrary`
+
+   Se i progetti DLL e il client sono nella stessa soluzione, o le soluzioni sono in cartelle diverse, quindi è necessario regolare il percorso relativo.
 
    ![Aggiungere il percorso dell'intestazione alla proprietà directory di inclusione aggiuntive](media/mathclient-additional-include-directories.png "aggiungere il percorso dell'intestazione alla proprietà directory di inclusione aggiuntive")
 

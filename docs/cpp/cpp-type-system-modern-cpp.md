@@ -3,12 +3,12 @@ title: Sistema di tipi C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220673"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476903"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
 
@@ -16,7 +16,7 @@ Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è 
 
 ## <a name="terminology"></a>Terminologia
 
-**Variabile**: Il collegamento simbolico nome di una quantità di dati in modo che il nome utilizzabile per accedere ai dati di cui fa riferimento a nell'ambito del codice in cui è definito. In C++ *variabile* viene generalmente usato per fare riferimento alle istanze di tipi di dati scalari, mentre le istanze di altri tipi sono in genere chiamate *oggetti*.
+**Variable**: Il collegamento simbolico nome di una quantità di dati in modo che il nome utilizzabile per accedere ai dati di cui fa riferimento a nell'ambito del codice in cui è definito. In C++ *variabile* viene generalmente usato per fare riferimento alle istanze di tipi di dati scalari, mentre le istanze di altri tipi sono in genere chiamate *oggetti*.
 
 **Oggetto**: Per semplicità e coerenza, in questo articolo viene usato il termine *oggetto* per fare riferimento a qualsiasi istanza di una classe o struttura, quando viene usato in senso generale include tutti i tipi, anche le variabili scalari.
 
@@ -102,9 +102,7 @@ Quando si definisce una **classe**, **struct**, **union**, oppure **enum**, quel
 
 - Il compilatore non ha una conoscenza predefinita di un tipo definito dall'utente. Viene a conoscenza del tipo quando rileva la definizione durante il processo di compilazione.
 
-- Specificare le operazioni che è possibile eseguire sul tipo e il modo in cui può essere convertito in altri tipi, definendo (tramite overload) gli operatori appropriati, come membri di classe o come funzioni non membro. Per altre informazioni, vedere [overload di funzioni](function-overloading.md).
-
-- Non è necessario che siano tipizzati in modo statico (regola secondo la quale il tipo di un oggetto non cambia mai). Tramite i meccanismi del *ereditarietà* e *polimorfismo*, una variabile dichiarata come tipo definito dall'utente della classe, definito a un'istanza dell'oggetto di una classe, potrebbe essere un tipo diverso in fase di esecuzione rispetto a fase di compilazione. Per altre informazioni, vedere [Ereditarietà](../cpp/inheritance-cpp.md).
+- Specificare le operazioni che è possibile eseguire sul tipo e il modo in cui può essere convertito in altri tipi, definendo (tramite overload) gli operatori appropriati, come membri di classe o come funzioni non membro. Per altre informazioni, vedere [overload di funzioni](function-overloading.md)
 
 ## <a name="pointer-types"></a>Tipi puntatore
 
