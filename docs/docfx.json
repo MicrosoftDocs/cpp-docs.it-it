@@ -184,6 +184,26 @@
         "standard-library/**.md": "corob",
         "text/**.md": "corob",
         "windows/**.md": "mblome"
+      },
+      "open_to_public_contributors": {
+        "assembler/**.md": false,
+        "atl-mfc-shared/**.md": false,
+        "atl/**.md": false,
+        "build/**.md": false,
+        "cloud/**.md": false,
+        "cpp/**.md": false,
+        "cppcx/**.md": false,
+        "data/**.md": false,
+        "dotnet/**.md": false,
+        "error-messages/**.md": false,
+        "intrinsics/**.md": false,
+        "mfc/**.md": false,
+        "parallel/**.md": false,
+        "preprocessor/**.md": false,
+        "security/**.md": false,
+        "standard-library/**.md": false,
+        "text/**.md": false,
+        "windows/**.md": false
       }
     },
     "template": [],
