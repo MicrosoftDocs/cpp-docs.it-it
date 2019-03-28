@@ -1,6 +1,6 @@
 ---
 title: Interfaccia ICommandSource
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296020"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565610"
 ---
 # <a name="icommandsource-interface"></a>Interfaccia ICommandSource
 
@@ -179,7 +179,7 @@ ID di comando.
 
 Questo metodo rimuove il gestore del comando eseguito il mapping a cmdID dall'oggetto origine del comando.
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 Rimuove un gruppo di gestori di comandi da un oggetto di origine del comando.
 ```
@@ -196,7 +196,7 @@ L'indice di inizio dell'intervallo di ID di comando.
 L'indice finale dell'intervallo di ID di comando.
 ### <a name="remarks"></a>Note
 
-Questo metodo rimuove un gruppo di gestori di messaggi, mappato a specificato l'ID comando cmdIDMin e cmdIDMax, dall'oggetto origine del comando.
+Questo metodo rimuove un gruppo di gestori di messaggi, il mapping per gli ID di comando specificati dalla cmdIDMin e cmdIDMax, dall'oggetto origine del comando.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ L'indice di inizio dell'intervallo di ID di comando.
 L'indice finale dell'intervallo di ID di comando.
 ### <a name="remarks"></a>Note
 
-Questo metodo rimuove un gruppo di utenti interfaccia comando gestori di messaggi, mappato a specificato l'ID comando cmdIDMin e cmdIDMax, dall'oggetto origine del comando.
+Questo metodo rimuove un gruppo di utenti interfaccia comando gestori di messaggi, il mapping per gli ID di comando specificati dalla cmdIDMin e cmdIDMax, dall'oggetto origine del comando.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

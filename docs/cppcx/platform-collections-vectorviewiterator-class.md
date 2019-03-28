@@ -1,18 +1,18 @@
 ---
 title: Classe Platform::Collections::VectorViewIterator
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743750"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565662"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Classe Platform::Collections::VectorViewIterator
 
@@ -61,7 +61,7 @@ Typename della classe modello VectorViewIterator.
 |[VectorViewIterator::operator\[\]](#operator-at)|Recupera un riferimento all'elemento che è distanziato dall'oggetto VectorViewIterator corrente dello spostamento specificato.|
 |[Operatore VectorViewIterator::operator+](#operator-plus)|Restituisce un oggetto VectorViewIterator che fa riferimento all'elemento distanziato dello spostamento specificato dall'oggetto VectorViewIterator specificato.|
 |[Operatore VectorViewIterator::operator++](#operator-increment)|Incrementa l'oggetto VectorViewIterator corrente.|
-|[Operator VectorViewIterator::operator+=](#operator-plus-assign)|Incrementa l'oggetto VectorViewIterator corrente dello spostamento specificato.|
+|[Operator VectorViewIterator::operator+=](#operator-plus-equals)|Incrementa l'oggetto VectorViewIterator corrente dello spostamento specificato.|
 |[Operatore VectorViewIterator::operator<](#operator-less-than)|Indica se l'oggetto VectorViewIterator corrente è minore dell'oggetto VectorViewIterator specificato.|
 |[Vectorviewiterator:: operator\<= (operatore)](#operator-less-than-or-equals)|Indica se l'oggetto VectorViewIterator corrente è minore o uguale all'oggetto VectorViewIterator specificato.|
 |[Operatore VectorViewIterator::operator-=](#operator-minus-assign)|Decrementa l'oggetto VectorViewIterator corrente dello spostamento specificato.|

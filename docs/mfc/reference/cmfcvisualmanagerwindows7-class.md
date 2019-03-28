@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCVisualManagerWindows7
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
 - AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269396"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565519"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Classe CMFCVisualManagerWindows7
 
@@ -34,7 +34,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Costruttore predefinito.|
-|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Distruttore predefinito.|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|Distruttore predefinito.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -42,7 +42,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |----------|-----------------|
 |`CMFCVisualManagerWindows7::CleanStyle`|Cancella lo stile di visualizzazione corrente e ripristina lo stile di visualizzazione predefinito.|
 |`CMFCVisualManagerWindows7::CleanUp`|Cancella tutti gli oggetti nell'interfaccia utente e ripristina i menu.|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|Disegna un pulsante nell'area non client nel frame. Usa il framework ridurre al minimo questo metodo consente di disegnare, ottimizzare, chiudere e ripristinare i pulsanti nell'angolo superiore destro della cornice della finestra. Questo metodo non viene chiamato quando il programma Usa un tema non Aero.|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Disegna un pulsante nell'area non client nel frame. Usa il framework ridurre al minimo questo metodo consente di disegnare, ottimizzare, chiudere e ripristinare i pulsanti nell'angolo superiore destro della cornice della finestra. Questo metodo viene chiamato solo quando il programma utilizza un' `Aero` tema.|
 |`CMFCVisualManagerWindows7::DrawNcText`|Disegna il testo nell'area non client nel frame. Il framework utilizza questo metodo per disegnare il titolo dell'applicazione nella barra del titolo nella parte superiore della finestra cornice.|
 |`CMFCVisualManagerWindows7::DrawSeparator`|Disegna un separatore nel [classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).|
 |`CMFCVisualManagerWindows7::GetRibbonBar`|Recupera le [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) associato all'interfaccia utente.|
@@ -173,7 +173,7 @@ Il framework chiama questo metodo quando riempie area intorno a un'immagine di v
 virtual void OnFillMenuImageRect(
     CDC* pDC,
     CMFCToolBarButton* pButton,
-    CRect rect,
+    CRect rectangle,
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in] Un puntatore a un `CMFCToolBarButton`. Il framework riempie lo sfondo di questo pulsante.
 
-*rect*<br/>
+*rectangle*<br/>
 [in] Un rettangolo che specifica i limiti dell'area del menu pulsante immagine.
 
 *state*<br/>

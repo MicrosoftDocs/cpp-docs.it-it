@@ -1,6 +1,6 @@
 ---
 title: Classe CAnimationGroup
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationGroup
 - AFXANIMATIONCONTROLLER/CAnimationGroup
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32b2adfee2a36139a11caa12fa98bd240b0732dd
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304379"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565987"
 ---
 # <a name="canimationgroup-class"></a>Classe CAnimationGroup
 
@@ -70,7 +70,7 @@ class CAnimationGroup;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Crea un gruppo di animazione.|
-|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|Distruttore. Chiamato quando è in corso l'eliminazione di un gruppo di animazione.|
+|[CAnimationGroup::~CAnimationGroup](#_dtorcanimationgroup)|Distruttore. Chiamato quando è in corso l'eliminazione di un gruppo di animazione.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -106,7 +106,7 @@ class CAnimationGroup;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|Identificatore univoco del gruppo di animazione.|
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|Puntatore al controller di animazione che appartiene a questo gruppo.|

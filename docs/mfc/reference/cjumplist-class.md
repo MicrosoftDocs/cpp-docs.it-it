@@ -1,6 +1,6 @@
 ---
 title: Classe CJumpList
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CJumpList
 - AFXADV/CJumpList
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: b72ea6f3715be1e4a11d457dbdeaba7a622ef8b6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9296912c97b1efb5f7cbd1ed9f769d0222d5f85c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259074"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565308"
 ---
 # <a name="cjumplist-class"></a>Classe CJumpList
 
-Oggetto `CJumpList` è riportato l'elenco di collegamenti visualizzati quando fare clic su un'icona nella barra delle applicazioni.
+Oggetto `CJumpList` è riportato l'elenco di collegamenti visualizzati quando facendo clic su un'icona nella barra delle applicazioni.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -60,9 +60,9 @@ class CJumpList;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CJumpList::CJumpList](#cjumplist)|Costruisce un oggetto `CJumpList`.|
-|[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|Elimina un oggetto `CJumpList`.|
+|[CJumpList:: ~ CJumpList](#_dtorcjumplist)|Elimina un oggetto `CJumpList`.|
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CJumpList::AbortList](#abortlist)|Interrompe una transazione di generazione elenco senza eseguire il commit.|
 |[CJumpList::AddDestination](#adddestination)|Di overload. Aggiunge all'elenco destinazione.|
@@ -188,7 +188,7 @@ BOOL AddTask(IShellLink* pShellLink);
 Specifica il percorso di attività di destinazione.
 
 *strCommandLineArgs*<br/>
-Specifica gli argomenti della riga di comando dell'eseguibile specificato da strTargetExecutablePath.
+Specifica gli argomenti della riga di comando dell'eseguibile specificato da *strTargetExecutablePath*.
 
 *strTitle*<br/>
 Nome dell'attività che verrà visualizzato nell'elenco di destinazione.

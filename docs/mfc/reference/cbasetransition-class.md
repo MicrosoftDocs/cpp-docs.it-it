@@ -1,6 +1,6 @@
 ---
 title: Classe CBaseTransition
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258372"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565909"
 ---
 # <a name="cbasetransition-class"></a>Classe CBaseTransition
 
@@ -73,8 +73,8 @@ class CBaseTransition : public CObject;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|Costruisce un oggetto di transizione di base.|
-|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di transizione.|
+|[CBaseTransition::CBaseTransition](#cbasetransition)|Costruisce un oggetto di base di transizione.|
+|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di transizione.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -95,7 +95,7 @@ class CBaseTransition : public CObject;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CBaseTransition::m_bAdded](#m_badded)|Specifica se è stata aggiunta una transizione di uno storyboard.|
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Archivia un puntatore al fotogramma chiave che specifica la fine della transizione.|
@@ -170,7 +170,7 @@ Si applica la transizione alla variabile correlata nello storyboard. Se è stato
 
 ##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
 
-Costruisce un oggetto di transizione di base.
+Costruisce un oggetto di base di transizione.
 
 ```
 CBaseTransition();
@@ -320,7 +320,7 @@ Restituisce TRUE se è stata aggiunta una transizione a uno storyboard, in caso 
 
 ### <a name="remarks"></a>Note
 
-Questo flag è impostato internamente quando il codice di primo livello aggiunge passa allo storyboard.
+Questo flag è impostato internamente quando il codice di primo livello aggiunge le transizioni allo storyboard.
 
 ##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
 

@@ -1,17 +1,17 @@
 ---
 title: Classe basic_regex
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633405"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565451"
 ---
 # <a name="basicregex-class"></a>Classe basic_regex
 
@@ -59,12 +59,12 @@ Queste funzioni membro accettano anche un argomento `flags` che specifica divers
 |pubblica icase flag_type const statico|regex_constants::icase|
 |pubblica nosubs flag_type const statico|regex_constants::nosubs|
 |ottimizzare flag_type const statico pubblico|regex_constants::optimize|
-|collate flag_type const statico pubblico|regex_constants::COLLATE|
+|collate flag_type const statico pubblico|regex_constants::collate|
 |flag_type const statico pubblico ECMAScript|regex_constants::ECMAScript|
-|public static const flag_type base|regex_constants::Basic|
-|pubblica flag_type const statici estesi|regex_constants::Extended|
+|public static const flag_type base|regex_constants::basic|
+|pubblica flag_type const statici estesi|regex_constants::extended|
 |pubblica awk flag_type const statico|regex_constants::awk|
-|pubblica grep flag_type const statico|regex_constants::GREP|
+|pubblica grep flag_type const statico|regex_constants::grep|
 |pubblica egrep flag_type const statico|regex_constants::egrep|
 |tratti RXtraits privati||
 
@@ -88,7 +88,7 @@ Queste funzioni membro accettano anche un argomento `flags` che specifica divers
 |-|-|
 |[assign](#assign)|Assegna un valore all'oggetto di espressione regolare.|
 |[flags](#flags)|Restituisce i flag delle opzioni della sintassi.|
-|[get_loc](#get_loc)|Restituisce l'oggetto delle impostazioni locali archiviate.|
+|[getloc](#getloc)|Restituisce l'oggetto delle impostazioni locali archiviate.|
 |[imbue](#imbue)|Modifica l'oggetto delle impostazioni locali archiviate.|
 |[mark_count](#mark_count)|Restituisce il numero di sottoespressioni corrispondenti.|
 |[swap](#swap)|Scambia due oggetti di espressione regolare.|
@@ -248,7 +248,7 @@ Puntatore all'inizio della sequenza da copiare.
 *flags*<br/>
 Flag di opzione sintassi da aggiungere durante la copia.
 
-*Len/TD >*<br/>
+*len/TD>*<br/>
 Lunghezza della sequenza da copiare.
 
 *str*<br/>
@@ -322,7 +322,7 @@ Puntatore all'inizio della sequenza da copiare.
 *flags*<br/>
 Flag di opzione sintassi da aggiungere durante la copia.
 
-*Len/TD >*<br/>
+*len/TD>*<br/>
 Lunghezza della sequenza da copiare.
 
 *str*<br/>
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametri
 
-*Loc*<br/>
+*loc*<br/>
 Oggetto impostazioni locali da archiviare.
 
 ### <a name="remarks"></a>Note

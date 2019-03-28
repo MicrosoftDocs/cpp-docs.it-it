@@ -1,6 +1,6 @@
 ---
 title: Classe CPathT
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273023"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565791"
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 
 Questa classe rappresenta un percorso.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -139,7 +139,7 @@ La classe di stringhe ATL/MFC da utilizzare per il percorso (vedere [CStringT](.
 |----------|-----------------|
 |[CPathT::operator StringType const &](#operator_const_stringtype_amp)|Questo operatore consente all'oggetto di essere considerato come una stringa.|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Questo operatore consente all'oggetto di essere considerato come una stringa.|
-|[CPathT::operator StringType &](#operator_stringtype)|Questo operatore consente all'oggetto di essere considerato come una stringa.|
+|[CPathT::operator StringType &](#operator_stringtype_amp)|Questo operatore consente all'oggetto di essere considerato come una stringa.|
 |[CPathT::operator +=](#operator_add_eq)|Questo operatore aggiunge una stringa nel percorso.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
@@ -653,7 +653,7 @@ Restituisce il percorso aggiornato.
 Questo operatore consente all'oggetto di essere considerato come una stringa.
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>Valore restituito
@@ -665,19 +665,19 @@ Restituisce una stringa che rappresenta il percorso corrente gestito da questo o
 Questo operatore consente all'oggetto di essere considerato come una stringa.
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce una stringa che rappresenta il percorso corrente gestito da questo oggetto.
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
 
 Questo operatore consente all'oggetto di essere considerato come una stringa.
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>Valore restituito

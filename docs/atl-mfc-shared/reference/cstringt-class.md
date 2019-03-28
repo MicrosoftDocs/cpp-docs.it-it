@@ -1,6 +1,6 @@
 ---
 title: Classe CstringT
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750871"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565818"
 ---
 # <a name="cstringt-class"></a>Classe CstringT
 
@@ -182,7 +182,7 @@ Determina se la classe string è necessario il supporto della libreria Run-Time 
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Assegna un nuovo valore per un `CStringT` oggetto.|
+|[CStringT::operator =](#operator_eq)|Assegna un nuovo valore per un `CStringT` oggetto.|
 |[CStringT::operator +](#operator_add)|Concatena due stringhe o un carattere e stringa.|
 |[+ = CStringT::operator](#operator_add_eq)|Concatena una nuova stringa alla fine di una stringa esistente.|
 |[CStringT::operator ==](#operator_eq_eq)|Determina se due stringhe sono uguali.|
@@ -251,7 +251,7 @@ I tipi di stringa seguenti sono disponibili nei progetti in cui non è definito 
 
 In quanto `CStringT` utilizza un argomento di modello per definire il tipo di carattere (entrambi [wchar_t](../../c-runtime-library/standard-types.md) oppure [char](../../c-runtime-library/standard-types.md)) supportati, i tipi di parametro di metodo possono essere complicati in alcuni casi. Per semplificare questo problema, un set di tipi predefiniti è definito e usato in tutta il `CStringT` classe. La tabella seguente elenca i vari tipi:
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`XCHAR`|Un singolo carattere (entrambe **wchar_t** oppure **char**) con lo stesso tipo di carattere come il `CStringT` oggetto.|
 |`YCHAR`|Un singolo carattere (entrambe **wchar_t** oppure **char**) con il tipo di carattere opposto come il `CStringT` oggetto.|
@@ -1023,6 +1023,56 @@ Questa funzione non è disponibile se è definito Unicode.
 ### <a name="example"></a>Esempio
 
 Vedere l'esempio relativo [CStringT::AnsiToOem](#ansitooem).
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+Assegna un nuovo valore alla stringa.
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>Parametri
+
+*strSrc*<br/>
+Oggetto `CStringT` da assegnare a questa stringa.
+
+*str*<br/>
+Riferimento a un oggetto `CThisSimpleString`.
+
+*bMFCDLL*<br/>
+Valore booleano che specifica se il progetto è una DLL MFC o meno.
+
+*BaseType*<br/>
+Il tipo di base di stringa.
+
+*var*<br/>
+Un oggetto variant da assegnare a questa stringa.
+
+*ch*<br/>
+Un carattere ANSI o Unicode da assegnare alla stringa.
+
+*pszSrc*<br/>
+Puntatore alla stringa originale viene assegnato.
+
+### <a name="remarks"></a>Note
+
+L'operatore di assegnazione accetta un altro `CStringT` oggetto, un puntatore ai caratteri o un singolo carattere. È necessario essere consapevoli che le eccezioni possano verificarsi quando si usa questo operatore perché nuova risorsa di archiviazione può essere allocata la memoria.
+
+Per informazioni sul `CThisSimpleString`, vedere la sezione Note del [CStringT::CStringT](#cstringt).
+
+> [!NOTE]
+> Sebbene sia possibile creare `CStringT` istanze che contengono caratteri null incorporati, è consigliabile su di esso. La chiamata di metodi e operatori su `CStringT` gli oggetti che contengono caratteri null incorporati possono produrre risultati imprevisti.
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 

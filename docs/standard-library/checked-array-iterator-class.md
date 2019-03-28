@@ -1,6 +1,6 @@
 ---
 title: Classe checked_array_iterator
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476600"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565714"
 ---
 # <a name="checkedarrayiterator-class"></a>Classe checked_array_iterator
 
@@ -495,7 +495,7 @@ Per un esempio di codice, vedere [checked_array_iterator::operator&lt;](#op_lt).
 
 Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=
+## <a name="op_lt_eq"></a>  checked_array_iterator::operator&lt;=
 
 Verifica se `checked_array_iterator` sul lato sinistro dell'operatore è minore o uguale di `checked_array_iterator` sul lato destro.
 
@@ -514,7 +514,7 @@ Per un esempio di codice, vedere [checked_array_iterator::operator&gt;=](#op_gt_
 
 Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=
+## <a name="op_gt_eq"></a>  checked_array_iterator::operator&gt;=
 
 Verifica se `checked_array_iterator` sul lato sinistro dell'operatore è maggiore o uguale a `checked_array_iterator` sul lato destro.
 
@@ -697,7 +697,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
+## <a name="operator--"></a>  checked_array_iterator::operator--
 
 Decrementa `checked_array_iterator` all'elemento precedente.
 
@@ -755,7 +755,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Offset di incremento dell'iteratore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -803,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Offset da aggiungere all'oggetto `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -841,7 +841,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
+## <a name="operator-_eq"></a>  checked_array_iterator::operator-=
 
 Decrementa un offset specificato da un `checked_array_iterator`.
 
@@ -851,7 +851,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Offset di incremento dell'iteratore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -890,7 +890,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
+## <a name="operator-"></a>  checked_array_iterator::operator-
 
 Decrementa un offset da un iteratore e restituisce il nuovo `checked_array_iterator` che punta all'elemento inserito in corrispondenza della nuova posizione dell'offset.
 
@@ -902,7 +902,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 L'offset deve essere diminuito da `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -910,8 +910,6 @@ L'offset deve essere diminuito da `checked_array_iterator`.
 Oggetto `checked_array_iterator` che punta all'elemento di offset.
 
 ### <a name="remarks"></a>Note
-
-Per un esempio di codice, vedere [checked_array_iterator::operator-](#operator-).
 
 Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-iterators.md).
 
@@ -925,7 +923,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Offset dall'indirizzo dell'oggetto `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valore restituito

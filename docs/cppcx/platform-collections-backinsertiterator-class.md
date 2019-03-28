@@ -1,18 +1,18 @@
 ---
 title: Classe Platform::Collections::BackInsertIterator
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739534"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564723"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Classe Platform::Collections::BackInsertIterator
 
@@ -141,7 +141,7 @@ Riferimento all'oggetto BackInsertIterator corrente.
 
 In base alla progettazione, l'esempio della prima sintassi determina dei pre-incrementi dell'oggetto BackInsertIterator corrente e la seconda sintassi ne determina dei post-incrementi. Il tipo `int` nella seconda sintassi indica un'operazione di post-incremento, non un effettivo operando Integer.
 
-Tuttavia, questo operatore in realtà non modifica l'oggetto BackInsertIterator. Restituisce invece un riferimento all'iteratore corrente invariato. Si tratta dello stesso comportamento [operatore *](#dereference-operator).
+Tuttavia, questo operatore in realtà non modifica l'oggetto BackInsertIterator. Restituisce invece un riferimento all'iteratore corrente invariato. Si tratta dello stesso comportamento [operatore *](#operator-dereference).
 
 ## <a name="see-also"></a>Vedere anche
 

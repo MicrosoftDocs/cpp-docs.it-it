@@ -1,6 +1,6 @@
 ---
 title: Classe duration
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568890"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565571"
 ---
 # <a name="duration-class"></a>Classe duration
 
@@ -50,7 +50,7 @@ L'argomento di modello `Rep` descrive il tipo usato per contenere il numero di t
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Durata](#duration)|Costruisce un oggetto `duration`.|
+|[duration](#duration)|Costruisce un oggetto `duration`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 In effetti, restituisce `duration(duration_values<rep>::min())`.
 
-## <a name="duration__operator-"></a>  duration::operator-
+## <a name="operator-"></a>  duration::operator-
 
 Restituisce una copia dell'oggetto `duration` insieme a un conteggio dei tick negati.
 
@@ -167,7 +167,7 @@ Restituisce una copia dell'oggetto `duration` insieme a un conteggio dei tick ne
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a>  duration::operator--
+## <a name="operator--"></a>  duration::operator--
 
 Decrementa il conteggio dei tick archiviati.
 
@@ -277,7 +277,7 @@ Oggetto `duration`.
 
 Dopo l'addizione viene eseguito l'oggetto `duration`.
 
-## <a name="duration__operator-_eq"></a>  duration::operator-=
+## <a name="operator-_eq"></a>  duration::operator-=
 
 Sottrae il conteggio dei tick di un oggetto `duration` specificati dal conteggio dei tick archiviati.
 

@@ -1,6 +1,6 @@
 ---
 title: uninitialized_object (classe)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: 1c431364aee0f1d1e75059abdb023ae52cf92155
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 05c24672531d50fa9bc31587e6c6733fdff21f29
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279331"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565540"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object (classe)
 
@@ -31,7 +31,7 @@ class uninitialized_object : public runtime_exception;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[uninitialized_object, costruttore](#ctor)|Inizializza una nuova istanza della classe `uninitialized_object`.|
+|[uninitialized_object, costruttore](#uninitialized_object)|Inizializza una nuova istanza della classe `uninitialized_object`.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -46,17 +46,18 @@ class uninitialized_object : public runtime_exception;
 **Intestazione:** amprt. h
 
 **Spazio dei nomi:** Concorrenza
-## <a name="uninitialized_object__ctor"></a> unsupported_feature
 
-Costruisce una nuova istanza dell'eccezione unsupported_feature.
+## <a name="uninitializedobject"></a>uninitialized_object
+
+Costruisce una nuova istanza di `uninitialized_object` eccezione.
 
 ### <a name="syntax"></a>Sintassi
 
 ```
-explicit unsupported_feature(
+explicit uninitialized_object(
     const char * _Message ) throw();
 
-unsupported_feature() throw();
+uninitialized_object() throw();
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -66,7 +67,7 @@ Descrizione dell'errore.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `unsupported_feature`.
+Il `uninitialized_object` oggetto eccezione.
 
 ## <a name="see-also"></a>Vedere anche
 

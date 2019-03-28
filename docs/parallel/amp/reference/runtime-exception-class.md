@@ -1,6 +1,6 @@
 ---
 title: runtime_exception (classe)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289663"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565493"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception (classe)
 
@@ -39,7 +39,7 @@ class runtime_exception : public std::exception;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[get_error_code](#runtime_exception__get_error_code)|Restituisce il codice di errore che ha causato l'eccezione.|
+|[get_error_code](#get_error_code)|Restituisce il codice di errore che ha causato l'eccezione.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
@@ -59,7 +59,7 @@ class runtime_exception : public std::exception;
 
 **Spazio dei nomi:** Concorrenza
 
-## <a name="runtime_exception__ctor"></a>  Costruttore runtime_exception
+## <a name="ctor"></a>  Costruttore runtime_exception
 
 Inizializza una nuova istanza della classe.
 
@@ -102,7 +102,7 @@ Elimina l'oggetto.
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="runtime_exception__get_error_code"></a>  get_error_code
+## <a name="geterrorcode"></a>get_error_code
 
 Restituisce il codice di errore che ha causato l'eccezione.
 
@@ -116,7 +116,7 @@ HRESULT get_error_code() const throw();
 
 Il valore HRESULT dell'errore che ha causato l'eccezione.
 
-## <a name="runtime_exception__operator_eq"></a>  operator=
+## <a name="operator_eq"></a>  operator=
   Copia il contenuto dell'oggetto specificato `runtime_exception` in questo oggetto.
 
 ### <a name="syntax"></a>Sintassi

@@ -1,25 +1,25 @@
 ---
 title: Overload di funzioni
-ms.date: 11/19/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6cc432e404a7a66de63cf87f0fe87f0ccdcb5d70
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176302"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565974"
 ---
 # <a name="function-overloading"></a>Overload di funzioni
 
-C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Questi sono denominati *sottoposti a overload* funzioni. Le funzioni in overload consentono di fornire diverse semantiche per una funzione, a seconda del tipo e numero di argomenti.
+C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Queste funzioni vengono chiamate *sottoposti a overload* funzioni. Le funzioni in overload consentono di fornire diverse semantiche per una funzione, a seconda del tipo e numero di argomenti.
 
-Ad esempio, un `print` funzione che accetta una `std::string` argomento potrebbe eseguire attività molto diverse rispetto a uno che accetta un argomento di tipo **doppie**. L'overload evita di dover usare, ad esempio i nomi `print_string` o `print_double`. In fase di compilazione, il compilatore sceglie quale overload usare in base al tipo di argomenti passato dal chiamante.  Se si chiama `print(42.0)` il `void print(double d)` funzione verrà richiamata. Se si chiama `print("hello world")` il `void print(std::string)` overload viene richiamato.
+Ad esempio, un `print` funzione che accetta una `std::string` argomento potrebbe eseguire attività molto diverse rispetto a uno che accetta un argomento di tipo **doppie**. L'overload evita di dover usare, ad esempio i nomi `print_string` o `print_double`. In fase di compilazione, il compilatore sceglie quale overload usare in base al tipo di argomenti passato dal chiamante.  Se si chiama `print(42.0)`, quindi il `void print(double d)` funzione verrà richiamata. Se si chiama `print("hello world")`, quindi il `void print(std::string)` overload viene richiamato.
 
-È possibile eseguire l'overload sia le funzioni membro e funzioni non membro. Nella tabella seguente sono illustrate quali parti di una dichiarazione di funzione C++ vengono usate per distinguere tra gruppi di funzioni con lo stesso nome nello stesso ambito.
+È possibile eseguire l'overload sia le funzioni membro e funzioni non membro. Nella tabella seguente sono illustrate quali parti di una dichiarazione di funzione C++ vengono utilizzate per distinguere tra gruppi di funzioni con lo stesso nome nello stesso ambito.
 
 ### <a name="overloading-considerations"></a>Considerazioni sull'overload
 
@@ -32,11 +32,11 @@ Ad esempio, un `print` funzione che accetta una `std::string` argomento potrebbe
 |Sfrutta **typedef** nomi|No|
 |Limiti di matrice non specificati|No|
 |**const** o **volatile**|Sì, quando applicato a una funzione intera|
-|[ref-qualifier](#ref-qualifier)|Yes|
+|[Qualificatori ref](#ref-qualifiers)|Yes|
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come è possibile usare l'overload.
+Nell'esempio seguente viene illustrato come è possibile utilizzare l'overload.
 
 ```cpp
 // function_overloading.cpp
@@ -113,13 +113,13 @@ int print(double dvalue, int prec)
 
 Nel codice precedente viene illustrato l'overload della funzione `print` nell'ambito file.
 
-L'argomento predefinito non viene considerato parte del tipo di funzione. Non viene pertanto usato nella selezione delle funzioni in overload. Due funzioni che differiscono solo nei relativi argomenti predefiniti vengono considerate più definizioni anziché funzioni in overload.
+L'argomento predefinito non è considerato parte del tipo di funzione. Pertanto, non viene utilizzato nella selezione di funzioni in overload. Due funzioni che differiscono solo nei relativi argomenti predefiniti vengono considerate più definizioni anziché funzioni in overload.
 
-Per gli operatori di overload non possono essere forniti argomenti predefiniti.
+Gli argomenti predefiniti non possono essere forniti per gli operatori di overload.
 
 ## <a name="argument-matching"></a>Corrispondenza di argomenti
 
-Le funzioni in overload vengono selezionate per la migliore corrispondenza delle dichiarazioni di funzione nell'ambito corrente con gli argomenti forniti nella chiamata di funzione. Se viene trovata una funzione appropriata, questa viene chiamata. "Appropriato" in questo contesto indica una delle seguenti operazioni:
+Le funzioni in overload vengono selezionate per la migliore corrispondenza delle dichiarazioni di funzione nell'ambito corrente con gli argomenti forniti nella chiamata di funzione. Se viene trovata una funzione appropriata, questa viene chiamata. "Appropriato" in questo contesto indica una:
 
 - Una corrispondenza esatta è stata trovata.
 
@@ -135,7 +135,7 @@ Le funzioni in overload vengono selezionate per la migliore corrispondenza delle
 
 Il compilatore crea un set di funzioni candidate per ciascun argomento. Le funzioni candidate sono funzioni in cui l'argomento effettivo in quella posizione può essere convertito nel tipo dell'argomento formale.
 
-Un set delle "migliori funzioni di corrispondenza" viene compilato per ogni argomento e la funzione selezionata è l'intersezione di tutti i set. Se l'intersezione contiene più funzioni, l'overload è ambiguo e genera un errore. La funzione che infine verrà selezionata è sempre una corrispondenza migliore di qualsiasi altra funzione del gruppo per almeno un argomento. In caso contrario (se non è chiaro quale prevale), la chiamata di funzione genera un errore.
+Un set delle "migliori funzioni di corrispondenza" viene compilato per ogni argomento e la funzione selezionata è l'intersezione di tutti i set. Se l'intersezione contiene più funzioni, l'overload è ambiguo e genera un errore. La funzione che infine verrà selezionata è sempre una corrispondenza migliore di qualsiasi altra funzione del gruppo per almeno un argomento. Se non è presente alcun chiaro quale prevale, la chiamata di funzione genera un errore.
 
 Considerare le seguenti dichiarazioni (le funzioni vengono contrassegnate come `Variant 1`, `Variant 2` e `Variant 3` per l'identificazione nella discussione seguente):
 
@@ -160,7 +160,7 @@ Con l'istruzione precedente vengono compilati due set:
 |Variante 1|Variante 1 (**int** può essere convertito in **lungo** mediante una conversione standard)|
 |Variante 3||
 
-Le funzioni del Set 2 sono funzioni per le quali vi sono conversioni implicite dal tipo di parametro effettivo nel tipo di parametro formale e tra tali funzioni vi è una funzione per cui il "costo" di conversione del tipo di parametro effettivo nel tipo di parametro formale è il più ridotto.
+Funzioni Set 2 sono funzioni per le quali vi sono conversioni implicite dal tipo di parametro effettivo al tipo di parametro formale e tra tali funzioni vi è una funzione per cui il "costo" di conversione del tipo di parametro effettivo al tipo di parametro formale è il più piccolo.
 
 L'intersezione dei due set è la Variante 1. Un esempio di una chiamata di funzione ambigua è:
 
@@ -170,18 +170,18 @@ F1 = Add( 3, 6 );
 
 Con la chiamata di funzione precedente vengono compilati i seguenti set:
 
-|Set 1: Funzioni Candidate sono primo argomento di tipo **int**|Set 2: Funzioni Candidate sono secondo argomento di tipo **int**|
+|Set 1: Funzioni candidate sono primo argomento di tipo **int**|Set 2: Funzioni candidate sono secondo argomento di tipo **int**|
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
 |Variante 2 (**int** può essere convertito in **lungo** mediante una conversione standard)|Variante 1 (**int** può essere convertito in **lungo** mediante una conversione standard)|
 
-Si noti che l'intersezione tra questi due set è vuota. Pertanto, il compilatore genera un messaggio di errore.
+Poiché l'intersezione di questi due set è vuoto, il compilatore genera un messaggio di errore.
 
 Per l'argomento corrispondente, una funzione con *n* gli argomenti predefiniti viene trattato come *n*+ 1 funzioni separate, ognuna con un numero diverso di argomenti.
 
-I puntini di sospensione (...) fungono da caratteri jolly; corrispondono a qualsiasi argomento effettivo. In tal modo, è possibile che vengano generati molti set ambigui se non si progettano set della funzione in overload con estrema attenzione.
+I puntini di sospensione (...) fungono da caratteri jolly; corrispondono a qualsiasi argomento effettivo. Si possono verificare molti set ambigui, se non è stato progettato il set di funzioni in overload con estrema attenzione.
 
 > [!NOTE]
->  L'ambiguità delle funzioni in overload non può essere determinata finché non viene rilevata una chiamata di funzione. A questo punto, i set vengono compilati per ogni argomento nella chiamata di funzione ed è possibile determinare se esiste un overload non ambiguo. Ciò significa che le ambiguità possono restare nel codice finché non vengono chiamate da una chiamata di funzione particolare.
+>  Ambiguità di funzioni in overload non è possibile determinare fino a quando non viene rilevata una chiamata di funzione. A questo punto, i set vengono compilati per ogni argomento nella chiamata di funzione ed è possibile determinare se esiste un overload non ambiguo. Ciò significa che le ambiguità possono restare nel codice finché non vengono chiamate da una chiamata di funzione particolare.
 
 ## <a name="argument-type-differences"></a>Differenze tra tipi di argomenti
 
@@ -189,7 +189,7 @@ Le funzioni in overload fanno una differenza tra i tipi di argomento che accetta
 
 Per lo stesso motivo, gli argomenti di un tipo modificato da delle funzioni **const** oppure **volatile** non vengono trattati in modo diverso rispetto al tipo di base per gli scopi dell'overload.
 
-Tuttavia, il meccanismo di overload della funzione può distinguere tra i riferimenti che sono qualificati dal **const** e **volatile** e i riferimenti al tipo di base. Ciò rende possibile un codice del tipo riportato di seguito:
+Tuttavia, il meccanismo di overload della funzione può distinguere tra i riferimenti che sono qualificati dal **const** e **volatile** e i riferimenti al tipo di base. Rende il codice, ad esempio i possibili seguenti:
 
 ```cpp
 // argument_type_differences.cpp
@@ -243,7 +243,7 @@ La sequenza di conversioni risultante, se disponibile, è nota come sequenza di 
 
 - Eseguire la conversione da **int** al **long senza segno**.
 
-La prima sequenza, sebbene raggiunga l'obiettivo desiderato, non è la migliore sequenza di corrispondenza (esiste una sequenza più breve).
+La prima sequenza, sebbene raggiunga l'obiettivo desiderato, non è la migliore sequenza di corrispondenza, è presente una sequenza più breve.
 
 Nella tabella seguente viene mostrato un gruppo di conversioni, denominate conversioni semplici, con un effetto limitato sulla determinazione della sequenza che rappresenta la migliore corrispondenza. Le istanze in cui le conversioni semplici influiscono sulla scelta della sequenza vengono illustrate nell'elenco che segue la tabella.
 
@@ -255,14 +255,14 @@ Nella tabella seguente viene mostrato un gruppo di conversioni, denominate conve
 |*type-name* **&**|*type-name*|
 |*nome del tipo* **]**|*type-name* __\*__|
 |*nome del tipo* **(** *elenco di argomenti* **)**|**(** __\*__ *nome_tipo* **) (** *dall'elenco di argomenti* **)**|
-|*type-name*|**const** *-nome del tipo*|
-|*type-name*|**volatili** *-nome del tipo*|
-|*type-name* __\*__|**const** *-nome del tipo* __\*__|
-|*type-name* __\*__|**volatili** *-nome del tipo* __\*__|
+|*type-name*|**const** *type-name*|
+|*type-name*|**volatile** *type-name*|
+|*type-name* __\*__|**const** *type-name* __\*__|
+|*type-name* __\*__|**volatile** *type-name* __\*__|
 
 La sequenza in cui vengono tentate le conversioni è la seguente:
 
-1. Corrispondenza esatta. Una corrispondenza esatta tra i tipi con cui viene chiamata la funzione e i tipi dichiarati nel prototipo di funzione è sempre la corrispondenza ottimale. Le sequenze di conversioni semplici vengono classificate come corrispondenze esatte. Tuttavia, le sequenze che non eseguono queste conversioni vengono considerate migliori rispetto alle sequenze che eseguono la conversione:
+1. Corrispondenza esatta. Una corrispondenza esatta tra i tipi con cui viene chiamata la funzione e i tipi dichiarati nel prototipo di funzione è sempre la corrispondenza ottimale. Le sequenze di conversioni semplici vengono classificate come corrispondenze esatte. Tuttavia, le sequenze che non apportano una di queste conversioni vengono considerate migliori rispetto alle sequenze che convertono:
 
    - Dal puntatore, al puntatore alla **const** (`type` <strong>\*</strong> al **const** `type` <strong>\*</strong> ).
 
@@ -272,7 +272,7 @@ La sequenza in cui vengono tentate le conversioni è la seguente:
 
    - Dal riferimento al riferimento al **volatili** (`type` **&** al **volatile** `type` **&**).
 
-1. Corrispondenza mediante le promozioni. Qualsiasi sequenza non classificata come corrispondenza esatta che contiene solo le promozioni integrali, le conversioni da **float** al **doppie**, e le conversioni semplici viene classificata come corrispondenza che usa le promozioni. Sebbene non sia ottimale come una corrispondenza esatta, l'utilizzo delle promozioni è preferibile rispetto a una corrispondenza che usa le conversioni standard.
+1. Corrispondenza mediante le promozioni. Qualsiasi sequenza non classificata come corrispondenza esatta che contiene solo le promozioni integrali, le conversioni da **float** al **doppie**, e le conversioni semplici viene classificata come corrispondenza che usa le promozioni. Sebbene non sia ottimale come una corrispondenza esatta, l'utilizzo delle promozioni è preferibile rispetto a una corrispondenza che utilizza le conversioni standard.
 
 1. Corrispondenza che usa le conversioni standard. Qualsiasi sequenza non classificata come una corrispondenza esatta o una corrispondenza che usa promozioni solo con conversioni standard e semplici viene classificata come corrispondenza che usa le conversioni standard. All'interno di questa categoria, sono necessarie le seguenti regole:
 
@@ -294,11 +294,11 @@ La regola precedente è valida solo insieme a un determinato percorso di derivaz
 ![Più&#45;ereditarietà multipla con conversioni preferite](../cpp/media/vc391t2.gif "più&#45;ereditarietà multipla con conversioni preferite") <br/>
 Grafico dell'ereditarietà multipla indicante le conversioni preferite
 
-La conversione dal tipo `C*` al tipo `B*` è preferibile rispetto alla conversione dal tipo `C*` al tipo `A*`. Il motivo è che si trovano nello stesso percorso e `B*` è più vicino. Tuttavia, la conversione dal tipo `C*` al tipo `D*` non è preferibile alla conversione al tipo `A*`; non esiste alcuna preferenza poiché le conversioni seguono percorsi diversi.
+La conversione dal tipo `C*` al tipo `B*` è preferibile rispetto alla conversione dal tipo `C*` al tipo `A*`. Il motivo è che si trovano nello stesso percorso e `B*` è più vicino. Tuttavia, la conversione dal tipo `C*` al tipo `D*` non è preferibile alla conversione al tipo `A*`; non è presente alcuna preferenza poiché le conversioni seguono percorsi diversi.
 
 1. Corrispondenza con le conversioni definite dall'utente. Questa sequenza non può essere classificata come una corrispondenza esatta, una corrispondenza che usa le promozioni o una corrispondenza che usa le conversioni standard. La sequenza deve contenere solo le conversioni definite dall'utente, le conversioni standard o le conversioni semplici da classificare come corrispondenza con le conversioni definite dall'utente. Una corrispondenza con le conversioni definite dall'utente è considerata migliore rispetto a una corrispondenza con i puntini di sospensione, ma non una corrispondenza ottimale come una corrispondenza con conversioni standard.
 
-1. Corrispondenza con i puntini di sospensione. Qualsiasi sequenza che corrisponde ai puntini di sospensione nella dichiarazione viene classificata come corrispondenza con i puntini di sospensione. Questa viene considerata la corrispondenza più debole.
+1. Corrispondenza con i puntini di sospensione. Qualsiasi sequenza che corrisponde ai puntini di sospensione nella dichiarazione viene classificata come corrispondenza con i puntini di sospensione. Viene considerata la corrispondenza più debole.
 
 Le conversioni definite dall'utente vengono applicate se non esiste alcuna conversione o promozione integrata. Queste conversioni sono selezionate in base al tipo di argomento di cui si sta eseguendo la corrispondenza. Esaminare il codice seguente:
 
@@ -337,9 +337,9 @@ UDC udc;
 LogToFile( udc );
 ```
 
-Nell'esempio precedente, la conversione definita dall'utente, **operator long**, viene richiamata per convertire `udc` per digitare **long**. Se nessuna conversione definita dall'utente nel tipo **lungo** fosse stato definito, la conversione sarebbe proseguita nel modo seguente: tipo `UDC` sarebbe stato convertito nel tipo **int** usando definite dall'utente conversione. La conversione standard dal tipo **int** al tipo **lungo** sarebbe stata applicata in modo da corrispondere l'argomento nella dichiarazione.
+Nell'esempio precedente, la conversione definita dall'utente, **operator long**, viene richiamata per convertire `udc` per digitare **long**. Se nessuna conversione definita dall'utente nel tipo **lungo** era stato definito, la conversione sarebbe proseguita nel modo seguente: Tipo di `UDC` sarebbe stato convertito nel tipo **int** mediante la conversione definita dall'utente. La conversione standard dal tipo **int** al tipo **lungo** sarebbe stata applicata in modo da corrispondere l'argomento nella dichiarazione.
 
-Se le conversioni definite dall'utente sono necessarie per la corrispondenza di un argomento, le conversioni standard non vengono usate per valutare la corrispondenza migliore. Questo vale anche se più funzioni candidate richiedono una conversione definita dall'utente; in tal caso, le funzioni sono considerate uguali. Ad esempio:
+Se sono necessarie tutte le conversioni definite dall'utente per corrispondenza di un argomento, le conversioni standard non vengono usate quando si valuta la corrispondenza migliore. Anche se più funzioni candidate richiedono una conversione definita dall'utente, le funzioni sono considerate uguali. Ad esempio:
 
 ```cpp
 // argument_matching2.cpp
@@ -371,7 +371,7 @@ Entrambe le versioni `Func` richiedono una conversione definita dall'utente per 
 
 - Conversione dal tipo **int** al tipo **long**; quindi conversione nel tipo `UDC2` (conversione in due passaggi).
 
-Anche se la seconda di queste richiede una conversione standard e la conversione definita dall'utente, le due conversioni sono tuttavia considerate uguali.
+Anche se il secondo richiede una conversione standard e la conversione definita dall'utente, le due conversioni sono tuttavia considerate uguali.
 
 > [!NOTE]
 >  Le conversioni definite dall'utente sono considerate conversioni per costruzione o per inizializzazione (funzione di conversione). Entrambi i metodi sono considerati uguali quando viene presa in considerazione la corrispondenza ottimale.
@@ -451,9 +451,9 @@ Un set di funzioni in overload accettabile è regolato da numerose restrizioni:
 
 **Fine sezione specifica Microsoft**
 
-- Le funzioni membro non possono essere sottoposte a overload unicamente perché una è statica e l'altra non statica.
+- Funzioni membro non possono essere sottoposti a overload unicamente perché una è statica e l'altra non statica.
 
-- **typedef** dichiarazioni di non definiscono nuovi tipi, ma introducono sinonimi per i tipi esistenti. Esse non influiscono sul meccanismo di overload. Esaminare il codice seguente:
+- **typedef** dichiarazioni di non definiscono nuovi tipi, ma introducono sinonimi per i tipi esistenti. Essi non influiscono sul meccanismo di overload. Esaminare il codice seguente:
 
     ```cpp
     typedef char * PSTR;
@@ -464,9 +464,9 @@ Un set di funzioni in overload accettabile è regolato da numerose restrizioni:
 
    Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR` è un sinonimo del tipo `char *`. Nell'ambito del membro, questo codice genera un errore.
 
-- I tipi enumerati sono tipi distinti e possono essere usati per distinguere le funzioni in overload.
+- I tipi enumerati sono tipi distinti e possono essere utilizzati per distinguere le funzioni in overload.
 
-- I tipi "matrice di" e "puntatore a" sono considerati identici, ai fini della distinzione tra le funzioni in overload. Ciò è valido solo per le matrici dimensionate singolarmente. Di conseguenza, le seguenti funzioni in overload sono in conflitto e generano un messaggio di errore:
+- I tipi "matrice di" e "puntatore a" sono considerati identici ai fini della distinzione tra le funzioni in overload, ma solo per dimensionate singolarmente le matrici. Ecco perché queste funzioni in overload sono in conflitto e generare un messaggio di errore:
 
     ```cpp
     void Print( char *szToPrint );
@@ -483,13 +483,13 @@ Un set di funzioni in overload accettabile è regolato da numerose restrizioni:
 
 ## <a name="overloading-overriding-and-hiding"></a>L'overload, si esegue l'override e nascosti
 
-Tutte le due dichiarazioni di funzione con lo stesso nome nello stesso ambito possono fare riferimento alla stessa funzione o a due funzioni discrete in overload. Se gli elenchi di argomenti delle dichiarazioni contengono argomenti di tipi equivalenti (come descritto nella sezione precedente), le dichiarazioni di funzione si riferiscono alla stessa funzione. In caso contrario, si riferiscono a due diverse funzioni selezionate usando l'overload.
+Tutte le due dichiarazioni di funzione con lo stesso nome nello stesso ambito possono fare riferimento alla stessa funzione o a due funzioni discrete in overload. Se gli elenchi di argomenti delle dichiarazioni contengono argomenti di tipi equivalenti (come descritto nella sezione precedente), le dichiarazioni di funzione si riferiscono alla stessa funzione. In caso contrario, si riferiscono a due diverse funzioni selezionate utilizzando l'overload.
 
-L'ambito di classe viene osservato rigidamente; pertanto, una funzione dichiarata in una classe base non si trova nello stesso ambito di una funzione dichiarata in una classe derivata. Se una funzione in una classe derivata viene dichiarata con lo stesso nome di una funzione virtuale nella classe di base, la funzione di classe derivata *esegue l'override* la funzione di classe di base. Per altre informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).
+Ambito di classe viene osservato rigidamente; Pertanto, non è una funzione dichiarata in una classe di base nello stesso ambito di una funzione dichiarata in una classe derivata. Se una funzione in una classe derivata viene dichiarata con lo stesso nome di una funzione virtuale nella classe di base, la funzione di classe derivata *esegue l'override* la funzione di classe di base. Per altre informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).
 
 Se la funzione di classe di base non è dichiarata come 'virtual', quindi la funzione di classe derivata viene detto *nascondere* è. Viene sottoposto a override sia nascondere sono distinti di eseguire l'overload.
 
-L'ambito del blocco viene osservato rigidamente; pertanto, una funzione dichiarata in un ambito di file non si trova nello stesso ambito di una funzione dichiarata localmente. Se una funzione dichiarata localmente ha lo stesso nome di una funzione dichiarata in ambito di file, la funzione dichiarata localmente nasconde la funzione con ambito di file anziché causare l'overload. Ad esempio:
+Ambito del blocco viene osservato rigidamente; Pertanto, non è una funzione dichiarata in ambito file nello stesso ambito di una funzione dichiarata localmente. Se una funzione dichiarata localmente ha lo stesso nome di una funzione dichiarata in ambito di file, la funzione dichiarata localmente nasconde la funzione con ambito di file anziché causare l'overload. Ad esempio:
 
 ```cpp
 // declaration_matching1.cpp
@@ -521,9 +521,9 @@ Il codice precedente mostra due definizioni dalla funzione `func`. La definizion
 
 Per funzioni membro in overload, a versioni diverse della funzione possono essere assegnati privilegi di accesso differenti. Verranno ancora considerate nell'ambito della classe contenitore e pertanto sono funzioni in overload. Si consideri il codice seguente, in cui la funzione membro `Deposit` è in overload; una versione è pubblica, l'altra privata.
 
-Lo scopo di questo esempio è quello di fornire una classe `Account` in cui è richiesta una password corretta per eseguire i depositi. Per eseguire questa operazione si usa un overload.
+Lo scopo di questo esempio è quello di fornire una classe `Account` in cui è richiesta una password corretta per eseguire i depositi. Avviene tramite l'overload.
 
-Si noti che la chiamata a `Deposit` in `Account::Deposit` chiama la funzione membro privato. Questa chiamata è corretta perché `Account::Deposit` è una funzione membro e pertanto dispone di accesso ai membri privati della classe.
+La chiamata a `Deposit` in `Account::Deposit` chiama la funzione membro privato. Questa chiamata è corretta perché `Account::Deposit` è una funzione membro, e ha accesso ai membri privati della classe.
 
 ```cpp
 // declaration_matching2.cpp

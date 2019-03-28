@@ -1,6 +1,6 @@
 ---
 title: Classe CD2DTextLayout
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DTextLayout
 - AFXRENDERTARGET/CD2DTextLayout
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ca89d12c6aeed33be740aa9f999e7c11d6c32056
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283969"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565269"
 ---
 # <a name="cd2dtextlayout-class"></a>Classe CD2DTextLayout
 
@@ -52,7 +52,7 @@ class CD2DTextLayout : public CD2DResource;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Costruisce un oggetto CD2DTextLayout.|
-|[CD2DTextLayout::~CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di layout di testo D2D.|
+|[CD2DTextLayout::~CD2DTextLayout](#_dtorcd2dtextlayout)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di layout di testo D2D.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -76,7 +76,7 @@ class CD2DTextLayout : public CD2DResource;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Un puntatore a un oggetto IDWriteTextLayout.|
 

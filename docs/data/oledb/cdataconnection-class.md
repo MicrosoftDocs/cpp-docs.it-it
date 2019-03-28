@@ -1,6 +1,6 @@
 ---
 title: Classe CDataConnection
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326539"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565506"
 ---
 # <a name="cdataconnection-class"></a>Classe CDataConnection
 
@@ -119,7 +119,7 @@ Con `CDataConnection`, è sufficiente creare un oggetto di connessione, passare 
 > [!NOTE]
 >  Se si sta creando un'applicazione di database che deve gestire più sessioni, è necessario usare [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).
 
-## <a name="#cdataconnection"></a> CDataConnection:: CDataConnection
+## <a name="cdataconnection"></a> CDataConnection:: CDataConnection
 
 Crea e Inizializza un `CDataConnection` oggetto.
 
@@ -141,7 +141,7 @@ Il primo override crea un nuovo `CDataConnection` oggetto con le impostazioni pr
 
 Il secondo override crea un nuovo `CDataConnection` oggetto con le impostazioni equivalenti all'oggetto connessione dati è specificato.
 
-## <a name="#copy"></a> CDataConnection:: Copy
+## <a name="copy"></a> CDataConnection::Copy
 
 Crea una copia di una connessione dati esistente.
 
@@ -156,7 +156,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *dominio Active Directory*<br/>
 [in] Un riferimento a una connessione dati esistente da copiare.
 
-## <a name="#open"></a> CDataConnection:: Open
+## <a name="open"></a> CDataConnection:: Open
 
 Apre una connessione a un'origine dati tramite una stringa di inizializzazione.
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 Un valore HRESULT standard.
 
-## <a name="#opennewsession"></a> CDataConnection:: Opennewsession
+## <a name="opennewsession"></a> CDataConnection::OpenNewSession
 
 Apre una nuova sessione con l'origine dati dell'oggetto connessione corrente.
 
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>Parametri
 
-*Sessione*<br/>
+*session*<br/>
 [in/out] Un riferimento all'oggetto nuova sessione.
 
 ### <a name="remarks"></a>Note

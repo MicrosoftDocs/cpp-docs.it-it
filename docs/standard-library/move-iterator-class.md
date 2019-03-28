@@ -1,6 +1,6 @@
 ---
 title: Classe move_iterator
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: c9ff9385d43ac1c53f91a548ea01c04c1c67dc18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656135"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565051"
 ---
 # <a name="moveiterator-class"></a>Classe move_iterator
 
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Offset da aggiungere alla posizione corrente per determinare la nuova posizione corrente.
 
 ### <a name="return-value"></a>Valore restituito
@@ -175,7 +175,7 @@ Restituisce il nuovo elemento corrente.
 
 L'operatore aggiunge *Off* all'iteratore archiviato. Restituisce quindi `*this`.
 
-## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
+## <a name="operator-_eq"></a>  move_iterator::operator-=
 
 Si sposta tra un numero specificato di elementi precedenti. Questo operatore sottrae un offset dall'iteratore archiviato.
 
@@ -234,7 +234,7 @@ reference operator[](difference_type _Off) const;
 
 L'operatore restituisce `(reference)*(*this + _Off)`.
 
-## <a name="move_iterator__operator--"></a>  move_iterator::operator--
+## <a name="operator--"></a>  move_iterator::operator--
 
 Gli operatori di decremento prefisso e di decremento suffisso eseguono un decremento sull'iteratore archiviato.
 
@@ -251,7 +251,7 @@ Il primo operatore membro (decremento prefisso) decrementa l'iteratore archiviat
 
 Il secondo operatore (decremento suffisso) esegue una copia di `*this` e valuta `--*this`. Restituisce quindi la copia.
 
-## <a name="move_iterator__operator-"></a>  move_iterator::operator-
+## <a name="operator-"></a>  move_iterator::operator-
 
 Decrementa l'iteratore archiviato e restituisce il valore indicato.
 

@@ -1,6 +1,6 @@
 ---
 title: Classe basic_ostream
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543637"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565727"
 ---
 # <a name="basicostream-class"></a>Classe basic_ostream
 
@@ -48,7 +48,7 @@ Il carattere `traits_type`.
 
 ## <a name="remarks"></a>Note
 
-La maggior parte delle funzioni membro che sono in rapporto di overload con [operator<<](#op_lt_lt) è costituita da funzioni di output formattato. Le funzioni seguono questo schema:
+La maggior parte delle funzioni membro che sono in rapporto di overload con [operator<<](#basic_ostream_operator_lt_lt) è costituita da funzioni di output formattato. Le funzioni seguono questo schema:
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ Per altre informazioni sui flussi di output, vedere l'esempio per la [Classe bas
 |[put](#put)|Inserisce un carattere in un flusso.|
 |[seekp](#seekp)|Reimposta la posizione nel flusso di output.|
 |[sentry](#sentry)|La classe annidata descrive un oggetto la cui dichiarazione struttura le funzioni di output formattate e quelle non formattate.|
-|[swap](#op_eq)|Scambia i valori in questo oggetto `basic_ostream` con quelli dell'oggetto `basic_ostream` fornito.|
+|[swap](#swap)|Scambia i valori in questo oggetto `basic_ostream` con quelli dell'oggetto `basic_ostream` fornito.|
 |[tellp](#tellp)|Indica la posizione nel flusso di output.|
 |[write](#write)|Inserisce i caratteri in un flusso.|
 
@@ -130,7 +130,7 @@ Per altre informazioni sui flussi di output, vedere l'esempio per la [Classe bas
 
 |Operatore|Descrizione|
 |-|-|
-|[operator=](#basic_ostream_operator_eq)|Assegna il valore del parametro di oggetto `basic_ostream` fornito a questo oggetto.|
+|[operator=](#op_eq)|Assegna il valore del parametro di oggetto `basic_ostream` fornito a questo oggetto.|
 |[operator<<](#basic_ostream_operator_lt_lt)|Scrive nel flusso.|
 
 ## <a name="requirements"></a>Requisiti
@@ -237,13 +237,13 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parametri
 
-*pfn*<br/>
+*Pfn*<br/>
 Un puntatore di funzione.
 
 *strbuf*<br/>
 Puntatore a un oggetto `stream_buf` .
 
-*Val*<br/>
+*val*<br/>
 Un elemento da scrivere nel flusso.
 
 ### <a name="return-value"></a>Valore restituito
@@ -375,7 +375,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Carattere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -419,13 +419,13 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 La posizione all'interno del flusso.
 
-*Off*<br/>
+*_Off*<br/>
 L'offset relativo alla *Way*.
 
-*Way*<br/>
+*_Way*<br/>
 Una delle enumerazioni [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Valore restituito
@@ -470,7 +470,7 @@ int main()
 
 La classe annidata descrive un oggetto la cui dichiarazione struttura le funzioni di output formattate e quelle non formattate.
 
-sentry classe {public: sentry esplicita (basic_ostream\<Elem, Tr > & _Ostr); operator bool () const; ~ sentry();};
+class sentry { public: explicit sentry(basic_ostream\<Elem, Tr>& _Ostr); operator bool() const; ~sentry(); };
 
 ### <a name="remarks"></a>Note
 

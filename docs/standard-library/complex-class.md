@@ -1,6 +1,6 @@
 ---
 title: Classe complex
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - complex/std::complex::value_type
 - complex/std::complex::imag
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: efdd904c3c82142862895a3df8a55162c10a3aad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ebaee81b792f9acc475fe25ac1ef7cc7a78a0de
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553387"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565558"
 ---
 # <a name="complex-class"></a>Classe complex
 
@@ -403,7 +403,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="complex__operator-_eq"></a>  complex::operator-=
+## <a name="operator-_eq"></a>  complex::operator-=
 
 Sottrae un numero da un numero complesso di destinazione, in cui il numero sottratto può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene aggiunto.
 

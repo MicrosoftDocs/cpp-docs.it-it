@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739432"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565697"
 ---
 # <a name="crect-class"></a>Classe CRect
 
@@ -950,7 +950,7 @@ Punta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura oppur
 
 Il parametro *x* e *y* (o `cx` e `cy`) vengono aggiunti valori a `CRect`.
 
-Il terzo overload ingrandisce `CRect` dal numero di unità specificata in ogni membro del parametro.
+Il terzo overload ingrandisce `CRect` dal numero di unità specificate in ogni membro del parametro.
 
 ### <a name="example"></a>Esempio
 
@@ -988,7 +988,7 @@ Punta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura oppur
 
 Il parametro *x* e *y* (o `cx` e `cy`) i valori vengono sottratti dal `CRect`.
 
-Il terzo overload decompressi `CRect` dal numero di unità specificata in ogni membro del parametro. Si noti che questo overload è analogo [DeflateRect](#deflaterect).
+Il terzo overload decompressi `CRect` dal numero di unità specificate in ogni membro del parametro. Si noti che questo overload è analogo [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Esempio
 
@@ -1085,7 +1085,7 @@ Il `CRect` risultante da spostare o ciò fa aumentare erroneamente `CRect` dal n
 
 Il parametro *x* e *y* (o `cx` e `cy`) vengono aggiunti al parametri `CRect`posizione.
 
-Il terzo overload restituisce un nuovo `CRect` che è uguale a `CRect` sottoposto a inflating per il numero di unità specificata in ogni membro del parametro.
+Il terzo overload restituisce un nuovo `CRect` che è uguale a `CRect` sottoposto a inflating per il numero di unità specificate in ogni membro del parametro.
 
 ### <a name="example"></a>Esempio
 
@@ -1128,7 +1128,7 @@ Il `CRect` risultante da spostare o deflazionando `CRect` dal numero di unità s
 
 Il parametro *x* e *y* (o `cx` e `cy`) vengono sottratti parametri `CRect`posizione.
 
-Il terzo overload restituisce un nuovo `CRect` che è uguale a `CRect` ridotto per il numero di unità specificata in ogni membro del parametro. Si noti che questo overload è analogo [DeflateRect](#deflaterect), non [SubtractRect](#subtractrect).
+Il terzo overload restituisce un nuovo `CRect` che è uguale a `CRect` ridotto per il numero di unità specificate in ogni membro del parametro. Si noti che questo overload è analogo [DeflateRect](#deflaterect), non [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Esempio
 

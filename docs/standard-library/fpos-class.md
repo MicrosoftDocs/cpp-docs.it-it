@@ -1,6 +1,6 @@
 ---
 title: Classe fpos
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iosfwd/std::fpos
 - iosfwd/std::fpos::seekpos
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: bf15cdf0ec4df1301b074ba2ae179dee3619d30d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78b136d72067fa5fff58e8a7acc044fb4e1a409e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564203"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565065"
 ---
 # <a name="fpos-class"></a>Classe fpos
 
@@ -83,10 +83,10 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Offset nel flusso.
 
-*Stato*<br/>
+*_State*<br/>
 Stato iniziale dell'oggetto `fpos`.
 
 *_Filepos*<br/>
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Offset in base al quale si vuole incrementare l'indicatore di posizione del file.
 
 ### <a name="return-value"></a>Valore restituito
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Offset in base al quale si vuole incrementare l'indicatore di posizione del file.
 
 ### <a name="return-value"></a>Valore restituito
@@ -221,7 +221,7 @@ La funzione membro aggiunge *Off* all'oggetto membro offset archiviato e quindi 
 
 Per un esempio di come usare `operator+=`, vedere [operator!=](#op_neq).
 
-## <a name="fpos__operator-"></a>  fpos::operator-
+## <a name="operator-"></a>  fpos::operator-
 
 Decrementa un indicatore di posizione del file.
 
@@ -236,7 +236,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 *right*<br/>
 Posizione del file.
 
-*Off*<br/>
+*_Off*<br/>
 Offset nel flusso.
 
 ### <a name="return-value"></a>Valore restituito
@@ -247,7 +247,7 @@ La prima funzione membro restituisce `(streamoff)*this - (streamoff) right`. La 
 
 Per un esempio di come usare `operator-`, vedere [operator!=](#op_neq).
 
-## <a name="fpos__operator-_eq"></a>  fpos::operator-=
+## <a name="operator-_eq"></a>  fpos::operator-=
 
 Decrementa un indicatore di posizione del file.
 
@@ -257,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Offset nel flusso.
 
 ### <a name="return-value"></a>Valore restituito
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Nuovo stato di conversione.
 
 ### <a name="return-value"></a>Valore restituito

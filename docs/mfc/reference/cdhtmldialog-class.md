@@ -1,6 +1,6 @@
 ---
 title: Classe CDHtmlDialog
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDHtmlDialog
 - AFXDHTML/CDHtmlDialog
@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bda980c26f9791e1d4f03026f7e118e69a4ab881
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413953"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565805"
 ---
 # <a name="cdhtmldialog-class"></a>Classe CDHtmlDialog
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |Nome|Descrizione|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Costruisce un oggetto CDHtmlDialog.|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Elimina un oggetto CDHtmlDialog.|
+|[CDHtmlDialog:: ~ CDHtmlDialog](#_dtorcdhtmldialog)|Elimina un oggetto CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -352,7 +352,7 @@ Consente di scambiare dati tra una variabile membro e il valore della proprietà
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT& var);
 
 void DDX_DHtml_AxControl(
@@ -370,7 +370,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *szId*<br/>
 Il valore del parametro ID del tag object nell'origine HTML per il controllo ActiveX.
 
-*dispid*<br/>
+*dispId*<br/>
 ID dispatch della proprietà con cui si vuole eseguire lo scambio di dati.
 
 *szPropName*<br/>
@@ -417,43 +417,43 @@ Consente di scambiare dati tra una variabile membro e qualsiasi proprietà dell'
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     CString& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     short& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     int& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     long& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     DWORD& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     float& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     double& value);
 ```
 
@@ -465,7 +465,7 @@ Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) og
 *szId*<br/>
 Il valore specificato per il parametro ID del controllo HTML.
 
-*dispid*<br/>
+*dispId*<br/>
 ID dispatch dell'elemento HTML con cui si vuole eseguire lo scambio di dati.
 
 *value*<br/>
@@ -510,7 +510,7 @@ void DDX_DHtml_SelectIndex(
 Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.
 
 *szId*<br/>
-Il valore specificato per il parametro id del controllo HTML.
+Il valore specificato per il controllo HTML `id` parametro.
 
 *value*<br/>
 Il valore da scambiare.
@@ -651,11 +651,11 @@ VARIANT GetControlProperty(
 
 VARIANT GetControlProperty(
     LPCTSTR szId,
-    DISPID dispid);
+    DISPID dispId);
 
 VARIANT GetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -669,7 +669,7 @@ Il nome di una proprietà nelle impostazioni locali predefinito dell'utente corr
 *pdispControl*<br/>
 Il `IDispatch` puntatore di un controllo ActiveX.
 
-*dispid*<br/>
+*dispId*<br/>
 L'ID di invio di una proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -802,7 +802,7 @@ template <class Q> HRESULT GetElementInterface(
 
 HRESULT GetElementInterface(
     LPCTSTR szElementId,
-    REFIID riid,
+    REFIID refiid,
     void** ppvObj);
 ```
 
@@ -814,7 +814,7 @@ L'ID di un elemento HTML.
 *ppvObj*<br/>
 Indirizzo del puntatore che verrà riempito con il puntatore all'interfaccia richiesta se viene trovato l'elemento e la query ha esito positivo.
 
-*riid*<br/>
+*refiid*<br/>
 L'ID interfaccia (IID) dell'interfaccia richiesta.
 
 ### <a name="return-value"></a>Valore restituito
@@ -827,12 +827,12 @@ Un valore HRESULT standard.
 
 ##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty
 
-Recupera il valore della proprietà identificata da *dispid* dall'elemento HTML identificato dal *szElementId*.
+Recupera il valore della proprietà identificata da *dispId* dall'elemento HTML identificato dal *szElementId*.
 
 ```
 VARIANT GetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 L'ID di un elemento HTML.
 
-*dispid*<br/>
+*dispId*<br/>
 L'ID di invio di una proprietà.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1151,7 +1151,7 @@ Restituisce E_NOTIMPL.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro è applicazione del CDHtmlDialog del [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), come descritto nel SDK di Windows.
+Questa funzione membro è l'implementazione del CDHtmlDialog del [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), come descritto nel SDK di Windows.
 
 ##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
 
@@ -1245,12 +1245,12 @@ Imposta la proprietà di un controllo ActiveX in un nuovo valore.
 ```
 void SetControlProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 L'ID HTML di un controllo ActiveX.
 
-*dispid*<br/>
+*dispId*<br/>
 ID dispatch della proprietà da impostare.
 
 *pVar*<br/>
@@ -1308,7 +1308,7 @@ Imposta una proprietà di un elemento HTML.
 ```
 void SetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 ```
 
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 L'ID di un elemento HTML.
 
-*dispid*<br/>
+*dispId*<br/>
 ID dispatch della proprietà da impostare.
 
 *pVar*<br/>

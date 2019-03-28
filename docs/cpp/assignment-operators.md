@@ -1,6 +1,6 @@
 ---
 title: Operatori di assegnazione
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328474"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565480"
 ---
 # <a name="assignment-operators"></a>Operatori di assegnazione
 
 ## <a name="syntax"></a>Sintassi
 
-*espressione* *assignment-operator* *espressione*
+*expression* *assignment-operator* *expression*
 
 *operatore di assegnazione* : uno dei<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
@@ -57,7 +57,7 @@ Gli operatori di assegnamento consentono di memorizzare un valore nell'oggetto d
 
 Tutti gli operatori di assegnamento nella tabella seguente, ad eccezione dell'operatore =, sono operatori di assegnamento composti.
 
-### <a name="assignment-operators"></a>Operatori di assegnazione
+### <a name="assignment-operators-table"></a>Tabella di operatori di assegnazione
 
 |Operatore|Significato|
 |--------------|-------------|
@@ -73,7 +73,7 @@ Tutti gli operatori di assegnamento nella tabella seguente, ad eccezione dell'op
 |**^=**|Ottiene l'OR esclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|
 |**\|=**|Ottiene l'OR inclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|
 
-**Parole chiave per gli operatori**
+### <a name="operator-keywords"></a>Parole chiave per operatori
 
 Tre degli operatori di assegnamento composti hanno testo equivalente. Ad esempio:
 
@@ -180,7 +180,7 @@ può avere uno dei seguenti effetti:
 
 ## <a name="compound-assignment"></a>Assegnazione composta
 
-Operatori di assegnamento composti, illustrati nella tabella [gli operatori di assegnazione](#assignment-operators), vengono specificati nel formato *e1* *op*= *e2*, dove *e1* è un l-value modificabile non del **const** tipo e *e2* è uno dei seguenti:
+Operatori di assegnamento composti, illustrati nella [tabella gli operatori di assegnazione](#assignment-operators-table), vengono specificati nel formato *e1* *op*= *e2*, dove *e1* è un l-value modificabile non dei **const** tipo e *e2* è uno dei seguenti:
 
 - Un tipo aritmetico
 

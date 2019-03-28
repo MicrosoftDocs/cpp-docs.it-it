@@ -1,6 +1,6 @@
 ---
 title: Macro della mappa messaggi (MFC)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: b1cc721ed994ae1c6704011199ac635ee462ded8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850272"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565537"
 ---
 # <a name="message-map-macros-mfc"></a>Macro della mappa messaggi (MFC)
 
@@ -45,7 +45,7 @@ Per supportare le mappe messaggi, MFC fornisce le seguenti macro:
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Dichiara una mappa messaggi verrà utilizzata in una classe per eseguire il mapping dei messaggi a funzioni (deve essere usato nella dichiarazione di classe).|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Inizia la definizione di una mappa messaggi (deve essere usato nell'implementazione della classe).|
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Inizia la definizione di una mappa messaggi per un tipo di classe che contiene un argomento singolo modello. |
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|Inizia la definizione di una mappa messaggi per un tipo di classe che contiene un argomento singolo modello. |
 |[END_MESSAGE_MAP](#end_message_map)|Termina la definizione di una mappa messaggi (deve essere usato nell'implementazione della classe).|
 
 ### <a name="message-mapping-macros"></a>Macro di Mapping di messaggi
@@ -67,7 +67,7 @@ Per supportare le mappe messaggi, MFC fornisce le seguenti macro:
 |||
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|Indica quale funzione gestirà l'intervallo di ID di comando specificati nei primi due parametri alla macro.|
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Indica il gestore di aggiornamento consente di gestire l'intervallo di ID di comando specificati nei primi due pa] Tri alla macro.|
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Indica il gestore di aggiornamento consente di gestire l'intervallo di ID di comando specificati nei primi due parametri alla macro.|
 |[ON_CONTROL_RANGE](#on_control_range)|Indica quale funzione gestirà le notifiche dall'intervallo ID specificati nei parametri di secondo e terzi alla macro di controllo. Il primo parametro è un messaggio di notifica del controllo, ad esempio BN_CLICKED.|
 
 Per altre informazioni su mappe messaggi, la dichiarazione della mappa messaggi e le macro di demarcazione e le macro di mapping di messaggi, vedere [mappe messaggi](../../mfc/reference/message-maps-mfc.md) e [gestione dei messaggi e Mapping argomenti](../../mfc/message-handling-and-mapping.md). Per altre informazioni sugli intervalli della mappa messaggi, vedere [gestori per intervalli della mappa messaggi](../../mfc/handlers-for-message-map-ranges.md).
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **Intestazione:** afxwin.h
 
-##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begintemplatemessagemap"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
 Inizia la definizione di una mappa messaggi per un tipo di classe che contiene un argomento singolo modello.
 
@@ -199,12 +199,12 @@ Questa macro viene mappato un messaggio di comando a una funzione membro.
 ### <a name="syntax"></a>Sintassi
 
 ```
-ON_COMMAND( id, memberFxn )
+ON_COMMAND( commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
+*commandId*<br/>
 ID di comando.
 
 *memberFxn*<br/>
@@ -216,7 +216,7 @@ Indica quale funzione gestirà un messaggio di comando da un oggetto di interfac
 
 Quando un oggetto destinazione comando riceve un messaggio WM_COMMAND Windows con l'ID specificato, ON_COMMAND chiamerà la funzione membro `memberFxn` per gestire il messaggio.
 
-Usare ON_COMMAND per eseguire il mapping di un singolo comando a una funzione membro. Uso [ON_COMMAND_RANGE](#on_command_range) per eseguire il mapping di un intervallo di ID di comando alla funzione membro di uno. Solo una voce della mappa messaggi può corrispondere a un id di comando specificato. Vale a dire, è possibile mappare un comando per più di un gestore. Per altre informazioni ed esempi, vedere [la gestione dei messaggi e Mapping argomenti](../../mfc/message-handling-and-mapping.md).
+Usare ON_COMMAND per eseguire il mapping di un singolo comando a una funzione membro. Uso [ON_COMMAND_RANGE](#on_command_range) per eseguire il mapping di un intervallo di ID di comando alla funzione membro di uno. Solo una voce della mappa messaggi può corrispondere a un ID di comando specificato. Vale a dire, è possibile mappare un comando per più di un gestore. Per altre informazioni ed esempi, vedere [la gestione dei messaggi e Mapping argomenti](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Esempio
 
@@ -237,12 +237,12 @@ Funzione membro di gestore comando estesa.
 ### <a name="syntax"></a>Sintassi
 
 ```
-ON_COMMAND_EX(id, memberFxn);
+ON_COMMAND_EX(commandId, memberFxn);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
+*commandId*<br/>
 ID di comando.
 
 *memberFxn*<br/>
@@ -265,7 +265,7 @@ Indica quale funzione gestirà un messaggio di notifica di controlli personalizz
 ### <a name="syntax"></a>Sintassi
 
 ```
-ON_CONTROL( wNotifyCode, id, memberFxn )
+ON_CONTROL( wNotifyCode, commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -273,7 +273,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 *wNotifyCode*<br/>
 Il codice di notifica del controllo.
 
-*ID*<br/>
+*commandId*<br/>
 ID di comando.
 
 *memberFxn*<br/>
@@ -356,7 +356,7 @@ Consente di indirizzare i comandi tramite l'interfaccia di dispatch comando `IOl
 ### <a name="syntax"></a>Sintassi
 
 ```
-ON_OLECMD( pguid, olecmdid, id )
+ON_OLECMD( pguid, olecmdid, commandId )
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -367,7 +367,7 @@ Identificatore del gruppo di comandi a cui appartiene il comando. Utilizzare NUL
 *olecmdid*<br/>
 L'identificatore del comando OLE.
 
-*ID*<br/>
+*commandId*<br/>
 L'ID del menu, barra degli strumenti ID, ID del pulsante o altri ID della risorsa o oggetto eseguito il comando.
 
 ### <a name="remarks"></a>Note
@@ -575,12 +575,12 @@ Questa macro indica quale funzione gestirà un messaggio di comando di aggiornam
 ### <a name="syntax"></a>Sintassi
 
 ```
-ON_UPDATE_COMMAND_UI( id, memberFxn )
+ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
+*messageId*<br/>
 ID del messaggio.
 
 *memberFxn*<br/>

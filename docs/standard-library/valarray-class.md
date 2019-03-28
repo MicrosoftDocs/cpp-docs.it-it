@@ -1,6 +1,6 @@
 ---
 title: Classe valarray
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525312"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565740"
 ---
 # <a name="valarray-class"></a>Classe valarray
 
@@ -88,7 +88,7 @@ In particolare, non possono esistere sottili differenze tra il costruttore di co
 |-|-|
 |[operator!](#op_not)|Operatore unario che ottiene i valori `NOT` logici di ogni elemento in un oggetto `valarray`.|
 |[operator%=](#op_mod_eq)|Ottiene il resto della divisione degli elementi di una matrice elemento per elemento per un oggetto `valarray` specificato o per un valore del tipo di elemento.|
-|[operator&=](#op_amp_eq)|Ottiene l'operatore `AND` bit per bit di elementi in una matrice con gli elementi corrispondenti in un oggetto `valarray` specificato o con un valore del tipo di elemento.|
+|[operator&=](#op_and_eq)|Ottiene l'operatore `AND` bit per bit di elementi in una matrice con gli elementi corrispondenti in un oggetto `valarray` specificato o con un valore del tipo di elemento.|
 |[operator>>=](#op_gt_gt_eq)|Sposta verso destra i bit per ogni elemento di un operando `valarray` di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto `valarray`.|
 |[operator<<=](#op_lt_lt_eq)|Sposta verso sinistra i bit per ogni elemento di un operando `valarray` di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto `valarray`.|
 |[operator*=](#op_star_eq)|Moltiplica gli elementi di un oggetto `valarray` specificato o di un valore del tipo di elemento, elemento per elemento, per un operando `valarray`.|
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a>  valarray::operator&amp;=
+## <a name="op_and_eq"></a>  valarray::operator&amp;=
 
 Ottiene l'operatore **AND** bit per bit di elementi in una matrice con gli elementi corrispondenti in un oggetto valarray specificato o con un valore del tipo di elemento.
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a>  valarray::operator-
+## <a name="operator-"></a>  valarray::operator-
 
 Operatore unario che applica un segno meno a ogni elemento in un oggetto valarray.
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a>  valarray::operator-=
+## <a name="operator-_eq"></a>  valarray::operator-=
 
 Sottrae gli elementi di un oggetto valarray specificato o un valore del tipo di elemento, elemento per elemento, da un operando valarray.
 
@@ -1115,7 +1115,7 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 *right*<br/>
 Oggetto valarray da copiare nell'operando valarray.
 
-*Val*<br/>
+*val*<br/>
 Valore da assegnare agli elementi dell'operando valarray.
 
 *_Slicearray*<br/>
@@ -1226,7 +1226,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Indice dell'elemento a cui deve essere assegnato un valore.
 
 *_Slicearray*<br/>
@@ -1276,7 +1276,7 @@ Oggetto valarray i cui elementi sono logico esclusivo elemento per elemento, **X
 
 ### <a name="remarks"></a>Note
 
-L'operatore or logico esclusivo, indicato come **XOR**, supporta la semantica seguente: dati gli elementi *e*1 e *e*2, *e*1 **XOR** *e*2 è **true** se uno degli elementi è true; **false** se entrambi gli elementi sono false o se entrambi gli elementi sono true.
+Esclusivo logico o, detta **XOR**, con la semantica seguente: Un elemento specifico *elettronica*1 e *elettronica*2, *e*1 **XOR** *e*2 è **true** se esattamente uno degli elementi è true. **false** se entrambi gli elementi sono false o se entrambi gli elementi sono true.
 
 ### <a name="example"></a>Esempio
 
@@ -1528,7 +1528,7 @@ void resize(
 *_Newsize*<br/>
 Il numero di elementi nell'oggetto valarray ridimensionato.
 
-*Val*<br/>
+*val*<br/>
 Il valore da assegnare agli elementi dell'oggetto valarray ridimensionato.
 
 ### <a name="remarks"></a>Note
@@ -1852,7 +1852,7 @@ Numero di elementi che possono essere contenuti in un oggetto valarray.
 *Val*<br/>
 Valore da utilizzare durante l'inizializzazione degli elementi nell'oggetto valarray.
 
-*PTR*<br/>
+*Ptr*<br/>
 Puntatore ai valori da utilizzare per inizializzare gli elementi nell'oggetto valarray.
 
 *A destra*<br/>

@@ -1,6 +1,6 @@
 ---
 title: Classe task_handle
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298087"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565100"
 ---
 # <a name="taskhandle-class"></a>Classe task_handle
 
@@ -39,7 +39,7 @@ Il tipo dell'oggetto funzione che verrà richiamato per eseguire il lavoro rappr
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[task_handle](#ctor)|Costruisce un nuovo oggetto `task_handle`. Il lavoro dell'attività viene eseguito invocando la funzione specificata come parametro al costruttore.|
+|[task_handle](#task_handle)|Costruisce un nuovo oggetto `task_handle`. Il lavoro dell'attività viene eseguito invocando la funzione specificata come parametro al costruttore.|
 |[~ task_handle distruttore](#dtor)|Elimina definitivamente il `task_handle` oggetto.|
 
 ### <a name="public-operators"></a>Operatori pubblici
@@ -76,7 +76,7 @@ L'operatore di chiamata di funzione che richiama il runtime per eseguire un'oper
 void operator()() const;
 ```
 
-##  <a name="task_handle__ctor"></a> task_handle
+## <a name="taskhandle"></a>task_handle
 
 Costruisce un nuovo oggetto `task_handle`. Il lavoro dell'attività viene eseguito invocando la funzione specificata come parametro al costruttore.
 

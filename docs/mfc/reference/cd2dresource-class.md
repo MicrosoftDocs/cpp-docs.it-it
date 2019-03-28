@@ -1,6 +1,6 @@
 ---
 title: Classe CD2DResource
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DResource
 - AFXRENDERTARGET/CD2DResource
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284866"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564775"
 ---
 # <a name="cd2dresource-class"></a>Classe CD2DResource
 
@@ -46,7 +46,7 @@ class CD2DResource : public CObject;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|Costruisce un oggetto CD2DResource.|
-|[CD2DResource:: ~ CD2DResource](#cd2dresource__~cd2dresource)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto risorsa D2D.|
+|[CD2DResource:: ~ CD2DResource](#_dtorcd2dresource)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto risorsa D2D.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -65,9 +65,9 @@ class CD2DResource : public CObject;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Risorsa verrà eliminata dal proprietario (CRenderTarget)|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Risorse verranno eliminato definitivamente dal proprietario (CRenderTarget)|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|Puntatore all'elemento padre CRenderTarget)|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
@@ -157,7 +157,7 @@ TRUE se la risorsa è valida. in caso contrario, FALSE.
 
 ##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
 
-Risorsa verrà eliminata dal proprietario (CRenderTarget)
+Risorse verranno eliminato definitivamente dal proprietario (CRenderTarget)
 
 ```
 BOOL m_bIsAutoDestroy;

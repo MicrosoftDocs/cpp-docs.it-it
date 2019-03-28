@@ -1,6 +1,6 @@
 ---
 title: Classe Platform::Collections::Map
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745171"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565282"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -47,7 +47,7 @@ Tipo di valore nella coppia chiave-valore.
 *C*<br/>
 Tipo che fornisce un oggetto funzione che può confrontare due valori di elementi come chiavi di ordinamento per determinare l'ordine relativo nella mappa. Per impostazione predefinita [std:: less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()* una funzione generato dal compilatore che convalida il tipo di *K* e *V* e fornisce un messaggio di errore descrittivo se il tipo non può essere archiviato nella mappa.
+*__is_valid_winrt_type()* una funzione generata dal compilatore che convalida il tipo di *K* e *V* e fornisce un messaggio di errore descrittivo se il tipo non può essere archiviato nella mappa.
 
 ### <a name="remarks"></a>Note
 
@@ -92,8 +92,8 @@ Per altre informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 |||
 |-|-|
-|nome|Descrizione|
-|[Map::MapChanged](#mapchanged-event.md) `event`|Si verifica quando l'oggetto Map subisce delle modifiche.|
+|Nome|Descrizione|
+|[Map:: mapchanged](#mapchanged) evento|Si verifica quando l'oggetto Map subisce delle modifiche.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -238,7 +238,7 @@ Typename dell'oggetto Map corrente.
 Tipo che fornisce un oggetto funzione che può confrontare due valori di elementi come chiavi di ordinamento per determinare l'ordine relativo nella mappa.
 
 *m*<br/>
-Un riferimento oppure [Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un `map Class` che viene usato per inizializzare l'oggetto Map corrente.
+Un riferimento oppure [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) a un `map Class` che viene usato per inizializzare l'oggetto Map corrente.
 
 *first*<br/>
 Iteratore di input del primo elemento in un intervallo di elementi utilizzato per inizializzare l'oggetto Map corrente.

@@ -1,17 +1,17 @@
 ---
 title: Contenitori e oggetti paralleli
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333293"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565948"
 ---
 # <a name="parallel-containers-and-objects"></a>Contenitori e oggetti paralleli
 
@@ -27,13 +27,13 @@ In questo argomento vengono descritte le seguenti contenitori e oggetti parallel
 
 Contenitori simultanei:
 
-- [Classe concurrent_vector](#ctor)
+- [Classe concurrent_vector](#vector)
 
-   - [Vettore e differenze tra concurrent_vector](#ctor)
+   - [Vettore e differenze tra concurrent_vector](#vector-differences)
 
-   - [Operazioni sicure per concorrenza](#ctor)
+   - [Operazioni sicure per concorrenza](#vector-safety)
 
-   - [Protezione dalle eccezioni](#ctor)
+   - [Protezione dalle eccezioni](#vector-exceptions)
 
 - [Classe concurrent_queue](#queue)
 
@@ -189,7 +189,7 @@ L'esempio seguente mostra la struttura di base per l'uso di `concurrent_unordere
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-Per un esempio che usa `concurrent_unordered_map` per eseguire una mappa e ridurre le operazioni in parallelo, vedere [procedura: eseguire mappa e ridurre le operazioni in parallelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Per un esempio che usa `concurrent_unordered_map` per eseguire una mappa e ridurre le operazioni in parallelo, vedere [come: Esecuzione della mappa e ridurre le operazioni in parallelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 ###  <a name="map-differences"></a> Unordered_map e differenze tra concurrent_unordered_map
 
@@ -291,9 +291,9 @@ Il `combinable` classe è una classe di modello contenente i parametri per il ri
 
 Per esempi su come usare il `combinable` classe, vedere gli argomenti seguenti:
 
-- [Procedura: Usare la classe combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
+- [Procedura: Usare combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
 
-- [Procedura: Usare l'oggetto combinable per combinare set](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
+- [Procedura: Usare combinable per combinare set](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
 
 [[Torna all'inizio](#top)]
 
@@ -302,10 +302,10 @@ Per esempi su come usare il `combinable` classe, vedere gli argomenti seguenti:
 [Procedura: Usare i contenitori paralleli per aumentare l'efficienza](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
 Viene illustrato come usare i contenitori paralleli in modo efficiente archiviare e accedere ai dati in parallelo.
 
-[Procedura: Usare la classe combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+[Procedura: Usare combinable per migliorare le prestazioni](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 Viene illustrato come utilizzare il `combinable` classe per eliminare lo stato condiviso e migliorare le prestazioni.
 
-[Procedura: Usare l'oggetto combinable per combinare set](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
+[Procedura: Usare combinable per combinare set](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
 Viene illustrato come utilizzare un `combine` funzione thread-local set di dati di tipo merge.
 
 [PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>

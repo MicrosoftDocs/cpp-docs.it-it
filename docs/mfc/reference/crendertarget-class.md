@@ -1,6 +1,6 @@
 ---
 title: Classe CRenderTarget
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259880"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565761"
 ---
 # <a name="crendertarget-class"></a>Classe CRenderTarget
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Costruisce un oggetto CRenderTarget.|
-|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di destinazione di rendering.|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto di destinazione di rendering.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -208,7 +208,7 @@ class CRenderTarget : public CObject;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Elenco di puntatori a oggetti CD2DResource.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Un puntatore a un oggetto ID2D1RenderTarget.|
@@ -502,7 +502,7 @@ Consente di disegnare la struttura di un rettangolo con le dimensioni specificat
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parametri
 
-*rect*<br/>
+*rectangle*<br/>
 Le dimensioni del rettangolo da disegnare, in pixel indipendenti dal dispositivo
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ Disegna il testo specificato usando le informazioni di formato fornite da un ogg
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 Un puntatore a una matrice di caratteri Unicode da disegnare.
 
-*rect*<br/>
+*rectangle*<br/>
 Le dimensioni e posizione dell'area in cui viene disegnato il testo.
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ Disegna l'interno del rettangolo specificato.
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*rect*<br/>
+*rectangle*<br/>
 La dimensione del rettangolo da disegnare, in pixel indipendenti dal dispositivo.
 
 *pBrush*<br/>

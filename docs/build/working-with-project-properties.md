@@ -1,19 +1,19 @@
 ---
 title: Impostare il compilatore C++ e creare proprietà in Visual Studio
 description: Usare l'IDE di Visual Studio per modificare le opzioni del compilatore e linker C++ e altre impostazioni di compilazione.
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827889"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564913"
 ---
 # <a name="set-compiler-and-build-properties"></a>Impostare il compilatore e le proprietà di compilazione
 
@@ -65,7 +65,7 @@ La figura seguente mostra le pagine delle proprietà per un progetto Visual C++.
 
 ![Pagine delle proprietà del progetto](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-È possibile usare l'Editor proprietà per visualizzare i valori di tutte le macro disponibili. Le macro vengono trattate nella sezione [Macro della pagina delle proprietà](#bkmkPropertiesVersusMacros) più avanti in questo articolo.
+È possibile usare l'Editor proprietà per visualizzare i valori di tutte le macro disponibili.
 
 ### <a name="predefined-macros"></a>Macro predefinite
 
@@ -79,7 +79,7 @@ Presenta la sintassi `%(name)`. Per un file una macro di elemento si applica sol
 
 È possibile creare *macro definite dall'utente* da usare come variabili nelle build di progetto. Ad esempio, si potrebbe creare una macro definita dall'utente per fornire un valore a un'istruzione di compilazione personalizzata o a uno strumento di compilazione personalizzato. Una macro definita dall'utente è una coppia nome/valore. In un file di progetto usare la notazione **$(**<em>name</em>**)** per accedere al valore.
 
-Una macro definita dall'utente viene archiviata in una finestra delle proprietà. Se il progetto non contiene già una finestra delle proprietà, è possibile crearne uno seguendo i passaggi descritti sotto [condivisione o riutilizzare le impostazioni di progetto Visual Studio C++](#bkmkPropertySheets).
+Una macro definita dall'utente viene archiviata in una finestra delle proprietà. Se il progetto non contiene già una finestra delle proprietà, è possibile crearne uno seguendo i passaggi descritti sotto [impostazioni di progetto di Visual Studio condivisione e riutilizzo](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>Per creare una macro definita dall'utente
 
@@ -128,13 +128,13 @@ Nel riquadro destro modificare le impostazioni del progetto **Ambiente** o **Uni
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Condivisione o riutilizzare le impostazioni di progetto Visual Studio](create-reusable-property-configurations.md)<br/>
+[Condividere o riutilizzare le impostazioni di progetto di Visual Studio](create-reusable-property-configurations.md)<br/>
 Come creare un file con estensione props con le impostazioni di compilazione personalizzati che possono essere condivisi o resused.
 
-[Ereditarietà della proprietà progetto](project-property-inheritance.md)<br/>
+[Ereditarietà delle proprietà del progetto](project-property-inheritance.md)<br/>
 Descrive l'ordine di valutazione di con estensione props, con estensione targets, i file con estensione vcxproj e variabili di ambiente nel processo di compilazione.
 
-[Modificare le proprietà e destinazioni senza modificare il file di progetto](modify-project-properties-without-changing-project-file.md)<br/>
+[Modificare le proprietà e le destinazioni senza modificare il file di progetto](modify-project-properties-without-changing-project-file.md)<br/>
 Come creare le impostazioni di compilazione temporanei senza la necessità di modificare un file di progetto. 
 
 ## <a name="see-also"></a>Vedere anche

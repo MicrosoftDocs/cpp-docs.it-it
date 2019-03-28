@@ -1,18 +1,18 @@
 ---
 title: Classe Platform::Collections::InputIterator
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745795"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565139"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Classe Platform::Collections::InputIterator
 
@@ -53,7 +53,7 @@ Typename della classe modello InputIterator.
 |Nome|Descrizione|
 |----------|-----------------|
 |[Operator InputIterator::operator!=](#operator-inequality)|Indica se l'oggetto InputIterator corrente è diverso dall'oggetto InputIterator specificato.|
-|[Operatore InputIterator::operator*](#operator-decrement)|Recupera un riferimento all'elemento specificato dall'oggetto InputIterator corrente.|
+|[Operatore InputIterator::operator*](#operator-dereference)|Recupera un riferimento all'elemento specificato dall'oggetto InputIterator corrente.|
 |[Operatore InputIterator::operator++](#operator-increment)|Incrementa l'oggetto InputIterator corrente.|
 |[Operatore InputIterator::operator==](#operator-equality)|Indica se l'oggetto InputIterator corrente è uguale all'oggetto InputIterator specificato.|
 |[Operatore InputIterator::operator->](#operator-arrow)|Recupera l'indirizzo dell'elemento a cui viene fatto riferimento dall'oggetto InputIterator corrente.|
@@ -76,12 +76,12 @@ Inizializza una nuova istanza della classe InputIterator.
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*iter*<br/>
+*iterator*<br/>
 Oggetto iteratore.
 
 ## <a name="operator-arrow"></a>  Inputiterator:: operator -&gt; operatore

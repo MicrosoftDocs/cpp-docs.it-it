@@ -1,6 +1,6 @@
 ---
 title: '#importare (direttiva) (C++)'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822626"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564956"
 ---
 # <a name="import-directive-c"></a>Direttiva #import (C++)
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 immediatamente dopo il **#import** istruzione nel codice sorgente.
 
-Lo spazio dei nomi può essere soppresso mediante il [no_namespace](#_predir_no_namespace) attributo il **#import** direttiva. Tuttavia, l'eliminazione dello spazio dei nomi può causare conflitti di nomi. Lo spazio dei nomi può essere rinominato anche per il [rename_namespace](#_predir_rename_namespace) attributo.
+Lo spazio dei nomi può essere soppresso mediante il [no_namespace](no-namespace.md)) attributo delle **#import** direttiva. Tuttavia, l'eliminazione dello spazio dei nomi può causare conflitti di nomi. Lo spazio dei nomi può essere rinominato anche per il [rename_namespace](rename-namespace.md) attributo.
 
 Il compilatore fornisce il percorso completo di qualsiasi dipendenza della libreria dei tipi richiesta dalla libreria dei tipi attualmente elaborata. Il percorso viene scritto, sotto forma di commenti, nell'intestazione della libreria dei tipi (TLH) generata dal compilatore per ogni libreria dei tipi elaborata.
 
