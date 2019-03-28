@@ -2,12 +2,12 @@
 title: Trasferimento alla piattaforma UWP (Universal Windows Platform) (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518541"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278463"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Trasferimento alla piattaforma UWP (Universal Windows Platform) (C++)
 
@@ -21,7 +21,7 @@ Questo argomento contiene le procedure seguenti per convertire il codice per la 
 
 - [Porting di un componente Runtime di Windows 8.1 per il UWP](#BK_81Component)
 
-Se si ha a disposizione una DLL Win32 per desktop classico e la si vuole chiamare da un'applicazione UWP, è anche possibile eseguire queste operazioni. Usando queste procedure, è possibile creare un livello dell'interfaccia utente UWP per un'applicazione C++ per desktop Windows classico esistente oppure un codice C++ multipiattaforma standard. Vedere [Procedura: usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
+Se si ha a disposizione una DLL Win32 per desktop classico e la si vuole chiamare da un'applicazione UWP, è anche possibile eseguire queste operazioni. Usando queste procedure, è possibile creare un livello dell'interfaccia utente UWP per un'applicazione C++ per desktop Windows classico esistente oppure un codice C++ multipiattaforma standard. Vedere [How to: Usare codice C++ esistente in un'app per la piattaforma UWP (Universal Windows Platform)](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
 ## <a name="BK_81StoreApp"></a> Porting di un'app di Windows Store 8.1 alla piattaforma UWP
 
@@ -74,7 +74,7 @@ Se si dispone di una DLL o di un componente Windows Runtime già compatibile con
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Per trasferire un componente Windows 8.1 Runtime nella piattaforma UWP
 
-1. Nella finestra di dialogo **Nuovo progetto** in Visual Studio 2017, trovare il nodo **Universale di Windows**. Se questo nodo non viene visualizzato, installare prima [Strumenti per Windows 10](http://go.microsoft.com/fwlink/p/?LinkID=617903) . Scegliere il modello **Componente Windows Runtime** , assegnare un nome al componente e scegliere il pulsante **OK** . Il nome del componente verrà usato come nome dello spazio dei nomi, quindi si potrebbe voler usare lo stesso nome del precedente spazio dei nomi del progetto. Di conseguenza, si deve creare il progetto in una cartella diversa da quella precedente. Se si sceglie un nome diverso, è possibile aggiornare lo spazio dei nomi nei file di codice generato.
+1. Nella finestra di dialogo **Nuovo progetto** in Visual Studio 2017, trovare il nodo **Universale di Windows**. Se questo nodo non viene visualizzato, installare prima [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Scegliere il modello **Componente Windows Runtime** , assegnare un nome al componente e scegliere il pulsante **OK** . Il nome del componente verrà usato come nome dello spazio dei nomi, quindi si potrebbe voler usare lo stesso nome del precedente spazio dei nomi del progetto. Di conseguenza, si deve creare il progetto in una cartella diversa da quella precedente. Se si sceglie un nome diverso, è possibile aggiornare lo spazio dei nomi nei file di codice generato.
 
 1. Chiudere il progetto.
 
