@@ -1,12 +1,12 @@
 ---
 title: Panoramica delle convenzioni ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 2695ba69c642b2100ec041d1f85debb4ad7041c8
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
+ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508858"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639446"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -187,27 +187,21 @@ I valori integrali vengono restituiti in x0.
 
 Valori a virgola mobile vengono restituiti in s0/d0/v0 come appropriato.
 
-Tipi restituiti per valore vengono gestiti in modo diverso a seconda del fatto che hanno determinate proprietà.
+Tipi restituiti per valore vengono gestiti in modo diverso a seconda del fatto che hanno determinate proprietà. Tipi che dispongono tutte di queste proprietà,
 
-I tipi sono specificati uno stile restituito "C" se sono aggregati dalla C + + 14 definizione dello standard. Vale a dire,
+- risultano *aggregazione* da C + + 14 definizione dello standard, vale a dire, dispongono di alcun costruttore fornito dall'utente, non ha membri dati non statici privati o protetti, senza classi di base e funzioni non virtuali, e
+- hanno un operatore di assegnazione di copia semplice, e
+- hanno un distruttore semplice,
 
-- dispongono di alcun costruttore fornito dall'utente, non ha membri dati non statici privati o protetti, senza classi di base e funzioni non virtuali,
-- hanno un costruttore di copia semplice, e
-- hanno un distruttore semplice.
+usare il seguente foglio di stile restituito:
 
-Tutti gli altri tipi vengono forniti uno stile restituito "C++".
+- Tipi restituiti in x0 minore o uguale a 8 byte.
+- Tipi di minore o uguale a 16 byte vengono restituiti in x0 e x1, con x0 contenente dagli 8 byte di ordine inferiore.
+- Per i tipi di dimensioni superiori a 16 byte, il chiamante conserva un blocco di memoria di dimensioni sufficienti e l'allineamento per contenere il risultato. L'indirizzo del blocco di memoria deve essere passato come argomento aggiuntivo alla funzione in x8. Il chiamato può modificare il blocco di memoria del risultato in qualsiasi momento durante l'esecuzione della subroutine. Il chiamato non è necessario per mantenere il valore archiviato in x8.
 
-### <a name="c-return-style"></a>Tipo restituito di C
+Tutti gli altri tipi utilizzano questa convenzione:
 
-Tipi restituiti in x0 minore o uguale a 8 byte.
-
-Tipi di minore o uguale a 16 byte vengono restituiti in x0 e x1, con x0 contenente dagli 8 byte di ordine inferiore.
-
-Per i tipi di dimensioni superiori a 16 byte, il chiamante conserva un blocco di memoria di dimensioni sufficienti e l'allineamento per contenere il risultato. L'indirizzo del blocco di memoria deve essere passato come argomento aggiuntivo alla funzione in x8. Il chiamato può modificare il blocco di memoria del risultato in qualsiasi momento durante l'esecuzione della subroutine. Il chiamato non è necessario per mantenere il valore archiviato in x8.
-
-### <a name="c-return-style"></a>Stile restituito C++
-
-Il chiamante conserva un blocco di memoria di dimensioni sufficienti e l'allineamento per contenere il risultato. L'indirizzo del blocco di memoria dovrà essere passato come argomento aggiuntivo alla funzione in x0 o x1 se $ x0 questo viene passato. Il chiamato può modificare il blocco di memoria del risultato in qualsiasi momento durante l'esecuzione della subroutine. Il destinatario della chiamata restituisce l'indirizzo del blocco di memoria in x0.
+- Il chiamante conserva un blocco di memoria di dimensioni sufficienti e l'allineamento per contenere il risultato. L'indirizzo del blocco di memoria dovrà essere passato come argomento aggiuntivo alla funzione in x0 o x1 se $ x0 questo viene passato. Il chiamato può modificare il blocco di memoria del risultato in qualsiasi momento durante l'esecuzione della subroutine. Il destinatario della chiamata restituisce l'indirizzo del blocco di memoria in x0.
 
 ## <a name="stack"></a>Stack
 
