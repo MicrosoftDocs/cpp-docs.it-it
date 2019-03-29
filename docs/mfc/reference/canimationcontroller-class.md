@@ -1,6 +1,6 @@
 ---
 title: Classe CAnimationController
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationController
 - AFXANIMATIONCONTROLLER/CAnimationController
@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 114b6bffdc63ecadc951965f8f199b229f0f7672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a3a533b876b9ca245c0553c4c24a815ef3cabca1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270280"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565961"
 ---
 # <a name="canimationcontroller-class"></a>Classe CAnimationController
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Costruisce un controller di animazione.|
-|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|Distruttore. Chiamato quando viene eliminata definitivamente l'oggetto controller di animazione.|
+|[CAnimationController::~CAnimationController](#_dtorcanimationcontroller)|Distruttore. Chiamato quando viene eliminata definitivamente l'oggetto controller di animazione.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -181,7 +181,7 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Un fotogramma chiave che rappresenta l'inizio dello storyboard.|
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Specifica se un controller di animazione è valido o meno. Questo membro è impostato su FALSE se il sistema operativo corrente non supporta l'API di animazione di Windows.|

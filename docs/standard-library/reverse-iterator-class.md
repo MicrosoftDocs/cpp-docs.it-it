@@ -1,6 +1,6 @@
 ---
 title: Classe reverse_iterator
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: c865caa6d47d68462740fb4e9b2f6b712d9b6df9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae4a3da8f15f838900cb5a4324fbaeda01d918a2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640219"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565636"
 ---
 # <a name="reverseiterator-class"></a>Classe reverse_iterator
 
@@ -84,7 +84,7 @@ In pratica, questo significa che in tale sequenza inversa reverse_iterator farà
 |[operator-](#operator-)|Sottrae un offset da un `reverse_iterator` e restituisce un `reverse_iterator` che punta all'elemento in corrispondenza della posizione dell'offset.|
 |[operator--](#operator--)|Decrementa `reverse_iterator` all'elemento precedente.|
 |[operator-=](#operator-_eq)|Sottrae un offset specificato da un `reverse_iterator`.|
-|[operator->](#operator-_gt)|Restituisce un puntatore all'elemento a cui punta un `reverse_iterator`.|
+|[operator->](#op-arrow)|Restituisce un puntatore all'elemento a cui punta un `reverse_iterator`.|
 |[operator&#91;&#93;](#op_at)|Restituisce un riferimento all'offset di un elemento dall'elemento a cui punta un `reverse_iterator` di un numero specificato di posizioni.|
 
 ## <a name="requirements"></a>Requisiti
@@ -196,7 +196,7 @@ Il tipo è un sinonimo del parametro di modello `Iterator`.
 
 Vedere [reverse_iterator::base](#base) per indicazioni su come dichiarare e usare `iterator_type`.
 
-## <a name="op_star"></a>  reverse_iterator:: operator\*
+## <a name="op_star"></a>  reverse_iterator::operator\*
 
 Restituisce l'elemento a cui punta un oggetto reverse_iterator.
 
@@ -477,7 +477,7 @@ After the +2 offset, the iterator rVPOS1 now points
 to the third element in the reversed sequence: 6.
 ```
 
-## <a name="reverse_iterator__operator-"></a>  reverse_iterator::operator-
+## <a name="operator-"></a>  reverse_iterator::operator-
 
 Sottrae un offset da un `reverse_iterator` e restituisce un `reverse_iterator` che punta all'elemento in corrispondenza della posizione dell'offset.
 
@@ -554,7 +554,7 @@ After the -2 offset, the iterator rVPOS2 points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="reverse_iterator__operator--"></a>  reverse_iterator::operator--
+## <a name="operator--"></a>  reverse_iterator::operator--
 
 Decrementa l'oggetto reverse_iterator all'elemento precedente.
 
@@ -627,7 +627,7 @@ After the decrement, the iterator rVPOS1 points
 to the next-to-last element in the reversed sequence: 3.
 ```
 
-## <a name="reverse_iterator__operator-_eq"></a>  reverse_iterator::operator-=
+## <a name="operator-_eq"></a>  reverse_iterator::operator-=
 
 Sottrae un offset specificato da un `reverse_iterator`.
 
@@ -702,7 +702,7 @@ After the -2 offset, the iterator rVPOS1 now points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="op_arrow"></a>  reverse_iterator::operator-&gt;
+## <a name="op-arrow"></a>  reverse_iterator::operator-&gt;
 
 Restituisce un puntatore all'elemento a cui punta un `reverse_iterator`.
 

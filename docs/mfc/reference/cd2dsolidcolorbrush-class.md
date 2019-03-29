@@ -1,6 +1,6 @@
 ---
 title: Classe CD2DSolidColorBrush
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DSolidColorBrush
 - AFXRENDERTARGET/CD2DSolidColorBrush
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: 41d1d1b8c28335ae6207e41d696359295a83e646
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f225198193443c11d0294010a5fb71858514c81e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291236"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565412"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Classe CD2DSolidColorBrush
 
@@ -50,7 +50,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 |Nome|Descrizione|
 |----------|-----------------|
 |[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Di overload. Costruisce un oggetto CD2DSolidColorBrush.|
-|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto solid brush D2D.|
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#_dtorcd2dsolidcolorbrush)|Distruttore. Chiamato quando viene eliminata definitivamente un oggetto solid brush D2D.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -72,7 +72,7 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Pennello tinta unita.|
 |[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Archivia un puntatore a un oggetto ID2D1SolidColorBrush.|

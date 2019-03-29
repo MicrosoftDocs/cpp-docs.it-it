@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 25b228c16f534ca227d50bfdf632fdacb5703cd9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818167"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565438"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (specifica il comportamento a virgola mobile)
 
@@ -30,12 +30,12 @@ Specifica il modo in cui il compilatore considera le eccezioni, le ottimizzazion
 
 #### <a name="precise"></a>Precisa
 
-Per impostazione predefinita, il compilatore Usa **/fp: precise** comportamento.
+Per impostazione predefinita, il compilatore Usa `/fp:precise` comportamento.
 
-Sotto **/fp: precise** il compilatore deve mantenere l'espressione di origine di ordinamento e proprietà del codice a virgola mobile di arrotondamento quando vengono generati e ottimizza il codice oggetto per la macchina di destinazione. Il compilatore viene arrotondato alla precisione di codice sorgente in quattro punti specifici durante la valutazione dell'espressione: in assegnazioni, in typecast, quando viene passato un argomento a virgola mobile a una chiamata di funzione e quando un valore a virgola mobile e viene restituito da una chiamata di funzione. È possibile eseguire i calcoli intermedi nella precisione di macchina. Typecast utilizzabile per l'arrotondamento in modo esplicito i calcoli intermedi.
+In `/fp:precise` il compilatore deve mantenere l'espressione di origine di ordinamento e proprietà del codice a virgola mobile di arrotondamento quando vengono generati e ottimizza il codice oggetto per la macchina di destinazione. Il compilatore viene arrotondato alla precisione di codice sorgente in quattro punti specifici durante la valutazione dell'espressione: in assegnazioni, in typecast, quando viene passato un argomento a virgola mobile a una chiamata di funzione e quando un valore a virgola mobile e viene restituito da una chiamata di funzione. È possibile eseguire i calcoli intermedi nella precisione di macchina. Typecast utilizzabile per l'arrotondamento in modo esplicito i calcoli intermedi.
 
 Il compilatore non esegue le trasformazioni algebriche su espressioni a virgola mobile, ad esempio la riassociazione o la distribuzione, a meno che non è garantita la trasformazione per produrre un risultato identico bit per bit.
-Le espressioni che prevedono valori speciali (NaN, + infinity, - infinity, -0,0) vengono elaborate in base alle specifiche IEEE 754. Ad esempio, `x != x` restituisca **true** se x è NaN. A virgola mobile *contrazioni*, vale a dire, istruzioni macchina che combinano operazioni a virgola mobile, può essere generato in **/fp: precise**.
+Le espressioni che prevedono valori speciali (NaN, + infinity, - infinity, -0,0) vengono elaborate in base alle specifiche IEEE 754. Ad esempio, `x != x` restituisca **true** se x è NaN. A virgola mobile *contrazioni*, vale a dire, istruzioni macchina che combinano operazioni a virgola mobile, può essere generato in `/fp:precise`.
 
 Il compilatore genera il codice deve essere eseguita [ambiente a virgola mobile predefinita](#the-default-floating-point-environment) e presuppone che l'ambiente a virgola mobile non è accessibile o modificato in fase di esecuzione. Vale a dire, si presuppone che il codice non annullare il mascheramento delle eccezioni a virgola mobile, leggere o scrivere i registri di stato a virgola mobile o modificare le modalità di arrotondamento.
 
@@ -43,41 +43,41 @@ Se il codice a virgola mobile e dipende dall'ordine di operazioni e le espressio
 
 #### <a name="strict"></a>strict
 
-**/fp: strict** ha un comportamento simile a **/fp: precise**, vale a dire, il compilatore deve mantenere l'ordine delle origini e arrotondamento delle proprietà del codice a virgola mobile e quando vengono generati e ottimizza il codice per la macchina di destinazione dell'oggetto e osserva lo standard quando la gestione dei valori speciali. Inoltre, il programma potrebbe accedere o modificare l'ambiente a virgola mobile in fase di esecuzione.
+`/fp:strict` presenta un comportamento simile a `/fp:precise`, vale a dire, il compilatore deve mantenere l'ordine delle origini e le proprietà del codice a virgola mobile di arrotondamento quando vengono generati e ottimizza il codice per la macchina di destinazione dell'oggetto e osserva lo standard quando la gestione dei valori speciali. Inoltre, il programma potrebbe accedere o modificare l'ambiente a virgola mobile in fase di esecuzione.
 
-Sotto **/fp: strict**, il compilatore genera codice che consente al programma in modo sicuro disabilitare il mascheramento delle eccezioni a virgola mobile, leggere o scrivere i registri di stato a virgola mobile o modificare le modalità di arrotondamento. Viene arrotondato alla precisione di codice sorgente in quattro punti specifici durante la valutazione dell'espressione: in assegnazioni, in typecast, quando viene passato un argomento a virgola mobile a una chiamata di funzione e quando un valore a virgola mobile e viene restituito da una chiamata di funzione. È possibile eseguire i calcoli intermedi nella precisione di macchina. Typecast utilizzabile per l'arrotondamento in modo esplicito i calcoli intermedi. Il compilatore non esegue le trasformazioni algebriche su espressioni a virgola mobile, ad esempio la riassociazione o la distribuzione, a meno che non è garantita la trasformazione per produrre un risultato identico bit per bit. Le espressioni che prevedono valori speciali (NaN, + infinity, - infinity, -0,0) vengono elaborate in base alle specifiche IEEE 754. Ad esempio, `x != x` restituisca **true** se x è NaN. Riduzioni a virgola mobile non vengono generati in **/fp: strict**.
+In `/fp:strict`, il compilatore genera codice che consente al programma in modo sicuro disabilitare il mascheramento delle eccezioni a virgola mobile, leggere o scrivere i registri di stato a virgola mobile o modificare le modalità di arrotondamento. Viene arrotondato alla precisione di codice sorgente in quattro punti specifici durante la valutazione dell'espressione: in assegnazioni, in typecast, quando viene passato un argomento a virgola mobile a una chiamata di funzione e quando un valore a virgola mobile e viene restituito da una chiamata di funzione. È possibile eseguire i calcoli intermedi nella precisione di macchina. Typecast utilizzabile per l'arrotondamento in modo esplicito i calcoli intermedi. Il compilatore non esegue le trasformazioni algebriche su espressioni a virgola mobile, ad esempio la riassociazione o la distribuzione, a meno che non è garantita la trasformazione per produrre un risultato identico bit per bit. Le espressioni che prevedono valori speciali (NaN, + infinity, - infinity, -0,0) vengono elaborate in base alle specifiche IEEE 754. Ad esempio, `x != x` restituisca **true** se x è NaN. Riduzioni a virgola mobile non vengono generati in `/fp:strict`.
 
-**/fp: strict** è un'operazione più costosa rispetto **/fp: precise** perché il compilatore deve inserire istruzioni aggiuntive per intercettare le eccezioni e consentire ai programmi di accedere o modificare l'ambiente a virgola mobile in fase di esecuzione. Se il codice non usa questa funzionalità, ma richiede l'ordinamento di codice sorgente e arrotondamento o si basa su valori speciali, usare **/fp: precise**. In caso contrario, è consigliabile usare **/fp: fast**, che può produrre codice più veloce e più piccolo.
+`/fp:strict` è un'operazione più costosa rispetto a `/fp:precise` perché il compilatore deve inserire istruzioni aggiuntive per intercettare le eccezioni e consentire ai programmi di accedere o modificare l'ambiente a virgola mobile in fase di esecuzione. Se il codice non usa questa funzionalità, ma richiede l'ordinamento di codice sorgente e arrotondamento o si basa su valori speciali, usare `/fp:precise`. In caso contrario, è consigliabile usare `/fp:fast`, che può produrre codice più veloce e più piccolo.
 
 #### <a name="fast"></a>Fast
 
-Il **/fp: fast** opzione consente al compilatore di riordinare, combinare o semplificare le operazioni a virgola mobile e per ottimizzare il codice a virgola mobile e per velocità e spazio. Il compilatore può omettere l'arrotondamento in istruzioni di assegnazione, typecast o chiamate di funzione. Può riordinare le operazioni o eseguire, ad esempio, trasformazioni algebriche, mediante l'utilizzo di leggi associative e distributive, anche se tali trasformazioni comportano il comportamento di arrotondamento diverso impatta in maniera visibile. A causa di questa ottimizzazione avanzata, il risultato di alcuni calcoli a virgola mobile può differire da quelle generate da altri **/fp** opzioni. Valori speciali (NaN, + infinity, - infinity, -0,0) non possono essere propagati o si comportano esattamente in base allo standard IEEE 754. Riduzioni a virgola mobile possono essere generate sotto **/fp: fast**. Il compilatore è ancora associato per l'architettura sottostante sotto **/fp: fast**, e ottimizzazioni aggiuntive potrebbero essere disponibili tramite l'uso delle [/arch](arch-minimum-cpu-architecture.md) opzione.
+Il `/fp:fast` opzione consente al compilatore di riordinare, combinare o semplificare le operazioni a virgola mobile e per ottimizzare il codice a virgola mobile e per velocità e spazio. Il compilatore può omettere l'arrotondamento in istruzioni di assegnazione, typecast o chiamate di funzione. Può riordinare le operazioni o eseguire, ad esempio, trasformazioni algebriche, mediante l'utilizzo di leggi associative e distributive, anche se tali trasformazioni comportano il comportamento di arrotondamento diverso impatta in maniera visibile. A causa di questa ottimizzazione avanzata, il risultato di alcuni calcoli a virgola mobile può differire da quelle generate da altre `/fp` opzioni. Valori speciali (NaN, + infinity, - infinity, -0,0) non possono essere propagati o si comportano esattamente in base allo standard IEEE 754. Riduzioni a virgola mobile possono essere generate in `/fp:fast`. Il compilatore è ancora associato per l'architettura sottostante sotto `/fp:fast`, e ottimizzazioni aggiuntive potrebbero essere disponibili tramite l'uso del [/arch](arch-minimum-cpu-architecture.md) opzione.
 
-Sotto **/fp: fast**, il compilatore genera il codice deve essere eseguita nell'ambiente a virgola mobile predefinito e si presuppone che l'ambiente a virgola mobile non è accessibile o modificato in fase di esecuzione. Vale a dire, si presuppone che il codice non annullare il mascheramento delle eccezioni a virgola mobile, leggere o scrivere i registri di stato a virgola mobile o modificare le modalità di arrotondamento.
+In `/fp:fast`, il compilatore genera il codice deve essere eseguita nell'ambiente a virgola mobile predefinito e si presuppone che l'ambiente a virgola mobile non è accessibile o modificato in fase di esecuzione. Vale a dire, si presuppone che il codice non annullare il mascheramento delle eccezioni a virgola mobile, leggere o scrivere i registri di stato a virgola mobile o modificare le modalità di arrotondamento.
 
-**/fp: fast** è destinato ai programmi che non richiedono codice di origine strict ordinamento e di arrotondamento di espressioni a virgola mobile e non fare affidamento sulle regole standard per la gestione dei valori speciali, ad esempio NaN. Se il codice a virgola mobile è necessaria la conservazione del codice sorgente di ordinamento e di arrotondamento o si basa sul comportamento standard di valori speciali, usare [/fp: precise](#precise). Se il codice accede o modifica l'ambiente a virgola mobile e per modificare la modalità di arrotondamento, disabilitare il mascheramento delle eccezioni a virgola mobile, o controllare lo stato a virgola mobile, utilizzare [/fp: strict](#strict).
+`/fp:fast` è progettato per i programmi che non richiedono codice sorgente strict ordinamento e di arrotondamento di espressioni a virgola mobile e non fare affidamento sulle regole standard per la gestione dei valori speciali, ad esempio NaN. Se il codice a virgola mobile è necessaria la conservazione del codice sorgente di ordinamento e di arrotondamento o si basa sul comportamento standard di valori speciali, usare [/fp: precise](#precise). Se il codice accede o modifica l'ambiente a virgola mobile e per modificare la modalità di arrotondamento, disabilitare il mascheramento delle eccezioni a virgola mobile, o controllare lo stato a virgola mobile, utilizzare [/fp: strict](#strict).
 
 #### <a name="except"></a>except
 
-Il **/fp: tranne** opzione genera codice per garantire che tutte le eccezioni a virgola mobile non mascherate vengono generate in corrispondenza del punto esatto in cui si verificano e che nessun ulteriori eccezioni a virgola mobile vengono generati. Per impostazione predefinita, il **/fp: strict** opzione Abilita **/fp: eccetto**, e **/fp: precise** non. Il **/fp: tranne** opzione non è compatibile con **/fp: fast**. L'opzione può essere disabilitata in modo esplicito da ci **/fp: eccetto-**.
+Il `/fp:except` opzione genera codice per garantire che tutte le eccezioni a virgola mobile non mascherate vengono generate in corrispondenza del punto esatto in cui si verificano e che nessun ulteriori eccezioni a virgola mobile vengono generati. Per impostazione predefinita, il `/fp:strict` opzione consente `/fp:except`, e `/fp:precise` non esiste. Il `/fp:except` opzione non è compatibile con `/fp:fast`. L'opzione può essere disabilitata in modo esplicito da parte di Microsoft di `/fp:except-`.
 
-Si noti che **/fp: tranne** non abilita tutte le eccezioni a virgola mobile da solo, ma è obbligatorio per i programmi consentire alle eccezioni a virgola mobile. Visualizzare [controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) per informazioni su come abilitare le eccezioni a virgola mobile.
+Si noti che `/fp:except` non abilita tutte le eccezioni a virgola mobile da solo, ma è obbligatorio per i programmi consentire alle eccezioni a virgola mobile. Visualizzare [controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) per informazioni su come abilitare le eccezioni a virgola mobile.
 
 ## <a name="remarks"></a>Note
 
-Più **/fp** possono specificare le opzioni nella riga di comando del compilatore stesso. Solo uno dei **/fp: strict**, **/fp: fast**, e **/fp: precise** opzioni possono essere attiva alla volta. Se più di una di queste opzioni viene specificata nella riga di comando, l'opzione successiva ha la precedenza e il compilatore genera un avviso. Il **/fp: strict** e **/fp: eccetto** non sono compatibili con le opzioni **/clr**.
+Più `/fp` possono specificare le opzioni nella riga di comando del compilatore stesso. Solo uno dei `/fp:strict`, `/fp:fast`, e `/fp:precise` opzioni possono essere attiva alla volta. Se più di una di queste opzioni viene specificata nella riga di comando, l'opzione successiva ha la precedenza e il compilatore genera un avviso. Il `/fp:strict` e `/fp:except` le opzioni non sono compatibili con `/clr`.
 
-Il [/Za](za-ze-disable-language-extensions.md) opzione (compatibilità ANSI) non è compatibile con **/fp**.
+Il [/Za](za-ze-disable-language-extensions.md) opzione (compatibilità ANSI) non è compatibile con `/fp`.
 
-### <a name="using-pragmas-to-control-floating-point-behavior"></a>Utilizzando i pragma per controllare il comportamento a virgola mobile
+### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>Usando le direttive del compilatore per controllare il comportamento a virgola mobile
 
-Il compilatore fornisce tre direttive pragma per eseguire l'override del comportamento a virgola mobile specificato nella riga di comando: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), e [fp_contract](../../preprocessor/fp-contract.md). È possibile usare questi pragma per controllare il comportamento a virgola mobile a livello di funzione, non all'interno di una funzione. Si noti che questi pragma non corrispondono direttamente al **/fp** opzioni. La tabella seguente mostra come la **/fp** pragma e opzioni di eseguire il mapping tra loro. Per altre informazioni, vedere la documentazione per le singole opzioni e il pragma.
+Il compilatore fornisce tre direttive pragma per eseguire l'override del comportamento a virgola mobile specificato nella riga di comando: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), e [fp_contract](../../preprocessor/fp-contract.md). È possibile usare queste direttive per controllare il comportamento a virgola mobile a livello di funzione, non all'interno di una funzione. Si noti che queste direttive non corrispondono direttamente al `/fp` opzioni. La tabella seguente mostra come il `/fp` direttive pragma e opzioni di eseguire il mapping tra loro. Per altre informazioni, vedere la documentazione per le singole opzioni e direttive pragma.
 
 ||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**/fp:fast**|Off|Off|Off|attivo|
-|**/fp:precise**|attivo|Off|Off|attivo|
-|**/fp:strict**|attivo|attivo|attivo|Off|
+|`/fp:fast`|Off|Off|Off|attivo|
+|`/fp:precise`|attivo|Off|Off|attivo|
+|`/fp:strict`|attivo|attivo|attivo|Off|
 
 ### <a name="the-default-floating-point-environment"></a>L'ambiente a virgola mobile predefinita
 
@@ -85,7 +85,7 @@ Quando viene inizializzato un processo, il *ambiente a virgola mobile predefinit
 
 ### <a name="floating-point-environment-access-and-modification"></a>Modifica e l'accesso all'ambiente a virgola mobile
 
-Il runtime di Microsoft Visual C++ offre diverse funzioni per accedere e modificare l'ambiente a virgola mobile. Questi includono [controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md), [clearfp](../../c-runtime-library/reference/clear87-clearfp.md), e [statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md) e le relative varianti. Per garantire il comportamento corretto del programma quando il codice accede o modifica l'ambiente a virgola mobile, `fenv_access` deve essere abilitato, ovvero per il **/fp: strict** opzione o dall'uso del `fenv_access` pragma, per queste funzioni per ha effetto. Quando si `fenv_access` non è abilitata, l'accesso o la modifica dell'ambiente a virgola mobile può comportare il comportamento del programma imprevisto: codice potrà non rispettare le modifiche richieste per l'ambiente a virgola mobile; i registri di stato a virgola mobile potrebbero non segnalare risultati previsti o correnti. e possono verificarsi eccezioni a virgola mobile impreviste o potrebbero non verificarsi eccezioni a virgola mobile previste.
+Il runtime di Microsoft Visual C++ offre diverse funzioni per accedere e modificare l'ambiente a virgola mobile. Questi includono [controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md), [clearfp](../../c-runtime-library/reference/clear87-clearfp.md), e [statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md) e le relative varianti. Per garantire il comportamento corretto del programma quando il codice accede o modifica l'ambiente a virgola mobile, `fenv_access` deve essere abilitato, ovvero per il `/fp:strict` opzione o dall'uso del `fenv_access` pragma, per queste funzioni abbia effetto. Quando si `fenv_access` non è abilitata, l'accesso o la modifica dell'ambiente a virgola mobile può comportare il comportamento del programma imprevisto: codice potrà non rispettare le modifiche richieste per l'ambiente a virgola mobile; i registri di stato a virgola mobile potrebbero non segnalare risultati previsti o correnti. e possono verificarsi eccezioni a virgola mobile impreviste o potrebbero non verificarsi eccezioni a virgola mobile previste.
 
 Quando il codice accede o modifica l'ambiente a virgola mobile, è necessario prestare attenzione quando si combina codice in cui `fenv_access` sia abilitato con codice che non dispone `fenv_access` abilitata. Nel codice in cui `fenv_access` non è abilitato, il compilatore presuppone che l'ambiente a virgola mobile predefinita della piattaforma è attiva e che lo stato a virgola mobile non è accessibile o modificato. Si consiglia di salvare e ripristinare l'ambiente a virgola mobile e locale allo stato predefinito prima che il controllo viene trasferito a una funzione che non ha `fenv_access` abilitata. Questo esempio viene illustrato come il `float_control` pragma può essere impostato e ripristinato:
 
@@ -97,7 +97,7 @@ Quando il codice accede o modifica l'ambiente a virgola mobile, è necessario pr
 
 ### <a name="floating-point-rounding-modes"></a>Modalità di arrotondamento a virgola mobile
 
-In entrambi **/fp: precise** e **/fp: fast** il compilatore genera il codice deve essere eseguita nell'ambiente a virgola mobile predefinito e si presuppone che l'ambiente non è accessibile o modificato in fase di esecuzione. Vale a dire, si presuppone che il codice non annullare il mascheramento delle eccezioni a virgola mobile, leggere o scrivere i registri di stato a virgola mobile o modificare le modalità di arrotondamento.  Tuttavia, alcuni programmi necessario modificare l'ambiente a virgola mobile. Ad esempio, in questo esempio calcola i limiti di errore di una moltiplicazione a virgola mobile e modificando la modalità di arrotondamento a virgola mobile:
+In entrambi `/fp:precise` e `/fp:fast` il compilatore genera il codice deve essere eseguita nell'ambiente a virgola mobile predefinito e si presuppone che l'ambiente non è accessibile o modificato in fase di esecuzione. Vale a dire, si presuppone che il codice non annullare il mascheramento delle eccezioni a virgola mobile, leggere o scrivere i registri di stato a virgola mobile o modificare le modalità di arrotondamento.  Tuttavia, alcuni programmi necessario modificare l'ambiente a virgola mobile. Ad esempio, in questo esempio calcola i limiti di errore di una moltiplicazione a virgola mobile e modificando la modalità di arrotondamento a virgola mobile:
 
 ```cpp
 // fp_error_bounds.cpp
@@ -145,14 +145,14 @@ int main(void)
 }
 ```
 
-Poiché il compilatore presuppone che il valore predefinito in ambiente a virgola mobile **/fp: fast** e **/fp: precise** è gratuito ignorare le chiamate a `_controlfp_s`. Ad esempio, quando compilato con entrambe **/O2** e **/fp: precise** per x86 architettura, non vengono calcolati i limiti e l'output del programma di esempio:
+Poiché il compilatore presuppone che il valore predefinito in ambiente a virgola mobile `/fp:fast` e `/fp:precise` è gratuito ignorare le chiamate a `_controlfp_s`. Ad esempio, quando compilato con entrambe `/O2` e `/fp:precise` per x86 architettura, non vengono calcolati i limiti e l'output del programma di esempio:
 
 ```Output
 cLower = -inf
 cUpper = -inf
 ```
 
-Quando viene compilato con entrambe **/O2** e **/fp: strict** per x86 architettura, l'output del programma di esempio:
+Quando viene compilato con entrambe `/O2` e `/fp:strict` per x86 architettura, l'output del programma di esempio:
 
 ```Output
 cLower = -inf
@@ -161,9 +161,9 @@ cUpper = -3.40282e+38
 
 ### <a name="floating-point-special-values"></a>Valori speciali a virgola mobile
 
-Sotto **/fp: precise** e **/fp: strict**, le espressioni che prevedono valori speciali (NaN, + infinity, - infinity, -0,0) si comportano in base alle specifiche IEEE 754. Sotto **/fp: fast**, il comportamento di questi valori speciali potrebbe essere incoerente con IEEE 754.
+Sotto `/fp:precise` e `/fp:strict`, le espressioni che prevedono valori speciali (NaN, + infinity, - infinity, -0,0) si comportano in base alle specifiche IEEE 754. In `/fp:fast`, il comportamento di questi valori speciali potrebbe essere incoerente con IEEE 754.
 
-Questo esempio viene illustrato il diverso comportamento dei valori speciali sotto **/fp: precise**, **/fp: strict** e **/fp: fast**:
+Questo esempio viene illustrato il diverso comportamento dei valori speciali sotto `/fp:precise`, `/fp:strict` e `/fp:fast`:
 
 ```cpp
 // fp_special_values.cpp
@@ -194,7 +194,7 @@ int main()
 }
 ```
 
-Quando viene compilato con **/O2** **/fp: precise** oppure **/O2** **/fp: strict** per x86 architettura, gli output siano coerenti con IEEE 754 specifica:
+Quando viene compilato con `/O2` `/fp:precise` oppure `/O2` `/fp:strict` per x86 architettura, gli output siano coerenti con la specifica IEEE 754:
 
 ```Output
 INFINITY == INFINITY : 1
@@ -204,7 +204,7 @@ NAN - NAN            : -nan(ind)
 std::signbit(-0.0/-INFINITY): 1
 ```
 
-Quando viene compilato con **/O2** **/fp: fast** per x86 architettura, l'output non sono conformi allo standard IEEE 754:
+Quando viene compilato con `/O2` `/fp:fast` per x86 architettura, l'output non sono conformi allo standard IEEE 754:
 
 ```Output
 INFINITY == INFINITY : 1
@@ -216,7 +216,7 @@ std::signbit(-0.0/-INFINITY): 0
 
 ### <a name="floating-point-algebraic-transformations"></a>Trasformazioni algebriche a virgola mobile
 
-Sotto **/fp: precise** e **/fp: strict**, il compilatore non esegue le trasformazioni di matematiche, a meno che la trasformazione genera sicuramente un bit per bit risultati identico. Il compilatore può eseguire tali trasformazioni sotto **/fp: fast**. Ad esempio, l'espressione `a * b + a * c` nella funzione di esempio `algebraic_transformation` può essere compilato in `a * (b + c)` sotto **/fp: fast**. Tali trasformazioni non vengono eseguiti sotto **/fp: precise** oppure **/fp: strict**, e il compilatore genera `a * b + a * c`.
+Sotto `/fp:precise` e `/fp:strict`, il compilatore non esegue le trasformazioni di matematiche, a meno che la trasformazione genera sicuramente un bit per bit risultati identico. Il compilatore può eseguire tali trasformazioni in `/fp:fast`. Ad esempio, l'espressione `a * b + a * c` nella funzione di esempio `algebraic_transformation` può essere compilato in `a * (b + c)` sotto `/fp:fast`. Tali trasformazioni non vengono eseguiti sotto `/fp:precise` oppure `/fp:strict`, e il compilatore genera `a * b + a * c`.
 
 ```cpp
 float algebraic_transformation (float a, float b, float c)
@@ -227,7 +227,7 @@ float algebraic_transformation (float a, float b, float c)
 
 ### <a name="floating-point-explicit-casting-points"></a>Punti di eseguire il cast esplicito a virgola mobile
 
-Sotto **/fp: precise** e **/fp: strict**, il compilatore viene arrotondato alla precisione di codice sorgente in quattro punti specifici durante la valutazione dell'espressione: in assegnazioni, in typecast quando un argomento a virgola mobile viene passato a una chiamata di funzione e quando viene restituito un valore a virgola mobile da una chiamata di funzione. Typecast utilizzabile per l'arrotondamento in modo esplicito i calcoli intermedi. Sotto **/fp: fast**, il compilatore non genera cast espliciti in questi punti per garantire la precisione di codice sorgente. Questo esempio viene illustrato il comportamento in differenti **/fp** opzioni:
+Sotto `/fp:precise` e `/fp:strict`, il compilatore viene arrotondato alla precisione di codice sorgente in quattro punti specifici durante la valutazione dell'espressione: in assegnazioni, in typecast quando viene passato un argomento a virgola mobile a una chiamata di funzione e quando a virgola mobile valore viene restituito da una chiamata di funzione. Typecast utilizzabile per l'arrotondamento in modo esplicito i calcoli intermedi. In `/fp:fast`, il compilatore non genera cast espliciti in questi punti per garantire la precisione di codice sorgente. Questo esempio viene illustrato il comportamento in diversi `/fp` opzioni:
 
 ```cpp
 float casting(float a, float b)
@@ -236,7 +236,7 @@ float casting(float a, float b)
 }
 ```
 
-Quando viene compilato usando **/O2** **/fp: precise** o **/O2** **/fp: strict**, è possibile visualizzare i cast di tipo espliciti vengono inseriti in entrambi i cast di tipo e la funzione restituisca punto nel codice generato per x64 architettura:
+Quando viene compilato usando `/O2` `/fp:precise` oppure `/O2` `/fp:strict`, è possibile visualizzare i cast di tipo espliciti vengono inseriti in entrambi i cast di tipo e nel punto di restituzione funzione nel codice generato per x64 architettura:
 
 ```asm
         addss    xmm0, xmm1
@@ -246,7 +246,7 @@ Quando viene compilato usando **/O2** **/fp: precise** o **/O2** **/fp: strict**
         ret      0
 ```
 
-Sotto **/O2** **/fp: fast** viene semplificato il codice generato, perché tutti i cast di tipo sono ottimizzati:
+Sotto `/O2` `/fp:fast` viene semplificato il codice generato, perché tutti i cast di tipo sono ottimizzati:
 
 ```asm
         addss    xmm0, xmm1
@@ -270,4 +270,3 @@ Sotto **/O2** **/fp: fast** viene semplificato il codice generato, perché tutti
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
-[Ottimizzazione virgola mobile MSVC](floating-point-optimization.md)<br/>

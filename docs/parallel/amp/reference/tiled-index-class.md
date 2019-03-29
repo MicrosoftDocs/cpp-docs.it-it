@@ -1,6 +1,6 @@
 ---
 title: Classe tiled_index
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257904"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565217"
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 
@@ -79,7 +79,7 @@ Lunghezza della dimensione meno significativa.
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Barrier (costante)](#tiled_index__barrier)|Archivia un [tile_barrier](tile-barrier-class.md) oggetto che rappresenta una barriera nella sezione del thread corrente.|
 |||
@@ -110,7 +110,7 @@ Lunghezza della dimensione meno significativa.
 
 **Spazio dei nomi:** Concorrenza
 
-## <a name="tiled_index__ctor"></a>  Costruttore tiled_index
+## <a name="ctor"></a>  Costruttore tiled_index
 
 Inizializza una nuova istanza della classe `tiled_index`.
 
@@ -152,7 +152,7 @@ Il `tile_index` oggetto da copiare per l'oggetto costruito `tiled_index`.
 
 |||
 |-|-|
-|nome|Descrizione|
+|Nome|Descrizione|
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inizializza una nuova istanza di `tile_index` classe dall'indice della sezione nelle coordinate globali e la posizione relativa nella sezione nelle coordinate locali. Il `_Global` e `_Tile_origin` vengono calcolati i parametri.|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inizializza una nuova istanza di `tile_index` classe copiando l'oggetto specificato `tiled_index` oggetto.|
 

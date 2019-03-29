@@ -1,16 +1,16 @@
 ---
-title: Condivisione o riutilizzare progetto impostazioni di Visual Studio - C++
-ms.date: 11/28/2018
+title: Condividi o riutilizza le impostazioni di progetto di Visual Studio - C++
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 50e3795a4708a3c15ed25ee7ff6565470ef6989a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827940"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565126"
 ---
-# <a name="share-or-resuse-visual-studio-project-settings"></a>Condivisione o riutilizzare le impostazioni di progetto Visual Studio
+# <a name="share-or-reuse-visual-studio-project-settings"></a>Condividi o riutilizza le impostazioni di progetto di Visual Studio
 
 Per creare un gruppo personalizzato di impostazioni che è possibile condividere con altri utenti o riutilizzare in più progetti, usare **Gestione proprietà** per creare un *finestra delle proprietà* (file con estensione props) per archiviare le impostazioni per ogni tipo di progetto che si vuole poter riutilizzare o condividere con altri utenti. Utilizzando proprietà fogli sono comunque molto meno soggette a errori di altre modalità di creazione di impostazioni "globali". 
 
