@@ -1,15 +1,9 @@
 ---
 layout: HubPage
 title: Documentazione di Visual C++
-description: Informazioni su come usare C++ per lo sviluppo di applicazioni, servizi e strumenti per piattaforme e dispositivi.
+description: 'Informazioni su come usare C++ per lo sviluppo di applicazioni, servizi e strumenti per piattaforme e dispositivi.'
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e8fe8dec14560579e255446c4de3ee5a17e302f6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703207"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -51,7 +45,7 @@ ms.locfileid: "55703207"
                 </a>
             </li>
             <li>
-                <a href="/cpp/what-s-new-for-visual-cpp-in-visual-studio">
+                <a href="/cpp/what-s-new-for-overview/visual-cpp-in-visual-studio.md">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
