@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3282
 ms.assetid: bac2ac89-c360-4c24-bb81-c20c62ece9ba
-ms.openlocfilehash: 7092ddc3bf6859212cbb143572de1ef3604a13d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46be1f5250c1ca787909c48646d59180d62bd899
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491507"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780847"
 ---
 # <a name="compiler-error-c3282"></a>Errore del compilatore C3282
 
 parametro generico elenchi possono trovarsi soltanto sul gestiti o WinRTclasses, struct o delle funzioni
 
-Un elenco di parametri generici è stato usato in modo non corretto.  Per altre informazioni, vedere [Generics](../../windows/generics-cpp-component-extensions.md).
+Un elenco di parametri generici è stato usato in modo non corretto.  Per altre informazioni, vedere [Generics](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 
