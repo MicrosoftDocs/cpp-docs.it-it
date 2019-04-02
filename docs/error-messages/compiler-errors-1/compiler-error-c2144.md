@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483330"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778286"
 ---
 # <a name="compiler-error-c2144"></a>Errore del compilatore C2144
 
@@ -23,7 +23,7 @@ Questo errore può essere causato da una parentesi graffa di chiusura mancanti, 
 
 C2144 può verificarsi anche quando si tenta di creare una macro da una parola chiave CLR che contiene un carattere di spazio vuoto.
 
-È inoltre possibile visualizzare C2144 se si sta tentando di inoltro del tipo. Vedere [l'inoltro di tipi (C + + CLI)](../../windows/type-forwarding-cpp-cli.md) per altre informazioni.
+È inoltre possibile visualizzare C2144 se si sta tentando di inoltro del tipo. Vedere [l'inoltro di tipi (C + + CLI)](../../extensions/type-forwarding-cpp-cli.md) per altre informazioni.
 
 ## <a name="examples"></a>Esempi
 

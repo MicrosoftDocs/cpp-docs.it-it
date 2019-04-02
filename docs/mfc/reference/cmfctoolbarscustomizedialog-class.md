@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295032"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780964"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Classe CMFCToolBarsCustomizeDialog
 
@@ -96,7 +96,7 @@ Mentre il **Personalizza** nella finestra di dialogo è attiva, il funzionamento
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare i vari metodi nella classe `CMFCToolBarsCustomizeDialog` . Nell'esempio viene illustrato come sostituire un pulsante della barra degli strumenti nella casella di riepilogo dei comandi nel **comandi** pagina, abilitare la creazione di nuove barre degli strumenti tramite il **Personalizza** nella finestra di dialogo e visualizzare il  **Personalizzazione** nella finestra di dialogo. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCToolBarsCustomizeDialog` . Nell'esempio viene illustrato come sostituire un pulsante della barra degli strumenti nella casella di riepilogo dei comandi nel **comandi** pagina, abilitare la creazione di nuove barre degli strumenti tramite il **Personalizza** nella finestra di dialogo e visualizzare il  **Personalizzazione** nella finestra di dialogo. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
@@ -158,7 +158,7 @@ Se `iInsertBefore` è -1, il pulsante viene aggiunto all'elenco di categorie; in
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `AddButton` metodo del `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte di [esempio di dispositivo di scorrimento](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `AddButton` metodo del `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte di [esempio di dispositivo di scorrimento](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]
 
@@ -246,7 +246,7 @@ TRUE se il metodo ha esito positivo. in caso contrario, FALSE.
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `AddToolBar` metodo nel `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `AddToolBar` metodo nel `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]
 
@@ -327,7 +327,7 @@ Per altre informazioni sui valori che è possibile passare il *uiFlags* parametr
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]
 
@@ -725,7 +725,7 @@ Quando [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu), [CMFCToolBarsCustomizeD
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `ReplaceButton` metodo nel `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `ReplaceButton` metodo nel `CMFCToolBarsCustomizeDialog` classe. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]
 

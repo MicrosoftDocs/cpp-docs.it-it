@@ -20,12 +20,12 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464587"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778234"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Utilizzo delle funzionalità di interoperabilità C++ (PInvoke implicito)
 
@@ -59,7 +59,7 @@ Indipendentemente dal fatto che COM viene utilizzato direttamente o tramite CRCW
 
 ## <a name="blittable-types"></a>Tipi copiabili da blt
 
-Per le API non gestite che usano tipi semplici, intrinseci (vedere [tipi copiabili e Non copiabili da blt](/dotnet/framework/interop/blittable-and-non-blittable-types)), è necessario alcun codice speciale in quanto questi tipi di dati hanno la stessa rappresentazione nella memoria, ma richiedono tipi di dati più complessi marshalling dei dati espliciti. Per un esempio, vedere [procedura: chiamare DLL Native da usando codice gestito PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
+Per le API non gestite che usano tipi semplici, intrinseci (vedere [tipi copiabili e Non copiabili da blt](/dotnet/framework/interop/blittable-and-non-blittable-types)), è necessario alcun codice speciale in quanto questi tipi di dati hanno la stessa rappresentazione nella memoria, ma richiedono tipi di dati più complessi marshalling dei dati espliciti. Per un esempio, vedere [Procedura: Chiamare DLL Native da codice gestito tramite PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
 
 ## <a name="example"></a>Esempio
 
@@ -111,7 +111,7 @@ Done
 
 - [Procedura: Convertire una stringa char * in una matrice System::Byte](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [Procedura: convertire System:: String in wchar_t * o char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [Procedura: Convertire System:: String in wchar_t * o char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
 - [Procedura: Convertire System::String in stringhe standard](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
@@ -127,23 +127,23 @@ Done
 
 - [Procedura: Aggiungere DLL native alla Global Assembly Cache](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)
 
-- [Procedura: Mantenere riferimenti al tipo di valore nel tipo nativo](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
+- [Procedura: Mantenere riferimenti al tipo valore nel tipo nativo](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
 
 - [Procedura: Mantenere i riferimenti agli oggetti nella memoria non gestita](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [Procedura: rilevare compilazioni /clr](../dotnet/how-to-detect-clr-compilation.md)
+- [Procedura: Rilevare compilazioni /clr](../dotnet/how-to-detect-clr-compilation.md)
 
 - [Procedura: Eseguire la conversione tra System::Guid e _GUID](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
 - [Procedura: Specificare un parametro out](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [Procedura: usare un tipo nativo in una compilazione /clr](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [Procedura: Usare un tipo nativo in una compilazione /clr](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
 - [Procedura: Dichiarare handle in tipi nativi](../dotnet/how-to-declare-handles-in-native-types.md)
 
 - [Procedura: Eseguire il wrapping di una classe nativa affinché possa essere usata in C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-Per informazioni sull'utilizzo dei delegati in uno scenario di interoperabilità, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).
+Per informazioni sull'utilizzo dei delegati in uno scenario di interoperabilità, vedere [delegato (estensioni del componente C++)](../extensions/delegate-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258398"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775491"
 ---
 # <a name="toolbar-fundamentals"></a>Nozioni fondamentali sulla barra degli strumenti
 
@@ -62,7 +62,7 @@ Creazione della barra degli strumenti si verifica in `CMainFrame::OnCreate`. Le 
 1. Chiama le funzioni per consentire di ancoraggio, a virgola mobile e le descrizioni comandi. Per informazioni dettagliate su queste chiamate, vedere l'articolo [ancoraggio e barre degli strumenti mobile](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
->  L'esempio MFC generale [DOCKTOOL](../visual-cpp-samples.md) include illustrazioni di barre degli strumenti MFC vecchi e nuovi. Le barre degli strumenti che usano `COldToolbar` richiedono chiamate nel passaggio 2 `LoadBitmap` (anziché `LoadToolBar`) e a `SetButtons`. Le nuove barre degli strumenti richiedono le chiamate a `LoadToolBar`.
+>  L'esempio MFC generale [DOCKTOOL](../overview/visual-cpp-samples.md) include illustrazioni di barre degli strumenti MFC vecchi e nuovi. Le barre degli strumenti che usano `COldToolbar` richiedono chiamate nel passaggio 2 `LoadBitmap` (anziché `LoadToolBar`) e a `SetButtons`. Le nuove barre degli strumenti richiedono le chiamate a `LoadToolBar`.
 
 L'ancoraggio, a virgola mobile e lo strumento suggerimenti chiamate sono facoltative. È possibile rimuovere le righe da `OnCreate` se si preferisce. Il risultato è una barra degli strumenti che rimane fisso, non è possibile float o ancorata e non è possibile visualizzare le descrizioni comandi.
 

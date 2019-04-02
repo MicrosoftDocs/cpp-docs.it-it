@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
-ms.openlocfilehash: d3acfd9d4d09c53fac0b2c5a2462c56dfd54e6d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9fe72501152891d3f82567f09922dda9a9b711a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598549"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775478"
 ---
 # <a name="compiler-error-c3670"></a>Errore del compilatore C3670
 
 'override': Impossibile eseguire l'override di metodo di classe di base inaccessibile 'method'
 
-Override può avvenire solo su una funzione il cui livello di accesso lo rende disponibile in un tipo derivato. Per altre informazioni, vedere [esegue l'override esplicito](../../windows/explicit-overrides-cpp-component-extensions.md).
+Override può avvenire solo su una funzione il cui livello di accesso lo rende disponibile in un tipo derivato. Per altre informazioni, vedere [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 L'esempio seguente genera l'errore C3670:
 

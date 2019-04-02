@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3909
 ms.assetid: 0a443132-e53f-42dc-a58b-f086da3e7bfd
-ms.openlocfilehash: 435288ba657bd22ba29c6681014ae15baa051cec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95de97a27fc42e98247675b1b48325593ff3c21e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636462"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778208"
 ---
 # <a name="compiler-error-c3909"></a>Errore del compilatore C3909
 
@@ -19,7 +19,7 @@ dichiarazione di evento gestito o aWinRT deve verificarsi in un tipo gestito o W
 
 Un evento Windows Runtime o gestito è stato dichiarato in un tipo nativo. Per correggere l'errore, dichiarare gli eventi nei tipi Windows Runtime o nei tipi gestiti.
 
-Per altre informazioni, vedere [evento](../../windows/event-cpp-component-extensions.md).
+Per altre informazioni, vedere [evento](../../extensions/event-cpp-component-extensions.md).
 
 L'esempio seguente genera l'errore C3909 e mostra come risolverlo:
 

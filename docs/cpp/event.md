@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606479"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778260"
 ---
 # <a name="event"></a>__event
 
@@ -62,7 +62,7 @@ Visualizzare [gestione degli eventi in C++ nativo](../cpp/event-handling-in-nati
 
 Gli eventi COM sono interfacce. I parametri di un metodo in un'interfaccia di origine evento devono essere *nelle* parametri (ma questo non è applicato rigorosamente), perché un' *out* parametro non è utile quando il multicasting. Verrà generato un avviso di livello 1 se si usa un' *out* parametro.
 
-Il tipo restituito è in genere HRESULT o **void**, ma può essere qualsiasi tipo integrale, incluso **enum**. Quando un evento utilizza un tipo restituito integrale e un gestore eventi restituisce un valore diverso da zero, si tratta di una condizione di errore nel qual caso l'evento generato interromperà le chiamate agli altri delegati. Si noti che il compilatore contrassegnerà automaticamente un'interfaccia di origine evento come un [origine](../windows/source-cpp.md) in IDL generato.
+Il tipo restituito è in genere HRESULT o **void**, ma può essere qualsiasi tipo integrale, incluso **enum**. Quando un evento utilizza un tipo restituito integrale e un gestore eventi restituisce un valore diverso da zero, si tratta di una condizione di errore nel qual caso l'evento generato interromperà le chiamate agli altri delegati. Si noti che il compilatore contrassegnerà automaticamente un'interfaccia di origine evento come un [origine](../windows/attributes/source-cpp.md) in IDL generato.
 
 Il [Interface](../cpp/interface.md) è sempre obbligatorio dopo la parola chiave **event** per un'origine evento COM.
 
@@ -75,7 +75,7 @@ Visualizzare [gestione degli eventi in COM](../cpp/event-handling-in-com.md) per
 
 ## <a name="managed-events"></a>Eventi gestiti
 
-Per informazioni sulla codifica di eventi nella nuova sintassi, vedere [evento](../windows/event-cpp-component-extensions.md).
+Per informazioni sulla codifica di eventi nella nuova sintassi, vedere [evento](../extensions/event-cpp-component-extensions.md).
 
 Gli eventi gestiti sono membri dati o metodi. Se usato con un evento, il tipo restituito del delegato deve essere conforme con la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Il tipo restituito del gestore eventi deve corrispondere al tipo restituito del delegato. Per altre informazioni sui delegati, vedere [delegati ed eventi](../dotnet/delegates-and-events.md). Se un evento gestito è un membro dati, il relativo tipo deve essere un puntatore a un delegato.
 
@@ -89,7 +89,7 @@ __event void OnClick(String* s);  // method as event
 
 Quando si dichiara un evento gestito in modo implicito, si possono specificare le funzioni di accesso add e remove che verranno chiamate quando i gestori eventi vengono aggiunti o rimossi. È inoltre possibile definire il metodo che chiama (genera) l'evento dall'esterno della classe.
 
-## <a name="example-native-events"></a>Esempio: eventi nativi
+## <a name="example-native-events"></a>Esempio: Eventi nativi
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>Esempio: eventi COM
+## <a name="example-com-events"></a>Esempio: Eventi COM
 
 ```cpp
 // EventHandling_COM_Event.cpp
@@ -131,8 +131,8 @@ public:
 
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [Gestione di eventi](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)
