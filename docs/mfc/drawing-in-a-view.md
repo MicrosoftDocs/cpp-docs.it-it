@@ -11,12 +11,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: 77844ebd31f624229870d27c72b08a987b7533bd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280771"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772553"
 ---
 # <a name="drawing-in-a-view"></a>Disegno in una visualizzazione
 
@@ -42,7 +42,7 @@ In questo esempio, è possibile definire il `GetData` funzioni come un membro de
 
 L'esempio visualizza stringhe ottenute dal documento, centrato nella visualizzazione. Se il `OnDraw` chiamata è per il disegno dello schermo, il `CDC` oggetto passato in *pDC* è un `CPaintDC` il cui costruttore ha già chiamato `BeginPaint`. Chiamate alle funzioni di disegno vengono effettuate tramite il puntatore di contesto di dispositivo. Per informazioni sulle chiamate di disegno e contesti di dispositivo, vedere la classe [CDC](../mfc/reference/cdc-class.md) nel *riferimento MFC* e [uso di oggetti finestra](../mfc/working-with-window-objects.md).
 
-Per altri esempi di come scrivere `OnDraw`, vedere la [esempi di MFC](../visual-cpp-samples.md).
+Per altri esempi di come scrivere `OnDraw`, vedere la [esempi di MFC](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vedere anche
 

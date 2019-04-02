@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3464
 ms.assetid: 0ede05dc-4486-4921-8e8c-78ab5a2e09c5
-ms.openlocfilehash: d1645571ce3102687d5054e066ec1dc7d633b3aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b21810d6df1fbfaf5ea94d9515487b16d00af548
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503126"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775296"
 ---
 # <a name="compiler-error-c3464"></a>Errore del compilatore C3464
 
@@ -19,7 +19,7 @@ Non è possibile inoltrare un tipo annidato con 'type'
 
 L'inoltro dei tipi non funziona nei tipi annidati.
 
-Per altre informazioni, vedere [l'inoltro di tipi (C + + CLI)](../../windows/type-forwarding-cpp-cli.md).
+Per altre informazioni, vedere [l'inoltro di tipi (C + + CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288780"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769485"
 ---
 # <a name="ribbon-designer-mfc"></a>Finestra di progettazione della barra multifunzione (MFC)
 
@@ -107,7 +107,7 @@ Gli argomenti seguenti descrivono come usare le funzionalità della finestra di 
 
 - **Pannello:** Un'area della barra multifunzione che visualizza un gruppo di controlli correlati. Ogni categoria della barra multifunzione contiene uno o più pannelli della barra multifunzione.
 
-- **Elementi della barra multifunzione:** Controlli nei pannelli, ad esempio, i pulsanti e caselle combinate. Per i vari controlli che possono essere ospitati in una barra multifunzione, vedere [esempio RibbonGadgets: Sulla barra multifunzione dell'applicazione gadget](../visual-cpp-samples.md).
+- **Elementi della barra multifunzione:** Controlli nei pannelli, ad esempio, i pulsanti e caselle combinate. Per i vari controlli che possono essere ospitati in una barra multifunzione, vedere [esempio RibbonGadgets: Sulla barra multifunzione dell'applicazione gadget](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292276"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776011"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 
@@ -278,7 +278,7 @@ In genere, MFC crea automaticamente i menu a comparsa. Se si desidera creare un 
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come configurare un oggetto di menu a comparsa. Nell'esempio viene illustrato come impostare il logo e il suono del menu a comparsa, impostare la velocità dell'animazione e il tipo, disegnare shadows menu quando viene visualizzato il menu a comparsa all'esterno della cornice principale, impostare la larghezza massima e impostare l'allineamento del menu a destra del menu a comparsa. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come configurare un oggetto di menu a comparsa. Nell'esempio viene illustrato come impostare il logo e il suono del menu a comparsa, impostare la velocità dell'animazione e il tipo, disegnare shadows menu quando viene visualizzato il menu a comparsa all'esterno della cornice principale, impostare la larghezza massima e impostare l'allineamento del menu a destra del menu a comparsa. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -451,7 +451,7 @@ Se *bOwnMessage* è TRUE, le route framework tutti i messaggi dal menu *pWndPare
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `Create` metodo del `CMFCPopuMenu` classe. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `Create` metodo del `CMFCPopuMenu` classe. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 2c9238eab1627b0494c4073c88032c488fdfb828
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752385"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777181"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Procedura: Dichiarare gli identificatori di Override nelle compilazioni Native (C + + CLI)
 
-[sealed](../windows/sealed-cpp-component-extensions.md), [astratto](../windows/abstract-cpp-component-extensions.md), e [override](../windows/override-cpp-component-extensions.md) sono disponibili nelle compilazioni che non utilizzano **/ZW** oppure [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+[sealed](../extensions/sealed-cpp-component-extensions.md), [astratto](../extensions/abstract-cpp-component-extensions.md), e [override](../extensions/override-cpp-component-extensions.md) sono disponibili nelle compilazioni che non utilizzano **/ZW** oppure [/clr](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
 >  Di C + + 11 linguaggio Standard ISO è il [eseguire l'override](../cpp/override-specifier.md) identificatore e il [finale](../cpp/final-specifier.md) identificatore ed entrambi sono supportati in Visual Studio Usa `final` anziché `sealed` nel codice che è destinato a essere compilato come solo nativo.
@@ -88,4 +88,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Identificatori di override](../windows/override-specifiers-cpp-component-extensions.md)
+[Identificatori di override](../extensions/override-specifiers-cpp-component-extensions.md)

@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296007"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781978"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
 
@@ -297,7 +297,7 @@ Le illustrazioni seguenti rappresentano un controllo griglia delle proprietà ch
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come configurare un oggetto di controllo della griglia di proprietà utilizzando i vari metodi nel `CMFCPropertyGridCtrl` classe. Nell'esempio viene illustrato come abilitare il controllo intestazione, abilitare l'area Descrizione e impostare l'aspetto del controllo della griglia delle proprietà. Nell'esempio viene inoltre illustrato come impostare la modalità alfabetica per il controllo in base al quale il controllo Ordina tutte le proprietà che contiene il nome della proprietà e come impostare i colori personalizzati per vari elementi del controllo della griglia delle proprietà. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come configurare un oggetto di controllo della griglia di proprietà utilizzando i vari metodi nel `CMFCPropertyGridCtrl` classe. Nell'esempio viene illustrato come abilitare il controllo intestazione, abilitare l'area Descrizione e impostare l'aspetto del controllo della griglia delle proprietà. Nell'esempio viene inoltre illustrato come impostare la modalità alfabetica per il controllo in base al quale il controllo Ordina tutte le proprietà che contiene il nome della proprietà e come impostare i colori personalizzati per vari elementi del controllo della griglia delle proprietà. In questo esempio fa parte il [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -480,7 +480,7 @@ Per creare un controllo griglia delle proprietà, chiamare prima [CMFCPropertyGr
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `Create` metodo `CMFCPropertyGridCtrl` classe. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `Create` metodo `CMFCPropertyGridCtrl` classe. In questo esempio fa parte il [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 

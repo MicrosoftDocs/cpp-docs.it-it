@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: b6fd633a39f7038be45a8776c9b4673138cc34b5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2a856c8067394e33976ba8ccdaa34be81ee11091
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274947"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771045"
 ---
 # <a name="cprintdialog-class"></a>Classe CPrintDialog
 
@@ -508,7 +508,7 @@ Chiamare questa funzione dopo la chiamata `DoModal` per determinare se visualizz
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC immagine](../../visual-cpp-samples.md)<br/>
+[Esempio MFC immagine](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Struttura CPrintInfo](../../mfc/reference/cprintinfo-structure.md)

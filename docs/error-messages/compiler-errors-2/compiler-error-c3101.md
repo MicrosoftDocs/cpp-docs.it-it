@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
-ms.openlocfilehash: 8db1ba622a0c83a7f2a6421d79ff5853cbc4d9a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d39afc548010df95bdf31b2c7708bc4fa0310bcd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555558"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779235"
 ---
 # <a name="compiler-error-c3101"></a>Errore del compilatore C3101
 
@@ -19,7 +19,7 @@ espressione non valida per l'attributo denominato argomento 'field'
 
 Durante l'inizializzazione di un argomento denominato dell'attributo, il valore deve essere una costante in fase di compilazione.
 
-Per altre informazioni sugli attributi, vedere [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Per altre informazioni sugli attributi, vedere [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

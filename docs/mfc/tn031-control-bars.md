@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286465"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772514"
 ---
 # <a name="tn031-control-bars"></a>TN031: Barre di controllo
 
@@ -136,7 +136,7 @@ Tutti i pulsanti con bitmap nella barra degli strumenti provengono da una singol
 
 Tutti i pulsanti devono avere la stessa dimensione. Il valore predefinito è il valore standard di 24 x 22 pixel. Tutte le immagini o tutti i glifi devono avere la stessa dimensione ed essere affiancati nella bitmap. La dimensione predefinita di immagini/glifi è 16 x 15 pixel. Pertanto, per una barra degli strumenti con 10 pulsanti (usando dimensioni standard), è necessario una bitmap di 160 pixel di larghezza e 15 pixel di altezza.
 
-Ogni pulsante ha una sola immagine o un solo glifo. I diversi stati e stili dei pulsanti (ad esempio, premuto, non selezionato, selezionato, disabilitato, selezionato disabilitato, indeterminato) sono generati in modo algoritmico da un'immagine o un glifo. È teoricamente possibile usare qualsiasi bitmap a colori o DIB. L'algoritmo per la generazione dei diversi stati dei pulsanti funziona meglio se l'immagine originale presenta sfumature di grigio. Esaminare i pulsanti della barra degli strumenti standard e la clipart dei pulsanti della barra degli strumenti forniti a titolo esemplificativo nell'esempio generale [CLIPART](../visual-cpp-samples.md) di MFC.
+Ogni pulsante ha una sola immagine o un solo glifo. I diversi stati e stili dei pulsanti (ad esempio, premuto, non selezionato, selezionato, disabilitato, selezionato disabilitato, indeterminato) sono generati in modo algoritmico da un'immagine o un glifo. È teoricamente possibile usare qualsiasi bitmap a colori o DIB. L'algoritmo per la generazione dei diversi stati dei pulsanti funziona meglio se l'immagine originale presenta sfumature di grigio. Esaminare i pulsanti della barra degli strumenti standard e la clipart dei pulsanti della barra degli strumenti forniti a titolo esemplificativo nell'esempio generale [CLIPART](../overview/visual-cpp-samples.md) di MFC.
 
 I colori usati nella barra degli strumenti sono coerenti anche con l'indicazione della Windows Interface Application Design Guide (Guida alla progettazione di applicazioni con interfaccia di Windows). Questi colori non sono hardcoded e vengono modificati in modo dinamico in risposta alla personalizzazione dell'utente nel Pannello di controllo.
 

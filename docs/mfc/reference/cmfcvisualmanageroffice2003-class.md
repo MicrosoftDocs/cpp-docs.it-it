@@ -92,12 +92,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd62ea4073ae1982f01a279a411c8d11e8e5cec3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273270"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776206"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 Class
 
@@ -207,7 +207,7 @@ Si utilizza il `CMFCVisualManagerOffice2003` classe per modificare l'aspetto vis
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come impostare il gestore visualizzazione di office 2003. Questo frammento di codice fa parte di [esempio dimostrativo avviso Desktop](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come impostare il gestore visualizzazione di office 2003. Questo frammento di codice fa parte di [esempio dimostrativo avviso Desktop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#6](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2003-class_1.cpp)]
 

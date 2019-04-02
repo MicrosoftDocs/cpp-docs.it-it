@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601708"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776921"
 ---
 # <a name="staticcast-operator"></a>Operatore static_cast
 
@@ -29,7 +29,7 @@ Nel linguaggio C++ standard non viene eseguito alcun controllo dei tipi in fase 
 
 Il **static_cast** operatore può essere usato per operazioni quali la conversione di un puntatore a una classe base a un puntatore a una classe derivata. Questi tipi di conversioni non sempre sono sicure.
 
-In generale si utilizza **static_cast** quando si desidera convertire tipi di dati numerici, ad esempio gli enum in int o tipi int in float e si sono alcuni dei tipi di dati coinvolti nella conversione. **static_cast** le conversioni non sono sicure quanto **dynamic_cast** conversioni, perché **static_cast** selezionare alcun tipo di fase di esecuzione, mentre **dynamic_cast** esegue. Oggetto **dynamic_cast** a un puntatore ambiguo non riuscirà, mentre un **static_cast** restituisce come se tutto fosse corretto e può essere pericolosa. Sebbene **dynamic_cast** sono più sicure, conversioni **dynamic_cast** solo eseguita sui puntatori o riferimenti e il controllo dei tipi in fase di esecuzione è un sovraccarico. Per altre informazioni, vedere [dynamic_cast Operator](../cpp/dynamic-cast-operator.md).
+In generale si utilizza **static_cast** quando si desidera convertire tipi di dati numerici, ad esempio gli enum in int o tipi int in float e si sono alcuni dei tipi di dati coinvolti nella conversione. **static_cast** le conversioni non sono sicure quanto **dynamic_cast** conversioni, perché **static_cast** selezionare alcun tipo di fase di esecuzione, mentre **dynamic_cast** fa. Oggetto **dynamic_cast** a un puntatore ambiguo non riuscirà, mentre un **static_cast** restituisce come se tutto fosse corretto e può essere pericolosa. Sebbene **dynamic_cast** sono più sicure, conversioni **dynamic_cast** solo eseguita sui puntatori o riferimenti e il controllo dei tipi in fase di esecuzione è un sovraccarico. Per altre informazioni, vedere [dynamic_cast Operator](../cpp/dynamic-cast-operator.md).
 
 Nell'esempio seguente la riga `D* pd2 = static_cast<D*>(pb);` non è sicura perché `D` può contenere campi e metodi non presenti in `B`. Tuttavia, la riga `B* pb2 = static_cast<B*>(pd);` è una conversione sicura perché `D` contiene sempre tutti `B`.
 
@@ -103,7 +103,7 @@ Qualsiasi espressione può essere convertita in modo esplicito al tipo void tram
 
 Il **static_cast** operatore non è possibile eseguire il cast di **const**, **volatile**, oppure **unaligned** attributi. Visualizzare [operatore const_cast](../cpp/const-cast-operator.md) per informazioni sulla rimozione di questi attributi.
 
-A causa il rischio di esecuzione di cast non verificati nella parte superiore di un rilocazione garbage collector, l'uso di **static_cast** deve essere solo nel codice critiche per le prestazioni quando si è certi funzionerà correttamente. Se è necessario utilizzare **static_cast** in modalità di rilascio, sostituirlo con [safe_cast](../windows/safe-cast-cpp-component-extensions.md) nelle build di debug per garantire l'esito positivo.
+**C + + / CLI:** A causa il rischio di esecuzione di cast non verificati nella parte superiore di un rilocazione garbage collector, l'uso di **static_cast** deve essere solo nel codice critiche per le prestazioni quando si è certi funzionerà correttamente. Se è necessario utilizzare **static_cast** in modalità di rilascio, sostituirlo con [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) nelle build di debug per garantire l'esito positivo.
 
 ## <a name="see-also"></a>Vedere anche
 

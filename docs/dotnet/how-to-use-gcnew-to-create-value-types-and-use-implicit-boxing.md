@@ -6,16 +6,16 @@ helpviewer_keywords:
 - boxing, implicit
 - value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
-ms.openlocfilehash: 4b7d0560d8a80d0c09e7f8d0fce83748ec1f2f28
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c67f8e0b9511f4ed1610e72e4a7df41c949b1d27
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739277"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770806"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Procedura: Utilizzare gcnew per creare tipi di valore e utilizzare la conversione Boxing implicita
 
-Usando [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) su un valore di tipo creerà un tipo di valore boxed, che quindi può essere inserito nell'heap gestito e sottoposto a garbage collection.
+Usando [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) su un valore di tipo creerà un tipo di valore boxed, che quindi può essere inserito nell'heap gestito e sottoposto a garbage collection.
 
 ## <a name="example"></a>Esempio
 
@@ -46,4 +46,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Boxing](../windows/boxing-cpp-component-extensions.md)
+[Conversione boxing](../extensions/boxing-cpp-component-extensions.md)

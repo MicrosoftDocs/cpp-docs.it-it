@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279919"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772764"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Uso di più file di risorse e i file di intestazione Visual c++
 
@@ -177,7 +177,7 @@ Visual C++ e il Compilatore di risorse supportano più file RC multipli nello st
 
 - Se si desidera gestire una risorsa con un editor di testo in formato leggibile, è necessario mantenerla in un file RC separato da quello modificato da Visual C++.
 
-- Se è necessario mantenere una risorsa definita dall'utente in un form binario o di testo interpretabile da un altro editor di dati specifico, è necessario mantenerla in un file RC distinto, in modo che Visual C++ non modifichi il formato in dati esadecimali. Il file con estensione Le risorse del file WAV (audio) nell'esempio di concetti avanzati MFC [SPEAKN](../visual-cpp-samples.md) costituiscono un buon esempio.
+- Se è necessario mantenere una risorsa definita dall'utente in un form binario o di testo interpretabile da un altro editor di dati specifico, è necessario mantenerla in un file RC distinto, in modo che Visual C++ non modifichi il formato in dati esadecimali. Il file con estensione Le risorse del file WAV (audio) nell'esempio di concetti avanzati MFC [SPEAKN](../overview/visual-cpp-samples.md) costituiscono un buon esempio.
 
 È possibile includere (tramite #include) un SECOND.RC nelle Direttive in fase di compilazione nella finestra di dialogo Inclusioni impostazione:
 

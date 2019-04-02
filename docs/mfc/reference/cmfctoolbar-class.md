@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283137"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775632"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Consente di specificare se aumentare o non le immagini della barra degli strumenti in modalità DPI elevata.|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Specifica il rapporto tra la dimensione delle immagini di grandi dimensioni (altezza o larghezza) e la dimensione delle immagini regolari.|
@@ -525,7 +525,7 @@ Per inserire un pulsante speciale, ad esempio una casella combinata o un elenco 
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare i vari metodi nella classe `CMFCToolBar` . Nell'esempio viene illustrato come impostare il testo dell'etichetta finestra della barra degli strumenti, impostare i bordi, impostare lo stile del riquadro e attivare i **Aggiungi o rimuovi pulsanti** pulsante visualizzato all'estremità della barra degli strumenti. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCToolBar` . Nell'esempio viene illustrato come impostare il testo dell'etichetta finestra della barra degli strumenti, impostare i bordi, impostare lo stile del riquadro e attivare i **Aggiungi o rimuovi pulsanti** pulsante visualizzato all'estremità della barra degli strumenti. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1031,7 +1031,7 @@ Chiamare questo metodo anziché [CMFCToolBar::Create](#create) quando si desider
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `CreateEx` metodo del `CMFCToolBar` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `CreateEx` metodo del `CMFCToolBar` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1799,7 +1799,7 @@ Il `CRect` oggetto a cui *lpRect* punti è impostato su 0 se non esiste un pulsa
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `GetItemRect` metodo del `CMFCToolBar` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `GetItemRect` metodo del `CMFCToolBar` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ Il framework chiama questo metodo durante l'inizializzazione per caricare le imm
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `LoadToolBar` metodo nel `CMFCToolBar` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `LoadToolBar` metodo nel `CMFCToolBar` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ Chiamare questo metodo quando si desidera aggiungere i pulsanti della barra degl
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `ReplaceButton` metodo nel `CMFCToolBar` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `ReplaceButton` metodo nel `CMFCToolBar` classe. Questo frammento di codice fa parte di [esempio dimostrativo di inserimento/espulsione](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]

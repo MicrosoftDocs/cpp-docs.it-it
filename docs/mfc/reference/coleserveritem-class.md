@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270553"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777376"
 ---
 # <a name="coleserveritem-class"></a>Classe COleServerItem
 
@@ -509,7 +509,7 @@ virtual void OnDoVerb(LONG iVerb);
 *iVerb*<br/>
 Specifica il verbo da eseguire. Può essere uno dei seguenti:
 
-|Valore|Significato|Simbolo|
+|Value|Significato|Simbolo|
 |-----------|-------------|------------|
 |0|verbo primario|OLEIVERB_PRIMARY|
 |1|Verbo secondario|(Nessuno)|
@@ -997,7 +997,7 @@ Il nome deve essere univoco all'interno del documento. Quando un'applicazione se
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Esempio MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

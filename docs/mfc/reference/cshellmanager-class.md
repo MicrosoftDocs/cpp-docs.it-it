@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ec2abf243e7f3865609f81fa4f3bf81e1b4c3d92
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269383"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769985"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 
@@ -128,7 +128,7 @@ Quando si chiama questo metodo, l'applicazione crea e visualizza una finestra di
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come recuperare un riferimento a un `CShellManager` utilizzando il `CWinAppEx::GetShellManager` (metodo) e come usare il `BrowseForFolder` (metodo). Questo frammento di codice fa parte di [esempio di Esplora risorse](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come recuperare un riferimento a un `CShellManager` utilizzando il `CWinAppEx::GetShellManager` (metodo) e come usare il `BrowseForFolder` (metodo). Questo frammento di codice fa parte di [esempio di Esplora risorse](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 

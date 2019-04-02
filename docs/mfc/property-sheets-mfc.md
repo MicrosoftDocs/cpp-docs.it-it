@@ -7,12 +7,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], property sheets
 - tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
-ms.openlocfilehash: b33f123c7b024e0de0853f8d30211272fd8de58a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 974d6cc0004985544f1786139a9a89c61f00382f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267602"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770083"
 ---
 # <a name="property-sheets-mfc"></a>Finestre delle proprietà (MFC)
 
@@ -38,7 +38,7 @@ In questa serie di articoli viene spiegato come implementare il supporto per le 
 
 - [Classe CPropertyPage](../mfc/reference/cpropertypage-class.md)
 
-- [Esempio](../visual-cpp-samples.md)
+- [Esempio](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Vedere anche
 

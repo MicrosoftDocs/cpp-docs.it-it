@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 71a5943f65f4bd490ecb02824fef7a96741709f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540323"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770629"
 ---
 # <a name="compiler-error-c3104"></a>Errore del compilatore C3104
 
@@ -19,7 +19,7 @@ argomento dell'attributo non valido
 
 È stato specificato un argomento non valido a un attributo.
 
-Visualizzare [tipi di parametro di attributo](../../windows/attribute-parameter-types-cpp-component-extensions.md) per altre informazioni.
+Visualizzare [tipi di parametro di attributo](../../extensions/attribute-parameter-types-cpp-component-extensions.md) per altre informazioni.
 
 Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual C++ 2005: passaggio di matrici gestite agli attributi personalizzati, il tipo della matrice non viene dedotto non è più nell'elenco di inizializzazione aggregata. Il compilatore ora è necessario specificare il tipo di matrice, nonché l'elenco di inizializzatori.
 

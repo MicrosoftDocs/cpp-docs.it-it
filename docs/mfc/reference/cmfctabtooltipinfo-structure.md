@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: 1e10e74729a1a4bde90ca22abdcc1a75b41c95db
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87c8820bc33f3a344933faa797a9fc60d2422b13
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260817"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773164"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Struttura CMFCTabToolTipInfo
 
@@ -27,7 +27,7 @@ struct CMFCTabToolTipInfo
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Specifica l'indice del controllo scheda.|
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Puntatore al controllo struttura a schede.|
@@ -39,7 +39,7 @@ Un puntatore a un `CMFCTabToolTipInfo` struttura viene passata come parametro de
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `CMFCTabToolTipInfo` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `CMFCTabToolTipInfo` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -65,7 +65,7 @@ Indice della scheda in cui si trova l'utente.
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `m_nTabIndex` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `m_nTabIndex` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -79,7 +79,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `m_pTabWnd` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `m_pTabWnd` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -97,7 +97,7 @@ Se la stringa è vuota, la descrizione comando non viene visualizzato.
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `m_strText` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `m_strText` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 

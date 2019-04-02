@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: 2ab4f43b2b12dff88148097e2961f235669aaa62
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b348dc2ac68ced89fb0702073f57a114befaf1cb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295669"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769355"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Classe CMFCPropertyGridFontProperty
 
@@ -102,7 +102,7 @@ Oggetto `CMFCPropertyGridFontProperty` oggetto rappresenta una proprietà del ti
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCPropertyGridFontProperty` classe. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCPropertyGridFontProperty` classe. In questo esempio fa parte il [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: 6ce5b9860cd75619f26a3585981af5807c33535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606674"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773775"
 ---
 # <a name="compiler-error-c3114"></a>Errore del compilatore C3114
 
@@ -19,7 +19,7 @@ ms.locfileid: "50606674"
 
 Affinché un membro dati della classe attribute sia un argomento denominato valido, non deve essere contrassegnato `static`, `const`, o `literal`. Se una proprietà, la proprietà non deve essere `static` e deve avere get e set di funzioni di accesso.
 
-Per altre informazioni, vedere [proprietà](../../windows/property-cpp-component-extensions.md) e [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Per altre informazioni, vedere [proprietà](../../extensions/property-cpp-component-extensions.md) e [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

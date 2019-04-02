@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: c228d5030c3577af22feda6a0d03769867b1c5c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5a815023d340839068873c32f1477d33053b13b4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268461"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775933"
 ---
 # <a name="ioleobjectimpl-class"></a>Classe IOleObjectImpl
 
@@ -369,7 +369,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 
 ### <a name="remarks"></a>Note
 
-È possibile aggiungere verbi per il file del progetto con estensione RGS. Ad esempio, vedere CIRCCTL. Gruppi di risorse nel [CIRC](../../visual-cpp-samples.md) esempio.
+È possibile aggiungere verbi per il file del progetto con estensione RGS. Ad esempio, vedere CIRCCTL. Gruppi di risorse nel [CIRC](../../overview/visual-cpp-samples.md) esempio.
 
 Visualizzare [IOleObject:: EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) in Windows SDK.
 

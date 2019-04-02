@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296727"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769901"
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 
@@ -521,6 +521,6 @@ GDI non usa questi valori, ad eccezione to restituirle quando un'applicazione ch
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC MDI](../../visual-cpp-samples.md)<br/>
+[Esempio MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)

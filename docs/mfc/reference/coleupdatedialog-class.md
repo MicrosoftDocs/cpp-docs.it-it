@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 74607a2a145025533c660ae68f20ffb8e59d3fad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b8e580130b025f07b8f85a624b7f5a224a00e49e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281733"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771106"
 ---
 # <a name="coleupdatedialog-class"></a>Classe COleUpdateDialog
 
@@ -121,7 +121,7 @@ Tutti i collegamenti e/o rappresentazioni distribuite vengono aggiornati, a meno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Esempio MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)

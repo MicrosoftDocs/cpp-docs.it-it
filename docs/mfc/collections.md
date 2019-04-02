@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273309"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767184"
 ---
 # <a name="collections"></a>Raccolte
 
@@ -55,7 +55,7 @@ Più avanti in questo argomento viene descritta brevemente ciascuna delle forme 
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Le classi Collection basate su modello
 
-Il modo più semplice per implementare una raccolta indipendente dai tipi che contiene oggetti di qualsiasi tipo consiste nell'utilizzare una delle classi MFC basate su modelli. Per esempi di queste classi, vedere l'esempio MFC [raccogliere](../visual-cpp-samples.md).
+Il modo più semplice per implementare una raccolta indipendente dai tipi che contiene oggetti di qualsiasi tipo consiste nell'utilizzare una delle classi MFC basate su modelli. Per esempi di queste classi, vedere l'esempio MFC [raccogliere](../overview/visual-cpp-samples.md).
 
 Nella tabella seguente vengono elencate le classi Collection MFC basate su modelli.
 

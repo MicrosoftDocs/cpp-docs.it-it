@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: d81fd0fb3612a8c22fa6365aa7fc6dddb89cf120
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70bb6dac7cb43701b57f3821872e02ab31426dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481159"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775627"
 ---
 # <a name="compiler-error-c3238"></a>Errore del compilatore C3238
 
@@ -19,7 +19,7 @@ ms.locfileid: "50481159"
 
 In un'applicazione client è stato definito un tipo già definito, mediante la sintassi di inoltro dei tipi, in un assembly di riferimento. Non è possibile definire entrambi i tipi nell'ambito dell'applicazione.
 
-Vedere [l'inoltro di tipi (C + + CLI)](../../windows/type-forwarding-cpp-cli.md) per altre informazioni.
+Vedere [l'inoltro di tipi (C + + CLI)](../../extensions/type-forwarding-cpp-cli.md) per altre informazioni.
 
 ## <a name="example"></a>Esempio
 

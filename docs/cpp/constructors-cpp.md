@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cad88af9e81a60857fbbd6c90cf81cdcafbd7a12
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694062"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781471"
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 
@@ -383,7 +383,7 @@ Di seguito è indicato l'ordine in base al quale un costruttore esegue le attivi
 
 1. Esegue il codice nel corpo della funzione.
 
-L'esempio seguente illustra l'ordine in cui vengono chiamati i costruttori di classi base e di membri in un costruttore per una classe derivata. Prima di tutto, viene chiamato il costruttore base, quindi i membri della classe base vengono inizializzati nell'ordine in cui vengono visualizzati nella dichiarazione di classe e infine viene chiamato il costruttore derivato.
+Nell'esempio seguente viene illustrato l'ordine in cui vengono chiamati i costruttori di classi base e di membri in un costruttore per una classe derivata. Prima di tutto, viene chiamato il costruttore base, quindi i membri della classe base vengono inizializzati nell'ordine in cui vengono visualizzati nella dichiarazione di classe e infine viene chiamato il costruttore derivato.
 
 ```cpp
 #include <iostream>
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Un costruttore di classi derivate chiama sempre un costruttore di classi base, in modo da poter usare le classi base completamente costruite prima che vengano completate eventuali operazioni aggiuntive. I costruttori di classe di base vengono chiamati in ordine di derivazione, ad esempio, se `ClassA` è derivato da `ClassB`, che deriva da `ClassC`, il `ClassC` costruttore viene chiamato prima di tutto la `ClassB` costruttore, il `ClassA` costruttore.
+Un costruttore di classi derivate chiama sempre un costruttore di classi base, in modo da poter utilizzare le classi base completamente costruite prima che vengano completate eventuali operazioni aggiuntive. I costruttori di classe di base vengono chiamati in ordine di derivazione, ad esempio, se `ClassA` è derivato da `ClassB`, che deriva da `ClassC`, il `ClassC` costruttore viene chiamato prima di tutto la `ClassB` costruttore, il `ClassA` costruttore.
 
 Se una classe base non dispone di un costruttore predefinito, è necessario fornire i parametri del costruttore della classe base nel costruttore della classe derivata:
 
@@ -474,9 +474,9 @@ Se un costruttore genera un'eccezione, l'ordine di eliminazione permanente è l'
 
 1. Il codice nel corpo della funzione del costruttore viene rimosso.
 
-1. Gli oggetti classe base e membro vengono eliminati in modo permanente nell'ordine inverso rispetto alla dichiarazione.
+1. Gli oggetti classe base e membro vengono eliminati definitivamente nell'ordine inverso rispetto alla dichiarazione.
 
-1. Se il costruttore non è delegante, tutti i membri e gli oggetti di classe base completamente costruiti vengono eliminati in modo permanente. Tuttavia, poiché l'oggetto stesso non viene costruito completamente, il distruttore non viene eseguito.
+1. Se il costruttore non è delegante, tutti i membri e gli oggetti di classe base completamente costruiti vengono eliminati definitivamente. Tuttavia, poiché l'oggetto stesso non viene costruito completamente, il distruttore non viene eseguito.
 
 ### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Costruttori di classi con ereditarietà multipla
 
@@ -636,9 +636,9 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-**Visual Studio 2017 versione 15.7 e successive**: il **utilizzando** istruzione **/std: c + + 17** modalità introduce nell'ambito tutti i costruttori dalla classe di base, ad eccezione di quelli che hanno una firma identica per i costruttori nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori. Vedere anche [miglioramenti in Visual Studio 2017 versione 15.7](../cpp-conformance-improvements-2017.md#improvements_157).
+**Visual Studio 2017 versione 15.7 e successive**: Il **usando** istruzione **/std: c + + 17** modalità introduce nell'ambito tutti i costruttori dalla classe di base, ad eccezione di quelli che hanno una firma identica ai costruttori nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori. Vedere anche [miglioramenti in Visual Studio 2017 versione 15.7](../overview/cpp-conformance-improvements-2017.md#improvements_157).
 
-Un modello di classe può ereditare tutti i costruttori da un argomento tipo, se tale tipo specifica una classe base:
+Un modello di classe può ereditare tutti i costruttori da un argomento di tipo, se tale tipo specifica una classe base:
 
 ```cpp
 template< typename T >
@@ -652,7 +652,7 @@ Una classe di derivazione non può ereditare da più classi base, se tali classi
 
 ## <a name="constructors_in_composite_classes"></a> Costruttori e classi composite
 
-Le classi contenenti membri di tipo classe sono dette *classi composite*. Quando viene creato un membro di tipo classe di una classe composita, il costruttore viene chiamato prima del costruttore della classe. Quando una classe contenuta è priva di un costruttore predefinito, è necessario usare un elenco di inizializzazione nel costruttore della classe composita. Nell'esempio precedente relativo a `StorageBox`, se si modifica il tipo della variabile membro `m_label` in una nuova classe `Label`, è necessario chiamare il costruttore della classe base e inizializzare la variabile `m_label` nel costruttore `StorageBox`:
+Le classi contenenti membri di tipo classe sono dette *classi composite*. Quando viene creato un membro di tipo classe di una classe composita, il costruttore viene chiamato prima del costruttore della classe. Quando una classe contenuta è priva di un costruttore predefinito, è necessario utilizzare un elenco di inizializzazione nel costruttore della classe composita. Nell'esempio precedente relativo a `StorageBox`, se si modifica il tipo della variabile membro `m_label` in una nuova classe `Label`, è necessario chiamare il costruttore della classe base e inizializzare la variabile `m_label` nel costruttore `StorageBox`:
 
 ```cpp
 class Label {

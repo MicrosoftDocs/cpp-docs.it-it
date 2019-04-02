@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267238"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777038"
 ---
 # <a name="example-implementing-a-property-page"></a>Esempio: Implementazione di una pagina delle proprietà
 
 In questo esempio viene illustrato come creare una pagina delle proprietà che consente di visualizzare e consente di modificare, le proprietà del [classi documento](../mfc/document-classes.md) interfaccia.
 
-L'esempio si basa sul [esempio ATLPages](../visual-cpp-samples.md).
+L'esempio si basa sul [esempio ATLPages](../overview/visual-cpp-samples.md).
 
 Per completare questo esempio, si apprenderà come:
 
@@ -41,7 +41,7 @@ Per completare questo esempio, si apprenderà come:
 
 In primo luogo, creare un nuovo progetto ATL per un server DLL denominato `ATLPages7`. A questo punto usare il [Creazione guidata pagina delle proprietà ATL](../atl/reference/atl-property-page-wizard.md) per generare una pagina delle proprietà. Assegnare la pagina delle proprietà un **nome breve** dei **DocProperties** quindi passare al **stringhe** pagina per impostare gli elementi specifici della pagina-proprietà come illustrato nella tabella seguente.
 
-|Elemento|Valore|
+|Elemento|Value|
 |----------|-----------|
 |Titolo|TextDocument|
 |Stringa doc|Proprietà TextDocument VCUE|
@@ -164,4 +164,4 @@ Quando si esegue questa macro, verrà visualizzata sulla pagina delle proprietà
 ## <a name="see-also"></a>Vedere anche
 
 [Pagine delle proprietà](../atl/atl-com-property-pages.md)<br/>
-[Esempio ATLPages](../visual-cpp-samples.md)
+[Esempio ATLPages](../overview/visual-cpp-samples.md)

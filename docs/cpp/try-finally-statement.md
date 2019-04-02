@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175921"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778338"
 ---
 # <a name="try-finally-statement"></a>Istruzione try-finally
 
@@ -33,7 +33,7 @@ ms.locfileid: "52175921"
 
 La sintassi seguente vengono descritte le **try-finally** istruzione:
 
-> **\_\_prova**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;codice controllato<br/>
 > }<br/>
@@ -45,11 +45,11 @@ La sintassi seguente vengono descritte le **try-finally** istruzione:
 ## <a name="grammar"></a>Grammatica
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\_\_provare** *compound-statement*  **\_ \_infine** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**\_\_try** *compound-statement* **\_\_finally** *compound-statement*
 
 Il **try-finally** istruzione è un'estensione Microsoft ai linguaggi C e C++ che consente alle applicazioni di destinazione di garantire l'esecuzione del codice di pulizia quando l'esecuzione di un blocco di codice viene interrotta. La pulizia è costituita da attività quali la deallocazione della memoria, la chiusura dei file e il rilascio di handle di file. Il **try-finally** istruzione è particolarmente utile per restituiscono le routine che presentano vari punti in cui viene eseguito un controllo per un errore che potrebbe causare prematuro dalla routine.
 
-Per informazioni correlate e un esempio di codice, vedere [try-except Statement](../cpp/try-except-statement.md). Per altre informazioni sull'eccezione strutturata in generale, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per altre informazioni sulla gestione delle eccezioni nelle applicazioni gestite, vedere [gestione delle eccezioni in /clr](../windows/exception-handling-cpp-component-extensions.md).
+Per informazioni correlate e un esempio di codice, vedere [try-except Statement](../cpp/try-except-statement.md). Per altre informazioni sull'eccezione strutturata in generale, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per altre informazioni sulla gestione delle eccezioni nelle applicazioni gestite con C + + / CLI, vedere [gestione delle eccezioni in /clr](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
 > La gestione eccezioni strutturata funziona con i file Win32 per i file di origine C++ e C. Tuttavia, non è progettato in particolare per C++. È possibile garantire maggiore portabilità del codice tramite la gestione delle eccezioni C++. Inoltre, la gestione eccezioni C++ è più flessibile, in quanto può gestire le eccezioni di qualsiasi tipo. Per i programmi C++, è consigliabile usare il meccanismo di gestione delle eccezioni C++ ([try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) istruzioni).
@@ -66,7 +66,7 @@ Il controllo raggiunge un' **try** istruzione per l'esecuzione sequenziale sempl
 
 Se si verifica un'eccezione di **try** blocco, il sistema operativo deve trovare un gestore per l'eccezione o il programma avrà esito negativo. Se viene trovato un gestore, tutti i **finally** vengono eseguiti blocchi e l'esecuzione viene ripresa nel gestore.
 
-Si supponga ad esempio che una serie di chiamate di funzione colleghi la funzione A alla funzione D, come illustrato di seguito. Ogni funzione dispone di un gestore di terminazione. Se un'eccezione viene generata nella funzione D e gestita in A, i gestori di terminazione, man mano che il sistema rimuove lo stack, vengono chiamati nell'ordine seguente: D, C, B.
+Si supponga ad esempio che una serie di chiamate di funzione colleghi la funzione A alla funzione D, come illustrato di seguito. Ogni funzione dispone di un gestore di terminazione. Se un'eccezione viene generata nella funzione D e gestita in A, i gestori di terminazione vengono chiamati nell'ordine indicato come il sistema rimuove lo stack: D, C, B.
 
 ![Ordine di terminazione&#45;esecuzione del gestore](../cpp/media/vc38cx1.gif "ordine di terminazione&#45;esecuzione del gestore") <br/>
 Ordine di terminazione esecuzione del gestore

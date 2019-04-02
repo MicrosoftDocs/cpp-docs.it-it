@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278534"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781692"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 
@@ -389,7 +389,7 @@ Se si imposta *bRightShadow* su FALSE, verrà disegnata l'ombreggiatura sotto e 
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `DrawShadow` metodo del `CDrawingManager` classe. Questo frammento di codice fa parte di [esempio dimostrativo foglio Prop](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `DrawShadow` metodo del `CDrawingManager` classe. Questo frammento di codice fa parte di [esempio dimostrativo foglio Prop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
@@ -473,7 +473,7 @@ void FillGradient(
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `FillGradient` metodo del `CDrawingManager` classe. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `FillGradient` metodo del `CDrawingManager` classe. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
@@ -509,7 +509,7 @@ Uso *nAngle* per specificare la direzione della sfumatura di colore. Quando si s
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `FillGradient2` metodo del `CDrawingManager` classe. Questo frammento di codice fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `FillGradient2` metodo del `CDrawingManager` classe. Questo frammento di codice fa parte il [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 

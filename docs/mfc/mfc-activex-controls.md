@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d10aad92088a02a1cab0977ea174abdf919a05e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262610"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769212"
 ---
 # <a name="mfc-activex-controls"></a>Controlli ActiveX MFC
 
@@ -116,7 +116,7 @@ Per impostazione predefinita, le classi dei controlli ActiveX e gli strumenti ve
 
    Contiene le librerie necessarie per sviluppare controlli ActiveX con MFC
 
-Sono inoltre disponibili degli esempi di controlli ActiveX MFC. Per altre informazioni su questi esempi, vedere [esempi di controlli: Controlli ActiveX, basata su MFC](../visual-cpp-samples.md)
+Sono inoltre disponibili degli esempi di controlli ActiveX MFC. Per altre informazioni su questi esempi, vedere [esempi di controlli: Controlli ActiveX, basata su MFC](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Vedere anche
 

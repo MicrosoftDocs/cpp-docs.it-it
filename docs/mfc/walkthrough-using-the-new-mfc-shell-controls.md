@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288788"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772150"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Procedura dettagliata: Utilizzo dei nuovi controlli Shell MFC
 
@@ -166,7 +166,7 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio da us
 
 - La procedura guidata Creazione di una barra di Outlook con entrambi una **cartelle** riquadro e un **calendario** riquadro. Probabilmente non ha senso avere un **calendario** riquadro in un **Explorer** finestra, quindi rimuovere tale riquadro ora.
 
-- Il `CMFCShellListCtrl` supporta la visualizzazione di file in modalità diverse, ad esempio **icone grandi**, **icone piccole**, **elenco**, e **dettagli**. Aggiornare l'applicazione per implementare questa funzionalità. Hint: vedere [esempi di Visual C++](../visual-cpp-samples.md).
+- Il `CMFCShellListCtrl` supporta la visualizzazione di file in modalità diverse, ad esempio **icone grandi**, **icone piccole**, **elenco**, e **dettagli**. Aggiornare l'applicazione per implementare questa funzionalità. Hint: vedere [esempi di Visual C++](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vedere anche
 

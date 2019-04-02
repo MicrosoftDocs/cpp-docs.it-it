@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296345"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776960"
 ---
 # <a name="atl-copy-policy-classes"></a>Classi di criteri di copia ATL
 
@@ -62,7 +62,7 @@ ATL fornisce due classi di criteri di copia in forma del `_Copy` e `_CopyInterfa
 
 ## <a name="custom-implementations"></a>Implementazioni personalizzate
 
-In genere, è necessario definire le proprie classi di criteri di copia per copiare eterogenei (vale a dire, la conversione tra tipi di dati). Per alcuni esempi di classi di criteri di copia personalizzato, esaminare i file VCUE_Copy e VCUE_CopyString. h nel [ATLCollections](../visual-cpp-samples.md) esempio. Questi file contengono le classi dei criteri di copia, due modelli `GenericCopy` e `MapCopy`, oltre a una serie di specializzazioni di `GenericCopy` per diversi tipi di dati.
+In genere, è necessario definire le proprie classi di criteri di copia per copiare eterogenei (vale a dire, la conversione tra tipi di dati). Per alcuni esempi di classi di criteri di copia personalizzato, esaminare i file VCUE_Copy e VCUE_CopyString. h nel [ATLCollections](../overview/visual-cpp-samples.md) esempio. Questi file contengono le classi dei criteri di copia, due modelli `GenericCopy` e `MapCopy`, oltre a una serie di specializzazioni di `GenericCopy` per diversi tipi di dati.
 
 ### <a name="genericcopy"></a>GenericCopy
 
@@ -81,4 +81,4 @@ VCUE_Copy contiene anche le specializzazioni di questa classe seguente: `Generic
 ## <a name="see-also"></a>Vedere anche
 
 [Implementazione di una raccolta basata su libreria standard C++](../atl/implementing-an-stl-based-collection.md)<br/>
-[Nell'esempio ATLCollections](../visual-cpp-samples.md)
+[Nell'esempio ATLCollections](../overview/visual-cpp-samples.md)

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301852"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775699"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -549,9 +549,9 @@ Sostituisce il valore dell'elemento a cui punta l'indice. Se *iElement* è maggi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MMXSwarm](../../visual-cpp-samples.md)<br/>
-[Esempio DynamicConsumer](../../visual-cpp-samples.md)<br/>
-[Esempio UpdatePV](../../visual-cpp-samples.md)<br/>
-[Esempio di testo scorrevole](../../visual-cpp-samples.md)<br/>
+[Esempio MMXSwarm](../../overview/visual-cpp-samples.md)<br/>
+[Esempio DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>
+[Esempio UpdatePV](../../overview/visual-cpp-samples.md)<br/>
+[Esempio di testo scorrevole](../../overview/visual-cpp-samples.md)<br/>
 [Classe CArray](../../mfc/reference/carray-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

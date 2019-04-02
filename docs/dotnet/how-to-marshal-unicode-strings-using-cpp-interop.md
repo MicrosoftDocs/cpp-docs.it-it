@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 920f06bd2197315b11f239827de76eba9591bad5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742671"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777675"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procedura: Il marshalling delle stringhe Unicode utilizzando l'interoperabilità C++
 
@@ -30,7 +30,7 @@ In questo argomento viene illustrato come le stringhe di Unicode possono essere 
 
 ## <a name="example"></a>Esempio
 
-Per passare una stringa Unicode da un oggetto gestito a una funzione non gestita, la funzione PtrToStringChars (dichiarata in Vcclr. h) può essere usata per l'accesso in memoria in cui è archiviata la stringa gestita. Poiché questo indirizzo viene passato a una funzione nativa, è importante che la memoria venga bloccata con [pin_ptr (C + + / CLI)](../windows/pin-ptr-cpp-cli.md) per impedire che vengano spostati in altri dati di tipo stringa, un ciclo di garbage collection verranno eseguiti durante il esecuzione di funzione non gestita.
+Per passare una stringa Unicode da un oggetto gestito a una funzione non gestita, la funzione PtrToStringChars (dichiarata in Vcclr. h) può essere usata per l'accesso in memoria in cui è archiviata la stringa gestita. Poiché questo indirizzo viene passato a una funzione nativa, è importante che la memoria venga bloccata con [pin_ptr (C + + / CLI)](../extensions/pin-ptr-cpp-cli.md) per impedire che vengano spostati in altri dati di tipo stringa, un ciclo di garbage collection verranno eseguiti durante il esecuzione di funzione non gestita.
 
 ```
 // MarshalUnicode1.cpp

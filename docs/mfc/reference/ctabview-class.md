@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326595"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772092"
 ---
 # <a name="ctabview-class"></a>Classe CTabView
 
@@ -65,7 +65,7 @@ Questa classe rende facile inserire una visualizzazione a schede in un'applicazi
 
 Ad esempio, si può avere un documento che può essere rappresentato in modi diversi: come un foglio di calcolo, un grafico, un modulo modificabile e così via. È possibile creare singole visualizzazioni dei dati di disegno in base alle esigenze, inserirli nel `CTabView`-oggetto derivato e chiedere a schede senza scrivere codice aggiuntivo.
 
-[Esempio di TabbedView: Applicazione di visualizzazione a schede MFC](../../visual-cpp-samples.md) illustra l'uso del `CTabView`.
+[Esempio di TabbedView: Applicazione di visualizzazione a schede MFC](../../overview/visual-cpp-samples.md) illustra l'uso del `CTabView`.
 
 ## <a name="example"></a>Esempio
 

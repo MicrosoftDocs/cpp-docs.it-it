@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: e64ea6701c5e3ec594c705e8995b5ba605ab0b79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301194"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779677"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Tipi di documenti multipli, visualizzazioni e finestre cornice
 
@@ -67,9 +67,9 @@ La figura seguente, suddivisa nelle parti a, b e c, illustra i tre modelli di in
 ![Più&#45;visualizzare le interfacce utente](../mfc/media/vc37a71.gif "più&#45;consente di visualizzare le interfacce utente") <br/>
 Interfacce utente a più visualizzazioni
 
-Il framework fornisce questi modelli implementando il comando Nuova finestra e fornendo la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), come illustrato in [Finestre con separatore](#_core_splitter_windows). Usando queste informazioni come punto di partenza, è possibile implementare altri modelli. Per programmi di esempio che illustrano diverse configurazioni di visualizzazioni, finestre cornice e con separatori, vedere [Esempi di MFC](../visual-cpp-samples.md).
+Il framework fornisce questi modelli implementando il comando Nuova finestra e fornendo la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), come illustrato in [Finestre con separatore](#_core_splitter_windows). Usando queste informazioni come punto di partenza, è possibile implementare altri modelli. Per programmi di esempio che illustrano diverse configurazioni di visualizzazioni, finestre cornice e con separatori, vedere [Esempi di MFC](../overview/visual-cpp-samples.md).
 
-Per altre informazioni su `UpdateAllViews`, vedere la classe [CView](../mfc/reference/cview-class.md) in *Riferimento MFC* ed [Esempio Scribble](../visual-cpp-samples.md).
+Per altre informazioni su `UpdateAllViews`, vedere la classe [CView](../mfc/reference/cview-class.md) in *Riferimento MFC* ed [Esempio Scribble](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_multiple_frame_windows"></a> Multiple Frame Windows
 
@@ -79,11 +79,11 @@ Il comando Nuova finestra del menu Finestra per le applicazioni MDI consente di 
 
 In una finestra con separatore, la finestra è, o può essere, suddivisa in due o più riquadri scorrevoli. Il controllo Splitter, o casella di divisione controllo posizionato nella cornice della finestra accanto alle barre di scorrimento consente di modificare le dimensioni dei riquadri. Ogni riquadro contiene una visualizzazione dello stesso documento. Nei separatori "dinamici", le visualizzazioni appartengono alla stessa classe, come illustrato nella parte b della figura interfacce utente con più visualizzazioni. Nei separatori statici le visualizzazioni possono appartenere a classi diverse. La classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)supporta finestre con separatore di entrambi i tipi.
 
-Le finestre con separatore dinamico con visualizzazioni della stessa classe consentono di suddividere una finestra in più riquadri e quindi di scorrere i diversi riquadri per visualizzare diverse porzioni del documento. È anche possibile rimuovere la divisione e di conseguenza le visualizzazioni aggiuntive. Ne sono un esempio le finestre con separatore aggiunte all' [esempio Scribble](../visual-cpp-samples.md) . Questo argomento descrive le tecniche di creazione di finestre con separatore dinamico. Una finestra con separatore dinamico viene visualizzata nella parte b della figura interfacce utente con più visualizzazioni.
+Le finestre con separatore dinamico con visualizzazioni della stessa classe consentono di suddividere una finestra in più riquadri e quindi di scorrere i diversi riquadri per visualizzare diverse porzioni del documento. È anche possibile rimuovere la divisione e di conseguenza le visualizzazioni aggiuntive. Ne sono un esempio le finestre con separatore aggiunte all' [esempio Scribble](../overview/visual-cpp-samples.md) . Questo argomento descrive le tecniche di creazione di finestre con separatore dinamico. Una finestra con separatore dinamico viene visualizzata nella parte b della figura interfacce utente con più visualizzazioni.
 
 Le finestre con separatore statico, con visualizzazioni di classi diverse, si aprono con la finestra divisa in più riquadri, ciascuno con uno scopo diverso. Ad esempio, nell'editor di bitmap di Visual C++, la finestra dell'immagine mostra due riquadri affiancati. Quello di sinistra visualizza un'immagine a dimensione naturale della bitmap. Il riquadro di destra visualizza un'immagine ingrandita della stessa bitmap. I riquadri sono separati dalla barra di divisione che l'utente può trascinare per modificare le dimensioni dei riquadri. Una finestra con separatore statico viene visualizzata nella parte c della figura interfacce utente con più visualizzazioni.
 
-Per altre informazioni, vedere la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) in *Riferimento MFC* e [Esempi di MFC](../visual-cpp-samples.md).
+Per altre informazioni, vedere la classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) in *Riferimento MFC* e [Esempi di MFC](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vedere anche
 

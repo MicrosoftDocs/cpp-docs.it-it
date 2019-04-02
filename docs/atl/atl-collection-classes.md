@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272100"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774984"
 ---
 # <a name="atl-collection-classes"></a>Classi di raccolta ATL
 
@@ -84,8 +84,8 @@ Ognuna delle classi di raccolte disponibili offre caratteristiche di prestazioni
 
 |Forma|Ordered|Indicizzati|Inserire un<br /><br /> elemento|Ricerca<br /><br /> elemento specificato|Duplica<br /><br /> elementi|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
-|List|Sì|No|Fast (tempo costante)|Lento o (n)|Sì|
-|Matrice|Sì|Tramite valore integer (tempo costante)|Lento o (n), ad eccezione dell'inserimento finale, in cui un tempo costante case|Lento o (n)|Sì|
+|List|Yes|No|Fast (tempo costante)|Lento o (n)|Yes|
+|Matrice|Yes|Tramite valore integer (tempo costante)|Lento o (n), ad eccezione dell'inserimento finale, in cui un tempo costante case|Lento o (n)|Yes|
 |Mappa|No|Da chiave (tempo costante)|Fast (tempo costante)|Fast (tempo costante)|No (chiavi) Sì (valori)|
 |Mappa di rosso-bianco|Sì (per chiave)|Da chiave O (log n)|Veloce O (log n)|Veloce O (log n)|No|
 |Oggetto Multimap rosso-bianco|Sì (per chiave)|Da chiave O(log n) (valori multipli per ogni chiave)|Veloce O (log n)|Veloce O (log n)|Sì (valori multipli per ogni chiave)|
@@ -116,13 +116,13 @@ Il diagramma seguente mostra la gerarchia di classi per il CTraits (classi).
 
 Gli esempi seguenti illustrano le classi di raccolta:
 
-- [Esempio MMXSwarm](../visual-cpp-samples.md)
+- [Esempio MMXSwarm](../overview/visual-cpp-samples.md)
 
-- [Esempio DynamicConsumer](../visual-cpp-samples.md)
+- [Esempio DynamicConsumer](../overview/visual-cpp-samples.md)
 
 - [Esempio UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
-- [Esempio di testo scorrevole](../visual-cpp-samples.md)
+- [Esempio di testo scorrevole](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Vedere anche
 

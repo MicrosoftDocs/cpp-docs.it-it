@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 2b063abd4186523d27cab7a766f57aadfeaf765d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e2aed98d9131b3d7b96cdc3e3297823d69d0ad38
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746045"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781536"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Concetti di base per l'utilizzo delle eccezioni gestite
 
@@ -166,6 +166,6 @@ Quando generazione o il rilevamento non gestiti delle eccezioni, è consigliabil
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione delle eccezioni](../windows/exception-handling-cpp-component-extensions.md)<br/>
-[safe_cast](../windows/safe-cast-cpp-component-extensions.md)<br/>
+[Gestione delle eccezioni](../extensions/exception-handling-cpp-component-extensions.md)<br/>
+[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)<br/>
 [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)

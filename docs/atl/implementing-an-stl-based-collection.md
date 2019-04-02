@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 90583f34c9e9fb500bb48fdbd3c1a17d343d865f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292922"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779248"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementazione di una raccolta basata sulla libreria Standard C++
 
 ATL fornisce il `ICollectionOnSTLImpl` interfaccia che consentono di implementare rapidamente le interfacce di raccolta basata su libreria Standard C++ per gli oggetti. Per comprendere il funzionamento di questa classe, sarà necessario utilizzare un semplice esempio (sotto) che utilizza questa classe per implementare una raccolta di sola lettura mira a client di automazione.
 
-Il codice di esempio è il [esempio ATLCollections](../visual-cpp-samples.md).
+Il codice di esempio è il [esempio ATLCollections](../overview/visual-cpp-samples.md).
 
 Per completare questa procedura, si apprenderà come:
 
@@ -75,7 +75,7 @@ Il typedef creati finora fornire tutte le informazioni necessarie per creare alt
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-In questo esempio, è possibile usare l'oggetto personalizzato `GenericCopy` classe definita in VCUE_Copy e VCUE_CopyString. h dal [ATLCollections](../visual-cpp-samples.md) esempio. È possibile usare questa classe in un altro codice, ma potrebbe essere necessario definire ulteriori specializzazioni di `GenericCopy` per supportare tipi di dati utilizzati nelle raccolte personalizzate. Per altre informazioni, vedere [classi di criteri di copia ATL](../atl/atl-copy-policy-classes.md).
+In questo esempio, è possibile usare l'oggetto personalizzato `GenericCopy` classe definita in VCUE_Copy e VCUE_CopyString. h dal [ATLCollections](../overview/visual-cpp-samples.md) esempio. È possibile usare questa classe in un altro codice, ma potrebbe essere necessario definire ulteriori specializzazioni di `GenericCopy` per supportare tipi di dati utilizzati nelle raccolte personalizzate. Per altre informazioni, vedere [classi di criteri di copia ATL](../atl/atl-copy-policy-classes.md).
 
 ##  <a name="vcconenumeration_and_collection"></a> Creazione di TypeDef per la raccolta e di enumerazione
 
@@ -102,5 +102,5 @@ A questo punto, è possibile testare il codice con il client di propria scelta.
 ## <a name="see-also"></a>Vedere anche
 
 [Raccolte ed enumeratori](../atl/atl-collections-and-enumerators.md)<br/>
-[Nell'esempio ATLCollections](../visual-cpp-samples.md)<br/>
+[Nell'esempio ATLCollections](../overview/visual-cpp-samples.md)<br/>
 [Classi di criteri di copia ATL](../atl/atl-copy-policy-classes.md)

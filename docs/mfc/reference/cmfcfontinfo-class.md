@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281187"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781328"
 ---
 # <a name="cmfcfontinfo-class"></a>Classe CMFCFontInfo
 
@@ -51,7 +51,7 @@ class CMFCFontInfo : public CObject
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|Un valore che specifica il set di caratteri (script) associato con il tipo di carattere.|
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Un valore che specifica passo e famiglia del tipo di carattere.|
@@ -65,7 +65,7 @@ class CMFCFontInfo : public CObject
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare diversi membri del `CMFCFontInfo` classe. Nell'esempio viene illustrato come ottenere un `CMFCFontInfo` dell'oggetto da un `CMFCRibbonFontComboBox`e come accedere alle relative variabili locali. In questo esempio fa parte di [esempio dimostrativo di Office 2007](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare diversi membri del `CMFCFontInfo` classe. Nell'esempio viene illustrato come ottenere un `CMFCFontInfo` dell'oggetto da un `CMFCRibbonFontComboBox`e come accedere alle relative variabili locali. In questo esempio fa parte di [esempio dimostrativo di Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 

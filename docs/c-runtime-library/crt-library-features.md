@@ -18,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 08d85cd6993a2f3558ddb501dacac671c0d5d797
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540270"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767691"
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT
 
@@ -33,7 +33,7 @@ Questo argomento descrive i vari file lib che formano le librerie di runtime C, 
 
 La libreria di runtime C (CRT) fa parte della libreria standard C++ che incorpora la libreria standard ISO C99. Le librerie Visual C++ che implementano la libreria CRT supportano lo sviluppo del codice nativo e il codice nativo e gestito misto. Tutte le versioni della libreria CRT supportano lo sviluppo multithread. La maggior parte delle librerie supporta il collegamento statico, per collegare la libreria direttamente al codice, oppure il collegamento dinamico, in modo che il codice usi file DLL comuni.
 
-A partire da Visual Studio 2015 la libreria CRT è stata sottoposta a refactoring in nuovi file binari. La libreria CRT universale (UCRT) contiene le funzioni e le variabili globali esportate dalla libreria CRT C99 standard. La libreria UCRT è ora un componente di Windows ed è inclusa in Windows 10. La libreria statica, la libreria di importazione DLL e i file di intestazione per la libreria UCRT si trovano ora in Windows 10 SDK. Quando si installa Visual C++, Visual Studio installato il subset di Windows 10 SDK richiesto per usare la libreria UCRT. È possibile usare la libreria UCRT in qualsiasi versione di Windows supportata da Visual Studio 2015 e versioni successive. È possibile ridistribuirla usando vcredist per le versioni supportate di Windows diverse da Windows 10. Per altre informazioni, vedere [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).
+A partire da Visual Studio 2015 la libreria CRT è stata sottoposta a refactoring in nuovi file binari. La libreria CRT universale (UCRT) contiene le funzioni e le variabili globali esportate dalla libreria CRT C99 standard. La libreria UCRT è ora un componente di Windows ed è inclusa in Windows 10. La libreria statica, la libreria di importazione DLL e i file di intestazione per la libreria UCRT si trovano ora in Windows 10 SDK. Quando si installa Visual C++, Visual Studio installato il subset di Windows 10 SDK richiesto per usare la libreria UCRT. È possibile usare la libreria UCRT in qualsiasi versione di Windows supportata da Visual Studio 2015 e versioni successive. È possibile ridistribuirla usando vcredist per le versioni supportate di Windows diverse da Windows 10. Per altre informazioni, vedere [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md).
 
 La tabella seguente elenca le librerie che implementano le librerie UCRT.
 

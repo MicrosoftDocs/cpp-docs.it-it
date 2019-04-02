@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281681"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778455"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Impedisce la visualizzazione attiva che perde lo stato attivo quando viene inserita e abilitata una nuova scheda.|
 
@@ -243,7 +243,7 @@ Per un esempio di come creare una finestra come una barra di controllo ancorabil
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCTabCtrl` classe per configurare un `CMFCTabCtrl` oggetto. Nell'esempio viene illustrato come aggiungere una scheda, mostrare il pulsante chiude nella scheda attiva, abilitare le etichette delle schede modificabile e visualizzare un menu a comparsa di etichette di finestra a schede. In questo esempio fa parte il [campione raccolta stato](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCTabCtrl` classe per configurare un `CMFCTabCtrl` oggetto. Nell'esempio viene illustrato come aggiungere una scheda, mostrare il pulsante chiude nella scheda attiva, abilitare le etichette delle schede modificabile e visualizzare un menu a comparsa di etichette di finestra a schede. In questo esempio fa parte il [campione raccolta stato](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
@@ -355,7 +355,7 @@ Nella tabella seguente sono elencati i valori è possibile specificare per il *p
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `Create` metodo nel `CMFCTabCtrl` classe. In questo esempio fa parte il [campione raccolta stato](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `Create` metodo nel `CMFCTabCtrl` classe. In questo esempio fa parte il [campione raccolta stato](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]
@@ -846,7 +846,7 @@ Sempre TRUE.
 
 Il valore della *stile* parametro può essere uno dei seguenti `CMFCTabCtrl::Style` enumerazioni.
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |STYLE_3D|Vengono visualizzate schede tridimensionale, rettangolare con angoli arrotondati.|
 |STYLE_3D_ONENOTE|Vengono visualizzate schede tridimensionale che dispongono di uno lato verticale e il lato "uno" inclinato e che abbia gli angoli arrotondati.|
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 Il *resizeMode* parametro può essere uno dei seguenti `ResizeMode` valori di enumerazione.
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |RESIZE_NO|Il controllo struttura a schede non può essere ridimensionato.|
 |RESIZE_VERT|Il controllo struttura a schede può essere ridimensionato in senso verticale, ma non in senso orizzontale.|

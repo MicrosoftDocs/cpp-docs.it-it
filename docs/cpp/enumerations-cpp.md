@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332413"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772565"
 ---
 # <a name="enumerations-c"></a>Enumerazioni (C++)
 
 Un'enumerazione è un tipo definito dall'utente costituito da un set di costanti integrali note come enumeratori.
 
 > [!NOTE]
->  Questo articolo descrive il linguaggio C++ Standard ISO **enum** tipo e i con ambito (o fortemente tipizzato) **classe enum** tipo introdotto in c++11. Per informazioni sul **classe enum pubblica** o **classe di enumerazione privata** tipi in C + + c++ /CLI e c++ /CLI CX, vedere [classe enum](../windows/enum-class-cpp-component-extensions.md).
+>  Questo articolo descrive il linguaggio C++ Standard ISO **enum** tipo e i con ambito (o fortemente tipizzato) **classe enum** tipo introdotto in c++11. Per informazioni sul **classe enum pubblica** o **classe di enumerazione privata** tipi in C + + c++ /CLI e c++ /CLI CX, vedere [classe enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -52,7 +52,7 @@ Nome del tipo assegnato all'enumerazione.
 *type*<br/>
 Tipo sottostante degli enumeratori. Tutti gli enumeratori dispongono dello stesso tipo sottostante. Può essere un tipo integrale qualsiasi.
 
-*elenco di enumerazione*<br/>
+*enum-list*<br/>
 Elenco degli enumeratori nell'enumerazione separati da virgola. Ogni enumeratore o nome della variabile nell'ambito deve essere univoco. I valori possono essere tuttavia duplicati. In un'enumerazione senza ambita, l'ambito è l'ambito circostante. in un'enumerazione con ambito, l'ambito è il *elenco di enumerazione* stesso.  In un'enumerazione con ambita, l'elenco può essere vuoto che definisce in effetti un nuovo tipo integrale.
 
 *class*<br/>
@@ -145,7 +145,7 @@ Notare che la riga `hand = account_num;` causa ancora l'errore che si verifica c
 
 ## <a name="no_enumerators"></a> Enumerazioni con nessun enumeratori
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): definendo un'enumerazione (normale o con ambita) con un tipo sottostante esplicito e non gli enumeratori, si può in effetti introduce un nuovo tipo di dati integrale che non dispone di alcuna conversione implicita in qualsiasi altro tipo. Tramite questo tipo anziché il relativo tipo sottostante predefinito, è possibile eliminare la possibilità di lievi errori dovuti a conversioni implicite accidentale.
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Definendo un tipo enum (normale o con ambito) con un tipo sottostante esplicito e non gli enumeratori, è in effetti possibile introdurre un nuovo tipo integrale che non dispone di alcuna conversione implicita in qualsiasi altro tipo. Tramite questo tipo anziché il relativo tipo sottostante predefinito, è possibile eliminare la possibilità di lievi errori dovuti a conversioni implicite accidentale.
 
 ```cpp
 enum class byte : unsigned char { };

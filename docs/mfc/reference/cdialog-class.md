@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305094"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771352"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -558,7 +558,7 @@ Specifica l'ID della Guida sensibile al contesto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC Sample DLGCBR32](../../visual-cpp-samples.md)<br/>
-[Esempio MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
+[MFC Sample DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC DLGTEMPL](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)

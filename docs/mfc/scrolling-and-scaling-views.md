@@ -8,18 +8,18 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283709"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777580"
 ---
 # <a name="scrolling-and-scaling-views"></a>Scorrimento e ridimensionamento di visualizzazioni
 
 MFC supporta le visualizzazioni di scorrimento e visualizzazioni che vengono ridimensionate automaticamente per le dimensioni della finestra cornice che li visualizza. Classe `CScrollView` supporta entrambi i tipi di viste.
 
-Per altre informazioni sullo scorrimento e ridimensionamento, vedere la classe [CScrollView](../mfc/reference/cscrollview-class.md) nel *riferimento MFC*. Per un esempio di scorrimento, vedere la [esempio Scribble](../visual-cpp-samples.md).
+Per altre informazioni sullo scorrimento e ridimensionamento, vedere la classe [CScrollView](../mfc/reference/cscrollview-class.md) nel *riferimento MFC*. Per un esempio di scorrimento, vedere la [esempio Scribble](../overview/visual-cpp-samples.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
 

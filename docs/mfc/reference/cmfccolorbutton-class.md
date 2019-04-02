@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293485"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780002"
 ---
 # <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
 
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`m_bAltColorDlg`|Valore booleano. Se TRUE, il framework Visualizza il [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) finestra di dialogo colore quando i *altri* fa clic sul pulsante, o se è FALSE, il sistema a colori nella finestra di dialogo. Il valore predefinito è TRUE. Per altre informazioni, vedere [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Valore booleano. Se TRUE, il framework imposta lo stato attivo nel menu colore quando viene visualizzato il menu di scelta o se è FALSE, non viene modificato lo stato attivo. Il valore predefinito è TRUE.|
@@ -126,7 +126,7 @@ Il `CMFCColorButton` oggetto notifica al relativo elemento padre di un colore mo
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come configurare un pulsante del colore utilizzando i vari metodi nel `CMFCColorButton` classe. I metodi di impostare il colore del pulsante del colore e il relativo numero di colonne e abilitare automatico e gli altri pulsanti. In questo esempio fa parte di [esempio dimostrativo di barra di stato](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come configurare un pulsante del colore utilizzando i vari metodi nel `CMFCColorButton` classe. I metodi di impostare il colore del pulsante del colore e il relativo numero di colonne e abilitare automatico e gli altri pulsanti. In questo esempio fa parte di [esempio dimostrativo di barra di stato](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]

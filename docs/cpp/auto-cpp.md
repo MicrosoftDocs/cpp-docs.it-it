@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518567"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776336"
 ---
 # <a name="auto-c"></a>auto (C++)
 
@@ -34,13 +34,13 @@ Il **automatica** parola chiave indica al compilatore di usare l'espressione di 
 
 È consigliabile usare la **automatica** parola chiave per la maggior parte dei casi, a meno che non si desideri effettivamente una conversione, perché offre questi vantaggi:
 
-- **Affidabilità:** se viene modificato il tipo dell'espressione, incluso quando viene modificato un tipo restituito della funzione, ovvero comunque a funzionare.
+- **Affidabilità:** Se viene modificato il tipo dell'espressione, incluso quando viene modificato un tipo restituito della funzione, ovvero comunque a funzionare.
 
-- **Prestazioni:** si ha la certezza che non verrà eseguita alcuna conversione.
+- **Prestazioni:** Si ha la certezza che non verrà eseguita alcuna conversione.
 
-- **Usabilità:** non è necessario preoccuparsi delle difficoltà legate all'ortografia nome tipo e di errori ortografici.
+- **Usabilità:** Non è necessario preoccuparsi delle difficoltà legate all'ortografia nome tipo e di errori ortografici.
 
-- **Efficienza:** la codifica può essere più efficiente.
+- **Efficienza:** La codifica può essere più efficiente.
 
 Casi di conversione in cui è possibile evitare di usare **automatica**:
 
@@ -48,11 +48,11 @@ Casi di conversione in cui è possibile evitare di usare **automatica**:
 
 - Tipi di helper modello di espressione, ad esempio, `(valarray+valarray)`.
 
-Usare la **automatica** parola chiave, usarlo invece di un tipo per dichiarare una variabile e specificare un'espressione di inizializzazione. Inoltre, è possibile modificare il **automatica** (parola chiave) tramite, ad esempio identificatori e dichiaratori **const**, **volatile**, puntatore (`*`), riferimenti (`&`) e riferimento rvalue (`&&`). Il compilatore valuta l'espressione di inizializzazione, quindi usa tali informazioni per dedurre il tipo della variabile.
+Usare la **automatica** parola chiave, usarlo invece di un tipo per dichiarare una variabile e specificare un'espressione di inizializzazione. Inoltre, è possibile modificare il **automatica** (parola chiave) tramite, ad esempio identificatori e dichiaratori **const**, **volatile**, puntatore (`*`), riferimenti (`&`) e riferimento rvalue (`&&`). Il compilatore valuta l'espressione di inizializzazione, quindi utilizza tali informazioni per dedurre il tipo della variabile.
 
 L'espressione di inizializzazione può essere un'assegnazione (sintassi del segno di uguale), un'inizializzazione diretta (sintassi di tipo funzione), un' [operatore new](new-operator-cpp.md) espressione o l'espressione di inizializzazione può essere il  *for-range-declaration* parametro in un [Range-based per istruzione (C++)](../cpp/range-based-for-statement-cpp.md) istruzione. Per altre informazioni, vedere [inizializzatori](../cpp/initializers.md) e gli esempi di codice più avanti in questo documento.
 
-Il **automatica** (parola chiave) è un segnaposto per un tipo, ma non è un tipo. Pertanto, il **automatica** parola chiave non può essere utilizzata in un cast o operatori, ad esempio [sizeof](../cpp/sizeof-operator.md) e [typeid](../windows/typeid-cpp-component-extensions.md).
+Il **automatica** (parola chiave) è un segnaposto per un tipo, ma non è un tipo. Pertanto, il **automatica** parola chiave non può essere utilizzata in un cast o operatori, ad esempio [sizeof](../cpp/sizeof-operator.md) e (per C + + c++ /CLI CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Utilizzabilità
 
@@ -133,7 +133,7 @@ Nella tabella seguente sono elencate le restrizioni sull'uso delle **automatica*
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Un simbolo non può essere usato prima che venga inizializzato. In pratica, ciò significa che una variabile non può essere usata per inizializzare se stessa.|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|È possibile eseguire il cast a un tipo dichiarato con la **automatica** (parola chiave).|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Tutti i simboli in un elenco di dichiaratori dichiarati con la **automatica** parola chiave deve essere risolto nello stesso tipo. Per altre informazioni, vedere [dichiarazioni e definizioni](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Il [sizeof](../cpp/sizeof-operator.md) e [typeid](../windows/typeid-cpp-component-extensions.md) non è possibile applicare operatori per un simbolo dichiarato con il **automatico** (parola chiave).|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|Il [sizeof](../cpp/sizeof-operator.md) e [typeid](../extensions/typeid-cpp-component-extensions.md) non è possibile applicare operatori per un simbolo dichiarato con il **automatico** (parola chiave).|
 
 ## <a name="examples"></a>Esempi
 
@@ -225,7 +225,7 @@ int main()
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (deduzione del tipo di variabile)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [Operatore sizeof](../cpp/sizeof-operator.md)<br/>
-[typeid](../windows/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operator new](new-operator-cpp.md)<br/>
 [Dichiarazioni e definizioni](declarations-and-definitions-cpp.md)<br/>
 [Esempi di espressioni lambda](../cpp/examples-of-lambda-expressions.md)<br/>

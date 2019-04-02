@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 0c4a74ce69f5c52eb6fc107ea477e5715e86ecd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826580"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775426"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>I progetti C/C++ e i sistemi di compilazione in Visual Studio
 
@@ -78,6 +78,8 @@ Nell'elenco seguente illustra diverse opzioni per progetti di Visual Studio - C+
 Viene illustrato come usare il compilatore C/C++ e compilare strumenti direttamente dalla riga di comando anziché usare l'IDE di Visual Studio.
 
 [Creazione di DLL in Visual Studio](dlls-in-visual-cpp.md) come creare, eseguire il debug e distribuire le DLL di C/C++ (librerie condivise) in Visual Studio.
+
+[Procedura dettagliata: Creazione e utilizzo di una libreria statica](walkthrough-creating-and-using-a-static-library-cpp.md) come creare un file binario con estensione LIB.
 
 [Creazione di applicazioni isolate C/C++ e assembly Side-by-side](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) descrive il modello di distribuzione per le applicazioni Desktop di Windows, basato sui concetti di applicazioni isolate e assembly side-by-side.
 

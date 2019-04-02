@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290456"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779040"
 ---
 # <a name="cusertool-class"></a>Classe CUserTool
 
@@ -70,7 +70,7 @@ class CUserTool : public CObject
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|Gli argomenti della riga di comando per lo strumento di utente.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|La directory iniziale per l'utilità di utente.|
@@ -82,7 +82,7 @@ Per altre informazioni su come abilitare strumenti utente nell'applicazione, ved
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come creare uno strumento da un `CUserToolsManager` dell'oggetto, impostare il `m_strLabel` variabile membro e impostare l'applicazione che viene eseguito lo strumento di utente. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come creare uno strumento da un `CUserToolsManager` dell'oggetto, impostare il `m_strLabel` variabile membro e impostare l'applicazione che viene eseguito lo strumento di utente. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 

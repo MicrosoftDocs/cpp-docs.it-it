@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269812"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768217"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 
@@ -154,7 +154,7 @@ class CMFCButton : public CButton
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Specifica l'allineamento del testo del pulsante.|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Specifica se usare i temi di Windows XP.|
@@ -180,7 +180,7 @@ Per gestire i messaggi di notifica in un'applicazione di finestra di dialogo, ag
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come configurare le proprietà del pulsante con i vari metodi nel `CMFCButton` classe. L'esempio fa parte del [esempio di nuovi controlli](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come configurare le proprietà del pulsante con i vari metodi nel `CMFCButton` classe. L'esempio fa parte del [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -542,7 +542,7 @@ Il `CMFCButton` costruttore inizializza il membro a BUTTONSTYLE_3D.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come impostare i valori del `m_nFlatStyle` variabile membro nel `CMFCButton` classe. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come impostare i valori del `m_nFlatStyle` variabile membro nel `CMFCButton` classe. In questo esempio fa parte il [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -867,7 +867,7 @@ void SetImage(
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare varie versioni del `SetImage` nel metodo il `CMFCButton` classe. L'esempio fa parte del [esempio di nuovi controlli](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare varie versioni del `SetImage` nel metodo il `CMFCButton` classe. L'esempio fa parte del [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -891,7 +891,7 @@ Utilizzare questo metodo per associare un'immagine di cursore, ad esempio il cur
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `SetMouseCursor` metodo nel `CMFCButton` classe. L'esempio fa parte del codice nel [esempio di nuovi controlli](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `SetMouseCursor` metodo nel `CMFCButton` classe. L'esempio fa parte del codice nel [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]

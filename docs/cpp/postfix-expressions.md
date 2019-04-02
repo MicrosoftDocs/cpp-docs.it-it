@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332439"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779261"
 ---
 # <a name="postfix-expressions"></a>Espressioni in forma suffissa
 
@@ -23,7 +23,7 @@ Le espressioni di suffisso sono costituite da espressioni primarie o da espressi
 |-------------------|-----------------------|
 |[Operatore di indice](../cpp/subscript-operator.md)|**[ ]**|
 |[Operatore di chiamata di funzione](../cpp/function-call-operator-parens.md)|**( )**|
-|[Operatore di conversione esplicita di tipi](../cpp/explicit-type-conversion-operator-parens.md)|*nome del tipo* **)**|
+|[Operatore di conversione esplicita di tipi](../cpp/explicit-type-conversion-operator-parens.md)|*type-name* **( )**|
 |[Operatore di accesso al membro](../cpp/member-access-operators-dot-and.md)|**.** o **->**|
 |[Operatore di incremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[Operatore di decremento suffisso](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
@@ -51,7 +51,7 @@ Il formato dell'espressione di suffisso
 simple-type-name ( expression-list )
 ```
 
-indica la chiamata del costruttore.  Se il nome di tipo semplice è un tipo fondamentale, l'elenco di espressioni deve essere costituito da un'unica espressione, la quale indica un cast del valore dell'espressione al tipo fondamentale.  Questo tipo di espressione cast riproduce un costruttore.  Poiché questo formato consente la costruzione dei tipi fondamentali e delle classi usando la stessa sintassi, è particolarmente utile quando si definiscono le classi modello.
+indica la chiamata del costruttore.  Se il nome di tipo semplice è un tipo fondamentale, l'elenco di espressioni deve essere costituito da un'unica espressione, la quale indica un cast del valore dell'espressione al tipo fondamentale.  Questo tipo di espressione cast riproduce un costruttore.  Poiché questo formato consente la costruzione dei tipi fondamentali e delle classi utilizzando la stessa sintassi, è particolarmente utile quando si definiscono le classi modello.
 
 Il *cast-keyword* è uno dei **dynamic_cast**, **static_cast** oppure **reinterpret_cast**.  Altre informazioni sono disponibili nel **dynamic_cast**, **static_cast** e **reinterpret_cast**.
 
@@ -59,7 +59,7 @@ Il **typeid** operatore viene considerato un'espressione di suffisso.  Visualizz
 
 ## <a name="formal-and-actual-arguments"></a>Argomenti formali ed effettivi
 
-I programmi chiamanti passano informazioni alle funzioni chiamate attraverso gli "argomenti effettivi." Le funzioni chiamate accedono a tali informazioni usando i corrispondenti "argomenti formali."
+I programmi chiamanti passano informazioni alle funzioni chiamate attraverso gli "argomenti effettivi." Le funzioni chiamate accedono a tali informazioni utilizzando i corrispondenti "argomenti formali."
 
 Quando viene chiamata una funzione, vengono eseguite le seguenti attività:
 
@@ -80,7 +80,7 @@ Quando viene chiamata una funzione, vengono eseguite le seguenti attività:
     Func( Temp_i );
     ```
 
-   Si noti che l'inizializzazione viene eseguita come se si usasse la sintassi del segno di uguale, anziché la sintassi di parentesi. Prima di passare il valore alla funzione, viene effettuata una copia di `i`. (Per altre informazioni, vedere [inizializzatori](../cpp/initializers.md) e [conversioni](../cpp/user-defined-type-conversions-cpp.md)).
+   Si noti che l'inizializzazione viene eseguita come se si utilizzasse la sintassi del segno di uguale, anziché la sintassi di parentesi. Prima di passare il valore alla funzione, viene effettuata una copia di `i`. (Per altre informazioni, vedere [inizializzatori](../cpp/initializers.md) e [conversioni](../cpp/user-defined-type-conversions-cpp.md)).
 
    Pertanto, se il prototipo di funzione (dichiarazione) chiama un argomento di tipo **lungo**, e se il programma chiamante fornisce un argomento di tipo effettivo **int**, l'argomento effettivo viene alzato di livello con un conversione del tipo standard digitare **lungo** (vedere [conversioni Standard](../cpp/standard-conversions.md)).
 
@@ -147,9 +147,9 @@ I puntini di sospensione indicano che gli argomenti potrebbero essere obbligator
 
 - Qualsiasi argomento di tipo classe viene passato in base al valore come struttura di dati; la copia viene creata tramite la copia binaria anziché richiamando il costruttore di copia della classe (se presente).
 
-I punti di sospensione, se usati, devono essere dichiarati per ultimi nell'elenco degli argomenti. Per altre informazioni sul passaggio di un numero variabile di argomenti, vedere la discussione relativa [va_arg, va_start e va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nel *Run-Time Library Reference*.
+I punti di sospensione, se utilizzati, devono essere dichiarati per ultimi nell'elenco degli argomenti. Per altre informazioni sul passaggio di un numero variabile di argomenti, vedere la discussione relativa [va_arg, va_start e va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nel *Run-Time Library Reference*.
 
-Per informazioni sugli argomenti predefiniti della programmazione CLR, vedere [elenchi di argomenti variabili (...) (C + + CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Per informazioni sugli argomenti predefiniti della programmazione CLR, vedere [elenchi di argomenti variabili (...) (C + + CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Gli argomenti predefiniti consentono di specificare il valore che deve assumere un argomento se non viene fornito nella chiamata di funzione. Nel frammento di codice seguente viene illustrato come usare gli argomenti predefiniti. Per altre informazioni sulle restrizioni su come specificare gli argomenti predefiniti, vedere [argomenti predefiniti](../cpp/default-arguments.md).
 

@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289869"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768551"
 ---
 # <a name="cfile-class"></a>Classe CFile
 
@@ -128,7 +128,7 @@ class CFile : public CObject
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFile::m_pTM](#m_ptm)|Puntatore a `CAtlTransactionManager` oggetto.|
 
@@ -213,7 +213,7 @@ Le cinque tabelle seguenti elencano le possibili opzioni per la *nOpenFlags* par
 
 Scegliere una sola delle seguenti opzioni relative alla modalità di accesso al file. La modalità predefinita è `CFile::modeRead`, che prevede la sola lettura.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::modeRead`|Richiede l'accesso in sola lettura.|
 |`CFile::modeWrite`|Richiede l'accesso in sola scrittura.|
@@ -221,7 +221,7 @@ Scegliere una sola delle seguenti opzioni relative alla modalità di accesso al 
 
 Scegliere una delle opzioni seguenti relative alla modalità carattere.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::typeBinary`|Imposta la modalità binaria (solo per le classi derivate).|
 |`CFile::typeText`|Imposta la modalità testo con un'elaborazione speciale per le coppie di ritorno a capo con avanzamento di riga (usato in solo le classi derivate).|
@@ -229,7 +229,7 @@ Scegliere una delle opzioni seguenti relative alla modalità carattere.
 
 Scegliere una sola delle seguenti opzioni relative alla modalità di condivisione del file. La modalità di condivisione file predefinita è `CFile::shareExclusive`, che è esclusiva.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|Nessuna restrizione alla condivisione.|
 |`CFile::shareDenyRead`|Nega l'accesso in lettura a tutti gli altri utenti.|
@@ -238,14 +238,14 @@ Scegliere una sola delle seguenti opzioni relative alla modalità di condivision
 
 Scegliere la prima delle seguenti opzioni relative alla modalità di creazione del file oppure entrambe. La modalità di creazione predefinita è `CFile::modeNoTruncate`, che prevede l'apertura di un file esistente.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::modeCreate`|Crea un nuovo file se non esiste alcun file. Se il file esiste già, è sovrascritto e impostare inizialmente a lunghezza zero.|
 |`CFile::modeNoTruncate`|Crea un nuovo file se non ne esiste uno, in caso contrario il file viene aggiunto all'oggetto `CFile`.|
 
 Scegliere le opzioni di memorizzazione nella cache del file come descritto. Per impostazione predefinita, il sistema usa uno schema di memorizzazione nella cache generico, non disponibile come opzione.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|Il sistema non usa una cache intermedia per il file. Questa opzione annulla le due opzioni seguenti.|
 |`CFile::osRandomAccess`|La cache dei file viene ottimizzata per l'accesso casuale. Non usare questa opzione e l'opzione per la scansione sequenziale.|
@@ -254,7 +254,7 @@ Scegliere le opzioni di memorizzazione nella cache del file come descritto. Per 
 
 Scegliere l'opzione di sicurezza seguente per evitare che l'handle di file venga ereditato. Per impostazione predefinita, l'handle di file può essere usato da tutti i nuovi processi figlio.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|Evita l'uso dell'handle di file da parte di qualsiasi processo figlio.|
 
@@ -602,8 +602,8 @@ La tabella seguente descrive i possibili risultati di `Open`.
 |--------------|------------------------|------------------|----------------------------|
 |NULL|No|true|N/D|
 |PTR per `CFileException`|No|true|non modificato|
-|NULL|Sì|false|N/D|
-|PTR per `CFileException`|Sì|false|inizializzato per la descrizione errore|
+|NULL|Yes|false|N/D|
+|PTR per `CFileException`|Yes|false|inizializzato per la descrizione errore|
 
 ### <a name="example"></a>Esempio
 
@@ -731,7 +731,7 @@ La posizione del puntatore del file se il metodo ha esito positivo; in caso cont
 
 Nella tabella seguente sono elencati i valori possibili per il *NDA* parametro.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |`CFile::begin`|Ricerca dall'inizio del file.|
 |`CFile::current`|Ricerca dalla posizione corrente del puntatore del file.|
@@ -918,7 +918,7 @@ Inoltre, vedere gli esempi relativi [CFile::CFile](#cfile) e [CFile::Open](#open
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[Esempio MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CStdioFile](../../mfc/reference/cstdiofile-class.md)<br/>

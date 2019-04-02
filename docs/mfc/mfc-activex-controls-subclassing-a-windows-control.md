@@ -16,16 +16,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277053"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773255"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controlli ActiveX MFC: Crea una sottoclasse di un controllo di Windows
 
-In questo articolo viene descritto il processo per la creazione di una sottoclasse di un controllo Windows comune per creare un controllo ActiveX. La creazione di una sottoclasse di un controllo Windows esistente è un modo rapido per sviluppare un controllo ActiveX. Il nuovo controllo disporrà delle funzionalità dei controlli Windows sottoclassati, come il disegno e la risposta ai clic del mouse. Esempio dei controlli ActiveX di MFC [pulsante](../visual-cpp-samples.md) è riportato un esempio di creazione di sottoclassi di un controllo di Windows.
+In questo articolo viene descritto il processo per la creazione di una sottoclasse di un controllo Windows comune per creare un controllo ActiveX. La creazione di una sottoclasse di un controllo Windows esistente è un modo rapido per sviluppare un controllo ActiveX. Il nuovo controllo disporrà delle funzionalità dei controlli Windows sottoclassati, come il disegno e la risposta ai clic del mouse. Esempio dei controlli ActiveX di MFC [pulsante](../overview/visual-cpp-samples.md) è riportato un esempio di creazione di sottoclassi di un controllo di Windows.
 
 >[!IMPORTANT]
 > ActiveX è una tecnologia legacy che non deve essere utilizzata per nuove attività di sviluppo. Per altre informazioni sulle tecnologie moderne che sostituiscono ActiveX, vedere [controlli ActiveX](activex-controls.md).
@@ -93,7 +93,7 @@ Per aggiungere manualmente un gestore messaggi per un messaggio della finestra r
 
 - Anche nel. File CPP, implementare il `OnOcmCommand` funzione membro per elaborare il messaggio riflesso. Il *wParam* e *lParam* i parametri sono identici a quelli del messaggio originale della finestra.
 
-Per un esempio di come riflette i messaggi vengono elaborati, vedere l'esempio di controlli ActiveX MFC [pulsante](../visual-cpp-samples.md). Viene illustrato come un `OnOcmCommand` gestore che il codice di notifica BN_CLICKED rileva e risponde generando (inviando) un `Click` evento.
+Per un esempio di come riflette i messaggi vengono elaborati, vedere l'esempio di controlli ActiveX MFC [pulsante](../overview/visual-cpp-samples.md). Viene illustrato come un `OnOcmCommand` gestore che il codice di notifica BN_CLICKED rileva e risponde generando (inviando) un `Click` evento.
 
 ## <a name="see-also"></a>Vedere anche
 

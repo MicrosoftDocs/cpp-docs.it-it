@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-ms.openlocfilehash: f84c0da7530a774ebe2b33aea0bddc5b0bf0fe17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 795b20cba41eeca8cc1a32e312edf065b718f364
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326348"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768486"
 ---
 # <a name="ccreatecontext-structure"></a>Struttura CCreateContext
 
@@ -56,7 +56,7 @@ Ecco alcune linee guida generali:
 
 In generale, se si usano le impostazioni predefinite di framework, è possibile ignorare `CCreateContext`. Se si tenta di modifiche più avanzate, il codice sorgente libreria Microsoft Foundation Class o i programmi di esempio, ad esempio, viene guiderà l'utente. Se si dimentica un parametro obbligatorio, un'asserzione di framework indicherà che cosa si è dimenticata.
 
-Per ulteriori informazioni sul `CCreateContext`, vedere l'esempio MFC [2x1 viene](../../visual-cpp-samples.md).
+Per ulteriori informazioni sul `CCreateContext`, vedere l'esempio MFC [2x1 viene](../../overview/visual-cpp-samples.md).
 
 ## <a name="requirements"></a>Requisiti
 

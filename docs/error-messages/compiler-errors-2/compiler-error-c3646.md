@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: df2e52631ed75cc4a473429ea35e136ed0a88f98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04ff1d026c97c56611f8b786d8a7254db711e4a8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606726"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769035"
 ---
 # <a name="compiler-error-c3646"></a>Errore del compilatore C3646
 
@@ -23,7 +23,7 @@ Il compilatore ha rilevato un token nella posizione in cui previsto un identific
 
 Ad esempio, se il non riconosciuto *specifier* viene **_NOEXCEPT**, sostituirla con la parola chiave **noexcept**.
 
-Per altre informazioni, vedere [gli identificatori di Override](../../windows/override-specifiers-cpp-component-extensions.md).
+Per altre informazioni, vedere [gli identificatori di Override](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

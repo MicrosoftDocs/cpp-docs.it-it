@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: f468de46cf6d8a8bfcd60521df8b1076a98f0735
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285334"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767067"
 ---
 # <a name="chtmleditdoc-class"></a>Classe CHtmlEditDoc
 
@@ -108,5 +108,5 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio HTMLEdit](../../visual-cpp-samples.md)<br/>
+[Esempio HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)

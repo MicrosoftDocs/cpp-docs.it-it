@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821365"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770928"
 ---
 # <a name="fatal-error-c1001"></a>Errore irreversibile C1001
 
@@ -23,4 +23,4 @@ Il compilatore non è possibile generare il codice corretto per un costrutto, sp
 
 Se le ottimizzazioni non sono responsabile dell'errore, provare a riscrivere la riga in cui viene segnalato l'errore, o più righe di codice che circonda tale riga. Per visualizzare il codice nello stesso modo il compilatore visualizzati dopo la pre-elaborazione, è possibile usare la [/P (pre-elabora in un file)](../../build/reference/p-preprocess-to-a-file.md) opzione.
 
-Per altre informazioni su come isolare l'origine dell'errore e come segnalare un errore del compilatore interno a Microsoft, vedere [come segnalare un problema con il set di strumenti Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Per altre informazioni su come isolare l'origine dell'errore e come segnalare un errore del compilatore interno a Microsoft, vedere [come segnalare un problema con il set di strumenti Visual C++](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).

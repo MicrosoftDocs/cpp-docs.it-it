@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
-ms.openlocfilehash: a6084632ac0a84cc058ea73eb3c2b632208792eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab18381d3f263e3207662e1667ac5c835983412f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475933"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781406"
 ---
 # <a name="compiler-error-c3612"></a>Errore del compilatore C3612
 
@@ -19,7 +19,7 @@ ms.locfileid: "50475933"
 
 I tipi definiti tramite `value` sono sealed per impostazione predefinita, e una classe è astratta, a meno che non implementa tutti i metodi della relativa base. Una classe astratta sealed non può essere una classe di base né può essere creata.
 
-Per altre informazioni, vedere [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md).
+Per altre informazioni, vedere [classi e struct](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

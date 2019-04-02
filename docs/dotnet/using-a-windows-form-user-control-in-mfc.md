@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: d36932a3edc0129f0497cb8db4095283650c5c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494159"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773099"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Utilizzo di un controllo utente Windows Form in MFC
 
@@ -34,7 +34,7 @@ Le sezioni seguenti descrivono come:
 > [!NOTE]
 > Quando si compila l'applicazione usando una copia privata (modificata) delle interfacce MFC Windows Forms DLL (mfcmifc80.dll), potrà essere installato nella Global Assembly Cache solo se si sostituisce la chiave di Microsoft con la propria chiave del fornitore. Per altre informazioni sulla firma degli assembly, vedere [programmazione con assembly](/dotnet/framework/app-domains/programming-with-assemblies) e [assembly con nome sicuro (firma degli Assembly) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Se l'applicazione MFC Usa Windows Form, è necessario ridistribuire mfcmifc80.dll con l'applicazione. Per altre informazioni, vedere [ridistribuzione della libreria MFC](../ide/redistributing-the-mfc-library.md).
+Se l'applicazione MFC Usa Windows Form, è necessario ridistribuire mfcmifc80.dll con l'applicazione. Per altre informazioni, vedere [ridistribuzione della libreria MFC](../windows/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>In questa sezione
 

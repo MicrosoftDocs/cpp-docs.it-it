@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: af8e1b72bde268a15012515065853daa617936e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0f037480e83b8ca1ba12af56904afe25a33e4d6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283982"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774464"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Procedura: Implementare il rilevamento nel codice
 
@@ -27,7 +27,7 @@ Quando un utente seleziona un elemento o inserisce un oggetto con un comando di 
 |Bordo tratteggiato|L'articolo è attualmente attiva|
 |Elemento sovrapposizioni di motivo di tratteggio a modello|Il server dell'elemento è aperto|
 
-È possibile gestire l'inizializzazione con facilità tramite una procedura che controlla lo stato dell'elemento OLE e imposta gli stili appropriati. Il `SetupTracker` funzione di disponibile nell'esempio OCLIENT viene illustrata l'inizializzazione di tracker. I parametri per questa funzione sono l'indirizzo dello strumento di rilevamento, *pTracker*; un puntatore all'elemento che è correlato allo strumento di rilevamento, client *pItem*; e un puntatore a un rettangolo, *pTrueRect* . Per un esempio più completo di questa funzione, vedere l'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md).
+È possibile gestire l'inizializzazione con facilità tramite una procedura che controlla lo stato dell'elemento OLE e imposta gli stili appropriati. Il `SetupTracker` funzione di disponibile nell'esempio OCLIENT viene illustrata l'inizializzazione di tracker. I parametri per questa funzione sono l'indirizzo dello strumento di rilevamento, *pTracker*; un puntatore all'elemento che è correlato allo strumento di rilevamento, client *pItem*; e un puntatore a un rettangolo, *pTrueRect* . Per un esempio più completo di questa funzione, vedere l'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 Il **SetupTracker** esempio di codice presenta una singola funzione; le righe della funzione sono intercalate dalla descrizione delle funzionalità della funzione:
 
@@ -45,11 +45,11 @@ Aprire l'elemento con un motivo a tratteggio se l'elemento è attualmente di sov
 
 [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]
 
-È quindi possibile chiamare questa funzione ogni volta che lo strumento di rilevamento deve essere visualizzata. Ad esempio, chiamare questa funzione dal `OnDraw` funzione della classe di visualizzazione. Aspetto del tracker viene aggiornato ogni volta che la vista viene ridisegnata. Per un esempio completo, vedere la `CMainView::OnDraw` funzione dell'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md).
+È quindi possibile chiamare questa funzione ogni volta che lo strumento di rilevamento deve essere visualizzata. Ad esempio, chiamare questa funzione dal `OnDraw` funzione della classe di visualizzazione. Aspetto del tracker viene aggiornato ogni volta che la vista viene ridisegnata. Per un esempio completo, vedere la `CMainView::OnDraw` funzione dell'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
-Nell'applicazione, gli eventi che richiedono un codice di tracker, ad esempio il rilevamento di ridimensionamento, lo spostamento o passaggi, si verificherà. Queste azioni è in genere indicano che viene viene effettuato un tentativo di catturare o spostare l'elemento. In questi casi, è necessario stabilire ciò che è stato afferrato: un quadratino di ridimensionamento o di una parte del bordo tra i quadratini di ridimensionamento. Il `OnLButtonDown` gestore messaggi è un'ottima soluzione per testare la posizione del mouse in relazione all'elemento. Effettuare una chiamata a `CRectTracker::HitTest`. Se il test restituisce un valore diverso da `CRectTracker::hitOutside`, l'elemento viene ridimensionata o spostata. Pertanto, è necessario effettuare una chiamata al `Track` funzione membro. Vedere le `CMainView::OnLButtonDown` funzione di disponibile nell'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) per un esempio completo.
+Nell'applicazione, gli eventi che richiedono un codice di tracker, ad esempio il rilevamento di ridimensionamento, lo spostamento o passaggi, si verificherà. Queste azioni è in genere indicano che viene viene effettuato un tentativo di catturare o spostare l'elemento. In questi casi, è necessario stabilire ciò che è stato afferrato: un quadratino di ridimensionamento o di una parte del bordo tra i quadratini di ridimensionamento. Il `OnLButtonDown` gestore messaggi è un'ottima soluzione per testare la posizione del mouse in relazione all'elemento. Effettuare una chiamata a `CRectTracker::HitTest`. Se il test restituisce un valore diverso da `CRectTracker::hitOutside`, l'elemento viene ridimensionata o spostata. Pertanto, è necessario effettuare una chiamata al `Track` funzione membro. Vedere le `CMainView::OnLButtonDown` funzione di disponibile nell'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) per un esempio completo.
 
-Il `CRectTracker` classe offre varie forme di cursore diverso consente di indicare se un'operazione di spostamento, ridimensionamento o trascinare l'operazione ha luogo. Per gestire questo evento, verificare se l'elemento attualmente sotto il mouse è selezionato. Se si tratta, effettuare una chiamata a `CRectTracker::SetCursor`, o chiamare il gestore predefinito. Nell'esempio seguente è tratto dall'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md):
+Il `CRectTracker` classe offre varie forme di cursore diverso consente di indicare se un'operazione di spostamento, ridimensionamento o trascinare l'operazione ha luogo. Per gestire questo evento, verificare se l'elemento attualmente sotto il mouse è selezionato. Se si tratta, effettuare una chiamata a `CRectTracker::SetCursor`, o chiamare il gestore predefinito. Nell'esempio seguente è tratto dall'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md):
 
 [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
 

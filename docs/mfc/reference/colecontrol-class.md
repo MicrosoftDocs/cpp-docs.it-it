@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283423"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771500"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -4209,8 +4209,8 @@ Chiamare questa funzione per l'invio di messaggi specifici tramite la mappa dei 
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC Sample CIRC3](../../visual-cpp-samples.md)<br/>
-[Esempio MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC Sample CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Classe COlePropertyPage](../../mfc/reference/colepropertypage-class.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>

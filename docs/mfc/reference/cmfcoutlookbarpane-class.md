@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288883"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773437"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Classe CMFCOutlookBarPane
 
@@ -111,7 +111,7 @@ Per un esempio di una barra di Outlook, vedere il progetto di esempio OutlookDem
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come usare i vari metodi del `CMFCOutlookBarPane` classe. Nell'esempio viene illustrato come creare un riquadro barra di Outlook, abilitare la modalità di scorrimento di pagina, attivare l'ancoraggio e impostare il colore di sfondo della barra di Outlook. Questo frammento di codice fa parte il [esempio di Outlook con più visualizzazioni](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come usare i vari metodi del `CMFCOutlookBarPane` classe. Nell'esempio viene illustrato come creare un riquadro barra di Outlook, abilitare la modalità di scorrimento di pagina, attivare l'ancoraggio e impostare il colore di sfondo della barra di Outlook. Questo frammento di codice fa parte il [esempio di Outlook con più visualizzazioni](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]

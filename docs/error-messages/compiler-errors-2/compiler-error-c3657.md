@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3657
 ms.assetid: 89a28a18-4c17-43a1-bda6-deb52c32d203
-ms.openlocfilehash: 209bf779122f38326cb3958ed83a2061deb64185
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f979d5776bea5e8fb6e0255bdcdeaacb284932ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463401"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772670"
 ---
 # <a name="compiler-error-c3657"></a>Errore del compilatore C3657
 
 i distruttori non possono eseguire l'override esplicito o essere sottoposto a override esplicito
 
-I distruttori o i finalizzatori non possono essere sostituiti in modo esplicito. Per altre informazioni, vedere [esegue l'override esplicito](../../windows/explicit-overrides-cpp-component-extensions.md).
+I distruttori o i finalizzatori non possono essere sostituiti in modo esplicito. Per altre informazioni, vedere [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

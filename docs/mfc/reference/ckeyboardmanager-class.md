@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303607"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779807"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 
@@ -81,7 +81,7 @@ Non è necessario creare un `CKeyboardManager` oggetto manualmente. Verrà creat
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come recuperare un puntatore a un `CKeyboardManager` dell'oggetto da un `CWinAppEx` classe e su come visualizzare tutti i tasti di scelta rapida associati con i comandi di menu. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come recuperare un puntatore a un `CKeyboardManager` dell'oggetto da un `CWinAppEx` classe e su come visualizzare tutti i tasti di scelta rapida associati con i comandi di menu. Questo frammento di codice fa parte il [esempio di pagine personalizzate](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 

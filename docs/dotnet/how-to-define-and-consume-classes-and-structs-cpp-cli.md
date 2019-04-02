@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751830"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774919"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procedura: Definire e usare classi e struct (C + + CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 Un' *classe implicitamente astratta* non è possibile creare un'istanza. Una classe è implicitamente astratta se il tipo di base della classe è un'interfaccia e la classe non implementa tutte le funzioni membro dell'interfaccia stessa.
 
-Se non si riesce a costruire degli oggetti da una classe che deriva da un'interfaccia, il motivo potrebbe essere che la classe è implicitamente astratta. Per altre informazioni sulle classi astratte, vedere [astratta](../windows/abstract-cpp-component-extensions.md).
+Se non si riesce a costruire degli oggetti da una classe che deriva da un'interfaccia, il motivo potrebbe essere che la classe è implicitamente astratta. Per altre informazioni sulle classi astratte, vedere [astratta](../extensions/abstract-cpp-component-extensions.md).
 
 Nell'esempio di codice seguente viene mostrato che non è possibile creare l'istanza della classe `MyClass` in quanto la funzione `MyClass::func2` non è implementata. Per consentire la compilazione dell'esempio, rimuovere il commento `MyClass::func2`.
 
@@ -229,7 +229,7 @@ In questa tabella sono riepilogati gli effetti dei vari identificatori di access
 |public|Il membro è accessibile all'interno e all'esterno dell'assembly.  Visualizzare [pubblica](../cpp/public-cpp.md) per altre informazioni.|
 |private|Non è possibile accedere al membro, né all'interno né all'esterno dell'assembly.  Visualizzare [privato](../cpp/private-cpp.md) per altre informazioni.|
 |protected|È possibile accedere al membro all'esterno e all'interno dell'assembly, ma solo per i tipi derivati.  Visualizzare [protetti](../cpp/protected-cpp.md) per altre informazioni.|
-|internal|Membro è pubblico all'interno dell'assembly, ma privato all'esterno dell'assembly.  `internal` è una parola chiave sensibile al contesto.  Per altre informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).|
+|internal|Membro è pubblico all'interno dell'assembly, ma privato all'esterno dell'assembly.  `internal` è una parola chiave sensibile al contesto.  Per altre informazioni, vedere [parole chiave sensibili al contesto](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |pubblico protetto - o - protetto pubblico|Il membro è pubblico nell'assembly, ma protetto all'esterno dell'assembly.|
 |privato protetto - o - protetto privato|Il membro è protetto all'interno dell'assembly, ma privato all'esterno dell'assembly.|
 
@@ -499,9 +499,9 @@ Queste diverse semantiche del puntatore `this` possono generare un comportamento
 
 Per altre informazioni, vedere
 
-- [Operatore handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [Operatore handle a oggetto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -797,7 +797,7 @@ Codice scritto in Visual C++ e compilato utilizzando **/clr** esegue distruttore
 
 - L'oggetto è un membro di un oggetto il cui distruttore è in esecuzione.
 
-- Si chiama il [eliminare](../cpp/delete-operator-cpp.md) operatore su un handle ([operatore Handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).
+- Si chiama il [eliminare](../cpp/delete-operator-cpp.md) operatore su un handle ([operatore Handle a oggetto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)).
 
 - Si chiama esplicitamente il distruttore.
 
@@ -844,7 +844,7 @@ Una volta eseguito il finalizzatore di un oggetto, vengono chiamati anche i fina
 
 Se un finalizzatore elimina un puntatore nativo in un tipo gestito, è necessario assicurarsi che i riferimenti al puntatore nativo o attraverso questo non vengano raccolti in anticipo; chiamare il distruttore sul tipo gestito anziché utilizzare <xref:System.GC.KeepAlive%2A>.
 
-In fase di compilazione, è possibile individuare se un tipo ha un finalizzatore o un distruttore. Per altre informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+In fase di compilazione, è possibile individuare se un tipo ha un finalizzatore o un distruttore. Per altre informazioni, vedere [supporto del compilatore per tratti di tipo](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 Nell'esempio seguente vengono illustrati due tipi, uno che dispone di risorse non gestite e uno che dispone di risorse gestite rilasciate in modo deterministico.
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)
+[Classi e struct](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[Classi e struct](../extensions/classes-and-structs-cpp-component-extensions.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 8a164101dc42241a2cc76c91a3baa66e02e4dc90
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c21e8b86962ebf37ca1a06bae056d09b9a9dbb2f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291132"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770123"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Procedura: Aggiungere controlli Ribbon e gestori di eventi
 
@@ -40,5 +40,5 @@ In questo argomento, si verrà aprire la finestra di progettazione della barra m
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio RibbonGadgets: Applicazione gadget della barra multifunzione](../visual-cpp-samples.md)<br/>
+[Esempio RibbonGadgets: Applicazione gadget della barra multifunzione](../overview/visual-cpp-samples.md)<br/>
 [Finestra di progettazione della barra multifunzione (MFC)](../mfc/ribbon-designer-mfc.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3908
 ms.assetid: 3c322482-c79e-4197-a578-2ad9bc379d1a
-ms.openlocfilehash: 84b21f20cbc8203a9cd70e487738c34c6ad3a89b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e11d830c3d662ea424caadeb50df669700f8c78f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598927"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766755"
 ---
 # <a name="compiler-error-c3908"></a>Errore del compilatore C3908
 
@@ -19,7 +19,7 @@ livello di accesso meno restrittivo di 'construct'
 
 Un metodo della funzione di accesso di proprietà (get o set) non può avere accesso meno restrittivo rispetto all'accesso specificato nella proprietà stessa.  Analogamente, per i metodi della funzione di accesso eventi.
 
-Per altre informazioni, vedere [proprietà](../../windows/property-cpp-component-extensions.md) e [evento](../../windows/event-cpp-component-extensions.md).
+Per altre informazioni, vedere [proprietà](../../extensions/property-cpp-component-extensions.md) e [evento](../../extensions/event-cpp-component-extensions.md).
 
 L'esempio seguente genera l'errore C3908:
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426446"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770804"
 ---
 # <a name="reflection-ccli"></a>Reflection (C++/CLI)
 
@@ -79,7 +79,7 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>Esempio: typeid
 
-Come con le `GetType` metodo, il [typeid](../windows/typeid-cpp-component-extensions.md) operatore restituisce un puntatore a un **tipo** dell'oggetto, pertanto questo codice indica il nome del tipo **System.Int32**. Visualizzazione di nomi di tipo è la più semplice di reflection, ma è una tecnica potenzialmente più utile per controllare o individuare i valori validi per i tipi enumerati. Questa operazione può essere eseguita usando il metodo statico **enum:: GetNames** funzione, che restituisce una matrice di stringhe, ognuna delle quali contiene un valore di enumerazione sotto forma di testo.  L'esempio seguente recupera una matrice di stringhe che descrive i valori di enumerazione per il **opzioni** enum (CLR) e li visualizza in un ciclo.
+Come con le `GetType` metodo, il [typeid](../extensions/typeid-cpp-component-extensions.md) operatore restituisce un puntatore a un **tipo** dell'oggetto, pertanto questo codice indica il nome del tipo **System.Int32**. Visualizzazione di nomi di tipo è la più semplice di reflection, ma è una tecnica potenzialmente più utile per controllare o individuare i valori validi per i tipi enumerati. Questa operazione può essere eseguita usando il metodo statico **enum:: GetNames** funzione, che restituisce una matrice di stringhe, ognuna delle quali contiene un valore di enumerazione sotto forma di testo.  L'esempio seguente recupera una matrice di stringhe che descrive i valori di enumerazione per il **opzioni** enum (CLR) e li visualizza in un ciclo.
 
 Se si aggiunge una quarta opzione per la **opzioni** enumerazione, questo codice segnalerà la nuova opzione senza ricompilazione, anche se l'enumerazione viene definita in un assembly separato.
 

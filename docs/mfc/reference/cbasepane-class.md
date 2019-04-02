@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259814"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774477"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 
@@ -342,7 +342,7 @@ I suggerimenti di personalizzazione seguenti riguardano la `CBasePane Class` e t
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare i vari metodi nella classe `CBasePane` . Nell'esempio viene illustrato come recuperare un riquadro dal `CFrameWndEx` classe e su come impostare la modalità di ancoraggio, l'allineamento del riquadro e lo stile del riquadro. Il codice deriva dal [esempio di Word Pad](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CBasePane` . Nell'esempio viene illustrato come recuperare un riquadro dal `CFrameWndEx` classe e su come impostare la modalità di ancoraggio, l'allineamento del riquadro e lo stile del riquadro. Il codice deriva dal [esempio di Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -1873,7 +1873,7 @@ In genere, il framework chiama questo metodo quando un riquadro viene ancorato d
 
 La tabella seguente illustra i possibili valori per *dwAlignment*:
 
-|Valore|Allineamento|
+|Value|Allineamento|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Allineamento a sinistra.|
 |CBRS_ALIGN_RIGHT|Allineamento a destra.|

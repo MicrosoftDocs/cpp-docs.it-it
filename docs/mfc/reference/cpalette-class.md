@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 8abd03ff2b133eb6040799eff6879a19a64783ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274661"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770805"
 ---
 # <a name="cpalette-class"></a>CPalette (classe)
 
@@ -326,7 +326,7 @@ Per altre informazioni sulla struttura di Windows `PALETTEENTRY`, vedere [PALETT
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC immagine](../../visual-cpp-samples.md)<br/>
+[Esempio MFC immagine](../../overview/visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [CPalette::GetPaletteEntries](#getpaletteentries)<br/>

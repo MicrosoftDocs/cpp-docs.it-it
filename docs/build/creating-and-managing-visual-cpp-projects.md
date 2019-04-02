@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: b5fb9ac87547578f101676d4cf424c7065155842
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826909"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775322"
 ---
 # <a name="visual-studio-projects---c"></a>Progetti di Visual Studio - C++
 
@@ -26,7 +26,7 @@ Oggetto *progetto di Visual Studio* è un progetto basato sul sistema di compila
 
 È possibile creare progetti C++ scegliendo **File &#124; nuovo &#124; Project**, quindi scegliendo Visual C++ nel riquadro sinistro. Nel riquadro centrale verrà visualizzato un elenco di modelli di progetto: 
 
-   ![Modelli di progetto](../media/vs2017-new-project.png "Finestra di dialogo Nuovo progetto di Visual Studio 2017")
+   ![Modelli di progetto](../overview/media/vs2017-new-project.png "Finestra di dialogo Nuovo progetto di Visual Studio 2017")
 
 Per altre informazioni su tutti i modelli di progetto predefiniti inclusi in Visual Studio, vedere [modelli di progetto C++ in Visual Studio](reference/visual-cpp-project-types.md). È possibile creare i propri modelli di progetto. Per altre informazioni, vedere [Procedura: Creare modelli di progetto](/visualstudio/ide/how-to-create-project-templates).
 
@@ -42,7 +42,7 @@ Aggiungere file di codice sorgente, icone o qualsiasi altro elemento al progetto
 
 ## <a name="add-third-party-libraries"></a>Aggiungere le librerie di terze parti
 
-Per aggiungere le librerie di terze parti, usare il [vcpkg](../vcpkg.md) Gestione pacchetti. Eseguire il passaggio di integrazione di Visual Studio per configurare i percorsi di libreria quando si fa riferimento da qualsiasi progetto di Visual Studio. 
+Per aggiungere le librerie di terze parti, usare il [vcpkg](vcpkg.md) Gestione pacchetti. Eseguire il passaggio di integrazione di Visual Studio per configurare i percorsi di libreria quando si fa riferimento da qualsiasi progetto di Visual Studio. 
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>Impostare le opzioni del compilatore e altre proprietà di compilazione
 
@@ -54,22 +54,22 @@ Per compilare ed eseguire il nuovo progetto, premere **F5** oppure fare clic sui
 
 Un nuovo progetto viene compilato senza errori. Quando si aggiunge il proprio codice, può talvolta introdurre un errore o attivare un avviso. Un errore impedisce la compilazione di completamento; non è un avviso. Tutti gli errori e avvisi verranno visualizzati nella finestra di Output e nell'elenco degli errori quando si compila il progetto. 
 
-   ![Output finestra ed elenco errori](../media/vs2017-output-error-list.png)
+   ![Output finestra ed elenco errori](../overview/media/vs2017-output-error-list.png)
 
 Nell'elenco errori, è possibile premere **F1** in un caso di errore evidenziato per passare al relativo argomento della documentazione.
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Impostare il compilatore C++ e creare proprietà in Visual Studio](working-with-project-properties.md)<br/>
+[Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](working-with-project-properties.md)<br/>
 Come usare le pagine delle proprietà e finestre delle proprietà per specificare le impostazioni del progetto.
 
-[Librerie di riferimento e i componenti in fase di compilazione](adding-references-in-visual-cpp-projects.md)<br/>
+[Fare riferimento a librerie e componenti in fase di compilazione](adding-references-in-visual-cpp-projects.md)<br/>
 Come includere i componenti COM e .NET libs, DLL, in un progetto.
  
-[Organizzare i file di Output progetto](how-to-organize-project-output-files-for-builds.md)<br/>
+[Organizzare i file di output dei progetti](how-to-organize-project-output-files-for-builds.md)<br/>
 Come personalizzare il percorso dei file eseguibili creato nel processo di compilazione.
 
-[Istruzioni di compilazione personalizzate e gli eventi di compilazione](understanding-custom-build-steps-and-build-events.md)<br/>
+[Istruzioni di compilazione personalizzate ed eventi di compilazione](understanding-custom-build-steps-and-build-events.md)<br/>
 Come aggiungere qualsiasi comando arbitrario per il processo di compilazione in corrispondenza di punti specificati.
 
 [Creare un progetto da un codice esistente](how-to-create-a-cpp-project-from-existing-code.md)<br/>
@@ -77,4 +77,4 @@ Come creare un nuovo progetto di Visual Studio da una raccolta separata di file 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Progetti e i sistemi di compilazione](projects-and-build-systems-cpp.md)<br>
+[Progetti e sistemi di compilazione](projects-and-build-systems-cpp.md)<br>

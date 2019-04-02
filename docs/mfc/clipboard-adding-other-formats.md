@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280218"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766847"
 ---
 # <a name="clipboard-adding-other-formats"></a>Appunti: Aggiunta di altri formati
 
@@ -36,7 +36,7 @@ Per aggiungere altri formati negli Appunti, è necessario eseguire l'override di
 
 1. Aggiungere i formati standard chiamando `COleDataSource::CacheGlobalData` per ogni formato standard che si desidera supportare.
 
-Questa tecnica viene usata nel programma di esempio OLE MFC [HIERSVR](../visual-cpp-samples.md) (esaminare le `OnGetClipboardData` funzione membro del **CServerItem** classe). L'unica differenza in questo esempio è che il terzo passaggio non è implementato poiché HIERSVR non supporta altri formati standard di nessuna.
+Questa tecnica viene usata nel programma di esempio OLE MFC [HIERSVR](../overview/visual-cpp-samples.md) (esaminare le `OnGetClipboardData` funzione membro del **CServerItem** classe). L'unica differenza in questo esempio è che il terzo passaggio non è implementato poiché HIERSVR non supporta altri formati standard di nessuna.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
 

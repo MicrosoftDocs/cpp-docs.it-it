@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 95a19b20e0acc4ae45a953eee5a1c4d2bfb3e9da
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 24d79c684226d57839161946255781c3bdd5a043
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326725"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779092"
 ---
 # <a name="coledataobject-class"></a>Classe COleDataObject
 
@@ -338,8 +338,8 @@ Il `IDataObject` è stato associato il `COleDataObject` chiamando `Attach` o `At
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Esempio MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Esempio MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDataSource](../../mfc/reference/coledatasource-class.md)<br/>
 [Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

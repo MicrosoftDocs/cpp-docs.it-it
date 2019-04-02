@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270306"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772751"
 ---
 # <a name="cmfccolordialog-class"></a>Classe CMFCColorDialog
 
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`m_bIsMyPalette`|TRUE se la finestra di dialogo di selezione colori Usa la propria tavolozza dei colori o FALSE se la finestra di dialogo viene utilizzata una tavolozza specificato nella `CMFCColorDialog` costruttore.|
 |`m_bPickerMode`|TRUE quando l'utente seleziona un colore dalla finestra di dialogo di selezione; in caso contrario, FALSE.|
@@ -100,7 +100,7 @@ Nella finestra di dialogo di selezione di colore viene visualizzato come una fin
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come configurare una finestra di dialogo colore utilizzando i vari metodi nel `CMFCColorDialog` classe. Nell'esempio viene illustrato come impostare l'oggetto corrente e i nuovi colori della finestra di dialogo e come impostare i componenti rossi, verdi e blu del colore selezionato nella pagina delle due proprietà della finestra di dialogo colore. In questo esempio fa parte il [esempio di nuovi controlli](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come configurare una finestra di dialogo colore utilizzando i vari metodi nel `CMFCColorDialog` classe. Nell'esempio viene illustrato come impostare l'oggetto corrente e i nuovi colori della finestra di dialogo e come impostare i componenti rossi, verdi e blu del colore selezionato nella pagina delle due proprietà della finestra di dialogo colore. In questo esempio fa parte il [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 

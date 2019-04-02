@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: fe85119761d2b56ca72c8efff00664c62d4767bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4d1361734f38d903e2171839b95888863126974a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299530"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771697"
 ---
 # <a name="csingledoctemplate-class"></a>Classe CSingleDocTemplate
 
@@ -117,7 +117,7 @@ Allocare dinamicamente un `CSingleDocTemplate` dell'oggetto e passarlo a `CWinAp
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[Esempio MFC DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>

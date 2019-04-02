@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304977"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778507"
 ---
 # <a name="coledropsource-class"></a>Classe COleDropSource
 
@@ -163,7 +163,7 @@ Poiché questa funzione viene chiamata spesso, deve essere ottimizzato quanto pi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Esempio MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Esempio MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)

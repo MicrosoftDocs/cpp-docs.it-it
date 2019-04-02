@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13c8ff545763017b01685e012ab2d497eaf7084a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268213"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767548"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Controlli ActiveX MFC: Localizzazione di un controllo ActiveX
 
@@ -28,7 +28,7 @@ Se si desidera adattare un controllo ActiveX per un mercato internazionale, è p
 
 In generale, i controlli ActiveX devono sempre basare le proprie impostazioni internazionali sulla proprietà LocaleID ambiente. A questo scopo, è possibile eseguire tre operazioni:
 
-- Caricare le risorse, sempre su richiesta, in base al valore corrente della proprietà di ambiente LocaleID. Esempio dei controlli ActiveX di MFC [LOCALIZE](../visual-cpp-samples.md) utilizza questa strategia.
+- Caricare le risorse, sempre su richiesta, in base al valore corrente della proprietà di ambiente LocaleID. Esempio dei controlli ActiveX di MFC [LOCALIZE](../overview/visual-cpp-samples.md) utilizza questa strategia.
 
 - Caricare le risorse quando il primo controllo viene creata un'istanza, in base alla proprietà LocaleID ambiente e usare queste risorse per tutte le altre istanze. Questo articolo illustra questa strategia.
 
@@ -40,7 +40,7 @@ In generale, i controlli ActiveX devono sempre basare le proprie impostazioni in
     > [!NOTE]
     >  Questa tecnica funziona per il controllo, ma la DLL di runtime non aggiornerà dinamicamente le proprie risorse quando la proprietà LocaleID ambiente modificata. Inoltre, le DLL di runtime per i controlli ActiveX utilizzano impostazioni locali del thread per determinare le impostazioni locali per le proprie risorse.
 
-La parte restante di questo articolo descrive due strategie di localizzazione. La prima strategia [localizza l'interfaccia del controllo programmabilità](#_core_localizing_your_control.92.s_programmability_interface) (nomi di proprietà, metodi ed eventi). La seconda strategia [localizza l'interfaccia utente controllo](#_core_localizing_the_control.92.s_user_interface), tramite proprietà LocaleID ambiente del contenitore. Per una dimostrazione della localizzazione dei controlli, vedere l'esempio di controlli ActiveX MFC [LOCALIZE](../visual-cpp-samples.md).
+La parte restante di questo articolo descrive due strategie di localizzazione. La prima strategia [localizza l'interfaccia del controllo programmabilità](#_core_localizing_your_control.92.s_programmability_interface) (nomi di proprietà, metodi ed eventi). La seconda strategia [localizza l'interfaccia utente controllo](#_core_localizing_the_control.92.s_user_interface), tramite proprietà LocaleID ambiente del contenitore. Per una dimostrazione della localizzazione dei controlli, vedere l'esempio di controlli ActiveX MFC [LOCALIZE](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Localizzazione di interfaccia di programmabilità del controllo
 
@@ -88,7 +88,7 @@ Esempio di codice seguente viene illustrato un approccio per individuare e caric
 
 [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-Si noti che l'ID di varietà di lingua è stato possibile essere archiviato in ogni caso dell'istruzione switch, per fornire più specializzato di localizzazione. Per una dimostrazione di questa funzione, vedere la `GetResourceHandle` esempio dei controlli funzione in ActiveX di MFC [LOCALIZE](../visual-cpp-samples.md).
+Si noti che l'ID di varietà di lingua è stato possibile essere archiviato in ogni caso dell'istruzione switch, per fornire più specializzato di localizzazione. Per una dimostrazione di questa funzione, vedere la `GetResourceHandle` esempio dei controlli funzione in ActiveX di MFC [LOCALIZE](../overview/visual-cpp-samples.md).
 
 Quando il controllo carica prima di tutto se stesso in un contenitore, è possibile chiamare [COleControl:: AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid) per recuperare l'ID delle impostazioni locali. Il controllo può quindi passare il valore di ID delle impostazioni locali restituito per il `GetLocalizedResourceHandle` funzione, che carica la libreria di risorse appropriato. Il controllo deve passare l'handle risultante, se presente, a [AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294671"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768134"
 ---
 # <a name="docking-and-floating-toolbars"></a>Ancoraggio e barre degli strumenti mobili
 
@@ -50,7 +50,7 @@ Altri argomenti illustrati in questo articolo includono:
 
 - [Posizioni di incapsulamento di impostazione per una barra degli strumenti fissa](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-Vedere l'esempio MFC generale [DOCKTOOL](../visual-cpp-samples.md) per alcuni esempi.
+Vedere l'esempio MFC generale [DOCKTOOL](../overview/visual-cpp-samples.md) per alcuni esempi.
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> L'abilitazione di ancoraggio in una finestra cornice
 
@@ -104,7 +104,7 @@ Per una barra degli strumenti con una dimensione fissato di stile, designare sul
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-L'esempio MFC generale [DOCKTOOL](../visual-cpp-samples.md) Mostra come usare le funzioni membro delle classi [CControlBar](../mfc/reference/ccontrolbar-class.md) e [CToolBar](../mfc/reference/ctoolbar-class.md) per gestire il layout dinamico di una barra degli strumenti. Vedere il file EDITBAR. CPP in DOCKTOOL.
+L'esempio MFC generale [DOCKTOOL](../overview/visual-cpp-samples.md) Mostra come usare le funzioni membro delle classi [CControlBar](../mfc/reference/ccontrolbar-class.md) e [CToolBar](../mfc/reference/ctoolbar-class.md) per gestire il layout dinamico di una barra degli strumenti. Vedere il file EDITBAR. CPP in DOCKTOOL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
 

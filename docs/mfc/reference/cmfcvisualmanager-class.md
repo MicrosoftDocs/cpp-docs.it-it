@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294330"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775166"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 
@@ -587,7 +587,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come recuperare i valori predefiniti di un `CMFCVisualManager` oggetto. Questo frammento di codice fa parte di [esempio di riquadro attività](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come recuperare i valori predefiniti di un `CMFCVisualManager` oggetto. Questo frammento di codice fa parte di [esempio di riquadro attività](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
@@ -4331,7 +4331,7 @@ L'implementazione predefinita di questo metodo riempie lo sfondo della barra con
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `OnFillBarBackground` nella `CMFCVisualManager` classe. Questo frammento di codice fa parte di [esempio dimostrativo di Outlook](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `OnFillBarBackground` nella `CMFCVisualManager` classe. Questo frammento di codice fa parte di [esempio dimostrativo di Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 

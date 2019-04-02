@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280316"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778767"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 
@@ -478,7 +478,7 @@ int Dir(
 *attr*<br/>
 Può essere qualsiasi combinazione dei **enum** i valori descritti nella `CFile::GetStatu` [s](../../mfc/reference/cfile-class.md#getstatus), o qualsiasi combinazione dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |0x0000|File può essere letti da o scritti.|
 |0x0001|File può essere letto da ma non scritto.|
@@ -1538,7 +1538,7 @@ Valore restituito pari a 0 o maggiore specifica l'indice di un elemento nella ca
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
+[Esempio MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

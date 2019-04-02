@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3297
 ms.assetid: 2a718b4c-6cdb-4418-92c0-fc3a259431c4
-ms.openlocfilehash: 6df8fd3df023602f65c872dedd74da36bbbc6bd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4661119680dff34dfaa43fb9ce71bf97150a8bd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649917"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769537"
 ---
 # <a name="compiler-error-c3297"></a>Errore del compilatore C3297
 
@@ -19,7 +19,7 @@ ms.locfileid: "50649917"
 
 Le classi di valori sono sealed. Se un vincolo è una classe di valori, un altro vincolo non può mai derivare da quella stessa classe.
 
-Per altre informazioni, vedere [vincoli su parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Per altre informazioni, vedere [vincoli su parametri di tipo generico (C + + CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: 778ed2d80aa926c7282073a99898a6aa355a3379
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602618"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779651"
 ---
 # <a name="super"></a>__super
 
@@ -33,7 +33,7 @@ Tutti i metodi accessibili della classe di base vengono considerati durante la f
 
 **super** non è possibile usare con una dichiarazione. Visualizzare [dichiarazione using](../cpp/using-declaration.md) per altre informazioni.
 
-Con l'introduzione del [attributi](../windows/cpp-attributes-reference.md) che inseriscono codice, il codice può contenere uno o più classi base i cui nomi si potrebbe non sapere ma che contengono metodi che si desiderano chiamare.
+Con l'introduzione del [attributi](../windows/attributes/attributes-alphabetical-reference.md) che inseriscono codice, il codice può contenere uno o più classi base i cui nomi si potrebbe non sapere ma che contengono metodi che si desiderano chiamare.
 
 ## <a name="example"></a>Esempio
 

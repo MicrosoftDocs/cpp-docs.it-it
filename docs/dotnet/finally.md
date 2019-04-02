@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: cb2bbdb36a102c7ef8974a9ac210473f2306f5d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746773"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771513"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +19,7 @@ Oltre a `try` e `catch` clausole, eccezioni Common Language Runtime supporta un 
 
 Lo scopo del `finally` blocco consiste nella pulizia delle risorse dopo che si è verificata l'eccezione a sinistra. Si noti che il `finally` blocco viene sempre eseguito, anche se è stata generata alcuna eccezione. Il `catch` blocco viene eseguito solo se viene generata un'eccezione gestita all'interno associato `try` blocco.
 
-`finally` è una parola chiave sensibile al contesto. visualizzare [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per altre informazioni.
+`finally` è una parola chiave sensibile al contesto. visualizzare [parole chiave sensibili al contesto](../extensions/context-sensitive-keywords-cpp-component-extensions.md) per altre informazioni.
 
 ## <a name="example"></a>Esempio
 
@@ -58,4 +58,4 @@ in finally
 
 ## <a name="see-also"></a>Vedere anche
 
-[Gestione delle eccezioni](../windows/exception-handling-cpp-component-extensions.md)
+[Gestione delle eccezioni](../extensions/exception-handling-cpp-component-extensions.md)

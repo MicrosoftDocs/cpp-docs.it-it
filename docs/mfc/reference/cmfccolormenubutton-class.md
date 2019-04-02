@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301337"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780223"
 ---
 # <a name="cmfccolormenubutton-class"></a>Classe CMFCColorMenuButton
 
@@ -105,7 +105,7 @@ La finestra di dialogo di selezione dei colori viene creato durante l'elaborazio
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come creare e configurare un pulsante di menu del colore utilizzando i vari metodi nel `CMFCColorMenuButton` classe. Nell'esempio, un `CPalette` oggetto viene prima creato e quindi utilizzato per costruire un oggetto del `CMFCColorMenuButton` classe. Il `CMFCColorMenuButton` oggetto viene quindi configurato abilitazione relativo automatica e gli altri pulsanti e impostando il relativo colore e il numero di colonne. Questo codice è parte di [esempio di Word Pad](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come creare e configurare un pulsante di menu del colore utilizzando i vari metodi nel `CMFCColorMenuButton` classe. Nell'esempio, un `CPalette` oggetto viene prima creato e quindi utilizzato per costruire un oggetto del `CMFCColorMenuButton` classe. Il `CMFCColorMenuButton` oggetto viene quindi configurato abilitazione relativo automatica e gli altri pulsanti e impostando il relativo colore e il numero di colonne. Questo codice è parte di [esempio di Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]

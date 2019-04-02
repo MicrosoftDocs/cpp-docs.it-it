@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 4f6b13d2adf9acb17d97876ae2fe5b693f682a5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748710"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771311"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>Procedura: Definire e usare delegati (C + + CLI)
 
@@ -504,4 +504,4 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[delegate  (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md)
+[delegate  (estensioni del componente C++)](../extensions/delegate-cpp-component-extensions.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3622
 ms.assetid: 02836f78-0cf2-4947-b87e-710187d81014
-ms.openlocfilehash: 69565a1a2d159623bca927a94543834d18c13299
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed307f46db1261d79d5b0ec6b36852cac2e6d13e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518092"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781913"
 ---
 # <a name="compiler-error-c3622"></a>Errore del compilatore C3622
 
 'class': una classe dichiarata come 'keyword' non è possibile creare un'istanza
 
-Si è verificato un tentativo di creare un'istanza di una classe contrassegnata come [astratta](../../windows/abstract-cpp-component-extensions.md). Una classe contrassegnata come `abstract` può essere una classe di base, ma non è possibile crearne istanze.
+Si è verificato un tentativo di creare un'istanza di una classe contrassegnata come [astratta](../../extensions/abstract-cpp-component-extensions.md). Una classe contrassegnata come `abstract` può essere una classe di base, ma non è possibile crearne istanze.
 
 ## <a name="example"></a>Esempio
 

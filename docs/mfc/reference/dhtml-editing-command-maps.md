@@ -2,16 +2,16 @@
 title: Mappe comandi di modifica DHTML
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278262"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776154"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mappe comandi di modifica DHTML
 
-Le macro seguenti possono essere utilizzate per eseguire il mapping di comandi di modifica DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-le classi derivate. Per un esempio di utilizzo, vedere [esempio HTMLEdit](../../visual-cpp-samples.md).
+Le macro seguenti possono essere utilizzate per eseguire il mapping di comandi di modifica DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-le classi derivate. Per un esempio di utilizzo, vedere [esempio HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="dhtml-editing-command-map-macros"></a>Macro della mappa di comando di modifica DHTML
 
@@ -46,7 +46,7 @@ Uso [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) per implementare la 
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [esempio HTMLEdit](../../visual-cpp-samples.md).
+Visualizzare [esempio HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -89,7 +89,7 @@ Utilizzare in combinazione con [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_c
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [esempio HTMLEdit](../../visual-cpp-samples.md).
+Visualizzare [esempio HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -113,7 +113,7 @@ Comando a cui di modifica HTML *cmdID* viene eseguito il mapping (ad esempio IDM
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [esempio HTMLEdit](../../visual-cpp-samples.md).
+Visualizzare [esempio HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -140,7 +140,7 @@ Nome della funzione del gestore messaggi a cui viene eseguito il mapping del com
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [esempio HTMLEdit](../../visual-cpp-samples.md).
+Visualizzare [esempio HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -167,7 +167,7 @@ Il tipo di elemento dell'interfaccia utente; uno dei AFX_UI_ELEMTYPE_NORMAL, AFX
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [esempio HTMLEdit](../../visual-cpp-samples.md).
+Visualizzare [esempio HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -197,7 +197,7 @@ Il tipo di elemento dell'interfaccia utente; uno dei AFX_UI_ELEMTYPE_NORMAL, AFX
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [esempio HTMLEdit](../../visual-cpp-samples.md).
+Visualizzare [esempio HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisiti
 

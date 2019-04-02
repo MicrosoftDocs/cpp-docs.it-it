@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 2d6b2cb15cfaa0b72b946c0edb3b451737b51772
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553504"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769987"
 ---
 # <a name="compiler-error-c3379"></a>Errore del compilatore C3379
 
@@ -19,7 +19,7 @@ ms.locfileid: "50553504"
 
 Quando applicato a un tipo gestito, ad esempio di classe o struttura, il [pubbliche](../../cpp/public-cpp.md) e [privati](../../cpp/private-cpp.md) parole chiave indicano se la classe verrà esposta tramite i metadati dell'assembly. `public` o `private` non può essere applicato a una classe annidata, che erediterà l'accesso all'assembly della classe contenitrice.
 
-Quando abbinata [/clr](../../build/reference/clr-common-language-runtime-compilation.md), il `ref` e `value` parole chiave indicano che una classe è gestita (vedere [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md)).
+Quando abbinata [/clr](../../build/reference/clr-common-language-runtime-compilation.md), il `ref` e `value` parole chiave indicano che una classe è gestita (vedere [classi e struct](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
 L'esempio seguente genera l'errore C3379:
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3296
 ms.assetid: fc4c9dcd-16cf-4eee-a1ac-c43e7c29e443
-ms.openlocfilehash: 2e9787b063a5a37af8d0e0fdd04492a743792646
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0a162590ac2a72dda17b2ecfc96899e94cde24c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588110"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767041"
 ---
 # <a name="compiler-error-c3296"></a>Errore del compilatore C3296
 
@@ -19,7 +19,7 @@ ms.locfileid: "50588110"
 
 Sono state rilevate più proprietà con lo stesso nome. Ogni proprietà in un tipo deve avere un nome univoco.
 
-Per altre informazioni, vedere [property](../../windows/property-cpp-component-extensions.md).
+Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

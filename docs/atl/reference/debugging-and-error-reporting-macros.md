@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565036"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775049"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macro di debug e segnalazione errori
 
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>Note
 
-La versione abbreviata di ATLTRACE2 scrive una stringa alla finestra di output del debugger. La seconda forma di ATLTRACE2 inoltre scrive l'output alla finestra di output del debugger, ma è soggetto alle impostazioni dello strumento di traccia ATL/MFC (vedere [ATLTraceTool esempio](../../visual-cpp-samples.md)). Ad esempio, se si imposta *livello* 4 e lo strumento di traccia ATL/MFC a livello 0, non si verrà visualizzato il messaggio. *livello* può essere 0, 1, 2, 3 o 4. Il valore predefinito, 0, segnala solo i problemi più gravi.
+La versione abbreviata di ATLTRACE2 scrive una stringa alla finestra di output del debugger. La seconda forma di ATLTRACE2 inoltre scrive l'output alla finestra di output del debugger, ma è soggetto alle impostazioni dello strumento di traccia ATL/MFC (vedere [ATLTraceTool esempio](../../overview/visual-cpp-samples.md)). Ad esempio, se si imposta *livello* 4 e lo strumento di traccia ATL/MFC a livello 0, non si verrà visualizzato il messaggio. *livello* può essere 0, 1, 2, 3 o 4. Il valore predefinito, 0, segnala solo i problemi più gravi.
 
 Il *categoria* parametro Elenca i flag di traccia da impostare. Questi flag corrispondono ai tipi di metodi per il quale si desidera eseguire report. Nella tabella seguente sono elencati i flag di traccia valido è possibile usare per la *categoria* parametro.
 

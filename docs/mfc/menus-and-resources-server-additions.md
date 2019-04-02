@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281952"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767203"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menu e risorse: Aggiunte di server
 
 Questo articolo vengono illustrate le modifiche da apportare ai menu e altre risorse in un'applicazione server (componente) modifica visiva. Un'applicazione server richiede molti aggiunte alla struttura di menu e altre risorse, perché può essere avviato in una delle tre modalità: autonoma, incorporati, o sul posto. Come descritto nel [menu e risorse (OLE)](../mfc/menus-and-resources-ole.md) articolo, sono presenti un massimo di quattro set di menu. Tutti e quattro vengono usate per un'applicazione MDI server completo, mentre vengono utilizzati per un server ridotto solo tre. La creazione guidata applicazione creerà il layout del menu necessari per il tipo di server desiderato. Alcune personalizzazioni possono essere necessarie.
 
-Se non si utilizza la creazione guidata applicazione, è possibile esaminare HIERSVR. RC, lo script di risorsa per l'applicazione di esempio MFC [HIERSVR](../visual-cpp-samples.md), per vedere come vengono implementate queste modifiche.
+Se non si utilizza la creazione guidata applicazione, è possibile esaminare HIERSVR. RC, lo script di risorsa per l'applicazione di esempio MFC [HIERSVR](../overview/visual-cpp-samples.md), per vedere come vengono implementate queste modifiche.
 
 Gli argomenti trattati in questo articolo includono:
 
@@ -56,7 +56,7 @@ Due nuove risorse di tabella di tasti di scelta rapida devono essere aggiunto pe
 
 Nella seconda tabella è quasi una copia esatta della tabella di tasti di scelta rapida della visualizzazione. Eventuali differenze in parallelo le modifiche apportate nel menu di scelta completamente aperti indicato nella [aggiunte al Menu di Server](#_core_server_menu_additions).
 
-Per un esempio di queste modifiche nella tabella di tasti di scelta rapida, confrontare le tabelle di tasti di scelta rapida IDR_HIERSVRTYPE_SRVR_IP e IDR_HIERSVRTYPE_SRVR_EMB con IDR_MAINFRAME in HIERSVR. File RC inclusi nell'esempio OLE MFC [HIERSVR](../visual-cpp-samples.md). I File e finestra di scelta rapida non sono presenti nella tabella sul posto e nella tabella incorporata sono copie esatte di essi.
+Per un esempio di queste modifiche nella tabella di tasti di scelta rapida, confrontare le tabelle di tasti di scelta rapida IDR_HIERSVRTYPE_SRVR_IP e IDR_HIERSVRTYPE_SRVR_EMB con IDR_MAINFRAME in HIERSVR. File RC inclusi nell'esempio OLE MFC [HIERSVR](../overview/visual-cpp-samples.md). I File e finestra di scelta rapida non sono presenti nella tabella sul posto e nella tabella incorporata sono copie esatte di essi.
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Aggiunte alla tabella delle stringhe per le applicazioni Server
 

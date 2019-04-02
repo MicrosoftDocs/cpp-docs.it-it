@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413927"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777168"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 La visualizzazione corrente è indicato da uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |MCMV_MONTH|Visualizzazione mensile|
 |MCMV_YEAR|Visualizzazione annuale|
@@ -1304,7 +1304,7 @@ Questo metodo invia il [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerec
 
 ## <a name="see-also"></a>Vedere anche
 
-[CMNCTRL1 esempio MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL1 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)

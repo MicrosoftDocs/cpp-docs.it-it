@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 7a222100cc7e13ee78f01cf4bb9c376af15f9b0e
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: a56c15f76b83620e4f67c188450a6b5d2f68c22f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328779"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766040"
 ---
 # <a name="data-access-in-visual-c"></a>Accesso ai dati in Visual C++
 
@@ -57,4 +57,4 @@ L'interfaccia ODBC è progettata per essere usata con il linguaggio di programma
 
 ## <a name="see-also"></a>Vedere anche
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

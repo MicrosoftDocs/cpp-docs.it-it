@@ -12,19 +12,19 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: b30b831522016ce61f138f7e0521c42ff44e04d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809769"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769277"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Procedura: Abilitare una a 64 bit e x64 ospitato sul set di strumenti MSVC nella riga di comando
 
 Visual Studio include i compilatori C++, ai linker e altri strumenti che è possibile usare per creare versioni specifiche della piattaforma delle App eseguibili nei sistemi operativi di Windows a 32 bit, 64 bit o basati su ARM. Altri carichi di lavoro facoltativi di Visual Studio consentono di usare gli strumenti di C++ per interagire con altre piattaforme, ad esempio iOS, Android e Linux. L'architettura di compilazione predefinito Usa strumenti ospitati da x86 a 32 bit per compilare il codice di Windows a 32 bit, native x86. Tuttavia, è probabile che un computer a 64 bit. È possibile sfruttare i vantaggi del processore e spazio di memoria disponibile per il codice a 64 bit utilizzando il set di strumenti a 64 bit e x64 ospitato quando si compila il codice per processori ARM, x64 o x86.
 
 > [!NOTE]
-> Per informazioni sugli strumenti specifici inclusi in ogni edizione di Visual Studio, vedere [strumenti di Visual C++ e funzionalità in edizioni di Visual Studio](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
+> Per informazioni sugli strumenti specifici inclusi in ogni edizione di Visual Studio, vedere [strumenti di Visual C++ e funzionalità in edizioni di Visual Studio](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md).
 >
 > Per informazioni su come usare l'IDE di Visual Studio per creare applicazioni a 64 bit, vedere [come: Configurare i progetti Visual C++ per piattaforme x64 a 64 bit](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 

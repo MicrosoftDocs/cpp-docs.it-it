@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746310"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770691"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -35,7 +35,7 @@ Scorre una matrice o una raccolta. Questa parola chiave non standard è disponib
 Tipo di `identifier`.
 
 *identifier*<br/>
-Variabile di iterazione che rappresenta l'elemento della raccolta.  Quando `identifier` è un [operatore di riferimento di rilevamento](../windows/tracking-reference-operator-cpp-component-extensions.md), è possibile modificare l'elemento.
+Variabile di iterazione che rappresenta l'elemento della raccolta.  Quando `identifier` è un [operatore di riferimento di rilevamento](../extensions/tracking-reference-operator-cpp-component-extensions.md), è possibile modificare l'elemento.
 
 *expression*<br/>
 Raccolta o espressione di matrice. L'elemento della raccolta deve poter essere convertito dal compilatore nel tipo `identifier`.
@@ -49,7 +49,7 @@ L'istruzione `for each` viene utilizzata per scorrere una raccolta. È possibile
 
 Il *istruzioni* vengono eseguiti per ogni elemento nella matrice o nella raccolta. Dopo che l'iterazione è stata completata per tutti gli elementi della raccolta, il controllo viene trasferito all'istruzione che segue il blocco `for each`.
 
-`for each` e `in` vengono [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).
+`for each` e `in` vengono [parole chiave sensibili al contesto](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 Per ulteriori informazioni:
 
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>Vedere anche
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+[Estensioni componenti per le piattaforme runtime](../extensions/component-extensions-for-runtime-platforms.md)

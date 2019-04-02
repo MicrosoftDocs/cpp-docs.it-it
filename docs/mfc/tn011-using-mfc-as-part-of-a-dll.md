@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7e9fda44e2af4ec32bae6299fbcc0eda17984f9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326452"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769732"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Utilizzo di MFC come parte di una DLL
 
@@ -57,7 +57,7 @@ Quando si compila una DLL MFC regolari collegate in modo statico a MFC, i simbol
 
 Le interfacce (API) tra l'applicazione e la DLL devono essere esportate in modo esplicito. È consigliabile definire le interfacce per larghezza di banda ridotta e usare solo le interfacce C, se possibile. Le interfacce C dirette sono più semplici da gestire rispetto alle classi C++ più complesse.
 
-Posizionare le tue API in un'intestazione separata che può essere incluso dal file C e C++. Vedere l'intestazione ScreenCap.h nell'esempio di concetti avanzati MFC [DLLScreenCap](../visual-cpp-samples.md) per un esempio. Per esportare le funzioni, immetterli nel `EXPORTS` sezione del file di definizione del modulo (. DEF) o includere `__declspec(dllexport)` sulle definizioni di funzione. Usare `__declspec(dllimport)` per importare il file eseguibile del client di queste funzioni.
+Posizionare le tue API in un'intestazione separata che può essere incluso dal file C e C++. Vedere l'intestazione ScreenCap.h nell'esempio di concetti avanzati MFC [DLLScreenCap](../overview/visual-cpp-samples.md) per un esempio. Per esportare le funzioni, immetterli nel `EXPORTS` sezione del file di definizione del modulo (. DEF) o includere `__declspec(dllexport)` sulle definizioni di funzione. Usare `__declspec(dllimport)` per importare il file eseguibile del client di queste funzioni.
 
 È necessario aggiungere la macro AFX_MANAGE_STATE all'inizio di tutte le funzioni esportate nelle DLL MFC regolari collegate a MFC in modo dinamico. Questa macro imposta lo stato del modulo corrente a quello per la DLL. Per usare questa macro, aggiungere la riga di codice seguente all'inizio delle funzioni esportate dalla DLL:
 

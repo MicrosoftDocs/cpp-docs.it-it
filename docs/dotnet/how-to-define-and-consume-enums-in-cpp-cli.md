@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 0252c4b64690f6a2fb0fd97b97841fe45fcce244
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751453"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774737"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Procedura: Definire e usare enumerazioni in c++ /CLI
 
@@ -92,7 +92,7 @@ Gli operatori &#124; ^ & ~ + +, sono definiti solo per le enumerazioni con integ
 Il compilatore non esegue alcun controllo statico o dinamico del risultato di un'operazione di enumerazione. un'operazione può comportare un valore non compreso nell'intervallo di enumeratori valido dell'enumerazione.
 
 > [!NOTE]
->  C++11 introduce i tipi di classe di enumerazione nel codice non gestito che sono significativamente diversi rispetto alle classi di enumerazione gestita in C + + / CLI. In particolare, il tipo di classe enum C++ 11 non supporta gli stessi operatori di tipo di classe di enumerazione gestita in C + + / CLI e C + + c++ /CLI codice sorgente dell'interfaccia della riga deve fornire un identificatore di accessibilità nell'enumerazione gestita delle dichiarazioni di classe per distinguerli da non gestiti (C++ 11) le dichiarazioni di classe enum. Per altre informazioni sulle classi di enumerazione in C + + c++ /CLI C++ /CLI, c++ /CX e C++ 11, vedere [classe enum](../windows/enum-class-cpp-component-extensions.md).
+>  C++11 introduce i tipi di classe di enumerazione nel codice non gestito che sono significativamente diversi rispetto alle classi di enumerazione gestita in C + + / CLI. In particolare, il tipo di classe enum C++ 11 non supporta gli stessi operatori di tipo di classe di enumerazione gestita in C + + / CLI e C + + c++ /CLI codice sorgente dell'interfaccia della riga deve fornire un identificatore di accessibilità nell'enumerazione gestita delle dichiarazioni di classe per distinguerli da non gestiti (C++ 11) le dichiarazioni di classe enum. Per altre informazioni sulle classi di enumerazione in C + + c++ /CLI C++ /CLI, c++ /CX e C++ 11, vedere [classe enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Vedere anche
 
-[classe di enumerazione](../windows/enum-class-cpp-component-extensions.md)
+[classe di enumerazione](../extensions/enum-class-cpp-component-extensions.md)

@@ -3,12 +3,12 @@ title: Concetti relativi a MFC
 ms.date: 1/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 58ab83fc195e199a63c53586983d26103950569b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633377"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766508"
 ---
 # <a name="mfc-concepts"></a>Concetti relativi a MFC
 
@@ -66,5 +66,5 @@ Illustra l'implementazione MFC di Windows Sockets.
 [Riferimenti alla libreria MFC](../mfc/mfc-desktop-applications.md)<br/>
 Fornisce materiale di riferimento per la libreria MFC, un set di classi che costituisce un framework applicazione, ovvero il framework di un'applicazione scritta per l'API di Windows.
 
-[Esempi di MFC](../visual-cpp-samples.md)<br/>
+[Esempi di MFC](../overview/visual-cpp-samples.md)<br/>
 Fornisce collegamenti a esempi che illustrano come utilizzare MFC nelle applicazioni desktop, DLL, le applicazioni di database, controlli, le applicazioni Web e altro.

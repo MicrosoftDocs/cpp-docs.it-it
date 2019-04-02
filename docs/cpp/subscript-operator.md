@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572913"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767925"
 ---
 # <a name="subscript-operator-"></a>Operatore di indice]
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Un'espressione in forma suffissa (che può anche essere un'espressione primaria) seguita dall'operatore di indice, **[]**, specifica l'indicizzazione della matrice.
 
-Per informazioni sulle matrici gestite, vedere [matrici](../windows/arrays-cpp-component-extensions.md).
+Per informazioni sulle matrici gestite in C + + / CLI, vedere [matrici](../extensions/arrays-cpp-component-extensions.md).
 
 In genere, il valore rappresentato da *postfix-expression* è un valore di puntatore, quale un identificatore di matrice, e *espressione* è un valore integrale (inclusi i tipi enumerati). Tuttavia, l'unica condizione da soddisfare dal punto di vista sintattico è che una delle espressioni sia di tipo puntatore e l'altra di tipo integrale. Pertanto il valore integrale potrebbe essere nella *postfix-expression* posizione e il valore di puntatore potrebbe essere nelle parentesi quadre nella *espressione* o posizione sottoscritta. Si consideri il frammento di codice riportato di seguito.
 

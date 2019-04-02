@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: 38f9c6953999e07f1a72ed6a9c0661184f075ea0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303076"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778871"
 ---
 # <a name="cbrush-class"></a>CBrush (classe)
 
@@ -435,7 +435,7 @@ Per altre informazioni sull'uso di oggetti grafici, vedere [gli oggetti di grafi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[Esempio MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CBitmap](../../mfc/reference/cbitmap-class.md)<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279338"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770343"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menu e risorse: Aggiunte di contenitori
 
@@ -29,7 +29,7 @@ Questo articolo vengono illustrate le modifiche da apportare ai menu e altre ris
 
 Nelle applicazioni contenitore, è necessario apportare due tipi di modifiche: modifiche alle risorse esistenti per supportare la modifica visiva OLE e aggiunta di nuove risorse utilizzato per l'attivazione sul posto. Se si usa la creazione guidata applicazione per creare l'applicazione contenitore, questi passaggi verranno eseguiti automaticamente, ma che possono richiedere alcune personalizzazioni.
 
-Se non si utilizza la creazione guidata applicazione, è possibile esaminare OCLIENT. RC, lo script di risorsa per l'applicazione di esempio OCLIENT, per vedere come vengono implementate queste modifiche. Vedere l'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md).
+Se non si utilizza la creazione guidata applicazione, è possibile esaminare OCLIENT. RC, lo script di risorsa per l'applicazione di esempio OCLIENT, per vedere come vengono implementate queste modifiche. Vedere l'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 Gli argomenti trattati in questo articolo includono:
 
@@ -62,7 +62,7 @@ Piccole modifiche alle risorse nella tabella di tasti di scelta rapida di un'app
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-La seconda modifica consiste nel creare una nuova tabella di tasti di scelta rapida che corrisponde alla nuova risorsa di menu creato per l'attivazione sul posto. Questa tabella include voci per i menu File e finestra oltre alla voce VK_ESCAPE precedente. L'esempio seguente è la tabella di tasti di scelta rapida creata per l'attivazione sul posto nell'esempio di MFC [contenitore](../visual-cpp-samples.md):
+La seconda modifica consiste nel creare una nuova tabella di tasti di scelta rapida che corrisponde alla nuova risorsa di menu creato per l'attivazione sul posto. Questa tabella include voci per i menu File e finestra oltre alla voce VK_ESCAPE precedente. L'esempio seguente è la tabella di tasti di scelta rapida creata per l'attivazione sul posto nell'esempio di MFC [contenitore](../overview/visual-cpp-samples.md):
 
 |Id|Chiave|Tipo|
 |--------|---------|----------|

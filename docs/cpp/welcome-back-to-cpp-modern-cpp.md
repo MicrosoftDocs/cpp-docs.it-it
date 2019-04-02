@@ -3,12 +3,12 @@ title: C++ (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334625"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771786"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ (C++ moderno)
 
@@ -99,7 +99,7 @@ Se si usa C++ dopo aver utilizzato un altro linguaggio, specialmente da un lingu
 
 C++ sta sperimentando una "rinascita" perché la potenza è nuovamente diventata l'elemento più importante. I linguaggi come Java e C# sono validi quando è importante la produttività del programmatore, ma mostrano le relative limitazioni quando sono importanti la potenza e le prestazioni. Per una buona efficienza e potenza, specialmente sui dispositivi con hardware ridotto, niente è meglio del linguaggio C++ moderno.
 
-Anche gli strumenti di sviluppo, oltre al linguaggio, sono moderni. Visual Studio apporta tutte le parti del ciclo di sviluppo affidabile ed efficiente. Include strumenti di Gestione del ciclo di vita delle applicazioni (ALM), miglioramenti IDE quali IntelliSense, meccanismi adatti agli strumenti come XAML, la compilazione, il debug e molti altri strumenti.
+Anche gli strumenti di sviluppo, oltre al linguaggio, sono moderni. Visual Studio apporta tutte le parti del ciclo di sviluppo affidabile ed efficiente. Include strumenti di Application Lifecycle Management (ALM), miglioramenti IDE quali IntelliSense, meccanismi adatti agli strumenti come XAML, la compilazione, il debug e molti altri strumenti.
 
 Gli articoli in questa parte della documentazione forniscono linee guida e procedure consigliate approfondite per le principali funzionalità e tecniche di scrittura dei moderni programmi in C++.
 
@@ -132,4 +132,4 @@ Per altre informazioni, vedere l'articolo di Stack Overflow [idiomi C++ che sono
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Espressioni lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Conformità al linguaggio Visual C++](../visual-cpp-language-conformance.md)
+[Conformità al linguaggio Visual C++](../overview/visual-cpp-language-conformance.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE containers [MFC], user interface
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
-ms.openlocfilehash: e35f831f3e1a0b2fede03de0bbd846525f3c41f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 68a56983bccbdb2ed7f6701577ea5abaa7ea04c6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304258"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779664"
 ---
 # <a name="containers-user-interface-issues"></a>Contenitori: Problemi dell'interfaccia utente
 
@@ -21,7 +21,7 @@ ms.locfileid: "57304258"
 |------------------------|---------|
 |Aggiunte di menu per i contenitori|[Menu e risorse: Aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md)|
 |Risorse aggiuntive per i contenitori|[Menu e risorse: Aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md)|
-|Disegno elementi collegati o incorporati|[Esempio di contenitore](../visual-cpp-samples.md)|
+|Disegno elementi collegati o incorporati|[Esempio di contenitore](../overview/visual-cpp-samples.md)|
 |Nuove finestre di dialogo per i contenitori|[Finestre di dialogo in OLE](../mfc/dialog-boxes-in-ole.md)|
 
 ## <a name="see-also"></a>Vedere anche

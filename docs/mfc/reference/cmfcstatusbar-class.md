@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326751"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775959"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>Note
 
-Il diagramma seguente mostra una figura della barra di stato dalla [esempio dimostrativo di barra di stato](../../visual-cpp-samples.md) dell'applicazione.
+Il diagramma seguente mostra una figura della barra di stato dalla [esempio dimostrativo di barra di stato](../../overview/visual-cpp-samples.md) dell'applicazione.
 
 ![Esempio di CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "esempio di CMFCStatusBar")
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra le variabili locali che l'applicazione viene utilizzata per chiamare i vari metodi di `CMFCStatusBar` classe. Queste variabili vengono dichiarate nel StatusBarDemoView.h. La cornice principale viene dichiarata in MAINFRM, il documento viene dichiarato in StatusBarDemoDoc.h e la visualizzazione viene dichiarata in StatusBarDemoView.h. Questo frammento di codice fa parte di [esempio dimostrativo di barra di stato](../../visual-cpp-samples.md).
+L'esempio seguente illustra le variabili locali che l'applicazione viene utilizzata per chiamare i vari metodi di `CMFCStatusBar` classe. Queste variabili vengono dichiarate nel StatusBarDemoView.h. La cornice principale viene dichiarata in MAINFRM, il documento viene dichiarato in StatusBarDemoDoc.h e la visualizzazione viene dichiarata in StatusBarDemoView.h. Questo frammento di codice fa parte di [esempio dimostrativo di barra di stato](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come ottenere un riferimento a `CMFCStatusBar` oggetto introducendo il `GetStatusBar` MainFrm e quindi chiamare questo metodo dal metodo di `GetStatusBar` metodo StatusBarDemoView.h. Questo frammento di codice fa parte di [esempio dimostrativo di barra di stato](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come ottenere un riferimento a `CMFCStatusBar` oggetto introducendo il `GetStatusBar` MainFrm e quindi chiamare questo metodo dal metodo di `GetStatusBar` metodo StatusBarDemoView.h. Questo frammento di codice fa parte di [esempio dimostrativo di barra di stato](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come chiamare diversi metodi nel `CMFCStatusBar` classe in StatusBarDemoView.cpp. Le costanti vengono dichiarate nel MainFrm. Nell'esempio viene illustrato come impostare l'icona, impostare il testo della descrizione comando del riquadro della barra di stato, visualizzare un indicatore di stato nel riquadro specificato, assegnare un'animazione al riquadro specificato, impostare il testo e la larghezza del riquadro della barra di stato e impostato l'indicatore di stato corrente del corso barra di SSE per il riquadro della barra di stato. Questo frammento di codice fa parte di [esempio dimostrativo di barra di stato](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come chiamare diversi metodi nel `CMFCStatusBar` classe in StatusBarDemoView.cpp. Le costanti vengono dichiarate nel MainFrm. Nell'esempio viene illustrato come impostare l'icona, impostare il testo della descrizione comando del riquadro della barra di stato, visualizzare un indicatore di stato nel riquadro specificato, assegnare un'animazione al riquadro specificato, impostare il testo e la larghezza del riquadro della barra di stato e impostato l'indicatore di stato corrente del corso barra di SSE per il riquadro della barra di stato. Questo frammento di codice fa parte di [esempio dimostrativo di barra di stato](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]

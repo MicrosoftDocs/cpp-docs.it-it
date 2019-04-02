@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293422"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781757"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (classe)
 
@@ -201,7 +201,7 @@ Per sfruttare i vantaggi delle funzionalità di ancoraggio estese nelle applicaz
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente deriva una classe da `CMDIChildWndEx`. Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+Nell'esempio seguente deriva una classe da `CMDIChildWndEx`. Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ Quando il framework è stato di ripristino in un secondo momento, il nome del do
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato l'uso del metodo `GetDocumentName`. Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato l'uso del metodo `GetDocumentName`. Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ Questa funzione viene utilizzata per impedire il salvataggio dei documenti di so
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato l'override di `IsReadOnly` (metodo). Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato l'override di `IsReadOnly` (metodo). Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418763"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778949"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 
@@ -604,6 +604,6 @@ L'incremento di passaggio è l'impostazione di `CProgressCtrl::SetStep` funzione
 
 ## <a name="see-also"></a>Vedere anche
 
-[CMNCTRL2 esempio MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL2 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3097
 ms.assetid: b24bd8f8-e04f-4fbb-be57-4feb9165572e
-ms.openlocfilehash: 8e83a92911e40df099ff5986d13dd44bd117d92d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1d5603ceb31313add075d334a7d27cbe878906d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452767"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768921"
 ---
 # <a name="compiler-error-c3097"></a>Errore del compilatore C3097
 
@@ -19,7 +19,7 @@ ms.locfileid: "50452767"
 
 Un attributo globale è stato usato in modo errato.
 
-Per altre informazioni, vedere [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Per altre informazioni, vedere [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738478"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780236"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Procedura: Effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C++
 
@@ -23,7 +23,7 @@ Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/manage
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come una funzione non gestita che accetta una struttura che contiene puntatori può essere chiamata da una funzione gestita. La funzione gestita crea un'istanza della struttura e inizializza il puntatore incorporato con la parola chiave new (anziché il [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) parola chiave). Perché consente di allocare la memoria nell'heap nativo, non è necessario aggiungere la matrice per impedire operazioni di garbage collection. Tuttavia, la memoria deve essere eliminata esplicitamente per evitare la perdita di memoria.
+Nell'esempio seguente viene illustrato come una funzione non gestita che accetta una struttura che contiene puntatori può essere chiamata da una funzione gestita. La funzione gestita crea un'istanza della struttura e inizializza il puntatore incorporato con la parola chiave new (anziché il [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) parola chiave). Perché consente di allocare la memoria nell'heap nativo, non è necessario aggiungere la matrice per impedire operazioni di garbage collection. Tuttavia, la memoria deve essere eliminata esplicitamente per evitare la perdita di memoria.
 
 ```
 // marshal_embedded_pointer.cpp

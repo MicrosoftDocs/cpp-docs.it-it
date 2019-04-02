@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.openlocfilehash: 248b423659d026774d4945ee6330a39dc4c6e16e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476929"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770148"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Procedura dettagliata: Creare e usare il proprio libreria a collegamento dinamico (C++)
 
@@ -398,7 +398,7 @@ Premere un tasto qualsiasi per chiudere la finestra di comando.
 
 Ora che è stata creata una DLL e un'applicazione client, è possibile provare. Provare a impostare i punti di interruzione nel codice dell'app client ed eseguire l'app nel debugger. Che cosa accade quando si esegue una chiamata di libreria. Aggiungere altre funzioni nella libreria o un'altra app client che usa la DLL di scrittura.
 
-Quando si distribuisce l'app, è necessario distribuire anche le DLL Usa. Il modo più semplice per rendere disponibili le DLL che si compila o che includono di terze parti per l'app è di inserirli nella stessa directory dell'app, noto anche come *distribuzione app-local*. Per altre informazioni sulla distribuzione, vedere [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md).
+Quando si distribuisce l'app, è necessario distribuire anche le DLL Usa. Il modo più semplice per rendere disponibili le DLL che si compila o che includono di terze parti per l'app è di inserirli nella stessa directory dell'app, noto anche come *distribuzione app-local*. Per altre informazioni sulla distribuzione, vedere [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: c6bdbb18c2d1b40423457b4cf07d0a747138b99b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266198"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776063"
 ---
 # <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
 
@@ -70,7 +70,7 @@ Per usare i menu a comparsa nell'applicazione, è necessario che un `CMenuTearOf
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come creare e inizializzare un `CMenuTearOffManager` chiamando il `CWinAppEX::EnableTearOffMenus` (metodo). Questo frammento di codice fa parte dell' [esempio di Word Pad](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come creare e inizializzare un `CMenuTearOffManager` chiamando il `CWinAppEX::EnableTearOffMenus` (metodo). Questo frammento di codice fa parte dell' [esempio di Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
 

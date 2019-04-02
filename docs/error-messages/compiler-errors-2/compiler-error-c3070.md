@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3070
 ms.assetid: ac88584d-40a6-4176-90f3-2371c3c935f2
-ms.openlocfilehash: 7e1175fc1289a2504795a9d19bcd6274462b7a84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3825e9e77564af9c40bc08aff560cdf533f2b5c0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677838"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769511"
 ---
 # <a name="compiler-error-c3070"></a>Errore del compilatore C3070
 
 'property': la proprietà non ha un metodo 'set'
 
-Non è stato definito un metodo della funzione di accesso di una proprietà. Per altre informazioni, vedere [property](../../windows/property-cpp-component-extensions.md).
+Non è stato definito un metodo della funzione di accesso di una proprietà. Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md).
 
 L'esempio seguente genera l'errore C3070:
 

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 842ceab1630fc7bc08b5c27dc769a25d029886f3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 934d746dafafb39c2ffc3477c59c95914d270196
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274518"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772828"
 ---
 # <a name="ctokengroups-class"></a>Classe CTokenGroups
 
@@ -273,7 +273,7 @@ Esegue il cast a un puntatore a un valore di [TOKEN_GROUPS](/windows/desktop/api
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio di sicurezza](../../visual-cpp-samples.md)<br/>
+[Esempio di sicurezza](../../overview/visual-cpp-samples.md)<br/>
 [Classe CSid](../../atl/reference/csid-class.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270891"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767652"
 ---
 # <a name="dialog-boxes-in-ole"></a>Finestre di dialogo in OLE
 
@@ -31,7 +31,7 @@ Questa finestra di dialogo consente all'utente controllare il formato utilizzato
 Questa finestra di dialogo consente all'utente di selezionare l'icona da visualizzare per rappresentare l'elemento collegato o incorporato. Visualizzare questa finestra di dialogo quando l'utente sceglie l'icona di modifica dal menu Modifica o sceglie il pulsante Cambia icona nella Incolla speciale o finestre di dialogo Convert. Viene inoltre visualizzata quando l'utente apre la finestra di dialogo Inserisci oggetto e sceglie Visualizza come icona. Usare la [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) classe per visualizzare questa finestra di dialogo.
 
 *Convert*<br/>
-Questa finestra di dialogo consente all'utente di modificare il tipo di un elemento incorporato o collegato. Ad esempio, se si è incorporato un metafile in un documento composito e successivamente si vuole usare un'altra applicazione per modificarlo, è possibile utilizzare la finestra di dialogo Converti. Questa finestra di dialogo viene visualizzata in genere facendo *tipo di elemento* oggetto dal menu Modifica e quindi, nel menu a cascata, facendo clic su Converti. Usare la [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) classe per visualizzare questa finestra di dialogo. Per un esempio, eseguire l'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md).
+Questa finestra di dialogo consente all'utente di modificare il tipo di un elemento incorporato o collegato. Ad esempio, se si è incorporato un metafile in un documento composito e successivamente si vuole usare un'altra applicazione per modificarlo, è possibile utilizzare la finestra di dialogo Converti. Questa finestra di dialogo viene visualizzata in genere facendo *tipo di elemento* oggetto dal menu Modifica e quindi, nel menu a cascata, facendo clic su Converti. Usare la [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) classe per visualizzare questa finestra di dialogo. Per un esempio, eseguire l'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Collegamenti di modifica o aggiornamento*<br/>
 La finestra di dialogo Modifica collegamenti consente all'utente di modificare le informazioni sull'origine dell'oggetto collegato. La finestra di dialogo Aggiorna i collegamenti verifica del codice sorgente di tutti gli elementi collegati nella finestra di dialogo corrente e consente di visualizzare la finestra di dialogo Modifica collegamenti se necessario. Visualizzare la finestra di dialogo Modifica collegamenti quando l'utente sceglie i collegamenti dal menu Modifica. La finestra di dialogo Aggiorna i collegamenti in genere viene visualizzata prima apertura di un documento composito. Usare la [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) o il [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) classe, a seconda di quale finestra di dialogo da visualizzare.

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266056"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781796"
 ---
 # <a name="ctypedptrmap-class"></a>Classe CTypedPtrMap
 
@@ -216,7 +216,7 @@ Per ulteriori osservazioni, vedere [CMapStringToOb::SetAt](../../mfc/reference/c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Esempio MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [Classe CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)<br/>

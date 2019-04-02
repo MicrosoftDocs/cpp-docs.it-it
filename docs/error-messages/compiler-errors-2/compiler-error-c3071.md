@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3071
 ms.assetid: 69879e66-a60e-4058-9bbd-d5c5e2d8ee37
-ms.openlocfilehash: 6960dbf62fd30b822f0d7c7a3c46a29a4115913f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1debe431711681a98b9472c85864d84373ec42d6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428353"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775998"
 ---
 # <a name="compiler-error-c3071"></a>Errore del compilatore C3071
 
@@ -19,7 +19,7 @@ operatore 'operator' applicabile solo a un'istanza di una classe di riferimento 
 
 Un operatore CLR non può essere usato in un tipo nativo. L'operatore può essere usato in una classe di riferimento o in un una struct di riferimento (un tipo di valore), ma non in un tipo nativo, ad esempio int, o in un alias per un tipo nativo, ad esempio System::Int32. Questi tipi non possono essere boxed nel codice C++ in modo da fare riferimento alla variabile nativa e quindi l'operatore non può essere usato.
 
-Per altre informazioni, vedere [operatore di riferimento di rilevamento](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+Per altre informazioni, vedere [operatore di riferimento di rilevamento](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

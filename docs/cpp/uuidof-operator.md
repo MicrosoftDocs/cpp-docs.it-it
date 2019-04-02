@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: 6e593d023c486aa504f0b5eee8578fa8c307bcc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432708"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769199"
 ---
 # <a name="uuidof-operator"></a>Operatore __uuidof
 
@@ -39,7 +39,7 @@ Utilizzare questa parola chiave per estrarre il GUID collegato:
 
 - Un oggetto tramite il [uuid](../cpp/uuid-cpp.md) attributi estesa.
 
-- Un blocco di libreria creato con il [modulo](../windows/module-cpp.md) attributo.
+- Un blocco di libreria creato con il [modulo](../windows/attributes/module-cpp.md) attributo.
 
 > [!NOTE]
 > In una build di debug **uuidof** sempre Inizializza un oggetto in modo dinamico (in fase di esecuzione). In una build di rilascio **uuidof** può inizializzare staticamente (in fase di compilazione) un oggetto.

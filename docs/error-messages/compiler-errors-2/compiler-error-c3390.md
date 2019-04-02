@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: e1146bf0ed2dd6d38a3c67cc6799c0e73f253323
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532617"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768745"
 ---
 # <a name="compiler-error-c3390"></a>Errore del compilatore C3390
 
 'type_arg': argomento di tipo non valido per il parametro generico 'param' del 'generic_type' generico. Deve essere un tipo riferimento
 
-L'istanza di un tipo generico è stata creata in modo non corretto.  Controllare la definizione del tipo.  Per altre informazioni, vedere [Generics](../../windows/generics-cpp-component-extensions.md).
+L'istanza di un tipo generico è stata creata in modo non corretto.  Controllare la definizione del tipo.  Per altre informazioni, vedere [Generics](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

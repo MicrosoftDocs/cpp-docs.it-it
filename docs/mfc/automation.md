@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265563"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767730"
 ---
 # <a name="automation"></a>automazione
 
@@ -55,17 +55,17 @@ Il tipo **VARIANT** è incapsulato nella classe [COleVariant](../mfc/reference/c
 
 ## <a name="automation-samples"></a>Esempi di automazione
 
-- [AUTOCLIK](../visual-cpp-samples.md) Utilizzare questo esempio per apprendere le tecniche di automazione e come base per l'apprendimento dell'automazione remota.
+- [AUTOCLIK](../overview/visual-cpp-samples.md) Utilizzare questo esempio per apprendere le tecniche di automazione e come base per l'apprendimento dell'automazione remota.
 
-- [ACDUAL](../visual-cpp-samples.md) Aggiunge interfacce duali a un'applicazione server di automazione.
+- [ACDUAL](../overview/visual-cpp-samples.md) Aggiunge interfacce duali a un'applicazione server di automazione.
 
-- [CALCDRIV](../visual-cpp-samples.md) Applicazione client di automazione che controlla MFCCALC.
+- [CALCDRIV](../overview/visual-cpp-samples.md) Applicazione client di automazione che controlla MFCCALC.
 
-- [INPROC](../visual-cpp-samples.md) Mostra un'applicazione server di automazione in-process.
+- [INPROC](../overview/visual-cpp-samples.md) Mostra un'applicazione server di automazione in-process.
 
-- [IPDRIVE](../visual-cpp-samples.md) Applicazione client di automazione che controlla INPROC.
+- [IPDRIVE](../overview/visual-cpp-samples.md) Applicazione client di automazione che controlla INPROC.
 
-- [MFCCALC](../visual-cpp-samples.md) Mostra un'applicazione client di automazione.
+- [MFCCALC](../overview/visual-cpp-samples.md) Mostra un'applicazione client di automazione.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
 

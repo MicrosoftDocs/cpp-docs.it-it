@@ -1,12 +1,12 @@
 ---
 title: Gestione delle eccezioni ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 78d3d7d206adcb123c9537e91c2d5976b8be5baa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816152"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770070"
 ---
 # <a name="arm64-exception-handling"></a>Gestione delle eccezioni ARM64
 
@@ -54,7 +54,7 @@ Queste sono le ipotesi nella descrizione di gestione delle eccezioni:
 
 ![layout dello stack frame](media/arm64-exception-handling-stack-frame.png "layout dello stack frame")
 
-Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in qualsiasi posizione nell'area di variabile locale in base a considerazioni di ottimizzazione. L'obiettivo è ottimizzare il numero di variabili locali che può essere raggiunto da una singola istruzione basata su puntatore ai frame (r29) o il puntatore dello stack (sp). Tuttavia per `alloca` funzioni, deve essere collegato e r29 deve puntare alla parte inferiore dello stack. Per consentire una migliore copertura di register-coppia-addressing-modalità, non volatile registrare aave aree sono posizionate nella parte superiore dello stack dell'area locale. Ecco alcuni esempi che illustrano alcune delle sequenze di prologo della query più efficiente. Per ragioni di semplicità e migliore località della cache, l'ordine di archiviazione dei registri salvati dal chiamato in tutti i prologhi canonici è in ordine "in continua crescita di". `#framesz` di seguito rappresenta la dimensione dell'intero stack (escluso alloca area). `#localsz` e `#outsz` indicano le dimensioni di rete locale (tra cui Salva area per il \<r29, lr > coppia) e in uscita di dimensioni del parametro, rispettivamente.
+Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in qualsiasi posizione nell'area di variabile locale in base a considerazioni di ottimizzazione. L'obiettivo è ottimizzare il numero di variabili locali che può essere raggiunto da una singola istruzione basata su puntatore ai frame (r29) o il puntatore dello stack (sp). Tuttavia per `alloca` funzioni, deve essere collegato e r29 deve puntare alla parte inferiore dello stack. Per consentire una migliore copertura di register-coppia-addressing-modalità, il registro non volatile Salva le aree vengono posizionati nella parte superiore dello stack dell'area locale. Ecco alcuni esempi che illustrano alcune delle sequenze di prologo della query più efficiente. Per ragioni di semplicità e migliore località della cache, l'ordine di archiviazione dei registri salvati dal chiamato in tutti i prologhi canonici è in ordine "in continua crescita di". `#framesz` di seguito rappresenta la dimensione dell'intero stack (escluso alloca area). `#localsz` e `#outsz` indicano le dimensioni di rete locale (tra cui Salva area per il \<r29, lr > coppia) e in uscita di dimensioni del parametro, rispettivamente.
 
 1. Concatenate, #localsz \<= 512
 
@@ -267,7 +267,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Si noti che anche se il prologo e ogni epilogo ha un proprio indice nei codici di rimozione, la tabella è condivisa tra di essi ed è assolutamente possibile (e non del tutto insolito) che possano condividere tutti i codici di stesso (vedere l'esempio 2 nell'appendice di seguito). Writer di compilatori necessario ottimizzare questo caso, in particolare perché l'indice più grande che è possibile specificare è 255, limitando in tal modo il numero totale di codici di rimozione per una determinata funzione.
+Si noti che anche se il prologo e ogni epilogo ha un proprio indice nei codici di rimozione, la tabella è condivisa tra di essi ed è assolutamente possibile (e non del tutto insolito) che possano condividere tutti i codici di stesso (vedere l'esempio 2 nel bel sezione esempi onsenti). Writer di compilatori necessario ottimizzare questo caso, in particolare perché l'indice più grande che è possibile specificare è 255, limitando in tal modo il numero totale di codici di rimozione per una determinata funzione.
 
 ### <a name="unwind-codes"></a>Codici di rimozione
 
@@ -340,7 +340,7 @@ I campi sono come segue:
 
 - **Funzione avviare RVA** è il RVA a 32 bit dell'inizio della funzione.
 - **Flag** è un campo di bit 2 come descritto in precedenza, con i significati seguenti:
-  - 00 = compresso di rimozione dei dati non utilizzati; bit restanti punti al record. xdata, sotto
+  - 00 = compresso di rimozione dei dati non utilizzati; bit rimanenti puntare a un record. XData
   - 01 = compresso utilizzati come descritto di seguito con singolo prologo ed epilogo all'inizio e alla fine dell'ambito di dati di rimozione
   - 10 = compresso utilizzati come descritto di seguito per il codice senza epilogo; prologo e di dati di rimozione Ciò è utile per descrivere i segmenti separati (funzione).
   - 11 = riservati;
@@ -353,7 +353,7 @@ I campi sono come segue:
   - 11 = funzione concatenate, viene utilizzata un'istruzione di coppia di archivio/carico prologo/epilogo \<r29, lr >
 - **H** è un flag a 1 bit che indica se la funzione privo di parametro di tipo integer (r0-r7) di registra archiviandoli all'inizio della funzione. (0 = non ospita i registri, 1 = ospita i registri).
 - **RegI** è un campo a 4 bit che indica il numero di registri INT non volatile (r19-r28) salvato nel percorso canonico dello stack.
-- **RegF** è un campo di 3 bit che indica il numero di registri FP non volatile (d8-d15) salvato nel percorso canonico dello stack. (0 non = Nessun FP registra salvato, m > 0: m + 1 FP registri vengono salvate). Per la funzione Salva un solo registro FP, compresse di rimozione non è possibile applicare i dati.
+- **RegF** è un campo di 3 bit che indica il numero di registri FP non volatile (d8-d15) salvato nel percorso canonico dello stack. (RegF = 0: non viene salvato alcun registro fp; RegF > 0: RegF + 1 FP registri vengono salvate). Compressi di rimozione dati non possono essere utilizzati per la funzione che consente di salvare un solo registro FP.
 
 Prologhi canoniche che rientrano nelle categorie 1, 2 (senza area dei parametri in uscita), 3 e 4 nella sezione precedente possono essere rappresentati dal formato di rimozione compresso.  L'epilogo di una funzione per funzioni canoniche seguono un form molto simile, eccetto **H** non ha alcun effetto il `set_fp` istruzione viene omesso e l'ordine dei passaggi, nonché le istruzioni in ogni passaggio vengono invertiti nell'epilogo. L'algoritmo per compresso xdata segue questi passaggi, descritta in dettaglio nella tabella riportata di seguito:
 
@@ -386,7 +386,7 @@ Passaggio &|Valori di flag|n. di istruzioni|Codice operativo|Codice di rimozione
 
 \*\* Se **RegI** == **CR** = = 0, e **RegF** ! = 0, il primo stp per la virgola mobile non di decremento prefisso.
 
-\*\*\* Nessuna istruzione corrispondente a `mov r29, sp` è presente nell'epilogo. Se una funzione richiede il ripristino di sp dal r29 quindi non è possibile usare compresse dei dati di rimozione.
+\*\*\* Nessuna istruzione corrispondente a `mov r29, sp` è presente nell'epilogo. Compressi di rimozione non è possibile utilizzare i dati se una funzione richiede il ripristino di sp dal r29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Epilogo di una funzione e rimozione di prologhi parziale
 

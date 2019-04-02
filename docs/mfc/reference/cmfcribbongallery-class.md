@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298633"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780392"
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
 
@@ -155,7 +155,7 @@ Un pulsante della raccolta si comporta come un pulsante di menu regolari con la 
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCRibbonGallery` classe per configurare un `CMFCRibbonGallery` oggetto. Nell'esempio viene illustrato come specificare il numero di elementi per ogni riga nella raccolta, abilitare il ridimensionamento del pannello del menu, abilitare la barra laterale a sinistra del menu a comparsa e visualizzare la raccolta della barra multifunzione come una tavolozza direttamente sulla barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare i vari metodi nella `CMFCRibbonGallery` classe per configurare un `CMFCRibbonGallery` oggetto. Nell'esempio viene illustrato come specificare il numero di elementi per ogni riga nella raccolta, abilitare il ridimensionamento del pannello del menu, abilitare la barra laterale a sinistra del menu a comparsa e visualizzare la raccolta della barra multifunzione come una tavolozza direttamente sulla barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 

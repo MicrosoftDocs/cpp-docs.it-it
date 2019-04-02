@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3100
 ms.assetid: 7a9c9eaf-08ef-442d-94a0-e457beee8549
-ms.openlocfilehash: 07529b576a8ce967c4ff834aab4d6d78d32d52ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98fa90d184db596458ec7b943e3c35ddc5b7bce9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521164"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771604"
 ---
 # <a name="compiler-error-c3100"></a>Errore del compilatore C3100
 
@@ -19,7 +19,7 @@ ms.locfileid: "50521164"
 
 È stata specificata una destinazione dell'attributo non valido.
 
-Per altre informazioni, vedere [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Per altre informazioni, vedere [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

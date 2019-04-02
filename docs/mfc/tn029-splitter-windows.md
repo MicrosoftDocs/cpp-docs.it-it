@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294993"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781731"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Finestre con separatore
 
@@ -46,7 +46,7 @@ Il numero massimo di riquadri che è possibile specificare per finestre con sepa
 
 ## <a name="splitter-examples"></a>Esempi di divisione
 
-Finestre con separatore molti dei programmi di esempio MFC usano direttamente o indirettamente. L'esempio MFC generale [2x1 viene](../visual-cpp-samples.md) illustrati diversi utilizzi delle finestre con separatore statici, incluse le procedure inserire una barra di divisione in una barra di divisione.
+Finestre con separatore molti dei programmi di esempio MFC usano direttamente o indirettamente. L'esempio MFC generale [2x1 viene](../overview/visual-cpp-samples.md) illustrati diversi utilizzi delle finestre con separatore statici, incluse le procedure inserire una barra di divisione in una barra di divisione.
 
 È anche possibile usare ClassWizard per creare un nuovo più documenti (MDI) interfaccia figlio classe finestra cornice che contiene una finestra con separatore. Per altre informazioni su finestre con separatore, vedere [tipi di documenti multipli, visualizzazioni e Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 

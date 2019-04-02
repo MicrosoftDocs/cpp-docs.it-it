@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275428"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778559"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (classe)
 
@@ -259,7 +259,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Determina se i riquadri ancorati possono essere convertiti in finestre figlio MDI.|
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Abilita o disabilita l'ottimizzazione di riemissione per le finestre figlio MDI.|
@@ -270,7 +270,7 @@ Per sfruttare i vantaggi delle funzionalità di personalizzazione estesa dell'ap
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente deriva una classe da `CMDIFrameWndEx`. Questo frammento di codice provenienza dal [esempio DrawClient: Applicazione di disegno oggetto OLE basati sulla barra multifunzione MFC](../../visual-cpp-samples.md).
+Nell'esempio seguente deriva una classe da `CMDIFrameWndEx`. Questo frammento di codice provenienza dal [esempio DrawClient: Applicazione di disegno oggetto OLE basati sulla barra multifunzione MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -449,7 +449,7 @@ Eseguire l'override di questo metodo per creare documenti quando vengono caricat
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `CreateDocumentWindow` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `CreateDocumentWindow` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 In questo esempio `g_strStartViewName` potrebbe essere il nome di un "documento virtuale" (ad esempio, "Start Page") che non è effettivamente caricato da un file su disco. Pertanto, è necessario l'elaborazione speciale per gestire tale case.
 
@@ -505,7 +505,7 @@ Questo metodo viene ancorato l'oggetto specificato nel riquadro per uno dei lati
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato l'uso del metodo `DockPane`. Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato l'uso del metodo `DockPane`. Questo frammento di codice provenienza dal [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -537,7 +537,7 @@ Chiamare questo metodo per ancorare diversi oggetti riquadro in un ordine predef
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come la `DockPaneLeftOf` metodo viene utilizzato nel [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come la `DockPaneLeftOf` metodo viene utilizzato nel [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ Chiamare questa funzione per abilitare la modalità Nascondi automaticamente per
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come la `EnableAutoHidePanes` metodo viene utilizzato nel [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come la `EnableAutoHidePanes` metodo viene utilizzato nel [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -595,7 +595,7 @@ Chiamare questa funzione per attivare l'ancoraggio di riquadri che appartengono 
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come la `EnableDocking` metodo viene utilizzato nel [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come la `EnableDocking` metodo viene utilizzato nel [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -686,7 +686,7 @@ Per altre informazioni su come usare MDI a schede gruppi, vedere [i gruppi a sch
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `EnableMDITabbedGroups` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `EnableMDITabbedGroups` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -738,7 +738,7 @@ Se *bTabCustomTooltips* è TRUE, verrà inviato un messaggio AFX_WM_ON_GET_TAB_T
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `EnableMDITabs` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `EnableMDITabs` viene utilizzata la [esempio MDITabsDemo: Applicazione MDI a schede MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -807,7 +807,7 @@ Menu del riquadro a comparsa viene visualizzato l'elenco dei riquadri dell'appli
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `EnablePaneMenu` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `EnablePaneMenu` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -849,7 +849,7 @@ Usare questo metodo per inserire una voce di menu con il comando viene chiamata 
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `EnableWindowsDialog` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `EnableWindowsDialog` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -1224,7 +1224,7 @@ Per caricare o salvare lo stato dei gruppi e le schede MDI e l'elenco dei docume
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `LoadMDIState` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `LoadMDIState` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1260,7 +1260,7 @@ Utilizzare questa funzione per creare una nuova finestra (nuovo gruppo a schede)
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `MDITabNewGroup` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `MDITabNewGroup` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1280,7 +1280,7 @@ Il valore predefinito è `FALSE`.
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `m_bCanCovertControlBarToMDIChild` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `m_bCanCovertControlBarToMDIChild` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -1621,7 +1621,7 @@ Se non è stato elaborato `OnShowMDITabContextMenu`, non verrà visualizzato il 
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `OnShowMDITabContextMenu` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `OnShowMDITabContextMenu` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1856,7 +1856,7 @@ Per caricare o salvare lo stato dei gruppi e le schede MDI e l'elenco dei docume
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `SaveMDIState` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `SaveMDIState` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1939,7 +1939,7 @@ Chiamare questo metodo per visualizzare o nascondere il riquadro. Non usare `Sho
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `ShowPane` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `ShowPane` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `ShowWindowsDialog` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `ShowWindowsDialog` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1980,7 +1980,7 @@ Usare questo metodo per convertire un documento a schede in un riquadro ancorato
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come `TabbedDocumentToControlBar` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../visual-cpp-samples.md).
+L'esempio seguente illustra come `TabbedDocumentToControlBar` viene utilizzata la [esempio VisualStudioDemo: Applicazione di Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 

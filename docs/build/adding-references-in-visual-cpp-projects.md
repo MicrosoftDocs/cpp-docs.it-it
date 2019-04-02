@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 8daba00432d7f14c8517da3ed4dc506cfd80865a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827190"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780470"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilizzo di librerie e componenti
 
@@ -20,7 +20,7 @@ Spesso, un progetto C++ deve chiamare funzioni o accedere ai dati in un file bin
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Elaborazione delle librerie scaricati tramite vcpkg
 
-Per utilizzare una libreria che è stato scaricato tramite il **vcpkg** Gestione pacchetti, è possibile ignorare le istruzioni riportate di seguito. Vedere [vcpkg: Gestione pacchetti per C++ per Windows, Linux e MacOS](../vcpkg.md#integrate-with-visual-studio-windows) per altre informazioni.
+Per utilizzare una libreria che è stato scaricato tramite il **vcpkg** Gestione pacchetti, è possibile ignorare le istruzioni riportate di seguito. Vedere [vcpkg: Gestione pacchetti per C++ per Windows, Linux e MacOS](vcpkg.md#integrate-with-visual-studio-windows) per altre informazioni.
 
 ## <a name="consuming-static-libraries"></a>Utilizzo di librerie statiche
 
@@ -167,4 +167,4 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento alla pagina di proprietà progetto C++](reference/property-pages-visual-cpp.md)<br>
-[Impostare il compilatore C++ e creare proprietà in Visual Studio](working-with-project-properties.md)
+[Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](working-with-project-properties.md)

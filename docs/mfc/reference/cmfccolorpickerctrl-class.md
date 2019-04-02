@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1977717ee590acb63655ba21bfa5eb6bfe7c9bd8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276013"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772358"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Classe CMFCColorPickerCtrl
 
@@ -111,7 +111,7 @@ Eseguire la procedura seguente per incorporare il `CMFCColorPickerCtrl` controll
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come configurare un `CMFCColorPickerCtrl` oggetti utilizzando diversi metodi nel `CMFCColorPickerCtrl` classe. Nell'esempio viene illustrato come impostare il tipo di controllo di selezione e come impostare relativo colore, hue, luminosità e saturazione. L'esempio fa parte del [esempio di nuovi controlli](../../visual-cpp-samples.md).
+L'esempio seguente illustra come configurare un `CMFCColorPickerCtrl` oggetti utilizzando diversi metodi nel `CMFCColorPickerCtrl` classe. Nell'esempio viene illustrato come impostare il tipo di controllo di selezione e come impostare relativo colore, hue, luminosità e saturazione. L'esempio fa parte del [esempio di nuovi controlli](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]

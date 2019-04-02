@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
-ms.openlocfilehash: eb320dda9a69937e49f669153bb77e484c5a15fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99c18e899a46c5e1d7a643ba32546f827c320373
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549591"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768978"
 ---
 # <a name="compiler-error-c3833"></a>Errore del compilatore C3833
 
 'type': tipo di destinazione non è valido per pointer_type
 
-Un' [interior_ptr](../../windows/interior-ptr-cpp-cli.md) oppure [pin_ptr](../../windows/pin-ptr-cpp-cli.md) è stato dichiarato in modo non corretto.
+Un' [interior_ptr](../../extensions/interior-ptr-cpp-cli.md) oppure [pin_ptr](../../extensions/pin-ptr-cpp-cli.md) è stato dichiarato in modo non corretto.
 
 L'esempio seguente genera l'errore C3833:
 

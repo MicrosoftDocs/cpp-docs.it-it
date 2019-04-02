@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ce0e3a8ecf4774bc0d259c0304b1e88532336bd1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285347"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771149"
 ---
 # <a name="coleipframewndex-class"></a>Classe COleIPFrameWndEx
 
@@ -170,7 +170,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come creare una sottoclasse per un'istanza della classe `COleIPFrameWndEx` e sostituirne il metodo. L'esempio illustra come sostituire i metodi `OnDestory` , `RepositionFrame` , `RecalcLayout` e `CalcWindowRect` . Questo frammento di codice fa parte dell' [esempio di Word Pad](../../visual-cpp-samples.md).
+L'esempio seguente illustra come creare una sottoclasse per un'istanza della classe `COleIPFrameWndEx` e sostituirne il metodo. L'esempio illustra come sostituire i metodi `OnDestory` , `RepositionFrame` , `RecalcLayout` e `CalcWindowRect` . Questo frammento di codice fa parte dell' [esempio di Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 

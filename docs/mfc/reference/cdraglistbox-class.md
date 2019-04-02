@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: 6574ffaf8c4b8c0414c00ef2f4a31f6ed74ebe9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294941"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781588"
 ---
 # <a name="cdraglistbox-class"></a>Classe CDragListBox
 
@@ -218,7 +218,7 @@ Indice in base zero dell'elemento di casella dell'elenco di trascinamento.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC TSTCON](../../visual-cpp-samples.md)<br/>
+[Esempio MFC TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [Classe CListBox](../../mfc/reference/clistbox-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CListBox](../../mfc/reference/clistbox-class.md)

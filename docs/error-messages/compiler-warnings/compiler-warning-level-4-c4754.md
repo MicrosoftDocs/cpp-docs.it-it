@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525171"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780353"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avviso del compilatore (livello 4) C4754
 
@@ -19,7 +19,7 @@ Le regole di conversione per operazioni aritmetiche in un confronto indicano che
 
 Dal momento che il risultato del confronto è sempre lo stesso viene generato l'avviso C4754. Questo indica che uno dei rami della condizione non viene mai eseguito, molto probabilmente perché l'espressione Integer collegata non è corretta. Tale errore del codice si verifica spesso nei controlli dell'overflow Integer nelle architetture a 64 bit.
 
-Le regole di conversione degli Integer sono complesse ed esistono molte insidie sottili. Come alternativa a correggere ogni avviso C4754, è possibile aggiornare il codice per usare la [Libreria SafeInt](../../windows/safeint-library.md).
+Le regole di conversione degli Integer sono complesse ed esistono molte insidie sottili. Come alternativa a correggere ogni avviso C4754, è possibile aggiornare il codice per usare la [Libreria SafeInt](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Esempio
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265522"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773827"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Procedure guidate ed editor risorse
 
@@ -46,7 +46,7 @@ La finestra proprietà verrà creata funzioni membro vuoto del gestore di messag
 
 Usare Visual C++ [editor di risorse](../windows/resource-editors.md) per creare e modificare i menu, finestre di dialogo, i controlli personalizzati, tasti di scelta rapida, bitmap, icone, cursori, stringhe e le risorse della versione. A partire da Visual C++ versione 4.0, un editor barra degli strumenti rende molto più semplice la creazione di barre degli strumenti.
 
-Per agevolare ulteriormente, la libreria Microsoft Foundation Class offre un file denominato comune. RES, che contiene le risorse di "ClipArt" che è possibile copiare dai più comuni. RES e incollare nel file di risorsa. COMUNI. RES include i pulsanti della barra degli strumenti, comuni cursori, icone e altro ancora. È possibile usare, modificare e ridistribuire le risorse nell'applicazione. Per altre informazioni sui comuni. RES, vedere la [Clipart esempio](../visual-cpp-samples.md).
+Per agevolare ulteriormente, la libreria Microsoft Foundation Class offre un file denominato comune. RES, che contiene le risorse di "ClipArt" che è possibile copiare dai più comuni. RES e incollare nel file di risorsa. COMUNI. RES include i pulsanti della barra degli strumenti, comuni cursori, icone e altro ancora. È possibile usare, modificare e ridistribuire le risorse nell'applicazione. Per altre informazioni sui comuni. RES, vedere la [Clipart esempio](../overview/visual-cpp-samples.md).
 
 La creazione guidata applicazione MFC, le procedure guidate di Visual C++, gli editor di risorse e il framework MFC non molto lavoro per l'utente e la gestione del codice molto più semplice. La maggior parte del codice specifico dell'applicazione è in classi documento e visualizzazione.
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283657"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778299"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -414,7 +414,7 @@ Specifica un flag che indica se segnalare le modifiche alla chiave specificata e
 *dwNotifyFilter*<br/>
 Specifica un set di flag che controllano quali modifiche deve essere segnalato. Questo parametro può essere una combinazione dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |REG_NOTIFY_CHANGE_NAME|Notificare al chiamante se viene aggiunto o eliminata una sottochiave.|
 |REG_NOTIFY_CHANGE_ATTRIBUTES|Notificare al chiamante di modifiche agli attributi della chiave, ad esempio le informazioni sul descrittore di sicurezza.|
@@ -887,7 +887,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 *si*<br/>
 Specifica i componenti del descrittore di sicurezza da impostare. Il valore può essere una combinazione dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |DACL_SECURITY_INFORMATION|Imposta l'elenco di controllo di accesso discrezionali della chiave (DACL). La chiave deve avere accesso WRITE_DAC, o il processo di chiamata deve essere il proprietario dell'oggetto.|
 |GROUP_SECURITY_INFORMATION|Imposta l'ID di sicurezza della chiave primaria di gruppo (SID). La chiave deve avere accesso WRITE_OWNER o il processo di chiamata deve essere il proprietario dell'oggetto.|
@@ -1058,5 +1058,5 @@ Le chiamate al metodo terza [RegSetValueEx](/windows/desktop/api/winreg/nf-winre
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio DCOM](../../visual-cpp-samples.md)<br/>
+[Esempio DCOM](../../overview/visual-cpp-samples.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

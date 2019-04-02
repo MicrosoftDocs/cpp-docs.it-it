@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 277f82874426a008f598c052966ad81f46c45732
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305042"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766807"
 ---
 # <a name="drag-and-drop-ole"></a>Trascinamento (OLE)
 
@@ -26,7 +26,7 @@ Quando si usa il trascinamento della selezione OLE, è rimuovere due passaggi da
 
 Uso della selezione e trascinamento OLE, dati possono essere trasferiti da una posizione a un'altra all'interno di un documento, tra documenti diversi o tra le applicazioni. Può essere implementata in un contenitore o un'applicazione server e qualsiasi applicazione può essere un'origine di rilascio, un obiettivo di rilascio o entrambi. Se un'applicazione ha implementato il supporto sia origine di trascinamento e obiettivo di rilascio, trascinamento della selezione è abilitata tra le finestre figlio, o all'interno di una finestra. Questa funzionalità può rendere più facile da utilizzare l'applicazione.
 
-Se si vuole solo usare le funzionalità di trascinamento e rilascio di OLE, vedere [trascinamento della selezione: Personalizzazione](../mfc/drag-and-drop-customizing.md). È possibile usare le tecniche descritte in questo articolo per rendere le applicazioni non OLE di origini di trascinamento. L'articolo [trascinamento della selezione: Implementazione di obiettivo di rilascio](../mfc/drag-and-drop-implementing-a-drop-target.md) viene descritto come implementare il supporto per la destinazione di trascinamento per OLE e le applicazioni non OLE. Inoltre sarà utile esaminare gli esempi OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md).
+Se si vuole solo usare le funzionalità di trascinamento e rilascio di OLE, vedere [trascinamento della selezione: Personalizzazione](../mfc/drag-and-drop-customizing.md). È possibile usare le tecniche descritte in questo articolo per rendere le applicazioni non OLE di origini di trascinamento. L'articolo [trascinamento della selezione: Implementazione di obiettivo di rilascio](../mfc/drag-and-drop-implementing-a-drop-target.md) viene descritto come implementare il supporto per la destinazione di trascinamento per OLE e le applicazioni non OLE. Inoltre sarà utile esaminare gli esempi OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md).
 
 Se non è stato letto il [oggetti dati e origini dati (OLE)](../mfc/data-objects-and-data-sources-ole.md) serie di articoli, è possibile farlo ora. Questi articoli illustrano le nozioni di base del trasferimento di dati e come implementarla nelle proprie applicazioni.
 

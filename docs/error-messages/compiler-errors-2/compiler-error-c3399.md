@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: e400c181f987a83588f8aedc63ecdedb82be310f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d05a861a2baedb86482503b6860098f12c41bd78
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568678"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767172"
 ---
 # <a name="compiler-error-c3399"></a>Errore del compilatore C3399
 
@@ -19,7 +19,7 @@ ms.locfileid: "50568678"
 
 Quando si specifica il vincolo `gcnew()` , si indica che il tipo di vincolo avrà un costruttore senza parametri. Quindi, se si tenta di creare un'istanza del tipo e di passare un parametro viene generato un errore.
 
-Vedere [vincoli su parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) per altre informazioni.
+Vedere [vincoli su parametri di tipo generico (C + + CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) per altre informazioni.
 
 ## <a name="example"></a>Esempio
 

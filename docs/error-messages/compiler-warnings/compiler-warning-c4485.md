@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: 7138f1a3cecaaf75fbab01fd1aee18529b7a3a84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5afb829485e0e9533a14e818e6d6785f268a83b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652460"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772091"
 ---
 # <a name="compiler-warning-c4485"></a>Avviso del compilatore C4485
 
@@ -19,7 +19,7 @@ ms.locfileid: "50652460"
 
 Sostituisce una funzione di accesso, con o senza il `virtual` parola chiave, una funzione di accesso di classe di base, ma la `override` o `new` identificatore non faceva parte della firma della funzione esegue l'override. Aggiungere il `new` o `override` identificatore per risolvere il problema.
 
-Visualizzare [eseguire l'override](../../windows/override-cpp-component-extensions.md) e [new (nuovo slot in vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) per altre informazioni.
+Visualizzare [eseguire l'override](../../extensions/override-cpp-component-extensions.md) e [new (nuovo slot in vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) per altre informazioni.
 
 C4485 viene sempre generato come errore. Usare la [avviso](../../preprocessor/warning.md) pragma per sopprimere C4485.
 

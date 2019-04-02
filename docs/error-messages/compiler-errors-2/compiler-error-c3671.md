@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: 4b99578ed40b4ff70f3606840198b7062083ca83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4534b11f3aedf638f69337fb6a7af778e086bb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667043"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778988"
 ---
 # <a name="compiler-error-c3671"></a>Errore del compilatore C3671
 
 'function_1': funzione non esegue l'override di 'funzione_2'
 
-Quando si usa la sintassi di override esplicita, il compilatore genera un errore se una funzione non esegue l'override.  Visualizzare [esegue l'override esplicito](../../windows/explicit-overrides-cpp-component-extensions.md) per altre informazioni.
+Quando si usa la sintassi di override esplicita, il compilatore genera un errore se una funzione non esegue l'override.  Visualizzare [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md) per altre informazioni.
 
 ## <a name="example"></a>Esempio
 

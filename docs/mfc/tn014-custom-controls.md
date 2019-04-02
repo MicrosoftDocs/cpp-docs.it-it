@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297489"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772124"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Controlli personalizzati
 
 In questa nota viene descritto il supporto MFC per i controlli di disegno automatico e personalizzati. Inoltre descrive creazione di una sottoclasse dinamica e viene descritta la relazione tra [CWnd](../mfc/reference/cwnd-class.md) gli oggetti e `HWND`s.
 
-Nell'applicazione MFC di esempio CTRLTEST viene illustrato come utilizzare molti controlli personalizzati. Vedere il codice sorgente per l'esempio MFC generale [CTRLTEST](../visual-cpp-samples.md) e Guida in linea.
+Nell'applicazione MFC di esempio CTRLTEST viene illustrato come utilizzare molti controlli personalizzati. Vedere il codice sorgente per l'esempio MFC generale [CTRLTEST](../overview/visual-cpp-samples.md) e Guida in linea.
 
 ## <a name="owner-draw-controlsmenus"></a>Menu e controlli per il disegno personalizzato
 
@@ -104,7 +104,7 @@ Per le caselle di riepilogo e le caselle combinate di disegno automatico, `OnDel
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>Esempi di controlli e di menu di disegno automatico
 
-L'esempio MFC generale [CTRLTEST](../visual-cpp-samples.md) vengono forniti esempi di un menu di disegno automatico e una casella di riepilogo di disegno automatico.
+L'esempio MFC generale [CTRLTEST](../overview/visual-cpp-samples.md) vengono forniti esempi di un menu di disegno automatico e una casella di riepilogo di disegno automatico.
 
 L'esempio più comune di un pulsante di disegno automatico è un pulsante bitmap. Un pulsante bitmap è un pulsante che mostra una, due o tre immagini bitmap per i diversi stati. Un esempio di questo oggetto è disponibile nella classe MFC [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
 
@@ -130,7 +130,7 @@ Creazione di una sottoclasse dinamica è possibile ottenere usando i metodi [CWn
 
 Entrambe le routine associano un oggetto `CWnd` a un `HWND` esistente. `SubclassWindow` accetta `HWND` direttamente. `SubclassDlgItem` è una funzione di supporto che accetta un ID di controllo e la finestra padre. `SubclassDlgItem` è progettato per collegare gli oggetti C++ ai controlli finestra di dialogo creati da un modello di finestra di dialogo.
 
-Vedere le [CTRLTEST](../visual-cpp-samples.md) riportato per alcuni esempi di quando utilizzare `SubclassWindow` e `SubclassDlgItem`.
+Vedere le [CTRLTEST](../overview/visual-cpp-samples.md) riportato per alcuni esempi di quando utilizzare `SubclassWindow` e `SubclassDlgItem`.
 
 ## <a name="see-also"></a>Vedere anche
 

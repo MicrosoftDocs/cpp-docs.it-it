@@ -16,16 +16,16 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: a66c429626938f1bf10d715c1fecac341a3ba000
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da255da9fb9ff7a652fa1af796568a8e50759dc4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446046"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777701"
 ---
 # <a name="event-handling-in-com"></a>Gestione di eventi in COM
 
-Nella gestione degli eventi COM, si configura un ricevitore di origine e di eventi eventi usando il [event_source](../windows/event-source.md) e [event_receiver](../windows/event-receiver.md) rispettivamente gli attributi, specificare `type` = `com`. Questi attributi inseriscono il codice appropriato per le interfacce personalizzate, dispatch e duali al fine di consentire alle classi a cui vengono applicati di generare eventi e gestirli dai punti di connessione COM.
+Nella gestione degli eventi COM, si configura un ricevitore di origine e di eventi eventi usando il [event_source](../windows/attributes/event-source.md) e [event_receiver](../windows/attributes/event-receiver.md) rispettivamente gli attributi, specificare `type` = `com`. Questi attributi inseriscono il codice appropriato per le interfacce personalizzate, dispatch e duali al fine di consentire alle classi a cui vengono applicati di generare eventi e gestirli dai punti di connessione COM.
 
 ## <a name="declaring-events"></a>Dichiarazione di eventi
 

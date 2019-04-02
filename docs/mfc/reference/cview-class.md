@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305016"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775309"
 ---
 # <a name="cview-class"></a>Classe CView
 
@@ -351,7 +351,7 @@ Un valore compreso il DROPEFFECT tipo enumerato, che indica il tipo di rilascio 
 
 - DROPEFFECT_MOVE per MK_ALT crea una copia dell'oggetto eliminato e l'eliminazione dell'oggetto originale. Si tratta in genere l'effetto di rilascio predefinito, quando la vista può accettare questo oggetto dati.
 
-Per altre informazioni, vedere l'esempio di concetti avanzati MFC [OCLIENT](../../visual-cpp-samples.md).
+Per altre informazioni, vedere l'esempio di concetti avanzati MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Note
 
@@ -405,7 +405,7 @@ Un valore compreso il DROPEFFECT tipo enumerato, che indica il tipo di rilascio 
 
 - DROPEFFECT_MOVE per MK_ALT crea una copia dell'oggetto eliminato e l'eliminazione dell'oggetto originale. Si tratta in genere l'effetto di rilascio predefinito, quando la vista può accettare l'oggetto dati.
 
-Per altre informazioni, vedere l'esempio di concetti avanzati MFC [OCLIENT](../../visual-cpp-samples.md).
+Per altre informazioni, vedere l'esempio di concetti avanzati MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Note
 
@@ -445,7 +445,7 @@ Un valore compreso il DROPEFFECT tipo enumerato, che indica il tipo di rilascio 
 
 - DROPEFFECT_SCROLL indica che un'operazione di scorrimento di trascinamento sta per verificarsi o è in corso nella visualizzazione di destinazione.
 
-Per altre informazioni, vedere l'esempio di concetti avanzati MFC [OCLIENT](../../visual-cpp-samples.md).
+Per altre informazioni, vedere l'esempio di concetti avanzati MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Note
 
@@ -871,7 +871,7 @@ Se *lHint* è 0 e *pHint* è NULL, il documento ha inviato una notifica di un ag
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC Sample MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[MFC Sample MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>

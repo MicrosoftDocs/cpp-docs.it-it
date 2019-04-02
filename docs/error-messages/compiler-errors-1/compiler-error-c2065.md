@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ae7f582de5d6c45df34c42164756356a9c794d31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482517"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778754"
 ---
 # <a name="compiler-error-c2065"></a>Errore del compilatore C2065
 
@@ -205,7 +205,7 @@ int main() {
 
 ## <a name="example-ccli-type-deduction-failure"></a>Esempio: C + + / errore di deduzione del tipo dell'interfaccia della riga
 
-Questo errore può verificarsi quando si chiama una funzione generica, se l'argomento tipo designato non può essere dedotto dai parametri utilizzati. Per altre informazioni, vedere [funzioni generiche (C + + CLI)](../../windows/generic-functions-cpp-cli.md).
+Questo errore può verificarsi quando si chiama una funzione generica, se l'argomento tipo designato non può essere dedotto dai parametri utilizzati. Per altre informazioni, vedere [funzioni generiche (C + + CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp

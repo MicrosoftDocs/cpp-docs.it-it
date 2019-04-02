@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270969"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769719"
 ---
 # <a name="general-mfc-topics"></a>Argomenti MFC generali
 
@@ -23,7 +23,7 @@ Il framework MFC rappresenta un metodo efficace che consente di creare applicazi
 
 ## <a name="in-this-section"></a>In questa sezione
 
-`MFC Samples`, che vengono forniti [esempi di Visual C++](../visual-cpp-samples.md)
+`MFC Samples`, che vengono forniti [esempi di Visual C++](../overview/visual-cpp-samples.md)
 
 [Uso dei file di origine MFC](../mfc/using-the-mfc-source-files.md)
 

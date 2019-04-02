@@ -2,16 +2,16 @@
 title: 'Procedura dettagliata: Compilazione di un c++ /CX Program nella riga di comando'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809509"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766066"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Procedura dettagliata: Compilazione di un c++ /CX Program nella riga di comando
 
-È possibile creare programmi Visual C++ destinati a Windows Runtime e compilarli dalla riga di comando. Visual C++ supporta le estensioni del componente Visual C++ (C++/CX), che offrono tipi e operatori aggiuntivi per il modello di programmazione Windows Runtime. È possibile usare c++ /CX per creare App per la Universal Windows Platform (UWP), Windows Phone 8.1 e Windows desktop. Per altre informazioni, vedere [una presentazione di c++ /Visual c++ /CX](https://msdn.microsoft.com/magazine/dn166929.aspx) e [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md).
+È possibile creare programmi Visual C++ destinati a Windows Runtime e compilarli dalla riga di comando. Visual C++ supporta le estensioni del componente Visual C++ (C++/CX), che offrono tipi e operatori aggiuntivi per il modello di programmazione Windows Runtime. È possibile usare c++ /CX per creare App per la Universal Windows Platform (UWP), Windows Phone 8.1 e Windows desktop. Per altre informazioni, vedere [una presentazione di c++ /Visual c++ /CX](https://msdn.microsoft.com/magazine/dn166929.aspx) e [Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md).
 
 Questa procedura dettagliata illustra come usare un editor di testo per creare un programma C++/CX di base, quindi compilarlo nella riga di comando. È possibile usare il proprio programma C++/CX anziché digitare quello riportato nell'esempio oppure è possibile usare esempi di codice C++/CX di un altro articolo della Guida. Questa tecnica è utile per la compilazione e test di piccoli moduli che non dispongono di alcun elemento dell'interfaccia utente.)
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301636"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768289"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Classe CMFCDesktopAlertWndInfo
 
@@ -47,7 +47,7 @@ class CMFCDesktopAlertWndInfo
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Handle per l'icona da visualizzare.|
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|L'ID di comando associato a un collegamento nella finestra di avviso.|
@@ -68,7 +68,7 @@ Se la finestra di dialogo predefinita non è sufficiente, è possibile creare un
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare i vari membri nel `CMFCDesktopAlertWndInfo` classe. L'esempio illustra come impostare l'handle dell'icona è visualizzata, il testo visualizzato nella finestra di avviso, il collegamento visualizzato nella finestra di avviso e l'ID di comando che è associato a un collegamento nella finestra di avviso. In questo esempio fa parte di [esempio dimostrativo avviso Desktop](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare i vari membri nel `CMFCDesktopAlertWndInfo` classe. L'esempio illustra come impostare l'handle dell'icona è visualizzata, il testo visualizzato nella finestra di avviso, il collegamento visualizzato nella finestra di avviso e l'ID di comando che è associato a un collegamento nella finestra di avviso. In questo esempio fa parte di [esempio dimostrativo avviso Desktop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a4d9271153618fab47a8b5b9cb11b2a5eed35230
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330086"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769303"
 ---
 # <a name="compiler-error-c3409"></a>Errore del compilatore C3409
 
@@ -19,7 +19,7 @@ ms.locfileid: "51330086"
 
 ## <a name="remarks"></a>Note
 
-Le parentesi quadre sono state interpretate dal compilatore come un [attributo](../../windows/cpp-attributes-reference.md) blocco, ma non sono presenti attributi sono stati trovati.
+Le parentesi quadre sono state interpretate dal compilatore come un [attributo](../../windows/attributes-alphabetical-reference.md) blocco, ma non sono presenti attributi sono stati trovati.
 
 Il compilatore può generare questo errore quando si usano le parentesi quadre come parte della definizione di un'espressione lambda. Questo errore si verifica quando il compilatore non è possibile determinare se le parentesi quadre sono parte della definizione di un'espressione lambda o di un blocco di attributi. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../../cpp/lambda-expressions-in-cpp.md).
 
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[attribute](../../windows/cpp-attributes-reference.md)<br/>
+[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
 [Espressioni lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Sintassi delle espressioni lambda](../../cpp/lambda-expression-syntax.md)

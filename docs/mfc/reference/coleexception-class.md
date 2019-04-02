@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 4b5dd2de2924b62dd76d7f16a494566849357de8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6874df550103abf727573d8e34b8adadd9643db8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300362"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767808"
 ---
 # <a name="coleexception-class"></a>Classe COleException
 
@@ -109,6 +109,6 @@ Per altre informazioni su SCODE, vedere [Structure of COM Error Codes](/windows/
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
+[Esempio MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [Classe CException](../../mfc/reference/cexception-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)

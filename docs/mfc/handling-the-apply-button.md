@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279445"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770837"
 ---
 # <a name="handling-the-apply-button"></a>Gestione del pulsante Applica
 
@@ -30,7 +30,7 @@ Per una pagina come modificata del report e abilitare il pulsante Applica, chiam
 
 Per implementare l'effetto del pulsante Applica, la finestra delle proprietà deve indicare il relativo proprietario o un altro oggetto esterno nell'applicazione, per applicare le impostazioni correnti in pagine delle proprietà. Allo stesso tempo, la finestra delle proprietà debba disabilitare il pulsante Applica chiamando `CPropertyPage::SetModified( FALSE )` per tutte le pagine che hanno applicato le modifiche all'oggetto esterno.
 
-Per un esempio di questo processo, vedere l'esempio MFC generale [PROPDLG](../visual-cpp-samples.md).
+Per un esempio di questo processo, vedere l'esempio MFC generale [PROPDLG](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vedere anche
 

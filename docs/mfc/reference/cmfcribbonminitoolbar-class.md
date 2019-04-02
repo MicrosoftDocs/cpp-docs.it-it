@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 462a4aa04ddc542db8aba734ed93ab0fae905dad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 394182aa0f9c967524ed0db510d0b9cc0739118e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283839"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777155"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
 
@@ -106,7 +106,7 @@ Utilizzare questa funzione per impostare l'elenco di comandi da visualizzare nel
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `SetCommands` metodo del `CMFCRibbonMiniToolBar` classe. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `SetCommands` metodo del `CMFCRibbonMiniToolBar` classe. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]
 

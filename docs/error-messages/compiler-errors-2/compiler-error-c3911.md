@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
-ms.openlocfilehash: 6c00a3bb388130d9a570e9fd731a9ed1200ed179
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25bf8def4e0a8085e20dc6ba9a04dc7f27cee651
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622183"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775985"
 ---
 # <a name="compiler-error-c3911"></a>Errore del compilatore C3911
 
@@ -19,7 +19,7 @@ ms.locfileid: "50622183"
 
 Metodo della funzione di accesso di un evento non è stato dichiarato in modo corretto.
 
-Per altre informazioni, vedere [evento](../../windows/event-cpp-component-extensions.md).
+Per altre informazioni, vedere [evento](../../extensions/event-cpp-component-extensions.md).
 
 L'esempio seguente genera l'errore C3911:
 

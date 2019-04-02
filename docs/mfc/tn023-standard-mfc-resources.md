@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277677"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780314"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Risorse MFC standard
 
@@ -23,7 +23,7 @@ In questa nota descrive le risorse standard fornito con e necessari per la libre
 
 MFC offre due categorie di risorse predefinite che è possibile usare nell'applicazione: ClipArt risorse e le risorse di framework standard.
 
-Risorse ClipArt sono risorse aggiuntive che il framework non dipende, ma può essere utile da aggiungere all'interfaccia utente dell'applicazione. Nell'esempio MFC generale sono contenute le seguenti risorse ClipArt [CLIPART](../visual-cpp-samples.md):
+Risorse ClipArt sono risorse aggiuntive che il framework non dipende, ma può essere utile da aggiungere all'interfaccia utente dell'applicazione. Nell'esempio MFC generale sono contenute le seguenti risorse ClipArt [CLIPART](../overview/visual-cpp-samples.md):
 
 - Common.rc: Un singolo file di risorse che contiene:
 

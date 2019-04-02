@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2748
 ms.assetid: b63ac78b-a200-499c-afea-15af1a1e819e
-ms.openlocfilehash: a85ee151d9a4d62cc4b95248d669ff924365a95a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 251492b736ba3325ed263a9a8754fc8fa480c664
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655637"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771877"
 ---
 # <a name="compiler-error-c2748"></a>Errore del compilatore C2748
 
 per la creazione della matrice gestita o WinRT occorre specificare la dimensione della matrice o l'inizializzatore di matrice
 
-Una matrice gestita o WinRT è in formato non valido. Per altre informazioni, vedere [matrice](../../windows/arrays-cpp-component-extensions.md).
+Una matrice gestita o WinRT è in formato non valido. Per altre informazioni, vedere [matrice](../../extensions/arrays-cpp-component-extensions.md).
 
 L'esempio seguente genera l'errore C2748 e mostra come risolverlo:
 

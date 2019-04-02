@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: a155d56cc234c11534f5456ef92ea913e094f1a8
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 506ead1b6e96f59717a92b6b0c48db0270b1822f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627280"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779521"
 ---
 # <a name="exception-handling-in-visual-c"></a>Gestione di eccezioni in Visual C++
 
@@ -33,7 +33,7 @@ Visual C++ supporta tre tipi di gestione delle eccezioni:
 
 Usare la [/EH](../build/reference/eh-exception-handling-model.md) opzione del compilatore per specificare il tipo di gestione delle eccezioni da usare in un progetto. Gestione delle eccezioni C++ è il valore predefinito. Non combinare i meccanismi di gestione degli errori; ad esempio non usare le eccezioni C++ con la gestione strutturata delle eccezioni. L'uso della gestione delle eccezioni C++ rende il codice più portabile e consente di gestire eccezioni di ogni tipo. Per altre informazioni sugli svantaggi della gestione strutturata delle eccezioni, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per consigli su come combinare le macro MFC ed eccezioni C++, vedere [alle eccezioni: Utilizzo delle macro MFC ed eccezioni C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-Per informazioni sulla gestione delle eccezioni nelle applicazioni CLR, vedere [gestione delle eccezioni (C + c++ /CLI e c++ /CX)](../windows/exception-handling-cpp-component-extensions.md).
+Per informazioni sulla gestione delle eccezioni nelle applicazioni CLR, vedere [gestione delle eccezioni (C + c++ /CLI e c++ /CX)](../extensions/exception-handling-cpp-component-extensions.md).
 
 Per informazioni sulla gestione delle eccezioni nei x64 processori, vedere [x64 la gestione delle eccezioni](../build/exception-handling-x64.md).
 

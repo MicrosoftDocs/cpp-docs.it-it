@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477987"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768068"
 ---
 # <a name="new-operator-c"></a>Operatore new (C++)
 
 Alloca memoria per un oggetto o una matrice di oggetti di *-nome del tipo* dall'archiviazione disponibile e restituisce un puntatore opportunamente tipizzato, diverso da zero per l'oggetto.
 
 > [!NOTE]
->  Estensioni del componente C++ Microsoft fornisce il supporto per la **nuovo** (parola chiave) per aggiungere le voci dello slot vtable. Per altre informazioni, vedere [new (nuovo slot in vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Estensioni del componente C++ Microsoft fornisce il supporto per la **nuovo** (parola chiave) per aggiungere le voci dello slot vtable. Per altre informazioni, vedere [new (nuovo slot in vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,7 +29,7 @@ Alloca memoria per un oggetto o una matrice di oggetti di *-nome del tipo* dall'
 
 Se ha esito negativo **nuove** restituisce zero o genera un'eccezione, vedere [nuova ed eliminare operatori](../cpp/new-and-delete-operators.md) per altre informazioni. È possibile modificare questo comportamento predefinito scrivendo una routine di gestione delle eccezioni personalizzata e chiamando il [set_new_handler](../c-runtime-library/reference/set-new-handler.md) funzione della libreria run-time con il nome di funzione come relativo argomento.
 
-Per informazioni su come creare un oggetto nell'heap gestito, vedere [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).
+Per informazioni su come creare un oggetto nell'heap gestito, vedere [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
 Quando **nuovo** viene usato per allocare memoria per un oggetto di classe C++, il costruttore dell'oggetto viene chiamato dopo che la memoria viene allocata.
 
@@ -61,7 +61,7 @@ Se si usa l'operatore **nuove** senza argomenti aggiuntivi e compilare con la [/
 
 Nell'elenco seguente descrive gli elementi di grammatica del **nuovo**:
 
-*selezione host*<br/>
+*placement*<br/>
 Fornisce un modo per passare argomenti aggiuntivi se si esegue l'overload **nuovo**.
 
 *type-name*<br/>

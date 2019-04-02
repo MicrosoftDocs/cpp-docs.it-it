@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270735"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776102"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Appunti: Copiare e incollare dati
 
@@ -32,7 +32,7 @@ Prima di implementare operazioni di copia o Incolla, è innanzitutto necessario 
 
 1. Se l'utente ha scelto di un'operazione di taglio invece di un'operazione di copia, eliminare i dati selezionati dall'applicazione.
 
-Per un esempio di questa sequenza, vedere la `OnEditCut` e `OnEditCopy` programmi di esempio di funzioni in OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md). Si noti che questi esempi di manutenzione di un puntatore ai dati attualmente selezionati, il passaggio 1 è già stato completato.
+Per un esempio di questa sequenza, vedere la `OnEditCut` e `OnEditCopy` programmi di esempio di funzioni in OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md). Si noti che questi esempi di manutenzione di un puntatore ai dati attualmente selezionati, il passaggio 1 è già stato completato.
 
 ##  <a name="_core_pasting_data"></a> Operazione Incolla dati
 
@@ -50,7 +50,7 @@ Operazione Incolla dati è più complicato rispetto a copiarlo, in quanto è nec
 
 1. Operazione Incolla del formato.
 
-Per un esempio del funzionamento, vedere l'implementazione del `OnEditPaste` funzioni membro in classi di visualizzazione definita in programmi di esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) e [HIERSVR](../visual-cpp-samples.md).
+Per un esempio del funzionamento, vedere l'implementazione del `OnEditPaste` funzioni membro in classi di visualizzazione definita in programmi di esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) e [HIERSVR](../overview/visual-cpp-samples.md).
 
 > [!TIP]
 >  Il vantaggio principale di separare l'operazione Incolla nella propria funzione è può essere utilizzato lo stesso codice incollare quando i dati viene eliminati all'interno dell'applicazione durante un'operazione di trascinamento e rilascio. Come OCLIENT e HIERSVR, il `OnDrop` funzione può anche chiamare `DoPasteItem`, Riutilizza il codice scritto per implementare le operazioni Incolla.

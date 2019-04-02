@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816100"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777818"
 ---
 # <a name="clr-restrictions"></a>Limitazioni di /clr
 
@@ -17,7 +17,7 @@ Tenere presente le restrizioni seguenti sull'utilizzo degli **/clr**:
 
 - In un gestore di eccezioni strutturate, esistono restrizioni sull'utilizzo `_alloca` durante la compilazione con **/clr**. Per altre informazioni, vedere [alloca](../../c-runtime-library/reference/alloca.md).
 
-- Non è valida con l'uso di controlli degli errori di run-time **/clr**. Per altre informazioni, vedere [Procedura: Usare i controlli runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- Non è valida con l'uso di controlli degli errori di run-time **/clr**. Per altre informazioni, vedere [Procedura: Usare i controlli di runtime nativi](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Quando **/clr** viene usato per compilare un programma che usa solo la sintassi C++ standard, le linee guida seguenti si applicano all'utilizzo di assembly inline:
 
@@ -29,7 +29,7 @@ Tenere presente le restrizioni seguenti sull'utilizzo degli **/clr**:
 
 - Il [naked](../../cpp/naked-cpp.md) [declspec](../../cpp/declspec.md) modificatore viene ignorato in /clr.
 
-- La funzione di conversione l'impostazione [set_se_translator](../../c-runtime-library/reference/set-se-translator.md) influirà solo catch nel codice non gestito. Visualizzare [gestione delle eccezioni](../../windows/exception-handling-cpp-component-extensions.md) per altre informazioni.
+- La funzione di conversione l'impostazione [set_se_translator](../../c-runtime-library/reference/set-se-translator.md) influirà solo catch nel codice non gestito. Visualizzare [gestione delle eccezioni](../../extensions/exception-handling-cpp-component-extensions.md) per altre informazioni.
 
 - Il confronto dei puntatori a funzione non è consentito in **/clr**.
 

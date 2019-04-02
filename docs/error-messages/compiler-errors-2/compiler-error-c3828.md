@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
-ms.openlocfilehash: 68a82105a2ff7d58090e9f345bf7aafb34d492d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f499bb2a8fd6d3148935daec89835b79d2ff5b49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515284"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770551"
 ---
 # <a name="compiler-error-c3828"></a>Errore del compilatore C3828
 
 'object type': gli argomenti di posizione non consentiti durante la creazione di istanze di gestione o WinRTclasses
 
-Quando si crea un oggetto di un tipo gestito o un tipo Windows Runtime, non è possibile utilizzare il form di posizione dell'operatore [ref new, gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md) oppure [nuove](../../cpp/new-operator-cpp.md).
+Quando si crea un oggetto di un tipo gestito o un tipo Windows Runtime, non è possibile utilizzare il form di posizione dell'operatore [ref new, gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) oppure [nuove](../../cpp/new-operator-cpp.md).
 
 L'esempio seguente genera l'errore C3828 e mostra come risolverlo:
 

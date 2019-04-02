@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 87beb468fb8fe61358a03e2cd287903a268a18ba
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 5e19ab9b9339f3e6f61abf7731a40ed3832b50c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740501"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767362"
 ---
 # <a name="csize-class"></a>Classe CSize
 
@@ -226,7 +226,7 @@ Il quarto operatore, il meno unario, modifica il segno del `CSize` valore. Veder
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC MDI](../../visual-cpp-samples.md)<br/>
+[Esempio MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Classe CPoint](../../atl-mfc-shared/reference/cpoint-class.md)

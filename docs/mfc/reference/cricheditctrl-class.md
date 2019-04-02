@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414291"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779274"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -269,7 +269,7 @@ Per altre informazioni sull'uso di `CRichEditCtrl`, vedere:
 
 - [Uso di CRichEditCtrl](../../mfc/using-cricheditctrl.md)
 
-Per un esempio dell'uso di un controllo rich edit in un'applicazione MFC, vedere la [WORDPAD](../../visual-cpp-samples.md) applicazione di esempio.
+Per un esempio dell'uso di un controllo rich edit in un'applicazione MFC, vedere la [WORDPAD](../../overview/visual-cpp-samples.md) applicazione di esempio.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -2198,7 +2198,7 @@ Per altre informazioni, vedere [EM_UNDO](/windows/desktop/Controls/em-undo) nel 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Esempio MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CEdit](../../mfc/reference/cedit-class.md)<br/>

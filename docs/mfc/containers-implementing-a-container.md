@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271424"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767886"
 ---
 # <a name="containers-implementing-a-container"></a>Contenitori: Implementazione di un contenitore
 
@@ -36,7 +36,7 @@ Queste funzionalità sono fornite automaticamente quando si usa la creazione gui
 
 1. Implementare un `OnSize` gestore messaggio per informare un oggetto OLE elemento incorporato che è necessario modificare il rettangolo in modo da riflettere la modifica delle dimensioni di visualizzazione che lo contiene.
 
-Poiché l'implementazione di queste funzionalità varia notevolmente da un'applicazione al successivo, la creazione guidata applicazione fornisce solo un'implementazione di base. Sarà probabilmente necessario personalizzare queste funzioni per ottenere l'applicazione funzioni correttamente. Per un esempio di questo oggetto, vedere la [contenitore](../visual-cpp-samples.md) esempio.
+Poiché l'implementazione di queste funzionalità varia notevolmente da un'applicazione al successivo, la creazione guidata applicazione fornisce solo un'implementazione di base. Sarà probabilmente necessario personalizzare queste funzioni per ottenere l'applicazione funzioni correttamente. Per un esempio di questo oggetto, vedere la [contenitore](../overview/visual-cpp-samples.md) esempio.
 
 #### <a name="to-handle-embedded-and-linked-items"></a>Gestire gli elementi collegati e incorporati
 
@@ -44,7 +44,7 @@ Poiché l'implementazione di queste funzionalità varia notevolmente da un'appli
 
 1. Eseguire l'override `OnChange`, `OnChangeItemPosition`, e `OnGetItemPosition`. Queste funzioni gestiscono il ridimensionamento, posizionamento e la modifica di elementi collegati e incorporati.
 
-La creazione guidata applicazione deriverà la classe per l'utente, ma sarà probabilmente necessario eseguire l'override `OnChange` e altre funzioni elencate nel passaggio 2 della procedura precedente. Le implementazioni di base devono essere personalizzati per la maggior parte delle applicazioni, poiché queste funzioni vengono implementate in modo diverso da un'applicazione a quella successiva. Per esempi, vedere gli esempi MFC [DRAWCLI](../visual-cpp-samples.md) e [contenitore](../visual-cpp-samples.md).
+La creazione guidata applicazione deriverà la classe per l'utente, ma sarà probabilmente necessario eseguire l'override `OnChange` e altre funzioni elencate nel passaggio 2 della procedura precedente. Le implementazioni di base devono essere personalizzati per la maggior parte delle applicazioni, poiché queste funzioni vengono implementate in modo diverso da un'applicazione a quella successiva. Per esempi, vedere gli esempi MFC [DRAWCLI](../overview/visual-cpp-samples.md) e [contenitore](../overview/visual-cpp-samples.md).
 
 È necessario aggiungere un numero di elementi alla struttura di menu dell'applicazione contenitore per il supporto OLE. Per altre informazioni, vedere [menu e risorse: Aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md).
 

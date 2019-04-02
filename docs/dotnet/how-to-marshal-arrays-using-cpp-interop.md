@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740004"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776895"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Procedura: Interoperabilità di marshalling di matrici usando C++
 
@@ -24,7 +24,7 @@ Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/manage
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come passare una matrice gestita a una funzione non gestita. Usa la funzione gestita [pin_ptr (C + + / CLI)](../windows/pin-ptr-cpp-cli.md) per disattivare la garbage collection per la matrice prima di chiamare la funzione non gestita. Fornendo la funzione non gestita con un puntatore bloccato nell'heap del Garbage Collector, è possibile evitare il sovraccarico di creazione di una copia della matrice. Per dimostrare che la funzione non gestita accede alla memoria dell'heap di Garbage Collection, modifica il contenuto della matrice e le modifiche vengono applicate quando la funzione gestita riprende il controllo.
+Nell'esempio seguente viene illustrato come passare una matrice gestita a una funzione non gestita. Usa la funzione gestita [pin_ptr (C + + / CLI)](../extensions/pin-ptr-cpp-cli.md) per disattivare la garbage collection per la matrice prima di chiamare la funzione non gestita. Fornendo la funzione non gestita con un puntatore bloccato nell'heap del Garbage Collector, è possibile evitare il sovraccarico di creazione di una copia della matrice. Per dimostrare che la funzione non gestita accede alla memoria dell'heap di Garbage Collection, modifica il contenuto della matrice e le modifiche vengono applicate quando la funzione gestita riprende il controllo.
 
 ```
 // PassArray1.cpp

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 350431975a4335fc06e436237b7e0d3388faab64
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278704"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769563"
 ---
 # <a name="containers-advanced-features"></a>Contenitori: Funzionalità avanzate
 
@@ -39,7 +39,7 @@ L'articolo [server: Implementazione di un Server](../mfc/servers-implementing-a-
 
 - Eseguire l'override `COleClientItem::CanActivate` per evitare di modificare gli elementi sul posto quando il server stesso è utilizzato per la modifica sul posto.
 
-   Ad esempio, l'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) ha incorporato un elemento creato dall'applicazione contenitore/server. Aprire l'applicazione OCLIENT e modificare sul posto l'elemento creato dall'applicazione contenitore/server. Quando si modifica l'elemento dell'applicazione, si decide che si desidera incorporare un elemento creato dall'esempio OLE MFC [HIERSVR](../visual-cpp-samples.md). A tale scopo, non utilizzare l'attivazione sul posto. È necessario aprire completamente HIERSVR per attivare questo elemento. Poiché la libreria MFC non supporta questa funzionalità OLE, l'override di `COleClientItem::CanActivate` consente di verificare questa situazione ed evitare un possibile errore di runtime nell'applicazione.
+   Ad esempio, l'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) ha incorporato un elemento creato dall'applicazione contenitore/server. Aprire l'applicazione OCLIENT e modificare sul posto l'elemento creato dall'applicazione contenitore/server. Quando si modifica l'elemento dell'applicazione, si decide che si desidera incorporare un elemento creato dall'esempio OLE MFC [HIERSVR](../overview/visual-cpp-samples.md). A tale scopo, non utilizzare l'attivazione sul posto. È necessario aprire completamente HIERSVR per attivare questo elemento. Poiché la libreria MFC non supporta questa funzionalità OLE, l'override di `COleClientItem::CanActivate` consente di verificare questa situazione ed evitare un possibile errore di runtime nell'applicazione.
 
 Se si crea una nuova applicazione e si desidera che funga da applicazione contenitore/server, selezionare tale opzione nella finestra di dialogo Opzioni OLE nella creazione guidata applicazione e tale supporto verrà creato automaticamente. Per altre informazioni, vedere l'articolo [Panoramica: Creazione di un contenitore di controlli ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Per informazioni su esempi di MFC, vedere Esempi relativi a MFC.
 
@@ -69,7 +69,7 @@ I collegamenti alla funzionalità Oggetti incorporati consentono all'utente di c
 
          If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
 
-L'esempio OLE MFC [OCLIENT](../visual-cpp-samples.md) implementa questa funzionalità. Per un esempio di questa procedura, vedere la `InitInstance` funzionare nel *OCLIENT. CPP* file di questa applicazione di esempio.
+L'esempio OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) implementa questa funzionalità. Per un esempio di questa procedura, vedere la `InitInstance` funzionare nel *OCLIENT. CPP* file di questa applicazione di esempio.
 
 ## <a name="see-also"></a>Vedere anche
 

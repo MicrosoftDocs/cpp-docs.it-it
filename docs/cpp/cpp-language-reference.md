@@ -8,12 +8,12 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031265"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774035"
 ---
 # <a name="c-language-reference"></a>Riferimenti al linguaggio C++
 
@@ -97,8 +97,8 @@ Panoramica delle procedure consigliate per la scrittura di programmi sicuri, cor
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)<br/>
-Materiale di riferimento sull'utilizzo di Visual C++ per Common Language Runtime.
+[Estensioni componenti per le piattaforme runtime](../extensions/component-extensions-for-runtime-platforms.md)<br/>
+Materiale di riferimento sull'uso di Visual C++ per destinati a .NET.
 
 [Riferimenti alla compilazione in C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Opzioni del compilatore, opzioni del linker e altri strumenti di compilazione.

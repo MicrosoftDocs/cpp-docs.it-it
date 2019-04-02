@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
-ms.openlocfilehash: 4eba2c9f34f1cfcaf97733f914520043ee1124bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 826084d375c69ca289a858a29a12ae16874c1fbd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557402"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781458"
 ---
 # <a name="compiler-error-c3394"></a>Errore del compilatore C3394
 
 errore di sintassi nella clausola constraint: trovato 'identifier', previsto un tipo
 
-Un vincolo non è stato creato nel formato corretto.  Per altre informazioni, vedere [vincoli su parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Un vincolo non è stato creato nel formato corretto.  Per altre informazioni, vedere [vincoli su parametri di tipo generico (C + + CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271255"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776986"
 ---
 # <a name="colepropertypage-class"></a>Classe COlePropertyPage
 
@@ -385,8 +385,8 @@ Puntatore a una stringa contenente il nome della pagina delle proprietà.
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC Sample CIRC3](../../visual-cpp-samples.md)<br/>
-[Esempio MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[MFC Sample CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
-ms.openlocfilehash: 1f6e51542cc852543d648f9f94a964ae0cab3b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b56aae115b1a1721f3f8a8688e36b25edc7f33f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512680"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780028"
 ---
 # <a name="compiler-error-c3388"></a>Errore del compilatore C3388
 
 'type': non consentito come vincolo, presupposto 'ref class' per continuare l'analisi
 
-Un vincolo è stato specificato su un tipo generico, ma non in modo corretto. Vedere [vincoli su parametri di tipo generico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) per altre informazioni.
+Un vincolo è stato specificato su un tipo generico, ma non in modo corretto. Vedere [vincoli su parametri di tipo generico (C + + CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) per altre informazioni.
 
 ## <a name="example"></a>Esempio
 

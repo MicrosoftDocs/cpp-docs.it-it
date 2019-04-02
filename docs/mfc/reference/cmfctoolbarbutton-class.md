@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275233"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776388"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Classe CMFCToolBarButton
 
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Specifica se un'immagine è visualizzata sul pulsante.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Specifica se un'etichetta di testo viene visualizzata sul pulsante.|
@@ -287,7 +287,7 @@ Il `CMFCToolBarButton` classe è la classe base per le altre classi di pulsante 
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come configurare un `CMFCToolBarButton` oggetti utilizzando diversi metodi nel `CMFCToolBarButton` classe. L'esempio illustra come abilitare il puntatore del mouse e dell'input da tastiera, impostare l'indice dell'immagine del pulsante, impostare il rettangolo di delimitazione del pulsante e rendere visibile il pulsante. Questo frammento di codice fa parte di [esempio di controllo struttura a schede](../../visual-cpp-samples.md).
+L'esempio seguente illustra come configurare un `CMFCToolBarButton` oggetti utilizzando diversi metodi nel `CMFCToolBarButton` classe. L'esempio illustra come abilitare il puntatore del mouse e dell'input da tastiera, impostare l'indice dell'immagine del pulsante, impostare il rettangolo di delimitazione del pulsante e rendere visibile il pulsante. Questo frammento di codice fa parte di [esempio di controllo struttura a schede](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]

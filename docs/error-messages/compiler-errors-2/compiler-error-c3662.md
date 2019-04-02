@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3662
 ms.assetid: 61bd3e41-a86b-42c0-be89-d992d3906ff1
-ms.openlocfilehash: c8f2252c05e3e264740004f4126c7557f30b126a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28d8df02d63fc1b16a392a2df83524cd616d5ab3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657332"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769043"
 ---
 # <a name="compiler-error-c3662"></a>Errore del compilatore C3662
 
@@ -19,7 +19,7 @@ ms.locfileid: "50657332"
 
 È stato usato un identificatore di override su un membro di tipo nativo, ma non è consentito.
 
-Per altre informazioni, vedere [esegue l'override esplicito](../../windows/explicit-overrides-cpp-component-extensions.md).
+Per altre informazioni, vedere [esegue l'override esplicito](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

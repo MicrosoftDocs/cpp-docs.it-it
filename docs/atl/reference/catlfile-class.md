@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-ms.openlocfilehash: 19e230f150803019d47e1ea710e7d713d1822a53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0faae50afcd26948bdcb4d4333efb25d5cca33ea
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270092"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772969"
 ---
 # <a name="catlfile-class"></a>Classe CAtlFile
 
@@ -66,7 +66,7 @@ class CAtlFile : public CHandle
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAtlFile::m_pTM](#m_ptm)|Puntatore a `CAtlTransactionManager` oggetto|
 
@@ -449,6 +449,6 @@ Chiamare le prime tre forme [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio di testo scorrevole](../../visual-cpp-samples.md)<br/>
+[Esempio di testo scorrevole](../../overview/visual-cpp-samples.md)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Classe CHandle](../../atl/reference/chandle-class.md)
