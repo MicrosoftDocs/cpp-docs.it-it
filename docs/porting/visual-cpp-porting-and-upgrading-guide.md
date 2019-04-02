@@ -2,12 +2,12 @@
 title: Guida al porting e aggiornamento in Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752428"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767678"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guida al porting e aggiornamento in Visual C++
 
@@ -76,8 +76,8 @@ Se si vuole assegnare al programma un'interfaccia utente XAML senza creare un'ap
 |Titolo|Description|
 |-----------|-----------------|
 |[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Illustra come usare i progetti creati nelle versioni precedenti di Visual C++.|
-|[Novità relative al compilatore C++ in Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Modifiche nell'IDE e degli strumenti da Visual Studio 2015 a Visual Studio 2017|
-|[Miglioramenti della conformità in Visual Studio 2017](../cpp-conformance-improvements-2017.md)|Miglioramenti di conformità agli standard da Visual Studio 2015 a Visual Studio 2017|
+|[Novità relative al compilatore C++ in Visual Studio 2017 RC](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Modifiche nell'IDE e degli strumenti da Visual Studio 2015 a Visual Studio 2017|
+|[Miglioramenti della conformità in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)|Miglioramenti di conformità agli standard da Visual Studio 2015 a Visual Studio 2017|
 |[Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md)|Elenco di tutte modifiche apportate alle librerie e agli strumenti per la compilazione di Visual C++ in Visual Studio dalla versione 2003 alla 2015 che potrebbero richiedere modifiche del codice corrente.|
 |[Visual C++: novità dalla versione 2003 alla 2015](visual-cpp-what-s-new-2003-through-2015.md)|Tutte le novità relative a Visual C++ da Visual Studio 2003 a Visual Studio 2015.|
 |[Porting di librerie di terze parti](porting-third-party-libraries.md)|Come usare lo strumento della riga di comando **vcpkg** per trasferire le librerie open source precedenti alle versioni compilate con i set di strumenti più recenti di Visual C++.|
@@ -88,4 +88,4 @@ Se si vuole assegnare al programma un'interfaccia utente XAML senza creare un'ap
 
 ## <a name="see-also"></a>Vedere anche
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)
