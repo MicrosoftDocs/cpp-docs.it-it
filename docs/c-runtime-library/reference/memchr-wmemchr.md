@@ -1,6 +1,6 @@
 ---
 title: memchr, wmemchr
-ms.date: 11/04/2016
+ms.date: 03/31/2019
 apiname:
 - wmemchr
 - memchr
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
+ms.sourcegitcommit: 489c0b998f2360317701f7a4a97b2b8ad96052d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209899"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58866916"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -87,9 +87,9 @@ Se ha esito positivo, restituisce un puntatore alla posizione del primo *c* nell
 
 ## <a name="remarks"></a>Note
 
-`memchr` e `wmemchr` cercano la prima occorrenza *c* nel primo *conteggio* byte del *buffer*. Arresta quando trova *c* o quando ha controllato i primi *conteggio* byte.
+`memchr` e `wmemchr` cercano la prima occorrenza *c* nel primo *conteggio* caratteri del *buffer*. Arresta quando trova *c* o quando ha controllato i primi *conteggio* caratteri.
 
-In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi gli overload C++, definire il simbolo CONST_RETURN.
+In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro \_CRT\_CONST\_correggere\_OVERLOAD è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi gli overload di C++ in C++, definire il simbolo \_CONST\_restituire.
 
 ## <a name="requirements"></a>Requisiti
 
