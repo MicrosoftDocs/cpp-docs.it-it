@@ -1,6 +1,6 @@
 ---
 title: Conversioni dai tipi integrali senza segno
-ms.date: 01/29/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579687"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565022"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversioni dai tipi integrali senza segno
 
-Un Integer senza segno viene convertito in un Integer senza segno o con segno più breve troncando i bit più significativi oppure in un Integer senza segno o con segno più lungo mediante estensione con zeri (vedere la tabella [Conversioni da tipi integrali senza segno](#_clang_table_4..3)).
+Un intero senza segno viene convertito in un intero senza segno o con segno più breve troncando i bit più significativi oppure in un intero senza segno o con segno più lungo mediante estensione con zeri. Per altre informazioni, vedere la [tabella delle conversioni dai tipi integrali senza segno](#conversions-from-unsigned-integral-types-table).
 
 Quando il valore con un tipo integrale viene abbassato di livello a un intero con segno di dimensione inferiore o un intero senza segno viene convertito nell'intero con segno corrispondente, tale valore rimane invariato se può essere rappresentato nel nuovo tipo. Tuttavia, il valore che esso rappresenta cambia se è impostato il bit di segno, come nell'esempio riportato di seguito.
 
@@ -35,7 +35,7 @@ I valori senza segno vengono convertiti in modo da mantenerne il valore e non so
 
 Nella tabella seguente sono riepilogate le conversioni dai tipi integrali senza segno.
 
-## <a name="conversions-from-unsigned-integral-types"></a>Conversioni dai tipi integrali senza segno
+## <a name="conversions-from-unsigned-integral-types-table"></a>Tabella delle conversioni dai tipi integrali senza segno
 
 |Da|A|Metodo|
 |----------|--------|------------|

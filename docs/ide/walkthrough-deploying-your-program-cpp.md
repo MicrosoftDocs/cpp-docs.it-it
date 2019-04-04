@@ -9,24 +9,24 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820208"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769264"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Procedura dettagliata: Distribuzione di un programma (C++)
 
-Dopo aver creato l'applicazione completando le procedure dettagliate correlate precedenti, disponibili in [Uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), l'ultimo passaggio è la creazione di un programma di installazione, in modo che altri utenti possano installare il programma nei rispettivi computer. Per il programma di installazione, si aggiungerà un nuovo progetto alla soluzione esistente. L'output del nuovo progetto è un file setup.exe che installerà l'applicazione in un altro computer.
+Dopo aver creato l'applicazione completando le procedure dettagliate correlate precedenti, l'ultimo passaggio consiste nel creare un programma di installazione in modo che altri utenti possano installare il programma nei rispettivi computer. Per il programma di installazione, si aggiungerà un nuovo progetto alla soluzione esistente. L'output del nuovo progetto è un file setup.exe che installerà l'applicazione in un altro computer.
 
-La procedura dettagliata mostra come usare Windows Installer per distribuire l'applicazione. Ai fini della distribuzione, è possibile anche utilizzare ClickOnce. Per altre informazioni, vedere [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md). Per altre informazioni sulla distribuzione in generale, vedere [Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components).
+La procedura dettagliata mostra come usare Windows Installer per distribuire l'applicazione. Ai fini della distribuzione, è possibile anche utilizzare ClickOnce. Per altre informazioni, vedere [ClickOnce Deployment for Visual C++ Applications](../windows/clickonce-deployment-for-visual-cpp-applications.md). Per altre informazioni sulla distribuzione in generale, vedere [Distribuzione di applicazioni, servizi e componenti](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 - Nella procedura dettagliata si presuppone la conoscenza delle nozioni di base del linguaggio C++.
 
-- Si presuppone anche che l'utente abbia completato le procedure dettagliate correlate elencate in precedenza in [Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- Si presuppone anche che l'utente abbia completato le procedure dettagliate correlate elencate in precedenza in [Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C++](using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 - La procedura dettagliata non può essere completata nelle versioni Express Edition di Visual Studio.
 
@@ -72,10 +72,10 @@ La procedura dettagliata mostra come usare Windows Installer per distribuire l'a
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-**Precedente:** [Procedura dettagliata: Debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Precedente:** [Procedura dettagliata: Debug di un progetto (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Progetti e sistemi di compilazione](../build/projects-and-build-systems-cpp.md)<br/>
-[Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[Distribuzione di applicazioni desktop](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>

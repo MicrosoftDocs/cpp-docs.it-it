@@ -2,12 +2,12 @@
 title: Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e4a1f4ecb6492bf74fca46df6f096ca79c71da18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16918a70d4ce56a7415c3a807485e72c085d1194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504260"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775042"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 
@@ -111,7 +111,7 @@ Ad esempio, l'opzione `/Zc:forScope` è stata introdotta nella cronologia di MSV
 
 Un esempio di errore comune durante l'aggiornamento si verifica quando un argomento non const viene passato a un parametro const. Le versioni meno recenti del compilatore non segnalavano sempre questa operazione come errore. Per altre informazioni, vedere [Conversioni più rigorose del compilatore](porting-guide-spy-increment.md#stricter_conversions).
 
-Per altre informazioni sui miglioramenti specifici della conformità, vedere [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md) e [Miglioramenti della conformità di C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md).
+Per altre informazioni sui miglioramenti specifici della conformità, vedere [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md) e [Miglioramenti della conformità di C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
 
 ## <a name="errors-involving-stdinth-integral-types"></a>Errori con i tipi integrali \<stdint.h>
 
@@ -127,7 +127,7 @@ L'opzione del compilatore [/showIncludes](../build/reference/showincludes-list-i
 
 Nel corso degli anni sono state apportate numerose modifiche al runtime C. Sono state aggiunte molte versioni sicure delle funzioni e alcune sono state rimosse. Come già descritto in precedenza in questo articolo, l'implementazione Microsoft della libreria CRT è stata sottoposta a refactoring in Visual Studio 2015, con nuovi file binari e file .lib associati.
 
-Se un errore riguarda una funzione CRT, cercare altre informazioni in [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md) o in [Miglioramenti della conformità di C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md). Se l'errore è LNK2019, simbolo esterno non risolto, assicurarsi che la funzione non sia stata rimossa. In alternativa, se si è certi che la funzione esiste ancora e che il codice chiamante è corretto, verificare se il progetto usa `/NODEFAULTLIB`. In tal caso è necessario aggiornare l'elenco delle librerie, in modo che il progetto usi le nuove librerie universali (UCRT). Per altre informazioni, vedere la sezione precedente relativa alla libreria e alle dipendenze.
+Se un errore riguarda una funzione CRT, cercare altre informazioni in [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md) o in [Miglioramenti della conformità di C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md). Se l'errore è LNK2019, simbolo esterno non risolto, assicurarsi che la funzione non sia stata rimossa. In alternativa, se si è certi che la funzione esiste ancora e che il codice chiamante è corretto, verificare se il progetto usa `/NODEFAULTLIB`. In tal caso è necessario aggiornare l'elenco delle librerie, in modo che il progetto usi le nuove librerie universali (UCRT). Per altre informazioni, vedere la sezione precedente relativa alla libreria e alle dipendenze.
 
 Se l'errore riguarda `printf` o `scanf`, assicurarsi che nessuna delle due funzioni sia definita privatamente senza l'inclusione di stdio.h. Se così fosse, rimuovere le definizioni private o definire il collegamento con legacy\_stdio\_definitions.lib. È possibile impostare questo valore nella finestra di dialogo **Pagine delle proprietà** in **Proprietà di configurazione** > **Linker** > **Input** nella proprietà **Dipendenze aggiuntive**. Se si esegue il collegamento con Windows SDK 8.1 o versione precedente, aggiungere legacy\_stdio\_definitions.lib.
 
@@ -161,11 +161,11 @@ Per altre informazioni, vedere [Aggiornamento della versione di Windows di desti
 
 ## <a name="atl--mfc"></a>ATL/MFC
 
-ATL e MFC sono API relativamente stabili, ma anch'esse vengono modificate occasionalmente. Per altre informazioni, vedere [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md), [Novità di Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) e [Miglioramenti della conformità di Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md).
+ATL e MFC sono API relativamente stabili, ma anch'esse vengono modificate occasionalmente. Per altre informazioni, vedere [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md), [Novità di Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) e [Miglioramenti della conformità di Visual C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md).
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 già definito in MSVCRTD.lib
 
-Questo errore può verificarsi nelle applicazioni MFC. Indica un problema di ordinamento tra la libreria CRT e la libreria MFC. La libreria MFC deve essere collegata per prima, in modo che renda disponibili gli operatori new e delete. Per correggere l'errore, usare l'opzione `/NODEFAULTLIB` per ignorare le librerie predefinite MSVCRTD.lib e mfcs140d.lib. Quindi aggiungere queste librerie come dipendenze aggiuntive.
+Questo errore può verificarsi nelle applicazioni MFC. Indica un problema di ordinamento tra la libreria CRT e la libreria MFC. La libreria MFC deve essere collegata per prima, in modo che renda disponibili gli operatori new e delete. Per correggere l'errore, usare l'opzione `/NODEFAULTLIB` per ignorare le librerie predefinite: MSVCRTD.lib e mfcs140d.lib. Quindi aggiungere queste librerie come dipendenze aggiuntive.
 
 ## <a name="32-vs-64-bit"></a>32 bit e 64 bit
 
@@ -182,4 +182,4 @@ Per altre informazioni, vedere [Porting da MBCS a Unicode](porting-guide-spy-inc
 ## <a name="see-also"></a>Vedere anche
 
 [Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Miglioramenti della conformità in Visual Studio 2017](../cpp-conformance-improvements-2017.md)
+[Miglioramenti della conformità in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)

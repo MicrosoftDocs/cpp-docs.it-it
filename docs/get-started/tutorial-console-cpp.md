@@ -2,16 +2,16 @@
 title: Creare un progetto di app console C++
 description: Creare un'app console Hello World in Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 49fc20f3040f50ddc1b8014cc4dcf8df20f7af87
-ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
+ms.openlocfilehash: 1b2fe7b95ec27a559de73673412cb2d28507b656
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "57700649"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476877"
 ---
 # <a name="create-a-c-console-app-project"></a>Creare un progetto di app console C++
 
@@ -23,7 +23,7 @@ In genere il punto di partenza per un programmatore C++ è un'applicazione "Hell
 
 ## <a name="create-your-app-project"></a>Creare il progetto di app
 
-Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e le *soluzioni* per organizzare i progetti. Un progetto contiene tutte le opzioni, le configurazioni e le regole usate per compilare le app e gestisce la relazione tra tutti i file del progetto e i file esterni. Per creare l'applicazione, per prima cosa creare un nuovo progetto e una soluzione.
+Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e le *soluzioni* per organizzare i progetti. Un progetto contiene tutte le opzioni, le configurazioni e le regole usate per la compilazione dell'applicazione. Gestisce anche la relazione tra tutti i file del progetto e i file esterni. Per creare l'applicazione, per prima cosa creare un nuovo progetto e una soluzione.
 
 1. Nella barra dei menu di Visual Studio scegliere **File** > **Nuovo** > **Progetto**. Si apre la finestra **Nuovo progetto**.
 
@@ -33,7 +33,7 @@ Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e l
 
    ![Finestra di dialogo Nuovo progetto](./media/calculator-new-project-dialog.png "Finestra di dialogo Nuovo progetto")
 
-   In questo modo viene creata un'applicazione console C++ di Windows. Le applicazioni console usano una finestra della console di Windows per visualizzare l'output e accettare l'input dell'utente. In Visual Studio si apre una finestra dell'editor e viene visualizzato il codice generato, che deve essere simile al seguente:
+   Viene creata un'applicazione console C++ di Windows vuota. Le applicazioni console usano una finestra della console di Windows per visualizzare l'output e accettare l'input dell'utente. In Visual Studio si apre una finestra dell'editor e viene visualizzato il codice generato:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -58,8 +58,6 @@ Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e l
     //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
-
-[Si è verificato un problema.](#create-your-app-project-issues)
 
 ## <a name="verify-that-your-new-app-builds-and-runs"></a>Verificare che la nuova app venga compilata ed eseguita
 
@@ -124,13 +122,11 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
 
 1. Per salvare il file, immettere **Ctrl + S** o scegliere l'icona **Salva** nella parte superiore dell'IDE, l'icona a forma di disco floppy nella barra degli strumenti sotto la barra dei menu.
 
-1. Per eseguire l'applicazione, premere **CTRL+F5** o accedere al menu **Debug** e scegliere **Avvia senza eseguire debug**. Se un elemento popup indica che **questo progetto non è aggiornato**, è possibile selezionare **Non visualizzare più questo messaggio** e quindi scegliere **Sì** per compilare l'applicazione. Viene visualizzato un popup della finestra della console con il testo specificato nel codice.
+1. Per eseguire l'applicazione, premere **CTRL+F5** o accedere al menu **Debug** e scegliere **Avvia senza eseguire debug**. Se un elemento popup indica **Il progetto seguente non è aggiornato**, è possibile selezionare **Non visualizzare più questo messaggio** e quindi scegliere **Sì** per compilare l'applicazione. Dovrebbe essere visualizzata una finestra della console con il testo specificato nel codice.
 
    ![Compilare e avviare l'applicazione](./media/calculator-first-launch.gif "Compilare e avviare l'applicazione")
 
 1. Al termine, chiudere la finestra della console.
-
-[Si è verificato un problema.](#edit-the-code-issues)
 
 ## <a name="add-code-to-do-some-math"></a>Aggiungere codice per eseguire alcuni calcoli matematici
 
@@ -138,7 +134,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
 
 ### <a name="to-add-a-calculator-class"></a>Per aggiungere una classe Calculator
 
-1. Accedere al menu **Progetto** e scegliere **Aggiungi classe**. Nella casella di modifica **Nome classe** immettere *Calculator*. Scegliere **OK**. Ciò consente di aggiungere due nuovi file al progetto. Per salvare tutti i file modificati in una sola volta, premere **CTRL+MAIUSC+S**. Si tratta di una scelta rapida da tastiera per **File** > **Salva tutto**. È anche disponibile un pulsante della barra degli strumenti per **Salva tutto**, un'icona con due dischi floppy, accanto al pulsante **Salva**. In generale, è buona norma scegliere spesso **Salva tutto** in modo da non tralasciare qualche file quando si salva.
+1. Accedere al menu **Progetto** e scegliere **Aggiungi classe**. Nella casella di modifica **Nome classe** immettere *Calculator*. Scegliere **OK**. Due nuovi file vengono aggiunti al progetto. Per salvare tutti i file modificati in una sola volta, premere **CTRL+MAIUSC+S**. Si tratta di una scelta rapida da tastiera per **File** > **Salva tutto**. È anche disponibile un pulsante della barra degli strumenti per **Salva tutto**, un'icona con due dischi floppy, accanto al pulsante **Salva**. In generale, è buona norma scegliere spesso **Salva tutto** in modo da non tralasciare qualche file quando si salva.
 
    ![Creare la classe Calculator](./media/calculator-create-class.gif "Creare la classe Calculator")
 
@@ -268,25 +264,25 @@ Poiché l'utente è libero di digitare qualsiasi cosa nella finestra della conso
 
 ### <a name="to-run-the-app-in-the-debugger"></a>Per eseguire l'app nel debugger
 
-1. Impostare un punto di interruzione sulla riga `result = c.Calculate(x, oper, y);`, subito dopo aver richiesto l'input dell'utente. A tale scopo, fare clic nella barra grigia verticale lungo il bordo sinistro della finestra dell'editor, accanto alla riga in modo da visualizzare un punto rosso.
+1. Impostare un punto di interruzione sulla riga `result = c.Calculate(x, oper, y);`, subito dopo aver richiesto l'input dell'utente. Per impostare il punto di interruzione, fare clic accanto alla riga nella barra grigia verticale lungo il bordo sinistro della finestra dell'editor. Viene visualizzato un punto rosso.
 
    ![Impostare un punto di interruzione](./media/calculator-set-breakpoint.gif "Impostare un punto di interruzione")
 
-   A questo punto, durante il debug del programma, l'esecuzione viene sempre sospesa in corrispondenza di quella riga. Ma si sa già che il programma funziona per i casi semplici e non si vuole sospendere l'esecuzione ogni volta, quindi si rende il punto di interruzione condizionale.
+   A questo punto, durante il debug del programma, l'esecuzione viene sempre sospesa in corrispondenza di quella riga. È già appurato che il programma funziona nei casi semplici. Poiché non si vuole sospendere l'esecuzione ogni volta, il punto di interruzione verrà impostato come condizionale.
 
-1. Fare clic con il pulsante destro del mouse sul punto rosso che rappresenta il punto di interruzione e scegliere **Condizioni**. Nella casella di modifica per la condizione immettere `(y == 0) && (oper == '/')`. Al termine, scegliere il pulsante **Chiudi**. La condizione viene salvata automaticamente.
+1. Fare clic con il pulsante destro del mouse sul punto rosso che rappresenta il punto di interruzione e scegliere **Condizioni**. Nella casella di modifica per la condizione immettere `(y == 0) && (oper == '/')`. Scegliere il pulsante **Chiudi** al termine. La condizione viene salvata automaticamente.
 
    ![Impostare un punto di interruzione condizionale](./media/calculator-conditional-breakpoint.gif "Impostare un punto di interruzione condizionale")
 
    Ora si sospende l'esecuzione in corrispondenza del nel punto di interruzione nel caso specifico in cui viene tentata una divisione per 0.
 
-1. Per eseguire il debug del programma, premere **F5** o scegliere il pulsante **Debugger Windows locale**, ovvero il pulsante della barra degli strumenti con la freccia verde. Nell'app console, se si immette un valore del tipo "5 - 0", il programma ha un comportamento normale e rimane in esecuzione. Tuttavia, se si digita "10 / 0", si interrompe in corrispondenza del punto di interruzione. È anche possibile inserire un numero qualsiasi di spazi tra l'operatore e i numeri. `cin` è abbastanza intelligente da analizzare l'input in modo appropriato.
+1. Per eseguire il debug del programma, premere **F5** o scegliere il pulsante della barra degli strumenti **Debugger Windows locale**, ovvero il pulsante con l'icona a forma di freccia verde. Nell'app console, se si immette un valore del tipo "5 - 0", il programma ha un comportamento normale e rimane in esecuzione. Tuttavia, se si digita "10 / 0", si interrompe in corrispondenza del punto di interruzione. È anche possibile inserire un numero qualsiasi di spazi tra l'operatore e i numeri. `cin` è abbastanza intelligente da analizzare l'input in modo appropriato.
 
    ![Sospensione in corrispondenza del punto di interruzione condizionale](./media/calculator-debug-conditional.gif "Sospensione in corrispondenza del punto di interruzione condizionale")
 
 ### <a name="useful-windows-in-the-debugger"></a>Finestre utili nel debugger
 
-Ogni volta che si esegue il debug del codice, è possibile notare che vengono visualizzate alcune nuove finestre. Queste finestre possono semplificare l'esperienza di debug. Osservare la finestra **Auto**. La finestra **Auto** contiene i valori correnti delle variabili usate almeno 3 righe prima e fino alla riga corrente.
+Ogni volta che si esegue il debug del codice, è possibile notare che vengono visualizzate alcune nuove finestre. Queste finestre possono semplificare l'esperienza di debug. Osservare la finestra **Auto**. La finestra **Auto** contiene i valori correnti delle variabili usate almeno tre righe prima e fino alla riga corrente.
 
    ![Finestra Auto](./media/calculator-autos.png "Finestra Auto")
 
@@ -294,21 +290,21 @@ Per visualizzare tutte le variabili da tale funzione, passare alla finestra **Va
 
    ![Finestra Variabili locali](./media/calculator-locals.png "Finestra Variabili locali")
 
-È anche possibile passare il mouse sulle variabili nel codice stesso per visualizzarne i valori correnti dove l'esecuzione è attualmente in pausa. Verificare che la finestra dell'editor sia attiva facendo clic su di essa prima di provare.
+È anche possibile passare il mouse sulle variabili nel codice stesso per visualizzarne i valori correnti dove l'esecuzione è attualmente in pausa. Verificare che la finestra dell'editor sia attiva facendo clic su di essa.
 
    ![Passaggio del mouse per visualizzare i valori delle variabili correnti](./media/calculator-hover-tooltip.gif "Passaggio del mouse per visualizzare i valori delle variabili correnti")
 
 ### <a name="to-continue-debugging"></a>Per continuare il debug
 
-1. La linea gialla a sinistra indica il punto di esecuzione corrente. Attualmente si trova su una riga che chiama `Calculate`, quindi premere **F11** per selezionare **Esegui istruzione** per la funzione. In questo modo si accede al corpo della funzione `Calculate`. Fare attenzione con **Esegui istruzione**: l'uso eccessivo può causare notevoli perdite di tempo, perché l'esecuzione avviene in tutto il codice usato dalla riga su cui ci si trova, incluse le funzioni della libreria standard.
+1. La linea gialla a sinistra indica il punto di esecuzione corrente. La riga corrente chiama `Calculate`, quindi premere **F11** per selezionare **Esegui istruzione** per la funzione. In questo modo si accede al corpo della funzione `Calculate`. Fare attenzione con **Esegui istruzione**. Con un uso eccessivo si potrebbe sprecare molto tempo, perché accede a tutto il codice usato nella riga attiva, incluse le funzioni della libreria standard.
 
-1. Ora che il punto di esecuzione è all'inizio della funzione `Calculate`, premere **F10** per passare alla riga successiva nell'esecuzione del programma. Questa opzione è nota anche come **Passa**. È possibile usare **Passa** per passare da una riga all'altra senza scendere nel dettaglio di ciò che avviene in ogni parte della riga. In generale è consigliabile usare **Passa** anziché **Esegui istruzione**, a meno che non si voglia scendere più in dettaglio nel codice chiamato da un'altra posizione (come per raggiungere il corpo di `Calculate`).
+1. Ora che il punto di esecuzione è all'inizio della funzione `Calculate`, premere **F10** per passare alla riga successiva nell'esecuzione del programma. La funzione **F10** è anche nota come **Esegui istruzione/routine**. È possibile usare **Passa** per passare da una riga all'altra senza scendere nel dettaglio di ciò che avviene in ogni parte della riga. In generale è consigliabile usare **Passa** anziché **Esegui istruzione**, a meno che non si voglia scendere più in dettaglio nel codice chiamato da un'altra posizione (come per raggiungere il corpo di `Calculate`).
 
 1. Continuare a usare **F10** per **passare** ogni riga finché non si torna alla funzione `main()` nell'altro file e fermarsi alla riga `cout`.
 
    ![Uscire da Calculate e controllare il risultato](./media/calculator-undefined-zero.gif "Uscire da Calculate e controllare il risultato")
 
-1. Sembra che il programma si comporti come previsto: accetta il primo numero e lo divide per il secondo. Sulla riga `cout` passare il mouse sulla variabile `result` o esaminare `result` nella finestra **Auto**. Si noterà che il relativo valore è indicato come "inf". Questo non è corretto e quindi è necessario risolvere il problema. La riga `cout` restituisce semplicemente qualsiasi valore archiviato in `result`, quindi se si va avanti di un'altra riga usando **F10**, la finestra della console visualizza quanto segue:
+1. Sembra che il programma si comporti come previsto: accetta il primo numero e lo divide per il secondo. Sulla riga `cout` passare il mouse sulla variabile `result` o esaminare `result` nella finestra **Auto**. Si noterà che il relativo valore è elencato come "inf" e questo non è corretto, quindi si vedrà come risolvere il problema. La riga `cout` restituisce semplicemente qualsiasi valore archiviato in `result`, quindi se si va avanti di un'altra riga usando **F10**, la finestra della console visualizza:
 
    ![Il risultato della divisione per zero](./media/calculator-divide-by-zero-fail.png "Il risultato della divisione per zero")
 
@@ -332,9 +328,9 @@ Per visualizzare tutte le variabili da tale funzione, passare alla finestra **Va
 
     int main()
     {
-        double x = 0.0
-        double y = 0.0
-        double result = 0.0
+        double x = 0.0;
+        double y = 0.0;
+        double result = 0.0;
         char oper = '+';
 
         cout << "Calculator Console Application" << endl << endl;
@@ -360,7 +356,7 @@ Per visualizzare tutte le variabili da tale funzione, passare alla finestra **Va
     }
     ```
 
-1. Ora premere **F5** una volta. In questo modo l'esecuzione del programma continua finché non deve interrompersi per richiedere l'input dell'utente. Immettere di nuovo `10 / 0`. A questo punto viene stampato un messaggio più utile. Viene chiesto all'utente di immettere altro input e il programma continua normalmente l'esecuzione.
+1. Ora premere **F5** una volta. L'esecuzione del programma continua finché non deve essere sospesa per richiedere l'input dell'utente. Immettere di nuovo `10 / 0`. A questo punto viene stampato un messaggio più utile. Viene chiesto all'utente di immettere altro input e il programma continua normalmente l'esecuzione.
 
    ![Il risultato finale dopo le modifiche](./media/calculator-final-verification.gif "Il risultato finale dopo le modifiche")
 
