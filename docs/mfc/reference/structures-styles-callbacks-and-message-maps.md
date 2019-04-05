@@ -10,10 +10,10 @@ helpviewer_keywords:
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
 ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780197"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Strutture, stili, callback e mappe messaggi
@@ -22,13 +22,13 @@ In questa sezione vengono illustrati le strutture, gli stili e le funzioni di ca
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Strutture usate da MFC](../../mfc/reference/structures-used-by-mfc.md)<br/>
+[Strutture utilizzate da MFC](../../mfc/reference/structures-used-by-mfc.md)<br/>
 Fornisce collegamenti alle strutture chiamate da diverse funzioni membro.
 
-[Stili usati da MFC](../../mfc/reference/styles-used-by-mfc.md)<br/>
+[Stili utilizzati da MFC](../../mfc/reference/styles-used-by-mfc.md)<br/>
 Vengono forniti collegamenti agli stili utilizzati quando vengono creati degli oggetti MFC.
 
-[Funzioni di callback usate da MFC](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
+[Funzioni di callback utilizzate da MFC](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
 Fornisce collegamenti alle funzioni di callback che compaiono nella libreria MFC.
 
 [Mappe messaggi](../../mfc/reference/message-maps-mfc.md)<br/>
@@ -36,8 +36,8 @@ Descrive le macro di mapping dei messaggi e le voci della mappa messaggi `CWnd`.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Panoramica della libreria di classi](../../mfc/class-library-overview.md)<br/>
+[Cenni preliminari sulla libreria di classi](../../mfc/class-library-overview.md)<br/>
 Elenca le classi nella libreria MFC in base alla categoria.
 
-[Esempi di MFC](../../overview/visual-cpp-samples.md)<br/>
+[Esempi relativi a MFC](../../overview/visual-cpp-samples.md)<br/>
 Fornisce collegamenti a esempi che dimostrano l'uso della libreria MFC.

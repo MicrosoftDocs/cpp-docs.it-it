@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: 8c69473ab813c2fa692044fddc406a74a5aeb197
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779820"
 ---
 # <a name="cdatetimectrl-class"></a>Classe CDateTimeCtrl
@@ -601,5 +601,5 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [DTM_SETS
 
 [CMNCTRL1 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)

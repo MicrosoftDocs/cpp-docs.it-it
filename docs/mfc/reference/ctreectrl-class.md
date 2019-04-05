@@ -163,10 +163,10 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
 ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58782004"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
@@ -279,7 +279,7 @@ Per altre informazioni sull'uso di `CTreeCtrl`, vedere:
 
 - [Controlli](../../mfc/controls-mfc.md)
 
-- [Uso di CTreeCtrl](../../mfc/using-ctreectrl.md)
+- [Utilizzo di CTreeCtrl](../../mfc/using-ctreectrl.md)
 
 - [Riferimento al controllo di visualizzazione albero](/windows/desktop/Controls/tree-view-control-reference) in Windows SDK.
 
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *hItem*<br/>
 L'handle dell'elemento cui immagine da recuperare.
 
-*nImage*<br/>
+*Immagine*<br/>
 Integer che riceve l'indice dell'immagine dell'elemento all'interno di elenco di immagini di controllo di visualizzazione albero.
 
 *nSelectedImage*<br/>
@@ -1427,7 +1427,7 @@ Numero intero che specifica gli attributi da impostare. Vedere il `TVITEM` strut
 *lpszItem*<br/>
 Indirizzo di una stringa contenente il testo dell'elemento.
 
-*nImage*<br/>
+*Immagine*<br/>
 Indice dell'immagine dell'elemento nell'elenco di immagini di controllo di visualizzazione albero.
 
 *nSelectedImage*<br/>
@@ -1925,7 +1925,7 @@ Numero intero che specifica gli attributi da impostare. Vedere le `mask` membro 
 *lpszItem*<br/>
 Indirizzo di una stringa contenente il testo dell'elemento.
 
-*nImage*<br/>
+*Immagine*<br/>
 Indice dell'immagine dell'elemento nell'elenco di immagini di controllo di visualizzazione albero. Vedere le `iImage` membro del `TVITEM` struttura.
 
 *nSelectedImage*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *hItem*<br/>
 Handle dell'elemento cui immagine deve essere impostata.
 
-*nImage*<br/>
+*Immagine*<br/>
 Indice dell'immagine dell'elemento nell'elenco di immagini di controllo di visualizzazione albero.
 
 *nSelectedImage*<br/>
@@ -2343,5 +2343,5 @@ Il *lParam1* e *lParam2* parametri corrispondono ai `lParam` membro del [struttu
 
 [CMNCTRL1 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[Classe CImageList](../../mfc/reference/cimagelist-class.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[CImageList (classe)](../../mfc/reference/cimagelist-class.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304990"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774583"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (classe)
 
@@ -89,7 +89,7 @@ Il `CMDIChildWnd` classe erediti gran parte della propria implementazione predef
 
 - Menu finestra figlio MDI attualmente attivo sostituisce completamente menu della finestra cornice MDI, e la didascalia della finestra figlio MDI attualmente attiva viene aggiunto alla didascalia della finestra cornice MDI. Per ulteriori esempi di funzioni finestra MDI figlio che vengono implementate insieme a una finestra cornice MDI, vedere il `CMDIFrameWnd` descrizione della classe.
 
-Non usare C++ **eliminare** operatore da eliminare definitivamente una finestra cornice. In alternativa, usare `CWnd::DestroyWindow`. Il `CFrameWnd` implementazione di `PostNcDestroy` eliminerà l'oggetto C++ quando la finestra viene eliminata. Quando l'utente chiude la finestra cornice, il valore predefinito `OnClose` gestore verrà chiamato `DestroyWindow`.
+Non usare C++ **eliminare** operatore da eliminare definitivamente una finestra cornice. In alternativa, utilizzare `CWnd::DestroyWindow`. Il `CFrameWnd` implementazione di `PostNcDestroy` eliminerà l'oggetto C++ quando la finestra viene eliminata. Quando l'utente chiude la finestra cornice, il valore predefinito `OnClose` gestore verrà chiamato `DestroyWindow`.
 
 Per ulteriori informazioni sul `CMDIChildWnd`, vedere [Frame Windows](../../mfc/frame-windows.md).
 
@@ -287,10 +287,10 @@ Chiamare questa funzione per impostare le risorse di menu e tasti di scelta rapi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC MDI](../../visual-cpp-samples.md)<br/>
-[MFC Sample MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[MFC Sample SNAPVW](../../visual-cpp-samples.md)<br/>
-[Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Esempio MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Classe CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)
+[CMDIFrameWnd (classe)](../../mfc/reference/cmdiframewnd-class.md)

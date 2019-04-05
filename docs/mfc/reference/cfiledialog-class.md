@@ -133,10 +133,10 @@ helpviewer_keywords:
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
 ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779209"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (classe)
@@ -1641,4 +1641,4 @@ Questo esempio viene aggiornato il `CFileDialog` prima di visualizzarla. Prima d
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)

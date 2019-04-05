@@ -11,10 +11,10 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
 ms.openlocfilehash: 639342e0a09a6e970478fce1b5aac629f03c2015
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776947"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Classe CMFCDesktopAlertWndButton
@@ -110,6 +110,6 @@ Diverso da zero se il pulsante chiude la finestra di dialogo di avviso; in caso 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)

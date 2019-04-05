@@ -109,10 +109,10 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778520"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametri
 
-*nSelect*<br/>
+*nSelezionare*<br/>
 Specifica l'indice in base zero della stringa da selezionare. Se-1, viene rimosso qualsiasi selezione corrente nella casella di riepilogo e il controllo di modifica viene cancellato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bExtended*<br/>
+*bIl*<br/>
 Specifica se la casella combinata deve utilizzare l'interfaccia utente estesa o l'interfaccia utente predefinita. Il valore TRUE consente di selezionare l'interfaccia utente estesa. il valore FALSE consente di selezionare l'interfaccia utente standard.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1559,11 +1559,11 @@ Questa funzione membro non ha alcun effetto su una casella combinata creata con 
 
 [Esempio MFC viene](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Classe CButton](../../mfc/reference/cbutton-class.md)<br/>
-[Classe CEdit](../../mfc/reference/cedit-class.md)<br/>
-[Classe CListBox](../../mfc/reference/clistbox-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CListBox (classe)](../../mfc/reference/clistbox-class.md)<br/>
 [Classe CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Classe CStatic](../../mfc/reference/cstatic-class.md)<br/>
 [Classe CDialog](../../mfc/reference/cdialog-class.md)

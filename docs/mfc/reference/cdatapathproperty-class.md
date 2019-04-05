@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 ms.openlocfilehash: 89cb8ddcdd42643f52f755516e8845109163c57a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780340"
 ---
 # <a name="cdatapathproperty-class"></a>Classe CDataPathProperty
@@ -219,5 +219,5 @@ Un percorso, che può essere assoluto o relativo alla proprietà viene caricata 
 
 [Immagine di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)

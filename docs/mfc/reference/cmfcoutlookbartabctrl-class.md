@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269938"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776804"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -109,7 +109,7 @@ Per creare una barra di Outlook che dispone del supporto di ancoraggio, usare un
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come inizializzare un `CMFCOutlookBarTabCtrl` dell'oggetto e usare i vari metodi nel `CMFCOutlookBarTabCtrl` classe. L'esempio illustra come abilitare la modifica sul posto dell'etichetta di testo sui pulsanti di pagina della scheda della barra di Outlook, attivare l'animazione, abilitare punti di controllo di scorrimento che consentono all'utente di scorrere i pulsanti nel riquadro della barra di Outlook, impostare la dimensione del bordo di segue la scheda Outlook ROL e impostare l'allineamento delle etichette di testo sui pulsanti della scheda della barra di Outlook. Questo frammento di codice fa parte di [esempio dimostrativo di Outlook](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come inizializzare un `CMFCOutlookBarTabCtrl` dell'oggetto e usare i vari metodi nel `CMFCOutlookBarTabCtrl` classe. L'esempio illustra come abilitare la modifica sul posto dell'etichetta di testo sui pulsanti di pagina della scheda della barra di Outlook, attivare l'animazione, abilitare punti di controllo di scorrimento che consentono all'utente di scorrere i pulsanti nel riquadro della barra di Outlook, impostare la dimensione del bordo di segue la scheda Outlook ROL e impostare l'allineamento delle etichette di testo sui pulsanti della scheda della barra di Outlook. Questo frammento di codice fa parte di [esempio dimostrativo di Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ Se si imposta *bDetachable* su TRUE, `AddControl` crea internamente un `CDockabl
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il `AddControl` metodo nel `CMFCOutlookBarTabCtrl` classe. Questo frammento di codice fa parte di [esempio dimostrativo di Outlook](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare il `AddControl` metodo nel `CMFCOutlookBarTabCtrl` classe. Questo frammento di codice fa parte di [esempio dimostrativo di Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 
@@ -246,7 +246,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] Specifica se l'animazione deve essere abilitata o disabilitata.
 
 ### <a name="remarks"></a>Note
@@ -265,7 +265,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 Se TRUE, abilita la modifica sul posto dell'etichetta di testo. Se FALSE, disabilitare la modifica sul posto.
 
 ### <a name="remarks"></a>Note
@@ -285,7 +285,7 @@ void EnableScrollButtons(
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] Determina se vengono visualizzati i pulsanti di scorrimento.
 
 *bIsUp*<br/>
@@ -506,8 +506,8 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
-[Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[CMFCOutlookBar (classe)](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [Classe CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)

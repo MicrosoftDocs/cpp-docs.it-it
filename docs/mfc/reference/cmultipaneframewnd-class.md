@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: bb420021ec5b9839091c42b5eae6e1d5b9f7f977
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c23d76e8f3ea54fe34e7956ad5b4e7dc9780def
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281239"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773060"
 ---
 # <a name="cmultipaneframewnd-class"></a>Classe CMultiPaneFrameWnd
 
@@ -155,7 +155,7 @@ Per informazioni sulla derivazione di una classe dalla classe la `CPaneFrameWnd`
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come recuperare un puntatore a un `CMultiPaneFrameWnd` oggetto. Questo frammento di codice fa parte di [esempio imposta dimensioni del riquadro](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come recuperare un puntatore a un `CMultiPaneFrameWnd` oggetto. Questo frammento di codice fa parte di [esempio imposta dimensioni del riquadro](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]
 
@@ -638,6 +638,6 @@ virtual void StoreRecentTabRelatedInfo(
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)

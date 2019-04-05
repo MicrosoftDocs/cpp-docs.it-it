@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 212ef69350fbc85e6e0cc76bd505b2a895e75c8e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4d1ef0c9087e876f3e8f43430b58fc80f3923ba6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279965"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773463"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Classe CMFCVisualManagerVS2005
 
@@ -86,7 +86,7 @@ Tutti i membri di questa classe sono funzioni virtuali che derivano dal predeces
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare il gestore visualizzazione Visual Studio 2005. Questo frammento di codice fa parte di [esempio dimostrativo avviso Desktop](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare il gestore visualizzazione Visual Studio 2005. Questo frammento di codice fa parte di [esempio dimostrativo avviso Desktop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 
@@ -387,9 +387,9 @@ virtual void OnUpdateSystemColors();
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
 [Classe CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>
 [Classe CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)<br/>
-[Classe CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
+[CMFCVisualManagerOffice2003 Class](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)

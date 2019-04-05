@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774183"
 ---
 # <a name="cdocument-class"></a>CDocument (classe)
@@ -176,7 +176,7 @@ class CDocument : public CCmdTarget
 |[CDocument::OnDrawThumbnail](#ondrawthumbnail)|L'override del metodo in una classe derivata per disegnare il contenuto di anteprima.|
 |[CDocument::OnLoadDocumentFromStream](#onloaddocumentfromstream)|Chiamato dal framework quando è necessario caricare i dati del documento dal flusso.|
 |[CDocument::OnNewDocument](#onnewdocument)|Chiamato per creare un nuovo documento.|
-|[CDocument::OnOpenDocument](#onopendocument)|Chiamato per aprire un documento esistente.|
+|[CDocument:: OnOpenDocument](#onopendocument)|Chiamato per aprire un documento esistente.|
 |[CDocument::OnPreviewHandlerQueryFocus](#onpreviewhandlerqueryfocus)|Indirizza il gestore di anteprime per restituire l'HWND dalla chiamata della funzione GetFocu.|
 |[CDocument::OnPreviewHandlerTranslateAccelerator](#onpreviewhandlertranslateaccelerator)|Indirizza il gestore di anteprime per gestire una sequenza di tasti passata dal message pump del processo in cui è in esecuzione il gestore di anteprime.|
 |[CDocument::OnRichPreviewBackColorChanged](#onrichpreviewbackcolorchanged)|Chiamato quando viene modificato il colore di sfondo anteprima avanzata.|
@@ -375,7 +375,7 @@ virtual POSITION FindChunk(
 *guid*<br/>
 Specifica il GUID di un blocco da trovare.
 
-*pid*<br/>
+*PID*<br/>
 Specifica un PID di un blocco da trovare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1070,10 +1070,10 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>Parametri
 
-*Guid*<br/>
+*GUID*<br/>
 Specifica il GUID di un blocco da rimuovere.
 
-*Pid*<br/>
+*PID*<br/>
 Specifica il PID di un blocco da rimuovere.
 
 ### <a name="remarks"></a>Note
@@ -1116,7 +1116,7 @@ virtual void ReportSaveLoadException(
 *lpszPathName*<br/>
 Punta al nome del documento che è stato in fase di salvataggio o caricamento.
 
-*e*<br/>
+*h*<br/>
 Punta all'eccezione generata. Può essere NULL.
 
 *bSaving*<br/>
@@ -1254,11 +1254,11 @@ Questa funzione chiama il [CView::OnUpdate](../../mfc/reference/cview-class.md#o
 
 ## <a name="see-also"></a>Vedere anche
 
-[MFC Sample MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [MFC Sample SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Esempio MFC NPP](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)

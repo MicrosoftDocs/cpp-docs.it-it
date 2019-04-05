@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266367"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773996"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestori per intervalli della mappa messaggi
 
@@ -95,7 +95,7 @@ Per altre informazioni sui requisiti dei parametri per l'aggiornamento di funzio
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> Esempio di ID del comando intervallo
 
-Quando è possibile usare intervalli è un esempio di gestione dei comandi, ad esempio il comando di Zoom nell'esempio di MFC [HIERSVR](../visual-cpp-samples.md). Questo comando esegue lo zoom della visualizzazione, ridimensionarlo tra 25% e 300% delle dimensioni normali. Classe di visualizzazione HIERSVR Usa un intervallo di gestire i comandi di Zoom con una voce nella mappa messaggi simili a questo:
+Quando è possibile usare intervalli è un esempio di gestione dei comandi, ad esempio il comando di Zoom nell'esempio di MFC [HIERSVR](../overview/visual-cpp-samples.md). Questo comando esegue lo zoom della visualizzazione, ridimensionarlo tra 25% e 300% delle dimensioni normali. Classe di visualizzazione HIERSVR Usa un intervallo di gestire i comandi di Zoom con una voce nella mappa messaggi simili a questo:
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 

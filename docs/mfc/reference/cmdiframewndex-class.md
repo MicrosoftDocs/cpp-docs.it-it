@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778559"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (classe)
@@ -641,7 +641,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] TRUE per abilitare il caricamento dello stato di ancoraggio, FALSE per disabilitare il caricamento dello stato di ancoraggio.
 
 ### <a name="remarks"></a>Note
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] Se TRUE, è abilitata la funzionalità di gruppi a schede MDI; Se FALSE, viene disabilitata la caratteristica dei gruppi a schede MDI.
 
 *params*<br/>
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 Specifica se le schede sono abilitate.
 
 *bIcons*<br/>
@@ -719,7 +719,7 @@ Specifica la posizione delle etichette della scheda.
 *bTabCloseButton*<br/>
 Specifica se visualizzare i pulsanti Chiudi scheda.
 
-*style*<br/>
+*stile*<br/>
 Specifica lo stile delle schede. Usare STYLE_3D_SCROLLED per schede normali o STYLE_3D_ONENOTE per le schede di Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] Se TRUE, la gestione automatica dei menu del riquadro è abilitata; Se FALSE, la gestione automatica è disabilitata.
 
 *uiCustomizeCmd*<br/>
@@ -1047,7 +1047,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Puntatore al riquadro prima o dopo il quale inserire il riquadro.
 
-*bAfter*<br/>
+*bDopo*<br/>
 [in] Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1132,7 +1132,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Il punto specificato nelle coordinate dello schermo.
 
 *dwBarAlignment*<br/>
@@ -1592,7 +1592,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] La posizione del menu di scelta in coordinate dello schermo.
 
 *dwAllowedItems*<br/>
@@ -1745,7 +1745,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Il punto (in coordinate dello schermo).
 
 *nSensitivity*<br/>
@@ -2026,7 +2026,7 @@ Questo metodo esegue l'override di [CWnd::WinHelp](../../mfc/reference/cwnd-clas
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
-[Classe CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)
+[CMDIChildWndEx (classe)](../../mfc/reference/cmdichildwndex-class.md)

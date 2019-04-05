@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
 ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777129"
 ---
 # <a name="compiler-error-c3072"></a>Errore del compilatore C3072

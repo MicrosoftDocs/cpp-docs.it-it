@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778455"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parametri
 
-*style*<br/>
+*stile*<br/>
 [in] Stile del controllo struttura a schede. Per altre informazioni, vedere la sezione Note.
 
 *rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] L'ID del controllo scheda.
 
-*location*<br/>
+*posizione*<br/>
 [in] La posizione delle schede. Il valore predefinito è LOCATION_BOTTOM. Per altre informazioni, vedere la sezione Note.
 
 *bCloseBtn*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] TRUE per visualizzare il pulsante Chiudi nella scheda attiva; FALSE per visualizzare il pulsante di chiusura nell'angolo superiore destro dell'area della scheda. Il valore predefinito è TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] TRUE per abilitare le etichette delle schede modificabile; FALSE per disattivare le etichette delle schede modificabile.
 
 ### <a name="remarks"></a>Note
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] TRUE per visualizzare un menu a comparsa di etichette di finestra a schede; FALSE per visualizzare i pulsanti di scorrimento in avanti e indietro. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parametri
 
-*style*<br/>
+*stile*<br/>
 [in] Uno dei valori di enumerazione che specifica l'aspetto del controllo scheda. Per altre informazioni, vedere la tabella nella sezione Osservazioni.
 
 ### <a name="return-value"></a>Valore restituito
@@ -876,7 +876,7 @@ virtual DROPEFFECT OnDragEnter(
 *dwKeyState*<br/>
 [in] Contiene lo stato dei tasti di modifica. Questo parametro è una combinazione bit per bit (OR) dei valori seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per altre informazioni, vedere la **parametri del messaggio** sezione [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-*point*<br/>
+*punto*<br/>
 [in] Contiene la posizione corrente del cursore nelle coordinate del client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in] Lo stato dei tasti di modifica, ovvero una combinazione bit per bit (OR) di MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per altre informazioni, vedere "Parametri del messaggio" nella [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-*point*<br/>
+*punto*<br/>
 [in] La posizione corrente del mouse.
 
 ### <a name="return-value"></a>Valore restituito
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Le coordinate del punto in cui visualizzare il menu di scelta rapida.
 
 ### <a name="remarks"></a>Note
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parametri
 
-*bCancel*<br/>
+*bAnnulla*<br/>
 [in] TRUE per abbandonare l'operazione di ridimensionamento corrente. FALSE per il completamento operazione di ridimensionamento corrente. In entrambi i casi, il framework arresta disegnare il rettangolo di ridimensionamento.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar
@@ -1137,8 +1137,8 @@ Questo metodo influisce solo un controllo struttura a schede che Visualizza sche
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
-[Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
-[Classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268486"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773840"
 ---
 # <a name="cricheditcntritem-class"></a>Classe CRichEditCntrItem
 
@@ -49,7 +49,7 @@ Un "controllo rich edit" è una finestra in cui l'utente può immettere e modifi
 
 Questo controllo comune di Windows (e pertanto il [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) e le classi correlate) è disponibile solo per i programmi in esecuzione in versioni di Windows 95 o 98 e Windows NT 3.51 e successive.
 
-Per un esempio dell'uso di modifica avanzate degli elementi di contenitore in un'applicazione MFC, vedere la [WORDPAD](../../visual-cpp-samples.md) applicazione di esempio.
+Per un esempio dell'uso di modifica avanzate degli elementi di contenitore in un'applicazione MFC, vedere la [WORDPAD](../../overview/visual-cpp-samples.md) applicazione di esempio.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -110,8 +110,8 @@ Per altre informazioni, vedere [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Esempio MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[Classe CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>
-[Classe CRichEditView](../../mfc/reference/cricheditview-class.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[CRichEditDoc (classe)](../../mfc/reference/cricheditdoc-class.md)<br/>
+[CRichEditView (classe)](../../mfc/reference/cricheditview-class.md)

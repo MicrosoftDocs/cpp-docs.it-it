@@ -7,10 +7,10 @@ helpviewer_keywords:
 - CMFCVisualManagerOfficeXP class [MFC]
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
 ms.openlocfilehash: c975a2b7ae7de12c154954e44470e7af9feeaa1d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781419"
 ---
 # <a name="cmfcvisualmanagerofficexp-class"></a>Classe CMFCVisualManagerOfficeXP
@@ -53,6 +53,6 @@ Nell'esempio seguente viene illustrato come utilizzare `CMFCVisualManagerOfficeX
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)

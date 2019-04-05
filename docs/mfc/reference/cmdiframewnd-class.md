@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282448"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776531"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (classe)
 
@@ -111,7 +111,7 @@ Il `CMDIFrameWnd` classe erediti gran parte della propria implementazione predef
 
 - Una finestra cornice MDI dispone anche di un'implementazione di ID_WINDOW_NEW, che crea un nuovo frame e visualizzazione del documento corrente. Un'applicazione può eseguire l'override di queste implementazioni di comando predefinita per personalizzare la gestione delle finestra MDI.
 
-Non usare C++ **eliminare** operatore da eliminare definitivamente una finestra cornice. In alternativa, usare `CWnd::DestroyWindow`. Il `CFrameWnd` implementazione di `PostNcDestroy` eliminerà l'oggetto C++ quando la finestra viene eliminata. Quando l'utente chiude la finestra cornice, il valore predefinito `OnClose` gestore verrà chiamato `DestroyWindow`.
+Non usare C++ **eliminare** operatore da eliminare definitivamente una finestra cornice. In alternativa, utilizzare `CWnd::DestroyWindow`. Il `CFrameWnd` implementazione di `PostNcDestroy` eliminerà l'oggetto C++ quando la finestra viene eliminata. Quando l'utente chiude la finestra cornice, il valore predefinito `OnClose` gestore verrà chiamato `DestroyWindow`.
 
 Per ulteriori informazioni sul `CMDIFrameWnd`, vedere [Frame Windows](../../mfc/frame-windows.md).
 
@@ -459,10 +459,10 @@ Vedere l'esempio relativo [CMDIFrameWnd::MDICascade](#mdicascade).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC MDI](../../visual-cpp-samples.md)<br/>
-[MFC Sample MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[MFC Sample SNAPVW](../../visual-cpp-samples.md)<br/>
-[Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Esempio MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Esempio MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)
+[CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md)

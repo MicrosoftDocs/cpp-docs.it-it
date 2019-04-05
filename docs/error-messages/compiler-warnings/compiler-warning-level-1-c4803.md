@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-ms.openlocfilehash: 3915307ac2bcc6a923c93382cfefa618ce01fe52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8f5fe9d55a44193325a2fcfe9ef7675a2b3b89
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563215"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774880"
 ---
 # <a name="compiler-warning-level-1-c4803"></a>Avviso del compilatore (livello 1) C4803
 
@@ -19,7 +19,7 @@ ms.locfileid: "50563215"
 
 I metodi di eventi devono avere la stessa classe di archiviazione della dichiarazione evento. Il compilatore consente di regolare i metodi dell'evento in modo che le classi di archiviazione sono uguali.
 
-Questo avviso può verificarsi se si dispone di una classe che implementa un evento da un'interfaccia. Il compilatore non genera in modo implicito un metodo di generazione di un evento in un'interfaccia. Quando si implementa tale interfaccia in una classe, il compilatore di generare in modo implicito un metodo di generazione e tale metodo non virtuale, di conseguenza il messaggio di avviso. Per altre informazioni sugli eventi, vedere [evento](../../windows/event-cpp-component-extensions.md).
+Questo avviso può verificarsi se si dispone di una classe che implementa un evento da un'interfaccia. Il compilatore non genera in modo implicito un metodo di generazione di un evento in un'interfaccia. Quando si implementa tale interfaccia in una classe, il compilatore di generare in modo implicito un metodo di generazione e tale metodo non virtuale, di conseguenza il messaggio di avviso. Per altre informazioni sugli eventi, vedere [evento](../../extensions/event-cpp-component-extensions.md).
 
 Visualizzare [avviso](../../preprocessor/warning.md) pragma per informazioni su come disabilitare un avviso.
 

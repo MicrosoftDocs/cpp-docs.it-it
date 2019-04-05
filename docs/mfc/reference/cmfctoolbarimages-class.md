@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303343"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776414"
 ---
 # <a name="cmfctoolbarimages-class"></a>Classe CMFCToolBarImages
 
@@ -242,7 +242,7 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|TRUE se la fusione (colori a 32 bit) alfa truecolor è disabilitata.|
 
@@ -252,7 +252,7 @@ La bitmap completa di immagini della barra degli strumenti gestiti da `CMFCToolb
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come configurare un `CMFCToolBarImages` oggetti utilizzando diversi metodi nel `CMFCToolBarImages` classe. Nell'esempio viene illustrato come impostare le dimensioni dell'immagine della barra degli strumenti, caricare un'immagine e impostare il colore trasparente dell'immagine. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../visual-cpp-samples.md).
+L'esempio seguente illustra come configurare un `CMFCToolBarImages` oggetti utilizzando diversi metodi nel `CMFCToolBarImages` classe. Nell'esempio viene illustrato come impostare le dimensioni dell'immagine della barra degli strumenti, caricare un'immagine e impostare il colore trasparente dell'immagine. Questo frammento di codice fa parte di [esempio dimostrativo di Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]
@@ -550,7 +550,7 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>Parametri
 
-*dominio Active Directory*<br/>
+*ds*<br/>
 [in] Un riferimento al `CAfxDrawState` oggetto passato per il `PrepareDrawImage` (metodo).
 
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon
@@ -1120,7 +1120,7 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>Parametri
 
-*dominio Active Directory*<br/>
+*ds*<br/>
 [in] Un riferimento a `CAfxDrawState` struttura che archivia le risorse allocate tra le diverse fasi per il rendering di immagini.
 
 *sizeImageDest*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parametri
 
-*nValue*<br/>
+*nValore*<br/>
 [in] Il nuovo valore del canale alfa.
 
 ### <a name="remarks"></a>Note
@@ -1383,7 +1383,7 @@ TRUE se ha esito positivo resize. in caso contrario, FALSE.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>

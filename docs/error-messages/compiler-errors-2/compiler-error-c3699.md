@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: e413e4a08ce22ef109179ff0f98baf32ebba41c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525843"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776739"
 ---
 # <a name="compiler-error-c3699"></a>Errore del compilatore C3699
 
@@ -36,7 +36,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-Una proprietà trivial non può avere tipo di riferimento. Per altre informazioni, vedere [property](../../windows/property-cpp-component-extensions.md) . L'esempio seguente genera l'errore C3699.
+Una proprietà trivial non può avere tipo di riferimento. Per altre informazioni, vedere [property](../../extensions/property-cpp-component-extensions.md) . L'esempio seguente genera l'errore C3699.
 
 ```
 // C3699_b.cpp

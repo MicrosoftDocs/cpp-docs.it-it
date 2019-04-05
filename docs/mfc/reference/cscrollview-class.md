@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259256"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774153"
 ---
 # <a name="cscrollview-class"></a>Classe CScrollView
 
@@ -82,7 +82,7 @@ Per scorrere automaticamente in risposta ai messaggi dalla tastiera, aggiungere 
 
 È possibile gestire la rotellina del mouse lo scorrimento manualmente eseguendo l'override di messaggio mappato [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) e [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funzioni membro. Come lo sono per `CScrollView`, il comportamento consigliato per il supporto di queste funzioni membro [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), il messaggio di rotazione della rotellina.
 
-Per poter sfruttare lo scorrimento automatico, derivare la classe di visualizzazione da `CScrollView` anziché da `CView`. Quando la vista viene innanzitutto creata, se si desidera calcolare la dimensione della visualizzazione scorrevole in base alla dimensione del documento, chiamata di `SetScrollSizes` funzione di membro dalla sostituzione di entrambi [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) o [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (È necessario scrivere codice personalizzato per eseguire una query di dimensioni del documento. Per un esempio, vedere la [esempio Scribble](../../visual-cpp-samples.md).)
+Per poter sfruttare lo scorrimento automatico, derivare la classe di visualizzazione da `CScrollView` anziché da `CView`. Quando la vista viene innanzitutto creata, se si desidera calcolare la dimensione della visualizzazione scorrevole in base alla dimensione del documento, chiamata di `SetScrollSizes` funzione di membro dalla sostituzione di entrambi [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) o [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (È necessario scrivere codice personalizzato per eseguire una query di dimensioni del documento. Per un esempio, vedere la [esempio Scribble](../../overview/visual-cpp-samples.md).)
 
 La chiamata al `SetScrollSizes` membro funzione imposta la modalità di mapping della visualizzazione, le dimensioni totali della visualizzazione a scorrimento e la quantità da scorrere orizzontalmente e verticalmente. Tutte le dimensioni sono in unità logiche. La dimensione logica della vista in genere verrà calcolata dai dati archiviati nel documento, ma in alcuni casi è possibile specificare una dimensione fissa. Per esempi di entrambi gli approcci, vedere [CScrollView::SetScrollSizes](#setscrollsizes).
 
@@ -376,8 +376,8 @@ In alternativa, in alcuni casi potrebbe essere necessario impostare una dimensio
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC immagine](../../visual-cpp-samples.md)<br/>
+[Esempio MFC immagine](../../overview/visual-cpp-samples.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>
 [Classe CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)

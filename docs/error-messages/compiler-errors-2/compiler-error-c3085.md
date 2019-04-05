@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3085
 ms.assetid: 1ac40bf2-f63e-439e-8921-47e6dadc8354
-ms.openlocfilehash: 9e174d4f8e50864dd7b33b58786cce03d50c2295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01ebfa0007b9acc08742c57cc0528216eabb0441
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558379"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774750"
 ---
 # <a name="compiler-error-c3085"></a>Errore del compilatore C3085
 
 'constructor': un costruttore non può essere 'keyword'
 
-Un costruttore è stato dichiarato in modo non corretto. Per altre informazioni, vedere [Override Specifiers](../../windows/override-specifiers-cpp-component-extensions.md) .
+Un costruttore è stato dichiarato in modo non corretto. Per altre informazioni, vedere [Override Specifiers](../../extensions/override-specifiers-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Esempio
 

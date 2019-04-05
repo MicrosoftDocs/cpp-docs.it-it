@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: d58293b94eeaf499c48f750972b15256e9c19794
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293186"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773736"
 ---
 # <a name="cmousemanager-class"></a>Classe CMouseManager
 
@@ -117,7 +117,7 @@ Per altre informazioni su come fornire comportamento personalizzato del mouse, v
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come recuperare un puntatore a un `CMouseManager` oggetto utilizzando il `CWinAppEx::GetMouseManager` metodo e il `AddView` metodo nel `CMouseManager` classe. Questo frammento di codice fa parte il [campione raccolta stato](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come recuperare un puntatore a un `CMouseManager` oggetto utilizzando il `CWinAppEx::GetMouseManager` metodo e il `AddView` metodo nel `CMouseManager` classe. Questo frammento di codice fa parte il [campione raccolta stato](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 
@@ -269,7 +269,7 @@ Se *uiCmd* è impostato su 0, la visualizzazione specificata non è più associa
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
 [Personalizzazione di tastiera e mouse](../../mfc/keyboard-and-mouse-customization.md)

@@ -231,10 +231,10 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
 ms.openlocfilehash: 4ea04ece6f381fb2bce1c33716c7e7248bca5b7b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778936"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>Classe CMFCVisualManagerOffice2007
@@ -2389,7 +2389,7 @@ static void __stdcall SetResourceHandle(HINSTANCE hinstRes);
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
 [Classe CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)<br/>

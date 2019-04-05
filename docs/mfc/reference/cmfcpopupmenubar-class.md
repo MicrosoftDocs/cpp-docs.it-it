@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: 14f1636917244efe4decc0108579f81fbad2f457
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300778"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776778"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar (classe)
 
@@ -91,7 +91,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Specifica se l'intestazione laterale grigia verrà visualizzata quando l'applicazione ha un aspetto di Windows XP.|
 
@@ -101,7 +101,7 @@ Il `CMFCPopupMenuBar` viene creato nello stesso momento come un [classe CMFCPopu
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come inizializzare un `CMFCPopupMenuBar` dell'oggetto da un `CMFCPopupMenu` oggetto. Questo frammento di codice fa parte dell' [esempio Draw Client](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come inizializzare un `CMFCPopupMenuBar` dell'oggetto da un `CMFCPopupMenu` oggetto. Questo frammento di codice fa parte dell' [esempio Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]
 
@@ -195,7 +195,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Un punto dello schermo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -444,7 +444,7 @@ void StartPopupMenuTimer(
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [Classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)

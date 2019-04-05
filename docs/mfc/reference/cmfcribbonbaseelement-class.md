@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289975"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773073"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 
@@ -394,7 +394,7 @@ A seconda delle dimensioni, un elemento della barra multifunzione Visualizza un'
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonBaseElement` . Nell'esempio viene illustrato come ottenere un `CMFCRibbonBaseElement` dell'oggetto da un `CMFCRibbonStatusBar` classe, impostare la descrizione dell'elemento della barra multifunzione, impostare il testo, impostare un keytip e impostare il testo della descrizione comando per l'elemento della barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../visual-cpp-samples.md).
+L'esempio seguente illustra come usare i vari metodi nella classe `CMFCRibbonBaseElement` . Nell'esempio viene illustrato come ottenere un `CMFCRibbonBaseElement` dell'oggetto da un `CMFCRibbonStatusBar` classe, impostare la descrizione dell'elemento della barra multifunzione, impostare il testo, impostare un keytip e impostare il testo della descrizione comando per l'elemento della barra multifunzione. Questo frammento di codice fa parte dell' [esempio Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*type*<br/>
+*tipo*<br/>
 [in] Valore enumerato di un tipo di immagine. Vedere la sezione Osservazioni per un elenco di valori possibili.
 
 *rectImage*<br/>
@@ -1199,7 +1199,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Finestra padre per l'elemento della barra multifunzione.
 
-*data*<br/>
+*Data*<br/>
 Dati di accessibilità per l'elemento della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2275,5 +2275,5 @@ TRUE se l'elemento della barra multifunzione è lo stato attivo; in caso contrar
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

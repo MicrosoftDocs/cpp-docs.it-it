@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
 ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779183"
 ---
 # <a name="compiler-warning-level-1-c4490"></a>Avviso del compilatore (livello 1) C4490

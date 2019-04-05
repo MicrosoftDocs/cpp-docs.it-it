@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3095
 ms.assetid: cde725be-0936-40f6-9e57-e1d7d0710f83
-ms.openlocfilehash: b8b6a7bfd5b44e0ddd1e8dfba1a054d9645a4693
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0cf35e7964925623be39c0177d77fc5a6231ad2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438753"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774113"
 ---
 # <a name="compiler-error-c3095"></a>Errore del compilatore C3095
 
@@ -19,7 +19,7 @@ ms.locfileid: "50438753"
 
 Alcuni attributi vengono dichiarati in modo che non sia possibile applicare più occorrenze dell'attributo a una destinazione.
 
-Per altre informazioni, vedere [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Per altre informazioni, vedere [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Esempio
 

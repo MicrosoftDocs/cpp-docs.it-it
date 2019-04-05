@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779027"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Classe CMFCPropertyGridProperty
@@ -406,7 +406,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAllow*<br/>
+*bConsenti*<br/>
 [in] TRUE per rendere la proprietà modificabile. FALSE per impostare la proprietà di sola lettura. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -545,7 +545,7 @@ void Enable(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] TRUE per abilitare la proprietà. FALSE per disabilitare la proprietà. Le proprietà disabilitate non rispondono al mouse o tastiera. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -563,7 +563,7 @@ void EnableSpinControl(
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] TRUE per abilitare il controllo pulsante di selezione; FALSE per disabilitare il controllo pulsante di selezione. Il valore predefinito è TRUE.
 
 *nMin*<br/>
@@ -880,7 +880,7 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Punto da testare, nelle coordinate del client. Questo parametro è in genere la posizione corrente del puntatore del mouse.
 
 *pt*<br/>
@@ -1129,7 +1129,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Un punto, nelle coordinate del client.
 
 ### <a name="remarks"></a>Note
@@ -1169,7 +1169,7 @@ virtual BOOL OnClickValue(
 *uiMsg*<br/>
 [in] Un messaggio di mouse.
 
-*point*<br/>
+*punto*<br/>
 [in] Un punto, nelle coordinate del client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1224,7 +1224,7 @@ virtual BOOL OnDblClk(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Un punto, nelle coordinate del client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1712,6 +1712,6 @@ void Show(
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)

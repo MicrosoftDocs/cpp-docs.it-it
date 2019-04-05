@@ -101,10 +101,10 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773723"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
@@ -1286,6 +1286,6 @@ Override di questa funzione per modificare il modo in cui il ricco Modifica vist
 
 [Esempio MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[Classe CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[CRichEditDoc (classe)](../../mfc/reference/cricheditdoc-class.md)<br/>
 [Classe CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)

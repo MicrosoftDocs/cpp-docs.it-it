@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: e78cf26b32d424bc9cc9441787192cda6f7aeb54
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280377"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776466"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Classe CMFCRibbonUndoButton
 
@@ -56,7 +56,7 @@ Il `CMFCRibbonUndoButton` classe usa uno stack per rappresentare l'elenco a disc
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCRibbonUndoButton` classe e aggiungere una nuova azione all'elenco di azioni. Questo frammento di codice fa parte di [esempio di gadget della barra multifunzione](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCRibbonUndoButton` classe e aggiungere una nuova azione all'elenco di azioni. Questo frammento di codice fa parte di [esempio di gadget della barra multifunzione](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 
@@ -159,7 +159,7 @@ Restituisce sempre TRUE.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)<br/>
 [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)

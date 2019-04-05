@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425029"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776349"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>Parametri
 
-*lower*<br/>
+*inferiore*<br/>
 Riferimento a un integer che riceve il limite inferiore per il controllo.
 
-*upper*<br/>
+*superiore*<br/>
 Riferimento a un integer che riceve il limite superiore per il controllo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -399,7 +399,7 @@ La funzione membro `SetRange32` imposta l'intervallo a 32 bit per il controllo p
 
 ## <a name="see-also"></a>Vedere anche
 
-[CMNCTRL2 esempio MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL2 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[Classe CSliderCtrl](../../mfc/reference/csliderctrl-class.md)
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[CSliderCtrl (classe)](../../mfc/reference/csliderctrl-class.md)

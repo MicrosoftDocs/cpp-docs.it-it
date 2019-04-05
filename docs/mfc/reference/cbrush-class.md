@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778871"
 ---
 # <a name="cbrush-class"></a>CBrush (classe)
@@ -184,7 +184,7 @@ BOOL CreateDIBPatternBrush(
 *hPackedDIB*<br/>
 Identifica un oggetto di memoria globale contenente una compressa bitmap indipendente dalla periferica (DIB).
 
-*nUsage*<br/>
+*Nutilizzo*<br/>
 Specifica se il `bmiColors[]` campi del [BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) struttura dei dati (una parte di "compressi DIB") contengono esplicita di valori RGB o indici in attualmente realizzata tavolozza logica. Il parametro deve essere uno dei valori seguenti:
 
 - La tabella dei colori DIB_PAL_COLORS è costituito da una matrice di indici di 16 bit.
@@ -437,6 +437,6 @@ Per altre informazioni sull'uso di oggetti grafici, vedere [gli oggetti di grafi
 
 [Esempio MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
 [Classe CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CBitmap](../../mfc/reference/cbitmap-class.md)<br/>
-[Classe CDC](../../mfc/reference/cdc-class.md)
+[CDC (classe)](../../mfc/reference/cdc-class.md)

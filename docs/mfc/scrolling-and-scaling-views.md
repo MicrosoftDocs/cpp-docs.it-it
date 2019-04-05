@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777580"
 ---
 # <a name="scrolling-and-scaling-views"></a>Scorrimento e ridimensionamento di visualizzazioni
@@ -35,7 +35,7 @@ Spesso le dimensioni di un documento sono maggiore della dimensione che può vis
 
 Qualsiasi visualizzazione può gestire i messaggi della barra di scorrimento nel relativo `OnHScroll` e `OnVScroll` funzioni membro. È possibile una gestione dei messaggi della barra di scorrimento implementano in queste funzioni, autonomamente tutto il lavoro, oppure è possibile usare il `CScrollView` classe per gestire lo scorrimento per l'utente.
 
-`CScrollView` effettua le operazioni seguenti:
+`CScrollView` esegue le operazioni seguenti:
 
 - Gestisce le dimensioni di finestra e del riquadro di visualizzazione e la modalità di mapping
 
@@ -49,4 +49,4 @@ Quando si desidera che la vista si adatti automaticamente le dimensioni della fi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle visualizzazioni](../mfc/using-views.md)
+[Utilizzo delle visualizzazioni](../mfc/using-views.md)

@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
 ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778169"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Classe CMFCRibbonProgressBar
@@ -262,7 +262,7 @@ Usare questo metodo per definire l'intervallo dell'indicatore di stato impostand
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

@@ -57,10 +57,10 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781692"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
@@ -972,7 +972,7 @@ static void __stdcall SetPixel(
 |*cy*|[in] L'altezza totale del bitmap.|
 |*x*|[in] La coordinata x del pixel nella bitmap da modificare.|
 |*y*|[in] Coordinata y del pixel nella bitmap da modificare.|
-|*color*|[in] Il nuovo colore per pixel identificato dalle coordinate specificate.|
+|*colore*|[in] Il nuovo colore per pixel identificato dalle coordinate specificate.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
@@ -1034,5 +1034,5 @@ TRUE indica che ruotare + 90 gradi; FALSE indica che ruotare-90 gradi.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

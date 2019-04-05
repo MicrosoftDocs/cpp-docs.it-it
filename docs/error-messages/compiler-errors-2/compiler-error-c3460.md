@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3460
 ms.assetid: adbf8775-10ca-4654-acdf-58dd765351cd
-ms.openlocfilehash: 3a7fe5c6bbb7198f18f5a5cf7cac26add6e6709b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ffbc5102855574aba668a2c501cd08dbaebe5b8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676694"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775179"
 ---
 # <a name="compiler-error-c3460"></a>Errore del compilatore C3460
 
 'type': è possibile inoltrare solo un tipo definito dall'utente
 
-Per altre informazioni, vedere [l'inoltro di tipi (C + + CLI)](../../windows/type-forwarding-cpp-cli.md).
+Per altre informazioni, vedere [l'inoltro di tipi (C + + CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

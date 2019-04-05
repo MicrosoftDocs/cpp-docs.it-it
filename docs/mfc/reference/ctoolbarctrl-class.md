@@ -183,10 +183,10 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
 ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781263"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (classe)
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Identificatore del comando del pulsante per abilitare o disabilitare.
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 TRUE per abilitare il pulsante, FALSE per disabilitare il pulsante.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2117,7 +2117,7 @@ BOOL SetIndent(int iIndent);
 
 ### <a name="parameters"></a>Parametri
 
-*iIndent*<br/>
+*Membro*<br/>
 Il valore che specifica il rientro, in pixel.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2389,5 +2389,5 @@ Questa funzione membro emula la funzionalità dei [TB_SETWINDOWTHEME](/windows/d
 [CMNCTRL1 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Esempio MFCIE di MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classe CToolBar](../../mfc/reference/ctoolbar-class.md)

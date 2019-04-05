@@ -265,10 +265,10 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780613"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
@@ -2702,7 +2702,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>Parametri
 
-*index*<br/>
+*indice*<br/>
 L'indice dell'elemento in cui il gruppo deve essere inserito.
 
 *pgrp*<br/>
@@ -2774,7 +2774,7 @@ Indice dell'elemento da inserire.
 *lpszItem*<br/>
 Indirizzo di una stringa contenente l'etichetta dell'elemento o LPSTR_TEXTCALLBACK se l'elemento è un elemento di callback. Per informazioni sugli elementi di callback, vedere [CListCtrl:: GetCallbackMask](#getcallbackmask).
 
-*nImage*<br/>
+*Immagine*<br/>
 Indice dell'immagine dell'elemento oppure I_IMAGECALLBACK se l'elemento è un elemento di callback. Per informazioni sugli elementi di callback, vedere [CListCtrl:: GetCallbackMask](#getcallbackmask).
 
 *nMask*<br/>
@@ -2875,7 +2875,7 @@ BOOL IsItemVisible(int index) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*index*|[in] Indice in base zero di un elemento nel controllo visualizzazione elenco corrente.|
+|*indice*|[in] Indice in base zero di un elemento nel controllo visualizzazione elenco corrente.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2923,7 +2923,7 @@ UINT MapIndexToID(UINT index) const;
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*index*|[in] Indice a base zero di un elemento.|
+|*indice*|[in] Indice a base zero di un elemento.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3043,7 +3043,7 @@ BOOL RedrawItems(
 *nFirst*<br/>
 Indice del primo elemento da ridisegnare.
 
-*nLast*<br/>
+*ultimo record. Nultimo*<br/>
 Indice dell'ultimo elemento da ridisegnare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*color*<br/>
+*colore*<br/>
 Oggetto [COLORREF](/windows/desktop/gdi/colorref) struttura che specifica il colore per impostare il punto di inserimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3655,7 +3655,7 @@ Specifica quali attributi devono essere impostate (vedere la sezione Osservazion
 *lpszItem*<br/>
 Indirizzo di una stringa con terminazione null che specifica dell'etichetta dell'elemento.
 
-*nImage*<br/>
+*Immagine*<br/>
 Indice dell'immagine dell'elemento all'interno dell'elenco immagini.
 
 *nState*<br/>
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*color*<br/>
+*colore*<br/>
 Il nuovo [COLORREF](/windows/desktop/gdi/colorref) struttura che contiene il colore di contorno.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4424,5 +4424,5 @@ Questa funzione dispone inoltre del controllo visualizzazione elenco in caso aff
 
 [Esempio MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](cwnd-class.md)<br/>
-[Grafico della gerarchia](../hierarchy-chart.md)<br/>
-[Classe CImageList](cimagelist-class.md)
+[Grafico delle gerarchie](../hierarchy-chart.md)<br/>
+[CImageList (classe)](cimagelist-class.md)

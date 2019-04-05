@@ -25,10 +25,10 @@ helpviewer_keywords:
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
 ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
-ms.sourcegitcommit: 489c0b998f2360317701f7a4a97b2b8ad96052d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58866916"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
