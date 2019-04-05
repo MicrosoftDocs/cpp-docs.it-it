@@ -4,12 +4,12 @@ ms.date: 10/12/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: a4b95674c2c9c6f0a5dae29e68cff44c759e0fa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029fe6866df81d366cc3bc15096f638791faa413
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578607"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030420"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Creazione di un consumer senza utilizzare una procedura guidata
 

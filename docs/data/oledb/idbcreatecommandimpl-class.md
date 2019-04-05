@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: fda12332ef14cb95e9f11f8df0b94ccfffa0303d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7450d91cd5e5383b55e2ebb391fe5f1190cbed2a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425185"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024929"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
@@ -79,5 +79,5 @@ Alcuni parametri corrispondono ai *riferimento per programmatori OLE DB* i param
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

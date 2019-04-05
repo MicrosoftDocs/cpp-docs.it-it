@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++ debugger, debugging providers
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-ms.openlocfilehash: 15e9df58d4b31a8e69999c9ec7c22af158d08b38
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 21d4cb455413c3f7cbcbed02cdd4c364a469426d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265087"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033873"
 ---
 # <a name="debugging-your-provider"></a>Debug del provider
 
@@ -36,4 +36,4 @@ Esistono due modi per eseguire il debug del provider:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Utilizzo dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

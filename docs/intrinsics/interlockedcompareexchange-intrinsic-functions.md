@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328312"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021469"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedCompareExchange
 
@@ -202,7 +202,7 @@ Il valore restituito è il valore iniziale del puntatore `Destination`.
 
 ## <a name="remarks"></a>Note
 
-`_InterlockedCompareExchange` esegue un confronto atomico del valore `Destination` con il valore `Comparand`. Se il valore `Destination` è uguale al valore `Comparand`, il valore `Exchange` viene archiviato nell'indirizzo specificato da `Destination`. In caso contrario, non viene eseguita alcuna operazione.
+`_InterlockedCompareExchange` esegue un confronto atomico del `Destination` valore con il `Comparand` valore. Se il valore `Destination` è uguale al valore `Comparand`, il valore `Exchange` viene archiviato nell'indirizzo specificato da `Destination`. In caso contrario, non viene eseguita alcuna operazione.
 
 `_InterlockedCompareExchange` fornisce il supporto intrinseco del compilatore per il SDK di Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) (funzione).
 

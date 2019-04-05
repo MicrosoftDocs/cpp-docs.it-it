@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328402"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041124"
 ---
 # <a name="accelerator-editor-c"></a>Accelerator Editor (C++)
 
@@ -71,10 +71,10 @@ Di seguito sono le voci legali per la **modificatore** proprietà nella tabella 
 
    |Value|Descrizione|
    |-----------|-----------------|
-   |**None**|Utente preme solo il **chiave** valore.<br/><br/>Questo valore viene utilizzato in modo più efficace con i valori ASCII/ANSI 001 tramite 026, che viene interpretato come ^ dalla alla ^ Z (**Ctrl + B** attraverso **Ctrl + Z**).|
+   |**nessuno**|Utente preme solo il **chiave** valore.<br/><br/>Questo valore viene utilizzato in modo più efficace con i valori ASCII/ANSI 001 tramite 026, che viene interpretato come ^ dalla alla ^ Z (**Ctrl + B** attraverso **Ctrl + Z**).|
    |**ALT**|L'utente deve premere **Alt** prima di **chiave** valore.|
    |**CTRL**|L'utente deve premere **Ctrl** prima di **chiave** valore, non valida con tipo ASCII.|
-   |**MAIUSC**|L'utente deve premere **Shift** prima di **chiave** valore.|
+   |**Shift**|L'utente deve premere **Shift** prima di **chiave** valore.|
    |**Ctrl + Alt**|L'utente deve premere **Ctrl** e **Alt** prima il **chiave** valore, non valida con tipo ASCII.|
    |**CTRL + MAIUSC**|L'utente deve premere **Ctrl** e **MAIUSC** prima il **chiave** valore, non valida con tipo ASCII.|
    |**ALT + MAIUSC**|L'utente deve premere **Alt** e **MAIUSC** prima il **chiave** valore, non valida con tipo ASCII.|
@@ -84,7 +84,7 @@ Il **chiave** proprietà imposta il tasto effettivo da usare come tasto di scelt
 
 Di seguito sono le voci legali per la **chiave** proprietà nella tabella di tasti di scelta rapida:
 
-   |Valore|Descrizione|
+   |Value|Descrizione|
    |-----------|-----------------|
    |Numero intero compreso tra 0 e 255 in formato decimale.|Il valore determina se il valore viene trattato come ASCII o ANSI come indicato di seguito:<br/><br/>   -Cifra numeri vengono sempre interpretati come la chiave corrispondente, anziché come valori ASCII o ANSI.<br/>   -I valori da 1 a 26, preceduti da zero, vengono interpretati come ^ dalla alla ^ Z, che rappresenta il valore ASCII delle lettere dell'alfabeto se premuto con il **Ctrl** tasto mantenuto premuto.<br/>   -I valori da 27 a 32 vengono sempre interpretati come valori decimali a tre cifre 027 e 032.<br/>   -I valori da 033 a 255, preceduto da 0 o non vengono interpretati come valori ANSI.|
    |Un singolo carattere della tastiera.|Caratteri maiuscoli A - Z o i numeri da 0 - 9 può essere ASCII o i valori di chiave virtuali. Qualsiasi altro carattere è solo ASCII.|
@@ -192,5 +192,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor di risorse](../windows/resource-editors.md)<br/>
+[editor di risorse](../windows/resource-editors.md)<br/>
 [Tasti di scelta rapida](../windows/predefined-accelerator-keys.md)<br/>

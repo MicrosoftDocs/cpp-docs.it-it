@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 5bc402ad8999f1864c7e6b1155da3c68862dda97
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827740"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028506"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione
 
@@ -24,11 +24,11 @@ Nell'ambiente di sviluppo Visual C++ esistono tre modi principali per personaliz
 
 - **Istruzioni di compilazione personalizzate**
 
-   Un'istruzione di compilazione personalizzata è una regola di compilazione associata a un progetto. Un'istruzione di compilazione personalizzata può specificare una riga di comando da eseguire, file di input o output aggiuntivi e un messaggio da visualizzare. Per altre informazioni, vedere [Procedura: Aggiungere un passaggio di compilazione personalizzata a progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
+   Un'istruzione di compilazione personalizzata è una regola di compilazione associata a un progetto. Un'istruzione di compilazione personalizzata può specificare una riga di comando da eseguire, file di input o output aggiuntivi e un messaggio da visualizzare. Per altre informazioni, vedere [Procedura: Aggiungere un'istruzione di compilazione personalizzata ai progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
 
-- **Strumenti di compilazione personalizzati**
+- **Strumenti di compilazione personalizzata**
 
-   Uno strumento di compilazione personalizzato è una regola di compilazione associata a uno o più file. Un'istruzione di compilazione personalizzata può passare file di input a uno strumento di compilazione personalizzato, che restituisce uno o più file di output. Ad esempio, i file della Guida in un'applicazione MFC vengono compilati con uno strumento di compilazione personalizzato. Per altre informazioni, vedere [Procedura: Aggiungere gli strumenti di compilazione personalizzata a progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) e [personalizzato specificando gli strumenti di compilazione](specifying-custom-build-tools.md).
+   Uno strumento di compilazione personalizzato è una regola di compilazione associata a uno o più file. Un'istruzione di compilazione personalizzata può passare file di input a uno strumento di compilazione personalizzato, che restituisce uno o più file di output. Ad esempio, i file della Guida in un'applicazione MFC vengono compilati con uno strumento di compilazione personalizzato. Per altre informazioni, vedere [Procedura: Aggiungere strumenti di compilazione personalizzati ai progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) e [Specifica di strumenti di compilazione personalizzati](specifying-custom-build-tools.md).
 
 - **Eventi di compilazione**
 
@@ -73,5 +73,5 @@ Gli eventi di compilazione e le istruzioni di compilazione personalizzate vengon
 
 ## <a name="see-also"></a>Vedere anche
 
-[Progetti di Visual Studio - C++](creating-and-managing-visual-cpp-projects.md)<br>
+[Visual Studio Projects - C++](creating-and-managing-visual-cpp-projects.md)<br>
 [Macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md)

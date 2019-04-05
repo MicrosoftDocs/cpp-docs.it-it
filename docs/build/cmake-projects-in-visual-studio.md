@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 22a8ecc34e6413c32628381241d45d3d76b39ecc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565295"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030433"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Progetti CMake in Visual Studio
 
@@ -164,7 +164,7 @@ Se CMake è stato installato dal programma di installazione di Visual Studio, è
 [Configurare un progetto CMake per Linux](../linux/cmake-linux-project.md)<br/>
 [Connettersi al computer Linux remoto](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Personalizzare le impostazioni di compilazione di CMake](customize-cmake-settings.md)<br/>
-[Informazioni di riferimento su CMakeSettings.json](cmakesettings-reference.md)<br/>
+[CMakeSettings.json reference](cmakesettings-reference.md)<br/>
 [Configurare le sessioni di debug di CMake](configure-cmake-debugging-sessions.md)<br/>
 [Distribuire, eseguire e sottoporre a debug il progetto Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Informazioni di riferimento sulle configurazioni predefinite CMake](cmake-predefined-configuration-reference.md)<br/>

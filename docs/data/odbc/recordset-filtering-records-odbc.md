@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: applicazione di filtri ai record (ODBC)'
+title: 'Recordset: Filtrare i record (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [MFC], filtering
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514751"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041215"
 ---
-# <a name="recordset-filtering-records-odbc"></a>Recordset: applicazione di filtri ai record (ODBC)
+# <a name="recordset-filtering-records-odbc"></a>Recordset: Filtrare i record (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -44,7 +44,7 @@ Questo argomento illustra come filtrare un set di record in modo che seleziona s
     > [!NOTE]
     >  La stringa letterale "MATH101" viene visualizzata con virgolette singole precedente. Nella specifica ODBC SQL, le virgolette singole vengono utilizzate per indicare un valore letterale stringa di caratteri. Controllare la documentazione del driver ODBC per i requisiti di delimitazione del DBMS in questa situazione. Questa sintassi è illustrata in modo più dettagliato alla fine di questo argomento.
 
-1. Impostare le opzioni che necessarie, come ordinamento, la modalità di blocco o parametri. Se si specifica un parametro è particolarmente utile. Per informazioni sull'uso dei parametri di filtro, vedere [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Impostare le opzioni che necessarie, come ordinamento, la modalità di blocco o parametri. Se si specifica un parametro è particolarmente utile. Per informazioni sull'uso dei parametri di filtro, vedere [Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Chiamare `Open` per il nuovo oggetto (o `Requery` per un oggetto aperto in precedenza).
 
@@ -82,15 +82,15 @@ Si noti l'uso dei caratteri di virgoletta singola. Se si imposta la stringa di f
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-Le virgolette sopra è conforme alla specifica ODBC, ma alcuni DBMS potrebbero richiedere altri caratteri di virgoletta. Per altre informazioni, vedere [SQL: del Recordset SQL istruzione (ODBC personalizzazione)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Le virgolette sopra è conforme alla specifica ODBC, ma alcuni DBMS potrebbero richiedere altri caratteri di virgoletta. Per altre informazioni, vedere [SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Se si sceglie di eseguire l'override della stringa del recordset predefiniti SQL passando la stringa SQL personalizzata per `Open`, non è necessario impostare un filtro se la stringa personalizzata contiene una **dove** clausola. Per altre informazioni sulle ignorando l'impostazione predefinita, SQL, vedere [SQL: del Recordset SQL istruzione (ODBC personalizzazione)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Se si sceglie di eseguire l'override della stringa del recordset predefiniti SQL passando la stringa SQL personalizzata per `Open`, non è necessario impostare un filtro se la stringa personalizzata contiene una **dove** clausola. Per altre informazioni sulle ignorando l'impostazione predefinita, SQL, vedere [SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: ordinamento dei record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Recordset: blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset: Ordinamento dei record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Recordset: Selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Recordset: Blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

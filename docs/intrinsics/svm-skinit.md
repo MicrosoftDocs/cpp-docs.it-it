@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-ms.openlocfilehash: 630d4b9d93802038bd00b65495bb18455b0c61a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591217"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026136"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
@@ -40,7 +40,7 @@ La funzione `__svm_skinit` è equivalente alle `SKINIT` istruzioni in linguaggio
 
 Il `SLB` parametro specifica l'indirizzo fisico di un blocco di 64 KB di memoria denominata la *Secure blocco del caricatore* (SLB). Il bilanciamento del carico software contiene un programma denominato il caricatore sicuro che consente di stabilire l'ambiente operativo per il computer e successivamente carica il kernel di sicurezza.
 
-Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.
+Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: Sistema di programmazione,"documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.
 
 ## <a name="requirements"></a>Requisiti
 

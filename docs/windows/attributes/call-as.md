@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 16839f5a5040e6b0019005912782ba359178cc47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579897"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023919"
 ---
 # <a name="callas"></a>call_as
 
@@ -25,7 +25,7 @@ Consente a un [locale](local-cpp.md) funzione viene mappata a una funzione remot
 
 ### <a name="parameters"></a>Parametri
 
-*function*<br/>
+*funzione*<br/>
 La funzione locale che si desidera siano chiamati quando viene richiamata una funzione remota.
 
 ## <a name="remarks"></a>Note
@@ -56,7 +56,7 @@ __interface IMInterface {
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -64,5 +64,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di metodo](method-attributes.md)<br/>
-[local](local-cpp.md)
+[Attributi del metodo](method-attributes.md)<br/>
+[locali](local-cpp.md)

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: 080504dabccd89340d511aa6d3192cf711d3d6bf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b764b571aae81f6225028cbe0d052d817d93d183
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416859"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024361"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl (classe)
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: d90e37e27f7e2a13ffebd11043e415c1d43751c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430499"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041189"
 ---
 # <a name="pragma"></a>pragma
 
@@ -56,7 +56,7 @@ __interface A
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

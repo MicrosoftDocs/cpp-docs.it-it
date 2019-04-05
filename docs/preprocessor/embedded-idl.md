@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525606"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034089"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
@@ -30,9 +30,9 @@ embedded_idl[("param")]
 *param*<br/>
 Può essere uno dei due valori:
 
-- **emitidl**: informazioni sui tipi importate dalla libreria dei tipi saranno presenti nel file IDL generato per il progetto con attributi.  Questa è l'impostazione predefinita e avrà effetto se non si specifica un parametro su `embedded_idl`.
+- **emitidl**: Informazioni sui tipi importate dalla libreria dei tipi saranno presenti nel file IDL generato per il progetto con attributi.  Questa è l'impostazione predefinita e avrà effetto se non si specifica un parametro su `embedded_idl`.
 
-- **no_emitidl**: informazioni sui tipi importate dalla libreria dei tipi non saranno presenti nel file IDL generato per il progetto con attributo.
+- **no_emitidl**: Informazioni sui tipi importate dalla libreria dei tipi non saranno presenti nel file IDL generato per il progetto con attributo.
 
 ## <a name="example"></a>Esempio
 
@@ -50,5 +50,5 @@ Può essere uno dei due valori:
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+[Attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Direttiva #import](../preprocessor/hash-import-directive-cpp.md)

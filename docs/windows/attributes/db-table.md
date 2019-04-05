@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: d0b67bae643698b6d4f09a75dd2e4ec6a23a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607272"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023867"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -34,7 +34,7 @@ Stringa che specifica il nome di una tabella di database (ad esempio, "prodotti"
 *source_name*<br/>
 (Facoltativo) La variabile `CSession` o l'istanza di una classe a cui è applicato l'attributo `db_source` con cui viene eseguito il comando. Vedere [db_source](db-source.md).
 
-*hresult*<br/>
+*HRESULT*<br/>
 (Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
 ## <a name="remarks"></a>Note
@@ -70,7 +70,7 @@ Per un esempio di questo attributo usato in un'applicazione, vedere gli esempi [
 |-|-|
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

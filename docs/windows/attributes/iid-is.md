@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 176ab83bfae18ff7f43fe0860591f2d1ac50d7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535330"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038557"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -25,7 +25,7 @@ Specifica l'IID dell'interfaccia COM a cui punta un puntatore a interfaccia.
 
 ### <a name="parameters"></a>Parametri
 
-*Espressione*<br/>
+*espressione*<br/>
 Un'espressione del linguaggio C che specifica un IID di un'interfaccia COM a cui punta un puntatore a interfaccia.
 
 ## <a name="remarks"></a>Note
@@ -59,7 +59,7 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**Si applica a**|Parametro di interfaccia, membro dati|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -67,4 +67,4 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)
+[Attributi dei parametri](parameter-attributes.md)

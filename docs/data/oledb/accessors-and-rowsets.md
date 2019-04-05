@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 21043e22b37084fa543bf6b8a0fc176c3b8be788
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175713"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030024"
 ---
 # <a name="accessors-and-rowsets"></a>Funzioni di accesso e rowset
 
@@ -70,4 +70,4 @@ Classi rowset
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

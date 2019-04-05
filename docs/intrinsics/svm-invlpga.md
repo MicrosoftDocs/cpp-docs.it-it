@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: 2d356cf7426c558c8ac0312eff02c0cb9de9c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544300"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031134"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
@@ -30,12 +30,12 @@ void __svm_invlpga(void *Va, int ASID);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Valutazione della vulnerabilità*|[in] L'indirizzo virtuale della pagina da invalidare.|
+|*Va*|[in] L'indirizzo virtuale della pagina da invalidare.|
 |*ASID*|[in] L'indirizzo dello spazio identificatore (ASID) della pagina da invalidare.|
 
 ## <a name="remarks"></a>Note
 
-La funzione `__svm_invlpga` è equivalente alle `INVLPGA` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.
+La funzione `__svm_invlpga` è equivalente alle `INVLPGA` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: Sistema di programmazione,"documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.
 
 ## <a name="requirements"></a>Requisiti
 

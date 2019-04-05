@@ -1,19 +1,19 @@
 ---
-title: 'SQL: tipi di dati SQL e C++ (ODBC)'
+title: 'SQL: SQL e tipi di dati C++ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649501"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024348"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: tipi di dati SQL e C++ (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL e tipi di dati C++ (ODBC)
 
 > [!NOTE]
 >  Queste informazioni si applicano alle classi ODBC MFC. Se si lavora con le classi DAO MFC, vedere l'argomento "Confronto di Microsoft Jet motore di Database SQL e ANSI SQL" nella Guida di DAO.
@@ -28,7 +28,7 @@ Nella tabella seguente viene eseguito il mapping tipi di dati di ANSI SQL ai tip
 |**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
 |**REAL**|**float**|
-|**NUMERO INTERO**|**long**|
+|**INTEGER**|**long**|
 |**FLOAT**|**double**|
 |**DOUBLE**|**double**|
 |**NUMERICO**|`CString` 1|
@@ -41,7 +41,7 @@ Nella tabella seguente viene eseguito il mapping tipi di dati di ANSI SQL ai tip
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**DATE**|`CTime`, `CString`|
-|**ORA**|`CTime`, `CString`|
+|**TIME**|`CTime`, `CString`|
 |**TIMESTAMP**|`CTime`, `CString`|
 
 1. ANSI **decimale** e **numerico** eseguire il mapping a `CString` perché **SQL_C_CHAR** è il tipo di trasferimento ODBC predefinito.
@@ -57,4 +57,4 @@ Se si usa la libreria di cursori ODBC con le classi di database ODBC MFC e il dr
 ## <a name="see-also"></a>Vedere anche
 
 [SQL](../../data/odbc/sql.md)<br/>
-[SQL: esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL: Esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

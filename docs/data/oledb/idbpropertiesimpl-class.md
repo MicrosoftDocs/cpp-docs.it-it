@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 13c41b97190ff13b87361b6e8344b8f17798708a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 807cdf55a5a2fa6e0cc063c22b1685d8156c41a5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413342"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031339"
 ---
 # <a name="idbpropertiesimpl-class"></a>Classe IDBPropertiesImpl
 
@@ -144,5 +144,5 @@ Se il provider viene inizializzato, questo metodo imposta i valori delle proprie
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

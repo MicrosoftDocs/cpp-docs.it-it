@@ -6,12 +6,12 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: c7d1250eef52164054f8181fff2384d6a12f0b99
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 8a238021f255da30a132755a297a471dd1f51246
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562900"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024942"
 ---
 # <a name="win32-predefined-symbols"></a>Simboli già definiti di Win32
 
@@ -40,6 +40,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[ID simbolo predefiniti](../windows/predefined-symbol-ids.md)<br/>
+[ID di simbolo già definiti](../windows/predefined-symbol-ids.md)<br/>
 [Simboli predefiniti di MFC](../windows/mfc-predefined-symbols.md)<br/>
 [Simboli predefiniti di ATL](../windows/atl-predefined-symbols.md)<br/>

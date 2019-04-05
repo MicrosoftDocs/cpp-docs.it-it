@@ -4,12 +4,12 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326641"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025137"
 ---
 # <a name="creating-a-simple-consumer"></a>Creazione di un consumer semplice
 
@@ -56,7 +56,7 @@ Successivamente, usare il **Creazione guidata Consumer OLE DB ATL** per aggiunge
    1. Nel **connessione** , specificare le informazioni necessarie, ad esempio nome del server, l'ID di accesso e password per l'origine dati e il database nel server.
 
       > [!NOTE]
-      > Si verifica un problema di sicurezza con il **Consenti salvataggio password** funzionalità delle **proprietà di Data Link** nella finestra di dialogo. Nelle **immettere le informazioni per l'accesso al server**, sono presenti due pulsanti di opzione: **Usa Windows protezione integrata NT** e **usare un nome utente specifico e una password**.
+      > Si verifica un problema di sicurezza con il **Consenti salvataggio password** funzionalità delle **proprietà di Data Link** nella finestra di dialogo. Nelle **immettere le informazioni per l'accesso al server**, sono presenti due pulsanti di opzione: **La sicurezza integrata di Windows usare NT** e **usare un nome utente specifico e una password**.
 
       > [!NOTE]
       > Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la **Consenti salvataggio password** casella di controllo), tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione utilizza Windows NT per verificare la tua identità.
@@ -100,4 +100,4 @@ La procedura guidata genera una classe di comando e una classe di record utente,
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Creazione di un consumer OLE DB mediante procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

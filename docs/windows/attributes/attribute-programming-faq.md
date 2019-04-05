@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815879"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025098"
 ---
 # <a name="attribute-programming-faq"></a>Domande frequenti sulla programmazione con attributi
 
@@ -40,7 +40,7 @@ Questo argomento sono incluse le seguenti domande frequenti:
 
 Un valore HRESULT è un tipo di dati semplice che viene spesso utilizzato come valore restituito da attributi e ATL in generale. La tabella seguente descrive i diversi valori. Altri valori sono contenuti nel file Winerror. h file di intestazione.
 
-|nome|Descrizione|Value|
+|Nome|Descrizione|Value|
 |----------|-----------------|-----------|
 |S_OK|Operazione riuscita|0x00000000|
 |E_UNEXPECTED|Errore imprevisto|0x8000FFFF|
@@ -80,16 +80,16 @@ Tuttavia, gli attributi seguenti presentano parametri senza nome, singoli:
 
 ||||
 |-|-|-|
-|[call_as](call-as.md)|[case](case-cpp.md)|[cpp_quote](cpp-quote.md)|
+|[call_as](call-as.md)|[maiuscole e minuscole](case-cpp.md)|[cpp_quote](cpp-quote.md)|
 |[default](default-cpp.md)|[defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
 |[emitidl](emitidl.md)|[entry](entry.md)|[first_is](first-is.md)|
 |[helpcontext](helpcontext.md)|[helpfile](helpfile.md)|[helpstring](helpstring.md)|
 |[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[ID](id.md)|
-|[iid_is](iid-is.md)|[import](import.md)|[importlib](importlib.md)|
+|[iid_is](iid-is.md)|[importazione](import.md)|[importlib](importlib.md)|
 |[include](include-cpp.md)|[includelib](includelib-cpp.md)|[last_is](last-is.md)|
 |[length_is](length-is.md)|[max_is](max-is.md)|[no_injected_text](no-injected-text.md)|
 |[pointer_default](pointer-default.md)|[pragma](pragma.md)|[restricted](restricted.md)|
-|[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
+|[size_is](size-is.md)|[origine](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
 ##  <a name="vcconattributeprogrammmingfaqanchor3"></a> È possibile usare i commenti in un blocco di attributi?

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: e1117cfb8e68cbdc5432355315213faad903ea35
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424652"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023724"
 ---
 # <a name="iconverttypeimpl-class"></a>Classe IConvertTypeImpl
 
@@ -76,5 +76,5 @@ Utilizza la conversione di dati OLE DB in `MSADC.DLL`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

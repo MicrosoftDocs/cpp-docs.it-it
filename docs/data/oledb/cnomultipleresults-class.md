@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
-ms.openlocfilehash: 8a1cabc058f1aaefe78c67df68106cf1db7ca58e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59b7b35c350a37f13e1f253bc1430d69521e4fa8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451480"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026727"
 ---
 # <a name="cnomultipleresults-class"></a>Classe CNoMultipleResults
 
@@ -35,5 +35,5 @@ Se si vuole che un comando gestisca più set di risultati, usare [CMultipleResul
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

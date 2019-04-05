@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849745"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026292"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Uso di classi di Database con documenti e visualizzazioni
 
@@ -73,4 +73,4 @@ Non è possibile usare documenti e visualizzazioni affatto. In tal caso, vedere 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classi di database MFC](../data/mfc-database-classes-odbc-and-dao.md)
+[Classi di Database MFC](../data/mfc-database-classes-odbc-and-dao.md)

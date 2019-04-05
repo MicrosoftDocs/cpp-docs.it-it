@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: 2c873451e9d2a47007330a5f05af05122a166ffb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88a027a24f8ab817f793f101f9f128e1fc0c61c3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527267"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023945"
 ---
 # <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
 
@@ -76,4 +76,4 @@ END_COLUMN_MAP()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[Utilizzo dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

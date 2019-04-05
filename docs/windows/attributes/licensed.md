@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: b0b66da845151ca8cad17f3fb33e0e0a736a4813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566361"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034995"
 ---
 # <a name="licensed"></a>licensed
 

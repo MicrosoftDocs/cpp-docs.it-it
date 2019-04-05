@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-ms.openlocfilehash: d6eb5aaa9a66f46335b0a364e6c6e79abc297d64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf1b47cc03d1839ae5c547393c3c193dab439d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647892"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027662"
 ---
 # <a name="cnoaccessor-class"></a>Classe CNoAccessor
 
@@ -61,5 +61,5 @@ Usare `CNoAccessor` come argomento di modello quando non si desidera la classe p
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

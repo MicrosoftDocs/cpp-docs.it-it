@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: 22aa969185afbac5ab395d0ac7dde23e715b8e58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537670"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026318"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -25,7 +25,7 @@ Consente di specificare un valore predefinito per un parametro facoltativo tipiz
 
 ### <a name="parameters"></a>Parametri
 
-*valore*<br/>
+*predefinito*<br/>
 Il valore predefinito per il parametro.
 
 ## <a name="remarks"></a>Note
@@ -62,7 +62,7 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -70,9 +70,9 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi dei parametri](parameter-attributes.md)<br/>
 [out](out-cpp.md)<br/>
 [retval](retval.md)<br/>
 [in](in-cpp.md)<br/>
 [pointer_default](pointer-default.md)<br/>
-[unique](unique-cpp.md)
+[univoco](unique-cpp.md)

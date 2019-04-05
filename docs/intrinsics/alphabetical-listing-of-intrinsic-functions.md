@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654767"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026201"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Elenco alfabetico delle funzioni intrinseche
 

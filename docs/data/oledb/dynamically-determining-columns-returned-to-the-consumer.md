@@ -5,12 +5,12 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 7db319aa153cb281c8fd8b4eec16972f5ac0c2c9
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 81353581d22f3d075fd19d783591ec856c21e241
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265178"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037659"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinazione dinamica delle colonne restituite al consumer
 
@@ -104,7 +104,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 }
 ```
 
-Questo esempio Usa una matrice statica per contenere le informazioni di colonna. Se il consumer non desidera che la colonna del segnalibro, una voce nella matrice è inutilizzata. Per gestire le informazioni, è possibile creare due macro di matrice: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX accetta un parametro aggiuntivo, *flag*, che è necessario se si imposta una colonna del segnalibro.
+Questo esempio Usa una matrice statica per contenere le informazioni di colonna. Se il consumer non desidera che la colonna del segnalibro, una voce nella matrice è inutilizzata. Per gestire le informazioni, si crea due macro di matrice: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX accetta un parametro aggiuntivo, *flag*, che è necessario se si imposta una colonna del segnalibro.
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////  

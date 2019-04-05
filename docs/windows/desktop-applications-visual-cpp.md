@@ -2,12 +2,12 @@
 title: Applicazioni desktop (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771919"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033112"
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 
@@ -37,14 +37,14 @@ Qualsiasi applicazione desktop in C++ possa usare le classi di Runtime C (CRT) e
 
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Applicazioni console di Windows in C++](console-applications-in-visual-cpp.md)|Contiene informazioni sulle applicazioni console. Un'applicazione console Win32 (o Win64) non ha una finestra specifica e non può attivare un ciclo di messaggi. Viene eseguita nella finestra della console e l'input e l'output vengono gestiti tramite la riga di comando.|
-|[Procedura dettagliata: Creazione di applicazioni desktop di Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Creare una semplice applicazione desktop di Windows.|
+|[Applicazioni Console Windows in C++](console-applications-in-visual-cpp.md)|Contiene informazioni sulle applicazioni console. Un'applicazione console Win32 (o Win64) non ha una finestra specifica e non può attivare un ciclo di messaggi. Viene eseguita nella finestra della console e l'input e l'output vengono gestiti tramite la riga di comando.|
+|[Procedura dettagliata: Creazione di applicazioni Desktop di Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Creare una semplice applicazione desktop di Windows.|
 |[Creazione di un'applicazione desktop di Windows vuota](creating-an-empty-windows-desktop-application.md)|Come creare un progetto desktop di Windows che non è presenti file predefinita.|
 |[Aggiunta di file a un'applicazione Win32 vuota](adding-files-to-an-empty-win32-applications.md)|Come aggiungere file a un progetto vuoto.|
-|[Uso di file di risorse](working-with-resource-files.md)|Come aggiungere immagini, icone, le tabelle di stringhe e altre risorse in un'applicazione desktop.|
+|[Utilizzo di file di risorse](working-with-resource-files.md)|Come aggiungere immagini, icone, le tabelle di stringhe e altre risorse in un'applicazione desktop.|
 |[Risorse per la creazione di un gioco con DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Collegamenti al contenuto per la creazione di giochi in C++.|
 |[Procedura dettagliata: Creazione e utilizzo di una libreria statica](walkthrough-creating-and-using-a-static-library-cpp.md)|Come creare un file binario con estensione LIB.|
-|[Procedura: Usare Windows 10 SDK in un'applicazione di Windows Desktop](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contiene i passaggi per configurare il progetto da compilare mediante Windows 10 SDK.|
+|[Procedura: Usare Windows 10 SDK in un'applicazione Desktop di Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contiene i passaggi per configurare il progetto da compilare mediante Windows 10 SDK.|
 
 ## <a name="related-articles"></a>Articoli correlati
 
@@ -52,7 +52,7 @@ Qualsiasi applicazione desktop in C++ possa usare le classi di Runtime C (CRT) e
 |-----------|-----------------|
 |[Sviluppo per Windows](/windows/desktop/index)|Contiene informazioni sull'API Windows e COM. Alcune API Windows e DLL di terze parti vengono implementate come oggetti COM.|
 |[Hilo: Sviluppo di applicazioni C++ per Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Descrive come creare un'applicazione desktop di Windows rich-client, che usa librerie di animazioni Windows e Direct2D per creare un'interfaccia utente basata su sequenze.  Questa esercitazione non è stata aggiornata da Windows 7, ma fornisce comunque un'introduzione completa per la programmazione Win32.|
-|[Panoramica della programmazione Windows in C++](overview-of-windows-programming-in-cpp.md)|Descrive le funzionalità principali di desktop Windows programming in C++.|
+|[Cenni preliminari sulla programmazione Windows in C++](overview-of-windows-programming-in-cpp.md)|Descrive le funzionalità principali di desktop Windows programming in C++.|
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 6fb385877285602c1eb6649d11e16558d7fb07ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544755"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033697"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -53,7 +53,7 @@ Il codice seguente viene illustrato un esempio d'uso **includono**. Per questo e
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -62,7 +62,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)<br/>
-[import](import.md)<br/>
+[importazione](import.md)<br/>
 [importidl](importidl.md)<br/>
 [includelib](includelib-cpp.md)<br/>
 [importlib](importlib.md)

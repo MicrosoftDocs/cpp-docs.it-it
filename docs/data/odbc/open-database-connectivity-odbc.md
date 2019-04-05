@@ -6,12 +6,12 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523351"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030089"
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
 
@@ -36,7 +36,7 @@ Per altre informazioni sull'uso dell'API ODBC senza MFC, vedere la [Open Databas
 
 - [SQL](sql.md) per ODBC
 
-- [Transazioni di database](transaction-odbc.md)
+- [Transazioni del database](transaction-odbc.md)
 
 - [Determinazione dello Schema dell'origine dati ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) in fase di esecuzione
 
@@ -64,18 +64,18 @@ Queste attività sono basate su MFC [ODBC](odbc-basics.md) classi. Per altre inf
 
 - [Progettazione e creazione di un'applicazione di database ODBC](design-and-create-an-odbc-database-application.md)
 
-- [Uso di form di database (visualizzazioni di record) con ODBC](use-database-forms-record-views-with-odbc.md)
+- [Utilizzo di form di database (visualizzazioni di record) con ODBC](use-database-forms-record-views-with-odbc.md)
 
-- [Uso di ODBC in un ambiente multiutente](use-odbc-to-work-with-other-users.md)
+- [Utilizzo di ODBC in un ambiente multiutente](use-odbc-to-work-with-other-users.md)
 
-- [Uso di connessioni a database ODBC](work-with-odbc-database-connections.md)
+- [Utilizzo di connessioni a database ODBC](work-with-odbc-database-connections.md)
 
-- [Uso di ODBC e driver](work-with-odbc-and-drivers.md)
+- [Utilizzo di ODBC e driver](work-with-odbc-and-drivers.md)
 
-- [Uso della libreria di cursori ODBC](use-the-odbc-cursor-library.md)
+- [Utilizzo della libreria di cursori ODBC](use-the-odbc-cursor-library.md)
 
-- [Uso di recordset ODBC MFC](use-mfc-odbc-recordsets.md)
+- [Utilizzo di recordset ODBC MFC](use-mfc-odbc-recordsets.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Accesso ai dati (MFC/ATL) di programmazione](../../data/data-access-programming-mfc-atl.md)
+[Programmazione dell'accesso ai dati (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

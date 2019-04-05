@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 63e27e992778776e186345da07937d1a88844e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611016"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032310"
 ---
 # <a name="floatcontrol"></a>float_control
 
@@ -25,7 +25,7 @@ Specifica il comportamento a virgola mobile per una funzione.
 
 ## <a name="options"></a>Opzioni
 
-*valore*, *impostazione* [, **push**]<br/>
+*value*, *setting* [, **push**]<br/>
 Specifica il comportamento a virgola mobile. *valore* può essere **preciso**, **strict**, oppure **tranne**. Per altre informazioni, vedere [/fp (Specifica il comportamento della virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md). Il *impostazione* può essere **sul** oppure **off**.
 
 Se *valore* viene **strict**, le impostazioni delle opzioni **strict** e **eccetto** specificati da *impostazione* . **tranne** può essere impostato solo su **sul** quando **preciso** o **strict** viene inoltre impostata su **sul**.

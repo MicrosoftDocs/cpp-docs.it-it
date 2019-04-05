@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 44a1a55114bcf2466aa5b084f2b53c5457f1a0aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487022"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032206"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -39,7 +39,7 @@ Vedere le [idl_module](idl-module.md) esempio per un esempio di come usare **use
 |-|-|
 |**Si applica a**|**modulo** attributo|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

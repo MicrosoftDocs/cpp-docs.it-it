@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - _ReadBarrier intrinsic
 ms.assetid: f9e54a92-61bc-4f55-8195-b8932065a796
-ms.openlocfilehash: d898f85398fffa79a9b484f0f82343b1675b61e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f31293b2bef0304bcdc58f0a8dbfce0436df9843
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565165"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025486"
 ---
 # <a name="readbarrier"></a>_ReadBarrier
 

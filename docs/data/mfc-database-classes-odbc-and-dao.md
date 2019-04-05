@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: c6baa07b5bc5e63927f00ecf912c69f8c96a34f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0aa11a020a5d15cd23463c31f2713aba38a037
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520380"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039377"
 ---
 # <a name="mfc-database-classes"></a>Classi di Database MFC
 
@@ -19,7 +19,7 @@ ms.locfileid: "50520380"
 
 Per altre informazioni, vedere i seguenti argomenti:
 
-- [Data Access Technologies Road Map](https://msdn.microsoft.com/library/ms810810.aspx) (Guida di orientamento per le tecnologie di accesso ai dati)
+- [Data Access Technologies Road Map](https://msdn.microsoft.com/library/ms810810.aspx)
 
 - [ODBC Driver 13.1 for SQL Server rilasciati](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Microsoft ODBC Driver 13 for SQL Server deve essere utilizzato per creare nuove applicazioni o migliorare quelle esistenti per trarre vantaggio dalle nuove caratteristiche di SQL Server 2016.
 
@@ -31,4 +31,4 @@ Per altre informazioni, vedere i seguenti argomenti:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Accesso ai dati (MFC/ATL) di programmazione](../data/data-access-programming-mfc-atl.md)
+[Programmazione dell'accesso ai dati (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

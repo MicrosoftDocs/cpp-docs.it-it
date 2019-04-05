@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 17e70a54024b8e5a3ab29e2420f60fbf3eec08a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677240"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025205"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -55,7 +55,7 @@ __interface IMyI
 |-|-|
 |**Si applica a**|**classe**, **interfaccia**, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -65,4 +65,4 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di interfaccia](interface-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[Attributi di metodo](method-attributes.md)
+[Attributi del metodo](method-attributes.md)

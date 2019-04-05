@@ -19,12 +19,12 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 8e3d5b3ff01dd37eec9f00dac2f2ce28013fc258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dc5cb06b3eb7f01667e4e1ec09dd60f9befae77
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659676"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026604"
 ---
 # <a name="irowsetcreatorimpl-class"></a>Classe IRowsetCreatorImpl
 
@@ -59,7 +59,7 @@ Una classe derivata da `IRowsetCreator`.
 
 Questa classe eredita da [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) ed esegue l'override [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Quando un oggetto provider di sessione o comando crea un set di righe, viene chiamato `QueryInterface` sull'oggetto set di righe cercando `IObjectWithSite` e chiama `SetSite` passando l'oggetto set di righe `IUnkown` interfaccia come interfaccia di sito.
 
-## <a name="setsite"></a> IRowsetCreatorImpl:: SetSite
+## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
 
 Imposta il sito che contiene l'oggetto set di righe. Per altre informazioni, vedere [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).
 
@@ -84,5 +84,5 @@ Un valore HRESULT standard.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

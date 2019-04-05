@@ -4,12 +4,12 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e8d5e5379a60128ace9502712a1d240f947ddcd5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826469"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021904"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Elementi interni di MSBuild per i progetti C++
 

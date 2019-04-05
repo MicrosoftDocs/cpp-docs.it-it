@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: cd8eee564fa17b21d5421a3471fd676af921f444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462140"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023243"
 ---
 # <a name="section"></a>section
 
@@ -38,8 +38,8 @@ Una sezione, una volta definita, rimarrà valida per il resto della compilazione
 |Attributo|Descrizione|
 |-|-|
 |**read**|Consente operazioni di lettura sui dati.|
-|**write**|Consente operazioni di scrittura sui dati.|
-|**Eseguire**|Consente l'esecuzione di codice.|
+|**scrivere**|Consente operazioni di scrittura sui dati.|
+|**execute**|Consente l'esecuzione di codice.|
 |**shared**|Condivide la sezione tra tutti i processi che caricano l'immagine.|
 |**nopage**|Contrassegna la sezione come non paginabile; utile per i driver di dispositivo Win32.|
 |**nocache**|Contrassegna la sezione come non memorizzabile nella cache; utile per i driver di dispositivo Win32.|

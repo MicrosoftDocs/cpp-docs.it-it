@@ -1,5 +1,5 @@
 ---
-title: 'Trasferimento di campi di record: utilizzo del codice della creazione guidata'
+title: 'Record Field Exchange: Utilizzo di codice della procedura guidata'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DoFieldExchange method, overriding
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492118"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041293"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>Trasferimento di campi di record: utilizzo del codice della creazione guidata
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Record Field Exchange: Utilizzo di codice della procedura guidata
 
 Questo argomento viene illustrato il codice che la creazione guidata applicazione MFC e **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per supportare RFX e come è possibile modificare tale codice.
 
 > [!NOTE]
->  Questo argomento si applica alle classi derivate da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, viene implementata exchange di massa di campi di record (RFX di massa). RFX di massa è simile a RFX. Per comprendere le differenze, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Questo argomento si applica alle classi derivate da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, viene implementata exchange di massa di campi di record (RFX di massa). RFX di massa è simile a RFX. Per comprendere le differenze, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Quando si crea una classe recordset con la creazione guidata applicazione MFC o **Aggiungi classe**, la procedura guidata scrive gli elementi seguenti correlati alla RFX per utente, in base all'origine dati, di tabella e colonna scelte effettuate nella procedura guidata:
 
@@ -99,7 +99,7 @@ Si noti che le seguenti funzionalità della funzione:
 
 - Una chiamata a `CFieldExchange::SetFieldType`, tramite il `pFX` puntatore. Questa chiamata consente di specificare che tutte le chiamate alle funzioni RFX viene chiamato alla fine della `DoFieldExchange` o la chiamata successiva a `SetFieldType` sono colonne di output. Per altre informazioni, vedere [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Diverse chiamate al `RFX_Text` funzione globale, ovvero uno per ogni membro del campo dati (tutti i quali si `CString` variabili nell'esempio). Queste chiamate specificano la relazione tra un nome di colonna nell'origine dati e un membro del campo dati. Funzioni RFX di eseguono il trasferimento dei dati effettivi. La libreria di classi fornisce le funzioni RFX per tutti i tipi di dati comuni. Per altre informazioni sulle funzioni RFX, vedere [Record Field Exchange: utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Diverse chiamate al `RFX_Text` funzione globale, ovvero uno per ogni membro del campo dati (tutti i quali si `CString` variabili nell'esempio). Queste chiamate specificano la relazione tra un nome di colonna nell'origine dati e un membro del campo dati. Funzioni RFX di eseguono il trasferimento dei dati effettivi. La libreria di classi fornisce le funzioni RFX per tutti i tipi di dati comuni. Per altre informazioni sulle funzioni RFX, vedere [Record Field Exchange: Utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  L'ordine delle colonne nel set di risultati deve corrispondere all'ordine delle chiamate alle funzioni RFX in `DoFieldExchange`.

@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: ripetizione di una query in un recordset (ODBC)'
+title: 'Recordset: Ripetizione di query in un Recordset (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, requerying
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482746"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024595"
 ---
-# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset: ripetizione di una query in un recordset (ODBC)
+# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset: Ripetizione di query in un Recordset (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -29,7 +29,7 @@ I motivi dell'entità per la ripetizione di query in un recordset sono:
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> Aggiornamento dei Recordset alla data
 
-Spesso, è opportuno ripetere una query dell'oggetto recordset per attivare la modalità aggiornati. In un ambiente di database multiutente, altri utenti possono apportare modifiche ai dati durante il ciclo di vita del recordset. Per altre informazioni sui casi in cui il recordset riflette le modifiche apportate da altri utenti e quando recordset di altri utenti riflettere le modifiche, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).
+Spesso, è opportuno ripetere una query dell'oggetto recordset per attivare la modalità aggiornati. In un ambiente di database multiutente, altri utenti possono apportare modifiche ai dati durante il ciclo di vita del recordset. Per altre informazioni sui casi in cui il recordset riflette le modifiche apportate da altri utenti e quando recordset di altri utenti riflettere le modifiche, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> Rieseguendo la query in base ai nuovi parametri
 
@@ -48,7 +48,7 @@ Poiché i dynaset sono utilizzati per presentare un set di record con dati aggio
 
 In alternativa, è possibile chiudere e riaprire il recordset originale. In entrambi i casi, il nuovo set di record rappresenta lo stato corrente dell'origine dati.
 
-Per un esempio, vedere [visualizzazioni di Record: la compilazione di una casella di riepilogo da un secondo Recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Per un esempio, vedere [visualizzazioni di Record: La compilazione di una casella di riepilogo da un secondo Recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
 
 > [!TIP]
 >  Per ottimizzare `Requery` prestazioni, evitare di modificare il recordset [filtro](../../data/odbc/recordset-filtering-records-odbc.md) oppure [ordinamento](../../data/odbc/recordset-sorting-records-odbc.md). Modificare solo il valore del parametro prima di chiamare `Requery`.
@@ -58,5 +58,5 @@ Se il `Requery` chiamata ha esito negativo, è possibile riprovare a eseguire la
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
-[Recordset: creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+[Recordset: Associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[Recordset: Creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

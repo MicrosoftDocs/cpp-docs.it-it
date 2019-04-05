@@ -27,12 +27,12 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 802c105e7795cdce604e72983f4fda549abcd5fb
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418269"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039793"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Classe IColumnsInfoImpl
 
@@ -103,5 +103,5 @@ Visualizzare [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms7
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: 776123baa0d53ac2a1777849b60d35cf0d93a172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426225"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023230"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
@@ -245,7 +245,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parametri
 
-*bookmark*<br/>
+*segnalibro*<br/>
 [in] Un segnalibro contrassegna la posizione da cui si desidera recuperare i dati.
 
 *lSkip*<br/>
@@ -321,5 +321,5 @@ Se si chiama questa funzione, deve essere prima che venga aperto il set di righe
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

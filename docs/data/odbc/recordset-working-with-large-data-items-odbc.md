@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: gestione di dati di grandi dimensioni (ODBC)'
+title: 'Recordset: Uso degli elementi di dati di grandi dimensioni (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BLOB (binary large object), recordsets
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 8ef32621821d731d9137a446bea220564cb7f92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460372"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033044"
 ---
-# <a name="recordset-working-with-large-data-items-odbc"></a>Recordset: gestione di dati di grandi dimensioni (ODBC)
+# <a name="recordset-working-with-large-data-items-odbc"></a>Recordset: Uso degli elementi di dati di grandi dimensioni (ODBC)
 
 In questo argomento si applica a entrambe le classi ODBC MFC e le classi DAO MFC.
 
 > [!NOTE]
->  Se si usano le classi DAO MFC, gestire gli elementi di dati di grandi dimensioni con la classe [CByteArray](../../mfc/reference/cbytearray-class.md) piuttosto che classe [CLongBinary](../../mfc/reference/clongbinary-class.md). Se si utilizza le classi ODBC MFC con il recupero di righe bulk, utilizzare `CLongBinary` anziché `CByteArray`. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Se si usano le classi DAO MFC, gestire gli elementi di dati di grandi dimensioni con la classe [CByteArray](../../mfc/reference/cbytearray-class.md) piuttosto che classe [CLongBinary](../../mfc/reference/clongbinary-class.md). Se si utilizza le classi ODBC MFC con il recupero di righe bulk, utilizzare `CLongBinary` anziché `CByteArray`. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Si supponga che il database consente di archiviare grandi porzioni di dati, ad esempio le bitmap (fotografie dipendente, mappe, immagini dei prodotti, gli oggetti OLE e così via). Questo tipo di dati è noto anche come Binary Large Object (o BLOB) perché:
 
@@ -40,7 +40,7 @@ Recordset sono due modi per risolvere le difficoltà speciali di gestione di ogg
 
 Per informazioni dettagliate sull'uso `CByteArray` per lavorare con gli elementi di dati di grandi dimensioni, vedere [Nota tecnica 45](../../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md).
 
-##  <a name="_core_the_cbytearray_class"></a> Classe CByteArray
+##  <a name="_core_the_cbytearray_class"></a> CByteArray Class
 
 `CByteArray` è una delle classi collection MFC. Oggetto `CByteArray` oggetto archivia una matrice dinamica di byte, ovvero la matrice può aumentare se necessario. La classe fornisce accesso veloce in base all'indice, come con le matrici C++ predefinite. `CByteArray` gli oggetti possono essere serializzati e il dump per scopi diagnostici. La classe fornisce funzioni membro per il recupero e impostazione byte specificati, inserimento aggiungendo byte e la rimozione di un byte o tutti i byte. Queste funzionalità semplificano l'analisi dei dati binari. Se l'oggetto binario è un oggetto OLE, ad esempio, potrebbe essere necessario eseguire alcuni byte intestazione per raggiungere l'oggetto effettivo.
 
@@ -62,5 +62,5 @@ A sua volta, si utilizza il `HGLOBAL` gestire, `m_hData`, per lavorare con i dat
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Recordset: Recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-ms.openlocfilehash: 133000c0cc8ef636a3f9752d2f6fc7f1934bd831
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e8671ba0d68b13f68db0f2b08dab4fe98f917e7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521125"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024955"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Definizioni per il riepilogo della grammatica
 

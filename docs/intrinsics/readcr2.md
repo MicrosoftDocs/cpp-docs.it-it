@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr2 intrinsic
 ms.assetid: d02c97d8-1953-46e7-a79e-a781e2c5bf27
-ms.openlocfilehash: e11f6c4fd0f5483b0d47abdaf6b8b371a8c61f09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e26ccbb3db1dfc113f84210314379b06dae93542
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496499"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031102"
 ---
 # <a name="readcr2"></a>__readcr2
 

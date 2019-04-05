@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 575bc2c347275bfb96f64e60f35379629b4eac18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614539"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027454"
 ---
 # <a name="output-parameters"></a>Parametri di output
 
@@ -57,4 +57,4 @@ Il `@_rowcount` parametro di output segnala quante righe sono state restituite d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle stored procedure](../../data/oledb/using-stored-procedures.md)
+[Utilizzo delle stored procedure](../../data/oledb/using-stored-procedures.md)

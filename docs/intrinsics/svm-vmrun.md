@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-ms.openlocfilehash: ffedf366453a800ce420914376b8d9bb441a602a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e53b2ebd54fc109b47f3067e5f89ce50b327de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603557"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041059"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 
@@ -38,7 +38,7 @@ void __svm_vmrun(
 
 Il `__svm_vmrun` funzione utilizza una quantità minima di informazioni di VMCB per avviare l'esecuzione del codice guest macchina virtuale. Usare la [__svm_vmsave](../intrinsics/svm-vmsave.md) oppure [__svm_vmload](../intrinsics/svm-vmload.md) funzionare se sono necessarie altre informazioni per la gestione di un interrupt complesso oppure passare a un altro guest.
 
-La funzione `__svm_vmrun` è equivalente alle `VMRUN` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nelle [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.
+La funzione `__svm_vmrun` è equivalente alle `VMRUN` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: Sistema di programmazione,"numero 24593, revisione 3.11 o versione successiva, al documento il [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.
 
 ## <a name="requirements"></a>Requisiti
 

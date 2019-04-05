@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 4cfadc84b9131aa787323b4967ae9cfc4baabbcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570417"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030000"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -25,7 +25,7 @@ Fa sì che un file con estensione idl o con estensione h da includere nel file I
 
 ### <a name="parameters"></a>Parametri
 
-*Name.idl*<br/>
+*name.idl*<br/>
 Il nome del file con estensione idl da inclusi come parte del file IDL generato.
 
 ## <a name="remarks"></a>Note
@@ -51,7 +51,7 @@ Il codice seguente è illustrato in un file con estensione cpp:
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|Yes|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -60,7 +60,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)<br/>
-[import](import.md)<br/>
+[importazione](import.md)<br/>
 [importidl](importidl.md)<br/>
 [include](include-cpp.md)<br/>
 [importlib](importlib.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-ms.openlocfilehash: fccf9ee553160d687a6094ccc9b95f4c55f7094f
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ac74f94b4cdc738237c2994646f7602f7f5118ca
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328545"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031647"
 ---
 # <a name="ole-db-programming"></a>Programmazione con OLE DB
 
@@ -25,8 +25,8 @@ Inoltre, è possibile utilizzare gli attributi per implementare i modelli consum
 
 |Per altre informazioni|Vedere|
 |-------------------------|---------|
-|Uso dei modelli consumer OLE DB (concetti)|[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|
-|Uso dei modelli provider OLE DB (concetti)|[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|
+|Uso dei modelli consumer OLE DB (concetti)|[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|
+|Uso dei modelli provider OLE DB (concetti)|[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|
 |Classi e macro dei modelli OLE DB|[Riferimenti ai modelli OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|
 |Attributi del consumer OLE DB|[Attributi del consumer OLE DB](../../windows/ole-db-consumer-attributes.md)|
 |Interfacce OLE DB|[Riferimento per programmatori OLE DB](/sql/connect/oledb/oledb-driver-for-sql-server) (in Windows SDK)|

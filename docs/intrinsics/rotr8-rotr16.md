@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-ms.openlocfilehash: 218fb14c118cb9208cdfc29176897543f680b593
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 27c3a9d914d04ecdffb7fa74dc3c8f79a442445c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329722"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028743"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 
@@ -36,10 +36,10 @@ unsigned short _rotr16(
 
 #### <a name="parameters"></a>Parametri
 
-*valore*<br/>
+*predefinito*<br/>
 [in] Valore da ruotare.
 
-*shift*<br/>
+*spostamento*<br/>
 [in] Il numero di bit da ruotare.
 
 ## <a name="return-value"></a>Valore restituito

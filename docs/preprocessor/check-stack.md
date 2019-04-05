@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 93ded20bde98cc4e7b0fc15fd8332195d38f2543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451987"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023378"
 ---
 # <a name="checkstack"></a>check_stack
 Indica al compilatore di disattivare i probe dello stack se `off` (o `-`) viene specificato, oppure di abilitare le ricerche dello stack se `on` (o `+`) specificato.
@@ -38,8 +38,8 @@ Se non si assegna un argomento per il **check_stack** pragma, controllo dello st
 |------------|------------------------------------|------------|
 |`#pragma check_stack( )` oppure<br /><br /> `#pragma check_stack`|Yes|Disabilita lo stack che controlla se sono presenti funzioni che seguono|
 |`#pragma check_stack( )` oppure<br /><br /> `#pragma check_stack`|No|Abilita lo stack che controlla se sono presenti funzioni che seguono|
-|`#pragma check_stack(on)`<br /><br /> o `#pragma check_stack +`|Sì o No|Abilita lo stack che controlla se sono presenti funzioni che seguono|
-|`#pragma check_stack(off)`<br /><br /> o `#pragma check_stack -`|Sì o No|Disabilita lo stack che controlla se sono presenti funzioni che seguono|
+|`#pragma check_stack(on)`<br /><br /> oppure `#pragma check_stack +`|Sì o No|Abilita lo stack che controlla se sono presenti funzioni che seguono|
+|`#pragma check_stack(off)`<br /><br /> oppure `#pragma check_stack -`|Sì o No|Disabilita lo stack che controlla se sono presenti funzioni che seguono|
 
 ## <a name="see-also"></a>Vedere anche
 

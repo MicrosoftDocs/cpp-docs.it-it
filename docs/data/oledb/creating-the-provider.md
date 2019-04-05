@@ -4,18 +4,18 @@ ms.date: 10/15/2018
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 05ab045e104e3035f8ccd2fa1924b6959164b8d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538186"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032350"
 ---
 # <a name="creating-the-provider"></a>Creazione di un provider
 
 ## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Per creare un provider OLE DB con la creazione guidata Provider OLE DB ATL
 
-1. Fare clic sul progetto.
+1. Fare clic con il pulsante destro del mouse sul progetto.
 
 1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **Aggiungi classe**.
 
@@ -25,11 +25,11 @@ ms.locfileid: "50538186"
 
 1. Modificare le altre caselle di nome, se necessario. Oltre ai nomi oggetto e il file, è possibile modificare quanto segue:
 
-   - **Coclasse**: il nome utilizzato da COM per creare il provider.
+   - **Coclasse**: Il nome utilizzato da COM per creare il provider.
 
-   - **ProgID**: l'identificatore a livello di codice, che è una stringa di testo che può essere utilizzata invece di un GUID.
+   - **ProgID**: L'identificatore a livello di codice, che è una stringa di testo che può essere utilizzata invece di un GUID.
 
-   - **Versione**: usato con i ProgID e coclasse per generare un ID a livello di codice dipendente dalla versione
+   - **Versione**: Utilizzato con il ProgID e la coclasse per generare un ID a livello di codice dipendente dalla versione
 
 1. Scegliere **Fine**.
 

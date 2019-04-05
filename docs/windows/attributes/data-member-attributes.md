@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512931"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041150"
 ---
 # <a name="data-member-attributes"></a>Attributi del membro dati
 
@@ -31,8 +31,8 @@ Gli attributi seguenti si applicano ai membri dei dati in una classe, coclasse o
 |[range](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
 |[rdx](rdx.md)|Crea una chiave del Registro di sistema o modifica una chiave del Registro di sistema esistente.|
 |[readonly](readonly-cpp.md)|Non consente l'assegnazione a un membro dati.|
-|[requestedit](requestedit.md)|Indica che la proprietà supporta il `OnRequestEdit` notifica.|
+|[requestedit](requestedit.md)|Indica che la proprietà supporta la notifica `OnRequestEdit`.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi per utilizzo](attributes-by-usage.md)
+[Attributi in base all'utilizzo](attributes-by-usage.md)

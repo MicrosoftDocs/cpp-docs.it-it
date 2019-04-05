@@ -8,12 +8,12 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: 63d4e9229eb7c5058587975d0ea04696786a9c73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20c583b874c2bdb56affc6a90c8464b82c4824f0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562149"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040835"
 ---
 # <a name="inbyte"></a>__inbyte
 

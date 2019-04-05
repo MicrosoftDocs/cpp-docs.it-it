@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641783"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041137"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -20,7 +20,7 @@ ms.locfileid: "50641783"
 
 Il `_ReturnAddress` intrinseco fornisce l'indirizzo dell'istruzione nella funzione chiamante che verrà eseguita dopo il controllo ritorna al chiamante.
 
-Compilare il seguente programma e il passaggio attraverso di esso nel debugger. Durante l'esecuzione del programma, prendere nota dell'indirizzo restituito da `_ReturnAddress`. Quindi, immediatamente dopo aver restituito dalla funzione in cui `_ReturnAddress` è stato usato, aprire la [procedura: utilizzare la finestra Disassembly](/visualstudio/debugger/how-to-use-the-disassembly-window) e notare che l'indirizzo dell'istruzione successiva da eseguire corrisponda all'indirizzo restituito da `_ReturnAddress`.
+Compilare il seguente programma e il passaggio attraverso di esso nel debugger. Durante l'esecuzione del programma, prendere nota dell'indirizzo restituito da `_ReturnAddress`. Quindi, immediatamente dopo aver restituito dalla funzione in cui `_ReturnAddress` è stato usato, aprire il [come: Utilizzare la finestra Disassembly](/visualstudio/debugger/how-to-use-the-disassembly-window) e notare che l'indirizzo dell'istruzione successiva da eseguire corrisponda all'indirizzo restituito da `_ReturnAddress`.
 
 Alcune ottimizzazioni quali maggio l'incorporamento interessano l'indirizzo del mittente. Ad esempio, se il programma di esempio riportato di seguito viene compilato con [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` verrà resa inline alla funzione chiamante, `main`. Di conseguenza, le chiamate a `_ReturnAddress` dal `inline_func` e `main` ciascuna delle quali produce lo stesso valore.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 8261d789f50c2750cccce48dac675ef478a70420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504390"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022666"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -25,7 +25,7 @@ Specifica l'attributo di puntatore predefinite per tutti i puntatori, ad eccezio
 
 ### <a name="parameters"></a>Parametri
 
-*valore*<br/>
+*predefinito*<br/>
 Un valore che descrive il tipo di puntatore: **ptr**, **ref**, o **univoco**.
 
 ## <a name="remarks"></a>Note
@@ -42,9 +42,9 @@ Vedere l'esempio relativo [defaultvalue](defaultvalue.md) per un esempio dell'us
 
 |||
 |-|-|
-|**Si applica a**|**interface**|
+|**Si applica a**|**interfaccia**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

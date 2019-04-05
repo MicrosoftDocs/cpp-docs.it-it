@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3496
 ms.assetid: e19885f2-677f-4c1e-bc69-e35852262dc3
-ms.openlocfilehash: c0075bf0e3749966a5e5b9fcd775b5d73171bf17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 025498f3fe244916cd0a06e36feee6fdb532acc6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599420"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026695"
 ---
 # <a name="compiler-error-c3496"></a>Errore del compilatore C3496
 

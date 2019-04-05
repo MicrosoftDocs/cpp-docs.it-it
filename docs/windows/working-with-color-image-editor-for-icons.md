@@ -62,12 +62,12 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: f50d734ab35968aa107e23b8450d60f316b6002e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563147"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034144"
 ---
 # <a name="how-to-work-with-color"></a>Procedura: Utilizzare i colori
 
@@ -108,9 +108,9 @@ Il **regola colori** nella finestra di dialogo consente di personalizzare i colo
 |**Visualizzazione delle sfumature**|Modifica i valori del colore selezionato.<br/><br/>Posizionare il selettore di precisione sul colore che si desidera modificare e spostare il dispositivo di scorrimento verso l'alto o verso il basso per modificare la luminosità o valori RGB del colore.|
 |**Barra luminosità**|Imposta la luminosità per il colore selezionato nel **visualizzazione delle sfumature** casella.<br/><br/>Selezionare e trascinare la freccia bianca la barra della luminosità maggiore o verso il basso per il minore. Il **colore** casella viene visualizzato il colore selezionato e l'effetto della luminosità è impostato.|
 |**Colore**|Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è ciano, 200 è magenta e 240 è blu.|
-|**Hue**|Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è ciano, 200 è magenta e 240 è blu.|
-|**Sat**|Specifica il valore di saturazione del colore che si sta definendo. La saturazione è la quantità di colore in una tonalità specificata. I valori compresi tra 0 e 240.|
-|**Lum**|Elenca la luminosità del colore che si sta definendo. I valori compresi tra 0 e 240.|
+|**Tonalità**|Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 è ciano, 200 è magenta e 240 è blu.|
+|**Sab**|Specifica il valore di saturazione del colore che si sta definendo. La saturazione è la quantità di colore in una tonalità specificata. I valori compresi tra 0 e 240.|
+|**LUM**|Elenca la luminosità del colore che si sta definendo. I valori compresi tra 0 e 240.|
 |**Rosso**|Specifica il valore di colore rosso del colore che si sta definendo. I valori compresi tra 0 e 255.|
 |**Verde**|Specifica il valore di colore verde del colore che si sta definendo. I valori compresi tra 0 e 255.|
 |**Blu**|Specifica il valore di colore blu del colore che si sta definendo. I valori compresi tra 0 e 255.|
@@ -125,7 +125,7 @@ Usare la **colori della tavolozza caricare** finestra di dialogo per caricare le
 |Proprietà|Descrizione|
 |-----------------|-----------------|
 |**Cerca in**|Specifica la posizione in cui si desidera individuare un file o cartella.<br/><br/>Selezionare la freccia per scegliere un altro percorso o selezionare l'icona della cartella sulla barra degli strumenti per spostare i livelli.|
-|**Nome del file**|Fornisce uno spazio è possibile digitare il nome del file da aprire.<br/><br/>Per trovare rapidamente un file che aperto in precedenza, selezionare il nome del file nell'elenco a discesa, se disponibile.<br/><br/>Se esegue una ricerca per un file, è possibile usare un asterisco (*) come caratteri jolly. Ad esempio, è possibile digitare \*.\* per visualizzare un elenco di tutti i file. È anche possibile digitare il percorso completo di un file, ad esempio, *C:\My c:\Documenti\MiaTavolozzaColori.PAL* oppure  *\\\NetworkServer\MyFolder\MyColorPalette.pal*.|
+|**Nome file**|Fornisce uno spazio è possibile digitare il nome del file da aprire.<br/><br/>Per trovare rapidamente un file che aperto in precedenza, selezionare il nome del file nell'elenco a discesa, se disponibile.<br/><br/>Se esegue una ricerca per un file, è possibile usare un asterisco (*) come caratteri jolly. Ad esempio, è possibile digitare \*.\* per visualizzare un elenco di tutti i file. È anche possibile digitare il percorso completo di un file, ad esempio, *C:\My c:\Documenti\MiaTavolozzaColori.PAL* oppure  *\\\NetworkServer\MyFolder\MyColorPalette.pal*.|
 |**Tipo file**|Elenca i tipi di file da visualizzare.<br/><br/>Tavolozza (*. PAL) è il tipo di file predefinito per le tavolozze di colori.|
 
 ## <a name="how-to"></a>Procedure

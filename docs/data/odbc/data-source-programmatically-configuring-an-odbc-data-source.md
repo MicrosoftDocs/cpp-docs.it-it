@@ -1,5 +1,5 @@
 ---
-title: "Origine dati: configurazione di un'origine dati ODBC a livello di codice"
+title: "Origine dati: Configurazione a livello di codice di un'origine dati ODBC"
 ms.date: 11/04/2016
 f1_keywords:
 - SQLConfigDataSource
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677370"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037957"
 ---
-# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origine dati: configurazione di un'origine dati ODBC a livello di codice
+# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origine dati: Configurazione a livello di codice di un'origine dati ODBC
 
 Questo argomento illustra come è possibile configurare nomi delle origini dati di Open Database Connectivity (ODBC) a livello di codice. Questo offre flessibilità per accedere ai dati senza forzare l'utente da utilizzare in modo esplicito l'amministratore ODBC o altri programmi per specificare i nomi delle origini dati.
 
@@ -26,7 +26,7 @@ Quando si crea un'origine dati ODBC di Microsoft Access tramite Amministratore O
 
 Tuttavia, maggior parte dei DBMS consente la creazione dell'origine dati a livello di codice. Alcune origini dati gestiscono una specifica di directory per i database. Vale a dire, una directory è l'origine dati e ogni tabella all'interno dell'origine dati viene archiviata in un file distinto (nel caso di dBASE o FoxPro, ogni tabella è un file con estensione dbf). I driver per gli altri database ODBC, ad esempio Microsoft Access e SQL Server, richiedono che vengano soddisfatti alcuni criteri specifici prima di poter stabilire un'origine dati. Ad esempio, quando si usa il driver ODBC di SQL Server, è necessario aver stabilito un computer SQL Server.
 
-##  <a name="_core_sqlconfigdatasource_example"></a> Esempio di SQLConfigDataSource
+##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource Example
 
 L'esempio seguente usa il `::SQLConfigDataSource` funzione API ODBC per creare una nuova origine dati Excel denominata New Excel Data Source:
 
@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 Si noti che l'origine dati è effettivamente una directory (C:\EXCELDIR); Questa directory deve esistere. Il driver per Excel Usa directory come origini dati e i file come singole tabelle (una tabella per ogni file con estensione xls).
 
-Per altre informazioni sulla creazione di tabelle, vedere [origine dati: creazione di una tabella in un'origine dati ODBC a livello di programmazione](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
+Per altre informazioni sulla creazione di tabelle, vedere [Zdroj dat: A livello di codice crea una tabella in un'origine dati ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
 
 Le informazioni seguenti vengono illustrati i parametri che devono essere passati al `::SQLConfigDataSource` funzione API ODBC. Usare `::SQLConfigDataSource`, è necessario includere il file di intestazione Odbcinst. h e usare la libreria di importazione Odbcinst. Inoltre, Odbccp32 deve essere il percorso in fase di esecuzione (presente Odbccp32.dll o 16 bit).
 
@@ -51,7 +51,7 @@ Amministratore ODBC (in genere installato nel Pannello di controllo) Crea una nu
 
 Anche se è stato possibile scrivere queste informazioni direttamente nel Registro di sistema senza usare `::SQLConfigDataSource`, qualsiasi applicazione che esegue questa operazione si basa sulla tecnica corrente utilizzato dalla gestione Driver per mantenere i dati. Se una revisione successiva gestione Driver ODBC implementa i record delle informazioni sulle origini dati in modo diverso, qualsiasi applicazione che usa questa tecnica viene interrotta. È in genere consigliabile utilizzare una funzione API quando ne viene specificato uno. Ad esempio, il codice sia portabile da 16 a 32 bit se si usa il `::SQLConfigDataSource` funzionare, perché la funzione scrive in modo corretto per il file ODBC ini o nel Registro di sistema.
 
-##  <a name="_core_sqlconfigdatasource_parameters"></a> Parametri di SQLConfigDataSource
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters
 
 Di seguito vengono descritti i parametri del `::SQLConfigDataSource` (funzione). Molte delle informazioni da cui proviene l'API ODBC *di riferimento per programmatori* forniti con Visual C++ versione 1.5 e successive.
 
@@ -94,7 +94,7 @@ Un modo per trovare i nomi delle chiavi e valori per il *lpszAttributes* paramet
 
    - 32 bit, trovare la chiave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Zdroje dat INI\ODBC** nel riquadro sinistro.
 
-      Riquadro di destra elenca le voci del modulo: "pub: REG_SZ:*<data source name>*", dove *<data source name>* è un'origine dati che è già stata configurata con le impostazioni desiderate per il driver si intende da utilizzare. Selezionare l'origine dati desiderata, ad esempio, SQL Server. Gli elementi che seguono la stringa "pub:" sono, nell'ordine, il nome chiave e il valore da usare nel *lpszAttributes* parametro.
+      Riquadro di destra elenca le voci del modulo: "pub: REG_SZ:*<data source name>*", dove *<data source name>* è un'origine dati che è già stata configurata con le impostazioni desiderate per il driver si intende usare. Selezionare l'origine dati desiderata, ad esempio, SQL Server. Gli elementi che seguono la stringa "pub:" sono, nell'ordine, il nome chiave e il valore da usare nel *lpszAttributes* parametro.
 
    - Per a 16 bit, individuare la sezione nel file ini contrassegnato da [*\<nome dell'origine dati >*].
 

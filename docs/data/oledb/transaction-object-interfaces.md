@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-ms.openlocfilehash: 386fb83df9ea7a889c8bb11f550313aad0bda926
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0caecc797a3175d5769f98e181e1d99ef6b1ad16
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418893"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034034"
 ---
 # <a name="transaction-object-interfaces"></a>Interfacce dell'oggetto Transaction
 

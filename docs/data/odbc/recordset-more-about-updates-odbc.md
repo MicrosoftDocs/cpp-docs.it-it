@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: ulteriori informazioni sugli aggiornamenti (ODBC)'
+title: 'Recordset: Informazioni sugli aggiornamenti (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665296"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040768"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>Recordset: ulteriori informazioni sugli aggiornamenti (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>Recordset: Informazioni sugli aggiornamenti (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -30,7 +30,7 @@ Questo argomento viene illustrato:
 - [Ulteriori informazioni sulle funzioni membro di aggiornamento ed eliminazione](#_core_more_about_update_and_delete).
 
 > [!NOTE]
->  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se è stato implementato il recupero di righe bulk, alcune informazioni non è applicabile. Ad esempio, non è possibile chiamare il `AddNew`, `Edit`, `Delete`, e `Update` funzioni membro; tuttavia, è possibile eseguire le transazioni. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se è stato implementato il recupero di righe bulk, alcune informazioni non è applicabile. Ad esempio, non è possibile chiamare il `AddNew`, `Edit`, `Delete`, e `Update` funzioni membro; tuttavia, è possibile eseguire le transazioni. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> Effetti delle altre operazioni sugli aggiornamenti
 
@@ -53,7 +53,7 @@ Se si chiude un recordset, o a essa associati `CDatabase` oggetti, con una trans
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> Lo scorrimento influenza gli aggiornamenti
 
-Quando si [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) in un recordset, viene riempito il buffer di modifica con ogni nuovo record corrente (il record precedente non viene prima memorizzato). Lo scorrimento viene ignorata su record eliminato in precedenza. Se si scorre dopo un' `AddNew` oppure `Edit` senza chiamare `Update`, `CommitTrans`, o `Rollback` in primo luogo, le modifiche vengono perse (senza alcun avviso all'utente) come un nuovo record vengono inseriti nel buffer di modifica. Con il record di scorrimento viene riempito il buffer di modifica, viene liberato il record memorizzato e viene apportata alcuna modifica nell'origine dati. Questo vale per entrambi `AddNew` e `Edit`.
+Quando si [Recordset: Scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) in un recordset, viene riempito il buffer di modifica con ogni nuovo record corrente (il record precedente non viene prima memorizzato). Lo scorrimento viene ignorata su record eliminato in precedenza. Se si scorre dopo un' `AddNew` oppure `Edit` senza chiamare `Update`, `CommitTrans`, o `Rollback` in primo luogo, le modifiche vengono perse (senza alcun avviso all'utente) come un nuovo record vengono inseriti nel buffer di modifica. Con il record di scorrimento viene riempito il buffer di modifica, viene liberato il record memorizzato e viene apportata alcuna modifica nell'origine dati. Questo vale per entrambi `AddNew` e `Edit`.
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Gli aggiornamenti e gli aggiornamenti di altri utenti
 
@@ -105,7 +105,7 @@ Quando vengono generate queste eccezioni, rimane il `AddNew` oppure `Edit` stato
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Recordset: Selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Eccezioni: eccezioni di database](../../mfc/exceptions-database-exceptions.md)
+[Eccezioni: Eccezioni del database](../../mfc/exceptions-database-exceptions.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58780470"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038767"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilizzo di librerie e componenti
 
@@ -128,7 +128,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Visualizza il nome dell'assembly per l'assembly di riferimento.
 
-- **Impostazioni cultura**
+- **culture**
 
    Ottiene le impostazioni cultura del riferimento selezionato.
 
@@ -140,7 +140,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Visualizza il percorso della directory dell'assembly di riferimento.
 
-- **Identità**
+- **identità**
 
    Per gli assembly .NET Framework, viene visualizzato il percorso completo. Per i componenti COM, viene visualizzato il GUID.
 
@@ -148,7 +148,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Visualizza l'etichetta del riferimento.
 
-- **Name**
+- **Nome**
 
    Visualizza il nome del riferimento.
 
@@ -158,13 +158,13 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
 - **Nome sicuro**
 
-   Impostato su`true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
+   `true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
 
-- **Version**
+- **Versione**
 
    Visualizza la versione dell'assembly di riferimento.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento alla pagina di proprietà progetto C++](reference/property-pages-visual-cpp.md)<br>
-[Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](working-with-project-properties.md)
+[Impostare il compilatore C++ e creare proprietà in Visual Studio](working-with-project-properties.md)

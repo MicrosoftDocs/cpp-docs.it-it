@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: e431736fcd38b3c08936e65ecf05594142ced4e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d97ad86e143102c96e87ae0a32245b0c01042501
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655318"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032433"
 ---
 # <a name="lcid"></a>lcid
 
@@ -50,7 +50,7 @@ __interface IStatic {
 |-|-|
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -58,4 +58,4 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)
+[Attributi dei parametri](parameter-attributes.md)

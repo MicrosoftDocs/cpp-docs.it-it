@@ -6,12 +6,12 @@ helpviewer_keywords:
 - inheritance [C++]
 - RCustomRowset
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-ms.openlocfilehash: 34eb07611ebfff09918d62273d4ca4a8c9cf4f7b
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: d22c6902667ec84abe7bd85ffbffd1f5c5c57f2a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265152"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024868"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>Modifica dell'ereditarietà di RCustomRowset
 

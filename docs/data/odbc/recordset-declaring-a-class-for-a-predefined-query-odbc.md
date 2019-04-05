@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: dichiarazione di una classe per una query già definita (ODBC)'
+title: 'Recordset: Dichiarazione di una classe per una Query predefinita (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: e83bf2ecb24a9abfd8dc9800a3a10d2d65025336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611263"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026527"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset: dichiarazione di una classe per una query già definita (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset: Dichiarazione di una classe per una Query predefinita (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
 Questo argomento illustra come creare una classe per una query predefinita (talvolta chiamata una stored procedure, come in Microsoft SQL Server).
 
 > [!NOTE]
->  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se viene implementato il recupero di righe bulk, il processo è molto simile. Per comprendere le differenze tra recordset che implementano il recupero di righe bulk e quelli che non li supportano, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se viene implementato il recupero di righe bulk, il processo è molto simile. Per comprendere le differenze tra recordset che implementano il recupero di righe bulk e quelli che non li supportano, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Alcuni sistemi di gestione di database (DBMS) consentono di creare una query predefinita e lo chiama da programmi, ad esempio una funzione. La query ha un nome, può accettare parametri e potrebbe restituire i record. La procedura descritta in questo argomento descrive come chiamare una query predefinita che restituisce i record (e probabilmente accetta parametri).
 
@@ -63,7 +63,7 @@ Le classi di database non supportano l'aggiornamento di query predefinite. La di
 
 1. Se la query accetta parametri, aggiungere un membro dati di parametro per ogni parametro, una chiamata alla funzione RFX e un'inizializzazione per ognuno.
 
-1. È necessario incrementare `m_nParams` per ciascun parametro, viene aggiunto come è stato fatto `m_nFields` per i campi aggiunti nel passaggio 4 di questa procedura. Per altre informazioni, vedere [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. È necessario incrementare `m_nParams` per ciascun parametro, viene aggiunto come è stato fatto `m_nFields` per i campi aggiunti nel passaggio 4 di questa procedura. Per altre informazioni, vedere [Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Scrivere manualmente una stringa di istruzione SQL nel formato seguente:
 
@@ -153,6 +153,6 @@ Questo codice crea uno snapshot, lo passa un parametro ottenuto in precedenza da
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: ripetizione di una query in un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[Recordset: dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Recordset: esecuzione di un join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Recordset: Ripetizione di query in un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[Recordset: Dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Recordset: Esecuzione di un Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
