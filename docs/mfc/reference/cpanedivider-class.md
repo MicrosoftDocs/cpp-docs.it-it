@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 7fc1215fb1b286423d6c50337bf5d94cac3298e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273630"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58773853"
 ---
 # <a name="cpanedivider-class"></a>Classe CPaneDivider
 
@@ -159,7 +159,7 @@ class CPaneDivider : public CBasePane
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Specifica la larghezza predefinita in pixel di tutti i divisori di riquadro dell'applicazione.|
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contiene un puntatore per le informazioni sulla classe di runtime su un `CPaneDivider`-oggetto derivato.|
@@ -176,7 +176,7 @@ Esistono due tipi di divisori di riquadro:
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come chiamare un oggetto `CPaneDivider` da un oggetto `CWorkspaceBar`. Questo frammento di codice fa parte di [esempio dimostrativo schede MDI](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come chiamare un oggetto `CPaneDivider` da un oggetto `CWorkspaceBar`. Questo frammento di codice fa parte di [esempio dimostrativo schede MDI](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 
@@ -733,7 +733,7 @@ void StoreRecentTabRelatedInfo(
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)<br/>
 [Classe CPaneContainer](../../mfc/reference/cpanecontainer-class.md)<br/>
