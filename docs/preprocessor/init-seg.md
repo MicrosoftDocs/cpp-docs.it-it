@@ -9,12 +9,12 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: f11ec6d3cee7af2ce785555af9b73d8c0eb58638
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532625"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026630"
 ---
 # <a name="initseg"></a>init_seg
 
@@ -36,13 +36,13 @@ Poiché l'inizializzazione di oggetti statici globali può includere il codice i
 
 Le opzioni per la **init_seg** pragma sono:
 
-*compiler*<br/>
+*compilatore*<br/>
 Riservato per l'inizializzazione della libreria di runtime di Microsoft C Gli oggetti in questo gruppo sono costruiti per primi.
 
 *lib*<br/>
 Disponibile per le inizializzazioni dei fornitori della libreria di classi di terze parti. Gli oggetti in questo gruppo sono costruiti dopo quelli contrassegnati come *compilatore* ma prima degli altri.
 
-*user*<br/>
+*utente*<br/>
 Disponibile per qualsiasi utente. Gli oggetti in questo gruppo sono costruiti per ultimi.
 
 *nome della sezione* consente la specifica esplicita della sezione di inizializzazione. Gli oggetti in specificato dall'utente *-nome della sezione* non vengono costruiti in modo implicito; tuttavia, gli indirizzi vengono inseriti nella sezione denominata da *-nome della sezione*.
@@ -57,7 +57,7 @@ Per un elenco di nomi non è consigliabile usare durante la creazione di una sez
 int __cdecl myexit (void (__cdecl *pf)(void))
 ```
 
-allora la funzione verrà chiamata al posto di `atexit` della libreria di runtime C. Ciò consente di compilare un elenco dei distruttori che dovranno essere chiamati quando si è pronti a eliminare definitivamente gli oggetti.
+allora la funzione verrà chiamata al posto di `atexit` della libreria di runtime C. Ciò consente di compilare un elenco dei distruttori che dovranno essere chiamati quando si è pronti a eliminare gli oggetti.
 
 Se si desidera posticiparne l'inizializzazione (ad esempio in una DLL) è possibile scegliere di specificare il nome della sezione in modo esplicito. È necessario quindi chiamare i costruttori per ogni oggetto statico.
 

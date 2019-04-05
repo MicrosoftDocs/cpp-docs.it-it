@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: bookmark e absolute position (ODBC)'
+title: 'Recordset: Bookmark e Absolute Position (ODBC)'
 ms.date: 11/04/2016
 f1_keywords:
 - SetAbsolutePosition
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: 826c1c0124eb261c97fff8f1e2fa01c8becb073a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500939"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023789"
 ---
-# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Recordset: bookmark e absolute position (ODBC)
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Recordset: Bookmark e Absolute Position (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -80,7 +80,7 @@ Per spostare il puntatore di record corrente utilizzando la posizione assoluta, 
 > [!NOTE]
 >  La posizione assoluta di un record è potenzialmente non affidabile. Se l'utente elimina i record dal recordset, cambia la posizione ordinale di tutti i record successivi. I segnalibri sono il metodo consigliato per lo spostamento del record corrente. Per altre informazioni, vedere [segnalibri in MFC ODBC](#_core_bookmarks_in_mfc_odbc).
 
-Per altre informazioni sull'esplorazione del recordset, vedere [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Per altre informazioni sull'esplorazione del recordset, vedere [Recordset: Scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 

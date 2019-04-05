@@ -9,12 +9,12 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 6589fe23359eecd654b23380747fbd3213c54dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432903"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026578"
 ---
 # <a name="conform"></a>conform
 **Sezione specifica C++**
@@ -33,7 +33,7 @@ Specifica il nome dell'opzione del compilatore da modificare. Valido solo *name*
 **Show**<br/>
 (Facoltativo) Fa sì che l'impostazione corrente di *nome* (true o false) da visualizzare mediante un messaggio di avviso durante la compilazione. Ad esempio `#pragma conform(forScope, show)`.
 
-**sul**, **off**<br/>
+**on**, **off**<br/>
 (Facoltativo) L'impostazione *nome* a **sul** consente la [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opzione del compilatore. Il valore predefinito è **disattivata**.
 
 **push**<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: creazione e chiusura di recordset (ODBC)'
+title: 'Recordset: Creazione e chiusura di recordset (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, creating
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: d98f7e59e52b86a1b9b1c3ffac5c3e7160e6c36d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581506"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041267"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset: creazione e chiusura di recordset (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset: Creazione e chiusura di recordset (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -71,10 +71,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Dopo aver chiamato `Open`, usare i membri di dati e funzioni membro dell'oggetto per lavorare con i record. In alcuni casi, è possibile rieseguire una query o aggiornare il recordset in modo da includere le modifiche apportate nell'origine dati. Per altre informazioni, vedere [Recordset: ripetizione di query in un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Dopo aver chiamato `Open`, usare i membri di dati e funzioni membro dell'oggetto per lavorare con i record. In alcuni casi, è possibile rieseguire una query o aggiornare il recordset in modo da includere le modifiche apportate nell'origine dati. Per altre informazioni, vedere [Recordset: Ripetizione di query in un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  La stringa di connessione utilizzata durante lo sviluppo potrebbe non essere la stessa stringa di connessione che servono agli utenti finali. Per informazioni sulla generalizzazione dell'applicazione a questo proposito, vedere [Zdroj dat: gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  La stringa di connessione utilizzata durante lo sviluppo potrebbe non essere la stessa stringa di connessione che servono agli utenti finali. Per informazioni sulla generalizzazione dell'applicazione a questo proposito, vedere [Zdroj dat: Gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
 ##  <a name="_core_setting_recordset_options"></a> Impostazione delle opzioni di Recordset
 
@@ -110,5 +110,5 @@ Al termine del recordset, è necessario eliminarlo e deallocare la memoria.
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[Recordset: aggiunta, aggiornamento ed eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Recordset: Scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[Recordset: Aggiunta, aggiornamento ed eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

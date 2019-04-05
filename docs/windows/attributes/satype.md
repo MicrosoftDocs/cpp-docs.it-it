@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 3d2d921e750adad0089df0d00590f256b56c732e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517689"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025724"
 ---
 # <a name="satype"></a>satype
 
@@ -36,7 +36,7 @@ Tipo di dati per il `SAFEARRAY` struttura dei dati che viene passato come parame
 |-|-|
 |**Si applica a**|Parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 ## <a name="remarks"></a>Note
@@ -62,6 +62,6 @@ __interface A {
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi del compilatore](compiler-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
-[Attributi di metodo](method-attributes.md)<br/>
+[Attributi dei parametri](parameter-attributes.md)<br/>
+[Attributi del metodo](method-attributes.md)<br/>
 [ID](id.md)

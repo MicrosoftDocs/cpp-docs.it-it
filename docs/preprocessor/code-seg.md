@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597703"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041241"
 ---
 # <a name="codeseg"></a>code_seg
 Specifica il segmento di testo in cui le funzioni vengono archiviate nel file OBJ.
@@ -37,10 +37,10 @@ Specifica il segmento di testo in cui le funzioni vengono archiviate nel file OB
 
 *Identificatore* consente di visualizzare con un solo record più **pop** comando.
 
-"*-nome del segmento*"<br/>
+"*segment-name*"<br/>
 (Facoltativo) Il nome di un segmento. Quando abbinata **pop**, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento di testo attivo.
 
-"*-classe di segmento*"<br/>
+"*segment-class*"<br/>
 (Facoltativo) Ignorato, ma incluso per compatibilità con le versioni di C++ precedenti alla versione 2.0.
 
 ## <a name="remarks"></a>Note

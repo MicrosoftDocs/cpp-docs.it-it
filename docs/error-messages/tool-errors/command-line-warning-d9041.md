@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: 2311c61c4d661d58302308f06b08971f94cdacab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d9a32fbf961e980633635f277a76955a706a4b0e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816308"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021456"
 ---
 # <a name="command-line-warning-d9041"></a>Avviso della riga di comando D9041
 

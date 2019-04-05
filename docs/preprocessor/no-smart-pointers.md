@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_smart_pointers attribute
 ms.assetid: d69dd71e-08a8-4446-a3d0-a062dc29cb17
-ms.openlocfilehash: 305c08497a600f602767496cba48d108335fdeb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed4950b9e90ef968fcf0c42e4f0a9775c58ea7ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636982"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030167"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
 **Sezione specifica C++**
@@ -32,5 +32,5 @@ Per impostazione predefinita, quando si utilizza `#import`, si ottiene una dichi
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+[Attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Direttiva #import](../preprocessor/hash-import-directive-cpp.md)

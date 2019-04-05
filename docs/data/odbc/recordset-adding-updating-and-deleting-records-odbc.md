@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: aggiunta, aggiornamento ed eliminazione di record (ODBC)'
+title: 'Recordset: Aggiunta, aggiornamento ed eliminazione di record (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-ms.openlocfilehash: a13bffdc79f01c49c290b8b5d4388f06ce777105
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512372"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024608"
 ---
-# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset: aggiunta, aggiornamento ed eliminazione di record (ODBC)
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Recordset: Aggiunta, aggiornamento ed eliminazione di record (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
 > [!NOTE]
->  È ora possibile aggiungere i record in blocco in modo più efficiente. Per altre informazioni, vedere [Recordset: aggiunta di massa di record (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
+>  È ora possibile aggiungere i record in blocco in modo più efficiente. Per altre informazioni, vedere [Recordset: Aggiunta di record nel blocco (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
 
 > [!NOTE]
->  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Dynaset e aggiornabili snapshot consentono di aggiungere, modificare (aggiornamento) ed eliminare record. Questo argomento viene illustrato:
 
@@ -45,7 +45,7 @@ Dynaset e aggiornabili snapshot consentono di aggiungere, modificare (aggiorname
 
 - [Come eliminare un record](#_core_deleting_a_record_from_a_recordset).
 
-Per altre informazioni sull'esecuzione degli aggiornamenti e come vengono visualizzati gli aggiornamenti ad altri utenti, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). In genere, quando si aggiungere, modificare o eliminare un record, il set di record viene modificato l'origine dati immediatamente. È anche possibile raggruppare gli aggiornamenti correlati in transazioni. Se è in corso una transazione, l'aggiornamento non è definitivo finché non si esegue il commit della transazione. In questo modo è possibile riportare o il rollback delle modifiche. Per informazioni sulle transazioni, vedere [transazione (ODBC)](../../data/odbc/transaction-odbc.md).
+Per altre informazioni sull'esecuzione degli aggiornamenti e come vengono visualizzati gli aggiornamenti ad altri utenti, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). In genere, quando si aggiungere, modificare o eliminare un record, il set di record viene modificato l'origine dati immediatamente. È anche possibile raggruppare gli aggiornamenti correlati in transazioni. Se è in corso una transazione, l'aggiornamento non è definitivo finché non si esegue il commit della transazione. In questo modo è possibile riportare o il rollback delle modifiche. Per informazioni sulle transazioni, vedere [transazione (ODBC)](../../data/odbc/transaction-odbc.md).
 
 Nella tabella seguente vengono riepilogate le opzioni disponibili per i recordset con caratteristiche di aggiornamento diversi.
 
@@ -102,9 +102,9 @@ if( !rsStudentSet.CanUpdate( ) )
 
 1. Chiamare il metodo dell'oggetto recordset `Update` funzione membro.
 
-   `Update` completa l'aggiunta mediante la scrittura del nuovo record nell'origine dati. Per informazioni sugli effetti se non si riesce a chiamare `Update`, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` completa l'aggiunta mediante la scrittura del nuovo record nell'origine dati. Per informazioni sugli effetti se non si riesce a chiamare `Update`, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
-Per informazioni sull'aggiunta di record e su quando i record aggiunti sono visibili nel set di record, vedere [Recordset: funzionamento dei metodi AddNew, Edit e Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
+Per informazioni sull'aggiunta di record e su quando i record aggiunti sono visibili nel set di record, vedere [Recordset: Come dei metodi AddNew, Edit e Delete (ODBC) lavoro](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
 
 Nell'esempio seguente viene illustrato come aggiungere un nuovo record:
 
@@ -147,7 +147,7 @@ Se è possibile modificare i record esistenti del recordset [CanUpdate](../../mf
 
 1. Chiamare il metodo dell'oggetto recordset `Update` funzione membro.
 
-   `Update` completa la modifica mediante la scrittura del record modificato all'origine dati. Per informazioni sugli effetti se non si riesce a chiamare `Update`, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` completa la modifica mediante la scrittura del record modificato all'origine dati. Per informazioni sugli effetti se non si riesce a chiamare `Update`, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 Dopo aver modificato un record, il record modificato rimane il record corrente.
 
@@ -197,9 +197,9 @@ rsStudent.Delete( );
 rsStudent.MoveNext( );
 ```
 
-Per altre informazioni sugli effetti della `AddNew`, `Edit`, e `Delete` funzioni membro, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Per altre informazioni sugli effetti della `AddNew`, `Edit`, e `Delete` funzioni membro, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset: Blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

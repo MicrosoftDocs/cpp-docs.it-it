@@ -1,12 +1,12 @@
 ---
 title: Gestione delle eccezioni ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 43e43beae5ee02f9ef4537da08a1c9915056b777
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870793"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031732"
 ---
 # <a name="arm64-exception-handling"></a>Gestione delle eccezioni ARM64
 
@@ -219,15 +219,15 @@ Questi dati viene suddiviso in quattro sezioni:
 
    e. **Conteggio di epilogo** è un campo di bit 5 che ha due significati, a seconda dello stato del **elettronica** bit:
 
-      1. Se **elettronica** è impostato su 0: Specifica il conteggio del numero totale di ambiti di eccezione descritti nella sezione 2. Se è presente più di 31 ambiti nella funzione, il **parole codice** campo deve essere impostato su 0 per indicare che è necessaria una parola di estensione.
+      1. Se **elettronica** è impostato su 0: Specifica il conteggio del numero totale di ambiti di epilogo descritto nella sezione 2. Se è presente più di 31 ambiti nella funzione, il **parole codice** campo deve essere impostato su 0 per indicare che è necessaria una parola di estensione.
 
       2. Se **elettronica** è impostato su 1, questo campo specifica l'indice del primo codice di rimozione che descrive solo epilogo e quello.
 
-   f. **Codice parole** è un campo di 5 bit che specifica il numero di parole a 32 bit necessari per contenere tutti i codici di rimozione nella sezione 4. Se sono necessari più di 31 parole (ad esempio, più di 124 rimozione byte del codice), questo campo deve essere impostato su 0 per indicare che è necessaria una parola di estensione.
+   f. **Codice parole** è un campo di 5 bit che specifica il numero di parole a 32 bit necessari per contenere tutti i codici di rimozione nella sezione 3. Se sono necessari più di 31 parole (ad esempio, più di 124 rimozione byte del codice), questo campo deve essere impostato su 0 per indicare che è necessaria una parola di estensione.
 
    g. **Il conteggio di epilogo estesa** e **estesi parole codice** campi corrispondono a 16 bit e a 8 bit, rispettivamente, che forniscono più spazio per la codifica di un numero di epiloghi insolitamente ampio o un numero insolitamente elevato di parole di codice di rimozione. La parola di estensione contenente questi campi è presente solo se entrambi i **conteggio di epilogo** e **parole di codice** campi nella prima parola di intestazione sono impostati su 0.
 
-1. Dopo i dati dell'eccezione, se **conteggio di epilogo** è diverso da zero, è un elenco di informazioni sugli ambiti di epilogo, compresse una per una parola e archiviate in ordine di inizio offset crescente. Ogni ambito contiene i bit seguenti:
+1. Dopo l'intestazione e intestazione estesa facoltativa descritti in precedenza, se **conteggio di epilogo** è diverso da zero, è un elenco di informazioni sugli ambiti di epilogo, compresse una per una parola e archiviate in ordine di inizio offset crescente. Ogni ambito contiene i bit seguenti:
 
    a. **Offset di avviare epilogo** è un campo a 18 bit che descrive l'offset in byte, diviso 4, dell'epilogo rispetto all'inizio della funzione
 
@@ -237,7 +237,7 @@ Questi dati viene suddiviso in quattro sezioni:
 
 1. Dopo che l'elenco di ambiti di epilogo è disponibile una matrice di byte che contengono codici di rimozione, descritti in dettaglio in una sezione successiva. Questa matrice viene riempita alla fine fino al più vicino confine di parola completa. I byte sono archiviati in ordine little-endian, in modo da essere direttamente recuperabili in modalità little-endian.
 
-1. Infine, dopo i byte di codice di rimozione (e, se il **X** bit nell'intestazione è stato impostato su 1) include le informazioni del gestore di eccezioni. Si tratta di una singola **eccezione gestore RVA** fornendo l'indirizzo del gestore eccezioni stesso, seguito immediatamente da una quantità a lunghezza variabile di dati richiesti dal gestore di eccezioni.
+1. Infine, dopo i byte di codice di rimozione, se il **X** bit nell'intestazione è stato impostato su 1, include le informazioni del gestore di eccezioni. Si tratta di una singola **eccezione gestore RVA** fornendo l'indirizzo del gestore eccezioni stesso, seguito immediatamente da una quantità a lunghezza variabile di dati richiesti dal gestore di eccezioni.
 
 Il precedente del record. XData è progettato in modo che sia possibile recuperare i primi 8 byte e dal calcolo della dimensione totale del record (meno la lunghezza dei dati a dimensione variabile eccezione che segue). Il frammento di codice seguente calcola le dimensioni dei record:
 

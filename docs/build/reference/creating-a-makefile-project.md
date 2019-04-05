@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827589"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035598"
 ---
 # <a name="create-a-c-makefile-project"></a>Creare un progetto makefile di C++
 
@@ -22,7 +22,7 @@ Nel caso in cui sia già disponibile un progetto makefile, è possibile sceglier
 
 - Creare un progetto makefile che utilizza il makefile esistente per configurare un file con estensione vcxproj che Visual Studio userà per IntelliSense in Visual Studio. In questo caso, non si potrà usufruire di tutte le funzionalità dell'IDE che si hanno con un progetto MSBuild nativo. Vedere la sezione [Per creare un progetto makefile](#create_a_makefile_project) riportata di seguito.
 - Usare la **Creazione guidata nuovo progetto da file di codice esistenti** per creare un progetto MSBuild nativo dal codice sorgente. Il makefile originale non useranno questo punto. Per altre informazioni, vedere [Procedura: Creare un progetto C++ da codice esistente](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 e versioni successiva**: Usare la **Apri cartella** funzionalità per modificare e compilare un progetto makefile come-senza alcun coinvolgimento del sistema MSBuild. Per altre informazioni, vedere [progetti Apri cartella per C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2017 e versioni successive**: Usare la **Apri cartella** funzionalità per modificare e compilare un progetto makefile come-senza alcun coinvolgimento del sistema MSBuild. Per altre informazioni, vedere [Progetti Apri cartella per C++](../open-folder-projects-cpp.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Per creare un progetto makefile con il modello di progetto makefile
 
@@ -54,7 +54,7 @@ Dopo aver creato un progetto makefile, è possibile visualizzare e modificare le
 
 - **Ricompilare della riga di comando:** Specifica la riga di comando da eseguire quando l'utente seleziona ricompilazione dal menu Compila. Viene visualizzata nella ricompilazione tutto da riga di comando nella pagina Nmake della pagina delle proprietà del progetto.
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procedura: Abilitazione di IntelliSense per progetti Makefile
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procedura: Abilitare IntelliSense per i progetti makefile
 
 IntelliSense non riesce in progetti makefile quando alcune impostazioni del progetto o le opzioni del compilatore sono configurate in modo non corretto. Seguire questi passaggi per configurare i progetti makefile in modo che IntelliSense funziona come previsto:
 
@@ -86,7 +86,7 @@ Alla successiva apertura del progetto makefile nell'ambiente di sviluppo di Visu
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo di IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [Riferimenti a NMAKE](nmake-reference.md)<br>
 [Procedura: Creare un progetto C++ da codice esistente](../how-to-create-a-cpp-project-from-existing-code.md)
 [caratteri speciali in un Makefile](special-characters-in-a-makefile.md)<br/>

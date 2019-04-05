@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: applicazione di parametri a un recordset (ODBC)'
+title: 'Recordset: Parametrizzazione di un Recordset (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parameterizing recordsets
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331269"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026162"
 ---
-# <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: applicazione di parametri a un recordset (ODBC)
+# <a name="recordset-parameterizing-a-recordset-odbc"></a>Recordset: Parametrizzazione di un Recordset (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -46,7 +46,7 @@ Gli usi tipici per i parametri includono:
 
 - Passaggio di argomenti in fase di esecuzione per una query predefinita.
 
-   Per passare parametri a una stored procedure, è necessario specificare un ODBC personalizzato completo **CHIAMARE** istruzione, ovvero con i segnaposto dei parametri, ovvero quando si chiama `Open`, si esegue l'override di istruzione SQL predefinita del recordset. Per altre informazioni, vedere [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) nel *Class Library Reference* e [SQL: del Recordset SQL istruzione (ODBC personalizzazione)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) e [ Recordset: Dichiarazione di una classe per una Query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+   Per passare parametri a una stored procedure, è necessario specificare un ODBC personalizzato completo **CHIAMARE** istruzione, ovvero con i segnaposto dei parametri, ovvero quando si chiama `Open`, si esegue l'override di istruzione SQL predefinita del recordset. Per altre informazioni, vedere [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) nel *Class Library Reference* e [SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) e [Recordset: Dichiarazione di una classe per una Query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 - Esegue in modo efficiente numerose ripetizioni di query con le informazioni di parametro diversi.
 
@@ -75,19 +75,19 @@ Gli usi tipici per i parametri includono:
                                        // for some drivers
     ```
 
-   Per informazioni su come usare le virgolette in modo corretto per le stringhe di filtro, vedere [Recordset: applicazione di filtri dei record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+   Per informazioni su come usare le virgolette in modo corretto per le stringhe di filtro, vedere [Recordset: Filtrare i record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
    Il valore del parametro è diverso ogni volta che viene ripetuta la query di set di record per un nuovo ID di studente.
 
    > [!TIP]
    > Utilizzo di un parametro è semplicemente un filtro più efficiente. Per un recordset con parametri, il database deve elaborare un database SQL **seleziona** istruzione una sola volta. Per un recordset filtrato senza parametri, il **selezionate** istruzione deve essere elaborata ogni volta che si `Requery` con un nuovo valore di filtro.
 
-Per altre informazioni sui filtri, vedere [Recordset: applicazione di filtri dei record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+Per altre informazioni sui filtri, vedere [Recordset: Filtrare i record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> Uso dei parametri della classe Recordset
 
 > [!NOTE]
-> In questa sezione si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa di massa di righe il recupero, l'implementazione di parametri è un processo simile. Per altre informazioni, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> In questa sezione si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa di massa di righe il recupero, l'implementazione di parametri è un processo simile. Per altre informazioni, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Prima di creare la classe del recordset, determinare i parametri necessari, quali sono i tipi di dati e come verranno utilizzati dal recordset.
 
@@ -114,7 +114,7 @@ Prima di creare la classe del recordset, determinare i parametri necessari, qual
 
    Aggiungere i membri dati del parametro dopo i membri dati del campo generate dalla procedura guidata. La convenzione consiste nell'aggiungere la parola "Param" per ogni nome di parametro definito dall'utente.
 
-1. Modificare il [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) definizione di funzione membro nel file con estensione cpp. Aggiungere una chiamata di funzione RFX per ogni membro di dati di parametro che è stato aggiunto alla classe. Per informazioni sulla scrittura delle funzioni RFX, vedere [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md). Far precedere le chiamate RFX per i parametri con una singola chiamata a:
+1. Modificare il [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) definizione di funzione membro nel file con estensione cpp. Aggiungere una chiamata di funzione RFX per ogni membro di dati di parametro che è stato aggiunto alla classe. Per informazioni sulla scrittura delle funzioni RFX, vedere [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Far precedere le chiamate RFX per i parametri con una singola chiamata a:
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -123,7 +123,7 @@ Prima di creare la classe del recordset, determinare i parametri necessari, qual
 
 1. Nel costruttore della classe recordset, incrementare il conteggio dei parametri, `m_nParams`.
 
-   Per informazioni, vedere [Record Field Exchange: utilizzo di codice della procedura guidata](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
+   Per informazioni, vedere [Record Field Exchange: Utilizzo di codice della procedura guidata](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
 
 1. Quando si scrive il codice che crea un oggetto recordset di questa classe, inserire un "?" (punto interrogativo) in ogni punto stringhe dell'istruzione SQL in un parametro da sostituire.
 
@@ -176,5 +176,5 @@ Il set di record contiene record per gli studenti i cui record soddisfano le con
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: aggiunta, aggiornamento ed eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Recordset: Aggiunta, aggiornamento ed eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[Recordset: Selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

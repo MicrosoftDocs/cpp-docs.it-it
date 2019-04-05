@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-ms.openlocfilehash: 8fef953a520572b42e69a48ea391282c7b70ba44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4d3119a640c0642664210384c297e011104411
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667363"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030818"
 ---
 # <a name="compiler-attributes"></a>Attributi del compilatore
 
@@ -21,8 +21,8 @@ Gli attributi del compilatore forniscono un'ampia gamma di funzionalità.
 |[emitidl](emitidl.md)|Determina se tutti gli attributi IDL successivi verranno elaborati e inseriti nel file con estensione IDL generato.|
 |[event_receiver](event-receiver.md)|Crea un ricevitore di eventi.|
 |[event_source](event-source.md)|Crea un'origine evento.|
-|[export](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
-|[implements](implements-cpp.md)|Specifica le interfacce dispatch che vengono forzate per essere membri della coclasse IDL.|
+|[esportazione](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
+|[implementa](implements-cpp.md)|Specifica le interfacce dispatch che vengono forzate per essere membri della coclasse IDL.|
 |[importidl](importidl.md)|Inserisce il file con estensione idl specificato nel file con estensione IDL generato.|
 |[importlib](importlib.md)|Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la libreria dei tipi da creare.|
 |[includelib](includelib-cpp.md)|Fa sì che un file con estensione idl o con estensione h da includere nel file IDL generato.|

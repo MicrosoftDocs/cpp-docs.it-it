@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-ms.openlocfilehash: 953318e09c4c0d00748f2b6189615dbd66677a96
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 4b88ad0da31321a696c1238f1c9838d3b3a1c927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785094"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030115"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Metodo Microsoft::WRL::Wrappers
 
@@ -36,15 +36,15 @@ namespace Microsoft::WRL::Wrappers;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[Classe CriticalSection](criticalsection-class.md)|Rappresenta una sezione critica.|
-|[Classe event (WRL)](event-class-wrl.md)|Rappresenta un evento.|
-|[Classe HandleT](handlet-class.md)|Rappresenta un handle a un oggetto.|
+|[CriticalSection (classe)](criticalsection-class.md)|Rappresenta una sezione critica.|
+|[Classe di evento (WRL)](event-class-wrl.md)|Rappresenta un evento.|
+|[HandleT (classe)](handlet-class.md)|Rappresenta un handle a un oggetto.|
 |[Classe HString](hstring-class.md)|Fornisce supporto per modificare un handle HSTRING.|
 |[Classe HStringReference](hstringreference-class.md)|Rappresenta un HSTRING creato da una stringa esistente.|
 |[Classe Mutex](mutex-class.md)|Rappresenta un oggetto di sincronizzazione che controlla esclusivamente una risorsa condivisa.|
 |[Classe RoInitializeWrapper](roinitializewrapper-class.md)|Inizializza il Runtime di Windows.|
-|[Classe Semaphore](semaphore-class.md)|Rappresenta un oggetto di sincronizzazione che controlla una risorsa condivisa che può supportare un numero limitato di utenti.|
-|[Classe SRWLock](srwlock-class.md)|Rappresenta un blocco in lettura/scrittura.|
+|[Semaphore (classe)](semaphore-class.md)|Rappresenta un oggetto di sincronizzazione che controlla una risorsa condivisa che può supportare un numero limitato di utenti.|
+|[SRWLock (classe)](srwlock-class.md)|Rappresenta un blocco in lettura/scrittura.|
 
 ## <a name="requirements"></a>Requisiti
 

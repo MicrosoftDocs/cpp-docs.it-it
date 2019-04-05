@@ -5,12 +5,12 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 79eb11a2a9d6403eb267098bb4f893b4424d6a67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466339"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040806"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Utilizzo dei modelli consumer OLE DB
 
@@ -26,23 +26,23 @@ Gli argomenti seguenti forniscono alcuni esempi di come usare i modelli Consumer
 
 - [Recupero dei dati](../../data/oledb/fetching-data.md)
 
-- [Aggiornamento dei rowset](../../data/oledb/updating-rowsets.md)
+- [aggiornamento rowset](../../data/oledb/updating-rowsets.md)
 
-- [Uso delle stored procedure](../../data/oledb/using-stored-procedures.md)
+- [Utilizzo delle stored procedure](../../data/oledb/using-stored-procedures.md)
 
-- [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)
+- [Utilizzo delle funzioni di accesso](../../data/oledb/using-accessors.md)
 
 - [Recupero di metadati con i rowset dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)
 
 - [Supporto delle transazioni in OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)
 
-- [Uso delle visualizzazioni di record OLE DB](../../data/oledb/using-ole-db-record-views.md)
+- [Utilizzo delle visualizzazioni di record OLE DB](../../data/oledb/using-ole-db-record-views.md)
 
-- [Uso di un recordset ADO esistente](../../data/oledb/using-an-existing-ado-recordset.md)
+- [Utilizzo di un recordset ADO esistente](../../data/oledb/using-an-existing-ado-recordset.md)
 
 - [Aggiornamento di una colonna quando un'altra tabella contiene un riferimento alla riga](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)
 
-- [Uso dei segnalibri](../../data/oledb/using-bookmarks.md)
+- [Utilizzo dei bookmark](../../data/oledb/using-bookmarks.md)
 
 - [Recupero di un BLOB](../../data/oledb/retrieving-a-blob.md)
 
@@ -60,4 +60,4 @@ Per un esempio di creazione e implementazione di un Consumer OLE DB, vedere [cre
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

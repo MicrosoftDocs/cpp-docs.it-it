@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328857"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038161"
 ---
 # <a name="toolbar-editor-c"></a>Toolbar Editor (C++)
 
@@ -90,9 +90,9 @@ Un pulsante della barra degli strumenti presenta le proprietà seguenti:
 
 |Proprietà|Descrizione|
 |--------------|-----------------|
-|**ID**|Definisce l'ID del pulsante. L'elenco di elenco a discesa include common **ID** nomi.|
-|**Width**|Imposta la larghezza del pulsante. è consigliabile 16 pixel.|
-|**Height**|Imposta l'altezza del pulsante. L'altezza di un pulsante Modifica l'altezza di tutti i pulsanti sulla barra degli strumenti. impostazione consigliata è 15 pixel.|
+|**Id**|Definisce l'ID del pulsante. L'elenco di elenco a discesa include common **ID** nomi.|
+|**Larghezza**|Imposta la larghezza del pulsante. è consigliabile 16 pixel.|
+|**Altezza**|Imposta l'altezza del pulsante. L'altezza di un pulsante Modifica l'altezza di tutti i pulsanti sulla barra degli strumenti. impostazione consigliata è 15 pixel.|
 |**Prompt**|Definisce il messaggio visualizzato nella barra di stato. Aggiunta *\n* e aggiunge un nome di un **ToolTip** al pulsante sulla barra degli strumenti. Per altre informazioni, vedere [creazione di una descrizione comando](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
 
 **Larghezza** e **altezza** si applicano a tutti i pulsanti. Una mappa di bit viene usata per creare una barra degli strumenti ha una larghezza massima di 2048, pertanto se si imposta la larghezza del pulsante su *512*, è possibile avere solo quattro pulsanti e se la larghezza viene impostata su *513*, è possibile avere solo tre pulsanti.
@@ -203,7 +203,7 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor di risorse](../windows/resource-editors.md)
+[editor di risorse](../windows/resource-editors.md)
 <!--
 [Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
 [Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->

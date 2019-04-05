@@ -34,12 +34,12 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-ms.openlocfilehash: 8410420564ae641ff5e624cc5a1ddb0f260672e6
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: c86a743df84df37ffe3234d82d79abd987a4dcda
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627377"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023135"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>Funzioni intrinseche _InterlockedXor
 
@@ -150,7 +150,7 @@ __int64 _InterlockedXor64_rel(
 
 #### <a name="parameters"></a>Parametri
 
-*Valore*<br/>
+*Value*<br/>
 [in, out] Puntatore al primo operando, da sostituire con il risultato.
 
 *Maschera*<br/>

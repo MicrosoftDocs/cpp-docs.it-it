@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-ms.openlocfilehash: 06618d1a468116855ccad149a150c0b621497f2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f4c4ad84abf2a5de2cdf09e7064396ea01eeebe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507952"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035046"
 ---
 # <a name="defining-stored-procedures"></a>Definizione delle stored procedure
 
@@ -67,4 +67,4 @@ db_command("{ ? = CALL dbo.dt_adduserobject }")
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle stored procedure](../../data/oledb/using-stored-procedures.md)
+[Utilizzo delle stored procedure](../../data/oledb/using-stored-procedures.md)

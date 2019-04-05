@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, optimize
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
-ms.openlocfilehash: 65948f2b466bdd40bd753dbba99e2e235c57b0f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f5240fc59f59a71ddb3d18b67fadf3463a0d1ea
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615865"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035400"
 ---
 # <a name="optimize"></a>optimize
 
@@ -35,7 +35,7 @@ Il *optimization-list* può essere zero o più parametri riportati nella tabella
 
 |Parametro/i|Tipo di ottimizzazione|
 |--------------------|--------------------------|
-|*g*|Abilita le ottimizzazioni globali.|
+|*V*|Abilita le ottimizzazioni globali.|
 |*s* o *t*|Specificare sequenze brevi o veloci di codice macchina.|
 |*y*|Generare i puntatori ai frame nello stack del programma.|
 

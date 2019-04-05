@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ODBC, record views
 - record views, ODBC
 ms.assetid: 6a2ce346-8104-4ccd-b06e-ca0859a132fe
-ms.openlocfilehash: 35d8072a33c135f8735280d741e954e5b9cf6fb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2267c732a2f879fc507f6793ac0a7bd9cda8128
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498059"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030063"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>Utilizzo di form di database (visualizzazioni di record) con ODBC
 

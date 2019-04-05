@@ -1,5 +1,5 @@
 ---
-title: 'Origine dati: gestione delle connessioni (ODBC)'
+title: 'Origine dati: Gestione delle connessioni (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], multiuser environments
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568506"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041163"
 ---
-# <a name="data-source-managing-connections-odbc"></a>Origine dati: gestione delle connessioni (ODBC)
+# <a name="data-source-managing-connections-odbc"></a>Origine dati: Gestione delle connessioni (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -72,7 +72,7 @@ Amministratore ODBC viene utilizzato per configurare le origini dati. È inoltre
 
 ##  <a name="_core_working_in_a_multiuser_environment"></a> In un ambiente multiutente
 
-Se più utenti sono connessi a un'origine dati, è possibile modificare i dati durante la manipolazione nei recordset. Allo stesso modo, le modifiche potrebbero influenzare i recordset di altri utenti. Per altre informazioni, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [transazione (ODBC)](../../data/odbc/transaction-odbc.md).
+Se più utenti sono connessi a un'origine dati, è possibile modificare i dati durante la manipolazione nei recordset. Allo stesso modo, le modifiche potrebbero influenzare i recordset di altri utenti. Per altre informazioni, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [transazione (ODBC)](../../data/odbc/transaction-odbc.md).
 
 ##  <a name="_core_generalizing_the_connection_string"></a> Generalizzazione della stringa di connessione
 
@@ -139,5 +139,5 @@ Per altre informazioni su come specificare l'origine dati se è un valore divers
 ## <a name="see-also"></a>Vedere anche
 
 [Origine dati (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[Origine dati: determinazione dello schema dell'origine dati (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[Origine dati: Determinazione dello Schema dell'origine dati (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [Classe CRecordset](../../mfc/reference/crecordset-class.md)

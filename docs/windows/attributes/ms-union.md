@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 6b9788fc02a3bf4d59d34823ba83d86f97298597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642468"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022308"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -62,7 +62,7 @@ __interface IFireTabCtrl {
 |-|-|
 |**Si applica a**|Unioni nonencapsulated|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|`dispinterface`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

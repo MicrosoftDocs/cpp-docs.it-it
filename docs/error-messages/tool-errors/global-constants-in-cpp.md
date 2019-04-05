@@ -5,12 +5,12 @@ helpviewer_keywords:
 - global constants
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-ms.openlocfilehash: 3da61b7718dadba9b454ee079651ce6372f21756
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ae29b8744e24b6471f0d5536f3f13cc5ae59499
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432617"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030193"
 ---
 # <a name="global-constants-in-c"></a>Costanti globali in C++
 

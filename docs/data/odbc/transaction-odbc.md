@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: 0deb21a43ff17ca94efe29bdec37db7611331a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615813"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023670"
 ---
 # <a name="transaction-odbc"></a>Transazione (ODBC)
 
@@ -29,7 +29,7 @@ Una transazione è un modo per raggruppare una serie di aggiornamenti da un [zdr
 Le chiamate al `AddNew` e `Edit` dalle funzioni membro di un `CRecordset` oggetto influenzano l'origine dati immediatamente quando si chiama `Update`. `Delete` anche le chiamate vengono applicate immediatamente. Al contrario, è possibile usare una transazione costituito da più chiamate a `AddNew`, `Edit`, `Update`, e `Delete`, che vengono eseguite, ma non eseguito il commit finché non si chiama `CommitTrans` in modo esplicito. Mediante la definizione di una transazione, è possibile eseguire una serie di tali chiamate, mantenendo la possibilità di annullarle. Se non è disponibile una risorsa critica o un'altra condizione impedisce il completamento dell'intera transazione, è possibile eseguire il rollback della transazione anziché eseguirne il commit. In tal caso, nessuna delle modifiche che appartengono alla transazione influisce sull'origine dati.
 
 > [!NOTE]
->  Attualmente la classe `CRecordset` non supporta gli aggiornamenti all'origine dati se è stato implementato il recupero di righe bulk. Ciò significa che è possibile eseguire chiamate a `AddNew`, `Edit`, `Delete`, o `Update`. Tuttavia, è possibile scrivere funzioni personalizzate per eseguire aggiornamenti e quindi chiamare tali funzioni all'interno di una determinata transazione. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Attualmente la classe `CRecordset` non supporta gli aggiornamenti all'origine dati se è stato implementato il recupero di righe bulk. Ciò significa che è possibile eseguire chiamate a `AddNew`, `Edit`, `Delete`, o `Update`. Tuttavia, è possibile scrivere funzioni personalizzate per eseguire aggiornamenti e quindi chiamare tali funzioni all'interno di una determinata transazione. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Oltre che interessano il recordset, le transazioni hanno effetto sulle istruzioni SQL eseguite direttamente, purché si utilizzino ODBC **HDBC** associati con il `CDatabase` oggetto o un database ODBC **HSTMT** base che **HDBC**.
@@ -43,9 +43,9 @@ Nelle classi di database, si eseguono le transazioni attraverso `CDatabase` ogge
 
 Gli argomenti seguenti forniscono altre informazioni sull'esecuzione delle transazioni:
 
-- [Transazione: esecuzione di una transazione in un recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [Transazione: Esecuzione di una transazione in un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-- [Transazione: effetti delle transazioni sugli aggiornamenti (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
+- [Transazione: Effetti delle transazioni sugli aggiornamenti (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
 ## <a name="see-also"></a>Vedere anche
 

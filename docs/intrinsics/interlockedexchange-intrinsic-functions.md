@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328519"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021495"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchange
 
@@ -144,10 +144,10 @@ __int64 _InterlockedExchange64_rel(
 
 #### <a name="parameters"></a>Parametri
 
-*Destinazione*<br/>
+*destinazione*<br/>
 [in, out] Puntatore al valore da scambiare. La funzione imposta questa variabile su `Value` e restituisce il valore precedente.
 
-*Valore*<br/>
+*Value*<br/>
 [in] Valore da scambiare con il valore a cui punta `Target`.
 
 ## <a name="return-value"></a>Valore restituito

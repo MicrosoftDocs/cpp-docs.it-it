@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563355"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023698"
 ---
 # <a name="dialog-box-controls-c"></a>Controlli di finestre di dialogo (C++)
 
@@ -39,16 +39,16 @@ I controlli standard disponibili nel **casella degli strumenti** con impostazion
 |Nome controllo|Evento predefinito|
 |---|---|
 |[Controllo Button](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Controllo casella di controllo](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Controllo casella combinata](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Controllo di modifica](../mfc/reference/cedit-class.md)|EN_CHANGE|
+|[Controllo Check Box](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Controllo Combo Box](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
+|[Controllo Edit](../mfc/reference/cedit-class.md)|EN_CHANGE|
 |Casella di gruppo|(non applicabile)|
-|[Controllo casella di riepilogo](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Controllo pulsante di opzione](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Controllo List Box](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
+|[Controllo Radio Button](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[Controllo Static Text](../mfc/reference/cstatic-class.md)|(non applicabile)|
-|[Controllo immagine](../mfc/reference/cpictureholder-class.md)|(non applicabile)|
+|[Controllo Picture](../mfc/reference/cpictureholder-class.md)|(non applicabile)|
 |[Controllo Rich Edit 2.0](../mfc/using-cricheditctrl.md)|EN_CHANGE|
-|[Controllo barra di scorrimento](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
+|[Controllo Scroll Bar](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
 > Per altre informazioni sull'uso di **RichEdit 1.0** controllare con MFC, vedere [utilizzo del controllo RichEdit 1.0 con MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) e [esempi di controlli di modifica avanzate](../mfc/rich-edit-control-examples.md).
@@ -57,17 +57,17 @@ Il [Windows Common Controls](../mfc/controls-mfc.md) disponibile nel **della cas
 
 |Nome controllo|Evento predefinito|
 |---|---|
-|[Controllo dispositivo di scorrimento](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Controllo di selezione](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
+|[Slider (controllo)](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Controllo Spin](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[Controllo Progress](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[Controllo hot Key](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Controllo elenco](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Controllo albero](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Controllo struttura a schede](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[Controllo Hot Key](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
+|[Controllo List](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
+|[Controllo Tree](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
+|[Controllo Tab](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
 |[Controllo Animation](../mfc/using-an-animation-control.md)|ACN_START|
 |[Controllo Date Time Picker](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Controllo calendario mensile](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[Controllo indirizzo IP](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
+|[Controllo Month Calendar](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[Controllo IP Address](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
 |[Controllo Extended Combo Box](../mfc/creating-an-extended-combo-box-control.md)||
 |Controllo personalizzato|TTN_GETDISPINFO|
 

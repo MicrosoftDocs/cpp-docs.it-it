@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 139efb7a34baacb2bb6ad424d13f2d337eb12af6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661656"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028399"
 ---
-# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Origine dati: creazione di una tabella in un'origine dati ODBC a livello di codice
+# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Origine dati: A livello di codice crea una tabella in un'origine dati ODBC
 
 Questo argomento illustra come creare una tabella per i dati di origine, tramite il `ExecuteSQL` funzione membro della classe `CDatabase`, passando una stringa che contiene la funzione di un **CREATE TABLE** istruzione SQL.
 
-Per informazioni generali sulle origini dati ODBC in MFC, vedere [origine dati (ODBC)](../../data/odbc/data-source-odbc.md). L'argomento [Zdroj dat: a livello di codice la configurazione di un'origine dati ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) descrive la creazione delle origini dati.
+Per informazioni generali sulle origini dati ODBC in MFC, vedere [origine dati (ODBC)](../../data/odbc/data-source-odbc.md). L'argomento [Zdroj dat: Configurazione a livello di codice di un'origine dati ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) descrive la creazione delle origini dati.
 
 Dopo aver stabilito l'origine di dati, è possibile creare facilmente tabelle utilizzando il `ExecuteSQL` funzione membro e il **CREATE TABLE** istruzione SQL. Ad esempio, se si dispone di un `CDatabase` oggetto chiamato `myDB`, è possibile utilizzare il seguente codice MFC per creare una tabella:
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521401"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024739"
 ---
 # <a name="creating-an-updatable-provider"></a>Creazione di un provider aggiornabile
 
@@ -111,7 +111,7 @@ Si noti che `IRowsetUpdateImpl` deriva da `IRowsetChangeImpl`. Di conseguenza, `
 
    - `DBPROP_IRowsetChange`: Verrà impostata automaticamente `DBPROP_IRowsetChange`.
 
-   - `DBPROP_UPDATABILITY`: Una maschera di bit che specifica i metodi supportati in `IRowsetChange`: `SetData`, `DeleteRows`, o `InsertRow`.
+   - `DBPROP_UPDATABILITY`: Maschera di bit che specifica i metodi supportati in `IRowsetChange`: `SetData`, `DeleteRows`, o `InsertRow`.
 
    - `DBPROP_CHANGEINSERTEDROWS`: Il consumer può chiamare `IRowsetChange::DeleteRows` o `SetData` per le righe appena inserite.
 

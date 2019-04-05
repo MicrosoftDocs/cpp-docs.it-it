@@ -36,12 +36,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: a18c24685ff0d5f65970a094730d1587abffb601
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563030"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028522"
 ---
 # <a name="how-to-create-resources-c"></a>Procedura: Creare le risorse (C++)
 
@@ -117,7 +117,7 @@ Il **visualizzazione di risorse** windows include il **Aggiungi risorsa** finest
 
 | Proprietà | Descrizione |
 |---|---|
-| **Tipo di risorsa** | Specificare il tipo di risorsa che si desidera creare.<br/><br/>È possibile espandere le categorie di risorsa finestra di cursore e finestra di dialogo per visualizzare risorse aggiuntive, che si trovano in *... \Microsoft visual Studio \<versione\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct.*. Se è necessario aggiungere i file con estensione rct, inserirli qui o specificare un altro [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Risorse visualizzate al livello superiore nel controllo albero sono le risorse predefinite fornite da Visual Studio. Le risorse in file con estensione rct vengono visualizzati nel secondo livello nella categoria appropriata. Non vi è alcun limite predefinito al numero di file con estensione rct che è possibile aggiungere.<br/><br/> |
+| **Tipo risorsa** | Specificare il tipo di risorsa che si desidera creare.<br/><br/>È possibile espandere le categorie di risorsa finestra di cursore e finestra di dialogo per visualizzare risorse aggiuntive, che si trovano in *... \Microsoft visual Studio \<versione\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct.*. Se è necessario aggiungere i file con estensione rct, inserirli qui o specificare un altro [percorso di inclusione](../windows/how-to-specify-include-directories-for-resources.md). Risorse visualizzate al livello superiore nel controllo albero sono le risorse predefinite fornite da Visual Studio. Le risorse in file con estensione rct vengono visualizzati nel secondo livello nella categoria appropriata. Non vi è alcun limite predefinito al numero di file con estensione rct che è possibile aggiungere.<br/><br/> |
 | **Nuovo** | Crea una risorsa in base al tipo selezionato nel **tipo di risorsa** casella e aprire la risorsa nell'editor appropriato.<br/><br/>Ad esempio, se si crea una risorsa finestra di dialogo, apre la risorsa nel [finestra di dialogo Editor](../windows/dialog-editor.md). |
 | **Import** | Aprire il **importare** finestra di dialogo per passare alla risorsa di cui si desidera importare nel progetto corrente.<br/><br/>È possibile importare una bitmap, icone, cursori, HTML, audio (. WAV), o file di risorse personalizzato. |
 | **Personalizzato** | Aprire il **nuova risorsa personalizzata** finestra di dialogo per creare una risorsa personalizzata.<br/><br/>Include anche un **tipo di risorsa** proprietà che fornisce una casella di testo immettere il nome del tipo di risorsa personalizzata. Quando si esce dalla, Visual C++ scritto automaticamente in maiuscolo il nome. Risorse personalizzate vengono modificate solo nella [Editor binario](../windows/binary-editor.md). |
@@ -190,5 +190,5 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
-[Procedura: Gestisci risorse](../windows/how-to-copy-resources.md)<br/>
-[Procedura: Includere risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Procedura: Gestire le risorse](../windows/how-to-copy-resources.md)<br/>
+[Procedura: Includere le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)<br/>

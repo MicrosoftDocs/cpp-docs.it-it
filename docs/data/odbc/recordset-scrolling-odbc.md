@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: scorrimento (ODBC)'
+title: 'Recordset: Scorrimento (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets [C++], end of
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: e41b526b86922bafd1d923fa5848a5ef8ed4825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579600"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040056"
 ---
-# <a name="recordset-scrolling-odbc"></a>Recordset: scorrimento (ODBC)
+# <a name="recordset-scrolling-odbc"></a>Recordset: Scorrimento (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -32,7 +32,7 @@ Questo argomento viene illustrato:
 
 ##  <a name="_core_scrolling_from_one_record_to_another"></a> Lo scorrimento da un Record a un altro
 
-Classe `CRecordset` fornisce il `Move` funzioni membro di uno scorrimento all'interno di un set di record. Queste funzioni sposterà il record corrente dal set di righe. Se è stato implementato il recupero di righe bulk, un `Move` operazione Riposiziona il recordset dalle dimensioni del set di righe. Se non è stato implementato il recupero, una chiamata a di massa di righe un `Move` funzione Riposiziona il recordset dal record di uno ogni volta. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Classe `CRecordset` fornisce il `Move` funzioni membro di uno scorrimento all'interno di un set di record. Queste funzioni sposterà il record corrente dal set di righe. Se è stato implementato il recupero di righe bulk, un `Move` operazione Riposiziona il recordset dalle dimensioni del set di righe. Se non è stato implementato il recupero, una chiamata a di massa di righe un `Move` funzione Riposiziona il recordset dal record di uno ogni volta. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Quando si sposta all'interno di un recordset, non è possibile ignorare i record eliminati. Per altre informazioni, vedere la [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) funzione membro.
@@ -93,7 +93,7 @@ Per altre informazioni sull'esplorazione del recordset, vedere [Recordset: Bookm
 
 ##  <a name="_core_when_scrolling_is_supported"></a> Quando lo scorrimento è supportato
 
-Come, originariamente progettato SQL fornita solo scorrimento in avanti, ma ODBC estende le funzionalità di scorrimento. Il livello di supporto per lo scorrimento disponibile dipende dal driver ODBC l'applicazione funziona con, livello di conformità del driver ODBC API e indica se la libreria di cursori ODBC viene caricata in memoria. Per altre informazioni, vedere [ODBC](../../data/odbc/odbc-basics.md) e [ODBC: libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Come, originariamente progettato SQL fornita solo scorrimento in avanti, ma ODBC estende le funzionalità di scorrimento. Il livello di supporto per lo scorrimento disponibile dipende dal driver ODBC l'applicazione funziona con, livello di conformità del driver ODBC API e indica se la libreria di cursori ODBC viene caricata in memoria. Per altre informazioni, vedere [ODBC](../../data/odbc/odbc-basics.md) e [ODBC: La libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!TIP]
 >  È possibile controllare se viene utilizzata la libreria di cursori. Vedere le *bUseCursorLib* e *dwOptions* parametri [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open).
@@ -106,4 +106,4 @@ Come, originariamente progettato SQL fornita solo scorrimento in avanti, ma ODBC
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
 [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)<br/>
-[Recordset: applicazione di filtri ai record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Recordset: Filtrare i record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

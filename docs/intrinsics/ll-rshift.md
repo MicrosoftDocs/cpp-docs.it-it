@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: 9c486921e41732ef7736ca5b62b44a86010dcf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621872"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041020"
 ---
 # <a name="llrshift"></a>__ll_rshift
 
@@ -35,7 +35,7 @@ __int64 __ll_rshift(
 *Maschera*<br/>
 [in] Valore intero a 64 bit da spostare a destra.
 
-*sillaba nBit*<br/>
+*nBit*<br/>
 [in] Il numero di bit da spostare, modulo 64 in x64 e modulo 32 x86.
 
 ## <a name="return-value"></a>Valore restituito
