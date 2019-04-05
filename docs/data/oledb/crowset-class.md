@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58779456"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032324"
 ---
 # <a name="crowset-class"></a>Classe CRowset
 
@@ -275,14 +275,14 @@ Una classe di funzione di accesso. Il valore predefinito è `CAccessorBase`.
 |[Chiudi](#close)|Rilascia le righe e corrente `IRowset` interfaccia.|
 |[Compare](#compare)|Confronta due segnalibri usando [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Crea un nuovo `CRowset` dell'oggetto e (facoltativamente) lo associa a un `IRowset` interfaccia fornita come parametro.|
-|[Eliminazione](#delete)|Elimina le righe dal set di righe utilizzando [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
+|[Eliminare](#delete)|Elimina le righe dal set di righe utilizzando [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Trova la riga corrispondente successiva dopo il segnalibro specificato.|
 |[GetApproximatePosition](#getapproximateposition)|Restituisce la posizione approssimativa di una riga corrispondente a un segnalibro.|
 |[GetData](#getdata)|Recupera i dati dalla copia del set di righe della riga.|
 |[GetDataHere](#getdatahere)|Recupera i dati dal buffer specificato.|
 |[GetOriginalData](#getoriginaldata)|Recupera i dati recuperati da più di recente o trasmesso all'origine dei dati, ignorando le modifiche in sospeso.|
 |[GetRowStatus](#getrowstatus)|Restituisce lo stato di tutte le righe.|
-|[Inserisci](#insert)|Crea e inserisce una nuova riga utilizzando [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
+|[INS](#insert)|Crea e inserisce una nuova riga utilizzando [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
 |[IsSameRow](#issamerow)|Confronta la riga specificata con la riga corrente.|
 |[MoveFirst](#movefirst)|Riposiziona il percorso per il recupero successivo nella posizione iniziale.|
 |[MoveLast](#movelast)|Passa all'ultimo record.|
@@ -292,8 +292,8 @@ Una classe di funzione di accesso. Il valore predefinito è `CAccessorBase`.
 |[MoveToRatio](#movetoratio)|Recupera le righe a partire da una posizione frazionaria nel set di righe.|
 |[ReleaseRows](#releaserows)|Le chiamate [:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) per rilasciare l'handle di riga corrente.|
 |[SetData](#setdata)|Imposta i valori dei dati in una o più colonne di una riga usando [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
-|[Operazione di annullamento](#undo)|Annulla le modifiche apportate a una riga dall'ultimo recupero o [Update](../../data/oledb/crowset-update.md).|
-|[Aggiornamento](#update)|Consente di trasmettere le modifiche apportate alla riga corrente dall'ultima istruzione fetch o aggiornamento in sospeso.|
+|[Annulla](#undo)|Annulla le modifiche apportate a una riga dall'ultimo recupero o [Update](../../data/oledb/crowset-update.md).|
+|[Aggiorna](#update)|Consente di trasmettere le modifiche apportate alla riga corrente dall'ultima istruzione fetch o aggiornamento in sospeso.|
 |[UpdateAll](#updateall)|Consente di trasmettere le modifiche apportate a tutte le righe dopo l'ultimo recupero o l'aggiornamento in sospeso.|
 
 ## <a name="remarks"></a>Note
@@ -348,10 +348,10 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 #### <a name="parameters"></a>Parametri
 
-*Bookmark1*<br/>
+*Segnalibro1*<br/>
 [in] Il primo segnalibro da confrontare.
 
-*Bookmark2*<br/>
+*Segnalibro2*<br/>
 [in] Il secondo segnalibro da confrontare.
 
 *pComparison*<br/>
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parametri
 
-*bookmark*<br/>
+*segnalibro*<br/>
 [in] Un segnalibro contrassegna la posizione da cui si desidera recuperare i dati.
 
 *lSkip*<br/>
@@ -940,5 +940,5 @@ Un valore HRESULT standard.
 [Esempio DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Esempio multiRead](../../overview/visual-cpp-samples.md)<br/>
 [Attributi multiRead](../../overview/visual-cpp-samples.md)<br/>
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

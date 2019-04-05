@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619631"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029551"
 ---
 # <a name="parameter-attributes"></a>Attributi dei parametri
 
@@ -18,7 +18,7 @@ Gli attributi seguenti si applicano ai parametri di un metodo in una classe o in
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|È possibile definire un attributo personalizzato.|
+|[personalizzati](custom-cpp.md)|È possibile definire un attributo personalizzato.|
 |[defaultvalue](defaultvalue.md)|Consente di specificare un valore predefinito per un parametro facoltativo tipizzato.|
 |[first_is](first-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|
 |[iid_is](iid-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|
@@ -28,15 +28,15 @@ Gli attributi seguenti si applicano ai parametri di un metodo in una classe o in
 |[lcid](lcid.md)|Consente di passare un identificatore delle impostazioni locali a una funzione.|
 |[length_is](length-is.md)|Specifica il numero di elementi della matrice deve essere trasmesso.|
 |[max_is](max-is.md)|Definisce il valore massimo per un indice di matrice valida.|
-|[optional](optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
+|[facoltativi](optional-cpp.md)|Specifica un parametro facoltativo per una funzione membro.|
 |[out](out-cpp.md)|Identifica i parametri dei puntatori restituiti dalla routine chiamata alla routine chiamante (dal server al client).|
 |[range](range-cpp.md)|Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.|
 |[ref](ref-cpp.md)|Identifica un puntatore di riferimento.|
 |[retval](retval.md)|Specifica il parametro che riceve il valore restituito del membro.|
 |[satype](satype.md)|Specifica il tipo di dati di `SAFEARRAY` struttura.|
 |[size_is](size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori con dimensioni, ridimensionati i puntatori ai puntatori a dimensioni e unidimensionali o le matrici multidimensionali.|
-|[unique](unique-cpp.md)|Specifica un puntatore univoco.|
+|[univoco](unique-cpp.md)|Specifica un puntatore univoco.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi per utilizzo](attributes-by-usage.md)
+[Attributi in base all'utilizzo](attributes-by-usage.md)

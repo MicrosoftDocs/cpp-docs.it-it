@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: recupero di massa di record (ODBC)'
+title: 'Recordset: Recupero di record nel blocco (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 55a89a66b36d12e6341b85d7dfa655b299638fcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628202"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027766"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset: recupero di massa di record (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset: Recupero di record nel blocco (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -137,7 +137,7 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 > [!NOTE]
 >  È necessario chiamare il `Close` funzione di membro prima derivata `CRecordset` classe esce dall'ambito. Ciò garantisce che qualsiasi memoria allocata dal framework vengono liberate. È buona norma chiamare sempre in modo esplicito `Close`, indipendentemente dal fatto che è stato implementato il recupero di righe bulk.
 
-Per altre informazioni sui campi di record (RFX), vedere [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md). Per altre informazioni sull'utilizzo di parametri, vedere [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype) e [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Per altre informazioni sui campi di record (RFX), vedere [Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Per altre informazioni sull'utilizzo di parametri, vedere [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype) e [Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 

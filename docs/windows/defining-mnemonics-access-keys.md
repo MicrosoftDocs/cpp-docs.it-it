@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 32c7b121d8c9309d2286158645ee4b6586f1df3b
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c49913597f51ef231073b89d60ad9718b1113f44
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563368"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041484"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>Procedura: Definire l'accesso di controllo e i valori (C++)
 
@@ -156,5 +156,5 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [Gestire i controlli finestra di dialogo](controls-in-dialog-boxes.md)<br/>
-[Procedura: Aggiungere, modificare o eliminare controlli](adding-editing-or-deleting-controls.md)<br/>
+[Procedura: Aggiungere, modificare o eliminare i controlli](adding-editing-or-deleting-controls.md)<br/>
 [Procedura: Controlli di layout](arrangement-of-controls-on-dialog-boxes.md)<br/>

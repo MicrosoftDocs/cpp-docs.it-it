@@ -1,5 +1,5 @@
 ---
-title: 'SQL: esecuzione di chiamate SQL dirette (ODBC)'
+title: 'SQL: Esecuzione di chiamate SQL dirette (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, direct calls from ODBC
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - SQL calls
 - direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-ms.openlocfilehash: 17b3279a4803a61595af64ab18629d6cf69f0f10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd528e7abb713e4b3eb2bd5388a29958a1bb006c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549851"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024981"
 ---
-# <a name="sql-making-direct-sql-calls-odbc"></a>SQL: esecuzione di chiamate SQL dirette (ODBC)
+# <a name="sql-making-direct-sql-calls-odbc"></a>SQL: Esecuzione di chiamate SQL dirette (ODBC)
 
 Questo argomento viene illustrato:
 
@@ -28,7 +28,7 @@ Questo argomento viene illustrato:
 
 ##  <a name="_core_when_to_call_sql_directly"></a> Quando chiamare direttamente SQL
 
-Per creare nuove tabelle, eliminare (Elimina) tabelle, modificare le tabelle esistenti, creare indici ed eseguire altre funzioni SQL che modificano il [origine dati (ODBC)](../../data/odbc/data-source-odbc.md) dello schema, è necessario eseguire un'istruzione SQL direttamente all'origine dati con Database Definition Language (DDL). Quando si usa una procedura guidata per creare un set di record per una tabella (in fase di progettazione), è possibile scegliere quali colonne della tabella per essere rappresentato nel set di record. Ciò non consente le colonne si o un altro utente dell'origine dati aggiunte alla tabella in un secondo momento, dopo la compilazione del programma. Le classi di database non supportano DDL direttamente, ma è comunque possibile scrivere codice per associare una nuova colonna del recordset in modo dinamico in fase di esecuzione. Per informazioni su come effettuare questa associazione, vedere [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+Per creare nuove tabelle, eliminare (Elimina) tabelle, modificare le tabelle esistenti, creare indici ed eseguire altre funzioni SQL che modificano il [origine dati (ODBC)](../../data/odbc/data-source-odbc.md) dello schema, è necessario eseguire un'istruzione SQL direttamente all'origine dati con Database Definition Language (DDL). Quando si usa una procedura guidata per creare un set di record per una tabella (in fase di progettazione), è possibile scegliere quali colonne della tabella per essere rappresentato nel set di record. Ciò non consente le colonne si o un altro utente dell'origine dati aggiunte alla tabella in un secondo momento, dopo la compilazione del programma. Le classi di database non supportano DDL direttamente, ma è comunque possibile scrivere codice per associare una nuova colonna del recordset in modo dinamico in fase di esecuzione. Per informazioni su come effettuare questa associazione, vedere [Recordset: Associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 È possibile utilizzare il sistema DBMS per modificare lo schema o un altro strumento che consente di eseguire operazioni DDL. È anche possibile usare chiamate di funzione ODBC per l'invio di istruzioni SQL, ad esempio chiamare una query predefinita (stored procedure) che non restituisce i record.
 

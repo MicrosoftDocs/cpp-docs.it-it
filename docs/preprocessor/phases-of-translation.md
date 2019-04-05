@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-ms.openlocfilehash: 75fc7f7c768094d90d41840fc47effa8179556fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11e36e06adc4fa95cb9aa607704e72f64c812429
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512984"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036153"
 ---
 # <a name="phases-of-translation"></a>Fasi di conversione
 
@@ -48,13 +48,13 @@ Il file di origine viene suddiviso in spazi vuoti e token di pre-elaborazione. I
 *Pre-elaborazione*<br/>
 Le direttive di pre-elaborazione vengono eseguite e le macro vengono espanse nel file di origine. L'istruzione `#include` richiama la conversione a partire dai precedenti tre passaggi di conversione in ogni testo incluso.
 
-*Mapping di set di caratteri*<br/>
+*Mapping set caratteri*<br/>
 Tutti i membri del set di caratteri e le sequenze di escape vengono convertite negli relativi equivalenti del set di caratteri di esecuzione. Per Microsoft C e C++, i set di caratteri di esecuzione e di origine sono entrambi ASCII.
 
 *Concatenazione di stringhe*<br/>
 Tutti i valori letterali stringa adiacenti e a caratteri "wide" vengono concatenati. `"String " "concatenation"`, ad esempio, diventa `"String concatenation"`.
 
-*Traduzione*<br/>
+*Conversione*<br/>
 Tutti i token vengono analizzati sintatticamente e semanticamente; gli stessi token vengono poi convertiti in codice oggetto.
 
 *Collegamento*<br/>

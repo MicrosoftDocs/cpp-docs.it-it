@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a54770e3c5c2bc3805024b237f9875bded1ab26
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58772384"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030180"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
@@ -138,5 +138,5 @@ Un valore HRESULT standard.
 ## <a name="see-also"></a>Vedere anche
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631722"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037750"
 ---
 # <a name="warning-pragma"></a>Warning (pragma)
 Consente la modifica selettiva del comportamento dei messaggi di avviso del compilatore.
@@ -37,10 +37,10 @@ Sono disponibili i seguenti parametri identificatore-avviso.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Applica il livello specificato agli avvisi specificati. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita.|
 |*default*|Reimposta il comportamento dell'avviso sul valore predefinito. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per altre informazioni, vedere [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*disable*|Non genera i messaggi di avviso specificati.|
-|*Errore*|Segnala gli avvisi specificati come errori.|
+|*Disable*|Non genera i messaggi di avviso specificati.|
+|*errore*|Segnala gli avvisi specificati come errori.|
 |*once*|Visualizza i messaggi specificati solo una volta.|
-|*non visualizzare*|Inserisce lo stato corrente del pragma nello stack, disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che venga ripristinato lo stato del pragma.|
+|*suppress*|Inserisce lo stato corrente del pragma nello stack, disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che venga ripristinato lo stato del pragma.|
 
 Nell'istruzione di codice seguente viene illustrato che un parametro `warning-number-list` può contenere più numeri di avviso e che è possibile specificare più parametri `warning-specifier` nella stessa direttiva pragma.
 

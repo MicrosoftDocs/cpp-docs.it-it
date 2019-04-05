@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563004"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029396"
 ---
 # <a name="resource-files-c"></a>File di risorse (C++)
 
@@ -131,6 +131,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di file di risorse](../windows/working-with-resource-files.md)<br/>
+[Utilizzo di file di risorse](../windows/working-with-resource-files.md)<br/>
 [Identificatori di risorsa (simboli)](../windows/symbols-resource-identifiers.md)<br/>
-[Editor di risorse](../windows/resource-editors.md)<br/>
+[editor di risorse](../windows/resource-editors.md)<br/>

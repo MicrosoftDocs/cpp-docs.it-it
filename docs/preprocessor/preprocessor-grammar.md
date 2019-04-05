@@ -6,50 +6,50 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614188"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032414"
 ---
 # <a name="preprocessor-grammar"></a>Grammatica del preprocessore
 
-*controllo linea*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identificatore* *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identificatore</em>**(** *identificatore*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
+*control-line*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifier</em>**(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence***"** *filename* **"**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
 
 *constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**definita (** *identificatore* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**definite** *identificatore*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined** *identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;qualsiasi altra espressione costante
 
 *condizionale* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Se parti* *elif parti*<sub>opt</sub> *parte else*<sub>opt</sub> *endif inline*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
 
-*Se parti* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Se-line* *testo*
+*if-part* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
 
-*Se-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *espressione costante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identificatore*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identificatore*
+*if-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
 
 *elif parti* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *testo*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parti di elif* *elif-line* *testo*
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
 
 *elif-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *espressione costante*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
 
 *parte else* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Else-line* *testo*
+&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
 *Else-line* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**
@@ -57,7 +57,7 @@ ms.locfileid: "50614188"
 *endif-line* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#endif**
 
-*Digit-sequence* :<br/>
+*digit-sequence* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 

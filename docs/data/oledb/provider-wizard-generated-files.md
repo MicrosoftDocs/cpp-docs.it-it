@@ -4,12 +4,12 @@ ms.date: 10/18/2018
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-ms.openlocfilehash: c93618ebe9d3140864c2c47867ea970777c208b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9a706463326249135a55bc907cb8a664a3ca808
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580934"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037091"
 ---
 # <a name="provider-wizard-generated-files"></a>File del provider generati tramite procedura guidata
 

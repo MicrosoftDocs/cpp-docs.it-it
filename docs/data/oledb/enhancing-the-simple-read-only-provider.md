@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IRowsetLocate class, adding to OLE DB template providers
 - simple read-only poviders [C++]
 ms.assetid: cba0e09f-44c1-41c1-9456-332aa13dc158
-ms.openlocfilehash: 4b06eb77851df0bf0bd0d3ef91a3ea960835ccba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d61f24a9a9abffe836a7f11bd5d1517fddf97fe7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462920"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034076"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Miglioramento di un provider semplice in sola lettura
 

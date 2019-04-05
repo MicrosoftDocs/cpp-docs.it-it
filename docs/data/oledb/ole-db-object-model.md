@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-ms.openlocfilehash: 83e94a1075392bdf730b98f8f10a9751662ec976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 303ad4166f0f1126182956fae9c19f513be7cfb3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486801"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039160"
 ---
 # <a name="ole-db-object-model"></a>Modello a oggetti OLE DB
 
@@ -79,4 +79,4 @@ Le notifiche vengono usate dai gruppi loro condividendo un set di righe (in cui 
 ## <a name="see-also"></a>Vedere anche
 
 [Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)<br/>
-[Panoramica della programmazione con OLE DB](../../data/oledb/ole-db-programming-overview.md)
+[Cenni preliminari sulla programmazione con OLE DB](../../data/oledb/ole-db-programming-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: cfc8d13ead28c0b817d7de015b9c507db152de6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d569758f90b9e55f65ad13517f86dea41d151ca8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508966"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039124"
 ---
 # <a name="makepublic"></a>make_public
 Indica che un tipo nativo deve avere accessibilità pubblica dell'assembly.

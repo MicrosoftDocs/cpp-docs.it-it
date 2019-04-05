@@ -37,12 +37,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: c410efbbd0ce51bcaca2ba43a835bf88e1cdbc54
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a4f98cdfea9ea1e82ec0a3de09e292604a6c199f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419174"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032115"
 ---
 # <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
 
@@ -171,5 +171,5 @@ Visualizzare [IAccessor:: ReleaseAccessor](/previous-versions/windows/desktop/ms
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-ms.openlocfilehash: 0a4528bed4426ce5b611e986a69f4b0b8c750548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7b72ba3bf1bd60324704b774bcedaf5612240f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499099"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028386"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 
@@ -34,11 +34,11 @@ unsigned char __vmx_vmread(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*Campo*|[in] Il campo VMCS da leggere.|
-|*Valore FieldValue*|[in] Leggere un puntatore alla posizione per archiviare il valore del campo VMCS specificato da di `Field` parametro.|
+|*FieldValue*|[in] Leggere un puntatore alla posizione per archiviare il valore del campo VMCS specificato da di `Field` parametro.|
 
 ## <a name="return-value"></a>Valore restituito
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |0|Operazione completata.|
 |1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|

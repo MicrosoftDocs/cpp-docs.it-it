@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 5579258c813850cdb8f29758bb4bd5d87270467f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330281"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035254"
 ---
 # <a name="outdwordstring"></a>__outdwordstring
 

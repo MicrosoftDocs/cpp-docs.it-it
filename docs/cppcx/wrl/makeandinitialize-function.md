@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-ms.openlocfilehash: ba34b1fde546187e823a73a063bce9f69f4e7e89
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 14ae5117194748748ceecf97ac83fc8813bba2d3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784933"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037484"
 ---
 # <a name="makeandinitialize-function"></a>Funzione MakeAndInitialize
 

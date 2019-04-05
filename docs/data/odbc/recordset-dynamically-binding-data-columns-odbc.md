@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: associazione dinamica di colonne di dati (ODBC)'
+title: 'Recordset: Associazione dinamica di colonne di dati (ODBC)'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175665"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035130"
 ---
-# <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: associazione dinamica di colonne di dati (ODBC)
+# <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: Associazione dinamica di colonne di dati (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -26,7 +26,7 @@ Recordset gestiscono le colonne nella tabella di associazione specificate in fas
 - [Come associare le colonne in modo dinamico in fase di esecuzione](#_core_how_to_bind_columns_dynamically).
 
 > [!NOTE]
->  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Le tecniche descritte in genere non sono consigliate se si usa il recupero di righe bulk. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Le tecniche descritte in genere non sono consigliate se si usa il recupero di righe bulk. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Quando è possibile associare le colonne in modo dinamico
 
@@ -92,9 +92,9 @@ Associazione dinamica di aggiunta di colonne in fase di esecuzione sono necessar
 |||
 |-|-|
 |**Colonne della tabella corrente**| (Elenco 1 nella figura) Un elenco delle colonne attualmente presenti nella tabella dell'origine dati. Questo elenco può corrispondere all'elenco delle colonne attualmente associate nel set di record.|
-|**Colonne associate a Recordset**| (Elenco 2 nella figura) Un elenco delle colonne associate nel recordset. Queste colonne già istruzioni RFX di `DoFieldExchange` (funzione).|
-|**Le colonne da associare in modo dinamico**| (Elenco di 3 nella figura) Un elenco di colonne nella tabella ma non nel set di record. Queste sono le colonne da associare in modo dinamico.|
-|**Colonna-Dynamic-Values**| (Elenco 4 nella figura) Un elenco che contiene risorse di archiviazione per i valori recuperati dalle colonne associate in modo dinamico. Elementi di questo elenco corrispondono a quelli nelle colonne-a-Bind-in modo dinamico, uno alla volta.|
+|**Bound-Recordset-Columns**| (Elenco 2 nella figura) Un elenco delle colonne associate nel recordset. Queste colonne già istruzioni RFX di `DoFieldExchange` (funzione).|
+|**Columns-To-Bind-Dynamically**| (Elenco di 3 nella figura) Un elenco di colonne nella tabella ma non nel set di record. Queste sono le colonne da associare in modo dinamico.|
+|**Dynamic-Column-Values**| (Elenco 4 nella figura) Un elenco che contiene risorse di archiviazione per i valori recuperati dalle colonne associate in modo dinamico. Elementi di questo elenco corrispondono a quelli nelle colonne-a-Bind-in modo dinamico, uno alla volta.|
 
 ###  <a name="_core_building_your_lists"></a> Compilazione degli elenchi
 
@@ -140,7 +140,7 @@ Successivamente, impostare i percorsi di archiviazione per le colonne da associa
 
    Nel caso più comune, colonna-Dynamic-Values dispone di elementi di tipo `CString`. Se si usano colonne con tipi di dati diversi, è necessario un elenco che può contenere elementi di una varietà di tipi.
 
-Il risultato di queste procedure è due elenchi principali: colonne-a-Bind-in modo dinamico che contiene i nomi delle colonne e dinamica-valori di colonna che contiene i valori nelle colonne del record corrente.
+Il risultato di queste procedure è due elenchi principali: Colonne-a-Bind-dinamico che contiene i nomi delle colonne e dinamica-valori di colonna che contiene i valori nelle colonne del record corrente.
 
 > [!TIP]
 > Se le nuove colonne non sono tutti dello stesso tipo di dati, è possibile che un altro elenco parallelo contenente gli elementi che definiscono in qualche modo il tipo di ogni elemento corrispondente nell'elenco delle colonne. (È possibile usare i valori AFX_RFX_BOOL AFX_RFX_BYTE, e così via, per questa operazione se si desidera. Queste costanti sono definite in AFXDB. H.) Scegliere un tipo di elenco basato su cui si rappresentano i tipi di dati di colonna.
@@ -171,4 +171,4 @@ Quando il framework chiama `DoFieldExchange` durante la `Open` processo per asso
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: gestione di dati di grandi dimensioni (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[Recordset: Uso degli elementi di dati di grandi dimensioni (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

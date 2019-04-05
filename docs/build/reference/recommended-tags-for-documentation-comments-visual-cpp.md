@@ -2,12 +2,12 @@
 title: Tag consigliati per i commenti della documentazione (commenti relativi alla documentazione di C++)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: adb8440dc07f8f3e193b58be6782859fbb8413e4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827039"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027896"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>Tag consigliati per i commenti relativi alla documentazione
 
@@ -29,7 +29,7 @@ Il compilatore elabora tutti i tag validi per XML. I tag seguenti forniscono le 
 |[\<para>](para-visual-cpp.md)|[\<param>](param-visual-cpp.md)1|[\<paramref>](paramref-visual-cpp.md)1|
 |[\<permission>](permission-visual-cpp.md)1|[\<remarks>](remarks-visual-cpp.md)|[\<returns>](returns-visual-cpp.md)|
 |[\<see>](see-visual-cpp.md)1|[\<seealso>](seealso-visual-cpp.md)1|[\<summary>](summary-visual-cpp.md)|
-|[\<value>](value-visual-cpp.md)|||
+|[\<valore>](value-visual-cpp.md)|||
 
 1. Il compilatore verifica la sintassi.
 

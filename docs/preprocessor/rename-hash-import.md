@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-ms.openlocfilehash: 15673a8b9ebaf298ae1b2b45c9a76a1691e681b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fbed04f040a47b5b389f40eeb15254da4a7940b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514192"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037067"
 ---
 # <a name="rename-import"></a>Rinomina (\#importazione)
 
@@ -60,5 +60,5 @@ Questo perché il nome `GetMyParent` ricorre solo nel file di intestazione della
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)
+[Attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Direttiva #import](../preprocessor/hash-import-directive-cpp.md)

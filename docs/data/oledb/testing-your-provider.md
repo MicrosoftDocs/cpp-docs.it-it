@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: 9bb42af69a204c88e6068444642275b59ea5bf5c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d7a3adad546834e2bdc80a695f4c3bf2259dc0ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518294"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038317"
 ---
 # <a name="testing-your-provider"></a>Test del provider
 
@@ -25,4 +25,4 @@ Prima di rilasciare un provider, è necessario eseguire i test seguenti, nell'or
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Utilizzo dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

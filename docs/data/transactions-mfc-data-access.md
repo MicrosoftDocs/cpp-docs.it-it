@@ -6,12 +6,12 @@ helpviewer_keywords:
 - transactions [C++]
 - databases [C++], transactions
 ms.assetid: f80afbfe-1517-4fec-8870-9ffc70a58b05
-ms.openlocfilehash: d986250205f9d45c83d88811527e9561b3258b3d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3dc5b9319a8745ddb446ae7dbe895bfcd446c37
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552556"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037607"
 ---
 # <a name="transactions--mfc-data-access"></a>Transazioni (accesso ai dati MFC)
 
@@ -37,4 +37,4 @@ Una transazione distribuita è una transazione che aggiorna i dati distribuiti, 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Accesso ai dati (MFC/ATL) di programmazione](../data/data-access-programming-mfc-atl.md)
+[Programmazione dell'accesso ai dati (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512673"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037646"
 ---
 # <a name="snapshot"></a>Snapshot
 
@@ -37,7 +37,7 @@ Supporto dello snapshot si basa sulla libreria di cursori ODBC, che fornisce i c
 Gli snapshot sono disponibili solo se la libreria di cursori ODBC è stata caricata quando il `CDatabase` costruzione dell'oggetto o il driver ODBC in uso supporta i cursori statici.
 
 > [!NOTE]
->  Per alcuni driver ODBC, ovvero i cursori statici, gli snapshot potrebbero non essere aggiornabili. Controllare la documentazione del driver per i tipi di cursore supportati e tipi di concorrenza supportati. Per garantire snapshot aggiornabili, assicurarsi che si tenta di caricare la libreria di cursori in memoria quando crei un `CDatabase` oggetto. Per altre informazioni, vedere [ODBC: libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+>  Per alcuni driver ODBC, ovvero i cursori statici, gli snapshot potrebbero non essere aggiornabili. Controllare la documentazione del driver per i tipi di cursore supportati e tipi di concorrenza supportati. Per garantire snapshot aggiornabili, assicurarsi che si tenta di caricare la libreria di cursori in memoria quando crei un `CDatabase` oggetto. Per altre informazioni, vedere [ODBC: La libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 >  Se si desidera utilizzare snapshot sia dynaset, è necessario basare tali criteri su due diversi `CDatabase` oggetti, ovvero due diverse connessioni.

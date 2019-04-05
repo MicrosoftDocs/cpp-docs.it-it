@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: 8c35625efa9ddc4cf5de3900c6e3e37047b2aa10
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332153"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030102"
 ---
 # <a name="shiftright128"></a>__shiftright128
 
@@ -31,13 +31,13 @@ unsigned __int64 __shiftright128(
 
 #### <a name="parameters"></a>Parametri
 
-*ParteBassa*<br/>
+*LowPart*<br/>
 [in] 64 bit meno significativi della quantità di 128 bit da spostare.
 
 *HighPart*<br/>
 [in] I 64 bit alti della quantità di 128 bit da spostare.
 
-*MAIUSC*<br/>
+*Shift*<br/>
 [in] Il numero di bit da spostare.
 
 ## <a name="return-value"></a>Valore restituito

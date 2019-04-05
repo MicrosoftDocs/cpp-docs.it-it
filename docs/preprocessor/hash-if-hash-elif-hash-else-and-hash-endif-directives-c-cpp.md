@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520422"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028091"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Direttive #if, #elif, #else e #endif (C/C++)
 
@@ -37,20 +37,20 @@ Il **#if** direttiva, con la **#elif**, **#else**, e **#endif** direttive, contr
 *condizionale* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Se parti elif-part*<sub>opt</sub> *parte else*<sub>opt</sub> *endif-line*
 
-*Se parti* :<br/>
+*if-part* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*testo a riga singola if*
 
-*Se-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***espressione costante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***identificatore*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***identificatore*
+*if-line* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if**  *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef**  *identifier*
 
 *elif parti* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*testo a riga singola elif*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*testo a riga singola elif elif parti*
 
 *elif-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***espressione costante*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
 
 *parte else* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*testo riga else*
@@ -65,7 +65,7 @@ Ciascuna **#if** direttiva in un file di origine deve essere corrisposte da una 
 
 Il **#if**, **#elif**, **#else**, e **#endif** direttive possono essere annidate in parti di testo da altro **#if**direttive. Ogni annidati **#else**, **#elif**, o **#endif** direttiva a cui appartiene il precedente più vicina **#if** direttiva.
 
-Tutte le direttive di compilazione condizionale, ad esempio **#if** e **#ifdef**, deve essere associata a chiusura **#endif** direttive prima della fine del file; in caso contrario, un errore messaggio viene generato. Quando le direttive di compilazione condizionale sono contenute in file di inclusione, devono soddisfare le stesse condizioni: non devono esistere direttive di compilazione condizionale non corrispondenti alla fine del file di inclusione.
+Tutte le direttive di compilazione condizionale, ad esempio **#if** e **#ifdef**, deve essere associata a chiusura **#endif** direttive prima della fine del file; in caso contrario, un errore messaggio viene generato. Quando le direttive di compilazione condizionale sono contenute in file di inclusione, devono soddisfare le stesse condizioni: Non deve essere presente alcun direttive di compilazione condizionale senza corrispondenza alla fine del file di inclusione.
 
 Sostituzione della macro viene eseguita all'interno della parte della riga di comando che segue un' **#elif** comando, in modo che una chiamata della macro può essere usata nel *espressione costante*.
 
@@ -97,7 +97,7 @@ L'operatore del preprocessore **definiti** può essere usato nelle espressioni c
 
 defined( `identifier` )
 
-defined `identifier`
+definizione `identifier`
 
 Questa espressione costante è considerata true (diverso da zero) se il *identificatore* è attualmente definito; in caso contrario, la condizione è false (0). Un identificatore definito come testo vuoto viene considerato definito. Il **definite** direttiva può essere utilizzata un **#if** e un **#elif** direttiva, ma non altrove.
 
@@ -174,7 +174,7 @@ Il codice precedente verifica se la costante simbolica `EXAMPLE_H` è definita. 
 
 ## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 versione 15.3 e versioni successive**: determina se un'intestazione della libreria è disponibile per l'inclusione:
+**Visual Studio 2017 versione 15.3 e successive**:  Determina se un'intestazione della libreria è disponibile per l'inclusione:
 
 ```cpp
 #ifdef __has_include

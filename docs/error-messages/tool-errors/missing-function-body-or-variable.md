@@ -5,12 +5,12 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 88470272192520e9aa0582fd06ff36a0542803ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c287d804df3222475d7cf32c6eb025f642dfb913
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647122"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031858"
 ---
 # <a name="missing-function-body-or-variable"></a>Codice di funzione o variabile mancante
 

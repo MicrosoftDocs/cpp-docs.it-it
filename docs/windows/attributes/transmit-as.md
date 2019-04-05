@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 546b4c4b32837b46c48eafbe12e991bb6c1630ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573254"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032102"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -25,7 +25,7 @@ Indica al compilatore di associare un tipo presentato che consentono di modifica
 
 ### <a name="parameters"></a>Parametri
 
-*type*<br/>
+*tipo*<br/>
 Specifica il tipo di dati che viene trasmesso tra client e server.
 
 ## <a name="remarks"></a>Note
@@ -72,7 +72,7 @@ struct _TREE_NODE_TYPE * right;
 |-|-|
 |**Si applica a**|**typedef**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -81,4 +81,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[esportazione](export.md)

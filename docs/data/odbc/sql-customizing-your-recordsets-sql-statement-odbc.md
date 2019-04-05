@@ -1,5 +1,5 @@
 ---
-title: "SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)"
+title: 'SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, SQL statements
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-ms.openlocfilehash: 84ce18ccbf3cc59dd9c94826366595d2f128784f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eabaab019ee94b0c5617573c534d920ec710e9b2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459926"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036195"
 ---
-# <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: personalizzazione dell'istruzione SQL del recordset (ODBC)
+# <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)
 
 Questo argomento viene illustrato:
 
@@ -56,7 +56,7 @@ Per sostituire il valore predefinito **selezionate** istruzione, passare una str
 > [!NOTE]
 >  Se si usano le stringhe letterali in filtri (o in altre parti dell'istruzione SQL), potrebbe essere necessario "offerta" (racchiudere tra parentesi delimitatori specificati) tali stringhe con un prefisso letterale specifici del DBMS e suffissi (o più caratteri).
 
-Potrebbe anche verificarsi speciali requisiti sintattici per operazioni quali gli outer join, a seconda del sistema DBMS. Usare funzioni ODBC per ottenere queste informazioni dal driver per il sistema DBMS. Ad esempio, chiamare `::SQLGetTypeInfo` per un particolare tipo di dati, ad esempio `SQL_VARCHAR`, per richiedere i caratteri:: SQLGetTypeInfo e SQL_VARCHAR. Se si sta scrivendo codice indipendente dal database, vedere [appendice c: SQL grammatica](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) nel [riferimento per programmatori ODBC](/sql/odbc/reference/odbc-programmer-s-reference) per informazioni dettagliate sulla sintassi.
+Potrebbe anche verificarsi speciali requisiti sintattici per operazioni quali gli outer join, a seconda del sistema DBMS. Usare funzioni ODBC per ottenere queste informazioni dal driver per il sistema DBMS. Ad esempio, chiamare `::SQLGetTypeInfo` per un particolare tipo di dati, ad esempio `SQL_VARCHAR`, per richiedere i caratteri:: SQLGetTypeInfo e SQL_VARCHAR. Se si sta scrivendo codice indipendente dal database, vedere [appendice c: Grammatica SQL](/sql/odbc/reference/appendixes/appendix-c-sql-grammar) nella [riferimento per programmatori ODBC](/sql/odbc/reference/odbc-programmer-s-reference) per informazioni dettagliate sulla sintassi.
 
 Un oggetto recordset costruisce l'istruzione SQL che viene usato per selezionare i record a meno che non si passa un'istruzione SQL personalizzata. Questa operazione dipende principalmente dal valore passato nel *lpszSQL* parametro del `Open` funzione membro.
 
@@ -94,7 +94,7 @@ Nella tabella seguente mostra le diverse possibilità per i *lpszSQL* parametro 
 
 \* `m_nFields` deve essere minore o uguale al numero di colonne specificato nella **seleziona** istruzione. Il tipo di dati di ogni colonna specificata nella **seleziona** istruzione deve essere lo stesso come il tipo di dati della colonna di output corrispondente RFX.
 
-### <a name="case-1---lpszsql--null"></a>Caso 1 lpszSQL = NULL
+### <a name="case-1---lpszsql--null"></a>Case 1   lpszSQL = NULL
 
 La selezione di recordset dipende da che cosa `GetDefaultSQL` restituisce quando `CRecordset::Open` lo chiama. Le stringhe possibili vengono descritti i casi 2 a 5.
 
@@ -144,11 +144,11 @@ Specificare l'elenco di colonne manualmente piuttosto che basarsi su RFX a crear
 
    È possibile, ad esempio includere le nuove colonne a che un cliente dell'applicazione aggiunti alle tabelle del database dopo l'applicazione è stata distribuita. È necessario aggiungere questi membri dati di campo aggiuntivi, che non sono noti al momento che è stata dichiarata la classe con una procedura guidata.
 
-   L'elenco di colonne deve corrispondere i nomi delle colonne e i tipi nello stesso ordine in cui sono elencati `DoFieldExchange`, seguita dai nomi delle colonne associate manualmente. Per altre informazioni, vedere [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+   L'elenco di colonne deve corrispondere i nomi delle colonne e i tipi nello stesso ordine in cui sono elencati `DoFieldExchange`, seguita dai nomi delle colonne associate manualmente. Per altre informazioni, vedere [Recordset: Associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 - Si vuole unire le tabelle specificando più tabelle nel **FROM** clausola.
 
-   Per informazioni ed esempi, vedere [Recordset: esecuzione di un Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
+   Per informazioni ed esempi, vedere [Recordset: Esecuzione di un Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md).
 
 ### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>Caso 4 lpszSQL = SELECT / FROM e WHERE e/o ORDER BY
 
@@ -158,9 +158,9 @@ Specificare l'elenco di colonne manualmente piuttosto che basarsi su RFX a crear
 
 Se è necessario chiamare una query predefinita (ad esempio una stored procedure in un database Microsoft SQL Server), è necessario scrivere una **CHIAMARE** istruzione nella stringa di cui si passa a *lpszSQL*. Le procedure guidate non supportano la dichiarazione di una classe recordset per la chiamata di una query predefinita. Non tutte le query predefinite restituiscono i record.
 
-Se una query predefinita non restituisce i record, è possibile usare la `CDatabase` funzione membro `ExecuteSQL` direttamente. Per una query predefinita che restituiscono record, è necessario scrivere manualmente anche le chiamate RFX in `DoFieldExchange` per tutte le colonne restituite. Le chiamate RFX devono essere nello stesso ordine e restituire gli stessi tipi, la query predefinita. Per altre informazioni, vedere [Recordset: dichiarazione di una classe per una Query già definita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+Se una query predefinita non restituisce i record, è possibile usare la `CDatabase` funzione membro `ExecuteSQL` direttamente. Per una query predefinita che restituiscono record, è necessario scrivere manualmente anche le chiamate RFX in `DoFieldExchange` per tutte le colonne restituite. Le chiamate RFX devono essere nello stesso ordine e restituire gli stessi tipi, la query predefinita. Per altre informazioni, vedere [Recordset: Dichiarazione di una classe per una Query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[SQL: tipi di dati SQL e C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
-[SQL: esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL: SQL e tipi di dati C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
+[SQL: Esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

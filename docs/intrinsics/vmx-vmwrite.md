@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-ms.openlocfilehash: e368a1f6be51d37cdfe7ef352fca69e987fed62d
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e52b1f181f00ce013a111d1a5a62abeff544e20a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328565"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037510"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
@@ -34,7 +34,7 @@ unsigned char __vmx_vmwrite(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*Campo*|[in] Il campo VMCS da scrivere.|
-|*Valore FieldValue*|[in] Valore da scrivere nel campo VMCS.|
+|*FieldValue*|[in] Valore da scrivere nel campo VMCS.|
 
 ## <a name="return-value"></a>Valore restituito
 

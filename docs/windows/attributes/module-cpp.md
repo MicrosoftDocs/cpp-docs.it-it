@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893522"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040580"
 ---
 # <a name="module-c"></a>modulo (C++)
 
@@ -25,7 +25,7 @@ Definisce il blocco di libreria nel file IDL.
 
 ### <a name="parameters"></a>Parametri
 
-*type*<br/>
+*tipo*<br/>
 (Facoltativo) Può essere uno dei seguenti:
 
 - `dll` Aggiunge funzioni e classi che consentono alla DLL risultante di funzionare come un server COM in-process. Rappresenta il valore predefinito.
@@ -48,7 +48,7 @@ L'ID univoco per la libreria. Se si omette questo parametro, viene generato auto
 *lcid*<br/>
 Il parametro di localizzazione. Per altre informazioni, vedere [lcid](/windows/desktop/Midl/lcid) .
 
-*control*<br/>
+*controllo*<br/>
 (Facoltativo) Specifica che tutte le coclassi nella libreria sono controlli.
 
 *helpstring*<br/>
@@ -72,7 +72,7 @@ Specifica la libreria dei tipi.
 *restricted*<br/>
 (Facoltativo) Impossibile chiamare i membri della raccolta in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](/windows/desktop/Midl/restricted) .
 
-*custom*<br/>
+*personalizzati*<br/>
 (Facoltativo) Uno o più attributi; come avviene per i [personalizzato](custom-cpp.md) attributo. Il primo parametro per *personalizzato* è il GUID dell'attributo. Ad esempio:
 
 ```
@@ -95,7 +95,7 @@ In un file IDL è consentito un solo blocco di libreria. Più voci di modulo nel
 
 Se questo attributo viene usato in un progetto che usa ATL, il comportamento dell'attributo cambia. Oltre al comportamento precedente, l'attributo inserisce anche un oggetto globale (chiamato `_AtlModule`) del tipo corretto e codice di supporto aggiuntivo. Se l'attributo è autonomo, inserisce una classe derivata dal tipo di modulo corretto. Se l'attributo è applicato a una classe, aggiunge una classe base del tipo di modulo corretto. Il tipo corretto è determinato dal valore della *tipo* parametro:
 
-- `type` = **dll**
+- `type` = **DLL**
 
    [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) si usa come classe base e punti di ingresso standard della DLL richiesti per un server COM. Questi punti di ingresso sono [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)e [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
@@ -103,7 +103,7 @@ Se questo attributo viene usato in un progetto che usa ATL, il comportamento del
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
-- `type` = **service**
+- `type` = **Servizio**
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) si usa come classe base e punto di ingresso standard dell'eseguibile [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
@@ -154,7 +154,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -166,7 +166,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 [Attributi autonomi](stand-alone-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[library](/windows/desktop/Midl/library)<br/>
+[libreria](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

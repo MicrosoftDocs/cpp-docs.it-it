@@ -43,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0a867f80f3be685b3c45c8645d6441732acf5851
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330983"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040238"
 ---
 # <a name="carrayrowset-class"></a>Classe CArrayRowset
 
@@ -85,7 +85,7 @@ Il tipo di classe della funzione di accesso che si desidera che il set di righe 
 
 |||
 |-|-|
-|[operatore&#91;&#93;](#operator)|Accede a un elemento del set di righe.|
+|[Operator&#91;&#93;](#operator)|Accede a un elemento del set di righe.|
 
 ### <a name="data-members"></a>Membri di dati
 
@@ -93,7 +93,7 @@ Il tipo di classe della funzione di accesso che si desidera che il set di righe 
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|Il numero di righe già lette.|
 
-## <a name="carrayrowset"></a> CArrayRowset:: CArrayRowset
+## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
 
 Crea un nuovo oggetto `CArrayRowset`.
 
@@ -118,7 +118,7 @@ Legge l'intero rowset in memoria, creandone un'immagine o uno snapshot.
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset:: operator
+## <a name="operator"></a> CArrayRowset::operator
 
 Fornisce una sintassi simile a matrice per l'accesso a una riga nel set di righe.
 
@@ -144,7 +144,7 @@ Il contenuto della riga richiesta.
 
 Se *nRow* supera il numero di righe nel set di righe, viene generata un'eccezione.
 
-## <a name="nrowsread"></a> CArrayRowset:: M_nrowsread
+## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
 
 Contiene il numero di righe nel set di righe che sono già stati letti.
 
@@ -156,6 +156,6 @@ ULONG m_nRowsRead;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CRowset](../../data/oledb/crowset-class.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: 940e1e3a957b44f0aaa225f7fc9e107926ba879f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5d62ec1526aff595c14a53e9eca43a7a3118c8fa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330502"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034524"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 
@@ -34,7 +34,7 @@ unsigned __int64 __ull_rshift(
 *Maschera*<br/>
 [in] Valore intero a 64 bit da spostare a destra.
 
-*sillaba nBit*<br/>
+*nBit*<br/>
 [in] Il numero di bit da spostare, modulo 32 su x86 e modulo 64 in x64.
 
 ## <a name="return-value"></a>Valore restituito

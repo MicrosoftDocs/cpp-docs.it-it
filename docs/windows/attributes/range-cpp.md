@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: b75915b901f55ce7ef8d295531ab5148c6535c93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644970"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029538"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,10 +25,10 @@ Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui v
 
 ### <a name="parameters"></a>Parametri
 
-*low*<br/>
+*Bassa*<br/>
 Il valore minimo dell'intervallo.
 
-*high*<br/>
+*Elevata*<br/>
 Il valore massimo dell'intervallo.
 
 ## <a name="remarks"></a>Note
@@ -59,7 +59,7 @@ __interface ICustom {
 |-|-|
 |**Si applica a**|Metodo di interfaccia, parametro di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -67,6 +67,6 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di metodo](method-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
-[Attributi di membro dati](data-member-attributes.md)
+[Attributi del metodo](method-attributes.md)<br/>
+[Attributi dei parametri](parameter-attributes.md)<br/>
+[Attributi del membro dati](data-member-attributes.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ifndef directive (#ifndef)
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-ms.openlocfilehash: 418b19e844d56fa2f33cf91a1b072e9add771eb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7a6a1604df03f0607f33e42880270cbdcd62e8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643794"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027230"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>Direttive #ifdef e #ifndef (C/C++)
 Il **#ifdef** e **#ifndef** direttive eseguono la stessa attività come il `#if` direttiva quando viene usato con **definito**( *identificatore* ).

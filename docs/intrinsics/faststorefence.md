@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __faststorefence intrinsic
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
-ms.openlocfilehash: 8a90dd61e0017788a91d8ff2eccbae9d12143619
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0c8027f443a475b03521920e2e036e7ed4eaafb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650645"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036695"
 ---
 # <a name="faststorefence"></a>__faststorefence
 

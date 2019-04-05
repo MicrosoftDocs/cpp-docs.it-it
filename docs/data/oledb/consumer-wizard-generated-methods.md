@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: d525c0e82d7fbc8bf0f83217eaa2cf9a1bd2f17b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 60ca0af25a0556c4a3d42d91ba3b0c52daa5f530
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331854"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034241"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metodi generati mediante la Creazione guidata consumer
 
@@ -161,4 +161,4 @@ La procedura guidata definisce i metodi `OpenDataSource` e `CloseDataSource`; `O
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Creazione di un consumer OLE DB mediante procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

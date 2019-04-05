@@ -5,12 +5,12 @@ helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b56ada13a0c597866d538991ed1e83078924ac9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631062"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029583"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Attributi Typedef, Enum, Union e Struct
 
@@ -20,9 +20,9 @@ Gli attributi seguenti si applicano per la [typedef](../../cpp/aliases-and-typed
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|[case](case-cpp.md)|Utilizzato con il [switch_type](switch-type.md) dell'attributo un **union**.|
-|[custom](custom-cpp.md)|È possibile definire un attributo personalizzato.|
-|[export](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
+|[maiuscole e minuscole](case-cpp.md)|Utilizzato con il [switch_type](switch-type.md) dell'attributo un **union**.|
+|[personalizzati](custom-cpp.md)|È possibile definire un attributo personalizzato.|
+|[esportazione](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
 |[first_is](first-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|
 |[helpcontext](helpcontext.md)|Specifica un ID di contesto che consente all'utente di visualizzare informazioni sull'elemento corrente nel file della Guida.|
 |[helpfile](helpfile.md)|Imposta il nome del file della Guida per una libreria dei tipi.|
@@ -33,15 +33,15 @@ Gli attributi seguenti si applicano per la [typedef](../../cpp/aliases-and-typed
 |[ref](ref-cpp.md)|Identifica un puntatore di riferimento.|
 |[switch_is](switch-is.md)|Specifica l'espressione o un identificatore che agisce come l'unione discriminante che consente di selezionare il membro dell'unione.|
 |[switch_type](switch-type.md)|Identifica il tipo della variabile utilizzata come l'unione discriminante.|
-|[unique](unique-cpp.md)|Specifica un puntatore univoco.|
+|[univoco](unique-cpp.md)|Specifica un puntatore univoco.|
 |[wire_marshal](wire-marshal.md)|Specifica un tipo di dati che verrà usato per la trasmissione anziché un tipo di dati specifici dell'applicazione.|
 
 ### <a name="enum"></a>enum
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|È possibile definire un attributo personalizzato.|
-|[export](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
+|[personalizzati](custom-cpp.md)|È possibile definire un attributo personalizzato.|
+|[esportazione](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
 |[uuid](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o interfaccia.|
 |[v1_enum](v1-enum.md)|Indica che il tipo enumerato specificato deve essere trasmessi come un'entità a 32 bit, anziché il valore predefinito di 16 bit.|
 
@@ -49,14 +49,14 @@ Gli attributi seguenti si applicano per la [typedef](../../cpp/aliases-and-typed
 
 |Attributo|Descrizione|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|È possibile definire un attributo personalizzato.|
-|[export](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
+|[personalizzati](custom-cpp.md)|È possibile definire un attributo personalizzato.|
+|[esportazione](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
 |[first_is](first-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|
 |[last_is](last-is.md)|Specifica l'indice dell'ultimo elemento di matrice deve essere trasmesso.|
 |[length_is](length-is.md)|Specifica il numero di elementi della matrice deve essere trasmesso.|
 |[max_is](max-is.md)|Definisce il valore massimo per un indice di matrice valida.|
 |[size_is](size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori con dimensioni, ridimensionati i puntatori ai puntatori a dimensioni e unidimensionali o le matrici multidimensionali.|
-|[unique](unique-cpp.md)|Specifica un puntatore univoco.|
+|[univoco](unique-cpp.md)|Specifica un puntatore univoco.|
 |[uuid](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o interfaccia.|
 
 ### <a name="nonencapsulated-union"></a>Unione nonencapsulated
@@ -71,12 +71,12 @@ Gli attributi seguenti si applicano per la [typedef](../../cpp/aliases-and-typed
 |Attributo|Descrizione|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|Indica che la classe supporta l'aggregazione.|
-|[aggregates](aggregates.md)|Indica che un controllo viene aggregata la classe di destinazione.|
+|[aggregati](aggregates.md)|Indica che un controllo viene aggregata la classe di destinazione.|
 |[appobject](appobject.md)|Identifica la coclasse come un oggetto applicazione che è associato a un'applicazione completa .exe e indica che le funzioni e le proprietà della coclasse sono disponibili a livello globale in questa libreria dei tipi.|
 |[coclass](coclass.md)|Crea un controllo ActiveX.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Aggiunge una voce di interfaccia a una mappa COM.|
-|[control](control.md)|Specifica che il tipo definito dall'utente è un controllo.|
-|[custom](custom-cpp.md)|È possibile definire un attributo personalizzato.|
+|[controllo](control.md)|Specifica che il tipo definito dall'utente è un controllo.|
+|[personalizzati](custom-cpp.md)|È possibile definire un attributo personalizzato.|
 |[db_column](db-column.md)|Associa una colonna specificata al set di righe.|
 |[db_command](db-command.md)|Crea un comando OLE DB.|
 |[db_param](db-param.md)|Consente di associare la variabile di membro specificato con un parametro di input o output e delimita la variabile.|
@@ -86,7 +86,7 @@ Gli attributi seguenti si applicano per la [typedef](../../cpp/aliases-and-typed
 |[defaultvtable](defaultvtable.md)|Definisce un'interfaccia come interfaccia predefinita vtable per un controllo.|
 |[event_receiver](event-receiver.md)|Crea un ricevitore di eventi.|
 |[event_source](event-source.md)|Crea un'origine evento.|
-|[export](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
+|[esportazione](export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|
 |[first_is](first-is.md)|Specifica l'indice del primo elemento della matrice deve essere trasmesso.|
 |[hidden](hidden.md)|Indica che l'elemento esiste ma non deve essere visualizzato in un browser orientate all'utente.|
 |[implements_category](implements-category.md)|Specifica le categorie di componenti implementate per la classe.|
@@ -95,13 +95,13 @@ Gli attributi seguenti si applicano per la [typedef](../../cpp/aliases-and-typed
 |[max_is](max-is.md)|Definisce il valore massimo per un indice di matrice valida.|
 |[requires_category](requires-category.md)|Specifica le categorie di componenti necessari della classe di destinazione.|
 |[size_is](size-is.md)|Specifica le dimensioni della memoria allocata per i puntatori con dimensioni, ridimensionati i puntatori ai puntatori a dimensioni e unidimensionali o le matrici multidimensionali.|
-|[source](source-cpp.md)|In una classe specifica le interfacce di origine dell'oggetto COM per i punti di connessione. In una proprietà o metodo, indica che il membro restituisce un oggetto o una variante che rappresenta l'origine degli eventi.|
+|[origine](source-cpp.md)|In una classe specifica le interfacce di origine dell'oggetto COM per i punti di connessione. In una proprietà o metodo, indica che il membro restituisce un oggetto o una variante che rappresenta l'origine degli eventi.|
 |[threading](threading-cpp.md)|Specifica il modello di threading per un oggetto COM.|
-|[unique](unique-cpp.md)|Specifica un puntatore univoco.|
+|[univoco](unique-cpp.md)|Specifica un puntatore univoco.|
 |[uuid](uuid-cpp-attributes.md)|Specifica l'ID univoco per una classe o interfaccia.|
 |[version](version-cpp.md)|Identifica una particolare versione tra più versioni di una classe.|
 |[vi_progid](vi-progid.md)|Specifica una forma indipendente dalla versione di ProgID.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi per utilizzo](attributes-by-usage.md)
+[Attributi in base all'utilizzo](attributes-by-usage.md)

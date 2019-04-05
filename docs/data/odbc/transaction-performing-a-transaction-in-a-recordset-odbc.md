@@ -1,17 +1,17 @@
 ---
-title: 'Transazione: esecuzione di una transazione in un recordset (ODBC)'
+title: 'Transazione: Esecuzione di una transazione in un Recordset (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: df7c28ebfbb68f3e0163368247b90ff69058726d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659587"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035241"
 ---
-# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transazione: esecuzione di una transazione in un recordset (ODBC)
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transazione: Esecuzione di una transazione in un Recordset (ODBC)
 
 Questo argomento illustra come eseguire una transazione in un recordset.
 
@@ -22,7 +22,7 @@ Questo argomento illustra come eseguire una transazione in un recordset.
 
 1. Chiamare il `CDatabase` dell'oggetto `BeginTrans` funzione membro.
 
-1. Se non è stato implementato il recupero di righe bulk, chiamare il `AddNew/Update`, `Edit/Update`, e `Delete` funzioni membro di uno o più oggetti di recordset dello stesso database tutte le volte in base alle esigenze. Per altre informazioni, vedere [Recordset: aggiunta, aggiornamento e l'eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Se è stato implementato il recupero di righe bulk, è necessario scrivere funzioni personalizzate per aggiornare l'origine dati.
+1. Se non è stato implementato il recupero di righe bulk, chiamare il `AddNew/Update`, `Edit/Update`, e `Delete` funzioni membro di uno o più oggetti di recordset dello stesso database tutte le volte in base alle esigenze. Per altre informazioni, vedere [Recordset: Aggiunta, aggiornamento ed eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Se è stato implementato il recupero di righe bulk, è necessario scrivere funzioni personalizzate per aggiornare l'origine dati.
 
 1. Infine, chiamare il `CDatabase` dell'oggetto `CommitTrans` funzione membro. Se si verifica un errore in uno degli aggiornamenti o si decide di annullare le modifiche, chiamare il `Rollback` funzione membro.
 
@@ -84,6 +84,6 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ## <a name="see-also"></a>Vedere anche
 
 [Transazione (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[Transazione: effetti delle transazioni sugli aggiornamenti (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
-[Classe CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
+[Transazione: Effetti delle transazioni sugli aggiornamenti (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
+[CDatabase (classe)](../../mfc/reference/cdatabase-class.md)<br/>
 [Classe CRecordset](../../mfc/reference/crecordset-class.md)

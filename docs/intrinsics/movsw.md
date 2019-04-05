@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: be80a7f50a62146ffcd6d271def6d254da5a88b2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329865"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038265"
 ---
 # <a name="movsw"></a>__movsw
 

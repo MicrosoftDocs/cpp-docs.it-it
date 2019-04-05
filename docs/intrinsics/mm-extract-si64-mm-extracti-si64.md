@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-ms.openlocfilehash: 21e2b23ca4ac3b98c44ea7152badc5c79f386c09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e77ca5589ed50a4199921603afec1d9888c6cca5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630100"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040212"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
 
@@ -44,10 +44,10 @@ __m128i _mm_extracti_si64(
 *Descrittore*<br/>
 [in] Un campo di 128 bit che descrive il campo di bit per estrarre.
 
-*Lunghezza*<br/>
+*Length*<br/>
 [in] Valore intero che specifica la lunghezza del campo da estrarre.
 
-*Index*<br/>
+*Indice*<br/>
 [in] Un numero intero che specifica l'indice del campo da estrarre
 
 ## <a name="return-value"></a>Valore restituito
@@ -110,7 +110,7 @@ result3 = 0x30eca86
 
 **Fine sezione specifica Microsoft**
 
-Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.
+Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.
 
 ## <a name="see-also"></a>Vedere anche
 

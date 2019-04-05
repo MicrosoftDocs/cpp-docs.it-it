@@ -4,12 +4,12 @@ ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB provider templates, unsupported data types
 ms.assetid: f495e50f-530a-4fab-ab54-e0c359785845
-ms.openlocfilehash: 44cdde2bad24d21adbc728c90ecd173717c02b04
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: e60f6cd4f7dca1ed3e176cabefc42f69946436a4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265191"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033839"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>Conversione di dati non supportati dal provider
 
@@ -19,4 +19,4 @@ Se si implementa un'interfaccia simile alla `IRowsetChange` che richiede la conv
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Utilizzo dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

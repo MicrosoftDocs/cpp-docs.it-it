@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: 1902ba61417be457b4c296b513e1632bfdd8cec6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9853b38675abfa0a94a319ac752eb2ef61a48e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492729"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031739"
 ---
 # <a name="propput"></a>propput
 
@@ -39,7 +39,7 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio dell'uso dei
 |-|-|
 |**Si applica a**|Metodo|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|`propget`, `propputref`|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -47,6 +47,6 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi di metodo](method-attributes.md)<br/>
+[Attributi del metodo](method-attributes.md)<br/>
 [propget](propget.md)<br/>
 [propputref](propputref.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2201
 ms.assetid: ed927659-6e9c-447d-9963-19969ae1e957
-ms.openlocfilehash: b011c5027af6c0561010c6d11d3efd07234549f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b490bc32a9da0a35a726371e3b17480fcd8b0df2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621599"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037198"
 ---
 # <a name="compiler-error-c2201"></a>Errore del compilatore C2201
 

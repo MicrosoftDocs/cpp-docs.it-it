@@ -5,18 +5,18 @@ helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-ms.openlocfilehash: 1f1361baafa5bb3dc884adcc464a3571aee04dd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478637"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033005"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Ruolo del programmatore nell'uso di una visualizzazione di record (accesso ai dati MFC)
 
 La tabella seguente illustra le operazioni più comuni che vengono eseguite dal programmatore per lavorare con una visualizzazione di record e le operazioni che vengono eseguite dal framework.
 
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Uso di una visualizzazione di record: programmatore e framework
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Uso di una visualizzazione di Record: Programmatore e Framework
 
 |Programmatore|Framework|
 |---------|-------------------|
@@ -29,7 +29,7 @@ La tabella seguente illustra le operazioni più comuni che vengono eseguite dal 
 |[Facoltativo] Scrittura di codice per eventuali convalide particolari.||
 |[Facoltativo] Scrittura di codice per aggiungere o eliminare record.||
 
-La programmazione basata su form è solo una delle modalità di uso dei database. Per informazioni sulle applicazioni tramite altre interfacce utente, o alcuna interfaccia utente, vedere [MFC: utilizzo di classi di Database con documenti e visualizzazioni](../data/mfc-using-database-classes-with-documents-and-views.md) e [MFC: utilizzo di classi di Database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md). Per approcci alternativi per visualizzare i record di database, vedere le classi [CListView](../mfc/reference/clistview-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md).
+La programmazione basata su form è solo una delle modalità di uso dei database. Per informazioni sulle applicazioni tramite altre interfacce utente, o alcuna interfaccia utente, vedere [MFC: Uso di classi di Database con documenti e visualizzazioni](../data/mfc-using-database-classes-with-documents-and-views.md) e [MFC: Utilizzo di classi di Database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md). Per approcci alternativi per visualizzare i record di database, vedere le classi [CListView](../mfc/reference/clistview-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md).
 
 ## <a name="see-also"></a>Vedere anche
 

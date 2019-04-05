@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], about OLE DB provider templates
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-ms.openlocfilehash: c88e03f509da3c97c270e308dc6dd44e3b44aeb7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 793aa08630ec92f99c33c2a4f3688e78630a6c58
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413784"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027480"
 ---
 # <a name="ole-db-provider-templates-c"></a>Modelli provider OLE DB (C++)
 

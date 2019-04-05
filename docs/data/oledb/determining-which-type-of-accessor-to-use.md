@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: 4fc0679c0596e1a79edfb91ddb5dba07be380382
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98234852d0577e581135980d6b8e525aeead5dc2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563241"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031868"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Determinazione del tipo di funzione di accesso da utilizzare
 
@@ -33,4 +33,4 @@ Nella tabella seguente elenca i tipi di funzioni di accesso disponibile nei mode
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)
+[Utilizzo delle funzioni di accesso](../../data/oledb/using-accessors.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - outdword instruction
 - __outdword intrinsic
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
-ms.openlocfilehash: dd2192842e2122ebb65dcfba9f1f68ec5fc468d5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 236c4812f62cb092876b400051248425ee1b13e7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331230"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034231"
 ---
 # <a name="outdword"></a>__outdword
 

@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: architettura (ODBC)'
+title: 'Recordset: Architettura (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, data members
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651191"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039650"
 ---
-# <a name="recordset-architecture-odbc"></a>Recordset: architettura (ODBC)
+# <a name="recordset-architecture-odbc"></a>Recordset: Architettura (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -33,7 +33,7 @@ In questo argomento vengono descritti i membri di dati che costituiscono l'archi
 - [Uso di membri dati m_nFields e m_nParams](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se viene implementato il recupero di righe bulk, l'architettura è simile. Per comprendere le differenze, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se viene implementato il recupero di righe bulk, l'architettura è simile. Per comprendere le differenze, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_a_sample_class"></a> Classe di esempio
 
@@ -83,16 +83,16 @@ Con la definizione di membri dati di parametro, indicare al framework sui parame
 >  MFC non esegue alcuna operazione se stesso con i parametri, in particolare, non viene eseguita una sostituzione di testo. Bensì indica ODBC dove ottenere il parametro. ODBC recupera i dati ed esegue la parametrizzazione necessaria.
 
 > [!NOTE]
->  L'ordine dei parametri è importante. Per informazioni su questa e altre informazioni sui parametri, vedere [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+>  L'ordine dei parametri è importante. Per informazioni su questa e altre informazioni sui parametri, vedere [Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ##  <a name="_core_using_m_nfields_and_m_nparams"></a> Utilizzo di m_nFields e m_nParams
 
 Quando una procedura guidata scrive un costruttore della classe, inizializza anche il [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) membro dei dati, che specifica il numero della [membri dati di campo](#_core_field_data_members) nella classe. Se si aggiungono [parametri](#_core_parameter_data_members) alla classe, è necessario aggiungere anche un'inizializzazione per il [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) membro dei dati, che specifica il numero di membri dati di parametro. Il framework utilizza questi valori per lavorare con i membri dati.
 
-Per altre informazioni ed esempi, vedere [Record Field Exchange: utilizzo di RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Per altre informazioni ed esempi, vedere [Record Field Exchange: Utilizzo di RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Recordset: Dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)

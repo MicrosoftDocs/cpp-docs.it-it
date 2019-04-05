@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ODBC drivers, list of
 - drivers, ODBC
 ms.assetid: 4e12c832-39fe-44f7-9230-5c8d37203f11
-ms.openlocfilehash: 4c53f8763ae9c60c79bea768bb1011ca9db5744d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 479c30717d645d511e06651e36f73bb1188f0d21
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663268"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039310"
 ---
 # <a name="odbc-driver-list"></a>Elenco dei driver ODBC
 
@@ -23,7 +23,7 @@ Visual C++ fornisce i driver ODBC per i database seguenti:
 
 - Microsoft Excel
 
-- file dBASE
+- dBASE
 
 - Paradox
 

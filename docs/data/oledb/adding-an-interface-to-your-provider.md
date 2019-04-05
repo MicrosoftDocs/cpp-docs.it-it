@@ -4,12 +4,12 @@ ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: 5659078641439744c1f68cbb399c19b9b58bd0bb
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: c0452ca74509b65de3787af93bff41b3cb399c99
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265139"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033872"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Aggiunta di un'interfaccia al provider
 
@@ -43,4 +43,4 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+[Utilizzo dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-ms.openlocfilehash: 469621eb828691b5475b453e8be0b8473b3594a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17e3e5c91a58894b25fc6b2a72f7d0056fa88119
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586342"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036537"
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 
@@ -36,7 +36,7 @@ unsigned char __vmx_vmclear(
 
 ## <a name="return-value"></a>Valore restituito
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |0|Operazione completata.|
 |1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|

@@ -1,5 +1,5 @@
 ---
-title: 'Trasferimento di campi di record: funzionamento di RFX'
+title: 'Record Field Exchange: Funzionamento di RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record editing [C++], using RFX
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-ms.openlocfilehash: efc08736f1b61bc634b819fc62545d886134cd35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534706"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032677"
 ---
-# <a name="record-field-exchange-how-rfx-works"></a>Trasferimento di campi di record: funzionamento di RFX
+# <a name="record-field-exchange-how-rfx-works"></a>Record Field Exchange: Funzionamento di RFX
 
 In questo argomento viene illustrato il processo RFX. Si tratta di un'avanzata copertura argomento:
 
@@ -26,7 +26,7 @@ In questo argomento viene illustrato il processo RFX. Si tratta di un'avanzata c
 - [Il processo di RFX](#_core_the_record_field_exchange_process)
 
 > [!NOTE]
->  Questo argomento si applica alle classi derivate da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, viene implementata exchange di massa di campi di record (RFX di massa). RFX di massa è simile a RFX. Per comprendere le differenze, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Questo argomento si applica alle classi derivate da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, viene implementata exchange di massa di campi di record (RFX di massa). RFX di massa è simile a RFX. Per comprendere le differenze, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_rfx_and_the_recordset"></a> RFX e Recordset
 
@@ -34,15 +34,15 @@ Membri di dati campo dell'oggetto recordset, complessivamente, costituiscono un 
 
 Il framework esegue il backup del buffer di modifica in momenti diversi, in modo che il relativo contenuto può ripristinare se necessario. RFX esegue il backup del buffer di modifica prima di aggiungere un nuovo record e prima di modificare un record esistente. Il buffer di modifica in alcuni casi, ad esempio, viene ripristinato dopo un' `Update` chiamata seguente `AddNew`. Buffer di modifica non è ripristinato se si annulla un buffer di modifica appena modificata, ad esempio, lo spostamento in un altro record prima di chiamare `Update`.
 
-Oltre a scambiare dati tra l'origine dati e i membri dati di campo del recordset, RFX gestisce i parametri di associazione. Quando il recordset è aperto, qualsiasi membro dati di parametro è associati in base all'ordine dei "?" segnaposto nell'istruzione SQL che `CRecordset::Open` costrutti. Per altre informazioni, vedere [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Oltre a scambiare dati tra l'origine dati e i membri dati di campo del recordset, RFX gestisce i parametri di associazione. Quando il recordset è aperto, qualsiasi membro dati di parametro è associati in base all'ordine dei "?" segnaposto nell'istruzione SQL che `CRecordset::Open` costrutti. Per altre informazioni, vedere [Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 Eseguire l'override della classe dell'oggetto recordset di `DoFieldExchange` esegue tutte le operazioni, lo spostamento dei dati in entrambe le direzioni. Come dialog data exchange (DDX), RFX necessita di informazioni sui membri dati della classe. La procedura guidata fornisce le informazioni necessarie per la scrittura di un'implementazione specifica di recordset di `DoFieldExchange` , in base ai dati del campo membro nomi e tipi di dati specificato con la procedura guidata.
 
 ##  <a name="_core_the_record_field_exchange_process"></a> Processo di scambio di campi di record
 
-In questa sezione viene descritta la sequenza di eventi RFX come un oggetto recordset è aperto e l'aggiunta, aggiornamento ed eliminazione di record. Nella tabella [sequenza delle RFX operazioni durante il Recordset apertura](#_core_sequence_of_rfx_operations_during_recordset_open) e la tabella [sequenza delle operazioni di RFX durante lo scorrimento](#_core_sequence_of_rfx_operations_during_scrolling) in questo argomento mostrano il processo come processi RFX un `Move` comando il Recordset e come gestione di un aggiornamento. Durante questi processi [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) viene chiamato per eseguire diverse operazioni. Il `m_nOperation` membro dati del [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) oggetto determina quale operazione è richiesto. Può risultare utile leggere [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) prima di leggere questa documentazione.
+In questa sezione viene descritta la sequenza di eventi RFX come un oggetto recordset è aperto e l'aggiunta, aggiornamento ed eliminazione di record. Nella tabella [sequenza delle RFX operazioni durante il Recordset apertura](#_core_sequence_of_rfx_operations_during_recordset_open) e la tabella [sequenza delle operazioni di RFX durante lo scorrimento](#_core_sequence_of_rfx_operations_during_scrolling) in questo argomento mostrano il processo come processi RFX un `Move` comando il Recordset e come gestione di un aggiornamento. Durante questi processi [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) viene chiamato per eseguire diverse operazioni. Il `m_nOperation` membro dati del [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) oggetto determina quale operazione è richiesto. Può risultare utile leggere [Recordset: Selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [Recordset: Modo in cui i record di aggiornamento di recordset (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) prima di leggere questa documentazione.
 
-###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX: Associazione iniziale di colonne e parametri
+###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX: Associazione iniziale di parametri e colonne
 
 Si verificano le seguenti attività RFX, nell'ordine indicato, quando si chiama un oggetto recordset [aperto](../../mfc/reference/crecordset-class.md#open) funzione membro:
 
@@ -68,7 +68,7 @@ Nella tabella seguente viene illustrata la sequenza di operazioni RFX quando si 
 
 Recordset usano esecuzione preparata ODBC per consentire la ripetizione rapida della query con la stessa istruzione SQL. Per altre informazioni sull'esecuzione preparata, vedere il SDK di ODBC *di riferimento per programmatori* in MSDN Library.
 
-###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: lo scorrimento
+###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: Scorrimento
 
 Quando si passa da un record a un altro, il framework chiama `DoFieldExchange` per sostituire i valori precedentemente memorizzati nei membri di dati di campo con i valori per il nuovo record.
 
@@ -82,7 +82,7 @@ Nella tabella seguente viene illustrata la sequenza di operazioni RFX quando l'u
 |||2. ODBC non lo spostamento e inserisce i dati.|
 ||3. Correzione dei dati di C++.||
 
-###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX: Aggiunta di nuovi record e modifica di record esistenti
+###  <a name="_mfc_rfx.3a_.adding_new_records_and_editing_existing_records"></a> RFX: Aggiunta di nuovi record e modifica di record esistente
 
 Se si aggiunge un nuovo record, il set di record funziona come un buffer di modifica per ottenere il contenuto del nuovo record. Come con l'aggiunta di record, record di modifica comporta la modifica dei valori dei membri dati di campo del recordset. Dal punto di vista RFX, la sequenza è come segue:
 

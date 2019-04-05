@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3484
 ms.assetid: 2fe847fa-f6ee-4978-bc1d-b6dc6ae906ac
-ms.openlocfilehash: fd8909b664f739afa1ab1208be0984b8f410154d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4405eb81911b1081d19d25ba779d24bee8f6d37
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468640"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039978"
 ---
 # <a name="compiler-error-c3484"></a>Errore del compilatore C3484
 

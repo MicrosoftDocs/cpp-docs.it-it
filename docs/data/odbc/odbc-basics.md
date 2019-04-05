@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591724"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033242"
 ---
 # <a name="odbc-basics"></a>Nozioni fondamentali su ODBC
 
@@ -25,7 +25,7 @@ Questo argomento vengono fornite le nozioni di base di Open Database Connectivit
 
 - [È necessario ridistribuire con le applicazioni dei componenti ODBC](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-È anche possibile leggere l'argomento correlato [ODBC: libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+È anche possibile leggere l'argomento correlato [ODBC: La libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 > Origini dati ODBC sono accessibili tramite le classi ODBC MFC, come descritto in questo argomento, o tramite le classi MFC oggetto DAO (Data Access).
@@ -39,11 +39,11 @@ ODBC è il database di per Microsoft WOSA Windows Open servizi architettura (), 
 
 Di seguito sono i componenti di ODBC:
 
-- API ODBC
+- ODBC API
 
    Chiama una libreria di funzione, un set di codici di errore e uno standard [SQL](../../data/odbc/sql.md) sintassi per l'accesso ai dati nei DBMS.
 
-- Gestione Driver ODBC
+- ODBC Driver Manager
 
    Una libreria a collegamento dinamico (file Odbc32.dll) che consente di caricare i driver di database ODBC per conto di un'applicazione. Questa DLL è trasparente all'applicazione.
 

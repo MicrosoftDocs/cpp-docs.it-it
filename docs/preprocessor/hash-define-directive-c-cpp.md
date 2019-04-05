@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: dec555de64a3ebd166bdff5558957f09e1c2755e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653752"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039506"
 ---
 # <a name="define-directive-cc"></a>Direttiva #define (C/C++)
 
@@ -23,9 +23,9 @@ Il **#define** consente di creare un *macro*, ovvero l'associazione di un identi
 
 ## <a name="syntax"></a>Sintassi
 
-`#define` *Identificatore* *token-string*<sub>opt</sub>
+`#define` *identifier* *token-string*<sub>opt</sub>
 
-`#define` *Identificatore* `(` *identifier*<sub>opt</sub> `,` *...*  `,` *identifier*<sub>opt</sub> `)` *token-string*<sub>opt</sub>
+`#define` *identifier* `(` *identifier*<sub>opt</sub>`,` *...* `,` *identifier*<sub>opt</sub>`)` *token-string*<sub>opt</sub>
 
 ## <a name="remarks"></a>Note
 

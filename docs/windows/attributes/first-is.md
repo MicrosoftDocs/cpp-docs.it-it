@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: fcabad8d6c512a84e44f050cd5b34d985d687636
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512815"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033083"
 ---
 # <a name="firstis"></a>first_is
 
@@ -25,7 +25,7 @@ Specifica l'indice del primo elemento della matrice deve essere trasmesso.
 
 ### <a name="parameters"></a>Parametri
 
-*Espressione*<br/>
+*espressione*<br/>
 Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.
 
 ## <a name="remarks"></a>Note
@@ -64,7 +64,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 |-|-|
 |**Si applica a**|Nel campo **struct** oppure **union**, parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|Nessuna|
+|**Attributi obbligatori**|nessuno|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -73,7 +73,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi dei parametri](parameter-attributes.md)<br/>
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>
 [length_is](length-is.md)<br/>

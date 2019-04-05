@@ -8,12 +8,12 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 155a7e4de6272f13d12ab2a64cba190a184f62cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588487"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040199"
 ---
 # <a name="record-views--mfc-data-access"></a>Visualizzazioni di record (accesso ai dati MFC)
 
@@ -37,17 +37,17 @@ Il materiale fornito in questi argomenti è relativo sia alle classi basate su O
 
 Gli argomenti trattati includono:
 
-- [Funzionalità delle classi di visualizzazione di Record](../data/features-of-record-view-classes-mfc-data-access.md)
+- [Funzionalità delle classi di visualizzazione di record](../data/features-of-record-view-classes-mfc-data-access.md)
 
-- [Scambio di dati per le visualizzazioni di Record](../data/data-exchange-for-record-views-mfc-data-access.md)
+- [Scambio di dati per le visualizzazioni di record](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [Ruolo del programmatore nell'uso di una visualizzazione di Record](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [Ruolo del programmatore nell'uso di una visualizzazione di record](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
-- [Progettazione e creazione di una visualizzazione di Record](../data/designing-and-creating-a-record-view-mfc-data-access.md)
+- [Progettazione e creazione di una visualizzazione di record](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
-- [Uso di una visualizzazione di Record](../data/using-a-record-view-mfc-data-access.md)
+- [Uso di una visualizzazione di record](../data/using-a-record-view-mfc-data-access.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Accesso ai dati (MFC/ATL) di programmazione](../data/data-access-programming-mfc-atl.md)<br/>
+[Programmazione dell'accesso ai dati (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [Elenco dei driver ODBC](../data/odbc/odbc-driver-list.md)

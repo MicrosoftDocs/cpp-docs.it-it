@@ -5,12 +5,12 @@ helpviewer_keywords:
 - standalone attributes
 - attributes [C++/CLI], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-ms.openlocfilehash: 1183d2b171a25b3b2d1aef14c19f81be65effc6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7dd1f35add3b23dbd81e32a1600481eec79fe7d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640824"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033058"
 ---
 # <a name="stand-alone-attributes"></a>Attributi autonomi
 
@@ -21,12 +21,12 @@ Un attributo autonomo non agisce su una parola chiave C++, ma è più simile a u
 |Attributo|Descrizione|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Genera la stringa specificata, senza i caratteri virgoletta, nel file di intestazione generato.|
-|[custom](custom-cpp.md)|È possibile definire un attributo personalizzato.|
+|[personalizzati](custom-cpp.md)|È possibile definire un attributo personalizzato.|
 |[db_command](db-command.md)|Crea un comando OLE DB.|
 |[emitidl](emitidl.md)|Determina se tutti gli attributi IDL successivi verranno elaborati e inseriti nel file con estensione IDL generato.|
 |[idl_module](idl-module.md)|Specifica un punto di ingresso in una DLL.|
 |[idl_quote](idl-quote.md)|Consente di usare costrutti IDL che non sono supportati nella versione corrente di Visual C++ e chiedere di pass-through per il file con estensione IDL generato.|
-|[import](import.md)|Specifica un altro file con estensione idl o ODL. h che contiene le definizioni che si desidera fare riferimento dal file con estensione idl principale.|
+|[importazione](import.md)|Specifica un altro file con estensione idl o ODL. h che contiene le definizioni che si desidera fare riferimento dal file con estensione idl principale.|
 |[importidl](importidl.md)|Inserisce il file con estensione idl specificato nel file con estensione IDL generato|
 |[importlib](importlib.md)|Rende i tipi già compilati in un'altra libreria dei tipi disponibili per la libreria dei tipi da creare.|
 |[include](include-cpp.md)|Specifica uno o più file di intestazione da includere nel file IDL generato.|
@@ -38,4 +38,4 @@ Un attributo autonomo non agisce su una parola chiave C++, ma è più simile a u
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi per utilizzo](attributes-by-usage.md)
+[Attributi in base all'utilizzo](attributes-by-usage.md)

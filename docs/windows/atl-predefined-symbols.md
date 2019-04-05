@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 2abbfb83f6d9b09a1c5dcc2afe1c48a6d2dff79a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6e876fe27bd57194513f637fda90845ca68c59ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562874"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033930"
 ---
 # <a name="atl-predefined-symbols"></a>Simboli predefiniti di ATL
 
@@ -37,6 +37,6 @@ ATL
 
 ## <a name="see-also"></a>Vedere anche
 
-[ID simbolo predefiniti](../windows/predefined-symbol-ids.md)<br/>
+[ID di simbolo già definiti](../windows/predefined-symbol-ids.md)<br/>
 [Simboli predefiniti di MFC](../windows/mfc-predefined-symbols.md)<br/>
-[Simboli predefiniti di Win32](../windows/win32-predefined-symbols.md)<br/>
+[Simboli già definiti di Win32](../windows/win32-predefined-symbols.md)<br/>

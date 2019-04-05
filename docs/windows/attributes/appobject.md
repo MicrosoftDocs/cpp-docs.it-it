@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 269c5bd3b51e2cc65fbb9c1c7766613595f8b547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8219c8fdd1b1df93f92fc6c1d0324a2475d3384b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486411"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034683"
 ---
 # <a name="appobject"></a>appobject
 

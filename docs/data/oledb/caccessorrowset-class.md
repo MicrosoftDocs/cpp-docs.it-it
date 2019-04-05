@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: dd7156575f551af1643dd3d1f8238ee1e3fe86f4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420154"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033904"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -67,7 +67,7 @@ Una classe di set di righe.
 
 |||
 |-|-|
-|[Bind](#bind)|Consente di creare associazioni (utilizzato quando `bBind` viene specificato come **false** nelle [CCommand::](../../data/oledb/ccommand-open.md)).|
+|[Eseguire l'associazione](#bind)|Consente di creare associazioni (utilizzato quando `bBind` viene specificato come **false** nelle [CCommand::](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Costruttore.|
 |[Chiudi](#close)|Chiude il set di righe e le funzioni di accesso.|
 |[FreeRecordMemory](#freerecordmemory)|Libera tutte le colonne nel record corrente che devono essere liberate.|
@@ -156,5 +156,5 @@ Per altre informazioni, vedere [IColumnsInfo:: GetColumnInfo](/previous-versions
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

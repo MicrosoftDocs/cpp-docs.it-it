@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 141c2f48b2069410b14f969171f2b1c185a0506e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669027"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033534"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementazione di un consumer semplice
 
@@ -198,4 +198,4 @@ Per altre informazioni sui segnalibri, vedere [mediante segnalibri](../../data/o
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di un consumer OLE DB tramite la procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[Creazione di un consumer OLE DB mediante procedura guidata](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

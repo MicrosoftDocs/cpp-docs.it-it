@@ -6,12 +6,12 @@ helpviewer_keywords:
 - record views, navigation
 - navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
-ms.openlocfilehash: 86e98cd8b29b0056966f6f201589ded3347c9779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88c76d31ae542d35476473888ad6282e3693405f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450661"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029524"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>Supporto dello spostamento in una visualizzazione di record (accesso ai dati MFC)
 

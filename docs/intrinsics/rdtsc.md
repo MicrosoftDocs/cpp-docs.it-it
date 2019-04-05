@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 5f058eaf6587b74f5a75044416d23ac6b64fb415
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f30be3340ae1be237bb2f8a008a8cb60c7351f0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582065"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036838"
 ---
 # <a name="rdtsc"></a>__rdtsc
 

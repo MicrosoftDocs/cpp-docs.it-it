@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _InterlockedAddLargeStatistic intrinsic
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-ms.openlocfilehash: 88ada0a906b777ab8ac676ddfe0a5166e906999d
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627472"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033414"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
@@ -35,7 +35,7 @@ long _InterlockedAddLargeStatistic(
 *Addendo*<br/>
 [in, out] Puntatore al primo operando per l'operazione di aggiunta. Il valore a cui viene sostituito dal risultato dell'addizione.
 
-*Valore*<br/>
+*Value*<br/>
 [in] Il secondo operando; valore da aggiungere al primo operando.
 
 ## <a name="return-value"></a>Valore restituito

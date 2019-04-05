@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: aggiornamento dei record (ODBC)'
+title: 'Recordset: Aggiornamento dei record (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510006"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034482"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset: aggiornamento dei record (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>Recordset: Aggiornamento dei record (ODBC)
 
 Questo argomento si applica alle classi ODBC MFC.
 
@@ -25,7 +25,7 @@ Oltre alla loro capacità di selezionare i record da un'origine dati, recordset,
 >  Il codice SQL in cui il `CRecordset` è basato l'oggetto può influire sulla updateability del recordset. Ad esempio, se la stringa SQL contiene un join o un **GROUP BY** clausola, MFC l'aggiornabilità su FALSE.
 
 > [!NOTE]
->  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se si usa il recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Questo argomento viene illustrato:
 
@@ -35,7 +35,7 @@ Questo argomento viene illustrato:
 
 [Recordset: La modalità dei metodi AddNew, Edit e Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) descrive le azioni di queste funzioni dal punto di vista del set di record.
 
-[Recordset: Ulteriori su aggiornamenti (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) completa la sequenza di aggiornamento di recordset attraverso la spiegazione effetti delle transazioni sugli aggiornamenti, influenza gli aggiornamenti in corso la chiusura di un recordset o lo scorrimento e interazione con gli aggiornamenti di altri utenti.
+[Recordset: Altre su aggiornamenti (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) completa la sequenza di aggiornamento di recordset per spiegare in che modo delle transazioni sugli aggiornamenti, influenza gli aggiornamenti in corso la chiusura di un recordset o lo scorrimento e interazione con gli aggiornamenti di altri utenti.
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> Ruolo del programmatore nell'aggiornamento di Recordset
 
@@ -73,4 +73,4 @@ Quando si chiama [AddNew](../../mfc/reference/crecordset-class.md#addnew) oppure
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: funzionamento dei metodi AddNew, Edit e Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Recordset: La modalità dei metodi AddNew, Edit e Delete di lavoro (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

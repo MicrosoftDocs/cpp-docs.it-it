@@ -10,12 +10,12 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 63971ba381394bcaf905d614496511b7aa0d01f3
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0b19ff0d1c709616868d47c172ff4cf8c6931b82
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563316"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036049"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identificatori di risorsa (simboli) (C++)
 
@@ -48,6 +48,6 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Uso di file di risorse](../windows/working-with-resource-files.md)<br/>
+[Utilizzo di file di risorse](../windows/working-with-resource-files.md)<br/>
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
-[Editor di risorse](../windows/resource-editors.md)<br/>
+[editor di risorse](../windows/resource-editors.md)<br/>

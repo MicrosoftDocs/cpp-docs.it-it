@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 7bc5d5763881b862487fa97e02da02d98bcd017d
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: dc5a823951e07af96efceec52d2aa23552c2d002
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562949"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029486"
 ---
 # <a name="dialog-editor-c"></a>Editor finestre (C++)
 
@@ -126,7 +126,7 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[Editor di risorse](../windows/resource-editors.md)<br/>
+[editor di risorse](../windows/resource-editors.md)<br/>
 [Procedura: Creare una finestra di dialogo](../windows/creating-a-new-dialog-box.md)<br/>
 [Finestra di dialogo](../windows/controls-in-dialog-boxes.md)<br/>
 <!--
