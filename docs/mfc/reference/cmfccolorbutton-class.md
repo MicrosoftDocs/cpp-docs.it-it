@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780002"
 ---
 # <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
@@ -162,7 +162,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Un valore RGB che specifica il colore di predefinito del pulsante automatico.
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] Specifica se il pulsante automatico è abilitato o disabilitato.
 
 ### <a name="remarks"></a>Note
@@ -186,7 +186,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Specifica se il [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) si apre la finestra di dialogo o la finestra di dialogo colore di sistema quando l'utente fa clic sul pulsante.
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] Specifica se il pulsante "altro" è abilitato o disabilitato.
 
 ### <a name="remarks"></a>Note
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*color*<br/>
+*colore*<br/>
 [in] Un valore RGB.
 
 ### <a name="remarks"></a>Note
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametri
 
-*color*<br/>
+*colore*<br/>
 [in] Il valore del colore RGB.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*color*<br/>
+*colore*<br/>
 [in] Colore selezionato dall'utente.
 
 ### <a name="remarks"></a>Note
@@ -474,13 +474,13 @@ Il `UpdateColor` funzione Cambia colore del pulsante attualmente selezionato e i
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCButton](../../mfc/reference/cmfcbutton-class.md)<br/>
 [Classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Classe CPalette](../../mfc/reference/cpalette-class.md)<br/>
-[Classe CArray](../../mfc/reference/carray-class.md)<br/>
+[CPalette (classe)](../../mfc/reference/cpalette-class.md)<br/>
+[CArray (classe)](../../mfc/reference/carray-class.md)<br/>
 [Classe CList](../../mfc/reference/clist-class.md)<br/>
 [CString](../../atl-mfc-shared/reference/cstringt-class.md)
