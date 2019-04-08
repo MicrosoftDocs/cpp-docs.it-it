@@ -18,7 +18,7 @@ ms.locfileid: "57817377"
 Procedure guidate dell'applicazione di Visual C++ non creano progetti verificabili.
 
 > [!IMPORTANT]
-> Deprecato di Visual Studio 2015 e Visual Studio 2017 non supporta il **/clr: pure** e **/CLR: safe** la creazione di progetti verificabile. Se è necessario codice verificabile, è consigliabile che si tradurre il codice in c#.
+> Deprecato di Visual Studio 2015 e Visual Studio 2017 non supporta il **/clr: pure** e **/CLR: safe** la creazione di progetti verificabile. Se è necessario codice verificabile, è consigliabile che si tradurre il codice in C#.
 
 Tuttavia, se si usa una versione precedente del set di strumenti del compilatore Visual C++ che supporta **/clr: pure** e **/CLR: safe**, progetti possono essere convertiti per essere verificabile. Questo argomento descrive come impostare le proprietà del progetto e modificare i file di origine per trasformare i progetti Visual C++ per creare applicazioni verificabili.
 

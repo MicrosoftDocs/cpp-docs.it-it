@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente crea un componente utilizzando il linguaggio c#. Si noti che il vincolo specifica che è possibile creare istanze del tipo generico solo con un tipo valore.
+L'esempio seguente crea un componente utilizzando il linguaggio C#. Si noti che il vincolo specifica che è possibile creare istanze del tipo generico solo con un tipo valore.
 
 ```
 // C3225_b.cs
@@ -54,7 +54,7 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Esempio
 
-Questo esempio viene utilizzato il linguaggio c#-componente creato e viola il vincolo che può essere solo MyList creata un'istanza con un tipo di valore diverso da <xref:System.Nullable>. L'esempio seguente genera l'errore C3225.
+Questo esempio viene utilizzato il linguaggio C#-componente creato e viola il vincolo che può essere solo MyList creata un'istanza con un tipo di valore diverso da <xref:System.Nullable>. L'esempio seguente genera l'errore C3225.
 
 ```
 // C3225_c.cpp

@@ -11,7 +11,7 @@ ms.locfileid: "58328415"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Riferimenti al linguaggio Visual C++ (C++/CX)
 
-C + c++ /CX è un set di estensioni del linguaggio C++ che consentono la creazione di App di Windows e componenti Windows Runtime in un linguaggio più vicino possibile a moderno C++. Usare C + + c++ /CX per scrivere app di Windows e componenti in codice nativo che interagiscano facilmente con Visual c#, Visual Basic e JavaScript e altri linguaggi che supportano il Runtime di Windows. In rari casi che richiedono l'accesso diretto alle interfacce COM non elaborate, o codice non eccezionale, è possibile usare la [libreria modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).
+C + c++ /CX è un set di estensioni del linguaggio C++ che consentono la creazione di App di Windows e componenti Windows Runtime in un linguaggio più vicino possibile a moderno C++. Usare C + + c++ /CX per scrivere app di Windows e componenti in codice nativo che interagiscano facilmente con Visual C#, Visual Basic e JavaScript e altri linguaggi che supportano il Runtime di Windows. In rari casi che richiedono l'accesso diretto alle interfacce COM non elaborate, o codice non eccezionale, è possibile usare la [libreria modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
 > **[C + + / WinRT](/windows/uwp/cpp-and-winrt-apis/index) è l'alternativa consigliata per C + + c++ /CX**. È una nuova, standard C++ 17 proiezione del linguaggio for Windows Runtime APIs, disponibile in Windows 10 SDK più recente dalla versione 1803 poi. C + + / WinRT è implementata interamente nel file di intestazione e progettato per fornire un accesso all'API Windows moderna.

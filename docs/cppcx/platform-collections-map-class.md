@@ -262,7 +262,7 @@ Oggetto [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections
 
 ## <a name="net-framework-equivalent"></a>Equivalente .NET Framework
 
-Le app di Windows Runtime che usano c# o Visual Basic il progetto IMap\<K, V > come IDictionary\<K, V >.
+Le app di Windows Runtime che usano C# o Visual Basic il progetto IMap\<K, V > come IDictionary\<K, V >.
 
 ## <a name="remove"></a>  Metodo Map:: Remove
 

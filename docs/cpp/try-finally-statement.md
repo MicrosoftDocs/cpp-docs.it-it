@@ -72,7 +72,7 @@ Si supponga ad esempio che una serie di chiamate di funzione colleghi la funzion
 Ordine di terminazione esecuzione del gestore
 
 > [!NOTE]
-> Il comportamento di try-finally è diverso da alcuni altri linguaggi che supportano l'utilizzo di **infine**, ad esempio c#.  Un unico **try** potrebbe essere, ma non entrambi, dei **finally** e **except**.  Se entrambi devono essere utilizzati insieme, un'istruzione try-except deve racchiudere l'istruzione try-finally interna.  Sono diverse anche le regole che specificano quando viene eseguito ciascun blocco.
+> Il comportamento di try-finally è diverso da alcuni altri linguaggi che supportano l'utilizzo di **infine**, ad esempio C#.  Un unico **try** potrebbe essere, ma non entrambi, dei **finally** e **except**.  Se entrambi devono essere utilizzati insieme, un'istruzione try-except deve racchiudere l'istruzione try-finally interna.  Sono diverse anche le regole che specificano quando viene eseguito ciascun blocco.
 
 Per garantire la compatibilità con versioni precedenti **try**, **finally**, e **Leave** sono sinonimi per **try**, **_ infine**, e **Leave** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
 

@@ -469,7 +469,7 @@ AMP C++ include una libreria grafica progettata per la programmazione grafica ac
 
 ## <a name="universal-windows-platform-uwp-apps"></a>App UWP (Universal Windows Platform)
 
-Come altre librerie di C++, è possibile utilizzare AMP C++ nelle App UWP. Questi articoli descrivono come includere codice C++ AMP nelle App che viene creato utilizzando C++, c#, Visual Basic o JavaScript:
+Come altre librerie di C++, è possibile utilizzare AMP C++ nelle App UWP. Questi articoli descrivono come includere codice C++ AMP nelle App che viene creato utilizzando C++, C#, Visual Basic o JavaScript:
 
 - [Uso di C++ AMP in app UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
@@ -477,9 +477,9 @@ Come altre librerie di C++, è possibile utilizzare AMP C++ nelle App UWP. Quest
 
 - [Ottimizzazione dei viaggi, un'app di Store finestra in JavaScript e C++ di Bing mappe](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Come utilizzare C++ AMP da c# utilizzando il Runtime di Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Come utilizzare C++ AMP da C# utilizzando il Runtime di Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Come utilizzare C++ AMP da c#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Come utilizzare C++ AMP da C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Chiamata di funzioni native da codice gestito](../../dotnet/calling-native-functions-from-managed-code.md)
 

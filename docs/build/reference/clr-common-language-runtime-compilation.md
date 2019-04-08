@@ -43,7 +43,7 @@ Una o più delle seguenti opzioni, delimitate da virgole.
 
 - **safe**
 
-   **/CLR: safe è deprecata**. L'opzione è stata rimossa in Visual Studio 2017. È consigliabile convertire il codice che deve essere MSIL sicuro a c#.
+   **/CLR: safe è deprecata**. L'opzione è stata rimossa in Visual Studio 2017. È consigliabile convertire il codice che deve essere MSIL sicuro a C#.
 
 - **noAssembly**
 

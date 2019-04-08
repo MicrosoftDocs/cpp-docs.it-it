@@ -71,7 +71,7 @@ Viene illustrato come utilizzare il [IXMLHTTPRequest2](/windows/desktop/api/msxm
 Usa il `HttpRequest` definito nella classe [procedura dettagliata: La connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) nel contesto di un'app UWP completa.
 
 [Creazione di un componente DLL di Windows Runtime con esempio di C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
-Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per creare un componente DLL in-process e utilizzarlo da C + + c++ /CX, JavaScript e c#.
+Viene illustrato come usare la libreria di modelli di Windows Runtime C++ per creare un componente DLL in-process e utilizzarlo da C + + c++ /CX, JavaScript e C#.
 
 [Esempio di gioco marble maze DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Illustra come usare la libreria di modelli di Windows Runtime C++ per gestire la durata di componenti COM come DirectX e Media Foundation nel contesto di un gioco 3D completo.

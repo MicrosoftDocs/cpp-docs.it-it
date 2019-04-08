@@ -13,7 +13,7 @@ ms.locfileid: "57807326"
 
 Un file di codice MSIL con estensione obj (compilato con [/clr](clr-common-language-runtime-compilation.md)) può essere utilizzato anche come file con estensione netmodule.  file con estensione obj contengono i metadati e i simboli nativi.  I file con estensione netmodule contengono solo metadati.
 
-È possibile passare un file di codice MSIL con estensione obj per qualsiasi altro compilatore di Visual Studio tramite l'opzione del compilatore /addmodule (ma tenere presente che il file con estensione obj diventa parte dell'assembly risultante e deve essere spedito all'assembly).  Ad esempio, Visual c# e Visual Basic hanno l'opzione del compilatore /addmodule.
+È possibile passare un file di codice MSIL con estensione obj per qualsiasi altro compilatore di Visual Studio tramite l'opzione del compilatore /addmodule (ma tenere presente che il file con estensione obj diventa parte dell'assembly risultante e deve essere spedito all'assembly).  Ad esempio, Visual C# e Visual Basic hanno l'opzione del compilatore /addmodule.
 
 > [!NOTE]
 >  Nella maggior parte dei casi, sarà necessario passare al linker il file con estensione obj dalla compilazione che ha creato il modulo .NET.  Il passaggio di un file di modulo MSIL con estensione netmodule o dll al linker può causare l'errore LNK1107.
