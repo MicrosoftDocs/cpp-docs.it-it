@@ -21,7 +21,7 @@ L'istanza di un tipo generico è stata creata in modo non corretto.  Controllare
 
 ## <a name="example"></a>Esempio
 
-Nel primo esempio Usa c# per creare un componente che contiene un tipo generico con vincoli che non sono supportati durante la creazione di tipi generici in C + + / CLR. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+Nel primo esempio Usa C# per creare un componente che contiene un tipo generico con vincoli che non sono supportati durante la creazione di tipi generici in C + + / CLR. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```cs
 // C3390.cs
