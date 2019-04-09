@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-ms.openlocfilehash: ae5a4583d5f074b98e346ba090246f533b80803d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237146"
 ---
 # <a name="native-and-net-interoperability"></a>Interoperabilità .NET e nativa
 
@@ -30,10 +30,8 @@ Visual C++ supporta le funzionalità di interoperabilità che consentono di cost
 [Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
 Descrive gli assembly generati con il [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) opzione del compilatore che contengono sia gestite sia la funzionalità.
 
-[Uso di un controllo utente Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
+[Utilizzo di un controllo utente Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 Viene illustrato come utilizzare le classi di supporto di MFC Windows Form per ospitare i controlli Windows Form all'interno delle applicazioni MFC.
 
-[Chiamata di funzioni native da codice gestito](../dotnet/calling-native-functions-from-managed-code.md)<br/>
+[Chiamata a funzioni native da codice gestito](../dotnet/calling-native-functions-from-managed-code.md)<br/>
 Descrive come DLL non CLR può essere usata dalle applicazioni .NET.
-
-## <a name="see-also"></a>Vedere anche

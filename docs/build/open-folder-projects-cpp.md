@@ -4,12 +4,12 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237133"
 ---
 # <a name="open-folder-projects-for-c"></a>Progetti Apri cartella per C++
 
@@ -64,7 +64,7 @@ Per altre informazioni, vedere [Riferimento allo schema CppProperties](cppproper
 
 ![Configura attività di Apri cartella](media/open-folder-config-tasks.png)
 
-Ciò consente di creare (o aperto) il **Tasks** file nella cartella. VS che Visual Studio crea nella cartella radice del progetto. È possibile definire un'attività arbitraria in questo file, quindi chiamarla usando il nome specificato dal menu di scelta rapida **Esplora soluzioni**. L'esempio seguente visualizza un file tasks.vs.json che definisce una singola attività. `taskName` definisce il nome visualizzato nel menu di scelta rapida. `appliesTo` definisce i file sui quali può essere eseguito il comando. La proprietà `command` fa riferimento alla variabile di ambiente COMSPEC, che identifica il percorso per la console (cmd.exe in Windows). È anche possibile fare riferimento a variabili di ambiente che vengono dichiarate in CppProperties.json o CMakeSettings.json. La proprietà `args` specifica la riga di comando da chiamare. La macro `${file}` recupera il file selezionato in **Esplora soluzioni**. Nell'esempio seguente viene visualizzato il nome del file con estensione cpp attualmente selezionato.
+Ciò consente di creare (o aperto) il **Tasks** file nella cartella. VS che Visual Studio crea nella cartella radice del progetto. È possibile definire un'attività arbitraria in questo file, quindi chiamarla usando il nome specificato dal menu di scelta rapida **Esplora soluzioni**. L'esempio seguente visualizza un file tasks.vs.json che definisce una singola attività. `taskName` definisce il nome visualizzato nel menu di scelta rapida. `appliesTo` Definisce i file che il comando può essere eseguito su. La proprietà `command` fa riferimento alla variabile di ambiente COMSPEC, che identifica il percorso per la console (cmd.exe in Windows). È anche possibile fare riferimento a variabili di ambiente che vengono dichiarate in CppProperties.json o CMakeSettings.json. La proprietà `args` specifica la riga di comando da chiamare. La macro `${file}` recupera il file selezionato in **Esplora soluzioni**. Nell'esempio seguente viene visualizzato il nome del file con estensione cpp attualmente selezionato.
 
 ```json
 {
@@ -107,7 +107,3 @@ Per specificare argomenti aggiuntivi, aggiungerli alla matrice JSON `args`, come
 ```
 
 Quando si salva questo file, la nuova configurazione viene visualizzata nell'elenco a discesa Destinazione di debug ed è possibile selezionarla per avviare il debugger. È possibile creare il numero desiderato di configurazioni di debug, per un numero qualsiasi di file eseguibili. Se a questo punto si preme **F5**, il debugger viene avviato e raggiunge qualsiasi punto di interruzione già impostato. Tutte le finestre del debugger già note e le relative funzionalità sono ora disponibili.
-
-## <a name="see-also"></a>Vedere anche
-
-

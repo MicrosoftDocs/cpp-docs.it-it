@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237198"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Procedura: Progettazione per la protezione dalle eccezioni
 
@@ -23,7 +23,7 @@ Indipendentemente da come una funzione gestisce un'eccezione, per garantire una 
 
 ### <a name="keep-resource-classes-simple"></a>Mantenere le classi di risorse semplici
 
-Quando si incapsula la gestione manuale delle risorse nelle classi, utilizzare una classe il cui scopo sia solo di gestire ciascuna risorsa; in caso contrario, si potrebbero introdurre delle perdite. Uso [puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md) quando possibile, come illustrato nell'esempio seguente. Questo esempio è volutamente finto e semplicistico per evidenziare le differenze quando viene usato `shared_ptr`.
+Quando si incapsula la gestione manuale delle risorse nelle classi, usare una classe che non esegue alcuna operazione eccetto la gestione di una singola risorsa. Per mantenere semplice la classe, si riduce il rischio di introdurre delle perdite di risorse. Uso [puntatori intelligenti](../cpp/smart-pointers-modern-cpp.md) quando possibile, come illustrato nell'esempio seguente. Questo esempio è volutamente finto e semplicistico per evidenziare le differenze quando viene usato `shared_ptr`.
 
 ```cpp
 // old-style new/delete version
@@ -107,7 +107,7 @@ Questa garanzia è la più debole fra le tre. Tuttavia, potrebbe essere la scelt
 
 ## <a name="exception-safe-classes"></a>Classi protette dalle eccezioni
 
-Una classe può garantire la propria sicurezza dalla eccezioni, anche quando viene utilizzata da funzioni non sicure, impedendo la propria costruzione o la propria eliminazione permanente parziale. Se il costruttore della classe esce prima del completamento, l'oggetto non viene creato e il relativo distruttore non viene chiamato. Sebbene i distruttori delle variabili automatiche inizializzate prima dell'eccezione saranno richiamati, la memoria allocata dinamicamente o le risorse non gestite da un puntatore intelligente o da una variabile automatica simile verranno perse.
+Una classe può garantire la propria sicurezza dalla eccezioni, anche quando viene utilizzata da funzioni non sicure, impedendo la propria costruzione o la propria eliminazione definitiva parziale. Se il costruttore della classe esce prima del completamento, l'oggetto non viene creato e il relativo distruttore non viene chiamato. Sebbene i distruttori delle variabili automatiche inizializzate prima dell'eccezione saranno richiamati, la memoria allocata dinamicamente o le risorse non gestite da un puntatore intelligente o da una variabile automatica simile verranno perse.
 
 I tipi predefiniti sono tutti privi di errori e i tipi della libreria standard supportano come minimo la garanzia di base. Attenersi alle seguenti linee guida per qualsiasi tipo definito dall'utente che deve essere indipendente dalle eccezioni:
 

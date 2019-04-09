@@ -1,6 +1,6 @@
 ---
 title: /Zp (Allineamento membri struct)
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237164"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Allineamento membri struct)
 
@@ -28,7 +28,7 @@ Controlla come vengono compressi i membri di una struttura in memoria e consente
 
 ## <a name="remarks"></a>Note
 
-Quando si specifica la **/Zp**_n_ opzione, ogni membro di struttura dopo il primo viene archiviato sulla dimensione del tipo di membro o *n*-limiti di byte (in cui *n* è 1, 2, 4, 8 o 16), qualunque sia il minore.
+Il **/Zp**_n_ opzione indica al compilatore in cui archiviare ogni membro della struttura. Il compilatore archivia membri dopo la prima a un limite che sarà il più piccolo delle dimensioni del tipo di membro, o un' *n*-limite di byte.
 
 I valori di compressione disponibili sono descritti nella tabella seguente:
 
@@ -37,13 +37,13 @@ I valori di compressione disponibili sono descritti nella tabella seguente:
 |1|Comprime le strutture nei limiti di 1 byte. Uguale allo **/Zp**.|
 |2|Comprime le strutture nei limiti di 2 byte.|
 |4|Comprime le strutture nei limiti di 4 byte.|
-|8|Comprime le strutture nei limiti di 8 byte (impostazione predefinita).|
-|16| Comprime le strutture nei limiti di 16 byte.|
+|8|Comprime le strutture nei limiti di 8 byte (impostazione predefinita per x86, ARM e ARM64).|
+|16| Comprime le strutture nei limiti di 16 byte (impostazione predefinita per x64).|
 
-È consigliabile usare questa opzione non a meno che non si abbiano requisiti specifici dell'allineamento.
+Non usare questa opzione a meno che non si abbiano requisiti specifici dell'allineamento.
 
 > [!WARNING]
-> Si supponga di intestazioni di C++ in Windows SDK **/zp8** di compressione. Memoria potrebbero venire danneggiati se il **/Zp** impostazione viene modificata quando si usano le intestazioni di Windows SDK.
+> Le intestazioni di C++ in Windows SDK impostato e presuppongono **/zp8** compressione internamente. Memoria potrebbero venire danneggiati se il **/Zp** impostazione viene modificata all'interno di intestazioni di Windows SDK. Le intestazioni non sono interessate da qualsiasi **/Zp** opzione è impostata nella riga di comando.
 
 È anche possibile usare [pack](../../preprocessor/pack.md) alla compressione struttura controllo. Per ulteriori informazioni sull'allineamento, vedere:
 
@@ -53,13 +53,13 @@ I valori di compressione disponibili sono descritti nella tabella seguente:
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [/ALIGN (allineamento sezione)](align-section-alignment.md)
+- [/ALIGN (Allineamento sezione)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
 
-1. Selezionare il **C/C++** > **generazione di codice** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **Code Generation** pagina delle proprietà.
 
 1. Modificare il **Allineamento membri Struct** proprietà.
 
@@ -69,5 +69,5 @@ I valori di compressione disponibili sono descritti nella tabella seguente:
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Opzioni del compilatore MSVC](compiler-options.md)
-- [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
+[Opzioni del compilatore MSVC](compiler-options.md) \
+[Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)
