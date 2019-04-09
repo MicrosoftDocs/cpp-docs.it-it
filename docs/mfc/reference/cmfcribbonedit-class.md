@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292190"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780483"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe CMFCRibbonEdit
 
@@ -140,7 +140,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come costruire un `CMFCRibbonEdit` dell'oggetto, visualizzare i pulsanti di selezione accanto a controllo di modifica e impostare il testo del controllo di modifica. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come costruire un `CMFCRibbonEdit` dell'oggetto, visualizzare i pulsanti di selezione accanto a controllo di modifica e impostare il testo del controllo di modifica. Questo frammento di codice fa parte di [esempio di MS Office 2007 Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
