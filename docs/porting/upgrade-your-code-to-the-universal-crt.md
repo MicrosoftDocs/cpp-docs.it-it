@@ -2,12 +2,12 @@
 title: Aggiornare il codice a Universal CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 368b61820310135f14cbe4225b9315e62d3686a7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769186"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898765"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Aggiornare il codice a Universal CRT
 
@@ -49,4 +49,4 @@ Molte funzioni sono state aggiunte o aggiornate nella libreria UCRT per migliora
 [Panoramica dei potenziali problemi di aggiornamento (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md)<br/>
-[Miglioramenti della conformità in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)
+[Miglioramenti della conformità di C++ in Visual Studio 2017](../overview/cpp-conformance-improvements.md)
