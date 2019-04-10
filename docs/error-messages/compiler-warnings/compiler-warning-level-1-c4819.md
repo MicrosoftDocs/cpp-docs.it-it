@@ -1,22 +1,24 @@
 ---
 title: Avviso del compilatore (livello 1) C4819
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - C4819
 helpviewer_keywords:
 - C4819
 ms.assetid: c0316e85-249c-414d-9df0-622d077c6bc2
-ms.openlocfilehash: c0ca29a304fbd05cb0c6b7d1b06414304c70fb2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d43b49d473e7113d8cdfb89aaa6e93045e13d0f7
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424222"
 ---
 # <a name="compiler-warning-level-1-c4819"></a>Avviso del compilatore (livello 1) C4819
 
-Il file contiene un carattere che non può essere rappresentato nella tabella codici corrente (numero). Salvare il file in formato Unicode per evitare perdite di dati.
+> Il file contiene un carattere che non può essere rappresentato nella tabella codici corrente (*numero*). Salvare il file in formato Unicode per evitare perdite di dati.
 
-C4819 si verifica quando un file di origine ANSI viene compilato in un sistema con una tabella codici che non può rappresentare tutti i caratteri nel file.
+C4819 si verifica quando si compila un file di origine ANSI su un sistema che utilizza una tabella codici che non può rappresentare tutti i caratteri nel file.
 
-Per risolvere C4819, salvare il file in formato Unicode. In Visual Studio, scegliere **File**, **opzioni di salvataggio avanzate**. Nel **opzioni di salvataggio avanzate** finestra di dialogo, selezionare un tipo di codifica che può rappresentare tutti i caratteri nel file, ad esempio UTF-8 e quindi scegliere **OK**.
+Esistono diversi modi per risolvere C4819. Un modo semplice consiste nel rimuovere il carattere che causa l'errore, se non è necessario, ad esempio, se si trova in un commento. È possibile impostare la tabella codici del sistema nel Pannello di controllo che supporta il set di caratteri utilizzato dal codice sorgente. È possibile usare Unicode [sequenze di escape](/cpp/c-language/escape-sequences) creare caratteri o stringhe che usano solo la versione ANSI base il set di caratteri nel codice sorgente. Infine, è possibile salvare il file in formato Unicode con una firma, noto anche come un byte order mark (BOM).
+
+Per salvare un file in formato Unicode, in Visual Studio, scegliere **File** > **Salva con nome**. Nel **Salva File con nome** finestra di dialogo, selezionare l'elenco a discesa nel **salvare** pulsante e scegliere **Salva con codifica**. Se si salva lo stesso nome di file, devi confermare che si desidera sostituire il file. Nel **opzioni di salvataggio avanzate** finestra di dialogo scegliere un tipo di codifica che può rappresentare tutti i caratteri nel file, ad esempio, **Unicode (UTF-8 con firma) - tabella codici 65001**: e quindi scegliere  **OK**.

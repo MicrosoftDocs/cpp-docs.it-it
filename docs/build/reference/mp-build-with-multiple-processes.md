@@ -1,6 +1,6 @@
 ---
 title: /MP (compilazione con più processi)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424144"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (compilazione con più processi)
 
@@ -51,7 +51,7 @@ La tabella seguente elenca le opzioni del compilatore e le funzionalità del lin
 |--------------------------------|-----------------|
 |Direttiva del preprocessore[#import](../../preprocessor/hash-import-directive-cpp.md) |Converte i tipi in una libreria dei tipi in classi C++ e quindi scrive tali classi in un file di intestazione.|
 |[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia l'output del preprocessore nello standard output (**stdout**).|
-|[/Gm](gm-enable-minimal-rebuild.md)|Consente una ricompilazione incrementale.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Deprecato. Consente una ricompilazione incrementale.|
 |[/showIncludes](showincludes-list-include-files.md)|Scrive un elenco dei file di inclusione nello standard error (**stderr**).|
 |[/Yc](yc-create-precompiled-header-file.md)|Scrive un file di intestazione precompilato.|
 
@@ -125,12 +125,8 @@ Le indicazioni per decidere se usare MSBuild o **/MP** tecnologia è come segue:
 
 - Se il numero di progetti e file per ogni progetto è bilanciato, usare entrambi MSBuild e **/MP**. Impostare inizialmente l'opzione **/maxcpucount** sul numero di progetti da compilare e l'opzione **/MP** sul numero di processori nel computer. Misurare le prestazioni e quindi modificare le impostazioni per ottenere risultati ottimali. Ripetere il ciclo finché non si ottiene il tempo totale di compilazione desiderato.
 
-#### <a name="the-gm-compiler-option"></a>Opzione /Gm del compilatore
-
-Per impostazione predefinita, la compilazione di un progetto abilita l'opzione **/Gm** del compilatore (compilazioni incrementali) per le compilazioni di debug e la disabilita per le compilazioni di rilascio. L'opzione **/MP** del compilatore viene pertanto disabilitata automaticamente nelle compilazioni di debug perché entra in conflitto con l'opzione **/Gm** predefinita del compilatore.
-
 ## <a name="see-also"></a>Vedere anche
 
-[#import (direttiva)](../../preprocessor/hash-import-directive-cpp.md)<br/>
+[Direttiva #import](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [Riferimenti alla riga di comando](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (generazione più veloce di file PDB)](zf.md)<br/>
+[/Zf (generazione di PDB più veloce)](zf.md)<br/>

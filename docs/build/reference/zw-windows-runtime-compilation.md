@@ -1,6 +1,6 @@
 ---
 title: /ZW (Compilazione di Windows Runtime)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809431"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424040"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Compilazione di Windows Runtime)
 
-Compila il codice per supportare estensioni del componente C++ di Visual C + + sorgente c++ /CX per la creazione di App Universal Windows Platform (UWP).
+Compila il codice per supportare Visual sorgente C++ estensioni del componente C++/CX per la creazione di App Universal Windows Platform (UWP).
 
 Quando si usa **/ZW** per compilare, specificare sempre **/EHsc** anche.
 
@@ -44,7 +44,7 @@ Quando si specifica la **/ZW** opzione, il compilatore supporta le seguenti funz
 
 - Automatic: il conteggio dei riferimenti degli oggetti Windows Runtime e automatico l'eliminazione di un oggetto quando il conteggio dei riferimenti va a zero.
 
-Poiché il linker incrementale non supporta i metadati di Windows inclusi nei file obj usando il **/ZW** opzione, il [/Gm (Abilita ricompilazione minima)](gm-enable-minimal-rebuild.md) opzione non è compatibile con **/ZW** .
+Poiché il linker incrementale non supporta i metadati di Windows inclusi nei file obj usando il **/ZW** opzione deprecate [/Gm (Abilita ricompilazione minima)](gm-enable-minimal-rebuild.md) opzione non è compatibile con **/ZW**.
 
 Per altre informazioni, vedere [riferimenti al linguaggio Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).
 

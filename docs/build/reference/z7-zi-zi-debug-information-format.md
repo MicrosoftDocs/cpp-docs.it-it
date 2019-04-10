@@ -1,6 +1,6 @@
 ---
 title: /Z7, /Zi, /ZI (Formato informazioni di debug)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816321"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424079"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Formato informazioni di debug)
 
@@ -52,7 +52,7 @@ Il **/Z7** opzione produce file oggetto che contengono anche informazioni di deb
 
 Per i server di distribuzione di versioni di debug delle librerie di terze parti, è disponibile un vantaggio alla mancanza di un file PDB. Tuttavia, i file oggetto per eventuali intestazioni precompilate sono necessari durante la fase di collegamento della libreria, nonché per il debug. Se sono presenti solo tipi di informazioni (e nessun codice) nel file oggetto con estensione pch, è necessario usare anche il [/Yl (inserisce il riferimento PCH per la libreria di Debug)](yl-inject-pch-reference-for-debug-library.md) opzione, che è abilitato per impostazione predefinita, quando si compila la libreria.
 
-Il [/Gm (Abilita ricompilazione minima)](gm-enable-minimal-rebuild.md) opzione non è disponibile quando **/Z7** è specificato.
+Deprecate [/Gm (Abilita ricompilazione minima)](gm-enable-minimal-rebuild.md) opzione non è disponibile quando **/Z7** è specificato.
 
 ### <a name="zi"></a>/ZI
 
