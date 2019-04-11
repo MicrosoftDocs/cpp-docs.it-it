@@ -14,7 +14,7 @@ ms.locfileid: "50592205"
 # <a name="microsoft-extensions"></a>Estensioni Microsoft
 
 *istruzione di ASM*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ASM***un'istruzione di assembly* **;** <sub>opt  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ASM** *un'istruzione di assembly* **;** <sub>opt  </sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**ASM {***elenco di istruzioni di assembly***};** <sub>opt    </sub>
 
 *elenco di istruzioni di assembly*:<br/>
