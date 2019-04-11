@@ -2,12 +2,12 @@
 title: Guida al porting e aggiornamento in Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767678"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898791"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guida al porting e aggiornamento in Visual C++
 
@@ -76,13 +76,13 @@ Se si vuole assegnare al programma un'interfaccia utente XAML senza creare un'ap
 |Titolo|Description|
 |-----------|-----------------|
 |[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Illustra come usare i progetti creati nelle versioni precedenti di Visual C++.|
-|[Novità relative al compilatore C++ in Visual Studio 2017 RC](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Modifiche nell'IDE e degli strumenti da Visual Studio 2015 a Visual Studio 2017|
-|[Miglioramenti della conformità in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)|Miglioramenti di conformità agli standard da Visual Studio 2015 a Visual Studio 2017|
+|[Novità relative al compilatore C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Modifiche all'IDE e agli strumenti nella versione corrente di Visual Studio|
+|[Miglioramenti della conformità di C++ in Visual Studio 2017](../overview/cpp-conformance-improvements.md)|Miglioramenti di conformità agli standard da Visual Studio 2015 a Visual Studio|
 |[Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md)|Elenco di tutte modifiche apportate alle librerie e agli strumenti per la compilazione di Visual C++ in Visual Studio dalla versione 2003 alla 2015 che potrebbero richiedere modifiche del codice corrente.|
 |[Visual C++: novità dalla versione 2003 alla 2015](visual-cpp-what-s-new-2003-through-2015.md)|Tutte le novità relative a Visual C++ da Visual Studio 2003 a Visual Studio 2015.|
-|[Porting di librerie di terze parti](porting-third-party-libraries.md)|Come usare lo strumento della riga di comando **vcpkg** per trasferire le librerie open source precedenti alle versioni compilate con i set di strumenti più recenti di Visual C++.|
+|[Conversione di librerie di terze parti](porting-third-party-libraries.md)|Come usare lo strumento della riga di comando **vcpkg** per trasferire le librerie open source precedenti alle versioni compilate con i set di strumenti più recenti di Visual C++.|
 |[Porting e aggiornamento: esempi e case study](porting-and-upgrading-examples-and-case-studies.md)|In questa sezione viene illustrato il processo di porting e aggiornamento di vari esempi e applicazioni e vengono descritte le esperienze e i risultati. La lettura di questi esempi offre una panoramica delle operazioni coinvolte nel processi di porting e aggiornamento. Vengono inoltre presentati suggerimenti e indicazioni per l'aggiornamento e viene descritto come risolvere errori specifici.|
-|[Trasferimento alla piattaforma UWP (Universal Windows Platform)](porting-to-the-universal-windows-platform-cpp.md)|Contiene informazioni sul porting di codice a Windows 10|
+|[Conversione alla piattaforma UWP (Universal Windows Platform)](porting-to-the-universal-windows-platform-cpp.md)|Contiene informazioni sul porting di codice a Windows 10|
 |[Introduzione a Visual C++ per utenti UNIX](introduction-to-visual-cpp-for-unix-users.md)|Fornisce informazioni per gli utenti UNIX che non hanno familiarità con Visual C++ e vogliono aumentare la produttività con questo linguaggio.|
 |[Porting da UNIX a Win32](porting-from-unix-to-win32.md)|Illustra le opzioni per la migrazione di applicazioni UNIX a Windows.|
 

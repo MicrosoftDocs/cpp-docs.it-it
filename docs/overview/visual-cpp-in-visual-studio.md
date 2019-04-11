@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 7ef43491c35ec4f57f7a691851e584e6aad58ef3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782277"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898713"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -26,14 +26,14 @@ Microsoft Visual C++, in genere abbreviato in Visual C++ o MSVC, è il nome di l
 
 ## <a name="whats-new-and-conformance-history"></a>Novità e cronologia conformità
 
-[Novità di C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Novità introdotte in Visual Studio 2017.
+[Novità di C++ in Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+Novità introdotte in Visual Studio.
 
 [Novità di C++ da Visual Studio 2003 a Visual Studio 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Novità di C++ introdotte per ogni versione di Visual Studio, dalla versione 2003 alla versione 2015.
 
-[Miglioramenti della conformità in Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
-Informazioni sui miglioramenti della conformità di C++ in Visual Studio 2017.
+[Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements.md)<br/>
+Informazioni sui miglioramenti della conformità di C++ in Visual Studio.
 
 [Conformità al linguaggio Visual C++](visual-cpp-language-conformance.md)<br/>
 Elenco dello stato di conformità per funzionalità nel compilatore MSVC C++.
@@ -83,7 +83,7 @@ Come usare le funzionalità di produttività nell'editor di C++ per eseguire il 
 [Debug del codice nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Usare il debugger di Visual Studio con i progetti C++.
 
-[Panoramica dell'analisi codice per C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Cenni preliminari sull'analisi del codice per C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Usare le annotazioni SAL o le verifiche di Linee guida di base di C++ per eseguire l'analisi statica.
 
 [Scrivere unit test per C/C++ in Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -127,15 +127,15 @@ Informazioni sull'uso di formati di testo e stringa diversi e sulle codifiche pe
 
 [Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
 
-[Riferimenti per il linguaggio C](../c-language/c-language-reference.md)
+[Riferimenti del linguaggio C](../c-language/c-language-reference.md)
 
-[Intrinseci del compilatore e linguaggio assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+[Intrinseci del compilatore e linguaggio dell'assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Librerie C++ in Visual Studio
 
 Nelle sezioni seguenti vengono fornite informazioni sulle varie librerie C e C++ incluse in Visual Studio.
 
-[Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Include alternative migliorate dal punto di vista della sicurezza alle funzioni note per causare problemi di sicurezza.
 
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -165,7 +165,7 @@ Lo strumento da riga di comando **vcpkg** semplifica notevolmente l'individuazio
 
 ## <a name="feedback-and-community"></a>Feedback e community
 
-[Come segnalare un problema con il set di strumenti di Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
+[Come segnalare un problema con il set di strumenti Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
 Informazioni su come creare e inoltrare segnalazioni di errore efficaci riguardanti i set di strumenti Visual C++, ad esempio compilatore, linker e altri.
 
 [Blog del team di Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
@@ -176,6 +176,6 @@ Informazioni su come ottenere assistenza, segnalare bug e fornire suggerimenti p
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)
-- [Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)
-- [Intrinseci del compilatore e linguaggio assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [Riferimenti del linguaggio C](../c-language/c-language-reference.md)
+- [Riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)
+- [Intrinseci del compilatore e linguaggio dell'assembly](../intrinsics/compiler-intrinsics-and-assembly-language.md)
