@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/10/2019
 ms.locfileid: "58780483"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe CMFCRibbonEdit
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in] L'etichetta per il `CMFCRibbonEdit` controllo.
 
-*nImage*<br/>
+*Immagine*<br/>
 [in] Indice dell'immagine di piccole dimensioni da utilizzare per il `CMFCRibbonEdit` controllo. La raccolta di immagini di piccole dimensioni viene mantenuta in base alla categoria della barra multifunzione padre.
 
 ### <a name="remarks"></a>Note
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parametri
 
-*bEnable*<br/>
+*bAttivare il*<br/>
 [in] TRUE per abilitare il controllo. FALSE per disabilitare il controllo.
 
 ### <a name="remarks"></a>Note
@@ -604,7 +604,7 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="remarks"></a>Note
@@ -619,7 +619,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*point*<br/>
+*punto*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="remarks"></a>Note
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Puntatore alla finestra padre per il `CMFCRibbonEdit` oggetto.
 
-*data*<br/>
+*Data*<br/>
 I dati di accessibilità per il `CMFCRibbonEdit` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -752,7 +752,7 @@ Il `CMFCRibbonEdit` controllo dispone di due larghezze in base alla relativa mod
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 [Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
