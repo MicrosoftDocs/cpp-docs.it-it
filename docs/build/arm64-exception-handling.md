@@ -1,12 +1,12 @@
 ---
 title: Gestione delle eccezioni ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59031732"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59534123"
 ---
 # <a name="arm64-exception-handling"></a>Gestione delle eccezioni ARM64
 
@@ -44,7 +44,7 @@ Queste sono le ipotesi nella descrizione di gestione delle eccezioni:
 
 1. Non è presente codice condizionale nell'epilogo di una funzione.
 
-1. Registro dei puntatori frame dedicato: Se la stored procedure sp viene salvata in un altro registro (r29) nel prologo, che registra rimane invariata in tutta la funzione, in modo che il sp di origine può essere recuperato in qualsiasi momento.
+1. Registro dei puntatori frame dedicato: Se la stored procedure sp viene salvata in un altro registro (x29) nel prologo, che registra rimane invariata in tutta la funzione, in modo che il sp di origine può essere recuperato in qualsiasi momento.
 
 1. A meno che il Service Pack viene salvato in un altro registro, tutte le relative modifiche del puntatore dello stack avviene esclusivamente all'interno di prologo ed epilogo.
 
@@ -54,90 +54,90 @@ Queste sono le ipotesi nella descrizione di gestione delle eccezioni:
 
 ![layout dello stack frame](media/arm64-exception-handling-stack-frame.png "layout dello stack frame")
 
-Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in qualsiasi posizione nell'area di variabile locale in base a considerazioni di ottimizzazione. L'obiettivo è ottimizzare il numero di variabili locali che può essere raggiunto da una singola istruzione basata su puntatore ai frame (r29) o il puntatore dello stack (sp). Tuttavia per `alloca` funzioni, deve essere collegato e r29 deve puntare alla parte inferiore dello stack. Per consentire una migliore copertura di register-coppia-addressing-modalità, il registro non volatile Salva le aree vengono posizionati nella parte superiore dello stack dell'area locale. Ecco alcuni esempi che illustrano alcune delle sequenze di prologo della query più efficiente. Per ragioni di semplicità e migliore località della cache, l'ordine di archiviazione dei registri salvati dal chiamato in tutti i prologhi canonici è in ordine "in continua crescita di". `#framesz` di seguito rappresenta la dimensione dell'intero stack (escluso alloca area). `#localsz` e `#outsz` indicano le dimensioni di rete locale (tra cui Salva area per il \<r29, lr > coppia) e in uscita di dimensioni del parametro, rispettivamente.
+Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in qualsiasi posizione nell'area di variabile locale in base a considerazioni di ottimizzazione. L'obiettivo è ottimizzare il numero di variabili locali che può essere raggiunto da una singola istruzione basata su puntatore ai frame (x29) o puntatore dello stack (sp). Tuttavia per `alloca` funzioni, deve essere collegato e x29 deve puntare alla parte inferiore dello stack. Per consentire una migliore copertura di register-coppia-addressing-modalità, il registro non volatile Salva le aree vengono posizionati nella parte superiore dello stack dell'area locale. Ecco alcuni esempi che illustrano alcune delle sequenze di prologo della query più efficiente. Per ragioni di semplicità e migliore località della cache, l'ordine di archiviazione dei registri salvati dal chiamato in tutti i prologhi canonici è in ordine "in continua crescita di". `#framesz` di seguito rappresenta la dimensione dell'intero stack (escluso alloca area). `#localsz` e `#outsz` indicano le dimensioni di rete locale (tra cui Salva area per il \<x29, lr > coppia) e in uscita di dimensioni del parametro, rispettivamente.
 
 1. Concatenate, #localsz \<= 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        stp    r29, lr, [sp, -#localsz]!    // save <r29,lr> at bottom of local area
-        mov    r29,sp                   // r29 points to bottom of local
-        sub    sp, #outsz               // (optional for #outsz != 0)
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        stp    x29,lr,[sp,#-localsz]!   // save <x29,lr> at bottom of local area
+        mov    x29,sp                   // x29 points to bottom of local
+        sub    sp,sp,#outsz             // (optional for #outsz != 0)
     ```
 
 1. Concatenate, #localsz > 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        sub    sp,#localsz+#outsz       // allocate remaining frame
-        stp    r29, lr, [sp, #outsz]    // save <r29,lr> at bottom of local area
-        add    r29,sp, #outsz           // setup r29 points to bottom of local area
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        sub    sp,sp,#(localsz+outsz)   // allocate remaining frame
+        stp    x29,lr,[sp,#outsz]       // save <x29,lr> at bottom of local area
+        add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
 1. Ai, le funzioni foglia (lr non salvati)
 
     ```asm
-        stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp, 16]
-        str    r23 [sp,32]
-        stp    d8,d9,[sp,40]            // save FP regs (optional)
-        stp    d10,d11,[sp,56]
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]
+        str    x23,[sp,#32]
+        stp    d8,d9,[sp,#40]           // save FP regs (optional)
+        stp    d10,d11,[sp,#56]
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Tutte le variabili locali sono accessibili basato su provider di servizi. \<R29, lr > punta al frame precedente. Per le dimensioni del fotogramma \<= 512, il "sub sp,..." può essere ottimizzato se l'area regs salvato viene spostato nella parte inferiore dello stack. Lo svantaggio di che è che non è coerenza con altri layout precedente e salvato regs prendere parte dell'intervallo per la coppia regs e modalità di indirizzamento offset pre-elaborazione e post-indicizzate.
+   Tutte le variabili locali sono accessibili basato su provider di servizi. \<x29, lr > punta al frame precedente. Per le dimensioni del fotogramma \<= 512, il "sub sp,..." può essere ottimizzato se l'area regs salvato viene spostato nella parte inferiore dello stack. Lo svantaggio di che è che non è coerenza con altri layout precedente e salvato regs prendere parte dell'intervallo per la coppia regs e modalità di indirizzamento offset pre-elaborazione e post-indicizzate.
 
 1. Funzioni di ai e non foglia (lr viene salvato nell'area di Int salvato)
 
     ```asm
-        stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        stp    r23, lr,[sp, 32]         // save last Int reg and lr
-        stp    d8,d9,[sp, 48]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,64]          // ...
-        sub    sp,#framesz-80           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        stp    x23,lr,[sp,#32]          // save last Int reg and lr
+        stp    d8,d9,[sp,#48]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#64]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
    Oppure, con numero pari salvato registri Int,
 
     ```asm
-        stp    r19,r20,[sp,-72]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        str    lr,[sp, 32]              // save lr
-        stp    d8,d9,[sp, 40]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,56]          // ...
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        str    lr,[sp,#32]              // save lr
+        stp    d8,d9,[sp,#40]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#56]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   Solo r19 salvato:
+   Solo x19 salvato:
 
     ```asm
-        sub    sp, sp, #16              // reg save area allocation*
-        stp    r19,lr,[sp,0]            // save r19, lr
-        sub    sp,#framesz-16           // allocate the remaining local area
+        sub    sp,sp,#16                // reg save area allocation*
+        stp    x19,lr,[sp]              // save x19, lr
+        sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
    \* Il reg Salva allocazione dell'area non è stata ridotta nel stp perché un stp pre-indicizzate reg-lr non può essere rappresentato con i codici di rimozione.
 
-   Tutte le variabili locali sono accessibili basato su provider di servizi. \<R29 > punta al frame precedente.
+   Tutte le variabili locali sono accessibili basato su provider di servizi. \<x29 > punta al frame precedente.
 
 1. Concatenate, #framesz \<= 512, #outsz = 0
 
     ```asm
-        stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
-        mov    r29,sp                       // r29 points to bottom of stack
-        stp    r19,r20,[sp, #framesz -32]   // save INT pair
-        stp    d8,d9,[sp, #framesz -16]     // save FP pair
+        stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
+        mov    x29,sp                       // x29 points to bottom of stack
+        stp    x19,x20,[sp,#(framesz-32)]   // save INT pair
+        stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
    Rispetto a prologo di #1 precedente, il vantaggio è che register tutte le istruzioni di salvataggio sono pronti per essere eseguita subito dopo un solo stack allocando (istruzione). Pertanto, non è disponibile alcuna dipendenza anti-dalla su sp che impedisce il parallelismo a livello di istruzione.
@@ -145,38 +145,38 @@ Per le funzioni di frame concatenati, la coppia fp e lr può essere salvata in q
 1. Concatenate, frame dimensioni > 512 (facoltativo per le funzioni senza allocazione)
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        sub    sp,#framesz-80               // allocate the remaining local area
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   A scopo di ottimizzazione, r29 possono essere inseriti in una posizione qualsiasi nell'area locale per fornire una migliore copertura per "reg-coppia" pre/post indexed offset e modalità di indirizzamento. Variabili locali sotto i puntatori ai frame sono accessibili basato su provider di servizi.
+   A scopo di ottimizzazione, x29 possono essere inseriti in una posizione qualsiasi nell'area locale per fornire una migliore copertura per "reg-coppia" pre/post indexed offset e modalità di indirizzamento. Variabili locali sotto i puntatori ai frame sono accessibili basato su provider di servizi.
 
 1. Concatenate, frame di dimensioni > 4 KB, con o senza alloca(),
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        mov    r8, #framesz/16
-        bl     chkstk
-        sub    sp, r8*16                    // allocate remaining frame
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        mov    x15,#(framesz/16)
+        bl     __chkstk
+        sub    sp,sp,x15,lsl#4              // allocate remaining frame
                                             // end of prolog
         ...
-        sp = alloca                         // more alloca() in body
+        sub    sp,sp,#alloca                // more alloca() in body
         ...
                                             // beginning of epilog
-        mov    sp,r29                       // sp points to top of local area
-        ldp    d10,d11, [sp,64],
+        mov    sp,x29                       // sp points to top of local area
+        ldp    d10,d11,[sp,#64]
         ...
-        ldp    r29, lr, [sp], -80           // post-indexed, reload <r29,lr>
+        ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
 ## <a name="arm64-exception-handling-information"></a>Informazioni sulla gestione delle eccezioni di ARM64
@@ -235,7 +235,7 @@ Questi dati viene suddiviso in quattro sezioni:
 
    c. **Indice iniziale di epilogo** una sorta di 10 (2 più bit rispetto **estesi parole di codice**) campo che indica l'indice byte della prima riga di codice che descrive questo epilogo di rimozione.
 
-1. Dopo che l'elenco di ambiti di epilogo è disponibile una matrice di byte che contengono codici di rimozione, descritti in dettaglio in una sezione successiva. Questa matrice viene riempita alla fine fino al più vicino confine di parola completa. I byte sono archiviati in ordine little-endian, in modo da essere direttamente recuperabili in modalità little-endian.
+1. Dopo che l'elenco di ambiti di epilogo è disponibile una matrice di byte che contengono codici di rimozione, descritti in dettaglio in una sezione successiva. Questa matrice viene riempita alla fine fino al più vicino confine di parola completa. Rimuovi i codici vengono scritti in questa matrice, iniziando con quella più vicina al corpo della funzione, spostandosi verso i bordi della funzione. I byte per ogni codice di rimozione sono archiviati nell'ordine big endian, in modo che possono essere recuperati direttamente, inizia con il byte più significativo prima di tutto che identifica l'operazione e la lunghezza della parte restante del codice.
 
 1. Infine, dopo i byte di codice di rimozione, se il **X** bit nell'intestazione è stato impostato su 1, include le informazioni del gestore di eccezioni. Si tratta di una singola **eccezione gestore RVA** fornendo l'indirizzo del gestore eccezioni stesso, seguito immediatamente da una quantità a lunghezza variabile di dati richiesti dal gestore di eccezioni.
 
@@ -286,22 +286,22 @@ I codici di rimozione sono codificati in base alla tabella riportata di seguito.
 |Codice di rimozione|BITS e l'interpretazione|
 |-|-|
 |`alloc_s`|000xxxxx: allocazione dello stack di piccole dimensioni con dimensioni \< 512 (2 ^ 5 * 16).|
-|`save_r19r20_x`|    001zzzzz: salvare \<r19, r20 > coppia in [sp-#Z * 8]!, offset pre-indicizzate > =-248 |
-|`save_fplr`|        01zzzzzz: salvare \<r29, lr > associa in [sp + #Z * 8], offset \<= 504. |
-|`save_fplr_x`|        10zzzzzz: salvare \<r29, lr > associa in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512 |
+|`save_r19r20_x`|    001zzzzz: salvare \<x19, x20 > coppia in [sp-#Z * 8]!, offset pre-indicizzate > =-248 |
+|`save_fplr`|        01zzzzzz: salvare \<x29, lr > associa in [sp + #Z * 8], offset \<= 504. |
+|`save_fplr_x`|        10zzzzzz: salvare \<x29, lr > associa in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512 |
 |`alloc_m`|        11000xxx'xxxxxxxx: allocazione dello stack di grandi dimensioni con dimensioni \< 16 KB (2 ^ 11 * 16). |
-|`save_regp`|        110010xx'xxzzzzzz: salvare r(19+#X) coppia in [sp + #Z * 8], offset \<= 504 |
-|`save_regp_x`|        110011xx'xxzzzzzz: salvare r(19+#X) coppia in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512 |
-|`save_reg`|        110100xx'xxzzzzzz: salvare r(19+#X) reg in [sp + #Z * 8], offset \<= 504 |
-|`save_reg_x`|        x 1101010'xxxzzzzz: salvare r(19+#X) reg in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -256 |
-|`save_lrpair`|         x 1101011'xxzzzzzz: salvare coppia \<r19 + 2 *#x10, lr > in [sp + #Z*8], offset \<= 504 |
+|`save_regp`|        110010xx'xxzzzzzz: salvare x(19+#X) coppia in [sp + #Z * 8], offset \<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: salvare x(19+#X) coppia in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512 |
+|`save_reg`|        110100xx'xxzzzzzz: salvare x(19+#X) reg in [sp + #Z * 8], offset \<= 504 |
+|`save_reg_x`|        x 1101010'xxxzzzzz: salvare x(19+#X) reg in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -256 |
+|`save_lrpair`|         x 1101011'xxzzzzzz: salvare coppia \<x (19 + 2 *#x10), lr > in [sp + #Z*8], offset \<= 504 |
 |`save_fregp`|        x 1101100'xxzzzzzz: salvare d(8+#X) coppia in [sp + #Z * 8], offset \<= 504 |
 |`save_fregp_x`|        x 1101101'xxzzzzzz: salvare d(8+#X) coppia, in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -512 |
 |`save_freg`|        x 1101110'xxzzzzzz: salvare d(8+#X) reg in [sp + #Z * 8], offset \<= 504 |
 |`save_freg_x`|        11011110' xxxzzzzz: salvare d(8+#X) reg in [sp-(#Z + 1) * 8]!, offset pre-indicizzate > = -256 |
 |`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx: allocazione dello stack di grandi dimensioni con dimensioni \< 256M (2 ^ 24 * 16) |
-|`set_fp`|        11100001: configurare r29: con: r29 mov, sp |
-|`add_fp`|        11100010' xxxxxxxx: configurare r29 con: aggiungere r29, sp, #x10 * 8 |
+|`set_fp`|        11100001: configurare x29: con: mov x29, sp |
+|`add_fp`|        11100010' xxxxxxxx: configurare x29 con: aggiungere x29, sp, #x10 * 8 |
 |`nop`|            11100011: nessuna rimozione operazione è necessaria. |
 |`end`|            11100100: fine del codice di rimozione. Implica ret nell'epilogo. |
 |`end_c`|        11100101: fine del codice di rimozione nell'ambito corrente concatenata. |
@@ -347,12 +347,12 @@ I campi sono come segue:
 - **Funzione lunghezza** è un campo a 11 bit che fornisce la lunghezza dell'intera funzione in byte, diviso 4. Se la funzione è maggiore di 8 KB, debba invece usare un record. XData completo.
 - **Dimensione dei frame** è un campo di bit 9 che indica il numero di byte di stack allocato per questa funzione, divisa per 16. Le funzioni che allocano più grande (8k-16) byte dello stack è necessario usare un record. XData completo. Ciò include l'area di variabile locale, in uscita area dei parametri, salvati dal chiamato Int e FP area e area parametri home, ma escludendo area Allocazione dinamica.
 - **CR** è un flag a 2 bit che indica se la funzione include istruzioni aggiuntive per configurare una catena di frame e il collegamento restituito:
-  - 00 = funzione ai, \<r29, lr > coppia non viene salvata nello stack.
+  - 00 = funzione ai, \<x29, lr > coppia non viene salvata nello stack.
   - 01 = funzione ai, \<lr > viene salvato nello stack
   - 10 = riservati;
-  - 11 = funzione concatenate, viene utilizzata un'istruzione di coppia di archivio/carico prologo/epilogo \<r29, lr >
-- **H** è un flag a 1 bit che indica se la funzione privo di parametro di tipo integer (r0-r7) di registra archiviandoli all'inizio della funzione. (0 = non ospita i registri, 1 = ospita i registri).
-- **RegI** è un campo a 4 bit che indica il numero di registri INT non volatile (r19-r28) salvato nel percorso canonico dello stack.
+  - 11 = funzione concatenate, viene utilizzata un'istruzione di coppia di archivio/carico prologo/epilogo \<x29, lr >
+- **H** è un flag a 1 bit che indica se la funzione privo di parametro di tipo integer Registra (x7 x0) archiviandoli all'inizio della funzione. (0 = non ospita i registri, 1 = ospita i registri).
+- **RegI** è un campo a 4 bit che indica il numero di registri INT non volatile (x19 x28) salvato nel percorso canonico dello stack.
 - **RegF** è un campo di 3 bit che indica il numero di registri FP non volatile (d8-d15) salvato nel percorso canonico dello stack. (RegF = 0: non viene salvato alcun registro fp; RegF > 0: RegF + 1 FP registri vengono salvate). Compressi di rimozione dati non possono essere utilizzati per la funzione che consente di salvare un solo registro FP.
 
 Prologhi canoniche che rientrano nelle categorie 1, 2 (senza area dei parametri in uscita), 3 e 4 nella sezione precedente possono essere rappresentati dal formato di rimozione compresso.  L'epilogo di una funzione per funzioni canoniche seguono un form molto simile, eccetto **H** non ha alcun effetto il `set_fp` istruzione viene omesso e l'ordine dei passaggi, nonché le istruzioni in ogni passaggio vengono invertiti nell'epilogo. L'algoritmo per compresso xdata segue questi passaggi, descritta in dettaglio nella tabella riportata di seguito:
@@ -367,26 +367,26 @@ Passaggio 3: Salvare i registri salvati dal chiamato FP.
 
 Passaggio 4: Salvare gli argomenti di input nell'area dei parametri home.
 
-Passaggio 5: Allocare stack restante, tra cui LAN, \<r29, lr > di associazione e in uscita area dei parametri. 5a corrisponde al tipo canonico 1. 5b e 5C sono per il tipo canonico 2. 5D e 5e per entrambi tipo 3 e 4 di tipo.
+Passaggio 5: Allocare stack restante, tra cui LAN, \<x29, lr > di associazione e in uscita area dei parametri. 5a corrisponde al tipo canonico 1. 5b e 5C sono per il tipo canonico 2. 5D e 5e per entrambi tipo 3 e 4 di tipo.
 
 Passaggio &|Valori di flag|n. di istruzioni|Codice operativo|Codice di rimozione
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2)|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &&<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5c|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5E|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+1|0 < **RegI** <= 10|RegI / 2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** == 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5E|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Se **CR** = = 01 e **RegI** è un numero dispari, il passaggio 2 e ultimo save_rep nel passaggio 1 viene unito in uno save_regp.
 
 \*\* Se **RegI** == **CR** = = 0, e **RegF** ! = 0, il primo stp per la virgola mobile non di decremento prefisso.
 
-\*\*\* Nessuna istruzione corrispondente a `mov r29, sp` è presente nell'epilogo. Compressi di rimozione non è possibile utilizzare i dati se una funzione richiede il ripristino di sp dal r29.
+\*\*\* Nessuna istruzione corrispondente a `mov x29,sp` è presente nell'epilogo. Compressi di rimozione non è possibile utilizzare i dati se una funzione richiede il ripristino di sp dal x29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Epilogo di una funzione e rimozione di prologhi parziale
 
@@ -397,16 +397,16 @@ La situazione di rimozione più comune è uno in cui l'eccezione o chiamata si �
 Ad esempio, eseguire questa sequenza di prologo ed epilogo:
 
 ```asm
-0000:    stp    r29, lr, [sp, -256]!        // save_fplr_x  256 (pre-indexed store)
-0004:    stp    d8,d9,[sp,224]              // save_fregp 0, 224
-0008:    stp    r19,r20,[sp,240]            // save_regp 0, 240
-000c:    mov    r29,sp                      // set_fp
+0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
+0004:    stp    d8,d9,[sp,#224]             // save_fregp 0, 224
+0008:    stp    x19,x20,[sp,#240]           // save_regp 0, 240
+000c:    mov    x29,sp                      // set_fp
          ...
-0100:    mov    sp,r29                      // set_fp
-0104:    ldp    r19,r20,[sp,240]            // save_regp 0, 240
+0100:    mov    sp,x29                      // set_fp
+0104:    ldp    x19,x20,[sp,#240]           // save_regp 0, 240
 0108:    ldp    d8,d9,[sp,224]              // save_fregp 0, 224
-010c:    ldp    r29, lr, [sp, -256]!        // save_fplr_x  256 (post-indexed load)
-0110:    ret     lr                         // end
+010c:    ldp    x29,lr,[sp],#256            // save_fplr_x  256 (post-indexed load)
+0110:    ret    lr                          // end
 ```
 
 Accanto a ogni opcode è il codice di rimozione appropriato che descrive questa operazione. La prima cosa da notare è che la serie di codici di rimozione per il prologo della query è un'immagine speculare dei codici di rimozione per l'epilogo (senza contare l'istruzione finale dell'epilogo). Si tratta di una situazione comune, che per questo motivo la rimozione codici per il prologo si presumono sempre da archiviare in ordine inverso dall'ordine di esecuzione del prologo.
@@ -442,9 +442,9 @@ Un caso tipico di frammenti di funzione è "code" separazione con il compilatore
 - (area 1: avviare)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
@@ -460,9 +460,9 @@ Un caso tipico di frammenti di funzione è "code" separazione con il compilatore
 
     ```asm
     ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
@@ -489,27 +489,27 @@ Un altro caso più complesso di frammenti di funzione è "riduzione di ritorno a
 - (area 1: avviare)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
 - (area 2: iniziare)
 
     ```asm
-        stp     r21,r22,[sp,224]        // save_regp 2, 224
+        stp     x21,x22,[sp,#224]       // save_regp 2, 224
         ...
-        ldp     r21,r22,[sp,224]        // save_regp 2, 224
+        ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
 - (area 2: fine)
 
     ```asm
         ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
