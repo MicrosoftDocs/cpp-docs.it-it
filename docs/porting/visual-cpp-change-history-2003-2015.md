@@ -5,10 +5,10 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58898882"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
@@ -66,7 +66,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - `float` e `long double`: versioni delle funzioni a virgola mobile `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2`, `expm1`, `fabs`, `fdim`, `floor`, `fma`, `fmax`, `fmin`, `fmod`, `frexp`, `hypot`, `ilogb`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round`, `scalbln`, `scalbn`, `sin`, `sinh`, `sqrt`, `tan`, `tanh`, `tgamma` e `trunc`
+  - Versioni `float` e `long double` delle funzioni a virgola mobile `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2`, `expm1`, `fabs`, `fdim`, `floor`, `fma`, `fmax`, `fmin`, `fmod`, `frexp`, `hypot`, `ilogb`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round`, `scalbln`, `scalbn`, `sin`, `sinh`, `sqrt`, `tan`, `tanh`, `tgamma` e `trunc`
 
   Se è presente codice che usa `abs` con un tipo a virgola mobile che include solo l'intestazione \<math.h>, le versioni a virgola mobile non sono più disponibili. La chiamata viene risolta in `abs(int)` anche con un argomento a virgola mobile, e viene generato l'errore seguente:
 
@@ -76,7 +76,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
   Per correggere questo avviso è necessario sostituire la chiamata a `abs` con una versione a virgola mobile di `abs`, ad esempio `fabs` per un argomento double o `fabsf` per un argomento float, oppure includere l'intestazione \<cmath> e continuare a usare `abs`.
 
-- **Conformità dei numeri a virgola mobile**
+- **Conformità del punto a virgola mobile**
 
    Sono state apportate numerose modifiche alla libreria matematica per migliorare la conformità alle specifiche IEEE 754 e C11 allegato F rispetto all'input per casi speciali, ad esempio NaN e infiniti. Ad esempio, gli input NaN non interattivi, che spesso venivano considerati errori nelle versioni precedenti della libreria, non vengono più considerati errori. Vedere [Standard IEEE 754](https://standards.ieee.org/standard/754-2008.html) e l'allegato F dello [Standard C11](http://www.iso-9899.info/wiki/The_Standard).
 
@@ -108,7 +108,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
 #### <a name="stdioh-and-conioh"></a>\<stdio.h> e \<conio.h>
 
-- **La famiglia di funzioni di printf e scanf vengono ora definite inline.**
+- **La famiglia di funzioni di printf e scanf ora viene definita inline.**
 
    Le definizioni di tutte le funzioni `printf` e `scanf` sono state spostate inline in \<stdio.h>, \<conio.h> e altre intestazioni CRT. Questa modifica sostanziale genera un errore del linker (LNK2019, simbolo esterno non risolto) per tutti i programmi che hanno dichiarato localmente queste funzioni senza includere le intestazioni CRT appropriate. Se possibile, aggiornare il codice per includere le intestazioni CRT, ovvero aggiungere `#include <stdio.h>`, e le funzioni inline. Se invece non si vuole modificare il codice per includere questi file di intestazione, una soluzione alternativa consiste nell'aggiungere una libreria aggiuntiva all'input del linker legacy_stdio_definitions.lib.
 
@@ -315,7 +315,7 @@ Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Vis
 
    L'implementazione di \<chrono> di [steady_clock](../standard-library/steady-clock-struct.md) è stata modificata per soddisfare i requisiti standard C++ per tenuta e monotonicità. `steady_clock` ora è basato su [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) e `high_resolution_clock` è ora un typedef per `steady_clock`. Di conseguenza, in Visual Studio `steady_clock::time_point` è ora un typedef per `chrono::time_point<steady_clock>`. Ciò non vale necessariamente per altre implementazioni.
 
-- **Allocatori e const**
+- **allocatori e const**
 
    Sono ora necessari confronti di uguaglianza/disuguaglianza di allocatori per accettare argomenti const su entrambi i lati. Se gli allocatori definiscono questi operatori come segue:
 
@@ -341,7 +341,7 @@ Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Vis
 
    I file di intestazione non standard \<hash_map> e \<hash_set> sono deprecati in Visual Studio 2015 e verranno rimossi in una versione futura. In alternativa usare \<unordered_map> e \<unordered_set>.
 
-- **Criteri di confronto e operator()**
+- **comparatori e operator()**
 
    I contenitori associativi (famiglia \<map>) ora richiedono che i comparatori abbiano operatori di chiamata di funzioni che possono essere chiamati da const. Il codice seguente in una dichiarazione di classe comparatore ora causa errori di compilazione:
 
@@ -355,7 +355,7 @@ Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Vis
     bool operator()(const X& a, const X& b) const
     ```
 
-- **Caratteristiche dei tipi**
+- **tratti di tipo**
 
    I nomi precedenti per tratti di tipo di una versione precedente dello standard C++ in versione bozza sono stati rimossi. Sono stati modificati in C++11 e sono stati aggiornati ai valori C++11 in Visual Studio 2015. La tabella seguente illustra i nomi precedenti e nuovi:
 
@@ -443,7 +443,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     }
     ```
 
-- `/Zg` - Opzione del compilatore
+- `/Zg` (opzione del compilatore)
 
    L'opzione del compilatore `/Zg`, che consente di generare i prototipi delle funzioni, non è più disponibile. Questa opzione del compilatore è stata precedentemente deprecata.
 
@@ -1004,7 +1004,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     //other partial specializations here
     ```
 
-- **Regole applicate per le dichiarazioni con prototipo (valido per solo C).**
+- **Regole applicate per le dichiarazioni con prototipo (valido per solo C)**
 
    Il codice seguente genera ora l'errore C2065:
 
@@ -1076,7 +1076,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    Questo modello si verifica spesso con ComPtr e altri tipi nello spazio dei nomi `Microsoft::WRL`.
 
-- **Correggere un indirizzo errato**
+- **Risolvere un indirizzo errato**
 
    Il codice seguente produce ora C2440: '=': impossibile convertire da 'type *' a 'type'. Per correggere l'errore, modificare &(type) in (type) e (&f()) in (f()).
 
@@ -1528,7 +1528,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     };
     ```
 
-   Per risolvere il problema, modificare la riga superiore in `#define A();`
+   Per correggere il problema modificare la riga superiore in `#define A();`
 
    Il codice seguente genera ora l'errore C2059: errore di sintassi ')'
 
@@ -1635,7 +1635,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Le dichiarazioni __declspec(novtable) devono essere coerenti**
 
-   `__declspec` - Le dichiarazioni devono essere coerenti in tutte le librerie. Il seguente codice ora genera una violazione One Definition Rule:
+   Le dichiarazioni `__declspec` devono essere coerenti in tutte le librerie. Il seguente codice ora genera una violazione One Definition Rule:
 
     ```cpp
     //a.cpp
@@ -1775,7 +1775,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
    Inoltre, nonostante il compilatore non fornisca una diagnostica specifica, il formato dell'operatore **new** inline viene considerato non valido.
 
-- **Chiamata a 'operator *type*()' (conversione definita dall'utente) su tipi non classe**
+- **Chiamata di 'operator *type*()' (conversione definita dall'utente) in tipi non classe**
 
    Le versioni precedenti del compilatore consentivano di chiamare 'operator *type*()' su tipi non classe ignorandolo senza avvisare. Questo comportamento precedente creava un rischio di generazione di codice errato senza avvisare, determinando un comportamento imprevedibile in fase di esecuzione. Il compilatore non accetta più il codice scritto in questo modo e genera invece l'errore del compilatore C2228.
 
@@ -2292,7 +2292,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     };
     ```
 
-- `volatile` **- Le variabili membro impediscono i costruttori e gli operatori di assegnazione definiti in modo implicito**
+- `volatile` Le variabili membro  **impediscono i costruttori e gli operatori di assegnazione definiti in modo implicito**
 
    Le versioni precedenti del compilatore consentivano a una classe con variabili membro **volatili** di generare automaticamente costruttori di copia/spostamento predefiniti e operatori di assegnazione di copia/spostamento predefiniti. Questo comportamento precedente non era corretto e non è conforme allo standard C++. Ora il compilatore presuppone che una classe con variabili membro **volatile** includa operatori di costruzione e di assegnazione non semplici, e di conseguenza impedisca la generazione automatica delle implementazioni predefinite di questi operatori. Quando questa classe è un membro di un'unione (o di un'unione anonima all'interno di una classe), i costruttori di copia/spostamento e gli operatori di assegnazione di copia/spostamento dell'unione (o della classe che contiene l'unione anonima) sono definiti implicitamente come eliminati. Il tentativo di costruire o copiare l'unione (o la classe che contiene l'unione anonima) senza definirli in modo esplicito è un errore e, di conseguenza, il compilatore genera l'errore C2280.
 
@@ -2680,7 +2680,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
     #include "c.h"
     ```
 
-- **File di intestazione precompilata (PCH) e directory di inclusione non corrispondenti ** (interessa solo `/Wall` `/WX`)
+- **File di intestazione precompilata (PCH) e directory di inclusione non corrispondenti**  (interessa solo `/Wall` `/WX`)
 
    Le versioni precedenti del compilatore accettavano gli argomenti della riga di comando delle directory di inclusione non corrispondenti (`-I`) per il compilatore tra le compilazioni `-Yc` e `-Yu` quando venivano usati file di intestazione precompilata (PCH). Il codice scritto in questo modo non è più accettato dal compilatore. Il compilatore ora genera un avviso CC4599 per consentire l'identificazione degli argomenti della riga di comando delle directory di inclusione non corrispondenti (`-I`) quando si usano i file PCH.
 
@@ -2966,27 +2966,27 @@ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _IT
 
 - L'accessibilità per la barra multifunzione MFC è stata modificata.  Anziché un'architettura a un livello ora viene usata un'architettura gerarchica. È ancora possibile utilizzare il comportamento precedente chiamando `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
-- `CDatabase::GetConnect` - Il metodo è stato rimosso. Per migliorare la sicurezza, la stringa di connessione viene ora archiviata nello stato crittografato e viene decrittografata solo se necessario; non può essere restituita come testo normale.  È possibile ottenere la stringa usando il metodo `CDatabase::Dump`.
+- Il metodo `CDatabase::GetConnect` è stato rimosso. Per migliorare la sicurezza, la stringa di connessione viene ora archiviata nello stato crittografato e viene decrittografata solo se necessario; non può essere restituita come testo normale.  È possibile ottenere la stringa usando il metodo `CDatabase::Dump`.
 
 - La firma di `CWnd::OnPowerBroadcast` è stata modificata. La firma di questo gestore messaggi è stata modificata per accettare un LPARAM come secondo parametro.
 
 - Le firme sono state modificate per includere i gestori di messaggi. Gli elenchi di parametri delle seguenti funzioni sono stati modificati per utilizzare i gestori di messaggi ON_WM_* aggiunti recentemente:
 
-   - `CWnd::OnDisplayChange` è stato modificato in (UINT, int, int) invece che in (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_DISPLAYCHANGE possa essere usata nella mappa messaggi.
+   - `CWnd::OnDisplayChange` è stato modificato in (UINT, int, int) anziché (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_DISPLAYCHANGE possa essere usata nella mappa messaggi.
 
-   - `CFrameWnd::OnDDEInitiate` è stato modificato in (CWnd*, UINT, UNIT) invece che in (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_DDE_INITIATE possa essere usata nella mappa messaggi.
+   - `CFrameWnd::OnDDEInitiate` è stato modificato in (CWnd*, UINT, UNIT) anziché (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_DDE_INITIATE possa essere usata nella mappa messaggi.
 
-   - `CFrameWnd::OnDDEExecute` è stato modificato in (CWnd*, HANDLE) invece che in (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_DDE_EXECUTE possa essere usata nella mappa messaggi.
+   - `CFrameWnd::OnDDEExecute` è stato modificato in (CWnd*, HANDLE) anziché (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_DDE_EXECUTE possa essere usata nella mappa messaggi.
 
-   - `CFrameWnd::OnDDETerminate` è stato modificato in (CWnd*) come parametro invece che in (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_DDE_TERMINATE possa essere usata nella mappa messaggi.
+   - `CFrameWnd::OnDDETerminate` è stato modificato in (CWnd*) come parametro anziché (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_DDE_TERMINATE possa essere usata nella mappa messaggi.
 
-   - `CMFCMaskedEdit::OnCut` è stato modificato e non ha parametri invece di avere (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_CUT possa essere usata nella mappa messaggi.
+   - `CMFCMaskedEdit::OnCut` è stato modificato e non ha parametri anziché avere (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_CUT possa essere usata nella mappa messaggi.
 
-   - `CMFCMaskedEdit::OnClear` è stato modificato e non ha parametri invece di avere (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_CLEAR possa essere usata nella mappa messaggi.
+   - `CMFCMaskedEdit::OnClear` è stato modificato e non ha parametri anziché avere (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_CLEAR possa essere usata nella mappa messaggi.
 
-   - `CMFCMaskedEdit::OnPaste` è stato modificato e non ha parametri invece di avere (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_PASTE possa essere usata nella mappa messaggi.
+   - `CMFCMaskedEdit::OnPaste` è stato modificato e non ha parametri anziché avere (WPARAM, LPARAM) in modo tale che la nuova macro ON_WM_PASTE possa essere usata nella mappa messaggi.
 
-- `#ifdef` - Le direttive nei file di intestazione MFC sono state rimosse. Numerose direttive `#ifdef` nei file di intestazione MFC correlati a versioni non supportate di Windows (WINVER &lt; 0x0501) sono state rimosse.
+- Le direttive `#ifdef` nei file di intestazione MFC sono state rimosse. Numerose direttive `#ifdef` nei file di intestazione MFC correlati a versioni non supportate di Windows (WINVER &lt; 0x0501) sono state rimosse.
 
 - La DLL ATL (atl120.dll) è stata rimossa. La DLL ATL viene ora fornita come intestazioni e come libreria statica (atls.lib).
 
@@ -3090,7 +3090,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Aggiunto un parametro al costruttore `CFolderPickerDialog`. È un parametro predefinito che non rappresenta una modifica essenziale per il codice sorgente.
 
-- `CFileStatus` - Le dimensioni della struttura sono state modificate: il membro `m_attribute` è stato modificato da BYTE a DWORD (in base al valore restituito da `GetFileAttributes`).
+- Modificate le dimensioni della struttura `CFileStatus`: il membro `m_attribute` è stato modificato da BYTE a DWORD (in base al valore restituito da `GetFileAttributes`).
 
 - `CRichEditCtrl` e `CRichEditView` usano MSFTEDIT_CLASS (controllo RichEdit 4.1) anziché RICHEDIT_CLASS (controllo RichEdit 3.0) nelle compilazioni Unicode.
 
@@ -3140,7 +3140,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
    - `CMFCSpinButtonCtrl`
 
-   - `CMFCToolBar` ReplaceThisText
+   - `CMFCToolBar`Sostituire il testo
 
    - `CMFCToolBarComboBoxEdit`
 
@@ -3404,15 +3404,15 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` - Classe: la classe `CTime` ora accetta le date a partire da 1/1/1900 DC. anziché 1/1/1970 DC.
+- Classe `CTime`: la classe `CTime` ora accetta le date a partire da 1/1/1900 DC. anziché 1/1/1970 DC.
 
 - Ordine di tabulazione dei controlli nelle finestre di dialogo MFC: l'ordine di tabulazione corretto di più controlli in una finestra di dialogo MFC è disturbato se un controllo ActiveX di MFC viene inserito nell'ordine di tabulazione. Questa modifica corregge il problema.
 
    Ad esempio, creare un'applicazione di finestre di dialogo MFC che usa un controllo ActiveX e diversi controlli di modifica. Posizionare il controllo ActiveX nel mezzo dell'ordine di tabulazione dei controlli di modifica. Avviare l'applicazione, fare clic su un controllo di modifica il cui ordine di tabulazione sia dopo il controllo ActiveX, quindi usare la tabulazione. Prima di questa modifica lo stato attivo passava al controllo di modifica successivo al controllo ActiveX anziché al controllo di modifica successivo nell'ordine di tabulazione.
 
-- `CFileDialog` - Classe: i modelli personalizzati per la classe `CFileDialog` non possono essere trasferiti automaticamente in Windows Vista. Si possono ancora usare, ma non hanno le funzionalità aggiuntive o l'aspetto delle finestre di dialogo di Windows Vista.
+- Classe `CFileDialog`: i modelli personalizzati per la classe `CFileDialog` non possono essere trasferiti automaticamente in Windows Vista. Si possono ancora usare, ma non hanno le funzionalità aggiuntive o l'aspetto delle finestre di dialogo di Windows Vista.
 
-- `CWnd` e `CFrameWnd` - Classi: Il metodo `CWnd::GetMenuBarInfo` è stato rimosso.
+- Classe `CWnd` e classe `CFrameWnd`: Il metodo `CWnd::GetMenuBarInfo` è stato rimosso.
 
    Il metodo `CFrameWnd::GetMenuBarInfo` è ora un metodo non virtuale. Per altre informazioni, vedere la **funzione GetMenuBarInfo** in Windows SDK.
 
