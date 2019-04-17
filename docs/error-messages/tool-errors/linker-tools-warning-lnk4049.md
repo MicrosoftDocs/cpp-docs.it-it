@@ -1,23 +1,25 @@
 ---
 title: Avviso degli strumenti del linker LNK4049
-ms.date: 04/09/2019
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4049
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: 357bf5a981dddadfd79d2d6981ccc9c478909097
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477353"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674253"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>Avviso degli strumenti del linker LNK4049
 
 > simbolo '*simbolo*'definito '*filename. obj*' è importato
 
-Il simbolo è stato esportato da sia importato al programma.
+[declspec](../../cpp/dllexport-dllimport.md) è stato specificato per *simbolo* anche se il simbolo è definito nel file oggetto *filename. obj* nell'immagine stessa. Rimuovere il `__declspec(dllimport)` modificatore per risolvere il problema.
+
+## <a name="remarks"></a>Note
 
 Questo avviso viene generato dal linker quando si definisce un simbolo nel file di un oggetto e farvi riferimento usando la `__declspec(dllimport)` modificatore di dichiarazione in un altro.
 

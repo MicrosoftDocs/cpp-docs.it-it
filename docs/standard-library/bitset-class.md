@@ -1,6 +1,6 @@
 ---
 title: Classe bitset
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 5e5d1e14e6cdf35c907b2bb1f7816fc07bbd416f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f580e56efe1db42e464deedfa66da861ff897bcb
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562838"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "58566117"
 ---
 # <a name="bitset-class"></a>Classe bitset
 
@@ -111,8 +111,8 @@ Un bit viene impostato se il valore è 1 e reimpostato se il valore è 0. Capovo
 |[operator>>=](#op_rshift_eq)|Sposta i bit in un `bitset` a destra di un numero di posizioni specificato e restituisce il risultato nel `bitset` di destinazione.|
 |[operator&#91;&#93;](#op_at)|Restituisce un riferimento a un bit in una posizione specificata in un `bitset` se il `bitset` è modificabile. In caso contrario, restituisce il valore del bit in tale posizione.|
 |[operator^=](#op_xor_eq)|Esegue una combinazione bit per bit di bitset con l'operazione esclusiva `OR`.|
-|[operator&#124;=](#op_or_eq')|Esegue una combinazione bit per bit di bitset con l'operazione inclusiva `OR`.|
-|[operator~](#op_dtor)|Inverte tutti i bit in un `bitset` di destinazione e restituisce il risultato.|
+|[operator&#124;=](#op_or_eq)|Esegue una combinazione bit per bit di bitset con l'operazione inclusiva `OR`.|
+|[operator~](#op_not)|Inverte tutti i bit in un `bitset` di destinazione e restituisce il risultato.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -228,7 +228,7 @@ explicit bitset(
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Intero senza segno la cui rappresentazione in base due viene usata per inizializzare i bit del bitset in fase di costruzione.
 
 *str*<br/>
@@ -237,7 +237,7 @@ La stringa di zero e quelli usati per inizializzare i valori di bit del bitset.
 *_CStr*<br/>
 La stringa di zero di tipo C e quelli usati per inizializzare i valori di bit del bitset.
 
-*POS*<br/>
+*_Pos*<br/>
 La posizione del carattere nella stringa, contando da sinistra a destra e partendo da zero, usata per inizializzare il primo bit del bitset.
 
 *count*<br/>
@@ -246,7 +246,7 @@ Il numero di caratteri nella stringa che si usa per specificare i valori inizial
 *_Zero*<br/>
 Il carattere usato per rappresentare uno zero. Il valore predefinito è "0".
 
-*C_onnessa*<br/>
+*_One*<br/>
 Il carattere usato per rappresentare un uno. Il valore predefinito è "1".
 
 ### <a name="remarks"></a>Note
@@ -463,7 +463,7 @@ bitset\<N>& flip(size_t _Pos);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 La posizione del bit il cui valore viene invertito.
 
 ### <a name="return-value"></a>Valore restituito
@@ -721,7 +721,7 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 Il numero di posizioni a sinistra di cui verranno spostati i bit nel bitset.
 
 ### <a name="return-value"></a>Valore restituito
@@ -773,7 +773,7 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 Il numero di posizioni a sinistra di cui verranno spostati i bit nel bitset.
 
 ### <a name="return-value"></a>Valore restituito
@@ -881,7 +881,7 @@ bitset\<N> operator>>(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 Il numero di posizioni a destra di cui verranno spostati i bit nel bitset.
 
 ### <a name="return-value"></a>Valore restituito
@@ -934,7 +934,7 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 Il numero di posizioni a destra di cui verranno spostati i bit nel bitset.
 
 ### <a name="return-value"></a>Valore restituito
@@ -983,7 +983,7 @@ reference operator[](size_t _Pos);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 La posizione in cui viene individuato il bit all'interno del bitset.
 
 ### <a name="remarks"></a>Note
@@ -1149,7 +1149,7 @@ the target bitset b1 becomes:   ( 01111 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-## <a name="op_dtor"></a>  bitset::operator~
+## <a name="op_not"></a>  bitset::operator~
 
 Inverte tutti i bit in un bitset di destinazione e restituisce il risultato.
 
@@ -1212,7 +1212,7 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Il valore dell'oggetto di tipo **bool** da assegnare a un bit in un bitset.
 
 *_Bitref*<br/>
@@ -1327,7 +1327,7 @@ bitset\<N>& reset(size_t _Pos);
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 La posizione del bit nel bitset da reimpostare su 0.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1390,10 +1390,10 @@ bitset\<N>& set(
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 La posizione del bit nel bitset da impostare su un valore assegnato.
 
-*Val*<br/>
+*val*<br/>
 Il valore da assegnare al bit nella posizione specificata.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1496,7 +1496,7 @@ bool test(size_t _Pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 La posizione del bit nel bitset di cui si deve verificare il valore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1506,3 +1506,129 @@ La posizione del bit nel bitset di cui si deve verificare il valore.
 ### <a name="remarks"></a>Note
 
 La funzione membro genera un'eccezione [out_of_range](../standard-library/out-of-range-class.md)
+
+## <a name="to_string"></a> bitset::to_string
+
+Converte un oggetto bitset in una rappresentazione di stringa.
+
+```
+template <class charT = char, class traits = char_traits<charT>, class Allocator = allocator<charT> >
+   basic_string<charT, traits, Allocator> to_string(charT zero = charT('0'), charT one = charT('1')) const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Un oggetto stringa della classe `basic_string`, in cui ogni set di bit nel bitset con un carattere corrispondente di 1 e un carattere di 0 se il bit è impostato.
+
+### <a name="example"></a>Esempio
+
+```cpp
+// bitset_to_string.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+#include <string>
+
+int main( )
+{
+   using namespace std;
+
+   bitset<5> b1 ( 7 );
+
+   cout << "The ordered set of bits in the bitset<5> b1( 7 )"
+        << "\n  that was generated by the number 7 is: ( "
+        << b1 << " )" << endl;
+
+   string s1;
+   s1 =  b1.template to_string<char, 
+   char_traits<char>, allocator<char> >( );
+   cout << "The string returned from the bitset b1"
+        << "\n  by the member function to_string( ) is: "
+        << s1 << "." << endl;
+}
+```
+
+```Output
+The ordered set of bits in the bitset<5> b1( 7 )
+  that was generated by the number 7 is: ( 00111 )
+The string returned from the bitset b1
+  by the member function to_string( ) is: 00111.
+```
+
+## <a name="to_ullong"></a> bitset::to_ullong
+
+Restituisce un **long long senza segno** valore che contiene gli stessi bit impostati del contenuto dell'oggetto bitset.
+
+```
+unsigned long long to_ullong() const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce la somma dei valori di bit presenti nella sequenza di bit come un **long long senza segno**. Ciò **long long senza segno** valore ricreerà gli stessi bit impostati se viene usato per inizializzare un bitset.
+
+### <a name="exceptions"></a>Eccezioni
+
+Genera un [overflow_error](overflow-error-class.md) oggetto se un bit nella sequenza di bit un bit ha valore che non può essere rappresentato come un valore di tipo **long long senza segno**.
+
+### <a name="remarks"></a>Note
+
+Restituisce la somma dei valori di bit presenti nella sequenza di bit come un **long long senza segno**.
+
+## <a name="to_ulong"></a> bitset::to_ulong
+
+Converte un oggetto bitset sul numero intero che genera la sequenza di bit contenuti se usati per inizializzare il bitset.
+
+```
+unsigned long to_ulong( ) const;
+```
+
+### <a name="return-value"></a>Valore restituito
+
+Valore intero che genera i bit in un bitset se usato nell'inizializzazione del bitset.
+
+### <a name="remarks"></a>Note
+
+Applicando la funzione membro restituisce il valore integer che contiene la stessa sequenza di cifre 0 e 1 perché è stata trovata nella sequenza di bit contenuti nel bitset.
+
+La funzione membro genera un' [overflow_error](overflow-error-class.md) oggetto se un bit nella sequenza di bit un bit ha valore che non può essere rappresentato come un valore di tipo **long senza segno**.
+
+### <a name="example"></a>Esempio
+
+```cpp
+// bitset_to_ulong.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+
+   bitset<5> b1 ( 7 );
+
+   cout << "The ordered set of bits in the bitset<5> b1( 7 )"
+        << "\n  that was generated by the number 7 is: ( "
+        << b1 << " )" << endl;
+
+   unsigned long int i;
+   i = b1.to_ulong( );
+   cout << "The integer returned from the bitset b1,"
+        << "\n  by the member function to_long( ), that"
+        << "\n  generated the bits as a base two number is: "
+        << i << "." << endl;
+}
+```
+
+```Output
+The ordered set of bits in the bitset<5> b1( 7 )
+  that was generated by the number 7 is: ( 00111 )
+The integer returned from the bitset b1,
+  by the member function to_long( ), that
+  generated the bits as a base two number is: 7.
+```
+
+## <a name="see-also"></a>Vedere anche
+
+[\<bitset>](bitset.md)<br/>
+[operatori BitSet](bitset-operators.md)<br/>
