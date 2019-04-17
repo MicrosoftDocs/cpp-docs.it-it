@@ -6,12 +6,12 @@ ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: b558b2e0c381b8521fe0ba5f18647a933175ce07
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58867271"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59430696"
 ---
 # <a name="create-a-c-console-app-project"></a>Creare un progetto di app console C++
 
@@ -34,6 +34,9 @@ Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e l
 1. Nell'elenco di modelli di progetto scegliere **App console**, quindi scegliere **Avanti**.
 
    ![Scegliere il modello App console](./media/calc-vs2019-choose-console-app.png "Scegliere il modello App console")
+
+   > [!Important]
+   > Assicurarsi di scegliere la versione C++ del modello **App Console**. La versione include i tag **C++**, **Windows** e **Console** e visualizza "++" nell'angolo dell'icona.
 
 1. Nella finestra di dialogo **Configura il nuovo progetto** selezionare la casella di modifica **Nome del progetto**, assegnare al nuovo progetto il nome *CalculatorTutorial*, quindi scegliere **Crea**.
 
