@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
 ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780366"
 ---
 # <a name="cmapstringtostring-class"></a>Classe CMapStringToString
@@ -110,7 +110,7 @@ ad esempio, si converte in
 
 ## <a name="remarks"></a>Note
 
-`CMapStringToString` incorpora il `IMPLEMENT_SERIAL` macro per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a turno se una mappa è archiviata in un archivio, con l'inserimento di overload ( **<<**) operatore o con il `Serialize` funzione membro.
+`CMapStringToString` incorpora la macro `IMPLEMENT_SERIAL` per supportare la serializzazione e il dump dei relativi elementi. Ogni elemento viene serializzato a turno se una mappa è archiviata in un archivio, con l'inserimento di overload ( **<<**) operatore o con il `Serialize` funzione membro.
 
 Se è necessario un dump di singoli `CString` -  `CString` elementi, è necessario impostare la profondità del contesto di dump su 1 o versioni successive.
 
@@ -228,4 +228,4 @@ Chiamare questo metodo per cercare un elemento della mappa con una chiave che co
 
 [Esempio MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)

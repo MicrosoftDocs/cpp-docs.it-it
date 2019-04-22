@@ -5,10 +5,10 @@ helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
 ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774737"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Procedura: Definire e usare enumerazioni in c++ /CLI
@@ -92,7 +92,7 @@ Gli operatori &#124; ^ & ~ + +, sono definiti solo per le enumerazioni con integ
 Il compilatore non esegue alcun controllo statico o dinamico del risultato di un'operazione di enumerazione. un'operazione può comportare un valore non compreso nell'intervallo di enumeratori valido dell'enumerazione.
 
 > [!NOTE]
->  C++11 introduce i tipi di classe di enumerazione nel codice non gestito che sono significativamente diversi rispetto alle classi di enumerazione gestita in C + + / CLI. In particolare, il tipo di classe enum C++ 11 non supporta gli stessi operatori di tipo di classe di enumerazione gestita in C + + / CLI e C + + c++ /CLI codice sorgente dell'interfaccia della riga deve fornire un identificatore di accessibilità nell'enumerazione gestita delle dichiarazioni di classe per distinguerli da non gestiti (C++ 11) le dichiarazioni di classe enum. Per altre informazioni sulle classi di enumerazione in C + + c++ /CLI C++ /CLI, c++ /CX e C++ 11, vedere [classe enum](../extensions/enum-class-cpp-component-extensions.md).
+>  C++11 introduce i tipi di classe di enumerazione nel codice non gestito che sono significativamente diversi rispetto alle classi di enumerazione gestita in C++/CLI. In particolare, il tipo di classe enum C++ 11 non supporta gli stessi operatori di tipo di classe di enumerazione gestita in C++/CLI, e C++/codice sorgente dell'interfaccia della riga deve fornire un identificatore di accessibilità nell'enumerazione gestita delle dichiarazioni di classe per distinguerli da unmanaged (c++11) le dichiarazioni di classe di enumerazione. Per altre informazioni sulle classi di enumerazione in C++/CLI, C++//CX e C++ 11, vedere [enum classi](../extensions/enum-class-cpp-component-extensions.md).
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Vedere anche
 
-[classe di enumerazione](../extensions/enum-class-cpp-component-extensions.md)
+[enum class](../extensions/enum-class-cpp-component-extensions.md)

@@ -1,20 +1,20 @@
 ---
-title: 'Procedura: Definire e usare classi e struct (C + + CLI)'
+title: 'Procedura: Definire e usare classi e struct (C++/CLI)'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774919"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procedura: Definire e usare classi e struct (C + + CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procedura: Definire e usare classi e struct (C++/CLI)
 
-Questo articolo illustra come definire e usare i tipi riferimento definiti dall'utente e tipi di valore in C + + / CLI.
+Questo articolo illustra come definire e usare i tipi riferimento definiti dall'utente e tipi di valore in C++/CLI.
 
 ##  <a name="BKMK_Contents"></a> Contenuto
 
@@ -455,7 +455,7 @@ Il compilatore non può rendere inline una chiamata a un costruttore se la class
 
 Definire un costruttore statico come funzione membro privata, poiché ha lo scopo di essere chiamato solo da CLR.
 
-Per altre informazioni sui costruttori statici, vedere [come: Definire un costruttore statico di interfaccia (C + + CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
+Per altre informazioni sui costruttori statici, vedere [come: Definire un costruttore statico di interfaccia (C++/CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
 
 ```cpp
 // compile with: /clr

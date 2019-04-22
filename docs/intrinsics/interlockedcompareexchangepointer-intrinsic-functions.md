@@ -25,10 +25,10 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
 ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024816"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funzioni intrinseche _InterlockedCompareExchangePointer
@@ -102,7 +102,7 @@ Il valore restituito è il valore iniziale della destinazione.
 
 ## <a name="remarks"></a>Note
 
-`_InterlockedCompareExchangePointer` esegue un confronto atomico del `Destination` indirizzi con il `Comparand` indirizzo. Se l'indirizzo `Destination` è uguale all'indirizzo `Comparand`, l'indirizzo `Exchange` viene archiviato nell'indirizzo specificato da `Destination`. In caso contrario, non viene eseguita alcuna operazione.
+`_InterlockedCompareExchangePointer` esegue un confronto atomico dell'indirizzo `Destination` con l'indirizzo `Comparand`. Se l'indirizzo `Destination` è uguale all'indirizzo `Comparand`, l'indirizzo `Exchange` viene archiviato nell'indirizzo specificato da `Destination`. In caso contrario, non viene eseguita alcuna operazione.
 
 `_InterlockedCompareExchangePointer` fornisce il supporto intrinseco del compilatore per il SDK di Windows Win32 [interlockedcompareexchangepointer](https://msdn.microsoft.com/library/ff547863.aspx) (funzione).
 

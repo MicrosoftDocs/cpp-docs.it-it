@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
 ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026792"
 ---
 # <a name="icommandimpl-class"></a>Classe ICommandImpl
@@ -91,7 +91,7 @@ Un'interfaccia di comando. Il valore predefinito è `ICommand`.
 |[Annulla](#cancel)|Annulla l'esecuzione del comando corrente.|
 |[CancelExecution](#cancelexecution)|Annulla l'esecuzione del comando corrente.|
 |[CreateRowset](#createrowset)|Crea un oggetto set di righe.|
-|[Esegui](#execute)|Esegue il comando.|
+|[Execute](#execute)|Esegue il comando.|
 |[GetDBSession](#getdbsession)|Restituisce un puntatore a interfaccia per la sessione che ha creato il comando.|
 |[ICommandImpl](#icommandimpl)|Costruttore.|
 
@@ -277,5 +277,5 @@ Il `Execute` metodo della classe del comando può impostare questa variabile su 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

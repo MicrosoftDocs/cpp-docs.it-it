@@ -19,10 +19,10 @@ helpviewer_keywords:
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
 ms.openlocfilehash: 3da533b3cf2ab8f396e4ba284cc0bf921a5c80b5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023204"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>Funzioni intrinseche _interlockedbittestandset

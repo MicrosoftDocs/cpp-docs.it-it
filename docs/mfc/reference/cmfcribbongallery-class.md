@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780392"
 ---
 # <a name="cmfcribbongallery-class"></a>Classe CMFCRibbonGallery
@@ -328,7 +328,7 @@ void EnableMenuResize(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] True per abilitare il ridimensionamento di menu. in caso contrario, FALSE.
 
 *bVertcalOnly*<br/>
@@ -348,7 +348,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per specificare che la barra laterale è abilitata; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
@@ -691,7 +691,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] La finestra padre della finestra raccolta della barra multifunzione.
 
-*Data*<br/>
+*data*<br/>
 [out] Oggetto `CAccessibilityData` oggetto che riceve i dati di accessibilità dalla raccolta della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -818,7 +818,7 @@ Per determinare l'elemento specifico che un utente ha selezionato dalla raccolta
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 [Classe CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778325"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Procedura: Eseguire la conversione tra vari tipi di stringhe
@@ -804,8 +804,8 @@ Hello, World! (basic_string)
 
 [Macro di conversione di stringhe MFC e ATL](../atl/reference/string-conversion-macros.md)<br/>
 [Operazioni di CString relative alle stringhe in formato C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[Procedura: Convertire stringhe Standard in System:: String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[Procedura: Convertire System:: String in stringhe Standard](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[Procedura: Convertire stringhe standard in System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[Procedura: Convertire System::String in stringhe standard](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
 [Procedura: Convertire System:: String in wchar_t * o char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [Programmazione con CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>

@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773073"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in] Puntatore a un contesto di dispositivo.
 
-*tipo*<br/>
+*type*<br/>
 [in] Valore enumerato di un tipo di immagine. Vedere la sezione Osservazioni per un elenco di valori possibili.
 
 *rectImage*<br/>
@@ -1199,7 +1199,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Questo parametro non viene utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Finestra padre per l'elemento della barra multifunzione.
 
-*Data*<br/>
+*data*<br/>
 Dati di accessibilità per l'elemento della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1963,10 +1963,10 @@ La tabella seguente riepiloga la logica per questo metodo.
 
 |*bCompactMode*|Dimensione dell'elemento corrente della barra multifunzione|Nuova dimensione dell'elemento della barra multifunzione|
 |--------------------|---------------------------------|-----------------------------|
-|true|Compact|Nessuna modifica.|
-|true|Intermedio|Compatta se possibile.|
-|true|Large|Livello intermedio se possibile.|
-|false|Compact|Se possibile; a livello intermedio in caso contrario, di grandi dimensioni.|
+|TRUE|Compact|Nessuna modifica.|
+|TRUE|Intermedio|Compatta se possibile.|
+|TRUE|Large|Livello intermedio se possibile.|
+|FALSE|Compact|Se possibile; a livello intermedio in caso contrario, di grandi dimensioni.|
 
 ##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData
 
@@ -2275,5 +2275,5 @@ TRUE se l'elemento della barra multifunzione è lo stato attivo; in caso contrar
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

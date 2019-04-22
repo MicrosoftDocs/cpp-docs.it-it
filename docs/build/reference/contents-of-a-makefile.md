@@ -6,10 +6,10 @@ helpviewer_keywords:
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
 ms.openlocfilehash: 59aa21e74a7e127816fea7534861469579d5b60f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021514"
 ---
 # <a name="contents-of-a-makefile"></a>Contenuto di un makefile
@@ -18,7 +18,7 @@ Contiene un makefile:
 
 - [Blocchi di descrizione](description-blocks.md)
 
-- [Comandi:](commands-in-a-makefile.md)
+- [Comandi](commands-in-a-makefile.md)
 
 - [Macro](macros-and-nmake.md)
 

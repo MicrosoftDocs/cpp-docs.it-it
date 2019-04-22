@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
 ms.openlocfilehash: ac57bac1d132c581ee12048b89d13ed1d1fdb7da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026344"
 ---
 # <a name="writemsr"></a>__writemsr
@@ -32,10 +32,10 @@ void __writemsr(
 
 #### <a name="parameters"></a>Parametri
 
-*Registrazione*<br/>
+*Register*<br/>
 [in] Il registro specifico di modello.
 
-*Value*<br/>
+*Valore*<br/>
 [in] Valore da scrivere.
 
 ## <a name="requirements"></a>Requisiti

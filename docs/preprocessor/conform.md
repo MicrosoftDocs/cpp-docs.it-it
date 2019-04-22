@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
 ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026578"
 ---
 # <a name="conform"></a>conform
@@ -30,7 +30,7 @@ Specifica il comportamento in fase di esecuzione del [/Zc: forScope](../build/re
 *name*<br/>
 Specifica il nome dell'opzione del compilatore da modificare. Valido solo *name* è `forScope`.
 
-**Show**<br/>
+**show**<br/>
 (Facoltativo) Fa sì che l'impostazione corrente di *nome* (true o false) da visualizzare mediante un messaggio di avviso durante la compilazione. Ad esempio `#pragma conform(forScope, show)`.
 
 **on**, **off**<br/>

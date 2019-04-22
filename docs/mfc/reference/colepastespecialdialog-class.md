@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776908"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
@@ -131,13 +131,13 @@ Stringa che descrive il formato per l'utente.
 *lpszResult*<br/>
 Stringa che descrive il risultato se viene scelto questo formato nella finestra di dialogo.
 
-*flag*<br/>
+*flags*<br/>
 I diversi collegamento e incorporamento opzioni disponibili per questo formato. Questo flag è una combinazione bit per bit di uno o più dei diversi valori del OLEUIPASTEFLAG tipo enumerato.
 
 *cf*<br/>
 Il formato degli Appunti da aggiungere.
 
-*TYMED*<br/>
+*tymed*<br/>
 I tipi di supporto disponibile in questo formato. Si tratta di una combinazione bit per bit di uno o più dei valori nel TYMED tipo enumerato.
 
 *nFormatID*<br/>
@@ -146,7 +146,7 @@ L'ID della stringa che identifica questo formato. Il formato di questa stringa �
 *bEnableIcon*<br/>
 Flag che determina se la casella di controllo Visualizza come icona è abilitata quando si sceglie il formato seguente nella casella di riepilogo.
 
-*per il lampeggiamento*<br/>
+*bLink*<br/>
 Flag che determina se il pulsante di opzione Incolla collegamento è abilitato quando si sceglie il formato seguente nella casella di riepilogo.
 
 ### <a name="remarks"></a>Note
@@ -385,5 +385,5 @@ Per altre informazioni, vedere la [OLEUIPASTESPECIAL](/windows/desktop/api/oledl
 
 [Esempio MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDialog](../../mfc/reference/coledialog-class.md)

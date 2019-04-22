@@ -103,10 +103,10 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778767"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parametri
 
-*bSelezionare*<br/>
+*bSelect*<br/>
 Specifica la modalità di selezione del set. Se *bSelezionare* è TRUE, la stringa è selezionata ed evidenziata; se FALSE, l'evidenziazione viene rimossa e la stringa non è più selezionata.
 
 *nFirstItem*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parametri
 
-*nSelezionare*<br/>
+*nSelect*<br/>
 Specifica l'indice in base zero della stringa di selezione. Se *nSelezionare* è -1, la casella di riepilogo è impostata su Nessuna opzione di selezione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Contiene l'indice in base zero della stringa da impostare. Se -1, la selezione viene aggiunto o rimosso da tutte le stringhe, in base al valore *bSelezionare*.
 
-*bSelezionare*<br/>
+*bSelect*<br/>
 Specifica la modalità di selezione del set. Se *bSelezionare* è TRUE, la stringa è selezionata ed evidenziata; se FALSE, l'evidenziazione viene rimossa e la stringa non è più selezionata. La stringa specificata viene selezionata ed evidenziata per impostazione predefinita.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1540,10 +1540,10 @@ Valore restituito pari a 0 o maggiore specifica l'indice di un elemento nella ca
 
 [Esempio MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Classe CButton](../../mfc/reference/cbutton-class.md)<br/>
-[CComboBox (classe)](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
+[Classe CEdit](../../mfc/reference/cedit-class.md)<br/>
 [Classe CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Classe CStatic](../../mfc/reference/cstatic-class.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
 ms.openlocfilehash: 745348e81888b5a87c57fbb99d397fcd423c3ee1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025549"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList (struttura)
@@ -30,7 +30,7 @@ struct InterfaceList;
 *T*<br/>
 Un nome di interfaccia. la prima interfaccia nell'elenco ricorsiva.
 
-*G*<br/>
+*U*<br/>
 Un nome di interfaccia. le interfacce rimanenti nell'elenco ricorsiva.
 
 ## <a name="remarks"></a>Note

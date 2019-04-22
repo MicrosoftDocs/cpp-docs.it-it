@@ -1,5 +1,5 @@
 ---
-title: cpp_quote (attributo COM C++)
+title: cpp_quote (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.cpp_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
 ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024682"
 ---
 # <a name="cppquote"></a>cpp_quote
@@ -25,7 +25,7 @@ Genera la stringa specificata, senza i caratteri virgoletta, nel file con estens
 
 ### <a name="parameters"></a>Parametri
 
-*statement*<br/>
+*istruzione*<br/>
 Un'istruzione di C.
 
 ## <a name="remarks"></a>Note
@@ -48,7 +48,7 @@ Vedere l'esempio relativo [duale](dual.md) per un esempio di come usare usare **
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

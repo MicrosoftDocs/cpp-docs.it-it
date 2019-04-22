@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
 ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775972"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: Caratteri di accesso in un System:: String
@@ -22,7 +22,7 @@ ms.locfileid: "58775972"
 
 `PtrToStringChars` Restituisce un <xref:System.Char>, che è un puntatore interno (noto anche come un `byref`). Di conseguenza, è sottoposte a garbage collection. Non è necessario aggiungere questo puntatore a meno che non si intende passare a una funzione nativa.
 
-Si consideri il codice seguente.  L'aggiunta non è necessaria perché `ppchar` è un puntatore interno e se il garbage collector Sposta la stringa che punta a, verrà aggiornato anche `ppchar`. Senza una [pin_ptr (C + + CLI)](../extensions/pin-ptr-cpp-cli.md), il codice sarà valido e non è la potenziale riduzione delle prestazioni causato dal blocco.
+Si consideri il codice seguente.  L'aggiunta non è necessaria perché `ppchar` è un puntatore interno e se il garbage collector Sposta la stringa che punta a, verrà aggiornato anche `ppchar`. Senza una [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md), il codice sarà valido e non è la potenziale riduzione delle prestazioni causato dal blocco.
 
 Se si passa `ppchar` a una funzione nativa, quindi deve essere un puntatore di blocco, il garbage collector non sarà in grado di aggiornare tutti i puntatori sul frame dello stack non gestito.
 

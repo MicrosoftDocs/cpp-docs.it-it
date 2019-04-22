@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773242"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
@@ -189,10 +189,10 @@ Se *bStretch* è TRUE, estendere la dimensione lungo l'orientamento fornita da *
 
 |bStretch|bHorz|L'estensione|Orientamento|Ancoraggio di ancoraggio/Not|
 |--------------|-----------|----------------|-----------------|--------------------------|
-|true|true|L'adattamento orizzontale|In senso orizzontale orientata ai servizi|Non ancoraggio|
-|true|false|L'adattamento verticale|In senso verticale orientata ai servizi|Non ancoraggio|
-|false|true|Nessun allungamento disponibili|In senso orizzontale orientata ai servizi|Ancoraggio|
-|false|false|Nessun allungamento disponibili|In senso verticale orientata ai servizi|Ancoraggio|
+|TRUE|TRUE|L'adattamento orizzontale|In senso orizzontale orientata ai servizi|Non ancoraggio|
+|TRUE|FALSE|L'adattamento verticale|In senso verticale orientata ai servizi|Non ancoraggio|
+|FALSE|TRUE|Nessun allungamento disponibili|In senso orizzontale orientata ai servizi|Ancoraggio|
+|FALSE|FALSE|Nessun allungamento disponibili|In senso verticale orientata ai servizi|Ancoraggio|
 
 ##  <a name="calcinsiderect"></a>  CControlBar::CalcInsideRect
 

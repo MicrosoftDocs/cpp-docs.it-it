@@ -18,10 +18,10 @@ helpviewer_keywords:
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024634"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Utilizzo di classi di Database senza documenti e visualizzazioni
@@ -54,7 +54,7 @@ La creazione guidata applicazione MFC offre diverse opzioni **seleziona il suppo
 
 |Opzione|Visualizza|Document|
 |------------|----------|--------------|
-|**nessuno**|Derivata da `CView`.|Non offre alcun supporto del database. Questa è l'opzione predefinita.<br /><br /> Se si seleziona il **supporto per l'architettura documento/visualizzazione** opzione il [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) , si ottiene supporto documento completo, con la serializzazione e **New** , **Aperta**, **salvare**, e **Salva con nome** comandi la **File** menu. Visualizzare [le applicazioni con alcun documento](#_core_applications_with_no_document).|
+|**None**|Derivata da `CView`.|Non offre alcun supporto del database. Questa è l'opzione predefinita.<br /><br /> Se si seleziona il **supporto per l'architettura documento/visualizzazione** opzione il [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) , si ottiene supporto documento completo, con la serializzazione e **New** , **Aperta**, **salvare**, e **Salva con nome** comandi la **File** menu. Visualizzare [le applicazioni con alcun documento](#_core_applications_with_no_document).|
 |**Solo i file di intestazione**|Derivata da `CView`.|Fornisce il livello di base del supporto di database per l'applicazione.<br /><br /> Include AFXDB. h. Aggiunge le librerie di collegamento, ma non crea tutte le classi specifiche del database. È possibile creare set di record in un secondo momento e usarli per esaminare e aggiornare i record.|
 |**Visualizzazione database senza supporto file**|Derivato da `CRecordView`|Fornisce il supporto dei documenti, ma non per la serializzazione. Documento può archiviare recordset e coordinare più viste. non supporta la serializzazione o la **New**, **Open**, **Salva**, e **Salva con nome** comandi. Visualizzare [le applicazioni con i documenti minimo](#_core_applications_with_minimal_documents). Se si include una vista di database, è necessario specificare l'origine dei dati.<br /><br /> Include i file di intestazione di database, le librerie di collegamento, una visualizzazione di record e un set di record. (Disponibile solo per le applicazioni con il **Supporto architettura documento/visualizzazione** opzione selezionata sulle [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) pagina.)|
 |**Vista di database con supporto file**|Derivato da `CRecordView`|Fornisce supporto per il documento completo, incluso la serializzazione e relative al documento **File** i comandi di menu. Le applicazioni di database è in genere funzionano in base al record anziché su un file per ogni singolo e pertanto non è necessaria la serializzazione. Tuttavia, potrebbe essere un utilizzo speciale per la serializzazione. Visualizzare [le applicazioni con i documenti minimo](#_core_applications_with_minimal_documents). Se si include una vista di database, è necessario specificare l'origine dei dati.<br /><br /> Include i file di intestazione di database, le librerie di collegamento, una visualizzazione di record e un set di record. (Disponibile solo per le applicazioni con il **Supporto architettura documento/visualizzazione** opzione selezionata sulle [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) pagina.)|
@@ -121,4 +121,4 @@ Perché non appartiene ad alcun documento la `CRecordset` dell'oggetto, è consi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classi di Database MFC](../data/mfc-database-classes-odbc-and-dao.md)
+[Classi di database MFC](../data/mfc-database-classes-odbc-and-dao.md)

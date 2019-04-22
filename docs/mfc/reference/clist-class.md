@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
 ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780951"
 ---
 # <a name="clist-class"></a>Classe CList
@@ -104,7 +104,7 @@ class CList : public CObject
 
 #### <a name="parameters"></a>Parametri
 
-*TYPE*<br/>
+*TIPO*<br/>
 Tipo di oggetto archiviato nell'elenco.
 
 *ARG_TYPE*<br/>
@@ -288,10 +288,10 @@ const TYPE& GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>Parametri
 
-*TYPE*<br/>
+*TIPO*<br/>
 Parametro di modello che specifica il tipo di oggetto nell'elenco.
 
-*posizione*<br/>
+*position*<br/>
 La posizione nell'elenco dell'elemento da ottenere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -340,7 +340,7 @@ TYPE& GetHead();
 
 ### <a name="parameters"></a>Parametri
 
-*TYPE*<br/>
+*TIPO*<br/>
 Parametro di modello che specifica il tipo di oggetto nell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
@@ -384,7 +384,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parametri
 
-*TYPE*<br/>
+*TIPO*<br/>
 Parametro di modello che specifica il tipo degli elementi nell'elenco.
 
 *rPosition*<br/>
@@ -419,7 +419,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parametri
 
-*TYPE*<br/>
+*TIPO*<br/>
 Parametro di modello che specifica il tipo degli elementi nell'elenco.
 
 *rPosition*<br/>
@@ -474,7 +474,7 @@ const TYPE& GetTail() const;
 
 ### <a name="parameters"></a>Parametri
 
-*TYPE*<br/>
+*TIPO*<br/>
 Parametro di modello che specifica il tipo di elementi nell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametri
 
-*posizione*<br/>
+*position*<br/>
 Un valore di posizione restituito da una precedente `GetNext`, `GetPrev`, o `Find` chiamata di funzione membro.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametri
 
-*posizione*<br/>
+*position*<br/>
 Un valore di posizione restituito da una precedente `GetNext`, `GetPrev`, o `Find` chiamata di funzione membro.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parametri
 
-*posizione*<br/>
+*position*<br/>
 La posizione dell'elemento da rimuovere dall'elenco.
 
 ### <a name="remarks"></a>Note
@@ -626,7 +626,7 @@ TYPE RemoveHead();
 
 ### <a name="parameters"></a>Parametri
 
-*TYPE*<br/>
+*TIPO*<br/>
 Parametro di modello che specifica il tipo di elementi nell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
@@ -651,7 +651,7 @@ TYPE RemoveTail();
 
 ### <a name="parameters"></a>Parametri
 
-*TYPE*<br/>
+*TIPO*<br/>
 Parametro di modello che specifica il tipo di elementi nell'elenco.
 
 ### <a name="return-value"></a>Valore restituito
@@ -699,6 +699,6 @@ Non è quello utilizzato per un indice e non è possibile operare su un valore d
 
 [Esempio MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CMap](../../mfc/reference/cmap-class.md)<br/>
-[CArray (classe)](../../mfc/reference/carray-class.md)
+[Classe CArray](../../mfc/reference/carray-class.md)

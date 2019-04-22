@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
 ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773788"
 ---
 # <a name="cmfcmaskededit-class"></a>Classe CMFCMaskedEdit
@@ -131,7 +131,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per specificare che il [CMFCMaskedEdit::GetWindowText](#getwindowtext) metodo retrieve mascherato solo caratteri. FALSE per specificare che il metodo di recuperare l'intero testo. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -191,7 +191,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per selezionare solo i gruppi; FALSE per selezionare l'intero testo. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -225,7 +225,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per convalidare l'input su solo mascherato caratteri; dell'utente FALSE per la convalida l'intera maschera. Il valore predefinito è TRUE.
 
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText
@@ -338,6 +338,6 @@ Questo metodo consente di ridefinire [CWnd::SetWindowText](../../mfc/reference/c
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)
+[Classe CEdit](../../mfc/reference/cedit-class.md)

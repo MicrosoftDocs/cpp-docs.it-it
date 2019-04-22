@@ -7,10 +7,10 @@ helpviewer_keywords:
 - record views, user interface
 ms.assetid: 2c7914b6-2dc3-40c3-b2f2-8371da2a4063
 ms.openlocfilehash: de94b28e713459edfd63aff832caecc7ea49ca33
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023360"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Aggiornamento dell'interfaccia utente per le visualizzazioni di record (accesso ai dati MFC)
@@ -27,5 +27,5 @@ ms.locfileid: "59023360"
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della navigazione in una visualizzazione di record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
-[Uso di una visualizzazione di record](../data/using-a-record-view-mfc-data-access.md)
+[Supporto della navigazione in una visualizzazione di Record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
+[Uso di una visualizzazione di Record](../data/using-a-record-view-mfc-data-access.md)

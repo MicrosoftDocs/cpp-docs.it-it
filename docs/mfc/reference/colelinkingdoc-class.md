@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300407"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58773554"
 ---
 # <a name="colelinkingdoc-class"></a>Classe COleLinkingDoc
 
@@ -57,7 +57,7 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="remarks"></a>Note
 
-Un'applicazione contenitore che supporta il collegamento a elementi incorporati è chiamata "contenitore collegamento". Il [OCLIENT](../../visual-cpp-samples.md) applicazione di esempio è un esempio di un contenitore di collegamento.
+Un'applicazione contenitore che supporta il collegamento a elementi incorporati è chiamata "contenitore collegamento". Il [OCLIENT](../../overview/visual-cpp-samples.md) applicazione di esempio è un esempio di un contenitore di collegamento.
 
 Quando l'origine dell'elemento collegato è un elemento incorporato in un altro documento, tale documento che lo contiene deve essere caricato nell'ordine per l'elemento incorporato da modificare. Per questo motivo, un contenitore di collegamento deve essere in grado di essere avviata da un'altra applicazione contenitore quando l'utente desidera modificare l'origine di un elemento collegato. L'applicazione deve usare anche il [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) classe in modo da poter creare i documenti quando avviata a livello di codice.
 
@@ -75,7 +75,7 @@ Connettere il `COleTemplateServer` oggetto ai modelli di documento chiamando l'o
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-Per un esempio `CWinApp`-definizione di classe derivata e `InitInstance` function, vedere OCLIENT. H e OCLIENT. CPP nell'esempio di MFC [OCLIENT](../../visual-cpp-samples.md).
+Per un esempio `CWinApp`-definizione di classe derivata e `InitInstance` function, vedere OCLIENT. H e OCLIENT. CPP nell'esempio di MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 Per altre informazioni sull'uso `COleLinkingDoc`, vedere gli articoli [contenitori: Implementazione di un contenitore](../../mfc/containers-implementing-a-container.md) e [contenitori: Funzionalità avanzate](../../mfc/containers-advanced-features.md).
 
@@ -193,7 +193,7 @@ Chiamare questa funzione per revocare la registrazione del documento con le DLL 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Esempio MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe COleDocument](../../mfc/reference/coledocument-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)

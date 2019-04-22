@@ -14,10 +14,10 @@ helpviewer_keywords:
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
 ms.openlocfilehash: b398a1adbf2f47343eed076f32ade5bb2564cd52
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767977"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: Migrazione da MFC/OLE1 a MFC/OLE 2
@@ -291,7 +291,7 @@ A questo punto, OCLIENT è un'applicazione contenitore OLE funzionale. È possib
 
 Una delle funzionalità più interessanti di OLE è attivazione sul posto (o "Modifica visiva"). Questa funzionalità consente all'applicazione server di intervenire le parti dell'interfaccia utente del contenitore fornito un'interfaccia per la modifica più trasparente per l'utente. Per implementare l'attivazione sul posto a OCLIENT, alcune risorse speciali devono essere aggiunti, oltre a codice aggiuntivo. Queste risorse e il codice in genere vengono forniti dalla creazione guidata applicazioni, infatti, gran parte del codice in questo caso è stato preso in prestito direttamente da un'applicazione nuova creazione guidata applicazioni con supporto per i "Contenitori".
 
-Prima di tutto, è necessario aggiungere una risorsa di menu da utilizzare quando è presente un elemento che è attivo sul posto. Copia risorsa IDR_OCLITYPE e rimuovendo tutto tranne i File e finestra popup, è possibile creare questa risorsa di menu extra in Visual C++. Tra i File e finestra popup per indicare la separazione dei gruppi sono inserite due barre di separazione (sarà simile: File &#124;&#124; Window). Per altre informazioni sul significato di tali separatori e come vengono uniti i menu di server e il contenitore vedere [menu e risorse: Menu Merging](../mfc/menus-and-resources-menu-merging.md).
+Prima di tutto, è necessario aggiungere una risorsa di menu da utilizzare quando è presente un elemento che è attivo sul posto. È possibile creare questa risorsa di menu aggiuntivi nell'oggetto visivo C++ copiando la risorsa IDR_OCLITYPE e rimozione di tutto tranne i File e finestra popup. Tra i File e finestra popup per indicare la separazione dei gruppi sono inserite due barre di separazione (sarà simile: File &#124;&#124; Window). Per altre informazioni sul significato di tali separatori e come vengono uniti i menu di server e il contenitore vedere [menu e risorse: Menu Merging](../mfc/menus-and-resources-menu-merging.md).
 
 Dopo aver creato questi menu creati, è necessario che il framework di informazioni disponibili sugli utenti. Questa operazione viene eseguita chiamando `CDocTemplate::SetContainerInfo` per il modello di documento prima di aggiungerlo all'elenco di modelli di documento in InitInstance. Il nuovo codice per registrare il modello di documento è simile alla seguente:
 
@@ -353,7 +353,7 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 
 A questo punto, è sufficiente codice per consentire a un elemento per essere attivato sul posto e gestire il ridimensionamento e lo spostamento dell'elemento quando è attiva, ma nessun codice consentirà all'utente di uscire dalla sessione di modifica. Anche se alcuni server fornirà questa funzionalità autonomamente se si gestisce il tasto ESC, è consigliabile che i contenitori offrono due modalità per disattivare un elemento: (1) facendo clic all'esterno dell'elemento e (2), premendo il tasto ESC.
 
-Per il tasto ESC, aggiungere un tasto di scelta rapida in Visual C++ che esegue il mapping di VK_ESCAPE (tasto) a un comando, ID_CANCEL_EDIT viene aggiunto alle risorse. Il gestore per il comando seguente:
+Per il tasto ESC, aggiungere un tasto di scelta rapida con oggetto visivo C++ che esegue il mapping di VK_ESCAPE (tasto) a un comando, ID_CANCEL_EDIT viene aggiunto alle risorse. Il gestore per il comando seguente:
 
 ```cpp
 // The following command handler provides the standard
@@ -527,7 +527,7 @@ BOOL COLEServerApp::InitInstance()
 
 Si noterà che il codice precedente fa riferimento a un nuovo ID di risorsa, IDR_HIERSVRTYPE_SRVR_EMB. Si tratta della risorsa di menu da utilizzare quando viene modificato un documento incorporato in un altro contenitore. In MFC/OLE1 le voci di menu specifiche per la modifica di un elemento incorporato sono state modificate in tempo reale. Utilizzando una struttura di menu completamente diverso quando si modifica un elemento incorporato invece di modificare un documento basato su file rende molto più semplice fornire interfacce utente diverse per queste due modalità distinte. Come si vedrà in seguito, una risorsa di menu completamente separata viene utilizzata durante la modifica di un oggetto incorporato sul posto.
 
-Per creare questa risorsa, caricare lo script di risorsa in Visual C++ e copiare la risorsa di menu IDR_HIERSVRTYPE esistente. Rinominare la nuova risorsa IDR_HIERSVRTYPE_SRVR_EMB (questa è la stessa convenzione di denominazione che utilizza la creazione guidata applicazione). Successivamente modificare "Salvataggio di File" in "Aggiornamento del File"; assegnare al comando ID_FILE_UPDATE ID. Inoltre modificare "File Salva con nome" in "File Salva copia con nome"; assegnare al comando ID_FILE_SAVE_COPY_AS ID. Il framework fornisce l'implementazione di entrambi questi comandi.
+Per creare questa risorsa, caricare lo script di risorsa in oggetto visivo C++ e copiare la risorsa di menu IDR_HIERSVRTYPE esistente. Rinominare la nuova risorsa IDR_HIERSVRTYPE_SRVR_EMB (questa è la stessa convenzione di denominazione che utilizza la creazione guidata applicazione). Successivamente modificare "Salvataggio di File" in "Aggiornamento del File"; assegnare al comando ID_FILE_UPDATE ID. Inoltre modificare "File Salva con nome" in "File Salva copia con nome"; assegnare al comando ID_FILE_SAVE_COPY_AS ID. Il framework fornisce l'implementazione di entrambi questi comandi.
 
 ```Output
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations
@@ -644,7 +644,7 @@ Per aggiungere "Modifica visiva" (o attivazione sul posto) all'applicazione serv
 
 - È necessario indicare al framework su queste risorse speciali e classi.
 
-La risorsa di menu è possibile creare con facilità. Eseguire Visual C++, copiare la risorsa di menu IDR_HIERSVRTYPE a una risorsa di menu denominata IDR_HIERSVRTYPE_SRVR_IP. Modificare il menu di scelta in modo che solo il popup di menu Modifica e della Guida vengono lasciati. Aggiungere due separatori di menu tra i menu Modifica e la Guida (sarà simile: Edit &#124;&#124; Help). Per altre informazioni sul significato di tali separatori e come vengono uniti i menu di server e un contenitore, vedere [menu e risorse: Menu Merging](../mfc/menus-and-resources-menu-merging.md).
+La risorsa di menu è possibile creare con facilità. Eseguire l'oggetto visivo C++, copiare la risorsa di menu IDR_HIERSVRTYPE a una risorsa di menu denominata IDR_HIERSVRTYPE_SRVR_IP. Modificare il menu di scelta in modo che solo il popup di menu Modifica e della Guida vengono lasciati. Aggiungere due separatori di menu tra i menu Modifica e la Guida (sarà simile: Edit &#124;&#124; Help). Per altre informazioni sul significato di tali separatori e come vengono uniti i menu di server e un contenitore, vedere [menu e risorse: Menu Merging](../mfc/menus-and-resources-menu-merging.md).
 
 È possibile creare con facilità la bitmap della barra degli strumenti subset copiando quello di un'applicazione generata dalla creazione guidata applicazioni aggiornata con un'opzione "Server" selezionata. Questa bitmap può quindi essere importata in Visual C++. Assicurarsi di assegnare un ID di IDR_HIERSVRTYPE_SRVR_IP bitmap.
 

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
 ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024916"
 ---
 # <a name="macros-and-c"></a>Macro e C++

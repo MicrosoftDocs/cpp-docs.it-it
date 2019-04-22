@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778338"
 ---
 # <a name="try-finally-statement"></a>Istruzione try-finally
@@ -49,7 +49,7 @@ La sintassi seguente vengono descritte le **try-finally** istruzione:
 
 Il **try-finally** istruzione è un'estensione Microsoft ai linguaggi C e C++ che consente alle applicazioni di destinazione di garantire l'esecuzione del codice di pulizia quando l'esecuzione di un blocco di codice viene interrotta. La pulizia è costituita da attività quali la deallocazione della memoria, la chiusura dei file e il rilascio di handle di file. Il **try-finally** istruzione è particolarmente utile per restituiscono le routine che presentano vari punti in cui viene eseguito un controllo per un errore che potrebbe causare prematuro dalla routine.
 
-Per informazioni correlate e un esempio di codice, vedere [try-except Statement](../cpp/try-except-statement.md). Per altre informazioni sull'eccezione strutturata in generale, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per altre informazioni sulla gestione delle eccezioni nelle applicazioni gestite con C + + / CLI, vedere [gestione delle eccezioni in /clr](../extensions/exception-handling-cpp-component-extensions.md).
+Per informazioni correlate e un esempio di codice, vedere [try-except Statement](../cpp/try-except-statement.md). Per altre informazioni sull'eccezione strutturata in generale, vedere [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Per altre informazioni sulla gestione delle eccezioni nelle applicazioni gestite con C++/CLI, vedere [gestione delle eccezioni in /clr](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
 > La gestione eccezioni strutturata funziona con i file Win32 per i file di origine C++ e C. Tuttavia, non è progettato in particolare per C++. È possibile garantire maggiore portabilità del codice tramite la gestione delle eccezioni C++. Inoltre, la gestione eccezioni C++ è più flessibile, in quanto può gestire le eccezioni di qualsiasi tipo. Per i programmi C++, è consigliabile usare il meccanismo di gestione delle eccezioni C++ ([try, catch e throw](../cpp/try-throw-and-catch-statements-cpp.md) istruzioni).
@@ -72,7 +72,7 @@ Si supponga ad esempio che una serie di chiamate di funzione colleghi la funzion
 Ordine di terminazione esecuzione del gestore
 
 > [!NOTE]
-> Il comportamento di try-finally è diverso da alcuni altri linguaggi che supportano l'utilizzo di **infine**, ad esempio C#.  Un unico **try** potrebbe essere, ma non entrambi, dei **finally** e **except**.  Se entrambi devono essere utilizzati insieme, un'istruzione try-except deve racchiudere l'istruzione try-finally interna.  Sono diverse anche le regole che specificano quando viene eseguito ciascun blocco.
+> Il comportamento di try-finally è diverso da alcuni altri linguaggi che supportano l'utilizzo di **infine**, ad esempio c#.  Un unico **try** potrebbe essere, ma non entrambi, dei **finally** e **except**.  Se entrambi devono essere utilizzati insieme, un'istruzione try-except deve racchiudere l'istruzione try-finally interna.  Sono diverse anche le regole che specificano quando viene eseguito ciascun blocco.
 
 Per garantire la compatibilità con versioni precedenti **try**, **finally**, e **Leave** sono sinonimi per **try**, **_ infine**, e **Leave** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
 

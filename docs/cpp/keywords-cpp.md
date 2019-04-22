@@ -10,15 +10,15 @@ helpviewer_keywords:
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
 ms.openlocfilehash: f87c2401bcc964229d3c0b3cf7119a09553cc2f2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774763"
 ---
 # <a name="keywords-c"></a>Parole chiave (C++)
 
-Le parole chiave sono identificatori riservati predefiniti che hanno un significato particolare. Nel programma non è possibile usarle come identificatori. Le seguenti parole chiave sono riservate a Microsoft C++. I nomi con caratteri di sottolineatura iniziali e seguito da (C + + CLI) sono estensioni Microsoft.
+Le parole chiave sono identificatori riservati predefiniti che hanno un significato particolare. Nel programma non è possibile usarle come identificatori. Le seguenti parole chiave sono riservate a Microsoft C++. I nomi con caratteri di sottolineatura iniziali e seguito da (C++/CLI) sono estensioni Microsoft.
 
 |||||
 |-|-|-|-|
@@ -40,19 +40,19 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
 |[break](break-statement-cpp.md)|[case](switch-statement-cpp.md)|[catch](try-throw-and-catch-statements-cpp.md)|[char](fundamental-types-cpp.md)|
 |[char16_t](char-wchar-t-char16-t-char32-t.md)|[char32_t](char-wchar-t-char16-t-char32-t.md)|[class](class-cpp.md)|[const](const-cpp.md)|
 |[const_cast](const-cast-operator.md)|[constexpr](constexpr-cpp.md)|[continue](continue-statement-cpp.md)|[decltype](decltype-cpp.md)|
-|[default](switch-statement-cpp.md)|[delegare](../extensions/delegate-cpp-component-extensions.md)(C + + CLI)|[delete](delete-operator-cpp.md)|[deprecated](deprecated-cpp.md) <sup>1</sup>|
+|[default](switch-statement-cpp.md)|[delegare](../extensions/delegate-cpp-component-extensions.md)(C++/CLI)|[delete](delete-operator-cpp.md)|[deprecated](deprecated-cpp.md) <sup>1</sup>|
 |[dllexport](dllexport-dllimport.md) <sup>1</sup>|[dllimport](dllexport-dllimport.md) <sup>1</sup>|[do](do-while-statement-cpp.md)|[double](fundamental-types-cpp.md)|
-|[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[classe di enumerazione](../extensions/enum-class-cpp-component-extensions.md)|
+|[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[enum class](../extensions/enum-class-cpp-component-extensions.md)|
 |[enum struct](../extensions/enum-class-cpp-component-extensions.md)|[event](../extensions/event-cpp-component-extensions.md)(C++/CLI)|[explicit](user-defined-type-conversions-cpp.md)|[extern](using-extern-to-specify-linkage.md)|
 |[false](false-cpp.md)|[finally](../dotnet/finally.md)|[float](fundamental-types-cpp.md)|[for](for-statement-cpp.md)|
 |[per ciascuno di essi in](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)(C++/CLI)|
 |[generic](../extensions/generics-cpp-component-extensions.md)(C++/CLI)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
-|[inline](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[classe interfaccia](../extensions/interface-class-cpp-component-extensions.md)(C + + CLI)|[struct di interfaccia](../extensions/interface-class-cpp-component-extensions.md)(C + + CLI)|
+|[inline](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[classe di interfaccia](../extensions/interface-class-cpp-component-extensions.md)(C++/CLI)|[struct di interfaccia](../extensions/interface-class-cpp-component-extensions.md)(C++/CLI)|
 |[interior_ptr](../extensions/interior-ptr-cpp-cli.md)(C++/CLI)|[literal](../extensions/literal-cpp-component-extensions.md)(C++/CLI)|[long](fundamental-types-cpp.md)|[mutable](mutable-data-members-cpp.md)|
 |[naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)(C++/CLI)|[new](new-operator-cpp.md)|
 |[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
 |[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|[private](private-cpp.md)|
-|[proprietà](../extensions/property-cpp-component-extensions.md)(C + + CLI)|[property](property-cpp.md) <sup>1</sup>|[protected](protected-cpp.md)|[public](public-cpp.md)|
+|[proprietà](../extensions/property-cpp-component-extensions.md)(C++/CLI)|[property](property-cpp.md) <sup>1</sup>|[protected](protected-cpp.md)|[public](public-cpp.md)|
 |[classe di riferimento](../extensions/classes-and-structs-cpp-component-extensions.md)|[struct di riferimento](../extensions/classes-and-structs-cpp-component-extensions.md)|[register](storage-classes-cpp.md#register)|[reinterpret_cast](reinterpret-cast-operator.md)|
 |[return](return-statement-cpp.md)|[safecast](../extensions/safe-cast-cpp-component-extensions.md)|[sealed](../extensions/sealed-cpp-component-extensions.md)(C++/CLI)|[selectany](selectany.md) <sup>1</sup>|
 |[short](fundamental-types-cpp.md)|[signed](fundamental-types-cpp.md)|[sizeof](sizeof-operator.md)|[static](storage-classes-cpp.md)|
@@ -60,8 +60,8 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
 |[template](templates-cpp.md)|[this](this-pointer.md)|[thread](thread.md) <sup>1</sup>|[throw](try-throw-and-catch-statements-cpp.md)|
 |[true](true-cpp.md)|[try](try-throw-and-catch-statements-cpp.md)|[typedef](aliases-and-typedefs-cpp.md)|[typeid](typeid-operator.md)|
 |[typeid](../extensions/typeid-cpp-component-extensions.md)|[typename](typename.md)|[union](unions.md)|[unsigned](fundamental-types-cpp.md)|
-|[usando](using-declaration.md) dichiarazione|[usando](namespaces-cpp.md#using_directives) (direttiva)|[uuid](uuid-cpp.md) <sup>1</sup>|[classe di valore](../extensions/classes-and-structs-cpp-component-extensions.md)(C + + CLI)|
-|[struct di valore](../extensions/classes-and-structs-cpp-component-extensions.md)(C + + CLI)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
+|[usando](using-declaration.md) dichiarazione|[usando](namespaces-cpp.md#using_directives) (direttiva)|[uuid](uuid-cpp.md) <sup>1</sup>|[classe di valori](../extensions/classes-and-structs-cpp-component-extensions.md)(C++/CLI)|
+|[struct di valore](../extensions/classes-and-structs-cpp-component-extensions.md)(C++/CLI)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
 |[while](while-statement-cpp.md)|
 
 <sup>1</sup> esteso gli attributi per il **declspec** (parola chiave).
@@ -80,7 +80,7 @@ Le estensioni Microsoft sono attivate per impostazione predefinita. Per assicura
 
 Quando le estensioni Microsoft sono abilitate, è possibile usare le parole chiave specifiche di Microsoft nei programmi. Per la compatibilità con ANSI, tali parole chiave sono precedute da un doppio carattere di sottolineatura. Per garantire la compatibilità, versioni singolo carattere di sottolineatura di molte delle parole chiave sottolineate doppia sono supportate. È inoltre **cdecl** è disponibile senza alcuna sottolineatura iniziale.
 
-Il **ASM** parola chiave sostituisce C++ `asm` sintassi. `asm` è riservata per compatibilità con altre implementazioni di C++, ma non è implementata. Uso **ASM**.
+Il **ASM** sostituisce parola chiave C++ `asm` sintassi. `asm` è riservata per compatibilità con altre implementazioni di C++, ma non è implementata. Uso **ASM**.
 
 La parola chiave **__based** ha usi limitati nelle compilazioni di destinazione a 32 bit e a 64 bit.
 

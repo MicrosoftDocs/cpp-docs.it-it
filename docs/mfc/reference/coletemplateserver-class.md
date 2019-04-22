@@ -15,10 +15,10 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781211"
 ---
 # <a name="coletemplateserver-class"></a>Classe COleTemplateServer
@@ -172,7 +172,7 @@ Per altre informazioni, vedere [Implementing the IDispatch Interface](/previous-
 ## <a name="see-also"></a>Vedere anche
 
 [Esempio MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[COleObjectFactory (classe)](../../mfc/reference/coleobjectfactory-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Classe COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleServerDoc](../../mfc/reference/coleserverdoc-class.md)<br/>
 [Classe COleServerItem](../../mfc/reference/coleserveritem-class.md)

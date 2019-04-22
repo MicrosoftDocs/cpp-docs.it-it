@@ -3,10 +3,10 @@ title: Cenni preliminari sulla programmazione Windows in C++
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772904"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
@@ -33,7 +33,7 @@ Per scenari di applicazioni desktop (in altre parole, non targeting UWP), è con
 - l'accesso a DirectX
 - utilizzo intenso di librerie standard C++
 
-È possibile creare un'interfaccia utente in C# e usare C + + / CLI per abilitare l'applicazione può usare le librerie C++ native. Per altre informazioni, vedere [programmazione .NET con c++ /CLI CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+È possibile creare un'interfaccia utente in C# e usare C++per abilitare l'applicazione può usare native /CLI C++ librerie. Per altre informazioni, vedere [programmazione .NET con c++ /CLI CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
 
 ## <a name="com-components"></a>Componenti COM
 
@@ -43,7 +43,7 @@ Il [modello COM (Component Object)](/windows/desktop/com/the-component-object-mo
 
 Universal Windows Platform (UWP) è l'API Windows moderna. Le app UWP eseguiti su qualsiasi dispositivo Windows 10, usano XAML per l'interfaccia utente e sono completamente abilitati per il tocco. Per altre informazioni sulla piattaforma UWP, vedere [che cos'è un'app Universal Windows Platform (UWP)?](/windows/uwp/get-started/whats-a-uwp) e [Guida alle App universali di Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
-Il supporto C++ originale per la piattaforma UWP contava di (1) C + + c++ /CX, un dialetto di C++ con le estensioni di sintassi o (2) di Windows libreria Runtime (WRL) basata su standard C++ e COM. Entrambi C + + c++ /CX e WRL sono ancora supportati. Per i nuovi progetti è consigliabile [C + + / WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) che è interamente basato su standard di C++ e fornisce prestazioni più veloci. 
+L'originale C++ il supporto per UWP è costituita da (1) C++/CX, un dialetto di C++ con le estensioni di sintassi o (2) di Windows libreria Runtime (WRL) che si basa sullo standard C++ e COM. Sia C++/CX e WRL sono ancora supportati. Per i nuovi progetti è consigliabile [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) che si basa interamente sullo standard C++ e fornisce prestazioni più veloci. 
 
 ## <a name="desktop-bridge"></a>Desktop Bridge
 
@@ -96,8 +96,8 @@ Visual Studio include un potente debugger per codice nativo, strumenti di analis
 ## <a name="in-this-section"></a>Contenuto della sezione
 |Titolo|Descrizione|
 |-----------|-----------------|
-|[Procedura dettagliata: Creazione di un programma C++ Standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Creare un'applicazione console di Windows.|
-|[Procedura dettagliata: Creazione di applicazioni Desktop di Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Creare una semplice applicazione desktop di Windows.|
+|[Procedura dettagliata: Creazione di un programma C++ standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Creare un'applicazione console di Windows.|
+|[Procedura dettagliata: Creazione di applicazioni desktop di Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Creare una semplice applicazione desktop di Windows.|
 |[Creazione guidata applicazione desktop di Windows](windows-desktop-wizard.md)|Usare la procedura guidata per creare nuovi progetti di Windows.|
 |[Active Template Library (ATL)](../atl/TOC.md)|Usare la libreria ATL per creare componenti COM in C++.|
 |[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|Usare MFC per creare grandi o piccole applicazioni di Windows con finestre di dialogo e controlli|
@@ -105,11 +105,11 @@ Visual Studio include un potente debugger per codice nativo, strumenti di analis
 |[Accesso ai dati](../data/data-access-in-cpp.md)| OLE DB e ODBC|
 |[Testo e stringhe](../text/text-and-strings-in-visual-cpp.md)|Vari tipi di stringhe in Windows.|
 |[Risorse per la creazione di un gioco con DirectX](resources-for-creating-a-game-using-directx.md)
-|[Procedura: Usare Windows 10 SDK in un'applicazione Desktop di Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
-|[Utilizzo di file di risorse](working-with-resource-files.md)|Come aggiungere immagini, icone, le tabelle di stringhe e altre risorse in un'applicazione desktop.|
+|[Procedura: Usare Windows 10 SDK in un'applicazione di Windows Desktop](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[Uso di file di risorse](working-with-resource-files.md)|Come aggiungere immagini, icone, le tabelle di stringhe e altre risorse in un'applicazione desktop.|
 |[Risorse per la creazione di un gioco con DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Collegamenti al contenuto per la creazione di giochi in C++.|
-|[Procedura: Usare Windows 10 SDK in un'applicazione Desktop di Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contiene i passaggi per configurare il progetto da compilare mediante Windows 10 SDK.|
-|[Distribuzione di applicazioni Desktop Native](deploying-native-desktop-applications-visual-cpp.md)|Distribuire applicazioni native su Windows.|
+|[Procedura: Usare Windows 10 SDK in un'applicazione di Windows Desktop](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contiene i passaggi per configurare il progetto da compilare mediante Windows 10 SDK.|
+|[Distribuzione di applicazioni desktop native](deploying-native-desktop-applications-visual-cpp.md)|Distribuire applicazioni native su Windows.|
 
 
 ## <a name="related-articles"></a>Articoli correlati
@@ -117,8 +117,8 @@ Visual Studio include un potente debugger per codice nativo, strumenti di analis
 |Titolo|Descrizione|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Argomento principale per il contenuto per gli sviluppatori di Visual C++.|
-[Sviluppo per .NET con c++ /CLI CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Creare wrapper per le librerie C++ native che ne consentono la comunicazione con componenti e le applicazioni .NET.|
-|[Estensioni componenti per .NET e UWP](../extensions/component-extensions-for-runtime-platforms.md)|Informazioni di riferimento per gli elementi della sintassi condivisi da C + + c++ /CX e c++ /CLI CLI.|
-|[App di Windows universale (C++)](universal-windows-apps-cpp.md)|Scrivere le applicazioni UWP usando C + + c++ /CX o libreria di modelli di Windows Runtime (WRL).|
+[Sviluppo in .NET con C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Creare wrapper per le librerie C++ native che ne consentono la comunicazione con componenti e le applicazioni .NET.|
+|[Estensioni componenti per .NET e UWP](../extensions/component-extensions-for-runtime-platforms.md)|Informazioni di riferimento per gli elementi della sintassi condivise da C++/CX e C++/CLI.|
+|[App di Windows universale (C++)](universal-windows-apps-cpp.md)|Scrivere le applicazioni UWP usando C++/CX o libreria di modelli di Windows Runtime (WRL).|
 |[Attributi di C++ per COM e .NET](attributes/cpp-attributes-com-net.md)|Attributi non standard per la programmazione solo Windows tramite .NET o COM.|
 

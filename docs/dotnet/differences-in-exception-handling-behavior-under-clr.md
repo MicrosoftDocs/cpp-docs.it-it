@@ -6,10 +6,10 @@ helpviewer_keywords:
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
 ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772738"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Differenze nel comportamento di gestione delle eccezioni in /CLR
@@ -18,7 +18,7 @@ ms.locfileid: "58772738"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> Uscita da un blocco Finally
 
-Nel codice C/C++ nativo, uscita da un _**infine** impedisce l'uso di gestione delle eccezioni strutturata (SEH) è consentito anche se genera un avviso.  Sotto [/clr](../build/reference/clr-common-language-runtime-compilation.md)uscita da un **infine** blocco causa un errore:
+In C nativo /C++ codice uscita da un _**finally** impedisce l'uso di gestione delle eccezioni strutturata (SEH) è consentito anche se genera un avviso.  Sotto [/clr](../build/reference/clr-common-language-runtime-compilation.md)uscita da un **infine** blocco causa un errore:
 
 ```cpp
 // clr_exception_handling_4.cpp

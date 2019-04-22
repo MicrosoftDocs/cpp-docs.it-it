@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
 ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025085"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Tasti di scelta rapida (Editor di immagini di C++ per le icone)
@@ -40,7 +40,7 @@ Di seguito sono i tasti di scelta rapida per i comandi dell'editor di immagini c
 |Image.LineTool|**CTRL** + **L**|Consente di disegnare una linea retta con la forma, la dimensione e il colore selezionati.|
 |Image.MagnificationTool|**Ctrl** + **M**|Attiva i **Ingrandisci** strumento che consente di ingrandire sezioni specifiche dell'immagine.|
 |Image.Magnify|**CTRL** + **MAIUSC** + **M**|Consente di passare dall'ingrandimento corrente all'ingrandimento 1:1 e viceversa.|
-|Image.NewImageType|**INS**|Viene avviata il [New \<dispositivo > finestra di dialogo Tipo immagine](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) con cui è possibile creare un'immagine per un tipo di immagine diversi.|
+|Image.NewImageType|**Inserisci**|Viene avviata il [New \<dispositivo > finestra di dialogo Tipo immagine](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) con cui è possibile creare un'immagine per un tipo di immagine diversi.|
 |Image.NextColor|**Ctrl** + **]**<br /><br /> -oppure-<br /><br /> **CTRL** + **freccia destra**|Consente di modificare il colore di primo piano nel colore successivo della tavolozza.|
 |Image.NextRightColor|**Ctrl** + **Maiusc** + **]**<br /><br /> -oppure-<br /><br /> **Shift** + **Ctrl** + **freccia destra**|Consente di modificare il colore di sfondo nel colore successivo della tavolozza.|
 |Image.OutlinedEllipseTool|**Shift** + **Alt** + **P**|Consente di disegnare un'ellisse piena con un contorno.|
@@ -72,4 +72,4 @@ nessuno
 [Procedura: Creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
 [Procedura: Modificare un'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
 [Procedura: Usare uno strumento di disegno](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Procedura: Utilizzare i colori](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Procedura: Usare i colori](../windows/working-with-color-image-editor-for-icons.md)<br/>

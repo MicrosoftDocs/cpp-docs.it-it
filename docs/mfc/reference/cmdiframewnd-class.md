@@ -35,10 +35,10 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
 ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776531"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (classe)
@@ -460,9 +460,9 @@ Vedere l'esempio relativo [CMDIFrameWnd::MDICascade](#mdicascade).
 ## <a name="see-also"></a>Vedere anche
 
 [Esempio MFC MDI](../../overview/visual-cpp-samples.md)<br/>
-[Esempio MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [MFC Sample SNAPVW](../../overview/visual-cpp-samples.md)<br/>
-[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md)
+[Classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)

@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
 ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780223"
 ---
 # <a name="cmfccolormenubutton-class"></a>Classe CMFCColorMenuButton
@@ -208,7 +208,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Specifica un nuovo colore automatico.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Specifica se il pulsante è automatica o meno.
 
 ### <a name="remarks"></a>Note
@@ -230,7 +230,7 @@ void EnableDocumentColors(
 *lpszLabel*<br/>
 [in] Specifica il testo del pulsante.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per visualizzare i colori di specifica del documento o su FALSE per visualizzare i colori di sistema.
 
 ### <a name="remarks"></a>Note
@@ -256,7 +256,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Specificare TRUE per visualizzare il `CMFCColorDialog` nella finestra di dialogo oppure FALSE per visualizzare la finestra di dialogo dei colori di sistema standard.
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] Specificare TRUE per visualizzare il pulsante "altro"; in caso contrario, FALSE. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in] L'ID di risorsa di un pulsante di menu del colore.
 
-*colore*<br/>
+*color*<br/>
 [in] Un valore di colore RGB.
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parametri
 
-*colore*<br/>
+*color*<br/>
 [in] Il valore RGB del colore il cui nome viene modificato.
 
 *strName*<br/>
@@ -546,7 +546,7 @@ void SetColumnsNumber(int nColumns);
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>

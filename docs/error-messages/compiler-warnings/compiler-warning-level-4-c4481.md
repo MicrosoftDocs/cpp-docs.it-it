@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C4481
 ms.assetid: 7bfd4e0c-b452-4e6c-b7c4-ac5cc93fe4ea
 ms.openlocfilehash: fe96ff50f4081e3c9dbe3c7eb68da156a69c96ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776364"
 ---
 # <a name="compiler-warning-level-4-c4481"></a>Avviso del compilatore (livello 4) C4481

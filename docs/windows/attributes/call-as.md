@@ -1,5 +1,5 @@
 ---
-title: call_as (attributo COM C++)
+title: call_as (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
 ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023919"
 ---
 # <a name="callas"></a>call_as
@@ -25,12 +25,12 @@ Consente a un [locale](local-cpp.md) funzione viene mappata a una funzione remot
 
 ### <a name="parameters"></a>Parametri
 
-*funzione*<br/>
+*function*<br/>
 La funzione locale che si desidera siano chiamati quando viene richiamata una funzione remota.
 
 ## <a name="remarks"></a>Note
 
-Il **call_as** attributi di C++ ha la stessa funzionalità come la [call_as](/windows/desktop/Midl/call-as) attributo MIDL.
+Il **call_as** C++ attributo ha la stessa funzionalità come il [call_as](/windows/desktop/Midl/call-as) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -56,7 +56,7 @@ __interface IMInterface {
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -64,5 +64,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi del metodo](method-attributes.md)<br/>
-[locali](local-cpp.md)
+[Attributi di metodo](method-attributes.md)<br/>
+[local](local-cpp.md)

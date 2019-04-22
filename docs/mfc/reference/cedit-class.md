@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773749"
 ---
 # <a name="cedit-class"></a>CEdit Class
@@ -854,7 +854,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nRiga*<br/>
+*nLine*<br/>
 Contiene il valore di indice per la riga desiderata nel testo del controllo di modifica, o contiene -1. Se *nRiga* è -1, specifica la riga corrente, vale a dire, la riga che contiene il punto di inserimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -883,7 +883,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parametri
 
-*nRiga*<br/>
+*nLine*<br/>
 Indice a base zero di un carattere nella riga la cui lunghezza è da recuperare. Il valore predefinito è -1.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1196,7 +1196,7 @@ void SetPasswordChar(TCHAR ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*ch*<br/>
 Specifica il carattere deve essere visualizzato al posto del carattere digitato dall'utente. Se *ch* è 0, vengono visualizzati i caratteri effettivi digitati dall'utente.
 
 ### <a name="remarks"></a>Note
@@ -1452,11 +1452,11 @@ Per altre informazioni, vedere [EM_UNDO](/windows/desktop/Controls/em-undo) nel 
 [Esempio MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CMNCTRL2 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CWnd](cwnd-class.md)<br/>
 [Classe CButton](cbutton-class.md)<br/>
-[CComboBox (classe)](ccombobox-class.md)<br/>
-[CListBox (classe)](clistbox-class.md)<br/>
+[Classe CComboBox](ccombobox-class.md)<br/>
+[Classe CListBox](clistbox-class.md)<br/>
 [Classe CScrollBar](cscrollbar-class.md)<br/>
 [Classe CStatic](cstatic-class.md)<br/>
 [Classe CDialog](cdialog-class.md)

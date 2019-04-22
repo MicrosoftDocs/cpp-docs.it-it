@@ -10,10 +10,10 @@ helpviewer_keywords:
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
 ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780873"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Procedura: Effettuare il marshalling di stringhe COM tramite l'interoperabilità C++
@@ -28,7 +28,7 @@ Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/manage
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come un oggetto BSTR (un formato di stringa usato nella programmazione COM) possono essere passati da un oggetto gestito da una funzione non gestita. Funzione gestita il chiamante utilizza <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> per ottenere l'indirizzo di una rappresentazione di BSTR dei contenuti di .NET System. String. Puntatore ' this ' è bloccata tramite [pin_ptr (C + + / CLI)](../extensions/pin-ptr-cpp-cli.md) per verificare che il relativo indirizzo fisico non è modificato durante un ciclo di garbage collection mentre è in esecuzione la funzione non gestita. Il garbage collector viene impedito lo spostamento della memoria finché il [pin_ptr (C + c++ /CLI CLI)](../extensions/pin-ptr-cpp-cli.md) esce dall'ambito.
+Nell'esempio seguente viene illustrato come un oggetto BSTR (un formato di stringa usato nella programmazione COM) possono essere passati da un oggetto gestito da una funzione non gestita. Funzione gestita il chiamante utilizza <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> per ottenere l'indirizzo di una rappresentazione di BSTR dei contenuti di .NET System. String. Puntatore ' this ' è bloccata tramite [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per verificare che il relativo indirizzo fisico non è modificato durante un ciclo di garbage collection mentre è in esecuzione la funzione non gestita. Il garbage collector viene impedito lo spostamento della memoria finché il [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) esce dall'ambito.
 
 ```
 // MarshalBSTR1.cpp

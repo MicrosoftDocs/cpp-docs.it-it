@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
 ms.openlocfilehash: be1051859ebbcbdc22a9b71f8c5adba2e75c4e92
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025180"
 ---
 # <a name="compiler-error-c3539"></a>Errore del compilatore C3539
@@ -40,4 +40,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Parola chiave auto](../../cpp/auto-keyword.md)
+[Auto (parola chiave)](../../cpp/auto-keyword.md)

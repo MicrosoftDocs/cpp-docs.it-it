@@ -61,10 +61,10 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768551"
 ---
 # <a name="cfile-class"></a>Classe CFile
@@ -600,10 +600,10 @@ La tabella seguente descrive i possibili risultati di `Open`.
 
 |`pError`|Errore rilevato|Valore restituito|Contenuto CFileException|
 |--------------|------------------------|------------------|----------------------------|
-|NULL|No|true|N/D|
-|PTR per `CFileException`|No|true|non modificato|
-|NULL|Yes|false|N/D|
-|PTR per `CFileException`|Yes|false|inizializzato per la descrizione errore|
+|NULL|No|TRUE|N/D|
+|PTR per `CFileException`|No|TRUE|non modificato|
+|NULL|Yes|FALSE|N/D|
+|PTR per `CFileException`|Yes|FALSE|inizializzato per la descrizione errore|
 
 ### <a name="example"></a>Esempio
 

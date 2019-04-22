@@ -9,10 +9,10 @@ helpviewer_keywords:
 - inline_recursion pragma
 ms.assetid: cfef5791-63b7-45ac-9574-623747b9b9c9
 ms.openlocfilehash: 80ffabc6ac7c95fd7d9fb4e62bea38c2a04b04f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026912"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
@@ -34,4 +34,4 @@ Il **inline_recursion** pragma controlla la modalità di espansione delle funzio
 
 [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_depth](../preprocessor/inline-depth.md)<br/>
-[/Ob (Espansione funzioni inline)](../build/reference/ob-inline-function-expansion.md)
+[/Ob (espansione funzioni inline)](../build/reference/ob-inline-function-expansion.md)

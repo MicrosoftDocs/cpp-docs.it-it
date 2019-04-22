@@ -11,10 +11,10 @@ helpviewer_keywords:
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
 ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025270"
 ---
 # <a name="comment-cc"></a>comment (C/C++)
@@ -39,7 +39,7 @@ Inserisce il nome e il numero di versione del compilatore nel file oggetto. Ques
 
 Posizioni *commentstring* nel file oggetto. In fase di collegamento questa stringa viene inserita nel file eseguibile. La stringa non viene caricata in memoria quando viene caricato il file eseguibile, ma è disponibile con un programma che cerca le stringhe stampabili nei file. Un utilizzo di questo tipo di record di commento prevede l'inclusione di un numero di versione o di informazioni simili in un file eseguibile.
 
-`exestr` è stato deprecato e verrà rimosso nelle versioni future. il linker non elabora il record di commento.
+`exestr` è deprecato e verrà rimosso nelle versioni future. Il linker non elabora il record di commento.
 
 ### <a name="lib"></a>lib
 

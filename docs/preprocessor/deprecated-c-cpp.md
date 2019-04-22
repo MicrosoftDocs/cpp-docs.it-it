@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: edbad2f666ac0c6546f03da0ffbdb87f19b7e4e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642819"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023314"
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
 

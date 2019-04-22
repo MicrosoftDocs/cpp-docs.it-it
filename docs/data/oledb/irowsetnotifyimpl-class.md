@@ -21,10 +21,10 @@ helpviewer_keywords:
 - OnRowsetChange method
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
 ms.openlocfilehash: 552fcdcee99f1bfe78a28c6ea41a89557f1682f4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026068"
 ---
 # <a name="irowsetnotifyimpl-class"></a>Classe IRowsetNotifyImpl
@@ -142,7 +142,7 @@ Questo metodo esegue il wrapping di [IRowsetNotify::OnRowsetChange](/previous-ve
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))
 [classe IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)

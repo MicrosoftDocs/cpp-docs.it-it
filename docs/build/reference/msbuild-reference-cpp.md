@@ -4,10 +4,10 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
 ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024699"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>Riferimenti a MSBuild per i progetti C++
@@ -30,7 +30,7 @@ Descrive i diversi tipi di file creato da Visual Studio per diversi tipi di prog
 [Modelli di progetto di Visual Studio C++](visual-cpp-project-types.md)<br>
 Descrive i tipi di progetto basato su MSBuild disponibili per C++.
 
-[Nuovi modelli di elemento C++](using-visual-cpp-add-new-item-templates.md)<br>
+[Modelli di nuovi elementi C++](using-visual-cpp-add-new-item-templates.md)<br>
 Vengono descritti i file di origine e altri elementi che è possibile aggiungere a un progetto di Visual Studio.
 
 [File di intestazione precompilata](../creating-precompiled-header-files.md) come usare file di intestazione precompilata e come creare personalizzate precompilati o meno codice per accelerare i tempi di compilazione.

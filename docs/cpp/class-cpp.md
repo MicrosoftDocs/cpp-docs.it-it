@@ -8,10 +8,10 @@ helpviewer_keywords:
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
 ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774815"
 ---
 # <a name="class-c"></a>class (C++)
@@ -66,7 +66,7 @@ Per ulteriori informazioni sulle classi in generale, fare riferimento a uno dei 
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Per informazioni sulle classi gestite e nelle strutture in C + + c++ /CLI e c++ /CX, vedere [classi e struct](../extensions/classes-and-structs-cpp-component-extensions.md)
+Per informazioni sulle classi gestite e nelle strutture in C++/CLI e C++/CX, vedere [classi e struct](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>Esempio
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767925"
 ---
 # <a name="subscript-operator-"></a>Operatore di indice]
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Un'espressione in forma suffissa (che può anche essere un'espressione primaria) seguita dall'operatore di indice, **[]**, specifica l'indicizzazione della matrice.
 
-Per informazioni sulle matrici gestite in C + + / CLI, vedere [matrici](../extensions/arrays-cpp-component-extensions.md).
+Per informazioni sulle matrici gestite in C++/CLI, vedere [matrici](../extensions/arrays-cpp-component-extensions.md).
 
 In genere, il valore rappresentato da *postfix-expression* è un valore di puntatore, quale un identificatore di matrice, e *espressione* è un valore integrale (inclusi i tipi enumerati). Tuttavia, l'unica condizione da soddisfare dal punto di vista sintattico è che una delle espressioni sia di tipo puntatore e l'altra di tipo integrale. Pertanto il valore integrale potrebbe essere nella *postfix-expression* posizione e il valore di puntatore potrebbe essere nelle parentesi quadre nella *espressione* o posizione sottoscritta. Si consideri il frammento di codice riportato di seguito.
 
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="positive-and-negative-subscripts"></a>Indici positivo e negativo
 
-Il primo elemento di una matrice è l'elemento 0. L'intervallo di matrice C++ proviene *matrice*[0] a *matrice*[*dimensioni* - 1]. Tuttavia, C++ supporta gli indici positivi e negativi. Gli indici negativi devono essere compresi nei limiti della matrice; in caso contrario, i risultati sono imprevedibili. Il codice seguente mostra indici di matrice positivi e negativi:
+Il primo elemento di una matrice è l'elemento 0. L'intervallo di un C++ matrice proviene *matrice*[0] per *matrice*[*dimensione* - 1]. Tuttavia, C++ supporta gli indici positivi e negativi. Gli indici negativi devono essere compresi nei limiti della matrice; in caso contrario, i risultati sono imprevedibili. Il codice seguente mostra indici di matrice positivi e negativi:
 
 ```cpp
 #include <iostream>

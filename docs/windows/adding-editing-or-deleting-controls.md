@@ -44,10 +44,10 @@ helpviewer_keywords:
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
 ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025364"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Procedura: Aggiungere, modificare o eliminare i controlli (C++)
@@ -232,7 +232,7 @@ Win32
 
 [Gestire i controlli finestra di dialogo](controls-in-dialog-boxes.md)<br/>
 [Procedura: Controlli di layout](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[Procedura: Definire i valori e controllare l'accesso](defining-mnemonics-access-keys.md)<br/>
+[Procedura: Definire l'accesso e i valori per i controlli](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

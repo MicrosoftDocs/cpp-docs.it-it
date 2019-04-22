@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
 ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774153"
 ---
 # <a name="cscrollview-class"></a>Classe CScrollView
@@ -378,6 +378,6 @@ In alternativa, in alcuni casi potrebbe essere necessario impostare una dimensio
 
 [Esempio MFC immagine](../../overview/visual-cpp-samples.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>
 [Classe CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)

@@ -36,10 +36,10 @@ helpviewer_keywords:
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
 ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023841"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
@@ -158,6 +158,6 @@ KeyType m_iRowset;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [Classe IRowsetImpl](../../data/oledb/irowsetimpl-class.md)

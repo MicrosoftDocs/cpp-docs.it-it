@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773983"
 ---
 # <a name="coleclientitem-class"></a>Classe COleClientItem
@@ -2150,7 +2150,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Puntatore a un [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struttura dei dati, che contiene informazioni sul nuovo dispositivo di destinazione di stampa. Può essere NULL.
 
-*PPD*<br/>
+*ppd*<br/>
 Puntatore a un [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) struttura dei dati, che contiene informazioni sul nuovo dispositivo di destinazione di stampa. Può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
@@ -2190,5 +2190,5 @@ Per altre informazioni, vedere [IOleLink::Update](/windows/desktop/api/oleidl/nf
 [Esempio MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [Esempio MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleServerItem](../../mfc/reference/coleserveritem-class.md)

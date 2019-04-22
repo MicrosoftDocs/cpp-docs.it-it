@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778949"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
@@ -442,7 +442,7 @@ BOOL SetMarquee(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*fMarqueeMode*|[in] True se in modalità testo scorrevole turn on o su FALSE per disattivare la modalità testo scorrevole.|
-|*Nintervallo*|[in] Tempo in millisecondi tra gli aggiornamenti del testo scorrevole.|
+|*nInterval*|[in] Tempo in millisecondi tra gli aggiornamenti del testo scorrevole.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -606,4 +606,4 @@ L'incremento di passaggio è l'impostazione di `CProgressCtrl::SetStep` funzione
 
 [CMNCTRL2 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)

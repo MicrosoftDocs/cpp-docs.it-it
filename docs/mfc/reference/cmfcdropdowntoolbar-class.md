@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
 ms.openlocfilehash: f2c4135d2a27928dbde4299fa1f8eda42237d893
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776791"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] L'ID risorsa della bitmap che fa riferimento alle immagini regolari menu.
 
-*Bloccato*<br/>
+*bLocked*<br/>
 [in] TRUE per bloccare la barra degli strumenti; in caso contrario, FALSE.
 
 *uiDisabledResID*<br/>
@@ -254,7 +254,7 @@ virtual void OnUpdateCmdUI(
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)<br/>

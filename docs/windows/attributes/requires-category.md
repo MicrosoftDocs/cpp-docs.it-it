@@ -1,5 +1,5 @@
 ---
-title: requires_category (attributo COM C++)
+title: requires_category (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
 ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022139"
 ---
 # <a name="requirescategory"></a>requires_category
@@ -31,7 +31,7 @@ L'ID della categoria obbligatoria.
 
 ## <a name="remarks"></a>Note
 
-Il **requires_category** attributo C++ specifica le categorie di componenti necessari per la classe di destinazione. Per altre informazioni, vedere [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
+Il **requires_category** C++ attributo specifica le categorie di componenti necessari per la classe di destinazione. Per altre informazioni, vedere [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
 
 Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento.
 

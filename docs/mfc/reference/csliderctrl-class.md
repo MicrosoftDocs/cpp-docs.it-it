@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
 ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776635"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (classe)
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parametri
 
-*Nposizione*<br/>
+*nLocation*<br/>
 Valore che rappresenta la posizione in cui visualizzare il controllo tooltip. Per un elenco di valori possibili, vedere il messaggio Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), come descritto nel SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
@@ -803,5 +803,5 @@ Questa funzione membro implementa il comportamento del messaggio Win32 [TBM_SETT
 
 [CMNCTRL2 esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CProgressCtrl](../../mfc/reference/cprogressctrl-class.md)

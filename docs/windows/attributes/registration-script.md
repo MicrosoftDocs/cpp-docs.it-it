@@ -1,5 +1,5 @@
 ---
-title: registration_script (attributo COM C++)
+title: registration_script (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
 ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024374"
 ---
 # <a name="registrationscript"></a>registration_script
@@ -30,7 +30,7 @@ Il percorso completo in un file di script (con estensione RGS) registrazione per
 
 ## <a name="remarks"></a>Note
 
-Il **registration_script** attributo C++ esegue lo script di registrazione personalizzato specificato da *script*. Se questo attributo viene omesso, viene usato un file con estensione RGS standard (contenente informazioni per la registrazione del componente). Per altre informazioni sui file con estensione RGS, vedere [il componente del Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md).
+Il **registration_script** C++ attributo esegue lo script di registrazione personalizzato specificato dal *script*. Se questo attributo viene omesso, viene usato un file con estensione RGS standard (contenente informazioni per la registrazione del componente). Per altre informazioni sui file con estensione RGS, vedere [il componente del Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md).
 
 Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento.
 

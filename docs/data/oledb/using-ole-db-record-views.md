@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
 ms.openlocfilehash: 83f4d64252ab5c2b80d62419ea448c1ffd0cdd69
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025873"
 ---
 # <a name="using-ole-db-record-views"></a>Utilizzo delle visualizzazioni di record OLE DB
@@ -33,5 +33,5 @@ La visualizzazione Mostra i campi del `CRowset` oggetto nei controlli della fine
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo delle funzioni di accesso](../../data/oledb/using-accessors.md)<br/>
-[COleDBRecordView (classe)](../../mfc/reference/coledbrecordview-class.md)<br/>
+[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)<br/>
+[Classe COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)<br/>

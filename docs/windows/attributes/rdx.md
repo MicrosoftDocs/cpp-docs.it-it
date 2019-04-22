@@ -7,10 +7,10 @@ helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
 ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023880"
 ---
 # <a name="rdx"></a>rdx
@@ -28,7 +28,7 @@ Crea una chiave del Registro di sistema o modifica una chiave del Registro di si
 *key*<br/>
 Il nome della chiave può essere creato o aperto.
 
-*valueName*<br/>
+*valuename*<br/>
 (Facoltativo) Specifica il campo del valore da impostare. Se un campo del valore con lo stesso nome esiste già nella chiave, viene aggiunto.
 
 *regtype*<br/>
@@ -48,7 +48,7 @@ Questo attributo può essere utilizzato in combinazione con il [coclasse](coclas
 |-|-|
 |**Si applica a**|**classe** oppure **struct** membro|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

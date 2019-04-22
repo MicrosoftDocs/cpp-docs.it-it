@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
 ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777363"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (classe)
@@ -209,6 +209,6 @@ Le nuove dimensioni del pulsante viene calcolata per adattare il testo del pulsa
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CMFCButton](../../mfc/reference/cmfcbutton-class.md)

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
 ms.openlocfilehash: 5ca1f33a809bc81b7dcc090231e507ba66775205
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786345"
 ---
 # <a name="choosing-a-deployment-method"></a>Scelta di un metodo di distribuzione

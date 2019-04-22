@@ -12,10 +12,10 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775049"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macro di debug e segnalazione errori
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>Parametri
 
 *exp*<br/>
-[in] La stringa e variabili da inviare per la finestra di output di Visual C++ o tutte le applicazioni che vengono intercettati questi messaggi.
+[in] La stringa e variabili da inviare all'oggetto visivo C++ finestra di output o tutte le applicazioni che vengono intercettati questi messaggi.
 
 *category*<br/>
 [in] Tipo di evento o un metodo in cui al report. Vedere la sezione Osservazioni per un elenco di categorie.
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>Parametri
 
 *exp*<br/>
-[in] La stringa da inviare per la finestra di output di Visual C++ o tutte le applicazioni che vengono intercettati questi messaggi.
+[in] La stringa da inviare all'oggetto visivo C++ finestra di output o tutte le applicazioni che vengono intercettati questi messaggi.
 
 *category*<br/>
 [in] Tipo di evento o un metodo in cui al report. Vedere la sezione Osservazioni per un elenco di categorie.

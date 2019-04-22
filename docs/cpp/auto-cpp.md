@@ -8,10 +8,10 @@ helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776336"
 ---
 # <a name="auto-c"></a>auto (C++)
@@ -52,7 +52,7 @@ Usare la **automatica** parola chiave, usarlo invece di un tipo per dichiarare u
 
 L'espressione di inizializzazione può essere un'assegnazione (sintassi del segno di uguale), un'inizializzazione diretta (sintassi di tipo funzione), un' [operatore new](new-operator-cpp.md) espressione o l'espressione di inizializzazione può essere il  *for-range-declaration* parametro in un [Range-based per istruzione (C++)](../cpp/range-based-for-statement-cpp.md) istruzione. Per altre informazioni, vedere [inizializzatori](../cpp/initializers.md) e gli esempi di codice più avanti in questo documento.
 
-Il **automatica** (parola chiave) è un segnaposto per un tipo, ma non è un tipo. Pertanto, il **automatica** parola chiave non può essere utilizzata in un cast o operatori, ad esempio [sizeof](../cpp/sizeof-operator.md) e (per C + + c++ /CLI CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
+Il **automatica** (parola chiave) è un segnaposto per un tipo, ma non è un tipo. Pertanto, il **automatica** parola chiave non può essere utilizzata in un cast o operatori, ad esempio [sizeof](../cpp/sizeof-operator.md) e (per C++/CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Utilizzabilità
 

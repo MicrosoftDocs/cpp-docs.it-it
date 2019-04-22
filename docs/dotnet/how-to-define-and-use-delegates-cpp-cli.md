@@ -1,19 +1,19 @@
 ---
-title: 'Procedura: Definire e usare delegati (C + + CLI)'
+title: 'Procedura: Definire e usare delegati (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
 ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771311"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>Procedura: Definire e usare delegati (C + + CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>Procedura: Definire e usare delegati (C++/CLI)
 
-Questo articolo illustra come definire e usare delegati in C + + / CLI.
+Questo articolo illustra come definire e usare delegati in C++/CLI.
 
 Anche se .NET Framework fornisce un numero di delegati, in alcuni casi potrebbe essere necessario definire nuovi delegati.
 

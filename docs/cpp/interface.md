@@ -7,10 +7,10 @@ helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
 ms.openlocfilehash: 1ec3a1d2cddbf8dbbb248a7366d5d56dd95ad074
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768315"
 ---
 # <a name="interface"></a>__interface
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>Note
 
-C++ [classe](../cpp/class-cpp.md) oppure [struct](../cpp/struct-cpp.md) può essere implementato con queste regole, ma **Interface** li applica.
+Oggetto C++ [classe](../cpp/class-cpp.md) oppure [struct](../cpp/struct-cpp.md) potrebbe essere implementato con queste regole, ma **Interface** li applica.
 
 Ad esempio, di seguito è riportata una definizione di interfaccia di esempio:
 

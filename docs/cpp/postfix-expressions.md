@@ -7,10 +7,10 @@ helpviewer_keywords:
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
 ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779261"
 ---
 # <a name="postfix-expressions"></a>Espressioni in forma suffissa
@@ -149,7 +149,7 @@ I puntini di sospensione indicano che gli argomenti potrebbero essere obbligator
 
 I punti di sospensione, se utilizzati, devono essere dichiarati per ultimi nell'elenco degli argomenti. Per altre informazioni sul passaggio di un numero variabile di argomenti, vedere la discussione relativa [va_arg, va_start e va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) nel *Run-Time Library Reference*.
 
-Per informazioni sugli argomenti predefiniti della programmazione CLR, vedere [elenchi di argomenti variabili (...) (C + + CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Per informazioni sugli argomenti predefiniti della programmazione CLR, vedere [elenchi di argomenti variabili (...) (C++/CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Gli argomenti predefiniti consentono di specificare il valore che deve assumere un argomento se non viene fornito nella chiamata di funzione. Nel frammento di codice seguente viene illustrato come usare gli argomenti predefiniti. Per altre informazioni sulle restrizioni su come specificare gli argomenti predefiniti, vedere [argomenti predefiniti](../cpp/default-arguments.md).
 

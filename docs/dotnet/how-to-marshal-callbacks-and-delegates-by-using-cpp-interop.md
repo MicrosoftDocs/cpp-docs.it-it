@@ -11,10 +11,10 @@ helpviewer_keywords:
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
 ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766937"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Procedura: Effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++
@@ -27,7 +27,7 @@ Il codice seguente usa gli esempi di [managed, unmanaged](../preprocessor/manage
 
 Nell'esempio seguente viene illustrato come configurare un'API non gestita per attivare un delegato gestito. Viene creato un delegato gestito e uno dei metodi di interoperabilità <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, viene usato per recuperare il punto di ingresso sottostante per il delegato. Questo indirizzo viene quindi passato alla funzione non gestita, che chiama il delegato con alcuna conoscenza del fatto che viene implementato come una funzione gestita.
 
-Si noti che viene possibile, ma non indispensabile, è possibile bloccare il delegato tramite [pin_ptr (C + + CLI)](../extensions/pin-ptr-cpp-cli.md) per impedire che venga rilocato o eliminati dal garbage collector. È necessaria una protezione da prematura garbage collection, il blocco fornisce altre funzionalità di protezione superiore a quella necessaria, poiché impedisce la raccolta, ma impedisce anche la rilocazione.
+Si noti che viene possibile, ma non indispensabile, è possibile bloccare il delegato tramite [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) per evitare che venga rilocato o eliminati dal garbage collector. È necessaria una protezione da prematura garbage collection, il blocco fornisce altre funzionalità di protezione superiore a quella necessaria, poiché impedisce la raccolta, ma impedisce anche la rilocazione.
 
 Se un delegato viene rilocato da un'operazione di garbage collection, non influirà sulla callback gestita, pertanto <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> viene usato per aggiungere un riferimento al delegato, consentendo la rilocazione del delegato, ma impedendone l'eliminazione. L'uso di GCHandle anziché pin_ptr riduce la potenziale frammentazione dell'heap gestito.
 
