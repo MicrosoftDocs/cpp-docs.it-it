@@ -27,10 +27,10 @@ helpviewer_keywords:
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
 ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040955"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Funzioni intrinseche_InterlockedAdd
@@ -78,10 +78,10 @@ __int64 _InterlockedAdd64_rel(
 
 #### <a name="parameters"></a>Parametri
 
-*Addendo*<br/>
+*Addend*<br/>
 [in, out] Puntatore al valore integer da aggiungere a; sostituito dal risultato dell'addizione.
 
-*Value*<br/>
+*Valore*<br/>
 [in] Il valore da aggiungere.
 
 ## <a name="return-value"></a>Valore restituito

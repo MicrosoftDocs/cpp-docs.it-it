@@ -6,10 +6,10 @@ f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
 ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041390"
 ---
 # <a name="callback-function-wrl"></a>Funzione di callback (WRL)
@@ -233,7 +233,7 @@ Oggetto che rappresenta l'oggetto di callback e la relativa funzione membro.
 *object*<br/>
 L'oggetto di cui la funzione membro viene chiamata quando si verifica un evento.
 
-*metodo*<br/>
+*method*<br/>
 La funzione membro da chiamare quando si verifica un evento.
 
 ## <a name="return-value"></a>Valore restituito

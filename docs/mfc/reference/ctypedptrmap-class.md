@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781796"
 ---
 # <a name="ctypedptrmap-class"></a>Classe CTypedPtrMap
@@ -40,7 +40,7 @@ Classe di base della classe map puntatore tipizzato. deve essere una classe dell
 *KEY*<br/>
 Classe dell'oggetto usato come chiave per la mappa.
 
-*VALUE*<br/>
+*VALORE*<br/>
 Classe dell'oggetto archiviato nella mappa.
 
 ## <a name="members"></a>Membri
@@ -100,7 +100,7 @@ Parametro di modello che specifica il tipo delle chiavi della mappa.
 *rKey*<br/>
 Specifica la chiave dell'elemento recuperato restituita.
 
-*VALUE*<br/>
+*VALORE*<br/>
 Parametro di modello che specifica il tipo dei valori della mappa.
 
 *rValue*<br/>
@@ -130,7 +130,7 @@ Parametro di modello che specifica la classe di base della classe della mappa.
 *key*<br/>
 La chiave dell'elemento da essere cercato.
 
-*VALUE*<br/>
+*VALORE*<br/>
 Parametro di modello che specifica il tipo di valori archiviati in questa mappa.
 
 *rValue*<br/>
@@ -154,7 +154,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Parametri
 
-*VALUE*<br/>
+*VALORE*<br/>
 Parametro di modello che specifica il tipo di valori archiviati in questa mappa.
 
 *BASE_CLASS*<br/>
@@ -217,8 +217,8 @@ Per ulteriori osservazioni, vedere [CMapStringToOb::SetAt](../../mfc/reference/c
 ## <a name="see-also"></a>Vedere anche
 
 [Esempio MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)<br/>
-[CMapPtrToWord Class](../../mfc/reference/cmapptrtoword-class.md)<br/>
+[Classe CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)<br/>
 [Classe CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)<br/>
 [Classe CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)

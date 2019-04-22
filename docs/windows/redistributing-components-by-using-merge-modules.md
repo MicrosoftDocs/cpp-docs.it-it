@@ -6,10 +6,10 @@ helpviewer_keywords:
 - redistributing applications, using merge modules
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
 ms.openlocfilehash: 7a110826e21f33986d68dcd46417ec5cbd5171bc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786533"
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>Ridistribuzione di componenti tramite modelli merge

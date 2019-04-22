@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
 ms.openlocfilehash: 8dccf581cff88dc2e8c4a889bed8b47fc140eb7c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786279"
 ---
 # <a name="deployment-in-visual-c"></a>Distribuzione in Visual C++

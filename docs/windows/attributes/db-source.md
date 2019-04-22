@@ -1,5 +1,5 @@
 ---
-title: db_source (attributo COM C++)
+title: db_source (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_source
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
 ms.openlocfilehash: 884cab78d64c20bef00958f0cc0319281fd69921
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026331"
 ---
 # <a name="dbsource"></a>db_source
@@ -31,7 +31,7 @@ La stringa di connessione utilizzata per la connessione all'origine dati. Per il
 *name*<br/>
 (Facoltativo) Quando si usa **db_source** in una classe *nome* è un'istanza di un oggetto origine dati che contiene la **db_source** attributo applicato (vedere l'esempio 1). Quando si usa **db_source** inline in un'implementazione di metodo *nome* è una variabile (locale al metodo) che può essere utilizzata per accedere ai dati di origine (vedere l'esempio 2). È passare questo *name* per il *source_name* parametro di `db_command` per associare l'origine dati a un comando.
 
-*HRESULT*<br/>
+*hresult*<br/>
 (Facoltativo) Identifica la variabile che riceverà l'HRESULT di questo comando di database. Se la variabile non esiste, verrà automaticamente inserita dall'attributo.
 
 ## <a name="remarks"></a>Note
@@ -74,7 +74,7 @@ class CMyCommand {};
 |-|-|
 |**Si applica a**|**classe**, **struct**, membro, metodo, locale|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

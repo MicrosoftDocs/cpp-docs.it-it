@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781978"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Classe CMFCPropertyGridCtrl
@@ -558,7 +558,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare l'area Descrizione; FALSE per disabilitare l'area Descrizione. Il valore predefinito è TRUE.
 
 ### <a name="remarks"></a>Note
@@ -578,7 +578,7 @@ void EnableHeaderCtrl(
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] TRUE per abilitare il controllo di intestazione; FALSE per disabilitare il controllo intestazione. Il valore predefinito è TRUE.
 
 *lpszLeftColumn*<br/>
@@ -1272,7 +1272,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Un punto, nelle coordinate del client.
 
 ### <a name="remarks"></a>Note
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parametri
 
-*colore*<br/>
+*color*<br/>
 [in] Un valore di colore RGB.
 
 ### <a name="remarks"></a>Note
@@ -1641,5 +1641,5 @@ Se si esegue l'override di questo metodo, restituisce TRUE se i dati della propr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

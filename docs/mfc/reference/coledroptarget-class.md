@@ -25,10 +25,10 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
 ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781640"
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
@@ -117,7 +117,7 @@ Punta all'oggetto dati che contiene i dati che possono essere eliminati.
 *dwKeyState*<br/>
 Contiene lo stato dei tasti di modifica. Questa è una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione corrente del cursore nelle coordinate del client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -182,7 +182,7 @@ Punta all'oggetto dati che contiene i dati da eliminare.
 *dwKeyState*<br/>
 Contiene lo stato dei tasti di modifica. Questa è una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione corrente del cursore nelle coordinate del client.
 
 ### <a name="return-value"></a>Valore restituito
@@ -228,7 +228,7 @@ Punta alla finestra che si trova attualmente il cursore.
 *dwKeyState*<br/>
 Contiene lo stato dei tasti di modifica. Questa è una combinazione di un numero qualsiasi delle operazioni seguenti: MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione del cursore, in pixel, rispetto allo schermo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -278,7 +278,7 @@ L'effetto che l'utente ha scelto per l'operazione drop. Può trattarsi di uno o 
 
 - Verrà stabilito DROPEFFECT_LINK link tramite messaggio e-mail dai dati rilasciati ai dati originali.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione del cursore, in pixel, rispetto allo schermo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -317,10 +317,10 @@ Punta all'oggetto dati che contiene i dati da eliminare.
 *dropDefault*<br/>
 L'effetto che l'utente ha scelto per l'operazione di rilascio predefinite basata sullo stato della chiave corrente. Può essere DROPEFFECT_NONE. Nella sezione Osservazioni vengono descritti gli effetti di rilascio.
 
-*elenco a discesa*<br/>
+*dropList*<br/>
 Un elenco degli effetti di trascinamento che supporta l'origine del trascinamento. I valori di effetto di rilascio possono essere combinati utilizzando l'operatore OR bit per bit (**&#124;**) operazione. Nella sezione Osservazioni vengono descritti gli effetti di rilascio.
 
-*punto*<br/>
+*point*<br/>
 Contiene la posizione del cursore, in pixel, rispetto allo schermo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -389,5 +389,5 @@ Per altre informazioni, vedere [RevokeDragDrop](/windows/desktop/api/ole2/nf-ole
 [Esempio MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Esempio MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDropSource](../../mfc/reference/coledropsource-class.md)

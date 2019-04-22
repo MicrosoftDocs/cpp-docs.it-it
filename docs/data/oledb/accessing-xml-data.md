@@ -10,10 +10,10 @@ helpviewer_keywords:
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
 ms.openlocfilehash: b5704c10393026a14ac66b632559fc376f008f8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041536"
 ---
 # <a name="accessing-xml-data"></a>Accesso ai dati XML
@@ -88,4 +88,4 @@ while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo delle funzioni di accesso](../../data/oledb/using-accessors.md)
+[Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

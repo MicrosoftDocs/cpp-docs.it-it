@@ -66,10 +66,10 @@ helpviewer_keywords:
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
 ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021631"
 ---
 # <a name="cdataconnection-class"></a>Classe CDataConnection
@@ -105,8 +105,8 @@ class CDataConnection
 |[operator bool](#op_bool_ole)|Determina se la sessione corrente è open o No.|
 |[operator CDataSource &](#op_cdata_amp)|Restituisce un riferimento all'oggetto contenuto `CDataSource` oggetto.|
 |[operator CDataSource *](#op_cdata_star)|Restituisce un puntatore all'oggetto `CDataSource` contenuto.|
-|[operatore CSession&](#op_csession_amp)|Restituisce un riferimento all'oggetto contenuto `CSession` oggetto.|
-|[operatore CSession*](#op_csession_star)|Restituisce un puntatore all'oggetto `CSession` contenuto.|
+|[operatore CSession &](#op_csession_amp)|Restituisce un riferimento all'oggetto contenuto `CSession` oggetto.|
+|[operatore CSession *](#op_csession_star)|Restituisce un puntatore all'oggetto `CSession` contenuto.|
 
 ## <a name="remarks"></a>Note
 
@@ -132,7 +132,7 @@ CDataConnection(const CDataConnection &ds);
 
 #### <a name="parameters"></a>Parametri
 
-*ds*<br/>
+*dominio Active Directory*<br/>
 [in] Un riferimento a una connessione dati esistente.
 
 ### <a name="remarks"></a>Note
@@ -153,7 +153,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 
 #### <a name="parameters"></a>Parametri
 
-*ds*<br/>
+*dominio Active Directory*<br/>
 [in] Un riferimento a una connessione dati esistente da copiare.
 
 ## <a name="open"></a> CDataConnection:: Open
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>Parametri
 
-*sessione*<br/>
+*session*<br/>
 [in/out] Un riferimento all'oggetto nuova sessione.
 
 ### <a name="remarks"></a>Note
@@ -306,5 +306,5 @@ Visualizzare [operatore CSession &](../../data/oledb/cdataconnection-operator-cs
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

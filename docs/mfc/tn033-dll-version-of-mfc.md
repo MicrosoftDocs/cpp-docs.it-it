@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
 ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767782"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: Versione DLL di MFC
@@ -42,7 +42,7 @@ Si tratta della versione del supporto DLL in MFC 1.0 è supportata. Viene descri
 
 MFC 3.0 (e versioni successive) supporta le DLL MFC regolari con tutte le nuove funzionalità, comprese le classi OLE e il Database.
 
-**AFXDLL**: Ciò è detta anche la versione delle librerie MFC condivisa. Questo è il nuovo supporto DLL aggiunto 2.0 MFC. La libreria MFC stessa è in un numero di DLL (descritti di seguito) e un'applicazione client o una DLL collegata in modo dinamico le DLL necessarie. Le interfacce tra i limiti dell'applicazione o DLL sono C + + / le interfacce delle classi MFC. L'applicazione client deve essere un'applicazione MFC. Supporta tutte le funzionalità di MFC 3.0 (eccezione: UNICODE non è supportato per le classi di database).
+**AFXDLL**: Ciò è detta anche la versione delle librerie MFC condivisa. Questo è il nuovo supporto DLL aggiunto 2.0 MFC. La libreria MFC stessa è in un numero di DLL (descritti di seguito) e un'applicazione client o una DLL collegata in modo dinamico le DLL necessarie. Le interfacce tra i limiti dell'applicazione o DLL sono C++interfacce di classi /MFC. L'applicazione client deve essere un'applicazione MFC. Supporta tutte le funzionalità di MFC 3.0 (eccezione: UNICODE non è supportato per le classi di database).
 
 > [!NOTE]
 > A partire da Visual C++ versione 4.0, questo tipo di DLL viene definito come una "DLL di estensione."
@@ -476,7 +476,7 @@ Un'applicazione che usa MFCxx Usa un allocatore di memoria comuni fornito da MSV
 
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>Numeri ordinali e classi dllexport e DLL di denominazione
 
-Non vengono usati i `class` **dllexport** funzionalità del compilatore C++. Al contrario, un elenco di esportazioni è incluso con le origini di libreria di classi (MFCxx.DEF e MFCxxD.DEF). Vengono esportati solo questi set selezionato di punti di ingresso (funzioni e dati). Altri simboli, ad esempio MFC implementazione privata funzioni o classi, non vengono esportate tutte le esportazioni sono eseguite dall'ordinale senza un nome di stringa della tabella nome residenti o non residenti.
+Non vengono usati i `class` **dllexport** funzionalità del C++ compilatore. Al contrario, un elenco di esportazioni è incluso con le origini di libreria di classi (MFCxx.DEF e MFCxxD.DEF). Vengono esportati solo questi set selezionato di punti di ingresso (funzioni e dati). Altri simboli, ad esempio MFC implementazione privata funzioni o classi, non vengono esportate tutte le esportazioni sono eseguite dall'ordinale senza un nome di stringa della tabella nome residenti o non residenti.
 
 Usando `class` **dllexport** potrebbe essere una valida alternativa per la creazione di DLL di dimensioni ridotte, ma in caso di una DLL di grandi dimensioni, ad esempio MFC, il valore predefinito esportazione meccanismo con efficienza e la capacità dei limiti.
 

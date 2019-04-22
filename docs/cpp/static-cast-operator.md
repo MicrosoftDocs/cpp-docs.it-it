@@ -7,10 +7,10 @@ helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
 ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776921"
 ---
 # <a name="staticcast-operator"></a>Operatore static_cast
@@ -103,7 +103,7 @@ Qualsiasi espressione può essere convertita in modo esplicito al tipo void tram
 
 Il **static_cast** operatore non è possibile eseguire il cast di **const**, **volatile**, oppure **unaligned** attributi. Visualizzare [operatore const_cast](../cpp/const-cast-operator.md) per informazioni sulla rimozione di questi attributi.
 
-**C + + / CLI:** A causa il rischio di esecuzione di cast non verificati nella parte superiore di un rilocazione garbage collector, l'uso di **static_cast** deve essere solo nel codice critiche per le prestazioni quando si è certi funzionerà correttamente. Se è necessario utilizzare **static_cast** in modalità di rilascio, sostituirlo con [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) nelle build di debug per garantire l'esito positivo.
+**C++/ CLI:** A causa il rischio di esecuzione di cast non verificati nella parte superiore di un rilocazione garbage collector, l'uso di **static_cast** deve essere solo nel codice critiche per le prestazioni quando si è certi funzionerà correttamente. Se è necessario utilizzare **static_cast** in modalità di rilascio, sostituirlo con [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) nelle build di debug per garantire l'esito positivo.
 
 ## <a name="see-also"></a>Vedere anche
 

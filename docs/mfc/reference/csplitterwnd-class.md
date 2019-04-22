@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781445"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
@@ -388,7 +388,7 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica la riga della finestra con separatore in cui inserire la nuova vista.
 
 *col*<br/>
@@ -475,7 +475,7 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica la riga di finestra con separatore in corrispondenza del quale eliminare la visualizzazione.
 
 *col*<br/>
@@ -649,7 +649,7 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica una riga.
 
 *col*<br/>
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica una riga.
 
 *cyCur*<br/>
@@ -727,7 +727,7 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica la riga di finestra con separatore.
 
 *col*<br/>
@@ -877,7 +877,7 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Se *pWnd* è NULL, specifica la riga nel riquadro che sarà attivo.
 
 *col*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Parametri
 
-*Riga*<br/>
+*row*<br/>
 Specifica una riga della finestra con separatore.
 
 *cyIdeal*<br/>
@@ -1038,6 +1038,6 @@ Puntatore a un contesto di dispositivo.
 
 [Esempio MFC viene](../../overview/visual-cpp-samples.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)

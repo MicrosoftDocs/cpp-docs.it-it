@@ -9,10 +9,10 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
 ms.openlocfilehash: 88a027a24f8ab817f793f101f9f128e1fc0c61c3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023945"
 ---
 # <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
@@ -76,4 +76,4 @@ END_COLUMN_MAP()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
 ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041377"
 ---
 # <a name="ref-c"></a>ref (C++)
@@ -51,7 +51,7 @@ __interface IFireTabCtrl
 |-|-|
 |**Si applica a**|**typedef**, parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -60,4 +60,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributi dei parametri](parameter-attributes.md)
+[Attributi di parametro](parameter-attributes.md)

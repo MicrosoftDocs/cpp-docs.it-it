@@ -3,10 +3,10 @@ title: Avviso del compilatore (livello 4) C4435
 ms.date: 11/04/2016
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
 ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041228"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>Avviso del compilatore (livello 4) C4435
@@ -38,4 +38,4 @@ class B : public virtual A  // C4435
 ## <a name="see-also"></a>Vedere anche
 
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[/vd (Disabilita spostamenti costruttori)](../../build/reference/vd-disable-construction-displacements.md)
+[/vd (disabilita gli spostamenti dei costruttori)](../../build/reference/vd-disable-construction-displacements.md)

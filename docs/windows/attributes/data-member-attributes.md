@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
 ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041150"
 ---
 # <a name="data-member-attributes"></a>Attributi del membro dati
@@ -35,4 +35,4 @@ Gli attributi seguenti si applicano ai membri dei dati in una classe, coclasse o
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi in base all'utilizzo](attributes-by-usage.md)
+[Attributi per utilizzo](attributes-by-usage.md)

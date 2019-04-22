@@ -31,10 +31,10 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
 ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778091"
 ---
 # <a name="cpagesetupdialog-class"></a>Classe CPageSetupDialog
@@ -325,7 +325,7 @@ virtual UINT OnDrawPage(
 *pDC*<br/>
 Puntatore al contesto di dispositivo stampante.
 
-*nmessaggio*<br/>
+*nMessage*<br/>
 Specifica un messaggio, che indica l'area della pagina da disegnare. Può essere uno dei seguenti:
 
 - WM_PSD_FULLPAGERECT area della pagina intera.
@@ -407,4 +407,4 @@ Eseguire l'override di questa funzione per personalizzare il disegno dell'immagi
 
 [Esempio MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)

@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
 ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779794"
 ---
 # <a name="ccontextmenumanager-class"></a>Classe CContextMenuManager
@@ -374,6 +374,6 @@ Questo metodo funziona come una chiamata modale per visualizzare un menu di scel
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CWinAppEx](../../mfc/reference/cwinappex-class.md)

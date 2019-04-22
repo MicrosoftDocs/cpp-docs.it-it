@@ -1,20 +1,20 @@
 ---
-title: 'Procedura: Usare le proprietà in C + + / CLI'
+title: 'Procedura: Usare le proprietà in C++/CLI'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
 ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781627"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Procedura: Usare le proprietà in C + + / CLI
+# <a name="how-to-use-properties-in-ccli"></a>Procedura: Usare le proprietà in C++/CLI
 
-Questo articolo illustra come usare le proprietà in C + + / CLI.
+Questo articolo illustra come usare le proprietà in C++/CLI.
 
 ## <a name="basic-properties"></a>Proprietà di base
 
@@ -88,7 +88,7 @@ In genere, una proprietà indicizzata espone una struttura di dati a cui si acce
 
 Se si usa una proprietà indicizzata predefinita, la struttura dei dati è possibile accedere semplicemente facendo riferimento al nome della classe, ma se si usa una proprietà indicizzata definita dall'utente, è necessario per specificare il nome della proprietà per accedere alla struttura di dati.
 
-Per informazioni su come usare un indicizzatore che viene scritto in C#, vedere [procedura: Usare un C# indicizzatore (C + + / CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Per informazioni su come usare un indicizzatore che viene scritto in C#, vedere [procedura: Usare un C# indicizzatore (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
 Questo esempio di codice mostra come usare l'impostazione predefinita e le proprietà indicizzate definite dall'utente:
 

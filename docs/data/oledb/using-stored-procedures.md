@@ -9,10 +9,10 @@ helpviewer_keywords:
 - stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
 ms.openlocfilehash: 7ace43283c56c0c859b193f63e8ca104f6b52a31
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041176"
 ---
 # <a name="using-stored-procedures"></a>Utilizzo delle stored procedure
@@ -37,4 +37,4 @@ Il provider OLE DB per SQL Server (SQLOLEDB) supporta i seguenti meccanismi util
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

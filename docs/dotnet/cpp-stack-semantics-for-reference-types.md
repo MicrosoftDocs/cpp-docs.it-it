@@ -5,10 +5,10 @@ helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
 ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772605"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantica dello stack C++ per i tipi di riferimento
@@ -27,7 +27,7 @@ Il compilatore non genererà un costruttore di copia per un tipo di riferimento.
 
 Il compilatore non genererà un operatore di assegnazione predefinito per un tipo di riferimento. Un operatore di assegnazione consente di creare un oggetto mediante la semantica dello stack e di inizializzarlo con un oggetto esistente creato mediante la semantica dello stack. Un operatore di assegnazione per un tipo di riferimento ha una firma nella forma seguente: `void operator=( R% ){}`.
 
-Se il distruttore del tipo rilascia delle risorse critiche e si utilizza la semantica dello stack per i tipi riferimento, non è necessario chiamare in modo esplicito il distruttore (o chiamare `delete`). Per altre informazioni sui distruttori nei tipi di riferimento, vedere [distruttori e finalizzatori in Procedura: Definire e usare classi e struct (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Se il distruttore del tipo rilascia delle risorse critiche e si utilizza la semantica dello stack per i tipi riferimento, non è necessario chiamare in modo esplicito il distruttore (o chiamare `delete`). Per altre informazioni sui distruttori nei tipi di riferimento, vedere [distruttori e finalizzatori in Procedura: Definire e usare classi e struct (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Un operatore di assegnazione generato dal compilatore seguirà le normali regole di C++ standard con le seguenti aggiunte:
 

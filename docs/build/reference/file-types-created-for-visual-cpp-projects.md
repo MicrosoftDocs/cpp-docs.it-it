@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424093"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipi di file creati per i progetti C++ di Visual Studio
@@ -50,16 +50,16 @@ Nella tabella seguente illustra i file comuni in un progetto di Visual Studio e 
 |Estensione di file|Tipo|Sommario|
 |--------------------|----------|--------------|
 |asmx|Origine|File di distribuzione.|
-|asp|Origine|File Active Server Page.|
+|asp|Source|File Active Server Page.|
 |atp|Progetto|File di progetto del modello di applicazione.|
 |bmp, dib, gif, jpg, jpe, png|Risorsa|File di immagine generali.|
 |bsc|Compilazione|File di codice del browser.|
-|.cpp, .c|Origine|File di codice sorgente principali per l'applicazione.|
+|.cpp, .c|Source|File di codice sorgente principali per l'applicazione.|
 |cur|Risorsa|File grafico bitmap di cursore.|
 |dbp|Progetto|File di progetto di database.|
-|disco|Origine|File di documento di individuazione dinamica. Gestisce l'individuazione di servizi Web XML.|
+|disco|Source|File di documento di individuazione dinamica. Gestisce l'individuazione di servizi Web XML.|
 |exe, dll|Progetto|File eseguibili o di libreria a collegamento dinamico.|
-|h|Origine|File di intestazione o di inclusione.|
+|h|Source|File di intestazione o di inclusione.|
 |htm, html, xsp, asp, htc, hta, xml|Risorsa|File Web comuni.|
 |HxC|Progetto|File di progetto della Guida.|
 |ico|Risorsa|File grafico bitmap di icona.|

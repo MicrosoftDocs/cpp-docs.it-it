@@ -13,10 +13,10 @@ helpviewer_keywords:
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
 ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041432"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword

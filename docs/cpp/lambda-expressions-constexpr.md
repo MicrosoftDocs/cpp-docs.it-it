@@ -5,10 +5,10 @@ helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
 ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424183"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>espressioni lambda constexpr in C++

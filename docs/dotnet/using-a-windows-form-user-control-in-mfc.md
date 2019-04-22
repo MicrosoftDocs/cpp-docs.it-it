@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
 ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773099"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Utilizzo di un controllo utente Windows Form in MFC
@@ -32,7 +32,7 @@ Le sezioni seguenti descrivono come:
 > Integrazione dei moduli di Windows di MFC funziona solo nei progetti che si collegano in modo dinamico con MFC (progetti in cui `_AFXDLL` è definito).
 
 > [!NOTE]
-> Quando si compila l'applicazione usando una copia privata (modificata) delle interfacce MFC Windows Forms DLL (mfcmifc80.dll), potrà essere installato nella Global Assembly Cache solo se si sostituisce la chiave di Microsoft con la propria chiave del fornitore. Per altre informazioni sulla firma degli assembly, vedere [programmazione con assembly](/dotnet/framework/app-domains/programming-with-assemblies) e [assembly con nome sicuro (firma degli Assembly) (C + + CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> Quando si compila l'applicazione usando una copia privata (modificata) delle interfacce MFC Windows Forms DLL (mfcmifc80.dll), potrà essere installato nella Global Assembly Cache solo se si sostituisce la chiave di Microsoft con la propria chiave del fornitore. Per altre informazioni sulla firma degli assembly, vedere [programmazione con assembly](/dotnet/framework/app-domains/programming-with-assemblies) e [assembly con nome sicuro (firma degli Assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Se l'applicazione MFC Usa Windows Form, è necessario ridistribuire mfcmifc80.dll con l'applicazione. Per altre informazioni, vedere [ridistribuzione della libreria MFC](../windows/redistributing-the-mfc-library.md).
 

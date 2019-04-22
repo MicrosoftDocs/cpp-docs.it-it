@@ -37,10 +37,10 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776830"
 ---
 # <a name="coledatasource-class"></a>Classe COleDataSource
@@ -491,5 +491,5 @@ void SetClipboard();
 [Esempio MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Esempio MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleDataObject](../../mfc/reference/coledataobject-class.md)

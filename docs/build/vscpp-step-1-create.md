@@ -7,10 +7,10 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898778"
 ---
 # <a name="create-a-c-console-app-project"></a>Creare un progetto di app console C++
@@ -19,7 +19,7 @@ In genere il punto di partenza per un programmatore C++ è un'applicazione "Hell
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Visual Studio con il carico di lavoro Sviluppo di applicazioni desktop con C++ deve essere installato e in esecuzione nel computer. Se non si è ancora installato, vedere [supporto di installazione di C++ in Visual Studio](vscpp-step-0-installation.md).
+- Visual Studio con il carico di lavoro Sviluppo di applicazioni desktop con C++ deve essere installato e in esecuzione nel computer. Se non è ancora installato, vedere [Installare il supporto C++ in Visual Studio](vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Creare il progetto di app
 
@@ -55,7 +55,7 @@ Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e l
 
 Visual Studio crea un nuovo progetto vuoto, pronto per specializzare per il tipo di app che si desidera creare e aggiungere i file del codice sorgente. Verranno eseguite più avanti.
 
-[È verificato un problema.](#create-your-app-project-issues)
+[Si è verificato un problema.](#create-your-app-project-issues)
 
 ## <a name="make-your-project-a-console-app"></a>Rendere il progetto di un'app console
 
@@ -69,7 +69,7 @@ Visual Studio è possibile creare tutti i tipi di componenti e App per Windows e
 
 Visual Studio riconosce automaticamente a questo punto compilare il progetto per l'esecuzione in una finestra della console. Si verrà successivamente, aggiungere un file di codice sorgente e immettere il codice per l'app.
 
-[È verificato un problema.](#make-your-project-a-console-app-issues)
+[Si è verificato un problema.](#make-your-project-a-console-app-issues)
 
 ## <a name="add-a-source-code-file"></a>Aggiungere un file di codice sorgente
 
@@ -81,7 +81,7 @@ Visual Studio riconosce automaticamente a questo punto compilare il progetto per
 
 Visual studio crea un file di codice sorgente nuovo e vuoto e viene aperta in una finestra dell'editor, pronta per immettere il codice sorgente.
 
-[È verificato un problema.](#add-a-source-code-file-issues)
+[Si è verificato un problema.](#add-a-source-code-file-issues)
 
 ## <a name="add-code-to-the-source-file"></a>Aggiungere codice al file di origine
 
@@ -103,7 +103,7 @@ Visual studio crea un file di codice sorgente nuovo e vuoto e viene aperta in un
 
 Quando il codice di aspetto simile al seguente nell'editor, si è pronti per andare al passaggio successivo e compilare l'app.
 
-[È verificato un problema.](#add-a-source-code-file-issues)
+[Si è verificato un problema.](#add-a-source-code-file-issues)
 
 ::: moniker-end
 

@@ -67,10 +67,10 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
 ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781874"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (classe)
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 [in] True per abilitare il pulsante, FALSE per disabilitare il pulsante.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*<br/>
+*elem*<br/>
 [in] Un elemento della barra di didascalia per il quale recuperare l'allineamento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -731,5 +731,5 @@ L'etichetta di testo è allineato come specificato dal *textAlignment* parametro
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)

@@ -5,10 +5,10 @@ f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
 ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766886"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>Errori Runtime di C da R6002 a R6035

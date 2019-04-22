@@ -4,10 +4,10 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424118"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
@@ -29,7 +29,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/clr](clr-common-language-runtime-compilation.md)|Genera un file di output da eseguire in Common Language Runtime.|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Controlla la valutazione di constexpr in fase di compilazione.|
 |[/D](d-preprocessor-definitions.md)|Definisce costanti e macro.|
-|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Controlla il formato dei messaggi di diagnostica.|
+|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Controlla il formato dei messaggi di diagnostica.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Elabora commenti per la documentazione in un file XML.|
 |[/E](e-preprocess-to-stdout.md)|Copia l'output del preprocessore in un output standard.|
 |[/EH](eh-exception-handling-model.md)|Specifica il modello di gestione delle eccezioni.|
@@ -39,17 +39,17 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/F](f-set-stack-size.md)|Imposta la dimensione dello stack.|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Genera codice ottimizzato per un determinato x64 architettura o per le specifiche delle microarchitetture nelle architetture di AMD64 ed Extended Memory 64 Technology (EM64T).|
 |[/FA](fa-fa-listing-file.md)|Crea un file di listato.|
-|[/FA](fa-fa-listing-file.md)|Imposta il nome del file di listato.|
+|[/Fa](fa-fa-listing-file.md)|Imposta il nome del file di listato.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Visualizza il percorso completo dei file di codice sorgente passati a cl.exe nel testo contenente informazioni di diagnostica.|
 |[/Fd](fd-program-database-file-name.md)|Rinomina il file del database di programma.|
 |[/Fe](fe-name-exe-file.md)|Rinomina il file eseguibile.|
 |[/FI](fi-name-forced-include-file.md)|Pre-elabora il file di inclusione specificato.|
-|[/FI](fi-preprocess-output-file-name.md)|Imposta il nome del file di output pre-elaborato.|
+|[/Fi](fi-preprocess-output-file-name.md)|Imposta il nome del file di output pre-elaborato.|
 |[/Fm](fm-name-mapfile.md)|Crea un file di mappa.|
 |[/Fo](fo-object-file-name.md)|Crea un file oggetto.|
 |[/fp](fp-specify-floating-point-behavior.md)|Specifica il comportamento della virgola mobile.|
-|[/fp](fp-name-dot-pch-file.md)|Specifica un nome del file di intestazione precompilato.|
-|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|Genera file del browser. **/Fr** è stato deprecato.|
+|[/Fp](fp-name-dot-pch-file.md)|Specifica un nome del file di intestazione precompilato.|
+|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Genera file del browser. **/Fr** è stato deprecato.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Forza scritture nel file del database di programma (PDB) per la serializzazione tramite MSPDBSRV.EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|Impone l'utilizzo di un nome file, come se fosse stato passato alla direttiva [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/Fx](fx-merge-injected-code.md)|Unisce il codice inserito al file di origine.|
@@ -58,13 +58,13 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Ge](ge-enable-stack-probes.md)|Deprecato. Attiva le ricerche dello stack.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Attiva la condivisione delle stringhe.|
 |[/GH](gh-enable-pexit-hook-function.md)|Chiama la funzione hook `_pexit`.|
-|[/GH](gh-enable-penter-hook-function.md)|Chiama la funzione hook `_penter`.|
+|[/Gh](gh-enable-penter-hook-function.md)|Chiama la funzione hook `_penter`.|
 |[/GL](gl-whole-program-optimization.md)|Attiva l'ottimizzazione dell'intero programma.|
 |[/Gm](gm-enable-minimal-rebuild.md)|Deprecato. Attiva una ricompilazione minima.|
 |[/GR](gr-enable-run-time-type-information.md)|Attiva RTTI (Run-Time Type Information).|
-|[/GR](gd-gr-gv-gz-calling-convention.md)|Usa la convenzione di chiamata `__fastcall` (solo x86).|
+|[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa la convenzione di chiamata `__fastcall` (solo x86).|
 |[/GS](gs-buffer-security-check.md)|Inserisce i controlli di sicurezza nel buffer.|
-|[/GS](gs-control-stack-checking-calls.md)|Controlla le ricerche dello stack.|
+|[/Gs](gs-control-stack-checking-calls.md)|Controlla le ricerche dello stack.|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|Supporta l'indipendenza da fiber per i dati allocati mediante l'archiviazione locale di thread statici.|
 |[/guard:cf](guard-enable-control-flow-guard.md)|Aggiunge controlli di sicurezza guard del flusso di controllo.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Usa la convezione di chiamata `__vectorcall` . (solo x86 e x64)|
@@ -72,7 +72,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/GX](gx-enable-exception-handling.md)|Deprecato. Attiva la gestione sincrona delle eccezioni. Usare [/EH](eh-exception-handling-model.md) .|
 |[/Gy](gy-enable-function-level-linking.md)|Attiva il collegamento a livello di funzione.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Deprecato. Equivale a [/RTC1](rtc-run-time-error-checks.md).|
-|[/GZ](gd-gr-gv-gz-calling-convention.md)|Usa la convenzione di chiamata `__stdcall` (solo x86).|
+|[/Gz](gd-gr-gv-gz-calling-convention.md)|Usa la convenzione di chiamata `__stdcall` (solo x86).|
 |[/H](h-restrict-length-of-external-names.md)|Deprecato. Limita la lunghezza dei nomi esterni (pubblici).|
 |[/HELP](help-compiler-command-line-help.md)|Elenca le opzioni del compilatore.|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Forza la scrittura di parametri passati nei registri nei rispettivi percorsi nello stack quando vengono immesse funzioni. Questa opzione del compilatore è solo per x64 compilatori (compilazione nativi e incrociata).|
@@ -103,24 +103,24 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Ox](ox-full-optimization.md)|Usa la massima ottimizzazione (/Ob2gity /Gs).|
 |[/Oy](oy-frame-pointer-omission.md)|Omette il puntatore a frame (solo x86).|
 |[/P](p-preprocess-to-a-file.md)|Scrive l'output del preprocessore in un file.|
-|[/PERMISSIVE--](permissive-standards-conformance.md)|Impostare la modalità standard-operazioni di conformità.|
+|[/permissive-](permissive-standards-conformance.md)|Impostare la modalità standard-operazioni di conformità.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Genera funzioni trascendenti veloci.|
 |[/QIfist](qifist-suppress-ftol.md)|Deprecato. Elimina `_ftol` quando è necessario eseguire una conversione da un tipo a virgola mobile a un tipo integrale (solo x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Rimuove i comandi `fwait` all'interno dei blocchi `try` .|
-|[/Qpar (Parallelizzazione automatica)](qpar-auto-parallelizer.md)|Abilita la parallelizzazione automatica dei cicli contrassegnati con la direttiva [#pragma loop()](../../preprocessor/loop.md) .|
+|[/Qpar (parallelizzazione automatica)](qpar-auto-parallelizer.md)|Abilita la parallelizzazione automatica dei cicli contrassegnati con la direttiva [#pragma loop()](../../preprocessor/loop.md) .|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Usa istruzioni di spostamento Integer per i valori a virgola mobile e disabilita determinate ottimizzazioni di carico a virgola mobile.|
-|[/Qvec-report (livello di segnalazione vettorizzazione automatica)](qvec-report-auto-vectorizer-reporting-level.md)|Abilita livelli di creazione rapporti per la vettorializzazione automatica.|
+|[/Qvec/report (livello di segnalazione vettorizzazione automatica)](qvec-report-auto-vectorizer-reporting-level.md)|Abilita livelli di creazione rapporti per la vettorializzazione automatica.|
 |[/RTC](rtc-run-time-error-checks.md)|Attiva il controllo degli errori di runtime.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Abilita funzionalità e avvisi di sicurezza aggiuntivi.|
 |[/showIncludes](showincludes-list-include-files.md)|Visualizza un elenco di file di inclusione durante la compilazione.|
 |[/source-charset](source-charset-set-source-character-set.md)|Set di set di caratteri di origine.|
 |[/std](std-specify-language-standard-version.md)|Selettore di compatibilità di versione standard C++.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Specifica un file di origine C.|
-|[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Specifica che tutti i file di origine sono C.|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Specifica che tutti i file di origine sono C.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Specifica un file di origine C++.|
-|[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Specifica tutti i file di origine C++.|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Specifica tutti i file di origine C++.|
 |[/U](u-u-undefine-symbols.md)|Rimuove una macro predefinita.|
-|[/U](u-u-undefine-symbols.md)|Rimuove tutte le macro predefinite.|
+|[/u](u-u-undefine-symbols.md)|Rimuove tutte le macro predefinite.|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Set di caratteri di origine e l'esecuzione di set in UTF-8.|
 |[/V](v-version-number.md)|Deprecato. Imposta la stringa di versione del file OBJ.|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Convalidare i file UTF-8 per solo i caratteri compatibili.|
@@ -131,7 +131,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà singola.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Dichiara l'ereditarietà virtuale.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Seleziona la modalità di interpretazione della parola chiave volatile.|
-|[/W](compiler-option-warning-level.md)|Disabilita tutti gli avvisi.|
+|[/w](compiler-option-warning-level.md)|Disabilita tutti gli avvisi.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Imposta il livello di avviso per l'output.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Imposta il livello di avviso per l'avviso specificato.|
 |[/Wall](compiler-option-warning-level.md)|Abilita tutti gli avvisi, inclusi quelli disabilitati per impostazione predefinita.|
@@ -154,7 +154,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Attiva le estensioni del linguaggio.|
 |[/Zf](zf.md)|Consente di migliorare tempo nelle compilazioni parallele per la generazione di PDB.|
 |[/Zg](zg-generate-function-prototypes.md)|Rimosso in Visual C++ 2015. Genera prototipi di funzione.|
-|[/Zi](z7-zi-zi-debug-information-format.md)|Include informazioni di debug in un database di programma compatibile con Modifica e continuazione.|
+|[/ZI](z7-zi-zi-debug-information-format.md)|Include informazioni di debug in un database di programma compatibile con Modifica e continuazione.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera informazioni di debug complete.|
 |[/Zl](zl-omit-default-library-name.md)|Rimuove il nome di libreria predefinito dal file obj (solo x86).|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Specifica il limite di allocazione di memoria delle intestazioni precompilate.|

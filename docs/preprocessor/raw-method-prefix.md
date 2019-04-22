@@ -7,10 +7,10 @@ helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
 ms.openlocfilehash: 963e04752dcb797343550d9b89f778bfe0e8a593
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021411"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
@@ -27,7 +27,7 @@ raw_method_prefix("Prefix")
 
 ### <a name="parameters"></a>Parametri
 
-*Prefisso*<br/>
+*Prefix*<br/>
 Prefisso da utilizzare.
 
 ## <a name="remarks"></a>Note
@@ -41,5 +41,5 @@ Metodi e proprietà di basso livello vengono esposti dalle funzioni membro denom
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[Direttiva #import](../preprocessor/hash-import-directive-cpp.md)
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

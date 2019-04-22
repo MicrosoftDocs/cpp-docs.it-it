@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
 ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766800"
 ---
 # <a name="compiler-warning-c4484"></a>Avviso del compilatore C4484
@@ -25,7 +25,7 @@ Per altre informazioni, vedere:
 
 - [override](../../extensions/override-cpp-component-extensions.md)
 
-- [New (nuovo slot in vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
+- [new (nuovo slot in vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 C4484 viene sempre generato come errore. Usare la [avviso](../../preprocessor/warning.md) pragma per sopprimere C4484.
 

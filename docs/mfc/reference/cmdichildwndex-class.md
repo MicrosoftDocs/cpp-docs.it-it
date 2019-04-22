@@ -113,10 +113,10 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781757"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (classe)
@@ -547,7 +547,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Puntatore al riquadro adiacente.
 
-*bDopo*<br/>
+*bAfter*<br/>
 [in] Se TRUE, *pControlBar* viene inserita dopo *pTarget*. Se FALSE, *pControlBar* viene inserita prima *pTarget*.
 
 ### <a name="return-value"></a>Valore restituito
@@ -567,7 +567,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Il punto specificato.
 
 *dwBarAlignment*<br/>
@@ -686,7 +686,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parametri
 
-*punto*<br/>
+*point*<br/>
 [in] Specifica il punto, nelle coordinate dello schermo, da controllare.
 
 *nSensitivity*<br/>
@@ -941,7 +941,7 @@ Specifica un puntatore alla finestra padre di livello principale della finestra 
 *nHitTest*<br/>
 Specifica il codice di area di hit test. Un hit test è un test che determina la posizione del cursore.
 
-*messaggio*<br/>
+*message*<br/>
 Specifica il numero di messaggi del mouse.
 
 ### <a name="remarks"></a>Note
@@ -1152,7 +1152,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-*bAttivare il*<br/>
+*bEnable*<br/>
 Specifica se abilitare (TRUE) o la selezione automatica di una parte dell'area client della finestra per visualizzare disable (FALSE).
 
 ### <a name="remarks"></a>Note
@@ -1185,8 +1185,8 @@ virtual void ActivateTopLevelFrame();
 
 ## <a name="see-also"></a>Vedere anche
 
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md)<br/>
+[Classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)<br/>
 [Classe CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
-[CMDIFrameWndEx (classe)](../../mfc/reference/cmdiframewndex-class.md)
+[Classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)

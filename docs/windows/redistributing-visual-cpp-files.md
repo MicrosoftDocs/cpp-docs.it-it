@@ -9,10 +9,10 @@ helpviewer_keywords:
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
 ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58786244"
 ---
 # <a name="redistributing-visual-c-files"></a>Ridistribuzione di file Visual C++

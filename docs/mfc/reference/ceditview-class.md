@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781237"
 ---
 # <a name="ceditview-class"></a>Classe CEditView
@@ -492,11 +492,11 @@ Chiamare `UnlockBuffer` dopo aver utilizzato il puntatore restituito da [LockBuf
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
-[CDocument (classe)](../../mfc/reference/cdocument-class.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
+[Classe CEdit](../../mfc/reference/cedit-class.md)<br/>
+[Classe CDocument](../../mfc/reference/cdocument-class.md)<br/>
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
-[CRichEditView (classe)](../../mfc/reference/cricheditview-class.md)
+[Classe CRichEditView](../../mfc/reference/cricheditview-class.md)

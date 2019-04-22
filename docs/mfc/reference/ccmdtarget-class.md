@@ -47,10 +47,10 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776193"
 ---
 # <a name="ccmdtarget-class"></a>Classe CCmdTarget
@@ -526,12 +526,12 @@ void RestoreWaitCursor();
 
 [Esempio MFC ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Grafico delle gerarchie](../../mfc/hierarchy-chart.md)<br/>
+[Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CCmdUI](../../mfc/reference/ccmdui-class.md)<br/>
-[CDocument (classe)](../../mfc/reference/cdocument-class.md)<br/>
+[Classe CDocument](../../mfc/reference/cdocument-class.md)<br/>
 [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
-[CWinApp (classe)](../../mfc/reference/cwinapp-class.md)<br/>
+[Classe CWinApp](../../mfc/reference/cwinapp-class.md)<br/>
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Classe CView](../../mfc/reference/cview-class.md)<br/>
-[CFrameWnd (classe)](../../mfc/reference/cframewnd-class.md)<br/>
+[Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Classe COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)

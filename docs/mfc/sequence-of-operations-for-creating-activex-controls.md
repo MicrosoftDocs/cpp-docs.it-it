@@ -9,10 +9,10 @@ helpviewer_keywords:
 - sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
 ms.openlocfilehash: 020c044cc0b3b96df102a5ab6625c945f1033f67
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781341"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Sequenza di operazioni per la creazione di controlli ActiveX
@@ -34,4 +34,4 @@ Nella tabella seguente viene illustrato il ruolo e il ruolo del framework nella 
 [Compilazione nel framework](../mfc/building-on-the-framework.md)<br/>
 [Sequenza delle operazioni per la compilazione di applicazioni MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
 [Sequenza delle operazioni per la creazione di applicazioni OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
-[Sequenza delle operazioni per la creazione di applicazioni database](../mfc/sequence-of-operations-for-creating-database-applications.md)
+[Sequenza delle operazioni per la creazione di applicazioni di database](../mfc/sequence-of-operations-for-creating-database-applications.md)

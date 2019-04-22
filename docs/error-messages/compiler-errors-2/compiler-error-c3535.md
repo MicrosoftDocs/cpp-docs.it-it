@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
 ms.openlocfilehash: e80fa62db9795838980c63e113300a554afabef3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040861"
 ---
 # <a name="compiler-error-c3535"></a>Errore del compilatore C3535
@@ -70,5 +70,5 @@ auto *p = x;  // C3535
 
 ## <a name="see-also"></a>Vedere anche
 
-[Parola chiave auto](../../cpp/auto-keyword.md)<br/>
+[Auto (parola chiave)](../../cpp/auto-keyword.md)<br/>
 [Tipi fondamentali](../../cpp/fundamental-types-cpp.md)

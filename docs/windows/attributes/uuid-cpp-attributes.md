@@ -7,10 +7,10 @@ helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
 ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026042"
 ---
 # <a name="uuid-c-attributes"></a>uuid (attributi C++)
@@ -52,7 +52,7 @@ Vedere le [associabile](bindable.md) per un esempio dell'uso di esempio **uuid**
 |-|-|
 |**Si applica a**|**classe**, **struct**, **interfaccia**, **union**, **enum**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
