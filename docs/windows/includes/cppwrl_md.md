@@ -1,1 +1,0 @@
-Libreria di modelli di Windows Runtime C++
