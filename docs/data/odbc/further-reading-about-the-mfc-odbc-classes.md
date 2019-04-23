@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035189"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Ulteriori informazioni sulle classi ODBC MFC
@@ -54,4 +54,4 @@ Nel *riferimento MFC*, vedere [CDatabase](../../mfc/reference/cdatabase-class.md
 ## <a name="see-also"></a>Vedere anche
 
 [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)<br/>
-[Programmazione dell'accesso ai dati (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Accesso ai dati (MFC/ATL) di programmazione](../../data/data-access-programming-mfc-atl.md)

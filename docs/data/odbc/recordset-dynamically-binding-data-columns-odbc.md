@@ -9,10 +9,10 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035130"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset: Associazione dinamica di colonne di dati (ODBC)
@@ -91,7 +91,7 @@ Associazione dinamica di aggiunta di colonne in fase di esecuzione sono necessar
 
 |||
 |-|-|
-|**Colonne della tabella corrente**| (Elenco 1 nella figura) Un elenco delle colonne attualmente presenti nella tabella dell'origine dati. Questo elenco può corrispondere all'elenco delle colonne attualmente associate nel set di record.|
+|**Current-Table-Columns**| (Elenco 1 nella figura) Un elenco delle colonne attualmente presenti nella tabella dell'origine dati. Questo elenco può corrispondere all'elenco delle colonne attualmente associate nel set di record.|
 |**Bound-Recordset-Columns**| (Elenco 2 nella figura) Un elenco delle colonne associate nel recordset. Queste colonne già istruzioni RFX di `DoFieldExchange` (funzione).|
 |**Columns-To-Bind-Dynamically**| (Elenco di 3 nella figura) Un elenco di colonne nella tabella ma non nel set di record. Queste sono le colonne da associare in modo dinamico.|
 |**Dynamic-Column-Values**| (Elenco 4 nella figura) Un elenco che contiene risorse di archiviazione per i valori recuperati dalle colonne associate in modo dinamico. Elementi di questo elenco corrispondono a quelli nelle colonne-a-Bind-in modo dinamico, uno alla volta.|

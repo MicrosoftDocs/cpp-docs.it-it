@@ -7,10 +7,10 @@ helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
 ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035099"
 ---
 # <a name="retval"></a>retval
@@ -49,5 +49,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi dei parametri](parameter-attributes.md)<br/>
-[Attributi del metodo](method-attributes.md)
+[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi di metodo](method-attributes.md)

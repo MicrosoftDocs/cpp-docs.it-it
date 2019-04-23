@@ -9,10 +9,10 @@ helpviewer_keywords:
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
 ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034378"
 ---
 # <a name="vtordisp"></a>vtordisp
@@ -41,10 +41,10 @@ Rimuove il primo record dallo stack interno del compilatore e ripristina l'impos
 *n*<br/>
 Specifica il nuovo valore per l'impostazione di vtordisp. I valori possibili sono 0, 1 o 2, corrispondenti per il `/vd0`, `/vd1`, e `/vd2` opzioni del compilatore. Per altre informazioni, vedere [/vd (Disabilita spostamenti costruttori)](../build/reference/vd-disable-construction-displacements.md).
 
-*attivo*<br/>
+*on*<br/>
 Equivalente a `#pragma vtordisp(1)`.
 
-*Off*<br/>
+*off*<br/>
 Equivalente a `#pragma vtordisp(0)`.
 
 ## <a name="remarks"></a>Note
@@ -57,7 +57,7 @@ Specificare 1 o *sul*, l'impostazione predefinita, consente nascosto **vtordisp*
 
 Specificando 2 consente a nascosto **vtordisp** membri per tutte le basi virtuali con le funzioni virtuali.  `vtordisp(2)` potrebbe essere necessario per assicurare prestazioni corrette dei **dynamic_cast** su un oggetto parzialmente costruito. Per altre informazioni, vedere [avviso del compilatore (livello 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
-`#pragma vtordisp()`, senza alcun argomento, consente di ripristinare l'impostazione di vtordisp sul valore iniziale.
+`#pragma vtordisp()`, senza argomenti, ripristina l'impostazione di vtordisp sul valore iniziale.
 
 ```cpp
 #pragma vtordisp(push, 2)

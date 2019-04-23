@@ -7,10 +7,10 @@ helpviewer_keywords:
 - D9040
 ms.assetid: 415e7f04-c1bd-4ac1-924a-03efa4645140
 ms.openlocfilehash: 73640eef0cc7dc8fa625ac9cef2e39fab0c22018
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035017"
 ---
 # <a name="command-line-warning-d9040"></a>Avviso della riga di comando D9040

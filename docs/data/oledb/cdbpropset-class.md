@@ -34,10 +34,10 @@ helpviewer_keywords:
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
 ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034248"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
@@ -109,7 +109,7 @@ bool AddProperty(DWORD dwPropertyID,
 *bValue*<br/>
 [in] Oggetto `BYTE` o un valore booleano utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
 
-*nValore*<br/>
+*nValue*<br/>
 [in] Valore intero utilizzato per inizializzare il valore della proprietà per il `DBPROP` struttura aggiunto al set di proprietà.
 
 *fltValue*<br/>
@@ -178,7 +178,7 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
 [Struttura DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))

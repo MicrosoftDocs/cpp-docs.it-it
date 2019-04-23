@@ -1,5 +1,5 @@
 ---
-title: '#Direttiva using (C + + CLI)'
+title: '#Direttiva using (C++/CLI)'
 ms.date: 10/18/2018
 f1_keywords:
 - friend_as_cpp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
 ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034261"
 ---
-# <a name="using-directive-ccli"></a>#using (direttiva) (C + + CLI)
+# <a name="using-directive-ccli"></a>#using (direttiva) (C++/CLI)
 
 Importa i metadati in un programma compilato con [/clr](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -47,7 +47,7 @@ Se *file* non contiene un assembly (se *file* è un modulo) e se non si intende 
 
 Un'alternativa all'utilizzo **#using** è la [/FU](../build/reference/fu-name-forced-hash-using-file.md) opzione del compilatore.
 
-gli assembly .exe passato a **#using** deve essere compilato usando uno dei compilatori Visual Studio .NET (Visual Basic o Visual C#, ad esempio).  Se si prova a importare i metadati di un assembly con estensione exe compilato con `/clr`, verrò generata un'eccezione di caricamento del file.
+gli assembly .exe passato a **#using** deve essere compilato usando uno dei compilatori Visual Studio .NET (Visual Basic o Visual c#, ad esempio).  Se si prova a importare i metadati di un assembly con estensione exe compilato con `/clr`, verrò generata un'eccezione di caricamento del file.
 
 > [!NOTE]
 > Un componente di cui viene fatto riferimento con **#using** può essere eseguito con una versione diversa del file importato in fase di compilazione, causando un'applicazione client per produrre risultati imprevisti.

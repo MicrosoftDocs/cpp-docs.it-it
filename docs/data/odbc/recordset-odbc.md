@@ -14,10 +14,10 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034495"
 ---
 # <a name="recordset-odbc"></a>Recordset (ODBC)

@@ -1,5 +1,5 @@
 ---
-title: idl_module (attributo COM C++)
+title: idl_module (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
 ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034978"
 ---
 # <a name="idlmodule"></a>idl_module
@@ -55,7 +55,7 @@ La funzione che verrà definita.
 
 ## <a name="remarks"></a>Note
 
-Il **idl_module** attributo C++ consente di specificare il punto di ingresso in un file con estensione dll, che consente di importare da un file con estensione dll.
+Il **idl_module** C++ attributo consente di specificare il punto di ingresso in un file con estensione dll, che consente di importare da un file con estensione dll.
 
 Il **idl_module** attributo ha funzionalità simili a quelle di [modulo](/windows/desktop/Midl/module) attributo MIDL.
 
@@ -84,7 +84,7 @@ void FuncName(int i);
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
