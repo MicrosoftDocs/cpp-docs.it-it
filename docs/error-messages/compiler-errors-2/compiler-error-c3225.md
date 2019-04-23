@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
 ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778312"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778287"
 ---
 # <a name="compiler-error-c3225"></a>Errore del compilatore C3225
 
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente crea un componente utilizzando il linguaggio C#. Si noti che il vincolo specifica che è possibile creare istanze del tipo generico solo con un tipo valore.
+L'esempio seguente crea un componente utilizzando il linguaggio c#. Si noti che il vincolo specifica che è possibile creare istanze del tipo generico solo con un tipo valore.
 
 ```
 // C3225_b.cs
@@ -54,7 +54,7 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>Esempio
 
-Questo esempio viene utilizzato il linguaggio C#-componente creato e viola il vincolo che può essere solo MyList creata un'istanza con un tipo di valore diverso da <xref:System.Nullable>. L'esempio seguente genera l'errore C3225.
+Questo esempio viene utilizzato il linguaggio c#-componente creato e viola il vincolo che può essere solo MyList creata un'istanza con un tipo di valore diverso da <xref:System.Nullable>. L'esempio seguente genera l'errore C3225.
 
 ```
 // C3225_c.cpp

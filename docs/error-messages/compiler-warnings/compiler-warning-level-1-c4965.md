@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
 ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771058"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778150"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Avviso del compilatore (livello 1) C4965
 

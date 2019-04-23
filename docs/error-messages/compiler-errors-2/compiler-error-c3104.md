@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
 ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58770629"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778117"
 ---
 # <a name="compiler-error-c3104"></a>Errore del compilatore C3104
 

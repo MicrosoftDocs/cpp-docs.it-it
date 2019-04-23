@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
 ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778039"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777952"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Avviso del compilatore (livello 1) C4383
 
@@ -21,7 +21,7 @@ Quando si aggiunge un override di istanza definiti dall'utente di operatore di d
 
 Per altre informazioni, vedere [operatore Handle a oggetto (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) e [operatore di riferimento di rilevamento](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
-Inoltre, un operatore di istanza non è disponibile ad altri compilatori di linguaggio tramite metadati di riferimento. Per altre informazioni, vedere [operatori definiti dall'utente (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+Inoltre, un operatore di istanza non è disponibile ad altri compilatori di linguaggio tramite metadati di riferimento. Per altre informazioni, vedere [operatori definiti dall'utente (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 
