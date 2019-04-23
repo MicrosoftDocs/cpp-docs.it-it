@@ -5,11 +5,11 @@ description: Informazioni su come usare C++ per lo sviluppo di applicazioni, ser
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264439"
 ---
 <div id="main" class="v2">
     <div class="container">
