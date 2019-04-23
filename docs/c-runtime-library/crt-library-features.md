@@ -19,10 +19,10 @@ helpviewer_keywords:
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
 ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767691"
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT

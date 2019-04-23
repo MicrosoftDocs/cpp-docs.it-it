@@ -6,10 +6,10 @@ ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898804"
 ---
 # <a name="visual-c-language-conformance"></a>Conformità al linguaggio Visual C++
@@ -88,7 +88,7 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 
 |Area funzionalità| |
 |----|---|
-|__Funzionalità del linguaggio di base C++17 (report sui difetti)__|__Supportato__|
+|__Funzionalità del linguaggio di base ++17 (report sui difetti)__|__Supportato__|
 |&nbsp;&nbsp;[P0702R1 Correzione della deduzione di argomenti del modello di classe per i costruttori di elenchi di inizializzatori](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1: semplificare l'acquisizione implicita delle espressioni lambda](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|No|
 |&nbsp;&nbsp;[CWG 1581: quando definire le funzioni membro constexpr](https://wg21.cmeerw.net/cwg/issue1581)|No|
@@ -315,7 +315,7 @@ Di seguito sono specificati gli algoritmi che attualmente non vengono paralleliz
 
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
 [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements.md)<br/>
+[Miglioramenti della conformità di C++ in Visual Studio](cpp-conformance-improvements.md)<br/>
 [Novità di Visual C++ in Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Visual C++: novità dalla versione 2003 alla 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>

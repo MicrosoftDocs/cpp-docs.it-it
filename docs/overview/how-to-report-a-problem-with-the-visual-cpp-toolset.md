@@ -5,10 +5,10 @@ ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 266ea37510b636cd1dc1cfa5909552ace50df1bc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58782261"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Come segnalare un problema con il set di strumenti Visual C++ o la documentazione

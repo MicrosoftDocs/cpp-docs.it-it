@@ -3,10 +3,10 @@ title: Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
 ms.openlocfilehash: 1dac6ad201656dc83428aa5182a59cb8ff824651
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898830"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
@@ -182,4 +182,4 @@ Per altre informazioni, vedere [Porting da MBCS a Unicode](porting-guide-spy-inc
 ## <a name="see-also"></a>Vedere anche
 
 [Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Miglioramenti della conformità di C++ in Visual Studio 2017](../overview/cpp-conformance-improvements.md)
+[Miglioramenti della conformità di C++ in Visual Studio](../overview/cpp-conformance-improvements.md)

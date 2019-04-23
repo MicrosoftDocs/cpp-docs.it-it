@@ -6,10 +6,10 @@ helpviewer_keywords:
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
 ms.openlocfilehash: 57e9556ccb7313c137c173e0f2143dc6e563d4c3
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898817"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usare multitargeting nativo in Visual Studio per compilare progetti precedenti
@@ -67,4 +67,4 @@ Quando questi prodotti sono installati, il menu a discesa della proprietà **Set
 ## <a name="see-also"></a>Vedere anche
 
 [Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Miglioramenti della conformità di C++ in Visual Studio 2017](../overview/cpp-conformance-improvements.md)
+[Miglioramenti della conformità di C++ in Visual Studio](../overview/cpp-conformance-improvements.md)
