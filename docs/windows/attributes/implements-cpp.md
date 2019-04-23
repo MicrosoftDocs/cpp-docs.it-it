@@ -7,10 +7,10 @@ helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
 ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033683"
 ---
 # <a name="implements-c"></a>implements (C++)
@@ -26,10 +26,10 @@ Specifica le interfacce dispatch che vengono forzate per essere membri della coc
 
 ### <a name="parameters"></a>Parametri
 
-*interfacce*<br/>
+*interfaces*<br/>
 Un elenco delimitato da virgole delle interfacce che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per specificare una singola interfaccia **implementa (** *interface_name* **)**.
 
-*interfacce dispatch*<br/>
+*dispinterfaces*<br/>
 Un elenco delimitato da virgole di interfaccia dispatch che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per specificare una singola interfaccia di dispatch **implementa (dispinterfaces =** *dispinterface_name* **)**.
 
 ## <a name="remarks"></a>Note
@@ -44,7 +44,7 @@ Per impostazione predefinita, solo i interfacce COM che sono classi di base di `
 |-|-|
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|Yes|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

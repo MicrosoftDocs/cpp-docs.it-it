@@ -7,10 +7,10 @@ helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
 ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030245"
 ---
 # <a name="source-c"></a>source (C++)
@@ -25,7 +25,7 @@ In una classe specifica le interfacce di origine dell'oggetto COM per i punti di
 
 ### <a name="parameters"></a>Parametri
 
-*interfacce*<br/>
+*interfaces*<br/>
 Una o più interfacce di specificare quando si applica l'origine dell'attributo a una classe. Questo parametro non viene utilizzato quando l'origine viene applicata a una proprietà o metodo.
 
 ## <a name="remarks"></a>Note
@@ -85,5 +85,5 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
-[Attributi del metodo](method-attributes.md)<br/>
+[Attributi di metodo](method-attributes.md)<br/>
 [coclass](coclass.md)

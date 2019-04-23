@@ -66,10 +66,10 @@ helpviewer_keywords:
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
 ms.openlocfilehash: b1ab6b0984cbf84690d69a3ffe7eb3931bf59563
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029473"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Classe IErrorRecordsImpl
@@ -325,5 +325,5 @@ CAtlArray< RecordClass > m_rgErrors;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

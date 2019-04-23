@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
 ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026279"
 ---
 # <a name="menu-commands-c"></a>Comandi di menu (C++)
@@ -32,11 +32,11 @@ Le informazioni seguenti sono organizzate in base al **dal Menu** le proprietà 
 |--------------|-----------------|
 |**Break**|Può essere uno dei seguenti valori:<br/>  - **Nessuno**: Nessuna interruzione. Questa è l'impostazione predefinita.<br/>  - **Colonna**: Per menu statici, questo valore posiziona il comando di menu in una nuova riga.<br/>      Nei menu a comparsa questo valore consente di posizionare il comando di menu in una nuova colonna, senza linee di separazione tra le colonne.<br/>      L'impostazione di questa proprietà influisce sull'aspetto del menu solo in fase di esecuzione e non nell'Editor dei menu.<br />   - **Barra**: Uguale allo **colonna** except, nei menu a comparsa, questo valore la nuova colonna viene separata dalla precedente mediante una linea verticale.<br/>      Impostazione di questa proprietà influisce sull'aspetto del menu solo in fase di esecuzione, non nel **Editor di Menu**.|
 |**Caption**|Il testo che costituisce l'etichetta del comando di menu ovvero il nome del menu. Per impostare come tasto di scelta una lettera della didascalia di un comando di menu, anteporre alla lettera desiderata una e commerciale (&).|
-|**Selezionato con segno di spunta**|Se **True**, il comando di menu inizialmente selezionato. Tipo: **Bool**. Valore predefinito: **False**.|
+|**Checked**|Se **True**, il comando di menu inizialmente selezionato. Tipo: **Bool**. Valore predefinito: **False**.|
 |**Enabled**|Se il valore impostato è **False**, la voce di menu è disabilitata.|
 |**Grayed**|Se **True**, il comando di menu è inizialmente disabilitato e inattivo. Tipo: **Bool**. Valore predefinito: **False**.|
-|**?**|Allinea a destra la voce di menu. Valore predefinito: **False**.<br/><br/>In tutte le applicazioni Windows, ad esempio, il comando di menu **?** è sempre posizionato a destra. Impostando questa proprietà su una voce di menu, tale voce verrà visualizzata all'estremità destra del menu. Si applica alle voci di primo livello.|
-|**Id**|Un simbolo definito nel file di intestazione. Tipo: **Simbolo**, **Integer**, o **stringa tra virgolette**.<br/><br/>È possibile usare qualsiasi simbolo normalmente disponibile negli editor. La [finestra Proprietà](/visualstudio/ide/reference/properties-window) non fornisce un elenco a discesa da cui effettuare una selezione.|
+|**Guida**|Allinea a destra la voce di menu. Valore predefinito: **False**.<br/><br/>In tutte le applicazioni Windows, ad esempio, il comando di menu **?** è sempre posizionato a destra. Impostando questa proprietà su una voce di menu, tale voce verrà visualizzata all'estremità destra del menu. Si applica alle voci di primo livello.|
+|**ID**|Un simbolo definito nel file di intestazione. Tipo: **Simbolo**, **Integer**, o **stringa tra virgolette**.<br/><br/>È possibile usare qualsiasi simbolo normalmente disponibile negli editor. La [finestra Proprietà](/visualstudio/ide/reference/properties-window) non fornisce un elenco a discesa da cui effettuare una selezione.|
 |**Popup**|Se **True**, il comando di menu è un menu a comparsa. Tipo: **Bool**. Valore predefinito: **True** per i menu di primo livello in una barra dei menu, in caso contrario **False**.|
 |**Prompt**|Contiene il testo da visualizzare nella barra di stato quando il comando di menu viene evidenziato. Il testo viene inserito nella tabella di stringhe con lo stesso identificatore usato per il comando di menu.<br/><br/>Questa proprietà è disponibile per qualsiasi tipo di progetto, ma la funzionalità in fase di esecuzione è specifica dei progetti MFC.|
 |**Right to Left Justify**|Allinea a destra il comando di menu sulla barra dei menu in fase di esecuzione. Tipo: **Bool**. Valore predefinito: **False**.|

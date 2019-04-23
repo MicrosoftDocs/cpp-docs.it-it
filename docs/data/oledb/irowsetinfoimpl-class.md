@@ -27,10 +27,10 @@ helpviewer_keywords:
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
 ms.openlocfilehash: b42ecf6c03dd1023d1ba150d579f77c4bae8998a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029171"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
@@ -126,5 +126,5 @@ Utilizzare questo metodo con [IGetDataSourceImpl](../../data/oledb/igetdatasourc
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

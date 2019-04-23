@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027630"
 ---
 # <a name="arm-intrinsics"></a>Oggetti intrinseci ARM
@@ -2155,10 +2155,10 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
 
 #### <a name="parameters"></a>Parametri
 
-*Percorso*<br/>
+*Posizione*<br/>
 Indirizzo di una posizione di memoria da cui leggere o in cui scrivere.
 
-*Value*<br/>
+*Valore*<br/>
 Valore da scrivere nella posizione di memoria specificato (solo funzioni intrinseche archivio).
 
 #### <a name="return-value-load-intrinsics-only"></a>Valore restituito (solo funzioni intrinseche di caricamento)
@@ -2208,10 +2208,10 @@ Numero del coprocessore compreso tra 0 e 15.
 *opcode1*<br/>
 Codice operativo specifico del coprocessore compreso tra 0 e 7.
 
-*CRN*<br/>
+*crn*<br/>
 Numero del registro del coprocessore, compreso tra 0 e 15, che specifica il primo operando nell'istruzione.
 
-*CRM*<br/>
+*crm*<br/>
 Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.
 
 *opcode2*<br/>
@@ -2225,7 +2225,7 @@ Valore letto dal coprocessore.
 
 I valori di tutti e cinque i parametri di questa funzione intrinseca devono essere espressioni costanti note al momento della compilazione.
 
-`_MoveFromCoprocessor` Usa l'istruzione MRC; `_MoveFromCoprocessor2` Usa MRC2. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.
+`_MoveFromCoprocessor` usa l'istruzione MRC; `_MoveFromCoprocessor2` usa MRC2. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.
 
 ###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
@@ -2247,10 +2247,10 @@ Numero del coprocessore compreso tra 0 e 15.
 *opcode1*<br/>
 Opcode specifico del coprocessore compreso tra 0 e 15.
 
-*CRM*<br/>
+*crm*<br/>
 Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.
 
-**Valore restituito**
+**Restituisce il valore**
 
 Valore letto dal coprocessore.
 
@@ -2258,7 +2258,7 @@ Valore letto dal coprocessore.
 
 I valori di tutti e tre i parametri di questa funzione intrinseca devono essere espressioni costanti note al momento della compilazione.
 
-`_MoveFromCoprocessor64` Usa l'istruzione MRRC. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.
+`_MoveFromCoprocessor64` usa l'istruzione MRRC. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.
 
 ###  <a name="MoveToCo"></a> _MoveToCoprocessor, _MoveToCoprocessor2
 
@@ -2286,7 +2286,7 @@ void _MoveToCoprocessor2(
 
 #### <a name="parameters"></a>Parametri
 
-*predefinito*<br/>
+*value*<br/>
 Valore da scrivere nel coprocessore.
 
 *coproc*<br/>
@@ -2295,10 +2295,10 @@ Numero del coprocessore compreso tra 0 e 15.
 *opcode1*<br/>
 Opcode specifico del coprocessore compreso tra 0 e 7.
 
-*CRN*<br/>
+*crn*<br/>
 Numero del registro del coprocessore, compreso tra 0 e 15, che specifica il primo operando nell'istruzione.
 
-*CRM*<br/>
+*crm*<br/>
 Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.
 
 *opcode2*<br/>
@@ -2312,7 +2312,7 @@ Nessuno.
 
 I valori dei parametri `coproc`, `opcode1`, `crn`, `crm` e `opcode2` di questa funzione intrinseca devono essere espressioni costanti note al momento della compilazione.
 
-`_MoveToCoprocessor` Usa l'istruzione MCR; `_MoveToCoprocessor2` Usa MCR2. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.
+`_MoveToCoprocessor` usa l'istruzione MCR; `_MoveToCoprocessor2` usa MCR2. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.
 
 ###  <a name="MoveToCo64"></a> _MoveToCoprocessor64
 
@@ -2335,7 +2335,7 @@ Numero del coprocessore compreso tra 0 e 15.
 *opcode1*<br/>
 Opcode specifico del coprocessore compreso tra 0 e 15.
 
-*CRM*<br/>
+*crm*<br/>
 Numero del registro del coprocessore, compreso tra 0 e 15, che specifica un operando di destinazione o di origine aggiuntivo.
 
 #### <a name="return-value"></a>Valore restituito
@@ -2346,7 +2346,7 @@ Nessuno.
 
 I valori dei parametri `coproc`, `opcode1` e `crm` di questa funzione intrinseca devono essere espressioni costanti note al momento della compilazione.
 
-`_MoveFromCoprocessor64` Usa l'istruzione MCRR. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.
+`_MoveFromCoprocessor64` usa l'istruzione MCRR. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.
 
 ##  <a name="I"></a> Supporto ARM per le funzioni intrinseche di altre architetture
 

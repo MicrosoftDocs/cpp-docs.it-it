@@ -7,10 +7,10 @@ helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
 ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029434"
 ---
 # <a name="custom-c"></a>custom (C++)
@@ -31,7 +31,7 @@ Definisce i metadati per un oggetto nella libreria dei tipi.
 *uuid*<br/>
 ID univoco.
 
-*predefinito*<br/>
+*value*<br/>
 Un valore che può essere impostato in una variante.
 
 ## <a name="remarks"></a>Note
@@ -58,7 +58,7 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi autonomi](stand-alone-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributi dei parametri](parameter-attributes.md)<br/>
-[Attributi del metodo](method-attributes.md)<br/>
+[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi di metodo](method-attributes.md)<br/>
 [Attributi di classe](class-attributes.md)<br/>
 [Attributi di interfaccia](interface-attributes.md)

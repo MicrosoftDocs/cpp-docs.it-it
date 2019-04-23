@@ -7,10 +7,10 @@ helpviewer_keywords:
 - records [C++], database
 ms.assetid: d9888635-8121-452c-8cb9-a1c5bf268010
 ms.openlocfilehash: 9b308f98a597a080048377b345c27cb5862e5f12
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033272"
 ---
 # <a name="record-mfc-data-access"></a>Record (accesso ai dati MFC)
@@ -19,4 +19,4 @@ Un record è una raccolta di dati che riguardano una singola entità, ad esempio
 
 ## <a name="see-also"></a>Vedere anche
 
-[Programmazione dell'accesso ai dati (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+[Accesso ai dati (MFC/ATL) di programmazione](../data/data-access-programming-mfc-atl.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - exclude attribute
 ms.assetid: 0883248a-d4bf-420e-9848-807b28fa976e
 ms.openlocfilehash: d6a320089d5954b2cf1d0d96ae1f37656f2ddd58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032388"
 ---
 # <a name="exclude-import"></a>escludere (\#importazione)
@@ -27,10 +27,10 @@ exclude("Name1"[, "Name2",...])
 
 ### <a name="parameters"></a>Parametri
 
-*Nome1*<br/>
+*Name1*<br/>
 Primo elemento da escludere.
 
-*Nome2*<br/>
+*Name2*<br/>
 Secondo elemento da escludere (se necessario).
 
 ## <a name="remarks"></a>Note
@@ -41,5 +41,5 @@ Le librerie dei tipi possono includere definizioni di elementi definiti nelle in
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[Direttiva #import](../preprocessor/hash-import-directive-cpp.md)
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

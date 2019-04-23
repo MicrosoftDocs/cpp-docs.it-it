@@ -1,5 +1,5 @@
 ---
-title: COM_INTERFACE_ENTRY (attributo COM C++)
+title: COM_INTERFACE_ENTRY (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
 ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030407"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
@@ -31,7 +31,7 @@ Stringa contenente il testo effettivo della voce. Per un elenco di valori possib
 
 ## <a name="remarks"></a>Note
 
-Il **com_interface_entry** attributo C++ inserisce il contenuto ridotta della stringa di caratteri nella mappa dell'interfaccia COM dell'oggetto di destinazione. Se l'attributo viene applicato una sola volta per l'oggetto di destinazione, la voce viene inserita all'inizio della mappa dell'interfaccia esistente. Se l'attributo viene applicato più volte allo stesso oggetto di destinazione, le voci vengono inserite all'inizio della mappa dell'interfaccia nell'ordine in che cui vengono ricevute.
+Il **com_interface_entry** C++ attributo inserisce il contenuto ridotta della stringa di caratteri nella mappa dell'interfaccia COM dell'oggetto di destinazione. Se l'attributo viene applicato una sola volta per l'oggetto di destinazione, la voce viene inserita all'inizio della mappa dell'interfaccia esistente. Se l'attributo viene applicato più volte allo stesso oggetto di destinazione, le voci vengono inserite all'inizio della mappa dell'interfaccia nell'ordine in che cui vengono ricevute.
 
 Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.
 

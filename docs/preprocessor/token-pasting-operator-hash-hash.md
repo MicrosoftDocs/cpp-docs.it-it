@@ -8,10 +8,10 @@ helpviewer_keywords:
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
 ms.openlocfilehash: dab4da5fd65fc280d2061256a580a015917d24b6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029943"
 ---
 # <a name="token-pasting-operator-"></a>Operatore di concatenamento dei token (##)

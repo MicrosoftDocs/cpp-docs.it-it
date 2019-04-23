@@ -13,10 +13,10 @@ helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
 ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032271"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Riferimenti ai modelli consumer OLE DB
@@ -86,7 +86,7 @@ Utilizzato per recuperare e modificare le righe in blocco tramite il recupero pi
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 Può essere utilizzato come argomento di modello se il comando non restituisce un set di righe.
 
-[cRestrictions](../../data/oledb/crestrictions-class.md)<br/>
+[CRestrictions](../../data/oledb/crestrictions-class.md)<br/>
 Utilizzato per specificare le restrizioni per i set di righe dello schema.
 
 [CRowset](../../data/oledb/crowset-class.md)<br/>

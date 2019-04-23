@@ -7,10 +7,10 @@ helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
 ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029538"
 ---
 # <a name="range-c"></a>range (C++)
@@ -25,10 +25,10 @@ Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui v
 
 ### <a name="parameters"></a>Parametri
 
-*Bassa*<br/>
+*low*<br/>
 Il valore minimo dell'intervallo.
 
-*Elevata*<br/>
+*high*<br/>
 Il valore massimo dell'intervallo.
 
 ## <a name="remarks"></a>Note
@@ -59,7 +59,7 @@ __interface ICustom {
 |-|-|
 |**Si applica a**|Metodo di interfaccia, parametro di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -67,6 +67,6 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi del metodo](method-attributes.md)<br/>
-[Attributi dei parametri](parameter-attributes.md)<br/>
-[Attributi del membro dati](data-member-attributes.md)
+[Attributi di metodo](method-attributes.md)<br/>
+[Attributi di parametro](parameter-attributes.md)<br/>
+[Attributi di membro dati](data-member-attributes.md)

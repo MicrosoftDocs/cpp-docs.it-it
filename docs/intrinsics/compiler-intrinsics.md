@@ -8,10 +8,10 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
 ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029278"
 ---
 # <a name="compiler-intrinsics"></a>Intrinseci del compilatore
@@ -34,13 +34,13 @@ Un file di intestazione \<intrin. h >, è disponibile che dichiara i prototipi p
 
 Le sezioni seguenti elencano tutti gli intrinseci disponibili in varie architetture. Per altre informazioni sull'uso degli intrinseci su un particolare processore di destinazione, fare riferimento alla documentazione di riferimento del produttore.
 
-- [Oggetti intrinseci ARM](../intrinsics/arm-intrinsics.md)
+- [Intrinseci ARM](../intrinsics/arm-intrinsics.md)
 
 - [Elenco intrinseci x86](../intrinsics/x86-intrinsics-list.md)
 
-- [Elenco oggetti intrinseci x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
+- [Elenco intrinseci x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [Funzioni intrinseche disponibili in tutte le architetture](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [Intrinseci disponibili in tutte le architetture](../intrinsics/intrinsics-available-on-all-architectures.md)
 
 - [Elenco alfabetico delle funzioni intrinseche](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
@@ -49,4 +49,4 @@ Le sezioni seguenti elencano tutti gli intrinseci disponibili in varie architett
 [Riferimento all'assembler ARM](../assembler/arm/arm-assembler-reference.md)<br/>
 [Riferimento a Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)
+[Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)

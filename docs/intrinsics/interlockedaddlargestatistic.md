@@ -9,10 +9,10 @@ helpviewer_keywords:
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
 ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033414"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
@@ -32,10 +32,10 @@ long _InterlockedAddLargeStatistic(
 
 #### <a name="parameters"></a>Parametri
 
-*Addendo*<br/>
+*Addend*<br/>
 [in, out] Puntatore al primo operando per l'operazione di aggiunta. Il valore a cui viene sostituito dal risultato dell'addizione.
 
-*Value*<br/>
+*Valore*<br/>
 [in] Il secondo operando; valore da aggiungere al primo operando.
 
 ## <a name="return-value"></a>Valore restituito

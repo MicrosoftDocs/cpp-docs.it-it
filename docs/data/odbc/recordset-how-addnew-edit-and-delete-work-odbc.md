@@ -18,10 +18,10 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
 ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033209"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: La modalità dei metodi AddNew, Edit e Delete di lavoro (ODBC)
@@ -34,7 +34,7 @@ Questo argomento viene illustrato come la `AddNew`, `Edit`, e `Delete` funzioni 
 
 - [Visibilità dei record aggiunti](#_core_visibility_of_added_records)
 
-- [How Editing Records Works](#_core_editing_an_existing_record)
+- [Modifica di record](#_core_editing_an_existing_record)
 
 - [Eliminazione di record](#_core_deleting_a_record)
 

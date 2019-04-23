@@ -1,5 +1,5 @@
 ---
-title: first_is (attributo COM C++)
+title: first_is (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
 ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033083"
 ---
 # <a name="firstis"></a>first_is
@@ -25,12 +25,12 @@ Specifica l'indice del primo elemento della matrice deve essere trasmesso.
 
 ### <a name="parameters"></a>Parametri
 
-*espressione*<br/>
+*expression*<br/>
 Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.
 
 ## <a name="remarks"></a>Note
 
-Il **first_is** attributi di C++ ha la stessa funzionalità come la [first_is](/windows/desktop/Midl/first-is) attributo MIDL.
+Il **first_is** C++ attributo ha la stessa funzionalità come il [first_is](/windows/desktop/Midl/first-is) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -64,7 +64,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 |-|-|
 |**Si applica a**|Nel campo **struct** oppure **union**, parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -73,7 +73,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributi dei parametri](parameter-attributes.md)<br/>
+[Attributi di parametro](parameter-attributes.md)<br/>
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>
 [length_is](length-is.md)<br/>

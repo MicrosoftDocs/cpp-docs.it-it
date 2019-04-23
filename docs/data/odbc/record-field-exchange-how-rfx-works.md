@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032677"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Record Field Exchange: Funzionamento di RFX
@@ -90,7 +90,7 @@ Se si aggiunge un nuovo record, il set di record funziona come un buffer di modi
 
 1. `AddNew` o `Edit` prepara i campi nel buffer di modifica in modo RFX può rilevare i membri dati di campo modificato.
 
-   Poiché un nuovo record non ha alcun valore precedente per confrontare i nuovi valori, `AddNew` imposta il valore di ogni membro di dati del campo sul valore PSEUDO_NULL. Successivamente, quando si chiama `Update`, RFX confronta il valore di ciascun membro dati con il valore PSEUDO_NULL. Se è presente una differenza, il membro dati è stato impostato. (Lo stesso come colonna di record con un valore Null PSEUDO_NULL è uno di questi è lo stesso come C++ NULL.)
+   Poiché un nuovo record non ha alcun valore precedente per confrontare i nuovi valori, `AddNew` imposta il valore di ogni membro di dati del campo sul valore PSEUDO_NULL. Successivamente, quando si chiama `Update`, RFX confronta il valore di ciascun membro dati con il valore PSEUDO_NULL. Se è presente una differenza, il membro dati è stato impostato. (Lo stesso come colonna di record con un valore Null PSEUDO_NULL è uno di questi è identico C++ NULL.)
 
    A differenza di `Update` chiamare per `AddNew`, il `Update` chiamare per `Edit` confronta i valori aggiornati con i valori memorizzati in precedenza, anziché utilizzare PSEUDO_NULL. La differenza è che `AddNew` senza valori memorizzati in precedenza per il confronto.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
-ms.openlocfilehash: c07401036261b9f93bb2c07dcf3aff1ecf72e2fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519353"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028260"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
 **Sezione specifica C++**

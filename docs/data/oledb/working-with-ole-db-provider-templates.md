@@ -8,10 +8,10 @@ helpviewer_keywords:
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
 ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030907"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Utilizzo dei modelli provider OLE DB
@@ -37,4 +37,4 @@ Per informazioni su come usare i modelli di provider OLE DB, vedere gli argoment
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimenti ai modelli del provider OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

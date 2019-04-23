@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
 ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029421"
 ---
 # <a name="assume"></a>__assume
@@ -31,7 +31,7 @@ __assume(
 
 #### <a name="parameters"></a>Parametri
 
-*espressione*<br/>
+*expression*<br/>
 Espressione che si presuppone restituisca true.
 
 ## <a name="remarks"></a>Note
@@ -43,7 +43,7 @@ Se l'istruzione `__assume` viene scritta come contraddizione (un'espressione che
 > [!WARNING]
 >  Un programma non deve contenere un'istruzione `__assume` non valida in un percorso raggiungibile. Se il compilatore può raggiungere un'istruzione `__assume` non valida, il programma potrebbe causare un comportamento imprevedibile e potenzialmente pericoloso.
 
-`__assume` non è un autentico intrinseco. Non deve essere dichiarata come funzione e non può essere usata in una direttiva `#pragma intrinsic`. Anche se non viene generato alcun codice, viene interessato il codice generato dall'utilità di ottimizzazione.
+`__assume` non è una funzione intrinseca originale. Non deve essere dichiarata come funzione e non può essere usata in una direttiva `#pragma intrinsic`. Anche se non viene generato alcun codice, viene interessato il codice generato dall'utilità di ottimizzazione.
 
 Uso `__assume` in un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo quando l'asserzione non è recuperabile. Non usare `__assume` in un'asserzione per cui si dispone di un codice di recupero da errori successivi perché il compilatore potrebbe ottimizzare il codice di gestione degli errori.
 

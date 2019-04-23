@@ -57,10 +57,10 @@ helpviewer_keywords:
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
 ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033320"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Funzioni intrinseche _InterlockedAnd
@@ -172,10 +172,10 @@ __int64 _InterlockedAnd64_rel(
 
 #### <a name="parameters"></a>Parametri
 
-*predefinito*<br/>
+*value*<br/>
 [in, out] Puntatore al primo operando, da sostituire con il risultato.
 
-*Maschera*<br/>
+*mask*<br/>
 [in] Il secondo operando.
 
 ## <a name="return-value"></a>Valore restituito

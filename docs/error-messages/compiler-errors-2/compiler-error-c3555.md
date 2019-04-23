@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3555
 ms.assetid: b4311bd3-851b-479a-9965-d03f39dd8fd4
 ms.openlocfilehash: 6545f708fd23b9f3a292ab8fa86087b9e67b3623
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029265"
 ---
 # <a name="compiler-error-c3555"></a>Errore del compilatore C3555

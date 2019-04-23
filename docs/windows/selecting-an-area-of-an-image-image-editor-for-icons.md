@@ -41,10 +41,10 @@ helpviewer_keywords:
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
 ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033294"
 ---
 # <a name="how-to-edit-an-image"></a>Procedura: Modificare un'immagine
@@ -208,12 +208,12 @@ In genere, il **Editor di immagini** ingrandire un'immagine quando viene ridimen
    |Proprietà|Descrizione|
    |--------------|-----------------|
    |**Colori**|Specifica la combinazione di colori per l'immagine. Selezionare **monocromatico**, **16**, o **256**, oppure **True colore**.<br/><br/>Se è già stata disegnata l'immagine con una tavolozza dei colori-16, selezionando **monocromatico** fa sì che le sostituzioni di bianco e nero per i colori nell'immagine. Contrasto elevato non viene mantenuto sempre: ad esempio, le aree adiacenti del rosso e verde sono entrambi convertite in nero.|
-   |**Nomefile**|Specifica il nome del file di immagine.<br/><br/>Per impostazione predefinita, Visual Studio assegna un nome file base creato rimuovendo i primi quattro caratteri IDB ("_") dall'identificatore di risorsa predefinita (IDB_BITMAP1) e aggiungendo l'estensione corretta. Il nome file per l'immagine in questo esempio sarebbe *BITMAP1*. È possibile rinominarlo *MIABITMAP1*.|
-   |**Altezza**|Imposta l'altezza dell'immagine (in pixel). Il valore predefinito è 48.<br/><br/>L'immagine viene ritagliata o viene aggiunto uno spazio vuoto sotto l'immagine esistente.|
-   |**Id**|Imposta l'identificatore della risorsa.<br/><br/>Per un'immagine, Microsoft Visual Studio, per impostazione predefinita, viene assegnato l'identificatore successivo disponibile in una serie: IDB_BITMAP1 IDB_BITMAP2 e così via. Per le icone e cursori vengono utilizzati nomi simili.|
+   |**Nome file**|Specifica il nome del file di immagine.<br/><br/>Per impostazione predefinita, Visual Studio assegna un nome file base creato rimuovendo i primi quattro caratteri IDB ("_") dall'identificatore di risorsa predefinita (IDB_BITMAP1) e aggiungendo l'estensione corretta. Il nome file per l'immagine in questo esempio sarebbe *BITMAP1*. È possibile rinominarlo *MIABITMAP1*.|
+   |**Height**|Imposta l'altezza dell'immagine (in pixel). Il valore predefinito è 48.<br/><br/>L'immagine viene ritagliata o viene aggiunto uno spazio vuoto sotto l'immagine esistente.|
+   |**ID**|Imposta l'identificatore della risorsa.<br/><br/>Per un'immagine, Microsoft Visual Studio, per impostazione predefinita, viene assegnato l'identificatore successivo disponibile in una serie: IDB_BITMAP1 IDB_BITMAP2 e così via. Per le icone e cursori vengono utilizzati nomi simili.|
    |**Tavolozza**|Le modifiche dei colori delle proprietà.<br/><br/>Fare doppio clic per selezionare un colore e visualizzare il [finestra di dialogo Regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Definire il colore digitando i valori RGB o HSL nelle caselle di testo appropriato.|
    |**SaveCompressed**|Indica se l'immagine è in un formato compresso. Questa proprietà è di sola lettura.<br/><br/>Visual Studio non consente di salvare le immagini in un formato compresso, in modo che per tutte le immagini create in Visual Studio, questa proprietà sarà **False**. Se si apre un'immagine compressa (creata in un altro programma) in Visual Studio, questa proprietà sarà **True**. Se si salva un'immagine compressa con Visual Studio, saranno non compresso e questa proprietà torneranno ai valori **False**.|
-   |**Larghezza**|Imposta la larghezza dell'immagine (in pixel). Il valore predefinito per le bitmap è pari a 48.<br/><br/>L'immagine viene ritagliata o uno spazio vuoto viene aggiunta a destra dell'immagine esistente.|
+   |**Width**|Imposta la larghezza dell'immagine (in pixel). Il valore predefinito per le bitmap è pari a 48.<br/><br/>L'immagine viene ritagliata o uno spazio vuoto viene aggiunta a destra dell'immagine esistente.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -224,5 +224,5 @@ nessuno
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
 [Procedura: Creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
 [Procedura: Usare uno strumento di disegno](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Procedura: Utilizzare i colori](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Procedura: Usare i colori](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

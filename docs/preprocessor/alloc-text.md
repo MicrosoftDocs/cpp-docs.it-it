@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
 ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031365"
 ---
 # <a name="alloctext"></a>alloc_text
@@ -28,7 +28,7 @@ textsection
 
 ## <a name="remarks"></a>Note
 
-Il **alloc_text** pragma non gestisce le funzioni membro C++ o funzioni in overload. È applicabile solo a funzioni dichiarate con collegamento C, vale a dire, le funzioni dichiarate con il **extern "C"** specifiche di collegamento. Se si tenta di utilizzare questo pragma in una funzione con collegamento C++, viene generato un errore del compilatore.
+Il **alloc_text** pragma non gestisce C++ funzioni membro o le funzioni in overload. È applicabile solo a funzioni dichiarate con collegamento C, vale a dire, le funzioni dichiarate con il **extern "C"** specifiche di collegamento. Se si tenta di utilizzare questo pragma in una funzione con collegamento C++, viene generato un errore del compilatore.
 
 Poiché le funzioni indirizzamento usando `__based` non è supportato, specificare percorsi della sezione richiede l'uso del **alloc_text** pragma. Il nome specificato da *textsection* deve essere racchiuso tra virgolette doppie.
 

@@ -1,5 +1,5 @@
 ---
-title: wire_marshal (attributo COM C++)
+title: wire_marshal (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
 ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029862"
 ---
 # <a name="wiremarshal"></a>wire_marshal
@@ -25,7 +25,7 @@ Specifica un tipo di dati che verrà usato per la trasmissione anziché un tipo 
 
 ## <a name="remarks"></a>Note
 
-Il **wire_marshal** attributi di C++ ha la stessa funzionalità come la [wire_marshal](/windows/desktop/Midl/wire-marshal) attributo MIDL.
+Il **wire_marshal** C++ attributo ha la stessa funzionalità come il [wire_marshal](/windows/desktop/Midl/wire-marshal) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -55,7 +55,7 @@ Il codice seguente illustra un uso **wire_marshal**:
 |-|-|
 |**Si applica a**|**typedef**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

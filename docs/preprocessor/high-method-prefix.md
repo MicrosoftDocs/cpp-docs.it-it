@@ -7,10 +7,10 @@ helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
 ms.openlocfilehash: 1575b2e3fee461ee0e3987aaf1e770d0611e31ec
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028986"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
@@ -27,7 +27,7 @@ high_method_prefix("Prefix")
 
 ### <a name="parameters"></a>Parametri
 
-*Prefisso*<br/>
+*Prefix*<br/>
 Prefisso da utilizzare.
 
 ## <a name="remarks"></a>Note
@@ -38,5 +38,5 @@ Per impostazione predefinita, le proprietà e i metodi di gestione degli errori 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[Direttiva #import](../preprocessor/hash-import-directive-cpp.md)
+[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

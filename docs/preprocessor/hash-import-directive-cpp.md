@@ -13,10 +13,10 @@ helpviewer_keywords:
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
 ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031985"
 ---
 # <a name="import-directive-c"></a>Direttiva #import (C++)
@@ -65,7 +65,7 @@ Specifica la libreria dei tipi da importare. *nome del file* può essere uno dei
 
 - Qualsiasi formato di file che può essere riconosciuta dal **LoadTypeLib** API.
 
-*attributi*<br/>
+*Attributi*<br/>
 Uno o più [#import attributi](#_predir_the_23import_directive_import_attributes). Separare gli attributi con uno spazio o una virgola. Ad esempio:
 
 ```cpp
@@ -148,7 +148,7 @@ Il file di intestazione principale della libreria dei tipi è costituito da sett
 
 - Definizione di GUID obsoleta facoltativa: Contiene le inizializzazioni delle costanti GUID denominate. Si tratta di nomi nel formato `CLSID_CoClass` e `IID_Interface`, simili a quelli generati dal compilatore MIDL.
 
-- `#include` istruzione per l'intestazione della libreria tipo secondario.
+- Istruzione `#include` per l'intestazione secondaria della libreria dei tipi.
 
 - Boilerplate del piè di pagina: Include attualmente `#pragma pack(pop)`.
 

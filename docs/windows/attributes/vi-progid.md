@@ -1,5 +1,5 @@
 ---
-title: vi_progid (attributo COM C++)
+title: vi_progid (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vi_progid
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
 ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033589"
 ---
 # <a name="viprogid"></a>vi_progid
@@ -32,7 +32,7 @@ ProgID presentano una versione leggibile dell'identificatore di classe (CLSID) u
 
 ## <a name="remarks"></a>Note
 
-Il **vi_progid** attributo C++ consente di specificare un ProgID indipendenti dalla versione per un oggetto COM. Un ProgID ha il formato *name1.name2.version*. Un ProgID indipendenti dalla versione non è un *versione*. È possibile specificare sia il `progid` e il **vi_progid** attributi su un `coclass`. Se non si specifica **vi_progid**, il ProgID indipendenti dalla versione è il valore specificato per il [progid](progid.md) attributo.
+Il **vi_progid** C++ attributo consente di specificare un ProgID indipendenti dalla versione per un oggetto COM. Un ProgID ha il formato *name1.name2.version*. Un ProgID indipendenti dalla versione non è un *versione*. È possibile specificare sia il `progid` e il **vi_progid** attributi su un `coclass`. Se non si specifica **vi_progid**, il ProgID indipendenti dalla versione è il valore specificato per il [progid](progid.md) attributo.
 
 **vi_progid** implica la `coclass` dell'attributo, vale a dire, se si specifica **vi_progid**, è la stessa operazione quello ottenuto specificando il `coclass` e **vi_progid** attributi.
 
@@ -52,7 +52,7 @@ Vedere le [coclasse](coclass.md) per un esempio dell'uso di esempio **vi_progid*
 |-|-|
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

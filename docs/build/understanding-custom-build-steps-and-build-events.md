@@ -12,10 +12,10 @@ helpviewer_keywords:
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028506"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione
@@ -26,7 +26,7 @@ Nell'ambiente di sviluppo Visual C++ esistono tre modi principali per personaliz
 
    Un'istruzione di compilazione personalizzata è una regola di compilazione associata a un progetto. Un'istruzione di compilazione personalizzata può specificare una riga di comando da eseguire, file di input o output aggiuntivi e un messaggio da visualizzare. Per altre informazioni, vedere [Procedura: Aggiungere un'istruzione di compilazione personalizzata ai progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
 
-- **Strumenti di compilazione personalizzata**
+- **Strumenti di compilazione personalizzati**
 
    Uno strumento di compilazione personalizzato è una regola di compilazione associata a uno o più file. Un'istruzione di compilazione personalizzata può passare file di input a uno strumento di compilazione personalizzato, che restituisce uno o più file di output. Ad esempio, i file della Guida in un'applicazione MFC vengono compilati con uno strumento di compilazione personalizzato. Per altre informazioni, vedere [Procedura: Aggiungere strumenti di compilazione personalizzati ai progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) e [Specifica di strumenti di compilazione personalizzati](specifying-custom-build-tools.md).
 
@@ -66,12 +66,12 @@ Gli eventi di compilazione e le istruzioni di compilazione personalizzate vengon
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Specificare gli strumenti di compilazione personalizzato](specifying-custom-build-tools.md)<br/>
-[Specificare eventi di compilazione](specifying-build-events.md)<br/>
-[Risolvere i problemi delle personalizzazioni di compilazione](troubleshooting-build-customizations.md)<br/>
-[Formato dell'Output di un'istruzione di compilazione personalizzata o evento di compilazione](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[Specificare strumenti di compilazione personalizzati](specifying-custom-build-tools.md)<br/>
+[Specificare gli eventi di compilazione](specifying-build-events.md)<br/>
+[Risoluzione dei problemi relativi alle personalizzazioni della compilazione](troubleshooting-build-customizations.md)<br/>
+[Formattare l'output di un'istruzione di compilazione personalizzata o un evento di compilazione](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
 
 ## <a name="see-also"></a>Vedere anche
 
-[Visual Studio Projects - C++](creating-and-managing-visual-cpp-projects.md)<br>
+[Progetti di Visual Studio - C++](creating-and-managing-visual-cpp-projects.md)<br>
 [Macro comuni per i comandi e le proprietà di compilazione](reference/common-macros-for-build-commands-and-properties.md)

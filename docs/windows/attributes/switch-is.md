@@ -1,5 +1,5 @@
 ---
-title: switch_is (attributo COM C++)
+title: switch_is (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
 ms.openlocfilehash: ccac405480e415df17b42f02dce74759f578d025
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031089"
 ---
 # <a name="switchis"></a>switch_is
@@ -25,7 +25,7 @@ Specifica l'espressione o un identificatore che agisce come l'unione discriminan
 
 ## <a name="remarks"></a>Note
 
-Il **switch_is** attributi di C++ ha la stessa funzionalità come la [switch_is](/windows/desktop/Midl/switch-is) attributo MIDL.
+Il **switch_is** C++ attributo ha la stessa funzionalità come il [switch_is](/windows/desktop/Midl/switch-is) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -39,7 +39,7 @@ Vedere le [case](case-cpp.md) per un esempio dell'uso di esempio **switch_is**.
 |-|-|
 |**Si applica a**|**typedef**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

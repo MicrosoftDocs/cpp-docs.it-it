@@ -9,10 +9,10 @@ helpviewer_keywords:
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
 ms.openlocfilehash: 950e83f2cd03e92bb5a9f953affe8e7ff479a408
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031300"
 ---
 # <a name="movsd"></a>__movsd
@@ -33,7 +33,7 @@ void __movsd(
 
 #### <a name="parameters"></a>Parametri
 
-*dest*<br/>
+*Dest*<br/>
 [out] La destinazione dell'operazione.
 
 *Origine*<br/>

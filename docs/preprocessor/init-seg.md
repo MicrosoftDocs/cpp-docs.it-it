@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
 ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026630"
 ---
 # <a name="initseg"></a>init_seg
@@ -36,13 +36,13 @@ Poiché l'inizializzazione di oggetti statici globali può includere il codice i
 
 Le opzioni per la **init_seg** pragma sono:
 
-*compilatore*<br/>
+*compiler*<br/>
 Riservato per l'inizializzazione della libreria di runtime di Microsoft C Gli oggetti in questo gruppo sono costruiti per primi.
 
 *lib*<br/>
 Disponibile per le inizializzazioni dei fornitori della libreria di classi di terze parti. Gli oggetti in questo gruppo sono costruiti dopo quelli contrassegnati come *compilatore* ma prima degli altri.
 
-*utente*<br/>
+*user*<br/>
 Disponibile per qualsiasi utente. Gli oggetti in questo gruppo sono costruiti per ultimi.
 
 *nome della sezione* consente la specifica esplicita della sezione di inizializzazione. Gli oggetti in specificato dall'utente *-nome della sezione* non vengono costruiti in modo implicito; tuttavia, gli indirizzi vengono inseriti nella sezione denominata da *-nome della sezione*.

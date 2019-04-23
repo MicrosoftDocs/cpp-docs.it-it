@@ -7,10 +7,10 @@ helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
 ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029512"
 ---
 # <a name="restricted"></a>restricted
@@ -27,7 +27,7 @@ Specifica che un membro di un modulo, interfaccia o interfaccia dispatch non pu�
 
 ### <a name="parameters"></a>Parametri
 
-*interfacce*<br/>
+*interfaces*<br/>
 Una o più interfacce che non possono essere chiamate in modo arbitrario su un oggetto COM. Questo parametro è valido solo quando viene applicato a una classe.
 
 ## <a name="remarks"></a>Note
@@ -78,4 +78,4 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi di interfaccia](interface-attributes.md)<br/>
-[Attributi del metodo](method-attributes.md)
+[Attributi di metodo](method-attributes.md)
