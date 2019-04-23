@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 93e3b8912ddf20bf8e190bb42e8413e6d909bbcc
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703467"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124681"
 ---
 # <a name="isnormal"></a>isnormal
 
-Determina se un valore a virgola mobile è un numero infinito.
+Determina se un valore a virgola mobile è un valore normale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,7 +27,7 @@ int isnormal(
 template <class FloatingType>
 inline bool isnormal(
    FloatingType x
-) throw(); /* C++-only template function */
+) throw(); /* C++-only function template */
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -37,11 +37,11 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**isnormal** restituisce un valore diverso da zero (**true** nel codice C++) se l'argomento *x* non subnormal sia finito. **isnormal** restituisce 0 (**false** nel codice C++) se l'argomento è un subnormali, un numero infinito o NAN.
+**isnormal** restituisce un valore diverso da zero (**true** in C++ codice) se l'argomento *x* diverso da zero, subnormali, infinito o NaN. In caso contrario, **isnormal** restituisce 0 (**false** in C++ codice).
 
 ## <a name="remarks"></a>Note
 
-**isnormal** è una macro quando viene compilato come C e una funzione di modello inline durante la compilazione come C++.
+**isnormal** è una macro quando viene compilato come C e un modello di funzione inline durante la compilazione come C++.
 
 ## <a name="requirements"></a>Requisiti
 

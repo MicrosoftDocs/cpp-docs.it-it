@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
 ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778754"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779401"
 ---
 # <a name="compiler-error-c2065"></a>Errore del compilatore C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Esempio: C + + / errore di deduzione del tipo dell'interfaccia della riga
+## <a name="example-ccli-type-deduction-failure"></a>Esempio: C++/ Errore di deduzione del tipo CLI
 
-Questo errore può verificarsi quando si chiama una funzione generica, se l'argomento tipo designato non può essere dedotto dai parametri utilizzati. Per altre informazioni, vedere [funzioni generiche (C + + CLI)](../../extensions/generic-functions-cpp-cli.md).
+Questo errore può verificarsi quando si chiama una funzione generica, se l'argomento tipo designato non può essere dedotto dai parametri utilizzati. Per altre informazioni, vedere [funzioni generiche (C++/CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Esempio: C + + / parametri dell'attributo della riga di comando
+## <a name="example-ccli-attribute-parameters"></a>Esempio: C++/ Parametri dell'attributo CLI
 
 Questo errore può essere generato anche in seguito alle operazioni di conformità del compilatore eseguite per Visual C++ 2005: controllo dei parametri per gli attributi di Visual C++.
 

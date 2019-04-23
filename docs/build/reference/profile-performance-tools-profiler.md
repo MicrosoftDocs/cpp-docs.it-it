@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810003"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124772"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler strumenti di prestazioni)
 
@@ -56,7 +56,22 @@ O il profilo indica al linker generare una sezione di rilocazione nell'immagine 
 
 1. Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Per impostare l'opzione del linker all'interno di progetto CMake per Visual Studio
+
+**CMake** progetto non dispone di un **pagine delle proprietà**, le opzioni del linker possono essere impostate da modifica il file cmakelists. txt.
+
+1. Aprire il file cmakelists. txt nella directory radice del progetto.
+
+1. Aggiungere il codice riportato di seguito. Per informazioni dettagliate, vedere [riferimenti di CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
+
+1. Ricompilare la soluzione.
+
+```
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
+```
+
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)
+

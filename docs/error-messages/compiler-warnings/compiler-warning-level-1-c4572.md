@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4572
 ms.assetid: 482dee5a-29bd-4fc3-b769-9dfd4cd2a964
 ms.openlocfilehash: e32509e4d32eef4f53b8d43a7db769844f1182c7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781549"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779466"
 ---
 # <a name="compiler-warning-level-1-c4572"></a>Avviso del compilatore (livello 1) C4572
 
 Attributo [ParamArray] deprecato in /clr, utilizzare '.' In alternativa
 
-È stato usato uno stile obsoleto per specificare un elenco di argomenti variabili. Quando si compila per Common Language Runtime, utilizzare la sintassi di puntini di sospensione anziché <xref:System.ParamArrayAttribute>. Per altre informazioni, vedere [elenchi di argomenti variabili (...) (C + + CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+È stato usato uno stile obsoleto per specificare un elenco di argomenti variabili. Quando si compila per Common Language Runtime, utilizzare la sintassi di puntini di sospensione anziché <xref:System.ParamArrayAttribute>. Per altre informazioni, vedere [elenchi di argomenti variabili (...) (C++/CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

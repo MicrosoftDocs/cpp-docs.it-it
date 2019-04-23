@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 73797f3817338c48e8ff11eaaadff71263374fd0
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775426"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124759"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>I progetti C/C++ e i sistemi di compilazione in Visual Studio
 
@@ -35,7 +35,7 @@ Compilazione di base C++ comporta tre passaggi principali:
 
 ## <a name="the-msvc-toolset"></a>Il set di strumenti MSVC
 
-Il compilatore Microsoft C++, linker, le librerie standard e utilità correlate costituiscono il set di strumenti del compilatore MSCV (detto anche una toolchain o "strumenti di compilazione"). Questi sono inclusi in Visual Studio. È anche possibile scaricare e usare il set di strumenti come pacchetto autonomo gratuito dal [percorso di download di Build Tools per Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+Microsoft C++ compilatore, linker, le librerie standard e utilità correlate costituiscono il set di strumenti del compilatore MSVC (detto anche una toolchain o "strumenti di compilazione"). Questi sono inclusi in Visual Studio. È anche possibile scaricare e usare il set di strumenti come pacchetto autonomo gratuito dal [percorso di download di Build Tools per Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
 
 È possibile creare semplici programmi richiamando il compilatore MSVC (cl.exe) direttamente dalla riga di comando. Il comando seguente accetta un file di codice di origine singolo e richiama cl.exe per compilare un file eseguibile denominato *hello.exe*: 
 
