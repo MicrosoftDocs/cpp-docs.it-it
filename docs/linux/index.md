@@ -3,11 +3,11 @@ layout: LandingPage
 title: Documentazione per lo sviluppo per Linux con C++
 description: Creare ed eseguire il debug di applicazioni in esecuzione su Linux.
 ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393142"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentazione per lo sviluppo per Linux con C++
 
