@@ -7,10 +7,10 @@ helpviewer_keywords:
 - COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
 ms.openlocfilehash: eb87d3861c6b3066cf482108e2ce2243c8196093
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038929"
 ---
 # <a name="com-attributes"></a>Attributi COM
@@ -20,7 +20,7 @@ Gli attributi COM inseriscono il codice per supportare numerose aree dello svilu
 |Attributo|Descrizione|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|Indica che un controllo può essere aggregato da un altro controllo.|
-|[aggregati](aggregates.md)|Indica che un controllo viene aggregata la classe di destinazione.|
+|[aggregates](aggregates.md)|Indica che un controllo viene aggregata la classe di destinazione.|
 |[coclass](coclass.md)|Crea un oggetto COM, che è possibile implementare un'interfaccia COM.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Aggiunge una voce di interfaccia a una mappa COM.|
 |[implements_category](implements-category.md)|Specifica le categorie di componenti implementate per la classe.|

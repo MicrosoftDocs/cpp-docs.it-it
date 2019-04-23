@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
 ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037737"
 ---
 # <a name="working-with-resource-files"></a>Utilizzo di file di risorse
@@ -18,7 +18,7 @@ ms.locfileid: "59037737"
 > [!WARNING]
 > Questa sezione si applica ad applicazioni desktop di Windows scritte in C++.
 >
-> Per informazioni sulle risorse nelle App Universal Windows Platform scritte in C++, vedere [definizione delle risorse dell'App](/windows/uwp/app-resources/), o sull'aggiunta di risorse per C + + + / progetti di interfaccia della riga di comando (gestito), vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) in Guida per gli sviluppatori di .NET Framework.
+> Per informazioni sulle risorse nelle App Universal Windows Platform scritte in C++, vedere [definizione delle risorse dell'App](/windows/uwp/app-resources/), o sull'aggiunta di risorse per C++/progetti di interfaccia della riga di comando (gestito), vedere [risorse nelle App Desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework.
 
 Le risorse possono essere costituite di un'ampia gamma di elementi, ad esempio:
 
@@ -44,7 +44,7 @@ Vengono descritti i file di risorse e l'utilizzo nelle applicazioni desktop di W
 [Identificatori di risorsa (simboli)](../windows/symbols-resource-identifiers.md)<br/>
 Descrive i simboli e fornisce informazioni sull'uso della finestra di dialogo **Simboli risorsa** per la gestione dei simboli nei progetti.
 
-[editor di risorse](../windows/resource-editors.md)<br/>
+[Editor di risorse](../windows/resource-editors.md)<br/>
 Viene descritto l'editor di risorse disponibili in Visual Studio e i tipi di risorse che è possibile modificare con ogni editor. Fornisce inoltre collegamenti a informazioni dettagliate sull'uso di ogni editor.
 
 ## <a name="related-sections"></a>Sezioni correlate
@@ -52,10 +52,10 @@ Viene descritto l'editor di risorse disponibili in Visual Studio e i tipi di ris
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Vengono forniti collegamenti alla documentazione di Visual C++.
 
-[Talk to Us](/visualstudio/ide/talk-to-us)<br/>
+[Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)<br/>
 Include collegamenti a informazioni sull'uso della documentazione disponibile, su come contattare il supporto tecnico e su come usare le funzionalità di accessibilità.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Applicazioni desktop di Windows](../windows/windows-desktop-applications-cpp.md)<br/>
+[Applicazioni Desktop di Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menu e altre risorse](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

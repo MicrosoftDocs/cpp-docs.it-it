@@ -12,10 +12,10 @@ helpviewer_keywords:
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
 ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237164"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Allineamento membri struct)
@@ -53,7 +53,7 @@ Non usare questa opzione a meno che non si abbiano requisiti specifici dell'alli
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [/ALIGN (Allineamento sezione)](align-section-alignment.md)
+- [/ALIGN (allineamento sezione)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 

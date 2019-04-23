@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3638
 ms.assetid: 8d8bc5ca-75aa-480e-b6b6-3178fab51b1d
 ms.openlocfilehash: 33bb248faf946c39543de4a14a44e2ebbda49880
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775231"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776745"
 ---
 # <a name="compiler-error-c3638"></a>Errore del compilatore C3638
 

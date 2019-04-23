@@ -50,10 +50,10 @@ helpviewer_keywords:
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
 ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039728"
 ---
 # <a name="ccommand-class"></a>Classe CCommand
@@ -101,10 +101,10 @@ Per usare un comando OLE DB che può restituire più risultati, specificare [CMu
 
 |||
 |-|-|
-|[Crea](#create)|Crea un nuovo comando per la sessione specificata, quindi imposta il testo del comando.|
+|[creare](#create)|Crea un nuovo comando per la sessione specificata, quindi imposta il testo del comando.|
 |[CreateCommand](#createcommand)|Crea un nuovo comando.|
 |[GetParameterInfo](#getparameterinfo)|Ottiene un elenco di parametri, i relativi nomi e tipi del comando.|
-|[Prepare](#prepare)|Convalida e ottimizza il comando corrente.|
+|[Preparare](#prepare)|Convalida e ottimizza il comando corrente.|
 |[ReleaseCommand](#releasecommand)|Rilascia la funzione di accesso parametro se necessario, quindi rilascia il comando.|
 |[SetParameterInfo](#setparameterinfo)|Specifica il tipo nativo di ogni parametro di comando.|
 |[Unprepare](#unprepare)|Rimuove il piano di esecuzione corrente dei comandi.|
@@ -209,7 +209,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 #### <a name="parameters"></a>Parametri
 
-*sessione*<br/>
+*session*<br/>
 [in] La sessione in cui eseguire il comando.
 
 *wszCommand*<br/>
@@ -276,7 +276,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 #### <a name="parameters"></a>Parametri
 
-*sessione*<br/>
+*session*<br/>
 [in] Una sessione in cui creare il comando.
 
 *wszCommand*<br/>
@@ -308,7 +308,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 #### <a name="parameters"></a>Parametri
 
-*sessione*<br/>
+*session*<br/>
 [in] Oggetto `CSession` oggetto da associare il nuovo comando.
 
 ### <a name="return-value"></a>Valore restituito
@@ -416,5 +416,5 @@ Questo metodo il wrapping del metodo OLE DB [ICommandPrepare::](/previous-versio
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

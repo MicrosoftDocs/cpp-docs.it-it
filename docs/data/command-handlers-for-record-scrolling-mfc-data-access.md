@@ -7,10 +7,10 @@ helpviewer_keywords:
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
 ms.openlocfilehash: 66944221910dbd23d78a78fc951030efbee86bd0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038518"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Gestione dei comandi per lo scorrimento dei record (accesso ai dati MFC)
@@ -32,4 +32,4 @@ Il `OnMove` funzione membro garantisce predefinito gestione dei comandi per tutt
 
 ## <a name="see-also"></a>Vedere anche
 
-[Supporto della navigazione in una visualizzazione di record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+[Supporto della navigazione in una visualizzazione di Record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

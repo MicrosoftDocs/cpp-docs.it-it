@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
 ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58779534"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776717"
 ---
 # <a name="compiler-error-c3392"></a>Errore del compilatore C3392
 
@@ -21,7 +21,7 @@ L'istanza di un tipo generico è stata creata in modo non corretto. Controllare 
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente usa C# per creare un componente che contiene un tipo generico con vincoli che non sono supportati durante la creazione di tipi generici in C + + / CLI. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
+L'esempio seguente usa C# per creare un componente che contiene un tipo generico con vincoli che non sono supportati durante la creazione di tipi generici in C++/CLI. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).
 
 ```cs
 // C3392.cs

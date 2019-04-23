@@ -31,10 +31,10 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036062"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedura: Gestire le risorse (C++)
@@ -129,5 +129,5 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
-[Procedura: Creare le risorse](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Procedura: Includere le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Procedura: Crea risorse](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Procedura: Includere risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md)<br/>

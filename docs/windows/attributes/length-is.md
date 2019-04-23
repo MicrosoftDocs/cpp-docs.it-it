@@ -1,5 +1,5 @@
 ---
-title: length_is (attributo COM C++)
+title: length_is (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
 ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039910"
 ---
 # <a name="lengthis"></a>length_is
@@ -25,12 +25,12 @@ Specifica il numero di elementi della matrice deve essere trasmesso.
 
 ### <a name="parameters"></a>Parametri
 
-*espressione*<br/>
+*expression*<br/>
 Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.
 
 ## <a name="remarks"></a>Note
 
-Il **length_is** attributi di C++ ha la stessa funzionalità come la [length_is](/windows/desktop/Midl/length-is) attributo MIDL.
+Il **length_is** C++ attributo ha la stessa funzionalità come il [length_is](/windows/desktop/Midl/length-is) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -44,7 +44,7 @@ Visualizzare [first_is](first-is.md) per un esempio di come specificare una sezi
 |-|-|
 |**Si applica a**|Nel campo **struct** oppure **union**, parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -53,7 +53,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 [Attributi IDL](idl-attributes.md)<br/>
 [Attributi Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributi dei parametri](parameter-attributes.md)<br/>
+[Attributi di parametro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>
 [last_is](last-is.md)<br/>

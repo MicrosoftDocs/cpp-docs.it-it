@@ -8,10 +8,10 @@ helpviewer_keywords:
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
 ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036786"
 ---
 # <a name="outword"></a>__outword

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3288
 ms.assetid: ed08a540-9751-46e1-9cbe-c51d6a49ffab
 ms.openlocfilehash: d076dabe0df91cefb90be5ec9e90f371331a51f1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771007"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776769"
 ---
 # <a name="compiler-error-c3288"></a>Errore del compilatore C3288
 

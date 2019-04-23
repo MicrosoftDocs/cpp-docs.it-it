@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
 ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038767"
 ---
 # <a name="consuming-libraries-and-components"></a>Utilizzo di librerie e componenti
@@ -50,7 +50,7 @@ Se un'applicazione C++ nativa deve utilizzare un oggetto COM, e che l'oggetto è
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>Assembly .NET e componenti Windows Runtime
 
-Nella piattaforma UWP o C + + c++ /CLI progetti si utilizzano gli assembly .NET o componenti Windows Runtime mediante l'aggiunta di un *riferimento* all'assembly o al componente. Sotto il **riferimenti** nodo in una piattaforma UWP o C + + c++ /CLI progetto CLI, noterete che i riferimenti ai componenti di uso comune. Fare clic sui **riferimenti** nodo **Esplora soluzioni** per visualizzare il **gestione riferimenti** e spostarsi tra i componenti aggiuntivi noti al sistema. Scegliere il **esplorare** pulsante per passare a qualsiasi cartella in cui si trova un componente personalizzato. Poiché gli assembly .NET e componenti Windows Runtime contengono informazioni sui tipi incorporati, è possibile visualizzare i relativi metodi e classi facendo clic e scegliendo **Mostra nel Visualizzatore oggetti**. 
+Nella piattaforma UWP o C++progetti /CLI, si utilizzano gli assembly .NET o componenti Windows Runtime mediante l'aggiunta di un *riferimento* all'assembly o al componente. Sotto il **riferimenti** nodo in una piattaforma UWP o C++progetto /CLI, noterete che i riferimenti ai componenti di uso comune. Fare clic sui **riferimenti** nodo **Esplora soluzioni** per visualizzare il **gestione riferimenti** e spostarsi tra i componenti aggiuntivi noti al sistema. Scegliere il **esplorare** pulsante per passare a qualsiasi cartella in cui si trova un componente personalizzato. Poiché gli assembly .NET e componenti Windows Runtime contengono informazioni sui tipi incorporati, è possibile visualizzare i relativi metodi e classi facendo clic e scegliendo **Mostra nel Visualizzatore oggetti**. 
 
 ## <a name="reference-properties"></a>Proprietà riferimento
 
@@ -80,9 +80,9 @@ Le proprietà dei riferimenti ActiveX sono disponibili solo per i riferimenti ai
 
    Visualizza lo strumento usato per compilare l'assembly di interoperabilità dalla libreria COM a cui fa riferimento o dal controllo ActiveX.
 
-### <a name="assembly-reference-properties-ccli"></a>Proprietà riferimento ad assembly (C + + CLI)
+### <a name="assembly-reference-properties-ccli"></a>Proprietà riferimento ad assembly (C++/CLI)
 
-Proprietà riferimento ad assembly sono disponibili solo per i riferimenti agli assembly di .NET Framework in C + + / progetti. Queste proprietà vengono visualizzate solo quando viene selezionato un assembly .NET Framework nel **riferimenti** riquadro. Non è possibile modificare le proprietà.
+Proprietà riferimento ad assembly sono disponibili solo per i riferimenti agli assembly di .NET Framework in C++progetti /CLI. Queste proprietà vengono visualizzate solo quando viene selezionato un assembly .NET Framework nel **riferimenti** riquadro. Non è possibile modificare le proprietà.
 
 - **Percorso relativo**
 
@@ -96,7 +96,7 @@ Sono disponibili le proprietà seguenti su vari tipi di riferimenti. Esse consen
 
    Specifica se copiare automaticamente l'assembly di riferimento nel percorso di destinazione durante una compilazione.
 
-- **Copia assembly Satellite locale (C + + CLI)**
+- **Copia assembly Satellite locale (C++/CLI)**
 
    Specifica se copiare automaticamente gli assembly satellite dell'assembly di riferimento nel percorso di destinazione durante una compilazione. Usato solo se **Copia localmente** è impostato su **true**.
 
@@ -128,7 +128,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Visualizza il nome dell'assembly per l'assembly di riferimento.
 
-- **culture**
+- **Impostazioni cultura**
 
    Ottiene le impostazioni cultura del riferimento selezionato.
 
@@ -140,7 +140,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Visualizza il percorso della directory dell'assembly di riferimento.
 
-- **identità**
+- **Identità**
 
    Per gli assembly .NET Framework, viene visualizzato il percorso completo. Per i componenti COM, viene visualizzato il GUID.
 
@@ -148,7 +148,7 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
    Visualizza l'etichetta del riferimento.
 
-- **Nome**
+- **Name**
 
    Visualizza il nome del riferimento.
 
@@ -158,13 +158,13 @@ Le proprietà seguenti sono incluse nei riferimenti di assembly COM e .NET e non
 
 - **Nome sicuro**
 
-   `true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
+   Impostato su`true` se il riferimento ha un nome sicuro. Un assembly con nome sicuro ha una versione univoca.
 
-- **Versione**
+- **Version**
 
    Visualizza la versione dell'assembly di riferimento.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento alla pagina di proprietà progetto C++](reference/property-pages-visual-cpp.md)<br>
-[Impostare il compilatore C++ e creare proprietà in Visual Studio](working-with-project-properties.md)
+[Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](working-with-project-properties.md)

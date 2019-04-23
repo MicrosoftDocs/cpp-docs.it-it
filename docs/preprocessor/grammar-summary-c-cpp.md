@@ -6,10 +6,10 @@ helpviewer_keywords:
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
 ms.openlocfilehash: a3f1674d8d72639413f092ca3f67324d4688618a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038434"
 ---
 # <a name="grammar-summary-cc"></a>Riepilogo grammatica (C/C++)

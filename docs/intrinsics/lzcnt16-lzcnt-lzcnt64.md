@@ -15,10 +15,10 @@ helpviewer_keywords:
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
 ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041338"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
@@ -43,7 +43,7 @@ unsigned __int64 __lzcnt64(
 
 #### <a name="parameters"></a>Parametri
 
-*predefinito*<br/>
+*value*<br/>
 [in] Il 16, 32 o intero senza segno a 64 bit a cercare di zeri iniziali.
 
 ## <a name="return-value"></a>Valore restituito

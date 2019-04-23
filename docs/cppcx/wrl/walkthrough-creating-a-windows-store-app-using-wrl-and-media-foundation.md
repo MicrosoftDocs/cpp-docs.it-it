@@ -4,10 +4,10 @@ ms.date: 09/17/2018
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
 ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036036"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Foundation
@@ -95,9 +95,9 @@ Nella maggior parte dei casi, è possibile usare c++ /CX per creare un Runtime d
 
    1. Sotto **dei metadati di Windows**, impostare **genera metadati Windows** al **Sì (/ WINMD)**.
 
-### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Usare il componente personalizzato di Media Foundation da un'app C# di WRL
+### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Usare il componente personalizzato di Media Foundation da un'app c# di WRL
 
-1. Aggiungere un nuovo **C# App vuota (Windows universale)** del progetto per il `MediaCapture` soluzione. Nome del progetto, ad esempio *MediaCapture*.
+1. Aggiungere un nuovo **c# App vuota (Windows universale)** del progetto per il `MediaCapture` soluzione. Nome del progetto, ad esempio *MediaCapture*.
 
 1. Nel **MediaCapture** del progetto, aggiungere un riferimento al `GrayscaleTransform` progetto. Per altre informazioni, vedere [come: Aggiungere o rimuovere riferimenti tramite Gestione riferimenti](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager).
 

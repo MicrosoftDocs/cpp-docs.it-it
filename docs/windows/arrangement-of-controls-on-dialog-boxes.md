@@ -81,10 +81,10 @@ helpviewer_keywords:
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
 ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037421"
 ---
 # <a name="how-to-layout-controls-c"></a>Procedura: Controlli di layout (C++)
@@ -114,12 +114,12 @@ Il **delle impostazioni Guida** nella finestra di dialogo presenta le proprietà
 |Proprietà|Descrizione|
 |---|---|
 |**Guide**|Consente di visualizzare le impostazioni per le guide di layout.|
-|**nessuno**|Nasconde gli strumenti di layout.|
+|**None**|Nasconde gli strumenti di layout.|
 |**Righelli e guide**|Quando abilitata, aggiunge righelli per gli strumenti di layout e consente le guide possono essere inseriti nei righelli. Le guide predefiniti sono i margini.|
-|**Grid**|Crea una griglia di layout. Nuovi controlli vengono automaticamente allineati alla griglia.|
-|**spaziatura di griglia**|Consente di visualizzare le impostazioni per la spaziatura della griglia in unità di finestra di dialogo (DLU-Dialog Unit).|
+|**Griglia**|Crea una griglia di layout. Nuovi controlli vengono automaticamente allineati alla griglia.|
+|**Spaziatura della griglia**|Consente di visualizzare le impostazioni per la spaziatura della griglia in unità di finestra di dialogo (DLU-Dialog Unit).|
 |**Larghezza: DLU-Dialog Unit**|Imposta la larghezza della griglia di layout in DLU-Dialog Unit. Una DLU orizzontale sia la larghezza media del tipo di carattere della finestra di dialogo diviso 4.|
-|**Altezza: DLU-Dialog Unit**|Imposta l'altezza della griglia di layout in DLU-Dialog Unit. Una DLU verticale è l'altezza di average del tipo di carattere finestra dialogo diviso per 8.|
+|**Height: DLU-Dialog Unit**|Imposta l'altezza della griglia di layout in DLU-Dialog Unit. Una DLU verticale è l'altezza di average del tipo di carattere finestra dialogo diviso per 8.|
 
 ### <a name="guides-and-margins"></a>Guide e margini
 
@@ -260,14 +260,14 @@ Usare i quadratini di ridimensionamento per ridimensionare un controllo. Quando 
 
    |Spacing (Spaziatura)|Descrizione|
    |---|---|
-   |**Spaziatura orizzontale**|Spazio tra i controlli in modo uniforme tra più a sinistra e selezionata il controllo all'estrema destra.|
+   |**Tra**|Spazio tra i controlli in modo uniforme tra più a sinistra e selezionata il controllo all'estrema destra.|
    |**Giù**|Spazio tra i controlli in modo uniforme tra i più in alto e il controllo di livello più basso selezionato.|
 
 - Per allineare al centro controlli, selezionare i controlli che si desidera riordinare. Passare al menu di scelta **formato** > **Centra nella finestra** e scegliere una delle modalità seguenti:
 
    |Disposizione|Descrizione|
    |---|---|
-   |**Vertical**|Allineare al centro verticalmente i controlli nella finestra di dialogo.|
+   |**Verticale**|Allineare al centro verticalmente i controlli nella finestra di dialogo.|
    |**Orizzontale**|Allineare al centro orizzontalmente i controlli nella finestra di dialogo.|
 
 - Per allineare i pulsanti di comando, selezionare uno o più pulsanti di comando. Passare al menu di scelta **formato** > **Disponi pulsanti**, quindi scegliere una delle modalità seguenti:
@@ -275,7 +275,7 @@ Usare i quadratini di ridimensionamento per ridimensionare un controllo. Quando 
    |Disposizione|Descrizione|
    |---|---|
    |**A destra**|Consente di allineare i pulsanti di comando lungo il bordo destro della finestra di dialogo.|
-   |**Bottom**|Consente di allineare i pulsanti di comando lungo il bordo inferiore della finestra di dialogo.|
+   |**In basso**|Consente di allineare i pulsanti di comando lungo il bordo inferiore della finestra di dialogo.|
 
    Se si seleziona un controllo diverso da un pulsante di comando, la posizione non è interessata.
 
@@ -286,5 +286,5 @@ Win32
 ## <a name="see-also"></a>Vedere anche
 
 [Gestire i controlli finestra di dialogo](controls-in-dialog-boxes.md)<br/>
-[Procedura: Aggiungere, modificare o eliminare i controlli](adding-editing-or-deleting-controls.md)<br/>
-[Procedura: Definire i valori e controllare l'accesso](defining-mnemonics-access-keys.md)<br/>
+[Procedura: Aggiungere, modificare o eliminare controlli](adding-editing-or-deleting-controls.md)<br/>
+[Procedura: Definire l'accesso e i valori per i controlli](defining-mnemonics-access-keys.md)<br/>

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
 ms.openlocfilehash: 2c11230d106b50e8120dfa9f4e283e97700d2739
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040108"
 ---
 # <a name="data-sources-and-sessions"></a>Origini dati e sessioni
@@ -30,4 +30,4 @@ Le classi sono:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

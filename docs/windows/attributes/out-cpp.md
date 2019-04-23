@@ -7,10 +7,10 @@ helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
 ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037581"
 ---
 # <a name="out-c"></a>out (C++)
@@ -39,7 +39,7 @@ Per un'illustrazione dell'uso di [out](bindable.md) , vedere l'esempio per **bin
 |-|-|
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -47,6 +47,6 @@ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi]
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi dei parametri](parameter-attributes.md)<br/>
+[Attributi di parametro](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
 [ID](id.md)

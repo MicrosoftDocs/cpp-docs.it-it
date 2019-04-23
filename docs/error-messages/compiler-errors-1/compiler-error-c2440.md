@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
 ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780678"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777134"
 ---
 # <a name="compiler-error-c2440"></a>Errore del compilatore C2440
 
@@ -143,7 +143,7 @@ int main() {
 
 ## <a name="example"></a>Esempio
 
-L'errore C2440 può inoltre verificarsi per un uso non corretto di una conversione definita dall'utente. Ad esempio, quando un operatore di conversione è stato definito come `explicit`, il compilatore non è possibile usarlo in una conversione implicita. Per altre informazioni sulle conversioni definite dall'utente, vedere [conversioni definite dall'utente (C + + CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). In questo esempio genera C2440:
+L'errore C2440 può inoltre verificarsi per un uso non corretto di una conversione definita dall'utente. Ad esempio, quando un operatore di conversione è stato definito come `explicit`, il compilatore non è possibile usarlo in una conversione implicita. Per altre informazioni sulle conversioni definite dall'utente, vedere [conversioni definite dall'utente (C++/CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)). In questo esempio genera C2440:
 
 ```cpp
 // C2440d.cpp
@@ -194,7 +194,7 @@ L'errore C2440 può inoltre verificarsi a causa delle modifiche nelle funzionali
 
 ## <a name="example"></a>Esempio
 
-Il compilatore Visual C++ non consente più la [operatore const_cast](../../cpp/const-cast-operator.md) downcast quando codice sorgente che utilizza **/clr** programmazione viene compilata.
+L'oggetto visivo C++ compilatore non consente più la [operatore const_cast](../../cpp/const-cast-operator.md) downcast quando codice sorgente che utilizza **/clr** programmazione viene compilata.
 
 Per risolvere l'errore C2440, utilizzare l'operatore di cast corretto. Per altre informazioni, vedere [operatori di cast](../../cpp/casting-operators.md).
 

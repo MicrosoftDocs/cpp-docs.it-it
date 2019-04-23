@@ -17,10 +17,10 @@ helpviewer_keywords:
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
 ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037789"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Procedura: Usare uno strumento di disegno
@@ -143,5 +143,5 @@ nessuno
 [Editor di immagini per le icone](../windows/image-editor-for-icons.md)<br/>
 [Procedura: Creare un'icona o un'altra immagine](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
 [Procedura: Modificare un'immagine](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Procedura: Utilizzare i colori](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Procedura: Usare i colori](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

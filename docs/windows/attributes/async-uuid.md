@@ -1,5 +1,5 @@
 ---
-title: async_uuid (attributo COM C++)
+title: async_uuid (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
 ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035796"
 ---
 # <a name="asyncuuid"></a>async_uuid
@@ -30,7 +30,7 @@ Un valore UUID che identifica la versione dell'interfaccia.
 
 ## <a name="remarks"></a>Note
 
-Il **async_uuid** attributi di C++ ha la stessa funzionalità come la [async_uuid](/windows/desktop/Midl/async-uuid) attributo MIDL.
+Il **async_uuid** C++ attributo ha la stessa funzionalità come il [async_uuid](/windows/desktop/Midl/async-uuid) attributo MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -54,7 +54,7 @@ __interface ICustom {
 |-|-|
 |**Si applica a**|`interface`|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|**dual**, **dispinterface**|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

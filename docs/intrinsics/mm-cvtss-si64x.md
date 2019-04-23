@@ -8,10 +8,10 @@ helpviewer_keywords:
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
 ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036825"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
@@ -30,7 +30,7 @@ __int64 _mm_cvtss_si64x(
 
 #### <a name="parameters"></a>Parametri
 
-*predefinito*<br/>
+*value*<br/>
 [in] Un `__m128` struttura che contiene i valori a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito

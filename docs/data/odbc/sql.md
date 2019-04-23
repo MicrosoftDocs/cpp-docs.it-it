@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
 ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037857"
 ---
 # <a name="sql"></a>SQL
@@ -47,12 +47,12 @@ Le classi di database usano una parte di SQL noto come Data Manipulation Languag
 
 |La parola chiave SQL|Usano le procedure guidate e le classi di database|
 |-----------------|---------------------------------------------|
-|**SELEZIONE**|Per identificare quali tabelle e colonne nell'origine dati devono essere utilizzati.|
+|**SELECT**|Per identificare quali tabelle e colonne nell'origine dati devono essere utilizzati.|
 |**WHERE**|Per applicare un filtro che consente di limitare la selezione.|
 |**ORDER BY**|Per applicare un ordinamento per il recordset.|
-|**INSERIMENTO**|Per aggiungere nuovi record a un set di record.|
+|**INSERT**|Per aggiungere nuovi record a un set di record.|
 |**DELETE**|Per eliminare i record da un recordset.|
-|**AGGIORNAMENTO**|Per modificare i campi di un record.|
+|**UPDATE**|Per modificare i campi di un record.|
 
 Inoltre, le classi di database riconoscono ODBC **CHIAMARE** istruzioni, che è possibile usare per chiamare una query predefinita (o stored procedure) su alcune origini dati. Il driver di database ODBC interpreta queste istruzioni e sostituisce il comando appropriato per ogni sistema DBMS.
 

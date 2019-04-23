@@ -7,10 +7,10 @@ helpviewer_keywords:
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 ms.openlocfilehash: 6fe4a37cc3665ac2b7886589018339b77babab2d
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59477418"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Errori e avvisi degli strumenti del linker
@@ -123,7 +123,7 @@ COLLEGAMENTO, LIB, DUMPBIN ed EDITBIN generare questi errori e avvisi.
 
 [Errore degli strumenti del linker LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md)
 
-[LNK1318 di errore degli strumenti del linker](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
+[Errore degli strumenti del linker LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
 
 [Errore degli strumenti del linker LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
 
@@ -175,7 +175,7 @@ COLLEGAMENTO, LIB, DUMPBIN ed EDITBIN generare questi errori e avvisi.
 
 [Avviso degli strumenti del linker LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
 
-[Avviso LNK4020 degli strumenti del linker](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
+[Avviso degli strumenti del linker LNK4020](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
 [Avviso degli strumenti del linker LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 
@@ -259,4 +259,4 @@ COLLEGAMENTO, LIB, DUMPBIN ed EDITBIN generare questi errori e avvisi.
 
 [Avviso degli strumenti del linker LNK4254](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md)
 
-[Avviso LNK4286 degli strumenti del linker](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)
+[Avviso degli strumenti del linker LNK4286](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)

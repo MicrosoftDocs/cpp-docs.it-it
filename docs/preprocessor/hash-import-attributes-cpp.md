@@ -5,10 +5,10 @@ helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
 ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036140"
 ---
 # <a name="import-attributes-c"></a>Attributi #import (C++)
@@ -51,4 +51,4 @@ Gli attributi seguenti sono disponibili per il `#import` direttiva.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttiva #import](../preprocessor/hash-import-directive-cpp.md)
+[#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

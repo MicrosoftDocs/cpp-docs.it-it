@@ -4,10 +4,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
 ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037523"
 ---
 # <a name="customize-cmake-build-settings"></a>Personalizzare le impostazioni di compilazione di CMake
@@ -100,16 +100,16 @@ Sono disponibili impostazioni aggiuntive per i progetti CMake per Linux. Vedere 
 
 ## <a name="environment-variables"></a>Variabili di ambiente
 
- `CMakeSettings.json` supporta anche le variabili di ambiente consumer in una qualsiasi delle proprietà menzionate in precedenza. La sintassi da usare è `${env.FOO}` per espandere la variabile dell'ambiente %FOO%.
+ `CMakeSettings.json` supporta anche variabili di ambiente di consumo in tutte le proprietà elencate in precedenza. La sintassi da usare è `${env.FOO}` per espandere la variabile dell'ambiente %FOO%.
 È possibile accedere anche alle macro incorporate all'interno di questo file:
 
-- `${workspaceRoot}` : fornisce il percorso completo della cartella dell'area di lavoro
-- `${workspaceHash}` – hash del percorso dell'area di lavoro. utile per la creazione di un identificatore univoco per l'area di lavoro corrente (ad esempio, per usare i percorsi delle cartelle)
-- `${projectFile}` : il percorso completo del file cmakelists. txt radice
-- `${projectDir}` : il percorso completo della cartella del file cmakelists. txt radice
-- `${thisFile}` : il percorso completo del `CMakeSettings.json` file
-- `${name}` : il nome della configurazione
-- `${generator}` : il nome del generatore CMake usato in questa configurazione
+- `${workspaceRoot}` – indica il percorso completo della cartella dello spazio di lavoro
+- `${workspaceHash}` – hash della posizione dell'area di lavoro; utile per creare un identificatore univoco per l'area di lavoro corrente (ad esempio, da usare nei percorsi delle cartelle)
+- `${projectFile}` – percorso completo del file radice CMakeLists.txt
+- `${projectDir}` – percorso completo della cartella del file radice CMakeLists.txt
+- `${thisFile}` – percorso completo del file `CMakeSettings.json`
+- `${name}` – nome della configurazione
+- `${generator}` – nome del generatore CMake usato in questa configurazione
 
 ## <a name="ninja-command-line-arguments"></a>Argomenti della riga di comando Ninja
 
@@ -137,7 +137,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="inherited-environments"></a>Ambienti ereditati
 
- `CMakeSettings.json` supporta ereditate ambienti. Questa funzionalità consente di (1) ereditare ambienti predefiniti e di (2) creare variabili di ambiente personalizzate che vengono passate a CMake.exe quando è in esecuzione.
+ `CMakeSettings.json` supporta gli ambienti ereditati. Questa funzionalità consente di (1) ereditare ambienti predefiniti e di (2) creare variabili di ambiente personalizzate che vengono passate a CMake.exe quando è in esecuzione.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]

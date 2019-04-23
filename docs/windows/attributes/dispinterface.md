@@ -7,10 +7,10 @@ helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
 ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038460"
 ---
 # <a name="dispinterface"></a>dispinterface
@@ -48,9 +48,9 @@ Per informazioni su come usare [dispinterface](bindable.md) , vedere l'esempio r
 
 |||
 |-|-|
-|**Si applica a**|**interfaccia**|
+|**Si applica a**|**interface**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -58,9 +58,9 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi in base all'utilizzo](attributes-by-usage.md)<br/>
+[Attributi per utilizzo](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
 [dual](dual.md)<br/>
-[personalizzati](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - __readcr4 intrinsic
 ms.assetid: b841a27b-fe0d-4ee9-b76b-f91d3eb061fa
 ms.openlocfilehash: b67016846768be778881c02b395c8d6f3af1ef3f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037224"
 ---
 # <a name="readcr4"></a>__readcr4

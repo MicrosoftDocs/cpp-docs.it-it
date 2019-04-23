@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
 ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038265"
 ---
 # <a name="movsw"></a>__movsw
@@ -33,7 +33,7 @@ void __movsw(
 
 #### <a name="parameters"></a>Parametri
 
-*dest*<br/>
+*Dest*<br/>
 [out] La destinazione dell'operazione.
 
 *Origine*<br/>

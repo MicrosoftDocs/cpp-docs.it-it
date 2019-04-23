@@ -1,5 +1,5 @@
 ---
-title: avviso
+title: warning
 ms.date: 11/04/2016
 f1_keywords:
 - warning_CPP
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
 ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037750"
 ---
 # <a name="warning-pragma"></a>Warning (pragma)
@@ -37,8 +37,8 @@ Sono disponibili i seguenti parametri identificatore-avviso.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Applica il livello specificato agli avvisi specificati. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita.|
 |*default*|Reimposta il comportamento dell'avviso sul valore predefinito. In questo modo viene anche abilitato un avviso specificato disattivato per impostazione predefinita. L'avviso verrà generato nel suo livello predefinito e documentato.<br /><br /> Per altre informazioni, vedere [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*Disable*|Non genera i messaggi di avviso specificati.|
-|*errore*|Segnala gli avvisi specificati come errori.|
+|*disable*|Non genera i messaggi di avviso specificati.|
+|*error*|Segnala gli avvisi specificati come errori.|
 |*once*|Visualizza i messaggi specificati solo una volta.|
 |*suppress*|Inserisce lo stato corrente del pragma nello stack, disabilita l'avviso specificato per la riga successiva, quindi estrae lo stack di avvisi in modo che venga ripristinato lo stato del pragma.|
 

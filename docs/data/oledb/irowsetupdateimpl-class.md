@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
 ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037718"
 ---
 # <a name="irowsetupdateimpl-class"></a>Classe IRowsetUpdateImpl
@@ -118,8 +118,8 @@ L'unità di archiviazione per tutti gli handle di riga utilizzato dal provider.
 |[GetOriginalData](#getoriginaldata)|Ottiene i dati trasmessi a più di recente o ottenuti dall'origine dati, ignorando le modifiche in sospeso.|
 |[GetPendingRows](#getpendingrows)|Restituisce un elenco di righe con modifiche in sospeso.|
 |[GetRowStatus](#getrowstatus)|Restituisce lo stato di righe specificate.|
-|[Annulla](#undo)|Annulla tutte le modifiche alla riga dopo l'ultimo recupero o l'aggiornamento.|
-|[Aggiorna](#update)|Trasmette tutte le modifiche apportate alla riga dopo l'ultimo recupero o l'aggiornamento.|
+|[Operazione di annullamento](#undo)|Annulla tutte le modifiche alla riga dopo l'ultimo recupero o l'aggiornamento.|
+|[Aggiornamento](#update)|Trasmette tutte le modifiche apportate alla riga dopo l'ultimo recupero o l'aggiornamento.|
 
 ### <a name="implementation-methods-callback"></a>Metodi di implementazione (Callback)
 
@@ -334,6 +334,6 @@ Puntatore ai dati da memorizzare nella cache. I dati sono di tipo *archiviazione
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [Creazione di un provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md)

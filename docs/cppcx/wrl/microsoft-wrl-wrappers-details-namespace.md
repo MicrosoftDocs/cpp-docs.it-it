@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Details namespace
 ms.assetid: 6d3f04ac-9b53-4a82-a188-a85309ec34a4
 ms.openlocfilehash: deccd4519b2ddf18725dca5af13b94ac79d6e280
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038722"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Spazio dei nomi Microsoft::WRL::Wrappers::Details
@@ -36,7 +36,7 @@ namespace Microsoft::WRL::Wrappers::Details;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[SyncLockT (classe)](synclockt-class.md)|Rappresenta un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.|
+|[Classe SyncLockT](synclockt-class.md)|Rappresenta un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.|
 |[Classe SyncLockWithStatusT](synclockwithstatust-class.md)|Rappresenta un tipo che può accettare esclusivo o la proprietà di una risorsa condivisa.|
 
 ### <a name="methods"></a>Metodi
@@ -53,4 +53,4 @@ namespace Microsoft::WRL::Wrappers::Details;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Metodo Microsoft::WRL::Wrappers](microsoft-wrl-wrappers-namespace.md)
+[Spazio dei nomi Microsoft::WRL::Wrappers](microsoft-wrl-wrappers-namespace.md)

@@ -22,10 +22,10 @@ helpviewer_keywords:
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
 ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038661"
 ---
 # <a name="resource-editors-c"></a>Editor di risorse (C++)
@@ -40,9 +40,9 @@ Quando si crea o si apre una risorsa, si apre automaticamente l'editor appropria
 |Usare|Per modificare|
 |----------------|----------------|
 |[Editor tasti di scelta rapida](../windows/accelerator-editor.md)|Tabelle dei tasti di scelta rapida in progetti Visual C++.|
-|[Editor binario](binary-editor.md)|Informazioni sui dati binari e risorse personalizzate in progetti Visual C++, Visual Basic o Visual C#.|
+|[Binary Editor](binary-editor.md)|Informazioni sui dati binari e risorse personalizzate in progetti Visual C++, Visual Basic o Visual C#.|
 |[Editor finestre](../windows/dialog-editor.md)|Finestre di dialogo nei progetti di Visual C++.|
-|[Editor di immagini](../windows/image-editor-for-icons.md)|Bitmap, icone, cursori e altri file di immagine in progetti Visual C++, Visual Basic o Visual C#.|
+|[Image Editor](../windows/image-editor-for-icons.md)|Bitmap, icone, cursori e altri file di immagine in progetti Visual C++, Visual Basic o Visual C#.|
 |[Editor dei menu](../windows/menu-editor.md)|Risorse menu in progetti Visual C++.|
 |[Editor barra multifunzione](../mfc/ribbon-designer-mfc.md)|Risorse della barra multifunzione in progetti MFC.|
 |[Editor stringhe](../windows/string-editor.md)|Tabelle di stringhe in progetti Visual C++.|
@@ -128,6 +128,6 @@ nessuno
 
 ## <a name="see-also"></a>Vedere anche
 
-[Utilizzo di file di risorse](../windows/working-with-resource-files.md)<br/>
+[Uso di file di risorse](../windows/working-with-resource-files.md)<br/>
 [File di risorse](../windows/resource-files-visual-studio.md)<br/>
 [Identificatori di risorsa (simboli)](../windows/symbols-resource-identifiers.md)<br/>

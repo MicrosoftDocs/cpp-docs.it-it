@@ -1,5 +1,5 @@
 ---
-title: idl_quote (attributo COM C++)
+title: idl_quote (C++ attributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
 ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037117"
 ---
 # <a name="idlquote"></a>idl_quote
@@ -25,7 +25,7 @@ Consente di usare costrutti IDL che non sono supportati nella versione corrente 
 
 ### <a name="parameters"></a>Parametri
 
-*ASCII*<br/>
+*testo*<br/>
 Il nome dell'attributo che si intende il compilatore Visual C++, passare al file IDL generato senza restituire un errore del compilatore.
 
 ## <a name="remarks"></a>Note
@@ -79,7 +79,7 @@ Questo codice causa `MYFLOT` e `MYDUB` e il *testo* movimento da inserire nel fi
 |-|-|
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).

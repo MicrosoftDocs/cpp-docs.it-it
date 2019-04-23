@@ -7,10 +7,10 @@ helpviewer_keywords:
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
 ms.openlocfilehash: cf11e63354502be000ba5f7259d9e36dfa774060
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038160"
 ---
 # <a name="release-builds"></a>Build di rilascio
@@ -20,10 +20,10 @@ Una build di rilascio utilizza ottimizzazioni. Quando si usano le ottimizzazioni
 ## <a name="in-this-section"></a>Contenuto della sezione
 
 [Problemi comuni durante la creazione di una build di rilascio](common-problems-when-creating-a-release-build.md)<br/>
-[Correzione dei problemi della build di rilascio](fixing-release-build-problems.md)<br/>
-[Utilizzo di VERIFY invece di ASSERT](using-verify-instead-of-assert.md)<br/>
-[Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
-[Procedura: Eseguire il debug di una Build di rilascio](how-to-debug-a-release-build.md)<br/>
+[Correzione dei problemi della build di versione](fixing-release-build-problems.md)<br/>
+[Uso di VERIFY invece di ASSERT](using-verify-instead-of-assert.md)<br/>
+[Uso della compilazione di debug per il controllo della sovrascrittura di memoria](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
+[Procedura: Eseguire il debug di una build di versione](how-to-debug-a-release-build.md)<br/>
 [Controllo delle sovrascritture di memoria](checking-for-memory-overwrites.md)<br/>
 [Ottimizzazione del codice](optimizing-your-code.md)<br/>
 

@@ -34,10 +34,10 @@ helpviewer_keywords:
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041124"
 ---
 # <a name="accelerator-editor-c"></a>Accelerator Editor (C++)
@@ -71,10 +71,10 @@ Di seguito sono le voci legali per la **modificatore** proprietà nella tabella 
 
    |Value|Descrizione|
    |-----------|-----------------|
-   |**nessuno**|Utente preme solo il **chiave** valore.<br/><br/>Questo valore viene utilizzato in modo più efficace con i valori ASCII/ANSI 001 tramite 026, che viene interpretato come ^ dalla alla ^ Z (**Ctrl + B** attraverso **Ctrl + Z**).|
+   |**None**|Utente preme solo il **chiave** valore.<br/><br/>Questo valore viene utilizzato in modo più efficace con i valori ASCII/ANSI 001 tramite 026, che viene interpretato come ^ dalla alla ^ Z (**Ctrl + B** attraverso **Ctrl + Z**).|
    |**ALT**|L'utente deve premere **Alt** prima di **chiave** valore.|
    |**CTRL**|L'utente deve premere **Ctrl** prima di **chiave** valore, non valida con tipo ASCII.|
-   |**Shift**|L'utente deve premere **Shift** prima di **chiave** valore.|
+   |**MAIUSC**|L'utente deve premere **Shift** prima di **chiave** valore.|
    |**Ctrl + Alt**|L'utente deve premere **Ctrl** e **Alt** prima il **chiave** valore, non valida con tipo ASCII.|
    |**CTRL + MAIUSC**|L'utente deve premere **Ctrl** e **MAIUSC** prima il **chiave** valore, non valida con tipo ASCII.|
    |**ALT + MAIUSC**|L'utente deve premere **Alt** e **MAIUSC** prima il **chiave** valore, non valida con tipo ASCII.|
@@ -192,5 +192,5 @@ Win32
 
 ## <a name="see-also"></a>Vedere anche
 
-[editor di risorse](../windows/resource-editors.md)<br/>
+[Editor di risorse](../windows/resource-editors.md)<br/>
 [Tasti di scelta rapida](../windows/predefined-accelerator-keys.md)<br/>

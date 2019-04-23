@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3912
 ms.assetid: 674e050c-11fb-4db1-8bdf-a3e95b41161d
 ms.openlocfilehash: bd66196c35715304577b8f6785261be8bdcdafec
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58773398"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775856"
 ---
 # <a name="compiler-error-c3912"></a>Errore del compilatore C3912
 

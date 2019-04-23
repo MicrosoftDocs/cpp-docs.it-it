@@ -7,10 +7,10 @@ helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
 ms.openlocfilehash: f0dd9101966f22253e6c4098c3c64d22d0a0cba6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041364"
 ---
 # <a name="defaultbind"></a>defaultbind
@@ -39,7 +39,7 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usar
 |-|-|
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|nessuno|
+|**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|nessuno|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
@@ -47,8 +47,8 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 ## <a name="see-also"></a>Vedere anche
 
 [Attributi IDL](idl-attributes.md)<br/>
-[Attributi del metodo](method-attributes.md)<br/>
-[Attributi del membro dati](data-member-attributes.md)<br/>
+[Attributi di metodo](method-attributes.md)<br/>
+[Attributi di membro dati](data-member-attributes.md)<br/>
 [displaybind](displaybind.md)<br/>
 [immediatebind](immediatebind.md)<br/>
 [requestedit](requestedit.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
 ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035598"
 ---
 # <a name="create-a-c-makefile-project"></a>Creare un progetto makefile di C++
@@ -86,7 +86,7 @@ Alla successiva apertura del progetto makefile nell'ambiente di sviluppo di Visu
 
 ## <a name="see-also"></a>Vedere anche
 
-[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[Utilizzo di IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [Riferimenti a NMAKE](nmake-reference.md)<br>
 [Procedura: Creare un progetto C++ da codice esistente](../how-to-create-a-cpp-project-from-existing-code.md)
 [caratteri speciali in un Makefile](special-characters-in-a-makefile.md)<br/>

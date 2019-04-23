@@ -9,10 +9,10 @@ helpviewer_keywords:
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
 ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035809"
 ---
 # <a name="ltcodegt"></a>&lt;codice&gt;
@@ -27,7 +27,7 @@ Il tag \<code> rappresenta un modo per indicare una o più righe come codice.
 
 #### <a name="parameters"></a>Parametri
 
-*contenuto*<br/>
+*content*<br/>
 Testo da contrassegnare come codice.
 
 ## <a name="remarks"></a>Note
