@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
 ms.openlocfilehash: d0913d09c51734f5255271c0d06e639810e0cb58
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59025416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148419"
 ---
 # <a name="class-attributes"></a>Attributi di classe
 

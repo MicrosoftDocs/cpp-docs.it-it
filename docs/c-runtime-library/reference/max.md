@@ -24,11 +24,11 @@ helpviewer_keywords:
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
 ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156866"
 ---
 # <a name="max"></a>__max
 
@@ -42,7 +42,7 @@ Una macro del preprocessore che restituisce il più elevato tra due valori.
 
 ### <a name="parameters"></a>Parametri
 
-*una*, *b*<br/>
+*a*, *b*<br/>
 Valori di qualsiasi tipo numerico da confrontare.
 
 ## <a name="return-value"></a>Valore restituito

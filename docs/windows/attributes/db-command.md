@@ -1,5 +1,5 @@
 ---
-title: db_command (attributo COM C++)
+title: db_command (C++ attributo COM)
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148198"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -122,7 +122,7 @@ Quando il provider di attributi del consumer applica questo attributo a una clas
 
 Questo esempio definisce un comando che consente di selezionare i nomi e i cognomi da una tabella in cui la colonna di stato corrisponde a "CA". **db_command** crea e legge un set di righe in cui è possibile chiamare funzioni generate dalla procedura guidata, ad esempio [OpenAll e CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), nonché funzioni membro `CRowset` come [MoveNext](../../data/oledb/crowset-movenext.md).
 
-Si noti che per questo codice è necessario specificare la propria stringa di connessione al database pubs. Per informazioni su come eseguire questa operazione nell'ambiente di sviluppo, vedere [Procedura: Connettersi a un database e visualizzare gli oggetti esistenti](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) e [Aggiungere nuove connessioni](/visualstudio/data-tools/add-new-connections).
+Si noti che per questo codice è necessario specificare la propria stringa di connessione al database pubs. Per informazioni su come eseguire questa operazione nell'ambiente di sviluppo, vedere [come: Connettersi a un Database e visualizzazione degli oggetti esistenti](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) e [aggiungere nuove connessioni](/visualstudio/data-tools/add-new-connections).
 
 ```cpp
 // db_command.h

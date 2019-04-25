@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
 ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156850"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -123,7 +123,7 @@ In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli 
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tccpy_s**|Esegue il mapping a una macro o a una funzione inline.|**_mbccpy_s**|Esegue il mapping a una macro o a una funzione inline.|
+|**_tccpy_s**|Esegue il mapping a una macro o a una funzione inline.|**_mbccpy_s**|Esegue il mapping a una macro o a una funzione inline.|
 
 ## <a name="requirements"></a>Requisiti
 

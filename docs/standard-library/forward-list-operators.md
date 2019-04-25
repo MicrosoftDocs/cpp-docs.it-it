@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 4126b81f61bd37a7a12e0621c323ec832c5b2ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159431"
 ---
 # <a name="ltforwardlistgt-operators"></a>Operatori &lt;forward_list&gt;
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2798
 ms.assetid: fb0cd861-b228-4f81-8090-e28344a727e0
 ms.openlocfilehash: f3e8f0ac260e49866d1c654f89d34bf57a8ffbc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152475"
 ---
 # <a name="compiler-error-c2798"></a>Errore del compilatore C2798
 

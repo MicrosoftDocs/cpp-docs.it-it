@@ -12,11 +12,11 @@ f1_keywords:
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
 ms.openlocfilehash: d5a4b0e2d671bb787501767d4321bd3ed61deb88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159537"
 ---
 # <a name="ltfstreamgt-typedefs"></a>Typedef &lt;fstream&gt;
 

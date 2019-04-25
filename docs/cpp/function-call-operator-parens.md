@@ -11,11 +11,11 @@ helpviewer_keywords:
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154152"
 ---
 # <a name="function-call-operator-"></a>Operatore di chiamata di funzione: ()
 
@@ -97,7 +97,7 @@ Welcome to C++
 
 ## <a name="function-call-results"></a>Risultati della chiamata di funzione
 
-Una chiamata di funzione restituisce un r-value, a meno che la funzione non sia dichiarata come tipo di riferimento. Le funzioni con tipo restituito di riferimento restituiscono l-value e possono essere usate a sinistra di un'istruzione di assegnazione, come indicato di seguito:
+Una chiamata di funzione restituisce un r-value, a meno che la funzione non sia dichiarata come tipo di riferimento. Le funzioni con tipo restituito di riferimento restituiscono l-value e possono essere utilizzate a sinistra di un'istruzione di assegnazione, come indicato di seguito:
 
 ```cpp
 // expre_Function_Call_Results.cpp
@@ -131,7 +131,7 @@ int main()
 
 Il codice precedente definisce una classe denominata `Point`, che contiene i dati privati, gli oggetti che rappresentano *x* e *y* coordinate. È necessario modificare tali oggetti e recuperare i relativi valori. Questo programma rappresenta una delle diverse progettazioni possibili per tale classe. Un'altra progettazione valida consiste nell'utilizzo delle funzioni `GetX` e `SetX` o `GetY` e `SetY`.
 
-Le funzioni che restituiscono tipi di classe, i puntatori ai tipi di classe o i riferimenti ai tipi di classe possono essere usati come operando a sinistra degli operatori di selezione dei membri. Pertanto, il codice seguente è valido:
+Le funzioni che restituiscono tipi di classe, i puntatori ai tipi di classe o i riferimenti ai tipi di classe possono essere utilizzati come operando a sinistra degli operatori di selezione dei membri. Pertanto, il codice seguente è valido:
 
 ```cpp
 // expre_Function_Results2.cpp

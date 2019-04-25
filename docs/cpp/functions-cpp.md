@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154130"
 ---
 # <a name="functions-c"></a>Funzioni (C++)
 
@@ -190,13 +190,13 @@ Per impostazione predefinita, gli argomenti vengono passati alla funzione per va
 void DoSomething(std::string& input){...}
 ```
 
-Quando una funzione modifica un argomento passato per riferimento, modifica l'oggetto originale, non una copia locale. Per impedire a una funzione di modificare tale argomento, qualificare il parametro come const&:
+Quando una funzione modifica un argomento passato per riferimento, modifica l'oggetto originale, non una copia locale. Per impedire che una funzione di modificare tale argomento, qualificare il parametro come const &:
 
 ```cpp
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11:** per gestire in modo esplicito gli argomenti che vengono passati per riferimento rvalue o lvalue-reference, usare una e commerciale doppia sul parametro per indicare un riferimento universale:
+**C++ 11:**  Per gestire in modo esplicito gli argomenti che vengono passati per riferimento rvalue o lvalue-reference, usare una e commerciale doppia sul parametro per indicare un riferimento universale:
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -257,9 +257,9 @@ Quando **automatica** viene usato in combinazione con un tipo restituito finale,
 
 ## <a name="function-local-variables"></a>Variabili locali delle funzioni
 
-Una variabile dichiarata all'interno di un corpo della funzione è definita un' *variabile locale* o semplicemente *locale*. Le locali non statiche sono visibili solo all'interno del corpo della funzione e, se sono dichiarate nello stack, escono dall'ambito al termine della funzione. Quando si crea una variabile locale e la si restituisce per valore, il compilatore può in genere eseguire l'ottimizzazione del valore restituito per evitare operazioni di copia non necessarie. Se si restituisce una variabile locale per riferimento, il compilatore emetterà un avviso, poiché qualsiasi tentativo da parte del chiamante di usare tale riferimento si verificherà dopo l'eliminazione definitiva della locale.
+Una variabile dichiarata all'interno di un corpo della funzione è definita un' *variabile locale* o semplicemente *locale*. Le locali non statiche sono visibili solo all'interno del corpo della funzione e, se sono dichiarate nello stack, escono dall'ambito al termine della funzione. Quando si crea una variabile locale e la si restituisce per valore, il compilatore può in genere eseguire l'ottimizzazione del valore restituito per evitare operazioni di copia non necessarie. Se si restituisce una variabile locale per riferimento, il compilatore emetterà un avviso, poiché qualsiasi tentativo da parte del chiamante di usare tale riferimento si verificherà dopo l'eliminazione della locale.
 
-In C++ una variabile locale può essere dichiarata come statica. La variabile è visibile solo all'interno del corpo della funzione, ma esiste una singola copia della variabile per tutte le istanze della funzione. Gli oggetti statici locali vengono eliminati definitivamente durante la chiusura specificata da `atexit`. Se un oggetto statico non è stato costruito perché il flusso di controllo del programma ne ha ignorato la dichiarazione, non viene eseguito alcun tentativo di eliminare definitivamente tale oggetto.
+In C++ una variabile locale può essere dichiarata come statica. La variabile è visibile solo all'interno del corpo della funzione, ma esiste una singola copia della variabile per tutte le istanze della funzione. Gli oggetti statici locali vengono eliminati definitivamente durante la chiusura specificata da `atexit`. Se un oggetto statico non è stato costruito perché il flusso di controllo del programma ne ha ignorato la dichiarazione, non viene eseguito alcun tentativo di eliminare tale oggetto.
 
 ##  <a name="type_deduction"></a> Deduzione dei tipi nei tipi restituiti (c++14)
 
@@ -363,7 +363,7 @@ Esistono vari modi per restituire più valori da una funzione:
     }
     ```
 
-1. **Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): usare binding strutturati. Il vantaggio di binding strutturati è che le variabili che archiviano i valori restituiti vengono inizializzate nello stesso momento che vengono dichiarati, che in alcuni casi può essere molto più efficiente. Nella presente informativa,`auto[x, y, z] = f();`: le parentesi quadre introdurre e inizializzare i nomi che rientrano nell'ambito per il blocco dell'intera funzione.
+1. **Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Usare le associazioni strutturate. Il vantaggio di binding strutturati è che le variabili che archiviano i valori restituiti vengono inizializzate nello stesso momento che vengono dichiarati, che in alcuni casi può essere molto più efficiente. Nella presente informativa,`auto[x, y, z] = f();`: le parentesi quadre introdurre e inizializzare i nomi che rientrano nell'ambito per il blocco dell'intera funzione.
 
     ```cpp
     #include <tuple>

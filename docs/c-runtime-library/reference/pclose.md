@@ -25,11 +25,11 @@ helpviewer_keywords:
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
 ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156009"
 ---
 # <a name="pclose"></a>_pclose
 
@@ -48,7 +48,7 @@ FILE *stream
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Valore restituito dalla chiamata precedente a **popen**.
 
 ## <a name="return-value"></a>Valore restituito

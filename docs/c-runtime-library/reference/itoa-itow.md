@@ -100,11 +100,11 @@ helpviewer_keywords:
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157370"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -199,7 +199,7 @@ Per usare queste funzioni senza l'avviso di deprecazione, definire le **CRT_SECU
 
 In C++, queste funzioni presentano overload di modello che richiamano le relative controparti più sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-I nomi Posix **itoa**, **ltoa**, e **ultoa** esiste come alias per il **itoa**, **ltoa**, e **ultoa** funzioni. I nomi Posix sono deprecati perché non seguono le convenzioni di nome funzione specifici dell'implementazione di ISO C. Per impostazione predefinita, queste funzioni che l'avviso di deprecazione [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Il nome POSIX per questo elemento è deprecato. Usare invece il nome conforme ISO C e C++:** *new_name*. Si consiglia di modificare il codice sorgente per le versioni più sicure di queste funzioni, usare **itoa_s**, **ltoa_s**, o **ultoa_s**. Per altre informazioni, vedere [itoa_s, itow_s funzioni](itoa-s-itow-s.md).
+I nomi Posix **itoa**, **ltoa**, e **ultoa** esiste come alias per il **itoa**, **ltoa**, e **ultoa** funzioni. I nomi Posix sono deprecati perché non seguono le convenzioni di nome funzione specifici dell'implementazione di ISO C. Per impostazione predefinita, queste funzioni che l'avviso di deprecazione [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Il nome POSIX per questo elemento è deprecato. Usare invece il ISO C e C++ nome conforme:** *new_name*. Si consiglia di modificare il codice sorgente per le versioni più sicure di queste funzioni, usare **itoa_s**, **ltoa_s**, o **ultoa_s**. Per altre informazioni, vedere [itoa_s, itow_s funzioni](itoa-s-itow-s.md).
 
 Per la portabilità del codice sorgente, è preferibile mantenere i nomi Posix nel codice. Per usare queste funzioni senza l'avviso di deprecazione, definire entrambi i **crt_nonstdc_no_warnings** e **CRT_SECURE_NO_WARNINGS** le macro del preprocessore prima di includere le intestazioni CRT. È possibile farlo nella riga di comando in un prompt dei comandi per gli sviluppatori aggiungendo il **/D_CRT_SECURE_NO_WARNINGS** e **/D_CRT_NONSTDC_NO_WARNINGS** le opzioni del compilatore per il **cl**comando. In caso contrario, definire la macro nei file di origine. Se si usano intestazioni precompilate, definire la macro nella parte superiore dell'intestazione precompilata includono file, in genere stdafx. h. Per definire le macro nel codice sorgente, usare **#define** direttive prima di includere qualsiasi intestazione CRT, come nel seguente esempio:
 

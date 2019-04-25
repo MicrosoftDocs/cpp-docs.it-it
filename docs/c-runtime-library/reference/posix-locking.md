@@ -21,11 +21,11 @@ helpviewer_keywords:
 - locking function
 ms.assetid: 1db15308-543e-44cf-a26f-5539f8e4fb2f
 ms.openlocfilehash: 58d63a4e5a4ec598c863deb2fd53f85becb98be7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155654"
 ---
 # <a name="locking"></a>blocco
 
