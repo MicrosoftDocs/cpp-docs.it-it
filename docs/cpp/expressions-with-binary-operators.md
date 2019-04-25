@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154308"
 ---
 # <a name="expressions-with-binary-operators"></a>Espressioni con operatori binari
 
@@ -33,9 +33,9 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
 - [Operatori shift](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - Spostamento verso destra (>>)
+   - Spostamento a destra (>>)
 
-   - Spostamento verso sinistra (<<)
+   - Spostamento a sinistra (<<)
 
 - [Operatori relazionali e di uguaglianza](../cpp/relational-operators-equal-and-equal.md)
 
@@ -45,7 +45,7 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
    - Minore o uguale a (\<=)
 
-   - Maggiore o uguale a (>=)
+   - Maggiore o uguale a (> =)
 
    - Uguale a (==)
 
@@ -61,9 +61,9 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
 - Operatori logici
 
-   - [Operatore logico AND (& &)](../cpp/logical-and-operator-amp-amp.md)
+   - [Logical AND (&&)](../cpp/logical-and-operator-amp-amp.md)
 
-   - [OR logico (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+   - [Logical OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
 
 - [Operatori di assegnazione](../cpp/assignment-operators.md)
 
@@ -81,9 +81,9 @@ Gli operatori binari agiscono su due operandi in un'espressione. Gli operatori b
 
    - Assegnazione di spostamento a sinistra (<\<=)
 
-   - Assegnazione di spostamento verso destra (>>=)
+   - Assegnazione di spostamento a destra (>> =)
 
-   - Assegnazione dell'operatore AND bit per bit (&=)
+   - Assegnazione AND bit per bit (& =)
 
    - Assegnazione dell'operatore OR esclusivo bit per bit (^=)
 

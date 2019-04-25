@@ -8,11 +8,11 @@ helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
 ms.openlocfilehash: 6fd4e25b3ca7b56e2221cb99b64f7c8e109bf452
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159554"
 ---
 # <a name="ltfunctionalgt-operators"></a>Operatori &lt;functional&gt;
 
@@ -40,7 +40,7 @@ Tipo di funzione di cui eseguire il wrapping.
 *f*<br/>
 Oggetto function.
 
-*NPC*<br/>
+*npc*<br/>
 Puntatore Null.
 
 ### <a name="remarks"></a>Note
@@ -99,7 +99,7 @@ Tipo di funzione di cui eseguire il wrapping.
 *f*<br/>
 Oggetto function.
 
-*NPC*<br/>
+*npc*<br/>
 Puntatore Null.
 
 ### <a name="remarks"></a>Note

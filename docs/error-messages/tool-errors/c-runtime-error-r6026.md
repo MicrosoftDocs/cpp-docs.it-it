@@ -1,5 +1,5 @@
 ---
-title: R6026 di errore di Runtime C
+title: Errore di runtime di C R6026
 ms.date: 11/04/2016
 f1_keywords:
 - R6026
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6026
 ms.assetid: 7ea751f8-fc20-46ab-99ef-84c95ca0b6b4
 ms.openlocfilehash: 28e541b61b6381cd283578a0ce1909e5b39a4a53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151916"
 ---
-# <a name="c-runtime-error-r6026"></a>R6026 di errore di Runtime C
+# <a name="c-runtime-error-r6026"></a>Errore di runtime di C R6026
 
 spazio insufficiente per l'inizializzazione stdio
 

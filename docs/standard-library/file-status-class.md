@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
 ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160017"
 ---
 # <a name="filestatus-class"></a>Classe file_status
 
@@ -54,7 +54,7 @@ class file_status;
 
 **Namespace:** std::experimental::filesystem, std::experimental::filesystem
 
-## <a name="file_status"></a> file_status:: file_status
+## <a name="file_status"></a> file_status::file_status
 
 Costruisce un wrapper per [file_type](../standard-library/filesystem-enumerations.md#file_type) e il file [perms](../standard-library/filesystem-enumerations.md#perms).
 
@@ -75,13 +75,13 @@ file_status(file_status&&) noexcept = default;
 *ftype*<br/>
 Specificato `file_type`, per impostazione predefinita `file_type::none`.
 
-*Maschera*<br/>
+*mask*<br/>
 File specificato `perms`, per impostazione predefinita `perms::unknown`.
 
 *file_status*<br/>
 L'oggetto archiviato.
 
-## <a name="op_as"></a> file_status::operator =
+## <a name="op_as"></a> file_status::operator=
 
 Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.
 
@@ -122,7 +122,7 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>Parametri
 
-*Maschera*<br/>
+*mask*<br/>
 `perms`specificato.
 
 ## <a name="see-also"></a>Vedere anche

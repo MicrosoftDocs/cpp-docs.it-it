@@ -7,11 +7,11 @@ helpviewer_keywords:
 - const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
 ms.openlocfilehash: 759ee503acb12f6c1a30fbbfaf87a8f66433e571
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154750"
 ---
 # <a name="const-c"></a>const (C++)
 
@@ -77,7 +77,7 @@ int main() {
 }
 ```
 
-È possibile usare i puntatori ai dati costanti come parametri di funzione per impedire alla funzione di modificare un parametro passato tramite un puntatore.
+È possibile utilizzare i puntatori ai dati costanti come parametri di funzione per impedire alla funzione di modificare un parametro passato tramite un puntatore.
 
 Per gli oggetti che vengono dichiarati come **const**, è possibile chiamare solo membro costante funzioni. In questo modo si garantisce che l'oggetto costante non sia mai modificato.
 

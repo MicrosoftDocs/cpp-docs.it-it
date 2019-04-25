@@ -31,11 +31,11 @@ helpviewer_keywords:
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
 ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156136"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -65,13 +65,13 @@ La grandezza al quadrato del *z*.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **norm** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float** o **long double** valori. In un programma C **norm** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **norm** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float**oppure **long double** valori. In un programma C **norm** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**NORM**, **normf**, **norml**|\<complex.h>|\<complex.h>|
+|**norm**, **normf**, **norml**|\<complex.h>|\<complex.h>|
 
 Il **fcomplex**, **_Dcomplex**, e **_Lcomplex** tipi sono equivalenti Microsoft specifici dei tipi nativi non implementati C99 **float Complex** , **double Complex**, e **long double Complex**, rispettivamente.  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - _com_error class [C++], operators
 ms.assetid: 0c4a1532-59b7-41ea-8aeb-1c486898db4d
 ms.openlocfilehash: 76f4f16c13e0bf4cdf9b36614edc6b84bc0284a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154916"
 ---
 # <a name="comerror-operators"></a>Operatori _com_error
 

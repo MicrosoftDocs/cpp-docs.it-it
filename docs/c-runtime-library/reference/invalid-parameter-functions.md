@@ -20,11 +20,11 @@ f1_keywords:
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
 ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157539"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -58,10 +58,10 @@ _invoke_watson(
 
 ## <a name="parameters"></a>Parametri
 
-*Espressione*<br/>
+*expression*<br/>
 Stringa che rappresenta l'espressione del parametro del codice sorgente che non è valido.
 
-*nome_funzione*<br/>
+*function_name*<br/>
 Nome della funzione che ha chiamato il gestore.
 
 *file_name*<br/>
@@ -91,7 +91,7 @@ Quando il gestore predefinito **_invoke_watson** viene chiamato, se il processor
 
 |Funzione|Intestazione obbligatoria|
 |--------------|------------------|
-|**INVALID_PARAMETER**, **invalid_parameter_noinfo**, **invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
+|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

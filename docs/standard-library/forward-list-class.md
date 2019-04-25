@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159782"
 ---
 # <a name="forwardlist-class"></a>Classe forward_list
 
@@ -217,9 +217,9 @@ void assign(InputIterator First, InputIterator Last);
 |*first*|Inizio dell'intervallo di sostituzione.|
 |*last*|Fine dell'intervallo di sostituzione.|
 |*count*|Numero di elementi da assegnare.|
-|*Val*|Valore da assegnare a ogni elemento.|
+|*val*|Valore da assegnare a ogni elemento.|
 |*Type*|Tipo di valore.|
-|* IList'|Initializer_list da copiare.|
+|* IList'| Oggetto initializer_list da copiare.|
 
 ### <a name="remarks"></a>Note
 
@@ -397,7 +397,7 @@ iterator emplace_after(const_iterator Where, Type&& val);
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*Where*|Posizione all'interno dell'elenco di inoltro di destinazione in cui viene costruito il nuovo elemento.|
-|*Val*|Argomento costruttore.|
+|*val*|Argomento costruttore.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -420,7 +420,7 @@ void emplace_front(Type&& val);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Val*|Elemento aggiunto all'inizio dell'elenco di inoltro.|
+|*val*|Elemento aggiunto all'inizio dell'elenco di inoltro.|
 
 ### <a name="remarks"></a>Note
 
@@ -719,7 +719,7 @@ void push_front(Type&& val);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Val*|Elemento aggiunto all'inizio dell'elenco di inoltro.|
+|*val*|Elemento aggiunto all'inizio dell'elenco di inoltro.|
 
 ### <a name="remarks"></a>Note
 
@@ -747,7 +747,7 @@ void remove(const Type& val);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Val*|Valore che, se contenuto da un elemento, comporterà la rimozione dell'elemento dall'elenco.|
+|*val*|Valore che, se contenuto da un elemento, comporterà la rimozione dell'elemento dall'elenco.|
 
 ### <a name="remarks"></a>Note
 
@@ -768,7 +768,7 @@ void remove_if(Predicate pred);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Pred*|Predicato unario che, se soddisfatto da un elemento, comporta l'eliminazione di tale elemento dall'elenco.|
+|*pred*|Predicato unario che, se soddisfatto da un elemento, comporta l'eliminazione di tale elemento dall'elenco.|
 
 ### <a name="remarks"></a>Note
 
@@ -790,7 +790,7 @@ void resize(size_type _Newsize, const Type& val);
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*_Newsize*|Numero di elementi nell'elenco di inoltro ridimensionato.|
-|*Val*|Valore da usare per la spaziatura interna.|
+|*val*|Valore da usare per la spaziatura interna.|
 
 ### <a name="remarks"></a>Note
 
@@ -832,7 +832,7 @@ void sort(Predicate pred);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Pred*|Predicato di ordinamento.|
+|*pred*|Predicato di ordinamento.|
 
 ### <a name="remarks"></a>Note
 

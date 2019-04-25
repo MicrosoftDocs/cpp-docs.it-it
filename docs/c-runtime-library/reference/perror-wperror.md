@@ -31,11 +31,11 @@ helpviewer_keywords:
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
 ms.openlocfilehash: c9026a96ecc74640eb2bcd7004d5d1e0fc287e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156103"
 ---
 # <a name="perror-wperror"></a>perror, _wperror
 
@@ -65,7 +65,7 @@ Il **perror** funzione viene stampato un messaggio di errore **stderr**. **wperr
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tperror**|**perror**|**perror**|**_wperror**|
+|**_tperror**|**perror**|**perror**|**_wperror**|
 
 *messaggio* viene prima stampato, seguito da due punti, quindi dal messaggio di errore di sistema per l'ultima chiamata di libreria che ha generato l'errore e infine da un carattere di nuova riga. Se *messaggi* è un puntatore null o un puntatore a una stringa, null **perror** viene stampato solo il messaggio di errore di sistema.
 

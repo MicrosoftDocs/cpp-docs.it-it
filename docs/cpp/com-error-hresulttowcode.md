@@ -7,11 +7,11 @@ helpviewer_keywords:
 - HRESULTToWCode method [C++]
 ms.assetid: ff3789f5-1047-41a0-b7e3-86dd8f638dba
 ms.openlocfilehash: d89503e822d92bf6a1fcb2b6bb658d532af32c5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155046"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
 
@@ -29,7 +29,7 @@ static WORD HRESULTToWCode(
 
 #### <a name="parameters"></a>Parametri
 
-*risorse umane*<br/>
+*hr*<br/>
 Il valore HRESULT a 32 bit per eseguire il mapping a 16 bit `wCode`.
 
 ## <a name="return-value"></a>Valore restituito

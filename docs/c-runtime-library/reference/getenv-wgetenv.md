@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _wgetenv function
 ms.assetid: 3b9cb9ab-a126-4e0e-a44f-6c5a7134daf4
 ms.openlocfilehash: 79c685fef8d6a4b966c53bb7d94b423d16971976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157669"
 ---
 # <a name="getenv-wgetenv"></a>getenv, _wgetenv
 
@@ -88,7 +88,7 @@ Quando due copie dell'ambiente (MBCS e Unicode) sono presenti contemporaneamente
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tgetenv**|**getenv**|**getenv**|**_wgetenv**|
+|**_tgetenv**|**getenv**|**getenv**|**_wgetenv**|
 
 Per controllare o modificare il valore della **TZ** Usa variabile di ambiente **getenv**, **putenv** e **tzset** in base alle esigenze. Per altre informazioni sulle **TZ**, vedere [tzset](tzset.md) e [Daylight, timezone e tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 

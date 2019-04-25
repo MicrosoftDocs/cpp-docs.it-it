@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::future [C++], wait_for
 - std::future [C++], wait_until
 ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159327"
 ---
 # <a name="future-class"></a>Classe future
 
@@ -55,7 +55,7 @@ Ogni *provider asincrono* standard restituisce un oggetto il cui tipo è una cre
 |Nome|Descrizione|
 |----------|-----------------|
 |[get](#get)|Recupera il risultato archiviato nello stato asincrono associato.|
-|[Condividi](#share)|Converte l'oggetto in `shared_future`.|
+|[share](#share)|Converte l'oggetto in `shared_future`.|
 |[valid](#valid)|Specifica se l'oggetto non è vuoto.|
 |[wait](#wait)|Blocca il thread corrente finché lo stato asincrono associato non è ready.|
 |[wait_for](#wait_for)|Blocca finché lo stato asincrono associato non è ready o finché non trascorre il periodo di tempo specificato.|

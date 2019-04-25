@@ -9,11 +9,11 @@ helpviewer_keywords:
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
 ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154481"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -51,7 +51,7 @@ friend class F;
 friend F;
 ```
 
-Il primo modulo introduce una nuova classe F se delle classi esistenti con lo stesso nome è stata trovata nello spazio dei nomi di colonne più interno. **C++11**: il secondo form non introduce una nuova classe; può essere utilizzato quando la classe è già stata dichiarata e deve essere usato quando si dichiara un parametro di tipo di modello o un typedef come friend.
+Il primo modulo introduce una nuova classe F se delle classi esistenti con lo stesso nome è stata trovata nello spazio dei nomi di colonne più interno. **C++11**: Il secondo form non introduce una nuova classe. può essere utilizzato quando la classe è già stata dichiarata e deve essere usato quando si dichiara un parametro di tipo di modello o un typedef come friend.
 
 Usare `class friend F` quando il tipo di riferimento non è ancora stato dichiarato:
 

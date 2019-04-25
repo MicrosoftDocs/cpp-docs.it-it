@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148319"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributi di C++ per COM e .NET
 
@@ -60,7 +60,7 @@ La figura seguente illustra la relazione tra il compilatore e il provider di att
 > [!NOTE]
 > Utilizzo dell'attributo non modifica il contenuto del file di origine. L'unica volta che il codice generato dall'attributo è visibile sia durante le sessioni di debug. Inoltre, per ogni file di origine nel progetto, è possibile generare un file di testo che visualizza i risultati della sostituzione attributo. Per altre informazioni su questa procedura, vedere [/Fx (Merge del codice)](../../build/reference/fx-merge-injected-code.md) e [debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).
 
-Ad esempio la maggior parte dei costrutti C++, gli attributi hanno un set di caratteristiche che definisce il corretto utilizzo. Ciò viene definito il contesto dell'attributo e verrà risolto in una tabella di contesto per ogni argomento di riferimento di attributo. Ad esempio, il [coclasse](coclass.md) attributo può essere applicato solo a una classe esistente o una struttura, anziché il [cpp_quote](cpp-quote.md) attributo, che può essere inserito in un punto qualsiasi all'interno di un file di origine C++.
+Ad esempio la maggior parte dei costrutti C++, gli attributi hanno un set di caratteristiche che definisce il corretto utilizzo. Ciò viene definito il contesto dell'attributo e verrà risolto in una tabella di contesto per ogni argomento di riferimento di attributo. Ad esempio, il [coclasse](coclass.md) attributo può essere applicato solo a una classe esistente o una struttura, in contrapposizione al [cpp_quote](cpp-quote.md) attributo, che può essere inserito in un punto qualsiasi all'interno di un C++ file di origine.
 
 ## <a name="building-an-attributed-program"></a>Compilazione di un programma con attributi
 

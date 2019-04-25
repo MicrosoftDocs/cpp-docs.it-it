@@ -21,11 +21,11 @@ helpviewer_keywords:
 - memicmp function
 ms.assetid: 45362e9c-7c64-41e9-92bb-7d4999a8635b
 ms.openlocfilehash: da192929f0005aa293c16881b4d21f3d334f6d68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156577"
 ---
 # <a name="memicmp"></a>memicmp
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - extended combo boxes [MFC], creating
 ms.assetid: a964267e-97b6-4e77-9f89-55bb5c68913f
 ms.openlocfilehash: bfc201fbb10c3caa3eaabd0e81206b9493ff7196
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153281"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>Creazione di un controllo casella combinata estesa
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
 ms.openlocfilehash: d60084c0d07d3eeb3f49a1fea53de04d150a701b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152722"
 ---
 # <a name="using-exit-or-return"></a>Utilizzo di exit o return
 
@@ -58,7 +58,7 @@ int main() {
 
 Nell'esempio precedente, gli oggetti statici `sd1` e `sd2` vengono creati e inizializzati prima della voce a `main`. Dopo che il programma termina mediante il **restituire** istruzione, first `sd2` viene eliminato definitivamente e quindi `sd1`. Il distruttore della classe `ShowData` chiude i file associati a questi oggetti statici.
 
-Un altro modo per scrivere il codice consiste nel dichiarare gli oggetti `ShowData` con ambito del blocco, consentendogli di essere eliminati quando escono dall'ambito:
+Un altro modo per scrivere il codice consiste nel dichiarare gli oggetti `ShowData` con ambito blocco, consentendogli di essere eliminati definitivamente quando escono dall'ambito:
 
 ```cpp
 int main() {

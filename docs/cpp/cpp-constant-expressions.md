@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
 ms.openlocfilehash: 97059066adadc3a7897cbd2c4c747e2a673e7201
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154672"
 ---
 # <a name="c-constant-expressions"></a>Espressioni costanti C++
 
@@ -46,7 +46,7 @@ char chArray[(int)Size];
 
 Le conversioni esplicite in tipi integrali sono valide nelle espressioni costanti; tutti gli altri tipi e i tipi derivati non sono validi tranne quando usati come operandi per il **sizeof** operatore.
 
-L'operatore virgola e gli operatori di assegnazione non possono essere usati nelle espressioni costanti.
+L'operatore virgola e gli operatori di assegnazione non possono essere utilizzati nelle espressioni costanti.
 
 ## <a name="see-also"></a>Vedere anche
 

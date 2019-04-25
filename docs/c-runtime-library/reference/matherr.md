@@ -23,11 +23,11 @@ helpviewer_keywords:
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
 ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156915"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,12 +73,12 @@ Il **tipo** membro specifica il tipo di errore matematico. È uno dei valori seg
 
 |Macro|Significato|
 |-|-|
-| **DOMINIO** | Errore di dominio di argomento |
-| **SING** | Singolarità dell'argomento |
-| **OVERFLOW** | Errore di intervallo di overflow |
-| **PLOSS** | Perdita parziale di significato |
-| **TLOSS** | Perdita totale di significato |
-| **UNDERFLOW** | Il risultato è troppo piccolo per essere rappresentato. (Questa condizione non è attualmente supportata). |
+| **_DOMAIN** | Errore di dominio di argomento |
+| **_SING** | Singolarità dell'argomento |
+| **_OVERFLOW** | Errore di intervallo di overflow |
+| **_PLOSS** | Perdita parziale di significato |
+| **_TLOSS** | Perdita totale di significato |
+| **_UNDERFLOW** | Il risultato è troppo piccolo per essere rappresentato. (Questa condizione non è attualmente supportata). |
 
 Il membro della struttura **name** è un puntatore a una stringa con terminazione Null che contiene il nome della funzione che ha causato l'errore. I membri della struttura **arg1** e **arg2** specificano i valori che hanno causato l'errore. Se un argomento viene fornito solo, questo viene archiviato in **arg1**.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
 ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153411"
 ---
 # <a name="dialog-boxes-in-ole"></a>Finestre di dialogo in OLE
 
