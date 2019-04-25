@@ -21,11 +21,11 @@ helpviewer_keywords:
 - kbhit function
 ms.assetid: 73f1eed7-b3ef-4887-8ec6-755367de1d7d
 ms.openlocfilehash: 5894fdd778742d2804a518842660d1a1ac5c55aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155641"
 ---
 # <a name="kbhit"></a>kbhit
 

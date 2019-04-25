@@ -5,11 +5,11 @@ f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159860"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -40,7 +40,7 @@ La funzione modello `async` e le classi modello `promise` e `packaged_task` sono
 
 Ognuna delle classi modello `promise`, `future`, e `shared_future` ha una specializzazione per il tipo **void** e una specializzazione parziale per l'archiviazione e recupero di un valore per riferimento. Queste specializzazioni si differenziano dal modello principale solo nelle firme e nella semantica delle funzioni che archiviano e recuperano il valore restituito.
 
-Le classi modello `future` e `shared_future` non si bloccano mai nei relativi distruttori, con l'eccezione di un unico caso che viene mantenuto per compatibilità con le versioni precedenti. Infatti, a differenza di quanto avviene con tutti gli altri oggetti future, per un oggetto `future` o l'ultimo oggetto `shared_future` associato a un'attività avviata con `std::async`, il distruttore si blocca se l'attività non è stata completata. In altri termini, si blocca se il thread non ha ancora chiamato `.get()` o `.wait()` e l'attività è ancora in esecuzione. Alla descrizione di `std::async` nella bozza dello standard è stata aggiunta una nota di usabilità che spiega quanto segue: se un oggetto future ottenuto da std::async viene spostato al di fuori dell'ambito locale, l'altro codice che usa l'oggetto future deve tenere presente che il distruttore di tale oggetto può bloccarsi per consentire allo stato condiviso di diventare ready. In tutti gli altri casi, i distruttori `future` e `shared_future` sono necessari ed è garantito che non si blocchino mai.
+Le classi modello `future` e `shared_future` non bloccano mai nei relativi distruttori, eccetto in un caso che viene mantenuto per compatibilità con le versioni precedenti: A differenza di tutti gli altri dei "future", per un `future`, o l'ultima `shared_future`, che è collegato a un'attività avviata con `std::async`, il distruttore si blocca se l'attività non è stata completata; vale a dire, si blocca se il thread non ha ancora chiamato `.get()` o `.wait()`e l'attività è ancora in esecuzione. La seguente nota di usabilità è stato aggiunto alla descrizione di `std::async` nella bozza di standard: "[Nota: Se una future ottenuta da std::async viene spostata all'esterno dell'ambito locale, altro codice che usa il futuro deve tenere presente che il distruttore della prossima può bloccarsi per lo stato condiviso di diventare ready. — nota finale] "In tutti gli altri casi `future` e `shared_future` i distruttori sono necessari e vengono garantiti si blocca mai.
 
 ## <a name="members"></a>Membri
 
@@ -73,11 +73,11 @@ Le classi modello `future` e `shared_future` non si bloccano mai nei relativi di
 
 ### <a name="enumerations"></a>Enumerazioni
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Fornisce i nomi simbolici per tutti gli errori segnalati dalla classe `future_error`.|
 |[future_status](../standard-library/future-enums.md#future_status)|Fornisce i nomi simbolici per i motivi che una funzione di attesa temporizzata può restituire.|
-|[avvio veloce](../standard-library/future-enums.md#launch)|Rappresenta un tipo di maschera di bit che descrive le possibili modalità per la funzione modello `async`.|
+|[launch](../standard-library/future-enums.md#launch)|Rappresenta un tipo di maschera di bit che descrive le possibili modalità per la funzione modello `async`.|
 
 ## <a name="see-also"></a>Vedere anche
 

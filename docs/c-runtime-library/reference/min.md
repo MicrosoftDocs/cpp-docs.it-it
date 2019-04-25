@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
 ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156551"
 ---
 # <a name="min"></a>__min
 
@@ -44,7 +44,7 @@ Una macro del preprocessore che restituisce il meno elevato tra due valori.
 
 ### <a name="parameters"></a>Parametri
 
-*una*, *b*<br/>
+*a*, *b*<br/>
 Valori di qualsiasi tipo che il **<** operatore funziona su.
 
 ## <a name="return-value"></a>Valore restituito

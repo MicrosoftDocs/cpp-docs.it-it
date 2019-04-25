@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
 ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157463"
 ---
 # <a name="locking"></a>_locking
 
@@ -78,11 +78,11 @@ L'argomento *mode* deve essere una delle seguenti costanti manifeste, definite i
 
 |*modalità* valore|Effetto|
 |-|-|
-| **LK_LOCK** | Blocca i byte specificati. Se i byte non possono essere bloccati, il programma ripeterà immediatamente il tentativo dopo 1 secondo. Se, dopo 10 tentativi, i byte non possono essere bloccati, la costante restituisce un errore. |
-| **LK_NBLCK** | Blocca i byte specificati. Se i byte non possono essere bloccati, la costante restituisce un errore. |
-| **LK_NBRLCK** | Uguale allo **lk_nblck**. |
-| **LK_RLCK** | Uguale allo **lk_lock**. |
-| **LK_UNLCK** | Sblocca i byte specificati, che devono essere stati bloccati in precedenza. |
+| **_LK_LOCK** | Blocca i byte specificati. Se i byte non possono essere bloccati, il programma ripeterà immediatamente il tentativo dopo 1 secondo. Se, dopo 10 tentativi, i byte non possono essere bloccati, la costante restituisce un errore. |
+| **_LK_NBLCK** | Blocca i byte specificati. Se i byte non possono essere bloccati, la costante restituisce un errore. |
+| **_LK_NBRLCK** | Uguale allo **lk_nblck**. |
+| **_LK_RLCK** | Uguale allo **lk_lock**. |
+| **_LK_UNLCK** | Sblocca i byte specificati, che devono essere stati bloccati in precedenza. |
 
 È possibile bloccare più aree di un file che non si sovrappongano. Un'area da sbloccare deve essere stata bloccata in precedenza. **Locking** unisce aree adiacenti; se due aree bloccate sono adiacenti, ogni area deve essere sbloccata separatamente. Le aree devono essere bloccate solo brevemente e devono essere sbloccate prima di chiudere un file o di uscire dal programma.
 

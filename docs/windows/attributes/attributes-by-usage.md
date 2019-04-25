@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
 ms.openlocfilehash: f6567a7866516c09bca03fa9f3d3aa5aa997b6b4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148453"
 ---
 # <a name="attributes-by-usage"></a>Attributi in base all'utilizzo
 

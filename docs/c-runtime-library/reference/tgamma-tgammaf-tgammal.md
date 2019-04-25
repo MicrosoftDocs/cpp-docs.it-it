@@ -31,11 +31,11 @@ helpviewer_keywords:
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
 ms.openlocfilehash: c9ff92658163fc20ce21496aba34b22b3661748b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155615"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -80,7 +80,7 @@ Un errore di intervallo può verificarsi se la grandezza del *x* è troppo grand
 |-----------|------------|
 |x = ±0|±INFINITY|
 |x = intero negativo|NaN|
-|x = - infinito|NaN|
+|x = -INFINITY|NaN|
 |x = +INFINITY|+INFINITO|
 |x = NaN|NaN|
 |Eerrore di dominio|NaN|
@@ -100,7 +100,7 @@ Se x è un numero naturale, questa funzione restituisce il fattoriale di (x-1).
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
-|**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**, **tgammaf**,  **tgammal**|\<math.h>|\<cmath>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

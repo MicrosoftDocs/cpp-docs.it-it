@@ -23,11 +23,11 @@ helpviewer_keywords:
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
 ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156603"
 ---
 # <a name="memccpy"></a>_memccpy
 

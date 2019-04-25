@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
 ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157994"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -88,8 +88,8 @@ Il comportamento delle **isalpha** e **isalpha_l** non è definito se *c* non è
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
-|**istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
+|**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
+|**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
 
 ## <a name="requirements"></a>Requisiti
 

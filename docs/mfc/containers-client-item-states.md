@@ -8,11 +8,11 @@ helpviewer_keywords:
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
 ms.openlocfilehash: 1453ba3f96e49cefc9014a93ebcfbcfe5c6bc905
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152852"
 ---
 # <a name="containers-client-item-states"></a>Contenitori: Stati elementi client
 

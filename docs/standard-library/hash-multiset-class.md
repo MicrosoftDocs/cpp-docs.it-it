@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
 ms.openlocfilehash: 6b271adbaf3fe4d2d5c3b41e974bf3036e7b1947
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159340"
 ---
 # <a name="hashmultiset-class"></a>Classe hash_multiset
 
@@ -795,7 +795,7 @@ iterator insert(ValTy&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore di un elemento da inserire nell'oggetto [hash_multiset](../standard-library/hash-multiset-class.md), a meno che l'oggetto `hash_multiset` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
+|*val*|Valore di un elemento da inserire nell'oggetto [hash_multiset](../standard-library/hash-multiset-class.md), a meno che l'oggetto `hash_multiset` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -847,8 +847,8 @@ iterator insert(
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore di un elemento da inserire nell'oggetto [hash_multiset](../standard-library/hash-multiset-class.md), a meno che l'oggetto `hash_multiset` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
-|*WHERE*|Posizione in cui iniziare a cercare il punto di inserimento corretto. (Se il punto di inserimento è immediatamente successivo, l'inserimento può avvenire in tempo costante ammortizzato anziché in tempo logaritmico *WHERE*.)|
+|*val*|Valore di un elemento da inserire nell'oggetto [hash_multiset](../standard-library/hash-multiset-class.md), a meno che l'oggetto `hash_multiset` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
+|*_Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. (Se il punto di inserimento è immediatamente successivo, l'inserimento può avvenire in tempo costante ammortizzato anziché in tempo logaritmico *WHERE*.)|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1100,7 +1100,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE*<br/>
+*_Where*<br/>
 Posizione dell'elemento da rimuovere dall'hash_multiset.
 
 *first*<br/>

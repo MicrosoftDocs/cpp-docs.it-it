@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159145"
 ---
 # <a name="unorderedmap-class"></a>Classe unordered_map
 
@@ -166,7 +166,7 @@ class unordered_map;
 |-|-|
 |*Key*|Tipo di chiave.|
 |*Ty*|Tipo mappato.|
-|*hash*|Tipo di oggetto della funzione hash.|
+|*Hash*|Tipo di oggetto della funzione hash.|
 |*Pred*|Tipo di oggetto della funzione di confronto di uguaglianza.|
 |*Alloc*|Classe Allocator.|
 
@@ -406,7 +406,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da mappare.
 
 ### <a name="remarks"></a>Note
@@ -907,7 +907,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -1171,7 +1171,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -1272,7 +1272,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -2629,8 +2629,8 @@ unordered_map(
 |-|-|
 |*Al*|Oggetto allocatore da archiviare.|
 |*Comp*|Oggetto della funzione di confronto da archiviare.|
-|*hash*|Oggetto della funzione hash da archiviare.|
-|*Valore di Bucket_count*|Numero minimo di bucket.|
+|*Hash*|Oggetto della funzione hash da archiviare.|
+|*Bucket_count*|Numero minimo di bucket.|
 |*A destra*|Contenitore da copiare.|
 |*Primo*||
 |*ultimo*||

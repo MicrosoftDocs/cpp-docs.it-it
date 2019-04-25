@@ -10,11 +10,11 @@ helpviewer_keywords:
 - floating limits
 ms.assetid: fc718652-1f4c-4ed8-af60-0e769637459c
 ms.openlocfilehash: cead21c9a66dbc54b46b1c9f8083022a59e80295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154405"
 ---
 # <a name="floating-limits"></a>Limiti sulle costanti a virgola mobile
 
@@ -24,7 +24,7 @@ La tabella seguente elenca i limiti sui valori delle costanti a virgola mobile. 
 
 ## <a name="limits-on-floating-point-constants"></a>Limiti sulle costanti a virgola mobile
 
-|Costante|Significato|Valore|
+|Costante|Significato|Value|
 |--------------|-------------|-----------|
 |`FLT_DIG`<br/>`DBL_DIG`<br/>`LDBL_DIG`|Numero di cifre, q, tali che un numero a virgola mobile con q cifre decimali possa essere arrotondato in una rappresentazione a virgola mobile e viceversa senza perdita di precisione.|6<br/>15<br/>15|
 |`FLT_EPSILON`<br/>`DBL_EPSILON`<br/>`LDBL_EPSILON`|Minor numero positivo x tale che x + 1 non sia uguale a 1.|1.192092896e-07F<br/>2.2204460492503131e-016<br/>2.2204460492503131e-016|

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156304"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -57,7 +57,7 @@ Al termine, **msize_dbg** restituisce le dimensioni (in byte) del blocco di memo
 
 ## <a name="remarks"></a>Note
 
-**msize_dbg** è una versione di debug nel _[msize](msize.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **msize_dbg** viene ridotta a una chiamata a **msize**. Entrambe **msize** e **msize_dbg** calcolare le dimensioni di un blocco di memoria nell'heap di base, ma **msize_dbg** aggiunge due funzionalità di debug: include i buffer su entrambi i lati dell'utente parte del blocco di memoria nelle dimensioni restituite e consente i calcoli delle dimensioni per tipi di blocchi specifici.
+**msize_dbg** è una versione di debug nel _[msize](msize.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **msize_dbg** viene ridotta a una chiamata a **msize**. Entrambe **msize** e **msize_dbg** calcolare le dimensioni di un blocco di memoria nell'heap di base, ma **msize_dbg** aggiunge due funzionalità di debug: Include i buffer su entrambi i lati della porzione utente del blocco di memoria nelle dimensioni restituite e consente i calcoli delle dimensioni per tipi di blocchi specifici.
 
 Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sui tipi di blocchi di allocazione e su come vengono usati, vedere [Tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle differenze tra chiamare una funzione standard dell'heap e la sua versione di debug nella build di debug di un'applicazione, vedere [Versioni di debug di funzioni di allocazione heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155420"
 ---
 # <a name="umask"></a>_umask
 
@@ -60,9 +60,9 @@ L'espressione integer *pmode* contiene una o entrambe le costanti manifesto segu
 
 |*pmode*| |
 |-|-|
-| **S_IWRITE** | Scrittura consentita. |
-| **S_IREAD** | Lettura consentita. |
-| **S_IREAD** &AMP;#124; **S_IWRITE** | Lettura e scrittura consentite. |
+| **_S_IWRITE** | Scrittura consentita. |
+| **_S_IREAD** | Lettura consentita. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Lettura e scrittura consentite. |
 
 Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per bit ( **&#124;** ). Se il *pmode* l'argomento è **s_iread**, non è consentita la lettura (il file è di sola scrittura). Se il *pmode* l'argomento è **s_iwrite**, non è consentita la scrittura (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, il bit di lettura con l'impostazione **umask** non ha alcun effetto sulle modalità del file.
 

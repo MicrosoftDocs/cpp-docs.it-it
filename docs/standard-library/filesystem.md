@@ -10,11 +10,11 @@ f1_keywords:
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159847"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -31,7 +31,7 @@ using namespace std::experimental::filesystem::v1;
 > [!IMPORTANT]
 > A partire dalla versione di Visual Studio 2017, il \<filesystem > dell'intestazione non era ancora uno standard di C++. Visual C++ 2017 implementa gli standard della bozza finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Questa intestazione supporta file system per uno di due ampie classi di sistemi operativi host: Microsoft Windows e Posix.
+Questa intestazione supporta file System per uno dei due ampie classi di sistemi operativi host: Microsoft Windows e Posix.
 
 Mentre la maggior parte delle funzionalità sono comuni a entrambi i sistemi operativi, questo documento ne identifica le differenze. Ad esempio:
 
@@ -102,7 +102,7 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 
 ## <a name="structs"></a>Struct
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Struttura space_info Structure](../standard-library/space-info-structure.md)|Contiene informazioni su un volume.|
 
@@ -116,7 +116,7 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 
 ## <a name="enumerations"></a>Enumerazioni
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumerazione usata con [copy_file](../standard-library/filesystem-functions.md#copy_file) che determina il comportamento nel caso in cui un file di destinazione esista già.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumerazione usata con [copy_file](../standard-library/filesystem-functions.md#copy_file) che determina il comportamento nel caso in cui un file di destinazione esista già.|

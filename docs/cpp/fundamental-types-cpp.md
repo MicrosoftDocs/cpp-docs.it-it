@@ -44,11 +44,11 @@ helpviewer_keywords:
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153801"
 ---
 # <a name="fundamental-types--c"></a>Tipi fondamentali (C++)
 
@@ -75,9 +75,9 @@ La tabella seguente illustra le restrizioni relative alle dimensioni dei tipi. Q
 ||**__int8**, **__int16**, **__int32**, **__int64**|Intero con dimensione `__int n`, dove `n` è la dimensione in bit della variabile di tipo intero. **__int8**, **__int16**, **__int32** e **__int64** sono parole chiave specifiche di Microsoft. Non tutti i tipi sono disponibili in tutte le architetture. (**__int128** non è supportato.)|
 ||**long**|Tipo di **lungo** (o **long int**) è un tipo integrale è maggiore o uguale alla dimensione di tipo **int**.<br /><br /> Gli oggetti di tipo **lungo** possono essere dichiarate come **lungo firmato** oppure **long senza segno**. **Lungo firmato** è un sinonimo **lungo**.|
 ||**long long**|Dimensioni superiori a unsigned **lungo**.<br /><br /> Gli oggetti di tipo **long long** possono essere dichiarate come **firmato long long** oppure **long long senza segno**. **tempo lungo firmato** è un sinonimo **long long**.|
-||**wchar_t**, **wchar_t**|Una variabile di tipo **wchar_t** designa un tipo di carattere wide o multibyte. Per impostazione predefinita **wchar_t** è un tipo nativo, ma è possibile usare [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per rendere **wchar_t** un typedef per **short senza segno**. Il **wchar_t** tipo è un sinonimo specifico di Microsoft per l'oggetto nativo **wchar_t** tipo.<br /><br /> Usare il prefisso L prima di un valore letterale carattere o stringa per designare il tipo di carattere wide.|
+||**wchar_t**, **__wchar_t**|Una variabile di tipo **wchar_t** designa un tipo di carattere wide o multibyte. Per impostazione predefinita **wchar_t** è un tipo nativo, ma è possibile usare [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per rendere **wchar_t** un typedef per **short senza segno**. Il **wchar_t** tipo è un sinonimo specifico di Microsoft per l'oggetto nativo **wchar_t** tipo.<br /><br /> Usare il prefisso L prima di un valore letterale carattere o stringa per designare il tipo di carattere wide.|
 |Virgola mobile|**float**|Tipo di **float** è mobile più piccolo tipo di punto.|
-||**double**|Tipo di **doppie** è un tipo a virgola mobile maggiore o uguale al tipo **float**, ma minore o uguale alla dimensione di tipo **long double**.<br /><br /> Specifica di Microsoft: la rappresentazione del **long double** e **double** è identico. Tuttavia **long double** e **double** sono tipi distinti.|
+||**double**|Tipo di **doppie** è un tipo a virgola mobile maggiore o uguale al tipo **float**, ma minore o uguale alla dimensione di tipo **long double**.<br /><br /> Specifiche di Microsoft: La rappresentazione del **long double** e **double** è identico. Tuttavia **long double** e **double** sono tipi distinti.|
 ||**long double**|Tipo di **long double** è un tipo di punto che è maggiore o uguale al tipo a virgola mobile **doppie**.|
 
 **Sezione specifica Microsoft**
@@ -88,10 +88,10 @@ La tabella seguente riporta la quantità spazio di archiviazione richiesta per i
 
 |Tipo|Dimensione|
 |----------|----------|
-|**bool**, **char**, **unsigned char**, **char con segno**, **__int8**|1 byte|
-|**__int16**, **breve**, **short senza segno**, **wchar_t**, **wchar_t**|2 byte|
+|**bool**, **char**, **unsigned char**, **signed char**, **__int8**|1 byte|
+|**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2 byte|
 |**float**, **__int32**, **int**, **unsigned int**, **long**, **long senza segno**|4 byte|
-|**doppie**, **__int64**, **long double**, **long long**|8 byte|
+|**double**, **__int64**, **long double**, **long long**|8 byte|
 
 **Fine sezione specifica Microsoft**
 

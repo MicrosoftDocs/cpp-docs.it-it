@@ -5,11 +5,11 @@ f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
 ms.openlocfilehash: 155f1868123514dfec89ab448ef22f2da225c4d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155290"
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias e typedef (C++)
 
@@ -311,7 +311,7 @@ typedef union REGS      // OK: name REGS redeclared
 
 ### <a name="typedefs-in-c-vs-c"></a>Confronto tra typedef in C++ e C
 
-Usare il **typedef** identificatore con tipi di classe è ampiamente supportato a causa della procedura ANSI C di dichiarare strutture senza nome in **(typedef)** dichiarazioni. Ad esempio, molti programmatori C usano le operazioni seguenti:
+Usare il **typedef** identificatore con tipi di classe è ampiamente supportato a causa della procedura ANSI C di dichiarare strutture senza nome in **(typedef)** dichiarazioni. Ad esempio, molti programmatori C utilizzano le operazioni seguenti:
 
 ```cpp
 // typedef_with_class_types1.cpp

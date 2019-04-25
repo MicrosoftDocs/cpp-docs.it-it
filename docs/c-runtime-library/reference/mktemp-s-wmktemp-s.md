@@ -33,11 +33,11 @@ helpviewer_keywords:
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
 ms.openlocfilehash: fef10f2cfbcc0332741d560a41a782b70ed14798
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156538"
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 
@@ -94,13 +94,13 @@ Il **mktemp_s** funzione crea un nome file univoco modificando il *nameTemplate*
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
+|**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
 Il *nameTemplate* argomento ha il formato **baseXXXXXX**, dove *base* è la parte del nome del nuovo file che viene fornito e ogni X è un segnaposto per un carattere fornito da **mktemp_s**. Ogni carattere del segnaposto nella *nameTemplate* deve essere una x maiuscola. **mktemp_s** mantiene *base* e sostituisce la prima X finale con un carattere alfabetico. **mktemp_s** sostituisce il carattere finale seguente x con un valore di cinque cifre; questo valore è un numero univoco che identifica il processo chiamante oppure nei programmi multithreading, il thread chiamante.
 
 Ogni chiamata completata a **mktemp_s** modificato *nameTemplate*. In ogni chiamata successiva dallo stesso processo o thread con lo stesso *nameTemplate* argomento **mktemp_s** controlli per i nomi di file che corrispondono ai nomi restituiti da **mktemp_s** nelle chiamate precedenti. Se non esiste alcun file per un determinato nome, **mktemp_s** restituisce tale nome. Se sono presenti file per tutti i nomi, in precedenza restituiti **mktemp_s** crea un nuovo nome sostituendo il carattere alfabetico usato nel nome restituito in precedenza con la successiva lettera minuscola disponibile, in ordine dalla 'a' a 'z'. Ad esempio, se *base* è:
 
-> **Fn**
+> **fn**
 
 e il valore di cinque cifre fornito da **mktemp_s** è 12345, il primo nome restituito è:
 

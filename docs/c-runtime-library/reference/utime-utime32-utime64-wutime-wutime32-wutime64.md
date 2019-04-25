@@ -59,11 +59,11 @@ helpviewer_keywords:
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
 ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155446"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -103,7 +103,7 @@ int _wutime64(
 *filename*<br/>
 Puntatore a una stringa contenente il percorso o il nome del file.
 
-*Tempi*<br/>
+*times*<br/>
 Puntatore ai valori di ora archiviati.
 
 ## <a name="return-value"></a>Valore restituito
@@ -142,7 +142,7 @@ Versioni specifiche del **utimbuf** struttura (**_utimebuf32** e **__utimbuf64**
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tutime**|**_utime**|**_utime**|**_wutime**|
+|**_tutime**|**_utime**|**_utime**|**_wutime**|
 |**_tutime32**|**_utime32**|**_utime32**|**_wutime32**|
 |**_tutime64**|**_utime64**|**_utime64**|**_wutime64**|
 
@@ -150,7 +150,7 @@ Versioni specifiche del **utimbuf** struttura (**_utimebuf32** e **__utimbuf64**
 
 |Routine|Intestazioni obbligatorie|Intestazioni facoltative|
 |-------------|----------------------|----------------------|
-|**utime**, **_utime32**, **_utime64**|\<sys/utime.h>|\<errno.h>|
+|**_utime**, **_utime32**, **_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_wutime**|\<utime.h> o \<wchar.h>|\<errno.h>|
 

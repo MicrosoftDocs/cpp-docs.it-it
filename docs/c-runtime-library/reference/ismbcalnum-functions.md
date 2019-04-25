@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157302"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,17 +112,17 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ma usano le 
 
 |Routine|Condizione di test|Esempio della tabella codici 932|
 |-------------|--------------------|---------------------------|
-|**ismbcalnum**, **ismbcalnum_l**|Carattere alfanumerico|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera ASCII inglese: vedere gli esempi relativi **ismbcdigit** e **ismbcalpha**.|
-|**ismbcalpha**, **ismbcalpha_l**|Carattere alfabetico|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera ASCII inglese: 0x41 < =*c*< = 0x5A o 0x61 < =*c*< = 0x7A, o una lettera katakana: 0xA6 < =*c*< = 0xDF.|
-|**ismbcdigit**, **ismbcdigit**|Carattere numerico|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una cifra ASCII: 0x30 < =*c*< = 0x39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Carattere alfanumerico|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera ASCII inglese: Vedere gli esempi relativi **ismbcdigit** e **ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|Carattere alfabetico|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera ASCII inglese: 0x41 < =*c*< = 0x5A o 0x61 < =*c*< = 0x7A, o una lettera katakana: 0xA6<=*c*<=0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Carattere numerico|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una cifra ASCII: 0x30<=*c*<=0x39.|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**ismbcalnum**, **ismbcalnum_l**|\<mbstring.h>|
-|**ismbcalpha**, **ismbcalpha_l**|\<mbstring.h>|
-|**ismbcdigit**, **ismbcdigit_l**|\<mbstring.h>|
+|**_ismbcalnum**, **_ismbcalnum_l**|\<mbstring.h>|
+|**_ismbcalpha**, **_ismbcalpha_l**|\<mbstring.h>|
+|**_ismbcdigit**, **_ismbcdigit_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
 ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154717"
 ---
 # <a name="c-bit-fields"></a>Campi di bit C++
 
@@ -19,11 +19,11 @@ Le classi e le strutture possono contenere membri che occupano uno spazio di arc
 
 ## <a name="syntax"></a>Sintassi
 
-*dichiaratore* **:** *espressione costante*
+*declarator* **:** *constant-expression*
 
 ## <a name="remarks"></a>Note
 
-(Facoltativo) *dichiaratore* è il nome mediante il quale il membro accede al programma. e deve essere un valore di tipo integrale (inclusi i tipi enumerati). Il *espressione costante* specifica il numero di bit il membro occupa nella struttura. I campi di bit anonimi, ovvero membri del campo di bit senza identificatore, possono essere usati per la spaziatura interna.
+(Facoltativo) *dichiaratore* è il nome mediante il quale il membro accede al programma. e deve essere un valore di tipo integrale (inclusi i tipi enumerati). Il *espressione costante* specifica il numero di bit il membro occupa nella struttura. I campi di bit anonimi, ovvero membri del campo di bit senza identificatore, possono essere utilizzati per la spaziatura interna.
 
 > [!NOTE]
 > Un campo di bit senza nome di larghezza 0 forza l'allineamento del campo di bit successivo a quello successivo **tipo** limite, in cui **tipo** è il tipo del membro.

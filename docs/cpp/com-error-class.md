@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
 ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155202"
 ---
 # <a name="comerror-class"></a>Classe _com_error
 
@@ -37,7 +37,7 @@ Oggetto **com_error** oggetto rappresenta una condizione di eccezione rilevata d
 |-|-|
 |[Erroree](../cpp/com-error-error.md)|Recupera il valore HRESULT passato al costruttore.|
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|Recupera il `IErrorInfo` oggetto passato al costruttore.|
-|[wCode](../cpp/com-error-wcode.md)|Recupera il codice di errore a 16 bit mappato in HRESULT incapsulato.|
+|[WCode](../cpp/com-error-wcode.md)|Recupera il codice di errore a 16 bit mappato in HRESULT incapsulato.|
 
 ### <a name="ierrorinfo-functions"></a>Funzioni di IErrorInfo
 
@@ -53,7 +53,7 @@ Oggetto **com_error** oggetto rappresenta una condizione di eccezione rilevata d
 
 |||
 |-|-|
-|[Messaggio di errore](../cpp/com-error-errormessage.md)|Recupera il messaggio stringa per HRESULT archiviate nel **com_error** oggetto.|
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Recupera il messaggio stringa per HRESULT archiviate nel **com_error** oggetto.|
 
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode per i Mapper HRESULT
 

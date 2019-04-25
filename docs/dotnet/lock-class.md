@@ -15,11 +15,11 @@ helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
 ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153440"
 ---
 # <a name="lock-class"></a>Classe lock
 
@@ -41,14 +41,14 @@ Internamente, la classe Usa blocco <xref:System.Threading.Monitor> per sincroniz
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |---------|-----------|
 |[lock::lock](#lock)|Costruisce un `lock` oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un determinato periodo di tempo o niente affatto.|
 |[lock::~lock](#tilde-lock)|Distrugge un `lock` oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |---------|-----------|
 |[lock::acquire](#acquire)|Acquisisce un blocco su un oggetto, facoltativamente in attesa di acquisire il blocco per sempre, per un determinato periodo di tempo o niente affatto.|
 |[lock::is_locked](#is-locked)|Indica se un blocco mantenuto.|
@@ -57,7 +57,7 @@ Internamente, la classe Usa blocco <xref:System.Threading.Monitor> per sincroniz
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |---------|-----------|
 |[lock::operator&nbsp;bool](#operator-bool)|Operatore per l'uso di `lock` in un'espressione condizionale.|
 |[lock::operator==](#operator-equality)|Operatore di uguaglianza.|

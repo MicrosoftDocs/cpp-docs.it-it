@@ -10,15 +10,15 @@ helpviewer_keywords:
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
 ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153853"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Elenchi di funzioni con argomenti variabili (C++)
 
-Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensione (...), possono accettare un numero variabile di argomenti. In questi casi, C++ fornisce il controllo di tipo solo per gli argomenti dichiarati esplicitamente. È possibile usare elenchi di argomenti variabili quando è necessario rendere una funzione così generale che anche il numero e i tipi di argomenti possono variare. La famiglia di funzioni è riportato un esempio di funzioni che usano elenchi di argomenti variabili. `printf` *argument-declaration-list*
+Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensione (...), possono accettare un numero variabile di argomenti. In questi casi, C++ fornisce il controllo di tipo solo per gli argomenti dichiarati esplicitamente. È possibile utilizzare elenchi di argomenti variabili quando è necessario rendere una funzione così generale che anche il numero e i tipi di argomenti possono variare. La famiglia di funzioni è riportato un esempio di funzioni che usano elenchi di argomenti variabili. `printf` *argument-declaration-list*
 
 ## <a name="functions-with-variable-arguments"></a>Funzioni con elenchi di argomenti variabili
 
@@ -118,6 +118,6 @@ Nell'esempio precedente vengono illustrati questi concetti importanti:
 
 1. Ai singoli argomenti si accede usando la macro `va_arg`. È necessario indicare alla macro `va_arg` il tipo di argomento da recuperare in modo che sia possibile trasferire il numero corretto di byte dallo stack. Se si specifica un tipo non corretto di dimensione diversa da quella fornita dal programma chiamante a `va_arg`, i risultati sono imprevedibili.
 
-1. È necessario eseguire esplicitamente il cast del risultato ottenuto al tipo desiderato usando la macro `va_arg`.
+1. È necessario eseguire esplicitamente il cast del risultato ottenuto al tipo desiderato utilizzando la macro `va_arg`.
 
 È necessario chiamare la macro per terminare l'elaborazione dell'argomento della variabile.`va_end`

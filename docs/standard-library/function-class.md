@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
 ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159717"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -82,7 +82,7 @@ public:
 *Fty*<br/>
 Tipo di funzione di cui eseguire il wrapping.
 
-*AX*<br/>
+*Ax*<br/>
 Funzione allocatore.
 
 ## <a name="remarks"></a>Note
@@ -156,13 +156,13 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-*Func*<br/>
+*_Func*<br/>
 Oggetto chiamabile.
 
 *_Fnref*<br/>
 Wrapper di riferimento che contiene un oggetto chiamabile.
 
-*AX*<br/>
+*Ax*<br/>
 Un oggetto allocatore.
 
 ### <a name="remarks"></a>Note
@@ -200,13 +200,13 @@ Oggetto funzione da copiare.
 *Fx*<br/>
 Tipo di oggetto chiamabile.
 
-*Func*<br/>
+*_Func*<br/>
 Oggetto chiamabile di cui eseguire il wrapping.
 
 *Alloc*<br/>
 Tipo di allocatore.
 
-*AX*<br/>
+*Ax*<br/>
 Allocatore.
 
 *_Fnref*<br/>
@@ -344,7 +344,7 @@ result_type operator()(
 *TN*<br/>
 Tipo dell'ennesimo argomento di chiamata.
 
-*TN*<br/>
+*tN*<br/>
 Ennesimo argomento di chiamata.
 
 ### <a name="remarks"></a>Note
@@ -394,13 +394,13 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametri
 
-*NPC*<br/>
+*npc*<br/>
 Costante puntatore Null.
 
 *right*<br/>
 Oggetto funzione da copiare.
 
-*Fn*<br/>
+*fn*<br/>
 Oggetto chiamabile di cui eseguire il wrapping.
 
 *fnref*<br/>

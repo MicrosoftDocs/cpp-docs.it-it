@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
 ms.openlocfilehash: 322b513dc648bf10fe593d9541560c4d22da21fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159587"
 ---
 # <a name="frontinsertiterator-class"></a>Classe front_insert_iterator
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Parametri
 
-*Contenitore*<br/>
+*Container*<br/>
 Tipo di contenitore nella cui parte iniziale devono essere inseriti gli elementi da un `front_insert_iterator`.
 
 ## <a name="remarks"></a>Note
@@ -169,7 +169,7 @@ After the front insertions, the list L is:
 */
 ```
 
-## <a name="op_star"></a>  front_insert_iterator:: operator\*
+## <a name="op_star"></a>  front_insert_iterator::operator\*
 
 Dereferenzia l'iteratore di inserimento restituendo l'elemento a cui punta.
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Valore da assegnare al contenitore.
 
 ### <a name="return-value"></a>Valore restituito

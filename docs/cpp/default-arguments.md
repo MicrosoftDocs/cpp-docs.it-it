@@ -11,15 +11,15 @@ helpviewer_keywords:
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154516"
 ---
 # <a name="default-arguments"></a>Argomenti predefiniti
 
-In molti casi, le funzioni presentano argomenti che vengono usati talmente raramente che un valore predefinito basterebbe. Per risolvere questo problema, la funzionalità argomento predefinito consente di specificare solo quegli argomenti di una funzione che sono significativi in una chiamata specificata. Per illustrare questo concetto, si consideri l'esempio illustrato in [overload di funzioni](../cpp/function-overloading.md).
+In molti casi, le funzioni presentano argomenti che vengono utilizzati talmente raramente che un valore predefinito basterebbe. Per risolvere questo problema, la funzionalità argomento predefinito consente di specificare solo quegli argomenti di una funzione che sono significativi in una chiamata specificata. Per illustrare questo concetto, si consideri l'esempio illustrato in [overload di funzioni](../cpp/function-overloading.md).
 
 ```cpp
 // Prototype three print functions.
@@ -79,9 +79,9 @@ print( d, 0 ); // Override default argument to achieve other
 //  results.
 ```
 
-Si notino questi punti quando si usano argomenti predefiniti:
+Si notino questi punti quando si utilizzano argomenti predefiniti:
 
-- Gli argomenti predefiniti vengono usati solo nelle chiamate di funzione in cui gli argomenti finali vengono omessi: devono essere gli ultimi argomenti. Pertanto, il codice seguente non è consentito:
+- Gli argomenti predefiniti vengono utilizzati solo nelle chiamate di funzione in cui gli argomenti finali vengono omessi: devono essere gli ultimi argomenti. Pertanto, il codice seguente non è consentito:
 
     ```cpp
     int print( double dvalue = 0.0, int prec );
