@@ -53,7 +53,7 @@
 ### [Set di caratteri a byte singolo e multibyte](single-byte-and-multibyte-character-sets.md)
 ### [Tipi di dati SBCS e MBCS](sbcs-and-mbcs-data-types.md)
 ### [Unicode: set di caratteri wide](unicode-the-wide-character-set.md)
-### [Uso di mapping di testo generico](using-generic-text-mappings.md)
+### [Using Generic-Text Mappings](using-generic-text-mappings.md) (Uso di mapping di testo generico)
 ### [Programma di testo generico di esempio](a-sample-generic-text-program.md)
 ### [Uso dei tipi di dati TCHAR.H con _MBCS](using-tchar-h-data-types-with-mbcs.md)
 ## [Allocazione di memoria](memory-allocation.md)
