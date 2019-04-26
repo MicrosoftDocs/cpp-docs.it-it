@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
 ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160072"
 ---
 # <a name="concurrency-namespace"></a>Spazio dei nomi concurrency
 
@@ -45,10 +45,8 @@ namespace concurrency;
 |----------|-----------------|
 |`runtime_object_identity`|Ogni istanza del messaggio ha un'identità che lo segue quando viene duplicato e viene passato tra i componenti della messaggistica. Non può corrispondere all'indirizzo dell'oggetto del messaggio.|
 |`task_status`|Un tipo che rappresenta lo stato terminale di un'attività. I valori validi sono `completed` e `canceled`.|
-|`TaskProc`|Un'astrazione elementare per un'attività, definita come `void (__cdecl * TaskProc)(void *)`. 
-  `TaskProc` è chiamato per richiamare il corpo di un'attività.|
-|`TaskProc_t`|Un'astrazione elementare per un'attività, definita come `void (__cdecl * TaskProc_t)(void *)`. 
-  `TaskProc` è chiamato per richiamare il corpo di un'attività.|
+|`TaskProc`|Un'astrazione elementare per un'attività, definita come `void (__cdecl * TaskProc)(void *)`. `TaskProc` è chiamato per richiamare il corpo di un'attività.|
+|`TaskProc_t`|Un'astrazione elementare per un'attività, definita come `void (__cdecl * TaskProc_t)(void *)`. `TaskProc` è chiamato per richiamare il corpo di un'attività.|
 
 ### <a name="classes"></a>Classi
 
@@ -156,7 +154,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Enumerazioni
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Stati validi per un `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Tipi di eventi che possono essere tracciati mediante la funzionalità di tracciatura offerta dalla libreria di agenti.|
