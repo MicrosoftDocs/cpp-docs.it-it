@@ -46,7 +46,6 @@
 #### [pgomgr](pgomgr.md)
 #### [pgosweep](pgosweep.md)
 #### [Procedura: Unire più profili PGO in un unico profilo](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-#### [Componente aggiuntivo PGO di Visual Studio 2013 nell'hub di prestazioni e diagnostica](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)
 # [Usare il set di strumenti MSVC dalla riga di comando](building-on-the-command-line.md)
 ## [Procedura dettagliata: Compilare un programma C++ nativo nella riga di comando](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 ## [Procedura dettagliata: Compilazione di un programma in C dalla riga di comando](walkthrough-compile-a-c-program-on-the-command-line.md)
