@@ -61,11 +61,11 @@ helpviewer_keywords:
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
 ms.openlocfilehash: 6b3562dd077b9aa80b9d188e9b2c43282e797af3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209689"
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
@@ -114,7 +114,7 @@ int _mbsnicoll_l(
 
 ### <a name="parameters"></a>Parametri
 
-*String1*, *stringa2*<br/>
+*string1*, *string2*<br/>
 Stringhe con terminazione Null da confrontare.
 
 *count*<br/>
@@ -145,17 +145,17 @@ Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1*
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsncicoll**|**_strnicoll**|**_mbsnbicoll**|**_wcsnicoll**|
-|**tcsnicoll**|**_strnicoll**|[_mbsnbicoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsnicoll**|
+|**_tcsncicoll**|**_strnicoll**|**_mbsnbicoll**|**_wcsnicoll**|
+|**_tcsnicoll**|**_strnicoll**|[_mbsnbicoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsnicoll**|
 |**_tcsnicoll_l**|**_strnicoll_l**|**_mbsnbicoll_l**|**_wcsnicoll_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strnicoll**, **strnicoll_l**|\<string.h>|
-|**wcsnicoll**, **wcsnicoll_l**|\<wchar.h> o \<string.h>|
-|**mbsnicoll**, **mbsnicoll_l**|\<mbstring.h>|
+|**_strnicoll**, **_strnicoll_l**|\<string.h>|
+|**_wcsnicoll**, **_wcsnicoll_l**|\<wchar.h> o \<string.h>|
+|**_mbsnicoll**, **_mbsnicoll_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

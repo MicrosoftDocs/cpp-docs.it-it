@@ -11,11 +11,11 @@ helpviewer_keywords:
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
 ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269986"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (Assegna un nome alla libreria di importazione)
 

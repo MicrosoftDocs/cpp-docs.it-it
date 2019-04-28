@@ -24,11 +24,11 @@ helpviewer_keywords:
 - wcsnset function
 ms.assetid: e7868ac9-dc34-4606-bd3c-0fb2e7c51631
 ms.openlocfilehash: 0e325237cdd8e1ff597bf0fbbe59be741bc9ef18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209580"
 ---
 # <a name="strnset-wcsnset"></a>strnset, wcsnset
 

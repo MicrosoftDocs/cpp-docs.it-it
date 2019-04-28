@@ -9,11 +9,11 @@ helpviewer_keywords:
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184601"
 ---
 # <a name="identifiers-c"></a>Identificatori (C++)
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-L'intervallo di caratteri consentiti in un identificatore è meno restrittivo quando si compila codice C++/CLI. Gli identificatori nel codice compilato con /clr devono essere conformi allo  [standard ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+L'intervallo di caratteri consentiti in un identificatore è meno restrittivo quando si compila codice C++/CLI. Gli identificatori nel codice compilato con /clr devono seguire [ECMA-335 Standard: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 **Fine sezione specifica Microsoft**
 
@@ -95,7 +95,7 @@ Il primo carattere di un identificatore deve essere un carattere alfabetico, mai
 
 Gli identificatori non possono avere esattamente la stessa ortografia delle parole chiave. Gli identificatori contenenti parole chiave sono validi. Ad esempio, `Pint` è un identificatore valido, anche se contiene **int**, che è una parola chiave.
 
-Utilizzo di due caratteri di sottolineatura sequenziali ( **_** ) in un identificatore, o di un singolo carattere di sottolineatura iniziale seguito da un carattere maiuscolo è riservato alle implementazioni C++ in tutti gli ambiti. Evitare di usare un carattere di sottolineatura iniziale seguito da una minuscola per i nomi con ambito file per non creare potenziali conflitti con gli identificatori riservati correnti o futuri.
+Utilizzo di due caratteri di sottolineatura sequenziali ( **_** ) in un identificatore, o di un singolo carattere di sottolineatura iniziale seguito da un carattere maiuscolo è riservato per C++ le implementazioni in tutti gli ambiti. Evitare di usare un carattere di sottolineatura iniziale seguito da una minuscola per i nomi con ambito file per non creare potenziali conflitti con gli identificatori riservati correnti o futuri.
 
 ## <a name="see-also"></a>Vedere anche
 

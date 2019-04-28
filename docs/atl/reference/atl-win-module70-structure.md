@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ATL_WIN_MODULE70 structure
 ms.assetid: a0aaf3ea-ca77-46ec-bd53-4dfb61dffbea
 ms.openlocfilehash: 0b636d328852daf821269230aae443cef084578b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260753"
 ---
 # <a name="atlwinmodule70-structure"></a>Struttura _ATL_WIN_MODULE70
 

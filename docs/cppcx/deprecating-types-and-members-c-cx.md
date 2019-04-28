@@ -3,15 +3,15 @@ title: Deprecazione di tipi e membri (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
 ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301500"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Deprecazione di tipi e membri (C++/CX)
 
-In C + + c++ /CLI CX, deprecazione dei tipi Windows Runtime e i membri per i producer e i consumer utilizzando il [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) attributo è supportato. Se usi un'API a cui è stato applicato questo attributo, compare un messaggio di avviso in fase di compilazione che indica che l'API è deprecata e inoltre consiglia l'uso di un'API alternativa. Nei tuoi tipi e metodi pubblici puoi applicare questo attributo e fornire il tuo messaggio personalizzato.
+In C++/CX, deprecazione dei tipi Windows Runtime e i membri per i producer e consumer tramite la [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) attributo è supportato. Se usi un'API a cui è stato applicato questo attributo, compare un messaggio di avviso in fase di compilazione che indica che l'API è deprecata e inoltre consiglia l'uso di un'API alternativa. Nei tuoi tipi e metodi pubblici puoi applicare questo attributo e fornire il tuo messaggio personalizzato.
 
 > [!CAUTION]
 > Il [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) attributo deve essere utilizzato solo con tipi Windows Runtime. Per le classi standard e i membri C++, usare [__declspec(deprecated)](../cpp/deprecated-cpp.md).
@@ -58,4 +58,4 @@ Nella seguente tabella sono elencati i costrutti a cui può essere applicato l'a
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

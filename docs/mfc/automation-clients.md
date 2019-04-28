@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
 ms.openlocfilehash: 098c41ea981d9d0069130d5439632aa7b0d6cbbd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62254362"
 ---
 # <a name="automation-clients"></a>client di automazione
 
@@ -40,6 +40,6 @@ Se si desidera gestire gli eventi nel client di automazione, è necessario aggiu
 
 ## <a name="see-also"></a>Vedere anche
 
-[Client di automazione: Uso delle librerie dei tipi](../mfc/automation-clients-using-type-libraries.md)<br/>
+[Client di automazione: uso delle librerie dei tipi](../mfc/automation-clients-using-type-libraries.md)<br/>
 [Automazione](../mfc/automation.md)<br/>
 [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md)

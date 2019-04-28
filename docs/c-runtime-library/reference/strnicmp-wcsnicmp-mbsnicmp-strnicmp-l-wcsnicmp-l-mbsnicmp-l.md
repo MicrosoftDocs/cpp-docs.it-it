@@ -67,11 +67,11 @@ helpviewer_keywords:
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
 ms.openlocfilehash: 38f5697e0c7fe147a481249888595b7d51cfe93c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209690"
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
@@ -120,7 +120,7 @@ int _mbsnicmp_l(
 
 ### <a name="parameters"></a>Parametri
 
-*String1*, *stringa2*<br/>
+*string1*, *string2*<br/>
 Stringhe che terminano con Null da confrontare.
 
 *count*<br/>
@@ -155,17 +155,17 @@ Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1*
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsncicmp**|**_strnicmp**|**_mbsnicmp**|**_wcsnicmp**|
-|**tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
+|**_tcsncicmp**|**_strnicmp**|**_mbsnicmp**|**_wcsnicmp**|
+|**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
 |**_tcsncicmp_l**|**_strnicmp_l**|**_mbsnicmp_l**|**_wcsnicmp_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strnicmp**, **strnicmp_l**|\<string.h>|
-|**wcsnicmp**, **wcsnicmp_l**|\<string.h> o \<wchar.h>|
-|**mbsnicmp**, **mbsnicmp_l**|\<mbstring.h>|
+|**_strnicmp**, **_strnicmp_l**|\<string.h>|
+|**_wcsnicmp**, **_wcsnicmp_l**|\<string.h> o \<wchar.h>|
+|**_mbsnicmp**, **_mbsnicmp_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

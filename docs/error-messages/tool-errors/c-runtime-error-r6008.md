@@ -1,5 +1,5 @@
 ---
-title: R6008 di errore di Runtime C
+title: Errore di runtime di C R6008
 ms.date: 11/04/2016
 f1_keywords:
 - R6008
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6008
 ms.assetid: f0f304fc-709a-4843-bc7e-bad1ae0d1649
 ms.openlocfilehash: 60e6475a84d2662ad3718e04dba879dc06afeee7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62214077"
 ---
-# <a name="c-runtime-error-r6008"></a>R6008 di errore di Runtime C
+# <a name="c-runtime-error-r6008"></a>Errore di runtime di C R6008
 
 spazio insufficiente per gli argomenti
 

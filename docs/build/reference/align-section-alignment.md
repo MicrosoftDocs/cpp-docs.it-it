@@ -12,11 +12,11 @@ helpviewer_keywords:
 - section alignment
 - sections
 ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57809470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295266"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Allineamento sezione)
 

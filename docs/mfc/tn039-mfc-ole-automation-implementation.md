@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
 ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305489"
 ---
-# <a name="tn039-mfcole-automation-implementation"></a>TN039: implementazione di automazione MFC/OLE
+# <a name="tn039-mfcole-automation-implementation"></a>TN039: Implementazione di automazione MFC/OLE
 
 > [!NOTE]
 > La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
@@ -120,7 +120,7 @@ Nome della classe.
 *pszName*<br/>
 Nome esterno della proprietà.
 
-*Nome membro*<br/>
+*memberName*<br/>
 Nome della variabile membro in cui la proprietà viene archiviata.
 
 *pfnAfterSet*<br/>
@@ -156,7 +156,7 @@ Nome esterno della proprietà.
 *memberGet*<br/>
 Nome della funzione membro usata per ottenere la proprietà.
 
-*set di membri*<br/>
+*memberSet*<br/>
 Nome della funzione membro utilizzata per impostare la proprietà.
 
 *vtPropType*<br/>
@@ -228,7 +228,7 @@ Nome della classe.
 *pszName*<br/>
 Nome esterno della proprietà.
 
-*DISPID*<br/>
+*dispid*<br/>
 DISPID fisse per la proprietà o metodo.
 
 *pfnGet*<br/>
@@ -237,7 +237,7 @@ Nome della funzione membro usata per ottenere la proprietà.
 *pfnSet*<br/>
 Nome della funzione membro utilizzata per impostare la proprietà.
 
-*Nome membro*<br/>
+*memberName*<br/>
 Il nome della variabile membro per eseguire il mapping alla proprietà
 
 *vtPropType*<br/>

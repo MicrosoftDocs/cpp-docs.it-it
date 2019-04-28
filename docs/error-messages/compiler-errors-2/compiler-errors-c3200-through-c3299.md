@@ -1,6 +1,6 @@
 ---
-title: Del compilatore errori C3200 a C3299
-ms.date: 11/17/2017
+title: Errori del compilatore da C3200 a C3299
+ms.date: 04/21/2019
 f1_keywords:
 - C3220
 - C3221
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - C3281
 - C3294
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-ms.openlocfilehash: e8a9c1db4cba837a5780e51f84035492cd0e9e76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6965fcde5f7cc93464593e83f787d0a5838398dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281495"
 ---
-# <a name="compiler-errors-c3200-through-c3299"></a>Del compilatore errori C3200 a C3299
+# <a name="compiler-errors-c3200-through-c3299"></a>Errori del compilatore da C3200 a C3299
 
 Gli articoli in questa sezione della documentazione illustrano un subset dei messaggi di errore generati dal compilatore.
 
@@ -71,8 +71,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3217](compiler-error-c3217.md)|«*parametro*': parametro generico non può essere vincolato in questa dichiarazione|
 |[Errore del compilatore C3218](compiler-error-c3218.md)|«*tipo*': tipo non consentito come vincolo|
 |[Errore del compilatore C3219](compiler-error-c3219.md)|«*parametri*': parametro generico non può essere vincolato da non interfacce multiple: '*tipo*»|
-|C3220 errore del compilatore|«*interfaccia*': interfaccia non può avere un progid|
-|C3221 errore del compilatore|«*membro*': più 'default' e 'casi' degli attributi in un membro non consentiti|
+|Errore del compilatore C3220|«*interfaccia*': interfaccia non può avere un progid|
+|Errore del compilatore C3221|«*membro*': più 'default' e 'casi' degli attributi in un membro non consentiti|
 |[Errore del compilatore C3222](compiler-error-c3222.md)|«*funzione*': Impossibile dichiarare argomenti predefiniti per il membro di un tipo gestito o WinRT o funzioni generiche|
 |[Errore del compilatore C3223](compiler-error-c3223.md)|«*proprietà*': Impossibile applicare 'typeid' a una proprietà|
 |[Errore del compilatore C3224](compiler-error-c3224.md)|«*tipo*': accetta nessuna classe generica in overload*numero*' argomenti di tipo generico|
@@ -96,25 +96,25 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3242](compiler-error-c3242.md)|«*funzione*': è possibile eseguire l'override in modo esplicito solo le funzioni virtuali|
 |[Errore del compilatore C3243](compiler-error-c3243.md)|Nessuna delle funzioni in overload è introdotta da '*interfaccia*'|
 |[Errore del compilatore C3244](compiler-error-c3244.md)|«*membro*': questo metodo è stato introdotto da '*interfaccia1*'non da'*interface2*»|
-|C3245 errore del compilatore|«*funzione*': elenco degli argomenti modello richiede l'uso di un modello di variabile|
+|Errore del compilatore C3245|«*funzione*': elenco degli argomenti modello richiede l'uso di un modello di variabile|
 |[Errore del compilatore C3246](compiler-error-c3246.md)|«*classe*': non può ereditare da '*base_class*"così com'è stato dichiarato come'*ereditarietà*»|
 |[Errore del compilatore C3247](compiler-error-c3247.md)|«*coclasse*': una coclasse non può ereditare da un'altra coclasse*base_class*»|
 |[Errore del compilatore C3248](compiler-error-c3248.md)|Obsoleta. '*funzione*': funzione dichiarata come 'sealed' non può essere sottoposto a override da '*funzione*'|
-|C3249 errore del compilatore|istruzione non valida o l'espressione secondaria per la funzione 'constexpr'|
-|C3250 errore del compilatore|«*dichiarazione*': dichiarazione non è consentita nel corpo della funzione 'constexpr'|
+|Errore del compilatore C3249|istruzione non valida o l'espressione secondaria per la funzione 'constexpr'|
+|Errore del compilatore C3250|«*dichiarazione*': dichiarazione non è consentita nel corpo della funzione 'constexpr'|
 |[Errore del compilatore C3251](compiler-error-c3251.md)|impossibile chiamare un metodo di una classe base su un'istanza di tipo valore|
 |[Errore del compilatore C3252](compiler-error-c3252.md)|«*funzione*': non è possibile ridurre l'accessibilità di un metodo virtuale in un tipo gestito o WinRT|
 |[Errore del compilatore C3253](compiler-error-c3253.md)|«*funzione*': errore dell'override esplicito|
 |[Errore del compilatore C3254](compiler-error-c3254.md)|'*funzione*': classe contiene override esplicito '*funzione*', ma non deriva da un'interfaccia che contiene la dichiarazione di funzione|
 |[Errore del compilatore C3255](compiler-error-c3255.md)|«*tipo*': Impossibile allocare dinamicamente l'oggetto tipo di valore nell'heap nativo|
-|C3256 errore del compilatore|«*funzione*': uso delle variabili non produce un'espressione costante|
+|Errore del compilatore C3256|«*funzione*': uso delle variabili non produce un'espressione costante|
 |Errore del compilatore C3257|Obsoleta.|
 |Errore del compilatore C3258|Obsoleta.|
-|C3259 errore del compilatore|le funzioni 'constexpr' possono avere solo un'istruzione return|
-|C3260 errore del compilatore|«*token*': ignorato token imprevisti prima di corpo dell'espressione lambda|
+|Errore del compilatore C3259|le funzioni 'constexpr' possono avere solo un'istruzione return|
+|Errore del compilatore C3260|«*token*': ignorato token imprevisti prima di corpo dell'espressione lambda|
 |Errore del compilatore C3261|una funzione che restituisce una matrice gestita o WinRT deve avere le parentesi di matrice alla fine della dichiarazione: '*identificatore*(...) []'|
 |[Errore del compilatore C3262](compiler-error-c3262.md)|indicizzazione matrice non valida: *numero* le dimensioni specificate per *numero*-dimensionale '*tipo*'|
-|C3263 errore del compilatore|Obsoleta.|
+|Errore del compilatore C3263|Obsoleta.|
 |[Errore del compilatore C3264](compiler-error-c3264.md)|«*identificatore*': un costruttore di classe non può avere un tipo restituito|
 |[Errore del compilatore C3265](compiler-error-c3265.md)|Impossibile dichiarare un '*managed_construct*'in una funzione non gestita'*unmanaged_construct*'|
 |[Errore del compilatore C3266](compiler-error-c3266.md)|«*funzione*': un costruttore di classe deve avere un elenco di parametri 'void'|
@@ -151,3 +151,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3297](compiler-error-c3297.md)|« *constraint2*': non è possibile usare ' *constraint1*' come vincolo poiché ' *constraint1*' contiene il vincolo value|
 |[Errore del compilatore C3298](compiler-error-c3298.md)|« *constraint1*': non è possibile usare ' *constraint2*' come vincolo poiché ' *constraint2*' contiene il vincolo ref e ' *constraint1*» contiene il vincolo value|
 |[Errore del compilatore C3299](compiler-error-c3299.md)|« *funzione*': Impossibile specificare vincoli poiché vengono ereditati dal metodo base|
+
+## <a name="see-also"></a>Vedere anche
+
+[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errori del compilatore da C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

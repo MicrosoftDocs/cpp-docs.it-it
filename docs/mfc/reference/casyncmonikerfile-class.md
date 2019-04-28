@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
 ms.openlocfilehash: b86cba0c2e8f7991902a552d404355d6c1474138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237860"
 ---
 # <a name="casyncmonikerfile-class"></a>Classe CAsyncMonikerFile
 

@@ -3,11 +3,11 @@ title: Funzioni di utilità HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 ms.openlocfilehash: ed01253c579cb6bb529c65e65b7e5ce8686e0b27
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260870"
 ---
 # <a name="atl-http-utility-functions"></a>Funzioni di utilità HTTP ATL
 

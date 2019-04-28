@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216421"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatori Left Shift e Right Shift (&gt; &gt; e &lt; &lt;)
 
@@ -86,7 +86,7 @@ int main() {
 
 ## <a name="right-shifts"></a>Spostamenti a destra
 
-L'operatore di spostamento a destra causa lo schema di bit nel *shift-expression* di spostare a destra del numero di posizioni specificato da *additive-expression*. Per i numeri senza segno, le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero. Per i numeri con segno, il bit di segno viene usato per riempire le posizioni dei bit liberate. In altre parole, se il numero è positivo, si usa 0, se il numero è negativo, si usa 1.
+L'operatore di spostamento a destra causa lo schema di bit nel *shift-expression* di spostare a destra del numero di posizioni specificato da *additive-expression*. Per i numeri senza segno, le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero. Per i numeri con segno, il bit di segno viene utilizzato per riempire le posizioni dei bit liberate. In altre parole, se il numero è positivo, si utilizza 0, se il numero è negativo, si utilizza 1.
 
 > [!IMPORTANT]
 > Il risultato di uno spostamento a destra di un numero negativo con segno è dipendente dall'implementazione. Sebbene Visual C++ usi il bit di segno per riempile le posizioni dei bit liberate, non vi è garanzia che anche altre implementazioni facciano lo stesso.

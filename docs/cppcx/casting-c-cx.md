@@ -3,15 +3,15 @@ title: Cast (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
 ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258213"
 ---
 # <a name="casting-ccx"></a>Cast (C++/CX)
 
-Quattro diversi operatori cast si applicano ai tipi Windows Runtime: [static_cast Operator](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **safe_cast Operator**, e [ Operatore reinterpret_cast](../cpp/reinterpret-cast-operator.md). **safe_cast** e **static_cast** genera un'eccezione quando la conversione non può essere eseguita. [static_cast Operator](../cpp/static-cast-operator.md) esegue inoltre il controllo dei tipi in fase di compilazione. **dynamic_cast** restituisce **nullptr** se risulta Impossibile convertire il tipo. Sebbene **reinterpret_cast** restituisce un valore diverso da null, potrebbe non essere valido. Per questo motivo, è consigliabile non utilizzare **reinterpret_cast** a meno che non si sa che il cast riuscirà. Inoltre, è consigliabile non usare cast di tipo C nel tuo C + + / codice /CX, in quanto sono identiche alle **reinterpret_cast**.
+Quattro diversi operatori cast si applicano ai tipi Windows Runtime: [static_cast Operator](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **safe_cast Operator**, e [ Operatore reinterpret_cast](../cpp/reinterpret-cast-operator.md). **safe_cast** e **static_cast** genera un'eccezione quando la conversione non può essere eseguita. [static_cast Operator](../cpp/static-cast-operator.md) esegue inoltre il controllo dei tipi in fase di compilazione. **dynamic_cast** restituisce **nullptr** se risulta Impossibile convertire il tipo. Sebbene **reinterpret_cast** restituisce un valore diverso da null, potrebbe non essere valido. Per questo motivo, è consigliabile non utilizzare **reinterpret_cast** a meno che non si sa che il cast riuscirà. Inoltre, è consigliabile non usare cast di tipo C in di C++codice /CX, in quanto sono identiche alle **reinterpret_cast**.
 
 Anche il compilatore e il runtime eseguono cast impliciti, ad esempio, nelle operazioni di boxing quando un tipo di valore o un tipo incorporato viene passato come argomento a un metodo il cui tipo di parametro è `Object^`. In teoria, un cast implicito non deve mai generare un'eccezione in fase di esecuzione. Se il compilatore non è in grado di eseguire una conversione implicita, genera un errore in fase di compilazione.
 
@@ -123,4 +123,4 @@ Nella tabella seguente sono riepilogati i casi in cui è possibile usare in sicu
 
 - [Sistema di tipi](../cppcx/type-system-c-cx.md)
 - [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
-- [Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+- [Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

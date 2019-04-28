@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
 ms.openlocfilehash: 76cdf9424e6eab33a3a92b3f98d9c2b0b04ff667
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183752"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -21,7 +21,7 @@ Ad esempio il **declspec ( [limitare](../cpp/restrict.md) )** modificatore, la *
 
 - Il **Restrict** parola chiave è valida solo per variabili, e `__declspec ( restrict )` è valido solo nelle dichiarazioni di funzione e definizioni.
 
-- **Restrict** è simile a **limitare** nella specifica C99, ma **Restrict** è utilizzabile in programmi C++ o C.
+- **Restrict** è simile a **limitare** nella specifica C99, ma **Restrict** può essere usato in C++ o i programmi C.
 
 - Quando **Restrict** viene utilizzato, il compilatore non trasferirà la proprietà noalias di una variabile. Vale a dire, se si assegna un **Restrict** variabile non -**Restrict** variabile, il compilatore consentirà comunque il non- Restrict variabile con un alias. Questo comportamento è diverso dal comportamento dei **limitare** parola chiave della specifica C99.
 
@@ -29,7 +29,7 @@ In generale, se si è interessati al comportamento di un'intera funzione, è pre
 
 Per garantire la compatibilità con le versioni precedenti, **_restrict** è un sinonimo **Restrict** , a meno che l'opzione del compilatore [/Za \(Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md) è specificato.
 
-In Visual Studio 2015 e versioni successive **Restrict** può essere utilizzato nei riferimenti C++.
+In Visual Studio 2015 e versioni successive **Restrict** può essere usato in C++ riferimenti.
 
 > [!NOTE]
 >  Quando viene usato in una variabile che ha il [volatile](../cpp/volatile-cpp.md) parola chiave **volatile** avrà la precedenza.

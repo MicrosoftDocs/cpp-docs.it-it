@@ -312,11 +312,11 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
 ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218370"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 
@@ -3905,4 +3905,4 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [Classe CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [Classe CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [Classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Procedura dettagliata: Inserimento di controlli sulle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
 ms.openlocfilehash: af708fd72904fb775ff1088948972bec159816c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266907"
 ---
 # <a name="summary-of-scope-rules"></a>Riepilogo delle regole di ambito
 
@@ -25,7 +25,7 @@ L'utilizzo di un nome deve essere non ambiguo all'interno dell'ambito relativo (
 
 ## <a name="global-names"></a>Nomi globali
 
-Un nome di un oggetto, funzione o enumeratore è globale se viene introdotto al di fuori di qualsiasi funzione o classe o se è preceduto dall'operatore unario di ambito globale (`::`) e se non viene usato insieme a uno degli operatori binari seguenti:
+Un nome di un oggetto, funzione o enumeratore è globale se viene introdotto al di fuori di qualsiasi funzione o classe o se è preceduto dall'operatore unario di ambito globale (`::`) e se non viene utilizzato insieme a uno degli operatori binari seguenti:
 
 - Risoluzione ambito (`::`)
 
@@ -41,7 +41,7 @@ I nomi specificati dopo l'operatore di selezione dei membri (**.** oppure **->**
 
 Il compilatore cerca i nomi nel seguente ordine, arrestandosi quando il nome viene trovato:
 
-1. Ambito del blocco corrente se il nome è usato in una funzione; in caso contrario, ambito globale.
+1. Ambito blocco corrente se il nome è usato in una funzione; in caso contrario, ambito globale.
 
 1. Verso l'esterno, attraverso ogni ambito di blocco contenitore, compreso l'ambito più esterno della funzione (inclusi i parametri della funzione).
 

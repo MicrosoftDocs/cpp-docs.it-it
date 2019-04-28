@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
 ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218538"
 ---
 # <a name="canimationpoint-class"></a>Classe CAnimationPoint
 
@@ -77,7 +77,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationPoint::m_xValue](#m_xvalue)|La variabile di animazione incapsulato rappresentato X coordinate del punto di animazione.|
 |[CAnimationPoint::m_yValue](#m_yvalue)|La variabile di animazione incapsulato che rappresenta la coordinata Y del punto di animazione.|

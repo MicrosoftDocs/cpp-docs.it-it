@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IConnectionPointContainerImpl class
 ms.assetid: 10db5a8d-8be9-4d9d-8a82-8ab9ffe3e9d6
 ms.openlocfilehash: 06baa4dac3248d783648b8ce37e51250e0de2498
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275516"
 ---
 # <a name="iconnectionpointcontainerimpl-class"></a>Classe IConnectionPointContainerImpl
 

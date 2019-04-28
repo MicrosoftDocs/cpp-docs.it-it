@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4088
 ms.assetid: 9bab817c-16b2-4324-be5e-f9cbb06b702e
 ms.openlocfilehash: 86069cb9cab1bf8454c9e60053ccfcaeaee5dd6d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255875"
 ---
 # <a name="compiler-warning-level-1-c4088"></a>Compilatore Warning (level 1) C4088
 

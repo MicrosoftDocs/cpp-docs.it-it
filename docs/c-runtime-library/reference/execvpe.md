@@ -21,11 +21,11 @@ helpviewer_keywords:
 - execvpe function
 ms.assetid: ee657071-c459-4bb6-82a2-8925c888f624
 ms.openlocfilehash: 55457b245927db0aabe34e89d5b4dfd59f0efb43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288456"
 ---
 # <a name="execvpe"></a>execvpe
 

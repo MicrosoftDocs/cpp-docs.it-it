@@ -3,11 +3,11 @@ title: Panoramica delle convenzioni ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
 ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295239"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Panoramica delle convenzioni ABI ARM32
 
@@ -41,7 +41,7 @@ Anche se Windows consente all'hardware ARM di gestire in modo trasparente gli ac
 
 Il set di istruzioni per Windows su ARM è limitato esclusivamente a Thumb-2. È previsto che tutto il codice eseguito su questa piattaforma inizi e rimanga sempre in modalità Thumb. È possibile che si riesca a passare al set di istruzioni ARM legacy, ma in questo caso eventuali eccezioni o interrupt possono causare un errore dell'applicazione in modalità utente o un controllo errori in modalità kernel.
 
-Un effetto collaterale di questo requisito è che per tutti i puntatori di codice deve essere impostata una velocità in bit bassa. In questo modo, quando vengono caricati e viene creato un branch con BLX o BX, il processore rimarrà in modalità Thumb e non proverà a eseguire il codice di destinazione come istruzioni ARM a 32 bit.
+Un effetto collaterale di questo requisito è che per tutti i puntatori di codice deve essere impostata una velocità in bit bassa. In questo modo, quando vengono caricati e viene creato un ramo con BLX o BX, il processore rimarrà in modalità Thumb e non proverà a eseguire il codice di destinazione come istruzioni ARM a 32 bit.
 
 ### <a name="it-instructions"></a>Istruzioni IT
 
@@ -116,7 +116,7 @@ Windows supporta solo varianti ARM con supporto per il coprocessore VFPv3-D32. I
 
 La tabella successiva illustra i campi di bit FPSCR (Floating-Point Status and Control Register):
 
-|Bit|Significato|Volatile?|Ruolo|
+|BITS|Significato|Volatile?|Ruolo|
 |----------|-------------|---------------|----------|
 |31-28|NZCV|Volatile|Flag di stato|
 |27|QC|Volatile|Saturazione cumulativa|

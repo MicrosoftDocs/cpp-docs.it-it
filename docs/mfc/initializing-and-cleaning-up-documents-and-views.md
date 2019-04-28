@@ -12,11 +12,11 @@ helpviewer_keywords:
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
 ms.openlocfilehash: 59e86f4000e2da588749ca48887d34c3effdfc3a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297190"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>Inizializzazione e pulizia di documenti e visualizzazioni
 

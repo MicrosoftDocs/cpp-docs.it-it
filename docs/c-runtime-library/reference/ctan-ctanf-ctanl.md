@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
 ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288754"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -73,17 +73,17 @@ La tangente *z*.
 |Input|Eccezione SEH|**matherr** eccezione|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|none|_DOMAIN|
-|∞ + (**tan**, **tanf**)|NON VALIDO|_DOMAIN|
+|± ∞ (**tan**, **tanf**)|NON VALIDO|_DOMAIN|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **ctan** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **ctan** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **ctan** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **ctan** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**Ctan**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**ctan**,               **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

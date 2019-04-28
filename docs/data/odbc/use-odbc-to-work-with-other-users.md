@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ODBC, working with other users
 ms.assetid: 8ff18684-f62b-4027-b9b2-7c3b5d52bd89
 ms.openlocfilehash: a3490ef6551f7ca8047b2f028e2a247f510c0717
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230879"
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>Utilizzo di ODBC in un ambiente multiutente
 

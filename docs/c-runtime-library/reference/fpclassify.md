@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
 ms.openlocfilehash: a25897a110d96923a45695d61f923dc7818c7e3a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287941"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -62,7 +62,7 @@ Valore a virgola mobile da verificare.
 
 **fpclassify** restituisce un valore integer che indica la classe a virgola mobile dell'argomento *x*. Questa tabella mostra i valori possibili restituiti da **fpclassify**, definito nel \<Math. h >.
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |**FP_NAN**|NaN silenzioso, segnalatore o indeterminato|
 |**FP_INFINITE**|Infinito positivo o negativo|

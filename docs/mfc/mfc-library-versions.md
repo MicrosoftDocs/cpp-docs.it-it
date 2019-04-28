@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238504"
 ---
 # <a name="mfc-library-versions"></a>Versioni di librerie MFC
 
@@ -85,7 +85,7 @@ I progetti MFC usano il simbolo del preprocessore \_UNICODE per indicare il supp
 
 Librerie statiche per MFC utilizzano le seguenti convenzioni di denominazione. I nomi delle librerie si presentano come
 
-> <em>u</em>AFX<em>cd</em>. LIB
+> <em>u</em>AFX<em>cd</em>.LIB
 
 dove le lettere mostrate in minuscolo corsivo sono dei segnaposti per gli identificatori i cui significati sono mostrati nella tabella seguente:
 
@@ -93,7 +93,7 @@ dove le lettere mostrate in minuscolo corsivo sono dei segnaposti per gli identi
 |---------------|-------------------------|
 |*u*|ANSI/MBCS (N) o Unicode (U); omettere per la versione senza controlli MFC nelle finestre di dialogo|
 |*c*|Versione con controlli MFC nelle finestre di dialogo (CW Closest) o senza (NMCD)|
-|*d*|Debug o Release: D=Debug; omettere l'identificatore per le versioni di rilascio|
+|*d*|Debug o Release: 1!d = Debug; omettere l'identificatore per il rilascio|
 
 Tutte le librerie elencate nella tabella seguente sono incluse precompilate nella directory \atlmfc\lib per le architetture di compilazione supportati.
 
@@ -116,14 +116,14 @@ Le DLL di MFC hanno *versione* numeri che indicano la compatibilità binaria. Us
 
 |DLL|Descrizione|
 |---------|-----------------|
-|MFC*versione*. DLL|Versione finale di MBCS, ANSI o DLL MFC|
+|MFC*version*.DLL|Versione finale di MBCS, ANSI o DLL MFC|
 |MFC*versione*U.DLL|DLL MFC, versione finale di Unicode|
-|MFC*versione*D.DLL|Versione DLL MFC, ANSI o eseguire il Debug di MBCS|
+|MFC*version*D.DLL|Versione DLL MFC, ANSI o eseguire il Debug di MBCS|
 |MFC*versione*UD. DLL|DLL MFC, versione di Debug di Unicode|
-|MFCM*versione*. DLL|DLL MFC con controlli Windows Form, versione finale di MBCS o ANSI|
-|MFCM*versione*U.DLL|DLL MFC con controlli Windows Form, versione finale di Unicode|
-|MFCM*versione*D.DLL|DLL MFC con controlli Windows Form, la versione ANSI o eseguire il Debug di MBCS|
-|MFCM*versione*UD. DLL|DLL MFC con controlli Windows Form, versione di Debug di Unicode|
+|MFCM*version*.DLL|DLL MFC con controlli Windows Form, versione finale di MBCS o ANSI|
+|MFCM*version*U.DLL|DLL MFC con controlli Windows Form, versione finale di Unicode|
+|MFCM*version*D.DLL|DLL MFC con controlli Windows Form, la versione ANSI o eseguire il Debug di MBCS|
+|MFCM*version*UD.DLL|DLL MFC con controlli Windows Form, versione di Debug di Unicode|
 
 Le librerie di importazione necessarie per creare applicazioni o MFC di estensione dll che utilizzano queste DLL condivise con lo stesso nome di base della DLL, ma hanno un'estensione di file con estensione LIB. Quando si usano le DLL condivise, una piccola libreria statica ancora deve essere collegata con il codice. Questa libreria è denominata MFCS*versione*lib {U} {D}.
 

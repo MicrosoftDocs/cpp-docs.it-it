@@ -10,11 +10,11 @@ helpviewer_keywords:
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
 ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216857"
 ---
 # <a name="basic-cstring-operations"></a>Operazioni di base con CString
 
@@ -36,7 +36,7 @@ Questo argomento viene illustrato nell'esempio di basic [CString](../atl-mfc-sha
 
 `CString`, `CStringA`, e `CStringW` ognuno ottenere un set di metodi e operatori definiti dalla `CStringT` per l'uso con i dati stringa supportati. Alcuni dei metodi di duplicati e, in alcuni casi, superare i servizi di stringa delle librerie di runtime C.
 
-Nota: `CString` è una classe nativa. Per una classe di stringa che viene usata in C + + / progetto, usare gestito CLI `System.String`.
+Nota: `CString` è una classe nativa. Per una classe di stringa che viene usata in un C++progetto, usare gestito /CLI `System.String`.
 
 ##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> Creazione di oggetti CString da stringhe letterali C Standard
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
 ms.openlocfilehash: fb707a2721ed40ee3ec37d01b2bbcfcc51f05c38
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57807806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295162"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Collegamento a risorse .NET Framework)
 

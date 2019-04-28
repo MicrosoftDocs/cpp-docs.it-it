@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
 ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303796"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programmazione .NET con C++/CLI (Visual C++)
 
 **Visual Studio 2015**: Per impostazione predefinita, i progetti CLR creati con 2015 sono destinati a.NET Framework 4.5.2. Per impostare .NET Framework 4.6 come destinazione quando si crea un nuovo progetto, nella finestra di dialogo **Nuovo progetto** modificare il framework di destinazione nell'elenco a discesa in alto al centro della finestra. Per modificare il framework di destinazione per un progetto esistente, chiudere il progetto, modificare il file di progetto (con estensione vcxproj) e modificare il valore della versione del framework di destinazione in 4.6. Alla successiva apertura del progetto, le impostazioni avranno effetto.
 
-**Visual Studio 2017**: In Visual Studio 2017, il framework predefinito corrisponda alla versione 4.6.1 e il selettore della versione Framework è in fondo il **finestra di dialogo Nuovo progetto**. C + + CLI non è installato per impostazione predefinita. Per installare il componente, aprire l'installazione di Visual Studio e scegliere di C + + / componente dell'interfaccia della riga in Visual C++.
+**Visual Studio 2017**: In Visual Studio 2017, il framework predefinito corrisponda alla versione 4.6.1 e il selettore della versione Framework è in fondo il **finestra di dialogo Nuovo progetto**. C++/ CLI stesso non è installato per impostazione predefinita. Per installare il componente, aprire l'installazione di Visual Studio e scegliere il C++componente /CLI in oggetto visivo C++.
 
 ## <a name="in-this-section"></a>In questa sezione
 
@@ -32,7 +32,7 @@ ms.locfileid: "57749815"
 
 [Espressioni regolari (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)
 
-[Gestione di file e i/o (C + + CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+[Gestione di file e i/o (C++/CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
 
 [Operazioni di grafica (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)
 

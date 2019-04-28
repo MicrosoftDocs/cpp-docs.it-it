@@ -1,6 +1,6 @@
 ---
-title: Compilatore avvisi C4000 a C4199
-ms.date: 11/17/2017
+title: Avvisi del compilatore da C4000 a C4199
+ms.date: 04/21/2019
 f1_keywords:
 - C4000
 - C4035
@@ -20,14 +20,14 @@ f1_keywords:
 - C4196
 - C4199
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-ms.openlocfilehash: 746bd86b9c5911ac8d4f7ae455b5a2184d302746
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 1af76f1bad4d8df06d527063bc6618d0f8ef8f70
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226715"
 ---
-# <a name="compiler-warnings-c4000-through-c4199"></a>Compilatore avvisi C4000 a C4199
+# <a name="compiler-warnings-c4000-through-c4199"></a>Avvisi del compilatore da C4000 a C4199
 
 Gli articoli in questa sezione della documentazione illustrano un subset dei messaggi di avviso generati dal compilatore.
 
@@ -186,3 +186,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1) C4196|previsto '%$L' o '%$L'. trovato '%$L'|
 |[Avviso del compilatore (livello 3) C4197](../../error-messages/compiler-warnings/compiler-warning-level-3-c4197.md)|'type': volatile di primo livello nel cast viene ignorato|
 |Avviso del compilatore (livello 1, livello 2, livello 3 e livello 4) C4199|%s|
+
+## <a name="see-also"></a>Vedere anche
+
+[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md) \
+[Avvisi del compilatore da C4000 - C5999](compiler-warnings-c4000-c5999.md)

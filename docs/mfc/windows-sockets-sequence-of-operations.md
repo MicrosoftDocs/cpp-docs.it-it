@@ -9,11 +9,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
 ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296514"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Sequenza delle operazioni
 
@@ -56,15 +56,15 @@ La sequenza di chiamate mostrato nella tabella precedente è per un socket di fl
 
 Per altre informazioni, vedere:
 
-- [Windows Sockets: Utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: uso di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Uso della classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: uso della classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Porte e indirizzi Socket](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows Sockets: porte e indirizzi socket](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows Sockets: Socket di Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: socket di flusso](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Socket di datagramma](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: socket di datagrammi](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vedere anche
 

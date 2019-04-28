@@ -36,11 +36,11 @@ helpviewer_keywords:
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
 ms.openlocfilehash: 4e4f5bb6639cbeee0f004f94f09177c08394d43e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258715"
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -105,7 +105,7 @@ Queste funzioni convalidano i relativi parametri. Se *strSource* è un puntatore
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsxfrm**|**strxfrm**|**strxfrm**|**wcsxfrm**|
+|**_tcsxfrm**|**strxfrm**|**strxfrm**|**wcsxfrm**|
 |**_tcsxfrm_l**|**_strxfrm_l**|**_strxfrm_l**|**_wcsxfrm_l**|
 
 Nelle impostazioni locali "C", l'ordine dei caratteri nel set di caratteri (set di caratteri ASCII) è lo stesso dell'ordine lessicografico dei caratteri. Tuttavia, in altre impostazioni locali, l'ordine dei caratteri nel set di caratteri può differire dall'ordine lessicografico dei caratteri. Ad esempio, in alcune impostazioni locali europee, il carattere 'a' (valore 0x61) precede il carattere '&\#x00E4;' (valore 0xE4) nel set di caratteri, ma il carattere 'ä' precede lessicograficamente il carattere 'a'.

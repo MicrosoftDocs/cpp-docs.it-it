@@ -10,11 +10,11 @@ helpviewer_keywords:
 - arch compiler option [C++]
 ms.assetid: cc17da15-47bd-4e74-b905-4e73c3bdb8a0
 ms.openlocfilehash: 83379ad7daca7dcb21f4ed0c0b94bb354161204a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273949"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (Architettura minima della CPU)
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
 ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245102"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numerici, booleani e valori letterali di puntatore (C++)
 

@@ -5,36 +5,36 @@ helpviewer_keywords:
 - Microsoft extensions to C/C++
 ms.assetid: 68654516-24ef-4f33-aae2-175f86cc1979
 ms.openlocfilehash: d8104c2df2335e11dcb711108d566e0fdd069762
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301773"
 ---
 # <a name="microsoft-extensions"></a>Estensioni Microsoft
 
-*istruzione di ASM*:<br/>
+*asm-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**ASM** *un'istruzione di assembly* **;** <sub>opt  </sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ASM {***elenco di istruzioni di assembly***};** <sub>opt    </sub>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm {**  *assembly-instruction-list*  **} ;**<sub>opt</sub>
 
-*elenco di istruzioni di assembly*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*un'istruzione di assembly* **;** <sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*un'istruzione di assembly* **;** *elenco di istruzioni di assembly* **;** <sub>opt</sub>
+*assembly-instruction-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
 
-*MS-modificatore-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*MS-modifier* *ms-modificatore-list*<sub>opt</sub>
+*ms-modifier-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ms-modifier* *ms-modifier-list*<sub>opt</sub>
 
-*MS-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**cdecl**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**fastcall**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**stdcall**<br/>
+*ms-modifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__stdcall**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**syscall** (riservato per le implementazioni future)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**oldcall** (riservato per le implementazioni future)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**unaligned** (riservato per le implementazioni future)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*modificatore di base*
+&nbsp;&nbsp;&nbsp;&nbsp;*based-modifier*
 
-*modificatore basato*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**based (** *tipo di base* **)**
+*based-modifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__based (** *based-type* **)**
 
-*tipo basato su*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Nome*
+*based-type*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*name*

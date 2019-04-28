@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
 ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218385"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -116,13 +116,13 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 Questo costruttore inizializza le variabili membro seguenti sui valori specificati:
 
-|Variabile membro|Valore|
+|Variabile membro|Value|
 |---------------------|-----------|
-|`m_bIsMousePressed`|false|
-|`m_bMultipleSort`|false|
-|`m_bAscending`|true|
+|`m_bIsMousePressed`|FALSE|
+|`m_bMultipleSort`|FALSE|
+|`m_bAscending`|TRUE|
 |`m_nHighlightedItem`|-1|
-|`m_bTracked`|false|
+|`m_bTracked`|FALSE|
 |`m_bIsDlgControl`|FALSE|
 |`m_hFont`|NULL|
 
@@ -160,7 +160,7 @@ int GetColumnState(int iColumn) const;
 
 Un valore che indica lo stato di ordinamento della colonna specificata. Nella tabella seguente sono elencati i valori possibili:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |-1|Disposto in ordine decrescente.|
 |0|Non è ordinato.|

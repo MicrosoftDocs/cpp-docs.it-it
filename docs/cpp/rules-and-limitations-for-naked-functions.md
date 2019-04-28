@@ -5,11 +5,11 @@ helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267376"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regole e limitazioni per le funzioni naked
 
@@ -33,7 +33,7 @@ Le seguenti regole e limitazioni si applicano alle funzioni naked:
 
 - Il **naked** parola chiave viene ignorato durante la compilazione con [/clr](../build/reference/clr-common-language-runtime-compilation.md).
 
-- Per la [fastcall](../cpp/fastcall.md) funzioni naked, ogni volta che si è un riferimento nel codice C/C++ a uno degli argomenti di registro, il codice di prologo deve archiviare i valori di tale registro nel percorso dello stack per tale variabile. Ad esempio:
+- Per la [fastcall](../cpp/fastcall.md) le funzioni naked, ogni volta che vi è un riferimento in C /C++ codice a uno degli argomenti di registro, il codice di prologo deve archiviare i valori di tale registro nel percorso dello stack per tale variabile. Ad esempio:
 
 ```cpp
 // nkdfastcl.cpp

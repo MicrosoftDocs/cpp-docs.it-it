@@ -61,11 +61,11 @@ helpviewer_keywords:
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
 ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210053"
 ---
 # <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
@@ -164,16 +164,16 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcslwr_s**|**_strlwr_s**|**_mbslwr_s**|**_wcslwr_s**|
-|**tcslwr_s_l**|**_strlwr_s_l**|**_mbslwr_s_l**|**_wcslwr_s_l**|
+|**_tcslwr_s**|**_strlwr_s**|**_mbslwr_s**|**_wcslwr_s**|
+|**_tcslwr_s_l**|**_strlwr_s_l**|**_mbslwr_s_l**|**_wcslwr_s_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strlwr_s**, **strlwr_s_l**|\<string.h>|
-|**mbslwr_s**, **mbslwr_s_l**|\<mbstring.h>|
-|**wcslwr_s**, **wcslwr_s_l**|\<string.h> o \<wchar.h>|
+|**_strlwr_s**, **_strlwr_s_l**|\<string.h>|
+|**_mbslwr_s**, **_mbslwr_s_l**|\<mbstring.h>|
+|**_wcslwr_s**, **_wcslwr_s_l**|\<string.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

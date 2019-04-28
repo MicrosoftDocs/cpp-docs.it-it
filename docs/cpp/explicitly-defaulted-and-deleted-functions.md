@@ -3,11 +3,11 @@ title: Funzioni impostate come predefinite ed eliminate in modo esplicito
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
 ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184326"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funzioni impostate come predefinite ed eliminate in modo esplicito
 
@@ -39,7 +39,7 @@ Ciò risulta utile per i tipi semplici, ma i tipi complessi stessi definiscono s
 > Lo standard C++11 specifica inoltre le regole aggiuntive seguenti:
 >
 > - Se un costruttore di copia o distruttore è dichiarato in modo esplicito, la generazione automatica dell'operatore di assegnazione di copia è deprecata.
-> - Se un operatore di assegnazione di copia o un distruttore è dichiarato in modo esplicito, la generazione automatica del costruttore di copia è deprecata.
+> - Se un costruttore di assegnazione di copia o un distruttore è dichiarato in modo esplicito, la generazione automatica del costruttore di copia è deprecata.
 >
 > In entrambi i casi, in Visual Studio si continua automaticamente a generare le funzioni necessarie in modo implicito e non viene generato alcun avviso.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _SECURE_SCL
 ms.assetid: 4ffbc788-cc12-4c6a-8cd7-490081675086
 ms.openlocfilehash: dcfaee2906136dffbe79a49f089a079104112e78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295747"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 

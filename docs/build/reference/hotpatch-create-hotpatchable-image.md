@@ -11,11 +11,11 @@ helpviewer_keywords:
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
 ms.openlocfilehash: 8830b26b8fdfc3db2aa5fe31a52e6226fd554946
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291652"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Crea immagine con funzionalità di patch a caldo)
 

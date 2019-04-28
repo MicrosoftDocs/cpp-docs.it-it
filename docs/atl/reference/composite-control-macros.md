@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 ms.openlocfilehash: 2c6d3e350755ef4a0cf4a84561e34619ab3974be
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278319"
 ---
 # <a name="composite-control-macros"></a>Macro di controlli compositi
 

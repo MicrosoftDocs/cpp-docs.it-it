@@ -39,11 +39,11 @@ helpviewer_keywords:
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
 ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285613"
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -89,8 +89,8 @@ Il **mbctohira** e **mbctokata** funzioni testano un carattere *c* e, se possibi
 
 |Routine|Converte|
 |--------------|--------------|
-|**mbctohira**, **mbctohira_l**|Da katakana multibyte a hiragana multibyte.|
-|**mbctokata**, **mbctokata_l**|Da hiragana multibyte a katakana multibyte.|
+|**_mbctohira**, **_mbctohira_l**|Da katakana multibyte a hiragana multibyte.|
+|**_mbctokata**, **_mbctokata_l**|Da hiragana multibyte a katakana multibyte.|
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno le **l** suffisso usare le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali e quelle che hanno il **l** suffisso usare il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

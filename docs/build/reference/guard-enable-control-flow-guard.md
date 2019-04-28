@@ -6,11 +6,11 @@ f1_keywords:
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
 ms.openlocfilehash: e6a8a1545b97976cbe82d1c81b0e70c3dac3a266
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270807"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (abilita la protezione del flusso di controllo)
 
@@ -26,7 +26,7 @@ Abilita la generazione dei controlli di sicurezza di Guard flusso di controllo n
 
 L'opzione **/guard:cf** fa in modo che il compilatore analizzi il flusso di controllo per verificare la presenza di destinazioni di chiamata indiretta in fase di compilazione e che quindi inserisca il codice per verificare le destinazioni in fase di esecuzione. Per impostazione predefinita, **/guard:cf** è disattivato e deve essere abilitato in modo esplicito. Per disabilitare in modo esplicito questa opzione, usare **/guard:cf-**.
 
-**Visual Studio 2017 e versioni successiva**: Questa opzione aggiunge le protezioni per **commutatore** istruzioni che generano tabelle di collegamento.
+**Visual Studio 2017 e versioni successive**: Questa opzione aggiunge le protezioni per **commutatore** istruzioni che generano tabelle di collegamento.
 
 Quando si specifica l'opzione **/guard:cf** (Guard flusso di controllo), il compilatore e il linker inseriscono controlli di sicurezza aggiuntivi in fase di esecuzione per rilevare i tentativi di violazione del codice. Durante la compilazione e il collegamento tutte le chiamate indirette presenti nel codice vengono analizzate allo scopo di individuare tutte le posizioni raggiungibili dal codice quando viene eseguito correttamente. Queste informazioni vengono archiviate in strutture aggiuntive nelle intestazioni dei file binari. Il compilatore inserisce anche un controllo prima di ogni chiamata indiretta presente nel codice al fine di garantire che la destinazione corrisponde a una delle posizioni verificate. Se il controllo eseguito su un sistema operativo compatibile con Guard flusso di controllo non riesce in fase di esecuzione, il programma viene chiuso dal sistema operativo.
 

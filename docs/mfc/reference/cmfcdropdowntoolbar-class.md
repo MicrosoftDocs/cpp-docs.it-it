@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
 ms.openlocfilehash: f2c4135d2a27928dbde4299fa1f8eda42237d893
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238059"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 
@@ -260,4 +260,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Classe CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
-[Procedura dettagliata: Inserimento di controlli nelle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Procedura dettagliata: Inserimento di controlli sulle barre degli strumenti](../../mfc/walkthrough-putting-controls-on-toolbars.md)

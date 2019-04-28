@@ -3,11 +3,11 @@ title: Parola chiave auto
 ms.date: 11/04/2016
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
 ms.openlocfilehash: 3477bd5033fac5b69733db5d6095c1317aac42ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284727"
 ---
 # <a name="auto-keyword"></a>Parola chiave auto
 

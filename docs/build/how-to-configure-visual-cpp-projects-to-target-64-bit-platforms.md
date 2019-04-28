@@ -7,11 +7,11 @@ helpviewer_keywords:
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
 ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274473"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Procedura: Configurare i progetti di Visual C++ a 64 Bit, come destinazione x64 piattaforme
 

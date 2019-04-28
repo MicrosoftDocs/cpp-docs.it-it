@@ -27,11 +27,11 @@ helpviewer_keywords:
 - yn function
 ms.assetid: e14215f3-53d4-4ae8-816e-4c1ec2019316
 ms.openlocfilehash: bd7dc2a1d6e4d8aa52a61ee86e6a45996d028173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258442"
 ---
 # <a name="y0-y1-yn"></a>y0, y1, yn
 

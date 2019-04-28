@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1037
 ms.assetid: 79103bca-ccfb-42e7-aef9-9b90c15b162f
 ms.openlocfilehash: 1c061ede5a2818678bd6181f7cc7325d0d5200d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62243848"
 ---
 # <a name="fatal-error-c1037"></a>Errore irreversibile C1037
 

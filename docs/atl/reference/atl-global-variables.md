@@ -8,11 +8,11 @@ helpviewer_keywords:
 - _pAtlModule
 ms.assetid: e881a319-99ca-4f5d-8a0b-34b3dcd0f37f
 ms.openlocfilehash: 4f98b31d2454b7c6e903e5b5b87bceb4ddcb6961
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248160"
 ---
 # <a name="atl-global-variables"></a>Variabili globali ATL
 

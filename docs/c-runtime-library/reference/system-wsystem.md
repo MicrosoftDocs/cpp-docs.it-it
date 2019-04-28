@@ -30,11 +30,11 @@ helpviewer_keywords:
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
 ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259092"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -84,7 +84,7 @@ Il **system** funzione passa *comando* all'interprete dei comandi, che esegue la
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**TSystem**|**system**|**system**|**_wsystem**|
+|**_tsystem**|**system**|**system**|**_wsystem**|
 
 ## <a name="requirements"></a>Requisiti
 

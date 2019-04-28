@@ -8,11 +8,11 @@ helpviewer_keywords:
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
 ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236556"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Procedure consigliate nella libreria di agenti asincroni
 

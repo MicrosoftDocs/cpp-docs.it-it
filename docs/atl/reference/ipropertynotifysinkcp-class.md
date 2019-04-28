@@ -10,11 +10,11 @@ helpviewer_keywords:
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
 ms.openlocfilehash: b96e5345923d04de74dace173a80b8c4d3ee917f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197890"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Classe IPropertyNotifySinkCP
 

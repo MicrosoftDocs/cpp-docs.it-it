@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
 ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260054"
 ---
 # <a name="catltransactionmanager-class"></a>Classe CAtlTransactionManager
 
@@ -77,7 +77,7 @@ class CAtlTransactionManager;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|TRUE se il fallback è supportato. FALSE in caso contrario.|
 |[m_hTransaction](#m_htransaction)|L'handle della transazione.|

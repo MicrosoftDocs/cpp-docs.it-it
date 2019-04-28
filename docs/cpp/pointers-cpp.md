@@ -8,21 +8,21 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223066"
 ---
 # <a name="pointers-c"></a>Puntatori (C++)
 
 I puntatori vengono dichiarati tramite la seguente sequenza
 
-> \[*identificatori di classi di archiviazione*] \[ *elementi cv-Qualifier*] *gli identificatori di tipo* \[ *ms-modifier*]  *dichiaratore* **;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* **;**
 
 in cui qualsiasi dichiaratore valido del puntatore può essere usato per *dichiaratore*. La sintassi di un dichiaratore di puntatore semplice è la seguente:
 
-> __\*__ \[*elementi CV-Qualifier*] *identificatore* \[ **=** *espressione*]
+> __\*__ \[*cv-qualifiers*] *identifier* \[**=** *expression*]
 
 1. Gli identificatori di dichiarazione:
 
@@ -50,7 +50,7 @@ Il dichiaratore per un puntatore a funzione ha il seguente aspetto:
 
 La sintassi per una matrice di puntatori ha il seguente aspetto:
 
-> __\*__ *Identificatore* **\[** \[ *espressione costante*] **]**
+> __\*__ *identifier* **\[** \[*constant-expression*] **]**
 
 Più dichiaratori e i relativi inizializzatori possono essere uniti in una sola dichiarazione in un elenco separato da virgola che segue l'identificatore della dichiarazione.
 

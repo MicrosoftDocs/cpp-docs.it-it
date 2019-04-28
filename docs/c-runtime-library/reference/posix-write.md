@@ -21,11 +21,11 @@ helpviewer_keywords:
 - write function
 ms.assetid: 1cbf112e-b9ef-4df6-993a-83abd4213acd
 ms.openlocfilehash: c9093670d075e75b5f98b8cd4a87e0fb56025374
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304683"
 ---
 # <a name="write"></a>scrivere
 

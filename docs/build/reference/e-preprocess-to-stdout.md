@@ -10,11 +10,11 @@ helpviewer_keywords:
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
 ms.openlocfilehash: 710be7e1dfc4de89bc1eed3e23e4803c561da10c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273261"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (Pre-elabora in stdout)
 

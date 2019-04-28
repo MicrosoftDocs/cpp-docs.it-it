@@ -10,21 +10,21 @@ helpviewer_keywords:
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
 ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244220"
 ---
 # <a name="references-c"></a>Riferimenti (C++)
 
-Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto che si trova in un'altra posizione in memoria. A differenza di un puntatore, dopo l'inizializzazione non è possibile impostare un riferimento in modo che indichi un oggetto diverso o che sia impostato su Null. Esistono due tipi di riferimenti: i riferimenti lvalue che fanno riferimento a un nome variabile e i riferimenti rvalue che fanno riferimento a un [oggetto temporaneo](../cpp/temporary-objects.md). L'operatore & indica un riferimento lvalue e l'operatore && indica un riferimento rvalue o un riferimento universale (rvalue o lvalue) in base al contesto.
+Un riferimento, analogamente a un puntatore, archivia l'indirizzo di un oggetto che si trova in un'altra posizione in memoria. A differenza di un puntatore, dopo l'inizializzazione non è possibile impostare un riferimento in modo che indichi un oggetto diverso o che sia impostato su Null. Esistono due tipi di riferimenti: i riferimenti lvalue che fanno riferimento a un nome variabile e i riferimenti rvalue che fanno riferimento a un [oggetto temporaneo](../cpp/temporary-objects.md). I & operatore indica un riferimento lvalue e & & operatore indica un riferimento rvalue o un riferimento universale (rvalue o lvalue) a seconda del contesto.
 
 È possibile dichiarare i riferimenti tramite la seguente sintassi:
 
-> \[*identificatori di classi di archiviazione*] \[ *elementi cv-Qualifier*] *gli identificatori di tipo* \[ *ms-modifier*]  *dichiaratore* \[ **=** *espressione*]**;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
 
-È possibile usare qualsiasi dichiaratore valido che specifica un riferimento. A meno che il riferimento non sia un riferimento al tipo di funzione o di matrice, si applica la sintassi seguente semplificata:
+È possibile utilizzare qualsiasi dichiaratore valido che specifica un riferimento. A meno che il riferimento non sia un riferimento al tipo di funzione o di matrice, si applica la sintassi seguente semplificata:
 
 > \[*identificatori di classi di archiviazione*] \[ *elementi cv-Qualifier*] *gli identificatori di tipo* \[ **&** o **&&**] \[ *elementi cv-Qualifier*] *identificatore* \[ **=** *espressione*]**;**
 
@@ -67,7 +67,7 @@ int &ref, *ptr, k;
 
 Un riferimento contiene l'indirizzo di un oggetto, ma dal punto di vista sintattico si comporta come un oggetto.
 
-Nel seguente programma osservare come il nome dell'oggetto, `s` e il riferimento all'oggetto, `SRef`, possano essere usati in modo identico nei programmi:
+Nel seguente programma osservare come il nome dell'oggetto, `s` e il riferimento all'oggetto, `SRef`, possano essere utilizzati in modo identico nei programmi:
 
 ## <a name="example"></a>Esempio
 

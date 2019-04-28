@@ -7,11 +7,11 @@ helpviewer_keywords:
 - BK4504
 ms.assetid: b56ee2d4-ad44-40f4-98c0-75934ea44a6c
 ms.openlocfilehash: 7ffcb7c2e6ae512006ccd29c87b05c53fdfcaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279300"
 ---
 # <a name="bscmake-warning-bk4504"></a>Avviso BK4504 di BSCMAKE
 

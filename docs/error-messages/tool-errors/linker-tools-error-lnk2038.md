@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2038
 ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298867"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Errore degli strumenti del linker LNK2038
 
@@ -26,13 +26,13 @@ Visual Studio definisce i simboli seguenti per impedire l'accesso del codice inc
 
 - `_MSC_VER` Indica i numeri di versione principale e secondaria del compilatore Visual C++ che consente di compilare un'app o una libreria. Il codice compilato con una versione del compilatore di Visual C++ non è compatibile con il codice compilato utilizzando una versione con diversi numeri di versione maggiore e minore. Per altre informazioni, vedere `_MSC_VER` nelle [Predefined Macros](../../preprocessor/predefined-macros.md).
 
-   Se si collega a una libreria che non è compatibile con la versione del compilatore Visual C++ in uso e non è possibile acquisire o creare una versione compatibile della libreria, è possibile utilizzare una versione precedente del compilatore per compilare il progetto: modificare il **set strumenti della piattaforma** proprietà del progetto per il set di strumenti precedenti. Per altre informazioni, vedere [procedura: modificare il Framework di destinazione e il set di strumenti della piattaforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Se si collega a una libreria che non è compatibile con la versione del compilatore Visual C++ in uso e non è possibile acquisire o creare una versione compatibile della libreria, è possibile utilizzare una versione precedente del compilatore per compilare il progetto: modificare il **set strumenti della piattaforma** proprietà del progetto per il set di strumenti precedenti. Per altre informazioni, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL` Indica il livello di sicurezza e le funzionalità sono abilitate nella libreria Standard C++ di debug. Queste funzionalità possono modificare la rappresentazione di alcuni oggetti della libreria C++ standard e quindi renderli incompatibili con quelli che utilizzano funzionalità di sicurezza e debug diverse. Per altre informazioni, vedere [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 
 - `RuntimeLibrary` Indica la versione di runtime della libreria Standard C++ e C viene utilizzato da un'app o una libreria. Il codice che utilizza una versione della libreria C++ standard o del runtime C è incompatibile con il codice che utilizza una versione diversa. Per altre informazioni, vedere [/MD, /MT, /LD (utilizzo della libreria di runtime)](../../build/reference/md-mt-ld-use-run-time-library.md).
 
-- `_PPLTASKS_WITH_WINRT` Indica che il codice che usa il [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) è collegato a oggetti compilati utilizzando un'impostazione diversa per il [/ZW](../../build/reference/zw-windows-runtime-compilation.md) opzione del compilatore. (**/ZW** supporta C + + c++ /CX.) Codice che utilizza o dipende dalla libreria PPL deve essere compilato usando le stesse **/ZW** impostazione utilizzato nel resto dell'app.
+- `_PPLTASKS_WITH_WINRT` Indica che il codice che usa il [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) è collegato a oggetti compilati utilizzando un'impostazione diversa per il [/ZW](../../build/reference/zw-windows-runtime-compilation.md) opzione del compilatore. (**/ZW** supporta C++/CX.) Codice che utilizza o dipende dalla libreria PPL deve essere compilato usando le stesse **/ZW** impostazione utilizzato nel resto dell'app.
 
 Assicurarsi che i valori di questi simboli siano coerenti in tutti i progetti della soluzione Visual Studio e anche con il codice e le librerie a cui l'applicazione fa riferimento.
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /FS compiler option [C++]
 ms.assetid: b2caaffe-f6e1-4963-b068-648f06b105e0
 ms.openlocfilehash: 97ffb9529087329cf327ba704523b93d5d9b99b1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270979"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Forza scritture PDB sincrone)
 

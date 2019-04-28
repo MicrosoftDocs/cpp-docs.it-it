@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
 ms.openlocfilehash: 5e4a5c86e53d74c8b704ee3780991d496fc1802a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273586"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Mantiene l'ultimo codice di errore per le chiamate PInvoke)
 

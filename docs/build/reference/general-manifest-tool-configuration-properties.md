@@ -10,11 +10,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.AssemblyIdentity
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
 ms.openlocfilehash: 9acdb7f5c934a8cabdd1803074778ac9f01f4960
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271030"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Generale, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt;
 
@@ -44,4 +44,4 @@ Per accedere alla finestra di dialogo di questa pagina delle proprietà, aprire 
 
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Pagine delle proprietà Strumento Manifesto](manifest-tool-property-pages.md)<br>
-[Impostare il compilatore C++ e creare proprietà in Visual Studio](../working-with-project-properties.md)
+[Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md)

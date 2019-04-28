@@ -15,11 +15,11 @@ helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
 ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262567"
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 
@@ -443,7 +443,7 @@ Una coppia che contiene un iteratore e un valore booleano. Vedere la sezione Oss
 
 ### <a name="remarks"></a>Note
 
-La prima funzione membro determina l'esistenza di un elemento X nella sequenza di cui chiave ha ordinamento equivalente a quella di `value`. Se non crea tale elemento X e la inizializza con `value`. La funzione determina quindi che l'iteratore `where` che designa X. Se si è verificato un inserimento, la funzione restituisce `std::pair(where, true)`. In caso contrario restituirà `std::pair(where, false)`.
+La prima funzione membro determina l'esistenza di un elemento X nella sequenza di cui chiave ha ordinamento equivalente a quella di `value`. Se non crea tale elemento X e la inizializza con `value`. La funzione determina quindi che l'iteratore `where` che designa X. Se si è verificato un inserimento, la funzione restituisce `std::pair(where, true)`. In caso contrario, restituirà `std::pair(where, false)`.
 
 La seconda funzione membro restituisce insert ( `value`), usando `_Where` come punto di partenza nella sequenza controllata per la ricerca del punto di inserimento.
 

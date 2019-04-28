@@ -10,11 +10,11 @@ helpviewer_keywords:
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
 ms.openlocfilehash: 178acc548fb9c89dcfde104d2a12d85637440e28
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294252"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (controlla la valutazione di constexpr)
 

@@ -11,11 +11,11 @@ f1_keywords:
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
 ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279099"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -36,9 +36,9 @@ A partire da Visual Studio 2015, l'implementazione di `steady_clock` è stata mo
 |[Classe duration](../standard-library/duration-class.md)|Descrive un tipo che contiene un intervallo di tempo.|
 |[Classe time_point](../standard-library/time-point-class.md)|Descrive un tipo che rappresenta un punto nel tempo.|
 
-### <a name="structs"></a>Strutture
+### <a name="structs"></a>Struct
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Struct common_type](../standard-library/common-type-structure.md)|Descrive le specializzazioni della classe modello [common_type](../standard-library/common-type-class.md) per la creazione di istanze di `duration` e `time_point`.|
 |[Struct duration_values](../standard-library/duration-values-structure.md)|Fornisce valori specifici per il parametro di modello `duration` `Rep`.|
@@ -89,9 +89,9 @@ Per altre informazioni sui tipi di rapporto usati nei seguenti typedef, vedere [
 |Literal|Descrizione|
 |-------------|-----------------|
 |chrono::hours operator "" h(unsigned long long Val)|Specifica le ore come valore integrale.|
-|chrono:: Duration\<ratio double,\<3600 >> operatore "" h (long double Val)|Specifica le ore come valore a virgola mobile.|
+|chrono::duration\<double, ratio\<3600> > operator "" h(long double Val)|Specifica le ore come valore a virgola mobile.|
 |chrono::minutes (operator "" min)(unsigned long long Val)|Specifica i minuti come valore integrale.|
-|chrono:: Duration\<ratio double,\<60 >> (operatore "" min) (long double Val)|Specifica i minuti come valore a virgola mobile.|
+|chrono::duration\<double, ratio\<60> > (operator "" min)( long double Val)|Specifica i minuti come valore a virgola mobile.|
 |chrono::seconds operator "" s(unsigned long long Val)|Specifica i minuti come valore integrale.|
 |chrono::duration\<double> operator "" s(long double Val)|Specifica i secondi come valore a virgola mobile.|
 |chrono::milliseconds operator "" ms(unsigned long long Val)|Specifica i millisecondi come valore integrale.|

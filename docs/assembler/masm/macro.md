@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MACRO directive
 ms.assetid: 89434f7c-bc2c-4e91-8940-fe2db8785233
 ms.openlocfilehash: 321f8472cd1622716af1114deefbee70e1982724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62202869"
 ---
 # <a name="macro"></a>MACRO
 
@@ -19,8 +19,8 @@ Contrassegna un blocco di macro chiamato *name* e stabilisce *parametro* segnapo
 
 ## <a name="syntax"></a>Sintassi
 
-> *nome* MACRO [[*parametro* [[: REQ |: =*predefinita* |: VARARG]]]]...<br/>
-> *Istruzioni*<br/>
+> *name* MACRO [[*parameter* [[:REQ | :=*default* | :VARARG]] ]] ...<br/>
+> *statements*<br/>
 > ENDM [[*valore*]]
 
 ## <a name="remarks"></a>Note

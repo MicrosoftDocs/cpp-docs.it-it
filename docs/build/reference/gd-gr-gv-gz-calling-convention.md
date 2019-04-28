@@ -22,11 +22,11 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
 ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270952"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
 
@@ -41,7 +41,7 @@ Queste opzioni determinano l'ordine di funzione gli argomenti vengono inseriti n
 
 ## <a name="remarks"></a>Note
 
-**/GD**, l'impostazione predefinita, consente di specificare il [cdecl](../../cpp/cdecl.md) convenzione di chiamata per tutte le funzioni ad eccezione di membro C++ funzioni e funzioni che sono contrassegnate [stdcall](../../cpp/stdcall.md), [_ fastcall](../../cpp/fastcall.md), oppure [vectorcall](../../cpp/vectorcall.md).
+**/GD**, l'impostazione predefinita, consente di specificare il [cdecl](../../cpp/cdecl.md) convenzione di chiamata per tutte le funzioni ad eccezione di C++ funzioni membro e funzioni che sono contrassegnate [stdcall](../../cpp/stdcall.md), [fastcall](../../cpp/fastcall.md), o [vectorcall](../../cpp/vectorcall.md).
 
 **/GR** consente di specificare il `__fastcall` convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++, le funzioni denominata `main`e le funzioni che sono contrassegnate `__cdecl`, `__stdcall`, o `__vectorcall`. Tutti i `__fastcall` funzioni devono avere prototipi. Questa convenzione di chiamata è disponibile solo nei compilatori destinati a x86 e viene ignorata dai compilatori destinati ad altre architetture.
 
@@ -54,7 +54,7 @@ Le funzioni che accettano un numero variabile di argomenti devono essere contras
 **/GD**, **/Gr**, **/Gv** e **/Gz** non sono compatibili con [/CLR: safe](clr-common-language-runtime-compilation.md) o **/clr: pure**. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
 > [!NOTE]
-> Per impostazione predefinita per x86 processori, le funzioni membro C++ utilizzano [thiscall](../../cpp/thiscall.md).
+> Per impostazione predefinita per x86 processori, C++ uso di funzioni membro [thiscall](../../cpp/thiscall.md).
 
 Per tutti i processori, una funzione membro contrassegnata in modo esplicito come `__cdecl`, `__fastcall`, `__vectorcall`, o `__stdcall` utilizza la convenzione di chiamata specificata se non viene ignorata in tale architettura. Una funzione membro che accetta un numero variabile di argomenti sempre viene utilizzato il `__cdecl` convenzione di chiamata.
 

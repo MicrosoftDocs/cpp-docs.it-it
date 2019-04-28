@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
 ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305515"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Uso di più file di risorse e i file di intestazione Visual c++
 

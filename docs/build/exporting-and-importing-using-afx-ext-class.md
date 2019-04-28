@@ -12,11 +12,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
 ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195329"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Esportazione e importazione tramite AFX_EXT_CLASS
 
@@ -114,7 +114,7 @@ Poiché MFC Usa sempre il `AFX_DATA` simbolo per elementi di dati viene definita
 
 - [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
-- [Importare in un'applicazione che usa declspec](importing-into-an-application-using-declspec-dllimport.md)
+- [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)
 

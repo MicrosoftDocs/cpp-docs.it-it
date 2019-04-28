@@ -15,11 +15,11 @@ helpviewer_keywords:
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
 ms.openlocfilehash: 2ec83fc320d65f5f51c14f9523544972cd69c66c
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246408"
 ---
 # <a name="ccommultithreadmodel-class"></a>Classe CComMultiThreadModel
 
@@ -35,7 +35,7 @@ class CComMultiThreadModel
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Fa riferimento alla classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).|
 |[CComMultiThreadModel::CriticalSection](#criticalsection)|Fa riferimento alla classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).|
@@ -43,7 +43,7 @@ class CComMultiThreadModel
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CComMultiThreadModel::Decrement](#decrement)|(Statico) Decrementa il valore della variabile specificata in modo thread-safe.|
 |[CComMultiThreadModel::Increment](#increment)|(Statico) Incrementa il valore della variabile specificata in modo thread-safe.|

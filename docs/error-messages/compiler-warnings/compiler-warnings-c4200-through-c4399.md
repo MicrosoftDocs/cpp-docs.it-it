@@ -1,6 +1,6 @@
 ---
-title: Del compilatores C4200 a C4399
-ms.date: 11/17/2017
+title: Avvisi del compilatore da C4200 a C4399
+ms.date: 04/21/2019
 f1_keywords:
 - C4203
 - C4277
@@ -28,14 +28,14 @@ f1_keywords:
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 5a257fa5ac39a9b8f593062d6a670c8d1ce4187f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280581"
 ---
-# <a name="compiler-warnings-c4200-through-c4399"></a>Del compilatores C4200 a C4399
+# <a name="compiler-warnings-c4200-through-c4399"></a>Avvisi del compilatore da C4200 a C4399
 
 Gli articoli in questa sezione della documentazione illustrano un subset dei messaggi di avviso generati dal compilatore.
 
@@ -66,15 +66,15 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 4) C4221](../../error-messages/compiler-warnings/compiler-warning-level-4-c4221.md)|utilizzata estensione non standard: '*identifier*': non può essere inizializzato con l'indirizzo della variabile automatica '*variabile*'|
 |[Avviso del compilatore (livelli 1 e 4) C4223](../../error-messages/compiler-warnings/compiler-warning-levels-1-and-4-c4223.md)|utilizzata estensione non standard: matrice non lvalue convertita in puntatore|
 |[Avviso del compilatore (livello 1) C4224](../../error-messages/compiler-warnings/compiler-warning-level-1-c4224.md)|utilizzata estensione non standard: parametro formale '*identificatore*' è stato precedentemente definito come un tipo|
-|[Del compilatore Warning (level 1, errore) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|utilizzata estensione non standard: '*parola chiave*' è una parola chiave obsoleta|
+|[Avviso del compilatore (livello 1, errore) C4226](../../error-messages/compiler-warnings/compiler-warning-level-1-c4226.md)|utilizzata estensione non standard: '*parola chiave*' è una parola chiave obsoleta|
 |[Avviso del compilatore (livello 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|utilizzato anacronismo: i qualificatori di riferimento vengono ignorati|
 |[Avviso del compilatore (livello 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|utilizzata estensione non standard: i qualificatori dopo la virgola nell'elenco dei dichiaratori vengono ignorati|
 |[Avviso del compilatore (livello 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|utilizzato anacronismo: i modificatori di dati vengono ignorati|
 |[Avviso del compilatore (livello 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|utilizzato anacronismo: modificatori e qualificatori frammisti. Qualificatori ignorati|
 |[Avviso del compilatore (livello 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|utilizzata estensione non standard: '*identifier*': indirizzo di dllimport '*dllimport*' non è statico, identità non garantita|
-|[Del compilatore (livello 4, errore) Avviso C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|utilizzata estensione non standard: '*parola chiave*' supportata solo in C++, non C (parola chiave)|
-|[Del compilatore (livello 4, errore) Avviso C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|utilizzata estensione non standard: '*parola chiave*' parola chiave riservata per utilizzi futuri|
-|[Del compilatore (livello 4, errore) Avviso C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|utilizzata estensione non standard: '*parola chiave*' parola chiave non supportata su questa architettura|
+|[Avviso del compilatore (livello 4, errore) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|utilizzata estensione non standard: '*parola chiave*' supportata solo in C++, non C (parola chiave)|
+|[Avviso del compilatore (livello 4, errore) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|utilizzata estensione non standard: '*parola chiave*' parola chiave riservata per utilizzi futuri|
+|[Avviso del compilatore (livello 4, errore) C4235](../../error-messages/compiler-warnings/compiler-warning-level-4-c4235.md)|utilizzata estensione non standard: '*parola chiave*' parola chiave non supportata su questa architettura|
 |[Avviso del compilatore (livello 1) C4237](../../error-messages/compiler-warnings/compiler-warning-level-1-c4237.md)|«*parola chiave*' parola chiave non ancora è supportata, ma riservato per utilizzi futuri|
 |[Avviso del compilatore (livello 4) C4238](../../error-messages/compiler-warnings/compiler-warning-level-4-c4238.md)|utilizzata estensione non standard: rvalue di classe utilizzato come lvalue|
 |[Avviso del compilatore (livello 4) C4239](../../error-messages/compiler-warnings/compiler-warning-level-4-c4239.md)|utilizzata estensione non standard: '*token*': conversione da '*type1*'a'*type2*'|
@@ -114,7 +114,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|«*operatore*': errata corrispondenza tra costanti unsigned/negative|
 |[Avviso del compilatore (livello 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|utilizzata estensione non standard: '*variabile*': variabile di controllo ciclo dichiarata nel ciclo for e viene utilizzata all'esterno dell'ambito del ciclo for; è in conflitto con la dichiarazione in ambito esterno|
 |[Avviso del compilatore (livello 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|utilizzata estensione non standard: '*variabile*': variabile di controllo ciclo dichiarata nel ciclo for e viene usato all'esterno dell'ambito del ciclo for|
-|[Avviso del compilatore (livello 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|Specifica di eccezione C++ ignorata eccetto to indicare che una funzione non è __declspec(nothrow)|
+|[Avviso del compilatore (livello 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|C++Specifica di eccezione ignorata, eccetto to indicare che una funzione non è __declspec(nothrow)|
 |[Avviso del compilatore (livello 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|«*dichiarazione*': operatore delete corrispondente non trovato; se l'inizializzazione genera un'eccezione, memoria non verrà liberata|
 |[Avviso del compilatore (livello 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|«*shift_operator*': calcolo shift negativo o troppo grande, un comportamento non definito|
 |[Avviso del compilatore (livello 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|«*matrice*': matrice è troppo piccola per includere un carattere di terminazione null|
@@ -152,7 +152,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1) C4330|attributo '*attributo*'per la sezione'*sezione*' ignorato|
 |[Avviso del compilatore (livello 1) C4333](../../error-messages/compiler-warnings/compiler-warning-level-1-c4333.md)|«*shift_operator*': spostamento a destra da eccessiva. perdita di dati|
 |[Avviso del compilatore (livello 3) C4334](../../error-messages/compiler-warnings/compiler-warning-level-3-c4334.md)|«*shift_operator*': risultato dello shift a 32 bit convertito in modo implicito a 64 bit (si intendeva eseguire lo shift a 64 bit?)|
-|[Avviso del compilatore C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Rilevato formato di file Mac: convertire il file di origine in formato DOS o UNIX|
+|[Genera un avviso C4335](../../error-messages/compiler-warnings/compiler-warning-c4335.md)|Rilevato formato di file Mac: convertire il file di origine in formato DOS o UNIX|
 |[Avviso del compilatore (livello 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|Importa libreria dei tipi di riferimenti incrociati '*libreria1*'prima di importare'*libreria2*'|
 |[Avviso del compilatore (livello 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|libreria dei tipi di riferimenti incrociati '*libreria1*'in'*libreria2*' viene automaticamente importato|
 |Avviso del compilatore (livello 4) C4338|#pragma *direttiva*: sezione standard '*sezione*' viene utilizzato|
@@ -166,7 +166,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|modifica del comportamento: '*membro1*'chiamato al posto di'*membro2*'|
 |Avviso del compilatore (livello 1) C4352|«*identificatore*': funzione intrinseca già definita|
 |[Avviso del compilatore (livello 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|utilizzata estensione non standard: costante 0 come espressione di funzione.  In alternativa, usare NOOP' (funzione intrinseca)|
-|[Avviso del compilatore C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)avviso del compilatore (livello 1 e livello 4) C4355|'this': utilizzato nell'elenco di inizializzatori di membro di base|
+|[Genera un avviso C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)avviso del compilatore (livello 1 e livello 4) C4355|'this': utilizzato nell'elenco di inizializzatori di membro di base|
 |[Avviso del compilatore (livello 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|«*membro*': membro dati statici non possa essere inizializzato tramite classi derivate|
 |[Avviso del compilatore (livello 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|argomento di matrice param trovato nell'elenco di argomenti formali per delegato '*delegare*'ignorato durante la generazione'*funzione*'|
 |[Avviso del compilatore (livello 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|«*operatore*': tipo restituito di delegati combinati non 'void', valore restituito è indefinito|
@@ -176,7 +176,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|«*espressione*': conversione da '*type1*'a'*type2*', mancata corrispondenza tra signed e unsigned|
 |[Avviso del compilatore (livello 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|Il risultato dell'operatore unario '*operatore*' operatore potrebbe essere non allineato|
 |Avviso del compilatore (livello 3) C4367|Conversione da '*type1*'a'*type2*' può causare l'eccezione di disallineamento del tipo di dati|
-|[Avviso (errore) del compilatore C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|non è possibile definire '*membro*'come 'membro di gestiti*tipo*': tipi misti non sono supportati|
+|[Genera un avviso C4368 (errore)](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|non è possibile definire '*membro*'come 'membro di gestiti*tipo*': tipi misti non sono supportati|
 |[Avviso del compilatore (livello 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|«*enumeratore*': valore dell'enumeratore '*valore*'non può essere rappresentato come'*tipo*', il valore è'*nuovo_valore*»|
 |Genera un avviso C4370|«*classname*': il layout della classe è stato modificato da una versione precedente del compilatore per migliorare la compressione|
 |[Avviso del compilatore (livello 3) C4371](../../error-messages/compiler-warnings/c4371.md)|«*NomeClasse*': layout della classe sia stato modificato da una versione precedente del compilatore per migliorare la compressione del membro '*membro*»|
@@ -199,9 +199,14 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 1) C4391](../../error-messages/compiler-warnings/compiler-warning-level-1-c4391.md)|«*function_signature*': tipo restituito non corretto per la funzione intrinseca, previsto '*tipo*»|
 |[Avviso del compilatore (livello 1) C4392](../../error-messages/compiler-warnings/compiler-warning-level-1-c4392.md)|«*function_signature*': numero errato di argomenti per una funzione intrinseca, previsto '*argument_count*' argomenti|
 |[Avviso del compilatore (livello 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'*variabile*': const non ha alcun effetto sul '*letterale*' membro dati; ignorata|
-|[Avviso del compilatore C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|«*funzione*': simbolo per dominio di applicazione non deve essere contrassegnato con __declspec('dllexport')|
+|[Genera un avviso C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|«*funzione*': simbolo per dominio di applicazione non deve essere contrassegnato con __declspec('dllexport')|
 |[Avviso del compilatore (livello 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|«*funzione*': funzione membro verrà richiamata su una copia del membro dati initonly '*membro*»|
 |[Avviso del compilatore (livello 2) C4396](compiler-warning-level-2-c4396.md)|«*funzione*': non è possibile utilizzare l'identificatore inline quando una dichiarazione friend fa riferimento alla specializzazione di un modello di funzione|
 |[Avviso del compilatore (livello 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute ignorato|
 |[Avviso del compilatore (livello 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|«*variabile*': oggetto globale per processo potrebbe non funzionare correttamente con più domini di applicazione; si consiglia di utilizzare __declspec(appdomain)|
 |[Avviso del compilatore (livello 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|«*simbolo*': simbolo per processo non dovrebbe essere contrassegnato con __declspec('dllimport') quando viene compilato con /clr: pure|
+
+## <a name="see-also"></a>Vedere anche
+
+[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md) \
+[Avvisi del compilatore da C4000 - C5999](compiler-warnings-c4000-c5999.md)

@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
 ms.openlocfilehash: 5c5836a11dbf9e05db5b56e0bc5c062dd1617b2f
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253582"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Classe CDataRecoveryHandler
 
@@ -689,4 +689,4 @@ Per usare questo metodo, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES deve essere i
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
-[Procedura: Aggiungere il supporto Gestione riavvio](../../mfc/how-to-add-restart-manager-support.md)
+[Procedura: Aggiungere il supporto di Gestione riavvio](../../mfc/how-to-add-restart-manager-support.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
 ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252727"
 ---
 # <a name="allocators"></a>Allocatori
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ATL threads, allocating
 ms.assetid: 66b2166a-8c50-49fd-b8e4-7f293470327d
 ms.openlocfilehash: ef1f86ca832674ba5710083b08b67f0a775a7a33
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246153"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Classe CComSimpleThreadAllocator
 

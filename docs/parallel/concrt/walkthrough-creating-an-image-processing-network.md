@@ -1,16 +1,16 @@
 ---
 title: 'Procedura dettagliata: Creazione di una rete di elaborazione di immagini'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205835"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Procedura dettagliata: Creazione di una rete di elaborazione di immagini
 
@@ -132,7 +132,7 @@ Il `loaded_bitmaps` buffer dei messaggi è importante perché, come un `unbounde
 
 Se l'applicazione richiede più quel messaggio blocca l'elaborazione del messaggio, anziché solo un blocco di messaggi che innanzitutto accetta il messaggio, è possibile usare un altro tipo di blocco di messaggio, ad esempio `overwrite_buffer`. Il `overwrite_buffer` la classe contiene un solo messaggio alla volta, ma si propaga messaggio per ciascuna delle relative destinazioni.
 
-La figura seguente mostra una rete di elaborazione delle immagini:
+Nella figura seguente viene illustrata la rete di elaborazione delle immagini:
 
 ![Rete di elaborazione di immagini](../../parallel/concrt/media/concrt_imageproc.png "rete di elaborazione di immagini")
 

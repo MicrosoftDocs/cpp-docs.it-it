@@ -31,11 +31,11 @@ helpviewer_keywords:
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288823"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -67,7 +67,7 @@ Codice di uscita del thread
 Ad esempio Win32 **ExitThread** API **endthreadex** non chiude l'handle del thread. Pertanto, quando si usano **beginthreadex** e **endthreadex**, è necessario chiudere l'handle del thread chiamando Win32 **CloseHandle** API.
 
 > [!NOTE]
-> **endthread** e **endthreadex** determinano dei distruttori C++ in sospeso nel thread non deve essere chiamato.
+> **endthread** e **endthreadex** causare C++ distruttori in sospeso nel thread non deve essere chiamato.
 
 ## <a name="requirements"></a>Requisiti
 

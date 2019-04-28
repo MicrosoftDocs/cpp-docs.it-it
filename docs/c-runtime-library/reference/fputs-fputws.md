@@ -29,11 +29,11 @@ helpviewer_keywords:
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
 ms.openlocfilehash: 3f7c7cff3300ae28717062a41aebd9e19c0cb5e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287967"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -57,7 +57,7 @@ int fputws(
 *str*<br/>
 Stringa di output.
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
@@ -76,7 +76,7 @@ Le due funzioni si comportano in modo identico se il flusso viene aperto in moda
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**fputts**|**fputs**|**fputs**|**fputws**|
+|**_fputts**|**fputs**|**fputs**|**fputws**|
 
 ## <a name="requirements"></a>Requisiti
 

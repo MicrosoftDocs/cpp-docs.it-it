@@ -6,11 +6,11 @@ helpviewer_keywords:
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274170"
 ---
 # <a name="optimization-best-practices"></a>Le procedure consigliate di ottimizzazione
 
@@ -93,7 +93,7 @@ Un'altra utile pragma per limitare il livello di incorporamento è `#pragma inli
 
 ## <a name="restrict-and-assume"></a>Restrict e \__assume
 
-Esistono un paio di parole chiave in Visual C++ che possono migliorare le prestazioni: [Restrict](../cpp/extension-restrict.md) e [assume](../intrinsics/assume.md).
+Esistono un paio di parole chiave nell'oggetto visivo C++ che può migliorare le prestazioni: [Restrict](../cpp/extension-restrict.md) e [assume](../intrinsics/assume.md).
 
 In primo luogo, si noti che `__restrict` e `__declspec(restrict)` sono due cose diverse. Mentre sono in qualche modo correlati, presentano una semantica è diversa. `__restrict` è un qualificatore di tipo, quali `const` o `volatile`, ma esclusivamente per i tipi di puntatore.
 
@@ -107,7 +107,7 @@ Con `__assume`, uno sviluppatore può indicare al compilatore di fare ipotesi su
 
 Ad esempio `__assume(a < 5);` indica che query optimizer alla riga di codice la variabile `a` è inferiore a 5. Anche in questo caso si tratta di un suggerimento al compilatore. Se `a` è effettivamente 6 a questo punto del programma, il comportamento del programma dopo che è ottimizzato il compilatore potrebbe non essere quello previsto. `__assume` è particolarmente utile prima le istruzioni switch e/o le espressioni condizionali.
 
-Esistono alcune limitazioni `__assume`. In primo luogo, ad esempio `__restrict`, è solo un suggerimento, in modo che il compilatore è libero per ignorare la richiesta. Inoltre, `__assume` attualmente funziona solo con le disuguaglianze rispetto alle costanti. Non propaga le disuguaglianze simboliche, ad esempio assume(a < b).
+Esistono alcune limitazioni `__assume`. In primo luogo, ad esempio `__restrict`, è solo un suggerimento, in modo che il compilatore è libero per ignorare la richiesta. Inoltre, `__assume` attualmente funziona solo con le disuguaglianze rispetto alle costanti. Non propaga le disuguaglianze simboliche, ad esempio, assume(a < b).
 
 ## <a name="intrinsic-support"></a>Supporto intrinseco
 

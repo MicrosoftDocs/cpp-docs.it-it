@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224194"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
@@ -49,7 +49,7 @@ Per informazioni su come disabilitare gli avvisi relativi agli iteratori verific
 
 ### <a name="example"></a>Esempio
 
-Per specificare un valore per la macro ITERATOR_DEBUG_LEVEL, usare una [/D](../build/reference/d-preprocessor-definitions.md) opzione del compilatore per definirla nella riga di comando oppure usare `#define` prima la libreria Standard C++ intestazioni sono incluse nei file di origine. Ad esempio, nella riga di comando, compilare *cpp* in modalità di debug e usare supporto degli iteratori di debug, è possibile specificare la definizione di macro ITERATOR_DEBUG_LEVEL:
+Per specificare un valore per la macro ITERATOR_DEBUG_LEVEL, usare una [/D](../build/reference/d-preprocessor-definitions.md) opzione del compilatore per definirla nella riga di comando oppure utilizzare `#define` prima di C++ intestazioni della libreria Standard sono inclusi nei file di origine. Ad esempio, nella riga di comando, compilare *cpp* in modalità di debug e usare supporto degli iteratori di debug, è possibile specificare la definizione di macro ITERATOR_DEBUG_LEVEL:
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223756"
 ---
 # <a name="numget-class"></a>Classe num_get
 
@@ -173,13 +173,13 @@ Inizio dell'intervallo di caratteri da cui leggere il numero.
 *last*<br/>
 Fine dell'intervallo di caratteri da cui leggere il numero.
 
-*In_losbase*<br/>
+*_Iosbase*<br/>
 [ios_base](../standard-library/ios-base-class.md) i cui flag vengono usati per la conversione.
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato a cui viene aggiunto failbit (vedere [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) in caso di errore.
 
-*Val*<br/>
+*val*<br/>
 Valore letto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -420,13 +420,13 @@ Inizio dell'intervallo di caratteri da cui leggere il numero.
 *last*<br/>
 Fine dell'intervallo di caratteri da cui leggere il numero.
 
-*In_losbase*<br/>
+*_Iosbase*<br/>
 [ios_base](../standard-library/ios-base-class.md) i cui flag vengono usati per la conversione.
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato a cui viene aggiunto failbit (vedere [ios_base:: iostate](../standard-library/ios-base-class.md#iostate)) in caso di errore.
 
-*Val*<br/>
+*val*<br/>
 Valore letto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -580,11 +580,11 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \> 1: Questi valori non definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 

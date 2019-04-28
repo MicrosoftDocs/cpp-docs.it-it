@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
 ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260844"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 

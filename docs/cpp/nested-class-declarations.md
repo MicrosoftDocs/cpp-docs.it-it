@@ -10,15 +10,15 @@ helpviewer_keywords:
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
 ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301552"
 ---
 # <a name="nested-class-declarations"></a>Dichiarazioni di classi annidate
 
-La classe può essere dichiarata all'interno dell'ambito di un'altra classe. Tale classe viene denominata "una classe annidata". Le classi annidate sono considerate all'interno dell'ambito della classe contenitore e possono essere usate all'interno di tale ambito. Per fare riferimento a una classe annidata da un ambito diverso dal relativo ambito contenitore immediato, è necessario usare un nome completo.
+La classe può essere dichiarata all'interno dell'ambito di un'altra classe. Tale classe viene denominata "una classe annidata". Le classi annidate sono considerate all'interno dell'ambito della classe contenitore e possono essere usate all'interno di tale ambito. Per fare riferimento a una classe annidata da un ambito diverso dal relativo ambito contenitore immediato, è necessario utilizzare un nome completo.
 
 Nell'esempio seguente viene illustrato come dichiarare classi annidate:
 
@@ -54,9 +54,9 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` e `BufferedIO::BufferedOutput` vengono dichiarate all'interno di `BufferedIO`. Questi nomi di classe non sono visibili al di fuori l'ambito della classe `BufferedIO`. Tuttavia, un oggetto di tipo `BufferedIO` non contiene alcun oggetto dei tipi `BufferedInput` o `BufferedOutput`.
+`BufferedIO::BufferedInput` e `BufferedIO::BufferedOutput` dichiarati all'interno di `BufferedIO`. Questi nomi di classe non sono visibili al di fuori l'ambito della classe `BufferedIO`. Tuttavia, un oggetto di tipo `BufferedIO` non contiene alcun oggetto dei tipi `BufferedInput` o `BufferedOutput`.
 
-Le classi annidate possono usare direttamente nomi, nomi dei tipi, nomi dei membri statici ed enumeratori solo dalla classe contenitore. Per usare i nomi degli altri membri della classe, è necessario usare puntatori, riferimenti o nomi di oggetto.
+Le classi annidate possono utilizzare direttamente nomi, nomi dei tipi, nomi dei membri statici ed enumeratori solo dalla classe contenitore. Per utilizzare i nomi degli altri membri della classe, è necessario utilizzare puntatori, riferimenti o nomi di oggetto.
 
 Nell'esempio `BufferedIO` precedente, all'enumerazione `IOError` possono accedere direttamente le funzioni membro delle classi annidate, `BufferedIO::BufferedInput` o `BufferedIO::BufferedOutput`, come illustrato nella funzione `good`.
 
