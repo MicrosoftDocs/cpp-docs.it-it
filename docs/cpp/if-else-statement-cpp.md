@@ -10,17 +10,17 @@ helpviewer_keywords:
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183648"
 ---
 # <a name="if-else-statement-c"></a>Istruzione if-else (C++)
 
 Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco if* vengono eseguiti solo se il *espressione if* restituisce un valore diverso da zero (o TRUE). Se il valore di *espressione* è diverso da zero, *statement1* e vengono eseguite le altre istruzioni nel blocco e l'altro blocco, se presente, viene ignorato. Se il valore di *espressione* è uguale a zero, quindi il blocco se viene ignorato e l'altro blocco, se presente, viene eseguito. Sono espressioni che restituiscono diverso da zero
 
-- true
+- TRUE
 - un puntatore non null,
 - qualsiasi valore diverso da zero aritmetico, o
 - tipo di un tipo di classe che definisce una conversione non ambigua a un'operazione aritmetica, boolean o puntatore. (Per informazioni sulle conversioni, vedere [conversioni Standard](../cpp/standard-conversions.md).)
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a> Se l'istruzione con un inizializzatore
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): un' **se** istruzione può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questa forma di istruzione if quando la variabile è necessaria solo all'interno dell'ambito del blocco di if.
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Un' **se** istruzione può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questa forma di istruzione if quando la variabile è necessaria solo all'interno dell'ambito del blocco di if.
 
 ## <a name="example"></a>Esempio
 
@@ -165,7 +165,7 @@ Il **else** clausola di un `if...else` istruzione è associata a più vicina pre
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Se le istruzioni di constexpr
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): nei modelli di funzione, è possibile usare un' **se constexpr** istruzione per prendere decisioni di diramazione in fase di compilazione senza dover ricorrere ai più overload di funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle decompressione (non è necessario alcun overload di parametro da zero):
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Nei modelli di funzione, è possibile usare un **se constexpr** istruzione per prendere decisioni di diramazione in fase di compilazione senza dover ricorrere a più overload di funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle decompressione (non è necessario alcun overload di parametro da zero):
 
 ```cpp
 template <class T, class... Rest>

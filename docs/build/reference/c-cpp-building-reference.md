@@ -9,11 +9,11 @@ helpviewer_keywords:
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
 ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294759"
 ---
 # <a name="cc-building-reference"></a>Riferimenti alla compilazione in C/C++
 
@@ -21,12 +21,12 @@ Visual C++ fornisce due modalità di creazione di un programma C/C++. Il modo pi
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Riferimenti a MSBuild per i progetti C++](msbuild-visual-cpp-overview.md)
+[Informazioni di riferimento su MSBuild per i progetti C++](msbuild-visual-cpp-overview.md)
 
-[Riferimenti al compilatore MSVC](compiling-a-c-cpp-program.md)<br/>
+[Informazioni di riferimento sul compilatore MSVC](compiling-a-c-cpp-program.md)<br/>
 Descrive il compilatore MSVC, che crea un file di oggetto contenenti codice macchina, direttive del linker, sezioni, i riferimenti esterni e i nomi di funzione/dati.
 
-[Riferimento del linker MSVC](linking.md)<br/>
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 Viene descritto il linker, che combina il codice dai file di oggetto creati dal compilatore e librerie collegate in modo statico, risolve i riferimenti al nome e crea un file eseguibile.
 
 [Supporto Unicode nel compilatore e nel linker](unicode-support-in-the-compiler-and-linker.md)
@@ -54,10 +54,10 @@ Descrive l'impostazione delle opzioni del compilatore nell'ambiente di sviluppo 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 Vengono forniti collegamenti ad argomenti che descrivono l'utilizzo delle opzioni del compilatore.
 
-[Riferimento del linker MSVC](linking.md)<br/>
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
 Descrive le opzioni del linker impostazione all'interno o all'esterno dell'ambiente di sviluppo integrato.
 
-[Opzioni del Linker MSVC](linker-options.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)<br/>
 Vengono forniti collegamenti ad argomenti che descrivono l'utilizzo delle opzioni del linker.
 
 [Riferimento a BSCMAKE](bscmake-reference.md)<br/>

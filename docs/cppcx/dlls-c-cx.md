@@ -3,11 +3,11 @@ title: DLL (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
 ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183285"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 

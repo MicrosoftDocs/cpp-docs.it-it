@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
 ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230982"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>Recordset: Uso degli elementi di dati di grandi dimensioni (ODBC)
 
@@ -62,5 +62,5 @@ A sua volta, si utilizza il `HGLOBAL` gestire, `m_hData`, per lavorare con i dat
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: Recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Recordset: recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)

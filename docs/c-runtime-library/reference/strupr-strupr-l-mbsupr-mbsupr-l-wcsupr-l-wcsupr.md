@@ -61,11 +61,11 @@ helpviewer_keywords:
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
 ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269030"
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
@@ -153,16 +153,16 @@ In C++ queste funzioni presentano overload di modello che richiamano le relative
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsupr**|**_strupr**|**_mbsupr**|**_wcsupr**|
-|**tcsupr_l**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
+|**_tcsupr**|**_strupr**|**_mbsupr**|**_wcsupr**|
+|**_tcsupr_l**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strupr**, **strupr_l**|\<string.h>|
-|**wcsupr**, **wcsupr_l**|\<string.h> o \<wchar.h>|
-|**mbsupr**, **mbsupr_l**|\<mbstring.h>|
+|**_strupr**, **_strupr_l**|\<string.h>|
+|**_wcsupr**, **_wcsupr_l**|\<string.h> o \<wchar.h>|
+|**_mbsupr**, **_mbsupr_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

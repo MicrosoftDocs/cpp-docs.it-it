@@ -31,11 +31,11 @@ helpviewer_keywords:
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
 ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289403"
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
 
@@ -72,13 +72,13 @@ Il seno iperbolico *z*, espresso in radianti.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **csinh** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **csinh** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **csinh** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **csinh** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**csinh**, **csinhf**, **csinhl**|\<complex.h>|\<ccomplex>|
+|**csinh**,               **csinhf**, **csinhl**|\<complex.h>|\<ccomplex>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

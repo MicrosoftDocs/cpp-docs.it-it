@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CStatusBarCtrl class [MFC], declaring parts of
 ms.assetid: 60e8f285-d2d8-424a-a6ea-2fc548370303
 ms.openlocfilehash: 0f00aee03a74799bf14563653b50c487ff001d02
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182319"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Inizializzazione delle parti di un oggetto CStatusBarCtrl
 

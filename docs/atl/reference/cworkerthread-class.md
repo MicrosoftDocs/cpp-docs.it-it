@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276659"
 ---
 # <a name="cworkerthread-class"></a>Classe CWorkerThread
 
@@ -45,7 +45,7 @@ La classe che fornisce la funzione di creazione di thread, ad esempio [CRTThread
 
 ### <a name="protected-structures"></a>Strutture protette
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`WorkerClientEntry`||
 
@@ -277,5 +277,5 @@ Si noti che la chiamata `Shutdown` su un oggetto inizializzato con un puntatore 
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Classi](../../atl/reference/atl-classes.md)<br/>
-[Multithreading: Creazione di thread di lavoro](../../parallel/multithreading-creating-worker-threads.md)<br/>
+[Multithreading: creazione di thread di lavoro](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [Interfaccia IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)

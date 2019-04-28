@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
 ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258149"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -24,7 +24,7 @@ Usare `__declspec(align(#))` per controllare con precisione l'allineamento dei d
 
 ## <a name="syntax"></a>Sintassi
 
-> **declspec (align (** *#* **))** *dichiaratore*
+> **__declspec( align(** *#* **) )** *declarator*
 
 ## <a name="remarks"></a>Note
 
@@ -188,7 +188,7 @@ A questo punto `aType` e `bType` sono le stesse dimensioni (8 byte), ma le varia
 
 L'archiviazione locale di thread (TLS, Thread-Local Storage) statici creata con l'attributo `__declspec(thread)` e inserita nella sezione TLS dell'immagine funziona per l'allineamento esattamente come i dati statici normali. Per creare dati TLS, il sistema operativo alloca memoria con la stessa dimensione della sezione TLS e rispetta l'attributo di allineamento della sezione TLS.
 
-L'esempio seguente illustra vari modi per inserire i dati allineati nell'archiviazione thread-local.
+L'esempio seguente illustra vari modi per inserire i dati allineati nell'archiviazione locale dei thread.
 
 ```cpp
 // put an aligned integer in TLS
@@ -230,7 +230,7 @@ Nella tabella seguente è indicato l'offset di ciascun membro in corrispondenza 
 |b|1|2|2|2|
 |c|3|4|4|8|
 |d|32|32|32|32|
-|e|40|40|40|40|
+|h|40|40|40|40|
 |f|41|42|44|48|
 |sizeof(S)|64|64|64|64|
 
@@ -244,4 +244,4 @@ L'offset di un oggetto è basato sull'offset tra l'oggetto precedente e l'impost
 
 [__declspec](../cpp/declspec.md)<br/>
 [Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[x64 convenzioni del software](../build/x64-software-conventions.md)
+[Convenzioni del software x64](../build/x64-software-conventions.md)

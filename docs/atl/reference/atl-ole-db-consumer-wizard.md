@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
 ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261260"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 
@@ -36,13 +36,13 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
    - **Connessione** scheda
 
-      Il contenuto di questa scheda dipende dal provider selezionato. Anche se esistono molti tipi di provider, in questa sezione vengono illustrate le connessioni per i due più comuni: i dati SQL e ODBC. Gli altri sono simili a quelli nei campi descritti di seguito.
+      Il contenuto di questa scheda dipende dal provider selezionato. Anche se esistono molti tipi di provider, in questa sezione vengono illustrate le connessioni per i due più comuni: Dati SQL e ODBC. Gli altri sono simili a quelli nei campi descritti di seguito.
 
       Per i dati SQL:
 
-      1. **Selezionare o immettere un nome server:** fare clic sul menu a discesa elenco per visualizzare tutti i server di dati registrati nella rete e selezionarne uno.
+      1. **Selezionare o immettere un nome server:** Fare clic sul menu a discesa elenco per visualizzare tutti i server di dati registrati nella rete e selezionarne uno.
 
-      1. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.
+      1. **Immettere le informazioni per l'accesso al server:** Immettere un nome utente e una password per accedere al server di dati.
 
          > [!NOTE]
          > Si verifica un problema di sicurezza con la funzionalità "Per il salvataggio della password" della finestra di dialogo proprietà di Data Link. In "Immettere le informazioni per l'accesso al server", sono disponibili due pulsanti di opzione:
@@ -53,26 +53,26 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
          > Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la casella di controllo per "Consenti salvataggio password"); tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione è sicura perché permette di crittografare la password.
          > Potrebbero esserci situazioni in cui si desidera selezionare "Consenti salvataggio password". Ad esempio, se si sta rilasciando una libreria con una soluzione di database privato, è necessario non accedono direttamente al database ma usare invece un'applicazione di livello intermedio per verificare che l'utente (tramite qualsiasi schema di autenticazione scelto) e quindi limitarne l'ordinamento dei dati disponibile per l'utente.
 
-      1. **Selezionare il database nel server:** fare clic sul menu di riepilogo per visualizzare tutti i database registrati nel server di dati e selezionarne uno.
+      1. **Selezionare il database nel server:** Fare clic sul menu di riepilogo per visualizzare tutti i database registrati nel server di dati e selezionarne uno.
 
          \- oppure -
 
-         **Collegare un file di database come un nome di database:** specificare un file da utilizzare come database, immettere il nome del percorso esplicito.
+         **Collegare un file di database come un nome di database:** Specificare un file da utilizzare come database. Immettere il nome del percorso esplicito.
 
       Per i dati ODBC:
 
-      1. **Specificare l'origine dei dati:** è possibile usare un nome dell'origine dati o una stringa di connessione.
+      1. **Specificare l'origine dei dati:** È possibile usare un nome dell'origine dati o una stringa di connessione.
 
-         **Usa nome origine dati:** questo elenco a discesa vengono visualizzate origini dati registrate nel computer. È possibile configurare le origini dati anticipo tramite Amministrazione origine dati ODBC
+         **Usa nome origine dati:** Questo elenco a discesa vengono visualizzate origini dati registrate nel computer. È possibile configurare le origini dati anticipo tramite Amministrazione origine dati ODBC
 
          \- oppure -
 
-         **Usa stringa di connessione:** immettere una stringa di connessione possiede già, oppure fare clic sui **compilare** pulsante; il **Seleziona origine dati** verrà visualizzata la finestra di dialogo. Selezionare un'origine dati di produzione o di file e fare clic su **OK**.
+         **Usa stringa di connessione:** Immettere una stringa di connessione possiede già, oppure fare clic sui **compilare** pulsante; il **Seleziona origine dati** verrà visualizzata la finestra di dialogo. Selezionare un'origine dati di produzione o di file e fare clic su **OK**.
 
          > [!NOTE]
          > È possibile ottenere una stringa di connessione visualizzando le proprietà di una connessione esistente nel **Esplora Server**, oppure è possibile creare una connessione facendo doppio clic su **Aggiungi connessione** in **Server Esplora**.
 
-      1. **Immettere le informazioni per l'accesso al server:** immettere un nome utente e una password per accedere al server di dati.
+      1. **Immettere le informazioni per l'accesso al server:** Immettere un nome utente e una password per accedere al server di dati.
 
       1. Immettere il catalogo iniziale da usare.
 
@@ -80,9 +80,9 @@ Questa procedura guidata imposta una classe di consumer OLE DB con le associazio
 
    - **Advanced** scheda
 
-      **Impostazioni di rete:** specificare il **livello di rappresentazione** (il livello di rappresentazione che il server è possibile utilizzare per rappresentare il client; corrisponde direttamente a livelli di rappresentazione RPC) e  **Livello di protezione** (il livello di protezione dei dati inviati tra client e server; corrisponde direttamente a livelli di protezione RPC).
+      **Impostazioni di rete:** Specificare il **livello di rappresentazione** (il livello di rappresentazione che il server è possibile utilizzare per rappresentare il client; corrisponde direttamente a livelli di rappresentazione RPC) e **livello di protezione** ( il livello di protezione dei dati inviati tra client e server. corrisponde direttamente a livelli di protezione RPC).
 
-      **Altro:** nelle **timeout della connessione**, specificare il numero di secondi di tempo di inattività consentiti prima che si verifica un timeout. Nelle **le autorizzazioni di accesso**, specificare le autorizzazioni di accesso per la connessione dati.
+      **Altro:** Nelle **timeout della connessione**, specificare il numero di secondi di tempo di inattività consentiti prima che si verifica un timeout. Nelle **le autorizzazioni di accesso**, specificare le autorizzazioni di accesso per la connessione dati.
 
       Per altre informazioni sulle proprietà di inizializzazione avanzata, vedere la documentazione fornita con ogni provider OLE DB specifico.
 

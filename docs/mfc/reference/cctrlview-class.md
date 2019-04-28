@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
 ms.openlocfilehash: 5cb68ab46e2cac8b2f1dcc13989077e32480a2c7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262606"
 ---
 # <a name="cctrlview-class"></a>Classe CCtrlView
 
@@ -50,7 +50,7 @@ class CCtrlView : public CView
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Contiene lo stile predefinito per la classe di visualizzazione.|
 |[CCtrlView::m_strClass](#m_strclass)|Contiene il nome della classe di Windows per la classe di visualizzazione.|

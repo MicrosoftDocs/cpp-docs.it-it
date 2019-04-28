@@ -3,15 +3,15 @@ title: Attributi (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
 ms.openlocfilehash: 5f74914ab65fdf2c1803b47665e16378991efa3c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209455"
 ---
 # <a name="attributes-ccx"></a>Attributi (C++/CX)
 
-Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre ai metodi e tipi Windows Runtime per specificare determinati comportamenti nella creazione dei metadati. Diversi attributi predefiniti, ad esempio, [Windows::Foundation::Metadata::WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute), vengono comunemente usati in C + + c++ /CLI codice /CX. Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:
+Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre ai metodi e tipi Windows Runtime per specificare determinati comportamenti nella creazione dei metadati. Diversi attributi predefiniti, ad esempio, [Windows::Foundation::Metadata::WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute), vengono comunemente usati in C++codice /CX. Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:
 
 [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]
 
@@ -47,4 +47,4 @@ Nell'esempio riportato di seguito viene mostrato come definire un attributo pers
 
 [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

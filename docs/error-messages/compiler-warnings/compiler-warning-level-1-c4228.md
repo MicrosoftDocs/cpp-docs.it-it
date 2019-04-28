@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4228
 ms.assetid: 9301d660-d601-464e-83f5-7ed844a3c6dc
 ms.openlocfilehash: c737a48883b97970af70014e2bda4bdc508ab471
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207568"
 ---
 # <a name="compiler-warning-level-1-c4228"></a>Avviso del compilatore (livello 1) C4228
 

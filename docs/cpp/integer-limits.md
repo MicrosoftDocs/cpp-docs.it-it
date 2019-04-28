@@ -8,11 +8,11 @@ helpviewer_keywords:
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
 ms.openlocfilehash: 0d14f6246dd2ec71c4e0b2286bb1f2b3325085b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183385"
 ---
 # <a name="integer-limits"></a>Limiti per tipi Integer
 
@@ -22,7 +22,7 @@ I limiti per i tipi Integer sono elencati nella tabella seguente. Questi limiti 
 
 ## <a name="limits-on-integer-constants"></a>Limiti su costanti Integer
 
-|Costante|Significato|Valore|
+|Costante|Significato|Value|
 |--------------|-------------|-----------|
 |CHAR_BIT|Numero di bit nella variabile minore che non sia un campo di bit.|8|
 |SCHAR_MIN|Valore minimo per una variabile di tipo **char con segno**.|-128|

@@ -6,11 +6,11 @@ f1_keywords:
 - PogoAutoSweepA
 - PogoAutoSweepW
 ms.openlocfilehash: 2d9804e5ce90663d44ac389ab4f71d10290e6470
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295335"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 

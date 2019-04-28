@@ -5,11 +5,11 @@ f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
 ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224077"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -67,7 +67,7 @@ Un tipo mutex è noto anche come *tipo bloccabile*. Se non fornisce la funzione 
 
 ### <a name="structs"></a>Strutture
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Struttura adopt_lock_t](../standard-library/adopt-lock-t-structure.md)|Rappresenta un tipo che viene utilizzato per definire un `adopt_lock`.|
 |[Struttura defer_lock_t](../standard-library/defer-lock-t-structure.md)|Rappresenta un tipo che definisce un oggetto `defer_lock` che consente di selezionare uno dei costruttori di overload di `unique_lock`.|
@@ -76,7 +76,7 @@ Un tipo mutex è noto anche come *tipo bloccabile*. Se non fornisce la funzione 
 
 ### <a name="variables"></a>Variabili
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Rappresenta un oggetto che è possibile passare ai costruttori di `lock_guard` e `unique_lock` per indicare che l'oggetto mutex, anch'esso passato al costruttore è bloccato.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Rappresenta un oggetto che può essere passato al costruttore di `unique_lock` per indicare che il costruttore non deve bloccare l'oggetto mutex anch’esso passato al costruttore.|

@@ -3,11 +3,11 @@ title: 1. Introduzione
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
 ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236450"
 ---
 # <a name="1-introduction"></a>1. Introduzione
 
@@ -57,7 +57,7 @@ In questo documento vengono usati i termini seguenti:
 
   Una variabile privata denomina un blocco di memoria che è univoco per il thread che effettua il riferimento. Esistono diversi modi per specificare che una variabile è privata: una definizione all'interno di un'area parallela, un `threadprivate` direttiva, una `private`, `firstprivate`, `lastprivate`, o `reduction` clausola oppure Usa la variabile come un `for`ciclo la variabile di controllo in una `for` ciclo immediatamente dopo una `for` o `parallel for` direttiva.
 
-- area
+- region
 
   Un extent dinamico.
 
@@ -131,7 +131,7 @@ In questa specifica API OpenMP fa riferimento a C, viene fatto riferimento al li
 
 ## <a name="16-organization"></a>1.6 Organizzazione
 
-- [Funzioni della libreria run-time](3-run-time-library-functions.md)
+- [Funzioni della libreria di runtime](3-run-time-library-functions.md)
 - [Variabili di ambiente](4-environment-variables.md)
 - [Comportamenti definiti dall'implementazione in OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 - [Nuove funzionalità in OpenMP C/C++ versione 2.0](f-new-features-and-clarifications-in-version-2-0.md)

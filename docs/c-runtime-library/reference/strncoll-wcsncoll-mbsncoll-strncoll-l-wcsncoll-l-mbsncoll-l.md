@@ -61,11 +61,11 @@ helpviewer_keywords:
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
 ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209776"
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
@@ -114,7 +114,7 @@ int _mbsncoll_l(
 
 ### <a name="parameters"></a>Parametri
 
-*String1*, *stringa2*<br/>
+*string1*, *string2*<br/>
 Stringhe che terminano con Null da confrontare.
 
 *count*<br/>
@@ -145,16 +145,16 @@ Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1*
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsnccoll**|**_strncoll**|**_mbsncoll**|**_wcsncoll**|
-|**tcsncoll**|**_strncoll**|[_mbsnbcoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsncoll**|
+|**_tcsnccoll**|**_strncoll**|**_mbsncoll**|**_wcsncoll**|
+|**_tcsncoll**|**_strncoll**|[_mbsnbcoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsncoll**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strncoll**, **strncoll_l**|\<string.h>|
-|**wcsncoll**, **wcsncoll_l**|\<wchar.h> o \<string.h>|
-|**mbsncoll**, **mbsncoll_l**|\<mbstring.h>|
+|**_strncoll**, **_strncoll_l**|\<string.h>|
+|**_wcsncoll**, **_wcsncoll_l**|\<wchar.h> o \<string.h>|
+|**_mbsncoll**, **_mbsncoll_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

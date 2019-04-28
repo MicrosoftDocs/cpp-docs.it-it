@@ -6,11 +6,11 @@ helpviewer_keywords:
 - CSpinButtonCtrl class [MFC], methods
 ms.assetid: a08a26fd-b803-4cbe-a509-395fa357d057
 ms.openlocfilehash: 5ad6f529762e77e1cf1c00f41eea0add5d196fbb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307263"
 ---
 # <a name="spin-button-member-functions"></a>Funzioni membro pulsante di selezione
 

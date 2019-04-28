@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
 ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293108"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Driver in modalità kernel di Windows NT)
 
