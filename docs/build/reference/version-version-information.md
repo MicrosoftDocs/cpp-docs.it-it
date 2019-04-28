@@ -12,11 +12,11 @@ helpviewer_keywords:
 - VERSION linker option
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
 ms.openlocfilehash: 626461fc7a9fc6dd7b6578e836733d154a66862a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316496"
 ---
 # <a name="version-version-information"></a>/VERSION (Informazioni sulla versione)
 

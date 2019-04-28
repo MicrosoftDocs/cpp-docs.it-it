@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
 ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225422"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menu e risorse: Aggiunte di server
 
@@ -73,4 +73,4 @@ Si applicano le stesse aggiunte per i server ridotti a quelli elencati in preced
 ## <a name="see-also"></a>Vedere anche
 
 [Menu e risorse (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[Menu e risorse: Unione di menu](../mfc/menus-and-resources-menu-merging.md)
+[Menu e risorse: unione di menu](../mfc/menus-and-resources-menu-merging.md)
