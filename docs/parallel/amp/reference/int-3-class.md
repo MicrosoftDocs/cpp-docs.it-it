@@ -73,11 +73,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
 ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180245"
 ---
 # <a name="int3-class"></a>Classe int_3
 
@@ -166,7 +166,7 @@ class int_3;
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[dimensioni (costante)](#size)||
 

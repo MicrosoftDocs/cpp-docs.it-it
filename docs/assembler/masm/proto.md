@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
 ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210521"
 ---
 # <a name="proto"></a>PROTO
 
@@ -19,7 +19,7 @@ Prototipi di una funzione o procedura. È possibile chiamare la funzione con pro
 
 ## <a name="syntax"></a>Sintassi
 
-> *etichetta* **PROTO** \[ *distanza*] \[ *langtype*] \[ __,__ \[ *parametri*]__:__*tag*]...
+> *label* **PROTO** \[*distance*] \[*langtype*] \[__,__ \[*parameter*]__:__*tag*] ...
 
 ### <a name="parameters"></a>Parametri
 
@@ -34,12 +34,12 @@ Il nome della funzione con prototipo.
 
 - 32 bit **FLAT** modello: **C**, **STDCALL**
 
-- i modelli di 16 bit: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- modelli di 16 bit: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
 
-*Parametro*<br/>
+*parameter*<br/>
 Nome facoltativo per un parametro di funzione.
 
-*Tag*<br/>
+*tag*<br/>
 Tipo di parametro di funzione.
 
 Il *parametri* e *tag* parametri possono comparire più volte, una volta per ogni argomento passato.

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
 ms.openlocfilehash: 311710d5614bbc7c24d6b32e89285715476f94da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224259"
 ---
 # <a name="ltiteratorgt-operators"></a>Operatori &lt;iterator&gt;
 
@@ -621,7 +621,7 @@ operator+(
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Numero di posizioni in base alle quali deve essere eseguito l'offset di move_iterator const o reverse_iterator const.
 
 *right*<br/>

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
 ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58771513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223014"
 ---
 # <a name="finally"></a>finally
 

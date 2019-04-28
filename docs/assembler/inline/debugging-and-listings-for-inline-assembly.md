@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline assembly, debugging
 ms.assetid: 69266930-6f9a-433d-b704-f4f44e7b2583
 ms.openlocfilehash: 1b2ec146daf450c4302be9fea8fdd117ec6398da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167206"
 ---
 # <a name="debugging-and-listings-for-inline-assembly"></a>Debug ed elenchi per assembly inline
 

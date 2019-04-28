@@ -3,11 +3,11 @@ title: Istruzione for basata su intervallo (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244143"
 ---
 # <a name="range-based-for-statement-c"></a>Istruzione for basata su intervallo (C++)
 
@@ -24,7 +24,7 @@ for ( for-range-declaration : expression )
 
 Usare basato su intervallo **per** istruzione per costruire cicli che devono essere eseguite tramite un "range", che è definita come tutto ciò che è possibile eseguire l'iterazione attraverso, ad esempio, `std::vector`, o qualsiasi altra libreria C++ Standard con un intervallo di sequenza è definito da una `begin()` e `end()`. Il nome dichiarato nel `for-range-declaration` parte è locale per il **per** istruzione e non può essere dichiarato nuovamente in `expression` o `statement`. Si noti che il [automatica](../cpp/auto-cpp.md) parola chiave è preferito nel `for-range-declaration` parte dell'istruzione.
 
-**Novità di Visual Studio 2017:** basati su intervallo per i cicli non richiedono più che Begin () ed end () restituiscano oggetti dello stesso tipo. Ciò consente a end() di restituire un oggetto sentinel come viene usato dagli intervalli in base alla definizione nella proposta Ranges-V3. Per altre informazioni, vedere il documento relativo alla [generalizzazione del ciclo for basato su intervallo](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e la [libreria range-v3 su GitHub](https://github.com/ericniebler/range-v3).
+**New in Visual Studio 2017:**  I cicli range-based for non richiedono più che begin() ed end() restituiscano oggetti dello stesso tipo. Ciò consente a end() di restituire un oggetto sentinel come viene usato dagli intervalli in base alla definizione nella proposta Ranges-V3. Per altre informazioni, vedere il documento relativo alla [generalizzazione del ciclo for basato su intervallo](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) e la [libreria range-v3 su GitHub](https://github.com/ericniebler/range-v3).
 
 Questo codice viene illustrato come utilizzare in base a intervallo **per** cicli di iterazione per scorrere una matrice e un vettore:
 

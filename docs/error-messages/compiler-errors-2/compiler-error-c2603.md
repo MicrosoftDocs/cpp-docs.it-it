@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
 ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62215401"
 ---
 # <a name="compiler-error-c2603"></a>Errore del compilatore C2603
 
-> «*funzione*': troppi oggetti statici in ambito blocco con costruttore/o distruttori nella funzione
+> «*funzione*': Troppi oggetti statici in ambito blocco con costruttore/o distruttori nella funzione
 
 Nelle versioni del compilatore Visual C++ prima di Visual Studio 2015, o quando la [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) è specificata l'opzione del compilatore, è previsto un limite pari a 31, sul numero di oggetti statici è possibile avere in una funzione inline visibile esternamente .
 

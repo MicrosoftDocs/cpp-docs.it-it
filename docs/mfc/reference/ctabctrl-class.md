@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323713"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 
@@ -517,7 +517,7 @@ Maschera che specifica quali lo stato dell'elemento flag da restituire. Per un e
 
 Un riferimento a un valore DWORD che riceve le informazioni di stato. Il valore può essere uno dei seguenti:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|L'elemento di scheda di controllo è selezionata.|
 |TCIS_HIGHLIGHTED|Viene evidenziato l'elemento del controllo scheda e la scheda e testo vengono disegnati utilizzando il colore di evidenziazione corrente. Quando si usa il colore di evidenziazione, questo sarà un'interpolazione true, non un colore retinato.|

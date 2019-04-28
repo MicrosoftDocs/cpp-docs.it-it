@@ -24,11 +24,11 @@ helpviewer_keywords:
 - wcsnicmp function
 ms.assetid: 01324ee4-0bd9-43e9-b2a3-53d180270a64
 ms.openlocfilehash: 88c58e48bbfdd426c8da290ce54aaa1708cc9ea3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209715"
 ---
 # <a name="strnicmp-wcsnicmp"></a>strnicmp, wcsnicmp
 

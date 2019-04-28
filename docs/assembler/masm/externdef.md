@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXTERNDEF directive
 ms.assetid: 95a10de6-c345-4428-a2f2-90f7d411dc86
 ms.openlocfilehash: 23d34af470e825a8535de8cb28645a7bfb4c4d1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62203097"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
@@ -19,7 +19,7 @@ Definisce uno o più variabili esterne, le etichette o simboli denominati *name*
 
 ## <a name="syntax"></a>Sintassi
 
-> : Tipo di nome EXTERNDEF [[langtype]] [[, [[langtype]]. nome: type]]...
+> EXTERNDEF [[langtype]] name:type [[, [[langtype]] name:type]]...
 
 ## <a name="remarks"></a>Note
 

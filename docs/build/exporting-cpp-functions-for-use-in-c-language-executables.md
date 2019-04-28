@@ -8,11 +8,11 @@ helpviewer_keywords:
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
 ms.openlocfilehash: a694b77e3730ab82ec1698076cc66729ff115cdc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195234"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C
 
@@ -36,7 +36,7 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 - [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
-- [Importare in un'applicazione che usa declspec](importing-into-an-application-using-declspec-dllimport.md)
+- [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)
 

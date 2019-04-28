@@ -43,11 +43,11 @@ helpviewer_keywords:
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
 ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209720"
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
@@ -101,7 +101,7 @@ Il **mbsninc** funzione incrementi *str* dal *conteggio* caratteri multibyte. **
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
+|**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
 **strninc** e **wcsninc** stringa di caratteri a byte singolo e versioni di stringa di caratteri wide di **mbsninc**. **wcsninc** e **strninc** sono disponibili solo per questo mapping e non deve essere utilizzato in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 

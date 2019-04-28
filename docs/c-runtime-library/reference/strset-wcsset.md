@@ -24,11 +24,11 @@ helpviewer_keywords:
 - strset function
 ms.assetid: 20e132d8-4b6c-4341-b1eb-8e19b46047e2
 ms.openlocfilehash: 352e2f0591c74b98ade309759b5d286c597fb624
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223196"
 ---
 # <a name="strset-wcsset"></a>strset, wcsset
 

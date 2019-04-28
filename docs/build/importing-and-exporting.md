@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
 ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188847"
 ---
 # <a name="importing-and-exporting"></a>Importazione ed esportazione
 
@@ -31,7 +31,7 @@ Un file di definizione moduli (def) è un file di testo contenente uno o più is
 
 ## <a name="using-declspec"></a>Utilizzando declspec
 
-Visual C++ usi **declspec** e **dllexport** per sostituire il **Export** parola chiave utilizzata in precedenza nelle versioni di 16 bit di Visual C++.
+Visual C++ viene utilizzato **declspec** e **dllexport** per sostituire il **Export** parola chiave utilizzata in precedenza nelle versioni di 16 bit dell'oggetto visivo C++.
 
 Non è necessario usare **declspec** per il codice venga compilato correttamente, ma in questo modo consente al compilatore di generare codice più efficiente. Il compilatore è in grado di generare codice migliore in quanto può determinare se esiste una funzione in una DLL o No, che consente al compilatore di generare codice che ignora un livello di riferimento indiretto che normalmente sarebbe presente in una chiamata di funzione che ha superato il limite di una DLL. Tuttavia, è necessario utilizzare **declspec** per importare le variabili usate in una DLL.
 

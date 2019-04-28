@@ -9,11 +9,11 @@ helpviewer_keywords:
 - memory header
 ms.assetid: ef8e38da-7c9d-4037-9ad1-20c99febf5dc
 ms.openlocfilehash: c63421995fdabc94a7e6495df8d9937049dbba9d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217339"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 

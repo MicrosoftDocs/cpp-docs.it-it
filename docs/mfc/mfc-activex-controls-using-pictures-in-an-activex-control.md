@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
 ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239292"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Controlli ActiveX MFC: Utilizzo di immagini in un controllo ActiveX
 
@@ -45,7 +45,7 @@ Le classi dei controlli ActiveX forniscono numerosi componenti che è possibile 
 
 - Pagina delle proprietà che gestisce una o più proprietà immagine di un controllo.
 
-   Questa pagina proprietà fa parte di un gruppo di pagine delle proprietà predefinite disponibili per i controlli ActiveX. Per altre informazioni sulle pagine proprietà del controllo ActiveX, vedere l'articolo [controlli ActiveX MFC: Uso delle pagine proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   Questa pagina proprietà fa parte di un gruppo di pagine delle proprietà predefinite disponibili per i controlli ActiveX. Per altre informazioni sulle pagine proprietà del controllo ActiveX, vedere l'articolo [controlli ActiveX MFC: uso delle pagine delle proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementazione di una proprietà immagine personalizzata nel controllo ActiveX
 
@@ -150,5 +150,5 @@ Dopo aver completato le modifiche, ricompilare il progetto per incorporare le nu
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: Usando i tipi di carattere](../mfc/mfc-activex-controls-using-fonts.md)<br/>
-[Controlli ActiveX MFC: Pagine delle proprietà](../mfc/mfc-activex-controls-property-pages.md)
+[Controlli ActiveX MFC: uso dei tipi di carattere](../mfc/mfc-activex-controls-using-fonts.md)<br/>
+[Controlli ActiveX MFC: pagine delle proprietà](../mfc/mfc-activex-controls-property-pages.md)

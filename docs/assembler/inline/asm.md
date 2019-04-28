@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
 ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167556"
 ---
 # <a name="asm"></a>__asm
 
@@ -27,13 +27,13 @@ La parola chiave `__asm` consente di richiamare l'assembler inline e può essere
 
 ## <a name="grammar"></a>Grammatica
 
-*blocco di ASM*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ASM** *un'istruzione di assembly* **;** <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**ASM {** *elenco di istruzioni di assembly* **}** **;** <sub>opt</sub>
+*asm-block*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
 
-*elenco di istruzioni di assembly*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*un'istruzione di assembly* **;** <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*un'istruzione di assembly* **;** *elenco di istruzioni di assembly* **;** <sub>opt</sub>
+*assembly-instruction-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
 
 ## <a name="remarks"></a>Note
 

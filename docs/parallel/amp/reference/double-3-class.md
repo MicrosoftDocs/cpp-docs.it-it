@@ -73,11 +73,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
 ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180362"
 ---
 # <a name="double3-class"></a>Classe double_3
 
@@ -159,7 +159,7 @@ class double_3;
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[dimensioni (costante)](#double_3__size)||
 

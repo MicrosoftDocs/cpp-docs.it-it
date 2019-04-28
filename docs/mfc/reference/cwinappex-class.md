@@ -119,11 +119,11 @@ helpviewer_keywords:
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
 ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323259"
 ---
 # <a name="cwinappex-class"></a>Classe CWinAppEx
 
@@ -210,7 +210,7 @@ class CWinAppEx : public CWinApp
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|Specifica se il framework verrà reimpostato tutte le immagini della barra degli strumenti quando viene caricata la finestra cornice contenente la barra degli strumenti.|
 

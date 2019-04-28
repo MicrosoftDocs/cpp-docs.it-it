@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
 ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219730"
 ---
 # <a name="general-mfc-topics"></a>Argomenti MFC generali
 
@@ -33,7 +33,7 @@ Il framework MFC rappresenta un metodo efficace che consente di creare applicazi
 
 [Compilazione nel framework](../mfc/building-on-the-framework.md)
 
-[CWinApp: La classe dell'applicazione](../mfc/cwinapp-the-application-class.md)
+[CWinApp: classe Application](../mfc/cwinapp-the-application-class.md)
 
 [I modelli di documento e il processo di creazione documento/visualizzazione](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ Il framework MFC rappresenta un metodo efficace che consente di creare applicazi
 
 [Requisiti di compilazione per i controlli comuni di Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[Procedura: Aggiungere il supporto Gestione riavvio](../mfc/how-to-add-restart-manager-support.md)
+[Procedura: Aggiungere il supporto di Gestione riavvio](../mfc/how-to-add-restart-manager-support.md)
 
 [Layout dinamico](../mfc/dynamic-layout.md)
 

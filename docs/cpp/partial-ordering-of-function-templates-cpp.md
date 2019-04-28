@@ -5,11 +5,11 @@ helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
 ms.openlocfilehash: 9a3dc687f197770f7a11440699163787b1dc48ef
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183374"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Ordinamento parziale di modelli di funzione (C++)
 
@@ -31,7 +31,7 @@ Utilizzare la procedura seguente per determinare se un candidato di modello di f
 
 1. Utilizzare le regole seguenti:
 
-   1. Una specializzazione di modello per un tipo specifico è più specializzata di una che accetta un argomento tipo generico.
+   1. Una specializzazione di modello per un tipo specifico è più specializzata di una che accetta un argomento di tipo generico.
 
    1. Un modello richiede solo __T\*__  è più specializzato richiede un solo __T__, perché il tipo di un ipotetico __X\*__  è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __T\*__  argomento di modello.
 

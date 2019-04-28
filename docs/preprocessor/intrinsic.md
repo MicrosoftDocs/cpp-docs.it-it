@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
 ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212377"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -44,7 +44,7 @@ Le seguenti funzioni hanno formati intrinseci e i formati intrinseci vengono usa
 
 I programmi che utilizzano le funzioni intrinseche sono più veloci in quanto non hanno il sovraccarico delle chiamate di funzione, ma potrebbero essere di dimensioni maggiori a causa del codice aggiuntivo generato.
 
-**x86 specifico**
+**x86 Specific**
 
 Il `_disable` e `_enable` intrinseci generano istruzioni in modalità kernel per disabilitare o abilitare gli interrupt e possono essere utili in driver in modalità kernel.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183522"
 ---
 # <a name="initializers"></a>Inizializzatori
 
@@ -428,7 +428,7 @@ myArr3: 8 9 10 0 0
 
 #### <a name="initializing-unions-and-structs"></a>Inizializzazione di unioni e struct
 
-Se un'unione non ha alcun costruttore, è possibile inizializzarla con un singolo valore (o un'altra istanza di un'unione). Il valore viene utilizzato per inizializzare il primo campo non statico. Questo non accade con l'inizializzazione struct in quanto il primo valore dell'inizializzatore viene utilizzato per inizializzare il primo campo, il secondo per inizializzare il secondo campo e così via... Confrontare l'inizializzazione di unioni e struct nell'esempio seguente.
+Se un'unione non ha alcun costruttore, è possibile inizializzarla con un singolo valore (o un'altra istanza di un'unione). Il valore viene usato per inizializzare il primo campo non statico. Questo non accade con l'inizializzazione struct in quanto il primo valore dell'inizializzatore viene utilizzato per inizializzare il primo campo, il secondo per inizializzare il secondo campo e così via... Confrontare l'inizializzazione di unioni e struct nell'esempio seguente.
 
 ```cpp
 struct MyStruct {

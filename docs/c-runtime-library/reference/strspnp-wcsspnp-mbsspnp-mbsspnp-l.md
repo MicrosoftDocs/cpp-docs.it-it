@@ -43,11 +43,11 @@ helpviewer_keywords:
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
 ms.openlocfilehash: 9a4a0d2f9b9940e181625b129e5ded8bb9644c39
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223131"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
@@ -83,7 +83,7 @@ unsigned char *_mbsspnp_l(
 *str*<br/>
 Stringa con terminazione Null in cui eseguire la ricerca.
 
-*set di caratteri*<br/>
+*charset*<br/>
 Set di caratteri con terminazione Null.
 
 *locale*<br/>
@@ -103,7 +103,7 @@ Se uno dei due *str* oppure *charset* è un puntatore null, questa funzione rich
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
+|**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
 **strspnp** e **wcsspnp** sono caratteri a byte singolo e versioni a caratteri wide di **mbsspnp**. **strspnp** e **wcsspnp** si comportano in modo identico alle **mbsspnp** in caso contrario, essi sono disponibili solo per questo mapping e non deve essere utilizzate per qualsiasi altro motivo. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 

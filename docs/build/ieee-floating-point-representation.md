@@ -12,11 +12,11 @@ helpviewer_keywords:
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
 ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188834"
 ---
 # <a name="ieee-floating-point-representation"></a>Formato a virgola mobile IEEE
 
@@ -24,7 +24,7 @@ Microsoft Visual C++ è coerente con gli standard di numerici IEEE. Lo standard 
 
 I valori vengono archiviati come indicato di seguito:
 
-|Valore|Archiviato come|
+|Value|Archiviato come|
 |-----------|---------------|
 |precisione singola|il segno, 8 bit esponente, significando a 23 bit|
 |precisione doppia|il segno, esponente a 11 bit, significando a 52 bit|
@@ -96,7 +96,7 @@ Di seguito sono riportati alcuni esempi in formato a precisione singola:
 
 - Il valore 4. Stesso significando, esponente aumenta di uno (valore distorto è 129 o 100 0000 1 nel file binario.
 
-   |Valore|Formula|Rappresentazione binaria|Esadecimale|
+   |Value|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
    |4|1 * 2<sup>2</sup>|0100 0000 1000 0000 0000 0000 0000 0000|0x40800000|
 
@@ -114,7 +114,7 @@ Di seguito sono riportati alcuni esempi in formato a precisione singola:
 
 - Il valore 0,75. L'esponente distorta è 126 011 1111 0 in formato binario e il significando è (1). 100 0000 ... 0000 0000, ovvero 1 1/2.
 
-   |Valore|Formula|Rappresentazione binaria|Esadecimale|
+   |Value|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
    |0.75|1.5 * 2<sup>-1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
 
@@ -126,7 +126,7 @@ Di seguito sono riportati alcuni esempi in formato a precisione singola:
 
 - 1/10 è una frazione ripetuta in formato binario. Il significando è appena inferiore a 1,6 e l'esponente distorta afferma che deve essere diviso per 16 1.6 (è 011 1101 1 nel file binario, che corrisponde a 123 in formato decimale). L'esponente true è 123 e 127 = - 4, il che significa che il fattore per cui moltiplicare è 2<sup>-4</sup> = 1/16. Si noti che il significando archiviato viene arrotondato per eccesso nell'ultimo bit, ovvero un tentativo per rappresentare il numero non rappresentabile nel modo più accurato possibile. (Il motivo tale 1/10 e 1/100 sono non esattamente rappresentabili nel file binario è simile al motivo che è non esattamente rappresentabili in formato decimale 1 o 3.)
 
-   |Valore|Formula|Rappresentazione binaria|Esadecimale|
+   |Value|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
    |0.1|1.6 * 2<sup>-4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
 

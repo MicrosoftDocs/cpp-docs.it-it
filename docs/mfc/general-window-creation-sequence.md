@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
 ms.openlocfilehash: 949cf72910654b502ca4b57be72bedc2db63c315
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219565"
 ---
 # <a name="general-window-creation-sequence"></a>Sequenza generale di creazione finestre
 
@@ -20,7 +20,7 @@ Quando si crea una finestra della finestra di personalizzati, ad esempio un elem
 
 Tutte le classi di finestra fornite da utilizzano MFC [due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md). Vale a dire, durante una chiamata di C++ **nuovo** (operatore), il costruttore alloca e Inizializza un oggetto C++ ma non crea una finestra di Windows corrispondente. Che viene eseguito in un secondo momento chiamando il [Create](../mfc/reference/cwnd-class.md#create) funzione membro dell'oggetto finestra.
 
-Il `Create` funzione membro rende la finestra di Windows e archivia relativi `HWND` nel membro dati pubblico dell'oggetto C++ [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` Consente di completare una flessibilità sui parametri di creazione. Prima di chiamare `Create`, è possibile registrare una classe della finestra con la funzione globale [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) per impostare gli stili di icona e la classe per il frame.
+Il `Create` funzione membro rende la finestra di Windows e archivia relativi `HWND` nel C++ membri dati pubblici dell'oggetto [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` Consente di completare una flessibilità sui parametri di creazione. Prima di chiamare `Create`, è possibile registrare una classe della finestra con la funzione globale [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) per impostare gli stili di icona e la classe per il frame.
 
 Per le finestre cornice, è possibile usare la [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) la funzione membro anziché `Create`. `LoadFrame` rende la finestra di Windows con meno parametri. Ottiene molti valori predefiniti da risorse, tra cui didascalia del frame, icona, tabella di tasti di scelta rapida e menu.
 

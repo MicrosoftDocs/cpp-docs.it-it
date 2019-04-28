@@ -8,15 +8,15 @@ helpviewer_keywords:
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
 ms.openlocfilehash: 913aa199b4acd2ceb6daf7a24d8c50c28234b74a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184361"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Asserzione e messaggi forniti dall'utente (C++)
 
-I C++ supporta tre la gestione degli errori i meccanismi del linguaggio che consentono di eseguire il debug dell'applicazione: il [direttiva #error](../preprocessor/hash-error-directive-c-cpp.md), il [static_assert](../cpp/static-assert.md) (parola chiave) e il [Macro assert, Assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro. Tutti i tre meccanismi generano messaggi di errore e due eseguono anche il test di asserzioni software. Un'asserzione software specifica una condizione che si prevede abbia valore True in un particolare punto del programma. Se un'asserzione sull'ora di compilazione non riesce, il compilatore genera un messaggio di diagnostica e un errore di compilazione. Se un'asserzione di runtime non riesce, il sistema operativo genera un messaggio di diagnostica e chiude l'applicazione.
+Il C++ supporta tre errore gestione i meccanismi del linguaggio che consentono di eseguire il debug dell'applicazione: il [#error direttiva](../preprocessor/hash-error-directive-c-cpp.md), il [static_assert](../cpp/static-assert.md) parola chiave e il [assert (macro), _ Assert, wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro. Tutti i tre meccanismi generano messaggi di errore e due eseguono anche il test di asserzioni software. Un'asserzione software specifica una condizione che si prevede abbia valore True in un particolare punto del programma. Se un'asserzione sull'ora di compilazione non riesce, il compilatore genera un messaggio di diagnostica e un errore di compilazione. Se un'asserzione di runtime non riesce, il sistema operativo genera un messaggio di diagnostica e chiude l'applicazione.
 
 ## <a name="remarks"></a>Note
 

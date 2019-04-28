@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), inline assembly macro directives
 ms.assetid: 83643a09-1699-40a8-8ef2-13502bc4ac2c
 ms.openlocfilehash: 7e1bed782d28a5bf7c934c3f57f50aae70038578
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167257"
 ---
 # <a name="masm-macro-directives-in-inline-assembly"></a>Direttive macro di MASM in assembly inline
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
 ms.openlocfilehash: bf1c3f677ac8cd2e3ad91ef694f0637af8a6f578
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180772"
 ---
 # <a name="user-interface-elements-mfc"></a>Elementi dell'interfaccia utente (MFC)
 
@@ -43,7 +43,7 @@ Viene descritta la gestione dei dati in MFC.
 [Visualizzazioni di form](../mfc/form-views-mfc.md)<br/>
 Viene descritto come aggiungere il supporto di form all'applicazione.
 
-[Guida HTML: Guida sensibile al contesto per i programmi](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
+[Guida di HTML: Guida sensibile al contesto per i programmi](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
 Viene descritto come aggiungere Guida sensibile al contesto per le applicazioni con la Guida HTML.
 
 [Gruppi a schede MDI](../mfc/mdi-tabbed-groups.md)<br/>

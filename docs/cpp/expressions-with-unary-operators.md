@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183871"
 ---
 # <a name="expressions-with-unary-operators"></a>Espressioni con operatori unari
 
@@ -35,11 +35,11 @@ Gli operatori unari agiscono solo su un operando in un'espressione. Gli operator
 
 - [Eseguire il cast (operatore)](../cpp/cast-operator-parens.md)
 
-- [operatore sizeof](../cpp/sizeof-operator.md)
+- [sizeof operator](../cpp/sizeof-operator.md)
 
 - [operatore uuidof](../cpp/uuidof-operator.md)
 
-- [operatore alignof](../cpp/alignof-operator.md)
+- [__alignof operator](../cpp/alignof-operator.md)
 
 - [operatore new](../cpp/new-operator-cpp.md)
 
@@ -55,17 +55,17 @@ Di seguito vengono indicati i formati possibili delle espressioni unarie.
 
 - `--` *unary-expression*
 
-- *operatore unario* *cast-expression*
+- *unary-operator* *cast-expression*
 
 - **sizeof** *unary-expression*
 
-- `sizeof(` *nome del tipo* `)`
+- `sizeof(` *type-name* `)`
 
-- `decltype(` *Espressione* `)`
+- `decltype(` *expression* `)`
 
-- *espressione di allocazione*
+- *allocation-expression*
 
-- *espressione di deallocazione*
+- *deallocation-expression*
 
 Eventuali *postfix-expression* viene considerato un *unary-expression*, e poiché qualsiasi espressione primaria viene considerata una *postfix-expression*, tutte le espressioni primarie è considerata una *unary-expression* anche. Per altre informazioni, vedere [espressioni in forma suffissa](../cpp/postfix-expressions.md) e [espressioni primarie](../cpp/primary-expressions.md).
 

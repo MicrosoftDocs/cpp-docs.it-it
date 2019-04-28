@@ -11,15 +11,15 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195316"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Esportazione da una DLL tramite __declspec(dllexport)
 
-Microsoft ha introdotto **Export** nella versione di Visual C++ per consentire al compilatore di generare automaticamente i nomi di esportazione e inserirli in un file lib del compilatore 16 bit. Questo file con estensione LIB è quindi utilizzabile per il collegamento a una DLL come un lib statico.
+Microsoft ha introdotto **Export** nella versione del compilatore 16 bit dell'oggetto visivo C++ per consentire al compilatore di generare automaticamente i nomi di esportazione e inserirli in un file con estensione LIB. Questo file con estensione LIB è quindi utilizzabile per il collegamento a una DLL come un lib statico.
 
 Nelle versioni più recenti del compilatore, è possibile esportare i dati, funzioni, classi o funzioni membro della classe da una DLL mediante il **dllexport** (parola chiave). **dllexport** aggiunge la direttiva di esportazione del file oggetto non è necessario usare un file con estensione def.
 
@@ -68,7 +68,7 @@ Come riferimento, eseguire ricerche in file di intestazione Winbase Win32. Che c
 
 - [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
-- [Importare in un'applicazione che usa declspec](importing-into-an-application-using-declspec-dllimport.md)
+- [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)
 

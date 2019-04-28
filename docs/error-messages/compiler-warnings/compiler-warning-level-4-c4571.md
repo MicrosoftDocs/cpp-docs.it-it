@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
 ms.openlocfilehash: 92164bf297a44871897b6c6150eb54f8c5ccf3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62220455"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>Avviso del compilatore (livello 4) C4571
 
@@ -29,7 +29,7 @@ Per impostazione predefinita, questo avviso non è attivo.  Attivare la visualiz
 
 - Non abilitare C4571 se non si desidera che i blocchi catch per intercettare le eccezioni strutturate, ma si desidera usare i blocchi catch.  È ancora possibile intercettare le eccezioni strutturate utilizzando le parole chiave di gestione delle eccezioni (**try**, **except**, e **finally**).  Ma ricordate che, quando compilato **/EHs** distruttori verranno chiamati solo quando viene generata un'eccezione C++, non quando si verifica un'eccezione SEH.
 
-- Sostituire il blocco catch con i blocchi catch per eccezioni specifiche di C++ e, facoltativamente, aggiungere la gestione delle eccezioni C++ gestione strutturata delle eccezioni (**try**, **except**, e **_ finally**).  Visualizzare [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) per altre informazioni.
+- Sostituire il blocco catch con i blocchi catch per specifico C++ le eccezioni e, facoltativamente, aggiungere Gestione delle eccezioni strutturata di C++ la gestione delle eccezioni (**try**, **except**, e **finally**).  Visualizzare [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md) per altre informazioni.
 
 Visualizzare [/EH (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md) per altre informazioni.
 

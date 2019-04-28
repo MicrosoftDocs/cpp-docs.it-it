@@ -45,11 +45,11 @@ helpviewer_keywords:
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
 ms.openlocfilehash: 31ddc2721abe997041bfde6645c8405fdd875e4d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209735"
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 
@@ -100,7 +100,7 @@ Se *str* viene **NULL**, viene richiamato il gestore di parametri non validi, co
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
+|**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
 **strnextc** e **wcsnextc** stringa di caratteri a byte singolo e versioni di stringa di caratteri wide di **mbsnextc**. **wcsnextc** restituisce il valore intero il successivo carattere wide *str*; **strnextc** restituisce il valore intero del carattere a byte singolo successivo in *str*. **strnextc** e **wcsnextc** sono disponibili solo per questo mapping e non deve essere utilizzato in caso contrario. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
 ms.openlocfilehash: 79adbf126438c7d9f2884987c53b573991f92cf1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205983"
 ---
 # <a name="cgopherlocator-class"></a>Classe CGopherLocator
 
@@ -108,7 +108,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esi
 
 I tipi possibili sono i seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |GOPHER_TYPE_TEXT_FILE|File di testo ASCII.|
 |GOPHER_TYPE_DIRECTORY|Una directory di elementi aggiuntivi Gopher.|

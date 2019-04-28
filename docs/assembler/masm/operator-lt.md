@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator LT
 ms.assetid: 6a7b43cc-2f38-49e9-b42e-8e5b5c41b965
 ms.openlocfilehash: d8014cd610aa439a888b8ef0af50202e22cd81b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176616"
 ---
 # <a name="operator-lt"></a>Operatore LT
 

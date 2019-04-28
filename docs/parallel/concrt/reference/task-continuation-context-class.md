@@ -13,11 +13,11 @@ helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
 ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212857"
 ---
 # <a name="taskcontinuationcontext-class"></a>Classe task_continuation_context
 
@@ -73,7 +73,7 @@ Il `get_current_winrt_context` metodo acquisisce contesto del thread fase di ese
 
 Il valore restituito da `get_current_winrt_context` può essere utilizzato per indicare al Runtime che la continuazione deve essere eseguita nel modello di apartment del contesto acquisito (STA e MTA), indipendentemente dal fatto che l'attività precedente riconosce apartment. Un'attività è un'attività che annulla il wrapping di un Runtime di Windows di apartment `IAsyncInfo` interfaccia o un'attività che è discesa da tale attività.
 
-Questo metodo è simile al `use_current` (metodo), ma è anche disponibile per codice C++ nativo senza C + + / supporto delle estensioni di CX. Si è destinato utilizzato da avanzati agli utenti la scrittura C + + c++ /CLI codice di libreria indipendente dalla CX sia native che i chiamanti di Windows Runtime. A meno che non necessaria questa funzionalità, è consigliabile il `use_current` metodo, che è disponibile solo per C + + / client CX.
+Questo metodo è simile al `use_current` metodo, ma è anche disponibile in codice nativo C++ codice senza C++/CX supporto delle estensioni. Si è rivolta a usato da utenti esperti la scrittura C++codice di libreria /CX-agnostic sia modalità nativa o ai chiamanti di Windows Runtime. A meno che non necessaria questa funzionalità, è consigliabile la `use_current` metodo, che è disponibile solo per C++/CX client.
 
 ##  <a name="use_arbitrary"></a> use_arbitrary
 

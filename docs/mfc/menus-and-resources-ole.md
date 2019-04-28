@@ -19,11 +19,11 @@ helpviewer_keywords:
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
 ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225467"
 ---
 # <a name="menus-and-resources-ole"></a>Menu e risorse (OLE)
 
@@ -54,11 +54,11 @@ Ognuno di questi nomi di risorse rappresenta un menu di scelta e, in genere, una
 
 Gli articoli seguenti illustrano gli argomenti relativi a contenitori, i server e l'unione necessari per implementare l'attivazione sul posto di menu:
 
-- [Menu e risorse: Aggiunte di contenitori](../mfc/menus-and-resources-container-additions.md)
+- [Menu e risorse: aggiunta di contenitori](../mfc/menus-and-resources-container-additions.md)
 
-- [Menu e risorse: Aggiunte di server](../mfc/menus-and-resources-server-additions.md)
+- [Menu e risorse: aggiunta di server](../mfc/menus-and-resources-server-additions.md)
 
-- [Menu e risorse: Unione di menu](../mfc/menus-and-resources-menu-merging.md)
+- [Menu e risorse: unione di menu](../mfc/menus-and-resources-menu-merging.md)
 
 ## <a name="see-also"></a>Vedere anche
 

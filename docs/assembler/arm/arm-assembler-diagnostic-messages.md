@@ -21,11 +21,11 @@ helpviewer_keywords:
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167843"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Messaggi di diagnostica Assembler ARM
 
@@ -60,7 +60,7 @@ L'assembler potrebbe provare a codificare un ramo in 16 bit e non riuscire con l
 label
 ```
 
-> A2202: Sintassi dell'istruzione Pre-UAL non consentita nell'area di controllo THUMB
+> A2202: Sintassi dell'istruzione pre-registrazione accesso utenti non consentita nell'area di controllo THUMB
 
 Codice Thumb deve usare la sintassi unificata dell'Assembler del linguaggio (UAL).  La sintassi precedente non viene più accettata
 
@@ -78,7 +78,7 @@ In modalità ARM, è una sintassi alternativa per la specifica di costanti.  Inv
     MOV r0, #4, #1       ; A2513: Rotation must be even
 ```
 
-> A2557: Numero di byte da scrivere nuovamente errato
+> A2557: Numero di byte da scrivere nuovamente non corretto
 
 In base alla struttura NEON caricare e archiviare le istruzioni (`VLDn`, `VSTn`), è una sintassi alternativa per la specifica di writeback per la registrazione di base.  Anziché inserire un punto esclamativo (!) dopo l'indirizzo, è possibile specificare un valore immediato che indica l'offset da aggiungere alla base registrate.  Se si utilizza questa sintassi, è necessario specificare il numero esatto di byte che sono stati caricati o memorizzati dall'istruzione.
 
@@ -113,7 +113,7 @@ In modalità ARM, è una sintassi alternativa per la specifica di costanti.  Inv
     ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecated
 ```
 
-> A4509: Questo modulo dell'istruzione condizionale è deprecato
+> A4509: Questa forma dell'istruzione condizionale è deprecata
 
 Questa forma dell'istruzione condizionale è stata deprecata da ARM nell'architettura di ARMv8. È consigliabile modificare il codice per usare i rami condizionali. Per visualizzare le istruzioni condizionali sono ancora supportate, consultare il [manuale di riferimento di architettura ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).
 

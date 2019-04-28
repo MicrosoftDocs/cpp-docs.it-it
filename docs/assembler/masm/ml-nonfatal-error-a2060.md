@@ -8,11 +8,11 @@ helpviewer_keywords:
 - A2060
 ms.assetid: 435d5b32-9b4f-4f4e-8142-af0ce7676e89
 ms.openlocfilehash: dc36b22dc664314086a7c70059a87a4b7f0763bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62201884"
 ---
 # <a name="ml-nonfatal-error-a2060"></a>Errore ML non irreversibile A2060
 

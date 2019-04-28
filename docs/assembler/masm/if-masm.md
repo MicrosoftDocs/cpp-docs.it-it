@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
 ms.openlocfilehash: 2b91698640e028bf91d822c12b85ded651a04d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62203064"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
@@ -19,7 +19,7 @@ Concede l'assembly del *ifstatements* se *expression1* è true (diverso da zero)
 
 ## <a name="syntax"></a>Sintassi
 
-> Se *expression1*<br/>
+> IF *expression1*<br/>
 > *ifstatements*<br/>
 > [[ELSEIF *expression2*<br/>
 > *elseifstatements*]]<br/>
@@ -29,7 +29,7 @@ Concede l'assembly del *ifstatements* se *expression1* è true (diverso da zero)
 
 ## <a name="remarks"></a>Note
 
-È possibile sostituire le direttive seguenti per [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI** , **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, e **ELSEIFNDEF** . Facoltativamente, consente di assemblare *parametro elsestatements* se l'espressione precedente è false. Si noti che le espressioni vengono valutate in fase di assembly.
+È possibile sostituire le direttive seguenti per [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, e **ELSEIFNDEF**. Facoltativamente, consente di assemblare *parametro elsestatements* se l'espressione precedente è false. Si noti che le espressioni vengono valutate in fase di assembly.
 
 ## <a name="see-also"></a>Vedere anche
 

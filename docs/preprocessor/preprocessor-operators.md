@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
 ms.openlocfilehash: 0b105cc2039e2aa50c11b796e5474a97d8c5c702
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179893"
 ---
 # <a name="preprocessor-operators"></a>Operatori del preprocessore
 Quattro operatori specifici del preprocessore vengono utilizzati nel contesto della direttiva `#define` (vedere il seguente elenco per un riepilogo di ciascun operatore). Gli operatori per la creazione di stringhe, caratteri e concatenamento dei token sono descritti nelle tre sezioni seguenti. Per informazioni sul `defined` operatore, vedere [#if, #elif, #else e #endif direttive](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
 ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210375"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -20,7 +20,7 @@ Definisce un segmento di programma chiamato *nome* presenza di attributi di segm
 ## <a name="syntax"></a>Sintassi
 
 > *nome* segmento [[READONLY]] [[*allineare*]] [[*combinare*]] [[*usare*]] [[*caratteristiche*]] ALIAS (*stringa*) [[«*classe*']]<br/>
-> *Istruzioni*<br/>
+> *statements*<br/>
 > *nome* termina
 
 #### <a name="parameters"></a>Parametri
@@ -45,12 +45,12 @@ Se questo parametro viene omesso, **PARA** viene usato per impostazione predefin
 *use*<br/>
 **USE16**, **USE32**, **FLAT**
 
-*Caratteristiche*<br/>
+*characteristics*<br/>
 **INFO**, **leggere**, **scrivere**, **EXECUTE**, **condiviso**, **NOPAGE**, **NOCACHE**, e **annullare**
 
 Queste sono supportate solo per COFF e corrispondono alle caratteristiche di sezione COFF di nome simile (ad esempio, **condiviso** corrisponde a IMAGE_SCN_MEM_SHARED). LETTURA imposta il flag IMAGE_SCN_MEM_READ. Il flag di sola lettura obsoleto ha causato la sezione per cancellare il flag IMG_SCN_MEM_WRITE. Eventuale *caratteristiche* vengono impostate, non vengono utilizzate le caratteristiche predefinite e solo i flag specificati dal programmatore restano validi.
 
-`ALIAS(` *Stringa* `)`<br/>
+`ALIAS(` *string* `)`<br/>
 Questa stringa viene utilizzata come nome della sezione nell'oggetto COFF generato.  Crea più sezioni con lo stesso nome esterno, con i nomi distinti segmento MASM.
 
 Non supportato con **/omf**.

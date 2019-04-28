@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
 ms.openlocfilehash: 97db98322cd7c0d14e46f54a055bbc646c90d785
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240389"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Gestione della notifica TTN_NEEDTEXT per le descrizioni comandi
 

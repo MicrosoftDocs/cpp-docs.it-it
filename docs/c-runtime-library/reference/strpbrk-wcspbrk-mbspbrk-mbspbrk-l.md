@@ -45,11 +45,11 @@ helpviewer_keywords:
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
 ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209567"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -139,7 +139,7 @@ Il `strpbrk` funzione restituisce un puntatore alla prima occorrenza di un carat
 
 `_mbspbrk` è simile a `_mbscspn` ad eccezione del fatto che `_mbspbrk` restituisce un puntatore anziché un valore di tipo [size_t](../../c-runtime-library/standard-types.md).
 
-In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi gli overload C++, definire il simbolo CONST_RETURN.
+In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi C++ gli overload, definire il simbolo CONST_RETURN.
 
 Il valore di output è interessato dall'impostazione dell'impostazione della categoria LC_CTYPE delle impostazioni locali; per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con la **l** suffisso è identico, ma usa il parametro delle impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

@@ -3,11 +3,11 @@ title: Recupero di puntatori a buffer di dati (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
 ms.openlocfilehash: 46a81fa9e3d278645b654dca3c652653f6c21037
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162308"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Recupero di puntatori a buffer di dati (C++/CX)
 

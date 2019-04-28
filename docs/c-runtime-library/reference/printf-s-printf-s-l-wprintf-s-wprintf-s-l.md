@@ -37,11 +37,11 @@ helpviewer_keywords:
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
 ms.openlocfilehash: 6b07fd90e0390d5c39bc8f5885f5744de20eeb79
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232001"
 ---
 # <a name="printfs-printfsl-wprintfs-wprintfsl"></a>printf_s, _printf_s_l, wprintf_s, _wprintf_s_l
 
@@ -75,7 +75,7 @@ int _wprintf_s_l(
 *format*<br/>
 Controllo del formato.
 
-*argomento*<br/>
+*argument*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -103,8 +103,8 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_unicode definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
-|**tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
+|**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
+|**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
 Il *formato* argomento è costituito da caratteri ordinari, sequenze di escape, e (se seguita da argomenti *formato*) specifiche di formato. Vengono copiate i caratteri ordinari e le sequenze di escape **stdout** in ordine di visualizzazione. Ad esempio, la riga di comando
 
@@ -128,8 +128,8 @@ Line one
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**printf_s**, **printf_s_l**|\<stdio.h>|
-|**wprintf_s**, **wprintf_s_l**|\<stdio.h> o \<wchar.h>|
+|**printf_s**, **_printf_s_l**|\<stdio.h>|
+|**wprintf_s**, **_wprintf_s_l**|\<stdio.h> o \<wchar.h>|
 
 La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

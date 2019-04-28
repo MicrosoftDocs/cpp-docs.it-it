@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
 ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182899"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Uso di classi di Database con documenti e visualizzazioni
 
@@ -63,7 +63,7 @@ Molte semplici applicazioni basate su form non sono necessario documenti. Se l'a
 
 ##  <a name="_core_other_factors"></a> Altri fattori
 
-Le applicazioni basate su form non sono in genere utili per meccanismo di serializzazione di documenti del framework, in modo che si potrebbe voler rimuovere, disabilitare o sostituire il **New** e **Open** i comandi di **File** menu. Vedere l'articolo [serializzazione: Visual Studio di serializzazione. Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md).
+Le applicazioni basate su form non sono in genere utili per meccanismo di serializzazione di documenti del framework, in modo che si potrebbe voler rimuovere, disabilitare o sostituire il **New** e **Open** i comandi di **File** menu. Vedere l'articolo [serializzazione: Serializzazione e Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Si potrebbe anche voler apportare usare delle numerose possibilità dell'interfaccia utente in grado di supportare il framework. Ad esempio, è possibile usare più `CRecordView` gli oggetti in una finestra con separatore, aprire recordset multipli in diversi più finestre dei documenti (MDI) interfaccia figlio e così via.
 

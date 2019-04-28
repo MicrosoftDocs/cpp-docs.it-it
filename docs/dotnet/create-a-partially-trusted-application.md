@@ -1,5 +1,5 @@
 ---
-title: "Procedura: Creare un'applicazione parzialmente attendibile (C + + CLI)"
+title: "Procedura: Creare un'applicazione parzialmente attendibile (C++/CLI)"
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
 ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209122"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Procedura: Creare un'applicazione parzialmente attendibile rimuovendo la dipendenza la DLL della libreria CRT
 

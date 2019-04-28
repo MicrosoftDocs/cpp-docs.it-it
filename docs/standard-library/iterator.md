@@ -8,11 +8,11 @@ helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
 ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224090"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -40,7 +40,7 @@ Gli iteratori costituiscono una generalizzazione dei puntatori, che astraggono d
 
 Gli iteratori che dispongono di un numero maggiore di requisiti e quindi di un accesso più efficiente possono essere utilizzati al posto degli iteratori con un numero inferiore di requisiti. Ad esempio, nel caso in cui venga chiamato un iteratore in avanti, può essere invece utilizzato un iteratore ad accesso casuale.
 
-Sono state aggiunte estensioni agli iteratori della libreria standard C++ per supportare diverse situazioni relative alla modalità di debug per gli iteratori verificati e non verificati. Per altre informazioni, vedere [Librerie protette: libreria standard](../standard-library/safe-libraries-cpp-standard-library.md).
+Sono state aggiunte estensioni agli iteratori della libreria standard C++ per supportare diverse situazioni relative alla modalità di debug per gli iteratori verificati e non verificati. Per altre informazioni, vedere [librerie protette: C++Libreria standard](../standard-library/safe-libraries-cpp-standard-library.md).
 
 ### <a name="functions"></a>Funzioni
 
@@ -55,9 +55,9 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 |[end](../standard-library/iterator-functions.md#end)|Recupera un iteratore all'elemento successivo all'ultimo elemento nel contenitore specificato.|
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Crea un iteratore in grado di inserire elementi all'inizio di un contenitore specificato.|
 |[inserter](../standard-library/iterator-functions.md#inserter)|Adattatore dell'iteratore che aggiunge un nuovo elemento a un contenitore in corrispondenza di un punto di inserimento specificato.|
-|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Crea un oggetto [checked_array_iterator](../standard-library/checked-array-iterator-class.md) che può essere usato da altri algoritmi. **Nota:**  questa funzione è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
+|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Crea un oggetto [checked_array_iterator](../standard-library/checked-array-iterator-class.md) che può essere usato da altri algoritmi. **Nota:**  Questa funzione è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
 |[make_move_iterator](../standard-library/iterator-functions.md#make_move_iterator)|Restituisce un iteratore di spostamento contenente l'iteratore fornito come relativo iteratore di base archiviato.|
-|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Crea un oggetto [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) che può essere usato da altri algoritmi. **Nota:**  questa funzione è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
+|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Crea un oggetto [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) che può essere usato da altri algoritmi. **Nota:**  Questa funzione è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
 |[next](../standard-library/iterator-functions.md#next)|Esegue l'iterazione per un numero specificato di volte e restituisce la nuova posizione dell'iteratore.|
 |[prev](../standard-library/iterator-functions.md#prev)|Esegue l'iterazione in ordine inverso per un numero specificato di volte e restituisce la nuova posizione dell'iteratore.|
 
@@ -80,7 +80,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo `Container`, cui accede tramite il metodo protetto `pointer` oggetto archiviato denominato contenitore.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per un `iterator_category` funzione che rappresenta un iteratore bidirezionale.|
-|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore verificato ad accesso causale. **Nota:**  questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
+|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore verificato ad accesso causale. **Nota:**  Questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
 |[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per un `iterator_category` funzione che rappresenta un iteratore in avanti.|
 |[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo `Container`, cui accede tramite il metodo protetto `pointer` oggetto archiviato denominato contenitore.|
 |[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per un `iterator_category` funzione che rappresenta un iteratore di input.|
@@ -95,7 +95,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 |[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per `iterator_category` funzione che rappresenta un iteratore di output.|
 |[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per `iterator_category` funzione che rappresenta un iteratore ad accesso casuale.|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|La classe modello descrive un oggetto che si comporta come un iteratore ad accesso casuale solo in senso inverso.|
-|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore ad accesso causale non verificato. **Nota:**  questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
+|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|Classe che accede a una matrice mediante un iteratore ad accesso causale non verificato. **Nota:**  Questa classe è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - iterator method
 ms.assetid: f9c49d1c-17cb-4b17-8e54-09e3ea41ca26
 ms.openlocfilehash: 3e425e3f8e2987019966aa73bbf9a34d47f2dbfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62211004"
 ---
 # <a name="container-classiterator"></a>Container Class::iterator
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator ;;
 ms.assetid: 94320c71-70df-4e71-8c22-e36797294e2b
 ms.openlocfilehash: 10c7395a29b3e9d7792939c3c54e9108a255f1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62199067"
 ---
 # <a name="operator-"></a>Operatore ;;
 
@@ -21,7 +21,7 @@ Considera *testo* come un commento in una macro che viene visualizzato solo nell
 
 ## <a name="syntax"></a>Sintassi
 
-> ;; *testo*
+> ;; *text*
 
 ## <a name="see-also"></a>Vedere anche
 

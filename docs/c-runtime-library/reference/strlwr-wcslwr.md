@@ -24,11 +24,11 @@ helpviewer_keywords:
 - wcslwr function
 ms.assetid: b9274824-4365-4674-b656-823c89653656
 ms.openlocfilehash: 14e2e31c3c92b8c2baad5abcd4503a39601e4b8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209903"
 ---
 # <a name="strlwr-wcslwr"></a>strlwr, wcslwr
 

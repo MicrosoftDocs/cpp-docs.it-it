@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
 ms.openlocfilehash: a94e419e07194ffb8903cd474f878b0e8553356c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210736"
 ---
 # <a name="c-standard-library-header-files"></a>File di intestazione libreria standard C++
 

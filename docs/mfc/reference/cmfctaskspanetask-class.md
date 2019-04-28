@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
 ms.openlocfilehash: 95a2e4f2a1f2e3344936af33fb2258b496b1be93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218694"
 ---
 # <a name="cmfctaskspanetask-class"></a>Classe CMFCTasksPaneTask
 
@@ -64,7 +64,7 @@ class CMFCTasksPaneTask : public CObject
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|Determina se la finestra di attività viene eliminata automaticamente.|
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|Determina se il framework consente di disegnare un'etichetta di attività come testo in grassetto.|

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
 ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180043"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallelismo delle attività (runtime di concorrenza)
 
@@ -108,7 +108,7 @@ Quando si usa la [Concurrency:: create_task](reference/concurrency-namespace-fun
 
 Se viene generata un'eccezione durante l'esecuzione di un'attività, il runtime effettua il marshalling di tale eccezione nella chiamata successiva a `task::get` o `task::wait` o su una continuazione basata sull'attività. Per altre informazioni sul meccanismo di gestione delle eccezioni di attività, vedere [gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
-Per un esempio che usa `task`, [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), annullamento, vedere [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). (La classe `task_completion_event` è descritta più avanti in questo documento).
+Per un esempio che usa `task`, [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), annullamento, vedere [procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). (La classe `task_completion_event` è descritta più avanti in questo documento).
 
 > [!TIP]
 >  Per altre informazioni dettagliate specifiche per le attività nelle App UWP, vedere [programmazione asincrona in C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) e [creazione di operazioni asincrone in C++ per le app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
@@ -244,7 +244,7 @@ A volte è necessario ritardare l'esecuzione di un'attività fino a soddisfare u
 
 Il [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) classe consente di semplificare tale composizione di attività. Analogamente ala classe `task`, il parametro di tipo `T` è il tipo del risultato prodotto dall'attività. Questo tipo può essere `void` se l'attività non restituisce un valore. `T` non può usare il modificatore `const`. In genere, un oggetto `task_completion_event` viene fornito a un thread o a un'attività che lo segnalerà se diventa disponibile il valore per l'oggetto. Contemporaneamente, una o più attività vengono impostate come listener di tale evento. Quando viene impostato l'evento, le attività del listener vengono completate e viene pianificata l'esecuzione delle loro continuazioni.
 
-Per un esempio che usa `task_completion_event` per implementare un'attività che viene completata dopo un ritardo, vedere [procedura: creare un'attività che viene completata dopo un ritardo](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
+Per un esempio che usa `task_completion_event` per implementare un'attività che viene completata dopo un ritardo, vedere [come: Creare un'attività che viene completata dopo un ritardo](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).
 
 ##  <a name="task-groups"></a> Gruppi di attività
 
@@ -257,9 +257,9 @@ La libreria PPL divide i gruppi di attività in queste due categorie: *gruppi di
 > [!IMPORTANT]
 > La libreria PPL definisce inoltre le [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo, che usa il `structured_task_group` classe per eseguire un set di attività in parallelo. Poiché l'algoritmo `parallel_invoke` presenta una sintassi più concisa, è consigliabile usarlo in alternativa alla classe `structured_task_group` quando è possibile. L'argomento [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md) descrive `parallel_invoke` in maggiore dettaglio.
 
-Usare `parallel_invoke` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ed è necessario attendere il completamento di tutte le attività prima di continuare. Questa tecnica è spesso detta *fork e join* parallelismo. Usare `task_group` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ma è possibile attendere il completamento delle attività in un secondo momento. È possibile, ad esempio, aggiungere attività a un oggetto `task_group` e attendere il completamento delle attività in un'altra funzione o da parte di un altro thread.
+Usare `parallel_invoke` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ed è necessario attendere il completamento di tutte le attività prima di continuare.  Questa tecnica è spesso detta *fork e join* parallelismo. Usare `task_group` quando sono presenti diverse attività indipendenti che si vuole eseguire contemporaneamente ma è possibile attendere il completamento delle attività in un secondo momento. È possibile, ad esempio, aggiungere attività a un oggetto `task_group` e attendere il completamento delle attività in un'altra funzione o da parte di un altro thread.
 
-I gruppi di attività supportano il concetto di annullamento. L'annullamento consente di segnalare l'annullamento dell'operazione globale a tutte le attività attive.  L'annullamento impedisce inoltre l'avvio delle attività che non sono ancora avviate. Per altre informazioni sull'annullamento, vedere [annullamento nella libreria PPL](cancellation-in-the-ppl.md).
+I gruppi di attività supportano il concetto di annullamento. L'annullamento consente di segnalare l'annullamento dell'operazione globale a tutte le attività attive. L'annullamento impedisce inoltre l'avvio delle attività che non sono ancora avviate. Per altre informazioni sull'annullamento, vedere [annullamento nella libreria PPL](cancellation-in-the-ppl.md).
 
 Il runtime fornisce inoltre un modello di gestione delle eccezioni che consente di generare un'eccezione da un'attività e di gestire tale eccezione durante l'attesa del completamento del gruppo di attività associato. Per altre informazioni su questo modello di gestione delle eccezioni, vedere [gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
@@ -275,7 +275,7 @@ Poiché la classe `structured_task_group` non viene sincronizzata nei thread, ha
 
 Se si usa un oggetto `structured_task_group` all'interno di un altro oggetto `structured_task_group`, è necessario che l'oggetto interno venga completato ed eliminato prima del completamento dell'oggetto esterno. La classe `task_group` non richiede il completamento dei gruppi di attività annidate prima del completamento del gruppo esterno.
 
-I gruppi di attività non strutturate e i gruppi di attività strutturate vengono usati con gli handle dell'attività in diversi modi. È possibile passare le funzioni lavoro direttamente a un oggetto `task_group`. L'oggetto `task_group` creerà e gestirà l'handle dell'attività automaticamente.  Con la classe `structured_task_group` è necessario gestire un oggetto `task_handle` per ogni attività. Ogni oggetto `task_handle` deve rimanere valido per tutta la durata del relativo oggetto `structured_task_group` associato. Usare la [make_task](reference/concurrency-namespace-functions.md#make_task) funzione per creare un `task_handle` dell'oggetto, come illustrato nell'esempio di base seguente:
+I gruppi di attività non strutturate e i gruppi di attività strutturate vengono usati con gli handle dell'attività in diversi modi. È possibile passare le funzioni lavoro direttamente a un oggetto `task_group`. L'oggetto `task_group` creerà e gestirà l'handle dell'attività automaticamente. Con la classe `structured_task_group` è necessario gestire un oggetto `task_handle` per ogni attività. Ogni oggetto `task_handle` deve rimanere valido per tutta la durata del relativo oggetto `structured_task_group` associato. Usare la [make_task](reference/concurrency-namespace-functions.md#make_task) funzione per creare un `task_handle` dell'oggetto, come illustrato nell'esempio di base seguente:
 
 [!code-cpp[concrt-make-task-structure#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_16.cpp)]
 
@@ -285,7 +285,7 @@ Per gestire gli handle dell'attività per i casi in cui presente un numero varia
 
 ##  <a name="example"></a> Esempio
 
-Nell'esempio di base seguente viene illustrato l'uso dei gruppi di attività. In questo esempio viene usato l'algoritmo `parallel_invoke` per eseguire due attività contemporaneamente. Ogni attività aggiunge sottoattività a un oggetto `task_group`.  Si noti che la classe `task_group` consente l'aggiunta simultanea di attività a più attività.
+Nell'esempio di base seguente viene illustrato l'uso dei gruppi di attività. In questo esempio viene usato l'algoritmo `parallel_invoke` per eseguire due attività contemporaneamente. Ogni attività aggiunge sottoattività a un oggetto `task_group`. Si noti che la classe `task_group` consente l'aggiunta simultanea di attività a più attività.
 
 [!code-cpp[concrt-using-task-groups#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_17.cpp)]
 
@@ -299,7 +299,7 @@ Message from task: 42
 
 Poiché l'algoritmo `parallel_invoke` esegue le attività contemporaneamente, l'ordine dei messaggi di output potrebbe variare.
 
-Per esempi completi che illustrano come usare il `parallel_invoke` algoritmo, vedere [procedura: usare parallel_invoke per scrivere una Routine di ordinamento parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) e [procedura: usare parallel_invoke per eseguire operazioni in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Per un esempio completo che usa il `task_group` classe di implementazione di future asincrone, vedere [questa procedura dettagliata: implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md).
+Per esempi completi che illustrano come usare il `parallel_invoke` algoritmo, vedere [come: Usare parallel_invoke per scrivere una Routine di ordinamento parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) e [come: Usare parallel_invoke per eseguire operazioni in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Per un esempio completo che usa il `task_group` classe di implementazione di future asincrone, vedere [procedura dettagliata: Implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md).
 
 ##  <a name="robust"></a> Programmazione efficiente
 
@@ -312,7 +312,7 @@ Prima di usare le attività, i gruppi di attività e gli algoritmi paralleli, as
 |[Procedura: Usare parallel_invoke per scrivere una routine di ordinamento in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Viene illustrato come usare l'algoritmo `parallel_invoke` per migliorare le prestazioni dell'algoritmo di ordinamento bitonico.|
 |[Procedura: Usare parallel_invoke per eseguire operazioni in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Viene illustrato come usare l'algoritmo `parallel_invoke` per migliorare le prestazioni di un programma che esegue più operazioni in un'origine dati condivisa.|
 |[Procedura: Creare un'attività che viene completata dopo un ritardo](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|Viene illustrato come utilizzare il `task`, `cancellation_token_source`, `cancellation_token`, e `task_completion_event` classi per creare un'attività che viene completata dopo un ritardo.|
-|[Procedura dettagliata: implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md)|Viene illustrato come combinare le funzionalità esistenti del runtime di concorrenza con funzionalità ancora più avanzate.|
+|[Procedura dettagliata: Implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md)|Viene illustrato come combinare le funzionalità esistenti del runtime di concorrenza con funzionalità ancora più avanzate.|
 |[PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Viene descritta la libreria PPL che fornisce un modello di programmazione imperativa per lo sviluppo di applicazioni simultanee.|
 
 ## <a name="reference"></a>Riferimenti

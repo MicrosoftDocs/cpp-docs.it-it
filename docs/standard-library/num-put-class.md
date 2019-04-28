@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
 ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223558"
 ---
 # <a name="numput-class"></a>Classe num_put
 
@@ -142,13 +142,13 @@ virtual iter_type do_put(
 *next*<br/>
 Iteratore che punta al primo elemento della stringa inserita.
 
-*In_losbase*<br/>
+*_Iosbase*<br/>
 Specifica il flusso contenente le impostazioni locali con il facet numpunct usato per creare la punteggiatura dell'output e i flag per la formattazione dell'output.
 
 *_Fill*<br/>
 Carattere usato per la spaziatura.
 
-*Val*<br/>
+*val*<br/>
 Numero o tipo booleano che deve essere incluso nell'output.
 
 ### <a name="return-value"></a>Valore restituito
@@ -315,11 +315,11 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \> 1: Questi valori non definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
@@ -384,13 +384,13 @@ iter_type put(
 *dest*<br/>
 Iteratore che punta al primo elemento della stringa inserita.
 
-*In_losbase*<br/>
+*_Iosbase*<br/>
 Specifica il flusso contenente le impostazioni locali con il facet numpunct usato per creare la punteggiatura dell'output e i flag per la formattazione dell'output.
 
 *_Fill*<br/>
 Carattere usato per la spaziatura.
 
-*Val*<br/>
+*val*<br/>
 Numero o tipo booleano che deve essere incluso nell'output.
 
 ### <a name="return-value"></a>Valore restituito

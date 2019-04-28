@@ -8,11 +8,11 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
 ms.openlocfilehash: d1ab314edeebedef4cff14cd5364a7ca16c74769
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216382"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilizzo di più funzioni di accesso per un rowset
 

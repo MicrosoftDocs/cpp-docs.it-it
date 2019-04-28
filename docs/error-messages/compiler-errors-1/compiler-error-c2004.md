@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2004
 ms.assetid: d81526dd-3a00-4593-87b0-d910d3d29bca
 ms.openlocfilehash: fb100d977188cd3a7d5b0ebbb3e29b53942871dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62208945"
 ---
 # <a name="compiler-error-c2004"></a>Errore del compilatore C2004
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
 ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241813"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>Personalizzazione dell'aspetto di un controllo Toolbar
 

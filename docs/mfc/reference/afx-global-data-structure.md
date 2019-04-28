@@ -56,11 +56,11 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
 ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212922"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA (struttura)
 
@@ -125,7 +125,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Indica se il sistema operativo corrente supporta la fusione alfa.|
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|Indica se l'applicazione è in esecuzione in un sistema operativo Windows 7 o versione successiva.|

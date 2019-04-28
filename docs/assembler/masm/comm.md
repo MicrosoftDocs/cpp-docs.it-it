@@ -7,11 +7,11 @@ helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
 ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179107"
 ---
 # <a name="comm"></a>COMM
 
@@ -27,7 +27,7 @@ Variabili comuni vengono allocate per il linker e non possono essere inizializza
 
 Ciascuna *definizione* ha il formato seguente:
 
-[*langtype*] [**NEAR** &#124; **ESTREMO**] _etichetta_**:**_tipo_[**:**_conteggio_]
+[*langtype*] [**NEAR** &#124; **FAR**] _label_**:**_type_[**:**_count_]
 
 L'opzione facoltativa *langtype* imposta le convenzioni di denominazione per il nome che segue. Esegue l'override di qualsiasi lingua specificata dal **. MODELLO** direttiva. L'opzione facoltativa **NEAR** oppure **ESTREMO** eseguire l'override del modello di memoria corrente. Il *etichetta* è il nome della variabile. Il *tipo* può essere qualsiasi identificatore di tipo ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md)e così via) o un numero intero che specifica il numero di byte. L'opzione facoltativa *conteggio* specifica il numero di elementi nell'oggetto dati dichiarato; il valore predefinito è uno.
 

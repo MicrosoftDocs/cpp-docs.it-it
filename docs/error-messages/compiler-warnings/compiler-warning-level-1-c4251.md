@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
 ms.openlocfilehash: d2fff1d2f30c4ac80af6d5b9ca452fa5f30f5a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207355"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>Avviso del compilatore (livello 1) C4251
 
@@ -29,7 +29,7 @@ Per ridurre al minimo la possibilità di danneggiamento dei dati durante l'espor
 
 È possibile evitare l'esportazione di classi definendo una DLL che definisce una classe con funzioni virtuali e le funzioni è possibile chiamare per creare un'istanza e l'eliminazione di oggetti del tipo.  È quindi possibile semplicemente chiamare funzioni virtuali sul tipo.
 
-C4251 può essere ignorato se si deriva da un tipo nella libreria Standard C++, la compilazione di una versione di debug (**/MTd**) e il messaggio di errore del compilatore in cui si intende Container_base.
+C4251 può essere ignorato se si deriva da un tipo di C++ libreria Standard, la compilazione di una versione di debug (**/MTd**) e il messaggio di errore del compilatore in cui si intende Container_base.
 
 ```cpp
 // C4251.cpp

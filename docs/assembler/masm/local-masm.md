@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LOCAL directive
 ms.assetid: 76147e2d-23ca-4f1e-8817-81428becd113
 ms.openlocfilehash: 94af498865151ff5c49fac9dbc03de65c4ecb934
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178007"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
 
@@ -21,7 +21,7 @@ Nella prima direttiva, all'interno di una macro **locale** definisce le etichett
 
 > LOCALE *localname* \[, *localname*]...
 >
-> LOCALE *label* \[ __\[__ *conteggio*__]__ ] \[ __:__  *tipo di*] \[ __,__ *etichetta* \[ __\[__ *conteggio* __]__  ] \[ *tipo*]]...
+> LOCAL *label* \[ __\[__*count*__]__ ] \[__:__*type*] \[__,__ *label* \[ __\[__*count*__]__ ] \[*type*] ] ...
 
 ## <a name="remarks"></a>Note
 

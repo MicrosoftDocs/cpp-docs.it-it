@@ -8,11 +8,11 @@ helpviewer_keywords:
 - critical sections
 ms.assetid: 759f05ef-6285-4be6-a2cc-78572dd75146
 ms.openlocfilehash: 98db15a1fee2637b9493b538468fa9446015404f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196155"
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>Modelli di threading e le classi di sezioni critiche
 

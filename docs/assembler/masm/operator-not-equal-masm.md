@@ -8,11 +8,11 @@ helpviewer_keywords:
 - operator !=
 ms.assetid: 8d48f40b-28d4-4996-ae1a-576478fd9c32
 ms.openlocfilehash: 10c9c269eee731eafe80e320a6856e1fbdac14cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200279"
 ---
 # <a name="operator--masm"></a>Operatore != (MASM)
 
@@ -20,7 +20,7 @@ Non è uguale a. Utilizzato solo all'interno [. IF](../../assembler/masm/dot-if.
 
 ## <a name="syntax"></a>Sintassi
 
-> expression1! = expression2
+> expression1 != expression2
 
 ## <a name="see-also"></a>Vedere anche
 
