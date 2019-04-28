@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
 ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305463"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: Il ridimensionamento di MFC/OLE sul posto e zoom
 

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - naked keyword [C++], storage-class attribute
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
 ms.openlocfilehash: f9d8a8747d4a808d040b814005782ed8187bf274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301578"
 ---
 # <a name="naked-function-calls"></a>Chiamate di funzioni naked
 
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft
 
-Le funzioni dichiarate con il **naked** attributo vengono generate senza codice di prologo o epilogo, permettendo di scrivere le proprie sequenze di prologo/epilogo personalizzate utilizzando il [assembler inline](../assembler/inline/inline-assembler.md). Le funzionalità naked vengono fornite come funzionalità avanzata. Tali funzioni consentono di dichiarare una funzione chiamata da un contesto diverso da C/C++ e di conseguenza si basano su presupposti diversi sulla posizione dei parametri o sui registri mantenuti. Gli esempi includono routine come gestori di interrupt. Questa funzionalità è particolarmente utile per i writer dei driver di dispositivo virtuali (VxDs).
+Le funzioni dichiarate con il **naked** attributo vengono generate senza codice di prologo o epilogo, permettendo di scrivere le proprie sequenze di prologo/epilogo personalizzate utilizzando il [assembler inline](../assembler/inline/inline-assembler.md). Le funzioni naked vengono fornite come funzionalità avanzata. Tali funzioni consentono di dichiarare una funzione chiamata da un contesto diverso da C/C++ e di conseguenza si basano su presupposti diversi sulla posizione dei parametri o sui registri mantenuti. Gli esempi includono routine come gestori di interrupt. Questa funzionalità è particolarmente utile per i writer dei driver di dispositivo virtuali (VxDs).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni
 

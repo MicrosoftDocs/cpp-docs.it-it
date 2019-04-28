@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
 ms.openlocfilehash: 804c8ad1f17c6ee1df563cafc69ee7aef494d1cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258136"
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
 
@@ -100,7 +100,7 @@ Nella maggior parte dei casi non è necessario chiamare queste funzioni in modo 
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**tempnam_dbg**, **wtempnam_dbg**|\<crtdbg.h>|
+|**_tempnam_dbg**, **_wtempnam_dbg**|\<crtdbg.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

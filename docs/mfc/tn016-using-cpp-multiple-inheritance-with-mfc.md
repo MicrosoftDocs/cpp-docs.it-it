@@ -1,5 +1,5 @@
 ---
-title: "TN016: utilizzo dell'ereditarietà multipla C++ con MFC"
+title: "TN016: Utilizzo dell'ereditarietà multipla C++ con MFC"
 ms.date: 06/28/2018
 f1_keywords:
 - vc.inheritance
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
 ms.openlocfilehash: 76dc2e856ca7db783ee542aa2dbb498fd4c1a769
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306129"
 ---
-# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: utilizzo dell'ereditarietà multipla C++ con MFC
+# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: Utilizzo dell'ereditarietà multipla C++ con MFC
 
 In questa nota viene descritto come utilizzare l'ereditarietà multipla (MI) con Microsoft Foundation Classes. L'utilizzo di istanza Gestita non è necessario con MFC. Istanza Gestita non viene usato in tutte le classi MFC e non è necessario scrivere una libreria di classi.
 

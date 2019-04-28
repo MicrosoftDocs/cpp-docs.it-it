@@ -1,6 +1,6 @@
 ---
-title: Compilatore errori C3100 a C3199
-ms.date: 11/17/2017
+title: Errori del compilatore da C3100 a C3199
+ms.date: 04/21/2019
 f1_keywords:
 - C3102
 - C3105
@@ -66,14 +66,14 @@ helpviewer_keywords:
 - C3191
 - C3193
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
-ms.openlocfilehash: 72228be503cee9b080ae667f36b042af88161894
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efa3207a9fdfb81a52bf319a1cbc2da84084b6cd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281655"
 ---
-# <a name="compiler-errors-c3100-through-c3199"></a>Compilatore errori C3100 a C3199
+# <a name="compiler-errors-c3100-through-c3199"></a>Errori del compilatore da C3100 a C3199
 
 Gli articoli in questa sezione della documentazione illustrano un subset dei messaggi di errore generati dal compilatore.
 
@@ -83,37 +83,37 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 
 |Error|Messaggio|
 |-----------|-------------|
-|[Errore del compilatore C3100](compiler-error-c3100.md)|«*identificatore*': qualificatore di attributo sconosciuto|
+|[Errore del compilatore da C3100](compiler-error-c3100.md)|«*identificatore*': qualificatore di attributo sconosciuto|
 |[Errore del compilatore C3101](compiler-error-c3101.md)|espressione non valida per l'argomento di attributo denominato '*identificatore*'|
-|C3102 errore del compilatore|Obsoleta.|
+|Errore del compilatore C3102|Obsoleta.|
 |[Errore del compilatore C3103](compiler-error-c3103.md)|«*identificatore*': argomento denominato ripetuto|
 |[Errore del compilatore C3104](compiler-error-c3104.md)|argomento dell'attributo non valido|
-|C3105 errore del compilatore|«*simbolo*': non può essere usato come attributo|
+|Errore del compilatore C3105|«*simbolo*': non può essere usato come attributo|
 |[Errore del compilatore C3106](compiler-error-c3106.md)|«*attributo*': argomenti non denominati devono precedere gli argomenti denominati|
-|C3107 errore del compilatore|«*attributo*': non è possibile definire funzioni membro di attributi nativi|
-|C3108 errore del compilatore|non è possibile dedurre un tipo come un elenco di inizializzatori non è un'espressione|
-|C3109 errore del compilatore|«*identificatore*': i metodi di interfaccia devono utilizzare stdcall' o cdecl' convenzione di chiamata|
+|Errore del compilatore C3107|«*attributo*': non è possibile definire funzioni membro di attributi nativi|
+|Errore del compilatore C3108|non è possibile dedurre un tipo come un elenco di inizializzatori non è un'espressione|
+|Errore del compilatore C3109|«*identificatore*': i metodi di interfaccia devono utilizzare stdcall' o cdecl' convenzione di chiamata|
 |[Errore del compilatore C3110](compiler-error-c3110.md)|«*funzione*': è possibile eseguire l'overload di un metodo di interfaccia COM|
-|C3111 errore del compilatore|Un elenco di inizializzatori non può essere utilizzato come l'argomento predefinito per un parametro di modello|
-|C3112 errore del compilatore|«*interfaccia*': un'interfaccia può essere dichiarata solo globale o un ambito dello spazio dei nomi|
+|Errore del compilatore C3111|Un elenco di inizializzatori non può essere utilizzato come l'argomento predefinito per un parametro di modello|
+|Errore del compilatore C3112|«*interfaccia*': un'interfaccia può essere dichiarata solo globale o un ambito dello spazio dei nomi|
 |[Errore del compilatore C3113](compiler-error-c3113.md)|un' 'interfaccia/enum' non può essere un modello o generico|
 |[Errore del compilatore C3114](compiler-error-c3114.md)|«*identificatore*': argomento di attributo denominato non valida|
 |[Errore del compilatore C3115](compiler-error-c3115.md)|«*attributo*': questo attributo non è consentito in '*costruire*»|
 |[Errore del compilatore C3116](compiler-error-c3116.md)|«*identificatore*': classe di archiviazione non è valido per il metodo di interfaccia|
 |[Errore del compilatore C3117](compiler-error-c3117.md)|«*interfaccia*': un'interfaccia può avere solo una classe di base|
 |[Errore del compilatore C3118](compiler-error-c3118.md)|«*interfaccia*': le interfacce non supportano l'ereditarietà virtuale|
-|C3119 errore del compilatore|alignas (void) non è consentita|
+|Errore del compilatore C3119|alignas (void) non è consentita|
 |[Errore del compilatore C3120](compiler-error-c3120.md)|«*identificatore*': i metodi di interfaccia non possono accettare un elenco di argomenti variabili|
 |[Errore del compilatore C3121](compiler-error-c3121.md)|non è possibile cambiare il GUID della classe*classe*'|
-|C3122 errore del compilatore|«*interfaccia*': un'interfaccia generica WinRT non può contenere GUID|
-|C3123 errore del compilatore|Interfaccia generica WinRT non può includere vincoli|
-|C3124 errore del compilatore|'signed char' non è un tipo di dati WinRT valido. Usare invece 'unsigned char', 'wchar_t' o 'signed short'.|
-|C3125 errore del compilatore|«*tipo*': tipo non è possibile derivare direttamente o indirettamente da 'Platform:: Exception'|
+|Errore del compilatore C3122|«*interfaccia*': un'interfaccia generica WinRT non può contenere GUID|
+|Errore del compilatore C3123|Interfaccia generica WinRT non può includere vincoli|
+|Errore del compilatore C3124|'signed char' non è un tipo di dati WinRT valido. Usare invece 'unsigned char', 'wchar_t' o 'signed short'.|
+|Errore del compilatore C3125|«*tipo*': tipo non è possibile derivare direttamente o indirettamente da 'Platform:: Exception'|
 |[Errore del compilatore C3126](compiler-error-c3126.md)|non è possibile definire un'unione '*unione*'all'interno del tipo gestito o WinRT'*tipo*'|
-|C3127 errore del compilatore|«*tipo*': '*tratto*' tratto può essere utilizzato solo in una classe ref WinRT|
-|C3128 errore del compilatore|«*tipo*'non ha un vtable introdotto da'*tipo*»|
-|C3129 errore del compilatore|«*tipo*': default_vptr_for_base può essere utilizzato solo in basi e tipi polimorfici definiti localmente|
-|[Errore del compilatore C3130](compiler-error-c3130.md)|Errore del compilatore interno: non è stato possibile scrivere nel PDB il blocco di codice inserito|
+|Errore del compilatore C3127|«*tipo*': '*tratto*' tratto può essere utilizzato solo in una classe ref WinRT|
+|Errore del compilatore C3128|«*tipo*'non ha un vtable introdotto da'*tipo*»|
+|Errore del compilatore C3129|«*tipo*': default_vptr_for_base può essere utilizzato solo in basi e tipi polimorfici definiti localmente|
+|[Errore del compilatore C3130](compiler-error-c3130.md)|Errore del compilatore interno: non è riuscito a scrivere nel PDB il blocco di codice inserito|
 |[Errore del compilatore C3131](compiler-error-c3131.md)|progetto deve avere un attributo 'module' con una proprietà 'name'|
 |[Errore del compilatore C3132](compiler-error-c3132.md)|«*parametro*': le matrici di parametri è applicabile solo a un argomento formale di tipo 'matrice unidimensionale gestita o WinRT'|
 |[Errore del compilatore C3133](compiler-error-c3133.md)|Non è possibile applicare attributi a varargs di C++|
@@ -126,8 +126,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3140](compiler-error-c3140.md)|non può contenere più attributi 'module' nella stessa unità di compilazione|
 |[Errore del compilatore C3141](compiler-error-c3141.md)|«*interfaccia*': le interfacce supportano solo l'ereditarietà pubblica|
 |[Errore del compilatore C3142](compiler-error-c3142.md)|«*proprietà*': è possibile accettare l'indirizzo di una proprietà|
-|C3143 errore del compilatore|«*argomento*': argomento di attributo non può avere più valori|
-|C3144 errore del compilatore|«*attributo*': attributo richiede argomenti espliciti, '*argomento*' è senza nome|
+|Errore del compilatore C3143|«*argomento*': argomento di attributo non può avere più valori|
+|Errore del compilatore C3144|«*attributo*': attributo richiede argomenti espliciti, '*argomento*' è senza nome|
 |[Errore del compilatore C3145](compiler-error-c3145.md)|«*identifier*': variabile globale o statica non abbia tipo gestito o WinRT '*tipo*»|
 |Errore del compilatore C3146|Obsoleta.|
 |Errore del compilatore C3147|Obsoleta.|
@@ -141,18 +141,18 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3155](compiler-error-c3155.md)|atributy nejsou povolené. in un indicizzatore di proprietà|
 |[Errore del compilatore C3156](compiler-error-c3156.md)|«*classe*': non è possibile avere una definizione locale di un tipo gestito o WinRT|
 |[Errore del compilatore C3157](compiler-error-c3157.md)|Attributo ParamArray può essere applicato solo all'ultimo parametro|
-|C3158 errore del compilatore|«*funzione*': '*parola chiave*' può essere applicato solo a una funzione membro virtuale|
+|Errore del compilatore C3158|«*funzione*': '*parola chiave*' può essere applicato solo a una funzione membro virtuale|
 |[Errore del compilatore C3159](compiler-error-c3159.md)|«*identificatore*': Impossibile dichiarare matrici di puntatori al tipo di valore|
 |[Errore del compilatore C3160](compiler-error-c3160.md)|«*tipo*': un membro dati di una classe gestita o WinRT non può avere questo tipo|
 |[Errore del compilatore C3161](compiler-error-c3161.md)|«*interfaccia*': classe, struct o interfaccia in un'interfaccia annidamento non è valida; impossibile annidare un'interfaccia in una classe o struct non è valida|
 |[Errore del compilatore C3162](compiler-error-c3162.md)|«*tipo*': un tipo di riferimento che ha un distruttore non può essere usato come tipo di membro dati statici '*membro*»|
 |[Errore del compilatore C3163](compiler-error-c3163.md)|«*classe*': attributi non coerenti con la dichiarazione precedente|
 |Errore del compilatore C3164|Obsoleta.|
-|C3165 errore del compilatore|«*valore*': non è possibile convertire un valore integrale o a virgola mobile|
+|Errore del compilatore C3165|«*valore*': non è possibile convertire un valore integrale o a virgola mobile|
 |[Errore del compilatore C3166](compiler-error-c3166.md)|Obsoleta. '*tipo*': un membro dati di una classe gestita o WinRT non può avere tipo di '*pointer_type* a interni *managed_pointer_type*'|
 |[Errore del compilatore C3167](compiler-error-c3167.md)|Impossibile eseguire l'inizializzazione di .NET Framework: assicurarsi che sia installato|
 |[Errore del compilatore C3168](compiler-error-c3168.md)|«*tipo*': tipo di enumerazione sottostante non valido|
-|C3169 errore del compilatore|«*tipo*': non è possibile dedurre il tipo per 'auto' da '*tipo*»|
+|Errore del compilatore C3169|«*tipo*': non è possibile dedurre il tipo per 'auto' da '*tipo*»|
 |[Errore del compilatore C3170](compiler-error-c3170.md)|non può avere identificatori di moduli diversi in un progetto|
 |[Errore del compilatore C3171](compiler-error-c3171.md)|«*modulo*': non è possibile specificare gli attributi di modulo diversi in un progetto|
 |[Errore del compilatore C3172](compiler-error-c3172.md)|«*identificatore*': non è possibile specificare attributi idl_module diversi nello stesso progetto|
@@ -160,14 +160,14 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3174](compiler-error-c3174.md)|attributo del modulo non è stato specificato|
 |[Errore del compilatore C3175](compiler-error-c3175.md)|«*funzione*': non è possibile chiamare un metodo di un tipo gestito dalla funzione non gestita '*funzione*»|
 |[Errore del compilatore C3176](compiler-error-c3176.md)|«*tipo*': Impossibile dichiarare un tipo valore locale|
-|C3177 errore del compilatore|non è possibile avere una funzione di conversione a un tipo che contiene '*tipo*'|
-|C3178 errore del compilatore|«*tipo*': Impossibile utilizzare ParamArray in una funzione con argomenti predefiniti|
+|Errore del compilatore C3177|non è possibile avere una funzione di conversione a un tipo che contiene '*tipo*'|
+|Errore del compilatore C3178|«*tipo*': Impossibile utilizzare ParamArray in una funzione con argomenti predefiniti|
 |[Errore del compilatore C3179](compiler-error-c3179.md)|non è consentito un tipo gestito o WinRT senza nome|
 |[Errore del compilatore C3180](compiler-error-c3180.md)|«*tipo*': nome supera il limite di metadati di '*numero*' caratteri|
 |[Errore del compilatore C3181](compiler-error-c3181.md)|«*tipo*': operando non valido per *operatore*|
 |[Errore del compilatore C3182](compiler-error-c3182.md)|«*tipo*': una dichiarazione di accesso o dichiarazione using di membro non valida all'interno di un tipo gestito o WinRT|
 |[Errore del compilatore C3183](compiler-error-c3183.md)|non è possibile definire una classe senza nome, uno struct o unione all'interno del tipo gestito o WinRT '*classe*'|
-|C3184 errore del compilatore|Obsoleta.|
+|Errore del compilatore C3184|Obsoleta.|
 |[Errore del compilatore C3185](compiler-error-c3185.md)|'typeid': utilizzato nel tipo gestito o WinRT '*tipo*', utilizzare '*operatore*' invece|
 |Errore del compilatore C3186|Obsoleta.|
 |[Errore del compilatore C3187](compiler-error-c3187.md)|«*identificatore*': disponibile solo all'interno del corpo di una funzione|
@@ -176,10 +176,15 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C3190](compiler-error-c3190.md)|«*declarator*'con gli argomenti di modello fornito non è la creazione di istanze esplicite di qualsiasi funzione membro di'*tipo*»|
 |Errore del compilatore C3191|Obsoleta.|
 |[Errore del compilatore C3192](compiler-error-c3192.md)|Errore di sintassi: ' ^' non è un operatore di prefisso (si intendeva ' *'?)|
-|C3193 errore del compilatore|'*costruire*': richiede ' o clr' o ' / ZW' opzione della riga di comando|
+|Errore del compilatore C3193|'*costruire*': richiede ' o clr' o ' / ZW' opzione della riga di comando|
 |[Errore del compilatore C3194](compiler-error-c3194.md)|«*tipo*': un tipo di valore non può contenere un operatore di assegnazione|
 |[Errore del compilatore C3195](compiler-error-c3195.md)|«*parola chiave*': è riservato e non può essere usato come membro di un tipo di classe o il valore di riferimento. Gli operatori CLR o WinRT devono essere definiti usando la parola chiave 'operator'|
 |[Errore del compilatore C3196](compiler-error-c3196.md)|«*identificatore*': utilizzato più volte|
 |[Errore del compilatore C3197](compiler-error-c3197.md)|«*parola chiave*': può essere usato solo nelle definizioni|
 |[Errore del compilatore C3198](compiler-error-c3198.md)|utilizzo non valido di pragma a virgola mobile: il pragma fenv_access funziona solo in modalità precise|
 |[Errore del compilatore C3199](compiler-error-c3199.md)|utilizzo non valido di pragma a virgola mobile: le eccezioni non sono supportate in modalità non precise|
+
+## <a name="see-also"></a>Vedere anche
+
+[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errori del compilatore da C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
 ms.openlocfilehash: f46c6f493ae41570c75c384fcc836707faeab99f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284007"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Servizi e pooling di risorse OLE DB
 

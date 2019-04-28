@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
 ms.openlocfilehash: 96d2f5fed0e450224f82ee909cea9d56082505fb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291613"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (Specifica un contenitore di chiavi per firmare un assembly)
 
@@ -33,7 +33,7 @@ Il linker crea un assembly firmato inserendo una chiave pubblica nel manifesto d
 
 Se esegue la compilazione con [/LN](ln-create-msil-module.md), il nome del file di chiave verrà mantenuto nel modulo e incorporato nell'assembly che viene creato quando si compila un assembly che include un riferimento esplicito per il modulo, tramite [#using](../../preprocessor/hash-using-directive-cpp.md), o durante il collegamento con [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md).
 
-È anche possibile passare le informazioni di crittografia per il compilatore con [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Uso [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) se si desidera che un assembly con firma parziale. Visualizzare [assembly con nome sicuro (firma degli Assembly) (C + + CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) per altre informazioni su come firmare un assembly.
+È anche possibile passare le informazioni di crittografia per il compilatore con [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Uso [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) se si desidera che un assembly con firma parziale. Visualizzare [assembly con nome sicuro (firma degli Assembly) (C++/CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) per altre informazioni su come firmare un assembly.
 
 Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:
 
@@ -63,5 +63,5 @@ Altre opzioni del linker che influiscono sulla generazione dell'assembly sono:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

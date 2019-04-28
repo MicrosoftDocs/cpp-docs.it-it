@@ -9,15 +9,15 @@ helpviewer_keywords:
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
 ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273573"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++
 
-Se si dispongono di funzioni in una DLL scritta in C, che si desidera accedere da un linguaggio C o un modulo di linguaggio C++, è consigliabile usare la **cplusplus** macro del preprocessore per determinare quale lingua è in fase di compilazione e quindi dichiarare questi funzioni con collegamento C se viene utilizzato da un modulo di linguaggio C++. Se si usa questa tecnica e forniscono i file di intestazione per la DLL, queste funzioni possono essere usate dagli utenti di C e C++ senza alcuna modifica.
+Se si dispongono di funzioni in una DLL scritta in C, che si desidera accedere da un linguaggio C o C++ modulo linguistico, è consigliabile usare il **cplusplus** macro del preprocessore per determinare quale lingua è in fase di compilazione e quindi dichiarare questi le funzioni con collegamento C, se viene utilizzato da un C++ modulo linguistico. Se si usa questa tecnica e forniscono i file di intestazione per la DLL, queste funzioni possono essere usate dagli utenti di C e C++ senza alcuna modifica.
 
 Il codice seguente illustra un file di intestazione che può essere utilizzato dalle applicazioni client di C e C++:
 
@@ -54,7 +54,7 @@ extern "C" {
 
 - [Determinare quale metodo di esportazione da utilizzare](determining-which-exporting-method-to-use.md)
 
-- [Importare in un'applicazione che usa declspec](importing-into-an-application-using-declspec-dllimport.md)
+- [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)
 

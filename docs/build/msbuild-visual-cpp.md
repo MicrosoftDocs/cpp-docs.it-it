@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
 ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273313"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>MSBuild dalla riga di comando - C++
 

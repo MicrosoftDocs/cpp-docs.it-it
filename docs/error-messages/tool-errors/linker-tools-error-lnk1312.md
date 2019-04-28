@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
 ms.openlocfilehash: 49fa7e7963d6bb561e1602b58fe1f26c5f3d54bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160471"
 ---
 # <a name="linker-tools-error-lnk1312"></a>Errore degli strumenti del linker LNK1312
 

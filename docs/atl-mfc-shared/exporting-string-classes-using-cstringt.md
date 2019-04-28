@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
 ms.openlocfilehash: a4ee73d2ae5cfb7bf9834fb23eed8470b7d29445
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252740"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Esportazione di classi String tramite CStringT
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212092"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -44,7 +44,7 @@ L'insieme di numeri complessi con operazioni di addizione complessa e moltiplica
 
 Con la rappresentazione di un numero complesso *z* = (*una*, *b*) nel formato *z* = *un*  +  *Business Intelligence*, dove *ho*<sup>2</sup> = -1, le regole per il calcolo algebrico dell'insieme di numeri reali può essere applicato al set di numeri complessi e ai rispettivi componenti. Ad esempio:
 
-   (1 + 2*ho*) \* (2 + 3*posso*) = 1 \* (2 + 3*ho*) + 2*ho* \* (2 + 3*i*) = (2 + 3*ho*) + (4*ho* + 6*ho*<sup>2</sup>) = (2 a 6) + (3 + 4)*ho* = -4 + 7*ho*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
 
 Il sistema di numeri complessi è un campo, ma non è un campo ordinato. Non vi è alcun ordine dei numeri complessi, di quanto accade per il campo di numeri reali e i relativi sottoinsiemi, in modo disuguaglianza non è possibile applicare a un numero complesso così come sono numeri reali.
 

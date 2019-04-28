@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
 ms.openlocfilehash: 974c32cef87801599ba0d14fd146e84ad874467f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273737"
 ---
 # <a name="determine-which-exporting-method-to-use"></a>Determinare quale metodo di esportazione da usare
 
@@ -48,7 +48,7 @@ Usando `__declspec(dllexport)` è comodo perché non è necessario preoccuparsi 
 
 - [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Importare in un'applicazione che usa declspec](importing-into-an-application-using-declspec-dllimport.md)
+- [Importare in un'applicazione tramite __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)
 

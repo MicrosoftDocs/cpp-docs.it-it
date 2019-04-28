@@ -454,18 +454,18 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180147"
 ---
 # <a name="reference-concurrency-runtime"></a>Riferimento (runtime di concorrenza)
 
 In questa sezione contiene informazioni di riferimento per il Runtime di concorrenza.
 
 > [!Note]
-> Lo standard del linguaggio C++ si riserva l'uso di identificatori che iniziano con un carattere di sottolineatura (_) per le implementazioni come le librerie. Non usare questi nomi nel codice. Il comportamento degli elementi di codice i cui nomi seguono questa convenzione non è garantito ed è soggetto a modifiche nelle future versioni. Per questi motivi, tali elementi di codice vengono omessi dalla documentazione di Runtime di concorrenza.
+> Il C++ standard del linguaggio si riserva l'uso di identificatori che iniziano con un carattere di sottolineatura (_) per le implementazioni come le librerie. Non usare questi nomi nel codice. Il comportamento degli elementi di codice i cui nomi seguono questa convenzione non è garantito ed è soggetto a modifiche nelle future versioni. Per questi motivi, tali elementi di codice vengono omessi dalla documentazione di Runtime di concorrenza.
 
 ## <a name="in-this-section"></a>In questa sezione
 

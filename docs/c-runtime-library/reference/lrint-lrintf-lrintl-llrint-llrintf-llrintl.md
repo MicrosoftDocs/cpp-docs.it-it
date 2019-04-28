@@ -43,11 +43,11 @@ helpviewer_keywords:
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
 ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285772"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -116,7 +116,7 @@ Dato che C++ consente l'overload, è possibile chiamare overload di **lrint** e 
 
 Se *x* non rappresenta l'equivalente a virgola mobile e di un valore integrale, queste funzioni generano **FE_INEXACT**.
 
-**Informazioni specifiche Microsoft**: quando il risultato non è compreso nell'intervallo del tipo restituito o quando il parametro è NaN o infinito, il valore restituito è definito dall'implementazione. Il compilatore Microsoft restituisce un valore zero (0).
+**Sezione specifica Microsoft**: Quando il risultato è compreso nell'intervallo del tipo restituito o quando il parametro è NaN o infinito, il valore restituito è definito dall'implementazione. Il compilatore Microsoft restituisce un valore zero (0).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -36,11 +36,11 @@ helpviewer_keywords:
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
 ms.openlocfilehash: 197a4f690a6626edbfec27ea4abef1999b6cedaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287701"
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
 
@@ -112,17 +112,17 @@ L'argomento *shflag* è un'espressione costante costituita da una delle costanti
 
 |Termine|Definizione|
 |----------|----------------|
-|**SH_COMPAT**|Imposta la modalità di compatibilità per applicazioni a 16 bit.|
-|**SH_DENYNO**|Consente l'accesso in lettura e scrittura.|
-|**SH_DENYRD**|Nega l'accesso in lettura al file.|
-|**SH_DENYRW**|Nega l'accesso in lettura e scrittura al file.|
-|**SH_DENYWR**|Nega l'accesso in scrittura al file.|
+|**_SH_COMPAT**|Imposta la modalità di compatibilità per applicazioni a 16 bit.|
+|**_SH_DENYNO**|Consente l'accesso in lettura e scrittura.|
+|**_SH_DENYRD**|Nega l'accesso in lettura al file.|
+|**_SH_DENYRW**|Nega l'accesso in lettura e scrittura al file.|
+|**_SH_DENYWR**|Nega l'accesso in scrittura al file.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tfsopen**|**_fsopen**|**_fsopen**|**_wfsopen**|
+|**_tfsopen**|**_fsopen**|**_fsopen**|**_wfsopen**|
 
 ## <a name="requirements"></a>Requisiti
 

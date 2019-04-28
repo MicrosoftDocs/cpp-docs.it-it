@@ -5,11 +5,11 @@ helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 8a2fe4fa-0489-433e-bfc6-495844d8d73a
 ms.openlocfilehash: e02fec4115d328dd8230d68ddb65b380ec743dc0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274707"
 ---
 # <a name="building-cc-isolated-applications"></a>Compilazione di applicazioni isolate C/C++
 

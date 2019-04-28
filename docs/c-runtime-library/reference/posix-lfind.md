@@ -21,11 +21,11 @@ helpviewer_keywords:
 - lfind function
 ms.assetid: 2528e787-94b6-4740-8a8d-6efc276d1f42
 ms.openlocfilehash: b17d8a1f3565e7165b445baf73a674e1ce4c9475
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305021"
 ---
 # <a name="lfind"></a>lfind
 

@@ -20,11 +20,11 @@ apilocation:
 apitype: DLLExport
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
 ms.openlocfilehash: d70d074b13b0f24f1f040ef0e861e073e303ac7b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285939"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -68,7 +68,7 @@ In caso contrario può restituire uno dei valori seguenti:
 |Problema|INVIO|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* = ± 0|-INFINITY|
+|*x* = ±0|-INFINITY|
 |*x* = 1|+0|
 |+INFINITY|+INFINITO|
 |NaN|NaN|
@@ -85,7 +85,7 @@ Se x è un numero intero, questa funzione restituisce essenzialmente l'indice in
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
-|**LOG2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
+|**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

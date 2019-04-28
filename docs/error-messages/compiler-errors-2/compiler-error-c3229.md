@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3229
 ms.assetid: f2d90923-aa8b-444f-ab10-1f37dbb864e1
 ms.openlocfilehash: a3716bafd92bbcd5875ab2ba317f0c6826289c59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173873"
 ---
 # <a name="compiler-error-c3229"></a>Errore del compilatore C3229
 

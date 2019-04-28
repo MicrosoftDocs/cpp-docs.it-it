@@ -11,11 +11,11 @@ helpviewer_keywords:
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
 ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293862"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (Specifica la libreria predefinita)
 
@@ -50,5 +50,5 @@ Quando usata senza argomenti, il [/NODEFAULTLIB (Ignora tutte le librerie predef
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimento del linker MSVC](linking.md)
-- [Opzioni del Linker MSVC](linker-options.md)
+- [Informazioni di riferimento sul linker MSVC](linking.md)
+- [Opzioni del linker MSVC](linker-options.md)

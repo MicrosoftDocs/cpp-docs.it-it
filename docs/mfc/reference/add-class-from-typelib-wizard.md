@@ -8,11 +8,11 @@ helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297008"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Aggiunta guidata classe da libreria dei tipi
 
@@ -70,4 +70,4 @@ Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreri
 ## <a name="see-also"></a>Vedere anche
 
 [Classe MFC da una libreria dei tipi](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
-[Client di automazione: Uso delle librerie dei tipi](../../mfc/automation-clients-using-type-libraries.md)
+[Client di automazione: uso delle librerie dei tipi](../../mfc/automation-clients-using-type-libraries.md)

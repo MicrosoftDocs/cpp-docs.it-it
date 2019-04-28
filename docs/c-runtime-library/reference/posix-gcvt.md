@@ -21,11 +21,11 @@ helpviewer_keywords:
 - gcvt function
 ms.assetid: 913478fd-ef22-4dee-b558-ff2bd6d72f3d
 ms.openlocfilehash: dc64a61f232d8d315724a1d4aa610f8186486146
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305151"
 ---
 # <a name="gcvt"></a>gcvt
 

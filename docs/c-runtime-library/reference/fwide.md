@@ -21,11 +21,11 @@ helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
 ms.openlocfilehash: d992ebc527744beeb4ef14175e3f10646a77a064
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287616"
 ---
 # <a name="fwide"></a>fwide
 
@@ -42,7 +42,7 @@ int fwide(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla **FILE** struttura (ignorato).
 
 *mode*<br/>

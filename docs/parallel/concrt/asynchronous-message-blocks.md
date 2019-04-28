@@ -7,11 +7,11 @@ helpviewer_keywords:
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237077"
 ---
 # <a name="asynchronous-message-blocks"></a>Blocchi dei messaggi asincroni
 
@@ -117,7 +117,7 @@ La tabella seguente illustra queste caratteristiche correlazione tra i vari tipi
 |`choice`|Entrambi|Ordered|10|1|
 |`join`|Entrambi|Ordered|Non associato|1|
 |`multitype_join`|Entrambi|Ordered|10|1|
-|`timer`|Origine|Non applicabile|Non applicabile|1|
+|`timer`|Source|Non applicabile|Non applicabile|1|
 
 Le sezioni seguenti descrivono i tipi di blocco dei messaggi in modo più dettagliato.
 

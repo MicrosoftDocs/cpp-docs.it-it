@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
 ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287930"
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
 
@@ -74,7 +74,7 @@ Entrambe queste funzioni scrive il carattere singolo *c* al **stdout** e sposta 
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**fputtchar**|**_fputchar**|**_fputchar**|**_fputwchar**|
+|**_fputtchar**|**_fputchar**|**_fputchar**|**_fputwchar**|
 
 ## <a name="requirements"></a>Requisiti
 

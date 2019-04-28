@@ -3,17 +3,17 @@ title: Scelta del formato dei file di input con estensione netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
 ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294577"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Scelta del formato dei file di input con estensione netmodule
 
 Un file di codice MSIL con estensione obj (compilato con [/clr](clr-common-language-runtime-compilation.md)) può essere utilizzato anche come file con estensione netmodule.  file con estensione obj contengono i metadati e i simboli nativi.  I file con estensione netmodule contengono solo metadati.
 
-È possibile passare un file di codice MSIL con estensione obj per qualsiasi altro compilatore di Visual Studio tramite l'opzione del compilatore /addmodule (ma tenere presente che il file con estensione obj diventa parte dell'assembly risultante e deve essere spedito all'assembly).  Ad esempio, Visual C# e Visual Basic hanno l'opzione del compilatore /addmodule.
+È possibile passare un file di codice MSIL con estensione obj per qualsiasi altro compilatore di Visual Studio tramite l'opzione del compilatore /addmodule (ma tenere presente che il file con estensione obj diventa parte dell'assembly risultante e deve essere spedito all'assembly).  Ad esempio, Visual c# e Visual Basic hanno l'opzione del compilatore /addmodule.
 
 > [!NOTE]
 >  Nella maggior parte dei casi, sarà necessario passare al linker il file con estensione obj dalla compilazione che ha creato il modulo .NET.  Il passaggio di un file di modulo MSIL con estensione netmodule o dll al linker può causare l'errore LNK1107.

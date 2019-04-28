@@ -94,11 +94,11 @@ helpviewer_keywords:
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
 ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58327678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294438"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macro comuni per le proprietà e i comandi di MSBuild
 

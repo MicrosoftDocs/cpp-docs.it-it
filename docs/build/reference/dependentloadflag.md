@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
 ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272087"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (flag di caricamento dipendente Set predefiniti)
 

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
 ms.openlocfilehash: 0009b4bc1c7bf70bd84b9a82ecdc8643789e8164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287400"
 ---
 # <a name="getpurecallhandler-setpurecallhandler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -66,7 +66,7 @@ Il precedente **_purecall_handler**. Restituisce **nullptr** se si è verificato
 
 ## <a name="remarks"></a>Note
 
-Il **get_purecall_handler** e **set_purecall_handler** funzioni sono specifiche di Microsoft e si applicano solo al codice C++.
+Il **get_purecall_handler** e **set_purecall_handler** funzioni sono specifiche di Microsoft e si applicano solo a C++ codice.
 
 Una chiamata a una funzione virtuale pura è un errore perché non ha un'implementazione. Per impostazione predefinita, il compilatore genera codice per richiamare una funzione del gestore errori quando viene chiamata una funzione virtuale pura, che termina il programma. È possibile installare una funzione del gestore errori personalizzata per le chiamate di funzioni virtuali pure, in modo da intercettarle per il debug o la creazione di report. Per usare gestore errori personalizzato, creare una funzione che ha il **_purecall_handler** firma, quindi usare **set_purecall_handler** per renderlo il gestore corrente.
 
@@ -78,7 +78,7 @@ Per ripristinare il comportamento predefinito, chiamare **set_purecall_handler**
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**get_purecall_handler**, **set_purecall_handler**|\<cstdlib> o \<stdlib.h>|
+|**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib> o \<stdlib.h>|
 
 Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

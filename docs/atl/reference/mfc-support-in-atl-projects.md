@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL projects, MFC support
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
 ms.openlocfilehash: 0aece6805f1de987b0164f405e50b99fd706fef4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275425"
 ---
 # <a name="mfc-support-in-atl-projects"></a>Supporto MFC nei progetti ATL
 

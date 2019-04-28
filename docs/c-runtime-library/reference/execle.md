@@ -21,11 +21,11 @@ helpviewer_keywords:
 - execle function
 ms.assetid: 5985b615-fe90-4d1c-9c1d-13ec87c8e306
 ms.openlocfilehash: e2cee970d2384d00d78378a85887ffb8ef9949a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288231"
 ---
 # <a name="execle"></a>execle
 

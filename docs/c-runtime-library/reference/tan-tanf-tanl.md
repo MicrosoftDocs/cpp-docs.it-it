@@ -1,5 +1,5 @@
 ---
-title: Tan, tanf, tanl
+title: tan, tanf, tanl
 ms.date: 04/10/2018
 apiname:
 - tan
@@ -33,13 +33,13 @@ helpviewer_keywords:
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
 ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258626"
 ---
-# <a name="tan-tanf-tanl"></a>Tan, tanf, tanl
+# <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
 Calcola la tangente.
 
@@ -68,7 +68,7 @@ Il **tan** le funzioni restituiscono la tangente *x*. Se *x* è maggiore o ugual
 |Input|Eccezione SEH|**Matherr** eccezione|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|none|_DOMAIN|
-|+ INF|**NON VALIDO**|_DOMAIN|
+|+ INF|**INVALID**|_DOMAIN|
 
 ## <a name="remarks"></a>Note
 
@@ -78,7 +78,7 @@ Dato che C++ consente l'overload, è possibile chiamare overload di **tan** che 
 
 |Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|
 |-------------|---------------------|-|
-|**Tan**, **tanf**, **tanl**|\<math.h>|\<cmath> o \<math.h>|
+|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> o \<math.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

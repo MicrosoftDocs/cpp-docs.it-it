@@ -7,11 +7,11 @@ helpviewer_keywords:
 - activation [MFC], flicker-free
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
 ms.openlocfilehash: fad24d6201260e87ff32436752a9fbf035e822ae
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297047"
 ---
 # <a name="providing-flicker-free-activation"></a>Fornitura di attivazione senza sfarfallio
 
@@ -27,4 +27,4 @@ Se si utilizza l'attivazione senza finestra, questa ottimizzazione non ha alcun 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli ActiveX MFC: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md)
+[Controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md)

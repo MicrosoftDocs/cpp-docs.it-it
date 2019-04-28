@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295461"
 ---
 # <a name="uniqueptr-class"></a>Classe unique_ptr
 
@@ -99,7 +99,7 @@ Oggetto `unique_ptr`.
 *Nptr*<br/>
 Oggetto `rvalue` di tipo `std::nullptr_t`.
 
-*PTR*<br/>
+*Ptr*<br/>
 Oggetto `pointer`.
 
 *Metodo Deleter*<br/>
@@ -117,7 +117,7 @@ Usare la funzione helper [make_unique](../standard-library/memory-functions.md#m
 
 `unique_ptr` gestisce una risorsa in modo univoco. Ogni oggetto `unique_ptr` archivia un puntatore nell'oggetto di sua proprietà oppure archivia un puntatore Null. Una risorsa può appartenere a non più di un oggetto `unique_ptr`. Quando un oggetto `unique_ptr` proprietario di una risorsa particolare viene eliminato definitivamente, la risorsa viene liberata. Un oggetto `unique_ptr` può essere spostato, ma non copiato. Per altre informazioni, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-La risorsa viene liberata chiamando un oggetto `deleter` archiviato di tipo `Del` in grado di allocare le risorse per un determinato `unique_ptr`. Il valore predefinito `deleter` `default_delete<T>` presuppone che la risorsa a cui punta `ptr` venga allocata con `new`, e che possa essere liberata chiamando `delete _Ptr`. Una specializzazione parziale `unique_ptr<T[]>`gestisce gli oggetti matrice allocati con `new[]` e ha il valore predefinito `deleter` `default_delete<T[]>`, specializzato per chiamare delete []. `ptr`.
+La risorsa viene liberata chiamando un oggetto `deleter` archiviato di tipo `Del` in grado di allocare le risorse per un determinato `unique_ptr`. Il valore predefinito `deleter` `default_delete<T>` presuppone che la risorsa a cui punta `ptr` venga allocata con `new`, e che possa essere liberata chiamando `delete _Ptr`. (Una specializzazione parziale `unique_ptr<T[]>`gestisce gli oggetti matrice allocati con `new[]`, e ha il valore predefinito `deleter` `default_delete<T[]>`, specializzato per chiamare delete [] `ptr`.)
 
 Il puntatore archiviato in una risorsa di proprietà, `stored_ptr` è di tipo `pointer`. È `Del::pointer` se definito; in caso contrario, `T *`. L'oggetto `deleter` archiviato `stored_deleter` non occupa spazio nell'oggetto se `deleter` è senza stato. Si noti che `Del` può essere un tipo di riferimento.
 

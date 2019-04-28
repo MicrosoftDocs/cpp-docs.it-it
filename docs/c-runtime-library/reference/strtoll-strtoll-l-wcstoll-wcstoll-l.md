@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
 ms.openlocfilehash: 53ae4ab1d482478c50aa257acdc974569bfc05f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269150"
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 
@@ -104,8 +104,8 @@ Il **strtoll** funzione converte *strSource* a un **long** **lungo**. Entrambe l
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcstoll**|**strtoll**|**strtoll**|**wcstoll**|
-|**tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
+|**_tcstoll**|**strtoll**|**strtoll**|**wcstoll**|
+|**_tcstoll_l**|**_strtoll_l**|**_strtoll_l**|**_wcstoll_l**|
 
 Le impostazioni locali **LC_NUMERIC** impostazione di categoria determina il riconoscimento del carattere di base *strSource*; per altre informazioni, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md). Le funzioni che non hanno le **l** suffisso usare le impostazioni locali correnti. **strtoll_l** e **wcstoll_l** sono identiche alle funzioni corrispondenti che non hanno il suffisso, ad eccezione del fatto che usano le impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -113,7 +113,7 @@ Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto la lett
 
 **strtoll** prevede *strSource* in modo che punti a una stringa nel formato seguente:
 
-> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cifre* &#124; *lettere*]  
+> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
 
 Oggetto *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. *cifre* sono uno o più cifre decimali. *lettere* sono uno o più lettere 'a' a 'z' (o 'A' a 'Z'). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui punta *strSource* vengono usate per determinare la base. Se il primo carattere è '0' e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se *base* è 0 e il primo carattere letto è '0', si presuppone un intero ottale e un carattere '8' o '9' interrompe la lettura.
 
@@ -121,8 +121,8 @@ Oggetto *whitespace* può essere costituito da caratteri di spazio e tabulazione
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strtoll**, **strtoll_l**|\<stdlib.h>|
-|**wcstoll**, **wcstoll_l**|\<stdlib.h> or \<wchar.h>|
+|**strtoll**, **_strtoll_l**|\<stdlib.h>|
+|**wcstoll**, **_wcstoll_l**|\<stdlib.h> or \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

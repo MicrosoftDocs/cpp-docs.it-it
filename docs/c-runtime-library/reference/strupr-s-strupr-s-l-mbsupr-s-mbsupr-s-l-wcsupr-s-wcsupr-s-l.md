@@ -61,11 +61,11 @@ helpviewer_keywords:
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
 ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304631"
 ---
 # <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
@@ -164,15 +164,15 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsupr_s**|**_strupr_s**|**_mbsupr_s**|**_wcsupr_s**|
-|**tcsupr_s_l**|**_strupr_s_l**|**_mbsupr_s_l**|**_wcsupr_s_l**|
+|**_tcsupr_s**|**_strupr_s**|**_mbsupr_s**|**_wcsupr_s**|
+|**_tcsupr_s_l**|**_strupr_s_l**|**_mbsupr_s_l**|**_wcsupr_s_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strupr_s**, **strupr_s_l**|\<string.h>|
-|**wcsupr_s**, **wcsupr_s_l**, **mbsupr_s**, **mbsupr_s_l**|\<string.h> o \<wchar.h>|
+|**_strupr_s**, **_strupr_s_l**|\<string.h>|
+|**_wcsupr_s**, **_wcsupr_s_l**, **_mbsupr_s**, **_mbsupr_s_l**|\<string.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

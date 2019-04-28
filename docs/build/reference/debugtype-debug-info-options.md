@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
 ms.openlocfilehash: 00e3cb61f8ec9aa707bb72aa9ff05a64f98d4e47
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272295"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (opzioni delle informazioni di debug)
 

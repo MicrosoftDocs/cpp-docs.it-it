@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
 ms.openlocfilehash: a1b5cda729e760246449bf197fdc9b32752b96e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241785"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar e CReBarCtrl
 

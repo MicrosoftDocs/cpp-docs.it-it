@@ -11,11 +11,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.GenerateCatalogFiles
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
 ms.openlocfilehash: 1731665ffa6117896490115028b4744e195beae2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291055"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Input e output, Strumento Manifesto, Proprietà di configurazione, finestra di dialogo Pagine delle proprietà di &lt;nomeprogetto&gt;
 
@@ -65,4 +65,4 @@ Specifica se l'applicazione è compatibile con DPI. Per impostazione predefinita
 
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [Pagine delle proprietà Strumento Manifesto](manifest-tool-property-pages.md)<br/>
-[Impostare il compilatore C++ e creare proprietà in Visual Studio](../working-with-project-properties.md)<br/>
+[Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md)<br/>

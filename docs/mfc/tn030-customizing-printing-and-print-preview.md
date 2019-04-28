@@ -1,5 +1,5 @@
 ---
-title: "TN030: personalizzazione della stampa e dell'anteprima di stampa"
+title: 'TN030: Personalizzazione della stampa e anteprima di stampa'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.print
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305684"
 ---
-# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: personalizzazione della stampa e dell'anteprima di stampa
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030: Personalizzazione della stampa e anteprima di stampa
 
 > [!NOTE]
 > La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
@@ -40,13 +40,13 @@ Per poter manualmente fuori banda, è necessario re implementare il ciclo di sta
 
 In secondo luogo, è necessario chiamare spesso `QueryAbort` durante il disegno della banda. In caso contrario, la procedura di interruzione non verrà chiamata e l'utente sarà in grado di annullare il processo di stampa.
 
-## <a name="print-preview-electronic-paper-with-user-interface"></a>Anteprima di stampa: Carta elettronico con interfaccia utente
+## <a name="print-preview-electronic-paper-with-user-interface"></a>Anteprima di stampa: Formato elettronico tramite interfaccia utente
 
 Anteprima di stampa, in sostanza, tenta di attivare la visualizzazione in un'emulazione di una stampante. Per impostazione predefinita, l'area client della finestra principale utilizzato per visualizzare una o due pagine completamente all'interno della finestra. L'utente è in grado di fare zoom avanti su un'area della pagina per visualizzarlo in modo più dettagliato. Con supporto aggiuntivo, l'utente può anche essere autorizzato a modificare il documento in modalità di anteprima.
 
 ## <a name="customizing-print-preview"></a>Personalizzazione di anteprima di stampa
 
-Un aspetto della modifica dell'anteprima di stampa sono disponibili solo in questa nota: l'aggiunta dell'interfaccia utente per la modalità di anteprima. Sono possibili altre modifiche, ma tali modifiche non rientrano nell'ambito di questa discussione.
+In questa nota si occupa solo con un aspetto della modifica dell'anteprima di stampa: Aggiunta dell'interfaccia utente sulla modalità di anteprima. Sono possibili altre modifiche, ma tali modifiche non rientrano nell'ambito di questa discussione.
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>Per aggiungere l'interfaccia utente per la modalità anteprima
 

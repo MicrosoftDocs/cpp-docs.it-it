@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
 ms.openlocfilehash: d93bf715f8fd8a03c75b1d1bf2e44f12c1d1b9c0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261377"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Aggiunta di un Consumer OLE DB ATL
 

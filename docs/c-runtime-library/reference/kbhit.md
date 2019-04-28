@@ -31,11 +31,11 @@ helpviewer_keywords:
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
 ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286479"
 ---
 # <a name="kbhit"></a>_kbhit
 

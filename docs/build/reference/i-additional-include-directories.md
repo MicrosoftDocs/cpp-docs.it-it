@@ -15,11 +15,11 @@ helpviewer_keywords:
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
 ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270142"
 ---
 # <a name="i-additional-include-directories"></a>/I (directory di inclusione aggiuntive)
 

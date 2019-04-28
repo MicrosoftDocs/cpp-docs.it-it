@@ -28,11 +28,11 @@ f1_keywords:
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
 ms.openlocfilehash: dcf1eca5b163c8553b43d747d53537ec424a793c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269189"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -97,7 +97,7 @@ Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto la lett
 
 **strtold** prevede *strSource* in modo che punti a una stringa nel formato seguente:
 
-[*whitespace*] [*sign*] [*cifre*] [. *cifre*] [{**1!d** &#124; **1!d** &#124; **elettronica** &#124; **elettronica**} [*sign* ]*cifre*]
+[*whitespace*] [*sign*] [*digits*] [.*digits*] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]*digits*]
 
 Oggetto *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. *sign* può essere plus (**+**) o di sottrazione (**-**); e *cifre* sono uno o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**d**, **D**, **e** o **E**) e facoltativamente da un intero con segno. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
 

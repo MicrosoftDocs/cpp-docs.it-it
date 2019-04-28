@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
 ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285699"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -68,7 +68,7 @@ void _wmakepath(
 *path*<br/>
 Buffer del percorso completo.
 
-*Unità*<br/>
+*drive*<br/>
 Contiene una lettera (A, B e così via) corrispondente all'unità desiderata e i due punti finali opzionali. **makepath** inserisce automaticamente i due punti nel percorso composto se mancante. Se *unità* viene **NULL** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella composita *percorso* stringa.
 
 *dir*<br/>
@@ -90,7 +90,7 @@ Il **makepath** funzione crea una stringa di percorso composita da singoli compo
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
+|**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
 Il *percorso* argomento deve puntare a un buffer vuoto sufficientemente grande da contenere il percorso completo. Composita *tracciato* deve essere superiore al **MAX_PATH** costante, definita in STDLIB. h.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
 ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222910"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Procedura: Comando Aggiungi controllo Routing per i Windows Form
 

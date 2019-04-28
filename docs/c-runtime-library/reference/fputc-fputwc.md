@@ -29,11 +29,11 @@ helpviewer_keywords:
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
 ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288019"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -57,7 +57,7 @@ wint_t fputwc(
 *c*<br/>
 Carattere da scrivere.
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
@@ -85,7 +85,7 @@ Seguono note specifiche per le routine.
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**fputtc**|**fputc**|**fputc**|**fputwc**|
+|**_fputtc**|**fputc**|**fputc**|**fputwc**|
 
 ## <a name="requirements"></a>Requisiti
 

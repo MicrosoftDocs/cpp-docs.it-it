@@ -52,11 +52,11 @@ helpviewer_keywords:
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
 ms.openlocfilehash: 0410aeda4bbec33738d01a9514181c19f351e2c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288361"
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -173,7 +173,7 @@ In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli 
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tctime_s**|**ctime_s**|**ctime_s**|**_wctime_s**|
+|**_tctime_s**|**ctime_s**|**ctime_s**|**_wctime_s**|
 |**_tctime32_s**|**_ctime32_s**|**_ctime32_s**|**_wctime32_s**|
 |**_tctime64_s**|**_ctime64_s**|**_ctime64_s**|**_wctime64_s**|
 
@@ -182,7 +182,7 @@ In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
 |**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
-|**wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> or \<wchar.h>|
+|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> or \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

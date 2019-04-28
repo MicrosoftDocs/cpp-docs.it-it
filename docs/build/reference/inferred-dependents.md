@@ -6,11 +6,11 @@ helpviewer_keywords:
 - dependents, inferred
 ms.assetid: 9303045c-69b3-4f35-bffc-19d5cd6ea3c3
 ms.openlocfilehash: 2382dec960ef93fc2f73987ad27b4670768a68cc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291535"
 ---
 # <a name="inferred-dependents"></a>Dipendenti dedotti
 

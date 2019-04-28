@@ -1,6 +1,6 @@
 ---
-title: Del compilatore C4800 avvisi tramite C5999
-ms.date: 03/14/2019
+title: Avvisi del compilatore da C4800 a C5999
+ms.date: 04/21/2019
 f1_keywords:
 - C4808
 - C4809
@@ -153,14 +153,14 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280321"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>Del compilatore C4800 avvisi tramite C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Avvisi del compilatore da C4800 a C5999
 
 Gli articoli in questa sezione della documentazione illustrano un subset dei messaggi di avviso generati dal compilatore.
 
@@ -170,7 +170,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 
 |Avviso|Messaggio|
 |-------------|------------|
-|[Avviso (livello 4) del compilatore C4800](compiler-warning-level-3-c4800.md)| La conversione implicita da '*tipo*' in bool. Possibile perdita di informazioni |
+|[Avviso del compilatore (livello 4) C4800](compiler-warning-level-3-c4800.md)| La conversione implicita da '*tipo*' in bool. Possibile perdita di informazioni |
 |[Avviso del compilatore (livello 1) C4803](compiler-warning-level-1-c4803.md)|«*metodo*': il metodo raise ha una classe di archiviazione diverso da quello dell'evento, '*evento*»|
 |[Avviso del compilatore (livello 1) C4804](compiler-warning-level-1-c4804.md)|«*operazione*': utilizzo non affidabile del tipo 'bool' nell'operazione|
 |[Avviso del compilatore (livello 1) C4805](compiler-warning-level-1-c4805.md)|«*operazione*': combinazione non affidabile del tipo '*type1*'e tipo'*type2*' nell'operazione|
@@ -206,8 +206,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 | Avviso del compilatore (livello 4) C4847 | «\_\_declspec (no\_init\_all)' può essere applicato solo a una funzione, un tipo di classe o una variabile locale: ignorato |
 | Avviso del compilatore (livello 1) C4848 | supporto per l'attributo standard ' Nessun\_univoco\_indirizzo in C + + 17 e versioni precedenti è un'estensione del fornitore |
 |[Avviso del compilatore (livello 4) C4866](c4866.md)| compilatore non può imporre l'ordine di valutazione da sinistra a destra per la chiamata a *nome_operatore*|
-|[Avviso (errore) del compilatore C4867](compiler-warning-c4867.md)|«*funzione*': chiamata di funzione senza elenco di argomenti; utilizzare '*chiamare*' per creare un puntatore a membro|
-|[Avviso (livello 4) del compilatore C4868](compiler-warning-c4868.md)|«_file_(*line_number*)' compilatore non può imporre l'ordine di valutazione da sinistra a destra nell'elenco di inizializzazione tra parentesi graffe|
+|[Genera un avviso C4867 (errore)](compiler-warning-c4867.md)|«*funzione*': chiamata di funzione senza elenco di argomenti; utilizzare '*chiamare*' per creare un puntatore a membro|
+|[Avviso del compilatore (livello 4) C4868](compiler-warning-c4868.md)|«_file_(*line_number*)' compilatore non può imporre l'ordine di valutazione da sinistra a destra nell'elenco di inizializzazione tra parentesi graffe|
 |Avviso del compilatore (livello 2) C4872|divisione a virgola mobile per zero rilevato durante la compilazione del grafico chiamate per il Concurrency:: parallel_for_each in: '*posizione*'|
 |Avviso del compilatore (livello 1) C4880|esegue il cast da ' const *type_1*'a'*type_2*': il cast di constness lontano da un puntatore o riferimento potrebbe causare un comportamento non definito in una funzione con restrizioni amp|
 |Avviso del compilatore (livello 4) C4881|il costruttore e/o il distruttore non verrà richiamato per la variabile tile_static '*variabile*'|
@@ -267,7 +267,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1) C4974|«*simbolo*': contrassegnato come deprecato|
 |Avviso del compilatore (livello 3) C4981|Warbird: funzione '*funzione*' contrassegnata come forceinline non resa inline perché contiene la semantica delle eccezioni|
 |Avviso del compilatore (livello 3) C4985|nome del simbolo ': attributi non presenti nella dichiarazione precedente.|
-|[Avviso del compilatore C4986](compiler-warning-c4986.md)|«*dichiarazione*': specifica di eccezione non corrisponde alla dichiarazione precedente|
+|[Genera un avviso C4986](compiler-warning-c4986.md)|«*dichiarazione*': specifica di eccezione non corrisponde alla dichiarazione precedente|
 |Avviso del compilatore (livello 4) C4987|utilizzata estensione non standard: 'throw (...)'|
 |Avviso del compilatore (livello 4) C4988|«*variabile*': variabile dichiarata all'esterno ambito classe/funzione|
 |Avviso del compilatore (livello 4) C4989|«*tipo*': tipo con definizioni in conflitto.|
@@ -316,3 +316,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 | Avviso del compilatore (livello 1) C5105 | espansione della macro producendo 'defined' produce un comportamento indefinito |
 | Avviso del compilatore (livello 1) C5106 | ridefinito con nomi di parametro diversi (macro) |
 | Avviso del compilatore (livello 1) C5107 | Missing irreversibile '*char*' carattere |
+
+## <a name="see-also"></a>Vedere anche
+
+[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md) \
+[Avvisi del compilatore da C4000 - C5999](compiler-warnings-c4000-c5999.md)

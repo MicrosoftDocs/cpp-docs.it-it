@@ -12,11 +12,11 @@ helpviewer_keywords:
 - instance constructors, code comments
 ms.assetid: f400774e-ba85-49ed-85b7-70ef2f7dcb2b
 ms.openlocfilehash: e0d02af016a0c7bfb0869b7cdd30fe0db2975102
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240861"
 ---
 # <a name="-constructors-comment"></a>// Commento sui costruttori
 

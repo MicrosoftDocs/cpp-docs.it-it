@@ -3,11 +3,11 @@ title: Boxing (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
 ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257965"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 
@@ -21,7 +21,7 @@ Sebbene non sia necessario eseguire la conversione boxing di una variabile per p
 
 ### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Tramite platform:: ibox\<T > per supportare i tipi di valore nullable
 
-C# e Visual Basic supportano il concetto dei tipi di valore nullable. In C + + c++ /CX, è possibile usare il `Platform::IBox<T>` tipo per esporre metodi pubblici che supportano i parametri di tipo valore nullable. L'esempio seguente mostra una C + + / metodo pubblico CX che restituisce null quando un chiamante c# passa un valore null per uno degli argomenti.
+C# e Visual Basic supportano il concetto dei tipi di valore nullable. In C++//CX, è possibile usare il `Platform::IBox<T>` tipo di esporre metodi pubblici che supportano i parametri di tipo valore nullable. L'esempio seguente mostra una C++/CX metodo pubblico che restituisce null quando un C# chiamante passa null per uno degli argomenti.
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 
@@ -41,4 +41,4 @@ In un client XAML C# puoi utilizzarlo nel modo seguente:
 [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Cast (C++/CX)](../cppcx/casting-c-cx.md)<br/>
 [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

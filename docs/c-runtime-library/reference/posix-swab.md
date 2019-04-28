@@ -21,11 +21,11 @@ helpviewer_keywords:
 - swab function
 ms.assetid: fb8b7137-420d-4485-bb65-e1ec68602905
 ms.openlocfilehash: 5fd61f492e5b598c8c238182d114b6af68532dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62304819"
 ---
 # <a name="swab"></a>swab
 

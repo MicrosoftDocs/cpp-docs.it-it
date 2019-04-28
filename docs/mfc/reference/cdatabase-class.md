@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253714"
 ---
 # <a name="cdatabase-class"></a>CDatabase (classe)
 
@@ -71,13 +71,13 @@ class CDatabase : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDatabase::CDatabase](#cdatabase)|Costruisce un oggetto `CDatabase`. È necessario inizializzare l'oggetto chiamando `OpenEx` o `Open`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDatabase::BeginTrans](#begintrans)|Avvia una "transazione", ovvero una serie di chiamate reversibile per il `AddNew`, `Edit`, `Delete`, e `Update` funzioni membro della classe `CRecordset` , ovvero sull'origine dati connessa. L'origine dati deve supportare le transazioni per `BeginTrans` abbia effetto.|
 |[CDatabase::BindParameters](#bindparameters)|Consente di associare i parametri prima di chiamare `CDatabase::ExecuteSQL`.|
@@ -102,7 +102,7 @@ class CDatabase : public CObject
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CDatabase::m_hdbc](#m_hdbc)|Aprire l'handle di connessione Database Connectivity (ODBC) a un'origine dati. Tipo di *HDBC*.|
 

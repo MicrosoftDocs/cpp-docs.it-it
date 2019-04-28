@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
 ms.openlocfilehash: b92d44bcfd04d4de7b39c5bdab5ee146d9b6693b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257634"
 ---
 # <a name="compiler-error-c2632"></a>Errore del compilatore C2632
 

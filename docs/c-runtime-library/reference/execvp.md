@@ -21,11 +21,11 @@ helpviewer_keywords:
 - execvp function
 ms.assetid: a0d0e898-9f06-4aa9-94ce-3ad317318c3a
 ms.openlocfilehash: a614eba0af528021061dd9c8f681f0b2fe5f44bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289005"
 ---
 # <a name="execvp"></a>execvp
 

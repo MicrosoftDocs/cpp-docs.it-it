@@ -10,17 +10,17 @@ helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
 ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232402"
 ---
 # <a name="cdecl"></a>__cdecl
 
 **Sezione specifica Microsoft**
 
-**cdecl** è l'impostazione predefinita la convenzione di chiamata per programmi C e C++. Poiché lo stack viene svuotato dal chiamante, l'attività possa eseguire `vararg` funzioni. Il **cdecl** convenzione di chiamata crea eseguibili di dimensioni maggiori rispetto [stdcall](../cpp/stdcall.md), perché richiede che ogni chiamata di funzione per includere il codice di pulizia dello stack. Nell'elenco seguente viene illustrata l'implementazione di questa convenzione di chiamata.
+**cdecl** è l'impostazione predefinita la convenzione di chiamata per C e C++ programmi. Poiché lo stack viene svuotato dal chiamante, l'attività possa eseguire `vararg` funzioni. Il **cdecl** convenzione di chiamata crea eseguibili di dimensioni maggiori rispetto [stdcall](../cpp/stdcall.md), perché richiede che ogni chiamata di funzione per includere il codice di pulizia dello stack. Nell'elenco seguente viene illustrata l'implementazione di questa convenzione di chiamata.
 
 |Elemento|Implementazione|
 |-------------|--------------------|

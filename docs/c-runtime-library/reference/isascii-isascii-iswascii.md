@@ -35,11 +35,11 @@ helpviewer_keywords:
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
 ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287469"
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
 
@@ -77,13 +77,13 @@ Per motivi di compatibilità **isascii** viene implementato come macro solo se [
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**istascii**|**__isascii**|**__isascii**|**iswascii**|
+|**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**isascii**, **isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
+|**isascii**, **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
 |**iswascii**|C: \<wctype.h>, \<ctype.h> o \<wchar.h><br /><br /> C++: \<cwctype>, \<cctype>, \<wctype.h>, \<ctype.h> o \<wchar.h>|
 
 Il **isascii**, **isascii** e **iswascii** funzioni sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
 ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59036825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62263334"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 

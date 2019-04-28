@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267275"
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 
@@ -55,7 +55,7 @@ Il risultato di una conversione è un l-value solo se genera un tipo di riferime
 
 ## <a name="integral-promotions"></a>Promozioni a intero
 
-Gli oggetti di un tipo integrale possono essere convertiti in un tipo integrale più ampio, ovvero in un tipo in grado di rappresentare un più ampio set di valori. Tale conversione widening viene denominata "promozione a intero." Con la promozione a intero, è possibile usare quanto segue in un'espressione ogni qual volta sia possibile usare un altro tipo integrale:
+Gli oggetti di un tipo integrale possono essere convertiti in un tipo integrale più ampio, ovvero in un tipo in grado di rappresentare un più ampio set di valori. Tale conversione widening viene denominata "promozione a intero." Con la promozione a intero, è possibile utilizzare quanto segue in un'espressione ogni qual volta sia possibile utilizzare un altro tipo integrale:
 
 - Gli oggetti, valori letterali e costanti di tipo **char** e **short int**
 
@@ -187,7 +187,7 @@ Esistono due casi in cui un puntatore a una classe può essere convertito in un 
 
 Il primo caso è quando la classe base specificata è accessibile e la conversione non è ambigua. (Vedere [più classi Base](../cpp/multiple-base-classes.md) per altre informazioni sui riferimenti ambigui della classe di base.)
 
-L'accessibilità di una classe base dipende dal tipo di ereditarietà usato nella derivazione. Esaminare l'ereditarietà illustrata nella seguente figura.
+L'accessibilità di una classe base dipende dal tipo di ereditarietà utilizzato nella derivazione. Esaminare l'ereditarietà illustrata nella seguente figura.
 
 ![Grafica dell'ereditarietà con base&#45;classe di accessibilità](../cpp/media/vc38xa1.gif "grafica dell'ereditarietà con base&#45;classe accessibilità") <br/>
 Grafico dell'ereditarietà per l'illustrazione dell'accessibilità delle classi base
@@ -255,7 +255,7 @@ Un puntatore a qualsiasi oggetto che non sia **const** oppure **volatile** può 
 
 ### <a name="const-and-volatile-pointers"></a>Puntatori const e volatile
 
-C++ non fornisce una conversione standard da un **const** oppure **volatile** tipo a un tipo che non è **const** oppure **volatile**. Tuttavia, qualsiasi tipo di conversione può essere specificato usando i cast di tipo espliciti (comprese le conversioni non sicure).
+C++ non fornisce una conversione standard da un **const** oppure **volatile** tipo a un tipo che non è **const** oppure **volatile**. Tuttavia, qualsiasi tipo di conversione può essere specificato utilizzando i cast di tipo espliciti (comprese le conversioni non sicure).
 
 > [!NOTE]
 >  I puntatori C++ ai membri, ad eccezione dei puntatori ai membri statici, sono diversi dai puntatori normali e non hanno le stesse conversioni standard. I puntatori ai membri statici sono puntatori normali e hanno le stesse conversioni dei puntatori normali.
@@ -268,7 +268,7 @@ In c++11 il [nullptr](../cpp/nullptr.md) tipo deve essere preferito rispetto del
 
 ### <a name="pointer-expression-conversions"></a>Conversioni di espressioni puntatore
 
-Qualsiasi espressione con un tipo di matrice può essere convertita in un puntatore dello stesso tipo. Il risultato della conversione è un puntatore al primo elemento della matrice. L'esempio riportato di seguito illustra tale conversione:
+Qualsiasi espressione con un tipo di matrice può essere convertita in un puntatore dello stesso tipo. Il risultato della conversione è un puntatore al primo elemento della matrice. Nell'esempio riportato di seguito viene illustrata tale conversione:
 
 ```cpp
 char szPath[_MAX_PATH]; // Array of type char.
@@ -279,7 +279,7 @@ Un'espressione che dà come risultato una funzione che restituisce un tipo speci
 
 - L'espressione viene usata come operando all'operatore address-of (**&**).
 
-- L'espressione viene usata come operando all'operatore function-call.
+- L'espressione viene utilizzata come operando all'operatore function-call.
 
 ## <a name="reference-conversions"></a>Conversioni riferimento
 

@@ -3,19 +3,19 @@ title: Eccezioni (C++/CX)
 ms.date: 01/18/2018
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
 ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301526"
 ---
 # <a name="exceptions-ccx"></a>Eccezioni (C++/CX)
 
-Gestione degli errori in C + + c++ /CX si basa sulle eccezioni. Il livello più importanti, componenti Windows Runtime segnalano gli errori come valori HRESULT. In C + + c++ /CX, questi valori vengono convertiti eccezioni fortemente tipizzate che contengono un valore HRESULT e una stringa descrittiva a cui è possibile accedere a livello di codice.  Le eccezioni vengono implementate come oggetto `ref class` che deriva da `Platform::Exception`.  Lo spazio dei nomi `Platform` definisce le classi distinte di eccezioni per i valori HRESULT più comuni; tutti gli altri valori sono segnalati tramite la classe `Platform::COMException` . Tutte le classi di eccezioni presentano un campo [Exception::HResult](platform-exception-class.md#hresult) che puoi utilizzare per recuperare il valore HRESULT originale. È anche possibile esaminare le informazioni sullo stack di chiamate per il codice utente nel debugger che possono aiutarti a individuare l'origine dell'eccezione, anche se proviene dal codice scritto in un linguaggio diverso da C++.
+Gestione degli errori in C++/CX si basa sulle eccezioni. Il livello più importanti, componenti Windows Runtime segnalano gli errori come valori HRESULT. In C++/CX, questi valori vengono convertiti eccezioni fortemente tipizzate che contengono un valore HRESULT e una stringa descrittiva a cui è possibile accedere a livello di codice.  Le eccezioni vengono implementate come oggetto `ref class` che deriva da `Platform::Exception`.  Lo spazio dei nomi `Platform` definisce le classi distinte di eccezioni per i valori HRESULT più comuni; tutti gli altri valori sono segnalati tramite la classe `Platform::COMException` . Tutte le classi di eccezioni presentano un campo [Exception::HResult](platform-exception-class.md#hresult) che puoi utilizzare per recuperare il valore HRESULT originale. È anche possibile esaminare le informazioni sullo stack di chiamate per il codice utente nel debugger che possono aiutarti a individuare l'origine dell'eccezione, anche se proviene dal codice scritto in un linguaggio diverso da C++.
 
 ## <a name="exceptions"></a>Eccezioni
 
-Nel programma C++, puoi generare e intercettare un'eccezione proveniente da un'operazione di Windows Runtime, un'eccezione derivata da `std::exception`, o un tipo definito dall'utente. Devi generare un'eccezione di Windows Runtime solo quando l'eccezione supera il limite dell'interfaccia binaria (ABI), ad esempio, quando il codice che intercetta la tua eccezione è scritto in JavaScript. Quando un'eccezione non Windows Runtime C++ raggiunge il limite dell'ABI, l'eccezione viene convertita in un `Platform::FailureException` eccezione, che rappresenta un valore HRESULT E_FAIL. Per ulteriori informazioni su ABI, vedi [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Nel programma C++, puoi generare e intercettare un'eccezione proveniente da un'operazione di Windows Runtime, un'eccezione derivata da `std::exception`, o un tipo definito dall'utente. Devi generare un'eccezione di Windows Runtime solo quando l'eccezione supera il limite dell'interfaccia binaria (ABI), ad esempio, quando il codice che intercetta la tua eccezione è scritto in JavaScript. Quando un non - Windows Runtime C++ eccezione raggiunge il limite dell'ABI, l'eccezione viene convertita in un `Platform::FailureException` eccezione, che rappresenta un valore HRESULT E_FAIL. Per ulteriori informazioni su ABI, vedi [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 È possibile dichiarare un [platform:: Exception](platform-exception-class.md) usando uno dei due costruttori che accettano un parametro HRESULT oppure un parametro HRESULT e un [platform:: String](platform-string-class.md)^ parametro che può essere passato attraverso il ABI a qualsiasi app di Windows Runtime che lo gestisce. In alternativa, puoi dichiarare un'eccezione usando uno di due overload del metodo [Exception::CreateException](platform-exception-class.md#createexception) che accettano un parametro HRESULT o un parametro HRESULT e un parametro `Platform::String^` .
 
@@ -27,13 +27,13 @@ Non puoi derivare un tipo di eccezione personale da `Platform::Exception`. Per g
 
 Nella tabella seguente sono elencate le eccezioni standard.
 
-|nome|HRESULT sottostante|Descrizione|
+|Nome|HRESULT sottostante|Descrizione|
 |----------|------------------------|-----------------|
 |COMException|*HRESULT definito dall'utente*|Generata quando viene restituito un HRESULT non riconosciuto da una chiamata a un metodo COM.|
 |AccessDeniedException|E\_ACCESSDENIED|Generata quando viene negato l'accesso a una risorsa o a una funzionalità.|
 |ChangedStateException|ELETTRONICA\_CHANGED\_DELLO STATO|Generata quando i metodi di un iteratore di raccolta o di una visualizzazione di raccolta vengono chiamati dopo che la raccolta padre è stata modificata, invalidando così i risultati del metodo.|
-|ClassNotRegisteredException|REGDB\_ELETTRONICA\_CLASSNOTREG|Generata quando una classe COM non è stata registrata.|
-|DisconnectedException|RPC\_ELETTRONICA\_DISCONNESSO|Generata quando un oggetto viene disconnesso dai relativi client.|
+|ClassNotRegisteredException|REGDB\_E\_CLASSNOTREG|Generata quando una classe COM non è stata registrata.|
+|DisconnectedException|RPC\_E\_DISCONNECTED|Generata quando un oggetto viene disconnesso dai relativi client.|
 |FailureException|E\_ESITO NEGATIVO|Generata quando un'operazione non viene completata correttamente.|
 |InvalidArgumentException|E\_INVALIDARG|Generata quando uno degli argomenti forniti a un metodo non è valido.|
 |InvalidCastException|E\_NOINTERFACE|Generata quando non è possibile eseguire il cast di un tipo a un altro tipo.|
@@ -43,7 +43,7 @@ Nella tabella seguente sono elencate le eccezioni standard.
 |OperationCanceledException|E\_ABORT|Generata quando un'operazione viene interrotta.|
 |OutOfBoundsException|E\_LIMITI|Generata quando un'operazione tenta di accedere a dati memorizzati al di fuori dell'intervallo valido.|
 |OutOfMemoryException|E\_OUTOFMEMORY|Generata quando la memoria disponibile non è sufficiente per completare l'operazione.|
-|WrongThreadException|RPC\_ELETTRONICA\_ERRATO\_THREAD|Generata quando un thread esegue una chiamata tramite un puntatore a interfaccia che è per un oggetto proxy che non appartiene all'apartment del thread.|
+|WrongThreadException|RPC\_E\_WRONG\_THREAD|Generata quando un thread esegue una chiamata tramite un puntatore a interfaccia che è per un oggetto proxy che non appartiene all'apartment del thread.|
 
 ## <a name="hresult-and-message-properties"></a>Proprietà Message e HResult
 
@@ -104,4 +104,4 @@ C + c++ /CX non usa il `finally` clausola.
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimenti al linguaggio Visual C++](visual-c-language-reference-c-cx.md)<br/>
-[Riferimento a spazi dei nomi](namespaces-reference-c-cx.md)
+[Riferimenti a spazi dei nomi](namespaces-reference-c-cx.md)

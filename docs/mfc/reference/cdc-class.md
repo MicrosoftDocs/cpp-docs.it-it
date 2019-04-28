@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173545"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -6022,7 +6022,7 @@ DWORD SetLayout(DWORD dwLayout);
 *dwLayout*<br/>
 Flag di controllo di layout del contesto di dispositivo e bitmap. Può essere una combinazione dei valori seguenti.
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |LAYOUT_BITMAPORIENTATIONPRESERVED|Disabilita qualsiasi reflection per le chiamate a [CDC:: BitBlt](#bitblt) e [CDC::StretchBlt](#stretchblt).|
 |LAYOUT_RTL|Imposta il layout orizzontale predefinito da destra a sinistra.|
@@ -6322,7 +6322,7 @@ int SetStretchBltMode(int nStretchMode);
 *nStretchMode*<br/>
 Specifica la modalità di adattamento. Può essere uno dei valori seguenti:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |BLACKONWHITE|Esegue un'operazione booleana e utilizzando i valori di colore per pixel eliminato ed esistenti. Se la bitmap è una bitmap monocromatica, questa modalità consente di mantenere i pixel neri a scapito di pixel bianco.|
 |COLORONCOLOR|Elimina i pixel. Questa modalità consente di eliminare eliminate tutte le righe di pixel senza tentare di mantenere le relative informazioni.|

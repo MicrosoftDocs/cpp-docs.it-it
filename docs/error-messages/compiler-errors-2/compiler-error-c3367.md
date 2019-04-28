@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3367
 ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
 ms.openlocfilehash: f53312fa9225270ef79d50d2ad351adce790d6fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300537"
 ---
 # <a name="compiler-error-c3367"></a>Errore del compilatore C3367
 
@@ -19,7 +19,7 @@ ms.locfileid: "50456290"
 
 Quando si chiama un delegato non associato, è necessario passare un'istanza di un oggetto. Una funzione membro statico viene chiamata tramite il nome della classe, quindi è possibile creare solo un'istanza di un delegato non associato con una funzione di membro di istanza.
 
-Per altre informazioni sui delegati non associati, vedere [procedura: definire e usare delegati (C + + / CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
+Per altre informazioni sui delegati non associati, vedere [come: Definire e usare delegati (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

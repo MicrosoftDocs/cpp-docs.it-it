@@ -8,15 +8,15 @@ helpviewer_keywords:
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
 ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210801"
 ---
 # <a name="c-standard-library-overview"></a>Panoramica sulla libreria standard C++
 
-Tutte le entità di libreria di C++ sono dichiarate o definite in una o più intestazioni standard. Questa implementazione include due intestazioni aggiuntive, \<hash_map > e \<hash_set >, che non sono necessari per lo Standard C++. Per un elenco completo di intestazioni supportate da questa implementazione, vedere [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione).
+Tutte le entità di libreria di C++ sono dichiarate o definite in una o più intestazioni standard. Questa implementazione include due intestazioni aggiuntive, \<hash_map > e \<hash_set >, che non sono necessari per il C++ Standard. Per un elenco completo di intestazioni supportate da questa implementazione, vedere [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione).
 
 Un'implementazione indipendente della libreria C++ fornisce solo un sottoinsieme di queste intestazioni:
 
@@ -42,9 +42,9 @@ Questa sezione contiene le sezioni seguenti:
 
 - [Avvio e chiusura di un programma C++](../standard-library/cpp-program-startup-and-termination.md)
 
-- [Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md) (Librerie protette: libreria standard C++)
+- [Librerie protette: libreria standard C++](../standard-library/safe-libraries-cpp-standard-library.md)
 
-- [Checked Iterators](../standard-library/checked-iterators.md) (Iteratori verificati)
+- [Iteratori verificati](../standard-library/checked-iterators.md)
 
 - [Debug Iterator Support](../standard-library/debug-iterator-support.md) (Supporto degli iteratori di debug)
 

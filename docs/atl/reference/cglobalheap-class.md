@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
 ms.openlocfilehash: cba15421fd0329df7a66a35979ed54b863b7cca0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258819"
 ---
 # <a name="cglobalheap-class"></a>Classe CGlobalHeap
 

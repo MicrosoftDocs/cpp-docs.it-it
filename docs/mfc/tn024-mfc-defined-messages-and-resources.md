@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306025"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Risorse e messaggi definiti MFC
 

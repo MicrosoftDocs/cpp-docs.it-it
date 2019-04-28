@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
 ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288940"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -77,7 +77,7 @@ La tangente iperbolica complessa di *z*.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **ctanh** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **ctanh** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **ctanh** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **ctanh** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 

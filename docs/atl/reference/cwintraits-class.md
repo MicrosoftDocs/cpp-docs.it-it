@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
 ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276783"
 ---
 # <a name="cwintraits-class"></a>Classe CWinTraits
 

@@ -154,11 +154,11 @@ helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
 ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276855"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -1448,8 +1448,7 @@ Dimensione del buffer in caratteri; è anche il numero massimo di caratteri da s
 Un oggetto BSTR in cui archiviare il testo della finestra.
 
 *strText*<br/>
-
-  `CString` in cui archiviare il testo della finestra.
+`CString` in cui archiviare il testo della finestra.
 
 ### <a name="return-value"></a>Valore restituito
 

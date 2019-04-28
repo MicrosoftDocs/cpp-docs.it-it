@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
 ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292615"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (Specifica file EXE)
 

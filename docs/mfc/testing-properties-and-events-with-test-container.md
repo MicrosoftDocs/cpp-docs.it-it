@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
 ms.openlocfilehash: 977ef29095e652ab40028a2e8ba7feffabf56418
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306450"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Test di proprietà ed eventi con Test Container
 

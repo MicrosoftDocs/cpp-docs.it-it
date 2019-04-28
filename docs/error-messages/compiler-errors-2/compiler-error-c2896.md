@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2896
 ms.assetid: b600407b-cb05-42e3-9069-2aa6960f0eaa
 ms.openlocfilehash: 1e30dc17e7c143af52c5a8b56be7f1efa7632ee2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227410"
 ---
 # <a name="compiler-error-c2896"></a>Errore del compilatore C2896
 

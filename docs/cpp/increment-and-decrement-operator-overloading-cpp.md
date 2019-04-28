@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183568"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>Overload degli operatori di incremento e decremento (C++)
 
@@ -22,7 +22,7 @@ Gli operatori di incremento e decremento rientrano in una categoria speciale poi
 
 - Decremento prefisso e decremento suffisso
 
-Quando si creano le funzioni dell'operatore di overload, può essere utile implementare versioni separate della forma prefissa e suffissa di questi operatori. Per distinguere tra i due, si osserva la regola seguente: la forma prefissa dell'operatore viene dichiarata esattamente come qualsiasi altro operatore unario; forma suffissa accetta un argomento aggiuntivo typu **int**.
+Quando si creano le funzioni dell'operatore di overload, può essere utile implementare versioni separate della forma prefissa e suffissa di questi operatori. Per distinguere tra i due, si osserva la regola seguente: La forma prefissa dell'operatore viene dichiarata esattamente come qualsiasi altro operatore unario; forma suffissa accetta un argomento aggiuntivo typu **int**.
 
 > [!NOTE]
 >  Quando si specifica un operatore di overload per la forma suffissa dell'operatore di incremento o decremento, l'argomento aggiuntivo deve essere di tipo **int**; specifica un qualsiasi altro tipo genera un errore.

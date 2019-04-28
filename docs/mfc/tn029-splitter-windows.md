@@ -8,11 +8,11 @@ helpviewer_keywords:
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
 ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305710"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Finestre con separatore
 

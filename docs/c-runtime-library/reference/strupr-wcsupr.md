@@ -24,11 +24,11 @@ helpviewer_keywords:
 - wcsupr function
 ms.assetid: 17dfe1cd-3b09-4702-9f89-2207f44953e6
 ms.openlocfilehash: 8f263ed98dbbc56065f2ca4d1b8b5f234132b7e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258663"
 ---
 # <a name="strupr-wcsupr"></a>strupr, wcsupr
 

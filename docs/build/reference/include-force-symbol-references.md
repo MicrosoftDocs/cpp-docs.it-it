@@ -13,11 +13,11 @@ helpviewer_keywords:
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
 ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269870"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (Forza riferimenti al simbolo)
 
@@ -56,5 +56,5 @@ Specifica di un simbolo con questa opzione esegue l'override del simbolo per la 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

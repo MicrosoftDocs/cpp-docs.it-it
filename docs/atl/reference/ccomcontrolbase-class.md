@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
 ms.openlocfilehash: 698912100244189bdec99fa3726a063eb2e907a7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260110"
 ---
 # <a name="ccomcontrolbase-class"></a>Classe CComControlBase
 
@@ -1219,9 +1219,9 @@ La tabella seguente illustra come la `m_spInPlaceSite` dipende dal tipo di punta
 
 |m_spInPlaceSite tipo|m_bWndLess valore|m_bInPlaceSiteEx Value|
 |---------------------------|-----------------------|-----------------------------|
-|`IOleInPlaceSiteWindowless`|true|TRUE o FALSE|
-|`IOleInPlaceSiteEx`|false|true|
-|`IOleInPlaceSite`|false|false|
+|`IOleInPlaceSiteWindowless`|TRUE|TRUE o FALSE|
+|`IOleInPlaceSiteEx`|FALSE|TRUE|
+|`IOleInPlaceSite`|FALSE|FALSE|
 
 ##  <a name="m_spoleadviseholder"></a>  CComControlBase::m_spOleAdviseHolder
 

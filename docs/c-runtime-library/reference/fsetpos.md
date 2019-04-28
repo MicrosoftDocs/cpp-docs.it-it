@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
 ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287573"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -44,15 +44,15 @@ int fsetpos(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
-*POS*<br/>
+*pos*<br/>
 Archiviazione dell'indicatore di posizione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **fsetpos** restituisce 0. In caso di errore, la funzione restituisce un valore diverso da zero e imposta **errno** a uno dei seguenti (definite in ERRNO di costanti di manifesto. H): **EBADF**, che indica il file non è accessibile oppure l'oggetto che *stream* punta a non è una struttura di file valido, o **EINVAL**, ovvero un valore valido per *stream* oppure *pos* è stato passato. Se viene passato un parametro non valido, queste funzioni chiamano il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri).
+Caso di esito positivo **fsetpos** restituisce 0. In caso di errore, la funzione restituisce un valore diverso da zero e imposta **errno** a uno dei seguenti (definite in ERRNO di costanti di manifesto. H): **EBADF**, ovvero il file non è accessibile oppure l'oggetto che *flusso* punta a non è una struttura di file valido, o **EINVAL**, ovvero un valore valido per *flusso*  oppure *pos* è stato passato. Se viene passato un parametro non valido, queste funzioni chiamano il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri).
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

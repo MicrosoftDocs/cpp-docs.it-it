@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
 ms.openlocfilehash: bf7734a7b81c9550c060d43c2eabf5cb05332407
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292584"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (Attiva funzione hook _penter)
 

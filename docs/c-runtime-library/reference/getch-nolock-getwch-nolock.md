@@ -35,11 +35,11 @@ helpviewer_keywords:
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
 ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287534"
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
 
@@ -67,7 +67,7 @@ Restituisce il carattere letto. Non vi è restituzione di errori.
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**gettch_nolock**|**_getch_nolock**|**_getch_nolock**|**_getwch_nolock**|
+|**_gettch_nolock**|**_getch_nolock**|**_getch_nolock**|**_getwch_nolock**|
 
 ## <a name="requirements"></a>Requisiti
 

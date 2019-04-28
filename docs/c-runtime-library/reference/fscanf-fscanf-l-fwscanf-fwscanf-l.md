@@ -41,11 +41,11 @@ helpviewer_keywords:
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
 ms.openlocfilehash: 5be3f4107d2f05c1863c9c8303ac89e184590baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287837"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 
@@ -80,13 +80,13 @@ int _fwscanf_l(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 *format*<br/>
 Stringa di controllo del formato.
 
-*argomento*<br/>
+*argument*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -110,8 +110,8 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
-|**ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
+|**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
+|**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
 Per altre informazioni, vedere [campi di specifica del formato: funzioni scanf e Wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
@@ -119,8 +119,8 @@ Per altre informazioni, vedere [campi di specifica del formato: funzioni scanf e
 
 |Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
-|**fscanf**, **fscanf_l**|\<stdio.h>|
-|**fwscanf**, **fwscanf_l**|\<stdio.h> o \<wchar.h>|
+|**fscanf**, **_fscanf_l**|\<stdio.h>|
+|**fwscanf**, **_fwscanf_l**|\<stdio.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

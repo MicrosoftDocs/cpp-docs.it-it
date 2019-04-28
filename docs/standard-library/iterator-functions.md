@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224142"
 ---
 # <a name="ltiteratorgt-functions"></a>Funzioni &lt;iterator&gt;
 
@@ -558,7 +558,7 @@ inserter(
 *_Cont*<br/>
 Contenitore a cui devono essere aggiunti nuovi elementi.
 
-*WHERE*<br/>
+*_Where*<br/>
 Iteratore che individua il punto di inserimento.
 
 ### <a name="remarks"></a>Note
@@ -630,7 +630,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Parametri
 
-*PTR*<br/>
+*Ptr*<br/>
 Puntatore alla matrice di destinazione.
 
 *Dimensione*<br/>
@@ -740,7 +740,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parametri
 
-*PTR*<br/>
+*Ptr*<br/>
 Puntatore alla matrice di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -820,7 +820,7 @@ InputIterator next(
 *first*<br/>
 Posizione corrente.
 
-*Off*<br/>
+*_Off*<br/>
 Numero di operazioni di iterazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -847,7 +847,7 @@ BidirectionalIterator prev(
 *first*<br/>
 Posizione corrente.
 
-*Off*<br/>
+*_Off*<br/>
 Numero di operazioni di iterazione.
 
 ### <a name="remarks"></a>Note

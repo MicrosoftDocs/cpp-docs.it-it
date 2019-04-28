@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
 ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305996"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: Documento vista e la creazione di Frame
 
@@ -39,8 +39,7 @@ L'oggetto `CWinApp` possiede tutte le finestre cornice nell'applicazione. La fin
 
 ## <a name="doctemplates"></a>Modelli di documento
 
-
-  `CDocTemplate` è l'autore e il gestore dei documenti. Possiede i documenti che crea. Se l'applicazione utilizza l'approccio basato sulle risorse descritto di seguito, non necessiterà di derivare da `CDocTemplate`.
+`CDocTemplate` è l'autore e il gestore dei documenti. Possiede i documenti che crea. Se l'applicazione utilizza l'approccio basato sulle risorse descritto di seguito, non necessiterà di derivare da `CDocTemplate`.
 
 Per un'applicazione SDI, la classe `CSingleDocTemplate` tiene traccia di un documento aperto. Per un'applicazione MDI, la classe `CMultiDocTemplate` tiene un elenco (`CPtrList`) di tutti i documenti aperti creati da tale modello. `CDocTemplate::AddDocument` e `CDocTemplate::RemoveDocument` forniscono le funzioni membro virtuali per l'aggiunta o la rimozione di un documento dal modello. `CDocTemplate` è un elemento friend di `CDocument` , pertanto è possibile impostare il metodo protetto `CDocument::m_pDocTemplate` puntatore all'indietro in modo che punti nuovamente al modello di documento che ha creato il documento.
 
@@ -64,8 +63,7 @@ L'interfaccia `CDocument::AddView`, `RemoveView` viene utilizzata per gestire l'
 
 Un `CFrameWnd` (noto anche come frame) ha lo stesso ruolo che aveva in MFC 1.0, ma ora la classe `CFrameWnd` è progettata per essere utilizzata in molti casi senza derivare una nuova classe. Le classi derivate `CMDIFrameWnd` e `CMDIChildWnd` sono potenziate, così diversi comandi standard sono già implementati.
 
-
-  `CFrameWnd` è responsabile della creazione di finestre nell'area client del frame. In genere è presente una finestra principale che riempie l'area client del frame.
+`CFrameWnd` è responsabile della creazione di finestre nell'area client del frame. In genere è presente una finestra principale che riempie l'area client del frame.
 
 Per una finestra cornice MDI l'area client viene riempita con il controllo MDICLIENT che è a sua volta il padre di tutte le finestre cornice figlio MDI. Per una finestra cornice SDI o una finestra cornice figlio MDI, l'area client di solito viene riempita con un oggetto finestra derivato da `CView`. Nel caso di `CSplitterWnd`, l'area client della visualizzazione viene riempita con l'oggetto finestra `CSplitterWnd` e gli oggetti finestra derivati da `CView` (uno per pannello) e vengono creati come finestre figlio di `CSplitterWnd`.
 

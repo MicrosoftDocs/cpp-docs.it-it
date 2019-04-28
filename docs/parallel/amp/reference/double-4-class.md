@@ -269,11 +269,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
 ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180323"
 ---
 # <a name="double4-class"></a>Classe double_4
 
@@ -455,7 +455,7 @@ class double_4;
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[dimensioni (costante)](#double_4__size)||
 

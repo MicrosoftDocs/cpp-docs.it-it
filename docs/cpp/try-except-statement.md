@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 ms.openlocfilehash: 400c831eec1c570f26dfc010b4e4c61e7d21b1c4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266842"
 ---
 # <a name="try-except-statement"></a>Istruzione try-except
 
@@ -41,11 +41,11 @@ Il **try-tranne** istruzione è un'estensione Microsoft C e linguaggi di C++ che
 
 ## <a name="syntax"></a>Sintassi
 
-> **\_\_prova**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;codice controllato<br/>
 > }<br/>
-> **\_\_tranne** ( *espressione* )<br/>
+> **\_\_except** ( *expression* )<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;codice del gestore eccezioni<br/>
 > }<br/>
