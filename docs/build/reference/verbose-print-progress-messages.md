@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
 ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317302"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (stampa di messaggi sullo stato)
 

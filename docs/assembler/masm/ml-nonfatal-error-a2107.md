@@ -8,11 +8,11 @@ helpviewer_keywords:
 - A2107
 ms.assetid: 0385b9f2-36df-4e30-a905-ab49bdc504d1
 ms.openlocfilehash: b30d47b6be7a888133336b5b74ac46c614fc7b4a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62201262"
 ---
 # <a name="ml-nonfatal-error-a2107"></a>Errore ML non irreversibile A2107
 

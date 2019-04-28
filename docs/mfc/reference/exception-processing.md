@@ -14,11 +14,11 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322215"
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 
@@ -161,7 +161,7 @@ Specifica un nome per un puntatore dell'oggetto eccezione che verrà creato dall
 Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Richiama la macro `THROW_LAST` per spostare l'elaborazione sul frame esterno dell'eccezione. Se si usa **CATCH_ALL**, fine il **PROVARE** blocco con un end_catch_all (macro).
 
 > [!NOTE]
->  Il **CATCH_ALL** blocco viene definito come ambito C++ da parentesi graffe. Se si dichiarano delle variabili in questo ambito, è possibile accedere a queste variabili solo all'interno di tale ambito.
+>  Il **CATCH_ALL** blocco viene definito come un C++ ambito da parentesi graffe. Se si dichiarano delle variabili in questo ambito, è possibile accedere a queste variabili solo all'interno di tale ambito.
 
 Per altre informazioni sulle eccezioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).
 
@@ -196,7 +196,7 @@ Usare la macro CATCH per intercettare un tipo di eccezione, quindi l'AND_CATCH (
 Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Chiamare il THROW_LAST (macro) all'interno di **AND_CATCH** bloccare per spostare l'elaborazione per il frame dell'eccezione esterna. **AND_CATCH** contrassegna la fine della precedente **CATCH** oppure **AND_CATCH** blocco.
 
 > [!NOTE]
->  Il **AND_CATCH** blocco viene definito come ambito C++ (delineato da parentesi graffe). Se si dichiarano variabili nell'ambito corrente, tenere presente che sono accessibili solo all'interno di tale ambito. Questo vale anche per il *nome_puntatore_oggetto_eccezione* variabile.
+>  Il **AND_CATCH** blocco viene definito come un C++ ambito (delimitata da parentesi graffe). Se si dichiarano variabili nell'ambito corrente, tenere presente che sono accessibili solo all'interno di tale ambito. Questo vale anche per il *nome_puntatore_oggetto_eccezione* variabile.
 
 ### <a name="example"></a>Esempio
 
@@ -225,7 +225,7 @@ Usare la **CATCH** macro per intercettare un tipo di eccezione, quindi l'and_cat
 Il codice di elaborazione delle eccezioni può interrogare l'oggetto eccezione, se necessario, per ottenere ulteriori informazioni sulla causa specifica dell'eccezione. Chiamare il THROW_LAST (macro) all'interno di **AND_CATCH_ALL** bloccare per spostare l'elaborazione per il frame dell'eccezione esterna. **AND_CATCH_ALL** contrassegna la fine della precedente **CATCH** oppure **AND_CATCH_ALL** blocco.
 
 > [!NOTE]
->  Il **AND_CATCH_ALL** blocco viene definito come ambito C++ (racchiusi tra parentesi graffe). Se si dichiarano variabili nell'ambito corrente, tenere presente che sono accessibili solo all'interno di tale ambito.
+>  Il **AND_CATCH_ALL** blocco viene definito come un C++ ambito (racchiusi tra parentesi graffe). Se si dichiarano variabili nell'ambito corrente, tenere presente che sono accessibili solo all'interno di tale ambito.
 
 ### <a name="requirements"></a>Requisiti
 

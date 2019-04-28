@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
 ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321072"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Specifica opzioni della riga di comando MIDL)
 
@@ -51,8 +51,8 @@ Il file deve contenere un'opzione della riga di comando MIDL per riga.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)<br/>
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)<br/>
 [/IDLOUT (assegna un nome ai file di output MIDL)](idlout-name-midl-output-files.md)<br/>
 [/IGNOREIDL (non elabora gli attributi in MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
 [/TLBOUT (denomina un file TLB)](tlbout-name-dot-tlb-file.md)<br/>

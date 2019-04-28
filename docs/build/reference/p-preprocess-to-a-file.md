@@ -13,11 +13,11 @@ helpviewer_keywords:
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
 ms.openlocfilehash: 5e6302d90647bce7e37c47a619e814cab300aaee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319980"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (Pre-elabora in un file)
 

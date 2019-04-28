@@ -11,11 +11,11 @@ helpviewer_keywords:
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
 ms.openlocfilehash: 1dc09b38beeb763733f8fa6a8ffa972059b30e03
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57819467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318927"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE (Imposta checksum)
 

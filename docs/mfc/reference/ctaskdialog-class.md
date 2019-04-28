@@ -117,11 +117,11 @@ helpviewer_keywords:
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
 ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324302"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -1623,4 +1623,4 @@ I valori per *wParam* e *lParam* dipendono il messaggio generato specifico. È p
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[Procedura dettagliata: Aggiunta di CTaskDialog a un'applicazione](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)
+[Procedura dettagliata: Aggiunta di CTaskDialog in un'applicazione](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

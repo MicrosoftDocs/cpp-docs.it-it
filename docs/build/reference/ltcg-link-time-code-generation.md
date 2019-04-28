@@ -14,11 +14,11 @@ helpviewer_keywords:
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
 ms.openlocfilehash: 40fb591952180735de3a2c226a3953a303c7d90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162357"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (Generazione di codice in fase di collegamento)
 
@@ -152,5 +152,5 @@ I moduli compilati con [/GL](gl-whole-program-optimization.md) e [/clr](clr-comm
 
 ## <a name="see-also"></a>Vedere anche
 
-- [Riferimento del linker MSVC](linking.md)
-- [Opzioni del Linker MSVC](linker-options.md)
+- [Informazioni di riferimento sul linker MSVC](linking.md)
+- [Opzioni del linker MSVC](linker-options.md)

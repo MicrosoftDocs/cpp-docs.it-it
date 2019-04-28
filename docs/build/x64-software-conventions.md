@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313855"
 ---
 # <a name="x64-software-conventions"></a>x64 convenzioni del software
 
@@ -193,7 +193,7 @@ Nella tabella seguente viene descritto il modo in cui ogni registro viene usato 
 
 ||||
 |-|-|-|
-|Registrazione|Stato|Utilizzo|
+|Registrazione|Status|Usa|
 |RAX|Volatile|Registro del valore restituito|
 |RCX|Volatile|Primo argomento Integer|
 |RDX|Volatile|Secondo argomento Integer|
@@ -210,7 +210,7 @@ Nella tabella seguente viene descritto il modo in cui ogni registro viene usato 
 |XMM1, YMM1|Volatile|Secondo argomento FP; secondo argomento di tipo vettore quando si usa `__vectorcall`.|
 |XMM2, YMM2|Volatile|Terzo argomento FP; terzo argomento di tipo vettore quando si usa `__vectorcall`.|
 |XMM3, YMM3|Volatile|Quarto argomento FP; quarto argomento di tipo vettore quando si usa `__vectorcall`.|
-|XMM4, YMM4|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; quinto argomento di tipo vettore quando si usa `__vectorcall`.|
+|XMM4, YMM4|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; quinto argomento tipo vettore quando si usa `__vectorcall`.|
 |XMM5, YMM5|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; sesto argomento di tipo vettore quando si usa `__vectorcall`.|
 |XMM6:XMM15, YMM6:YMM15|Non volatile (XMM), volatile (metà superiore di YMM)|Deve essere mantenuto dal chiamato. I registri YMM devono essere mantenuti in base alle esigenze del chiamante.|
 

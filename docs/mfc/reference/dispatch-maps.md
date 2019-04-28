@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322514"
 ---
 # <a name="dispatch-maps"></a>Mappe di invio
 
@@ -169,9 +169,9 @@ Il `VTS_` costanti e i relativi significati sono i seguenti:
 |VTS_VARIANT|`const VARIANT*` o `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
 |VTS_PI2|__short\*__|
-|VTS_PI4|__Long\*__|
+|VTS_PI4|__long\*__|
 |VTS_PR4|__float\*__|
-|VTS_PR8|__Valore Double\*__|
+|VTS_PR8|__double\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -206,7 +206,7 @@ Nome della classe.
 *pszName*<br/>
 Nome esterno della proprietà.
 
-*Nome membro*<br/>
+*memberName*<br/>
 Nome della variabile membro in cui la proprietà viene archiviata.
 
 *vtPropType*<br/>
@@ -261,7 +261,7 @@ Nome esterno della proprietà.
 *memberGet*<br/>
 Nome della funzione membro usata per ottenere la proprietà.
 
-*set di membri*<br/>
+*memberSet*<br/>
 Nome della funzione membro utilizzata per impostare la proprietà.
 
 *vtPropType*<br/>
@@ -298,7 +298,7 @@ Nome della classe.
 *szExternalName*<br/>
 Nome esterno della proprietà.
 
-*Nome membro*<br/>
+*memberName*<br/>
 Nome della variabile membro in cui la proprietà viene archiviata.
 
 *pfnAfterSet*<br/>

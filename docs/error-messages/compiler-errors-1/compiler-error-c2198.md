@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2198
 ms.assetid: 638a845c-9d7f-4115-a9aa-d72455605668
 ms.openlocfilehash: a7fbc5dc6dc91dab5bfea3a81c8d5c045e485161
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182821"
 ---
 # <a name="compiler-error-c2198"></a>Errore del compilatore C2198
 

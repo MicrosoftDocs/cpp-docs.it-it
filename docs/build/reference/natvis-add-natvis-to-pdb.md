@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
 ms.openlocfilehash: e758a49b41a17d805b752947cd1944087c8ff852
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320617"
 ---
 # <a name="natvis-add-natvis-to-pdb"></a>/NATVIS (aggiunge Natvis a PDB)
 

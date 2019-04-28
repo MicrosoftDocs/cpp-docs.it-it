@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
 ms.openlocfilehash: af9c65e51f7230b0fc6a59d0eed42eca08d24837
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324285"
 ---
 # <a name="ctabbedpane-class"></a>Classe CTabbedPane
 
@@ -71,7 +71,7 @@ class CTabbedPane : public CBaseTabbedPane
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|Posizione predefinita delle schede nell'applicazione.|
 |[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|Informazioni sulla classe di runtime per un oggetto personalizzato derivato da `CMFCTabCtrl`.|

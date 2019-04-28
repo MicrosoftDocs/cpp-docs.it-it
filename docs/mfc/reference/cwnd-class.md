@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323500"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1822,7 +1822,7 @@ Specifica le coordinate client del punto da sottoporre a test.
 *nflags*<br/>
 Specifica le finestre figlio da ignorare. Questo parametro può essere una combinazione dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |CWP_ALL|Non ignorare tutte le finestre figlio|
 |CWP_SKIPINVISIBLE|Ignorare le finestre figlio invisibili|
@@ -6127,7 +6127,7 @@ Contiene il numero di ripetizioni, il numero di volte in cui che la sequenza di 
 *nFlags*<br/>
 Contiene l'analisi codice, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |0-15|Specifica il numero di ripetizioni. Il valore è il numero di volte in cui che la sequenza di tasti viene ripetuta come risultato dell'utente tenendo premuto il tasto.|
 |16-23|Specifica il codice di analisi. Il valore dipende da OEM (OEM)|
@@ -6542,7 +6542,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Valore|Descrizione|
+|Value|Descrizione|
 |-----------|-----------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|

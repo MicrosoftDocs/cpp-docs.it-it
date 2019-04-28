@@ -3,11 +3,11 @@ title: Direttive assembly ARM
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
 ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167673"
 ---
 # <a name="arm-assembler-directives"></a>Direttive assembly ARM
 
@@ -27,11 +27,11 @@ Nella maggior parte, l'assembler ARM Microsoft Usa il linguaggio assembly ARM, d
 
    Non supportato.
 
-- ORGANIZZAZIONE16
+- CODE16
 
    Non è supportata perché implica la sintassi di Thumb pre-registrazione accesso utenti, che non consente l'assembler ARM Microsoft.  Usare il `THUMB` direttiva, invece, con sintassi di registrazione accesso utenti.
 
-- COMUNI
+- COMMON
 
    Specifica di un tipo di allineamento per l'area comune non è supportata.
 
@@ -83,7 +83,7 @@ Nella maggior parte, l'assembler ARM Microsoft Usa il linguaggio assembly ARM, d
 
    Se `TYPE` *t* viene specificato, quindi *t* indica come il linker deve tentare di risolvere *sym*.  Questi valori per *t* sono possibili:
 
-   |Valore|Descrizione|
+   |Value|Descrizione|
    |-|-|
    |1|Esegue la ricerca della libreria per *sym*|
    |2|Eseguire una ricerca di libreria *sym*|
@@ -107,7 +107,7 @@ Nella maggior parte, l'assembler ARM Microsoft Usa il linguaggio assembly ARM, d
 
    Non supportato.
 
-- RILOCAZIONE
+- RELOC
 
    `RELOC n` può solo seguire un'istruzione o una direttiva di definizione dei dati. Non vi è alcun "simbolo anonimo" che può essere riposizionata.
 

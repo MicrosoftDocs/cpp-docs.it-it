@@ -10,11 +10,11 @@ helpviewer_keywords:
 - disable two-phase name lookup
 - /Zc:twoPhase
 ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315807"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(disabilita la ricerca del nome in due fasi)
 

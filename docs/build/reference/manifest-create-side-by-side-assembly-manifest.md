@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
 ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321644"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Crea manifesto dell'assembly syde-by-side)
 
@@ -59,5 +59,5 @@ Se si specifica /MANIFEST, il nome del file manifesto è lo stesso del nome del 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

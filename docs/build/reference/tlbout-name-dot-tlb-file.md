@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
 ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317640"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Assegna un nome al file TLB)
 
@@ -56,8 +56,8 @@ Se non viene specificata l'opzione /TLBOUT, il file con estensione tlb otterrà 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)<br/>
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)<br/>
 [/IGNOREIDL (non elabora gli attributi in MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
 [/MIDL (specifica opzioni della riga di comando MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Compilazione di un programma con attributi](../../windows/building-an-attributed-program.md)

@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
 ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317159"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (generare metadati di Windows)
 

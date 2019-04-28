@@ -7,15 +7,15 @@ helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
 ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315716"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/Zc:__cplusplus (Abilita cplusplus aggiornato macro)
 
-Il **/Zc:__cplusplus** Abilita opzione del compilatore il  **\_ \_cplusplus** macro del preprocessore per segnalare un valore aggiornato di recente supporto degli standard di linguaggio C++. Per impostazione predefinita, Visual Studio restituisce sempre il valore "199711L" per il  **\_ \_cplusplus** macro del preprocessore.
+Il **/Zc:__cplusplus** Abilita opzione del compilatore il  **\_ \_cplusplus** macro del preprocessore per segnalare un valore aggiornato per recenti C++ supporto degli standard di linguaggio. Per impostazione predefinita, Visual Studio restituisce sempre il valore "199711L" per il  **\_ \_cplusplus** macro del preprocessore.
 
 ## <a name="syntax"></a>Sintassi
 

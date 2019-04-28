@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
 ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316704"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Crea il file di intestazione precompilato)
 

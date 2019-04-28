@@ -9,11 +9,11 @@ helpviewer_keywords:
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308212"
 ---
 # <a name="serialization-in-mfc"></a>Serializzazione in MFC
 
@@ -36,11 +36,11 @@ Se si desidera, è possibile ignorare la serializzazione di MFC per creare il pr
 
 Gli articoli seguenti illustrano due attività principali richieste per la serializzazione:
 
-- [Serializzazione: Creazione di una classe serializzabile](../mfc/serialization-making-a-serializable-class.md)
+- [Serializzazione: creazione di una classe serializzabile](../mfc/serialization-making-a-serializable-class.md)
 
-- [Serializzazione: Serializzazione di un oggetto](../mfc/serialization-serializing-an-object.md)
+- [Serializzazione: serializzazione di un oggetto](../mfc/serialization-serializing-an-object.md)
 
-L'articolo [serializzazione: Visual Studio di serializzazione. Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md) descrive quando la serializzazione è una tecnica di input/output appropriata in applicazioni di database.
+L'articolo [serializzazione: Serializzazione e Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md) descrive quando la serializzazione è una tecnica di input/output appropriata in applicazioni di database.
 
 ## <a name="see-also"></a>Vedere anche
 

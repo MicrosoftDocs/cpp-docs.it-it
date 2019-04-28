@@ -15,11 +15,11 @@ helpviewer_keywords:
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
 ms.openlocfilehash: 8a5d696c385c9c7a1c953bd28ea4da3c67369a2c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319343"
 ---
 # <a name="c-project-property-page-reference"></a>Riferimento alla pagina di proprietà progetto C++
 
@@ -83,5 +83,5 @@ Pagine delle proprietà in progetti non Windows, vedere [riferimento alla pagina
 
 ## <a name="see-also"></a>Vedere anche
 
-[Procedura: Creare e rimuovere dipendenze di progetto](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[Procedura: Creare e rimuovere dipendenze del progetto](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
 [Procedura: Creare e modificare le configurazioni](/visualstudio/ide/how-to-create-and-edit-configurations)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
 ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317146"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Utilizzo dei template Aggiungi nuovo elemento di Visual C++
 
@@ -35,7 +35,7 @@ La tabella seguente contiene un elenco alfabetico dei modelli di Visual C++ Aggi
 |File di intestazione (.h)|Crea un file di intestazione di C++.|
 |Pagina HTML (.htm)|Crea un file HTML vuoto.|
 |File icona (.ico)|Crea un file icona Win32.|
-|Classe Installer|Aggiunge una classe che eredita dal <xref:System.Configuration.Install.Installer> usando le funzionalità di CLR.|
+|Classe Installer|Aggiunge una classe che eredita dalla <xref:System.Configuration.Install.Installer>tramite le funzionalità CLR.|
 |File Midl (.idl)|Crea un file del linguaggio di definizione dell'interfaccia.|
 |File di definizione moduli (.def)|Crea un file di definizione dell'esportazione della DLL.|
 |Finestra delle proprietà (.props)|Crea un file della finestra delle proprietà di Visual C++.|
@@ -45,7 +45,7 @@ La tabella seguente contiene un elenco alfabetico dei modelli di Visual C++ Aggi
 |File modello di risorse (.rct)|Crea un file modello di risorse.|
 |Barra multifunzione (.mfcribbon-ms)|Crea un file ribbon.|
 |File di risposta server (.srf)|Crea un file di risposta server usato con ATL Server.|
-|File di script SQL (.sql)|Crea un file di script SQL. **Nota:**  Questo modello non è una funzionalità Professional Edition.|
+|File di script SQL (.sql)|Crea un file di script SQL. **Nota:**  questo modello non è una funzionalità della Professional Edition.|
 |Foglio di stile (.css)|Aggiunge un foglio di stile CSS utilizzato per le definizioni di stile HTML.|
 |File di testo (.txt)|Aggiunge un file di testo vuoto.|
 |Controllo utente|Aggiunge un controllo utente utilizzando le funzionalità CLR.|

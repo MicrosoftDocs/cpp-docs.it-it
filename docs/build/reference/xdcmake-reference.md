@@ -7,11 +7,11 @@ helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
 ms.openlocfilehash: 097c105e005a3c734ba86139ed3b4b6ecdcf49d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316392"
 ---
 # <a name="xdcmake-reference"></a>Riferimento a XDCMake
 

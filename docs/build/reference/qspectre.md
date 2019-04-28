@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - /Qspectre
 ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319187"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -55,8 +55,8 @@ L'impatto sulle prestazioni **/Qspectre** rilevato sia trascurabile in svariate 
 Il **/Qspectre** opzione del compilatore genera il codice che si collega in modo implicito le versioni delle librerie di runtime che sono state progettate per fornire mitigazioni Spectre. Queste librerie sono componenti facoltativi che devono essere installati tramite l'installazione di Visual Studio:
 
 - VC + + 2017 versione *version_numbers* Libs per Spectre \[(x86 e x64) | (ARM) | (ARM64)]
-- ATL Visual C++ per \[(x86 o x64) | ARM | ARM64] con Mitigazioni Spectre
-- MFC Visual C++ per \[x86 o x64 | ARM | ARM64] con Mitigazioni Spectre
+- Visual C++ per ATL \[(x86 o x64) | ARM | ARM64] con Mitigazioni Spectre
+- Visual C++ per MFC \[x86 o x64 | ARM | ARM64] con Mitigazioni Spectre
 
 Se si compila il codice usando **/Qspectre** e tali librerie non sono installati, i report di sistema di compilazione **avviso MSB8038: Mitigazione Spectre è abilitata, ma le librerie mitigate di Spectre non sono state trovate**. Se non è possibile compilare codice MFC o ATL e il linker segnala un errore, ad esempio **errore irreversibile LNK1104: Impossibile aprire il file 'OLDNAMES. lib'**, potrebbero trattarsi di queste librerie sono mancante.
 

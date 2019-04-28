@@ -2,11 +2,11 @@
 title: Panoramica delle convenzioni ABI ARM64
 ms.date: 03/27/2019
 ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195507"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -231,7 +231,7 @@ L'interfaccia EABI ARM specifica inoltre un modello di rimozione di eccezioni ch
 
 ## <a name="cycle-counter"></a>Contatore di cicli
 
-Tutte le CPU ARMv8 necessari per supportare un contatore di cicli registra, un registro a 64 bit che consente di configurare Windows per essere leggibili in qualsiasi livello di eccezione, inclusa la modalità utente. È possibile accedervi tramite la speciale PMCCNTR_EL0 registrare, tramite il codice operativo MSR nel codice dell'assembly, o `_ReadStatusReg` intrinseco in codice C/C++.
+Tutte le CPU ARMv8 necessari per supportare un contatore di cicli registra, un registro a 64 bit che consente di configurare Windows per essere leggibili in qualsiasi livello di eccezione, inclusa la modalità utente. È possibile accedervi tramite la speciale PMCCNTR_EL0 registrare, tramite il codice operativo MSR nel codice dell'assembly, o la `_ReadStatusReg` intrinseco in C /C++ codice.
 
 Il contatore di cicli di seguito è un contatore di cicli true, non un orologio parete. La frequenza del conteggio varia con la frequenza del processore. Se si ritiene che è necessario conoscere la frequenza del contatore del ciclo, si sconsiglia di utilizzare il contatore di cicli. Al contrario, si vuole misurare tempo di clock, per cui è consigliabile usare `QueryPerformanceCounter`.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - _variant_t class [C++], member functions
 ms.assetid: 3c340097-55c3-4efe-873e-11e8a56f552d
 ms.openlocfilehash: 27a482fb402f80513a48f13d1ad7bd89d077ff4d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312073"
 ---
 # <a name="variantt-member-functions"></a>Funzioni membro _variant_t
 

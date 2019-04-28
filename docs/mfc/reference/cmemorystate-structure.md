@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163754"
 ---
 # <a name="cmemorystate-structure"></a>Struttura CMemoryState
 
@@ -54,7 +54,7 @@ Una "perdita di memoria" si verifica quando la memoria per un oggetto viene allo
 
 - Uso di C++ **nuove** e **eliminare** operatori.
 
-Il `CMemoryState` diagnostica solo il rilevamento di memoria perdite causate quando la memoria allocata tramite il **nuovi** operatore non è deallocato utilizzando **eliminare**. Sono altri due gruppi di funzioni di gestione della memoria per programmi non-c + + e con la combinazione **nuove** e **eliminare** nello stesso programma non è consigliata. Una macro aggiuntiva, DEBUG_NEW, viene utilizzata per sostituire il **nuovo** operatore quando sono necessari file e traccia del numero di riga delle allocazioni di memoria. DEBUG_NEW viene utilizzato ogni volta che si userebbe normalmente il **nuovo** operatore.
+Il `CMemoryState` diagnostica solo il rilevamento di memoria perdite causate quando la memoria allocata tramite il **nuovi** operatore non è deallocato utilizzando **eliminare**. Altri due gruppi di funzioni di gestione della memoria sono per non -C++ programmi e con la combinazione **nuove** e **eliminare** nello stesso programma non è consigliabile. Una macro aggiuntiva, DEBUG_NEW, viene utilizzata per sostituire il **nuovo** operatore quando sono necessari file e traccia del numero di riga delle allocazioni di memoria. DEBUG_NEW viene utilizzato ogni volta che si userebbe normalmente il **nuovo** operatore.
 
 Come per altre informazioni di diagnostica, il `CMemoryState` diagnostica è disponibile solo in versioni di debug del programma. Una versione di debug deve avere la costante debug definita.
 

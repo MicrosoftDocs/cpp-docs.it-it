@@ -7,11 +7,11 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
 ms.openlocfilehash: 4c64c6875d82000d6a0ac880b103b5e220015cb3
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57814007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188925"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Procedura: Aggiungere un passaggio di compilazione personalizzata a progetti MSBuild
 

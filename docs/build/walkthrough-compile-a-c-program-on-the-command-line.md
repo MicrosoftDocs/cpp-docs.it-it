@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314182"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Procedura dettagliata: Compila un programma C nella riga di comando
 
@@ -162,5 +162,5 @@ Il compilatore Visual C++ C è compatibile con lo standard ISO C99, ma non è st
 
 [Procedura dettagliata: Creazione di un programma C++ standard (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Riferimenti per il linguaggio C](../c-language/c-language-reference.md)<br/>
-[Progetti e i sistemi di compilazione](projects-and-build-systems-cpp.md)<br/>
+[Progetti e sistemi di compilazione](projects-and-build-systems-cpp.md)<br/>
 [Compatibilità](../c-runtime-library/compatibility.md)

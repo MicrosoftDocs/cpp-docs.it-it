@@ -8,11 +8,11 @@ helpviewer_keywords:
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
 ms.openlocfilehash: 0f4c4ad84abf2a5de2cdf09e7064396ea01eeebe
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176395"
 ---
 # <a name="defining-stored-procedures"></a>Definizione delle stored procedure
 

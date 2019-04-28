@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK4102
 ms.assetid: bfd1b17e-05c7-4bc2-80d6-2888b1a425b2
 ms.openlocfilehash: 0f9c8649988dd3056e98730ac4b02022a8c9dd51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327262"
 ---
 # <a name="linker-tools-warning-lnk4102"></a>Avviso degli strumenti del linker LNK4102
 

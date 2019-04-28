@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4694
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
 ms.openlocfilehash: 6164fd2e19e35233ba67feb84d117f1e4e01f20d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59778839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62311052"
 ---
 # <a name="compiler-warning-c4694"></a>Avviso del compilatore C4694
 

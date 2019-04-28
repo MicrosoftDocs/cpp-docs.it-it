@@ -3,11 +3,11 @@ title: x64 dello stack dell'utilizzo
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
 ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314810"
 ---
 # <a name="x64-stack-usage"></a>x64 dello stack dell'utilizzo
 

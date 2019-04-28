@@ -8,11 +8,11 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: df59990f-b420-43f3-b415-5c25493abeee
 ms.openlocfilehash: ddb8239e6c168a3c20aeb252125e9dde60c7c4bf
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326456"
 ---
 # <a name="null-directive"></a>Direttiva null
 La direttiva del preprocessore null è un simbolo di cancelletto singolo (**#**) da solo su una riga. Non ha alcun effetto.

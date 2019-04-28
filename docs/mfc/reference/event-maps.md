@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322241"
 ---
 # <a name="event-maps"></a>Mappe eventi
 
@@ -21,7 +21,7 @@ La libreria Microsoft Foundation Class offre un modello ottimizzato di programma
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-Il `EVENT_STOCK_CLICK` macro indica che il controllo genera un evento ogni volta che rileva un mouse fare clic su Click. Per un elenco più dettagliato di altri eventi predefiniti, vedere l'articolo [controlli ActiveX: eventi](../../mfc/mfc-activex-controls-events.md). Le macro sono inoltre disponibili per indicare eventi personalizzati.
+Il `EVENT_STOCK_CLICK` macro indica che il controllo genera un evento ogni volta che rileva un mouse fare clic su Click. Per un elenco più dettagliato di altri eventi predefiniti, vedere l'articolo [controlli ActiveX: Gli eventi](../../mfc/mfc-activex-controls-events.md). Le macro sono inoltre disponibili per indicare eventi personalizzati.
 
 Sebbene le macro di mapping degli eventi siano importanti, in genere non vengono inserite direttamente. Questo perché la finestra Proprietà crea automaticamente nei file sorgente le voci di mapping degli eventi quando la si utilizza per associare funzioni che generano eventi ad eventi. Ogni qualvolta si desidera modificare o aggiungere una voce di mapping degli eventi, è possibile utilizzare la finestra Proprietà.
 
@@ -63,7 +63,7 @@ DECLARE_EVENT_MAP()
 
 Usare declare_event_map (macro) alla fine della dichiarazione di classe. Quindi, nel file con estensione cpp che definisce le funzioni membro della classe, usare il BEGIN_EVENT_MAP (macro), le voci di macro per ognuno degli eventi del controllo ed end_event_map (macro) per dichiarare la fine dell'elenco di eventi.
 
-Per altre informazioni sulle mappe eventi, vedere l'articolo [controlli ActiveX: eventi](../../mfc/mfc-activex-controls-events.md).
+Per altre informazioni sulle mappe eventi, vedere l'articolo [controlli ActiveX: Gli eventi](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -89,7 +89,7 @@ Specifica il nome della classe di base *theClass*.
 
 Nel file di implementazione (. cpp) che definisce le funzioni membro per la classe, avviare la mappa di eventi con BEGIN_EVENT_MAP (macro), quindi aggiungere le voci di macro per ognuno degli eventi e completare la mappa di eventi con end_event_map (macro).
 
-Per altre informazioni su mappe eventi e BEGIN_EVENT_MAP (macro), vedere l'articolo [controlli ActiveX: eventi](../../mfc/mfc-activex-controls-events.md).
+Per altre informazioni su mappe eventi e BEGIN_EVENT_MAP (macro), vedere l'articolo [controlli ActiveX: Gli eventi](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -190,7 +190,7 @@ EVENT_CUSTOM_ID(
 *pszName*<br/>
 Nome dell'evento.
 
-*DISPID*<br/>
+*dispid*<br/>
 ID dispatch utilizzato dal controllo quando viene attivato l'evento.
 
 *pfnFire*<br/>

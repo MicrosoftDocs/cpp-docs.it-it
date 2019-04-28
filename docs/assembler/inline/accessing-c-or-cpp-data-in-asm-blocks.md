@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
 ms.openlocfilehash: 1f56cc5c049c1501ea09c76f31be3ab9dea5ed10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167608"
 ---
 # <a name="accessing-c-or-c-data-in-asm-blocks"></a>Accesso a dati C o C++ in blocchi __asm
 

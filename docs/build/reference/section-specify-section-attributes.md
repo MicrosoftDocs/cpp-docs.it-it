@@ -9,11 +9,11 @@ helpviewer_keywords:
 - section attributes
 - /SECTION linker option
 ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318563"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Specifica attributi di sezione)
 
@@ -91,5 +91,5 @@ Il **ALIGN =**_numero_ argomento consente di specificare un valore di allineamen
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

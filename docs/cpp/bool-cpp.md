@@ -9,17 +9,17 @@ helpviewer_keywords:
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
 ms.openlocfilehash: e481cb9de7c80d147179efceab2fda9b160f3c21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184286"
 ---
 # <a name="bool-c"></a>bool (C++)
 
 Questa parola chiave è un tipo incorporato. Una variabile di questo tipo può avere valori [true](../cpp/true-cpp.md) e [false](../cpp/false-cpp.md). Le espressioni condizionali presentano il tipo **bool** e hanno pertanto valori di tipo **bool**. Ad esempio, `i!=0` ora è TRUE o FALSE a seconda del valore di `i`.
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): l'operando di un incremento prefisso o suffisso o di decremento operatore potrebbe non essere di tipo **bool**. In altre parole, data una variabile `b` typu **bool**, queste espressioni non sono più consentite:
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): L'operando di un incremento prefisso o suffisso o di decremento operatore potrebbe non essere di tipo **bool**. In altre parole, data una variabile `b` typu **bool**, queste espressioni non sono più consentite:
 
 ```cpp
     b++;

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <= operator, comparing specific objects
 ms.assetid: a5676804-07ef-40ab-8251-cde5b11ebdf9
 ms.openlocfilehash: a77521e9186ab7aaf49ef39d309700f3cd6c3428
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176707"
 ---
 # <a name="operator-lt-masm-run-time"></a>operatore &lt;= (MASM Run Time)
 
@@ -20,7 +20,7 @@ ms.locfileid: "50434814"
 
 ## <a name="syntax"></a>Sintassi
 
-> expression1 < = expression2
+> expression1 <= expression2
 
 ## <a name="see-also"></a>Vedere anche
 

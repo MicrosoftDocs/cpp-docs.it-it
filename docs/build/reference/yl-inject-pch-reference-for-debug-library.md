@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /Yl compiler option [C++]
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
 ms.openlocfilehash: 92e47836e0fdae077defa0fe35b515ab4ca20a66
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316249"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Inserisce il riferimento PCH per la libreria di debug)
 

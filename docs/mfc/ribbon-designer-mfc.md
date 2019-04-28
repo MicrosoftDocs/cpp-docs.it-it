@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309195"
 ---
 # <a name="ribbon-designer-mfc"></a>Finestra di progettazione della barra multifunzione (MFC)
 
@@ -89,7 +89,7 @@ Gli argomenti seguenti descrivono come usare le funzionalità della finestra di 
 
 - [Procedura: Personalizzare la barra di accesso rapido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [Procedura: Aggiungere controlli Ribbon e gestori di eventi](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [Procedura: Aggiungere controlli e gestori eventi della barra multifunzione](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
 - [Procedura: Caricare una risorsa Ribbon da un'applicazione MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 

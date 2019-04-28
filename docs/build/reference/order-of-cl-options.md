@@ -7,11 +7,11 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 300908ce-ae00-4b45-964b-e4e69ff6777b
 ms.openlocfilehash: 93907265bed8141b5c63edd5e75d632e060351fe
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320942"
 ---
 # <a name="order-of-cl-options"></a>Ordine delle opzioni CL
 

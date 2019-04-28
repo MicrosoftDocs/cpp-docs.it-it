@@ -3,11 +3,11 @@ title: Layout dinamico
 ms.date: 11/19/2018
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 396aad5b33a00021ddb5c1143c1d15c130e97eaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175318"
 ---
 # <a name="dynamic-layout"></a>Layout dinamico
 
@@ -61,7 +61,7 @@ La procedura precedente è utile per specificare le proprietà del layout dinami
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Per il primo controllo a cui si desidera aggiungere un comportamento dinamico, usare i metodi statici nella classe del layout dinamico per creare il [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) struttura che codifica il modo in cui deve essere regolato il controllo. A tale scopo, scegliere il metodo statico appropriato: [Movehorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [Movevertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [Movenone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), oppure [Movehorizontalandvertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Passare una percentuale per gli aspetti orizzontale e/o verticale dello spostamento. Questi metodi statici restituiscono tutti un oggetto MoveSettings appena creato che è possibile usare per specificare il comportamento di spostamento di un controllo.
+1. Per il primo controllo a cui si desidera aggiungere un comportamento dinamico, usare i metodi statici nella classe del layout dinamico per creare il [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) struttura che codifica il modo in cui deve essere regolato il controllo. Eseguire questa operazione, scegliere il metodo statico appropriato: [Movehorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [Movevertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [Movenone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), o [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Passare una percentuale per gli aspetti orizzontale e/o verticale dello spostamento. Questi metodi statici restituiscono tutti un oggetto MoveSettings appena creato che è possibile usare per specificare il comportamento di spostamento di un controllo.
 
    Tenere presente che con il valore 100 l'entità dello spostamento sarà identico a quello del ridimensionamento della finestra di dialogo, di conseguenza il bordo di un controllo rimarrà a una distanza fissa dal nuovo bordo.
 

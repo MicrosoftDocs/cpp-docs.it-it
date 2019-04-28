@@ -8,11 +8,11 @@ helpviewer_keywords:
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
 ms.openlocfilehash: 0831d94f1a6f0293d3605a5e2e9ebde0564baf24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322001"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Gli helper e funzioni globali di analisi di URL Internet
 
@@ -189,7 +189,7 @@ Un riferimento a un `CString` oggetto contenente la password dell'utente.
 *dwFlags*<br/>
 I flag che controllano come analizzare l'URL. Può essere una combinazione dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |ICU_DECODE|Convertire le sequenze di escape XX % per caratteri.|
 |ICU_NO_ENCODE|Non convertire i caratteri non sicuri per sequenza di escape.|

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
 ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324025"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Classe CSinusoidalTransitionFromRange
 

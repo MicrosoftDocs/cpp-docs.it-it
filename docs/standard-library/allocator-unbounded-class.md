@@ -8,11 +8,11 @@ helpviewer_keywords:
 - allocator_unbounded class
 ms.assetid: facbaea1-b320-4d99-96da-039b2642f352
 ms.openlocfilehash: 4e5bf54b386a3c3fe4e2604a78437275707acbfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179185"
 ---
 # <a name="allocatorunbounded-class"></a>Classe allocator_unbounded
 

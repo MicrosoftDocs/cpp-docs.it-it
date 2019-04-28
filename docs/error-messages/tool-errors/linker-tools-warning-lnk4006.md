@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK4006
 ms.assetid: 3a637d17-1676-4ea6-bd8b-290137d28d3b
 ms.openlocfilehash: c81c93a6df8c7eef809f243e3dc56164ea548371
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187141"
 ---
 # <a name="linker-tools-warning-lnk4006"></a>Avviso degli strumenti del linker LNK4006
 

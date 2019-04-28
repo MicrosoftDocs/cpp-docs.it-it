@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
 ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317926"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Allocazioni stack)
 
@@ -57,5 +57,5 @@ Un altro modo per impostare le dimensioni dello stack è con il [STACKSIZE](stac
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

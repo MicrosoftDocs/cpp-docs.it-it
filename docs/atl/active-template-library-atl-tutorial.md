@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
 ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198478"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Esercitazione relativa alla Libreria ATL (Active Template Library)
 

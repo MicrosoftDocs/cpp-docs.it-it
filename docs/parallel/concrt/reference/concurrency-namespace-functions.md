@@ -34,11 +34,11 @@ f1_keywords:
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
 ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163741"
 ---
 # <a name="concurrency-namespace-functions"></a>funzioni dello spazio dei nomi Concurrency
 
@@ -692,7 +692,7 @@ Se non si fornisce un confronto binario `std::less` viene usato come impostazion
 
 Se non si specifica un tipo di allocatore o un'istanza, l'allocatore di memoria della libreria Standard C++ `std::allocator<T>` viene usato per allocare il buffer.
 
-Tramite l'algoritmo l'intervallo di input viene diviso in due blocchi e successivamente ogni blocco viene diviso in due blocchi secondari per l'esecuzione in parallelo. L'argomento facoltativo `_Chunk_size` può essere utilizzato per indicare all'algoritmo che i blocchi di dimensione < `_Chunk_size` devono essere gestiti in serie.
+Tramite l'algoritmo l'intervallo di input viene diviso in due blocchi e successivamente ogni blocco viene diviso in due blocchi secondari per l'esecuzione in parallelo. L'argomento facoltativo `_Chunk_size` può essere utilizzato per indicare all'algoritmo che gestisca blocchi di dimensioni < `_Chunk_size` in modo seriale.
 
 ##  <a name="parallel_for"></a>  parallel_for
 
@@ -1101,7 +1101,7 @@ Se non si specifica una funzione di proiezione, una funzione di proiezione prede
 
 Se non si specifica un tipo di allocatore o un'istanza, l'allocatore di memoria della libreria Standard C++ `std::allocator<T>` viene usato per allocare il buffer.
 
-Tramite l'algoritmo l'intervallo di input viene diviso in due blocchi e successivamente ogni blocco viene diviso in due blocchi secondari per l'esecuzione in parallelo. L'argomento facoltativo `_Chunk_size` può essere utilizzato per indicare all'algoritmo che i blocchi di dimensione < `_Chunk_size` devono essere gestiti in serie.
+Tramite l'algoritmo l'intervallo di input viene diviso in due blocchi e successivamente ogni blocco viene diviso in due blocchi secondari per l'esecuzione in parallelo. L'argomento facoltativo `_Chunk_size` può essere utilizzato per indicare all'algoritmo che gestisca blocchi di dimensioni < `_Chunk_size` in modo seriale.
 
 ##  <a name="parallel_reduce"></a>  parallel_reduce
 
@@ -1220,7 +1220,7 @@ Il primo overload viene utilizzato il confronto binario `std::less`.
 
 Nel secondo overload viene utilizzato il confronto binario fornito in cui deve essere presente la firma `bool _Func(T, T)` dove `T` è il tipo degli elementi dell'intervallo di input.
 
-Tramite l'algoritmo l'intervallo di input viene diviso in due blocchi e successivamente ogni blocco viene diviso in due blocchi secondari per l'esecuzione in parallelo. L'argomento facoltativo `_Chunk_size` può essere utilizzato per indicare all'algoritmo che i blocchi di dimensione < `_Chunk_size` devono essere gestiti in serie.
+Tramite l'algoritmo l'intervallo di input viene diviso in due blocchi e successivamente ogni blocco viene diviso in due blocchi secondari per l'esecuzione in parallelo. L'argomento facoltativo `_Chunk_size` può essere utilizzato per indicare all'algoritmo che gestisca blocchi di dimensioni < `_Chunk_size` in modo seriale.
 
 ##  <a name="parallel_transform"></a>  parallel_transform
 

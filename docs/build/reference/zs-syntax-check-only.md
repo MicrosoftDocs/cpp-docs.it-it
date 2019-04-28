@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /Zs compiler option [C++]
 ms.assetid: b4b41e6a-3f41-4d09-9cb6-fde5aa2cfecf
 ms.openlocfilehash: e3713312b71c4cd539d40e09a3eaa821a2e5caed
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315417"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs (Solo controllo della sintassi)
 

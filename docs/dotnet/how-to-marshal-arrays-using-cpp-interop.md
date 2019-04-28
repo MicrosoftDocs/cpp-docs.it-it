@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
 ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324922"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>Procedura: Interoperabilità di marshalling di matrici usando C++
 

@@ -36,11 +36,11 @@ helpviewer_keywords:
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
 ms.openlocfilehash: 59b0483d76a2a98c1f278a323a827b243d21adea
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321293"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (utilizzo della libreria di runtime)
 

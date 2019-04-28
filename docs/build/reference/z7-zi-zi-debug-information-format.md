@@ -24,11 +24,11 @@ helpviewer_keywords:
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
 ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316288"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Formato informazioni di debug)
 

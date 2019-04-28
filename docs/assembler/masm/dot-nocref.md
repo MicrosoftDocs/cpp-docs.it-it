@@ -7,11 +7,11 @@ helpviewer_keywords:
 - .NOCREF directive
 ms.assetid: 696a6a71-7e88-4b60-8550-7857d772ed20
 ms.openlocfilehash: ef9989d378b9e5af9695b02ddda8cf1e9951d935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178553"
 ---
 # <a name="nocref"></a>.NOCREF
 
@@ -19,7 +19,7 @@ Evita la visualizzazione elenco dei simboli nel file di simboli nella tabella e 
 
 ## <a name="syntax"></a>Sintassi
 
-> . NOCREF [[nome [[, nome]]...]]
+> .NOCREF [[name[[, name]]...]]
 
 ## <a name="remarks"></a>Note
 

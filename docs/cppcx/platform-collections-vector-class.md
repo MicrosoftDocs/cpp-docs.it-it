@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
 ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161638"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -95,7 +95,7 @@ Se si prova a usare una **vettore** immettere un valore restituito pubblico o un
 
 |||
 |-|-|
-|nome|Descrizione|
+|Nome|Descrizione|
 |evento [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Si verifica quando l'oggetto Vector subisce delle modifiche.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DLLs [C++], creating
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
 ms.openlocfilehash: c750fd94e21eec39a25acf216a452faaa277bf7c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320409"
 ---
 # <a name="noentry-no-entry-point"></a>/NOENTRY (nessun punto di ingresso)
 
@@ -48,5 +48,5 @@ Usare questa opzione per impedire che in LINK venga collegato un riferimento a `
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione di una DLL di sole risorse](../creating-a-resource-only-dll.md)<br/>
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

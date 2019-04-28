@@ -7,11 +7,11 @@ helpviewer_keywords:
 - U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
 ms.openlocfilehash: 3b1df28e3cd7b27a9e7a130d9d71c1af68db9aec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324363"
 ---
 # <a name="nmake-fatal-error-u1033"></a>Errore irreversibile U1033 di NMAKE 
 

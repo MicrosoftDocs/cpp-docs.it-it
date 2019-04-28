@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WX linker option
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
 ms.openlocfilehash: b4b29ed364d39c5f105dded703b8530c08db35e6
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57822093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316301"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (Considera gli avvisi del linker come errori)
 

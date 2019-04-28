@@ -13,11 +13,11 @@ helpviewer_keywords:
 - MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
 ms.openlocfilehash: f0e770425f8068b15522f405ffdcf7cf52999fe0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321217"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (Combina sezioni)
 
@@ -49,5 +49,5 @@ L'opzione /MERGE è utile per la creazione di VxD ed eseguendo l'override di nom
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

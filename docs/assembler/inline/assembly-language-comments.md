@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __asm keyword [C++], instructions
 ms.assetid: 0dc10850-77f5-426e-9dab-185ea28e06e4
 ms.openlocfilehash: fc37658eccd99b61d45aa9a9a7a2675ef90eee89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167244"
 ---
 # <a name="assembly-language-comments"></a>Commenti in linguaggio assembly
 

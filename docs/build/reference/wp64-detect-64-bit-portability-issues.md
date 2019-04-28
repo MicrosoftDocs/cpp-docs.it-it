@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
 ms.openlocfilehash: 5a3cdaf85fa4dc05ece54fc630cb69fc93650e6b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316548"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Rileva errori di portabilità a 64 bit)
 

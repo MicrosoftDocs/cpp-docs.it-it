@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3728
 ms.assetid: 6b510cb1-887f-4fcd-9a1f-3bb720417ed1
 ms.openlocfilehash: 68aa23843b0470f15f409b6f3b58624f979ccfae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62328107"
 ---
 # <a name="compiler-error-c3728"></a>Errore del compilatore C3728
 

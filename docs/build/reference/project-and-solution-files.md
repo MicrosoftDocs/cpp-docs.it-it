@@ -12,11 +12,11 @@ helpviewer_keywords:
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
 ms.openlocfilehash: b4b82aa3837558b2c325fb6cba6819422c0db7ff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319577"
 ---
 # <a name="project-and-solution-files"></a>File di soluzioni e di progetto
 
@@ -31,7 +31,7 @@ Al momento della creazione di un progetto di Visual Studio vengono creati i file
 |*Projname*.sdf|*Projname*|Non visualizzato in Esplora soluzioni|File del *database di esplorazione*. Supporta le funzionalità di esplorazione e navigazione quali **Vai alla definizione**, **Trova tutti i riferimenti** e **Visualizzazione classi**. Viene generato analizzando i file di intestazione.|
 |*Projname.* vcxproj.filters|*Projname*|Non visualizzato in Esplora soluzioni|File dei *filtri*. Specifica dove inserire un file aggiunto alla soluzione. Ad esempio, un file con estensione h viene inserito nel nodo **File di intestazione**.|
 |*Projname.* vcxproj.user|*Projname*|Non visualizzato in Esplora soluzioni|File *migrazione utente*. Dopo la migrazione di un progetto da Visual Studio 2008, questo file contiene informazioni convertite da qualsiasi file vsprops. |
-|*Projname*.idl|*Projname*|Origine|(Specifico di un progetto) Contiene il codice sorgente IDL (Interface Description Language) per una libreria dei tipi controllo. Questo file viene usato da Visual C++ per generare una libreria dei tipi. La libreria generata espone l'interfaccia del controllo ad altri client di automazione. Per altre informazioni, vedere [Interface Definition (IDL) File](/windows/desktop/Rpc/the-interface-definition-language-idl-file) (File di definizione dell'interfaccia (IDL)) in Windows SDK.|
+|*Projname*.idl|*Projname*|Source|(Specifico di un progetto) Contiene il codice sorgente IDL (Interface Description Language) per una libreria dei tipi controllo. Questo file viene usato da Visual C++ per generare una libreria dei tipi. La libreria generata espone l'interfaccia del controllo ad altri client di automazione. Per altre informazioni, vedere [Interface Definition (IDL) File](/windows/desktop/Rpc/the-interface-definition-language-idl-file) (File di definizione dell'interfaccia (IDL)) in Windows SDK.|
 |ReadMe.txt|*Projname*|Progetto|File *leggimi*. Viene generato dalla procedura guidata dell'applicazione e descrive i file in un progetto.|
 
 ## <a name="see-also"></a>Vedere anche

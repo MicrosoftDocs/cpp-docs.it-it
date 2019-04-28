@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
 ms.openlocfilehash: 97a57cc8a1acccf70572ff963e496aa79fa3ab43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166464"
 ---
 # <a name="assume"></a>ASSUME
 
@@ -19,10 +19,10 @@ Abilita controllo degli errori per i valori dei registri.
 
 ## <a name="syntax"></a>Sintassi
 
-> Si SUPPONGA *segregister*:*name* [[, *segregister*:*nome*]]...<br/>
-> Si SUPPONGA *dataregister*:*tipo* [[, *dataregister*:*tipo*]]...<br/>
+> ASSUME *segregister*:*name* [[, *segregister*:*name*]]...<br/>
+> ASSUME *dataregister*:*type* [[, *dataregister*:*type*]]...<br/>
 > Si SUPPONGA *registrare*: errore [[, *registrare*: errore]]...<br/>
-> Si SUPPONGA [[*registrare*:]] NOTHING [[, *registrare*: NOTHING]]...
+> ASSUME [[*register*:]] NOTHING [[, *register*:NOTHING]]...
 
 ## <a name="remarks"></a>Note
 

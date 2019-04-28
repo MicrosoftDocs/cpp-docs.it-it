@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
 ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321592"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Specifica le dipendenze tra manifesti)
 
@@ -73,5 +73,5 @@ Il linker verrà raccogliere commenti /MANIFESTDEPENDENCY, eliminare le voci dup
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

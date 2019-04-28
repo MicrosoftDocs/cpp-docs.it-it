@@ -6,11 +6,11 @@ helpviewer_keywords:
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
 ms.openlocfilehash: 6b68d1bc06a6827ca94b05fa2760206f424d40fe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310840"
 ---
 # <a name="mdi-tabbed-groups"></a>Gruppi a schede MDI
 

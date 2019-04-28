@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
 ms.openlocfilehash: 0f037480e83b8ca1ba12af56904afe25a33e4d6c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160302"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>Procedura: Implementare il rilevamento nel codice
 
@@ -55,4 +55,4 @@ Il `CRectTracker` classe offre varie forme di cursore diverso consente di indica
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tracker: Implementazione di tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+[Tracker: implementazione di tracker nell'applicazione OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)

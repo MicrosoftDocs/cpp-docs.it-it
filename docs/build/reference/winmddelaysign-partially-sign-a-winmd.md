@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCLinkerTool.WINMDDelaySign
 ms.assetid: 445cd602-62cb-400a-8e3a-4beb6572724d
 ms.openlocfilehash: 5e6eab3fbc40543b634f03da826d3bd3477b9623
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57421461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316600"
 ---
 # <a name="winmddelaysign-partially-sign-a-winmd"></a>/WINMDDELAYSIGN (firmare parzialmente un winmd)
 
@@ -35,5 +35,5 @@ Abilita la firma parziale di un file di metadati Runtime di Windows (con estensi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

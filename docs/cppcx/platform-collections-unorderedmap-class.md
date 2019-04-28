@@ -6,11 +6,11 @@ f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
 ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161732"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -81,7 +81,7 @@ Per altre informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 |||
 |-|-|
-|nome|Descrizione|
+|Nome|Descrizione|
 |[Map:: mapchanged](#mapchanged) evento|Si verifica quando l'oggetto Map subisce delle modifiche.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà

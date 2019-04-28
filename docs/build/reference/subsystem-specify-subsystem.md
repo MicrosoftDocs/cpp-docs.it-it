@@ -12,11 +12,11 @@ helpviewer_keywords:
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
 ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318245"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Specifica il sottosistema)
 
@@ -87,5 +87,5 @@ Il valore minimo facoltativo e predefiniti *principali* e *secondaria* numeri di
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

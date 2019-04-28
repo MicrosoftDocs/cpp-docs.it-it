@@ -14,23 +14,23 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180388"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funzioni dello spazio dei nomi Concurrency (AMP)
 
 ||||
 |-|-|-|
 |[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
-|[atomic_exchange (C++ AMP) (funzione)](#atomic_exchange)|[atomic_fetch_add (funzione) (C++ AMP)](#atomic_fetch_add)|[atomic_fetch_and (funzione) (C++ AMP)](#atomic_fetch_and)|
+|[Funzione atomic_exchange (C++ AMP)](#atomic_exchange)|[Funzione atomic_fetch_add (C++ AMP)](#atomic_fetch_add)|[Funzione atomic_fetch_and (C++ AMP)](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
-|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or (funzione) (C++ AMP)](#atomic_fetch_or)|[atomic_fetch_sub (funzione) (C++ AMP)](#atomic_fetch_sub)|
-|[atomic_fetch_xor (funzione) (C++ AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
+|[atomic_fetch_min](#atomic_fetch_min)|[Funzione atomic_fetch_or (C++ AMP)](#atomic_fetch_or)|[Funzione atomic_fetch_sub (C++ AMP)](#atomic_fetch_sub)|
+|[Funzione atomic_fetch_xor (C++ AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
-|[global_memory_fence](#global_memory_fence)|[parallel_for_each (funzione) (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
+|[global_memory_fence](#global_memory_fence)|[Funzione parallel_for_each (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
 ##  <a name="all_memory_fence"></a>  all_memory_fence
 
@@ -86,7 +86,7 @@ Il valore da archiviare nella posizione di memoria specificata da `_Dest` se `_D
 
 **true** se l'operazione ha esito positivo; in caso contrario, **false**.
 
-##  <a name="atomic_exchange"></a>  atomic_exchange (C++ AMP) (funzione)
+##  <a name="atomic_exchange"></a>  Funzione atomic_exchange (C++ AMP)
 
 Imposta il valore del percorso di destinazione come operazione atomica.
 
@@ -119,7 +119,7 @@ Nuovo valore.
 
 Il valore originale del percorso di destinazione.
 
-##  <a name="atomic_fetch_add"></a>  atomic_fetch_add (funzione) (C++ AMP)
+##  <a name="atomic_fetch_add"></a>  Funzione atomic_fetch_add (C++ AMP)
 
 Aggiungere in modo atomico un valore per il valore di una posizione di memoria.
 
@@ -147,7 +147,7 @@ Valore da aggiungere.
 
 Il valore originale della posizione di memoria.
 
-##  <a name="atomic_fetch_and"></a>  atomic_fetch_and (funzione) (C++ AMP)
+##  <a name="atomic_fetch_and"></a>  Funzione atomic_fetch_and (C++ AMP)
 
 Esegue in modo atomico un'operazione con AND bit per bit di un valore e il valore di una posizione di memoria.
 
@@ -270,7 +270,7 @@ Il valore da confrontare con il valore in corrispondenza della posizione specifi
 
 Il valore originale archiviato nella posizione specificata.
 
-##  <a name="atomic_fetch_or"></a>  atomic_fetch_or (funzione) (C++ AMP)
+##  <a name="atomic_fetch_or"></a>  Funzione atomic_fetch_or (C++ AMP)
 
 Esegue in modo atomico un'operazione di OR bit per bit con un valore e il valore di una posizione di memoria.
 
@@ -298,7 +298,7 @@ Il valore da usare nel calcolo OR bit per bit.
 
 Il valore originale della posizione di memoria.
 
-##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub (funzione) (C++ AMP)
+##  <a name="atomic_fetch_sub"></a>  Funzione atomic_fetch_sub (C++ AMP)
 
 In modo atomico sottrae un valore da una posizione di memoria.
 
@@ -326,7 +326,7 @@ Il valore da sottrarre.
 
 Il valore originale della posizione di memoria.
 
-##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor (funzione) (C++ AMP)
+##  <a name="atomic_fetch_xor"></a>  Funzione atomic_fetch_xor (C++ AMP)
 
 Esegue un'operazione XOR bit per bit di un valore e una posizione di memoria in modo atomico.
 
@@ -453,7 +453,7 @@ Il tipo di dati degli elementi copiati.
 
 ##  <a name="copy_async"></a>  copy_async
 
-Copia un oggetto C++ AMP e restituisce un [completion_future](completion-future-class.md) oggetto che può esserci attesa. È possibile copiare i dati durante l'esecuzione di codice su un acceleratore.  Il formato generale di questa funzione è `copy(src, dest)`.
+Copie di un C++ oggetto AMP e restituisce un [completion_future](completion-future-class.md) oggetto che può esserci attesa. È possibile copiare i dati durante l'esecuzione di codice su un acceleratore.  Il formato generale di questa funzione è `copy(src, dest)`.
 
 ```
 template <typename value_type, int _Rank>
@@ -585,7 +585,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 *_Barrier*<br/>
 Un oggetto tile_barrier
 
-##  <a name="parallel_for_each"></a>  parallel_for_each (funzione) (C++ AMP)
+##  <a name="parallel_for_each"></a>  Funzione parallel_for_each (C++ AMP)
 
 Esegue una funzione tra il dominio di calcolo. Per altre informazioni, vedere [Panoramica di C++ AMP](../../../parallel/amp/cpp-amp-overview.md).
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator LENGTHOF
 ms.assetid: 09c40dbb-a4e0-4fc6-80ab-dc9967240ef6
 ms.openlocfilehash: e6cfde853a30ec9b3c04828313e657f2175cb8cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176720"
 ---
 # <a name="operator-lengthof"></a>Operatore LENGTHOF
 

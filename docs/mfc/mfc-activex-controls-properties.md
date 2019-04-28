@@ -7,11 +7,11 @@ helpviewer_keywords:
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
 ms.openlocfilehash: 5e01854e7ae7acdc33275351d0d26a76dfeabc9b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324324"
 ---
 # <a name="mfc-activex-controls-properties"></a>Controlli ActiveX MFC: Proprietà
 
@@ -27,13 +27,13 @@ Sono supportate le proprietà predefinite e personalizzate, come i metodi, da un
 
 Gli articoli seguenti illustrano proprietà del controllo ActiveX in modo più dettagliato:
 
-- [Controlli ActiveX MFC: Aggiunta di proprietà predefinite](../mfc/mfc-activex-controls-adding-stock-properties.md)
+- [Controlli ActiveX MFC: aggiunta di proprietà predefinite](../mfc/mfc-activex-controls-adding-stock-properties.md)
 
-- [Controlli ActiveX MFC: Aggiunta di proprietà personalizzate](../mfc/mfc-activex-controls-adding-custom-properties.md)
+- [Controlli ActiveX MFC: aggiunta di proprietà personalizzate](../mfc/mfc-activex-controls-adding-custom-properties.md)
 
-- [Controlli ActiveX MFC: Implementazione di proprietà avanzate](../mfc/mfc-activex-controls-advanced-property-implementation.md)
+- [Controlli ActiveX MFC: implementazione di proprietà avanzate](../mfc/mfc-activex-controls-advanced-property-implementation.md)
 
-- [Controlli ActiveX MFC: L'accesso a proprietà di ambiente](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
+- [Controlli ActiveX MFC: accesso alle proprietà di ambiente](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
 ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160341"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controlli ActiveX MFC: Aggiunta di un'altra pagina delle proprietà personalizzata
 
@@ -24,9 +24,9 @@ Le procedure seguenti usano un framework di controllo di ActiveX di esempio crea
 
 Per altre informazioni sull'utilizzo delle pagine delle proprietà in un controllo ActiveX, vedere gli articoli seguenti:
 
-- [Controlli ActiveX MFC: Pagine delle proprietà](../mfc/mfc-activex-controls-property-pages.md)
+- [Controlli ActiveX MFC: pagine delle proprietà](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Controlli ActiveX MFC: Uso delle pagine proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Controlli ActiveX MFC: uso delle pagine delle proprietà predefinite](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
     > [!NOTE]
     >  Si consiglia di utilizzare tale proprietà nuove pagine di rispettano la dimensione standard per pagine proprietà del controllo ActiveX. La proprietà di colori e immagini predefinita delle pagine unità di misura 250 x 62 finestra di dialogo (DLU). La pagina delle proprietà standard del tipo di carattere è 250 x 110 DLU. La pagina delle proprietà predefinite creata dalla creazione guidata controllo ActiveX utilizza lo standard DLU 250 x 62.

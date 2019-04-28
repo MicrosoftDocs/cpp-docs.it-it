@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
 ms.openlocfilehash: 025c25d6c01ab9a28c68574cc2a13e09dbf28388
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161745"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections (spazio dei nomi)
 
@@ -35,7 +35,7 @@ using namespace Platform::Collections;
 
 Questo spazio dei nomi contiene i seguenti membri.
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Classe Platform::Collections::BackInsertIterator](../cppcx/platform-collections-backinsertiterator-class.md)|Rappresenta un iteratore che inserisce un elemento alla fine di una raccolta.|
 |[Classe Platform::Collections::InputIterator](../cppcx/platform-collections-inputiterator-class.md)|Rappresenta un iteratore che inserisce un elemento all'inizio di una raccolta.|

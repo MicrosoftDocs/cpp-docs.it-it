@@ -11,11 +11,11 @@ helpviewer_keywords:
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
 ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327314"
 ---
 # <a name="class-library-overview"></a>Cenni preliminari sulla libreria di classi
 
@@ -23,7 +23,7 @@ Questa panoramica vengono suddivisi in categorie e vengono descritte le classi i
 
 Le classi della libreria sono riportate qui nelle categorie seguenti:
 
-- [Classe root: CObject](../mfc/root-class-cobject.md)
+- [Classe radice: CObject](../mfc/root-class-cobject.md)
 
 - [Classi architettura dell'applicazione MFC](../mfc/mfc-application-architecture-classes.md)
 

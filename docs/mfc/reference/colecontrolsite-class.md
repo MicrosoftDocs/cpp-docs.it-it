@@ -107,11 +107,11 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
 ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310383"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 
@@ -397,7 +397,7 @@ virtual HRESULT DoVerb(
 *nVerb*<br/>
 Specifica il verbo da eseguire. Può includere uno dei seguenti:
 
-|Valore|Significato|Simbolo|
+|Value|Significato|Simbolo|
 |-----------|-------------|------------|
 |0|verbo primario|OLEIVERB_PRIMARY|
 |-1|Verbo secondario|(Nessuno)|

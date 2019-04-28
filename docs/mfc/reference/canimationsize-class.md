@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
 ms.openlocfilehash: f52016afe39da900dca4847d29beccb97d829b60
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325117"
 ---
 # <a name="canimationsize-class"></a>Classe CAnimationSize
 
@@ -77,7 +77,7 @@ class CAnimationSize : public CAnimationBaseObject;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationSize::m_cxValue](#m_cxvalue)|La variabile di animazione incapsulato che rappresenta la larghezza delle dimensioni di animazione.|
 |[CAnimationSize::m_cyValue](#m_cyvalue)|La variabile di animazione incapsulato che rappresenta l'altezza delle dimensioni di animazione.|

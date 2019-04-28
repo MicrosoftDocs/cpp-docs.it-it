@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323359"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Flag che determinano il comportamento di Gestione riavvio.|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|Il periodo di tempo in millisecondi tra si chiuda.|
@@ -2395,4 +2395,4 @@ Specifica l'ID modello utente applicazione.
 
 [Classe CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
-[Procedura: Aggiungere il supporto Gestione riavvio](../../mfc/how-to-add-restart-manager-support.md)
+[Procedura: Aggiungere il supporto di Gestione riavvio](../../mfc/how-to-add-restart-manager-support.md)

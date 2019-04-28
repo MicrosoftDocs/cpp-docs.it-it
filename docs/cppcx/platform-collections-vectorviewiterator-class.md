@@ -8,11 +8,11 @@ helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
 ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161407"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Classe Platform::Collections::VectorViewIterator
 
