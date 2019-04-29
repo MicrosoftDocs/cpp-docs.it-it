@@ -1,5 +1,5 @@
 ---
-title: 'TN061: messaggi ON_NOTIFY e WM_NOTIFY'
+title: 'TN061: Messaggi ON_NOTIFY e Wm_notify'
 ms.date: 06/28/2018
 f1_keywords:
 - ON_NOTIFY
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 ms.openlocfilehash: 74eb39a855da3ff3e6da7f14a76bf0804919826d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399577"
 ---
-# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: messaggi ON_NOTIFY e WM_NOTIFY
+# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: Messaggi ON_NOTIFY e Wm_notify
 
 > [!NOTE]
 > La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
@@ -31,7 +31,7 @@ In questa nota tecnica vengono fornite informazioni sul nuovo messaggio WM_NOTIF
 
 In Windows 3.x, controlli notificare padri di eventi, ad esempio clic del mouse, viene modificato nel contenuto e di selezione e di disegno dello sfondo del controllo inviando un messaggio per l'elemento padre. Notifiche semplice vengono inviate come messaggi WM_COMMAND speciali, con il codice di notifica (ad esempio BN_CLICKED) e controllare l'ID raggruppate *wParam* e l'handle del controllo nella *lParam*. Si noti che, essendo *wParam* e *lParam* sono completa, non è possibile passare dati aggiuntivi, questi messaggi possono essere solo notifica semplice. Ad esempio, nella notifica BN_CLICKED, non vi è alcuna possibilità di inviare informazioni sulla posizione del cursore del mouse quando è stato scelto il pulsante.
 
-Quando i controlli in Windows 3.x necessario inviano un messaggio di notifica che include dati aggiuntivi, usano un'ampia varietà di messaggi con scopi speciali, tra cui WM_CTLCOLOR, WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM _ CHARTOITEM WM_VKEYTOITEM e così via. Questi messaggi possono essere riflesse al controllo che li ha inviati. Per altre informazioni, vedere [TN062: Reflection messaggi per i controlli Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
+Quando i controlli in Windows 3.x necessario inviano un messaggio di notifica che include dati aggiuntivi, usano un'ampia varietà di messaggi con scopi speciali, tra cui WM_CTLCOLOR, WM_VSCROLL, WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM, WM_DELETEITEM, WM _ CHARTOITEM WM_VKEYTOITEM e così via. Questi messaggi possono essere riflesse al controllo che li ha inviati. Per altre informazioni, vedere [TN062: La Reflection per i controlli di Windows del messaggio](../mfc/tn062-message-reflection-for-windows-controls.md).
 
 **Messaggi di notifica in Win32**
 
@@ -114,7 +114,7 @@ dove i parametri sono:
 *pNotifyStruct*<br/>
 Puntatore alla struttura di notifica, come descritto nella sezione precedente.
 
-*Risultato*<br/>
+*result*<br/>
 Un puntatore al codice di risultato imposterai prima della restituzione.
 
 ## <a name="example"></a>Esempio
@@ -183,7 +183,7 @@ L'identificatore dell'elemento figlio del controllo che riceve la notifica.
 *pNotifyStruct*<br/>
 Puntatore alla struttura di notifica, come descritto in precedenza.
 
-*Risultato*<br/>
+*result*<br/>
 Un puntatore al codice di risultato imposterai prima della restituzione.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE

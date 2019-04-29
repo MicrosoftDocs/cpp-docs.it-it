@@ -50,11 +50,11 @@ helpviewer_keywords:
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
 ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397679"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -213,7 +213,7 @@ x x x x x x
 base() same = True
 ```
 
-## <a name="begin"></a> collection_adapter::Begin (STL/CLR)
+## <a name="begin"></a> collection_adapter::begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -455,7 +455,7 @@ int main()
 a b c
 ```
 
-## <a name="iterator"></a> collection_adapter::Iterator (STL/CLR)
+## <a name="iterator"></a> collection_adapter::iterator (STL/CLR)
 
 Tipo di un iteratore per la sequenza controllata.
 
@@ -500,7 +500,7 @@ int main()
 a b c
 ```
 
-## <a name="key_type"></a> collection_adapter::KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> collection_adapter::key_type (STL/CLR)
 
 Tipo di una chiave del dizionario.
 
@@ -600,7 +600,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::operator = (STL/CLR)
+## <a name="op_eq"></a> collection_adapter::operator= (STL/CLR)
 
 Sostituisce l'handle BCL stored.
 
@@ -657,7 +657,7 @@ a b c
 a b c
 ```
 
-## <a name="reference"></a> collection_adapter::Reference (STL/CLR)
+## <a name="reference"></a> collection_adapter::reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -705,7 +705,7 @@ int main()
 a b c
 ```
 
-## <a name="size"></a> collection_adapter::Size (STL/CLR)
+## <a name="size"></a> collection_adapter::size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -1034,7 +1034,7 @@ Il tipo associato gli iteratori sottoposta a wrapping.
 
 Il range_adapter archivia una coppia di iteratori, che a sua volta delimitare una sequenza di elementi. L'oggetto implementa quattro interfacce di libreria di classi base che consentono di scorrere gli elementi, in ordine. Utilizzare questa classe modello per modificare gli intervalli STL/CLR molto simile a contenitori di libreria di classi base.
 
-## <a name="range_adapter_op_eq"></a> range_adapter::operator = (STL/CLR)
+## <a name="range_adapter_op_eq"></a> range_adapter::operator= (STL/CLR)
 
 Sostituisce la coppia iteratore archiviato.
 

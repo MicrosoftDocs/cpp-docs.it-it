@@ -25,11 +25,11 @@ helpviewer_keywords:
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
 ms.openlocfilehash: 0228170e4ab5b55b4b061fa61a412766de77a063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356602"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 

@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377504"
 ---
 # <a name="array-class-c-standard-library"></a>Classe array (libreria standard C++)
 
@@ -162,7 +162,7 @@ class array;
 |Operatore|Descrizione|
 |-|-|
 |[array::operator=](#op_eq)|Sostituisce la sequenza controllata.|
-|[operator\[\]](#op_at)|Accede a un elemento in una posizione specificata.|
+|[array::operator\[\]](#op_at)|Accede a un elemento in una posizione specificata.|
 
 ## <a name="remarks"></a>Note
 
@@ -247,7 +247,7 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Il valore da assegnare.
 
 ### <a name="remarks"></a>Note
@@ -303,7 +303,7 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*off*<br/>
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Note
@@ -963,7 +963,7 @@ void fill(const Type& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore dell'elemento inserito nella matrice.|
+|*val*|Valore dell'elemento inserito nella matrice.|
 
 ### <a name="remarks"></a>Note
 
@@ -1149,7 +1149,7 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*off*<br/>
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Note

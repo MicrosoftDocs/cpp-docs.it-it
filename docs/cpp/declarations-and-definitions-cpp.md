@@ -3,11 +3,11 @@ title: Dichiarazioni e definizioni (C++)
 ms.date: 11/04/2016
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
 ms.openlocfilehash: 1e76f636a6efd652ac629ad2f97f0b09f6171f9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399070"
 ---
 # <a name="declarations-and-definitions-c"></a>Dichiarazioni e definizioni (C++)
 

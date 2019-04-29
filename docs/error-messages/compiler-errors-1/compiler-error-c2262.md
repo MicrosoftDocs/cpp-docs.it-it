@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2262
 ms.assetid: 727d1c6e-53e8-40e5-b7b8-6a7ac2011727
 ms.openlocfilehash: 12272c21adac0e326cb8b149b359584197577941
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397523"
 ---
 # <a name="compiler-error-c2262"></a>Errore del compilatore C2262
 
-'attribute_specifiers': impossibile specificare una versione, le impostazioni cultura o l'architettura del processore per le dichiarazioni InternalsVisibleTo
+'attribute_specifiers': Nelle dichiarazioni InternalsVisibleTo non è possibile specificare una versione, impostazioni cultura o architettura del processore specificato
 
 L'attributo <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> non è stato specificato correttamente.
 

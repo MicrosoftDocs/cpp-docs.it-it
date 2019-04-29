@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
 ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404689"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversioni di tipi e indipendenza dai tipi (C++ moderno)
 
@@ -20,7 +20,7 @@ Quando il compilatore rileva una conversione non sicura, genera un errore o un a
 
 ## <a name="implicit-type-conversions"></a>Conversioni implicite di tipi
 
-Quando un'espressione contiene operandi di differenti tipi predefiniti e non usare cast espliciti sono presenti, il compilatore Usa incorporati *conversioni standard* per convertire uno degli operandi in modo che i tipi corrispondano. Il compilatore tenta le conversioni in una sequenza ben definita finché una conversione non ha esito positivo. Se la conversione selezionata è una promozione, il compilatore non genera un avviso. Se la conversione è di tipo narrowing, il compilatore genera un avviso sulla possibile perdita di dati. L'effettiva perdita di dati dipende dai valori effettivi implicati, ma si consiglia di considerare questo avviso come se fosse un errore. Se è coinvolto un tipo definito dall'utente, il compilatore tenta di utilizzare le conversioni specificate nella definizione della classe. Se non viene trovata una conversione accettabile, il compilatore genera un errore e il programma non verrà compilato. Per altre informazioni sulle regole che controllano le conversioni standard, vedere [conversioni Standard](../cpp/standard-conversions.md). Per altre informazioni sulle conversioni definite dall'utente, vedere [conversioni definite dall'utente (C + + CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
+Quando un'espressione contiene operandi di differenti tipi predefiniti e non usare cast espliciti sono presenti, il compilatore Usa incorporati *conversioni standard* per convertire uno degli operandi in modo che i tipi corrispondano. Il compilatore tenta le conversioni in una sequenza ben definita finché una conversione non ha esito positivo. Se la conversione selezionata è una promozione, il compilatore non genera un avviso. Se la conversione è di tipo narrowing, il compilatore genera un avviso sulla possibile perdita di dati. L'effettiva perdita di dati dipende dai valori effettivi implicati, ma si consiglia di considerare questo avviso come se fosse un errore. Se è coinvolto un tipo definito dall'utente, il compilatore tenta di utilizzare le conversioni specificate nella definizione della classe. Se non viene trovata una conversione accettabile, il compilatore genera un errore e il programma non verrà compilato. Per altre informazioni sulle regole che controllano le conversioni standard, vedere [conversioni Standard](../cpp/standard-conversions.md). Per altre informazioni sulle conversioni definite dall'utente, vedere [conversioni definite dall'utente (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
 
 ### <a name="widening-conversions-promotion"></a>Conversione di ampliamento (promozione)
 
@@ -30,7 +30,7 @@ In una conversione di ampliamento un valore in una variabile più piccola viene 
 |----------|--------|
 |Qualsiasi con o senza segno di tipo integrale eccetto **long long** o **__int64**|**double**|
 |**bool** o **char**|Qualsiasi altro tipo predefinito|
-|**brevi** o **wchar_t**|**int**, **lungo**, **long long**|
+|**brevi** o **wchar_t**|**int**, **long**, **long long**|
 |**int**, **long**|**long long**|
 |**float**|**double**|
 

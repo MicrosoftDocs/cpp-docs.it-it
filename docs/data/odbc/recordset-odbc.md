@@ -14,11 +14,11 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397744"
 ---
 # <a name="recordset-odbc"></a>Recordset (ODBC)
 
@@ -77,49 +77,49 @@ Gli argomenti seguenti illustrano i dettagli di utilizzo degli oggetti recordset
 
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>Argomenti relativi alle operazioni di apertura, la lettura e chiusura di recordset
 
-- [Recordset: Architettura (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
+- [Recordset: architettura (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [Recordset: Dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [Recordset: dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [Recordset: Creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+- [Recordset: creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
-- [Recordset: Scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
+- [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
-- [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
+- [Recordset: segnalibri e posizione assoluta (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-- [Recordset: Filtrare i record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+- [Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [Recordset: Ordinamento dei record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [Recordset: ordinamento di record (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [Recordset: parametrizzazione di un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>Argomenti relativi alle operazioni di modifica dei recordset
 
-- [Recordset: Aggiunta, aggiornamento ed eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [Recordset: aggiunta, aggiornamento ed eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-- [Recordset: Blocco dei record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+- [Recordset: blocco di record (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [Recordset: Ripetizione di query in un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [Recordset: ripetizione di una query su un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>Argomenti relativi in qualche modo le tecniche più avanzate
 
-- [Recordset: Esecuzione di un Join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [Recordset: esecuzione di un join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [Recordset: Dichiarazione di una classe per una Query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [Recordset: dichiarazione di una classe per una query predefinita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [Recordset: Associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [Recordset: associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- [Recordset: Uso degli elementi di dati di grandi dimensioni (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [Recordset: gestione di dati di grandi dimensioni (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [Recordset: Recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [Recordset: recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>Argomenti sul funzionano dei recordset
 
-- [Recordset: Selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>Vedere anche
 

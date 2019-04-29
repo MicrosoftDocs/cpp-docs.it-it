@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 6ec4ff879b70e4d2cc16a3328217660db695e859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377139"
 ---
 # <a name="ltatomicgt-functions"></a>Funzioni &lt;atomic&gt;
 
@@ -154,7 +154,7 @@ Puntatore a un valore di tipo `Ty`.
 *Valore*<br/>
 Valore di tipo `Ty`.
 
-*Diffgr:ID="Order1*<br/>
+*Order1*<br/>
 Primo argomento [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 *Order2*<br/>
@@ -238,7 +238,7 @@ Puntatore a un valore di tipo `Ty`.
 *Valore*<br/>
 Valore di tipo `Ty`.
 
-*Diffgr:ID="Order1*<br/>
+*Order1*<br/>
 Primo argomento [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 *Order2*<br/>
@@ -306,7 +306,7 @@ Puntatore a un oggetto `atomic` che archivia un valore di tipo `Ty`.
 *Valore*<br/>
 Valore di tipo `Ty`.
 
-*Ordine*<br/>
+*Order*<br/>
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
@@ -457,7 +457,7 @@ Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 *Valore*<br/>
 Valore di tipo `T`.
 
-*Ordine*<br/>
+*Order*<br/>
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
@@ -521,7 +521,7 @@ Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 *Valore*<br/>
 Valore di tipo `T`.
 
-*Ordine*<br/>
+*Order*<br/>
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
@@ -676,7 +676,7 @@ Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 *Valore*<br/>
 Valore di tipo `T`.
 
-*Ordine*<br/>
+*Order*<br/>
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
@@ -715,7 +715,7 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 *Flag*<br/>
 Puntatore a un oggetto `atomic_flag` .
 
-*Ordine*<br/>
+*Order*<br/>
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
@@ -750,7 +750,7 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 *Flag*<br/>
 Puntatore a un oggetto `atomic_flag` .
 
-*Ordine*<br/>
+*Order*<br/>
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
@@ -844,7 +844,7 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 *Formato Atom*<br/>
 Puntatore a un oggetto `atomic` che contiene un valore di tipo `Ty`.
 
-*Ordine*<br/>
+*Order*<br/>
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Non usare `memory_order_release` o `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -861,7 +861,7 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Ordine*<br/>
+*Order*<br/>
 Un vincolo di ordinamento della memoria che determina il tipo di limite.
 
 ### <a name="remarks"></a>Note
@@ -926,7 +926,7 @@ Puntatore a un oggetto `atomic` che contiene un valore di tipo `Ty`.
 *Valore*<br/>
 Valore di tipo `Ty`.
 
-*Ordine*<br/>
+*Order*<br/>
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Non usare `memory_order_consume`, `memory_order_acquire` o `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Note
@@ -943,7 +943,7 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Ordine*<br/>
+*Order*<br/>
 Un vincolo di ordinamento della memoria che determina il tipo di limite.
 
 ### <a name="remarks"></a>Note
@@ -970,7 +970,7 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Valore di tipo `Ty`.
 
 ### <a name="return-value"></a>Valore restituito

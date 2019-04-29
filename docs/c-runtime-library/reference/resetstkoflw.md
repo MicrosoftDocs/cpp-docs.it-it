@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357538"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -88,7 +88,7 @@ Chiamare **resetstkoflw** per ripristinare la pagina di protezione ogni volta ch
 
 A questi punti, lo stack non è ancora sufficientemente svuotato.
 
-Le eccezioni di overflow dello stack vengono generate come eccezioni strutturate, non eccezioni C++, pertanto **resetstkoflw** non è utile in un normale **catch** bloccarsi, in quanto non rileverà un'eccezione di overflow dello stack. Tuttavia, se si usa [_set_se_translator](set-se-translator.md) per implementare un convertitore di eccezioni strutturate che genera eccezioni C++ (come nel secondo esempio), per un'eccezione di overflow dello stack viene restituita un'eccezione C++ che può essere gestita da un blocco catch C++.
+Le eccezioni di overflow dello stack vengono generate come eccezioni strutturate, non C++ le eccezioni, pertanto **resetstkoflw** non è utile in un normale **catch** bloccarsi, in quanto non rileverà un overflow dello stack eccezione. Tuttavia, se si usa [_set_se_translator](set-se-translator.md) per implementare un convertitore di eccezioni strutturate che genera eccezioni C++ (come nel secondo esempio), per un'eccezione di overflow dello stack viene restituita un'eccezione C++ che può essere gestita da un blocco catch C++.
 
 Non è sicuro chiamare **_resetstkoflw** in un blocco catch C++ che viene raggiunto da un'eccezione generata dalla funzione del convertitore di eccezioni strutturate. In questo caso, lo spazio dello stack non viene liberato e il puntatore dello stack non viene reimpostato fino all'esterno del blocco catch, anche se i distruttori sono stati chiamati per tutti gli oggetti distruttibili prima del blocco catch. Questa funzione non deve essere chiamata finché lo spazio dello stack non è libero e il puntatore dello stack non è stato reimpostato. Pertanto, deve essere chiamata solo dopo l'uscita dal blocco catch. Nel blocco catch è consigliabile utilizzare uno spazio di stack il più piccolo possibile, poiché un overflow dello stack che si verifica nel blocco catch che sta tentando di risolvere un overflow dello stack precedente non è reversibile e il programma può smettere di rispondere dal momento che l'overflow nel blocco catch genera un'eccezione che, a sua volta, è gestita dallo stesso blocco catch.
 
@@ -104,7 +104,7 @@ Gestione delle eccezioni strutturate non intercetterà un' **STATUS_STACK_OVERFL
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-**Librerie:** tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+**Librerie:** Tutte le versioni del [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Esempio
 
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Descrizione
 
-L'esempio seguente illustra l'uso consigliato di **resetstkoflw** in un programma in cui le eccezioni strutturate vengono convertite in eccezioni C++.
+L'esempio seguente illustra l'uso consigliato di **resetstkoflw** in un programma in cui le eccezioni strutturate vengono convertite in C++ eccezioni.
 
 ### <a name="code"></a>Codice
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
 ms.openlocfilehash: a70c444af9e1622b3f46837fcfa2d5e8856abf30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399135"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>Considerazioni per la scrittura di codice di prologo e di epilogo
 
@@ -43,7 +43,7 @@ ret                       ; Return from function
 
 Lo stack va sempre verso il basso (dal livello alto a quello basso degli indirizzi di memoria). Il puntatore di base (`ebp`) punta al valore inserito di `ebp`. L'area delle variabili locali inizia da `ebp-4`. Per accedere alle variabili locali, calcolare un offset da `ebp` sottraendo il valore appropriato da `ebp`.
 
-##  <a name="_pluslang___local_size"></a> LOCAL_SIZE
+##  <a name="_pluslang___local_size"></a> __LOCAL_SIZE
 
 Il compilatore fornisce un simbolo, `__LOCAL_SIZE`, per l'uso nel blocco dell'assembler inline del codice di prologo di funzione. Questo simbolo viene utilizzato per allocare spazio per le variabili locali sullo stack frame nel codice di prologo personalizzato.
 

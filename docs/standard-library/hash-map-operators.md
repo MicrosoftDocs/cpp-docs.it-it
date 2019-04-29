@@ -6,11 +6,11 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: ba84f476c712f64e7782f0ea476bbb65a35dc14a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405053"
 ---
 # <a name="lthashmapgt-operators"></a>Operatori &lt;hash_map&gt;
 
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>  operatore = = (hash_multimap)
+## <a name="op_eq_eq_mm"></a>  operator==  (hash_multimap)
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_multimap](unordered-multimap-class.md).

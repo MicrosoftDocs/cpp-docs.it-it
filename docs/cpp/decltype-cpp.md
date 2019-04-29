@@ -1,5 +1,5 @@
 ---
-title: decltype (C++)
+title: decltype  (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - decltype_cpp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399083"
 ---
-# <a name="decltype--c"></a>decltype (C++)
+# <a name="decltype--c"></a>decltype  (C++)
 
 Il **decltype** identificatore di tipo restituisce il tipo di un'espressione specificata. Il **decltype** identificatore di tipo con il [parola chiave auto](../cpp/auto-cpp.md), risulta principalmente utile per gli sviluppatori che scrivono librerie di modelli. Uso **automatica** e **decltype** per dichiarare una funzione di modello restituiscono il cui tipo dipende dai tipi dei relativi argomenti di modello. In alternativa, usare **automatica** e **decltype** per dichiarare una funzione di modello che esegue il wrapping di una chiamata a un'altra funzione e quindi restituisce il tipo restituito della funzione con wrapping.
 
@@ -30,7 +30,7 @@ decltype( expression )
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Espressione*|Un'espressione. Per altre informazioni, vedere [espressioni](../cpp/expressions-cpp.md).|
+|*expression*|Un'espressione. Per altre informazioni, vedere [espressioni](../cpp/expressions-cpp.md).|
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>Esempio
 
-**Visual Studio 2017 e versioni successiva:** il compilatore analizza argomenti decltype quando i modelli vengono dichiarati piuttosto che creare un'istanza. Di conseguenza, se viene rilevata una specializzazione non dipendente nell'argomento decltype, non verrà rinviata all'ora di creazione di un'istanza ma verrà elaborata immediatamente e sarà possibile diagnosticare eventuali errori risultanti in quel momento.
+**Visual Studio 2017 e versioni successiva:** Il compilatore analizza argomenti decltype quando i modelli vengono dichiarati piuttosto che creare un'istanza. Di conseguenza, se viene rilevata una specializzazione non dipendente nell'argomento decltype, non verrà rinviata all'ora di creazione di un'istanza ma verrà elaborata immediatamente e sarà possibile diagnosticare eventuali errori risultanti in quel momento.
 
 Nell'esempio seguente viene illustrato questo tipo di errore del compilatore che viene generato al momento della dichiarazione:
 

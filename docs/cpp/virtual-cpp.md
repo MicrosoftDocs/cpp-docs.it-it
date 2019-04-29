@@ -11,11 +11,11 @@ helpviewer_keywords:
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
 ms.openlocfilehash: f68bd2e500ebe16c43ef6c3d7a5aede26421b27d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393909"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
@@ -30,13 +30,13 @@ virtual [access-specifier] base-class-name
 
 #### <a name="parameters"></a>Parametri
 
-*identificatori di tipo*<br/>
+*type-specifiers*<br/>
 Specifica il tipo restituito della funzione interna virtuale.
 
-*dichiaratore di funzione membro*<br/>
+*member-function-declarator*<br/>
 Dichiara una nuova funzione interna.
 
-*Identificatore di accesso*<br/>
+*access-specifier*<br/>
 Definisce il livello di accesso per la classe di base **pubbliche**, **protetti** oppure **private**. Può apparire prima o dopo il **virtuale** (parola chiave).
 
 *base-class-name*<br/>

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
 ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383412"
 ---
 # <a name="write"></a>_write
 
@@ -57,7 +57,7 @@ Numero di byte.
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **Write** restituisce il numero di byte effettivamente scritti. Se lo spazio effettivo rimanente sul disco è inferiore alla dimensione del buffer tenta di scrivere sul disco, la funzione **Write** ha esito negativo e No Scarica i contenuti del buffer sul disco. Valore restituito di -1 indica un errore. Se vengono passati parametri non validi, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostata su uno dei tre valori: **EBADF**, ovvero il descrittore del file non è valido o non è possibile aprire il file per la scrittura; **ENOSPC**, ovvero non è sufficiente spazio rimanente nel dispositivo per l'operazione; oppure **EINVAL**, vale a dire che *buffer* era un puntatore null o che un dispari *conteggio* di byte passata deve essere scritto in un file in modalità Unicode.
+Caso di esito positivo **Write** restituisce il numero di byte effettivamente scritti. Se lo spazio effettivo rimanente sul disco è inferiore alla dimensione del buffer tenta di scrivere sul disco, la funzione **Write** ha esito negativo e No Scarica i contenuti del buffer sul disco. Valore restituito di -1 indica un errore. Se vengono passati parametri non validi, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostato su uno dei tre valori: **EBADF**, ovvero il descrittore del file non è valido o non è possibile aprire il file per la scrittura; **ENOSPC**, che significa che non è sufficiente spazio rimanente nel dispositivo per l'operazione; oppure **EINVAL**, che significa che *buffer* era un puntatore null o che un dispari *conteggio* di byte passata deve essere scritto in un file in modalità Unicode.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

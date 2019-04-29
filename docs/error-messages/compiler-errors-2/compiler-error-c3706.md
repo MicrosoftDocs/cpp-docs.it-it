@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400292"
 ---
 # <a name="compiler-error-c3706"></a>Errore del compilatore C3706
 
 'function': deve essere un'interfaccia COM può generare eventi COM
 
-L'interfaccia di eventi che consente di generare eventi COM deve essere un'interfaccia COM. In questo caso, l'interfaccia deve essere definito utilizzando un attributo di Visual C++ o importati utilizzando [#import](../../preprocessor/hash-import-directive-cpp.md) da una libreria dei tipi con l'attributo embedded_idl del #import.
+L'interfaccia di eventi che consente di generare eventi COM deve essere un'interfaccia COM. In questo caso, l'interfaccia deve essere definita usando un oggetto visivo C++ attributo o importati con [#import](../../preprocessor/hash-import-directive-cpp.md) da una libreria dei tipi con l'attributo embedded_idl del #import.
 
 Si noti che il `#include` righe del file di intestazione ATL illustrati nell'esempio riportato di seguito sono necessarie per l'uso di eventi COM. Per correggere questo errore, apportare `IEvents` (l'interfaccia di gestione degli eventi) un'interfaccia COM applicando uno dei seguenti attributi per la definizione dell'interfaccia: [oggetto](../../windows/object-cpp.md), [doppio](../../windows/dual.md), o [ interfaccia dispatch](../../windows/dispinterface.md).
 

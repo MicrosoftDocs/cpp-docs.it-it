@@ -24,11 +24,11 @@ helpviewer_keywords:
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385193"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -47,7 +47,7 @@ void _tzset( void );
 
 Il **tzset** funzione Usa l'impostazione corrente della variabile di ambiente **TZ** per assegnare valori alle tre variabili globali: **Daylight**, **TimeZone** , e **tzname**. Queste variabili vengono usate per la [ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) funzioni per apportare correzioni dall'ora UTC (coordinated universal time) all'ora locale e dal [ora](time-time32-time64.md) funzione calcolare l'ora UTC dall'ora di sistema. Usare la sintassi seguente per impostare il **TZ** variabile di ambiente:
 
-> **impostato TZ =**_tzn_ \[ **+** &#124; **-**]*hh* \[ **:**_mm_\[**:**_ss_]] [*dzn*]
+> **set TZ=**_tzn_ \[**+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
 
 |Parametro|Descrizione|
 |-|-|
@@ -72,10 +72,10 @@ In base il **TZ** valore variabile di ambiente, i valori seguenti vengono assegn
 
 |Variabile globale|Descrizione|Valore predefinito|
 |---------------------|-----------------|-------------------|
-|**Daylight**|Valore diverso da zero se è specificato un orario di--l'ora legale **TZ** configurazione; in caso contrario, 0.|1|
-|**TimeZone**|La differenza in secondi tra l'ora locale e l'ora UTC.|28800 (28800 secondi equivale a 8 ore)|
-|**tzname**[0]|Valore del nome del fuso orario dalla stringa **TZ** variabile di ambiente; vuoto se **TZ** non è stata impostata.|PST|
-|**tzname**[1]|Valore stringa del fuso orario ora legale; vuoto se viene specificato--l'ora legale fuso **TZ** variabile di ambiente.|PDT|
+|**_daylight**|Valore diverso da zero se è specificato un orario di--l'ora legale **TZ** configurazione; in caso contrario, 0.|1|
+|**_timezone**|La differenza in secondi tra l'ora locale e l'ora UTC.|28800 (28800 secondi equivale a 8 ore)|
+|**_tzname**[0]|Valore del nome del fuso orario dalla stringa **TZ** variabile di ambiente; vuoto se **TZ** non è stata impostata.|PST|
+|**_tzname**[1]|Valore stringa del fuso orario ora legale; vuoto se viene specificato--l'ora legale fuso **TZ** variabile di ambiente.|PDT|
 
 I valori predefiniti illustrati nella tabella precedente per **Daylight** e il **tzname** matrice corrispondono a "PST8PDT". Se la zona DST viene omessa dal **TZ** variabile di ambiente, il valore di **Daylight** è uguale a 0 e il [ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)e [localtime](localtime-localtime32-localtime64.md) funzioni restituiscono 0 per i flag DST.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - operators [C++], extraction
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
 ms.openlocfilehash: 1fc6ffd2f033dfe3df60260f734d93b79d6824f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362426"
 ---
 # <a name="using-extraction-operators"></a>Utilizzo degli operatori di estrazione
 

@@ -3,15 +3,15 @@ title: Opzioni del compilatore e del linker (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
 ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383360"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opzioni del compilatore e del linker (C++/CX)
 
-Una variabile di ambiente C + + c++ /CLI, le opzioni del compilatore CX e le opzioni del linker supportano la compilazione di App per il Runtime di Windows.
+Una variabile di ambiente C++opzioni del compilatore /CX e le opzioni del linker supportano la compilazione di App per Windows Runtime.
 
 ## <a name="library-path"></a>Percorso di libreria
 
@@ -43,4 +43,4 @@ Quando si usa **/ZW**, il compilatore collega automaticamente la versione DLL di
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione di App e librerie](../cppcx/building-apps-and-libraries-c-cx.md)
+[Compilazione di app e librerie](../cppcx/building-apps-and-libraries-c-cx.md)

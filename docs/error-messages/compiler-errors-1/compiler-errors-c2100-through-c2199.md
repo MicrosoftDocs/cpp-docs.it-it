@@ -1,6 +1,6 @@
 ---
-title: Errore del compilatores C2100 through C2199
-ms.date: 11/17/2017
+title: Errori del compilatore da C2100 a C2199
+ms.date: 04/21/2019
 f1_keywords:
 - C2119
 - C2123
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 3a5a5368700eb1c4c585826021fefc21c25ecedf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360541"
 ---
-# <a name="compiler-errors-c2100-through-c2199"></a>Errore del compilatores C2100 through C2199
+# <a name="compiler-errors-c2100-through-c2199"></a>Errori del compilatore da C2100 a C2199
 
 Gli articoli in questa sezione della documentazione illustrano un subset dei messaggi di errore generati dal compilatore.
 
@@ -44,7 +44,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2101](compiler-error-c2101.md)|'&' in costante|
 |[Errore del compilatore C2102](compiler-error-c2102.md)|'&' richiede un valore l-value|
 |[Errore del compilatore C2103](compiler-error-c2103.md)|'&' nella variabile di registro|
-|[Errore del compilatore C2104](compiler-error-c2104.md)|'&' su campo di bit ignorato|
+|[Errore del compilatore C2104](compiler-error-c2104.md)|' &' su campo di bit ignorato|
 |[Errore del compilatore C2105](compiler-error-c2105.md)|«*operatore*' richiede un l-value|
 |[Errore del compilatore C2106](compiler-error-c2106.md)|«*operatore*': operando sinistro deve essere l-value|
 |[Errore del compilatore C2107](compiler-error-c2107.md)|indice non valido. riferimento indiretto non consentito|
@@ -59,11 +59,11 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2116](compiler-error-c2116.md)|elenchi di parametri di funzione differenti|
 |[Errore del compilatore C2117](compiler-error-c2117.md)|«*identificatore*': overflow dei limiti della matrice|
 |[Errore del compilatore C2118](compiler-error-c2118.md)|indice negativo|
-|C2119 errore del compilatore|«*identifier*': il tipo per '*tipo*' non può essere dedotto da un inizializzatore vuoto|
+|Errore del compilatore C2119|«*identifier*': il tipo per '*tipo*' non può essere dedotto da un inizializzatore vuoto|
 |[Errore del compilatore C2120](compiler-error-c2120.md)|'void' non valido con tutti i tipi|
 |[Errore del compilatore C2121](compiler-error-c2121.md)|'#': carattere non valido: probabilmente il risultato dell'espansione di una macro|
 |[Errore del compilatore C2122](compiler-error-c2122.md)|«*identificatore*': parametro di prototipo nome non valido nell'elenco|
-|C2123 errore del compilatore|«*identificatore*': i modelli di alias non possono essere specializzati in modo esplicito o parziale|
+|Errore del compilatore C2123|«*identificatore*': i modelli di alias non possono essere specializzati in modo esplicito o parziale|
 |[Errore del compilatore C2124](compiler-error-c2124.md)|divisione o mod per 0|
 |Errore del compilatore C2125|'constexpr' non è compatibile con '*token*'|
 |Errore del compilatore C2126|«*identificatore*' non può essere dichiarato con identificatore 'constexpr'|
@@ -71,12 +71,12 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2128](compiler-error-c2128.md)|«*funzione*': alloc_text/same_seg applicabili solo alle funzioni con collegamento C|
 |[Errore del compilatore C2129](compiler-error-c2129.md)|funzione statica '*identificatore*' dichiarata ma non definita|
 |[Errore del compilatore C2130](compiler-error-c2130.md)|#line prevista una stringa contenente il nome file. trovato '*token*'|
-|[C2131 errore del compilatore](compiler-error-c2131.md)|espressione non dà come risultato una costante|
+|[Errore del compilatore C2131](compiler-error-c2131.md)|espressione non dà come risultato una costante|
 |[Errore del compilatore C2132](compiler-error-c2132.md)|Errore di sintassi: identificatore imprevisto|
 |[Errore del compilatore C2133](compiler-error-c2133.md)|«*identificatore*': dimensione sconosciuta|
 |[Errore del compilatore C2134](compiler-error-c2134.md)|«*funzione*': chiamata non produce un'espressione costante|
 |[Errore del compilatore C2135](compiler-error-c2135.md)|«*operatore*': operazione su campo di bit non valida|
-|C2136 errore del compilatore|creazione del contratto API non consentito|
+|Errore del compilatore C2136|creazione del contratto API non consentito|
 |[Errore del compilatore C2137](compiler-error-c2137.md)|costante carattere vuota|
 |[Errore del compilatore C2138](compiler-error-c2138.md)|Definisci un'enumerazione senza membri non è valida|
 |[Errore del compilatore C2139](compiler-error-c2139.md)|«*classe*': una classe non definita non è consentita come argomento per il tratto di tipo intrinseco del compilatore '*tratto*»|
@@ -116,7 +116,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2173](compiler-error-c2173.md)|«*funzione*': parametro effettivo non è un puntatore: parametro *numero*, elenco di parametri *numero*|
 |[Errore del compilatore C2174](compiler-error-c2174.md)|«*funzione*': il parametro effettivo ha tipo 'void': parametro *numero*, elenco di parametri *numero*|
 |[Errore del compilatore C2175](compiler-error-c2175.md)|«*delle impostazioni locali*': impostazioni locali non valido|
-|C2176 errore del compilatore|un'istruzione return non può trovarsi nel gestore di un funzione blocco try associato a un costruttore|
+|Errore del compilatore C2176|un'istruzione return non può trovarsi nel gestore di un funzione blocco try associato a un costruttore|
 |[Errore del compilatore C2177](compiler-error-c2177.md)|costante troppo grande|
 |[Errore del compilatore C2178](compiler-error-c2178.md)|«*identifier*'non può essere dichiarata con'*identificatore*' identificatore|
 |[Errore del compilatore C2179](compiler-error-c2179.md)|«*tipo*': un argomento di attributo non è possibile usare i parametri di tipo|
@@ -127,7 +127,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2184](compiler-error-c2184.md)|«*tipo*': tipo non valido per espressione except|
 |[Errore del compilatore C2185](compiler-error-c2185.md)|«*identificatore*': allocazione con base non valida|
 |[Errore del compilatore C2186](compiler-error-c2186.md)|«*operatore*': operando di tipo 'void' non valido|
-|C2187 errore del compilatore|Errore di sintassi: '*token*' non è previsto qui|
+|Errore del compilatore C2187|Errore di sintassi: '*token*' non è previsto qui|
 |[Errore del compilatore C2188](compiler-error-c2188.md)|«*numero*': troppo grande per caratteri "wide"|
 |Errore del compilatore C2189|attributo 'alignas' non può essere applicato a un campo di bit, un parametro di funzione, una dichiarazione di eccezione o una variabile dichiarata con classe di archiviazione ' register'|
 |[Errore del compilatore C2190](compiler-error-c2190.md)|primo elenco di parametri più lungo del secondo|
@@ -140,3 +140,8 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2197](compiler-error-c2197.md)|«*funzione*': troppi argomenti per chiamata|
 |[Errore del compilatore C2198](compiler-error-c2198.md)|«*funzione*': argomenti insufficienti per chiamata|
 |[Errore del compilatore C2199](compiler-error-c2199.md)|Errore di sintassi: trovato '*identificatore* (' in ambito globale (si desiderava creare una dichiarazione?)|
+
+## <a name="see-also"></a>Vedere anche
+
+[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errori del compilatore da C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

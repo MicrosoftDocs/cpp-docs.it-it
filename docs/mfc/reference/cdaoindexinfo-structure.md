@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399772"
 ---
 # <a name="cdaoindexinfo-structure"></a>Struttura CDaoIndexInfo
 
@@ -61,7 +61,7 @@ Quando si imposta una chiave primaria per una tabella, la chiave primaria viene 
 *m_bUnique*<br/>
 Indica se un oggetto indice rappresenta un indice univoco per una tabella. Se questa proprietà è TRUE, l'oggetto indice rappresenta un indice univoco. Un indice univoco è costituito da uno o più campi che consentono di disporre in modo logico tutti i record in una tabella in modo univoco e predefinito. Se l'indice è costituito da un campo, i valori in tale campo devono essere univoci per l'intera tabella. Se l'indice è costituita da più di un campo, ogni campo può contenere valori duplicati, ma ogni combinazione di valori di tutti i campi indicizzati debba essere univoci.
 
-Se la proprietà Unique sia il database primario di un oggetto indice è impostata su TRUE, l'indice è unique e primary: identifica in modo univoco tutti i record nella tabella in un ordine logico predefinito. Se la proprietà primaria è impostata su FALSE, l'indice è un indice secondario. Gli indici secondari (chiavi e non chiave) organizzare logicamente i record in un ordine predefinito senza che funge da identificatore per i record nella tabella.
+Se la proprietà Unique sia il database primario di un oggetto indice è impostata su TRUE, l'indice è univoci e primari: Identifica in modo univoco tutti i record nella tabella in un ordine logico predefinito. Se la proprietà primaria è impostata su FALSE, l'indice è un indice secondario. Gli indici secondari (chiavi e non chiave) organizzare logicamente i record in un ordine predefinito senza che funge da identificatore per i record nella tabella.
 
 Per altre informazioni, vedere gli argomenti "Proprietà Primary" e "Proprietà Unique" nella Guida di DAO.
 

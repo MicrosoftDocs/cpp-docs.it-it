@@ -3,11 +3,11 @@ title: Uso di C++ AMP nelle App UWP
 ms.date: 11/04/2016
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
 ms.openlocfilehash: 31fede0a2419e56d53cb16521b08067dac5facc6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405352"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>Uso di C++ AMP nelle App UWP
 
@@ -15,7 +15,7 @@ ms.locfileid: "57272659"
 
 ## <a name="performance-considerations"></a>Considerazioni sulle prestazioni
 
-Se si utilizza estensioni del componente C++ di Visual C + + c++ /CLI /CX per creare l'app Universal Windows Platform (UWP), è consigliabile usare tipi plain-old-data (POD) con archiviazione contigua, ad esempio, `std::vector` o matrici di tipo C, ovvero per i dati che saranno utilizzato con C++ AMP. Questo può consentire di ottenere prestazioni più elevate utilizzando i tipi non-POD o i contenitori di Windows RT perché nessun marshaling deve verificarsi.
+Se si usa Visual C++ estensioni del componente C++/CX per creare l'app Universal Windows Platform (UWP), è consigliabile usare tipi plain-old-data (POD) con archiviazione contigua, ad esempio, `std::vector` o le matrici di tipo C, ovvero per i dati che verranno usati con C++ AMP. Questo può consentire di ottenere prestazioni più elevate utilizzando i tipi non-POD o i contenitori di Windows RT perché nessun marshaling deve verificarsi.
 
 Nel kernel di AMP C++, per accedere ai dati archiviati in questo modo, è sufficiente racchiudere il `std::vector` o una matrice di archiviazione in un `concurrency::array_view` e quindi usare la visualizzazione di matrici in un `concurrency::parallel_for_each` ciclo:
 

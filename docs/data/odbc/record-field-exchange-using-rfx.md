@@ -5,11 +5,11 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395651"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Record Field Exchange: Utilizzo di RFX
 
@@ -20,9 +20,9 @@ In questo argomento viene illustrato l'utilizzo di RFX in relazione a ciò che i
 
 Gli argomenti seguenti contengono informazioni correlate:
 
-- [Record Field Exchange: Utilizzo di codice della procedura guidata](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) presenta i componenti principali di RFX e viene illustrato il codice che la creazione guidata applicazione MFC e **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) scrivere per il supporto RFX e come si potrebbe voler modificare il codice della procedura guidata.
+- [Trasferimento di campi di record: Utilizzo di codice della procedura guidata](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) presenta i componenti principali di RFX e viene illustrato il codice che la creazione guidata applicazione MFC e **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) scrivere per il supporto RFX e come si potrebbe voler modificare il codice della procedura guidata.
 
-- [Record Field Exchange: Utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) illustra la scrittura delle chiamate per le funzioni RFX di `DoFieldExchange` eseguire l'override.
+- [Trasferimento di campi di record: Utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) illustra la scrittura delle chiamate per le funzioni RFX di `DoFieldExchange` eseguire l'override.
 
 Nella tabella seguente viene illustrato il ruolo in relazione a ciò che il framework esegue automaticamente.
 
@@ -41,8 +41,8 @@ Nella tabella seguente viene illustrato il ruolo in relazione a ciò che il fram
 ## <a name="see-also"></a>Vedere anche
 
 [Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Record Field Exchange: Funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[Recordset: Recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Trasferimento di campi di record: funzionamento di RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[Recordset: recupero di somme e altri risultati aggregati (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [Classe CRecordset](../../mfc/reference/crecordset-class.md)<br/>
 [Classe CFieldExchange](../../mfc/reference/cfieldexchange-class.md)<br/>
 [Macro, funzioni globali e variabili globali](../../mfc/reference/mfc-macros-and-globals.md)

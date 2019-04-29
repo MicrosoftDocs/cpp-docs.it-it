@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CXX0018
 ms.assetid: d3d115d6-8981-4651-b615-566de867a263
 ms.openlocfilehash: 1c235e27199d79711c784e460824bf1cbb845f24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397120"
 ---
 # <a name="expression-evaluator-error-cxx0018"></a>Errore dell‘analizzatore di espressioni CXX0018
 
@@ -24,18 +24,18 @@ La finestra Espressioni di controllo può visualizzare i seguenti registri:
 
 AX SP DS IP
 
-BX BP ES FL
+BX    BP    ES    FL
 
-CX SISTEMA INTERNAZIONALE DI MISURA SS GS
+CX    SI    SS    GS
 
-DX L'INSERIMENTO DELLE DIPENDENZE CS SS
+DX    DI    CS    SS
 
-EAX ESP DS EIP
+EAX    ESP    DS    EIP
 
-EBX EBP ES EFL
+EBX    EBP    ES    EFL
 
-ECX ESI ADFS
+ECX    ESI    FS
 
-CS EDI EDX
+EDX    EDI    CS
 
 Questo errore è identico all'errore CAN0018.

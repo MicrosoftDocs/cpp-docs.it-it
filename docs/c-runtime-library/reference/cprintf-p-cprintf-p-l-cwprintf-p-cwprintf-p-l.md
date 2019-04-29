@@ -44,11 +44,11 @@ helpviewer_keywords:
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
 ms.openlocfilehash: ef4ac6a89749c2784e4935fcf83810e81b61ae11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348289"
 ---
 # <a name="cprintfp-cprintfpl-cwprintfp-cwprintfpl"></a>_cprintf_p, _cprintf_p_l, _cwprintf_p, _cwprintf_p_l
 
@@ -85,7 +85,7 @@ int _cwprintf_p_l(
 *format*<br/>
 Stringa di controllo del formato.
 
-*argomento*<br/>
+*argument*<br/>
 Parametri facoltativi.
 
 *locale*<br/>
@@ -112,15 +112,15 @@ Inoltre, come **cprintf_s** e **cwprintf_s**, convalidano il puntatore di input 
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcprintf_p**|**_cprintf_p**|**_cprintf_p**|**_cwprintf_p**|
-|**tcprintf_p_l**|**_cprintf_p_l**|**_cprintf_p_l**|**_cwprintf_p_l**|
+|**_tcprintf_p**|**_cprintf_p**|**_cprintf_p**|**_cwprintf_p**|
+|**_tcprintf_p_l**|**_cprintf_p_l**|**_cprintf_p_l**|**_cwprintf_p_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**cprintf_p**, **cprintf_p_l**|\<conio.h>|
-|**cwprintf_p**, **cwprintf_p_l**|\<conio.h>|
+|**_cprintf_p**, **_cprintf_p_l**|\<conio.h>|
+|**_cwprintf_p**, **_cwprintf_p_l**|\<conio.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

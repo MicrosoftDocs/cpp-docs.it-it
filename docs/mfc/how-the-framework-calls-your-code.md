@@ -13,11 +13,11 @@ helpviewer_keywords:
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
 ms.openlocfilehash: 81b0749167391a841badff5494023a2ca5d3147e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407952"
 ---
 # <a name="how-the-framework-calls-your-code"></a>Chiamate del codice dal framework
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4429
 ms.assetid: a3e4cf1f-a869-4e47-834a-850c21eb5297
 ms.openlocfilehash: d4eb7e7075c7adf418254e748f104a6d57c72741
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391530"
 ---
 # <a name="compiler-warning-level-4-c4429"></a>Avviso del compilatore (livello 4) C4429
 

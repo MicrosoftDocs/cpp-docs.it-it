@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CAN0040
 ms.assetid: 1914e605-d80b-4abc-9e8f-dbcbefec095b
 ms.openlocfilehash: 24dae581f5779def0808da211f52dad27b45bc9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396990"
 ---
 # <a name="expression-evaluator-error-cxx0040"></a>Errore dell‘analizzatore di espressioni CXX0040
 

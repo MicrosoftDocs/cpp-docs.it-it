@@ -133,11 +133,11 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
 ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372907"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 
@@ -229,7 +229,7 @@ class CPaneFrameWnd : public CWnd
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Specifica se registrare la classe della finestra con lo stile della classe CS_SAVEBITS.|
 
@@ -741,7 +741,7 @@ virtual LRESULT HitTest(
 
 Uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |HTNOWHERE|Il punto è all'esterno della finestra con mini-cornice.|
 |HTCLIENT|Il punto si trova nell'area client.|

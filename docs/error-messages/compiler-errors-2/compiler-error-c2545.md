@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2545
 ms.assetid: 51598eb9-0c57-4306-a0cd-3862980f3672
 ms.openlocfilehash: 7f43ecfa74667c8cc6562bf1feaf4e8d0927f690
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397471"
 ---
 # <a name="compiler-error-c2545"></a>Errore del compilatore C2545
 

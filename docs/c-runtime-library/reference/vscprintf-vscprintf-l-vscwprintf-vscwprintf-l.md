@@ -43,11 +43,11 @@ helpviewer_keywords:
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
 ms.openlocfilehash: 18b177114fe0e2984fee518b06a72bea72905ed1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383477"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
@@ -81,7 +81,7 @@ int _vscwprintf_l(
 *format*<br/>
 Stringa di controllo del formato.
 
-*valore di ArgPtr*<br/>
+*argptr*<br/>
 Puntatore a un elenco di argomenti.
 
 *locale*<br/>
@@ -108,15 +108,15 @@ Ciascuna *argomenti* (se presente) viene convertito in base alla specifica di fo
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vsctprintf**|**_vscprintf**|**_vscprintf**|**_vscwprintf**|
-|**vsctprintf_l**|**_vscprintf_l**|**_vscprintf_l**|**_vscwprintf_l**|
+|**_vsctprintf**|**_vscprintf**|**_vscprintf**|**_vscwprintf**|
+|**_vsctprintf_l**|**_vscprintf_l**|**_vscprintf_l**|**_vscwprintf_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**vscprintf**, **vscprintf_l**|\<stdio.h>|
-|**vscwprintf**, **vscwprintf_l**|\<stdio.h> o \<wchar.h>|
+|**_vscprintf**, **_vscprintf_l**|\<stdio.h>|
+|**_vscwprintf**, **_vscwprintf_l**|\<stdio.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401501"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Del compilatore (livello 3) avviso C4996
 
@@ -19,7 +19,7 @@ Il compilatore ha rilevato una dichiarazione deprecata. **Questo avviso è sempr
 
 Si tratta di alcuni comuni messaggi C4996 generati dalla libreria di Runtime C e la libreria Standard, ma non un elenco esaustivo. Seguire i collegamenti o continuare a leggere per modi per risolvere il problema o per disattivare l'avviso.
 
-- [Il nome POSIX per questo elemento è deprecato. Usare invece il nome conforme ISO C e C++: *new_name*. Vedere la Guida online per i dettagli.](#posix-function-names)
+- [Il nome POSIX per questo elemento è deprecato. Usare invece il ISO C e C++ nome conforme: *new_name*. Vedere la Guida online per i dettagli.](#posix-function-names)
 
 - [Questa funzione o variabile potrebbe non essere sicuro. È consigliabile usare *safe_version* invece. Per disabilitare la deprecazione, usare \_CRT\_SECURE\_NO\_avvisi.  Vedere la Guida online per i dettagli.](#unsafe-crt-library-functions)
 
@@ -65,7 +65,7 @@ Ecco alcune delle origini comuni di C4996 avvisi ed errori.
 
 ### <a name="posix-function-names"></a>Nomi delle funzioni POSIX
 
-**Il nome POSIX per questo elemento è deprecato. Usare invece il nome conforme ISO C e C++:** *new_name*. **Vedere la Guida online per informazioni dettagliate.**
+**Il nome POSIX per questo elemento è deprecato. Usare invece il ISO C e C++ nome conforme:** *new_name*. **Vedere la Guida online per informazioni dettagliate.**
 
 Microsoft è stato rinominato alcune funzioni POSIX in CRT deve essere conforme a C99 e C++11 03 regole per i nomi di funzione globale definito dall'implementazione. Solo i nomi POSIX originali sono deprecati, non le funzioni. Nella maggior parte dei casi, il carattere di sottolineatura iniziale è stato aggiunto al nome della funzione POSIX per creare un nome conforme allo standard. Il compilatore genera un avviso di deprecazione per il nome di funzione originali e suggerisce un nome preferito.
 

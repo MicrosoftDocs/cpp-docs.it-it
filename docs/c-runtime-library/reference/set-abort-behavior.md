@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _set_abort_behavior function
 - set_abort_behavior function
 ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356693"
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
@@ -51,7 +51,7 @@ unsigned int _set_abort_behavior(
 *flags*<br/>
 Nuovo valore della [abort](abort.md) flag.
 
-*Maschera*<br/>
+*mask*<br/>
 Maschera per la [abort](abort.md) flag di bit da impostare.
 
 ## <a name="return-value"></a>Valore restituito

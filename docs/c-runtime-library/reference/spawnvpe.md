@@ -21,11 +21,11 @@ helpviewer_keywords:
 - spawnvpe function
 ms.assetid: be16bf98-5059-4c33-be00-7524142a017e
 ms.openlocfilehash: 26f4483f5873561b2f13735a00ec84c984abaa9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355094"
 ---
 # <a name="spawnvpe"></a>spawnvpe
 

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
 ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389255"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Disabilita (**sul**) o Abilita (**off**) le ottimizzazioni che è stato possibile modificare l'ambiente a virgola mobile e contrassegno i test e cambia la modalità.
 
 ## <a name="syntax"></a>Sintassi
 
-> **fenv_access #pragma (** { **sul** | **off** } **)**
+> **#pragma fenv_access (** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Note
 

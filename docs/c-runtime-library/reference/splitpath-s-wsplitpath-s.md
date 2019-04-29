@@ -32,11 +32,11 @@ helpviewer_keywords:
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
 ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355029"
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 
@@ -150,7 +150,7 @@ Ogni componente del percorso completo è archiviato in un buffer separato; le co
 
 La tabella seguente elenca i valori delle costanti manifeste.
 
-|nome|Value|
+|Nome|Value|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|

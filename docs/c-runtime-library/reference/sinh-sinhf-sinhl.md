@@ -32,11 +32,11 @@ helpviewer_keywords:
 - sinhl function
 - hyperbolic functions
 ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356277"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -67,7 +67,7 @@ Il **sinh** le funzioni restituiscono il seno iperbolico *x*. Per impostazione p
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|None|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e + 002|OVERFLOW+INEXACT|OVERFLOW|
+|&#124;x&#124; ≥ 7.104760e+002|OVERFLOW+INEXACT|OVERFLOW|
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

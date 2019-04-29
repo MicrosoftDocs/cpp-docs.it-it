@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3204
 ms.assetid: 06e578da-0262-48c8-b2ae-be1cd6d28884
 ms.openlocfilehash: 4c34ad35916f01323a72102c7099d4afd0ab17be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402723"
 ---
 # <a name="compiler-error-c3204"></a>Errore del compilatore C3204
 

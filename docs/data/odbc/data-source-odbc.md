@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC data sources, represented by CDatabase
 ms.assetid: b246721f-b9e1-49bd-a6c7-f348b8c3d537
 ms.openlocfilehash: b435c65bab565e109d37e1dd24e051993cbb30c8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397913"
 ---
 # <a name="data-source-odbc"></a>Origine dati (ODBC)
 
@@ -25,9 +25,9 @@ In termini di database, un'origine dati è un set specifico di dati, le informaz
 
 Gli argomenti seguenti fornite ulteriori informazioni sulle origini dati:
 
-- [Origine dati: Gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+- [Origine dati: gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
 
-- [Origine dati: Determinazione dello Schema dell'origine dati (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
+- [Origine dati: determinazione dello schema dell'origine dati (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
 
 ## <a name="see-also"></a>Vedere anche
 

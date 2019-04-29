@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
 ms.openlocfilehash: 55c383c4bdf83ddb5fdf1c4990d5f2e47b4d819a
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393883"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
@@ -193,9 +193,9 @@ int __cdecl main( void )
 
 Il **vectorcall** segue convenzione di chiamata il **fastcall** convenzione per gli argomenti di tipo integer a 32 bit e sfrutta i vantaggi dei registri vettoriali SSE per tipo vettore e gli argomenti HVA.
 
-I primi due argomenti tipo Integer presenti nell'elenco di parametri da sinistra a destra vengono inseriti rispettivamente in ECX e in EDX. Nascosta **ciò** puntatore viene trattato come primo argomento di tipo integer e viene passato in ECX. I primi sei argomenti tipo vettore vengono passati per valore attraverso i registri vettoriali SSE da 0 - 5 oppure nei registri YMM o XMM in base alle dimensioni dell'argomento.
+I primi due argomenti di tipo Integer presenti nell'elenco di parametri da sinistra a destra vengono inseriti rispettivamente in ECX e in EDX. Nascosta **ciò** puntatore viene trattato come primo argomento di tipo integer e viene passato in ECX. I primi sei argomenti di tipo vettore vengono passati per valore attraverso i registri vettoriali SSE da 0 - 5 oppure nei registri YMM o XMM in base alle dimensioni dell'argomento.
 
-I primi sei argomenti tipo vettore, in ordine da sinistra a destra, vengono passati per valore nei registri vettoriali SSE da 0 a 5. A virgola mobile e **__m128** tipi vengono passati nei registri XMM, e **__m256** tipi vengono passati in YMM Registra. Nessuno spazio dello shadow stack viene allocato per gli argomenti tipo vettore passati dal registro. Il settimo argomento tipo vettore e quelli successivi vengono passati nello stack per riferimento alla memoria allocata dal chiamante. La limitazione dell'errore del compilatore [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) non si applica a questi argomenti.
+I primi sei argomenti tipo vettore, in ordine da sinistra a destra, vengono passati per valore nei registri vettoriali SSE da 0 a 5. A virgola mobile e **__m128** tipi vengono passati nei registri XMM, e **__m256** tipi vengono passati in YMM Registra. Nessuno spazio dello shadow stack viene allocato per gli argomenti tipo vettore passati dal registro. Il settimo argomento di tipo vettore e quelli successivi vengono passati nello stack per riferimento alla memoria allocata dal chiamante. La limitazione dell'errore del compilatore [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) non si applica a questi argomenti.
 
 Dopo che i registri sono stati allocati per gli argomenti vettoriali, i dati i membri degli argomenti HVA vengono allocati in ordine crescente a vettoriali inutilizzati registra XMM0 a XMM5 (o da YMM0 a YMM5, per **__m256** tipi), finché sono disponibili registri sufficienti è disponibile per l'intero HVA. Se non sono disponibili registri sufficienti, l'argomento HVA verrà passato sullo stack per riferimento alla memoria allocata dal chiamante. Nessuno spazio dello stack shadow viene allocato per un argomento HVA. Gli argomenti HVA vengono assegnati ai registri in ordine da sinistra a destra nell'elenco dei parametri e possono trovarsi in qualsiasi posizione.
 

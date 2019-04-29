@@ -11,11 +11,11 @@ helpviewer_keywords:
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392297"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Costruttori di copia e operatori di assegnazione di copia (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50535044"
 >
 > Le operazioni di assegnazione e di inizializzazione comportano entrambe la copia degli oggetti.
 
-- **Assegnazione**: quando il valore di un oggetto viene assegnato a un altro oggetto, viene copiato il primo oggetto per il secondo oggetto. Quindi,
+- **Assegnazione**: Quando il valore di un oggetto viene assegnato a un altro oggetto, viene copiato il primo oggetto per il secondo oggetto. Quindi,
 
     ```cpp
     Point a, b;
@@ -34,7 +34,7 @@ ms.locfileid: "50535044"
 
    comporta che il valore di `b` venga copiato in `a`.
 
-- **Inizializzazione**: l'inizializzazione si verifica quando viene dichiarato un nuovo oggetto, quando gli argomenti vengono passati alle funzioni per valore o i valori sono restituiti dalle funzioni per valore.
+- **Inizializzazione**: L'inizializzazione si verifica quando viene dichiarato un nuovo oggetto, quando gli argomenti vengono passati alle funzioni per valore o i valori sono restituiti dalle funzioni per valore.
 
 È possibile definire la semantica di "copia" per gli oggetti di tipo classe. Si consideri, ad esempio, il seguente codice:
 
@@ -76,13 +76,13 @@ int main()
 
 Costruttori di copia generato dal compilatore, ad esempio i costruttori di copia definito dall'utente, hanno un singolo argomento di tipo "riferimento a *-nome della classe*." Un'eccezione è quando tutte le classi di base e le classi di membro hanno costruttori di copia dichiarati come accettano un solo argomento di tipo **const** <em>-nome della classe</em><strong>&</strong>. In tal caso, è anche argomento del costruttore di copia generato dal compilatore **const**.
 
-Quando il tipo di argomento al costruttore di copia non è **const**, l'inizializzazione copiando un **const** oggetto genera un errore. Non è vero il contrario: se l'argomento **const**, copiando un oggetto che non è possibile inizializzare **const**.
+Quando il tipo di argomento al costruttore di copia non è **const**, l'inizializzazione copiando un **const** oggetto genera un errore. Non è vero il contrario: Se l'argomento **const**, copiando un oggetto che non è possibile inizializzare **const**.
 
 Gli operatori di assegnazione generato dal compilatore seguono lo stesso modello in relazione a **const.** Accettano un solo argomento di tipo <em>-nome della classe</em> <strong>&</strong> , a meno che gli operatori di assegnazione in tutte le classi di base e di membro accettino argomenti di tipo **const** <em>-nome della classe</em><strong>&</strong>. In questo caso, la classe generato assegnazione operatore accetta un **const** argomento.
 
 > [!NOTE]
 > Quando le classi base virtuali vengono inizializzate dai costruttori di copia, generate dal compilatore o definite dall'utente, vengono inizializzate una sola volta: nel punto in cui vengono costruite.
 
-La implicazioni sono simili a quelle del costruttore di copia. Quando il tipo di argomento non è **const**, assegnazione di un **const** oggetto genera un errore. Non è vero il contrario: se un **const** valore viene assegnato a un valore che non è **const**, l'assegnazione ha esito positivo.
+La implicazioni sono simili a quelle del costruttore di copia. Quando il tipo di argomento non è **const**, assegnazione di un **const** oggetto genera un errore. Non è vero il contrario: Se un **const** valore viene assegnato a un valore che non è **const**, l'assegnazione ha esito positivo.
 
 Per altre informazioni sugli operatori di assegnazione di overload, vedere [assegnazione](../cpp/assignment.md).

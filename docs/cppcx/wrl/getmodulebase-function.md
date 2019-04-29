@@ -6,11 +6,11 @@ f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
 ms.openlocfilehash: 4d8c8467b7aeb9c21bf5f4ee19c60e6e60880688
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58784940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398394"
 ---
 # <a name="getmodulebase-function"></a>Funzione GetModuleBase
 

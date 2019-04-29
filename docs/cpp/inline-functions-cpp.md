@@ -13,11 +13,11 @@ helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
 ms.openlocfilehash: 55cf598877c2447e0f80e783b53b290699042b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400591"
 ---
 # <a name="inline-functions-c"></a>Funzioni inline (C++)
 
@@ -88,7 +88,7 @@ Il **inline** parola chiave indica al compilatore che l'espansione inline è pre
 
 Questi motivi possono interferire con incorporamenti *come anche altri*, a discrezione del compilatore; è non devono dipendere le **inline** identificatore per fare in modo da rendere inline una funzione.
 
-Analogamente alle funzioni normali, non è definito alcun ordine di valutazione degli argomenti di una funzione inline. Tale ordine infatti può essere diverso da quello in cui gli argomenti vengono valutati una volta passati usando il protocollo normale di chiamata di funzione.
+Analogamente alle funzioni normali, non è definito alcun ordine di valutazione degli argomenti di una funzione inline. Tale ordine infatti può essere diverso da quello in cui gli argomenti vengono valutati una volta passati utilizzando il protocollo normale di chiamata di funzione.
 
 Il [/Ob](../build/reference/ob-inline-function-expansion.md) opzione di ottimizzazione del compilatore consente di determinare se espansione funzioni inline viene effettivamente eseguita.
 
@@ -132,7 +132,7 @@ Nonostante **forceinline**, il compilatore non è codice inline in qualsiasi cir
 
 - La funzione o il relativo chiamante viene compilato con /Ob0 (l'opzione predefinita per le compilazioni di debug).
 
-- La funzione e il chiamante usano tipi diversi di gestione delle eccezioni (gestione delle eccezioni C++ per la prima, gestione delle eccezioni strutturata per il secondo).
+- La funzione e il chiamante utilizzano tipi diversi di gestione delle eccezioni (gestione delle eccezioni C++ per la prima, gestione delle eccezioni strutturata per il secondo).
 
 - La funzione ha un elenco di argomenti variabile.
 
@@ -142,7 +142,7 @@ Nonostante **forceinline**, il compilatore non è codice inline in qualsiasi cir
 
 - La funzione è virtuale e viene chiamata virtualmente. Per chiamate dirette alle funzioni virtuali può essere eseguita l'espansione inline.
 
-- Il programma usa l'indirizzo della funzione e la chiamata viene effettuata tramite il puntatore alla funzione stessa. Per chiamate dirette alle funzioni di cui ne avevano l'indirizzo può essere eseguita l'espansione inline.
+- Il programma utilizza l'indirizzo della funzione e la chiamata viene effettuata tramite il puntatore alla funzione stessa. Per chiamate dirette alle funzioni di cui ne avevano l'indirizzo può essere eseguita l'espansione inline.
 
 - La funzione viene anche contrassegnata con il [naked](../cpp/naked-cpp.md) [declspec](../cpp/declspec.md) modificatore.
 

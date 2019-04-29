@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
 ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394858"
 ---
 # <a name="activex-control-containers"></a>Contenitori di controlli ActiveX
 
@@ -33,19 +33,19 @@ Articoli aggiuntivi in cui vengono illustrati diversi argomenti, dalla creazione
 
 - [Contenitori per i controlli ActiveX](../mfc/containers-for-activex-controls.md)
 
-- [Contenitori di controlli ActiveX: Attivazione manuale del contenimento dei controlli ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
+- [Contenitori di controlli ActiveX: abilitazione manuale del contenimento dei controlli ActiveX](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
 
-- [Contenitori di controlli ActiveX: Inserimento di un controllo in un'applicazione contenitore di controlli](../mfc/inserting-a-control-into-a-control-container-application.md)
+- [Contenitori di controlli ActiveX: inserimento di un controllo in un'applicazione contenitore di controlli](../mfc/inserting-a-control-into-a-control-container-application.md)
 
-- [Contenitori di controlli ActiveX: Connessione di un controllo ActiveX a una variabile membro](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
+- [Contenitori di controlli ActiveX: connessione di un controllo ActiveX a una variabile membro](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
 - [Contenitori di controlli ActiveX: Gestione degli eventi da un controllo ActiveX](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
 
-- [Contenitori di controlli ActiveX: Visualizzazione e modifica le proprietà del controllo](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
+- [Contenitori di controlli ActiveX: visualizzazione e modifica delle proprietà dei controlli](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
 
-- [Contenitori di controlli ActiveX: Programmazione di controlli ActiveX in un contenitore di controlli ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
+- [Contenitori di controlli ActiveX: programmazione di controlli ActiveX in un contenitore di controlli ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
 
-- [Contenitori di controlli ActiveX: Utilizzo di controlli in un contenitore Non è una finestra di dialogo](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [Contenitori di controlli ActiveX: uso dei controlli in un contenitore diverso da una finestra di dialogo](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 Per altre informazioni sull'uso dei controlli ActiveX in una finestra di dialogo, vedere la [finestra di dialogo Editor](../windows/dialog-editor.md) argomenti.
 

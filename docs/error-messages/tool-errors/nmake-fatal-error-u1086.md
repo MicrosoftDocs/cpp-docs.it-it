@@ -7,11 +7,11 @@ helpviewer_keywords:
 - U1086
 ms.assetid: 6d3cd68a-ead6-4a6d-a205-01324785de7e
 ms.openlocfilehash: 2b0768697821b732a918403fedb463bdb127c54b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399915"
 ---
 # <a name="nmake-fatal-error-u1086"></a>Errore irreversibile U1086 di NMAKE 
 

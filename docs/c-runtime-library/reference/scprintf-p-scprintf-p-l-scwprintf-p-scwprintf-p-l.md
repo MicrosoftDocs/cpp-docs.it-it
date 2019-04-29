@@ -44,11 +44,11 @@ helpviewer_keywords:
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
 ms.openlocfilehash: 818dc5c24cca178fa03d08d1f609c23abbc7a013
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357057"
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 
@@ -82,7 +82,7 @@ int _scwprintf_p _l(
 *format*<br/>
 Stringa di controllo del formato.
 
-*argomento*<br/>
+*argument*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -111,15 +111,15 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**sctprintf_p**|**_scprintf_p**|**_scprintf_p**|**_scwprintf_p**|
-|**sctprintf_p_l**|**_scprintf_p_l**|**_scprintf_p_l**|**_scwprintf_p_l**|
+|**_sctprintf_p**|**_scprintf_p**|**_scprintf_p**|**_scwprintf_p**|
+|**_sctprintf_p_l**|**_scprintf_p_l**|**_scprintf_p_l**|**_scwprintf_p_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**scprintf_p**, **scprintf_p_l**|\<stdio.h>|
-|**scwprintf_p**, **scwprintf_p_l**|\<stdio.h> o \<wchar.h>|
+|**_scprintf_p**, **_scprintf_p_l**|\<stdio.h>|
+|**_scwprintf_p**, **_scwprintf_p_l**|\<stdio.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
