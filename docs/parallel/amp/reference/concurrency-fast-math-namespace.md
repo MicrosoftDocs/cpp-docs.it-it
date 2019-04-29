@@ -5,11 +5,11 @@ f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
 ms.openlocfilehash: e774c2d8e4431960e796ee1e6cc87b924d04174b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405599"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Spazio dei nomi Concurrency::fast_math
 

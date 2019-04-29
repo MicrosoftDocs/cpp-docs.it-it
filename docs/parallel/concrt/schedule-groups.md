@@ -5,11 +5,11 @@ helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
 ms.openlocfilehash: febcc0a9c7af75801962ea6be687ce87cc5501d4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407913"
 ---
 # <a name="schedule-groups"></a>Gruppi di pianificazione
 

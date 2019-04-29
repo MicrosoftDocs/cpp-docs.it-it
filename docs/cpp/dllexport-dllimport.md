@@ -11,11 +11,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
 ms.openlocfilehash: 2ae284172828ed63b6499475df108c28aecb32ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398927"
 ---
 # <a name="dllexport-dllimport"></a>dllexport, dllimport
 
@@ -50,7 +50,7 @@ __declspec( dllimport ) int i;
 __declspec( dllexport ) void func();
 ```
 
-In alternativa, per rendere il codice più leggibile, è possibile usare le definizioni di macro:
+In alternativa, per rendere il codice più leggibile, è possibile utilizzare le definizioni di macro:
 
 ```cpp
 #define DllImport   __declspec( dllimport )

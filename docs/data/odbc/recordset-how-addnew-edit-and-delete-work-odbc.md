@@ -18,11 +18,11 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
 ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397835"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Recordset: La modalità dei metodi AddNew, Edit e Delete di lavoro (ODBC)
 
@@ -160,5 +160,5 @@ Per informazioni sulle istruzioni SQL utilizzate nelle operazioni di aggiornamen
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: Informazioni sugli aggiornamenti (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[Recordset: altre informazioni sugli aggiornamenti (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)

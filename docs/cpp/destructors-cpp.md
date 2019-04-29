@@ -10,11 +10,11 @@ helpviewer_keywords:
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
 ms.openlocfilehash: f26f797da75f0d7d7aa6f6849c9484cea35fb125
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398983"
 ---
 # <a name="destructors-c"></a>Distruttori (C++)
 
@@ -90,7 +90,7 @@ I distruttori vengono chiamati quando si verifica uno degli eventi seguenti:
 
 - Un programma termina e gli oggetti globali o statici sono presenti.
 
-- Il distruttore viene chiamato in modo esplicito usando il nome completo della funzione distruttore.
+- Il distruttore viene chiamato in modo esplicito utilizzando il nome completo della funzione distruttore.
 
 I distruttori possono chiamare liberamente le funzioni membro di classe e accedere ai dati membro di classe.
 
@@ -218,7 +218,7 @@ Nell'esempio precedente, il distruttore di `Base2` viene chiamato prima del dist
 
 ## <a name="explicit-destructor-calls"></a>Chiamate del distruttore esplicite
 
-La chiamata di un distruttore in modo esplicito è raramente necessaria. Tuttavia, può essere utile eseguire la pulizia di oggetti inseriti in corrispondenza di indirizzi assoluti. Questi oggetti vengono comunemente allocati usando IIR **nuovo** operatore che accetta un argomento di posizione. Il **eliminare** operatore non può deallocare tale memoria perché non viene allocata dall'archivio libero (per altre informazioni, vedere [nuova ed eliminare operatori](../cpp/new-and-delete-operators.md)). Una chiamata al distruttore è tuttavia in grado di eseguire una pulizia appropriata. Per chiamare in modo esplicito il distruttore di un oggetto, `s`, di classe `String`, usare una delle seguenti istruzioni:
+La chiamata di un distruttore in modo esplicito è raramente necessaria. Tuttavia, può essere utile eseguire la pulizia di oggetti inseriti in corrispondenza di indirizzi assoluti. Questi oggetti vengono comunemente allocati usando IIR **nuovo** operatore che accetta un argomento di posizione. Il **eliminare** operatore non può deallocare tale memoria perché non viene allocata dall'archivio libero (per altre informazioni, vedere [nuova ed eliminare operatori](../cpp/new-and-delete-operators.md)). Una chiamata al distruttore è tuttavia in grado di eseguire una pulizia appropriata. Per chiamare in modo esplicito il distruttore di un oggetto, `s`, di classe `String`, utilizzare una delle seguenti istruzioni:
 
 ```cpp
 s.String::~String();     // non-virtual call

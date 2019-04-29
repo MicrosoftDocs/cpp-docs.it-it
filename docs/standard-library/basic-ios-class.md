@@ -56,11 +56,11 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: c22e048d01665deed83a9474525f414dfd874fe0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400656"
 ---
 # <a name="basicios-class"></a>Classe basic_ios
 
@@ -223,7 +223,7 @@ void clear(io_state state);
 *state*<br/>
 (Facoltativo) Flag da impostare dopo la cancellazione di tutti i flag. Il valore predefinito è `goodbit`.
 
-*reraise)*<br/>
+*reraise*<br/>
 (Facoltativo) Specifica se l'eccezione deve essere generata nuovamente. Per impostazione predefinita **false** (non verrà generata nuovamente l'eccezione).
 
 ### <a name="remarks"></a>Note
@@ -528,7 +528,7 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parametri
 
-*SB*<br/>
+*_Sb*<br/>
 Buffer standard in cui archiviare gli elementi di input o output.
 
 *_Isstd*<br/>
@@ -728,7 +728,7 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parametri
 
-*SB*<br/>
+*_Sb*<br/>
 Flusso.
 
 ### <a name="remarks"></a>Note
@@ -820,7 +820,7 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Flag aggiuntivi da impostare.
 
 ### <a name="remarks"></a>Note

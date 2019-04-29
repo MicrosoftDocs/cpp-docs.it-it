@@ -7,11 +7,11 @@ helpviewer_keywords:
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
 ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403438"
 ---
 # <a name="reference-type-function-returns"></a>Elementi restituiti dalla funzione tipo-riferimento
 
@@ -80,7 +80,7 @@ x = 7
 y = 9
 ```
 
-Tenere presente che le funzioni `x` e `y` vengono dichiarate come elementi che restituiscono tipi di riferimenti. Tali funzioni possono essere usate su entrambi i lati di un'istruzione di assegnazione.
+Tenere presente che le funzioni `x` e `y` vengono dichiarate come elementi che restituiscono tipi di riferimenti. Tali funzioni possono essere utilizzate su entrambi i lati di un'istruzione di assegnazione.
 
 Si noti anche che in genere l'oggetto ThePoint rimane nell'ambito e quindi i rispettivi membri di riferimento sono ancora attivi ed è possibile accedervi in modo sicuro.
 
@@ -96,7 +96,7 @@ Le dichiarazioni di tipi di riferimenti devono contenere gli inizializzatori tra
 
 ## <a name="caution-returning-address-of-local"></a>Attenzione nella restituzione dell'indirizzo di una variabile locale
 
-Se si dichiara un oggetto a livello di ambito locale, tale oggetto verrà eliminato al completamento della funzione. Se la funzione restituisce un riferimento all'oggetto, tale riferimento provocherà probabilmente una violazione di accesso in fase di esecuzione se il chiamante tenta di usare il riferimento Null.
+Se si dichiara un oggetto a livello di ambito locale, tale oggetto verrà eliminato definitivamente al completamento della funzione. Se la funzione restituisce un riferimento all'oggetto, tale riferimento provocherà probabilmente una violazione di accesso in fase di esecuzione se il chiamante tenta di usare il riferimento Null.
 
 ```cpp
 // C4172 means Don’t do this!!!

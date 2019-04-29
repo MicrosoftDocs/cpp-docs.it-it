@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
 ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404611"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation:Collections (spazio dei nomi) (C++/CX)
 

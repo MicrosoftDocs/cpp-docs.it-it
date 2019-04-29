@@ -1,5 +1,5 @@
 ---
-title: R6032 di errore di Runtime C
+title: Errore di runtime di C R6032
 ms.date: 11/04/2016
 f1_keywords:
 - R6032
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6032
 ms.assetid: 52092a63-cc51-444a-bfc3-fad965a3558e
 ms.openlocfilehash: e0ae3acc491658840d74e262f3ab2719e613d60e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399993"
 ---
-# <a name="c-runtime-error-r6032"></a>R6032 di errore di Runtime C
+# <a name="c-runtime-error-r6032"></a>Errore di runtime di C R6032
 
 Spazio insufficiente per informazioni sulle impostazioni locali
 

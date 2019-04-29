@@ -1,16 +1,16 @@
 ---
 title: 'Procedura dettagliata: Implementazione di future'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
 ms.openlocfilehash: 7164919d649751ac11fefa5be3cb2e5b7798ee4f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407848"
 ---
 # <a name="walkthrough-implementing-futures"></a>Procedura dettagliata: Implementazione di future
 

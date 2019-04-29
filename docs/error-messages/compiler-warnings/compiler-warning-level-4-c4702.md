@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
 ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395248"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>Avviso del compilatore (livello 4) C4702
 

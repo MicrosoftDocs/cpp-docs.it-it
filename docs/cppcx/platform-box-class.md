@@ -6,11 +6,11 @@ f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
 ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404650"
 ---
 # <a name="platformbox-class"></a>Classe Platform::Box
 
@@ -30,7 +30,7 @@ ref class Box abstract;
 
 ### <a name="members"></a>Membri
 
-|Membro|Descrizione|
+|Member|Descrizione|
 |------------|-----------------|
 |[Box](#ctor) | Crea un oggetto `Box` che può incapsulare un valore del tipo specificato. |
 |[operatore di finestra&lt;const T&gt;^](#box-const-t) | Consente conversioni boxing da una classe di valori `const``T` o da una classe `enum``T` a `Box<T>`. |
@@ -169,4 +169,4 @@ Restituisce il valore boxed con lo stesso tipo presente in origine prima di esse
 ## <a name="see-also"></a>Vedere anche
 
 [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)<br/>
-[Boxing](../cppcx/boxing-c-cx.md)
+[Conversione boxing](../cppcx/boxing-c-cx.md)

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405170"
 ---
 # <a name="collate-class"></a>Classe collate
 
@@ -118,11 +118,11 @@ Nome delle impostazioni locali.
 
 I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \> 1: Questi valori non definiti.
 
 Il costruttore inizializza l'oggetto di base con **delle impostazioni locali::/**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -148,7 +148,7 @@ Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 *first2*<br/>
 Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-*Last2*<br/>
+*last2*<br/>
 Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -214,7 +214,7 @@ Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 *first2*<br/>
 Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-*Last2*<br/>
+*last2*<br/>
 Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito

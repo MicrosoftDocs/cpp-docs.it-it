@@ -12,11 +12,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405131"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerazioni &lt;filesystem&gt;
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valori
 
-|Nome|Valore|Descrizione|
+|Nome|Value|Descrizione|
 |----------|-----------|-----------------|
 |`not_found`|-1|Rappresenta un file che non esiste.|
 |`none`|0|Rappresenta un file che non ha alcun attributo di tipo. (non supportato).|

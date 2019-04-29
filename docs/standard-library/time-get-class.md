@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412033"
 ---
 # <a name="timeget-class"></a>Classe time_get
 
@@ -232,10 +232,10 @@ Un campo in iosbase in cui gli elementi di maschera di bit appropriati sono impo
 *ptm*<br/>
 Puntatore alla struttura temporale in cui deve essere memorizzata l'ora.
 
-*FMT*<br/>
+*fmt*<br/>
 Carattere dell'identificatore di conversione.
 
-*Mod*<br/>
+*mod*<br/>
 Carattere facoltativo del modificatore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -568,10 +568,10 @@ Gli elementi della maschera di bit appropriati sono impostati in modo che lo sta
 *ptm*<br/>
 Puntatore alla struttura temporale in cui deve essere memorizzata l'ora.
 
-*FMT*<br/>
+*fmt*<br/>
 Carattere dell'identificatore di conversione.
 
-*Mod*<br/>
+*mod*<br/>
 Carattere facoltativo del modificatore.
 
 *fmt_first*<br/>
@@ -590,7 +590,7 @@ La prima funzione membro restituisce `do_get(first, last, iosbase, state, ptm, f
 
 La seconda funzione membro chiama `do_get` sotto il controllo del formato delimitato da `[fmt_first, fmt_last)`. Considera il formato come una sequenza di campi, ciascuno dei quali determina la conversione di zero o più elementi di input delimitati da `[first, last)`. Restituisce un iteratore che definisce il primo elemento non convertito. Esistono tre tipi di campi:
 
-Una percentuale (%) nel formato, seguita da un modificatore facoltativo *mod* nel set EOQ # [], seguito da un identificatore di conversione *fmt*, sostituisce *primo* con il valore restituito da `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Un errore di conversione imposta `ios_base::failbit` nelle *stato* e restituisce.
+Una percentuale (%) il formato, seguito da un modificatore facoltativo *mod* nel set EOQ # [], seguito da un identificatore di conversione *fmt*, sostituisce *primo* con il valore restituito da `do_get(first, last, iosbase, state, ptm, fmt, mod)`. Un errore di conversione imposta `ios_base::failbit` nelle *stato* e restituisce.
 
 Un elemento dello spazio vuoto nel formato ignora dopo lo zero o più elementi di input dello spazio vuoto.
 
@@ -1040,18 +1040,18 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*Refs*<br/>
+*refs*<br/>
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
 I valori possibili per il *refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \> 1: Questi valori non definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 

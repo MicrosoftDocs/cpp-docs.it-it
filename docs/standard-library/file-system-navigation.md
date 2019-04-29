@@ -3,15 +3,15 @@ title: Esplorazione del file system
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
 ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405196"
 ---
 # <a name="file-system-navigation"></a>Esplorazione del file system
 
-L'intestazione \<filesystem> implementa la specifica tecnica del file system di ISO/IEC TS 18822:2015 di C++ (bozza finale [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) e contiene tipi e funzioni che consentono di scrivere codice indipendente dalla piattaforma per l'esplorazione del file system. Essendo multipiattaforma, contiene le API che non sono rilevanti per i sistemi Windows. Ad esempio, ciò significa che `is_fifo(const path&)` restituisce sempre **false** su Windows.
+Il \<filesystem > implementa intestazione il C++ File System Technical Specification ISO/IEC TS 18822:2015 (bozza finale: [ISO/IEC JTC 1/SC/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) e contiene tipi e funzioni che consentono di scrivere codice indipendente dalla piattaforma per l'esplorazione del file system. Essendo multipiattaforma, contiene le API che non sono rilevanti per i sistemi Windows. Ad esempio, ciò significa che `is_fifo(const path&)` restituisce sempre **false** su Windows.
 
 ## <a name="overview"></a>Panoramica
 

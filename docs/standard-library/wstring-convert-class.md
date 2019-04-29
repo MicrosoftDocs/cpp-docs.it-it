@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
 ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410798"
 ---
 # <a name="wstringconvert-class"></a>Classe wstring_convert
 
@@ -139,7 +139,7 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Byte*|Sequenza di byte a elemento singolo da convertire.|
 |*ptr*|Sequenza di caratteri con terminazione Null di tipo C da convertire.|
-|*BSTR*|Oggetto [byte_string](#byte_string) da convertire.|
+|*Bstr*|Oggetto [byte_string](#byte_string) da convertire.|
 |*first*|Il primo carattere in un intervallo di caratteri da convertire.|
 |*last*|L'ultimo carattere in un intervallo di caratteri da convertire.|
 
@@ -245,8 +245,8 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*\*Pcvt*|Oggetto di tipo `Codecvt` per eseguire la conversione.|
-|*Stato*|Oggetto di tipo [state_type](#state_type) che rappresenta lo stato della conversione.|
-|*Berr*|L'oggetto [byte_string](#byte_string) da visualizzare in caso di errori.|
+|*_State*|Oggetto di tipo [state_type](#state_type) che rappresenta lo stato della conversione.|
+|*_Berr*|L'oggetto [byte_string](#byte_string) da visualizzare in caso di errori.|
 |*Werr*|L'oggetto [wide_string](#wide_string) da visualizzare in caso di errori.|
 
 ### <a name="remarks"></a>Note

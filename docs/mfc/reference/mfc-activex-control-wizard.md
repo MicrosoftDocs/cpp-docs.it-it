@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
 ms.openlocfilehash: cec4c3aa6aedfa7a1f8234c6cc2355970d453f56
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412772"
 ---
 # <a name="mfc-activex-control-wizard"></a>Creazione guidata controllo ActiveX MFC
 

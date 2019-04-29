@@ -1,18 +1,34 @@
 ---
-title: Errori matematici da M6101 a M6205
-ms.date: 11/17/2017
+title: Errori matematici
+ms.date: 04/16/2019
 ms.assetid: bdf3dc2a-d993-4f53-b0f2-9604e4914127
-ms.openlocfilehash: 323864dcae5b60b96e193487afd53fe004d38c7e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 7d89a7b9f89342b973307f592e59d05cfe44f84f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59777237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393220"
 ---
-# <a name="math-errors-m6101-through-m6205"></a>Errori matematici da M6101 a M6205
+# <a name="math-errors-mxxxx"></a>Errori matematici (Mxxxx)
 
-In questa sezione è un riferimento per gli errori generati dalla libreria matematica a virgola mobile di runtime.
+In questa sezione è un riferimento per gli errori generati dalla libreria matematica a virgola mobile di runtime. Avvisi ed errori di runtime Math hanno il formato M*xxxx*, dove *xxxx* è un numero a quattro cifre.
 
-È possibile trovare ulteriore assistenza per errori e avvisi nei forum pubblici di Microsoft. È possibile cercare l'errore o un numero di avviso sul [Community degli sviluppatori](https://developercommunity.visualstudio.com) sito. Il [generali su Visual C++](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) forum è dedicato alle domande su Visual C++ che non vengono trattate in altri forum. È anche possibile eseguire la ricerca di errori e avvisi e porre domande nel [Stack Overflow](http://stackoverflow.com/) per trovare le soluzioni.
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Per collegamenti a informazioni aggiuntive e risorse della community, vedere [della Guida di Visual C++ e Community](../../overview/visual-cpp-help-and-community.md).
+## <a name="math-errors"></a>Errori matematici
+
+[Errore matematico M6101](math-error-m6101.md) \
+[Errore matematico M6102](math-error-m6102.md) \
+[Errore matematico M6107](math-error-m6107.md) \
+[Errore matematico M6108](math-error-m6108.md) \
+[Errore matematico M6110](math-error-m6110.md) \
+[Errore matematico M6111](math-error-m6111.md) \
+[Errore matematico M6201](math-error-m6201.md) \
+[Errore matematico M6202](math-error-m6202.md) \
+[Errore matematico M6203](math-error-m6203.md) \
+[Errore matematico M6205](math-error-m6205.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md) \
+[Matematiche e supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)

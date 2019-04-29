@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 ms.openlocfilehash: b9c6f8db26cdc67d3a1bc752b9b5eb31f7dc220b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411929"
 ---
 # <a name="timeput-class"></a>Classe time_put
 
@@ -101,10 +101,10 @@ virtual iter_type do_put(
 *next*<br/>
 Iteratore di output in cui deve essere inserita la sequenza di caratteri che rappresenta la data e l'ora.
 
-*In_losbase*<br/>
+*_Iosbase*<br/>
 Non usato.
 
-*Pt*<br/>
+*_Pt*<br/>
 Informazioni di tipo data e ora da visualizzare in output.
 
 *_Fmt*<br/>
@@ -164,13 +164,13 @@ iter_type put(iter_type next,
 *next*<br/>
 Iteratore di output in cui deve essere inserita la sequenza di caratteri che rappresenta la data e l'ora.
 
-*In_losbase*<br/>
+*_Iosbase*<br/>
 Non usato.
 
 *_Fill*<br/>
 Il carattere di tipo `CharType` usato per la spaziatura.
 
-*Pt*<br/>
+*_Pt*<br/>
 Informazioni di tipo data e ora da visualizzare in output.
 
 *_Fmt*<br/>
@@ -254,11 +254,11 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \> 1: Questi valori non definiti.
 
 Il costruttore inizializza l'oggetto di base con [locale:: facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
 

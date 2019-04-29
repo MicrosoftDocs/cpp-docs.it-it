@@ -10,11 +10,11 @@ helpviewer_keywords:
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
 ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394702"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Allocazione e deallocazione di memoria delle finestre
 

@@ -1,6 +1,6 @@
 ---
 title: Errori del compilatore da C2400 a C2499
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C2416
 - C2442
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - C2481
 - C2497
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-ms.openlocfilehash: 2ba9a55610c6f2e5e38733125414c6076e2c2f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 569780a0716d26406c1703fa91fe5216d92ce653
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404351"
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Errori del compilatore da C2400 a C2499
 
@@ -59,7 +59,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2413](compiler-error-c2413.md)|«*identificatore*': le dimensioni di allineamento non valida|
 |[Errore del compilatore C2414](compiler-error-c2414.md)|numero non valido di operandi|
 |[Errore del compilatore C2415](compiler-error-c2415.md)|tipo di operando improprio|
-|C2416 errore del compilatore|attributo '*attributo*' non può essere applicato in questo contesto|
+|Errore del compilatore C2416|attributo '*attributo*' non può essere applicato in questo contesto|
 |[Errore del compilatore C2417](compiler-error-c2417.md)|divisione per zero in '*contesto*'|
 |[Errore del compilatore C2418](compiler-error-c2418.md)|Impossibile eliminare il file del browser: *nomefile*|
 |[Errore del compilatore C2419](compiler-error-c2419.md)|Mod per zero in '*contesto*'|
@@ -85,7 +85,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2439](compiler-error-c2439.md)|«*identificatore*': Impossibile inizializzare il membro|
 |[Errore del compilatore C2440](compiler-error-c2440.md)|«*conversione*': Impossibile convertire da '*type_1*'a'*type_2*»|
 |[Errore del compilatore C2441](compiler-error-c2441.md)|«*variabile*': un simbolo dichiarato con declspec (Process) deve essere const in /clr: pure modalità|
-|C2442 errore del compilatore|«*identificatore*': definizione di spazio dei nomi annidati non può essere inline o disporre di attributi|
+|Errore del compilatore C2442|«*identificatore*': definizione di spazio dei nomi annidati non può essere inline o disporre di attributi|
 |[Errore del compilatore C2443](compiler-error-c2443.md)|conflitto di dimensione dell'operando|
 |[Errore del compilatore C2444](compiler-error-c2444.md)|«*identificatore*': utilizzato prototipo ANSI, trovato 'type', previsto ' {' o ';'|
 |[Errore del compilatore C2446](compiler-error-c2446.md)|«*operator*': nessuna conversione da '*type_1*'a'*type_2*»|
@@ -95,10 +95,10 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2450](compiler-error-c2450.md)|passa un'espressione di tipo '*tipo*' non è valido|
 |[Errore del compilatore C2451](compiler-error-c2451.md)|espressioni condizionali di tipo '*tipo*' non è valido|
 |[Errore del compilatore C2452](compiler-error-c2452.md)|«*tipo*': tipo di origine non è valido per safe_cast|
-|C2453 errore del compilatore|«*tipo*': tipo di destinazione non è valido per safe_cast|
-|C2454 errore del compilatore|«*identificatore*': nome dell'alias dello spazio dei nomi non può essere dichiarato con un nome completo|
-|C2455 errore del compilatore|«*classe*' una classe ref WinRT che deriva da una classe di base importata non può essere astratta.|
-|C2456 errore del compilatore|«*classe*' una classe ref unsealed non può avere un costruttore visibile pubblico. Rendere la classe sealed oppure specificare invece costruttore come 'internal', 'protected private' o 'private'.|
+|Errore del compilatore C2453|«*tipo*': tipo di destinazione non è valido per safe_cast|
+|Errore del compilatore C2454|«*identificatore*': nome dell'alias dello spazio dei nomi non può essere dichiarato con un nome completo|
+|Errore del compilatore C2455|«*classe*' una classe ref WinRT che deriva da una classe di base importata non può essere astratta.|
+|Errore del compilatore C2456|«*classe*' una classe ref unsealed non può avere un costruttore visibile pubblico. Rendere la classe sealed oppure specificare invece costruttore come 'internal', 'protected private' o 'private'.|
 |[Errore del compilatore C2457](compiler-error-c2457.md)|«*identificatore*': la macro predefinita non può trovarsi all'esterno di un corpo di funzione|
 |[Errore del compilatore C2458](compiler-error-c2458.md)|«*identificatore*': ridefinizione all'interno di definizione|
 |[Errore del compilatore C2459](compiler-error-c2459.md)|«*identificatore*': è definita; non è possibile aggiungere come membro anonimo|
@@ -109,19 +109,19 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2465](compiler-error-c2465.md)|impossibile definire un tipo anonimo tra parentesi|
 |[Errore del compilatore C2466](compiler-error-c2466.md)|non è possibile allocare una matrice di dimensione costante 0|
 |[Errore del compilatore C2467](compiler-error-c2467.md)|dichiarazione non valida di tipo anonimo '*user_defined_type*'|
-|C2468 errore del compilatore|costruttore non può essere 'constexpr' in una classe o struct con classi base virtuali|
+|Errore del compilatore C2468|costruttore non può essere 'constexpr' in una classe o struct con classi base virtuali|
 |[Errore del compilatore C2469](compiler-error-c2469.md)|'new': non è possibile allocare oggetti 'void'|
 |[Errore del compilatore C2470](compiler-error-c2470.md)|«*funzione*': sembra una definizione di funzione, ma non esiste alcun parametro elenco; corpo apparente della verrà ignorato|
 |[Errore del compilatore C2471](compiler-error-c2471.md)|non è possibile aggiornare il database di programma '*filename*'|
 |[Errore del compilatore C2472](compiler-error-c2472.md)|'*funzione*' non può essere generata nel codice gestito: '*messaggio*'; compilare con /clr per generare un'immagine mista|
 |[Errore del compilatore C2473](compiler-error-c2473.md)|«*identificatore*': sembra una definizione di funzione, ma non sono presenti elenchi di parametri.|
 |[Errore del compilatore C2474](compiler-error-c2474.md)|«*identificatore*': manca un punto e virgola adiacente, potrebbe trattarsi di una parola chiave o identificatore.|
-|C2475 errore del compilatore|«*identificatore*': ridefinizione. mancata corrispondenza tra l'identificatore 'constexpr'|
+|Errore del compilatore C2475|«*identificatore*': ridefinizione. mancata corrispondenza tra l'identificatore 'constexpr'|
 |[Errore del compilatore C2477](compiler-error-c2477.md)|«*membro*': membro dati statici non possa essere inizializzato tramite classi derivate|
-|C2478 errore del compilatore|la dichiarazione è incompatibile con '*istanza*'|
+|Errore del compilatore C2478|la dichiarazione è incompatibile con '*istanza*'|
 |[Errore del compilatore C2479](compiler-error-c2479.md)|«*identificatore*': 'allocate ()' è validi solo per gli elementi di dati di estensione statica|
 |[Errore del compilatore C2480](compiler-error-c2480.md)|«*identificatore*': 'thread' è valido solo per gli elementi di dati di estensione statica|
-|C2481 errore del compilatore|«*identificatore*': thread_local è valido solo per i membri statici e variabili nell'ambito del blocco o lo spazio dei nomi|
+|Errore del compilatore C2481|«*identificatore*': thread_local è valido solo per i membri statici e variabili nell'ambito del blocco o lo spazio dei nomi|
 |[Errore del compilatore C2482](compiler-error-c2482.md)|«*identificatore*': l'inizializzazione dinamica dei dati locale di thread non è consentiti nel codice gestito o WINRT|
 |[Errore del compilatore C2483](compiler-error-c2483.md)|«*identificatore*': oggetto con distruttore o tipo non aggregato non può essere dichiarato con la durata di archiviazione di thread nel codice gestito o WINRT|
 |[Errore del compilatore C2485](compiler-error-c2485.md)|«*identificatore*': attributo esteso non riconosciuto|
@@ -136,6 +136,11 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Errore del compilatore C2494](compiler-error-c2494.md)|«*parola chiave*' non può essere chiamato dall'interno di un'espressione di filtro o &#95; &#95;blocco finally/finally|
 |[Errore del compilatore C2495](compiler-error-c2495.md)|«*identificatore*': '__declspec(noexcept)' può essere applicato solo a definizioni o dichiarazioni di funzione|
 |[Errore del compilatore C2496](compiler-error-c2496.md)|«*identificatore*': 'selectany' può essere applicato solo agli elementi di dati con collegamento esterno|
-|C2497 errore del compilatore|«*identificatore*': 'implementation_key' può essere applicato solo a dichiarazioni di funzione|
+|Errore del compilatore C2497|«*identificatore*': 'implementation_key' può essere applicato solo a dichiarazioni di funzione|
 |[Errore del compilatore C2498](compiler-error-c2498.md)|«*funzione*': 'novtable' può essere applicato solo a definizioni o dichiarazioni di classe|
 |[Errore del compilatore C2499](compiler-error-c2499.md)|«*classe*': una classe non può essere la classe di base|
+
+## <a name="see-also"></a>Vedere anche
+
+[C /C++ del compilatore e compilazione di errori e avvisi degli strumenti](../compiler-errors-1/c-cpp-build-errors.md) \
+[Errori del compilatore da C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

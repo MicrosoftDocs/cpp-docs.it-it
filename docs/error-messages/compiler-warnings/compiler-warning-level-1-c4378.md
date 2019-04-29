@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
 ms.openlocfilehash: 6197bd66214785d515bb1b73ceaf5a68d6751e79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410408"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Avviso del compilatore (livello 1) C4378
 

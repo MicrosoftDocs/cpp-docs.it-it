@@ -5,11 +5,11 @@ f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
 ms.openlocfilehash: c832ce759c556765fa412b2ef77333bc6612b8c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407874"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>Classe task_options (runtime di concorrenza)
 

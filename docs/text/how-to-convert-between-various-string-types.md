@@ -8,11 +8,11 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410733"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Procedura: Eseguire la conversione tra vari tipi di stringhe
 

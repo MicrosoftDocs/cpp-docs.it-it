@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
 ms.openlocfilehash: be1075da65284ac3f9672a839622b59c8926bfb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405237"
 ---
 # <a name="codecvt-class"></a>Classe codecvt
 
@@ -209,11 +209,11 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- 2: questi valori non definiti.
+- 2: Questi valori non definiti.
 
 Il costruttore inizializza il relativo `locale::facet` oggetto di base con **delle impostazioni locali::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -274,7 +274,7 @@ virtual result do_in(
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.
 
 *first1*<br/>
@@ -289,7 +289,7 @@ Puntatore oltre la fine della sequenza convertita, al primo carattere non conver
 *first2*<br/>
 Puntatore all'inizio della sequenza convertita.
 
-*Last2*<br/>
+*last2*<br/>
 Puntatore alla fine della sequenza convertita.
 
 *next2*<br/>
@@ -329,7 +329,7 @@ virtual int do_length(
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.
 
 *first1*<br/>
@@ -394,7 +394,7 @@ virtual result do_out(
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.
 
 *first1*<br/>
@@ -409,7 +409,7 @@ Riferimento a un puntatore al primo non convertito `CharType`, dopo l'ultimo `Ch
 *first2*<br/>
 Puntatore all'inizio della sequenza convertita.
 
-*Last2*<br/>
+*last2*<br/>
 Puntatore alla fine della sequenza convertita.
 
 *next2*<br/>
@@ -449,13 +449,13 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.
 
 *first2*<br/>
 Puntatore alla prima posizione nell'intervallo di destinazione.
 
-*Last2*<br/>
+*last2*<br/>
 Puntatore all'ultima posizione nell'intervallo di destinazione.
 
 *next2*<br/>
@@ -563,7 +563,7 @@ result in(
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.
 
 *first1*<br/>
@@ -578,7 +578,7 @@ Puntatore oltre la fine della sequenza convertita, al primo carattere non conver
 *first2*<br/>
 Puntatore all'inizio della sequenza convertita.
 
-*Last2*<br/>
+*last2*<br/>
 Puntatore alla fine della sequenza convertita.
 
 *next2*<br/>
@@ -665,7 +665,7 @@ int length(
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.
 
 *first1*<br/>
@@ -770,7 +770,7 @@ result out(
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.
 
 *first1*<br/>
@@ -785,7 +785,7 @@ Riferimento a un puntatore al primo non convertito `CharType` dopo l'ultimo `Cha
 *first2*<br/>
 Puntatore all'inizio della sequenza convertita.
 
-*Last2*<br/>
+*last2*<br/>
 Puntatore alla fine della sequenza convertita.
 
 *next2*<br/>
@@ -862,13 +862,13 @@ result unshift(
 
 ### <a name="parameters"></a>Parametri
 
-*Stato*<br/>
+*_State*<br/>
 Lo stato della conversione che viene mantenuto tra le chiamate alla funzione membro.
 
 *first2*<br/>
 Puntatore alla prima posizione nell'intervallo di destinazione.
 
-*Last2*<br/>
+*last2*<br/>
 Puntatore all'ultima posizione nell'intervallo di destinazione.
 
 *next2*<br/>

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: b6d2ac108652e33fdd76abaac9b982840d4fce7f
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413021"
 ---
 # <a name="ltmapgt-operators"></a>Operatori &lt;map&gt;
 

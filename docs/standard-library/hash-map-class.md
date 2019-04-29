@@ -89,11 +89,11 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405066"
 ---
 # <a name="hashmap-class"></a>Classe hash_map
 
@@ -121,7 +121,7 @@ Tipo di dati relativo alle chiavi da archiviare in hash_map.
 Tipo di dati relativo agli elementi da archiviare in hash_map.
 
 *Tratti*<br/>
-Tipo che include due oggetti funzione, uno della classe compare, in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo, e una funzione hash che corrisponde a un predicato unario che esegue il mapping di valori di chiave degli elementi a valori Unsigned Integer di tipo `size_t`. Questo argomento è facoltativo e hash_compare<`Key`, less<`Key`> > è il valore predefinito.
+Tipo che include due oggetti funzione, uno della classe compare, in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo, e una funzione hash che corrisponde a un predicato unario che esegue il mapping di valori di chiave degli elementi a valori Unsigned Integer di tipo `size_t`. Questo argomento è facoltativo e hash_compare <`Key`, less <`Key`>> è il valore predefinito.
 
 *Allocatore*<br/>
 Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione di hash_map e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è allocator<pair <const `Key`, `Type`>>.
@@ -891,7 +891,7 @@ emplace(
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore usato per eseguire move-contruct su un elemento da inserire nell'oggetto [hash_map](../standard-library/hash-map-class.md), a meno che `hash_map` non contenga già tale elemento o, più in generale, un elemento la cui chiave sia ordinata in modo equivalente.|
+|*val*|Valore usato per eseguire move-contruct su un elemento da inserire nell'oggetto [hash_map](../standard-library/hash-map-class.md), a meno che `hash_map` non contenga già tale elemento o, più in generale, un elemento la cui chiave sia ordinata in modo equivalente.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -950,8 +950,8 @@ iterator emplace_hint(
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore usato per eseguire move-contruct su un elemento da inserire nell'oggetto [hash_map](../standard-library/hash-map-class.md), a meno che `hash_map` non contenga già tale elemento o, più in generale, un elemento la cui chiave sia ordinata in modo equivalente.|
-|*WHERE*|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
+|*val*|Valore usato per eseguire move-contruct su un elemento da inserire nell'oggetto [hash_map](../standard-library/hash-map-class.md), a meno che `hash_map` non contenga già tale elemento o, più in generale, un elemento la cui chiave sia ordinata in modo equivalente.|
+|*_Where*|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1218,7 +1218,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE*<br/>
+*_Where*<br/>
 Posizione dell'elemento da rimuovere dall'hash_map.
 
 *first*<br/>
@@ -1593,8 +1593,8 @@ iterator insert(
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore di un elemento da inserire nell'oggetto hash_map, a meno che quest'ultimo non contenga già tale elemento o, più in generale, un elemento la cui chiave sia ordinata in modo equivalente.|
-|*WHERE*|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
+|*val*|Valore di un elemento da inserire nell'oggetto hash_map, a meno che quest'ultimo non contenga già tale elemento o, più in generale, un elemento la cui chiave sia ordinata in modo equivalente.|
+|*_Where*|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
 |*first*|Posizione del primo elemento da copiare da un oggetto hash_map.|
 |*last*|Posizione immediatamente dopo l'ultimo elemento da copiare da un oggetto hash_map.|
 

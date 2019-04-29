@@ -3,11 +3,11 @@ title: Utilizzo di sezioni
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405369"
 ---
 # <a name="using-tiles"></a>Utilizzo di sezioni
 
@@ -291,13 +291,13 @@ Esistono due tipi di accesso alla memoria che deve essere sincronizzati: accesso
 
 Oggetto *limite di memoria* garantisce che gli accessi sono disponibili ad altri thread nella sezione del thread di memoria e memoria siano eseguiti in base all'ordine di programma. A tale scopo, i compilatori e i processori non riordinano le letture e scritture lungo il limite. In AMP C++, viene creato un limite di memoria da una chiamata a uno dei metodi seguenti:
 
-- [Metodo tile_barrier:: Wait](reference/tile-barrier-class.md#wait): consente di creare una barriera protettiva entrambi globale e `tile_static` memoria.
+- [Metodo tile_barrier:: Wait](reference/tile-barrier-class.md#wait): Crea un limite attorno a entrambi globale e `tile_static` memoria.
 
-- [Metodo tile_barrier:: wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): consente di creare una barriera protettiva entrambi globale e `tile_static` memoria.
+- [Metodo tile_barrier:: wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): Crea un limite attorno a entrambi globale e `tile_static` memoria.
 
-- [Metodo tile_barrier:: wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): crea un limite attorno solo memoria globale.
+- [Metodo tile_barrier:: wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): Crea una barriera protettiva solo memoria globale.
 
-- [Metodo tile_barrier:: wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crea un limite solo intorno alla `tile_static` memoria.
+- [Metodo tile_barrier:: wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): Crea un limite solo intorno alla `tile_static` memoria.
 
 Chiamando il limite specifico richiesto si possono migliorare le prestazioni dell'app. Il tipo di barriera influisce sul modo in cui il compilatore e l'hardware riordinano le istruzioni. Ad esempio, se si usa un limite di memoria globale, si applica gli accessi alla memoria solo globali e di conseguenza, il compilatore e l'hardware possono riordinare legge e scrive `tile_static` variabili sui due lati del limite.
 

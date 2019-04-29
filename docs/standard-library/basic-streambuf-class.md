@@ -95,11 +95,11 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
 ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414178"
 ---
 # <a name="basicstreambuf-class"></a>Classe basic_streambuf
 
@@ -582,10 +582,10 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 La posizione da cercare relativo alla *Way*.
 
-*Way*<br/>
+*_Way*<br/>
 Punto iniziale per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
 
 *_Which*<br/>
@@ -711,10 +711,10 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 La posizione da cercare relativo alla *Way*.
 
-*Way*<br/>
+*_Way*<br/>
 Punto iniziale per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
 
 *_Which*<br/>
@@ -982,7 +982,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Il carattere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1030,7 +1030,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Il carattere.
 
 ### <a name="return-value"></a>Valore restituito

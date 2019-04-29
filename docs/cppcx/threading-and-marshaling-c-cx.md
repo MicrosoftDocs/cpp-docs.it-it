@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
 ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404637"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading e marshalling (C++/CX)
 
@@ -97,7 +97,7 @@ In Visual C++, quando si crea un riferimento a una classe di Windows Runtime in-
 
 ## <a name="authoring-agile-windows-runtime-components"></a>Creazione di componenti Windows Runtime agili
 
-Quando si definisce una classe di riferimento in C + + c++ /CX, è agile per impostazione predefinita, ovvero, ovvero ha `ThreadingModel`impostato su Both e `MarshallingType`= Agile.  Se si usa la libreria di modelli di Windows Runtime C++, è possibile rendere la classe agile derivando da `FtmBase`, che usa il `FreeThreadedMarshaller`.  Se crei una classe con l'attributo `ThreadingModel`impostato su Both o l'attributo `ThreadingModel`impostato su MTA, assicurati che la classe sia thread-safe.
+Quando si definisce una classe di riferimento in C++//CX, è agile per impostazione predefinita, vale a dire, ha `ThreadingModel`impostato su Both e `MarshallingType`= Agile.  Se si usa la libreria di modelli di Windows Runtime C++, è possibile rendere la classe agile derivando da `FtmBase`, che usa il `FreeThreadedMarshaller`.  Se crei una classe con l'attributo `ThreadingModel`impostato su Both o l'attributo `ThreadingModel`impostato su MTA, assicurati che la classe sia thread-safe.
 
 È possibile modificare il modello di threading e il comportamento di marshalling di una classe di riferimento. Tuttavia, se apporti modifiche che rendono la classe non Agile, è importante che tu comprenda le implicazioni che ne derivano.
 

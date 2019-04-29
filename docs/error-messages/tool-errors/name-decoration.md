@@ -1,40 +1,38 @@
 ---
 title: Decorazione dei nomi
-ms.date: 09/05/2018
+ms.date: 04/22/2019
 helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 - decorated names, calling conventions
 ms.assetid: 8327a27b-bb4f-49f2-8218-b851b9d2a463
-ms.openlocfilehash: b916a73e0b8f86755384914fa85ef8a901e4a64c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: d1557f53a07a544ff4f9e5a63f905e6854fb74ce
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393155"
 ---
 # <a name="name-decoration"></a>Decorazione dei nomi
 
-La decorazione dei nomi in genere fa riferimento alle convenzioni di denominazione di C++, ma può essere applicata anche a diversi casi di C. Per impostazione predefinita, C++ usa il nome della funzione, i parametri e il tipo restituito per creare un nome linker per la funzione. Si consideri la seguente funzione:
+La decorazione dei nomi in genere fa riferimento alle convenzioni di denominazione di C++, ma può essere applicata anche a diversi casi di C. Per impostazione predefinita, C++ usa il nome della funzione, i parametri e il tipo restituito per creare un nome linker per la funzione. Si consideri la dichiarazione di funzione seguente:
 
-```
-void CALLTYPE test(void)
-```
+`void CALLTYPE test(void);`
 
 La seguente tabella mostra il nome linker per diverse convenzioni di chiamata.
 
-|Convenzione di chiamata|File "C" o .c esterno|.cpp, .cxx o /TP|
+|Convenzione di chiamata|`extern "C"` o `.c` file|`.cpp`, `.cxx` o `/TP`|
 |------------------------|---------------------------|------------------------|
 |Convenzione di denominazione C (`__cdecl`)|`_test`|`?test@@ZAXXZ`|
-|Convenzione di denominazione Fastcall (`__fastcall`)|`@test@0`|`?test@@YIXXZ`|
-|Convenzione di denominazione Chiamata standard (`__stdcall`)|`_test@0`|`?test@@YGXXZ`|
-|Convenzione di denominazione Vectorcall (`__vectorcall`)|`test@@0`|`?test@@YQXXZ`|
+|Convenzione di denominazione chiamata veloci (`__fastcall`)|`@test@0`|`?test@@YIXXZ`|
+|Convenzione di denominazione di chiamata standard (`__stdcall`)|`_test@0`|`?test@@YGXXZ`|
+|Convenzione di denominazione dei vettori (`__vectorcall`)|`test@@0`|`?test@@YQXXZ`|
 
-usare "C" esterno per chiamare una funzione C da C++. "C" esterno forza l'utilizzo della convenzione di denominazione C per le funzioni non classe C++. Tenere presenti le opzioni del compilatore **/Tc** oppure **/Tp**, che indicano al compilatore di ignorare l'estensione e il file viene compilato come C o C++, rispettivamente. Queste opzioni possono generare file imprevisti.
+Uso `extern "C"` per chiamare una funzione C da C++. `extern "C"` forza l'utilizzo della convenzione di denominazione C per non di classe C++ funzioni. Tenere presenti le opzioni del compilatore **/Tc** oppure **/Tp**, che indicano al compilatore di ignorare l'estensione e il file viene compilato come C o C++, rispettivamente. Queste opzioni possono generare nomi del linker che non previsto.
 
-Questo errore può essere causato anche da prototipi di funzione con parametri non corrispondenti. La decorazione dei nomi incorpora i parametri di una funzione nel nome funzionale decorato finale. L'errore LNK2001 può essere causato anche dalla chiamata di una funzione con tipi di parametri non corrispondenti a quelli nella dichiarazione di funzione.
+Questo errore può essere causato anche da prototipi di funzione con parametri non corrispondenti. La decorazione dei nomi incorpora i parametri di una funzione nel nome funzionale decorato finale. Chiamata a una funzione con i tipi di parametro che non corrispondono a quelli nella dichiarazione di funzione può anche provocare l'errore LNK2001.
 
-Attualmente non è disponibile alcuno standard per la denominazione C++ tra i fornitori di compilatori o anche tra versioni diverse di un compilatore. Di conseguenza, se si collegano file oggetto compilati con altri compilatori, lo schema di denominazione prodotto potrebbe non essere lo stesso e causare esterni non risolti.
+Non esistono attualmente standard per C++ dei nomi tra i fornitori di compilatori o anche tra versioni diverse di un compilatore. Collegano file oggetto compilati da altri compilatori non producano lo stesso schema di denominazione e può causare esterni non risolti.
 
 ## <a name="see-also"></a>Vedere anche
 

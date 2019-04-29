@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
 ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405157"
 ---
 # <a name="filesystemerror-class"></a>Classe filesystem_error
 
@@ -35,9 +35,9 @@ La classe funge da classe base per tutte le eccezioni generate per segnalare un 
 
 |Funzione membro|Descrizione|
 |-|-|
-|[percorso 1](#path1)|Restituisce `mypval1`.|
+|[path1](#path1)|Restituisce `mypval1`.|
 |[path2](#path2)|Restituisce `mypval2`.|
-|[Novità](#what)|Rappresenta un puntatore a un oggetto `NTBS`.|
+|[what](#what)|Rappresenta un puntatore a un oggetto `NTBS`.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -45,7 +45,7 @@ La classe funge da classe base per tutte le eccezioni generate per segnalare un 
 
 **Spazio nomi:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error:: filesystem_error
+## <a name="filesystem_error"></a> filesystem_error::filesystem_error
 
 Il primo costruttore crea il messaggio da *what_arg* e *ec*. Il secondo costruttore crea anche il messaggio dal *pval1*, che viene archiviato in `mypval1`. Il terzo costruttore crea anche il messaggio dal *pval1*, che viene archiviato in `mypval1`e dal *pval2*, che viene archiviato in `mypval2`.
 
@@ -68,7 +68,7 @@ filesystem_error(const string& what_arg,
 *what_arg*<br/>
 Messaggio specificato.
 
-*CE*<br/>
+*ec*<br/>
 Codice di errore specificato.
 
 *mypval1*<br/>

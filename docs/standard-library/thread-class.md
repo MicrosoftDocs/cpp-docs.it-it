@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::thread [C++], native_handle
 - std::thread [C++], swap
 ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412072"
 ---
 # <a name="thread-class"></a>Classe thread
 
@@ -68,7 +68,7 @@ Ogni thread di esecuzione ha un identificatore univoco di tipo `thread::id`. La 
 |[get_id](#get_id)|Restituisce l'identificatore univoco del thread associato.|
 |[hardware_concurrency](#hardware_concurrency)|Statico. Restituisce una stima del numero di contesti di thread hardware.|
 |[join](#join)|Si blocca fino al completamento del thread associato.|
-|[sottoponibile a join](#joinable)|Specifica se il thread associato è sottoponibile a join.|
+|[joinable](#joinable)|Specifica se il thread associato è sottoponibile a join.|
 |[native_handle](#native_handle)|Restituisce il tipo specifico dell'implementazione che rappresenta l'handle del thread.|
 |[swap](#swap)|Scambia lo stato dell'oggetto con un oggetto specificato **thread** oggetto.|
 
@@ -84,7 +84,7 @@ Ogni thread di esecuzione ha un identificatore univoco di tipo `thread::id`. La 
 
 **Spazio dei nomi:** std
 
-## <a name="detach"></a>  thread:: Detach
+## <a name="detach"></a>  thread::detach
 
 Dissocia il thread associato. Il sistema operativo diventa responsabile del rilascio di risorse di thread al termine delle operazioni.
 
@@ -140,7 +140,7 @@ Il costruttore predefinito crea un oggetto che non risulta uguale all'oggetto `t
 
 Tutti gli oggetti `thread::id` costruiti in modo predefinito risultano uguali.
 
-## <a name="join"></a>  thread:: join
+## <a name="join"></a>  thread::join
 
 Si blocca fino al completamento del thread di esecuzione associato all'oggetto chiamante.
 
@@ -152,7 +152,7 @@ void join();
 
 Se la chiamata ha esito positivo, le chiamate successive a [get_id](#get_id) per l'oggetto chiamante restituiscono un oggetto [thread::id](#id_class) predefinito che non risulta uguale al `thread::id` di alcun thread esistente. Se le chiamata ha esito negativo, il valore restituito da `get_id` rimane invariato.
 
-## <a name="joinable"></a>  thread:: joinable
+## <a name="joinable"></a>  thread::joinable
 
 Specifica se il thread associato è *sottoponibile a join*.
 
@@ -168,7 +168,7 @@ bool joinable() const noexcept;
 
 Un oggetto thread è *sottoponibile a join* se `get_id() != id()`.
 
-## <a name="native_handle"></a>  thread:: native_handle
+## <a name="native_handle"></a>  thread::native_handle
 
 Restituisce il tipo specifico dell'implementazione che rappresenta l'handle del thread. L'handle del thread può essere usato in modi specifici dell'implementazione.
 

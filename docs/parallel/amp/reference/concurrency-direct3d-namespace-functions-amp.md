@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405586"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funzioni dello spazio dei nomi Concurrency::Direct3D (AMP)
 
@@ -156,7 +156,7 @@ Il runtime di AMP C++ offre informazioni dettagliate sull'errore in modalità di
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Acquisire un blocco in un accelerator_view per eseguire in modo sicuro le operazioni D3D sulle risorse condivise con accelerator_view. L'oggetto accelerator_view e tutte le risorse di AMP C++ associate ad accelerator_view internamente accettano questo blocco quando si eseguono operazioni e si bloccheranno mentre un altro thread utilizza il blocco di accesso di D3D. Questo blocco è non ricorsivo: È un comportamento definito chiamare questa funzione da un thread che contiene già il blocco. È un comportamento definito eseguire operazioni su accelerator_view o su qualsiasi contenitore di dati associato ad accelerator_view dal thread che contiene il blocco di accesso di D3D. Vedere anche scoped_d3d_access_lock, una classe stile RAII per un blocco di accesso di D3D basata sull'ambito.
+Acquisire un blocco in un accelerator_view per eseguire in modo sicuro le operazioni D3D sulle risorse condivise con accelerator_view. L'oggetto accelerator_view e tutte le C++ le risorse di AMP associate ad accelerator_view internamente accettano questo blocco quando si eseguono operazioni e si bloccheranno mentre un altro thread utilizza il blocco di accesso di D3D. Questo blocco è non ricorsivo: È un comportamento definito chiamare questa funzione da un thread che contiene già il blocco. È un comportamento definito eseguire operazioni su accelerator_view o su qualsiasi contenitore di dati associato ad accelerator_view dal thread che contiene il blocco di accesso di D3D. Vedere anche scoped_d3d_access_lock, una classe stile RAII per un blocco di accesso di D3D basata sull'ambito.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);

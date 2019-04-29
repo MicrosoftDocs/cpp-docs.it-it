@@ -100,11 +100,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
 ms.openlocfilehash: fb7db25785d041786f5dfc0d2c3986a76d776d5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404416"
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 
@@ -256,7 +256,7 @@ La cancellazione o la rimozione di un elemento chiama il distruttore per il valo
 
 ## <a name="members"></a>Membri
 
-## <a name="begin"></a> hash_map:: Begin (STL/CLR)
+## <a name="begin"></a> hash_map::begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -381,7 +381,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_map:: Clear (STL/CLR)
+## <a name="clear"></a> hash_map::clear (STL/CLR)
 
 Rimuove tutti gli elementi.
 
@@ -439,7 +439,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_map:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> hash_map::const_iterator (STL/CLR)
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -481,7 +481,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> hash_map:: const_reference (STL/CLR)
+## <a name="const_reference"></a> hash_map::const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -526,7 +526,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> hash_map:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> hash_map::const_reverse_iterator (STL/CLR)
 
 Il tipo di iteratore inverso costante per la sequenza controllata...
 
@@ -568,7 +568,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> hash_map:: Count (STL/CLR)
+## <a name="count"></a> hash_map::count (STL/CLR)
 
 Trova il numero di elementi corrispondenti a una chiave specificata.
 
@@ -728,7 +728,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_map:: end (STL/CLR)
+## <a name="end"></a> hash_map::end (STL/CLR)
 
 Designa la fine della sequenza controllata.
 
@@ -781,7 +781,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="equal_range"></a> hash_map:: equal_range (STL/CLR)
+## <a name="equal_range"></a> hash_map::equal_range (STL/CLR)
 
 Trova un intervallo che corrisponde a una chiave specificata.
 
@@ -842,7 +842,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> hash_map:: Erase (STL/CLR)
+## <a name="erase"></a> hash_map::erase (STL/CLR)
 
 Rimuove gli elementi in corrispondenza delle posizioni specificate.
 
@@ -1263,7 +1263,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_map"></a> hash_map:: hash_map (STL/CLR)
+## <a name="hash_map"></a> hash_map::hash_map (STL/CLR)
 
 Costruisce un oggetto contenitore.
 
@@ -1301,7 +1301,7 @@ Funzione per le chiavi di mapping a bucket di hash.
 *last*<br/>
 Fine dell'intervallo da inserire.
 
-*Pred*<br/>
+*pred*<br/>
 Ordinamento di predicato per la sequenza controllata.
 
 *right*<br/>
@@ -1545,7 +1545,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_map:: Insert (STL/CLR)
+## <a name="insert"></a> hash_map::insert (STL/CLR)
 
 Aggiunge elementi.
 
@@ -1570,7 +1570,7 @@ Fine dell'intervallo da inserire.
 *right*<br/>
 Enumerazione da inserire.
 
-*Val*<br/>
+*val*<br/>
 Valore della chiave da inserire.
 
 *where*<br/>
@@ -1665,7 +1665,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="iterator"></a> hash_map:: Iterator (STL/CLR)
+## <a name="iterator"></a> hash_map::iterator (STL/CLR)
 
 Tipo di un iteratore per la sequenza controllata.
 
@@ -1707,7 +1707,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> hash_map:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_map::key_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due chiavi.
 
@@ -1766,7 +1766,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_map:: key_compare (STL/CLR)
+## <a name="key_compare"></a> hash_map::key_compare (STL/CLR)
 
 Delegato di ordinamento per due chiavi.
 
@@ -1826,7 +1826,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_map:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> hash_map::key_type (STL/CLR)
 
 Tipo di una chiave di ordinamento.
 
@@ -1945,7 +1945,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_map:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> hash_map::lower_bound (STL/CLR)
 
 Trova l'inizio dell'intervallo che corrisponde a una chiave specificata.
 
@@ -2019,7 +2019,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 Valore della chiave da usare.
 
-*Il mapping*<br/>
+*mapped*<br/>
 Valore mappato per la ricerca.
 
 ### <a name="remarks"></a>Note
@@ -2053,7 +2053,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> hash_map:: mapped_type (STL/CLR)
+## <a name="mapped_type"></a> hash_map::mapped_type (STL/CLR)
 
 Tipo di un valore mappato associato a ogni chiave.
 
@@ -2180,7 +2180,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op_as"></a> hash_map:: operator = (STL/CLR)
+## <a name="op_as"></a> hash_map::operator= (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -2302,7 +2302,7 @@ c1[b] = 2
 [a 1] [A 10] [b 2] [c 13]
 ```
 
-## <a name="rbegin"></a> hash_map:: rbegin (STL/CLR)
+## <a name="rbegin"></a> hash_map::rbegin (STL/CLR)
 
 Indica l'inizio della sequenza controllata inversa.
 
@@ -2353,7 +2353,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> hash_map:: Reference (STL/CLR)
+## <a name="reference"></a> hash_map::reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -2472,7 +2472,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_map:: rend (STL/CLR)
+## <a name="rend"></a> hash_map::rend (STL/CLR)
 
 Indica la fine della sequenza controllata inversa.
 
@@ -2525,7 +2525,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> hash_map:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> hash_map::reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -2567,7 +2567,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="size"></a> hash_map:: Size (STL/CLR)
+## <a name="size"></a> hash_map::size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -2619,7 +2619,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_map:: size_type (STL/CLR)
+## <a name="size_type"></a> hash_map::size_type (STL/CLR)
 
 Il tipo di una distanza signed tra due elementi.
 
@@ -2667,7 +2667,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_map:: swap (STL/CLR)
+## <a name="swap"></a> hash_map::swap (STL/CLR)
 
 Scambia il contenuto di due contenitori.
 
@@ -2785,7 +2785,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> hash_map:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> hash_map::upper_bound (STL/CLR)
 
 Trova fine dell'intervallo che corrisponde a una chiave specificata.
 
@@ -2844,7 +2844,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> hash_map:: value_comp (STL/CLR)
+## <a name="value_comp"></a> hash_map::value_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due valori di elemento.
 
@@ -2939,7 +2939,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> hash_map:: value_type (STL/CLR)
+## <a name="value_type"></a> hash_map::value_type (STL/CLR)
 
 Tipo di un elemento.
 

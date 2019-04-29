@@ -9,11 +9,11 @@ helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
 ms.openlocfilehash: 7635f999b227d02ec7fd56296fef1b0b047abd29
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405469"
 ---
 # <a name="unsupportedfeature-class"></a>Classe unsupported_feature
 

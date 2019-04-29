@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412969"
 ---
 # <a name="matchresults-class"></a>Classe match_results
 
@@ -68,11 +68,11 @@ La classe modello descrive un oggetto che controlla una sequenza non modificabil
 |[get_allocator](#get_allocator)|Restituisce l'allocatore archiviato.|
 |[length](#length)|Restituisce la lunghezza di una sottocorrispondenza.|
 |[max_size](#max_size)|Ottiene il numero massimo delle sottocorrispondenze.|
-|[posizione](#position)|Ottiene l'offset iniziale di un sottogruppo.|
+|[position](#position)|Ottiene l'offset iniziale di un sottogruppo.|
 |[prefix](#prefix)|Ottiene la sequenza prima della prima sottocorrispondenza.|
 |[size](#size)|Conteggia il numero di sottocorrispondenze.|
 |[str](#str)|Restituisce una sottocorrispondenza.|
-|[Suffisso](#suffix)|Ottiene la sequenza dopo l'ultima sottocorrispondenza.|
+|[suffix](#suffix)|Ottiene la sequenza dopo l'ultima sottocorrispondenza.|
 |[swap](#swap)|Scambia due oggetti match_results.|
 
 ### <a name="operators"></a>Operatori
@@ -304,7 +304,7 @@ Tipo di iteratore di output.
 *out*<br/>
 Flusso di output in cui scrivere.
 
-*FMT*<br/>
+*fmt*<br/>
 Stringa di formato.
 
 *flags*<br/>
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Alloc*<br/>
+*alloc*<br/>
 Oggetto allocatore da archiviare.
 
 *right*<br/>

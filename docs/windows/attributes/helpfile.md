@@ -7,11 +7,11 @@ helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
 ms.openlocfilehash: 7aff6addffb13d2d45953d190eeaac518fe48d6d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409564"
 ---
 # <a name="helpfile"></a>helpfile
 

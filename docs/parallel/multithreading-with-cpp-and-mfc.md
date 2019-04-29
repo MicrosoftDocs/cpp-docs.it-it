@@ -14,11 +14,11 @@ helpviewer_keywords:
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
 ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407666"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Multithreading con C++ e MFC
 
@@ -40,17 +40,17 @@ Per altre informazioni sulla modalità di gestione di processi e thread del sist
 
 Per altre informazioni sul supporto MFC al multithreading, vedere gli argomenti seguenti:
 
-- [Multithreading: Creazione di thread dell'interfaccia utente](multithreading-creating-user-interface-threads.md)
+- [Multithreading: creazione di thread di interfaccia utente](multithreading-creating-user-interface-threads.md)
 
-- [Multithreading: Creazione di thread di lavoro](multithreading-creating-worker-threads.md)
+- [Multithreading: creazione di thread di lavoro](multithreading-creating-worker-threads.md)
 
-- [Multithreading: Come usare le classi di sincronizzazione](multithreading-how-to-use-the-synchronization-classes.md)
+- [Multithreading: come usare le classi di sincronizzazione](multithreading-how-to-use-the-synchronization-classes.md)
 
-- [Multithreading: Terminazione dei thread](multithreading-terminating-threads.md)
+- [Multithreading: terminazione di thread](multithreading-terminating-threads.md)
 
-- [Multithreading: Suggerimenti sulla programmazione](multithreading-programming-tips.md)
+- [Multithreading: suggerimenti per la programmazione](multithreading-programming-tips.md)
 
-- [Multithreading: Quando usare le classi di sincronizzazione](multithreading-when-to-use-the-synchronization-classes.md)
+- [Multithreading: quando usare le classi di sincronizzazione](multithreading-when-to-use-the-synchronization-classes.md)
 
 ## <a name="see-also"></a>Vedere anche
 

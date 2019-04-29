@@ -3,15 +3,15 @@ title: Utilizzo degli oggetti accelerator e accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405391"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Utilizzo degli oggetti accelerator e accelerator_view
 
-È possibile usare la [acceleratore](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classi per specificare un dispositivo o emulatore per eseguire il codice C++ AMP. Un sistema potrebbe avere diversi dispositivi o emulatori che differiscono per quantità di memoria, supporto della memoria condivisa, supporto per il debug o supporto a precisione doppia. C++ Accelerated Massive Parallelism (C++ AMP) fornisce API che è possibile usare per esaminare gli acceleratori disponibili, impostarne uno come predefinito, specificare più accelerator_views per più chiamate a parallel_for_each ed eseguire attività di debug speciali.
+È possibile usare la [acceleratore](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classi per specificare un dispositivo o emulatore per eseguire il C++ codice AMP su. Un sistema potrebbe avere diversi dispositivi o emulatori che differiscono per quantità di memoria, supporto della memoria condivisa, supporto per il debug o supporto a precisione doppia. C++Accelerated Massive Parallelism (C++ AMP) fornisce API che è possibile usare per esaminare gli acceleratori disponibili, impostarne uno come predefinito, specificare più accelerator_views per più chiamate a parallel_for_each ed eseguire attività di debug speciali.
 
 ## <a name="using-the-default-accelerator"></a>Utilizzo degli acceleratori predefiniti
 

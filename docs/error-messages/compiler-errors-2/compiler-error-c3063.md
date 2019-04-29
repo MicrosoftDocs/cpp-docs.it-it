@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3063
 ms.assetid: 0ecf6f1f-e4a7-487a-9fd5-79d8ac470001
 ms.openlocfilehash: 9e53d9fe273a392695212df6dbeb679822a39068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404221"
 ---
 # <a name="compiler-error-c3063"></a>Errore del compilatore C3063
 
 l'operatore 'operator': tutti gli operandi devono avere lo stesso tipo di enumerazione
 
-Quando si usano gli operatori sugli enumeratori, entrambi gli operandi devono essere del tipo di enumerazione. Per altre informazioni, vedere [procedura: definire e usare enumerazioni in c++ /CLI CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
+Quando si usano gli operatori sugli enumeratori, entrambi gli operandi devono essere del tipo di enumerazione. Per altre informazioni, vedere [Procedura: Definire e usare enumerazioni in C++/CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

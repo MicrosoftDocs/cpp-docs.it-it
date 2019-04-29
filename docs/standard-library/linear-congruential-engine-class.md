@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413255"
 ---
 # <a name="linearcongruentialengine-class"></a>Classe linear_congruential_engine
 
@@ -49,13 +49,13 @@ class linear_congruential_engine{
 Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 *A*<br/>
-**Moltiplicatore**. **Precondizione**: vedere la sezione Note.
+**Moltiplicatore**. **Precondizione**: Vedere la sezione Osservazioni.
 
 *C*<br/>
-**Incremento**. **Precondizione**: vedere la sezione Note.
+**Incremento**. **Precondizione**: Vedere la sezione Osservazioni.
 
 *M*<br/>
-**Modulo**. **Precondizione**: vedere la sezione Note.
+**Modulo**. **Precondizione**: Vedere la sezione Osservazioni.
 
 ## <a name="members"></a>Membri
 
@@ -80,13 +80,13 @@ Se *M* è diverso da zero, i valori degli argomenti di modello *oggetto* e *C* d
 
 Sebbene sia possibile costruire un generatore direttamente da questo motore, è anche possibile usare uno dei typedef predefiniti seguenti.
 
-`minstd_rand0`: motore del 1988 a standard minimo (Lewis, Goodman e Miller, 1969).
+`minstd_rand0`: Motore del 1988 a standard minimo (Lewis, Goodman e Miller, 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand`: motore standard minimo `minstd_rand0` aggiornato (Park, Miller e Stockmeyer, 1993).
+`minstd_rand`: Motore standard minimo `minstd_rand0` aggiornato (Park, Miller e Stockmeyer, 1993).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;

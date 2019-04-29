@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
 ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396781"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Errore del compilatore di risorse RW2003
 
@@ -19,7 +19,7 @@ Errore di generazione
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili
 
-1. **Errore: File di risorse di Bitmap file non è in formato 3.00**
+1. **Errore: File di risorse di bitmap file non è in formato 3.00**
 
    Le immagini bitmap in formato Windows versione 2. x non possono essere usate nei file di risorse della versione 3. x. La mappa di bit deve essere ridisegnato o convertito in formato 3.x.
 

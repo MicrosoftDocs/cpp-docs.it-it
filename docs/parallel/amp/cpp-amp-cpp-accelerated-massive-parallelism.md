@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
 ms.openlocfilehash: f8ac71023f66868a66fb8c54a5e86678225378a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400695"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 
@@ -26,8 +26,8 @@ C++ AMP (C++ Accelerated Massive Parallelism) accelera l'esecuzione del codice C
 |[Uso degli oggetti accelerator e accelerator_view](../../parallel/amp/using-accelerator-and-accelerator-view-objects.md)|Viene descritto come utilizzare gli acceleratori per personalizzare l'esecuzione del codice sulla GPU.|
 |[Uso di C++ AMP in app UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)|Viene descritto come utilizzare C++ AMP nelle App Universal Windows Platform (UWP) che utilizzano i tipi Windows Runtime.|
 |[Grafica (C++ AMP)](../../parallel/amp/graphics-cpp-amp.md)|Viene descritto come usare la libreria grafica di C++ AMP.|
-|[Procedura dettagliata: moltiplicazione di matrici](../../parallel/amp/walkthrough-matrix-multiplication.md)|Viene illustrata la moltiplicazione di matrici utilizzando codice C++ AMP e l'affiancamento.|
-|[Procedura dettagliata: debug di un'applicazione C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|Viene illustrato come creare ed eseguire il debug di un'applicazione che utilizza la riduzione parallela per riassumere una grande matrice di numeri interi.|
+|[Procedura dettagliata: Moltiplicazione di matrici](../../parallel/amp/walkthrough-matrix-multiplication.md)|Viene illustrata la moltiplicazione di matrici utilizzando codice C++ AMP e l'affiancamento.|
+|[Procedura dettagliata: Debug di un'applicazione C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|Viene illustrato come creare ed eseguire il debug di un'applicazione che utilizza la riduzione parallela per riassumere una grande matrice di numeri interi.|
 
 ## <a name="reference"></a>Riferimenti
 

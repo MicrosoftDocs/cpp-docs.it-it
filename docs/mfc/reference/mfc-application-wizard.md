@@ -8,11 +8,11 @@ helpviewer_keywords:
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
 ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412748"
 ---
 # <a name="mfc-application-wizard"></a>Creazione guidata applicazione MFC
 

@@ -1,16 +1,16 @@
 ---
 title: "Procedura dettagliata: Uso del Runtime di concorrenza in un'applicazione abilitata COM"
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
 ms.openlocfilehash: 9d306377be4a000c54fb5556b15263a15b2d4618
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407783"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Procedura dettagliata: Uso del Runtime di concorrenza in un'applicazione abilitata COM
 

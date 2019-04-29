@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 ms.openlocfilehash: 8510bbc89a22fe3eb8df6bbf8ce77db44c7a65a0
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405079"
 ---
 # <a name="hashmultimap-class"></a>Classe hash_multimap
 
@@ -849,7 +849,7 @@ iterator emplace(ValTy&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore usato per eseguire move-contruct su un elemento da inserire nell'oggetto [hash_multimap](../standard-library/hash-multimap-class.md).|
+|*val*|Valore usato per eseguire move-contruct su un elemento da inserire nell'oggetto [hash_multimap](../standard-library/hash-multimap-class.md).|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -906,8 +906,8 @@ iterator emplace_hint(
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore usato per eseguire move-contruct su un elemento da inserire nell'oggetto [hash_multimap](../standard-library/hash-multimap-class.md), a meno che `hash_multimap` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
-|*WHERE*|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
+|*val*|Valore usato per eseguire move-contruct su un elemento da inserire nell'oggetto [hash_multimap](../standard-library/hash-multimap-class.md), a meno che `hash_multimap` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
+|*_Where*|Suggerimento sulla posizione per avviare la ricerca del punto di inserimento corretto.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1176,7 +1176,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE*<br/>
+*_Where*<br/>
 Posizione dell'elemento da rimuovere dall'hash_multimap.
 
 *first*<br/>
