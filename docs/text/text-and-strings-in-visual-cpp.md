@@ -25,11 +25,11 @@ helpviewer_keywords:
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
 ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411799"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Testo e stringhe in Visual C++
 
@@ -46,10 +46,10 @@ Il formato Unicode è una specifica per il supporto di tutti i set di caratteri,
 [Supporto per set di caratteri Multibyte (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 Caratteri MBCS, un'alternativa a Unicode per il supporto di set di caratteri, come quello giapponese o cinese, che non possono essere rappresentato in un singolo byte.
 
-[Mapping testo generico in Tchar. h](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[Mapping di testo generico in tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Fornisce i mapping testo generico specifiche di Microsoft per molti tipi di dati, routine e altri oggetti.
 
-[Procedura: Eseguire la conversione tra vari tipi di stringhe](../text/how-to-convert-between-various-string-types.md)<br/>
+[Procedura: Convertire vari tipi di stringhe](../text/how-to-convert-between-various-string-types.md)<br/>
 Viene illustrato come convertire diversi tipi di stringhe Visual C++ in altre stringhe.
 
 ## <a name="related-sections"></a>Sezioni correlate

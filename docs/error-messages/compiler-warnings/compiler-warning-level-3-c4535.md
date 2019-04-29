@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4535
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
 ms.openlocfilehash: 2483e5803c5de7d63bd2fa9fed97730b7c894137
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401865"
 ---
 # <a name="compiler-warning-level-3-c4535"></a>Avviso del compilatore (livello 3) C4535
 

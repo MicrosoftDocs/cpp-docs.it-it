@@ -6,11 +6,11 @@ helpviewer_keywords:
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
 ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392778"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controlli ActiveX MFC: Aggiunta di proprietà personalizzate
 
@@ -95,6 +95,6 @@ Si noti che l'aggiunta guidata proprietà aggiunge automaticamente una chiamata 
 ## <a name="see-also"></a>Vedere anche
 
 [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controlli ActiveX MFC: Proprietà](../mfc/mfc-activex-controls-properties.md)<br/>
-[Controlli ActiveX MFC: Metodi](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controlli ActiveX MFC: proprietà](../mfc/mfc-activex-controls-properties.md)<br/>
+[Controlli ActiveX MFC: metodi](../mfc/mfc-activex-controls-methods.md)<br/>
 [Classe COleControl](../mfc/reference/colecontrol-class.md)

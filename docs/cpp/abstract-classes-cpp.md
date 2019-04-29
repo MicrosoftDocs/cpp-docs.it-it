@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
 ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385089"
 ---
 # <a name="abstract-classes-c"></a>Classi astratte (C ++)
 
@@ -39,7 +39,7 @@ L'unica differenza tra questa dichiarazione e la precedente è che `PrintBalance
 
 ## <a name="restrictions-on-abstract-classes"></a>Limitazioni alle classi astratte
 
-Non è possibile usare le classi astratte per:
+Non è possibile utilizzare le classi astratte per:
 
 - Variabili o dati dei membri
 
@@ -53,7 +53,7 @@ Un'altra restrizione è che se il costruttore per una classe astratta chiama dir
 
 Le funzioni virtuali pure possono essere definite per le classi astratte, ma possono essere chiamate direttamente solo usando la sintassi:
 
-*abstract-class-name*::*-nome della funzione*)
+*abstract-class-name*::*function-name*()
 
 Questa operazione può essere utile quando si progettano le gerarchie di classe le cui classi base includono i distruttori virtuali pure, poiché i distruttori di classe base sono sempre chiamati nel processo di eliminazione definitiva di un oggetto. Si consideri l'esempio seguente:
 
@@ -84,7 +84,7 @@ int main() {
 Quando l'oggetto a cui si fa riferimento `pDerived` viene eliminato, viene chiamato il distruttore della classe `derived` e quindi quello della classe `base`. L'implementazione vuota per la funzione virtuale pure assicura che esiste almeno un'implementazione per la funzione.
 
 > [!NOTE]
-> Nell'esempio precedente, la funzione virtuale pure `base::~base` viene chiamata in modo implicito da `derived::~derived`. È inoltre possibile chiamare le funzioni virtuali pure in modo esplicito usando un nome di funzione membro completo.
+> Nell'esempio precedente, la funzione virtuale pure `base::~base` viene chiamata in modo implicito da `derived::~derived`. È inoltre possibile chiamare le funzioni virtuali pure in modo esplicito utilizzando un nome di funzione membro completo.
 
 ## <a name="see-also"></a>Vedere anche
 

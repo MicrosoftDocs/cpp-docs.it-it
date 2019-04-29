@@ -5,11 +5,11 @@ helpviewer_keywords:
 - based addressing
 ms.assetid: a68ff750-c7fa-4c0c-8d5f-2df76e4686c5
 ms.openlocfilehash: 8dec9b0bcc7db25e2ec4c39b9d907922691bfc05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393948"
 ---
 # <a name="based-grammar"></a>Grammatica __based
 
@@ -21,15 +21,15 @@ L'unica forma di indirizzamento di base accettabile nelle compilazioni a 32 bit 
 
 ## <a name="grammar"></a>Grammatica
 
-*base-intervallo-modifier*: **based (***espressione di base***)** 
+*based-range-modifier*: **__based(**  *base-expression*  **)**
 
 *base-expression*: *based-variablebased-abstract-declaratorsegment-namesegment-cast*
 
-*base-variable*: *identificatore*
+*based-variable*: *identifier*
 
 *base-abstract-declarator*: *abstract-declarator*
 
-*tipo di base*: *-nome del tipo*
+*base-type*: *type-name*
 
 **Fine sezione specifica Microsoft**
 

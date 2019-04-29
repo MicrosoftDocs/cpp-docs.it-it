@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
 ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399148"
 ---
 # <a name="conditional-operator--"></a>Operatore condizionale:? :
 
@@ -47,7 +47,7 @@ Le espressioni condizionali presentano un'associatività da destra a sinistra. I
 
 - Se entrambi gli operandi sono di tipo void, il tipo comune è il tipo void.
 
-- Se entrambi gli operanti sono dello stesso tipo definito dall'utente, il tipo comune è di quel tipo.
+- Se entrambi gli operandi sono dello stesso tipo definito dall'utente, il tipo comune è di quel tipo.
 
 - Se gli operandi sono di tipi diversi e almeno un operando è di un tipo definito dall'utente, per determinare il tipo comune vengono usate le regole del linguaggio. Vedere l'avviso di seguito.
 

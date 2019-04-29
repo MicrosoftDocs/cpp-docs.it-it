@@ -7,11 +7,11 @@ helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
 ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409252"
 ---
 # <a name="libraryblock"></a>library_block
 

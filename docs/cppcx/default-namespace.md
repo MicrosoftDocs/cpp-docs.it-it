@@ -3,15 +3,15 @@ title: spazio dei nomi predefinito
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
 ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389463"
 ---
 # <a name="default-namespace"></a>spazio dei nomi predefinito
 
-Il `default` dello spazio dei nomi fornisce l'ambito di tipi incorporati supportati da C + + / CX.
+Il `default` dello spazio dei nomi fornisce l'ambito di tipi incorporati supportati da C++/CX.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,7 +32,7 @@ Tutti i tipi incorporati ereditano i membri seguenti.
 
 ### <a name="built-in-types"></a>Tipi incorporati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`char16`|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|
 |`float32`|Numero a virgola mobile IEEE 754 a 32 bit.|

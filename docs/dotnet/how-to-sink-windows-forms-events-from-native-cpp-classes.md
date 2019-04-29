@@ -9,11 +9,11 @@ helpviewer_keywords:
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
 ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387266"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Procedura: Elaborare eventi di Windows Form da classi C++ Native
 

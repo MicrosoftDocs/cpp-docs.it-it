@@ -15,11 +15,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392141"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma suffissa: ++ e --
 
@@ -48,7 +48,7 @@ Applica l'operatore di incremento suffisso a un puntatore a una matrice di ogget
 
 Gli operandi di incremento suffisso e operatori di decremento in forma suffissa devono essere modificabili (non **const**) espressioni l-value di tipo aritmetico o puntatore. Il tipo del risultato è uguale a quello del *postfix-expression*, ma non è più un l-value.
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): l'operando di un'operazione di incremento o decremento operatore potrebbe non essere di tipo **bool**.
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): L'operando di un'operazione di incremento o decremento operatore potrebbe non essere di tipo **bool**.
 
 Il codice seguente illustra l'operatore di incremento suffisso:
 

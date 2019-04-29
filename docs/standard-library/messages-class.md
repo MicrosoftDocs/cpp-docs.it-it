@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383581"
 ---
 # <a name="messages-class"></a>Classe messages
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Catval*<br/>
+*_Catval*<br/>
 Catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Catval*<br/>
+*_Catval*<br/>
 Catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
@@ -149,13 +149,13 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametri
 
-*Catval*<br/>
+*_Catval*<br/>
 Valore di identificazione che specifica il catalogo dei messaggi in cui eseguire ricerche.
 
-*Imposta*<br/>
+*_Set*<br/>
 Primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*Messaggio*<br/>
+*_Message*<br/>
 Secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
 *_Dfault*<br/>
@@ -219,13 +219,13 @@ string_type get(
 
 ### <a name="parameters"></a>Parametri
 
-*Catval*<br/>
+*_Catval*<br/>
 Valore di identificazione che specifica il catalogo dei messaggi in cui eseguire ricerche.
 
-*Imposta*<br/>
+*_Set*<br/>
 Primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*Messaggio*<br/>
+*_Message*<br/>
 Secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
 *_Dfault*<br/>
@@ -264,11 +264,11 @@ Nome delle impostazioni locali.
 
 I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \> 1: Questi valori non definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 

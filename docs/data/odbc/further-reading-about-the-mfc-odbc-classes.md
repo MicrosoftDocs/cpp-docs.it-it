@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395898"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Ulteriori informazioni sulle classi ODBC MFC
 
@@ -23,11 +23,11 @@ Ulteriormente gli argomenti seguenti illustrano i concetti e tecniche introdotte
 
 - [Dynaset](../../data/odbc/dynaset.md)
 
-- [Eccezioni: Eccezioni del database](../../mfc/exceptions-database-exceptions.md)
+- [Eccezioni: eccezioni del database](../../mfc/exceptions-database-exceptions.md)
 
-- [MFC: Uso di classi di Database con documenti e visualizzazioni](../../data/mfc-using-database-classes-with-documents-and-views.md)
+- [MFC: uso di classi di database con documenti e viste](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [MFC: Utilizzo di classi di Database senza documenti e visualizzazioni](../../data/mfc-using-database-classes-without-documents-and-views.md)
+- [MFC: uso di classi di database senza documenti e viste](../../data/mfc-using-database-classes-without-documents-and-views.md)
 
 - [ODBC](../../data/odbc/odbc-basics.md)
 
@@ -39,7 +39,7 @@ Ulteriormente gli argomenti seguenti illustrano i concetti e tecniche introdotte
 
 - [Visualizzazioni di record](../../data/record-views-mfc-data-access.md)
 
-- [Serializzazione: Visual Studio di serializzazione. Input/Output del database](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [Serializzazione: Serializzazione e Input/Output del database](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [Snapshot](../../data/odbc/snapshot.md)
 

@@ -3,11 +3,11 @@ title: Valori letterali definiti dall'utente (C++)
 ms.date: 11/04/2016
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
 ms.openlocfilehash: 1de94b43423bb5b420be29d3cace146e265a1459
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392115"
 ---
 # <a name="user-defined-literals--c"></a>Valori letterali definiti dall'utente (C++)
 
@@ -109,7 +109,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
 
 È possibile usare valori letterali non elaborati per fornire un'interpretazione personalizzata di una sequenza di input diversa rispetto a quella eseguita dal compilatore. Ad esempio, è possibile definire un valore letterale che converte la sequenza `4.75987` in un tipo Decimal personalizzato invece di un tipo a virgola mobile IEEE 754. Analogamente ai valori letterali cooked, i valori letterali non elaborati possono essere usati anche per eseguire la convalida delle sequenze di input in fase di compilazione.
 
-### <a name="example-limitations-of-raw-literals"></a>Esempio: Limitazioni di valori letterali non elaborati
+### <a name="example-limitations-of-raw-literals"></a>Esempio: Limitazioni dei valori letterali non elaborati
 
 L'operatore di valore letterale non elaborato e il modello di operatore di valore letterale funzionano solo per valori letterali definiti dall'utente di tipo integrale e a virgola mobile, come illustrato dall'esempio seguente:
 

@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413216"
 ---
 # <a name="list-class"></a>Classe list
 
@@ -758,7 +758,7 @@ void emplace(iterator Where, Type&& val);
 |Parametro|Descrizione|
 |-|-|
 |*Where*|Posizione nell'oggetto [list](../standard-library/list-class.md) di destinazione dove viene inserito il primo elemento.|
-|*Val*|Elemento aggiunto alla fine dell'oggetto `list`.|
+|*val*|Elemento aggiunto alla fine dell'oggetto `list`.|
 
 ### <a name="remarks"></a>Note
 
@@ -800,7 +800,7 @@ void emplace_back(Type&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Elemento aggiunto alla fine dell'oggetto [list](../standard-library/list-class.md).|
+|*val*|Elemento aggiunto alla fine dell'oggetto [list](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Note
 
@@ -842,7 +842,7 @@ void emplace_front(Type&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Elemento aggiunto all'inizio dell'oggetto [list](../standard-library/list-class.md).|
+|*val*|Elemento aggiunto all'inizio dell'oggetto [list](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Note
 
@@ -1678,7 +1678,7 @@ void push_back(void push_back(Type&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Elemento aggiunto alla fine dell'oggetto list.|
+|*val*|Elemento aggiunto alla fine dell'oggetto list.|
 
 ### <a name="remarks"></a>Note
 
@@ -1734,7 +1734,7 @@ void push_front(Type&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Elemento aggiunto all'inizio dell'oggetto list.|
+|*val*|Elemento aggiunto all'inizio dell'oggetto list.|
 
 ### <a name="remarks"></a>Note
 
@@ -1894,7 +1894,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Valore che, se contenuto da un elemento, comporterà la rimozione dell'elemento dall'elenco.
 
 ### <a name="remarks"></a>Note
@@ -1952,7 +1952,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parametri
 
-*Pred*<br/>
+*pred*<br/>
 Predicato unario che, se soddisfatto da un elemento, comporta l'eliminazione di tale elemento dall'elenco.
 
 ### <a name="example"></a>Esempio
@@ -2106,7 +2106,7 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*<br/>
 Nuova dimensione della stringa.
 
-*Val*<br/>
+*val*<br/>
 Valore dei nuovi elementi da aggiungere all'elenco se la nuova dimensione è maggiore di quella originale. Se il valore viene omesso, ai nuovi elementi viene assegnato il valore predefinito per la classe.
 
 ### <a name="remarks"></a>Note
@@ -2538,7 +2538,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parametri
 
-*Pred*<br/>
+*pred*<br/>
 Predicato binario usato per confrontare gli elementi successivi.
 
 ### <a name="remarks"></a>Note

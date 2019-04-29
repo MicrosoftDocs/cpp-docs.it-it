@@ -14,11 +14,11 @@ helpviewer_keywords:
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 ms.openlocfilehash: 49ee800bafff017c29b73c5f6fd64318009a140a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403464"
 ---
 # <a name="raising-software-exceptions"></a>Generazione di eccezioni software
 
@@ -38,7 +38,7 @@ Il \<file Winerror. h > file Mostra il formato per i codici di eccezione. Per as
 
 |BITS|Impostazione binaria consigliata|Descrizione|
 |----------|--------------------------------|-----------------|
-|31-30|11|Questi due bit descrivono lo stato di base del codice: 11 = errore, 00 = esito positivo, 01 = messaggio informativo, 10 = avviso.|
+|31-30|11|Questi due bit descrivono lo stato di base del codice:  11 = errore, 00 = esito positivo, 01 = messaggio informativo, 10 = avviso.|
 |29|1|Bit client. Impostare su 1 per i codici definiti dall'utente.|
 |28|0|Bit riservati. Lasciare impostato su 0.|
 

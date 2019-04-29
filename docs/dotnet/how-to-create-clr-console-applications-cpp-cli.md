@@ -1,18 +1,18 @@
 ---
-title: 'Procedura: Creare applicazioni Console CLR (C + + CLI)'
+title: 'Procedura: Creare applicazioni Console CLR (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
 ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387480"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Procedura: Creare applicazioni Console CLR (C + + CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Procedura: Creare applicazioni Console CLR (C++/CLI)
 
 È possibile usare il modello di applicazione console per creare un progetto di applicazione console che dispone già dei riferimenti al progetto e dei file essenziali.
 

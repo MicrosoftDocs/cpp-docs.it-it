@@ -3,17 +3,17 @@ title: Sistema di tipi (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
 ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392089"
 ---
 # <a name="type-system-ccx"></a>Sistema di tipi (C++/CX)
 
-Con l'architettura di Windows Runtime, è possibile usare C + + c++ /CX, Visual Basic, Visual c# e JavaScript per scrivere App e componenti che direttamente l'accesso all'API Windows e l'interagiscono con altri componenti e le app di Windows Runtime. App della piattaforma di Windows universali che vengono scritte in C++ compilate in codice nativo eseguibile direttamente nella CPU. App della piattaforma di Windows universali che vengono scritti in c# o Visual Basic compilare in Microsoft intermediate language (MSIL) ed eseguirlo in common language runtime (CLR). App della piattaforma di Windows universali che vengono scritte in JavaScript eseguite in un ambiente di runtime. Componenti del sistema operativo Windows Runtime stessi vengono scritti in C++ ed eseguiti come codice nativo. Tutti questi componenti e le app Universal Windows Platform comunicare direttamente tramite l'interfaccia binaria (ABI) applicazione di Windows Runtime.
+Con l'architettura di Windows Runtime, è possibile usare C++/CX, Visual Basic, Visual C# e JavaScript per scrivere App e componenti che direttamente l'accesso all'API Windows e l'interagiscono con altri componenti e le app di Windows Runtime. App della piattaforma di Windows universali che vengono scritte in C++ compilate in codice nativo eseguibile direttamente nella CPU. App della piattaforma di Windows universali che vengono scritti in c# o Visual Basic compilare in Microsoft intermediate language (MSIL) ed eseguirlo in common language runtime (CLR). App della piattaforma di Windows universali che vengono scritte in JavaScript eseguite in un ambiente di runtime. Componenti del sistema operativo Windows Runtime stessi vengono scritti in C++ ed eseguiti come codice nativo. Tutti questi componenti e le app Universal Windows Platform comunicare direttamente tramite l'interfaccia binaria (ABI) applicazione di Windows Runtime.
 
-Per abilitare il supporto per il Runtime di Windows in un linguaggio C++ moderno, Microsoft ha creato il C + + / CX. C + c++ /CX fornisce tipi di base incorporati e implementazioni di tipi Windows Runtime fondamentali che consentono le app C++ e componenti per comunicare tramite l'interfaccia ABI con App scritte in altri linguaggi. È possibile utilizzare qualsiasi tipo Windows Runtime o creare le classi, struct, interfacce e altri tipi definiti dall'utente che possono essere utilizzati da altri componenti e le app della piattaforma Windows universale. un'app Universal Windows Platform che viene scritto in C + + c++ /CX può anche usare struct e classi C++ regolari, purché non dispongono di accessibilità pubblica.
+Per abilitare il supporto per il Runtime di Windows in un moderno C++ espressione idiomatica, Microsoft ha creato il C++/CX. C + c++ /CX fornisce tipi di base incorporati e implementazioni di tipi Windows Runtime fondamentali che consentono le app C++ e componenti per comunicare tramite l'interfaccia ABI con App scritte in altri linguaggi. È possibile utilizzare qualsiasi tipo Windows Runtime o creare le classi, struct, interfacce e altri tipi definiti dall'utente che possono essere utilizzati da altri componenti e le app della piattaforma Windows universale. un'app Universal Windows Platform che viene scritto in C++/CX può anche usare normali C++ classi e struct a condizione che non dispongono di accessibilità pubblica.
 
 Per un'analisi approfondita della proiezione del linguaggio C++/CX e del modo in cui funziona, vedi questi post di blog:
 
@@ -42,14 +42,14 @@ La visibilità di un tipo o di un metodo nei metadati dipende da quali modificat
 |protected|internal|
 |protetto pubblico|protetto privato|
 
-È possibile utilizzare il **Visualizzatore oggetti** per visualizzare il contenuto dei file .winmd. Nel file di Windows. winmd sono i componenti Windows Runtime inclusi in Windows. Il file winmd contiene i tipi fondamentali utilizzati in C + + c++ /CX e Platform. winmd contiene i tipi aggiuntivi dallo spazio dei nomi Platform. Per impostazione predefinita, questi tre file con estensione winmd sono inclusi in tutti i progetti C++ per le app Universal Windows Platform.
+È possibile utilizzare il **Visualizzatore oggetti** per visualizzare il contenuto dei file .winmd. Nel file di Windows. winmd sono i componenti Windows Runtime inclusi in Windows. Il file winmd contiene i tipi fondamentali utilizzati in C++/CX e Platform. winmd contiene i tipi aggiuntivi dallo spazio dei nomi Platform. Per impostazione predefinita, questi tre file con estensione winmd sono inclusi in tutti i progetti C++ per le app Universal Windows Platform.
 
 > [!TIP]
 > I tipi nell'oggetto [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) non sono presenti nel file .winmd perché non sono pubblici. Sono implementazioni specifiche di C++ private delle interfacce definite in `Windows::Foundation::Collections`. Un'app di Windows Runtime scritta in JavaScript o c# non riconosce una [classe Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) è, ma può utilizzare un `Windows::Foundation::Collections::IVector`. I tipi `Platform::Collections` sono definiti nel file collection.h.
 
-## <a name="windows-runtime-type-system-in-ccx"></a>Sistema di tipi Windows Runtime in C + + c++ /CX
+## <a name="windows-runtime-type-system-in-ccx"></a>Sistema di tipi Windows Runtime in C++/CX
 
-Le sezioni seguenti descrivono le principali funzionalità di sistema dei tipi Windows Runtime e come vengono supportati in C + + / CX.
+Le sezioni seguenti descrivono le principali funzionalità di sistema dei tipi Windows Runtime e come vengono supportati C++/CX.
 
 ### <a name="namespaces"></a>Spazi dei nomi
 
@@ -77,13 +77,13 @@ Per ulteriori informazioni, vedi [Stringhe](../cppcx/strings-c-cx.md).
 
 ### <a name="arrays"></a>Matrici
 
-Il Runtime di Windows supporta array 1-dimensionale di qualsiasi tipo. Le matrici di matrici non sono supportate.  In C + + c++ /CX, matrici di Windows Runtime vengono proiettate come le [classe platform:: Array](../cppcx/platform-array-class.md).
+Il Runtime di Windows supporta array 1-dimensionale di qualsiasi tipo. Le matrici di matrici non sono supportate.  In C++/CX, matrici di Windows Runtime vengono proiettate come il [classe platform:: Array](../cppcx/platform-array-class.md).
 
 Per altre informazioni, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
 
 ### <a name="ref-classes-and-structs"></a>Classi e struct di riferimento
 
-Una classe di Windows Runtime viene proiettata in C + + c++ /CX come una classe o uno struct di riferimento, perché vengono copiati dal riferimento. La gestione della memoria per le classi e gli struct di riferimento avviene in modo trasparente attraverso il conteggio dei riferimenti. Quando l'ultimo riferimento a un oggetto esce dall'ambito, l'oggetto viene rimosso. Una classe o uno struct di riferimento presenta le seguenti caratteristiche:
+Una classe di Windows Runtime viene proiettata C++/CX come una classe o uno struct di riferimento, perché vengono copiati dal riferimento. La gestione della memoria per le classi e gli struct di riferimento avviene in modo trasparente attraverso il conteggio dei riferimenti. Quando l'ultimo riferimento a un oggetto esce dall'ambito, l'oggetto viene rimosso. Una classe o uno struct di riferimento presenta le seguenti caratteristiche:
 
 - Contengono costruttori, metodi, proprietà ed eventi come membri. Questi membri possono avere accessibilità interna, protetta, privata o pubblica.
 
@@ -115,7 +115,7 @@ Una proprietà è un membro dati pubblico di qualsiasi tipo Windows Runtime e vi
 
 Per ulteriori informazioni, vedi [Proprietà](../cppcx/properties-c-cx.md).
 
-### <a name="windows-runtime-collections-in-ccx"></a>Le raccolte di Windows Runtime in C + + c++ /CX
+### <a name="windows-runtime-collections-in-ccx"></a>Le raccolte di Windows Runtime in C++/CX
 
 Il Runtime di Windows definisce un set di interfacce per i tipi di raccolta che ogni linguaggio implementa secondo le proprie regole. C + c++ /CLI CX fornisce le implementazioni nel [classe Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md), [:: Collections](../cppcx/platform-collections-map-class.md)e altri tipi di raccolta concreti correlati, compatibili con le Controparti STL (Template Library) standard.
 

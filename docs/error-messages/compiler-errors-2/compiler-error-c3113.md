@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3113
 ms.assetid: 3afdc668-b29e-474e-9ea3-aa027d42db7c
 ms.openlocfilehash: b8edd31db87587887d9e96522802ee9091caab91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404130"
 ---
 # <a name="compiler-error-c3113"></a>Errore del compilatore C3113
 

@@ -18,13 +18,13 @@ helpviewer_keywords:
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
 ms.openlocfilehash: 66f3b5a33791d20297cde6e6223ba65189a99682
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384714"
 ---
-# <a name="pure-and-verifiable-code-ccli"></a>Codice pure e verificabile (C + + CLI)
+# <a name="pure-and-verifiable-code-ccli"></a>Codice pure e verificabile (C++/CLI)
 
 Per la programmazione .NET, Visual C++ in Visual Studio 2017 supporta la creazione di assembly misti usando il [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) opzione del compilatore. Il **/clr: pure** e **/CLR: safe** opzioni sono deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017. Se il codice deve essere sicuro o verificabile e quindi è consigliabile convertirlo per C#.
 

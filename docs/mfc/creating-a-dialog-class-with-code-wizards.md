@@ -8,11 +8,11 @@ helpviewer_keywords:
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
 ms.openlocfilehash: d99188a3a70965f33a8038eb904f606e74c1591b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405885"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>Creazione di una classe di finestre di dialogo con creazioni guidate codice
 

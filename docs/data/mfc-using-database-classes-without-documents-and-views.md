@@ -18,11 +18,11 @@ helpviewer_keywords:
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396015"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Utilizzo di classi di Database senza documenti e visualizzazioni
 
@@ -59,7 +59,7 @@ La creazione guidata applicazione MFC offre diverse opzioni **seleziona il suppo
 |**Visualizzazione database senza supporto file**|Derivato da `CRecordView`|Fornisce il supporto dei documenti, ma non per la serializzazione. Documento può archiviare recordset e coordinare più viste. non supporta la serializzazione o la **New**, **Open**, **Salva**, e **Salva con nome** comandi. Visualizzare [le applicazioni con i documenti minimo](#_core_applications_with_minimal_documents). Se si include una vista di database, è necessario specificare l'origine dei dati.<br /><br /> Include i file di intestazione di database, le librerie di collegamento, una visualizzazione di record e un set di record. (Disponibile solo per le applicazioni con il **Supporto architettura documento/visualizzazione** opzione selezionata sulle [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) pagina.)|
 |**Vista di database con supporto file**|Derivato da `CRecordView`|Fornisce supporto per il documento completo, incluso la serializzazione e relative al documento **File** i comandi di menu. Le applicazioni di database è in genere funzionano in base al record anziché su un file per ogni singolo e pertanto non è necessaria la serializzazione. Tuttavia, potrebbe essere un utilizzo speciale per la serializzazione. Visualizzare [le applicazioni con i documenti minimo](#_core_applications_with_minimal_documents). Se si include una vista di database, è necessario specificare l'origine dei dati.<br /><br /> Include i file di intestazione di database, le librerie di collegamento, una visualizzazione di record e un set di record. (Disponibile solo per le applicazioni con il **Supporto architettura documento/visualizzazione** opzione selezionata sulle [tipo di applicazione, creazione guidata applicazione MFC](../mfc/reference/application-type-mfc-application-wizard.md) pagina.)|
 
-Per una discussione di alternative alla serializzazione e all'utilizzo per la serializzazione, vedere [serializzazione: Visual Studio di serializzazione. Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md).
+Per una discussione di alternative alla serializzazione e all'utilizzo per la serializzazione, vedere [serializzazione: Serializzazione e Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md).
 
 ##  <a name="_core_applications_with_minimal_documents"></a> Applicazioni con i documenti minimo
 
@@ -81,7 +81,7 @@ Selezionare l'opzione di database di creazione guidata applicazione **vista senz
 
 ###  <a name="_core_a_document_with_file_support"></a> Documento con il supporto di File
 
-Selezionare l'opzione di database di creazione guidata applicazione **vista con supporto per file di Database** quando si dispone di un utilizzo alternativo per il documento correlato **File** comandi di menu e la serializzazione di documenti. Per la parte di accesso ai dati del programma, è possibile usare il documento nello stesso modo come descritto in [documento senza supporto File](#_core_a_document_without_file_support). È possibile usare funzionalità di serializzazione del documento, ad esempio, per leggere e scrivere un documento del profilo utente serializzato che archivia le preferenze dell'utente o altre informazioni utili. Per altre informazioni, vedere [serializzazione: Visual Studio di serializzazione. Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md).
+Selezionare l'opzione di database di creazione guidata applicazione **vista con supporto per file di Database** quando si dispone di un utilizzo alternativo per il documento correlato **File** comandi di menu e la serializzazione di documenti. Per la parte di accesso ai dati del programma, è possibile usare il documento nello stesso modo come descritto in [documento senza supporto File](#_core_a_document_without_file_support). È possibile usare funzionalità di serializzazione del documento, ad esempio, per leggere e scrivere un documento del profilo utente serializzato che archivia le preferenze dell'utente o altre informazioni utili. Per altre informazioni, vedere [serializzazione: Serializzazione e Input/Output del database](../mfc/serialization-serialization-vs-database-input-output.md).
 
 La creazione guidata applicazione supporta questa opzione, ma è necessario scrivere il codice che serializza il documento. Store le informazioni serializzate in membri dati del documento.
 

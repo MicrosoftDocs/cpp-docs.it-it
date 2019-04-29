@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2929
 ms.assetid: 11134027-6adc-4733-b6bd-b94486bd1933
 ms.openlocfilehash: fe2a56f7722c70c11e980fb6ee59230ffd056c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385719"
 ---
 # <a name="compiler-error-c2929"></a>Errore del compilatore C2929
 

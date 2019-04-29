@@ -5,11 +5,11 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, x86
 ms.openlocfilehash: a55f237381b1c372c304bf67886bcf22cc85f61d
-ms.sourcegitcommit: 2ce88de75e7681220ae09a0ab13056f22f357a46
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59982395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389645"
 ---
 # <a name="x86-intrinsics-list"></a>x86 elenco oggetti intrinseci
 

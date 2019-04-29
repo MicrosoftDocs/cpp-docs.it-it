@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4806
 ms.assetid: 79eb74cd-b925-4b5b-84e1-8ae6f33e38b3
 ms.openlocfilehash: b6fc5708d4e2f9982ceaab57260f13e134e4d247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406405"
 ---
 # <a name="compiler-warning-level-1-c4806"></a>Avviso del compilatore (livello 1) C4806
 

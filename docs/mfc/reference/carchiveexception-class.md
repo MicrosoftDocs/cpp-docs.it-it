@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
 ms.openlocfilehash: 731735bccf9225e67d82b1fe90336c92a630b368
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391309"
 ---
 # <a name="carchiveexception-class"></a>Classe CArchiveException
 
@@ -118,7 +118,7 @@ Questo membro dati è una variabile pubblica di tipo **int**. I relativi valori 
     >  Questi enumeratori di causa `CArchiveException` sono diversi dagli enumeratori di causa `CFileException`.
 
     > [!NOTE]
-    > `CArchiveException::generic` è stato deprecato. In alternativa, usare `genericException`. Se **generico** viene usato in un'applicazione e compilato con /clr, vi saranno errori di sintassi che non sono facili da decifrare.
+    > `CArchiveException::generic` è stato deprecato. In alternativa, utilizzare `genericException`. Se **generico** viene usato in un'applicazione e compilato con /clr, vi saranno errori di sintassi che non sono facili da decifrare.
 
 ##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName
 

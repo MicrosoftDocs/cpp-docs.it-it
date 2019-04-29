@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
 ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386271"
 ---
 # <a name="cgopherconnection-class"></a>Classe CGopherConnection
 

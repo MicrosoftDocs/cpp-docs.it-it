@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396784"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Errore del compilatore di risorse RW2002
 
@@ -69,7 +69,7 @@ Errore di analisi
 
 1. **nome della classe controllo previsto**
 
-   Il `class` campo di un **controllo** istruzione nel **finestra di dialogo** istruzione deve essere uno dei seguenti tipi: pulsante, casella combinata, modifica, LISTBOX, della barra di scorrimento, statico, o definito dall'utente. Assicurarsi che la classe sia stata digitata correttamente.
+   Il `class` campo di un **controllo** istruzione nel **dialogo** istruzione deve essere uno dei seguenti tipi: PULSANTE, casella combinata, modifica, LISTBOX, della barra di scorrimento, statico, o definito dall'utente. Assicurarsi che la classe sia stata digitata correttamente.
 
 1. **Previsto nome del tipo di carattere**
 
@@ -141,7 +141,7 @@ Errore di analisi
 
 1. **tipo di controllo non valido**
 
-   Ogni istruzione di controllo in una **dialogo** istruzione deve essere uno dei seguenti: casella di controllo, casella combinata, controllo, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICONA, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, della barra di scorrimento. Assicurarsi che queste istruzioni di controllo siano state digitate correttamente.
+   Ogni istruzione di controllo in una **dialogo** istruzione deve essere uno dei seguenti: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICON, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, SCROLLBAR. Assicurarsi che queste istruzioni di controllo siano state digitate correttamente.
 
 1. **Tipo non valido**
 

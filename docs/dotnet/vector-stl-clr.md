@@ -98,11 +98,11 @@ helpviewer_keywords:
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
 ms.openlocfilehash: 09a0919cd47937960736c6cccf31343c5e12087d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384387"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -248,7 +248,7 @@ Fine dell'intervallo da inserire.
 *right*<br/>
 Enumerazione da inserire.
 
-*Val*<br/>
+*val*<br/>
 Valore dell'elemento da inserire.
 
 ### <a name="remarks"></a>Note
@@ -314,7 +314,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Note
@@ -405,7 +405,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> Vector::back_item (STL/CLR)
+## <a name="back_item"></a> vector::back_item (STL/CLR)
 
 Accede all'ultimo elemento.
 
@@ -456,7 +456,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a> Vector:: Begin (STL/CLR)
+## <a name="begin"></a> vector::begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -618,7 +618,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> Vector:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> vector::const_iterator (STL/CLR)
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -703,7 +703,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> Vector:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> vector::const_reverse_iterator (STL/CLR)
 
 Il tipo di iteratore inverso costante per la sequenza controllata...
 
@@ -745,7 +745,7 @@ int main()
 c b a
 ```
 
-## <a name="difference_type"></a> Vector:: difference_type (STL/CLR)
+## <a name="difference_type"></a> vector::difference_type (STL/CLR)
 
 I tipi di una distanza signed tra due elementi.
 
@@ -1036,7 +1036,7 @@ front() = a
 x b c
 ```
 
-# <a name="front_item"></a> Vector::front_item (STL/CLR)
+# <a name="front_item"></a> vector::front_item (STL/CLR)
 Accede al primo elemento.
 
 ### <a name="syntax"></a>Sintassi
@@ -1209,7 +1209,7 @@ a b c
 a a c
 ```
 
-# <a name="generic_reverse_iterator"></a> Vector::generic_reverse_iterator (STL/CLR)
+# <a name="generic_reverse_iterator"></a> vector::generic_reverse_iterator (STL/CLR)
 Il tipo di un iteratore inverso per l'uso con l'interfaccia generica per il contenitore.
 
 ### <a name="syntax"></a>Sintassi
@@ -1265,7 +1265,7 @@ a b c
 a c c
 ```
 
-## <a name="generic_value"></a> Vector::generic_value (STL/CLR)
+## <a name="generic_value"></a> vector::generic_value (STL/CLR)
 
 Il tipo di elemento per l'uso con l'interfaccia generica per il contenitore.
 
@@ -1321,7 +1321,7 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a> Vector:: Insert (STL/CLR)
+## <a name="insert"></a> vector::insert (STL/CLR)
 
 Aggiunge elementi in una posizione specificata.
 
@@ -1350,7 +1350,7 @@ Fine dell'intervallo da inserire.
 *right*<br/>
 Enumerazione da inserire.
 
-*Val*<br/>
+*val*<br/>
 Valore dell'elemento da inserire.
 
 *where*<br/>
@@ -1479,7 +1479,7 @@ a b c
 x b c
 ```
 
-## <a name="op_as"></a> Vector:: operator = (STL/CLR)
+## <a name="op_as"></a> vector::operator= (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -1532,7 +1532,7 @@ a b c
 a b c
 ```
 
-## <a name="op"></a> Vector::operator(STL/CLR)
+## <a name="op"></a> vector::operator(STL/CLR)
 
 Accede a un elemento in una posizione specificata.
 
@@ -1544,7 +1544,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Note
@@ -1584,7 +1584,7 @@ a b c
 a x c
 ```
 
-## <a name="pop_back"></a> Vector:: pop_back (STL/CLR)
+## <a name="pop_back"></a> vector::pop_back (STL/CLR)
 
 Rimuove l'ultimo elemento.
 
@@ -1631,7 +1631,7 @@ a b c
 a b
 ```
 
-## <a name="push_back"></a> Vector:: push_back (STL/CLR)
+## <a name="push_back"></a> vector::push_back (STL/CLR)
 
 Aggiunge un nuovo ultimo elemento.
 
@@ -1892,7 +1892,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="resize"></a> Vector:: resize (STL/CLR)
+## <a name="resize"></a> vector::resize (STL/CLR)
 
 Modifica il numero di elementi.
 
@@ -1905,10 +1905,10 @@ void resize(size_type new_size, value_type val);
 
 #### <a name="parameters"></a>Parametri
 
-*NEW_SIZE*<br/>
+*new_size*<br/>
 Nuova dimensione della sequenza controllata.
 
-*Val*<br/>
+*val*<br/>
 Valore dell'elemento di spaziatura.
 
 ### <a name="remarks"></a>Note
@@ -1952,7 +1952,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse_iterator"></a> Vector:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> vector::reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -2001,7 +2001,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a> Vector:: Size (STL/CLR)
+## <a name="size"></a> vector::size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -2054,7 +2054,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> Vector:: size_type (STL/CLR)
+## <a name="size_type"></a> vector::size_type (STL/CLR)
 
 Tipo di una distanza Signed tra due elementi.
 
@@ -2212,7 +2212,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> Vector:: value_type (STL/CLR)
+## <a name="value_type"></a> vector::value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -2288,7 +2288,7 @@ Fine dell'intervallo da inserire.
 *right*<br/>
 Oggetto o un intervallo da inserire.
 
-*Val*<br/>
+*val*<br/>
 Valore dell'elemento da inserire.
 
 ### <a name="remarks"></a>Note
@@ -2402,7 +2402,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="op_neq"></a> operatore! = (vettore di) (STL/CLR)
+## <a name="op_neq"></a> operator!= (vector) (STL/CLR)
 
 Confronto non uguale al vettore.
 
@@ -2471,7 +2471,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operatore&lt; (vettore di) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (vector) (STL/CLR)
 
 Vettore di minore di confronto.
 
@@ -2540,7 +2540,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operatore&lt;= (vettore di) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (vector) (STL/CLR)
 
 Vector minore o uguale confronto.
 
@@ -2609,7 +2609,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operatore = = (vettore di) (STL/CLR)
+## <a name="op_eq"></a> operator== (vector) (STL/CLR)
 
 Confronto uguale vettore.
 
@@ -2678,7 +2678,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operatore&gt; (vettore di) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (vector) (STL/CLR)
 
 Confronto maggiore di vettore.
 
@@ -2747,7 +2747,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operatore&gt;= (vettore di) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (vector) (STL/CLR)
 
 Confronto uguale o maggiore del vettore.
 

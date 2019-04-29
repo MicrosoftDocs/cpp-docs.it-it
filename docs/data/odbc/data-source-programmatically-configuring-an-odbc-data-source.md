@@ -10,11 +10,11 @@ helpviewer_keywords:
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
 ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395930"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origine dati: Configurazione a livello di codice di un'origine dati ODBC
 

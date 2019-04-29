@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3799
 ms.assetid: 336a2811-9370-4e6e-b03b-325bda470805
 ms.openlocfilehash: 19ff414bde9bb24fca62fd10cfef6d18109199e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400123"
 ---
 # <a name="compiler-error-c3799"></a>Errore del compilatore C3799
 
 proprietà indicizzata non può avere un elenco di parametri vuoto
 
-È stata dichiarata in modo errato una proprietà indicizzata. Per altre informazioni, vedere [procedura: utilizzare le proprietà in C + + c++ /CLI CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+È stata dichiarata in modo errato una proprietà indicizzata. Per altre informazioni, vedere [Procedura: Usare le proprietà in C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Esempio
 

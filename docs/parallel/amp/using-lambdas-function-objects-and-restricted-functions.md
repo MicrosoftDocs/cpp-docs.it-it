@@ -3,15 +3,15 @@ title: Utilizzo di espressioni lambda, oggetti funzione e funzioni con restrizio
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
 ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405326"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Utilizzo di espressioni lambda, oggetti funzione e funzioni con restrizioni
 
-Il codice C++ AMP che si desidera eseguire sull'acceleratore viene specificato come argomento in una chiamata ai [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) (metodo). È possibile specificare un'espressione lambda o un oggetto funzione (functor) come argomento. Inoltre, la lambda espressione o l'oggetto funzione può chiamare una funzione con limitazioni AMP C++. In questo argomento Usa un algoritmo di somma di matrice per illustrare le espressioni lambda, oggetti funzione e funzioni con restrizioni. Nell'esempio seguente viene illustrato l'algoritmo senza codice C++ AMP. Vengono create due matrici 1-dimensionale di uguale lunghezza. Gli elementi integer corrispondenti vengono aggiunti e archiviati in una terza matrice dimensionale-1. C++ AMP non viene utilizzato.
+Il C++ codice AMP che si desidera eseguire sull'acceleratore viene specificato come argomento in una chiamata per il [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metodo. È possibile specificare un'espressione lambda o un oggetto funzione (functor) come argomento. Inoltre, la lambda espressione o l'oggetto funzione può chiamare una funzione con limitazioni AMP C++. In questo argomento Usa un algoritmo di somma di matrice per illustrare le espressioni lambda, oggetti funzione e funzioni con restrizioni. Nell'esempio seguente viene illustrato l'algoritmo senza codice C++ AMP. Vengono create due matrici 1-dimensionale di uguale lunghezza. Gli elementi integer corrispondenti vengono aggiunti e archiviati in una terza matrice dimensionale-1. C++ AMP non viene utilizzato.
 
 ```cpp
 void CpuMethod() {

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
 ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404741"
 ---
 # <a name="transporting-exceptions-between-threads"></a>Trasporto delle eccezioni tra thread
 
-Visual C++ supporta *trasferimento di un'eccezione* da un thread a altro. Il trasferimento delle eccezioni consente di rilevare un'eccezione in un thread e di fare in modo che sembri generata da un altro thread. È ad esempio possibile utilizzare questa funzionalità per scrivere un'applicazione multithreading in cui il thread principale gestisce tutte le eccezioni generate dai thread secondari. Il trasferimento delle eccezioni è utile soprattutto agli sviluppatori che intendono creare sistemi o librerie di programmazione parallela. Per implementare il trasferimento delle eccezioni, Visual C++ fornisce le [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) tipo e il [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), e [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funzioni.
+Visual C++ supporta *trasferimento di un'eccezione* da un thread a altro. Il trasferimento delle eccezioni consente di rilevare un'eccezione in un thread e di fare in modo che sembri generata da un altro thread. È ad esempio possibile utilizzare questa funzionalità per scrivere un'applicazione multithreading in cui il thread principale gestisce tutte le eccezioni generate dai thread secondari. Il trasferimento delle eccezioni è utile soprattutto agli sviluppatori che intendono creare sistemi o librerie di programmazione parallela. Per implementare il trasferimento delle eccezioni, oggetto visivo C++ fornisce il [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) tipo e il [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)e [make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funzioni.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,7 +42,7 @@ namespace std
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*non è specificato*|Classe interna non specificata utilizzata per implementare il tipo `exception_ptr`.|
+|*unspecified*|Classe interna non specificata utilizzata per implementare il tipo `exception_ptr`.|
 |*p*|Oggetto `exception_ptr` che fa riferimento a un'eccezione.|
 |*E*|Classe che rappresenta un'eccezione.|
 |*e*|Istanza della classe del parametro `E`.|

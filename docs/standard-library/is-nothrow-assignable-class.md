@@ -7,11 +7,11 @@ helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
 ms.openlocfilehash: c59c3623f9c9548a7b7e59d0c56a2acd4d3883a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383620"
 ---
 # <a name="isnothrowassignable-class"></a>Classe is_nothrow_assignable
 

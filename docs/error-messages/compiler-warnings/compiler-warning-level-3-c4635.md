@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
 ms.openlocfilehash: 21873a883b19924ce3ef41511d65f8ae640875f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401722"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>Avviso del compilatore (livello 3) C4635
 
@@ -33,6 +33,6 @@ L'esempio seguente genera l'errore C4635:
 public ref class Test {};
 ```
 
-L'output relativo a questo esempio è: **Il tag finale 'member' non corrisponde al tag iniziale 'summary'**.
+Si noti che l'output relativo a questo esempio è: **Fine tag 'member' non corrisponde al tag iniziale 'summary'.**
 
 Il problema con questo esempio è che il tag di fine per \<summary > non è corretta, e il compilatore non lo riconosce come il \<riepilogo > tag di fine.  Il \<membro > tag è incorporato nel file con estensione xdc dal compilatore nelle compilazioni /doc.  Quindi, qui il problema è che il tag di fine \</member >, non corrisponde al tag iniziale precedente che il compilatore elaborato (\<riepilogo >.

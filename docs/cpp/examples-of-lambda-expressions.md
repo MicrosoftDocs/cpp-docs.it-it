@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392193"
 ---
 # <a name="examples-of-lambda-expressions"></a>Esempi di espressioni lambda
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>Esempio
 
 È possibile usare le espressioni lambda nel corpo di una funzione. L'espressione lambda può accedere a qualsiasi funzione o membro dati a cui può accedere la funzione contenitrice. È possibile acquisire in modo esplicito o implicito il **ciò** puntatore per fornire l'accesso ai membri di funzioni e i dati della classe contenitrice.
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): acquisire **ciò** per valore (`[*this]`) quando viene utilizzata l'espressione lambda in operazioni parallele o asincrone in cui il codice venga eseguito dopo l'oggetto originale esce dall'ambito.
+**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Acquisire **ciò** base al valore (`[*this]`) quando l'espressione lambda viene utilizzata nelle operazioni parallele o asincrone in cui il codice venga eseguito dopo che l'oggetto originale esce dall'ambito.
 
 È possibile usare la **ciò** puntatore in modo esplicito in una funzione, come illustrato di seguito:
 
@@ -479,7 +479,7 @@ Per altre informazioni sulla gestione delle eccezioni, vedere [gestione delle ec
 
 [[Contenuto dell'articolo](#top)]
 
-##  <a name="managedLambdaExpressions"></a> Usando le espressioni Lambda con tipi gestiti (C + + CLI)
+##  <a name="managedLambdaExpressions"></a> Utilizzo di espressioni Lambda con tipi gestiti (C++/CLI)
 
 ### <a name="example"></a>Esempio
 

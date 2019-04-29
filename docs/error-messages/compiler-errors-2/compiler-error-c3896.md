@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3896
 ms.assetid: eb8be0f6-5b4e-4d71-8285-8a2a94f8ba29
 ms.openlocfilehash: 00e103720dc666b17566b67da19d4e908bb3addd
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59776080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385524"
 ---
 # <a name="compiler-error-c3896"></a>Errore del compilatore C3896
 

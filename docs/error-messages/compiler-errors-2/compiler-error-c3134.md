@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3134
 ms.assetid: f887e4d2-7740-49e4-9972-7edceb8fa77b
 ms.openlocfilehash: 54728e7da0b74b45c7900958df0813bd4241088c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390620"
 ---
 # <a name="compiler-error-c3134"></a>Errore del compilatore C3134
 
