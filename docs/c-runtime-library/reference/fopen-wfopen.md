@@ -33,11 +33,11 @@ helpviewer_keywords:
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
 ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333339"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -115,7 +115,7 @@ Se *modalità* viene **", ccs =**_codifica_**"**, **fopen** tenta innanzitutto d
 
 La stringa di caratteri *modalità* specifica il tipo di accesso richiesto per il file, come indicato di seguito.
 
-|*mode*|Accedi a|
+|*mode*|Accesso|
 |-|-|
 | **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **fopen** chiamata ha esito negativo. |
 | **"w"** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |

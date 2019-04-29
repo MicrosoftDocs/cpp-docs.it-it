@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335381"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -55,7 +55,7 @@ Il valore di bit della parola di controllo corrente.
 *newControl*<br/>
 Valori di bit della parola di controllo nuova.
 
-*Maschera*<br/>
+*mask*<br/>
 Maschera di bit della parola di controllo nuova da impostare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -68,7 +68,7 @@ Il **controlfp_s** funzione è una versione indipendente dalla piattaforma e pi�
 
 Se il valore per *maschera* è uguale a 0, **controlfp_s** Ottiene la parola di controllo a virgola mobile e archivia il valore recuperato in *currentControl*.
 
-Se *maschera* è diverso da zero, viene impostato un nuovo valore per la parola di controllo: per ogni bit impostato (vale a dire, uguale a 1) nel *maschera*, il bit corrispondente nella *nuovo* viene usato per aggiornare il controllo Word. In altre parole, *fpcntrl* = ((*fpcntrl* & ~*maschera*) &#124; (*newControl* & *maschera* )) in cui *fpcntrl* corrisponde alla parola di controllo a virgola mobile. In questo scenario *currentControl* è impostata sul valore dopo il completamento della modifica, non è il valore di bit della parola di controllo precedente.
+Se *mask* è diverso da zero, viene impostato un nuovo valore per la parola di controllo: Per uno qualsiasi di bit che viene impostato (vale a dire, uguale a 1) nella *maschera*, il bit corrispondente nella *nuove* viene usato per aggiornare la parola di controllo. In altre parole, *fpcntrl* = ((*fpcntrl* & ~*maschera*) &#124; (*newControl* & *maschera* )) in cui *fpcntrl* corrisponde alla parola di controllo a virgola mobile. In questo scenario *currentControl* è impostata sul valore dopo il completamento della modifica, non è il valore di bit della parola di controllo precedente.
 
 > [!NOTE]
 > Per impostazione predefinita, le librerie di runtime mascherano tutte le eccezioni a virgola mobile.
@@ -117,7 +117,7 @@ Per il **_MCW_EM** maschera, deselezionandolo imposta l'eccezione, che consente 
 |**_MCW_EM** (maschera eccezione interruzione)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
 |**_MCW_IC** (controllo infinito)<br /><br /> (Non su ARM o x64 piattaforme supportate.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
 |**_MCW_RC** (controllo arrotondamento)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** (controllo precisione)<br /><br /> (Non su ARM o x64 piattaforme supportate.)|0x00030000|**_PC_24** (24 bit)<br /><br /> **_PC_53** (53 bit)<br /><br /> **_PC_64** (64 bit)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_PC** (controllo precisione)<br /><br /> (Non su ARM o x64 piattaforme supportate.)|0x00030000|**_PC_24** (24 bits)<br /><br /> **_PC_53** (53 bits)<br /><br /> **_PC_64** (64 bits)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>Requisiti
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
 ms.openlocfilehash: f1fad1ad18af54945ef32dadaac50a6de4dbd62f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366381"
 ---
 # <a name="compiler-error-c2893"></a>Errore del compilatore C2893
 

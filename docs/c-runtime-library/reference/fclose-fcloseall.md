@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334879"
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
@@ -62,7 +62,7 @@ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _
 
 Il **fcloseall** funzione chiude tutti i flussi aperti tranne **stdin**, **stdout**, **stderr** (e in MS-DOS, **_stdaux**  e **_stdprn**). Chiude anche ed elimina i file temporanei creati dal **tmpfile**. In entrambe le funzioni, tutti i buffer associati al flusso vengono scaricati prima della chiusura. I buffer allocati nel sistema vengono rilasciati quando viene chiuso il flusso. I buffer assegnati dall'utente con **setbuf** e **setvbuf** non vengono rilasciati automaticamente.
 
-**Nota:** quando vengono usate queste funzioni per chiudere un flusso, il descrittore del file sottostante e l'handle di file (o socket) del sistema operativo vengono chiusi insieme al flusso. Di conseguenza, se il file è stato originariamente aperto come handle di file o descrittore di file e viene chiusa con **fclose**, non chiamare **Close** per chiudere il descrittore del file; non chiamare la funzione Win32  **CloseHandle** per chiudere l'handle di file.
+**Nota:** Quando queste funzioni vengono usate per chiudere un flusso, il descrittore di file e del sistema operativo handle di file (o sottostante socket) viene chiusi insieme nel flusso. Di conseguenza, se il file è stato originariamente aperto come handle di file o descrittore di file e viene chiusa con **fclose**, non chiamare **Close** per chiudere il descrittore del file; non chiamare la funzione Win32  **CloseHandle** per chiudere l'handle di file.
 
 **fclose** e **fcloseall** includono codice per la protezione da interferenze di altri thread. Per la versione non blocca il thread di un **fclose**, vedere **fclose_nolock**.
 

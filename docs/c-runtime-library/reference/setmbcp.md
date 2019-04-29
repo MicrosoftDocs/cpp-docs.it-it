@@ -25,11 +25,11 @@ helpviewer_keywords:
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
 ms.openlocfilehash: c1f4967baa5fda68a7df33bcd08935dca23fab16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356459"
 ---
 # <a name="setmbcp"></a>_setmbcp
 
@@ -45,7 +45,7 @@ int _setmbcp(
 
 ### <a name="parameters"></a>Parametri
 
-*tabella codici*<br/>
+*codepage*<br/>
 Nuova impostazione della tabella codici per le routine multibyte indipendenti dalle impostazioni locali.
 
 ## <a name="return-value"></a>Valore restituito

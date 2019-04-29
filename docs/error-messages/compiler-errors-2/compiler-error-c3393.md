@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3393
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
 ms.openlocfilehash: 5147e3e406fde73a05b7069e2a9336f27b3db622
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59776262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62328666"
 ---
 # <a name="compiler-error-c3393"></a>Errore del compilatore C3393
 

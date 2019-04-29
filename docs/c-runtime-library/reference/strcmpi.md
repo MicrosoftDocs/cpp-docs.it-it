@@ -22,11 +22,11 @@ helpviewer_keywords:
 - strcmpi function
 ms.assetid: 74206b2f-9bca-4d32-9cdc-93cb94c2aaa1
 ms.openlocfilehash: 4c87c67b0102272a78690c39ac3065b0b2904ae5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354236"
 ---
 # <a name="strcmpi"></a>strcmpi
 

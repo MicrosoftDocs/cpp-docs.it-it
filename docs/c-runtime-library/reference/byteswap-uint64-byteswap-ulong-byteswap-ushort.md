@@ -37,11 +37,11 @@ helpviewer_keywords:
 - _byteswap_ulong function
 ms.assetid: 83bda211-f02f-4cf0-8a78-d6de1f175970
 ms.openlocfilehash: 4f9409ebcc7e2bf29d5d6b9303f127188f9e6229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347782"
 ---
 # <a name="byteswapuint64-byteswapulong-byteswapushort"></a>_byteswap_uint64, _byteswap_ulong, _byteswap_ushort
 
@@ -57,7 +57,7 @@ unsigned __int64 _byteswap_uint64 ( unsigned __int64 val );
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Il valore integer per cui invertire l'ordine dei byte.
 
 ## <a name="requirements"></a>Requisiti

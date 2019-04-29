@@ -29,11 +29,11 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347444"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
@@ -65,8 +65,8 @@ Per impostazione predefinita, se il risultato è troppo grande in un **cosh**, *
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|none|**DOMINIO**|
-|*x* ≥ 7.104760e + 002|**INESATTO**+**OVERFLOW**|**OVERFLOW**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
+|*x* ≥ 7.104760e+002|**INEXACT**+**OVERFLOW**|**OVERFLOW**|
 
 ## <a name="remarks"></a>Note
 

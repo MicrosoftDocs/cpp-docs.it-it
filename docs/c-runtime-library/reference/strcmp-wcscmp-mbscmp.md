@@ -43,11 +43,11 @@ helpviewer_keywords:
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
 ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354223"
 ---
 # <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
@@ -110,7 +110,7 @@ Il **strcmp** funzione esegue un confronto ordinale *string1* e *string2* e rest
 
 Il **strcmp** funzioni differiscono dalle **strcoll** funzioni in cui **strcmp** confronti ordinali e non sono interessati dalle impostazioni locali. **strcoll** confronta le stringhe a livello lessicografico usando la **LC_COLLATE** categoria delle impostazioni locali correnti. Per altre informazioni sul **LC_COLLATE** categoria, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md).
 
-Nelle impostazioni locali "C", l'ordine dei caratteri nel set di caratteri (set di caratteri ASCII) è lo stesso dell'ordine lessicografico dei caratteri. Tuttavia, in altre impostazioni locali, l'ordine dei caratteri nel set di caratteri può differire dall'ordine lessicografico. Ad esempio, in alcune impostazioni locali europee, il carattere 'a' (valore 0x61) precede il carattere 'ä' (valore 0xE4) nel set di caratteri, ma il carattere 'ä' precede a livello lessicografico il carattere 'a'.
+Nelle impostazioni locali "C", l'ordine dei caratteri nel set di caratteri (set di caratteri ASCII) è lo stesso dell'ordine lessicografico dei caratteri. Tuttavia, in altre impostazioni locali, l'ordine dei caratteri nel set di caratteri può differire dall'ordine lessicografico. Ad esempio, in determinate impostazioni locali europee, il carattere 'a' (valore 0x61) precede il carattere 'ä' (valore 0xE4) nel set di caratteri, ma il carattere "ä" viene fornito davanti al carattere "a" a livello lessicografico.
 
 Nelle impostazioni locali per il quale il set di caratteri e l'ordine lessicografico dei caratteri differiscono, è possibile usare **strcoll** invece di **strcmp** per il confronto lessicografico delle stringhe. In alternativa, è possibile usare **strxfrm** nelle stringhe originali e quindi usare **strcmp** sulle stringhe risultanti.
 

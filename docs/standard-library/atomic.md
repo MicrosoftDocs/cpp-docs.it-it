@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376601"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ Un'operazione atomica ha due proprietà chiave che consentono di usare più thre
 
 In alcune piattaforme, potrebbe non essere possibile implementare in modo efficiente operazioni atomiche per alcuni tipi senza usare blocchi `mutex`. Un tipo atomico è *senza blocco* se nessuna operazione atomica su tale tipo usa i blocchi.
 
-**C++11**: nei gestori di segnale è possibile eseguire operazioni atomiche su un oggetto `obj` se `obj.is_lock_free()` o `atomic_is_lock_free(x)` sono true.
+**C++11**: Nei gestori di segnale è possibile eseguire operazioni atomiche su un oggetto `obj` se `obj.is_lock_free()` o `atomic_is_lock_free(x)` sono true.
 
 La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornisce un tipo atomico minimo che contiene un **bool** flag. Le operazioni sono sempre senza blocco.
 
@@ -152,14 +152,14 @@ I nomi di typedef esistono per specializzazioni del modello atomico per alcuni d
 
 ## <a name="structs"></a>Struct
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Struttura atomic](../standard-library/atomic-structure.md)|Descrive un oggetto che esegue operazioni atomiche su un valore archiviato.|
 |[Struttura atomic_flag](../standard-library/atomic-flag-structure.md)|Descrive un oggetto che imposta e rimuove atomicamente un **bool** flag.|
 
 ## <a name="enums"></a>Enumerazioni
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Enumerazione memory_order](../standard-library/atomic-enums.md#memory_order_enum)|Fornisce nomi simbolici per le operazioni di sincronizzazione sulle posizioni di memoria. Queste operazioni influiscono sul modo in cui gli assegnamenti in un thread diventano visibili in un altro.|
 
@@ -167,7 +167,7 @@ I nomi di typedef esistono per specializzazioni del modello atomico per alcuni d
 
 Nell'elenco seguente le funzioni che non terminano con `_explicit` hanno la semantica del `_explicit` corrispondente, ad eccezione del fatto che hanno gli argomenti [memory_order](../standard-library/atomic-enums.md#memory_order_enum) impliciti di `memory_order_seq_cst`.
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Esegue un'operazione di *confronto e scambio atomico*.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Esegue un'operazione di *confronto e scambio atomico*.|

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
 ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338831"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
@@ -76,9 +76,9 @@ Se l'operazione riesce, restituisce l'esponente in base 2 del *x*, vale a dire 2
 
 |Problema|INVIO|
 |-----------|------------|
-|*x* = ± 0|1|
-|*x* = - infinito|+0|
-|*x* = + INFINITY|+INFINITO|
+|*x* = ±0|1|
+|*x* = -INFINITY|+0|
+|*x* = +INFINITY|+INFINITO|
 |*x* = NaN|NaN|
 |Errore di intervallo di overflow|+HUGE_VAL, +HUGE_VALF o +HUGE_VALL|
 |Errore di intervallo di underflow|Risultato corretto, dopo l'arrotondamento|
@@ -93,7 +93,7 @@ Dato che C++ consente l'overload, è possibile chiamare overload di **exp2** che
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**EXP**, **expf**, **soluz**|\<math.h>|\<cmath>|
+|**exp**, **expf**, **expl**|\<math.h>|\<cmath>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

@@ -33,11 +33,11 @@ helpviewer_keywords:
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
 ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331525"
 ---
 # <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
@@ -100,7 +100,7 @@ Zero in caso di esito positivo; in caso contrario un codice di errore.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|**dest**|*sizeInBytes*|*src*|Valore restituito|
+|**Dest**|*sizeInBytes*|*src*|Valore restituito|
 |------------|-------------------|-----------|------------------|
 |**NULL**|qualsiasi|qualsiasi|**EINVAL**|
 |Qualsiasi|<= 0|qualsiasi|**EINVAL**|
@@ -122,8 +122,8 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcsncat**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat_s**|[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
-|**tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
+|**_tcsncat**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat_s**|[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
+|**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
 ## <a name="requirements"></a>Requisiti
 

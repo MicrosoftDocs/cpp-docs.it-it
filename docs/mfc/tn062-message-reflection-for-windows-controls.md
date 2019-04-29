@@ -1,5 +1,5 @@
 ---
-title: 'TN062: reflection messaggi per controlli Windows'
+title: 'TN062: Reflection messaggi per controlli Windows'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls.messages
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351845"
 ---
-# <a name="tn062-message-reflection-for-windows-controls"></a>TN062: reflection messaggi per controlli Windows
+# <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Reflection messaggi per controlli Windows
 
 > [!NOTE]
 > La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
 
 In questa nota tecnica descrive la reflection di messaggio, una nuova funzionalità di 4.0 di MFC. Contiene inoltre istruzioni per la creazione di un controllo riutilizzabile semplice che usa la reflection di messaggio.
 
-In questa nota tecnica non viene illustrata la reflection di messaggio perché si applica ai controlli ActiveX (precedentemente denominati controlli OLE). Vedere l'articolo [controlli ActiveX: crea una sottoclasse di un controllo Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+In questa nota tecnica non viene illustrata la reflection di messaggio perché si applica ai controlli ActiveX (precedentemente denominati controlli OLE). Vedere l'articolo [controlli ActiveX: Crea una sottoclasse di un controllo Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 **Che cos'è la Reflection di messaggio**
 
@@ -63,7 +63,7 @@ Quando viene inviato un messaggio WM_NOTIFY, il controllo è disponibile la prim
 
 La macro della mappa messaggi per messaggi riflessi è leggermente diversa da quello notifiche periodiche: dispone *_REFLECT* aggiunto al nome normale. Ad esempio, per gestire un messaggio WM_NOTIFY nell'elemento padre, utilizzare la macro ON_NOTIFY nella mappa messaggi dell'elemento padre. Per gestire il messaggio riflesso nel controllo figlio, usare la macro ON_NOTIFY_REFLECT nella mappa messaggi del controllo figlio. In alcuni casi, i parametri sono diversi, anche. Si noti che ClassWizard in genere possibile aggiungere le voci della mappa messaggi per l'utente e fornire implementazioni lo scheletro della funzione con i parametri corretti.
 
-Visualizzare [TN061: messaggi ON_NOTIFY e Wm_notify](../mfc/tn061-on-notify-and-wm-notify-messages.md) per informazioni sul nuovo messaggio WM_NOTIFY.
+Vedere [TN061: Messaggi ON_NOTIFY e Wm_notify](../mfc/tn061-on-notify-and-wm-notify-messages.md) per informazioni sul nuovo messaggio WM_NOTIFY.
 
 **Le voci della mappa messaggi e prototipi di funzione del gestore di messaggi riprodotti**
 
@@ -87,26 +87,26 @@ I significati dei parametri e valori restituiti delle funzioni sono documentati 
 
 |Voce della mappa|Prototipo di funzione|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**void afx_msg** `memberFxn` **();**|
-|**ON_NOTIFY_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**void afx_msg** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *risultato* **);**|
-|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**void afx_msg** `memberFxn` **(CCmdUI** <strong>\*</strong> `pCmdUI` **);**|
-|**ON_WM_CTLCOLOR_REFLECT)**|**afx_msg CtlColor HBRUSH (CDC** <strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
-|**ON_WM_DRAWITEM_REFLECT)**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
-|**ON_WM_MEASUREITEM_REFLECT)**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
-|**ON_WM_DELETEITEM_REFLECT)**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
-|**ON_WM_COMPAREITEM_REFLECT)**|**int afx_msg CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
-|**ON_WM_CHARTOITEM_REFLECT)**|**int afx_msg CharToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
-|**ON_WM_VKEYTOITEM_REFLECT)**|**int afx_msg VKeyToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
-|**ON_WM_HSCROLL_REFLECT)**|**afx_msg void proprietà HScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
-|**ON_WM_VSCROLL_REFLECT)**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
-|**ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|
+|**ON_CONTROL_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|
+|**ON_NOTIFY_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI**<strong>\*</strong> `pCmdUI` **);**|
+|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg CtlColor HBRUSH (CDC** <strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
+|**ON_WM_DRAWITEM_REFLECT( )**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
+|**ON_WM_MEASUREITEM_REFLECT( )**|**afx_msg void MeasureItem ( LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
+|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
+|**ON_WM_COMPAREITEM_REFLECT( )**|**int afx_msg CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_CHARTOITEM_REFLECT( )**|**int afx_msg CharToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
+|**ON_WM_VKEYTOITEM_REFLECT( )**|**int afx_msg VKeyToItem (UINT** `nKey` **, UINT** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void proprietà HScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll (UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_PARENTNOTIFY_REFLECT( )**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|
 
 Le macro ON_NOTIFY_REFLECT e ON_CONTROL_REFLECT presentano variazioni che consentono a più di un oggetto (ad esempio il controllo e il relativo elemento padre) per gestire un determinato messaggio.
 
 |Voce della mappa|Prototipo di funzione|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**BOOL afx_msg** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *risultato* **);**|
-|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**BOOL afx_msg** `memberFxn` **();**|
+|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|
 
 ## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Gestione di messaggi riprodotti: Un esempio di un controllo riutilizzabile
 

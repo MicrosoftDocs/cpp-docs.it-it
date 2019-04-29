@@ -10,11 +10,11 @@ helpviewer_keywords:
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
 ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330570"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -25,10 +25,10 @@ Gestione delle eccezioni strutturata (SEH) è un'estensione Microsoft C per gest
 ## <a name="grammar"></a>Grammatica
 
 *try-except-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**try** *compound-statement* **except** **(** *espressione* **)** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**try** *compound-statement* **finally** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>Note
 

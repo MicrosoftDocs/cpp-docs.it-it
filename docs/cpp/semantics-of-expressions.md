@@ -8,11 +8,11 @@ helpviewer_keywords:
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
 ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331213"
 ---
 # <a name="semantics-of-expressions"></a>Semantica delle espressioni
 
@@ -52,9 +52,9 @@ L'ordine in cui viene valutata l'espressione nella figura riportata sopra è det
 
 1. L'addizione (+) ha la precedenza più elevata successiva, pertanto `a` viene aggiunto al prodotto di `b` e `c`.
 
-1. Lo spostamento a sinistra (<<) ha la precedenza più bassa nell'espressione, tuttavia esistono due occorrenze. Poiché l'operatore di spostamento a sinistra raggruppa gli elementi da sinistra verso destra, viene prima valutata la sottoespressione sinistra, quindi la sottoespressione destra.
+1. Spostamento a sinistra (<<) ha la precedenza più bassa nell'espressione, ma esistono due occorrenze. Poiché l'operatore di spostamento a sinistra raggruppa gli elementi da sinistra verso destra, viene prima valutata la sottoespressione sinistra, quindi la sottoespressione destra.
 
-Quando per raggruppare le sottoespressioni vengono usate le parentesi, queste alterano la precedenza e anche l'ordine in cui l'espressione viene valutata, come illustrato di seguito.
+Quando per raggruppare le sottoespressioni vengono utilizzate le parentesi, queste alterano la precedenza e anche l'ordine in cui l'espressione viene valutata, come illustrato di seguito.
 
 ![Ordine di valutazione dell'espressione tra parentesi](../cpp/media/vc38zv2.gif "ordine di valutazione dell'espressione con parentesi") <br/>
 Ordine di valutazione dell'espressione con parentesi
@@ -69,12 +69,12 @@ Il linguaggio C++ specifica determinate compatibilità quando specifica gli oper
 
 |Tipo previsto|Tipi consentiti|
 |-------------------|-------------------|
-|*type*|`const` *Tipo*<br /> `volatile` *Tipo*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *Tipo*<br /> `volatile const` *type*&|
-|*Tipo* \*|*Tipo* \*<br /> `const` *Tipo* \*<br /> `volatile` *Tipo* \*<br /> `volatile const` *Tipo* \*|
-|`const` *Tipo*|*type*<br /> `const` *Tipo*<br />`const` *type*&|
-|`volatile` *Tipo*|*type*<br /> `volatile` *Tipo*<br /> `volatile` *type*&|
+|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
+|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
+|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
+|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
 
-Poiché le regole precedenti possono essere sempre usate in combinazione, qualora sia previsto un puntatore, è possibile fornire un puntatore di tipo const a un oggetto di tipo volatile.
+Poiché le regole precedenti possono essere sempre utilizzate in combinazione, qualora sia previsto un puntatore, è possibile fornire un puntatore di tipo const a un oggetto di tipo volatile.
 
 ## <a name="ambiguous-expressions"></a>Espressioni ambigue
 
@@ -94,7 +94,7 @@ Un'espressione può modificare il valore di un oggetto una sola volta tra "punti
 
 La definizione del linguaggio C++ attualmente non specifica i punti di sequenza. In Microsoft C++ vengono usati gli stessi punti di sequenza di ANSI C per qualsiasi espressione contenente gli operatori C, ma non gli operatori di overload. Quando gli operatori sono sottoposti a overload, la semantica cambia dalla sequenza dell'operatore nella sequenza della chiamata di funzione. In Microsoft C++ vengono usati i seguenti punti di sequenza:
 
-- L'operando sinistro dell'operatore logico AND (&&). L'operando sinistro dell'operatore logico AND viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Non è certo che l'operando destro dell'operatore logico AND venga valutato.
+- Operando sinistro dell'operatore logico AND (& &). L'operando sinistro dell'operatore logico AND viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Non è certo che l'operando destro dell'operatore logico AND venga valutato.
 
 - Operando sinistro dell'operatore logico OR (&#124;&#124;). L'operando sinistro dell'operatore logico OR viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Non è certo che l'operando destro dell'operatore logico OR venga valutato.
 

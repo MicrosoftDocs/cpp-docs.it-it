@@ -8,11 +8,11 @@ helpviewer_keywords:
 - is_lvalue_reference
 ms.assetid: 7f11896b-935c-4de1-9c87-9d0127f904e2
 ms.openlocfilehash: e032522e790b7027886ba1a6199ed7fdf86c0936
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351943"
 ---
 # <a name="islvaluereference-class"></a>Classe is_lvalue_reference
 

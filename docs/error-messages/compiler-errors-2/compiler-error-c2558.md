@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2558
 ms.assetid: 822b701e-dcae-423a-b21f-47f36aff9c90
 ms.openlocfilehash: b0dca0b19d427cf83238c824739d288a1cfd54d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353011"
 ---
 # <a name="compiler-error-c2558"></a>Errore del compilatore C2558
 

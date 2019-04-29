@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353573"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -94,7 +94,7 @@ Parametro che precede il primo argomento facoltativo.
 
 ## <a name="remarks"></a>Note
 
-Il **va_arg**, **va_copy**, **va_end**, e **va_start** macro forniscono un modo portabile per accedere agli argomenti a una funzione quando la funzione accetta un numero variabile di argomenti. Esistono due versioni delle macro: le macro definite in STDARG.H conformi allo standard ISO C99 e le macro definite in VARARGS.H che sono deprecate, ma vengono mantenute per compatibilità con le versioni precedenti del codice scritto prima dello standard ANSI C89.
+Il **va_arg**, **va_copy**, **va_end**, e **va_start** macro forniscono un modo portabile per accedere agli argomenti a una funzione quando la funzione accetta un numero variabile di argomenti. Sono disponibili due versioni delle macro: Le macro definite in STDARG. H conformi a ISO C99 standard; le macro definite in VARARGS. H sono deprecate, ma vengono mantenuti per garantire la compatibilità con il codice scritto prima il standard ANSI C89.
 
 Queste macro presuppongono che la funzione accetti un numero fisso di argomenti obbligatori, seguito da un numero variabile di argomenti facoltativi. Gli argomenti obbligatori vengono dichiarati come parametri comuni per la funzione e sono accessibili tramite i nomi dei parametri. Gli argomenti facoltativi sono accessibili tramite le macro in STDARG.H (o VARARGS.H per il codice scritto prima dello standard ANSI C89), che impostano un puntatore al primo argomento facoltativo nell'elenco di argomenti, recuperano gli argomenti dall'elenco e reimpostano il puntatore al termine dell'elaborazione degli argomenti.
 

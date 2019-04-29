@@ -46,11 +46,11 @@ helpviewer_keywords:
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
 ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335257"
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -87,7 +87,7 @@ int _cwscanf_l(
 *format*<br/>
 Stringa di controllo del formato.
 
-*argomento*<br/>
+*argument*<br/>
 Parametri facoltativi.
 
 *locale*<br/>
@@ -109,15 +109,15 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcscanf**|**_cscanf**|**_cscanf**|**_cwscanf**|
-|**tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
+|**_tcscanf**|**_cscanf**|**_cscanf**|**_cwscanf**|
+|**_tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**cscanf**, **cscanf_l**|\<conio.h>|
-|**cwscanf**, **cwscanf_l**|\<conio.h> o \<wchar.h>|
+|**_cscanf**, **_cscanf_l**|\<conio.h>|
+|**_cwscanf**, **_cwscanf_l**|\<conio.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

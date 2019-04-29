@@ -31,11 +31,11 @@ helpviewer_keywords:
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
 ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335399"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -72,13 +72,13 @@ Il complesso coniugato di *z*.  Il risultato ha la stessa parte reale e immagina
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **conj** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **conj** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **conj** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **conj** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**conj**, **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+|**conj**,               **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

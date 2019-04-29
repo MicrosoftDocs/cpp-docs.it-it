@@ -5,11 +5,11 @@ helpviewer_keywords:
 - arrays [C++], attributes
 ms.assetid: 36f80b76-7f20-41ae-a6bf-460e5379f26b
 ms.openlocfilehash: 1a6bcaf4c0ae6b199d6c0bb12e7efb5b976295e0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368773"
 ---
 # <a name="array-attributes"></a>Attributi di matrice
 

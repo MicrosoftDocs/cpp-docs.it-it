@@ -30,11 +30,11 @@ helpviewer_keywords:
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
 ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332949"
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -69,7 +69,7 @@ Puntatore a un buffer contenente il nome del percorso assoluto o completo, o **N
 *relPath*<br/>
 Nome del percorso relativo.
 
-*MaxLength*<br/>
+*maxLength*<br/>
 Lunghezza massima del buffer di nome di percorso assoluto (*absPath*). Questa lunghezza è espressa in byte per **FullPath** ma in caratteri "wide" (**wchar_t**) per **wfullpath**.
 
 *blockType*<br/>

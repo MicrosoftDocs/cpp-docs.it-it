@@ -43,11 +43,11 @@ helpviewer_keywords:
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
 ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353893"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
@@ -89,7 +89,7 @@ Il **StrDup** chiamate di funzione [malloc](malloc.md) allocare spazio di archiv
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
+|**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
 In quanto **StrDup** chiamate **malloc** allocare spazio di archiviazione per la copia dei *strSource*, è consigliabile sempre rilasciare la memoria chiamando la [libero](free.md) sul puntatore che viene restituito dalla chiamata alla routine **StrDup**.
 

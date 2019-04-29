@@ -41,11 +41,11 @@ helpviewer_keywords:
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
 ms.openlocfilehash: 7e88bcf5bf7ffc5eba6feecd545cda8f7950829c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353887"
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
@@ -106,7 +106,7 @@ Se *avviare* oppure *corrente* viene **NULL**, viene richiamato il gestore di pa
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
+|**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
 **strdec** e **wcsdec** sono versioni a caratteri a byte singolo e caratteri wide di **mbsdec** e **mbsdec_l**. **strdec** e **wcsdec** sono disponibili solo per questo mapping e non deve essere utilizzato in caso contrario.
 

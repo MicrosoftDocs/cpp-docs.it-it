@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333326"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -98,7 +98,7 @@ Controllare sempre il valore restituito per verificare se la funzione è stata c
 
 **fopen_s** supporta flussi di file Unicode. Per aprire un file Unicode nuovo o esistente, passare un *ccs* flag che specifica la codifica voluta a **fopen_s**:
 
-**fopen_s (& fp, "NewFile. txt", "rw, ccs =**_codifica_**");**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
 
 I valori consentiti di *codifica* vengono **UNICODE**, **UTF-8**, e **UTF-16LE**. Se si è specificato alcun valore per *codifica*, **fopen_s** Usa la codifica ANSI.
 
@@ -111,7 +111,7 @@ Nella tabella seguente vengono riepilogate le modalità per vari *ccs* flag asse
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Codifiche usate in base a flag ccs e indicatore ordine byte
 
-|flag CCS|Nessun indicatore ordine byte (o file nuovo)|Indicatore ordine byte (BOM): UTF-8|Indicatore ordine byte (BOM): UTF-16|
+|flag CCS|Nessun indicatore ordine byte (o file nuovo)|BOM: UTF-8|BOM: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -125,11 +125,11 @@ Se *modalità* viene **", ccs =**_codifica_**"**, **fopen_s** tenta innanzitutto
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tfopen_s**|**fopen_s**|**fopen_s**|**_wfopen_s**|
+|**_tfopen_s**|**fopen_s**|**fopen_s**|**_wfopen_s**|
 
 La stringa di caratteri *modalità* specifica il tipo di accesso richiesto per il file, come indicato di seguito.
 
-|*mode*|Accedi a|
+|*mode*|Accesso|
 |-|-|
 | **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **fopen_s** chiamata ha esito negativo. |
 | **"w"** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
@@ -168,19 +168,19 @@ Per altre informazioni sull'uso delle modalità testo e binaria in formato Unico
 | **R** | Specifica che la memorizzazione nella cache è ottimizzata, ma non limitata, per l'accesso casuale dal disco. |
 | **T** | Specifica un file come temporaneo. Se possibile, non viene scaricato su disco. |
 | **D** | Specifica un file come temporaneo. Viene eliminato quando viene chiuso l'ultimo puntatore del file. |
-| **CCS =**_codifica_ | Specifica il set di utilizzare caratteri con codificato (uno dei **UTF-8**, **UTF-16LE**, o **UNICODE**) per questo file. Lasciare non specificato se si vuole la codifica ANSI. |
+| **ccs=**_encoding_ | Specifica il set di utilizzare caratteri con codificato (uno dei **UTF-8**, **UTF-16LE**, o **UNICODE**) per questo file. Lasciare non specificato se si vuole la codifica ANSI. |
 
 I caratteri validi per il *modalità* stringa usata nella **fopen_s** e [fdopen](fdopen-wfdopen.md) corrispondono alle *oflag* argomenti utilizzati in [_ Aprire](open-wopen.md) e [sopen](sopen-wsopen.md), come indicato di seguito.
 
 |I caratteri *modalità* stringa|Equivalente *oflag* valore per sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**O_wronly** &#124; **o_append** (in genere **o_wronly** &#124; **o_creat** &#124;* * o_append * *)|
-|**+**|**O_rdwr** &#124; **o_append** (in genere **o_rdwr** &#124; **o_append** &#124; **o_creat** )|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND**)|
+|**a+**|**_O_RDWR** &#124; **_O_APPEND** (usually **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
-|**r +**|**O_RDWR**|
-|**w**|**O_wronly** (in genere **o_wronly** &#124; **o_creat** &#124;* * o_trunc * *)|
-|**w +**|**O_rdwr** (in genere **o_rdwr** &#124; **o_creat** &#124; **o_trunc**)|
-|**b**|**O_BINARY**|
+|**r+**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC**)|
+|**w+**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
 |**c**|nessuno|
 |**n**|nessuno|
@@ -188,9 +188,9 @@ I caratteri validi per il *modalità* stringa usata nella **fopen_s** e [fdopen]
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
-|**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**O_UTF8**|
-|**CCS = UTF-16LE**|**O_UTF16**|
+|**ccs=UNICODE**|**_O_WTEXT**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 Se si usa **rb** modalità, non sarà necessario trasferire il codice e prevedono la lettura di molti file e/o non è rilevante sulle prestazioni di rete, i file Win32 mappati alla memoria potrebbero anche essere un'opzione.
 

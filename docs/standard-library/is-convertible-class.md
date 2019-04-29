@@ -8,11 +8,11 @@ helpviewer_keywords:
 - is_convertible
 ms.assetid: 75614008-1894-42ea-bd57-974399628536
 ms.openlocfilehash: cdc3276f229fb9c1ac059a9eeb29e77655b4fc69
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337375"
 ---
 # <a name="isconvertible-class"></a>Classe is_convertible
 

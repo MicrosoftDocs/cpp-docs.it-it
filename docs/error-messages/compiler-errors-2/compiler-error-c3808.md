@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
 ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352988"
 ---
 # <a name="compiler-error-c3808"></a>Errore del compilatore C3808
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
 ms.openlocfilehash: 251528cafcbedb0352a1962d70452f8b8778f10b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348601"
 ---
 # <a name="using-cdatetimectrl"></a>Utilizzo di CDateTimeCtrl
 

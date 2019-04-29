@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
 ms.openlocfilehash: ce505c5a389d4ff6aa12a88bfc47fb0a6f026eea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335608"
 ---
 # <a name="alignedrecalloc"></a>_aligned_recalloc
 
@@ -50,13 +50,13 @@ void * _aligned_recalloc(
 *memblock*<br/>
 Puntatore al blocco di memoria corrente.
 
-*Numero*<br/>
+*number*<br/>
 Numero di elementi.
 
 *size*<br/>
 Dimensione in byte di ogni elemento.
 
-*Allineamento*<br/>
+*alignment*<br/>
 Valore di allineamento, che deve essere una potenza intera di 2.
 
 ## <a name="return-value"></a>Valore restituito

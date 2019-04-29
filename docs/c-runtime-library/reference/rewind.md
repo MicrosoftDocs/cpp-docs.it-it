@@ -25,11 +25,11 @@ helpviewer_keywords:
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
 ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357564"
 ---
 # <a name="rewind"></a>rewind
 
@@ -45,14 +45,14 @@ void rewind(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="remarks"></a>Note
 
 Il **rewind** funzione Riposiziona il puntatore del file associato *stream* all'inizio del file. Una chiamata a **rewind** è simile a
 
-**fseek (void) (** _stream_**, 0 L, SEEK_SET);**
+**(void) fseek(** _stream_**, 0L, SEEK_SET );**
 
 Tuttavia, a differenza [fseek](fseek-fseeki64.md), **rewind** Cancella gli indicatori di errore per il flusso, nonché l'indicatore di fine del file. Inoltre, a differenza [fseek](fseek-fseeki64.md), **rewind** non restituisce un valore che indica se il puntatore è stato spostato correttamente.
 

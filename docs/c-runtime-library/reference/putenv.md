@@ -22,11 +22,11 @@ helpviewer_keywords:
 - putenv function
 ms.assetid: 1dc49ef3-6b12-484c-8e60-7048bcc999f1
 ms.openlocfilehash: 395875ef918fb5d3e9ab2ce4269f61d860b1ee96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357988"
 ---
 # <a name="putenv"></a>putenv
 

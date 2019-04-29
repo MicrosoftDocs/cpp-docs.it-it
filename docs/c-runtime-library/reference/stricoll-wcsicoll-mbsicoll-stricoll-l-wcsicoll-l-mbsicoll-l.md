@@ -52,11 +52,11 @@ helpviewer_keywords:
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
 ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353664"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
@@ -99,7 +99,7 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>Parametri
 
-*String1*, *stringa2*<br/>
+*string1*, *string2*<br/>
 Stringhe che terminano con Null da confrontare.
 
 *locale*<br/>
@@ -130,15 +130,15 @@ Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1*
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsicoll**|**_stricoll**|**_mbsicoll**|**_wcsicoll**|
+|**_tcsicoll**|**_stricoll**|**_mbsicoll**|**_wcsicoll**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**stricoll**, **stricoll_l**|\<string.h>|
-|**wcsicoll**, **_wcsicoll_l**|\<wchar.h>, \<string.h>|
-|**mbsicoll**, **mbsicoll_l**|\<mbstring.h>|
+|**_stricoll**, **_stricoll_l**|\<string.h>|
+|**_wcsicoll**, **_wcsicoll_l**|\<wchar.h>, \<string.h>|
+|**_mbsicoll**, **_mbsicoll_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

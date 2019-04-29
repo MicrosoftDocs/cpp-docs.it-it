@@ -21,11 +21,11 @@ f1_keywords:
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
 ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333105"
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
 
@@ -48,16 +48,16 @@ size_t _fread_nolock_s(
 *buffer*<br/>
 Percorso di archiviazione per i dati.
 
-*BufferSize*<br/>
+*bufferSize*<br/>
 Dimensioni del buffer di destinazione in byte.
 
 *elementSize*<br/>
 Dimensione dell'elemento da leggere in byte.
 
-*valore elementCount*<br/>
+*elementCount*<br/>
 Numero massimo di elementi da leggere.
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito

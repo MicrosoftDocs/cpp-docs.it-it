@@ -36,11 +36,11 @@ helpviewer_keywords:
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
 ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333157"
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 
@@ -75,7 +75,7 @@ int _fwprintf_s_l(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 *format*<br/>
@@ -108,8 +108,8 @@ Come le versioni non sicure (vedere [fprintf, fprintf_l, fwprintf, fwprintf_l](f
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**ftprintf_s**|**fprintf_s**|**fprintf_s**|**fwprintf_s**|
-|**ftprintf_s_l**|**_fprintf_s_l**|**_fprintf_s_l**|**_fwprintf_s_l**|
+|**_ftprintf_s**|**fprintf_s**|**fprintf_s**|**fwprintf_s**|
+|**_ftprintf_s_l**|**_fprintf_s_l**|**_fprintf_s_l**|**_fwprintf_s_l**|
 
 Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
@@ -117,8 +117,8 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 |Funzione|Intestazione obbligatoria|
 |--------------|---------------------|
-|**fprintf_s**, **fprintf_s_l**|\<stdio.h>|
-|**fwprintf_s**, **fwprintf_s_l**|\<stdio.h> o \<wchar.h>|
+|**fprintf_s**, **_fprintf_s_l**|\<stdio.h>|
+|**fwprintf_s**, **_fwprintf_s_l**|\<stdio.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

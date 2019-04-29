@@ -51,11 +51,11 @@ helpviewer_keywords:
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
 ms.openlocfilehash: 1bf0e08f3b28368d9aea5438b3036ac8a0283735
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363089"
 ---
 # <a name="openmp-functions"></a>Funzioni OpenMP
 

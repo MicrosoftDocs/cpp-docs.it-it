@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333930"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,15 +44,15 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Flusso di destinazione.
 
-*POS*<br/>
+*pos*<br/>
 Archiviazione dell'indicatore di posizione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **fgetpos** restituisce 0. In caso di errore, viene restituito un valore diverso da zero e imposta **errno** a uno dei seguenti manifesto costanti (definite in STDIO. H): **EBADF**, ovvero il flusso specificato non è un puntatore di file valido o non è accessibile, o **EINVAL**, vale a dire il *flusso* valore o il valore di *pos* è valido, ad esempio se è un puntatore null. Se *stream* oppure *pos* è un **NULL** puntatore, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Caso di esito positivo **fgetpos** restituisce 0. In caso di errore, viene restituito un valore diverso da zero e imposta **errno** a uno dei seguenti manifesto costanti (definite in STDIO. H): **EBADF**, che significa che il flusso specificato non è un puntatore di file valido o non è accessibile, oppure **EINVAL**, vale a dire il *flusso* valore o il valore di *pos*è valido, ad esempio se è un puntatore null. Se *stream* oppure *pos* è un **NULL** puntatore, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Note
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
 ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340716"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -72,13 +72,13 @@ L'argomento (anche noto come fase) di *z*. Il risultato sia compreso nell'interv
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **carg** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float** o **lungo** **double** valori. In un programma C **carg** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **carg** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float**oppure **lungo** **doppie** valori. In un programma C **carg** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
+|**carg**,               **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

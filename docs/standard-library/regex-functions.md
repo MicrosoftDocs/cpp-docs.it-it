@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369605"
 ---
 # <a name="ltregexgt-functions"></a>Funzioni &lt;regex&gt;
 
@@ -120,7 +120,7 @@ Risultati della corrispondenza. Corrisponde al tipo Elem: [smatch](../standard-l
 *ptr*<br/>
 Puntatore all'inizio della sequenza per cui cercare una corrispondenza. Se *ptr* viene `char*`, quindi utilizzare `cmatch` e `regex`. Se *ptr* viene `wchar_t*` utilizzarla `wcmatch` e `wregex`.
 
-*Re*<br/>
+*re*<br/>
 L'espressione regolare per cui cercare una corrispondenza. Tipo di `regex` per `string` e `char*`, o `wregex` per `wstring` e `wchar_t*`.
 
 *str*<br/>
@@ -241,7 +241,7 @@ Flag per le corrispondenze.
 *first*<br/>
 Inizio della sequenza per cui cercare una corrispondenza.
 
-*FMT*<br/>
+*fmt*<br/>
 Formato delle sostituzioni.
 
 *last*<br/>
@@ -250,7 +250,7 @@ Fine della sequenza per cui cercare una corrispondenza.
 *out*<br/>
 Iteratore di output.
 
-*Re*<br/>
+*re*<br/>
 L'espressione regolare per cui cercare una corrispondenza.
 
 *str*<br/>
@@ -389,7 +389,7 @@ Risultati della corrispondenza.
 *ptr*<br/>
 Puntatore all'inizio della sequenza per cui cercare una corrispondenza.
 
-*Re*<br/>
+*re*<br/>
 L'espressione regolare per cui cercare una corrispondenza.
 
 *str*<br/>

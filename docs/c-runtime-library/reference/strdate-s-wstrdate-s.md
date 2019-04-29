@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
 ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353989"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -84,7 +84,7 @@ Zero in caso di esito positivo. Il valore restituito è un codice di errore se s
 |**NULL**|(qualsiasi)|**EINVAL**|Non modificato|
 |Non **NULL** (che punta a un buffer valido)|0|**EINVAL**|Non modificato|
 |Non **NULL** (che punta a un buffer valido)|0 < *numberOfElements* < 9|**EINVAL**|Stringa vuota|
-|Non **NULL** (che punta a un buffer valido)|*numberOfElements* > = 9|0|Data corrente, formattata come specificato nella sezione Note|
+|Non **NULL** (che punta a un buffer valido)|*numberOfElements* >= 9|0|Data corrente, formattata come specificato nella sezione Note|
 
 ## <a name="security-issues"></a>Problemi relativi alla sicurezza
 
@@ -106,7 +106,7 @@ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli.
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tstrdate_s**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
+|**_tstrdate_s**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
 
 ## <a name="requirements"></a>Requisiti
 

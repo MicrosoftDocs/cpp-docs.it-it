@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
 ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347600"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -65,13 +65,13 @@ La parte immaginaria del *z*.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cimag** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float** oppure **lungo** **double** valori. In un programma C **cimag** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **cimag** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float**oppure **lungo** **doppie** valori. In un programma C **cimag** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**cimag**, **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
+|**cimag**,               **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

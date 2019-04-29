@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
 ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329887"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL e tipi di dati C++ (ODBC)
 
@@ -57,4 +57,4 @@ Se si usa la libreria di cursori ODBC con le classi di database ODBC MFC e il dr
 ## <a name="see-also"></a>Vedere anche
 
 [SQL](../../data/odbc/sql.md)<br/>
-[SQL: Esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL: esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

@@ -7,11 +7,11 @@ ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
 ms.openlocfilehash: 80bdb1ca83be5fb390035d7f3b005793a2f03715
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370346"
 ---
 # <a name="ltrandomgt-functions"></a>Funzioni &lt;random&gt;
 
@@ -35,7 +35,7 @@ Tipo integrale a virgola mobile. Per informazioni sui tipi possibili, vedere [\<
 *BITS*<br/>
 Generatore di numeri casuali.
 
-*Generazione*<br/>
+*Gen*<br/>
 Generatore di numeri casuali.
 
 ### <a name="remarks"></a>Note

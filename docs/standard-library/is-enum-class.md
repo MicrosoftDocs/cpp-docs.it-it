@@ -8,11 +8,11 @@ helpviewer_keywords:
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
 ms.openlocfilehash: 623bda13a12ac311618e1b9fffdbc3f676013df6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336506"
 ---
 # <a name="isenum-class"></a>Classe is_enum
 

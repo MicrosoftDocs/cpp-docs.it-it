@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 ms.openlocfilehash: e4944c1cf1114bbd009ebc62b776628ba86b3b4d
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352046"
 ---
 # <a name="application-control"></a>Controllo Application
 
@@ -196,7 +196,7 @@ Diverso da zero se la class factory del controllo è stata bloccata con successo
 
 ### <a name="remarks"></a>Note
 
-Ciò può accelerare notevolmente la visualizzazione dei comandi. Ad esempio, una volta creato un controllo in una finestra di dialogo e bloccato il controllo con `AfxOleLockControl`, non è necessario crearlo e interromperne l'esecuzione ogni volta che la finestra di dialogo viene visualizzata o viene eliminata in modo permanente. Se l'utente apre e chiude una finestra di dialogo ripetutamente, il blocco dei controlli può migliorare significativamente le prestazioni. Quando si è pronti per eliminare definitivamente il controllo, chiamare `AfxOleUnlockControl`.
+Ciò può accelerare notevolmente la visualizzazione dei comandi. Ad esempio, una volta creato un controllo in una finestra di dialogo e bloccato il controllo con `AfxOleLockControl`, non è necessario crearlo e interromperne l'esecuzione ogni volta che la finestra di dialogo viene visualizzata o viene terminata in modo permanente. Se l'utente apre e chiude una finestra di dialogo ripetutamente, il blocco dei controlli può migliorare significativamente le prestazioni. Quando si è pronti per eliminare il controllo in modo permanente, chiamare `AfxOleUnlockControl`.
 
 ### <a name="example"></a>Esempio
 
@@ -353,7 +353,7 @@ Diverso da zero se la class factory del controllo è stata sbloccata; in caso co
 
 ### <a name="remarks"></a>Note
 
-Un controllo è bloccato con `AfxOleLockControl`, in modo che i dati creati dinamicamente associati al controllo rimangono in memoria. Ciò può accelerare notevolmente la visualizzazione del controllo, perché il controllo non debba essere creato ed eliminato ogni volta che viene visualizzato. Quando si è pronti per eliminare definitivamente il controllo, chiamare `AfxOleUnlockControl`.
+Un controllo è bloccato con `AfxOleLockControl`, in modo che i dati creati dinamicamente associati al controllo rimangono in memoria. Ciò può accelerare notevolmente la visualizzazione del controllo, perché il controllo non debba essere creato ed eliminato ogni volta che viene visualizzato. Quando si è pronti per eliminare il controllo in modo permanente, chiamare `AfxOleUnlockControl`.
 
 ### <a name="example"></a>Esempio
 

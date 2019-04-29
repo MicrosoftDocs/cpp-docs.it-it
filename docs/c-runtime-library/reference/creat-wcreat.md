@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335308"
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 
@@ -86,15 +86,15 @@ Il **creat** funzione crea un nuovo file o si apre e tronca una esistente. **wcr
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcreat**|**_creat**|**_creat**|**_wcreat**|
+|**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
 Se il file specificato da *filename* non esiste, un nuovo file viene creato con l'impostazione di autorizzazione specificata e viene aperto per la scrittura. Se il file esiste già e l'impostazione di autorizzazione consente la scrittura, **creat** tronca il file di lunghezza 0, eliminando il contenuto precedente e lo apre per la scrittura. L'impostazione di autorizzazione *pmode*, viene applicata solo i file appena creati. Il nuovo file riceve l'impostazione di autorizzazione specificata dopo averlo chiuso per la prima volta. L'espressione integer *pmode* contiene una o entrambe le costanti manifeste **s_iwrite** e **s_iread**, definite in sys\stat.h. Quando vengono specificate entrambe le costanti, queste vengono unite con il bit per bit o un operatore ( **&#124;** ). Il *pmode* parametro è impostato su uno dei valori seguenti.
 
-|Valore|Definizione|
+|Value|Definizione|
 |-----------|----------------|
-|**S_IWRITE**|Scrittura consentita.|
-|**S_IREAD**|Lettura consentita.|
-|**S_IREAD** &AMP;#124; **S_IWRITE**|Lettura e scrittura consentite.|
+|**_S_IWRITE**|Scrittura consentita.|
+|**_S_IREAD**|Lettura consentita.|
+|**_S_IREAD** &#124; **_S_IWRITE**|Lettura e scrittura consentite.|
 
 Se non viene concessa l'autorizzazione in scrittura, il file è di sola lettura. Tutti i file sono sempre leggibili. Non è possibile concedere l'autorizzazione di sola scrittura. Le modalità **s_iwrite** e **s_iread** | **s_iwrite** sono quindi equivalenti. I file aperti tramite **creat** vengono sempre aperti in modalità di compatibilità (vedere [sopen](sopen-wsopen.md)) con **sh_denyno**.
 

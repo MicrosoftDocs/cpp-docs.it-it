@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
 ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357878"
 ---
 # <a name="querynewhandler"></a>_query_new_handler
 
@@ -50,7 +50,7 @@ Restituisce l'indirizzo della routine del nuovo gestore corrente come impostato 
 
 ## <a name="remarks"></a>Note
 
-C++ **query_new_handler** funzione restituisce l'indirizzo della funzione di gestione delle eccezioni corrente impostata da C++ [set_new_handler](set-new-handler.md) (funzione). **set_new_handler** viene usato per specificare una funzione di gestione delle eccezioni che deve assumere il controllo se il **nuovi** operatore non riesce ad allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
+Il C++ **query_new_handler** funzione restituisce l'indirizzo della funzione di gestione delle eccezioni corrente impostata dal C++ [set_new_handler](set-new-handler.md) (funzione). **set_new_handler** viene usato per specificare una funzione di gestione delle eccezioni che deve assumere il controllo se il **nuovi** operatore non riesce ad allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
 
 ## <a name="requirements"></a>Requisiti
 

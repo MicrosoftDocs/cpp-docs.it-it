@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
 ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329920"
 ---
 # <a name="transaction-odbc"></a>Transazione (ODBC)
 
@@ -43,9 +43,9 @@ Nelle classi di database, si eseguono le transazioni attraverso `CDatabase` ogge
 
 Gli argomenti seguenti forniscono altre informazioni sull'esecuzione delle transazioni:
 
-- [Transazione: Esecuzione di una transazione in un Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [Transazione: esecuzione di una transazione in un recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-- [Transazione: Effetti delle transazioni sugli aggiornamenti (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
+- [Transazione: effetti delle transazioni sugli aggiornamenti (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
 ## <a name="see-also"></a>Vedere anche
 

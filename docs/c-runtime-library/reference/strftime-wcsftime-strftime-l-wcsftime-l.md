@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353844"
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -111,7 +111,7 @@ Questa funzione convalida i relativi parametri. Se *strDest*, *formato*, o *time
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsftime**|**strftime**|**strftime**|**wcsftime**|
+|**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
 Il *formato* argomento è costituito da uno o più codici di; come in **printf**, i codici di formattazione sono preceduti da un segno di percentuale (**%**). Caratteri che non iniziano con **%** vengono copiati invariati in *strDest*. Il **LC_TIME** categoria delle impostazioni locali correnti influisce sulla formattazione dell'output di **strftime**. (Per ulteriori informazioni sul **LC_TIME**, vedere [setlocale](setlocale-wsetlocale.md).) Il **strftime** e **wcsftime** funzioni utilizzano correnti delle impostazioni locali. Il **strftime_l** e **wcsftime_l** versioni di queste funzioni sono identiche ad eccezione del fatto che accettano le impostazioni locali come parametro e usarlo invece correnti delle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -162,9 +162,9 @@ Come nel **printf** funzione, il **#** flag potrebbe prefisso qualsiasi codice d
 
 |Codice formato|Significato|
 |-----------------|-------------|
-|**% #a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#x10** , **%#z**, **%#Z**, **%#%**|**#** flag viene ignorato.|
-|**%#c**|Lunga data e ora di rappresentazione, appropriato per le impostazioni locali. Ad esempio: "martedì 14 marzo 1995 12.41.29".|
-|**%#x10**|Rappresentazione di data estesa, appropriata per le impostazioni locali. Ad esempio: "martedì 14 marzo 1995".|
+|**%#a**, **%#A**, **%#b**, **%#B**, **%#g**, **%#G**, **%#h**, **%#n**, **%#p**, **%#t**, **%#u**, **%#w**, **%#X**, **%#z**, **%#Z**, **%#%**|**#** flag viene ignorato.|
+|**%#c**|Lunga data e ora di rappresentazione, appropriato per le impostazioni locali. Ad esempio: "Martedì, 14 marzo 1995, 12:41:29".|
+|**%#x**|Rappresentazione di data estesa, appropriata per le impostazioni locali. Ad esempio: "Martedì, 14 marzo 1995".|
 |**%#d**, **%#D**, **%#e**, **%#F**, **%#H**, **% #I**, **%#j**, **%#m**, **%#M**, **%#r**, **%#R**, **%#S**, **%#T** , **%#U**, **%#V**, **%#W**, **%#y**, **%#Y**|Rimuovere zeri o spazi (se presente).|
 
 La settimana ISO 8601 e l'anno settimana in base al prodotto da **%V**, **%g**, e **%G**, viene utilizzato una settimana in cui inizia il lunedì, in cui settimana 1 settimana che contiene 4 gennaio, ovvero il primo settimana che include almeno quattro giorni dell'anno. Se il primo lunedì dell'anno è il 2 °, 3 o 4, i giorni precedenti fanno parte dell'ultima settimana dell'anno precedente. Per questi giorni **%V** viene sostituita da entrambi e 53 **%g** e **%G** vengono sostituite da cifre dell'anno precedente.

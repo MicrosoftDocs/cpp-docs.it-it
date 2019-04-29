@@ -35,11 +35,11 @@ helpviewer_keywords:
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
 ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357889"
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 
@@ -76,7 +76,7 @@ Il **putenv** funzione aggiunge nuove variabili di ambiente o modifica i valori 
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tputenv**|**_putenv**|**_putenv**|**_wputenv**|
+|**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
 Il *envstring* argomento deve essere un puntatore a una stringa nel formato *varname*=*value_string*, dove *varname* è il nome della variabile di ambiente per essere aggiunti o modificati e *value_string* è il valore della variabile. Se *varname* fa già parte dell'ambiente, il valore viene sostituito dal *value_string*; in caso contrario, il nuovo *varname* variabile e il relativo *value_string*  valore vengono aggiunti all'ambiente. È possibile rimuovere una variabile dall'ambiente specificando un oggetto vuoto *value_string*, o in altre parole, specificando solo *varname*=.
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356446"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ Restituisce un puntatore alla funzione precedente registrata da **set_terminate*
 
 ## <a name="remarks"></a>Note
 
-Il **set_terminate** funzione installazioni *termFunction* come nome della funzione chiamata dalla **terminare**. **set_terminate** viene usato con la gestione delle eccezioni C++ e può essere chiamato in qualsiasi punto del programma prima che venga generata l'eccezione. **terminare** chiamate [abort](abort.md) per impostazione predefinita. È possibile modificare questo valore predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_terminate** con il nome della funzione come relativo argomento. **terminare** chiama l'ultima funzione fornita come argomento al **set_terminate**. Dopo l'esecuzione di qualsiasi desiderato attività di pulizia *termFunction* deve uscire dal programma. Se non viene chiuso (se viene restituito al chiamante), [abort](abort.md) viene chiamato.
+Il **set_terminate** funzione installazioni *termFunction* come nome della funzione chiamata dalla **terminare**. **set_terminate** viene usato con C++ gestione delle eccezioni e può essere chiamato in qualsiasi punto del programma prima che venga generata l'eccezione. **terminare** chiamate [abort](abort.md) per impostazione predefinita. È possibile modificare questo valore predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_terminate** con il nome della funzione come relativo argomento. **terminare** chiama l'ultima funzione fornita come argomento al **set_terminate**. Dopo l'esecuzione di qualsiasi desiderato attività di pulizia *termFunction* deve uscire dal programma. Se non viene chiuso (se viene restituito al chiamante), [abort](abort.md) viene chiamato.
 
 In un ambiente multithreading, le funzioni di terminazione vengono mantenute separatamente per ogni thread. Ogni nuovo thread richiede l'installazione della propria funzione di terminazione. Quindi, ogni thread è responsabile della propria gestione della terminazione.
 

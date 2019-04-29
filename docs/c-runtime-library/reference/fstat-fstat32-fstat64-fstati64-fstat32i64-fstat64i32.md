@@ -50,11 +50,11 @@ helpviewer_keywords:
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
 ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332795"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -128,7 +128,7 @@ Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze 
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variazioni tipo time e tipo lunghezza file di _stat
 
-|Funzioni|_USE_32BIT_TIME_T definito?|Tipo time|Tipo lunghezza file|
+|Funzioni|_USE_32BIT_TIME_T definito?|Tipo Time|Tipo lunghezza file|
 |---------------|------------------------------------|---------------|----------------------|
 |**_fstat**|Non definito|64 bit|32 bit|
 |**_fstat**|Definito|32 bit|32 bit|

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368734"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 
@@ -35,7 +35,7 @@ La classe `Exception` dispone dei seguenti generi di membri.
 
 ### <a name="constructors"></a>Costruttori
 
-|Membro|Descrizione|
+|Member|Descrizione|
 |------------|-----------------|
 |[Exception::Exception](#ctor)|Inizializza una nuova istanza della classe `Exception`.|
 

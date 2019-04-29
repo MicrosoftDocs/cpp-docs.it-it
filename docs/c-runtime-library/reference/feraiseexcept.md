@@ -22,11 +22,11 @@ helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
 ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334359"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -42,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>Parametri
 
-*tranne che ai*<br/>
+*excepts*<br/>
 Eccezioni a virgola mobile da generare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -66,7 +66,7 @@ Il *eccetto* argomento può essere uguale a zero, uno dei valori di macro di ecc
 
 Per usare questa funzione, è necessario disattivare le ottimizzazioni a virgola mobile che potrebbero impedire l'accesso tramite la direttiva `#pragma fenv_access(on)` prima della chiamata. Per altre informazioni, vedere [fenv_access](../../preprocessor/fenv-access.md).
 
-**Specifica di Microsoft:** le eccezioni specificate in *eccetto* vengono generati nell'ordine FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Tuttavia, FE_INEXACT può essere generata quando viene generata FE_OVERFLOW o FE_UNDERFLOW, anche se non specificato nella *eccetto*. **Fine sezione specifica Microsoft**
+**Specifica di Microsoft:** Le eccezioni specificate in *eccetto* vengono generati nell'ordine FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Tuttavia, FE_INEXACT può essere generata quando viene generata FE_OVERFLOW o FE_UNDERFLOW, anche se non specificato nella *eccetto*. **Fine sezione specifica Microsoft**
 
 ## <a name="requirements"></a>Requisiti
 

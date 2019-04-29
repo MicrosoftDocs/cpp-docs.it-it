@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
 ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371777"
 ---
 # <a name="macros-cc"></a>Macro (C/C++)
 Pre-elaborazione espande le macro in tutte le righe che non sono direttive del preprocessore (righe che non è un **#** come primo carattere diverso da spazi vuoti) e nelle parti di alcune direttive che non vengono ignorate come parte di un compilazione condizionale. Le direttive di "compilazione condizionale" consentono di evitare la compilazione di porzioni del file di origine grazie alla possibilità di eseguire un test di un'espressione costante o di un identificatore, in modo da determinare quali blocchi di testo vengono passati al compilatore e quali blocchi di testo vengono rimossi dal file di origine durante la pre-elaborazione.

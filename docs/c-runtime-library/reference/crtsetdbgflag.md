@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348185"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -86,11 +86,11 @@ La tabella seguente contiene un elenco dei campi di bit per **_crtDbgFlag** e ne
 
 |Campo di bit|Impostazione predefinita|Descrizione|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Attiva le allocazioni di heap di debug e l'utilizzo di identificatori di tipo blocco di memoria, ad esempio **CLIENT_BLOCK**. OFF: aggiunge le nuove allocazioni all'elenco collegato dell'heap, ma imposta il tipo di blocco su **_IGNORE_BLOCK**.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: chiama [_CrtCheckMemory](crtcheckmemory.md) a ogni richiesta di allocazione e deallocazione. OFF: **CrtCheckMemory** deve essere chiamato in modo esplicito.<br /><br /> Quando viene impostato questo flag, le macro del controllo frequenza heap non hanno alcun effetto.|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Include **CRT_BLOCK** tipi in stato di memoria e il rilevamento delle perdite differenza operazioni. OFF: la memoria usata internamente dalla libreria di runtime viene ignorata da queste operazioni.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: mantiene i blocchi di memoria liberati nell'elenco collegato dell'heap, assegna loro il tipo **_FREE_BLOCK** e li riempie con il valore byte 0xDD. OFF: non mantiene i blocchi di memoria liberati nell'elenco collegato dell'heap.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|
-|**CRTDBG_LEAK_CHECK_DF**|OFF|ON: esegue il controllo automatico delle perdite all'uscita del programma mediante una chiamata a [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) e genera un report di errore se l'applicazione non ha liberato tutta la memoria allocata. OFF: non esegue automaticamente il controllo delle perdite di memoria all'uscita del programma.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|
+|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Abilitare le allocazioni di heap di debug e l'utilizzo di identificatori di tipo blocco di memoria, ad esempio **CLIENT_BLOCK**. OFF: Aggiunge le nuove allocazioni all'elenco collegato dell'heap, ma impostare tipo di blocco su **IGNORE_BLOCK**.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: Chiamare [CrtCheckMemory](crtcheckmemory.md) a ogni richiesta di allocazione e deallocazione. OFF: **CrtCheckMemory** deve essere chiamato in modo esplicito.<br /><br /> Quando viene impostato questo flag, le macro del controllo frequenza heap non hanno alcun effetto.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Includere **CRT_BLOCK** tipi in stato di memoria e il rilevamento delle perdite differenza operazioni. OFF: Memoria usata internamente dalla libreria di runtime viene ignorata da queste operazioni.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: Mantenere i blocchi di memoria liberati nell'elenco collegato dell'heap, assegna loro il **FREE_BLOCK** digitare e li riempie con il valore byte 0xDD. OFF: Non mantenere i blocchi liberati nell'elenco collegato dell'heap.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON: Eseguire automatica controllo delle perdite all'uscita del programma mediante una chiamata a [CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) e generare un report degli errori se l'applicazione non ha liberato tutta la memoria allocata. OFF: Non eseguire automaticamente controllo delle perdite all'uscita del programma.<br /><br /> È anche possibile usare in combinazione le macro del controllo frequenza heap.|
 
 **Macro di controllo della frequenza dell'heap**
 

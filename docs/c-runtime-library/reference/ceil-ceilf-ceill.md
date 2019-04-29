@@ -30,11 +30,11 @@ helpviewer_keywords:
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
 ms.openlocfilehash: b128f20593d41fff3c4c50f6d68f8643798c5b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335440"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -71,7 +71,7 @@ Il **ceil** le funzioni restituiscono un valore a virgola mobile che rappresenta
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|none|**DOMINIO**|
+|± **QNAN**, **IND**|none|**_DOMAIN**|
 
 **ceil** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 

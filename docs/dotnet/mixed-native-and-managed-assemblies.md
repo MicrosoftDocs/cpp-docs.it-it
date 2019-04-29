@@ -13,11 +13,11 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
 ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384855"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assembly misti (nativi e gestiti)
 
@@ -27,14 +27,14 @@ Ad esempio, una libreria esistente costituite interamente da codice C++ nativo p
 
 Visual C++ supporta solo la generazione di assembly misti gestiti usando il **/clr** opzione del compilatore. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017. Se è necessario puro o verificabile assembly gestiti, è consigliabile che crearle usando c#.
 
-Versioni precedenti di strumenti del compilatore Visual C++ supportano la generazione di tre tipi distinti di assembly gestiti: mista, pura e verificabile. Quest'ultimo sono illustrati nella [codice Pure e verificabile (C + + CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Versioni precedenti di strumenti del compilatore Visual C++ supportano la generazione di tre tipi distinti di assembly gestiti: mista, pura e verificabile. Quest'ultimo sono illustrati nella [codice Pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Procedura: migrare a /clr](../dotnet/how-to-migrate-to-clr.md)<br/>
+[Procedura: Eseguire la migrazione a /clr](../dotnet/how-to-migrate-to-clr.md)<br/>
 Descrive le procedure consigliate per l'introduzione o l'aggiornamento delle funzionalità .NET nell'applicazione.
 
-[Procedura: compilare /clr MFC e ATL codice tramite l'utilizzo](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+[Procedura: Compilazione /clr MFC e ATL codice tramite l'utilizzo](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
 Viene illustrato come compilare programmi esistenti di MFC e ATL per Common Language Runtime di destinazione.
 
 [Inizializzazione di assembly misti](../dotnet/initialization-of-mixed-assemblies.md)<br/>

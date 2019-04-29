@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::ends [C++]
 - std::flush [C++]
 ms.openlocfilehash: fa498f4acbb151eab4321bcddc6af027ee266237
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370992"
 ---
 # <a name="ltostreamgt-functions"></a>Funzioni &lt;ostream&gt;
 

@@ -45,11 +45,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 3f99bde3-c891-493d-908f-30559c421058
 ms.openlocfilehash: 266df8c033fc9d1c8459aff9f2b95771947d88d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364701"
 ---
 # <a name="vprintfp-vprintfpl-vwprintfp-vwprintfpl"></a>_vprintf_p, _vprintf_p_l, _vwprintf_p, _vwprintf_p_l
 
@@ -83,7 +83,7 @@ int _vwprintf_p_l(
 *format*<br/>
 Specifica di formato.
 
-*valore di ArgPtr*<br/>
+*argptr*<br/>
 Puntatore a un elenco di argomenti.
 
 *locale*<br/>
@@ -112,15 +112,15 @@ Se *formato* è un puntatore null o se la stringa di formato contiene caratteri 
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vtprintf_p**|**_vprintf_p**|**_vprintf_p**|**_vwprintf_p**|
-|**vtprintf_p_l**|**_vprintf_p_l**|**_vprintf_p_l**|**_vwprintf_p_l**|
+|**_vtprintf_p**|**_vprintf_p**|**_vprintf_p**|**_vwprintf_p**|
+|**_vtprintf_p_l**|**_vprintf_p_l**|**_vprintf_p_l**|**_vwprintf_p_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
-|**vprintf_p**, **vprintf_p_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vwprintf_p**, **vwprintf_p_l**|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vprintf_p**, **_vprintf_p_l**|\<stdio.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vwprintf_p**, **_vwprintf_p_l**|\<stdio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
 
 \* Richiesto per la compatibilità con UNIX V.
 

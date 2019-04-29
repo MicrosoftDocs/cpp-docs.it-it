@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _FCbuild function
 - _LCbuild function
 ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340466"
 ---
 # <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356316"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -47,7 +47,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 *buffer*<br/>
@@ -57,7 +57,7 @@ Buffer allocato dall'utente.
 Modalità di buffering.
 
 *size*<br/>
-Dimensioni del buffer in byte. Intervallo consentito: 2 < = *dimensioni* < = INT_MAX (2147483647). Internamente, il valore specificato per *dimensioni* viene arrotondato per difetto al multiplo più vicino di 2.
+Dimensioni del buffer in byte. Intervallo consentito: 2 <= *size* <= INT_MAX (2147483647). Internamente, il valore specificato per *dimensioni* viene arrotondato per difetto al multiplo più vicino di 2.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -75,9 +75,9 @@ La modalità deve essere **iofbf**, **iolbf**, o **ionbf**. Se *modalità* viene
 
 |*modalità* valore|Significato|
 |-|-|
-| **IOFBF** | Buffering completo vale a dire *buffer* viene usato come buffer e *dimensioni* viene usato come le dimensioni del buffer. Se *buffer* viene **NULL**, un buffer allocato automaticamente *dimensioni* byte viene utilizzato. |
-| **IOLBF** | Per alcuni sistemi, viene così fornito il buffering di riga. Tuttavia, per Win32, il comportamento è identico **iofbf** -Buffering completo. |
-| **IONBF** | Nessun buffer viene usato, indipendentemente dalla *buffer* oppure *dimensioni*. |
+| **_IOFBF** | Buffering completo vale a dire *buffer* viene usato come buffer e *dimensioni* viene usato come le dimensioni del buffer. Se *buffer* viene **NULL**, un buffer allocato automaticamente *dimensioni* byte viene utilizzato. |
+| **_IOLBF** | Per alcuni sistemi, viene così fornito il buffering di riga. Tuttavia, per Win32, il comportamento è identico **iofbf** -Buffering completo. |
+| **_IONBF** | Nessun buffer viene usato, indipendentemente dalla *buffer* oppure *dimensioni*. |
 
 ## <a name="requirements"></a>Requisiti
 

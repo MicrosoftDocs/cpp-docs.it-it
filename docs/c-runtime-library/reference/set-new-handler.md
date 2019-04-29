@@ -26,11 +26,11 @@ helpviewer_keywords:
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356499"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -53,7 +53,7 @@ Restituisce un puntatore alla funzione registrata da di gestione delle eccezioni
 
 ## <a name="remarks"></a>Note
 
-C++ **set_new_handler** funzione specifica una funzione di gestione delle eccezioni che deve assumere il controllo se il **nuove** operatore non riesce ad allocare memoria. Se **nuove** ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni che è stata passata come argomento al **set_new_handler**. **Pnh**, definite in New. h, è un puntatore a una funzione che restituisce il tipo **int** e accetta un argomento di tipo **size_t**. Uso **size_t** per specificare la quantità di spazio da allocare.
+Il C++ **set_new_handler** funzione specifica una funzione di gestione delle eccezioni che deve assumere il controllo se il **nuovo** operatore non riesce ad allocare memoria. Se **nuove** ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni che è stata passata come argomento al **set_new_handler**. **Pnh**, definite in New. h, è un puntatore a una funzione che restituisce il tipo **int** e accetta un argomento di tipo **size_t**. Uso **size_t** per specificare la quantità di spazio da allocare.
 
 Non è previsto alcun gestore predefinito.
 

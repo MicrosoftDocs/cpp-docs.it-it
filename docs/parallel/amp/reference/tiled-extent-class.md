@@ -14,11 +14,11 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
 ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352281"
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
 
@@ -81,7 +81,7 @@ Lunghezza della dimensione meno significativa.
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[tile_dim0 Constant](#tile_dim0)|Archivia la lunghezza della dimensione più significativa.|
 |[tile_dim1 (costante)](#tile_dim1)|Archivia la lunghezza della dimensione significativa next-a-la maggior parte.|

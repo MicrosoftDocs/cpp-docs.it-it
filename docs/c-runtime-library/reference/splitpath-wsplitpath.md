@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
 ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355003"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -68,7 +68,7 @@ void _wsplitpath(
 *path*<br/>
 Percorso completo.
 
-*Unità*<br/>
+*drive*<br/>
 Lettera di unità, seguita da due punti (**:**). È possibile passare **NULL** per questo parametro se non è necessaria la lettera di unità.
 
 *dir*<br/>
@@ -90,7 +90,7 @@ Il **splitpath** funzione suddivide un percorso nei suoi quattro componenti. **s
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
+|**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
 Ogni componente del percorso completo è archiviato in un buffer separato; le costanti manifeste **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definito in STDLIB. H) specificare le dimensioni massime per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
 
@@ -98,12 +98,12 @@ Ogni buffer deve essere di dimensioni pari alla costante manifesta corrispondent
 
 La tabella seguente elenca i valori delle costanti manifeste.
 
-|nome|Valore|
+|Nome|Value|
 |----------|-----------|
-|**MAX_DRIVE**|3|
-|**MAX_DIR**|256|
-|**MAX_FNAME**|256|
-|**MAX_EXT**|256|
+|**_MAX_DRIVE**|3|
+|**_MAX_DIR**|256|
+|**_MAX_FNAME**|256|
+|**_MAX_EXT**|256|
 
 Se il percorso completo non contiene un componente (ad esempio, un nome di file), **splitpath** assegna stringhe vuote ai buffer corrispondenti.
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2371
 ms.assetid: d383993d-05ef-4e35-8129-3b58a6f7b7b7
 ms.openlocfilehash: 6fe9e85451d973ddd3983a935a9d1349c2699efb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338974"
 ---
 # <a name="compiler-error-c2371"></a>Errore del compilatore C2371
 

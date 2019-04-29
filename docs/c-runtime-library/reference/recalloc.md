@@ -24,11 +24,11 @@ helpviewer_keywords:
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
 ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357722"
 ---
 # <a name="recalloc"></a>_recalloc
 
@@ -49,7 +49,7 @@ void *_recalloc(
 *memblock*<br/>
 Puntatore al blocco di memoria allocato in precedenza.
 
-*Numero*<br/>
+*number*<br/>
 Numero di elementi.
 
 *size*<br/>
@@ -73,7 +73,7 @@ Poiché il nuovo blocco può trovarsi in una nuova posizione di memoria, il punt
 
 **recalloc** imposta **errno** al **ENOMEM** se l'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta supera **heap_maxreq**. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**recalloc** chiamate **realloc** per usare C++ [set_new_mode](set-new-mode.md) funzione per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore **realloc** consiste nel chiamare la routine del nuovo gestore come impostato da [set_new_handler](set-new-handler.md). Per impostazione predefinita **realloc** non chiama la routine del nuovo gestore in caso di errore per allocare memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **recalloc** non riesce ad allocare memoria **realloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando per lo stesso motivo ha esito negativo. Per eseguire l'override del comportamento predefinito, chiamare
+**recalloc** chiamate **realloc** per utilizzare il C++ [set_new_mode](set-new-mode.md) funzione per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore **realloc** consiste nel chiamare la routine del nuovo gestore come impostato da [set_new_handler](set-new-handler.md). Per impostazione predefinita **realloc** non chiama la routine del nuovo gestore in caso di errore per allocare memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **recalloc** non riesce ad allocare memoria **realloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando per lo stesso motivo ha esito negativo. Per eseguire l'override del comportamento predefinito, chiamare
 
 ```C
 _set_new_mode(1);

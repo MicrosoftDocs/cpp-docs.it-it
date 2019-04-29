@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
 ms.openlocfilehash: 9992d2054c04eea1b3b63d591601acf0091acb5e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348562"
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows Sockets in MFC
 
@@ -46,31 +46,31 @@ I sistemi operativi Microsoft Windows fornisce librerie a collegamento dinamico 
 
 Per altre informazioni sui socket di Windows, vedere:
 
-- [Windows Sockets: Socket di Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: socket di flusso](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Socket di datagramma](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: socket di datagrammi](../mfc/windows-sockets-datagram-sockets.md)
 
-- [Windows Sockets: Utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: uso di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Sequenza delle operazioni](../mfc/windows-sockets-sequence-of-operations.md)
+- [Windows Sockets: sequenza delle operazioni](../mfc/windows-sockets-sequence-of-operations.md)
 
-- [Windows Sockets: Esempio di socket che utilizzano archivi](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Sockets: esempio di socket che usano archivi](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows Sockets: Funzionamento dei socket con archivi](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: funzionamento dei socket con archivi](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets: Uso della classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: uso della classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Derivazione dalle classi Socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: derivazione da classi socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets: Notifiche socket](../mfc/windows-sockets-socket-notifications.md)
+- [Windows Sockets: notifiche dei socket](../mfc/windows-sockets-socket-notifications.md)
 
-- [Windows Sockets: Il blocco](../mfc/windows-sockets-blocking.md)
+- [Windows Sockets: blocco](../mfc/windows-sockets-blocking.md)
 
-- [Windows Sockets: L'ordine dei byte](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Sockets: ordine dei byte](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows Sockets: Conversione di stringhe](../mfc/windows-sockets-converting-strings.md)
+- [Windows Sockets: conversione di stringhe](../mfc/windows-sockets-converting-strings.md)
 
-- [Windows Sockets: Porte e indirizzi Socket](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows Sockets: porte e indirizzi socket](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
 ## <a name="see-also"></a>Vedere anche
 

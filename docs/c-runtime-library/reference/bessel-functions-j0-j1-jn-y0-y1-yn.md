@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341120"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funzioni di Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -92,21 +92,21 @@ Il **_j0**, **_j1**, e **Jn** routine restituiscono il primo tipo di funzioni di
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|**NON VALIDO**|**DOMINIO**|
+|± **QNAN**, **IND**|**INVALID**|**_DOMAIN**|
 
 Il **_y0**, **_y1**, e **Yn** routine restituiscono Bessel funzioni del secondo tipo: ordini 0, 1 e n, rispettivamente.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|**NON VALIDO**|**DOMINIO**|
-|± 0|**ZERODIVIDE**|**SING**|
-|&#124;x&#124; < 0,0|**NON VALIDO**|**DOMINIO**|
+|± **QNAN**, **IND**|**INVALID**|**_DOMAIN**|
+|± 0|**ZERODIVIDE**|**_SING**|
+|&#124;x&#124; < 0.0|**INVALID**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_j0**, **_j1**, **Jn**, **_y0**, **_y1**, **Yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

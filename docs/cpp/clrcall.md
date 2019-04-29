@@ -7,11 +7,11 @@ helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364571"
 ---
 # <a name="clrcall"></a>__clrcall
 
@@ -29,7 +29,7 @@ Quando `/clr` (non `/clr:pure` oppure `/clr:safe`) viene usato e **clrcall** è 
 
 [/CLR (compilazione common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) implica che tutte le funzioni e i puntatori a funzione siano **clrcall** e il compilatore non consente una funzione all'interno del modulo diversamente da contrassegnare qualsiasi elemento diverso dal **clrcall**. Quando **/clr: pure** viene utilizzato **clrcall** può essere specificata solo in dichiarazioni esterne e i puntatori a funzione.
 
-È possibile chiamare direttamente **clrcall** le funzioni da codice C++ esistente che è stato compilato utilizzando **/clr** fino a quando tale funzione dispone di un'implementazione MSIL. **clrcall** le funzioni non possono essere chiamate direttamente da funzioni che hanno l'assembly inline e chiamano intrinseci specifici della CPU, ad esempio, anche se tali funzioni vengono compilate con `/clr`.
+È possibile chiamare direttamente **clrcall** le funzioni da esistente C++ codice compilato usando **/clr** fino a quando tale funzione dispone di un'implementazione MSIL. **clrcall** le funzioni non possono essere chiamate direttamente da funzioni che hanno l'assembly inline e chiamano intrinseci specifici della CPU, ad esempio, anche se tali funzioni vengono compilate con `/clr`.
 
 **clrcall** sono concepite per essere usato nel dominio dell'applicazione in cui sono state create solo i puntatori a funzione.  Anziché passare **clrcall** puntatori a funzione tra domini dell'applicazione, usare <xref:System.CrossAppDomainDelegate>. Per altre informazioni, vedere [domini applicazione e Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 

@@ -32,11 +32,11 @@ helpviewer_keywords:
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
 ms.openlocfilehash: fa390c039a3d663cb79cb311667e568a6a053131
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355159"
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe, _wspawnlpe
 
@@ -73,10 +73,10 @@ intptr_t _wspawnlpe(
 *mode*<br/>
 Modalità di esecuzione del processo chiamante.
 
-*CmdName*<br/>
+*cmdname*<br/>
 Percorso del file da eseguire.
 
-*arg0*, *arg1*,... *argn*<br/>
+*arg0*, *arg1*, ... *argn*<br/>
 Elenco dei puntatori agli argomenti. Il *arg0* argomento è in genere un puntatore a *cmdname*. Gli argomenti *arg1* attraverso *argn* sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. Seguendo *argn*, deve essere presente un **NULL** puntatore per contrassegnare la fine dell'elenco di argomenti.
 
 *envp*<br/>

@@ -40,11 +40,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353822"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -152,14 +152,14 @@ Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xF
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
+|**_tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strerror_s**, **strerror_s**|\<string.h>|
-|**wcserror_s**, **wcserror_s**|\<string.h> o \<wchar.h>|
+|**strerror_s**, **_strerror_s**|\<string.h>|
+|**_wcserror_s**, **__wcserror_s**|\<string.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

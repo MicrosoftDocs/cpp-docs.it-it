@@ -142,11 +142,11 @@ helpviewer_keywords:
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
 ms.openlocfilehash: 6011aad0ef86bc0e633687a6d8e017e9b12771c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350832"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -272,7 +272,7 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `binary_search`. Per altre informazioni, vedere [binary_search](../standard-library/algorithm-functions.md#binary_search).
 
-## <a name="copy"></a> Copia (STL/CLR)
+## <a name="copy"></a> copy (STL/CLR)
 
 Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in avanti.
 
@@ -303,7 +303,7 @@ template<class _BidIt1, class _BidIt2> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `copy_backward`. Per altre informazioni, vedere [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
 
-## <a name="count"></a> conteggio (STL/CLR)
+## <a name="count"></a> count (STL/CLR)
 
 Restituisce il numero di elementi di un intervallo i cui valori corrispondono a un valore specificato.
 
@@ -335,7 +335,7 @@ template<class _InIt, class _Pr> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `count_if`. Per altre informazioni, vedere [count_if](../standard-library/algorithm-functions.md#count_if).
 
-## <a name="equal"></a> uguale a (STL/CLR)
+## <a name="equal"></a> equal (STL/CLR)
 
 Confronta due intervalli elemento per elemento per verificarne l'uguaglianza o l'equivalenza nel senso specificato da un predicato binario.
 
@@ -372,7 +372,7 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `equal_range`. Per altre informazioni, vedere [equal_range](../standard-library/algorithm-functions.md#equal_range).
 
-## <a name="fill"></a> Fill (STL/CLR)
+## <a name="fill"></a> fill (STL/CLR)
 
 Assegna lo stesso nuovo valore a ogni elemento di un intervallo specificato.
 
@@ -402,7 +402,7 @@ template<class _OutIt, class _Diff, class _Ty> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `fill_n`. Per altre informazioni, vedere [fill_n](../standard-library/algorithm-functions.md#fill_n).
 
-## <a name="find"></a> Find (STL/CLR)
+## <a name="find"></a> find (STL/CLR)
 
 Individua la posizione della prima occorrenza di un elemento in un intervallo con un valore specificato.
 
@@ -485,7 +485,7 @@ template<class _InIt, class _Fn1> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `for_each`. Per altre informazioni, vedere [for_each](../standard-library/algorithm-functions.md#for_each).
 
-## <a name="generate"></a> generare (STL/CLR)
+## <a name="generate"></a> generate (STL/CLR)
 
 Assegna i valori generati da un oggetto funzione a ogni elemento di un intervallo.
 
@@ -550,7 +550,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Note
 
-Questa funzione si comporta come la funzione della libreria Standard C++ `inplace_merge` per altre informazioni, vedere [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
+Questa funzione si comporta come la C++ funzione della libreria Standard `inplace_merge` per altre informazioni, vedere [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
 
 ## <a name="iter_swap"></a> iter_swap (STL/CLR)
 
@@ -674,7 +674,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `merge`. Per altre informazioni, vedere [merge](../standard-library/algorithm-functions.md#merge).
 
-## <a name="min"></a> Min (STL/CLR)
+## <a name="min"></a> min (STL/CLR)
 
 Confronta due oggetti e restituisce il minore dei due in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -800,7 +800,7 @@ template<class _InIt, class _RanIt, class _Pr> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `partial_sort_copy`. Per altre informazioni, vedere [partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy).
 
-## <a name="partition"></a> partizione (STL/CLR)
+## <a name="partition"></a> partition (STL/CLR)
 
 Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano il predicato unario che precedono quelli che non lo soddisfano.
 
@@ -883,7 +883,7 @@ template<class _RanIt, class _Fn1> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `random_shuffle`. Per altre informazioni, vedere [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle).
 
-## <a name="remove"></a> rimuovere (STL/CLR)
+## <a name="remove"></a> remove (STL/CLR)
 
 Elimina un valore specificato da un intervallo specificato senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo senza il valore specificato.
 
@@ -945,7 +945,7 @@ template<class _FwdIt, class _Pr> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `remove_if`. Per altre informazioni, vedere [remove_if](../standard-library/algorithm-functions.md#remove_if).
 
-## <a name="replace"></a> Replace (STL/CLR)
+## <a name="replace"></a> replace (STL/CLR)
 
 Esamina ogni elemento di un intervallo e lo sostituisce se corrisponde a un valore specificato.
 
@@ -1039,7 +1039,7 @@ template<class _BidIt, class _OutIt> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `reverse_copy`. Per altre informazioni, vedere [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy).
 
-## <a name="rotate"></a> ruotare (STL/CLR)
+## <a name="rotate"></a> rotate (STL/CLR)
 
 Scambia gli elementi di due intervalli adiacenti.
 
@@ -1070,7 +1070,7 @@ template<class _FwdIt, class _OutIt> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `rotate_copy`. Per altre informazioni, vedere [rotate_copy](../standard-library/algorithm-functions.md#rotate_copy).
 
-## <a name="search_"></a> eseguire la ricerca (STL/CLR)
+## <a name="search_"></a> search (STL/CLR)
 
 Cerca la prima occorrenza di una sequenza all'interno di un intervallo di destinazione i cui elementi sono uguali a quelli di una sequenza specificata di elementi oppure i cui elementi sono equivalenti nel senso specificato da un predicato binario agli elementi della sequenza specificata.
 
@@ -1184,7 +1184,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `set_union`. Per altre informazioni, vedere [set_union](../standard-library/algorithm-functions.md#set_union).
 
-## <a name="sort"></a> Sort (STL/CLR)
+## <a name="sort"></a> sort (STL/CLR)
 
 Dispone gli elementi di un intervallo specificato in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.
 
@@ -1281,7 +1281,7 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `swap_ranges`. Per altre informazioni, vedere [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges).
 
-## <a name="transform"></a> trasformazione (STL/CLR)
+## <a name="transform"></a> transform (STL/CLR)
 
 Applica un oggetto funzione ad ogni elemento di un intervallo di origine o a una coppia di elementi di due intervalli di origine e copia i valori restituiti dell'oggetto funzione in un intervallo di destinazione.
 
@@ -1300,7 +1300,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
 
 Questa funzione si comporta come la funzione della libreria Standard C++ `transform`. Per altre informazioni, vedere [trasformare](../standard-library/algorithm-functions.md#transform).
 
-## <a name="unique"></a> Unique (STL/CLR)
+## <a name="unique"></a> unique (STL/CLR)
 
 Rimuove gli elementi duplicati adiacenti l'uno rispetto all'altro in un intervallo specificato.
 

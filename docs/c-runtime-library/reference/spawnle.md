@@ -21,11 +21,11 @@ helpviewer_keywords:
 - spawnle function
 ms.assetid: 7c90cfdd-dcee-4ea6-b709-cd0f7598b0fe
 ms.openlocfilehash: 93a2ca7cab8d717bddccee0b01294d4eb897661d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355263"
 ---
 # <a name="spawnle"></a>spawnle
 

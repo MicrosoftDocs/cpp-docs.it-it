@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _FCmulcc function
 - _LCmulcc function
 ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335383"
 ---
 # <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
 

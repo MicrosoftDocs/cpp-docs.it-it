@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373154"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -237,7 +237,7 @@ class CPane : public CBasePane
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Consente una gestione coerente delle dimensioni minime per i riquadri.|
 |[CPane::m_recentDockInfo](#m_recentdockinfo)|Contiene informazioni di ancoraggio recenti.|

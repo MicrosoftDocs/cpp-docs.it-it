@@ -11,11 +11,11 @@ helpviewer_keywords:
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
 ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331122"
 ---
 # <a name="single-inheritance"></a>Ereditarietà singola
 
@@ -54,7 +54,7 @@ Esempio di grafico aciclico diretto
 Nel diagramma precedente, denominato grafico aciclico diretto, alcune classi sono classi base per più di una classe derivata. Tuttavia, il contrario non è vero: esiste una sola classe base diretta per qualsiasi classe derivata specificata. Il grafico nella figura raffigura struttura a ereditarietà singola.
 
 > [!NOTE]
-> I grafici aciclici diretti non sono univoci per l'ereditarietà singola. Tali grafici vengono inoltre usati per rappresentare grafici di ereditarietà multipla.
+> I grafici aciclici diretti non sono univoci per l'ereditarietà singola. Tali grafici vengono inoltre utilizzati per rappresentare grafici di ereditarietà multipla.
 
 Nell'ereditarietà la classe derivata contiene i membri della classe base e tutti i nuovi membri aggiunti. Di conseguenza, una classe derivata può fare riferimento ai membri della classe base, a meno che i membri non vengano ridefiniti nella classe derivata. L'operatore di risoluzione dell'ambito (`::`) può essere usato per fare riferimento a membri delle classi base dirette o indirette quando tali membri sono stati ridefiniti nella classe derivata. Si consideri l'esempio seguente:
 

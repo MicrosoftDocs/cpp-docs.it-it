@@ -31,11 +31,11 @@ helpviewer_keywords:
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
 ms.openlocfilehash: 5939b3665bef4d07a4eaca262c38d4a20b83aed5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355185"
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
 
@@ -64,7 +64,7 @@ intptr_t _wspawnv(
 *mode*<br/>
 Modalità di esecuzione del processo chiamante.
 
-*CmdName*<br/>
+*cmdname*<br/>
 Percorso del file da eseguire.
 
 *argv*<br/>

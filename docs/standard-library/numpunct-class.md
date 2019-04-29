@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371477"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
@@ -352,11 +352,11 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \> 1: Questi valori non definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 

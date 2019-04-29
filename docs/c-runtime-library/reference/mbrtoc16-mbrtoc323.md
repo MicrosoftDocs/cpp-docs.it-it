@@ -27,11 +27,11 @@ helpviewer_keywords:
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
 ms.openlocfilehash: f8573ac321772d19141be0228891b290ba48b217
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331584"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -57,7 +57,7 @@ size_t mbrtoc32(
 
 ### <a name="parameters"></a>Parametri
 
-*Destinazione*<br/>
+*destination*<br/>
 Puntatore per il **char16_t** oppure **char32_t** equivalente del carattere multibyte da convertire. Se Null, la funzione non archivia un valore.
 
 *source*<br/>
@@ -73,7 +73,7 @@ Puntatore a un **mbstate_t** oggetto di stato di conversione utilizzato per inte
 
 In caso di esito positivo restituisce il valore del primo di tali condizioni che si applica, dato il corrente *stato* valore:
 
-|Valore|Condizione|
+|Value|Condizione|
 |-----------|---------------|
 |0|Alla successiva *max_bytes* o un minor numero di caratteri convertiti dal *origine* corrispondono al carattere wide null, corrisponde al valore archiviato se *destinazione* non null.<br /><br /> *stato* contiene lo stato iniziale di spostamento.|
 |Tra 1 e *max_bytes*, inclusi,|Il valore restituito è il numero di byte di *origine* che completa un carattere multibyte valido. Il carattere wide convertito viene archiviato se *destinazione* non null.|

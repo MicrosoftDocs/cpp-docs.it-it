@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
 ms.openlocfilehash: 6ddc32ac3a2de5993e6755df0cd9fc7d3546094e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372283"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Creazione di un progetto DLL MFC
 

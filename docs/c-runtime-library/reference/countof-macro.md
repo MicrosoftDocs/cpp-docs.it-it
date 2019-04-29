@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335347"
 ---
 # <a name="countof-macro"></a>Macro _countof
 
@@ -50,7 +50,7 @@ Il numero di elementi nella matrice, espresso come un **size_t**.
 
 **countof** viene implementato come macro del preprocessore simile a funzione. La versione di C++ ha la macchina di modello aggiuntivo per rilevare in fase di compilazione se viene passato un puntatore anziché una matrice dichiarata in modo statico.
 
-Assicurarsi che *matrice* è effettivamente una matrice, non un puntatore. In C **countof** produca risultati errati se *matrice* è un puntatore. In C++ **countof** si verifica un errore di compilazione se *matrice* è un puntatore.  Una matrice passata come parametro a una funzione *decade a un puntatore*, il che significa che all'interno della funzione, è possibile usare **countof** per determinare l'ambito della matrice.
+Assicurarsi che *matrice* è effettivamente una matrice, non un puntatore. In C **countof** produca risultati errati se *matrice* è un puntatore. In C++, **countof** si verifica un errore di compilazione se *matrice* è un puntatore.  Una matrice passata come parametro a una funzione *decade a un puntatore*, il che significa che all'interno della funzione, è possibile usare **countof** per determinare l'ambito della matrice.
 
 ## <a name="requirements"></a>Requisiti
 

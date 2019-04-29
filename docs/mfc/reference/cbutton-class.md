@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348692"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 
@@ -321,7 +321,7 @@ int GetCheck() const;
 
 Il valore restituito da un controllo pulsante creato con BS_AUTOCHECKBOX, BS_AUTORADIOBUTTON, BS_AUTO3STATE, BS_CHECKBOX, BS_RADIOBUTTON o stile BS_3STATE è uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Stato del pulsante è deselezionato.|
 |BST_CHECKED|Stato del pulsante è selezionato.|
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 Un campo di bit che contiene la combinazione di valori che indicano lo stato corrente di un controllo pulsante. La tabella seguente elenca i valori possibili.
 
-|Stato del pulsante|Valore|Descrizione|
+|Stato del pulsante|Value|Descrizione|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|Stato iniziale.|
 |BST_CHECKED|0x0001|Il controllo pulsante è selezionato.|
@@ -699,7 +699,7 @@ void SetCheck(int nCheck);
 *nCheck*<br/>
 Specifica lo stato di selezione. Questo parametro può essere uno dei seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |BST_UNCHECKED|Impostare lo stato del pulsante su deselezionata.|
 |BST_CHECKED|Impostare lo stato del pulsante controllare.|

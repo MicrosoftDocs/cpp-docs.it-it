@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365184"
 ---
 # <a name="ltvalarraygt-functions"></a>Funzioni &lt;valarray&gt;
 
@@ -974,7 +974,7 @@ Oggetto valarray i cui elementi sono uguali al seno iperbolico degli elementi de
 
 Identità che definiscono il seno iperbolico in termini di funzione esponenziale:
 
-sinh ( *z* ) = (exp ( *z* )-exp (- *z* )) / 2
+sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2
 
 ### <a name="example"></a>Esempio
 
@@ -1210,7 +1210,7 @@ Oggetto valarray i cui elementi sono uguali al coseno iperbolico degli elementi 
 
 Identità che definiscono la tangente iperbolica in termini di funzione esponenziale:
 
-Tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = (exp ( *z* )-exp (- *z* )) / (exp ( *z* ) + exp (- *z* ))
+tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )
 
 ### <a name="example"></a>Esempio
 

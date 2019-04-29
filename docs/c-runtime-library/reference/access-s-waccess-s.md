@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
 ms.openlocfilehash: 17d19527323f3e97edecd22ca7c0a0262b1cfbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335685"
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 

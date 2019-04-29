@@ -22,11 +22,11 @@ f1_keywords:
 - regex/std::wssub_match
 ms.assetid: e6a69067-106c-4a24-9e08-7c867a3a2260
 ms.openlocfilehash: 33217388ff7e0826efcee413b39adaeba569399a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369137"
 ---
 # <a name="ltregexgt-typedefs"></a>Typedef &lt;regex&gt;
 

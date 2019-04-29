@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377150"
 ---
 # <a name="basicfilebuf-class"></a>Classe basic_filebuf
 
@@ -271,7 +271,7 @@ La funzione membro restituisce un puntatore null se il puntatore del file è un 
 
 ### <a name="remarks"></a>Note
 
-`close` le chiamate `fclose`( **fp**). Se la funzione restituisce un valore diverso da zero, la funzione restituisce un puntatore null. In caso contrario, restituisce **this** per indicare che il file è stato chiuso.
+`close` calls `fclose`( **fp**). Se la funzione restituisce un valore diverso da zero, la funzione restituisce un puntatore null. In caso contrario, restituisce **this** per indicare che il file è stato chiuso.
 
 Per un flusso wide, se si sono verificati inserimenti dall'apertura del flusso o dall'ultima chiamata a `streampos`, la funzione chiama [overflow](#overflow). Inserisce anche qualsiasi sequenza necessaria per ripristinare lo stato di conversione iniziale usando il facet di conversione di file `fac` chiamare `fac.unshift` in base alle esigenze. Ogni elemento `byte` typu **char** prodotto viene scritto nel flusso associato designato dal puntatore di file `fp` come tramite le chiamate successive del form `fputc`( **byte**, **fp**). Se la chiamata a `fac.unshift` o qualsiasi scrittura ha esito negativo, la funzione non riesce.
 
@@ -402,10 +402,10 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parametri
 
-*Nome file*<br/>
+*_Filename*<br/>
 Nome del file da aprire.
 
-*Modalità*<br/>
+*_Mode*<br/>
 Una delle enumerazioni in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ La funzione membro apre il file con nome file *filename* chiamando [fopen](../c-
 
 Se **mode & ios_base:: Binary** è diverso da zero, la funzione aggiunge `b` a `strmode` per aprire un flusso binario anziché un flusso di testo. Quindi archivia il valore restituito da `fopen` nel puntatore del file `fp`. Se **mode & ios_base::ate** è diverso da zero e il puntatore del file non è un puntatore null, la funzione chiama `fseek`( **fp**, 0, `SEEK_END`) per posizionare il flusso alla fine del file. Se tale operazione di posizionamento ha esito negativo, la funzione chiama [chiudere](#close)( `fp`) e archivia un puntatore null nel puntatore del file.
 
-Se il puntatore del file non è un puntatore null, la funzione determina il facet di conversione file: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)) usato da [underflow](#underflow) e [overflow](#overflow).
+Se il puntatore del file non è un puntatore null, la funzione determina il facet di conversione file: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc)), per l'uso da [underflow](#underflow) e [overflow](#overflow).
 
 Se il puntatore del file è un puntatore null, la funzione restituisce un puntatore null. In caso contrario, restituisce **this**.
 
@@ -536,10 +536,10 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 La posizione da cercare relativo alla *Way*.
 
-*Way*<br/>
+*_Way*<br/>
 Punto iniziale per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
 
 *_Which*<br/>

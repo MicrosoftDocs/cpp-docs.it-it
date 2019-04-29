@@ -28,11 +28,11 @@ helpviewer_keywords:
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
 ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357590"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 

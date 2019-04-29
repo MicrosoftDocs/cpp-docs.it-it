@@ -10,11 +10,11 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.openlocfilehash: 46ced4ac5f7952a9b7f66418ea037e053b16e9be
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346119"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Distribuzione di applicazioni desktop native (Visual C++)
 

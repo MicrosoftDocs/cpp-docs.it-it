@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362738"
 ---
 # <a name="unorderedset-class"></a>Classe unordered_set
 
@@ -161,7 +161,7 @@ class unordered_set;
 |Parametro|Descrizione|
 |-|-|
 |*Key*|Tipo di chiave.|
-|*hash*|Tipo di oggetto della funzione hash.|
+|*Hash*|Tipo di oggetto della funzione hash.|
 |*Pred*|Tipo di oggetto della funzione di confronto di uguaglianza.|
 |*Alloc*|Classe Allocator.|
 
@@ -363,7 +363,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da mappare.
 
 ### <a name="remarks"></a>Note
@@ -855,7 +855,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -1165,7 +1165,7 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -1265,7 +1265,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -2429,7 +2429,7 @@ unordered_set(
 |*InputIterator*|Tipo di iteratore.|
 |*Al*|Oggetto allocatore da archiviare.|
 |*Comp*|Oggetto della funzione di confronto da archiviare.|
-|*hash*|Oggetto della funzione hash da archiviare.|
+|*Hash*|Oggetto della funzione hash da archiviare.|
 |*bucket_count*|Numero minimo di bucket.|
 |*A destra*|Contenitore da copiare.|
 |*IList*|Oggetto initializer_list contenente gli elementi da copiare.|

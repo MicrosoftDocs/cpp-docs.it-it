@@ -24,11 +24,11 @@ helpviewer_keywords:
 - wcsicmp function
 ms.assetid: 2e3c6703-2635-4961-a253-e2c4c5029ed8
 ms.openlocfilehash: ff3e160af253765fbafc7c3ee0082639c231a1e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353651"
 ---
 # <a name="stricmp-wcsicmp"></a>stricmp, wcsicmp
 

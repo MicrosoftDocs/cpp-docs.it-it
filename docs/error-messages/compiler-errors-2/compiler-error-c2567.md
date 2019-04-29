@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2567
 ms.assetid: 9c140ac9-7059-47e6-9ba1-e7939c8c0dc3
 ms.openlocfilehash: eec529f43e23810843651888ef5722c5d0a0b2c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366355"
 ---
 # <a name="compiler-error-c2567"></a>Errore del compilatore C2567
 

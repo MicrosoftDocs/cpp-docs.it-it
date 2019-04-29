@@ -44,11 +44,11 @@ helpviewer_keywords:
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
 ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347808"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -95,7 +95,7 @@ La stringa di input è una sequenza di caratteri che può essere interpretata co
 
 Il *str* argomento **atol** ha il formato seguente:
 
-> [*whitespace*] [*sign*] [*cifre*]]
+> [*whitespace*] [*sign*] [*digits*]]
 
 Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* uno o più cifre.
 
@@ -107,15 +107,15 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tstol**|**atol**|**atol**|**_wtol**|
-|**ttol**|**atol**|**atol**|**_wtol**|
+|**_tstol**|**atol**|**atol**|**_wtol**|
+|**_ttol**|**atol**|**atol**|**_wtol**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |--------------|---------------------|
 |**atol**|\<stdlib.h>|
-|**atol_l**, **wtol**, **wtol_l**|\<stdlib.h> e \<wchar.h>|
+|**_atol_l**, **_wtol**, **_wtol_l**|\<stdlib.h> e \<wchar.h>|
 
 ## <a name="example"></a>Esempio
 

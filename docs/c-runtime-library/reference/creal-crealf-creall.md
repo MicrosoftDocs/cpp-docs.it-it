@@ -31,11 +31,11 @@ helpviewer_keywords:
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
 ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339752"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -65,7 +65,7 @@ La parte reale del *z*.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **creal** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float** oppure **long double** valori. In un programma C **creal** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **creal** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float**oppure **long double** valori. In un programma C **creal** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
 
 ## <a name="requirements"></a>Requisiti
 

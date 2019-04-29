@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
 ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331688"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -55,12 +55,12 @@ Buffer che deve contenere le informazioni sull'heap.
 
 |Valore restituito|Significato|
 |-|-|
-|**HEAPBADBEGIN**| Le informazioni di intestazione iniziali non sono valide o non sono state trovate.|
-|**HEAPBADNODE**| L'heap è danneggiato o è stato travato un nodo non valido.|
-|**HEAPBADPTR**| Il **pentry** campo le **heapinfo** struttura non contiene un puntatore valido nell'heap o *entryinfo* è un puntatore null.|
-|**HEAPEND**| Fine dell'heap raggiunta correttamente.|
-|**HEAPEMPTY**| L'heap non è stato inizializzato.|
-|**HEAPOK**| Nessun errore finora. *entryinfo* viene aggiornato con le informazioni relative alla voce dell'heap successiva.|
+|**_HEAPBADBEGIN**| Le informazioni di intestazione iniziali non sono valide o non sono state trovate.|
+|**_HEAPBADNODE**| L'heap è danneggiato o è stato travato un nodo non valido.|
+|**_HEAPBADPTR**| Il **pentry** campo le **heapinfo** struttura non contiene un puntatore valido nell'heap o *entryinfo* è un puntatore null.|
+|**_HEAPEND**| Fine dell'heap raggiunta correttamente.|
+|**_HEAPEMPTY**| L'heap non è stato inizializzato.|
+|**_HEAPOK**| Nessun errore finora. *entryinfo* viene aggiornato con le informazioni relative alla voce dell'heap successiva.|
 
 Inoltre, se si verifica un errore, **heapwalk** imposta **errno** al **ENOSYS**.
 

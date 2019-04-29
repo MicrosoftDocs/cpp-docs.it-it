@@ -47,11 +47,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
 ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341353"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -98,7 +98,7 @@ La stringa di input è una sequenza di caratteri che può essere interpretata co
 
 Il *str* argomento **atof** e **wtof** ha il formato seguente:
 
-[*whitespace*] [*sign*] [*cifre*] [__.__ *cifre*] [{**elettronica** &#124; **elettronica** } [*sign*]*cifre*]
+[*whitespace*] [*sign*] [*digits*] [__.__*digits*] [ {**e** &#124; **E** }[*sign*]*digits*]
 
 Oggetto *whitespace* costituito da caratteri di spazio o tabulazione che vengono ignorati. *sign* può essere più (+) o meno (-) e *cifre* sono uno o più cifre decimali. Se non viene visualizzata alcuna cifra prima del separatore decimale, è necessario che sia presente almeno una cifra dopo il separatore decimale. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**elettronica**, o **elettronica**) e un intero decimale con segno facoltativo.
 
@@ -110,15 +110,15 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ma usano le 
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tstof**|**atof**|**atof**|**_wtof**|
-|**ttof**|**atof**|**atof**|**_wtof**|
+|**_tstof**|**atof**|**atof**|**_wtof**|
+|**_ttof**|**atof**|**atof**|**_wtof**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |------------------|---------------------|
-|**atof**, **atof_l**|C: \<math.h> o \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> o \<math.h>|
-|**wtof**, **wtof_l**|C: \<stdlib.h> o \<wchar.h> C++: \<cstdlib>, \<stdlib.h> o \<wchar.h>|
+|**atof**, **_atof_l**|C: \<math.h> o \<stdlib.h> C++: \<cstdlib>, \<stdlib.h>, \<cmath> o \<math.h>|
+|**_wtof**, **_wtof_l**|C: \<stdlib.h> o \<wchar.h> C++: \<cstdlib>, \<stdlib.h> o \<wchar.h>|
 
 ## <a name="example"></a>Esempio
 

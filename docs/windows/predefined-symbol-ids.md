@@ -6,11 +6,11 @@ helpviewer_keywords:
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
 ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362296"
 ---
 # <a name="predefined-symbol-ids"></a>ID di simbolo già definiti
 

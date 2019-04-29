@@ -44,11 +44,11 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
 ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354210"
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -91,7 +91,7 @@ int _mbscoll_l(
 
 ### <a name="parameters"></a>Parametri
 
-*String1*, *stringa2*<br/>
+*string1*, *string2*<br/>
 Stringhe che terminano con Null da confrontare.
 
 *locale*<br/>
@@ -121,7 +121,7 @@ Il confronto delle due stringhe è un'operazione che dipende dalle impostazioni 
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcscoll**|**strcoll**|**_mbscoll**|**wcscoll**|
+|**_tcscoll**|**strcoll**|**_mbscoll**|**wcscoll**|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -129,7 +129,7 @@ Il confronto delle due stringhe è un'operazione che dipende dalle impostazioni 
 |-------------|---------------------|
 |**strcoll**|\<string.h>|
 |**wcscoll**|\<wchar.h>, \<string.h>|
-|**mbscoll**, **_mbscoll_l**|\<mbstring.h>|
+|**_mbscoll**, **_mbscoll_l**|\<mbstring.h>|
 |**_strcoll_l**|\<string.h>|
 |**_wcscoll_l**|\<wchar.h>, \<string.h>|
 

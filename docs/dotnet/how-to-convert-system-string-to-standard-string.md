@@ -7,11 +7,11 @@ helpviewer_keywords:
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
 ms.openlocfilehash: 3ea3c56af2fefaf7c65055135e8549fb153c9a8b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379116"
 ---
 # <a name="how-to-convert-systemstring-to-standard-string"></a>Procedura: Convertire System:: String in stringhe Standard
 

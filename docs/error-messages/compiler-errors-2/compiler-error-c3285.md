@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3285
 ms.assetid: 04e8f210-d67e-4810-b153-e1efe2986c8f
 ms.openlocfilehash: 6bc211fb2394a9a2989702c13e19bd63ea8a5ad7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62381332"
 ---
 # <a name="compiler-error-c3285"></a>Errore del compilatore C3285
 

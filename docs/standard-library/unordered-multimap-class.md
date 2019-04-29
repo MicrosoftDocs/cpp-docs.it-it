@@ -138,11 +138,11 @@ helpviewer_keywords:
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 ms.openlocfilehash: ca080cfee9869985c322bf1311fabf8aff72383a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362933"
 ---
 # <a name="unorderedmultimap-class"></a>Classe unordered_multimap
 
@@ -165,7 +165,7 @@ class unordered_multimap;
 |-|-|
 |*Key*|Tipo di chiave.|
 |*Ty*|Tipo mappato.|
-|*hash*|Tipo di oggetto della funzione hash.|
+|*Hash*|Tipo di oggetto della funzione hash.|
 |*Pred*|Tipo di oggetto della funzione di confronto di uguaglianza.|
 |*Alloc*|Classe Allocator.|
 
@@ -356,7 +356,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da mappare.
 
 ### <a name="remarks"></a>Note
@@ -858,7 +858,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -1174,7 +1174,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -1281,7 +1281,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Keyval*<br/>
+*keyval*<br/>
 Valore della chiave da cercare.
 
 ### <a name="remarks"></a>Note
@@ -2541,8 +2541,8 @@ unordered_multimap(
 |*InputIterator*|Tipo di iteratore.|
 |*Al*|Oggetto allocatore da archiviare.|
 |*Comp*|Oggetto della funzione di confronto da archiviare.|
-|*hash*|Oggetto della funzione hash da archiviare.|
-|*Valore di Bucket_count*|Numero minimo di bucket.|
+|*Hash*|Oggetto della funzione hash da archiviare.|
+|*Bucket_count*|Numero minimo di bucket.|
 |*A destra*|Contenitore da copiare.|
 |*IList*|initializer_list da cui copiare gli elementi.|
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
 ms.openlocfilehash: b06bc0f22ee71c8afbbc8feadca68895fc24a50b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358864"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Esempio di contenimento dei documenti attivi: raccoglitore di Office
 

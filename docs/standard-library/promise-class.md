@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
 ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369956"
 ---
 # <a name="promise-class"></a>Classe promise
 
@@ -44,7 +44,7 @@ class promise;
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[oggetto Promise](#promise)|Costruisce un oggetto `promise`.|
+|[promise](#promise)|Costruisce un oggetto `promise`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -65,7 +65,7 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-*oggetto Promise*<br/>
+*promise*<br/>
 
 ## <a name="requirements"></a>Requisiti
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametri
 
-*Escl.*<br/>
+*Exc*<br/>
 Oggetto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) archiviato con questo metodo come risultato dell'eccezione.
 
 ### <a name="remarks"></a>Note
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametri
 
-*Escl.*<br/>
+*Exc*<br/>
 Oggetto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) archiviato con questo metodo come risultato dell'eccezione.
 
 ### <a name="remarks"></a>Note

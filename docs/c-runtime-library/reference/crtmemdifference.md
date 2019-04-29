@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
 ms.openlocfilehash: f2c6306bf604737d0ace142674b21845a08e2dee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339468"
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 
@@ -48,7 +48,7 @@ int _CrtMemDifference(
 *stateDiff*<br/>
 Puntatore a un **CrtMemState** struttura utilizzata per archiviare le differenze tra due stati della memoria (restituiti).
 
-*stato precedente*<br/>
+*oldState*<br/>
 Puntatore a uno stato di memoria precedente (**CrtMemState** struttura).
 
 *newState*<br/>
@@ -78,7 +78,7 @@ Per altre informazioni sulle funzioni dello stato dell'heap e la **CrtMemState**
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-**Librerie:** solo le versioni di debug delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+**Librerie:** Le versioni di debug [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md) solo.
 
 ## <a name="see-also"></a>Vedere anche
 

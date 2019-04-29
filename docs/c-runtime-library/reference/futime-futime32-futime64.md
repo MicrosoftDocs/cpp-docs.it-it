@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
 ms.openlocfilehash: f21e394acdcc7fbf8a91c5450a4c04daa050db21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332676"
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 
@@ -65,7 +65,7 @@ int _futime64(
 *fd*<br/>
 Descrittore di file del file aperto.
 
-*FILETIME*<br/>
+*filetime*<br/>
 Puntatore alla struttura contenente la nuova data di modifica.
 
 ## <a name="return-value"></a>Valore restituito

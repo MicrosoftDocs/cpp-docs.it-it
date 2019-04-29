@@ -34,11 +34,11 @@ helpviewer_keywords:
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
 ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357460"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 
@@ -57,7 +57,7 @@ int _wrmdir(
 
 ### <a name="parameters"></a>Parametri
 
-*nomedir*<br/>
+*dirname*<br/>
 Percorso della directory da rimuovere.
 
 ## <a name="return-value"></a>Valore restituito
@@ -82,7 +82,7 @@ Il **rmdir** funzione Elimina la directory specificata da *dirname*. La director
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**trmdir**|**_rmdir**|**_rmdir**|**_wrmdir**|
+|**_trmdir**|**_rmdir**|**_rmdir**|**_wrmdir**|
 
 ## <a name="requirements"></a>Requisiti
 
