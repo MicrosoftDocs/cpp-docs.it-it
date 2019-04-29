@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2012
 ms.assetid: 9f0d8162-c0b3-4234-a41f-836fdb75c84e
 ms.openlocfilehash: 85c3ad1d127dcabeeed0c5727ba6bbbca86f7898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364467"
 ---
 # <a name="compiler-error-c2012"></a>Errore del compilatore C2012
 
-nome mancante dopo '<'
+Nome mancante dopo ' <'
 
 In una direttiva `#include` manca il nome file richiesto.
 

@@ -60,11 +60,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
 ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384608"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -89,7 +89,7 @@ template<typename Value,
 *Valore*<br/>
 Tipo di un elemento nella sequenza controllata.
 
-*Contenitore*<br/>
+*Container*<br/>
 Tipo del contenitore sottostante.
 
 ## <a name="requirements"></a>Requisiti
@@ -248,7 +248,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> stack:: container_type (STL/CLR)
+## <a name="container_type"></a> stack::container_type (STL/CLR)
 
 Tipo del contenitore sottostante.
 
@@ -523,7 +523,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a> stack:: get_container (STL/CLR)
+## <a name="get_container"></a> stack::get_container (STL/CLR)
 
 Accede al contenitore sottostante.
 
@@ -565,7 +565,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> stack:: operator = (STL/CLR)
+## <a name="op_as"></a> stack::operator= (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -708,7 +708,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a> stack::Reference (STL/CLR)
+## <a name="reference"></a> stack::reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -757,7 +757,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a> stack:: Size (STL/CLR)
+## <a name="size"></a> stack::size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -811,7 +811,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> stack:: size_type (STL/CLR)
+## <a name="size_type"></a> stack::size_type (STL/CLR)
 
 Il tipo di una distanza signed tra due elementi.
 
@@ -878,7 +878,7 @@ explicit stack(container_type% wrapped);
 *right*<br/>
 Oggetto da copiare.
 
-*eseguito il wrapping*<br/>
+*wrapped*<br/>
 Sottoposta a wrapping contenitore da usare.
 
 ### <a name="remarks"></a>Note
@@ -1055,7 +1055,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a> stack:: top_item (STL/CLR)
+## <a name="top_item"></a> stack::top_item (STL/CLR)
 
 Accede all'ultimo elemento.
 
@@ -1107,7 +1107,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a> stack:: value_type (STL/CLR)
+## <a name="value_type"></a> stack::value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -1152,7 +1152,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a> operatore! = (stack) (STL/CLR)
+## <a name="op_neq"></a> operator!= (stack) (STL/CLR)
 
 Stack di confronto non è uguale.
 
@@ -1223,7 +1223,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operatore&lt; (stack) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (stack) (STL/CLR)
 
 Stack di minore di confronto.
 
@@ -1294,7 +1294,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operatore&lt;= (stack) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (stack) (STL/CLR)
 
 Stack minore o uguale confronto.
 
@@ -1365,7 +1365,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operatore = = (stack) (STL/CLR)
+## <a name="op_eq"></a> operator== (stack) (STL/CLR)
 
 Confronto uguale dello stack.
 
@@ -1436,7 +1436,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operatore&gt; (stack) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (stack) (STL/CLR)
 
 Confronto maggiore di stack.
 
@@ -1507,7 +1507,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operatore&gt;= (stack) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (stack) (STL/CLR)
 
 Confronto uguale o maggiore di stack.
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
 ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342035"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
@@ -46,7 +46,7 @@ size_t _aligned_msize_dbg(
 *memblock*<br/>
 Puntatore al blocco di memoria.
 
-*Allineamento*<br/>
+*alignment*<br/>
 Valore di allineamento, che deve essere una potenza intera di 2.
 
 *offset*<br/>
@@ -60,7 +60,7 @@ Restituisce le dimensioni (in byte) come intero senza segno.
 
 Il *allineamento* e *offset* valori devono essere quello utilizzato per i valori passati alla funzione che ha allocato il blocco.
 
-**aligned_msize_dbg** è una versione di debug di [aligned_msize](aligned-msize.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_msize_dbg** viene ridotta a una chiamata a **aligned_msize**. Entrambe **aligned_msize** e **aligned_msize_dbg** calcolare le dimensioni di un blocco di memoria nell'heap di base, ma **aligned_msize_dbg** aggiunge una funzionalità di debug: include i buffer su entrambi i lati della parte della memoria di blocco nelle dimensioni restituite.
+**aligned_msize_dbg** è una versione di debug di [aligned_msize](aligned-msize.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_msize_dbg** viene ridotta a una chiamata a **aligned_msize**. Entrambe **aligned_msize** e **aligned_msize_dbg** calcolare le dimensioni di un blocco di memoria nell'heap di base, ma **aligned_msize_dbg** aggiunge una funzionalità di debug: Include i buffer su entrambi i lati della porzione utente del blocco di memoria nelle dimensioni restituite.
 
 Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null oppure *allineamento* non è una potenza di 2 **msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri ](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** al **EINVAL** e restituisce -1.
 

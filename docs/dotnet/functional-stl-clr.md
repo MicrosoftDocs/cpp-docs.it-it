@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393753"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -141,7 +141,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parametri
 
-*arg1*<br/>
+*Arg1*<br/>
 Il tipo del primo argomento.
 
 *Arg2*<br/>
@@ -216,7 +216,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parametri
 
-*arg1*<br/>
+*Arg1*<br/>
 Il tipo del primo argomento.
 
 *Arg2*<br/>
@@ -322,7 +322,7 @@ Il tipo del funtore stored.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |operator()|Calcola la funzione desiderata.|
-|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
+|operator delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
 
 ### <a name="remarks"></a>Note
 
@@ -401,7 +401,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Parametri di template
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomento.
 
 *Fun*<br/>
@@ -409,7 +409,7 @@ Il tipo del funtore.
 
 #### <a name="function-parameters"></a>Parametri di funzione
 
-*funtore*<br/>
+*functor*<br/>
 Il funtore per eseguire il wrapping.
 
 *left*<br/>
@@ -482,7 +482,7 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Parametri di template
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomento.
 
 *Fun*<br/>
@@ -490,7 +490,7 @@ Il tipo del funtore.
 
 #### <a name="function-parameters"></a>Parametri di funzione
 
-*funtore*<br/>
+*functor*<br/>
 Il funtore per eseguire il wrapping.
 
 *right*<br/>
@@ -597,7 +597,7 @@ Il tipo del funtore stored.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |operator()|Calcola la funzione desiderata.|
-|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
+|operator delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
 
 ### <a name="remarks"></a>Note
 
@@ -702,7 +702,7 @@ Il tipo del funtore stored.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |operator()|Calcola la funzione desiderata.|
-|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
+|operator delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
 
 ### <a name="remarks"></a>Note
 
@@ -787,7 +787,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Tipo di argomenti e il valore restituito.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -806,7 +806,7 @@ Tipo di argomenti e il valore restituito.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |operator()|Calcola la funzione desiderata.|
-|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
+|operator delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
 
 ### <a name="remarks"></a>Note
 
@@ -888,7 +888,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -907,7 +907,7 @@ Il tipo di argomenti.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |operator()|Calcola la funzione desiderata.|
-|operatore delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
+|operator delegate_type^()|Il funtore a un delegato viene eseguito il cast.|
 
 ### <a name="remarks"></a>Note
 
@@ -960,7 +960,7 @@ int main()
 1 0
 ```
 
-## <a name="greater"></a> maggiore (STL/CLR)
+## <a name="greater"></a> greater (STL/CLR)
 
 La classe modello descrive un funtore che, quando viene chiamato, restituisce true solo se il primo argomento è maggiore del secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.
 
@@ -989,7 +989,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1090,7 +1090,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1191,7 +1191,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1205,7 +1205,7 @@ Il tipo di argomenti.
 
 |Member|Descrizione|
 |------------|-----------------|
-|less|Costruisce il funtore.|
+|meno|Costruisce il funtore.|
 
 |Operatore|Descrizione|
 |--------------|-----------------|
@@ -1292,7 +1292,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1393,7 +1393,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1492,7 +1492,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1584,7 +1584,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1656,7 +1656,7 @@ int main()
 1 0
 ```
 
-## <a name="minus"></a> meno (STL/CLR)
+## <a name="minus"></a> minus (STL/CLR)
 
 La classe modello descrive un funtore che, quando viene chiamato, restituisce il primo argomento meno la seconda. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.
 
@@ -1685,7 +1685,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Tipo di argomenti e il valore restituito.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1786,7 +1786,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Tipo di argomenti e il valore restituito.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1887,7 +1887,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Tipo di argomenti e il valore restituito.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -1986,7 +1986,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -2078,7 +2078,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomenti.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -2168,7 +2168,7 @@ Il tipo del funtore.
 
 #### <a name="function-parameters"></a>Parametri di funzione
 
-*funtore*<br/>
+*functor*<br/>
 Il funtore per eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
@@ -2240,7 +2240,7 @@ Il tipo del funtore.
 
 #### <a name="function-parameters"></a>Parametri di funzione
 
-*funtore*<br/>
+*functor*<br/>
 Il funtore per eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus"></a> Plus (STL/CLR)
+## <a name="plus"></a> plus (STL/CLR)
 
 La classe modello descrive un funtore che, quando viene chiamato, restituisce il primo argomento e il secondo. Usarlo specificare un oggetto funzione in base al relativo tipo di argomento.
 
@@ -2332,7 +2332,7 @@ public:
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Tipo di argomenti e il valore restituito.
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -2418,7 +2418,7 @@ generic<typename Arg,
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomento.
 
 *Risultato*<br/>
@@ -2483,7 +2483,7 @@ generic<typename Arg>
 
 #### <a name="parameters"></a>Parametri
 
-*arg*<br/>
+*Arg*<br/>
 Il tipo di argomento.
 
 ### <a name="remarks"></a>Note
@@ -2579,7 +2579,7 @@ Il tipo del funtore stored.
 |Operatore|Descrizione|
 |--------------|-----------------|
 |operator()|Calcola la funzione desiderata.|
-|delegate_type ^|Il funtore a un delegato viene eseguito il cast.|
+|delegate_type^|Il funtore a un delegato viene eseguito il cast.|
 
 ### <a name="remarks"></a>Note
 

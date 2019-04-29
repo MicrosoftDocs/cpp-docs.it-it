@@ -1,5 +1,5 @@
 ---
-title: 'Intervallo di gestione delle eccezioni: riepilogo'
+title: 'Intervallo di gestione delle eccezioni: Un riepilogo'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sequence [C++]
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
 ms.openlocfilehash: cbff7c4153646fcb3471e18d20a0e633fbd1307f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330453"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Intervallo di gestione delle eccezioni: riepilogo
+# <a name="timing-of-exception-handling-a-summary"></a>Intervallo di gestione delle eccezioni: Un riepilogo
 
 Un gestore terminazioni viene eseguito, indipendentemente dal modo in cui il **try** blocco di istruzioni viene terminato. Cause del passaggio fuori il **try** blocco, un `longjmp` istruzione che trasferisce il controllo di fuori del blocco e la rimozione dello stack dovuta alla gestione delle eccezioni.
 

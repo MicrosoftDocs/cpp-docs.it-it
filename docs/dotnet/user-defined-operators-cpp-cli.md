@@ -5,11 +5,11 @@ helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
 ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384504"
 ---
 # <a name="user-defined-operators-ccli"></a>Operatori definiti dall'utente (C++/CLI)
 

@@ -3,17 +3,17 @@ title: Raccolte (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
 ms.openlocfilehash: 850ac0f4801a13a5407f8fe008740bbfa21cc02c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347343"
 ---
 # <a name="collections-ccx"></a>Raccolte (C++/CX)
 
 In C + c++ /CX program, è possibile utilizzare in modo gratuito di contenitori di libreria di modelli standard (STL, Standard Template Library) o qualsiasi altro tipo di raccolta definito dall'utente. Tuttavia, quando si passano le raccolte e viceversa attraverso l'interfaccia di Windows Runtime applicativa binaria (ABI), ad esempio, per un controllo XAML o a un client JavaScript, è necessario usare i tipi di raccolta di Windows Runtime.
 
-Windows Runtime definisce le interfacce per le raccolte e i tipi correlati e C + + c++ /CX fornisce le implementazioni concrete C++ nel file di intestazione Collection. h. Nella seguente immagine vengono mostrate le relazioni tra i tipi di raccolta:
+Windows Runtime definisce le interfacce per le raccolte e i tipi correlati e C++/CX fornisce concrete C++ le implementazioni nel file di intestazione Collection. h. Nella seguente immagine vengono mostrate le relazioni tra i tipi di raccolta:
 
 ![C&#43;&#43;&#47;dell'albero di ereditarietà /CX per tipi di raccolte](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;dell'albero di ereditarietà /CX per tipi di raccolta")
 
@@ -28,7 +28,7 @@ Windows Runtime definisce le interfacce per le raccolte e i tipi correlati e C +
    > [!IMPORTANT]
    > Gli iteratori proxy `VectorIterator` e `VectorViewIterator` usano oggetti proxy `VectoryProxy<T>` e `ArrowProxy<T>` per consentire l'uso con i contenitori STL. Per ulteriori informazioni, vedi "Elementi VectorProxy" più avanti in questo articolo.
 
-- C + + / raccolta CX tipi supportano le stesse thread garanzie safety dei contenitori STL.
+- Il C++raccolta /CX tipi supportano le stesse thread garanzie safety dei contenitori STL.
 
 - [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) e [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) definiscono gli eventi che vengono generati quando la raccolta cambia in vari modi. Grazie all'implementazione di queste interfacce,  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) e [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) supportano l'associazione dati con le raccolte XAML. Se ad esempio disponi di un oggetto `Vector` con associazione dati a un oggetto `Grid`, quando aggiungi un elemento a una raccolta, la modifica viene riflessa nell'interfaccia utente della griglia.
 
@@ -96,7 +96,7 @@ Gli elementi in [Platform::Collections::Map](../cppcx/platform-collections-map-c
 
 ## <a name="collection-types"></a>Tipi di raccolta
 
-Le raccolte sono suddivise in quattro categorie: versioni modificabili e versioni di sola lettura di raccolte di sequenze e raccolte associative. Inoltre, C + + c++ /CX migliora le raccolte, fornendo tre classi di iteratore che semplificano l'accesso alle raccolte.
+Le raccolte sono suddivise in quattro categorie: versioni modificabili e versioni di sola lettura di raccolte di sequenze e raccolte associative. Inoltre, C++/CX contribuisce a migliorare le raccolte, che fornisce tre classi di iteratore che semplificano l'accesso alle raccolte.
 
 Gli elementi di una raccolta modificabile possono essere modificati, mentre gli elementi di una raccolta di sola lettura, nota come *visualizzazione*, possono solo essere letti. Gli elementi di un [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) oppure[Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md) raccolta sono accessibili attraverso un iteratore o della raccolta [vector::GetAt](../cppcx/platform-collections-vector-class.md#getat) e un indice. Possono accedere agli elementi di una raccolta associativa utilizzando l'insieme [Map:: Lookup](../cppcx/platform-collections-map-class.md#lookup) e una chiave.
 
@@ -125,7 +125,7 @@ Iteratore STL che soddisfa le richieste di un iteratore STL di accesso causale m
 
 ### <a name="begin-and-end-functions"></a>Funzioni begin() ed end()
 
-Per semplificare l'utilizzo della libreria STL per elaborare `Vector`, `VectorView`, `Map`, `MapView`e arbitrario `Windows::Foundation::Collections` oggetti C + +, c++ /CX supporta gli overload del [begin (funzione)](../cppcx/begin-function.md) e [end Funzione](../cppcx/end-function.md) funzioni non membro.
+Per semplificare l'utilizzo della libreria STL per elaborare `Vector`, `VectorView`, `Map`, `MapView`e arbitrario `Windows::Foundation::Collections` oggetti, C++/CX supporta gli overload del [funzione begin](../cppcx/begin-function.md) e[funzione end](../cppcx/end-function.md) funzioni non membro.
 
 Nella tabella seguente sono elencati gli iteratori e le funzioni disponibili.
 
@@ -147,4 +147,4 @@ I delegati [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/ap
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

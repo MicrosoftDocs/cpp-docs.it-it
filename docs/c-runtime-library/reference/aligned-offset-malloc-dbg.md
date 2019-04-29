@@ -23,11 +23,11 @@ helpviewer_keywords:
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
 ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348874"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -50,7 +50,7 @@ void * _aligned_offset_malloc_dbg(
 *size*<br/>
 Dimensione dell'allocazione di memoria richiesta.
 
-*Allineamento*<br/>
+*alignment*<br/>
 Valore di allineamento, che deve essere una potenza intera di 2.
 
 *offset*<br/>

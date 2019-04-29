@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2381
 ms.assetid: cc765f67-64ac-406f-93ef-ae7d548d58d7
 ms.openlocfilehash: b29f7dac6c6d71e12eb0f003cdfc151dd2c349a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347899"
 ---
 # <a name="compiler-error-c2381"></a>Errore del compilatore C2381
 

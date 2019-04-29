@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405040"
 ---
 # <a name="hashset-class"></a>Classe hash_set
 
@@ -803,7 +803,7 @@ emplace(
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore di un elemento da inserire nell'oggetto [hash_set](../standard-library/hash-set-class.md), a meno che l'oggetto `hash_set` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
+|*val*|Valore di un elemento da inserire nell'oggetto [hash_set](../standard-library/hash-set-class.md), a meno che l'oggetto `hash_set` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -855,8 +855,8 @@ iterator emplace(
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Valore di un elemento da inserire nell'oggetto [hash_set](../standard-library/hash-set-class.md), a meno che l'oggetto `hash_set` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
-|*WHERE*|Posizione in cui iniziare a cercare il punto di inserimento corretto. (Se il punto di inserimento è immediatamente successivo, l'inserimento può avvenire in tempo costante ammortizzato anziché in tempo logaritmico *WHERE*.)|
+|*val*|Valore di un elemento da inserire nell'oggetto [hash_set](../standard-library/hash-set-class.md), a meno che l'oggetto `hash_set` non contenga già tale elemento o, più in generale, un elemento la cui la chiave sia ordinata in modo equivalente.|
+|*_Where*|Posizione in cui iniziare a cercare il punto di inserimento corretto. (Se il punto di inserimento è immediatamente successivo, l'inserimento può avvenire in tempo costante ammortizzato anziché in tempo logaritmico *WHERE*.)|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1106,7 +1106,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE*<br/>
+*_Where*<br/>
 Posizione dell'elemento da rimuovere dall'hash_set.
 
 *first*<br/>

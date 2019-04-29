@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
 ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338688"
 ---
 # <a name="canimationvalue-class"></a>Classe CAnimationValue
 
@@ -70,7 +70,7 @@ class CAnimationValue : public CAnimationBaseObject;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationValue::m_value](#m_value)|La variabile di animazione incapsulato che rappresenta il valore di animazione.|
 

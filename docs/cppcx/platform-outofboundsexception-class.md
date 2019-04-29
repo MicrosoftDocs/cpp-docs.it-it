@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::OutOfBoundsException
 ms.assetid: 96f8bf75-1207-4049-964b-7771822cadf3
 ms.openlocfilehash: 3f5165c0394726e0f6606f5261ba6306d8408948
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330388"
 ---
 # <a name="platformoutofboundsexception-class"></a>Classe Platform::OutOfBoundsException
 

@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
 ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355406"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
@@ -125,15 +125,15 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**sntscanf**|**_snscanf**|**_snscanf**|**_snwscanf**|
-|**sntscanf_l**|**_snscanf_l**|**_snscanf_l**|**_snwscanf_l**|
+|**_sntscanf**|**_snscanf**|**_snscanf**|**_snwscanf**|
+|**_sntscanf_l**|**_snscanf_l**|**_snscanf_l**|**_snwscanf_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**snscanf**, **snscanf_l**|\<stdio.h>|
-|**snwscanf**, **snwscanf_l**|\<stdio.h> o \<wchar.h>|
+|**_snscanf**, **_snscanf_l**|\<stdio.h>|
+|**_snwscanf**, **_snwscanf_l**|\<stdio.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

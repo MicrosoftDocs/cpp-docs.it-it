@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
 ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330518"
 ---
 # <a name="thread"></a>thread
 
@@ -24,7 +24,7 @@ Il **thread** modificatore di classe di archiviazione estesi viene usato per dic
 
 ## <a name="syntax"></a>Sintassi
 
-> **declspec (thread)** *dichiaratore*
+> **__declspec( thread )** *declarator*
 
 ## <a name="remarks"></a>Note
 

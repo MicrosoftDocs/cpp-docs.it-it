@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '& operator [C++], bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
 ms.openlocfilehash: b7d0d73802a5af7ab71e980d73eaff5c5b3c4bb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387708"
 ---
 # <a name="bitwise-and-operator-amp"></a>Operatore AND bit per bit: &amp;
 

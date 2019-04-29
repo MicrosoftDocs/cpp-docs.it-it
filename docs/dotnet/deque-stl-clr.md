@@ -99,11 +99,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
 ms.openlocfilehash: ff5ddcfa101baf4c85145d1c6d64a6a3b9e7df58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393766"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
@@ -209,7 +209,7 @@ Tipo di un elemento nella sequenza controllata.
 |<xref:System.Collections.Generic.IEnumerable%601>|La sequenza tramite elementi tipizzati.|
 |<xref:System.Collections.Generic.ICollection%601>|Gestione gruppo di elementi tipizzati.|
 |<xref:System.Collections.Generic.IList%601>|Gestisci gruppo ordinato di elementi tipizzati.|
-|IDeque < valore\>|Mantenere contenitore generico.|
+|IDeque<Value\>|Mantenere contenitore generico.|
 
 ## <a name="remarks"></a>Note
 
@@ -252,7 +252,7 @@ Fine dell'intervallo da inserire.
 *right*<br/>
 Enumerazione da inserire.
 
-*Val*<br/>
+*val*<br/>
 Valore dell'elemento da inserire.
 
 ### <a name="remarks"></a>Note
@@ -318,7 +318,7 @@ reference at(size_type pos);
 
 #### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Note
@@ -409,7 +409,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> deque:: back_item (STL/CLR)
+## <a name="back_item"></a> deque::back_item (STL/CLR)
 
 Accede all'ultimo elemento.
 
@@ -460,7 +460,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a> deque:: Begin (STL/CLR)
+## <a name="begin"></a> deque::begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -572,7 +572,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> deque:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> deque::const_iterator (STL/CLR)
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -613,7 +613,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> deque:: const_reference (STL/CLR)
+## <a name="const_reference"></a> deque::const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -657,7 +657,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> deque:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> deque::const_reverse_iterator (STL/CLR)
 
 Il tipo di iteratore inverso costante per la sequenza controllata...
 
@@ -699,7 +699,7 @@ int main()
 c b a
 ```
 
-## <a name="deque"></a> deque:: deque (STL/CLR)
+## <a name="deque"></a> deque::deque (STL/CLR)
 
 Costruisce un oggetto contenitore.
 
@@ -730,7 +730,7 @@ Fine dell'intervallo da inserire.
 *right*<br/>
 Oggetto o un intervallo da inserire.
 
-*Val*<br/>
+*val*<br/>
 Valore dell'elemento da inserire.
 
 ### <a name="remarks"></a>Note
@@ -844,7 +844,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="difference_type"></a> deque:: difference_type (STL/CLR)
+## <a name="difference_type"></a> deque::difference_type (STL/CLR)
 
 I tipi di una distanza signed tra due elementi.
 
@@ -1135,7 +1135,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> deque:: front_item (STL/CLR)
+## <a name="front_item"></a> deque::front_item (STL/CLR)
 
 Accede al primo elemento.
 
@@ -1422,7 +1422,7 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a> deque:: Insert (STL/CLR)
+## <a name="insert"></a> deque::insert (STL/CLR)
 
 Aggiunge elementi in una posizione specificata.
 
@@ -1451,7 +1451,7 @@ Fine dell'intervallo da inserire.
 *right*<br/>
 Enumerazione da inserire.
 
-*Val*<br/>
+*val*<br/>
 Valore dell'elemento da inserire.
 
 *where*<br/>
@@ -1580,7 +1580,7 @@ a b c
 x b c
 ```
 
-## <a name="op_neq"></a> deque:: operator! = (STL/CLR)
+## <a name="op_neq"></a> deque::operator!= (STL/CLR)
 
 Confronto non uguale deque.
 
@@ -1661,7 +1661,7 @@ reference operator[](size_type pos);
 
 #### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Posizione dell'elemento a cui accedere.
 
 ### <a name="remarks"></a>Note
@@ -1795,7 +1795,7 @@ a b c
 b c
 ```
 
-## <a name="push_back"></a> deque:: push_back (STL/CLR)
+## <a name="push_back"></a> deque::push_back (STL/CLR)
 
 Aggiunge un nuovo ultimo elemento.
 
@@ -1835,7 +1835,7 @@ int main()
 a b c
 ```
 
-## <a name="push_front"></a> deque:: push_front (STL/CLR)
+## <a name="push_front"></a> deque::push_front (STL/CLR)
 
 Aggiunge un nuovo elemento di primo.
 
@@ -2041,7 +2041,7 @@ a b c
 y x c
 ```
 
-## <a name="resize"></a> deque:: resize (STL/CLR)
+## <a name="resize"></a> deque::resize (STL/CLR)
 
 Modifica il numero di elementi.
 
@@ -2054,10 +2054,10 @@ void resize(size_type new_size, value_type val);
 
 #### <a name="parameters"></a>Parametri
 
-*NEW_SIZE*<br/>
+*new_size*<br/>
 Nuova dimensione della sequenza controllata.
 
-*Val*<br/>
+*val*<br/>
 Valore dell'elemento di spaziatura.
 
 ### <a name="remarks"></a>Note
@@ -2101,7 +2101,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse_iterator"></a> deque:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> deque::reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -2150,7 +2150,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a> deque:: Size (STL/CLR)
+## <a name="size"></a> deque::size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -2203,7 +2203,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> deque:: size_type (STL/CLR)
+## <a name="size_type"></a> deque::size_type (STL/CLR)
 
 Il tipo di una distanza signed tra due elementi.
 
@@ -2248,7 +2248,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> deque:: swap (STL/CLR)
+## <a name="swap"></a> deque::swap (STL/CLR)
 
 Scambia il contenuto di due contenitori.
 
@@ -2361,7 +2361,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> deque:: value_type (STL/CLR)
+## <a name="value_type"></a> deque::value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -2406,7 +2406,7 @@ int main()
 a b c
 ```
 
-## <a name="op_lt"></a> operatore&lt; (deque) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (deque) (STL/CLR)
 
 Deque minore di confronto.
 
@@ -2475,7 +2475,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operatore&lt;= (deque) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (deque) (STL/CLR)
 
 Deque minore di o uguale confronto.
 
@@ -2544,7 +2544,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_as"></a> operatore = (deque) (STL/CLR)
+## <a name="op_as"></a> operator= (deque) (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -2597,7 +2597,7 @@ a b c
 a b c
 ```
 
-## <a name="op_eq"></a> operatore = = (deque) (STL/CLR)
+## <a name="op_eq"></a> operator== (deque) (STL/CLR)
 
 Confronto uguale deque.
 
@@ -2666,7 +2666,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operatore&gt; (deque) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (deque) (STL/CLR)
 
 Confronto maggiore di deque.
 
@@ -2735,7 +2735,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operatore&gt;= (deque) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (deque) (STL/CLR)
 
 Deque confronto maggiore o uguale.
 

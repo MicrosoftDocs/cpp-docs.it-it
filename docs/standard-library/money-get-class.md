@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383529"
 ---
 # <a name="moneyget-class"></a>Classe money_get
 
@@ -111,16 +111,16 @@ Iteratore di input che indica l'inizio della sequenza da convertire.
 *last*<br/>
 Iteratore di input che indica la fine della sequenza da convertire.
 
-*Utenti internazionali*<br/>
+*Intl*<br/>
 Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario.
 
 *Stato*<br/>
 Imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
 
-*Val*<br/>
+*val*<br/>
 Stringa in cui è archiviata la sequenza convertita.
 
 ### <a name="return-value"></a>Valore restituito
@@ -193,16 +193,16 @@ Iteratore di input che indica l'inizio della sequenza da convertire.
 *last*<br/>
 Iteratore di input che indica la fine della sequenza da convertire.
 
-*Utenti internazionali*<br/>
+*Intl*<br/>
 Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
 
 *Stato*<br/>
 Imposta elementi della maschera di bit appropriati per lo stato del flusso in base all'esito positivo o negativo delle operazioni.
 
-*Val*<br/>
+*val*<br/>
 Stringa in cui è archiviata la sequenza convertita.
 
 ### <a name="return-value"></a>Valore restituito
@@ -291,11 +291,11 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \> 1: Questi valori non definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 

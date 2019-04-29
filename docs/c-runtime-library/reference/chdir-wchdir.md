@@ -33,11 +33,11 @@ helpviewer_keywords:
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
 ms.openlocfilehash: e4cf7a44864df0b5ecca531aab3db4546c25bb2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347665"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -56,7 +56,7 @@ int _wchdir(
 
 ### <a name="parameters"></a>Parametri
 
-*nomedir*<br/>
+*dirname*<br/>
 Percorso della nuova directory di lavoro.
 
 ## <a name="return-value"></a>Valore restituito
@@ -79,7 +79,7 @@ Quando si usa il carattere barra rovesciata facoltativo (**&#92;**) nei percorsi
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tchdir**|**_chdir**|**_chdir**|**_wchdir**|
+|**_tchdir**|**_chdir**|**_chdir**|**_wchdir**|
 
 ## <a name="requirements"></a>Requisiti
 

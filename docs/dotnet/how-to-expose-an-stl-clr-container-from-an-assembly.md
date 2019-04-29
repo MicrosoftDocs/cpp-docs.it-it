@@ -6,11 +6,11 @@ helpviewer_keywords:
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
 ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387331"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Procedura: Esporre un contenitore STL/CLR da un Assembly
 

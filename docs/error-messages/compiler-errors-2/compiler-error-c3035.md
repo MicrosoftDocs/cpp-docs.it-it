@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3035
 ms.assetid: af34fad2-2b45-42d0-a9ff-04eab3e91c37
 ms.openlocfilehash: e6d42c53407e1047d299e82566c7fadeb639641d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393571"
 ---
 # <a name="compiler-error-c3035"></a>Errore del compilatore C3035
 

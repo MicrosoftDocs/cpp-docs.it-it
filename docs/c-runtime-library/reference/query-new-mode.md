@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
 ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358073"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
@@ -49,7 +49,7 @@ Restituisce la modalità del gestore nuovo corrente, ovvero 0 o 1, per **malloc*
 
 ## <a name="remarks"></a>Note
 
-C++ **query_new_mode** funzione restituisce un intero che indica la nuova modalità del gestore impostata da C++ [set_new_mode](set-new-mode.md) per funziona [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore di allocazione della memoria, **malloc** consiste nel chiamare la routine del nuovo gestore come impostato da [set_new_handler](set-new-handler.md). Per impostazione predefinita **malloc** non chiama la routine del nuovo gestore in caso di errore. È possibile usare **set_new_mode** per eseguire l'override di questo comportamento in modo che in caso di errore **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando non riesce a allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
+Il C++ **query_new_mode** funzione restituisce un intero che indica la nuova modalità del gestore impostata dal C++ [set_new_mode](set-new-mode.md) funzionare per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore di allocazione della memoria, **malloc** consiste nel chiamare la routine del nuovo gestore come impostato da [set_new_handler](set-new-handler.md). Per impostazione predefinita **malloc** non chiama la routine del nuovo gestore in caso di errore. È possibile usare **set_new_mode** per eseguire l'override di questo comportamento in modo che in caso di errore **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando non riesce a allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
 
 ## <a name="requirements"></a>Requisiti
 

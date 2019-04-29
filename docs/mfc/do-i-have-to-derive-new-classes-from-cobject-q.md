@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CObject class [MFC], when to use
 ms.assetid: 26021031-feaf-424c-80d1-9547c4409d6a
 ms.openlocfilehash: 30eb3ce5bbb72ab685ed891644a478a36026ebea
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352385"
 ---
 # <a name="do-i-have-to-derive-new-classes-from-cobject"></a>Derivare nuove classi da CObject?
 
@@ -22,4 +22,4 @@ Derivare una classe dalla classe [CObject](../mfc/reference/cobject-class.md) qu
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe CObject: Domande frequenti](../mfc/cobject-class-frequently-asked-questions.md)
+[Classe CObject: domande frequenti](../mfc/cobject-class-frequently-asked-questions.md)

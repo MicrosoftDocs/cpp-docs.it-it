@@ -31,11 +31,11 @@ helpviewer_keywords:
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
 ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335594"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
@@ -72,13 +72,13 @@ L'arcoseno del *z*, espresso in radianti. Il risultato è unbounded lungo l'asse
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **casin** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **casin** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **casin** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **casin** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**casin**, **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
+|**casin**,               **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

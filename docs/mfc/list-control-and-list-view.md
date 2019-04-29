@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list controls [MFC], List view
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
 ms.openlocfilehash: 5c9612a22eab27d568c0dbb86d29ba031fe5985e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365332"
 ---
 # <a name="list-control-and-list-view"></a>Controllo List e visualizzazione elenco
 

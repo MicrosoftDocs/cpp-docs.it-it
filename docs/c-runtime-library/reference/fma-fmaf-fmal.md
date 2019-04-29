@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
 ms.openlocfilehash: f96592e245e443bae2f3334da51cae5572753708
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333495"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -94,7 +94,7 @@ In caso contrario, può restituire uno dei valori seguenti:
 
 |Problema|INVIO|
 |-----------|------------|
-|*x* = infinito *y* = 0 o<br /><br /> *x* = 0, *y* = infinito|NaN|
+|*x* = INFINITY, *y* = 0 or<br /><br /> *x* = 0, *y* = INFINITY|NaN|
 |*x* oppure *y* = esatta + INFINITY, *z* = infinito con segno opposto|NaN|
 |*x* oppure *y* = NaN|NaN|
 |non (*x* = 0, *y*= indefinito) e *z* = NaN<br /><br /> non (*x*= indefinito, *y*= 0) e *z* = NaN|NaN|
@@ -113,7 +113,7 @@ Questa funzione calcola il valore come per la precisione infinita e quindi arrot
 
 |Funzione|Intestazione C|Intestazione C++|
 |--------------|--------------|------------------|
-|**FMA**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

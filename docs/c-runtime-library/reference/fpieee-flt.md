@@ -26,11 +26,11 @@ helpviewer_keywords:
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333248"
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 
@@ -54,7 +54,7 @@ Codice dell'eccezione.
 *excInfo*<br/>
 Puntatore a una struttura di informazioni sulle eccezioni di Windows NT.
 
-*Gestore*<br/>
+*handler*<br/>
 Puntatore alla routine del gestore di trap IEEE dell'utente.
 
 ## <a name="return-value"></a>Valore restituito
@@ -71,7 +71,7 @@ Il **fpieee_record** struttura, definita in fpieee. h, contiene informazioni rel
 |----------------------------|-----------------|
 |**RoundingMode**<br/>**Precisione**|Questi **unsigned** **int** campi contengono informazioni sull'ambiente a virgola mobile al momento si è verificata l'eccezione.|
 |**Operazione**|Ciò **unsigned** **int** campo indica il tipo di operazione che ha causato il trap. Se il tipo è un confronto (**_FpCodeCompare**), è possibile specificare una delle speciali **_FPIEEE_COMPARE_RESULT** valori (come definito in fpieee. h) il **Result.Value** campo. Il tipo di conversione (**_FpCodeConvert**) indica che il trap si è verificato durante un'operazione di conversione a virgola mobile. È possibile esaminare i **Operand1** e **risultato** tipi per determinare il tipo di conversione tentata.|
-|**Operand1 '**<br/>**Operand2 '**<br/>**Risultato**|Questi **_FPIEEE_VALUE** strutture indicano i tipi e valori di risultato proposto e gli operandi. Ogni struttura contiene questi campi:<br /><br /> **OperandValid** : Flag che indica se il valore di risposta è valido.<br />**Formato** -tipo di dati del valore corrispondente. Il tipo di formato potrebbe essere restituito anche se il valore corrispondente non è valido.<br />**Valore** -risultati o dati valore dell'operando.|
+|**Operand1**<br/>**Operand2**<br/>**Risultato**|Questi **_FPIEEE_VALUE** strutture indicano i tipi e valori di risultato proposto e gli operandi. Ogni struttura contiene questi campi:<br /><br /> **OperandValid** : Flag che indica se il valore di risposta è valido.<br />**Formato** -tipo di dati del valore corrispondente. Il tipo di formato potrebbe essere restituito anche se il valore corrispondente non è valido.<br />**Valore** -risultati o dati valore dell'operando.|
 |**Causa**<br/>**Enable**<br/>**Status**|**Fpieee_exception_flags** contiene un campo di bit per ogni tipo di eccezione a virgola mobile. Esiste una corrispondenza tra questi campi e gli argomenti usati per mascherare le eccezioni fornite a [_controlfp](control87-controlfp-control87-2.md). Il significato esatto di ogni bit dipende dal contesto:<br /><br /> **Causa** -ogni bit del set indica la particolare eccezione generata.<br />**Abilitare** -ogni bit del set indica che l'eccezione specifica è attualmente smascherata.<br />**Stato** -ogni bit del set indica che l'eccezione specifica è attualmente in sospeso. Ciò include le eccezioni che non sono state generate perché sono state mascherate da **controlfp**.|
 
 Le eccezioni in sospeso disabilitate vengono generate quando vengono abilitate. Ciò può comportare un comportamento indefinito quando si usa **fpieee_flt** come filtro eccezioni. Chiamare sempre [_clearfp](clear87-clearfp.md) prima di abilitare le eccezioni a virgola mobile.

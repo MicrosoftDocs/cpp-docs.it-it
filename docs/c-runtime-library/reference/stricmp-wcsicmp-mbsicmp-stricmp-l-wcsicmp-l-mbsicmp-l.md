@@ -57,11 +57,11 @@ helpviewer_keywords:
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
 ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353839"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -104,7 +104,7 @@ int _mbsicmp_l(
 
 ### <a name="parameters"></a>Parametri
 
-*String1*, *stringa2*<br/>
+*string1*, *string2*<br/>
 Stringhe che terminano con Null da confrontare.
 
 *locale*<br/>
@@ -141,7 +141,7 @@ Se il [strcmp](strcmp-wcscmp-mbscmp.md) funzione viene usata invece di **stricmp
 
 **wcsicmp** e **wcscmp** si comportano in modo identico con la differenza che **wcscmp** non converte i relativi argomenti in minuscolo prima di confrontarli. **mbsicmp** e **mbscmp** si comportano in modo identico con la differenza che **mbscmp** non converte i relativi argomenti in minuscolo prima di confrontarli.
 
-È necessario chiamare [setlocale](setlocale-wsetlocale.md) per **wcsicmp** per lavorare con i caratteri Latin 1. Le impostazioni locali di C sono applicate per impostazione predefinita, quindi, ad esempio, il confronto tra ä e Ä non risulterà uguale. Chiamare **setlocale** con qualsiasi impostazione locale ad eccezione di c prima della chiamata a **wcsicmp**. Nell'esempio seguente viene illustrato come **wcsicmp** è sensibile alle impostazioni locali:
+È necessario chiamare [setlocale](setlocale-wsetlocale.md) per **wcsicmp** per lavorare con i caratteri Latin 1. Le impostazioni locali C sono attiva per impostazione predefinita, pertanto, ad esempio, non risulta uguale a Ä ä. Chiamare **setlocale** con qualsiasi impostazione locale ad eccezione di c prima della chiamata a **wcsicmp**. Nell'esempio seguente viene illustrato come **wcsicmp** è sensibile alle impostazioni locali:
 
 ```C
 // crt_stricmp_locale.c
@@ -165,15 +165,15 @@ Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1*
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcsicmp**|**_stricmp**|**_mbsicmp**|**_wcsicmp**|
+|**_tcsicmp**|**_stricmp**|**_mbsicmp**|**_wcsicmp**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**stricmp**, **stricmp_l**|\<string.h>|
-|**wcsicmp**, **wcsicmp_l**|\<string.h> o \<wchar.h>|
-|**mbsicmp**, **mbsicmp_l**|\<mbstring.h>|
+|**_stricmp**, **_stricmp_l**|\<string.h>|
+|**_wcsicmp**, **_wcsicmp_l**|\<string.h> o \<wchar.h>|
+|**_mbsicmp**, **_mbsicmp_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

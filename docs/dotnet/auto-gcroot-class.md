@@ -17,11 +17,11 @@ helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
 ms.openlocfilehash: 81d4174943543db708090ad654a911980ecf026d
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388930"
 ---
 # <a name="autogcroot-class"></a>Classe auto_gcroot
 
@@ -43,7 +43,7 @@ Tipo gestito da incorporare.
  
 ### <a name="public-constructors"></a>Costruttori pubblici 
  
-|nome|Descrizione| 
+|Nome|Descrizione| 
 |---------|-----------| 
 |[auto_gcroot::auto_gcroot](#auto-gcroot)|Il `auto_gcroot` costruttore.| 
 |[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|Il `auto_gcroot` distruttore.
@@ -51,7 +51,7 @@ Tipo gestito da incorporare.
 
 ### <a name="public-methods"></a>Metodi pubblici 
 
-|nome|Descrizione| 
+|Nome|Descrizione| 
 |---------|-----------| 
 |[auto_gcroot::attach](#attach)|Collegare `auto_gcroot` a un oggetto.| 
 |[auto_gcroot::get](#get)|Ottiene l'oggetto contenuto.| 
@@ -62,7 +62,7 @@ Tipo gestito da incorporare.
  
 ### <a name="public-operators"></a>Operatori pubblici
  
-|nome|Descrizione| 
+|Nome|Descrizione| 
 |---------|-----------|
 |[auto_gcroot::operator-&gt;](#operator-arrow)|L'operatore di accesso di membro.|  
 |[auto_gcroot::operator=](#operator-assign)|Operatore di assegnazione.|

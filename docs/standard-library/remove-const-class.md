@@ -8,11 +8,11 @@ helpviewer_keywords:
 - remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
 ms.openlocfilehash: 04f7c6475d88f843ef381563f80559529e6b59e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368968"
 ---
 # <a name="removeconst-class"></a>Classe remove_const
 

@@ -4,11 +4,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392275"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
 
@@ -90,11 +90,11 @@ PI = .75 //Error. Cannot modify const variable.
 
 Il **const** qualificatore viene ampiamente usato nelle dichiarazioni di funzione e la variabile e "correttezza di const" è un concetto importante in C++; fondamentalmente di utilizzare **const** assicurazione in fase di compilazione che è possibile che i valori non vengano modificati accidentalmente. Per altre informazioni, vedere [const](../cpp/const-cpp.md).
 
-Oggetto **const** tipo è diverso dalla relativa versione non const; ad esempio **const int** è un tipo diverso da **int**. È possibile usare C++ **const_cast** operatore in quei rari casi in cui è necessario rimuovere *constness* da una variabile. Per altre informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+Oggetto **const** tipo è diverso dalla relativa versione non const; ad esempio **const int** è un tipo diverso da **int**. È possibile usare il C++ **const_cast** quei rari casi in cui è necessario rimuovere gli operatori *constness* da una variabile. Per altre informazioni, vedere [conversioni di tipi e indipendenza dai tipi](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="string-types"></a>Tipi di stringa
 
-In teoria, il linguaggio C++ non dispone di alcun tipo di stringa predefinite; **char** e **wchar_t** archiviano caratteri singoli, è necessario dichiarare una matrice di questi tipi per avvicinarsi a una stringa, aggiungendo un valore null finale (ad esempio ASCII `'\0'`) all'elemento della matrice Dopo l'ultimo carattere valido (detto anche un *stringa in formato C*). Le stringhe di tipo C richiedono la scrittura di una quantità maggiore di codice o l'utilizzo delle funzioni della libreria dell'utilità di stringa esterna. Ma nel linguaggio C++ moderno, sono disponibili i tipi della libreria Standard `std::string` (8 bit **char**-digitare le stringhe di caratteri) oppure `std::wstring` (per 16 bit **wchar_t**-digitare le stringhe di caratteri). Questi contenitori della libreria Standard C++ possono essere considerati come tipi di stringa nativi perché fanno parte delle librerie standard incluse in qualsiasi ambiente di compilazione conforme a C++. È sufficiente utilizzare la direttiva `#include <string>` per rendere questi tipi disponibili nel programma. (Se si utilizza MFC o ATL, è disponibile anche la classe CString, anche se non fa parte dello standard C++). L'utilizzo di matrici di caratteri con terminazione Null (le stringhe in stile C citate in precedenza) è fortemente sconsigliato nel linguaggio C++ moderno.
+In teoria, il C++ linguaggio non dispone di alcun tipo di stringa predefinite; **char** e **wchar_t** archiviano caratteri singoli, è necessario dichiarare una matrice di questi tipi per avvicinarsi a una stringa, aggiungendo un valore null finale (ad esempio ASCII `'\0'`) all'elemento della matrice posizione immediatamente successiva all'ultimo carattere valido (detto anche un *stringa in formato C*). Le stringhe di tipo C richiedono la scrittura di una quantità maggiore di codice o l'utilizzo delle funzioni della libreria dell'utilità di stringa esterna. Ma nel Framework moderno C++, sono disponibili i tipi della libreria Standard `std::string` (per 8 bit **char**-digitare le stringhe di caratteri) o `std::wstring` (per 16 bit **wchar_t**-digitare le stringhe di caratteri). Questi contenitori della libreria Standard C++ possono essere considerati come tipi di stringa nativi perché fanno parte delle librerie standard incluse in qualsiasi ambiente di compilazione conforme a C++. È sufficiente utilizzare la direttiva `#include <string>` per rendere questi tipi disponibili nel programma. (Se si utilizza MFC o ATL, è disponibile anche la classe CString, anche se non fa parte dello standard C++). L'utilizzo di matrici di caratteri con terminazione Null (le stringhe in stile C citate in precedenza) è fortemente sconsigliato nel linguaggio C++ moderno.
 
 ## <a name="user-defined-types"></a>Tipi definiti dall'utente
 

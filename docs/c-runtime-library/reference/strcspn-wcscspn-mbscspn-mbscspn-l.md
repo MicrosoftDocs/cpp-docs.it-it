@@ -40,11 +40,11 @@ helpviewer_keywords:
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
 ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353976"
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
@@ -104,7 +104,7 @@ La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazi
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcscspn**|**strcspn**|**_mbscspn**|**wcscspn**|
+|**_tcscspn**|**strcspn**|**_mbscspn**|**wcscspn**|
 |N/D|N/D|**_mbscspn_l**|N/D|
 
 ## <a name="requirements"></a>Requisiti
@@ -113,7 +113,7 @@ La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazi
 |-------------|---------------------|
 |**strcspn**|\<string.h>|
 |**wcscspn**|\<string.h> o \<wchar.h>|
-|**mbscspn**, **mbscspn_l**|\<mbstring.h>|
+|**_mbscspn**, **_mbscspn_l**|\<mbstring.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

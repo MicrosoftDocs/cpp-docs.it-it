@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
 ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59040056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397721"
 ---
 # <a name="recordset-scrolling-odbc"></a>Recordset: Scorrimento (ODBC)
 
@@ -106,4 +106,4 @@ Come, originariamente progettato SQL fornita solo scorrimento in avanti, ma ODBC
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
 [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)<br/>
-[Recordset: Filtrare i record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

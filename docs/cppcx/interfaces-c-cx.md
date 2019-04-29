@@ -3,11 +3,11 @@ title: Interfacce (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
 ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375782"
 ---
 # <a name="interfaces-ccx"></a>Interfacce (C++/CX)
 
@@ -63,7 +63,7 @@ Quando una classe di riferimento implementa più interfacce e queste ultime hann
 
 ## <a name="generic-interfaces"></a>Interfacce generiche
 
-In C + + c++ /CX, la `generic` (parola chiave) viene usato per rappresentare un tipo Windows Runtime con parametri. Un tipo con parametri viene emesso nei metadati e può essere utilizzato da codice scritto in qualsiasi linguaggio che supporta i parametri di tipo. Windows Runtime definisce alcune interfacce generiche, ad esempio, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector), ma non supporta la creazione di interfacce generiche definite dall'utente pubbliche in C + + c++ /CLI CX. Tuttavia, è possibile creare interfacce generiche private.
+In C++/CX, la `generic` parola chiave viene usata per rappresentare un tipo Windows Runtime con parametri. Un tipo con parametri viene emesso nei metadati e può essere utilizzato da codice scritto in qualsiasi linguaggio che supporta i parametri di tipo. Windows Runtime definisce alcune interfacce generiche, ad esempio, [Windows::Foundation::Collections::IVector\<T >](Windows::Foundation::Collections::IVector), ma non supporta la creazione di pubbliche definita dall'utente interfacce generiche in C++/ CX. Tuttavia, è possibile creare interfacce generiche private.
 
 Ecco come tipi Windows Runtime utilizzabile per creare un'interfaccia generica:
 
@@ -99,4 +99,4 @@ Ecco come tipi Windows Runtime utilizzabile per creare un'interfaccia generica:
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

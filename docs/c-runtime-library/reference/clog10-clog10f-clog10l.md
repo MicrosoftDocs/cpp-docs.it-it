@@ -31,11 +31,11 @@ helpviewer_keywords:
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
 ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335453"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10, clog10f, clog10l
 
@@ -73,13 +73,13 @@ I possibili valori restituiti sono:
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **clog10** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **clog10** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **clog10** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **clog10** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**clog10**, **clog10f**, **clogl**|\<complex.h>|\<ccomplex>|
+|**clog10**,               **clog10f**, **clogl**|\<complex.h>|\<ccomplex>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

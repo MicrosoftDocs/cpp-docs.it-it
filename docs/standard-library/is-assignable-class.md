@@ -7,11 +7,11 @@ helpviewer_keywords:
 - is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
 ms.openlocfilehash: b1357bf8c5ad4dfd5035855e34a8fd6a7ed73d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391010"
 ---
 # <a name="isassignable-class"></a>Classe is_assignable
 

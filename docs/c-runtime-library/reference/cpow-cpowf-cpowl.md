@@ -31,11 +31,11 @@ helpviewer_keywords:
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
 ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339845"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
 
@@ -75,13 +75,13 @@ Il valore di *x* elevato alla potenza del *y* con un ramo tagliato *x* lungo l'a
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cpow** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **cpow** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **cpow** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **cpow** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**cpow**, **cpowf**, **cpowl**|\<complex.h>|\<ccomplex>|
+|**cpow**,               **cpowf**, **cpowl**|\<complex.h>|\<ccomplex>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

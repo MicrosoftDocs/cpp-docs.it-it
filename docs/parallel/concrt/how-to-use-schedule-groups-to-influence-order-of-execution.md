@@ -6,11 +6,11 @@ helpviewer_keywords:
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
 ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62367044"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Procedura: Usare i gruppi di pianificazione per influenzare l'ordine di esecuzione
 

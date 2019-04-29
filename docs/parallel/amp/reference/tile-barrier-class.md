@@ -13,11 +13,11 @@ helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
 ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351508"
 ---
 # <a name="tilebarrier-class"></a>Classe tile_barrier
 

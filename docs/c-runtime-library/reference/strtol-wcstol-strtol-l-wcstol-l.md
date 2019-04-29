@@ -38,11 +38,11 @@ helpviewer_keywords:
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
 ms.openlocfilehash: 73df5dd3ffcd4a9b2fca8b6b713b645ef94addb5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379155"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
@@ -105,7 +105,7 @@ Il **strtol** funzione converte *strSource* a un **long**. **strtol** interrompe
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcstol**|**strtol**|**strtol**|**wcstol**|
+|**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
 Le impostazioni locali correnti **LC_NUMERIC** impostazione di categoria determina il riconoscimento del carattere di base *strSource*; per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni senza il **l** suffisso usare le impostazioni locali correnti. **strtol_l** e **wcstol_l** sono identiche alle funzioni corrispondenti senza il **l** suffisso ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
@@ -114,7 +114,7 @@ Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto la lett
 
 **strtol** prevede *strSource* in modo che punti a una stringa nel formato seguente:
 
-> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*cifre* &#124; *lettere*]  
+> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
 
 Oggetto *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. *cifre* sono uno o più cifre decimali. *lettere* sono uno o più lettere 'a' a 'z' (o 'A' a 'Z').  Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui punta *strSource* vengono usate per determinare la base. Se il primo carattere è 0 e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un Integer ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se *base* è 0 e il primo carattere letto è '0', si presuppone un intero ottale e un carattere '8' o '9' arresterà l'analisi.
 

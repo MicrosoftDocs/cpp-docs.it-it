@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335295"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -72,9 +72,9 @@ La tabella seguente elenca i tipi di report definiti in Crtdbg.h.
 
 |Tipo di report|Descrizione|
 |-----------------|-----------------|
-|**CRT_WARN**|Avvisi, messaggi e informazioni che non richiedono attenzione immediata.|
-|**CRT_ERROR**|Errori e problemi irreversibili che richiedono attenzione immediata.|
-|**CRT_ASSERT**|Asserzioni non riuscite (espressioni dichiarate che restituiscono **FALSE**).|
+|**_CRT_WARN**|Avvisi, messaggi e informazioni che non richiedono attenzione immediata.|
+|**_CRT_ERROR**|Errori e problemi irreversibili che richiedono attenzione immediata.|
+|**_CRT_ASSERT**|Asserzioni non riuscite (espressioni dichiarate che restituiscono **FALSE**).|
 
 Il **CrtSetReportMode** funzione viene assegnata la nuova modalità di report specificata nella *reportMode* per il tipo di report specificato in *reportType* e restituisce definita in precedenza modalità di report per *reportType*. La tabella seguente elenca le scelte disponibili per *reportMode* e il comportamento risultante di **CrtDbgReport**. Queste opzioni sono definite flag di bit in Crtdbg.h.
 
@@ -83,7 +83,7 @@ Il **CrtSetReportMode** funzione viene assegnata la nuova modalità di report sp
 |**_CRTDBG_MODE_DEBUG**|Scrive il messaggio alla finestra di output del debugger.|
 |**_CRTDBG_MODE_FILE**|Scrive il messaggio a un handle di file specificato dall'utente. Deve essere chiamato [_CrtSetReportFile](crtsetreportfile.md) per definire il file o il flusso da usare come destinazione.|
 |**_CRTDBG_MODE_WNDW**|Crea una finestra di messaggio per visualizzare il messaggio con il [abort](abort.md), **ripetere**, e **ignora** pulsanti.|
-|**_CRTDBG_REPORT_MODE**|Restituisce *reportMode* per l'oggetto specificato *reportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|Restituisce *reportMode* per l'oggetto specificato *reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 Ogni tipo di report può essere riportato tramite uno, due o tre modalità oppure senza modalità. Pertanto, è possibile avere più di una destinazione definita per un tipo di report singolo. Ad esempio, il frammento di codice seguente causa errori di asserzione da inviare a entrambi una finestra di messaggio di debug e di ottenere **stderr**:
 
@@ -102,7 +102,7 @@ Le modalità di creazione di report per ogni tipo di report possono anche essere
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-**Librerie:** solo le versioni di debug delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+**Librerie:** Le versioni di debug [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md) solo.
 
 ## <a name="see-also"></a>Vedere anche
 

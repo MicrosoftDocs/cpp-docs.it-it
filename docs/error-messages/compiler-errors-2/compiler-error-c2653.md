@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
 ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350780"
 ---
 # <a name="compiler-error-c2653"></a>Errore del compilatore C2653
 
@@ -21,7 +21,7 @@ La sintassi del linguaggio richiede una classe, struttura, unione o dello spazio
 
 Questo errore può verificarsi quando si usa un nome che non è stato dichiarato come una classe, struttura, unione o dello spazio dei nomi davanti a un operatore di ambito. Per risolvere questo problema, controllare il nome o includere l'intestazione che dichiara il nome prima di utilizzarlo.
 
-C2653 è anche possibile se si prova a definire un *spazi dei nomi composti*, uno spazio dei nomi contenente uno o più nomi di ambito annidato dello spazio dei nomi. Composta dello spazio dei nomi le definizioni non sono consentite in C++ prima di c++17. Gli spazi dei nomi composti sono supportate a partire in Visual Studio 2015 Update 3, quando si specifica la [/std: c + + più recente](../../build/reference/std-specify-language-standard-version.md) opzione del compilatore. A partire da Visual C++ 2017 versione 15.5, il compilatore supporta le definizioni di spazi dei nomi composti quando la [/std: c + + 17](../../build/reference/std-specify-language-standard-version.md) opzione specificata.
+C2653 è anche possibile se si prova a definire un *spazi dei nomi composti*, uno spazio dei nomi contenente uno o più nomi di ambito annidato dello spazio dei nomi. Composta dello spazio dei nomi le definizioni non sono consentite in C++ prima di c++17. Gli spazi dei nomi composti sono supportate a partire in Visual Studio 2015 Update 3, quando si specifica la [/std: c + + più recente](../../build/reference/std-specify-language-standard-version.md) opzione del compilatore. A partire da Visual C++ 2017 versione 15.5, il compilatore supporta le definizioni di spazi dei nomi composti quando il [/std: c + + 17](../../build/reference/std-specify-language-standard-version.md) opzione specificata.
 
 ## <a name="examples"></a>Esempi
 

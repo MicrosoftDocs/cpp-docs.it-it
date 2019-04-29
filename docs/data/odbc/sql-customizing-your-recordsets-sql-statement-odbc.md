@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
 ms.openlocfilehash: eabaab019ee94b0c5617573c534d920ec710e9b2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59036195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329933"
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)
 
@@ -162,5 +162,5 @@ Se una query predefinita non restituisce i record, è possibile usare la `CDatab
 
 ## <a name="see-also"></a>Vedere anche
 
-[SQL: SQL e tipi di dati C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
-[SQL: Esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL: tipi di dati SQL e C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
+[SQL: esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

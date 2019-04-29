@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4659
 ms.assetid: e29ba8db-7917-43f6-8e34-868b752279ae
 ms.openlocfilehash: 2aef25e922d8f38ac7103b1b12ccb31c282f0403
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374651"
 ---
 # <a name="compiler-warning-level-1-c4659"></a>Avviso del compilatore (livello 1) C4659
 

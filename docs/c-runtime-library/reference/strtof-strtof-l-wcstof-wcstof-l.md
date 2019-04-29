@@ -39,11 +39,11 @@ helpviewer_keywords:
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
 ms.openlocfilehash: 10a50a175685f3e8f7f1241683c7705fd9a9b142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376432"
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
@@ -99,8 +99,8 @@ Ogni funzione converte la stringa di input *strSource* a un **float**. Il **strt
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcstof**|**strtof**|**strtof**|**wcstof**|
-|**tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
+|**_tcstof**|**strtof**|**strtof**|**wcstof**|
+|**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
 Il **LC_NUMERIC** impostazione di categoria di impostazioni locali correnti determina il riconoscimento del carattere di base *strSource*; per altre informazioni, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md). Le funzioni che non hanno le **l** suffisso usare le impostazioni locali correnti, quelli che hanno il suffisso sono identiche ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -108,7 +108,7 @@ Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto la lett
 
 **strtof** prevede *strSource* in modo che punti a una stringa nel formato seguente:
 
-[*whitespace*] [*sign*] [*cifre*] [__.__ *cifre*] [{**elettronica** &#124; **elettronica**} [*sign*] *cifre*]
+[*whitespace*] [*sign*] [*digits*] [__.__*digits*] [{**e** &#124; **E**} [*sign*] *digits*]
 
 Oggetto *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. *sign* può essere plus (**+**) o di sottrazione (**-**); e *cifre* sono uno o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**elettronica** oppure **elettronica**) e un intero con segno facoltativo. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
 
@@ -118,8 +118,8 @@ Le versioni UCRT di queste funzioni non supportano la conversione di stile Fortr
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strtof**, **strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> o \<stdlib.h>|
-|**wcstof**, **wcstof_l**|C: \<stdlib.h> o \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> o \<wchar.h>|
+|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> o \<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h> o \<wchar.h> C++: &lt;cstdlib>, \<stdlib.h> o \<wchar.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

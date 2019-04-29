@@ -107,11 +107,11 @@ helpviewer_keywords:
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
 ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354716"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -203,10 +203,10 @@ Questa funzione convalida i relativi parametri. Se uno dei due *percorso* oppure
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variazioni tipo time e tipo lunghezza file di _stat
 
-|Funzioni|_USE_32BIT_TIME_T definito?|Tipo time|Tipo lunghezza file|
+|Funzioni|_USE_32BIT_TIME_T definito?|Tipo Time|Tipo lunghezza file|
 |---------------|------------------------------------|---------------|----------------------|
-|**Stat**, **wstat**|Non definito|64 bit|32 bit|
-|**Stat**, **wstat**|Definito|32 bit|32 bit|
+|**_stat**, **_wstat**|Non definito|64 bit|32 bit|
+|**_stat**, **_wstat**|Definito|32 bit|32 bit|
 |**_stat32**, **_wstat32**|Non interessato dalla definizione macro|32 bit|32 bit|
 |**_stat64**, **_wstat64**|Non interessato dalla definizione macro|64 bit|64 bit|
 |**_stati64**, **_wstati64**|Non definito|64 bit|64 bit|
@@ -218,7 +218,7 @@ Questa funzione convalida i relativi parametri. Se uno dei due *percorso* oppure
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tstat**|**_stat**|**_stat**|**_wstat**|
+|**_tstat**|**_stat**|**_stat**|**_wstat**|
 |**_tstat64**|**_stat64**|**_stat64**|**_wstat64**|
 |**_tstati64**|**_stati64**|**_stati64**|**_wstati64**|
 |**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
@@ -246,8 +246,8 @@ Se *percorso* fa riferimento a un dispositivo, il **st_size**, vari campi ora, *
 
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
-|**Stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h> seguito da \<sys/stat.h>|\<errno.h>|
-|**wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h> seguito da \<sys/stat.h> o \<wchar.h>|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h> seguito da \<sys/stat.h>|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h> seguito da \<sys/stat.h> o \<wchar.h>|\<errno.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

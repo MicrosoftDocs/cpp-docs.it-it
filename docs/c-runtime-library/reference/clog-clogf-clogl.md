@@ -31,11 +31,11 @@ helpviewer_keywords:
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
 ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340638"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
@@ -82,13 +82,13 @@ I possibili valori restituiti sono:
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **clog** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **clog** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **clog** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **clog** accetta e restituisce sempre un **_Dcomplex** valore.
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione C|Intestazione C++|
 |-------------|--------------|------------------|
-|**CLOG**, **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+|**clog**,               **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

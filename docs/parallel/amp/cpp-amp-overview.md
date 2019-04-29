@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
 ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349897"
 ---
 # <a name="c-amp-overview"></a>Cenni preliminari su C++ AMP
 
@@ -102,9 +102,9 @@ void CppAmpMethod() {
 
 Gli stessi elementi base sono presenti, ma vengono utilizzati costrutti C++ AMP:
 
-- Dati: Si utilizzano matrici C++ per creare tre C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) oggetti. Si forniti quattro valori per costruire un' `array_view` oggetti: i valori dei dati, il numero di dimensioni, il tipo di elemento e la lunghezza del `array_view` oggetto in ogni dimensione. Il tipo di dimensione e vengono passati come parametri di tipo. I dati e lunghezza vengono passati come parametri del costruttore. In questo esempio, la matrice C++ che viene passata al costruttore è unidimensionale. Il numero di dimensioni e la lunghezza vengono utilizzati per costruire la forma rettangolare dei dati nel `array_view` oggetto e i dati usati per riempire la matrice di valori. La libreria di runtime include anche il [classe array](../../parallel/amp/reference/array-class.md), che ha un'interfaccia che è simile al `array_view` classe e viene descritto più avanti in questo articolo.
+- Dati: Si utilizza C++ per costruire tre matrici C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) oggetti. Si forniti quattro valori per costruire un' `array_view` oggetti: i valori dei dati, il numero di dimensioni, il tipo di elemento e la lunghezza del `array_view` oggetto in ogni dimensione. Il tipo di dimensione e vengono passati come parametri di tipo. I dati e lunghezza vengono passati come parametri del costruttore. In questo esempio, la matrice C++ che viene passata al costruttore è unidimensionale. Il numero di dimensioni e la lunghezza vengono utilizzati per costruire la forma rettangolare dei dati nel `array_view` oggetto e i dati usati per riempire la matrice di valori. La libreria di runtime include anche il [classe array](../../parallel/amp/reference/array-class.md), che ha un'interfaccia che è simile al `array_view` classe e viene descritto più avanti in questo articolo.
 
-- Iterazione: Il [funzione (C++ AMP) parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) fornisce un meccanismo per scorrere gli elementi di dati, o *dominio di calcolo*. In questo esempio, il dominio di calcolo specificato da `sum.extent`. Il codice che si vuole eseguire è contenuto in un'espressione lambda, o *funzione del kernel*. Il `restrict(amp)` indica che viene usato solo il subset del linguaggio C++ che C++ AMP può accelerare.
+- Iterazione: Il [parallel_for_each (funzione) (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) fornisce un meccanismo per scorrere gli elementi di dati, o *dominio di calcolo*. In questo esempio, il dominio di calcolo specificato da `sum.extent`. Il codice che si vuole eseguire è contenuto in un'espressione lambda, o *funzione del kernel*. Il `restrict(amp)` indica che viene usato solo il subset del linguaggio C++ che C++ AMP può accelerare.
 
 - Indice: Il [classe index](../../parallel/amp/reference/index-class.md) variabile `idx`, viene dichiarata con un rango pari a uno in modo che corrisponda il rango del `array_view` oggetto. Tramite l'indice, è possibile accedere ai singoli elementi del `array_view` oggetti.
 
@@ -469,7 +469,7 @@ AMP C++ include una libreria grafica progettata per la programmazione grafica ac
 
 ## <a name="universal-windows-platform-uwp-apps"></a>App UWP (Universal Windows Platform)
 
-Come altre librerie di C++, è possibile utilizzare AMP C++ nelle App UWP. Questi articoli descrivono come includere codice C++ AMP nelle App che viene creato utilizzando C++, C#, Visual Basic o JavaScript:
+Come altre librerie di C++, è possibile utilizzare AMP C++ nelle App UWP. Questi articoli descrivono come includere codice C++ AMP nelle App che viene creato utilizzando C++, c#, Visual Basic o JavaScript:
 
 - [Uso di C++ AMP in app UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
@@ -477,9 +477,9 @@ Come altre librerie di C++, è possibile utilizzare AMP C++ nelle App UWP. Quest
 
 - [Ottimizzazione dei viaggi, un'app di Store finestra in JavaScript e C++ di Bing mappe](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Come utilizzare C++ AMP da C# utilizzando il Runtime di Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Come utilizzare C++ AMP da c# utilizzando il Runtime di Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Come utilizzare C++ AMP da C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Come utilizzare C++ AMP da c#](http://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Chiamata di funzioni native da codice gestito](../../dotnet/calling-native-functions-from-managed-code.md)
 

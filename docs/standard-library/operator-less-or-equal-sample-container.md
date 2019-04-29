@@ -15,11 +15,11 @@ helpviewer_keywords:
 - <= operator
 ms.assetid: 338577dd-dc88-4a2b-9e12-0379c54fc8a2
 ms.openlocfilehash: 4b7461246b7dd610dc0043a242bd8010e9077fad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371396"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;sample container&gt;)
 

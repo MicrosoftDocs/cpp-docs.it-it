@@ -1,5 +1,5 @@
 ---
-title: R6028 di errore di Runtime C
+title: Errore di runtime di C R6028
 ms.date: 11/04/2016
 f1_keywords:
 - R6028
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6028
 ms.assetid: 81e99079-4388-4244-a4f7-4641c508871c
 ms.openlocfilehash: 4992641c2456f0322b5c52eb907b159904e4c9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380513"
 ---
-# <a name="c-runtime-error-r6028"></a>R6028 di errore di Runtime C
+# <a name="c-runtime-error-r6028"></a>Errore di runtime di C R6028
 
 Impossibile inizializzare "heap"
 

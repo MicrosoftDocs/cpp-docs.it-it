@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369124"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -95,9 +95,9 @@ Ogni oggetto `regex_traits` contiene un oggetto di tipo `regex_traits::locale` u
 |[lookup_collatename](#lookup_collatename)|Esegue il mapping di una sequenza a un elemento di ordinamento.|
 |[transform](#transform)|Converte in una sequenza ordinata di elementi equivalenti.|
 |[transform_primary](#transform_primary)|Esegue la conversione nella sequenza ordinata equivalente senza distinzione tra maiuscole e minuscole.|
-|[Traduci](#translate)|Esegue la conversione nell'elemento corrispondente.|
+|[translate](#translate)|Esegue la conversione nell'elemento corrispondente.|
 |[translate_nocase](#translate_nocase)|Esegue la conversione nell'elemento corrispondente senza distinzione tra maiuscole e minuscole.|
-|[valore](#value)|Converte un elemento in un valore in cifre.|
+|[value](#value)|Converte un elemento in un valore in cifre.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -221,7 +221,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametri
 
-*Loc*<br/>
+*loc*<br/>
 Oggetto impostazioni locali da archiviare.
 
 ### <a name="remarks"></a>Note
@@ -241,7 +241,7 @@ bool isctype(char_type ch, char_class_type cls) const;
 *ch*<br/>
 Elemento su cui eseguire il test.
 
-*a CLS*<br/>
+*cls*<br/>
 Classi da testare.
 
 ### <a name="remarks"></a>Note

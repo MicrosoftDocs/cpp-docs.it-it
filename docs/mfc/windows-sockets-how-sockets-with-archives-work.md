@@ -10,11 +10,11 @@ helpviewer_keywords:
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
 ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389441"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: Funzionamento dei socket con archivi
 
@@ -46,7 +46,7 @@ Se `CSocket` non sono stati implementati come un oggetto di due stati, è possib
 
 In modalità "compatible archivio", un `CSocketFile` oggetto offre prestazioni migliori e riduce il rischio di "deadlock". Un deadlock si verifica quando entrambi i socket di invio e ricezione sono in attesa tra loro, o in attesa di una risorsa comune. Questa situazione può verificarsi se il `CArchive` oggetto ha collaborato con i `CSocketFile` esattamente come è visualizzato con un `CFile` oggetto. Con `CFile`, l'archivio può supporre che, se riceve un numero di byte quello richiesto, la fine del file è stato raggiunto. Con `CSocketFile`, tuttavia, dei dati sono basato su messaggi; il buffer può contenere più messaggi, pertanto la ricezione di un valore più basso rispetto al numero di byte richiesto non implica fine del file. L'applicazione non vengono bloccati in questo caso come potrebbe accadere con `CFile`, e può continuare a leggere i messaggi dal buffer fino a quando il buffer è vuoto. Il [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) funzionare in `CArchive` è utile per monitorare lo stato del buffer dell'archivio in questo caso.
 
-Per altre informazioni, vedere [Windows Sockets: Utilizzo di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
+Per altre informazioni, vedere [Windows Sockets: uso di socket con archivi](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>Vedere anche
 

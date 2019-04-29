@@ -3,11 +3,11 @@ title: Riferimenti deboli e cicli di interruzione (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
 ms.openlocfilehash: 19252b8684eade131394e98dc705f2f1d451f0cf
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59778657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384894"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Riferimenti deboli e cicli di interruzione (C++/CX)
 

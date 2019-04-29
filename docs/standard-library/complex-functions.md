@@ -43,11 +43,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389203"
 ---
 # <a name="ltcomplexgt-functions"></a>Funzioni &lt;complex&gt;
 
@@ -934,7 +934,7 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Parametri
 
-*Base*<br/>
+*_Base*<br/>
 Numero complesso o numero del tipo di parametro per il numero complesso che costituisce la base da elevare a potenza con la funzione membro.
 
 *_Power*<br/>
@@ -1224,7 +1224,7 @@ Numero complesso che corrisponde al seno iperbolico del numero complesso di inpu
 
 Identità che definiscono seni iperbolici:
 
-sinh ( *z*) = (1 o 2)\*(exp ( *z*)-exp (- *z*))
+sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )
 
 sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)
 
@@ -1392,7 +1392,7 @@ Numero complesso che corrisponde alla tangente del numero complesso di input.
 
 Identità che definiscono la cotangente complessa:
 
-tan ( *z*) = sin ( *z*) / cos ( *z*) = (exp ( *iz*)-exp (- *iz*)) / *i*(exp ( *iz*) + exp (- *iz*))
+tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )
 
 ### <a name="example"></a>Esempio
 
@@ -1481,7 +1481,7 @@ Numero complesso che corrisponde alla tangente iperbolica del numero complesso d
 
 Identità che definiscono la cotangente iperbolica:
 
-Tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = (exp ( *z*)-exp (- *z*)) / (exp ( *z*) + exp (- *z*))
+tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )
 
 ### <a name="example"></a>Esempio
 

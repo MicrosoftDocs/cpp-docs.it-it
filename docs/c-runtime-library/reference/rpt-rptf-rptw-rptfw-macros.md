@@ -87,11 +87,11 @@ helpviewer_keywords:
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357503"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT, _RPTF, _RPTW, _RPTFW Macros
 
@@ -151,9 +151,9 @@ Se un' **macro rpt** macro viene chiamata e né **CrtSetReportMode** né **crtse
 
 |Tipo di report|Destinazione di output|
 |-----------------|------------------------|
-|**CRT_WARN**|Il testo dell'avviso non viene visualizzato.|
-|**CRT_ERROR**|Finestra popup. Come se fosse stato specificato `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);`.|
-|**CRT_ASSERT**|Uguale allo **CRT_ERROR**.|
+|**_CRT_WARN**|Il testo dell'avviso non viene visualizzato.|
+|**_CRT_ERROR**|Finestra popup. Come se fosse stato specificato `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);`.|
+|**_CRT_ASSERT**|Uguale allo **CRT_ERROR**.|
 
 Quando la destinazione è una finestra di messaggio di debug e l'utente sceglie il **ripetere** sul pulsante **CrtDbgReport** o **CrtDbgReportW** restituisce 1, inducendo le macro ad avviare il il debugger fornito il cui debug just-in-time (JIT) è abilitato. Per altre informazioni sull'uso di queste macro come meccanismo di gestione degli errori di debug, vedere [Using Macros for Verification and Reporting](/visualstudio/debugger/macros-for-reporting) (Uso delle macro per verifiche e report).
 
@@ -163,10 +163,10 @@ Sono disponibili altre due macro che generano un report di debug. La macro [_ASS
 
 |Macro|Intestazione obbligatoria|
 |-----------|---------------------|
-|**Macro rpt** macro|\<crtdbg.h>|
-|**Rptf** macro|\<crtdbg.h>|
+|**_RPT** macros|\<crtdbg.h>|
+|**_RPTF** macros|\<crtdbg.h>|
 |**Rptw** macro|\<crtdbg.h>|
-|**Rptfw** macro|\<crtdbg.h>|
+|**_RPTFW** macros|\<crtdbg.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

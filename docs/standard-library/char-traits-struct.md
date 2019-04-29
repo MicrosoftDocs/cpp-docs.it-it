@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379441"
 ---
 # <a name="chartraits-struct"></a>Struct char_traits
 
@@ -258,7 +258,7 @@ static char_type *copy(char_type* _To,
 *_To*<br/>
 L'elemento all'inizio della matrice di stringhe o caratteri che deve ricevere la sequenza di caratteri copiata.
 
-*FROM*<br/>
+*_From*<br/>
 L'elemento all'inizio della matrice di stringhe o caratteri di origine da copiare.
 
 *_Num*<br/>
@@ -323,7 +323,7 @@ La matrice di stringhe o caratteri che deve ricevere la sequenza di caratteri co
 *dest_size*<br/>
 Il valore pari *dest*. Se `char_type` viene **char**, questa dimensione è espressa in byte. Se `char_type` viene **wchar_t**, questa dimensione è espressa in parole.
 
-*FROM*<br/>
+*_From*<br/>
 La matrice di stringhe o caratteri di origine da copiare.
 
 *count*<br/>
@@ -384,7 +384,7 @@ Il carattere EOF.
 
 Un valore che rappresenta di fine del file (ad esempio EOF o WEOF).
 
-Lo standard C++ stabilisce che questo valore non deve corrispondere a un valore `char_type` valido. Il compilatore Visual C++ applica questo vincolo al tipo **char**, ma non per tipo **wchar_t**. Nell'esempio che segue viene illustrato quanto descritto.
+Lo standard C++ stabilisce che questo valore non deve corrispondere a un valore `char_type` valido. L'oggetto visivo C++ compilatore impone questo vincolo al tipo **char**, ma non per il tipo **wchar_t**. Nell'esempio che segue viene illustrato quanto descritto.
 
 ### <a name="example"></a>Esempio
 
@@ -582,7 +582,7 @@ Il primo carattere della stringa in cui verrà eseguita la ricerca.
 *_Num*<br/>
 Il numero di posizioni, contando dalla prima, nell'intervallo in cui verrà eseguita la ricerca.
 
-*CH*<br/>
+*_Ch*<br/>
 Il carattere da cercare nell'intervallo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -766,7 +766,7 @@ static char_type *move(char_type* _To,
 *_To*<br/>
 L'elemento all'inizio della matrice di stringhe o caratteri che deve ricevere la sequenza di caratteri copiata.
 
-*FROM*<br/>
+*_From*<br/>
 L'elemento all'inizio della matrice di stringhe o caratteri di origine da copiare.
 
 *_Num*<br/>
@@ -846,7 +846,7 @@ L'elemento all'inizio della matrice di stringhe o caratteri che deve ricevere la
 *dest_size*<br/>
 Il valore pari *dest*. Se `char_type` viene **char**, questo è espresso in byte. Se `char_type` viene **wchar_t**, questo è espresso in parole.
 
-*FROM*<br/>
+*_From*<br/>
 L'elemento all'inizio della matrice di stringhe o caratteri di origine da copiare.
 
 *count*<br/>
@@ -916,7 +916,7 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Il carattere rappresentato come `int_type` da testare per verificare se è o non è il carattere EOF.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1024,7 +1024,7 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Il carattere `int_type` da rappresentare come `char_type`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1130,7 +1130,7 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Il carattere `char_type` da rappresentare come `int_type`.
 
 ### <a name="return-value"></a>Valore restituito

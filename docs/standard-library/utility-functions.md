@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362367"
 ---
 # <a name="ltutilitygt-functions"></a>Funzioni &lt;utility&gt;
 
@@ -39,7 +39,7 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Oggetto che riceverà il valore di new_val.
 
 *new_val*<br/>
@@ -100,7 +100,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*Type*|Il tipo del valore passato *Arg*, che potrebbe essere diverso rispetto al tipo del *Arg*. in genere determinato da un argomento di modello della funzione di inoltro.|
-|*arg*|Argomento di cui eseguire il cast.|
+|*Arg*|Argomento di cui eseguire il cast.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -170,7 +170,7 @@ Tipo di elemento della prima coppia.
 *T2*<br/>
 Tipo di elemento della seconda coppia.
 
-*richiesta pull*<br/>
+*pr*<br/>
 Coppia da selezionare.
 
 ### <a name="remarks"></a>Note
@@ -276,7 +276,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*Type*|Un tipo dedotto dal tipo dell'argomento passato *Arg*, in combinazione con le regole di compressione dei riferimenti.|
-|*arg*|Argomento di cui eseguire il cast. Anche se il tipo della *Arg* sembra essere specificato come riferimento rvalue, `move` accetta anche argomenti lvalue poiché riferimenti lvalue possono essere associati ai riferimenti rvalue.|
+|*Arg*|Argomento di cui eseguire il cast. Anche se il tipo della *Arg* sembra essere specificato come riferimento rvalue, `move` accetta anche argomenti lvalue poiché riferimenti lvalue possono essere associati ai riferimenti rvalue.|
 
 ### <a name="return-value"></a>Valore restituito
 

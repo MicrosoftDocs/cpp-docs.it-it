@@ -8,11 +8,11 @@ helpviewer_keywords:
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
 ms.openlocfilehash: 40c1c05ca72f639829f2d3658497b0e9f3199640
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403373"
 ---
 # <a name="restrict"></a>restrict
 
@@ -22,7 +22,7 @@ Quando applicato a una definizione che restituisce un tipo di puntatore, o dichi
 
 ## <a name="syntax"></a>Sintassi
 
-> **__declspec(restrict)** *pointer_return_type* *funzione*();
+> **__declspec(restrict)** *pointer_return_type* *function*();
 
 ## <a name="remarks"></a>Note
 

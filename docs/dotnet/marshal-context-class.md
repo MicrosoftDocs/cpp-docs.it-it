@@ -9,11 +9,11 @@ helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
 ms.openlocfilehash: 25fc2be80ba0e5d8c7f76cee1f22eed4d1bb4fc7
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384868"
 ---
 # <a name="marshalcontext-class"></a>Classe marshal_context
 
@@ -35,14 +35,14 @@ Lo stesso `marshal_context` può essere usato per le conversioni di dati diversi
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|nome|Descrizione| 
+|Nome|Descrizione| 
 |---------|-----------| 
 |[marshal_context::marshal_context](#marshal-context)|Costruisce un `marshal_context` oggetto da utilizzare per la conversione dei dati tra i tipi di dati gestiti e nativi.| 
 |[marshal_context::~marshal_context](#tilde-marshal-context)|Elimina un oggetto `marshal_context`.| 
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|nome|Descrizione| 
+|Nome|Descrizione| 
 |---------|-----------| 
 |[marshal_context::marshal_as](#marshal-as)|Effettua il marshalling su un oggetto dati specifico per convertirlo tra un tipo di dati gestito e un tipo nativo.| 
 
@@ -113,7 +113,7 @@ La libreria del marshalling è costituito da diversi file di intestazione. Quals
 
 ### <a name="example"></a>Esempio
 
-In questo esempio viene creato un contesto per effettuare il marshalling da un tipo di variabile `System::String` a un tipo di variabile `const char *`. I dati convertiti non sono validi dopo la riga che elimina il contesto.
+In questo esempio viene creato un contesto per il marshalling da un tipo di variabile `System::String` a un tipo di variabile `const char *`. I dati convertiti non sono validi dopo la riga che elimina il contesto.
 
 ```cpp
 // marshal_context_test.cpp

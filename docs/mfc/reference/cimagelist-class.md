@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346366"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -357,7 +357,7 @@ Dimensioni di ogni immagine, in pixel.
 *nFlags*<br/>
 Specifica il tipo di elenco immagini da creare. Questo parametro può essere una combinazione dei valori seguenti, ma può includere solo uno del `ILC_COLOR` valori.
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |ILC_COLOR|Se nessuno degli altri ILC_COLOR * flag è specificato, usare il comportamento predefinito. In genere, il valore predefinito è ILC_COLOR4; ma per i driver video precedente, il valore predefinito è ILC_COLORDDB.|
 |ILC_COLOR4|Usare una sezione di bitmap indipendente dalla periferica (DIB) 4 bit (16 colori) come le bitmap per l'elenco di immagini.|
@@ -720,7 +720,7 @@ Immagine colore di sfondo, per impostazione predefinita CLR_DEFAULT. Questo para
 *rgbFore*<br/>
 Colore di primo piano immagine, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |CLR_DEFAULT|Colore di primo piano predefinito. L'immagine viene disegnata utilizzando il colore di sistema come il colore primo piano.|
 |CLR_NONE|Nessun colore di blend. L'immagine viene sfumato con il colore del contesto di dispositivo di destinazione.|

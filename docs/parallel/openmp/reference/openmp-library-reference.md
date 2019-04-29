@@ -3,11 +3,11 @@ title: Riferimento alla libreria OpenMP
 ms.date: 03/20/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
 ms.openlocfilehash: 6f4bbeca54bff1fc44a3576362edca9c30926d5a
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362517"
 ---
 # <a name="openmp-library-reference"></a>Riferimento alla libreria OpenMP
 

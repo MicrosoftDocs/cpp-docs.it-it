@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4056
 ms.assetid: a3c3a9b8-ec30-452d-96cb-3694adcce789
 ms.openlocfilehash: 59c66f2f7dcbd1e20463df613b1b7deae6a1c349
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349867"
 ---
 # <a name="compiler-warning-level-2-c4056"></a>Compilatore avviso (livello 2) C4056
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
 ms.openlocfilehash: c21e8b86962ebf37ca1a06bae056d09b9a9dbb2f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389515"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Procedura: Aggiungere controlli Ribbon e gestori di eventi
 

@@ -40,11 +40,11 @@ helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
 ms.openlocfilehash: 1a884a75fbc3ba979402c94c67d2915863a847e9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384465"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -73,7 +73,7 @@ Includere l'intestazione STL/CLR `<cliext/utility>` per definire la classe model
 |[operator== (pair) (STL/CLR)](#op_eq)|Confronto uguale coppia.|
 |[operator!= (pair) (STL/CLR)](#op_neq)|Coppia di confronto non uguale.|
 |[operator< (pair) (STL/CLR)](#op_lt)|Coppia di minore di confronto.|
-|[operatore\<= (coppia) (STL/CLR)](#op_lteq)|Associare minore o uguale confronto.|
+|[operator\<= (pair) (STL/CLR)](#op_lteq)|Associare minore o uguale confronto.|
 |[operator> (pair) (STL/CLR)](#op_gt)|Coppia di confronto maggiore.|
 |[operator>= (pair) (STL/CLR)](#op_gteq)|Confronto uguale o maggiore di coppia.|
 
@@ -83,7 +83,7 @@ Includere l'intestazione STL/CLR `<cliext/utility>` per definire la classe model
 
 ## <a name="members"></a>Membri
 
-## <a name="pair"></a> coppia (STL/CLR)
+## <a name="pair"></a> pair (STL/CLR)
 La classe modello descrive un oggetto che esegue il wrapping di una coppia di valori.
 
 ### <a name="syntax"></a>Sintassi
@@ -164,7 +164,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="first_type"></a> Pair::first_type (STL/CLR)
+## <a name="first_type"></a> pair::first_type (STL/CLR)
 
 Il tipo del primo valore sottoposto a wrapping.
 
@@ -201,7 +201,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="op_as"></a> Pair:: operator = (STL/CLR)
+## <a name="op_as"></a> pair::operator= (STL/CLR)
 
 Sostituisce la coppia di valori archiviata.
 
@@ -263,10 +263,10 @@ pair(Value1 val1, Value2 val2);
 *right*<br/>
 Coppia da archiviare.
 
-*Val1*<br/>
+*val1*<br/>
 Primo valore da archiviare.
 
-*Val2*<br/>
+*val2*<br/>
 Secondo valore da archiviare.
 
 ### <a name="remarks"></a>Note
@@ -367,7 +367,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="second_type"></a> Pair::second_type (STL/CLR)
+## <a name="second_type"></a> pair::second_type (STL/CLR)
 
 Il tipo del secondo valore sottoposto a wrapping.
 
@@ -526,7 +526,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="op_neq"></a> operatore! = (coppia) (STL/CLR)
+## <a name="op_neq"></a> operator!= (pair) (STL/CLR)
 
 Coppia di confronto non uguale.
 
@@ -580,7 +580,7 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="op_lt"></a> operatore&lt; (coppia) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (pair) (STL/CLR)
 
 Coppia di minore di confronto.
 
@@ -634,7 +634,7 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="op_lteq"></a> operatore&lt;= (coppia) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (pair) (STL/CLR)
 
 Associare minore o uguale confronto.
 
@@ -688,7 +688,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="op_eq"></a> operatore = = (coppia) (STL/CLR)
+## <a name="op_eq"></a> operator== (pair) (STL/CLR)
 
 Confronto uguale coppia.
 
@@ -742,7 +742,7 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="op_gt"></a> operatore&gt; (coppia) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (pair) (STL/CLR)
 
 Coppia di confronto maggiore.
 
@@ -796,7 +796,7 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="op_gteq"></a> operatore&gt;= (coppia) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (pair) (STL/CLR)
 
 Confronto uguale o maggiore di coppia.
 

@@ -28,11 +28,11 @@ helpviewer_keywords:
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
 ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339247"
 ---
 # <a name="execv-wexecv"></a>_execv, _wexecv
 
@@ -56,7 +56,7 @@ intptr_t _wexecv(
 
 ### <a name="parameters"></a>Parametri
 
-*CmdName*<br/>
+*cmdname*<br/>
 Percorso del file da eseguire.
 
 *argv*<br/>

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
 ms.openlocfilehash: 56a2ba641df610519949f64f6feeca18d9a99e93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359956"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>Avviso del compilatore (livelli 2 e 4) C4200
 
@@ -19,7 +19,7 @@ usata estensione non standard: matrice di dimensioni zero in struct/union
 
 Una struttura o un'unione contiene una matrice di dimensioni pari a zero.
 
-La dichiarazione di una matrice con dimensione zero è un'estensione Microsoft. L'avviso è di livello 2 quando viene compilato un file C++ e di livello 4 quando viene compilato un file C. La compilazione C++ fornisce inoltre l'avviso: "Impossibile generare un operatore di costruttore di copia o di assegnazione copia se un tipo definito dall'utente contiene una matrice di dimensioni zero". Questo esempio genera l'avviso C4200:
+La dichiarazione di una matrice con dimensione zero è un'estensione Microsoft. L'avviso è di livello 2 quando viene compilato un file C++ e di livello 4 quando viene compilato un file C. C++compilazione fornisce inoltre l'avviso: "Impossibile generare operatore di costruttore di copia o assegnazione di copia quando tipo definito dall'utente contiene una matrice di dimensioni zero." Questo esempio genera l'avviso C4200:
 
 ```cpp
 // C4200.cpp

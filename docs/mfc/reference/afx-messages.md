@@ -65,17 +65,17 @@ helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
 ms.openlocfilehash: 5caf40fc757e2c5c90c06e1698ce4c15d1ed6240
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338059"
 ---
 # <a name="afx-messages"></a>AFX (messaggi)
 
 Questi messaggi vengono usati in MFC.
 
-## <a name="messages"></a>Messaggi
+## <a name="messages"></a>Messages
 
 La tabella seguente elenca i messaggi che vengono usati nella libreria MFC:
 

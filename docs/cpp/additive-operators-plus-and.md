@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
 ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385050"
 ---
 # <a name="additive-operators--and--"></a>Operatori di addizione: + e -
 
@@ -42,13 +42,13 @@ Gli operatori additivi accettano gli operandi di tipi aritmetici o tipi puntator
 
 Gli operatori additivi accettano gli operandi *aritmetici*, *integrale*, e *scalare* tipi. Questi vengono definiti nella tabella seguente.
 
-### <a name="types-used-with-additive-operators"></a>Tipi usati con gli operatori additivi
+### <a name="types-used-with-additive-operators"></a>Tipi utilizzati con gli operatori additivi
 
 |Tipo|Significato|
 |----------|-------------|
 |*arithmetic*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|
 |*integral*|I tipi char e int di tutte le dimensioni (long e short) e le enumerazioni sono tipi "integrali".|
-|*scalare*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|
+|*scalar*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|
 
 Le combinazioni valide per questi operatori sono:
 

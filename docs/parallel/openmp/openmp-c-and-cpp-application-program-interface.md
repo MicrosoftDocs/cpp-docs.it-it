@@ -3,11 +3,11 @@ title: Application Program Interface C e C++ OpenMP
 ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
 ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362699"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>Application Program Interface C e C++ OpenMP
 
@@ -25,7 +25,7 @@ L'autorizzazione a duplicare senza costi tutte o parte di questo materiale viene
 
 1. [Direttive](2-directives.md)
 
-1. [Funzioni della libreria run-time](3-run-time-library-functions.md)
+1. [Funzioni della libreria di runtime](3-run-time-library-functions.md)
 
 1. [Variabili di ambiente](4-environment-variables.md)
 
@@ -33,7 +33,7 @@ L'autorizzazione a duplicare senza costi tutte o parte di questo materiale viene
 
 Un  [Esempi](a-examples.md)
 
-B. [Stub per funzioni della libreria run-time](b-stubs-for-run-time-library-functions.md)
+B. [Stub per funzioni della libreria di runtime](b-stubs-for-run-time-library-functions.md)
 
 C. [Grammatica OpenMP C e C++](c-openmp-c-and-cpp-grammar.md)
 
@@ -41,7 +41,7 @@ D. [Clausola schedule](d-using-the-schedule-clause.md)
 
 E. [Comportamenti definiti dall'implementazione in OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 
-F. [Nuove funzionalità e i chiarimenti nella versione 2.0](f-new-features-and-clarifications-in-version-2-0.md)
+F. [Nuovi chiarimenti e funzionalità della versione 2.0](f-new-features-and-clarifications-in-version-2-0.md)
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
 ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391231"
 ---
 # <a name="cd2dlayer-class"></a>Classe CD2DLayer
 
@@ -70,7 +70,7 @@ class CD2DLayer : public CD2DResource;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CD2DLayer::m_pLayer](#m_player)|Archivia un puntatore a un oggetto ID2D1Layer.|
 

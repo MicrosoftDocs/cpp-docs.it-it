@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
 ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379044"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Procedura: Intercettare le eccezioni nel codice nativo generate da MSIL
 

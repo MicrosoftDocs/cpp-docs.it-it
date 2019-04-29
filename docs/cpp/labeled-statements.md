@@ -6,11 +6,11 @@ helpviewer_keywords:
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
 ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368747"
 ---
 # <a name="labeled-statements"></a>Istruzioni con etichetta
 
@@ -60,7 +60,7 @@ L'aspetto di un' *identificatore* etichetta nel programma di origine dichiara un
 
 Un'etichetta non può apparire da sola ma deve essere sempre associata a un'istruzione. Se è necessario che un'etichetta appaia da sola, inserire un'istruzione null dopo di essa.
 
-L'etichetta ha l'ambito della funzione e non può essere ridichiarata all'interno di essa. Tuttavia, lo stesso nome può essere usato come etichetta in funzioni differenti.
+L'etichetta ha l'ambito della funzione e non può essere ridichiarata all'interno di essa. Tuttavia, lo stesso nome può essere utilizzato come etichetta in funzioni differenti.
 
 ```cpp
 // labels_with_goto.cpp
@@ -160,7 +160,7 @@ L'aspetto di un' *identificatore* etichetta nel programma di origine dichiara un
 
 Un'etichetta non può apparire da sola ma deve essere sempre associata a un'istruzione. Se è necessario che un'etichetta appaia da sola, inserire un'istruzione null dopo di essa.
 
-L'etichetta ha l'ambito della funzione e non può essere ridichiarata all'interno di essa. Tuttavia, lo stesso nome può essere usato come etichetta in funzioni differenti.
+L'etichetta ha l'ambito della funzione e non può essere ridichiarata all'interno di essa. Tuttavia, lo stesso nome può essere utilizzato come etichetta in funzioni differenti.
 
 ```cpp
 // labels_with_goto.cpp

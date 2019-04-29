@@ -43,11 +43,11 @@ helpviewer_keywords:
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
 ms.openlocfilehash: 016be9a1d753787b6e0c3800df5a96baea1a19f5
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347298"
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -133,7 +133,7 @@ Il `strrchr` funzione trova l'ultima occorrenza del *c* (convertito **char**) in
 
 `wcsrchr` e `_mbsrchr` sono le versioni a caratteri wide e a caratteri multibyte di `strrchr`. Gli argomenti e il valore restituito di `wcsrchr` sono stringhe con caratteri wide, mentre quelli di `_mbsrchr` sono stringhe con caratteri multibyte.
 
-In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi gli overload C++, definire il simbolo CONST_RETURN.
+In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi C++ gli overload, definire il simbolo CONST_RETURN.
 
 `_mbsrchr` convalida i propri parametri. Se *str* è NULL, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` è impostato su EINVAL e `_mbsrchr` restituisce 0. `strrchr` e `wcsrchr` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 

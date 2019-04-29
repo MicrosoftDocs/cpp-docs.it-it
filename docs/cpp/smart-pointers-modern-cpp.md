@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331025"
 ---
 # <a name="smart-pointers-modern-c"></a>Puntatori intelligenti (C++ moderno)
 
@@ -49,7 +49,7 @@ Di seguito vengono illustrati i passaggi essenziali per utilizzare i puntatori i
 
 1. Consentire al puntatore intelligente di eliminare l'oggetto.
 
-I puntatori intelligenti sono progettati per essere estremamente efficaci sia in termini di memoria che di prestazioni. Ad esempio, l'unico membro dati in `unique_ptr` è il puntatore incapsulato. Ciò significa che `unique_ptr` è esattamente delle stesse dimensioni del puntatore, ovvero quattro o otto byte. L'accesso al puntatore incapsulato tramite gli operatori * e -> sottoposti a overload del puntatore intelligente non è più lento dell'accesso diretto ai puntatori non elaborati.
+I puntatori intelligenti sono progettati per essere estremamente efficaci sia in termini di memoria che di prestazioni. Ad esempio, l'unico membro dati in `unique_ptr` è il puntatore incapsulato. Ciò significa che `unique_ptr` è esattamente delle stesse dimensioni del puntatore, ovvero quattro o otto byte. Accesso al puntatore incapsulato tramite il puntatore intelligente di overload * e -> operatori non sono notevolmente inferiori rispetto all'accesso ai puntatori non elaborati direttamente.
 
 I puntatori intelligenti dispongono di funzioni membro proprie accessibili tramite la notazione "punto". Ad esempio, alcuni puntatori intelligenti della libreria Standard C++ hanno una funzione membro di reimpostazione che rilascia la proprietà del puntatore. Come illustrato nell'esempio seguente, questa caratteristica è utile quando è necessario liberare memoria di proprietà del puntatore intelligente prima che quest'ultimo esca dall'ambito.
 

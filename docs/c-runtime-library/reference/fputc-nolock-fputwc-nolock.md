@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
 ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333131"
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
 
@@ -62,7 +62,7 @@ wint_t _fputwc_nolock(
 *c*<br/>
 Carattere da scrivere.
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
@@ -79,7 +79,7 @@ Le due funzioni si comportano in modo identico se il flusso viene aperto in moda
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**fputtc_nolock**|**_fputc_nolock**|**_fputc_nolock**|**_fputwc_nolock**|
+|**_fputtc_nolock**|**_fputc_nolock**|**_fputc_nolock**|**_fputwc_nolock**|
 
 ## <a name="requirements"></a>Requisiti
 

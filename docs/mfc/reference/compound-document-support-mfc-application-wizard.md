@@ -5,11 +5,11 @@ f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
 ms.openlocfilehash: b2ff4f312132b690223f124fd8790d0e2c172b7f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373440"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Supporto documenti compositi, Creazione guidata applicazione MFC
 
@@ -21,9 +21,9 @@ Per impostazione predefinita, l'applicazione non contiene nessun supporto docume
 
   Determina se l'applicazione fornisce il supporto dei contenitori, il supporto del server o entrambi. Per ulteriori informazioni su quest'area, vedere:
 
-  - [Contenitori: Implementazione di un contenitore](../../mfc/containers-implementing-a-container.md)
+  - [Contenitori: implementazione di un contenitore](../../mfc/containers-implementing-a-container.md)
 
-  - [Server: Implementazione di un Server](../../mfc/servers-implementing-a-server.md)
+  - [Server: implementazione di un server](../../mfc/servers-implementing-a-server.md)
 
   |Opzione|Descrizione|
   |------------|-----------------|

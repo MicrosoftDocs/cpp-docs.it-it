@@ -11,11 +11,11 @@ helpviewer_keywords:
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358235"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Gestori per messaggi Windows standard
 
@@ -23,7 +23,7 @@ I gestori predefiniti per i messaggi Windows standard (**WM _**) sono già defin
 
 `afx_msg void OnPaint();`
 
-Il **afx_msg** (parola chiave) suggerisce l'effetto di C++ **virtual** parola chiave distinguendo i gestori da altre `CWnd` funzioni membro. Notare, tuttavia, che queste funzioni non sono effettivamente virtuali; vengono invece implementate attraverso le mappe messaggi. Le mappe messaggi dipendono unicamente da macro standard del preprocessore, non dalle estensioni del linguaggio C++. Il **afx_msg** (parola chiave) viene risolto in uno spazio vuoto dopo la pre-elaborazione.
+Il **afx_msg** (parola chiave) suggerisce l'effetto del C++ **virtuale** parola chiave distinguendo i gestori da altre `CWnd` funzioni membro. Notare, tuttavia, che queste funzioni non sono effettivamente virtuali; vengono invece implementate attraverso le mappe messaggi. Le mappe messaggi dipendono unicamente da macro standard del preprocessore, non dalle estensioni del linguaggio C++. Il **afx_msg** (parola chiave) viene risolto in uno spazio vuoto dopo la pre-elaborazione.
 
 Per eseguire l'override di un gestore definito in una classe base, definire semplicemente una funzione con lo stesso prototipo nella classe derivata e creare una voce nella mappa messaggi per il gestore. Il gestore "esegue l'override" di qualsiasi gestore dello stesso nome in una qualsiasi delle classi base della classe.
 

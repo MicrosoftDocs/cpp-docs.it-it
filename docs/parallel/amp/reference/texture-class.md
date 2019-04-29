@@ -18,11 +18,11 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
 ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351534"
 ---
 # <a name="texture-class"></a>Classe texture
 
@@ -81,7 +81,7 @@ Numero di dimensioni della trama.
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Rank (costante)](#rank)|Ottiene il rango del `texture` oggetto.|
 

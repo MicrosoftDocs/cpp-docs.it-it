@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4684
 ms.assetid: e95f1a83-2784-4b05-ae94-12148e056e26
 ms.openlocfilehash: 8ba3d75ecb370ac86c9a6ab47f05dd49fc12ba23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374404"
 ---
 # <a name="compiler-warning-level-1-c4684"></a>Avviso del compilatore (livello 1) C4684
 
-'attribute': avviso!! attributo può comportare la generazione di codice non valido: utilizzare con cautela
+'attribute': AVVISO IMPORTANTE! attributo può comportare la generazione di codice non valido: utilizzare con cautela
 
 È stato utilizzato un attributo non comune da usare.
 

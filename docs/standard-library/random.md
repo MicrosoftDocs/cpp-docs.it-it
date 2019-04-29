@@ -7,11 +7,11 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369813"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -212,11 +212,11 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
 
 I generatori URNG sono spesso descritti tramite e proprietà seguenti:
 
-1. **Durata periodo**: numero di iterazioni necessarie per la ripetizione della sequenza di numeri generati. È preferibile specificare un periodo lungo.
+1. **Durata periodo**: Numero di iterazioni necessarie per la ripetizione della sequenza di numeri generati. È preferibile specificare un periodo lungo.
 
-2. **Prestazioni**: rapidità con cui è possibile generare i numeri e quantità di memoria necessaria. È preferibile che il valore sia basso.
+2. **Prestazioni**: Rapidità con cui è possibile generare i numeri e quantità di memoria necessaria. È preferibile che il valore sia basso.
 
-3. **Qualità**: livello di casualità effettiva della sequenza generata. Questa proprietà è definita spesso "*casualità*".
+3. **Quality**: Casualità true della sequenza generata. Questa proprietà è definita spesso "*casualità*".
 
 Le sezioni seguenti elencano i generatori di numeri casuali (generatori Urng) forniti nel \<random > dell'intestazione.
 

@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330206"
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 
@@ -89,7 +89,7 @@ La classe String presenta gli operatori seguenti.
 |[operatore+ Operatore](#operator-plus)|Concatena due oggetti stringa in un nuovo oggetto stringa.|
 |[String:: operator > operatore](#operator-greater-than)|Indica se il valore di un oggetto String è maggiore del valore di un secondo oggetto String.|
 |[String:: operator > = (operatore)](#operator-greater-than-or-equals)|Indica se il valore di un oggetto String è maggiore o uguale al valore di un secondo oggetto String.|
-|[String:: operator! = (operatore)](#operator-inequality)|Indica se i valori di due oggetti String specificati sono differenti.|
+|[String:: operator! = (operatore)](#operator-inequality)|Indica se due oggetti String specificati hanno valori diversi.|
 |[String:: operator < operatore](#operator-less-than)|Indica se il valore di un oggetto String è minore del valore di un secondo oggetto String.|
 
 ### <a name="requirements"></a>Requisiti
@@ -411,7 +411,7 @@ Secondo oggetto `String`.
 
 ## <a name="operator-inequality"></a> String::operator!=
 
-Indica se due specificato `String` oggetti presentano valori diversi.
+Indica se due `String` oggetti presentano valori diversi.
 
 ### <a name="syntax"></a>Sintassi
 

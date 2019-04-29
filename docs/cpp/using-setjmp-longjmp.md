@@ -13,11 +13,11 @@ helpviewer_keywords:
 - setjmp function, C++ programs
 ms.assetid: 96be8816-f6f4-4567-9a9c-0c3c720e37c5
 ms.openlocfilehash: 4ead12f79701899b3977993c9de3c3803023150f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364519"
 ---
 # <a name="using-setjmp-and-longjmp"></a>Uso di setjmp e longjmp
 
@@ -32,7 +32,7 @@ Se si decide di usare `setjmp` e `longjmp` in un programma C++, includere anche 
 
 Se si usa un' [/EH](../build/reference/eh-exception-handling-model.md) seleziona l'opzione per compilare codice C++, i distruttori per gli oggetti locali vengono chiamati durante la rimozione dello stack. Tuttavia, se si usa **/EHs** oppure **/EHsc** a compilazione e una delle funzioni che usa [noexcept](../cpp/noexcept-cpp.md) chiamate `longjmp`, quindi il distruttore di rimozione per la funzione potrebbe non avvenire, a seconda dello stato di query optimizer.
 
-Nel codice portabile, quando un `longjmp` chiamata viene eseguita, corretta distruzione corretta oggetti basati su frame in modo esplicito non è garantita dallo standard e potrebbe non essere supportata da altri compilatori. Per essere informati, a livello di avviso 4, una chiamata a `setjmp` Genera avviso C4611: l'interazione tra setjmp' e l'eliminazione degli oggetti C++ non è portabile.
+Nel codice portabile, quando un `longjmp` chiamata viene eseguita, corretta distruzione corretta oggetti basati su frame in modo esplicito non è garantita dallo standard e potrebbe non essere supportata da altri compilatori. Per essere informati, a livello di avviso 4, una chiamata a `setjmp` fa sì che l'avviso C4611: l'interazione tra setjmp' e C++ eliminazione degli oggetti non è portabile.
 
 **Fine sezione specifica Microsoft**
 

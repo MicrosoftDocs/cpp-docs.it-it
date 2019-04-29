@@ -34,11 +34,11 @@ helpviewer_keywords:
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
 ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334775"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -81,11 +81,11 @@ File descrittori passati **fdopen** sono di proprietà dall'oggetto restituito *
 
 |Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
+|**_tfdopen**|**_fdopen**|**_fdopen**|**_wfdopen**|
 
 Il *modalità* stringa di caratteri specifica il tipo di accesso al file richiesto per il file:
 
-| *mode* | Accedi a |
+| *mode* | Accesso |
 |--------|--------|
 | **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, il **fopen** chiamata ha esito negativo. |
 | **"w"** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
@@ -114,12 +114,12 @@ I caratteri validi per il *modalità* stringa usata nella **fopen** e **fdopen**
 |I caratteri *modalità* stringa|Equivalente *oflag* affare **Open** e **sopen**|
 |---------------------------------|---------------------------------------------------|
 |**a**|**\_U\_WRONLY &#124; \_u\_APPEND** (in genere  **\_u\_WRONLY &#124; \_u\_per creare &#124; \_u \_APPEND**)|
-|**+**|**\_U\_RDWR &#124; \_u\_APPEND** (in genere  **\_u\_RDWR &#124; \_u\_APPEND &#124; \_O\_ Per creare** )|
+|**a+**|**\_O\_RDWR &#124; \_O\_APPEND** (usually **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_CREAT** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_U\_WRONLY** (in genere  **\_u\_WRONLY &#124; \_u\_per creare &#124; \_u\_TRUNC**)|
-|**w +**|**\_U\_RDWR** (in genere  **\_u\_RDWR &#124; \_u\_per creare &#124; \_u\_TRUNC**)|
-|**b**|**\_U\_BINARIO**|
+|**r+**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (usually **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (usually **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
 |**c**|nessuno|
 |**n**|nessuno|
@@ -190,4 +190,4 @@ Lines in file: 2
 [fclose, \_fcloseall](fclose-fcloseall.md)<br/>
 [fopen, \_wfopen](fopen-wfopen.md)<br/>
 [freopen, \_wfreopen](freopen-wfreopen.md)<br/>
-[\_aprire, \_wopen](open-wopen.md)<br/>
+[\_open, \_wopen](open-wopen.md)<br/>

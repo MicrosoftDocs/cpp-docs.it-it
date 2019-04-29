@@ -8,11 +8,11 @@ helpviewer_keywords:
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
 ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383672"
 ---
 # <a name="isbaseof-class"></a>Classe is_base_of
 
@@ -27,7 +27,7 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Parametri
 
-*base*<br/>
+*Base*<br/>
 Classe di base per cui eseguire la verifica.
 
 *Derivati*<br/>

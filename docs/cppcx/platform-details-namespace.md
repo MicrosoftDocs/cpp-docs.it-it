@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
 ms.openlocfilehash: 05677a08b7c63ddbe2196da946d62c00004d8942
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387643"
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details (spazio dei nomi)
 
@@ -30,7 +30,7 @@ namespace Platform {
 
 Sebbene questo spazio dei nomi sia solo per uso interno, tramite i browser è possibile visualizzarne i seguenti membri.
 
-|nome|Nota|
+|Nome|Nota|
 |----------|------------|
 |Console|Class. Visualizza l'output negli unit test.|
 |_GUID|Struct|

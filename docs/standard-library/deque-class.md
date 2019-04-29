@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394013"
 ---
 # <a name="deque-class"></a>Classe deque
 
@@ -321,7 +321,7 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Numero di posizione o indice dell'elemento a cui fare riferimento nella deque.
 
 ### <a name="return-value"></a>Valore restituito
@@ -777,7 +777,7 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*A destra*|Deque di cui la deque costruita deve essere una copia.|
 |*Primo*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
 |*ultimo*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
-|* IList'|Oggetto initializer_list da copiare.|
+|* IList'| Oggetto initializer_list da copiare.|
 
 ### <a name="remarks"></a>Note
 
@@ -1072,8 +1072,8 @@ iterator emplace(
 
 |Parametro|Descrizione|
 |-|-|
-|*WHERE*|Posizione nella [deque](../standard-library/deque-class.md) in cui viene inserito il primo elemento.|
-|*Val*|Valore dell'elemento da inserire nell'oggetto `deque`.|
+|*_Where*|Posizione nella [deque](../standard-library/deque-class.md) in cui viene inserito il primo elemento.|
+|*val*|Valore dell'elemento da inserire nell'oggetto `deque`.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1137,7 +1137,7 @@ void emplace_back(Type&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Elemento aggiunto alla fine della [deque](../standard-library/deque-class.md).|
+|*val*|Elemento aggiunto alla fine della [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Esempio
 
@@ -1187,7 +1187,7 @@ void emplace_front(Type&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Elemento aggiunto all'inizio della [deque](../standard-library/deque-class.md).|
+|*val*|Elemento aggiunto all'inizio della [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Esempio
 
@@ -1334,7 +1334,7 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parametri
 
-*WHERE*<br/>
+*_Where*<br/>
 Posizione dell'elemento da rimuovere dalla deque.
 
 *first*<br/>
@@ -1591,7 +1591,7 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*pos*<br/>
 Posizione dell'elemento della deque a cui fare riferimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1816,7 +1816,7 @@ void push_back(Type&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Elemento aggiunto alla fine della deque.|
+|*val*|Elemento aggiunto alla fine della deque.|
 
 ### <a name="remarks"></a>Note
 
@@ -1835,7 +1835,7 @@ void push_front(Type&& val);
 
 |Parametro|Descrizione|
 |-|-|
-|*Val*|Elemento aggiunto all'inizio della deque.|
+|*val*|Elemento aggiunto all'inizio della deque.|
 
 ### <a name="remarks"></a>Note
 
@@ -2090,7 +2090,7 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*<br/>
 Nuova dimensione della deque.
 
-*Val*<br/>
+*val*<br/>
 Valore dei nuovi elementi da aggiungere alla deque se la nuova dimensione è maggiore di quella originale. Se il valore viene omesso, ai nuovi elementi viene assegnato il valore predefinito per la classe.
 
 ### <a name="remarks"></a>Note

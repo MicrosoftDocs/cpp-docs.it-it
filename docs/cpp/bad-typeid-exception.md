@@ -9,11 +9,11 @@ helpviewer_keywords:
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 ms.openlocfilehash: 0389a6db1249ad47d4ca5cc10003169933c7a5c3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392388"
 ---
 # <a name="badtypeid-exception"></a>Eccezione bad_typeid
 

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
 ms.openlocfilehash: 440582bb42a1795721eab17b24be3e0bc3daf80f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334970"
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
 
@@ -45,7 +45,7 @@ int _fclose_nolock(
 
 ### <a name="parameters"></a>Parametri
 
-*flusso*<br/>
+*stream*<br/>
 Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito

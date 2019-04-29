@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
 ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339481"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -77,7 +77,7 @@ Puntatore al nome del modulo (.exe o .dll) in cui si è verificata l'asserzione 
 *format*<br/>
 Puntatore alla stringa di controllo del formato usata per creare il messaggio utente.
 
-*argomento*<br/>
+*argument*<br/>
 Argomenti di sostituzione facoltativi usati da *formato*.
 
 ## <a name="return-value"></a>Valore restituito
@@ -96,7 +96,7 @@ Il [macro rpt, rptf](rpt-rptf-rptw-rptfw-macros.md) eseguire il debug di chiamat
 
 La tabella seguente elenca le scelte disponibili per la modalità di report e file e il comportamento risultante di **CrtDbgReport** e **CrtDbgReportW**. Queste opzioni sono definite come flag di bit in \<crtdbg.h>.
 
-|Modalità rapporto|File di rapporto|**CrtDbgReport**, **CrtDbgReportW** comportamento|
+|Modalità rapporto|File di rapporto|**_CrtDbgReport**, **_CrtDbgReportW** behavior|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|Non applicabile|Scrive un messaggio tramite l'API [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) di Windows.|
 |**_CRTDBG_MODE_WNDW**|Non applicabile|Esegue una chiamata all'API[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) di Windows per creare la finestra in cui visualizzare il messaggio nonché i pulsanti **Interrompi**, **Riprova** e **Ignora**. Se un utente sceglie **Abort**, **CrtDbgReport** oppure **CrtDbgReport** viene immediatamente interrotto. Se un utente fa clic su **Riprova**, viene restituito 1. Se un utente sceglie **Ignore**, l'esecuzione continua e **CrtDbgReport** e **CrtDbgReportW** restituiscono 0. Si noti che quando si fa clic su **Ignora** in presenza di una condizione di errore, spesso si determina un "comportamento indefinito".|

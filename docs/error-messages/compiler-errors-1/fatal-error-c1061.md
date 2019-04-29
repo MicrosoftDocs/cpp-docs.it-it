@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1061
 ms.assetid: 9366c0bc-96e0-4967-aa7d-4ebf098de806
 ms.openlocfilehash: 1733a13e697af775653609ddfcc22f7297dad240
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363960"
 ---
 # <a name="fatal-error-c1061"></a>Errore irreversibile C1061
 

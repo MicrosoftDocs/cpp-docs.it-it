@@ -32,11 +32,11 @@ helpviewer_keywords:
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
 ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356252"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 

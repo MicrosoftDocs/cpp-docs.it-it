@@ -39,11 +39,11 @@ helpviewer_keywords:
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
 ms.openlocfilehash: e2ebfdc80a451ebf02563f78a62dd08618f92bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340417"
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -73,7 +73,7 @@ int __control87_2(
 *new*<br/>
 Valori di bit della parola di controllo nuova.
 
-*Maschera*<br/>
+*mask*<br/>
 Maschera di bit della parola di controllo nuova da impostare.
 
 *x86_cw*<br/>
@@ -90,7 +90,7 @@ Per la **__control87_2**, il valore restituito è 1, che indica l'esito positivo
 
 ## <a name="remarks"></a>Note
 
-Il **_control87** funzione Ottiene e imposta la parola di controllo a virgola mobile. La parola di controllo a virgola mobile consente al programma di modificare le modalità di precisione, arrotondamento e infinito nel pacchetto matematico a virgola mobile, a seconda della piattaforma. È anche possibile usare **_control87** per mascherare o annullare il mascheramento delle eccezioni a virgola mobile. Se il valore per *maschera* è uguale a 0, **_control87** Ottiene la parola di controllo a virgola mobile. Se *maschera* è diverso da zero, viene impostato un nuovo valore per la parola di controllo: per ogni bit che si trova in (vale a dire, uguale a 1) nel *maschera*, il bit corrispondente nella *nuovo* viene usato per aggiornare il controllo Word. In altre parole, **fpcntrl** = ((**fpcntrl** & ~*maschera*) &#124; (*nuovo* & *maschera*)) in cui **fpcntrl** corrisponde alla parola di controllo a virgola mobile.
+Il **_control87** funzione Ottiene e imposta la parola di controllo a virgola mobile. La parola di controllo a virgola mobile consente al programma di modificare le modalità di precisione, arrotondamento e infinito nel pacchetto matematico a virgola mobile, a seconda della piattaforma. È anche possibile usare **_control87** per mascherare o annullare il mascheramento delle eccezioni a virgola mobile. Se il valore per *maschera* è uguale a 0, **_control87** Ottiene la parola di controllo a virgola mobile. Se *mask* è diverso da zero, viene impostato un nuovo valore per la parola di controllo: Per uno qualsiasi di bit che si trova in (vale a dire, uguale a 1) nella *maschera*, il bit corrispondente nella *nuove* viene usato per aggiornare la parola di controllo. In altre parole, **fpcntrl** = ((**fpcntrl** & ~*maschera*) &#124; (*nuovo* & *maschera*)) in cui **fpcntrl** corrisponde alla parola di controllo a virgola mobile.
 
 > [!NOTE]
 > Per impostazione predefinita, le librerie di runtime mascherano tutte le eccezioni a virgola mobile.
@@ -138,13 +138,13 @@ Per il **_MCW_EM** maschera, cancellare la maschera di impostazione dell'eccezio
 |**_MCW_EM** (maschera eccezione interruzione)|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
 |**_MCW_IC** (controllo infinito)<br /><br /> (Non supportato in ARM o x64] piattaforme.)|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
 |**_MCW_RC** (controllo arrotondamento)|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** (controllo precisione)<br /><br /> (Non su ARM o x64 piattaforme supportate.)|0x00030000|**_PC_24** (24 bit)<br /><br /> **_PC_53** (53 bit)<br /><br /> **_PC_64** (64 bit)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_PC** (controllo precisione)<br /><br /> (Non su ARM o x64 piattaforme supportate.)|0x00030000|**_PC_24** (24 bits)<br /><br /> **_PC_53** (53 bits)<br /><br /> **_PC_64** (64 bits)|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_control87**, **controlfp**, **_control87_2**|\<float.h>|
+|**_control87**, **_controlfp**, **_control87_2**|\<float.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).
 

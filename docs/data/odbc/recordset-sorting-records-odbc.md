@@ -7,11 +7,11 @@ helpviewer_keywords:
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
 ms.openlocfilehash: 831f21901186ed0ae010b0f332327eefcba94b51
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368630"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Recordset: Ordinamento dei record (ODBC)
 
@@ -62,5 +62,5 @@ Il set di record contiene tutti i record di studenti, vengono ordinati in senso 
 ## <a name="see-also"></a>Vedere anche
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
-[Recordset: Filtrare i record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+[Recordset: parametrizzazione di un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[Recordset: filtro di record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

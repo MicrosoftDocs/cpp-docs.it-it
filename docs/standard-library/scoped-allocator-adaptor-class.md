@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348211"
 ---
 # <a name="scopedallocatoradaptor-class"></a>Classe scoped_allocator_adaptor
 
@@ -65,7 +65,7 @@ Tre tipi sono definiti a scopo di illustrazione:
 
 ### <a name="constructors"></a>Costruttori
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Costruisce un oggetto `scoped_allocator_adaptor`.|
 
@@ -88,7 +88,7 @@ Tre tipi sono definiti a scopo di illustrazione:
 
 ### <a name="structs"></a>Struct
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Struct scoped_allocator_adaptor::rebind](#rebind_struct)|Definisce il tipo `Outer::rebind\<Other>::other` come sinonimo di `scoped_allocator_adaptor\<Other, Inner...>`.|
 
@@ -271,7 +271,7 @@ Riferimento all'oggetto archiviato di tipo `outer_allocator_type`.
 
 Definisce il tipo `Outer::rebind\<Other>::other` come sinonimo di `scoped_allocator_adaptor\<Other, Inner...>`.
 
-struct riassociazione {typedef Other_traits::rebind\<altri > Other_alloc; scoped_allocator_adaptor typedef\<Other_alloc, Inner... > other;};
+struct riassociazione {typedef Other_traits::rebind\<altri > Other_alloc; scoped_allocator_adaptor typedef\<Other_alloc, Inner... > altri; };
 
 ## <a name="scoped_allocator_adaptor"></a>  Costruttore scoped_allocator_adaptor::scoped_allocator_adaptor
 
@@ -297,10 +297,10 @@ scoped_allocator_adaptor(Outer2&& al,
 *right*<br/>
 Oggetto `scoped_allocator_adaptor` esistente.
 
-*Al*<br/>
+*al*<br/>
 Allocatore esistente da usare come allocatore esterno.
 
-*REST*<br/>
+*rest*<br/>
 Elenco di allocatori da usare come allocatori interni.
 
 ### <a name="remarks"></a>Note

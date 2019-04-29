@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341600"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ Se lo spazio non può essere allocato viene generata un'eccezione di overflow de
 
 **alloca** alloca *dimensioni* byte dallo stack di programma. Lo spazio allocato automaticamente viene liberato quando la funzione chiamante viene chiuso (non durante l'allocazione si limita a passare fuori ambito). Pertanto, non passare il valore del puntatore restituito da **alloca** come argomento al [gratuita](free.md).
 
-Esistono alcune restrizioni per chiamare in modo esplicito **alloca** in un gestore di eccezioni (EH, Exception HANDLING). Le routine EH in esecuzione su processori x86 operano nel relativo frame di memoria: eseguono le attività nello spazio di memoria che non è basato sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, chiamare in modo esplicito **alloca** in uno dei seguenti scenari genera un errore di programma durante la restituzione alla routine EH chiamante:
+Esistono alcune restrizioni per chiamare in modo esplicito **alloca** in un gestore di eccezioni (EH, Exception HANDLING). Routine EH in esecuzione su processori x86 operano nel relativo frame di memoria: Eseguono le attività nello spazio di memoria che non si basa sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, chiamare in modo esplicito **alloca** in uno dei seguenti scenari genera un errore di programma durante la restituzione alla routine EH chiamante:
 
 - Espressione di filtro eccezioni di Windows NT SEH: `__except ( _alloca() )`
 

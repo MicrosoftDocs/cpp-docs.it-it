@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
 ms.openlocfilehash: 612c0772504043a99f3a2ae9fa7da9c791076d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384647"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
@@ -230,7 +230,7 @@ La cancellazione o la rimozione di un elemento chiama il distruttore per il valo
 
 ## <a name="members"></a>Membri
 
-## <a name="begin"></a>set:: Begin (STL/CLR)
+## <a name="begin"></a>set::begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -278,7 +278,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="clear"></a>set:: Clear (STL/CLR)
+## <a name="clear"></a>set::clear (STL/CLR)
 
 Rimuove tutti gli elementi.
 
@@ -336,7 +336,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a>set:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a>set::const_iterator (STL/CLR)
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -378,7 +378,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a>set:: const_reference (STL/CLR)
+## <a name="const_reference"></a>set::const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -423,7 +423,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a>set:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a>set::const_reverse_iterator (STL/CLR)
 
 Il tipo di iteratore inverso costante per la sequenza controllata...
 
@@ -465,7 +465,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a>set:: Count (STL/CLR)
+## <a name="count"></a>set::count (STL/CLR)
 
 Trova il numero di elementi corrispondenti a una chiave specificata.
 
@@ -518,7 +518,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a>set:: difference_type (STL/CLR)
+## <a name="difference_type"></a>set::difference_type (STL/CLR)
 
 I tipi di una distanza signed tra due elementi.
 
@@ -573,7 +573,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a>set:: Empty (STL/CLR)
+## <a name="empty"></a>set::empty (STL/CLR)
 
 Verifica se sono presenti o meno degli elementi.
 
@@ -625,7 +625,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a>set:: end (STL/CLR)
+## <a name="end"></a>set::end (STL/CLR)
 
 Designa la fine della sequenza controllata.
 
@@ -674,7 +674,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a>set:: equal_range (STL/CLR)
+## <a name="equal_range"></a>set::equal_range (STL/CLR)
 
 Trova un intervallo che corrisponde a una chiave specificata.
 
@@ -734,7 +734,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a>set:: Erase (STL/CLR)
+## <a name="erase"></a>set::erase (STL/CLR)
 
 Rimuove gli elementi in corrispondenza delle posizioni specificate.
 
@@ -818,7 +818,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a>set:: Find (STL/CLR)
+## <a name="find"></a>set::find (STL/CLR)
 
 Trova un elemento che corrisponde a una chiave specificata.
 
@@ -1104,7 +1104,7 @@ a b c
 a
 ```
 
-## <a name="insert"></a> set:: Insert (STL/CLR)
+## <a name="insert"></a> set::insert (STL/CLR)
 
 Aggiunge elementi.
 
@@ -1129,7 +1129,7 @@ Fine dell'intervallo da inserire.
 *right*<br/>
 Enumerazione da inserire.
 
-*Val*<br/>
+*val*<br/>
 Valore della chiave da inserire.
 
 *where*<br/>
@@ -1220,7 +1220,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="iterator"></a> set:: Iterator (STL/CLR)
+## <a name="iterator"></a> set::iterator (STL/CLR)
 
 Tipo di un iteratore per la sequenza controllata.
 
@@ -1262,7 +1262,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> set:: key_comp (STL/CLR)
+## <a name="key_comp"></a> set::key_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due chiavi.
 
@@ -1321,7 +1321,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> set:: key_compare (STL/CLR)
+## <a name="key_compare"></a> set::key_compare (STL/CLR)
 
 Delegato di ordinamento per due chiavi.
 
@@ -1381,7 +1381,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> set:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> set::key_type (STL/CLR)
 
 Tipo di una chiave di ordinamento.
 
@@ -1426,7 +1426,7 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> set:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> set::lower_bound (STL/CLR)
 
 Trova l'inizio dell'intervallo che corrisponde a una chiave specificata.
 
@@ -1529,7 +1529,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> set::operator = (STL/CLR)
+## <a name="op_as"></a> set::operator= (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -1584,7 +1584,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> set:: rbegin (STL/CLR)
+## <a name="rbegin"></a> set::rbegin (STL/CLR)
 
 Indica l'inizio della sequenza controllata inversa.
 
@@ -1632,7 +1632,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> set:: Reference (STL/CLR)
+## <a name="reference"></a> set::reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -1677,7 +1677,7 @@ int main()
 a b c
 ```
 
-## <a name="rend"></a> set:: rend (STL/CLR)
+## <a name="rend"></a> set::rend (STL/CLR)
 
 Indica la fine della sequenza controllata inversa.
 
@@ -1726,7 +1726,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> set:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> set::reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -1768,7 +1768,7 @@ int main()
 c b a
 ```
 
-## <a name="set"></a> set:: set (STL/CLR)
+## <a name="set"></a> set::set (STL/CLR)
 
 Costruisce un oggetto contenitore.
 
@@ -1797,7 +1797,7 @@ Inizio dell'intervallo da inserire.
 *last*<br/>
 Fine dell'intervallo da inserire.
 
-*Pred*<br/>
+*pred*<br/>
 Ordinamento di predicato per la sequenza controllata.
 
 *right*<br/>
@@ -1939,7 +1939,7 @@ c b a
 a b c
 ```
 
-## <a name="size"></a> set:: Size (STL/CLR)
+## <a name="size"></a> set::size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -1993,7 +1993,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> set:: size_type (STL/CLR)
+## <a name="size_type"></a> set::size_type (STL/CLR)
 
 Il tipo di una distanza signed tra due elementi.
 
@@ -2041,7 +2041,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> set:: swap (STL/CLR)
+## <a name="swap"></a> set::swap (STL/CLR)
 
 Scambia il contenuto di due contenitori.
 
@@ -2159,7 +2159,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> set:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> set::upper_bound (STL/CLR)
 
 Trova fine dell'intervallo che corrisponde a una chiave specificata.
 
@@ -2216,7 +2216,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> set:: value_comp (STL/CLR)
+## <a name="value_comp"></a> set::value_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due valori di elemento.
 
@@ -2260,7 +2260,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> set:: value_compare (STL/CLR)
+## <a name="value_compare"></a> set::value_compare (STL/CLR)
 
 Delegato di ordinamento per due valori di elemento.
 
@@ -2305,7 +2305,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> set:: value_type (STL/CLR)
+## <a name="value_type"></a> set::value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -2350,7 +2350,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> operatore! = (set) (STL/CLR)
+## <a name="op_neq"></a> operator!= (set) (STL/CLR)
 
 Elenco di confronto non uguale.
 
@@ -2420,7 +2420,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operatore&lt; (set) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (set) (STL/CLR)
 
 Elenco minore di confronto.
 
@@ -2490,7 +2490,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operatore&lt;= (set) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (set) (STL/CLR)
 
 Elenco minore o uguale confronto.
 
@@ -2560,7 +2560,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operatore = = (set) (STL/CLR)
+## <a name="op_eq"></a> operator== (set) (STL/CLR)
 
 Confronto uguale a elenco.
 
@@ -2630,7 +2630,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operatore&gt; (set) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (set) (STL/CLR)
 
 Confronto maggiore di elenco.
 
@@ -2700,7 +2700,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operatore&gt;= (set) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (set) (STL/CLR)
 
 Confronto uguale o maggiore di elenco.
 

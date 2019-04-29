@@ -5,11 +5,11 @@ helpviewer_keywords:
 - output streams, int or long argument manipulators
 ms.assetid: 338f3164-b5e2-4c5a-a605-7d9dc3629ca1
 ms.openlocfilehash: e093512af2741329c58db0b613453f3388bacdf2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370801"
 ---
 # <a name="output-stream-manipulators-with-one-argument-int-or-long"></a>Manipolatori del flusso di output con un solo argomento (int o long)
 

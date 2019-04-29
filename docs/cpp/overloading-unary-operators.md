@@ -12,11 +12,11 @@ helpviewer_keywords:
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
 ms.openlocfilehash: 802380bad59534e8402020142e394b3948032476
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377231"
 ---
 # <a name="overloading-unary-operators"></a>Overload degli operatori unari
 
@@ -34,7 +34,7 @@ Di seguito sono elencati gli operatori unari di cui è possibile eseguire l'over
 
 1. `-` ([negazione unaria](../cpp/additive-operators-plus-and.md))
 
-1. `++` ([incremento](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
+1. `++` ([increment](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
 
 1. `--` ([decremento](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
 
@@ -46,13 +46,13 @@ Gli operatori di conversione vengono illustrati anche in un argomento distinto; 
 
 Le regole seguenti valgono per tutti gli altri operatori unari. Per dichiarare una funzione di un operatore unario come membro non statico, è necessario dichiararla nel seguente formato:
 
-> *RET-type* **operator** *op* **)**
+> *ret-type* **operator** *op* **()**
 
 in cui *ret-type* è il tipo restituito e *op* è uno degli operatori elencati nella tabella precedente.
 
 Per dichiarare una funzione di un operatore unario come funzione globale, è necessario dichiararla nel seguente formato:
 
-> *RET-type* **operator** *op* **(** *arg* **)**
+> *ret-type* **operator** *op* **(** *arg* **)**
 
 in cui *ret-type* e *op* vengono descritti per le funzioni dell'operatore membro e il *arg* è un argomento di tipo classe su cui operare.
 

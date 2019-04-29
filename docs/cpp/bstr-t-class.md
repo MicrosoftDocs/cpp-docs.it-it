@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
 ms.openlocfilehash: f394a48c0326058be705d14fb0413e23e8052ae2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386161"
 ---
 # <a name="bstrt-class"></a>_bstr_t Class
 
@@ -44,10 +44,10 @@ Oggetto `_bstr_t` incapsulato dall'oggetto di [tipo di dati BSTR](/previous-vers
 |||
 |-|-|
 |[operator =](../cpp/bstr-t-operator-equal.md)|Assegna un nuovo valore a un oggetto `_bstr_t` esistente.|
-|[operator + =](../cpp/bstr-t-operator-add-equal-plus.md)|Aggiunge caratteri alla fine dell'oggetto `_bstr_t`.|
+|[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|Aggiunge caratteri alla fine dell'oggetto `_bstr_t`.|
 |[operatore +](../cpp/bstr-t-operator-add-equal-plus.md)|Concatena due stringhe.|
 |[operatore !](../cpp/bstr-t-operator-logical-not.md)|Controlla se incapsulato `BSTR` è una stringa NULL.|
-|[operatore = =,! =, \<, >, \<=, > =](../cpp/bstr-t-relational-operators.md)|Confronta due oggetti `_bstr_t`.|
+|[operator ==, !=, \<, >, \<=, >=](../cpp/bstr-t-relational-operators.md)|Confronta due oggetti `_bstr_t`.|
 |[operatore wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|Estrae i puntatori all'oggetto Unicode incapsulato o all'oggetto multibyte `BSTR`.|
 
 **Fine sezione specifica Microsoft**

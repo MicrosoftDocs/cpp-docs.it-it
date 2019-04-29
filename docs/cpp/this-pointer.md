@@ -9,11 +9,11 @@ helpviewer_keywords:
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330479"
 ---
 # <a name="this-pointer"></a>Puntatore this
 
@@ -51,7 +51,7 @@ void Date::setMonth( int mn )
 }
 ```
 
-L'espressione `*this` viene in genere usata per restituire l'oggetto corrente da una funzione membro:
+L'espressione `*this` viene in genere utilizzata per restituire l'oggetto corrente da una funzione membro:
 
 ```cpp
 return *this;

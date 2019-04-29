@@ -8,11 +8,11 @@ helpviewer_keywords:
 - remove_extent
 ms.assetid: b9320862-3891-49fc-80bc-571eb2c035cf
 ms.openlocfilehash: 1425de12158354c649ec355124f8c255255b29c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368877"
 ---
 # <a name="removeextent-class"></a>Classe remove_extent
 

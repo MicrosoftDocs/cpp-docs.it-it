@@ -7,11 +7,11 @@ helpviewer_keywords:
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369033"
 ---
 # <a name="regular-expressions-c"></a>Espressioni regolari (C++)
 
@@ -21,7 +21,7 @@ La libreria standard C++ supporta più grammatiche dell'espressione regolare. In
 
 Grammatica dell'espressione regolare da utilizzare per specificato mediante l'utilizzo di uno del `std::regex_constants::syntax_option_type` valori di enumerazione. Questi grammatiche dell'espressione regolare vengono definite in std::regex_constants:
 
-- `ECMAScript`: Questa opzione è più vicina alla grammatica usata da JavaScript e i linguaggi .NET.
+- `ECMAScript`: Si tratta più vicina alla grammatica usata da JavaScript e i linguaggi .NET.
 - `basic`: Le espressioni regolari di POSIX base o motore regole di business.
 - `extended`: Il POSIX esteso per le espressioni regolari o ERE.
 - `awk`: Si tratta di `extended`, ma presenta altre sequenze di escape per caratteri non stampabili.
@@ -32,8 +32,8 @@ Per impostazione predefinita, se non viene specificata alcuna grammatica, `ECMAS
 
 Oltre la grammatica, è possibile applicare diversi flag:
 - `icase`: Ignora maiuscole/minuscole in caso di corrispondenza.
-- `nosubs`: Ignora contrassegnate corrispondenze (vale a dire, espressioni tra parentesi). Nessun sostituzioni vengono archiviate.
-- `optimize`: Assicurarsi di corrispondenza più rapidamente, a spese della fase di costruzione maggiore.
+- `nosubs`: Ignorare contrassegnate corrispondenze (vale a dire, espressioni tra parentesi). Nessun sostituzioni vengono archiviate.
+- `optimize`: Rendere più veloce, corrispondenti a spese della fase di costruzione maggiore.
 - `collate`: Usare le sequenze di distinzione delle impostazioni locali delle regole di confronto (ad esempio, gli intervalli nel formato "[a-z]").
 
 Zero o più flag possono essere integrate con la grammatica per specificare il comportamento del motore delle espressioni regolari. Se solo i flag sono specificati, `ECMAScript` viene considerato come la grammatica.
@@ -303,8 +303,8 @@ Un carattere di escape dsw è il nome breve di una classe di caratteri, come ill
 |"\D"|"[^[:d:]]"|"[^[:digit:]]"|
 |"\s"|"[[:s:]]"|"[[:space:]]"|
 |"\S"|"[^[:s:]]"|"[^[:space:]]"|
-|"\w"|"[[:w:]]"|"[a-zA-Z0-9 _]"\*|
-|"\W"|"[^[:w:]]"|"[^ a-zA-Z0-9 _]"\*|
+|"\w"|"[[:w:]]"|"[a-zA-Z0-9_]"\*|
+|"\W"|"[^[:w:]]"|"[^a-zA-Z0-9_]"\*|
 
 \*Set di caratteri ASCII
 
@@ -393,7 +393,7 @@ Un carattere ordinario è qualsiasi carattere valido che non ha un significato s
 
 In `ECMAScript` i seguenti caratteri hanno significati speciali:
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }  &#124;
 
 In `basic` e in `grep` i seguenti caratteri hanno significati speciali:
 
@@ -480,7 +480,7 @@ Una corrispondenza parziale ha esito positivo se la corrispondenza raggiunge la 
 |"$&"|"&"|Sequenza di caratteri corrispondente all'intera espressione regolare (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (simbolo del dollaro seguito dalla virgoletta inversa)||Sequenza di caratteri che precede la sottosequenza corrispondente all'espressione regolare (`[match.prefix().first, match.prefix().second)`)|
+|"$\`" (simbolo del dollaro seguito dalla virgoletta inversa) | | La sequenza di caratteri che precede la sottosequenza che corrisponde all'espressione regolare (`[match.prefix().first, match.prefix().second)`)|
 |"$'" (simbolo del dollaro seguito dalla virgoletta dritta)||Sequenza di caratteri che segue la sottosequenza corrispondente all'espressione regolare (`[match.suffix().first, match.suffix().second)`)|
 |"$n"|"\n"|La sequenza di caratteri che corrisponde al gruppo capture nella posizione `n`, dove `n` è un numero compreso tra 0 e 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|"\n"|

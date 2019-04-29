@@ -7,11 +7,11 @@ helpviewer_keywords:
 - regex_traits<char> class
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
 ms.openlocfilehash: 6a685dfa00b49ecfa7c2da2a8618b49cbc38cc01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369371"
 ---
 # <a name="regextraitsltchargt-class"></a>Classe regex_traits&lt;char&gt;
 

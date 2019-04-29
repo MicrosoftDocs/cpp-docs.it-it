@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
 ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386369"
 ---
 # <a name="mfc-activex-controls-methods"></a>Controlli ActiveX MFC: Metodi
 
@@ -34,11 +34,11 @@ Se è stata usata la [Creazione guidata controllo ActiveX MFC](../mfc/reference/
 
 Gli articoli seguenti illustrano i metodi in dettaglio:
 
-- [Controlli ActiveX MFC: Aggiunta di metodi predefiniti](../mfc/mfc-activex-controls-adding-stock-methods.md)
+- [Controlli ActiveX MFC: aggiunta di metodi predefiniti](../mfc/mfc-activex-controls-adding-stock-methods.md)
 
-- [Controlli ActiveX MFC: Aggiunta di metodi personalizzati](../mfc/mfc-activex-controls-adding-custom-methods.md)
+- [Controlli ActiveX MFC: aggiunta di metodi personalizzati](../mfc/mfc-activex-controls-adding-custom-methods.md)
 
-- [Controlli ActiveX MFC: Restituzione di codici di errore da un metodo](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
+- [Controlli ActiveX MFC: restituzione di codici di errore da un metodo](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
 
 ## <a name="see-also"></a>Vedere anche
 

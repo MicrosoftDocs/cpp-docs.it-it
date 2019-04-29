@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_realloc function
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
 ms.openlocfilehash: 456d57eeebfd47a2133b8a5813b11aaf77a300a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335698"
 ---
 # <a name="alignedrealloc"></a>_aligned_realloc
 
@@ -52,7 +52,7 @@ Puntatore al blocco di memoria corrente.
 *size*<br/>
 Dimensione dell'allocazione di memoria richiesta.
 
-*Allineamento*<br/>
+*alignment*<br/>
 Valore di allineamento, che deve essere una potenza intera di 2.
 
 ## <a name="return-value"></a>Valore restituito

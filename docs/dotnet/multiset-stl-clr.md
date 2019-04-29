@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
 ms.openlocfilehash: e7a0551c1d75993d588f5dbb369989c42a71d903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384777"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
@@ -232,7 +232,7 @@ La cancellazione o la rimozione di un elemento chiama il distruttore per il valo
 
 ## <a name="members"></a>Membri
 
-## <a name="begin"></a> multiset:: Begin (STL/CLR)
+## <a name="begin"></a> multiset::begin (STL/CLR)
 
 Indica l'inizio della sequenza controllata.
 
@@ -338,7 +338,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> multiset:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> multiset::const_iterator (STL/CLR)
 
 Tipo di un iteratore costante per la sequenza controllata.
 
@@ -380,7 +380,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> multiset:: const_reference (STL/CLR)
+## <a name="const_reference"></a> multiset::const_reference (STL/CLR)
 
 Tipo di un riferimento costante a un elemento.
 
@@ -425,7 +425,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> multiset:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> multiset::const_reverse_iterator (STL/CLR)
 
 Il tipo di iteratore inverso costante per la sequenza controllata...
 
@@ -467,7 +467,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> multiset:: Count (STL/CLR)
+## <a name="count"></a> multiset::count (STL/CLR)
 
 Trova il numero di elementi corrispondenti a una chiave specificata.
 
@@ -520,7 +520,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> multiset:: difference_type (STL/CLR)
+## <a name="difference_type"></a> multiset::difference_type (STL/CLR)
 
 I tipi di una distanza signed tra due elementi.
 
@@ -627,7 +627,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> multiset:: end (STL/CLR)
+## <a name="end"></a> multiset::end (STL/CLR)
 
 Designa la fine della sequenza controllata.
 
@@ -676,7 +676,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> multiset:: equal_range (STL/CLR)
+## <a name="equal_range"></a> multiset::equal_range (STL/CLR)
 
 Trova un intervallo che corrisponde a una chiave specificata.
 
@@ -736,7 +736,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> multiset:: Erase (STL/CLR)
+## <a name="erase"></a> multiset::erase (STL/CLR)
 
 Rimuove gli elementi in corrispondenza delle posizioni specificate.
 
@@ -1106,7 +1106,7 @@ a b c
 a
 ```
 
-## <a name="insert"></a> multiset:: Insert (STL/CLR)
+## <a name="insert"></a> multiset::insert (STL/CLR)
 
 Aggiunge elementi.
 
@@ -1131,7 +1131,7 @@ Fine dell'intervallo da inserire.
 *right*<br/>
 Enumerazione da inserire.
 
-*Val*<br/>
+*val*<br/>
 Valore della chiave da inserire.
 
 *where*<br/>
@@ -1219,7 +1219,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="iterator"></a> multiset:: Iterator (STL/CLR)
+## <a name="iterator"></a> multiset::iterator (STL/CLR)
 
 Tipo di un iteratore per la sequenza controllata.
 
@@ -1261,7 +1261,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> multiset:: key_comp (STL/CLR)
+## <a name="key_comp"></a> multiset::key_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due chiavi.
 
@@ -1320,7 +1320,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> multiset:: key_compare (STL/CLR)
+## <a name="key_compare"></a> multiset::key_compare (STL/CLR)
 
 Delegato di ordinamento per due chiavi.
 
@@ -1380,7 +1380,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> multiset:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> multiset::key_type (STL/CLR)
 
 Tipo di una chiave di ordinamento.
 
@@ -1425,7 +1425,7 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> multiset:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> multiset::lower_bound (STL/CLR)
 
 Trova l'inizio dell'intervallo che corrisponde a una chiave specificata.
 
@@ -1528,7 +1528,7 @@ int main()
 a b c
 ```
 
-## <a name="multiset"></a> multiset:: multiset (STL/CLR)
+## <a name="multiset"></a> multiset::multiset (STL/CLR)
 
 Costruisce un oggetto contenitore.
 
@@ -1557,7 +1557,7 @@ Inizio dell'intervallo da inserire.
 *last*<br/>
 Fine dell'intervallo da inserire.
 
-*Pred*<br/>
+*pred*<br/>
 Ordinamento di predicato per la sequenza controllata.
 
 *right*<br/>
@@ -1699,7 +1699,7 @@ c b a
 a b c
 ```
 
-## <a name="op_as"></a> multiset::operator = (STL/CLR)
+## <a name="op_as"></a> multiset::operator= (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -1754,7 +1754,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> multiset:: rbegin (STL/CLR)
+## <a name="rbegin"></a> multiset::rbegin (STL/CLR)
 
 Indica l'inizio della sequenza controllata inversa.
 
@@ -1802,7 +1802,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> multiset:: Reference (STL/CLR)
+## <a name="reference"></a> multiset::reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -1847,7 +1847,7 @@ int main()
 a b c
 ```
 
-## <a name="rend"></a> multiset:: rend (STL/CLR)
+## <a name="rend"></a> multiset::rend (STL/CLR)
 
 Indica la fine della sequenza controllata inversa.
 
@@ -1896,7 +1896,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> multiset:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> multiset::reverse_iterator (STL/CLR)
 
 Tipo di un iteratore inverso della sequenza controllata.
 
@@ -1938,7 +1938,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> multiset:: Size (STL/CLR)
+## <a name="size"></a> multiset::size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -1992,7 +1992,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> multiset:: size_type (STL/CLR)
+## <a name="size_type"></a> multiset::size_type (STL/CLR)
 
 Il tipo di una distanza signed tra due elementi.
 
@@ -2040,7 +2040,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> multiset:: swap (STL/CLR)
+## <a name="swap"></a> multiset::swap (STL/CLR)
 
 Scambia il contenuto di due contenitori.
 
@@ -2158,7 +2158,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> multiset:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> multiset::upper_bound (STL/CLR)
 
 Trova fine dell'intervallo che corrisponde a una chiave specificata.
 
@@ -2215,7 +2215,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> multiset:: value_comp (STL/CLR)
+## <a name="value_comp"></a> multiset::value_comp (STL/CLR)
 
 Copia il delegato di ordinamento per due valori di elemento.
 
@@ -2304,7 +2304,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> multiset:: value_type (STL/CLR)
+## <a name="value_type"></a> multiset::value_type (STL/CLR)
 
 Tipo di un elemento.
 
@@ -2349,7 +2349,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> operatore! = (multiset) (STL/CLR)
+## <a name="op_neq"></a> operator!= (multiset) (STL/CLR)
 
 Elenco di confronto non uguale.
 
@@ -2419,7 +2419,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operatore&lt; (multiset) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (multiset) (STL/CLR)
 
 Elenco minore di confronto.
 
@@ -2489,7 +2489,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operatore&lt;= (multiset) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (multiset) (STL/CLR)
 
 Elenco minore o uguale confronto.
 
@@ -2559,7 +2559,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operatore = = (multiset) (STL/CLR)
+## <a name="op_eq"></a> operator== (multiset) (STL/CLR)
 
 Confronto uguale a elenco.
 
@@ -2629,7 +2629,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operatore&gt; (multiset) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (multiset) (STL/CLR)
 
 Confronto maggiore di elenco.
 
@@ -2699,7 +2699,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operatore&gt;= (multiset) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (multiset) (STL/CLR)
 
 Confronto uguale o maggiore di elenco.
 

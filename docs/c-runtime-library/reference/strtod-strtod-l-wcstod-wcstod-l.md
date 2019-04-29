@@ -43,11 +43,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
 ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376471"
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -101,8 +101,8 @@ Ogni funzione converte la stringa di input *strSource* a un **doppie**. Il **str
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcstod**|**strtod**|**strtod**|**wcstod**|
-|**tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
+|**_tcstod**|**strtod**|**strtod**|**wcstod**|
+|**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
 Il **LC_NUMERIC** impostazione di categoria di impostazioni locali correnti determina il riconoscimento del carattere di punto di base *strSource*. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le funzioni senza il **l** suffisso usare le impostazioni locali correnti. **strtod_l** è identica alla **strtod_l** ad eccezione del fatto che usino il *delle impostazioni locali* passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -120,8 +120,8 @@ Le versioni UCRT di queste funzioni non supportano la conversione di stile Fortr
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**strtod**, **strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> o &lt;stdlib.h> |
-|**wcstod**, **wcstod_l**|C: &lt;stdlib.h> o &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> o &lt;wchar.h> |
+|**strtod**, **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> o &lt;stdlib.h> |
+|**wcstod**, **_wcstod_l**|C: &lt;stdlib.h> o &lt;wchar.h> C++: &lt;cstdlib>, &lt;stdlib.h> o &lt;wchar.h> |
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

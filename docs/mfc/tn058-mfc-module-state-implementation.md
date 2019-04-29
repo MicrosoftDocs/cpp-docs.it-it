@@ -1,5 +1,5 @@
 ---
-title: 'TN058: implementazione di stato del modulo MFC'
+title: 'TN058: Implementazione di stato del modulo MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.implementation
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399598"
 ---
-# <a name="tn058-mfc-module-state-implementation"></a>TN058: implementazione di stato del modulo MFC
+# <a name="tn058-mfc-module-state-implementation"></a>TN058: Implementazione di stato del modulo MFC
 
 > [!NOTE]
 > La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
@@ -30,7 +30,7 @@ Prima di leggere questa nota, vedere "Gestione di stato dei dati dei moduli MFC"
 
 ## <a name="overview"></a>Panoramica
 
-Esistono tre tipi di informazioni sullo stato MFC: stato del modulo, lo stato del processo e lo stato del Thread. In alcuni casi è possibile combinare questi tipi di stato. Ad esempio, le mappe di handle di MFC sono modulo locale sia locale dei thread. In questo modo due moduli diversi avere mappe diverse in ognuno dei relativi thread.
+Esistono tre tipi di informazioni sullo stato MFC: Stato del modulo, lo stato del processo e lo stato del Thread. In alcuni casi è possibile combinare questi tipi di stato. Ad esempio, le mappe di handle di MFC sono modulo locale sia locale dei thread. In questo modo due moduli diversi avere mappe diverse in ognuno dei relativi thread.
 
 Stato del processo e lo stato del Thread sono simili. Questi elementi di dati sono operazioni che sono sempre stato variabili globali, ma hanno devono essere specifiche per un determinato processo o thread per supportano Win32s appropriata o per il supporto multithreading appropriato. Categoria a cui si inserisce un elemento dati specificato in dipende da tale elemento e la semantica desiderata per quanto riguarda i limiti di thread e processi.
 

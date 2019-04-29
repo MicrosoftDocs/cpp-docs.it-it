@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
 ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386356"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>Avviso del compilatore (livello 1) C4730
 

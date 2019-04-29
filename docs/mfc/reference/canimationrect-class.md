@@ -39,11 +39,11 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
 ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378180"
 ---
 # <a name="canimationrect-class"></a>Classe CAnimationRect
 
@@ -97,7 +97,7 @@ class CAnimationRect : public CAnimationBaseObject;
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|La variabile di animazione incapsulato che nella parte inferiore rappresenta il limite del rettangolo di animazione.|
 |[CAnimationRect::m_leftValue](#m_leftvalue)|La variabile di animazione incapsulato che a sinistra rappresenta il limite del rettangolo di animazione.|

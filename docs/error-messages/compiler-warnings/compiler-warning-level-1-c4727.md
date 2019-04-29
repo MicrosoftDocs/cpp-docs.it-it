@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
 ms.openlocfilehash: be1a248fc2709706e137b543344966735c19064e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386434"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Avviso del compilatore (livello 1) C4727
 
@@ -23,7 +23,7 @@ Per risolvere, compilare un file di origine con **/c /Yc** (Crea file pch), e co
 
 Pertanto, se è stato eseguito quanto segue e genera C4727:
 
-**cl /clr /GL a.cpp cpp b. cpp c.cpp /Ycstdafx.h**
+**cl /clr /GL a.cpp b.cpp c.cpp /Ycstdafx.h**
 
 È necessario effettuare le seguenti invece:
 

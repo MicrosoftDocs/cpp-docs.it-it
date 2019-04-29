@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394143"
 ---
 # <a name="ctype-class"></a>Classe ctype
 
@@ -147,11 +147,11 @@ Valore Integer che consente di specificare il tipo di gestione della memoria per
 
 I valori possibili per il *_Refs* parametro e i relativi significati sono:
 
-- 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
+- 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
-- 1: la durata dell'oggetto deve essere gestita manualmente.
+- 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \> 1: Questi valori non definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 

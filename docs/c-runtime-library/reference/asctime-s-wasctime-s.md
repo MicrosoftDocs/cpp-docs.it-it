@@ -31,11 +31,11 @@ helpviewer_keywords:
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
 ms.openlocfilehash: 350d8c7b1dcf61272a3cfee884dff8a63b455f1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349475"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 
@@ -98,7 +98,7 @@ Zero in caso di esito positivo. In caso di esito negativo, viene richiamato il g
 
 Il **asctime** funzione converte un'ora archiviata come una struttura di una stringa di caratteri. Il *tmSource* valore viene in genere ottenuto da una chiamata a **gmtime** oppure **localtime**. Entrambe le funzioni possono essere utilizzate per riempire un **tm** strutturare, come definito nel tempo. H.
 
-|membro timeptr|Valore|
+|membro timeptr|Value|
 |--------------------|-----------|
 |**tm_hour**|Ore dalla mezzanotte (0-23)|
 |**tm_isdst**|Positivo se è in vigore l'ora legale. 0 se l'ora legale non è in vigore. Negativo se lo stato dell'ora legale è sconosciuto. La libreria di runtime C presuppone le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST).|
@@ -120,7 +120,7 @@ Risultato stringa prodotto da **asctime_s** contiene esattamente 26 caratteri e 
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
+|**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
 In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

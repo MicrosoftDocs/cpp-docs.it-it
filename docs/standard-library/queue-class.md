@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369943"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -45,7 +45,7 @@ class queue
 *Type*<br/>
 Tipo di dati degli elementi da archiviare nell'oggetto queue
 
-*Contenitore*<br/>
+*Container*<br/>
 Tipo del contenitore sottostante usato per implementare l'oggetto queue.
 
 ## <a name="remarks"></a>Note
@@ -323,7 +323,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Elemento aggiunto alla fine dell'oggetto queue.
 
 ### <a name="remarks"></a>Note

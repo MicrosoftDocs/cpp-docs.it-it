@@ -39,11 +39,11 @@ helpviewer_keywords:
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
 ms.openlocfilehash: 271c28dd4e267e5b3b702858cc398689e3e35d6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354431"
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
 
@@ -83,7 +83,7 @@ Queste funzioni non sono utili per [/clr (compilazione Common Language Runtime)]
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**_status87**, **statusfp**, **_statusfp2**|\<float.h>|
+|**_status87**, **_statusfp**, **_statusfp2**|\<float.h>|
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

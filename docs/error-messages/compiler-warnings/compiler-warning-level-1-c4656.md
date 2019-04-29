@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4656
 ms.assetid: b5aaef74-2320-4345-a6ae-b813881a491c
 ms.openlocfilehash: 4285ce20f6131c2503304ed1bdb1bde02b2efcec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375249"
 ---
 # <a name="compiler-warning-level-1-c4656"></a>Avviso del compilatore (livello 1) C4656
 

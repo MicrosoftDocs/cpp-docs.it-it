@@ -52,11 +52,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
 ms.openlocfilehash: ed5e190f0c64aca3876d1cd1f05c9d75224355cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384764"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -80,7 +80,7 @@ template<typename Value,
 *Valore*<br/>
 Tipo di un elemento nella sequenza controllata.
 
-*Contenitore*<br/>
+*Container*<br/>
 Tipo del contenitore sottostante.
 
 ## <a name="requirements"></a>Requisiti
@@ -129,7 +129,7 @@ Tipo del contenitore sottostante.
 |Interfaccia|Descrizione|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicare un oggetto.|
-|IPriorityQueue\<Value, contenitore >|Mantenere la scheda di contenitore generico.|
+|IPriorityQueue\<Value, Container>|Mantenere la scheda di contenitore generico.|
 
 ## <a name="remarks"></a>Note
 
@@ -161,7 +161,7 @@ Di conseguenza, sono candidati per il contenitore sottostante [deque (STL/CLR)](
 
 ## <a name="members"></a>Membri
 
-## <a name="assign"></a> priority_queue::Assign (STL/CLR)
+## <a name="assign"></a> priority_queue::assign (STL/CLR)
 
 Sostituisce tutti gli elementi.
 
@@ -259,7 +259,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> priority_queue:: container_type (STL/CLR)
+## <a name="container_type"></a> priority_queue::container_type (STL/CLR)
 
 Tipo del contenitore sottostante.
 
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="op_as"></a> priority_queue::operator = (STL/CLR)
+## <a name="op_as"></a> priority_queue::operator= (STL/CLR)
 
 Sostituisce la sequenza controllata.
 
@@ -629,7 +629,7 @@ c a b
 c a b
 ```
 
-## <a name="pop"></a> priority_queue:: POP (STL/CLR)
+## <a name="pop"></a> priority_queue::pop (STL/CLR)
 
 Rimuove l'elemento più alto proirity.
 
@@ -677,7 +677,7 @@ c a b
 b a
 ```
 
-## <a name="priority_queue"></a> priority_queue:: priority_queue (STL/CLR)
+## <a name="priority_queue"></a> priority_queue::priority_queue (STL/CLR)
 
 Costruisce un oggetto scheda di contenitore.
 
@@ -710,7 +710,7 @@ Inizio dell'intervallo da inserire.
 *last*<br/>
 Fine dell'intervallo da inserire.
 
-*Pred*<br/>
+*pred*<br/>
 Ordinamento di predicato per la sequenza controllata.
 
 *right*<br/>
@@ -864,7 +864,7 @@ c a b
 a c b
 ```
 
-## <a name="push"></a> priority_queue:: push (STL/CLR)
+## <a name="push"></a> priority_queue::push (STL/CLR)
 
 Aggiunge un nuovo elemento.
 
@@ -905,7 +905,7 @@ int main()
 c a b
 ```
 
-## <a name="reference"></a> priority_queue::Reference (STL/CLR)
+## <a name="reference"></a> priority_queue::reference (STL/CLR)
 
 Tipo di un riferimento a un elemento.
 
@@ -954,7 +954,7 @@ c a b
 x a b
 ```
 
-## <a name="size"></a> priority_queue:: Size (STL/CLR)
+## <a name="size"></a> priority_queue::size (STL/CLR)
 
 Conta il numero di elementi.
 
@@ -1008,7 +1008,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> priority_queue:: size_type (STL/CLR)
+## <a name="size_type"></a> priority_queue::size_type (STL/CLR)
 
 Il tipo di una distanza signed tra due elementi.
 
@@ -1107,7 +1107,7 @@ d c b a
 c a b
 ```
 
-## <a name="top"></a> priority_queue:: Top (STL/CLR)
+## <a name="top"></a> priority_queue::top (STL/CLR)
 
 Accede all'elemento con priorità più alta.
 
@@ -1323,7 +1323,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="value_type"></a> priority_queue:: value_type (STL/CLR)
+## <a name="value_type"></a> priority_queue::value_type (STL/CLR)
 
 Tipo di un elemento.
 

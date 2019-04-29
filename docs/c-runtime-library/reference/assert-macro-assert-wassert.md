@@ -29,11 +29,11 @@ helpviewer_keywords:
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
 ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341366"
 ---
 # <a name="assert-macro-assert-wassert"></a>Macro assert, _assert, _wassert
 
@@ -59,7 +59,7 @@ void _wassert(
 
 ### <a name="parameters"></a>Parametri
 
-*Espressione*<br/>
+*expression*<br/>
 Un'espressione scalare (incluse le espressioni puntatore) che corrisponde a diverso da zero (**true**) oppure 0 (**false**).
 
 *message*<br/>
@@ -68,7 +68,7 @@ Messaggio da visualizzare.
 *filename*<br/>
 Nome del file di origine in cui l'asserzione non è riuscita.
 
-*Riga*<br/>
+*line*<br/>
 Numero di riga nel file di origine dell'asserzione non riuscita.
 
 ## <a name="remarks"></a>Note
@@ -81,7 +81,7 @@ Il messaggio di diagnostica viene visualizzato in caratteri wide. Pertanto, funz
 
 La destinazione dei messaggi di diagnostica dipende dal tipo di applicazione che ha chiamato la routine. Applicazioni console ricevono sempre il messaggio attraverso **stderr**. In un'applicazione basata su Windows **assert** chiama il Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) funzione per creare una finestra di messaggio per visualizzare il messaggio con un **OK** pulsante. Quando l'utente fa clic su **OK**, il programma terminerà immediatamente.
 
-Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime, **assert** crea una finestra di messaggio con tre pulsanti: **Interrompi**, **ripetere**e **Ignorare**. Se l'utente fa clic su **Interrompi**, il programma terminerà immediatamente. Se l'utente fa clic su **Riprova**, il debugger viene chiamato e l'utente può eseguire il debug del programma se il debug JIT (Just-In-Time) è abilitato. Se l'utente sceglie **Ignore**, **assert** continua con l'esecuzione normale: creando la finestra di messaggio con il **OK** pulsante. Si noti che facendo clic su **Ignora** quando esiste una condizione di errore può verificarsi un comportamento indefinito.
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime, **assert** crea una finestra di messaggio con tre pulsanti: **Interrompere**, **Riprova**, e **ignorare**. Se l'utente fa clic su **Interrompi**, il programma terminerà immediatamente. Se l'utente fa clic su **Riprova**, il debugger viene chiamato e l'utente può eseguire il debug del programma se il debug JIT (Just-In-Time) è abilitato. Se l'utente sceglie **Ignore**, **assert** continua con l'esecuzione normale: creando la finestra di messaggio con il **OK** pulsante. Si noti che facendo clic su **Ignora** quando esiste una condizione di errore può verificarsi un comportamento indefinito.
 
 Per ulteriori informazioni sul debug CRT, vedere [Tecniche di debug CRT](/visualstudio/debugger/crt-debugging-techniques).
 
@@ -93,7 +93,7 @@ Il **assert** macro è attivata in entrambe le versioni di rilascio e debug dell
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**l'asserzione**, **wassert**|\<assert.h>|
+|**assert**, **_wassert**|\<assert.h>|
 
 La firma del **macro Assert** funzione non è disponibile in un file di intestazione. La firma del **wassert** funzione è disponibile solo quando il **NDEBUG** macro non è definita.
 

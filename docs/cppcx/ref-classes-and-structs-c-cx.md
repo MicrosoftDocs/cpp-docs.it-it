@@ -3,21 +3,21 @@ title: Classi e struct di riferimento (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
 ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368591"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classi e struct di riferimento (C++/CX)
 
-C + c++ /CLI supporta CX definito dall'utente *le classi di riferimento* e *ref struct*e definiti dall'utente *classi value* e *struct di valore*. Queste strutture di dati sono contenitori primari tramite i quali C + + c++ /CX supporta il sistema di tipi Windows Runtime. I relativi contenuti vengono emessi nei metadati in base a determinate regole specifiche e ciò consente loro di essere passati tra i componenti Windows Runtime e App Universal Windows Platform che vengono scritti in C++ o altri linguaggi.
+C + c++ /CLI supporta CX definito dall'utente *le classi di riferimento* e *ref struct*e definiti dall'utente *classi value* e *struct di valore*. Queste strutture di dati sono contenitori primari tramite i quali C++/CX supporta il sistema di tipi Windows Runtime. I relativi contenuti vengono emessi nei metadati in base a determinate regole specifiche e ciò consente loro di essere passati tra i componenti Windows Runtime e App Universal Windows Platform che vengono scritti in C++ o altri linguaggi.
 
 Le classi e gli struct di riferimento presentano le seguenti caratteristiche principali:
 
 - Devono essere dichiarati in uno spazio dei nomi, nell'ambito dello spazio dei nomi, e in tale spazio possono avere accessibilità pubblica o privata. Solo i tipi pubblici vengono emessi nei metadati. Le definizioni delle classi pubbliche annidate non sono consentite, incluse le classi [enum](../cppcx/enums-c-cx.md) pubbliche annidate. Per altre informazioni, vedere [spazi dei nomi e visibilità del tipo](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
-- Può contenere come membri C + + c++ /CX incluse classi di riferimento, classi di valore, struct di riferimento, struct di valore o gli struct di valore nullable. Può inoltre contenere tipi scalari quali float64, bool e così via. Può inoltre contenere tipi C++ standard come `std::vector` o una classe personalizzata, purché non siano pubblici. C + + / costrutti CX abbia `public`, `protected`, `internal`, `private`, o `protected private` accessibilità. Tutti i membri `public` o `protected` vengono emessi nei metadati. I tipi C++ standard devono avere accessibilità `private`, `internal`o `protected private` , che ne impedisce l'emissione nei metadati.
+- Può contenere come membri C++/CX incluse classi di riferimento, classi di valore, struct di riferimento, struct di valore o gli struct di valore nullable. Può inoltre contenere tipi scalari quali float64, bool e così via. Può inoltre contenere tipi C++ standard come `std::vector` o una classe personalizzata, purché non siano pubblici. C++Potrebbero essere costrutti /CX `public`, `protected`, `internal`, `private`, o `protected private` accessibilità. Tutti i membri `public` o `protected` vengono emessi nei metadati. I tipi C++ standard devono avere accessibilità `private`, `internal`o `protected private` , che ne impedisce l'emissione nei metadati.
 
 - Possono implementare una o più *classi di interfaccia* o *struct di interfaccia*.
 
@@ -81,7 +81,7 @@ Non è consentito l'utilizzo di classi di riferimento pubbliche che dispongono d
 
 ## <a name="destructors"></a>Distruttori
 
-In C + + c++ /CX, la chiamata `delete` in un distruttore pubblico richiama il distruttore indipendentemente dal conteggio dei riferimenti dell'oggetto. Questo comportamento ti consente di definire un distruttore che esegue la pulizia personalizzata delle risorse non RAII in modo deterministico. Tuttavia, anche in questo caso, l'oggetto stesso non viene eliminato dalla memoria. La memoria per l'oggetto viene liberata solo quando il conteggio dei riferimenti raggiunge zero.
+In C++/CX, la chiamata `delete` in un distruttore pubblico richiama il distruttore indipendentemente dal conteggio dei riferimenti dell'oggetto. Questo comportamento ti consente di definire un distruttore che esegue la pulizia personalizzata delle risorse non RAII in modo deterministico. Tuttavia, anche in questo caso, l'oggetto stesso non viene eliminato dalla memoria. La memoria per l'oggetto viene liberata solo quando il conteggio dei riferimenti raggiunge zero.
 
 Se il distruttore di una classe non è pubblico, viene richiamato solo quando il conteggio dei riferimenti raggiunge zero. Se si chiama `delete` su un oggetto che ha un distruttore privato, il compilatore genera l'avviso C4493, cui è indicato che "espressione delete non ha alcun effetto poiché il distruttore di \<nome tipo > non dispone di accessibilità 'public'."
 
@@ -97,11 +97,11 @@ Non sono consentite altre combinazioni.  Se non dichiari un distruttore in modo 
 
 Il comportamento non è definito se tenti di accedere ai membri di una classe il cui distruttore è già stato eseguito; ciò potrebbe provocare un arresto anomalo del programma. La chiamata a `delete t` su un tipo senza un distruttore pubblico non ha alcun effetto. Anche la chiamata a `delete this` su un tipo o una classe base con un distruttore `private` o `protected private` noto dalla gerarchia dei tipi non ha alcun effetto.
 
-Quando dichiari un distruttore pubblico, il compilatore genera il codice in modo che la classe di riferimento implementi `Platform::IDisposable` e il distruttore implementi il metodo `Dispose` . `Platform::IDisposable` è di C + + / proiezione CX di `Windows::Foundation::IClosable`. Non implementare mai tali interfacce in modo esplicito.
+Quando dichiari un distruttore pubblico, il compilatore genera il codice in modo che la classe di riferimento implementi `Platform::IDisposable` e il distruttore implementi il metodo `Dispose` . `Platform::IDisposable` è il C++/CX proiezione della `Windows::Foundation::IClosable`. Non implementare mai tali interfacce in modo esplicito.
 
 ## <a name="inheritance"></a>Ereditarietà
 
-Platform::Object è la classe di base universale per tutte le classi di riferimento. Tutte le classi di riferimento sono implicitamente convertibili in Platform::Object e possono eseguire l'override di [Object::ToString](../cppcx/platform-object-class.md#tostring). Tuttavia, il modello di ereditarietà di Windows Runtime non può in genere il modello di ereditarietà; in C + + c++ /CX ciò significa che una classe di riferimento pubblica definita dall'utente non può essere utilizzato come classe di base.
+Platform::Object è la classe di base universale per tutte le classi di riferimento. Tutte le classi di riferimento sono implicitamente convertibili in Platform::Object e possono eseguire l'override di [Object::ToString](../cppcx/platform-object-class.md#tostring). Tuttavia, il modello di ereditarietà di Windows Runtime non può in genere il modello di ereditarietà; in C++/CX ciò significa che una classe di riferimento pubblica definita dall'utente non può essere utilizzato come classe di base.
 
 Se si stai creando un controllo utente XAML e l'oggetto fa parte del sistema di proprietà delle dipendenze, puoi usare `Windows::UI::Xaml::DependencyObject` come classe base.
 
@@ -109,9 +109,9 @@ In seguito alla definizione di una classe `MyBase` non sealed che eredita da `De
 
 Non è necessario che una classe base di riferimento derivi da una classe non sealed esistente. Se è necessaria una gerarchia di oggetti per modellare la struttura del programma o consentire il riutilizzo del codice, utilizza classi di riferimento private o interne o, meglio ancora, classi C++ standard. Puoi esporre la funzionalità della gerarchia di oggetti privati tramite un wrapper di classe di riferimento sealed pubblico.
 
-Una classe di riferimento che ha un costruttore pubblico o protetto in C + + c++ /CX deve essere dichiarata come sealed. Questa restrizione implica che non è possibile per le classi che vengono scritti in altri linguaggi come c# o Visual Basic ereditino da tipi dichiarati in un componente Windows Runtime scritta in C + + / CX.
+Una classe di riferimento che ha un costruttore pubblico o protetto in C++/CX deve essere dichiarata come sealed. Questa restrizione implica che non è possibile per le classi che vengono scritti in altri linguaggi, ad esempio C# o Visual Basic ereditino da tipi dichiarati in un componente Windows Runtime scritta in C++/CX.
 
-Ecco le regole di base per l'ereditarietà in C + + c++ /CX:
+Ecco le regole di base per l'ereditarietà in C++/CX:
 
 - Le classi di riferimento possono ereditare direttamente solo da una classe base di riferimento, ma possono implementare un numero indefinito di interfacce.
 
@@ -130,6 +130,6 @@ Nell'esempio riportato di seguito viene mostrato come esporre una classe di rife
 ## <a name="see-also"></a>Vedere anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
-[Classi e struct](../cppcx/value-classes-and-structs-c-cx.md)<br/>
+[Classi e struct di valore](../cppcx/value-classes-and-structs-c-cx.md)<br/>
 [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

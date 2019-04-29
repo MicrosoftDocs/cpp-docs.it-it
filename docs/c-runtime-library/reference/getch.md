@@ -21,11 +21,11 @@ helpviewer_keywords:
 - getch function
 ms.assetid: d3a0b744-d63c-4f71-960e-24e619dccd01
 ms.openlocfilehash: e207aa231a524b8efdfacd9abd953774c5523f08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331818"
 ---
 # <a name="getch"></a>getch
 

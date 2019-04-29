@@ -3,11 +3,11 @@ title: Riferimento rapido (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
 ms.openlocfilehash: 0526c9083d177688146926598b79e66ca2f9723c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362335"
 ---
 # <a name="quick-reference-ccx"></a>Riferimento rapido (C++/CX)
 
@@ -19,7 +19,7 @@ Quando si compila dalla riga di comando, usare il **/ZW** opzione del compilator
 
 |Concetto|C++ standard|C++/CX|Note|
 |-------------|--------------------|------------------------------------------------------------------|-------------|
-|Tipi fondamentali|Tipi di base di C++.|C + + / tipi fondamentali di CX che implementano i tipi fondamentali che sono definiti nel Runtime di Windows.|Il `default` dello spazio dei nomi contiene C + + c++ /CLI CX predefinito i tipi di base. Il compilatore in modo implicito esegue il mapping di C + + c++ /CX fondamentali ai tipi standard C++.<br /><br /> Il `Platform` famiglia di spazi dei nomi contiene tipi che implementano i tipi fondamentali di Windows Runtime.|
+|Tipi fondamentali|Tipi di base di C++.|C++/CX tipi fondamentali che implementano i tipi fondamentali che sono definiti nel Runtime di Windows.|Il `default` contiene lo spazio dei nomi C++/CX predefinito i tipi di base. Il compilatore esegue il mapping in modo implicito C++tipi fondamentali /CX allo standard C++ i tipi.<br /><br /> Il `Platform` famiglia di spazi dei nomi contiene tipi che implementano i tipi fondamentali di Windows Runtime.|
 ||`bool`|`bool`|Valore booleano a 8 bit.|
 ||`__wchar_t`|`char16`|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|
 ||`short`<br /><br /> `unsigned short`|`int16`<br /><br /> `uint16`|Intero con segno a 16 bit.<br /><br /> Intero senza segno a 16 bit.|

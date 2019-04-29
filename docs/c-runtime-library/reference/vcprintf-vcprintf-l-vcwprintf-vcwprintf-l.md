@@ -44,11 +44,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
 ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364844"
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 
@@ -85,7 +85,7 @@ int _vcwprintf_l(
 *format*<br/>
 Specifica di formato.
 
-*valore di ArgPtr*<br/>
+*argptr*<br/>
 Puntatore a un elenco di argomenti.
 
 *locale*<br/>
@@ -110,15 +110,15 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 |Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vtcprintf**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
-|**vtcprintf_l**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
+|**_vtcprintf**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
+|**_vtcprintf_l**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|Intestazioni facoltative|
 |-------------|---------------------|----------------------|
-|**vcprintf**, **vcprintf_l**|\<conio.h> e \<stdarg.h>|\<varargs.h>*|
-|**vcwprintf**, **vcwprintf_l**|\<conio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vcprintf**, **_vcprintf_l**|\<conio.h> e \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf**, **_vcwprintf_l**|\<conio.h> o \<wchar.h> e \<stdarg.h>|\<varargs.h>*|
 
 \* Richiesto per la compatibilità con UNIX V.
 

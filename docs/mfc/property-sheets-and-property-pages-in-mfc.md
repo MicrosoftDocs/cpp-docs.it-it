@@ -8,11 +8,11 @@ helpviewer_keywords:
 - tab dialog boxes
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
 ms.openlocfilehash: fa8ee3518ad2b32e0eace77f0961eb86ccde1822
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391374"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Finestre delle proprietà e pagine delle proprietà in MFC
 

@@ -5,11 +5,11 @@ f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376669"
 ---
 # <a name="atomic-structure"></a>Struttura atomic
 
@@ -24,20 +24,20 @@ struct atomic;
 
 ## <a name="members"></a>Membri
 
-|Membro|Descrizione|
+|Member|Descrizione|
 |----------|-----------------|
 |**Costruttore**||
 |[atomic](#atomic)|Costruisce un oggetto atomico.|
 |**Operatori**||
-|[operatore atomic:: Ty](#op_ty)|Legge e restituisce il valore archiviato. ([atomic:: Load](#load))|
-|[operatore atomic:: =](#op_eq)|Usa un valore specificato per sostituire il valore archiviato. ([atomic::store](#store))|
-|[operatore atomic:: + +](#op_inc)|Incrementa il valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|
-|[operatore atomic:: + =](#op_add_eq)|Aggiunge un valore specificato al valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|
-|[operatore atomic:::](#op_dec)|Decrementa il valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|
-|[operatore atomic:: =](#op_sub_eq)|Sottrae un valore specificato da un valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|
-|[operatore atomic:: & =](#op_and_eq)|Esegue un'operazione bitwise e su un valore specificato e il valore archiviato. Usato solo da specializzazioni integrali.|
-|[operatore atomic::&#124;=](#op_or_eq)|Bit per bit o su un valore specificato e il valore archiviato. Usato solo da specializzazioni integrali.|
-|[operatore atomic:: ^ =](#op_xor_eq)|Esegue un esclusivo bit per bit o su un valore specificato e il valore archiviato. Usato solo da specializzazioni integrali.|
+|[operatore atomic:: Ty](#op_ty)|Legge e restituisce il valore archiviato. ([atomic::load](#load))|
+|[atomic::operator=](#op_eq)|Usa un valore specificato per sostituire il valore archiviato. ([atomic::store](#store))|
+|[atomic::operator++](#op_inc)|Incrementa il valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|
+|[atomic::operator+=](#op_add_eq)|Aggiunge un valore specificato al valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|
+|[atomic::operator--](#op_dec)|Decrementa il valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|
+|[atomic::operator-=](#op_sub_eq)|Sottrae un valore specificato da un valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.|
+|[atomic::operator&=](#op_and_eq)|Esegue un'operazione bitwise e su un valore specificato e il valore archiviato. Usato solo da specializzazioni integrali.|
+|[atomic::operator&#124;=](#op_or_eq)|Bit per bit o su un valore specificato e il valore archiviato. Usato solo da specializzazioni integrali.|
+|[atomic::operator^=](#op_xor_eq)|Esegue un esclusivo bit per bit o su un valore specificato e il valore archiviato. Usato solo da specializzazioni integrali.|
 |**Funzioni**||
 |[compare_exchange_strong](#compare_exchange_strong)|Consente di eseguire un' *atomic_compare_and_exchange* operazione sul **ciò** e restituisce il risultato.|
 |[compare_exchange_weak](#compare_exchange_weak)|Esegue una *weak_atomic_compare_and_exchange* operazione sul **ciò** e restituisce il risultato.|
@@ -60,10 +60,10 @@ Esiste una specializzazione per ogni tipo integrale eccetto **bool**. Ogni speci
 
 ||||
 |-|-|-|
-|**atomic\<char >**|**atomic\<char con segno >**|**atomic\<unsigned char >**|
-|**atomic\<char16_t >**|**atomic\<char32_t >**|**atomic\<wchar_t >**|
-|**atomic\<breve >**|**atomic\<short senza segno >**|**atomic\<int >**|
-|**atomic\<int senza segno >**|**atomic\<lungo >**|**atomic\<long senza segno >**|
+|**atomic\<char>**|**atomic\<char con segno >**|**atomic\<unsigned char >**|
+|**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
+|**atomic\<short>**|**atomic\<unsigned short>**|**atomic\<int>**|
+|**atomic\<int senza segno >**|**atomic\<long>**|**atomic\<long senza segno >**|
 |**atomic\<long long >**|**atomic\<long long senza segno >**|
 
 Le specializzazioni integrali sono derivate dai tipi `atomic_integral` corrispondenti. Ad esempio, **atomico\<unsigned int >** è derivato da `atomic_uint`.
@@ -113,7 +113,7 @@ atomic<Ty>::operator Ty() const noexcept;
 
 Questo operatore viene applicata il `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_eq"></a> operatore atomic:: =
+## <a name="op_eq"></a> atomic::operator=
 
 Archivia un valore specificato.
 
@@ -135,7 +135,7 @@ Oggetto *Ty* oggetto.
 
 Restituisce *valore*.
 
-## <a name="op_inc"></a> operatore atomic:: + +
+## <a name="op_inc"></a> atomic::operator++
 
 Incrementa il valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.
 
@@ -150,7 +150,7 @@ Ty atomic<Ty>::operator++() noexcept;
 
 I primi due operatori restituiscono il valore incrementato. gli ultimi due operatori restituiscono il valore prima dell'incremento. Gli operatori di usano la `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_add_eq"></a> operatore atomic:: + =
+## <a name="op_add_eq"></a> atomic::operator+=
 
 Aggiunge un valore specificato al valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.
 
@@ -176,7 +176,7 @@ Oggetto *Ty* oggetto che contiene il risultato dell'addizione.
 
 Questo operatore viene utilizzato il `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_dec"></a> operatore atomic:::
+## <a name="op_dec"></a> atomic::operator--
 
 Decrementa il valore archiviato. Usato solo da specializzazioni integrali e dei puntatori.
 
@@ -243,7 +243,7 @@ Il risultato di bit per bit e.
 
 Questo operatore esegue un'operazione read-modify-write per sostituire il valore archiviato di  **\*ciò** con un bit per bit e del *valore* e il valore corrente archiviato in  **\*ciò**, nell'ambito dei vincoli delle `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_or_eq"></a> operatore atomic::&#124;=
+## <a name="op_or_eq"></a> atomic::operator&#124;=
 
 Bit per bit o su un valore specificato e il valore archiviato di  **\*ciò**. Usato solo da specializzazioni integrali.
 
@@ -269,7 +269,7 @@ Il risultato di bit per bit o.
 
 Questo operatore esegue un'operazione read-modify-write per sostituire il valore archiviato di  **\*ciò** con un bit per bit o di *valore* e il valore corrente archiviato in  **\*ciò**, nell'ambito dei vincoli delle `memory_order_seq_cst` [memory_order](atomic-enums.md) vincoli.
 
-## <a name="op_xor_eq"></a> operatore atomic:: ^ =
+## <a name="op_xor_eq"></a> atomic::operator^=
 
 Esegue un esclusivo bit per bit o su un valore specificato e il valore archiviato di  **\*ciò**. Usato solo da specializzazioni integrali.
 
@@ -295,7 +295,7 @@ Il risultato di esclusivo bit per bit o.
 
 Questo operatore esegue un'operazione read-modify-write per sostituire il valore archiviato di  **\*ciò** con un bit per bit esclusiva o della *valore* e il valore corrente archiviato in  **\*ciò**, nell'ambito dei vincoli delle `memory_order_seq_cst` [memory_order](atomic-enums.md) vincoli.
 
-## <a name="compare_exchange_strong"></a> atomic:: compare_exchange_strong
+## <a name="compare_exchange_strong"></a> atomic::compare_exchange_strong
 
 Esegue un'operazione di confronto e scambio atomico sul  **\*ciò**.
 
@@ -332,7 +332,7 @@ Hodnotu typu *Ty*.
 *Valore*<br/>
 Hodnotu typu *Ty*.
 
-*Diffgr:ID="Order1*<br/>
+*Order1*<br/>
 Primo `memory_order` argomento.
 
 *Order2*<br/>
@@ -350,7 +350,7 @@ Gli overload che non è un secondo `memory_order` usare implicita *Order2* basat
 
 Per gli overload che accettano due `memory_order` parametri, il valore del *Order2* non deve essere `memory_order_release` oppure `memory_order_acq_rel`e non deve essere maggiore del valore del *diffgr:ID="Order1*.
 
-## <a name="compare_exchange_weak"></a> atomic:: compare_exchange_weak
+## <a name="compare_exchange_weak"></a> atomic::compare_exchange_weak
 
 Esegue un'operazione confronto e scambio atomica debole sugli  **\*ciò**.
 
@@ -387,7 +387,7 @@ Hodnotu typu *Ty*.
 *Valore*<br/>
 Hodnotu typu *Ty*.
 
-*Diffgr:ID="Order1*<br/>
+*Order1*<br/>
 Primo `memory_order` argomento.
 
 *Order2*<br/>
@@ -407,7 +407,7 @@ Gli overload che non è un secondo `memory_order` usare implicita *Order2* basat
 
 Per gli overload che accettano due `memory_order` parametri, il valore del *Order2* non deve essere `memory_order_release` oppure `memory_order_acq_rel`e non deve essere maggiore del valore del *diffgr:ID="Order1*.
 
-## <a name="exchange"></a> atomic:: Exchange
+## <a name="exchange"></a> atomic::exchange
 
 Usa un valore specificato per sostituire il valore archiviato di  **\*ciò**.
 
@@ -427,7 +427,7 @@ Ty atomic<Ty>::exchange(
 *Valore*<br/>
 Hodnotu typu *Ty*.
 
-*Ordine*<br/>
+*Order*<br/>
 Oggetto `memory_order`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -438,7 +438,7 @@ Il valore archiviato di  **\*ciò** prima dello scambio.
 
 Questa operazione esegue un'operazione read-modify-write per utilizzare *valore* per sostituire il valore archiviato in  **\*ciò**, nei vincoli di memoria specificati da  *Ordine*.
 
-## <a name="fetch_add"></a> atomic:: fetch_add
+## <a name="fetch_add"></a> atomic::fetch_add
 
 Recupera il valore archiviato  **\*ciò**e quindi aggiunge un valore specificato al valore archiviato.
 
@@ -458,7 +458,7 @@ Ty atomic<Ty>::fetch_add (
 *Valore*<br/>
 Hodnotu typu *Ty*.
 
-*Ordine*<br/>
+*Order*<br/>
 Oggetto `memory_order`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -469,7 +469,7 @@ Oggetto *Ty* oggetto che contiene il valore archiviato  **\*ciò** prima dell'ag
 
 Il `fetch_add` metodo esegue un'operazione read-modify-write per aggiungere in modo atomico *valore* al valore archiviato nella  **\*ciò**e applica i vincoli di memoria specificati da *Ordine*.
 
-## <a name="fetch_and"></a> atomic:: fetch_and
+## <a name="fetch_and"></a> atomic::fetch_and
 
 Bit per bit e in un valore e un valore esistente archiviato in  **\*ciò**.
 
@@ -489,7 +489,7 @@ Ty atomic<Ty>::fetch_and (
 *Valore*<br/>
 Hodnotu typu *Ty*.
 
-*Ordine*<br/>
+*Order*<br/>
 Oggetto `memory_order`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -500,7 +500,7 @@ Oggetto *Ty* oggetto che contiene il risultato di bit per bit e.
 
 Il `fetch_and` metodo esegue un'operazione read-modify-write per sostituire il valore archiviato di  **\*ciò** con un bit per bit e di *valore* e il valore corrente archiviato in  **\*ciò**, all'interno dei vincoli di memoria specificati da *ordine*.
 
-## <a name="fetch_or"></a> atomic:: fetch_or
+## <a name="fetch_or"></a> atomic::fetch_or
 
 Bit per bit o in un valore e un valore esistente archiviato in  **\*ciò**.
 
@@ -520,7 +520,7 @@ Ty atomic<Ty>::fetch_or (
 *Valore*<br/>
 Hodnotu typu *Ty*.
 
-*Ordine*<br/>
+*Order*<br/>
 Oggetto `memory_order`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -531,7 +531,7 @@ Oggetto *Ty* oggetto che contiene il risultato di bit per bit o.
 
 Il `fetch_or` metodo esegue un'operazione read-modify-write per sostituire il valore archiviato di  **\*ciò** con un bit per bit o dei *valore* e il valore corrente archiviato in  **\*ciò**, all'interno dei vincoli di memoria specificati da *ordine*.
 
-## <a name="fetch_sub"></a> atomic:: fetch_sub
+## <a name="fetch_sub"></a> atomic::fetch_sub
 
 Sottrae un valore specificato da un valore archiviato.
 
@@ -551,7 +551,7 @@ Ty atomic<Ty>::fetch_sub (
 *Valore*<br/>
 Hodnotu typu *Ty*.
 
-*Ordine*<br/>
+*Order*<br/>
 Oggetto `memory_order`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -582,7 +582,7 @@ Ty atomic<Ty>::fetch_xor (
 *Valore*<br/>
 Hodnotu typu *Ty*.
 
-*Ordine*<br/>
+*Order*<br/>
 Oggetto `memory_order`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -593,7 +593,7 @@ Oggetto *Ty* oggetto che contiene il risultato di esclusivo bit per bit o.
 
 Il `fetch_xor` metodo esegue un'operazione read-modify-write per sostituire il valore archiviato di  **\*ciò** con un bit per bit esclusiva o dei *valore* e il valore corrente archiviato in  **\*ciò**e applica i vincoli di memoria specificati da *ordine*.
 
-## <a name="is_lock_free"></a> atomic:: is_lock_free
+## <a name="is_lock_free"></a> atomic::is_lock_free
 
 Specifica se le operazioni atomiche su  **\*ciò** sono senza blocco.
 
@@ -624,7 +624,7 @@ Ty atomic::load(
 
 ### <a name="parameters"></a>Parametri
 
-*Ordine*<br/>
+*Order*<br/>
 Oggetto `memory_order`. *Ordine* non deve essere `memory_order_release` o `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -651,7 +651,7 @@ void atomic<Ty>::store(
 *Valore*<br/>
 Oggetto *Ty* oggetto.
 
-*Ordine*<br/>
+*Order*<br/>
 Oggetto `memory_order` vincolo.
 
 ### <a name="remarks"></a>Note
