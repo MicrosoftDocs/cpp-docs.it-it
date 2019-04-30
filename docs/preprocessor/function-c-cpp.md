@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
 ms.openlocfilehash: c57ff2053b3c1fd52474c7eb0dd598641632f789
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59027259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409928"
 ---
 # <a name="function-cc"></a>function (C/C++)
 Specifica la generazione delle chiamate alle funzioni specificate nell'elenco di argomenti del pragma.

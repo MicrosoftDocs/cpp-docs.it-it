@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412553"
 ---
 # <a name="sharedptr-class"></a>Classe shared_ptr
 
@@ -155,7 +155,7 @@ Più thread possono leggere e scrivere contemporaneamente oggetti `shared_ptr` d
 
 |Operatore|Descrizione|
 |-|-|
-|[shared_ptr:: operator bool](#op_bool)|Verifica se una risorsa di proprietà esiste.|
+|[shared_ptr::operator bool](#op_bool)|Verifica se una risorsa di proprietà esiste.|
 |[shared_ptr::operator*](#op_star)|Ottiene il valore definito.|
 |[shared_ptr::operator=](#op_eq)|Sostituisce la risorsa di proprietà.|
 |[shared_ptr::operator-&gt;](#op_arrow)|Ottiene un puntatore al valore definito.|
@@ -239,7 +239,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  shared_ptr:: operator bool
+## <a name="op_bool"></a>  shared_ptr::operator bool
 
 Verifica se una risorsa di proprietà esiste.
 
@@ -337,10 +337,10 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parametri
 
-*SP*<br/>
+*sp*<br/>
 Puntatore condiviso da copiare.
 
-*Asia Pacifico*<br/>
+*ap*<br/>
 Puntatore automatico da copiare.
 
 ### <a name="remarks"></a>Note
@@ -462,13 +462,13 @@ Tipo del metodo Deleter.
 *ptr*<br/>
 Puntatore da copiare.
 
-*DTOR*<br/>
+*dtor*<br/>
 Metodo Deleter da copiare.
 
 *A*<br/>
 Tipo dell'allocatore.
 
-*Alloc*<br/>
+*alloc*<br/>
 Allocatore da copiare.
 
 ### <a name="remarks"></a>Note
@@ -585,19 +585,19 @@ Tipo del metodo Deleter.
 *A*<br/>
 Tipo dell'allocatore.
 
-*DTOR*<br/>
+*dtor*<br/>
 Metodo Deleter.
 
-*Accelerator*<br/>
+*ator*<br/>
 Allocatore.
 
-*SP*<br/>
+*sp*<br/>
 Puntatore intelligente da copiare.
 
-*Windows Phone*<br/>
+*wp*<br/>
 Puntatore debole.
 
-*Asia Pacifico*<br/>
+*ap*<br/>
 Puntatore automatico da copiare.
 
 ### <a name="remarks"></a>Note
@@ -721,7 +721,7 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parametri
 
-*SP*<br/>
+*sp*<br/>
 Puntatore condiviso con cui effettuare lo scambio.
 
 ### <a name="remarks"></a>Note

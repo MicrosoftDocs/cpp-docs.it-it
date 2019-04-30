@@ -16,11 +16,11 @@ helpviewer_keywords:
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
 ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410642"
 ---
 # <a name="locales-and-code-pages"></a>Impostazioni locali e tabelle codici
 

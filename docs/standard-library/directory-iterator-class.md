@@ -26,11 +26,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
 ms.openlocfilehash: 6763f2a96b771fadbec311cf8740352fff53e29a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413846"
 ---
 # <a name="directoryiterator-class"></a>Classe directory_iterator
 
@@ -56,13 +56,13 @@ class directory_iterator;
 
 |Costruttore|Descrizione|
 |-|-|
-|[classe directory_iterator](#directory_iterator)|Costruisce un iteratore di input sequenziato attraverso i nomi di file in una directory.|
+|[directory_iterator](#directory_iterator)|Costruisce un iteratore di input sequenziato attraverso i nomi di file in una directory.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
 |Funzione membro|Descrizione|
 |-|-|
-|[Incremento](#increment)|Prova ad avanzare al nome file successivo nella directory.|
+|[increment](#increment)|Prova ad avanzare al nome file successivo nella directory.|
 
 ### <a name="operators"></a>Operatori
 
@@ -81,7 +81,7 @@ class directory_iterator;
 
 **Spazio nomi:** std::experimental::filesystem
 
-## <a name="directory_iterator"></a> directory_iterator:: directory_iterator
+## <a name="directory_iterator"></a> directory_iterator::directory_iterator
 
 Il primo costruttore produce un iteratore di fine sequenza. L'archivio di secondo e terzo costruttore *pval* nelle `mydir`, quindi provano ad aprire e leggere `mydir` come una directory. Se ha esito positivo, archiviano il primo nome file nella directory in `myentry`; in caso contrario, producono un iteratore di fine sequenza.
 
@@ -98,16 +98,16 @@ directory_iterator(directory_iterator&&) noexcept = default;
 
 ### <a name="parameters"></a>Parametri
 
-*PVal*<br/>
+*pval*<br/>
 Il percorso del nome file archiviato.
 
-*CE*<br/>
+*ec*<br/>
 Il codice di errore di stato.
 
-*classe directory_iterator*<br/>
+*directory_iterator*<br/>
 L'oggetto archiviato.
 
-## <a name="increment"></a> directory_iterator:: Increment
+## <a name="increment"></a> directory_iterator::increment
 
 La funzione prova a avanzare al nome file successivo nella directory. Se ha esito positivo, archivia il nome del file in `myentry`; in caso contrario, produce un iteratore di fine sequenza.
 
@@ -115,7 +115,7 @@ La funzione prova a avanzare al nome file successivo nella directory. Se ha esit
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-## <a name="op_neq"></a> directory_iterator:: operator! =
+## <a name="op_neq"></a> directory_iterator::operator!=
 
 L'operatore membro restituisce `!(*this == right)`.
 
@@ -128,7 +128,7 @@ bool operator!=(const directory_iterator& right) const;
 *right*<br/>
 Il [directory_iterator](../standard-library/directory-iterator-class.md) cui è confrontato il `directory_iterator`.
 
-## <a name="op_as"></a> directory_iterator:: operator =
+## <a name="op_as"></a> directory_iterator::operator=
 
 Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.
 
@@ -142,7 +142,7 @@ directory_iterator& operator=(directory_iterator&&) noexcept = default;
 *right*<br/>
 Il [directory_iterator](../standard-library/directory-iterator-class.md) copiata nel `directory_iterator`.
 
-## <a name="op_eq"></a> directory_iterator:: operator = =
+## <a name="op_eq"></a> directory_iterator::operator==
 
 L'operatore membro restituisce **true** solo se entrambi `*this` e *a destra* sono iteratori di fine sequenza o entrambi sono non fine-di--iteratori di sequenza.
 
@@ -155,7 +155,7 @@ bool operator==(const directory_iterator& right) const;
 *right*<br/>
 Il [directory_iterator](../standard-library/directory-iterator-class.md) cui è confrontato il `directory_iterator`.
 
-## <a name="op_star"></a> directory_iterator:: operator *
+## <a name="op_star"></a> directory_iterator::operator*
 
 L'operatore membro restituisce `myentry`.
 
@@ -163,7 +163,7 @@ L'operatore membro restituisce `myentry`.
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> directory_iterator:: operator ->
+## <a name="op_cast"></a> directory_iterator::operator->
 
 La funzione membro restituisce `&**this`.
 
@@ -171,7 +171,7 @@ La funzione membro restituisce `&**this`.
 const directory_entry * operator->() const;
 ```
 
-## <a name="op_increment"></a> directory_iterator:: operator + +
+## <a name="op_increment"></a> directory_iterator::operator++
 
 La prima funzione membro chiama `increment()`, quindi restituisce `*this`. La seconda funzione membro esegue una copia dell'oggetto, le chiamate `increment()`, quindi restituisce la copia.
 

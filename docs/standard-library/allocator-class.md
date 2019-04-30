@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411045"
 ---
 # <a name="allocator-class"></a>Classe allocator
 
@@ -77,7 +77,7 @@ Di conseguenza, un allocatore definisce i tipi seguenti:
 
 Questi `Type`specificano il form che puntatori e riferimenti devono accettare per gli elementi allocati. ( [allocator:: Pointer](#pointer) non è necessariamente identico `Type*` per tutti gli oggetti allocatore, anche se ha questa definizione ovvia per la classe `allocator`.)
 
-**C++11 e versioni successive:** per abilitare le operazioni di spostamento nell'allocatore, usare l'interfaccia dell'allocatore minimo e implementare il costruttore di copia, gli operatori == e !=, allocate e deallocate. Per altre informazioni e un esempio, vedere [Allocatori](../standard-library/allocators.md)
+**C++ 11 e versioni successive:**  Per abilitare operazioni di spostamento nell'allocatore, usare l'interfaccia dell'allocatore minimo e implementare il costruttore di copia, = = e! = (operatori), allocare e deallocare. Per altre informazioni e un esempio, vedere [Allocatori](../standard-library/allocators.md)
 
 ## <a name="members"></a>Membri
 
@@ -134,7 +134,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Valore const o nonconst dell'oggetto di cui viene cercato l'indirizzo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -469,7 +469,7 @@ void construct(pointer ptr, _Other&&...   val);
 *ptr*<br/>
 Puntatore al percorso in cui deve essere creato l'oggetto.
 
-*Val*<br/>
+*val*<br/>
 Il valore con cui viene inizializzato l'oggetto costruito.
 
 ### <a name="remarks"></a>Note

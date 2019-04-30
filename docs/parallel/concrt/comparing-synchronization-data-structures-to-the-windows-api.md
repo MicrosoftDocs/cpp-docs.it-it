@@ -6,11 +6,11 @@ helpviewer_keywords:
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
 ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414035"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Confronto delle strutture di dati di sincronizzazione con l'API Windows
 
@@ -28,11 +28,11 @@ Il [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-wri
 
 |Funzionalità|`reader_writer_lock`|Blocco SRW|
 |-------------|--------------------------|--------------|
-|Non è rientrante|Sì|Sì|
+|Non è rientrante|Yes|Yes|
 |Possibile alzare di livello un lettore in un writer (supporto per l'aggiornamento)|No|No|
 |Può abbassare di livello un autore di un lettore (supporto per il downgrade)|No|No|
-|Blocco di scrittura preferenza|Sì|No|
-|Accesso FIFO per i writer|Sì|No|
+|Blocco di scrittura preferenza|Yes|No|
+|Accesso FIFO per i writer|Yes|No|
 
 Per altre informazioni sui blocchi SRW, vedere [blocchi Slim Reader/Writer (SRW)](https://msdn.microsoft.com/library/windows/desktop/aa904937) in Platform SDK.
 

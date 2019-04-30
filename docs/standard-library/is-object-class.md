@@ -8,11 +8,11 @@ helpviewer_keywords:
 - is_object
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
 ms.openlocfilehash: 89c554bda1c82fbedda5b027dbb70b12c2c7cec4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413652"
 ---
 # <a name="isobject-class"></a>Classe is_object
 

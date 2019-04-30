@@ -9,11 +9,11 @@ helpviewer_keywords:
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
 ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409915"
 ---
 # <a name="fpcontract"></a>fp_contract
 
@@ -21,7 +21,7 @@ Determina se contrazione a virgola mobile viene eseguita. Una contrazione a virg
 
 ## <a name="syntax"></a>Sintassi
 
-> **fp_contract #pragma (** { **sul** | **off** } **)**
+> **#pragma fp_contract (** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Note
 

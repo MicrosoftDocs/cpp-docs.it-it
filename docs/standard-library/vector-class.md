@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410902"
 ---
 # <a name="vector-class"></a>Classe vector
 
@@ -302,7 +302,7 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>Parametri
 
-*POS*<br/>
+*_Pos*<br/>
 Numero di posizione o indice dell'elemento a cui fare riferimento nel vettore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -897,8 +897,8 @@ iterator emplace(
 
 |Parametro|Descrizione|
 |-|-|
-|*WHERE*|Posizione dell'oggetto [vector](../standard-library/vector-class.md) in cui viene inserito il primo elemento.|
-|*Val*|Valore dell'elemento da inserire nell'oggetto `vector`.|
+|*_Where*|Posizione dell'oggetto [vector](../standard-library/vector-class.md) in cui viene inserito il primo elemento.|
+|*val*|Valore dell'elemento da inserire nell'oggetto `vector`.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1080,7 +1080,7 @@ iterator erase(
 
 |Parametro|Descrizione|
 |-|-|
-|*WHERE*|Posizione dell'elemento da rimuovere dal vettore.|
+|*_Where*|Posizione dell'elemento da rimuovere dal vettore.|
 |*first*|Posizione del primo elemento rimosso dal vettore.|
 |*last*|Posizione oltre l'ultimo elemento rimosso dal vettore.|
 
@@ -1247,8 +1247,8 @@ void insert(
 
 |Parametro|Descrizione|
 |-|-|
-|*WHERE*|Posizione nel vettore in cui viene inserito il primo elemento.|
-|*Val*|Valore dell'elemento da inserire nel vettore.|
+|*_Where*|Posizione nel vettore in cui viene inserito il primo elemento.|
+|*val*|Valore dell'elemento da inserire nel vettore.|
 |*count*|Numero di elementi da inserire nel vettore.|
 |*first*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
 |*last*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
@@ -1753,7 +1753,7 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>Parametri
 
-*NewSize*<br/>
+*Newsize*<br/>
 La nuova dimensione del vettore.
 
 *Val*<br/>
