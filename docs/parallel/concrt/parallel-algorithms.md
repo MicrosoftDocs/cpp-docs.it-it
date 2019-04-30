@@ -5,11 +5,11 @@ helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
 ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262870"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346333"
 ---
 # <a name="parallel-algorithms"></a>Algoritmi paralleli
 
@@ -84,9 +84,9 @@ Per un esempio completo che usa il `parallel_for` algoritmo, vedere [come: Scriv
 
 ##  <a name="parallel_for_each"></a> L'algoritmo parallel_for_each
 
-Il [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo esegue le attività in un contenitore iterativo, ad esempio quelli forniti dalla libreria Standard C++, in parallelo. Usa la stessa logica di partizionamento che il `parallel_for` algoritmo utilizza.
+Il [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo esegue le attività in un contenitore iterativo, ad esempio quelle fornite dal C++ della libreria Standard, in parallelo. Usa la stessa logica di partizionamento che il `parallel_for` algoritmo utilizza.
 
-Il `parallel_for_each` la libreria Standard C++ è simile all'algoritmo [std:: for_each](../../standard-library/algorithm-functions.md#for_each) algoritmo, con la differenza che il `parallel_for_each` algoritmo esegue le attività simultaneamente. Come altri algoritmi paralleli, `parallel_for_each` non esegue le attività in un ordine specifico.
+Il `parallel_for_each` è simile all'algoritmo di C++ della libreria Standard [std:: for_each](../../standard-library/algorithm-functions.md#for_each) algoritmo, con la differenza che la `parallel_for_each` algoritmo esegue le attività simultaneamente. Come altri algoritmi paralleli, `parallel_for_each` non esegue le attività in un ordine specifico.
 
 Sebbene il `parallel_for_each` algoritmo funziona in entrambi gli iteratori in avanti e iteratori ad accesso casuale, offre prestazioni migliori con gli iteratori ad accesso casuale.
 
@@ -134,7 +134,7 @@ Per esempi completi che usano il `parallel_invoke` algoritmo, vedere [come: Usar
 
 ##  <a name="parallel_transform_reduce"></a> Gli algoritmi parallel_reduce e parallel_transform
 
-Il [Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_transform) e [Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_reduce) algoritmi sono versioni parallele degli algoritmi della libreria Standard C++ [std::Transform](../../standard-library/algorithm-functions.md#transform)e [std:: accumulate](../../standard-library/numeric-functions.md#accumulate), rispettivamente. Le versioni di Runtime di concorrenza si comportano come le versioni della libreria Standard C++ ad eccezione del fatto che l'ordine delle operazioni non è determinata quanto vengono eseguite in parallelo. Sfruttare questi algoritmi quando si utilizza un set sufficientemente grande da ottenere vantaggi di scalabilità e di prestazioni dall'esecuzione in parallelo.
+Il [Concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_transform) e [Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_reduce) algoritmi sono versioni parallele del C++ algoritmi della libreria Standard [std::Transform](../../standard-library/algorithm-functions.md#transform) e [std:: accumulate](../../standard-library/numeric-functions.md#accumulate), rispettivamente. Le versioni di Runtime di concorrenza si comportano come le versioni della libreria Standard C++ ad eccezione del fatto che l'ordine delle operazioni non è determinata quanto vengono eseguite in parallelo. Sfruttare questi algoritmi quando si utilizza un set sufficientemente grande da ottenere vantaggi di scalabilità e di prestazioni dall'esecuzione in parallelo.
 
 > [!IMPORTANT]
 >  Gli algoritmi `parallel_transform` e `parallel_reduce` supportano solo iteratori di accesso casuale, bidirezionale e di inoltro perché tramite questi iteratori vengono generati indirizzi di memoria stabili. Inoltre, tramite questi iteratori devono essere generati valori l-value non `const`.

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
 ms.openlocfilehash: 6955d755897d326479d2b3789edb02ff66806175
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460840"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345967"
 ---
 # <a name="member-function-templates"></a>Modelli di funzioni membro
 

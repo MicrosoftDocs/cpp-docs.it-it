@@ -8,11 +8,11 @@ helpviewer_keywords:
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
 ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176363"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345939"
 ---
 # <a name="multiple-base-classes"></a>Più classi base
 
@@ -42,11 +42,11 @@ Quando si specifica la *base-list*, è possibile specificare più volte lo stess
 
 ## <a name="virtual-base-classes"></a>Classi di base virtuali
 
-Poiché una classe può rappresentare più di una volta una classe base indiretta per una classe derivata, in C++ è possibile ottimizzare l'utilizzo di tali classi base. Le classi base virtuali consentono di risparmiare spazio e di evitare ambiguità in gerarchie di classi in cui viene usata l'ereditarietà multipla.
+Poiché una classe può rappresentare più di una volta una classe base indiretta per una classe derivata, in C++ è possibile ottimizzare l'utilizzo di tali classi base. Le classi base virtuali consentono di risparmiare spazio e di evitare ambiguità in gerarchie di classi in cui viene utilizzata l'ereditarietà multipla.
 
 Ogni oggetto non virtuale contiene una copia dei membri dati definiti nella classe base. Questa duplicazione determina uno spreco di spazio e richiede di specificare la copia dei membri della classe base desiderata ogni volta che vi si accede.
 
-Quando una classe base viene specificata come base virtuale, può essere usata più volte come base indiretta senza duplicazione dei membri dati. Una sola copia dei membri dati viene condivisa da tutte le classi base che la usano come base virtuale.
+Quando una classe base viene specificata come base virtuale, può essere utilizzata più volte come base indiretta senza duplicazione dei membri dati. Una sola copia dei membri dati viene condivisa da tutte le classi base che la utilizzano come base virtuale.
 
 Quando si dichiara una classe base virtuale, il **virtuale** parola chiave viene visualizzata negli elenchi di base delle classi derivate.
 
@@ -89,7 +89,7 @@ Layout degli oggetti con ereditarietà virtuale e non virtuale
 > [!NOTE]
 >  L'ereditarietà virtuale offre vantaggi significativi in termini di dimensione se paragonata all'ereditarietà non virtuale. Può introdurre tuttavia un ulteriore sovraccarico di elaborazione.
 
-Se una classe derivata esegue l'override di una funzione virtuale che eredita da una classe base virtuale e se un costruttore o un distruttore per la classe base derivata chiama tale funzione usando un puntatore alla classe base virtuale, il compilatore può introdurre campi vtordisp nelle classi con basi virtuali. Il `/vd0` opzione del compilatore elimina l'aggiunta del membro nascosto vtordisp costruttore/distruttore distanziato dello spostamento. Il `/vd1` consente opzione del compilatore, l'impostazione predefinita, in cui sono necessari. Disattivare vtordisps solo se si è certi che tutti i costruttori e distruttori di classe chiamino virtualmente le funzioni virtuali.
+Se una classe derivata esegue l'override di una funzione virtuale che eredita da una classe base virtuale e se un costruttore o un distruttore per la classe base derivata chiama tale funzione utilizzando un puntatore alla classe base virtuale, il compilatore può introdurre campi vtordisp nelle classi con basi virtuali. Il `/vd0` opzione del compilatore elimina l'aggiunta del membro nascosto vtordisp costruttore/distruttore distanziato dello spostamento. Il `/vd1` consente opzione del compilatore, l'impostazione predefinita, in cui sono necessari. Disattivare vtordisps solo se si è certi che tutti i costruttori e distruttori di classe chiamino virtualmente le funzioni virtuali.
 
 Il `/vd` opzione del compilatore interessa un intero modulo di compilazione. Usare la `vtordisp` pragma per disabilitare e riabilitare `vtordisp` campi in base a una classe per classe:
 
@@ -144,7 +144,7 @@ Il compilatore rileva le ambiguità eseguendo dei test nell'ordine seguente:
 
 1. Se l'accesso al nome viola le autorizzazioni di accesso ai membri, viene generato un messaggio di errore. (Per altre informazioni, vedere [controllo di accesso ai membri](../cpp/member-access-control-cpp.md).)
 
-Quando un'espressione produce ambiguità attraverso l'ereditarietà, è possibile risolverla manualmente qualificando il nome in questione con il relativo nome di classe. Per fare in modo che l'esempio precedente venga compilato correttamente e senza ambiguità, usare codice analogo al seguente:
+Quando un'espressione produce ambiguità attraverso l'ereditarietà, è possibile risolverla manualmente qualificando il nome in questione con il relativo nome di classe. Per fare in modo che l'esempio precedente venga compilato correttamente e senza ambiguità, utilizzare codice analogo al seguente:
 
 ```cpp
 C *pc = new C;
@@ -153,13 +153,13 @@ pc->B::a();
 ```
 
 > [!NOTE]
->  Quando `C` viene dichiarata, è possibile che la stessa generi errori, quando si fa riferimento a `B` nell'ambito di `C`. In ogni caso, fino a quando un riferimento non qualificato a `B` non venga effettivamente usato nell'ambito di `C`, non viene generato alcun errore.
+>  Quando `C` viene dichiarata, è possibile che la stessa generi errori, quando si fa riferimento a `B` nell'ambito di `C`. In ogni caso, fino a quando un riferimento non qualificato a `B` non venga effettivamente utilizzato nell'ambito di `C`, non viene generato alcun errore.
 
 ### <a name="dominance"></a>Dominanza
 
 È possibile che più nomi (funzione, oggetto o enumeratore) vengano raggiunti mediante un grafico di ereditarietà. Questi casi sono considerati ambigui con le classi base non virtuali. Sono anche ambigui con le classi base virtuali, a meno che uno dei nomi "domini" sugli altri.
 
-Un nome domina un altro nome se è definito in entrambe le classi e una classe è derivata dall'altra. Il nome dominante è il nome nella classe derivata; questo nome viene usato quando sarebbe altrimenti sorta una certa ambiguità, come mostrato nell'esempio seguente:
+Un nome domina un altro nome se è definito in entrambe le classi e una classe è derivata dall'altra. Il nome dominante è il nome nella classe derivata; questo nome viene utilizzato quando sarebbe altrimenti sorta una certa ambiguità, come mostrato nell'esempio seguente:
 
 ```cpp
 // deriv_Dominance.cpp
@@ -211,7 +211,7 @@ La figura seguente mostra come vengono composti gli oggetti mediante l'ereditari
 ![Derivazione virtuale e non&#45;derivazione virtuale](../cpp/media/vc38xr1.gif "derivazione virtuale e non&#45;derivazione virtuale") <br/>
 Derivazione non virtuale e non virtuale
 
-Nella figura l'accesso a qualsiasi membro della classe `A` tramite le classi base non virtuali causa ambiguità; il compilatore non dispone di informazioni che spieghino se usare l'oggetto secondario associato a `B` o l'oggetto secondario associato a `C`. Tuttavia, quando `A` è specificato come classe base virtuale, non esiste alcuna ambiguità sull'oggetto secondario a cui viene eseguito l'accesso.
+Nella figura l'accesso a qualsiasi membro della classe `A` tramite le classi base non virtuali causa ambiguità; il compilatore non dispone di informazioni che spieghino se utilizzare l'oggetto secondario associato a `B` o l'oggetto secondario associato a `C`. Tuttavia, quando `A` è specificato come classe base virtuale, non esiste alcuna ambiguità sull'oggetto secondario a cui viene eseguito l'accesso.
 
 ## <a name="see-also"></a>Vedere anche
 
