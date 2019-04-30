@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OpenMP in Visual C++, new features
 - explicit parallelization, new features
 ms.openlocfilehash: 52402aa553c6d68d3073aba26ecac7b784522ee9
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60125175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363271"
 ---
 # <a name="simd-extension"></a>Estensioni SIMD
 
@@ -106,7 +106,7 @@ La direttiva OpenMP SIMD può anche usare le clausole seguenti per migliorare il
   
 La direttiva OpenMP SIMD offre agli utenti un modo per determinare il compilatore apportare cicli vettore adatto. Annotando un ciclo con la direttiva OpenMP SIMD, gli utenti intendono disporre di più iterazioni del ciclo eseguite contemporaneamente.
 
-Ad esempio, il ciclo seguente è annotato con la direttiva OpenMP SIMD. Non è disponibile parallelismo perfetto tra le iterazioni del ciclo, poiché è presente una dipendenza con le versioni precedenti da un [i] a [i-1]&lt], ma a causa della direttiva SIMD che il compilatore è comunque consentito pack iterazioni consecutive della prima istruzione in una singola istruzione vettore ed eseguire li in parallelo.
+Ad esempio, il ciclo seguente è annotato con la direttiva OpenMP SIMD. Non è disponibile parallelismo perfetto tra le iterazioni del ciclo, poiché è presente una dipendenza con le versioni precedenti da un [i] a [i-1], ma a causa della direttiva SIMD che il compilatore è comunque consentito pack iterazioni consecutive della prima istruzione in una singola istruzione vettore ed eseguire li in parallelo.
 
 ```c
     #pragma omp simd
