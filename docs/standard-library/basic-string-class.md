@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409785"
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 
@@ -137,7 +137,7 @@ class basic_string;
 ### <a name="parameters"></a>Parametri
 
 *CharType*<br/>
-Tipo di dati di un singolo carattere da archiviare nella stringa. La libreria Standard C++ fornisce le specializzazioni di questa classe modello, con le definizioni dei tipi [stringa](../standard-library/string-typedefs.md#string) per gli elementi di tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), per **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) per `char16_t`, e [u32string](../standard-library/string-typedefs.md#u32string) per `char32_t`.
+Tipo di dati di un singolo carattere da archiviare nella stringa. Il C++ libreria Standard fornisce specializzazioni di questa classe modello, con le definizioni dei tipi [stringa](../standard-library/string-typedefs.md#string) per gli elementi di tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), per **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) per `char16_t`, e [u32string](../standard-library/string-typedefs.md#u32string) per `char32_t`.
 
 *Tratti*<br/>
 Diverse proprietà importanti del `CharType` elementi in una specializzazione basic_string vengono descritti dalla classe `Traits`. Il valore predefinito è `char_traits`< `CharType`>.
@@ -313,13 +313,13 @@ La stringa C da aggiungere.
 *str*<br/>
 La stringa i cui caratteri devono essere aggiunti.
 
-*Off*<br/>
+*_Off*<br/>
 Indice della parte della stringa di origine che fornisce i caratteri da aggiungere.
 
 *count*<br/>
 Il numero massimo di caratteri da aggiungere dalla stringa di origine.
 
-*CH*<br/>
+*_Ch*<br/>
 Il valore di caratteri da aggiungere.
 
 *first*<br/>
@@ -477,7 +477,7 @@ Il numero di caratteri deve essere assegnato dalla stringa di origine.
 *str*<br/>
 La stringa di origine i cui caratteri devono essere assegnati alla stringa di destinazione.
 
-*CH*<br/>
+*_Ch*<br/>
 Il valore di caratteri da assegnare.
 
 *first*<br/>
@@ -486,7 +486,7 @@ Un iteratore di input, const_pointer o const_iterator che punta al primo caratte
 *last*<br/>
 Un iteratore di input, const_pointer o const_iterator che punta al carattere immediatamente successivo all'ultimo carattere dell'intervallo della stringa di origine da assegnare all'intervallo di destinazione.
 
-*Off*<br/>
+*off*<br/>
 La posizione da cui si inizia ad assegnare i nuovi caratteri.
 
 ### <a name="return-value"></a>Valore restituito
@@ -601,7 +601,7 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 L'indice della posizione dell'elemento a cui fare riferimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -762,7 +762,7 @@ Stringa per inizializzare la stringa costruita.
 *_Roff*<br/>
 Indice di un carattere in una stringa che è il primo da usare per inizializzare i valori di carattere per la stringa costruita.
 
-*CH*<br/>
+*_Ch*<br/>
 Valore di carattere da copiare nella stringa costruita.
 
 *first*<br/>
@@ -1168,7 +1168,7 @@ Il numero massimo di caratteri della stringa operando da confrontare.
 *_Num2*<br/>
 Il numero massimo di caratteri della stringa parametro da confrontare.
 
-*Off*<br/>
+*_Off*<br/>
 L'indice della stringa parametro da cui inizia il confronto.
 
 *count*<br/>
@@ -1490,7 +1490,7 @@ Matrice di caratteri di destinazione in cui copiare gli elementi.
 
 _ *Conteggio* il numero di caratteri da copiare, al massimo, dalla stringa di origine.
 
-*Off*<br/>
+*_Off*<br/>
 Posizione iniziale nella stringa di origine da cui effettuare le copie.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1598,7 +1598,7 @@ Il valore pari *dest*.
 
 _ *Conteggio* il numero di caratteri da copiare, al massimo, dalla stringa di origine.
 
-*Off*<br/>
+*_Off*<br/>
 Posizione iniziale nella stringa di origine da cui effettuare le copie.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1919,7 +1919,7 @@ Iteratore che punta alla posizione immediatamente successiva all'ultimo elemento
 *_It*<br/>
 Iteratore che punta alla posizione dell'elemento nella stringa da cancellare.
 
-*POS*<br/>
+*_Pos*<br/>
 Indice del primo carattere della stringa da rimuovere.
 
 *count*<br/>
@@ -2019,10 +2019,10 @@ size_type find(
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Valore di carattere che la funzione membro deve cercare.
 
-*Off*<br/>
+*_Off*<br/>
 Indice della posizione da cui partirà la ricerca.
 
 *ptr*<br/>
@@ -2194,10 +2194,10 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Valore di carattere che la funzione membro deve cercare.
 
-*Off*<br/>
+*_Off*<br/>
 Indice della posizione da cui partirà la ricerca.
 
 *ptr*<br/>
@@ -2382,10 +2382,10 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Valore di carattere che la funzione membro deve cercare.
 
-*Off*<br/>
+*_Off*<br/>
 Indice della posizione da cui partirà la ricerca.
 
 *ptr*<br/>
@@ -2569,10 +2569,10 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Valore di carattere che la funzione membro deve cercare.
 
-*Off*<br/>
+*_Off*<br/>
 Indice della posizione in cui finirà la ricerca.
 
 *ptr*<br/>
@@ -2758,10 +2758,10 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Valore di carattere che la funzione membro deve cercare.
 
-*Off*<br/>
+*_Off*<br/>
 Indice della posizione in cui finirà la ricerca.
 
 *ptr*<br/>
@@ -3037,10 +3037,10 @@ Numero dei caratteri da inserire.
 *str*<br/>
 Stringa C da inserire interamente o parzialmente nella stringa di destinazione.
 
-*Off*<br/>
+*_Off*<br/>
 Indice della parte della stringa di origine che fornisce i caratteri da aggiungere.
 
-*CH*<br/>
+*_Ch*<br/>
 Valore di carattere degli elementi da inserire.
 
 *_It*<br/>
@@ -3330,7 +3330,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Il carattere da aggiungere.
 
 *ptr*<br/>
@@ -3422,7 +3422,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Il valore di caratteri da assegnare.
 
 *ptr*<br/>
@@ -3507,7 +3507,7 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 L'indice della posizione dell'elemento a cui fare riferimento.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3624,7 +3624,7 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Carattere da aggiungere alla fine della stringa.
 
 ### <a name="remarks"></a>Note
@@ -3939,7 +3939,7 @@ Numero massimo di caratteri della stringa parametro C da usare.
 *ptr*<br/>
 Stringa C che deve essere un'origine dei caratteri per la stringa operando.
 
-*CH*<br/>
+*_Ch*<br/>
 Carattere da copiare nella stringa operando.
 
 *first0*<br/>
@@ -4248,7 +4248,7 @@ void resize(
 *count*<br/>
 La nuova dimensione della stringa.
 
-*CH*<br/>
+*_Ch*<br/>
 Valore con cui vengono inizializzati i caratteri aggiunti se sono necessari elementi aggiuntivi.
 
 ### <a name="remarks"></a>Note
@@ -4381,10 +4381,10 @@ size_type rfind(
 
 ### <a name="parameters"></a>Parametri
 
-*CH*<br/>
+*_Ch*<br/>
 Valore di carattere che la funzione membro deve cercare.
 
-*Off*<br/>
+*_Off*<br/>
 Indice della posizione da cui partirà la ricerca.
 
 *ptr*<br/>
@@ -4664,7 +4664,7 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 Indice che individua l'elemento nella posizione da cui viene eseguita la copia della stringa, con un valore predefinito di 0.
 
 *count*<br/>

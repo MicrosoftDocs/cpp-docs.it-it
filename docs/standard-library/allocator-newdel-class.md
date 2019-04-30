@@ -10,11 +10,11 @@ helpviewer_keywords:
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
 ms.openlocfilehash: eac2fb993eb3e9aab5d043debe6402576d7b49b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411019"
 ---
 # <a name="allocatornewdel-class"></a>Classe allocator_newdel
 

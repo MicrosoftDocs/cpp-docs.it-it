@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
 ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412605"
 ---
 # <a name="sharedfuture-class"></a>Classe shared_future
 
@@ -72,7 +72,7 @@ Gli oggetti `shared_future` non sono sincronizzati. La chiamata di metodi sullo 
 
 **Spazio dei nomi:** std
 
-## <a name="get"></a>  shared_future:: Get
+## <a name="get"></a>  shared_future::get
 
 Recupera il risultato archiviato nello *stato asincrono associato*.
 
@@ -154,7 +154,7 @@ bool valid() noexcept;
 
 **true** se l'oggetto ha uno stato asincrono associato; in caso contrario, **false**.
 
-## <a name="wait"></a>  shared_future:: Wait
+## <a name="wait"></a>  shared_future::wait
 
 Blocca il thread corrente finché lo *stato asincrono associato* non è *ready*.
 
@@ -166,7 +166,7 @@ void wait() const;
 
 Uno stato asincrono associato è ready solo se il provider asincrono ha archiviato un valore restituito o un'eccezione.
 
-## <a name="wait_for"></a>  shared_future:: wait_for
+## <a name="wait_for"></a>  shared_future::wait_for
 
 Blocca il thread corrente finché lo stato asincrono associato non è *ready* o finché non è trascorso un periodo di tempo specificato.
 

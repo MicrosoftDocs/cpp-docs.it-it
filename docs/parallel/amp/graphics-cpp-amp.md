@@ -3,11 +3,11 @@ title: Grafica (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405664"
 ---
 # <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 
@@ -263,7 +263,7 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 
 ## <a name="texture-view-classes"></a>Classi di visualizzazioni di trama
 
-C++ AMP introduce la [classe texture_view](../../parallel/amp/reference/texture-view-class.md) in Visual Studio 2013. Le visualizzazioni di trama supportano le stesse texel gli stessi tipi e il [classe texture](../../parallel/amp/reference/texture-class.md), ma a differenza delle trame, forniscono l'accesso a funzionalità hardware aggiuntive come le mipmap e il campionamento della trama. Le visualizzazioni di trama supportano l'accesso di sola scrittura, di sola lettura e di lettura e scrittura ai dati di trama sottostanti.
+C++AMP introduce la [classe texture_view](../../parallel/amp/reference/texture-view-class.md) in Visual Studio 2013. Le visualizzazioni di trama supportano le stesse texel gli stessi tipi e il [classe texture](../../parallel/amp/reference/texture-class.md), ma a differenza delle trame, forniscono l'accesso a funzionalità hardware aggiuntive come le mipmap e il campionamento della trama. Le visualizzazioni di trama supportano l'accesso di sola scrittura, di sola lettura e di lettura e scrittura ai dati di trama sottostanti.
 
 - L'accesso in sola lettura viene fornito dalla specializzazione del modello `texture_view<const T, N>` che supporta elementi con 1, 2 o 4 componenti, il campionamento delle trame e l'accesso dinamico a un intervallo di livelli di mipmap che vengono determinati quando viene creata un'istanza della visualizzazione.
 
@@ -344,8 +344,8 @@ Il tipo di elemento di un oggetto `texture_view`, il relativo stato const e il n
 
 |Tipo|Componenti|Lettura|Write|Campionamento|Accesso alle mipmap|
 |----------|----------------|----------|-----------|--------------|-------------------|
-|texture_view\<const T, N >|1, 2, 4|Sì|No (1)|Sì|Sì, indicizzabile. L'intervallo viene determinato al momento della creazione delle istanze.|
-|Texture_view\<T, N >|1<br /><br /> 2, 4|Sì<br /><br /> No (2)|Sì<br /><br /> Sì|No (1)<br /><br /> No (1)|Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.<br /><br /> Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.|
+|texture_view\<const T, N >|1, 2, 4|Yes|No (1)|Yes|Sì, indicizzabile. L'intervallo viene determinato al momento della creazione delle istanze.|
+|Texture_view\<T, N >|1<br /><br /> 2, 4|Yes<br /><br /> No (2)|Yes<br /><br /> Yes|No (1)<br /><br /> No (1)|Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.<br /><br /> Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.|
 
 Da questa tabella, è possibile vedere che le visualizzazioni di trama in sola lettura supportano completamente le nuove funzionalità a fronte dell'impossibilità di scrivere sulla visualizzazione. Le visualizzazioni di trama che consentono la scrittura sono limitate in quanto possono accedere a un solo livello di mipmap. Le visualizzazioni di trama in lettura e scrittura sono ancora più specializzate di quelle scrivibili, poiché richiedono che il tipo di elemento della visualizzazione di trama abbia un solo componente. Si noti che il campionamento non è supportato per le visualizzazioni di trama scrivibili perché è un'operazione orientata alla lettura.
 

@@ -1,6 +1,6 @@
 ---
 title: Operatori &lt;set&gt;
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - set/std::operator!=
 - set/std::operator&gt;
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: f6354da2a7b4cf6419be4aae1a8d5f20356a4012
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16308623a845fdbf804f4e72f2159bc2a2dbc76b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412592"
 ---
 # <a name="ltsetgt-operators"></a>Operatori &lt;set&gt;
 
 ||||
 |-|-|-|
-|[operator!= (set)](#op_neq)|[operator&gt; (set)](#op_gt)|[operator&gt;= (set)](#eq)|
-|[operator&lt; (set)](#op_lt)|[operator&lt;= (set)](#eq)|[operator== (set)](#op_eq_eq)|
+|[operator!= (set)](#op_neq)|[operator&gt; (set)](#op_gt)|[operator&gt;= (set)](#op_gt_eq)|
+|[operator&lt; (set)](#op_lt)|[operator&lt;= (set)](#op_lt_eq)|[operator== (set)](#op_eq_eq)|
 |[operator!= (multiset)](#op_neq_multiset)|[operator&gt; (multiset)](#op_gt_multiset)|[operator&gt;= (multiset)](#op_gt_eq_multiset)|
 |[operator&lt; (multiset)](#op_lt_multiset)|[operator&lt;= (multiset)](#op_lt_eq_multiset)|[operator== (multiset)](#op_eq_eq_multiset)|
 

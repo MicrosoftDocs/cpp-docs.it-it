@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
 ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414009"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 

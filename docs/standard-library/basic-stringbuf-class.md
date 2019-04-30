@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409759"
 ---
 # <a name="basicstringbuf-class"></a>Classe basic_stringbuf
 
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parametri
 
-*Modalità*<br/>
+*_Mode*<br/>
 Una delle enumerazioni in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *str*<br/>
@@ -235,13 +235,13 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*_Off*<br/>
 La posizione da cercare relativo alla *Way*. Per altre informazioni, vedere [basic_stringbuf::off_type](#off_type).
 
-*Way*<br/>
+*_Way*<br/>
 Punto iniziale per le operazioni di offset. Per i valori possibili, vedere [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*Modalità*<br/>
+*_Mode*<br/>
 Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura. Per altre informazioni, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Valore restituito
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 Posizione da cercare.
 
-*Modalità*<br/>
+*_Mode*<br/>
 Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
 
 ### <a name="return-value"></a>Valore restituito
@@ -379,7 +379,7 @@ Se la funzione non può essere eseguita correttamente, restituisce **traits_type
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta prova a estrarre l'elemento corrente `byte` dal buffer di input, incrementa la posizione del flusso corrente e restituisce l'elemento come **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**). È possibile farlo in un modo: se è disponibile una posizione di lettura, accetta `byte` come elemento archiviato nella posizione di lettura e incrementa il puntatore successivo per il buffer di input.
+La funzione membro virtuale protetta prova a estrarre l'elemento corrente `byte` dal buffer di input, incrementa la posizione del flusso corrente e restituisce l'elemento come **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**). È possibile farlo in uno dei modi: Se è disponibile una posizione di lettura, accetta `byte` come elemento archiviato nella posizione di lettura e incrementa il puntatore successivo per il buffer di input.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 

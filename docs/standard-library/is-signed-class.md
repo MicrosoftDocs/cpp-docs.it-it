@@ -8,11 +8,11 @@ helpviewer_keywords:
 - is_signed
 ms.assetid: 20ae44d9-22ad-4fbd-b26a-f18c62689451
 ms.openlocfilehash: eacc271697930bec64630c0a1be612bd89eeb91f
-ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59534136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413530"
 ---
 # <a name="issigned-class"></a>Classe is_signed
 

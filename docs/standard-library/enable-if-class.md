@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413762"
 ---
 # <a name="enableif-class"></a>Classe enable_if
 
@@ -50,7 +50,7 @@ In C++ un errore di sostituzione dei parametri modello non è un errore vero e p
 
 Ecco quattro scenari di esempio:
 
-- Scenario 1: wrapping del tipo restituito di una funzione:
+- Scenario 1: Il tipo restituito di una funzione di wrapping:
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- Scenario 2: aggiunta di un parametro di funzione che include un argomento predefinito:
+- Scenario 2: Aggiunta di un parametro di funzione che include un argomento predefinito:
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- Scenario 3: aggiunta di un parametro di modello che include un argomento predefinito:
+- Scenario 3: Aggiunta di un parametro di modello che include un argomento predefinito:
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- Scenario 4: se la funzione include un argomento non basato su modello, è possibile eseguire il wrapping del relativo tipo:
+- Scenario 4: Se la funzione ha un argomento non basato su modelli, è possibile disporre del relativo tipo:
 
 ```cpp
     template <typename T>

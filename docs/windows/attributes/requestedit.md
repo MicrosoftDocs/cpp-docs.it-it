@@ -7,11 +7,11 @@ helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
 ms.openlocfilehash: 30b0c5ec807865280c8e538ea701c3d1a5c4ef9c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407380"
 ---
 # <a name="requestedit"></a>requestedit
 

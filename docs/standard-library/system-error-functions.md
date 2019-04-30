@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::make_error_condition
 - std::system_category
 ms.openlocfilehash: 78be83af678b553babbf1cde3d96c1507940b611
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58172907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412111"
 ---
 # <a name="ltsystemerrorgt-functions"></a>Funzioni &lt;system_error&gt;
 

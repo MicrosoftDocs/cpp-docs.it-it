@@ -7,11 +7,11 @@ helpviewer_keywords:
 - system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
 ms.openlocfilehash: bad260e5372965c35517986da8feb2cfa3c0e1d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412228"
 ---
 # <a name="systemerror-class"></a>Classe system_error
 

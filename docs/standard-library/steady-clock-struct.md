@@ -5,11 +5,11 @@ f1_keywords:
 - chrono/std::chrono::steady_clock
 ms.assetid: 970d12ec-fc80-4391-a2f7-b57b2aec668d
 ms.openlocfilehash: 19e9f5c4dcfc7306b989605894e9a0787e0920ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412397"
 ---
 # <a name="steadyclock-struct"></a>Struct steady_clock
 
@@ -31,7 +31,7 @@ Un clock Ã¨ *monotonico* se il valore restituito da una prima chiamata a `now` Ã
 
 ### <a name="public-typedefs"></a>TypeDef pubblici
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`steady_clock::duration`|Un sinonimo `nanoseconds`, definita in \<chrono >.|
 |`steady_clock::period`|Un sinonimo `nano`, definita in \<ratio >.|
@@ -46,7 +46,7 @@ Un clock Ã¨ *monotonico* se il valore restituito da una prima chiamata a `now` Ã
 
 ## <a name="public-constants"></a>Costanti pubbliche
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`steady_clock::is_steady`|Mantiene **true**. Un oggetto `steady_clock` Ã¨ *costante*.|
 

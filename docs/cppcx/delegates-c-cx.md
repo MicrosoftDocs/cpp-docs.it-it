@@ -3,11 +3,11 @@ title: Delegati (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
 ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406925"
 ---
 # <a name="delegates-ccx"></a>Delegati (C++/CX)
 
@@ -106,7 +106,7 @@ Nell'esempio riportato di seguito viene illustrato come costruire un delegato da
 [!code-cpp[Cx_delegates#115](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#115)]
 
 > [!WARNING]
-> Se usi un'espressione lambda che acquisisce il puntatore "this", assicurati di utilizzare l'operatore `-=` per annullare in modo esplicito la registrazione dall'evento prima di uscire da lambda. Per altre informazioni, vedere [Eventi](../cppcx/events-c-cx.md).
+> Se usi un'espressione lambda che acquisisce il puntatore "this", assicurati di utilizzare l'operatore `-=` per annullare in modo esplicito la registrazione dall'evento prima di uscire da lambda. Per ulteriori informazioni, vedi [Eventi](../cppcx/events-c-cx.md).
 
 ### <a name="generic-delegates"></a>Delegati generici
 
@@ -134,4 +134,4 @@ Se hai familiarità con i gestori eventi di .NET, saprai che è preferibile crea
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+[Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

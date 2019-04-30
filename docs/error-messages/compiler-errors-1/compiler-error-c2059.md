@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
 ms.openlocfilehash: 2fb2aa86a1fd8f8e0710d787682fdd44abd941ec
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408667"
 ---
 # <a name="compiler-error-c2059"></a>Errore del compilatore C2059
 

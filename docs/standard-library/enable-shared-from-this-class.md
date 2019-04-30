@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_shared_from_this
 ms.assetid: 9237603d-22e2-421f-b070-838ac006baf5
 ms.openlocfilehash: 9bf5055aefe505461e81703373ecb042a1f7224a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413723"
 ---
 # <a name="enablesharedfromthis-class"></a>Classe enable_shared_from_this
 
@@ -102,5 +102,5 @@ sp2->val == 3
 
 ## <a name="see-also"></a>Vedere anche
 
-[enable_shared_from_this:: shared_from_this](#shared_from_this)<br/>
+[enable_shared_from_this::shared_from_this](#shared_from_this)<br/>
 [Classe shared_ptr](../standard-library/shared-ptr-class.md)<br/>

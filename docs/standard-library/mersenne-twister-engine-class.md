@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
 ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410979"
 ---
 # <a name="mersennetwisterengine-class"></a>Classe mersenne_twister_engine
 
@@ -50,7 +50,7 @@ Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere 
 *U*, *S*, *T*, *L*<br/>
 **Parametri di spostamento per la crittografia**. Usati come valori di spostamento durante la crittografia. Precondizione: `U,S,T,L ≤ W`
 
-*1!D*, *B*, *C*<br/>
+*D*, *B*, *C*<br/>
 **Parametri maschera di bit crittografia**. Usati come valori di maschera di bit durante la crittografia. Precondizione: `D,B,C ≤ (1u<<W) - 1u`
 
 *F*<br/>
@@ -77,7 +77,7 @@ L'argomento del modello `UIntType` deve essere abbastanza grande da contenere va
 
 Sebbene sia possibile costruire un generatore direttamente da questo motore, è anche possibile usare uno dei typedef predefiniti seguenti:
 
-`mt19937`: motore Mersenne Twister a 32 bit (Matsumoto e Nishimura, 1998).
+`mt19937`: Motore Mersenne Twister a 32 bit (Matsumoto e Nishimura, 1998).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -88,7 +88,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`: motore Mersenne Twister a 64 bit (Matsumoto e Nishimura, 2000).
+`mt19937_64`: Motore Mersenne Twister a 64 bit (Matsumoto e Nishimura, 2000).
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,

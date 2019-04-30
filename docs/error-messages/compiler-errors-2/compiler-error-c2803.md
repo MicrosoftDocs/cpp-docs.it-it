@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2803
 ms.assetid: 2cdbe374-8cc4-4c4e-ba15-062a7479e937
 ms.openlocfilehash: d20b8dde9f4134273adcba0f947f685f7ce7d213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408524"
 ---
 # <a name="compiler-error-c2803"></a>Errore del compilatore C2803
 
@@ -19,7 +19,7 @@ ms.locfileid: "50447268"
 
 L'operatore di overload non dispone di un parametro di tipo classe.
 
-Per poter scrivere "a < b", con a e b di classe tipo A, è necessario passare almeno un parametro per riferimento (utilizzando riferimenti e non puntatori) o per valore.
+È necessario passare almeno un parametro per riferimento (non utilizzando i puntatori, ma i riferimenti) oppure per valore sia in grado di scrivere "un < b" (una e b in fase di classe tipo).
 
 Se entrambi i parametri sono puntatori sarà un semplice confronto degli indirizzi di puntatori e non userà la conversione definita dall'utente.
 

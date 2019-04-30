@@ -20,11 +20,11 @@ helpviewer_keywords:
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 ms.openlocfilehash: f4d0bc2c2922374d27bba3c0693e50f7930dbe67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413697"
 ---
 # <a name="errorcode-class"></a>Classe error_code
 
@@ -90,8 +90,8 @@ void assign(value_type val, const error_category& _Cat);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Val*|Il valore del codice di errore da archiviare nell'`error_code`.|
-|*Servizio*|La categoria dell'errore da archiviare nell'`error_code`.|
+|*val*|Il valore del codice di errore da archiviare nell'`error_code`.|
+|*_Cat*|La categoria dell'errore da archiviare nell'`error_code`.|
 
 ### <a name="remarks"></a>Note
 
@@ -154,8 +154,8 @@ error_code(_Enum _Errcode,
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Val*|Il valore del codice di errore da archiviare nell'`error_code`.|
-|*Servizio*|La categoria dell'errore da archiviare nell'`error_code`.|
+|*val*|Il valore del codice di errore da archiviare nell'`error_code`.|
+|*_Cat*|La categoria dell'errore da archiviare nell'`error_code`.|
 |*_Errcode*|Il valore di enumerazione da archiviare nell'`error_code`.|
 
 ### <a name="remarks"></a>Note

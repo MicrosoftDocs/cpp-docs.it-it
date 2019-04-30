@@ -39,11 +39,11 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411071"
 ---
 # <a name="allocatorbase-class"></a>Classe allocator_base
 
@@ -61,7 +61,7 @@ class allocator_base
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*Type*|Tipo degli elementi assegnato dall'allocatore.|
-|*Sincronizzazione*|I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](../standard-library/sync-none-class.md), la [Classe sync_per_container](../standard-library/sync-per-container-class.md), la [Classe sync_per_thread](../standard-library/sync-per-thread-class.md) o la [Classe sync_shared](../standard-library/sync-shared-class.md).|
+|*Sync*|I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](../standard-library/sync-none-class.md), la [Classe sync_per_container](../standard-library/sync-per-container-class.md), la [Classe sync_per_thread](../standard-library/sync-per-thread-class.md) o la [Classe sync_shared](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Costruttori
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*val*<br/>
 Valore const o nonconst dell'oggetto di cui viene cercato l'indirizzo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -240,7 +240,7 @@ void construct(pointer ptr, const Type& val);
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*ptr*|Puntatore al percorso in cui deve essere creato l'oggetto.|
-|*Val*|Il valore con cui viene inizializzato l'oggetto costruito.|
+|*val*|Il valore con cui viene inizializzato l'oggetto costruito.|
 
 ### <a name="remarks"></a>Note
 

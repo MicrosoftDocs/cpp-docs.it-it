@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410973"
 ---
 # <a name="allocatortraits-class"></a>Classe allocator_traits
 
@@ -78,7 +78,7 @@ class allocator_traits;
 
 I metodi statici seguenti chiamano il metodo corrispondente in un parametro allocatore specificato.
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[allocate](#allocate)|Metodo statico che alloca la memoria usando il parametro allocatore specificato.|
 |[construct](#construct)|Metodo statico che usa un allocatore specificato per costruire un oggetto.|
@@ -106,7 +106,7 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parametri
 
-*Al*<br/>
+*al*<br/>
 Un oggetto allocatore.
 
 *count*<br/>
@@ -123,7 +123,7 @@ Il primo metodo statico restituisce `al.allocate(count)`.
 
 Il secondo metodo statico restituisce `al.allocate(count, hint)`, se l'espressione è ben formata; in caso contrario, restituisce `al.allocate(count)`.
 
-## <a name="construct"></a>  allocator_traits:: Construct
+## <a name="construct"></a>  allocator_traits::construct
 
 Metodo statico che usa un allocatore specificato per costruire un oggetto.
 
@@ -134,7 +134,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parametri
 
-*Al*<br/>
+*al*<br/>
 Un oggetto allocatore.
 
 *ptr*<br/>
@@ -159,7 +159,7 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parametri
 
-*Al*<br/>
+*al*<br/>
 Un oggetto allocatore.
 
 *ptr*<br/>
@@ -174,7 +174,7 @@ Questo metodo chiama `al.deallocate(ptr, count)`.
 
 Questo metodo non genera nulla.
 
-## <a name="destroy"></a>  allocator_traits:: Destroy
+## <a name="destroy"></a>  allocator_traits::destroy
 
 Metodo statico che usa un allocatore specificato per chiamare il distruttore in un oggetto senza la deallocazione della memoria.
 
@@ -185,7 +185,7 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parametri
 
-*Al*<br/>
+*al*<br/>
 Un oggetto allocatore.
 
 *ptr*<br/>
@@ -205,7 +205,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parametri
 
-*Al*<br/>
+*al*<br/>
 Un oggetto allocatore.
 
 ### <a name="remarks"></a>Note
@@ -222,7 +222,7 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parametri
 
-*Al*<br/>
+*al*<br/>
 Un oggetto allocatore.
 
 ### <a name="return-value"></a>Valore restituito

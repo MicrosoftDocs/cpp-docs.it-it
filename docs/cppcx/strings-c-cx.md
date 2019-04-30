@@ -3,15 +3,15 @@ title: Stringhe (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
 ms.openlocfilehash: 8f7cbdd02cb1d38231c476ba939009a95533a046
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403243"
 ---
 # <a name="strings-ccx"></a>Stringhe (C++/CX)
 
-Viene rappresentato il testo in Windows Runtime in C + + c++ /CX per il [classe platform:: String](../cppcx/platform-string-class.md). Usare il `Platform::String Class` quando si passano le stringhe e viceversa ai metodi nelle classi di Windows Runtime o quando si interagisce con altri componenti Runtime Windows attraverso il limite dell'interfaccia binaria (ABI). L'oggetto `Platform::String Class` fornisce i metodi per numerose operazioni di stringa comuni ma non è progettato per essere una classe String completa. Nel modulo C++ utilizza i tipi di stringa C++ standard quali [wstring](../standard-library/basic-string-class.md) per l'elaborazione dei testi importanti e converti il risultato finale in [Platform::String^](../cppcx/platform-string-class.md) prima di passarlo a o da un'interfaccia pubblica. La conversione tra `wstring` o `wchar_t*` e `Platform::String`è un'operazione semplice ed efficace.
+Viene rappresentato il testo nel Runtime di Windows in C++/CX per la [classe platform:: String](../cppcx/platform-string-class.md). Usare il `Platform::String Class` quando si passano le stringhe e viceversa ai metodi nelle classi di Windows Runtime o quando si interagisce con altri componenti Runtime Windows attraverso il limite dell'interfaccia binaria (ABI). L'oggetto `Platform::String Class` fornisce i metodi per numerose operazioni di stringa comuni ma non è progettato per essere una classe String completa. Nel modulo C++ utilizza i tipi di stringa C++ standard quali [wstring](../standard-library/basic-string-class.md) per l'elaborazione dei testi importanti e converti il risultato finale in [Platform::String^](../cppcx/platform-string-class.md) prima di passarlo a o da un'interfaccia pubblica. La conversione tra `wstring` o `wchar_t*` e `Platform::String`è un'operazione semplice ed efficace.
 
 **Passaggio rapido**
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], unclipped device context
 ms.assetid: 9c020063-73da-4803-bf7b-2e1fd950c9ed
 ms.openlocfilehash: 0f129c0bfa5bd76df4ba34b117e7ed8aa08c2ecb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411812"
 ---
 # <a name="using-an-unclipped-device-context"></a>Utilizzo di un contesto di dispositivo integro
 
@@ -25,4 +25,4 @@ Se si utilizza l'attivazione senza finestra, questa ottimizzazione non ha alcun 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Controlli ActiveX MFC: Ottimizzazione](../mfc/mfc-activex-controls-optimization.md)
+[Controlli ActiveX MFC: ottimizzazione](../mfc/mfc-activex-controls-optimization.md)

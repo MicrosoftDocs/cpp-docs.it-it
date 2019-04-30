@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4297
 ms.assetid: ba92fcdc-9f70-4f60-abe6-281f9582ca59
 ms.openlocfilehash: 07dd6c65498ddd0d377ec3e0fbc7b44e52bec96b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408628"
 ---
 # <a name="compiler-warning-level-1-c4297"></a>Avviso del compilatore (livello 1) C4297
 
@@ -23,7 +23,7 @@ Per impostazione predefinita, il compilatore genera identificatori `noexcept(tru
 
 Per altre informazioni sulle specifiche di eccezione, vedere [specifiche di eccezioni (generazione)](../../cpp/exception-specifications-throw-cpp.md). Vedere anche [/EH (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md) per informazioni su come modificare il comportamento in fase di compilazione di gestione delle eccezioni.
 
-Questo avviso viene generato anche per declspec ([dllexport](../../cpp/dllexport-dllimport.md)) le funzioni contrassegnate come extern "C", anche se sono funzioni C++.
+Questo avviso viene generato anche per declspec ([dllexport](../../cpp/dllexport-dllimport.md)) le funzioni contrassegnate come extern "C", anche se sono C++ funzioni.
 
 L'esempio seguente genera l'errore C4297:
 
