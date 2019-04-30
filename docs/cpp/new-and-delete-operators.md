@@ -10,17 +10,17 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441301"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345888"
 ---
 # <a name="new-and-delete-operators"></a>Operatori new e delete
 
 C++ supporta l'allocazione dinamica e alla deallocazione di oggetti utilizzando il [nuove](../cpp/new-operator-cpp.md) e [eliminare](../cpp/delete-operator-cpp.md) operatori. Questi operatori allocano memoria per gli oggetti da un pool denominato archivio libero. Il **nuove** operatore chiama la funzione speciale [operatore new](../cpp/new-operator-cpp.md)e il **Elimina** operatore chiama la funzione speciale [operatore delete](../cpp/delete-operator-cpp.md).
 
-Il **nuovo** funzione nella libreria Standard C++ supporta il comportamento specificato nello standard C++, che consiste nel generare un'eccezione std:: bad_alloc se l'allocazione di memoria ha esito negativo. Se si desidera ancora la versione di non generante **nuovo**, collega il programma con nothrownew. Tuttavia, quando collega con nothrownew, il valore predefinito **operatore new** nella libreria Standard C++ non funzionerà più.
+Il **nuove** funzionare nel C++ libreria Standard supporta il comportamento specificato nella C++ standard, che consiste nel generare un'eccezione std:: bad_alloc se l'allocazione di memoria ha esito negativo. Se si desidera ancora la versione di non generante **nuovo**, collega il programma con nothrownew. Tuttavia, quando collega con nothrownew, il valore predefinito **operatore new** nella libreria Standard C++ non funzionerà più.
 
 Per un elenco dei file della libreria che includono la libreria di Runtime C e la libreria Standard C++, vedere [funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md).
 

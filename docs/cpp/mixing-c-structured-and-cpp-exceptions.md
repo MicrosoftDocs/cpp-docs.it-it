@@ -9,17 +9,17 @@ helpviewer_keywords:
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
 ms.openlocfilehash: 94d6dc249cb130aaf09d3202b9e8f437d00a9597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548203"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345961"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Combinazione di eccezioni di C++ e C (strutturato)
 
-Se si desidera scrivere codice portabile, non è consigliato l'uso di structured exception handling (SEH) in un programma C++. Tuttavia, può a volte si desidera la compilazione con [/EHa](../build/reference/eh-exception-handling-model.md) e combinare le eccezioni strutturate e codice sorgente C++ e necessarie alcune funzionalità per gestire entrambi i tipi di eccezioni. Poiché un gestore di eccezioni strutturate non prevede il concetto di oggetti o eccezioni tipizzate, non può gestire le eccezioni generate da codice C++. Tuttavia, C++ **catch** gestori possono gestire le eccezioni strutturate. Sintassi di gestione delle eccezioni C++ (**provare**, **throw**, **catch**) non viene accettato dal compilatore C, ma la sintassi di gestione delle eccezioni strutturata (**try**, **except**, **finally**) è supportato dal compilatore C++.
+Se si desidera scrivere codice portabile, non è consigliato l'uso di structured exception handling (SEH) in un programma C++. Tuttavia, può a volte si desidera la compilazione con [/EHa](../build/reference/eh-exception-handling-model.md) e combinare le eccezioni strutturate e codice sorgente C++ e necessarie alcune funzionalità per gestire entrambi i tipi di eccezioni. Poiché un gestore di eccezioni strutturate non prevede il concetto di oggetti o eccezioni tipizzate, non può gestire le eccezioni generate da codice C++. Tuttavia, C++ **catch** gestori possono gestire le eccezioni strutturate. C++sintassi di gestione delle eccezioni (**provare**, **throw**, **catch**) non viene accettato dal compilatore C, ma la sintassi di gestione delle eccezioni strutturata (**try**, **except**, **finally**) è supportato per i C++ compilatore.
 
-Visualizzare [set_se_translator](../c-runtime-library/reference/set-se-translator.md) per informazioni su come gestire le eccezioni strutturate come eccezioni C++.
+Visualizzare [set_se_translator](../c-runtime-library/reference/set-se-translator.md) per informazioni su come gestire le eccezioni strutturate come C++ eccezioni.
 
 Se si combinano strutturato e delle eccezioni C++, tenere presenti questi possibili problemi:
 

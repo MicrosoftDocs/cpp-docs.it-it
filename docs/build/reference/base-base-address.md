@@ -21,11 +21,11 @@ helpviewer_keywords:
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
 ms.openlocfilehash: dc6380903af0be2e6696ca3589813c249f71dd05
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812278"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341016"
 ---
 # <a name="base-base-address"></a>/BASE (indirizzo di base)
 
@@ -78,5 +78,5 @@ Un altro modo per impostare l'indirizzo di base consiste nell'usare la *BASE* ar
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

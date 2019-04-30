@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Automation [C++], DLLs
 ms.assetid: 2728ecd1-14e2-4ae0-a946-e749e11dbb74
 ms.openlocfilehash: 4ac60c44348ea21f490cb312285ae88ac682cf7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821248"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341670"
 ---
 # <a name="automation-in-a-dll"></a>Automazione in una DLL
 

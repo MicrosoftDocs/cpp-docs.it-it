@@ -3,11 +3,11 @@ title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
 ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812252"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341053"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 

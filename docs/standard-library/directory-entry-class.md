@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533822"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342981"
 ---
 # <a name="directoryentry-class"></a>Classe directory_entry
 
@@ -84,7 +84,7 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 |[operator<=](#op_lteq)|Restituisce `!(right < *this)`.|
 |[operator>](#op_gt)|Restituisce `right < *this`.|
 |[operator>=](#op_gteq)|Restituisce `!(*this < right)`.|
-|[operator const path_type &](#path_type)|Restituisce `mypath`.|
+|[operator const path_type&](#path_type)|Restituisce `mypath`.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -104,7 +104,7 @@ void assign(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parametri
 
-*PVal*<br/>
+*pval*<br/>
 Il percorso del nome file archiviato.
 
 *stat_arg*<br/>
@@ -128,7 +128,7 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parametri
 
-*PVal*<br/>
+*pval*<br/>
 Il percorso del nome file archiviato.
 
 *stat_arg*<br/>
@@ -137,7 +137,7 @@ Lo stato del nome file archiviato.
 *symstat_arg*<br/>
 Lo stato del collegamento simbolico del nome file archiviato.
 
-## <a name="op_neq"></a> operatore! =
+## <a name="op_neq"></a> operator!=
 
 La funzione membro restituisce `!(*this == right)`.
 
@@ -177,7 +177,7 @@ bool operator==(const directory_entry& right) const noexcept;
 *right*<br/>
 Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
-## <a name="op_lt"></a> Operatore&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 La funzione membro restituisce `mypath < right.mypath`.
 
@@ -190,7 +190,7 @@ bool operator<(const directory_entry& right) const noexcept;
 *right*<br/>
 Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
-## <a name="op_lteq"></a> Operatore&lt;=
+## <a name="op_lteq"></a> operator&lt;=
 
 La funzione membro restituisce `!(right < *this)`.
 
@@ -203,7 +203,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 *right*<br/>
 Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
-## <a name="op_gt"></a> Operatore&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 La funzione membro restituisce `right < *this`.
 
@@ -216,7 +216,7 @@ bool operator&gt;(const directory_entry& right) const noexcept;
 *right*<br/>
 Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
 
-## <a name="op_gteq"></a> Operatore&gt;=
+## <a name="op_gteq"></a> operator&gt;=
 
 La funzione membro restituisce `!(*this < right)`.
 
@@ -237,7 +237,7 @@ L'operatore membro restituisce `mypath`.
 operator const std::experimental::filesystem::path&() const;
 ```
 
-## <a name="path"></a> Percorso
+## <a name="path"></a> path
 
 La funzione membro restituisce `mypath`.
 
@@ -258,7 +258,7 @@ void replace_filename(
 
 ### <a name="parameters"></a>Parametri
 
-*PVal*<br/>
+*pval*<br/>
 Il percorso del nome file archiviato.
 
 *stat_arg*<br/>
@@ -282,12 +282,12 @@ file_status status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*CE*<br/>
+*ec*<br/>
 Il codice di errore di stato.
 
 ## <a name="symlink_status"></a> symlink_status
 
-Entrambe le funzioni membro restituiscono `mysymstat` probabilmente prima modificato nel modo seguente: se `status_known(mysymstat)` quindi non fare nulla. In caso contrario, `mysymstat = symlink_status(mypval)`.
+Entrambe le funzioni membro restituiscono `mysymstat` probabilmente prima modificato nel modo seguente: Se `status_known(mysymstat)` quindi non fare nulla. In caso contrario, `mysymstat = symlink_status(mypval)`.
 
 ```cpp
 file_status symlink_status() const;
@@ -296,7 +296,7 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*CE*<br/>
+*ec*<br/>
 Il codice di errore di stato.
 
 ## <a name="see-also"></a>Vedere anche

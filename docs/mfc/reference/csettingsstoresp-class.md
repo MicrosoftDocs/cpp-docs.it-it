@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
 ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275194"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64339531"
 ---
 # <a name="csettingsstoresp-class"></a>Classe CSettingsStoreSP
 
@@ -46,7 +46,7 @@ class CSettingsStoreSP
 
 ### <a name="data-members"></a>Membri di dati
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |`m_dwUserData`|Dati utente personalizzati che vengono archiviati nel `CSettingsStoreSP` oggetto. È fornire questi dati nel costruttore del `CSettingsStoreSP` oggetto.|
 |`m_pRegistry`|Il `CSettingsStore`-derivato dell'oggetto che il `Create` Crea metodo.|

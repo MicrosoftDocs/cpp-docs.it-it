@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
 ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278691"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346040"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Spazio dei nomi Concurrency (C++ AMP)
 
@@ -57,7 +57,7 @@ namespace Concurrency;
 
 ### <a name="enumerations"></a>Enumerazioni
 
-|nome|Descrizione|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Enumerazione access_type](concurrency-namespace-enums-amp.md#access_type)|Specifica il tipo di accesso dati.|
 |[Enumerazione queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)|Specifica la modalità di accodamento sono supportate dall'acceleratore.|
@@ -72,7 +72,7 @@ namespace Concurrency;
 |[Operatore operator-(C++ AMP)](concurrency-namespace-operators-amp.md#operator-)|Calcola la differenza per componente tra gli argomenti specificati.|
 |[operatore * Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_star)|Calcola il prodotto per componente degli argomenti specificati.|
 |[operatore / operatore (C++ AMP)](concurrency-namespace-operators-amp.md#operator_div)|Calcola il quoziente per componente degli argomenti specificati.|
-|[Operatore operator % (C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Calcola il modulo del primo argomento specificato dal secondo argomento specificato.|
+|[operatore Operator % (C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Calcola il modulo del primo argomento specificato dal secondo argomento specificato.|
 
 ### <a name="functions"></a>Funzioni
 
@@ -92,12 +92,12 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Di overload. Imposta il valore archiviato nella posizione specificata sulla differenza di tale valore e un valore specificato come operazione atomica.|
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Di overload. Imposta il valore archiviato nella posizione specificata per il bit per bit `xor` di quel valore e un valore specificato come operazione atomica.|
 |[copy](concurrency-namespace-functions-amp.md#copy)|Copia un oggetto C++ AMP. Tutti i requisiti di trasferimento sincrono dei dati sono soddisfatte. I dati non possono essere copiati quando codice è in esecuzione codice su un acceleratore. Il formato generale di questa funzione è `copy(src, dest)`.|
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copia un oggetto C++ AMP e restituisce [completion_future](completion-future-class.md) che può esserci attesa. Impossibile copiare i dati durante l'esecuzione di codice su un acceleratore. Il formato generale di questa funzione è `copy(src, dest)`.|
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copie di un C++ oggetto AMP e restituisce [completion_future](completion-future-class.md) che può esserci attesa. Impossibile copiare i dati durante l'esecuzione di codice su un acceleratore. Il formato generale di questa funzione è `copy(src, dest)`.|
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Interrompe l'esecuzione di una funzione che ha il `restrict(amp)` clausola di restrizione.|
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Stampa una stringa formattata di Visual Studio **Output** finestra e genera un [runtime_exception](runtime-exception-class.md) eccezione che ha la stessa formattazione di stringhe.|
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Stampa una stringa formattata di Visual Studio **Output** finestra. Viene chiamato da una funzione che ha il `restrict(amp)` clausola di restrizione.|
 |[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione finché gli accessi alla memoria globale tutti sono state completate.|
-|[parallel_for_each (funzione) (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Esegue una funzione tra il dominio di calcolo.|
+|[Funzione parallel_for_each (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Esegue una funzione tra il dominio di calcolo.|
 |[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Blocca l'esecuzione di tutti i thread in una sezione fino a `tile_static` gli accessi alla memoria sono state completate.|
 
 ## <a name="constants"></a>Costanti

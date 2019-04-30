@@ -10,11 +10,11 @@ helpviewer_keywords:
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
 ms.openlocfilehash: 93aeabc3fe984bee8a9281281320d61dccd182bf
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739388"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345695"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Procedura: Usando le strutture di effettuare il marshalling di interoperabilità C++
 

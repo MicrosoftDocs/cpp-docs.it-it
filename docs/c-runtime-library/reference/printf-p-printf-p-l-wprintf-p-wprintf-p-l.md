@@ -40,11 +40,11 @@ helpviewer_keywords:
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
 ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660361"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345194"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
@@ -78,7 +78,7 @@ int _wprintf_p_l(
 *format*<br/>
 Controllo del formato.
 
-*argomento*<br/>
+*argument*<br/>
 Argomenti facoltativi.
 
 *locale*<br/>
@@ -108,14 +108,14 @@ Se *formato* oppure *argomento* sono **NULL**, o stringa di formato contiene car
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tprintf_p**|**_printf_p**|**_printf_p**|**_wprintf_p**|
-|**tprintf_p_l**|**_printf_p_l**|**_printf_p_l**|**_wprintf_p_l**|
+|**_tprintf_p_l**|**_printf_p_l**|**_printf_p_l**|**_wprintf_p_l**|
 
 ## <a name="requirements"></a>Requisiti
 
 |Routine|Intestazione obbligatoria|
 |-------------|---------------------|
-|**printf_p**, **printf_p_l**|\<stdio.h>|
-|**wprintf_p**, **wprintf_p_l**|\<stdio.h> o \<wchar.h>|
+|**_printf_p**, **_printf_p_l**|\<stdio.h>|
+|**_wprintf_p**, **_wprintf_p_l**|\<stdio.h> o \<wchar.h>|
 
 La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 

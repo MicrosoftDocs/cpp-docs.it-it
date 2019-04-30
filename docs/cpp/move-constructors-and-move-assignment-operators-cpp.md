@@ -1,15 +1,15 @@
 ---
-title: 'Procedura: definire costruttori di spostamento e operatori di assegnazione di spostamento (C++)'
+title: 'Procedura: Definire i costruttori di spostamento e operatori di assegnazione di spostamento (C++)'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504520"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345019"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Costruttori di spostamento e operatori di assegnazione di spostamento (C++)
 
@@ -287,7 +287,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.
 ```
 
-La versione di questo esempio che usa la semantica di spostamento è più efficiente rispetto alla versione che non usa tale semantica in quanto esegue meno operazioni di copia, allocazione e deallocazione di memoria.
+La versione di questo esempio che utilizza la semantica di spostamento è più efficiente rispetto alla versione che non utilizza tale semantica in quanto esegue meno operazioni di copia, allocazione e deallocazione di memoria.
 
 ## <a name="robust-programming"></a>Programmazione efficiente
 
@@ -312,4 +312,4 @@ Il [std:: Move](../standard-library/utility-functions.md#move) funzione mantiene
 ## <a name="see-also"></a>Vedere anche
 
 [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std:: Move](../standard-library/utility-functions.md#move)
+[std::move](../standard-library/utility-functions.md#move)

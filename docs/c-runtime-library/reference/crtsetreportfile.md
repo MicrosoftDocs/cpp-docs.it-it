@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
 ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464246"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343013"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
@@ -47,7 +47,7 @@ _HFILE _CrtSetReportFile(
 *reportType*<br/>
 Tipo di report: **CRT_WARN**, **CRT_ERROR**, e **CRT_ASSERT**.
 
-*Impossibile*<br/>
+*reportFile*<br/>
 Nuovo file di report per *reportType*.
 
 ## <a name="return-value"></a>Valore restituito
@@ -106,7 +106,7 @@ Il file di report usato da ogni tipo di report può essere controllato separatam
 
 La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-**Librerie:** solo le versioni di debug delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+**Librerie:** Le versioni di debug [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md) solo.
 
 ## <a name="see-also"></a>Vedere anche
 

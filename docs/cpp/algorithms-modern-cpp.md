@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
 ms.openlocfilehash: b972e575c982ae2523ec560a6237eac76ceaf834
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220153"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345180"
 ---
 # <a name="algorithms-modern-c"></a>Algoritmi (C++ moderno)
 
@@ -61,7 +61,7 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 
 ### <a name="range-based-for-loops"></a>Basato su intervallo per i cicli
 
-Basato su intervallo **per** ciclo è una C + + 11 funzionalità del linguaggio, non un algoritmo della libreria Standard C++. Ma merita di essere menzionato in questa discussione sui cicli. Basato su intervallo **per** i cicli sono un'estensione delle **per** (parola chiave) e forniscono un modo pratico ed efficiente per scrivere cicli che scorrono un intervallo di valori. I contenitori della libreria Standard C++, stringhe e matrici sono pronti all'uso in base a intervallo **per** cicli. Per abilitare questa nuova sintassi di iterazione per il tipo definito dall'utente, aggiungere il supporto seguente:
+Basato su intervallo **per** ciclo non è una funzionalità di C++11 c++11 linguaggio, un C++ algoritmo della libreria Standard. Ma merita di essere menzionato in questa discussione sui cicli. Basato su intervallo **per** i cicli sono un'estensione delle **per** (parola chiave) e forniscono un modo pratico ed efficiente per scrivere cicli che scorrono un intervallo di valori. I contenitori della libreria Standard C++, stringhe e matrici sono pronti all'uso in base a intervallo **per** cicli. Per abilitare questa nuova sintassi di iterazione per il tipo definito dall'utente, aggiungere il supporto seguente:
 
 - Oggetto `begin` metodo che restituisce un iteratore all'inizio della struttura e un `end` metodo che restituisce un iteratore alla fine della struttura.
 

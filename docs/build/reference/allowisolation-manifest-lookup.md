@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
 ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818453"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341073"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Ricerca di manifesti)
 
@@ -47,5 +47,5 @@ Per altre informazioni, vedere [Manifest Files Reference](/windows/desktop/SbsCs
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento del linker MSVC](linking.md)<br/>
-[Opzioni del Linker MSVC](linker-options.md)
+[Informazioni di riferimento sul linker MSVC](linking.md)<br/>
+[Opzioni del linker MSVC](linker-options.md)

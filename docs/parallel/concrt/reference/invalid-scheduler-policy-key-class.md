@@ -9,11 +9,11 @@ helpviewer_keywords:
 - invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
 ms.openlocfilehash: 1bc2f1cffdeba5f81bd96932ecef23a563fac351
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274063"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341102"
 ---
 # <a name="invalidschedulerpolicykey-class"></a>Classe invalid_scheduler_policy_key
 
