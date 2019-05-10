@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216421"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222055"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operatori Left Shift e Right Shift (&gt; &gt; e &lt; &lt;)
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Se si sposta a sinistra un numero con segno coinvolgendo il bit di segno, il risultato sarà indefinito. Nell'esempio seguente viene illustrato ciò che accade in Visual C++ quando un bit viene spostato a sinistra nella posizione del bit di segno.
+Se si sposta a sinistra un numero con segno coinvolgendo il bit di segno, il risultato sarà indefinito. Nell'esempio seguente viene illustrato cosa accade quando un bit 1 viene spostato a sinistra nella posizione di bit di segno.
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 L'operatore di spostamento a destra causa lo schema di bit nel *shift-expression* di spostare a destra del numero di posizioni specificato da *additive-expression*. Per i numeri senza segno, le posizioni dei bit liberate dall'operazione di spostamento vengono riempite con zero. Per i numeri con segno, il bit di segno viene utilizzato per riempire le posizioni dei bit liberate. In altre parole, se il numero è positivo, si utilizza 0, se il numero è negativo, si utilizza 1.
 
 > [!IMPORTANT]
-> Il risultato di uno spostamento a destra di un numero negativo con segno è dipendente dall'implementazione. Sebbene Visual C++ usi il bit di segno per riempile le posizioni dei bit liberate, non vi è garanzia che anche altre implementazioni facciano lo stesso.
+> Il risultato di uno spostamento a destra di un numero negativo con segno è dipendente dall'implementazione. Sebbene Microsoft C++ compilatore utilizza il bit di segno per riempire le posizioni di bit vuote, non c'è garanzia che le altre implementazioni eseguire anche questa operazione.
 
 Nell'esempio seguente vengono illustrate operazioni di spostamento a destra tramite numeri senza segno:
 

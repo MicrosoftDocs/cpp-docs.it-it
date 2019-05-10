@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148319"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448510"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributi di C++ per COM e .NET
 
@@ -34,7 +34,7 @@ Gli attributi estendono C++ in direzioni non è attualmente possibile senza la c
 
 - Sostituisce la grande quantità di codice IDL richiesti da un componente COM con alcuni attributi concisi.
 
-Ad esempio, per implementare un sink di evento semplice per una classe generica di ATL, è possibile applicare il [event_receiver](event-receiver.md) attributo in una classe specifica, ad esempio `CMyReceiver`. Il `event_receiver` attributo viene quindi compilato dal compilatore Visual C++, che inserisce il codice appropriato nel file di oggetto.
+Ad esempio, per implementare un sink di evento semplice per una classe generica di ATL, è possibile applicare il [event_receiver](event-receiver.md) attributo in una classe specifica, ad esempio `CMyReceiver`. Il `event_receiver` attributo viene quindi compilato da Microsoft C++ compilatore, che inserisce il codice appropriato nel file di oggetto.
 
 ```cpp
 [event_receiver(com)]
@@ -49,7 +49,7 @@ class CMyReceiver
 
 ## <a name="basic-mechanics-of-attributes"></a>Meccanismi di base degli attributi
 
-Esistono tre modi per inserire attributi nel progetto. In primo luogo, è possibile inserirli manualmente il codice sorgente. In secondo luogo, è possibile inserire tramite la griglia delle proprietà di un oggetto nel progetto. Infine, è possibile inserire tramite le procedure guidate diverse. Per altre informazioni sull'uso di **delle proprietà** finestra e le procedure guidate diverse, vedere [Creating and Managing Visual C++ Projects](../../build/creating-and-managing-visual-cpp-projects.md).
+Esistono tre modi per inserire attributi nel progetto. In primo luogo, è possibile inserirli manualmente il codice sorgente. In secondo luogo, è possibile inserire tramite la griglia delle proprietà di un oggetto nel progetto. Infine, è possibile inserire tramite le procedure guidate diverse. Per altre informazioni sull'uso di **delle proprietà** finestra e le procedure guidate diverse, vedere [progetti di Visual Studio - C++ ](../../build/creating-and-managing-visual-cpp-projects.md).
 
 Come prima, quando viene compilato il progetto, il compilatore analizza ogni file di origine C++, creando un file oggetto. Tuttavia, quando il compilatore rileva un attributo, viene analizzato e ne verifica la sintassi. Il compilatore chiama quindi in modo dinamico un provider di attributi per inserire il codice o apportare altre modifiche in fase di compilazione. L'implementazione del provider è diverso a seconda del tipo di attributo. Ad esempio, gli attributi relativi a ATL vengono implementati da Atlprov.
 
@@ -64,7 +64,7 @@ Ad esempio la maggior parte dei costrutti C++, gli attributi hanno un set di car
 
 ## <a name="building-an-attributed-program"></a>Compilazione di un programma con attributi
 
-Dopo aver inserito gli attributi di Visual C++ nel codice sorgente, è possibile il compilatore Visual C++ per produrre un file con estensione idl e libreria dei tipi per l'utente. Le seguenti opzioni del linker consentono di generare file con estensione tlb e IDL:
+Dopo aver inserito l'oggetto visivo C++ gli attributi nel codice sorgente, si consiglia di Microsoft C++ compilatore genererà un file con estensione idl e libreria dei tipi per l'utente. Le seguenti opzioni del linker consentono di generare file con estensione tlb e IDL:
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 

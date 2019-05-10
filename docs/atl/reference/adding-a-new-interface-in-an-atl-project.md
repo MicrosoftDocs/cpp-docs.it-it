@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 99f262d420cd503c6ca385ed29bcaa2647c5f556
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 15283439bdcf76fea64d677ad84bee333833dc71
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249193"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221218"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Aggiunta di una nuova interfaccia in un progetto ATL
 
@@ -43,7 +43,7 @@ Quando si aggiunge un'interfaccia per l'oggetto o il controllo, si crea funzioni
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Tipi di progetto Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++tipi di progetto in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 0cbab7c7cca1fc88bb99210262be45c56b6be7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391426"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447765"
 ---
 # <a name="compiler-warning-level-4-c4459"></a>Compilatore avviso (livello 4) C4459
 
@@ -19,7 +19,7 @@ ms.locfileid: "62391426"
 
 La dichiarazione di *identifier* nell'ambito locale nasconde la dichiarazione dei con denominazione identica *identificatore* in ambito globale. Questo avviso informa l'utente che fa riferimento a *identificatore* in questo ambito risolvono nella versione dichiarata localmente, non la versione globale, che potrebbe non essere lo scopo previsto. In generale, è consigliabile che è ridurre al minimo l'uso delle variabili globali come una buona norma di progettazione. Per ridurre al minimo inquinamento dello spazio dei nomi globali, è consigliabile usare uno spazio dei nomi denominato per le variabili globali.
 
-Questo avviso è stata introdotta in Visual Studio 2015, Visual c++ versione del compilatore 18.00 inizia. Per eliminare gli avvisi da tale versione del compilatore o in un secondo momento durante la migrazione del codice, usare il [/WV:18](../../build/reference/compiler-option-warning-level.md) opzione del compilatore.
+Questo avviso è stata introdotta in Visual Studio 2015, in Microsoft C++ versione del compilatore 18.00 inizia. Per eliminare gli avvisi da tale versione del compilatore o in un secondo momento durante la migrazione del codice, usare il [/WV:18](../../build/reference/compiler-option-warning-level.md) opzione del compilatore.
 
 ## <a name="example"></a>Esempio
 

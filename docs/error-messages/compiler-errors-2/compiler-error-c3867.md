@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242878"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447192"
 ---
 # <a name="compiler-error-c3867"></a>Errore del compilatore C3867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62242878"
 
 Si è cercato di accettare l'indirizzo di una funzione membro senza qualificare la funzione membro con il nome della classe e l'operatore address-of.
 
-Questo errore può essere generato anche in seguito alle operazioni di conformità del compilatore eseguite per Visual C++ 2005: conformità avanzata del puntatore a membro. Il codice compilato prima di Visual C++ 2005 ora genererà l'errore C3867.
+Questo errore può anche essere generato in seguito a operazioni di conformità del compilatore eseguite per Visual Studio 2005: conformità avanzata di puntatore a membro. Il codice compilato prima di Visual Studio 2005 ora genererà l'errore C3867.
 
 ## <a name="example"></a>Esempio
 

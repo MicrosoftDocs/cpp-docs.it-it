@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388774"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447694"
 ---
 # <a name="compiler-error-c2885"></a>Errore del compilatore C2885
 
@@ -21,7 +21,7 @@ ms.locfileid: "62388774"
 
 ## <a name="example"></a>Esempio
 
-Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual C++ 2005: non è più valido per avere una `using` dichiarazione per un tipo annidato, è necessario qualificare in modo esplicito ogni apportate al tipo annidato, inserire il tipo in un nome di riferimento spazio o creare un typedef.
+Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual Studio 2005: non è più valido per avere una `using` dichiarazione per un tipo annidato, è necessario qualificare in modo esplicito ogni riferimento apportate al tipo annidato, inserire il tipo in un n amespace, o creare un typedef.
 
 L'esempio seguente genera l'errore C2885.
 
