@@ -1,16 +1,16 @@
 ---
 title: "Procedura dettagliata: Creazione di un'applicazione barra multifunzione utilizzando MFC"
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a45df5258a16885b50e11d4cca8ba99eb4b3d458
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358307"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558222"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Procedura dettagliata: Creazione di un'applicazione barra multifunzione utilizzando MFC
 
@@ -22,9 +22,7 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per u
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Per creare un'applicazione MFC con una barra multifunzione
 
-1. Usare la **Creazione guidata applicazione MFC** per creare un'applicazione MFC che dispone di una barra multifunzione. Per eseguire la procedura guidata, scegliere il **File** dal menu **New**, quindi fare clic su **progetto**.
-
-1. Nel **nuovo progetto** finestra di dialogo espandere il **Visual C++** nodo sotto **modelli installati**, selezionare **MFC**e quindi scegliere  **Applicazione MFC**. Digitare un nome per il progetto, ad esempio, *MFCRibbonApp*, quindi fare clic su **OK**.
+1. Usare la **Creazione guidata applicazione MFC** per creare un'applicazione MFC che dispone di una barra multifunzione. Vedere [Procedura dettagliata: Utilizzo dei nuovi controlli Shell MFC](walkthrough-using-the-new-mfc-shell-controls.md) per istruzioni su come aprire la procedura guidata per la versione di Visual Studio.
 
 1. Impostare le opzioni seguenti **Creazione guidata applicazione MFC**:
 
@@ -34,7 +32,7 @@ Questa procedura dettagliata si presuppone di aver impostato Visual Studio per u
 
     1. Nel **le proprietà del modello di documento** nella sezione la **estensione File** , digitare un'estensione per i documenti che crea l'applicazione, ad esempio, *mfcrbnapp*.
 
-    1. Nel **supporto per Database** sezione, assicurarsi che **None** sia selezionata.
+    1. Nel **supporto per Database** sezione (solo Visual Studio 2015), assicurarsi che **None** sia selezionata.
 
     1. Nel **funzionalità dell'interfaccia utente** sezione, assicurarsi che **usare una barra multifunzione** sia selezionata.
 

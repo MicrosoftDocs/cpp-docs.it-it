@@ -1,17 +1,17 @@
 ---
 title: Domande frequenti su DLL MFC
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274118"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220940"
 ---
 # <a name="dll-frequently-asked-questions"></a>Domande frequenti relative alle DLL
 
@@ -41,11 +41,7 @@ Una DLL MFC che crea un nuovo thread MFC durante l'avvio smetterà di rispondere
 
 ## <a name="mfc_multithreaded_2"></a> Un'applicazione multithreading può accedere a una DLL MFC in diversi thread?
 
-Applicazioni multithreading possono accedere a DLL di estensione MFC e DLL MFC regolari collegate a MFC in modo dinamico da thread diversi. E, a partire da Visual C++ versione 4.2, un'applicazione può accedere a DLL MFC regolari collegate a MFC in modo statico da più thread creati nell'applicazione.
-
-Prima della versione 4.2, solo un thread esterno è stato possibile collegare a una DLL MFC regolare collegata a MFC in modo statico.
-
-Si noti che il termine USRDLL non sono non è più utilizzato nella documentazione di Visual C++. Una DLL MFC regolare collegata in modo statico a MFC ha le stesse caratteristiche di USRDLL.
+Applicazioni multithreading possono accedere a DLL di estensione MFC e DLL MFC regolari collegate a MFC in modo dinamico da thread diversi. Un'applicazione può accedere DLL MFC regolari collegate a MFC in modo statico da più thread creati nell'applicazione.
 
 ## <a name="mfc_prohibited_classes"></a> Esistono funzioni che non possono essere utilizzate in una DLL MFC o classi MFC?
 
@@ -69,4 +65,4 @@ Una delle possibili cause di perdita di memoria è che MFC crea oggetti temporan
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](dlls-in-visual-cpp.md)
+[Creare DLL C/C++ in Visual Studio](dlls-in-visual-cpp.md)

@@ -2,12 +2,12 @@
 title: Configurazione di programmi per Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273802"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446368"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurazione di programmi per Windows XP
 
@@ -25,7 +25,7 @@ Il set di strumenti della piattaforma Windows XP incluso in Visual Studio è una
 
 1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.
 
-1. Nel **pagine delle proprietà** finestra di dialogo per il progetto, sotto **le proprietà di configurazione** > **generali**, impostare il **setstrumentidellapiattaforma** proprietà per il set di strumenti desiderato di Windows XP. Ad esempio, scegliere **Visual Studio 2017 - Windows XP (v141_xp)** per creare codice per Windows XP e Windows Server 2003 con Microsoft Visual C++ compilatore 2017.
+1. Nel **pagine delle proprietà** finestra di dialogo per il progetto, sotto **le proprietà di configurazione** > **generali**, impostare il **setstrumentidellapiattaforma** proprietà per il set di strumenti desiderato di Windows XP. Ad esempio, scegliere **Visual Studio 2017 - Windows XP (v141_xp)** per creare codice per Windows XP e Windows Server 2003 con Microsoft C++ compilatore in Visual Studio 2017.
 
 ### <a name="c-runtime-support"></a>Supporto di C++ runtime
 

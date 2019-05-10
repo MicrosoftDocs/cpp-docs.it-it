@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270900"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446570"
 ---
 # <a name="general-property-page-project"></a>Pagina delle proprietà Generale (Progetto)
 
@@ -98,7 +98,7 @@ Le proprietà nella sezione Generale influiscono sul percorso dei file creati ne
 
 - **Set di strumenti della piattaforma**
 
-   Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. I progetti di Visual C++ possono usare il set di strumenti predefinito installato da Visual Studio oppure uno dei set di strumenti installato dalle diverse versioni precedenti di Visual Studio, inclusi i set di strumenti che creano eseguibili che possono essere eseguiti in Windowx XP. Per informazioni su come modificare il set di strumenti della piattaforma, vedere [come: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. Visual Studio C++ progetti possono essere destinati a entrambi i set di strumenti predefinito installato da Visual Studio o uno del set di strumenti installati dalle diverse versioni precedenti di Visual Studio, inclusi i set di strumenti che creare file eseguibili che è possono eseguire su Windowx XP. Per informazioni su come modificare il set di strumenti della piattaforma, vedere [come: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Abilita compilazione incrementale gestita**
 

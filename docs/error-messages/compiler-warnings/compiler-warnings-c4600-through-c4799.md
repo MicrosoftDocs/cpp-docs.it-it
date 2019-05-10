@@ -41,11 +41,11 @@ helpviewer_keywords:
 - C4770
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 ms.openlocfilehash: 3df17b115797f4d68621854d072c41aca14a0fd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227031"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857556"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Avvisi del compilatore da C4600 a C4799
 

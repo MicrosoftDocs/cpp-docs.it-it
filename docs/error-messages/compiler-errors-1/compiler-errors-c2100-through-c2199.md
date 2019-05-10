@@ -24,11 +24,11 @@ helpviewer_keywords:
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
 ms.openlocfilehash: 3a5a5368700eb1c4c585826021fefc21c25ecedf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360541"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857406"
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>Errori del compilatore da C2100 a C2199
 

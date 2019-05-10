@@ -1,17 +1,15 @@
 ---
 title: MSBuild dalla riga di comando - C++
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273313"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220567"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>MSBuild dalla riga di comando - C++
 
@@ -53,7 +51,7 @@ Per altre informazioni su MSBuild, vedere:
 
 |Termine|Definizione|
 |----------|----------------|
-|[Procedura dettagliata: Uso di MSBuild per creare un progetto Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Viene illustrato come creare un progetto di Visual C++ usando **MSBuild**.|
+|[Procedura dettagliata: Uso di MSBuild per creare un progetto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Viene illustrato come creare un Visual Studio C++ del progetto mediante **MSBuild**.|
 |[Procedura: Uso degli eventi di compilazione nei progetti MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Viene illustrato come specificare un'azione che si verifica in una determinata fase nella build: prima dell'avvio della compilazione; prima dell'inizio del collegamento. o termine della compilazione.|
 |[Procedura: Aggiungere un'istruzione di compilazione personalizzata ai progetti MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Viene illustrato come aggiungere una fase definita dall'utente alla sequenza di compilazione.|
 |[Procedura: Aggiungere strumenti di compilazione personalizzati ai progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Viene illustrato come associare uno strumento di compilazione a un determinato file.|

@@ -21,11 +21,11 @@ f1_keywords:
 - C4199
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
 ms.openlocfilehash: 1af76f1bad4d8df06d527063bc6618d0f8ef8f70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226715"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857197"
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>Avvisi del compilatore da C4000 a C4199
 

@@ -1,14 +1,14 @@
 ---
 title: Inserimento del controllo in una pagina Web (Esercitazione di ATL, parte 7)
 ms.custom: get-started-article
-ms.date: 09/27/2018
+ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261540"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221240"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Inserimento del controllo in una pagina Web (Esercitazione di ATL, parte 7)
 
@@ -74,7 +74,7 @@ Il controllo non esegue ancora alcuna operazione, quindi modificare la pagina We
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Che indica che il controllo è sicuro per lo Scripting
 
-È possibile visualizzare la pagina Web con il controllo in Internet Explorer o, più agevolmente, utilizzare la vista del browser Web incorporata in Visual C++. Per visualizzare il controllo nella visualizzazione del Web browser, fare doppio clic su PolyCtl. htm e fare clic su **Visualizza nel Browser**.
+È possibile visualizzare la pagina Web con il controllo solo in Internet Explorer. Altri browser non supporta più i controlli ActiveX a causa di problemi di sicurezza. 
 
 > [!NOTE]
 > Se il controllo non è visibile, significa che alcuni browser richiedono modifiche delle impostazioni per eseguire i controlli ActiveX. Consultare la documentazione del browser su come abilitare i controlli ActiveX.

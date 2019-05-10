@@ -101,11 +101,11 @@ helpviewer_keywords:
 - C3378
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
 ms.openlocfilehash: ca55e19534f722a7231a1d30c63e2dbb77d25ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281456"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857729"
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>Errori del compilatore da C3300 a C3399
 

@@ -1,6 +1,6 @@
 ---
 title: Classe CStockPropImpl
-ms.date: 11/06/2018
+ms.date: 05/06/2019
 f1_keywords:
 - CStockPropImpl
 - ATLCTL/ATL::CStockPropImpl
@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 246e2a26db6adde0fec06523c1b8db09c5f552f3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277487"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221065"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 
@@ -182,7 +182,7 @@ La classe usata per gestire le informazioni sul tipo per *T*. Il valore predefin
 
 `CStockPropImpl` fornisce **inserito** e **ottenere** metodi per ogni proprietà predefinite. Questi metodi forniscono il codice necessario per impostare o ottenere il membro dei dati associato a ogni proprietà e per inviare una notifica e la sincronizzazione con il contenitore quando viene modificata una proprietà.
 
-Visual C++ fornisce il supporto per le proprietà predefinite tramite le procedure guidate. Per altre informazioni sull'aggiunta di proprietà predefinite per un controllo, vedere la [esercitazione di ATL](../../atl/active-template-library-atl-tutorial.md).
+Visual Studio offre supporto per le proprietà predefinite tramite le procedure guidate. Per altre informazioni sull'aggiunta di proprietà predefinite per un controllo, vedere la [esercitazione di ATL](../../atl/active-template-library-atl-tutorial.md).
 
 Per motivi di compatibilità `CStockPropImpl` espone inoltre `get_Window` e `put_Window` metodi che è sufficiente chiamare `get_HWND` e `put_HWND`, rispettivamente. L'implementazione predefinita di `put_HWND` restituisce E_FAIL poiché HWND deve essere una proprietà di sola lettura.
 

@@ -135,11 +135,11 @@ helpviewer_keywords:
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 ms.openlocfilehash: 7dd09e6f31592f6d4b62b94d8d3256fe1a432010
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280314"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857412"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Avvisi del compilatore da C4400 a C4599
 

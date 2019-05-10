@@ -1,6 +1,6 @@
 ---
 title: Importazione ed esportazione
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188847"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220634"
 ---
 # <a name="importing-and-exporting"></a>Importazione ed esportazione
 
@@ -31,8 +31,6 @@ Un file di definizione moduli (def) è un file di testo contenente uno o più is
 
 ## <a name="using-declspec"></a>Utilizzando declspec
 
-Visual C++ viene utilizzato **declspec** e **dllexport** per sostituire il **Export** parola chiave utilizzata in precedenza nelle versioni di 16 bit dell'oggetto visivo C++.
-
 Non è necessario usare **declspec** per il codice venga compilato correttamente, ma in questo modo consente al compilatore di generare codice più efficiente. Il compilatore è in grado di generare codice migliore in quanto può determinare se esiste una funzione in una DLL o No, che consente al compilatore di generare codice che ignora un livello di riferimento indiretto che normalmente sarebbe presente in una chiamata di funzione che ha superato il limite di una DLL. Tuttavia, è necessario utilizzare **declspec** per importare le variabili usate in una DLL.
 
 Con la sezione EXPORTS del file. def corretto, **dllexport** non è obbligatorio. **dllexport** è stata aggiunta per fornire un modo semplice per esportare funzioni da un file con estensione dll o .exe senza usare un file def.
@@ -47,4 +45,4 @@ Il formato di file eseguibile portabile Win32 è progettato per ridurre al minim
 
 ## <a name="see-also"></a>Vedere anche
 
-[DLL in Visual C++](dlls-in-visual-cpp.md)
+[Creare DLL C/C++ in Visual Studio](dlls-in-visual-cpp.md)

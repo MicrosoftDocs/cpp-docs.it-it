@@ -1,14 +1,14 @@
 ---
 title: Creazione del progetto (Esercitazione di ATL, parte 1)
 ms.custom: get-started-article
-ms.date: 09/26/2018
+ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262086"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221399"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Creazione del progetto (Esercitazione di ATL, parte 1)
 
@@ -36,9 +36,9 @@ Questa esercitazione illustra in dettaglio di un progetto ATL senza attributi ch
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Per creare il progetto ATL iniziale utilizzando la creazione guidata progetto ATL
 
-1. Nell'ambiente di sviluppo Visual Studio, fare clic su **New** nel **File** dal menu e quindi fare clic su **progetto**.
+1. In Visual Studio 2017 e versioni precedenti: **File** > **nuove** > **progetto**. Aprire il **Visual C++**  scheda e selezionare **MFC/ATL**. Selezionare **progetto ATL**.
 
-1. Aprire il **Visual C++** scheda e selezionare **MFC/ATL**. Selezionare **progetto ATL**.
+   In Visual Studio 2019: Scegli **File** > **New** > **progetto**, digitare "atl" nella casella di ricerca e scegliere **progetto ATL**.
 
 1. Tipo di *poligono* come nome del progetto.
 

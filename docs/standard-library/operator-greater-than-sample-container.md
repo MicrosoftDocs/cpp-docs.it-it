@@ -10,17 +10,17 @@ helpviewer_keywords:
 - '> operator, comparing specific objects'
 - operator >
 ms.assetid: 49bd417a-3305-4ffa-9884-39d3904ed87d
-ms.openlocfilehash: 7d6c1135632d57707812a6702d7226eafa49c0c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d195148e725857c16a0f037b87a7fa0f71841a4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371392"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220478"
 ---
 # <a name="operatorgt-ltsample-containergt"></a>operator&gt; (&lt;sample container&gt;)
 
 > [!NOTE]
-> Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
+> In questo argomento è in Microsoft C++ come esempio non funzionale dei contenitori usati nella documentazione di C++ della libreria Standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
 
 Esegue l'overload di **operator>** per confrontare due oggetti della classe modello [Container](../standard-library/sample-container-class.md).
 

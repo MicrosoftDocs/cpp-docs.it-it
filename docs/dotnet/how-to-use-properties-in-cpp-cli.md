@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387149"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447316"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Procedura: Usare le proprietà in C++/CLI
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Proprietà astratte e sealed
 
-Anche se il [astratto](../extensions/abstract-cpp-component-extensions.md) e [sealed](../extensions/sealed-cpp-component-extensions.md) parole chiave vengono specificate come validi in C ECMA + c++ /CLI specifica CLI, per il compilatore Visual C++, è quindi possibile specificare nelle proprietà trivial, né sulle proprietà dichiarazione di una proprietà non semplice.
+Anche se il [astratto](../extensions/abstract-cpp-component-extensions.md) e [sealed](../extensions/sealed-cpp-component-extensions.md) vengono specificate parole chiave come valide nello standard ECMA C++specifica /CLI, per Microsoft C++ (compilatore), è quindi possibile specificare nelle proprietà trivial, né sulle dichiarazione di proprietà di una proprietà non semplice.
 
 Per dichiarare una proprietà abstract o sealed, è necessario definire una proprietà non semplice e quindi specificare il `abstract` o `sealed` parola chiave su get e set di funzioni di accesso.
 

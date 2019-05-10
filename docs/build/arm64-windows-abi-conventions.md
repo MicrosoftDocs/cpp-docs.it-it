@@ -1,12 +1,12 @@
 ---
 title: Panoramica delle convenzioni ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfb1b5b6be6a7a368c2ed7cab255da90ae7a22df
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195507"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220984"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Panoramica delle convenzioni ABI ARM64
 
@@ -50,6 +50,24 @@ Come con la ARM32 versione di Windows, in ARM64 Windows viene eseguito in modali
 Windows in esecuzione su ARM64 consente all'hardware di CPU gestire gli accessi non allineati in modo trasparente. Un miglioramento da AArch32, questo supporto ora funziona anche per tutti gli accessi di integer (inclusi gli accessi da più parole) e per gli accessi a virgola mobile.
 
 Tuttavia, gli accessi alla memoria non memorizzati nella cache (dispositivo) ancora devono sempre essere allineati. Se il codice probabilmente è stato possibile leggere o scrivere dati disallineati dalla memoria non memorizzati nella cache, che è necessario assicurarsi di allineare tutti gli accessi.
+
+Allineamento di layout predefinito per le variabili locali:
+
+| Dimensioni in byte | Allineamento in byte |
+| - | - |
+| 1 | 1 |
+| 2 | 2 |
+| 3, 4 | 4 |
+| > 4 | 8 |
+
+Allineamento di layout predefinito per gli elementi statici e variabili globali:
+
+| Dimensioni in byte | Allineamento in byte |
+| - | - |
+| 1 | 1 |
+| 2 - 7 | 4 |
+| 8 - 63 | 8 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Registri integer
 
@@ -185,7 +203,9 @@ In effetti, è quello utilizzato per le regole seguenti C.12–C.15 allocare arg
 
 I valori integrali vengono restituiti in x0.
 
-Valori a virgola mobile vengono restituiti in s0/d0/v0 come appropriato.
+Valori a virgola mobile vengono restituiti in s0, d0 o v0, come appropriato.
+
+Valori HFA e HVA vengono restituiti in s0-s3, d0 d3 o v0-v3, come appropriato.
 
 Tipi restituiti per valore vengono gestiti in modo diverso a seconda del fatto che hanno determinate proprietà. Tipi che dispongono tutte di queste proprietà,
 

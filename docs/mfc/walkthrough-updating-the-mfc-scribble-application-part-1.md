@@ -1,6 +1,6 @@
 ---
 title: "Procedura dettagliata: L'aggiornamento dell'applicazione MFC Scribble (parte 1)"
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - examples [MFC], update existing application
 - ribbon UI, porting to
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358293"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558219"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: L'aggiornamento dell'applicazione MFC Scribble (parte 1)
 
@@ -24,7 +24,7 @@ In questa procedura dettagliata viene modificato l'esempio classico di Scribble 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Il [esempio MFC di Scribble 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Per altre informazioni sulla conversione per Visual Studio 2017, vedere [Guida al Porting: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
+Il [esempio MFC di Scribble 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Per altre informazioni sulla conversione per Visual Studio 2017 o versione successiva, vedere [Guida al Porting: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Sezioni
 

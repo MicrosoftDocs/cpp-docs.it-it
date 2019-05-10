@@ -11,11 +11,11 @@ f1_keywords:
 - R6034
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
 ms.openlocfilehash: 8fc1c5365d4c09908235336575c80b9df6892f90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400032"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856618"
 ---
 # <a name="c-runtime-errors-rxxxx"></a>Errori di runtime di C (Rxxxx)
 

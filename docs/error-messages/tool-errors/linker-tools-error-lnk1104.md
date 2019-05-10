@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: eadeeb7ac19e3975a37a1364502b33400018cb05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255513"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446964"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Errore degli strumenti del linker LNK1104
 
@@ -59,7 +59,7 @@ Verificare che è stata installata ogni versione della libreria che è necessari
 
 ### <a name="cannot-open-a-file-built-by-your-project"></a>Non è possibile aprire un file compilato dal progetto
 
-Questo errore può verificarsi se il file *filename* è compilati dalla soluzione, ma non esiste ancora quando il linker prova ad accedervi. Questa situazione può verificarsi quando un progetto dipende da un altro progetto, ma non i progetti vengono compilati nell'ordine corretto. Per risolvere questo problema, assicurarsi che i riferimenti del progetto vengono impostati nel progetto che usa il file in modo che il file mancante viene compilato prima che sia necessario. Per altre informazioni, vedere [aggiunta di riferimenti nei progetti Visual C++](../../build/adding-references-in-visual-cpp-projects.md) e [gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project).
+Questo errore può verificarsi se il file *filename* è compilati dalla soluzione, ma non esiste ancora quando il linker prova ad accedervi. Questa situazione può verificarsi quando un progetto dipende da un altro progetto, ma non i progetti vengono compilati nell'ordine corretto. Per risolvere questo problema, assicurarsi che i riferimenti del progetto vengono impostati nel progetto che usa il file in modo che il file mancante viene compilato prima che sia necessario. Per altre informazioni, vedere [aggiunta di riferimenti in Visual Studio C++ progetti](../../build/adding-references-in-visual-cpp-projects.md) e [gestione dei riferimenti in un progetto](/visualstudio/ide/managing-references-in-a-project).
 
 ### <a name="cannot-open-file-cprogramobj"></a>Impossibile aprire il file ' c:\\Program.obj'
 

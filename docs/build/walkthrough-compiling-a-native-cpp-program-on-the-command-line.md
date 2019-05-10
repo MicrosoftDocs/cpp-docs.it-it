@@ -1,23 +1,24 @@
 ---
 title: 'Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando'
+description: Utilizzare Microsoft C++ compilatore da un prompt dei comandi.
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 64300c8683dd5d1c40638ba7d50acfca6abc40c0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313883"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217707"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando
 
-Visual C++ include un compilatore C++ da riga di comando che è possibile usare per creare tutti gli elementi da app console di base per le app della piattaforma Windows universale, applicazioni Desktop, i driver di dispositivo e componenti .NET.
+Visual Studio include una riga di comando C++ compilatore che è possibile usare per creare tutti gli elementi da app console di base per le app Universal Windows Platform, le app Desktop, i driver di dispositivo e componenti .NET.
 
 In questa procedura dettagliata, si crea una semplice "Hello, World"-lo stile di programma C++ tramite un testo dell'editor, quindi compilarlo nella riga di comando. Se si vuole provare a IDE di Visual Studio anziché usare la riga di comando, vedere [procedura dettagliata: Utilizzo di progetti e soluzioni (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) oppure [usando l'IDE di Visual Studio per lo sviluppo di applicazioni Desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
@@ -29,7 +30,7 @@ Per completare questa procedura dettagliata, è necessario avere installato Visu
 
 Visual Studio è un ambiente di sviluppo integrato avanzato (IDE) che supporta un editor completo, i gestori di risorse, debugger e compilatori per molti linguaggi e piattaforme. Per informazioni su come scaricare e installare Visual Studio, inclusa l'edizione gratuita di Visual Studio Community e includono il supporto per lo sviluppo in C/C++, vedere [supporto di installazione di C++ in Visual Studio](vscpp-step-0-installation.md).
 
-Build Tools per Visual Studio installa solo i compilatori della riga di comando, strumenti e le librerie che necessari per compilare programmi C e C++. È ideale per i laboratori di compilazione o in aula esercita e installa relativamente rapida. Per installare solo gli strumenti da riga di comando, scaricare [Build Tools per Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721).
+Build Tools per Visual Studio installa solo i compilatori della riga di comando, strumenti e le librerie che necessari per compilare programmi C e C++. È ideale per i laboratori di compilazione o in aula esercita e installa relativamente rapida. Per installare solo gli strumenti da riga di comando, cercare Build Tools per Visual Studio [download di Visual Studio](https://visualstudio.microsoft.com/downloads/) pagina.
 
 Prima di poter compilare un programma C o C++ nella riga di comando, è necessario verificare che siano installati gli strumenti e che è possibile accedervi dalla riga di comando. Visual C++ ha requisiti complessi per l'ambiente della riga di comando individuare gli strumenti, intestazioni e librerie utilizzate. **Non è possibile usare Visual C++ in una finestra del prompt dei comandi normale** senza eseguire alcune attività di preparazione. Fortunatamente, Visual C++ vengono installati per poter avviare un prompt dei comandi per gli sviluppatori con l'ambiente configurato per le compilazioni da riga di comando di scelta rapida. Sfortunatamente, i nomi dei tasti di scelta del prompt dei comandi per gli sviluppatori e in cui si trovano sono diversi in quasi tutte le versioni di Visual C++ e su diverse versioni di Windows. La prima attività di questa procedura dettagliata consiste nel trovare quello giusto da usare.
 
@@ -38,11 +39,11 @@ Prima di poter compilare un programma C o C++ nella riga di comando, è necessar
 
 ### <a name="open-a-developer-command-prompt"></a>Aprire un prompt dei comandi per gli sviluppatori
 
-1. Se è stato installato Visual Studio 2017 in Windows 10, aprire il menu Start e scegliere **tutte le app**. Scorrere verso il basso e aprire il **Visual Studio 2017** cartella (non l'app di Visual Studio 2017). Scegli **prompt dei comandi per gli sviluppatori per VS 2017** per aprire la finestra del prompt dei comandi.
+1. Se è stato installato Visual Studio 2017 o versione successiva in Windows 10, aprire il menu Start e scegliere **tutte le app**. Scorrere verso il basso e aprire il **Visual Studio** cartella (non l'applicazione di Visual Studio). Scegli **prompt dei comandi per gli sviluppatori per VS** per aprire la finestra del prompt dei comandi.
 
    Se è installato Microsoft Visual C++ Build Tools 2015 in Windows 10, aprire il **avviare** dal menu e scegliere **tutte le app**. Scorrere verso il basso e aprire il **Visual C++ Build Tools** cartella. Scegli **prompt dei comandi degli strumenti nativi Visual C++ 2015 x86** per aprire la finestra del prompt dei comandi.
 
-   Se si usa una versione diversa di Visual Studio o eseguita una versione diversa di Windows, cercare nel menu di avvio o avviare pagina per una cartella di strumenti di Visual Studio che contiene un collegamento prompt dei comandi per gli sviluppatori. È anche possibile usare la funzione di ricerca di Windows per cercare "prompt dei comandi per gli sviluppatori" e sceglierne uno che corrisponde alla versione installata di Visual Studio. Utilizzare il collegamento per aprire la finestra del prompt dei comandi.
+   È anche possibile usare la funzione di ricerca di Windows per cercare "prompt dei comandi per gli sviluppatori" e sceglierne uno che corrisponde alla versione installata di Visual Studio. Utilizzare il collegamento per aprire la finestra del prompt dei comandi.
 
 1. Successivamente, verificare che il prompt dei comandi per gli sviluppatori di Visual C++ è configurato correttamente. Nella finestra del prompt dei comandi, immettere `cl` e verificare che l'output simile al seguente:
 
@@ -87,7 +88,7 @@ Prima di poter compilare un programma C o C++ nella riga di comando, è necessar
 
 1. Salvare il lavoro. Nel menu **File** del Blocco note scegliere **Salva**.
 
-   Congratulazioni, è stato creato un file di origine Visual C++, cpp, che è pronto per la compilazione.
+   È stato creato un C++ file di origine, cpp, che è pronto per la compilazione.
 
 1. Passare alla finestra del prompt dei comandi per gli sviluppatori. Immettere `dir` al prompt dei comandi per elencare il contenuto della directory c:\hello. Verrà visualizzato il cpp file di origine nell'elenco di directory, simile a:
 

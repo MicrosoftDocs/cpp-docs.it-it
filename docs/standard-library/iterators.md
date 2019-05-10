@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396145"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220326"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -86,7 +86,7 @@ Un iteratore `Iterator` diverso da un puntatore all'oggetto deve anche definire 
 > [!NOTE]
 > È possibile evitare l'utilizzo di iteratori in modo esplicito utilizzando cicli range-for. Per altre informazioni, vedere [basati su intervallo per l'istruzione](../cpp/range-based-for-statement-cpp.md).
 
-Visual C++ offre ora gli iteratori verificati e iteratori di debug per garantire che i limiti del contenitore non vengano sovrascritti. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md) e [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md).
+Microsoft C++ offre ora controllati gli iteratori di debug per garantire che i limiti del contenitore non vengano sovrascritti. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md) e [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Vedere anche
 

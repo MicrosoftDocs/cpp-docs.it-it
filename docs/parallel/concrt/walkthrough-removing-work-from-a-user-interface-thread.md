@@ -1,16 +1,16 @@
 ---
 title: "Procedura dettagliata: Rimozione di lavoro da un Thread dell'interfaccia utente"
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407800"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856995"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procedura dettagliata: Rimozione di lavoro da un Thread dell'interfaccia utente
 
@@ -54,9 +54,9 @@ Questa sezione descrive come creare l'applicazione MFC di base.
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Per creare un'applicazione MFC Visual C++
 
-1. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
+1. Usare la **Creazione guidata applicazione MFC** per creare un'applicazione MFC con tutte le impostazioni predefinite. Vedere [Procedura dettagliata: Utilizzo dei nuovi controlli Shell MFC](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) per istruzioni su come aprire la procedura guidata per la versione di Visual Studio.
 
-1. Nel **nuovo progetto** nella finestra di dialogo il **modelli installati** riquadro, selezionare **Visual C++**, quindi il **modelli** riquadro, selezionare **Applicazione MFC**. Digitare un nome per il progetto, ad esempio, `Mandelbrot`, quindi fare clic su **OK** per visualizzare il **Creazione guidata applicazione MFC**.
+1. Digitare un nome per il progetto, ad esempio, `Mandelbrot`, quindi fare clic su **OK** per visualizzare il **Creazione guidata applicazione MFC**.
 
 1. Nel **tipo di applicazione** riquadro, selezionare **singolo documento**. Verificare che il **supporto per l'architettura documento/visualizzazione** casella di controllo è deselezionata.
 

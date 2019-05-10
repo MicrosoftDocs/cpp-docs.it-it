@@ -1,20 +1,18 @@
 ---
 title: File di intestazione precompilata
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341753"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220814"
 ---
 # <a name="precompiled-header-files"></a>File di intestazione precompilata
 
@@ -43,7 +41,7 @@ La prima compilazione, ovvero quello che crea il file di intestazione precompila
 
 ## <a name="two-choices-for-precompiling-code"></a>Precompilazione del codice automatica e manuale
 
-Con Visual C++, è possibile precompilare qualsiasi codice C o C++. non si è limitati alla precompilazione solo i file di intestazione.
+È possibile precompilare C o C++ del codice; non si è limitati alla precompilazione solo i file di intestazione.
 
 La precompilazione richiede una pianificazione, ma consente di eseguire compilazioni significativamente più veloce se si precompilazione del codice sorgente diverso da semplici file di intestazione.
 
@@ -133,7 +131,7 @@ Questa tabella elenca le opzioni del compilatore potrebbero generare un avviso d
 
 Nelle sezioni precedenti presentano una panoramica delle intestazioni precompilate: /Yc e /Yu, l'opzione /Fp e il [hdrstop](../preprocessor/hdrstop.md) pragma. Questa sezione viene descritto un metodo per l'uso di opzioni di intestazione precompilata manuale in un progetto. termina con un makefile di esempio e il codice che gestisce.
 
-Per un altro approccio per usare le opzioni di intestazione precompilata manuale in un progetto, studiare a uno dei makefile che si trova nella directory MFC\SRC che viene creata durante l'installazione predefinita di Visual C++. Questi makefile adottano un approccio simile a quello presentato in questa sezione, ma diffondere l'utilizzo di macro Microsoft Program Maintenance Utility (NMAKE) e offrono un maggiore controllo del processo di compilazione.
+Per un altro approccio per usare le opzioni di intestazione precompilata manuale in un progetto, studiare a uno dei makefile che si trova nella directory MFC\SRC che viene creata durante l'installazione predefinita di Visual Studio. Questi makefile adottano un approccio simile a quello presentato in questa sezione, ma diffondere l'utilizzo di macro Microsoft Program Maintenance Utility (NMAKE) e offrono un maggiore controllo del processo di compilazione.
 
 ## <a name="pch-files-in-the-build-process"></a>File PCH nel processo di compilazione
 

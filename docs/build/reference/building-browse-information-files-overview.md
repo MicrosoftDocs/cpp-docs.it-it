@@ -1,24 +1,28 @@
 ---
 title: 'File di informazioni: Panoramica'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
 - bsc files, about bsc files
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272884"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220542"
 ---
 # <a name="building-browse-information-files-overview"></a>File di informazioni: Panoramica
 
+
+> [!WARNING]
+> Sebbene BSCMAKE venga ancora installato con Visual Studio, non viene più usato dall'IDE. A partire da Visual Studio 2008, le informazioni di visualizzazione e sui simboli vengono automaticamente archiviate in un file sdf di SQL Server nella cartella della soluzione.
+
 Per creare informazioni di visualizzazione per l'esplorazione di simbolo, il compilatore crea un file sbr per ogni file di origine nel progetto, quindi BSCMAKE. File EXE concatena i file SBR in un unico file BSC.
 
-Generazione di file sbr e BSC richiede tempo, in modo che Visual C++ consente di disattivare queste funzioni per impostazione predefinita. Se si desidera visualizzare le informazioni correnti, è necessario attivare le opzioni di ricerca e generare nuovamente il progetto.
+Generazione di file sbr e BSC richiede tempo, in modo che Visual Studio consente di disattivare queste funzioni per impostazione predefinita. Se si desidera visualizzare le informazioni correnti, è necessario attivare le opzioni di ricerca e generare nuovamente il progetto.
 
 Uso [/FR](fr-fr-create-dot-sbr-file.md) oppure [/Fr](fr-fr-create-dot-sbr-file.md) per indicare al compilatore di creare i file SBR. Per creare i file con estensione bsc, è possibile chiamare [BSCMAKE](bscmake-command-line.md) dalla riga di comando. Mediante l'utilità BSCMAKE dalla riga di comando offre un controllo più preciso sulla manipolazione dei file di informazioni. Visualizzare [riferimenti a BSCMAKE](bscmake-reference.md) per altre informazioni.
 

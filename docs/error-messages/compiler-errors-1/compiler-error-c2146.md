@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 3a0fd9c49a71f6f53d1a109378e3a6894bb68723
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f00de0ce491d517da11f251b89ccb9a7ae66b77d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175428"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447281"
 ---
 # <a name="compiler-error-c2146"></a>Errore del compilatore C2146
 
@@ -73,7 +73,7 @@ typename X<T>::Y func() { }
 
 Verrà anche visualizzato l'errore in seguito a operazioni di conformità del compilatore eseguite per Visual Studio .NET 2003: specializzazioni esplicite non trovano più parametri di modello dal modello principale.
 
-L'uso di `T` dal modello principale non è consentita nella specializzazione esplicita. Per il codice sia valida nelle versioni di Visual Studio .NET 2003 e Visual Studio .NET di Visual C++, sostituire tutte le istanze del parametro di modello nella specializzazione con il tipo specializzato in modo esplicito.
+L'uso di `T` dal modello principale non è consentita nella specializzazione esplicita. Per il codice sia valido in di Visual Studio .NET 2003 e Visual Studio .NET, sostituire tutte le istanze del parametro di modello nella specializzazione con il tipo specializzato in modo esplicito.
 
 L'esempio seguente viene compilato in Visual Studio .NET, ma avrà esito negativo in Visual Studio .NET 2003:
 

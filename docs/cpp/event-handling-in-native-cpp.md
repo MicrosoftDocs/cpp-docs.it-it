@@ -1,15 +1,15 @@
 ---
 title: Gestione di eventi in C++ nativo
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- event handling [C++], Visual C++
+- event handling [C++]
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 93bfcc93c680618ea3a51eabd145548a4f47563a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9eb0334e3633921842fcc06155ba0300ff6192e1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154464"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222183"
 ---
 # <a name="event-handling-in-native-c"></a>Gestione di eventi in C++ nativo
 

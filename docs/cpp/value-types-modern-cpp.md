@@ -1,14 +1,14 @@
 ---
 title: Tipi di valore (C++ moderno)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 32cdb29ec1c59081ad7e0493888f290f21561d2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390906"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221892"
 ---
 # <a name="value-types-modern-c"></a>Tipi di valore (C++ moderno)
 
@@ -49,7 +49,7 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
 
 ## <a name="value-types-and-move-efficiency"></a>I tipi di valore e l'efficienza di spostamento
 
-Copia allocazione sovraccarico viene evitato a causa di nuove ottimizzazioni della copia. Ad esempio, quando si inserisce una stringa all'interno di un vettore di stringhe, non vi sarà alcun overhead di riallocazione di copia, solo un move - anche se il risultato è un aumento del vettore di se stesso. Questo vale anche per altre operazioni, ad esempio eseguire un'operazione di aggiunta su due oggetti molto grandi. Come si abilita queste ottimizzazioni di operazione valore? In alcuni compilatori C++, il compilatore abiliterà questo automaticamente in modo implicito, proprio come i costruttori di copia possono essere generati automaticamente dal compilatore. Tuttavia, in Visual C++, la classe dovrà "acconsentire esplicitamente" per spostare i costruttori e assegnazione dichiarandolo nella definizione della classe. Questa operazione viene eseguita usando la doppia e commerciale (& &) riferimento rvalue nel membro appropriato della funzione dichiarazioni e definizione costruttore di spostamento e i metodi di assegnazione spostamento.  È anche necessario inserire il codice corretto per "ruba sviscerare" dell'oggetto di origine.
+Copia allocazione sovraccarico viene evitato a causa di nuove ottimizzazioni della copia. Ad esempio, quando si inserisce una stringa all'interno di un vettore di stringhe, non vi sarà alcun overhead di riallocazione di copia, solo un move - anche se il risultato è un aumento del vettore di se stesso. Questo vale anche per altre operazioni, ad esempio eseguire un'operazione di aggiunta su due oggetti molto grandi. Come si abilita queste ottimizzazioni di operazione valore? In alcuni compilatori C++, il compilatore abiliterà questo automaticamente in modo implicito, proprio come i costruttori di copia possono essere generati automaticamente dal compilatore. Tuttavia, in C++, la classe dovrà "acconsentire esplicitamente" per spostare i costruttori e assegnazione dichiarandolo nella definizione della classe. Questa operazione viene eseguita usando la doppia e commerciale (& &) riferimento rvalue nel membro appropriato della funzione dichiarazioni e definizione costruttore di spostamento e i metodi di assegnazione spostamento.  È anche necessario inserire il codice corretto per "ruba sviscerare" dell'oggetto di origine.
 
 Per decidere se è necessario spostare abilitato? Se si conosce già, che è necessario copiare costruzione abilitata, è possibile spostare abilitata se può essere più conveniente di una copia completa. Tuttavia, se si conosce, che è necessario spostare il supporto, non significa necessariamente che si desidera copia abilitata. Questo secondo caso viene chiamato "tipo di spostamento-only". Un esempio già nella libreria standard è `unique_ptr`. Come nota a margine, il vecchio `auto_ptr` è deprecata ed è stato sostituito da `unique_ptr` esattamente a causa della mancanza di supporto di semantica di spostamento nella versione precedente di C++.
 

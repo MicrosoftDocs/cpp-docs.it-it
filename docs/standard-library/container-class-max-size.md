@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - max_size method
 ms.assetid: 56754753-9911-48fd-b463-ac06b2fa1aab
-ms.openlocfilehash: 3b0347ae160286ca97d16063ac893943e0d63da8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50ea2c4696b407cacade29713ef58cb86756eed3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211030"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221604"
 ---
 # <a name="container-classmaxsize"></a>Container Class::max_size
 
 > [!NOTE]
-> Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
+> In questo argomento è in Microsoft C++ come esempio non funzionale dei contenitori usati nella documentazione di C++ della libreria Standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
 
 Restituisce la lunghezza della sequenza più lunga che l'oggetto può controllare, in un tempo costante indipendentemente dalla lunghezza della sequenza controllata.
 

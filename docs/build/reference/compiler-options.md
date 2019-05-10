@@ -1,6 +1,6 @@
 ---
 title: Opzioni del compilatore MSVC
-ms.date: 01/29/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - compiler options, C++
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ab41a5de027f28b361937e58fb179fd72db54e4e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294265"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221747"
 ---
 # <a name="compiler-options"></a>Opzioni del compilatore
 
-CL.exe è uno strumento che consente di controllare il linker e i compilatori C++ e Microsoft Visual C++ (MSVC) C. CL.exe può essere eseguito solo in sistemi operativi che supportano Microsoft Visual Studio per Windows.
+CL.exe è uno strumento che consente di controllare il Microsoft C++ (MSVC) C e C++ i compilatori e del linker. CL.exe può essere eseguito solo in sistemi operativi che supportano Microsoft Visual Studio per Windows.
 
 > [!NOTE]
 > È possibile avviare questo strumento solo da un prompt dei comandi per gli sviluppatori di Visual Studio. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File. Per altre informazioni, vedere [un set di strumenti MSVC dalla riga di comando](../building-on-the-command-line.md).

@@ -1,6 +1,6 @@
 ---
 title: Formato a virgola mobile IEEE
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188834"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220630"
 ---
 # <a name="ieee-floating-point-representation"></a>Formato a virgola mobile IEEE
 
-Microsoft Visual C++ è coerente con gli standard di numerici IEEE. Lo standard IEEE 754 descrive formati a virgola mobile, un modo per rappresentare numeri reali in hardware. Sono presenti almeno cinque formati interni per i numeri a virgola mobile rappresentabili nell'hardware di destinazione per il compilatore MSVC, ma il compilatore Usa solo due di essi. Il *precisione singola* (4 byte) e *precisione doppia* formati (8 byte) vengono usati in Visual C++. Precisione singola viene dichiarata utilizzando la parola chiave **float**. Precisione doppia è dichiarata mediante la parola chiave **doppie**. Specifica inoltre lo standard IEEE *mezza precisione* (a 2 byte) e *quattro volte precisione* formati (16 byte), nonché un *esteso a precisione doppia* (10 byte) formato, che alcuni compilatori C e C++ implementano come le **long double** tipo di dati. Nel compilatore MSVC, il **long double** tipo di dati viene considerato come un tipo distinto, ma il tipo di archiviazione è mappato al **doppie**. C'è, tuttavia, intrinseco e supporto del linguaggio assembly per i calcoli usano altri formati, tra cui il formato esteso a precisione doppia (10 byte), in cui è supportata dall'hardware.
+Microsoft C++ (MSVC) è coerente con gli standard di numerici IEEE. Lo standard IEEE 754 descrive formati a virgola mobile, un modo per rappresentare numeri reali in hardware. Sono presenti almeno cinque formati interni per i numeri a virgola mobile rappresentabili nell'hardware di destinazione per il compilatore MSVC, ma il compilatore Usa solo due di essi. Il *precisione singola* (4 byte) e *precisione doppia* formati (8 byte) vengono utilizzati in MSVC. Precisione singola viene dichiarata utilizzando la parola chiave **float**. Precisione doppia è dichiarata mediante la parola chiave **doppie**. Specifica inoltre lo standard IEEE *mezza precisione* (a 2 byte) e *quattro volte precisione* formati (16 byte), nonché un *esteso a precisione doppia* (10 byte) formato, che alcuni compilatori C e C++ implementano come le **long double** tipo di dati. Nel compilatore MSVC, il **long double** tipo di dati viene considerato come un tipo distinto, ma il tipo di archiviazione è mappato al **doppie**. C'è, tuttavia, intrinseco e supporto del linguaggio assembly per i calcoli usano altri formati, tra cui il formato esteso a precisione doppia (10 byte), in cui è supportata dall'hardware.
 
 I valori vengono archiviati come indicato di seguito:
 

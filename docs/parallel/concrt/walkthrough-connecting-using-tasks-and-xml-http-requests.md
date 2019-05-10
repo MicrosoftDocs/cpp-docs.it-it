@@ -1,17 +1,17 @@
 ---
 title: 'Procedura dettagliata: Connessione tramite attività e richieste HTTP XML'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 449f99f37f0d328b7c874730b814335f8b69e807
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411400"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856290"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procedura dettagliata: Connessione tramite attività e richieste HTTP XML
 
@@ -31,6 +31,8 @@ Per un esempio che usa `IXMLHTTPRequest2` ma non le attività, vedere [Guida int
 
 ## <a name="prerequisites"></a>Prerequisiti
 
+Il supporto UWP è facoltativo in Visual Studio 2017 e versioni successive. Per installarlo, aprire l'installazione di Visual Studio dal menu Start di Windows e scegliere la versione di Visual Studio in uso. Fare clic sui **Modify** pulsante e assicurarsi che il **lo sviluppo UWP** riquadro viene controllato. Sotto **i componenti facoltativi** assicurarsi che  **C++ strumenti della piattaforma UWP** sia selezionata. Usare v141 per Visual Studio 2017 o v142 per Visual Studio 2019.
+
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>Definizione delle classi HttpRequest, HttpRequestBuffersCallback e HttpRequestStringCallback
 
 Quando si usa la `IXMLHTTPRequest2` l'interfaccia per creare richieste web tramite HTTP, si implementa il `IXMLHTTPRequest2Callback` interfaccia per ricevere la risposta del server e rispondere agli altri eventi. Questo esempio viene definito il `HttpRequest` classe per creare richieste web e il `HttpRequestBuffersCallback` e `HttpRequestStringCallback` classi per elaborare le risposte. Il `HttpRequestBuffersCallback` e `HttpRequestStringCallback` le classi supportano il `HttpRequest` classe, ma funzionano solo con il `HttpRequest` classe dal codice dell'applicazione.
@@ -43,7 +45,9 @@ Per supportare l'annullamento, la `HttpRequest`, `HttpRequestBuffersCallback`, e
 
 #### <a name="to-define-the-httprequest-class"></a>Per definire la classe HttpRequest
 
-1. Usare Visual C++ **App vuota (XAML)** modello per creare un progetto di app XAML vuota. Questo esempio assegna al progetto il nome `UsingIXMLHTTPRequest2`.
+1. Dal menu principale, scegliere **File** > **New** > **progetto**. 
+
+1. Usare il C++ **App vuota (Windows universale)** modello per creare un progetto di app XAML vuota. Questo esempio assegna al progetto il nome `UsingIXMLHTTPRequest2`.
 
 1. Aggiungere al progetto un file di intestazione denominato HttpRequest.h e un file di origine denominato HttpRequest.
 

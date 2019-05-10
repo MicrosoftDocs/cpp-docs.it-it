@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404429"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447311"
 ---
 # <a name="friend-assemblies-c"></a>Assembly Friend (C++)
 
@@ -47,7 +47,7 @@ Anche se i tipi nell'ambito dello spazio dei nomi e ambito globale possono esser
 
 Accesso a tutti i tipi in un assembly deve essere concessa esplicitamente.  Ad esempio, l'assembly C non ha accesso a tutti i tipi nell'assembly A se assembly C fa riferimento all'assembly B e l'assembly B ha accesso a tutti i tipi nell'assembly A.
 
-Per informazioni su come firmare, vale a dire, come assegnare un nome sicuro a, ovvero un assembly che viene compilato con il compilatore Visual C++, vedere [assembly con nome sicuro (firma degli Assembly) (C + c++ /CLI CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Per informazioni su come firmare, vale a dire, come assegnare un nome sicuro a, ovvero un assembly che viene compilato con Microsoft C++ compilatore, vedere [assembly con nome sicuro (firma degli Assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Come alternativa all'uso della funzionalità di assembly friend, è possibile usare <xref:System.Security.Permissions.StrongNameIdentityPermission> limitare l'accesso ai singoli tipi.
 

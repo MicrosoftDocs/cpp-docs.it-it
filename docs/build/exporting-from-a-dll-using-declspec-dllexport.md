@@ -1,6 +1,6 @@
 ---
 title: Esportazione da una DLL tramite __declspec(dllexport)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,18 +10,16 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195316"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220800"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Esportazione da una DLL tramite __declspec(dllexport)
 
-Microsoft ha introdotto **Export** nella versione del compilatore 16 bit dell'oggetto visivo C++ per consentire al compilatore di generare automaticamente i nomi di esportazione e inserirli in un file con estensione LIB. Questo file con estensione LIB è quindi utilizzabile per il collegamento a una DLL come un lib statico.
-
-Nelle versioni più recenti del compilatore, è possibile esportare i dati, funzioni, classi o funzioni membro della classe da una DLL mediante il **dllexport** (parola chiave). **dllexport** aggiunge la direttiva di esportazione del file oggetto non è necessario usare un file con estensione def.
+È possibile esportare i dati, funzioni, classi o funzioni membro della classe da una DLL mediante il **dllexport** (parola chiave). **dllexport** aggiunge la direttiva di esportazione del file oggetto non è necessario usare un file con estensione def.
 
 La comodità è più evidente quando si tenta di esportare decorati i nomi delle funzioni C++. Poiché non è presente alcuna specifica standard per la decorazione dei nomi, il nome di una funzione esportata potrebbe cambiare tra versioni diverse del compilatore. Se si usa **dllexport**, la ricompilazione della DLL e file .exe dipendenti è necessaria solo per conto di eventuali modifiche delle convenzioni di denominazione.
 
@@ -50,11 +48,6 @@ Quando si compila la DLL, si crea in genere un file di intestazione che contiene
 ```
 
 **dllexport** archivia i nomi nella tabella di esportazione della DLL delle funzioni. Se si desidera ottimizzare le dimensioni della tabella, vedere [esportazione di funzioni da una DLL per ordinale anziché al nome](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
-
-> [!NOTE]
->  Durante il porting del codice sorgente della DLL da Win16 a Win32, sostituire ogni istanza di **Export** con **dllexport**.
-
-Come riferimento, eseguire ricerche in file di intestazione Winbase Win32. Che contiene esempi di **declspec** utilizzo.
 
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
 

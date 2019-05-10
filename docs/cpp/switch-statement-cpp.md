@@ -1,6 +1,6 @@
 ---
 title: Istruzione switch (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267089"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221941"
 ---
 # <a name="switch-statement-c"></a>Istruzione switch (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 Nell'esempio precedente `capa` viene incrementato se `c` è una `A` maiuscola. Il **break** istruzione dopo `capa++` termina l'esecuzione del **passare** corpo dell'istruzione e il controllo passa al **mentre** ciclo. Senza il **INTERR** istruzione, l'esecuzione sarebbe "passare" alla successiva istruzione con etichetta, in modo che `lettera` e `nota` potrebbe anche essere incrementato. Uno scopo simile viene servito dal **INTERR** istruzione per `case 'a'`. Se `c` è minuscolo `a`, `lettera` viene incrementata e il **interruzione** istruzione termina il **passare** corpo dell'istruzione. Se `c` non è un `a` oppure `A`, il **predefinita** viene eseguita un'istruzione.
 
-**Visual Studio 2017 e versioni successiva:** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)) il `[[fallthrough]]` attributo è specificato in c++17 standard. Può essere utilizzato una **commutatore** istruzione come un suggerimento al compilatore (o a chiunque legga il codice) tale comportamento del FallThrough è previsto. Il compilatore Visual C++ attualmente non avvisa in caso di fallthrough comportamento, in modo che questo attributo non ha alcun effetto sul comportamento del compilatore. Si noti che l'attributo viene applicato a un'istruzione vuota all'interno dell'istruzione con etichetta; in altre parole il punto e virgola è necessario.
+**Visual Studio 2017 e versioni successiva:** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)) il `[[fallthrough]]` attributo è specificato in c++17 standard. Può essere utilizzato una **commutatore** istruzione come un suggerimento al compilatore (o a chiunque legga il codice) tale comportamento del FallThrough è previsto. Microsoft C++ compilatore attualmente non un avviso sul comportamento del fallthrough, in modo che questo attributo non ha alcun effetto sul comportamento del compilatore. Si noti che l'attributo viene applicato a un'istruzione vuota all'interno dell'istruzione con etichetta; in altre parole il punto e virgola è necessario.
 
 ```cpp
 int main()

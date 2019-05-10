@@ -1,6 +1,6 @@
 ---
 title: thread
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330518"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221966"
 ---
 # <a name="thread"></a>thread
 
@@ -40,7 +40,7 @@ Quando si usano le variabili thread-local in librerie a caricamento dinamico, è
 
 1. Se la variabile viene inizializzata con una chiamata di funzione (inclusi i costruttori), questa funzione verrà chiamata solo per il thread che ha causato il file binario/DLL da caricare nel processo e per i thread che ha avviato dopo che è stata caricata il file binario/DLL. Le funzioni di inizializzazione non vengono chiamate per qualsiasi altro thread che era già in esecuzione quando è stata caricata la DLL. Inizializzazione dinamica si verifica per la chiamata di funzione DllMain per DLL_THREAD_ATTACH, ma la DLL mai Ottiene che il messaggio se la DLL non è nel processo quando viene avviato il thread.
 
-1. Le variabili locali del thread che vengono inizializzate in modo statico con valori costanti vengono in genere inizializzate correttamente su tutti i thread. Tuttavia, a partire da dicembre 2017 è un problema noto della conformità nel compilatore Microsoft Visual C++ in base al quale le variabili constexpr ricezione dinamica anziché l'inizializzazione statica.
+1. Le variabili locali del thread che vengono inizializzate in modo statico con valori costanti vengono in genere inizializzate correttamente su tutti i thread. Tuttavia, a partire da dicembre 2017 si verifica un problema noto della conformità in Microsoft C++ compilatore in base al quale le variabili constexpr di ricezione dinamica anziché l'inizializzazione statica.
 
    Nota: Entrambi questi aspetti devono essere corretti in futuro gli aggiornamenti del compilatore.
 

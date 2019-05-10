@@ -1,26 +1,26 @@
 ---
 title: Set di caratteri
-ms.date: 04/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 5282d5b227e71c0ba6f822a9534a8a31cbd86db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331233"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222529"
 ---
 # <a name="character-sets"></a>Set di caratteri
 
-Il testo di un programma C++ viene archiviato in file di origine che usano una particolare codifica dei caratteri. Lo standard C++ specifica un set di caratteri di origine base per i file di origine e un set di caratteri di esecuzione di base per i file compilati. Visual C++ consente un set aggiuntivo di caratteri specifici delle impostazioni locali da usare nei file di origine e nei file compilati.
+Il testo di un programma C++ viene archiviato in file di origine che usano una particolare codifica dei caratteri. Lo standard C++ specifica un set di caratteri di origine base per i file di origine e un set di caratteri di esecuzione di base per i file compilati. Microsoft C++ del compilatore (MSVC) consente a un set aggiuntivo di caratteri specifici delle impostazioni locali da usare nei file di origine e i file compilati.
 
 ## <a name="character-sets"></a>Set di caratteri
 
-Lo standard C++ specifica un *set di caratteri di origine di base* che possono essere usati nei file di origine. Per rappresentare i caratteri esterni a questo set, è possibile specificare i caratteri aggiuntivi usando un *nome di carattere universale*. Quando vengono compilati, il *set di caratteri di esecuzione di base* e *set di caratteri wide di esecuzione di base* rappresentano i caratteri e le stringhe che possono essere visualizzati in un programma. L'implementazione di Visual C++ consente caratteri aggiuntivi nel codice sorgente e nel codice compilato.
+Lo standard C++ specifica un *set di caratteri di origine di base* che possono essere usati nei file di origine. Per rappresentare i caratteri esterni a questo set, è possibile specificare i caratteri aggiuntivi usando un *nome di carattere universale*. Quando vengono compilati, il *set di caratteri di esecuzione di base* e *set di caratteri wide di esecuzione di base* rappresentano i caratteri e le stringhe che possono essere visualizzati in un programma. L'implementazione di MSVC consente caratteri aggiuntivi nel codice sorgente e il codice compilato.
 
 ### <a name="basic-source-character-set"></a>Set di caratteri di origine di base
 
@@ -36,7 +36,7 @@ Il *set di caratteri di origine di base* è costituito da 96 caratteri che posso
 
 **Sezione specifica Microsoft**
 
-Visual C++ include il carattere `$` come membro del set di caratteri di origine di base. Visual C++ consente anche di usare un set aggiuntivo di caratteri da usare nei file di origine in base alla codifica file. Per impostazione predefinita, Visual Studio archivia i file di origine usando la tabella codici predefinita. Quando vengono salvati i file di origine usando una tabella codici specifica delle impostazioni locali o una tabella codici Unicode, Visual C++ consente di usare qualsiasi carattere di tale tabella codici nel proprio codice sorgente, ad eccezione dei codici di controllo non esplicitamente consentiti nel set di caratteri di origine di base. Ad esempio, è possibile inserire caratteri giapponesi nei commenti, negli identificatori o nei valori letterali stringa se si salva il file usando una tabella codici giapponese. Visual C++ non consente sequenze di caratteri che non possono essere convertite in caratteri multibyte o punti di codice Unicode validi. A seconda delle opzioni del compilatore, non tutti i caratteri consentiti potrebbero apparire negli identificatori. Per altre informazioni, vedere [Identifiers](../cpp/identifiers-cpp.md).
+MSVC include la `$` carattere come membro del set di caratteri di origine di base. MSVC consente anche un set aggiuntivo di caratteri da utilizzare nei file di origine, in base alla codifica di file. Per impostazione predefinita, Visual Studio archivia i file di origine usando la tabella codici predefinita. Quando vengono salvati i file di origine usando una tabella codici dalle impostazioni locali o una tabella codici Unicode, MSVC consente di usare i caratteri della tabella codici nel codice sorgente, ad eccezione dei codici di controllo non esplicitamente consentiti nel carattere di origine di base. Ad esempio, è possibile inserire caratteri giapponesi nei commenti, negli identificatori o nei valori letterali stringa se si salva il file usando una tabella codici giapponese. MSVC non consente sequenze di caratteri che non possono essere convertite in caratteri multibyte validi o punti di codice Unicode. A seconda delle opzioni del compilatore, non tutti i caratteri consentiti potrebbero apparire negli identificatori. Per altre informazioni, vedere [Identifiers](../cpp/identifiers-cpp.md).
 
 **Fine sezione specifica Microsoft**
 
@@ -48,7 +48,7 @@ Siccome i programmi in C++ possono usare molti più caratteri rispetto a quelli 
 
 **Sezione specifica Microsoft**
 
-Il compilatore Visual C++ considera un carattere nel formato nome di carattere universale e valore letterale in modo intercambiabile. Ad esempio, è possibile dichiarare un identificatore usando il formato di nome di carattere universale e usarlo nel formato di valore letterale:
+Microsoft C++ compilatore considera un carattere nel formato nome di carattere universale e formato letterale in modo intercambiabile. Ad esempio, è possibile dichiarare un identificatore usando il formato di nome di carattere universale e usarlo nel formato di valore letterale:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'

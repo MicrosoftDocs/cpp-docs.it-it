@@ -247,11 +247,11 @@ f1_keywords:
 - C3999
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
 ms.openlocfilehash: c5cb482804dac90a278036d594dc92e7be33e2bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281335"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857709"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>Errori del compilatore da C3500 a C3999
 

@@ -1,17 +1,15 @@
 ---
 title: 'Procedura: Usare gli eventi di compilazione in progetti MSBuild'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273482"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221467"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Procedura: Usare gli eventi di compilazione in progetti MSBuild
 
@@ -39,7 +37,7 @@ Nella tabella seguente sono elencati ognuna *Usa in compilazione* elemento:
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente può essere aggiunto all'interno dell'elemento di progetto del file MyProject. vcxproj creato in [procedura dettagliata: Uso di MSBuild per creare un progetto Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Oggetto *pre-compilazione* eventi rende una copia di Main. cpp; un *pre-collegamento* eventi rende una copia di /all Main. obj; e un *post-compilazione* eventi crea una copia del myproject.exe. Se il progetto viene compilato con la configurazione rilascio, gli eventi di compilazione vengono eseguiti. Se il progetto viene compilato con una configurazione di debug, gli eventi di compilazione non vengono eseguiti.
+Nell'esempio seguente può essere aggiunto all'interno dell'elemento di progetto del file MyProject. vcxproj creato in [procedura dettagliata: Uso di MSBuild per creare un C++ Project](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Oggetto *pre-compilazione* eventi rende una copia di Main. cpp; un *pre-collegamento* eventi rende una copia di /all Main. obj; e un *post-compilazione* eventi crea una copia del myproject.exe. Se il progetto viene compilato con la configurazione rilascio, gli eventi di compilazione vengono eseguiti. Se il progetto viene compilato con una configurazione di debug, gli eventi di compilazione non vengono eseguiti.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +71,4 @@ Nell'esempio seguente può essere aggiunto all'interno dell'elemento di progetto
 ## <a name="see-also"></a>Vedere anche
 
 [MSBuild dalla riga di comando - C++](msbuild-visual-cpp.md)<br/>
-[Procedura dettagliata: Uso di MSBuild per creare un progetto Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Procedura dettagliata: Uso di MSBuild per creare un progetto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

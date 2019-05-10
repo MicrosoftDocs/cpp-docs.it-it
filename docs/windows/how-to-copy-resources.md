@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345266"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449065"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedura: Gestire le risorse (C++)
 
@@ -100,7 +100,7 @@ File di risorse gestite (con estensione resx) sono file XML. Quando si aggiunge 
 
 ## <a name="import-and-export-resources"></a>Importazione / esportazione di risorse
 
-È possibile importare risorse grafiche (bitmap, icone, cursori e barre degli strumenti), file HTML e risorse personalizzate da usare in Visual C++. È inoltre possibile esportare gli stessi tipi di file da un progetto Visual C++ in file separati utilizzabili all'esterno dell'ambiente di sviluppo.
+È possibile importare risorse grafiche (bitmap, icone, cursori e barre degli strumenti), file HTML e risorse personalizzate da usare in Visual C++. È possibile esportare gli stessi tipi di file da Visual Studio C++ progetto per separare i file che possono essere usati all'esterno dell'ambiente di sviluppo.
 
 > [!NOTE]
 > Tipi di risorse, ad esempio gli acceleratori, finestre di dialogo e le tabelle di stringhe non possono essere importati o esportati perché non si tratta di tipi di file autonomi.

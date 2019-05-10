@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266783"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221907"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -24,7 +24,7 @@ Uno dei motivi per usare **thiscall** è disponibile nelle classi il cui membro 
 
 Durante la compilazione con [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md), tutte le funzioni e i puntatori a funzione sono `__clrcall` se non diversamente specificato. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017.
 
-Nelle versioni precedenti di Visual C++ 2005, il **thiscall** convenzione di chiamata potrebbe non essere specificato in modo esplicito in un programma, perché **thiscall** non è una parola chiave.
+Nelle versioni precedenti di Visual Studio 2005, il **thiscall** convenzione di chiamata potrebbe non essere specificato in modo esplicito in un programma, perché **thiscall** non era una parola chiave.
 
 `vararg` uso di funzioni membro di **cdecl** convenzione di chiamata. Tutti gli argomenti della funzione vengono inseriti nello stack, con la **ciò** puntatore è posizionato sullo stack di ultima
 

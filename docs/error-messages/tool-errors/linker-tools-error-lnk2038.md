@@ -5,12 +5,12 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298867"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446957"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Errore degli strumenti del linker LNK2038
 
@@ -24,9 +24,9 @@ Questo errore può verificarsi quando un file oggetto nel progetto è scaduto. P
 
 Visual Studio definisce i simboli seguenti per impedire l'accesso del codice incompatibile che può generare errori di runtime o altri comportamenti imprevisti.
 
-- `_MSC_VER` Indica i numeri di versione principale e secondaria del compilatore Visual C++ che consente di compilare un'app o una libreria. Il codice compilato con una versione del compilatore di Visual C++ non è compatibile con il codice compilato utilizzando una versione con diversi numeri di versione maggiore e minore. Per altre informazioni, vedere `_MSC_VER` nelle [Predefined Macros](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` Indica i numeri di versione principale e secondario di Microsoft C++ compilatore (MSVC) che viene usato per compilare un'app o una libreria. Il codice compilato con una versione di MSVC è incompatibile con il codice compilato con una versione con numeri di versione principale e secondario diversi. Per altre informazioni, vedere `_MSC_VER` nelle [Predefined Macros](../../preprocessor/predefined-macros.md).
 
-   Se si collega a una libreria che non è compatibile con la versione del compilatore Visual C++ in uso e non è possibile acquisire o creare una versione compatibile della libreria, è possibile utilizzare una versione precedente del compilatore per compilare il progetto: modificare il **set strumenti della piattaforma** proprietà del progetto per il set di strumenti precedenti. Per altre informazioni, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Se si collegano a una libreria che non è compatibile con la versione di MSVC che sta usando, e non è possibile acquisire o compilare una versione compatibile della libreria, è possibile usare una versione precedente del compilatore per compilare il progetto: modificare il  **Set di strumenti della piattaforma** proprietà del progetto per il set di strumenti precedenti. Per altre informazioni, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - `_ITERATOR_DEBUG_LEVEL` Indica il livello di sicurezza e le funzionalità sono abilitate nella libreria Standard C++ di debug. Queste funzionalità possono modificare la rappresentazione di alcuni oggetti della libreria C++ standard e quindi renderli incompatibili con quelli che utilizzano funzionalità di sicurezza e debug diverse. Per altre informazioni, vedere [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 

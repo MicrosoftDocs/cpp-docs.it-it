@@ -1,6 +1,6 @@
 ---
 title: 'Procedura: Creare un progetto C++ da codice esistente'
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189024"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221464"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Procedura: Creare un progetto C++ da codice esistente
 
@@ -26,8 +26,6 @@ L'importazione di file di codice esistenti in un progetto C++ consente l'uso del
 ### <a name="to-create-a-c-project-from-existing-code"></a>Per creare un progetto C++ da codice esistente
 
 1. Nel menu **File** selezionare **Nuovo** > **Progetto da codice esistente**.
-
-1. Nella prima pagina della procedura guidata **Creazione guidata nuovo progetto da file di codice esistenti** selezionare **Visual C++** nell'elenco **Specificare il tipo di progetto che si vuole creare**. Scegliere **Avanti** per continuare.
 
 1. Specificare il percorso del progetto, la directory dei file di origine e i tipi di file che la procedura guidata importa nel nuovo progetto. Scegliere **Avanti** per continuare.
 
@@ -44,7 +42,7 @@ L'importazione di file di codice esistenti in un progetto C++ consente l'uso del
 
     | Impostazione | Descrizione |
     | --- | --- |
-    | **Utilizza Visual Studio** | Specifica l'uso degli strumenti di compilazione inclusi in Visual Studio per compilare il nuovo progetto. Questa opzione è selezionata per impostazione predefinita.<br/><br/>Selezionare **Tipo di progetto** per specificare il tipo di progetto generato dalla procedura guidata. Scegliere **Progetto Applicazione Windows**, **Progetto di applicazione console**, **Progetto libreria di collegamento dinamico (DLL)** o **Progetto libreria statica (LIB)**.<br/><br/>Selezionare **Aggiungi supporto per ATL** per aggiungere il supporto per ATL al nuovo progetto.<br/><br/>Selezionare **Aggiungi supporto per MFC** per aggiungere il supporto per MFC al nuovo progetto.<br/><br/>Selezionare **Aggiungi supporto per Common Language Runtime** per aggiungere il supporto di programmazione CLR al progetto. Scegliere il **Supporto Common Language Runtime** corrispondente al tipo di conformità, ad esempio **Supporto Common Language Runtime (sintassi precedente)** per la conformità con la sintassi delle estensioni gestite per C++, la sintassi di programmazione di CLR usata prima di Visual C++ 2005. |
+    | **Utilizza Visual Studio** | Specifica l'uso degli strumenti di compilazione inclusi in Visual Studio per compilare il nuovo progetto. Questa opzione è selezionata per impostazione predefinita.<br/><br/>Selezionare **Tipo di progetto** per specificare il tipo di progetto generato dalla procedura guidata. Scegliere **Progetto Applicazione Windows**, **Progetto di applicazione console**, **Progetto libreria di collegamento dinamico (DLL)** o **Progetto libreria statica (LIB)**.<br/><br/>Selezionare **Aggiungi supporto per ATL** per aggiungere il supporto per ATL al nuovo progetto.<br/><br/>Selezionare **Aggiungi supporto per MFC** per aggiungere il supporto per MFC al nuovo progetto.<br/><br/>Selezionare **Aggiungi supporto per Common Language Runtime** per aggiungere il supporto di programmazione CLR al progetto. Scegliere il **supporto Common Language Runtime** per il tipo di conformità, ad esempio **Common Language Runtime (sintassi precedente)** per la conformità con le estensioni gestite per C++ sintassi, la sintassi di programmazione CLR prima di Visual Studio 2005. |
     | **Utilizza sistema di compilazione esterno** | Specifica l'uso di strumenti di compilazione non inclusi in Visual Studio per compilare il nuovo progetto. Quando questa opzione è selezionata, è possibile specificare righe di comando di compilazione nelle pagine **Specifica le impostazioni di configurazione per il debug** e **Specifica le impostazioni di configurazione per il rilascio**. |
 
     ![Impostazioni progetto](media/settings.png)

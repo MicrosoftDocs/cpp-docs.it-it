@@ -1,15 +1,15 @@
 ---
 title: Distribuire un'applicazione Visual C++ tramite un progetto di installazione
-ms.date: 09/17/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-ms.openlocfilehash: e2d83d45f1369e250b24708edd17f4004e030a17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6829e917ed0a0e27bea7f42eb9bcfb2b9ad5d2e1
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387812"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877373"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Procedura dettagliata: Distribuzione di un'applicazione Visual C++ tramite un progetto di installazione
 
@@ -23,28 +23,91 @@ Per completare la procedura dettagliata, è necessario disporre dei componenti s
 
 - Un altro computer che non dispone delle librerie Visual C++.
 
-### <a name="to-deploy-an-application-by-using-a-setup-project"></a>Per distribuire un'applicazione tramite un progetto di installazione
+## <a name="create-the-setup-project"></a>Creare il progetto di installazione
 
-1. Creare un nuovo progetto. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
+Le istruzioni per la creazione di un progetto di installazione variano a seconda di quale versione di Visual Studio installata. Assicurarsi di avere il selettore di versione nell'angolo superiore sinistro impostata per la versione corretta.
 
-1. Usare **Creazione guidata applicazione MFC** per creare una nuova soluzione di Visual Studio. Per trovare la procedura guidata, nella finestra di dialogo **Nuovo progetto** espandere il nodo **Visual C++**, selezionare **MFC**, selezionare **Applicazione MFC**, immettere un nome per il progetto e fare clic su **OK**. Scegliere **Fine**.
+::: moniker range="=vs-2019"
 
-   > [!NOTE]
-   > Se il tipo **Applicazione MFC** non è presente:<br/>
-   > **Visual Studio 2017**: selezionare **Apri il programma di installazione di Visual Studio** nel riquadro a sinistra della finestra di dialogo **Nuovo progetto**. Installare l'opzione che si trova in **Sviluppo di applicazioni desktop con C++**, nella sezione dei componenti **Facoltativi**, denominata **MFC Visual C++ per x86 e x64**.<br/>
-   > **Visual Studio 2015**: fare clic sul pulsante Start di Windows e digitare **Installazione applicazioni**. Aprire il programma dall'elenco risultati e quindi individuare l'installazione di Microsoft Visual Studio 2015 nell'elenco dei programmi installati. Fare doppio clic, quindi scegliere **Modifica** e selezionare il componente **Microsoft Foundation Classes** in **Visual C++**.
+### <a name="to-create-the-project-in-visual-studio-2019"></a>Per creare il progetto in Visual Studio 2019
+
+1. Nella barra dei menu, scegliere **File** > **New** > **progetto** per aprire la **crea un nuovo progetto** nella finestra di dialogo.
+
+   ![Progetto di App di MFC](media/vs2019-mfc-app-new-project.png "MFC nuova app")
+
+1. Nella parte superiore della finestra di dialogo, digitare `MFC` nella ricerca e quindi selezionare **MFC App** dall'elenco dei risultati. Se non è presente, è necessario avviare il programma di installazione di Visual Studio dal menu Start di Windows e fare clic sui  **C++ carico di lavoro sviluppo di applicazioni Desktop** riquadro. Sotto **singoli componenti**, assicurarsi che sia selezionato il componente MFC.
+
+1. Nella pagina successiva, immettere un nome per il progetto e specificare il percorso del progetto se si desidera.
+
+1. Scegliere il **Create** pulsante per creare il progetto client. Quando la **Creazione guidata applicazione MFC** viene visualizzata, accettare tutte le impostazioni predefinite.
 
 1. Modificare la configurazione attiva della soluzione impostandola su **Rilascio**. Nel menu **Compila** selezionare **Gestione configurazione**. Nella finestra di dialogo **Gestione configurazione** selezionare **Rilascio** nell'elenco a discesa **Configurazione soluzione attiva**. Fare clic su **Chiudi**.
 
 1. Premere **CTRL**+**MAIUSC**+**B** per compilare l'applicazione. Oppure nel menu **Compila** scegliere **Compila soluzione**. La compilazione dell'applicazione consente al progetto di installazione di usare l'output di questo progetto di applicazione MFC.
 
-1. Se non è ancora stato fatto, scaricare l'estensione Microsoft Visual Studio Installer Projects. L'estensione è gratuita per gli sviluppatori di Visual Studio e aggiunge le funzionalità presenti nei modelli di progetto di installazione e distribuzione in Visual Studio. Quando si è connessi a Internet, in Visual Studio scegliere **Strumenti** > **Estensioni e aggiornamenti**. Nella finestra di dialogo **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **INVIO**, selezionare **Microsoft Visual Studio \<versione> Installer Projects** e fare clic su **Scarica**. Scegliere di eseguire e installare l'estensione e quindi riavviare Visual Studio.
+1. Se non è ancora stato fatto, scaricare l'estensione Microsoft Visual Studio Installer Projects. L'estensione è gratuita per gli sviluppatori di Visual Studio e aggiunge le funzionalità presenti nei modelli di progetto di installazione e distribuzione in Visual Studio. Quando si è connessi a Internet, in Visual Studio, scegliere **Extensions** > **Gestisci estensioni**. Nella finestra di dialogo **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **invio**, selezionare **Microsoft Visual Studio \<versione > i progetti Installer**, fare clic su **scaricare**. Scegliere di eseguire e installare l'estensione e quindi riavviare Visual Studio.
 
-1. Sulla barra dei menu scegliere **File** > **Progetti e soluzioni recenti** e quindi scegliere di riaprire il progetto.
+   ![Progetto di installazione di Visual Studio](media/vs2019-extension-dialog-installer-project.png "denominare il progetto client")
+
+1. Nella barra dei menu di Visual Studio, scegliere **File** > **progetti e soluzioni recenti**e quindi scegliere di riaprire il progetto.
+
+1. Nella barra dei menu, scegliere **File** > **New** > **progetto** per aprire la **crea un nuovo progetto** nella finestra di dialogo. Nella casella di ricerca, digitare "Setup" e nell'elenco dei risultati scegliere **progetto di installazione**.
+
+1. Immettere un nome per il progetto di installazione nella casella **Nome**. Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione**. Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene aperta una scheda **File Assistant (ProjectName)** (Assistente file - NomeProgetto).
+
+::: moniker-end
+
+::: moniker range="=vs-2017"
+
+### <a name="to-create-the-project-in-visual-studio-2017"></a>Per creare il progetto in Visual Studio 2017
+
+1. Creare un nuovo progetto. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
+
+1. Usare la **Creazione guidata applicazione MFC** per creare una nuova soluzione di Visual Studio. Per trovare la procedura guidata, nella finestra di dialogo **Nuovo progetto** espandere il nodo **Visual C++**, selezionare **MFC**, selezionare **Applicazione MFC**, immettere un nome per il progetto e fare clic su **OK**. Scegliere **Fine**.
+
+   > [!NOTE]
+   > Se il **applicazione MFC** tipo non è presente, selezionare **aperto Visual Studio Installer** nel riquadro sinistro della finestra di **nuovo progetto** nella finestra di dialogo. Installare l'opzione che si trova in **Sviluppo di applicazioni desktop con C++**, nella sezione dei componenti **Facoltativi**, denominata **MFC Visual C++ per x86 e x64**.
+
+1. Modificare la configurazione attiva della soluzione impostandola su **Rilascio**. Nel menu **Compila** selezionare **Gestione configurazione**. Nella finestra di dialogo **Gestione configurazione** selezionare **Rilascio** nell'elenco a discesa **Configurazione soluzione attiva**. Fare clic su **Chiudi**.
+
+1. Premere **CTRL**+**MAIUSC**+**B** per compilare l'applicazione. Oppure nel menu **Compila** scegliere **Compila soluzione**. La compilazione dell'applicazione consente al progetto di installazione di usare l'output di questo progetto di applicazione MFC.
+
+1. Se non è ancora stato fatto, scaricare l'estensione Microsoft Visual Studio Installer Projects. L'estensione è gratuita per gli sviluppatori di Visual Studio e aggiunge le funzionalità presenti nei modelli di progetto di installazione e distribuzione in Visual Studio. Quando si è connessi a Internet, in Visual Studio scegliere **Strumenti** > **Estensioni e aggiornamenti**. Nella finestra di dialogo **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **invio**, selezionare **Microsoft Visual Studio \<versione > i progetti Installer**, fare clic su **scaricare**. Scegliere di eseguire e installare l'estensione e quindi riavviare Visual Studio.
+
+1. Nella barra dei menu, scegliere **File** > **progetti e soluzioni recenti**e quindi scegliere di riaprire il progetto.
 
 1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Nuovo progetto**. Quindi nel riquadro a sinistra della finestra di dialogo espandere i nodi **Installato** > **Altri tipi di progetto** e selezionare **Programma di installazione di Visual Studio**. Nel riquadro centrale selezionare **Progetto di installazione**.
 
 1. Immettere un nome per il progetto di installazione nella casella **Nome**. Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione**. Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene aperta una scheda **File Assistant (ProjectName)** (Assistente file - NomeProgetto).
+
+::: moniker-end
+
+::: moniker range="=vs-2015"
+
+### <a name="to-create-the-project-in-visual-studio-2015"></a>Per creare il progetto in Visual Studio 2015
+
+1. Creare un nuovo progetto. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
+
+1. Usare la **Creazione guidata applicazione MFC** per creare una nuova soluzione di Visual Studio. Per trovare la procedura guidata, nella finestra di dialogo **Nuovo progetto** espandere il nodo **Visual C++**, selezionare **MFC**, selezionare **Applicazione MFC**, immettere un nome per il progetto e fare clic su **OK**. Scegliere **Fine**.
+
+   > [!NOTE]
+   > Se il **applicazione MFC** tipo non è presente, fare clic sul pulsante Start di Windows e tipo **Installazione applicazioni**. Aprire il programma dall'elenco risultati e quindi individuare l'installazione di Microsoft Visual Studio 2015 nell'elenco dei programmi installati. Fare doppio clic, quindi scegliere **Modifica** e selezionare il componente **Microsoft Foundation Classes** in **Visual C++**.
+
+1. Modificare la configurazione attiva della soluzione impostandola su **Rilascio**. Dal **compilare** dal menu **Configuration Manager**. Nella finestra di dialogo **Gestione configurazione** selezionare **Rilascio** nell'elenco a discesa **Configurazione soluzione attiva**. Fare clic su **Chiudi**.
+
+1. Premere **CTRL**+**MAIUSC**+**B** per compilare l'applicazione. Oppure nel menu **Compila** scegliere **Compila soluzione**. La compilazione dell'applicazione consente al progetto di installazione di usare l'output di questo progetto di applicazione MFC.
+
+1. Se non è ancora stato fatto, scaricare l'estensione Microsoft Visual Studio Installer Projects. L'estensione è gratuita per gli sviluppatori di Visual Studio e aggiunge le funzionalità presenti nei modelli di progetto di installazione e distribuzione in Visual Studio. Quando si è connessi a Internet, in Visual Studio scegliere **Strumenti** > **Estensioni e aggiornamenti**. Nella finestra di dialogo **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **invio**, selezionare **Microsoft Visual Studio \<versione > i progetti Installer**, fare clic su **scaricare**. Scegliere di eseguire e installare l'estensione e quindi riavviare Visual Studio.
+
+1. Nella barra dei menu, scegliere **File** > **progetti e soluzioni recenti**e quindi scegliere di riaprire il progetto.
+
+1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Nuovo progetto**. Quindi nel riquadro a sinistra della finestra di dialogo espandere i nodi **Installato** > **Altri tipi di progetto** e selezionare **Programma di installazione di Visual Studio**. Nel riquadro centrale selezionare **Progetto di installazione**.
+
+1. Immettere un nome per il progetto di installazione nella casella **Nome**. Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione**. Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene aperta una scheda **File Assistant (ProjectName)** (Assistente file - NomeProgetto).
+
+::: moniker-end
+
+## <a name="add-items-to-the-project"></a>Aggiungere elementi al progetto
 
 1. Fare clic con il pulsante destro del mouse sul nodo **Cartella applicazione** e selezionare **Aggiungi** > **Output progetto** per aprire la finestra di dialogo **Aggiungi gruppo output progetto**. Nella finestra di dialogo selezionare **Output primario** e fare clic su **OK**. Viene visualizzato un nuovo elemento denominato **Output primario da NomeProgetto (attivo)**.
 

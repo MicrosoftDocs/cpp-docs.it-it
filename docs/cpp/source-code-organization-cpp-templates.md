@@ -2,12 +2,12 @@
 title: Organizzazione del codice sorgente (modelli di C++)
 ms.date: 11/04/2016
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: 94e386b6301519b98b101adfca699b7f3128e3c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 592f17c08b9d4de0f67f17c60521d6e9a11dfc3a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331001"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221998"
 ---
 # <a name="source-code-organization-c-templates"></a>Organizzazione del codice sorgente (modelli di C++)
 
@@ -78,7 +78,6 @@ public:
 #endif
 
 //MyArray.cpp
-#include "stdafx.h"
 #include <iostream>
 #include "MyArray.h"
 

@@ -1,6 +1,6 @@
 ---
 title: Variabili di ambiente CL
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - cl
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 620ec386e06b1a0eed91c94e9b2b891d9955fd00
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294473"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217630"
 ---
 # <a name="cl-environment-variables"></a>Variabili di ambiente CL
 
@@ -22,7 +22,7 @@ Lo strumento CL usa le seguenti variabili di ambiente:
 
 - CL e \_CL\_, se definito. Lo strumento CL antepone le opzioni e gli argomenti definiti nella variabile di ambiente CL agli argomenti della riga di comando e accoda le opzioni e gli argomenti definiti nella \_CL\_, prima dell'elaborazione.
 
-- INCLUDE, che deve puntare alla sottodirectory \include dell'installazione di Visual C++.
+- Sono inclusi, che deve puntare alla sottodirectory \include dell'installazione di Visual Studio.
 
 - LIBPATH, che specifica le directory per cercare i file di metadati a cui fa riferimento [#using](../../preprocessor/hash-using-directive-cpp.md). Per altre informazioni su LIBPATH, vedere `#using`.
 

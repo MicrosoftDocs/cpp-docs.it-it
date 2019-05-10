@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
-ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4540180058c890a1dec9c4060f796f1f044c934
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215401"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447989"
 ---
 # <a name="compiler-error-c2603"></a>Errore del compilatore C2603
 
 > «*funzione*': Troppi oggetti statici in ambito blocco con costruttore/o distruttori nella funzione
 
-Nelle versioni del compilatore Visual C++ prima di Visual Studio 2015, o quando la [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) è specificata l'opzione del compilatore, è previsto un limite pari a 31, sul numero di oggetti statici è possibile avere in una funzione inline visibile esternamente .
+Nelle versioni di Microsoft C++ compilatore prima di Visual Studio 2015, o quando il [/Zc:threadSafeInit-](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) viene specificata l'opzione del compilatore, è previsto un limite pari a 31, sul numero di oggetti statici è possibile avere in visibile esternamente funzione inline.
 
-Per risolvere questo problema, è consigliabile adottare la versione più recente del set di strumenti del compilatore Visual C++ o, se possibile, rimuovere l'opzione del compilatore /Zc:threadSafeInit-. Se questo non è possibile, provare a usare gli oggetti statici. Se gli oggetti sono dello stesso tipo, provare a usare una singola matrice statica di quel tipo e fare riferimento a singoli membri in base alle esigenze.
+Per risolvere questo problema, è consigliabile adottare la versione più recente di Microsoft C++ set di strumenti del compilatore, o, se possibile, rimuovere l'opzione del compilatore /Zc:threadSafeInit-. Se questo non è possibile, provare a usare gli oggetti statici. Se gli oggetti sono dello stesso tipo, provare a usare una singola matrice statica di quel tipo e fare riferimento a singoli membri in base alle esigenze.
 
 ## <a name="example"></a>Esempio
 

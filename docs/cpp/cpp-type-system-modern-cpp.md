@@ -3,12 +3,12 @@ title: Sistema di tipi C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392275"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222138"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Tipi fondamentali (predefiniti)
 
-A differenza di alcuni linguaggi, C++ non presenta alcun tipo di base universale da cui derivano tutti gli altri tipi. L'implementazione di Visual C++ del linguaggio include molti *tipi fondamentali*, noto anche come *tipi incorporati*. Questo include i tipi numerici, ad esempio **int**, **double**, **long**, **bool**, più il **char** e**wchar_t** tipi per i caratteri ASCII e UNICODE, rispettivamente. I tipi più importanti (tranne **bool**, **double**, **wchar_t** e i tipi correlati) versioni che modificano l'intervallo di valori che la variabile può archiviare tutte senza segno. Ad esempio, un' **int**, che archivia un intero con segno a 32 bit, può rappresentare un valore compreso tra -2.147.483.648 e 2.147.483.647. Un' **unsigned int**, che viene archiviato anche come 32 bit, è possibile archiviare un valore compreso tra 0 e 4.294.967.295. Il numero totale di valori possibili è in ogni caso lo stesso, solo l'intervallo è diverso.
+A differenza di alcuni linguaggi, C++ non presenta alcun tipo di base universale da cui derivano tutti gli altri tipi. Il linguaggio include molti *tipi fondamentali*, noto anche come *tipi incorporati*. Questo include i tipi numerici, ad esempio **int**, **double**, **long**, **bool**, più il **char** e**wchar_t** tipi per i caratteri ASCII e UNICODE, rispettivamente. I tipi più importanti (tranne **bool**, **double**, **wchar_t** e i tipi correlati) versioni che modificano l'intervallo di valori che la variabile può archiviare tutte senza segno. Ad esempio, un' **int**, che archivia un intero con segno a 32 bit, può rappresentare un valore compreso tra -2.147.483.648 e 2.147.483.647. Un' **unsigned int**, che viene archiviato anche come 32 bit, è possibile archiviare un valore compreso tra 0 e 4.294.967.295. Il numero totale di valori possibili è in ogni caso lo stesso, solo l'intervallo è diverso.
 
 I tipi fondamentali sono riconosciuti dal compilatore che ha regole predefinite che stabiliscono quali operazioni è possibile eseguire su di essi e come possono essere convertiti in altri tipi fondamentali. Per un elenco completo dei tipi incorporati e le dimensioni e limiti numerici, vedere [tipi fondamentali](../cpp/fundamental-types-cpp.md).
 

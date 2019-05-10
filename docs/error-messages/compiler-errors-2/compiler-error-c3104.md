@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404169"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447843"
 ---
 # <a name="compiler-error-c3104"></a>Errore del compilatore C3104
 
@@ -21,7 +21,7 @@ argomento dell'attributo non valido
 
 Visualizzare [tipi di parametro di attributo](../../extensions/attribute-parameter-types-cpp-component-extensions.md) per altre informazioni.
 
-Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual C++ 2005: passaggio di matrici gestite agli attributi personalizzati, il tipo della matrice non viene dedotto non è più nell'elenco di inizializzazione aggregata. Il compilatore ora è necessario specificare il tipo di matrice, nonché l'elenco di inizializzatori.
+Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual Studio 2005: passaggio di matrici gestite agli attributi personalizzati, il tipo della matrice non viene dedotto non è più nell'elenco di inizializzazione aggregata. Il compilatore ora è necessario specificare il tipo di matrice, nonché l'elenco di inizializzatori.
 
 ## <a name="example"></a>Esempio
 

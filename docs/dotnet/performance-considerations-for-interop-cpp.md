@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384751"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447259"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Considerazioni sulle prestazioni per l'interoperabilità (C++)
 
@@ -21,7 +21,7 @@ In questo argomento vengono fornite linee guida per ridurre l'effetto delle tran
 
 Visual C++ supporta gli stessi meccanismi di interoperabilità negli altri linguaggi .NET, ad esempio Visual Basic e c# (P/Invoke), ma fornisce inoltre il supporto di interoperabilità che è specifico di Visual C++ (interoperabilità C++). Per le applicazioni critiche per le prestazioni, è importante comprendere le implicazioni sulle prestazioni di ogni tecnica interoperabilità.
 
-Indipendentemente dalla tecnica di interoperabilità utilizzata, le sequenze di transizione speciale, chiamate thunk, sono necessari ogni volta che una funzione gestita chiama un versa non gestito (funzione) e viceversa. I thunk vengono inseriti automaticamente dal compilatore Visual C++, ma è importante tenere presente che App ha complessivamente, le transizioni possono essere costose in termini di prestazioni.
+Indipendentemente dalla tecnica di interoperabilità utilizzata, le sequenze di transizione speciale, chiamate thunk, sono necessari ogni volta che una funzione gestita chiama un versa non gestito (funzione) e viceversa. I thunk vengono inseriti automaticamente da Microsoft C++ compilatore, ma è importante tenere presente che App ha complessivamente, le transizioni possono essere costose in termini di prestazioni.
 
 ## <a name="reducing-transitions"></a>Riducendo le transizioni
 

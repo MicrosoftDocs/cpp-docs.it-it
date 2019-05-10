@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f17561941d785e5eb7b5fd8c52ab452aa6369e7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323281"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220433"
 ---
 # <a name="cwinthread-class"></a>CWinThread (classe)
 
@@ -311,7 +311,7 @@ BOOL m_bAutoDelete;
 
 Il `m_bAutoDelete` membro dati è una variabile pubblica di tipo BOOL.
 
-Il valore `m_bAutoDelete` non influisce su come l'handle dei thread sottostanti viene chiuso. L'handle dei thread viene sempre chiuso quando l'oggetto `CWinThread` viene eliminato definitivamente.
+Il valore di `m_bAutoDelete` non ha effetto sul modo in cui l'handle del thread sottostanti viene chiuso, ma modifica i tempi della chiusura dell'handle. L'handle dei thread viene sempre chiuso quando l'oggetto `CWinThread` viene eliminato definitivamente.
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 
@@ -323,7 +323,9 @@ HANDLE m_hThread;
 
 ### <a name="remarks"></a>Note
 
-Il `m_hThread` membro dati è una variabile pubblica di tipo di HANDLE. È valido solo se sottostante thread attualmente presente.
+Il `m_hThread` membro dati è una variabile pubblica di tipo di HANDLE. È valido solo se l'oggetto thread kernel sottostante non è disponibile e l'handle non è stato ancora chiuso.
+
+Il distruttore CWinThread chiama CloseHandle su `m_hThread`. Se [m_bAutoDelete](#m_bautodelete) è TRUE quando il thread termina, il CWinThread l'oggetto viene eliminato definitivamente, che consente di invalidare eventuali puntatori agli oggetti CWinThread e variabili membro. Potrebbe essere necessario il `m_hThread` membro per verificare il valore di uscita del thread, o attendere un segnale. Per mantenere l'oggetto CWinThread e il relativo `m_hThread` del set di membri durante l'esecuzione dei thread e dopo la terminazione, `m_bAutoDelete` su FALSE prima di consentire l'esecuzione di thread continuare. In caso contrario, il thread potrebbe terminare, eliminare l'oggetto CWinThread e chiudere l'handle prima di provare a usarlo. Se si usa questa tecnica, è responsabile per l'eliminazione dell'oggetto CWinThread.
 
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID
 
@@ -335,7 +337,8 @@ DWORD m_nThreadID;
 
 ### <a name="remarks"></a>Note
 
-Il `m_nThreadID` membro dati è una variabile pubblica di tipo DWORD. È valido solo se sottostante thread attualmente presente.
+Il `m_nThreadID` membro dati è una variabile pubblica di tipo DWORD. È valido solo se l'oggetto thread kernel sottostante non è disponibile.
+Vedere anche la sezione Osservazioni [m_hThread](#m_hthread) durata.
 
 ### <a name="example"></a>Esempio
 

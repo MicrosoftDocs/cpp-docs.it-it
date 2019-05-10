@@ -1,15 +1,15 @@
 ---
 title: Sintassi delle espressioni lambda
-ms.date: 03/25/2019
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216511"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222396"
 ---
 # <a name="lambda-expression-syntax"></a>Sintassi delle espressioni lambda
 
@@ -83,7 +83,7 @@ Nell'esempio, il terzo argomento per il **for_each** funzione è un'espressione 
 
 ## <a name="example-2-using-a-function-object"></a>Esempio 2: Uso di un oggetto (funzione)
 
-Talvolta un'espressione lambda potrebbe risultare troppo complessa da gestire per ampliare l'esempio precedente. L'esempio seguente usa un oggetto funzione, anziché un'espressione lambda, in combinazione con il **for_each** funzione per produrre gli stessi risultati di esempio 1. In entrambi gli esempi viene memorizzato il conteggio dei numeri pari in un oggetto `vector`. Per mantenere lo stato dell'operazione, la classe `FunctorClass` archivia la variabile `m_evenCount` per riferimento come variabile membro. Per eseguire l'operazione `FunctorClass` implementa l'operatore di chiamata di funzione, **Operator ()**. Il compilatore di Visual C++ genera codice analogo per dimensioni e prestazioni al codice dell'espressione lambda dell'Esempio 1. Per un problema di base simile a quello presentato in questo articolo, la progettazione più semplice delle espressioni lambda è probabilmente preferibile alla progettazione dell'oggetto funzione. Se tuttavia si prevede che la funzionalità possa richiedere un'espansione significativa in futuro, usare la progettazione dell'oggetto funzione in modo che la manutenzione del codice risulti più facile.
+Talvolta un'espressione lambda potrebbe risultare troppo complessa da gestire per ampliare l'esempio precedente. L'esempio seguente usa un oggetto funzione, anziché un'espressione lambda, in combinazione con il **for_each** funzione per produrre gli stessi risultati di esempio 1. In entrambi gli esempi viene memorizzato il conteggio dei numeri pari in un oggetto `vector`. Per mantenere lo stato dell'operazione, la classe `FunctorClass` archivia la variabile `m_evenCount` per riferimento come variabile membro. Per eseguire l'operazione `FunctorClass` implementa l'operatore di chiamata di funzione, **Operator ()**. Microsoft C++ compilatore genera codice analogo per dimensioni e prestazioni al codice dell'espressione lambda esempio 1. Per un problema di base simile a quello presentato in questo articolo, la progettazione più semplice delle espressioni lambda è probabilmente preferibile alla progettazione dell'oggetto funzione. Se tuttavia si prevede che la funzionalità possa richiedere un'espansione significativa in futuro, usare la progettazione dell'oggetto funzione in modo che la manutenzione del codice risulti più facile.
 
 Per altre informazioni sul **operator**, vedere [chiamata di funzione](../cpp/function-call-cpp.md). Per altre informazioni sul **for_each** function, vedere [for_each](../standard-library/algorithm-functions.md#for_each).
 

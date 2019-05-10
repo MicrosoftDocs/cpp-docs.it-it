@@ -1,14 +1,14 @@
 ---
 title: Conversioni di tipi e indipendenza dai tipi (C++ moderno)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404689"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221854"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversioni di tipi e indipendenza dai tipi (C++ moderno)
 
@@ -84,7 +84,7 @@ Il compilatore non emette avvisi sulle conversioni implicite tra i tipi integral
 
 ### <a name="pointer-conversions"></a>Conversioni puntatore
 
-In molte espressioni, le matrici in stile C vengono convertite in modo implicito in un puntatore al primo elemento della matrice e le conversioni costanti possono verificarsi automaticamente. Sebbene utile, questo metodo è potenzialmente soggetto ad errori. Ad esempio, il seguente esempio di codice progettato in modo errato sembra non avere senso, tuttavia viene compilato in Visual C++ e produce come risultato "p". Innanzitutto, la stringa "help" viene convertita in `char*` che punta al primo elemento della matrice; questo puntatore viene quindi incrementato di tre elementi in modo che punti ora all'ultimo elemento "p".
+In molte espressioni, le matrici in stile C vengono convertite in modo implicito in un puntatore al primo elemento della matrice e le conversioni costanti possono verificarsi automaticamente. Sebbene utile, questo metodo è potenzialmente soggetto ad errori. Ad esempio, il seguente esempio di codice progettato in modo errato sembra non avere senso e ancora verrà compilato e produce un risultato "p". Innanzitutto, la stringa "help" viene convertita in `char*` che punta al primo elemento della matrice; questo puntatore viene quindi incrementato di tre elementi in modo che punti ora all'ultimo elemento "p".
 
 ```cpp
 char* s = "Help" + 3;

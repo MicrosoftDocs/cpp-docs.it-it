@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314093"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446190"
 ---
 # <a name="set-compiler-and-build-properties"></a>Impostare il compilatore e le proprietà di compilazione
 
@@ -23,7 +23,7 @@ Nell'IDE tutte le informazioni necessarie per compilare un progetto vengono espo
 
 Quando si crea un progetto, il sistema assegna i valori per varie proprietà. Le impostazioni predefinite variano leggermente a seconda del tipo di progetto e delle opzioni selezionate nella procedura guidata app. Ad esempio, un progetto ATL ha proprietà relative a file MIDL, ma questi sono assenti in un'applicazione console di base. Le proprietà predefinite vengono visualizzate nel riquadro Generale nelle Pagine delle proprietà:
 
-![Visual C&#43;&#43; Impostazioni predefinite progetto](media/visual-c---project-defaults.png "Impostazioni predefinite progetto di Visual C++")
+![Visual C&#43; &#43; impostazioni predefinite progetto](media/visual-c---project-defaults.png "Visual C++ impostazioni predefinite del progetto")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>Applicazione delle proprietà per creare le configurazioni e piattaforme di destinazione
 
@@ -61,7 +61,7 @@ Il **pagine delle proprietà** nella finestra di dialogo Mostra solo le pagine d
 
 MSBuild supporta l'utilizzo delle costanti in fase di compilazione denominati "macro" per determinati valori di stringa includono le directory e percorsi. Questi sono esposti nelle pagine delle proprietà, in cui è possibile fare riferimento al e modificarli utilizzando la [Editor di proprietà](#property_editor). 
 
-La figura seguente mostra le pagine delle proprietà per un progetto Visual C++. Nel riquadro sinistro è selezionata la **regola** *Directory di VC++* e nel riquadro destro vengono visualizzate le proprietà associate alla regola in questione. Il `$(...)` valori sono denominati *macro*. Una *macro* è una costante in fase di compilazione che può fare riferimento a un valore definito da Visual Studio o dal sistema MSBuild o a un valore definito dall'utente. Usando le macro anziché i valori hardcoded, ad esempio i percorsi di directory, è possibile condividere più facilmente le impostazioni delle proprietà tra i computer e tra le versioni di Visual Studio e assicurarsi meglio che le impostazioni del progetto partecipino in modo corretto in [ ereditarietà della proprietà](project-property-inheritance.md). 
+La figura seguente mostra le pagine delle proprietà per un Visual Studio C++ project. Nel riquadro sinistro è selezionata la **regola** *Directory di VC++* e nel riquadro destro vengono visualizzate le proprietà associate alla regola in questione. Il `$(...)` valori sono denominati *macro*. Una *macro* è una costante in fase di compilazione che può fare riferimento a un valore definito da Visual Studio o dal sistema MSBuild o a un valore definito dall'utente. Usando le macro anziché i valori hardcoded, ad esempio i percorsi di directory, è possibile condividere più facilmente le impostazioni delle proprietà tra i computer e tra le versioni di Visual Studio e assicurarsi meglio che le impostazioni del progetto partecipino in modo corretto in [ ereditarietà della proprietà](project-property-inheritance.md). 
 
 ![Pagine delle proprietà del progetto](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

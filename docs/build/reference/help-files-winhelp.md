@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 376d9faa87868cce842a1cb70273e220ff691fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 835300d2fe39688f3b9c41dad801f1a79984c803
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270198"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446554"
 ---
 # <a name="help-files-winhelp"></a>File della Guida (WinHelp)
 
@@ -35,4 +35,4 @@ I file seguenti vengono creati quando si aggiunge il tipo di Guida WinHelp del s
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tipi di file creati per i progetti di Visual C++](file-types-created-for-visual-cpp-projects.md)
+[Tipi di file creati per oggetto visivo C++ progetti](file-types-created-for-visual-cpp-projects.md)

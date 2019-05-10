@@ -2,16 +2,16 @@
 title: DLL (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 13e733f0be27fe532af6109bdd6fc53291265e66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183285"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447245"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
-È possibile usare Visual Studio per creare una DLL Win32 standard o un componente Windows Runtime DLL che possono essere usati da app Universal Windows Platform (UWP). Una DLL standard creata con una versione di Visual Studio o il compilatore Visual C++ precedente a Visual Studio 2012 non venga caricato correttamente in un'app UWP, potrebbe non passare i test di verifica app di Microsoft Store.
+È possibile usare Visual Studio per creare una DLL Win32 standard o un componente Windows Runtime DLL che possono essere usati da app Universal Windows Platform (UWP). Una DLL standard creata con una versione di Visual Studio o Microsoft C++ compilatore precedente rispetto a Visual Studio 2012 non venga caricato correttamente in un'app UWP e potrebbe non passare i test di verifica app di Microsoft Store.
 
 ## <a name="windows-runtime-component-dlls"></a>DLL del componente Windows Runtime
 

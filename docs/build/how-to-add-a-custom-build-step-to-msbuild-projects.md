@@ -1,17 +1,15 @@
 ---
 title: 'Procedura: Aggiungere un passaggio di compilazione personalizzata a progetti MSBuild'
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 4c64c6875d82000d6a0ac880b103b5e220015cb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d70f145a9d43463266a9c0bbff68e8e7f36ef2c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188925"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220724"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Procedura: Aggiungere un passaggio di compilazione personalizzata a progetti MSBuild
 
@@ -27,7 +25,7 @@ Istruzioni di compilazione personalizzate e strumenti di compilazione personaliz
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Definire ciò che viene eseguita dall'istruzione di compilazione personalizzata
 
-1. Aggiungere un gruppo di proprietà al file di progetto. In questo gruppo di proprietà, specificare il comando, gli input e output e un messaggio, come illustrato nell'esempio seguente. In questo esempio crea un file CAB dal file Main. cpp è stato creato in [procedura dettagliata: Uso di MSBuild per creare un progetto Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Aggiungere un gruppo di proprietà al file di progetto. In questo gruppo di proprietà, specificare il comando, gli input e output e un messaggio, come illustrato nell'esempio seguente. In questo esempio crea un file CAB dal file Main. cpp è stato creato in [procedura dettagliata: Uso di MSBuild per creare un C++ Project](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -52,6 +50,6 @@ Istruzioni di compilazione personalizzate e strumenti di compilazione personaliz
 
 ## <a name="see-also"></a>Vedere anche
 
-[Procedura dettagliata: Uso di MSBuild per creare un progetto Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Procedura dettagliata: Uso di MSBuild per creare un progetto C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Procedura: Uso degli eventi di compilazione nei progetti MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Procedura: Aggiungere strumenti di compilazione personalizzati ai progetti MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)

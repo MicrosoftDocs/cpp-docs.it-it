@@ -1,15 +1,15 @@
 ---
 title: Esempi di espressioni lambda
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392193"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222098"
 ---
 # <a name="examples-of-lambda-expressions"></a>Esempi di espressioni lambda
 
@@ -61,7 +61,7 @@ Sebbene le espressioni lambda vengano dichiarate soprattutto nel corpo di una fu
 
 ### <a name="example-2"></a>Esempio 2
 
-Il compilatore Visual C++ associa un'espressione lambda alle relative variabili acquisite quando viene dichiarata un'espressione e non quando viene chiamata l'espressione. Nell'esempio seguente viene illustrata un'espressione lambda che acquisisce la variabile locale `i` per valore e la variabile locale `j` per riferimento. Poiché l'espressione lambda acquisisce `i` per valore, la riassegnazione successiva di `i` nel programma non influisce sul risultato dell'espressione. Tuttavia, poiché l'espressione lambda acquisisce `j` per riferimento, la riassegnazione di `j` influisce sul risultato dell'espressione.
+Microsoft C++ compilatore associa un'espressione lambda alle relative variabili acquisite quando l'espressione viene dichiarata quando viene chiamata l'espressione. Nell'esempio seguente viene illustrata un'espressione lambda che acquisisce la variabile locale `i` per valore e la variabile locale `j` per riferimento. Poiché l'espressione lambda acquisisce `i` per valore, la riassegnazione successiva di `i` nel programma non influisce sul risultato dell'espressione. Tuttavia, poiché l'espressione lambda acquisisce `j` per riferimento, la riassegnazione di `j` influisce sul risultato dell'espressione.
 
 ### <a name="code"></a>Codice
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 663b639dbfecf9253547e1dd3b4e40480c27b470
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331090"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222040"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Dichiaratore di riferimento rvalue: &amp;&amp;
 
@@ -35,7 +35,7 @@ I riferimenti rvalue supportano l'implementazione di *semantica di spostamento*,
 
 Per implementare la semantica di spostamento, si forniscono in genere un *costruttore di spostamento* e facoltativamente un operatore di assegnazione di spostamento (**operatore =**), alla classe. Nelle operazioni di copia e assegnazione le cui origini sono valori rvalue viene automaticamente utilizzata la semantica di spostamento. A differenza di un costruttore di copia predefinito, il compilatore non fornisce un costruttore di spostamento predefinito. Per altre informazioni su come scrivere un costruttore di spostamento e su come usarla nell'applicazione, vedere [costruttori di spostamento e operatori di assegnazione di spostamento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-È inoltre possibile sottoporre a overload funzioni e operatori comuni per sfruttare la semantica di spostamento. Visual C++ 2010 viene introdotta la semantica di spostamento nella libreria Standard C++. Ad esempio, la classe `string` implementa le operazioni che eseguono la semantica di spostamento. Si consideri l'esempio seguente in cui vengono concatenate diverse stringhe e viene visualizzato il risultato:
+È inoltre possibile sottoporre a overload funzioni e operatori comuni per sfruttare la semantica di spostamento. Visual Studio 2010 viene introdotta la semantica di spostamento in di C++ libreria Standard. Ad esempio, la classe `string` implementa le operazioni che eseguono la semantica di spostamento. Si consideri l'esempio seguente in cui vengono concatenate diverse stringhe e viene visualizzato il risultato:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,15 +51,15 @@ int main()
 }
 ```
 
-Prima di Visual C++ 2010, con ogni chiamata a **operatore +** alloca e restituisce un nuovo elemento temporaneo `string` oggetto (rvalue). **operatore +** non è possibile aggiungere una stringa a altra perché non conoscere se le stringhe di origine sono lvalue o rvalue. Se le stringhe di origine sono entrambe lvalue, è possibile che a esse venga fatto riferimento in un altro punto del programma e pertanto non devono essere modificate. Utilizzando i riferimenti rvalue **operatore +** possono essere modificate per accettare i valori rvalue, non è possibile farvi riferimento in un punto del programma. Pertanto **operatore +** possono ora aggiungere una stringa a un altro. Ciò può ridurre notevolmente il numero delle allocazioni di memoria dinamica che devono essere eseguite dalla classe `string`. Per altre informazioni sul `string` classe, vedere [classe basic_string](../standard-library/basic-string-class.md).
+Prima di Visual Studio 2010, con ogni chiamata a **operatore +** alloca e restituisce un nuovo elemento temporaneo `string` oggetto (rvalue). **operatore +** non è possibile aggiungere una stringa a altra perché non conoscere se le stringhe di origine sono lvalue o rvalue. Se le stringhe di origine sono entrambe lvalue, è possibile che a esse venga fatto riferimento in un altro punto del programma e pertanto non devono essere modificate. Utilizzando i riferimenti rvalue **operatore +** possono essere modificate per accettare i valori rvalue, non è possibile farvi riferimento in un punto del programma. Pertanto **operatore +** possono ora aggiungere una stringa a un altro. Ciò può ridurre notevolmente il numero delle allocazioni di memoria dinamica che devono essere eseguite dalla classe `string`. Per altre informazioni sul `string` classe, vedere [classe basic_string](../standard-library/basic-string-class.md).
 
-La semantica di spostamento è utile anche quando il compilatore non può utilizzare l'ottimizzazione del valore restituito (RVO) o l'ottimizzazione del valore restituito denominato (NRVO). In questi casi, il compilatore chiama il costruttore di spostamento se è definito dal tipo. Per altre informazioni sull'ottimizzazione valore restituito denominato, vedere [ottimizzazione del valore restituito denominato in Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
+La semantica di spostamento è utile anche quando il compilatore non può utilizzare l'ottimizzazione del valore restituito (RVO) o l'ottimizzazione del valore restituito denominato (NRVO). In questi casi, il compilatore chiama il costruttore di spostamento se è definito dal tipo. Per altre informazioni sull'ottimizzazione valore restituito denominato, vedere [ottimizzazione del valore restituito denominato in Visual Studio 2005](https://msdn.microsoft.com/library/ms364057.aspx).
 
 Per comprendere meglio la semantica di spostamento, si consideri l'esempio dell'inserimento di un elemento in un oggetto `vector`. Se la capacità dell'oggetto `vector` viene superata, tale oggetto `vector` dovrà allocare di nuovo la memoria per i relativi elementi, quindi copiare ogni elemento in un'altra posizione di memoria per creare spazio per l'elemento inserito. Quando viene eseguita la copia di un elemento tramite un'operazione di inserimento, viene creato un nuovo elemento, viene chiamato il costruttore di copia per copiare i dati dall'elemento precedente nel nuovo elemento, quindi viene eliminato l'elemento precedente. La semantica di spostamento consente di spostare gli oggetti direttamente senza dover effettuare le dispendiose operazioni di allocazione della memoria e di copia.
 
 Per sfruttare i vantaggi della semantica di spostamento nell'esempio `vector`, è possibile scrivere un costruttore di spostamento per spostare i dati da un oggetto a un altro.
 
-Per altre informazioni sull'introduzione della semantica di spostamento nella libreria Standard C++ in Visual C++ 2010, vedere [libreria Standard C++](../standard-library/cpp-standard-library-reference.md).
+Per altre informazioni sull'introduzione della semantica di spostamento in di C++ libreria Standard in Visual Studio 2010, vedere [ C++ della libreria Standard](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="perfect-forwarding"></a>Inoltro perfetto
 

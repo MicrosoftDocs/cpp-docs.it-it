@@ -1,6 +1,6 @@
 ---
 title: Ottimizzazione del codice
-ms.date: 04/23/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: 430ac9ef1b2946e511d04f7ce18bb0f20d727d75
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f44fb734c8441e10b656c5326c8df4bf6879499a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341107"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220184"
 ---
 # <a name="optimizing-your-code"></a>Ottimizzazione del codice
 
-Ottimizzazione di un file eseguibile, è possibile ottenere un equilibrio tra velocità di esecuzione e dimensione del codice. In questo argomento vengono illustrati alcuni dei meccanismi disponibili in Visual C++ che consentono di ottimizzare il codice.
+Ottimizzazione di un file eseguibile, è possibile ottenere un equilibrio tra velocità di esecuzione e dimensione del codice. In questo argomento vengono illustrati alcuni dei meccanismi forniti da Visual Studio che consentono di ottimizzare il codice.
 
 ## <a name="language-features"></a>Funzionalità del linguaggio
 
