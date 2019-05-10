@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209160"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448076"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semantica dello stack C++ per i tipi di riferimento
 
-Prima di Visual C++ 2005, era possibile creare un'istanza di un tipo di riferimento solo utilizzando l'operatore `new`, il quale creava l'oggetto sull'heap sottoposto a procedura di Garbage Collection. Adesso invece è possibile creare un'istanza di un tipo di riferimento utilizzando la stessa sintassi che viene utilizzata per creare un'istanza di un tipo nativo nello stack. Pertanto, non è necessario usare [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) per creare un oggetto di un tipo riferimento. E quando l'oggetto esce dall'ambito, il compilatore chiama il distruttore dell'oggetto.
+Prima di Visual Studio 2005, un'istanza di un tipo riferimento potrebbe essere creata solo usando il `new` operatore, che ha creato l'oggetto nell'operazione di garbage collection heap. Adesso invece è possibile creare un'istanza di un tipo di riferimento utilizzando la stessa sintassi che viene utilizzata per creare un'istanza di un tipo nativo nello stack. Pertanto, non è necessario usare [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) per creare un oggetto di un tipo riferimento. E quando l'oggetto esce dall'ambito, il compilatore chiama il distruttore dell'oggetto.
 
 ## <a name="remarks"></a>Note
 

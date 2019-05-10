@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317120"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446497"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Struttura dei file con estensione vcxproj e props
 
@@ -21,13 +21,13 @@ Se si sceglie di modificare manualmente un file con estensione vcxproj, tenere p
 
 1. La struttura del file deve seguire una forma prescritta, come descritto in questo articolo.
 
-1. Il sistema di progetto Visual C++ attualmente non supporta i caratteri jolly negli elementi del progetto. Non supporta ad esempio:
+1. Visual Studio C++ sistema del progetto attualmente non supporta i caratteri jolly negli elementi di progetto. Non supporta ad esempio:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Il sistema di progetto Visual C++ attualmente non supporta le macro nei percorsi degli elementi del progetto. Non supporta ad esempio:
+1. Visual Studio C++ sistema del progetto non supporta attualmente le macro in percorsi di elementi di progetto. Non supporta ad esempio:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -224,7 +224,7 @@ I metadata devono includere le condizioni di configurazione per ogni configurazi
 </ItemGroup>
 ```
 
-Il sistema di progetto Visual C++ attualmente non supporta i caratteri jolly negli elementi del progetto.
+Visual Studio C++ sistema del progetto attualmente non supporta i caratteri jolly negli elementi di progetto.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Il sistema di progetto Visual C++ attualmente non supporta i caratteri jolly neg
 </ItemGroup>
 ```
 
-Il sistema di progetto Visual C++ attualmente non supporta le macro negli elementi del progetto.
+Visual Studio C++ sistema del progetto non supporta attualmente le macro negli elementi di progetto.
 
 ```xml
 <ItemGroup>

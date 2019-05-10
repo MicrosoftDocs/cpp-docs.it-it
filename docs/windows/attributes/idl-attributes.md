@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29761d814505d2c2dd435d3416fe2367e1c16073
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409551"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448410"
 ---
 # <a name="idl-attributes"></a>Attributi IDL
 
@@ -27,7 +27,7 @@ A questo punto, è possibile modificare il file con estensione idl all'interno d
 
 Se non è stato usato con [attributi COM](com-attributes.md), attributi IDL consentono di definire le interfacce. Quando viene compilato il codice sorgente, gli attributi vengono usati per definire il file con estensione IDL generato. Se usato con gli attributi COM in un progetto ATL, alcuni IDL attributi, ad esempio `coclass`, che il codice venga inserito nel progetto.
 
-Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL che non sono supportati nella versione corrente dell'oggetto visivo C++. Questo e altri attributi, ad esempio [importlib](importlib.md) e [includelib](includelib-cpp.md) sarà possibile utilizzare i file con estensione idl esistenti nel progetto Visual C++ corrente.
+Si noti che [idl_quote](idl-quote.md) consente di usare costrutti MIDL che non sono supportati nella versione corrente dell'oggetto visivo C++. Questo e altri attributi, ad esempio [importlib](importlib.md) e [includelib](includelib-cpp.md) consentono di utilizzare i file con estensione idl esistenti in Visual Studio corrente C++ progetto.
 
 |Attributo|Descrizione|
 |---------------|-----------------|

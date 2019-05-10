@@ -1,6 +1,6 @@
 ---
 title: Creazione di un progetto ATL
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - vc.appwiz.ATL.project
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: d44434a36c8d757fb8f79d36a672c4c77de64ade
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c36200d7f0d41aa4f116fdee3f5d95ff1e80e839
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278111"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445999"
 ---
 # <a name="creating-an-atl-project"></a>Creazione di un progetto ATL
 
@@ -33,7 +33,7 @@ Il modo più semplice per creare un progetto ATL è utilizzare la procedura guid
 
 1. Fare clic su **fine** per chiudere la procedura guidata e aprire il nuovo progetto nell'ambiente di sviluppo.
 
-Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per i progetti Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md). Per altre informazioni sulle configurazioni per il nuovo progetto ATL e come modificarle, vedere [configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md).
+Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per oggetto visivo C++ progetti](../../build/reference/file-types-created-for-visual-cpp-projects.md). Per altre informazioni sulle configurazioni per il nuovo progetto ATL e come modificarle, vedere [configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md).
 
 ## <a name="see-also"></a>Vedere anche
 

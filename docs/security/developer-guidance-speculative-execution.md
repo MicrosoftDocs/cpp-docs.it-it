@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3895cdb060d45d3f75c75f75c930e868b3654b2
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179319"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448600"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Linee guida per sviluppatori di C++ per l'esecuzione speculativa i canali
 
@@ -21,7 +21,7 @@ Questo articolo contiene indicazioni per gli sviluppatori agevolare l'identifica
 
 Le indicazioni fornite in questo articolo sono correlata alle classi di vulnerabilità rappresentata da:
 
-1. CVE-2017-5753, noto anche come Spectre variante 1. Questa classe di vulnerabilità di hardware è correlata ai canali lato che possono verificarsi a causa dell'esecuzione speculativa che si verifica in seguito a soddisfare un ramo condizionale. Il compilatore Visual C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per il `/Qspectre` commutatore che fornisce una mitigazione in fase di compilazione per un set limitato di modelli di codice potenzialmente vulnerabili correlati per CVE 2017-5753. Il `/Qspectre` commutatore è disponibile anche in Visual Studio 2015 Update 3 attraverso [KB 4338871](https://support.microsoft.com/help/4338871). La documentazione per il [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flag vengono fornite ulteriori informazioni sul relativo utilizzo e gli effetti.
+1. CVE-2017-5753, noto anche come Spectre variante 1. Questa classe di vulnerabilità di hardware è correlata ai canali lato che possono verificarsi a causa dell'esecuzione speculativa che si verifica in seguito a soddisfare un ramo condizionale. Microsoft C++ compilatore in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per il `/Qspectre` commutatore che fornisce una mitigazione in fase di compilazione per un set limitato di modelli di codice potenzialmente vulnerabili correlati per CVE 2017-5753. Il `/Qspectre` commutatore è disponibile anche in Visual Studio 2015 Update 3 attraverso [KB 4338871](https://support.microsoft.com/help/4338871). La documentazione per il [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flag vengono fornite ulteriori informazioni sul relativo utilizzo e gli effetti.
 
 2. CVE-2018-3639, noto anche come [speculativa Store Bypass (SSB)](https://aka.ms/sescsrdssb). Questa classe di vulnerabilità di hardware è correlata ai canali lato che possono verificarsi a causa dell'esecuzione speculativa di un carico prima di un archivio dipendenti come risultato di soddisfare un accesso memoria.
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-Si noti che entrambi questi esempi implica speculativa modifica dei puntatori ramo indiretta allocate nello stack. È possibile che la modifica speculativa può verificarsi anche per le variabili globali, con allocazione dell'heap di memoria e persino memoria di sola lettura su alcuni CPU. Per la memoria allocate nello stack, il compilatore Visual C++ esegue già i passaggi per rendere più difficile modificare speculativo allocate nello stack indiretta le destinazioni, ad esempio tramite il riordinamento delle variabili locali in modo che i buffer vengono posizionati accanto a un cookie di sicurezza come in parte i [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) funzionalità di sicurezza del compilatore.
+Si noti che entrambi questi esempi implica speculativa modifica dei puntatori ramo indiretta allocate nello stack. È possibile che la modifica speculativa può verificarsi anche per le variabili globali, con allocazione dell'heap di memoria e persino memoria di sola lettura su alcuni CPU. Per la memoria allocate nello stack, Microsoft C++ compilatore esegue già i passaggi per rendere più difficile speculativo modificare allocate nello stack indiretta le destinazioni, ad esempio tramite il riordinamento delle variabili locali in modo che i buffer vengono posizionati accanto a una protezione cookie durante la [/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) funzionalità di sicurezza del compilatore.
 
 ## <a name="speculative-type-confusion"></a>Confusione di tipo speculativa
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barriera tramite strumentazione in fase di compilazione
 
-Il compilatore Visual C++ in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per il `/Qspectre` commutatore automaticamente inserisce una barriera per un set limitato di modelli di codice potenzialmente vulnerabili correlati per CVE 2017-5753. La documentazione per il [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flag vengono fornite ulteriori informazioni sul relativo utilizzo e gli effetti. È importante notare che questo flag non copre tutti i modelli di scrittura di codice potenzialmente vulnerabili e di conseguenza gli sviluppatori non devono affidarsi a essa come una mitigazione completa per questa classe di vulnerabilità.
+Microsoft C++ compilatore in Visual Studio 2017 (a partire dalla versione 15.5.5) include il supporto per il `/Qspectre` commutatore automaticamente inserisce una barriera per un set limitato di modelli di codice potenzialmente vulnerabili correlati a CVE-2017-5753. La documentazione per il [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) flag vengono fornite ulteriori informazioni sul relativo utilizzo e gli effetti. È importante notare che questo flag non copre tutti i modelli di scrittura di codice potenzialmente vulnerabili e di conseguenza gli sviluppatori non devono affidarsi a essa come una mitigazione completa per questa classe di vulnerabilità.
 
 ### <a name="masking-array-indices"></a>Gli indici di matrice di maschera
 

@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d5d7652b6424177191275f8f80d7b1f6cf02b261
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195144"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221134"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilazione di assembly side-by-side C/C++
 
 Oggetto [assembly side-by-side](/windows/desktop/SbsCs/about-side-by-side-assemblies-) è una raccolta di risorse, ovvero un gruppo di DLL, classi di windows, server COM, librerie dei tipi o interfacce, disponibile per un'applicazione da usare in fase di esecuzione. Il vantaggio principale di riassemblaggio DLL negli assembly è che più versioni degli assembly sono utilizzabile dalle applicazioni nello stesso momento e che è possibile per gli assembly attualmente installato il servizio in caso di una versione di aggiornamento.
 
-Un'applicazione Visual C++ può utilizzare una o più DLL in diverse parti dell'applicazione. In fase di esecuzione, le DLL vengono caricate nel processo principale e viene eseguito il codice richiesto. L'applicazione si basa sul sistema operativo per individuare le DLL necessarie, conoscere quali altre DLL dipendenti devono essere caricati e quindi caricarli contestualmente alla DLL richiesta. Nelle versioni di sistemi operativi Windows precedenti a Windows XP, Windows Server 2003 e Windows Vista, il caricatore del sistema operativo cerca DLL dipendente nella cartella locale dell'applicazione o un'altra cartella specificata nel percorso di sistema. In Windows XP, Windows Server 2003 e Windows Vista, il caricatore del sistema operativo può anche cercare le DLL dipendenti utilizzando un [manifesto](/windows/desktop/sbscs/manifests) file e cercare gli assembly side-by-side che contengono queste DLL.
+Oggetto C++ applicazione può usare una o più DLL in diverse parti dell'applicazione. In fase di esecuzione, le DLL vengono caricate nel processo principale e viene eseguito il codice richiesto. L'applicazione si basa sul sistema operativo per individuare le DLL necessarie, conoscere quali altre DLL dipendenti devono essere caricati e quindi caricarli contestualmente alla DLL richiesta. Nelle versioni di sistemi operativi Windows precedenti a Windows XP, Windows Server 2003 e Windows Vista, il caricatore del sistema operativo cerca DLL dipendente nella cartella locale dell'applicazione o un'altra cartella specificata nel percorso di sistema. In Windows XP, Windows Server 2003 e Windows Vista, il caricatore del sistema operativo può anche cercare le DLL dipendenti utilizzando un [manifesto](/windows/desktop/sbscs/manifests) file e cercare gli assembly side-by-side che contengono queste DLL.
 
 Per impostazione predefinita, quando una DLL è compilata con Visual Studio, ha un [manifesto dell'applicazione](/windows/desktop/SbsCs/application-manifests) incorporato come una risorsa di tipo RT_MANIFEST con ID uguale a 2. Come per un file eseguibile, questo manifesto descrive le dipendenze di questa DLL da altri assembly. Ciò presuppone che la DLL non fa parte di un assembly side-by-side e le applicazioni che dipendono da questa DLL non prevede di usare un manifesto dell'applicazione per caricarlo, ma si basano invece sullo caricatore del sistema operativo per trovare questa DLL nel percorso di sistema.
 

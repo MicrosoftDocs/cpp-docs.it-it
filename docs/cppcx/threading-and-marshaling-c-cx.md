@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404637"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448157"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Threading e marshalling (C++/CX)
 
@@ -35,7 +35,7 @@ Quando si crea un'app Universal Windows Platform, è possibile interagire con co
 
 ### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>Genera un avviso C4451 durante l'utilizzo di classi non agile
 
-Per vari motivi, alcune classi non possono essere Agile. Se accedi a istanze di classi non Agile sia da un thread dell'interfaccia utente che da un thread in background, verifica attentamente il corretto comportamento in fase di esecuzione. Il compilatore di Visual C++ genera alcuni avvisi quando viene creata un'istanza di una classe di runtime non Agile nell'applicazione in ambito globale o quando si dichiara un tipo non Agile come membro della classe in una classe di riferimento contrassegnata come Agile.
+Per vari motivi, alcune classi non possono essere Agile. Se accedi a istanze di classi non Agile sia da un thread dell'interfaccia utente che da un thread in background, verifica attentamente il corretto comportamento in fase di esecuzione. Microsoft C++ compilatore genera avvisi quando si crea un'istanza di una classe di runtime non agile nell'app in ambito globale o dichiara un tipo non agile come membro della classe in una classe di riferimento che a sua volta è contrassegnato come agile.
 
 Tra le classi non Agile, le più semplici da gestire sono quelle che contengono i seguenti attributi con le seguenti impostazioni: `ThreadingModel`= Both e `MarshallingType`= Standard.  Queste classi possono essere trasformate in Agile semplicemente utilizzando la classe di supporto `Agile<T>` .   Nell'esempio riportato di seguito vengono mostrati una dichiarazione di un oggetto non Agile di tipo `Windows::Security::Credentials::UI::CredentialPickerOptions^`e l'avviso del compilatore che viene emesso di conseguenza.
 

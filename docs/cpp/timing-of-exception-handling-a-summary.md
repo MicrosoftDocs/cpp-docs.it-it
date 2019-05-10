@@ -1,6 +1,6 @@
 ---
 title: 'Intervallo di gestione delle eccezioni: Un riepilogo'
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: cbff7c4153646fcb3471e18d20a0e633fbd1307f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330453"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221897"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Intervallo di gestione delle eccezioni: Un riepilogo
 
 Un gestore terminazioni viene eseguito, indipendentemente dal modo in cui il **try** blocco di istruzioni viene terminato. Cause del passaggio fuori il **try** blocco, un `longjmp` istruzione che trasferisce il controllo di fuori del blocco e la rimozione dello stack dovuta alla gestione delle eccezioni.
 
 > [!NOTE]
->  Visual C++ supporta due formati delle istruzioni `setjmp` e `longjmp`. La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per usare questa versione, includere il file \<setjmp. h >. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per usare questa versione, includere il file \<setjmpex >. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.
+>  Microsoft C++ compilatore supporta due forme del `setjmp` e `longjmp` istruzioni. La versione veloce ignora la gestione delle terminazioni ma è più efficiente. Per usare questa versione, includere il file \<setjmp. h >. L'altra versione supporta la gestione delle terminazioni come descritto nel paragrafo precedente. Per usare questa versione, includere il file \<setjmpex >. L'aumento delle prestazioni della versione veloce dipende dalla configurazione hardware.
 
 Il sistema operativo esegue tutti i gestori terminazioni nell'ordine corretto (incluso il corpo di un gestore eccezioni), prima che sia possibile eseguire qualsiasi altro codice.
 

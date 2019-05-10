@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -LN compiler option [C++]
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-ms.openlocfilehash: 18b0e72d50f328afc1f2856f833cec1aa7d46f30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2dbd5ae5ddf802185912c49caf37aa61c6a7d4c3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176216"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446265"
 ---
 # <a name="ln-create-msil-module"></a>/LN (Crea modulo MSIL)
 
@@ -36,7 +36,7 @@ Un programma gestito non dispone di un assembly di metadati nel manifesto viene 
 
 L'estensione di file predefinita per un modulo è netmodule.
 
-Nelle versioni di Visual C++ precedenti Visual C++ 2005, un modulo è stato creato con **/CLR: noAssembly**.
+Nelle versioni precedenti di Visual Studio 2005, un modulo è stato creato con **/CLR: noAssembly**.
 
 Il linker MSVC accetta file con estensione netmodule come input e il file di output generato dal linker sarà un assembly o file con estensione netmodule con alcuna dipendenza dalla fase di esecuzione in uno qualsiasi dei netmodule che sono stati introdotti nel linker.  Per altre informazioni, vedere [File con estensione netmodule come input del linker](netmodule-files-as-linker-input.md).
 

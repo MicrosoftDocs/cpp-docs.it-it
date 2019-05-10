@@ -6,18 +6,21 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e3950f79c4c88d031e04d0d145e0a03c9ebc0a37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293901"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221799"
 ---
 # <a name="decorated-names"></a>Nomi decorati
 
 Le funzioni, i dati e gli oggetti nei programmi C e C++ sono rappresentati internamente dai nomi decorati. Oggetto *nome decorato* è una stringa codificata creata dal compilatore durante la compilazione di un oggetto, dati o definizione di funzione. Registra convenzioni di chiamata, tipi, parametri di funzione e altre informazioni insieme al nome. Questa decorazione dei nomi, nota anche come *alterazione dei nomi*, consente al linker di trovare le funzioni corrette e gli oggetti durante il collegamento di un file eseguibile.
 
-Le convenzioni di denominazione decorata sono state modificate in alcune versioni di Visual C++ e possono anche essere diverse a seconda delle architetture di destinazione. Per un corretto collegamento con i file di origine creati usando Visual C++, le DLL e le librerie C e C++ dovrebbero essere compilate usando gli stessi set di strumenti, gli stessi flag e la stessa architettura di destinazione del compilatore.
+Le convenzioni di denominazione decorate sono state modificate in diverse versioni di Visual Studio e possono essere diverse nelle architetture di destinazione diverso. Per collegarsi correttamente con file di origine creati usando Visual Studio, C e C++ DLL e librerie devono essere compilate usando il set di strumenti del compilatore stesso, flag e architettura di destinazione. 
+
+> [!NOTE]
+> Librerie compilate con Visual Studio 2015 possono essere utilizzate dalle applicazioni compilate con Visual Studio 2017 o Visual Studio 2019.
 
 ##  <a name="Using"></a> Utilizzo dei nomi decorati
 
@@ -25,7 +28,7 @@ Di solito non è necessario conoscere il nome decorato per scrivere un codice ch
 
 Se si modifica il nome della funzione, la classe, la convenzione di chiamata, il tipo restituito o qualsiasi parametro, viene modificato anche il nome decorato. In questo caso, è necessario ottenere il nuovo nome decorato e usarlo ovunque sia specificato il nome decorato.
 
-La decorazione dei nomi è importante anche quando si crea un collegamento a un codice scritto in altri linguaggi di programmazione o si usano altri compilatori. Ogni compilatore usa una convenzione di decorazione dei nomi diversa. Quando l'eseguibile crea un collegamento a un codice scritto in un altro linguaggio, si deve prestare particolare attenzione nel trovare una corrispondenza con i nomi esportati e importati e con le convenzioni di chiamata. Il codice del linguaggio assembly deve usare i nomi decorati e le convenzioni di chiamata di Visual C++ per creare un collegamento con il codice sorgente scritto con Visual C++.
+La decorazione dei nomi è importante anche quando si crea un collegamento a un codice scritto in altri linguaggi di programmazione o si usano altri compilatori. Ogni compilatore usa una convenzione di decorazione dei nomi diversa. Quando l'eseguibile crea un collegamento a un codice scritto in un altro linguaggio, si deve prestare particolare attenzione nel trovare una corrispondenza con i nomi esportati e importati e con le convenzioni di chiamata. Codice di linguaggio assembly deve usare i nomi MSVC decorati e le convenzioni di chiamata per collegare al codice sorgente scritto utilizzando MSVC.
 
 ##  <a name="Format"></a> Formato di C++ nome decorato
 

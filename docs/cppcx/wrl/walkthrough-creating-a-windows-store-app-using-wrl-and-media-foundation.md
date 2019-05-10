@@ -1,18 +1,21 @@
 ---
 title: "Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Foundation"
-ms.date: 09/17/2018
+ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409204"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558262"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Foundation
 
-Informazioni su come usare la libreria di modelli C++ (WRL) di Windows Runtime per creare un'app Universal Windows Platform (UWP) che usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+> [!NOTE]
+> Per la nuova App della piattaforma UWP e componenti, è consigliabile usare [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), una nuova proiezione standard del C + + 17 language for Windows Runtime APIs. C++/ È disponibile in Windows 10 SDK versione 1803 poi WinRT. C++/ WinRT viene implementata interamente nel file di intestazione e viene progettato per fornire un accesso all'API Windows moderna.
+
+In questa esercitazione si apprenderà come usare il Runtime di Windows C++ libreria di modelli (WRL) per creare un'app Universal Windows Platform (UWP) che usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 Questo esempio illustra come creare una trasformazione personalizzata di Media Foundation che applica un effetto scala di grigi alle immagini acquisite da una webcam. L'app usa C++ per definire la trasformazione personalizzata e C# per usare il componente per trasformare le immagini acquisite. 
 
@@ -25,6 +28,8 @@ Nella maggior parte dei casi, è possibile usare c++ /CX per creare un Runtime d
 > Anche se questo esempio di codice è lungo, mostra i requisiti minimi per poter creare una trasformazione utile di Media Foundation. È possibile usare l'esempio come punto di partenza per una trasformazione personalizzata. In questo esempio è stato adattato dal [esempio di estensioni multimediali](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), che usa le estensioni multimediali per applicare effetti ai video, decodificare i video e creare gestori di schema che generano flussi multimediali.
 
 ## <a name="prerequisites"></a>Prerequisiti
+
+- In Visual Studio 2017 e versioni successive, il supporto UWP è un componente facoltativo. Per installarlo, aprire l'installazione di Visual Studio dal menu Start di Windows e trovare la versione di Visual Studio. Scegliere **Modify** e quindi assicurarsi che il **sviluppo della piattaforma Windows Universal** riquadro viene controllato. Sotto **i componenti facoltativi** controllare  **C++ strumenti per la piattaforma UWP (v141)** per Visual Studio 2017, o  **C++ strumenti per la piattaforma UWP (v142)** per Visual Studio 2019. Controllare quindi la versione del SDK di Windows che si desidera utilizzare. 
 
 - Esperienza con la [Windows Runtime](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 

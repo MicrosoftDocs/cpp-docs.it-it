@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec472e506e78a57b65186bf6a5b801419fb141fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346413"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449037"
 ---
 # <a name="deployment-concepts"></a>Concetti principali della distribuzione
 
@@ -21,7 +21,7 @@ Questa sezione illustra le considerazioni principali da tenere presenti per la d
 
 ## <a name="windows-installer-deployment-in-c"></a>Distribuzione con Windows Installer in C+++
 
-Per la distribuzione, i progetti Visual C++ usano in genere l'installazione tradizionale tramite Windows Installer. Per preparare una distribuzione con Windows Installer, si include l'applicazione in un file setup.exe e si distribuisce tale file insieme a un pacchetto di installazione (con estensione msi). Gli utenti eseguono quindi setup.exe per installare l'applicazione.
+Visual Studio C++ progetti usano in genere il programma di installazione tradizionale di Windows Installer per la distribuzione. Per preparare una distribuzione con Windows Installer, si include l'applicazione in un file setup.exe e si distribuisce tale file insieme a un pacchetto di installazione (con estensione msi). Gli utenti eseguono quindi setup.exe per installare l'applicazione.
 
 Per creare il pacchetto dell'applicazione, si aggiunge un progetto di installazione alla soluzione. Dopo la compilazione, vengono creati i file del programma di installazione e del relativo pacchetto da distribuire agli utenti. Per altre informazioni, vedere [Scelta di un metodo di distribuzione](choosing-a-deployment-method.md).
 

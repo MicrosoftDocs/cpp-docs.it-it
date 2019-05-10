@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de433361901b5d247616c154afc48d637373d43
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338935"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448039"
 ---
 # <a name="compiler-error-c2440"></a>Errore del compilatore C2440
 
@@ -194,7 +194,7 @@ L'errore C2440 può inoltre verificarsi a causa delle modifiche nelle funzionali
 
 ## <a name="example"></a>Esempio
 
-L'oggetto visivo C++ compilatore non consente più la [operatore const_cast](../../cpp/const-cast-operator.md) downcast quando codice sorgente che utilizza **/clr** programmazione viene compilata.
+Microsoft C++ compilatore non consente più la [operatore const_cast](../../cpp/const-cast-operator.md) downcast quando codice sorgente che utilizza **/clr** programmazione viene compilata.
 
 Per risolvere l'errore C2440, utilizzare l'operatore di cast corretto. Per altre informazioni, vedere [operatori di cast](../../cpp/casting-operators.md).
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: 4059961d70e6486f7417a5eff034b194d9860558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 384847738f5410d750d53d3125c18f6a5256cccf
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261433"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221253"
 ---
 # <a name="atl-project-wizard"></a>Creazione guidata progetto ATL
 
@@ -48,8 +48,8 @@ Inoltre, considerare le seguenti attività quando si creano e ottimizzazione di 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione e gestione di progetti Visual C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
-[Tipi di progetto Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
+[Progetti di Visual Studio - C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[C++tipi di progetto in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Esercitazione](../../atl/active-template-library-atl-tutorial.md)

@@ -1,21 +1,21 @@
 ---
 title: "Procedura: Incorporare un manifesto in un'applicazione C/C++"
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274382"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220698"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procedura: Incorporare un manifesto in un'applicazione C/C++
 
-È consigliabile che un'applicazione C/C++ (o libreria) abbiano il manifesto incorporato all'interno del file binario finale perché in questo modo il comportamento di runtime corretto nella maggior parte degli scenari. Per impostazione predefinita, Visual Studio prova a incorporare il manifesto durante la generazione di un progetto da file di origine. visualizzare [generazione di manifesti in Visual Studio](manifest-generation-in-visual-studio.md) per altre informazioni. Tuttavia se un'applicazione viene compilata usando nmake, sono necessarie alcune modifiche al makefile esistente. In questa sezione viene illustrato come modificare un makefile esistente per incorporare automaticamente il manifesto nel file binario finale.
+È consigliabile incorporare il manifesto dell'applicazione o della libreria nel file binario finale perché in questo modo il comportamento di runtime corretto nella maggior parte degli scenari. Per impostazione predefinita, Visual Studio prova a incorporare il manifesto durante la generazione di un progetto. Per altre informazioni, vedere [generazione di manifesti in Visual Studio](manifest-generation-in-visual-studio.md). Tuttavia, se si compila l'applicazione usando nmake, è necessario apportare alcune modifiche per il file di progetto. In questa sezione viene illustrato come modificare i makefile in modo che incorpori automaticamente il manifesto all'interno del file binario finale.
 
 ## <a name="two-approaches"></a>Due approcci
 
@@ -23,15 +23,19 @@ Esistono due modi per incorporare il manifesto in un'applicazione o una libreria
 
 - Se non si sta eseguendo una compilazione incrementale è possibile incorporare direttamente il manifesto tramite la riga di comando simile al seguente come passaggio di post-compilazione:
 
-   **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    oppure
 
-   **MT.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (1 per un file EXE, 2 per una DLL).
+   Usare 1 per un file EXE e 2 per una DLL.
 
-- Se si esegue una compilazione incrementale, la modifica diretta della risorsa come illustrato di seguito verrà disabilitare la compilazione incrementale e causare una ricompilazione completa, di conseguenza debba adottare un approccio diverso:
+- Se si esegue una compilazione incrementale, utilizzare la procedura seguente:
 
    - Collegare il file binario per generare il file MyApp.exe.manifest.
 
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Se questo script viene eseguito senza modifiche con Visual C++, crea correttamente MyApp.exe. Crea anche il file manifesto esterno MyApp.exe.manifest, da usare dal sistema operativo per caricare gli assembly dipendenti in fase di esecuzione.
+Se questo script viene eseguito senza modifiche con Visual Studio, viene creato correttamente MyApp.exe. Crea anche il file manifesto esterno MyApp.exe.manifest, da usare dal sistema operativo per caricare gli assembly dipendenti in fase di esecuzione.
 
 Lo script di nmake per MyLibrary. dll è molto simile:
 
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-A questo punto creare makefile.targ.inc e copiarvi il seguente:
+A questo punto creare **makefile.targ.inc** e copiarvi il seguente:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

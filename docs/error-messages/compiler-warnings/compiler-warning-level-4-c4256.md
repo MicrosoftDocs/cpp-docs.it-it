@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: b1f7534098a04c7c65a380d302999260c960f284
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400958"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447768"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>Avviso del compilatore (livello 4) C4256
 
@@ -19,7 +19,7 @@ ms.locfileid: "62400958"
 
 Possibili incompatibilità.
 
-Si prenda in considerazione il seguente esempio di codice. Se la definizione del costruttore S2::S2 (int i,...) è stato compilato con una versione del compilatore Visual C++ precedenti alla versione 7, ma nell'esempio seguente viene compilato con la versione corrente, la chiamata al costruttore per S3 non funziona più correttamente a causa di una modifica di convenzione di chiamata speciale. Utilizzando Visual C++ 6.0, in entrambi i casi la chiamata non funziona comunque, a meno che non venga passato alcun parametro per i puntini di sospensione.
+Si prenda in considerazione il seguente esempio di codice. Se la definizione del costruttore S2::S2 (int i,...) è stato compilato con una versione di Microsoft C++ compilatore prima della versione 7, ma nell'esempio seguente viene compilato con la versione corrente, la chiamata al costruttore per S3 non funziona più correttamente a causa di una modifica di convenzione di chiamata speciale. Utilizzando Visual C++ 6.0, in entrambi i casi la chiamata non funziona comunque, a meno che non venga passato alcun parametro per i puntini di sospensione.
 
 Per risolvere il problema,
 

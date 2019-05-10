@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9e370bcff0c30fb508ebc22aaff1f6a56dd420a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397276"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447096"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Avviso del compilatore (livello 1) C4581
 
 comportamento deprecato: '"string1" ' sostituito con 'string2' per elaborare l'attributo
 
-Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual C++ 2005: controllo dei parametri per gli attributi di Visual C++.
+Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual Studio 2005: controllo dei parametri per l'oggetto visivo C++ gli attributi.
 
 Nelle versioni precedenti, i valori di attributo sono stati accettati se sono stati racchiusi tra virgolette. Se il valore è un'enumerazione, non deve essere racchiuso tra virgolette.
 

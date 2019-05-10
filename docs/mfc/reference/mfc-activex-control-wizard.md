@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-ms.openlocfilehash: cec4c3aa6aedfa7a1f8234c6cc2355970d453f56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3341f840c46584c4e45afe3607c83433976e6c37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412772"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217641"
 ---
 # <a name="mfc-activex-control-wizard"></a>Creazione guidata controllo ActiveX MFC
 
@@ -64,6 +64,6 @@ Questa pagina della procedura guidata descrive le impostazioni dell'applicazione
 
 ## <a name="see-also"></a>Vedere anche
 
-[Creazione e gestione di progetti Visual C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
-[Tipi di progetto Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
+[Progetti di Visual Studio - C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[C++tipi di progetto in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Concetti](../../atl/active-template-library-atl-concepts.md)

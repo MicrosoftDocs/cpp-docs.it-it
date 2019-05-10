@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330570"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221954"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-Gestione delle eccezioni strutturata (SEH) è un'estensione Microsoft C per gestire situazioni di codice eccezionale, ad esempio errori hardware, correttamente. Sebbene Windows e Visual C++ supportino SEH, è consigliabile usare Gestione delle eccezioni C++ conforme allo standard ISO perché rende il codice più portabile e flessibile. Tuttavia, per mantenere il codice esistente o per alcuni tipi di programmi, è comunque necessario usare SEH.
+Gestione delle eccezioni strutturata (SEH) è un'estensione Microsoft C per gestire situazioni di codice eccezionale, ad esempio errori hardware, correttamente. Sebbene Windows e Microsoft C++ supportino SEH, è consigliabile usare conforme allo standard ISO C++ gestione delle eccezioni perché rende il codice più portabile e flessibile. Tuttavia, per mantenere il codice esistente o per alcuni tipi di programmi, è comunque necessario usare SEH.
 
 **Specifiche di Microsoft:**
 
@@ -34,7 +34,7 @@ Gestione delle eccezioni strutturata (SEH) è un'estensione Microsoft C per gest
 
 Con SEH, è possibile garantire che le risorse, ad esempio i blocchi di memoria e i file vengano rilasciate correttamente se l'esecuzione viene interrotta in modo imprevisto. È anche possibile gestire problemi specifici, ad esempio memoria insufficiente, usando codice strutturato conciso che non si basa sul **goto** istruzioni o test complessi dei codici restituiti.
 
-Le istruzioni try-except e try-finally a cui si fa riferimento in questo articolo sono estensioni Microsoft per il linguaggio C. Supportano la gestione delle eccezioni strutturata permettendo alle applicazioni di ottenere il controllo di un programma dopo eventi che altrimenti terminerebbero l'esecuzione. Anche se la gestione delle eccezioni strutturata può essere usata con file di origine C++, non è stata progettata in modo specifico per C++. Se si utilizza Gestione delle eccezioni Strutturata in un programma C++ che esegue la compilazione usando il [/EHa o /EHsc](../build/reference/eh-exception-handling-model.md) opzione, i distruttori per gli oggetti locali vengono chiamati, ma altri comportamenti di esecuzione potrebbero non essere quello previsto. Per informazioni generali, vedere l'esempio più avanti in questo articolo. Nella maggior parte dei casi, invece di gestione delle eccezioni Strutturata è consigliabile usare conforme allo standard ISO [gestione delle eccezioni C++](../cpp/try-throw-and-catch-statements-cpp.md), che supporta anche Visual C++. L'uso della gestione delle eccezioni C++ permette di assicurare una maggiore portabilità del codice e la gestione di qualsiasi tipo di eccezione.
+Le istruzioni try-except e try-finally a cui si fa riferimento in questo articolo sono estensioni Microsoft per il linguaggio C. Supportano la gestione delle eccezioni strutturata permettendo alle applicazioni di ottenere il controllo di un programma dopo eventi che altrimenti terminerebbero l'esecuzione. Anche se la gestione delle eccezioni strutturata può essere usata con file di origine C++, non è stata progettata in modo specifico per C++. Se si utilizza Gestione delle eccezioni Strutturata in un programma C++ che esegue la compilazione usando il [/EHa o /EHsc](../build/reference/eh-exception-handling-model.md) opzione, i distruttori per gli oggetti locali vengono chiamati, ma altri comportamenti di esecuzione potrebbero non essere quello previsto. Per informazioni generali, vedere l'esempio più avanti in questo articolo. Nella maggior parte dei casi, invece di gestione delle eccezioni Strutturata è consigliabile usare conforme allo standard ISO [ C++ gestione delle eccezioni](../cpp/try-throw-and-catch-statements-cpp.md), che Microsoft C++ compilatore supporta anche. L'uso della gestione delle eccezioni C++ permette di assicurare una maggiore portabilità del codice e la gestione di qualsiasi tipo di eccezione.
 
 Se si dispone di codice C che utilizza SEH, è possibile combinare, con codice C++ che usa la gestione delle eccezioni C++. Per informazioni, vedere [gestire le eccezioni strutturate in C++](../cpp/exception-handling-differences.md).
 

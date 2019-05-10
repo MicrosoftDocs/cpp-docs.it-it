@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407198"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448937"
 ---
 # <a name="uuid-c-attributes"></a>uuid (attributi C++)
 
@@ -32,7 +32,7 @@ Un identificatore univoco a 128 bit.
 
 ## <a name="remarks"></a>Note
 
-Se la definizione di un'interfaccia o classe non specifica la **uuid** attributo C++, quindi il compilatore Visual C++ fornisce uno. Quando si specifica un **uuid**, è necessario includere le virgolette.
+Se la definizione di un'interfaccia o classe non specifica la **uuid** C++ attributo, quindi Microsoft C++ compilatore fornirà uno. Quando si specifica un **uuid**, è necessario includere le virgolette.
 
 Se non si specifica **uuid**, il compilatore genererà lo stesso GUID per le interfacce o classi con lo stesso nome nei progetti di attributo diverso in un computer.
 

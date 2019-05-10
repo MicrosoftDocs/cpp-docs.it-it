@@ -1,22 +1,22 @@
 ---
 title: Supporto COM del compilatore
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: f0b1d6280dc27641287de8fe539cd3a148048245
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154838"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222215"
 ---
 # <a name="compiler-com-support"></a>Supporto COM del compilatore
 
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft
 
-Il compilatore di Visual C++ è in grado di leggere direttamente le librerie dei tipi COM (Component Object Model) e di tradurre il contenuto in codice sorgente C++ che può essere incluso nella compilazione. Sono disponibili estensioni del linguaggio per semplificare la programmazione COM sul lato client.
+Microsoft C++ compilatore direttamente può leggere librerie dei tipi di componente oggetto del modello (COM) e convertire il contenuto in C++ codice sorgente che può essere incluso nella compilazione. Sono disponibili estensioni del linguaggio per semplificare la programmazione COM sul lato client.
 
 Tramite il [direttiva del preprocessore #import](../preprocessor/hash-import-directive-cpp.md), il compilatore può leggere una libreria dei tipi e convertire i dati in un file di intestazione C++ che descrive il modello COM interfacce come classi. È disponibile un set di attributi `#import` per il controllo utente del contenuto dei file di intestazione delle librerie dei tipi risultanti.
 

@@ -1,21 +1,21 @@
 ---
 title: Comportamento non standard
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compatibility and compliance, nonstandard behavior
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245374"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222033"
 ---
 # <a name="nonstandard-behavior"></a>Comportamento non standard
 
-Negli sezioni seguenti sono elencate alcune parti in cui l'implementazione Visual C++ di C++ non si conforma allo standard C++. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).
+Le sezioni seguenti elencano alcune delle posizioni in cui l'implementazione Microsoft del C++ non è conforme con il C++ standard. I numeri delle sezioni indicati di seguito fanno riferimento ai numeri delle sezioni nello standard C++ 11 (ISO/IEC 14882:2011(E)).
 
 L'elenco dei limiti del compilatore che differiscono da quelli definiti nello standard C++ è disponibile nella [limiti del compilatore](../cpp/compiler-limits.md).
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Associazione di nomi non dipendenti nei modelli
 
-Il compilatore Visual C++ non supporta attualmente i nomi di associazione non dipendenti nell'analisi iniziale di un modello. Questo non è conforme alla sezione 16.6.3 della specifica C++ ISO. Ne possono conseguire overload dichiarati dopo il modello, ma prima della creazione di istanze del modello stesso.
+Microsoft C++ compilatore attualmente non supporta nomi di associazione non dipendenti nell'analisi iniziale di un modello. Questo non è conforme alla sezione 16.6.3 della specifica C++ ISO. Ne possono conseguire overload dichiarati dopo il modello, ma prima della creazione di istanze del modello stesso.
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ Per altre informazioni sulle specifiche di eccezione, vedere [specifiche di ecce
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-Il C++ standard dichiara che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non devono corrispondere a un valore valido `char_type` valore. L'oggetto visivo C++ compilatore impone questo vincolo al tipo **char**, ma non per il tipo **wchar_t**. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.
+Il C++ standard dichiara che [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) non devono corrispondere a un valore valido `char_type` valore. Microsoft C++ compilatore impone questo vincolo al tipo **char**, ma non per il tipo **wchar_t**. Questo non è conforme al requisito indicato nella Tabella 62 della sezione 12.1.1 della specifica ISO C++. Nell'esempio che segue viene illustrato quanto descritto.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Percorso di archiviazione di oggetti
 
-Lo standard C++ (sezione 1.8 paragrafo 6) richiede che oggetti C++ completi abbiano percorsi di archiviazione univoci. Tuttavia con Visual C++, vi sono casi in cui tipi senza membri dati condividono una posizione di archiviazione con altri tipi per la durata dell'oggetto.
+Lo standard C++ (sezione 1.8 paragrafo 6) richiede che oggetti C++ completi abbiano percorsi di archiviazione univoci. Tuttavia con Microsoft C++, vi sono casi in cui i tipi senza membri dati condividono un percorso di archiviazione con altri tipi per la durata dell'oggetto.

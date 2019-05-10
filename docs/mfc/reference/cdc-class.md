@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173545"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222570"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 Punta a una stringa di caratteri da misurare. È anche possibile passare un [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto per questo parametro.
 
 *nCount*<br/>
-Specifica il numero di caratteri nella stringa. Se *nCount* è -1, la lunghezza viene calcolata.
+Specifica la [lunghezza della stringa](/windows/desktop/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
 
 *nTabPositions*<br/>
 Specifica il numero di posizioni di tabulazione nella matrice a cui punta *lpnTabStopPositions*.
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 Punta a una stringa di caratteri. È anche possibile passare un [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto per questo parametro.
 
 *nCount*<br/>
-Specifica il numero di caratteri nella stringa. Se *nCount* è -1, la lunghezza viene calcolata.
+Specifica la [lunghezza della stringa](/windows/desktop/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
 
 *str*<br/>
 Oggetto `CString` oggetto che contiene i caratteri specificati da misurare.
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 Punta a una stringa di caratteri. È anche possibile passare un [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto per questo parametro.
 
 *nCount*<br/>
-Specifica il numero di caratteri nella stringa. Se *nCount* è -1, la lunghezza viene calcolata.
+Specifica la [lunghezza della stringa](/windows/desktop/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
 
 *nTabPositions*<br/>
 Specifica il numero di posizioni di tabulazione nella matrice a cui punta *lpnTabStopPositions*.
@@ -4087,7 +4087,7 @@ Specifica l'indirizzo dell'istanza di routine della funzione di callback fornita
 Specifica un puntatore far a dati deve essere passato alla funzione di output. Se *lpfnOutput* sia impostato su NULL *lpData* deve essere un puntatore di tipo long alla stringa da restituire.
 
 *nCount*<br/>
-Specifica il numero di caratteri da restituire. Se questo parametro è 0, `GrayString` calcola la lunghezza della stringa (supponendo che *lpData* è un puntatore alla stringa). Se *nCount* è -1 e la funzione a cui punta *lpfnOutput* restituisce 0, l'immagine è visualizzata ma non in grigio.
+Specifica il numero di caratteri da restituire. Se questo parametro è 0, `GrayString` calcola la lunghezza della stringa (supponendo che *lpData* è un puntatore alla stringa). Se *nCount* è 1 e la funzione a cui punta *lpfnOutput* restituisce 0, l'immagine è visualizzata ma non in grigio.
 
 *x*<br/>
 Specifica la coordinata x logica della posizione iniziale del rettangolo che racchiude la stringa.
@@ -6891,7 +6891,7 @@ Specifica la coordinata y logica del punto iniziale della stringa.
 Punta alla stringa di caratteri da disegnare. È possibile passare un puntatore a una matrice di caratteri o un [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto per questo parametro.
 
 *nCount*<br/>
-Specifica il numero di caratteri nella stringa. Se *nCount* è -1, la lunghezza viene calcolata.
+Specifica la [lunghezza della stringa](/windows/desktop/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
 
 *nTabPositions*<br/>
 Specifica il numero di valori nella matrice di posizioni di tabulazione.

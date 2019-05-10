@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384686"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447234"
 ---
 # <a name="reflection-ccli"></a>Reflection (C++/CLI)
 
@@ -34,7 +34,7 @@ Si noti che il nome dell'assembly specificato è il nome sicuro (vedere [creazio
 Il modo più comune per accedere alle funzionalità di reflection è tramite il <xref:System.Object.GetType%2A> (metodo). Questo metodo è fornito da <xref:System.Object?displayProperty=nameWithType>, da cui derivano tutte le classi di garbage collection.
 
 > [!NOTE]
-> La reflection su un .exe compilate con il compilatore Visual C++ è consentita solo se il .exe viene compilata con il **/clr: pure** oppure **/CLR: safe** opzioni del compilatore. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non è disponibile in Visual Studio 2017. Visualizzare [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) per altre informazioni.
+> La reflection su un .exe compilato con Microsoft C++ compilatore è consentito solo se il .exe viene compilata con le **/clr: pure** oppure **/CLR: safe** le opzioni del compilatore. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e non è disponibile in Visual Studio 2017. Visualizzare [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md) per altre informazioni.
 
 Per altre informazioni, vedere <xref:System.Reflection>.
 
@@ -181,7 +181,7 @@ Se il codice riportato sopra viene compilato in una DLL denominata vcpp_reflecti
 
 Una volta che il sistema di reflection è stato caricato l'assembly, una matrice di **tipo** oggetti viene recuperata con il <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> (funzione). Ogni elemento della matrice contiene informazioni su un tipo diverso, anche se in questo caso, viene definita una sola classe. Usando un ciclo, ciascuna **tipo** in questa matrice viene eseguita una query sui membri del tipo tramite il **:: GetMembers** (funzione). Questa funzione restituisce una matrice di **MethodInfo** oggetti, ogni oggetto che contiene informazioni sulla funzione membro, membro dati o proprietà del tipo.
 
-Si noti che l'elenco dei metodi include in modo esplicito le funzioni definite **TestClass** e le funzioni ereditate in modo implicito dalle **System:: Object** classe. Come parte dell'adozione in .NET anziché nella sintassi di Visual C++, le proprietà vengono visualizzate come membri dati sottostanti a cui che si accede tramite le funzioni get/set. Le funzioni get/set vengono visualizzati in questo elenco come i metodi regolari. Reflection è supportata tramite common language runtime, non dal compilatore Visual C++.
+Si noti che l'elenco dei metodi include in modo esplicito le funzioni definite **TestClass** e le funzioni ereditate in modo implicito dalle **System:: Object** classe. Come parte dell'adozione in .NET anziché nella sintassi di Visual C++, le proprietà vengono visualizzate come membri dati sottostanti a cui che si accede tramite le funzioni get/set. Le funzioni get/set vengono visualizzati in questo elenco come i metodi regolari. Reflection è supportata tramite common language runtime, non da Microsoft C++ compilatore.
 
 Anche se si usa questo codice per esaminare un assembly definito, è possibile utilizzare anche questo codice per controllare gli assembly .NET. Ad esempio, se si modifica TestAssembly a mscorlib, si verrà visualizzato un elenco di ogni tipo e un metodo definito in mscorlib. dll.
 

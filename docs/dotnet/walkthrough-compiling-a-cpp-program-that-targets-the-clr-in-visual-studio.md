@@ -1,43 +1,76 @@
 ---
 title: Compilare un' c++ /CLI programma destinato a CLR
-ms.date: 09/17/2018
+description: Utilizzare Microsoft C++ per creare programmi e librerie che possono connettersi nativo C++ codice e i programmi .NET.
+ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
 - compiling programs [C++]
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384400"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221803"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Procedura dettagliata: Compilare un' c++ /CLI programma destinato a CLR in Visual Studio
 
-Tramite C++/le estensioni del linguaggio della riga di comando è possibile creare C++ i programmi che utilizzano classi .NET e compilarle con l'ambiente di sviluppo di Visual Studio.
+Tramite C++o della riga di comando è possibile creare C++ i programmi che utilizzano classi .NET, nonché nativo C++ tipi. C++/ CLI è destinato all'uso in applicazioni console e nelle DLL che eseguono il wrapping nativo C++ del codice e renderla accessibile da programmi .NET. Per creare un'interfaccia utente di Windows basata su .NET, usare C# o Visual Basic. 
 
 Per questa procedura, è possibile digitare il proprio programma C++ o usare uno dei programmi di esempio. Il programma di esempio usato in questa procedura crea un file di testo con nome textfile.txt e lo salva nella directory del progetto.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questi argomenti presuppongono la conoscenza delle nozioni di base del linguaggio C++.
+- Conoscenza delle nozioni di base del linguaggio C++.
+- In Visual Studio 2017 e versioni successive, C++supporto dell'interfaccia della riga è un componente facoltativo. Per installarlo, aprire il **programma di installazione di Visual Studio** dal menu Start di Windows. Assicurarsi che il **sviluppo di applicazioni Desktop con C++**  riquadro è selezionato e nel **facoltativo** sezione componenti, anche controllo di  **C++supporto**.
 
-### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Per creare un nuovo progetto in Visual Studio e aggiungere un nuovo file di origine
+## <a name="create-a-new-project"></a>Creare un nuovo progetto
+
+Questa procedura varia a seconda di quale versione di Visual Studio in uso. Assicurarsi che il selettore di versione in alto a sinistra della pagina sia impostato correttamente.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>Per creare un C++progetto /CLI in Visual Studio 2019
+
+1. Nelle **Esplora soluzioni**, fare clic su alto per aprire il **creare un nuovo progetto** nella finestra di dialogo.
+
+1. Nella parte superiore della finestra di dialogo, digitare **CLR** nella ricerca e quindi selezionare **progetto CLR vuoto** dall'elenco dei risultati. 
+
+1. Scegliere il **Create** pulsante per creare il progetto.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>Per creare un C++progetto /CLI in Visual Studio 2017
 
 1. Creare un nuovo progetto. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
 
 1. Nei tipi di progetto di Visual C++ fare clic su **CLR** e quindi su **Progetto CLR vuoto**.
 
-   > [!NOTE]
-   > Se il tipo **Progetto CLR vuoto** non è presente (solo per Visual Studio 2017), selezionare **Apri il programma di installazione di Visual Studio** nel riquadro a sinistra della finestra di dialogo **Nuovo progetto**. Installare l'opzione che si trova in **Sviluppo di applicazioni desktop con C++**, nella sezione dei componenti **Facoltativi**, denominata **Supporto C++/CLI**.<br/>
+1. Digitare un nome di progetto. Per impostazione predefinita la soluzione che contiene il progetto ha lo stesso nome del nuovo progetto, ma è possibile immettere un nome diverso. Se si vuole è anche possibile immettere un percorso diverso per il progetto.
 
-1. Digitare un nome di progetto.
+1. Fare clic su **OK** per creare il nuovo progetto.
 
-   Per impostazione predefinita la soluzione che contiene il progetto ha lo stesso nome del nuovo progetto, ma è possibile immettere un nome diverso. Se si vuole è anche possibile immettere un percorso diverso per il progetto.
+::: moniker-end
 
-   Fare clic su **OK** per creare il nuovo progetto.
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>Per creare un C++progetto /CLI in Visual Studio 2015
+
+1. Creare un nuovo progetto. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
+
+1. Nei tipi di progetto di Visual C++ fare clic su **CLR** e quindi su **Progetto CLR vuoto**.
+
+1. Digitare un nome di progetto. Per impostazione predefinita la soluzione che contiene il progetto ha lo stesso nome del nuovo progetto, ma è possibile immettere un nome diverso. Se si vuole è anche possibile immettere un percorso diverso per il progetto.
+
+1. Fare clic su **OK** per creare il nuovo progetto.
+
+::: moniker-end
+
+## <a name="add-a-source-file"></a>Aggiungere un file di origine
 
 1. Se **Esplora soluzioni** non è visibile, scegliere **Esplora soluzioni** dal menu **Visualizza**.
 
@@ -57,7 +90,7 @@ Questi argomenti presuppongono la conoscenza delle nozioni di base del linguaggi
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Per altre informazioni sulla nuova sintassi di Visual C++, vedere [Estensioni componenti per le piattaforme runtime](../extensions/component-extensions-for-runtime-platforms.md).
+   Per altre informazioni su C++sintassi /CLI, vedere [Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. Scegliere **Compila soluzione** dal menu **Compila**.
 

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f69f0a19cdcd3526d8afac2e1492da806c2dffd3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412748"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448485"
 ---
 # <a name="mfc-application-wizard"></a>Creazione guidata applicazione MFC
 
 La creazione guidata applicazione MFC genera un'applicazione che, quando viene compilato, implementa la funzionalità di base di un'applicazione eseguibile (.exe) di Windows. L'applicazione di starter MFC include i file di origine (. cpp) di C++, i file di risorse (RC), i file di intestazione (h) e un file di progetto (vcxproj). Il codice che viene generato in questi file di avvio è basato su MFC.
 
 > [!NOTE]
->  A seconda delle opzioni selezionato, la procedura guidata crea i file aggiuntivi nel progetto. Ad esempio, se si seleziona **della Guida sensibile al contesto** nel [funzionalità avanzate](../../mfc/reference/advanced-features-mfc-application-wizard.md) pagina, la procedura guidata crea i file che sono necessari per compilare i file della Guida del progetto. Per altre informazioni sui file creati nella procedura guidata, vedere [tipi di File creati per i progetti Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)e vedere il file Readme. txt nel progetto.
+>  A seconda delle opzioni selezionato, la procedura guidata crea i file aggiuntivi nel progetto. Ad esempio, se si seleziona **della Guida sensibile al contesto** nel [funzionalità avanzate](../../mfc/reference/advanced-features-mfc-application-wizard.md) pagina, la procedura guidata crea i file che sono necessari per compilare i file della Guida del progetto. Per altre informazioni sui file creati nella procedura guidata, vedere [tipi di File creati per oggetto visivo C++ progetti](../../build/reference/file-types-created-for-visual-cpp-projects.md)e vedere il file Readme. txt nel progetto.
 
 ## <a name="overview"></a>Panoramica
 
@@ -35,7 +35,7 @@ Questa pagina della procedura guidata descrive le impostazioni dell'applicazione
 
    - Il progetto viene creato usando lo stile del progetto di Visual Studio e attiva cambio stile di visualizzazione.
 
-   - Il progetto Usa MFC in una DLL condivisa. Per altre informazioni, vedere [DLL in Visual C++](../../build/dlls-in-visual-cpp.md).
+   - Il progetto Usa MFC in una DLL condivisa. Per altre informazioni, vedere [crea C /C++ DLL in Visual Studio](../../build/dlls-in-visual-cpp.md).
 
 - [Supporto documenti compositi, Creazione guidata applicazione MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)
 

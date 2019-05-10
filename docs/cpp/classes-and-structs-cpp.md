@@ -1,19 +1,15 @@
 ---
 title: Classi e struct (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- Visual C++, classes
-- structures, C++ classes
-- user-defined types
-- classes [C++]
-- user-defined types, C++ classes
+- C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: c28f83e7853ffb09bba7721ec71ab43c85aedb0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a37a23296159de2632f6a218eb81315ee2d6a646
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386447"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222515"
 ---
 # <a name="classes-and-structs-c"></a>Classi e struct (C++)
 

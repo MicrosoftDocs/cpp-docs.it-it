@@ -1,14 +1,14 @@
 ---
 title: Gestione di errori ed eccezioni (C++ moderno)
-ms.date: 09/17/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398914"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222151"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Gestione di errori ed eccezioni (C++ moderno)
 
@@ -90,13 +90,13 @@ Le eccezioni e le asserzioni sono due distinti meccanismi per il rilevamento di 
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Eccezioni C++ ed eccezioni SEH Windows
 
-Programmi C e C++ possono utilizzare il meccanismo (SEH) nel sistema operativo Windows di gestione strutturata delle eccezioni. I concetti in SEH sono simili a quelle in C++ eccezioni, ad eccezione del fatto che SEH utilizza i **try**, **except**, e **finally** costruisce anziché **prova**  e **catch**. In Visual C++, le eccezioni C++ vengono implementate per SEH. Tuttavia, quando si scrive codice C++, usare la sintassi di eccezione C++.
+Programmi C e C++ possono utilizzare il meccanismo (SEH) nel sistema operativo Windows di gestione strutturata delle eccezioni. I concetti in SEH sono simili a quelle in C++ eccezioni, ad eccezione del fatto che SEH utilizza i **try**, **except**, e **finally** costruisce anziché **prova**  e **catch**. In Microsoft C++ compilatore (MSVC), C++ le eccezioni vengono implementate per SEH. Tuttavia, quando si scrive codice C++, usare la sintassi di eccezione C++.
 
 Per altre informazioni sulla gestione delle eccezioni Strutturata, vedere [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
 
 ## <a name="exception-specifications-and-noexcept"></a>Le specifiche di eccezione e noexcept
 
-Le specifiche di eccezione sono introdotte in C++ che consente di specificare le eccezioni che potrebbe generare una funzione. Tuttavia, le specifiche di eccezione sono risultate problematiche nella pratica e sono deprecate nello standard c++11 bozza. È consigliabile non utilizzare le specifiche di eccezione, ad eccezione di `throw()`, che indica che la funzione non consente eccezioni eseguire l'escape. Se è necessario usare le specifiche di eccezione del tipo `throw(` *tipo*`)`, tenere presente che Visual C++ si allontana dallo standard in determinati modi. Per altre informazioni, vedere [specifiche di eccezioni (generazione)](../cpp/exception-specifications-throw-cpp.md). Il `noexcept` identificatore è stato introdotto in c++11 come l'alternativa consigliata a `throw()`.
+Le specifiche di eccezione sono introdotte in C++ che consente di specificare le eccezioni che potrebbe generare una funzione. Tuttavia, le specifiche di eccezione sono risultate problematiche nella pratica e sono deprecate nello standard c++11 bozza. È consigliabile non utilizzare le specifiche di eccezione, ad eccezione di `throw()`, che indica che la funzione non consente eccezioni eseguire l'escape. Se è necessario usare le specifiche di eccezione del tipo `throw(` *tipo*`)`, tenere presente che MSVC parte dallo standard in determinati modi. Per altre informazioni, vedere [specifiche di eccezioni (generazione)](../cpp/exception-specifications-throw-cpp.md). Il `noexcept` identificatore è stato introdotto in c++11 come l'alternativa consigliata a `throw()`.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,6 +1,6 @@
 ---
 title: Macro di opzioni del compilatore
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278423"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221124"
 ---
 # <a name="compiler-options-macros"></a>Macro di opzioni del compilatore
 
@@ -32,10 +32,10 @@ Queste macro controllano le funzionalità del compilatore specifici.
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Un simbolo che attiva gli errori nei progetti convertiti da versioni precedenti di ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Definire se uno o più degli oggetti di usare il threading apartment.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Assicura `CString` costruttori espliciti, impedendo tutte le conversioni non intenzionali.|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Definire questa macro per utilizzare C++ compatibile con la sintassi standard, che genera l'errore del compilatore C4867 quando una sintassi non standard viene utilizzata per inizializzare un puntatore a una funzione membro.|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Definire questa macro per utilizzare C++ sintassi conforme a standard, che genera l'errore del compilatore C4867 quando una sintassi non standard viene utilizzata per inizializzare un puntatore a una funzione membro.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Definire se uno o più degli oggetti di usare il threading libero o neutrale.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Un simbolo che indica il progetto avrà gli oggetti che sono contrassegnati come entrambi, Free o neutro. La macro [_ATL_FREE_THREADED](#_atl_free_threaded) invece deve essere utilizzato.|
-|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Un simbolo di cui non è possibile utilizzare lo spazio dei nomi predefinito come ATL.|
+|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Un simbolo che non è possibile utilizzare lo spazio dei nomi predefinito come ATL.|
 |[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Un simbolo che impedisce che si sta compilando il progetto di codice correlato a COM.|
 |[ATL_NO_VTABLE](#atl_no_vtable)|Un simbolo che impedisce che il puntatore vtable inizializzato nel costruttore e distruttore della classe.|
 |[ATL_NOINLINE](#atl_noinline)|Un simbolo che indica una funzione non deve essere impostato come inline.|
@@ -113,7 +113,7 @@ Definire questa macro per forzare l'utilizzo della sintassi conformi allo standa
 
 ### <a name="remarks"></a>Note
 
-Le librerie ATL e MFC sono state modificate in modo da corrispondere migliore conformità C++ standard del compilatore Visual C++. In base allo standard ANSI C++, la sintassi di un puntatore a una funzione membro della classe deve essere `&CMyClass::MyFunc`.
+Le librerie ATL e MFC sono state modificate in modo che corrisponda di Microsoft C++ standard migliorata del compilatore C++ conformità. In base allo standard ANSI C++, la sintassi di un puntatore a una funzione membro della classe deve essere `&CMyClass::MyFunc`.
 
 Quando [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) non è definito (nel caso predefinito), ATL/MFC disabilita l'errore C4867 nelle mappe di macro (in particolare messaggio mappato) in modo che il codice che è stato creato nelle versioni precedenti è possibile continuare a compilare come indicato in precedenza. Se si definiscono **_ATL_ENABLE_PTM_WARNING**, il codice deve essere C++ conforme allo standard.
 
@@ -153,7 +153,7 @@ Se questo simbolo è definito, ATL permette di ottenere codice che eseguirà la 
 
 ##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE
 
-Un simbolo di cui non è possibile utilizzare lo spazio dei nomi predefinito come ATL.
+Un simbolo che non è possibile utilizzare lo spazio dei nomi predefinito come ATL.
 
 ```
 _ATL_NO_AUTOMATIC_NAMESPACE

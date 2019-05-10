@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 9598d7a0480ee762892d1026a1eb64dcc5c64399
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362309"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448450"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparazione di un computer per il test per l'esecuzione di un file eseguibile di debug
 
@@ -25,7 +25,7 @@ Per preparare un computer per il test della versione di debug di un'applicazione
 - Usare la distribuzione locale per installare una versione di debug di una determinata DLL di Visual C++ nella directory di installazione dell'applicazione usando i file inclusi nella directory Programmi o Programmi (x86) in \Microsoft Visual Studio \<versione>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Per eseguire il debug remoto dell'applicazione compilata con Visual C++ 2005 o Visual C++ 2008 in un altro computer, è necessario distribuire le versioni di debug delle DLL della libreria di Visual C++ come assembly affiancati condivisi. È possibile utilizzare un progetto di installazione o Windows Installer per installare i modelli unione corrispondenti.
+    >  Per il debug remoto dell'applicazione compilata con Visual Studio 2005 o Visual Studio 2008 in un altro computer, è necessario distribuire le versioni di debug dell'oggetto visivo C++ libreria DLL come assembly side-by-side condivisi. È possibile utilizzare un progetto di installazione o Windows Installer per installare i modelli unione corrispondenti.
 
 - Usare l'opzione **Distribuisci** nella finestra di dialogo **Gestione configurazione** in Visual Studio per copiare l'output del progetto e altri file nel computer remoto.
 

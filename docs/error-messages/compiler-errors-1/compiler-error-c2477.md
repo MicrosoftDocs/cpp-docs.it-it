@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2477
 ms.assetid: 60bc324b-6605-4833-8099-a291efc712e7
-ms.openlocfilehash: 27db194cb308d711a259127b628c60b4d10b94ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73d8daa9576e4edc29958918c107e9edf18cc579
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383230"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447966"
 ---
 # <a name="compiler-error-c2477"></a>Errore del compilatore C2477
 
 'member': membro dati statici non possa essere inizializzato tramite classi derivate
 
-Un membro dati statici di una classe modello è stato inizializzato in modo non corretto. Si tratta di una modifica importante riguardo le versioni del compilatore Visual C++ precedenti a Visual Studio .NET 2003, per la conformità allo standard ISO C++.
+Un membro dati statici di una classe modello è stato inizializzato in modo non corretto. Si tratta di una modifica importante riguardo le versioni di Microsoft C++ compilatore precedenti a Visual Studio .NET 2003, per essere conforme a ISO C++ standard.
 
 L'esempio seguente genera l'errore C2477:
 

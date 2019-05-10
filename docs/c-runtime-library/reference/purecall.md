@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: a7a6db42dc4b8d9b2962a66c7866aae9db55eb3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: df6dde91ccb952e66eb77c841b2b1ace12756b8c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231975"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446634"
 ---
 # <a name="purecall"></a>_purecall
 
@@ -42,7 +42,7 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>Note
 
-Il **purecall** funzione è un dettaglio di implementazione specifica di Microsoft di Microsoft Visual C++ compilatore. Questa funzione non è progettata per essere chiamata direttamente dal codice e non ha una dichiarazione di intestazione pubblica. È qui documentata perché si tratta di un'esportazione pubblica della libreria di runtime C.
+Il **purecall** funzione è un dettaglio di implementazione specifica di Microsoft di Microsoft C++ compilatore. Questa funzione non è progettata per essere chiamata direttamente dal codice e non ha una dichiarazione di intestazione pubblica. È qui documentata perché si tratta di un'esportazione pubblica della libreria di runtime C.
 
 Una chiamata a una funzione virtuale pura è un errore perché non ha un'implementazione. Il compilatore genera codice per richiamare il **purecall** funzione del gestore errori quando viene chiamata una funzione virtuale pura. Per impostazione predefinita **purecall** termina il programma. Prima della chiusura, il **purecall** funzione richiama un **_purecall_handler** funzionare se ne è stata impostata per il processo. È possibile installare una funzione del gestore errori personalizzata per le chiamate di funzioni virtuali pure, in modo da intercettarle per il debug o la creazione di report. Per usare gestore errori personalizzato, creare una funzione che ha il **_purecall_handler** firma, quindi usare [set_purecall_handler](get-purecall-handler-set-purecall-handler.md) per renderlo il gestore corrente.
 

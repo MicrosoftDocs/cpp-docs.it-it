@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: 65b7e1d8f03b5e59bd21091531bc9d21472e4ae4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402736"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447805"
 ---
 # <a name="compiler-error-c3203"></a>Errore del compilatore C3203
 
@@ -19,7 +19,7 @@ ms.locfileid: "62402736"
 
 È stato passato un argomento non valido a un modello di classe o a un generico. Il modello di classe o il generico prevede un tipo come parametro.
 
-Questo errore può essere generato in seguito alle operazioni di conformità del compilatore eseguite per Visual C++ 2005: un modello di classe non specializzato non può essere usato come argomento di modello in un elenco di classi di base. Per risolvere l'errore C3203, aggiungere in modo esplicito uno o più parametri di tipo modello al nome della classe modello quando la si usa come parametro di modello in un elenco di classi di base.
+Questo errore può verificarsi in seguito a operazioni di conformità del compilatore eseguite per Visual Studio 2005: un modello di classe non specializzato non può essere utilizzato come argomento di modello in un elenco delle classi base. Per risolvere l'errore C3203, aggiungere in modo esplicito uno o più parametri di tipo modello al nome della classe modello quando la si usa come parametro di modello in un elenco di classi di base.
 
 ```
 // C3203.cpp

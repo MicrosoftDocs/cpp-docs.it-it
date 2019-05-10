@@ -1,17 +1,17 @@
 ---
 title: Parola chiave auto
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
-ms.openlocfilehash: 3477bd5033fac5b69733db5d6095c1317aac42ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a695c33ab55601bb8d81b00f963646f6a48f09d5
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284727"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222256"
 ---
 # <a name="auto-keyword"></a>Parola chiave auto
 
-Il **automatica** la parola chiave è un identificatore di dichiarazione. Tuttavia, lo standard C++ definisce per tale parola chiave un significato originale e uno rivisto. Prima di Visual C++ 2010, il **automatica** parola chiave dichiara una variabile nella *automatica* classe di archiviazione, vale a dire una variabile con una durata locale. A partire da Visual C++ 2010, il **automatica** parola chiave dichiara una variabile il cui tipo viene dedotto dall'espressione di inizializzazione nella relativa dichiarazione. Il [/Zc: Auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) l'opzione del compilatore controlla il significato della **automatica** (parola chiave).
+Il **automatica** la parola chiave è un identificatore di dichiarazione. Tuttavia, lo standard C++ definisce per tale parola chiave un significato originale e uno rivisto. Prima di Visual Studio 2010, il **automatica** parola chiave dichiara una variabile nella *automatica* classe di archiviazione, vale a dire una variabile con una durata locale. A partire da Visual Studio 2010, il **automatica** parola chiave dichiara una variabile il cui tipo viene dedotto dall'espressione di inizializzazione nella relativa dichiarazione. Il [/Zc: Auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) l'opzione del compilatore controlla il significato della **automatica** (parola chiave).
 
 ## <a name="syntax"></a>Sintassi
 

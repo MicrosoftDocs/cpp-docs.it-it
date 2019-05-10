@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 6974f0d82653203973be50b5ea709bd9487a215f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363973"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448024"
 ---
 # <a name="fatal-error-c1010"></a>Errore irreversibile C1010
 
 fine file imprevista durante la ricerca dell'intestazione precompilata. Si è omesso di aggiungere ' #include name' per l'origine?
 
-Specificato con un file di inclusione [/Yu](../../build/reference/yu-use-precompiled-header-file.md) non è elencato nel file di origine.  Questa opzione è abilitata per impostazione predefinita nella maggior parte dei tipi di progetto Visual C++ e "stdafx. h" è l'impostazione predefinita includono file specificato da questa opzione.
+Specificato con un file di inclusione [/Yu](../../build/reference/yu-use-precompiled-header-file.md) non è elencato nel file di origine.  Questa opzione è abilitata per impostazione predefinita in Visual Studio la maggior parte delle C++ tipi di progetto e "stdafx. h" è l'impostazione predefinita includono file specificato da questa opzione.
 
 Nell'ambiente di Visual Studio, usare uno dei metodi seguenti per risolvere questo errore:
 

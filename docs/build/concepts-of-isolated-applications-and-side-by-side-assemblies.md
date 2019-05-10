@@ -1,16 +1,16 @@
 ---
 title: Concetti di applicazioni isolate e assembly side-by-side
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 448d2088a9e91de8fc34b4f23721ffec77f6c697
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f569381b9efe9a8ca7704dc87bcb8e8102e0cde2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196703"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220917"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Concetti di applicazioni isolate e assembly side-by-side
 
@@ -32,7 +32,7 @@ In fase di esecuzione, Windows utilizza le informazioni sull'assembly contenute 
 
 ## <a name="visual-c-libraries"></a>Librerie di Visual C++
 
-In Visual Studio 2005 e Visual Studio 2008 le librerie ridistribuibili come ATL, MFC, CRT, C++ standard, OpenMP e MSDIA vengono distribuite come assembly affiancati condivisi nella cache degli assembly nativi. Nella versione corrente le librerie ridistribuibili utilizzano la distribuzione centrale. Per impostazione predefinita, tutte le applicazioni compilate utilizzando Visual C++ vengono compilate con il manifesto incorporato nel file binario finale e il manifesto descrive le dipendenze del file binario nelle librerie di Visual C++. Per informazioni dettagliate sulla generazione del manifesto per le applicazioni Visual C++, vedere [Understanding Manifest Generation for C/C++ Programs](understanding-manifest-generation-for-c-cpp-programs.md) Un manifesto non è necessario per le applicazioni collegate staticamente alle librerie che utilizzano o che utilizzano la distribuzione locale. Per altre informazioni sulla distribuzione, vedere [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
+In Visual Studio 2005 e Visual Studio 2008 le librerie ridistribuibili come ATL, MFC, CRT, C++ standard, OpenMP e MSDIA vengono distribuite come assembly affiancati condivisi nella cache degli assembly nativi. Nella versione corrente le librerie ridistribuibili utilizzano la distribuzione centrale. Per impostazione predefinita, tutte le applicazioni compilate con Visual Studio vengono compilate con il manifesto incorporato nel file binario finale e il manifesto descrive le dipendenze del file binario nell'oggetto visivo C++ librerie. Per informazioni dettagliate sulla generazione di C++ applicazioni, vedere [Understanding Manifest Generation for C /C++ programmi](understanding-manifest-generation-for-c-cpp-programs.md). Un manifesto non è necessario per le applicazioni collegate staticamente alle librerie che utilizzano o che utilizzano la distribuzione locale. Per altre informazioni sulla distribuzione, vedere [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Vedere anche
 

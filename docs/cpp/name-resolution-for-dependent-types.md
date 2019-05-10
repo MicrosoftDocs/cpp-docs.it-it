@@ -2,12 +2,12 @@
 title: Risoluzione dei nomi per tipi dipendenti
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 04db4b0efc5e58dbd3de6fc9979c3a3cdd44d84e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345930"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222412"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Risoluzione dei nomi per tipi dipendenti
 
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>Risoluzione dell'ambiguità del modello
 
-Visual Studio 2012 consente di applicare C + + 03/98/11 regole standard di risoluzione dell'ambiguità con la parola chiave "template". Nell'esempio seguente, Visual C++ 2010 accetterebbero sia le righe non conformi e le righe conformi.  Visual Studio 2012 accetta solo le righe conformi.
+Visual Studio 2012 consente di applicare C + + 03/98/11 regole standard di risoluzione dell'ambiguità con la parola chiave "template". Nell'esempio seguente, Visual Studio 2010 accetterebbero sia le righe non conformi e le righe conformi.  Visual Studio 2012 accetta solo le righe conformi.
 
 ```cpp
 #include <iostream>

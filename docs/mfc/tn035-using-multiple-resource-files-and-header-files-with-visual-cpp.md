@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305515"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448536"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Uso di più file di risorse e i file di intestazione Visual c++
 
@@ -204,7 +204,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-Mediante le Direttive in fase di compilazione è possibile organizzare le risorse modificabili e non modificabili di Visual C++ in più file RC, in cui MYAPP.RC "master" non esegue alcuna operazione tranne includere (tramite #include) gli altri file RC. Se si utilizza un file MAK di progetto di Visual C++, è necessario includere il file RC "master" nel progetto, in modo da compilare tutte le risorse #include con l'applicazione.
+Mediante le Direttive in fase di compilazione è possibile organizzare le risorse modificabili e non modificabili di Visual C++ in più file RC, in cui MYAPP.RC "master" non esegue alcuna operazione tranne includere (tramite #include) gli altri file RC. Se si usa Visual Studio C++ project. File di codice MAK, quindi si deve includere "master". RC di file nel progetto in modo che tutte le # include le risorse vengono compilati con l'applicazione.
 
 **Imposizione dei file Visual C++ non modificabili**
 

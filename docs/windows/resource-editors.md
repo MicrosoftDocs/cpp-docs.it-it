@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388176"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448921"
 ---
 # <a name="resource-editors-c"></a>Editor di risorse (C++)
 
@@ -39,15 +39,15 @@ Quando si crea o si apre una risorsa, si apre automaticamente l'editor appropria
 
 |Usare|Per modificare|
 |----------------|----------------|
-|[Editor tasti di scelta rapida](../windows/accelerator-editor.md)|Tabelle dei tasti di scelta rapida in progetti Visual C++.|
+|[Editor tasti di scelta rapida](../windows/accelerator-editor.md)|Le tabelle di tasti di scelta rapida in Visual Studio C++ progetti.|
 |[Binary Editor](binary-editor.md)|Informazioni sui dati binari e risorse personalizzate in progetti Visual C++, Visual Basic o Visual C#.|
-|[Editor finestre](../windows/dialog-editor.md)|Finestre di dialogo nei progetti di Visual C++.|
+|[Editor finestre](../windows/dialog-editor.md)|Finestre di dialogo di Visual Studio C++ progetti.|
 |[Image Editor](../windows/image-editor-for-icons.md)|Bitmap, icone, cursori e altri file di immagine in progetti Visual C++, Visual Basic o Visual C#.|
-|[Editor dei menu](../windows/menu-editor.md)|Risorse menu in progetti Visual C++.|
+|[Editor dei menu](../windows/menu-editor.md)|Risorse menu in Visual Studio C++ progetti.|
 |[Editor barra multifunzione](../mfc/ribbon-designer-mfc.md)|Risorse della barra multifunzione in progetti MFC.|
-|[Editor stringhe](../windows/string-editor.md)|Tabelle di stringhe in progetti Visual C++.|
-|[Editor barra degli strumenti](../windows/toolbar-editor.md)|Risorse della barra degli strumenti in progetti Visual C++. Il **Editor barra degli strumenti** fa parte il **Editor di immagini**.|
-|[Editor di informazioni sulla versione](../windows/version-information-editor.md)|Informazioni sulla versione in progetti Visual C++.|
+|[Editor stringhe](../windows/string-editor.md)|Tabelle di stringhe in Visual Studio C++ progetti.|
+|[Editor barra degli strumenti](../windows/toolbar-editor.md)|Le risorse della barra degli strumenti in Visual Studio C++ progetti. Il **Editor barra degli strumenti** fa parte il **Editor di immagini**.|
+|[Editor di informazioni sulla versione](../windows/version-information-editor.md)|Informazioni sulla versione in Visual Studio C++ progetti.|
 
 > [!NOTE]
 > Se il progetto non contiene già un file RC, vedere [come: Creare risorse](../windows/how-to-create-a-resource-script-file.md).

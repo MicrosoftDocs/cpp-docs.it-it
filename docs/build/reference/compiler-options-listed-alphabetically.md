@@ -1,14 +1,14 @@
 ---
 title: Opzioni del compilatore elencate in ordine alfabetico
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272334"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221772"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 
@@ -34,7 +34,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/E](e-preprocess-to-stdout.md)|Copia l'output del preprocessore in un output standard.|
 |[/EH](eh-exception-handling-model.md)|Specifica il modello di gestione delle eccezioni.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia l'output del preprocessore in un output standard.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Consente di inviare le informazioni sugli errori interni del compilatore direttamente al team di Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|È possibile fornire informazioni sugli errori interni del compilatore direttamente a Microsoft C++ team.|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|Set esecuzione character set.|
 |[/F](f-set-stack-size.md)|Imposta la dimensione dello stack.|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Genera codice ottimizzato per un determinato x64 architettura o per le specifiche delle microarchitetture nelle architetture di AMD64 ed Extended Memory 64 Technology (EM64T).|
@@ -153,7 +153,7 @@ Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni
 |[/Zc](zc-conformance.md)|Specifica il comportamento standard in [/Ze](za-ze-disable-language-extensions.md).[ /Za, /Ze (Disabilita estensioni linguaggio)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Deprecato. Attiva le estensioni del linguaggio.|
 |[/Zf](zf.md)|Consente di migliorare tempo nelle compilazioni parallele per la generazione di PDB.|
-|[/Zg](zg-generate-function-prototypes.md)|Rimosso in Visual C++ 2015. Genera prototipi di funzione.|
+|[/Zg](zg-generate-function-prototypes.md)|Rimosso in Visual Studio 2015. Genera prototipi di funzione.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Include informazioni di debug in un database di programma compatibile con Modifica e continuazione.|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera informazioni di debug complete.|
 |[/Zl](zl-omit-default-library-name.md)|Rimuove il nome di libreria predefinito dal file obj (solo x86).|

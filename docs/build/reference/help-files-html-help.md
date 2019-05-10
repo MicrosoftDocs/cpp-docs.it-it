@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-ms.openlocfilehash: cde4809fa270e66081088d68d806e637f64e5344
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7fbac8bfa0427e8d6c60e88da92a525e62fb1a24
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270212"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446273"
 ---
 # <a name="help-files-html-help"></a>File della Guida (HTML)
 
@@ -27,4 +27,4 @@ I file seguenti vengono creati quando si aggiunge il tipo di Guida HTML del supp
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tipi di file creati per i progetti di Visual C++](file-types-created-for-visual-cpp-projects.md)
+[Tipi di file creati per oggetto visivo C++ progetti](file-types-created-for-visual-cpp-projects.md)
