@@ -2,12 +2,12 @@
 title: MFC e ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: c2cfb77f0e3885e0b315ddfe38bf942ec157375a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54498ddf8999379d93c899c05aa41fe224616ea3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239253"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525425"
 ---
 # <a name="mfc-and-atl"></a>MFC e ATL
 
@@ -17,7 +17,7 @@ Microsoft Foundation Classes fornisce un wrapper basato sugli oggetti C++ in Win
 
 In Visual Studio 2015 Visual C++ è un componente facoltativo e i componenti MFC e ATL sono sottocomponenti di Visual C++. Se non si selezionano questi componenti quando si installa per la prima volta Visual Studio, verrà chiesto di installarli al primo tentativo di creazione o apertura di un progetto MFC o ATL.
 
-In Visual Studio 2017 e versioni successive, MFC e ATL sono sottocomponenti del **sviluppo di applicazioni Desktop con C++** carico di lavoro nel programma di installazione di Visual Studio. È possibile installare il supporto ATL senza MFC o combinati supporto ATL e MFC (MFC dipende da ATL). Per altre informazioni sui componenti e carichi di lavoro, vedere [installare Visual Studio 2017](/visualstudio/install/install-visual-studio).
+In Visual Studio 2017 e versioni successive, MFC e ATL sono sottocomponenti del **sviluppo di applicazioni Desktop con C++** carico di lavoro nel programma di installazione di Visual Studio. È possibile installare il supporto ATL senza MFC o combinati supporto ATL e MFC (MFC dipende da ATL). Per altre informazioni sui componenti e carichi di lavoro, vedere [installazione di Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="related-articles"></a>Articoli correlati
 

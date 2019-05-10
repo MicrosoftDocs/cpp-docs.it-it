@@ -1,23 +1,25 @@
 ---
 title: Creazione guidata consumer ODBC MFC (C++)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.mfc.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20357646bbb7aa4fe00db43d8e77f9bf0b95c9b5
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310311"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525359"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Creazione guidata consumer ODBC MFC (C++)
 
-> [!WARNING]
-> In Visual Studio 2017 versione 15.9 questa procedura guidata del codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto generale per ATL e MFC non subisce attualmente l'effetto della rimozione di questa procedura guidata. Se vuoi condividere i tuoi commenti e suggerimenti su questa deprecazione, compila il [presente sondaggio](https://www.surveymonkey.com/r/QDWKKCN). I tuoi commenti e suggerimenti sono importanti per noi.
+::: moniker range="vs-2019"
+
+Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni successive.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Questa procedura guidata per impostare una classe recordset ODBC e le associazioni di dati necessaria per accedere all'origine dati specificata.
 
@@ -73,6 +75,8 @@ Questa procedura guidata per impostare una classe recordset ODBC e le associazio
 - **Associare tutte le colonne**
 
    Specifica se sono associate tutte le colonne della tabella selezionata. Se si seleziona questa casella (impostazione predefinita), tutte le colonne sono associate. Se non si seleziona questa casella, viene associata alcuna colonna, e necessario associare manualmente nella classe recordset.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -2,12 +2,12 @@
 title: 3. Funzioni della libreria run-time
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363232"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525040"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funzioni della libreria run-time
 
@@ -40,7 +40,7 @@ Le funzioni descritte in questa sezione interessano e monitorare ambienti parall
 - [omp_set_nested](#319-omp_set_nested-function)
 - [omp_get_nested](#3110-omp_get_nested-function)
 
-### <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads (funzione)
+### <a name="311-omp_set_num_threads-function"></a>3.1.1 omp_set_num_threads (funzione)
 
 Il `omp_set_num_threads` funzione imposta il numero predefinito di thread da usare per aree parallele in un secondo momento che non specificano un `num_threads` clausola. Il formato è il seguente:
 
@@ -62,7 +62,7 @@ Questa chiamata ha la precedenza sul `OMP_NUM_THREADS` variabile di ambiente. Il
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) variabile di ambiente
 - [num_threads](2-directives.md#23-parallel-construct) clausola
 
-### <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads (funzione)
+### <a name="312-omp_get_num_threads-function"></a>3.1.2 omp_get_num_threads (funzione)
 
 Il `omp_get_num_threads` funzione restituisce il numero di thread attualmente del team l'esecuzione di tale area dalla quale viene chiamato. Il formato è il seguente:
 
@@ -81,7 +81,7 @@ Se il numero di thread non è stato impostato in modo esplicito dall'utente, il 
 - [num_threads](2-directives.md#23-parallel-construct)
 - [parallel](2-directives.md#23-parallel-construct)
 
-### <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads (funzione)
+### <a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads (funzione)
 
 Il `omp_get_max_threads` funzione restituisce un intero che ha garantito a essere grande almeno come il numero di thread che verrebbe utilizzato in modo da formare un team se un'area parallela senza un `num_threads` clausola sono stati affinché sia disponibile in quel punto nel codice. Il formato è il seguente:
 
@@ -109,7 +109,7 @@ Il `omp_get_max_threads` valore restituito della funzione è utilizzabile per al
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
 - [num_threads](2-directives.md#23-parallel-construct)
 
-### <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num (funzione)
+### <a name="314-omp_get_thread_num-function"></a>3.1.4 omp_get_thread_num (funzione)
 
 Il `omp_get_thread_num` funzione restituisce il numero di thread, all'interno del relativo team, del thread che esegue la funzione. Rientra numero di thread compreso tra 0 e `omp_get_num_threads()`-1, inclusivo. Il thread master del team sia 0.
 
@@ -126,7 +126,7 @@ Se viene chiamato da un'area seriale, `omp_get_thread_num` restituisce 0. Se chi
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function) function
 
-### <a name="315-ompgetnumprocs-function"></a>3.1.5 omp_get_num_procs (funzione)
+### <a name="315-omp_get_num_procs-function"></a>3.1.5 omp_get_num_procs (funzione)
 
 Il `omp_get_num_procs` funzione restituisce il numero di processori disponibili per il programma al momento della chiamata di funzione. Il formato è il seguente:
 
@@ -135,7 +135,7 @@ Il `omp_get_num_procs` funzione restituisce il numero di processori disponibili 
 int omp_get_num_procs(void);
 ```
 
-### <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel (funzione)
+### <a name="316-omp_in_parallel-function"></a>3.1.6 omp_in_parallel (funzione)
 
 Il `omp_in_parallel` funzione restituisce un valore diverso da zero se viene chiamato all'interno di extent dinamica di un'area parallela in esecuzione in parallelo; in caso contrario, restituisce 0. Il formato è il seguente:
 
@@ -146,7 +146,7 @@ int omp_in_parallel(void);
 
 Questa funzione restituisce un valore diverso da zero quando viene chiamato dall'interno di un'area in esecuzione in parallelo, tra cui regioni annidate che vengono serializzate.
 
-### <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic (funzione)
+### <a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic (funzione)
 
 Il `omp_set_dynamic` funzione Abilita o disabilita la regolazione dinamica del numero di thread disponibili per l'esecuzione di aree parallele. Il formato è il seguente:
 
@@ -171,7 +171,7 @@ Il valore predefinito per la regolazione dinamica del thread è definito dall'im
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="318-ompgetdynamic-function"></a>3.1.8 omp_get_dynamic (funzione)
+### <a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic (funzione)
 
 Il `omp_get_dynamic` funzione restituisce un valore diverso da zero se è abilitata, la regolazione dinamica dei thread e restituisce 0 in caso contrario. Il formato è il seguente:
 
@@ -186,7 +186,7 @@ Se l'implementazione non implementa la regolazione dinamica del numero di thread
 
 - Per una descrizione di regolazione del thread dinamica, vedere [omp_set_dynamic](#317-omp_set_dynamic-function).
 
-### <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested (funzione)
+### <a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested (funzione)
 
 Il `omp_set_nested` funzione Abilita o disabilita il parallelismo annidato. Il formato è il seguente:
 
@@ -208,7 +208,7 @@ Quando è abilitato il parallelismo annidato, il numero di thread usati per l'es
 - [OMP_NESTED](4-environment-variables.md#44-omp_nested)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="3110-ompgetnested-function"></a>3.1.10 funzione omp_get_nested
+### <a name="3110-omp_get_nested-function"></a>3.1.10 funzione omp_get_nested
 
 Il `omp_get_nested` funzione restituisce un valore diverso da zero se il parallelismo annidato è abilitato e 0 se è disabilitato. Per altre informazioni sul parallelismo annidato, vedere [omp_set_nested](#319-omp_set_nested-function). Il formato è il seguente:
 
@@ -241,7 +241,7 @@ Per le funzioni seguenti, la variabile di blocco deve avere tipo `omp_nest_lock_
 
 Le funzioni di blocco OpenMP accedono alla variabile di blocco in modo che possano sempre leggere e aggiornare il valore massimo corrente della variabile di blocco. Pertanto, non è necessario per un programma di OpenMP includere esplicita `flush` direttive per assicurarsi che il blocco valore della variabile sia coerenza tra diversi thread. (Potrebbe esserci una necessità `flush` direttive per rendere coerente con i valori di altre variabili.)
 
-### <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 funzioni funzioni omp_init_lock e omp_init_nest_lock
+### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 funzioni funzioni omp_init_lock e omp_init_nest_lock
 
 Queste funzioni consentono solo di inizializzazione di un blocco. Ogni funzione inizializza il blocco associato al parametro *blocco* per l'utilizzo nelle chiamate future. Il formato è il seguente:
 
@@ -253,7 +253,7 @@ void omp_init_nest_lock(omp_nest_lock_t *lock);
 
 Lo stato iniziale viene sbloccato (vale a dire, nessun thread è proprietario del blocco). Per un blocco annidabile, il conteggio di annidamento iniziale è zero. Non è conforme a chiamare una di queste routine con una variabile di blocco che è già stato inizializzato.
 
-### <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 funzioni funzioni omp_destroy_lock e omp_destroy_nest_lock
+### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 funzioni funzioni omp_destroy_lock e omp_destroy_nest_lock
 
 Queste funzioni assicurarsi che la punta a bloccare la variabile *blocco* è inizializzata. Il formato è il seguente:
 
@@ -265,7 +265,7 @@ void omp_destroy_nest_lock(omp_nest_lock_t *lock);
 
 È conforme a chiamare una di queste routine con una variabile di blocco che non è inizializzata o sbloccato.
 
-### <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 funzioni omp_set_lock e omp_set_nest_lock
+### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 funzioni omp_set_lock e omp_set_nest_lock
 
 Ognuna di queste funzioni consente di bloccare il thread che esegue la funzione fino a quando il blocco specificato è disponibile e quindi imposta il blocco. Un semplice blocco è disponibile se è sbloccato. È disponibile se si tratta di un blocco annidabile sbloccato o se è già di proprietà dal thread di esecuzione della funzione. Il formato è il seguente:
 
@@ -279,7 +279,7 @@ Per un semplice blocco, l'argomento di `omp_set_lock` funzione deve puntare a un
 
 Per un blocco annidabile, l'argomento di `omp_set_nest_lock` funzione deve puntare a una variabile inizializzata blocco. Il numero di nidificazione viene incrementato e il thread viene concesso o continua, la proprietà del blocco.
 
-### <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 funzioni funzioni omp_unset_lock e omp_unset_nest_lock
+### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>3.2.4 funzioni funzioni omp_unset_lock e omp_unset_nest_lock
 
 Queste funzioni forniscono i mezzi di rilasciare la proprietà di un blocco. Il formato è il seguente:
 
@@ -295,7 +295,7 @@ Per un semplice blocco, il `omp_unset_lock` funzione rilascia il thread che eseg
 
 Per un blocco annidabile, il `omp_unset_nest_lock` funzione decrementa la nidificazione count e rilascia il thread che esegue la funzione di proprietà del blocco se il numero risultante è zero.
 
-### <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 funzioni funzioni omp_test_lock e omp_test_nest_lock
+### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 funzioni funzioni omp_test_lock e omp_test_nest_lock
 
 Queste funzioni tentano di impostare un blocco ma non bloccano l'esecuzione del thread. Il formato è il seguente:
 
@@ -318,7 +318,7 @@ Le funzioni descritte in questa sezione supportano un timer portabile basata sul
 - Il [omp_get_wtime](#331-omp_get_wtime-function) funzione restituisce il tempo trascorso.
 - Il [omp_get_wtick](#332-omp_get_wtick-function) funzione restituisce secondi tra i successivi cicli macchina.
 
-### <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime (funzione)
+### <a name="331-omp_get_wtime-function"></a>3.3.1 omp_get_wtime (funzione)
 
 Il `omp_get_wtime` funzione restituisce un valore a virgola mobile a precisione doppia uguale al tempo trascorso in secondi dal tempo"in precedenza".  Il "tempo effettivo in precedenza" è arbitrario, ma ha comunque non cambia durante l'esecuzione del programma dell'applicazione. Il formato è il seguente:
 
@@ -340,7 +340,7 @@ printf_s("Work took %f sec. time.\n", end-start);
 
 Le volte restituite sono "times singoli thread" da cui è destinato a che essi non sono necessarie per essere coerente a livello globale in tutti i thread che fanno parte di un'applicazione.
 
-### <a name="332-ompgetwtick-function"></a>3.3.2 omp_get_wtick (funzione)
+### <a name="332-omp_get_wtick-function"></a>3.3.2 omp_get_wtick (funzione)
 
 Il `omp_get_wtick` funzione restituisce un valore a virgola mobile a precisione doppia uguale al numero di secondi tra i successivi cicli macchina. Il formato è il seguente:
 

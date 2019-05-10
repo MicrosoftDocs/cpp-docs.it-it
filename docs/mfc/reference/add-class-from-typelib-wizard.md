@@ -1,25 +1,27 @@
 ---
 title: Aggiunta guidata classe da libreria dei tipi
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.typelib
+ms.date: 05/09/2019
 helpviewer_keywords:
-- Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794df6c207c2f2e93cdcc63a6b83cd3434764e87
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297008"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525466"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Aggiunta guidata classe da libreria dei tipi
 
-Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreria dei tipi disponibili. La procedura guidata crea una classe per ogni interfaccia che aggiunta dalla libreria dei tipi selezionati.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> In Visual Studio 2017 versione 15.9 questa procedura guidata del codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto generale per ATL e MFC non subisce attualmente l'effetto della rimozione di questa procedura guidata. Se vuoi condividere i tuoi commenti e suggerimenti su questa deprecazione, compila il [presente sondaggio](https://www.surveymonkey.com/r/QDWKKCN). I tuoi commenti e suggerimenti sono importanti per noi.
+Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni successive.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreria dei tipi disponibili. La procedura guidata crea una classe per ogni interfaccia che aggiunta dalla libreria dei tipi selezionati.
 
 - **Aggiungi classe da**
 
@@ -66,6 +68,8 @@ Utilizzare questa procedura guidata per aggiungere una classe MFC da una libreri
    Imposta il nome del file di intestazione per la nuova classe. Per impostazione predefinita, il nome è basato sul nome specificato in **Classi generate**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nel percorso desiderato o aggiungere la dichiarazione di classe a un file esistente. Se si sceglie un file esistente, la procedura guidata non lo salverà nel percorso selezionato finché non si sceglie **Fine**.
 
    La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

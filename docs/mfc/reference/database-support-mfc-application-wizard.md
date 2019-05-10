@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323114"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525460"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Supporto database, Creazione guidata applicazione MFC
 
@@ -46,15 +46,15 @@ Questa pagina fornisce le opzioni che consentono di specificare il livello di da
 
 - **Origine dati**
 
+   > [!NOTE]
+   > La creazione guidata Consumer OLE DB ATL e creazione guidata Consumer ODBC MFC non sono disponibili in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere manualmente la funzionalità. Per altre informazioni, vedere [creazione di un Consumer senza utilizzare una procedura guidata](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
+
    Scegliere il **Zdroj dat** pulsante per configurare un'origine dati utilizzando il driver specificato o un provider e un database. Se è stato selezionato OLE DB nel **tipo di Client** viene visualizzato questo pulsante di opzione, il **proprietà di Data Link** nella finestra di dialogo. Se si seleziona ODBC nel **tipo di Client** fornisce questo pulsante di opzione il **Seleziona origine dati** nella finestra di dialogo. Questa opzione è disponibile solo se si sceglie di includere una vista di database nell'applicazione.
 
    |Opzione|Descrizione|
    |------------|-----------------|
    |**Proprietà Data Link** (OLE DB)|Stabilisce l'origine dati specificata utilizzando il provider OLE DB specificato. È necessario specificare il provider OLE DB, la posizione dei dati, l'origine dati, l'ID di accesso e (facoltativamente) una password. Per informazioni dettagliate su questa finestra di dialogo, vedere **zdroj dat** nelle [Creazione guidata Consumer OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).|
    |**Selezionare l'origine dati** (ODBC)|Stabilisce l'origine dati specificata tramite il driver ODBC specificato. È necessario selezionare un nome dell'origine dati per scegliere una tabella per l'origine dati. La procedura guidata associa tutte le colonne della tabella per le variabili membro di un `CRecordset`-classe derivata. Per informazioni dettagliate su questa finestra di dialogo, vedere **zdroj dat** nelle [Creazione guidata Consumer ODBC MFC](../../mfc/reference/mfc-odbc-consumer-wizard.md).|
-
-   > [!NOTE]
-   > Nelle versioni precedenti, facendo clic MAIUSC i **Zdroj dat** pulsante aperta una finestra di dialogo Apri File per consentire di selezionare un file di Data Link (UDL). Questa funzionalità non è più supportata.
 
 - **Genera classe database con attributi**
 

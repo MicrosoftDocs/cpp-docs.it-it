@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35bcd4d951ee0340709976807de3a1d5e984cf29
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405638"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524834"
 ---
 # <a name="acceleratorview-class"></a>Classe accelerator_view
 
@@ -121,7 +121,7 @@ accelerator_view( const accelerator_view & other );
 *other*<br/>
 Il `accelerator_view` oggetto da copiare.
 
-## <a name="createmarker"></a>create_marker
+## <a name="create_marker"></a>create_marker
 
 Restituisce una future per tenere traccia del completamento di tutti i comandi inviati finora a questo `accelerator_view` oggetto.
 
@@ -149,7 +149,7 @@ void flush();
 
 Restituisce `void`.
 
-## <a name="getaccelerator"></a>get_accelerator
+## <a name="get_accelerator"></a>get_accelerator
 
 Restituisce l'oggetto di tasti di scelta rapida per l'oggetto accelerator_view.
 ### <a name="syntax"></a>Sintassi
@@ -162,7 +162,7 @@ accelerator get_accelerator() const;
 
 L'oggetto di tasti di scelta rapida per l'oggetto accelerator_view.
 
-## <a name="getisautoselection"></a>get_is_auto_selection
+## <a name="get_is_auto_selection"></a>get_is_auto_selection
 
 Restituisce un valore booleano che indica se il runtime selezionerà automaticamente un tasto di scelta appropriato quando l'oggetto accelerator_view viene passato a un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -176,7 +176,7 @@ bool get_is_auto_selection() const;
 
 **true** se il runtime selezionerà automaticamente un acceleratore appropriato; in caso contrario, **false**.
 
-## <a name="getisdebug"></a>get_is_debug
+## <a name="get_is_debug"></a> get_is_debug
 
 Restituisce un valore booleano che indica se l'oggetto accelerator_view dispone del livello DEBUG abilitato per la segnalazione estensiva degli errori.
 
@@ -190,7 +190,7 @@ bool get_is_debug() const;
 
 Valore booleano che indica se il `accelerator_view` oggetto dispone del livello DEBUG abilitato per la segnalazione estensiva degli errori.
 
-## <a name="getqueuingmode"></a>get_queuing_mode
+## <a name="get_queuing_mode"></a>get_queuing_mode
 
 Restituisce la modalità di Accodamento per l'oggetto accelerator_view.
 
@@ -204,7 +204,7 @@ queuing_mode get_queuing_mode() const;
 
 La modalità di Accodamento per il `accelerator_view` oggetto.
 
-## <a name="getversion"></a>get_version
+## <a name="get_version"></a>get_version
 
 Restituisce la versione di accelerator_view.
 
@@ -218,7 +218,7 @@ unsigned int get_version() const;
 
 La versione del `accelerator_view`.
 
-## <a name="isautoselection"></a>is_auto_selection
+## <a name="is_auto_selection"></a>is_auto_selection
 
 Ottiene un valore booleano che indica se il runtime selezionerà automaticamente un tasto di scelta appropriato quando l'oggetto accelerator_view viene passato a un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -228,7 +228,7 @@ Ottiene un valore booleano che indica se il runtime selezionerà automaticamente
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="isdebug"></a>is_debug
+## <a name="is_debug"></a>is_debug
 
 Ottiene un valore booleano che indica se l'oggetto accelerator_view dispone del livello DEBUG abilitato per la segnalazione estensiva degli errori.
 
@@ -295,7 +295,7 @@ Il `accelerator_view` oggetto da confrontare con questo.
 
 **true** se i due oggetti sono uguali; in caso contrario, **false**.
 
-## <a name="queuingmode"></a>queuing_mode
+## <a name="queuing_mode"></a>queuing_mode
 
 Ottiene la modalità di Accodamento per l'oggetto accelerator_view.
 
