@@ -1,8 +1,6 @@
 ---
 title: Elaborazione delle eccezioni
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.exceptions
 helpviewer_keywords:
 - macros [MFC], exception handling
 - DAO (Data Access Objects), exceptions [MFC]
@@ -13,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1d70505013553e27130d9d9042b0c8e5c074ab5
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322215"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612208"
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 

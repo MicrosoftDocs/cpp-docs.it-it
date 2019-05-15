@@ -1,20 +1,18 @@
 ---
 title: Strutture, stili, callback e mappe messaggi
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.structures
 helpviewer_keywords:
 - callback functions, MFC
 - styles, MFC
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1fa072c5395c9171e0abdd4f3dab3251cd27229
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309980"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611676"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Strutture, stili, callback e mappe messaggi
 

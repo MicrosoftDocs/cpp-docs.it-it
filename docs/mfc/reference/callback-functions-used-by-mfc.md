@@ -1,20 +1,18 @@
 ---
 title: Funzioni di callback utilizzate da MFC
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.functions
 helpviewer_keywords:
 - callback functions [MFC], MFC
 - MFC, callback functions
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84581a4a1147a5b0b046e1bf2fbe412bffe9c662
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152150"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612246"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funzioni di callback utilizzate da MFC
 

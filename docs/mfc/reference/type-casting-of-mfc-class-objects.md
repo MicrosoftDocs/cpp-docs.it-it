@@ -1,8 +1,6 @@
 ---
 title: Cast di tipo degli oggetti classe MFC
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.classes
 helpviewer_keywords:
 - macros [MFC], type casting
 - pointers [MFC], type casting
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7586f3c3f3aefd78fa868cc847df27e8aac58ab
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309811"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611657"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Cast di tipo degli oggetti classe MFC
 

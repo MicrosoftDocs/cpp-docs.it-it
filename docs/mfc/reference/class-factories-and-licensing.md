@@ -1,17 +1,15 @@
 ---
 title: Class factory e licenze
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.classes
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18d86122e57af056a50a4d94bac89d65a7b71c7d
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392557"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611851"
 ---
 # <a name="class-factories-and-licensing"></a>Class factory e licenze
 

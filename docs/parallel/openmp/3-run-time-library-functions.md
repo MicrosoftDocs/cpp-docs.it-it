@@ -1,13 +1,13 @@
 ---
 title: 3. Funzioni della libreria run-time
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525040"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611181"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funzioni della libreria run-time
 
@@ -55,6 +55,8 @@ Questa funzione ha gli effetti descritti in precedenza quando viene chiamato da 
 
 Questa chiamata ha la precedenza sul `OMP_NUM_THREADS` variabile di ambiente. Il valore predefinito per il numero di thread, che può essere stabilita chiamando `omp_set_num_threads` oppure impostando il `OMP_NUM_THREADS` variabile di ambiente, può essere sottoposto a override esplicito in una singola `parallel` direttiva specificando il `num_threads` clausola.
 
+Per altre informazioni, vedere [omp_set_dynamic](#317-omp_set_dynamic-function).
+
 #### <a name="cross-references"></a>Riferimenti incrociati
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
@@ -74,6 +76,8 @@ int omp_get_num_threads(void);
 Il `num_threads` clausola, il `omp_set_num_threads` funzione e il `OMP_NUM_THREADS` variabile di ambiente controllare il numero di thread in un team.
 
 Se il numero di thread non è stato impostato in modo esplicito dall'utente, il valore predefinito è definito dall'implementazione. Questa funzione esegue l'associazione per l'inclusione più vicina `parallel` direttiva. Se viene chiamato da una parte seriale di un programma o da un'area parallela annidata che viene serializzata, questa funzione restituisce 1.
+
+Per altre informazioni, vedere [omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Riferimenti incrociati
 
@@ -165,6 +169,12 @@ Una chiamata a `omp_set_dynamic` ha la precedenza sul `OMP_DYNAMIC` variabile di
 
 Il valore predefinito per la regolazione dinamica del thread è definito dall'implementazione. Di conseguenza, i codici di utente che dipendono da un numero specifico di thread per l'esecuzione corretta devono disabilitare in modo esplicito thread dinamico. Le implementazioni non sono necessarie per offrire la possibilità di modificare dinamicamente il numero di thread, ma sono richieste per fornire l'interfaccia per supportare la portabilità tra tutte le piattaforme.
 
+#### <a name="microsoft-specific"></a>Sezione specifica Microsoft
+
+Il supporto corrente di `omp_get_dynamic` e `omp_set_dynamic` è come segue: 
+
+Il parametro di input `omp_set_dynamic` non influenza i criteri di threading e non modifica il numero di thread. `omp_get_num_threads` Restituisce sempre il numero definito dall'utente, se impostato, o il numero di thread predefinito. Nell'implementazione corrente di Microsoft, `omp_set_dynamic(0)` Disattiva threading dinamiche in modo che il set esistente di thread può essere riutilizzato per l'area parallela seguente. `omp_set_dynamic(1)` Attiva threading dinamico rimuovendo il set esistente di thread e creazione di un nuovo set per l'area parallela imminente. Il numero di thread nel nuovo set è lo stesso come il set precedente e si basa sul valore restituito di `omp_get_num_threads`. Pertanto, per prestazioni ottimali, usare `omp_set_dynamic(0)` riutilizzare i thread esistenti.
+
 #### <a name="cross-references"></a>Riferimenti incrociati
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
@@ -180,7 +190,7 @@ Il `omp_get_dynamic` funzione restituisce un valore diverso da zero se è abilit
 int omp_get_dynamic(void);
 ```
 
-Se l'implementazione non implementa la regolazione dinamica del numero di thread, questa funzione restituisce sempre 0.
+Se l'implementazione non implementa la regolazione dinamica del numero di thread, questa funzione restituisce sempre 0. Per altre informazioni, vedere [omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Riferimenti incrociati
 
