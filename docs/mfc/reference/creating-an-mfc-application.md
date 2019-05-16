@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: c70c82d14227687f34309f8d125e3aeab53034a5
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0f16fe577f1dc02dc9a2fc0cffb5899b16ad8cca
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448443"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708240"
 ---
 # <a name="creating-an-mfc-application"></a>Creazione di un'applicazione MFC
 
@@ -47,7 +47,7 @@ La Creazione guidata applicazione MFC genera le classi e i file appropriati per 
 
 1. Fare clic su **fine** per chiudere la procedura guidata e aprire il nuovo progetto nell'ambiente di sviluppo.
 
-Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per oggetto visivo C++ progetti](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per Visual Studio C++ progetti](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Vedere anche
 

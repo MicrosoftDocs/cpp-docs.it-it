@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448571"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708062"
 ---
 # <a name="windows-desktop-wizard"></a>Creazione guidata applicazione desktop di Windows
 
@@ -83,7 +83,7 @@ Dopo aver creato un'applicazione desktop di Windows, è possibile aggiungere cla
 > [!NOTE]
 > Non è possibile aggiungere classi ATL ed è possibile aggiungere classi MFC solo a quei tipi di applicazioni desktop di Windows che supportano MFC (vedere la tabella precedente).
 
-È possibile visualizzare i file creati per il progetto con la procedura guidata in **Esplora soluzioni**. Per altre informazioni sui file che verrà creato il progetto, vedere il file di progetto creato, `ReadMe.txt`. Per altre informazioni sui tipi di file, [tipi di File creati per oggetto visivo C++ progetti](../build/reference/file-types-created-for-visual-cpp-projects.md).
+È possibile visualizzare i file creati per il progetto con la procedura guidata in **Esplora soluzioni**. Per altre informazioni sui file che verrà creato il progetto, vedere il file di progetto creato, `ReadMe.txt`. Per altre informazioni sui tipi di file, [tipi di File creati per Visual Studio C++ progetti](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 44671985b2ab22e866a63b284a4b22d87b614667
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: cd1d7910d95fa7e412f9843da2cec7ae10a38ef6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446741"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708230"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Creazione di un progetto DLL MFC
 
@@ -36,7 +36,7 @@ Una DLL MFC è un file binario che agisce come una libreria condivisa di funzion
 
 1. Fare clic su **Finish** per chiudere la procedura guidata e aprire il nuovo progetto nella **Esplora soluzioni**.
 
-Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per oggetto visivo C++ progetti](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per Visual Studio C++ progetti](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Vedere anche
 

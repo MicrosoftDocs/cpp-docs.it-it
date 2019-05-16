@@ -2,12 +2,12 @@
 title: Intrinseci del compilatore e linguaggio dell'assembly
 ms.date: 11/04/2016
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-ms.openlocfilehash: 016303262db40917099dfd6d13b4b11ad6ec2797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6e2617290b368eff3fded4053db124f5d88d62ec
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345208"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708316"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Intrinseci del compilatore e linguaggio dell'assembly
 
@@ -21,4 +21,4 @@ In questa sezione della documentazione sono contenute informazioni sugli intrins
 |[Assembler inline](../assembler/inline/inline-assembler.md)|Viene illustrato come usare l'assembler inline di Visual C/C++ con i processori x86.|
 |[Riferimento all'assembler ARM](../assembler/arm/arm-assembler-reference.md)|Viene fornito materiale di riferimento per l'assembler ARM Microsoft (armasm) e gli strumenti correlati.|
 |[Riferimento a Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)|Viene fornito materiale di riferimento per l'assembler Macro Microsoft (masm).|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Articolo di livello superiore per la documentazione di Visual C++.|
+|[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Articolo di livello superiore per la documentazione di Visual C++.|
