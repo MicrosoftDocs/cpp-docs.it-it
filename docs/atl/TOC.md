@@ -95,7 +95,7 @@
 ## [Classi di raccolta ATL](atl-collection-classes.md)
 ## [Componente del Registro di sistema ATL (Registrar)](atl-registry-component-registrar.md)
 ### [Creazione degli script del Registro di sistema](creating-registrar-scripts.md)
-#### [Informazioni sulla sintassi Backus Nauer Form (BNF)](understanding-backus-nauer-form-bnf-syntax.md)
+#### [Informazioni sulla sintassi Backus-Naur form (BNF)](understanding-backus-naur-form-bnf-syntax.md)
 #### [Informazioni sulle strutture ad albero di analisi](understanding-parse-trees.md)
 #### [Esempio di script del Registro di sistema](registry-scripting-examples.md)
 #### [Uso dei parametri sostituibili (preprocessore del registrar)](using-replaceable-parameters-the-registrar-s-preprocessor.md)
