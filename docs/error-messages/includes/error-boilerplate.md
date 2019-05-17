@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: af8edc41f6c2036d231eb7e922a631628294645a
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857746"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837591"
 ---
 > [!IMPORTANT]
 > I compilatori di Visual Studio e strumenti di compilazione possono segnalare molti tipi di errori e avvisi. Dopo aver trovato un errore o avviso, gli strumenti di compilazione possono presupporre lo scopo del codice e tentare di continuare, in modo che altri problemi possono essere segnalati nello stesso momento. Se la supposizione degli strumenti non è corretta, gli errori o avvisi successivi potrebbero non essere applicabili al progetto. Quando si correggono i problemi nel progetto, iniziare sempre con il primo errore o avviso restituito e ricompilare spesso. Una correzione potrebbe prevedere molti errori successivi a risolversi.
