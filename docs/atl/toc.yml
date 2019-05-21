@@ -1,0 +1,966 @@
+- name: Active Template Library (ATL)
+  href: atl-com-desktop-components.md
+- name: Concetti relativi a ATL (Active Template Library)
+  expanded: false
+  items:
+    - name: Concetti relativi a ATL (Active Template Library)
+      href: active-template-library-atl-concepts.md
+    - name: Introduzione a COM e ATL
+      expanded: false
+      items:
+        - name: Introduzione a COM e ATL
+          href: introduction-to-com-and-atl.md
+        - name: Introduzione a COM
+          expanded: false
+          items:
+            - name: Introduzione a COM
+              href: introduction-to-com.md
+            - name: Interfacce (ATL)
+              href: interfaces-atl.md
+            - name: IUnknown
+              href: iunknown.md
+            - name: Conteggio riferimenti
+              href: reference-counting.md
+            - name: QueryInterface
+              href: queryinterface.md
+            - name: Marshaling
+              href: marshaling.md
+            - name: Aggregazione
+              href: aggregation.md
+        - name: Introduzione a ATL
+          expanded: false
+          items:
+            - name: Introduzione a ATL
+              href: introduction-to-atl.md
+            - name: Uso di una libreria di modelli
+              href: using-a-template-library.md
+            - name: Ambito di ATL
+              href: scope-of-atl.md
+            - name: Suggerimenti per la scelta tra ATL e MFC
+              href: recommendations-for-choosing-between-atl-and-mfc.md
+    - name: Nozioni fondamentali sugli oggetti COM ATL
+      expanded: false
+      items:
+        - name: Nozioni fondamentali sugli oggetti COM ATL
+          href: fundamentals-of-atl-com-objects.md
+        - name: Implementazione di CComObjectRootEx
+          href: implementing-ccomobjectrootex.md
+        - name: 'Implementazione di CComObject, CComAggObject e CComPolyObject'
+          href: implementing-ccomobject-ccomaggobject-and-ccompolyobject.md
+        - name: Supporto di IDispatch e IErrorInfo
+          href: supporting-idispatch-and-ierrorinfo.md
+        - name: Supporto di IDispEventImpl
+          href: supporting-idispeventimpl.md
+        - name: Modifica della class factory e del modello di aggregazione predefiniti
+          href: changing-the-default-class-factory-and-aggregation-model.md
+        - name: Creazione di un oggetto aggregato
+          href: creating-an-aggregated-object.md
+    - name: Interfacce duali e ATL
+      expanded: false
+      items:
+        - name: Interfacce duali e ATL
+          href: dual-interfaces-and-atl.md
+        - name: Implementazione di un'interfaccia duale
+          href: implementing-a-dual-interface.md
+        - name: Interfacce duali multiple
+          href: multiple-dual-interfaces.md
+        - name: Attributo nonextensible
+          href: nonextensible-attribute.md
+        - name: Interfacce duali ed eventi
+          href: dual-interfaces-and-events.md
+    - name: Raccolte ed enumeratori ATL
+      expanded: false
+      items:
+        - name: Raccolte ed enumeratori ATL
+          href: atl-collections-and-enumerators.md
+        - name: Classi di raccolte ed enumeratori ATL
+          href: atl-collection-and-enumerator-classes.md
+        - name: Principi di progettazione per le interfacce di raccolte ed enumeratori
+          href: design-principles-for-collection-and-enumerator-interfaces.md
+        - name: Implementazione di una raccolta basata su libreria standard C++
+          expanded: false
+          items:
+            - name: Implementazione di una raccolta basata su libreria standard C++
+              href: implementing-an-stl-based-collection.md
+            - name: Classi di criteri di copia ATL
+              href: atl-copy-policy-classes.md
+    - name: Nozioni fondamentali sui controlli compositi ATL
+      expanded: false
+      items:
+        - name: Nozioni fondamentali sui controlli compositi ATL
+          href: atl-composite-control-fundamentals.md
+        - name: Inserimento di un controllo composito
+          href: inserting-a-composite-control.md
+        - name: Modifica del progetto ATL
+          href: modifying-the-atl-project.md
+        - name: Aggiunta di funzionalità al controllo composito
+          href: adding-functionality-to-the-composite-control.md
+        - name: Creazione e test del progetto ATL
+          href: building-and-testing-the-atl-project.md
+    - name: Domande frequenti sul contenimento di controlli ATL
+      href: atl-control-containment-faq.md
+    - name: Pagine delle proprietà COM ATL
+      expanded: false
+      items:
+        - name: Pagine delle proprietà COM ATL
+          href: atl-com-property-pages.md
+        - name: Specifica delle pagine delle proprietà
+          href: specifying-property-pages.md
+        - name: Implementazione di pagine delle proprietà
+          expanded: false
+          items:
+            - name: Implementazione di pagine delle proprietà
+              href: implementing-property-pages.md
+            - name: 'Esempio: implementazione di una pagina delle proprietà'
+              href: example-implementing-a-property-page.md
+    - name: Supporto ATL per controlli DHTML
+      expanded: false
+      items:
+        - name: Supporto ATL per controlli DHTML
+          href: atl-support-for-dhtml-controls.md
+        - name: Identificazione degli elementi del progetto di controlli DHTML
+          href: identifying-the-elements-of-the-dhtml-control-project.md
+        - name: Chiamata al codice C++ da DHTML
+          href: calling-cpp-code-from-dhtml.md
+        - name: Creazione di un controllo DHTML ATL
+          href: creating-an-atl-dhtml-control.md
+        - name: Test del controllo DHTML ATL
+          href: testing-the-atl-dhtml-control.md
+        - name: Modifica del controllo DHTML ATL
+          href: modifying-the-atl-dhtml-control.md
+        - name: Test del controllo DHTML ATL modificato
+          href: testing-the-modified-atl-dhtml-control.md
+    - name: Punti di connessione ATL
+      expanded: false
+      items:
+        - name: Punti di connessione ATL
+          href: atl-connection-points.md
+        - name: Classi di punti di connessione ATL
+          href: atl-connection-point-classes.md
+        - name: Aggiunta di punti di connessione a un oggetto
+          href: adding-connection-points-to-an-object.md
+        - name: Esempio di punto di connessione ATL
+          href: atl-connection-point-example.md
+    - name: Gestione di eventi e ATL
+      expanded: false
+      items:
+        - name: Gestione di eventi e ATL
+          href: event-handling-and-atl.md
+        - name: Principi di gestione degli eventi
+          href: event-handling-principles.md
+        - name: Implementazione dell'interfaccia di gestione degli eventi
+          href: implementing-the-event-handling-interface.md
+        - name: Uso di IDispEventImpl
+          href: using-idispeventimpl.md
+        - name: Uso di IDispEventSimpleImpl
+          href: using-idispeventsimpleimpl.md
+        - name: Riepilogo della gestione degli eventi ATL
+          href: atl-event-handling-summary.md
+    - name: ATL e il marshaler privo di thread
+      href: atl-and-the-free-threaded-marshaler.md
+    - name: Specifica di un modello di threading per un progetto (ATL)
+      href: specifying-the-threading-model-for-a-project-atl.md
+    - name: Classi di moduli ATL
+      href: atl-module-classes.md
+    - name: Servizi ATL
+      expanded: false
+      items:
+        - name: Servizi ATL
+          href: atl-services.md
+        - name: 'Funzione CAtlServiceModuleT::Start'
+          href: catlservicemodulet-start-function.md
+        - name: 'Funzione CAtlServiceModuleT::ServiceMain'
+          href: catlservicemodulet-servicemain-function.md
+        - name: 'Funzione CAtlServiceModuleT::Run'
+          href: catlservicemodulet-run-function.md
+        - name: 'Funzione CAtlServiceModuleT::Handler'
+          href: catlservicemodulet-handler-function.md
+        - name: 'Voci del Registro di sistema '
+          href: registry-entries.md
+        - name: DCOMCNFG
+          href: dcomcnfg.md
+        - name: Suggerimenti sul debug
+          expanded: false
+          items:
+            - name: Suggerimenti sul debug
+              href: debugging-tips.md
+            - name: Uso di Gestione attività
+              href: using-task-manager.md
+            - name: Visualizzazione delle asserzioni
+              href: displaying-assertions.md
+            - name: Esecuzione del programma come server locale
+              href: running-the-program-as-a-local-server.md
+    - name: Classi di finestre ATL
+      expanded: false
+      items:
+        - name: Classi di finestre ATL
+          href: atl-window-classes.md
+        - name: Introduzione alle classi di finestre ATL
+          href: introduction-to-atl-window-classes.md
+        - name: Uso di una finestra
+          href: using-a-window.md
+        - name: Implementazione di una finestra
+          expanded: false
+          items:
+            - name: Implementazione di una finestra
+              href: implementing-a-window.md
+            - name: Aggiunta di un gestore di messaggi ATL
+              href: adding-an-atl-message-handler.md
+            - name: Mappe di messaggi (ATL)
+              href: message-maps-atl.md
+            - name: Funzioni del gestore di messaggi
+              expanded: false
+              items:
+                - name: Funzioni del gestore di messaggi
+                  href: message-handler-functions.md
+                - name: CommandHandler
+                  href: commandhandler.md
+                - name: MessageHandler
+                  href: messagehandler.md
+                - name: NotifyHandler
+                  href: notifyhandler.md
+            - name: Implementazione di una finestra con CWindowImpl
+              href: implementing-a-window-with-cwindowimpl.md
+        - name: Implementazione di una finestra di dialogo
+          href: implementing-a-dialog-box.md
+        - name: Uso delle finestre contenute
+          href: using-contained-windows.md
+        - name: Informazioni sulle caratteristiche delle finestre
+          href: understanding-window-traits.md
+    - name: Classi di raccolte ATL
+      href: atl-collection-classes.md
+    - name: Componente del Registro di sistema ATL (Registrar)
+      expanded: false
+      items:
+        - name: Componente del Registro di sistema ATL (Registrar)
+          href: atl-registry-component-registrar.md
+        - name: Creazione di script di registrazione
+          expanded: false
+          items:
+            - name: Creazione di script di registrazione
+              href: creating-registrar-scripts.md
+            - name: Informazioni sulla sintassi Backus-Naur form (BNF)
+              href: understanding-backus-nauer-form-bnf-syntax.md
+            - name: Informazioni sugli alberi di analisi
+              href: understanding-parse-trees.md
+            - name: Esempio di script di registrazione
+              href: registry-scripting-examples.md
+            - name: Uso di parametri sostituibili (preprocessore del Registrar)
+              href: using-replaceable-parameters-the-registrar-s-preprocessor.md
+            - name: Richiamo di script
+              href: invoking-scripts.md
+        - name: Configurazione di un collegamento statico nel codice del Registrar (solo C++)
+          href: setting-up-a-static-link-to-the-registrar-code-cpp-only.md
+    - name: Programmazione con il codice runtime C e ATL
+      expanded: false
+      items:
+        - name: Programmazione con il codice runtime C e ATL
+          href: programming-with-atl-and-c-run-time-code.md
+        - name: Vantaggi e compromessi del metodo usato per collegarsi a CRT
+          href: benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md
+        - name: Collegamento a CRT nel progetto ATL
+          href: linking-to-the-crt-in-your-atl-project.md
+    - name: Programmazione con CComBSTR (ATL)
+      href: programming-with-ccombstr-atl.md
+    - name: Informazioni di riferimento sulla codifica ATL
+      href: atl-encoding-reference.md
+    - name: Informazioni di riferimento sulle utilità ATL
+      href: atl-utilities-reference.md
+- name: Esercitazione su ATL (Active Template Library)
+  expanded: false
+  items:
+    - name: Esercitazione su ATL (Active Template Library)
+      href: active-template-library-atl-tutorial.md
+    - name: 'Creazione del progetto (esercitazione su ATL, parte 1)'
+      href: creating-the-project-atl-tutorial-part-1.md
+    - name: 'Aggiunta di un controllo (esercitazione su ATL, parte 2)'
+      href: adding-a-control-atl-tutorial-part-2.md
+    - name: 'Aggiunta di una proprietà al controllo (esercitazione su ATL, parte 3)'
+      href: adding-a-property-to-the-control-atl-tutorial-part-3.md
+    - name: 'Modifica del codice di disegno (esercitazione su ATL, parte 4)'
+      href: changing-the-drawing-code-atl-tutorial-part-4.md
+    - name: 'Aggiunta di un evento (esercitazione su ATL, parte 5)'
+      href: adding-an-event-atl-tutorial-part-5.md
+    - name: 'Aggiunta di una pagina delle proprietà (esercitazione su ATL, parte 6)'
+      href: adding-a-property-page-atl-tutorial-part-6.md
+    - name: 'Inserimento del controllo in una pagina Web (esercitazione su ATL, parte 7)'
+      href: putting-the-control-on-a-web-page-atl-tutorial-part-7.md
+- name: Panoramica delle classi ATL per categoria
+  expanded: false
+  items:
+    - name: Panoramica delle classi ATL
+      href: atl-class-overview.md
+    - name: Classi di class factory
+      href: class-factories-classes.md
+    - name: Classi di informazioni sulle classi
+      href: class-information-classes.md
+    - name: Classi di raccolte
+      href: collection-classes.md
+    - name: Classi di moduli COM
+      href: com-modules-classes.md
+    - name: Classi di controlli composti
+      href: composite-controls-classes.md
+    - name: Classi di punti di connessione
+      href: connection-points-classes.md
+    - name: Classi di contenimento di controlli
+      href: control-containment-classes.md
+    - name: 'Controlli: classi di supporto generali'
+      href: controls-general-support-classes.md
+    - name: Classi di trasferimento dei dati
+      href: data-transfer-classes.md
+    - name: Classi di tipi dati
+      href: data-types-classes.md
+    - name: Classi di debug ed eccezioni
+      href: debugging-and-exceptions-classes.md
+    - name: Classi di interfacce duali
+      href: dual-interfaces-classes.md
+    - name: Classi di enumeratori e raccolte
+      href: enumerators-and-collections-classes.md
+    - name: Classi di informazioni sugli errori
+      href: error-information-classes.md
+    - name: Classi di gestione di file
+      href: file-handling-classes.md
+    - name: Classi di puntatori di interfaccia
+      href: interface-pointers-classes.md
+    - name: Classi di implementazione IUnknown
+      href: iunknown-implementation-classes.md
+    - name: Classi di gestione della memoria
+      href: memory-management-classes.md
+    - name: Classi di snap-in MMC
+      href: mmc-snap-in-classes.md
+    - name: Classi di sicurezza oggetti
+      href: object-safety-classes.md
+    - name: Classi di persistenza
+      href: persistence-classes.md
+    - name: Classi di proprietà e pagine delle proprietà
+      href: properties-and-property-pages-classes.md
+    - name: Classi di supporto del Registro di sistema
+      href: registry-support-classes.md
+    - name: Classi di oggetti in esecuzione
+      href: running-objects-classes.md
+    - name: Classi di sicurezza
+      href: security-classes.md
+    - name: Classi di supporto dei provider di servizi
+      href: service-provider-support-classes.md
+    - name: Classi di informazioni del sito
+      href: site-information-classes.md
+    - name: Classi di stringhe e testo
+      href: string-and-text-classes.md
+    - name: Classi di interfacce tear-off
+      href: tear-off-interfaces-classes.md
+    - name: Classi di pooling dei thread
+      href: thread-pooling-classes.md
+    - name: Classi di modelli di threading e sezioni critiche
+      href: threading-models-and-critical-sections-classes.md
+    - name: Classi di supporto dell'interfaccia utente
+      href: ui-support-classes.md
+    - name: Classi di utilità
+      href: utility-classes.md
+    - name: Classi di supporto di Windows
+      href: windows-support-classes.md
+- name: Informazioni di riferimento sulla libreria ATL
+  expanded: false
+  items:
+    - name: Informazioni di riferimento su classi e struct ATL
+      expanded: false
+      items:
+        - name: Classi e struct ATL
+          href: reference/atl-classes.md
+        - name: Struttura _ATL_BASE_MODULE70
+          href: reference/atl-base-module70-structure.md
+        - name: Struttura _ATL_COM_MODULE70
+          href: reference/atl-com-module70-structure.md
+        - name: Struttura _ATL_FUNC_INFO
+          href: reference/atl-func-info-structure.md
+        - name: Struttura _ATL_MODULE70
+          href: reference/atl-module70-structure.md
+        - name: Struttura _ATL_WIN_MODULE70
+          href: reference/atl-win-module70-structure.md
+        - name: Struttura _AtlCreateWndData
+          href: reference/atlcreatewnddata-structure.md
+        - name: Struttura ATL_DRAWINFO
+          href: reference/atl-drawinfo-structure.md
+        - name: Classe _U_MENUorID
+          href: reference/u-menuorid-class.md
+        - name: Classe _U_RECT
+          href: reference/u-rect-class.md
+        - name: Classe _U_STRINGorID
+          href: reference/u-stringorid-class.md
+        - name: Classe CA2AEX
+          href: reference/ca2aex-class.md
+        - name: Classe CA2CAEX
+          href: reference/ca2caex-class.md
+        - name: Classe CA2WEX
+          href: reference/ca2wex-class.md
+        - name: Classe CAccessToken
+          href: reference/caccesstoken-class.md
+        - name: Classe CAcl
+          href: reference/cacl-class.md
+        - name: Classe CAdapt
+          href: reference/cadapt-class.md
+        - name: Classe CAtlArray
+          href: reference/catlarray-class.md
+        - name: Classe CAtlAutoThreadModule
+          href: reference/catlautothreadmodule-class.md
+        - name: Classe CAtlAutoThreadModuleT
+          href: reference/catlautothreadmodulet-class.md
+        - name: Classe CAtlBaseModule
+          href: reference/catlbasemodule-class.md
+        - name: Classe CAtlComModule
+          href: reference/catlcommodule-class.md
+        - name: Classe CAtlDebugInterfacesModule
+          href: reference/catldebuginterfacesmodule-class.md
+        - name: Classe CAtlDllModuleT
+          href: reference/catldllmodulet-class.md
+        - name: Classe CAtlException
+          href: reference/catlexception-class.md
+        - name: Classe CAtlExeModuleT
+          href: reference/catlexemodulet-class.md
+        - name: Classe CAtlFile
+          href: reference/catlfile-class.md
+        - name: Classe CAtlFileMapping
+          href: reference/catlfilemapping-class.md
+        - name: Classe CAtlFileMappingBase
+          href: reference/catlfilemappingbase-class.md
+        - name: Classe CAtlList
+          href: reference/catllist-class.md
+        - name: Classe CAtlMap
+          href: reference/catlmap-class.md
+        - name: Classe CAtlModule
+          href: reference/catlmodule-class.md
+        - name: Classe CAtlModuleT
+          href: reference/catlmodulet-class.md
+        - name: Classe CAtlPreviewCtrlImpl
+          href: reference/catlpreviewctrlimpl-class.md
+        - name: Classe CAtlServiceModuleT
+          href: reference/catlservicemodulet-class.md
+        - name: Classe CAtlTemporaryFile
+          href: reference/catltemporaryfile-class.md
+        - name: Classe CAtlTransactionManager
+          href: reference/catltransactionmanager-class.md
+        - name: Classe CAtlWinModule
+          href: reference/catlwinmodule-class.md
+        - name: Classe CAutoPtr
+          href: reference/cautoptr-class.md
+        - name: Classe CAutoPtrArray
+          href: reference/cautoptrarray-class.md
+        - name: Classe CAutoPtrElementTraits
+          href: reference/cautoptrelementtraits-class.md
+        - name: Classe CAutoPtrList
+          href: reference/cautoptrlist-class.md
+        - name: Classe CAutoRevertImpersonation
+          href: reference/cautorevertimpersonation-class.md
+        - name: Classe CAutoVectorPtr
+          href: reference/cautovectorptr-class.md
+        - name: Classe CAutoVectorPtrElementTraits
+          href: reference/cautovectorptrelementtraits-class.md
+        - name: Classe CAxDialogImpl
+          href: reference/caxdialogimpl-class.md
+        - name: Classe CAxWindow
+          href: reference/caxwindow-class.md
+        - name: Classe CAxWindow2T
+          href: reference/caxwindow2t-class.md
+        - name: Classe CBindStatusCallback
+          href: reference/cbindstatuscallback-class.md
+        - name: Classe CComAggObject
+          href: reference/ccomaggobject-class.md
+        - name: Classe CComAllocator
+          href: reference/ccomallocator-class.md
+        - name: Classe CComApartment
+          href: reference/ccomapartment-class.md
+        - name: Classe CComAutoCriticalSection
+          href: reference/ccomautocriticalsection-class.md
+        - name: Classe CComAutoDeleteCriticalSection
+          href: reference/ccomautodeletecriticalsection-class.md
+        - name: Classe CComAutoThreadModule
+          href: reference/ccomautothreadmodule-class.md
+        - name: Classe CComBSTR
+          href: reference/ccombstr-class.md
+        - name: Classe CComCachedTearOffObject
+          href: reference/ccomcachedtearoffobject-class.md
+        - name: Classe CComClassFactory
+          href: reference/ccomclassfactory-class.md
+        - name: Classe CComClassFactory2
+          href: reference/ccomclassfactory2-class.md
+        - name: Classe CComClassFactoryAutoThread
+          href: reference/ccomclassfactoryautothread-class.md
+        - name: Classe CComClassFactorySingleton
+          href: reference/ccomclassfactorysingleton-class.md
+        - name: Classe CComCoClass
+          href: reference/ccomcoclass-class.md
+        - name: Classe CComCompositeControl
+          href: reference/ccomcompositecontrol-class.md
+        - name: Classe CComContainedObject
+          href: reference/ccomcontainedobject-class.md
+        - name: Classe CComControl
+          href: reference/ccomcontrol-class.md
+        - name: Classe CComControlBase
+          href: reference/ccomcontrolbase-class.md
+        - name: Classe CComCriticalSection
+          href: reference/ccomcriticalsection-class.md
+        - name: Classe CComCritSecLock
+          href: reference/ccomcritseclock-class.md
+        - name: Classe CComCurrency
+          href: reference/ccomcurrency-class.md
+        - name: Classe CComDynamicUnkArray
+          href: reference/ccomdynamicunkarray-class.md
+        - name: Classe CComEnum
+          href: reference/ccomenum-class.md
+        - name: Classe CComEnumImpl
+          href: reference/ccomenumimpl-class.md
+        - name: Classe CComEnumOnSTL
+          href: reference/ccomenumonstl-class.md
+        - name: Classe CComFakeCriticalSection
+          href: reference/ccomfakecriticalsection-class.md
+        - name: Classe CComGITPtr
+          href: reference/ccomgitptr-class.md
+        - name: Classe CComHeap
+          href: reference/ccomheap-class.md
+        - name: Classe CComHeapPtr
+          href: reference/ccomheapptr-class.md
+        - name: Classe CComModule
+          href: reference/ccommodule-class.md
+        - name: Classe CComMultiThreadModel
+          href: reference/ccommultithreadmodel-class.md
+        - name: Classe CComMultiThreadModelNoCS
+          href: reference/ccommultithreadmodelnocs-class.md
+        - name: Classe CComObject
+          href: reference/ccomobject-class.md
+        - name: Classe CComObjectGlobal
+          href: reference/ccomobjectglobal-class.md
+        - name: Classe CComObjectNoLock
+          href: reference/ccomobjectnolock-class.md
+        - name: Classe CComObjectRoot
+          href: reference/ccomobjectroot-class.md
+        - name: Classe CComObjectRootEx
+          href: reference/ccomobjectrootex-class.md
+        - name: Classe CComObjectStack
+          href: reference/ccomobjectstack-class.md
+        - name: Classe CComPolyObject
+          href: reference/ccompolyobject-class.md
+        - name: Classe CComPtr
+          href: reference/ccomptr-class.md
+        - name: Classe CComPtrBase
+          href: reference/ccomptrbase-class.md
+        - name: Classe CComQIPtr
+          href: reference/ccomqiptr-class.md
+        - name: Classe CComQIPtrElementTraits
+          href: reference/ccomqiptrelementtraits-class.md
+        - name: Classe CComSafeArray
+          href: reference/ccomsafearray-class.md
+        - name: Classe CComSafeArrayBound
+          href: reference/ccomsafearraybound-class.md
+        - name: Classe CComSafeDeleteCriticalSection
+          href: reference/ccomsafedeletecriticalsection-class.md
+        - name: Classe CComSimpleThreadAllocator
+          href: reference/ccomsimplethreadallocator-class.md
+        - name: Classe CComSingleThreadModel
+          href: reference/ccomsinglethreadmodel-class.md
+        - name: Classe CComTearOffObject
+          href: reference/ccomtearoffobject-class.md
+        - name: Classe CComUnkArray
+          href: reference/ccomunkarray-class.md
+        - name: Classe CComVariant
+          href: reference/ccomvariant-class.md
+        - name: Classe CContainedWindowT
+          href: reference/ccontainedwindowt-class.md
+        - name: Classe CCRTAllocator
+          href: reference/ccrtallocator-class.md
+        - name: Classe CCRTHeap
+          href: reference/ccrtheap-class.md
+        - name: Classe CDacl
+          href: reference/cdacl-class.md
+        - name: Classe CDebugReportHook
+          href: reference/cdebugreporthook-class.md
+        - name: Classe CDefaultCharTraits
+          href: reference/cdefaultchartraits-class.md
+        - name: Classe CDefaultCompareTraits
+          href: reference/cdefaultcomparetraits-class.md
+        - name: Classe CDefaultElementTraits
+          href: reference/cdefaultelementtraits-class.md
+        - name: Classe CDefaultHashTraits
+          href: reference/cdefaulthashtraits-class.md
+        - name: Classe CDialogImpl
+          href: reference/cdialogimpl-class.md
+        - name: Classe CDynamicChain
+          href: reference/cdynamicchain-class.md
+        - name: Classe CElementTraits
+          href: reference/celementtraits-class.md
+        - name: Classe CElementTraitsBase
+          href: reference/celementtraitsbase-class.md
+        - name: Classe CFirePropNotifyEvent
+          href: reference/cfirepropnotifyevent-class.md
+        - name: Classe CGlobalHeap
+          href: reference/cglobalheap-class.md
+        - name: Classe CHandle
+          href: reference/chandle-class.md
+        - name: Classe CHeapPtr
+          href: reference/cheapptr-class.md
+        - name: Classe CHeapPtrBase
+          href: reference/cheapptrbase-class.md
+        - name: Classe CHeapPtrElementTraits
+          href: reference/cheapptrelementtraits-class.md
+        - name: Classe CHeapPtrList
+          href: reference/cheapptrlist-class.md
+        - name: Classe CInterfaceArray
+          href: reference/cinterfacearray-class.md
+        - name: Classe CInterfaceList
+          href: reference/cinterfacelist-class.md
+        - name: Classe CLocalHeap
+          href: reference/clocalheap-class.md
+        - name: Classe CMessageMap
+          href: reference/cmessagemap-class.md
+        - name: Classe CNonStatelessWorker
+          href: reference/cnonstatelessworker-class.md
+        - name: Classe CNoWorkerThread
+          href: reference/cnoworkerthread-class.md
+        - name: Classe CPathT
+          href: reference/cpatht-class.md
+        - name: Classe CPrimitiveElementTraits
+          href: reference/cprimitiveelementtraits-class.md
+        - name: Classe CPrivateObjectSecurityDesc
+          href: reference/cprivateobjectsecuritydesc-class.md
+        - name: Classe CRBMap
+          href: reference/crbmap-class.md
+        - name: Classe CRBMultiMap
+          href: reference/crbmultimap-class.md
+        - name: Classe CRBTree
+          href: reference/crbtree-class.md
+        - name: Classe CRegKey
+          href: reference/cregkey-class.md
+        - name: Classe CRTThreadTraits
+          href: reference/crtthreadtraits-class.md
+        - name: Classe CSacl
+          href: reference/csacl-class.md
+        - name: Classe CSecurityAttributes
+          href: reference/csecurityattributes-class.md
+        - name: Classe CSecurityDesc
+          href: reference/csecuritydesc-class.md
+        - name: Classe CSid
+          href: reference/csid-class.md
+        - name: Classe CSimpleArray
+          href: reference/csimplearray-class.md
+        - name: Classe CSimpleArrayEqualHelper
+          href: reference/csimplearrayequalhelper-class.md
+        - name: Classe CSimpleArrayEqualHelperFalse
+          href: reference/csimplearrayequalhelperfalse-class.md
+        - name: Classe CSimpleDialog
+          href: reference/csimpledialog-class.md
+        - name: Classe CSimpleMap
+          href: reference/csimplemap-class.md
+        - name: Classe CSimpleMapEqualHelper
+          href: reference/csimplemapequalhelper-class.md
+        - name: Classe CSimpleMapEqualHelperFalse
+          href: reference/csimplemapequalhelperfalse-class.md
+        - name: Classe CSnapInItemImpl
+          href: reference/csnapinitemimpl-class.md
+        - name: Classe CSnapInPropertyPageImpl
+          href: reference/csnapinpropertypageimpl-class.md
+        - name: Classe CSocketAddr
+          href: reference/csocketaddr-class.md
+        - name: Classe CStockPropImpl
+          href: reference/cstockpropimpl-class.md
+        - name: Classe CStringElementTraits
+          href: reference/cstringelementtraits-class.md
+        - name: Classe CStringElementTraitsI
+          href: reference/cstringelementtraitsi-class.md
+        - name: Classe CStringRefElementTraits
+          href: reference/cstringrefelementtraits-class.md
+        - name: Classe CThreadPool
+          href: reference/cthreadpool-class.md
+        - name: Classe CTokenGroups
+          href: reference/ctokengroups-class.md
+        - name: Classe CTokenPrivileges
+          href: reference/ctokenprivileges-class.md
+        - name: Classe CUrl
+          href: reference/curl-class.md
+        - name: Classe CW2AEX
+          href: reference/cw2aex-class.md
+        - name: Classe CW2CWEX
+          href: reference/cw2cwex-class.md
+        - name: Classe CW2WEX
+          href: reference/cw2wex-class.md
+        - name: Classe CWin32Heap
+          href: reference/cwin32heap-class.md
+        - name: Classe CWindow
+          href: reference/cwindow-class.md
+        - name: Classe CWindowImpl
+          href: reference/cwindowimpl-class.md
+        - name: Classe CWinTraits
+          href: reference/cwintraits-class.md
+        - name: Classe CWinTraitsOR
+          href: reference/cwintraitsor-class.md
+        - name: Classe CWndClassInfo
+          href: reference/cwndclassinfo-class.md
+        - name: Classe CWorkerThread
+          href: reference/cworkerthread-class.md
+        - name: Classe IAtlAutoThreadModule
+          href: reference/iatlautothreadmodule-class.md
+        - name: Classe IAtlMemMgr
+          href: reference/iatlmemmgr-class.md
+        - name: Interfaccia IAxWinAmbientDispatch
+          href: reference/iaxwinambientdispatch-interface.md
+        - name: Interfaccia IAxWinAmbientDispatchEx
+          href: reference/iaxwinambientdispatchex-interface.md
+        - name: Interfaccia IAxWinHostWindow
+          href: reference/iaxwinhostwindow-interface.md
+        - name: Interfaccia IAxWinHostWindowLic
+          href: reference/iaxwinhostwindowlic-interface.md
+        - name: Classe ICollectionOnSTLImpl
+          href: reference/icollectiononstlimpl-class.md
+        - name: Classe IConnectionPointContainerImpl
+          href: reference/iconnectionpointcontainerimpl-class.md
+        - name: Classe IConnectionPointImpl
+          href: reference/iconnectionpointimpl-class.md
+        - name: Classe IDataObjectImpl
+          href: reference/idataobjectimpl-class.md
+        - name: Classe IDispatchImpl
+          href: reference/idispatchimpl-class.md
+        - name: Classe IDispEventImpl
+          href: reference/idispeventimpl-class.md
+        - name: Classe IDispEventSimpleImpl
+          href: reference/idispeventsimpleimpl-class.md
+        - name: Interfaccia IDocHostUIHandlerDispatch
+          href: reference/idochostuihandlerdispatch-interface.md
+        - name: Classe IEnumOnSTLImpl
+          href: reference/ienumonstlimpl-class.md
+        - name: Classe IObjectSafetyImpl
+          href: reference/iobjectsafetyimpl-class.md
+        - name: Classe IObjectWithSiteImpl
+          href: reference/iobjectwithsiteimpl-class.md
+        - name: Classe IOleControlImpl
+          href: reference/iolecontrolimpl-class.md
+        - name: Classe IOleInPlaceActiveObjectImpl
+          href: reference/ioleinplaceactiveobjectimpl-class.md
+        - name: Classe IOleInPlaceObjectWindowlessImpl
+          href: reference/ioleinplaceobjectwindowlessimpl-class.md
+        - name: Classe IOleObjectImpl
+          href: reference/ioleobjectimpl-class.md
+        - name: Classe IPerPropertyBrowsingImpl
+          href: reference/iperpropertybrowsingimpl-class.md
+        - name: Classe IPersistPropertyBagImpl
+          href: reference/ipersistpropertybagimpl-class.md
+        - name: Classe IPersistStorageImpl
+          href: reference/ipersiststorageimpl-class.md
+        - name: Classe IPersistStreamInitImpl
+          href: reference/ipersiststreaminitimpl-class.md
+        - name: Classe IPointerInactiveImpl
+          href: reference/ipointerinactiveimpl-class.md
+        - name: Classe IPropertyNotifySinkCP
+          href: reference/ipropertynotifysinkcp-class.md
+        - name: Classe IPropertyPage2Impl
+          href: reference/ipropertypage2impl-class.md
+        - name: Classe IPropertyPageImpl
+          href: reference/ipropertypageimpl-class.md
+        - name: Classe IProvideClassInfo2Impl
+          href: reference/iprovideclassinfo2impl-class.md
+        - name: Classe IQuickActivateImpl
+          href: reference/iquickactivateimpl-class.md
+        - name: Interfaccia IRegistrar
+          href: reference/iregistrar-class.md
+        - name: Classe IRunnableObjectImpl
+          href: reference/irunnableobjectimpl-class.md
+        - name: Classe IServiceProviderImpl
+          href: reference/iserviceproviderimpl-class.md
+        - name: Classe ISpecifyPropertyPagesImpl
+          href: reference/ispecifypropertypagesimpl-class.md
+        - name: Classe ISupportErrorInfoImpl
+          href: reference/isupporterrorinfoimpl-class.md
+        - name: Interfaccia IThreadPoolConfig
+          href: reference/ithreadpoolconfig-interface.md
+        - name: Classe IViewObjectExImpl
+          href: reference/iviewobjecteximpl-class.md
+        - name: Interfaccia IWorkerThreadClient
+          href: reference/iworkerthreadclient-interface.md
+        - name: Classe Win32ThreadTraits
+          href: reference/win32threadtraits-class.md
+        - name: Archetipo Worker
+          href: reference/worker-archetype.md
+    - name: Enumerazione ATL_URL_SCHEME
+      href: reference/atl-url-scheme-enum.md
+    - name: Informazioni di riferimento sulle funzioni ATL
+      expanded: false
+      items:
+        - name: Funzioni ATL
+          href: reference/atl-functions.md
+        - name: Funzioni di utilità HTTP ATL
+          href: reference/atl-http-utility-functions.md
+        - name: Funzioni di codifica del testo ATL
+          href: reference/atl-text-encoding-functions.md
+        - name: Funzioni di percorsi ATL
+          href: reference/atl-path-functions.md
+        - name: Funzioni globali di mappe COM
+          href: reference/com-map-global-functions.md
+        - name: Funzioni globali di controlli compositi
+          href: reference/composite-control-global-functions.md
+        - name: Funzioni globali di punti di connessione
+          href: reference/connection-point-global-functions.md
+        - name: Funzioni globali di debug e segnalazione errori
+          href: reference/debugging-and-error-reporting-global-functions.md
+        - name: Funzioni globali di contesto di dispositivi
+          href: reference/device-context-global-functions.md
+        - name: Funzioni globali di gestione di eventi
+          href: reference/event-handling-global-functions.md
+        - name: Funzioni globali di marshalling
+          href: reference/marshaling-global-functions.md
+        - name: Funzioni globali di conversione pixel-HIMETRIC
+          href: reference/pixel-himetric-conversion-global-functions.md
+        - name: Funzioni globali del Registro di sistema e librerie dei tipi
+          href: reference/registry-and-typelib-global-functions.md
+        - name: Funzioni globali di sicurezza
+          href: reference/security-global-functions.md
+        - name: Funzioni globali di identificatori di sicurezza
+          href: reference/security-identifier-global-functions.md
+        - name: Funzioni globali di registrazione server
+          href: reference/server-registration-global-functions.md
+        - name: Funzioni globali WinModule
+          href: reference/winmodule-global-functions.md
+    - name: Informazioni di riferimento sulle macro ATL
+      expanded: false
+      items:
+        - name: Macro ATL
+          href: reference/atl-macros.md
+        - name: Macro di aggregazione e class factory
+          href: reference/aggregation-and-class-factory-macros.md
+        - name: Macro di categoria
+          href: reference/category-macros.md
+        - name: Macro di mappe COM
+          href: reference/com-map-macros.md
+        - name: Macro di ingresso all'interfaccia COM
+          href: reference/com-interface-entry-macros.md
+        - name: Macro di opzioni del compilatore
+          href: reference/compiler-options-macros.md
+        - name: Macro di controlli compositi
+          href: reference/composite-control-macros.md
+        - name: Macro di punti di connessione
+          href: reference/connection-point-macros.md
+        - name: Macro di debug e segnalazione errori
+          href: reference/debugging-and-error-reporting-macros.md
+        - name: Macro di gestione delle eccezioni
+          href: reference/exception-handling-macros.md
+        - name: Macro di mappe di messaggi (ATL)
+          href: reference/message-map-macros-atl.md
+        - name: Macro di mappe di oggetti
+          href: reference/object-map-macros.md
+        - name: Macro di stato di oggetti
+          href: reference/object-status-macros.md
+        - name: Macro di mappe di proprietà
+          href: reference/property-map-macros.md
+        - name: Macro di scambio dati del Registro di sistema
+          href: reference/registry-data-exchange-macros.md
+        - name: Macro del Registro di sistema
+          href: reference/registry-macros.md
+        - name: Macro di mappe di servizi
+          href: reference/service-map-macros.md
+        - name: Macro di oggetti snap-in
+          href: reference/snap-in-object-macros.md
+        - name: Macro di conversione di stringhe
+          href: reference/string-conversion-macros.md
+        - name: Macro di classi di finestre
+          href: reference/window-class-macros.md
+        - name: Macro di messaggi di finestre
+          href: reference/windows-messages-macros.md
+    - name: Informazioni di riferimento sugli operatori ATL
+      href: reference/atl-operators.md
+    - name: Informazioni di riferimento sulle variabili globali ATL
+      href: reference/atl-global-variables.md
+    - name: Informazioni di riferimento sui typedef ATL
+      href: reference/atl-typedefs.md
+- name: Progetti ATL in Visual Studio
+  expanded: false
+  items:
+    - name: Informazioni di riferimento su finestre di dialogo e procedure guidate ATL
+      expanded: false
+      items:
+        - name: Finestre di dialogo e procedure guidate ATL
+          href: reference/atl-wizards-and-dialog-boxes.md
+        - name: Informazioni di riferimento sulla Creazione guidata componente ASP ATL
+          expanded: false
+          items:
+            - name: Creazione guidata componente ASP ATL
+              href: reference/atl-active-server-page-component-wizard.md
+            - name: 'Creazione guidata componente ASP ATL, ASP'
+              href: reference/asp-atl-active-server-page-component-wizard.md
+            - name: 'Creazione guidata componente ASP ATL, opzioni'
+              href: reference/options-atl-active-server-page-component-wizard.md
+        - name: Informazioni di riferimento sulla Creazione guidata componente ATL COM+ 1.0
+          expanded: false
+          items:
+            - name: Creazione guidata componente ATL COM+ 1.0
+              href: reference/atl-com-plus-1-0-component-wizard.md
+            - name: 'COM+ 1.0, Creazione guidata componente ATL COM+ 1.0'
+              href: reference/com-plus-1-0-atl-com-plus-1-0-component-wizard.md
+        - name: Informazioni di riferimento sulla Creazione guidata controllo ATL
+          expanded: false
+          items:
+            - name: Creazione guidata controllo ATL
+              href: reference/atl-control-wizard.md
+            - name: 'Creazione guidata controllo ATL, aspetto'
+              href: reference/appearance-atl-control-wizard.md
+            - name: 'Creazione guidata controllo ATL, interfacce'
+              href: reference/interfaces-atl-control-wizard.md
+            - name: 'Creazione guidata controllo ATL, opzioni'
+              href: reference/options-atl-control-wizard.md
+            - name: 'Creazione guidata controllo ATL, proprietà predefinite'
+              href: reference/stock-properties-atl-control-wizard.md
+        - name: Informazioni di riferimento sulla Creazione guidata finestra di dialogo ATL
+          href: reference/atl-dialog-wizard.md
+        - name: Informazioni di riferimento sulla Creazione guidata consumer OLE DB ATL
+          href: reference/atl-ole-db-consumer-wizard.md
+        - name: Informazioni di riferimento sulla Creazione guidata provider OLE DB ATL
+          href: reference/atl-ole-db-provider-wizard.md
+        - name: Creazione guidata progetto ATL
+          expanded: false
+          items:
+            - name: Creazione guidata progetto ATL
+              href: reference/atl-project-wizard.md
+            - name: 'Impostazioni applicazione, Creazione guidata progetto ATL'
+              href: reference/application-settings-atl-project-wizard.md
+        - name: Informazioni di riferimento sulla Creazione guidata progetto ATL
+          expanded: false
+          items:
+            - name: Creazione guidata pagina delle proprietà ATL
+              href: reference/atl-property-page-wizard.md
+            - name: 'Creazione guidata pagina delle proprietà ATL, opzioni'
+              href: reference/options-atl-property-page-wizard.md
+            - name: 'Creazione guidata pagina delle proprietà ATL, stringhe'
+              href: reference/strings-atl-property-page-wizard.md
+        - name: 'Informazioni di riferimento sulla Creazione guidata oggetto semplice ATL, opzioni'
+          expanded: false
+          items:
+            - name: Creazione guidata oggetto semplice ATL
+              href: reference/atl-simple-object-wizard.md
+            - name: 'Creazione guidata oggetto semplice ATL, opzioni'
+              href: reference/options-atl-simple-object-wizard.md
+    - name: Aggiungere una nuova interfaccia in un progetto ATL
+      href: reference/adding-a-new-interface-in-an-atl-project.md
+    - name: Aggiungere un componente ASP ATL
+      href: reference/adding-an-atl-active-server-page-component.md
+    - name: Aggiungere un componente COM+ 1.0 ATL
+      href: reference/adding-an-atl-com-plus-1-0-component.md
+    - name: Aggiungere un controllo ATL
+      href: reference/adding-an-atl-control.md
+    - name: Aggiungere una finestra di dialogo ATL
+      href: reference/adding-an-atl-dialog-box.md
+    - name: Aggiungere un consumer OLE DB ATL
+      href: reference/adding-an-atl-ole-db-consumer.md
+    - name: Aggiungere un provider OLE DB ATL
+      href: reference/adding-an-atl-ole-db-provider.md
+    - name: Aggiungere una pagina delle proprietà ATL
+      href: reference/adding-an-atl-property-page.md
+    - name: Aggiungere un oggetto semplice ATL
+      href: reference/adding-an-atl-simple-object.md
+    - name: Aggiungere oggetti e controlli a un progetto ATL
+      href: reference/adding-objects-and-controls-to-an-atl-project.md
+    - name: Creare un progetto ATL
+      href: reference/creating-an-atl-project.md
+    - name: Supporto di COM+ 1.0 nei progetti ATL
+      href: reference/com-plus-1-0-support-in-atl-projects.md
+    - name: Configurazioni predefinite dei progetti ATL
+      href: reference/default-atl-project-configurations.md
+    - name: Rendere un oggetto ATL non creabile
+      href: reference/making-an-atl-object-noncreatable.md
+    - name: Supporto di MFC nei progetti ATL
+      href: reference/mfc-support-in-atl-projects.md
+    - name: Specificare l'ottimizzazione del compilatore per un progetto ATL
+      href: reference/specifying-compiler-optimization-for-an-atl-project.md

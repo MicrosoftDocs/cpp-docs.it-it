@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 8fdd48c026485e55db01f6f70b0dde3c1e68d847
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: a897f3b6154368c7381f1cac8e51ed5acfac5d32
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782245"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708173"
 ---
 # <a name="visual-c-help-and-community"></a>Guida e community di Visual C++
 
@@ -26,7 +26,7 @@ Le informazioni seguenti illustrano come scrivere codice in C++ e usare gli stru
 
 |Titolo|Description|
 |-----------|-----------------|
-|[Visual C++](visual-cpp-in-visual-studio.md)|Contiene documentazione di riferimento e concettuale su Visual C++. Parte di MSDN Library.|
+|[C++ in Visual Studio](visual-cpp-in-visual-studio.md)|Contiene documentazione di riferimento e concettuale su Visual C++. Parte di MSDN Library.|
 |[Windows Dev Center](https://developer.microsoft.com/windows/)|Contiene informazioni su come usare C++ e altri linguaggi per sviluppare app per Windows 10. Parte del Windows Dev Center, i contenuti di C++ sono nel nodo Documenti > Riferimento al linguaggio.|
 
 ### <a name="online-and-offline-documentation"></a>Documentazione online e offline
