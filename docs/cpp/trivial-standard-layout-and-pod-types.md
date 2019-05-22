@@ -1,33 +1,33 @@
 ---
-title: Semplici, tipi di valori letterali, di POD e di layout standard
+title: Tipi semplici, layout standard, POD e letterali
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
-ms.openlocfilehash: c742f4c84a1b2ba558b790d7eea7760902da7818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266764"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934208"
 ---
-# <a name="trivial-standard-layout-pod-and-literal-types"></a>Semplici, tipi di valori letterali, di POD e di layout standard
+# <a name="trivial-standard-layout-pod-and-literal-types"></a>Tipi semplici, layout standard, POD e letterali
 
-Il termine *layout* fa riferimento a disposizione i membri di un oggetto di tipo classe, struct o unione in memoria. In alcuni casi, il layout è ben definito dalla specifica del linguaggio. Ma quando una classe o struct contiene alcune funzionalità del linguaggio C++, ad esempio le classi base virtuali, le funzioni virtuali, i membri con controllo di accesso diverso, il compilatore è libero di scegliere un layout. Layout in questione può variare a seconda di quali ottimizzazioni vengono eseguite e in molti casi oggetto occupate eventualmente da non ancora un'area contigua di memoria. Ad esempio, se una classe ha funzioni virtuali, tutte le istanze di tale classe potrebbero condividere una tabella a singola funzione virtuale. Tali tipi sono ovviamente molto utili, ma dispongono anche di limitazioni. Poiché non è definito il layout non possono essere passate per i programmi scritti in altri linguaggi, ad esempio C, e poiché potrebbero essere non contigui non eseguirne in modo affidabile la copia con funzioni di basso livello fast, ad esempio `memcopy` o serializzato in una rete.
+Il termine *layout* fa riferimento alla disposizione in memoria dei membri di un oggetto di tipo class, struct o union. In alcuni casi il layout è definito completamente dalla specifica del linguaggio. Tuttavia quando un oggetto class o struct contiene determinate funzionalità del linguaggio C++ quali classi di base virtuali, funzioni virtuali o membri con controlli dell'accesso diversi, il compilatore è libero di scegliere un layout. Il layout in questione può variare a seconda delle ottimizzazioni eseguite e in molti casi è possibile che l'oggetto non occupi nemmeno un'area di memoria contigua. Se ad esempio una classe ha funzioni virtuali, tutte le istanze di tale classe possono condividere una singola tabella di funzioni virtuali. Questi tipi sono molto utili ma presentano anche limitazioni. Poiché il layout non è definito, non possono essere passati a programmi scritti in altri linguaggi, ad esempio C. Inoltre dato che potrebbero essere non contigui non possono essere copiati in modo affidabile con funzioni rapide di basso livello, ad esempio `memcopy`, né serializzati in una rete.
 
-Per abilitare i compilatori, nonché i programmi C++ e metaprograms prendere in considerazione l'idoneità di un determinato tipo per le operazioni che dipendono da un layout di memoria specifico, c++14 introdotte tre categorie di semplici classi e struct: *semplici*, *layout standard*, e *POD* o dati non aggiornati. La libreria Standard include i modelli di funzione `is_trivial<T>`, `is_standard_layout<T>` e `is_pod<T>` che determinano se un determinato tipo appartiene a una categoria specificata.
+Per consentire ai compilatori e ai programmi e metaprogrammi C++ di valutare se un determinato tipo è adatto a operazioni che dipendono da un layout di memoria particolare, C++14 ha introdotto tre categorie di classi e struct intuitivi: *semplici*, *layout standard* e *POD* (Plain Old Data). La libreria Standard include i modelli di funzione `is_trivial<T>`, `is_standard_layout<T>` e `is_pod<T>`, che determinano se un certo tipo appartiene a una categoria specifica.
 
 ## <a name="trivial-types"></a>Tipi semplici
 
-Quando una classe o struct c++ ha fornito dal compilatore o in modo esplicito impostate come predefinite speciali funzioni membro, quindi è un tipo semplice. Occupa un'area di memoria contigue. Può avere membri con gli identificatori di accesso diverso. In C++, il compilatore è libero di scegliere come ordinare i membri in questa situazione. Pertanto, è possibile memcopy tali oggetti ma è possibile usare in modo affidabile da un programma C. Un tipo trivial T può essere copiato in una matrice di char o unsigned char e in modo sicuro copiato nuovamente in una variabile T. Si noti che a causa dei requisiti di allineamento, potrebbero essere presenti byte di spaziatura interna tra i membri dei tipi.
+Quando una classe o uno struct in C++ ha funzioni membro speciali fornite dal compilatore o impostate come predefinite in modo esplicito, si tratta di un tipo semplice. Il tipo occupa un'area di memoria contigua. Può avere membri con identificatori di accesso diversi. In C++ il compilatore è libero di scegliere come ordinare i membri in questa situazione. Pertanto è possibile eseguire memcpy con tali oggetti, ma non è possibile usarli in modo affidabile da un programma C. Un tipo semplice T può essere copiato in una matrice char o unsigned char e copiato nuovamente in una variabile T in modo sicuro. Si noti che a causa dei requisiti di allineamento potrebbero essere presenti byte di riempimento tra i membri dei tipi.
 
-I tipi Trivial hanno un costruttore predefinito semplice, costruttore di copia semplice, l'operatore di assegnazione di copia semplice e distruttore semplice. In ogni caso *trivial* significa che il costruttore/operatore/distruttore non è fornito dall'utente e a cui appartiene una classe con
+I tipi semplici hanno un costruttore predefinito semplice, un costruttore di copia semplice, un operatore di assegnazione di copia semplice e un distruttore semplice. In ognuno di questi casi *semplice* significa che il costruttore/operatore/distruttore non è specificato dall'utente e appartiene a una classe che
 
-- Nessun funzioni virtuali o le classi base virtuali,
+- non ha funzioni virtuali o classi base virtuali,
 
-- Nessuna classe base con un corrispondente non è semplice costruttore/operatore/distruttore
+- non ha classi base con un costruttore/operatore/distruttore corrispondente non semplice
 
-- Nessun membro dei dati del tipo di classe con un corrispondente non è semplice costruttore/operatore/distruttore
+- non ha membri di dati di tipo classe con un costruttore/operatore/distruttore corrispondente non semplice
 
-Gli esempi seguenti illustrano i tipi semplici. In Trivial2, la presenza del `Trivial2(int a, int b)` costruttore richiede di specificare un costruttore predefinito. Per il tipo per qualificarsi come semplice, è necessario in modo esplicito che un costruttore predefinito.
+Negli esempi riportati di seguito vengono illustrati i tipi semplici. In Trivial2 la presenza del costruttore `Trivial2(int a, int b)` richiede di specificare un costruttore predefinito. Perché il tipo sia qualificabile come semplice, è necessario assegnare in modo esplicito come impostazione predefinita il costruttore corrispondente.
 
 ```cpp
 struct Trivial
@@ -47,27 +47,27 @@ struct Trivial2
 };
 ```
 
-## <a name="standard-layout-types"></a>Tipi layout standard
+## <a name="standard-layout-types"></a>Tipi di layout standard
 
-Quando una classe o struct non contiene alcune funzionalità del linguaggio C++, ad esempio le funzioni virtuali che non sono disponibili nel linguaggio C e tutti i membri hanno lo stesso controllo di accesso, è un tipo di layout standard. È in grado di memcopy e il layout è sufficientemente definito che può essere utilizzato dai programmi C. I tipi layout standard possono avere funzioni membro speciali definite dall'utente. Inoltre, i tipi layout standard presentano queste caratteristiche:
+Quando una classe o uno struct non contiene alcune funzionalità del linguaggio C++ come le funzioni virtuali (che non sono disponibili nel linguaggio C) e tutti i membri hanno lo stesso controllo di accesso, si tratta di un tipo layout standard. Questo tipo supporta memcpy e il layout è abbastanza definito da poter essere usato dai programmi C. I tipi layout standard possono avere funzioni membro speciali definite dall'utente. I tipi layout standard presentano anche queste caratteristiche:
 
-- Nessun funzioni virtuali o le classi base virtuali
+- non hanno funzioni virtuali o classi base virtuali
 
 - tutti i membri dati non statici hanno lo stesso controllo di accesso
 
 - tutti i membri non statici del tipo di classe sono layout standard
 
-- classi di base sono layout standard
+- le eventuali classi di base sono layout standard
 
-- non dispone di alcun classi di base dello stesso tipo del primo membro di dati non statici.
+- non hanno nessuna classe di base dello stesso tipo del primo membro dati non statici.
 
-- soddisfa una delle seguenti condizioni:
+- soddisfano una delle seguenti condizioni:
 
-  - Nessun membro dati non statici nella classe più derivata e non più di una classe di base con membri dati non statici, o
+  - nessun membro dati non statici nella classe più derivata e non più di una classe di base con membri dati non statici, o
 
-  - non dispone di alcun classi di base con membri dati non statici
+  - nessuna classe di base con membri di dati non statici
 
-Il codice seguente illustra un esempio di un tipo di layout standard:
+Il codice seguente illustra un esempio di tipo di layout standard:
 
 ```cpp
 struct SL
@@ -79,7 +79,7 @@ struct SL
 };
 ```
 
-Le ultime due requisiti probabilmente possono essere illustrati meglio con il codice. Nell'esempio successivo, anche se Base è layout standard, `Derived` non è un layout standard perché questa applicazione (la classe più derivata) e `Base` dispongono di membri dati non statici:
+È probabile che gli ultimi due requisiti siano più facili da illustrare con il codice. Nell'esempio successivo, anche se Base è layout standard, `Derived` non è layout standard perché sia tale classe (la classe più derivata) sia `Base` hanno membri dati non statici:
 
 ```cpp
 struct Base
@@ -96,7 +96,7 @@ struct Derived : public Base
 };
 ```
 
-In questo esempio `Derived` è layout standard poiché `Base` non ha membri dati non statici:
+In questo esempio `Derived` è layout standard perché `Base` non ha membri dati non statici:
 
 ```cpp
 struct Base
@@ -112,15 +112,15 @@ struct Derived : public Base
 };
 ```
 
-Derivata sarà ugualmente layout standard se `Base` aveva i membri dati e `Derived` aveva solo le funzioni membro.
+Anche Derived sarebbe layout standard se `Base` avesse i membri dati e `Derived` avesse solo funzioni membro.
 
 ## <a name="pod-types"></a>Tipi POD
 
-Quando una classe o struct è semplice sia layout standard, è un tipo POD (dati non aggiornati). Il layout di memoria dei tipi POD è pertanto contiguo e ogni membro dispone di un indirizzo superiore rispetto al membro che è stato dichiarato prima di esso, in modo che la copia dei byte per byte e i/o binari possono essere eseguiti su questi tipi.  Tipi scalari, ad esempio int sono anche tipi POD. I tipi POD che sono classi possono avere solo tipi POD come membri dati non statici.
+Quando una classe o struct è sia semplice sia layout standard, è un tipo POD (Plain Old Data). Il layout di memoria dei tipi POD è pertanto contiguo e ogni membro dispone di un indirizzo superiore rispetto al membro dichiarato prima di esso, in modo che su questi tipi è possibile eseguire operazioni di copia byte per byte e I/O binario.  Anche i tipi scalari come int sono tipi POD. I tipi POD che sono classi possono avere come membri dati non statici solo tipi POD.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente mostra le distinzioni tra layout standard banale, e tipi POD:
+L'esempio seguente visualizza le distinzioni tra i tipi semplice, layout standard e POD:
 
 ```cpp
 #include <type_traits>

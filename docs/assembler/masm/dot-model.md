@@ -6,43 +6,43 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204097"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934097"
 ---
 # <a name="model"></a>.MODEL
 
-Inizializza il modello di memoria programma.
+Inizializza il modello di memoria del programma.
 
 ## <a name="syntax"></a>Sintassi
 
-> . MODELLO memorymodel [[, langtype]] [[, stackoption]]
+> .MODEL memorymodel [[, langtype]] [[, stackoption]]
 
 ### <a name="parameters"></a>Parametri
 
 *memorymodel*<br/>
-Parametro obbligatorio che determina le dimensioni di puntatori di codice e i dati.
+Parametro obbligatorio che determina le dimensioni dei puntatori di codice e di dati.
 
 *langtype*<br/>
-Parametro facoltativo che imposta le convenzioni di denominazione e chiamate per le procedure e dei simboli pubblici.
+Parametro facoltativo che imposta le convenzioni di denominazione e chiamata per le procedure e i simboli pubblici.
 
 *stackoption*<br/>
 Parametro facoltativo.
 
 *stackoption* non viene usato se *memorymodel* è `FLAT`.
 
-Che specifica `NEARSTACK` raggruppa il segmento dello stack in un singolo segmento fisico (`DGROUP`) insieme ai dati. Lo stack di registri di segmento (`SS`) si presuppone che contengono lo stesso indirizzo come il Registro di segmento di dati (`DS`). `FARSTACK` non di gruppo con lo stack `DGROUP`; di conseguenza `SS` non è uguale `DS`.
+Se si specifica `NEARSTACK` il segmento dello stack viene raggruppato in un singolo segmento fisico (`DGROUP`) insieme ai dati. Si presuppone che il registro dello stack di segmento (`SS`) contenga lo stesso indirizzo del registro del segmento di dati (`DS`). `FARSTACK` non raggruppa lo stack con `DGROUP`; di conseguenza `SS` non è uguale a `DS`.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-.`MODEL` non viene usato nel [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+.`MODEL` non viene usato in [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-La tabella seguente elenca i possibili valori per ogni parametro quando la destinazione a piattaforme di 16 bit e a 32 bit:
+La tabella seguente elenca i valori possibili per ogni parametro quando la destinazione è rappresentata da piattaforme a 16 bit e a 32 bit:
 
-|Parametro|valori a 32 bit|valori a 16 bit (supporto per lo sviluppo di versioni precedenti a 16 bit)|
+|Parametro|Valori a 32 bit|Valori a 16 bit (supporto per lo sviluppo di versioni precedenti a 16 bit)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
 |*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
@@ -50,9 +50,9 @@ La tabella seguente elenca i possibili valori per ogni parametro quando la desti
 
 ## <a name="code"></a>Codice
 
-Per esempi relativi MASM, scaricare gli esempi del compilatore [esempi di Visual C++ e la relativa documentazione per Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749).
+Per esempi relativi a MASM, scaricare gli esempi del compilatore da [Esempi di Visual C++ e documentazione correlata per Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749).
 
-Nell'esempio seguente viene illustrato l'utilizzo del `.MODEL` direttiva.
+Nell'esempio seguente viene illustrato l'uso della direttiva `.MODEL`.
 
 ## <a name="example"></a>Esempio
 
