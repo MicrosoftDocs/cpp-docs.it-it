@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 47fee2291d201fca04674b07926ed88aaed0a95c
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 5808a99d376ab3640c955156688d64bc0285e67e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524538"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706985"
 ---
 # <a name="atl-property-page-wizard"></a>Creazione guidata pagina delle proprietà ATL
 
@@ -22,7 +22,7 @@ Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni suc
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Questa procedura guidata [aggiunge una pagina delle proprietà in un progetto ATL](../../atl/reference/adding-an-atl-property-page.md) o in un progetto MFC con supporto ATL. Una pagina delle proprietà ATL fornisce un'interfaccia utente per impostare le proprietà (o chiamare i metodi) di uno o più oggetti COM.
 

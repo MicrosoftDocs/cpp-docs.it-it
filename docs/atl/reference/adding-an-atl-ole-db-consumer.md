@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: 7925063e03522c96d251748b23b6b929733999a1
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 1e384a283a2a149faa5b8d6e0817eac3cacfeff9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524634"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706917"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Aggiunta di un consumer OLE DB ATL
 
@@ -19,7 +19,7 @@ La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 201
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Usare questa procedura guidata per aggiungere un consumer OLE DB ATL a un progetto. Un consumer OLE DB ATL è costituito da una classe di funzione di accesso OLE DB e dalle associazioni di dati necessarie per accedere a un'origine dati. Il progetto deve essere stato creato come applicazione ATL COM o come applicazione MFC o Win32 che contiene supporto ATL (aggiunto automaticamente dalla Creazione guidata consumer OLE DB ATL).
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: c92a450a00e6218d2ccc679d56aeff0f379762a3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525060"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707554"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membri dati di stato dei campi in funzioni di accesso generate dalla creazione guidata
 
@@ -20,7 +20,7 @@ La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 201
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Quando si usa la **Creazione guidata consumer OLE DB ATL** per creare un consumer, la procedura guidata genera un membro dati della classe di record utente per ogni campo specificato nel mapping delle colonne. Ogni membro dati è di tipo `DWORD` e contiene un valore di stato corrispondente al relativo campo.
 
