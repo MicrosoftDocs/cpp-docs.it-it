@@ -1,89 +1,91 @@
 ---
 title: Creazione guidata provider OLE DB ATL
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248263"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706969"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Creazione guidata provider OLE DB ATL
 
-Questa procedura guidata vengono create le classi che compongono un provider OLE DB.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> In Visual Studio 2017 versione 15.9 questa procedura guidata del codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto generale per ATL e MFC non subisce attualmente l'effetto della rimozione di questa procedura guidata. Se vuoi condividere i tuoi commenti e suggerimenti su questa deprecazione, compila il [presente sondaggio](https://www.surveymonkey.com/r/QDWKKCN). I tuoi commenti e suggerimenti sono importanti per noi.
+Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni successive.
 
-## <a name="remarks"></a>Note
+::: moniker-end
 
-A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registrerà i componenti COM sotto **HKEY_CURRENT_USER** invece di **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare il **Registra componente per tutti gli utenti** opzione della procedura guidata.
+::: moniker range="<=vs-2017"
 
-Nella tabella seguente vengono descritte le opzioni per la creazione guidata Provider OLE DB ATL:
+## <a name="remarks"></a>Osservazioni
+
+A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
+
+La tabella seguente descrive le opzioni per la Creazione guidata provider OLE DB ATL:
 
 - **Nome breve**
 
-   Digitare il nome breve del provider da creare. Le altre caselle di modifica della procedura guidata verranno popolato automaticamente in base al nome digitato. Se si desidera, è possibile modificare le altre caselle di nome.
+   Digitare il nome breve del provider da creare. Le altre caselle di modifica della procedura guidata verranno completate automaticamente in base al nome digitato qui. È possibile modificare le altre caselle del nome se lo si desidera.
 
-- **Coclasse**
+- **CoClass**
 
-   Il nome della coclasse. Il nome del ProgID verrà modificato in base a questo nome.
+   Nome della coclasse. Il nome di ProgID cambierà in modo da corrispondere a questo nome.
 
 - **Con attributi**
 
-   Questa opzione specifica se la procedura guidata creerà le classi di provider usando gli attributi o le dichiarazioni di template. Quando si seleziona questa opzione, verranno utilizzati attributi invece delle dichiarazioni di modello (questo è l'opzione predefinita se si creasse un progetto con attributo). Quando si deseleziona questa opzione, la procedura guidata utilizza le dichiarazioni di template anziché agli attributi (questo è l'opzione predefinita se è stato creato un progetto senza attributi).
+   Questa opzione specifica se la procedura guidata creerà classi del provider tramite attributi o dichiarazioni di modello. Quando si seleziona questa opzione, la procedura guidata usa attributi invece di dichiarazioni di modello (impostazione predefinita se è stato creato un progetto con attributi). Quando si deseleziona questa opzione, la procedura guidata usa dichiarazioni di modello invece di attributi (impostazione predefinita se è stato creato un progetto senza attributi).
 
-   Se si seleziona questa opzione quando è stato creato un progetto senza attributi, la procedura guidata avvisa l'utente che il progetto verrà convertito in un progetto con attributi e chiede se si desidera continuare o meno.
+   Se si seleziona questa opzione quando è stato creato un progetto senza attributi, la procedura guidata avvisa che il progetto verrà convertito in un progetto con attributi e chiede se continuare o meno.
 
 - **ProgID**
 
-   Il ProgID, o identificatore a livello di codice, è una stringa di testo che l'applicazione può usare invece un GUID. Il nome del ProgID ha il formato *CoClassname*.
+   Il ProgID o identificatore a livello di codice è una stringa di testo che l'applicazione può usare al posto di un GUID. Il nome di ProgID ha il formato *Nomeprogetto.Nomecoclasse*.
 
 - **Version**
 
-   Il numero di versione del provider. Il valore predefinito è 1.
+   Numero di versione del provider. Il valore predefinito è 1.
 
-- **Classe DataSource**
+- **Classe origine dati**
 
-   Il nome della classe di origine dati, nel formato C*Shortname*origine.
+   Nome della classe di origine dati, nel formato C*Nomebreve*Source.
 
-- **Origine dati file con estensione h**
+- **File H di origine dati**
 
-   Il file di intestazione per la classe dell'origine dati. È possibile modificare questo nome file o selezionare un file di intestazione esistente.
+   File di intestazione per la classe di origine dati. È possibile modificare il nome di questo file o selezionare un file di intestazione esistente.
 
-- **Classe di sessione**
+- **Session class** (Classe di sessione)
 
-   Il nome della classe di sessione, nel formato C*Shortname*sessione.
+   Nome della classe di sessione, nel formato C*Nomebreve*Session.
 
-- **File con estensione h di sessione**
+- **File H di sessione**
 
-   Il file di intestazione per la classe di sessione. È possibile modificare questo nome file o selezionare un file di intestazione esistente.
+   File di intestazione per la classe di sessione. È possibile modificare il nome di questo file o selezionare un file di intestazione esistente.
 
-- **Classe di comando**
+- **Command class** (Classe di comando)
 
-   Il nome della classe di comando, nel formato C*Shortname*comando.
+   Nome della classe di comando, nel formato C*Nomebreve*Command.
 
-- **File con estensione h di comando**
+- **File H di comando**
 
-   Il file di intestazione per la classe di comando. Questo nome non può essere modificato e dipende dal nome del file di intestazione del set di righe.
+   File di intestazione per la classe di comando. Questo nome non può essere modificato e dipende dal nome del file di intestazione del set di righe.
 
-- **Classe di rowset**
+- **Rowset class** (Classe di set di righe)
 
-   Il nome della classe di set di righe, nel formato C*Shortname*set di righe.
+   Nome della classe di set di righe, nel formato C*Nomebreve*Rowset.
 
-- **File con estensione h di rowset**
+- **File H di rowset**
 
-   Il file di intestazione per la classe di set di righe. È possibile modificare questo nome file o selezionare un file di intestazione esistente.
+   File di intestazione per la classe di set di righe. È possibile modificare il nome di questo file o selezionare un file di intestazione esistente.
 
-- **File con estensione cpp del set di righe**
+- **File CPP di rowset**
 
-   File di implementazione del provider. È possibile modificare questo nome file o selezionare un file di implementazione esistente.
+   File di implementazione del provider. È possibile modificare il nome di questo file o selezionare un file di implementazione esistente.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

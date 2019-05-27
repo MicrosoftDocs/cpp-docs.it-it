@@ -9,31 +9,31 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: c36200d7f0d41aa4f116fdee3f5d95ff1e80e839
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 971d6c05ad4669f32e3b232d5e91c501e197be30
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445999"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707430"
 ---
 # <a name="creating-an-atl-project"></a>Creazione di un progetto ATL
 
-Il modo più semplice per creare un progetto ATL è utilizzare la procedura guidata progetto ATL, che si trova nel **i progetti Win32** cartella della **nuovo progetto** nella finestra di dialogo.
+Il modo più semplice per creare un progetto ATL è usare la Creazione guidata progetto ATL, disponibile nella cartella **Progetti Win32** della finestra di dialogo **Nuovo progetto**.
 
-## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Per creare un progetto ATL mediante la creazione guidata progetto ATL
+## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Per creare un progetto ATL mediante la Creazione guidata progetto ATL
 
-1. In Visual Studio, scegliere **File > Nuovo > progetto** dal menu principale.
+1. In Visual Studio scegliere **File > Nuovo > Progetto** dal menu principale.
 
-1. Selezionare il **progetto ATL** icona nel **modelli** riquadro per aprire il **Creazione guidata progetto ATL**.
+1. Selezionare l'icona **Progetto ATL** nel riquadro **Modelli** per aprire la **Creazione guidata progetto ATL**.
 
-1. Definire le impostazioni dell'applicazione usando il [le impostazioni dell'applicazione](../../atl/reference/application-settings-atl-project-wizard.md) pagina della **Creazione guidata progetto ATL**.
+1. Definire le impostazioni dell'applicazione mediante la pagina [Impostazioni applicazione](../../atl/reference/application-settings-atl-project-wizard.md) della **Creazione guidata progetto ATL**.
 
    > [!NOTE]
    > Saltare questo passaggio per mantenere le impostazioni predefinite della procedura guidata.
 
-1. Fare clic su **fine** per chiudere la procedura guidata e aprire il nuovo progetto nell'ambiente di sviluppo.
+1. Scegliere **Fine** per uscire dalla procedura guidata e aprire il nuovo progetto nell'ambiente di sviluppo.
 
-Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per oggetto visivo C++ progetti](../../build/reference/file-types-created-for-visual-cpp-projects.md). Per altre informazioni sulle configurazioni per il nuovo progetto ATL e come modificarle, vedere [configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md).
+Una volta creato il progetto, è possibile visualizzare i file generati in **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [Tipi di file creati per i progetti di Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md). Per altre informazioni sulle configurazioni per il nuovo progetto ATL e su come modificarle, vedere [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md).
 
 ## <a name="see-also"></a>Vedere anche
 

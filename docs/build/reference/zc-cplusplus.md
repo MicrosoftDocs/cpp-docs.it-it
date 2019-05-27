@@ -1,54 +1,54 @@
 ---
-title: /Zc:__cplusplus (Abilita cplusplus aggiornato macro)
-ms.date: 05/30/2018
+title: /Zc:__cplusplus (abilita la macro __cplusplus aggiornata)
+ms.date: 05/16/2019
 f1_keywords:
 - /Zc:__cplusplus
 helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
-ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43392438eabc7cc7f6decb1349d112a0ce5bd0f5
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315716"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837541"
 ---
-# <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/Zc:__cplusplus (Abilita cplusplus aggiornato macro)
+# <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/Zc:__cplusplus (abilita la macro __cplusplus aggiornata)
 
-Il **/Zc:__cplusplus** Abilita opzione del compilatore il  **\_ \_cplusplus** macro del preprocessore per segnalare un valore aggiornato per recenti C++ supporto degli standard di linguaggio. Per impostazione predefinita, Visual Studio restituisce sempre il valore "199711L" per il  **\_ \_cplusplus** macro del preprocessore.
+L'opzione del compilatore **/Zc:__cplusplus** abilita la macro del preprocessore **\_\_cplusplus** per segnalare un valore aggiornato nel supporto di standard recenti del linguaggio C++. Per impostazione predefinita, Visual Studio restituisce sempre il valore "199711L" per la macro del preprocessore **\_\_cplusplus**.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/Zc:__cplusplus**[**-**]
+> **/Zc:__cplusplus**[ **-** ]
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il  **\_ \_cplusplus** macro del preprocessore viene comunemente usato per il supporto di report per una particolare versione dello standard C++. Perché si verifichi una grande quantità di codice esistente dipendono dal valore di questa macro corrispondenti "199711L", il compilatore non modifica il valore della macro, a meno che acconsentire esplicitamente tramite il **/Zc:__cplusplus** opzione del compilatore. Il **/Zc:__cplusplus** opzione è disponibile a partire da Visual Studio 2017 versione 15.7 ed è disattivata per impostazione predefinita. Nelle versioni precedenti di Visual Studio e per impostazione predefinita, oppure se **/Zc:__cplusplus-** è specificato, Visual Studio restituisce il valore "199711 L" per il  **\_ \_cplusplus** macro del preprocessore. Il [/PERMISSIVE--](permissive-standards-conformance.md) non abilita l'opzione **/Zc:__cplusplus**.
+La macro del preprocessore **\_\_cplusplus** viene in genere usata per segnalare il supporto di una specifica versione dello standard C++. Poiché per gran parte del codice esistente apparentemente è necessario che il valore di questa macro corrisponda a "199711L", il compilatore non cambia il valore della macro a meno che non si acconsenta esplicitamente tramite l'opzione del compilatore **/Zc:__cplusplus**. L'opzione **/Zc:__cplusplus** è disponibile a partire da Visual Studio 2017 versione 15.7 ed è disattivata per impostazione predefinita. Nelle versioni precedenti di Visual Studio, e per impostazione predefinita, oppure se si specifica **/Zc:__cplusplus-** , Visual Studio restituisce il valore "199711L" per la macro del preprocessore **\_\_cplusplus**. L'opzione [/permissive-](permissive-standards-conformance.md) non abilita **/Zc:__cplusplus**.
 
-Quando la **/Zc:__cplusplus** opzione è abilitata, il valore restituito dal  **\_ \_cplusplus** dipende dalla macro il [/std](std-specify-language-standard-version.md) Cambia versione l'impostazione. Questa tabella mostra i valori possibili per la macro:
+Se l'opzione **/Zc:__cplusplus** è abilitata, il valore segnalato dalla macro **\_\_cplusplus** dipende dall'impostazione dell'opzione di versione [/std](std-specify-language-standard-version.md). Questa tabella indica i valori possibili per la macro:
 
-|Commutatore /Zc:__cplusplus|commutatore /std:c++|valore cplusplus|
+|Opzione /Zc:__cplusplus|Opzione /std:c++|Valore di __cplusplus|
 |-|-|-|
-Zc:__cplusplus|/std:c++14 (default)|201402L
+Zc:__cplusplus|/std:c++14 (impostazione predefinita)|201402L
 Zc:__cplusplus|/std:c++17|201703L
-Zc:__cplusplus|/std: c + + più recente|201704L
-Zc:__cplusplus-(disabilitato)|Qualsiasi valore|199711L
-Non è specificato|Qualsiasi valore|199711L
+Zc:__cplusplus|/std:c++latest|201704L
+Zc:__cplusplus- (disabilitata)|Qualsiasi valore|199711L
+Non specificato|Qualsiasi valore|199711L
 
-Il compilatore non supporta parametri standard per c++98, c++03 o linguaggio c++11.
+Il compilatore non supporta le opzioni standard per C++98, C++03 o C++11.
 
-Per il rilevamento delle modifiche per il set di strumenti del compilatore granularità, usare il [msc_ver](../../preprocessor/predefined-macros.md) la macro predefinita. Il valore di questa macro predefinita viene incrementato per ogni aggiornamento di set di strumenti in Visual Studio 2017 e versioni successive. Il [_MSVC_LANG](../../preprocessor/predefined-macros.md) la macro predefinita segnala se la versione standard le **/Zc:__cplusplus** opzione è abilitata o disabilitata. Quando **/Zc:__cplusplus** è abilitata, `__cplusplus == _MSVC_LANG`.
+Per rilevare in modo dettagliato le modifiche apportate al set di strumenti del compilatore, usare la macro predefinita [_MSC_VER](../../preprocessor/predefined-macros.md). Il valore di questa macro predefinita viene incrementato per ogni aggiornamento del set di strumenti apportato in Visual Studio 2017 e versioni successive. La macro predefinita [_MSVC_LANG](../../preprocessor/predefined-macros.md) segnala la versione standard indipendentemente dal fatto che l'opzione **/Zc:__cplusplus** sia abilitata o disabilitata. Se **/Zc:__cplusplus** è abilitata, `__cplusplus == _MSVC_LANG`.
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Per impostare questa opzione del compilatore in Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **C/C++** > **della riga di comando** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà **Proprietà di configurazione** > **C/C++** > **Riga di comando**.
 
-1. Aggiungere **/Zc:__cplusplus** oppure **/Zc:__cplusplus-** per il **opzioni aggiuntive:** riquadro.
+1. Aggiungere **/Zc:__cplusplus** o **/Zc:__cplusplus-** nel riquadro **Opzioni aggiuntive**.
 
 ## <a name="see-also"></a>Vedere anche
 
 - [/Zc (conformità)](zc-conformance.md)
-- [/ std:<c++14|c++17|c++Latest> (versione standard del linguaggio di specifica)](std-specify-language-standard-version.md)
+- [/std (specifica la versione standard del linguaggio)](std-specify-language-standard-version.md)
 - [Macro predefinite](../../preprocessor/predefined-macros.md)

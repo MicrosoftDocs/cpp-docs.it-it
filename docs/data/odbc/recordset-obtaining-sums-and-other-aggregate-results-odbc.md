@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Recupero di somme e altri risultati aggregati (ODBC)'
+title: 'Recordset: recupero di somme e altri risultati aggregati (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,56 +10,59 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: e10f2e1574dae234d98d210784d4a8ddef3bb57e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397783"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707851"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset: Recupero di somme e altri risultati aggregati (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset: recupero di somme e altri risultati aggregati (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+> [!NOTE] 
+> La Creazione guidata consumer ODBC MFC non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile creare manualmente un consumer.
 
-Questo argomento viene illustrato come ottenere risultati aggregati con i seguenti [SQL](../../data/odbc/sql.md) parole chiave:
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-- **SOMMA** calcola il totale dei valori in una colonna con tipo di dati numerico.
+In questo argomento viene illustrato come ottenere risultati aggregati con le parole chiave [SQL](../../data/odbc/sql.md) seguenti:
 
-- **MIN** estrae il valore più piccolo in una colonna con tipo di dati numerico.
+- **SUM** Calcola il totale dei valori in una colonna con tipo di dati numerico.
 
-- **MAX** estrae il valore più grande in una colonna con tipo di dati numerico.
+- **MIN** Estrae il valore più piccolo in una colonna con tipo di dati numerico.
 
-- **AVG** calcola la media di tutti i valori in una colonna con tipo di dati numerico.
+- **MAX** Estrae il valore più grande in una colonna con tipo di dati numerico.
 
-- **CONTEGGIO** conta il numero di record in una colonna di qualsiasi tipo di dati.
+- **AVG** Calcola la media di tutti i valori in una colonna con tipo di dati numerico.
 
-Usare queste funzioni SQL per ottenere informazioni statistiche sui record in un'origine dati anziché per estrarre i record dall'origine dati. Il recordset che viene creato in genere è costituito da un singolo record (se tutte le colonne sono funzioni di aggregazione) che contiene un valore. (Potrebbe essere più di un record se è stata usata un' **GROUP BY** clausola.) Questo valore è il risultato del calcolo o estrazione eseguita dalla funzione di SQL.
+- **COUNT** Esegue il conteggio del numero di record in una colonna con qualsiasi tipo di dati.
+
+Usare queste funzioni SQL per ottenere informazioni statistiche sui record in un'origine dati, anziché per estrarre i record dall'origine dati. Il recordset che viene creato in genere è costituito da un singolo record (se tutte le colonne sono aggregazioni) che contiene un valore. Potrebbe essere presente più di un record se è stata usata una clausola **GROUP BY**. Questo valore è il risultato del calcolo o dell'estrazione eseguita dalla funzione SQL.
 
 > [!TIP]
->  Per aggiungere un database SQL **GROUP BY** clausola (e possibilmente un **HAVING** clausola) all'istruzione SQL, aggiungerlo alla fine della `m_strFilter`. Ad esempio:
+>  Per aggiungere una clausola SQL **GROUP BY** (ed eventualmente una clausola **HAVING**) all'istruzione SQL, aggiungerla alla fine di `m_strFilter`. Ad esempio:
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 ```
 
-È possibile limitare il numero di record che consente di ottenere risultati aggregati, filtrare e ordinare le colonne.
+È possibile limitare il numero di record usati per ottenere risultati aggregati filtrando e ordinando le colonne.
 
 > [!CAUTION]
->  Alcuni operatori di aggregazione restituiscono un tipo di dati diverso da quello delle colonne su cui si sta eseguendo l'aggregazione.
+>  Alcuni operatori di aggregazione restituiscono un tipo di dati diverso da quello delle colonne su cui eseguono l'aggregazione.
 
-- **SOMMA** e **AVG** potrebbe restituire il tipo di dati più grande successivo (ad esempio, è stato chiamato con `int` restituisce **LONG** o **double**).
+- **SUM** e **AVG** possono restituire il successivo tipo di dati più grande (ad esempio, la chiamata con `int` restituisce **LONG** o **double**).
 
-- **CONTEGGIO** restituisce in genere **lungo** indipendentemente dal tipo di colonna di destinazione.
+- **COUNT** in genere restituisce **LONG** indipendentemente dal tipo di colonna di destinazione.
 
-- **MAX** e **MIN** restituiscono lo stesso tipo di dati come le colonne calcolate.
+- **MAX** e **MIN** restituiscono lo stesso tipo di dati delle colonne su cui eseguono il calcolo.
 
-     Ad esempio, il **Aggiungi classe** procedura guidata crea `long` `m_lSales` per contenere una colonna di vendite, ma è necessario sostituire il nome con un `double m_dblSumSales` membro dati per contenere il risultato dell'aggregazione. Vedere l'esempio seguente.
+     Ad esempio, la procedura guidata **Aggiungi classe** crea `long` `m_lSales` per contenere una colonna Sales, ma è necessario sostituire questo valore con un membro dati `double m_dblSumSales` per contenere il risultato dell'aggregazione. Vedere l'esempio seguente.
 
-#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Per ottenere un risultato aggregato per un set di record
+#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Per ottenere un risultato aggregato per un recordset
 
-1. Creare un set di record, come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) contenente le colonne da cui si desidera ottenere i risultati aggregati.
+1. Creare un recordset, come descritto in [Aggiunta di un consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md), contenente le colonne da cui si vogliono ottenere i risultati aggregati.
 
-1. Modificare il [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) funzione per il recordset. Sostituire la stringa che rappresenta il nome della colonna (il secondo argomento della [RFX](../../data/odbc/record-field-exchange-using-rfx.md) chiamate di funzione) con una stringa che rappresenta la funzione di aggregazione nella colonna. Ad esempio, sostituire:
+1. Modificare la funzione [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) per il recordset. Sostituire la stringa che rappresenta il nome della colonna (il secondo argomento delle chiamate di funzione [RFX](../../data/odbc/record-field-exchange-using-rfx.md)) con una stringa che rappresenta la funzione di aggregazione nella colonna. Ad esempio, sostituire:
 
     ```
     RFX_Long(pFX, "Sales", m_lSales);
@@ -71,12 +74,12 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
     ```
 
-1. Apre il recordset. Il risultato dell'operazione di aggregazione viene lasciato in `m_dblSumSales`.
+1. Aprire il recordset. Il risultato dell'operazione di aggregazione viene lasciato in `m_dblSumSales`.
 
 > [!NOTE]
->  La procedura guidata assegna i nomi dei membri di dati senza prefissi ungheresi. Ad esempio, la procedura guidata produrrebbe `m_Sales` per una colonna di vendite, anziché quella di `m_lSales` nome usato in precedenza a scopo illustrativo.
+>  La procedura guidata assegna i nomi dei membri dati senza i prefissi della notazione ungherese. Ad esempio, la procedura guidata produrrebbe `m_Sales` per una colonna Sales, anziché il nome `m_lSales` usato in precedenza a scopo illustrativo.
 
-Se si usa un' [CRecordView](../../mfc/reference/crecordview-class.md) di classi per visualizzare i dati, è necessario modificare la chiamata di funzione DDX per visualizzare il nuovo valore del membro dati; in questo caso, può essere modificato da:
+Se si usa una classe [CRecordView](../../mfc/reference/crecordview-class.md) per visualizzare i dati, è necessario modificare la chiamata di funzione DDX per visualizzare il valore del nuovo membro dati. In questo caso, deve essere modificata da:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);

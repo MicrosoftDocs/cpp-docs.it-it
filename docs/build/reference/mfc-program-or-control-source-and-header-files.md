@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: 89e02054b72946c4b1b773ce79b1c380da6ef01a
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 6a6561e993016e70764186114e1f7cabd93cdc2d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446252"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707452"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>File di intestazione e di origine di un controllo o di un programma MFC
 
@@ -17,7 +17,7 @@ I file seguenti vengono creati quando si crea un progetto MFC in Visual Studio, 
 
 Tutti questi file si trovano nella directory *Projname* e anche nella cartella File di intestazione (file con estensione h) oppure nella cartella File di origine (file con estensione cpp) in Esplora soluzioni.
 
-|Nome file|Descrizione|
+|Nome file|Description|
 |---------------|-----------------|
 |*Projname*.h|File di inclusione principale per il programma o la DLL. Contiene tutti i simboli globali e le direttive `#include` per altri file di intestazione. Deriva la classe `CPrjnameApp` da `CWinApp` e dichiara una funzione membro `InitInstance`. Per un controllo, la classe `CPrjnameApp` viene derivata da `COleControlModule`.|
 |*Projname*.cpp|Il file di origine principale del programma. Crea un oggetto della classe `CPrjnameApp`, che viene derivata da `CWinApp` ed esegue l'override della funzione membro `InitInstance`.<br /><br /> Per i file eseguibili, `CPrjnameApp::InitInstance` esegue diverse operazioni. Registra i modelli di documento, che fungono da connessione tra documenti e visualizzazioni, e crea una finestra cornice principale e un documento vuoto o apre un documento, se ne è specificato uno come argomento della riga di comando per l'applicazione.<br /><br /> Per le DLL e i controlli ActiveX (in precedenza OLE), `CProjNameApp::InitInstance` registra l'object factory del controllo con OLE chiamando `COleObjectFactory::RegisterAll` ed effettua una chiamata a `AfxOLEInit`. La funzione membro `CProjNameApp::ExitInstance`, poi, viene usata per scaricare il controllo dalla memoria tramite una chiamata a **AfxOleTerm**.<br /><br /> Questo file, poi, registra e annulla la registrazione del controllo nel database di registrazione di Windows mediante l'implementazione delle funzioni `DllRegisterServer` e `DllUnregisterServer`.|
@@ -34,6 +34,6 @@ Tutti questi file si trovano nella directory *Projname* e anche nella cartella F
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tipi di file creati per oggetto visivo C++ progetti](file-types-created-for-visual-cpp-projects.md)<br>
+[Tipi di file creati per i progetti di Visual Studio C++](file-types-created-for-visual-cpp-projects.md)<br>
 [File di intestazione e di origine di un controllo o programma ATL](atl-program-or-control-source-and-header-files.md)<br>
 [Progetti CLR](files-created-for-clr-projects.md)

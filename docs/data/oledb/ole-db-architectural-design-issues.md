@@ -1,41 +1,44 @@
 ---
 title: Problemi di progettazione dell'architettura OLE DB
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395560"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525311"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemi di progettazione dell'architettura OLE DB
 
-Tenere presente quanto segue prima di avviare l'applicazione OLE DB:
+> [!NOTE]
+> La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente. Per altre informazioni, vedere [Creazione di un consumer senza utilizzare una procedura guidata](creating-a-consumer-without-using-a-wizard.md).
 
-## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Quale implementazione di programmazione si userà per scrivere un'applicazione OLE DB?
+Prendere in considerazione gli aspetti seguenti prima di iniziare a creare un'applicazione OLE DB:
 
-Microsoft offre varie librerie per portare a termine questa attività: una libreria di modelli OLE DB, OLE DB attributi e le interfacce OLE DB non elaborate in OLE DB SDK. Inoltre, sono disponibili procedure guidate che consentono scrivere un programma. Queste implementazioni sono descritte nel [modelli OLE DB, attributi e altre implementazioni](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
+## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Quale implementazione di programmazione si userà per scrivere l'applicazione OLE DB?
+
+Microsoft offre diverse librerie per eseguire questa attività: una libreria di modelli OLE DB, attributi OLE DB e le interfacce OLE DB raw in OLE DB SDK. Sono inoltre disponibili procedure guidate che offrono supporto nella scrittura del programma. Queste implementazioni sono descritte in [Modelli, attributi e altre implementazioni OLE DB](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).
 
 ## <a name="do-you-need-to-write-your-own-provider"></a>È necessario scrivere un provider personalizzato?
 
-La maggior parte degli sviluppatori non necessario scrivere il proprio provider. Microsoft offre diversi provider. Quando si crea una connessione dati (ad esempio, quando si aggiunge un utente al progetto utilizzando il **Creazione guidata Consumer OLE DB ATL**), il **proprietà di Data Link** nella finestra di dialogo sono elencati tutti i provider disponibili registrati nel sistema. Se uno dei provider è appropriato per la propria applicazione di accesso archivio e i dati dei dati, la cosa più semplice da fare consiste nell'utilizzare uno di questi. Tuttavia, se l'archivio dati non si adatta a una di queste categorie, è necessario creare un provider personalizzato. Per informazioni sulla creazione di provider, vedere [modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
+Per la maggior parte degli sviluppatori non è necessario scrivere un provider personalizzato. Microsoft offre diversi provider. Quando si crea una connessione dati (ad esempio, quando si aggiunge un consumer al progetto usando la **Creazione guidata consumer OLE DB ATL**), nella finestra di dialogo **Proprietà di Data Link** sono elencati tutti i provider disponibili registrati nel sistema. Se uno dei provider è appropriato per l'applicazione di archivio dati e accesso ai dati, la cosa più facile è scegliere tra tali provider. Se tuttavia l'archivio dati non si rientra in queste categorie, è necessario creare un provider personalizzato. Per informazioni sulla creazione di provider, vedere [Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
 
-## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>Quale livello di supporto è necessario per l'utente?
+## <a name="what-level-of-support-do-you-need-for-your-consumer"></a>Quale livello di supporto è necessario per il consumer?
 
-Alcuni utenti possono essere complessi. mentre altre possono essere complesse. La funzionalità degli oggetti OLE DB specificata dalle proprietà. Quando si usa la **Creazione guidata Consumer OLE DB ATL** per creare un consumer o il **Creazione guidata Provider** per creare un provider, imposta le proprietà dell'oggetto appropriato per l'utente per offrirti un set standard di funzionalità. Tuttavia, se le classi generate dalla procedura guidata, consumer o provider non supportano tutte le informazioni necessarie per eseguire, è necessario fare riferimento alle interfacce di tali classi nel [libreria di modelli OLE DB](../../data/oledb/ole-db-templates.md). Queste interfacce includono le interfacce OLE DB non elaborate, che fornisce l'implementazione aggiuntiva per rendere più semplice utilizzarle per l'utente.
+Alcuni consumer possono essere più semplici e altri più complessi. La funzionalità degli oggetti OLE DB è specificata dalle proprietà. Quando si usa la **Creazione guidata consumer OLE DB ATL** per creare un consumer o la **Creazione guidata provider di database** per creare un provider, vengono impostate le proprietà degli oggetti appropriate per fornire un set standard di funzionalità. Se tuttavia le classi del provider o del consumer che la procedura guidata ha generato non supportano tutte le funzionalità richieste, è necessario fare riferimento alle interfacce per tali classi nella [libreria di modelli OLE DB](../../data/oledb/ole-db-templates.md). Queste interfacce eseguono il wrapping delle interfacce OLE DB raw, fornendo un'implementazione aggiuntiva per semplificarne l'uso.
 
-Ad esempio, se si desidera aggiornare i dati in un set di righe, ma sia dimenticato di specificare quando è stato creato l'utente con la procedura guidata, è possibile specificare le funzionalità al termine dell'attività, impostando il `DBPROP_IRowsetChange` e `DBPROP_UPDATABILITY` le proprietà dell'oggetto comando. Quindi, quando viene creato il set di righe, ha la `IRowsetChange` interfaccia.
+Se, ad esempio, se vuole aggiornare i dati in un set di righe, ma si è dimenticato di specificarlo al momento della creazione del consumer con la procedura guidata, è possibile specificare le funzionalità successivamente impostando le proprietà `DBPROP_IRowsetChange` e `DBPROP_UPDATABILITY` nell'oggetto comando. Quando il set di righe viene creato, ha quindi l'interfaccia `IRowsetChange`.
 
-## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>Si dispone di codice precedenti utilizzando un'altra tecnologia di accesso ai dati (ADO, ODBC o DAO)?
+## <a name="do-you-have-older-code-using-another-data-access-technology-ado-odbc-or-dao"></a>Si ha codice precedente in cui viene usata un'altra tecnologia di accesso ai dati (ADO, ODBC o DAO)?
 
-Date le possibili combinazioni di tecnologie (ad esempio usando i componenti di ADO con i componenti OLE DB e la migrazione di codice ODBC e OLE DB), che copre tutte le situazioni esula dall'ambito della documentazione di Visual C++. Tuttavia, molti articoli che trattano diversi scenari di sono disponibili nei siti web Microsoft seguenti:
+Considerate tutte le possibili combinazioni di tecnologie (ad esempio l'uso di componenti ADO con componenti OLE DB e la migrazione di codice ODBC a OLE DB), l'esame di tutti gli scenari non rientra nell'ambito della documentazione di Visual C++. Nei siti Web Microsoft seguenti sono tuttavia disponibili numerosi articoli che trattano diversi scenari:
 
 - [Guida e supporto tecnico Microsoft](https://support.microsoft.com/)
 
-- [Panoramica di Microsoft Data Access articoli tecnici](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Microsoft Data Access Technical Articles Overview](https://msdn.microsoft.com/library/ms810811.aspx) (Panoramica di articoli tecnici su Microsoft Data Access Components)
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,19 +1,23 @@
 ---
 title: Memorizzazione di stringhe in un provider OLE DB
-ms.date: 10/26/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 5dce7dac84ef69da17baac135a68bd78698c4456
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344978"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525347"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Memorizzazione di stringhe in un provider OLE DB
 
-Nella *Custom*RS, il **Creazione guidata Provider OLE DB ATL** consente di creare un record utente predefinita denominato `CWindowsFile`. Per gestire le due stringhe, modificare `CWindowsFile` come illustrato nel codice seguente:
+> [!NOTE] 
+> La Creazione guidata provider OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive.
+
+
+In *Custom*RS.h la **Creazione guidata provider OLE DB ATL** crea un record utente predefinito denominato `CWindowsFile`. Per gestire le due stringhe, modificare `CWindowsFile` come illustrato nel codice seguente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -48,9 +52,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-I membri dei dati `szCommand` e `szText` rappresentano le due stringhe, con `szCommand2` e `szText2` con colonne aggiuntive se necessario. Il membro dati `dwBookmark` non è necessaria per questo provider semplice in sola lettura, ma viene usato in un secondo momento per aggiungere un' `IRowsetLocate` dell'interfaccia, vedere [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md). Il `==` operatore confronta istanze (implementazione di questo operatore è facoltativo).
+I membri dati `szCommand` e `szText` rappresentano le due stringhe, con `szCommand2` e `szText2` con colonne aggiuntive, se necessario. Il membro dati `dwBookmark` non è necessario per questo provider semplice di sola lettura, ma viene usato in seguito per aggiungere un'interfaccia `IRowsetLocate`. Vedere [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md). L'operatore `==` confronta le istanze (l'implementazione di questo operatore è facoltativa).
 
-Quando questa operazione, è possibile aggiungere la funzionalità del [lettura di stringhe in un Provider OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
+Al termine di questa operazione, è possibile aggiungere la funzionalità di [Lettura di stringhe in un provider OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
 ## <a name="see-also"></a>Vedere anche
 

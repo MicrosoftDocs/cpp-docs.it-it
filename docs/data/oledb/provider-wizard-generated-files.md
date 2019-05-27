@@ -1,27 +1,37 @@
 ---
 title: File del provider generati tramite procedura guidata
-ms.date: 10/18/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-ms.openlocfilehash: a9a706463326249135a55bc907cb8a664a3ca808
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: de5c9056402cb1db25240772eb3c592523daafae
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282962"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525328"
 ---
 # <a name="provider-wizard-generated-files"></a>File del provider generati tramite procedura guidata
 
-Il **Creazione guidata Provider OLE DB ATL** genera i file seguenti. Gli argomenti seguenti usano il nome abbreviato *Custom*, ma i nomi esatti del file dipendono dalle scelte effettuate durante la creazione del provider.
+::: moniker range="vs-2019"
 
-|Nome file|Descrizione|
+La Creazione guidata provider OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+La **Creazione guidata provider OLE DB ATL** genera i file seguenti. Gli argomenti seguenti usano il nome abbreviato *Custom*, ma i nomi di file esatti dipendono dalle scelte effettuate durante la creazione del provider.
+
+|Nome file|Description|
 |---------------|-----------------|
-|*Custom*RS.cpp|Contiene l'helper comando `Execute` metodo e la mappa delle colonne del provider.|
-|*Custom*DS.h|Implementa l'oggetto origine dati. Questo file di intestazione contiene il mapping di proprietà dell'origine dati.|
-|*Custom*RS|Implementa gli oggetti comando e set di righe. Questo file di intestazione contiene il mapping di proprietà per proprietà rowset e comando.|
-|*Custom*Sess.h|Implementa l'oggetto sessione. Questo file di intestazione contiene il mapping di proprietà per proprietà della sessione.|
-|*Custom*RGS|Contiene gli oggetti registrati generati per il **Creazione guidata Provider OLE DB**.|
+|*Custom*RS.cpp|Contiene il metodo hepler `Execute` del comando e il mapping delle colonne del provider.|
+|*Custom*DS.h|Implementa l'oggetto origine dati. Questo file di intestazione contiene il mapping delle proprietà dell'origine dati.|
+|*Custom*RS.h|Implementa gli oggetti comando e set di righe. Questo file di intestazione contiene il mapping delle proprietà del set di righe e del comando.|
+|*Custom*Sess.h|Implementa l'oggetto sessione. Questo file di intestazione contiene il mapping delle proprietà della sessione.|
+|*Custom*.rgs|Contiene gli oggetti registrati generati dalla **Creazione guidata provider OLE DB**.|
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

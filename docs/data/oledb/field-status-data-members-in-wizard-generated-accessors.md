@@ -1,24 +1,32 @@
 ---
 title: Membri dati di stato dei campi in funzioni di accesso generate dalla creazione guidata
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: dd650b7cafef78e23c23ddfef791c88b6b93727f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c92a450a00e6218d2ccc679d56aeff0f379762a3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409005"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525060"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membri dati di stato dei campi in funzioni di accesso generate dalla creazione guidata
 
-Quando si usa la **Creazione guidata Consumer OLE DB ATL** per creare un utente, la procedura guidata genera un membro dati della classe di record utente per ogni campo che specifica nella mappa delle colonne. Ogni membro dati è di tipo `DWORD` e contiene un valore di stato corrispondente al campo corrispondente.
+::: moniker range="vs-2019"
 
-Ad esempio, per un membro dati *m_OwnerID*, la procedura guidata genera un membro dati aggiuntivi per lo stato del campo (*dwOwnerIDStatus*) e un altro per la lunghezza del campo (*dwOwnerIDLength*). Viene inoltre generata una mappa delle colonne con voci COLUMN_ENTRY_LENGTH_STATUS.
+La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente. Per altre informazioni, vedere [Creazione di un consumer senza utilizzare una procedura guidata](creating-a-consumer-without-using-a-wizard.md).
 
-Questa operazione è illustrata nel codice seguente:
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Quando si usa la **Creazione guidata consumer OLE DB ATL** per creare un consumer, la procedura guidata genera un membro dati della classe di record utente per ogni campo specificato nel mapping delle colonne. Ogni membro dati è di tipo `DWORD` e contiene un valore di stato corrispondente al relativo campo.
+
+Per un membro dati *m_OwnerID*, ad esempio, la procedura guidata genera un membro dati aggiuntivo per lo stato del campo (*dwOwnerIDStatus*) e un altro per la lunghezza del campo (*dwOwnerIDLength*). Viene inoltre generato un mapping delle colonne con voci COLUMN_ENTRY_LENGTH_STATUS.
+
+Questo comportamento è illustrato nel codice seguente:
 
 ```cpp
 class CAuthorsAccessor
@@ -54,19 +62,19 @@ public:
 > [!NOTE]
 > Se si modifica la classe di record utente o si crea un consumer personalizzato, le variabili dei dati devono essere specificate prima delle variabili di stato e di lunghezza.
 
-È possibile usare i valori di stato per scopi di debug. Se il codice generato per il **Creazione guidata Consumer OLE DB ATL** genera errori di compilazione, ad esempio DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED, è necessario innanzitutto controllare i valori correnti dei membri di dati dello stato del campo. Quelli che hanno valori diversi da zero corrispondono alle colonne che causa l'errore.
+È possibile usare i valori di stato per scopi di debug. Se il codice generato per dalla **Creazione guidata consumer OLE DB ATL** genera errori di compilazione, ad esempio DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED, è necessario prima di tutto controllare i valori correnti dei membri dati dello stato del campo. Gli elementi che hanno valori diversi da zero corrispondono alle colonne che hanno causato l'errore.
 
-È anche possibile usare i valori di stato per impostare un valore NULL per un determinato campo. In questo modo risulta utile nei casi in cui si vuole distinguere un valore del campo come valore NULL anziché zero. È responsabilità dell'utente a decidere se NULL è un valore valido o un valore speciale e decidere come l'applicazione deve gestire. OLE DB definisce DBSTATUS_S_ISNULL come il termine corretto si intende specificare un valore NULL generico. Se il consumer legge i dati e il valore è null, il campo stato è impostato su DBSTATUS_S_ISNULL. Se l'utente desidera impostare un valore NULL, il consumer imposta il valore di stato su DBSTATUS_S_ISNULL prima di chiamare il provider.
+È anche possibile usare i valori di stato per impostare un valore NULL per un determinato campo. Ciò è utile nei casi in cui si vuole distinguere un valore di campo come valore NULL invece di zero. È compito dell'utente decidere se NULL è un valore valido o un valore speciale e stabilire come deve essere gestito dall'applicazione. OLE DB definisce DBSTATUS_S_ISNULL come il modo corretto per specificare un valore NULL generico. Se il consumer legge i dati e il valore è Null, il campo di stato è impostato su DBSTATUS_S_ISNULL. Se il consumer vuole impostare un valore NULL, deve impostare il valore di stato su DBSTATUS_S_ISNULL prima di chiamare il provider.
 
-Aprire quindi cercare DBSTATUSENUM e OleDb. È quindi possibile confrontare il valore numerico dello stato con i valori di enumerazione DBSTATUSENUM diverso da zero. Se il nome dell'enumerazione non è sufficiente indicare qual è il problema, vedere la **lo stato** argomento nella **valori di Data Binding** sezione del [Guida per programmatori OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). In questo argomento contiene le tabelle di valori di stati utilizzati per ottenere o impostare i dati. Per informazioni sui valori di lunghezza, vedere la **lunghezza** argomento nella stessa sezione.
+Aprire quindi OleDb.h e cercare DBSTATUSENUM. È quindi possibile confrontare il valore numerico dello stato diverso da zero con i valori dell'enumerazione DBSTATUSENUM. Se il nome dell'enumerazione non è sufficiente per capire qual è il problema, vedere l'argomento **Stato** nella sezione **Associazione dei valori di dati** della [Guida per programmatori OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Questo argomento contiene tabelle di valori di stato usati per ottenere o impostare i dati. Per informazioni sui valori di lunghezza, vedere l'argomento **Lunghezza** nella stessa sezione.
 
-## <a name="retrieving-the-length-or-status-of-a-column"></a>Recupero della lunghezza o lo stato di una colonna
+## <a name="retrieving-the-length-or-status-of-a-column"></a>Recupero della lunghezza o dello stato di una colonna
 
-È possibile recuperare la lunghezza di una colonna a lunghezza variabile o lo stato di una colonna (da cercare DBSTATUS_S_ISNULL, ad esempio):
+È possibile recuperare la lunghezza di una colonna a lunghezza variabile o lo stato di una colonna (per controllare, ad esempio, la presenza di DBSTATUS_S_ISNULL):
 
-- Per ottenere la lunghezza, usare il COLUMN_ENTRY_LENGTH (macro).
+- Per ottenere la lunghezza, usare la macro COLUMN_ENTRY_LENGTH.
 
-- Per ottenere lo stato, usare il COLUMN_ENTRY_STATUS (macro).
+- Per ottenere lo stato, usare la macro COLUMN_ENTRY_STATUS.
 
 - Per ottenere entrambi, usare COLUMN_ENTRY_LENGTH_STATUS, come illustrato:
 
@@ -86,7 +94,7 @@ Aprire quindi cercare DBSTATUSENUM e OleDb. È quindi possibile confrontare il v
     };
     ```
 
-- Accedere quindi, la lunghezza e/o lo stato come illustrato:
+- Accedere quindi alla lunghezza e/o allo stato come illustrato:
 
     ```cpp
     CTable<CAccessor<CProducts >> product;
@@ -102,7 +110,9 @@ Aprire quindi cercare DBSTATUSENUM e OleDb. È quindi possibile confrontare il v
     }
     ```
 
-Quando si usa `CDynamicAccessor`, la lunghezza e stato vengono associati automaticamente. Per recuperare i valori di lunghezza e stato, usare il `GetLength` e `GetStatus` funzioni membro.
+Quando si usa `CDynamicAccessor`, la lunghezza e lo stato vengono associati automaticamente. Per recuperare i valori di lunghezza e stato, usare le funzioni membro `GetLength` e `GetStatus`.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

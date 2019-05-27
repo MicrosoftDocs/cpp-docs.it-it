@@ -7,44 +7,44 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-ms.openlocfilehash: 5b74eef1799dd5f9fae8f2a6aceeb79a115ce837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c24d3cfe1b5ef4ff9415840ee07a8f57cf22a90
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202224"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707268"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Riferimento a Microsoft Macro Assembler
 
-Microsoft Macro Assembler (MASM) offre diversi vantaggi rispetto a assembly inline. MASM contiene un linguaggio macro che dispone di funzionalità, ad esempio l'elaborazione di stringhe di ciclo, aritmetici e di testo. MASM inoltre offre un maggiore controllo sull'hardware, perché supporta il set di istruzioni del 386 486 e processori Pentium. Usando MASM, è possibile anche ridurre l'overhead di memoria e tempo.
+Microsoft Macro Assembler (MASM) offre diversi vantaggi rispetto all'assembly inline. MASM contiene un linguaggio macro che dispone di funzionalità per l'elaborazione di cicli, calcoli aritmetici e stringhe di testo. MASM offre inoltre un maggiore controllo sull'hardware, perché supporta i set di istruzioni dei processori 386, 486 e Pentium. Usando MASM, è anche possibile ridurre il tempo e l'overhead di memoria.
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Opzione della riga di comando ML e ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md)<br/>
-Descrive le opzioni della riga di comando ML.exe e ML64.exe.
+[Opzioni della riga di comando ML e ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md)<br/>
+Vengono descritte le opzioni della riga di comando di ML.exe e ML64.exe.
 
 [Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)<br/>
-Descrive gli avvisi e messaggi di errore irreversibile e non irreversibili ML.exe.
+Vengono descritti gli avvisi e i messaggi di errore irreversibili e non irreversibili di ML.exe.
 
 [Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
-Fornisce collegamenti ad articoli che illustrano l'uso delle direttive di MASM.
+Vengono forniti collegamenti ad articoli che illustrano l'uso delle direttive in MASM.
 
 [Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)<br/>
-Fornisce collegamenti ad articoli che illustrano l'uso di simboli in MASM.
+Vengono forniti collegamenti ad articoli che illustrano l'uso dei simboli in MASM.
 
 [Riferimento a operatori](../../assembler/masm/operators-reference.md)<br/>
-Fornisce collegamenti ad articoli che illustrano l'uso degli operatori di MASM.
+Vengono forniti collegamenti ad articoli che illustrano l'uso degli operatori in MASM.
 
 [Manuali di programmazione del produttore del processore](../../assembler/masm/processor-manufacturer-programming-manuals.md)<br/>
-Vengono forniti collegamenti a siti Web che possono contenere informazioni sulla programmazione su processori che non sono prodotte, venduto o supportata da Microsoft.
+Vengono forniti collegamenti a siti Web che possono contenere informazioni sulla programmazione relative a processori che non sono prodotti, venduti o supportati da Microsoft.
 
 [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)<br/>
 Informazioni su come creare i file di output per x64.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Visual C++](../../overview/visual-cpp-in-visual-studio.md)<br/>
-Vengono forniti collegamenti a diverse aree della documentazione di Visual Studio e Visual C++.
+[C++ in Visual Studio](../../overview/visual-cpp-in-visual-studio.md)<br/>
+Vengono forniti collegamenti a diverse sezioni della documentazione di Visual Studio e Visual C++.
 
 ## <a name="see-also"></a>Vedere anche
 

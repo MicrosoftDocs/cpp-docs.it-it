@@ -1,25 +1,24 @@
 ---
 title: File di risorse (C++)
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 helpviewer_keywords:
 - resource files
 - resources [C++]
-- file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f1e32ba4776f3e975dc0fbc72334a85d6c793c93
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 20e57aa51cff8c4e3392c313645468387c2a4244
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446340"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707397"
 ---
 # <a name="resource-files-c"></a>File di risorse (C++)
 
-Le risorse sono elementi dell'interfaccia che consentono all'utente di visualizzare le informazioni. Bitmap, icone, barre degli strumenti e cursori sono tutte risorse. Alcune risorse possono essere modificate in modo da eseguire un'azione, ad esempio la selezione di una voce da un menu o l'immissione di dati in una finestra di dialogo.
+Le risorse sono elementi dell'interfaccia che consentono all'utente di visualizzare le informazioni. Bitmap, icone, barre degli strumenti e cursori sono tutte risorse. Alcune risorse possono eseguire un'azione, ad esempio la selezione di una voce da un menu o l'immissione di dati in una finestra di dialogo.
 
-Per altre informazioni, vedere l'[articolo relativo all'uso delle risorse](../../windows/working-with-resource-files.md).
+ Per altre informazioni, vedere [Uso delle risorse](../../windows/working-with-resource-files.md).
 
-|Nome file|Directory|Esplora soluzioni|Descrizione|
+|Nome file|Directory|Esplora soluzioni|Description|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Projname*.rc|*Projname*|File di origine|File script di risorsa per il progetto. Il file di script di risorsa contiene i seguenti elementi, a seconda del tipo di progetto, e il supporto selezionato per il progetto, ad esempio le barre degli strumenti, le finestre di dialogo o il linguaggio HTML:<br /><br />- Definizione predefinita di menu.<br />- Tabelle di stringhe e tasti di scelta rapida.<br />- Finestra di dialogo **Informazioni** predefinita.<br />- Altre finestre di dialogo.<br />- File icona (res\\*Projname*.ico).<br />- Informazioni sulla versione.<br />- Bitmap.<br />- Barra degli strumenti.<br />- File HTML.<br /><br /> Il file di risorse include il file Afxres.rc per le risorse standard di Microsoft Foundation Class.|
 |Resource.h|*Projname*|File di intestazione|File di intestazione delle risorse che include le definizioni per le risorse usate dal progetto.|
@@ -32,4 +31,4 @@ Per altre informazioni, vedere l'[articolo relativo all'uso delle risorse](../..
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tipi di file creati per oggetto visivo C++ progetti](file-types-created-for-visual-cpp-projects.md)
+[Tipi di file creati per i progetti di Visual Studio C++](file-types-created-for-visual-cpp-projects.md)

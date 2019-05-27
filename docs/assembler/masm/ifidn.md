@@ -1,30 +1,34 @@
 ---
-title: IFIDN]
-ms.date: 08/30/2018
+title: IFIDN, IFIDNI
+ms.date: 05/23/2019
 f1_keywords:
 - IFIDN[[I]]
+- IFIDN
+- IFIDNI
 helpviewer_keywords:
 - IFIDN[[I]] directive
+- IFIDN directive
+- IFIDNI directive
 ms.assetid: 957893b1-1a30-4ffd-96f2-6663604a5058
-ms.openlocfilehash: d727c47d5c92d3c8b12c2701bdd8264db4fd5abc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dab7771e96848fd77aec7e601b9da2f1bc8610d
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202882"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197663"
 ---
-# <a name="ifidn"></a>IFIDN]
+# <a name="ifidn-ifidni"></a>IFIDN, IFIDNI
 
 Assembly di concessioni se gli elementi di testo sono identici.
 
 ## <a name="syntax"></a>Sintassi
 
-> IFIDN[[I]] textitem1, textitem2
+> **IFIDN**\[**I**] *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>Note
 
-Se **ho** è specificato, il confronto viene operata la distinzione. Visualizzare [IF](../../assembler/masm/if-masm.md) per la sintassi completa.
+Se **IFIDNI** è specificato, il confronto viene operata la distinzione. Visualizzare [IF](../../assembler/masm/if-masm.md) per la sintassi completa.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)

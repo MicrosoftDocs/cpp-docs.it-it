@@ -1,83 +1,85 @@
 ---
 title: Creazione guidata componente ASP ATL
-ms.date: 11/04/2016
-f1_keywords:
-- vc.codewiz.class.atl.asp.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ASP components, creating in ATL
-- ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: f020ed9b58f631bfff09fe54c70e36146eb03368
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a78beeab663ef1b467cdec32ca51132e8134a9b2
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249015"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707046"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Creazione guidata componente ASP ATL
 
-Questa procedura guidata consente di inserire nel progetto di componente pagine ASP (Active Server). Microsoft Internet Information Services (IIS) usa i componenti ASP come parte della relativa architettura di sviluppo avanzato pagina Web.
+::: moniker range="vs-2019"
 
-Usando questa procedura guidata, è possibile specificare che il componente del modello di threading e il supporto di aggregazione. È inoltre possibile indicare il supporto per l'interfaccia di informazioni di errore, i punti di connessione e marshalling a thread libero.
+Questa procedura guidata non è disponibile in Visual Studio 2019 e versioni successive.
 
-> [!WARNING]
-> In Visual Studio 2017 versione 15.9 questa procedura guidata del codice è deprecata e verrà rimossa in una versione futura di Visual Studio. Questa procedura guidata viene usata raramente. Il supporto generale per ATL e MFC non subisce attualmente l'effetto della rimozione di questa procedura guidata. Se vuoi condividere i tuoi commenti e suggerimenti su questa deprecazione, compila il [presente sondaggio](https://www.surveymonkey.com/r/QDWKKCN). I tuoi commenti e suggerimenti sono importanti per noi.
+::: moniker-end
 
-## <a name="remarks"></a>Note
+::: moniker range="<=vs-2017"
 
-A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registrerà i componenti COM sotto **HKEY_CURRENT_USER** invece di **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare il **Registra componente per tutti gli utenti** opzione della procedura guidata.
+Questa procedura guidata inserisce nel progetto un componente ASP (Active Server Pages). Microsoft Internet Information Services (IIS) usa componenti ASP come parte della propria architettura di sviluppo avanzato di pagine Web.
+
+Usando questa procedura guidata, è possibile specificare il modello di threading del componente e il relativo supporto di aggregazione. È anche possibile indicare il supporto per l'interfaccia delle informazioni sugli errori, i punti di connessione e il marshalling con modello di threading Free.
+
+## <a name="remarks"></a>Osservazioni
+
+A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registra i componenti COM in **HKEY_CURRENT_USER** invece che in **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare l'opzione **Registra componente per tutti gli utenti** della procedura guidata.
 
 ## <a name="names"></a>Nomi
 
-Specificare i nomi per l'oggetto dell'interfaccia e le classi da aggiungere al progetto. Ad eccezione di **nome breve**, tutte le altre caselle possono essere modificati indipendentemente dagli altri. Se si modifica il testo per **nome breve**, la modifica viene riflessa nei nomi di tutte le altre caselle in questa pagina.
+Specificare i nomi per l'oggetto, l'interfaccia e le classi da aggiungere al progetto. Ad eccezione di **Nome breve**, tutte le altre caselle possono essere modificate indipendentemente dalle altre. Se si modifica il testo per **Nome breve**, la modifica viene applicata ai nomi di tutte le altre caselle in questa pagina.
 
-Se si modifica il **coclasse** nome nella sezione COM, la modifica viene riflessa nel **tipo** e **ProgID** caselle, ma il **interfaccia** nome non viene modificato. Questo comportamento di denominazione è progettato per rendere facilmente identificabile tutti i nomi per l'utente quando si sviluppa il controllo.
+Se si modifica il nome di **CoClass** nella sezione COM, la modifica viene applicata alle caselle **Tipo** e **ProgID**, ma il nome di **Interfaccia** non viene modificato. Questo comportamento di denominazione è progettato per rendere tutti i nomi facilmente identificabili durante lo sviluppo del controllo.
 
 ### <a name="c"></a>C++
 
-Vengono fornite informazioni per la classe C++ creata per l'oggetto.
+Fornisce informazioni per la classe C++ creata per l'oggetto.
 
 - **Nome breve**
 
-   Imposta il nome radice per l'oggetto. Il nome specificato determina la `Class` e **Coclass** nomi, il **file con estensione cpp** e **file con estensione h** nomi, il **interfaccia**nome, il **tipo** nomi e il **ProgID**, a meno che non vengano modificati singolarmente questi campi.
+   Imposta il nome radice per l'oggetto. Il nome specificato determina i nomi di `Class` e **CoClass**, i nomi di **File con estensione cpp** e **File con estensione h**, il nome di **Interfaccia**, i nomi di **Tipo** e il valore di **ProgID**, a meno che questi campi non vengano modificati singolarmente.
 
 - **File con estensione h**
 
-   Imposta il nome del file di intestazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome fornito nel **nome breve**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nel percorso desiderato o aggiungere la dichiarazione di classe a un file esistente. Se si seleziona un file esistente, il non verrà salvato nel percorso selezionato finché non si fare clic su **fine** nella procedura guidata.
+   Imposta il nome del file di intestazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome specificato in **Nome breve**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome file nel percorso desiderato o aggiungere la dichiarazione di classe a un file esistente. Se si seleziona un file esistente, la procedura guidata non lo salverà nel percorso selezionato finché non si sceglie **Fine**.
 
    La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se la dichiarazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.
 
 - **Classe**
 
-   Imposta il nome della classe da creare. Questo nome è basato sul nome fornito nel **nome breve**, preceduto da "C", il prefisso standard per un nome di classe.
+   Imposta il nome della classe da creare. Questo nome è basato sul nome specificato in **Nome breve**, preceduto da "C", il prefisso tipico per un nome di classe.
 
 - **File con estensione cpp**
 
-   Imposta il nome del file di implementazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome fornito nel **nome breve**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome del file nel percorso desiderato. Il file non viene salvato nel percorso selezionato fino a quando non si fa clic su **Fine** nella procedura guidata.
+   Imposta il nome del file di implementazione per la nuova classe dell'oggetto. Per impostazione predefinita, questo nome è basato sul nome specificato in **Nome breve**. Fare clic sul pulsante con i puntini di sospensione per salvare il nome del file nel percorso desiderato. Il file non viene salvato nel percorso selezionato fino a quando non si fa clic su **Fine** nella procedura guidata.
 
    La procedura guidata non sovrascrive i file. Se si seleziona il nome di un file esistente, quando si sceglie **Fine**, la procedura guidata chiede di specificare se l'implementazione di classe deve essere aggiunta al contenuto del file. Fare clic su **Sì** per aggiungere il file. Fare clic su **No** per tornare alla procedura guidata e specificare un altro nome di file.
 
 - **Con attributi**
 
-   Indica se l'oggetto utilizza gli attributi. Se si aggiunge un oggetto a un progetto ATL con attributo, questa opzione è selezionata e non può essere modificata. Vale a dire, è possibile aggiungere solo gli oggetti con attributi a un progetto creato con il supporto di attributo.
+   Indica se l'oggetto usa attributi. Se si aggiunge un oggetto a un progetto ATL con attributi, questa opzione è selezionata e non può essere modificata. Questo significa che è possibile aggiungere oggetti con attributi solo a un progetto creato con supporto per gli attributi.
 
-   Se si seleziona questa opzione per un progetto ATL non ha attributo supporto, la procedura guidata chiederà di specificare se si desidera aggiungere il supporto di attributo per il progetto.
+   Se si seleziona questa opzione per un progetto ATL che non include il supporto per gli attributi, la procedura guidata chiede di specificare se si vuole aggiungere il supporto per gli attributi al progetto.
 
-   Per impostazione predefinita per i progetti senza attributi, tutti gli oggetti aggiunti dopo aver impostato questa opzione vengono designati come oggetto con attributi (la casella di controllo è selezionata). È possibile deselezionare questa casella per aggiungere un oggetto che non usa gli attributi.
+   Per i progetti senza attributi, per impostazione predefinita qualsiasi oggetto aggiunto dopo aver impostato questa opzione viene designato come con attributi (la casella di controllo è selezionata). È possibile deselezionare questa casella per aggiungere un oggetto che non usa attributi.
 
-   Visualizzare [le impostazioni dell'applicazione, creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [meccanismi di base degli attributi](../../windows/basic-mechanics-of-attributes.md) per altre informazioni.
+   Per altre informazioni, vedere [Impostazioni applicazione, Creazione guidata progetto ATL](../../atl/reference/application-settings-atl-project-wizard.md) e [Meccanismi di base degli attributi](../../windows/basic-mechanics-of-attributes.md).
 
 ### <a name="com"></a>COM
 
-Fornisce informazioni sulle funzionalità COM per l'oggetto.
+Fornisce informazioni sulla funzionalità COM per l'oggetto.
 
-- **Coclasse**
+- **CoClass**
 
-   Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto. Se il progetto oppure questo oggetto utilizza gli attributi, è possibile modificare questa opzione perché ATL non include il **coclasse** attributo.
+   Imposta il nome della classe del componente che contiene un elenco delle interfacce supportate dall'oggetto. Se il progetto o questo oggetto usa attributi, non è possibile modificare questa opzione, perché ATL non include l'attributo **CoClass**.
 
 - **Type**
 
-   Imposta la descrizione dell'oggetto che verrà visualizzato nel Registro di sistema per la coclasse.
+   Imposta la descrizione dell'oggetto che verrà visualizzata nel Registro di sistema per la coclasse.
 
 - **Interface**
 
@@ -85,7 +87,9 @@ Fornisce informazioni sulle funzionalità COM per l'oggetto.
 
 - **ProgID**
 
-   Imposta il nome che i contenitori possano usare invece il CLSID dell'oggetto.
+   Imposta il nome che può essere usato dai contenitori invece del CLSID dell'oggetto.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

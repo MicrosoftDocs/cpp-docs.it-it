@@ -1,14 +1,14 @@
 ---
 title: Informazioni di riferimento sullo schema CppProperties.json
-ms.date: 03/21/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 05bb92b0fe791ad8b0037665c2db32a08fa52d7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220849"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837053"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Informazioni di riferimento sullo schema CppProperties.json
 
@@ -115,9 +115,9 @@ Una configurazione può avere una delle proprietà seguenti:
 |`compilerSwitches`|Una o più opzioni aggiuntive che possono influire sul comportamento di IntelliSense|
 |`forcedInclude`|L'intestazione da includere automaticamente in ogni unità di compilazione (con mapping a /FI per MSVC o -include per Clang)|
 |`undefines`|L'elenco delle macro la cui definizione deve essere rimossa (con mapping a /U per MSVC)|
-|`intelliSenseMode`|Il motore IntelliSense da usare. È possibile specificare varianti di architettura specifiche per MSVC, gcc o Clang:<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|Il motore IntelliSense da usare. È possibile specificare varianti di architettura specifiche per MSVC, gcc o Clang:<br/><br/>- windows-msvc-x86 (predefinito)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-Nota: I valori `msvc-x86` e `msvc-x64` sono supportati per motivi di compatibilità solo. Usare il `windows-msvc*` varianti.
+Nota: i valori `msvc-x86` e `msvc-x64` sono supportati solo per motivi di compatibilità con le versioni precedenti. Usare le varianti `windows-msvc*`.
 
 ## <a name="custom-configurations"></a>Configurazioni personalizzate
 
@@ -143,7 +143,7 @@ Nota: I valori `msvc-x86` e `msvc-x64` sono supportati per motivi di compatibili
 
  `CppProperties.json` supporta l'espansione delle variabili di ambiente di sistema per i percorsi di inclusione e altri valori delle proprietà. La sintassi è `${env.FOODIR}` per espandere l'elemento `%FOODIR%` di una variabile di ambiente. Sono supportate anche le variabili definite dal sistema seguenti:
 
-|Nome variabile|Descrizione|
+|Nome variabile|Description|
 |-----------|-----------------|
 |vsdev|Ambiente Visual Studio predefinito|
 |msvc_x86|Compilazione per x86 usando strumenti x86|
@@ -156,7 +156,7 @@ Nota: I valori `msvc-x86` e `msvc-x64` sono supportati per motivi di compatibili
 
 Quando viene installato il carico di lavoro di Linux sono disponibili gli ambienti seguenti per la definizione di Linux e WSL come destinazione remota:
 
-|Nome variabile|Descrizione|
+|Nome variabile|Description|
 |-----------|-----------------|
 |linux_x86|Imposta come destinazione x86 Linux in modalità remota|
 |linux_x64|Imposta come destinazione x64 Linux in modalità remota|
@@ -264,7 +264,7 @@ In `CppProperties.json` è possibile accedere alle macro predefinite seguenti:
 |-|-|
 |`${workspaceRoot}`| Percorso completo della cartella dell'area di lavoro|
 |`${projectRoot}`| Percorso completo alla cartella contenente `CppProperties.json`|
-|`${vsInstallDir}`| Percorso completo della cartella in cui è installata l'istanza di VS 2017 in esecuzione|
+|`${vsInstallDir}`| Percorso completo alla cartella in cui è installata l'istanza di Visual Studio in esecuzione|
 
 Se ad esempio il progetto ha una cartella Include e presenta anche windows.h e altre intestazioni comuni di Windows SDK, può essere utile aggiornare il file di configurazione `CppProperties.json` con queste inclusioni:
 
@@ -289,7 +289,7 @@ Se ad esempio il progetto ha una cartella Include e presenta anche windows.h e a
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` e `%VCToolsInstallDir%` non sono impostate come variabili di ambiente globali. Di conseguenza, verificare di avviare devenv.exe da un "Prompt dei comandi per gli sviluppatori di Visual Studio 2017" che definisce tali variabili.
+> `%WindowsSdkDir%` e `%VCToolsInstallDir%` non sono impostate come variabili di ambiente globali. Di conseguenza, verificare di avviare devenv.exe da un Prompt dei comandi per gli sviluppatori che definisce tali variabili (tipo "sviluppatore" nel menu Start di Windows).
 
 ## <a name="troubleshoot-intellisense-errors"></a>Risolvere gli errori di IntelliSense
 

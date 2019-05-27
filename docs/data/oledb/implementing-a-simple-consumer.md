@@ -1,36 +1,43 @@
 ---
 title: Implementazione di un consumer semplice
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 592a51dd77f7a2e115ee67a481e56dc558209253
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390802"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525074"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementazione di un consumer semplice
 
-Gli argomenti seguenti illustrano come modificare i file creati per il **Creazione guidata applicazione MFC** e **Creazione guidata Consumer OLE DB ATL** per creare un consumer semplice. Questo esempio è costituito dalle parti seguenti:
+::: moniker range="vs-2019"
 
-- [Recupero dei dati con il Consumer](#retrieve) viene illustrato come implementare il codice del consumer che legge tutti i dati, riga per riga, da una tabella di database.
+La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente. Per altre informazioni, vedere [Creazione di un consumer senza utilizzare una procedura guidata](creating-a-consumer-without-using-a-wizard.md).
 
-- [Aggiunta di supporto di segnalibro al Consumer](#bookmark) viene illustrato come aggiungere supporto per segnalibro al consumer.
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Gli argomenti seguenti illustrano come modificare i file creati dalla **Creazione guidata applicazione MFC** e dalla **Creazione guidata consumer OLE DB ATL** per creare un consumer semplice. L'esempio è composto dalle parti seguenti:
+
+- [Recupero dei dati con il consumer](#retrieve): illustra come implementare codice nel consumer che legge tutti i dati, riga per riga, da una tabella di database.
+
+- [Aggiunta del supporto di segnalibri al consumer](#bookmark): illustra come aggiungere il supporto dei segnalibri al consumer.
 
 > [!NOTE]
-> È possibile usare l'applicazione consumer descritte in questa sezione per testare la `MyProv` e `Provider` i provider di esempio.
+> È possibile usare l'applicazione consumer descritta in questa sezione per testare i provider di esempio `MyProv` e `Provider`.
 
 > [!NOTE]
-> Per compilare un'applicazione consumer per testare `MyProv` (lo stesso provider descritto in [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)), è necessario includere il supporto di segnalibro come descritto in [aggiunta del supporto di segnalibro per il Consumer](#bookmark).
+> Per creare un'applicazione consumer per testare `MyProv`, ovvero lo stesso provider descritto in [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md), è necessario includere il supporto dei segnalibri come descritto in [Aggiunta del supporto di segnalibri al consumer](#bookmark).
 
-## <a name="retrieve" ></a> Recupero dei dati con il Consumer
+## <a name="retrieve" ></a> Recupero dei dati con il consumer
 
-### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Per modificare l'applicazione console per utilizzare l'applicazione consumer OLE DB
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Per modificare l'applicazione console per usare il consumer OLE DB
 
-1. In `MyCons.cpp`, modificare il codice principale inserendo il testo in grassetto, come indicato di seguito:
+1. In `MyCons.cpp` modificare il codice principale inserendo il testo in grassetto, come indicato di seguito:
 
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
@@ -57,32 +64,32 @@ Gli argomenti seguenti illustrano come modificare i file creati per il **Creazio
     }
     ```
 
-## <a name="bookmark" ></a> Aggiunta del supporto di segnalibro al Consumer
+## <a name="bookmark" ></a> Aggiunta del supporto di segnalibri al consumer
 
-Un segnalibro è una colonna che identifica in modo univoco le righe della tabella. In genere si tratta della colonna chiave, ma non sempre; è specifico del provider. Questa sezione illustra come aggiungere il supporto di segnalibro. A tale scopo, è necessario eseguire i passaggi seguenti nella classe di record utente:
+Un segnalibro è una colonna che identifica in modo univoco le righe della tabella. In genere si tratta della colonna chiave, ma non è sempre così. La colonna è specifica del provider. Questa sezione illustra come aggiungere il supporto dei segnalibri. A tale scopo, è necessario eseguire la procedura seguente nella classe di record utente:
 
-- Creare un'istanza di segnalibri. Si tratta di oggetti di tipo [CBookmark](../../data/oledb/cbookmark-class.md).
+- Creare un'istanza dei segnalibri. Si tratta di oggetti di tipo [CBookmark](../../data/oledb/cbookmark-class.md).
 
-- Richiedere una colonna del segnalibro dal provider impostando il `DBPROP_IRowsetLocate` proprietà.
+- Richiedere una colonna segnalibro al provider impostando la proprietà `DBPROP_IRowsetLocate`.
 
-- Aggiungere una voce segnalibro alla mappa delle colonne utilizzando il [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.
+- Aggiungere una voce segnalibro al mapping delle colonne usando la macro [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
 
-I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro con cui operare. Questo esempio di codice viene illustrato un segnalibro come indicato di seguito:
+La procedura precedente fornisce il supporto dei segnalibri e un oggetto segnalibro con cui lavorare. L'esempio di codice seguente illustra un segnalibro con i passaggi seguenti:
 
 - Aprire un file per la scrittura.
 
-- Dati del set di righe di output per il file riga per riga.
+- Restituire come output nel file i dati del set di righe, riga per riga.
 
-- Sposta il cursore del set di righe al segnalibro chiamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
+- Spostare il cursore del set di righe al segnalibro chiamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).
 
-- La riga con segnalibro, aggiungerlo alla fine del file di output.
+- Restituire come output la riga con il segnalibro, aggiungendola alla fine del file.
 
 > [!NOTE]
-> Se si usa un'applicazione consumer per testare il `Provider` applicazione del provider di esempio, non inserire il supporto per segnalibro descritte in questa sezione.
+> Se si usa questa applicazione consumer per testare l'applicazione del provider di esempio `Provider`, omettere il supporto dei segnalibri descritto in questa sezione.
 
 ### <a name="to-instantiate-the-bookmark"></a>Per creare un'istanza del segnalibro
 
-1. La funzione di accesso deve contenere un oggetto di tipo [CBookmark](../../data/oledb/cbookmark-class.md). Il *nSize* parametro specifica la dimensione del buffer del segnalibro in byte, in genere 4 per piattaforme a 32 bit e 8 per le piattaforme a 64 bit. Per i membri dati delle colonne nella classe di record utente, aggiungere la dichiarazione seguente:
+1. La funzione di accesso deve contenere un oggetto di tipo [CBookmark](../../data/oledb/cbookmark-class.md). Il parametro *nSize* specifica la dimensione del buffer dei segnalibri in byte, in genere 4 per le piattaforme a 32 bit e 8 per le piattaforme a 64 bit. Aggiungere la dichiarazione seguente ai membri dati delle colonne nella classe di record utente:
 
     ```cpp
     //////////////////////////////////////////////////////////////////////
@@ -95,9 +102,9 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
        ...
     ```
 
-### <a name="to-request-a-bookmark-column-from-the-provider"></a>Per richiedere una colonna del segnalibro del provider
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>Per richiedere una colonna segnalibro al provider
 
-1. Aggiungere il codice seguente nel `GetRowsetProperties` metodo nella classe di record utente:
+1. Aggiungere il codice seguente nel metodo `GetRowsetProperties` nella classe di record utente:
 
     ```cpp
     // Set the DBPROP_IRowsetLocate property.
@@ -109,9 +116,9 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
     }
     ```
 
-### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Per aggiungere una voce segnalibro alla mappa delle colonne
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Per aggiungere una voce segnalibro al mapping delle colonne
 
-1. Aggiungere la voce seguente alla mappa delle colonne nella classe di record utente:
+1. Aggiungere la voce seguente al mapping delle colonne nella classe di record utente:
 
     ```cpp
     // Set a bookmark entry in the column map.
@@ -123,9 +130,9 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
     END_COLUMN_MAP()
     ```
 
-### <a name="to-use-a-bookmark-in-your-main-code"></a>Per utilizzare un segnalibro nel codice principale
+### <a name="to-use-a-bookmark-in-your-main-code"></a>Per usare un segnalibro nel codice principale
 
-1. Nel `MyCons.cpp` file dell'applicazione console è precedentemente creato, modificare il codice principale come segue. Per usare i segnalibri, il codice principale deve creare un'istanza di un proprio oggetto segnalibro (`myBookmark`); si tratta di un segnalibro diverso da quello nella funzione di accesso (`m_bookmark`).
+1. Nel file `MyCons.cpp` dell'applicazione console creata in precedenza modificare il codice principale come indicato di seguito. Per usare i segnalibri, il codice principale deve creare un'istanza di un proprio oggetto segnalibro (`myBookmark`). Si tratta di un segnalibro diverso da quello nella funzione di accesso (`m_bookmark`).
 
     ```cpp
     ///////////////////////////////////////////////////////////////////////
@@ -194,7 +201,9 @@ I passaggi precedenti offrono supporto per segnalibro e un oggetto segnalibro co
     }
     ```
 
-Per altre informazioni sui segnalibri, vedere [mediante segnalibri](../../data/oledb/using-bookmarks.md). Sono inoltre riportati alcuni esempi di segnalibri nel [aggiornamento dei rowset](../../data/oledb/updating-rowsets.md).
+Per altre informazioni sui segnalibri, vedere [Using Bookmarks](../../data/oledb/using-bookmarks.md) (Uso dei segnalibri). Esempi di segnalibri sono anche disponibili in [Aggiornamento dei set di righe](../../data/oledb/updating-rowsets.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

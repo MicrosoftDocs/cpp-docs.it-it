@@ -1,6 +1,6 @@
 ---
-title: Aggiunta di oggetti e i controlli a un progetto ATL
-ms.date: 11/04/2016
+title: Aggiunta di oggetti e controlli a un progetto ATL
+ms.date: 05/09/2019
 f1_keywords:
 - vc.appwiz.ATL.controls
 helpviewer_keywords:
@@ -11,16 +11,19 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: d16e9a9e7b92d2a98f8994227c5641994677fdda
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221213"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706853"
 ---
-# <a name="adding-objects-and-controls-to-an-atl-project"></a>Aggiunta di oggetti e i controlli a un progetto ATL
+# <a name="adding-objects-and-controls-to-an-atl-project"></a>Aggiunta di oggetti e controlli a un progetto ATL
 
-È possibile utilizzare una delle procedure guidate di codice ATL per aggiungere un oggetto o un controllo ai progetti basati su ATL o MFC. Per ogni oggetto COM o un controllo vengono aggiunte, la procedura guidata genera file con estensione h e. cpp, nonché un file con estensione RGS per il supporto del Registro di sistema basato su script. Le creazioni guidate codice ATL seguenti sono disponibili in Visual Studio:
+> [!NOTE] 
+> La Creazione guidata componente ATL COM+ 1.0, la Creazione guidata consumer OLE DB ATL e la Creazione guidata componente ASP ATL non sono disponibili in Visual Studio 2019 e versioni successive.
+
+È possibile usare una delle procedure guidate per il codice ATL per aggiungere un oggetto o un controllo ai progetti basati su ATL o MFC. Per ogni oggetto o controllo COM aggiunto, la procedura guidata genera file con estensione h e cpp, nonché un file con estensione rgs per il supporto del Registro di sistema basato su script. In Visual Studio sono disponibili le procedure guidate per il codice ATL seguenti:
 
 ||||
 |-|-|-|
@@ -29,25 +32,25 @@ ms.locfileid: "65221213"
 |[Aggiungi supporto ATL a MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Creazione guidata componente ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Provider OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md)|
 
 > [!NOTE]
-> Prima di aggiungere un oggetto ATL al progetto, è necessario esaminare i dettagli e i requisiti per l'oggetto nei relativi argomenti correlati della Guida.
+> Prima di aggiungere un oggetto ATL al progetto, è necessario esaminare i dettagli e i requisiti per l'oggetto negli argomenti correlati della Guida.
 
-## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Per aggiungere un oggetto o un controllo tramite la creazione guidata controllo ATL
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Per aggiungere un oggetto o un controllo tramite la Creazione guidata controllo ATL
 
-1. Nelle **Esplora soluzioni**, fare doppio clic sul nodo del progetto e fare clic su **Add** dal menu di scelta rapida. Fare clic su **aggiungere classe**.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Aggiungi** dal menu di scelta rapida. Fare clic su **Aggiungi classe**.
 
-   Il [Aggiungi classe](../../ide/add-class-dialog-box.md) verrà visualizzata la finestra di dialogo.
+   Verrà visualizzata la finestra di dialogo [Aggiungi classe](../../ide/add-class-dialog-box.md).
 
-1. Con il **ATL** cartella selezionata nel **categorie** riquadro, selezionare un oggetto da inserire dal **modelli** riquadro. Fare clic su **Apri**. Viene visualizzata la procedura guidata per codice per l'oggetto selezionato.
+1. Con la cartella **ATL** selezionata nel riquadro **Categorie**, selezionare un oggetto da inserire dal riquadro **Modelli**. Fare clic su **Apri**. Verrà visualizzata la procedura guidata per il codice per l'oggetto selezionato.
 
    > [!NOTE]
-   > Se si desidera aggiungere un oggetto ATL a un progetto MFC, è necessario aggiungere il supporto ATL al progetto esistente. È possibile farlo seguendo le istruzioni disponibili nel [aggiunta del supporto ATL a un progetto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Per aggiungere un oggetto ATL a un progetto MFC, è necessario aggiungere il supporto ATL al progetto esistente. A tale scopo, seguire le istruzioni disponibili in [Aggiunta del supporto ATL a un progetto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
-   In alternativa, se si tenta di aggiungere un oggetto ATL a un progetto MFC senza l'aggiunta del supporto ATL in precedenza, Visual Studio chiederà di specificare se si desidera supporto ATL aggiunto al progetto. Fare clic su **Sì** Aggiungi supporto ATL al progetto e aprire la procedura guidata selezionata ATL.
+   In alternativa, se si tenta di aggiungere un oggetto ATL a un progetto MFC senza prima aver aggiunto il supporto ATL, Visual Studio chiederà di specificare se si vuole aggiungere al progetto il supporto ATL. Fare clic su **Sì** per aggiungere il supporto ATL al progetto e aprire la procedura guidata ATL selezionata.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[C++tipi di progetto in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
+[Tipi di progetto C++ in Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Nozioni fondamentali sugli oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programmazione con il codice runtime C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)

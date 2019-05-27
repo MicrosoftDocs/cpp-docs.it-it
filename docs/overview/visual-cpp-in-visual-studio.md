@@ -1,28 +1,29 @@
 ---
 title: C++ in Visual Studio
 description: Visual C++ è il nome del compilatore Microsoft C++, dell'editor di codice e degli strumenti correlati nell'IDE di Visual Studio. Usare Visual C++ per sviluppare programmi per Windows, Linux, Android e iOS.
-ms.date: 09/26/2018
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222610"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934155"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
 > [!NOTE]
-> Questa documentazione per sviluppatori si applica a Visual Studio 2015 e Visual Studio 2017.
+> Questa documentazione per sviluppatori si applica a Visual Studio 2015 e versioni successive. Usare il selettore di versione nella parte superiore sinistra della pagina in modo che corrisponda alla versione di Visual Studio in uso.
 >
 > Coloro che cercano un package ridistribuibile di Visual C++ per poter eseguire un programma possono visitare l'[Area download Microsoft](http://www.microsoft.com/download/) e digitare **Visual C++** nella casella di ricerca.
 
-
 Microsoft Visual C++, in genere abbreviato in Visual C++ o MSVC, è il nome di librerie e strumenti di sviluppo in linguaggio assembly, C e C++ disponibili come parte di Visual Studio in Windows. Questi strumenti e librerie consentono di creare app per la piattaforma UWP (Universal Windows Platform), applicazioni server e desktop Windows native, app e librerie multipiattaforma eseguite in Windows, Linux, Android e iOS, nonché librerie e app gestite che usano .NET Framework. È possibile usare Visual C++ per scrivere un'ampia gamma di app che spaziano da semplici app console ad app più sofisticate e complesse per desktop Windows, da driver di dispositivo e componenti del sistema operativo a giochi multipiattaforma per dispositivi mobili e da app per i più piccoli dispositivi IoT ad app HPC (High Performance Computing) multi-server nel cloud di Azure.
+
+Visual Studio 2015, 2017 e 2019 possono essere installati side-by-side. È possibile usare Visual Studio 2019 (set di strumenti del compilatore v142) per modificare e compilare programmi usando il set di strumenti di Visual Studio 2015 (v140) e Visual Studio 2017 (v141).
 
 ## <a name="whats-new-and-conformance-history"></a>Novità e cronologia conformità
 

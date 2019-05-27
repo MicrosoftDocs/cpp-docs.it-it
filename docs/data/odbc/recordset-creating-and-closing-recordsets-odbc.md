@@ -1,6 +1,6 @@
 ---
-title: 'Recordset: Creazione e chiusura di recordset (ODBC)'
-ms.date: 11/04/2016
+title: 'Recordset: creazione e chiusura di recordset (ODBC)'
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, creating
 - recordsets, creating
@@ -9,58 +9,61 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395586"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707989"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset: Creazione e chiusura di recordset (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset: creazione e chiusura di recordset (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+> [!NOTE] 
+> La Creazione guidata consumer ODBC MFC non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile creare manualmente un consumer.
 
-Per usare un set di record, costruire un oggetto recordset e quindi chiamare relativo `Open` funzione membro per eseguire la query del recordset e selezionare i record. Dopo aver terminato il recordset, chiudere ed eliminare definitivamente l'oggetto.
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-Questo argomento viene illustrato:
+Per usare un recordset, costruire un oggetto recordset e quindi chiamare la relativa funzione membro `Open` per eseguire la query del recordset e selezionare i record. Al termine del recordset, chiudere ed eliminare definitivamente l'oggetto.
+
+In questo argomento:
 
 - [Quando e come creare un oggetto recordset](#_core_creating_recordsets_at_run_time).
 
-- [Quando e come è possibile qualificare il comportamento del recordset da parametrizzata, il filtro, ordinamento o bloccandolo](#_core_setting_recordset_options).
+- [Quando e come qualificare il comportamento del recordset tramite la parametrizzazione, il filtro, l'ordinamento o il blocco](#_core_setting_recordset_options).
 
 - [Quando e come chiudere un oggetto recordset](#_core_closing_a_recordset).
 
 ##  <a name="_core_creating_recordsets_at_run_time"></a> Creazione di recordset in fase di esecuzione
 
-Prima di poter creare gli oggetti recordset nel programma, si scrivono in genere le classi del recordset specifici dell'applicazione. Per altre informazioni su questo passaggio preliminare, vedere [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
+Prima di poter creare oggetti recordset in un programma, in genere si scrivono le classi recordset specifiche dell'applicazione. Per altre informazioni su questo passaggio preliminare, vedere [Aggiunta di un consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
-Aprire un oggetto dynaset o di uno snapshot quando è necessario selezionare record da un'origine dati. Il tipo dell'oggetto da creare dipende cosa occorre per eseguire operazioni con i dati nell'applicazione e su quali il driver ODBC supporta. Per altre informazioni, vedere [Dynaset](../../data/odbc/dynaset.md) e [Snapshot](../../data/odbc/snapshot.md).
+Aprire un oggetto dynaset o snapshot quando è necessario selezionare record da un'origine dati. Il tipo di oggetto da creare dipende dalle operazioni che è necessario eseguire con i dati nell'applicazione e dagli elementi supportati dal driver ODBC. Per altre informazioni, vedere [Dynaset](../../data/odbc/dynaset.md) e [Snapshot](../../data/odbc/snapshot.md).
 
-#### <a name="to-open-a-recordset"></a>Per aprire un set di record
+#### <a name="to-open-a-recordset"></a>Per aprire un recordset
 
-1. Costruire un oggetto del `CRecordset`-classe derivata.
+1. Costruire un oggetto della classe derivata da `CRecordset`.
 
    È possibile costruire l'oggetto nell'heap o nello stack frame di una funzione.
 
-1. Facoltativamente è possibile modificare il comportamento di recordset predefinito. Per le opzioni disponibili, vedere [impostazione delle opzioni di Recordset](#_core_setting_recordset_options).
+1. Facoltativamente, è possibile modificare il comportamento del recordset predefinito. Per le opzioni disponibili, vedere [Impostazione delle opzioni del recordset](#_core_setting_recordset_options).
 
-1. Chiamare l'oggetto [aperto](../../mfc/reference/crecordset-class.md#open) funzione membro.
+1. Chiamare la funzione membro [Open](../../mfc/reference/crecordset-class.md#open) dell'oggetto.
 
-Nel costruttore, passare un puntatore a un `CDatabase` dell'oggetto o passare NULL per usare un oggetto di database temporaneo che costruisce il framework e verrà aperto in base alla stringa di connessione restituita dal [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect) funzione membro. Il `CDatabase` oggetto potrebbe già essere connesso a un'origine dati.
+Nel costruttore, passare un puntatore a un oggetto `CDatabase` o passare NULL per usare un oggetto di database temporaneo che viene costruito e aperto dal framework in base alla stringa di connessione restituita dalla funzione membro [GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect). L'oggetto `CDatabase` potrebbe essere già connesso a un'origine dati.
 
-La chiamata a `Open` Usa SQL per selezionare record dall'origine dati. Il primo record selezionati (se presente) è il record corrente. I valori dei campi del record vengono archiviati nei membri dati di campo dell'oggetto recordset. Se sono stati selezionati tutti i record, sia la `IsBOF` e `IsEOF` funzioni membro restituiscono 0.
+La chiamata a `Open` usa SQL per selezionare i record dall'origine dati. Il primo record selezionato (se presente) è il record corrente. I valori dei campi di questo record sono archiviati nei membri dati di campo dell'oggetto recordset. Se sono stati selezionati record, le funzioni membro `IsBOF` e `IsEOF` restituiscono 0.
 
-Nel [aperto](../../mfc/reference/crecordset-class.md#open) chiamata, è possibile:
+Nella chiamata [Open](../../mfc/reference/crecordset-class.md#open) è possibile:
 
-- Specificare se il set di record è un dynaset o uno snapshot. I recordset aperti come snapshot per impostazione predefinita. In alternativa, è possibile specificare un recordset forward-only, che consente solo scorrimento in avanti, un record alla volta.
+- Specificare se il recordset è un dynaset o uno snapshot. Per impostazione predefinita, i recordset vengono aperti come snapshot. In alternativa, è possibile specificare un recordset forward-only, che consente solo lo scorrimento in avanti, un record alla volta.
 
-   Per impostazione predefinita, un set di record Usa il tipo predefinito archiviato nel `CRecordset` membro dati `m_nDefaultType`. Procedure guidate di scrivono codice per inizializzare `m_nDefaultType` per il tipo di recordset scelto nella procedura guidata. Invece di accettazione di questa impostazione predefinita, è possibile sostituire un altro tipo di recordset.
+   Per impostazione predefinita, un recordset usa il tipo predefinito archiviato nel membro dati `m_nDefaultType` di `CRecordset`. Le procedure guidate scrivono il codice per inizializzare `m_nDefaultType` per il tipo di recordset scelto nella procedura guidata. Invece di accettare questa impostazione predefinita, è possibile sostituire un altro tipo di recordset.
 
-- Specificare una stringa per sostituire il valore predefinito SQL **seleziona** istruzione che crea il recordset.
+- Specificare una stringa per sostituire l'istruzione SQL **SELECT** predefinita costruita dal recordset.
 
-- Specificare se il recordset è di sola lettura o di solo accodamento. Recordset consentono completi l'aggiornamento per impostazione predefinita, ma è possibile limitare che per l'aggiunta di record solo o è possibile disattivare tutti gli aggiornamenti.
+- Specificare se il recordset è di sola lettura o di solo accodamento. Per impostazione predefinita, i recordset consentono un aggiornamento completo, ma è possibile limitare questo comportamento solo all'aggiunta di nuovi record oppure disattivare tutti gli aggiornamenti.
 
-Nell'esempio seguente viene illustrato come aprire un oggetto di snapshot di sola lettura della classe `CStudentSet`, una classe specifica dell'applicazione:
+Nell'esempio seguente viene illustrato come aprire un oggetto snapshot di sola lettura della classe `CStudentSet`, una classe specifica dell'applicazione:
 
 ```cpp
 // Construct the snapshot object
@@ -71,41 +74,41 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Dopo aver chiamato `Open`, usare i membri di dati e funzioni membro dell'oggetto per lavorare con i record. In alcuni casi, è possibile rieseguire una query o aggiornare il recordset in modo da includere le modifiche apportate nell'origine dati. Per altre informazioni, vedere [Recordset: Ripetizione di query in un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Dopo aver chiamato `Open`, usare le funzioni membro e i membri dati dell'oggetto per lavorare con i record. In alcuni casi, può essere necessario ripetere una query o aggiornare il recordset in modo da includere le modifiche apportate nell'origine dati. Per altre informazioni, vedere [Recordset: ripetizione di una query su un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  La stringa di connessione utilizzata durante lo sviluppo potrebbe non essere la stessa stringa di connessione che servono agli utenti finali. Per informazioni sulla generalizzazione dell'applicazione a questo proposito, vedere [Zdroj dat: Gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  La stringa di connessione usata durante lo sviluppo può non essere la stessa stringa di connessione necessaria per gli utenti finali. Per informazioni sulla generalizzazione dell'applicazione a questo proposito, vedere [Origine dati: gestione delle connessioni (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-##  <a name="_core_setting_recordset_options"></a> Impostazione delle opzioni di Recordset
+##  <a name="_core_setting_recordset_options"></a> Impostazione delle opzioni del recordset
 
-Dopo la costruzione dell'oggetto recordset ma prima di chiamare `Open` per selezionare record, si potrebbe voler impostare alcune opzioni per controllare il comportamento del recordset. Per tutti i recordset, è possibile:
+Dopo la costruzione dell'oggetto recordset ma prima della chiamata a `Open` per selezionare i record, è possibile impostare alcune opzioni per controllare il comportamento del recordset. Per tutti i recordset, è possibile:
 
-- Specificare una [filtro](../../data/odbc/recordset-filtering-records-odbc.md) alla selezione dei record.
+- Specificare un [filtro](../../data/odbc/recordset-filtering-records-odbc.md) per vincolare la selezione dei record.
 
-- Specificare una [ordinamento](../../data/odbc/recordset-sorting-records-odbc.md) affinché i record.
+- Specificare un criterio di [ordinamento](../../data/odbc/recordset-sorting-records-odbc.md) per i record.
 
-- Specificare [parametri](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) pertanto è possibile selezionare i record usando le informazioni recuperate o calcolati in fase di esecuzione.
+- Specificare [parametri](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) in modo da selezionare i record tramite informazioni recuperate o calcolate in fase di esecuzione.
 
-Se le condizioni, è anche possibile impostare l'opzione seguente:
+Se le condizioni lo richiedono, è anche possibile impostare l'opzione seguente:
 
-- Se il recordset è aggiornabile e supporta le opzioni di blocco, specificare il [blocco](../../data/odbc/recordset-locking-records-odbc.md) metodo usato per gli aggiornamenti.
+- Se il recordset è aggiornabile e supporta le opzioni di blocco, specificare il metodo di [blocco](../../data/odbc/recordset-locking-records-odbc.md) usato per gli aggiornamenti.
 
 > [!NOTE]
->  Per influire sulla selezione del record, è necessario impostare queste opzioni prima di chiamare il `Open` funzione membro.
+>  Per influire sulla selezione dei record, è necessario impostare queste opzioni prima di chiamare la funzione membro `Open`.
 
-##  <a name="_core_closing_a_recordset"></a> Chiusura di un Recordset
+##  <a name="_core_closing_a_recordset"></a> Chiusura di un recordset
 
-Al termine del recordset, è necessario eliminarlo e deallocare la memoria.
+Al termine del recordset, è necessario eliminarlo e deallocare la relativa memoria.
 
 #### <a name="to-close-a-recordset"></a>Per chiudere un recordset
 
-1. Chiamare relativi [Chiudi](../../mfc/reference/crecordset-class.md#close) funzione membro.
+1. Chiamare la relativa funzione membro [Close](../../mfc/reference/crecordset-class.md#close).
 
 1. Eliminare definitivamente l'oggetto recordset.
 
-   Se è stata dichiarata nello stack frame di una funzione, l'oggetto viene eliminato automaticamente quando l'oggetto esce dall'ambito. In caso contrario, usare il **eliminare** operatore.
+   Se è stato dichiarato nello stack frame di una funzione, l'oggetto viene eliminato automaticamente quando esce dall'ambito. In caso contrario, usare l'operatore **delete**.
 
-`Close` libera il recordset `HSTMT` gestire. Ma non elimina l'oggetto di C++.
+`Close` libera l'handle `HSTMT` del recordset. Non elimina definitivamente l'oggetto C++.
 
 ## <a name="see-also"></a>Vedere anche
 

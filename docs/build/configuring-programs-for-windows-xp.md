@@ -1,39 +1,41 @@
 ---
 title: Configurazione di programmi per Windows XP
-ms.date: 02/02/2018
+ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446368"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837129"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurazione di programmi per Windows XP
 
-Poiché Visual Studio supporta più set di strumenti della piattaforma, è possibile includere i sistemi operativi e librerie di runtime che non sono supportate dal set di strumenti predefinito. Passando il set di strumenti della piattaforma, ad esempio, è possibile utilizzare c++11, c++14 e miglioramenti di C + + 17 lingue supportati dal compilatore MSVC in Visual Studio per creare le app destinate a Windows XP e Windows Server 2003. È possibile anche usare set di strumenti della piattaforma meno recenti per mantenere il codice legacy compatibili con file binario e comunque sfruttare le funzionalità più recenti dell'IDE di Visual Studio.
+Poiché Visual Studio supporta più set di strumenti della piattaforma, è possibile considerare sistemi operativi e librerie di runtime non supportati dal set di strumenti predefinito. Ad esempio, cambiando set di strumenti della piattaforma è possibile usare i miglioramenti dei linguaggi C++11, C++14 e C++17 supportati dal compilatore MSVC in Visual Studio per creare app destinate a Windows XP e Windows Server 2003. È anche possibile usare set di strumenti della piattaforma meno recenti per mantenere il codice legacy compatibile con il codice binario sfruttando comunque le funzionalità più recenti dell'IDE di Visual Studio.
 
-## <a name="install-the-windows-xp-platform-toolset"></a>Installare il set di strumenti della piattaforma Windows XP
+Visual Studio 2019 e versioni successive non include il supporto per la creazione di codice per Windows XP con il set di strumenti v142. Il supporto per lo sviluppo di Windows XP con il set di strumenti v141 incluso in Visual Studio 2017 è disponibile come componente facoltativo del programma di installazione di Visual Studio.
 
-Per ottenere il set di strumenti della piattaforma e i componenti di destinazione Windows XP e Windows Server 2003 in Visual Studio 2017, eseguire l'installazione di Visual Studio. Quando si installa inizialmente Visual Studio o quando si sceglie **Modify** per modificare un'installazione esistente, assicurarsi che le **sviluppo Desktop con C++** viene selezionato il carico di lavoro. Nell'elenco dei componenti facoltativi per questo carico di lavoro, scegliere **supporto Windows XP per C++**, quindi scegliere **installare** oppure **Modify**.
+## <a name="install-the-windows-xp-platform-toolset"></a>Installare il set di strumenti della piattaforma di Windows XP
+
+Per ottenere i componenti e il set di strumenti della piattaforma per Windows XP e Windows Server 2003 in Visual Studio 2017, eseguire il programma di installazione di Visual Studio. Quando si installa Visual Studio per la prima volta o si sceglie **Modifica** per modificare un'installazione esistente, assicurarsi che sia selezionato il carico di lavoro **Sviluppo di applicazioni desktop con C++**. Nell'elenco dei componenti facoltativi di questo carico di lavoro selezionare **Supporto Windows XP per C++** e quindi scegliere **Installa** o **Modifica**.
 
 ## <a name="windows-xp-targeting-experience"></a>Esperienza destinata a Windows XP
 
-Il set di strumenti della piattaforma Windows XP incluso in Visual Studio è una versione di Windows 7 SDK, ma usa il compilatore C++ corrente. Configura inoltre le proprietà del progetto per i valori predefiniti appropriati, ad esempio, la specifica di un linker compatibile per specificare come destinazione di livello inferiore. Solo Windows desktop le app create usando un set strumenti della piattaforma Windows XP eseguite in Windows XP e Windows Server 2003, ma queste App sono eseguibili anche su sistemi operativi Windows più recenti.
+Il set di strumenti della piattaforma di Windows XP incluso in Visual Studio è una versione di Windows 7 SDK, ma usa il compilatore C++ corrente. Configura inoltre le proprietà del progetto in base ai valori predefiniti appropriati, ad esempio specificando un linker compatibile per supportare una versione precedente. Solo le app desktop Windows create usando il set di strumenti della piattaforma di Windows XP vengono eseguite in Windows XP e Windows Server 2003, ma queste app possono essere eseguite anche in sistemi operativi Windows più recenti.
 
 #### <a name="to-target-windows-xp"></a>Per usare Windows XP
 
 1. In **Esplora soluzioni** aprire il menu di scelta rapida per il progetto e scegliere **Proprietà**.
 
-1. Nel **pagine delle proprietà** finestra di dialogo per il progetto, sotto **le proprietà di configurazione** > **generali**, impostare il **setstrumentidellapiattaforma** proprietà per il set di strumenti desiderato di Windows XP. Ad esempio, scegliere **Visual Studio 2017 - Windows XP (v141_xp)** per creare codice per Windows XP e Windows Server 2003 con Microsoft C++ compilatore in Visual Studio 2017.
+1. Nella finestra di dialogo **Pagine delle proprietà** del progetto impostare in **Proprietà di configurazione** > **Generale** la proprietà **Set strumenti della piattaforma** sul set di strumenti di Windows XP desiderato. Ad esempio, scegliere **Visual Studio 2017 - Windows XP (v141_xp)** per creare codice per Windows XP e Windows Server 2003 usando il compilatore Microsoft C++ in Visual Studio 2017.
 
 ### <a name="c-runtime-support"></a>Supporto di C++ runtime
 
-Nonché il set di strumenti della piattaforma Windows XP, la libreria Runtime C (CRT), della libreria Standard C++, libreria ATL (Active Template), libreria di Runtime di concorrenza (ConCRT), libreria PPL (Parallel Patterns Library), (MFC (Microsoft Foundation Class Library) e C++ AMP (C++ Accelerated Massive programmazione) libreria includono il supporto di runtime per Windows XP e Windows Server 2003. Per questi sistemi operativi, le versioni minime supportate sono Windows XP Service Pack 3 (SP3) per x86, Windows XP Service Pack 2 (SP2) per x64 e Windows Server 2003 Service Pack 2 (SP2) per x86 e x64.
+Oltre al set di strumenti della piattaforma di Windows XP, la libreria di runtime C (CRT), la libreria standard C++, la libreria ATL (Active Template Library), la libreria runtime di concorrenza (ConCRT), la libreria PPL (Parallel Patterns Library), la libreria Microsoft Foundation Class (MFC) e la libreria C++ AMP (C++ Accelerated Massive Parallelism) includono anche il supporto del runtime per Windows XP e Windows Server 2003. Per questi sistemi operativi, le versioni minime supportate sono Windows XP Service Pack 3 (SP3) per x86, Windows XP Service Pack 2 (SP2) per x64 e Windows Server 2003 Service Pack 2 (SP2) per x86 e x64.
 
-Queste librerie sono supportate dal set di strumenti della piattaforma installati da Visual Studio, a seconda della destinazione:
+Queste librerie sono supportate dai set di strumenti della piattaforma installati da Visual Studio, a seconda della destinazione:
 
-|Libreria|Set di strumenti della piattaforma predefinito per il supporto delle app desktop Windows|Piattaforma del set di strumenti targeting Store App predefinite|Set strumenti della piattaforma Windows XP come destinazione Windows XP, Windows Server 2003|
+|Libreria|Set di strumenti della piattaforma predefinito per il supporto delle app desktop Windows|Set di strumenti della piattaforma predefinito per il supporto delle app dello Store|Set di strumenti della piattaforma di Windows XP per il supporto di Windows XP, Windows Server 2003|
 |---|---|---|---|
 |CRT|x|x|x|
 |Libreria standard C++|x|x|x|
@@ -43,28 +45,28 @@ Queste librerie sono supportate dal set di strumenti della piattaforma installat
 |C++ AMP|x|x||
 
 > [!NOTE]
-> Le app scritte in C++/CLI e destinazione di .NET Framework 4 vengono eseguiti in Windows XP e Windows Server 2003.
+> Le app scritte in C++/CLI per .NET Framework 4 vengono eseguite in Windows XP e Windows Server 2003.
 
 ### <a name="differences-between-the-toolsets"></a>Differenze tra i set di strumenti
 
-A causa delle differenze nel supporto di piattaforme e librerie, l'esperienza di sviluppo per le app che usano un set di strumenti della piattaforma Windows XP non è completa come per le app che usano set strumenti della piattaforma Visual Studio l'impostazione predefinita.
+A causa delle differenze nel supporto di piattaforme e librerie, l'esperienza di sviluppo per le app che usano un set di strumenti della piattaforma per Windows XP non è completa come per le app che usano il set di strumenti della piattaforma predefinito per Visual Studio.
 
 - **Funzionalità del linguaggio C++**
 
-   Solo funzionalità del linguaggio C++ implementata in Visual Studio 2012 sono supportate nelle App che usano il v110\_xp set strumenti della piattaforma. Solo funzionalità del linguaggio C++ implementata in Visual Studio 2013 sono supportate nelle App che usano il v120\_xp set strumenti della piattaforma. Solo funzionalità del linguaggio C++ implementata in Visual Studio 2015 sono supportate nelle App che usano il v140\_xp set strumenti della piattaforma. Visual Studio Usa il compilatore corrispondente quando esegue le compilazioni usando il set di strumenti di piattaforma meno recenti. Usare il set di strumenti della piattaforma Windows XP più recente per sfruttare i vantaggi delle funzionalità del linguaggio C++ aggiuntive implementate in tale versione del compilatore.
+   Nelle app che usano il set di strumenti della piattaforma v110\_xp sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2012. Nelle app che usano il set di strumenti della piattaforma v120\_xp sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2013. Nelle app che usano il set di strumenti della piattaforma v140\_xp sono supportate solo le funzionalità del linguaggio C++ implementate in Visual Studio 2015. Visual Studio usa il compilatore corrispondente quando esegue le compilazioni con set di strumenti della piattaforma precedenti. Usare il set di strumenti della piattaforma di Windows XP più recente per sfruttare le funzionalità aggiuntive del linguaggio C++ implementate in tale versione del compilatore.
 
 - **Debug remoto**
 
-   Remote Tools per Visual Studio non supporta il debug remoto in Windows XP o Windows Server 2003. Per eseguire il debug di un'app quando è in esecuzione in Windows XP o Windows Server 2003, è possibile utilizzare un debugger da una versione precedente di Visual Studio per eseguire il debug in locale o remoto. Ciò è simile all'esecuzione del debug di un'app in Windows Vista, che supporta il runtime del set di strumenti della piattaforma, ma non il debug remoto.
+   Remote Tools per Visual Studio non supporta il debug remoto in Windows XP o Windows Server 2003. Per eseguire il debug di un'app in esecuzione in Windows XP o Windows Server 2003, è possibile usare un debugger di una versione precedente di Visual Studio per eseguirne il debug in locale o remoto. Ciò è simile all'esecuzione del debug di un'app in Windows Vista, che supporta il runtime del set di strumenti della piattaforma, ma non il debug remoto.
 
 - **Analisi statica**
 
-   I set di strumenti della piattaforma Windows XP non supportano l'analisi statica in quanto le annotazioni SAL per il SDK di Windows 7 e le librerie di runtime non sono compatibili. Quando si desidera eseguire l'analisi statica in un'app che supporta Windows XP o Windows Server 2003, è possibile passare temporaneamente la soluzione per il set di strumenti della piattaforma predefinito per eseguire l'analisi e quindi tornare a set strumenti della piattaforma di Windows XP per compilare l'app.
+   I set di strumenti della piattaforma di Windows XP non supportano l'analisi statica, perché le annotazioni SAL per Windows 7 SDK e le librerie di runtime non sono compatibili. Quando si vuole eseguire l'analisi statica su un'app che supporta Windows XP o Windows Server 2003, è possibile passare temporaneamente al set di strumenti della piattaforma predefinito per eseguire l'analisi e quindi tornare al set di strumenti della piattaforma di Windows XP per compilare l'app.
 
 - **Debug della grafica DirectX**
 
-   Poiché il Debugger della grafica non supporta l'API di Direct3D 9, non può essere utilizzato per eseguire il debug di App che usano Direct3D in Windows XP o Windows Server 2003. Tuttavia, se l'app implementa un renderer alternativo che usa le API Direct3D 10 o Direct3D 11 API, il debugger grafica può essere usato per diagnosticare i problemi mediante tali API.
+   Poiché lo strumento Debugger grafica non supporta l'API Direct3D 9, non può essere usato per eseguire il debug delle app che usano Direct3D in Windows XP o Windows Server 2003. Tuttavia, se l'app implementa un renderer alternativo che usa le API Direct3D 10 o Direct3D 11 API, il debugger grafica può essere usato per diagnosticare i problemi mediante tali API.
 
 - **Compilazione HLSL**
 
-   Per impostazione predefinita, il set di strumenti di Windows XP non compila i file di codice sorgente HLSL. Per compilare i file HLSL, scaricare e installare DirectX SDK di giugno 2010, quindi impostare le directory VC del progetto per includerlo. Per altre informazioni, vedere la "DirectX SDK non registra i percorsi di inclusione e della libreria con Visual Studio 2010" sezione del [giugno 2010 pagina di download di DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   Per impostazione predefinita, il set di strumenti di Windows XP non compila i file di codice sorgente HLSL. Per compilare i file HLSL, scaricare e installare DirectX SDK di giugno 2010, quindi impostare le directory VC del progetto per includerlo. Per altre informazioni, vedere la sezione "DirectX SDK Does Not Register Include/Library Paths with Visual Studio 2010" (DirectX SDK non registra i percorsi di inclusione e della libreria con Visual Studio 2010) della [pagina di download di DirectX SDK giugno 2010](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

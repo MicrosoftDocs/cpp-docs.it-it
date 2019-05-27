@@ -1,102 +1,112 @@
 ---
 title: Creazione di un consumer semplice
-ms.date: 11/06/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: cc24df1f15d43c384e6bf3853766fad82cf51255
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362025"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707706"
 ---
 # <a name="creating-a-simple-consumer"></a>Creazione di un consumer semplice
 
-Usare la **Creazione guidata progetto ATL** e **Creazione guidata Consumer OLE DB ATL** per generare un consumer di modelli OLE DB.
+::: moniker range="vs-2019"
 
-## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Per creare un'applicazione console per un consumer OLE DB
+La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente. Per altre informazioni, vedere [Creazione di un consumer senza utilizzare una procedura guidata](creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Usare la **Creazione guidata progetto ATL** e la **Creazione guidata Consumer OLE DB ATL** per generare un consumer di modelli OLE DB.
+
+## <a name="to-create-a-console-application-for-an-ole-db-consumer"></a>Per crea un'applicazione console per un consumer OLE DB
 
 1. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
 
    Verrà visualizzata la finestra di dialogo **Nuovo progetto** .
 
-1. Nel **tipi di progetto** riquadro, fare clic sul **installato** > **Visual C++** > **Desktop Windows** cartella, e quindi fare clic sui **Creazione guidata applicazione Desktop Windows** icona nel **modelli** riquadro. Nel **Name** immettere il nome del progetto, ad esempio *MyCons*.
+1. Nel riquadro **Tipi di progetto** fare clic sulla cartella **Installati** > **Visual C++**  > **Desktop di Windows** e quindi fare clic sull'icona **Creazione guidata applicazione desktop di Windows** nel riquadro **Modelli**. Nella casella **Nome** immettere il nome del progetto, ad esempio *MyCons*.
 
 1. Fare clic su **OK**.
 
-   Il **progetto Desktop di Windows** procedura guidata viene visualizzata.
+   Viene avviata la **Creazione guidata applicazione desktop di Windows**.
 
-1. Nel **Application Settings** pagina, selezionare **applicazione Console**e quindi selezionare **aggiungere file di intestazione comuni per ATL**.
+1. Nella pagina **Impostazioni applicazione** selezionare **Applicazione console** e quindi **Aggiungi file di intestazione comune per ATL**.
 
 1. Fare clic su **OK** per chiudere la procedura guidata e generare il progetto.
 
-Successivamente, usare il **Creazione guidata Consumer OLE DB ATL** per aggiungere un oggetto del consumer OLE DB.
+Usare quindi la **Creazione guidata Consumer OLE DB ATL** per aggiungere un oggetto consumer OLE DB.
 
-## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Per creare un consumer con la creazione guidata Consumer OLE DB ATL
+## <a name="to-create-a-consumer-with-the-atl-ole-db-consumer-wizard"></a>Per creare un consumer con la Creazione guidata consumer OLE DB ATL
 
-1. Nelle **Esplora soluzioni**, fare doppio clic su di `MyCons` progetto.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto `MyCons`.
 
-1. Nel menu di scelta rapida, fare clic su **Add**, quindi fare clic su **nuovo elemento**.
+1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Nuovo elemento**.
 
    Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**.
 
-1. Nel **categorie** riquadro, fare clic su **installati** > **Visual C++** > **ATL**, fare clic su di **Consumer OLEDB ATL** icona nel **modelli** riquadro e quindi fare clic su **Add**.
+1. Nel riquadro **Categorie** fare clic su **Installati** > **Visual C++**  > **ATL**, fare clic sull'icona  **Consumer OLE DB ATL** nel riquadro **Modelli** e quindi fare clic su **Aggiungi**.
 
-   Il **Creazione guidata Consumer OLE DB ATL** viene visualizzata.
+   Viene avviata la **Creazione guidata consumer OLE DB ATL**.
 
-1. Scegliere il **Zdroj dat** pulsante.
+1. Fare clic sul pulsante **Origine dati**.
 
-   Il **proprietà di Data Link** verrà visualizzata la finestra di dialogo.
+   Viene visualizzata la finestra di dialogo **Proprietà di Data Link**.
 
-1. Nel **proprietà di Data Link** dialogo casella, eseguire le operazioni seguenti:
+1. Nella finestra di dialogo **Proprietà di Data Link** eseguire le operazioni seguenti:
 
-   1. Nel **Provider** scheda, specificare un provider OLE DB.
+   1. Nella scheda **Provider** specificare un provider OLE DB.
 
-   1. Nel **connessione** , specificare le informazioni necessarie, ad esempio nome del server, l'ID di accesso e password per l'origine dati e il database nel server.
-
-      > [!NOTE]
-      > Si verifica un problema di sicurezza con il **Consenti salvataggio password** funzionalità delle **proprietà di Data Link** nella finestra di dialogo. Nelle **immettere le informazioni per l'accesso al server**, sono presenti due pulsanti di opzione: **La sicurezza integrata di Windows usare NT** e **usare un nome utente specifico e una password**.
+   1. Nella scheda **Connessione** specificare le informazioni necessarie, ad esempio il nome del server, l'ID di accesso e la password per l'origine dati e il database nel server.
 
       > [!NOTE]
-      > Se si seleziona **usare un nome utente specifico e una password**, è possibile scegliere di salvare la password (usando la **Consenti salvataggio password** casella di controllo), tuttavia, questa opzione non è sicura. Si consiglia di selezionare **utilizza Windows protezione integrata NT**; questa opzione utilizza Windows NT per verificare la tua identità.
+      > Esiste un problema di sicurezza relativo alla funzionalità **Consenti salvataggio password** della finestra di dialogo **Proprietà di Data Link**. In **Immettere le informazioni per l'accesso al server** sono disponibili due pulsanti di opzione: **Usa sicurezza integrata di Windows NT** e **Utilizza nome utente e password specifici**.
 
       > [!NOTE]
-      > Se non è possibile utilizzare la sicurezza integrata di Windows NT, è consigliabile usare un'applicazione di livello intermedio per richiedere all'utente la password o per archiviare la password in un percorso con meccanismi di sicurezza per consentirne la protezione (invece che nel codice sorgente).
+      > Se si seleziona **Utilizza nome utente e password specifici**, è possibile scegliere di salvare la password (usando la casella di controllo **Consenti salvataggio password**), ma questa opzione non è sicura. È consigliabile selezionare **Usa sicurezza integrata di Windows NT**: questa opzione usa Windows NT per verificare l'identità dell'utente.
 
-   1. Dopo aver selezionato il provider e altre impostazioni, fare clic su **Test connessione** per verificare le selezioni effettuate nelle pagine precedenti della finestra di dialogo. Se il **risultati** casella reports `Test connection succeeded`, fare clic su **OK** per creare il collegamento di dati.
+      > [!NOTE]
+      > Se non è possibile ricorrere alla sicurezza integrata di Windows NT, è consigliabile usare un'applicazione di livello intermedio per richiedere all'utente la password o per archiviare la password in un percorso con meccanismi di sicurezza per consentirne la protezione (invece che nel codice sorgente).
 
-   Il **Seleziona oggetto di Database** verrà visualizzata la finestra di dialogo.
+   1. Dopo aver selezionato il provider e altre impostazioni, fare clic su **Test connessione** per verificare le selezioni effettuate nelle pagine precedenti della finestra di dialogo. Se la casella **Risultati** indica `Test connection succeeded`, fare clic su **OK** per creare il collegamento dati.
 
-1. Usare il controllo albero per selezionare una tabella, vista o stored procedure. Per questo esempio, selezionare la `Products` dalla tabella di `Northwind` database.
+   Verrà visualizzata la finestra di dialogo **Seleziona oggetto di database**.
 
-1. Fare clic su **OK**. In questo modo verrà nuovamente visualizzato il **Creazione guidata Consumer OLE DB ATL**.
+1. Usare il controllo albero per selezionare una tabella, una visualizzazione o una stored procedure. Per questo esempio, selezionare la tabella `Products` dal database `Northwind`.
 
-1. I nomi di termine della procedura guidata `Class` e **file con estensione h** in base al nome della tabella, vista o una stored procedure che è stato selezionato. Se si desidera, è possibile modificare questi nomi.
+1. Fare clic su **OK**. Viene visualizzata di nuovo la **Creazione guidata consumer OLE DB ATL**.
 
-1. Cancella il **con attributi** casella di controllo in modo che la procedura guidata crea il codice di consumer usando [classi di modelli OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) anziché il valore predefinito [attributi del consumer OLE DB](../../windows/ole-db-consumer-attributes.md).
+1. La procedura guidata immette i nomi per `Class` e **File con estensione h** in base al nome della tabella, della visualizzazione o della stored procedure selezionata. È possibile modificare questi nomi se lo si desidera.
 
-1. Sotto **tipo**, selezionare **comando**.
+1. Deselezionare la casella di controllo **Con attributi** in modo che la procedura guidata crei il codice del consumer tramite [classi di modelli OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) invece degli [attributi del consumer OLE DB](../../windows/ole-db-consumer-attributes.md) predefiniti.
 
-   La procedura guidata crea una [CCommand](../../data/oledb/ccommand-class.md)-basati su consumer, se si seleziona **comando** o un [CTable](../../data/oledb/ctable-class.md)-basati su consumer, se si seleziona **tabella**. La classe di tabella o un comando è denominata dopo l'oggetto selezionato, ma è possibile modificare il nome.
+1. In **Tipo** selezionare **Comando**.
 
-1. Sotto **supporto**, lasciare il **modifica**, **Inserisci**, e **Elimina** deselezionate le caselle.
+   La procedura guidata crea un consumer basato su [CCommand](../../data/oledb/ccommand-class.md) se si seleziona **Comando** o un consumer basato su [CTable](../../data/oledb/ctable-class.md) se si seleziona **Tabella**. La classe di tabella o di comando viene denominata in base all'oggetto selezionato, ma è possibile modificare il nome.
 
-   Selezionare il **Change**, **Inserisci**, e **Elimina** caselle di controllo per supportare la modifica, inserimento ed eliminazione di record nel set di righe. Per altre informazioni sulla scrittura di dati per i dati dell'archivio, vedere [aggiornamento dei rowset](../../data/oledb/updating-rowsets.md).
+1. In **Supporto** lasciare deselezionate le caselle **Cambia**, **Inserisci** ed **Elimina**.
 
-1. Fare clic su **fine** per creare i consumer.
+   Selezionare le caselle di controllo **Cambia**, **Inserisci** ed **Elimina** per supportare la modifica, l'inserimento e l'eliminazione di record nel set di righe. Per altre informazioni sulla scrittura di dati nell'archivio dati, vedere [Aggiornamento dei set di righe](../../data/oledb/updating-rowsets.md).
 
-La procedura guidata genera una classe di comando e una classe di record utente, come illustrato nella [classi riguardano](../../data/oledb/consumer-wizard-generated-classes.md). La classe di comando assumerà il nome immesso nel `Class` finestra della procedura guidata (in questo caso, `CProducts`), e la classe di record utente avrà un nome nel formato "*NomeClasse*della funzione di accesso" (in questo caso, `CProductsAccessor`).
+1. Fare clic su **Fine** per creare il consumer.
+
+La procedura guidata genera una classe di comando e una classe di record utente, come mostrato in [Classi generate mediante la Creazione guidata consumer](../../data/oledb/consumer-wizard-generated-classes.md). Il nome della classe di comando sarà quello immesso nella casella `Class` nella procedura guidata (in questo caso `CProducts`), mentre il nome della classe di record utente avrà il formato "*NomeClasse*Accessor" (in questo caso `CProductsAccessor`).
 
 > [!NOTE]
-> La procedura guidata inserisce la riga seguente nel `Products.h`:
+> La procedura guidata inserisce la riga seguente in `Products.h`:
 
 ```cpp
 #error Security Issue: The connection string may contain a password
 ```
 
 > [!NOTE]
-> Questa riga impedisce all'applicazione consumer la compilazione e ricordarsi di controllare la stringa di connessione per le password impostate come hardcoded. Dopo avere verificato la stringa di connessione, è possibile rimuovere questa riga di codice.
+> Questa riga impedisce la compilazione dell'applicazione consumer e ricorda di controllare la stringa di connessione per individuare le password impostate come hardcoded. Dopo avere controllato la stringa di connessione, è possibile rimuovere questa riga di codice.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

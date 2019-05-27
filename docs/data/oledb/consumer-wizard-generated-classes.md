@@ -1,31 +1,34 @@
 ---
 title: Classi generate mediante la Creazione guidata consumer
-ms.date: 10/17/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- attribute-injected classes and methods
-- wizard-generated classes and methods
-- OLE DB consumers, wizard-generated classes and methods
-- command classes in OLE DB consumer
-- classes [C++], OLE DB Consumer Wizard-generated
-- consumer wizard-generated classes and methods
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 7cd1fbe69186a2fcdbf25f1b2aa12727c98065da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f172da3aefb3f2440ddb4bba41dc549b0bf4a926
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362243"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525133"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classi generate mediante la Creazione guidata consumer
 
-Quando si usa la **Creazione guidata Consumer OLE DB ATL** per generare un consumer, è possibile scegliere di mediante attributi modelli OLE DB o OLE DB. In entrambi i casi, verrà generata una classe di comando e una classe di record utente. La classe di comando contiene codice che consente di aprire l'origine dati e il set di dati specificati nella procedura guidata. La classe di record utente contiene una mappa delle colonne per la tabella di database selezionata. Tuttavia, il codice generato in ciascuno dei casi sarà differente:
 
-- Se si seleziona un consumer basato su modelli, verrà generata una classe di comando e una classe di record utente. La classe di comando assumerà il nome immesso nel **classe** casella nella procedura guidata (ad esempio, `CProducts`), e la classe di record utente avrà un nome nel formato "*ClassName*della funzione di accesso" (ad esempio, `CProductsAccessor`). Entrambe le classi verranno inserite nel file di intestazione del consumer.
+::: moniker range="vs-2019"
 
-- Se si seleziona un consumer basato su attributi, la classe di record utente assumerà un nome nel formato "_*ClassName*Accessor" e verrà inserita. Vale a dire, sarà possibile visualizzare solo la classe di comando nell'editor di testo. è possibile visualizzare solo la classe di record utente come codice inserito. Per informazioni sulla visualizzazione di codice inserito, vedere [Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).
+La Creazione guidata consumer OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile aggiungere la funzionalità manualmente.
 
-Gli esempi seguenti usano una classe di comando creata nella `Products` tabella del `Northwind` database per illustrare il codice generato dalla creazione guidata consumer per la classe di comando e una classe di record utente.
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Quando si usa la **Creazione guidata consumer OLE DB ATL** per generare un consumer, è possibile scegliere di usare modelli OLE DB o attributi OLE DB. In entrambi i casi, verrà generata una classe di comando e una classe di record utente. La classe di comando contiene codice che consente di aprire l'origine dati e il set di dati specificati nella procedura guidata. La classe di record utente contiene una mappa delle colonne per la tabella di database selezionata. Tuttavia, il codice generato in ciascuno dei casi sarà differente:
+
+- Se si seleziona un consumer basato su modelli, verrà generata una classe di comando e una classe di record utente. Il nome della classe di comando sarà quello immesso nella casella **Classe** nella procedura guidata, ad esempio `CProducts`, mentre il nome della classe di record utente avrà il formato "*NomeClasse*Accessor", ad esempio `CProductsAccessor`. Entrambe le classi verranno inserite nel file di intestazione del consumer.
+
+- Se si seleziona un consumer basato su attributi, la classe di record utente assumerà un nome nel formato "_*ClassName*Accessor" e verrà inserita. Questo significa che nell'editor di testo sarà possibile visualizzare solo la classe di comando, mentre la classe di record utente può essere visualizzata solo come codice inserito. Per informazioni sulla visualizzazione di codice inserito, vedere [Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).
+
+Gli esempi seguenti usano una classe di comando creata nella tabella `Products` del database `Northwind` per mostrare il codice del consumer generato dalla procedura guidata per la classe di comando e la classe di record utente.
 
 ## <a name="templated-user-record-classes"></a>Classi di record utente basate su modelli
 
@@ -39,7 +42,7 @@ La prima parte della classe di record utente include le dichiarazioni dei membri
 > Se si modifica la classe di record utente o si crea un consumer personalizzato, le variabili dei dati devono essere specificate prima delle variabili di stato e di lunghezza.
 
 > [!NOTE]
-> La creazione guidata Consumer OLE DB ATL Usa il `DB_NUMERIC` tipo per associare tipi di dati numerici. In precedenza veniva usato `DBTYPE_VARNUMERIC` (il formato di cui è descritto dal `DB_VARNUMERIC` digitare, vedere OleDb). Se non si esegue la procedura guidata per creare i consumer, è consigliabile usare `DB_NUMERIC`.
+> La Creazione guidata consumer OLE DB ATL usa il tipo `DB_NUMERIC` per associare tipi di dati numerici. In precedenza veniva usato `DBTYPE_VARNUMERIC`, il cui formato viene descritto dal tipo `DB_VARNUMERIC`. Vedere Oledb.h. Se non si usa la procedura guidata per creare consumer, è consigliabile usare `DB_NUMERIC`.
 
 ```cpp
 // Products.H : Declaration of the CProducts class
@@ -148,11 +151,11 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>Classi di record utente inserite dagli attributi
 
-Se si crea un consumer OLE DB usando gli attributi di database ([db_command](../../windows/db-command.md) o [db_table](../../windows/db-table.md)), gli attributi inseriscono una classe di record utente con un nome nel formato "_*ClassName*Accessor". Se ad esempio la classe di comando è stata denominata `COrders`, la classe di record utente sarà `_COrdersAccessor`. Sebbene la classe di record utente venga visualizzata **Visualizzazione classi**, fare doppio clic sulla passa invece alla classe di comando o una tabella nel file di intestazione. In questi casi, la visualizzazione del codice inserito dagli attributi consente solo di visualizzare la dichiarazione effettiva della classe di record utente.
+Se si crea un consumer OLE DB usando gli attributi di database ([db_command](../../windows/db-command.md) o [db_table](../../windows/db-table.md)), gli attributi inseriscono una classe di record utente con un nome nel formato "_*ClassName*Accessor". Se ad esempio la classe di comando è stata denominata `COrders`, la classe di record utente sarà `_COrdersAccessor`. Benché la classe di record utente venga visualizzata in **Visualizzazione classi**, facendo doppio clic su di essa è possibile passare alla classe di comando o di tabella nel file di intestazione. In questi casi, la visualizzazione del codice inserito dagli attributi consente solo di visualizzare la dichiarazione effettiva della classe di record utente.
 
-È possibile che si verifichino problemi se si aggiungono metodi o si esegue l'override di metodi in consumer con attributi. Ad esempio, aggiungendo un costruttore di `_COrdersAccessor` alla dichiarazione `COrders` , in realtà viene aggiunto un costruttore alla classe `COrdersAccessor` inserita. Tale costruttore può inizializzare le colonne/parametri, ma non è possibile creare un costruttore di copia in questo modo, perché è possibile creare direttamente istanze di `COrdersAccessor` oggetto. Se è necessario un costruttore (o altri metodi) direttamente sul `COrders` (classe), è consigliabile definire una nuova classe che deriva da `COrders` e aggiungere i metodi necessari.
+È possibile che si verifichino problemi se si aggiungono metodi o si esegue l'override di metodi in consumer con attributi. Ad esempio, aggiungendo un costruttore di `_COrdersAccessor` alla dichiarazione `COrders` , in realtà viene aggiunto un costruttore alla classe `COrdersAccessor` inserita. Un costruttore di questo tipo può inizializzare le colonne o i parametri, ma non è possibile creare un costruttore di copia in questo modo, perché questo non può creare direttamente istanze dell'oggetto `COrdersAccessor`. Se è necessario un costruttore (o un altro metodo) direttamente nella classe `COrders`, è consigliabile definire una nuova classe derivante da `COrders` e aggiungere i metodi necessari qui.
 
-Nell'esempio seguente, la procedura guidata genera una dichiarazione della classe `COrders`, ma la classe di record utente `COrdersAccessor` non è visualizzata, perché si inseriscono gli attributi.
+Nell'esempio seguente la procedura guidata genera una dichiarazione per la classe `COrders`, ma la classe di record utente `COrdersAccessor` non viene visualizzata, perché viene inserita dagli attributi.
 
 ```cpp
 #define _ATL_ATTRIBUTES
@@ -183,6 +186,8 @@ class CProducts : public CCommand<CAccessor<_CProductsAccessor>>
 La maggior parte del codice inserito è identica o simile alla versione basata su modelli. Le principali differenze riguardano i metodi inseriti, che sono descritti in [Metodi generati mediante la Creazione guidata consumer](../../data/oledb/consumer-wizard-generated-methods.md).
 
 Per informazioni sulla visualizzazione di codice inserito, vedere [Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

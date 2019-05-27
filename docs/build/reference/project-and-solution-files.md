@@ -9,22 +9,22 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: 153480331d3300555c78a3489ca603d854893f5b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 37bfd1a6db2087e97ab76d3d06ed6f56e59b96e3
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446596"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707407"
 ---
 # <a name="project-and-solution-files"></a>File di soluzioni e di progetto
 
 Al momento della creazione di un progetto di Visual Studio vengono creati i file riportati di seguito. Questi file vengono usati per gestire i file di progetto nella soluzione.
 
-|Nomefile|Directory|Esplora soluzioni|Descrizione|
+|Nomefile|Directory|Esplora soluzioni|Description|
 |--------------|------------------------|--------------------------------|-----------------|
 |*Solname*.sln|*Projname*|Non visualizzato in Esplora soluzioni|File di *soluzione*. Organizza tutti gli elementi di un progetto o di più progetti in una soluzione.|
 |*Projname*.suo|*Projname*|Non visualizzato in Esplora soluzioni|File di *opzioni di soluzione*. Archivia le personalizzazioni per la soluzione, in modo che ogni volta che si apre un progetto o un file nella soluzione abbia l'aspetto e il comportamento desiderati.|
-|*Projname*.vcxproj|*Projname*|Non visualizzato in Esplora soluzioni|File di *progetto*. Archivia informazioni specifiche di ogni progetto. Nelle versioni precedenti, questo file è denominato *Projname*.vcproj o *Projname*.dsp. Per un esempio di un C++ file (con estensione vcxproj) del progetto, vedere [i file di progetto](project-files.md).|
+|*Projname*.vcxproj|*Projname*|Non visualizzato in Esplora soluzioni|File di *progetto*. Archivia informazioni specifiche di ogni progetto. Nelle versioni precedenti, questo file è denominato *Projname*.vcproj o *Projname*.dsp. Per un esempio di file di progetto C++ (con estensione vcxproj), vedere [File di progetto](project-files.md).|
 |*Projname*.vcxitems|*Projname*|Non visualizzato in Esplora soluzioni|File di *Progetto elementi condivisi*. Il progetto non viene compilato.  Al contrario, è possibile che un altro progetto C++ vi faccia riferimento e che i relativi file diventino parte del processo di compilazione del progetto che vi fa riferimento. In questo modo è possibile condividere codice comune tra progetti C++ multipiattaforma.|
 |*Projname*.sdf|*Projname*|Non visualizzato in Esplora soluzioni|File del *database di esplorazione*. Supporta le funzionalità di esplorazione e navigazione quali **Vai alla definizione**, **Trova tutti i riferimenti** e **Visualizzazione classi**. Viene generato analizzando i file di intestazione.|
 |*Projname.* vcxproj.filters|*Projname*|Non visualizzato in Esplora soluzioni|File dei *filtri*. Specifica dove inserire un file aggiunto alla soluzione. Ad esempio, un file con estensione h viene inserito nel nodo **File di intestazione**.|
@@ -34,4 +34,4 @@ Al momento della creazione di un progetto di Visual Studio vengono creati i file
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tipi di file creati per oggetto visivo C++ progetti](file-types-created-for-visual-cpp-projects.md)
+[Tipi di file creati per i progetti di Visual Studio C++](file-types-created-for-visual-cpp-projects.md)

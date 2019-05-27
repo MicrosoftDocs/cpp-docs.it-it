@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: 726d9f6573b4a3457205001875dac80b3a2997d7
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899447"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934167"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Miglioramenti della conformità C++ in Visual Studio 2017 versioni 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159)
 
-Con il supporto per constexpr generalizzata e NSDMI per le aggregazioni, il compilatore di Microsoft Visual C++ è ora completo per le funzionalità aggiunte nello standard C++14. Si noti che il compilatore manca ancora di alcune funzionalità relative agli standard C++11 e C++98. Vedere [Visual C++ Language Conformance](../visual-cpp-language-conformance.md) (Conformità al linguaggio Visual C++) per una tabella che mostra lo stato corrente del compilatore.
+Con il supporto per constexpr generalizzato e NSDMI per le aggregazioni, il compilatore di Microsoft C++ è ora completo per le funzionalità aggiunte nello standard C++14. Si noti che il compilatore manca ancora di alcune funzionalità relative agli standard C++11 e C++98. Vedere [Visual C++ Language Conformance](../visual-cpp-language-conformance.md) (Conformità al linguaggio Visual C++) per una tabella che mostra lo stato corrente del compilatore.
 
 ## <a name="c11"></a>C++11
 
@@ -70,7 +70,7 @@ Nuova sintassi per consentire un solo identificatore dello spazio dei nomi in un
 
 ### <a name="structured-bindings"></a>Binding strutturati
 
-In una singola dichiarazione è ora possibile archiviare un valore con i nomi singoli dei relativi componenti, quando il valore è una matrice, std::tuple o std::pair oppure tutti i membri dati sono non statici e pubblici. Per altre informazioni, vedere [Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) (Binding strutturati) e [Returning multiple values from a function](../../cpp/functions-cpp.md#multi_val) (Restituzione di più valori da una funzione).
+In una singola dichiarazione è ora possibile archiviare un valore con i nomi singoli dei relativi componenti, quando il valore è una matrice, `std::tuple` o `std::pair` oppure tutti i membri dati sono non statici e pubblici. Per altre informazioni, vedere [Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) (Binding strutturati) e [Returning multiple values from a function](../../cpp/functions-cpp.md#multi_val) (Restituzione di più valori da una funzione).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Regole di costruzione per i valori di classi di enumerazione
 
@@ -955,7 +955,7 @@ L'avviso viene escluso in **/Wv:18** ed è attivo per impostazione predefinita n
 
 ### <a name="stdisconvertible-for-array-types"></a>std::is_convertible per i tipi matrice
 
-Le versioni precedenti del compilatore restituiscono risultati non corretti per [std::is_convertible](../../standard-library/is-convertible-class.md) per i tipi matrice. Per questo motivo, gli autori delle librerie dovevano gestire come caso speciale il compilatore Microsoft Visual C++ quando veniva usato il tratto di tipo `std::is_convertible<...>`. Nell'esempio seguente le asserzioni statiche hanno esito positivo nelle versioni precedenti di Visual Studio, ma negativo in Visual Studio 2017 versione 15.3:
+Le versioni precedenti del compilatore restituiscono risultati non corretti per [std::is_convertible](../../standard-library/is-convertible-class.md) per i tipi matrice. Per questo motivo, gli autori delle librerie dovevano gestire come caso speciale il compilatore Microsoft C++ quando veniva usato il tratto di tipo `std::is_convertible<...>`. Nell'esempio seguente le asserzioni statiche hanno esito positivo nelle versioni precedenti di Visual Studio, ma negativo in Visual Studio 2017 versione 15.3:
 
 ```cpp
 #include <type_traits>
@@ -2039,4 +2039,4 @@ In Visual Studio 2017 versione 15.9 il codice genera questo errore: *error C3615
 
 ## <a name="see-also"></a>Vedere anche
 
-[Conformità al linguaggio Visual C++](../visual-cpp-language-conformance.md)
+[Conformità al linguaggio di Visual C++](../visual-cpp-language-conformance.md)

@@ -1,56 +1,56 @@
 ---
 title: Programmazione Web e cloud in Visual C++
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 33431a8f8660af683ed2e39e10811c22fe2f4fcc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385271"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65790366"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programmazione Web e cloud in Visual C++
 
 In C++, esistono diverse opzioni per la connessione al Web e al cloud.
 
-## <a name="cloud-programming-options"></a>Il cloud le opzioni di programmazione
+## <a name="microsoft-azure-sdks-and-rest-services"></a>Microsoft Azure SDK e servizi REST
 
-- [Servizi mobili di Windows Azure](http://www.windowsazure.com/develop/mobile/)
+- [Libreria client di Archiviazione di Microsoft Azure per C++](https://azure.github.io/azure-storage-cpp/)
 
-  Fornisce API native che è possibile usare nelle App Universal Windows Platform (UWP) o App desktop di Windows per connettersi a servizi mobili di Azure. Benché la maggior parte degli esempi nel sito Web sia in C#, è possibile usare anche C++. Per altre informazioni, vedere [Avvio rapido: Aggiunta di un servizio mobile con C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
+  La libreria client di Archiviazione di Azure per C++ fornisce un'API completa per l'uso di Archiviazione di Azure, con la possibilità di eseguire, a titolo esemplificativo, le seguenti operazioni:
 
-- [Libreria Client di archiviazione di Microsoft Azure per C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+  - Creare, leggere, eliminare ed elencare contenitori BLOB, tabelle e code.
+  - Creare, leggere, eliminare, elencare e copiare BLOB, nonché leggere e scrivere intervalli di BLOB.
+  - Inserire, eliminare, sostituire, unire ed eseguire query sulle entità in una tabella di Azure.
+  - Accodare e rimuovere dalla coda i messaggi in una coda di Azure.
+  - Elencare contenitori, BLOB, tabelle e code in modalità lazy ed eseguire query sulle entità in modalità lazy
 
-  La libreria Client di archiviazione di Azure per C++ offre un'API completa per l'uso di archiviazione di Azure, tra cui esemplificativo per effettuare le seguenti operazioni:
+- Gli [Azure IoT Hub SDK](/azure/iot-hub/iot-hub-devguide-sdks) ANSI C99 per Internet delle cose consentono l'esecuzione delle applicazioni IoT nel dispositivo o nel back-end.
 
-  - Creare, leggere, eliminare ed elencare i contenitori blob, tabelle e code.
-  - Creazione, lettura, eliminazione, elenco e copia BLOB più leggere e scrivere gli intervalli di blob.
-  - INSERT, delete, replace, unione ed eseguire query sulle entità in una tabella di Azure.
-  - Accodamento e rimozione dalla coda dei messaggi in una coda di Azure.
-  - In modo differito elencare i contenitori, BLOB, tabelle e code e in modo differito eseguire query sulle entità
+- [OneDrive e SharePoint in Microsoft Graph](https://dev.onedrive.com/README.htm)
 
-- [API di OneDrive](https://dev.onedrive.com/README.htm)
+  L'API OneDrive fornisce un set di servizi HTTP per connettere l'applicazione a file e cartelle in Office 365 e SharePoint Server 2016.
 
-  L'API di OneDrive fornisce un set di servizi HTTP per connettere l'applicazione ai file e cartelle in Office 365 e SharePoint Server 2016.
+## <a name="windows-and-cross-platform-networking-apis"></a>Windows e API di rete multipiattaforma
 
 - [C++ REST SDK (nome in codice "Casablanca")](https://github.com/Microsoft/cpprestsdk)
 
   Fornisce un'API moderna, multipiattaforma e asincrona per l'interazione con i servizi REST.
 
-  - Eseguire chiamate REST in qualsiasi server HTTP, con supporto incorporato per la serializzazione e analisi di documenti JSON
-  - Supporta OAuth 1 e 2, che include un listener locale di reindirizzamento
-  - Effettuare connessioni WebSocket rispetto ai servizi remoti
-  - Un'attività completamente asincrona API basata su libreria PPL, tra cui un pool di thread predefinito
+  - Eseguire chiamate REST a qualsiasi server HTTP, con un supporto incorporato per l'analisi e la serializzazione di documenti JSON
+  - Supporta OAuth 1 e 2, incluso un listener di reindirizzamento locale
+  - Stabilire connessioni WebSocket a servizi remoti
+  - Un'API per le attività completamente asincrona basata su PPL, incluso un pool di thread predefinito
 
-  Supporta Windows Desktop (7 +), Windows Server (2012 e versioni successive), Universal Windows Platform, Linux, OSX, Android e iOS.
+  Supporta Windows Desktop (7 e versioni successive), Windows Server (2012 e versioni successive), UWP (Universal Windows Platform), Linux, OSX, Android e iOS.
 
 - [Windows::Web::Http::HttpClient](/uwp/api/windows.web.http.httpclient)
 
-  Classe client HTTP di Windows Runtime modellata sulla classe .NET Framework con lo stesso nome nello spazio dei nomi System.Web. `HttpClient` supporta completamente il caricamento e il download asincrono su HTTP e i filtri pipeline, che permettono l'inserimento di gestori HTTP personalizzati nella pipeline. Windows SDK include filtri di esempio per reti a consumo, autenticazione OAuth e altro ancora. Per le app destinate solo a Universal Windows Platform, è consigliabile usare il `Windows::Web:HttpClient` classe.
+  Classe client HTTP di Windows Runtime modellata sulla classe .NET Framework con lo stesso nome nello spazio dei nomi System.Web. `HttpClient` supporta completamente il caricamento e il download asincrono su HTTP e i filtri pipeline, che permettono l'inserimento di gestori HTTP personalizzati nella pipeline. Windows SDK include filtri di esempio per reti a consumo, autenticazione OAuth e altro ancora. Per le app destinate solo alla piattaforma UWP (Universal Windows Platform) è consigliabile usare la classe `Windows::Web:HttpClient`.
 
 - [Interfaccia IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  Fornisce un'interfaccia COM nativa che è possibile usare in app di Windows Runtime o App desktop di Windows per connettersi a Internet tramite HTTP e generare un'operazione GET, PUT e altri comandi HTTP. Per altre informazioni, vedere [Procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
+  Fornisce un'interfaccia COM nativa che è possibile usare in app di Windows Runtime o app desktop di Windows per connettersi a Internet su HTTP ed eseguire GET, PUT e altri comandi HTTP. Per altre informazioni, vedere [Procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
 - [Internet di Windows (WinInet)](/windows/desktop/WinInet/portal)
 
@@ -58,5 +58,6 @@ In C++, esistono diverse opzioni per la connessione al Web e al cloud.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md) <br/>
-[Le reti e servizi web](/windows/uwp/networking/)
+[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md) <br/>
+[Centro per sviluppatori C++ e C di Microsoft Azure](https://azure.microsoft.com/develop/cpp/) <br/>
+[Reti e servizi Web (UWP)](/windows/uwp/networking/)

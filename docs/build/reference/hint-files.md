@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446299"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707104"
 ---
 # <a name="hint-files"></a>File dei suggerimenti
 
-Un *file dei suggerimenti* contiene macro a causa delle quali intere aree di codice verrebbero ignorate dal parser del database di esplorazione di C++. Quando si apre un Visual Studio C++ progetto, il parser analizza il codice in ogni file di origine nel progetto e compila un database con informazioni su ogni identificatore. L'IDE usa le informazioni per supportare le funzionalità di esplorazione del codice, ad esempio il browser **Visualizzazione classi** e la **barra di spostamento**.
+Un *file dei suggerimenti* contiene macro a causa delle quali intere aree di codice verrebbero ignorate dal parser del database di esplorazione di C++. Quando si apre un progetto di Visual Studio C++, il parser analizza il codice in ogni file di origine del progetto e crea un database con le informazioni su ogni identificatore. L'IDE usa le informazioni per supportare le funzionalità di esplorazione del codice, ad esempio il browser **Visualizzazione classi** e la **barra di spostamento**.
 
 Il parser del database di esplorazione di C++ è un parser 'fuzzy' in grado di analizzare grandi quantità di codice in un breve periodo di tempo. Il parser risulta veloce anche perché ignora il contenuto dei blocchi. Ad esempio, il parser registra solo la posizione e i parametri di una funzione e ne ignora il contenuto. Alcune macro possono causare problemi per l'euristica usata per determinare l'inizio e la fine di un blocco. Questi problemi causano una registrazione non corretta delle aree di codice.
 
@@ -118,7 +118,7 @@ Il sistema di analisi cerca i file dei suggerimenti nelle directory nell'ordine 
 
 - La directory che contiene il pacchetto di installazione per Visual C++ (**vcpackages**). Questa directory contiene un file dei suggerimenti predefinito che descrive i simboli dei file di sistema usati di frequente, ad esempio **windows.h**. Di conseguenza, il progetto eredita automaticamente la maggior parte dei suggerimenti necessari.
 
-- Il percorso dalla directory radice di un file di origine alla directory che contiene il file di origine stesso. In una tipica di Visual Studio C++ la directory radice del progetto contiene file di soluzione o progetto.
+- Il percorso dalla directory radice di un file di origine alla directory che contiene il file di origine stesso. In un progetto tipico di Visual Studio C++ la directory radice contiene i file della soluzione o del progetto.
 
    L'eccezione a questa regola si verifica se un *file di interruzione* si trova nel percorso del file di origine. Un file di interruzione è un file denominato **cpp.stop**. Un file di interruzione offre un maggiore controllo sull'ordine di ricerca. Anziché iniziare dalla directory radice, il sistema di analisi esegue la ricerca dalla directory che contiene il file di interruzione alla directory che contiene il file di origine. In un progetto tipico non è necessario usare un file di interruzione.
 
@@ -162,7 +162,7 @@ I suggerimenti usano questa sintassi:
 
 Questo esempio illustra come si accumulano i suggerimenti contenuti nei file dei suggerimenti. I file di interruzione non vengono usati in questo esempio.
 
-La figura illustra alcune delle directory fisiche in Visual Studio C++ project. I file dei suggerimenti si trovano nelle directory `vcpackages`, `Debug`, `A1` e `A2`.
+La figura illustra alcune delle directory fisiche di un progetto Visual Studio C++. I file dei suggerimenti si trovano nelle directory `vcpackages`, `Debug`, `A1` e `A2`.
 
 ### <a name="hint-file-directories"></a>Directory dei file dei suggerimenti
 
@@ -244,7 +244,7 @@ Le note seguenti si applicano all'elenco precedente:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tipi di file creati per oggetto visivo C++ progetti](file-types-created-for-visual-cpp-projects.md)<br>
+[Tipi di file creati per i progetti di Visual Studio C++](file-types-created-for-visual-cpp-projects.md)<br>
 [Direttiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [Direttiva #undef (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Annotazioni SAL](../../c-runtime-library/sal-annotations.md)<br>

@@ -3,19 +3,19 @@ title: 'vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux
 description: vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifica notevolmente l'acquisizione e installazione delle librerie C++ open source in Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 03/18/2019
+ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 5dba6877c4489337625eed016c77b853f84af990
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217657"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837013"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: utilità per la gestione dei pacchetti per C++ per Windows, Linux e MacOS
 
-vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifica notevolmente l'acquisizione e installazione di librerie di terze parti in Windows, Linux e MacOS. Se un progetto usa librerie di terze parti, è consigliabile usare vcpkg per installarle. vcpkg supporta sia librerie open source che proprietarie. Tutte le librerie nel catalogo di Windows per vcpkg sono state testate per la compatibilità con Visual Studio 2015 e Visual Studio 2017. A partire da maggio 2018 sono disponibili più di 900 librerie nel catalogo di Windows e più di 350 nel catalogo di Linux/MacOS. La community di C++ aggiunge continuamente altre librerie a entrambi i cataloghi.
+vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifica notevolmente l'acquisizione e installazione di librerie di terze parti in Windows, Linux e MacOS. Se un progetto usa librerie di terze parti, è consigliabile usare vcpkg per installarle. vcpkg supporta sia librerie open source che proprietarie. Tutte le librerie nel catalogo di Windows per vcpkg sono state testate per la compatibilità con Visual Studio 2015, Visual Studio 2017 e Visual Studio 2019. A partire da maggio 2018 sono disponibili più di 900 librerie nel catalogo di Windows e più di 350 nel catalogo di Linux/MacOS. La community di C++ aggiunge continuamente altre librerie a entrambi i cataloghi.
 
 ## <a name="simple-yet-flexible"></a>Semplice ma flessibile
 
@@ -23,7 +23,7 @@ Basta un unico comando per scaricare le origini e compilare una libreria. vcpkg 
 
 ## <a name="sources-not-binaries"></a>Origini e non file binari
 
-Per le librerie del catalogo Windows, vcpkg scarica origini anziché file binari[1]. Queste origini vengono compilate con Visual Studio 2017 o Visual Studio 2015, se non è installata la versione 2017. In C++ è molto importante che tutte le librerie usate siano compilate con lo stesso compilatore e la stessa versione del compilatore del codice dell'applicazione che si collega a tali librerie. Con vcpkg è possibile evitare, o almeno ridurre notevolmente, il rischio di file binari non corrispondenti e i problemi correlati. Nei team che usano una versione specifica del compilatore come standard, un solo membro del team può usare vcpkg per scaricare le origini e compilare un set di file binari, quindi usare il comando di esportazione per comprimere i file binari e le intestazioni per gli altri membri del team. Per altre informazioni, vedere [Esportare file binari compilati e intestazioni](#export_binaries_per_project) di seguito.
+Per le librerie del catalogo Windows, vcpkg scarica origini anziché file binari[1]. Compila tali origini usando la versione più recente di Visual Studio a disposizione. In C++ è molto importante che tutte le librerie usate siano compilate con lo stesso compilatore e la stessa versione del compilatore del codice dell'applicazione che si collega a tali librerie. Con vcpkg è possibile evitare, o almeno ridurre notevolmente, il rischio di file binari non corrispondenti e i problemi correlati. Nei team che usano una versione specifica del compilatore come standard, un solo membro del team può usare vcpkg per scaricare le origini e compilare un set di file binari, quindi usare il comando di esportazione per comprimere i file binari e le intestazioni per gli altri membri del team. Per altre informazioni, vedere [Esportare file binari compilati e intestazioni](#export_binaries_per_project) di seguito.
 
 Se si crea un clone di vcpkg con librerie private nella raccolta di port, è possibile aggiungere un port che scarica file binari precompilati e intestazioni, quindi scrivere un file portfile.cmake che copia semplicemente questi file nella posizione desiderata.
 
@@ -119,7 +119,7 @@ Se è necessario usare una versione specifica di una libreria, diversa dalla ver
 
 1. Creare un nuovo clone di vcpkg
 1. Modificare il portfile per la libreria per ottenere la versione necessaria
-1. Eseguire **vcpkg install \<libreria>**.
+1. Eseguire **vcpkg install \<libreria>** .
 1. Usare **vcpkg integrate project** per creare un pacchetto NuGet che fa riferimento a tale libreria per progetti specifici.
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrare con Visual Studio Code (Linux/MacOS)
@@ -148,8 +148,8 @@ Per impostazione predefinita, il comando **upgrade** elenca solo le librerie che
 
 - **--no-dry-run**: esegue l'aggiornamento; se omesso, il comando elenca solo i pacchetti non aggiornati.
 - **--keep-going**: continua l'installazione di pacchetti, anche in caso di errore di uno di essi.
-- **--triplet \<t>**: imposta la tripletta predefinita per i pacchetti non qualificati.
-- **--vcpkg-root\<percorso>**: specifica la directory vcpkg da usare al posto della directory corrente o della directory dello strumento.
+- **--triplet \<t>** : imposta la tripletta predefinita per i pacchetti non qualificati.
+- **--vcpkg-root\<percorso>** : specifica la directory vcpkg da usare al posto della directory corrente o della directory dello strumento.
 
 ### <a name="upgrade-example"></a>Esempio di aggiornamento
 
@@ -178,7 +178,7 @@ Digitare **vcpkg remove** per rimuovere una libreria installata. Se sono present
 
 ## <a name="customize-vcpkg"></a>Personalizzare vcpkg
 
-È possibile modificare il clone di vcpkg nei modi preferiti. Si possono creare più cloni di vcpkg e modificare i portfile in ognuno, per ottenere versioni specifiche di librerie o specificare parametri della riga di comando. Ad esempio, in un'organizzazione, è possibile che un gruppo di sviluppatori lavori a software con un set di dipendenze mentre un altro gruppo usa un set diverso. È possibile configurare due cloni di vcpkg e modificare ognuno in modo da scaricare le versioni delle librerie, le opzioni di compilazione e altri elementi in base alle specifiche esigenze.
+È possibile modificare il clone di vcpkg nei modi preferiti. Si possono creare più cloni di vcpkg e modificare i portfile in ognuno, per ottenere versioni specifiche di librerie o specificare parametri della riga di comando. Ad esempio, in un'organizzazione, è possibile che un gruppo di sviluppatori lavori a software con un set di dipendenze mentre un altro gruppo usa un set diverso. È possibile configurare due cloni di vcpkg e modificarli in modo da scaricare le versioni delle librerie, le opzioni di compilazione e altro ancora in base alle esigenze.
 
 ## <a name="uninstall-vcpkg"></a>Disinstallare vcpkg
 

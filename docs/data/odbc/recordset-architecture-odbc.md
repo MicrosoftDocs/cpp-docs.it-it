@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Architettura (ODBC)'
+title: 'Recordset: architettura (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, data members
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0edde640e0eebaf21216fc9ef37a8e31e2c1a210
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395638"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707970"
 ---
-# <a name="recordset-architecture-odbc"></a>Recordset: Architettura (ODBC)
+# <a name="recordset-architecture-odbc"></a>Recordset: architettura (ODBC)
 
-Questo argomento si applica alle classi ODBC MFC.
+Le informazioni contenute in questo argomento sono valide per le classi ODBC MFC.
 
-In questo argomento vengono descritti i membri di dati che costituiscono l'architettura di un oggetto recordset:
+In questo argomento vengono descritti i membri dati che costituiscono l'architettura di un oggetto recordset:
 
 - [Membri dati di campo](#_core_field_data_members)
 
@@ -33,11 +33,14 @@ In questo argomento vengono descritti i membri di dati che costituiscono l'archi
 - [Uso di membri dati m_nFields e m_nParams](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  In questo argomento si applica a oggetti derivati da `CRecordset` in quale riga bulk il recupero non è stato implementato. Se viene implementato il recupero di righe bulk, l'architettura è simile. Per comprendere le differenze, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Questo argomento si applica agli oggetti derivati da `CRecordset` in cui non è stato implementato il recupero di massa di righe. Se viene implementato il recupero di massa di righe, l'architettura è simile. Per informazioni sulle differenze, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_a_sample_class"></a> Classe di esempio
 
-Quando si usa la [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) dalla **Aggiungi classe** guidata alla dichiarazione di una classe derivata da `CRecordset`, la classe risultante ha la struttura generale illustrata di seguito semplice classe:
+> [!NOTE] 
+> La Creazione guidata consumer ODBC MFC non è disponibile in Visual Studio 2019 e versioni successive. È comunque possibile creare manualmente un consumer.
+
+Quando si usa la [Creazione guidata consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) dalla procedura guidata **Aggiungi classe** per dichiarare una classe recordset derivata da `CRecordset`, la classe risultante ha la struttura generale illustrata nella semplice classe seguente:
 
 ```cpp
 class CCourse : public CRecordset
@@ -51,45 +54,45 @@ public:
 };
 ```
 
-All'inizio della classe, la procedura guidata scrive un set di [membri dati di campo](#_core_field_data_members). Quando si crea la classe, è necessario specificare uno o più membri di dati di campo. Se la classe è con parametri, come l'esempio di classe è (con il membro dati `m_strIDParam`), è necessario aggiungere manualmente [membri dati di parametro](#_core_parameter_data_members). La procedura guidata non supporta l'aggiunta di parametri a una classe.
+All'inizio della classe, la procedura guidata scrive un set di [membri dati di campo](#_core_field_data_members). Quando si crea la classe, è necessario specificare uno o più membri dati di campo. Se la classe è con parametri, come nel caso della classe di esempio (con il membro dati `m_strIDParam`), è necessario aggiungere manualmente i [membri dati di parametro](#_core_parameter_data_members). La procedura guidata non supporta l'aggiunta di parametri a una classe.
 
 ##  <a name="_core_field_data_members"></a> Membri dati di campo
 
-I membri più importanti della classe recordset sono membri dati del campo. Per ogni colonna selezionata dall'origine dati, la classe contiene un membro dati di tipo di dati appropriato per la colonna. Ad esempio, il [classe di esempio](#_core_a_sample_class) mostrato all'inizio di questo argomento contiene due membri dati di campo, entrambi di tipo `CString`, denominato `m_strCourseID` e `m_strCourseTitle`.
+I membri più importanti della classe recordset sono i membri dati di campo. Per ogni colonna selezionata dall'origine dati, la classe contiene un membro dati del tipo di dati appropriato per la colonna. Ad esempio, la [classe di esempio](#_core_a_sample_class) riportata all'inizio di questo argomento contiene due membri dati di campo, entrambi di tipo `CString`, denominati `m_strCourseID` e `m_strCourseTitle`.
 
-Quando il recordset consente di selezionare un set di record, il framework viene associata automaticamente le colonne del record corrente (dopo il `Open` chiamata, il primo record è aggiornato) per i membri di dati del campo dell'oggetto. Vale a dire, il framework utilizza il membro dati di campo appropriato come un buffer in cui archiviare il contenuto di una colonna di record.
+Quando il recordset seleziona un set di record, il framework associa automaticamente le colonne del record corrente (dopo la chiamata `Open`, il primo record è quello corrente) per i membri dati di campo dell'oggetto. In altre parole, il framework usa il membro dati di campo appropriato come un buffer in cui archiviare il contenuto di una colonna di record.
 
-Mentre l'utente scorre in un nuovo record, il framework utilizza i membri di dati campo per rappresentare il record corrente. Il framework consente di aggiornare i membri di dati di campo, sostituendo i valori del record precedente. Membri dati del campo vengono utilizzati anche per l'aggiornamento del record corrente e per l'aggiunta di nuovi record. Come parte del processo di aggiornamento di un record, è specificare i valori di aggiornamento assegnando valori direttamente al membro dati di campo appropriato o membri.
+Quando l'utente esegue lo scorrimento a un nuovo record, il framework usa i membri dati di campo per rappresentare il record corrente. Il framework aggiorna i membri dati di campo, sostituendo i valori del record precedente. I membri dati di campo vengono anche usati per l'aggiornamento del record corrente e per l'aggiunta di nuovi record. Nell'ambito del processo di aggiornamento di un record, è possibile specificare i valori di aggiornamento assegnando direttamente i valori a uno o più membri dati di campo appropriati.
 
 ##  <a name="_core_parameter_data_members"></a> Membri dati di parametro
 
-Se la classe è con parametri, ha uno o più membri di dati di parametro. Una classe con parametri consente di una query di recordset di base sulle informazioni specificate o calcolate in fase di esecuzione.
+Se la classe è con parametri, dispone di uno o più membri dati di parametro. Una classe con parametri consente di basare una query recordset su informazioni ottenute o calcolate in fase di esecuzione.
 
-In genere, il parametro consente di limitare la selezione, come nell'esempio seguente. In base il [classe di esempio](#_core_a_sample_class) all'inizio di questo argomento, l'oggetto recordset potrà eseguire l'istruzione SQL seguente:
+In genere, il parametro consente di restringere la selezione, come nell'esempio seguente. In base alla [classe di esempio](#_core_a_sample_class) riportata all'inizio di questo argomento, l'oggetto recordset potrà eseguire l'istruzione SQL seguente:
 
 ```sql
 SELECT CourseID, CourseTitle FROM Course WHERE CourseID = ?
 ```
 
-Il "?" è un segnaposto per un valore di parametro che viene fornito in fase di esecuzione. Quando si crea il recordset e impostare il `m_strIDParam` membro dati da MATH101, l'istruzione SQL effettiva per il recordset diventa:
+"?" è un segnaposto per un valore di parametro che viene fornito in fase di esecuzione. Quando si costruisce il recordset e si imposta il relativo membro dati `m_strIDParam` su MATH101, l'istruzione SQL effettiva per il recordset diventa:
 
 ```sql
 SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 ```
 
-Con la definizione di membri dati di parametro, indicare al framework sui parametri nella stringa SQL. Il framework associa il parametro, che consente a ODBC di sapere dove ottenere i valori da sostituire il segnaposto. Nell'esempio, set di record risultante contiene solo il record della tabella Course con una colonna CourseID il cui valore è MATH101. Vengono selezionate tutte le colonne specificate di questo record. È possibile specificare tutti i parametri (e i segnaposto) in base alle esigenze.
+Attraverso la definizione dei membri dati di parametro, è possibile indicare al framework i parametri nella stringa SQL. Il framework associa il parametro, che consente a ODBC di sapere come ottenere i valori con cui sostituire il segnaposto. Nell'esempio, il recordset risultante contiene solo il record della tabella Course con una colonna CourseID il cui valore è MATH101. Vengono selezionate tutte le colonne specificate di questo record. È possibile specificare tutti i parametri (e i segnaposto) necessari.
 
 > [!NOTE]
->  MFC non esegue alcuna operazione se stesso con i parametri, in particolare, non viene eseguita una sostituzione di testo. Bensì indica ODBC dove ottenere il parametro. ODBC recupera i dati ed esegue la parametrizzazione necessaria.
+>  MFC non esegue alcuna operazione con i parametri: in particolare, non esegue la sostituzione di testo. Al contrario, MFC indica a ODBC come ottenere il parametro. ODBC recupera quindi i dati ed esegue la parametrizzazione necessaria.
 
 > [!NOTE]
->  L'ordine dei parametri è importante. Per informazioni su questa e altre informazioni sui parametri, vedere [Recordset: Parametrizzazione di un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+>  L'ordine dei parametri è importante. Per maggior dettagli in proposito e altre informazioni sui parametri, vedere [Recordset: parametrizzazione di un recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
-##  <a name="_core_using_m_nfields_and_m_nparams"></a> Utilizzo di m_nFields e m_nParams
+##  <a name="_core_using_m_nfields_and_m_nparams"></a> Uso di membri dati m_nFields e m_nParams
 
-Quando una procedura guidata scrive un costruttore della classe, inizializza anche il [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) membro dei dati, che specifica il numero della [membri dati di campo](#_core_field_data_members) nella classe. Se si aggiungono [parametri](#_core_parameter_data_members) alla classe, è necessario aggiungere anche un'inizializzazione per il [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) membro dei dati, che specifica il numero di membri dati di parametro. Il framework utilizza questi valori per lavorare con i membri dati.
+Quando una procedura guidata scrive un costruttore per la classe, inizializza anche il membro dati [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields), che specifica il numero di [membri dati di campo](#_core_field_data_members) nella classe. Se si aggiungono [parametri](#_core_parameter_data_members) alla classe, è necessario aggiungere anche un'inizializzazione per il membro dati [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams), che specifica il numero di membri dati di parametro. Il framework usa questi valori per lavorare con i membri dati.
 
-Per altre informazioni ed esempi, vedere [Record Field Exchange: Utilizzo di RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Per altre informazioni ed esempi, vedere [Trasferimento di campi di record: uso di RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
 ## <a name="see-also"></a>Vedere anche
 

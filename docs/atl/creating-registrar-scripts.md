@@ -1,6 +1,6 @@
 ---
-title: Creazione di script per ATL (Registrar)
-ms.date: 11/04/2016
+title: Creazione di script per il registrar ATL
+ms.date: 05/14/2014
 helpviewer_keywords:
 - scripting, registry scripting
 - ATL, registry
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-ms.openlocfilehash: e1a0b66e673fcefd0b75683ef75247a388217361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f32606701ea08736985f0b0dd2ed82712040a049
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250853"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707064"
 ---
-# <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
+# <a name="creating-registrar-scripts"></a>Creazione di script di registrazione
 
-Uno script di registrazione fornisce l'accesso basato sui dati, anziché basate su API e nel Registro di sistema. Accesso basato sui dati è in genere più efficiente poiché sono necessari solo uno o due righe in uno script per aggiungere una chiave del Registro di sistema.
+Uno script di registrazione fornisce un accesso basato sui dati, invece che basato su API, al Registro di sistema. L'accesso basato sui dati in genere è più efficiente poiché sono necessarie solo una o due righe in uno script per aggiungere una chiave al Registro di sistema.
 
-Il [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md) genera automaticamente uno script di registrazione per il server COM. È possibile trovare questo script nel file con estensione RGS associato all'oggetto.
+La [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md) genera automaticamente uno script di registrazione per il server COM. È possibile trovare questo script nel file con estensione rgs associato all'oggetto.
 
-Script di registrazione elaborato dal motore di Script del Registrar ATL in fase di esecuzione. Il motore di Script viene richiamato automaticamente durante l'installazione di server.
+Lo script di registrazione viene elaborato dal motore di script del registrar ATL in fase di esecuzione. ATL richiama automaticamente il motore di script durante l'installazione del server.
 
-Questo articolo illustra gli argomenti seguenti relativi agli script di registrazione:
+In questo articolo vengono trattati gli argomenti seguenti relativi agli script di registrazione:
 
-- [Informazioni sulla sintassi Backus Nauer Form (BNF)](../atl/understanding-backus-nauer-form-bnf-syntax.md)
+- [Informazioni sulla sintassi Backus-Naur form (BNF)](../atl/understanding-backus-naur-form-bnf-syntax.md)
 
 - [Informazioni sulle strutture ad albero di analisi](../atl/understanding-parse-trees.md)
 

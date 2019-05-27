@@ -1,6 +1,6 @@
 ---
 title: /clr (Compilazione Common Language Runtime)
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: ea4a878afea4453796277486da88b85e7f74883c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: fa2be3d3ce17df104cda121e4869c975ec6dd440
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446532"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837300"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilazione Common Language Runtime)
 
@@ -35,35 +35,35 @@ Una o più delle seguenti opzioni, delimitate da virgole.
 
 - none
 
-   Senza opzioni **/clr** crea i metadati per l'applicazione. I metadati possono essere usati da altre applicazioni CLR e l'applicazione può usare tipi e dati nei metadati di altri componenti CLR. Per altre informazioni, vedere [assembly misti (nativi e gestiti)](../../dotnet/mixed-native-and-managed-assemblies.md).
+   Senza opzioni, **/clr** crea i metadati per l'applicazione. I metadati possono essere usati da altre applicazioni CLR e l'applicazione può usare tipi e dati nei metadati di altri componenti CLR. Per altre informazioni, vedere [Assembly misti (nativi e gestiti)](../../dotnet/mixed-native-and-managed-assemblies.md).
 
 - **pure**
 
-   **/CLR: pure è deprecato**. L'opzione è stata rimossa in Visual Studio 2017. È consigliabile convertire in C# il codice che deve essere MSIL pure.
+   **/clr:pure è deprecato**. L'opzione è stata rimossa in Visual Studio 2017 e versioni successive. È consigliabile convertire in C# il codice che deve essere MSIL pure.
 
 - **safe**
 
-   **/CLR: safe è deprecata**. L'opzione è stata rimossa in Visual Studio 2017. È consigliabile convertire il codice che deve essere MSIL sicuro a c#.
+   **/clr:safe è deprecato**. L'opzione è stata rimossa in Visual Studio 2017 e versioni successive. È consigliabile convertire in C# il codice che deve essere safe MSIL.
 
 - **noAssembly**
 
-   **è stato deprecato /CLR: noAssembly**. In alternativa, usare [/LN (Create MSIL Module)](ln-create-msil-module.md) .
+   **/clr:noAssembly è deprecato**. In alternativa, usare [/LN (Create MSIL Module)](ln-create-msil-module.md) .
 
    Specifica che un manifesto dell'assembly non deve essere inserito nel file di output. Per impostazione predefinita, l'opzione **noAssembly** non è attiva.
 
    Un programma gestito senza metadati dell'assembly nel manifesto è detto *modulo*. L'opzione **noAssembly** può essere usata solo per produrre un modulo. Se si esegue la compilazione con [/c](c-compile-without-linking.md) e **/clr:noAssembly**, specificare l'opzione [/NOASSEMBLY](noassembly-create-a-msil-module.md) nella fase del linker per creare un modulo.
 
-   Prima di Visual Studio 2005, **/CLR: noAssembly** obbligatorio **/LD**. **/LD** è ora implicito quando si specifica **/clr:noAssembly**.
+   Nelle versioni precedenti a Visual Studio 2005 **/clr:noAssembly** richiede **/LD**. **/LD** è ora implicito quando si specifica **/clr:noAssembly**.
 
 - **initialAppDomain**
 
-   Consente a un'applicazione Visual C++ per l'esecuzione nella versione 1 di CLR.  Un'applicazione compilata usando **initialAppDomain** non deve essere usata da un'applicazione che usa ASP.NET, perché questo non è supportato nella versione 1 di CLR.
+   Consente di eseguire un'applicazione Visual C++ nella versione 1 di CLR.  Un'applicazione compilata usando **initialAppDomain** non deve essere usata da un'applicazione che usa ASP.NET, perché questo non è supportato nella versione 1 di CLR.
 
 - **nostdlib**
 
    Indica al compilatore di ignorare la directory \clr predefinita. Il compilatore produce errori se si includono più versioni di una DLL, ad esempio System.dll. Questa opzione consente di specificare il framework specifico da usare durante la compilazione.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
 Quello gestito è un codice che può essere ispezionato e gestito da CLR. Il codice gestito può accedere agli oggetti gestiti. Per altre informazioni, vedere [/clr Restrictions](clr-restrictions.md).
 
@@ -73,11 +73,11 @@ Un'applicazione compilata usando **/clr** non contiene necessariamente dati gest
 
 Per abilitare il debug in un'applicazione gestita, vedere [/ASSEMBLYDEBUG (aggiunge DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
-Solo dei tipi CLR verrà creata un'istanza nell'heap del Garbage Collector. Per altre informazioni, vedere [classi e struct](../../extensions/classes-and-structs-cpp-component-extensions.md). Per compilare un funzione nel codice nativo, usare la direttiva pragma `unmanaged` . Per altre informazioni, vedere [managed, unmanaged](../../preprocessor/managed-unmanaged.md).
+Solo dei tipi CLR verrà creata un'istanza nell'heap del Garbage Collector. Per altre informazioni, vedere [Classes and Structs](../../extensions/classes-and-structs-cpp-component-extensions.md) (Classi e struct). Per compilare un funzione nel codice nativo, usare la direttiva pragma `unmanaged` . Per altre informazioni, vedere [managed, unmanaged](../../preprocessor/managed-unmanaged.md).
 
 Per impostazione predefinita, l'opzione **/clr** non è attiva. Quando l'opzione **/clr** è attiva, è attiva anche l'opzione **/MD** . Per altre informazioni, vedere [/MD, /MT, /LD (utilizzo della libreria di runtime)](md-mt-ld-use-run-time-library.md). **/MD** fa sì che le versioni multithread collegate in modo dinamico delle routine di runtime vengano selezionate dai file di intestazione (con estensione h) standard. Il multithreading è richiesto per la programmazione gestita perché il Garbage Collector CLR esegue i finalizzatori in un thread ausiliario.
 
-Se esegue la compilazione usando **/c**, è possibile specificare il tipo CLR del file di output risultante con [/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md).
+Se si esegue la compilazione usando **/c**, è possibile specificare il tipo CLR del file di output risultante con [/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md).
 
 **/clr** implica **/EHa**. Nessun'altra opzione **/EH** è supportata per **/clr**. Per altre informazioni, vedere [/EH (Modello di gestione delle eccezioni)](eh-exception-handling-model.md).
 
@@ -89,7 +89,7 @@ Usare l'opzione del linker [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-
 
 Quando si usa l'opzione **/clr** , il simbolo `_MANAGED` viene definito come 1. Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md).
 
-Prima vengono inizializzate le variabili globali in un file oggetto nativo (durante DllMain se l'eseguibile è una DLL) e quindi vengono inizializzate le variabili globali nella sezione gestita (prima che il codice gestito venga eseguito). `#pragma` [init_seg](../../preprocessor/init-seg.md) interessa solo l'ordine di inizializzazione nelle categorie gestite e non gestite.
+Prima vengono inizializzate le variabili globali in un file oggetto nativo (durante DllMain se l'eseguibile è una DLL) e quindi vengono inizializzate le variabili globali nella sezione gestita (prima che il codice gestito venga eseguito). `#pragma` [init_seg](../../preprocessor/init-seg.md) ha effetto solo sull'ordine di inizializzazione nelle categorie gestite e non gestite.
 
 ## <a name="metadata-and-unnamed-classes"></a>Metadati e classi senza nome
 

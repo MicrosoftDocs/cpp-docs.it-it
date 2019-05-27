@@ -1,21 +1,24 @@
 ---
 title: Aggiunta di un'interfaccia al provider
-ms.date: 10/29/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: c0452ca74509b65de3787af93bff41b3cb399c99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1d219568c1787558674c47edd55436b8690a61c
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384972"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524800"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Aggiunta di un'interfaccia al provider
 
-Determinare l'oggetto che si desidera aggiungere l'interfaccia per (in genere gli oggetti di origine, set di righe, comando o sessione di dati creati dal **Creazione guidata Provider OLE DB**). È possibile che l'oggetto che è necessario aggiungere l'interfaccia è quella attualmente non supporta il provider. In tal caso, eseguire la **Creazione guidata Provider OLE DB ATL** per creare l'oggetto. Fare clic sul progetto in **Visualizzazione classi**, fare clic su **Add** > **nuovo elemento** dal menu, selezionare **installato**  >  **Visual C++** > **ATL**, quindi fare clic su **Provider OLEDB ATL**. È possibile inserire il codice dell'interfaccia in una directory distinta e quindi copiare i file di progetto del provider.
+> [!NOTE]
+> La Creazione guidata provider OLE DB ATL non è disponibile in Visual Studio 2019 e versioni successive.
 
-Se è stata creata una nuova classe per supportare l'interfaccia, rendere l'oggetto ereditano da tale classe. Ad esempio, è possibile aggiungere la classe `IRowsetIndexImpl` a un oggetto set di righe:
+Determinare l'oggetto cui si vuole aggiungere l'interfaccia (in genere gli oggetti origine dati, set di righe, comando o sessione creati dalla **Creazione guidata provider OLE DB**). È possibile che l'oggetto cui è necessario aggiungere l'interfaccia sia uno non supportato dal provider. In questo caso, eseguire la **Creazione guidata provider OLE DB ATL** per creare l'oggetto. Fare clic con il pulsante destro del mouse sul progetto in **Visualizzazione classi**, scegliere **Aggiungi** > **Nuovo elemento** dal menu, selezionare **Installati** > **Visual C++** > **ATL** e quindi fare clic su **Provider OLE DB ATL**. Può essere necessario inserire il codice dell'interfaccia in una directory separata e quindi copiare i file nel progetto del provider.
+
+Se è stata creata una nuova classe per supportare l'interfaccia, fare in modo che l'oggetto erediti da questa classe. Ad esempio, è possibile aggiungere la classe `IRowsetIndexImpl` a un oggetto set di righe:
 
 ```cpp
 template <class Creator>
@@ -24,7 +27,7 @@ class CCustomRowset :
     public IRowsetIndexImpl< ... >
 ```
 
-Aggiungere l'interfaccia nell'oggetto tramite la macro COM_INTERFACE_ENTRY COM_MAP. Se non è presente alcun mapping, crearne uno. Ad esempio:
+Aggiungere l'interfaccia a COM_MAP nell'oggetto usando la macro COM_INTERFACE_ENTRY. Se non è presente alcuna mappa, crearne una. Ad esempio:
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)
@@ -32,7 +35,7 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-Per l'oggetto set di righe, catena la mappa dell'elemento padre dell'oggetto in modo che l'oggetto può delegare alla classe padre. In questo esempio, aggiungere la macro COM_INTERFACE_ENTRY_CHAIN alla mappa:
+Per l'oggetto set di righe, concatenare la mappa dell'oggetto padre in modo che l'oggetto possa delegare alla classe padre. In questo esempio aggiungere la macro COM_INTERFACE_ENTRY_CHAIN alla mappa:
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)

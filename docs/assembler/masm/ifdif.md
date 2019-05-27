@@ -1,30 +1,33 @@
 ---
-title: IFDIF]
-ms.date: 08/30/2018
+title: IFDIF, IFDIFI
+ms.date: 05/23/2019
 f1_keywords:
-- IFDIF[[I]]
+- IFDIF
+- IFDIFI
 helpviewer_keywords:
 - IFDIF[[I]] directive
+- IFDIF directive
+- IFDIFI directive
 ms.assetid: b85a553c-9098-4a57-a24f-596456eefa1c
-ms.openlocfilehash: 6e5c8f05ecc2a7abbd0facdfba8e3ab8bcfe66b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c799cdeb4046692c4b2254e9f54d4ca364ee8b7f
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202960"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197697"
 ---
-# <a name="ifdif"></a>IFDIF]
+# <a name="ifdif-ifdifi"></a>IFDIF, IFDIFI
 
 Assembly di concessioni se gli elementi di testo sono diversi.
 
 ## <a name="syntax"></a>Sintassi
 
-> IFDIF[[I]] textitem1, textitem2
+> **IFDIF**\[**I**] *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>Note
 
-Se **ho** è specificato, il confronto viene operata la distinzione. Visualizzare [IF](../../assembler/masm/if-masm.md) per la sintassi completa.
+Se **IFDIFI** è specificato, il confronto viene operata la distinzione. Visualizzare [IF](../../assembler/masm/if-masm.md) per la sintassi completa.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento a direttive](../../assembler/masm/directives-reference.md)<br/>
+[Riferimento a direttive](../../assembler/masm/directives-reference.md)
