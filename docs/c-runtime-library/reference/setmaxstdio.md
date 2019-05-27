@@ -1,6 +1,6 @@
 ---
 title: _setmaxstdio
-ms.date: 11/04/2016
+ms.date: 05/21/2019
 apiname:
 - _setmaxstdio
 apilocation:
@@ -25,48 +25,48 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 58cffedf673e23a69c2d8040071b2e3353ff4502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b768d920ffd86a5bd762f8994244dda67fb15f
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356342"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174829"
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
 
-Imposta un valore massimo per il numero di file aperti contemporaneamente la **stdio** livello.
+Imposta un massimo per il numero di file aperti contemporaneamente al livello del flusso I/O.
 
 ## <a name="syntax"></a>Sintassi
 
 ```C
 int _setmaxstdio(
-   int newmax
+   int new_max
 );
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*newmax*<br/>
-Nuovo massimo per il numero di file aperti contemporaneamente la **stdio** livello.
+*new_max*<br/>
+Nuovo valore massimo per il numero di file aperti contemporaneamente al livello del flusso I/O.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce *newmax* se ha esito positivo; in caso contrario, -1.
+Restituisce *new_max* in caso di esito positivo e -1 in caso contrario.
 
-Se *newmax* è minore di **_IOB_ENTRIES** o versioni successive il numero massimo di handle disponibili nel sistema operativo, il gestore di parametri non validi viene richiamato, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** al **EINVAL**.
+Se *new_max* è minore di **_IOB_ENTRIES** o maggiore del numero massimo di handle disponibili nel sistema operativo, viene chiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **setmaxstdio** funzione modifica il valore massimo per il numero di file che possono essere aperti contemporaneamente la **stdio** livello.
+La funzione **_setmaxstdio** modifica il valore massimo per il numero di file che possono essere aperti contemporaneamente al livello del flusso I/O.
 
-Le operazioni di I/O del runtime C supportano ora molti più file aperti nelle piattaforme Win32 rispetto alle versioni precedenti. Fino a 2.048 file può essere aperto contemporaneamente al [livello lowio](../../c-runtime-library/low-level-i-o.md) (vale a dire, aperto e si accede tramite il **Open**, **Read**, **Write**, e così via della famiglia di funzioni dei / o). Fino a 512 file può essere aperto contemporaneamente al [livello stdio](../../c-runtime-library/stream-i-o.md) (vale a dire, aperto e si accede tramite il **fopen**, **fgetc**, **fputc** e così via della famiglia di funzioni). Il limite di 512 file aperti contemporaneamente la **stdio** livello può essere aumentato a un massimo di 2.048 tramite il **setmaxstdio** (funzione).
+L'I/O del runtime C ora supporta fino a 8192 file aperti contemporaneamente al [livello di I/O basso](../../c-runtime-library/low-level-i-o.md). Questo livello include i file aperti e ai quali è stato eseguito l'accesso tramite la famiglia di funzioni I/O **_open**, **_read** e **_write**. Per impostazione predefinita, è possibile aprire contemporaneamente un massimo di 512 file al [livello del flusso I/O](../../c-runtime-library/stream-i-o.md). Questo livello include i file aperti e ai quali è stato eseguito l'accesso tramite la famiglia di funzioni **fopen**, **fgetc** e **fputc**. Il limite di 512 file aperti al livello del flusso I/O può essere aumentato a un massimo di 8.192 file tramite la funzione **_setmaxstdio**.
 
-Perché **stdio**-il livello di funzioni, ad esempio **fopen**, vengono compilati in cima il **lowio** funzioni, il numero massimo di 2.048 è un limite superiore fisso per il numero di contemporaneamente Aprire i file accessibili tramite la libreria di runtime C.
+Dato che le funzioni al livello del flusso I/O come **fopen** sono basate sulle funzioni del livello I/O basso, il numero massimo di 8.192 è un limite superiore fisso per il numero di file aperti contemporaneamente accessibili tramite la libreria di runtime C.
 
 > [!NOTE]
-> Questo limite superiore potrebbe essere maggiore di quanto supportato da una particolare configurazione e piattaforma Win32.
+> Questo limite superiore potrebbe essere maggiore di quello supportato da una particolare configurazione e piattaforma Win32.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -78,7 +78,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [getmaxstdio](getmaxstdio.md) per un esempio di utilizzo **setmaxstdio**.
+Vedere [_getmaxstdio](getmaxstdio.md) per un esempio dell'uso di **_setmaxstdio**.
 
 ## <a name="see-also"></a>Vedere anche
 

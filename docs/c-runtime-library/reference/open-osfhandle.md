@@ -1,6 +1,6 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
+ms.date: 05/21/2019
 apiname:
 - _open_osfhandle
 apilocation:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156104"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174798"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -54,22 +54,22 @@ Tipi di operazioni consentite.
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **open_osfhandle** restituisce un descrittore di file di runtime C. In caso contrario, restituisce -1.
+Se ha esito positivo, **_open_osfhandle** restituisce un descrittore di file di runtime C. In caso contrario restituisce -1.
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Il **open_osfhandle** funzione alloca un descrittore di file di runtime C e la associa l'handle di file del sistema operativo specificato da *osfhandle*. Per evitare un avviso del compilatore, eseguire il cast di *osfhandle* argomento dal **gestire** al **intptr_t**. Il *flags* l'argomento è un'espressione integer formata da uno o più delle costanti manifeste definite in \<fcntl. h >. Quando vengono usate due o più costanti manifeste per comporre il *flags* argomento, le costanti vengono combinate con l'operatore OR bit per bit ( **&#124;** ).
+La funzione **_open_osfhandle** alloca un descrittore di file di runtime C e lo associa a un handle di file del sistema operativo specificato da *osfhandle*. Per evitare un avviso del compilatore, eseguire il cast di dell'argomento *osfhandle* da **HANDLE** a **intptr_t**. L'argomento *flags* è un'espressione integer formata da una o più delle costanti del manifesto definite in \<fcntl.h>. Quando vengono usate due o più costanti manifesto per comporre l'argomento *flags*, le costanti vengono combinate con l'operatore OR bit per bit ( **&#124;** ).
 
-Queste costanti manifeste definite \<fcntl. h >:
+Queste costanti manifesto sono definite in \<fcntl.h>:
 
 |||
 |-|-|
-| **\_U\_APPEND** | Posiziona un puntatore del file alla fine del file prima di ogni operazione di scrittura. |
+| **\_O\_APPEND** | Posiziona un puntatore del file alla fine del file prima di ogni operazione di scrittura. |
 | **\_O\_RDONLY** | Apre il file in sola lettura. |
 | **\_O\_TEXT** | Apre il file in modalità testo (convertito). |
 | **\_O\_WTEXT** | Apre il file in modalità Unicode (convertito in UTF-16). |
 
-Il **open_osfhandle** chiamata trasferisce la proprietà dell'handle di file Win32 per il descrittore del file. Per chiudere un file aperto con **open_osfhandle**, chiamare [ \_chiudere](close.md). L'handle di file del sistema operativo sottostante viene inoltre chiuso da una chiamata a **Close**, quindi non è necessario chiamare la funzione Win32 **CloseHandle** sull'handle originale. Se il descrittore del file è di proprietà di un **FILE &#42;**  flusso, quindi chiamare [fclose](fclose-fcloseall.md) su esso **FILE &#42;**  flusso chiude anche il descrittore di file e il handle sottostante. In questo caso, non chiamare **Close** nel descrittore di file.
+La chiamata **_open_osfhandle** trasferisce la proprietà dell'handle di file Win32 al descrittore di file. Per chiudere un file aperto tramite **_open_osfhandle**, chiamare [\_close](close.md). Anche l'handle di file del sistema operativo sottostante viene chiuso da una chiamata a **_close**. Non chiamare la funzione Win32 **CloseHandle** sull'handle originale. Se il descrittore del file è di proprietà di un flusso **FILE &#42;** una chiamata a [fclose](fclose-fcloseall.md) su tale flusso **FILE &#42;** chiude sia il descrittore del file sia l'handle sottostante. In questo caso non chiamare **_close** per il descrittore di file o **CloseHandle** per l'handle originale.
 
 ## <a name="requirements"></a>Requisiti
 
