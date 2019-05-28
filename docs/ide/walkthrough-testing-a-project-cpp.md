@@ -1,17 +1,17 @@
 ---
 title: 'Procedura dettagliata: Test di un progetto (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - project testing [C++]
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: aa1af9cd355265214827527b986b8602a25e93f3
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 5ced3c4267f2c33869e18373c11ebf5e237d9485
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57808274"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857664"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Procedura dettagliata: Test di un progetto (C++)
 

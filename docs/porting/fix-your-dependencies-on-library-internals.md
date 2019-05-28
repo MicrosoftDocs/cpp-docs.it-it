@@ -2,15 +2,15 @@
 title: Correggere le dipendenze da elementi interni delle librerie
 ms.date: 05/24/2017
 helpviewer_keywords:
-- library internals in an upgraded Visual C++ project
-- _Hash_seq in an upgraded Visual C++ project
+- library internals in an upgraded Visual Studio C++ project
+- _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: 7f1db0019894474b0770d293b293a663b1ee5a0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af395ea6f8c8e6a88bd2b003f0eee948bde8b6a9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662696"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449093"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>Correggere le dipendenze da elementi interni delle librerie
 

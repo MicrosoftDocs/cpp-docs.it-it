@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: b15bc7551c4bf99b6dd52f99bb5e69064ddb8308
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58867270"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "66182801"
 ---
 # <a name="create-a-c-console-app-project"></a>Creare un progetto di app console C++
 
@@ -27,7 +27,7 @@ Visual Studia usa i *progetti* per organizzare il codice per un'applicazione e l
 
 1. Nella barra dei menu di Visual Studio scegliere **File** > **Nuovo** > **Progetto**. Si apre la finestra **Nuovo progetto**.
 
-2. Nella barra laterale sinistra verificare che sia selezionato **Visual C++**. Nella parte centrale scegliere **Applicazione console di Windows**.
+2. Nella barra laterale sinistra verificare che sia selezionato **Visual C++** . Nella parte centrale scegliere **Applicazione console di Windows**.
 
 3. Nella casella di modifica **Nome** in basso assegnare il nome *CalculatorTutorial* al nuovo progetto e scegliere **OK**.
 
@@ -113,7 +113,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
 
    > Informazioni sul codice:
    >
-   > - Le istruzioni `#include` consentono di fare riferimento al codice che si trova in altri file. In alcuni casi viene visualizzato un nome file racchiuso tra parentesi quadre (**\<\>**), in altri casi il nome è racchiuso tra virgolette (**" "**). In generale, le parentesi quadre vengono usate quando si fa riferimento alla libreria standard C++, mentre le virgolette vengono usate per gli altri file.
+   > - Le istruzioni `#include` consentono di fare riferimento al codice che si trova in altri file. In alcuni casi viene visualizzato un nome file racchiuso tra parentesi quadre ( **\<\>** ), in altri casi il nome è racchiuso tra virgolette ( **" "** ). In generale, le parentesi quadre vengono usate quando si fa riferimento alla libreria standard C++, mentre le virgolette vengono usate per gli altri file.
    > - La riga `#include "pch.h"` (o nelle versioni precedenti di Visual Studio, `#include "stdafx.h"`) fa riferimento a un elemento noto come intestazione precompilata. Questi oggetti vengono spesso usati dai programmatori professionisti per migliorare i tempi di compilazione, ma esulano dall'ambito di questa esercitazione.
    > - La riga `using namespace std;` indica al compilatore che è previsto materiale in arrivo dalla libreria standard C++ da usare in questo file. Senza questa riga, ogni parola chiave proveniente dalla libreria dovrà essere preceduta da `std::`, per indicarne l'ambito. Ad esempio, senza tale riga, ogni riferimento a `cout` deve essere scritto come `std::cout`. L'istruzione `using` viene aggiunta per rendere il codice più pulito.
    > - La parola chiave `cout` viene usata per stampare in un output standard di C++. L'operatore **\<\<** indica al compilatore di inviare tutto ciò che si trova alla sua destra all'output standard.

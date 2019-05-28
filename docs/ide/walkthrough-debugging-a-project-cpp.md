@@ -1,17 +1,17 @@
 ---
 title: 'Procedura dettagliata: Debug di un progetto (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - projects [C++], debugging
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 0a1ceddca3234ead7d10cc839d41a6d644ec1866
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 55124bc2f240499cc163fca6d0004a79047060a4
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57812031"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857242"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Procedura dettagliata: Debug di un progetto (C++)
 
@@ -31,7 +31,7 @@ In questa procedura dettagliata si modifica il programma per risolvere il proble
 
    Nella finestra **Visualizzazione classi** espandere la struttura del progetto **Game** e selezionare la classe **Cardgame** per visualizzare i membri e i metodi della classe.
 
-   Aprire il menu di scelta rapida per il distruttore **~Cardgame (void)**, quindi scegliere **Vai a definizione**.
+   Aprire il menu di scelta rapida per il distruttore **~Cardgame (void)** , quindi scegliere **Vai a definizione**.
 
 1. Per diminuire il valore `totalParticipants` al termine di un'istanza di Cardgame, aggiungere il codice seguente tra le parentesi graffe di apertura e chiusura del distruttore `Cardgame::~Cardgame`.
 
