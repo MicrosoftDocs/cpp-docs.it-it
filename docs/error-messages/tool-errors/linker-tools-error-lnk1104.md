@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fcd3c06ae2db5c43aacbf781800870a83d2d77c1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446964"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451142"
 ---
 # <a name="linker-tools-error-lnk1104"></a>Errore degli strumenti del linker LNK1104
 
@@ -81,7 +81,7 @@ Quando si specificano singole raccolte nel **dipendenze aggiuntive** proprietà 
 
 Questo errore può verificarsi quando il Percordo *filename* a più di 260 caratteri. Modificare i nomi o ridisporre la struttura di directory, se necessario per abbreviare i percorsi per i file necessari.
 
-Questo errore può verificarsi perché il file è troppo grande. Le librerie o un oggetto file più di un gigabyte di dimensioni può causare problemi per il linker a 32 bit. Possibile correzione per risolvere questo problema consiste nell'usare il set di strumenti a 64 bit. Per altre informazioni su come eseguire questa operazione dalla riga di comando, vedere [come: Abilitare una a 64 bit Visual C++ set di strumenti della riga di comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Per informazioni su come eseguire questa operazione nell'IDE, vedere [uso di MSBuild con il compilatore a 64 bit e strumenti](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) e questo post di Stack Overflow: [Come rendere Visual Studio usare la toolchain amd64 native](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
+Questo errore può verificarsi perché il file è troppo grande. Le librerie o un oggetto file più di un gigabyte di dimensioni può causare problemi per il linker a 32 bit. Possibile correzione per risolvere questo problema consiste nell'usare il set di strumenti a 64 bit. Per altre informazioni su come eseguire questa operazione dalla riga di comando, vedere [come: Abilitare una a 64 bit Visual C++ set di strumenti della riga di comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md). Per informazioni su come eseguire questa operazione nell'IDE, vedere [uso di MSBuild con il compilatore a 64 bit e strumenti](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project) e questo post di Stack Overflow: [Come rendere Visual Studio usare la toolchain amd64 native](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055).
 
 Questo errore può verificarsi se si dispone delle autorizzazioni file insufficienti per accedere *filename*. Questa situazione può verificarsi se si usa un account utente normali e un tentativo di accedere ai file di libreria nella directory di sistema protette o utilizzare i file copiati da altri utenti che hanno le autorizzazioni originali impostato. Per risolvere questo problema, spostare il file in una directory del progetto scrivibile. Se il file si trova nella directory scrivibile ma dispone di autorizzazioni inaccessibile, è possibile usare un prompt dei comandi di amministratore ed eseguire il comando takeown.exe assumere la proprietà del file.
 

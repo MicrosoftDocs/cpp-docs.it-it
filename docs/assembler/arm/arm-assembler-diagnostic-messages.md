@@ -20,12 +20,12 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167843"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449220"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Messaggi di diagnostica Assembler ARM
 
@@ -33,13 +33,13 @@ L'assembler ARM Microsoft (*armasm*) genera errori e avvisi di diagnostica quand
 
 ## <a name="syntax"></a>Sintassi
 
-> <em>nome file</em>**(**<em>numero di riga</em>**):** \[ **errore**|**avviso** ] **Oggetto**<em>numero</em>**:** *messaggio*
+> <em>nome file</em> **(** <em>numero di riga</em> **):** \[ **errore**|**avviso** ] **Oggetto**<em>numero</em> **:** *messaggio*
 
 ## <a name="diagnostic-messages---errors"></a>Messaggi di diagnostica - errori
 
 > A2193: tale istruzione genera un comportamento imprevedibile
 
-L'architettura ARM non è possibile garantire che cosa accade quando l'istruzione viene eseguita.  Per informazioni dettagliate sulle forme ben definite di questa istruzione, visitare il [manuale di riferimento di architettura ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).
+L'architettura ARM non è possibile garantire che cosa accade quando l'istruzione viene eseguita.  Per informazioni dettagliate sulle forme ben definite di questa istruzione, visitare il [manuale di riferimento di architettura ARM](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
@@ -115,7 +115,7 @@ In modalità ARM, è una sintassi alternativa per la specifica di costanti.  Inv
 
 > A4509: Questa forma dell'istruzione condizionale è deprecata
 
-Questa forma dell'istruzione condizionale è stata deprecata da ARM nell'architettura di ARMv8. È consigliabile modificare il codice per usare i rami condizionali. Per visualizzare le istruzioni condizionali sono ancora supportate, consultare il [manuale di riferimento di architettura ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).
+Questa forma dell'istruzione condizionale è stata deprecata da ARM nell'architettura di ARMv8. È consigliabile modificare il codice per usare i rami condizionali. Per visualizzare le istruzioni condizionali sono ancora supportate, consultare il [manuale di riferimento di architettura ARM](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 Questo avviso non è generato quando il **- oldit** viene utilizzata l'opzione della riga di comando.
 

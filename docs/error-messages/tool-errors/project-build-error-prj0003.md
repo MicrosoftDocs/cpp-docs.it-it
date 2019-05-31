@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 00d101e62d49078ebfcfff9455497f30224b84fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359696"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450762"
 ---
 # <a name="project-build-error-prj0003"></a>Errore di compilazione progetto PRJ0003
 
@@ -21,7 +21,7 @@ Il *riga di comando* comando creato dall'input nella **pagine delle proprietà**
 
 Possibili cause di questo errore includono:
 
-- Il progetto dipende dal Server ATL. A partire da Visual Studio 2008, ATL Server non è più inclusa come parte di Visual Studio, ma è stato rilasciato come progetto di origine condiviso in CodePlex. Per scaricare il codice sorgente di ATL Server e gli strumenti, visitare [libreria Server ATL e strumenti](http://go.microsoft.com/fwlink/p/?linkid=81979).
+- Il progetto dipende dal Server ATL. A partire da Visual Studio 2008, ATL Server non è più inclusa come parte di Visual Studio, ma è stato rilasciato come progetto di origine condiviso in CodePlex. Per scaricare il codice sorgente di ATL Server e gli strumenti, visitare [libreria Server ATL e strumenti](https://go.microsoft.com/fwlink/p/?linkid=81979).
 
 - Risorse di sistema insufficienti. Chiudere alcune applicazioni per risolvere il problema.
 

@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e3e44e99e6f3a53a930ed5b3ac1f7cd5ae23063
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247864"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449553"
 ---
 # <a name="atl-text-encoding-functions"></a>Funzioni di codifica del testo ATL
 
@@ -295,7 +295,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Lo schema di codifica "B" è descritto in RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Lo schema di codifica "B" è descritto in RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength
 
@@ -319,7 +319,7 @@ Il numero di caratteri necessari per un buffer che può contenere i dati con cod
 
 ### <a name="remarks"></a>Note
 
-Lo schema di codifica "B" è descritto in RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Lo schema di codifica "B" è descritto in RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="escapexml"></a> EscapeXML
 
@@ -362,7 +362,7 @@ La lunghezza in caratteri della stringa convertita.
 
 Possibili conversioni eseguite da questa funzione sono illustrate nella tabella:
 
-|Source|Destinazione|
+|Origine|Destinazione|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -447,7 +447,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Lo schema di codifica "Q" è descritto in RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Lo schema di codifica "Q" è descritto in RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength
 
@@ -471,7 +471,7 @@ Il numero di caratteri necessari per un buffer che può contenere i dati con cod
 
 ### <a name="remarks"></a>Note
 
-Lo schema di codifica "Q" è descritto in RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).
+Lo schema di codifica "Q" è descritto in RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="qpdecode"></a> QPDecode
 
@@ -509,7 +509,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Lo schema di codifica stampabile tra virgolette è descritto nel documento RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Lo schema di codifica stampabile tra virgolette è descritto nel documento RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 
@@ -530,7 +530,7 @@ Il numero di byte necessari per un buffer che può contenere una stringa decodif
 
 ### <a name="remarks"></a>Note
 
-Lo schema di codifica stampabile tra virgolette è descritto nel documento RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Lo schema di codifica stampabile tra virgolette è descritto nel documento RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencode"></a> QPEncode
 
@@ -566,7 +566,7 @@ ATLSMTP_QPENCODE flag che descrivono come viene eseguita la conversione da esegu
 
 - Accoda ATLSMTP_QPENCODE_TRAILING_SOFT `=\r\n` alla stringa codificata.
 
-Lo schema di codifica stampabile tra virgolette è descritto nella [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt).
+Lo schema di codifica stampabile tra virgolette è descritto nella [RFC 2045](https://www.ietf.org/rfc/rfc2045.txt).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -574,7 +574,7 @@ Restituisce TRUE se l'operazione riesce, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Lo schema di codifica stampabile tra virgolette è descritto nel documento RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Lo schema di codifica stampabile tra virgolette è descritto nel documento RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 
@@ -595,7 +595,7 @@ Il numero di caratteri necessari per un buffer che può contenere i dati con cod
 
 ### <a name="remarks"></a>Note
 
-Lo schema di codifica stampabile tra virgolette è descritto nel documento RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).
+Lo schema di codifica stampabile tra virgolette è descritto nel documento RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="uudecode"></a> UUDecode
 

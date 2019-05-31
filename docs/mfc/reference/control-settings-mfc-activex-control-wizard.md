@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373284"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450550"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Impostazioni controllo, Creazione guidata controllo ActiveX MFC
 
@@ -57,7 +57,7 @@ Per altre informazioni su come selezionare le opzioni in questa pagina per migli
    Specifica che il controllo dispone di Windows standard **sulle** della finestra di dialogo che visualizza le informazioni sul copyright e il numero di versione.
 
    > [!NOTE]
-   > Modo in cui l'utente accede alla Guida per il controllo dipende dal modo in cui è stata implementata la Guida in linea e indica se è stata integrata la Guida di controllo con l'aiuto di contenitore. Per altre informazioni sull'integrazione della Guida, nella [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) sito Web, cercare "Aggiunta sensibili al contesto della Guida per un controllo ActiveX MFC".
+   > Modo in cui l'utente accede alla Guida per il controllo dipende dal modo in cui è stata implementata la Guida in linea e indica se è stata integrata la Guida di controllo con l'aiuto di contenitore. Per altre informazioni sull'integrazione della Guida, nella [MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542) sito Web, cercare "Aggiunta sensibili al contesto della Guida per un controllo ActiveX MFC".
 
    Quando si seleziona questa opzione, inserisce il `AboutBox` del controllo di metodo nella classe del controllo di progetto (C*ProjName*CTRL. cpp) e AboutBox viene aggiunto alla mappa di invio del progetto. Questa opzione è selezionata per impostazione predefinita.
 
@@ -87,7 +87,7 @@ Per altre informazioni su come selezionare le opzioni in questa pagina per migli
 
 - **Si comporta come un semplice controllo frame**
 
-   Specifica che il controllo è un contenitore per altri controlli, impostando il bit per il controllo OLEMISC_SIMPLEFRAME. Per altre informazioni, nella [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) sito Web, ricerca di "Contenimento del sito Frame semplice".
+   Specifica che il controllo è un contenitore per altri controlli, impostando il bit per il controllo OLEMISC_SIMPLEFRAME. Per altre informazioni, nella [MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542) sito Web, ricerca di "Contenimento del sito Frame semplice".
 
 - **Carica le proprietà in modo asincrono**
 

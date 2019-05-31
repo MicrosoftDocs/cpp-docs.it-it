@@ -1,18 +1,19 @@
 ---
-title: Formattazione di stringhe e I / O (C++ moderno)
-ms.date: 11/04/2016
+title: Formattazione di stringhe e I/O (C++ moderno)
+description: Opzioni per la stringa formattata i/o disponibile nel Framework moderno C++.
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22c745798109a2dbef82297c45256593823f806
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266920"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450497"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formattazione di stringhe e I/O (C++ moderno)
 
-C++ [iostream](../standard-library/iostream.md) sono in grado dei / o di stringa formattata. Ad esempio, il codice seguente viene illustrato come impostare il cout per formattare un integer da restituire in formato esadecimale, primo salvando lo stato corrente e reimpostandolo in seguito, perché dopo la formattazione di stato viene passata a cout, resta uguale fino alla modifica, non solo per una riga del codice.
+C++[ \<iostream >](../standard-library/iostream.md) stringa formattata i/o di supporto di classi, funzioni e operatori. Ad esempio, il codice seguente viene illustrato come impostare `cout` per formattare un integer da restituire in formato esadecimale. In primo luogo, Salva lo stato corrente per ripristinare le impostazioni in un secondo momento, perché una volta lo stato di formato viene passato a `cout`, resta uguale fino alla modifica. Non è applicabile solo a una riga di codice.
 
 ```cpp
 #include <iostream>
@@ -38,9 +39,13 @@ int main()
 }
 ```
 
-Ciò può essere interamente troppo complessa in molti casi. In alternativa, è possibile utilizzare Boost dalle librerie Boost di C++, anche se è conforme allo standard. È possibile scaricare qualsiasi libreria Boost dal [Boost](http://www.boost.org/) sito Web.
+Questo approccio è indipendente dai tipi ed estendibili, ma è anche dettagliati e complessi.
 
-Alcuni vantaggi di Boost. Format sono:
+## <a name="alternative-format-options"></a>Opzioni relative al formato alternativo
+
+In alternativa, è possibile usare `Boost.Format` miglioramento C++ librerie, anche se è conforme allo standard. È possibile scaricare qualsiasi libreria Boost dal [Boost](https://www.boost.org/) sito Web.
+
+Alcuni vantaggi di `Boost.Format` sono:
 
 - Sicurezza: Indipendente dai tipi e genera un'eccezione per gli errori, ad esempio, la specifica di troppo pochi o troppi elementi.
 
@@ -48,7 +53,7 @@ Alcuni vantaggi di Boost. Format sono:
 
 - Utile: Posix standard e stringhe di formato simili.
 
-Sebbene Boost si basa su C++ [iostream](../standard-library/iostream-programming.md), che sono sicuri ed estensibili, non sono ottimizzate per le prestazioni. Quando è necessario ottimizzare le prestazioni, prendere in considerazione C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) e [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), che sono veloci e facile da usare. Tuttavia, non sono estendibili o senza vulnerabilità. (Le versioni sicure esistono, ma comportano una riduzione delle prestazioni leggero. Per altre informazioni, vedere [printf_s, printf_s_l, wprintf_s, wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) e [sprintf_s, sprintf_s_l, swprintf_s, swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
+Sebbene `Boost.Format` si basa su C++ [ \<iostream >](../standard-library/iostream-programming.md) strutture, che sono sicuri ed estensibili, non sono ottimizzate per le prestazioni. Quando è necessario ottimizzare le prestazioni, prendere in considerazione C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) e [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), che sono veloci e facile da usare. Tuttavia, non sono estendibili o senza vulnerabilità. (Le versioni sicure esistono, ma comportano una riduzione delle prestazioni leggero. Per altre informazioni, vedere [printf_s, printf_s_l, wprintf_s, wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) e [sprintf_s, sprintf_s_l, swprintf_s, swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
 Il codice seguente vengono illustrate alcune delle funzionalità di formattazione Boost.
 

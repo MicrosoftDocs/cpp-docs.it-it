@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 600459784b4db620b6b717b5ffdfaf24d1ceb757
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159314"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450665"
 ---
 # <a name="geometricdistribution-class"></a>Classe geometric_distribution
 
@@ -93,7 +93,7 @@ Le funzioni membro `operator()` restituiscono il successivo valore generato basa
 
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
 
-Per informazioni dettagliate sulla distribuzione del chi quadrato, vedere l'articolo di Wolfram MathWorld relativo alla [distribuzione geometrica](http://go.microsoft.com/fwlink/p/?linkid=400529).
+Per informazioni dettagliate sulla distribuzione del chi quadrato, vedere l'articolo di Wolfram MathWorld relativo alla [distribuzione geometrica](https://go.microsoft.com/fwlink/p/?linkid=400529).
 
 ## <a name="example"></a>Esempio
 

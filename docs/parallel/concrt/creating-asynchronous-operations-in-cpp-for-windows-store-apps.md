@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92226d8db9fa87ce829ae96b4802ad2f45bc3e54
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413989"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450194"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Creazione di operazioni asincrone in C++ per le app UWP
 
@@ -126,7 +126,7 @@ La figura seguente mostra l'app `Primes` dopo che ogni opzione è stata selezion
 
 ![Applicazione Primes di Windows Runtime](../../parallel/concrt/media/concrt_windows_primes.png "applicazione Primes di Windows Runtime")
 
-Per esempi in cui viene usato `create_async` per creare attività asincrone che possono essere utilizzate da altri linguaggi, vedere [Utilizzo di C++ nell'esempio di utilità di ottimizzazione dei viaggi di Bing Mappe](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) e [Windows 8 Asynchronous Operations in C++ with PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)(Operazioni asincrone di Windows 8 in C++ con PPL).
+Per esempi in cui viene usato `create_async` per creare attività asincrone che possono essere utilizzate da altri linguaggi, vedere [Utilizzo di C++ nell'esempio di utilità di ottimizzazione dei viaggi di Bing Mappe](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) e [Windows 8 Asynchronous Operations in C++ with PPL](https://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)(Operazioni asincrone di Windows 8 in C++ con PPL).
 
 ##  <a name="exethread"></a> Controllo del thread di esecuzione
 

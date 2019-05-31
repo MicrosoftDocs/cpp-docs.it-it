@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 72d65ce7471ed047ab8347a45c58a6b8a9f39a7a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837284"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450854"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
 
@@ -39,7 +39,7 @@ Queste opzioni determinano l'ordine in cui gli argomenti della funzione vengono 
 > **/Gv**<br/>
 > **/Gz**<br/>
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 **/Gd**, ossia l'impostazione predefinita, specifica la convenzione di chiamata di [__cdecl](../../cpp/cdecl.md) per tutte le funzioni ad eccezione delle funzioni membro di C++ e delle funzioni contrassegnate come [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md) o [__vectorcall](../../cpp/vectorcall.md).
 
@@ -47,7 +47,7 @@ Queste opzioni determinano l'ordine in cui gli argomenti della funzione vengono 
 
 **/Gz** specifica la convenzione di chiamata di `__stdcall` per tutte le funzioni ad eccezione delle funzioni membro di C++, delle funzioni denominate `main` e delle funzioni contrassegnate come `__cdecl`, `__fastcall` o `__vectorcall`. Tutte le funzioni `__stdcall` devono avere prototipi. Questa convenzione di chiamata è disponibile solo nei compilatori in x86 e viene ignorata dai compilatori che usano altre architetture.
 
-**/Gv** specifica la convenzione di chiamata di `__vectorcall` per tutte le funzioni ad eccezione delle funzioni membro di C++, delle funzioni denominate main, delle funzioni con un elenco di argomenti variabili `vararg` o delle funzioni contrassegnate con un attributo `__cdecl`, `__stdcall` o `__fastcall` in conflitto. Questa convenzione di chiamata è disponibile solo nelle architetture x86 e x64 che supportano /arch:SSE2 e versioni successive e viene ignorata dai compilatori che usano l'architettura ARM.
+**/GV** specifica il `__vectorcall` convenzione di chiamata per tutte le funzioni ad eccezione di C++ funzioni membro, le funzioni denominate `main`, le funzioni con un `vararg` elenco di argomenti variabili o funzioni che sono contrassegnate con un conflitto `__cdecl`, `__stdcall`, o `__fastcall` attributo. Questa convenzione di chiamata è disponibile solo nelle architetture x86 e x64 che supportano /arch:SSE2 e versioni successive e viene ignorata dai compilatori che usano l'architettura ARM.
 
 Le funzioni che accettano un numero variabile di argomenti devono essere contrassegnate come `__cdecl`.
 
@@ -101,7 +101,7 @@ Per C, la convenzione di denominazione di `__vectorcall` usa il nome della funzi
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare la pagina delle proprietà **C/C++** > **Avanzate**.
+1. Selezionare la pagina delle proprietà **C/C++**  > **Avanzate**.
 
 1. Modificare la proprietà **Convenzione di chiamata**.
 

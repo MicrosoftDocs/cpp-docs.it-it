@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239129"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449739"
 ---
 # <a name="mfc-internet-programming-basics"></a>Concetti di base della programmazione Internet MFC
 
@@ -70,11 +70,11 @@ MFC fornisce classi che supportano la programmazione di applicazioni Internet. �
 
 ##  <a name="_core_web_sites_for_more_information"></a> Siti Web per altre informazioni
 
-Per ulteriori informazioni sulla tecnologia di Internet di Microsoft, vedere la [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) sito Web. (Collegamenti possono cambiare senza preavviso.)
+Per ulteriori informazioni sulla tecnologia di Internet di Microsoft, vedere la [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) sito Web. (Collegamenti possono cambiare senza preavviso.)
 
 Questo sito Web per gli sviluppatori che contiene informazioni sull'uso di strumenti di sviluppo Microsoft e le tecnologie e le storie principali relativi alle conferenze recenti e futuri. In questa pagina è possibile passare a numerosi siti per sviluppatori correlati, inclusi .NET e centri per sviluppatori XML. È anche possibile scaricare beta SDK ed esempi.
 
-Il [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) pubblica specifiche di HTML, HTTP, CGI e altre tecnologie di World Wide Web.
+Il [World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) pubblica specifiche di HTML, HTTP, CGI e altre tecnologie di World Wide Web.
 
 ##  <a name="_core_more_internet_help"></a> Ulteriori informazioni su Internet
 

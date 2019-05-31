@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.AdditionalOptionsPage
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
-ms.openlocfilehash: f42d99b5f1fab06c5de0b8e794009a4ac4291e0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62111141e40862f630b11e4f87f912497ab265b9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270168"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450906"
 ---
 # <a name="hlsl-property-pages"></a>Pagine delle proprietà HLSL
 
@@ -27,10 +27,10 @@ ms.locfileid: "62270168"
 
    Contiene le proprietà per specificare l'output dei file generato dal compilatore HLSL.
 
-È possibile specificare gli argomenti della riga di comando per il compilatore HLSL usando la proprietà **Opzioni aggiuntive** della pagina delle proprietà **Riga di comando**, che include gli argomenti che non possono essere configurati tramite altre proprietà delle pagine delle proprietà HLSL. Per informazioni sul compilatore HLSL, vedere [Effect-Compiler Tool](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409) (Compilatore degli effetti)
+È possibile specificare gli argomenti della riga di comando per il compilatore HLSL usando la proprietà **Opzioni aggiuntive** della pagina delle proprietà **Riga di comando**, che include gli argomenti che non possono essere configurati tramite altre proprietà delle pagine delle proprietà HLSL. Per informazioni sul compilatore HLSL, vedere [Effect-Compiler Tool](https://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409) (Compilatore degli effetti)
 
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento alla pagina di proprietà progetto C++](property-pages-visual-cpp.md)<br>
 [Pagine delle proprietà Riga di comando](command-line-property-pages.md)<br>
-[Compiling Shaders](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409) (Compilazione di shader)
+[Compiling Shaders](https://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409) (Compilazione di shader)

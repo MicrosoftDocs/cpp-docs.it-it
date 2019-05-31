@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414009"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449689"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 
@@ -63,7 +63,7 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 |-|-|
 |[Creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Vengono descritti alcuni punti chiave da tenere presenti quando si usa il Runtime di concorrenza per produrre operazioni asincrone in un'app UWP.|
 |[Procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Viene illustrato come combinare attività PPL con le `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` interfacce per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.|
-|[Esempi di app di Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Contiene esempi di codice scaricabile e demo di App per Windows 8. x. Gli esempi in C++ usano le funzionalità del runtime di concorrenza come attività della libreria PPL per elaborare i dati in background per mantenere l'esperienza utente reattiva.|
+|[Esempi di app di Windows Runtime](https://code.msdn.microsoft.com/windowsapps)|Contiene esempi di codice scaricabile e demo di App per Windows 8. x. Gli esempi in C++ usano le funzionalità del runtime di concorrenza come attività della libreria PPL per elaborare i dati in background per mantenere l'esperienza utente reattiva.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programmazione del flusso di dati nella libreria di agenti asincroni
 
@@ -99,8 +99,8 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 |||
 |-|-|
 |[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni sull'uso del Runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app di Windows Runtime scritte in C++ e XAML.|
-|[Blog relativo alla programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|
-|[Forum relativo all'elaborazione parallela in C++ e codice nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|
+|[Blog relativo alla programmazione parallela in codice nativo](https://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|
+|[Forum relativo all'elaborazione parallela in C++ e codice nativo](https://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|
 |[Programmazione parallela](/dotnet/standard/parallel-programming/index)|Illustra il modello di programmazione parallelo che è disponibile in .NET Framework.|
 
 ## <a name="see-also"></a>Vedere anche

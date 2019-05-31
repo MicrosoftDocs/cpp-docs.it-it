@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447704"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449606"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Errore degli strumenti del linker LNK2019
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-Per correggere questo errore, modificare `unsigned short` al `wchar_t` oppure `WCHAR`, oppure compilare LNK2019g.cpp usando **/Zc:wchar_t-**.
+Per correggere questo errore, modificare `unsigned short` al `wchar_t` oppure `WCHAR`, oppure compilare LNK2019g.cpp usando **/Zc:wchar_t-** .
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Per altre informazioni sulle possibili cause e soluzioni per LNK2001, vedere la domanda in Stack Overflow [che cos'è un errore di simbolo esterno non definito o non risolti con riferimento e come correggerlo?](http://stackoverflow.com/q/12573816/2002113).
+Per altre informazioni sulle possibili cause e soluzioni per LNK2001, vedere la domanda in Stack Overflow [che cos'è un errore di simbolo esterno non definito o non risolti con riferimento e come correggerlo?](https://stackoverflow.com/q/12573816/2002113).
 

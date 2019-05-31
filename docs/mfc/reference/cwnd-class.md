@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220336"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451226"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1652,7 +1652,7 @@ void BringWindowToTop();
 
 Inoltre, `BringWindowToTop` attiva le finestre popup, di livello superiore e figlio MDI. È necessario utilizzare la funzione membro `BringWindowToTop` per rivelare eventuali finestre parzialmente o completamente nascoste da finestre sovrapposte.
 
-Questa funzione chiama semplicemente Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) (funzione). Chiamare il [SetWindowPos](#setwindowpos) funzione per modificare la posizione di una finestra nell'ordine Z. La funzione `BringWindowToTop` non modifica lo stile della finestra per renderla una finestra di livello superiore. Per altre informazioni, vedere [qual è la differenza tra HWND_TOP e HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Questa funzione chiama semplicemente Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) (funzione). Chiamare il [SetWindowPos](#setwindowpos) funzione per modificare la posizione di una finestra nell'ordine Z. La funzione `BringWindowToTop` non modifica lo stile della finestra per renderla una finestra di livello superiore. Per altre informazioni, vedere [qual è la differenza tra HWND_TOP e HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Esempio
 
@@ -2455,7 +2455,7 @@ Il *lpPathSpec* parametro ha il formato seguente:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-In questo esempio *unità* è una lettera di unità *directory* è un nome di directory valido, e *filename* è un nome di file valido deve contenere almeno un carattere jolly. I caratteri jolly sono un punto interrogativo (**?**), che significa creare una corrispondenza con qualsiasi carattere un asterisco (<strong>\*</strong>), vale a dire qualsiasi numero di caratteri.
+In questo esempio *unità* è una lettera di unità *directory* è un nome di directory valido, e *filename* è un nome di file valido deve contenere almeno un carattere jolly. I caratteri jolly sono un punto interrogativo ( **?** ), che significa creare una corrispondenza con qualsiasi carattere un asterisco (<strong>\*</strong>), vale a dire qualsiasi numero di caratteri.
 
 Se si specifica una stringa di lunghezza 0 per *lpPathSpec*, o se si specifica solo un nome di directory ma non includono le specifiche di file, la stringa verrà modificata in "\*.\*".
 
@@ -2523,7 +2523,7 @@ Il *lpPathSpec* parametro ha il formato seguente:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-In questo esempio *unità* è una lettera di unità *directory* è un nome di directory valido, e *filename* è un nome di file valido deve contenere almeno un carattere jolly. I caratteri jolly sono un punto interrogativo (**?**), che significa creare una corrispondenza con qualsiasi carattere un asterisco (<strong>\*</strong>), vale a dire corrisponde a qualsiasi numero di caratteri.
+In questo esempio *unità* è una lettera di unità *directory* è un nome di directory valido, e *filename* è un nome di file valido deve contenere almeno un carattere jolly. I caratteri jolly sono un punto interrogativo ( **?** ), che significa creare una corrispondenza con qualsiasi carattere un asterisco (<strong>\*</strong>), vale a dire corrisponde a qualsiasi numero di caratteri.
 
 Se si specifica una stringa di lunghezza zero per *lpPathSpec*, verrà usata la directory corrente e *lpPathSpec* non verrà modificato. Se si specifica solo un nome di directory ma non includono le specifiche di file, la stringa verrà modificata in "\*".
 

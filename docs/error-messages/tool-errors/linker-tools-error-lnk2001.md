@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161017"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449628"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Errore degli strumenti del linker LNK2001
 
@@ -71,7 +71,7 @@ Questo errore può verificarsi se il codice fa riferimento a un simbolo da una v
 
 Non è attualmente non standard per [denominazione C++](../../error-messages/tool-errors/name-decoration.md) tra i fornitori di compilatori o anche tra versioni diverse di un compilatore. Pertanto, collegano file oggetto compilati con altri compilatori potrà non produrre lo stesso schema di denominazione e generare l'errore LNK2001.
 
-[Opzioni di compilazione mixing inline e non inline](../../error-messages/tool-errors/function-inlining-problems.md) in moduli diversi può causare l'errore LNK2001. Se si crea una libreria di C++ con attivata l'inline delle funzioni (**/Ob1** o **/Ob2**) ma il file di intestazione corrispondente che descrive le funzioni inline disattivata (Nessuna `inline` parola chiave), questo errore si verifica. Per risolvere questo problema, definire le funzioni `inline` nel file di intestazione si include in altri file di origine.
+[Opzioni di compilazione mixing inline e non inline](../../error-messages/tool-errors/function-inlining-problems.md) in moduli diversi può causare l'errore LNK2001. Se si crea una libreria di C++ con attivata l'inline delle funzioni ( **/Ob1** o **/Ob2**) ma il file di intestazione corrispondente che descrive le funzioni inline disattivata (Nessuna `inline` parola chiave), questo errore si verifica. Per risolvere questo problema, definire le funzioni `inline` nel file di intestazione si include in altri file di origine.
 
 Se si usa la `#pragma inline_depth` del compilatore direttiva, assicurarsi di avere un [valore del set 2 o versioni successive](../../error-messages/tool-errors/function-inlining-problems.md)e assicurarsi che è anche possibile usare i [/Ob1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md) opzione del compilatore.
 
@@ -101,5 +101,5 @@ In alcuni casi, il linker può segnalare solo il nome decorato per un simbolo. �
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Per altre informazioni sulle possibili cause e soluzioni per LNK2001, vedere la domanda in Stack Overflow [che cos'è un errore di simbolo esterno non definito o non risolti con riferimento e come correggerlo?](http://stackoverflow.com/q/12573816/2002113).
+Per altre informazioni sulle possibili cause e soluzioni per LNK2001, vedere la domanda in Stack Overflow [che cos'è un errore di simbolo esterno non definito o non risolti con riferimento e come correggerlo?](https://stackoverflow.com/q/12573816/2002113).
 

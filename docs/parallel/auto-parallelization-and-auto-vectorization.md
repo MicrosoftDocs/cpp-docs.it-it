@@ -2,12 +2,12 @@
 title: Parallelizzazione automatica e vettorizzazione automatica
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ff908d1c7d45c8f757b8efe29f4f392102dc61d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236699"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450244"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Parallelizzazione automatica e vettorizzazione automatica
 
@@ -107,12 +107,12 @@ Come con la parallelizzazione automatica, è possibile specificare il [/Qvec-rep
 
 Per altre informazioni su codici motivo e messaggi, vedere [messaggi di vettorizzazione e parallelizzazione](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-Per un esempio che illustra come la vettorizzazione funziona in pratica, vedere [progetto Austin parte 2 di 6: Pagina a usare CURL](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+Per un esempio che illustra come la vettorizzazione funziona in pratica, vedere [progetto Austin parte 2 di 6: Pagina a usare CURL](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
 ## <a name="see-also"></a>Vedere anche
 
 [loop](../preprocessor/loop.md)<br/>
-[Programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
+[Programmazione parallela in codice nativo](https://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [/Qpar (parallelizzazione automatica)](../build/reference/qpar-auto-parallelizer.md)<br/>
 [/Qvec/report (livello di segnalazione parallelizzazione automatica)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec/report (livello di segnalazione vettorizzazione automatica)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>

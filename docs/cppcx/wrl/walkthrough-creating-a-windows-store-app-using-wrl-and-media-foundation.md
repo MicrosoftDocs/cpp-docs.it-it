@@ -3,12 +3,12 @@ title: "Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Found
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
-ms.translationtype: HT
+ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558262"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450152"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Procedura dettagliata: Creazione di un'app UWP tramite WRL e Media Foundation
 
@@ -17,7 +17,7 @@ ms.locfileid: "64558262"
 
 In questa esercitazione si apprenderà come usare il Runtime di Windows C++ libreria di modelli (WRL) per creare un'app Universal Windows Platform (UWP) che usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-Questo esempio illustra come creare una trasformazione personalizzata di Media Foundation che applica un effetto scala di grigi alle immagini acquisite da una webcam. L'app usa C++ per definire la trasformazione personalizzata e C# per usare il componente per trasformare le immagini acquisite. 
+Questo esempio illustra come creare una trasformazione personalizzata di Media Foundation che applica un effetto scala di grigi alle immagini acquisite da una webcam. L'app usa C++ per definire la trasformazione personalizzata e C# per usare il componente per trasformare le immagini acquisite.
 
 > [!NOTE]
 > Oltre a C#, per il componente personalizzato di trasformazione è possibile usare JavaScript, Visual Basic o C++.
@@ -25,7 +25,7 @@ Questo esempio illustra come creare una trasformazione personalizzata di Media F
 Nella maggior parte dei casi, è possibile usare c++ /CX per creare un Runtime di Windows. Tuttavia, in alcuni casi è necessario usare il WRL. Ad esempio, quando si crea un'estensione multimediale per Microsoft Media Foundation, è necessario creare un componente che implementa le interfacce COM e Windows Runtime. Poiché C++ c++ /CX è possibile creare solo gli oggetti di Windows Runtime, per creare un'estensione multimediale è necessario usare il WRL perché consente l'implementazione di interfacce COM e Windows Runtime.
 
 > [!NOTE]
-> Anche se questo esempio di codice è lungo, mostra i requisiti minimi per poter creare una trasformazione utile di Media Foundation. È possibile usare l'esempio come punto di partenza per una trasformazione personalizzata. In questo esempio è stato adattato dal [esempio di estensioni multimediali](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), che usa le estensioni multimediali per applicare effetti ai video, decodificare i video e creare gestori di schema che generano flussi multimediali.
+> Anche se questo esempio di codice è lungo, mostra i requisiti minimi per poter creare una trasformazione utile di Media Foundation. È possibile usare l'esempio come punto di partenza per una trasformazione personalizzata. In questo esempio è stato adattato dal [esempio di estensioni multimediali](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), che usa le estensioni multimediali per applicare effetti ai video, decodificare i video e creare gestori di schema che generano flussi multimediali.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -98,7 +98,7 @@ Nella maggior parte dei casi, è possibile usare c++ /CX per creare un Runtime d
 
    1. Anche in **Input**, aggiungere `runtimeobject.lib`, `mfuuid.lib`, e `mfplat.lib` per i **dipendenze aggiuntive** proprietà.
 
-   1. Sotto **dei metadati di Windows**, impostare **genera metadati Windows** al **Sì (/ WINMD)**.
+   1. Sotto **dei metadati di Windows**, impostare **genera metadati Windows** al **Sì (/ WINMD)** .
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>Usare il componente personalizzato di Media Foundation da un'app c# di WRL
 
@@ -122,10 +122,10 @@ La figura seguente illustra il `MediaCapture app`.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-L'esempio mostra come acquisire foto, una alla volta, dalla webcam predefinita. Il [esempio di estensioni multimediali](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) ancora più avanzate. Illustra come enumerare i dispositivi webcam e come usare i gestori di schema locali. Illustra inoltre altri effetti multimediali che lavorano sia sulle singole foto che sui flussi di video.
+L'esempio mostra come acquisire foto, una alla volta, dalla webcam predefinita. Il [esempio di estensioni multimediali](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) ancora più avanzate. Illustra come enumerare i dispositivi webcam e come usare i gestori di schema locali. Illustra inoltre altri effetti multimediali che lavorano sia sulle singole foto che sui flussi di video.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Libreria di modelli di Windows Runtime C++ (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
-[Esempio di estensioni multimediali](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
+[Esempio di estensioni multimediali](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45d6492c87b7543a54d031f02dcf09e319150131
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317159"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449715"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (generare metadati di Windows)
 
 Abilita la generazione di file di metadati di Windows Runtime (con estensione winmd).
 
-> **/WINMD**\[**:**{**NO**\|**ONLY**}]
+> **/WINMD**\[ **:** {**NO**\|**ONLY**}]
 
 ## <a name="arguments"></a>Argomenti
 
@@ -30,13 +30,13 @@ Il linker genera solo il file con estensione winmd, ma non un file eseguibile bi
 
 ## <a name="remarks"></a>Note
 
-Il **/WINMD** l'opzione del linker viene utilizzato per le app UWP e di componenti Windows runtime per controllare la creazione di un file di metadati (con estensione winmd) di Windows Runtime. Un file con estensione winmd è un tipo di DLL che contiene i metadati per i tipi Windows runtime e, nel caso di componenti di runtime, le implementazioni di tali tipi. I metadati seguono il [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
+Il **/WINMD** l'opzione del linker viene utilizzato per le app UWP e di componenti Windows runtime per controllare la creazione di un file di metadati (con estensione winmd) di Windows Runtime. Un file con estensione winmd è un tipo di DLL che contiene i metadati per i tipi Windows runtime e, nel caso di componenti di runtime, le implementazioni di tali tipi. I metadati seguono il [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
 
 Per impostazione predefinita, il nome del file di output ha il formato *binaryname*. winmd. Per specificare un nome file diverso, usare il [/WINMDFILE](winmdfile-specify-winmd-file.md) opzione.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Selezionare il **le proprietà di configurazione** > **Linker** > **metadati Windows** pagina delle proprietà.
 

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 3822a3c751ac06154e4b13a12f449e7f0ff2cc07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316855"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450708"
 ---
 # <a name="vc-directories-property-page-windows"></a>Pagina delle proprietà Directory di VC++ (Windows)
 
@@ -26,11 +26,11 @@ In questa pagina delle proprietà è possibile indicare a Visual Studio le direc
 
 Per la versione Linux di questa pagina, vedere [Directory di VC++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
-Per accedere alla pagina delle proprietà **Directory di VC++**:
+Per accedere alla pagina delle proprietà **Directory di VC++** :
 
 1. Se la finestra **Esplora soluzioni** non è visibile, scegliere **Visualizza** > **Esplora soluzioni** dal menu principale.
 1. Fare clic con il pulsante destro del mouse su un nodo del progetto (non sulla soluzione di primo livello) e scegliere **Proprietà**.
-1. Nel riquadro sinistro della finestra di dialogo **Pagine delle proprietà** espandere **Proprietà di configurazione** > **Directory di VC++**.
+1. Nel riquadro sinistro della finestra di dialogo **Pagine delle proprietà** espandere **Proprietà di configurazione** > **Directory di VC++** .
 
 Le proprietà in Directory di VC ++ vengono applicate a un progetto, non al nodo della soluzione di primo livello. Se la finestra **Directory di VC ++** non viene visualizzata in **Proprietà di configurazione**, selezionare un nodo del progetto C++ nella finestra **Esplora soluzioni**:
 
@@ -44,7 +44,7 @@ Le impostazioni predefinite per le proprietà in **Directory di VC ++** dipendon
 
 Per visualizzare i valori di una delle directory:
 
-1. Selezionare una delle proprietà nella pagina **Directory di VC ++**. Scegliere ad esempio **Directory librerie**.
+1. Selezionare una delle proprietà nella pagina **Directory di VC ++** . Scegliere ad esempio **Directory librerie**.
 1. Selezionare la freccia a discesa alla fine del campo contenente il valore della proprietà.
 1. Nel menu a discesa scegliere **Modifica**.
 
@@ -74,7 +74,7 @@ Per un elenco delle macro di usate comune, vedere [macro comuni per compilare i 
 
 - Definire le macro utente in un file con estensione props. Per altre informazioni, vedere [Macro della pagina delle proprietà](../working-with-project-properties.md).
 
-Per altre informazioni, vedere questi post di blog: [Directory di VC + +](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [ereditate le proprietà e finestre delle proprietà](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), e [Visual Studio 2010 C++ progetto di Guida all'aggiornamento](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
+Per altre informazioni, vedere questi post di blog: [Directory di VC + +](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [ereditate le proprietà e finestre delle proprietà](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), e [Visual Studio 2010 C++ progetto di Guida all'aggiornamento](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Tipi di directory
 
@@ -103,4 +103,4 @@ Prima di ogni compilazione, Visual Studio esegue una query del timestamp in tutt
 
 ## <a name="sharing-the-settings"></a>Condivisione delle impostazioni
 
-È possibile condividere le proprietà del progetto con altri utenti o tra più computer. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+È possibile condividere le proprietà del progetto con altri utenti o tra più computer. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).

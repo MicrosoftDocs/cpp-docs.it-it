@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 9b37212d97644c42b9048a5c74cf15ee745564b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93271ebe48d2734a5d248b4a4b19689612427ded
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386291"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450196"
 ---
 # <a name="chisquareddistribution-class"></a>Classe chi_squared_distribution
 
@@ -93,7 +93,7 @@ Le funzioni membro `operator()` restituiscono il successivo valore generato basa
 
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).
 
-Per informazioni dettagliate sulla distribuzione del chi quadrato, vedere l'articolo di Wolfram MathWorld relativo alla [distribuzione chi quadrato](http://go.microsoft.com/fwlink/p/?linkid=400528).
+Per informazioni dettagliate sulla distribuzione del chi quadrato, vedere l'articolo di Wolfram MathWorld relativo alla [distribuzione chi quadrato](https://go.microsoft.com/fwlink/p/?linkid=400528).
 
 ## <a name="example"></a>Esempio
 

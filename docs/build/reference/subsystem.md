@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317718"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450723"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -43,7 +43,7 @@ Applicazione in modalità carattere Windows. Il sistema operativo fornisce una c
 **EFI_RUNTIME_DRIVER**<br/>
 Immagine EFI (Extensible Firmware Interface)
 
-Le opzioni del sottosistema EFI descrivono le immagini eseguibili che vengono eseguite nell'ambiente Extensible Firmware Interface. Questo ambiente è in genere fornito con l'hardware e viene eseguito prima che il sistema operativo venga caricato. Le principali differenze tra tipi di immagine EFI sono la posizione di memoria in cui l'immagine viene caricata e l'azione eseguita quando viene restituita la chiamata all'immagine. Un'immagine EFI_APPLICATION viene scaricata quando viene restituito il controllo. Il driver EFI_BOOT_SERVICE_DRIVER o EFI_RUNTIME_DRIVER viene scaricato solo se il controllo restituisce un codice errore. Un'immagine EFI_ROM viene eseguita da ROM. Per altre informazioni, vedere le specifiche sul [Unified EFI Forum](http://www.uefi.org/) sito Web.
+Le opzioni del sottosistema EFI descrivono le immagini eseguibili che vengono eseguite nell'ambiente Extensible Firmware Interface. Questo ambiente è in genere fornito con l'hardware e viene eseguito prima che il sistema operativo venga caricato. Le principali differenze tra tipi di immagine EFI sono la posizione di memoria in cui l'immagine viene caricata e l'azione eseguita quando viene restituita la chiamata all'immagine. Un'immagine EFI_APPLICATION viene scaricata quando viene restituito il controllo. Il driver EFI_BOOT_SERVICE_DRIVER o EFI_RUNTIME_DRIVER viene scaricato solo se il controllo restituisce un codice errore. Un'immagine EFI_ROM viene eseguita da ROM. Per altre informazioni, vedere le specifiche sul [Unified EFI Forum](https://www.uefi.org/) sito Web.
 
 **NATIVO**<br/>
 Codice che viene eseguito senza un ambiente di sottosistema, ad esempio driver di dispositivo in modalità kernel e processi di sistema nativi. Questa opzione è generalmente riservata alle funzionalità di sistema di Windows.

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b64fac7086dcc22199ca359a163074b967c56f95
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388163"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450613"
 ---
 # <a name="redistributing-visual-c-files"></a>Ridistribuzione di file Visual C++
 
 > [!NOTE]
-> Se questa pagina è stata visualizzata durante la ricerca della pagina di download di uno dei file del Runtime di Visual C++, Andare alla [sito Web Microsoft](http://www.microsoft.com/) e immettere **Visual C++ Redistributable** nella casella di ricerca. Scaricare e installare il pacchetto ridistribuibile per l'architettura del computer (ad esempio x64 se si esegue Windows a 64 bit) e la versione di Visual C++ necessaria (ad esempio, 2015).
+> Se questa pagina è stata visualizzata durante la ricerca della pagina di download di uno dei file del Runtime di Visual C++, Andare alla [sito Web Microsoft](https://www.microsoft.com/) e immettere **Visual C++ Redistributable** nella casella di ricerca. Scaricare e installare il pacchetto ridistribuibile per l'architettura del computer (ad esempio x64 se si esegue Windows a 64 bit) e la versione di Visual C++ necessaria (ad esempio, 2015).
 
 Quando si distribuisce un'applicazione, è necessario distribuire i file necessari per il suo supporto. Se alcuni di questi file sono forniti da Microsoft, verificare di disporre dell'autorizzazione per ridistribuirli. Per esaminare le condizioni di licenza di Visual Studio, vedere il collegamento Condizioni di licenza nella finestra di dialogo Informazioni su Microsoft Visual Studio nell'IDE o scaricare il file [Contratto di licenza per il software Microsoft](https://visualstudio.microsoft.com/license-terms/mlt687465/). Per visualizzare l'"elenco REDIST" a cui viene fatto riferimento nella sezione "Codice distribuibile" del Contratto di licenza per il software Microsoft per alcune edizioni di Visual Studio, vedere [Codice distribuibile per Microsoft Visual Studio 2017 e Microsoft Visual Studio 2017 SDK (inclusi utilità e file del server di compilazione)](/visualstudio/productinfo/2017-redistribution-vs) o, per Visual Studio 2015, vedere [Codice distribuibile per Microsoft Visual Studio 2015 e Microsoft Visual Studio 2015 SDK](/visualstudio/productinfo/2015-redistribution-vs). Per altre informazioni sui file ridistribuibili, vedere [Determinazione delle DLL da ridistribuire](determining-which-dlls-to-redistribute.md) ed [Esempi di distribuzione](deployment-examples.md).
 

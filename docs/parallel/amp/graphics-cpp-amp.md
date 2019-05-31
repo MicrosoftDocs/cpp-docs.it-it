@@ -2,12 +2,12 @@
 title: Grafica (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e21c5af094ce90c8e4365ed4263198422ad1905
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405664"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449876"
 ---
 # <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 
@@ -25,7 +25,7 @@ Il `norm` e `unorm` tipi sono tipi scalari che limitano l'intervallo della **flo
 
 ## <a name="short-vector-library"></a>Libreria Short Vector
 
-La libreria Short Vector fornisce alcune delle funzionalità dei [tipo vettore](http://go.microsoft.com/fwlink/p/?linkid=248500) che viene definito in HLSL e viene in genere utilizzata per definire i texel. Un vettore short è una struttura di dati che contiene da uno a quattro valori dello stesso tipo. I tipi supportati sono **doppie**, **float**, **int**, `norm`, `uint`, e `unorm`. I nomi dei tipi sono riportati nella tabella seguente. Per ogni tipo, è disponibile anche un oggetto corrispondente **typedef** che non dispone di un carattere di sottolineatura nel nome. Tipi che includono i caratteri di sottolineatura presenti il [Concurrency:: Graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Inclusi tra i tipi che non hanno i caratteri di sottolineatura il [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) in modo che siano chiaramente separati dai tipi fondamentali con nomi simili, ad esempio **__int8** e **__int16**.
+La libreria Short Vector fornisce alcune delle funzionalità dei [tipo vettore](https://go.microsoft.com/fwlink/p/?linkid=248500) che viene definito in HLSL e viene in genere utilizzata per definire i texel. Un vettore short è una struttura di dati che contiene da uno a quattro valori dello stesso tipo. I tipi supportati sono **doppie**, **float**, **int**, `norm`, `uint`, e `unorm`. I nomi dei tipi sono riportati nella tabella seguente. Per ogni tipo, è disponibile anche un oggetto corrispondente **typedef** che non dispone di un carattere di sottolineatura nel nome. Tipi che includono i caratteri di sottolineatura presenti il [Concurrency:: Graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Inclusi tra i tipi che non hanno i caratteri di sottolineatura il [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) in modo che siano chiaramente separati dai tipi fondamentali con nomi simili, ad esempio **__int8** e **__int16**.
 
 ||Lunghezza 2|Lunghezza 3|Lunghezza 4|
 |-|--------------|--------------|--------------|
@@ -67,7 +67,7 @@ Molte GPU dispongono di hardware e cache ottimizzati per recuperare pixel e texe
 
 - Uno short vector con due o quattro componenti. L'unica eccezione è `double_4`, che non è consentito.
 
-L'oggetto `texture` può avere una dimensione pari a 1, 2 o 3. L'oggetto `texture` può essere acquisito solo per riferimento nell'espressione lambda di una chiamata a `parallel_for_each`. La trama viene archiviata sulla GPU come oggetto texture Direct3D. Per altre informazioni sulle trame e sui texel in Direct3D, vedere [Introduzione alle trame in Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).
+L'oggetto `texture` può avere una dimensione pari a 1, 2 o 3. L'oggetto `texture` può essere acquisito solo per riferimento nell'espressione lambda di una chiamata a `parallel_for_each`. La trama viene archiviata sulla GPU come oggetto texture Direct3D. Per altre informazioni sulle trame e sui texel in Direct3D, vedere [Introduzione alle trame in Direct3D 11](https://go.microsoft.com/fwlink/p/?linkid=248502).
 
 Il tipo di texel utilizzato può essere uno dei molti formati di trama utilizzati nella programmazione grafica. Un formato RGBA, ad esempio, potrebbe utilizzare 32 bit, con 8 bit per ciascun elemento scalare R, G, B e A. L'hardware trama di una scheda grafica può accedere ai singoli elementi in base al formato. Se ad esempio si utilizza il formato RGBA, l'hardware trama consente di estrarre ciascun elemento a 8 bit in una forma a 32 bit. In C++ AMP è possibile impostare i bit per elemento scalare del texel per poter accedere automaticamente ai singoli elementi scalari nel codice senza scorrere i bit.
 
@@ -307,7 +307,7 @@ void write2ComponentTexture() {
 
 Come si può notare, i due esempi di codice sono quasi identici quando si scrive sul livello di mipmap principale. Se nel codice esistente si è utilizzato `writeonly_texture_view` e non si intende migliorare tale codice, non è necessario modificarlo. Se invece si intende migliorarlo, è consigliabile riscriverlo per utilizzare `texture_view` perché i miglioramenti previsti in questa visualizzazione supportano nuove funzionalità di trama hardware. Per ulteriori informazioni sulle nuove funzionalità, continuare a leggere.
 
-Per altre informazioni sulla deprecazione di `writeonly_texture_view`, vedere [Panoramica della progettazione vista trame in C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) nella programmazione parallela nel blog del codice nativo.
+Per altre informazioni sulla deprecazione di `writeonly_texture_view`, vedere [Panoramica della progettazione vista trame in C++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) nella programmazione parallela nel blog del codice nativo.
 
 ### <a name="instantiating-texture-view-objects"></a>Creazione di istanze di oggetti texture view
 
@@ -379,9 +379,9 @@ void write2ComponentTexture() {
 
 Le visualizzazioni di trama i cui elementi sono basati su tipi a virgola mobile, ad esempio float, float_2 o float_4, possono anche essere letti utilizzando il campionamento delle trame per sfruttare il supporto hardware per varie modalità di filtro e indirizzamento. C++ AMP supporta le due modalità di filtro più comuni negli scenario di calcolo, filtro punto (più simile) e filtro lineare (media ponderata) e quattro modalità di indirizzamento, ovvero wrapping, mirroring, clamping e bordo. Per altre informazioni sulle modalità di indirizzamento, vedere [enumerazione address_mode](reference/concurrency-graphics-namespace-enums.md#address_mode).
 
-Oltre alle modalità supportate direttamente da C++ AMP, è possibile accedere ad altre modalità di filtro e modalità di indirizzamento della piattaforma sottostante utilizzando le API di interoperabilità per utilizzare un campionatore di trame creato utilizzando direttamente le API della piattaforma. Ad esempio, Direct3D supporta altre modalità di filtro, come il filtro anisotropico, e consente l'applicazione di una modalità di indirizzamento diversa a ogni dimensione di una trama. È possibile creare un campionatore di trame sulle cui coordinate sono state eseguite operazioni di wrapping verticale, mirroring orizzontale e di campionamento con filtro anisotropico mediante le API di Direct3D e utilizzare il campionatore nel codice C++ AMP tramite l'API di interoperabilità `make_sampler`. Per altre informazioni, vedere [campionamento delle trame in C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) nella programmazione parallela nel blog del codice nativo.
+Oltre alle modalità supportate direttamente da C++ AMP, è possibile accedere ad altre modalità di filtro e modalità di indirizzamento della piattaforma sottostante utilizzando le API di interoperabilità per utilizzare un campionatore di trame creato utilizzando direttamente le API della piattaforma. Ad esempio, Direct3D supporta altre modalità di filtro, come il filtro anisotropico, e consente l'applicazione di una modalità di indirizzamento diversa a ogni dimensione di una trama. È possibile creare un campionatore di trame sulle cui coordinate sono state eseguite operazioni di wrapping verticale, mirroring orizzontale e di campionamento con filtro anisotropico mediante le API di Direct3D e utilizzare il campionatore nel codice C++ AMP tramite l'API di interoperabilità `make_sampler`. Per altre informazioni, vedere [campionamento delle trame in C++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) nella programmazione parallela nel blog del codice nativo.
 
-Le visualizzazioni di trama supportano inoltre la lettura delle mipmap. Le visualizzazioni di trama di sola lettura, ovvero quelle che presentano un tipo di elemento const, offrono la massima flessibilità in quanto è possibile campionare in modo dinamico un intervallo di livelli di mipmap determinato al momento della creazione delle istanze e perché supportano elementi con 1, 2 o 4 componenti. Anche le visualizzazioni di trama di lettura e scrittura che contengono elementi con un solo componente supportano le mipmap, ma solo di un livello determinato al momento della creazione delle istanze. Per altre informazioni, vedere [trame con mipmap](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) nella programmazione parallela nel blog del codice nativo.
+Le visualizzazioni di trama supportano inoltre la lettura delle mipmap. Le visualizzazioni di trama di sola lettura, ovvero quelle che presentano un tipo di elemento const, offrono la massima flessibilità in quanto è possibile campionare in modo dinamico un intervallo di livelli di mipmap determinato al momento della creazione delle istanze e perché supportano elementi con 1, 2 o 4 componenti. Anche le visualizzazioni di trama di lettura e scrittura che contengono elementi con un solo componente supportano le mipmap, ma solo di un livello determinato al momento della creazione delle istanze. Per altre informazioni, vedere [trame con mipmap](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) nella programmazione parallela nel blog del codice nativo.
 
 ### <a name="writing-to-texture-view-objects"></a>Scrittura su oggetti texture view
 
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>Interoperabilità
 
-Il runtime C++ AMP supporta l'interoperabilità tra `texture<T,1>` e il [interfaccia ID3D11Texture1D](http://go.microsoft.com/fwlink/p/?linkId=248503)tra `texture<T,2>` e il [interfaccia ID3D11Texture2D](http://go.microsoft.com/fwlink/p/?linkId=255317)e tra `texture<T,3>`e il [interfaccia ID3D11Texture3D](http://go.microsoft.com/fwlink/p/?linkId=255377). Il [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) metodo accetta un `texture` oggetto e restituisce un `IUnknown` interfaccia. Il [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) metodo accetta un `IUnknown` interfaccia e un' `accelerator_view` oggetto e restituisce un `texture` oggetto.
+Il runtime C++ AMP supporta l'interoperabilità tra `texture<T,1>` e il [interfaccia ID3D11Texture1D](https://go.microsoft.com/fwlink/p/?linkId=248503)tra `texture<T,2>` e il [interfaccia ID3D11Texture2D](https://go.microsoft.com/fwlink/p/?linkId=255317)e tra `texture<T,3>`e il [interfaccia ID3D11Texture3D](https://go.microsoft.com/fwlink/p/?linkId=255377). Il [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) metodo accetta un `texture` oggetto e restituisce un `IUnknown` interfaccia. Il [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) metodo accetta un `IUnknown` interfaccia e un' `accelerator_view` oggetto e restituisce un `texture` oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 

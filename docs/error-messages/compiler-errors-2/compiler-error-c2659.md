@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2659
 ms.assetid: b0883600-4d27-4ca7-a931-8ca6bd48654d
-ms.openlocfilehash: b8b6493b01ac2b88ea50ba50157328f59fdbedf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b44ef825626f60e9ae6c6e8600953959fcd7b3a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360385"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449233"
 ---
 # <a name="compiler-error-c2659"></a>Errore del compilatore C2659
 
 'operatore': funzione come operando sinistro
 
-Funzione presente a sinistra dell'operatore specificato. La causa più comune di questo errore è il fatto che il compilatore ha analizzato l'identificatore a sinistra dell'operatore come una funzione, mentre lo sviluppatore lo aveva inteso come una variabile. Per altre informazioni, vedere Wikipedia articolo [analisi più frustranti](http://en.wikipedia.org/wiki/Most_vexing_parse). In questo esempio vengono illustrate una dichiarazione di funzione e una definizione di variabile che spesso generano confusione:
+Funzione presente a sinistra dell'operatore specificato. La causa più comune di questo errore è il fatto che il compilatore ha analizzato l'identificatore a sinistra dell'operatore come una funzione, mentre lo sviluppatore lo aveva inteso come una variabile. Per altre informazioni, vedere Wikipedia articolo [analisi più frustranti](https://en.wikipedia.org/wiki/Most_vexing_parse). In questo esempio vengono illustrate una dichiarazione di funzione e una definizione di variabile che spesso generano confusione:
 
 ```
 // C2659a.cpp

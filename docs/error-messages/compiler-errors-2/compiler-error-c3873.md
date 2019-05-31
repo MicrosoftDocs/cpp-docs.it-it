@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3873
 ms.assetid: e68fd3be-2391-492b-ac3f-d2428901b2e9
-ms.openlocfilehash: eb2a6935073c3b4a2b9eb3d9b099b372cfa34303
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca70af12ef3223c8c5950f0fa98b1c63a2dd3a4c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385641"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450828"
 ---
 # <a name="compiler-error-c3873"></a>Errore del compilatore C3873
 
@@ -19,7 +19,7 @@ ms.locfileid: "62385641"
 
 Il compilatore C++ è conforme allo standard C++11 sui caratteri consentiti in un identificatore. In un identificatore sono consentiti solo alcuni intervalli di caratteri e di nomi di caratteri universali. Sono previste ulteriori restrizioni per il carattere iniziale di un identificatore. Per altre informazioni e per un elenco degli intervalli di caratteri universali e di caratteri consentiti, vedere [Identifiers](../../cpp/identifiers-cpp.md).
 
-L'intervallo di caratteri consentiti in un identificatore è meno restrittivo quando si compila codice C++/CLI. Gli identificatori nel codice compilato con /clr devono seguire [ECMA-335 Standard: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+L'intervallo di caratteri consentiti in un identificatore è meno restrittivo quando si compila codice C++/CLI. Gli identificatori nel codice compilato con /clr devono seguire [ECMA-335 Standard: Common Language Infrastructure (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 L'esempio seguente genera l'errore C3873:
 

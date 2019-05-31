@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369813"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450799"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -49,7 +49,7 @@ Di seguito sono riportati alcuni suggerimenti da tenere presenti quando si usa \
 
 - L'associazione più utile per la maggior parte delle applicazioni è costituita dal motore `mt19937` con `uniform_int_distribution`, come mostrato nell'[esempio di codice](#code) più avanti in questo articolo.
 
-Esistono diverse opzioni disponibili dal \<random > intestazione e uno di essi è preferibile alla funzione Runtime C obsoleta `rand()`. Per informazioni sui problemi con relativi `rand()` e in che modo \<random > li gestisce, vedere [questo video](http://go.microsoft.com/fwlink/p/?linkid=397615).
+Esistono diverse opzioni disponibili dal \<random > intestazione e uno di essi è preferibile alla funzione Runtime C obsoleta `rand()`. Per informazioni sui problemi con relativi `rand()` e in che modo \<random > li gestisce, vedere [questo video](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Esempi
 
@@ -500,7 +500,7 @@ In Visual Studio sono disponibili due generatori URNG molto utili, ovvero `mt199
 
 <sup>* Se è fornito un seeding noto.</sup>
 
-Anche se lo standard C++ ISO non richiede che `random_device` sia sicuro a livello di crittografia, Visual Studio è implementato in modo da offrire questo tipo di sicurezza. La definizione "sicuro a livello di crittografia" non implica alcuna garanzia, ma fa riferimento a un livello minimo di entropia e, quindi, al livello di prevedibilità, fornito da un determinato algoritmo di creazione di sequenze casuali. Per altre informazioni, vedere l'articolo di Wikipedia relativo al [generatore di numeri pseudocasuali crittograficamente sicuro](http://go.microsoft.com/fwlink/p/?linkid=398017).) Poiché non è richiesto dallo standard C++ ISO, è possibile che altre piattaforme implementino `random_device` come semplice generatore di numeri pseudocasuali (non crittograficamente sicuro) e che sia possibile usarlo solo come origine di seeding per un altro generatore. Quando si usa `random_device` in codice destinato a più piattaforme, verificare la documentazione relativa alle piattaforme specifiche.
+Anche se lo standard C++ ISO non richiede che `random_device` sia sicuro a livello di crittografia, Visual Studio è implementato in modo da offrire questo tipo di sicurezza. La definizione "sicuro a livello di crittografia" non implica alcuna garanzia, ma fa riferimento a un livello minimo di entropia e, quindi, al livello di prevedibilità, fornito da un determinato algoritmo di creazione di sequenze casuali. Per altre informazioni, vedere l'articolo di Wikipedia relativo al [generatore di numeri pseudocasuali crittograficamente sicuro](https://go.microsoft.com/fwlink/p/?linkid=398017).) Poiché non è richiesto dallo standard C++ ISO, è possibile che altre piattaforme implementino `random_device` come semplice generatore di numeri pseudocasuali (non crittograficamente sicuro) e che sia possibile usarlo solo come origine di seeding per un altro generatore. Quando si usa `random_device` in codice destinato a più piattaforme, verificare la documentazione relativa alle piattaforme specifiche.
 
 Per definizione, i risultati di `random_device` non sono riproducibili e, come effetto collaterale, è possibile che l'esecuzione risulti significativamente più lenta rispetto ad altri generatori URNG. La maggior parte delle applicazioni che non devono essere crittograficamente sicure usano `mt19937` o un motore simile, anche se è consigliabile eseguirne il seeding tramite una chiamata a `random_device`, come illustrato nell'[esempio di codice](#code).
 

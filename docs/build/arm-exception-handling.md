@@ -2,12 +2,12 @@
 title: Gestione delle eccezioni ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195355"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450488"
 ---
 # <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
@@ -21,7 +21,7 @@ L'interfaccia EABI (Embedded Application Binary Interface) ARM specifica un mode
 
 ### <a name="assumptions"></a>Presupposti
 
-Le immagini eseguibili per Windows su ARM usano il formato Portable Executable (PE). Per altre informazioni, vedere [specifica Microsoft PE e COFF](http://go.microsoft.com/fwlink/p/?linkid=84140). Le informazioni sulla gestione delle eccezioni sono memorizzate nelle sezioni .pdata e .xdata dell'immagine.
+Le immagini eseguibili per Windows su ARM usano il formato Portable Executable (PE). Per altre informazioni, vedere [specifica Microsoft PE e COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). Le informazioni sulla gestione delle eccezioni sono memorizzate nelle sezioni .pdata e .xdata dell'immagine.
 
 Il meccanismo di gestione delle eccezioni si basa su alcuni presupposti in relazione al codice che segue l'ABI per Windows su ARM:
 

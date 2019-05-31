@@ -2,12 +2,12 @@
 title: Configurazione di programmi per Windows XP
 ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 55753737b4868f33487ed980eaf37a8801f59638
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837129"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450698"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurazione di programmi per Windows XP
 
@@ -17,7 +17,7 @@ Visual Studio 2019 e versioni successive non include il supporto per la creazion
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installare il set di strumenti della piattaforma di Windows XP
 
-Per ottenere i componenti e il set di strumenti della piattaforma per Windows XP e Windows Server 2003 in Visual Studio 2017, eseguire il programma di installazione di Visual Studio. Quando si installa Visual Studio per la prima volta o si sceglie **Modifica** per modificare un'installazione esistente, assicurarsi che sia selezionato il carico di lavoro **Sviluppo di applicazioni desktop con C++**. Nell'elenco dei componenti facoltativi di questo carico di lavoro selezionare **Supporto Windows XP per C++** e quindi scegliere **Installa** o **Modifica**.
+Per ottenere i componenti e il set di strumenti della piattaforma per Windows XP e Windows Server 2003 in Visual Studio 2017, eseguire il programma di installazione di Visual Studio. Quando si installa Visual Studio per la prima volta o si sceglie **Modifica** per modificare un'installazione esistente, assicurarsi che sia selezionato il carico di lavoro **Sviluppo di applicazioni desktop con C++** . Nell'elenco dei componenti facoltativi di questo carico di lavoro selezionare **Supporto Windows XP per C++** e quindi scegliere **Installa** o **Modifica**.
 
 ## <a name="windows-xp-targeting-experience"></a>Esperienza destinata a Windows XP
 
@@ -69,4 +69,4 @@ A causa delle differenze nel supporto di piattaforme e librerie, l'esperienza di
 
 - **Compilazione HLSL**
 
-   Per impostazione predefinita, il set di strumenti di Windows XP non compila i file di codice sorgente HLSL. Per compilare i file HLSL, scaricare e installare DirectX SDK di giugno 2010, quindi impostare le directory VC del progetto per includerlo. Per altre informazioni, vedere la sezione "DirectX SDK Does Not Register Include/Library Paths with Visual Studio 2010" (DirectX SDK non registra i percorsi di inclusione e della libreria con Visual Studio 2010) della [pagina di download di DirectX SDK giugno 2010](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   Per impostazione predefinita, il set di strumenti di Windows XP non compila i file di codice sorgente HLSL. Per compilare i file HLSL, scaricare e installare DirectX SDK di giugno 2010, quindi impostare le directory VC del progetto per includerlo. Per altre informazioni, vedere la sezione "DirectX SDK Does Not Register Include/Library Paths with Visual Studio 2010" (DirectX SDK non registra i percorsi di inclusione e della libreria con Visual Studio 2010) della [pagina di download di DirectX SDK giugno 2010](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

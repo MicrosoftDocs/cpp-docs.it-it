@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558219"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450520"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Procedura dettagliata: L'aggiornamento dell'applicazione MFC Scribble (parte 1)
 
@@ -24,7 +24,7 @@ In questa procedura dettagliata viene modificato l'esempio classico di Scribble 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Il [esempio MFC di Scribble 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Per altre informazioni sulla conversione per Visual Studio 2017 o versione successiva, vedere [Guida al Porting: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
+Il [esempio MFC di Scribble 1.0](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Per altre informazioni sulla conversione per Visual Studio 2017 o versione successiva, vedere [Guida al Porting: MFC Scribble](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Sezioni
 
@@ -171,7 +171,7 @@ Quando si converte un'applicazione che utilizza menu in un'applicazione che usa 
 
 1. Nella visualizzazione progettazione, scegliere il **applicazione** pulsante per visualizzare le relative proprietà. Modificare i valori delle proprietà come segue: **Immagine** al `IDB_RIBBON_MAIN`, **dei messaggi di richiesta** a `File`, **chiavi** a `f`, **Large Images** a `IDB_RIBBON_FILELARGE`e **Small Images** a `IDB_RIBBON_FILESMALL`.
 
-1. Le seguenti modifiche creano il menu visualizzato quando l'utente sceglie il **applicazione** pulsante. Fare clic sui puntini di sospensione (**...** ) accanto a **elementi principali** per aprire la **Editor elementi**.
+1. Le seguenti modifiche creano il menu visualizzato quando l'utente sceglie il **applicazione** pulsante. Fare clic sui puntini di sospensione ( **...** ) accanto a **elementi principali** per aprire la **Editor elementi**.
 
    1. Con il **articoli** tipo **pulsante** selezionato, fare clic su **Aggiungi** per aggiungere un pulsante. Change **didascalia** al `&New`, **ID** a `ID_FILE_NEW`, **immagine** a `0`, **immagine di grandi dimensioni** per `0`.
 
@@ -199,7 +199,7 @@ Quando si converte un'applicazione che utilizza menu in un'applicazione che usa 
 
 1. Le modifiche seguenti creano un pulsante di uscita che viene visualizzato in fondo il **applicazione** menu pulsante.
 
-   1. Nel **delle proprietà** finestra, fare clic sui puntini di sospensione (**...** ) accanto a **pulsante** per aprire la **Editor elementi**.
+   1. Nel **delle proprietà** finestra, fare clic sui puntini di sospensione ( **...** ) accanto a **pulsante** per aprire la **Editor elementi**.
 
    1. Con il **articoli** tipo **pulsante** selezionato, fare clic su **Aggiungi** per aggiungere un pulsante. Change **didascalia** a `E&xit`, **ID** alla `ID_APP_EXIT`, **immagine** a `8`.
 
