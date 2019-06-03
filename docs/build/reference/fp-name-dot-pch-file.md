@@ -1,6 +1,7 @@
 ---
-title: /Fp (Specifica file pch)
-ms.date: 11/04/2016
+title: /Fp (nome &period;alcun file pch)
+description: Usare l'opzione del compilatore /Fp per specificare il nome di file di intestazione precompilata.
+ms.date: 05/31/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e7faa934d14acb5d129173c5e0c7ee67d6caf2b
+ms.sourcegitcommit: 540fa2f5015de1adfa7b6bf823f6eb4ed5a6a4bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270992"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66460884"
 ---
-# <a name="fp-name-pch-file"></a>/Fp (Specifica file pch)
+# <a name="fp-name-periodpch-file"></a>/Fp (nome &period;alcun file pch)
 
 Fornisce un nome di percorso per un'intestazione precompilata anziché usare il nome del percorso predefinito.
 
@@ -32,39 +33,33 @@ Fornisce un nome di percorso per un'intestazione precompilata anziché usare il 
 
 ## <a name="remarks"></a>Note
 
-Usare questa opzione con [/Yc (Crea precompilati o meno File di intestazione)](yc-create-precompiled-header-file.md) oppure [/Yu (Usa il File intestazione precompilata)](yu-use-precompiled-header-file.md) per fornire un nome di percorso per un'intestazione precompilata anziché usare il nome del percorso predefinito. È anche possibile usare **/Fp** con **/Yc** per specificare l'uso di un file di intestazione precompilata che differisce dal **/Yc**<em>filename</em> argomento e dal nome di base del file di origine.
+Usare la **/Fp** opzione con [/Yc (Crea precompilati o meno File di intestazione)](yc-create-precompiled-header-file.md) oppure [/Yu (Usa il File intestazione precompilata)](yu-use-precompiled-header-file.md) per specificare il percorso e il nome per l'intestazione precompilata (PCH) file. Per impostazione predefinita, il **/Yc** opzione Crea un nome di file PCH utilizzando il nome di base del file di origine e una *pch* estensione.
 
-Se non si specifica un'estensione come parte del nome del percorso, viene utilizzata un'estensione di PCH. Se si specifica una directory senza un nome di file, il nome file predefinito è VC*x*0.pch, dove *x* è la versione principale di Visual C++ in uso.
-
-È anche possibile usare la **/Fp** opzione con **/Yu**.
+Se non si specifica un'estensione come parte del *pathname*, un'estensione della *pch* presuppone. Quando si specifica un nome di directory mediante l'utilizzo di una barra ( **/** ) alla fine del *pathname*, il nome file predefinito è vc*versione*0.pch, in cui  *versione* è la versione principale del set di strumenti di Visual Studio. Questa directory deve esistere, o viene generato l'errore C1083.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Fare clic sulla cartella **C/C++** .
+1. Aprire il **le proprietà di configurazione** > **C /C++**  > **intestazioni precompilate** pagina delle proprietà.
 
-1. Scegliere il **intestazioni precompilate** pagina delle proprietà.
-
-1. Modificare il **File di intestazione precompilata** proprietà.
+1. Modificare il **File di Output intestazione precompilata** proprietà.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
-- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>.
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="example"></a>Esempio
+## <a name="examples"></a>Esempi
 
-Se si desidera creare un file di intestazione precompilata per una versione di debug del programma e si esegue la compilazione sia i file di intestazione e il codice sorgente, è possibile specificare un comando, ad esempio:
+Per creare un separato denominato versione del file di intestazione precompilato per le build di debug del programma, è possibile specificare un comando, ad esempio:
 
-```
+```CMD
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP
 ```
 
-## <a name="example"></a>Esempio
+Il comando seguente specifica l'utilizzo di un file di intestazione precompilata denominato MYPCH. Il compilatore precompila codice sorgente di Prog fino alla fine di MyApp. h e inserisce il codice precompilato in MYPCH. Quindi Usa il contenuto di MYPCH e consente di compilare il resto del Prog per creare un file con estensione obj. L'output di questo esempio è un file denominato PROG.exe.
 
-Il comando seguente specifica l'utilizzo di un file di intestazione precompilata denominato MYPCH. Il compilatore presuppone che il codice sorgente di Prog. cpp è stato precompilato tramite MyApp. h e che il codice precompilato si trovi in MYPCH. Usa il contenuto di MYPCH e consente di compilare il resto del Prog per creare un file con estensione obj. L'output di questo esempio è un file denominato PROG.exe.
-
-```
+```CMD
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 ```
 
