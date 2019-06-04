@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63c2971f5d55cb5198925650bcf90b2f1a8b0958
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252701"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503221"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -169,7 +169,7 @@ L'oggetto `COleDateTime` da confrontare.
 
 ### <a name="example"></a>Esempio
 
-Gli operatori **>=**, **\< =**, **>**, e **<**, genera un'asserzione se il `COleDateTime` oggetto viene impostato su null.
+Gli operatori **>=** , **\< =** , **>** , e **<** , genera un'asserzione se il `COleDateTime` oggetto viene impostato su null.
 
 [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]
 
@@ -225,7 +225,7 @@ Indichi i valori di data e ora da copiare nel nuovo `COleDateTime` oggetto.
 Valori di data e ora di MS-DOS per essere convertito in un valore data/ora e copiare nel nuovo `COleDateTime` oggetto.
 
 *timeStamp*<br/>
-Un riferimento a un [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struttura che contiene l'ora locale corrente.
+Un riferimento a un [DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype) struttura che contiene l'ora locale corrente.
 
 ### <a name="remarks"></a>Note
 
@@ -347,7 +347,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ### <a name="parameters"></a>Parametri
 
 *timeStamp*<br/>
-Un riferimento a un [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) struttura.
+Un riferimento a un [DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype) struttura.
 
 ### <a name="return-value"></a>Valore restituito
 

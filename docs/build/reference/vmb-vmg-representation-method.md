@@ -1,5 +1,5 @@
 ---
-title: /vmb, - vmg (metodo di rappresentazione)
+title: /vmb, /vmg (Metodo di rappresentazione)
 ms.date: 11/04/2016
 f1_keywords:
 - /vmb
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-ms.openlocfilehash: eac41de04ec883e7b5acf26596647f912b0b1d20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d24d7f92537f16e36213b8a8fd7b945fda7f5a
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316743"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504303"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Metodo di rappresentazione)
 
@@ -41,7 +41,7 @@ Uso **/vmg** per dichiarare un puntatore a un membro di una classe prima della d
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 

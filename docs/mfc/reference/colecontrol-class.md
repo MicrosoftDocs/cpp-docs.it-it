@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edad2ca391639868e7af1db6e13aaec66733f383
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160315"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503855"
 ---
 # <a name="colecontrol-class"></a>COleControl (classe)
 
@@ -1184,7 +1184,7 @@ Un descrittore per i tipi di parametro dell'evento.
 
 In genere questa funzione non deve essere chiamata direttamente. Al contrario si chiamerà le funzioni di generazione dell'evento nella sezione della dichiarazione di classe del controllo mappa eventi.
 
-Il *pbParams* argomento è un elenco delimitato da spazio **VTS _**. Uno o più di questi valori, separati da spazi (non virgole), specificano l'elenco dei parametri della funzione. I valori possibili sono i seguenti:
+Il *pbParams* argomento è un elenco delimitato da spazio **VTS _** . Uno o più di questi valori, separati da spazi (non virgole), specificano l'elenco dei parametri della funzione. I valori possibili sono i seguenti:
 
 |Simbolo|Tipo di parametro|
 |------------|--------------------|
@@ -2811,7 +2811,7 @@ DWORD che descrive quale form o, aspetto di un oggetto deve essere visualizzato.
 - Rettangolo DVASPECT_TRANSPARENT che copre tutte le parti trasparenti o irregolare.
 
 *pRect*<br/>
-Punta al [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) struttura che specifica il rettangolo in cui l'oggetto deve essere disegnato. Questo parametro controlla il posizionamento e l'adattamento dell'oggetto.
+Punta al [RECTL](/previous-versions/dd162907\(v=vs.85\)) struttura che specifica il rettangolo in cui l'oggetto deve essere disegnato. Questo parametro controlla il posizionamento e l'adattamento dell'oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 

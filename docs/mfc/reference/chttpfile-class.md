@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 3c701f933d622adc5f3d8b1eb2371406e5b45e6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a637ef8feb28396b1427341c8174e9a7adaa69a9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345799"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503499"
 ---
 # <a name="chttpfile-class"></a>Classe CHttpFile
 
@@ -126,7 +126,7 @@ Un riferimento a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) 
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -319,7 +319,7 @@ Un puntatore a un Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinba
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -398,7 +398,7 @@ Un riferimento a un codice di stato. Codici di stato indicano l'esito positivo o
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 

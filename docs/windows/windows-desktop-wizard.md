@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 2f9ac262cc564c39d30ddfae7f70ea92e92081a8
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708062"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503791"
 ---
 # <a name="windows-desktop-wizard"></a>Creazione guidata applicazione desktop di Windows
 
@@ -51,7 +51,7 @@ Crea il tipo di applicazione specificata.
 
 |Opzione|Descrizione|
 |------------|-----------------|
-|**Applicazione console**|Crea un'applicazione console. Programmi console sviluppati con [funzioni Console](https://msdn.microsoft.com/library/ms813137.aspx), che forniscono il supporto di modalità carattere nelle finestre della console. Visual C++ [librerie run-time](../c-runtime-library/c-run-time-library-reference.md) anche fornire l'output e input da finestre della console con funzioni dei / o standard, ad esempio `printf_s()` e `scanf_s()`. Un'applicazione console non dispone di alcuna interfaccia utente grafica. Compila in un file .exe e può essere eseguito come applicazione autonoma dalla riga di comando.<br /><br /> È possibile aggiungere il supporto MFC e ATL a un'applicazione console.|
+|**Applicazione console**|Crea un'applicazione console. Visual C++ [librerie run-time](../c-runtime-library/c-run-time-library-reference.md) anche fornire l'output e input da finestre della console con funzioni dei / o standard, ad esempio `printf_s()` e `scanf_s()`. Un'applicazione console non dispone di alcuna interfaccia utente grafica. Compila in un file .exe e può essere eseguito come applicazione autonoma dalla riga di comando.<br /><br /> È possibile aggiungere il supporto MFC e ATL a un'applicazione console.|
 |**Applicazione di Windows**|Crea un programma Win32. Un programma Win32 è un'applicazione eseguibile (EXE) scritta in C o C++, tramite chiamate all'API Win32 per creare un'interfaccia utente grafica.<br /><br /> Non è possibile aggiungere MFC o ATL supportano a un'applicazione Windows.|
 |**Libreria a collegamento dinamico**|Crea una libreria di collegamento dinamico Win32 (DLL). Una DLL Win32 è un file binario, scritto in C o C++, che usa le chiamate all'API Win32 anziché le classi MFC e che funge da una libreria condivisa di funzioni che possono essere utilizzate contemporaneamente da più applicazioni.<br /><br /> Non è possibile aggiungere supporto MFC o ATL a un'applicazione DLL creata usando questa procedura guidata, ma è possibile creare una DLL MFC da scegliere **nuovo > progetto > DLL MFC**.|
 |**Libreria statica**|Crea una libreria statica. Una libreria statica è un file contenente gli oggetti e le funzioni e i dati che si collega il programma quando viene compilato il file eseguibile. In questo argomento illustra come creare i file di avvio e [proprietà del progetto](../build/reference/property-pages-visual-cpp.md) per una libreria statica. Un file di libreria statica offre i vantaggi seguenti:<br /><br />-Una libreria statica Win32 è utile se l'applicazione che si sta lavorando effettua le chiamate all'API Win32 anziché le classi MFC.<br />-Il processo di collegamento non cambiano se il resto dell'applicazione Windows viene scritto nel linguaggio C o C++.<br />-È possibile collegare una libreria statica a un programma basato su MFC o a un programma non MFC.|
@@ -87,4 +87,4 @@ Dopo aver creato un'applicazione desktop di Windows, è possibile aggiungere cla
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++tipi di progetto in Visual Studio](../build/reference/visual-cpp-project-types.md)
+[Tipi di progetto C++ in Visual Studio](../build/reference/visual-cpp-project-types.md)

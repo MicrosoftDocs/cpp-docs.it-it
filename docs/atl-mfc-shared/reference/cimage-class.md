@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b61d38d141392dc85a150ddd2caf50b28146ae7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235122"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503177"
 ---
 # <a name="cimage-class"></a>CImage (classe)
 
@@ -158,7 +158,7 @@ Per determinare se un oggetto bitmap associata è una sezione DIB, chiamare [IsD
 > [!NOTE]
 > Utilizzo globale `CImage` gli oggetti in una DLL non è consigliata. Se è necessario usare un globali `CImage` oggetti in una DLL, chiamata [CImage::ReleaseGDIPlus](#releasegdiplus) rilasciare in modo esplicito le risorse usate da GDI+.
 
-`CImage` non possono essere selezionati in un nuovo [CDC](../../mfc/reference/cdc-class.md). `CImage` Crea un proprio HDC per l'immagine. Poiché un oggetto HBITMAP può essere selezionato solo in uno HDC alla volta, HBITMAP associato il `CImage` non possono essere selezionati in un altro HDC. Se è necessario una CDC, recuperare il HDC dal `CImage` e assegnarle a [CDC::FromHandle] (.. /.. /MFC/Reference/CDC-Class.MD#cdc__fromhandle.
+`CImage` non possono essere selezionati in un nuovo [CDC](../../mfc/reference/cdc-class.md). `CImage` Crea un proprio HDC per l'immagine. Poiché un oggetto HBITMAP può essere selezionato solo in uno HDC alla volta, HBITMAP associato il `CImage` non possono essere selezionati in un altro HDC. Se è necessario una CDC, recuperare il HDC dal `CImage` e assegnarle a [CDC::FromHandle](../../mfc/reference/cdc-class.md#fromhandle).
 
 ## <a name="example"></a>Esempio
 
@@ -480,7 +480,7 @@ Specifica il tipo di compressione per una bitmap dal basso in alto compressa (DI
 - Il formato BI_BITFIELDS sono compressi e la tabella dei colori è costituito da tre maschere di colore DWORD che specificano i componenti rossi, verdi e blu, rispettivamente, di ciascun pixel. Questo è valido se utilizzato con - 16 e 32 bpp bitmap.
 
 *pdwBitfields*<br/>
-Usato solo se *eCompression* è impostato per BI_BITFIELDS, in caso contrario, deve essere NULL. Un puntatore a una matrice di tre maschere di bit DWORD, che specifica quali bit di ogni pixel vengono usati per i componenti rossi, verdi e blu del colore, rispettivamente. Per informazioni sulle restrizioni per i campi di bit, vedere [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) nel SDK di Windows.
+Usato solo se *eCompression* è impostato per BI_BITFIELDS, in caso contrario, deve essere NULL. Un puntatore a una matrice di tre maschere di bit DWORD, che specifica quali bit di ogni pixel vengono usati per i componenti rossi, verdi e blu del colore, rispettivamente. Per informazioni sulle restrizioni per i campi di bit, vedere [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) nel SDK di Windows.
 
 *dwFlags*<br/>
 Specifica se l'oggetto bitmap dispone di un canale alfa. Può essere una combinazione di zero o più dei valori seguenti:
@@ -648,7 +648,7 @@ Il numero di bit per pixel.
 
 Questo valore determina il numero di bit che definiscono ogni pixel e il numero massimo di colori della bitmap.
 
-In genere, i bit per pixel è 1, 4, 8, 16, 24 o 32. Vedere le `biBitCount` appartenente [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) nel SDK di Windows per altre informazioni su questo valore.
+In genere, i bit per pixel è 1, 4, 8, 16, 24 o 32. Vedere le `biBitCount` appartenente [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) nel SDK di Windows per altre informazioni su questo valore.
 
 ##  <a name="getcolortable"></a>  CImage::GetColorTable
 

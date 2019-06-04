@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349264"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504518"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -83,7 +83,7 @@ Dimensione dello stack per un nuovo thread, oppure 0.
 Elenco di argomenti da passare a un nuovo thread, oppure **NULL**.
 
 *Sicurezza*<br/>
-Puntatore a una struttura [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) che determina se l'handle restituito può essere ereditato dai processi figlio. Se *sicurezza* viene **NULL**, l'handle non può essere ereditata. Deve essere **NULL** per le applicazioni Windows 95.
+Puntatore a una struttura [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) che determina se l'handle restituito può essere ereditato dai processi figlio. Se *sicurezza* viene **NULL**, l'handle non può essere ereditata. Deve essere **NULL** per le applicazioni Windows 95.
 
 *initflag*<br/>
 Flag che controllano lo stato iniziale di un nuovo thread. Impostare *initflag* su 0 per l'esecuzione immediata o da **CREATE_SUSPENDED** per creare il thread in uno stato sospeso; usare [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) per eseguire il thread. Impostare *initflag* al **STACK_SIZE_PARAM_IS_A_RESERVATION** flag da utilizzare *stack_size* come dimensione dello stack in byte di riserva iniziale; se questo flag viene omesso, *stack_size* specifica le dimensioni massime dei commit.

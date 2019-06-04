@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245582"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503336"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY macro
 
@@ -39,7 +39,7 @@ Queste macro immettere le interfacce dell'oggetto nella propria mappa COM in mod
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Uguale allo [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), ad eccezione del fatto che l'esecuzione di query per qualsiasi IID comporta la query di inoltro *punk*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Uguale allo [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), a meno che *punk* è NULL, viene creato automaticamente la funzione di aggregazione descritto dal *clsid*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Uguale allo [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), ad eccezione del fatto che l'esecuzione di query per qualsiasi IID comporta la query di inoltro *punk*e se *punk* è NULL, la creazione automatica la funzione di aggregazione descritto dal *clsid*.|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Fa sì che il programma chiami [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) quando viene richiesto l'interfaccia specificata.|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Fa sì che il programma chiami [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) quando viene richiesto l'interfaccia specificata.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Salva i dati specifici dell'interfaccia per ogni istanza.|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Espone le interfacce tear-off.|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Elabora la mappa COM della classe di base durante l'elaborazione raggiunge questa voce nella mappa COM.|
@@ -243,7 +243,7 @@ Se la query di interfaccia non riesce, l'elaborazione della mappa COM continua.
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-Fa sì che il programma chiami [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) quando viene richiesto l'interfaccia specificata.
+Fa sì che il programma chiami [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) quando viene richiesto l'interfaccia specificata.
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -328,7 +328,7 @@ Ad esempio, nel codice seguente:
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-Si noti che la prima voce nella mappa COM deve essere un'interfaccia sull'oggetto che contiene la mappa COM. Di conseguenza, non è possibile avviare le voci della mappa COM con COM_INTERFACE_ENTRY_CHAIN, provocando la mappa COM di un oggetto diverso da cercare nel punto in cui **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** viene visualizzato nella mappa COM dell'oggetto. Se si desidera cercare prima di tutto la mappa COM di un altro oggetto, aggiungere una voce di interfaccia per `IUnknown` alla mappa COM, quindi concatenare mappa COM dell'oggetto. Ad esempio:
+Si noti che la prima voce nella mappa COM deve essere un'interfaccia sull'oggetto che contiene la mappa COM. Di conseguenza, non è possibile avviare le voci della mappa COM con COM_INTERFACE_ENTRY_CHAIN, provocando la mappa COM di un oggetto diverso da cercare nel punto in cui **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** viene visualizzato nella mappa COM dell'oggetto. Se si desidera cercare prima di tutto la mappa COM di un altro oggetto, aggiungere una voce di interfaccia per `IUnknown` alla mappa COM, quindi concatenare mappa COM dell'oggetto. Ad esempio:
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

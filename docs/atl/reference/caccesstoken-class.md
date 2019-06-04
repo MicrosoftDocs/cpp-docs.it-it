@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260727"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503373"
 ---
 # <a name="caccesstoken-class"></a>Classe CAccessToken
 
@@ -246,7 +246,7 @@ Puntatore al nuovo `CAccessToken` oggetto.
 Specifica i diritti di accesso richiesto per il nuovo token. L'impostazione predefinita, MAXIMUM_ALLOWED, richieste di tutti i diritti di accesso valide per il chiamante. Visualizzare [diritti di accesso e le maschere di accesso](/windows/desktop/SecAuthZ/access-rights-and-access-masks) ulteriori su diritti di accesso.
 
 *pTokenAttributes*<br/>
-Puntatore a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struttura che consente di specificare un descrittore di sicurezza per il nuovo token e determina se i processi figlio possono ereditare il token. Se *pTokenAttributes* è NULL, il token Ottiene un descrittore di sicurezza predefinite e l'handle non può essere ereditata.
+Puntatore a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struttura che consente di specificare un descrittore di sicurezza per il nuovo token e determina se i processi figlio possono ereditare il token. Se *pTokenAttributes* è NULL, il token Ottiene un descrittore di sicurezza predefinite e l'handle non può essere ereditata.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -295,10 +295,10 @@ Specifica i flag aggiuntivi che consentono di controllare la classe di priorità
 Se TRUE, il profilo dell'utente viene caricato con [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
 *pProcessAttributes*<br/>
-Puntatore a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struttura che consente di specificare un descrittore di sicurezza per il nuovo processo e determina se l'handle restituito possono ereditare da processi figlio. Se *pProcessAttributes* è NULL, il processo Ottiene un descrittore di sicurezza predefinite e l'handle non può essere ereditata.
+Puntatore a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struttura che consente di specificare un descrittore di sicurezza per il nuovo processo e determina se l'handle restituito possono ereditare da processi figlio. Se *pProcessAttributes* è NULL, il processo Ottiene un descrittore di sicurezza predefinite e l'handle non può essere ereditata.
 
 *pThreadAttributes*<br/>
-Puntatore a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struttura che consente di specificare un descrittore di sicurezza per il nuovo thread e determina se l'handle restituito possono ereditare da processi figlio. Se *pThreadAttributes* è NULL, il thread Ottiene un descrittore di sicurezza predefinite e l'handle non può essere ereditata.
+Puntatore a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struttura che consente di specificare un descrittore di sicurezza per il nuovo thread e determina se l'handle restituito possono ereditare da processi figlio. Se *pThreadAttributes* è NULL, il thread Ottiene un descrittore di sicurezza predefinite e l'handle non può essere ereditata.
 
 *bInherit*<br/>
 Indica se il nuovo processo eredita l'handle dal processo chiamante. Se TRUE, ogni handle aperta ereditabile nel processo chiamante viene ereditata dal nuovo processo. Handle ereditati hanno gli stessi privilegi di accesso e valore come gli handle originali.

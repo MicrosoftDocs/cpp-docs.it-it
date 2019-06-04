@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 6ce3532e99dc1d0ff0151285766aa5d78c2b9e9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4f5024e282885797858c800640bc5651819ca20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275308"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503062"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>Interfaccia IDocHostUIHandlerDispatch
 
@@ -32,7 +32,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>Metodi pubblici
 
 > [!NOTE]
->  I collegamenti nella tabella seguente sono per gli argomenti di riferimento INet SDK per i membri del [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx) interfaccia. `IDocHostUIHandlerDispatch` ha la stessa funzionalità `IDocUIHostHandler`, con la differenza è che `IDocHostUIHandlerDispatch` è un'interfaccia dispatch mentre `IDocUIHostHandler` è un'interfaccia personalizzata.
+>  I collegamenti nella tabella seguente sono per gli argomenti di riferimento INet SDK per i membri del [IDocUIHostHandler](/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\)) interfaccia. `IDocHostUIHandlerDispatch` ha la stessa funzionalità `IDocUIHostHandler`, con la differenza è che `IDocHostUIHandlerDispatch` è un'interfaccia dispatch mentre `IDocUIHostHandler` è un'interfaccia personalizzata.
 
 |||
 |-|-|
@@ -67,4 +67,4 @@ La definizione di questa interfaccia è disponibile come file IDL o C++, come il
 
 ## <a name="see-also"></a>Vedere anche
 
-[IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)
+[IDocUIHostHandler](/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))

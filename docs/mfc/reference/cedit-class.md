@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164072"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503740"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ Se si desidera gestire i messaggi di notifica Windows inviati da un controllo di
 
 Ogni voce nella mappa messaggi assume il formato seguente:
 
-  **On _**_notifica_**(** _id_**,** _memberFxn_ **)**
+  **On _** _notifica_ **(** _id_ **,** _memberFxn_ **)**
 
 in cui `id` specifica l'ID della finestra figlio del controllo di modifica l'invio della notifica, e `memberFxn` è il nome della funzione membro padre scritta per gestire la notifica.
 
@@ -708,7 +708,7 @@ Specifica il carattere da visualizzare anziché il carattere digitato dall'utent
 
 ### <a name="remarks"></a>Note
 
-Se si crea il controllo di modifica con lo stile ES_PASSWORD, la DLL che supporta il controllo determina il carattere della password predefinito. Il manifesto o la [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) metodo determina a quali DLL supporta il controllo di modifica. Se user32.dll supporta il controllo di modifica, il carattere della password predefinita è l'asterisco ('* ', U + 002A). Se comctl32.dll versione 6 supporta il controllo di modifica, il carattere predefinito è cerchio nero ('●', 25CF U +). Per ulteriori informazioni su quali DLL e versione supporta i controlli comuni, vedere [Shell e le versioni di controlli comuni](https://msdn.microsoft.com/library/windows/desktop/bb776779).
+Se si crea il controllo di modifica con lo stile ES_PASSWORD, la DLL che supporta il controllo determina il carattere della password predefinito. Il manifesto o la [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) metodo determina a quali DLL supporta il controllo di modifica. Se user32.dll supporta il controllo di modifica, il carattere della password predefinita è l'asterisco ('* ', U + 002A). Se comctl32.dll versione 6 supporta il controllo di modifica, il carattere predefinito è cerchio nero ('●', 25CF U +). Per ulteriori informazioni su quali DLL e versione supporta i controlli comuni, vedere [Shell e le versioni di controlli comuni](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
 Questo metodo invia il [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) messaggio, che è descritti nel SDK di Windows.
 
@@ -867,7 +867,7 @@ L'indice del carattere è il numero di caratteri dall'inizio del controllo di mo
 
 Questa funzione membro viene elaborata solo da controlli di modifica più righe.
 
-Per altre informazioni, vedere [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) nel SDK di Windows.
+Per altre informazioni, vedere [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) nel SDK di Windows.
 
 ### <a name="example"></a>Esempio
 

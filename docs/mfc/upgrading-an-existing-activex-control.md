@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 57d94a51d9dfb78dfaf3a690c43c74a2d6ab6db3
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 22cbeaa5ac0f92e2b7bcc9dcbd06df9ab4ccaff5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450608"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503840"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Aggiornamento di un controllo ActiveX esistente
 
@@ -181,7 +181,7 @@ Per usare un controllo ActiveX concesso in licenza in Internet Explorer, è nece
 
 - Utilizzo del parametro Codebase
 
-Per usare un controllo con licenza in una pagina HTML in un computer privo di licenza, è necessario generare un file delle licenze (LPK). Il file LPK contiene le licenze di runtime per i controlli con licenza nella pagina HTML. Questo file viene generato LPK_Tool. File EXE che viene fornito con il SDK ActiveX. Per altre informazioni, vedere il sito Web MSDN all'indirizzo [ https://msdn.microsoft.com ](https://msdn.microsoft.com).
+Per usare un controllo con licenza in una pagina HTML in un computer privo di licenza, è necessario generare un file delle licenze (LPK). Il file LPK contiene le licenze di runtime per i controlli con licenza nella pagina HTML. Questo file viene generato LPK_Tool. File EXE che viene fornito con il SDK ActiveX.
 
 #### <a name="to-create-an-lpk-file"></a>Per creare un file LPK
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d50aa8cac331ce44008f2b1949721495106c68e8
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386271"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503648"
 ---
 # <a name="cgopherconnection-class"></a>Classe CGopherConnection
 
@@ -199,7 +199,7 @@ Un riferimento a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) 
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ##  <a name="openfile"></a>  CGopherConnection::OpenFile
 

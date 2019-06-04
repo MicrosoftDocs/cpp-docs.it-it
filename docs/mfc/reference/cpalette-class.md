@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373180"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504756"
 ---
 # <a name="cpalette-class"></a>CPalette (classe)
 
@@ -111,7 +111,7 @@ Specifica la prima voce nella tavolozza da animare.
 Specifica il numero di voci della tavolozza da animare.
 
 *lpPaletteColors*<br/>
-Punta al primo membro di una matrice [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) strutture per sostituire le voci della tavolozza identificate dal *nStartIndex* e *nNumEntries*.
+Punta al primo membro di una matrice [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) strutture per sostituire le voci della tavolozza identificate dal *nStartIndex* e *nNumEntries*.
 
 ### <a name="remarks"></a>Note
 
@@ -245,7 +245,7 @@ Specifica la prima voce nella tavolozza logica da recuperare.
 Specifica il numero di voci della tavolozza logica da recuperare.
 
 *lpPaletteColors*<br/>
-Punta a una matrice di [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) strutture di dati per ricevere le voci della tavolozza. La matrice deve contenere almeno un numero di strutture di dati come specificato da *nNumEntries*.
+Punta a una matrice di [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) strutture di dati per ricevere le voci della tavolozza. La matrice deve contenere almeno un numero di strutture di dati come specificato da *nNumEntries*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -312,7 +312,7 @@ Specifica la prima voce nella tavolozza logica da impostare.
 Specifica il numero di voci della tavolozza logica da impostare.
 
 *lpPaletteColors*<br/>
-Punta a una matrice di [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) strutture di dati per ricevere le voci della tavolozza. La matrice deve contenere almeno un numero di strutture di dati come specificato da *nNumEntries*.
+Punta a una matrice di [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) strutture di dati per ricevere le voci della tavolozza. La matrice deve contenere almeno un numero di strutture di dati come specificato da *nNumEntries*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -322,7 +322,7 @@ Impostare il numero di voci della tavolozza logica; 0 se la funzione ha esito ne
 
 Se la tavolozza logica sia selezionata in un contesto di dispositivo quando l'applicazione chiama `SetPaletteEntries`, le modifiche saranno effettive fino a quando l'applicazione chiama [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).
 
-Per altre informazioni sulla struttura di Windows `PALETTEENTRY`, vedere [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) nel SDK di Windows.
+Per altre informazioni, vedere [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) nel SDK di Windows.
 
 ## <a name="see-also"></a>Vedere anche
 

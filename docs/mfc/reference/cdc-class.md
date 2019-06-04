@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222570"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504394"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -3220,7 +3220,7 @@ Restituisce la modalità grafica corrente se l'operazione riesce. Per un elenco 
 
 Restituisce 0 in caso di errore.
 
-Per ottenere informazioni sull'errore, chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Per ottenere informazioni sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, il layout del flag per il contesto di dispositivo corrente. In caso contrario, GDI_ERROR. Per informazioni dettagliate sull'errore, chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Per un elenco dei flag di layout, vedere [CDC::SetLayout](#setlayout).
+Se l'operazione riesce, il layout del flag per il contesto di dispositivo corrente. In caso contrario, GDI_ERROR. Per informazioni dettagliate sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Per un elenco dei flag di layout, vedere [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Note
 
@@ -4012,7 +4012,7 @@ Restituisce un valore diverso da zero se l'operazione riesce.
 
 Restituisce 0 in caso di errore.
 
-Per ottenere informazioni sull'errore, chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Per ottenere informazioni sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
@@ -4459,7 +4459,7 @@ Restituisce un valore diverso da zero se l'operazione riesce.
 
 Restituisce 0 in caso di errore.
 
-Per ottenere informazioni sull'errore, chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Per ottenere informazioni sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
@@ -6003,7 +6003,7 @@ Specifica la modalità di grafica. Per un elenco dei valori di che questo parame
 
 Restituisce la modalità grafica precedente l'operazione riesce.
 
-Restituisce 0 in caso di errore. Per ottenere informazioni sull'errore, chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Restituisce 0 in caso di errore. Per ottenere informazioni sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
@@ -6032,7 +6032,7 @@ Flag di controllo di layout del contesto di dispositivo e bitmap. Può essere un
 
 Se l'operazione riesce, il layout precedente del contesto di dispositivo.
 
-Se ha esito negativo, GDI_ERROR. Per ottenere informazioni sull'errore, chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Se ha esito negativo, GDI_ERROR. Per ottenere informazioni sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
@@ -6657,7 +6657,7 @@ Restituisce un valore diverso da zero se l'operazione riesce.
 
 Restituisce 0 in caso di errore.
 
-Per ottenere informazioni sull'errore, chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Per ottenere informazioni sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 

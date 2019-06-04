@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373808"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504240"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 
@@ -74,7 +74,7 @@ Esempio di codice seguente è una parte di una finestra di dialogo che consente 
 
 ## <a name="example"></a>Esempio
 
-L'esempio di codice seguente dal file di intestazione dialogo definisce la [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) e [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) variabili necessarie per il [CNetAddressCtrl::GetAddress](#getaddress)metodo.
+L'esempio di codice seguente dal file di intestazione dialogo definisce la [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) e [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) variabili necessarie per il [CNetAddressCtrl::GetAddress](#getaddress)metodo.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -191,7 +191,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>Parametri
 
 *pAddress*<br/>
-[in, out] Puntatore a un [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struttura.  Impostare il *pAddrInfo* membro della struttura all'indirizzo di un [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struttura prima di chiamare il metodo GetAddress.
+[in, out] Puntatore a un [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) struttura.  Impostare il *pAddrInfo* membro della struttura all'indirizzo di un [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) struttura prima di chiamare il metodo GetAddress.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -199,7 +199,7 @@ Il valore S_OK se questo metodo ha esito positivo; in caso contrario, un codice 
 
 ### <a name="remarks"></a>Note
 
-Se questo metodo ha esito positivo, il [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) struttura contiene informazioni aggiuntive sull'indirizzo di rete.
+Se questo metodo ha esito positivo, il [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) struttura contiene informazioni aggiuntive sull'indirizzo di rete.
 
 Usare la [CNetAddressCtrl::SetAllowType](#setallowtype) metodo per specificare i tipi di indirizzi può supportare il controllo di indirizzo di rete corrente. Usare la [CNetAddressCtrl::GetAddress](#getaddress) metodo per convalidare e analizzare l'indirizzo di rete immessi dall'utente. Usare la [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) metodo per visualizzare una finestra popup messaggio di errore se il [CNetAddressCtrl::GetAddress](#getaddress) metodo ha esito negativo.
 
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Una combinazione bit per bit (OR) di flag che specifica i tipi di indirizzi può supportare il controllo di indirizzo di rete. Per altre informazioni, vedere [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).
+Una combinazione bit per bit (OR) di flag che specifica i tipi di indirizzi può supportare il controllo di indirizzo di rete. Per altre informazioni, vedere [NET_STRING](/windows/desktop/shell/net-string).
 
 ### <a name="remarks"></a>Note
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*dwAddrMask*|[in] Una combinazione bit per bit (OR) di flag che specifica i tipi di indirizzi può supportare il controllo di indirizzo di rete. Per altre informazioni, vedere [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|
+|*dwAddrMask*|[in] Una combinazione bit per bit (OR) di flag che specifica i tipi di indirizzi può supportare il controllo di indirizzo di rete. Per altre informazioni, vedere [NET_STRING](/windows/desktop/shell/net-string).|
 
 ### <a name="return-value"></a>Valore restituito
 

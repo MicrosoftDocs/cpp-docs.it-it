@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8940b1d028edc76383470f913ccbe16cb8c0e9f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181977"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503707"
 ---
 # <a name="cftpconnection-class"></a>Classe CFtpConnection
 
@@ -208,7 +208,7 @@ Un puntatore a una stringa contenente il nome della directory da creare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione di Windows [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione di Windows [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -246,7 +246,7 @@ Un puntatore a un valore DWORD che contiene le informazioni seguenti:
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -284,7 +284,7 @@ Un puntatore a un valore DWORD che contiene le informazioni seguenti:
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -344,7 +344,7 @@ L'identificatore di contesto per il recupero di file. Visualizzare **osservazion
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -434,7 +434,7 @@ L'identificatore di contesto per posizionare il file. Visualizzare **osservazion
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -457,7 +457,7 @@ Un puntatore a una stringa contenente il nome del file da rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -478,7 +478,7 @@ Un puntatore a una stringa che contiene la directory da rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -506,7 +506,7 @@ Un puntatore a una stringa contenente il nome del file nuovo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -527,7 +527,7 @@ Un puntatore a una stringa contenente il nome della directory.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) può essere chiamato per determinare la causa dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) può essere chiamato per determinare la causa dell'errore.
 
 ### <a name="remarks"></a>Note
 

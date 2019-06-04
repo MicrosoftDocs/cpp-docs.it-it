@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451226"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504247"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -5607,7 +5607,7 @@ Diverso da zero se la funzione ha esito positivo. Il valore è 0 se si verifica 
 
 Una finestra bloccata non può essere spostata. È possibile bloccare solo una finestra alla volta. Per sbloccare una finestra bloccata con `LockWindowUpdate`, chiamare [UnlockWindowUpdate](#unlockwindowupdate).
 
-Se un'applicazione con una finestra bloccata (o tutte le finestre figlio bloccato) chiama il [GetDC,](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx,](https://msdn.microsoft.com/library/windows/desktop/dd144873) oppure [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) funzione di Windows, la funzione chiamata restituisce un dispositivo contesto il cui area visibile è vuoto. Questa situazione si verifica fino a quando l'applicazione Sblocca la finestra chiamando il `UnlockWindowUpdate` funzione membro.
+Se un'applicazione con una finestra bloccata (o tutte le finestre figlio bloccato) chiama il [GetDC,](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx,](/windows/desktop/api/winuser/nf-winuser-getdcex) oppure [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) funzione di Windows, la funzione chiamata restituisce un dispositivo contesto il cui area visibile è vuoto. Questa situazione si verifica fino a quando l'applicazione Sblocca la finestra chiamando il `UnlockWindowUpdate` funzione membro.
 
 Mentre gli aggiornamenti di finestra sono bloccati, il sistema tiene traccia del rettangolo di delimitazione di tutte le operazioni di disegno per contesti di dispositivo associati a una finestra bloccata. Quando viene riattivato disegno, il rettangolo di delimitazione viene invalidato nella finestra bloccata e le relative finestre figlio per forzare un'eventuale [WM_PAINT](/windows/desktop/gdi/wm-paint) messaggio per aggiornare la schermata. Se si è verificato nessun disegno mentre la finestra aggiornata erano bloccata, non viene invalidata un'area.
 
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Note
 
-Questo metodo riceve la [WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651) messaggio di notifica, che è descritti nel SDK di Windows. Quando l'utente accede o disattivazione, il sistema operativo Aggiorna le impostazioni specifiche dell'utente. Il sistema invia questo messaggio immediatamente dopo l'aggiornamento delle impostazioni.
+Questo metodo riceve la [WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged) messaggio di notifica, che è descritti nel SDK di Windows. Quando l'utente accede o disattivazione, il sistema operativo Aggiorna le impostazioni specifiche dell'utente. Il sistema invia questo messaggio immediatamente dopo l'aggiornamento delle impostazioni.
 
 > [!NOTE]
 > Questa funzione membro viene chiamata dal framework per consentire all'applicazione di gestire un messaggio di Windows. I parametri passati alla funzione riflettono i parametri ricevuti dal framework quando è stato ricevuto il messaggio. Se si chiama l'implementazione della classe di base di questa funzione, questa userà i parametri passati in origine con il messaggio e non i parametri che si forniscono alla funzione.

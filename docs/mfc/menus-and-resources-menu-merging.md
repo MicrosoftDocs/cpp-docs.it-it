@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225539"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504828"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menu e risorse: Unione di menu
 
@@ -29,9 +29,7 @@ Gli argomenti trattati in questo articolo includono:
 
 ##  <a name="_core_menu_layouts"></a> Layout di menu
 
-Il primo passaggio è per il coordinamento dei layout dei menu. Per altre informazioni, vedere la **Menu di creazione** sezione [considerazioni sulla programmazione di Menu](https://msdn.microsoft.com/library/ms647557.aspx) nel SDK di Windows.
-
-Le applicazioni del contenitore devono creare un nuovo menu per essere usato solo quando gli elementi incorporati sono attivati sul posto. Come minimo, questo menu deve includere quanto segue, nell'ordine elencato:
+Il primo passaggio è per il coordinamento dei layout dei menu. Le applicazioni del contenitore devono creare un nuovo menu per essere usato solo quando gli elementi incorporati sono attivati sul posto. Come minimo, questo menu deve includere quanto segue, nell'ordine elencato:
 
 1. Menu file identico a quello utilizzato quando i file sono aperti. (In genere altre voci di menu non vengono inserite prima dell'elemento successivo).
 

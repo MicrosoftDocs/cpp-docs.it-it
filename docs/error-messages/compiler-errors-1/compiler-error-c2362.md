@@ -1,29 +1,29 @@
 ---
 title: Errore del compilatore C2362
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 f1_keywords:
 - C2362
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: 17656b2a48a3680a9269d3ca300fd4188eda6b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364324"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503206"
 ---
 # <a name="compiler-error-c2362"></a>Errore del compilatore C2362
 
-inizializzazione di 'identifier' ignorata da 'goto label'
+> inizializzazione di '*identifier*' ignorata da ' goto *etichetta*'
 
-Durante la compilazione con [/Za](../../build/reference/za-ze-disable-language-extensions.md), il passaggio all'etichetta impedisce l'identificatore di inizializzazione.
+Quando viene compilato usando [/Za](../../build/reference/za-ze-disable-language-extensions.md), un salto all'etichetta di impedisce l'identificatore di inizializzazione.
 
-Non può iniziare oltre una dichiarazione con un inizializzatore a meno che non la dichiarazione è racchiuso in un blocco che non viene immesso o la variabile è già stata inizializzata.
+È possibile passare solo dopo una dichiarazione con un inizializzatore, se la dichiarazione è racchiuso in un blocco che non viene immesso o se la variabile è già stata inizializzata.
 
-L'esempio seguente genera l'errore C2326:
+L'esempio seguente genera l'errore C2362:
 
-```
+```cpp
 // C2362.cpp
 // compile with: /Za
 int main() {
@@ -35,7 +35,7 @@ label1:;
 
 Possibile soluzione:
 
-```
+```cpp
 // C2362b.cpp
 // compile with: /Za
 int main() {

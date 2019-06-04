@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337895"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503557"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (classe)
 
@@ -493,7 +493,7 @@ Una variante viene utilizzata per specificare argomenti di output del comando.
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) in Windows SDK.
+Visualizzare [IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) in Windows SDK.
 
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
 
@@ -759,7 +759,7 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) valore, come descritto nel SDK di Windows.
+Oggetto [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) valore, come descritto nel SDK di Windows.
 
 ### <a name="remarks"></a>Note
 
@@ -1307,7 +1307,7 @@ Eseguire l'override `OnFrameWindowActivate` per ricevere il `OnFrameWindowActiva
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
-Questa funzione membro viene chiamata dal framework quando le [a schermo intero](https://msdn.microsoft.com/library/aa752119.aspx) proprietà è stata modificata.
+Questa funzione membro viene chiamata dal framework quando le [a schermo intero](/previous-versions/aa752119\(v=vs.85\)) proprietà è stata modificata.
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1430,7 +1430,7 @@ Eseguire l'override `OnHideUI` per ricevere il `HideUI` notifica dal controllo d
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
-Questa funzione membro viene chiamata dal framework quando le [sulla barra dei menu](https://msdn.microsoft.com/library/aa752131.aspx) proprietà è stata modificata.
+Questa funzione membro viene chiamata dal framework quando le [sulla barra dei menu](/previous-versions/aa752131\(v=vs.85\)) proprietà è stata modificata.
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1481,7 +1481,7 @@ L'URL per cui navigazione non riuscita.
 Il nome del frame in cui la risorsa è visualizzata, o NULL se nessun riquadro denominato era destinato alla risorsa.
 
 *dwError*<br/>
-Un codice di stato di errore, se disponibile. Per un elenco dei possibili codici di stato HTTP e HRESULT, vedere [NavigateError codici di stato di evento.](https://msdn.microsoft.com/library/aa768365.aspx)
+Un codice di stato di errore, se disponibile. Per un elenco dei possibili codici di stato HTTP e HRESULT, vedere [codici di stato evento NavigateError.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\)).
 
 *pbCancel*<br/>
 Specifica se annullare la navigazione a una pagina di errore o qualsiasi ulteriore ricerca. Se TRUE (impostazione predefinita), continuare con la navigazione a una pagina di errore o la ricerca automatica; Se FALSE, annullare lo spostamento di una pagina di errore o la ricerca automatica.
@@ -1490,7 +1490,7 @@ Specifica se annullare la navigazione a una pagina di errore o qualsiasi ulterio
 
 Eseguire l'override di questo metodo per fornire la gestione degli errori di navigazione personalizzata.
 
-Per altre informazioni, vedere [DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)
+Per altre informazioni, vedere [DWebBrowserEvents2::NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
 
@@ -1661,7 +1661,7 @@ Eseguire l'override `OnShowUI` per ricevere il `ShowUI` notifica dal controllo d
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
-Questa funzione membro viene chiamata dal framework quando le [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx) proprietà è stata modificata.
+Questa funzione membro viene chiamata dal framework quando le [StatusBar](/previous-versions//aa768270\(v=vs.85\)) proprietà è stata modificata.
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1687,7 +1687,7 @@ Stringa che contiene il nuovo testo della barra di stato.
 
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
 
-Questa funzione membro viene chiamata dal framework quando le [TheaterMode viene](https://msdn.microsoft.com/library/aa768273.aspx) proprietà è stata modificata.
+Questa funzione membro viene chiamata dal framework quando le [TheaterMode viene](/previous-versions/aa768273\(v=vs.85\)) proprietà è stata modificata.
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1717,7 +1717,7 @@ Per HTML, il titolo potrebbe cambiare. anche se sta ancora scaricando HTML, l'UR
 
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
 
-Questa funzione membro viene chiamata dal framework quando le [sulla barra degli strumenti](https://msdn.microsoft.com/library/aa768274.aspx) proprietà è stata modificata.
+Questa funzione membro viene chiamata dal framework quando le [sulla barra degli strumenti](/previous-versions/aa768274\(v=vs.85\)) proprietà è stata modificata.
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1956,7 +1956,7 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>Parametri
 
 *nLevel*<br/>
-L'indirizzo della variabile che specifica il livello di aggiornamento. Le variabili possibili sono definite [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), nel SDK di Windows.
+L'indirizzo della variabile che specifica il livello di aggiornamento. Le variabili possibili sono definite [RefreshConstants](/previous-versions/aa768363\(v=vs.85\)), nel SDK di Windows.
 
 ### <a name="remarks"></a>Note
 

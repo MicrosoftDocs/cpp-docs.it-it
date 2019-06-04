@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: e75c52b016fff5bf04fefc86d4289021efc4db8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17a1b362f2cfe40be99c10298a780a6bf4f6419f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277024"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503131"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Classe IObjectSafetyImpl
 
@@ -97,7 +97,7 @@ L'implementazione restituisce i valori appropriati per qualsiasi interfaccia sup
 > [!IMPORTANT]
 >  Qualsiasi oggetto che supporta `IObjectSafety` è responsabile per la propria sicurezza e quello di qualsiasi oggetto delega. Il programmatore deve tener conto dei derivanti dall'esecuzione del codice nel contesto dell'utente, il cross-site scripting ed eseguire il controllo dell'area appropriata.
 
-Visualizzare [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) in Windows SDK.
+Visualizzare [IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) in Windows SDK.
 
 ##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety
 
@@ -125,9 +125,9 @@ L'implementazione restituisce E_NOINTERFACE per qualsiasi interfaccia non suppor
 > [!IMPORTANT]
 >  Qualsiasi oggetto che supporta `IObjectSafety` è responsabile per la propria sicurezza e quello di qualsiasi oggetto delega. Il programmatore deve tener conto dei derivanti dall'esecuzione del codice nel contesto dell'utente, il cross-site scripting ed eseguire il controllo dell'area appropriata.
 
-Visualizzare [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) in Windows SDK.
+Visualizzare [IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) in Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Interfaccia IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
+[Interfaccia IObjectSafety](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

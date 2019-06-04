@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612294"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504503"
 ---
 # <a name="application-information-and-management"></a>Informazioni sull'applicazione e gestione
 
@@ -98,7 +98,7 @@ Specifica un flag aggiuntivo che controlla la creazione del thread. Questo flag 
 - **0** avviare il thread immediatamente dopo la creazione.
 
 *lpSecurityAttrs*<br/>
-Punta a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struttura che specifica gli attributi di sicurezza per il thread. Se NULL, verranno usati gli stessi attributi di sicurezza del thread di creazione. Per altre informazioni su questa struttura, vedere il SDK di Windows.
+Punta a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struttura che specifica gli attributi di sicurezza per il thread. Se NULL, verranno usati gli stessi attributi di sicurezza del thread di creazione. Per altre informazioni su questa struttura, vedere il SDK di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -110,7 +110,7 @@ La prima forma del `AfxBeginThread` crea un thread di lavoro. Il secondo form cr
 
 `AfxBeginThread` Crea un nuovo `CWinThread` oggetti, le chiamate relative [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) funzionare per avviare l'esecuzione del thread e restituisce un puntatore al thread. Nel corso della routine vengono effettuati controlli per assicurarsi che tutti gli oggetti vengono deallocati in modo corretto deve avere esito negativo qualsiasi parte della creazione. Per terminare il thread, chiamare [AfxEndThread](#afxendthread) all'interno del thread o restituito dalla funzione di controllo del thread di lavoro.
 
-Il multithreading deve essere abilitato dall'applicazione. in caso contrario, questa funzione avrà esito negativo. Per altre informazioni sull'abilitazione del multithreading, vedere [/MD, /MT, /LD (utilizzo della libreria Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md) sotto *le opzioni del compilatore di Visual C++*.
+Il multithreading deve essere abilitato dall'applicazione. in caso contrario, questa funzione avrà esito negativo. Per altre informazioni sull'abilitazione del multithreading, vedere [/MD, /MT, /LD (utilizzo della libreria Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md) sotto *le opzioni del compilatore di Visual C++* .
 
 Per ulteriori informazioni sul `AfxBeginThread`, vedere gli articoli [Multithreading: Creazione di thread di lavoro](../../parallel/multithreading-creating-worker-threads.md) e [Multithreading: Creazione di thread dell'interfaccia utente](../../parallel/multithreading-creating-user-interface-threads.md).
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parametri
 
 *nClassStyle*<br/>
-Specifica lo stile di classe di Windows o combinazione degli stili, creati con OR bit per bit ( **&#124;**) operatore, per la classe della finestra. Per un elenco di stili delle classi, vedere la [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struttura nel SDK di Windows. Se NULL, i valori predefiniti verranno impostati come indicato di seguito:
+Specifica lo stile di classe di Windows o combinazione degli stili, creati con OR bit per bit ( **&#124;** ) operatore, per la classe della finestra. Per un elenco di stili delle classi, vedere la [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) struttura nel SDK di Windows. Se NULL, i valori predefiniti verranno impostati come indicato di seguito:
 
 - Imposta lo stile del mouse su CS_DBLCLKS, che invia fare doppio clic su messaggi alla routine della finestra quando l'utente fa doppio clic del mouse.
 

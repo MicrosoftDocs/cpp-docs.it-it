@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261065"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503425"
 ---
 # <a name="atldrawinfo-structure"></a>Struttura ATL_DRAWINFO
 
@@ -60,7 +60,7 @@ Contesto delle informazioni per il dispositivo di destinazione a cui punta `ptd`
 Il contesto di dispositivo su cui disegnare. Per un oggetto senza finestra, il `hdcDraw` membro fa parte il `MM_TEXT` modalità di mapping con le sue coordinate logiche corrispondente alle coordinate client della finestra contenitore. Inoltre, il contesto di dispositivo deve essere lo stesso stato come quello normalmente passato per un `WM_PAINT` messaggio.
 
 `prcBounds`<br/>
-Puntatore a un [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) che specifica il rettangolo nella struttura `hdcDraw` e in cui deve essere disegnato l'oggetto. Questo membro controlla il posizionamento e l'adattamento dell'oggetto. Questo membro deve essere NULL per disegnare un oggetto attivo sul posto senza. In ogni altra situazione, NULL, non è un valore valido e dovrebbe restituire un `E_INVALIDARG` codice di errore. Se il contenitore passa un valore diverso da NULL a un oggetto senza finestra, l'oggetto deve eseguire il rendering l'aspetto richiesto nel contesto di dispositivo specificato e il rettangolo. Un contenitore può richiedere questo da un oggetto senza eseguire il rendering di una vista in secondo luogo, non attivo dell'oggetto o per stampare l'oggetto.
+Puntatore a un [RECTL](/previous-versions//dd162907\(v=vs.85\)) che specifica il rettangolo nella struttura `hdcDraw` e in cui deve essere disegnato l'oggetto. Questo membro controlla il posizionamento e l'adattamento dell'oggetto. Questo membro deve essere NULL per disegnare un oggetto attivo sul posto senza. In ogni altra situazione, NULL, non è un valore valido e dovrebbe restituire un `E_INVALIDARG` codice di errore. Se il contenitore passa un valore diverso da NULL a un oggetto senza finestra, l'oggetto deve eseguire il rendering l'aspetto richiesto nel contesto di dispositivo specificato e il rettangolo. Un contenitore può richiedere questo da un oggetto senza eseguire il rendering di una vista in secondo luogo, non attivo dell'oggetto o per stampare l'oggetto.
 
 `prcWBounds`<br/>
 Se `hdcDraw` è un contesto di dispositivo metafile (vedere [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) in Windows SDK), questo è un puntatore a un `RECTL` struttura che specifica il rettangolo delimitatore nel metafile sottostante. La struttura rettangolo contiene le dimensioni della finestra e l'origine di finestra. Questi valori sono utili per il disegno metafile. Il rettangolo indicato dal `prcBounds` è annidato all'interno di questa `prcWBounds` rettangolo; sono nello stesso spazio delle coordinate.

@@ -1,24 +1,24 @@
 ---
 title: Allocazione di risorse GDI
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 helpviewer_keywords:
 - resources [MFC], printing
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: 5f5f6c6585217393a6008fafa875a83e67ab8016
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: adfd8b19f683b82eec213890c8e1345e070ff3ec
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305003"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504623"
 ---
 # <a name="allocating-gdi-resources"></a>Allocazione di risorse GDI
 
 Questo articolo descrive come allocare e deallocare gli oggetti Graphics Device Interface (GDI) di Windows necessari per la stampa.
 
 > [!NOTE]
->  Per altre informazioni, vedere la documentazione di GDI+ SDK all'indirizzo: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+>  Per altre informazioni, vedere la [documentazione di GDI+ SDK](/windows/desktop/gdiplus/-gdiplus-gdi-start).
 
 Si supponga di dover usare determinati tipi di carattere, penne o altri oggetti GDI per la stampa, ma non per la visualizzazione sullo schermo. A causa della quantità di memoria che richiedono, non è conveniente allocare questi oggetti all'avvio dell'applicazione. Quando l'applicazione non stampa un documento, la memoria potrebbe essere necessaria per altri scopi. È preferibile allocare gli oggetti all'avvio della stampa e quindi eliminarli al termine.
 

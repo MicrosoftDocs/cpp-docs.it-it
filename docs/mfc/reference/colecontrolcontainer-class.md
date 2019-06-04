@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310437"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504557"
 ---
 # <a name="colecontrolcontainer-class"></a>Classe COleControlContainer
 
@@ -473,7 +473,7 @@ L'identificatore del controllo.
 Puntatore a una variabile booleana che riceve un valore di esito positivo o negativo (funzione) (TRUE indica l'esito positivo, FALSE indica un esito negativo).
 
 *bSigned*<br/>
-Specifica se la funzione deve esaminare il testo per un segno meno (-) all'inizio e restituire un valore intero con segno se ne trova uno. Se il *bSigned* parametro è TRUE, specifica che il valore da recuperare è un valore intero con segno, eseguire il cast del valore restituito in un **int** tipo. Per ottenere informazioni sull'errore, chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Specifica se la funzione deve esaminare il testo per un segno meno (-) all'inizio e restituire un valore intero con segno se ne trova uno. Se il *bSigned* parametro è TRUE, specifica che il valore da recuperare è un valore intero con segno, eseguire il cast del valore restituito in un **int** tipo. Per ottenere informazioni sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -515,7 +515,7 @@ Specifica la lunghezza massima, in caratteri, della stringa da copiare nel buffe
 
 Se la funzione ha esito positivo, il valore restituito specifica il numero di caratteri copiati nel buffer, senza includere il carattere di terminazione null.
 
-Se la funzione ha esito negativo, il valore restituito è zero. Per ottenere informazioni sull'errore, chiamare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Se la funzione ha esito negativo, il valore restituito è zero. Per ottenere informazioni sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

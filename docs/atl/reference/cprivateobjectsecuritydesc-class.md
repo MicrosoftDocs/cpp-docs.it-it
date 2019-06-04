@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc726892515ea38a559bdf182affa96f84be3449
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278150"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503298"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Classe CPrivateObjectSecurityDesc
 
@@ -173,7 +173,7 @@ Puntatore a un `GUID` struttura che identifica il tipo di oggetto associato all'
 Specifica se il nuovo oggetto può contenere altri oggetti. Il valore true indica che il nuovo oggetto è un contenitore. Il valore false indica che il nuovo oggetto non è un contenitore.
 
 *AutoInheritFlags*<br/>
-Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) per altri dettagli.
+Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -181,7 +181,7 @@ Restituisce true se l'operazione ha esito positivo, false in caso di esito negat
 
 ### <a name="remarks"></a>Note
 
-Questo metodo chiama [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) oppure [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).
+Questo metodo chiama [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) oppure [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
 
 Il secondo metodo consente di specificare il tipo di oggetto GUID del nuovo oggetto o controllo del modo in cui le voci ACE vengono ereditate.
 
@@ -265,7 +265,7 @@ Puntatore a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_ma
 Riferimento per la [CAccessToken](../../atl/reference/caccesstoken-class.md) oggetto per conto del quale l'oggetto viene creato il processo di client.
 
 *AutoInheritFlags*<br/>
-Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) per altri dettagli.
+Un set di flag di bit che controllano il modo in cui le voci di controllo di accesso (ACE) ereditate da *pParent*. Visualizzare [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) per altri dettagli.
 
 ### <a name="return-value"></a>Valore restituito
 

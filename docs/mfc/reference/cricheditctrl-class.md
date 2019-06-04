@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb2f354314a0b0d1220a1ecb1c0fa2b8a913d5e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372101"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504726"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -503,7 +503,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Uso `CreateEx` invece di `Create` per applicare stili estesi di Windows, specificati dal prefisso di stile esteso di Windows **WS_EX _**.
+Uso `CreateEx` invece di `Create` per applicare stili estesi di Windows, specificati dal prefisso di stile esteso di Windows **WS_EX _** .
 
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl
 
@@ -1122,7 +1122,7 @@ Dipende dal formato:
 
 ### <a name="remarks"></a>Note
 
-Se si usa la prima forma **funzione membro GetSelText (** `lpBuf` **)**, è necessario assicurarsi che il buffer sia sufficientemente grande per il testo verrà visualizzato. Chiamare [funzione membro GetSel](#getsel) per determinare il numero di caratteri nella selezione corrente.
+Se si usa la prima forma **funzione membro GetSelText (** `lpBuf` **)** , è necessario assicurarsi che il buffer sia sufficientemente grande per il testo verrà visualizzato. Chiamare [funzione membro GetSel](#getsel) per determinare il numero di caratteri nella selezione corrente.
 
 Per altre informazioni, vedere [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) nel SDK di Windows.
 
@@ -1354,7 +1354,7 @@ L'indice del carattere della riga specificata nel *nRiga* oppure -1 se il numero
 
 L'indice del carattere è il numero di caratteri dall'inizio del controllo rich edit alla riga specificata.
 
-Per altre informazioni, vedere [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) nel SDK di Windows.
+Per altre informazioni, vedere [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) nel SDK di Windows.
 
 ### <a name="example"></a>Esempio
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58b7b180f5b4925f64078f8c799036252003549e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278085"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503242"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -195,7 +195,7 @@ Opzioni per la chiave. Il valore predefinito è REG_OPTION_NON_VOLATILE. Per un 
 L'accesso di sicurezza per la chiave. Il valore predefinito è KEY_READ &#124; KEY_WRITE. Per un elenco di valori possibili e le descrizioni, vedere `RegCreateKeyEx`.
 
 *lpSecAttr*<br/>
-Un puntatore a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) struttura che indica se l'handle della chiave può essere ereditato da un processo figlio. Per impostazione predefinita, questo parametro è NULL (ovvero l'handle non può essere ereditato).
+Un puntatore a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struttura che indica se l'handle della chiave può essere ereditato da un processo figlio. Per impostazione predefinita, questo parametro è NULL (ovvero l'handle non può essere ereditato).
 
 *lpdwDisposition*<br/>
 [out] Se diverso da NULL, recupera REG_CREATED_NEW_KEY (se la chiave non esisteva ed è stata creata) o REG_OPENED_EXISTING_KEY (se la chiave esisteva ed è stato aperto).

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5268a5ae336b0f96dfd6c0bd348a883e85ac32e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160198"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503549"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (classe)
 
@@ -315,7 +315,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Uso `CreateEx` invece di `Create` per applicare stili estesi di Windows, specificati dal prefisso di stile esteso di Windows **WS_EX _**.
+Uso `CreateEx` invece di `Create` per applicare stili estesi di Windows, specificati dal prefisso di stile esteso di Windows **WS_EX _** .
 
 ##  <a name="createdragimage"></a>  CHeaderCtrl::CreateDragImage
 
@@ -761,7 +761,7 @@ L'indice dell'elemento, basato sull'ordine nel controllo header. L'indice conta 
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro implementa il comportamento della macro Win32 [HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355), come descritto nel SDK di Windows. Viene fornito per supportare l'ordinamento degli elementi di intestazione.
+Questa funzione membro implementa il comportamento della macro Win32 [HDM_ORDERTOINDEX](/windows/desktop/controls/hdm-ordertoindex), come descritto nel SDK di Windows. Viene fornito per supportare l'ordinamento degli elementi di intestazione.
 
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin
 

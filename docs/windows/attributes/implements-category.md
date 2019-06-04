@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: beca804fae8d6e82b4664102b39d76a23e66ca59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbd859018210d3c972ae9d4b0e9f659d96d95aab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409408"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504197"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -30,7 +30,7 @@ L'ID della categoria implementata.
 
 ## <a name="remarks"></a>Note
 
-Il **implements_category** C++ attributo specifica le categorie di componenti implementate dalla classe di destinazione. Questa operazione viene eseguita creando una mappa di categoria e aggiungendo separare le voci specificate per il **implements_category** attributo. Per altre informazioni, vedere [quali sono le categorie di componenti e come eseguire operazioni They Work?](https://msdn.microsoft.com/library/windows/desktop/ms694322).
+Il **implements_category** C++ attributo specifica le categorie di componenti implementate dalla classe di destinazione. Questa operazione viene eseguita creando una mappa di categoria e aggiungendo separare le voci specificate per il **implements_category** attributo. Per altre informazioni, vedere [categorie di componenti and How They Work](/windows/desktop/com/component-categories-and-how-they-work).
 
 Questo attributo richiede che anche l'attributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se `progid` viene applicata `vi_progid` e `coclass` vengono applicati anche.
 

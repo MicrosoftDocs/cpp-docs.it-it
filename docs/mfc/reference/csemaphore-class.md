@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324207"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504704"
 ---
 # <a name="csemaphore-class"></a>Classe CSemaphore
 
@@ -83,14 +83,14 @@ Il conteggio di utilizzo massimo per il semaforo. Deve essere maggiore di 0.
 Il nome del semaforo. Deve essere specificato se si accederà al semaforo attraverso i limiti di processo. Se `NULL`, l'oggetto sarà senza nome. Se il nome corrisponde a un semaforo esistente, il costruttore crea un nuovo `CSemaphore` oggetto cui fa riferimento il semaforo di tale nome. Se il nome corrisponde a un oggetto di sincronizzazione esistente che non è un semaforo, la creazione avrà esito negativo.
 
 *lpsaAttributes*<br/>
-Attributi di sicurezza per l'oggetto semaforo. Per una descrizione completa di questa struttura, vedere [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) nel SDK di Windows.
+Attributi di sicurezza per l'oggetto semaforo. Per una descrizione completa di questa struttura, vedere [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) nel SDK di Windows.
 
 ### <a name="remarks"></a>Note
 
 Per accedere o rilasciare un `CSemaphore` dell'oggetto, creare un [CMultiLock](../../mfc/reference/cmultilock-class.md) o [CSingleLock](../../mfc/reference/csinglelock-class.md) oggetto e chiamare relativo [blocco](../../mfc/reference/csinglelock-class.md#lock) e [Unlock](../../mfc/reference/csinglelock-class.md#unlock) funzioni membro.
 
 > [!IMPORTANT]
->  Dopo aver creato il `CSemaphore` dell'oggetto, utilizzare [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) per garantire che il mutex non esisteva. Se il mutex non erano presenti in modo imprevisto, potrebbe indicare un processo è squatting e potrebbe voler usare mutex da utenti malintenzionati. In questo caso, la procedura di altissimo di sicurezza consigliata è di chiudere l'handle e continuare come se si è verificato un errore nella creazione dell'oggetto.
+>  Dopo aver creato il `CSemaphore` dell'oggetto, utilizzare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) per garantire che il mutex non esisteva. Se il mutex non erano presenti in modo imprevisto, potrebbe indicare un processo è squatting e potrebbe voler usare mutex da utenti malintenzionati. In questo caso, la procedura di altissimo di sicurezza consigliata è di chiudere l'handle e continuare come se si è verificato un errore nella creazione dell'oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 
