@@ -2,12 +2,12 @@
 title: 'Guida al porting: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751374"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451130"
 ---
 # <a name="porting-guide-spy"></a>Guida al porting: Spy++
 
@@ -39,7 +39,7 @@ Uno dei file non trovati in Spy++ è verstamp.h. Da una ricerca in Internet, è 
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
-Il modo più semplice per trovare un simbolo nei file di inclusione disponibili consiste nell'usare **Cerca nei file** (**Ctrl**+**Maiusc**+**F**) e specificare **Directory di inclusione di Visual C++**. Il simbolo è stato trovato nel file ntverp.h. Il file di inclusione verstamp.h è stato sostituito con il file ntverp.h e l'errore è scomparso.
+Il modo più semplice per trovare un simbolo nei file di inclusione disponibili consiste nell'usare **Cerca nei file** (**Ctrl**+**Maiusc**+**F**) e specificare **Directory di inclusione di Visual C++** . Il simbolo è stato trovato nel file ntverp.h. Il file di inclusione verstamp.h è stato sostituito con il file ntverp.h e l'errore è scomparso.
 
 ##  <a name="linker_output_settings"></a> Passaggio 3. Configurazione della proprietà OutputFile del linker
 
@@ -51,7 +51,7 @@ MSBuild rileva che la proprietà **Link.OutputFile** non corrisponde ai valori *
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 ```
 
-**Link.OutputFile** è l'output di compilazione (ad esempio, EXE, DLL) e in genere viene creato da `$(TargetDir)$(TargetName)$(TargetExt)` e restituisce il percorso, il nome file e l'estensione. Si tratta di un errore che si verifica comunemente durante la migrazione dei progetti dal vecchio strumento di compilazione di Visual C++ (vcbuild.exe) al nuovo strumento di compilazione (MSBuild.exe). Dal momento che la modifica dello strumento di compilazione ha avuto luogo in Visual Studio 2010, potrebbe essere possibile riscontrare questo problema ogni volta che si esegue la migrazione di un progetto precedente alla versione 2010 a una versione 2010 o successiva. Il problema fondamentale è che la migrazione guidata del progetto non aggiorna il valore **Link.OutputFile** perché non è sempre possibile determinare su cosa deve basarsi il relativo valore rispetto alle altre impostazioni del progetto. Di conseguenza, è in genere necessario impostarlo manualmente. Per altre informazioni, vedere questo [post](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx) nel blog di Visual C++.
+**Link.OutputFile** è l'output di compilazione (ad esempio, EXE, DLL) e in genere viene creato da `$(TargetDir)$(TargetName)$(TargetExt)` e restituisce il percorso, il nome file e l'estensione. Si tratta di un errore che si verifica comunemente durante la migrazione dei progetti dal vecchio strumento di compilazione di Visual C++ (vcbuild.exe) al nuovo strumento di compilazione (MSBuild.exe). Dal momento che la modifica dello strumento di compilazione ha avuto luogo in Visual Studio 2010, potrebbe essere possibile riscontrare questo problema ogni volta che si esegue la migrazione di un progetto precedente alla versione 2010 a una versione 2010 o successiva. Il problema fondamentale è che la migrazione guidata del progetto non aggiorna il valore **Link.OutputFile** perché non è sempre possibile determinare su cosa deve basarsi il relativo valore rispetto alle altre impostazioni del progetto. Di conseguenza, è in genere necessario impostarlo manualmente. Per altre informazioni, vedere questo [post](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) nel blog di Visual C++.
 
 In questo caso la proprietà **Link.OutputFile** è stata impostata su .\Debug\Spyxx.exe e .\Release\Spyxx.exe per il progetto Spy++, a seconda della configurazione. La soluzione migliore consiste nel sostituire semplicemente questi valori hardcoded con `$(TargetDir)$(TargetName)$(TargetExt)` per **tutte le configurazioni**. Se il problema persiste, è possibile personalizzare da questa posizione oppure modificare le proprietà nella sezione **Generale** in cui tali valori vengono impostati. Le proprietà sono **Directory di output**, **Nome destinazione** ed **Estensione di destinazione**. Tenere presente che se la proprietà che si sta visualizzando usa macro, è possibile scegliere **Modifica** dall'elenco a discesa per visualizzare la finestra di dialogo che visualizza la stringa finale con le sostituzioni di macro effettuate. È possibile visualizzare le macro disponibili e i relativi valori correnti scegliendo il pulsante **Macro**.
 
