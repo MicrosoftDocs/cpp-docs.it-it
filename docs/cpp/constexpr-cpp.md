@@ -21,8 +21,8 @@ Per limitare la complessità dei calcoli di costanti in fase di compilazione e i
 
 ## <a name="syntax"></a>Sintassi
 
-> **constexpr** *tipo di valore letterale* *identificatore* ** = ** *espressione costante* **;** 
->  **constexpr** *-tipo di valore letterale* *identificatore* **{** *espressione costante * **}** **;** 
+> **constexpr** *tipo di valore letterale* *identificatore* **=** *espressione costante* **;** 
+>  **constexpr** *-tipo di valore letterale* *identificatore* **{** *espressione costante* **}** **;** 
 >  **constexpr** *-tipo di valore letterale* *identificatore* **(** *params* **)** **;** 
 >  **constexpr** *ctor* **(** *params* **)** **;**
 
