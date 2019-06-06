@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-ms.openlocfilehash: 7ed2b66ffe382cc8683b811362fb014597168037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33aa12626e92eb40606e3ec9b12ebb7bcac571ec
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321975"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741649"
 ---
 # <a name="mapping-messages-to-functions"></a>Mapping di messaggi a funzioni
 
@@ -51,4 +51,4 @@ Per rimuovere un gestore di messaggi, fare doppio clic il gestore nella colonna 
 [Aggiunta di una variabile membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Override di una funzione virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Aggiunta di gestori eventi per i controlli della finestra di dialogo](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
-[Esplorazione della struttura delle classi](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Esplorazione della struttura delle classi](../../ide/navigate-code-cpp.md)

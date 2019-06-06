@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-ms.openlocfilehash: 1676edf487d536d75ccd7901c5bdfa827cc143fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37638d12c65986d40e7df9f0fbfdef4b8207e418
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412767"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741579"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Tipi di messaggi associati a oggetti dell'interfaccia utente
 
@@ -34,4 +34,4 @@ Nella tabella seguente illustra i tipi di oggetti con cui si usa e i tipi di mes
 [Aggiunta di una variabile membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Override di una funzione virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestore messaggi MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Esplorazione della struttura delle classi](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Esplorazione della struttura delle classi](../../ide/navigate-code-cpp.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-ms.openlocfilehash: 250d1a838787d1ace682c084bdceeb0e1e6d3c92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 970dd7072cb8391d76d39536e442d5aab8e0f61d
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322995"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741595"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definizione di un gestore messaggi per un messaggio riprodotto
 
@@ -56,4 +56,4 @@ Per creare un [controllo ActiveX](../../mfc/activex-controls-on-the-internet.md)
 [Aggiunta di una variabile membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Override di una funzione virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Gestore messaggi MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Esplorazione della struttura delle classi](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Esplorazione della struttura delle classi](../../ide/navigate-code-cpp.md)
