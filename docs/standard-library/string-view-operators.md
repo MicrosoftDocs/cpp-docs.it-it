@@ -113,7 +113,7 @@ Deve esistere una conversione implicita da *convertible_string_type* a di string
 Il confronto si basa su un pairwise il confronto lessicografico delle sequenze di caratteri. Se hanno lo stesso numero di elementi e gli elementi sono tutti uguali, i due oggetti sono uguali.
 
 
-## <a name="op_lt"> Operatore</a>&lt;
+## <a name="op_lt"></a> Operatore&lt;
 
 Verifica se l'oggetto sul lato sinistro dell'operatore è minore dell'oggetto nel sidestring_view a destra
 ```cpp
@@ -236,7 +236,7 @@ un flusso di output su cui scritto.
 
 Utilizzare questo operatore per inserire il contenuto di un string_view in un flusso di output, ad esempio usando [std:: cout](iostream.md#cout).
 
-## <a name="op_gt"> Operatore</a>&gt;
+## <a name="op_gt"></a> Operatore&gt;
 
 Verifica se l'oggetto a sinistra dell'operatore è maggiore dell'oggetto a destra.
 
