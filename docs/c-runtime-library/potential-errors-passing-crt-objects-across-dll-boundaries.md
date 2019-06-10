@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 10fbb128698b6422779d09a15fe3c1d25e8de5b5
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749900"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446662"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL
 
@@ -23,7 +23,7 @@ HEAP[]: indirizzo non valido specificato a RtlValidateHeap(#,#)
 
 ## <a name="causes"></a>Cause
 
-Ogni copia della libreria CRT ha uno stato separato e distinto, che viene mantenuto dall'app o dalla DLL nella memoria locale dei thread. Di conseguenza, gli oggetti CRT come gli handle di file, le variabili di ambiente e le impostazioni locali sono validi solo per la copia di CRT nell'app o nella DLL in cui questi oggetti vengono allocati o impostati. Quando una DLL e i relativi client app usano copie diverse della libreria CRT, non è possibile passare questi oggetti CRT attraverso il limite di DLL e aspettarsi di prelevarli correttamente dall'altra parte. Questo vale soprattutto per le versioni di CRT precedenti Universal CRT in Visual Studio 2015 e versioni successive. È presente una libreria CRT specifica della versione per ogni versione di Visual Studio compilata con Visual C++ 2013 o versioni precedenti. I dettagli interni di implementazione di CRT, ad esempio le strutture dati e le convenzioni di denominazione, sono differenti per ogni versione. Il collegamento dinamico di codice compilato per una versione di CRT a una versione diversa della DLL CRT non è mai stato supportato, ma talvolta funziona. Questo comportamento, tuttavia, si verifica più per caso che grazie alla progettazione.
+Ogni copia della libreria CRT ha uno stato separato e distinto, che viene mantenuto dall'app o dalla DLL nella memoria locale dei thread. Di conseguenza, gli oggetti CRT come gli handle di file, le variabili di ambiente e le impostazioni locali sono validi solo per la copia di CRT nell'app o nella DLL in cui questi oggetti vengono allocati o impostati. Quando una DLL e i relativi client app usano copie diverse della libreria CRT, non è possibile passare questi oggetti CRT attraverso il limite di DLL e aspettarsi di prelevarli correttamente dall'altra parte. Questo vale soprattutto per le versioni di CRT precedenti Universal CRT in Visual Studio 2015 e versioni successive. È presente una libreria CRT specifica della versione per ogni versione di Visual Studio compilata con Visual Studio 2013 o versioni precedenti. I dettagli interni di implementazione di CRT, ad esempio le strutture dati e le convenzioni di denominazione, sono differenti per ogni versione. Il collegamento dinamico di codice compilato per una versione di CRT a una versione diversa della DLL CRT non è mai stato supportato, ma talvolta funziona. Questo comportamento, tuttavia, si verifica più per caso che grazie alla progettazione.
 
 Inoltre, poiché ogni copia della libreria CRT dispone di un proprio gestore dell'heap, allocando memoria in una libreria CRT e passando il puntatore oltre i limiti di una DLL da liberare da una copia diversa della libreria CRT è potenzialmente causa di problemi che si verificano nella memoria heap. Se si progetta la DLL in modo che passi gli oggetti CRT oltre i limiti o che allochi memoria e aspetti che questa venga liberata all'esterno della DLL, si limitano i client app della DLL a usare la stessa copia della libreria CRT usata dalla DLL. La DLL e i relativi client usano in genere la stessa copia della libreria CRT solo se sono collegati al momento del caricamento alla stessa versione della DLL CRT. Poiché la versione della DLL della libreria Universal CRT usata da Visual Studio 2015 e versioni successive il Windows 10 è ora un componente di Windows distribuito in modo centralizzato, ucrtbase.dll, tale componente è lo stesso per le app compilate con Visual Studio 2015 e versioni successive. Tuttavia, anche quando il codice CRT è identico, non è possibile assegnare memoria allocata in un heap a un componente che usa un altro heap.
 

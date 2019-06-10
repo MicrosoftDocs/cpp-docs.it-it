@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: b763361d2cdd732025e492a25ac63fc01f06c2b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e9842d8c24089c7fbb33745c3bf5d4edb1d29343
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739738"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446780"
 ---
 # <a name="time-management"></a>Gestione dell'ora
 
@@ -47,7 +47,7 @@ Le routine **_ftime** e **localtime** usano la variabile di ambiente **TZ**. Se 
 > In tutte le versioni di Microsoft C/C++ ad eccezione della versione 7.0 e in tutte le versioni di Visual C++, la funzione ora restituisce l'ora corrente come numero di secondi trascorsi dalla mezzanotte del 1° gennaio 1970. Nella versione 7.0 di Microsoft C/C++ **time** restituiva l'ora corrente come il numero di secondi trascorsi dalla mezzanotte del 31 dicembre 1899.
 
 > [!NOTE]
-> Nelle versioni di Visual C++ e Microsoft C/C++ precedenti a Visual C++ 2005 **time** era un **long** **int** (a 32 bit) e quindi non poteva essere usato per esprimere date successive al 19 gennaio 2038 alle 03.14.07 UTC. Per impostazione predefinita, **time_t** è ora equivalente a **__time64_t**, ma definire **_USE_32BIT_TIME_T** modifica **time_t** in **__time32_t** e forza numerose funzioni ora a chiamare le versioni che accettano **time_t** a 32 bit. Per altre informazioni, vedere [Tipi standard](../c-runtime-library/standard-types.md) e i commenti della documentazione per le singole funzioni relative all'ora.
+> Nelle versioni di Visual C++ and Microsoft C/C++ precedenti a Visual C++ 2005 **time** era un **long** **int** (a 32 bit) e quindi non poteva essere usato per esprimere date successive al 19 gennaio 2038 alle 03.14.07 UTC. Per impostazione predefinita, **time_t** è ora equivalente a **__time64_t**, ma definire **_USE_32BIT_TIME_T** modifica **time_t** in **__time32_t** e forza numerose funzioni ora a chiamare le versioni che accettano **time_t** a 32 bit. Per altre informazioni, vedere [Tipi standard](../c-runtime-library/standard-types.md) e i commenti della documentazione per le singole funzioni relative all'ora.
 
 ## <a name="see-also"></a>Vedere anche
 

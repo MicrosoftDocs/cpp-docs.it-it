@@ -1,6 +1,6 @@
 ---
 title: 'Procedura dettagliata: Distribuzione di un programma (C++)'
-ms.date: 09/14/2018
+ms.date: 05/14/2019
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
 - setup projects [C++]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 4232edd10b71c70097002511ef4ee663e67d6598
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769264"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182661"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Procedura dettagliata: Distribuzione di un programma (C++)
 
@@ -30,11 +30,47 @@ La procedura dettagliata mostra come usare Windows Installer per distribuire l'a
 
 - La procedura dettagliata non può essere completata nelle versioni Express Edition di Visual Studio.
 
-- Se non è ancora stato fatto, scaricare l'estensione Microsoft Visual Studio Installer Projects, come descritto nella procedura riportata più avanti. L'estensione è gratuita per gli sviluppatori di Visual Studio e aggiunge le funzionalità presenti nei modelli di progetto di installazione e distribuzione in Visual Studio.
+## <a name="install-the-visual-studio-setup-and-deployment-project-template"></a>Installare il modello di progetto di installazione e distribuzione di Visual Studio
 
-### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>Per installare il modello di progetto di installazione e distribuzione di Visual Studio
+I passaggi descritti in questa sezione variano a seconda della versione di Visual Studio installata. Assicurarsi che il selettore della versione in alto a sinistra nella pagina sia impostato correttamente.
 
-1. Quando si è connessi a Internet, in Visual Studio scegliere **Strumenti** > **Estensioni e aggiornamenti**.
+::: moniker range="vs-2019"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2019"></a>Per installare il modello di progetto di installazione e distribuzione per Visual Studio 2019
+
+1. Se non è ancora stato fatto, scaricare l'estensione Microsoft Visual Studio Installer Projects. L'estensione è gratuita per gli sviluppatori di Visual Studio e aggiunge le funzionalità presenti nei modelli di progetto di installazione e distribuzione in Visual Studio. Connettersi a Internet e quindi in Visual Studio scegliere **Estensioni** > **Gestisci estensioni**. Nella finestra di dialogo **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **INVIO**, selezionare **Microsoft Visual Studio \<versione> Installer Projects** e fare clic su **Scarica**. Scegliere di eseguire e installare l'estensione e quindi riavviare Visual Studio.
+
+1. Sulla barra dei menu di Visuali Studio scegliere **File** > **Progetti e soluzioni recenti** e quindi scegliere di riaprire il progetto.
+
+1. Sulla barra dei menu scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto**. Nella casella di ricerca digitare "installazione" e nell'elenco dei risultati scegliere **Progetto di installazione**.
+
+1. Immettere un nome per il progetto di installazione nella casella **Nome**. Nell'elenco a discesa **Soluzione** selezionare **Aggiungi a soluzione**. Scegliere il pulsante **OK** per creare il progetto di installazione. Nella finestra dell'editor viene aperta una scheda **File Assistant (ProjectName)** (Assistente file - NomeProgetto).
+
+1. Fare clic con il pulsante destro del mouse sul nodo **Cartella applicazione** e selezionare **Aggiungi** > **Output progetto** per aprire la finestra di dialogo **Aggiungi gruppo output progetto**.
+
+1. Nella finestra di dialogo selezionare **Output primario** e fare clic su **OK**. Viene visualizzato un nuovo elemento denominato **Output primario da Game (attivo)** .
+
+1. Selezionare l'elemento **Output primario da Game (attivo)** , fare clic con il pulsante destro del mouse e scegliere **Crea collegamento a output primario da Game (attivo)** . Viene visualizzato un nuovo elemento denominato **Collegamento a output primario da Game (attivo)** .
+
+1. Rinominare l'elemento del collegamento in *Game* e quindi trascinarlo nel nodo **Menu Programmi dell'utente** sul lato sinistro della finestra.
+
+1. In **Esplora soluzioni** selezionare il progetto **Game Installer** e scegliere **Visualizza** > **Finestra Proprietà** o premere **F4** per aprire la finestra **Proprietà**.
+
+1. Specificare eventuali dettagli aggiuntivi da visualizzare nel programma di installazione.  Ad esempio, usare *Contoso* per **Produttore**, *Game Installer* per **Nome prodotto** e *http\://www.contoso.com* per **URL supporto**.
+
+1. Nella barra dei menu scegliere **Compilazione** > **Gestione configurazione**. Nella tabella **Progetto**, nella colonna **Compilazione** selezionare la casella per **Game Installer**. Fare clic su **Chiudi**.
+
+1. Sulla barra dei menu scegliere **Compila** > **Compila soluzione** per compilare il progetto Game e il progetto Game Installer.
+
+1. Nella cartella della soluzione individuare il programma setup.exe compilato dal progetto Game Installer ed eseguirlo per installare l'applicazione del gioco nel computer. È possibile copiare questo file, insieme a GameInstaller.msi, per installare l'applicazione e i file di libreria necessari in un altro computer.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2017-and-earlier"></a>Per installare il modello di progetto di installazione e distribuzione per Visual Studio 2017 e versioni precedenti
+
+1. Connettersi a Internet e quindi in Visual Studio scegliere **Strumenti** > **Estensioni e aggiornamenti**.
 
 1. In **Estensioni e aggiornamenti** selezionare la scheda **Online** e digitare *Microsoft Visual Studio Installer Projects* nella casella di ricerca. Premere **INVIO**, selezionare **Microsoft Visual Studio \<versione> Installer Projects** e fare clic su **Scarica**.
 
@@ -54,9 +90,9 @@ La procedura dettagliata mostra come usare Windows Installer per distribuire l'a
 
 1. Fare clic con il pulsante destro del mouse sul nodo **Cartella applicazione** e selezionare **Aggiungi** > **Output progetto** per aprire la finestra di dialogo **Aggiungi gruppo output progetto**.
 
-1. Nella finestra di dialogo selezionare **Output primario** e fare clic su **OK**. Viene visualizzato un nuovo elemento denominato **Output primario da Game (attivo)**.
+1. Nella finestra di dialogo selezionare **Output primario** e fare clic su **OK**. Viene visualizzato un nuovo elemento denominato **Output primario da Game (attivo)** .
 
-1. Selezionare l'elemento **Output primario da Game (attivo)**, fare clic con il pulsante destro del mouse e scegliere **Crea collegamento a output primario da Game (attivo)**. Viene visualizzato un nuovo elemento denominato **Collegamento a output primario da Game (attivo)**.
+1. Selezionare l'elemento **Output primario da Game (attivo)** , fare clic con il pulsante destro del mouse e scegliere **Crea collegamento a output primario da Game (attivo)** . Viene visualizzato un nuovo elemento denominato **Collegamento a output primario da Game (attivo)** .
 
 1. Rinominare l'elemento del collegamento in *Game* e quindi trascinarlo nel nodo **Menu Programmi dell'utente** sul lato sinistro della finestra.
 
@@ -69,6 +105,8 @@ La procedura dettagliata mostra come usare Windows Installer per distribuire l'a
 1. Sulla barra dei menu scegliere **Compila** > **Compila soluzione** per compilare il progetto Game e il progetto Game Installer.
 
 1. Nella cartella della soluzione individuare il programma setup.exe compilato dal progetto Game Installer ed eseguirlo per installare l'applicazione del gioco nel computer. È possibile copiare questo file, insieme a GameInstaller.msi, per installare l'applicazione e i file di libreria necessari in un altro computer.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Passaggi successivi
 

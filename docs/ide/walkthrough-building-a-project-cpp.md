@@ -1,21 +1,21 @@
 ---
 title: 'Procedura dettagliata: Compilazione di un progetto (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 8aadb6983cc096ff75785c6bab7ace6bd5f0c632
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: ea477e7b2f5435e049b242e68d151cc1f2d20624
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57809008"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182691"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Procedura dettagliata: Compilazione di un progetto (C++)
 
-In questa procedura dettagliata si introdurrà deliberatamente un errore di sintassi di Visual C++ nel codice per capire come si manifesta un errore di compilazione e come risolverlo. Quando si compilerà il progetto un messaggio di errore indicherà la natura del problema e il punto in cui si è verificato.
+In questa procedura dettagliata si introdurrà deliberatamente un errore di sintassi C++ nel codice per capire come si manifesta un errore di compilazione e come risolverlo. Quando si compilerà il progetto un messaggio di errore indicherà la natura del problema e il punto in cui si è verificato.
 
 ## <a name="prerequisites"></a>Prerequisiti
 

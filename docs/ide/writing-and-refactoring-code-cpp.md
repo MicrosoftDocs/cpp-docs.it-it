@@ -1,17 +1,18 @@
 ---
 title: Scrittura e refactoring del codice (C++)
-ms.date: 04/30/2018
+description: Usare l'editor di codice C++ in Visual Studio per formattare, esplorare, comprendere ed effettuare il refactoring del codice.
+ms.date: 05/14/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570430"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182631"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Scrittura e refactoring del codice (C++)
 
-L'editor di codice e l'IDE di Visual C++ includono numerosi strumenti per la scrittura di codice. Alcuni sono specifici di C++ e altri sono sostanzialmente uguali per tutti i linguaggi di Visual Studio. Per altre informazioni sulle funzionalità condivise, vedere [Scrittura di codice nell'editor di testo e di codice](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Le opzioni per l'abilitazione e configurazione delle funzionalità specifiche di C++ sono disponibili in **Strumenti &#124; Opzioni &#124; Editor di testo &#124; C/C++**. Dopo aver scelto l'opzione da impostare, è possibile ottenere ulteriori informazioni premendo il tasto **F1** quando la finestra di dialogo è attiva. Per le opzioni di formattazione di codice generale, digitare `Editor C++` in **Avvio veloce**.
+L'editor di codice C++ e l'IDE di Visual Studio includono numerosi strumenti per la scrittura di codice. Alcuni sono specifici di C++ e altri sono sostanzialmente uguali per tutti i linguaggi di Visual Studio. Per altre informazioni sulle funzionalità condivise, vedere [Scrittura di codice nell'editor di testo e di codice](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Le opzioni per l'abilitazione e configurazione delle funzionalità specifiche di C++ sono disponibili in **Strumenti &#124; Opzioni &#124; Editor di testo &#124; C/C++** . Dopo aver scelto l'opzione da impostare, è possibile ottenere ulteriori informazioni premendo il tasto **F1** quando la finestra di dialogo è attiva. Per le opzioni di formattazione di codice generale, digitare `Editor C++` in **Avvio veloce**.
 
 Le funzionalità sperimentali, che possono o non possono essere incluse in una versione futura di Visual Studio, sono nella finestra di dialogo [Editor di testo C++ Sperimentale](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). In Visual Studio 2017 è possibile abilitare **IntelliSense predittivo** in questa finestra di dialogo.
 

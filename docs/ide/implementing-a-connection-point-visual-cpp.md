@@ -1,18 +1,16 @@
 ---
 title: Implementare un punto di connessione
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.impl.cp.overview
+ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 7afa61246c5251936967e281f7237dc37e5be045
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693282"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182601"
 ---
 # <a name="implement-a-connection-point"></a>Implementare un punto di connessione
 
@@ -61,7 +59,7 @@ Un oggetto collegabile, ovvero un'origine, può visualizzare un punto di conness
 
 ## <a name="implement-connection-point-wizard"></a>Implementazione guidata punto di connessione
 
-Questa procedura guidata consente di implementare un punto di connessione per un oggetto COM. Un oggetto collegabile, ovvero un'origine, può visualizzare un punto di connessione per le proprie interfacce o per qualsiasi interfaccia in uscita. Visual C++ e Windows offrono entrambi librerie dei tipi con interfacce in uscita. Ogni interfaccia in uscita può essere implementata da un client in un oggetto, ovvero un sink.
+Questa procedura guidata consente di implementare un punto di connessione per un oggetto COM. Un oggetto collegabile, ovvero un'origine, può visualizzare un punto di connessione per le proprie interfacce o per qualsiasi interfaccia in uscita. MSVC e Windows offrono entrambi librerie dei tipi con interfacce in uscita. Ogni interfaccia in uscita può essere implementata da un client in un oggetto, ovvero un sink.
 
 Per altre informazioni, vedere [Punti di connessione ATL](../atl/atl-connection-points.md).
 
@@ -77,7 +75,7 @@ Per altre informazioni, vedere [Punti di connessione ATL](../atl/atl-connection-
 
   Visualizza le interfacce le cui definizioni sono incluse nella libreria dei tipi attualmente selezionata nella casella **Available type libraries** (Librerie dei tipi disponibili).
 
-  |Pulsante Trasferimento|Descrizione|
+  |Pulsante Trasferimento|Description|
   |---------------------|-----------------|
   |**>**|Aggiunge all'elenco **Implementa punti di connessione** il nome dell'interfaccia attualmente selezionata nell'elenco **Interfacce**.|
   |**>>**|Aggiunge all'elenco **Implementa punti di connessione** i nomi di tutte le interfacce disponibili nell'elenco **Interfacce**.|

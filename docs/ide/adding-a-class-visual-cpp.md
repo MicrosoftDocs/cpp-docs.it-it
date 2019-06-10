@@ -1,8 +1,7 @@
 ---
 title: Aggiungere una classe
-ms.date: 11/08/2018
+ms.date: 05/14/2019
 f1_keywords:
-- vc.codewiz.classes.adding
 - vc.addclass
 helpviewer_keywords:
 - ATL projects, adding classes
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - classes [C++], adding
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-ms.openlocfilehash: 21dd4b1936eda201df8283146ba9f41fa81e11de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fa53c2af5cd3e81c2d4877ef255430eac9525aad
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693581"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182681"
 ---
 # <a name="add-a-class"></a>Aggiungere una classe
 
-Per aggiungere una classe in un progetto Visual C++, in **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto, scegliere **Aggiungi** e quindi **Classe**. Viene visualizzata la finestra di dialogo [Aggiungi classe](#add-class-dialog-box).
+Per aggiungere una classe in un progetto Visual Studio C++, in **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto, scegliere **Aggiungi** e quindi **Classe**. Viene visualizzata la finestra di dialogo [Aggiungi classe](#add-class-dialog-box).
 
 Quando si aggiunge una classe, è necessario specificare un nome diverso dalle classi che esistono già in MFC o ATL. Se si specifica un nome che esiste già in una delle due librerie, l'IDE visualizza un messaggio di errore.
 
@@ -32,7 +31,7 @@ Se la convenzione di denominazione del progetto richiede l'uso di un nome esiste
 
 ## <a name="what-kind-of-class-do-you-want-to-add"></a>Tipo di classe da aggiungere
 
-Nella finestra di dialogo **Aggiungi classe** quando si espande il nodo **Visual C++** nel riquadro sinistro vengono visualizzati diversi gruppi di modelli installati. I gruppi includono **CLR**, **ATL**, **MFC** e **C++**. Quando si seleziona un gruppo, nel riquadro centrale viene visualizzato un elenco dei modelli disponibili nel gruppo. Ogni modello contiene i file e il codice sorgente necessari per una classe.
+Nella finestra di dialogo **Aggiungi classe** quando si espande il nodo **Visual C++** nel riquadro sinistro vengono visualizzati diversi gruppi di modelli installati. I gruppi includono **CLR**, **ATL**, **MFC** e **C++** . Quando si seleziona un gruppo, nel riquadro centrale viene visualizzato un elenco dei modelli disponibili nel gruppo. Ogni modello contiene i file e il codice sorgente necessari per una classe.
 
 Per generare una nuova classe, selezionare un modello nel riquadro centrale, digitare un nome per la classe nella casella **Nome** e selezionare **Aggiungi**. Viene visualizzata l'**Aggiunta guidata classe** che consente di specificare le opzioni per la classe.
 
@@ -81,13 +80,8 @@ Esistono quattro categorie di modelli **Aggiungi classe** : .NET, ATL, MFC e Gen
 |Modello|Wizard|
 |--------------|------------|
 |Aggiungi supporto ATL a MFC|Non disponibile|
-|Componente pagine ASP ATL|[Creazione guidata componente ASP ATL](../atl/reference/atl-active-server-page-component-wizard.md)|
 |Controllo ATL|[Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md)|
 |Finestra di dialogo ATL|[Creazione guidata finestra di dialogo ATL](../atl/reference/atl-dialog-wizard.md)|
-|Componente ATL COM+ 1.0|[Creazione guidata componente ATL COM+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)|
-|Consumer OLEDB ATL|[Creazione guidata consumer OLE DB ATL](../atl/reference/atl-ole-db-consumer-wizard.md)|
-|Provider OLEDB ATL|[Creazione guidata provider OLE DB ATL](../atl/reference/atl-ole-db-provider-wizard.md)|
-|Pagina delle proprietà ATL|[Creazione guidata pagina delle proprietà ATL](../atl/reference/atl-property-page-wizard.md)|
 |Oggetto semplice ATL|[Creazione guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md)|
 |Provider di eventi WMI|Configurazione guidata provider di eventi WMI|
 |Provider di istanze WMI|Configurazione guidata provider di istanze WMI|
@@ -97,9 +91,6 @@ Esistono quattro categorie di modelli **Aggiungi classe** : .NET, ATL, MFC e Gen
 |Modello|Wizard|
 |--------------|------------|
 |Classe MFC|[Creazione guidata aggiunta classe MFC](../mfc/reference/mfc-add-class-wizard.md)|
-|Classe MFC da controllo ActiveX|[Aggiunta guidata classe da controllo ActiveX](../ide/add-class-from-activex-control-wizard.md)|
-|Classe MFC da libreria di tipi|[Aggiunta guidata classe da libreria dei tipi](../mfc/reference/add-class-from-typelib-wizard.md)|
-|Consumer ODBC MFC|[Creazione guidata consumer ODBC MFC](../mfc/reference/mfc-odbc-consumer-wizard.md)|
 
 #### <a name="generic-classes"></a>Classi generiche
 

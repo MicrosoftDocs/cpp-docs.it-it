@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: 621e62379657da66d6eaec7a3ceff780fd610066
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c3e51aa7e5a4346137e94191b551b0d53452e460
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828173"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449003"
 ---
 # <a name="build-system-changes"></a>Modifiche al sistema di compilazione
 
-Il sistema MSBuild è utilizzato per compilare progetti Visual C++. Tuttavia, in Visual Studio 2008 e le versioni precedenti, il sistema VCBuild è stato utilizzato. Alcuni tipi di file e i concetti che dipendono da VCBuild non esistono o sono rappresentati in modo diverso nel sistema corrente. Questo documento illustra le differenze nel sistema di compilazione corrente.
+Il sistema MSBuild è usato per compilare progetti Visual Studio C++. Tuttavia, in Visual Studio 2008 e le versioni precedenti, il sistema VCBuild è stato utilizzato. Alcuni tipi di file e i concetti che dipendono da VCBuild non esistono o sono rappresentati in modo diverso nel sistema corrente. Questo documento illustra le differenze nel sistema di compilazione corrente.
 
 ## <a name="vcproj-is-now-vcxproj"></a>L'estensione vcproj è ora vcxproj
 
@@ -37,7 +37,7 @@ Nella versione corrente l'estensione della finestra delle proprietà del progett
 
 ## <a name="custom-build-rules-and-rules-files"></a>Regole di compilazione personalizzate e file con estensione rules
 
-Nelle versioni precedenti un *file delle regole* è un file XML con estensione rules. Un file delle regole consente di definire le regole di compilazione personalizzate e includerle nel processo di compilazione di un progetto Visual C++. Una regola di compilazione personalizzata, che può essere associata a una o più estensioni, consente di inviare i file di input a uno strumento che genera uno o più file di output.
+Nelle versioni precedenti un *file delle regole* è un file XML con estensione rules. Un file delle regole consente di definire le regole di compilazione personalizzate e includerle nel processo di compilazione di un progetto Visual Studio C++. Una regola di compilazione personalizzata, che può essere associata a una o più estensioni, consente di inviare i file di input a uno strumento che genera uno o più file di output.
 
 In questa versione le regole di compilazione personalizzate sono rappresentate da tre tipi di file con estensione xml, props e targets anziché un file con estensione rules. Quando viene eseguita la migrazione alla versione corrente di un file con estensione rules generato da una versione precedente di Visual C++, i file con estensione xml, props e targets equivalenti vengono creati e archiviati nel progetto insieme al file con estensione rules originale.
 
@@ -50,7 +50,7 @@ Nelle versioni precedenti la macro **$(Inherit)** specifica l'ordine in cui veng
 
 Nella versione corrente l'ereditarietà è supportata specificando il valore di una proprietà come concatenazione di uno o più valori letterali e macro di proprietà. Le macro **$(Inherit)** e **$(NoInherit)** non sono supportate.
 
-Nell'esempio seguente viene assegnato un elenco delimitato da punto e virgola a una proprietà nella pagina delle proprietà. L'elenco è composto dalla concatenazione del valore letterale *\<value>* e del valore della proprietà `MyProperty`, a cui si accede tramite la notazione di macro, **$(**<em>MyProperty</em>**)**.
+Nell'esempio seguente viene assegnato un elenco delimitato da punto e virgola a una proprietà nella pagina delle proprietà. L'elenco è composto dalla concatenazione del valore letterale *\<value>* e del valore della proprietà `MyProperty`, a cui si accede tramite la notazione di macro, **$(** <em>MyProperty</em> **)** .
 
 ```
 Property=<value>;$(MyProperty)

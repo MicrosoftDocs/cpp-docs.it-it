@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58780821"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448971"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduzione a Visual C++ per utenti UNIX
 
@@ -43,13 +43,13 @@ Un'applicazione è invece costituita da più librerie ed eseguibili, ognuno dei 
 
 È possibile creare nuovi progetti nell'ambiente di sviluppo. In Visual Studio sono disponibili numerosi modelli che forniscono codice standard per vari progetti comuni. È possibile usare creazioni guidate applicazione per generare progetti con strutture di codice per i vari tipi di applicazione.
 
-È possibile iniziare con un progetto vuoto usando la **creazione guidata applicazione console (Win32)**. Selezionare la casella di controllo **Progetto vuoto**. È quindi possibile aggiungere file nuovi ed esistenti al progetto in un secondo momento.
+È possibile iniziare con un progetto vuoto usando la **creazione guidata applicazione console (Win32)** . Selezionare la casella di controllo **Progetto vuoto**. È quindi possibile aggiungere file nuovi ed esistenti al progetto in un secondo momento.
 
 A ogni progetto creato è necessario assegnare un nome. Per impostazione predefinita, il nome del progetto è uguale al nome della libreria di collegamento dinamico (DLL) o dell'eseguibile compilato dal progetto. Per altre informazioni, vedere [Creazione di soluzioni e progetti](/visualstudio/ide/creating-solutions-and-projects).
 
 ## <a name="microsoft-specific-modifiers"></a>Modificatori specifici Microsoft
 
-Il compilatore Microsoft Visual C++ implementa diverse estensioni per il linguaggio di programmazione C++ standard per supportare la programmazione per i sistemi operativi Windows. Queste estensioni consentono di specificare, tra l'altro, attributi della classe di archiviazione, convenzioni di chiamata delle funzioni e indirizzi di base. Per un elenco completo di tutte le estensioni C++ supportate, vedere [Modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).
+Il compilatore Microsoft C++ implementa diverse estensioni per il linguaggio di programmazione C++ standard per supportare la programmazione per i sistemi operativi Windows. Queste estensioni consentono di specificare, tra l'altro, attributi della classe di archiviazione, convenzioni di chiamata delle funzioni e indirizzi di base. Per un elenco completo di tutte le estensioni C++ supportate, vedere [Modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md).
 
 Per disabilitare tutte le estensioni specifiche di Microsoft in C++, usare l'opzione `/Za` del compilatore. Questa opzione è consigliata se si intende scrivere codice da eseguire su più piattaforme. Per altre informazioni sull'opzione del compilatore `/Za`, vedere [/Za, /Ze (Disabilita estensioni linguaggio)](../build/reference/za-ze-disable-language-extensions.md). Per altre informazioni sulla conformità del compilatore C++, vedere [Conformità al linguaggio Visual C++](../overview/visual-cpp-language-conformance.md) e [Comportamento non standard](../cpp/nonstandard-behavior.md).
 

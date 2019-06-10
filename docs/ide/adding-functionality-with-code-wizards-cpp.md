@@ -1,35 +1,39 @@
 ---
 title: Aggiunta di funzionalità con creazioni guidate codice (C++)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.classes
+ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
-- wizards [C++], code
-- Visual C++ projects, adding functionality
-- projects [C++], adding functionality
-- class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57822574"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182651"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Aggiunta di funzionalità con creazioni guidate codice (C++)
 
 Dopo aver creato un progetto, è possibile effettuare modifiche o aggiunte alla funzionalità del progetto. Tali attività includono la creazione di nuove classi, l'aggiunta di nuove funzioni membro e variabili e l'aggiunta di metodi di automazione e proprietà. Le creazioni guidate codice sono progettate per consentire di effettuare tutte queste operazioni.
 
-> [!WARNING]
-> Diverse procedure guidate del codice ATL e MFC sono deprecate e verranno rimosse in una versione futura di Visual Studio. Queste procedure guidate vengono utilizzate raramente. Il supporto generale per ATL e MFC subisce attualmente l'effetto della rimozione di queste procedure guidate. Se vuoi condividere i tuoi commenti e suggerimenti su questa deprecazione, compila il [presente sondaggio](https://www.surveymonkey.com/r/QDWKKCN). I tuoi commenti e suggerimenti sono importanti per noi.
+> [!NOTE]
+> In Visual Studio 2019 le creazioni guidate codice seguenti, usate raramente, sono state rimosse. Il supporto generale per ATL e MFC subisce attualmente l'effetto della rimozione di queste procedure guidate. Il codice di esempio per queste tecnologie è archiviato in Microsoft Docs e nel repository GitHub VCSamples.
+
+- Creazione guidata componente ATL COM+ 1.0
+- Creazione guidata componente ASP ATL
+- Creazione guidata provider OLE DB ATL
+- Creazione guidata pagina delle proprietà ATL
+- Creazione guidata consumer OLE DB ATL
+- Consumer ODBC MFC
+- Classe MFC da controllo ActiveX
+- Classe MFC da libreria di tipi.
+
 
 > [!NOTE]
 >  È ora possibile aggiungere gestori di messaggi e associare messaggi ed eseguire l'override di funzioni virtuali MFC mediante la [finestra Proprietà](/visualstudio/ide/reference/properties-window).
 
-## <a name="accessing-visual-c-code-wizards"></a>Accesso alle creazioni guidate codice di Visual C++
+## <a name="accessing-c-code-wizards"></a>Accesso alle creazioni guidate codice C++
 
-È possibile accedere alle creazioni guidate codice di Visual C++ in tre modi:
+È possibile accedere alle creazioni guidate codice C++ in tre modi:
 
 - Nel menu **Progetto** il comando **Aggiungi nuovo elemento** consente di visualizzare la finestra di dialogo `Add New Item` per aggiungere nuovi file al progetto. Il comando **Aggiungi classe** visualizza la finestra di dialogo [Aggiungi classe](../ide/add-class-dialog-box.md) che apre le procedure guidate per ogni tipo di classe che è possibile aggiungere al progetto. Il comando **Aggiungi risorsa** visualizza la finestra di dialogo [Aggiungi risorsa](../windows/add-resource-dialog-box.md) che consente di creare o selezionare una risorsa da aggiungere al progetto.
 
@@ -73,5 +77,5 @@ Dopo aver creato un progetto, è possibile effettuare modifiche o aggiunte alla 
 
 [Override di una funzione virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Esplorazione della struttura delle classi](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[Tipi di progetto Visual C++](../build/reference/visual-cpp-project-types.md)<br>
-[Tipi di file creati per i progetti di Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Tipi di progetto C++ in Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
+[Tipi di file creati per i progetti di Visual Studio C++](../build/reference/file-types-created-for-visual-cpp-projects.md)

@@ -1,18 +1,18 @@
 ---
 title: Supporto di operazioni matematiche complesse C
-ms.date: 03/30/2018
+ms.date: 05/14/2019
 f1_keywords:
 - c.complex
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452611"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66186092"
 ---
 # <a name="c-complex-math-support"></a>Supporto di operazioni matematiche complesse C
 
@@ -28,19 +28,19 @@ L'implementazione Microsoft dell'intestazione complex.h definisce questi tipi co
 
 |Tipo standard|Tipo Microsoft|
 |-|-|
-|**float complex** o **float _Complex**|**_FComplex**|
-|**double complex** o **double _Complex**|**_DComplex**|
-|**long double complex** o **long double _Complex**|**_LComplex**|
+|**float complex** o **float _Complex**|**_Fcomplex**|
+|**double complex** o **double _Complex**|**_Dcomplex**|
+|**long double complex** o **long double _Complex**|**_Lcomplex**|
 
 L'intestazione math.h definisce un tipo separato, **struct _complex**, usato per la funzione [_cabs](../c-runtime-library/reference/cabs.md). Il tipo **struct _complex** non viene usato dalle funzioni matematiche complesse equivalenti [cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
 ## <a name="complex-constants-and-macros"></a>Costanti e macro complesse
 
-**I** viene definito come tipo complesso **float** **_FComplex** inizializzato da `{ 0.0f, 1.0f }`.
+**I** viene definito come tipo complesso **float** **_Fcomplex** inizializzato da `{ 0.0f, 1.0f }`.
 
 ## <a name="trigonometric-functions"></a>Funzioni trigonometriche
 
-|Funzione|Descrizione|
+|Funzione|Description|
 |-|-|
 |[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|Calcola l'arcocoseno complesso di un numero complesso|
 |[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|Calcola l'arcoseno complesso di un numero complesso|
@@ -51,7 +51,7 @@ L'intestazione math.h definisce un tipo separato, **struct _complex**, usato per
 
 ## <a name="hyperbolic-functions"></a>Funzioni iperboliche
 
-|Funzione|Descrizione|
+|Funzione|Description|
 |-|-|
 |[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|Calcola l'arcocoseno iperbolico complesso di un numero complesso|
 |[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|Calcola il seno iperbolico complesso di un numero complesso|
@@ -62,7 +62,7 @@ L'intestazione math.h definisce un tipo separato, **struct _complex**, usato per
 
 ## <a name="exponential-and-logarithmic-functions"></a>Funzioni esponenziali e logaritmiche
 
-|Funzione|Descrizione|
+|Funzione|Description|
 |-|-|
 |[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|Calcola l'esponenziale in base *e* complesso di un numero complesso|
 |[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|Calcola il logaritmo naturale complesso (in base *e*) di un numero complesso|
@@ -70,7 +70,7 @@ L'intestazione math.h definisce un tipo separato, **struct _complex**, usato per
 
 ## <a name="power-and-absolute-value-functions"></a>Funzioni di potenza e valore assoluto
 
-|Funzione|Descrizione|
+|Funzione|Description|
 |-|-|
 |[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Calcola il valore assoluto complesso (denominato anche norma, modulo o grandezza) di un numero complesso|
 |[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Calcola la funzione di potenza complessa x<sup>y</sup>|
@@ -78,7 +78,7 @@ L'intestazione math.h definisce un tipo separato, **struct _complex**, usato per
 
 ## <a name="manipulation-functions"></a>Funzioni di manipolazione
 
-|Funzione|Descrizione|
+|Funzione|Description|
 |-|-|
 |[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Costruisce un numero complesso da parti reali e immaginarie|
 |[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|Calcola l'argomento (detto anche angolo di fase) di un numero complesso|
@@ -92,7 +92,7 @@ L'intestazione math.h definisce un tipo separato, **struct _complex**, usato per
 
 Poiché i numeri complessi non sono un tipo nativo nel compilatore Microsoft, gli operatori aritmetici standard non sono definiti nei tipi complessi. Per praticità, queste funzioni della libreria di operazioni matematiche complesse vengono fornite per consentire la manipolazione limitata di numeri complessi nel codice utente:
 
-|Funzione|Descrizione|
+|Funzione|Description|
 |-|-|
 |[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Moltiplicare due numeri complessi|
 |[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Moltiplica un numero complesso e un numero a virgola mobile|

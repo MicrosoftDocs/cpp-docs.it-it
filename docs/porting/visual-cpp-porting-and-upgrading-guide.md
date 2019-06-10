@@ -2,12 +2,12 @@
 title: Guida al porting e aggiornamento in Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898791"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450384"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guida al porting e aggiornamento in Visual C++
 
@@ -53,7 +53,7 @@ Per iniziare ad aggiornare un progetto o una soluzione, aprire la soluzione nell
 
 8. Errori di runtime o risultati imprevisti a seguito di modifiche del comportamento
 
-9. Errori causati da errori introdotti negli strumenti. Se si verifica un errore, segnalarlo al team di Visual C++ usando i canali di supporto tradizionali o il [Feedback Center di Visual Studio](http://connect.microsoft.com/VisualStudio/Feedback).
+9. Errori causati da errori introdotti negli strumenti. Se si verifica un errore, segnalarlo al team di Visual C++ usando i canali di supporto tradizionali o la pagina della [Community degli sviluppatori di Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
 
 Oltre alle modifiche che non possono essere evitate a causa di errori del compilatore, altre modifiche nel processo di aggiornamento sono facoltative, ad esempio:
 
@@ -75,7 +75,7 @@ Se si vuole assegnare al programma un'interfaccia utente XAML senza creare un'ap
 
 |Titolo|Description|
 |-----------|-----------------|
-|[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Illustra come usare i progetti creati nelle versioni precedenti di Visual C++.|
+|[Aggiornamento di progetti da versioni precedenti di Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Illustra come usare i progetti creati nelle versioni precedenti di Visual Studio.|
 |[Novità del compilatore C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Modifiche all'IDE e agli strumenti nella versione corrente di Visual Studio|
 |[Miglioramenti della conformità di C++ in Visual Studio](../overview/cpp-conformance-improvements.md)|Miglioramenti di conformità agli standard da Visual Studio 2015 a Visual Studio|
 |[Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md)|Elenco di tutte modifiche apportate alle librerie e agli strumenti per la compilazione di Visual C++ in Visual Studio dalla versione 2003 alla 2015 che potrebbero richiedere modifiche del codice corrente.|
@@ -88,4 +88,4 @@ Se si vuole assegnare al programma un'interfaccia utente XAML senza creare un'ap
 
 ## <a name="see-also"></a>Vedere anche
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)

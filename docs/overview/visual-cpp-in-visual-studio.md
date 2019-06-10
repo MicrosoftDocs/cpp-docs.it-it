@@ -1,25 +1,25 @@
 ---
 title: C++ in Visual Studio
 description: Visual C++ è il nome del compilatore Microsoft C++, dell'editor di codice e degli strumenti correlati nell'IDE di Visual Studio. Usare Visual C++ per sviluppare programmi per Windows, Linux, Android e iOS.
-ms.date: 05/13/2019
+ms.date: 05/14/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934155"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451198"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
 > [!NOTE]
 > Questa documentazione per sviluppatori si applica a Visual Studio 2015 e versioni successive. Usare il selettore di versione nella parte superiore sinistra della pagina in modo che corrisponda alla versione di Visual Studio in uso.
 >
-> Coloro che cercano un package ridistribuibile di Visual C++ per poter eseguire un programma possono visitare l'[Area download Microsoft](http://www.microsoft.com/download/) e digitare **Visual C++** nella casella di ricerca.
+> Coloro che cercano un package ridistribuibile di Visual C++ per poter eseguire un programma possono visitare l'[Area download Microsoft](https://www.microsoft.com/download/) e digitare **Visual C++** nella casella di ricerca.
 
 Microsoft Visual C++, in genere abbreviato in Visual C++ o MSVC, è il nome di librerie e strumenti di sviluppo in linguaggio assembly, C e C++ disponibili come parte di Visual Studio in Windows. Questi strumenti e librerie consentono di creare app per la piattaforma UWP (Universal Windows Platform), applicazioni server e desktop Windows native, app e librerie multipiattaforma eseguite in Windows, Linux, Android e iOS, nonché librerie e app gestite che usano .NET Framework. È possibile usare Visual C++ per scrivere un'ampia gamma di app che spaziano da semplici app console ad app più sofisticate e complesse per desktop Windows, da driver di dispositivo e componenti del sistema operativo a giochi multipiattaforma per dispositivi mobili e da app per i più piccoli dispositivi IoT ad app HPC (High Performance Computing) multi-server nel cloud di Azure.
 
@@ -45,10 +45,10 @@ Informazioni sulle modifiche importanti nelle versioni precedenti.
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Installare Visual Studio ed eseguire l'aggiornamento dalle versioni precedenti
 
 [Installare il supporto C++ in Visual Studio](../build/vscpp-step-0-installation.md)<br/>
-Download di Visual Studio 2015 o Visual Studio 2017 e installazione del set di strumenti Visual C++.
+Download di Visual Studio 2017 o Visual Studio 2019 e installazione del set di strumenti Visual C++.
 
 [Guida al porting e aggiornamento in Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-Linee guida per la portabilità del codice e l'aggiornamento di progetti in Visual Studio 2015 o Visual Studio 2017, inclusa la portabilità del codice C++ in Windows 10 e nella piattaforma UWP (Universal Windows Platform).
+Linee guida per la portabilità del codice e l'aggiornamento dei progetti a Visual Studio 2015 o versione successiva per beneficiare della maggiore conformità del compilatore allo standard C++, di tempi di compilazione notevolmente migliorati e di funzionalità di sicurezza quali la mitigazione Spectre.
 
 [Strumenti e funzionalità di Visual C++ nelle versioni di Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Informazioni sulle varie edizioni di Visual Studio.
@@ -59,9 +59,9 @@ Informazioni sulle piattaforme supportate.
 ## <a name="learn-c"></a>Informazioni su C++
 
 [Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-Altre informazioni sulle tecniche moderne di programmazione di C++ basate su C++11 e C++14, con le quali è possibile scrivere codice sicuro in modo veloce, senza incorrere nelle numerose trappole che la programmazione C nasconde.
+Altre informazioni sulle moderne tecniche di programmazione C++ basate su C++11 e versioni successive grazie alle quali è possibile scrivere codice sicuro in modo veloce evitando molti dei problemi tipici della programmazione nel linguaggio C.
 
-[C++ standard](http://isocpp.org/)<br/>
+[C++ standard](https://isocpp.org/)<br/>
 Informazioni su C++, panoramica di C++ moderno e collegamenti a libri, articoli, discussioni ed eventi
 
 [Informazioni su Visual C++](../build/vscpp-step-1-create.md)<br/>
@@ -79,7 +79,7 @@ Come usare l'IDE di Visual Studio per creare progetti, modificare il codice, col
 Come creare e configurare progetti di Visual Studio C++, progetti CMake e altri tipi di progetti con le opzioni del compilatore e del linker MSVC.
 
 [Scrittura e refactoring del codice C++](../ide/writing-and-refactoring-code-cpp.md)<br/>
-Come usare le funzionalità di produttività nell'editor di C++ per eseguire il refactoring, esplorare e scrivere codice.
+Come usare le funzionalità di produttività disponibili nell'editor di C++ per esplorare, comprendere, scrivere codice ed effettuarne il refactoring.
 
 [Debug del codice nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Usare il debugger di Visual Studio con i progetti C++.
@@ -117,7 +117,7 @@ Informazioni su come proteggere le applicazioni da codice dannoso e da un uso no
 In C++, esistono diverse opzioni per la connessione al Web e al cloud.
 
 [Accesso ai dati](../data/data-access-in-cpp.md)<br/>
-Connettersi ai database mediante ODBC e altre tecnologie di accesso ai database.
+Connettersi ai database tramite ODBC e OLE DB.
 
 [Testo e stringhe](../text/text-and-strings-in-visual-cpp.md)<br/>
 Informazioni sull'uso di formati di testo e stringa diversi e sulle codifiche per lo sviluppo locale e internazionale.

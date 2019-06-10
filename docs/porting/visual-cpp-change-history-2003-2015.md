@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
+ms.openlocfilehash: f05656612e464395117e77c82fb9dc9eb2290e0e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "58898882"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451281"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
 
@@ -36,7 +36,7 @@ I miglioramenti apportati in modo costante alla conformità del compilatore poss
 
 - [Modifiche importanti apportate al runtime di concorrenza](#BK_ConcRT)
 
-## <a name="VC_2015"></a>Modifiche della conformità di Visual C++ 2015
+## <a name="VC_2015"></a> Modifiche della conformità di Visual Studio 2015
 
 ###  <a name="BK_CRT"></a> Libreria di runtime C (CRT)
 
@@ -409,7 +409,7 @@ Quando si aggiorna il codice rispetto alle versioni precedenti, potrebbero verif
 
 In Visual Studio 2015 i miglioramenti apportati in modo costante alla conformità del compilatore possono talvolta modificare il modo in cui il compilatore riconosce il codice sorgente esistente. In questo caso si possono riscontrare errori nuovi o diversi durante la compilazione, o anche differenze di comportamento nel codice che apparentemente in precedenza veniva compilato ed eseguito correttamente.
 
-Fortunatamente, queste differenze hanno un effetto minimo o nullo sulla maggior parte del codice sorgente. Quando è necessario modificare il codice sorgente o apportare altre modifiche per risolvere queste differenze, le correzioni sono in genere semplici e limitate. Sono stati inclusi numerosi esempi di codice sorgente in precedenza accettabile per cui potevano essere necessarie modifiche *(prima)* e di correzioni per la risoluzione dei problemi *(dopo)*.
+Fortunatamente, queste differenze hanno un effetto minimo o nullo sulla maggior parte del codice sorgente. Quando è necessario modificare il codice sorgente o apportare altre modifiche per risolvere queste differenze, le correzioni sono in genere semplici e limitate. Sono stati inclusi numerosi esempi di codice sorgente in precedenza accettabile per cui potevano essere necessarie modifiche *(prima)* e di correzioni per la risoluzione dei problemi *(dopo)* .
 
 Benché queste differenze possano influire sul codice sorgente o altri elementi di compilazione, non influiscono sulla compatibilità binaria tra gli aggiornamenti alle versioni di Visual Studio. Una *modifica sostanziale*, molto più drastica, può influire sulla compatibilità binaria, ma le interruzioni della compatibilità binaria si verificano solo tra le versioni principali di Visual Studio, ad esempio tra Visual Studio 2013 e Visual Studio 2015. Per informazioni sulle modifiche sostanziali apportate tra Visual Studio 2013 e Visual Studio 2015, vedere [Modifiche della conformità di Visual Studio 2015](#VC_2015).
 
@@ -641,7 +641,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Operatore new e delete di posizionamento**
 
-   È stata apportata una modifica all'operatore **delete** per fare in modo che sia conforme allo standard C++14. Per informazioni dettagliate sulla modifica agli standard, vedere [Deallocazione con dimensione C++](http://isocpp.org/files/papers/n3778.html). Le modifiche aggiungono una forma di operatore **delete** globale che accetta un parametro di dimensione. La differenza sostanziale è che se in precedenza si usava un operatore **delete** con la stessa firma (per la corrispondenza con un operatore **new di posizionamento**, ora si riceve un errore del compilatore (C2956, che si verifica nel punto in cui viene usato l'operatore new di posizionamento, poiché è la posizione nel codice in cui il compilatore tenta di identificare un operatore **delete** corrispondente appropriato).
+   È stata apportata una modifica all'operatore **delete** per fare in modo che sia conforme allo standard C++14. Per informazioni dettagliate sulla modifica agli standard, vedere [Deallocazione con dimensione C++](https://isocpp.org/files/papers/n3778.html). Le modifiche aggiungono una forma di operatore **delete** globale che accetta un parametro di dimensione. La differenza sostanziale è che se in precedenza si usava un operatore **delete** con la stessa firma (per la corrispondenza con un operatore **new di posizionamento**, ora si riceve un errore del compilatore (C2956, che si verifica nel punto in cui viene usato l'operatore new di posizionamento, poiché è la posizione nel codice in cui il compilatore tenta di identificare un operatore **delete** corrispondente appropriato).
 
    La funzione `void operator delete(void *, size_t)` era un operatore **delete di posizionamento** corrispondente alla funzione **new di posizionamento** `void * operator new(size_t, size_t)` in C++11. Con la deallocazione dimensionata di C++14, questa funzione delete è ora una *funzione di deallocazione consueta* (operatore **delete** globale). Lo standard richiede che, se l'uso di un operatore new cerca una funzione delete corrispondente e trova una funzione di deallocazione consueta, il programma non ha un formato corretto.
 
@@ -1106,7 +1106,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
 
 - **Il valore letterale della stringa è una matrice costante**
 
-   Il codice seguente genera ora l'errore C2664: 'void f(void *)': impossibile convertire l'argomento 1 da 'const char (*)[2]' a 'void *'
+   Il codice seguente genera ora l'errore C2664: 'void f(void *)': impossibile convertire l'argomento 1 da 'const char (* )[2]' a 'void *'
 
     ```cpp
     void f(void *);
@@ -2756,7 +2756,7 @@ Benché queste differenze possano influire sul codice sorgente o altri elementi 
         }
     ```
 
-- Lo standard C++ non consente la specializzazione esplicita in una classe. Sebbene sia consentita dal compilatore di Microsoft Visual C++ in alcune situazioni, nei casi come quello citato nell'esempio seguente viene generato un errore, poiché il compilatore non considera la seconda funzione come una specializzazione della prima.
+- Lo standard C++ non consente la specializzazione esplicita in una classe. Sebbene sia consentita dal compilatore Microsoft C++ in alcune situazioni, nei casi come quello citato nell'esempio riportato di seguito viene ora generato un errore perché il compilatore non considera la seconda funzione come una specializzazione della prima.
 
     ```cpp
     template < int N>
@@ -2994,7 +2994,7 @@ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _IT
 
 - Lo strumento di analisi ATL/MFC è stato rimosso contestualmente alla DLL ATL e il meccanismo di analisi è stato semplificato. Il costruttore `CTraceCategory` ora accetta un parametro (il nome della categoria) e le macro TRACE chiamano funzioni CRT di report di debug.
 
-## <a name="visual-c-2012-breaking-changes"></a>Modifiche importanti in Visual C++ 2012
+## <a name="visual-studio-2012-breaking-changes"></a>Modifiche importanti in Visual Studio 2012
 
 ### <a name="compiler"></a>Compilatore
 
@@ -3042,19 +3042,19 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - A seguito di una modifica che causa un'interruzione tra gli standard C++98/03 e C++11, se si usano argomenti di modello espliciti per la chiamata a `make_pair()`, come in `make_pair<int, int>(x, y)`, in genere la compilazione in Visual C++ in Visual Studio 2012 non viene eseguita. La soluzione consiste nel chiamare sempre `make_pair() ` senza argomenti di modello espliciti, come in `make_pair(x, y)`. Se si indicano argomenti di modello espliciti, viene vanificato lo scopo della funzione. Se è necessario controllare con precisione il tipo risultante, usare `pair` anziché `make_pair`, come in `pair<short, short>(int1, int2)`.
 
-- Un'altra modifica sostanziale tra gli standard C++98/03 e C++11: quando A è implicitamente convertibile in B e B è implicitamente convertibile in C, ma A non è implicitamente convertibile in C, lo standard C++98/03 e Visual C++ 2010 consentivano la conversione di `pair<A, X>` in `pair<C, X>` (in modo implicito o esplicito). L'altro tipo, X, non interessa in questa sede e non è specifico per il primo tipo nella coppia. Il compilatore C++ in Visual Studio 2012 rileva che A non è implicitamente convertibile in C e rimuove la conversione della coppia dalla risoluzione dell'overload. Questa modifica è positiva per molti scenari. Ad esempio, l'overload di `func(const pair<int, int>&)` e `func(const pair<string, string>&)`e la chiamata di `func()` con `pair<const char *, const char *>` eseguiranno la compilazione con questa modifica. Tuttavia, la modifica interrompe il codice che si basava su conversioni di coppia aggressive. In genere, tale codice può essere corretto eseguendo una parte della conversione in modo esplicito, ad esempio passando `make_pair(static_cast<B>(a), x)` a una funzione che prevede `pair<C, X>`.
+- Un'altra modifica sostanziale tra gli standard C++98/03 e C++11: quando A è implicitamente convertibile in B e B è implicitamente convertibile in C, ma A non è implicitamente convertibile in C, lo standard C++98/03 e Visual Studio 2010 consentivano la conversione di `pair<A, X>` in `pair<C, X>` (in modo implicito o esplicito). L'altro tipo, X, non interessa in questa sede e non è specifico per il primo tipo nella coppia. Il compilatore C++ in Visual Studio 2012 rileva che A non è implicitamente convertibile in C e rimuove la conversione della coppia dalla risoluzione dell'overload. Questa modifica è positiva per molti scenari. Ad esempio, l'overload di `func(const pair<int, int>&)` e `func(const pair<string, string>&)`e la chiamata di `func()` con `pair<const char *, const char *>` eseguiranno la compilazione con questa modifica. Tuttavia, la modifica interrompe il codice che si basava su conversioni di coppia aggressive. In genere, tale codice può essere corretto eseguendo una parte della conversione in modo esplicito, ad esempio passando `make_pair(static_cast<B>(a), x)` a una funzione che prevede `pair<C, X>`.
 
-- Visual C++ 2010 simulava i modelli variadic, ad esempio `make_shared<T>(arg1, arg2, argN)`, fino a un limite massimo di 10 argomenti, contrassegnando overload e specializzazioni con macchine di precompilazione. In Visual Studio 2012 questo limite viene ridotto a cinque argomenti, per migliorare il tempo di compilazione e il consumo di memoria del compilatore per la maggior parte degli utenti. Tuttavia, è possibile impostare il limite precedente definendo in modo esplicito _VARIADIX_MAX come 10, a livello di progetto.
+- Visual Studio 2010 simulava i modelli variadic, ad esempio `make_shared<T>(arg1, arg2, argN)`, fino a un limite massimo di 10 argomenti, contrassegnando overload e specializzazioni con programmi preprocessori. In Visual Studio 2012 questo limite viene ridotto a cinque argomenti, per migliorare il tempo di compilazione e il consumo di memoria del compilatore per la maggior parte degli utenti. Tuttavia, è possibile impostare il limite precedente definendo in modo esplicito _VARIADIX_MAX come 10, a livello di progetto.
 
 - C++11 17.6.4.3.1 [macro.names]/2 impedisce la sostituzione a livello macro delle parole chiave quando sono incluse intestazioni della libreria standard di C++. Le intestazioni ora generano errori del compilatore se rilevano parole chiave sostituite tramite macro. La definizione di _ALLOW_KEYWORD_MACROS consente la compilazione del codice ma ne è fortemente sconsigliato l'uso. Come eccezione, la forma macro `new` è consentita per impostazione predefinita, perché le intestazioni configurano un'auto-protezione globale usando `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")`. Defining _ENFORCE_BAN_OF_MACRO_NEW esegue esattamente l'operazione indicata nel nome.
 
-- Per implementare varie ottimizzazioni e controlli di debug, l'implementazione della libreria standard di C++ interrompe intenzionalmente la compatibilità binaria tra le versioni di Visual Studio (2005, 2008, 2010, 2012). Se si usa la libreria standard di C++, viene impedita la combinazione di file oggetto e librerie statiche compilati usando versioni diverse in un unico file binario (EXE o DLL) e non è consentito passare gli oggetti della libreria standard di C++ tra i file binari compilati usando versioni diverse. La combinazione di librerie statiche e file oggetto (usando la libreria standard di C++) compilati usando Visual C++ 2010 con quelli compilati usando il compilatore C++ in Visual Studio 2012 genera errori del linker per mancata corrispondenza in _MSC_VER, dove _MSC_VER è la macro che contiene la versione principale del compilatore (1700 per Visual C++ in Visual Studio 2012). Questo controllo non consente di rilevare la combinazione DLL e altre combinazioni inerenti a Visual C++ 2008 o versioni precedenti.
+- Per implementare varie ottimizzazioni e controlli di debug, l'implementazione della libreria standard di C++ interrompe intenzionalmente la compatibilità binaria tra le versioni di Visual Studio (2005, 2008, 2010, 2012). Se si usa la libreria standard di C++, viene impedita la combinazione di file oggetto e librerie statiche compilati usando versioni diverse in un unico file binario (EXE o DLL) e non è consentito passare gli oggetti della libreria standard di C++ tra i file binari compilati usando versioni diverse. La combinazione di librerie statiche e file oggetto (usando la libreria standard di C++) compilati usando Visual Studio 2010 con quelli compilati usando il compilatore C++ in Visual Studio 2012 genera errori del linker per mancata corrispondenza in _MSC_VER, dove _MSC_VER è la macro che contiene la versione principale del compilatore (1700 per Visual C++ in Visual Studio 2012). Questo controllo non consente di rilevare la combinazione DLL e altre combinazioni inerenti a Visual Studio 2008 o versioni precedenti.
 
-- Oltre a rilevare le mancate corrispondenze in _ITERATOR_DEBUG_LEVEL, implementato in Visual C++ 2010, il compilatore C++ in Visual Studio 2012 rileva le mancate corrispondenze nella libreria di runtime. Queste mancate corrispondenze si verificano quando vengono combinate le opzioni del compilatore `/MT` (versione statica), `/MTd` (debug statico), `/MD` (versione dinamica) e `/MDd` (debug dinamico).
+- Oltre a rilevare le mancate corrispondenze in _ITERATOR_DEBUG_LEVEL, implementato in Visual Studio 2010, il compilatore C++ in Visual Studio 2012 rileva le mancate corrispondenze nella libreria di runtime. Queste mancate corrispondenze si verificano quando vengono combinate le opzioni del compilatore `/MT` (versione statica), `/MTd` (debug statico), `/MD` (versione dinamica) e `/MDd` (debug dinamico).
 
 - `operator<()`, `operator>()`, `operator<=()` e `operator>=()` in precedenza erano disponibili per le famiglie di contenitori `std::unordered_map` e `stdext::hash_map`, anche se le implementazioni non erano di fatto utili. Questi operatori non standard sono stati rimossi in Visual C++ in Visual Studio 2012. Inoltre, l'implementazione di `operator==()` e `operator!=()` per la famiglia `std::unordered_map` è stata estesa per includere la famiglia `stdext::hash_map`. Si consiglia di evitare l'uso della famiglia `stdext::hash_map` nel nuovo codice.
 
-- C++11 22.4.1.4 [locale.codecvt] specifica che `codecvt::length()` e `codecvt::do_length()` devono accettare parametri `stateT&` modificabili, ma Visual C++ 2010 ha accettato `const stateT&`. Il compilatore C++ in Visual Studio 2012 accetta`stateT&` come definito dallo standard. Questa differenza è significativa se si tenta di eseguire l'override della funzione virtuale `do_length()`.
+- C++11 22.4.1.4 [locale.codecvt] specifica che `codecvt::length()` e `codecvt::do_length()` devono accettare parametri `stateT&` modificabili, ma Visual Studio 2010 ha accettato `const stateT&`. Il compilatore C++ in Visual Studio 2012 accetta`stateT&` come definito dallo standard. Questa differenza è significativa se si tenta di eseguire l'override della funzione virtuale `do_length()`.
 
 ### <a name="crt"></a>CRT
 
@@ -3228,7 +3228,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Rinominato `CPane::GetDockSiteRow(CDockingPanesRow *)` in `CPane::SetDockSiteRow`.
 
-## <a name="visual-c-2010-breaking-changes"></a>Modifiche importanti in Visual C++ 2010
+## <a name="visual-studio-2010-breaking-changes"></a>Modifiche importanti in Visual Studio 2010
 
 ### <a name="compiler"></a>Compilatore
 
@@ -3244,23 +3244,23 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Se si esegue la compilazione con entrambe le opzioni del compilatore, `/GL` (ottimizzazione intero programma) e `/clr` (compilazione Common Language Runtime), l'opzione `/GL` viene ignorata. Questa modifica è stata apportata poiché la combinazione delle opzioni del compilatore non risultava particolarmente vantaggiosa. In seguito a questa modifica le prestazioni della compilazione sono migliorate.
 
-- Per impostazione predefinita il supporto per i trigrammi è disabilitato in Visual C++ 2010. Usare l'opzione del compilatore `/Zc:trigraphs` per abilitare il supporto dei trigrammi. Un trigramma è costituito da due punti interrogativi consecutivi ("??") seguiti da un terzo carattere univoco. Il compilatore sostituisce un trigramma con un carattere di punteggiatura corrispondente. Ad esempio, il compilatore sostituisce il trigramma `??=` con il carattere "#". Usare i trigrammi in file di origine C che usano un set di caratteri che non contiene rappresentazioni grafiche adeguate per alcuni caratteri di punteggiatura.
+- Per impostazione predefinita, il supporto per i trigrammi è disabilitato in Visual Studio 2010. Usare l'opzione del compilatore `/Zc:trigraphs` per abilitare il supporto dei trigrammi. Un trigramma è costituito da due punti interrogativi consecutivi ("??") seguiti da un terzo carattere univoco. Il compilatore sostituisce un trigramma con un carattere di punteggiatura corrispondente. Ad esempio, il compilatore sostituisce il trigramma `??=` con il carattere "#". Usare i trigrammi in file di origine C che usano un set di caratteri che non contiene rappresentazioni grafiche adeguate per alcuni caratteri di punteggiatura.
 
 - Il linker non supporta più l'ottimizzazione per Windows 98. L'opzione `/OPT` (ottimizzazioni) genera un errore in fase di compilazione se si specifica `/OPT:WIN98` o `/OPT:NOWIN98`.
 
 - Le opzioni predefinite del compilatore specificate dalle proprietà di compilazione RuntimeLibrary e DebugInformationFormat del sistema sono state modificate. Per impostazione predefinita, queste proprietà di compilazione vengono specificate nei progetti creati nelle versioni da 7.0 a 10.0 di Visual C++. Se si esegue la migrazione di un progetto creato da Visual C++ 6.0, considerare la possibilità di specificare un valore per queste proprietà.
 
-- In Visual C++ 2010, RuntimeLibrary = MultiThreaded (`/MD`) e DebugInformationFormat = ProgramDatabase (`/Zi`). In Visual C++ 9.0, RuntimeLibrary = MultiThreaded (`/MT`) e DebugInformationFormat = Disabled.
+- In Visual Studio 2010, RuntimeLibrary = MultiThreaded (`/MD`) e DebugInformationFormat = ProgramDatabase (`/Zi`). In Visual C++ 9.0, RuntimeLibrary = MultiThreaded (`/MT`) e DebugInformationFormat = Disabled.
 
 ### <a name="clr"></a>CLR
 
 - I compilatori Microsoft C# e Visual Basic ora sono in grado di produrre un assembly senza interoperabilità primaria (no-PIA). Un assembly no-PIA è in grado di usare i tipi COM senza la distribuzione del relativo assembly di interoperabilità primario (PIA). Quando si consumano assembly no-PIA prodotti da Visual C# o Visual Basic, è necessario fare riferimento all'assembly PIA nel comando di compilazione prima di fare riferimento a qualsiasi assembly no-PIA che usa la libreria.
 
-### <a name="visual-c-projects-and-msbuild"></a>Progetti di Visual C++ e MSBuild
+### <a name="visual-studio-c-projects-and-msbuild"></a>Progetti di Visual Studio C++ e MSBuild
 
-- I progetti di Visual C++ sono ora basati sullo strumento MSBuild. Di conseguenza, i file di progetto usano un nuovo formato di file XML e il suffisso di un file con estensione VCXPROJ. Visual C++ 2010 converte automaticamente i file di progetto da versioni precedenti di Visual Studio nel nuovo formato di file. Un progetto esistente è interessato se dipende dallo strumento di compilazione precedente, VCBUILD.exe, o dal suffisso del file di progetto con estensione VCPROJ.
+- I progetti di Visual Studio C++ ora sono basati sullo strumento MSBuild. Di conseguenza, i file di progetto usano un nuovo formato di file XML e il suffisso di un file con estensione VCXPROJ. Visual Studio 2010 converte automaticamente i file di progetto da versioni precedenti di Visual Studio nel nuovo formato di file. Un progetto esistente è interessato se dipende dallo strumento di compilazione precedente, VCBUILD.exe, o dal suffisso del file di progetto con estensione VCPROJ.
 
-- Nelle versioni precedenti Visual C++ supportava la valutazione tardiva delle finestre delle proprietà. Ad esempio, una finestra delle proprietà padre poteva importare una finestra delle proprietà figlio e l'elemento padre poteva usare una variabile definita nell'elemento figlio per definire altre variabili. La valutazione tardiva consentiva all'elemento padre di usare la variabile figlio anche prima dell'importazione della finestra delle proprietà figlio. In Visual C++ 2010 una variabile della finestra del progetto non può essere usata prima che sia definita, perché MSBuild supporta solo la valutazione precoce.
+- Nelle versioni precedenti Visual C++ supportava la valutazione tardiva delle finestre delle proprietà. Ad esempio, una finestra delle proprietà padre poteva importare una finestra delle proprietà figlio e l'elemento padre poteva usare una variabile definita nell'elemento figlio per definire altre variabili. La valutazione tardiva consentiva all'elemento padre di usare la variabile figlio anche prima dell'importazione della finestra delle proprietà figlio. In Visual Studio 2010 non è possibile usare una variabile della finestra del progetto prima che sia stata definita perché MSBuild supporta solo la valutazione anticipata.
 
 ### <a name="ide"></a>IDE
 
@@ -3274,7 +3274,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Il modello di distribuzione delle librerie non usa più manifesti per trovare una particolare versione di una libreria a collegamento dinamico. Il nome di ogni libreria a collegamento dinamico contiene invece il proprio numero di versione e si usa quel nome per individuare la libreria.
 
-- Nelle versioni precedenti di Visual Studio era possibile ricompilare le librerie di runtime. Visual C++ 2010 non supporta più la creazione di copie personali dei file della libreria di runtime C.
+- Nelle versioni precedenti di Visual Studio era possibile ricompilare le librerie di runtime. Visual Studio 2010 non supporta più la creazione di copie personali dei file della libreria di runtime C.
 
 ### <a name="standard-library"></a>Libreria standard
 
@@ -3306,7 +3306,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - Sono state rimosse diverse direttive dal compilatore di riferimento a Microsoft Macro Assembler. Le direttive rimosse sono `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087` e `.NO87`.
 
-## <a name="visual-c-2008-breaking-changes"></a>Modifiche importanti in Visual C++ 2008
+## <a name="visual-studio-2008-breaking-changes"></a>Modifiche importanti in Visual Studio 2008
 
 ### <a name="compiler"></a>Compilatore
 
@@ -3330,7 +3330,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
    - tag_name
 
-### <a name="visual-c-projects"></a>Progetti di Visual C++
+### <a name="visual-studio-c-projects"></a>Progetti di Visual Studio C++
 
 - Quando si aggiornano progetti da versioni precedenti di Visual Studio è necessario modificare le macro WINVER e _WIN32_WINNT in modo che siano maggiori o uguali a 0x0500.
 
@@ -3386,7 +3386,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 ### <a name="atl"></a>ATL
 
-- Non è possibile compilare ATL senza una dipendenza da CRT. Nelle versioni precedenti di Visual Studio è possibile usare #define ATL_MIN_CRT rendere un progetto ATL in minima parte dipendente da CRT. In Visual C++ 2008 tutti i progetti ATL dipendono in minima parte da CRT indipendentemente dal fatto che sia definita ATL_MIN_CRT.
+- Non è possibile compilare ATL senza una dipendenza da CRT. Nelle versioni precedenti di Visual Studio è possibile usare #define ATL_MIN_CRT rendere un progetto ATL in minima parte dipendente da CRT. In Visual Studio 2008 tutti i progetti ATL dipendono in minima parte da CRT indipendentemente dal fatto che sia definita ATL_MIN_CRT.
 
 - La codebase di ATL Server è stata rilasciata come progetto di origine condiviso in CodePlex e non viene installata come parte di Visual Studio. Le classi di codifica e decodifica dei dati di atlenc.h e le funzioni e classi di utilità di atlutil.h e atlpath.h sono state mantenute e ora fanno parte della libreria ATL. Alcuni dei file associati ad ATL Server non fanno più parte di Visual Studio.
 
@@ -3396,7 +3396,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 ### <a name="atlmfc-shared-classes"></a>Classi condivise ATL/MFC
 
-- Non è possibile compilare ATL senza una dipendenza da CRT. Nelle versioni precedenti di Visual Studio è possibile usare `#define ATL_MIN_CRT` per rendere un progetto ATL in minima parte dipendente da CRT. In Visual C++ 2008 tutti i progetti ATL dipendono in minima parte da CRT indipendentemente dal fatto che sia definita ATL_MIN_CRT.
+- Non è possibile compilare ATL senza una dipendenza da CRT. Nelle versioni precedenti di Visual Studio è possibile usare `#define ATL_MIN_CRT` per rendere un progetto ATL in minima parte dipendente da CRT. In Visual Studio 2008 tutti i progetti ATL dipendono in minima parte da CRT indipendentemente dal fatto che sia definita ATL_MIN_CRT.
 
 - La codebase di ATL Server è stata rilasciata come progetto di origine condiviso in CodePlex e non viene installata come parte di Visual Studio. Le classi di codifica e decodifica dei dati di atlenc.h e le funzioni e classi di utilità di atlutil.h e atlpath.h sono state mantenute e ora fanno parte della libreria ATL. Alcuni dei file associati ad ATL Server non fanno più parte di Visual Studio.
 
@@ -3420,7 +3420,7 @@ L'enumerazione `SchedulerType` di `UmsThreadDefault` è deprecata. Specificare `
 
 - API ANSI deprecate: le versioni ANSI di diversi metodi MFC sono deprecate. Usare le versioni Unicode dei metodi nelle applicazioni future. Per altre informazioni, vedere i **requisiti di compilazione per i controlli comuni di Windows Vista**.
 
-## <a name="visual-c-2005-breaking-changes"></a>Modifiche importanti in Visual C++ 2005
+## <a name="visual-studio-2005-breaking-changes"></a>Modifiche importanti in Visual Studio 2005
 
 ### <a name="crt"></a>CRT
 
