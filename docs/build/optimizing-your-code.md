@@ -10,7 +10,7 @@ helpviewer_keywords:
 - performance, compiler
 ms.openlocfilehash: f44fb734c8441e10b656c5326c8df4bf6879499a
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220184"
