@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174806"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821691"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Procedura: Creare e usare istanze shared_ptr
 
@@ -108,7 +108,7 @@ Nell'esempio che segue viene illustrato come dichiarare e inizializzare istanze 
 
 - Se è necessario fornire un accesso a una funzione di supporto al puntatore sottostante e si sa che la funzione di supporto userà semplicemente il puntatore e restituirà il risultato prima che la funzione chiamante restituisca il risultato, tale funzione non dovrà condividere la proprietà del puntatore sottostante. Deve semplicemente accedere al puntatore entro il ciclo di vita dell'oggetto `shared_ptr` del chiamante. In questo caso, è possibile passare `shared_ptr` in base al riferimento oppure passare il puntatore non elaborato o un riferimento all'oggetto sottostante. Il passaggio di questo metodo offre un leggero miglioramento delle prestazioni e può inoltre aiutare a definire il proprio intento di programmazione.
 
-- Talvolta, ad esempio in un `std:vector<shared_ptr<T>>`, è necessario passare ogni `shared_ptr` a un corpo di espressione lambda o a un oggetto funzione denominata. Se l'espressione lambda o la funzione non memorizza il puntatore, passare `shared_ptr` in base al riferimento per evitare di chiamare il costruttore di copia per ogni elemento.
+- Talvolta, ad esempio in un `std::vector<shared_ptr<T>>`, è necessario passare ogni `shared_ptr` a un corpo di espressione lambda o a un oggetto funzione denominata. Se l'espressione lambda o la funzione non memorizza il puntatore, passare `shared_ptr` in base al riferimento per evitare di chiamare il costruttore di copia per ogni elemento.
 
 ## <a name="example-6"></a>Esempio 6
 
