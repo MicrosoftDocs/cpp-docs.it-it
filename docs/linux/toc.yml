@@ -10,6 +10,8 @@
   href: create-a-new-linux-project.md
 - name: Connettersi al computer Linux remoto
   href: connect-to-your-remote-linux-computer.md
+- name: Configurare i progetti Linux per l'uso di Address Sanitizer
+  href: linux-asan-configuration.md
 - name: 'Distribuire, eseguire e sottoporre a debug il progetto Linux'
   href: deploy-run-and-debug-your-linux-project.md
 - name: 'Esercitazione: Creare progetti multipiattaforma C++ in Visual Studio'
