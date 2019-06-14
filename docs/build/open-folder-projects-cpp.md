@@ -4,24 +4,24 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 4f59781833a303ad2db837549eddca2f2ce291b1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8856a5b1782c75c5a59dfdc93a8203627059ea12
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220489"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042728"
 ---
 # <a name="open-folder-projects-for-c"></a>Progetti Apri cartella per C++
 
 In Visual Studio 2017 e versioni successive la funzionalità "Apri cartella" consente di aprire una cartella di file di origine e avviare la codifica con il supporto di IntelliSense, esplorazione, refactoring, debug e così via. Non viene caricato nessun file con estensione sln o vcxproj. Se necessario, è possibile specificare attività personalizzate e creare e avviare parametri mediante semplici file con estensione json. Per informazioni generiche sulla funzionalità Apri cartella, vedere [Sviluppare codice in Visual Studio senza progetti o soluzioni](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
 
-CMake è integrato nell'IDE di Visual Studio come CMake Tools per Visual Studio, un componente del carico di lavoro desktop di C++. Per altre informazioni, vedere [Progetti CMake in Visual Studio](cmake-projects-in-visual-studio.md). Per qualsiasi altro sistema di compilazione è possibile usare la funzionalità Apri cartella. Apri cartella separa in modo efficace l'editor del codice, il debugger e gli analizzatori dal sistema di compilazione e dal set di strumenti del compilatore. È possibile usare l'editor del codice C++ con le funzionalità IntelliSense avanzate, gli analizzatori del codice e il debugger di Visual Studio con praticamente qualsiasi sistema di compilazione, tra cui CMake, Ninja, QMake (per i progetti Qt), gyp, SCons, Gradle, Buck, make e altro ancora. Funziona persino con un singolo file o un'ampia raccolta di file senza sistema di compilazione.
+CMake è integrato nell'IDE di Visual Studio come componente di C++ carico di lavoro desktop. Per altre informazioni, vedere [Progetti CMake in Visual Studio](cmake-projects-in-visual-studio.md). Per qualsiasi altro sistema di compilazione è possibile usare la funzionalità Apri cartella. Apri cartella separa in modo efficace l'editor del codice, il debugger e gli analizzatori dal sistema di compilazione e dal set di strumenti del compilatore. È possibile usare l'editor del codice C++ con le funzionalità IntelliSense avanzate, gli analizzatori del codice e il debugger di Visual Studio con praticamente qualsiasi sistema di compilazione, tra cui CMake, Ninja, QMake (per i progetti Qt), gyp, SCons, Gradle, Buck, make e altro ancora. Funziona persino con un singolo file o un'ampia raccolta di file senza sistema di compilazione.
 
 Per usare Apri cartella, nel menu principale selezionare **File | Apri | Cartella** oppure premere **CTRL+MAIUSC+ALT+O**. Esplora soluzioni visualizza immediatamente tutti i file presenti nella cartella. È possibile fare clic su qualsiasi file per iniziare a modificarlo. Visual Studio avvia l'indicizzazione dei file in background per abilitare le funzionalità IntelliSense, di navigazione e di refactoring. Man mano che si modificano, creano, spostano o eliminano file, Visual Studio tiene traccia automaticamente delle modifiche e aggiorna continuamente il relativo indice IntelliSense. 
 
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Progetti QMake destinati al framework Qt
 
-È possibile usare CMake Tools per Visual Studio per la compilazione di progetti Qt destinati a Qt oppure usare [Qt Visual Studio Extension](https://download.qt.io/development_releases/vsaddin/) per Visual Studio 2015 o Visual Studio 2017.
+È possibile usare CMake per compilare progetti Qt, o è possibile usare la [estensione di Visual Studio Qt](https://download.qt.io/development_releases/vsaddin/) per Visual Studio 2015 o Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck e così via
 
