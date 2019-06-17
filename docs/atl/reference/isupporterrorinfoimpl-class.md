@@ -1,6 +1,6 @@
 ---
 title: Classe ISupportErrorInfoImpl
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - ISupportErrorInfoImpl
 - ATLCOM/ATL::ISupportErrorInfoImpl
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: f7e300e30ff0f14b56d2a1bae86b00e090674679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 650d90c9ec98754e11586f63e0871b70ebbe34f3
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274765"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141710"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Classe ISupportErrorInfoImpl
 
 Questa classe fornisce un'implementazione predefinita del [ISupportErrorInfo interfaccia](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) e può essere usato quando solo una singola interfaccia genera errori in un oggetto.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+> Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```cpp
 template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl
    : public ISupportErrorInfo
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
 *piid*<br/>
 Un puntatore all'IID dell'interfaccia che supporta [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
@@ -67,101 +67,13 @@ Classe `ISupportErrorInfoImpl` fornisce un'implementazione predefinita di `ISupp
 
 Indica se l'interfaccia identificata dal `riid` supporta la [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interfaccia.
 
-```
+```cpp
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```
 
 ### <a name="remarks"></a>Note
 
 Visualizzare [ISupportErrorInfo::InterfaceSupportsErrorInfo](/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) in Windows SDK.
-
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
-
-Chiamare questo metodo per ottenere il numero di thread nel pool.
-
-```
-STDMETHOD(GetSize)(int* pnNumThreads);
-```
-
-### <a name="parameters"></a>Parametri
-
-*pnNumThreads*<br/>
-[out] Indirizzo della variabile che, in caso di esito positivo riceve il numero di thread nel pool.
-
-### <a name="return-value"></a>Valore restituito
-
-Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
-
-### <a name="example"></a>Esempio
-
-[!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]
-
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
-
-Chiamare questo metodo per ottenere il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.
-
-```
-STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
-```
-
-### <a name="parameters"></a>Parametri
-
-*pdwMaxWait*<br/>
-[out] Indirizzo della variabile che, in caso di esito positivo riceve il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.
-
-### <a name="return-value"></a>Valore restituito
-
-Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
-
-### <a name="example"></a>Esempio
-
-Visualizzare [IThreadPoolConfig::GetSize](#getsize).
-
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
-
-Chiamare questo metodo per impostare il numero di thread nel pool.
-
-```
-STDMETHOD(SetSize)int nNumThreads);
-```
-
-### <a name="parameters"></a>Parametri
-
-*nNumThreads*<br/>
-Il numero richiesto di thread nel pool.
-
-Se *nNumThreads* è negativo, il valore assoluto corrispondente verrà moltiplicato per il numero di processori del computer per ottenere il numero totale di thread.
-
-Se *nNumThreads* è uguale a zero, ATLS_DEFAULT_THREADSPERPROC verrà moltiplicata per il numero di processori del computer per ottenere il numero totale di thread.
-
-### <a name="return-value"></a>Valore restituito
-
-Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
-
-### <a name="example"></a>Esempio
-
-Visualizzare [IThreadPoolConfig::GetSize](#getsize).
-
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
-
-Chiamare questo metodo per impostare il tempo massimo in millisecondi di attesa per un thread arrestare il pool di thread.
-
-```
-STDMETHOD(SetTimeout)(DWORD dwMaxWait);
-```
-
-### <a name="parameters"></a>Parametri
-
-*dwMaxWait*<br/>
-Il tempo massimo richiesto in millisecondi di attesa per un thread arrestare il pool di thread.
-
-### <a name="return-value"></a>Valore restituito
-
-Restituisce S_OK se l'operazione riesce, o un valore HRESULT di errore in caso di errore.
-
-### <a name="example"></a>Esempio
-
-Visualizzare [IThreadPoolConfig::GetSize](#getsize).
 
 ## <a name="see-also"></a>Vedere anche
 
