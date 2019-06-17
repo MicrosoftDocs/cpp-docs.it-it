@@ -1,79 +1,104 @@
 ---
 title: Configurare un progetto C++ Linux in Visual Studio
-ms.date: 11/12/2018
+ms.date: 06/07/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 8e8bf2b12462a18c8a0e6c1c4d6677f18e2f0f34
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451145"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821574"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
-Questo argomento illustra come configurare un progetto Linux C++ basato su un modello di progetto Linux in Visual Studio. Per informazioni sui progetti Linux CMake in Visual Studio, vedere [Configurare un progetto CMake per Linux](cmake-linux-project.md).
+::: moniker range="vs-2015"
+
+Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+
+::: moniker-end
+
+Questo argomento illustra come configurare un progetto Linux C++ come descritto in [Creare un nuovo progetto Linux C++ in Visual Studio](create-a-new-linux-project.md). Per i progetti CMake per Linux, vedere [Configurare un progetto CMake per Linux](cmake-linux-project.md). 
+
+È possibile configurare un progetto Linux in modo che abbia come destinazione una macchina Linux fisica, una macchina virtuale o il [sottosistema Windows per Linux](/windows/wsl/about) (WSL). 
+
+::: moniker range="vs-2019"
+
+**Visual Studio 2019 versione 16.1**:
+
+- Quando la destinazione è WSL, è possibile evitare le operazioni di copia necessarie per la compilazione e IntelliSense quando le destinazioni sono i sistemi Linux remoti.
+
+- È possibile specificare destinazioni Linux separate per la compilazione e il debug.
+
+::: moniker-end
 
 ## <a name="general-settings"></a>Impostazioni generali
 
-Con Visual Studio è possibile configurare un'ampia gamma di opzioni per un progetto Linux.  Per visualizzare queste opzioni, selezionare il menu **Progetto > Proprietà** o fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Proprietà** dal menu di scelta rapida. Vengono visualizzate le impostazioni **Generale**.
+Per visualizzare le opzioni di configurazione, selezionare il menu **Progetto > Proprietà** o fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Proprietà** dal menu di scelta rapida. Vengono visualizzate le impostazioni **Generale**.
 
 ![Impostazioni di configurazione generali](media/settings_general.png)
 
-Per impostazione predefinita, lo strumento genera un file eseguibile con estensione out.  Per compilare una libreria statica o dinamica, o per usare un makefile esistente, usare **Tipo configurazione**.
+Per impostazione predefinita, lo strumento genera un file eseguibile con estensione out. Per compilare una libreria statica o dinamica, o per usare un makefile esistente, usare l'impostazione **Tipo di configurazione**.
 
-Per altre informazioni sulle opzioni nelle pagine delle proprietà, vedere [Informazioni di riferimento sulla pagina delle proprietà di un progetto Linux](prop-pages-linux.md).
+Per altre informazioni sulle impostazioni nelle pagine delle proprietà, vedere [Informazioni di riferimento sulla pagina delle proprietà di un progetto Linux](prop-pages-linux.md).
 
 ## <a name="remote-settings"></a>Impostazioni remote
 
-Per modificare le impostazioni relative al computer Linux remoto, configurare le opzioni remote visualizzate nelle impostazioni [Generale](prop-pages/general-linux.md):
+Per modificare le impostazioni relative al computer Linux remoto, configurare le impostazioni remote visualizzate in [Generale](prop-pages/general-linux.md).
 
-- Per modificare il computer Linux di destinazione, usare la voce **Computer di compilazione remota**.  In questo modo sarà possibile selezionare una delle connessioni create in precedenza.  Per creare una nuova voce, vedere [Connessione al computer Linux remoto](connect-to-your-remote-linux-computer.md).
+- Per specificare un computer Linux di destinazione remoto, usare la voce **Computer di compilazione remota**. In questo modo sarà possibile selezionare una delle connessioni create in precedenza. Per creare una nuova voce, vedere [Connettersi al computer Linux remoto](connect-to-your-remote-linux-computer.md).
 
-- La **directory radice di compilazione remota** determina il percorso radice in cui viene compilato il progetto nel computer Linux remoto.  Se non vengono apportate modifiche, per impostazione predefinita sarà **~/projects**.
+   ![Computer di generazione](media/remote-build-machine-vs2019.png)
 
-- La **directory del progetto di compilazione remota** è quella in cui verrà compilato il progetto specifico nel computer Linux remoto.  Per impostazione predefinita, sarà **$(directoryradiceremota)/$(nomeprogetto)** , che si espanderà in una directory denominata come il progetto corrente, nella directory radice impostata in precedenza.
+   ::: moniker range="vs-2019"
+
+   **Visual Studio 2019 versione 16.1**: Per impostare come destinazione il sottosistema Windows per Linux, fare clic sulla freccia giù per **Set di strumenti della piattaforma** e scegliere **WSL_1_0**. Le altre opzioni remote scompariranno e al loro posto verrà visualizzato il percorso alla shell WSL predefinita:
+
+   ![Computer di generazione WSL](media/wsl-remote-vs2019.png)
+
+   Se si hanno installazioni WSL side-by-side, è possibile specificare un percorso diverso. Per altre informazioni sulla gestione di più distribuzioni, vedere [Gestire e configurare il sottosistema Windows per Linux](/windows/wsl/wsl-config#set-a-default-distribution).
+
+   È possibile specificare una destinazione diversa per il debug nella pagina **Proprietà di configurazione** > **Debug**.
+
+   ::: moniker-end
+
+- La **directory radice di compilazione remota** determina il percorso radice in cui viene compilato il progetto nel computer Linux remoto. Se non vengono apportate modifiche, per impostazione predefinita sarà **~/projects**.
+
+- La **directory del progetto di compilazione remota** è quella in cui verrà compilato il progetto specifico nel computer Linux remoto. Per impostazione predefinita, sarà **$(directoryradiceremota)/$(nomeprogetto)** , che si espanderà in una directory denominata come il progetto corrente, nella directory radice impostata in precedenza.
 
 > [!NOTE]
-> Per modificare compilatori C e C++ predefiniti o il linker e l'archiver usati per compilare il progetto, usare le voci corrispondenti nella sezione **C/C++ > Generale** e nella sezione **Linker > General**.  Ad esempio, è possibile scegliere di usare una versione specifica di GCC o persino il compiler Clang. Per altre informazioni, vedere [Proprietà C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) e [Proprietà del linker (Linux C++)](prop-pages/linker-linux.md).
+> Per modificare compilatori C e C++ predefiniti o il linker e l'archiver usati per compilare il progetto, usare le voci corrispondenti nella sezione **C/C++ > Generale** e nella sezione **Linker > General**. È possibile ad esempio specificare una versione specifica di GCC o Clang. Per altre informazioni, vedere [Proprietà C/C++ (Linux C++)](prop-pages/c-cpp-linux.md) e [Proprietà del linker (Linux C++)](prop-pages/linker-linux.md).
 
-## <a name="include-directories-and-intellisense-support"></a>Directory di inclusione e supporto IntelliSense
+## <a name="copy-sources-remote-systems-only"></a>Copiare le origini (solo sistemi remoti)
 
-**Visual Studio 2017 versione 15.6 e precedenti:**<br/>
-Per impostazione predefinita, Visual Studio non comprende alcun file di inclusione a livello di sistema da computer Linux.  Ad esempio, gli elementi della directory **/usr/include** non sono presenti in Visual Studio.
-Per il supporto completo di [IntelliSense](/visualstudio/ide/using-intellisense), sarà necessario copiare i file in un percorso nel computer di sviluppo e configurare Visual Studio in modo che scelga tale percorso.  È possibile, ad esempio, usare SCP (Secure Copy) per copiare i file.  In Windows 10 è possibile usare [Bash in Windows](https://msdn.microsoft.com/commandline/wsl/about) per eseguire SCP.  Per le versioni precedenti di Windows, è possibile usare ad esempio [PSCP (PuTTY Secure Copy)](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+::: moniker range="vs-2019"
 
-È possibile copiare i file usando un comando simile al seguente:
+Questa sezione non si applica se la destinazione è WSL.
 
-`scp -r linux_username@remote_host:/usr/include .`
+::: moniker-end
 
-Naturalmente, sostituire i valori di **linux_username** e **remote_host** riportati sopra in modo che siano appropriati all'ambiente.
+Durante la compilazione in sistemi remoti, i file di origine del computer di sviluppo vengono copiati nel computer Linux dove vengono poi compilati. Per impostazione predefinita, tutti i file di origine del progetto di Visual Studio vengono copiati nel percorso impostato sopra. Tuttavia,è anche possibile aggiungere file di origine aggiuntivi all'elenco oppure disabilitare totalmente la copia di file di origine. Quest'ultima è l'impostazione predefinita per i progetti makefile.
 
-Una volta copiati i file, usare **Directory di VC++** nelle proprietà del progetto per indicare a Visual Studio dove trovare i file di inclusione aggiuntivi che sono stati appena copiati.
-
-![Directory di VC++](media/settings_directories.png)
-
-**Visual Studio 2017 versione 15.7 e successive:**<br/>
-Vedere [Gestire le intestazioni remote per IntelliSense](#remote_intellisense).
-
-## <a name="copy-sources"></a>Copia origini
-
-Durante la compilazione, i file origine del computer di sviluppo vengono copiati nel computer Linux dove vengono poi compilati.  Per impostazione predefinita, tutti i file di origine del progetto di Visual Studio vengono copiati nel percorso impostato sopra.  Tuttavia,è anche possibile aggiungere file di origine aggiuntivi all'elenco oppure disabilitare totalmente la copia di file di origine. Quest'ultima è l'impostazione predefinita per i progetti makefile.
-
-- **Origini da copiare** determina quali file di origine vengono copiati nel computer remoto.  Per impostazione predefinita, **\@(SourcesToCopyRemotely)** corrisponde a tutti i file di codice sorgente nel progetto, ma non include i file di asset o risorsa, ad esempio le immagini.
+- **Origini da copiare** determina quali file di origine vengono copiati nel computer remoto. Per impostazione predefinita, **\@(SourcesToCopyRemotely)** corrisponde a tutti i file di codice sorgente nel progetto, ma non include i file di asset o risorsa, ad esempio le immagini.
 
 - L'opzione **Copia origini** può essere attivata e disattivata per attivare e disattivare la copia dei file di origine nel computer remoto.
 
-- **Altre origini da copiare** consente di aggiungere file di origine che verranno copiati nel sistema remoto.  È possibile specificare un elenco delimitato da punti e virgola, oppure usare la sintassi **:=** per specificare un nome locale e remoto da usare:
+- **Altre origini da copiare** consente di aggiungere file di origine che verranno copiati nel sistema remoto. È possibile specificare un elenco delimitato da punti e virgola, oppure usare la sintassi **:=** per specificare un nome locale e remoto da usare:
 
 `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>Eventi di compilazione
 
-Poiché tutta la compilazione avviene in un computer remoto, sono stati aggiunti diversi eventi alla sezione Eventi di compilazione in Proprietà del progetto.  Si tratta di **Evento pre-compilazione remota**, **Evento di pre-collegamento remoto** ed **Evento di post-compilazione remota** che verranno eseguiti nel computer remoto prima o dopo i singoli passaggi del processo.
+Poiché tutta la compilazione avviene in un computer remoto (o WSL), sono stati aggiunti diversi eventi alla sezione Eventi di compilazione in Proprietà del progetto. Si tratta di **Evento pre-compilazione remota**, **Evento di pre-collegamento remoto** ed **Evento di post-compilazione remota** che verranno eseguiti nel computer remoto prima o dopo i singoli passaggi del processo.
 
 ![Eventi di compilazione](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> IntelliSense per le intestazioni remote (Visual Studio 2017 15.7 e versioni successive)
+## <a name="remote_intellisense"></a> IntelliSense per le intestazioni nei sistemi remoti
+
+::: moniker range="vs-2019"
+
+Questa sezione non si applica se la destinazione è WSL.
+
+::: moniker-end
 
 Quando si aggiunge una nuova connessione in **Gestione connessione**, Visual Studio rileva automaticamente le directory di inclusione per il compilatore nel sistema remoto. Visual Studio quindi comprime e copia i file in una directory nel computer Windows locale. Successivamente, ogni volta che si usa la connessione in un progetto Visual Studio o CMake, le intestazioni in tali directory vengono usate per gestire IntelliSense.
 
@@ -83,9 +108,23 @@ Questa funzionalità dipende dal computer Linux in cui è installato il file ZIP
 apt install zip
 ```
 
-Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiattaforma > Gestione connessione > Gestione intestazioni remote per IntelliSense**. Per aggiornare la cache di intestazione dopo aver apportato le modifiche nel computer Linux, selezionare la connessione remota e quindi selezionare **Aggiorna**. Selezionare **Elimina** per rimuovere le intestazioni senza eliminare la connessione stessa. Selezionare **Esplora** per aprire la directory locale in **Esplora file**. Considerare questa cartella come di sola lettura. Per scaricare le intestazioni per una connessione esistente creata prima della versione 15.3, selezionare la connessione e quindi **Scarica**.
+Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiattaforma > Gestione connessione > Gestione intestazioni remote per IntelliSense**. Per aggiornare la cache di intestazione dopo aver apportato le modifiche nel computer Linux, selezionare la connessione remota e quindi selezionare **Aggiorna**. Selezionare **Elimina** per rimuovere le intestazioni senza eliminare la connessione stessa. Selezionare **Esplora** per aprire la directory locale in **Esplora file**. Considerare questa cartella come di sola lettura. Per scaricare le intestazioni per una connessione esistente creata prima di Visual Studio 2017 versione 15.3, selezionare la connessione e quindi **Scarica**.
+
+::: moniker range="vs-2017"
 
 ![IntelliSense per le intestazioni remote](media/remote-header-intellisense.png)
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+![IntelliSense per le intestazioni remote](media/connection-manager-vs2019.png)
+
+È possibile abilitare la registrazione per la risoluzione dei problemi:
+
+![Registrazione remota](media/remote-logging-vs2019.png)
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vedere anche
 

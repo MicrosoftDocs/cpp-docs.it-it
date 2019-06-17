@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182651"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741645"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Aggiunta di funzionalità con creazioni guidate codice (C++)
 
@@ -76,6 +76,6 @@ Dopo aver creato un progetto, è possibile effettuare modifiche o aggiunte alla 
 ## <a name="see-also"></a>Vedere anche
 
 [Override di una funzione virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[Esplorazione della struttura delle classi](../ide/navigating-the-class-structure-visual-cpp.md)<br>
+[Spostarsi all'interno del codice C++ in Visual Studio](../ide/navigate-code-cpp.md)<br>
 [Tipi di progetto C++ in Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
 [Tipi di file creati per i progetti di Visual Studio C++](../build/reference/file-types-created-for-visual-cpp-projects.md)

@@ -1,26 +1,34 @@
 ---
 title: Proprietà generali (progetto makefile di Linux C++) | Microsoft Docs
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a64066ad3c8d7e6ca8bfa9d3d82670ff1da4b527
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524592"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821450"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Proprietà di un progetto makefile (Linux C++)
+
+::: moniker range="vs-2015"
+
+Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 Questo è un elenco parziale delle proprietà disponibili in un progetto makefile di Linux. Molte proprietà di progetto Makefile sono identiche alle proprietà del progetto Applicazione Console di Linux C++.
 
 ## <a name="general"></a>Generale
 
-Proprietà | Descrizione | Scelte
+Proprietà | Description | Scelte
 --- | ---| ---
 Directory di output | Specifica un percorso relativo della directory dei file di output. Può includere variabili di ambiente.
 Directory intermedia | Specifica un percorso relativo della directory dei file intermedi. Può includere variabili di ambiente.
 File del log di compilazione | Specifica il file del log di compilazione in cui scrivere quando è abilitata la funzione di log di compilazione.
-Tipo di configurazione | Specifica il tipo di output generato da questa configurazione. | **Libreria dinamica (so)**: libreria dinamica (so)<br>**Libreria statica (a)**: libreria statica (a)<br>**Applicazione (.out)**: applicazione (out)<br>**Makefile**: makefile<br>
+Tipo di configurazione | Specifica il tipo di output generato da questa configurazione. | **Libreria dinamica (so)** : libreria dinamica (so)<br>**Libreria statica (a)** : libreria statica (a)<br>**Applicazione (.out)** : applicazione (out)<br>**Makefile**: makefile<br>
 Computer di compilazione remota | Computer o dispositivo di destinazione da usare per operazioni di compilazione, distribuzione e debug in remoto.
 Directory radice di compilazione remota | Consente di specificare un percorso di una directory nel computer remoto o nel dispositivo.
 Directory del progetto di compilazione remota | Consente di specificare un percorso di una directory nel computer remoto o nel dispositivo per il progetto.
@@ -37,37 +45,37 @@ Vedere [Proprietà di un progetto Copia origini (Linux C++)](copy-sources-projec
 
 ### <a name="pre-build-event"></a>Evento di pre-compilazione
 
-Proprietà | Descrizione
+Proprietà | Description
 --- | ---
 Riga di comando | Specifica una riga di comando per l'esecuzione dello strumento Evento di pre-compilazione.
-Descrizione | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione.
+Description | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione.
 Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente.
 Altri file da copiare | Consente di specificare i file aggiuntivi da copiare nel sistema remoto. Facoltativamente è possibile specificare l'elenco come coppie di mapping da percorso locale a percorso remoto usando una sintassi simile a percorsolocalecompleto1:=percorsoremotocompleto1;percorsolocalecompleto2:=percorsoremotocompleto2, che consente di copiare un file locale nel percorso remoto specificato nel sistema remoto.
 
 ### <a name="post-build-event"></a>Evento di post-compilazione
 
-Proprietà | Descrizione
+Proprietà | Description
 --- | ---
 Riga di comando | Specifica una riga di comando per l'esecuzione dello strumento Evento di post-compilazione.
-Descrizione | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione.
+Description | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione.
 Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente.
 Altri file da copiare | Consente di specificare i file aggiuntivi da copiare nel sistema remoto. Facoltativamente è possibile specificare l'elenco come coppie di mapping da percorso locale a percorso remoto usando una sintassi simile a percorsolocalecompleto1:=percorsoremotocompleto1;percorsolocalecompleto2:=percorsoremotocompleto2, che consente di copiare un file locale nel percorso remoto specificato nel sistema remoto.
 
 ### <a name="remote-pre-build-event"></a>Evento di pre-compilazione remota
 
-Proprietà | Descrizione
+Proprietà | Description
 --- | ---
 Riga di comando | Consente di specificare una riga di comando per lo strumento Evento di pre-compilazione da eseguire nel sistema remoto.
-Descrizione | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione.
+Description | Consente di specificare una descrizione che verrà visualizzata dallo strumento Evento di pre-compilazione.
 Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente.
 Altri file da copiare | Consente di specificare i file aggiuntivi da copiare dal sistema remoto. Facoltativamente è possibile specificare l'elenco come coppie di mapping da percorso remoto a percorso locale usando una sintassi simile a percorsoremotocompleto1:=percorsolocalecompleto1;percorsoremotocompleto2:=percorsolocalecompleto2, che consente di copiare un file remoto nel percorso specificato nel computer locale.
 
 ### <a name="remote-post-build-event"></a>Evento di post-compilazione remota
 
-Proprietà | Descrizione
+Proprietà | Description
 --- | ---
 Riga di comando | Consente di specificare una riga di comando per lo strumento Evento di post-compilazione da eseguire nel sistema remoto.
-Descrizione | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione.
+Description | Specifica una descrizione che verrà visualizzata dallo strumento Evento di post-compilazione.
 Usa in compilazione | Consente di specificare se questo evento di compilazione è escluso dalla compilazione per la configurazione corrente.
 Altri file da copiare | Consente di specificare i file aggiuntivi da copiare dal sistema remoto. Facoltativamente è possibile specificare l'elenco come coppie di mapping da percorso remoto a percorso locale usando una sintassi simile a percorsoremotocompleto1:=percorsolocalecompleto1;percorsoremotocompleto2:=percorsolocalecompleto2, che consente di copiare un file remoto nel percorso specificato nel computer locale.
 
@@ -77,7 +85,7 @@ Altri file da copiare | Consente di specificare i file aggiuntivi da copiare dal
 
 Le proprietà di IntelliSense possono essere impostate a livello di progetto o di file per fornire i dettagli al motore IntelliSense. Non influiscono sulla compilazione.
 
-Proprietà | Descrizione
+Proprietà | Description
 --- | ---
 Percorso di ricerca di inclusione | Specifica il percorso di ricerca di inclusione per la risoluzione dei file inclusi.
 Inclusioni forzate | Specifica i file di cui è imposta l'inclusione.
@@ -87,7 +95,7 @@ Opzioni aggiuntive | Specifica le opzioni aggiuntive del compilatore che Intelli
 
 ### <a name="build"></a>Compilazione
 
-Proprietà | Descrizione
+Proprietà | Description
 --- | ---
 Riga di comando per Compila | Specifica la riga di comando da eseguire per il comando "Compila".
 Riga di comando per Ricompila tutto | Specifica la riga di comando da eseguire per il comando "Ricompila tutto".
@@ -95,9 +103,11 @@ Riga di comando per Pulisci | Specifica la riga di comando da eseguire per il co
 
 ### <a name="remote-build"></a>Compilazione remota
 
-Proprietà | Descrizione
+Proprietà | Description
 --- | ---
 Riga di comando per Compila | Specifica la riga di comando da eseguire per il comando "Compila". Viene eseguito nel sistema remoto.
 Riga di comando per Ricompila tutto | Specifica la riga di comando da eseguire per il comando "Ricompila tutto". Viene eseguito nel sistema remoto.
 Riga di comando per Pulisci | Specifica la riga di comando da eseguire per il comando "Pulisci". Viene eseguito nel sistema remoto.
 Output | Consente di specificare gli output generati dalla compilazione remota nel sistema remoto.
+
+::: moniker-end

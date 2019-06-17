@@ -1,19 +1,27 @@
 ---
 title: Proprietà del linker (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678340"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821301"
 ---
 # <a name="linker-properties-linux-c"></a>Proprietà del linker (Linux C++)
 
+::: moniker range="vs-2015"
+
+Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
 ## <a name="general"></a>Generale
 
-Proprietà | Descrizione | Scelte
+Proprietà | Description | Scelte
 --- | ---| ---
 File di output | L'opzione sostituisce il nome e il percorso predefiniti del programma creato dal linker. (-o)
 Mostra stato | Visualizza i messaggi di stato del linker.
@@ -32,7 +40,7 @@ Copia output | Consente di specificare se copiare il file di output di compilazi
 
 ## <a name="input"></a>Input
 
-Proprietà | Descrizione | Scelte
+Proprietà | Description | Scelte
 --- | ---| ---
 Ignora librerie predefinite specifiche | Specifica il nome di una o più librerie predefinite da ignorare. (--exclude-libs lib,lib)
 Ignora librerie predefinite | Ignora le librerie predefinite e cerca solo nelle librerie specificate in modo esplicito.
@@ -42,16 +50,18 @@ Dipendenze aggiuntive | Specifica altri elementi da aggiungere alla riga di coma
 
 ## <a name="debugging"></a>Debug
 
-Proprietà | Descrizione | Scelte
+Proprietà | Description | Scelte
 --- | ---| ---
 Informazioni sui simboli del debugger | Informazioni sui simboli del debugger ottenuti dal file di output. | **Includi tutti**<br>**Ometti solo le informazioni sui simboli del debugger**<br>**Ometti tutte le informazioni sui simboli**<br>
 Nome file di mapping | L'opzione Map indica al linker di creare un file di mapping con il nome specificato dall'utente. (-Map=)
 
 ## <a name="advanced"></a>Avanzate
 
-Proprietà | Descrizione | Scelte
+Proprietà | Description | Scelte
 --- | ---| ---
 Contrassegna le variabili come di sola lettura dopo la rilocazione | Questa opzione contrassegna le variabili come di sola lettura dopo la rilocazione.
 Abilita il binding immediato delle funzioni | Questa opzione contrassegna l'oggetto per l'associazione immediata delle funzioni.
 Non richiedere stack eseguibili | Questa opzione contrassegna l'output in modo da non richiedere lo stack degli eseguibili.
 Intero archivio | Con Intero archivio viene usato tutto il codice disponibile in origini e dipendenze aggiuntive.
+
+::: moniker-end

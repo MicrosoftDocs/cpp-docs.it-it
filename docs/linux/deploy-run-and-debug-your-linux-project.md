@@ -1,32 +1,59 @@
 ---
 title: Distribuire, eseguire ed eseguire il debug del progetto Linux C++ in Visual Studio
 description: Descrive come compilare, eseguire ed eseguire il debug del codice nella destinazione remota all'interno di un progetto Linux C++ in Visual Studio.
-ms.date: 09/12/2018
+ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562887"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821627"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Distribuire, eseguire e sottoporre a debug il progetto Linux
 
+::: moniker range="vs-2015"
+
+Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
+
+::: moniker-end
+
 Dopo avere creato un progetto Linux C++ in Visual Studio ed essersi connessi al progetto usando [Gestione connessione per Linux](connect-to-your-remote-linux-computer.md), è possibile eseguire il progetto ed eseguirne il debug. Si compila, si esegue e si sottopone a debug il codice nella destinazione remota.
+
+::: moniker range="vs-2019"
+
+**Visual Studio 2019 versione 16.1**: è possibile usare diversi sistemi Linux per il debug e la compilazione. Specificare il computer di compilazione nella pagina delle proprietà **Generale** e il computer di debug nella pagina delle proprietà **Debug**.
+
+::: moniker-end
 
 Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
 - Eseguire il debug usando le tradizionali funzionalità di Visual Studio, ad esempio punti di interruzione, finestre Espressioni di controllo e passaggio del puntatore su una variabile. Usando questi metodi, è possibile eseguire il debug nel modo consueto, come per gli altri tipi di progetto.
 
-- Visualizzare l'output dal computer di destinazione in una finestra della console di Linux speciale. È anche possibile usare la console per inviare l'input al computer di destinazione.
+- Visualizzare l'output dal computer di destinazione nella finestra della console di Linux. È anche possibile usare la console per inviare l'input al computer di destinazione.
 
 ## <a name="debug-your-linux-project"></a>Eseguire il debug del progetto Linux
 
 1. Selezionare la modalità di debug nella pagina delle proprietà **Debug**.
 
+   
+   
+   ::: moniker range="vs-2019"
+
+   Per il debug delle applicazioni in esecuzione su Linux viene usato GDB. Quando si esegue il debug in un sistema remoto (non WSL), è possibile eseguire GDB in due modi diversi selezionabili dall'opzione **Modalità di debug** nella pagina delle proprietà **Debug** del progetto:
+
+   ![Opzioni GDB](media/vs2019-debugger-settings.png)
+
+   ::: moniker-end
+
+   ::: moniker range="vs-2017"
+
    Per il debug delle applicazioni in esecuzione su Linux viene usato GDB. È possibile eseguire GDB in due modalità diverse, selezionabili dall'opzione **Modalità di debug** nella pagina delle proprietà di **debug** del progetto:
 
-   ![Opzioni GDB](media/settings_debugger.png)
+   ![Opzioni GDB](media/vs2017-debugger-settings.png)
+
+   ::: moniker-end
+
 
    - In modalità **gdbserver**, GDB viene eseguito in locale e si connette a gdbserver nel sistema remoto.  Si noti che questa è l'unica modalità supportata dalla finestra della console di Linux.
 
@@ -77,11 +104,30 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
    `handle SIGILL nostop noprint`
 
+## <a name="debug-with-attach-to-process"></a>Debug con Associa a processo
+
+La pagina delle proprietà [Debug](prop-pages/debugging-linux.md) per i progetti di Visual Studio e le impostazioni **Launch.vs.json** per progetti CMake offrono impostazioni che consentono di creare un'associazione a un processo in esecuzione. Se è necessario aumentare il controllo oltre a quello che queste impostazioni offrono, è possibile inserire un file denominato `Microsoft.MIEngine.Options.xml` nella radice della soluzione o dell'area di lavoro. Di seguito è riportato un semplice esempio:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<SupplementalLaunchOptions>
+    <AttachOptions>
+      <AttachOptionsForConnection AdditionalSOLibSearchPath="/home/user/solibs">
+        <ServerOptions MIDebuggerPath="C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\VC\Linux\bin\gdb\7.9\x86_64-linux-gnu-gdb.exe"
+ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\ConsoleApplication17.out"/>
+        <SetupCommands>
+          <Command IgnoreFailures="true">-enable-pretty-printing</Command>
+        </SetupCommands>
+      </AttachOptionsForConnection>
+    </AttachOptions>
+</SupplementalLaunchOptions>
+```
+
+L'elemento **AttachOptionsForConnection** include la maggior parte degli attributi che potrebbero essere necessari. L'esempio sopra riportato spiega come specificare una posizione in cui cercare librerie aggiuntive con estensione so. L'elemento figlio **ServerOptions** consente di creare un'associazione al processo remoto usando invece la modalità gdbserver. A tale scopo è necessario specificare un client gdb locale (quello distribuito in Visual Studio 2017 è illustrato sopra) e una copia locale del file binario con i simboli. L'elemento **SetupCommands** consente di passare i comandi direttamente a gdb. È possibile trovare tutte le opzioni disponibili nello [schema LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) su GitHub.
+
 ## <a name="next-steps"></a>Passaggi successivi
 
 - Per eseguire il debug dei dispositivi ARM in Linux, vedere il post di blog sul [debug di un dispositivo ARM incorporato in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
-
-- Per eseguire il debug con il comando **Connetti a processo**, vedere il post di blog sui [miglioramenti del carico di lavoro Linux C++ per il sistema del progetto, la finestra della console di Linux, rsync e Connetti a processo](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>Vedere anche
 
