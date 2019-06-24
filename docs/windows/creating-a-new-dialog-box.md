@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223571"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344214"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Procedura: Creare una finestra di dialogo (C++)
 
 La posizione e dimensioni di una finestra di dialogo di C++ e la posizione e dimensioni dei controlli in essa contenuti vengono misurati in unità di misura della finestra. I valori per i singoli controlli e la finestra di dialogo vengono visualizzati in basso a destra della barra quando si seleziona di stato di Visual Studio.
 
 > [!NOTE]
-> Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).
+> Se il progetto non contiene già un file RC, vedere [creando un nuovo File di Script di risorsa](../windows/how-to-create-a-resource-script-file.md).
 
 ## <a name="how-to"></a>Procedure
 
@@ -38,7 +38,7 @@ Il **finestra di dialogo Editor** consente di:
 
 1. Nel **Aggiungi risorsa** finestra di dialogo **finestra di dialogo** nel **tipo di risorsa** elenco e quindi scegliere **New**.
 
-   Se un segno più (**+**) accanto al **dialogo** tipo di risorsa, significa che i modelli di finestra di dialogo sono disponibili. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **New**.
+   Se un segno più ( **+** ) accanto al **dialogo** tipo di risorsa, significa che i modelli di finestra di dialogo sono disponibili. Selezionare il segno più per espandere l'elenco dei modelli, selezionare un modello e scegliere **New**.
 
    Verrà visualizzata la finestra di dialogo Nuova nel **finestra di dialogo Editor**.
 

@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01116116ad6bb455d3b0fd8966e65b2fec4c5a35
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390984"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344373"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Procedura: Aggiungere, modificare o eliminare i controlli (C++)
 
@@ -69,9 +69,9 @@ Il **finestra di dialogo Editor** verrà visualizzata la scheda nel [finestra Ca
 
    - Selezionare la finestra di dialogo in corrispondenza della posizione in cui si desidera posizionare il controllo e il controllo viene visualizzato in cui è stata selezionata.
 
-   - Trascinare e rilasciare il controllo dal **casella degli strumenti** finestra nella posizione in una finestra di dialogo ed è quindi possibile spostare i controlli o modificarne la dimensione e forma.
+   - Trascinare e rilasciare il controllo dal **casella degli strumenti** finestra nella posizione sulla finestra di dialogo. È quindi possibile spostare il controllo all'interno o modificare le dimensioni e la forma.
 
-   - Fare doppio clic sul controllo nella **casella degli strumenti** finestra e viene visualizzato nella finestra di dialogo, quindi riposizionare il controllo nella posizione desiderata.
+   - Fare doppio clic sul controllo nella **casella degli strumenti** finestra e viene visualizzato nella finestra di dialogo. Riposizionare il controllo nella posizione desiderata.
 
 ### <a name="to-add-multiple-controls"></a>Per aggiungere più controlli
 
@@ -87,7 +87,7 @@ Il **finestra di dialogo Editor** verrà visualizzata la scheda nel [finestra Ca
 
 1. Posizionare il cursore che viene visualizzato come mirino, in cui si desidera che l'angolo superiore sinistro del nuovo controllo in una finestra di dialogo.
 
-1. Selezionare e tenere premuto il pulsante del mouse per ancorare l'angolo superiore sinistro del controllo nella finestra di dialogo, quindi trascinare il cursore a destra e verso il basso fino a quando il controllo è la dimensione desiderata.
+1. Selezionare e tenere premuto il pulsante del mouse per ancorare l'angolo superiore sinistro del controllo nella finestra di dialogo. Trascinare il cursore a destra e verso il basso, fino a quando il controllo è la dimensione desiderata.
 
    > [!NOTE]
    > È possibile ancorare uno qualsiasi dei quattro angoli del controllo che si disegna. Nell'angolo superiore sinistro di utilizzare questa procedura come esempio.
@@ -99,7 +99,7 @@ Il **finestra di dialogo Editor** verrà visualizzata la scheda nel [finestra Ca
 
 ### <a name="to-add-a-custom-control"></a>Per aggiungere un controllo personalizzato
 
-È possibile aggiungere controlli personalizzati alla finestra di dialogo selezionando il **controllo personalizzato** icona nel **della casella degli strumenti** e trascinando la finestra di dialogo. Per aggiungere un **Syslink** controllare, aggiungere un controllo personalizzato, quindi modificare il controllo **classe** proprietà **Syslink**. Questa azione causerà le proprietà da aggiornare e visualizzare il **Syslink** proprietà del controllo. Per informazioni sulla classe wrapper MFC, vedere [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+È possibile aggiungere controlli personalizzati alla finestra di dialogo. Selezionare il **controllo personalizzato** icona nel **della casella degli strumenti** e trascinarlo nella finestra di dialogo. Per aggiungere un `Syslink` controllo, aggiungere un controllo personalizzato, quindi modificare il controllo **classe** proprietà `Syslink`. Questa azione causerà le proprietà da aggiornare e visualizzare il `Syslink` proprietà del controllo. Per informazioni sulla classe wrapper MFC, vedere [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Controlli di modifica
 
@@ -139,7 +139,7 @@ Il **finestra di dialogo Editor** verrà visualizzata la scheda nel [finestra Ca
 > [!TIP]
 > Per passare da un controllo della finestra di dialogo al gestore esistente, fare doppio clic sul controllo.
 
-È anche possibile usare la **le variabili membro** scheda le [Creazione guidata classe MFC](../mfc/reference/mfc-class-wizard.md) per aggiungere nuove variabili membro per una classe specificata e visualizzare le variabili membro che sono già state definite.
+È anche possibile usare la **le variabili membro** scheda le [Creazione guidata classe MFC](../mfc/reference/mfc-class-wizard.md) per aggiungere nuove variabili membro per una classe specificata e visualizzare le variabili membro già definita.
 
 ## <a name="delete-controls"></a>Eliminare i controlli
 
@@ -149,7 +149,7 @@ Nella finestra di dialogo, selezionare il controllo, quindi premere il **elimina
 
 ### <a name="troubleshooting"></a>Risoluzione dei problemi
 
-Dopo aver aggiunto un controllo comune o un controllo rich edit, una finestra di dialogo non sarà più visualizzato quando si testa la finestra di dialogo o non verrà visualizzata la finestra di dialogo, ad esempio:
+Dopo aver aggiunto un controllo comune o un controllo rich edit alla finestra di dialogo, questa sarà visibile quando si esegue il test nella finestra di dialogo. In alternativa, non verrà visualizzata la finestra di dialogo. Ad esempio:
 
 1. Creare un progetto Win32, modificare le impostazioni dell'applicazione in modo da creare un'applicazione Windows (non un'app console).
 
@@ -196,7 +196,7 @@ Il **Inserisci controllo ActiveX** finestra di dialogo consente di inserire cont
 |**Path**|Visualizza il file in cui si trova il controllo ActiveX.|
 
 > [!CAUTION]
-> Potrebbe non essere legalmente consentito distribuire tutti i controlli ActiveX nel sistema. Fare riferimento al contratto di licenza del software che ha installato i controlli o contattare il produttore del software.
+> Potrebbe non essere legalmente consentito distribuire tutti i controlli ActiveX nel sistema. Fare riferimento al contratto di licenza per il software installato i controlli o contattare il produttore del software.
 
 #### <a name="to-add-an-activex-control"></a>Per aggiungere un controllo ActiveX
 
@@ -215,7 +215,7 @@ Il **Inserisci controllo ActiveX** finestra di dialogo consente di inserire cont
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>Per modificare le proprietà per un controllo ActiveX
 
-Controlli ActiveX forniti da fornitori indipendenti possono sono dotati di loro proprietà e le caratteristiche. Queste proprietà vengono visualizzate nel **delle proprietà** finestra, inclusi qualsiasi proprietà vengono visualizzate le pagine create dai writer del controllo ActiveX nel **pagine delle proprietà** finestra di dialogo (per visualizzare la  **Pagina delle proprietà** per un controllo ActiveX specifico, selezionare il **pagina delle proprietà** pulsante il [finestra proprietà](/visualstudio/ide/reference/properties-window)).
+Controlli ActiveX forniti da fornitori indipendenti possono sono dotati di loro proprietà e le caratteristiche. Queste proprietà vengono visualizzate nel **proprietà** finestra. Pagine delle proprietà create per i writer del controllo ActiveX vengono visualizzate nei **pagine delle proprietà** nella finestra di dialogo. (Per visualizzare il **pagina delle proprietà** per un controllo ActiveX specifico, selezionare la **pagina delle proprietà** pulsante il [finestra proprietà](/visualstudio/ide/reference/properties-window)).
 
 - Selezionare il **ActiveX** controllano e passare al menu **View** > **pagina delle proprietà** per visualizzare le proprietà. Apportare le modifiche necessarie nella pagina delle proprietà.
 

@@ -3,12 +3,12 @@ title: Informazioni di riferimento sullo schema CppProperties.json
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837053"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344408"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Informazioni di riferimento sullo schema CppProperties.json
 
@@ -17,9 +17,9 @@ Per i progetti Apri cartella che non usano CMake è possibile archiviare le impo
 
 ## <a name="default-configurations"></a>Configurazioni predefinite
 
-Visual Studio offre configurazioni predefinite per le configurazioni di tipo Debug e Release x86 e x64. Per impostazione predefinita, il progetto ha una configurazione di tipo Debug x86 in `CppProperties.json`. Per aggiungere una nuova configurazione, fare clic con il pulsante destro del mouse sul file `CppProperties.json` in **Esplora soluzioni** e scegliere **Aggiungi configurazione**:
+Visual Studio offre configurazioni predefinite per le configurazioni di tipo Debug e Release x86 e x64. Per impostazione predefinita, il progetto ha una configurazione di tipo Debug x86 in `CppProperties.json`. Per aggiungere una nuova configurazione, fare clic sui `CppProperties.json` del file in **Esplora soluzioni** e scegliere **Aggiungi configurazione**:
 
-![Aggiungi configurazione di Apri cartella](media/open-folder-add-config.png "Aggiungi nuova configurazione di Apri cartella")
+![Apri cartella - aggiungere una nuova configurazione](media/open-folder-add-config.png "Apri cartella aggiungere una nuova configurazione")
 
 Le configurazioni predefinite sono illustrate di seguito:
 
@@ -115,9 +115,9 @@ Una configurazione può avere una delle proprietà seguenti:
 |`compilerSwitches`|Una o più opzioni aggiuntive che possono influire sul comportamento di IntelliSense|
 |`forcedInclude`|L'intestazione da includere automaticamente in ogni unità di compilazione (con mapping a /FI per MSVC o -include per Clang)|
 |`undefines`|L'elenco delle macro la cui definizione deve essere rimossa (con mapping a /U per MSVC)|
-|`intelliSenseMode`|Il motore IntelliSense da usare. È possibile specificare varianti di architettura specifiche per MSVC, gcc o Clang:<br/><br/>- windows-msvc-x86 (predefinito)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|Il motore IntelliSense da usare. È possibile specificare le varianti specifiche dell'architettura per MSVC, gcc e Clang:<br/><br/>- windows-msvc-x86 (predefinito)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-Nota: i valori `msvc-x86` e `msvc-x64` sono supportati solo per motivi di compatibilità con le versioni precedenti. Usare le varianti `windows-msvc*`.
+Nota: i valori `msvc-x86` e `msvc-x64` sono supportati solo per motivi di compatibilità con le versioni precedenti. Usare il `windows-msvc-*` varianti invece.
 
 ## <a name="custom-configurations"></a>Configurazioni personalizzate
 
@@ -143,7 +143,7 @@ Nota: i valori `msvc-x86` e `msvc-x64` sono supportati solo per motivi di compat
 
  `CppProperties.json` supporta l'espansione delle variabili di ambiente di sistema per i percorsi di inclusione e altri valori delle proprietà. La sintassi è `${env.FOODIR}` per espandere l'elemento `%FOODIR%` di una variabile di ambiente. Sono supportate anche le variabili definite dal sistema seguenti:
 
-|Nome variabile|Description|
+|Nome variabile|Descrizione|
 |-----------|-----------------|
 |vsdev|Ambiente Visual Studio predefinito|
 |msvc_x86|Compilazione per x86 usando strumenti x86|
@@ -156,7 +156,7 @@ Nota: i valori `msvc-x86` e `msvc-x64` sono supportati solo per motivi di compat
 
 Quando viene installato il carico di lavoro di Linux sono disponibili gli ambienti seguenti per la definizione di Linux e WSL come destinazione remota:
 
-|Nome variabile|Description|
+|Nome variabile|Descrizione|
 |-----------|-----------------|
 |linux_x86|Imposta come destinazione x86 Linux in modalità remota|
 |linux_x64|Imposta come destinazione x64 Linux in modalità remota|
@@ -208,7 +208,7 @@ Quando viene installato il carico di lavoro di Linux sono disponibili gli ambien
 ```
 ## <a name="per-configuration-environment-variables"></a>Variabili di ambiente a livello di configurazione
 
-È anche possibile definire una proprietà **environments** all'interno di una configurazione, in modo che venga applicata solo a tale configurazione ed esegua l'override di qualsiasi variabile globale con lo stesso nome. Nell'esempio seguente la configurazione x64 definisce una variabile **INCLUDE** locale che esegue l'override del valore globale:
+È anche possibile definire un' **ambienti** proprietà all'interno di una configurazione. Lo si applica solo a tale configurazione ed esegue l'override di qualsiasi variabile globale avente lo stesso nome. Nell'esempio seguente la configurazione x64 definisce una variabile **INCLUDE** locale che esegue l'override del valore globale:
 
 ```json
 {
@@ -266,7 +266,7 @@ In `CppProperties.json` è possibile accedere alle macro predefinite seguenti:
 |`${projectRoot}`| Percorso completo alla cartella contenente `CppProperties.json`|
 |`${vsInstallDir}`| Percorso completo alla cartella in cui è installata l'istanza di Visual Studio in esecuzione|
 
-Se ad esempio il progetto ha una cartella Include e presenta anche windows.h e altre intestazioni comuni di Windows SDK, può essere utile aggiornare il file di configurazione `CppProperties.json` con queste inclusioni:
+Ad esempio, se il progetto dispone di una cartella di inclusione e include anche altre intestazioni comuni dal SDK di Windows e Windows. h, è possibile aggiornare il `CppProperties.json` include file di configurazione con il codice seguente:
 
 ```json
 {
@@ -294,6 +294,3 @@ Se ad esempio il progetto ha una cartella Include e presenta anche windows.h e a
 ## <a name="troubleshoot-intellisense-errors"></a>Risolvere gli errori di IntelliSense
 
 Per risolvere i problemi di IntelliSense causati dalla mancanza di percorsi di inclusione, aprire l'**Elenco errori** e filtrare l'output specificando "Solo IntelliSense" e il codice di errore E1696 "Impossibile aprire il file di origine...".
-
-
-

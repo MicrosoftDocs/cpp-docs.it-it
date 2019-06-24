@@ -3,22 +3,22 @@ title: Aggiunta di un controllo (Esercitazione di ATL, parte 2)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f38d63a44328bf014f04635a24989a875ddf1e
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223545"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344333"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Aggiunta di un controllo (Esercitazione di ATL, parte 2)
 
-In questo passaggio, si verrà aggiungere un controllo al progetto, compilarlo ed eseguirne il test in una pagina Web.
+In questo passaggio si aggiunta un controllo al progetto, compilarlo ed eseguirne il test in una pagina Web.
 
 ## <a name="procedures"></a>Procedure
 
 ### <a name="to-add-an-object-to-an-atl-project"></a>Per aggiungere un oggetto a un progetto ATL
 
-1. Nelle **Esplora soluzioni**, fare doppio clic su di `Polygon` progetto.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto `Polygon`.
 
 1. Puntare **Add** nel menu di scelta rapida e fare clic su **nuovo elemento** nel sottomenu.
 
@@ -28,7 +28,7 @@ In questo passaggio, si verrà aggiungere un controllo al progetto, compilarlo e
 
 1. Nell'elenco dei modelli a destra, selezionare **del controllo ATL**. Fare clic su **Aggiungi**. Il **del controllo ATL** procedura guidata si aprirà, ed è possibile configurare il controllo.
 
-1. Tipo `PolyCtl` come il nome breve e notare che gli altri campi vengono completati automaticamente. Non fare clic **fine** ancora, in quanto è necessario apportare alcune modifiche.
+1. Tipo `PolyCtl` come il nome breve e notare che gli altri campi vengono completati automaticamente. Non fare clic su **fine** ancora, perché è necessario apportare altre modifiche.
 
 Il **del controllo ATL** della procedura guidata **nomi** pagina contiene i campi seguenti:
 
@@ -43,13 +43,13 @@ Il **del controllo ATL** della procedura guidata **nomi** pagina contiene i camp
 |**Type**|Una descrizione per il controllo.|
 |**ProgID**|Nome leggibile che può essere utilizzato per cercare il CLSID del controllo.|
 
-È necessario apportare diverse impostazioni aggiuntive nel **del controllo ATL** procedura guidata.
+Sono disponibili diverse impostazioni aggiuntive devono essere modificate nel **del controllo ATL** procedura guidata.
 
 ### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>Per abilitare il supporto per la connessione e informazioni dettagliate sull'errore fa riferimento
 
 1. Fare clic su **le opzioni** per aprire il **opzioni** pagina.
 
-1. Selezionare il **punti di connessione** casella di controllo. Verrà creato il supporto per un'interfaccia in uscita nel file IDL.
+1. Selezionare il **punti di connessione** casella di controllo. Questa opzione Crea supporto per un'interfaccia in uscita nel file IDL.
 
 È anche possibile aggiungere le interfacce per estendere la funzionalità del controllo.
 
@@ -61,7 +61,7 @@ Il **del controllo ATL** della procedura guidata **nomi** pagina contiene i camp
 
 1. Selezionare `ISpecifyPropertyPages` e fare clic sui **iscrizione** freccia per spostarla nel **supportati** elenco.
 
-È anche possibile rendere il controllo inseribile, il che significa che può essere incorporato in applicazioni che supportano gli oggetti incorporati, ad esempio Excel o Word.
+È inoltre possibile rendere il controllo *inseribile*, vale a dire che è può essere incorporato in applicazioni che supportano gli oggetti incorporati, ad esempio Excel o Word.
 
 ### <a name="to-make-the-control-insertable"></a>Per rendere il controllo inseribile
 
@@ -77,9 +77,9 @@ Il poligono visualizzato dall'oggetto avrà un colore di riempimento a tinta uni
 
 1. Sotto **non è supportato**, scorrere verso il basso l'elenco delle possibili proprietà predefinite. Selezionare `Fill Color` e fare clic sui **iscrizione** freccia per spostarla nel **supportati** elenco.
 
-1. Le opzioni per il controllo è stata completata. Scegliere **Fine**.
+1. Scegliere **Fine**.
 
-Come la procedura guidata ha creato il controllo, diverse modifiche al codice e aggiunte al file si è verificato. Sono stati creati i file seguenti:
+Come la procedura guidata crea il controllo, si verificano diverse modifiche al codice e aggiunte al file. Vengono creati i file seguenti:
 
 |File|Descrizione|
 |----------|-----------------|
@@ -88,13 +88,13 @@ Come la procedura guidata ha creato il controllo, diverse modifiche al codice e 
 |PolyCtl.rgs|Un file di testo che contiene lo script del Registro di sistema utilizzato per registrare il controllo.|
 |PolyCtl.htm|Una pagina Web contenente un riferimento al controllo appena creato.|
 
-La procedura guidata vengono eseguite anche le modifiche al codice seguente:
+La procedura guidata consente inoltre le modifiche al codice seguente:
 
-- Aggiunto un `#include` istruzione ai file stdafx. h e stdafx. h per includere la libreria ATL i file necessari per supportare i controlli.
+- Aggiunge un `#include` istruzione ai file stdafx. h e stdafx. h per includere la libreria ATL i file necessari per supportare i controlli.
 
-- Polygon. idl modificato per includere i dettagli del nuovo controllo.
+- Polygon. idl per includere i dettagli del nuovo controllo viene modificato.
 
-- Aggiunto il nuovo controllo alla mappa dell'oggetto in Polygon.
+- Aggiunge il nuovo controllo alla mappa dell'oggetto in Polygon.
 
 A questo punto è possibile compilare il controllo per vederlo in azione.
 
@@ -104,13 +104,13 @@ A questo punto è possibile compilare il controllo per vederlo in azione.
 
 1. Nel **compilare** menu, fare clic su **compilare poligono**.
 
-    Al termine della compilazione, il controllo pulsante destro del mouse in PolyCtl. htm **Esplora soluzioni** e selezionare **Visualizza nel Browser**. Verrà visualizzata la pagina HTML Web contenente il controllo. Verrà visualizzata una pagina con il titolo "Pagina ATL test 8.0 per l'oggetto PolyCtl" e il testo PolyCtl. Si tratta del controllo.
+    Al termine della compilazione, il controllo pulsante destro del mouse in PolyCtl. htm **Esplora soluzioni** e selezionare **Visualizza nel Browser**. Viene visualizzata la pagina HTML Web contenente il controllo. Verrà visualizzata una pagina con il titolo "ATL test 8.0 pagina per l'oggetto PolyCtl" e il controllo, il testo PolyCtl.
 
 > [!NOTE]
 > Se il controllo non è visibile, significa che alcuni browser richiedono modifiche delle impostazioni per eseguire i controlli ActiveX. Consultare la documentazione del browser su come abilitare i controlli ActiveX.
 
 > [!NOTE]
-> Durante il completamento di questa esercitazione, se si riceve un messaggio di errore in cui non è possibile creare il file DLL, chiudere il file PolyCtl htm e il contenitore di Test del controllo ActiveX e compilare nuovamente la soluzione. Se non è possibile creare la DLL, riavviare il computer o disconnettersi (se si usa servizi Terminal).
+> Durante il completamento di questa esercitazione, se si riceve un messaggio di errore che non è possibile creare il file DLL, chiudere il file PolyCtl htm e il contenitore di Test del controllo ActiveX e compilare nuovamente la soluzione. Se non è possibile creare la DLL, riavviare il computer o disconnettersi se si usa servizi Terminal.
 
 Successivamente, si aggiungerà una proprietà personalizzata al controllo.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: e86e64c1de232aba0c17a0fdfb3600e480567a57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a9bbf3072a665c04501025d421839fa90a37225
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324129"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344416"
 ---
 # <a name="csharedfile-class"></a>Classe CSharedFile
 
@@ -46,15 +46,15 @@ class CSharedFile : public CMemFile
 
 ## <a name="remarks"></a>Note
 
-File in memoria si comportano come i file del disco, ad eccezione del fatto che il file viene archiviato nella memoria RAM, piuttosto che sul disco. Un file di memoria è utile per l'archiviazione temporanea a velocità o per il trasferimento dei byte non elaborati o oggetti serializzati tra processi indipendenti.
+File di memoria si comportano come i file del disco. La differenza è, viene archiviato un file di memoria in RAM, invece che sul disco. Un file di memoria è utile per l'archiviazione temporanea a velocità, o per il trasferimento dei byte non elaborati o oggetti serializzati tra processi indipendenti.
 
 I file di memoria condivisa differiscono da altri file di memoria viene allocata memoria per essi con il [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) funzione Windows. Il `CSharedFile` classe archivia i dati in un blocco di memoria globale allocato (creato utilizzando `GlobalAlloc`), e questo blocco di memoria può essere condivise tramite DDE, negli Appunti o altri OLE/COM uniform operazioni di trasferimento dati, ad esempio, usando `IDataObject`.
 
 `GlobalAlloc` Restituisce un HGLOBAL gestire invece di un puntatore alla memoria, ad esempio il puntatore restituito da [malloc](../../c-runtime-library/reference/malloc.md). L'handle HGLOBAL è necessaria in determinate applicazioni. Per inserire dati negli Appunti, ad esempio, è necessario un handle HGLOBAL.
 
-Si noti che `CSharedFile` non file mappato alla memoria utilizzo e i dati non possono essere condiviso direttamente tra processi.
+`CSharedFile` non Usa file mappato alla memoria e i dati non può essere condiviso direttamente tra processi.
 
-`CSharedFile` gli oggetti possono allocare automaticamente la memoria o è possibile collegare il proprio blocco di memoria per il `CSharedFile` chiamando [CSharedFile::SetHandle](#sethandle). In entrambi i casi, viene allocata la memoria per l'aumento delle dimensioni automaticamente nel file di memoria `nGrowBytes`-dimensioni incrementi se `nGrowBytes` è diverso da zero.
+`CSharedFile` gli oggetti possono allocare automaticamente la memoria. In alternativa, è possibile collegare il proprio blocco di memoria per il `CSharedFile` chiamando [CSharedFile::SetHandle](#sethandle). In entrambi i casi, viene allocata la memoria per l'aumento delle dimensioni automaticamente nel file di memoria `nGrowBytes`-dimensioni incrementi se `nGrowBytes` è diverso da zero.
 
 Per altre informazioni, vedere l'articolo [file in MFC](../../mfc/files-in-mfc.md) e [gestione dei File](../../c-runtime-library/file-handling.md) nel *Run-Time Library Reference*.
 
@@ -126,7 +126,7 @@ Specifica se il blocco di memoria può raggiungere.
 
 ### <a name="remarks"></a>Note
 
-Se *bAllowGrow* è diverso da zero, la dimensione del blocco di memoria viene aumentata in base alle esigenze, ad esempio, se un tentativo di tentato di scrivere più byte nel file che sono stati allocati per il blocco di memoria.
+Se *bAllowGrow* è diverso da zero, la dimensione del blocco di memoria viene aumentata in base alle esigenze, ad esempio, se si prova a scrivere nel file rispetto alla dimensione del blocco di memoria più byte.
 
 ## <a name="see-also"></a>Vedere anche
 
