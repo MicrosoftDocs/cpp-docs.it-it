@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 784969bea25bfff49a21c23b350afbfc8bdab59a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 235307a09796b21979c33ded18f8ce69414c0c3f
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383516"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400405"
 ---
 # <a name="uniquelock-class"></a>Classe unique_lock
 
@@ -66,7 +66,7 @@ Internamente, un `unique_lock` archivia un puntatore a un oggetto associato `mut
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-*unique_lock*<br/>
+*unique_lock*
 
 ## <a name="requirements"></a>Requisiti
 

@@ -82,14 +82,14 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: f3e733bced407f96414783612165984c71b63775
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b657dbc5ae537e15f6638ffbd3594cd52b644f3b
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369567"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400775"
 ---
-# <a name="regexconstants-namespace"></a>spazio dei nomi regex_constants
+# <a name="regexconstants-namespace"></a>Spazio dei nomi regex_constants
 
 Spazio dei nomi per i flag dell'espressione regolare.
 
@@ -210,7 +210,7 @@ Il tipo è un tipo di maschera di bit che descrive le opzioni da usare quando es
 
 Le opzioni di corrispondenza sono:
 
-*match_default*<br/>
+`match_default`
 
 `match_not_bol` -- non considerare la prima posizione nella sequenza di destinazione come inizio di una riga
 

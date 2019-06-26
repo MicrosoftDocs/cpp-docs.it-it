@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: ed9c19dad029f8fc9495d38ab6e5c0ba8ad6d529
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: b3172dd6ed4c438bacedd6760da5ab65228396f3
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877410"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400916"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Procedura dettagliata: Creazione di un programma C++ Standard (C++)
 
@@ -28,19 +28,19 @@ Per completare questa procedura dettagliata è necessario comprendere le nozioni
 
 ### <a name="to-create-a-project-and-add-a-source-file"></a>Per creare un progetto e aggiungere un file di origine
 
-Questa procedura varia a seconda di quale versione di Visual Studio in uso. Assicurarsi che il selettore di versione in alto a sinistra della pagina sia impostato correttamente.
+I passaggi seguenti variano leggermente a seconda della versione di Visual Studio in uso. Assicurarsi che il selettore della versione in alto a sinistra nella pagina sia impostato correttamente.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-c-project-in-visual-studio-2019"></a>Per creare un C++ progetto in Visual Studio 2019
 
-1. Dal menu principale, scegliere **File** > **New** > **progetto** per aprire la **crea un nuovo progetto** finestra di dialogo casella.
+1. Dal menu principale scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto**.
 
-1. Nella parte superiore della finestra di dialogo, impostare **Language** al **C++**, impostare **Platform** al **Windows**e impostare **tipodiprogetto** al **Console**. 
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**. 
 
-1. Nell'elenco filtrato dei tipi di progetto, scegliere **applicazione Console** quindi scegliere **successivo**. Nella pagina successiva, immettere un nome per il progetto e specificare il percorso del progetto se si desidera.
+1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**. Nella pagina successiva, immettere un nome per il progetto e specificare il percorso del progetto se si desidera.
 
-1. Scegliere il **Create** pulsante per creare il progetto.
+1. Scegliere il pulsante **Crea** per creare il progetto.
 
 ::: moniker-end
 
@@ -88,7 +88,7 @@ Questa procedura varia a seconda di quale versione di Visual Studio in uso. Assi
 
    1. In **Esplora soluzioni**, fare doppio clic sul **i file di origine** cartella, scegliere **Add**, quindi fare clic su **nuovo elemento**.
 
-   1. Nel **codice** nodo, fare clic su **File di C++ (. cpp)**, digitare un nome per il file e quindi fare clic su **Add**.
+   1. Nel **codice** nodo, fare clic su **File di C++ (. cpp)** , digitare un nome per il file e quindi fare clic su **Add**.
 
    Il file con estensione cpp verrà visualizzato nei **file di origine** cartella **Esplora soluzioni**, e il file viene aperto nell'editor di Visual Studio.
 
@@ -107,9 +107,9 @@ Questa procedura varia a seconda di quale versione di Visual Studio in uso. Assi
 ## <a name="next-steps"></a>Passaggi successivi
 
 **Precedente:** [Applicazioni console in Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
-**Successivo:** [Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**Successivo:** [Procedura dettagliata: Compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)<br/>
-[Libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Libreria standard C++](../standard-library/cpp-standard-library-reference.md)

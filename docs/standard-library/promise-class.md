@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 991df549168456112afe27bed6f4991a7ccfb88e
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369956"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400863"
 ---
 # <a name="promise-class"></a>Classe promise
 
@@ -65,7 +65,7 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-*promise*<br/>
+*promise*
 
 ## <a name="requirements"></a>Requisiti
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 72d65ce7471ed047ab8347a45c58a6b8a9f39a7a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: eabb4e11715e03745e27911ccd654568d70b8352
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450854"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400505"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
 
@@ -37,7 +37,7 @@ Queste opzioni determinano l'ordine in cui gli argomenti della funzione vengono 
 > **/Gd**<br/>
 > **/Gr**<br/>
 > **/Gv**<br/>
-> **/Gz**<br/>
+> **/Gz**
 
 ## <a name="remarks"></a>Note
 
