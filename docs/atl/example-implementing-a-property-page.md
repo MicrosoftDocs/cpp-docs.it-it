@@ -45,7 +45,7 @@ Per completare questo esempio, è necessario eseguire queste operazioni:
 
 - [Creare una macro](#vcconcreating_a_macro) che testerà la pagina delle proprietà.
 
-##  <a name="vcconusing_the_atl_object_wizard">Aggiunta della classe della pagina delle proprietà ATL</a>
+##  <a name="vcconusing_the_atl_object_wizard"></a> Aggiunta della classe della pagina delle proprietà ATL
 
 Prima di tutto, creare un nuovo progetto ATL per un server DLL denominato `ATLPages7`. Usare ora la [Creazione guidata pagina delle proprietà ATL](../atl/reference/atl-property-page-wizard.md) per generare una pagina delle proprietà. In **Nome breve** assegnare alla pagina delle proprietà il nome **DocProperties**, quindi passare alla pagina **Stringhe** per impostare gli elementi specifici della pagina delle proprietà come mostrato nella tabella seguente.
 
