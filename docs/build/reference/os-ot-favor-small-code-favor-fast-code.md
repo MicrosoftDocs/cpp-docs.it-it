@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: d4e8d062685a543c428f0c86a22c17c8faf017ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bbdda07eacdb003515a40a93a232c0f8626ca89
+ms.sourcegitcommit: aed09c9c05e6b031c8a9f87a8d6bbdaf253485e8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320175"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412234"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocità codice)
 
@@ -39,7 +39,7 @@ Riduce al minimo o aumenta la dimensione di exe e DLL.
 
 **/OS** (Ottimizza per dimensione codice) consente di ridurre la dimensione di exe e DLL indicando al compilatore per favorire la riduzione delle dimensioni rispetto alla velocità. Il compilatore può ridurre molti costrutti di C e C++ per le sequenze simili a livello funzionale di codice macchina. Talvolta queste differenze offrono compromessi della dimensione e la velocità. Il **/Os** e **/Ot** opzioni consentono di specificare una preferenza per uno di essi:
 
-**/Ot** (Ottimizza per velocità codice) Massimizza la velocità di exe e DLL indicando al compilatore di ottimizzare la velocità rispetto a dimensioni. (Questo è il valore predefinito). Il compilatore può ridurre molti costrutti di C e C++ per le sequenze simili a livello funzionale di codice macchina. In alcuni casi, queste differenze rappresentano un compromesso tra la dimensione e velocità. È implicita l'opzione /Ot Ottimizza velocità ([/O2](o1-o2-minimize-size-maximize-speed.md)) opzione. Il **/O2** opzione combina diverse opzioni per produrre codice molto veloce.
+**/Ot** (Ottimizza per velocità codice) Massimizza la velocità di exe e DLL indicando al compilatore di ottimizzare la velocità rispetto a dimensioni. (Questo è il valore predefinito). Il compilatore può ridurre molti costrutti di C e C++ per le sequenze simili a livello funzionale di codice macchina. In alcuni casi, queste differenze rappresentano un compromesso tra la dimensione e velocità. Il **/Ot** implicito opzione Ottimizza velocità ([/O2](o1-o2-minimize-size-maximize-speed.md)) opzione. Il **/O2** opzione combina diverse opzioni per produrre codice molto veloce.
 
 Se si usa **/Os** oppure **/Ot**, quindi è necessario specificare anche [/Og](og-global-optimizations.md) per ottimizzare il codice.
 
@@ -48,7 +48,7 @@ Se si usa **/Os** oppure **/Ot**, quindi è necessario specificare anche [/Og](o
 
 **x86 Specific**
 
-Esempio di codice seguente illustra la differenza tra Ottimizza per dimensione codice (**/Os**) le opzioni e Ottimizza per velocità codice (**/Ot**) opzione:
+Esempio di codice seguente illustra la differenza tra Ottimizza per dimensione codice ( **/Os**) le opzioni e Ottimizza per velocità codice ( **/Ot**) opzione:
 
 > [!NOTE]
 >  Di seguito viene descritto il comportamento previsto quando si usa **/Os** oppure **/Ot**. Tuttavia, il comportamento del compilatore nelle diverse versioni possono comportare diverse ottimizzazioni per il codice seguente.
@@ -65,14 +65,14 @@ int differ(int x)
 }
 ```
 
-Come illustrato nel frammento di codice macchina riportato di seguito, quando DIFFER per dimensioni (**/Os**), il compilatore implementa il moltiplicare l'espressione nell'istruzione return in modo esplicito come una moltiplicazione per produrre una sequenza breve ma più lenta del codice:
+Come illustrato nel frammento di codice macchina riportato di seguito, quando DIFFER per dimensioni ( **/Os**), il compilatore implementa il moltiplicare l'espressione nell'istruzione return in modo esplicito come una moltiplicazione per produrre una sequenza breve ma più lenta del codice:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-In alternativa, quando DIFFER per la velocità di (**/Ot**), il compilatore implementa il moltiplicare l'espressione nell'istruzione return come una serie di MAIUSC e `LEA` istruzioni per produrre una sequenza più lunga, ma veloce di codice:
+In alternativa, quando DIFFER per la velocità di ( **/Ot**), il compilatore implementa il moltiplicare l'espressione nell'istruzione return come una serie di MAIUSC e `LEA` istruzioni per produrre una sequenza più lunga, ma veloce di codice:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
@@ -86,7 +86,7 @@ sub    eax, ecx
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
