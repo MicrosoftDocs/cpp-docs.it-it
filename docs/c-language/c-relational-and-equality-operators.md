@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149648"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400523"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operatori relazionali e operatori di uguaglianza C
 
@@ -26,7 +26,7 @@ Gli operatori relazionali e di uguaglianza binari confrontano il primo operando 
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
@@ -48,7 +48,7 @@ I primi quattro operatori nell'elenco sopra riportato hanno maggiore precedenza 
 
 Gli operandi possono disporre di un tipo integrale, a virgola mobile o puntatore. I tipi di operandi possono essere diversi. Gli operatori relazionali eseguono conversioni aritmetiche consuete su operandi di tipo integrale e a virgola mobile. Inoltre, è possibile utilizzare le seguenti combinazioni di tipi di operando con gli operatori relazionali e di uguaglianza:
 
-- Entrambi gli operandi di qualsiasi operatore relazionale o di uguaglianza possono essere puntatori allo stesso tipo. Per gli operatori di uguaglianza (`==`) e di disuguaglianza (`!=`) il risultato del confronto indica se i due puntatori sono indirizzati alla stessa posizione di memoria. Per gli altri operatori relazionali (**\<**, **>**, **\<**= e **>**=) il risultato del confronto indica la posizione relativa dei due indirizzi di memoria degli oggetti a cui si fa riferimento. Gli operatori relazionali confrontano solo gli offset.
+- Entrambi gli operandi di qualsiasi operatore relazionale o di uguaglianza possono essere puntatori allo stesso tipo. Per gli operatori di uguaglianza (`==`) e di disuguaglianza (`!=`) il risultato del confronto indica se i due puntatori sono indirizzati alla stessa posizione di memoria. Per gli altri operatori relazionali ( **\<** , **>** , **\<** = e **>** =) il risultato del confronto indica la posizione relativa dei due indirizzi di memoria degli oggetti a cui si fa riferimento. Gli operatori relazionali confrontano solo gli offset.
 
    Il confronto tra puntatori viene definito solo per le parti dello stesso oggetto. Se i puntatori fanno riferimento ai membri di una matrice, il confronto è equivalente al confronto dei pedici corrispondenti. L'indirizzo del primo elemento della matrice è "minore di" quello dell'ultimo elemento. Nel caso di strutture, i puntatori ai membri della struttura dichiarati successivamente sono "maggiori dei" puntatori ai membri dichiarati nella struttura. I puntatori ai membri della stessa unione sono uguali.
 

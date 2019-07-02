@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 4232edd10b71c70097002511ef4ee663e67d6598
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 5cc4ead7aaef2ffa56870a374b0b73d16eb31521
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182661"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400965"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Procedura dettagliata: Distribuzione di un programma (C++)
 
@@ -110,7 +110,7 @@ I passaggi descritti in questa sezione variano a seconda della versione di Visua
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-**Precedente:** [Procedura dettagliata: Debug di un progetto (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
+**Precedente:** [Procedura dettagliata: Debug di un progetto (C++)](walkthrough-debugging-a-project-cpp.md)
 
 ## <a name="see-also"></a>Vedere anche
 

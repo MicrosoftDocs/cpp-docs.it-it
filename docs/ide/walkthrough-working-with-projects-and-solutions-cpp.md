@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 6dfee695092a69252069dbfc73b6260bd65245e2
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ae2830d58bb992a4ff065aa0e53085a490eb90d7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182641"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400945"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Procedura dettagliata: Uso di progetti e soluzioni (C++)
 
@@ -261,7 +261,7 @@ La compilazione di un progetto e una soluzione per l'app è stata completata. Co
 ## <a name="next-steps"></a>Passaggi successivi
 
 **Precedente:** [Uso dell'IDE di Visual Studio per lo sviluppo di applicazioni desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**Successivo:** [Procedura dettagliata: Compilazione di un progetto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Successivo:** [Procedura dettagliata: Compilazione di un progetto (C++)](../ide/walkthrough-building-a-project-cpp.md)
 
 ## <a name="see-also"></a>Vedere anche
 

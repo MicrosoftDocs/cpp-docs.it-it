@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 994878509c4fc1bf14390fad8ff4c112a4af8242
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 17d6a1b0685d6981c7df79e76ecc5142083e14c7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975174"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400896"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabella di conformità al linguaggio C++ di Microsoft
 
@@ -345,7 +345,7 @@ __VS 2017 15.3__ indica le funzionalità supportate in Visual Studio 2017 versio
 __VS 2017 15.5__ indica le funzionalità supportate in Visual Studio 2017 versione 15.5.<br/>
 __VS 2017 15.7__ indica le funzionalità supportate in Visual Studio 2017 versione 15.7.<br/>
 __VS 2019 16.0__ indica le funzionalità supportate in Visual Studio 2019 versione 16.0 (RTW).<br/>
-__VS 2019 16.1__ indica le funzionalità supportate in Visual Studio 2019 versione 16.1.<br/>
+__VS 2019 16.1__ indica le funzionalità supportate in Visual Studio 2019 versione 16.1.
 
 ### <a name="notes"></a>Note
 
