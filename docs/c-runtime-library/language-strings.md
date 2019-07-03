@@ -23,9 +23,9 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 
 |Stringa lingua|Nome equivalente delle impostazioni locali|
 |---------------------|----------------------------|
-|americano|it-IT|
-|inglese americano|it-IT|
-|inglese americano|it-IT|
+|americano|en-US|
+|inglese americano|en-US|
+|inglese americano|en-US|
 |australiano|en-AU|
 |belga|nl-BE|
 |canadese|en-CA|
@@ -37,7 +37,7 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |cinese singapore|zh-SG|
 |cinese tradizionale|zh-TW|
 |olandese belga|nl-BE|
-|inglese americano|it-IT|
+|inglese americano|en-US|
 |inglese aus|en-AU|
 |inglese belize|en-BZ|
 |inglese can|en-CA|
@@ -48,8 +48,8 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |inglese sudafrica|en-ZA|
 |inglese trinidad y tobago|en-TT|
 |inglese regno unito|en-GB|
-|inglese stati uniti|it-IT|
-|inglese stati uniti|it-IT|
+|inglese stati uniti|en-US|
+|inglese stati uniti|en-US|
 |francese belga|fr-BE|
 |francese canadese|fr-CA|
 |francese lussemburgo|fr-LU|
@@ -86,8 +86,8 @@ L'implementazione della libreria di runtime Microsoft C supporta anche queste st
 |svedese finlandia|sv-FI|
 |svizzero|de-CH|
 |uk|en-GB|
-|us|it-IT|
-|stati uniti|it-IT|
+|us|en-US|
+|stati uniti|en-US|
 
 ## <a name="see-also"></a>Vedere anche
 
