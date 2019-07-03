@@ -3,12 +3,12 @@ title: Informazioni di riferimento sullo schema CppProperties.json
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344408"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516370"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Informazioni di riferimento sullo schema CppProperties.json
 
@@ -264,7 +264,7 @@ In `CppProperties.json` è possibile accedere alle macro predefinite seguenti:
 |-|-|
 |`${workspaceRoot}`| Percorso completo della cartella dell'area di lavoro|
 |`${projectRoot}`| Percorso completo alla cartella contenente `CppProperties.json`|
-|`${vsInstallDir}`| Percorso completo alla cartella in cui è installata l'istanza di Visual Studio in esecuzione|
+|`${env.vsInstallDir}`| Percorso completo alla cartella in cui è installata l'istanza di Visual Studio in esecuzione|
 
 Ad esempio, se il progetto dispone di una cartella di inclusione e include anche altre intestazioni comuni dal SDK di Windows e Windows. h, è possibile aggiornare il `CppProperties.json` include file di configurazione con il codice seguente:
 
