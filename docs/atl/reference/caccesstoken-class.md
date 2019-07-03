@@ -1,6 +1,6 @@
 ---
 title: Classe CAccessToken
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 f1_keywords:
 - CAccessToken
 - ATLSECURITY/ATL::CAccessToken
@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d66b126ce5fd6c3da80d2bb4e6322f8180f0b8cf
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503373"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552186"
 ---
 # <a name="caccesstoken-class"></a>Classe CAccessToken
 
@@ -283,7 +283,7 @@ Puntatore a una stringa con terminazione null che specifica il modulo per l'esec
 Puntatore a una stringa con terminazione null che specifica la riga di comando da eseguire.
 
 *pProcessInformation*<br/>
-Puntatore a un [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information) struttura che riceve informazioni di identificazione sul nuovo processo.
+Puntatore a un [struttura PROCESS_INFORMATION](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) che riceve informazioni di identificazione sul nuovo processo.
 
 *pStartupInfo*<br/>
 Puntatore a un [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) struttura che specifica come deve venire visualizzata la finestra principale per il nuovo processo.

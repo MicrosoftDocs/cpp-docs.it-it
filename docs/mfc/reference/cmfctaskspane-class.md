@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCTasksPane
-ms.date: 11/19/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeb24a0a02d1a084c83e280705344a9e5c505724
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218670"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552278"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 
@@ -294,7 +294,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemovePage](#removepage)|Rimuove una pagina specifica dal riquadro attività.|
 |[CMFCTasksPane::RemoveTask](#removetask)|Rimuove un'attività da un gruppo di attività.|
 |[CMFCTasksPane::SaveState](#savestate)|(Esegue l'override [CDockablePane:: SaveState](cdockablepane-class.md).)|
-|[CMFCTasksPane::Serialize](#serialize)|(Esegue l'override [CDockablePane:: Serialize]().)|
+|[CMFCTasksPane::Serialize](#serialize)|(Esegue l'override [CDockablePane:: Serialize](cdockablepane-class.md).)|
 |[CMFCTasksPane::SetActivePage](#setactivepage)|Attiva una pagina specificata nel riquadro attività.|
 |[CMFCTasksPane::SetCaption](#setcaption)|Imposta il nome della didascalia del riquadro attività.|
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Imposta l'altezza di una didascalia del gruppo.|

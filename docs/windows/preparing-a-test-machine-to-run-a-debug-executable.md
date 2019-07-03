@@ -1,15 +1,15 @@
 ---
 title: Preparazione di un computer per il test per l'esecuzione di un file eseguibile di debug
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448450"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552335"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparazione di un computer per il test per l'esecuzione di un file eseguibile di debug
 
@@ -29,11 +29,11 @@ Per preparare un computer per il test della versione di debug di un'applicazione
 
 - Usare l'opzione **Distribuisci** nella finestra di dialogo **Gestione configurazione** in Visual Studio per copiare l'output del progetto e altri file nel computer remoto.
 
-Dopo aver installato le DDL di Visual C++, è possibile eseguire un debugger remoto in una condivisione di rete. Per altre informazioni sul debug remoto, vedere [Debug remoto](/visualstudio/debugger/remote-debugging.md).
+Dopo aver installato le DDL di Visual C++, è possibile eseguire un debugger remoto in una condivisione di rete. Per altre informazioni sul debug remoto, vedere [Debug remoto](/visualstudio/debugger/remote-debugging).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Distribuzione in Visual C++](deployment-in-visual-cpp.md)<br>
 [Windows Installer Command line options](/windows/desktop/Msi/command-line-options) (Opzioni della riga di comando di Windows Installer)<br>
 [Esempi di distribuzione](deployment-examples.md)<br>
-[Remote Debugging](/visualstudio/debugger/remote-debugging.md)
+[Remote Debugging](/visualstudio/debugger/remote-debugging)

@@ -1,13 +1,13 @@
 ---
 title: Cenni preliminari sulla programmazione Windows in C++
-ms.date: 05/06/2019
+ms.date: 07/02/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
-ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
+ms.openlocfilehash: 1f49c9f8f78f83d6ae991b7427b28f7f5cbf7f0c
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355558"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552310"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
 
@@ -118,5 +118,5 @@ Visual Studio include un potente debugger per codice nativo, strumenti di analis
 |[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Argomento principale per il contenuto per gli sviluppatori di Visual C++.|
 [Sviluppo in .NET con C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Creare wrapper per le librerie C++ native che ne consentono la comunicazione con componenti e le applicazioni .NET.|
 |[Estensioni componenti per .NET e UWP](../extensions/component-extensions-for-runtime-platforms.md)|Informazioni di riferimento per gli elementi della sintassi condivise da C++/CX e C++/CLI.|
-|[App di Windows universale (C++)](universal-windows-apps-cpp.md)|Scrivere le applicazioni UWP usando C++/CX o libreria di modelli di Windows Runtime (WRL).|
+|[App di Windows universale (C++)](../cppcx/universal-windows-apps-cpp.md)|Scrivere le applicazioni UWP usando C++/CX o libreria di modelli di Windows Runtime (WRL).|
 |[Attributi di C++ per COM e .NET](attributes/cpp-attributes-com-net.md)|Attributi non standard per la programmazione solo Windows tramite .NET o COM.|

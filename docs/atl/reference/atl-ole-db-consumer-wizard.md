@@ -1,15 +1,15 @@
 ---
 title: Creazione guidata consumer OLE DB ATL
-ms.date: 05/09/2019
+ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 7195d712474765258ac0319539697b3517cb91b3
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706975"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552233"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 
@@ -30,7 +30,7 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
 - **Origine dati**
 
-   Il pulsante **Origine dati** permette di configurare l'origine dati specificata usando il provider OLE DB indicato. Quando si fa clic su questo pulsante, viene visualizzata la finestra di dialogo **Proprietà di Data Link**. Per altre informazioni sulla creazione di stringhe di connessione e sulla finestra di dialogo **Proprietà di Data Link**, vedere [Panoramica dell'API Data Link](/previous-versions/windows/desktop/ms718102) nella documentazione di Windows SDK.
+   Il pulsante **Origine dati** permette di configurare l'origine dati specificata usando il provider OLE DB indicato. Quando si fa clic su questo pulsante, viene visualizzata la finestra di dialogo **Proprietà di Data Link**. Per altre informazioni sulla creazione di stringhe di connessione e sulla finestra di dialogo **Proprietà di Data Link**, vedere [Panoramica dell'API Data Link](/previous-versions/windows/desktop/ms718102(v=vs.85)) nella documentazione di Windows SDK.
 
    Le informazioni aggiuntive seguenti descrivono le schede della finestra di dialogo **Proprietà di Data Link**.
 
@@ -86,7 +86,7 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
       **Impostazioni di rete:** specificare un valore in **Livello di rappresentazione** (livello di rappresentazione che il server può usare per rappresentare il client, corrisponde direttamente ai livelli di rappresentazione RPC) e in **Livello di protezione** (livello di protezione dei dati inviati tra client e server, corrisponde direttamente ai livelli di protezione RPC).
 
-      **Altro:**: in **Timeout connessione** specificare il numero di secondi di tempo di inattività consentiti prima che si verifichi un timeout. In **Autorizzazioni di accesso** specificare le autorizzazioni di accesso per la connessione dati.
+      **Altro:** : in **Timeout connessione** specificare il numero di secondi di tempo di inattività consentiti prima che si verifichi un timeout. In **Autorizzazioni di accesso** specificare le autorizzazioni di accesso per la connessione dati.
 
       Per altre informazioni sulle proprietà di inizializzazione avanzate, vedere la documentazione fornita con ogni provider OLE DB specifico.
 
@@ -171,7 +171,7 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
 - **Supporto**
 
-   Selezionare le caselle di controllo per specificare i tipi di aggiornamenti che devono essere supportati nel consumer (l'impostazione predefinita è nessuno). Ognuna delle opzioni seguenti imposterà [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) e le voci appropriate per [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) nella mappa del set di proprietà.
+   Selezionare le caselle di controllo per specificare i tipi di aggiornamenti che devono essere supportati nel consumer (l'impostazione predefinita è nessuno). Ognuna delle opzioni seguenti imposterà [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) e le voci appropriate per [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) nella mappa del set di proprietà.
 
    - **Modifica**
 
@@ -191,4 +191,4 @@ Questa procedura guidata configura una classe consumer OLE DB con le associazion
 
 [Consumer OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Stringhe di connessione e collegamenti dati (OLE DB)](/previous-versions/windows/desktop/ms718376)
+[Stringhe di connessione e collegamenti dati (OLE DB)](/previous-versions/windows/desktop/ms718376(v=vs.85))
