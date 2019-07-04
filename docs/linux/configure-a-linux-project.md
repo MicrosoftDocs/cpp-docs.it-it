@@ -1,13 +1,13 @@
 ---
 title: Configurare un progetto C++ Linux in Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821574"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042626"
 ---
 # <a name="configure-a-linux-project"></a>Configurare un progetto Linux
 
@@ -37,7 +37,7 @@ Per visualizzare le opzioni di configurazione, selezionare il menu **Progetto > 
 
 ![Impostazioni di configurazione generali](media/settings_general.png)
 
-Per impostazione predefinita, lo strumento genera un file eseguibile con estensione out. Per compilare una libreria statica o dinamica, o per usare un makefile esistente, usare l'impostazione **Tipo di configurazione**.
+Per impostazione predefinita, viene generato un file eseguibile con estensione out. Per compilare una libreria statica o dinamica, o per usare un makefile esistente, usare l'impostazione **Tipo di configurazione**.
 
 Per altre informazioni sulle impostazioni nelle pagine delle proprietà, vedere [Informazioni di riferimento sulla pagina delle proprietà di un progetto Linux](prop-pages-linux.md).
 
@@ -105,7 +105,7 @@ Quando si aggiunge una nuova connessione in **Gestione connessione**, Visual Stu
 Questa funzionalità dipende dal computer Linux in cui è installato il file ZIP. Per installare lo ZIP usare questo comando apt-get:
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 Per gestire la cache di intestazione, passare a **Strumenti > Opzioni, Multipiattaforma > Gestione connessione > Gestione intestazioni remote per IntelliSense**. Per aggiornare la cache di intestazione dopo aver apportato le modifiche nel computer Linux, selezionare la connessione remota e quindi selezionare **Aggiorna**. Selezionare **Elimina** per rimuovere le intestazioni senza eliminare la connessione stessa. Selezionare **Esplora** per aprire la directory locale in **Esplora file**. Considerare questa cartella come di sola lettura. Per scaricare le intestazioni per una connessione esistente creata prima di Visual Studio 2017 versione 15.3, selezionare la connessione e quindi **Scarica**.

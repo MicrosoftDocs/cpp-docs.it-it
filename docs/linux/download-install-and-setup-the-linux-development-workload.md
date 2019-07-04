@@ -1,17 +1,22 @@
 ---
 title: Installare il carico di lavoro Linux C++ in Visual Studio
 description: Descrive come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821587"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042754"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
+::: moniker range="vs-2015"
+
+I progetti Linux sono supportati in Visual Studio 2017 e versioni successive.
+
+::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
@@ -35,7 +40,10 @@ Il supporto di [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wi
 
 ## <a name="visual-studio-setup"></a>Configurazione di Visual Studio
 
-1. Digitare "Programma di installazione di Visual Studio" nella casella di ricerca di Windows: ![Casella di ricerca di Windows](media/visual-studio-installer-search.png)
+1. Digitare "Programma di installazione di Visual Studio" nella casella di ricerca di Windows:
+
+   ![Casella di ricerca di Windows](media/visual-studio-installer-search.png)
+
 2. Cercare il programma di installazione nei risultati **App** e farci doppio clic sopra. Quando il programma di installazione si apre, scegliere **Modifica** e quindi fare clic sulla scheda **Carichi di lavoro**. Scorrere verso il basso fino ad **Altri set di strumenti** e selezionare il carico di lavoro **Linux development with C++** (Sviluppo di applicazioni Linux con C++).
 
    ![Carico di lavoro Visual C++ per lo sviluppo di applicazioni Linux](media/linuxworkload.png)
@@ -56,10 +64,10 @@ In Windows 10 è possibile installare e impostare come destinazione la distribuz
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Configurazione di Linux: Ubuntu in WSL
 
-In WSL non è necessaria alcuna connessione remota. Per la sincronizzazione automatica delle intestazioni di Linux con Visual Studio per il supporto di Intellisense sono necessari **zip** e **rsync**. Se le applicazioni richieste non sono già presenti, è possibile installarle come indicato di seguito:
+Quando si intende usare WSL, non è necessario aggiungere una connessione remota o configurare SSH per la compilazione e il debug. Per la sincronizzazione automatica delle intestazioni di Linux con Visual Studio per il supporto di Intellisense sono necessari **zip** e **rsync**. Se le applicazioni richieste non sono già presenti, è possibile installarle come indicato di seguito:
 
 ```bash
-sudo g++ gdb make rsync zip
+sudo apt-get install g++ gdb make rsync zip
 ```
 ::: moniker-end
 

@@ -3,12 +3,12 @@ title: Distribuire, eseguire ed eseguire il debug del progetto Linux C++ in Visu
 description: Descrive come compilare, eseguire ed eseguire il debug del codice nella destinazione remota all'interno di un progetto Linux C++ in Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821627"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042758"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Distribuire, eseguire e sottoporre a debug il progetto Linux
 
@@ -22,7 +22,7 @@ Dopo avere creato un progetto Linux C++ in Visual Studio ed essersi connessi al 
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 versione 16.1**: è possibile usare diversi sistemi Linux per il debug e la compilazione. Specificare il computer di compilazione nella pagina delle proprietà **Generale** e il computer di debug nella pagina delle proprietà **Debug**.
+**Visual Studio 2019 versione 16.1**: è possibile usare diversi sistemi Linux per il debug e la compilazione. È ad esempio possibile eseguire la compilazione su un sistema x64 e distribuire in un dispositivo ARM quando si usano scenari IoT come destinazione. Per altre informazioni, vedere [Specificare computer diversi per la compilazione e il debug](#separate_build_debug) più avanti in questo articolo.
 
 ::: moniker-end
 
@@ -35,8 +35,6 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 ## <a name="debug-your-linux-project"></a>Eseguire il debug del progetto Linux
 
 1. Selezionare la modalità di debug nella pagina delle proprietà **Debug**.
-
-   
    
    ::: moniker range="vs-2019"
 
@@ -94,15 +92,19 @@ Esistono diversi modi di interagire con il progetto Linux ed eseguirne il debug.
 
    ![Finestra della console di Linux](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options"></a>Configurare le altre opzioni di debug
+## <a name="configure-other-debugging-options-msbuild-based-projects"></a>Configurare altre opzioni di debug (progetti basati su MSBuild)
 
 - Gli argomenti della riga di comando possono essere passati all'eseguibile usando l'elemento **Argomenti del programma** nella pagina delle proprietà di **debug** del progetto.
 
    ![Argomenti del programma](media/settings_programarguments.png)
 
-- Le opzioni specifiche del debugger possono essere passate a GDB usando la voce **Comandi aggiuntivi del debugger**.  Può essere utile ad esempio ignorare i segnali SIGILL (istruzione non valida).  Per ottenere questo risultato, è possibile usare il comando **handle**,  aggiungendo quanto segue alla voce **Comandi aggiuntivi del debugger** come illustrato in precedenza:
+- Le opzioni specifiche del debugger possono essere passate a GDB usando la voce **Comandi aggiuntivi del debugger**.  Può essere utile ad esempio ignorare i segnali SIGILL (istruzione non valida).  Per ottenere questo risultato, è possibile usare il comando **handle**, aggiungendo quanto segue alla voce **Comandi aggiuntivi del debugger** come illustrato in precedenza:
 
    `handle SIGILL nostop noprint`
+
+## <a name="configure-other-debugging-options-cmake-projects"></a>Configurare le altre opzioni di debug (progetti CMake)
+
+È possibile specificare argomenti della riga di comando aggiuntivi per un progetto CMake nel file launch.vs.json. Per altre informazioni, vedere [Eseguire il debug del progetto CMake](cmake-linux-project.md#debug_cmake_project).
 
 ## <a name="debug-with-attach-to-process"></a>Debug con Associa a processo
 
@@ -124,6 +126,72 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 ```
 
 L'elemento **AttachOptionsForConnection** include la maggior parte degli attributi che potrebbero essere necessari. L'esempio sopra riportato spiega come specificare una posizione in cui cercare librerie aggiuntive con estensione so. L'elemento figlio **ServerOptions** consente di creare un'associazione al processo remoto usando invece la modalità gdbserver. A tale scopo è necessario specificare un client gdb locale (quello distribuito in Visual Studio 2017 è illustrato sopra) e una copia locale del file binario con i simboli. L'elemento **SetupCommands** consente di passare i comandi direttamente a gdb. È possibile trovare tutte le opzioni disponibili nello [schema LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) su GitHub.
+
+::: moniker range="vs-2019"
+
+## <a name="separate_build_debug"></a> Specificare computer diversi per la compilazione e il debug
+
+In Visual Studio 2019 versione 16.1 è possibile separare il computer di compilazione remota dal computer di debug remoto per progetti Linux basati su MSBuild e progetti CMake destinati a un computer Linux remoto. Ad esempio, è ora possibile eseguire la compilazione su un sistema x64 e distribuire in un dispositivo ARM, quando si usano scenari IoT come destinazione.
+
+### <a name="msbuild-based-projects"></a>Progetti basati su MSBuild
+
+Per impostazione predefinita, il computer di debug remoto corrisponde al computer di compilazione remota (**Proprietà di configurazione** > **Generale** > **Computer di compilazione remota**). Per specificare un nuovo computer di debug remoto, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e passare a **Proprietà di configurazione** > **Debug** > **Computer di debug remoto**.  
+
+![Computer di debug remoto Linux](media/linux-remote-debug-machine.png)
+
+Il menu a discesa per **Computer di debug remoto** è popolato con tutte le connessioni remote stabilite. Per aggiungere una nuova connessione remota, passare a **Strumenti** > **Opzioni** > **Multipiattaforma** > **Gestione connessioni** o cercare "Gestione connessioni" in **Avvio veloce**. È inoltre possibile specificare una nuova directory per la distribuzione remota nelle pagine delle proprietà del progetto (**Proprietà di configurazione** > **Generale** > **Directory di distribuzione remota**).
+
+Per impostazione predefinita, nel computer di debug remoto vengono distribuiti solo i file necessari per il debug del processo. È possibile usare **Esplora soluzioni** per configurare i file di origine da distribuire nel computer di debug remoto. Quando si fa clic su un file di origine, viene visualizzata un'anteprima delle relative proprietà direttamente sotto Esplora soluzioni.
+
+![File distribuibili Linux](media/linux-deployable-content.png)
+
+La proprietà **Content** specifica se il file verrà distribuito nel computer di debug remoto. È possibile disabilitare la distribuzione completamente passando a **Pagine delle proprietà** > **Gestione configurazione** e deselezionando **Distribuisci** per la specifica configurazione.
+
+In alcuni casi può essere necessario maggiore controllo sulla distribuzione del progetto. Ad esempio quando alcuni file da distribuire si trovano all'esterno della soluzione oppure quando si vuole personalizzare la directory di distribuzione remota per singoli file o directory. In questi casi, aggiungere uno o più blocchi di codice seguenti al file con estensione vcxproj e sostituire "example.cpp" con i nomi dei file:
+
+```xml
+
+<ItemGroup>
+   <RemoteDeploy Include="__example.cpp">
+<!-- This is the source Linux machine, can be empty if DeploymentType is LocalRemote -->
+      <SourceMachine>$(RemoteTarget)</SourceMachine>
+      <TargetMachine>$(RemoteDebuggingTarget)</TargetMachine>
+      <SourcePath>~/example.cpp</SourcePath>
+      <TargetPath>~/example.cpp</TargetPath>
+<!-- DeploymentType can be LocalRemote, in which case SourceMachine will be empty and SourcePath is a local file on Windows -->
+      <DeploymentType>RemoteRemote</DeploymentType>
+<!-- Indicates whether the deployment contains executables -->
+      <Executable>true</Executable>
+   </RemoteDeploy>
+</ItemGroup>
+```
+
+### <a name="cmake-projects"></a>Progetti CMake
+
+Per i progetti CMake destinati a un computer Linux remoto, è possibile specificare un nuovo computer di debug remoto in launch.vs.json. Per impostazione predefinita, il valore di "remoteMachineName" viene sincronizzato con la proprietà "remoteMachineName" in CMakeSettings.json, che corrisponde al computer di compilazione remota. Queste proprietà non devono più corrispondere e il valore di "remoteMachineName" in launch.vs.json determineranno quale computer remoto viene usato per la distribuzione e il debug.
+
+![Computer di debug remoto CMake](media/cmake-remote-debug-machine.png)
+
+IntelliSense suggerisce un elenco di tutte le connessioni remote stabilite. È possibile aggiungere una nuova connessione remota passando a **Strumenti** > **Opzioni** > **Multipiattaforma** > **Gestione connessioni** o cercando "Gestione connessioni" in **Avvio veloce**.
+
+Se si vuole un controllo completo sulla distribuzione, è possibile aggiungere uno o più blocchi di codice seguenti al file launch.vs.json. Ricordarsi di sostituire i valori dei segnaposto con i valori reali:
+
+```json
+
+"disableDeploy": false,
+"deployDirectory": "~\foo",
+"deploy" : [
+   {
+      "sourceMachine": "127.0.0.1 (username=example1, port=22, authentication=Password)",
+      "targetMachine": "192.0.0.1 (username=example2, port=22, authentication=Password)",
+      "sourcePath": "~/example.cpp",
+      "targetPath": "~/example.cpp",
+      "executable": "false"
+   }
+]
+
+```
+::: moniker-end
 
 ## <a name="next-steps"></a>Passaggi successivi
 
