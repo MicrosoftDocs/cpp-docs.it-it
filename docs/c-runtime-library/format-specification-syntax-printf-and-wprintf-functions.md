@@ -1,6 +1,6 @@
 ---
 title: 'Sintassi per la specifica del formato: funzioni printf wprintf'
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740311"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552258"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
@@ -22,7 +22,7 @@ Le diverse funzioni `printf` e `wprintf` accettano una stringa di formato e argo
 
 Una specifica di conversione è costituita da campi obbligatori e facoltativi nel seguente formato:
 
-**%**[[*flag*](#flags)][[*larghezza*](#width)][.[*precisione*](#precision)][[*dimensione*](#size)][*tipo*](#type)
+**%** [[*flag*](#flags)][[*larghezza*](#width)][.[*precisione*](#precision)][[*dimensione*](#size)][*tipo*](#type)
 
 Ogni campo della specifica di conversione è un carattere o un numero che indica un particolare identificatore di conversione o opzione di formato. Il campo obbligatorio *tipo* specifica il tipo di conversione da applicare a un argomento. I campi facoltativi *flag*, *larghezza* e *precisione* controllano aspetti aggiuntivi del formato quali gli spazi o gli zeri iniziali, la giustificazione e la precisione visualizzata. Il campo *dimensione* specifica la dimensione dell'argomento usato e convertito.
 
@@ -64,7 +64,7 @@ I tipi Integer come `short`, `int`, `long`, `long long` e le loro varianti `unsi
 |**X**|Integer|Intero esadecimale senza segno; usa "ABCDEF".|
 |**e**|A virgola mobile|Valore con segno che presenta il formato [-]*d.dddd*__e±__*dd*[*d*] dove *d* corrisponde a una cifra decimale, *dddd* corrisponde a una o più cifre decimali a seconda della precisione specificata oppure a sei cifre per impostazione predefinita e *dd*[*d*] corrisponde a due o tre cifre decimali a seconda del [formato di output](../c-runtime-library/set-output-format.md) e delle dimensioni dell'esponente.|
 |**E**|A virgola mobile|Identico al formato **e** con la differenza che l'esponente è introdotto da **E** anziché da **e**.|
-|**f**|A virgola mobile|Valore con segno che ha il formato [-]*dddd*__.__*dddd*, dove *dddd* corrisponde a una o più cifre decimali. Il numero di cifre prima del separatore decimale dipende dalla grandezza del numero, mentre il numero di cifre dopo il separatore decimale dipende dalla precisione richiesta o corrisponde a sei per impostazione predefinita.|
+|**f**|A virgola mobile|Valore con segno che ha il formato [-]*dddd* __.__ *dddd*, dove *dddd* corrisponde a una o più cifre decimali. Il numero di cifre prima del separatore decimale dipende dalla grandezza del numero, mentre il numero di cifre dopo il separatore decimale dipende dalla precisione richiesta o corrisponde a sei per impostazione predefinita.|
 |**F**|A virgola mobile|Identico al formato **f** con la differenza che gli output infinity e NaN sono in maiuscolo.|
 |**g**|A virgola mobile|I valori con segno vengono visualizzati in formato **f** o **e**, a seconda di quale sia più compatto per il valore e la precisione specificati. Il formato **e** viene usato solo quando l'esponente del valore è minore di -4 oppure maggiore o uguale all'argomento *precision*. Gli zeri finali vengono troncati e il separatore decimale viene visualizzato solo se uno o più cifre lo seguono.|
 |**G**|A virgola mobile|Identico al formato **g** salvo per il fatto che l'esponente è introdotto da **E**anziché da **e** (quando necessario).|
@@ -74,7 +74,7 @@ I tipi Integer come `short`, `int`, `long`, `long long` e le loro varianti `unsi
 |**p**|Tipo di puntatore|Visualizza l'argomento come indirizzo nelle cifre esadecimali.|
 |**s**|Stringa|Una volta usato con funzioni `printf`, specifica una stringa di caratteri a byte singolo o multibyte; una volta usato con le funzioni `wprintf`, specifica una stringa di carattere wide. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
 |**S**|Stringa|Una volta usato con funzioni `printf`, specifica una stringa di caratteri wide; una volta usato con le funzioni `wprintf`, specifica una stringa di caratteri a un byte singolo o multibyte. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
-|**Z**|Struttura `ANSI_STRING` o `UNICODE_STRING`|Quando l'indirizzo di una struttura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) o [UNICODE_STRING](/windows-hardware/drivers/ddi/content/wudfwdm/ns-wudfwdm-_unicode_string) viene passato come argomento, visualizza la stringa contenuta nel buffer a cui fa riferimento il campo `Buffer` della struttura. Usare il prefisso modificatore *dimensione* **w** per specificare un argomento `UNICODE_STRING`, per esempio `%wZ`. Il campo `Length` della struttura deve essere impostato sulla lunghezza, espressa in byte, della stringa. Il campo `MaximumLength` della struttura deve essere impostato sulla lunghezza, espressa in byte, del buffer.<br /><br /> In genere il carattere tipo **Z** viene usato solo nelle funzioni che usano una specifica di formato, come ad esempio `dbgPrint` e `kdPrint`.|
+|**Z**|Struttura `ANSI_STRING` o `UNICODE_STRING`|Quando l'indirizzo di una struttura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) o [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) viene passato come argomento, visualizza la stringa contenuta nel buffer a cui fa riferimento il campo `Buffer` della struttura. Usare il prefisso modificatore *dimensione* **w** per specificare un argomento `UNICODE_STRING`, per esempio `%wZ`. Il campo `Length` della struttura deve essere impostato sulla lunghezza, espressa in byte, della stringa. Il campo `MaximumLength` della struttura deve essere impostato sulla lunghezza, espressa in byte, del buffer.<br /><br /> In genere il carattere tipo **Z** viene usato solo nelle funzioni che usano una specifica di formato, come ad esempio `dbgPrint` e `kdPrint`.|
 
 A partire da Visual Studio 2015, se l'argomento che corrisponde a un identificatore di conversione a virgola mobile (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) è infinito, non definito o NaN, l'output formattato è conforme allo standard C99. Questa tabella elenca l'output formattato:
 
@@ -119,7 +119,7 @@ Il primo campo facoltativo in una specifica di conversione contiene *direttive f
 |----------|-------------|-------------|
 |**-**|Allinea a sinistra il risultato entro la larghezza del campo specificata.|Allinea a destra.|
 |**+**|Usa un segno (+ o -) come prefisso del valore di output se si tratta di un tipo con segno.|Il segno viene visualizzato solo per i valori con segno negativo (-).|
-|**0**|Se *larghezza* è preceduto da **0**, vengono aggiunti zeri iniziali fino a ottenere la larghezza minima. Se appaiono sia **0** sia **-**, **0** viene ignorato. Se **0** è specificato per un formato intero (**i**, **u**, **x**, **X**, **o**, **d**) ed è anche presente una specifica di precisione quale `%04.d`, **0** viene ignorato. Se **0** è specificato per il formato a virgola mobile **a** o **A**, gli zeri iniziali vengono posizionati prima della mantissa, dopo il prefisso `0x` o `0X`.|Nessun riempimento.|
+|**0**|Se *larghezza* è preceduto da **0**, vengono aggiunti zeri iniziali fino a ottenere la larghezza minima. Se appaiono sia **0** sia **-** , **0** viene ignorato. Se **0** è specificato per un formato intero (**i**, **u**, **x**, **X**, **o**, **d**) ed è anche presente una specifica di precisione quale `%04.d`, **0** viene ignorato. Se **0** è specificato per il formato a virgola mobile **a** o **A**, gli zeri iniziali vengono posizionati prima della mantissa, dopo il prefisso `0x` o `0X`.|Nessun riempimento.|
 |**blank** (' ')|Usare uno spazio come prefisso del valore di output se questo è provvisto di segno e positivo. Lo spazio viene ignorato se appaiono sia il flag blank sia il flag +.|Non viene visualizzato alcuno spazio.|
 |**#**|Quando viene usato con il formato **o**, **x** o **X**, il flag **#** usa rispettivamente 0, 0x o 0X, come prefisso di qualsiasi valore di output diverso da zero.|Non viene visualizzato alcuno spazio.|
 ||Quando è usato con il formato **e**, **E**, **f**, **F**, **a** o **A** il flag **#** impone la presenza di un separatore decimale nel valore di output.|Il separatore decimale viene visualizzato solo se è seguito da cifre.|
@@ -129,7 +129,7 @@ Il primo campo facoltativo in una specifica di conversione contiene *direttive f
 
 ## <a name="width-specification"></a>Specifica della larghezza
 
-In una specifica di conversione, il campo facoltativo di specifica della larghezza viene visualizzato dopo qualsiasi carattere *flag*. L'argomento *larghezza* è un intero decimale non negativo che controlla il numero minimo di caratteri restituiti. Se il numero di caratteri nel valore di output è inferiore alla larghezza specificata, vengono aggiunti spazi a sinistra o a destra dei valori, a seconda che sia specificato o meno il flag di allineamento a sinistra (**-**), fino a raggiungere la larghezza minima. Se *larghezza* è preceduto da 0, vengono aggiunti zeri iniziali alle conversioni intere o a virgola mobile fino a raggiungere la larghezza minima, salvo se la conversione restituisce un valore infinito o non numerico.
+In una specifica di conversione, il campo facoltativo di specifica della larghezza viene visualizzato dopo qualsiasi carattere *flag*. L'argomento *larghezza* è un intero decimale non negativo che controlla il numero minimo di caratteri restituiti. Se il numero di caratteri nel valore di output è inferiore alla larghezza specificata, vengono aggiunti spazi a sinistra o a destra dei valori, a seconda che sia specificato o meno il flag di allineamento a sinistra ( **-** ), fino a raggiungere la larghezza minima. Se *larghezza* è preceduto da 0, vengono aggiunti zeri iniziali alle conversioni intere o a virgola mobile fino a raggiungere la larghezza minima, salvo se la conversione restituisce un valore infinito o non numerico.
 
 La specifica della larghezza non provoca mai il troncamento di un valore. Se il numero di caratteri nel valore di output è maggiore della larghezza specificata o se *larghezza* non viene specificato, vengono restituiti tutti i caratteri del valore in base alla specifica *precisione*.
 
@@ -159,7 +159,7 @@ Il carattere *tipo* determina l'interpretazione di *precisione* o la precisione 
 
 |Tipo|Significato|Impostazione predefinita|
 |----------|-------------|-------------|
-|**a**, **A**|La precisione indica il numero di cifre dopo il punto.|La precisione predefinita è 13. Se la precisione è 0 non viene stampato alcun separatore decimale, a meno che non venga usato il flag **#**.|
+|**a**, **A**|La precisione indica il numero di cifre dopo il punto.|La precisione predefinita è 13. Se la precisione è 0 non viene stampato alcun separatore decimale, a meno che non venga usato il flag **#** .|
 |**c**, **C**|La precisione non ha alcun effetto.|Viene stampato il carattere.|
 |**d**, **i**, **o**, **u**, **x**, **X**|La precisione specifica il numero minimo di cifre da stampare. Se il numero di cifre nell'argomento è minore di *precisione*, il valore di output viene riempito a sinistra con zeri. Il valore non viene troncato quando il numero di cifre supera *precisione*.|La precisione predefinita è 1.|
 |**e**, **E**|La precisione specifica il numero di cifre da stampare dopo il separatore decimale. L'ultima cifra stampata viene arrotondata.|La precisione predefinita è 6. Se *precisione* è 0 o il punto (.) non è seguito da un numero, non viene stampato alcun separatore decimale.|

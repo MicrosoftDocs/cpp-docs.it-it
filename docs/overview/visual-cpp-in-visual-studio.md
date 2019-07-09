@@ -1,18 +1,18 @@
 ---
 title: C++ in Visual Studio
 description: Visual C++ è il nome del compilatore Microsoft C++, dell'editor di codice e degli strumenti correlati nell'IDE di Visual Studio. Usare Visual C++ per sviluppare programmi per Windows, Linux, Android e iOS.
-ms.date: 05/14/2019
+ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451198"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552370"
 ---
 # <a name="c-in-visual-studio"></a>C++ in Visual Studio
 
@@ -92,7 +92,7 @@ Creare unit test usando il framework di testing unità Microsoft per C++, Google
 
 ## <a name="write-applications-in-c"></a>Scrittura di applicazioni in C++
 
-[App di Windows universale](../windows/universal-windows-apps-cpp.md)<br/>
+[App di Windows universale (C++)](../cppcx/universal-windows-apps-cpp.md)<br/>
 Guide e contenuto di riferimento di Windows Dev Center. Per informazioni sullo sviluppo di app UWP, vedere [Introduzione alla piattaforma UWP (Universal Windows Platform)](/windows/uwp/get-started/universal-application-platform-guide) e [Creare la prima app UWP in C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Applicazioni desktop (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
