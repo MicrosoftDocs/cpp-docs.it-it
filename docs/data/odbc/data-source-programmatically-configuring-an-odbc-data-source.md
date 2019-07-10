@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
 ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62395930"
@@ -80,7 +80,7 @@ Elenco di attributi nel formato "nome chiave = valore". Queste stringhe sono sep
 
 1. Fare clic su **Aggiungi**.
 
-Ciò offre un elenco di driver installati con le relative descrizioni. Utilizzare questa descrizione come le *lpszDriver* parametro. Si noti che è utilizzare la descrizione completa, ad esempio "File di Excel (xls)", tra cui l'estensione di file e le parentesi, se presenti nella descrizione.
+Ciò offre un elenco di driver installati con le relative descrizioni. Utilizzare questa descrizione come le *lpszDriver* parametro. Si noti che è utilizzare la descrizione completa, ad esempio "File di Excel (*.xls)", tra cui l'estensione di file e le parentesi, se presenti nella descrizione.
 
 In alternativa, è possibile esaminare il Registro di sistema (oppure, per il file Odbcinst. ini a 16 bit), che contiene un elenco di tutte le voci di driver e le descrizioni nella chiave del Registro di sistema "ODBC Drivers" (o la sezione [ODBC Drivers] in Odbcinst. ini).
 
@@ -94,9 +94,9 @@ Un modo per trovare i nomi delle chiavi e valori per il *lpszAttributes* paramet
 
    - 32 bit, trovare la chiave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Zdroje dat INI\ODBC** nel riquadro sinistro.
 
-      Riquadro di destra elenca le voci del modulo: "pub: REG_SZ:*<data source name>*", dove *<data source name>* è un'origine dati che è già stata configurata con le impostazioni desiderate per il driver si intende usare. Selezionare l'origine dati desiderata, ad esempio, SQL Server. Gli elementi che seguono la stringa "pub:" sono, nell'ordine, il nome chiave e il valore da usare nel *lpszAttributes* parametro.
+      Riquadro di destra elenca le voci del modulo: "pub: REG_SZ: *<data source name>* ", dove *<data source name>* è un'origine dati che è già stata configurata con le impostazioni desiderate per il driver si intende usare. Selezionare l'origine dati desiderata, ad esempio, SQL Server. Gli elementi che seguono la stringa "pub:" sono, nell'ordine, il nome chiave e il valore da usare nel *lpszAttributes* parametro.
 
-   - Per a 16 bit, individuare la sezione nel file ini contrassegnato da [*\<nome dell'origine dati >*].
+   - Per a 16 bit, individuare la sezione nel file ini contrassegnato da [ *\<nome dell'origine dati >* ].
 
       Le righe che seguono sono nel formato "nome chiave = valore". Queste sono esattamente le voci da utilizzare nel *lpszAttributes* parametro.
 
