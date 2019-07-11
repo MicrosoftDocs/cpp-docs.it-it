@@ -25,7 +25,7 @@ C2653 è anche possibile se si prova a definire un *spazi dei nomi composti*, un
 
 ## <a name="examples"></a>Esempi
 
-In questo esempio genera C2653 perché un nome di ambito viene usato ma non dichiarato. Il compilatore prevede che una classe, struttura, unione o dello spazio dei nomi prima di un operatore di ambito (:).
+In questo esempio genera C2653 perché un nome di ambito viene usato ma non dichiarato. Il compilatore prevede che una classe, struttura, unione o dello spazio dei nomi prima di un operatore di ambito (::).
 
 ```cpp
 // C2653.cpp
