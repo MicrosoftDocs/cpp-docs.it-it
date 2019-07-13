@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2588a4fe9903de624cbd3517c290a5439fe284a
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252945"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860981"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -121,7 +121,7 @@ Il `CMFCTabCtrl` classe fornisce funzionalità per un controllo struttura a sche
 class CMFCTabCtrl : public CMFCBaseTabCtrl
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -132,7 +132,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Consente di visualizzare la scheda specificata del controllo scheda corrente e imposta lo stato attivo in tale scheda.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Membri di dati
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Impedisce la visualizzazione attiva che perde lo stato attivo quando viene inserita e abilitata una nuova scheda.|
 
@@ -336,7 +336,7 @@ TRUE se ha esito positivo. in caso contrario, FALSE.
 
 Nella tabella seguente vengono descritti i valori è possibile specificare per il *stile* parametro.
 
-|Stile|Descrizione|
+|Style|Descrizione|
 |-----------|-----------------|
 |STYLE_3D|Crea un controllo struttura a schede con un aspetto tridimensionale.|
 |STYLE_FLAT|Crea un controllo struttura a schede con schede flat.|
@@ -348,7 +348,7 @@ Nella tabella seguente vengono descritti i valori è possibile specificare per i
 
 Nella tabella seguente sono elencati i valori è possibile specificare per il *posizione* parametro.
 
-|Percorso|Descrizione|
+|Location|Descrizione|
 |--------------|-----------------|
 |LOCATION_BOTTOM|Le schede si trovano nella parte inferiore del controllo scheda.|
 |LOCATION_TOP|Le schede si trovano nella parte superiore del controllo scheda.|
@@ -846,7 +846,7 @@ Sempre TRUE.
 
 Il valore della *stile* parametro può essere uno dei seguenti `CMFCTabCtrl::Style` enumerazioni.
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |STYLE_3D|Vengono visualizzate schede tridimensionale, rettangolare con angoli arrotondati.|
 |STYLE_3D_ONENOTE|Vengono visualizzate schede tridimensionale che dispongono di uno lato verticale e il lato "uno" inclinato e che abbia gli angoli arrotondati.|
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 Il *resizeMode* parametro può essere uno dei seguenti `ResizeMode` valori di enumerazione.
 
-|Nome|Descrizione|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |RESIZE_NO|Il controllo struttura a schede non può essere ridimensionato.|
 |RESIZE_VERT|Il controllo struttura a schede può essere ridimensionato in senso verticale, ma non in senso orizzontale.|
@@ -1139,6 +1139,5 @@ Questo metodo influisce solo un controllo struttura a schede che Visualizza sche
 
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classi](../../mfc/reference/mfc-classes.md)<br/>
-[Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
 [Classe CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
 [Classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)

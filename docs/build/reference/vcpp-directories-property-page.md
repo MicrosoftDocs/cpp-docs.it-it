@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450708"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861053"
 ---
 # <a name="vc-directories-property-page-windows"></a>Pagina delle proprietà Directory di VC++ (Windows)
 
-In questa pagina delle proprietà è possibile indicare a Visual Studio le directory da usare quando si compila il progetto attualmente selezionato. Per impostare le directory per più progetti in una soluzione, usare una finestra delle proprietà personalizzata come descritto in [condivisione o riutilizzare le impostazioni di progetto Visual Studio C++](../create-reusable-property-configurations.md).
+In questa pagina delle proprietà è possibile indicare a Visual Studio le directory da usare quando si compila il progetto attualmente selezionato. Per impostare le directory per più progetti in una soluzione, usare una finestra delle proprietà personalizzata come descritto in [Condividi o riutilizza Visual Studio C++ impostazioni del progetto](../create-reusable-property-configurations.md).
 
 Per la versione Linux di questa pagina, vedere [Directory di VC++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
@@ -54,7 +54,7 @@ Viene visualizzata una finestra di dialogo simile alla seguente:
 
 ![Visualizzare la directory libreria](../media/vcppdir_libdir.png "Finestra di dialogo per aggiungere o rimuovere i percorsi della libreria")
 
-Usare questa finestra di dialogo per visualizzare le directory correnti. Se però si vuole modificare o aggiungere una directory, è preferibile usare **Gestione proprietà** per creare una finestra delle proprietà o modificare la finestra delle proprietà utente predefinita. Per altre informazioni, vedere [condivisione o riutilizzare le impostazioni di progetto Visual Studio C++](../create-reusable-property-configurations.md).
+Usare questa finestra di dialogo per visualizzare le directory correnti. Se però si vuole modificare o aggiungere una directory, è preferibile usare **Gestione proprietà** per creare una finestra delle proprietà o modificare la finestra delle proprietà utente predefinita. Per altre informazioni, vedere [Condividi o riutilizza Visual Studio C++ impostazioni del progetto](../create-reusable-property-configurations.md).
 
 Come illustrato in precedenza, molti dei percorsi ereditati vengono specificati come macro.  Per esaminare il valore corrente di una macro, scegliere il pulsante **Macro** nell'angolo inferiore destro della finestra di dialogo. Si noti che molte macro dipendono dal tipo di configurazione. Può succedere che una macro in una build di debug restituisca un percorso diverso da quello restituito dalla stessa macro in una build di rilascio.
 

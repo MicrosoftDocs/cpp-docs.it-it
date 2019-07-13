@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: b846a065b02a73bfca8f548097101f73008b33d3
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504247"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861058"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -835,7 +835,7 @@ Fornisce la funzionalità di base di tutte le classi di finestre nella libreria 
 class CWnd : public CCmdTarget
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -1088,7 +1088,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CWnd::Default](#default)|Chiama la routine predefinita per la finestra, che fornisce l'elaborazione predefinita per gli eventuali messaggi della finestra non elaborati da un'applicazione.|
 |[CWnd::DefWindowProc](#defwindowproc)|Chiama la routine predefinita per la finestra, che fornisce l'elaborazione predefinita per gli eventuali messaggi della finestra non elaborati da un'applicazione.|
@@ -1267,7 +1267,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
 |[CWnd::m_hWnd](#m_hwnd)|Indica l'oggetto HWND associato a questo `CWnd`.|
 
@@ -1606,9 +1606,7 @@ Il `CWnd` oggetto su cui si chiama questa funzione deve essere un controllo con 
 
 `BindDefaultProperty` può essere usato nel contesto seguente:
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bindproperty"></a>  CWnd:: BindProperty
 
@@ -1636,9 +1634,7 @@ Il `CWnd` oggetto su cui si chiama questa funzione deve essere un controllo con 
 
 `BindProperty` può essere usato nel contesto seguente:
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bringwindowtotop"></a>  CWnd::BringWindowToTop
 
@@ -4065,9 +4061,7 @@ Utilizzare il puntatore restituito per impostare la proprietà ICursor di un con
 
 ### <a name="example"></a>Esempio
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="getdynamiclayout"></a>  CWnd::GetDynamicLayout
 
@@ -5969,7 +5963,7 @@ afx_msg void OnAppCommand(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*pWnd*|[in] Puntatore a un `CWnd` oggetto che rappresenta la finestra in cui l'utente fa clic sul pulsante con i comuni o ha premuto il tasto di comando. In questa finestra può essere una finestra figlio della finestra di ricezione del messaggio.|
 |*nCmd*|[in] Indica il comando applicazione. Per un elenco di valori possibili, vedere i comandi sotto la *cmd* sezione del *lParam* parametro del [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
@@ -7305,7 +7299,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*uFlag*|[in] Questo flag può contenere i valori seguenti:<br /><br /> -GIDC_ARRIVAL - un nuovo dispositivo è stato aggiunto al sistema.<br />Dispositivi - GIDC_REMOVAL - sono stato rimosso dal sistema.|
 
@@ -7352,7 +7346,7 @@ afx_msg void OnInputLangChangeRequest(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*nFlags*|[in] Combinazione bit per bit (OR) di flag che indicano le nuove impostazioni locali è stata selezionata dalle impostazioni locali precedente o successiva nell'elenco delle impostazioni locali installata o layout delle nuove impostazioni locali di input tastiera può essere utilizzato con il set di caratteri di sistema.<br /><br /> I valori possibili sono INPUTLANGCHANGE_BACKWARD INPUTLANGCHANGE_FORWARD e INPUTLANGCHANGE_SYSCHARSET.|
 |*nLocaleId*|[in] Identificatore delle impostazioni locali di input. Per altre informazioni, vedere [costanti di identificatore di lingua e le stringhe](/windows/desktop/Intl/language-identifier-constants-and-strings).|
@@ -7386,7 +7380,7 @@ Specifica il codice tasto virtuale della chiave specificata. Per un elenco di co
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Value|Descrizione|
+|Value|DESCRIZIONE|
 |-----------|-----------------|
 |0-7|Analisi codice (valore OEM dipendente).|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è una chiave estesa).|
@@ -7784,7 +7778,7 @@ afx_msg UINT OnMenuDrag(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*nPos*|[in] La posizione di indice della voce di menu all'inizio dell'operazione di trascinamento.|
 |*pMenu*|[in] Puntatore per il [CMenu](../../mfc/reference/cmenu-class.md) oggetto che contiene la voce di menu.|
@@ -7843,7 +7837,7 @@ afx_msg void OnMenuRButtonUp(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*nPos*|[in] La posizione di indice della voce di menu quando è stato rilasciato il pulsante destro del mouse.|
 |*pMenu*|[in] Puntatore per il [CMenu](../../mfc/reference/cmenu-class.md) oggetto che contiene la voce di menu.|
@@ -7972,7 +7966,7 @@ Questo metodo riceve la [WM_MOUSEHOVER](/windows/desktop/inputdev/wm-mousehover)
 
 Il *nFlags* parametro può essere una combinazione di tasti di modifica elencati nella tabella seguente. Per altre informazioni, vedere [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-|Tasto di modifica|Descrizione|
+|Tasto di modifica|DESCRIZIONE|
 |------------------|-----------------|
 |MK_CONTROL|Il tasto CTRL è premuto.|
 |MK_LBUTTON|Il pulsante sinistro del mouse è premuto.|
@@ -8570,7 +8564,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*bIsRendering*|[in] TRUE se per il rendering Manager finestra Desktop (DWM) è abilitato per l'area non client della finestra. FALSE se è disabilitato per il rendering.|
 
@@ -8620,7 +8614,7 @@ afx_msg void OnNcXButtonDown(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*nHitTest*|[in] Il valore di hit test restituito dai [CWnd::DefWindowProc](#defwindowproc) funzionano come risultato di elaborazione il [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) messaggio.|
 |*nButton*|[in] Un valore di XBUTTON1 se il primo pulsante X del mouse viene premuto o XBUTTON2 se il secondo pulsante X viene premuto.|
@@ -9524,7 +9518,7 @@ Specifica il numero di ripetizioni (il numero di volte in cui che la sequenza di
 *nFlags*<br/>
 Il *nFlags* parametro può avere questi valori:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-15|Specifica il numero di ripetizioni. Il valore è il numero di volte in cui che la sequenza di tasti viene ripetuta come risultato dell'utente tenendo premuto il tasto...|
 |16-23|Specifica il codice di analisi. Il valore dipende da OEM (OEM)|
@@ -9648,7 +9642,7 @@ Specifica il numero di ripetizioni.
 *nFlags*<br/>
 Specifica il codice di analisi, codice chiave transizione, lo stato precedente della chiave e codice del contesto, come illustrato nel seguente elenco:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0-7|Analisi codice (valore OEM dipendente). Byte basso della parola più significativa.|
 |8|Chiave estesi, ad esempio una chiave di funzione o una chiave del tastierino numerico (1 se è un tasto esteso; in caso contrario, 0).|
@@ -9756,7 +9750,7 @@ Per le tastiere 101 e 102 chiave avanzato IBM, chiavi avanzate sono il tasto ALT
 
 Per non-US Tastiere tasto 102 avanzate, il tasto ALT destro viene gestita come la combinazione di tasti CTRL + ALT. Di seguito viene illustrata la sequenza dei messaggi e chiamate risultanti quando l'utente preme e rilascia la chiave:
 
-|Sequence|Funzione di accesso|Messaggio passato|
+|Sequenza|Funzione di accesso|Messaggio passato|
 |--------------|-----------------------|--------------------|
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|
@@ -9957,7 +9951,7 @@ afx_msg void OnUniChar(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*nChar*|[in] Specifica il codice carattere del tasto premuto.|
 |*nRepCnt*|[in] Specifica il numero di ripetizioni per il messaggio corrente. Il valore è il numero di volte in cui che la sequenza di tasti è autorepeated come risultato dell'utente tenendo premuto il tasto. Se la sequenza di tasti viene mantenuto sufficientemente lungo, vengono inviati più messaggi. Tuttavia, il numero di ripetizioni non è cumulativo.|
@@ -10320,7 +10314,7 @@ Questo metodo riceve la [WM_XBUTTONDBLCLK](/windows/desktop/inputdev/wm-xbuttond
 
 Il *nFlags* parametro può essere una combinazione di tasti di modifica elencati nella tabella seguente. Per altre informazioni, vedere [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-|Tasto di modifica|Descrizione|
+|Tasto di modifica|DESCRIZIONE|
 |------------------|-----------------|
 |MK_CONTROL|Il tasto CTRL è premuto.|
 |MK_LBUTTON|Il pulsante sinistro del mouse è premuto.|
@@ -10396,7 +10390,7 @@ Questo metodo riceve la [WM_XBUTTONUP](/windows/desktop/inputdev/wm-xbuttonup) n
 
 Il *nFlags* parametro può essere una combinazione di tasti di modifica elencati nella tabella seguente. Per altre informazioni, vedere [sull'Input del Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-|Tasto di modifica|Descrizione|
+|Tasto di modifica|DESCRIZIONE|
 |------------------|-----------------|
 |MK_CONTROL|Il tasto CTRL è premuto.|
 |MK_LBUTTON|Il pulsante sinistro del mouse è premuto.|

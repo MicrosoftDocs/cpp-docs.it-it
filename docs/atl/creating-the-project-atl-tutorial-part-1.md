@@ -3,12 +3,12 @@ title: Creazione del progetto (Esercitazione di ATL, parte 1)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221399"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861017"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Creazione del progetto (Esercitazione di ATL, parte 1)
 
@@ -44,15 +44,10 @@ Questa esercitazione illustra in dettaglio di un progetto ATL senza attributi ch
 
     Il percorso per il codice sorgente in genere per impostazione predefinita sarà \Users\\\<username > \source\repos e una nuova cartella verrà creato automaticamente.
 
-1. Fare clic su **OK** e il **progetto ATL** verrà visualizzata la procedura guidata.
+1. In Visual Studio 2019, accettare i valori predefiniti e fare clic su **OK**. 
+   In Visual Studio 2017, fare clic su **OK** per aprire il **progetto ATL** procedura guidata. Fare clic su **le impostazioni dell'applicazione** per visualizzare le opzioni disponibili. Poiché questo progetto viene creato un controllo e un controllo deve essere un server in-process, lasciare il **tipo di applicazione** sotto forma di DLL. Fare clic su **OK**.
 
-1. Fare clic su **le impostazioni dell'applicazione** per visualizzare le opzioni disponibili.
-
-1. Come si sta creando un controllo e un controllo deve essere un server in-process, lasciare il **tipo di applicazione** sotto forma di DLL.
-
-1. Lasciare le altre opzioni sui rispettivi valori predefiniti e fare clic su **OK**.
-
-Il **Creazione guidata progetto ATL** creerà il progetto tramite la generazione di file diversi. È possibile visualizzare questi file nel **Esplora soluzioni** espandendo la `Polygon` oggetto. I file sono elencati di seguito.
+Visual Studio creerà il progetto tramite la generazione di file diversi. È possibile visualizzare questi file nel **Esplora soluzioni** espandendo la `Polygon` oggetto. I file sono elencati di seguito.
 
 |File|Descrizione|
 |----------|-----------------|
@@ -66,7 +61,7 @@ Il **Creazione guidata progetto ATL** creerà il progetto tramite la generazione
 |stdafx.cpp|Il file che verranno `#include` i file di implementazione di ATL.|
 |stdafx.h|Il file che verranno `#include` i file di intestazione ATL.|
 
-1. Nelle **Esplora soluzioni**, fare doppio clic su di `Polygon` progetto.
+1. In **Esplora soluzioni** fare clic con il pulsante destro del mouse sul progetto `Polygon`.
 
 1. Nel menu di scelta rapida, fare clic su **proprietà**.
 

@@ -1,16 +1,16 @@
 ---
-title: convenzione di chiamata x64
+title: Convenzione di chiamata x64
 description: Dettagli della convenzione di chiamata x64 predefinita ABI.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313619"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861152"
 ---
-# <a name="x64-calling-convention"></a>convenzione di chiamata x64
+# <a name="x64-calling-convention"></a>Convenzione di chiamata x64
 
 In questa sezione vengono descritti i processi standard e convenzioni utilizzate in una funzione (il chiamante) per effettuare chiamate in un'altra funzione (il chiamato) x64 codice.
 
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>Registri salvato chiamante/chiamato
 
-I registri RAX, ovvero RCX, RDX, R8, R9, R10, R11 considerati volatile e deve essere considerato eliminato definitivamente on le chiamate di funzione (a meno che in caso contrario, la sicurezza-comprovabili dall'analisi, ad esempio Ottimizzazione intero programma).
+I registri RAX, ovvero RCX, RDX, R8, R9, R10, R11, XMM0 a 5 e le parti superiori di da YMM0 a 15 e ZMM0-15 sono considerate volatile e devono essere considerate eliminato definitivamente on le chiamate di funzione (a meno che in caso contrario, la sicurezza-comprovabili dall'analisi, ad esempio Ottimizzazione intero programma). I registri XMM ZMM e YMM 16-31 AVX512VL, sono volatili.
 
-I registri RBX RBP, RDI, RSI, RSP, R12, R13, R14 e R15 sono considerati non volatile e devono essere salvati e ripristinato da una funzione che li Usa.
+I registri RBX RBP, RDI, RSI, RSP, R12, R13, R14, R15 e XMM6-15 sono considerati non volatile e devono essere salvati e ripristinato da una funzione che li Usa.
 
 ## <a name="function-pointers"></a>Puntatori funzione
-
+ 
 I puntatori a funzione sono semplicemente puntatori all'etichetta della rispettiva funzione. Non esistono alcuna tabella dei requisiti di contenuto (TOC) per puntatori a funzione.
 
 ## <a name="floating-point-support-for-older-code"></a>Supporto a virgola mobile per il codice precedente
