@@ -1,6 +1,6 @@
 ---
 title: CWinApp (classe)
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CWinApp
 - AFXWIN/CWinApp
@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894489"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -209,7 +209,7 @@ Classe di base da cui deriva un oggetto applicazione Windows.
 class CWinApp : public CWinThread
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -287,7 +287,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[CWinApp::EnableShellOpen](#enableshellopen)|Consente all'utente di aprire i file di dati da Gestione File di Windows.|
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Standard di caricamenti. Impostazioni del file INI e abilita la recente funzionalità degli elenchi del file.|
@@ -306,7 +306,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|Indica se l'utente è in modalità di contesto della Guida (in genere richiamate con MAIUSC + F1).|
 |[CWinApp::m_eHelpType](#m_ehelptype)|Specifica il tipo di Guida utilizzata dall'applicazione.|
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Flag che determinano il comportamento di Gestione riavvio.|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|Il periodo di tempo in millisecondi tra si chiuda.|
@@ -899,7 +899,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 Questa funzione membro non distinzione maiuscole / minuscole, pertanto, le stringhe nel *lpszSection* e *lpszEntry* parametri alcune possibili differenze nei case.
 
 > [!NOTE]
-> `GetProfileBinary` Alloca un buffer e restituisce il relativo indirizzo nelle \* *ppData*. Il chiamante è responsabile della liberazione di buffer, utilizzare **delete []**.
+> `GetProfileBinary` Alloca un buffer e restituisce il relativo indirizzo nelle \* *ppData*. Il chiamante è responsabile della liberazione di buffer, utilizzare **delete []** .
 
 > [!IMPORTANT]
 > I dati restituiti dalla funzione non sono necessariamente con terminazione null e il chiamante deve eseguire la convalida. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
@@ -1033,10 +1033,10 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>Parametri
 
 *dwData*<br/>
-Specifica i dati aggiuntivi. Il valore usato dipende dal valore della *nCmd* parametro.
+Specifica i dati aggiuntivi. Il valore usato dipende dal valore della *nCmd* parametro. Per impostazione predefinita `0x000F` vale a dire [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Specifica il tipo di Guida richiesto. Per un elenco di valori possibili e gli effetti di *dwData* parametro, vedere la *uCommand* parametro descritto in sui the HTMLHelp funzione API nel SDK di Windows.
+Specifica il tipo di Guida richiesto. Per un elenco di valori possibili e gli effetti di *dwData* parametro, vedere la *uCommand* parametro descritto nel [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) o [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) Funzioni API nel SDK di Windows.  
 
 ### <a name="remarks"></a>Note
 
@@ -1962,7 +1962,7 @@ virtual HRESULT RegisterWithRestartManager(
 
 |||
 |-|-|
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |*bRegisterRecoveryCallback*|[in] TRUE indica che questa istanza dell'applicazione utilizza una funzione di callback di ripristino; FALSE indica che non lo è. Il framework chiama la funzione di callback di ripristino quando l'applicazione viene chiusa in modo imprevisto. Per altre informazioni, vedere [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |*strRestartIdentifier*|[in] Stringa univoca che identifica questa istanza di Gestione riavvio. L'identificatore di Gestione riavvio è univoco per ogni istanza di un'applicazione.|
 |*pwzCommandLineArgs*|[in] Stringa che contiene gli argomenti aggiuntivi dalla riga di comando.|

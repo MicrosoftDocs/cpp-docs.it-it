@@ -1,6 +1,6 @@
 ---
 title: Determinazione delle DLL da ridistribuire
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 4e4b53745c76a8e5b630bdd92633779e84262188
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894486"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinazione delle DLL da ridistribuire
 
 Quando si compila un'applicazione che usa librerie DLL fornite da Visual Studio, gli utenti che vogliono eseguire l'applicazione dovranno avere le stesse DLL nei propri computer. Poiché la maggior parte degli utenti probabilmente non dispone di Visual Studio, è necessario fornire loro queste DLL. Visual Studio rende le DLL disponibili sotto forma di *file ridistribuibili* che è possibile includere nel programma di installazione dell'applicazione.
 
-Per includere le DLL ridistribuibili in modo più semplice nel programma di installazione, le DLL sono disponibili anche sotto forma di *pacchetti ridistribuibili* autonomi. Si tratta di file eseguibili specifici per l'architettura che installano i file ridistribuibili nel computer dell'utente tramite distribuzione centrale. Ad esempio, vcredist\_x86.exe vengono installate le librerie a 32 bit x86 a computer, vcredist\_x64.exe vengono installate le librerie a 64 bit x64 computer e vcredist\_ARM.exe vengono installate le librerie per computer ARM. È consigliabile usare la distribuzione centrale perché Microsoft può aggiornare in modo indipendente queste librerie tramite il servizio Windows Update. Oltre alla copia nell'installazione di Visual Studio, i pacchetti ridistribuibili correnti sono disponibili per il download. Per i collegamenti ai pacchetti ridistribuibili più recenti supportati per set di strumenti correnti e precedenti, vedere [Download delle più recenti versioni di Visual C++ supportate](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). È possibile trovare versioni precedenti specifiche dei pacchetti ridistribuibili cercando "Pacchetti ridistribuibili Visual C++" nell'[Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=158431).
+Per includere le DLL ridistribuibili in modo più semplice nel programma di installazione, le DLL sono disponibili anche sotto forma di *pacchetti ridistribuibili* autonomi. Si tratta di file eseguibili specifici per l'architettura che installano i file ridistribuibili nel computer dell'utente tramite distribuzione centrale. Ad esempio, vcredist\_x86.exe vengono installate le librerie a 32 bit per i computer x86 e x64, vcredist\_x64.exe vengono installate le librerie a 64 bit x64 computer e vcredist\_ARM.exe vengono installate le librerie per ARM computer. È consigliabile usare la distribuzione centrale perché Microsoft può aggiornare in modo indipendente queste librerie tramite il servizio Windows Update. Oltre alla copia nell'installazione di Visual Studio, i pacchetti ridistribuibili correnti sono disponibili per il download. Per i collegamenti ai pacchetti ridistribuibili più recenti supportati per set di strumenti correnti e precedenti, vedere [Download delle più recenti versioni di Visual C++ supportate](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). È possibile trovare versioni precedenti specifiche dei pacchetti ridistribuibili cercando "Pacchetti ridistribuibili Visual C++" nell'[Area download Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=158431).
 
 Il numero di versione principale del pacchetto ridistribuibile distribuito deve corrispondere alla versione del set di strumenti di Visual Studio usato per creare l'applicazione e il numero di versione secondaria deve essere uguale o superiore. Visual Studio 2017 e Visual Studio 2015 hanno numeri di versione compatibili per i set di strumenti. Questo significa che i file ridistribuibili di Visual Studio 2017 possono essere usati da app compilate con il set di strumenti 2015. Anche se possono essere compatibili, non è supportato l'uso dei file ridistribuibili 2015 in app create usando il set di strumenti 2017. È supportato solo l'uso di un pacchetto ridistribuibile di una versione corrispondente alla versione del set di strumenti o più recente.
 

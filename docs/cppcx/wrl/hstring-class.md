@@ -1,6 +1,6 @@
 ---
 title: Classe HString
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894409"
 ---
 # <a name="hstring-class"></a>Classe HString
 
@@ -58,7 +59,7 @@ class HString;
 
 Il Runtime di Windows fornisce l'accesso alle stringhe attraverso [HSTRING](/windows/desktop/WinRT/hstring) gli handle. Il `HString` classe fornisce funzioni comode e operatori per semplificare l'uso di handle di HSTRING. Questa classe può gestire la durata della sua proprietà tramite un modello RAII HSTRING.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -76,6 +77,7 @@ Nome                                     | Descrizione
 [HString::Detach](#detach)               | Disassocia i `HString` oggetto dal relativo valore sottostante.
 [HString::Get](#get)                     | Recupera il valore di handle sottostante di HSTRING.
 [HString::GetAddressOf](#getaddressof)   | Recupera un puntatore all'handle sottostante di HSTRING.
+[HString::GetRawBuffer](#getrawbuffer)   | Recupera un puntatore ai dati della stringa sottostante.
 [HString::IsValid](#isvalid)             | Indica se l'oggetto corrente `HString` oggetto è valido.
 [HString::MakeReference](#makereference) | Crea un `HStringReference` oggetto da un parametro di stringa specificata.
 [HString::Release](#release)             | Elimina il valore string sottostante e inizializza l'oggetto corrente `HString` oggetto su un valore vuoto.
@@ -181,6 +183,22 @@ Puntatore a handle sottostante di HSTRING.
 ### <a name="remarks"></a>Note
 
 Dopo questa operazione, viene eliminato il valore di stringa dell'handle sottostante di HSTRING.
+
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+Recupera un puntatore ai dati della stringa sottostante.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Parametri
+
+*lunghezza* puntatore a un **int** variabile che riceve la lunghezza dei dati.
+
+### <a name="return-value"></a>Valore restituito
+
+Oggetto **const** puntatore ai dati della stringa sottostante.
+
 
 ## <a name="hstring"></a>HString::HString
 

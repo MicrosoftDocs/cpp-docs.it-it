@@ -1,6 +1,6 @@
 ---
 title: friend (C++)
-ms.date: 11/19/2018
+ms.date: 07/15/2019
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03b6cb7f856ec59c10f5e410c947f74d17ec4e46
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894411"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -119,7 +119,7 @@ Per dichiarare due classi che rappresentano elementi Friend l'uno dell'altro, la
 
 ## <a name="friend-functions"></a>funzioni di tipo friend
 
-Oggetto **friend** è una funzione che non è un membro di una classe, ma ha accesso ai membri privati e protetti della classe. Le funzioni friend non sono considerate membri della classe; sono funzioni esterne normali a cui vengono concessi privilegi di accesso speciali. Gli elementi Friend non sono nell'ambito della classe e non vengono chiamati utilizzando gli operatori di selezione dei membri (**.** e -**>**) a meno che non sono membri di un'altra classe. Oggetto **friend** funzione viene dichiarata dalla classe che concede l'accesso. Il **friend** dichiarazione può essere inserita in un punto qualsiasi nella dichiarazione di classe. Non è influenzata dalle parole chiave di controllo di accesso.
+Oggetto **friend** è una funzione che non è un membro di una classe, ma ha accesso ai membri privati e protetti della classe. Le funzioni friend non sono considerate membri della classe; sono funzioni esterne normali a cui vengono concessi privilegi di accesso speciali. Gli elementi Friend non sono nell'ambito della classe e non vengono chiamati utilizzando gli operatori di selezione dei membri ( **.** e - **>** ) a meno che non sono membri di un'altra classe. Oggetto **friend** funzione viene dichiarata dalla classe che concede l'accesso. Il **friend** dichiarazione può essere inserita in un punto qualsiasi nella dichiarazione di classe. Non è influenzata dalle parole chiave di controllo di accesso.
 
 Nell'esempio seguente viene illustrata una classe `Point` e una funzione friend `ChangePrivate`. Il **friend** funzione ha accesso al membro dati privato del `Point` riceve come parametro dell'oggetto.
 
@@ -224,7 +224,7 @@ int main() {
 
 L'accesso Friend non è reciproco a meno che non venga specificato in modo esplicito come tale. Nell'esempio precedente, le funzioni membro di `YourClass` non possono accedere ai membri privati di `YourOtherClass`.
 
-Un tipo gestito non può avere nessuna funzione Friend, classe Friend o interfaccia Friend.
+Un tipo gestito (in C++/CLI) non può avere qualsiasi funzioni friend, classe friend o interfacce friend.
 
 L'accesso Friend non è ereditato, pertanto classi derivate da `YourOtherClass` non possono accedere a membri privati di `YourClass`. L'accesso Friend non è transitivo, pertanto classi che rappresentano elementi friend di `YourOtherClass` non possono accedere a membri privati di `YourClass`.
 
@@ -235,9 +235,7 @@ Implicazioni della relazione Friend
 
 ## <a name="inline-friend-definitions"></a>Definizioni di elementi friend inline
 
-Le funzioni friend possono essere definite all'interno delle dichiarazioni di classe. Queste funzioni sono funzioni inline e, analogamente alle funzioni membro inline, si comportano come se fossero definite immediatamente dopo la visualizzazione di tutti i membri di classe ma prima della chiusura dell'ambito di classe (ovvero la fine della dichiarazione di classe).
-
-Le funzioni friend definite all'interno delle dichiarazioni di classe non sono considerate come esistenti nell'ambito della classe che le contiene, ma si trovano in ambito file.
+È possibile definire funzioni Friend (di battesimo un corpo di funzione) all'interno delle dichiarazioni di classe. Queste funzioni sono funzioni inline e, analogamente alle funzioni membro inline, si comportano come se fossero definite immediatamente dopo la visualizzazione di tutti i membri di classe ma prima della chiusura dell'ambito di classe (ovvero la fine della dichiarazione di classe). Le funzioni Friend definite all'interno delle dichiarazioni di classe sono nell'ambito della classe contenitrice.
 
 ## <a name="see-also"></a>Vedere anche
 

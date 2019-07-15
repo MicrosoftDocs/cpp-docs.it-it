@@ -1,6 +1,6 @@
 ---
 title: CMFCMenuButton (classe)
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CMFCMenuButton
 - AFXMENUBUTTON/CMFCMenuButton
@@ -12,6 +12,7 @@ f1_keywords:
 - AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
 - AFXMENUBUTTON/CMFCMenuButton::m_hMenu
 - AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
+- AFXMENUBUTTON/CMFCMenuButton::m_bDefaultClick
 helpviewer_keywords:
 - CMFCMenuButton [MFC], CMFCMenuButton
 - CMFCMenuButton [MFC], PreTranslateMessage
@@ -21,13 +22,14 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_bStayPressed
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
+- CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71d239c9d1084c69ab2e159a479e66f0cbe66d7a
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894426"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (classe)
 
@@ -39,7 +41,7 @@ Pulsante che consente di visualizzare un menu di scelta rapida e segnala le sele
 class CMFCMenuButton : public CMFCButton
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -56,13 +58,14 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="data-members"></a>Membri di dati
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Specifica se visualizzare il menu a comparsa del sistema predefinita oppure usare [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Specifica se il menu di scelta rapida verrà visualizzato di sotto o a destra del pulsante.|
 |[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Specifica se il pulsante di menu cambia il proprio stato dopo che l'utente rilascia il pulsante.|
 |[CMFCMenuButton::m_hMenu](#m_hmenu)|Handle per il menu di Windows associata.|
 |[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Un identificatore che indica quale elemento selezionato dall'utente nel menu a comparsa.|
+|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| Consenti elaborazione predefinita (nel testo/immagine del pulsante).|
 
 ## <a name="remarks"></a>Note
 
@@ -164,6 +167,28 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Note
 
 Il valore di questa variabile membro è zero se l'utente annulla il menu senza effettuare una selezione o se si verifica un errore.
+
+##  <a name="m_bdefaultclick"></a>  CMFCMenuButton::m_bDefaultClick
+
+Consente l'elaborazione predefinita immagini o testo sul pulsante.
+
+```
+BOOL  m_bDefaultClick;
+```
+
+### <a name="remarks"></a>Note
+
+Impostazione m_bDefaultClick su false, il pulsante visualizzare il menu quando si fa clic sul pulsante in un punto qualsiasi.
+
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+
+Un intero che indica quale elemento l'utente seleziona il menu a comparsa.
+
+```
+int m_nMenuResult;
+```
+
+### <a name="remarks"></a>Note
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage
 
