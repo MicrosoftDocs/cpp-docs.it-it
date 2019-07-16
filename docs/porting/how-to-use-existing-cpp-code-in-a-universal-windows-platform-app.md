@@ -2,12 +2,12 @@
 title: "Procedura: Usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)"
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424196"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861139"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedura: Usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)
 
@@ -135,7 +135,7 @@ La procedura seguente riguarda il caso in cui è presente una DLL nativa che esp
 
 2. Aprire **Proprietà progetto** per il progetto DLL e impostare **Configurazione** su **Tutte le configurazioni**.
 
-3. In **Proprietà progetto** della scheda **C/C++** > **Generale** impostare **Utilizza estensioni di Windows Runtime** su **Sì (/ZW)**. In questo modo si abilitano le estensioni del componente (C++/CX).
+3. In **Proprietà progetto** della scheda **C/C++**  > **Generale** impostare **Utilizza estensioni di Windows Runtime** su **Sì (/ZW)** . In questo modo si abilitano le estensioni del componente (C++/CX).
 
 4. In **Esplora soluzioni** selezionare il nodo del progetto, aprire il menu di scelta rapida e scegliere **Scarica progetto**. Quindi, aprire il menu di scelta rapida sul nodo del progetto scaricato e scegliere di modificare il file di progetto. Individuare l'elemento `WindowsTargetPlatformVersion` e sostituirlo con gli elementi seguenti.
 
@@ -157,7 +157,7 @@ La procedura seguente riguarda il caso in cui è presente una DLL nativa che esp
 
    Il problema è che i progetti Windows universali utilizzano una convenzione di denominazione diversa per il file di intestazione precompilata.
 
-6. Compilare il progetto. È possibile visualizzare alcuni errori relativi alle opzioni della riga di comando incompatibili. Ad esempio l'opzione **Abilita ricompilazione minima (/Gm)**, ora deprecata ma usata di frequente, è configurata come impostazione predefinita in molti progetti C++ meno recenti e non è compatibile con `/ZW`.
+6. Compilare il progetto. È possibile visualizzare alcuni errori relativi alle opzioni della riga di comando incompatibili. Ad esempio l'opzione **Abilita ricompilazione minima (/Gm)** , ora deprecata ma usata di frequente, è configurata come impostazione predefinita in molti progetti C++ meno recenti e non è compatibile con `/ZW`.
 
    Alcune funzioni non sono disponibili quando si esegue la compilazione per la piattaforma Windows universale. Verranno visualizzati errori del compilatore relativi a eventuali problemi. I relativi fino a quando non si dispone di una compilazione pulita.
 
@@ -193,9 +193,9 @@ Tuttavia, è possibile usare una libreria statica in una piattaforma UWP senza r
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>Per utilizzare una libreria statica C++ nativa in un progetto UWP
 
-1. Nelle proprietà del progetto per il progetto della piattaforma UWP, nella sezione **Linker** aggiungere il percorso alla libreria nella proprietà **Input**. Ad esempio, per una libreria del progetto che salva l'output in *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, aggiungere il relativo percorso`Debug\MyNativeLibrary\MyNativeLibrary.lib`.
+1. Nelle proprietà di progetto per il progetto UWP, scegliere **Proprietà di configurazione** > **Linker** > **Input** nel riquadro di sinistra. Nel riquadro di destra aggiungere il percorso della libreria nella proprietà **Dipendenze aggiuntive**. Ad esempio, per una libreria del progetto che salva l'output in *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, aggiungere il relativo percorso`Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Aggiungere un'istruzione di inclusione per associare il file di intestazione a pch.h nel progetto UWP e iniziare ad aggiungere codice che utilizza la libreria.
+2. Aggiungere un'istruzione di inclusione per fare riferimento al file di intestazione nel file pch.h (se disponibile) o in un file con estensione cpp e iniziare ad aggiungere codice che usa la libreria.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -221,7 +221,7 @@ Se si desidera utilizzare le API native in una libreria statica da un'app UWP e 
 
 6. È possibile ora avere codice duplicato. Se si dispone di più intestazioni precompilate (ad esempio, stdafx.h e pch.h), sceglierne una da mantenere. Copiare il codice necessario, ad esempio le istruzioni include, in quella che si sta mantenendo. Eliminare l'altra e in **Intestazioni precompilate** nelle proprietà del progetto assicurarsi che il nome del file di intestazione sia corretto.
 
-   Se è stato modificato il file da utilizzare come intestazione precompilata, assicurarsi che le opzioni di intestazione precompilata siano corrette per ogni file. Selezionare, a turno, ogni file con estensione cpp, aprire la finestra delle proprietà e assicurarsi che tutte siano impostate su **Usa (/Yu)**, fatta eccezione per l'intestazione precompilata desiderata, che deve essere impostata su **Crea (/Yc)**.
+   Se è stato modificato il file da utilizzare come intestazione precompilata, assicurarsi che le opzioni di intestazione precompilata siano corrette per ogni file. Selezionare, a turno, ogni file con estensione cpp, aprire la finestra delle proprietà e assicurarsi che tutte siano impostate su **Usa (/Yu)** , fatta eccezione per l'intestazione precompilata desiderata, che deve essere impostata su **Crea (/Yc)** .
 
 7. Compilare il progetto e risolvere eventuali errori. Questi errori potrebbero essere causati dall'uso dell'opzione `/ZW` o potrebbero essere causati da una nuova versione di Windows SDK oppure potrebbero riflettere dipendenze come, ad esempio, file di intestazione da cui dipende la libreria o differenze nelle impostazioni del progetto tra il progetto precedente e quello nuovo.
 
