@@ -1,6 +1,6 @@
 ---
-title: Riferimento sulle pagina Proprietà progetto C++ - Visual Studio
-ms.date: 05/06/2019
+title: C++Guida di riferimento alle pagine delle proprietà del progetto-Visual Studio
+ms.date: 07/16/2019
 f1_keywords:
 - VC.Project.NotAProp.Edit
 helpviewer_keywords:
@@ -14,22 +14,30 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 7b10e3c7eef846d72220545b89a217da7a4bb9a1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217793"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299734"
 ---
-# <a name="c-project-property-page-reference"></a>Riferimento alla pagina di proprietà progetto C++
+# <a name="c-project-property-page-reference"></a>C++riferimento alla pagina delle proprietà del progetto
 
-Usando le pagine delle proprietà è possibile specificare le impostazioni per i progetti di Visual Studio. Per aprire la finestra di dialogo **Pagine delle proprietà** di un progetto di Visual Studio, scegliere **Proprietà** dal menu **Progetto**. Per altre informazioni sulle proprietà del progetto, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+In Visual Studio è possibile specificare le opzioni del compilatore e del linker, i percorsi di file e altre impostazioni di compilazione tramite le pagine delle proprietà per il progetto. Per aprire le **pagine delle proprietà**, scegliere**Proprietà** **progetto** > dal menu principale oppure fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**. Per altre informazioni sulle proprietà del progetto, [vedere C++ impostare le proprietà del compilatore e della compilazione in Visual Studio](../working-with-project-properties.md).
 
-Pagine delle proprietà in progetti non Windows, vedere [riferimento alla pagina di proprietà di Linux C++](../../linux/prop-pages-linux.md).
+Per le pagine delle proprietà nei progetti Linux, vedere informazioni di [riferimento sulla pagina delle proprietà di Linux C++ ](../../linux/prop-pages-linux.md).
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Avanzate, Strumento Manifesto, Proprietà di configurazione, \<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](advanced-manifest-tool.md)
+[Pagina delle proprietà Generale (Progetto)](general-property-page-project.md)
+
+[Pagina delle proprietà Directory di VC++](vcpp-directories-property-page.md)
+
+[Strumento Manifesto,](general-manifest-tool-configuration-properties.md)
+[strumento Manifesto generale, strumento Manifesto di input e output](input-and-output-manifest-tool.md)
+, strumento manifesto[com](isolated-com-manifest-tool.md)
+isolato[, avanzato](advanced-manifest-tool.md)
+
 
 [Pagine delle proprietà Riga di comando](command-line-property-pages.md)
 
@@ -39,9 +47,9 @@ Pagine delle proprietà in progetti non Windows, vedere [riferimento alla pagina
 
 [Pagina delle proprietà Generale (File)](general-property-page-file.md)
 
-[Pagina delle proprietà Generale (Progetto)](general-property-page-project.md)
 
-[Generale, Strumento Manifesto, Proprietà di configurazione,\<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](general-manifest-tool-configuration-properties.md)
+
+
 
 [Pagine delle proprietà HLSL](hlsl-property-pages.md)
 
@@ -51,9 +59,9 @@ Pagine delle proprietà in progetti non Windows, vedere [riferimento alla pagina
 
 [Pagine delle proprietà HLSL: File di output](hlsl-property-pages-output-files.md)
 
-[Input e output, Strumento Manifesto, Proprietà di configurazione, \<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](input-and-output-manifest-tool.md)
 
-[COM isolato, Strumento Manifesto, Proprietà di configurazione, \<finestra di dialogo Pagine delle proprietà di <nomeprogetto>](isolated-com-manifest-tool.md)
+
+
 
 [Pagine delle proprietà Linker](linker-property-pages.md)
 
@@ -73,7 +81,7 @@ Pagine delle proprietà in progetti non Windows, vedere [riferimento alla pagina
 
 [Pagine delle proprietà Risorse](resources-property-pages.md)
 
-[Pagina delle proprietà Directory di VC++](vcpp-directories-property-page.md)
+
 
 [Pagina delle proprietà Riferimenti Web](web-references-property-page.md)
 

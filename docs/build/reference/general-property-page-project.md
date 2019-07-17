@@ -1,6 +1,6 @@
 ---
 title: Pagina delle proprietà Generale (Progetto)
-ms.date: 11/04/2016
+ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -25,30 +25,62 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446570"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299776"
 ---
 # <a name="general-property-page-project"></a>Pagina delle proprietà Generale (Progetto)
 
-Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Esplora soluzioni e si sceglie **Proprietà**, nella pagina delle proprietà **Generale** del nodo **Proprietà di configurazione** nel riquadro sinistro vengono visualizzate due sezioni di proprietà:
+::: moniker range=">=vs-2019"
 
-- Generale
+Questo argomento si applica ai progetti di Visual Studio per Windows. Per i progetti Linux, vedere informazioni di [riferimento sulla pagina delle proprietà di Linux C++ ](../../linux/prop-pages-linux.md). Per i progetti CMake, vedere [progetti CMake in Visual Studio](../cmake-projects-in-visual-studio.md).
 
-- Impostazioni predefinite progetto
+Quando si fa clic con il pulsante destro del mouse su un nodo del progetto in Esplora soluzioni e si seleziona **Proprietà**, nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro sinistro vengono visualizzate le proprietà seguenti:
 
-Per i progetti non Windows, vedere [riferimento alla pagina di proprietà di Linux C++](../../linux/prop-pages-linux.md).
+- **Directory di output**
 
-## <a name="general"></a>Generale
+   Specifica la directory in cui strumenti come il linker inseriranno tutti i file di output finali creati durante il processo di compilazione. In genere, si tratta dell'output di strumenti come il linker, Gestione librerie o BSCMake. Per impostazione predefinita, questa proprietà corrisponde alla directory specificata dalle macro $(SolutionDir)$(Configuration)\.
 
-Le proprietà nella sezione Generale influiscono sul percorso dei file creati nel processo di compilazione e determinano quali file eliminare quando viene selezionata l'opzione **Pulisci** (menu **Compila**).
+   Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.OutputDirectory%2A>.
 
-- **Piattaforma di destinazione**
+- **Directory intermedia**
 
-   Specifica la piattaforma su cui verrà eseguito il progetto. Ad esempio, Windows, Android o iOS. Il valore **Windows 10** indica che il progetto è destinato alla piattaforma UWP (Universal Windows Platform). Se il progetto è destinato a versioni precedenti di Windows, la versione non è elencata e il valore di questo campo indica semplicemente **Windows**. Si tratta di un campo di sola lettura che viene impostato quando si crea un progetto.
+   Specifica la directory in cui strumenti come il compilatore inseriranno tutti i file intermedi creati durante il processo di compilazione. In genere, si tratta dell'output di strumenti come il compilatore C/C++, MIDL e il compilatore di risorse. Per impostazione predefinita, questa proprietà corrisponde alla directory specificata dalla macro $(Configuration)\.
+
+   Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.IntermediateDirectory%2A>.
+
+- **Nome di destinazione**
+
+   Specifica il nome file generato dal progetto. Per impostazione predefinita, questa proprietà corrisponde al nome file specificato dalla macro $(ProjectName).
+
+- **Tipo configurazione**
+
+  È possibile scegliere tra diversi tipi di configurazione:
+
+  - **Applicazione (.exe)**
+
+     Visualizza il set di strumenti del linker (Compilatore C/C++, MIDL, Compilatore di risorse, Linker, BSCMake, Generatore proxy del servizio Web XML, eventi di compilazione personalizzata, pre-compilazione, pre-collegamento e post-compilazione).
+
+  - **Libreria dinamica (.dll)**
+
+     Visualizza il set di strumenti del linker, specifica l'opzione del linker /DLL e aggiunge _WINDLL a CL.
+
+  - **Makefile**
+
+     Visualizza il set di strumenti di makefile (NMake).
+
+  - **Libreria statica (.lib)**
+
+     Visualizza il set di strumenti Gestione librerie (uguale al set di strumenti del linker, ad eccezione dello strumento Gestione librerie sostitutivo per il linker e l'omissione di Generatore proxy del servizio Web XML).
+
+  - **Utilità**
+
+     Visualizza il set di strumenti delle utilità (MIDL, eventi di compilazione personalizzata, pre-compilazione e post-compilazione).
+
+  Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Versione di Windows SDK**
 
@@ -58,11 +90,43 @@ Le proprietà nella sezione Generale influiscono sul percorso dei file creati ne
 
    È possibile installare il set di strumenti della piattaforma Windows XP incluso in Visual Studio per usare la versione corrente delle librerie per compilare i progetti di Windows XP e Windows 2003 Server. Per informazioni su come ottenere e usare questo set di strumenti della piattaforma, vedere [Configurazione di programmi per Windows XP](../configuring-programs-for-windows-xp.md). Per altre informazioni sulla modifica del set di strumenti della piattaforma, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- **Versione minima piattaforma di destinazione**
+- **Set di strumenti della piattaforma**
 
-   Specifica la versione minima della piattaforma su cui può essere eseguito il progetto. Questa proprietà viene visualizzata solo se è supportata dal tipo di progetto, ad esempio in progetti universali di Windows. Se l'app può sfruttare i vantaggi delle funzionalità di una versione più recente di Windows SDK, ma può comunque essere eseguita nelle versioni precedenti senza queste funzionalità, al limite con una certa perdita di prestazioni, il valore di queste due proprietà potrebbe differire. In questo caso, il codice deve verificare la versione della piattaforma su cui viene eseguito al runtime senza tentare di usare funzionalità non disponibili in versioni precedenti della piattaforma.
+   Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. I progetti C++ di Visual Studio possono avere come destinazione il set di strumenti predefinito installato da Visual Studio o uno dei set di strumenti installati da diverse versioni precedenti di Visual Studio, inclusi i set di strumenti per la creazione di file eseguibili che possono essere eseguiti in Windows XP. Per informazioni sulla modifica del set di strumenti della [piattaforma, vedere Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
-   Questa opzione non viene applicata in Visual C++. L'opzione è comunque inclusa per coerenza con gli altri linguaggi, come C# e JavaScript, e come guida per chiunque usi il progetto. Visual C++ non genera un errore se si usa una funzionalità non disponibile nella versione minima.
+- **C++Standard del linguaggio**
+
+   Specifica lo standard del linguaggio da utilizzare. Il valore predefinito è/std: c++ 14. Specificare/std: c++ 17 per usare le funzionalità di C++ 17 o/std: c++ + Latest per usare C++ 20 o altre funzionalità sperimentali. Per ulteriori informazioni, vedere [/STD (specifica la versione standard del linguaggio)](std-specify-language-standard-version.md)
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+In Visual Studio 2015 e Visual Studio 2017, quando si fa clic con il pulsante destro del mouse su un nodo del progetto in **Esplora soluzioni**e si seleziona **Proprietà**, nella pagina delle proprietà **generale** nel nodo **proprietà di configurazione** nel riquadro a sinistra viene visualizzato due sezioni di proprietà:
+
+- Generale
+
+- Impostazioni predefinite progetto
+
+## <a name="general"></a>Generale
+
+- **Piattaforma di destinazione**
+
+   Specifica la piattaforma su cui verrà eseguito il progetto. Ad esempio, Windows, Android o iOS. Il valore **Windows 10** indica che il progetto è destinato alla piattaforma UWP (Universal Windows Platform). Se il progetto è destinato a versioni precedenti di Windows, la versione non è elencata e il valore di questo campo indica semplicemente **Windows**. Si tratta di un campo di sola lettura che viene impostato quando si crea un progetto.
+
+- **Versione della piattaforma di destinazione (Visual Studio 2015)**
+
+   Specifica la versione minima della piattaforma su cui può essere eseguito il progetto. Questa proprietà viene visualizzata solo se il tipo di progetto lo supporta. Se l'app può sfruttare i vantaggi delle funzionalità di una versione più recente di Windows SDK, ma può comunque essere eseguita nelle versioni precedenti senza queste funzionalità, al limite con una certa perdita di prestazioni, il valore di queste due proprietà potrebbe differire. In questo caso, il codice deve verificare la versione della piattaforma su cui viene eseguito al runtime senza tentare di usare funzionalità non disponibili in versioni precedenti della piattaforma.
+
+   Il C++ sistema del progetto non applica questa opzione. L'opzione è comunque inclusa per coerenza con gli altri linguaggi, come C# e JavaScript, e come guida per chiunque usi il progetto. Visual C++ non genera un errore se si usa una funzionalità non disponibile nella versione minima.
+
+- **Versione di Windows SDK (Visual Studio 2017)**
+
+   Per la piattaforma di destinazione Windows, specifica la versione di Windows SDK necessaria per il progetto. Quando si installa un carico di lavoro C++ usando il programma di installazione di Visual Studio, vengono installati anche i componenti obbligatori di Windows SDK. Se nel computer sono installate altre versioni di Windows SDK, nell'elenco a discesa vengono visualizzate tutte le versioni degli strumenti di SDK installati.
+
+   Per sviluppare il progetto per Windows 7 o Windows Vista, usare il valore **8.1**, perché Windows SDK 8.1 è compatibile con le versioni precedenti di queste piattaforme. È anche necessario definire il valore appropriato per **_WIN32_WINNT** in targetver.h. For Windows 7, il valore è 0x0601. Vedere [Modifica di WINVER e _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
+
+   È possibile installare il set di strumenti della piattaforma Windows XP incluso in Visual Studio per usare la versione corrente delle librerie per compilare i progetti di Windows XP e Windows 2003 Server. Per informazioni su come ottenere e usare questo set di strumenti della piattaforma, vedere [Configurazione di programmi per Windows XP](../configuring-programs-for-windows-xp.md). Per altre informazioni sulla modifica del set di strumenti della piattaforma, vedere [Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Directory di output**
 
@@ -94,18 +158,18 @@ Le proprietà nella sezione Generale influiscono sul percorso dei file creati ne
 
    Permette di specificare un percorso non predefinito per il file di log creato ogni volta che si compila un progetto. Il percorso predefinito è specificato dalla macro $(IntDir)$(MSBuildProjectName).log.
 
-   È possibile usare macro di progetto per modificare il percorso della directory. Visualizzare [macro comuni per compilare i comandi e proprietà](common-macros-for-build-commands-and-properties.md).
+   È possibile usare macro di progetto per modificare il percorso della directory. Vedere [macro comuni per i comandi e le proprietà di compilazione](common-macros-for-build-commands-and-properties.md).
 
 - **Set di strumenti della piattaforma**
 
-   Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. Visual Studio C++ progetti possono essere destinati a entrambi i set di strumenti predefinito installato da Visual Studio o uno del set di strumenti installati dalle diverse versioni precedenti di Visual Studio, inclusi i set di strumenti che creare file eseguibili che è possono eseguire su Windowx XP. Per informazioni su come modificare il set di strumenti della piattaforma, vedere [come: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permette di destinare il progetto a una versione diversa delle librerie e del compilatore di Visual C++. I progetti C++ di Visual Studio possono avere come destinazione il set di strumenti predefinito installato da Visual Studio o uno dei set di strumenti installati da diverse versioni precedenti di Visual Studio, inclusi i set di strumenti per la creazione di file eseguibili che possono essere eseguiti in Windows XP. Per informazioni sulla modifica del set di strumenti della [piattaforma, vedere Procedura: Modificare il framework di destinazione e il set di strumenti della piattaforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Abilita compilazione incrementale gestita**
 
    Per i progetti gestiti, consente il rilevamento della visibilità esterna quando si generano assembly. Se una modifica a un progetto gestito non è visibile in altri progetti, i progetti dipendenti non saranno ricompilati. È così possibile migliorare considerevolmente i tempi di compilazione di soluzioni che includono progetti gestiti.
 
 ## <a name="project-defaults"></a>Impostazioni predefinite progetto
-
+ 
 Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresentano proprietà predefinite che è possibile modificare. La definizione di queste proprietà è disponibile nei file con estensione props in *Directory di installazione*\VC\VCProjectDefaults.
 
 - **Tipo configurazione**
@@ -140,12 +204,6 @@ Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresent
 
    Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>.
 
-- **Uso di ATL**
-
-   Specifica se il progetto ATL sarà collegato staticamente o dinamicamente alla DLL ATL. Se si specifica un'opzione diversa da **Senza utilizzare ATL**, verrà aggiunta una definizione alla pagina delle proprietà **Riga di comando** del compilatore.
-
-   Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfATL%2A>.
-
 - **Set di caratteri**
 
    Definisce se deve essere impostato _UNICODE o _MBCS. Influisce anche sul punto di ingresso del linker nei casi appropriati.
@@ -170,6 +228,8 @@ Le proprietà incluse nella sezione Impostazioni predefinite progetto rappresent
 
    Specifica se il progetto supporta le app di Windows Runtime (Universal Windows Platform). Per altre informazioni, vedere [/ZW (compilazione di Windows Runtime)](zw-windows-runtime-compilation.md) e il Centro per sviluppatori Windows.
 
+::: moniker-end
+
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento alla pagina di proprietà progetto C++](property-pages-visual-cpp.md)
+[C++riferimento alla pagina delle proprietà del progetto](property-pages-visual-cpp.md)

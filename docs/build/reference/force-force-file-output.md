@@ -1,6 +1,6 @@
 ---
 title: /FORCE (Forza l'output del file)
-ms.date: 11/04/2016
+ms.date: 07/19/2019
 f1_keywords:
 - VC.Project.VCLinkerTool.ForceLink
 - /force
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: af7962a4b3b5805e7e0c4d59752254c8ade17f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28b1c21382832c8775ffe0406038a482e74076c5
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292471"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299716"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Forza l'output del file)
 
@@ -25,29 +25,31 @@ ms.locfileid: "62292471"
 
 ## <a name="remarks"></a>Note
 
-L'opzione /FORCE indica al linker di creare un file valido .exe o DLL anche se un simbolo viene fatto riferimento ma non definito o è definito più volte.
+L'opzione/FORCE indica al linker di creare un file exe o una DLL valida anche se viene fatto riferimento a un simbolo, ma non è definito o è definito in modo multiplo.
 
-L'opzione /FORCE può assumere un argomento facoltativo:
+L'opzione/FORCE può assumere un argomento facoltativo:
 
-- Usare /Force: multiple per creare un file di output LINK trovi più definizioni per un simbolo o meno.
+- Utilizzare/FORCE: MULTIPLE per creare un file di output indipendentemente dal fatto che il collegamento trovi più di una definizione per un simbolo.
 
-- Usare /FORCE: UNRESOLVED per creare un file di output LINK trovi un simbolo non definito o meno. / FORZARE: non risolti viene ignorata se il simbolo del punto di ingresso non è stato risolto.
+- Utilizzare/FORCE: Unresolved per creare un file di output indipendentemente dal fatto che LINK trovi un simbolo non definito. /FORCE: UNRESOLVED viene ignorato se il simbolo del punto di ingresso non è risolto.
 
-/Force senza argomenti implica entrambi più e non risolto.
+/FORCE senza argomenti implica sia il multiplo che non risolto.
 
-Creata un file con questa opzione potrebbe non essere eseguita come previsto. Quando viene specificata l'opzione /FORCE, il linker non collegherà in modo incrementale.
+Un file creato con questa opzione potrebbe non essere eseguito come previsto. Il linker non verrà collegato in modo incrementale quando si specifica l'opzione/FORCE.
 
-Se un modulo viene compilato con **/clr**, **/Force** non creerà un'immagine.
+Se un modulo viene compilato con **/CLR**, **/Force** non creerà un'immagine.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Proprietà**. 
 
-1. Scegliere il **Linker** cartella.
+1. Fare clic sulla cartella **Linker**.
 
 1. Fare clic sulla pagina delle proprietà **Riga di comando** .
 
-1. Digitare l'opzione nel **opzioni aggiuntive** casella.
+1. Digitare l'opzione nella casella **Opzioni aggiuntive** .
+
+Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

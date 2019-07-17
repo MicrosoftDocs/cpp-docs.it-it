@@ -1,6 +1,6 @@
 ---
 title: Directory di VC++ (pagina delle proprietà)
-ms.date: 10/09/2018
+ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCDirectories.IncludePath
 - VC.Project.VCDirectories.ReferencePath
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 9b005a89156db48615ec6ea8dfc4f07a7414fc3b
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861053"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299780"
 ---
 # <a name="vc-directories-property-page-windows"></a>Pagina delle proprietà Directory di VC++ (Windows)
 
-In questa pagina delle proprietà è possibile indicare a Visual Studio le directory da usare quando si compila il progetto attualmente selezionato. Per impostare le directory per più progetti in una soluzione, usare una finestra delle proprietà personalizzata come descritto in [Condividi o riutilizza Visual Studio C++ impostazioni del progetto](../create-reusable-property-configurations.md).
+In questa pagina delle proprietà è possibile indicare a Visual Studio le directory da usare quando si compila il progetto attualmente selezionato. Per impostare directory per più progetti in una soluzione, usare una finestra delle proprietà personalizzata come descritto in [condividere o riutilizzare C++ le impostazioni di progetto di Visual Studio](../create-reusable-property-configurations.md).
 
 Per la versione Linux di questa pagina, vedere [Directory di VC++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
@@ -38,7 +38,7 @@ Le proprietà in Directory di VC ++ vengono applicate a un progetto, non al nodo
 
 Si noti che la pagina delle proprietà **Directory di VC ++** per i progetti multipiattaforma ha un aspetto diverso. Per informazioni specifiche sui progetti Linux C++, vedere [Directory di VC++ (Linux C++)](../../linux/prop-pages/directories-linux.md).
 
-Se non si conoscono *proprietà del progetto* in Visual Studio, può risultare utile leggere prima [delle proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+Se non si ha familiarità con le *proprietà del progetto* in Visual Studio, potrebbe essere utile leggere prima di tutto le [proprietà C++ del compilatore e della compilazione in Visual Studio](../working-with-project-properties.md).
 
 Le impostazioni predefinite per le proprietà in **Directory di VC ++** dipendono dal tipo di progetto. Per i progetti desktop includono i percorsi degli strumenti di C++ per un particolare set di strumenti della piattaforma e il percorso di Windows SDK. È possibile modificare l'impostazione per **Set di strumenti piattaforma** e **Versione di Windows SDK** nella pagina **Proprietà di configurazione** > **Generale**.
 
@@ -54,7 +54,7 @@ Viene visualizzata una finestra di dialogo simile alla seguente:
 
 ![Visualizzare la directory libreria](../media/vcppdir_libdir.png "Finestra di dialogo per aggiungere o rimuovere i percorsi della libreria")
 
-Usare questa finestra di dialogo per visualizzare le directory correnti. Se però si vuole modificare o aggiungere una directory, è preferibile usare **Gestione proprietà** per creare una finestra delle proprietà o modificare la finestra delle proprietà utente predefinita. Per altre informazioni, vedere [Condividi o riutilizza Visual Studio C++ impostazioni del progetto](../create-reusable-property-configurations.md).
+Usare questa finestra di dialogo per visualizzare le directory correnti. Se però si vuole modificare o aggiungere una directory, è preferibile usare **Gestione proprietà** per creare una finestra delle proprietà o modificare la finestra delle proprietà utente predefinita. Per altre informazioni, vedere [condividere o riutilizzare le C++ impostazioni di progetto di Visual Studio](../create-reusable-property-configurations.md).
 
 Come illustrato in precedenza, molti dei percorsi ereditati vengono specificati come macro.  Per esaminare il valore corrente di una macro, scegliere il pulsante **Macro** nell'angolo inferiore destro della finestra di dialogo. Si noti che molte macro dipendono dal tipo di configurazione. Può succedere che una macro in una build di debug restituisca un percorso diverso da quello restituito dalla stessa macro in una build di rilascio.
 
@@ -64,9 +64,9 @@ Come illustrato in precedenza, molti dei percorsi ereditati vengono specificati 
 
 Nota: L'elenco viene popolato durante la digitazione. Non premere **INVIO**.
 
-Per altre informazioni sulle macro e perché è consigliabile utilizzare invece di percorsi hardcoded laddove possibile, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+Per altre informazioni sulle macro e sul motivo per cui è consigliabile usarle anziché percorsi hardcoded quando possibile, vedere [impostare C++ le proprietà del compilatore e della compilazione in Visual Studio](../working-with-project-properties.md).
 
-Per un elenco delle macro di usate comune, vedere [macro comuni per compilare i comandi e proprietà](common-macros-for-build-commands-and-properties.md).
+Per un elenco delle macro usate di frequente, vedere [macro comuni per i comandi e le proprietà di compilazione](common-macros-for-build-commands-and-properties.md).
 
 È possibile personalizzare le macro in due modi:
 
@@ -74,7 +74,7 @@ Per un elenco delle macro di usate comune, vedere [macro comuni per compilare i 
 
 - Definire le macro utente in un file con estensione props. Per altre informazioni, vedere [Macro della pagina delle proprietà](../working-with-project-properties.md).
 
-Per altre informazioni, vedere questi post di blog: [Directory di VC + +](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [ereditate le proprietà e finestre delle proprietà](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), e [Visual Studio 2010 C++ progetto di Guida all'aggiornamento](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
+Per ulteriori informazioni, vedere i post di Blog seguenti: [Directory di VC + +](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [proprietà ereditate e finestre delle proprietà](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)e [Guida C++ all'aggiornamento del progetto di Visual Studio 2010](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Tipi di directory
 
