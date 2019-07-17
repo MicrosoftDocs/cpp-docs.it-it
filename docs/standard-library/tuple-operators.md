@@ -9,21 +9,16 @@ f1_keywords:
 - tuple/std::operator<=
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: e60de54a78f3a206ef77776761c3419bf8a2f3b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411877"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241653"
 ---
 # <a name="lttuplegt-operators"></a>Operatori &lt;tuple&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operatore! =
 
 Confronta oggetti `tuple` per verificarne la disuguaglianza.
 
@@ -36,7 +31,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*<br/>
+*TN*\
 Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
@@ -88,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Confronta oggetti `tuple` per verificare se sono minori di un certo valore.
 
@@ -101,7 +96,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*<br/>
+*TN*\
 Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
@@ -153,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> Operatore&lt;=
 
 Confronta oggetti `tuple` per verificare se sono minori o uguali a un certo valore.
 
@@ -166,7 +161,7 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*<br/>
+*TN*\
 Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
@@ -218,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Confronta oggetti `tuple` per verificarne l'uguaglianza.
 
@@ -231,7 +226,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*<br/>
+*TN*\
 Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
@@ -283,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 Confronta oggetti `tuple` per verificare qual è il maggiore.
 
@@ -296,7 +291,7 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*<br/>
+*TN*\
 Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
@@ -348,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> Operatore&gt;=
 
 Confronta oggetti `tuple` per verificare se sono uguali o stabilire qual è il maggiore.
 
@@ -361,7 +356,7 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Parametri
 
-*TN*<br/>
+*TN*\
 Tipo dell'ennesimo elemento tupla.
 
 ### <a name="remarks"></a>Note
@@ -412,7 +407,3 @@ int main() {
 true
 false
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[\<tuple>](../standard-library/tuple.md)<br/>

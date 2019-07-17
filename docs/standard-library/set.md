@@ -6,29 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 633571f00cfe761b687e9b76624029f57ab6043e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bf5663d3e6891d45e2139c612d8e16860b6cace
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412579"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246388"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
 Definisce le classi modello del contenitore set e multiset e i rispettivi modelli di supporto.
 
-## <a name="syntax"></a>Sintassi
+## <a name="requirements"></a>Requisiti
 
-```cpp
-#include <set>
-```
+**Intestazione:** \<set>
 
-## <a name="members"></a>Membri
+**Spazio dei nomi:** std
+
+> [!NOTE]
+> Il \<impostare > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>Operatori
 
 |Versione set|Versione multiset|Descrizione|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[operator!= (set)](../standard-library/set-operators.md#op_neq)|[operator!= (multiset)](../standard-library/set-operators.md#op_neq)|Verifica se l'oggetto set o multiset a sinistra dell'operatore non è uguale all'oggetto set o multiset a destra.|
 |[operator< (set)](../standard-library/set-operators.md#op_lt)|[operator< (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Verifica se l'oggetto set o multiset a sinistra dell'operatore è minore dell'oggetto set o multiset a destra.|
 |[operator<= (set)](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Verifica se l'oggetto set o multiset a sinistra dell'operatore è minore o uguale all'oggetto set o multiset a destra.|
@@ -39,12 +42,12 @@ Definisce le classi modello del contenitore set e multiset e i rispettivi modell
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate
 
 |Versione set|Versione multiset|Descrizione|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Scambia gli elementi di due set o multiset.|
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|||
 |-|-|
 |[Classe set](../standard-library/set-class.md)|Usata per l'archiviazione e il recupero di dati da una raccolta in cui i valori degli elementi contenuti sono univoci e vengono usati come valori delle chiavi in base ai quali i dati vengono automaticamente ordinati.|
 |[Classe multiset](../standard-library/multiset-class.md)|Usata per l'archiviazione e il recupero di dati da una raccolta in cui i valori degli elementi contenuti devono essere univoci e vengono usati come valori delle chiavi in base ai quali i dati vengono automaticamente ordinati.|

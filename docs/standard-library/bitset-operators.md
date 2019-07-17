@@ -12,21 +12,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380195"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243328"
 ---
 # <a name="ltbitsetgt-operators"></a>Operatori &lt;bitset&gt;
 
-||||
-|-|-|-|
-|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator^](#op_xor)|[operator&#124;](#op_or)| |
-
-## <a name="op_amp"></a>  operator&amp;
+## <a name="op_amp">Operatore </a>&amp;
 
 Esegue un'operazione `AND` bit per bit tra due bitset.
 
@@ -40,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `AND` bit per bit.
 
-*right*<br/>
+*Ok*\
 La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `AND` bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
@@ -78,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operatore&lt;&lt;
 
 Inserisce una rappresentazione di testo della sequenza di bit nel flusso di output.
 
@@ -91,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Un oggetto di tipo **bitset\<N>** che deve essere inserito nel flusso di output come stringa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -102,7 +97,7 @@ Una rappresentazione di testo della sequenza di bit in `ostr`.
 
 Gli overload della funzione modello `operator<<`, consentendo un bitset devono essere scritti senza prima convertirlo in una stringa. La funzione di modello consente di gestire in modo efficace quanto segue:
 
-**ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
+**ostr** << _*destra*. [to_string](bitset-class.md) <**CharType**, **Traits**, **allocator**\<**CharType**>>)
 
 ### <a name="example"></a>Esempio
 
@@ -135,7 +130,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="op_gt_gt"></a> Operatore&gt;&gt;
 
 Legge una stringa di caratteri di bit in un bitset.
 
@@ -150,10 +145,10 @@ _Istr,
 
 ### <a name="parameters"></a>Parametri
 
-*_Istr*<br/>
+*_Istr*\
 La immessa nel flusso di input da inserire nel bitset.
 
-*right*<br/>
+*Ok*\
 Il bitset che riceve i bit dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
@@ -221,7 +216,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>  operator^
+## <a name="op_xor"></a> operatore ^
 
 Esegue un'operazione `EXCLUSIVE-OR` bit per bit tra due bitset.
 
@@ -235,10 +230,10 @@ operator^(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `EXCLUSIVE-OR` bit per bit.
 
-*right*<br/>
+*Ok*\
 La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `EXCLUSIVE-OR` bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
@@ -273,7 +268,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  operator&#124;
+## <a name="op_or"></a> operatore&#124;
 
 Esegue un'operazione `OR` bit per bit tra due bitset.
 
@@ -287,10 +282,10 @@ operator|(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Il primo dei due bitset i cui rispettivi elementi devono essere combinati con l'operazione `OR` bit per bit.
 
-*right*<br/>
+*Ok*\
 La seconda delle due matrici di valori i cui rispettivi elementi devono essere combinati con l'operazione `OR` bit per bit.
 
 ### <a name="return-value"></a>Valore restituito
@@ -324,7 +319,3 @@ bitset 1: 0101
 bitset 2: 0011
 bitset 3: 0111
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[\<bitset>](../standard-library/bitset.md)<br/>

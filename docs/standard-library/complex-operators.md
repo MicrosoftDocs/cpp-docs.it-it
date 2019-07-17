@@ -15,27 +15,20 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 8641e2f8bcc80cd2ba9b6b68e5574a476f60312e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8f8b623ad53b84b8e614a1831d1a060df890931
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371620"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244702"
 ---
 # <a name="ltcomplexgt-operators"></a>Operatori &lt;complex&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|
-|[operator/](#op_div)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operatore! =
 
 Verifica la disuguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
 ```
-
 template <class Type>
 bool operator!=(
     const complex<Type>& left,
@@ -54,10 +47,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la disuguaglianza.
 
-*right*<br/>
+*Ok*\
 Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
@@ -170,7 +163,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a>  operator\*
+## <a name="op_star">Operatore </a>\*
 
 Moltiplica due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -194,10 +187,10 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Il primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere moltiplicato con il \* operazione.
 
-*right*<br/>
+*Ok*\
 Il secondo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere moltiplicato con il \* operazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -268,7 +261,7 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a>  operator+
+## <a name="op_add"></a> Operatore operator +
 
 Aggiunge due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -295,10 +288,10 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Primo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere aggiunto con l'operazione +.
 
-*right*<br/>
+*Ok*\
 Secondo di due numeri complessi o numero del tipo di parametro per un numero complesso che deve essere aggiunto con l'operazione +.
 
 ### <a name="return-value"></a>Valore restituito
@@ -409,7 +402,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a>  operator-
+## <a name="operator-"></a> Operatore operator-
 
 Sottrae due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -435,10 +428,10 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Primo di due numeri complessi o numero del tipo parametro per un numero complesso che deve essere sottratto con l'operazione -.
 
-*right*<br/>
+*Ok*\
 Secondo di due numeri complessi o numero del tipo parametro per un numero complesso che deve essere sottratto con l'operazione -.
 
 ### <a name="return-value"></a>Valore restituito
@@ -551,7 +544,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a>  operator/
+## <a name="op_div"></a> operatore /
 
 Divide due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -574,10 +567,10 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Numero complesso o numero del tipo parametro per un numero complesso che rappresenta il numeratore da dividere per il denominatore con l'operazione /.
 
-*right*<br/>
+*Ok*\
 Numero complesso o numero del tipo parametro per un numero complesso che rappresenta il numeratore da usare per dividere il denominatore con l'operazione /.
 
 ### <a name="return-value"></a>Valore restituito
@@ -671,7 +664,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operatore&lt;&lt;
 
 Inserisce un numero complesso specificato nel flusso di output.
 
@@ -684,10 +677,10 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*Ostr*<br/>
+*Ostr*\
 Flusso di output in cui immettere il numero complesso.
 
-*right*<br/>
+*Ok*\
 Numero complesso da immettere nel flusso di output
 
 ### <a name="return-value"></a>Valore restituito
@@ -733,7 +726,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Verifica l'uguaglianza tra due numeri complessi, di cui uno o entrambi possono appartenere al sottoinsieme del tipo per le parti reali e immaginarie.
 
@@ -757,10 +750,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la disuguaglianza.
 
-*right*<br/>
+*Ok*\
 Numero complesso o oggetto del relativo tipo di parametro di cui verificarne la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
@@ -873,7 +866,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="op_gt_gt"></a> Operatore&gt;&gt;
 
 Estrae un valore complesso dal flusso di input.
 
@@ -887,10 +880,10 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-*Istr*<br/>
+*Istr*\
 Flusso di output da cui estrarre il numero complesso.
 
-*right*<br/>
+*Ok*\
 Numero complesso da estrarre dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
@@ -932,7 +925,3 @@ int main( )
 Input a complex number ( try: 2.0 ): 2.0
 2.0
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[\<complex>](../standard-library/complex.md)<br/>

@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f859c2e11d8a800c44b93e69e4b862300c6d3a13
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224090"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245775"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
 Definisce le primitive degli iteratori, gli iteratori predefiniti e gli iteratori di flusso, nonché diversi modelli di supporto. Gli iteratori predefiniti includono gli adattatori di inversione e di inserimento. Esistono tre classi di adattatori degli iteratori di inserimento: front, back e general. Tali classi forniscono la semantica di inserimento anziché la semantica di sovrascrittura fornita dagli iteratori delle funzioni membro del contenitore.
 
-## <a name="syntax"></a>Sintassi
+## <a name="requirements"></a>Requisiti
 
-```cpp
-#include <iterator>
-```
+**Intestazione:** \<iterator>
+
+**Spazio dei nomi:** std
 
 ## <a name="remarks"></a>Note
 
@@ -42,17 +42,23 @@ Gli iteratori che dispongono di un numero maggiore di requisiti e quindi di un a
 
 Sono state aggiunte estensioni agli iteratori della libreria standard C++ per supportare diverse situazioni relative alla modalità di debug per gli iteratori verificati e non verificati. Per altre informazioni, vedere [librerie protette: C++Libreria standard](../standard-library/safe-libraries-cpp-standard-library.md).
 
+## <a name="members"></a>Members
+
 ### <a name="functions"></a>Funzioni
 
-|Funzione|Descrizione|
+|||
 |-|-|
 |[advance](../standard-library/iterator-functions.md#advance)|Incrementa un iteratore di un numero specificato di posizioni.|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Crea un iteratore in grado di inserire gli elementi nella parte finale di un contenitore specificato.|
 |[begin](../standard-library/iterator-functions.md#begin)|Recupera un iteratore al primo elemento di un contenitore specificato.|
 |[cbegin](../standard-library/iterator-functions.md#cbegin)|Recupera un iteratore costante al primo elemento di un contenitore specificato.|
 |[cend](../standard-library/iterator-functions.md#cend)|Recupera un iteratore costante all'elemento successivo all'ultimo elemento del contenitore specificato.|
+|[crbegin](../standard-library/iterator-functions.md#crbegin)||
+|[crend](../standard-library/iterator-functions.md#crend)||
+|[data](../standard-library/iterator-functions.md#data)||
 |[distance](../standard-library/iterator-functions.md#distance)|Determina il numero di incrementi tra le posizioni a cui puntano due iteratori.|
 |[end](../standard-library/iterator-functions.md#end)|Recupera un iteratore all'elemento successivo all'ultimo elemento nel contenitore specificato.|
+|[empty](../standard-library/iterator-functions.md#empty)||
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Crea un iteratore in grado di inserire elementi all'inizio di un contenitore specificato.|
 |[inserter](../standard-library/iterator-functions.md#inserter)|Adattatore dell'iteratore che aggiunge un nuovo elemento a un contenitore in corrispondenza di un punto di inserimento specificato.|
 |[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Crea un oggetto [checked_array_iterator](../standard-library/checked-array-iterator-class.md) che può essere usato da altri algoritmi. **Nota:**  Questa funzione è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
@@ -60,10 +66,13 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 |[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Crea un oggetto [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) che può essere usato da altri algoritmi. **Nota:**  Questa funzione è un'estensione Microsoft della libreria standard C++. Il codice implementato mediante questa funzione non può essere trasferito negli ambienti di compilazione standard di C++ che non supportano questa estensione Microsoft.|
 |[next](../standard-library/iterator-functions.md#next)|Esegue l'iterazione per un numero specificato di volte e restituisce la nuova posizione dell'iteratore.|
 |[prev](../standard-library/iterator-functions.md#prev)|Esegue l'iterazione in ordine inverso per un numero specificato di volte e restituisce la nuova posizione dell'iteratore.|
+|[rbegin](../standard-library/iterator-functions.md#rbegin)||
+|[rend](../standard-library/iterator-functions.md#rend)||
+|[size](../standard-library/iterator-functions.md#size)||
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
 |[operator!=](../standard-library/iterator-operators.md#op_neq)|Verifica se l'oggetto iteratore a sinistra dell'operatore non è uguale all'oggetto iteratore a destra.|
 |[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Verifica se l'oggetto iteratore a sinistra dell'operatore è uguale all'oggetto iteratore a destra.|
@@ -76,7 +85,7 @@ Sono state aggiunte estensioni agli iteratori della libreria standard C++ per su
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|||
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|La classe modello descrive un oggetto iteratore di output. Inserisce gli elementi in un contenitore di tipo `Container`, cui accede tramite il metodo protetto `pointer` oggetto archiviato denominato contenitore.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Una classe che fornisce un tipo restituito per un `iterator_category` funzione che rappresenta un iteratore bidirezionale.|

@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220379"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240704"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -89,10 +89,12 @@ Infine, una caratteristica importante degli oggetti percorso è che è possibile
 
 Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)](../standard-library/file-system-navigation.md) (Esplorazione del file system (C++)).
 
-## <a name="classes"></a>Classi
+## <a name="members"></a>Members
 
-|Nome|Descrizione|
-|----------|-----------------|
+### <a name="classes"></a>Classi
+
+|||
+|-|-|
 |[Classe directory_entry](../standard-library/directory-entry-class.md)|Descrive un oggetto restituito da `directory_iterator` o `recursive_directory_iterator` e contiene un percorso.|
 |[Classe directory_iterator](../standard-library/directory-iterator-class.md)|Descrive un iteratore di input sequenziato attraverso i nomi file in una directory del file system.|
 |[Classe filesystem_error](../standard-library/filesystem-error-class.md)|Classe di base per le eccezioni generate per segnalare un overflow del sistema di basso livello.|
@@ -100,11 +102,11 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 |[Classe recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)|Descrive un iteratore di input sequenziato attraverso i nomi file in una directory del file system. L'iteratore può anche accedere alle sottodirectory.|
 |[Classe file_status](../standard-library/file-status-class.md)|Esegue il wrapping di un `file_type`.|
 
-## <a name="structs"></a>Struct
+### <a name="structs"></a>Struct
 
-|Nome|Descrizione|
-|----------|-----------------|
-|[Struttura space_info Structure](../standard-library/space-info-structure.md)|Contiene informazioni su un volume.|
+|||
+|-|-|
+|[Struttura space_info](../standard-library/space-info-structure.md)|Contiene informazioni su un volume.|
 
 ## <a name="functions"></a>Funzioni
 
@@ -116,12 +118,13 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 
 ## <a name="enumerations"></a>Enumerazioni
 
-|Nome|Descrizione|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumerazione usata con [copy_file](../standard-library/filesystem-functions.md#copy_file) che determina il comportamento nel caso in cui un file di destinazione esista già.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumerazione usata con [copy_file](../standard-library/filesystem-functions.md#copy_file) che determina il comportamento nel caso in cui un file di destinazione esista già.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumerazione che specifica le opzioni per gli iteratori di directory.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumerazione di tipi di file.|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo di maschera di bit usato per trasferire le autorizzazioni e le opzioni per le autorizzazioni|
 
 ## <a name="see-also"></a>Vedere anche

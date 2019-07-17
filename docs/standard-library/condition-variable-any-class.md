@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecf13974404ec6e223d5d3e7387a70526eeefcc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279054"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244654"
 ---
 # <a name="conditionvariableany-class"></a>Classe condition_variable_any
 
@@ -35,31 +35,25 @@ Usare la classe `condition_variable_any` per l'attesa di un evento che ha un qua
 class condition_variable_any;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
-### <a name="public-constructors"></a>Costruttori pubblici
+### <a name="constructors"></a>Costruttori
 
-|Nome|Descrizione|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable_any](#condition_variable_any)|Costruisce un oggetto `condition_variable_any`.|
 
-### <a name="public-methods"></a>Metodi pubblici
+### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
-|----------|-----------------|
+|||
+|-|-|
 |[notify_all](#notify_all)|Sblocca tutti i thread in attesa dell'oggetto `condition_variable_any`.|
 |[notify_one](#notify_one)|Sblocca uno dei thread in attesa dell'oggetto `condition_variable_any`.|
 |[wait](#wait)|Blocca un thread.|
 |[wait_for](#wait_for)|Blocca un thread e imposta un intervallo di tempo dopo il quale il thread viene sbloccato.|
 |[wait_until](#wait_until)|Blocca un thread e imposta un tempo massimo dopo il quale il thread viene sbloccato.|
 
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<condition_variable >
-
-**Spazio dei nomi:** std
-
-## <a name="condition_variable_any"></a>  Costruttore condition_variable_any::condition_variable_any
+## <a name="condition_variable_any"></a> condition_variable_any
 
 Costruisce un oggetto `condition_variable_any`.
 
@@ -71,7 +65,7 @@ condition_variable_any();
 
 Se non è disponibile memoria sufficiente, il costruttore genera un oggetto [system_error](../standard-library/system-error-class.md) che ha un codice di errore `not_enough_memory`. Se l'oggetto non può essere costruito perché non è disponibile un'altra risorsa, il costruttore genera un oggetto `system_error` che ha un codice di errore `resource_unavailable_try_again`.
 
-## <a name="notify_all"></a>  condition_variable_any::notify_all
+## <a name="notify_all"></a> notify_all
 
 Sblocca tutti i thread in attesa dell'oggetto `condition_variable_any`.
 
@@ -79,7 +73,7 @@ Sblocca tutti i thread in attesa dell'oggetto `condition_variable_any`.
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable_any::notify_one
+## <a name="notify_one"></a> notify_one
 
 Sblocca uno dei thread in attesa dell'oggetto `condition_variable_any`.
 
@@ -87,7 +81,7 @@ Sblocca uno dei thread in attesa dell'oggetto `condition_variable_any`.
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable_any::wait
+## <a name="wait"></a> Attendere
 
 Blocca un thread.
 
@@ -101,10 +95,10 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Parametri
 
-*Lck*<br/>
+*Lck*\
 Un oggetto `mutex` di qualsiasi tipo.
 
-*Pred*<br/>
+*Pred*\
 Qualsiasi espressione che restituisca **true** oppure **false**.
 
 ### <a name="remarks"></a>Note
@@ -118,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable_any::wait_for
+## <a name="wait_for"></a> wait_for
 
 Blocca un thread e imposta un intervallo di tempo dopo il quale il thread viene sbloccato.
 
@@ -132,13 +126,13 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Parametri
 
-*Lck*<br/>
+*Lck*\
 Un oggetto `mutex` di qualsiasi tipo.
 
-*Rel_time*<br/>
+*Rel_time*\
 Un oggetto `chrono::duration` che specifica la quantità di tempo prima che il thread venga riattivato.
 
-*Pred*<br/>
+*Pred*\
 Qualsiasi espressione che restituisca **true** oppure **false**.
 
 ### <a name="return-value"></a>Valore restituito
@@ -161,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable_any::wait_until
+## <a name="wait_until"></a> wait_until
 
 Blocca un thread e imposta un tempo massimo dopo il quale il thread viene sbloccato.
 
@@ -187,13 +181,13 @@ void wait_until(
 
 ### <a name="parameters"></a>Parametri
 
-*Lck*<br/>
+*Lck*\
 Un oggetto mutex.
 
-*Abs_time*<br/>
+*Abs_time*\
 Un oggetto [chrono:: time_point](../standard-library/time-point-class.md).
 
-*Pred*<br/>
+*Pred*\
 Qualsiasi espressione che restituisca **true** oppure **false**.
 
 ### <a name="return-value"></a>Valore restituito
@@ -217,8 +211,3 @@ return true;
 ```
 
 Il terzo e il quarto metodo usano un puntatore a un oggetto di tipo `xtime` per sostituire l'oggetto `chrono::time_point`. L'oggetto `xtime` specifica il tempo massimo di attesa di un segnale.
-
-## <a name="see-also"></a>Vedere anche
-
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>

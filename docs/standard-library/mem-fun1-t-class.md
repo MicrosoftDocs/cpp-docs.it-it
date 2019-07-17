@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_t class
 ms.assetid: 01a8c2c2-b2f7-4e3f-869c-5b5b9f06ea54
-ms.openlocfilehash: 42a6ee7c169d078e216b82365ab26d10838798c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 822de97849750a72948137ba8fe23beab8554ff5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412865"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245093"
 ---
 # <a name="memfun1t-class"></a>Classe mem_fun1_t
 
@@ -28,19 +28,18 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
     Result operator()(
     Type* _Pleft,
     Arg right) const;
-
 };
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*_Pm*<br/>
+*_Pm*\
 Puntatore alla funzione membro di classe `Type` da convertire in un oggetto funzione.
 
-*_Pleft*<br/>
+*Pleft*\
 L'oggetto che il *_Pm* funzione membro viene chiamata su.
 
-*right*<br/>
+*Ok*\
 L'argomento che viene assegnato a *_Pm*.
 
 ## <a name="return-value"></a>Valore restituito
@@ -49,19 +48,8 @@ Funzione binaria adattabile.
 
 ## <a name="remarks"></a>Note
 
-La classe modello archivia una copia della *_Pm*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` che restituisce ( **_Pleft**->\* `_Pm`)( **right**).
+La classe modello archivia una copia della *_Pm*, che deve essere un puntatore a una funzione membro della classe `Type`, in un oggetto membro privato. Definisce la relativa funzione membro `operator()` prevede la restituzione (**pleft** -> \* `_Pm`) (**destro**).
 
 ## <a name="example"></a>Esempio
 
 Il costruttore di `mem_fun1_t` non viene usato in genere direttamente. Per adattare le funzioni membro, viene usata la funzione helper `mem_fun`. Per un esempio di come usare gli adattatori di funzione membro, vedere [mem_fun](../standard-library/functional-functions.md#mem_fun).
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<functional>
-
-**Spazio dei nomi:** std
-
-## <a name="see-also"></a>Vedere anche
-
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

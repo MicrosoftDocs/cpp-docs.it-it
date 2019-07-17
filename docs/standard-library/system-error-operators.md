@@ -5,20 +5,16 @@ f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d5c8f49c4a38862d62b7fe8212d98c87949fecfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412124"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246217"
 ---
 # <a name="ltsystemerrorgt-operators"></a>Operatori &lt;system_error&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&lt;](#op_lt)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto a destra.
 
@@ -28,14 +24,18 @@ bool operator==(const error_code& left,
 
 bool operator==(const error_condition& left,
     const error_code& right);
+
+bool operator==(const error_condition& left,
+    const error_condition& right);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*left*|Oggetto di cui verificare l'uguaglianza.|
-|*right*|Oggetto di cui verificare l'uguaglianza.|
+*A sinistra*\
+Oggetto di cui verificare l'uguaglianza.
+
+*Ok*\
+Oggetto di cui verificare l'uguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -45,24 +45,24 @@ bool operator==(const error_condition& left,
 
 Questa funzione restituisce `left.category() == right.category() && left.value() == right.value()`.
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.
 
 ```cpp
-bool operator!=(const error_code& left,
-    const error_condition& right);
-
-bool operator!=(const error_condition& left,
-    const error_code& right);
+bool operator!=(const error_code& left, const error_condition& right);
+bool operator!=(const error_condition& left, const error_code& right);
+bool operator!=(const error_code& left, const error_code& right);
+bool operator!=(const error_condition& left, const error_condition& right);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*left*|Oggetto di cui verificare la disuguaglianza.|
-|*right*|Oggetto di cui verificare la disuguaglianza.|
+*A sinistra*\
+Oggetto di cui verificare la disuguaglianza.
+
+*Ok*\
+Oggetto di cui verificare la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -72,7 +72,7 @@ bool operator!=(const error_condition& left,
 
 Questa funzione restituisce `!(left == right)`.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Verifica se un oggetto è più piccolo dell'oggetto passato per il confronto.
 
@@ -102,10 +102,11 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*left*|Oggetto da confrontare.|
-|*right*|Oggetto da confrontare.|
+*A sinistra*\
+Oggetto da confrontare.
+
+*Ok*\
+Oggetto da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -115,6 +116,9 @@ inline bool operator<(
 
 Questa funzione consente di verificare l'ordine degli errori.
 
-## <a name="see-also"></a>Vedere anche
+## <a name="op_ostream"></a> Operatore&lt;&lt;
 
-[<system_error>](../standard-library/system-error.md)<br/>
+```cpp
+template <class charT, class traits> 
+    basic_ostream<charT, traits>& operator<<(basic_ostream<charT, traits>& os, const error_code& ec);
+```

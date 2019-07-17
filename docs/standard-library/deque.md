@@ -6,26 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 4c9746a0ffee654bb783e30e9a98e708b68048cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167bdc324a67d8b1379f279e8fcc363ee6b0fca2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393987"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246731"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
 Definisce l'oggetto deque della classe modello del contenitore e diversi modelli di supporto.
 
-## <a name="syntax"></a>Sintassi
+## <a name="requirements"></a>Requisiti
 
-```cpp
-#include <deque>
-```
+**Intestazione**: \<deque >
+
+> [!NOTE]
+> Il \<deque > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
 |[operator!=](../standard-library/deque-operators.md#op_neq)|Verifica se l'oggetto deque sul lato sinistro dell'operatore non è uguale all'oggetto deque sul lato destro.|
 |[operator<](../standard-library/deque-operators.md#op_lt)|Verifica se l'oggetto deque sul lato sinistro dell'operatore è minore dell'oggetto deque sul lato destro.|
@@ -36,13 +39,13 @@ Definisce l'oggetto deque della classe modello del contenitore e diversi modelli
 
 ### <a name="functions"></a>Funzioni
 
-|Funzione|Descrizione|
+|||
 |-|-|
 |[swap](../standard-library/deque-functions.md#swap)|Scambia gli elementi di due deque.|
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|||
 |-|-|
 |[Classe deque](../standard-library/deque-class.md)|Una classe modello di contenitori di sequenza che organizzano gli elementi di un determinato tipo in una disposizione lineare e, come i vettori, consentono l'accesso casuale veloce a qualsiasi elemento e l'inserimento e l'eliminazione efficienti sul retro del contenitore.|
 

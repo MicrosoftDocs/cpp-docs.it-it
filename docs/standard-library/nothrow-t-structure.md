@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nothrow_t class
 ms.assetid: dc7d5d42-ed5a-4919-88fe-bbad519b7a1d
-ms.openlocfilehash: 2313c436a1fd25149fa7ea72f122a6f323b40028
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd65b5006326850522a251cbcf7d655133a1aa8a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223623"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245574"
 ---
 # <a name="nothrowt-structure"></a>Struttura nothrow_t
 
@@ -30,13 +30,3 @@ La struttura consente al compilatore di selezionare la versione corretta del cos
 ## <a name="example"></a>Esempio
 
 Vedere [operator new](../standard-library/new-operators.md#op_new) e [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) per esempi relativi all'uso di `std::nothrow_t` come parametro di funzione.
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<new>
-
-**Spazio dei nomi:** std
-
-## <a name="see-also"></a>Vedere anche
-
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

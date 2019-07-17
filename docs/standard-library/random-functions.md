@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 80bdb1ca83be5fb390035d7f3b005793a2f03715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370346"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240393"
 ---
 # <a name="ltrandomgt-functions"></a>Funzioni &lt;random&gt;
 
-## <a name="generate_canonical"></a>  generate_canonical
+## <a name="generate_canonical"></a> generate_canonical
 
 Restituisce un valore a virgola mobile da una sequenza casuale.
 
@@ -29,19 +29,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*<br/>
+*RealType*\
 Tipo integrale a virgola mobile. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*BITS*<br/>
+*BITS*\
 Generatore di numeri casuali.
 
-*Gen*<br/>
+*Generazione*\
 Generatore di numeri casuali.
 
 ### <a name="remarks"></a>Note
 
 Le chiamate di funzione di modello `operator()` dei *Gen* più volte e inserisce i valori restituiti in un valore a virgola mobile `x` di tipo *RealType* fino a quando non dispone di recupero del numero specificato di bit di mantissa in `x`. Il numero specificato è il meno elevato tra *Bits* (che deve essere diverso da zero) e il numero completo di bit di mantissa *RealType*. La prima chiamata fornisce i bit di livello più basso. La funzione restituisce `x`.
-
-## <a name="see-also"></a>Vedere anche
-
-[\<random>](../standard-library/random.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 2ebaee81b792f9acc475fe25ac1ef7cc7a78a0de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db04569d3938c673653ac36eeebdabc9cb725c1e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376159"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244736"
 ---
 # <a name="complex-class"></a>Classe complex
 
@@ -42,28 +42,30 @@ In particolare, non possono esistere sottili differenze tra il costruttore di co
 
 Per i tre tipi a virgola mobile esistono specializzazioni esplicite della classe modello complex. In questa implementazione, un valore di qualsiasi altro tipo `Type` è il cast di tipo a **doppie** per i calcoli effettivi, con il **double** risultato assegnato all'oggetto archiviato di tipo `Type`.
 
+## <a name="members"></a>Members
+
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|||
 |-|-|
 |[complex](#complex)|Costruisce un numero complesso con parti reali e immaginarie specificate oppure come copia di un altro numero complesso.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|||
 |-|-|
 |[value_type](#value_type)|Tipo che rappresenta il tipo di dati usato per rappresentare le parti reale e immaginaria di un numero complesso.|
 
-### <a name="member-functions"></a>Funzioni membro
+### <a name="functions"></a>Funzioni
 
-|Funzione membro|Descrizione|
+|||
 |-|-|
 |[imag](#imag)|Estrae il componente immaginario di un numero complesso.|
 |[real](#real)|Estrae il componente reale di un numero complesso.|
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
 |[operator*=](#op_star_eq)|Moltiplica un numero complesso di destinazione per un fattore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.|
 |[operator+=](#op_add_eq)|Aggiunge un numero a un numero complesso di destinazione, in cui il numero aggiunto può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene aggiunto.|
@@ -71,13 +73,9 @@ Per i tre tipi a virgola mobile esistono specializzazioni esplicite della classe
 |[operator/=](#op_div_eq)|Divide un numero complesso di destinazione per un divisore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.|
 |[operator=](#op_eq)|Assegna un numero a un numero complesso di destinazione, in cui il numero assegnato può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene assegnato.|
 
-## <a name="requirements"></a>Requisiti
 
-**Intestazione**: \<complex>
 
-**Spazio dei nomi:** std
-
-## <a name="complex"></a>  complex::complex
+## <a name="complex"></a> complesse
 
 Costruisce un numero complesso con parti reali e immaginarie specificate oppure come copia di un altro numero complesso.
 
@@ -93,13 +91,13 @@ constexpr complex(
 
 ### <a name="parameters"></a>Parametri
 
-*_RealVal*<br/>
+*_RealVal*\
 Valore della parte reale usata per inizializzare il numero complesso da costruire.
 
-*_ImagVal*<br/>
+*_ImagVal*\
 Valore della parte immaginaria usata per inizializzare il numero complesso da costruire.
 
-*complexNum*<br/>
+*complexNum*\
 Numero complesso le cui parti reale e immaginaria vengono usate per inizializzare il numero complesso da costruire.
 
 ### <a name="remarks"></a>Note
@@ -161,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>  complex::imag
+## <a name="imag"></a> imag
 
 Estrae il componente immaginario di un numero complesso.
 
@@ -173,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Numero complesso di cui estrarre il valore immaginario.
 
 ### <a name="return-value"></a>Valore restituito
@@ -215,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a>  complex::operator*=
+## <a name="op_star_eq"></a> operatore * =
 
 Moltiplica un numero complesso di destinazione per un fattore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.
 
@@ -230,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -300,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a>  complex::operator+=
+## <a name="op_add_eq"></a> operator + =
 
 Aggiunge un numero a un numero complesso di destinazione, in cui il numero aggiunto può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene aggiunto.
 
@@ -315,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -403,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a>  complex::operator-=
+## <a name="operator-_eq"></a> operatore =
 
 Sottrae un numero da un numero complesso di destinazione, in cui il numero sottratto può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene aggiunto.
 
@@ -418,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum*<br/>
+*complexNum*\
 Numero complesso da sottrarre dal numero complesso di destinazione.
 
-*_RealPart*<br/>
+*_RealPart*\
 Numero reale da sottrarre dal numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -511,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>  complex::operator/=
+## <a name="op_div_eq"></a> operatore / =
 
 Divide un numero complesso di destinazione per un divisore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.
 
@@ -526,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Parametri
 
-*complexNum*<br/>
+*complexNum*\
 Numero complesso da sottrarre dal numero complesso di destinazione.
 
-*_RealPart*<br/>
+*_RealPart*\
 Numero reale da sottrarre dal numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -615,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a>  complex::operator=
+## <a name="op_eq"></a> operator=
 
 Assegna un numero a un numero complesso di destinazione, in cui il numero assegnato può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene assegnato.
 
@@ -628,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Numero complesso o numero dello stesso tipo del parametro del numero complesso di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -693,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a>  complex::real
+## <a name="real"></a> Real
 
 Ottiene o imposta il componente reale di un numero complesso.
 
@@ -705,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Numero complesso di cui estrarre il valore reale.
 
 ### <a name="return-value"></a>Valore restituito
@@ -747,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a>  complex::value_type
+## <a name="value_type"></a> value_type
 
 Tipo che rappresenta il tipo di dati usato per rappresentare le parti reale e immaginaria di un numero complesso.
 

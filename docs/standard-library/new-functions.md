@@ -2,23 +2,64 @@
 title: Funzioni &lt;new&gt;
 ms.date: 11/04/2016
 f1_keywords:
+- new/std::get_new_handler
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: b5803b5fdf44392b6096f9c9a5ebdde7f94eae59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223732"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243670"
 ---
 # <a name="ltnewgt-functions"></a>Funzioni &lt;new&gt;
 
-|||
-|-|-|
-|[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|
+## <a name="get_new_handler"></a> get_new_handler
 
-## <a name="nothrow"></a>  nothrow
+```cpp
+new_handler get_new_handler() noexcept;
+```
+
+### <a name="remarks"></a>Note
+
+Restituisce l'attuale `new_handler`.
+
+## <a name="launder"></a> riciclare
+
+```cpp
+template <class T>
+    constexpr T* launder(T* ptr) noexcept;
+```
+
+### <a name="parameters"></a>Parametri
+
+*PTR*\
+L'indirizzo di un byte in memoria che contiene un oggetto il cui tipo è simile a *T*.
+
+### <a name="return-value"></a>Valore restituito
+
+Hodnotu typu *T\**  che punta a X.
+
+### <a name="remarks"></a>Note
+
+Detta anche una barriera di ottimizzazione del puntatore.
+
+Quando il valore del relativo argomento può essere usato in un'espressione costante, usato come espressione costante. Un byte di spazio di archiviazione è raggiungibile tramite un valore del puntatore che punta a un oggetto se entro lo spazio di archiviazione occupata da un altro oggetto, un oggetto con un puntatore simile.
+
+### <a name="example"></a>Esempio
+
+```cpp
+struct X { const int n; };
+
+X *p = new X{3};
+const int a = p->n;
+new (p) X{5}; // p does not point to new object because X::n is const
+const int b = p->n; // undefined behavior
+const int c = std::launder(p)->n; // OK
+```
+
+## <a name="nothrow"></a> nothrow
 
 Fornisce un oggetto da utilizzare come argomento per il **nothrow** le versioni di **nuove** e **Elimina**.
 
@@ -34,7 +75,7 @@ L'oggetto viene usato come argomento di funzione in modo da stabilire una corris
 
 Vedere [operator new](../standard-library/new-operators.md#op_new) e [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) per esempi relativi all'uso di `std::nothrow_t` come parametro di funzione.
 
-## <a name="set_new_handler"></a>  set_new_handler
+## <a name="set_new_handler"></a> set_new_handler
 
 Installa una funzione utente che deve essere chiamato quando **operatore new** non riesce ad allocare memoria.
 
@@ -44,7 +85,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*Pnew*<br/>
+*Pnew*\
 Il `new_handler` da installare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -117,7 +158,3 @@ Allocating 5000000 ints.
 The new_handler is called:
 bad allocation
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[\<new>](../standard-library/new.md)<br/>

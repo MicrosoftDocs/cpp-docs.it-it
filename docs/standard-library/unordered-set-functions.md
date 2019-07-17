@@ -5,20 +5,16 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: a6e005918730a2ca1f52469130e2ea2cf1547fc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376994"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243418"
 ---
 # <a name="ltunorderedsetgt-functions"></a>Funzioni &lt;unordered_set&gt;
 
-|||
-|-|-|
-|[swap (set)](#swap)|[swap (unordered_multiset)](#swap_unordered_multiset)|
-
-## <a name="swap"></a>  swap (unordered_set)
+## <a name="swap"></a> swap (unordered_set)
 
 Scambia il contenuto di due contenitori.
 
@@ -32,22 +28,22 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-*Key*<br/>
+*Chiave*\
 Tipo di chiave.
 
-*Hash*<br/>
+*hash*\
 Tipo di oggetto della funzione hash.
 
-*Pred*<br/>
+*Pred*\
 Tipo di oggetto della funzione di confronto di uguaglianza.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*A sinistra*\
 Primo contenitore da scambiare.
 
-*right*<br/>
+*Ok*\
 Secondo contenitore da scambiare.
 
 ### <a name="remarks"></a>Note
@@ -102,18 +98,16 @@ return (0);
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>  swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
 
 Scambia il contenuto di due contenitori.
 
 ```
-
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -122,22 +116,22 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-*Key*<br/>
+*Chiave*\
 Tipo di chiave.
 
-*Hash*<br/>
+*hash*\
 Tipo di oggetto della funzione hash.
 
-*Pred*<br/>
+*Pred*\
 Tipo di oggetto della funzione di confronto di uguaglianza.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*A sinistra*\
 Primo contenitore da scambiare.
 
-*right*<br/>
+*Ok*\
 Secondo contenitore da scambiare.
 
 ### <a name="remarks"></a>Note
@@ -194,12 +188,7 @@ int main()
 ```
 
 ```Output
-
 [c] [b] [a]
 [f] [e] [d]
 [c] [b] [a]
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>

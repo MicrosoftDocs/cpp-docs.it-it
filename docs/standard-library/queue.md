@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: ed1960dffa4bfe8b1ae4105f9f31943fa7a30212
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 641ab1bfe99360320509b806149fcedfe1068879
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369865"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240357"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
 Definisce l'oggetto priority_queue delle classi modello, nonché la coda e diversi modelli di supporto.
 
-## <a name="syntax"></a>Sintassi
+## <a name="requirements"></a>Requisiti
 
-```cpp
-#include <queue>
-```
+**Intestazione:** \<queue>
+
+**Spazio dei nomi:** std
+
+> [!NOTE]
+> Il \<coda > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
 |[operator!=](../standard-library/queue-operators.md#op_neq)|Verifica se l'oggetto queue a sinistra dell'operatore non è uguale all'oggetto queue a destra.|
 |[operator<](../standard-library/queue-operators.md#op_lt)|Verifica se l'oggetto queue a sinistra dell'operatore è minore dell'oggetto queue a destra.|
@@ -34,9 +39,15 @@ Definisce l'oggetto priority_queue delle classi modello, nonché la coda e diver
 |[operator>](../standard-library/queue-operators.md#op_gt)|Verifica se l'oggetto queue a sinistra dell'operatore è maggiore dell'oggetto queue a destra.|
 |[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Verifica se l'oggetto queue a sinistra dell'operatore è maggiore o uguale all'oggetto queue a destra.|
 
+### <a name="functions"></a>Funzioni
+
+|||
+|-|-|
+|[swap]()||
+
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|||
 |-|-|
 |[Classe queue](../standard-library/queue-class.md)|Classe di adattatori di contenitori di modelli che fornisce una restrizione di funzionalità, limitando l'accesso agli elementi anteriore e posteriore di un tipo di contenitore sottostante.|
 |[Classe priority_queue](../standard-library/priority-queue-class.md)|Classe di adattatori di contenitori di modelli che fornisce una restrizione di funzionalità, limitando l'accesso all'elemento superiore di un tipo di contenitore sottostante, che è sempre il più grande.|

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413177"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245414"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -152,7 +152,7 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[combine](#combine)|Inserisce un facet delle impostazioni locali specificate nelle impostazioni locali di destinazione.|
 |[name](#name)|Restituisce il nome delle impostazioni locali archiviate.|
@@ -166,8 +166,9 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|Descrizione|
 |-|-|
+|[operator=](#op_eq)|Assegna le impostazioni locali.|
 |[operator!=](#op_neq)|Verifica l'ineguaglianza di due impostazioni locali.|
 |[operator( )](#op_call)|Confronta due oggetti `basic_string`.|
 |[operator==](#op_eq_eq)|Verifica l'uguaglianza di due impostazioni locali.|
@@ -177,7 +178,7 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 |Classe|Descrizione|
 |-|-|
 |[facet](#facet_class)|Classe utilizzata come classe base per tutti i facet delle impostazioni locali.|
-|[ID](#id_class)|La classe di membro fornisce un'identificazione dei facet univoca utilizzata come indice per cercare i facet nelle impostazioni locali.|
+|[id](#id_class)|La classe di membro fornisce un'identificazione dei facet univoca utilizzata come indice per cercare i facet nelle impostazioni locali.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -417,7 +418,7 @@ La classe membro descrive l'oggetto membro statico richiesto da ciascun facet de
 
 ## <a name="locale"></a>  locale::locale
 
-Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali.
+Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali. Include inoltre un distruttore.
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -548,6 +551,14 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
+## <a name="op_eq"></a>  locale:: operator =
+
+Assegna le impostazioni locali.
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
+```
+
 ## <a name="op_neq"></a>  locale::operator!=
 
 Verifica l'ineguaglianza di due impostazioni locali.
@@ -632,9 +643,9 @@ Stringa destra.
 
 La funzione membro restituisce:
 
-- - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
+- \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- + 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 

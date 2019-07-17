@@ -7,46 +7,51 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: 9bba893f63ca935e0feeb891faa4e141e1958306
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4365f0aaf8fdd4d43159b78acf6dcffa4fcbe428
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412098"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246554"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
 Includere l'intestazione \<system_error > per definire la classe di eccezione `system_error` e i modelli correlati per l'elaborazione di errori di sistema di basso livello.
 
-## <a name="syntax"></a>Sintassi
+## <a name="requirements"></a>Requisiti
 
-```cpp
-#include <system_error>
-```
+**Intestazione:** \<system_error>
+
+**Spazio dei nomi:** std
+
+## <a name="members"></a>Members
 
 ### <a name="objects"></a>Oggetti
 
 |||
 |-|-|
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|Rappresenta la categoria di errori generici.|
+|[is_error_code_enum_v](../standard-library/system-error-functions.md#is_error_code_enum_v)||
+|[is_error_condition_enum_v](../standard-library/system-error-functions.md#is_error_condition_enum_v)||
 |[system_category](../standard-library/system-error-functions.md#system_category)|Rappresenta la categoria di errori causati da un overflow di basso livello del sistema.|
 
 ### <a name="functions"></a>Funzioni
 
-|Funzione|Descrizione|
+|||
 |-|-|
 |[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Crea un oggetto `error_code`.|
 |[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Crea un oggetto `error_condition`.|
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
 |[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Verifica se l'oggetto a sinistra dell'operatore è uguale all'oggetto a destra.|
 |[operator!=](../standard-library/system-error-operators.md#op_neq)|Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.|
 |[operator<](../standard-library/system-error-operators.md#op_lt)|Verifica se un oggetto è più piccolo dell'oggetto passato per il confronto.|
+|[operator<<](../standard-library/system-error-operators.md#op_ostream)||
 
-### <a name="enumerations"></a>Enumerazioni
+### <a name="enums"></a>Enumerazioni
 
 |||
 |-|-|
@@ -59,15 +64,10 @@ Includere l'intestazione \<system_error > per definire la classe di eccezione `s
 |[error_category](../standard-library/error-category-class.md)|Rappresenta la base comune astratta per gli oggetti che descrive una categoria di codici di errore.|
 |[error_code](../standard-library/error-code-class.md)|Rappresenta gli errori di sistema di basso livello che sono specifici dell'implementazione.|
 |[error_condition](../standard-library/error-condition-class.md)|Rappresenta i codici di errore definiti dall'utente.|
+|[hash](../standard-library/hash-structure.md#system_error)||
 |[is_error_code_enum](../standard-library/is-error-code-enum-class.md)|Rappresenta un predicato di tipo che verifica l'enumerazione della classe [error_code](../standard-library/error-code-class.md).|
 |[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Rappresenta un predicato di tipo che verifica l'enumerazione per la classe [error_condition](../standard-library/error-condition-class.md).|
 |[system_error](../standard-library/system-error-class.md)|Rappresenta la classe di base per tutte le eccezioni generate per segnalare un overflow di basso livello del sistema.|
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<system_error>
-
-**Spazio dei nomi:** std
 
 ## <a name="see-also"></a>Vedere anche
 

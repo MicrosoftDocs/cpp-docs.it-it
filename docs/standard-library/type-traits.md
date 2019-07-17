@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278982"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243528"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -110,6 +110,7 @@ Proprietà dei tipi
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Verifica se il tipo è una classe polimorfica.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Verifica se il tipo è una classe astratta.|
 |[is_final](../standard-library/is-final-class.md)|Verifica se il tipo è un tipo di classe contrassegnato come `final`.|
+|[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|Verifica se il tipo è un intero con segno.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Verifica se il tipo è un intero senza segno.|
 |[is_constructible](../standard-library/is-constructible-class.md)|Verifica se il tipo è costruibile mediante i tipi di argomento specificati.|
@@ -119,6 +120,8 @@ Proprietà dei tipi
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Verifica se al primo tipo può essere assegnato un valore del secondo tipo.|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Verifica se al primo tipo può essere assegnato un valore del secondo tipo.|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Verifica se al primo tipo può essere assegnato un riferimento rvalue del tipo.|
+|[is_swappable](../standard-library/type-traits-functions.md#is_swappable)||
+|[is_swappable_with](../standard-library/type-traits-functions.md#is_swappable_with)||
 |[is_destructible](../standard-library/is-destructible-class.md)|Verifica se il tipo è destructible.|
 |[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Verifica se il tipo non usa alcuna operazione non semplice quando viene costruito mediante i tipi specificati.|
 |[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Verifica se il tipo non usa alcuna operazione non semplice quando viene costruito per impostazione predefinita.|
@@ -135,8 +138,11 @@ Proprietà dei tipi
 |[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Verifica se il tipo è assegnabile mediante il tipo specificato e se l'assegnazione è nota come operazione che non genera eccezioni.|
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Verifica se il tipo è assegnabile mediante copia e se l'assegnazione è nota come operazione che non genera eccezioni.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Verifica se il tipo è assegnabile mediante spostamento e se l'assegnazione è nota come operazione che non genera eccezioni.|
+|[is_nothrow_swappable](../standard-library/type-traits-functions.md#is_nothrow_swappable)||
+|[is_nothrow_swappable_with](../standard-library/type-traits-functions.md#is_nothrow_swappable_with)||
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Verifica se il tipo è distruttibile e se il distruttore è noto come elemento che non genera eccezioni.|
 |`has_virtual_destructor`|Verifica se il tipo ha un distruttore virtuale.|
+|`has_unique_object_representations`||
 | [is_invocable](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando tipi di argomenti specificati.<br/> Aggiunta di c++17. |
 | [is_invocable_r](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato mediante i tipi di argomento specificati e il risultato è convertibile nel tipo specificato.<br/> Aggiunta di c++17. |
 | [is_nothrow_invocable](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando l'argomento specificato di tipi ed è noto per non generare eccezioni.<br/> Aggiunta di c++17. |
@@ -211,6 +217,14 @@ Altre trasformazioni
 |[invoke_result](invoke-result-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. <br/>Aggiunta di c++17. |
 |[result_of](../standard-library/result-of-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. <br/>Aggiunto in c++14, deprecata in c++17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Genera il tipo integrale sottostante per un tipo di enumerazione.|
+
+Tratti di operatore logico
+
+|||
+|-|-|
+|[combinazione](../standard-library/conjunction-class.md)||
+|[disgiunzione](../standard-library/disjunction-class.md)||
+|[Negazione](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>Vedere anche
 

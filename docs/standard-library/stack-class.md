@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412436"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241056"
 ---
 # <a name="stack-class"></a>Classe stack
 
@@ -40,11 +40,11 @@ class stack
 
 ### <a name="parameters"></a>Parametri
 
-*Type*<br/>
+*Tipo*\
 Tipo di dati degli elementi da archiviare nello stack.
 
-*Container*<br/>
-Tipo del contenitore sottostante usato per implementare lo stack. Il valore predefinito è la classe `deque`*\<Type>*.
+*Contenitore*\
+Tipo del contenitore sottostante usato per implementare lo stack. Il valore predefinito è la classe `deque` *\<Type>* .
 
 ## <a name="remarks"></a>Note
 
@@ -60,23 +60,25 @@ Gli oggetti stack sono di tipo equalitycomparable se e solo se gli elementi dell
 
 - La [classe priority_queue](../standard-library/priority-queue-class.md) ordina gli elementi in modo che l'elemento più grande sia sempre in prima posizione. Supporta l'inserimento di un elemento e l'ispezione e la rimozione del primo elemento. Una buona analogia è costituita da una fila di persone disposte in base a età, altezza o qualche altro criterio.
 
+## <a name="members"></a>Members
+
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|||
 |-|-|
 |[stack](#stack)|Costruisce un `stack` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|||
 |-|-|
 |[container_type](#container_type)|Tipo che fornisce il contenitore di base che deve essere adattato da un oggetto `stack`.|
 |[size_type](#size_type)|Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un `stack`.|
 |[value_type](#value_type)|Tipo che rappresenta il tipo di oggetto archiviato come elemento in `stack`.|
 
-### <a name="member-functions"></a>Funzioni membro
+### <a name="functions"></a>Funzioni
 
-|Funzione membro|Descrizione|
+|||
 |-|-|
 |[empty](#empty)|Verifica se `stack` è vuoto.|
 |[pop](#pop)|Rimuove l'elemento dalla parte superiore di `stack`.|
@@ -84,13 +86,7 @@ Gli oggetti stack sono di tipo equalitycomparable se e solo se gli elementi dell
 |[size](#size)|Restituisce il numero di elementi nel `stack`.|
 |[top](#top)|Restituisce un riferimento a un elemento nella parte superiore di `stack`.|
 
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<stack>
-
-**Spazio dei nomi:** std
-
-## <a name="container_type"></a>  stack::container_type
+## <a name="container_type"></a> container_type
 
 Tipo che fornisce il contenitore di base da adattare.
 
@@ -108,7 +104,7 @@ Per altre informazioni su `Container`, vedere la sezione Note dell'argomento [Cl
 
 Vedere l'esempio relativo a [stack::stack](#stack) per indicazioni su come dichiarare e usare `container_type`.
 
-## <a name="empty"></a>  stack::empty
+## <a name="empty"></a> vuota
 
 Verifica se uno stack è vuoto.
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>  stack::pop
+## <a name="pop"></a> POP
 
 Rimuove l'elemento all'inizio dello stack.
 
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>  stack::push
+## <a name="push"></a> push
 
 Aggiunge un elemento all'inizio dello stack.
 
@@ -219,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-*val*<br/>
+*Val*\
 Elemento aggiunto all'inizio dello stack.
 
 ### <a name="remarks"></a>Note
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>  stack::size
+## <a name="size"></a> Dimensioni
 
 Restituisce il numero di elementi presenti nello stack.
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>  stack::size_type
+## <a name="size_type"></a> size_type
 
 Tipo Unsigned Integer in grado di rappresentare il numero di elementi di uno stack.
 
@@ -315,7 +311,7 @@ Il tipo è un sinonimo del `size_type` del contenitore di base adattato dallo st
 
 Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`.
 
-## <a name="stack"></a>  stack::stack
+## <a name="stack"></a> Stack
 
 Costruisce uno stack vuoto o che rappresenta una copia totale o parziale di una classe contenitore di base.
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Contenitore di cui lo stack costruito deve essere una copia.
 
 ### <a name="example"></a>Esempio
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>  stack::top
+## <a name="top"></a> In alto
 
 Restituisce un riferimento a un elemento all'inizio dello stack.
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a>  stack::value_type
+## <a name="value_type"></a> value_type
 
 Tipo che rappresenta il tipo di oggetto archiviato come elemento in uno stack.
 

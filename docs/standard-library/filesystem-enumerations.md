@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405131"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240751"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerazioni &lt;filesystem&gt;
 
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Valori
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
 |`none`|Comportamento predefinito: ignorare i collegamenti simbolici a directory. L'autorizzazione negata è un errore.|
 |`follow_directory_symlink`|Considerare i collegamenti simbolici a directory come directory effettive.|
@@ -119,6 +119,14 @@ enum class file_type {
 |`fifo`|6|Rappresenta un file FIFO nei sistemi basati su UNIX. (non supportato).|
 |`socket`|7|Rappresenta un socket nei sistemi basati su UNIX. (non supportato).|
 |`unknown`|8|Rappresenta un file il cui stato non può essere determinato.|
+
+## <a name="perm_options"></a>  perm_options
+
+Include i valori `replace`, `add`, `remove`, e `nofollow`.
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 

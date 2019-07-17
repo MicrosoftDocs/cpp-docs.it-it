@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 496b728b67c4539a63d5bf3c783f8c9145c1de42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369904"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240286"
 ---
 # <a name="ltqueuegt-operators"></a>Operatori &lt;queue&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto queue a sinistra dell'operatore non è uguale all'oggetto queue a destra.
 
@@ -40,10 +35,10 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Oggetto di tipo `queue`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -97,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Verifica se l'oggetto queue a sinistra dell'operatore è minore dell'oggetto queue a destra.
 
@@ -107,10 +102,10 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Oggetto di tipo `queue`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -160,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> Operatore&lt;=
 
 Verifica se l'oggetto queue a sinistra dell'operatore è minore o uguale all'oggetto queue a destra.
 
@@ -170,10 +165,10 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Oggetto di tipo `queue`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -225,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Verifica se l'oggetto queue a sinistra dell'operatore è uguale all'oggetto queue a destra.
 
@@ -235,10 +230,10 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Oggetto di tipo `queue`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -291,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 Verifica se l'oggetto queue a sinistra dell'operatore è maggiore dell'oggetto queue a destra.
 
@@ -301,10 +296,10 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Oggetto di tipo `queue`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -357,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> Operatore&gt;=
 
 Verifica se l'oggetto queue a sinistra dell'operatore è maggiore o uguale all'oggetto queue a destra.
 
@@ -367,10 +362,10 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Oggetto di tipo `queue`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `queue`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -421,7 +416,3 @@ int main( )
 The queue q1 is less than the queue q2.
 The queue q1 is greater than or equal to the queue q3.
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[\<queue>](../standard-library/queue.md)<br/>

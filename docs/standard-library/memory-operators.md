@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348458"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243826"
 ---
 # <a name="ltmemorygt-operators"></a>Operatori &lt;memory&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operatore! =
 
 Verifica la disuguaglianza tra oggetti.
 
@@ -48,16 +42,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Uno degli oggetti di cui verificare la disuguaglianza.
 
-*right*<br/>
+*Ok*\
 Uno degli oggetti di cui verificare la disuguaglianza.
 
-*Ty1*<br/>
+*Ty1*\
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*<br/>
+*Ty2*\
 Tipo controllato dal puntatore condiviso destro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Verifica l'uguaglianza tra oggetti.
 
@@ -149,16 +143,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Uno degli oggetti di cui verificare l'uguaglianza.
 
-*right*<br/>
+*Ok*\
 Uno degli oggetti di cui verificare l'uguaglianza.
 
-*Ty1*<br/>
+*Ty1*\
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*<br/>
+*Ty2*\
 Tipo controllato dal puntatore condiviso destro.
 
 ### <a name="return-value"></a>Valore restituito
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> Operatore&gt;=
 
 Verifica se un oggetto è maggiore o uguale a un secondo oggetto.
 
@@ -256,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Uno degli oggetti da confrontare.
 
-*right*<br/>
+*Ok*\
 Uno degli oggetti da confrontare.
 
-*Ty1*<br/>
+*Ty1*\
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*<br/>
+*Ty2*\
 Tipo controllato dal puntatore condiviso destro.
 
 ### <a name="remarks"></a>Note
 
 L'operatore modello restituiscono `left.get() >= right.get()`.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt">Operatore </a>&lt;
 
 Verifica se un oggetto è minore di un secondo oggetto.
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Uno degli oggetti da confrontare.
 
-*right*<br/>
+*Ok*\
 Uno degli oggetti da confrontare.
 
-*Ty1*<br/>
+*Ty1*\
 Tipo controllato dal puntatore sinistro.
 
-*Ty2*<br/>
+*Ty2*\
 Tipo controllato dal puntatore destro.
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="op_lt_eq"></a> Operatore&lt;=
 
 Verifica se un oggetto è minore o uguale a un secondo oggetto.
 
@@ -320,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Uno degli oggetti da confrontare.
 
-*right*<br/>
+*Ok*\
 Uno degli oggetti da confrontare.
 
-*Ty1*<br/>
+*Ty1*\
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*<br/>
+*Ty2*\
 Tipo controllato dal puntatore condiviso destro.
 
 ### <a name="remarks"></a>Note
 
 L'operatore modello restituiscono `left.get() <= right.get()`
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt">Operatore </a>&gt;
 
 Verifica se un oggetto è maggiore di un secondo oggetto.
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*A sinistra*\
 Uno degli oggetti da confrontare.
 
-*right*<br/>
+*Ok*\
 Uno degli oggetti da confrontare.
 
-*Ty1*<br/>
+*Ty1*\
 Tipo controllato dal puntatore condiviso sinistro.
 
-*Ty2*<br/>
+*Ty2*\
 Tipo controllato dal puntatore condiviso destro.
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="op_lt_lt"></a> Operatore&lt;&lt;
 
 Scrive il puntatore condiviso nel flusso.
 
@@ -378,19 +372,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*<br/>
+*Elem*\
 Tipo dell'elemento flusso.
 
-*Tr*<br/>
+*TR*\
 Tipo dei tratti dell'elemento flusso.
 
-*Ty*<br/>
+*Ty*\
 Tipo controllato dal puntatore condiviso.
 
-*out*<br/>
+*out*\
 Flusso di output.
 
-*sp*<br/>
+*SP*\
 Puntatore condiviso.
 
 ### <a name="remarks"></a>Note
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[\<memory>](../standard-library/memory.md)<br/>

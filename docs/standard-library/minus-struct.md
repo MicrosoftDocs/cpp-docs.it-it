@@ -7,12 +7,12 @@ helpviewer_keywords:
 - minus struct
 - minus class
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
-ms.openlocfilehash: 8683aca2656a4fd519be1dd7929448dfd221feac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e57023c78f944a038e94d851abdbf7909545295c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295786"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246780"
 ---
 # <a name="minus-struct"></a>minus (struct)
 
@@ -39,12 +39,13 @@ struct minus<void>
 
 ### <a name="parameters"></a>Parametri
 
-*Tipo di*, *T*, *U* un tipo che supporta un file binario `operator-` che accetta gli operandi dei tipi specificati o dedotti.
+*Tipo di*, *T*, *U*\
+Tipo che supporta un `operator-` binario che accetta gli operandi dei tipi specificati o dedotti.
 
-*A sinistra*<br/>
+*A sinistra*\
 Operando sinistro dell'operazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *T*.
 
-*A destra*<br/>
+*Ok*\
 Operando destro dell'operazione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo *tipo*. Il modello specializzato esegue un inoltro di lvalue perfetto e gli argomenti di riferimento rvalue del tipo di dedurre *U*.
 
 ## <a name="return-value"></a>Valore restituito
@@ -99,20 +100,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 1 5 9 13 17 21 )
 The vector v2 = ( -1 2 5 8 11 14 )
 The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
-*/
 ```
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<functional>
-
-**Spazio dei nomi:** std
-
-## <a name="see-also"></a>Vedere anche
-
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

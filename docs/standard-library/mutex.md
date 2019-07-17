@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 377ec995f4e61c957e8e620749f96523b60fed3e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224077"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240591"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -18,11 +18,11 @@ Includere l'intestazione standard \<mutex> per definire le classi `mutex`, `recu
 > [!WARNING]
 > A partire da Visual Studio 2015, i tipi di sincronizzazione della libreria Standard C++ si basano sulle primitive di sincronizzazione di Windows e non usano più ConcRT (tranne quando la piattaforma di destinazione è Windows XP). I tipi definiti in \<mutex> non devono essere usati con qualsiasi tipo o funzione ConcRT.
 
-## <a name="syntax"></a>Sintassi
+## <a name="requirements"></a>Requisiti
 
-```cpp
-#include <mutex>
-```
+**Intestazione:** \<mutex >
+
+**Spazio dei nomi:** std
 
 ## <a name="remarks"></a>Note
 
@@ -47,28 +47,33 @@ Un *tipo mutex programmato* soddisfa i requisiti per un tipo mutex. Inoltre, ha 
 
 Un tipo mutex è noto anche come *tipo bloccabile*. Se non fornisce la funzione membro `try_lock`, si tratta di un *tipo bloccabile di base*. Un tipo mutex programmato è noto anche come *tipo bloccabile programmato*.
 
+## <a name="members"></a>Members
+
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
-|----------|-----------------|
+|||
+|-|-|
 |[Classe lock_guard](../standard-library/lock-guard-class.md)|Rappresenta un modello di cui è possibile creare un’istanza per la creazione di un oggetto il cui distruttore sblocca un tipo `mutex`.|
 |[Classe mutex (libreria standard C++)](../standard-library/mutex-class-stl.md)|Rappresenta un tipo mutex. Gli oggetti di questo tipo possono essere utilizzati per gestire l'esclusione reciproca in un programma.|
 |[Classe recursive_mutex](../standard-library/recursive-mutex-class.md)|Rappresenta un tipo mutex. Contrariamente alla classe `mutex`, il comportamento di chiamata di metodi di blocco per gli oggetti che sono già stati bloccati è ben definito.|
 |[Classe recursive_timed_mutex](../standard-library/recursive-timed-mutex-class.md)|Rappresenta un tipo mutex programmato. Gli oggetti di questo tipo possono essere utilizzati per gestire l'esclusione reciproca con un blocco a tempo limitato all’interno di un programma. A differenza degli oggetti di tipo `timed_mutex`, l'effetto della chiamata di metodi di blocco per oggetti `recursive_timed_mutex` è ben definito.|
+|[Classe scoped_lock](../standard-library/scoped-lock-class.md)||
 |[Classe timed_mutex](../standard-library/timed-mutex-class.md)|Rappresenta un tipo mutex programmato. Gli oggetti di questo tipo possono essere utilizzati per gestire l'esclusione reciproca con un blocco a tempo limitato all’interno di un programma.|
 |[Classe unique_lock](../standard-library/unique-lock-class.md)|Rappresenta un modello di cui è possibile creare un’istanza per la creazione di oggetti che gestiscono il blocco e lo sblocco di un tipo `mutex`.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
-|----------|-----------------|
+|||
+|-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|Fornisce un meccanismo per chiamare un oggetto richiamabile esattamente una sola volta l'esecuzione.|
 |[lock](../standard-library/mutex-functions.md#lock)|Tenta di bloccare tutti gli argomenti senza deadlock.|
+|[swap](../standard-library/mutex-functions.md#swap)||
+|[try_lock](../standard-library/mutex-functions.md#try_lock)||
 
-### <a name="structs"></a>Strutture
+### <a name="structs"></a>Struct
 
-|Nome|Descrizione|
-|----------|-----------------|
+|||
+|-|-|
 |[Struttura adopt_lock_t](../standard-library/adopt-lock-t-structure.md)|Rappresenta un tipo che viene utilizzato per definire un `adopt_lock`.|
 |[Struttura defer_lock_t](../standard-library/defer-lock-t-structure.md)|Rappresenta un tipo che definisce un oggetto `defer_lock` che consente di selezionare uno dei costruttori di overload di `unique_lock`.|
 |[Struttura once_flag](../standard-library/once-flag-structure.md)|Rappresenta un **struct** che viene usato con la funzione modello `call_once` per assicurarsi che l'inizializzazione codice viene chiamato una sola volta, anche in presenza di più thread di esecuzione.|
@@ -76,8 +81,8 @@ Un tipo mutex è noto anche come *tipo bloccabile*. Se non fornisce la funzione 
 
 ### <a name="variables"></a>Variabili
 
-|Nome|Descrizione|
-|----------|-----------------|
+|||
+|-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Rappresenta un oggetto che è possibile passare ai costruttori di `lock_guard` e `unique_lock` per indicare che l'oggetto mutex, anch'esso passato al costruttore è bloccato.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Rappresenta un oggetto che può essere passato al costruttore di `unique_lock` per indicare che il costruttore non deve bloccare l'oggetto mutex anch’esso passato al costruttore.|
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Rappresenta un oggetto che può essere passato al costruttore di `unique_lock` per indicare che il costruttore deve provare a sbloccare l’oggetto `mutex` anch’esso passato al costruttore senza blocco.|

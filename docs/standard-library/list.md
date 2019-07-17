@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: cfe6e8b4f75a3dbf824574654bfba83dcbbd8ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2c04bb73bfa379ea87ba4c950bf805931c16ba1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413203"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245569"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -24,9 +24,14 @@ Definisce l'elenco di classi modello del contenitore e diversi modelli di suppor
 #include <list>
 ```
 
+> [!NOTE]
+> Il \<elenco > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+
+## <a name="members"></a>Members
+
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
 |[operator!=](../standard-library/list-operators.md#op_neq)|Verifica se l'oggetto elenco a sinistra dell'operatore non è uguale all'oggetto elenco a destra.|
 |[operator<](../standard-library/list-operators.md#op_lt)|Verifica se l'oggetto elenco a sinistra dell'operatore è minore dell'oggetto elenco a destra.|
@@ -35,9 +40,15 @@ Definisce l'elenco di classi modello del contenitore e diversi modelli di suppor
 |[operator>](../standard-library/list-operators.md#op_gt)|Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore dell'oggetto elenco a destra.|
 |[operator>=](../standard-library/list-operators.md#op_gt_eq)|Verifica se l'oggetto elenco a sinistra dell'operatore è maggiore o uguale all'oggetto elenco a destra.|
 
+### <a name="functions"></a>Funzioni
+
+|||
+|-|-|
+|[swap](../standard-library/list-functions.md#swap)|Scambia gli elementi di due elenchi.|
+
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|||
 |-|-|
 |[Classe list](../standard-library/list-class.md)|Classe modello di contenitori sequenziali che gestiscono gli elementi in una disposizione lineare e consentono inserimenti ed eliminazioni efficienti in qualsiasi posizione all'interno della sequenza.|
 

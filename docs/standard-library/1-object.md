@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: 183df5c2ff039ff9438b1a00c63318e16dc84c37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c1f13d40e02ec6e099ef1e2c20fe1cac4a4ef93
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411279"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246541"
 ---
 # <a name="1-object"></a>Oggetto _1
 
@@ -23,8 +23,7 @@ Segnaposto per gli argomenti sostituibili.
 
 ```cpp
 namespace placeholders {
-    extern unspecified _1,
-    _2, ... _M
+    extern unspecified _1, _2, ... _M
 } // namespace placeholders (within std)
 ```
 
@@ -84,14 +83,3 @@ int main()
 2^2 == 4
 3^2 == 9
 ```
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<functional>
-
-**Spazio dei nomi:** std
-
-## <a name="see-also"></a>Vedere anche
-
-[bind](../standard-library/functional-functions.md#bind)<br/>
-[Classe is_placeholder](../standard-library/is-placeholder-class.md)<br/>

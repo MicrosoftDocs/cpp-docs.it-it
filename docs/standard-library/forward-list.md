@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: cbde6268be0f501a220721cae498254dd0588eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20c5b83e0ce00c7634d32e6b63c92242c24d1b2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159379"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240643"
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 
 Definisce la classe modello contenitore forward_list e diversi modelli di supporto.
 
-## <a name="syntax"></a>Sintassi
+## <a name="requirements"></a>Requisiti
 
-```cpp
-#include <forward_list>
-```
+**Intestazione:** \<forward_list>
+
+**Spazio dei nomi:** std
+
+> [!NOTE]
+> Il \<forward_list > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
 |[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è uguale all'oggetto elenco di inoltro a destra.|
 |[operator!=](../standard-library/forward-list-operators.md#op_neq)|Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore non è uguale all'oggetto elenco di inoltro a destra.|
@@ -36,13 +41,13 @@ Definisce la classe modello contenitore forward_list e diversi modelli di suppor
 
 ### <a name="functions"></a>Funzioni
 
-|Funzione|Descrizione|
+|||
 |-|-|
 |[swap](../standard-library/forward-list-functions.md#swap)|Scambia gli elementi di due elenchi di inoltro.|
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|||
 |-|-|
 |[forward_list](../standard-library/forward-list-class.md)|Descrive un oggetto che controlla una sequenza di elementi di lunghezza variabile. La sequenza viene archiviata come elenco collegato singolarmente di elementi, ognuno dei quali contiene un membro di tipo `Type`.|
 

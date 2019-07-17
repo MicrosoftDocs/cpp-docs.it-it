@@ -5,20 +5,16 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 68f0ba605b62f2492f49a2b81030c42dca80bf5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413229"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245362"
 ---
 # <a name="ltlimitsgt-enums"></a>Enumerazioni &lt;limits&gt;
 
-|||
-|-|-|
-|[float_denorm_style](#float_denorm_style)|[float_round_style](#float_round_style)|
-
-## <a name="float_denorm_style"></a>  Enumerazione float_denorm_style
+## <a name="float_denorm_style"></a> float_denorm_style
 
 L'enumerazione descrive i vari metodi che un'implementazione può scegliere per la rappresentazione di un valore a virgola mobile denormalizzato, ovvero troppo piccolo per essere rappresentato come valore normalizzato.
 
@@ -43,7 +39,7 @@ L'enumerazione restituisce:
 
 Vedere [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm) per un esempio in cui è possibile accedere ai valori di questa enumerazione.
 
-## <a name="float_round_style"></a>  Enumerazione float_round_style
+## <a name="float_round_style"></a> float_round_style
 
 L'enumerazione descrive i vari metodi che un'implementazione può scegliere per l'arrotondamento di un valore a virgola mobile in un valore intero.
 
@@ -73,7 +69,3 @@ L'enumerazione restituisce:
 ### <a name="example"></a>Esempio
 
 Vedere [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style) per un esempio in cui è possibile accedere ai valori di questa enumerazione.
-
-## <a name="see-also"></a>Vedere anche
-
-[\<limits>](../standard-library/limits.md)<br/>

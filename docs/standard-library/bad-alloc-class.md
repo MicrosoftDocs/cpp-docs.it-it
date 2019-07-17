@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 63b474d0209a5cc385de9dc11b56d5de8382a9cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d1d81e393b4a3eb27ea08bc53634bfcbc119240
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376419"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243984"
 ---
 # <a name="badalloc-class"></a>Classe bad_alloc
 
@@ -22,20 +22,16 @@ La classe descrive un'eccezione generata per indicare che una richiesta di alloc
 ```cpp
 class bad_alloc : public exception {
     bad_alloc();
-virtual ~bad_alloc();
-
+    virtual ~bad_alloc();
+    bad_alloc(const bad_alloc&);
+    bad_alloc& operator=(const bad_alloc&);
+    const char* what() const override;
 };
 ```
 
 ## <a name="remarks"></a>Note
 
 Il valore restituito da `what` è una stringa C definita dall'implementazione. Nessuna delle funzioni membro genera eccezioni.
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<new>
-
-**Spazio dei nomi:** std
 
 ## <a name="example"></a>Esempio
 
@@ -58,17 +54,6 @@ int main() {
 }
 ```
 
-## <a name="sample-output"></a>Esempio di output
-
 ```Output
 bad allocation
 ```
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<new>
-
-## <a name="see-also"></a>Vedere anche
-
-[Classe exception](../standard-library/exception-class.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3d84f4707af33f44a930f7f67b7f751e2ead627c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412306"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245398"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -45,7 +45,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|Descrizione|
 |-|-|
 |[operator+](../standard-library/string-operators.md#op_add)|Concatena due oggetti stringa.|
 |[operator!=](../standard-library/string-operators.md#op_neq)|Verifica se l'oggetto stringa a sinistra dell'operatore non è uguale all'oggetto stringa a destra.|
@@ -61,6 +61,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 |||
 |-|-|
+|[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Scambia le matrici di caratteri di due stringhe.|
 |[stod](../standard-library/string-functions.md#stod)|Converte una sequenza di caratteri in una **doppie**.|
 |[stof](../standard-library/string-functions.md#stof)|Converte una sequenza di caratteri in una **float**.|

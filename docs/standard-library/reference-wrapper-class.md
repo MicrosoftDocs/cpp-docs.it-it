@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: baf38dd637e31f6fabdf869a242f8f18e2812717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369590"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240266"
 ---
 # <a name="referencewrapper-class"></a>Classe reference_wrapper
 
@@ -35,7 +35,6 @@ Esegue il wrapping di un riferimento
 template <class Ty>
 class reference_wrapper
 {
-public:
     typedef Ty type;
 
     reference_wrapper(Ty&) noexcept;
@@ -45,9 +44,6 @@ public:
     template <class... Types>
     auto operator()(Types&&... args) const ->
         decltype(std::invoke(get(), std::forward<Types>(args)...));
-
-private:
-    Ty *ptr; // exposition only
 };
 ```
 
@@ -59,39 +55,35 @@ Il tipo `Ty` deve essere un tipo di oggetto o un tipo di funzione, altrimenti si
 
 Le funzioni helper [std::ref](functional-functions.md#ref) e [std::cref](functional-functions.md#cref) possono essere usate per creare oggetti `reference_wrapper`.
 
+## <a name="members"></a>Members
+
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|||
 |-|-|
 |[reference_wrapper](#reference_wrapper)|Costruisce un oggetto `reference_wrapper`.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|||
 |-|-|
 |[result_type](#result_type)|Tipo di risultato di un riferimento debole di cui è stato eseguito il wrapping.|
 |[type](#type)|Tipo di riferimento di cui è stato eseguito il wrapping.|
 
-### <a name="member-functions"></a>Funzioni membro
+### <a name="functions"></a>Funzioni
 
-|Funzione membro|Descrizione|
+|||
 |-|-|
 |[get](#get)|Ottiene il riferimento di cui è stato eseguito il wrapping.|
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|Ottiene un puntatore al riferimento di cui è stato eseguito il wrapping.|
-|[reference_wrapper::operator()](#op_call)|Chiama il riferimento di cui è stato eseguito il wrapping.|
+|[operator Ty&amp;](#op_ty_amp)|Ottiene un puntatore al riferimento di cui è stato eseguito il wrapping.|
+|[operator()](#op_call)|Chiama il riferimento di cui è stato eseguito il wrapping.|
 
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<functional>
-
-**Spazio dei nomi:** std
-
-## <a name="get"></a>  reference_wrapper::get
+## <a name="get"></a> get
 
 Ottiene il riferimento di cui è stato eseguito il wrapping.
 
@@ -130,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a>  Ty reference_wrapper::operator&amp;
+## <a name="op_ty_amp"></a> operator Ty&amp;
 
 Ottiene il riferimento di cui è stato eseguito il wrapping.
 
@@ -166,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a>  reference_wrapper::operator()
+## <a name="op_call"></a> operator()
 
 Chiama il riferimento di cui è stato eseguito il wrapping.
 
@@ -177,10 +169,10 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>Parametri
 
-*Tipi*<br/>
+*Tipi*\
 Tipi dell'elenco di argomenti.
 
-*args*<br/>
+*args*\
 Elenco di argomenti.
 
 ### <a name="remarks"></a>Note
@@ -212,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper
+## <a name="reference_wrapper"></a> reference_wrapper
 
 Costruisce un oggetto `reference_wrapper`.
 
@@ -222,10 +214,10 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo di cui eseguire il wrapping.
 
-*val*<br/>
+*Val*\
 Valore di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
@@ -263,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a>  reference_wrapper::result_type
+## <a name="result_type"></a> result_type
 
 Tipo di risultato di un riferimento debole di cui è stato eseguito il wrapping.
 
@@ -302,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a>  reference_wrapper::type
+## <a name="type"></a> Tipo
 
 Tipo di riferimento di cui è stato eseguito il wrapping.
 
@@ -343,8 +335,3 @@ int main() {
 i = 1
 rwi = 1
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[cref](../standard-library/functional-functions.md#cref)<br/>
-[ref](../standard-library/functional-functions.md#ref)<br/>

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159717"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243801"
 ---
 # <a name="function-class"></a>Classe function
 
@@ -79,10 +79,10 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*Fty*<br/>
+*Fty*\
 Tipo di funzione di cui eseguire il wrapping.
 
-*Ax*<br/>
+*AX*\
 Funzione allocatore.
 
 ## <a name="remarks"></a>Note
@@ -103,21 +103,23 @@ In tutti i casi, `INVOKE(f, t1, t2, ..., tN)`, dove `f` è l'oggetto chiamabile 
 
 Un oggetto `function` vuoto non include un oggetto chiamabile o un riferimento a un oggetto chiamabile.
 
+## <a name="members"></a>Members
+
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|||
 |-|-|
 |[function](#function)|Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|||
 |-|-|
 |[result_type](#result_type)|Tipo restituito dell'oggetto chiamabile archiviato.|
 
-### <a name="member-functions"></a>Funzioni membro
+### <a name="functions"></a>Funzioni
 
-|Funzione membro|Descrizione|
+|||
 |-|-|
 |[assign](#assign)|Assegna un oggetto chiamabile a questo oggetto funzione.|
 |[swap](#swap)|Scambia due oggetti chiamabili.|
@@ -126,19 +128,13 @@ Un oggetto `function` vuoto non include un oggetto chiamabile o un riferimento a
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
-|[function::operator unspecified](#op_unspecified)|Verifica se è presente un oggetto chiamabile archiviato.|
-|[function::operator()](#op_call)|Chiama un oggetto chiamabile.|
-|[function::operator=](#op_eq)|Sostituisce l'oggetto chiamabile archiviato.|
+|[operatore non specificato](#op_unspecified)|Verifica se è presente un oggetto chiamabile archiviato.|
+|[operator()](#op_call)|Chiama un oggetto chiamabile.|
+|[operator=](#op_eq)|Sostituisce l'oggetto chiamabile archiviato.|
 
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<functional>
-
-**Spazio dei nomi:** std
-
-## <a name="assign"></a>  function::assign
+## <a name="assign"></a> assegnare
 
 Assegna un oggetto chiamabile a questo oggetto funzione.
 
@@ -156,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-*_Func*<br/>
+*Func*\
 Oggetto chiamabile.
 
-*_Fnref*<br/>
+*_Fnref*\
 Wrapper di riferimento che contiene un oggetto chiamabile.
 
-*Ax*<br/>
+*AX*\
 Un oggetto allocatore.
 
 ### <a name="remarks"></a>Note
 
 Ogni funzione membro sostituisce l'oggetto `callable object` incluso in `*this` con l'oggetto chiamabile passato come `operand`. Entrambe allocano memoria con l'oggetto allocatore *Ax*.
 
-## <a name="function"></a>  function::function
+## <a name="function"></a> (Funzione)
 
 Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.
 
@@ -194,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Oggetto funzione da copiare.
 
-*Fx*<br/>
+*Fx*\
 Tipo di oggetto chiamabile.
 
-*_Func*<br/>
+*Func*\
 Oggetto chiamabile di cui eseguire il wrapping.
 
-*Alloc*<br/>
+*Alloc*\
 Tipo di allocatore.
 
-*Ax*<br/>
+*AX*\
 Allocatore.
 
-*_Fnref*<br/>
+*_Fnref*\
 Riferimento all'oggetto chiamabile di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
@@ -286,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>  function::operator unspecified
+## <a name="op_unspecified"></a> operatore non specificato
 
 Verifica se è presente un oggetto chiamabile archiviato.
 
@@ -328,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>  function::operator()
+## <a name="op_call"></a> operator()
 
 Chiama un oggetto chiamabile.
 
@@ -341,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Parametri
 
-*TN*<br/>
+*TN*\
 Tipo dell'ennesimo argomento di chiamata.
 
-*tN*<br/>
+*TN*\
 Ennesimo argomento di chiamata.
 
 ### <a name="remarks"></a>Note
@@ -379,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>  function::operator=
+## <a name="op_eq"></a> operator=
 
 Sostituisce l'oggetto chiamabile archiviato.
 
@@ -394,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parametri
 
-*npc*<br/>
+*NPC*\
 Costante puntatore Null.
 
-*right*<br/>
+*Ok*\
 Oggetto funzione da copiare.
 
-*fn*<br/>
+*Fn*\
 Oggetto chiamabile di cui eseguire il wrapping.
 
-*fnref*<br/>
+*fnref*\
 Riferimento all'oggetto chiamabile di cui eseguire il wrapping.
 
 ### <a name="remarks"></a>Note
@@ -461,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>  function::result_type
+## <a name="result_type"></a> result_type
 
 Tipo restituito dell'oggetto chiamabile archiviato.
 
@@ -503,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>  function::swap
+## <a name="swap"></a> swap
 
 Scambia due oggetti chiamabili.
 
@@ -513,7 +509,7 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Oggetto funzione con cui eseguire lo scambio.
 
 ### <a name="remarks"></a>Note
@@ -562,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>  function::target
+## <a name="target"></a> Destinazione
 
 Verifica se l'oggetto chiamabile archiviato è chiamabile come specificato.
 
@@ -575,7 +571,7 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Parametri
 
-*Fty2*<br/>
+*Fty2*\
 Tipo di oggetto chiamabile di destinazione da verificare.
 
 ### <a name="remarks"></a>Note
@@ -623,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>  function::target_type
+## <a name="target_type"></a> target_type
 
 Ottiene le informazioni sui tipi per l'oggetto chiamabile.
 
@@ -668,8 +664,3 @@ type == int (__cdecl*)(int)
 empty == true
 type == void
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
-[Classe reference_wrapper](../standard-library/reference-wrapper-class.md)<br/>

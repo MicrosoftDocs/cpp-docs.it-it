@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-ms.openlocfilehash: 710453711e60f4607a20eb3e71b65127c8dd5316
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cff84f1f15eea34c60162f702dfe05350d1383d1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370268"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240459"
 ---
 # <a name="pointertounaryfunction-class"></a>Classe pointer_to_unary_function
 
@@ -25,7 +25,6 @@ template <class Arg, class Result>
 class pointer_to_unary_function
     : public unary_function<Arg, Result>
 {
-public:
     explicit pointer_to_unary_function(Result(*pfunc)(Arg));
     Result operator()(Arg left) const;
 };
@@ -33,10 +32,10 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*pfunc*<br/>
+*pfunc*\
 Funzione binaria da convertire.
 
-*left*<br/>
+*A sinistra*\
 Oggetto su cui viene chiamata la funzione *\*pfunc*.
 
 ## <a name="return-value"></a>Valore restituito
@@ -50,13 +49,3 @@ Un puntatore a funzione unaria è un oggetto funzione e può essere passato a qu
 ## <a name="example"></a>Esempio
 
 Il costruttore di `pointer_to_unary_function` viene usato di rado in modo diretto. Vedere la funzione helper [ptr_fun](../standard-library/functional-functions.md#ptr_fun) per indicazioni su come dichiarare e usare il predicato dell'adattatore `pointer_to_unary_function`.
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<functional>
-
-**Spazio dei nomi:** std
-
-## <a name="see-also"></a>Vedere anche
-
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

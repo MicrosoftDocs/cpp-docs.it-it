@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411149"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245948"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -24,6 +24,9 @@ Definisce le funzioni di modello del contenitore di libreria standard C++ che es
 ```cpp
 (see relevant links below for specific algorithm syntax)
 ```
+
+> [!NOTE]
+> Il \<algoritmo > libreria Usa inoltre il `#include <initializer_list>` istruzione.
 
 ## <a name="remarks"></a>Note
 
@@ -41,14 +44,15 @@ Gli algoritmi di libreria standard C++ vengono spesso classificati in gruppi che
 
 Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numerica dispongono del proprio file di intestazione [\<numeric>](../standard-library/numeric.md) e gli oggetti funzione e gli adattatori vengono definiti nell'intestazione [\<functional>](../standard-library/functional.md). Gli oggetti funzione che restituiscono valori booleani vengono definiti predicati. Il predicato binario predefinito è l'operatore di confronto `operator<`. In generale, gli elementi di cui viene eseguito l'ordinamento devono essere confrontabili come "minore di" in modo che, dati qualsiasi due elementi, sia possibile determinare che sono equivalenti (ovvero che uno non è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti.
 
-### <a name="function-templates"></a>Modelli di funzione
+### <a name="function-templates"></a>Modelli di funzioni
 
-|Modello di funzione|Descrizione|
+|||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|Cerca due elementi adiacenti uguali o che soddisfano una condizione specificata.|
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Restituisce **true** quando una condizione è presente in ogni elemento dell'intervallo specificato.|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|Restituisce **true** quando una condizione è presente almeno una volta nell'intervallo specificato di elementi.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Verifica se in un intervallo ordinato è presente un elemento uguale a un valore specificato o equivalente a tale valore nel senso specificato da un predicato binario.|
+|[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in avanti.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in indietro.|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copia tutti gli elementi in un intervallo specificato che testano **true** per una condizione specificata|
@@ -65,6 +69,7 @@ Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numer
 |[find_if](../standard-library/algorithm-functions.md#find_if)|Individua la posizione della prima occorrenza di un elemento in un intervallo che soddisfa una condizione specificata.|
 |[find_if_not](../standard-library/algorithm-functions.md#find_if_not)|Restituisce il primo elemento nell'intervallo indicato che non soddisfa una determinata condizione.|
 |[for_each](../standard-library/algorithm-functions.md#for_each)|Applica un oggetto funzione specificato a ogni elemento ordinato in avanti all'interno di un intervallo e restituisce l'oggetto funzione.|
+|[for_each_n](../standard-library/algorithm-functions.md#for_each_n)||
 |[generate](../standard-library/algorithm-functions.md#generate)|Assegna i valori generati da un oggetto funzione a ogni elemento di un intervallo.|
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|Assegna i valori generati da un oggetto funzione a un numero specificato di elementi di un intervallo e torna alla posizione immediatamente successiva all'ultimo valore assegnato.|
 |[includes](../standard-library/algorithm-functions.md#includes)|Verifica se un intervallo ordinato contiene tutti gli elementi contenuti in un secondo intervallo ordinato, in cui il criterio di ordinamento o di equivalenza tra gli elementi può essere specificato da un predicato binario.|
@@ -113,6 +118,7 @@ Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numer
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Inverte l'ordine degli elementi all'interno di un intervallo di origine copiandoli nel contempo in un intervallo di destinazione|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|Scambia gli elementi di due intervalli adiacenti.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Scambia gli elementi di due intervalli adiacenti all'interno di un intervallo di origine e copia il risultato in un intervallo di destinazione.|
+|[sample](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|Cerca la prima occorrenza di una sequenza all'interno di un intervallo di destinazione i cui elementi sono uguali a quelli di una sequenza specificata di elementi oppure i cui elementi sono equivalenti nel senso specificato da un predicato binario agli elementi della sequenza specificata.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Cerca la prima sottosequenza di un intervallo di un numero specificato di elementi che dispongono di un valore specifico o di una relazione con tale valore come specificato da un predicato binario.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Unisce tutti gli elementi appartenenti a un intervallo di origine ordinato, ma non a un secondo intervallo di origine ordinato, in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.|

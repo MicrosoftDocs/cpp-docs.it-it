@@ -7,40 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
-ms.openlocfilehash: 6fd4e25b3ca7b56e2221cb99b64f7c8e109bf452
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159554"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243764"
 ---
 # <a name="ltfunctionalgt-operators"></a>Operatori &lt;functional&gt;
 
-|||
-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Verifica se l'oggetto chiamabile è vuoto.
 
 ```cpp
 template <class Fty>
-bool operator==(const function<Fty>& f, null_ptr_type npc);
+    bool operator==(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator==(null_ptr_type npc, const function<Fty>& f);
+    bool operator==(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Fty*<br/>
+*Fty*\
 Tipo di funzione di cui eseguire il wrapping.
 
-*f*<br/>
+*F*\
 Oggetto function.
 
-*npc*<br/>
+*NPC*\
 Puntatore Null.
 
 ### <a name="remarks"></a>Note
@@ -79,27 +75,27 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operatore! =
 
 Verifica se l'oggetto chiamabile non è vuoto.
 
 ```cpp
 template <class Fty>
-bool operator!=(const function<Fty>& f, null_ptr_type npc);
+    bool operator!=(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator!=(null_ptr_type npc, const function<Fty>& f);
+    bool operator!=(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Fty*<br/>
+*Fty*\
 Tipo di funzione di cui eseguire il wrapping.
 
-*f*<br/>
+*F*\
 Oggetto function.
 
-*npc*<br/>
+*NPC*\
 Puntatore Null.
 
 ### <a name="remarks"></a>Note
@@ -137,7 +133,3 @@ int main()
 not empty == false
 not empty == true
 ```
-
-## <a name="see-also"></a>Vedere anche
-
-[\<functional>](../standard-library/functional.md)<br/>

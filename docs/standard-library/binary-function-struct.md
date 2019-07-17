@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: 2a6735ab558480039a0d2fa0e83ee4c5de02c5f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acbcb7496b7e6b37af61c5eb7a113c77855e6928
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414093"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243393"
 ---
 # <a name="binaryfunction-struct"></a>Struct binary_function
 
@@ -24,14 +24,14 @@ struct binary_function {
    typedef Arg1 first_argument_type;
    typedef Arg2 second_argument_type;
    typedef Result result_type;
-   };
+};
 ```
 
 ## <a name="remarks"></a>Note
 
 Lo struct modello serve come base per le classi che definiscono una funzione membro del form:
 
-> *result_type* ** operator()( const** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**& ) const**
+> *result_type* * * Operator () (const * * <em>first_argument_type</em> **&, const** <em>second_argument_type</em> **&) const**
 
 Tutte le funzioni binarie possono fare riferimento al primo tipo di argomento come *first_argument_type*, al secondo tipo di argomento come *second_argument_type*e al tipo restituito come *result_type*.
 
@@ -88,20 +88,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 11 5.5 3.66667 2.75 2.2 1.83333 )
 The vector v2 = ( -0 -2 -4 -6 -8 -10 )
 The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )
-*/
 ```
-
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<functional>
-
-**Spazio dei nomi:** std
-
-## <a name="see-also"></a>Vedere anche
-
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>

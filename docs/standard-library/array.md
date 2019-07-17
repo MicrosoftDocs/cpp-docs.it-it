@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fce204e3873151eafa0c4fa9c2b1e0af9971cfae
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377244"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243891"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
 Definisce la classe modello contenitore **matrice** e diversi modelli di supporto.
 
-## <a name="syntax"></a>Sintassi
+## <a name="requirements"></a>Requisiti
 
-```cpp
-#include <array>
-```
+**Intestazione:** \<array>
+
+**Spazio dei nomi:** std
+
+> [!NOTE]
+> Il \<array > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|||
 |-|-|
 |[array](../standard-library/array-class-stl.md)|Archivia una sequenza di elementi a lunghezza fissa.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Esegue il wrapping del tipo di un elemento di matrice.|
@@ -33,7 +38,7 @@ Definisce la classe modello contenitore **matrice** e diversi modelli di support
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|||
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|confronto tra matrici, uguale|
 |[operator!=](../standard-library/array-operators.md#op_neq)|confronto tra matrici, diverso|
@@ -44,7 +49,7 @@ Definisce la classe modello contenitore **matrice** e diversi modelli di support
 
 ### <a name="functions"></a>Funzioni
 
-|Funzione|Descrizione|
+|||
 |-|-|
 |[get](../standard-library/array-functions.md#get)|Ottenere l'elemento di matrice specificato.|
 |[swap](../standard-library/array-functions.md#swap)|Scambia il contenuto di una matrice con il contenuto di un'altra matrice.|

@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450799"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240410"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 Definisce strutture per la generazione casuale di numeri, permettendo la creazione di numeri casuali distribuiti in modo uniforme.
 
-## <a name="syntax"></a>Sintassi
+## <a name="requirements"></a>Requisiti
 
-```cpp
-#include <random>
-```
+**Intestazione**: \<casuale >
+
+**Spazio dei nomi:** std
+
+> [!NOTE]
+> Il \<casuale > Usa libreria di ' #include < initializer_list >' istruzione.
 
 ## <a name="summary"></a>Riepilogo
 
@@ -216,7 +219,7 @@ I generatori URNG sono spesso descritti tramite e proprietà seguenti:
 
 2. **Prestazioni**: Rapidità con cui è possibile generare i numeri e quantità di memoria necessaria. È preferibile che il valore sia basso.
 
-3. **Quality**: Casualità true della sequenza generata. Questa proprietà è definita spesso "*casualità*".
+3. **Qualità**: Casualità true della sequenza generata. Questa proprietà è definita spesso "*casualità*".
 
 Le sezioni seguenti elencano i generatori di numeri casuali (generatori Urng) forniti nel \<random > dell'intestazione.
 
@@ -495,7 +498,7 @@ In Visual Studio sono disponibili due generatori URNG molto utili, ovvero `mt199
 
 |URNG|Fast|Sicuro a livello di crittografia|Compatibile con seeding|Deterministico|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|Yes|No|Yes|Sì<sup>*</sup>|
+|`mt19937`|Yes|No|Sì|Sì<sup>*</sup>|
 |`random_device`|No|Sì|No|No|
 
 <sup>* Se è fornito un seeding noto.</sup>

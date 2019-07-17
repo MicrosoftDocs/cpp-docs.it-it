@@ -6,16 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cassert header
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
-ms.openlocfilehash: 6634ddd9adb4e7e7364aec2354c4ebd707e6ccd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14dda03e835ec411013b2d827bd1ccaa77f8982e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380039"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245023"
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
 
-Include l'intestazione della libreria C standard \<assert.h> e aggiunge i nomi associati allo spazio dei nomi `std`.
+Include l'intestazione della libreria C Standard \<Assert. h > e aggiunge i nomi associati al `std` dello spazio dei nomi. Includendo questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C Standard vengano dichiarati nel `std` dello spazio dei nomi.
+
+> [!NOTE]
+> \<Assert. h > non definisce il `static_assert` macro.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,9 +26,15 @@ Include l'intestazione della libreria C standard \<assert.h> e aggiunge i nomi a
 #include <cassert>
 ```
 
-## <a name="remarks"></a>Note
+## <a name="macros"></a>Macro
 
-L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
+```cpp
+#define assert(E)
+```
+
+### <a name="remarks"></a>Note
+
+`assert(E)` è solo costanti, se non è definito NDEBUG in cui `assert` ultimo è definito o ridefinito, o *elettronica* convertito in bool restituisce **true**.
 
 ## <a name="see-also"></a>Vedere anche
 

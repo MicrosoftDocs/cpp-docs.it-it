@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225269"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243576"
 ---
 # <a name="clistbox-class"></a>CListBox (classe)
 
@@ -119,7 +119,7 @@ Fornisce la funzionalità di una casella di riepilogo di Windows.
 class CListBox : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -146,7 +146,7 @@ class CListBox : public CWnd
 |[CListBox::GetCount](#getcount)|Restituisce il numero di stringhe in una casella di riepilogo.|
 |[CListBox::GetCurSel](#getcursel)|Restituisce l'indice in base zero della stringa attualmente selezionata in una casella di riepilogo.|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|Restituisce la larghezza in pixel che una casella di riepilogo è possibile scorrere orizzontalmente.|
-|[CListBox::GetItemData](#getitemdata)|Restituisce il valore a 32 bit associato con l'elemento casella di riepilogo.|
+|[CListBox::GetItemData](#getitemdata)|Restituisce un valore associato all'elemento casella di riepilogo.|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|Restituisce un puntatore a un elemento di casella di riepilogo.|
 |[CListBox::GetItemHeight](#getitemheight)|Determina l'altezza degli elementi in una casella di riepilogo.|
 |[CListBox::GetItemRect](#getitemrect)|Restituisce il rettangolo di delimitazione dell'elemento casella di riepilogo che è attualmente visualizzato.|
@@ -169,8 +169,8 @@ class CListBox : public CWnd
 |[CListBox::SetCaretIndex](#setcaretindex)|Imposta il rettangolo di attivazione per l'elemento in corrispondenza dell'indice specificato in una casella di riepilogo a selezione multipla.|
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Imposta la larghezza della colonna di una casella di riepilogo a più colonne.|
 |[CListBox::SetCurSel](#setcursel)|Seleziona una stringa di casella di riepilogo.|
-|[CListBox::SetHorizontalExtent](#sethorizontalextent)|Imposta la larghezza in pixel che una casella di riepilogo è possibile scorrere orizzontalmente.|
-|[CListBox::SetItemData](#setitemdata)|Imposta il valore a 32 bit associato con l'elemento casella di riepilogo.|
+|[CListBox:: SetHorizontalExtent](#sethorizontalextent)|Imposta la larghezza in pixel che una casella di riepilogo è possibile scorrere orizzontalmente.|
+|[CListBox::SetItemData](#setitemdata)|Imposta un valore associato all'elemento casella di riepilogo.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Imposta un puntatore all'elemento casella di riepilogo.|
 |[CListBox::SetItemHeight](#setitemheight)|Imposta l'altezza degli elementi in una casella di riepilogo.|
 |[CListBox::SetLocale](#setlocale)|Imposta l'identificatore delle impostazioni locali per una casella di riepilogo.|
@@ -702,7 +702,7 @@ Specifica l'indice in base zero dell'elemento nella casella di riepilogo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore a 32 bit associato con l'elemento o LB_ERR se si verifica un errore.
+Il valore associato con l'elemento o LB_ERR se si verifica un errore.
 
 ### <a name="remarks"></a>Note
 
@@ -1261,7 +1261,7 @@ Per impostare o rimuovere una selezione in una casella di riepilogo a selezione 
 
 [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]
 
-##  <a name="sethorizontalextent"></a>  CListBox::SetHorizontalExtent
+##  <a name="sethorizontalextent"></a>  CListBox:: SetHorizontalExtent
 
 Imposta la larghezza, in pixel, mediante il quale una casella di riepilogo può essere necessario scorrere orizzontalmente.
 
@@ -1288,7 +1288,7 @@ Questa funzione membro non è utile per le caselle di riepilogo a più colonne. 
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-Imposta un valore a 32 bit associato con l'elemento specificato in una casella di riepilogo.
+Imposta un valore associato all'elemento specificato in una casella di riepilogo.
 
 ```
 int SetItemData(

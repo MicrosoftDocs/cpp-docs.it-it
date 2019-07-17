@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369943"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240405"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -42,10 +42,10 @@ class queue
 
 ### <a name="parameters"></a>Parametri
 
-*Type*<br/>
+*Tipo*\
 Tipo di dati degli elementi da archiviare nell'oggetto queue
 
-*Container*<br/>
+*Contenitore*\
 Tipo del contenitore sottostante usato per implementare l'oggetto queue.
 
 ## <a name="remarks"></a>Note
@@ -64,23 +64,25 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 
 - La [classe priority_queue](../standard-library/priority-queue-class.md) ordina gli elementi in modo che l'elemento più grande sia sempre in posizione iniziale. Supporta l'inserimento di un elemento e l'ispezione e la rimozione del primo elemento. Una buona analogia è costituita da una fila di persone disposte in base a età, altezza o qualche altro criterio.
 
+## <a name="members"></a>Members
+
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|||
 |-|-|
 |[queue](#queue)|Costruisce un `queue` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|||
 |-|-|
 |[container_type](#container_type)|Tipo che fornisce il contenitore di base che deve essere adattato da `queue`.|
 |[size_type](#size_type)|Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un `queue`.|
 |[value_type](#value_type)|Tipo che rappresenta il tipo di oggetto archiviato come elemento in `queue`.|
 
-### <a name="member-functions"></a>Funzioni membro
+### <a name="functions"></a>Funzioni
 
-|Funzione membro|Descrizione|
+|||
 |-|-|
 |[back](#back)|Restituisce un riferimento all'ultimo elemento aggiunto di recente alla fine della `queue`.|
 |[empty](#empty)|Verifica se `queue` è vuoto.|
@@ -89,13 +91,7 @@ Esistono tre tipi di adattatori di contenitori definiti nella libreria standard 
 |[push](#push)|Aggiunge un elemento alla fine dell'oggetto `queue`.|
 |[size](#size)|Restituisce il numero di elementi nel `queue`.|
 
-## <a name="requirements"></a>Requisiti
-
-**Intestazione:** \<queue>
-
-**Spazio dei nomi:** std
-
-## <a name="back"></a>  queue::back
+## <a name="back"></a> Indietro
 
 Restituisce un riferimento all'ultimo elemento aggiunto di recente alla fine dell'oggetto queue.
 
@@ -141,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a>  queue::container_type
+## <a name="container_type"></a> container_type
 
 Tipo che fornisce il contenitore di base da adattare.
 
@@ -159,7 +155,7 @@ Per altre informazioni su `Container`, vedere la sezione Note dell'argomento [Cl
 
 Vedere l'esempio relativo a [queue](#queue) per indicazioni su come dichiarare e usare `container_type`.
 
-## <a name="empty"></a>  queue::empty
+## <a name="empty"></a> vuota
 
 Verifica se un oggetto queue è vuoto.
 
@@ -205,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a>  queue::front
+## <a name="front"></a> primo piano
 
 Restituisce un riferimento al primo elemento all'inizio dell'oggetto queue.
 
@@ -257,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a>  queue::pop
+## <a name="pop"></a> POP
 
 Rimuove un elemento dall'inizio dell'oggetto queue.
 
@@ -313,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a>  queue::push
+## <a name="push"></a> push
 
 Aggiunge un elemento alla fine dell'oggetto queue.
 
@@ -323,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-*val*<br/>
+*Val*\
 Elemento aggiunto alla fine dell'oggetto queue.
 
 ### <a name="remarks"></a>Note
@@ -362,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a>  queue::queue
+## <a name="queue"></a> Coda
 
 Costruisce un oggetto queue vuoto o che rappresenta una copia di un oggetto contenitore di base.
 
@@ -374,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Il contenitore **const** di cui l'oggetto queue costruito deve essere una copia.
 
 ### <a name="remarks"></a>Note
@@ -429,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a>  queue::size
+## <a name="size"></a> Dimensioni
 
 Restituisce il numero di elementi dell'oggetto queue.
 
@@ -470,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>  queue::size_type
+## <a name="size_type"></a> size_type
 
 Tipo Unsigned Integer in grado di rappresentare il numero di elementi di un oggetto queue.
 
@@ -486,7 +482,7 @@ Il tipo è un sinonimo del `size_type` del contenitore di base adattato dall'ogg
 
 Vedere l'esempio relativo a [queue::front](#front) per indicazioni su come dichiarare e usare `size_type`.
 
-## <a name="value_type"></a>  queue::value_type
+## <a name="value_type"></a> value_type
 
 Tipo che rappresenta il tipo di oggetto archiviato come elemento in un oggetto queue.
 
