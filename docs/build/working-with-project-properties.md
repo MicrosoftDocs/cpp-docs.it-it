@@ -1,23 +1,23 @@
 ---
 title: Impostare il compilatore e le proprietà di compilazione C++ in Visual Studio
 description: Usare l'IDE di Visual Studio per C++ modificare le opzioni del compilatore e del linker e altre impostazioni di compilazione.
-ms.date: 03/27/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 896587aea65d7aec24d3a11ff7d3e757937c2632
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 436c9c47d7e08176860144ce62cc874919351029
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299691"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313453"
 ---
 # <a name="set-compiler-and-build-properties"></a>Impostare le proprietà del compilatore e della compilazione
 
-Nell'IDE tutte le informazioni necessarie per compilare un progetto vengono esposte come *proprietà*. Queste informazioni includono nome dell'applicazione, estensione (ad esempio DLL, LIB, EXE), opzioni del compilatore, opzioni del linker, impostazioni del debugger, istruzioni di compilazione personalizzate e molti altri elementi. Per visualizzare e modificare queste proprietà si usano in genere le *Pagine delle proprietà* ( **Progetto &#124; Proprietà**). Per accedere alle pagine delle proprietà, scegliere **progetto \<> nome progetto > Proprietà** dal menu principale oppure fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**.
+Nell'IDE tutte le informazioni necessarie per compilare un progetto vengono esposte come *proprietà*. Queste informazioni includono nome dell'applicazione, estensione (ad esempio DLL, LIB, EXE), opzioni del compilatore, opzioni del linker, impostazioni del debugger, istruzioni di compilazione personalizzate e molti altri elementi. In genere, è possibile utilizzare le *pagine delle proprietà* per visualizzare e modificare queste proprietà. Per accedere alle pagine delle proprietà, scegliere **Project** >  **_NomeProgetto_ Properties** dal menu principale oppure fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**.
 
 ## <a name="default-properties"></a>Proprietà predefinite
 
@@ -82,7 +82,7 @@ Una macro definita dall'utente viene archiviata in una finestra delle proprietà
 
 #### <a name="to-create-a-user-defined-macro"></a>Per creare una macro definita dall'utente
 
-1. Nella finestra **Gestione proprietà** (sulla barra dei menu scegliere **Visualizza**, **Gestione proprietà**) aprire il menu di scelta rapida per una finestra delle proprietà (il nome termina con l'estensione user) e quindi scegliere Proprietà. Viene aperta la finestra di dialogo **Pagine delle proprietà** per la finestra delle proprietà.
+1. Aprire la finestra **Gestione proprietà** . Sulla barra dei menu scegliere **Visualizza** > **Gestione proprietà** o **Visualizza** > **altre** > **Gestione proprietà**di Windows. Aprire il menu di scelta rapida per una finestra delle proprietà (il nome termina con. User), quindi scegliere **Proprietà**. Viene aperta la finestra di dialogo **Pagine delle proprietà** per la finestra delle proprietà.
 
 1. Nel riquadro sinistro della finestra selezionare **Macro utente**. Nel riquadro destro scegliere il pulsante **Aggiungi macro** per aprire la finestra di dialogo **Aggiungi macro utente**.
 

@@ -1,7 +1,7 @@
 ---
-title: I progetti C/C++ e i sistemi di compilazione in Visual Studio
+title: C/C++ progetti e sistemi di compilazione in Visual Studio
 ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
-ms.date: 05/06/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - builds [C++]
 - C++ projects, building
@@ -9,84 +9,84 @@ helpviewer_keywords:
 - builds [C++], options
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: b345517bb1202030c9d512d16e80484feb4ba737
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 672dea77c4165ddcd84d3253525dc8c2d8be3e7c
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220365"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313179"
 ---
-# <a name="cc-projects-and-build-systems-in-visual-studio"></a>I progetti C/C++ e i sistemi di compilazione in Visual Studio
+# <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ progetti e sistemi di compilazione in Visual Studio
 
-È possibile usare Visual Studio 2017 per modificare, compilare e creare qualsiasi codebase C++ con il supporto IntelliSense completo senza la necessità di convertire tale codice in un progetto di Visual Studio o di compilazione con il set di strumenti MSVC. Ad esempio, è possibile modificare un progetto CMake multipiattaforma in Visual Studio in un computer Windows, quindi compilarlo per Linux con g + + in un computer Linux remoto.
+È possibile usare Visual Studio per modificare, compilare e compilare qualsiasi C++ codebase con il supporto completo di IntelliSense senza dover convertire tale codice in un progetto di Visual Studio o compilarlo con il set di strumenti MSVC. Ad esempio, è possibile modificare un progetto CMake multipiattaforma in Visual Studio in un computer Windows, quindi compilarlo per Linux usando g + + in un computer Linux remoto.
 
-## <a name="c-compilation"></a>Compilazione di C++
+## <a name="c-compilation"></a>C++compilazione
 
-Per *compilazione* significa che un programma C++ compilare codice sorgente da uno o più file e quindi collegare tali file in un file eseguibile (.exe), una libreria di caricamento dinamico (DLL) o una libreria statica (lib). 
+Per *compilare* un C++ programma si intende compilare il codice sorgente da uno o più file e quindi collegare tali file in un file eseguibile (con estensione exe), in una libreria con caricamento dinamico (. dll) o in una libreria statica (. lib). 
 
-Compilazione di base C++ comporta tre passaggi principali:
+La C++ compilazione di base prevede tre passaggi principali:
 
-- Il preprocessore C++ Trasforma tutte le definizioni di macro e #directives in ogni file di origine. Ciò consente di creare un *unità di conversione*.
-- Il compilatore C++ consente di compilare ogni unità di conversione in file oggetto (obj), applicazione di tutte le opzioni del compilatore sono state impostate.
-- Il *linker* unisce i file oggetto in un unico file eseguibile, applicando le opzioni dei linker che sono state impostate. 
+- Il C++ preprocessore trasforma tutte le definizioni di #directives e macro in ogni file di origine. Verrà creata un' *unità di conversione*.
+- Il C++ compilatore compila ogni unità di conversione in file oggetto (. obj), applicando tutte le opzioni del compilatore impostate.
+- Il *linker* unisce i file oggetto in un unico eseguibile, applicando le opzioni del linker impostate. 
 
-## <a name="the-msvc-toolset"></a>Il set di strumenti MSVC
+## <a name="the-msvc-toolset"></a>Set di strumenti MSVC
 
-Microsoft C++ compilatore, linker, le librerie standard e utilità correlate costituiscono il set di strumenti del compilatore MSVC (detto anche una toolchain o "strumenti di compilazione"). Questi sono inclusi in Visual Studio. È anche possibile scaricare e usare il set di strumenti come pacchetto autonomo gratuito dal [percorso di download di Build Tools per Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+Il compilatore C++ Microsoft, il linker, le librerie standard e le utilità correlate comprendono il set di strumenti del compilatore MSVC (detto anche "strumenti di compilazione"). Sono incluse in Visual Studio. È anche possibile scaricare e usare il set di strumenti come pacchetto autonomo gratuitamente dal [percorso di download degli strumenti di compilazione per Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
-È possibile creare semplici programmi richiamando il compilatore MSVC (cl.exe) direttamente dalla riga di comando. Il comando seguente accetta un file di codice di origine singolo e richiama cl.exe per compilare un file eseguibile denominato *hello.exe*: 
+È possibile compilare programmi semplici richiamando il compilatore MSVC (cl. exe) direttamente dalla riga di comando. Il comando seguente accetta un solo file di codice sorgente e richiama cl. exe per compilare un eseguibile denominato *Hello. exe*: 
 
 ```cmd
 cl /EHsc hello.cpp
 ```
-Si noti che qui (cl.exe) il compilatore richiama automaticamente il preprocessore C++ e il linker per produrre il file di output finale.  Per altre informazioni, vedere [compilazione dalla riga di comando di](building-on-the-command-line.md).
+Si noti che qui il compilatore (cl. exe) richiama automaticamente il C++ preprocessore e il linker per produrre il file di output finale.  Per ulteriori informazioni, vedere [compilazione dalla riga di comando](building-on-the-command-line.md).
 
-## <a name="build-systems-and-projects"></a>Compilare progetti e i sistemi
+## <a name="build-systems-and-projects"></a>Sistemi e progetti di compilazione
 
-La maggior parte dei programmi del mondo reale utilizzano alcuni tipi di *sistema di compilazione* per la gestione delle complessità della compilazione di più file di origine per le configurazioni multiple (ad esempio debug e rilascio), più piattaforme (x86, x64, ARM, e così via), compilazione personalizzata i passaggi e anche di creare più file eseguibili che devono essere compilati in un determinato ordine. Si apportano le impostazioni in un file di configurazione di compilazione e il sistema di compilazione accetta tale file come input prima che richiama il compilatore. Il set di file del codice sorgente e file di configurazione di compilazione necessari per compilare un file eseguibile viene chiamato un *progetto*. 
+La maggior parte dei programmi reali usa un tipo di *sistema di compilazione* per gestire complessità di compilazione di più file di origine per più configurazioni (ad esempio debug e versione), più piattaforme (x86, x64, ARM e così via), procedure di compilazione personalizzate e persino più eseguibili che devono essere compilati in un determinato ordine. Le impostazioni vengono apportate in un file di configurazione della compilazione e il sistema di compilazione lo accetta come input prima di richiamare il compilatore. Il set di file di codice sorgente e i file di configurazione della build necessari per compilare un file eseguibile è denominato *progetto*. 
 
-Nell'elenco seguente illustra diverse opzioni per progetti di Visual Studio - C++:
+L'elenco seguente mostra varie opzioni per i progetti di Visual C++Studio:
 
-- creare un progetto di Visual Studio usando l'IDE di Visual Studio e configurarlo con le pagine delle proprietà. Progetti di Visual Studio producono i programmi eseguiti su Windows. Per una panoramica, vedere [compilazione e creazione](/visualstudio/ide/compiling-and-building-in-visual-studio) nella documentazione di Visual Studio.
+- creare un progetto di Visual Studio usando l'IDE di Visual Studio e configurarlo usando le pagine delle proprietà. I progetti di Visual Studio producono programmi eseguibili in Windows. Per una panoramica, vedere [compilazione e compilazione](/visualstudio/ide/compiling-and-building-in-visual-studio) nella documentazione di Visual Studio.
 
-- Aprire una cartella che contiene un file cmakelists. txt. Supporto per CMake è integrato in Visual Studio. È possibile usare l'IDE di modifica, test e debug senza modificare i file di CMake in alcun modo. In questo modo è possibile lavorare nello stesso progetto CMake come altri utenti che potrebbe usare diversi editor. CMake è l'approccio consigliato per lo sviluppo multipiattaforma. Per altre informazioni, vedere [progetti CMake](cmake-projects-in-visual-studio.md).
+- aprire una cartella che contiene un file CMakeLists. txt. Il supporto di CMake è integrato in Visual Studio. È possibile usare l'IDE per modificare, testare ed eseguire il debug senza modificare in alcun modo i file CMake. Questo consente di lavorare nello stesso progetto CMake degli altri utenti che potrebbero usare editor diversi. CMake è l'approccio consigliato per lo sviluppo multipiattaforma. Per altre informazioni, vedere [progetti CMake](cmake-projects-in-visual-studio.md).
  
-- Aprire una cartella di file di origine separata senza file di progetto. Visual Studio utilizzerà l'euristica per la creazione dei file. Questo è un modo semplice per compilare ed eseguire le applicazioni console di piccole dimensioni. Per altre informazioni, vedere [progetti Apri cartella](open-folder-projects-cpp.md).
+- aprire una cartella separata dei file di origine senza file di progetto. Visual Studio userà l'euristica per compilare i file. Si tratta di un modo semplice per compilare ed eseguire applicazioni console di piccole dimensioni. Per altre informazioni, vedere [progetti di cartelle aperte](open-folder-projects-cpp.md).
 
-- Aprire una cartella che contiene un makefile, o qualsiasi altro file configurazione sistema di compilazione. È possibile configurare Visual Studio per richiamare i comandi di compilazione arbitraria aggiungendo i file JSON nella cartella. Per altre informazioni, vedere [progetti Apri cartella](open-folder-projects-cpp.md).
+- aprire una cartella che contiene un makefile o qualsiasi altro file di configurazione del sistema di compilazione. È possibile configurare Visual Studio per richiamare qualsiasi comando di compilazione arbitraria aggiungendo file JSON alla cartella. Per altre informazioni, vedere [progetti di cartelle aperte](open-folder-projects-cpp.md).
  
-- Aprire un makefile di Windows in Visual Studio. Per altre informazioni, vedere [riferimenti a NMAKE](reference/nmake-reference.md).
+- Aprire un makefile di Windows in Visual Studio. Per ulteriori informazioni, vedere [riferimento a NMAKE](reference/nmake-reference.md).
 
 ## <a name="msbuild-from-the-command-line"></a>MSBuild dalla riga di comando 
 
-È possibile richiamare MSBuild dalla riga di comando mediante il passaggio di un file con estensione vcxproj insieme le opzioni della riga di comando. Questo approccio richiede una buona conoscenza di MSBuild ed è consigliato solo se assolutamente necessario. Per altre informazioni, vedere [MSBuild](msbuild-visual-cpp.md).
+È possibile richiamare MSBuild dalla riga di comando passandogli un file con estensione vcxproj insieme alle opzioni della riga di comando. Questo approccio richiede una conoscenza corretta di MSBuild ed è consigliato solo quando è strettamente necessario. Per altre informazioni, vedere [MSBuild](msbuild-visual-cpp.md).
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Progetti di Visual Studio](creating-and-managing-visual-cpp-projects.md) come creare, configurare e compilare C++ progetti in Visual Studio usando nativo (MSBuild) di sistema di compilazione.
+[Progetti di Visual Studio](creating-and-managing-visual-cpp-projects.md) Come creare, configurare e compilare C++ progetti in Visual Studio usando il relativo sistema di compilazione nativo (MSBuild).
 
-[Progetti CMake](cmake-projects-in-visual-studio.md) come codice, compilare e distribuire progetti CMake in Visual Studio.
+[Progetti CMake](cmake-projects-in-visual-studio.md) Come codificare, compilare e distribuire progetti CMake in Visual Studio.
 
-[Aprire i progetti di cartella](open-folder-projects-cpp.md) come usare Visual Studio code, creare e distribuire i progetti C++ in base a qualsiasi sistema di compilazione arbitraria o nessun sistema di compilazione. Per niente. 
+[Apri progetti cartella](open-folder-projects-cpp.md) Come usare Visual Studio per scrivere codice, compilare e distribuire C++ progetti in base a qualsiasi sistema di compilazione arbitrario o a nessun sistema di compilazione. Per niente. 
 
-[Build di rilascio](release-builds.md) come creare e risolvere i problemi con ottimizzazione per la versione build per la distribuzione agli utenti finali.
+[Build di rilascio](release-builds.md) Come creare e risolvere i problemi relativi alle build di rilascio ottimizzate per la distribuzione agli utenti finali.
 
 [Usare il set di strumenti MSVC dalla riga di comando](building-on-the-command-line.md)<br/>
-Viene illustrato come usare il compilatore C/C++ e compilare strumenti direttamente dalla riga di comando anziché usare l'IDE di Visual Studio.
+Viene illustrato come usare il compilatore CC++ /e gli strumenti di compilazione direttamente dalla riga di comando, anziché usare l'IDE di Visual Studio.
 
-[Creazione di DLL in Visual Studio](dlls-in-visual-cpp.md) come creare, eseguire il debug e distribuire le DLL di C/C++ (librerie condivise) in Visual Studio.
+[Creazione di dll in Visual Studio](dlls-in-visual-cpp.md) Come creare, eseguire il debug e distribuire CC++ /dll (librerie condivise) in Visual Studio.
 
-[Procedura dettagliata: Creazione e utilizzo di una libreria statica](walkthrough-creating-and-using-a-static-library-cpp.md) come creare un file binario con estensione LIB.
+[Procedura dettagliata: Creazione e utilizzo di una libreria](walkthrough-creating-and-using-a-static-library-cpp.md) statica come creare un file binario con estensione LIB.
 
-[Creazione di applicazioni isolate C/C++ e assembly Side-by-side](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) descrive il modello di distribuzione per le applicazioni Desktop di Windows, basato sui concetti di applicazioni isolate e assembly side-by-side.
+[Compilazione di applicazioniC++ C/isolate e assembly affiancati](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Viene descritto il modello di distribuzione per le applicazioni desktop di Windows, in base al concetto di applicazioni isolate e assembly affiancati.
 
-[Configurare i progetti C++ a 64 bit x64 destinazioni](configuring-programs-for-64-bit-visual-cpp.md) come destinazione x64 a 64 bit hardware con le MSVC strumenti di compilazione.
+[Configurare C++ progetti per destinazioni x64 a 64 bit](configuring-programs-for-64-bit-visual-cpp.md) Come destinare hardware a 64 bit x64 con gli strumenti di compilazione MSVC.
 
-[Configurare i progetti C++ per processori ARM](configuring-programs-for-arm-processors-visual-cpp.md) come usare gli strumenti di compilazione MSVC riferimento a hardware ARM.
+[Configurare C++ i progetti per i processori ARM](configuring-programs-for-arm-processors-visual-cpp.md) Come usare gli strumenti di compilazione di MSVC per l'hardware ARM.
 
-[Ottimizzazione del codice](optimizing-your-code.md) come ottimizzare il codice in diversi modi, tra cui le ottimizzazioni PGO programma.
+[Ottimizzazione del codice](optimizing-your-code.md) Come ottimizzare il codice in diversi modi, incluse le ottimizzazioni guidate dal programma.
 
-[Configurazione di programmi per Windows XP](configuring-programs-for-windows-xp.md) come destinazione gli strumenti di compilazione di Windows XP con di MSVC.
+[Configurazione di programmi per Windows XP](configuring-programs-for-windows-xp.md) Come definire come destinazione Windows XP con gli strumenti di compilazione di MSVC.
 
 [Riferimenti alla compilazione in C/C++](reference/c-cpp-building-reference.md)<br/>
 Vengono forniti collegamenti ad articoli di riferimento sulla compilazione di programmi in C++, sulle opzioni del compilatore e del linker e su vari strumenti di compilazione.

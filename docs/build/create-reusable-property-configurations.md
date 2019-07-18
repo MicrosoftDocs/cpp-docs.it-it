@@ -1,18 +1,18 @@
 ---
-title: Condividi o riutilizza le impostazioni di progetto di Visual Studio - C++
-ms.date: 03/27/2019
+title: Condividere o riutilizzare le impostazioni di progetto di Visual Studio-C++
+ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a8f6da3dc754aa9d47d46e26207a02bd1685ea8
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196877"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313187"
 ---
-# <a name="share-or-reuse-visual-studio-project-settings"></a>Condividi o riutilizza le impostazioni di progetto di Visual Studio
+# <a name="share-or-reuse-visual-studio-project-settings"></a>Condividere o riutilizzare le impostazioni di progetto di Visual Studio
 
-Per creare un gruppo personalizzato di impostazioni che è possibile condividere con altri utenti o riutilizzare in più progetti, usare **Gestione proprietà** per creare un *finestra delle proprietà* (file con estensione props) per archiviare le impostazioni per ogni tipo di progetto che si vuole poter riutilizzare o condividere con altri utenti. Utilizzando proprietà fogli sono comunque molto meno soggette a errori di altre modalità di creazione di impostazioni "globali". 
+Per creare un gruppo personalizzato di impostazioni che è possibile condividere con altri utenti o riutilizzare in più progetti, utilizzare **Gestione proprietà** per creare una *finestra delle proprietà* (file con estensione Props) per archiviare le impostazioni per ogni tipo di progetto che si desidera riutilizzare o condividere con altri. L'utilizzo delle finestre delle proprietà è molto meno soggetto a errori rispetto ad altri modi per creare impostazioni "globali". 
 
 > [!IMPORTANT]
 > **File con estensione user e per quale motivo sono problematici**
@@ -21,13 +21,13 @@ Per creare un gruppo personalizzato di impostazioni che è possibile condividere
 >
 > Sebbene i file con estensione user vengano ancora installati da Visual Studio e partecipino all'ereditarietà delle proprietà, sono vuoti per impostazione predefinita. È consigliabile eliminare il riferimento a essi in **Gestione proprietà** per verificare che i progetti funzionino a prescindere dalle impostazioni per utente e per computer. Questo è importante per garantire il corretto funzionamento in un ambiente di controllo del codice sorgente.
 
-Per visualizzare **Gestione proprietà**, sulla barra dei menu scegliere **Visualizza**, **Altre finestre**, **Gestione proprietà**.
+Per visualizzare **Gestione proprietà**, sulla barra dei menu scegliere **Visualizza** > **Gestione proprietà** o **Visualizza** > **altre finestre** > **Gestione proprietà**, a seconda delle impostazioni.
 
-Se si ha un set di proprietà comune usato di frequente da applicare a più progetti, è possibile usare **Gestione proprietà** per acquisirle in un file della *finestra delle proprietà* riutilizzabile la cui estensione di file è generalmente props. È possibile applicare il foglio (o i fogli) a nuovi progetti in modo da non dover impostare le relative proprietà da zero. Per accedere a **Gestione proprietà**, sulla barra dei menu scegliere **Visualizza**, **Gestione proprietà**.
+Se si ha un set di proprietà comune usato di frequente da applicare a più progetti, è possibile usare **Gestione proprietà** per acquisirle in un file della *finestra delle proprietà* riutilizzabile la cui estensione di file è generalmente props. È possibile applicare il foglio (o i fogli) a nuovi progetti in modo da non dover impostare le relative proprietà da zero.
 
 ![Menu di scelta rapida Gestione proprietà](media/sharingnew.png "SharingNew")
 
-In ogni nodo di configurazione vengono visualizzati i nodi per ogni finestra delle proprietà che si applica a questa configurazione. Il sistema aggiunge finestre delle proprietà che impostano i valori in base alle opzioni selezionate nella procedura guidata app quando si crea il progetto. Fare clic con il pulsante destro del mouse su qualsiasi nodo e scegliere Proprietà per visualizzare le proprietà che si applicano a quel nodo. Tutte le finestre delle proprietà vengono importate automaticamente nella finestra delle proprietà "master" del progetto (ms.cpp.props) e vengono valutate nell'ordine in cui vengono visualizzate in Gestione proprietà. È possibile spostarle per modificare l'ordine di valutazione. Le finestre delle proprietà che vengono valutate in un secondo momento sostituiranno i valori nelle finestre valutate in precedenza. Visualizzare [ereditarietà della proprietà del progetto](project-property-inheritance.md) per altre informazioni sull'ordine di valutazione nel file con estensione vcxproj, i file con estensione props e targets, le variabili di ambiente e la riga di comando.
+In ogni nodo di configurazione vengono visualizzati i nodi per ogni finestra delle proprietà che si applica a questa configurazione. Il sistema aggiunge finestre delle proprietà che impostano i valori in base alle opzioni selezionate nella procedura guidata app quando si crea il progetto. Fare clic con il pulsante destro del mouse su qualsiasi nodo e scegliere Proprietà per visualizzare le proprietà che si applicano a quel nodo. Tutte le finestre delle proprietà vengono importate automaticamente nella finestra delle proprietà "master" del progetto (ms.cpp.props) e vengono valutate nell'ordine in cui vengono visualizzate in Gestione proprietà. È possibile spostarle per modificare l'ordine di valutazione. Le finestre delle proprietà che vengono valutate in un secondo momento sostituiranno i valori nelle finestre valutate in precedenza. Per ulteriori informazioni sull'ordine di valutazione nel file. vcxproj, i file con estensione props e targets, le variabili di ambiente e la riga di comando, vedere [ereditarietà della proprietà del progetto](project-property-inheritance.md) .
 
 Se si sceglie **Aggiungi nuova finestra delle proprietà del progetto** e successivamente si seleziona ad esempio la finestra delle proprietà MyProps.props, viene visualizzata una finestra di dialogo della pagina delle proprietà. Questa condizione è valida per la finestra delle proprietà MyProps. Le modifiche apportate vengono scritte nella finestra, non nel file di progetto (con estensione vcxproj).
 
@@ -44,7 +44,7 @@ In soluzioni di grandi dimensioni, in cui vengono usati numerosi progetti, può 
 
 #### <a name="to-create-a-property-sheet"></a>Per creare una finestra delle proprietà
 
-1. Sulla barra dei menu scegliere **Visualizza**, **Gestione proprietà**. Verrà aperto **Gestione proprietà**.
+1. Sulla barra dei menu scegliere **Visualizza** > **Gestione proprietà** o **Visualizza** > **altre** > **Gestione proprietà**di Windows. Verrà aperto **Gestione proprietà**.
 
 2. Per definire l'ambito della finestra delle proprietà, selezionare l'elemento a cui si applica. Può trattarsi di una configurazione specifica o di un'altra finestra delle proprietà. Aprire il menu di scelta rapida per questo elemento e quindi scegliere **Aggiungi nuova finestra delle proprietà del progetto**. Specificare un nome e un percorso.
 
