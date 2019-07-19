@@ -207,7 +207,7 @@ Oggetto di cui verificare la disuguaglianza.
 
 L'operatore membro restituisce `(!*this == right)`.
 
-### <a name="op_lt">Operatore </a>&lt;
+### <a name="op_lt"></a>Operatore &lt;
 
 Verifica se l'oggetto [error_category](../standard-library/error-category-class.md) è più piccolo dell'oggetto `error_category` passato per il confronto.
 

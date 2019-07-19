@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a> Operatore&lt;
 
 Verifica se l'oggetto map a sinistra dell'operatore è minore dell'oggetto map a destra.
 
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="op_gt"></a> Operatore&gt;
 
 Verifica se l'oggetto map a sinistra dell'operatore è maggiore dell'oggetto map a destra.
 
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="op_lt_multimap">Operatore </a>&lt;
+## <a name="op_lt_multimap"></a> Operatore&lt;
 
 Verifica se l'oggetto multimap a sinistra dell'operatore è minore dell'oggetto multimap a destra.
 
@@ -687,7 +687,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="op_gt_multimap">Operatore </a>&gt;
+## <a name="op_gt_multimap"></a> Operatore&gt;
 
 Verifica se l'oggetto multimap a sinistra dell'operatore è maggiore dell'oggetto multimap a destra.
 

@@ -89,7 +89,7 @@ typedef ForwardIterator iter_type;
 
 Il tipo è un sinonimo del parametro di modello `ForwardIterator`.
 
-### <a name="op_star">Operatore </a>\*
+### <a name="op_star"></a>Operatore \*
 
 Operatore di dereferenziazione usato per implementare l'espressione dell'iteratore di archiviazione non elaborato \* *ii* = *x*.
 

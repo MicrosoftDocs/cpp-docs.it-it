@@ -76,7 +76,7 @@ int main( )
 The deques are not equal.
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a>Operatore &lt;
 
 Verifica se l'oggetto deque sul lato sinistro dell'operatore è minore dell'oggetto deque sul lato destro.
 

@@ -206,7 +206,7 @@ La prima funzione restituisce un `duration` oggetto che ha un intervallo di temp
 
 La seconda e terza funzione restituiscono un `time_point` oggetto che rappresenta un punto nel tempo che viene spostato, in base all'intervallo *Rim*, dal punto nel tempo *ora*.
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a> Operatore &lt;
 
 Determina se un oggetto [duration](../standard-library/duration-class.md) o [time_point](../standard-library/time-point-class.md) è minore di un altro oggetto `duration` o `time_point`.
 

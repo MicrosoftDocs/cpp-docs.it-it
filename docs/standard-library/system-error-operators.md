@@ -72,7 +72,7 @@ Oggetto di cui verificare la disuguaglianza.
 
 Questa funzione restituisce `!(left == right)`.
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a>Operatore &lt;
 
 Verifica se un oggetto è più piccolo dell'oggetto passato per il confronto.
 

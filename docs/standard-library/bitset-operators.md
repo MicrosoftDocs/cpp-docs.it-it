@@ -21,7 +21,7 @@ ms.locfileid: "68243328"
 ---
 # <a name="ltbitsetgt-operators"></a>Operatori &lt;bitset&gt;
 
-## <a name="op_amp">Operatore </a>&amp;
+## <a name="op_amp"></a> Operatore &amp;
 
 Esegue un'operazione `AND` bit per bit tra due bitset.
 
