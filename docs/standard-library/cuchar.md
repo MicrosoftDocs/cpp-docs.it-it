@@ -1,42 +1,34 @@
 ---
 title: '&lt;cuchar&gt;'
-ms.date: 04/04/2019
+ms.date: 07/17/2019
 f1_keywords:
 - <cuchar>
+- cuchar
 helpviewer_keywords:
 - cuchar header
-ms.openlocfilehash: 9fe161d5079aa2fe82dfaef0a483c3a3e600408b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 004ca23ea86134fb7cd6149015ac31cc51b5a403
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268573"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341065"
 ---
-# <a name="ltcwchargt"></a>&lt;cwchar&gt;
+# <a name="ltcuchargt"></a>&lt;cuchar&gt;
 
-Include l'intestazione della libreria C Standard \<uchar.h > e aggiunge i nomi associati al `std` dello spazio dei nomi.
+Include l'intestazione \<della libreria standard C UCHAR. h > e aggiunge i nomi associati `std` allo spazio dei nomi.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<cuchar >
+**Intestazione:** \<> cuchar
 
 **Spazio dei nomi:** std
 
-## <a name="member-functions"></a>Funzioni membro
-
-|||
-|-|-|
-|[c16rtomb](../standard-library/cuchar-functions.md#c16rtomb)|Nessuna descrizione.|
-|[c32rtomb](../standard-library/cuchar-functions.md#c32rtomb)|Nessuna descrizione.|
-|[mbrtoc16](../standard-library/cuchar-functions.md#mbrtoc16)|Nessuna descrizione.|
-|[mbrtoc32](../standard-library/cuchar-functions.md#mbrtoc32)|Nessuna descrizione.|
-
 ## <a name="remarks"></a>Note
 
-L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
+Questa `mbstate_t` intestazione aggiunge i tipi di libreria standard C e `size_t`e le funzioni [c16rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md), `std` [c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md), [mbrtoc16](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)e [mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md) allo spazio dei nomi.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
+[C++Panoramica della libreria standard](cpp-standard-library-overview.md)\
+[Thread safety nella C++ libreria standard](thread-safety-in-the-cpp-standard-library.md)

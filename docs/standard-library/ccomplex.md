@@ -1,33 +1,40 @@
 ---
 title: '&lt;ccomplex&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - <ccomplex>
+- ccomplex
+helpviewer_keywords:
+- ccomplex header
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-ms.openlocfilehash: ab9e95eb7b432a85a75d73d388ec069b0d04ac62
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5383b1eca4fda72f5f9e3a78637373acbcf7ab
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351105"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341135"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 
-Include l'intestazione [\<complex>](../standard-library/complex.md) della libreria standard C++, che include l'intestazione della libreria C standard \<complex.h> e aggiunge i nomi associati allo spazio dei nomi `std`.
+Include l' C++ intestazione [ \<](complex.md)della libreria standard > complesse.
 
-## <a name="syntax"></a>Sintassi
+> [!NOTE]
+> La \<libreria standard C Complex. h > intestazione non è inclusa \<da ccomplex >, perché è effettivamente sostituita dagli C++ overload in \<> complessi e \<cmath >. In questo modo \<l'intestazione ccomplex > ridondante. L' \<intestazione Complex. h > è deprecata in C++. L' \<intestazione di > ccomplex è deprecata in c++ 17 ed è stata rimossa nello standard bozza c++ 20.
 
-```cpp
-#include <ccomplex>
-```
+## <a name="requirements"></a>Requisiti
+
+**Intestazione:** \<> ccomplex
+
+**Spazio dei nomi:** std
 
 ## <a name="remarks"></a>Note
 
-L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
-
-Il nome `clog` dichiarato in \<complex.h> non è definito nello spazio dei nomi `std` a causa dei conflitti potenziali con il `clog` dichiarato in [\<iostream>](../standard-library/iostream.md).
+Il nome `clog` \<, dichiarato in Complex. h > `std` , non è definito nello spazio dei nomi a causa di potenziali conflitti con `clog` il dichiarato in [ \<iostream >](iostream.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[\<> complesse](complex.md)\
+[\<cmath>](cmath.md)\
+[Guida di riferimento ai file di intestazione](cpp-standard-library-header-files.md)\
+[C++Panoramica della libreria standard](cpp-standard-library-overview.md)\
+[Thread safety nella C++ libreria standard](thread-safety-in-the-cpp-standard-library.md)
