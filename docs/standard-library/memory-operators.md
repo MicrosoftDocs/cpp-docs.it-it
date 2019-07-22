@@ -266,7 +266,7 @@ Tipo controllato dal puntatore condiviso destro.
 
 L'operatore modello restituiscono `left.get() >= right.get()`.
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a> Operatore&lt;
 
 Verifica se un oggetto è minore di un secondo oggetto.
 
@@ -330,7 +330,7 @@ Tipo controllato dal puntatore condiviso destro.
 
 L'operatore modello restituiscono `left.get() <= right.get()`
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="op_gt"></a> Operatore&gt;
 
 Verifica se un oggetto è maggiore di un secondo oggetto.
 

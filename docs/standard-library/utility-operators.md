@@ -166,7 +166,7 @@ int main( )
 }
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a> Operatore&lt;
 
 Verifica se l'oggetto pair a sinistra dell'operatore è minore dell'oggetto pair a destra.
 
@@ -325,7 +325,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="op_gt"></a> Operatore&gt;
 
 Verifica se l'oggetto pair a sinistra dell'operatore è maggiore dell'oggetto pair a destra.
 
