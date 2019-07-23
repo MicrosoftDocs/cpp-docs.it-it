@@ -3,12 +3,12 @@ title: Installare il carico di lavoro Linux C++ in Visual Studio
 description: Descrive come scaricare, installare e configurare il carico di lavoro Linux per C++ in Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5df7b323d202f398059e92abaeeeedbf73439fa4
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042754"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299803"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Scaricare, installare e configurare il carico di lavoro Linux
 
@@ -31,8 +31,6 @@ Per questi scenari è necessario il carico di lavoro **Sviluppo di applicazioni 
 ::: moniker range="vs-2019"
 
 In Visual Studio 2019 è possibile specificare destinazioni separate per la compilazione e il debug. Se la destinazione è WSL non è più necessario aggiungere una connessione remota o configurare SSH.
-
-Il supporto di [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) è integrato in Visual Studio per i progetti Linux.
 
 ::: moniker-end
 
