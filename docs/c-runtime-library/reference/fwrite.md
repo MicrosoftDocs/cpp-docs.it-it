@@ -22,12 +22,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287547"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376057"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -60,15 +60,15 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fwrite** restituisce il numero di full elementi effettivamente scritti, che può essere minore di *conteggio* se si verifica un errore. Inoltre, se si verifica un errore, non è possibile determinare l'indicatore della posizione del file. Se uno dei due *stream* oppure *buffer* è un puntatore null o se viene specificato un numero dispari di byte da scrivere in modalità Unicode, la funzione richiama il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce 0.
+**fwrite** restituisce il numero di elementi completi effettivamente scritti, che può essere minore di *count* se si verifica un errore. Inoltre, se si verifica un errore, non è possibile determinare l'indicatore della posizione del file. Se il *flusso* o il *buffer* è un puntatore null o se viene specificato un numero dispari di byte da scrivere in modalità Unicode, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce 0.
 
 ## <a name="remarks"></a>Note
 
-Il **fwrite** funzione scrive fino a *conteggio* elementi, di *dimensioni* ognuno, con una lunghezza da *buffer* all'output *flusso*. Il puntatore del file associato *flusso* (se presente) viene incrementato del numero di byte effettivamente scritti. Se *flusso* viene aperto in modalità testo, ogni carattere di avanzamento riga viene sostituito con un ritorno a capo - avanzamento riga coppia. La sostituzione non ha effetto sul valore restituito.
+La funzione **fwrite** scrive fino al *conteggio* degli elementi, di lunghezza ogni *dimensione* , dal *buffer* al *flusso*di output. Il puntatore del file associato al *flusso* (se ne esiste uno) viene incrementato del numero di byte effettivamente scritti. Se il *flusso* viene aperto in modalità testo, ogni avanzamento riga viene sostituito con una coppia ritorno a capo/avanzamento riga. La sostituzione non ha effetto sul valore restituito.
 
-Quando *flusso* viene aperto in modalità di conversione Unicode, ad esempio, se *stream* aperta chiamando **fopen** e l'utilizzo di un parametro modalità che include **ccs = UNICODE**, **ccs = UTF-16LE**, o **ccs = UTF-8**, o se la modalità viene modificata in una modalità di conversione Unicode tramite **setMode** e una modalità parametro che include **o_wtext**, **_O_U16TEXT**, o **_O_U8TEXT**—*buffer* viene interpretato come un puntatore a un Matrice di **wchar_t** che contiene dati UTF-16. Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
+Quando il *flusso* viene aperto in modalità di conversione Unicode, ad esempio se il *flusso* viene aperto chiamando **fopen** e usando un parametro di modalità che include **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**o se la modalità è modificato in modalità di conversione Unicode tramite **_setmode** e un parametro di modalità che include **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**, il*buffer* viene interpretato come un puntatore a una matrice di **wchar_t** che contiene Dati UTF-16. Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
 
-Poiché questa funzione blocca il thread di chiamata, può essere considerata thread-safe. Per una versione non di blocco, vedere **fwrite_nolock**.
+Poiché questa funzione blocca il thread di chiamata, può essere considerata thread-safe. Per una versione non di blocco, vedere **_fwrite_nolock**.
 
 ## <a name="requirements"></a>Requisiti
 

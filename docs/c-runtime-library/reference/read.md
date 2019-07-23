@@ -26,12 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd599f227192b8c3ce17a0321d6399319e1925
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357655"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376310"
 ---
 # <a name="read"></a>_read
 
@@ -60,19 +60,19 @@ Numero massimo di byte da leggere.
 
 ## <a name="return-value"></a>Valore restituito
 
-**Read** restituisce il numero di byte letti, che può essere minore rispetto *buffer_size* se ci sono meno *buffer_size* byte lasciato nel file, o se il file è stato aperto in modalità testo. In modalità testo, ogni ritorno a capo con avanzamento riga coppia `\r\n` viene sostituito con un carattere di avanzamento riga singola `\n`. Solo il singolo carattere di avanzamento riga viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
+**_read** restituisce il numero di byte letti, che potrebbero essere minori di *BUFFER_SIZE* se nel file sono rimasti meno di *BUFFER_SIZE* byte o se il file è stato aperto in modalità testo. In modalità testo ogni coppia `\r\n` ritorno a capo/avanzamento riga viene sostituita da un singolo carattere `\n`di avanzamento riga. Solo il carattere di avanzamento riga singolo viene conteggiato nel valore restituito. La sostituzione non influisce sul puntatore di file.
 
-Se la funzione tenta di leggere alla fine del file, restituisce 0. Se *fd* è non valido, il file non è aperto per la lettura, o il file è bloccato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** al **EBADF**.
+Se la funzione tenta di leggere alla fine del file, restituisce 0. Se *FD* non è valido, il file non è aperto per la lettura o il file è bloccato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EBADF**.
 
-Se *buffer* viene **NULL**, o se *buffer_size* > **INT_MAX**, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostata su **EINVAL**.
+Se il *buffer* è **null**o se *BUFFER_SIZE* > **INT_MAX**, viene richiamato il gestore di parametri non validi. Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**.
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **Read** funzione legge un numero massimo di *buffer_size* byte in *buffer* dal file associato *fd*. L'operazione di lettura inizia dalla posizione corrente del puntatore del file associato al file specificato. Dopo l'operazione di lettura, il puntatore del file punta al carattere successivo non letto.
+La funzione **_read** legge un massimo di *BUFFER_SIZE* byte nel *buffer* dal file associato a *FD*. L'operazione di lettura inizia dalla posizione corrente del puntatore del file associato al file specificato. Dopo l'operazione di lettura, il puntatore del file punta al carattere successivo non letto.
 
-Se il file è stato aperto in modalità testo, la lettura termina quando **Read** rileva un carattere CTRL + Z, che viene considerato come un indicatore di fine del file. Usa [lseek](lseek-lseeki64.md) per cancellare l'indicatore di fine del file.
+Se il file è stato aperto in modalità testo, la lettura termina quando **_read** rileva un carattere CTRL + Z, che viene considerato come un indicatore di fine file. Usa [lseek](lseek-lseeki64.md) per cancellare l'indicatore di fine del file.
 
 ## <a name="requirements"></a>Requisiti
 

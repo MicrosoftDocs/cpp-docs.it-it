@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23e241794455a92f9e3628a786d75a6d4c7b037e
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413788"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376327"
 ---
 # <a name="effects-of-buffering"></a>Effetti della memorizzazione nel buffer
 
@@ -39,7 +39,7 @@ Affinché il programma funzioni in modo logico, l'oggetto `cout` deve svuotarsi 
 cout <<"Please wait..." <<flush;
 ```
 
-Questo passaggio scarica il buffer, garantendo che il messaggio venga visualizzato prima dell'attesa. È anche possibile usare la `endl` manipolatore, che svuota il buffer e genera un ritorno a capo-avanzamento riga oppure è possibile usare il `cin` oggetto. Questo oggetto (con l'oggetto `cerr` o `clog` ) in genere è associato all'oggetto `cout` . Quindi, qualsiasi uso di `cin` (oppure dell'oggetto `cerr` o `clog` ) scarica l'oggetto `cout` .
+Questo passaggio scarica il buffer, garantendo che il messaggio venga visualizzato prima dell'attesa. È anche possibile usare il `endl` manipolatore, che Scarica il buffer e restituisce un feed della riga di ritorno a capo, oppure è possibile `cin` usare l'oggetto. Questo oggetto (con l'oggetto `cerr` o `clog` ) in genere è associato all'oggetto `cout` . Quindi, qualsiasi uso di `cin` (oppure dell'oggetto `cerr` o `clog` ) scarica l'oggetto `cout` .
 
 ## <a name="see-also"></a>Vedere anche
 

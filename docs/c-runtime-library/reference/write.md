@@ -23,12 +23,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 032bf332caee09fbe17d58eeae16ab44b98402d3
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383412"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376301"
 ---
 # <a name="write"></a>_write
 
@@ -57,19 +57,19 @@ Numero di byte.
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **Write** restituisce il numero di byte effettivamente scritti. Se lo spazio effettivo rimanente sul disco è inferiore alla dimensione del buffer tenta di scrivere sul disco, la funzione **Write** ha esito negativo e No Scarica i contenuti del buffer sul disco. Valore restituito di -1 indica un errore. Se vengono passati parametri non validi, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e **errno** è impostato su uno dei tre valori: **EBADF**, ovvero il descrittore del file non è valido o non è possibile aprire il file per la scrittura; **ENOSPC**, che significa che non è sufficiente spazio rimanente nel dispositivo per l'operazione; oppure **EINVAL**, che significa che *buffer* era un puntatore null o che un dispari *conteggio* di byte passata deve essere scritto in un file in modalità Unicode.
+In caso di esito positivo, **_write** restituisce il numero di byte scritti. Se lo spazio effettivo rimanente sul disco è inferiore alle dimensioni del buffer che la funzione sta tentando di scrivere sul disco, **_write** ha esito negativo e non Scarica il contenuto del buffer sul disco. Un valore restituito di-1 indica un errore. Se vengono passati parametri non validi, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su uno dei tre valori seguenti: **EBADF**, che indica che il descrittore del file non è valido o il file non è aperto per la scrittura; **ENOSPC**, il che significa che lo spazio disponibile nel dispositivo non è sufficiente per l'operazione. o **EINVAL**, il che significa che il *buffer* è un puntatore null o che è stato passato un *numero* dispari di byte da scrivere in un file in modalità Unicode.
 
 Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Se il file viene aperto in modalità testo, ogni carattere di avanzamento riga viene sostituito con un ritorno a capo - avanzamento riga coppia nell'output. La sostituzione non interessa il valore restituito.
+Se il file viene aperto in modalità testo, ogni carattere di avanzamento riga viene sostituito con una coppia ritorno a capo/avanzamento riga nell'output. La sostituzione non influisce sul valore restituito.
 
-Quando il file viene aperto in modalità di conversione Unicode, ad esempio, se *fd* viene aperto usando **Open** oppure **sopen** e un parametro modalità che include **_O_ WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**, o se viene aperto usando **fopen** e un parametro modalità che include **ccs = UNICODE**, **ccs = UTF-16LE**, o **ccs = UTF-8**, o se la modalità viene modificata in una modalità di conversione Unicode tramite **setMode**—*buffer* viene interpretato come un puntatore a una matrice di **wchar_t** contenente **UTF-16** dei dati. Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
+Quando il file viene aperto in modalità di conversione Unicode, ad esempio se *FD* viene aperto utilizzando **_open** o **_sopen** e un parametro di modalità che include **_O_WTEXT**, **_O_U16TEXT**o **_O_U8TEXT**o se è aperto utilizzando **fopen** e un parametro di modalità che include **CCS = Unicode**, **CCS = UTF-16LE**o **CCS = UTF-8**o se la modalità viene modificata in modalità di conversione Unicode tramite **_setmode**, il*buffer* viene interpretato come un puntatore a un matrice di **wchar_t** che contiene dati **UTF-16** . Un tentativo di scrivere un numero dispari di byte in questa modalità causerà un errore di convalida del parametro.
 
 ## <a name="remarks"></a>Note
 
-Il **Write** funzione scritture *conteggio* byte dal *buffer* nel file associato *fd*. L'operazione di scrittura inizia dalla posizione corrente del puntatore del file (se presente) associato al file specifico. Se il file è aperto per l'aggiunta, l'operazione inizia dalla fine corrente del file. Al termine dell'operazione di scrittura, il puntatore del file viene incrementato del numero di byte effettivamente scritti.
+La funzione **_write** scrive il *numero* di byte dal *buffer* nel file associato a *FD*. L'operazione di scrittura inizia dalla posizione corrente del puntatore del file (se presente) associato al file specifico. Se il file è aperto per l'aggiunta, l'operazione inizia dalla fine corrente del file. Al termine dell'operazione di scrittura, il puntatore del file viene incrementato del numero di byte scritti.
 
-Durante la scrittura di file aperti in modalità testo, **Write** considera un carattere CTRL + Z come il logico fine del file. Durante la scrittura in un dispositivo **Write** considera un carattere CTRL + Z nel buffer come un terminatore di output.
+Quando si scrive in file aperti in modalità testo, **_write** considera un carattere CTRL + Z come la fine logica del file. Quando si scrive in un dispositivo, **_write** considera un carattere CTRL + Z nel buffer come un terminatore di output.
 
 ## <a name="requirements"></a>Requisiti
 
