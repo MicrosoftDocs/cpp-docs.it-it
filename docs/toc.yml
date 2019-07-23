@@ -418,12 +418,14 @@
                   href: build/reference/advanced-property-page.md
                 - name: Pagina delle proprietà Directory di VC++
                   href: build/reference/vcpp-directories-property-page.md
+                - name: Pagine delle proprietà C/C++
+                  href: build/reference/c-cpp-prop-page.md
+                - name: Pagine delle proprietà Linker
+                  href: build/reference/linker-property-pages.md
                 - name: Pagine delle proprietà Riga di comando
                   href: build/reference/command-line-property-pages.md
                 - name: Pagina delle proprietà NMake
                   href: build/reference/nmake-property-page.md
-                - name: Pagine delle proprietà Linker
-                  href: build/reference/linker-property-pages.md
                 - name: Pagine delle proprietà dello strumento Manifesto
                   expanded: false
                   items:
@@ -8538,6 +8540,8 @@
                   href: standard-library/csetjmp.md
                 - name: <csignal>
                   href: standard-library/csignal.md
+                - name: <cstdalign>
+                  href: standard-library/cstdalign.md
                 - name: <cstdarg>
                   href: standard-library/cstdarg.md
                 - name: <cstdbool>
@@ -8556,6 +8560,8 @@
                   href: standard-library/ctgmath.md
                 - name: <ctime>
                   href: standard-library/ctime.md
+                - name: <cuchar>
+                  href: standard-library/cuchar.md
                 - name: <cvt-wbuffer>
                   href: standard-library/cvt-wbuffer.md
                 - name: <cvt-wstring>
