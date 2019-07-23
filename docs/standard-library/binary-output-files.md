@@ -6,16 +6,16 @@ helpviewer_keywords:
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4562f5c1167aeadc6689313e73545ed1ad9bbcf8
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414061"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376337"
 ---
 # <a name="binary-output-files"></a>File di output binari
 
-I flussi erano originariamente progettati per il testo, quindi la modalità di output predefinita è testo. In modalità testo, carattere di nuova riga (10 esadecimale) si espande in un ritorno a capo-avanzamento di riga (solo 16-bit). L'espansione può causare problemi, come illustrato di seguito:
+I flussi erano originariamente progettati per il testo, quindi la modalità di output predefinita è testo. In modalità testo, il carattere di avanzamento riga (nuova riga) si espande in una coppia ritorno a capo/avanzamento riga. L'espansione può causare problemi, come illustrato di seguito:
 
 ```cpp
 // binary_output_files.cpp
@@ -30,7 +30,7 @@ int main( )
 }
 ```
 
-L'output previsto del programma potrebbe essere la sequenza di byte {99, 0, 10, 0}, invece il programma restituisce {99, 0, 13, 10, 0}, causando problemi se un programma è in attesa di un input binario. Se è necessario un output binario true, in cui i caratteri vengono scritti senza essere convertiti, è possibile specificare l'output binario usando l'argomento openmode del costruttore [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream):
+L'output previsto del programma potrebbe essere la sequenza di byte {99, 0, 10, 0}, invece il programma restituisce {99, 0, 13, 10, 0}, causando problemi se un programma è in attesa di un input binario. Se è necessario un output di tipo binario reale, in cui i caratteri vengono scritti non tradotti, è possibile specificare l' output binario `openmode` usando l'argomento del costruttore [ofstream](../standard-library/basic-ofstream-class.md#basic_ofstream):
 
 ```cpp
 // binary_output_files2.cpp
@@ -50,4 +50,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Flussi di output](../standard-library/output-streams.md)<br/>
+[Flussi di output](../standard-library/output-streams.md)
