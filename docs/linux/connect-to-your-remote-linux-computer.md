@@ -3,12 +3,12 @@ title: Connettersi al sistema Linux di destinazione in Visual Studio
 description: Come connettersi a un computer Linux remoto o a WSL dall'interno di un progetto di Visual Studio C++.
 ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 00d7facca2857efb0b8b43b5aaf38edce348a511
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: cd107f096e4395f93775ee80b889cc0efd627166
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861136"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313424"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connettersi al sistema Linux di destinazione in Visual Studio
 
@@ -20,11 +20,11 @@ Il supporto Linux è disponibile in Visual Studio 2017 e versioni successive.
 
 ::: moniker range=">=vs-2017"
 
-È possibile configurare un progetto Linux destinato a un computer remoto o a un sottosistema Windows per Linux (WSL). Per i computer remoti, e per WSL in Visual Studio 2017, è necessario configurare una connessione. 
+È possibile configurare un progetto Linux destinato a un computer remoto o al sottosistema Windows per Linux (WSL). Per i computer remoti, e per WSL in Visual Studio 2017, è necessario configurare una connessione remota. 
 
 ## <a name="connect-to-a-remote-linux-computer"></a>Connettersi a un computer Linux remoto
 
-Durante la compilazione di un progetto Linux C++ per un sistema Linux remoto (macchina virtuale o computer fisico), il codice Linux viene copiato nel computer Linux remoto, quindi compilato in base alle impostazioni di Visual Studio.
+Durante la compilazione di un progetto Linux C++ per un sistema Linux remoto (macchina virtuale o computer fisico), il codice sorgente Linux viene copiato nel computer Linux remoto, quindi compilato in base alle impostazioni di Visual Studio.
 
 Per configurare la connessione remota:
 
@@ -92,15 +92,15 @@ In Visual Studio 2017 è possibile connettersi al sottosistema Windows per Linux
 
 ::: moniker range="vs-2019"
 
-In Visual Studio 2019 versione 16.1 non è necessario aggiungere una connessione remota oppure configurare SSH quando la destinazione è WSL. Tutto ciò che serve nel sistema Linux è gcc, gdb, make, rsync e zip. Visual Studio richiede rsync e zip solo per estrarre i file di intestazione al primo uso dall'istanza di WSL nel file system di Windows per usarli per IntelliSense. In Visual Studio 2019 versione 16.1, il supporto di WSL si basa su Windows versione 1809. È possibile che sia in esecuzione una versione successiva di Windows, ma Visual Studio non sfrutta ancora i vantaggi delle nuove funzionalità WSL.
+In Visual Studio 2019 versione 16.1 è stato aggiunto il supporto nativo per l'utilizzo di C++ con il [sottosistema Windows per Linux (WSL)](https://docs.microsoft.com/windows/wsl/about).  Ciò significa che non è più necessario aggiungere una connessione remota o configurare SSH per compilare ed eseguire il debug nell'installazione WSL locale. Informazioni dettagliate su [come installare WSL](https://docs.microsoft.com/windows/wsl/install-win10) sono disponibili qui.
 
-Se la distribuzione supporta apt, è possibile installare i pacchetti necessari con questo comando:
+Per configurare l'installazione di WSL in modo che funzioni con Visual Studio, è necessario aver installato gli strumenti seguenti: GCC, GDB, make, rsync e zip. È possibile installarli in distribuzioni che usano APT con questo comando: 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
 
-Per configurare il progetto per WSL, vedere [Configurare un progetto Linux](configure-a-linux-project.md) oppure [Configurare un progetto CMake per Linux](cmake-linux-project.md) a seconda del tipo di progetto disponibile.
+Per configurare il progetto per WSL, vedere [Configurare un progetto Linux](configure-a-linux-project.md) oppure [Configurare un progetto CMake per Linux](cmake-linux-project.md) a seconda del tipo di progetto disponibile. Per seguire le istruzioni dettagliate per la creazione di una applicazione console semplice con WSL, vedere il post di blog introduttivo [C++ with Visual Studio 2019 and the Windows Subsystem for Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/) (C++ con Visual Studio 2019 e il sottosistema Windows per Linux (WSL)).
 
 ::: moniker-end
 

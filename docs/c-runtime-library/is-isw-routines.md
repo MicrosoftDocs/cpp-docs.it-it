@@ -16,12 +16,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 961ad52070928ba755625747546c8dc7b1c215ba
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 1550f8f012802e03e9228e67c381915b1b4e1d64
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750820"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376040"
 ---
 # <a name="is-isw-routines"></a>is, isw Routines
 
@@ -156,7 +156,7 @@ Carattere wide stampabile, incluso il carattere wide dello spazio (L ').
 Carattere wide stampabile che non sia il carattere wide di spazio (L' ') né un carattere wide per il quale la funzione `iswalnum` sia diversa da zero.
 
 `iswspace`<br/>
-Carattere wide che corrisponde allo spazio vuoto standard o è parte di un set definito a livello di implementazione di caratteri wide per il quale la funzione `iswalnum` è falsa. Gli spazi vuoti standard sono: spazio (L' '), modulo continuo (L'\f'), nuova riga (L'\n'), ritorno a capo (L'\r'), tabulazione orizzontale (L'\t') e tabulazione verticale (L'\v').
+Carattere wide che corrisponde allo spazio vuoto standard o è parte di un set definito a livello di implementazione di caratteri wide per il quale la funzione `iswalnum` è falsa. Gli spazi vuoti standard sono: spazio (L' '), avanzamento carta (L'\f'), nuova riga (L'\n'), ritorno a capo (L'\r'), tabulazione orizzontale (L'\t') e tabulazione verticale (L'\v').
 
 `iswupper`<br/>
 Carattere wide maiuscolo o una parte di un set di caratteri wide definito a livello di implementazione per il quale nessuna delle funzioni `iswcntrl`, `iswdigit`, `iswpunct`, o `iswspace` è diversa da zero. `iswupper` restituisce un valore diverso da zero solo per i caratteri wide che corrispondono a caratteri maiuscoli.

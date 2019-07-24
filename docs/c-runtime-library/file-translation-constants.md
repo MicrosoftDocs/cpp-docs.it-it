@@ -11,12 +11,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: ef9b986753de05c45b3071e55f9b163fa5a6a7da
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ed2fae935850837ebace880d78c206754b3061bd
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743329"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375921"
 ---
 # <a name="file-translation-constants"></a>Costanti di conversione di file
 
@@ -28,13 +28,13 @@ ms.locfileid: "57743329"
 
 ## <a name="remarks"></a>Osservazioni
 
-Queste costanti specificano la modalità di conversione (**"b"** o **"t"**). La modalità è inclusa nella stringa che specifica il tipo di accesso (**"r"**, **"w"**, **"a"**, **"r+"**, **"w+"**, **"a+"**).
+Queste costanti specificano la modalità di conversione ( **"b"** o **"t"** ). La modalità è inclusa nella stringa che specifica il tipo di accesso ( **"r"** , **"w"** , **"a"** , **"r+"** , **"w+"** , **"a+"** ).
 
 Le modalità di conversione sono le seguenti:
 
 - **t**
 
-   Apre in modalità testo (convertita). In questa modalità, le combinazioni ritorno a capo/avanzamento di riga (CR-LF) vengono convertite in singoli avanzamenti di riga (LF) al momento dell'input e i caratteri di avanzamento riga vengono convertiti in combinazioni di ritorno a capo-avanzamento di riga (CR-LF) al momento dell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. Nei file aperti per la lettura o lettura/scrittura, `fopen` verifica la presenza della combinazione CTRL+Z alla fine del file e la rimuove, se possibile. Questa operazione viene eseguita perché l'utilizzo delle funzioni `fseek` e `ftell` per spostarsi all'interno di un file che terminano con CTRL+Z può causare un comportamento non corretto di `fseek` in prossimità della fine del file.
+   Apre in modalità testo (convertita). In questa modalità le combinazioni di ritorno a capo-avanzamento di riga vengono convertite in un singolo avanzamento riga al momento dell'input e i caratteri di avanzamento riga vengono convertiti in combinazioni di ritorno a capo-avanzamento di riga al momento dell'output. Inoltre, CTRL+Z viene interpretato nell'input come carattere di fine file. Nei file aperti per la lettura o lettura/scrittura `fopen` verifica la presenza della combinazione CTRL+Z alla fine del file e, se possibile, la rimuove. Questa operazione viene eseguita perché l'utilizzo delle funzioni `fseek` e `ftell` per spostarsi all'interno di un file che terminano con CTRL+Z può causare un comportamento non corretto di `fseek` in prossimità della fine del file.
 
    > [!NOTE]
    > L'opzione **t** non fa parte dello standard ANSI per `fopen` e `freopen`. È un'estensione Microsoft e non deve essere utilizzata dove si desidera la portabilità ANSI.
