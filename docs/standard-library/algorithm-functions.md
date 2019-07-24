@@ -200,16 +200,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 7b0a8b427b919b624928a7d37d67937ac04884db
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245980"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313390"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
-## <a name="adjacent_find"></a> adjacent_find
+## <a name="adjacent_find"></a>adjacent_find
 
 Cerca due elementi adiacenti uguali o che soddisfano una condizione specificata.
 
@@ -223,7 +223,7 @@ template<class ForwardIterator , class BinaryPredicate>
 ForwardIterator adjacent_find(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
 
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator adjacent_find(
@@ -241,18 +241,21 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*Comp*\
+*Pred*\
 Predicato binario che fornisce la condizione che deve essere soddisfatta dai valori degli elementi adiacenti nell'intervallo in cui eseguire la ricerca.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore in avanti al primo elemento della coppia adiacente con elementi uguali (nella prima versione) o che soddisfano la condizione fornita dal predicato binario (nella seconda versione), sempre che tale coppia di elementi venga trovata. In caso contrario, un iteratore che punta alla *ultimo* viene restituito.
+Iteratore in poi al primo degli elementi adiacenti che sono uguali tra loro (nella prima versione) o che soddisfano la condizione fornita dal predicato binario (nella seconda versione), a condizione che tale coppia di elementi venga trovata. In caso contrario, viene restituito un iteratore che punta all' *Ultima* .
 
 ### <a name="remarks"></a>Note
 
@@ -272,47 +275,47 @@ L'operatore `operator==` usato per determinare la corrispondenza tra elementi de
 // Returns whether second element is twice the first
 bool twice (int elem1, int elem2 )
 {
-   return elem1 * 2 == elem2;
+    return elem1 * 2 == elem2;
 }
 
 int main()
 {
-   using namespace std;
-   list <int> L;
-   list <int>::iterator Iter;
-   list <int>::iterator result1, result2;
+    using namespace std;
+    list<int> L;
+    list<int>::iterator Iter;
+    list<int>::iterator result1, result2;
 
-   L.push_back( 50 );
-   L.push_back( 40 );
-   L.push_back( 10 );
-   L.push_back( 20 );
-   L.push_back( 20 );
+    L.push_back( 50 );
+    L.push_back( 40 );
+    L.push_back( 10 );
+    L.push_back( 20 );
+    L.push_back( 20 );
 
-   cout << "L = ( " ;
-   for ( Iter = L.begin( ) ; Iter != L.end( ) ; Iter++ )
-      cout << *Iter << " ";
-   cout << ")" << endl;
+    cout << "L = ( " ;
+    for ( Iter = L.begin( ) ; Iter != L.end( ) ; Iter++ )
+        cout << *Iter << " ";
+    cout << ")" << endl;
 
-   result1 = adjacent_find( L.begin( ), L.end( ) );
-   if ( result1 == L.end( ) )
-      cout << "There are not two adjacent elements that are equal."
-           << endl;
-   else
-      cout << "There are two adjacent elements that are equal.\n"
-           << "They have a value of "
-           << *( result1 ) << "." << endl;
+    result1 = adjacent_find( L.begin( ), L.end( ) );
+    if ( result1 == L.end( ) )
+        cout << "There are not two adjacent elements that are equal."
+            << endl;
+    else
+        cout << "There are two adjacent elements that are equal.\n"
+            << "They have a value of "
+            << *( result1 ) << "." << endl;
 
-   result2 = adjacent_find( L.begin( ), L.end( ), twice );
-   if ( result2 == L.end( ) )
-      cout << "There are not two adjacent elements where the "
-           << "second is twice the first." << endl;
-   else
-   {
-      cout << "There are two adjacent elements where "
-           << "the second is twice the first.\n"
-           << "They have values of " << *(result2++)
-           << " & " << *result2 << "." << endl;
-   }
+    result2 = adjacent_find( L.begin( ), L.end( ), twice );
+    if ( result2 == L.end( ) )
+        cout << "There are not two adjacent elements where the "
+            << "second is twice the first." << endl;
+    else
+    {
+        cout << "There are two adjacent elements where "
+            << "the second is twice the first.\n"
+            << "They have values of " << *(result2++)
+            << " & " << *result2 << "." << endl;
+    }
 }
 ```
 
@@ -324,43 +327,46 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a> all_of
+## <a name="all_of"></a>all_of
 
-Restituisce **true** quando una condizione è presente in ogni elemento dell'intervallo specificato.
+Restituisce **true** quando una condizione è presente in ogni elemento nell'intervallo specificato.
 
 ```cpp
-template<class InputIterator, class Predicate>
+template<class InputIterator, class UnaryPredicate>
 bool all_of(
     InputIterator first,
     InputIterator last,
-    BinaryPredicatecomp);
+    UnaryPredicate pred);
 
-template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+template <class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 bool all_of(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    Predicate pred);
+    ForwardIterator first,
+    ForwardIterator last,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che indica dove iniziare a cercare una condizione. L'iteratore indica l'inizio di un intervallo di elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che indica la fine dell'intervallo di elementi in cui verificare una condizione.
 
-*comp*<br/>
-Condizione da verificare. Si tratta di un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*\
+Condizione da verificare. Si tratta di un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce **true** se la condizione viene rilevata in ogni elemento nell'intervallo indicato oppure se l'intervallo è vuoto, e **false** in caso contrario.
+Restituisce **true** se la condizione viene rilevata in corrispondenza di ogni elemento nell'intervallo indicato oppure se l'intervallo è vuoto e **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello restituisce **true** solo se, per ogni `N` compreso nell'intervallo `[0,Last - first)`, il predicato `comp(*(_First + N))` viene **true**.
+La funzione modello restituisce **true** solo se, per ogni `N` nell'intervallo `[0, last - first)`, il predicato `pred(*(first + N))` è **true**.
 
 ### <a name="example"></a>Esempio
 
@@ -397,35 +403,38 @@ li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
-## <a name="any_of"></a> any_of
+## <a name="any_of"></a>any_of
 
-Restituisce **true** quando una condizione è presente almeno una volta nell'intervallo specificato di elementi.
+Restituisce **true** quando una condizione è presente almeno una volta nell'intervallo di elementi specificato.
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
 bool any_of(
     InputIterator first,
     InputIterator last,
-    UnaryPredicate comp);
+    UnaryPredicate pred);
 
-template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+template <class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 bool any_of(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che indica dove inizia l'intervallo di elementi in cui verificare una condizione.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che indica la fine dell'intervallo di elementi in cui verificare una condizione.
 
-*Comp*\
-Condizione da verificare. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Il predicato definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*\
+Condizione da verificare. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Il predicato definisce la condizione che deve essere soddisfatta dall'elemento verificato. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -433,9 +442,9 @@ Restituisce **true** se la condizione viene rilevata almeno una volta nell'inter
 
 ### <a name="remarks"></a>Note
 
-La funzione modello restituisce **true** solo se, per alcuni `N` compreso nell'intervallo
+La funzione modello restituisce **true** solo se, per alcuni `N` nell'intervallo
 
-`[0, last - first)`, il predicato `comp(*(first + N))` è true.
+`[0, last - first)`, il predicato `pred(*(first + N))` è true.
 
 ### <a name="example"></a>Esempio
 
@@ -471,7 +480,7 @@ li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
-## <a name="binary_search"></a> binary_search
+## <a name="binary_search"></a>binary_search
 
 Verifica se in un intervallo ordinato è presente un elemento uguale a un valore specificato o equivalente a tale valore nel senso specificato da un predicato binario.
 
@@ -482,26 +491,26 @@ bool binary_search(
     ForwardIterator last,
     const Type& value);
 
-template<class ForwardIterator,  class Type,  class BinaryPredicate>
+template<class ForwardIterator, class Type, class BinaryPredicate>
 bool binary_search(
     ForwardIterator first,
     ForwardIterator last,
     const Type& value,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *value*\
 Il valore a cui deve corrispondere il valore dell'elemento o che deve soddisfare la condizione con il valore di elemento specificato dal predicato binario.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
@@ -518,7 +527,7 @@ Gli intervalli di origine non vengono modificati da `binary_search`.
 
 Per poter essere ordinati, i tipi di valore degli iteratori in avanti devono essere confrontabili mediante il tipo di confronto "minore di", in modo che, dati due elementi, sia possibile determinare o che sono equivalenti (nel senso che nessuno è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti.
 
-La complessità dell'algoritmo è logaritmica per gli iteratori ad accesso casuale e lineare in caso contrario, con il numero di passaggi proporzionali a (`last` - `first`).
+La complessità dell'algoritmo è logaritmica per gli iteratori ad accesso casuale e lineare in caso contrario, con il numero di passaggi proporzionali`last`a ( - `first`).
 
 ### <a name="example"></a>Esempio
 
@@ -545,7 +554,7 @@ int main()
 {
     using namespace std;
 
-    list <int> List1;
+    list<int> List1;
 
     List1.push_back( 50 );
     List1.push_back( 10 );
@@ -602,16 +611,48 @@ int main()
 }
 ```
 
-## <a name="clamp"></a> Clamp
+## <a name="clamp"></a>morsetto
+
+Confronta un valore con un limite superiore e inferiore e restituisce un riferimento al valore se è compreso tra i limiti o un riferimento al limite superiore o inferiore, se il valore è rispettivamente superiore o inferiore.
 
 ```cpp
-template<class T>
-constexpr const T& clamp(const T& v, const T& lo, const T& hi);
-template<class T, class Compare>
-constexpr const T& clamp(const T& v, const T& lo, const T& hi, Compare comp);
+template<class Type>
+constexpr const Type& clamp(
+    const Type& value,
+    const Type& lower,
+    const Type& upper);
+
+template<class Type, class Compare>
+constexpr const Type& clamp(
+    const Type& value,
+    const Type& lower,
+    const Type& upper,
+    Compare pred);
 ```
 
-## <a name="copy"></a> copia
+### <a name="parameters"></a>Parametri
+
+*value*\
+Valore da confrontare con la *parte superiore* e *inferiore*.
+
+*inferiore*\
+Limite inferiore dei valori a cui bloccare il *valore* .
+
+*superiore*\
+Limite superiore dei valori a cui bloccare il *valore* .
+
+*Pred*\
+Predicato utilizzato per confrontare il valore con un *valore* *inferiore* o *superiore*. Un predicato di confronto accetta due argomenti e restituisce **true** se il primo è in un certo senso minore del secondo e in caso contrario, **false**.
+
+### <a name="return-value"></a>Valore restituito
+
+Restituisce un riferimento a un *valore minore* se `value < lower`o un riferimento a un `upper < value`valore *superiore* se. In caso contrario, restituisce un riferimento a *value*.
+
+### <a name="remarks"></a>Note
+
+Il comportamento non è definito se *Upper* è minore di *Lower*.
+
+## <a name="copy"></a>copia
 
 Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in avanti.
 
@@ -625,16 +666,20 @@ OutputIterator copy(
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator2 copy(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
     ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo di origine.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di origine.
 
 *destBeg*\
@@ -642,13 +687,13 @@ Iteratore di output che punta alla posizione del primo elemento nell'intervallo 
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione, vale a dire, l'iteratore punta `result` + (*ultima* - *primo*).
+Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione, `result` ovvero l'iteratore punta a + (*ultimo* - *primo*).
 
 ### <a name="remarks"></a>Note
 
 L'intervallo di origine deve essere valido e la destinazione deve disporre di spazio sufficiente per contenere tutti gli elementi copiati.
 
-Poiché l'algoritmo copia gli elementi di origine in un ordine a partire il primo elemento, l'intervallo di destinazione può sovrapporsi all'intervallo di origine purché la *ultimo* posizione dell'intervallo di origine non è contenuta nella destinazione intervallo. `copy` utilizzabile per spostare gli elementi a sinistra, ma non da destra, a meno che non si verificano sovrapposizioni tra gli intervalli di origine e destinazione. Per spostare a destra di un numero qualsiasi di posizioni, usare l'algoritmo [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
+Poiché l'algoritmo copia gli elementi di origine in un ordine a partire dal primo elemento, l'intervallo di destinazione può sovrapporsi all'intervallo di origine purché l' *Ultima* posizione dell'intervallo di origine non sia contenuta nell'intervallo di destinazione. `copy`può essere utilizzato per spostare gli elementi a sinistra ma non a destra, a meno che non vi sia alcuna sovrapposizione tra gli intervalli di origine e di destinazione. Per spostare a destra di un numero qualsiasi di posizioni, usare l'algoritmo [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
 
 L'algoritmo `copy` modifica solo i valori a cui puntano gli iteratori, assegnando nuovi valori agli elementi dell'intervallo di destinazione. Tale algoritmo non può essere utilizzato per creare nuovi elementi e non è in grado di inserire direttamente gli elementi in un contenitore vuoto.
 
@@ -662,44 +707,44 @@ L'algoritmo `copy` modifica solo i valori a cui puntano gli iteratori, assegnand
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-      v1.push_back( 10 * i );
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+        v1.push_back( 10 * i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 10 ; ii++ )
-      v2.push_back( 3 * ii );
+    int ii;
+    for ( ii = 0 ; ii <= 10 ; ii++ )
+        v2.push_back( 3 * ii );
 
-   cout << "v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // To copy the first 3 elements of v1 into the middle of v2
-   copy( v1.begin( ), v1.begin( ) + 3, v2.begin( ) + 4 );
+    // To copy the first 3 elements of v1 into the middle of v2
+    copy( v1.begin( ), v1.begin( ) + 3, v2.begin( ) + 4 );
 
-   cout << "v2 with v1 insert = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 with v1 insert = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // To shift the elements inserted into v2 two positions
-   // to the left
-   copy( v2.begin( )+4, v2.begin( ) + 7, v2.begin( ) + 2 );
+    // To shift the elements inserted into v2 two positions
+    // to the left
+    copy( v2.begin( )+4, v2.begin( ) + 7, v2.begin( ) + 2 );
 
-   cout << "v2 with shifted insert = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 with shifted insert = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -710,7 +755,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a> copy_backward
+## <a name="copy_backward"></a>copy_backward
 
 Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in indietro.
 
@@ -724,28 +769,28 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore bidirezionale che punta alla posizione del primo elemento dell'intervallo di origine.
 
-*ultimo*\
+*Ultima*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di origine.
 
-*destEnd*\
+*DestEnd*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione, vale a dire, l'iteratore punta *destEnd* -(*ultima* - *first*).
+Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione, ovvero l'iteratore punta a  DestEnd-(*ultimo* - *primo*).
 
 ### <a name="remarks"></a>Note
 
 L'intervallo di origine deve essere valido e la destinazione deve disporre di spazio sufficiente per contenere tutti gli elementi copiati.
 
-L'algoritmo `copy_backward` impone requisiti più rigidi di quelli dell'algoritmo di copia. Sia l'iteratore di input che quello di output devono essere bidirezionali.
+L' `copy_backward` algoritmo impone requisiti più severi rispetto a quelli dell' `copy` algoritmo. Sia l'iteratore di input che quello di output devono essere bidirezionali.
 
 Gli algoritmi `copy_backward` e [move_backward](../standard-library/algorithm-functions.md#move_backward) sono gli unici algoritmi della libreria standard C++ che definiscono l'intervallo di output con un iteratore che punta alla fine dell'intervallo di destinazione.
 
-Poiché l'algoritmo copia gli elementi di origine in un ordine a partire dall'ultimo elemento, l'intervallo di destinazione può sovrapporsi all'intervallo di origine purché la *primo* posizione dell'intervallo di origine non è contenuta nella destinazione intervallo. `copy_backward` può essere utilizzato per spostare gli elementi a destra ma non a sinistra, a meno che non si verifichi alcuna sovrapposizione tra gli intervalli di origine e quelli di destinazione. Per spostare a sinistra di un numero qualsiasi di posizioni, usare l'algoritmo [copy](../standard-library/algorithm-functions.md#copy).
+Poiché l'algoritmo copia gli elementi di origine in un ordine a partire dall'ultimo elemento, l'intervallo di destinazione può sovrapporsi all'intervallo di origine purché la *prima* posizione dell'intervallo di origine non sia contenuta nell'intervallo di destinazione. `copy_backward` può essere utilizzato per spostare gli elementi a destra ma non a sinistra, a meno che non si verifichi alcuna sovrapposizione tra gli intervalli di origine e quelli di destinazione. Per spostare a sinistra di un numero qualsiasi di posizioni, usare l'algoritmo [copy](../standard-library/algorithm-functions.md#copy).
 
 L'algoritmo `copy_backward` modifica solo i valori a cui puntano gli iteratori, assegnando nuovi valori agli elementi dell'intervallo di destinazione. Tale algoritmo non può essere utilizzato per creare nuovi elementi e non è in grado di inserire direttamente gli elementi in un contenitore vuoto.
 
@@ -759,94 +804,98 @@ L'algoritmo `copy_backward` modifica solo i valori a cui puntano gli iteratori, 
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; ++i )
-      v1.push_back( 10 * i );
+    int i;
+    for ( i = 0 ; i <= 5 ; ++i )
+        v1.push_back( 10 * i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 10 ; ++ii )
-      v2.push_back( 3 * ii );
+    int ii;
+    for ( ii = 0 ; ii <= 10 ; ++ii )
+        v2.push_back( 3 * ii );
 
-   cout << "v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; ++Iter1 )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; ++Iter1 )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // To copy_backward the first 3 elements of v1 into the middle of v2
-   copy_backward( v1.begin( ), v1.begin( ) + 3, v2.begin( ) + 7 );
+    // To copy_backward the first 3 elements of v1 into the middle of v2
+    copy_backward( v1.begin( ), v1.begin( ) + 3, v2.begin( ) + 7 );
 
-   cout << "v2 with v1 insert = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 with v1 insert = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // To shift the elements inserted into v2 two positions
-   // to the right
-   copy_backward( v2.begin( )+4, v2.begin( ) + 7, v2.begin( ) + 9 );
+    // To shift the elements inserted into v2 two positions
+    // to the right
+    copy_backward( v2.begin( )+4, v2.begin( ) + 7, v2.begin( ) + 9 );
 
-   cout << "v2 with shifted insert = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 with shifted insert = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 }
 ```
 
-## <a name="copy_if"></a> copy_if
+## <a name="copy_if"></a>copy_if
 
-In un intervallo di elementi, copia gli elementi che fanno **true** la condizione specificata.
+In un intervallo di elementi, copia gli elementi **true** per la condizione specificata.
 
 ```cpp
-template<class InputIterator, class OutputIterator, class BinaryPredicate>
+template<class InputIterator, class OutputIterator, class UnaryPredicate>
 OutputIterator copy_if(
     InputIterator first,
     InputIterator last,
     OutputIterator dest,
-    Predicate pred);
+    UnaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Predicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class UnaryPredicate>
 ForwardIterator2 copy_if(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, ForwardIterator1 last,
-    ForwardIterator2 result, Predicate pred);
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che indica l'inizio di un intervallo in cui verificare la condizione.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che indica la fine dell'intervallo.
 
 *dest*\
 Iteratore di output che indica la destinazione per gli elementi copiati.
 
 *Pred*\
-Condizione verificata in ogni elemento dell'intervallo. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Un predicato accetta un argomento e restituisce **true** oppure **false**.
+Condizione verificata in ogni elemento dell'intervallo. La condizione è fornita da un oggetto funzione predicato definito dall'utente. Un predicato unario accetta un argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di output che è uguale a *dest* incrementato una volta per ogni elemento che soddisfa la condizione. In altre parole, il valore restituito meno *dest* è uguale al numero di elementi copiati.
+Un iteratore di output uguale a *dest* incrementato una volta per ogni elemento che soddisfa la condizione. In altre parole, il valore restituito meno *dest* corrisponde al numero di elementi copiati.
 
 ### <a name="remarks"></a>Note
 
 La funzione del modello restituisce
 
-`if (pred(*_First + N)) * dest++ = *(_First + N))`
+`if (pred(*first + N)) * dest++ = *(first + N))`
 
-una volta per ogni `N` nell'intervallo `[0, last - first)`, esclusivamente per aumentare i valori di `N` iniziando dal valore più basso. Se *dest* e *primo* indicano aree di archiviazione *dest* non deve essere compreso nell'intervallo `[ first, last )`.
+una volta per ogni `N` nell'intervallo `[0, last - first)`, esclusivamente per aumentare i valori di `N` iniziando dal valore più basso. Se *dest* e *First* designano le aree di archiviazione, *dest* non deve essere compreso nell' `[ first, last )`intervallo.
 
-## <a name="copy_n"></a> copy_n
+## <a name="copy_n"></a>copy_n
 
 Copia un numero specificato di elementi.
 
@@ -857,17 +906,20 @@ OutputIterator copy_n(
     Size count,
     OutputIterator dest);
 
-template<class ExecutionPolicy, class ForwardIterator1, class Size,
-class ForwardIterator2>
+template<class ExecutionPolicy, class ForwardIterator1, class Size, class ForwardIterator2>
 ForwardIterator2 copy_n(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, Size n,
-    ForwardIterator2 result);
+    ForwardIterator1 first,
+    Size count,
+    ForwardIterator2 dest);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che indica da dove copiare gli elementi.
 
 *conteggio*\
@@ -878,11 +930,11 @@ Iteratore di output che indica dove copiare gli elementi.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un iteratore di output dove sono stati copiati gli elementi. Corrisponde al valore restituito del terzo parametro, *dest*.
+Restituisce un iteratore di output dove sono stati copiati gli elementi. Corrisponde al valore restituito del parametro *dest* .
 
 ### <a name="remarks"></a>Note
 
-La funzione modello valuta `*(dest + N) = *(first + N))` una volta per ogni `N` compreso nell'intervallo `[0, count)`, esclusivamente per aumentare i valori di `N` iniziando dal valore più basso. Restituisce quindi `dest + N`. Se *dest* e *primo* indicano aree di archiviazione *dest* non deve essere compreso nell'intervallo `[first, last)`.
+La funzione di modello restituisce `*(dest + N) = *(first + N))` una volta per `N` ogni nell'intervallo `[0, count)`, per aumentare in modo rigoroso i valori di `N` iniziando dal valore più basso. Restituisce quindi `dest + N`. Se *dest* e *First* designano le aree di archiviazione, *dest* non deve essere compreso nell' `[first, last)`intervallo.
 
 ### <a name="example"></a>Esempio
 
@@ -900,8 +952,8 @@ int main()
     string s2{"badger"};
 
     cout << s1 << " + " << s2 << " = ";
-    
-    // Copy the first 3 letters from s1 
+
+    // Copy the first 3 letters from s1
     // to the first 3 positions in s2
     copy_n(s1.begin(), 3, s2.begin());
 
@@ -913,7 +965,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a> conteggio
+## <a name="count"></a>conteggio
 
 Restituisce il numero di elementi di un intervallo i cui valori corrispondono a un valore specificato.
 
@@ -922,31 +974,34 @@ template<class InputIterator, class Type>
 typename iterator_traits<InputIterator>::difference_type count(
     InputIterator first,
     InputIterator last,
-    const Type& val);
-    
-template<class ExecutionPolicy, class ForwardIterator, class T>
+    const Type& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 typename iterator_traits<ForwardIterator>::difference_type
 count(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    const T& value);
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo da attraversare.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da attraversare.
 
-*Val*\
+*value*\
 Valore degli elementi da conteggiare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il tipo di differenza del `InputIterator` che conta il numero di elementi nell'intervallo [ *primo*, *ultimo* ) con valore *val*.
+Il tipo di differenza dell' `InputIterator` oggetto che conta il numero di elementi nell'intervallo [*First*, *Last*) con *valore*value.
 
 ### <a name="remarks"></a>Note
 
@@ -991,36 +1046,39 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a> count_if
+## <a name="count_if"></a>count_if
 
 Restituisce il numero di elementi di un intervallo i cui valori soddisfano una condizione specificata.
 
 ```cpp
-template<class InputIterator, class Predicate>
+template<class InputIterator, class UnaryPredicate>
 typename iterator_traits<InputIterator>::difference_type count_if(
     InputIterator first,
     InputIterator last,
-    Predicate pred);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+    UnaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 typename iterator_traits<ForwardIterator>::difference_type
 count_if(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da conteggiare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da conteggiare. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1073,7 +1131,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a> Uguale a
+## <a name="equal"></a>uguale
 
 Confronta due intervalli elemento per elemento per verificarne l'uguaglianza o l'equivalenza nel senso specificato da un predicato binario.
 
@@ -1084,75 +1142,83 @@ Usare gli overload a doppio intervallo nel codice C++14 perché gli overload che
 ```cpp
 template<class InputIterator1, class InputIterator2>
 bool equal(
-    InputIterator1  First1,
-    InputIterator1  Last1,
-    InputIterator2  First2);
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2);
 
 template<class InputIterator1, class InputIterator2, class BinaryPredicate>
 bool equal(
-    InputIterator1  First1,
-    InputIterator1  Last1,
-    InputIterator2  First2,
-    BinaryPredicate Comp); // C++14
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    BinaryPredicate pred); // C++14
 
 template<class InputIterator1, class InputIterator2>
 bool equal(
-    InputIterator1  First1,
-    InputIterator1  Last1,
-    InputIterator2  First2,
-    InputIterator2  Last2);
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2);
 
 template<class InputIterator1, class InputIterator2, class BinaryPredicate>
 bool equal(
-    InputIterator1  First1,
-    InputIterator1  Last1,
-    InputIterator2  First2,
-    InputIterator2  Last2,
-    BinaryPredicate Comp);
-    
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    BinaryPredicate pred);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 bool equal(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
     ForwardIterator2 first2);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 bool equal(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, ForwardIterator1 last1,
-    ForwardIterator2 first2, BinaryPredicate pred);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    BinaryPredicate pred);
 
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 bool equal(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, ForwardIterator1 last1,
-    ForwardIterator2 first2, ForwardIterator2 last2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 bool equal(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, ForwardIterator1 last1,
-    ForwardIterator2 first2, ForwardIterator2 last2,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo intervallo da testare.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo intervallo da testare.
 
 *first2*\
 Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo da testare.
 
-*first2*\
+*Last2*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo intervallo da testare.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1209,35 +1275,35 @@ template<class ForwardIterator, class Type>
 pair<ForwardIterator, ForwardIterator> equal_range(
     ForwardIterator first,
     ForwardIterator last,
-    const Type& val);
+    const Type& value);
 
-template<class ForwardIterator, class Type, class Predicate>
+template<class ForwardIterator, class Type, class Compare>
 pair<ForwardIterator, ForwardIterator> equal_range(
     ForwardIterator first,
     ForwardIterator last,
-    const Type& val,
-    Predicate comp);
+    const Type& value,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
-*Val*\
+*value*\
 Il valore da ricercare nell'intervallo ordinato.
 
-*Comp*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Una coppia di iteratori in avanti che specificano un intervallo secondario, all'interno dell'intervallo effettuata la ricerca, in cui tutti gli elementi sono equivalenti a *val* nel modo definito dal predicato binario usato (entrambi *comp* il valore predefinito, less o -a).
+Coppia di iteratori in poi che specificano un sottointervallo, contenuto nell'intervallo cercato, in cui tutti gli elementi sono equivalenti al *valore* nel senso definito dal predicato binario usato ( *prede* o l'impostazione predefinita, minore di).
 
-Se nessun elemento nell'intervallo è equivalente a *val*, la coppia di iteratori in avanti restituita sono uguale e specificano il punto in cui *val* può essere inserito senza alterare l'ordine dell'intervallo.
+Se nessun elemento nell'intervallo è equivalente a *value*, gli iteratori in diretta nella coppia restituita sono uguali e specificano il punto in cui il *valore* può essere inserito senza compromettere l'ordine dell'intervallo.
 
 ### <a name="remarks"></a>Note
 
@@ -1245,9 +1311,9 @@ Il primo iteratore restituito dall'algoritmo è [lower_bound](../standard-librar
 
 L'intervallo deve essere ordinato in base al predicato fornito in `equal_range`. Ad esempio, se si intende usare il predicato "maggiore di", l'intervallo deve essere ordinato in ordine decrescente.
 
-Gli elementi nell'intervallo secondario probabilmente vuoto definito dai due iteratori restituiti da `equal_range` equivalga a *val* nel modo definito dal predicato usato.
+Gli elementi nell'intervallo secondario probabilmente vuoto definito dalla coppia di iteratori restituiti da `equal_range` saranno equivalenti al *valore* nel senso definito dal predicato usato.
 
-La complessità dell'algoritmo è logaritmica per gli iteratori ad accesso casuale e lineare in caso contrario, con il numero di passaggi proporzionali a (*ultima* - *primo*).
+La complessità dell'algoritmo è logaritmica per gli iteratori ad accesso casuale e lineare in caso contrario, con il numero di passaggi proporzionali a (*ultimo* - *primo*).
 
 ### <a name="example"></a>Esempio
 
@@ -1281,7 +1347,7 @@ template<class T> void dump_vector( const vector<T>& v, pair<typename vector<T>:
     cout << endl;
 }
 
-template<class T> void equal_range_demo( const vector<T>& original_vector, T val )
+template<class T> void equal_range_demo( const vector<T>& original_vector, T value )
 {
     vector<T> v(original_vector);
 
@@ -1294,14 +1360,14 @@ template<class T> void equal_range_demo( const vector<T>& original_vector, T val
     cout << endl << endl;
 
     pair<vector<T>::iterator, vector<T>::iterator> result
-        = equal_range( v.begin(), v.end(), val );
+        = equal_range( v.begin(), v.end(), value );
 
-    cout << "Result of equal_range with val = " << val << ":" << endl << '\t';
+    cout << "Result of equal_range with value = " << value << ":" << endl << '\t';
     dump_vector( v, result );
     cout << endl;
 }
 
-template<class T, class F> void equal_range_demo( const vector<T>& original_vector, T val, F pred, string predname )
+template<class T, class F> void equal_range_demo( const vector<T>& original_vector, T value, F pred, string predname )
 {
     vector<T> v(original_vector);
 
@@ -1314,9 +1380,9 @@ template<class T, class F> void equal_range_demo( const vector<T>& original_vect
     cout << endl << endl;
 
     pair<typename vector<T>::iterator, typename vector<T>::iterator> result
-        = equal_range( v.begin(), v.end(), val, pred );
+        = equal_range( v.begin(), v.end(), value, pred );
 
-    cout << "Result of equal_range with val = " << val << ":" << endl << '\t';
+    cout << "Result of equal_range with value = " << value << ":" << endl << '\t';
     dump_vector( v, result );
     cout << endl;
 }
@@ -1366,7 +1432,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a> riempimento
+## <a name="fill"></a>riempimento
 
 Assegna lo stesso nuovo valore a ogni elemento di un intervallo specificato.
 
@@ -1375,26 +1441,29 @@ template<class ForwardIterator, class Type>
 void fill(
     ForwardIterator first,
     ForwardIterator last,
-    const Type& val);
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator, class T>
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 void fill(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    const T& value);
+    ForwardIterator first,
+    ForwardIterator last,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da attraversare.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da attraversare.
 
-*Val*\
-Il valore da assegnare agli elementi nell'intervallo [ *primo*, *ultima*).
+*value*\
+Valore da assegnare agli elementi nell'intervallo [*First*, *Last*).
 
 ### <a name="remarks"></a>Note
 
@@ -1411,28 +1480,28 @@ L'intervallo di destinazione deve essere valido. Tutti i puntatori devono essere
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // Fill the last 5 positions with a value of 2
-   fill( v1.begin( ) + 5, v1.end( ), 2 );
+    // Fill the last 5 positions with a value of 2
+    fill( v1.begin( ) + 5, v1.end( ), 2 );
 
-   cout << "Modified v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Modified v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -1441,40 +1510,42 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a> fill_n
+## <a name="fill_n"></a>fill_n
 
 Assegna un nuovo valore a un numero specificato di elementi di un intervallo che inizia con un determinato elemento.
 
 ```cpp
 template<class OutputIterator, class Size, class Type>
 OutputIterator fill_n(
-    OutputIterator First,
-    Size Count,
-    const Type& Val);
+    OutputIterator first,
+    Size count,
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator,
-class Size, class T>
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Type>
 ForwardIterator fill_n(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    Size n, 
-    const T& value);
+    ForwardIterator first,
+    Size count,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
-Iteratore di output che punta alla posizione del primo elemento nell'intervallo a cui assegnare il valore *Val*.
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo a cui assegnare il *valore*del valore.
 
 *conteggio*\
 Tipo integer con o senza segno che specifica il numero di elementi a cui assegnare il valore.
 
-*Val*\
-Il valore da assegnare agli elementi nell'intervallo [ *primo*, *First + Count*).
+*value*\
+Valore da assegnare agli elementi nell'intervallo [*First*, *First + count*).
 
 ### <a name="return-value"></a>Valore restituito
 
-Un iteratore all'elemento successivo all'ultimo elemento inserito se *conteggio* > zero, in caso contrario il primo elemento.
+Iteratore all'elemento che segue l'ultimo elemento riempito se *count* > zero, in caso contrario il primo elemento.
 
 ### <a name="remarks"></a>Note
 
@@ -1492,12 +1563,12 @@ L'intervallo di destinazione deve essere valido. Tutti i puntatori devono essere
 int main()
 {
     using namespace std;
-    vector <int> v;
+    vector<int> v;
 
     for ( auto i = 0 ; i < 9 ; ++i )
         v.push_back( 0 );
 
-    cout << "  vector v = ( " ;
+    cout << " vector v = ( " ;
     for ( const auto &w : v )
         cout << w << " ";
     cout << ")" << endl;
@@ -1528,39 +1599,42 @@ int main()
 }
 ```
 
-## <a name="find"></a> trovare
+## <a name="find"></a>trovare
 
 Individua la posizione della prima occorrenza di un elemento in un intervallo con un valore specificato.
 
 ```cpp
-template<class InputIterator, class T>
+template<class InputIterator, class Type>
 InputIterator find(
     InputIterator first,
     InputIterator last,
-    const T& val);
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator, class T>
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 ForwardIterator find(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    const T& value);
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca del valore specificato.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca del valore specificato.
 
-*Val*\
+*value*\
 Valore da ricercare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di input che punta alla prima occorrenza del valore specificato nell'intervallo in cui eseguire la ricerca. Se viene trovato alcun elemento con un valore equivalente, restituisce *ultimo*.
+Iteratore di input che punta alla prima occorrenza del valore specificato nell'intervallo in cui eseguire la ricerca. Se non viene trovato alcun elemento con un valore equivalente, restituisce *l'ultimo*.
 
 ### <a name="remarks"></a>Note
 
@@ -1568,53 +1642,53 @@ L'operatore `operator==` usato per determinare la corrispondenza tra un elemento
 
 Per un esempio di codice con `find()`, vedere [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="find_end"></a> find_end
+## <a name="find_end"></a>find_end
 
 Ricerca in un intervallo l'ultima sottosequenza identica a una sequenza specificata o equivalente nel senso specificato da un predicato binario.
 
 ```cpp
 template<class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1 find_end(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    ForwardIterator2 Last2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2);
 
 template<class ForwardIterator1, class ForwardIterator2, class Pred>
 ForwardIterator1 find_end(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    ForwardIterator2 Last2,
-    Pred Comp);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
+    Pred pred);
 
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1
 find_end(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
-    
+
 template<class ExecutionPolicy, class ForwardIterator1,
 class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1
 find_end(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*First1*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*last1*\
+*Last1*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *first2*\
@@ -1623,12 +1697,12 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *Last2*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cercare.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore in avanti che punta alla posizione del primo elemento dell'ultima sottosequenza all'interno di [First1,Last1) che corrisponde alla sequenza specificata [First2, Last2).
+Iteratore in poi che punta alla posizione del primo elemento dell'ultima sottosequenza all'interno di [first1, last1) che corrisponde alla sequenza specificata [first2, Last2).
 
 ### <a name="remarks"></a>Note
 
@@ -1649,77 +1723,77 @@ Gli intervalli a cui viene fatto riferimento devono essere validi. Tutti i punta
 // Return whether second element is twice the first
 bool twice ( int elem1, int elem2 )
 {
-   return 2 * elem1 == elem2;
+    return 2 * elem1 == elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   list <int> L1;
-   vector <int>::iterator Iter1, Iter2;
-   list <int>::iterator L1_Iter, L1_inIter;
+    using namespace std;
+    vector<int> v1, v2;
+    list<int> L1;
+    vector<int>::iterator Iter1, Iter2;
+    list<int>::iterator L1_Iter, L1_inIter;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   int ii;
-   for ( ii = 1 ; ii <= 4 ; ii++ )
-   {
-      L1.push_back( 5 * ii );
-   }
+    int ii;
+    for ( ii = 1 ; ii <= 4 ; ii++ )
+    {
+        L1.push_back( 5 * ii );
+    }
 
-   int iii;
-   for ( iii = 2 ; iii <= 4 ; iii++ )
-   {
-      v2.push_back( 10 * iii );
-   }
+    int iii;
+    for ( iii = 2 ; iii <= 4 ; iii++ )
+    {
+        v2.push_back( 10 * iii );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "List L1 = ( " ;
-   for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
-      cout << *L1_Iter << " ";
-   cout << ")" << endl;
+    cout << "List L1 = ( " ;
+    for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
+        cout << *L1_Iter << " ";
+    cout << ")" << endl;
 
-   cout << "Vector v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-      cout << ")" << endl;
+    cout << "Vector v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+        cout << ")" << endl;
 
-   // Searching v1 for a match to L1 under identity
-   vector <int>::iterator result1;
-   result1 = find_end ( v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
+    // Searching v1 for a match to L1 under identity
+    vector<int>::iterator result1;
+    result1 = find_end ( v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
 
-   if ( result1 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is a match of L1 in v1 that begins at "
-           << "position "<< result1 - v1.begin( ) << "." << endl;
+    if ( result1 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is a match of L1 in v1 that begins at "
+            << "position "<< result1 - v1.begin( ) << "." << endl;
 
-   // Searching v1 for a match to L1 under the binary predicate twice
-   vector <int>::iterator result2;
-   result2 = find_end ( v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
+    // Searching v1 for a match to L1 under the binary predicate twice
+    vector<int>::iterator result2;
+    result2 = find_end ( v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
 
-   if ( result2 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is a sequence of elements in v1 that "
-           << "are equivalent to those\n in v2 under the binary "
-           << "predicate twice and that begins at position "
-           << result2 - v1.begin( ) << "." << endl;
+    if ( result2 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is a sequence of elements in v1 that "
+            << "are equivalent to those\n in v2 under the binary "
+            << "predicate twice and that begins at position "
+            << result2 - v1.begin( ) << "." << endl;
 }
 ```
 
@@ -1732,33 +1806,33 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a> find_first_of
+## <a name="find_first_of"></a>find_first_of
 
 Ricerca la prima occorrenza di uno dei diversi valori all'interno di un intervallo di destinazione o la prima occorrenza di uno dei diversi elementi equivalenti nel senso specificato da un predicato binario in un set specificato di elementi.
 
 ```cpp
 template<class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1 find_first_of(
-    ForwardIterator1  first1,
-    ForwardIterator1 Last1,
-    ForwardIterator2  first2,
-    ForwardIterator2 Last2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2);
 
 template<class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1 find_first_of(
-    ForwardIterator1  first1,
-    ForwardIterator1 Last1,
-    ForwardIterator2  first2,
-    ForwardIterator2 Last2,
-    BinaryPredicate  comp);
-    
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1
 find_first_of(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
 
 template<class ExecutionPolicy, class ForwardIterator1,
@@ -1766,19 +1840,19 @@ class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1
 find_first_of(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*First1*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*last1*\
+*Last1*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *first2*\
@@ -1787,7 +1861,7 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *Last2*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo per cui trovare una corrispondenza.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1813,78 +1887,78 @@ Gli intervalli a cui viene fatto riferimento devono essere validi. Tutti i punta
 // Return whether second element is twice the first
 bool twice ( int elem1, int elem2 )
 {
-   return 2 * elem1 == elem2;
+    return 2 * elem1 == elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   list <int> L1;
-   vector <int>::iterator Iter1, Iter2;
-   list <int>::iterator L1_Iter, L1_inIter;
+    using namespace std;
+    vector<int> v1, v2;
+    list<int> L1;
+    vector<int>::iterator Iter1, Iter2;
+    list<int>::iterator L1_Iter, L1_inIter;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   int ii;
-   for ( ii = 3 ; ii <= 4 ; ii++ )
-   {
-      L1.push_back( 5 * ii );
-   }
+    int ii;
+    for ( ii = 3 ; ii <= 4 ; ii++ )
+    {
+        L1.push_back( 5 * ii );
+    }
 
-   int iii;
-   for ( iii = 2 ; iii <= 4 ; iii++ )
-   {
-      v2.push_back( 10 * iii );
-   }
+    int iii;
+    for ( iii = 2 ; iii <= 4 ; iii++ )
+    {
+        v2.push_back( 10 * iii );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "List L1 = ( " ;
-   for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
-      cout << *L1_Iter << " ";
-   cout << ")" << endl;
+    cout << "List L1 = ( " ;
+    for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
+        cout << *L1_Iter << " ";
+    cout << ")" << endl;
 
-   cout << "Vector v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-      cout << ")" << endl;
+    cout << "Vector v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+        cout << ")" << endl;
 
-   // Searching v1 for first match to L1 under identity
-   vector <int>::iterator result1;
-   result1 = find_first_of ( v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
+    // Searching v1 for first match to L1 under identity
+    vector<int>::iterator result1;
+    result1 = find_first_of ( v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
 
-   if ( result1 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is at least one match of L1 in v1"
-           << "\n and the first one begins at "
-           << "position "<< result1 - v1.begin( ) << "." << endl;
+    if ( result1 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is at least one match of L1 in v1"
+            << "\n and the first one begins at "
+            << "position "<< result1 - v1.begin( ) << "." << endl;
 
-   // Searching v1 for a match to L1 under the binary predicate twice
-   vector <int>::iterator result2;
-   result2 = find_first_of ( v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
+    // Searching v1 for a match to L1 under the binary predicate twice
+    vector<int>::iterator result2;
+    result2 = find_first_of ( v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
 
-   if ( result2 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is a sequence of elements in v1 that "
-           << "are equivalent\n to those in v2 under the binary "
-           << "predicate twice\n and the first one begins at position "
-           << result2 - v1.begin( ) << "." << endl;
+    if ( result2 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is a sequence of elements in v1 that "
+            << "are equivalent\n to those in v2 under the binary "
+            << "predicate twice\n and the first one begins at position "
+            << result2 - v1.begin( ) << "." << endl;
 }
 ```
 
@@ -1899,38 +1973,38 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a> find_if
+## <a name="find_if"></a>find_if
 
 Individua la posizione della prima occorrenza di un elemento in un intervallo che soddisfa una condizione specificata.
 
 ```cpp
-template<class InputIterator, class Predicate>
+template<class InputIterator, class UnaryPredicate>
 InputIterator find_if(
     InputIterator first,
     InputIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 ForwardIterator find_if(
     ExecutionPolicy&& exec,
     ForwardIterator first, ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** (soddisfatto) o **false** (non soddisfatto). La firma dei *pred* deve essere efficacemente `bool pred(const T& arg);`, dove `T` è un tipo a cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. Il **const** (parola chiave) viene visualizzata solo per illustrare che l'oggetto funzione o espressione lambda non deve modificare l'argomento.
+Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);`in realtà, `T` dove è un tipo in `InputIterator` cui può essere convertito in modo implicito quando viene dereferenziato. La  parola chiave const viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di input che fa riferimento al primo elemento nell'intervallo che soddisfa la condizione specificata dal predicato (il predicato restituisce **true**). Se non viene trovato nessun elemento soddisfa il predicato, restituisce *ultimo*.
+Iteratore di input che fa riferimento al primo elemento dell'intervallo che soddisfa la condizione specificata dal predicato (il predicato restituisce **true**). Se non viene trovato alcun elemento che soddisfi il predicato, restituisce per *ultimo*.
 
 ### <a name="remarks"></a>Note
 
@@ -2021,38 +2095,38 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a> find_if_not
+## <a name="find_if_not"></a>find_if_not
 
 Restituisce il primo elemento nell'intervallo indicato che non soddisfa una determinata condizione.
 
 ```cpp
-template<class InputIterator, class Predicate>
+template<class InputIterator, class UnaryPredicate>
 InputIterator find_if_not(
     InputIterator first,
     InputIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 ForwardIterator find_if_not(
     ExecutionPolicy&& exec,
     ForwardIterator first, ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che non deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** (soddisfatto) o **false** (non soddisfatto). La firma dei *pred* deve essere efficacemente `bool pred(const T& arg);`, dove `T` è un tipo a cui `InputIterator` può essere convertito in modo implicito quando viene dereferenziato. Il **const** (parola chiave) viene visualizzata solo per illustrare che l'oggetto funzione o espressione lambda non deve modificare l'argomento.
+Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che non deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);`in realtà, `T` dove è un tipo in `InputIterator` cui può essere convertito in modo implicito quando viene dereferenziato. La  parola chiave const viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di input che fa riferimento al primo elemento nell'intervallo che non soddisfa la condizione specificata dal predicato (il predicato restituisce **false**). Se tutti gli elementi soddisfano il predicato (il predicato restituisce **true** per ogni elemento), restituisce *ultima*.
+Iteratore di input che fa riferimento al primo elemento dell'intervallo che non soddisfa la condizione specificata dal predicato (il predicato restituisce **false**). Se tutti gli elementi soddisfano il predicato (il predicato restituisce **true** per ogni elemento), restituisce per *ultimo*.
 
 ### <a name="remarks"></a>Note
 
@@ -2060,7 +2134,7 @@ Questa funzione di modello è una generalizzazione dell'algoritmo [find](../stan
 
 Per un esempio di codice facilmente adattabile a `find_if_not()`, vedere [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="for_each"></a> for_each
+## <a name="for_each"></a>for_each
 
 Applica un oggetto funzione specificato a ogni elemento ordinato in avanti all'interno di un intervallo e restituisce l'oggetto funzione.
 
@@ -2070,21 +2144,21 @@ Function for_each(
     InputIterator first,
     InputIterator last,
     Function func);
-    
+
 template<class ExecutionPolicy, class ForwardIterator, class Function>
 void for_each(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Function f);
+    Function func);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo che deve essere usato.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo che deve essere usato.
 
 *Func*\
@@ -2100,7 +2174,7 @@ L'algoritmo `for_each` è molto flessibile e consente la modifica di ogni elemen
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è lineare con al massimo (*ultima* - *primo*) confronti.
+La complessità è lineare con al massimo confronti (*ultimi* - *primi*).
 
 ### <a name="example"></a>Esempio
 
@@ -2116,95 +2190,95 @@ template <class Type>
 class MultValue
 {
 private:
-   Type Factor;   // The value to multiply by
+    Type Factor;   // The value to multiply by
 public:
-   // Constructor initializes the value to multiply by
-   MultValue ( const Type& val ) : Factor ( val ) {
-   }
+    // Constructor initializes the value to multiply by
+    MultValue ( const Type& value ) : Factor ( value ) {
+    }
 
-   // The function call for the element to be multiplied
-   void operator( ) ( Type& elem ) const
-   {
-      elem *= Factor;
-   }
+    // The function call for the element to be multiplied
+    void operator( ) ( Type& elem ) const
+    {
+        elem *= Factor;
+    }
 };
 
 // The function object to determine the average
 class Average
 {
 private:
-   long num;      // The number of elements
-   long sum;      // The sum of the elements
+    long num;      // The number of elements
+    long sum;      // The sum of the elements
 public:
-   // Constructor initializes the value to multiply by
-   Average( ) : num ( 0 ) , sum ( 0 )
-   {
-   }
+    // Constructor initializes the value to multiply by
+    Average( ) : num ( 0 ) , sum ( 0 )
+    {
+    }
 
-   // The function call to process the next elment
-   void operator( ) ( int elem ) \
-   {
-      num++;      // Increment the element count
-      sum += elem;   // Add the value to the partial sum
-   }
+    // The function call to process the next elment
+    void operator( ) ( int elem )
+    {
+        num++;      // Increment the element count
+        sum += elem;   // Add the value to the partial sum
+    }
 
-   // return Average
-   operator double( )
-   {
-      return  static_cast <double> (sum) /
-      static_cast <double> (num);
-   }
+    // return Average
+    operator double( )
+    {
+        return static_cast<double> (sum) /
+            static_cast<double> (num);
+    }
 };
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   // Constructing vector v1
-   int i;
-   for ( i = -4 ; i <= 2 ; i++ )
-   {
-      v1.push_back(  i );
-   }
+    // Constructing vector v1
+    int i;
+    for ( i = -4 ; i <= 2 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "Original vector  v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Using for_each to multiply each element by a Factor
-   for_each ( v1.begin( ), v1.end( ), MultValue<int> ( -2 ) );
+    // Using for_each to multiply each element by a Factor
+    for_each ( v1.begin( ), v1.end( ), MultValue<int> ( -2 ) );
 
-   cout << "Multiplying the elements of the vector v1\n "
-        <<  "by the factor -2 gives:\n v1mod1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Multiplying the elements of the vector v1\n "
+            << "by the factor -2 gives:\n v1mod1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // The function object is templatized and so can be
-   // used again on the elements with a different Factor
-   for_each (v1.begin( ), v1.end( ), MultValue<int> (5 ) );
+    // The function object is templatized and so can be
+    // used again on the elements with a different Factor
+    for_each (v1.begin( ), v1.end( ), MultValue<int> (5 ) );
 
-   cout << "Multiplying the elements of the vector v1mod\n "
-        <<  "by the factor 5 gives:\n v1mod2 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Multiplying the elements of the vector v1mod\n "
+            << "by the factor 5 gives:\n v1mod2 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // The local state of a function object can accumulate
-   // information about a sequence of actions that the
-   // return value can make available, here the Average
-   double avemod2 = for_each ( v1.begin( ), v1.end( ),
-      Average( ) );
-   cout << "The average of the elements of v1 is:\n Average ( v1mod2 ) = "
-        << avemod2 << "." << endl;
+    // The local state of a function object can accumulate
+    // information about a sequence of actions that the
+    // return value can make available, here the Average
+    double avemod2 = for_each ( v1.begin( ), v1.end( ),
+        Average( ) );
+    cout << "The average of the elements of v1 is:\n Average ( v1mod2 ) = "
+            << avemod2 << "." << endl;
 }
 ```
 
 ```Output
-Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
+Original vector v1 = ( -4 -3 -2 -1 0 1 2 ).
 Multiplying the elements of the vector v1
 by the factor -2 gives:
 v1mod1 = ( 8 6 4 2 0 -2 -4 ).
@@ -2215,24 +2289,24 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="for_each_n"></a> for_each_n
+## <a name="for_each_n"></a>for_each_n
 
 ```cpp
 template<class InputIterator, class Size, class Function>
 InputIterator for_each_n(
-    InputIterator first, 
-    Size n, 
+    InputIterator first,
+    Size n,
     Function f);
 
 template<class ExecutionPolicy, class ForwardIterator, class Size, class Function>
 ForwardIterator for_each_n(
-    ExecutionPolicy&& exec, 
-    ForwardIterator first, 
-    Size n, 
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    Size n,
     Function f);
 ```
 
-## <a name="generate"></a> generare
+## <a name="generate"></a>generare
 
 Assegna i valori generati da un oggetto funzione a ogni elemento di un intervallo.
 
@@ -2241,8 +2315,8 @@ template<class ForwardIterator, class Generator>
 void generate(
     ForwardIterator first,
     ForwardIterator last,
-    Generator _Gen);
-    
+    Generator gen);
+
 template<class ExecutionPolicy, class ForwardIterator, class Generator>
 void generate(
     ExecutionPolicy&& exec,
@@ -2252,13 +2326,13 @@ void generate(
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui devono essere assegnati i valori.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui devono essere assegnati i valori.
 
-*_Gen*\
+*generazione*\
 Oggetto funzione chiamato senza argomenti e usato per generare i valori da assegnare a ognuno degli elementi nell'intervallo.
 
 ### <a name="remarks"></a>Note
@@ -2267,7 +2341,7 @@ L'oggetto funzione viene richiamato per ciascun elemento nell'intervallo e non d
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è lineare, con esattamente ( `last`  -   `first`) le chiamate al generatore è obbligatorio.
+La complessità è lineare, con chiamate esatte `last`  -  `first`al generatore richieste.
 
 ### <a name="example"></a>Esempio
 
@@ -2282,28 +2356,28 @@ La complessità è lineare, con esattamente ( `last`  -   `first`) le chiamate a
 
 int main()
 {
-   using namespace std;
+    using namespace std;
 
-   // Assigning random values to vector integer elements
-   vector <int> v1 ( 5 );
-   vector <int>::iterator Iter1;
-   deque <int> deq1 ( 5 );
-   deque <int>::iterator d1_Iter;
+    // Assigning random values to vector integer elements
+    vector<int> v1 ( 5 );
+    vector<int>::iterator Iter1;
+    deque<int> deq1 ( 5 );
+    deque<int>::iterator d1_Iter;
 
-   generate ( v1.begin( ), v1.end( ), rand );
+    generate ( v1.begin( ), v1.end( ), rand );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Assigning random values to deque integer elements
-   generate ( deq1.begin( ), deq1.end( ), rand );
+    // Assigning random values to deque integer elements
+    generate ( deq1.begin( ), deq1.end( ), rand );
 
-   cout << "Deque deq1 is ( " ;
-   for ( d1_Iter = deq1.begin( ) ; d1_Iter != deq1.end( ) ; d1_Iter++ )
-      cout << *d1_Iter << " ";
-   cout << ")." << endl;
+    cout << "Deque deq1 is ( " ;
+    for ( d1_Iter = deq1.begin( ) ; d1_Iter != deq1.end( ) ; d1_Iter++ )
+        cout << *d1_Iter << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -2312,34 +2386,37 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a> generate_n
+## <a name="generate_n"></a>generate_n
 
 Assegna i valori generati da un oggetto funzione a un numero specificato di elementi di un intervallo e torna alla posizione immediatamente successiva all'ultimo valore assegnato.
 
 ```cpp
 template<class OutputIterator, class Diff, class Generator>
 void generate_n(
-    OutputIterator First,
-    Diff Count,
-    Generator Gen);
+    OutputIterator first,
+    Diff count,
+    Generator gen);
 
 template<class ExecutionPolicy, class ForwardIterator, class Size, class Generator>
 ForwardIterator generate_n(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    Size n, 
+    ForwardIterator first,
+    Size count,
     Generator gen);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di output che punta al primo elemento nell'intervallo in cui devono essere assegnati i valori.
 
 *conteggio*\
 Tipo Signed Integer o Unsigned Integer che specifica il numero di elementi a cui verrà assegnato un valore dalla funzione del generatore.
 
-*Generazione*\
+*generazione*\
 Oggetto funzione chiamato senza argomenti e usato per generare i valori da assegnare a ognuno degli elementi nell'intervallo.
 
 ### <a name="remarks"></a>Note
@@ -2348,7 +2425,7 @@ L'oggetto funzione viene richiamato per ciascun elemento nell'intervallo e non d
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è lineare, con richiesta di esattamente `Count` chiamate al generatore.
+La complessità è lineare, con richiesta di esattamente `count` chiamate al generatore.
 
 ### <a name="example"></a>Esempio
 
@@ -2363,7 +2440,9 @@ La complessità è lineare, con richiesta di esattamente `Count` chiamate al gen
 
 using namespace std;
 
-template <typename C> void print(const string& s, const C& c) {
+template <typename C>
+void print(const string& s, const C& c)
+{
     cout << s;
 
     for (const auto& e : c) {
@@ -2393,7 +2472,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a> include
+## <a name="includes"></a>include
 
 Verifica se un intervallo ordinato contiene tutti gli elementi contenuti in un secondo intervallo ordinato, in cui il criterio di ordinamento o di equivalenza tra gli elementi può essere specificato da un predicato binario.
 
@@ -2405,39 +2484,41 @@ bool includes(
     InputIterator2 first2,
     InputIterator2 last2);
 
-template<class InputIterator1, class InputIterator2, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class Compare>
 bool includes(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
-    BinaryPredicate comp );
-    
+    Compare pred );
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 bool includes(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Compare>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Compare>
 bool includes(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
-    ForwardIterator2 last2, 
-    Compare comp);
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
 *first2*\
@@ -2446,8 +2527,8 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo dei d
 *Last2*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo dei due intervalli di origine ordinati consecutivi in cui verificare se tutti gli elementi del secondo sono contenuti nel primo.
 
-*Comp*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2465,7 +2546,7 @@ Gli intervalli di origine non vengono modificati dall'algoritmo `merge`.
 
 Per poter essere ordinati, i tipi di valore degli iteratori di input devono essere confrontabili mediante il tipo di confronto "minore di", in modo che, dati due elementi, sia possibile determinare o che sono equivalenti (nel senso che nessuno è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. Più precisamente, l'algoritmo controlla se tutti gli elementi del primo intervallo ordinato prima in un predicato binario specificato hanno un ordinamento equivalente a quelli nel secondo intervallo ordinato.
 
-La complessità dell'algoritmo è lineare con al massimo 2 \* (( *last1 - first1*)-(* last2 - first2 *)) - 1 confronti per gli intervalli di origine non vuoti.
+La complessità dell'algoritmo è lineare con al massimo `2 * ((last1 - first1) - (last2 - first2)) - 1` i confronti per gli intervalli di origine non vuoti.
 
 ### <a name="example"></a>Esempio
 
@@ -2480,121 +2561,121 @@ La complessità dell'algoritmo è lineare con al massimo 2 \* (( *last1 - first1
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser (int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1a, v1b;
-   vector <int>::iterator Iter1a,  Iter1b;
+    using namespace std;
+    vector<int> v1a, v1b;
+    vector<int>::iterator Iter1a, Iter1b;
 
-   // Constructing vectors v1a & v1b with default less-than ordering
-   int i;
-   for ( i = -2 ; i <= 4 ; i++ )
-   {
-      v1a.push_back(  i );
-   }
+    // Constructing vectors v1a & v1b with default less-than ordering
+    int i;
+    for ( i = -2 ; i <= 4 ; i++ )
+    {
+        v1a.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-2 ; ii <= 3 ; ii++ )
-   {
-      v1b.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-2 ; ii <= 3 ; ii++ )
+    {
+        v1b.push_back( ii );
+    }
 
-   cout << "Original vector v1a with range sorted by the\n "
-        << "binary predicate less than is v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+            << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+            << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b );
-   vector <int>::iterator Iter2a,  Iter2b;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
-   v2a.pop_back( );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b );
+    vector<int>::iterator Iter2a, Iter2b;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    v2a.pop_back( );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is v2a = ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+            << "binary predicate greater is v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is v2b = ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+            << "binary predicate greater is v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ;
-   vector <int>::iterator Iter3a, Iter3b;
-   reverse (v3a.begin( ), v3a.end( ) );
-   v3a.pop_back( );
-   v3a.pop_back( );
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) ;
+    vector<int>::iterator Iter3a, Iter3b;
+    reverse (v3a.begin( ), v3a.end( ) );
+    v3a.pop_back( );
+    v3a.pop_back( );
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is v3a = ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+            << "binary predicate mod_lesser is v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        <<  "binary predicate mod_lesser is v3b = ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+            << "binary predicate mod_lesser is v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To test for inclusion under an asscending order
-   // with the default binary predicate less <int>( )
-   bool Result1;
-   Result1 = includes ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ) );
-   if ( Result1 )
-      cout << "All the elements in vector v1b are "
-           << "contained in vector v1a." << endl;
-   else
-      cout << "At least one of the elements in vector v1b "
-           << "is not contained in vector v1a." << endl;
+    // To test for inclusion under an asscending order
+    // with the default binary predicate less<int>( )
+    bool Result1;
+    Result1 = includes ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ) );
+    if ( Result1 )
+        cout << "All the elements in vector v1b are "
+            << "contained in vector v1a." << endl;
+    else
+        cout << "At least one of the elements in vector v1b "
+            << "is not contained in vector v1a." << endl;
 
-   // To test for inclusion under descending
-   // order specify binary predicate greater<int>( )
-   bool Result2;
-   Result2 = includes ( v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ), greater <int>( ) );
-   if ( Result2 )
-      cout << "All the elements in vector v2b are "
-           << "contained in vector v2a." << endl;
-   else
-      cout << "At least one of the elements in vector v2b "
-           << "is not contained in vector v2a." << endl;
+    // To test for inclusion under descending
+    // order specify binary predicate greater<int>( )
+    bool Result2;
+    Result2 = includes ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ), greater<int>( ) );
+    if ( Result2 )
+        cout << "All the elements in vector v2b are "
+            << "contained in vector v2a." << endl;
+    else
+        cout << "At least one of the elements in vector v2b "
+            << "is not contained in vector v2a." << endl;
 
-   // To test for inclusion under a user
-   // defined binary predicate mod_lesser
-   bool Result3;
-   Result3 = includes ( v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), mod_lesser );
-   if ( Result3 )
-      cout << "All the elements in vector v3b are "
-           << "contained under mod_lesser in vector v3a."
-           << endl;
-   else
-      cout << "At least one of the elements in vector v3b is "
-           << " not contained under mod_lesser in vector v3a."
-           << endl;
+    // To test for inclusion under a user
+    // defined binary predicate mod_lesser
+    bool Result3;
+    Result3 = includes ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), mod_lesser );
+    if ( Result3 )
+        cout << "All the elements in vector v3b are "
+            << "contained under mod_lesser in vector v3a."
+            << endl;
+    else
+        cout << "At least one of the elements in vector v3b is "
+            << " not contained under mod_lesser in vector v3a."
+            << endl;
 }
 ```
 
@@ -2613,10 +2694,10 @@ Original vector v3b with range sorted by the
 binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
 All the elements in vector v1b are contained in vector v1a.
 At least one of the elements in vector v2b is not contained in vector v2a.
-At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
+At least one of the elements in vector v3b is not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a> inplace_merge
+## <a name="inplace_merge"></a>inplace_merge
 
 Combina gli elementi di due intervalli ordinati consecutivi in un unico intervallo ordinato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -2627,42 +2708,45 @@ void inplace_merge(
     BidirectionalIterator middle,
     BidirectionalIterator last);
 
-template<class BidirectionalIterator, class Predicate>
+template<class BidirectionalIterator, class Compare>
 void inplace_merge(
     BidirectionalIterator first,
     BidirectionalIterator middle,
     BidirectionalIterator last,
-    Predicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class BidirectionalIterator>
 void inplace_merge(
     ExecutionPolicy&& exec,
     BidirectionalIterator first,
     BidirectionalIterator middle,
     BidirectionalIterator last);
-    
+
 template<class ExecutionPolicy, class BidirectionalIterator, class Compare>
 void inplace_merge(
     ExecutionPolicy&& exec,
     BidirectionalIterator first,
     BidirectionalIterator middle,
-    BidirectionalIterator last, 
-    Compare comp);
+    BidirectionalIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore bidirezionale che punta alla posizione del primo elemento nel primo dei due intervalli ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
 *intermedio*\
 Iteratore bidirezionale che punta alla posizione del primo elemento nel secondo dei due intervalli ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*ultimo*\
+*Ultima*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo dei due intervalli ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*Comp*\
-Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
@@ -2670,7 +2754,7 @@ Gli intervalli consecutivi ordinati a cui si fa riferimento devono essere validi
 
 Gli intervalli consecutivi ordinati devono essere disposti come condizione preliminare per l'applicazione dell'algoritmo `inplace_merge` nello stesso ordine usato dall'algoritmo per ordinare gli intervalli combinati. L'operazione è stabile in quanto viene mantenuto l'ordine relativo degli elementi all'interno di ciascun intervallo. Quando sono presenti elementi equivalenti in entrambi gli intervalli di origine, l'elemento nel primo intervallo precede l'elemento del secondo nell'intervallo combinato.
 
-La complessità dipende dalla memoria disponibile poiché l'algoritmo alloca memoria in un buffer temporaneo. Se è disponibile memoria sufficiente, il caso migliore è lineare con (*ultima* - *primo*) - 1 confronti; se non è disponibile alcuna memoria ausiliaria, il caso peggiore è *N*log (*N*), dove *N* = (*ultima* - *prima*).
+La complessità dipende dalla memoria disponibile poiché l'algoritmo alloca memoria in un buffer temporaneo. Se è disponibile memoria sufficiente, il caso migliore è lineare con `(last - first) - 1` i confronti; se non è disponibile memoria ausiliaria, il `N log(N)`caso peggiore è, dove *N* = *ultimo* -  *.*
 
 ### <a name="example"></a>Esempio
 
@@ -2685,92 +2769,92 @@ La complessità dipende dalla memoria disponibile poiché l'algoritmo alloca mem
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1, Iter2, Iter3;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1, Iter2, Iter3;
 
-   // Constructing vector v1 with default less-than ordering
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    // Constructing vector v1 with default less-than ordering
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-5 ; ii <= 0 ; ii++ )
-   {
-      v1.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-5 ; ii <= 0 ; ii++ )
+    {
+        v1.push_back( ii );
+    }
 
-   cout << "Original vector v1 with subranges sorted by the\n "
-        <<  "binary predicate less than is  v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector v1 with subranges sorted by the\n "
+            << "binary predicate less than is v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // Constructing vector v2 with ranges sorted by greater
-   vector <int> v2 ( v1 );
-   vector <int>::iterator break2;
-   break2 = find ( v2.begin( ), v2.end( ), -5 );
-   sort ( v2.begin( ), break2 , greater<int>( ) );
-   sort ( break2 , v2.end( ), greater<int>( ) );
-   cout << "Original vector v2 with subranges sorted by the\n "
-        << "binary predicate greater is v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    // Constructing vector v2 with ranges sorted by greater
+    vector<int> v2 ( v1 );
+    vector<int>::iterator break2;
+    break2 = find ( v2.begin( ), v2.end( ), -5 );
+    sort ( v2.begin( ), break2 , greater<int>( ) );
+    sort ( break2 , v2.end( ), greater<int>( ) );
+    cout << "Original vector v2 with subranges sorted by the\n "
+            << "binary predicate greater is v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // Constructing vector v3 with ranges sorted by mod_lesser
-   vector <int> v3 ( v1 );
-   vector <int>::iterator break3;
-   break3 = find ( v3.begin( ), v3.end( ), -5 );
-   sort ( v3.begin( ), break3 , mod_lesser );
-   sort ( break3 , v3.end( ), mod_lesser );
-   cout << "Original vector v3 with subranges sorted by the\n "
-        << "binary predicate mod_lesser is v3 = ( " ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")" << endl;
+    // Constructing vector v3 with ranges sorted by mod_lesser
+    vector<int> v3 ( v1 );
+    vector<int>::iterator break3;
+    break3 = find ( v3.begin( ), v3.end( ), -5 );
+    sort ( v3.begin( ), break3 , mod_lesser );
+    sort ( break3 , v3.end( ), mod_lesser );
+    cout << "Original vector v3 with subranges sorted by the\n "
+            << "binary predicate mod_lesser is v3 = ( " ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")" << endl;
 
-   vector <int>::iterator break1;
-   break1 = find (v1.begin( ), v1.end( ), -5 );
-   inplace_merge ( v1.begin( ), break1, v1.end( ) );
-   cout << "Merged inplace with default order,\n vector v1mod = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    vector<int>::iterator break1;
+    break1 = find (v1.begin( ), v1.end( ), -5 );
+    inplace_merge ( v1.begin( ), break1, v1.end( ) );
+    cout << "Merged inplace with default order,\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To merge inplace in descending order, specify binary
-   // predicate greater<int>( )
-   inplace_merge ( v2.begin( ), break2 , v2.end( ) , greater<int>( ) );
-   cout << "Merged inplace with binary predicate greater specified,\n "
-        << "vector v2mod = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    // To merge inplace in descending order, specify binary
+    // predicate greater<int>( )
+    inplace_merge ( v2.begin( ), break2 , v2.end( ) , greater<int>( ) );
+    cout << "Merged inplace with binary predicate greater specified,\n "
+            << "vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // Applying a user defined (UD) binary predicate mod_lesser
-   inplace_merge ( v3.begin( ), break3, v3.end( ), mod_lesser );
-   cout << "Merged inplace with binary predicate mod_lesser specified,\n "
-        << "vector v3mod = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")" << endl;
+    // Applying a user defined (UD) binary predicate mod_lesser
+    inplace_merge ( v3.begin( ), break3, v3.end( ), mod_lesser );
+    cout << "Merged inplace with binary predicate mod_lesser specified,\n "
+            << "vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")" << endl;
 }
 ```
 
 ```Output
 Original vector v1 with subranges sorted by the
-binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
+binary predicate less than is v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
 Original vector v2 with subranges sorted by the
 binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Original vector v3 with subranges sorted by the
@@ -2783,9 +2867,9 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a> is_heap
+## <a name="is_heap"></a>is_heap
 
-Restituisce **true** se gli elementi nell'intervallo specificato formano un heap.
+Restituisce **true** se gli elementi dell'intervallo specificato formano un heap.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -2793,179 +2877,188 @@ bool is_heap(
     RandomAccessIterator first,
     RandomAccessIterator last);
 
-template<class RandomAccessIterator, class BinaryPredicate>
+template<class RandomAccessIterator, class Compare>
 bool is_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 bool is_heap(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 bool is_heap(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
-    RandomAccessIterator last, 
-    Compare comp);
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di accesso casuale che indica l'inizio di un intervallo in cui cercare un heap.
 
-*ultimo*\
+*Ultima*\
 Iteratore di accesso casuale che indica la fine di un intervallo.
 
-*Comp*\
-Condizione da verificare per ordinare gli elementi. Un predicato binario accetta un solo argomento e restituisce **true** oppure **false**.
+*Pred*\
+Condizione da verificare per ordinare gli elementi. Un predicato di confronto accetta due argomenti e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce **true** se gli elementi nell'intervallo specificato formano un heap **false** se non lo sono.
+Restituisce **true** se gli elementi dell'intervallo specificato formano un heap, **false** in caso contrario.
 
 ### <a name="remarks"></a>Note
 
-La prima funzione modello restituisce [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`.
+La prima funzione di modello restituisce [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`.
 
 La seconda funzione di modello restituisce
 
-`is_heap_until(first, last, comp) == last`.
+[https://login.microsoftonline.com/consumers/](`is_heap_until(first, last, pred) == last`).
 
-## <a name="is_heap_until"></a> is_heap_until
+## <a name="is_heap_until"></a>is_heap_until
 
-Restituisce un iteratore posizionato in corrispondenza il primo elemento nell'intervallo [ `begin`, `end`) che non soddisfa la condizione di ordinamento heap oppure *end* se l'intervallo forma un heap.
+Restituisce un iteratore posizionato in corrispondenza del primo elemento nell'intervallo `first`[ `last`,) che non soddisfa la condizione di ordinamento dell'heap oppure *termina* se l'intervallo forma un heap.
 
 ```cpp
 template<class RandomAccessIterator>
 RandomAccessIterator is_heap_until(
-    RandomAccessIterator begin,
-    RandomAccessIterator end);
+    RandomAccessIterator first,
+    RandomAccessIterator last);
 
-template<class RandomAccessIterator, class BinaryPredicate>
+template<class RandomAccessIterator, class Compare>
 RandomAccessIterator is_heap_until(
-    RandomAccessIterator begin,
-    RandomAccessIterator end,
-    BinaryPredicate compare);
-    
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    Compare pred);
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 RandomAccessIterator is_heap_until(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 RandomAccessIterator is_heap_until(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*iniziare*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore ad accesso casuale che specifica il primo elemento di un intervallo per il controllo di un heap.
 
-*Fine*\
+*Ultima*\
 Iteratore ad accesso casuale che specifica la fine di un intervallo per il controllo di un heap.
 
-*Confrontare*\
-Predicato binario che specifica una condizione di ordinamento di tipo "strict weak" che definisce un heap. Il predicato predefinito quando *confrontare* non viene specificato è `std::less<>`.
+*Pred*\
+Predicato binario che specifica una condizione di ordinamento di tipo "strict weak" che definisce un heap. Il predicato `std::less<>` predefinito è quando non è specificato *prede* .
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce *end* se l'intervallo specificato forma un heap o contiene uno o meno elementi. In caso contrario, restituisce un iteratore per il primo elemento che non soddisfa la condizione di heap.
+Restituisce *l'ultimo* se l'intervallo specificato forma un heap o contiene uno o meno elementi. In caso contrario, restituisce un iteratore per il primo elemento che non soddisfa la condizione di heap.
 
 ### <a name="remarks"></a>Note
 
-La prima funzione modello restituisce l'ultimo iteratore `next` nelle `[begin , end]` in cui `[begin , next)` è un heap ordinato in base all'oggetto funzione `std::less<>`. Se la distanza `end - begin < 2`, la funzione restituisce *end*.
+La prima funzione di modello restituisce l'ultimo `next` iteratore `[first, next)` in `[first, last)` dove è un heap ordinato in base `std::less<>`all'oggetto funzione. Se la distanza `last - first` è minore di 2, la funzione restituisce l' *ultimo*.
 
-La seconda funzione di modello si comporta come la prima, ad eccezione del fatto che usa il predicato `compare` anziché `std::less<>` come condizione di ordinamento heap.
+La seconda funzione di modello si comporta come la prima, ad eccezione del fatto che usa il *predicato* predicato anziché come condizione di `std::less<>` ordinamento heap.
 
-## <a name="is_partitioned"></a> is_partitioned
+## <a name="is_partitioned"></a>is_partitioned
 
-Restituisce **true** se tutti gli elementi dell'intervallo specificato che testano **true** per una condizione precedono gli elementi che testano **false**.
+Restituisce **true** se tutti gli elementi dell'intervallo specificato che verificano **true** per una condizione precedono gli elementi che testano **false**.
 
 ```cpp
-template<class InputIterator, class BinaryPredicate>
+template<class InputIterator, class UnaryPredicate>
 bool is_partitioned(
     InputIterator first,
     InputIterator last,
-    BinaryPredicate comp);
-    
-template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+    UnaryPredicate pred);
+
+template <class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 bool is_partitioned(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    Predicate pred);
+    ForwardIterator first,
+    ForwardIterator last,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che indica l'inizio di un intervallo in cui cercare una condizione.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che indica la fine di un intervallo.
 
-*Comp*\
-La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*\
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true quando tutti gli elementi dell'intervallo specificato che testano **true** per una condizione precedono gli elementi che testano **false**e in caso contrario, restituisce **false**.
+Restituisce **true** quando tutti gli elementi dell'intervallo specificato che verificano **true** per una condizione precedono tutti gli elementi che testano **false**; in caso contrario, restituisce **false**.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello restituisce **true** solo se tutti gli elementi `[first, last)` vengono partizionate dal *comp*; ovvero tutti gli elementi `X` nel `[first, last)` per il quale `comp (X)` è true si verificano prima di tutti gli elementi `Y` per il quale `comp (Y)` viene **false**.
+La funzione di modello restituisce **true** solo se tutti gli `[first, last)` elementi in sono partizionati da *prede*, ovvero tutti gli `X` elementi `[first, last)` in per `pred (X)` i quali è true si verificano prima di tutti gli `Y` elementi per i quali è **false**. `pred (Y)`
 
-## <a name="is_permutation"></a> is_permutation
+## <a name="is_permutation"></a>is_permutation
 
 Restituisce true se entrambi gli intervalli contengono gli stessi elementi, gli elementi sono nello stesso ordine o meno. Usare gli overload a doppio intervallo nel codice C++14 perché gli overload che accettano un singolo iteratore per il secondo intervallo non rileveranno differenze se questo è più lungo del primo, e ciò risulterà in un comportamento indefinito, in special modo se il secondo intervallo è più breve del primo.
 
 ```cpp
 template<class ForwardIterator1, class ForwardIterator2>
 bool is_permutation(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
 
-template<class ForwardIterator1, class ForwardIterator2, class Predicate>
+template<class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 bool is_permutation(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    Predicate Pred);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    BinaryPredicate Pred);
 
 // C++14
 template<class ForwardIterator1, class ForwardIterator2>
 bool is_permutation(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    ForwardIterator2 Last2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2);
 
-template<class ForwardIterator1, class ForwardIterator2, class Predicate>
+template<class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 bool is_permutation(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    ForwardIterator2 Last2,
-    Predicate Pred);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*First1*\
 Iteratore in avanti che fa riferimento al primo elemento dell'intervallo.
 
-*last1*\
+*Last1*\
 Iteratore in avanti che fa riferimento all'elemento successivo all'ultimo elemento dell'intervallo.
 
 *first2*\
@@ -2975,17 +3068,17 @@ Iteratore in avanti che fa riferimento al primo elemento del secondo intervallo,
 Iteratore in avanti che fa riferimento all'elemento successivo all'ultimo elemento del secondo intervallo, usato per il confronto.
 
 *Pred*\
-Un predicato che verifica l'equivalenza e restituisce un **bool**.
+Predicato che verifica l'equivalenza e restituisce un valore **bool**.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** quando gli intervalli possono essere riorganizzati in modo che siano identici in base al predicato di confronto; in caso contrario, **false**.
+**true** quando gli intervalli possono essere ridisposti in modo che siano identici in base al predicato di confronto; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
 Nel peggiore dei casi, `is_permutation` ha una complessità quadratica.
 
-La prima funzione modello presuppone che siano presenti altrettanti elementi nell'intervallo che inizia con *First2* quanti sono presenti nell'intervallo designato da [ `First1`, `Last1`). Se esistono più elementi nel secondo intervallo, vengono ignorati; se esistono meno elementi, si verificherà un comportamento indefinito. La terza funzione modello (C++14 e versioni successive) non fa questa ipotesi.  Entrambe restituiscono **true** solo se, per ogni elemento X nell'intervallo designato da [ `First1`, `Last1`) sono presenti tanti elementi Y nello stesso intervallo per cui X = = Y quanti sono presenti nell'intervallo che inizia con *First2* o [ `First2, Last2).` in questo caso, `operator==` deve eseguire un confronto a coppie tra gli operandi.
+La prima funzione di modello presuppone che il numero di elementi nell'intervallo a partire da *first2* sia compreso nell'intervallo definito da `[first1, last1)`. Se esistono più elementi nel secondo intervallo, vengono ignorati; se esistono meno elementi, si verificherà un comportamento indefinito. La terza funzione modello (C++14 e versioni successive) non fa questa ipotesi. Entrambi restituiscono **true** solo se, per ogni elemento x nell'intervallo designato `[first1, last1)` da sono presenti tanti elementi Y nello stesso intervallo per cui x = = Y è presente nell'intervallo a partire da *first2* o `[first2, last2)`. In questo `operator==` caso, deve eseguire un confronto a coppie tra gli operandi.
 
 La seconda e la quarta funzione modello si comportano allo stesso modo, tranne per il fatto che sostituiscono `operator==(X, Y)` con `Pred(X, Y)`. Per un corretto comportamento, il predicato deve essere simmetrico, riflessivo e transitivo.
 
@@ -3045,7 +3138,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a> is_sorted
+## <a name="is_sorted"></a>is_sorted
 
 Restituisce **true** se gli elementi nell'intervallo specificato sono ordinati.
 
@@ -3055,96 +3148,103 @@ bool is_sorted(
     ForwardIterator first,
     ForwardIterator last);
 
-template<class ForwardIterator, class BinaryPredicate>
+template<class ForwardIterator, class Compare>
 bool is_sorted(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class ForwardIterator>
 bool is_sorted(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
-    
+
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
 bool is_sorted(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che indica il punto in cui inizia l'intervallo da controllare.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che indica la fine di un intervallo.
 
-*Comp*\
-La condizione da testare per determinare un ordine tra due elementi. Un predicato accetta un solo argomento e restituisce **true** o **false**. Viene eseguita la stessa attività di `operator<`.
+*Pred*\
+La condizione da testare per determinare un ordine tra due elementi. Un predicato di confronto accetta due argomenti e restituisce **true** o **false**. Viene eseguita la stessa attività di `operator<`.
 
 ### <a name="remarks"></a>Note
 
-La prima funzione modello restituisce [is_sorted_until](#is_sorted_until)`( first, last ) == last`. Il `operator<` funzione esegue il confronto dell'ordine.
+La prima funzione di modello restituisce [is_sorted_until](#is_sorted_until)`( first, last ) == last`. La `operator<` funzione esegue il confronto degli ordini.
 
-La seconda funzione modello restituisce `is_sorted_until( first, last , comp ) == last`. Il *comp* funzione di predicato esegue il confronto dell'ordine.
+La seconda funzione di modello `is_sorted_until( first, last , pred ) == last`restituisce. La funzione predicato *Predator* esegue il confronto degli ordini.
 
-## <a name="is_sorted_until"></a> is_sorted_until
+## <a name="is_sorted_until"></a>is_sorted_until
 
 Restituisce un `ForwardIterator` impostato sull'ultimo elemento nell'ordine definito da un intervallo specificato.
 
-La seconda versione consente di fornire una `BinaryPredicate` funzione che restituisce **true** quando due elementi sono ordinati, e **false** in caso contrario.
+La seconda versione consente di fornire un oggetto funzione di confronto che restituisce **true** quando due elementi specificati sono ordinati e **false** in caso contrario.
 
 ```cpp
 template<class ForwardIterator>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last);
-template<class ForwardIterator, class BinaryPredicate>
+
+template<class ForwardIterator, class Compare>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator is_sorted_until(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
 ForwardIterator is_sorted_until(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che indica il punto in cui inizia l'intervallo da controllare.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che indica la fine di un intervallo.
 
-*Comp*\
-La condizione da testare per determinare un ordine tra due elementi. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*\
+La condizione da testare per determinare un ordine tra due elementi. Un predicato di confronto accetta due argomenti e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un `ForwardIterator` impostato sull'ultimo elemento nell'ordine. La sequenza ordinata inizia da *primo*.
+Restituisce un `ForwardIterator` impostato sull'ultimo elemento nell'ordine. La sequenza ordinata inizia dalla *prima*.
 
 ### <a name="remarks"></a>Note
 
-La prima funzione modello restituisce l'ultimo iteratore `next` nelle `[first, last]` in modo che `[first, next)` è una sequenza ordinata per `operator<`. Se `distance()` `< 2` la funzione restituisce *ultima*.
+La prima funzione di modello restituisce l'ultimo `next` iteratore in `[first, next)` in modo che sia una sequenza `operator<`ordinata in `[first, last]` base a. Se `distance()` è minore di 2, la funzione restituisce l' *ultimo*.
 
-La seconda funzione di modello ha lo stesso comportamento, ad eccezione del fatto che sostituisce `operator<(X, Y)` con `comp (X, Y)`.
+La seconda funzione di modello ha lo stesso comportamento, ad eccezione del fatto che sostituisce `operator<(X, Y)` con `pred(X, Y)`.
 
-## <a name="iter_swap"></a> iter_swap
+## <a name="iter_swap"></a>iter_swap
 
 Scambia due valori a cui viene fatto riferimento da una coppia di iteratori specificati.
 
@@ -3155,7 +3255,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Uno degli iteratori in avanti il cui valore deve essere scambiato.
 
 *Ok*\
@@ -3163,7 +3263,7 @@ Il secondo iteratore in avanti il cui valore deve essere scambiato.
 
 ### <a name="remarks"></a>Note
 
-È consigliabile usare `swap` anziché **iter_swap**, inclusa nello standard C++ per ragioni di compatibilità con le versioni precedenti. Se `Fit1` e `Fit2` sono iteratori in avanti, quindi `iter_swap(Fit1, Fit2)`, è equivalente a `swap( *Fit1, *Fit2)`.
+`swap`deve essere usato in preferenza per **iter_swap**, incluso nello standard per la C++ compatibilità con le versioni precedenti. Se `Fit1` `iter_swap( Fit1, Fit2 )` `swap( *Fit1, *Fit2 )`e `Fit2` sono iteratori in diretta, è equivalente a.
 
 I tipi di valore degli iteratori in avanti di input devono avere lo stesso valore.
 
@@ -3185,105 +3285,105 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt&   operator=( const CInt& rhs ) { m_nVal =
-   rhs.m_nVal; return *this; }
-   bool operator<( const CInt& rhs ) const
-      { return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt&   operator=( const CInt& rhs ) { m_nVal =
+    rhs.m_nVal; return *this; }
+    bool operator<( const CInt& rhs ) const
+        { return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
-   osIn << "CInt(" << rhs.m_nVal << ")";
-   return osIn;
+    osIn << "CInt(" << rhs.m_nVal << ")";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   CInt c1 = 5, c2 = 1, c3 = 10;
-   deque<CInt> deq1;
-   deque<CInt>::iterator d1_Iter;
+    CInt c1 = 5, c2 = 1, c3 = 10;
+    deque<CInt> deq1;
+    deque<CInt>::iterator d1_Iter;
 
-   deq1.push_back ( c1 );
-   deq1.push_back ( c2 );
-   deq1.push_back ( c3 );
+    deq1.push_back ( c1 );
+    deq1.push_back ( c2 );
+    deq1.push_back ( c3 );
 
-   cout << "The original deque of CInts is deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The original deque of CInts is deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   // Exchanging first and last elements with iter_swap
-   iter_swap ( deq1.begin( ), --deq1.end( ) );
+    // Exchanging first and last elements with iter_swap
+    iter_swap ( deq1.begin( ), --deq1.end( ) );
 
-   cout << "The deque of CInts with first & last elements swapped is:\n deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The deque of CInts with first & last elements swapped is:\n deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   // Swapping back first and last elements with swap
-   swap ( *deq1.begin( ), *(deq1.end( ) -1 ) );
+    // Swapping back first and last elements with swap
+    swap ( *deq1.begin( ), *(deq1.end( ) -1 ) );
 
-   cout << "The deque of CInts with first & last elements swapped back is:\n deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The deque of CInts with first & last elements swapped back is:\n deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   // Swapping a vector element with a deque element
-   vector <int> v1;
-   vector <int>::iterator Iter1;
-   deque <int> deq2;
-   deque <int>::iterator d2_Iter;
+    // Swapping a vector element with a deque element
+    vector<int> v1;
+    vector<int>::iterator Iter1;
+    deque<int> deq2;
+    deque<int>::iterator d2_Iter;
 
-   int i;
-   for ( i = 0 ; i <= 3 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 3 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii = 4 ; ii <= 5 ; ii++ )
-   {
-      deq2.push_back( ii );
-   }
+    int ii;
+    for ( ii = 4 ; ii <= 5 ; ii++ )
+    {
+        deq2.push_back( ii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Deque deq2 is ( " ;
-   for ( d2_Iter = deq2.begin( ) ; d2_Iter != deq2.end( ) ; d2_Iter++ )
-      cout << *d2_Iter << " ";
-   cout << ")." << endl;
+    cout << "Deque deq2 is ( " ;
+    for ( d2_Iter = deq2.begin( ) ; d2_Iter != deq2.end( ) ; d2_Iter++ )
+        cout << *d2_Iter << " ";
+    cout << ")." << endl;
 
-   iter_swap ( v1.begin( ), deq2.begin( ) );
+    iter_swap ( v1.begin( ), deq2.begin( ) );
 
-   cout << "After exchanging first elements,\n vector v1 is: v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl << " & deque deq2 is: deq2 = ( ";
-   for ( d2_Iter = deq2.begin( ) ; d2_Iter != deq2.end( ) ; d2_Iter++ )
-      cout << *d2_Iter << " ";
-   cout << ")." << endl;
+    cout << "After exchanging first elements,\n vector v1 is: v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl << " & deque deq2 is: deq2 = ( ";
+    for ( d2_Iter = deq2.begin( ) ; d2_Iter != deq2.end( ) ; d2_Iter++ )
+        cout << *d2_Iter << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -3300,51 +3400,53 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a> lexicographical_compare
+## <a name="lexicographical_compare"></a>lexicographical_compare
 
 Confronta due sequenze elemento per elemento per determinare quale delle due è minore.
 
 ```cpp
 template<class InputIterator1, class InputIterator2>
 bool lexicographical_compare(
-    InputIterator1  first1,
-    InputIterator1 Last1,
-    InputIterator2  first2,
-    InputIterator2 Last2  );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2 );
 
-template<class InputIterator1, class InputIterator2, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class Compare>
 bool lexicographical_compare(
-    InputIterator1  first1,
-    InputIterator1 Last1,
-    InputIterator2  first2,
-    InputIterator2 Last2,
-    BinaryPredicate  comp  );
-    
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    Compare pred );
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 bool lexicographical_compare(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Compare>
 bool lexicographical_compare(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo intervallo da confrontare.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo intervallo da confrontare.
 
 *first2*\
@@ -3353,8 +3455,8 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo inter
 *Last2*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel secondo intervallo da confrontare.
 
-*Comp*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3368,7 +3470,7 @@ Un confronto lessicografico tra sequenze confronta le sequenze elemento per elem
 
 - Non viene trovata alcuna disuguaglianza, ma una sequenza include più elementi dell'altra e la sequenza più breve è considerata minore della sequenza più lunga.
 
-- Non viene trovata alcuna disuguaglianza e le sequenze hanno lo stesso numero di elementi e pertanto le sequenze sono uguali e il risultato del confronto è false.
+- Non viene trovata alcuna disuguaglianza e le sequenze hanno lo stesso numero di elementi, quindi le sequenze sono uguali e il risultato del confronto è **false**.
 
 ### <a name="example"></a>Esempio
 
@@ -3383,76 +3485,76 @@ Un confronto lessicografico tra sequenze confronta le sequenze elemento per elem
 // Return whether second element is twice the first
 bool twice ( int elem1, int elem2 )
 {
-   return 2 * elem1 < elem2;
+    return 2 * elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   list <int> L1;
-   vector <int>::iterator Iter1, Iter2;
-   list <int>::iterator L1_Iter, L1_inIter;
+    using namespace std;
+    vector<int> v1, v2;
+    list<int> L1;
+    vector<int>::iterator Iter1, Iter2;
+    list<int>::iterator L1_Iter, L1_inIter;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
-   int ii;
-   for ( ii = 0 ; ii <= 6 ; ii++ )
-   {
-      L1.push_back( 5 * ii );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
+    int ii;
+    for ( ii = 0 ; ii <= 6 ; ii++ )
+    {
+        L1.push_back( 5 * ii );
+    }
 
-   int iii;
-   for ( iii = 0 ; iii <= 5 ; iii++ )
-   {
-      v2.push_back( 10 * iii );
-   }
+    int iii;
+    for ( iii = 0 ; iii <= 5 ; iii++ )
+    {
+        v2.push_back( 10 * iii );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "List L1 = ( " ;
-   for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
-      cout << *L1_Iter << " ";
-   cout << ")" << endl;
+    cout << "List L1 = ( " ;
+    for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
+        cout << *L1_Iter << " ";
+    cout << ")" << endl;
 
-   cout << "Vector v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-      cout << ")" << endl;
+    cout << "Vector v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+        cout << ")" << endl;
 
-   // Self lexicographical_comparison of v1 under identity
-   bool result1;
-   result1 = lexicographical_compare (v1.begin( ), v1.end( ),
-                  v1.begin( ), v1.end( ) );
-   if ( result1 )
-      cout << "Vector v1 is lexicographically_less than v1." << endl;
-   else
-      cout << "Vector v1 is not lexicographically_less than v1." << endl;
+    // Self lexicographical_comparison of v1 under identity
+    bool result1;
+    result1 = lexicographical_compare (v1.begin( ), v1.end( ),
+                    v1.begin( ), v1.end( ) );
+    if ( result1 )
+        cout << "Vector v1 is lexicographically_less than v1." << endl;
+    else
+        cout << "Vector v1 is not lexicographically_less than v1." << endl;
 
-   // lexicographical_comparison of v1 and L2 under identity
-   bool result2;
-   result2 = lexicographical_compare (v1.begin( ), v1.end( ),
-                  L1.begin( ), L1.end( ) );
-   if ( result2 )
-      cout << "Vector v1 is lexicographically_less than L1." << endl;
-   else
-      cout << "Vector v1 is lexicographically_less than L1." << endl;
+    // lexicographical_comparison of v1 and L2 under identity
+    bool result2;
+    result2 = lexicographical_compare (v1.begin( ), v1.end( ),
+                    L1.begin( ), L1.end( ) );
+    if ( result2 )
+        cout << "Vector v1 is lexicographically_less than L1." << endl;
+    else
+        cout << "Vector v1 is lexicographically_less than L1." << endl;
 
-   bool result3;
-   result3 = lexicographical_compare (v1.begin( ), v1.end( ),
-                  v2.begin( ), v2.end( ), twice );
-   if ( result3 )
-      cout << "Vector v1 is lexicographically_less than v2 "
-           << "under twice." << endl;
-   else
-      cout << "Vector v1 is not lexicographically_less than v2 "
-           << "under twice." << endl;
+    bool result3;
+    result3 = lexicographical_compare (v1.begin( ), v1.end( ),
+                    v2.begin( ), v2.end( ), twice );
+    if ( result3 )
+        cout << "Vector v1 is lexicographically_less than v2 "
+            << "under twice." << endl;
+    else
+        cout << "Vector v1 is not lexicographically_less than v2 "
+            << "under twice." << endl;
 }
 ```
 
@@ -3465,7 +3567,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a> lower_bound
+## <a name="lower_bound"></a>lower_bound
 
 Trova la posizione del primo elemento in un intervallo ordinato con un valore maggiore o equivalente a un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -3481,21 +3583,21 @@ ForwardIterator lower_bound(
     ForwardIterator first,
     ForwardIterator last,
     const Type& value,
-    BinaryPredicate comp );
+    BinaryPredicate pred );
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *value*\
 Valore la cui prima posizione o possibile prima posizione è da ricercare nell'intervallo ordinato.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3512,7 +3614,7 @@ L'intervallo non è modificato dall'algoritmo `lower_bound`.
 
 Per poter essere ordinati, i tipi di valore degli iteratori in avanti devono essere confrontabili mediante il tipo di confronto "minore di", in modo che, dati due elementi, sia possibile determinare o che sono equivalenti (nel senso che nessuno è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti.
 
-La complessità dell'algoritmo è logaritmica per gli iteratori ad accesso casuale e lineare in caso contrario, con il numero di passaggi proporzionali a (`last - first`).
+La complessità dell'algoritmo è logaritmica per gli iteratori ad accesso casuale e lineare in caso contrario, con il numero di passaggi proporzionali`last - first`a ().
 
 ### <a name="example"></a>Esempio
 
@@ -3542,12 +3644,12 @@ int main()
     // Constructing vector v1 with default less-than ordering
     for ( auto i = -1 ; i <= 4 ; ++i )
     {
-        v1.push_back(  i );
+        v1.push_back( i );
     }
 
     for ( auto ii =-3 ; ii <= 0 ; ++ii )
     {
-        v1.push_back(  ii  );
+        v1.push_back( ii );
     }
 
     cout << "Starting vector v1 = ( " ;
@@ -3578,7 +3680,7 @@ int main()
     sort(v3.begin(), v3.end(), mod_lesser);
 
     cout << "Original vector v3 with range sorted by the\n "
-        <<  "binary predicate mod_lesser is v3 = ( " ;
+        << "binary predicate mod_lesser is v3 = ( " ;
     for (const auto &Iter : v3)
         cout << Iter << " ";
     cout << ")." << endl;
@@ -3597,14 +3699,14 @@ int main()
     cout << "The lower_bound in v2 for the element with a value of 3 is: "
         << *Result << "." << endl;
 
-    // lower_bound of 3 in v3 with the binary predicate  mod_lesser
-    Result = lower_bound(v3.begin(), v3.end(), 3,  mod_lesser);
+    // lower_bound of 3 in v3 with the binary predicate mod_lesser
+    Result = lower_bound(v3.begin(), v3.end(), 3, mod_lesser);
     cout << "The lower_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }
 ```
 
-## <a name="make_heap"></a> make_heap
+## <a name="make_heap"></a>make_heap
 
 Converte gli elementi di un intervallo specificato in un heap in cui il primo elemento è il più grande e per il quale un criterio di ordinamento può essere specificato con un predicato binario.
 
@@ -3618,18 +3720,18 @@ template<class RandomAccessIterator, class BinaryPredicate>
 void make_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
-    BinaryPredicate comp );
+    BinaryPredicate pred );
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da convertire in heap.
 
-*ultimo*\
+*Ultima*\
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da convertire in heap.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
@@ -3642,7 +3744,7 @@ Gli heap hanno due proprietà:
 
 Gli heap sono un modo ideale per implementare le code di priorità e vengono usati nell'implementazione dell'adattatore del contenitore della libreria standard C++ [priority_queue Class](../standard-library/priority-queue-class.md).
 
-La complessità è lineare, con richiesta 3 \* (* cognome - nome *) i confronti.
+La complessità è lineare e richiede `3 * (last - first)` confronti.
 
 ### <a name="example"></a>Esempio
 
@@ -3655,38 +3757,38 @@ La complessità è lineare, con richiesta 3 \* (* cognome - nome *) i confronti.
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   random_shuffle( v1.begin( ), v1.end( ) );
+    random_shuffle( v1.begin( ), v1.end( ) );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Make v1 a heap with default less than ordering
-   make_heap ( v1.begin( ), v1.end( ) );
-   cout << "The heaped version of vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with default less than ordering
+    make_heap ( v1.begin( ), v1.end( ) );
+    cout << "The heaped version of vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Make v1 a heap with greater than ordering
-   make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The greater-than heaped version of v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with greater than ordering
+    make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The greater-than heaped version of v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="max"></a> Max
+## <a name="max"></a>Max
 
 Confronta due oggetti e restituisce il maggiore dei due in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -3699,28 +3801,28 @@ template<class Type, class Pr>
 constexpr Type& max(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
 template<class Type>
 constexpr Type& max (
-    initializer_list<Type> );
+    initializer_list<Type> ilist);
 template<class Type, class Pr>
 constexpr Type& max(
-    initializer_list<Type> ,
-    BinaryPredicate comp);
+    initializer_list<Type> ilist,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Primo dei due oggetti confrontati.
 
 *Ok*\
 Secondo dei due oggetti confrontati.
 
-*Comp*\
+*Pred*\
 Predicato binario usato per confrontare i due oggetti.
 
-*_IList*\
+*inList*\
 Oggetto initializer list che contiene gli oggetti da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -3729,7 +3831,7 @@ Maggiore dei due oggetti, a meno che nessuno dei due sia superiore; in tal caso,
 
 ### <a name="remarks"></a>Note
 
-Nell'algoritmo `max` in genere non sono presenti oggetti passati come parametri. La maggior parte degli algoritmi della libreria standard C++ agisce su un intervallo di elementi la cui posizione è specificata dagli iteratori passati come parametri. Se è necessaria una funzione che agisce su un intervallo di elementi, usare invece [max_element](../standard-library/algorithm-functions.md#max_element). Consente a Visual Studio 2017 **constexpr** sull'overload che accettano un oggetto initializer_list.
+Nell'algoritmo `max` in genere non sono presenti oggetti passati come parametri. La maggior parte degli algoritmi della libreria standard C++ agisce su un intervallo di elementi la cui posizione è specificata dagli iteratori passati come parametri. Se è necessaria una funzione che agisce su un intervallo di elementi, usare invece [max_element](../standard-library/algorithm-functions.md#max_element). Visual Studio 2017 Abilita **constExpr** sugli overload che accettano un initializer_list.
 
 ### <a name="example"></a>Esempio
 
@@ -3749,137 +3851,137 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt&   operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      {return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt&   operator=( const CInt& rhs ) {m_nVal =
+    rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        {return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether absolute value of elem1 is greater than
 // absolute value of elem2
 bool abs_greater ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = -elem1;
-   if ( elem2 < 0 )
-      elem2 = -elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = -elem1;
+    if ( elem2 < 0 )
+        elem2 = -elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   int a = 6, b = -7;
-   // Return the integer with the larger absolute value
-   const int& result1 = max(a, b, abs_greater);
-   // Return the larger integer
-   const int& result2 = max(a, b);
+    int a = 6, b = -7;
+    // Return the integer with the larger absolute value
+    const int& result1 = max(a, b, abs_greater);
+    // Return the larger integer
+    const int& result2 = max(a, b);
 
-   cout << "Using integers 6 and -7..." << endl;
-   cout << "The integer with the greater absolute value is: "
-        << result1 << "." << endl;
-   cout << "The integer with the greater value is: "
-        << result2 << "." << endl;
-   cout << endl;
+    cout << "Using integers 6 and -7..." << endl;
+    cout << "The integer with the greater absolute value is: "
+            << result1 << "." << endl;
+    cout << "The integer with the greater value is: "
+            << result2 << "." << endl;
+    cout << endl;
 
-// Comparing the members of an initializer_list
-const int& result3 = max({ a, b });
-const int& result4 = max({ a, b }, abs_greater);
+    // Comparing the members of an initializer_list
+    const int& result3 = max({ a, b });
+    const int& result4 = max({ a, b }, abs_greater);
 
-cout << "Comparing the members of an initializer_list..." << endl;
-cout << "The member with the greater value is: " << result3 << endl;
-cout << "The integer with the greater absolute value is: " << result4 << endl;
+    cout << "Comparing the members of an initializer_list..." << endl;
+    cout << "The member with the greater value is: " << result3 << endl;
+    cout << "The integer with the greater absolute value is: " << result4 << endl;
 
-   // Comparing set containers with elements of type CInt
-   // using the max algorithm
-   CInt c1 = 1, c2 = 2, c3 = 3;
-   set<CInt> s1, s2, s3;
-   set<CInt>::iterator s1_Iter, s2_Iter, s3_Iter;
+    // Comparing set containers with elements of type CInt
+    // using the max algorithm
+    CInt c1 = 1, c2 = 2, c3 = 3;
+    set<CInt> s1, s2, s3;
+    set<CInt>::iterator s1_Iter, s2_Iter, s3_Iter;
 
-   s1.insert ( c1 );
-   s1.insert ( c2 );
-   s2.insert ( c2 );
-   s2.insert ( c3 );
+    s1.insert ( c1 );
+    s1.insert ( c2 );
+    s2.insert ( c2 );
+    s2.insert ( c3 );
 
-   cout << "s1 = (";
-   for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
-      cout << " " << *s1_Iter << ",";
-   s1_Iter = --s1.end( );
-   cout << " " << *s1_Iter << " )." << endl;
+    cout << "s1 = (";
+    for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
+        cout << " " << *s1_Iter << ",";
+    s1_Iter = --s1.end( );
+    cout << " " << *s1_Iter << " )." << endl;
 
-   cout << "s2 = (";
-   for ( s2_Iter = s2.begin( ); s2_Iter != --s2.end( ); s2_Iter++ )
-      cout << " " << *s2_Iter << ",";
-   s2_Iter = --s2.end( );
-   cout << " " << *s2_Iter << " )." << endl;
+    cout << "s2 = (";
+    for ( s2_Iter = s2.begin( ); s2_Iter != --s2.end( ); s2_Iter++ )
+        cout << " " << *s2_Iter << ",";
+    s2_Iter = --s2.end( );
+    cout << " " << *s2_Iter << " )." << endl;
 
-   s3 = max ( s1, s2 );
-   cout << "s3 = max ( s1, s2 ) = (";
-   for ( s3_Iter = s3.begin( ); s3_Iter != --s3.end( ); s3_Iter++ )
-      cout << " " << *s3_Iter << ",";
-   s3_Iter = --s3.end( );
-   cout << " " << *s3_Iter << " )." << endl << endl;
+    s3 = max ( s1, s2 );
+    cout << "s3 = max ( s1, s2 ) = (";
+    for ( s3_Iter = s3.begin( ); s3_Iter != --s3.end( ); s3_Iter++ )
+        cout << " " << *s3_Iter << ",";
+    s3_Iter = --s3.end( );
+    cout << " " << *s3_Iter << " )." << endl << endl;
 
-   // Comparing vectors with integer elements using the max algorithm
-   vector <int> v1, v2, v3, v4, v5;
-   vector <int>::iterator Iter1, Iter2, Iter3, Iter4, Iter5;
+    // Comparing vectors with integer elements using the max algorithm
+    vector<int> v1, v2, v3, v4, v5;
+    vector<int>::iterator Iter1, Iter2, Iter3, Iter4, Iter5;
 
-   int i;
-   for ( i = 0 ; i <= 2 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 2 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 2 ; ii++ )
-   {
-      v2.push_back( ii );
-   }
+    int ii;
+    for ( ii = 0 ; ii <= 2 ; ii++ )
+    {
+        v2.push_back( ii );
+    }
 
-   int iii;
-   for ( iii = 0 ; iii <= 2 ; iii++ )
-   {
-      v3.push_back( 2 * iii );
-   }
+    int iii;
+    for ( iii = 0 ; iii <= 2 ; iii++ )
+    {
+        v3.push_back( 2 * iii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v3 is ( " ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    cout << "Vector v3 is ( " ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 
-   v4 = max ( v1, v2 );
-   v5 = max ( v1, v3 );
+    v4 = max ( v1, v2 );
+    v5 = max ( v1, v3 );
 
-   cout << "Vector v4 = max (v1,v2) is ( " ;
-   for ( Iter4 = v4.begin( ) ; Iter4 != v4.end( ) ; Iter4++ )
-      cout << *Iter4 << " ";
-   cout << ")." << endl;
+    cout << "Vector v4 = max (v1,v2) is ( " ;
+    for ( Iter4 = v4.begin( ) ; Iter4 != v4.end( ) ; Iter4++ )
+        cout << *Iter4 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v5 = max (v1,v3) is ( " ;
-   for ( Iter5 = v5.begin( ) ; Iter5 != v5.end( ) ; Iter5++ )
-      cout << *Iter5 << " ";
-   cout << ")." << endl;
+    cout << "Vector v5 = max (v1,v3) is ( " ;
+    for ( Iter5 = v5.begin( ) ; Iter5 != v5.end( ) ; Iter5++ )
+        cout << *Iter5 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -3899,41 +4001,49 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a> max_element
+## <a name="max_element"></a>max_element
 
 Trova la prima occorrenza dell'elemento più grande in un intervallo specificato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
 ```cpp
 template<class ForwardIterator>
-constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last );
+constexpr ForwardIterator max_element(
+    ForwardIterator first,
+    ForwardIterator last );
 
-template<class ForwardIterator, class BinaryPredicate>
-constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryPredicate comp );
+template<class ForwardIterator, class Compare>
+constexpr ForwardIterator max_element(
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare pred );
 
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator max_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
 ForwardIterator max_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca dell'elemento più grande.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla prima posizione dopo l'elemento finale nell'intervallo in cui eseguire la ricerca dell'elemento più grande.
 
-*Comp*\
-Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3943,7 +4053,7 @@ Iteratore in avanti che punta alla posizione della prima occorrenza dell'element
 
 L'intervallo a cui si fa riferimento deve essere valido, tutti i puntatori devono essere dereferenziabili e all'interno di ciascuna sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è lineare: (`last` - `first`) - 1 confronti sono necessari per un intervallo non vuoto.
+La complessità è lineare: `(last - first) - 1` i confronti sono necessari per un intervallo non vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -3963,89 +4073,89 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt& operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      {return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt& operator=( const CInt& rhs ) {m_nVal =
+    rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        {return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<(ostream& osIn, const CInt& rhs)
 {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is greater than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   // Searching a set container with elements of type CInt
-   // for the maximum element
-   CInt c1 = 1, c2 = 2, c3 = -3;
-   set<CInt> s1;
-   set<CInt>::iterator s1_Iter, s1_R1_Iter, s1_R2_Iter;
+    // Searching a set container with elements of type CInt
+    // for the maximum element
+    CInt c1 = 1, c2 = 2, c3 = -3;
+    set<CInt> s1;
+    set<CInt>::iterator s1_Iter, s1_R1_Iter, s1_R2_Iter;
 
-   s1.insert ( c1 );
-   s1.insert ( c2 );
-   s1.insert ( c3 );
+    s1.insert ( c1 );
+    s1.insert ( c2 );
+    s1.insert ( c3 );
 
-   cout << "s1 = (";
-   for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
-      cout << " " << *s1_Iter << ",";
-   s1_Iter = --s1.end( );
-   cout << " " << *s1_Iter << " )." << endl;
+    cout << "s1 = (";
+    for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
+        cout << " " << *s1_Iter << ",";
+    s1_Iter = --s1.end( );
+    cout << " " << *s1_Iter << " )." << endl;
 
-   s1_R1_Iter = max_element ( s1.begin( ), s1.end( ) );
+    s1_R1_Iter = max_element ( s1.begin( ), s1.end( ) );
 
-   cout << "The largest element in s1 is: " << *s1_R1_Iter << endl;
-   cout << endl;
+    cout << "The largest element in s1 is: " << *s1_R1_Iter << endl;
+    cout << endl;
 
-   // Searching a vector with elements of type int for the maximum
-   // element under default less than & mod_lesser binary predicates
-   vector <int> v1;
-   vector <int>::iterator v1_Iter, v1_R1_Iter, v1_R2_Iter;
+    // Searching a vector with elements of type int for the maximum
+    // element under default less than & mod_lesser binary predicates
+    vector<int> v1;
+    vector<int>::iterator v1_Iter, v1_R1_Iter, v1_R2_Iter;
 
-   int i;
-   for ( i = 0 ; i <= 3 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 3 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii = 1 ; ii <= 4 ; ii++ )
-   {
-      v1.push_back( - 2 * ii );
-   }
+    int ii;
+    for ( ii = 1 ; ii <= 4 ; ii++ )
+    {
+        v1.push_back( - 2 * ii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( v1_Iter = v1.begin( ) ; v1_Iter != v1.end( ) ; v1_Iter++ )
-      cout << *v1_Iter << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1_Iter = v1.begin( ) ; v1_Iter != v1.end( ) ; v1_Iter++ )
+        cout << *v1_Iter << " ";
+    cout << ")." << endl;
 
-   v1_R1_Iter = max_element ( v1.begin( ), v1.end( ) );
-   v1_R2_Iter = max_element ( v1.begin( ), v1.end( ), mod_lesser);
+    v1_R1_Iter = max_element ( v1.begin( ), v1.end( ) );
+    v1_R2_Iter = max_element ( v1.begin( ), v1.end( ), mod_lesser);
 
-   cout << "The largest element in v1 is: " << *v1_R1_Iter << endl;
-   cout << "The largest element in v1 under the mod_lesser"
-        << "\n binary predicate is: " << *v1_R2_Iter << endl;
+    cout << "The largest element in v1 is: " << *v1_R1_Iter << endl;
+    cout << "The largest element in v1 under the mod_lesser"
+            << "\n binary predicate is: " << *v1_R2_Iter << endl;
 }
 ```
 
-## <a name="merge"></a> merge
+## <a name="merge"></a>merge
 
 Combina tutti gli elementi di due intervalli di origine ordinati in un unico intervallo di destinazione ordinato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -4058,43 +4168,44 @@ OutputIterator merge(
     InputIterator2 last2,
     OutputIterator result );
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator merge(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
     OutputIterator result,
-    BinaryPredicate comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    Compare pred );
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator merge(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator merge(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da combinare e ordinare in un singolo intervallo.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione dell'ultimo elemento nel primo dei due intervalli di origine ordinati da combinare e ordinare in un singolo intervallo.
 
 *first2*\
@@ -4103,11 +4214,11 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo dei d
 *Last2*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine ordinati consecutivi da combinare e ordinare in un singolo intervallo.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine da combinare e ordinare in un singolo intervallo.
 
-*Comp*\
-Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4125,7 +4236,7 @@ L'operazione è stabile in quanto, nell'intervallo di destinazione, viene manten
 
 Per poter essere ordinati, i tipi di valore degli iteratori di input devono essere confrontabili mediante il tipo di confronto "minore di", in modo che, dati due elementi, sia possibile determinare o che sono equivalenti (nel senso che nessuno è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. Quando sono presenti elementi equivalenti in entrambi gli intervalli di origine, nell'intervallo di destinazione gli elementi del primo intervallo di origine precedono quelli del secondo intervallo di origine.
 
-La complessità dell'algoritmo è lineare con al massimo (*last1* - *first1*)-(*last2* - *first2*) - 1 i confronti.
+La complessità dell'algoritmo è lineare con al massimo `(last1 - first1) - (last2 - first2) - 1` i confronti.
 
 La [classe list](../standard-library/list-class.md) offre una funzione membro "merge" per unire gli elementi di due elenchi.
 
@@ -4141,105 +4252,105 @@ La [classe list](../standard-library/list-class.md) offre una funzione membro "m
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 ) {
-   if (elem1 < 0)
-      elem1 = - elem1;
-   if (elem2 < 0)
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if (elem1 < 0)
+        elem1 = - elem1;
+    if (elem2 < 0)
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main() {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a,  Iter1b, Iter1;
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1;
 
-   // Constructing vector v1a and v1b with default less than ordering
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-      v1a.push_back(  i );
+    // Constructing vector v1a and v1b with default less than ordering
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+        v1a.push_back( i );
 
-   int ii;
-   for ( ii =-5 ; ii <= 0 ; ii++ )
-      v1b.push_back(  ii  );
+    int ii;
+    for ( ii =-5 ; ii <= 0 ; ii++ )
+        v1b.push_back( ii );
 
-   cout << "Original vector v1a with range sorted by the\n "
-        << "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+            << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        << "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+            << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vector v2 with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) ,  v2 ( v1 );
-   vector <int>::iterator Iter2a,  Iter2b, Iter2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vector v2 with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+            << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+            << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vector v3 with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ,  v3 ( v1 );
-   vector <int>::iterator Iter3a,  Iter3b, Iter3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser );
+    // Constructing vector v3 with ranges sorted by mod_lesser
+    vector<int> v3a( v1a ), v3b( v1b ) , v3( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        << "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+            << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        << "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+            << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To merge inplace in ascending order with default binary
-   // predicate less <int>( )
-   merge ( v1a.begin( ), v1a.end( ), v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Merged inplace with default order,\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To merge inplace in ascending order with default binary
+    // predicate less<int>( )
+    merge ( v1a.begin( ), v1a.end( ), v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Merged inplace with default order,\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To merge inplace in descending order, specify binary
-   // predicate greater<int>( )
-   merge ( v2a.begin( ), v2a.end( ), v2b.begin( ), v2b.end( ),
-       v2.begin( ),  greater <int>( ) );
-   cout << "Merged inplace with binary predicate greater specified,\n "
-        << "vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To merge inplace in descending order, specify binary
+    // predicate greater<int>( )
+    merge ( v2a.begin( ), v2a.end( ), v2b.begin( ), v2b.end( ),
+        v2.begin( ), greater<int>( ) );
+    cout << "Merged inplace with binary predicate greater specified,\n "
+            << "vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // Applying A user-defined (UD) binary predicate mod_lesser
-   merge ( v3a.begin( ), v3a.end( ), v3b.begin( ), v3b.end( ),
-       v3.begin( ),  mod_lesser );
-   cout << "Merged inplace with binary predicate mod_lesser specified,\n "
-        << "vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // Applying A user-defined (UD) binary predicate mod_lesser
+    merge ( v3a.begin( ), v3a.end( ), v3b.begin( ), v3b.end( ),
+        v3.begin( ), mod_lesser );
+    cout << "Merged inplace with binary predicate mod_lesser specified,\n "
+            << "vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="min"></a> Min
+## <a name="min"></a>min
 
 Confronta due oggetti e restituisce il minore dei due in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -4248,41 +4359,44 @@ template<class Type>
 constexpr const Type& min(
     const Type& left,
     const Type& right);
+
 template<class Type, class Pr>
 constexpr const Type& min(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
+
 template<class Type>
 constexpr Type min(
-    initializer_list<Type> );
+    initializer_list<Type> ilist);
+
 template<class Type, class Pr>
 constexpr Type min(
-    initializer_list<Type>,
-    BinaryPredicate comp);
+    initializer_list<Type> ilist,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Primo dei due oggetti confrontati.
 
 *Ok*\
 Secondo dei due oggetti confrontati.
 
-*Comp*\
+*Pred*\
 Predicato binario usato per confrontare i due oggetti.
 
-*_IList*\
-initializer_list contenente i membri da confrontare.
+*inList*\
+Oggetto `initializer_list` contenente i membri da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il minore dei due oggetti, a meno che nessuno dei due sia minore; in tal caso, restituisce il primo dei due oggetti. Nel caso di initializer_list, restituisce il minore degli oggetti nell'elenco.
+Il minore dei due oggetti, a meno che nessuno dei due sia minore; in tal caso, restituisce il primo dei due oggetti. Nel caso di un oggetto `initializer_list`, restituisce il minor valore degli oggetti nell'elenco.
 
 ### <a name="remarks"></a>Note
 
-Nell'algoritmo `min` in genere non sono presenti oggetti passati come parametri. La maggior parte degli algoritmi della libreria standard C++ agisce su un intervallo di elementi la cui posizione è specificata dagli iteratori passati come parametri. Se è necessaria una funzione che usa un intervallo di elementi, usare [min_element](../standard-library/algorithm-functions.md#min_element). [constexpr](../cpp/constexpr-cpp.md) era stata attivata la `initializer_list` overload in Visual Studio 2017.
+Nell'algoritmo `min` in genere non sono presenti oggetti passati come parametri. La maggior parte degli algoritmi della libreria standard C++ agisce su un intervallo di elementi la cui posizione è specificata dagli iteratori passati come parametri. Se è necessaria una funzione che usa un intervallo di elementi, usare [min_element](../standard-library/algorithm-functions.md#min_element). [constExpr](../cpp/constexpr-cpp.md) è stato abilitato `initializer_list` negli overload di Visual Studio 2017.
 
 ### <a name="example"></a>Esempio
 
@@ -4317,7 +4431,7 @@ private:
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
     osIn << "CInt( " << rhs.m_nVal << " )";
-       return osIn;
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
@@ -4344,7 +4458,7 @@ int main()
         << result2 << "." << endl;
     cout << endl;
 
-// Comparing the members of an initializer_list
+    // Comparing the members of an initializer_list
     const int& result3 = min({ a, c });
     const int& result4 = min({ a, b }, mod_lesser);
 
@@ -4355,7 +4469,7 @@ int main()
     cout << endl;
 
     // Comparing set containers with elements of type CInt
-       // using the min algorithm
+    // using the min algorithm
     CInt c1 = 1, c2 = 2, c3 = 3;
     set<CInt> s1, s2, s3;
     set<CInt>::iterator s1_Iter, s2_Iter, s3_Iter;
@@ -4385,8 +4499,8 @@ int main()
     cout << " " << *s3_Iter << " )." << endl << endl;
 
     // Comparing vectors with integer elements using min algorithm
-    vector <int> v1, v2, v3, v4, v5;
-    vector <int>::iterator Iter1, Iter2, Iter3, Iter4, Iter5;
+    vector<int> v1, v2, v3, v4, v5;
+    vector<int>::iterator Iter1, Iter2, Iter3, Iter4, Iter5;
 
     int i;
     for ( i = 0 ; i <= 2 ; i++ )
@@ -4451,44 +4565,49 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a> min_element
+## <a name="min_element"></a>min_element
 
 Trova la prima occorrenza dell'elemento più piccolo in un intervallo specificato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
 ```cpp
 template<class ForwardIterator>
-constexpr ForwardIterator min_element(ForwardIterator first, ForwardIterator last );
+constexpr ForwardIterator min_element(
+    ForwardIterator first,
+    ForwardIterator last );
 
-template<class ForwardIterator, class BinaryPredicate>
+template<class ForwardIterator, class Compare>
 constexpr ForwardIterator min_element(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp);
+    Compare pred);
 
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator min_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
 ForwardIterator min_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca dell'elemento più piccolo.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca dell'elemento più piccolo.
 
-*Comp*\
-Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4498,7 +4617,7 @@ Iteratore in avanti che punta alla posizione della prima occorrenza dell'element
 
 L'intervallo a cui si fa riferimento deve essere valido, tutti i puntatori devono essere dereferenziabili e all'interno di ciascuna sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è lineare: (`last` - `first`) - 1 confronti sono necessari per un intervallo non vuoto.
+La complessità è lineare: `(last - first) - 1` i confronti sono necessari per un intervallo non vuoto.
 
 ### <a name="example"></a>Esempio
 
@@ -4518,84 +4637,84 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt& operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      {return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt& operator=( const CInt& rhs ) {m_nVal =
+    rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        {return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   // Searching a set container with elements of type CInt
-   // for the minimum element
-   CInt c1 = 1, c2 = 2, c3 = -3;
-   set<CInt> s1;
-   set<CInt>::iterator s1_Iter, s1_R1_Iter, s1_R2_Iter;
+    // Searching a set container with elements of type CInt
+    // for the minimum element
+    CInt c1 = 1, c2 = 2, c3 = -3;
+    set<CInt> s1;
+    set<CInt>::iterator s1_Iter, s1_R1_Iter, s1_R2_Iter;
 
-   s1.insert ( c1 );
-   s1.insert ( c2 );
-   s1.insert ( c3 );
+    s1.insert ( c1 );
+    s1.insert ( c2 );
+    s1.insert ( c3 );
 
-   cout << "s1 = (";
-   for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
-      cout << " " << *s1_Iter << ",";
-   s1_Iter = --s1.end( );
-   cout << " " << *s1_Iter << " )." << endl;
+    cout << "s1 = (";
+    for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
+        cout << " " << *s1_Iter << ",";
+    s1_Iter = --s1.end( );
+    cout << " " << *s1_Iter << " )." << endl;
 
-   s1_R1_Iter = min_element ( s1.begin( ), s1.end( ) );
+    s1_R1_Iter = min_element ( s1.begin( ), s1.end( ) );
 
-   cout << "The smallest element in s1 is: " << *s1_R1_Iter << endl;
-   cout << endl;
+    cout << "The smallest element in s1 is: " << *s1_R1_Iter << endl;
+    cout << endl;
 
-   // Searching a vector with elements of type int for the maximum
-   // element under default less than & mod_lesser binary predicates
-   vector <int> v1;
-   vector <int>::iterator v1_Iter, v1_R1_Iter, v1_R2_Iter;
+    // Searching a vector with elements of type int for the maximum
+    // element under default less than & mod_lesser binary predicates
+    vector<int> v1;
+    vector<int>::iterator v1_Iter, v1_R1_Iter, v1_R2_Iter;
 
-   int i;
-   for ( i = 0 ; i <= 3 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 3 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii = 1 ; ii <= 4 ; ii++ )
-   {
-      v1.push_back( - 2 * ii );
-   }
+    int ii;
+    for ( ii = 1 ; ii <= 4 ; ii++ )
+    {
+        v1.push_back( - 2 * ii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( v1_Iter = v1.begin( ) ; v1_Iter != v1.end( ) ; v1_Iter++ )
-      cout << *v1_Iter << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1_Iter = v1.begin( ) ; v1_Iter != v1.end( ) ; v1_Iter++ )
+        cout << *v1_Iter << " ";
+    cout << ")." << endl;
 
-   v1_R1_Iter = min_element ( v1.begin( ), v1.end( ) );
-   v1_R2_Iter = min_element ( v1.begin( ), v1.end( ), mod_lesser);
+    v1_R1_Iter = min_element ( v1.begin( ), v1.end( ) );
+    v1_R2_Iter = min_element ( v1.begin( ), v1.end( ), mod_lesser);
 
-   cout << "The smallest element in v1 is: " << *v1_R1_Iter << endl;
-   cout << "The smallest element in v1 under the mod_lesser"
+    cout << "The smallest element in v1 is: " << *v1_R1_Iter << endl;
+    cout << "The smallest element in v1 under the mod_lesser"
         << "\n binary predicate is: " << *v1_R2_Iter << endl;
 }
 ```
@@ -4610,7 +4729,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a> minmax_element
+## <a name="minmax_element"></a>minmax_element
 
 Esegue le operazioni eseguite da `min_element` e `max_element` in un'unica chiamata.
 
@@ -4618,61 +4737,59 @@ Esegue le operazioni eseguite da `min_element` e `max_element` in un'unica chiam
 template<class ForwardIterator>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator first,
-    ForwardIterator Last);
-template<class ForwardIterator, class BinaryPredicate>
+    ForwardIterator last);
+
+template<class ForwardIterator, class Compare>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
-    ForwardIterator  first,
-    ForwardIterator Last,
-    BinaryPredicate  comp);
-    
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare pred);
+
 template<class ExecutionPolicy, class ForwardIterator>
-pair<ForwardIterator, ForwardIterator>
-minmax_element(
+pair<ForwardIterator, ForwardIterator> minmax_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
-pair<ForwardIterator, ForwardIterator>
-minmax_element(
+pair<ForwardIterator, ForwardIterator> minmax_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    Compare comp);
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che indica l'inizio di un intervallo.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che indica la fine di un intervallo.
 
-*Comp*\
-Un test facoltativo usato per ordinare gli elementi.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che definisce il senso in cui un elemento è minore di un altro. Il predicato di confronto accetta due argomenti e restituisce **true** quando il primo è minore del secondo e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
 Valore restituito
 
-`pair<ForwardIterator, ForwardIterator>`
-
-`(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.
+`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
 
 ### <a name="remarks"></a>Note
 
 La prima funzione di modello restituisce
 
-`pair<ForwardIterator,ForwardIterator>`
+`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
 
-[https://login.microsoftonline.com/common/](`(min_element(_First,Last), max_element(_First,Last))`).
+La seconda funzione di modello ha lo stesso comportamento, ad eccezione del fatto che sostituisce `operator<(X, Y)` con `pred(X, Y)`.
 
-La seconda funzione di modello ha lo stesso comportamento, ad eccezione del fatto che sostituisce `operator<(X, Y)` con `comp (X, Y)`.
+Se la sequenza non è vuota, la funzione esegue al massimo `3 * (last - first - 1) / 2` i confronti.
 
-Se la sequenza è non vuoto, la funzione viene eseguita al massimo `3 * (last - first - 1) / 2` confronti.
-
-## <a name="minmax"></a> minmax
+## <a name="minmax"></a>MinMax
 
 Confronta due parametri di input e li restituisce come coppia, in ordine crescente.
 
@@ -4681,45 +4798,48 @@ template<class Type>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
     const Type& right);
+
 template<class Type, class BinaryPredicate>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
+
 template<class Type>
 constexpr pair<Type&, Type&> minmax(
-    initializer_list<Type> );
+    initializer_list<Type> ilist);
+
 template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
-    initializer_list<Type>,
-    BinaryPredicate comp);
+    initializer_list<Type> ilist,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Primo dei due oggetti confrontati.
 
 *Ok*\
 Secondo dei due oggetti confrontati.
 
-*Comp*\
+*Pred*\
 Predicato binario usato per confrontare i due oggetti.
 
-*_IList*\
-initializer_list contenente i membri da confrontare.
+*inList*\
+Oggetto `initializer_list` contenente i membri da confrontare.
 
 ### <a name="remarks"></a>Note
 
-La prima funzione modello restituisce `pair<const Type&, const Type&>( right , left )` se *a destra* è minore di *sinistro*. In caso contrario, restituirà `pair<const Type&, const Type&>( left , right )`.
+La prima funzione di modello `pair<const Type&, const Type&>( right, left )` restituisce se *right* è minore di *Left*. In caso contrario, restituirà `pair<const Type&, const Type&>( left, right )`.
 
-La seconda funzione membro restituisce una coppia in cui il primo elemento è il minore e il secondo è il maggiore quando confrontato dal predicato *comp*.
+La seconda funzione membro restituisce una coppia in cui il primo elemento è minore e il secondo è maggiore rispetto al *predicato*predicato.
 
-Le funzioni modello rimanenti si comportano allo stesso, ad eccezione del fatto che sostituiscono il *a sinistra* e *destro* parametri con *_IList*.
+Le funzioni del modello rimanenti hanno lo stesso comportamento, ad eccezione del fatto che sostituiscono i parametri *Left* e *right* con inList.
 
 La funzione esegue un unico confronto.
 
-## <a name="mismatch"></a> mancata corrispondenza
+## <a name="mismatch"></a>mancata corrispondenza
 
 Confronta due intervalli elemento per elemento e trova la prima posizione in cui viene riscontrata una differenza.
 
@@ -4729,80 +4849,81 @@ Usare gli overload a doppio intervallo nel codice C++14 perché gli overload che
 template<class InputIterator1, class InputIterator2>
 pair<InputIterator1, InputIterator2>>
 mismatch(
-    InputIterator1 First1,
-    InputIterator1 Last1,
-    InputIterator2 First2 );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2 );
 
 template<class InputIterator1, class InputIterator2, class BinaryPredicate> pair<InputIterator1, InputIterator2>>
 mismatch(
-    InputIterator1 First1,
-    InputIterator1 Last1,
-    InputIterator2 First2,
-    BinaryPredicate Comp );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    BinaryPredicate pred );
 
 //C++14
 template<class InputIterator1, class InputIterator2>
 pair<InputIterator1, InputIterator2>>
 mismatch(
-    InputIterator1 First1,
-    InputIterator1 Last1,
-    InputIterator2 First2,
-    InputIterator2 Last2 );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2 );
 
 template<class InputIterator1, class InputIterator2, class BinaryPredicate> pair<InputIterator1, InputIterator2>>
 mismatch(
-    InputIterator1 First1,
-    InputIterator1 Last1,
-    InputIterator2 First2,
-    InputIterator2 Last2,
-    BinaryPredicate Comp);
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    BinaryPredicate pred);
 
 //C++17
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 pair<ForwardIterator1, ForwardIterator2>
 mismatch(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
     ForwardIterator2 first2);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 pair<ForwardIterator1, ForwardIterator2>
 mismatch(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     BinaryPredicate pred);
 
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 pair<ForwardIterator1, ForwardIterator2>
 mismatch(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 pair<ForwardIterator1, ForwardIterator2>
 mismatch(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo intervallo da testare.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo intervallo da testare.
 
 *first2*\
@@ -4811,7 +4932,7 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo inter
 *Last2*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo intervallo da testare.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che confronta gli elementi correnti in ogni intervallo e ne determina l'equivalenza. Restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
@@ -4820,7 +4941,7 @@ Una coppia di iteratori che risolve le posizioni di mancata corrispondenza nei d
 
 ### <a name="remarks"></a>Note
 
-La prima funzione di modello presuppone che siano presenti altrettanti elementi nell'intervallo a partire da first2 quanti sono presenti nell'intervallo designato da [first1, last1). Se esistono più elementi nel secondo intervallo, vengono ignorati; se esistono meno elementi, si verificherà un comportamento indefinito.
+La prima funzione di modello presuppone che siano presenti altrettanti elementi nell'intervallo a partire da first2 quanti sono presenti nell'intervallo designato da [first1, last1). Se nel secondo intervallo sono presenti più elementi, verranno ignorati; Se è presente un numero minore, viene generato un comportamento non definito.
 
 L'intervallo in cui eseguire la ricerca deve essere valido. Tutti gli iteratori devono essere dereferenziabili e l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
@@ -4917,13 +5038,13 @@ int main()
 C++03: vec_1 and vec_2 are a mismatch: false
 C++14: vec_1 and vec_2: mismatch. Left iterator at end right iterator at 30
 C++14 vec_1 v. vec_2 modified: mismatch. Left iterator at 15 right iterator at 42
-C++14 vec_3 v. vec_4 with pred:  match.
+C++14 vec_3 v. vec_4 with pred: match.
 C++14 vec_3 v. modified vec_4 with pred: mismatch. Left iterator at 60 right iterator at 31
 C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="alg_move"></a> &lt;ALG&gt; spostare
+## <a name="alg_move"></a>&lt;spostamentoALG&gt;
 
 Sposta gli elementi associati a un intervallo specificato.
 
@@ -4933,22 +5054,24 @@ OutputIterator move(
     InputIterator first,
     InputIterator last,
     OutputIterator dest);
-    
-template<class ExecutionPolicy, class ForwardIterator1,
-class ForwardIterator2>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator2 move(
-    ExecutionPolicy&& exec, 
-    ForwardIterator1 first, 
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
     ForwardIterator1 last,
     ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che indica dove inizia l'intervallo di elementi da spostare.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che indica dove termina l'intervallo di elementi da spostare.
 
 *dest*\
@@ -4956,58 +5079,63 @@ Iteratore di output che conterrà gli elementi spostati.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello valuta `*(dest + N) = move(*(first + N))` una volta per ogni `N` compreso nell'intervallo `[0, last - first)`, esclusivamente per aumentare i valori di `N` iniziando dal valore più basso. Restituisce quindi `dest + N`. Se `dest` e *primo* indicano aree di archiviazione *dest* non deve essere compreso nell'intervallo `[first, last)`.
+La funzione di modello restituisce `*(dest + N) = move(*(first + N))` una volta per `N` ogni nell'intervallo `[0, last - first)`, per aumentare in modo rigoroso i valori di `N` iniziando dal valore più basso. Restituisce quindi `dest + N`. Se `dest` e *prima* designano le aree di archiviazione, *dest* non deve essere compreso nell' `[first, last)`intervallo.
 
-## <a name="move_backward"></a> move_backward
+## <a name="move_backward"></a>move_backward
 
 Sposta gli elementi di un iteratore in un altro. Lo spostamento inizia con l'ultimo elemento in un intervallo specificato e termina con il primo elemento in quell'intervallo.
 
 ```cpp
 template<class BidirectionalIterator1, class BidirectionalIterator2>
-   BidirectionalIterator2 move_backward(
-       BidirectionalIterator1 first,
-       BidirectionalIterator1 last,
-       BidirectionalIterator2 destEnd);
+BidirectionalIterator2 move_backward(
+    BidirectionalIterator1 first,
+    BidirectionalIterator1 last,
+    BidirectionalIterator2 destEnd);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore che indica l'inizio di un intervallo dal quale spostare gli elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore che indica la fine di un intervallo dal quale spostare gli elementi. Questo elemento non viene spostato.
 
-*destEnd*\
+*DestEnd*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di destinazione.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello valuta `*(destEnd - N - 1) = move(*(last - N - 1))` una volta per ogni `N` compreso nell'intervallo `[0, last - first)`, esclusivamente per aumentare i valori di `N` iniziando dal valore più basso. Restituisce quindi `destEnd - (last - first)`. Se *destEnd* e *primo* indicano aree di archiviazione *destEnd* non deve essere compreso nell'intervallo `[first, last)`.
+La funzione di modello restituisce `*(destEnd - N - 1) = move(*(last - N - 1))` una volta per `N` ogni nell'intervallo `[0, last - first)`, per aumentare in modo rigoroso i valori di `N` iniziando dal valore più basso. Restituisce quindi `destEnd - (last - first)`. Se  DestEnd e *First* designano le aree di archiviazione  , DestEnd non deve essere compreso nell' `[first, last)`intervallo.
 
 `move` e `move_backward` sono equivalenti a livello funzionale all'utilizzo di `copy` e `copy_backward` con un iteratore di spostamento.
 
-## <a name="next_permutation"></a> next_permutation
+## <a name="next_permutation"></a>next_permutation
 
 Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico successiva, se esiste, dove il senso di successivo può essere specificato con un predicato binario.
 
 ```cpp
 template<class BidirectionalIterator>
-bool next_permutation(BidirectionalIterator first, BidirectionalIterator last);
+bool next_permutation(
+    BidirectionalIterator first,
+    BidirectionalIterator last);
 
 template<class BidirectionalIterator, class BinaryPredicate>
-bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, BinaryPredicate comp);
+bool next_permutation(
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore bidirezionale che punta alla posizione del primo elemento dell'intervallo da permutare.
 
-*ultimo*\
+*Ultima*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo da permutare.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
@@ -5018,9 +5146,9 @@ Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i c
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-Il predicato binario predefinito è minore e gli elementi dell'intervallo devono essere comparabili con "minore di" per garantire che la permutazione successiva sia ben definita.
+Il predicato binario predefinito è minore di e gli elementi nell'intervallo devono essere minori di confrontabili per garantire che la permutazione successiva sia ben definita.
 
-La complessità è lineare con al massimo (* cognome - nome *) / 2 scambi.
+La complessità è lineare con al massimo `(last - first) / 2` gli scambi.
 
 ### <a name="example"></a>Esempio
 
@@ -5040,102 +5168,102 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt&   operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      { return ( m_nVal < rhs.m_nVal );}
-   friend   ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ) {}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ) {}
+    CInt& operator=( const CInt& rhs ) {m_nVal =
+        rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        { return ( m_nVal < rhs.m_nVal ); }
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   // Reordering the elements of type CInt in a deque
-   // using the prev_permutation algorithm
-   CInt c1 = 5, c2 = 1, c3 = 10;
-   bool deq1Result;
-   deque<CInt> deq1, deq2, deq3;
-   deque<CInt>::iterator d1_Iter;
+    // Reordering the elements of type CInt in a deque
+    // using the prev_permutation algorithm
+    CInt c1 = 5, c2 = 1, c3 = 10;
+    bool deq1Result;
+    deque<CInt> deq1, deq2, deq3;
+    deque<CInt>::iterator d1_Iter;
 
-   deq1.push_back ( c1 );
-   deq1.push_back ( c2 );
-   deq1.push_back ( c3 );
+    deq1.push_back ( c1 );
+    deq1.push_back ( c2 );
+    deq1.push_back ( c3 );
 
-   cout << "The original deque of CInts is deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The original deque of CInts is deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   deq1Result = next_permutation ( deq1.begin( ), deq1.end( ) );
+    deq1Result = next_permutation ( deq1.begin( ), deq1.end( ) );
 
-   if ( deq1Result )
-      cout << "The lexicographically next permutation "
-           << "exists and has\nreplaced the original "
-           << "ordering of the sequence in deq1." << endl;
-   else
-      cout << "The lexicographically next permutation doesn't "
-           << "exist\n and the lexicographically "
-           << "smallest permutation\n has replaced the "
-           << "original ordering of the sequence in deq1." << endl;
+    if ( deq1Result )
+        cout << "The lexicographically next permutation "
+            << "exists and has\nreplaced the original "
+            << "ordering of the sequence in deq1." << endl;
+    else
+        cout << "The lexicographically next permutation doesn't "
+            << "exist\n and the lexicographically "
+            << "smallest permutation\n has replaced the "
+            << "original ordering of the sequence in deq1." << endl;
 
-   cout << "After one application of next_permutation,\n deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl << endl;
+    cout << "After one application of next_permutation,\n deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl << endl;
 
-   // Permuting vector elements with binary function mod_lesser
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    // Permuting vector elements with binary function mod_lesser
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = -3 ; i <= 3 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = -3 ; i <= 3 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   next_permutation ( v1.begin( ), v1.end( ), mod_lesser );
+    next_permutation ( v1.begin( ), v1.end( ), mod_lesser );
 
-   cout << "After the first next_permutation, vector v1 is:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the first next_permutation, vector v1 is:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   int iii = 1;
-   while ( iii <= 5 ) {
-      next_permutation ( v1.begin( ), v1.end( ), mod_lesser );
-      cout << "After another next_permutation of vector v1,\n v1 =   ( " ;
-      for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ;Iter1 ++ )
-         cout << *Iter1  << " ";
-      cout << ")." << endl;
-      iii++;
-   }
+    int iii = 1;
+    while ( iii <= 5 ) {
+        next_permutation ( v1.begin( ), v1.end( ), mod_lesser );
+        cout << "After another next_permutation of vector v1,\n v1 =   ( " ;
+        for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ;Iter1 ++ )
+            cout << *Iter1 << " ";
+        cout << ")." << endl;
+        iii++;
+    }
 }
 ```
 
@@ -5161,56 +5289,66 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a> nth_element
+## <a name="nth_element"></a>nth_element
 
-Esegue la partizione di un intervallo di elementi, individuando correttamente l'*ennesimo* elemento della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.
+Esegue la partizione di un intervallo di elementi, individuando correttamente l'elemento *ennesimo* della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.
 
 ```cpp
 template<class RandomAccessIterator>
-void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last);
+void nth_element(
+    RandomAccessIterator first,
+    RandomAccessIterator nth,
+    RandomAccessIterator last);
 
-template<class RandomAccessIterator, class BinaryPredicate>
-void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+template<class RandomAccessIterator, class Compare>
+void nth_element(
+    RandomAccessIterator first,
+    RandomAccessIterator nth,
+    RandomAccessIterator last,
+    Compare pred);
 
 template<class ExecutionPolicy, class RandomAccessIterator>
 void nth_element(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator nth,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 void nth_element(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator nth,
-    RandomAccessIterator last, 
-    Compare comp);
+    RandomAccessIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da partizionare.
 
-*_Nth*\
+*nth*\
 Iteratore ad accesso casuale che punta alla posizione dell'elemento da ordinare correttamente sul limite della partizione.
 
-*ultimo*\
+*Ultima*\
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
-*Comp*\
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*Pred*\
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
 
 ### <a name="remarks"></a>Note
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-L'algoritmo `nth_element` non garantisce che gli elementi negli intervalli secondari in entrambi i lati dell'*ennesimo* elemento vengano ordinati. Offre meno garanzie rispetto a `partial_sort`, che ordina gli elementi nell'intervallo sotto un elemento selezionato, e può essere usato come alternativa rapida a `partial_sort` quando l'ordinamento dell'intervallo minore non è necessario.
+L' `nth_element` algoritmo non garantisce che gli elementi negli intervalli secondari dell'elemento *n*siano ordinati. Offre meno garanzie rispetto a `partial_sort`, che ordina gli elementi nell'intervallo sotto un elemento selezionato, e può essere usato come alternativa rapida a `partial_sort` quando l'ordinamento dell'intervallo minore non è necessario.
 
 Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi è minore di un altro.
 
-La media di una complessità di ordinamento è lineare rispetto a * cognome - nome *.
+La media di una complessità di ordinamento è lineare rispetto all' *ultima prima*.
 
 ### <a name="example"></a>Esempio
 
@@ -5224,96 +5362,102 @@ La media di una complessità di ordinamento è lineare rispetto a * cognome - no
 
 // Return whether first element is greater than the second
 bool UDgreater ( int elem1, int elem2 ) {
-   return elem1 > elem2;
+    return elem1 > elem2;
 }
 
 int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-      v1.push_back( 3 * i );
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+        v1.push_back( 3 * i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 5 ; ii++ )
-      v1.push_back( 3 * ii + 1 );
+    int ii;
+    for ( ii = 0 ; ii <= 5 ; ii++ )
+        v1.push_back( 3 * ii + 1 );
 
-   int iii;
-   for ( iii = 0 ; iii <= 5 ; iii++ )
-      v1.push_back( 3 * iii +2 );
+    int iii;
+    for ( iii = 0 ; iii <= 5 ; iii++ )
+        v1.push_back( 3 * iii +2 );
 
-   cout << "Original vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   nth_element(v1.begin( ), v1.begin( ) + 3, v1.end( ) );
-   cout << "Position 3 partitioned vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    nth_element(v1.begin( ), v1.begin( ) + 3, v1.end( ) );
+    cout << "Position 3 partitioned vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To sort in descending order, specify binary predicate
-   nth_element( v1.begin( ), v1.begin( ) + 4, v1.end( ),
-          greater<int>( ) );
-   cout << "Position 4 partitioned (greater) vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // To sort in descending order, specify binary predicate
+    nth_element( v1.begin( ), v1.begin( ) + 4, v1.end( ),
+            greater<int>( ) );
+    cout << "Position 4 partitioned (greater) vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   random_shuffle( v1.begin( ), v1.end( ) );
-   cout << "Shuffled vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    random_shuffle( v1.begin( ), v1.end( ) );
+    cout << "Shuffled vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // A user-defined (UD) binary predicate can also be used
-   nth_element( v1.begin( ), v1.begin( ) + 5, v1.end( ), UDgreater );
-   cout << "Position 5 partitioned (UDgreater) vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // A user-defined (UD) binary predicate can also be used
+    nth_element( v1.begin( ), v1.begin( ) + 5, v1.end( ), UDgreater );
+    cout << "Position 5 partitioned (UDgreater) vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
-## <a name="none_of"></a> none_of
+## <a name="none_of"></a>none_of
 
-Restituisce **true** quando una condizione non è mai presente tra gli elementi dell'intervallo specificato.
+Restituisce **true** quando una condizione non è mai presente tra gli elementi nell'intervallo specificato.
 
 ```cpp
-template<class InputIterator, class BinaryPredicate>
-bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
+template<class InputIterator, class UnaryPredicate>
+bool none_of(
+    InputIterator first,
+    InputIterator last,
+    UnaryPredicate pred);
 
-template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+template <class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 bool none_of(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    Predicate pred);
+    ForwardIterator first,
+    ForwardIterator last,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che indica dove inizia l'intervallo di elementi in cui verificare una condizione.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che indica dove termina un intervallo di elementi.
 
-*Comp*\
-La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*\
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce **true** se la condizione non viene rilevata almeno una volta nell'intervallo indicato, e **false** se viene rilevata la condizione.
+Restituisce **true** se la condizione non viene rilevata almeno una volta nell'intervallo indicato e **false** se viene rilevata la condizione.
 
 ### <a name="remarks"></a>Note
 
-La funzione modello restituisce **true** solo se, per alcuni `N` compreso nell'intervallo `[0, last - first)`, il predicato `comp(*(first + N))` sempre **false**.
+La funzione modello restituisce **true** solo se, per alcuni `N` nell'intervallo `[0, last - first)`, il predicato `pred(*(first + N))` è sempre **false**.
 
-## <a name="partial_sort"></a> partial_sort
+## <a name="partial_sort"></a>partial_sort
 
 Dispone un numero specificato di elementi più piccoli di un intervallo in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.
 
@@ -5324,13 +5468,13 @@ void partial_sort(
     RandomAccessIterator sortEnd,
     RandomAccessIterator last);
 
-template<class RandomAccessIterator, class BinaryPredicate>
+template<class RandomAccessIterator, class Compare>
 void partial_sort(
     RandomAccessIterator first,
     RandomAccessIterator sortEnd,
     RandomAccessIterator last
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 void partial_sort(
     ExecutionPolicy&& exec,
@@ -5343,31 +5487,34 @@ void partial_sort(
     ExecutionPolicy&& exec,
     RandomAccessIterator first,
     RandomAccessIterator middle,
-    RandomAccessIterator last, 
-    Compare comp);
+    RandomAccessIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.
 
 *sortEnd*\
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo secondario da ordinare.
 
-*ultimo*\
+*Ultima*\
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ordinare parzialmente.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi è minore di un altro. Il `sort` algoritmo non è stabile e non garantisce che l'ordinamento relativo degli elementi equivalenti venga preservato. L'algoritmo `stable_sort` non preserva l'ordinamento originale.
+Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi è minore di un altro. L' `sort` algoritmo non è stabile e non garantisce che venga mantenuto l'ordine relativo degli elementi equivalenti. L'algoritmo `stable_sort` non preserva l'ordinamento originale.
 
-La complessità media di ordinamento parziale *O*((`last`- `first`) log (`sortEnd`- `first`)).
+La complessità di ordinamento parziale medio *è O*(`last`(- - `first`) log`sortEnd`(`first`)).
 
 ### <a name="example"></a>Esempio
 
@@ -5382,52 +5529,51 @@ La complessità media di ordinamento parziale *O*((`last`- `first`) log (`sortEn
 // Return whether first element is greater than the second
 bool UDgreater ( int elem1, int elem2 )
 {
-   return elem1 > elem2;
+    return elem1 > elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 2 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 2 * i );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 5 ; ii++ )
-   {
-      v1.push_back( 2 * ii +1 );
-   }
+    int ii;
+    for ( ii = 0 ; ii <= 5 ; ii++ )
+    {
+        v1.push_back( 2 * ii +1 );
+    }
 
-   cout << "Original vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   partial_sort(v1.begin( ), v1.begin( ) + 6, v1.end( ) );
-   cout << "Partially sorted vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    partial_sort(v1.begin( ), v1.begin( ) + 6, v1.end( ) );
+    cout << "Partially sorted vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To partially sort in descending order, specify binary predicate
-   partial_sort(v1.begin( ), v1.begin( ) + 4, v1.end( ), greater<int>( ) );
-   cout << "Partially resorted (greater) vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // To partially sort in descending order, specify binary predicate
+    partial_sort(v1.begin( ), v1.begin( ) + 4, v1.end( ), greater<int>( ) );
+    cout << "Partially resorted (greater) vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // A user-defined (UD) binary predicate can also be used
-   partial_sort(v1.begin( ), v1.begin( ) + 8, v1.end( ),
-UDgreater );
-   cout << "Partially resorted (UDgreater) vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // A user-defined (UD) binary predicate can also be used
+    partial_sort(v1.begin( ), v1.begin( ) + 8, v1.end( ), UDgreater );
+    cout << "Partially resorted (UDgreater) vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -5442,7 +5588,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a> partial_sort_copy
+## <a name="partial_sort_copy"></a>partial_sort_copy
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione in cui gli elementi di origine sono ordinati in base al predicato binario relativo al valore inferiore o a un altro predicato binario specificato.
 
@@ -5454,39 +5600,41 @@ RandomAccessIterator partial_sort_copy(
     RandomAccessIterator first2,
     RandomAccessIterator last2 );
 
-template<class InputIterator, class RandomAccessIterator, class BinaryPredicate>
+template<class InputIterator, class RandomAccessIterator, class Compare>
 RandomAccessIterator partial_sort_copy(
     InputIterator first1,
     InputIterator last1,
     RandomAccessIterator first2,
     RandomAccessIterator last2,
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator>
 RandomAccessIterator partial_sort_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
     RandomAccessIterator result_first,
     RandomAccessIterator result_last);
 
-template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator,
-class Compare>
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator, class Compare>
 RandomAccessIterator partial_sort_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
     RandomAccessIterator result_first,
     RandomAccessIterator result_last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo di origine.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo di origine.
 
 *first2*\
@@ -5495,8 +5643,8 @@ Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'in
 *Last2*\
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione ordinato.
 
-*Comp*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*Pred*\
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5584,35 +5732,38 @@ int main() {
 }
 ```
 
-## <a name="partition"></a> partizione
+## <a name="partition"></a>partizione
 
 Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano il predicato unario che precedono quelli che non lo soddisfano.
 
 ```cpp
-template<class BidirectionalIterator, class Predicate>
+template<class BidirectionalIterator, class UnaryPredicate>
 BidirectionalIterator partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
-    Predicate comp);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+    UnaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 ForwardIterator partition(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da partizionare.
 
-*ultimo*\
+*Ultima*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
-*Comp*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5622,9 +5773,9 @@ Iteratore bidirezionale che punta alla posizione del primo elemento nell'interva
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-Gli elementi *a* e *b* sono equivalenti, ma non necessariamente uguali, se *Pr* ( *a*,  *b*) è false e *Pr* ( *b*,  *a*) è false, dove *Pr* è il predicato specificato dal parametro. Il `partition` algoritmo non è stabile e non garantisce che l'ordinamento relativo degli elementi equivalenti venga preservato. L'algoritmo `stable_ partition` non preserva l'ordinamento originale.
+Gli elementi *a* e *b* sono equivalenti, ma non necessariamente uguali, `pred( a, b )` se both è `pred( b, a )` false e è false, dove *prede* è il predicato specificato dal parametro. L' `partition` algoritmo non è stabile e non garantisce che venga mantenuto l'ordine relativo degli elementi equivalenti. L'algoritmo `stable_partition` non preserva l'ordinamento originale.
 
-La complessità è lineare: vi sono (`last` - `first`) le applicazioni di *comp* e al massimo (`last` - `first`) / 2 scambi.
+La complessità è lineare: esistono `(last - first)` applicazioni di *prede* e al massimo `(last - first)/2` gli scambi.
 
 ### <a name="example"></a>Esempio
 
@@ -5635,135 +5786,142 @@ La complessità è lineare: vi sono (`last` - `first`) le applicazioni di *comp*
 #include <algorithm>
 #include <iostream>
 
-bool greater5 ( int value ) {
-   return value > 5;
+bool greater5 ( int value )
+{
+    return value > 5;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 10 ; i++ )
-   {
-      v1.push_back( i );
-   }
-   random_shuffle( v1.begin( ), v1.end( ) );
+    int i;
+    for ( i = 0 ; i <= 10 ; i++ )
+    {
+        v1.push_back( i );
+    }
+    random_shuffle( v1.begin( ), v1.end( ) );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Partition the range with predicate greater10
-   partition ( v1.begin( ), v1.end( ), greater5 );
-   cout << "The partitioned set of elements in v1 is: ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Partition the range with predicate greater10
+    partition ( v1.begin( ), v1.end( ), greater5 );
+    cout << "The partitioned set of elements in v1 is: ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="partition_copy"></a> partition_copy
+## <a name="partition_copy"></a>partition_copy
 
-Copia gli elementi per cui è una condizione **true** in una destinazione e per i quali è la condizione **false** a altro. Gli elementi devono provenire da un intervallo specificato.
+Copia gli elementi per i quali una condizione è **true** in una destinazione e per la quale la condizione è **false** in un'altra. Gli elementi devono provenire da un intervallo specificato.
 
 ```cpp
-template<class InputIterator, class OutputIterator1, class OutputIterator2, class Predicate>
-pair<OutputIterator1, OutputIterator2>
-    partition_copy(
+template<class InputIterator, class OutputIterator1, class OutputIterator2, class UnaryPredicate>
+pair<OutputIterator1, OutputIterator2> partition_copy(
     InputIterator first,
     InputIterator last,
     OutputIterator1 dest1,
     OutputIterator2 dest2,
-    Predicate pred);
-    
-template <class ExecutionPolicy, class ForwardIterator, class ForwardIterator1,
-class ForwardIterator2, class Predicate>
-pair<ForwardIterator1, ForwardIterator2>
-partition_copy(
+    UnaryPredicate pred);
+
+template <class ExecutionPolicy, class ForwardIterator, class ForwardIterator1, class ForwardIterator2, class UnaryPredicate>
+pair<ForwardIterator1, ForwardIterator2> partition_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    ForwardIterator1 out_true, 
+    ForwardIterator1 out_true,
     ForwardIterator2 out_false,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che indica l'inizio di un intervallo in cui verificare una condizione.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che indica la fine di un intervallo.
 
-*eventdestination="dest1*\
-Iteratore di output usato per copiare gli elementi che restituiscono true per una condizione verificata usando *pred*.
+*dest1*\
+Iteratore di output usato per copiare gli elementi che restituiscono true per una condizione verificata tramite predazione.
 
 *dest2*\
-Iteratore di output usato per copiare gli elementi che restituiscono false per una condizione verificata usando *pred*.
+Iteratore di output usato per copiare gli elementi che restituiscono false per una condizione verificata tramite predazione.
 
 *Pred*\
-La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione da verificare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione da verificare. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello copia ogni elemento `X` nelle `[first,last)` al `*dest1++` se `_Pred(X)` è true, o a `*dest2++` in caso contrario. Restituisce `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
+La funzione di modello copia ogni `X` elemento `[first,last)` `*dest1++` in in `pred(X)` se è true oppure in `*dest2++` caso contrario. Restituisce `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
 
-## <a name="partition_point"></a> partition_point
+## <a name="partition_point"></a>partition_point
 
 Restituisce il primo elemento nell'intervallo specificato che non soddisfa la condizione. Gli elementi vengono ordinati in modo che quelli che soddisfano la condizione precedano quelli che non la soddisfano.
 
 ```cpp
-template<class ForwardIterator, class Predicate>
+template<class ForwardIterator, class UnaryPredicate>
 ForwardIterator partition_point(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate comp);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 `ForwardIterator` che indica l'inizio di un intervallo in cui verificare una condizione.
 
-*ultimo*\
+*Ultima*\
 `ForwardIterator` che indica la fine di un intervallo.
 
-*Comp*\
-La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+*Pred*\
+La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un `ForwardIterator` che fa riferimento al primo elemento che non soddisfa la condizione verificata da *comp*, o restituisce *ultimo* se non viene trovata.
+Restituisce un `ForwardIterator` oggetto che fa riferimento al primo elemento che non soddisfa la condizione testata da *predazione*oppure restituisce l' *ultimo* se non ne viene trovato uno.
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello trova il primo iteratore `it` nelle `[first, last)` per il quale `comp(*it)` viene **false**. La sequenza deve essere ordinata in base *comp*.
+La funzione di modello trova il primo `it` iteratore in `pred(*it)` `[first, last)` per il quale è **false**. La sequenza deve essere ordinata in base a predazione.
 
-## <a name="pop_heap"></a> pop_heap
+## <a name="pop_heap"></a>pop_heap
 
 Rimuove l'elemento più grande dall'inizio di un heap alla penultima posizione nell'intervallo e costituisce un nuovo heap con gli elementi rimanenti.
 
 ```cpp
 template<class RandomAccessIterator>
-void pop_heap( RandomAccessIterator first, RandomAccessIterator last);
+void pop_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
-void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
+void pop_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'heap.
 
-*ultimo*\
+*Ultima*\
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'heap.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
@@ -5782,7 +5940,7 @@ L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori d
 
 L'intervallo di esclusione dell'elemento appena aggiunto alla fine deve essere un heap.
 
-La complessità è logaritmica e richiede al massimo di log (* cognome - nome *) i confronti.
+La complessità è logaritmica e richiede al massimo `log (last - first)` i confronti.
 
 ### <a name="example"></a>Esempio
 
@@ -5794,59 +5952,60 @@ La complessità è logaritmica e richiede al massimo di log (* cognome - nome *)
 #include <functional>
 #include <iostream>
 
-int main()  {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1, Iter2;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 1 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 1 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   // Make v1 a heap with default less than ordering
-   random_shuffle( v1.begin( ), v1.end( ) );
-   make_heap ( v1.begin( ), v1.end( ) );
-   cout << "The heaped version of vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with default less than ordering
+    random_shuffle( v1.begin( ), v1.end( ) );
+    make_heap ( v1.begin( ), v1.end( ) );
+    cout << "The heaped version of vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Add an element to the back of the heap
-   v1.push_back( 10 );
-   push_heap( v1.begin( ), v1.end( ) );
-   cout << "The reheaped v1 with 10 added is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Add an element to the back of the heap
+    v1.push_back( 10 );
+    push_heap( v1.begin( ), v1.end( ) );
+    cout << "The reheaped v1 with 10 added is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove the largest element from the heap
-   pop_heap( v1.begin( ), v1.end( ) );
-   cout << "The heap v1 with 10 removed is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl << endl;
+    // Remove the largest element from the heap
+    pop_heap( v1.begin( ), v1.end( ) );
+    cout << "The heap v1 with 10 removed is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl << endl;
 
-   // Make v1 a heap with greater-than ordering with a 0 element
-   make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
-   v1.push_back( 0 );
-   push_heap( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The 'greater than' reheaped v1 puts the smallest "
+    // Make v1 a heap with greater-than ordering with a 0 element
+    make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
+    v1.push_back( 0 );
+    push_heap( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The 'greater than' reheaped v1 puts the smallest "
         << "element first:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Application of pop_heap to remove the smallest element
-   pop_heap( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The 'greater than' heaped v1 with the smallest element\n "
+    // Application of pop_heap to remove the smallest element
+    pop_heap( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The 'greater than' heaped v1 with the smallest element\n "
         << "removed from the heap is: ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="prev_permutation"></a> prev_permutation
+## <a name="prev_permutation"></a>prev_permutation
 
 Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico precedente, se esiste, dove il significato di precedente può essere specificato con un predicato binario.
 
@@ -5860,31 +6019,31 @@ template<class BidirectionalIterator, class BinaryPredicate>
 bool prev_permutation(
     BidirectionalIterator first,
     BidirectionalIterator last,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore bidirezionale che punta alla posizione del primo elemento dell'intervallo da permutare.
 
-*ultimo*\
+*Ultima*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento dell'intervallo da permutare.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se la permutazione a livello lessicografico precedente esiste e ha sostituito l'ordinamento originale dell'intervallo; in caso contrario **false**, nel qual caso l'ordinamento viene trasformato in modo lessicografico più grande permutazione.
+**true** se la permutazione lessicografico precedente esiste e ha sostituito l'ordinamento originale dell'intervallo; in caso contrario, **false**, nel qual caso l'ordinamento viene trasformato nella permutazione lessicografico più grande.
 
 ### <a name="remarks"></a>Note
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-Il predicato binario predefinito è minore e gli elementi dell'intervallo devono essere comparabili con "minore di" per garantire che la permutazione precedente sia definita correttamente.
+Il predicato binario predefinito è minore di e gli elementi nell'intervallo devono essere confrontabili con minore di per garantire che la permutazione precedente sia ben definita.
 
-La complessità è lineare, con al massimo (`last` -  `first`) / 2 scambi.
+La complessità è lineare, con al massimo scambi`last`( - `first`)/2.
 
 ### <a name="example"></a>Esempio
 
@@ -5903,97 +6062,98 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 class CInt {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt&   operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      {return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt&   operator=( const CInt& rhs ) {m_nVal =
+    rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        {return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs ) {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser (int elem1, int elem2 ) {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
-int main() {
-   // Reordering the elements of type CInt in a deque
-   // using the prev_permutation algorithm
-   CInt c1 = 1, c2 = 5, c3 = 10;
-   bool deq1Result;
-   deque<CInt> deq1, deq2, deq3;
-   deque<CInt>::iterator d1_Iter;
+int main()
+{
+    // Reordering the elements of type CInt in a deque
+    // using the prev_permutation algorithm
+    CInt c1 = 1, c2 = 5, c3 = 10;
+    bool deq1Result;
+    deque<CInt> deq1, deq2, deq3;
+    deque<CInt>::iterator d1_Iter;
 
-   deq1.push_back ( c1 );
-   deq1.push_back ( c2 );
-   deq1.push_back ( c3 );
+    deq1.push_back ( c1 );
+    deq1.push_back ( c2 );
+    deq1.push_back ( c3 );
 
-   cout << "The original deque of CInts is deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The original deque of CInts is deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   deq1Result = prev_permutation ( deq1.begin( ), deq1.end( ) );
+    deq1Result = prev_permutation ( deq1.begin( ), deq1.end( ) );
 
-   if ( deq1Result )
-      cout << "The lexicographically previous permutation "
-           << "exists and has \nreplaced the original "
-           << "ordering of the sequence in deq1." << endl;
-   else
-      cout << "The lexicographically previous permutation doesn't "
-           << "exist\n and the lexicographically "
-           << "smallest permutation\n has replaced the "
-           << "original ordering of the sequence in deq1." << endl;
+    if ( deq1Result )
+        cout << "The lexicographically previous permutation "
+            << "exists and has \nreplaced the original "
+            << "ordering of the sequence in deq1." << endl;
+    else
+        cout << "The lexicographically previous permutation doesn't "
+            << "exist\n and the lexicographically "
+            << "smallest permutation\n has replaced the "
+            << "original ordering of the sequence in deq1." << endl;
 
-   cout << "After one application of prev_permutation,\n deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl << endl;
+    cout << "After one application of prev_permutation,\n deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl << endl;
 
-   // Permutating vector elements with binary function mod_lesser
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    // Permutating vector elements with binary function mod_lesser
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = -3 ; i <= 3 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = -3 ; i <= 3 ; i++ )
+        v1.push_back( i );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   prev_permutation ( v1.begin( ), v1.end( ), mod_lesser );
+    prev_permutation ( v1.begin( ), v1.end( ), mod_lesser );
 
-   cout << "After the first prev_permutation, vector v1 is:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the first prev_permutation, vector v1 is:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   int iii = 1;
-   while ( iii <= 5 ) {
-      prev_permutation ( v1.begin( ), v1.end( ), mod_lesser );
-      cout << "After another prev_permutation of vector v1,\n v1 =   ( " ;
-      for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ;Iter1 ++ )
-         cout << *Iter1  << " ";
-      cout << ")." << endl;
-      iii++;
-   }
+    int iii = 1;
+    while ( iii <= 5 ) {
+        prev_permutation ( v1.begin( ), v1.end( ), mod_lesser );
+        cout << "After another prev_permutation of vector v1,\n v1 =   ( " ;
+        for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ;Iter1 ++ )
+            cout << *Iter1 << " ";
+        cout << ")." << endl;
+        iii++;
+    }
 }
 ```
 
@@ -6020,27 +6180,32 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a> push_heap
+## <a name="push_heap"></a>push_heap
 
 Aggiunge un elemento che si trova alla fine di un intervallo a un heap esistente costituito dagli elementi precedenti dell'intervallo.
 
 ```cpp
 template<class RandomAccessIterator>
-void push_heap( RandomAccessIterator first, RandomAccessIterator last );
+void push_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last );
 
 template<class RandomAccessIterator, class BinaryPredicate>
-void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
+void push_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'heap.
 
-*ultimo*\
+*Ultima*\
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da convertire in heap.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
@@ -6059,7 +6224,7 @@ L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori d
 
 L'intervallo di esclusione dell'elemento appena aggiunto alla fine deve essere un heap.
 
-La complessità è logaritmica e richiede al massimo di log ( *cognome - nome*) confronti.
+La complessità è logaritmica e richiede al massimo `log(last - first)` i confronti.
 
 ### <a name="example"></a>Esempio
 
@@ -6072,91 +6237,97 @@ La complessità è logaritmica e richiede al massimo di log ( *cognome - nome*) 
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 1 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 1 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   random_shuffle( v1.begin( ), v1.end( ) );
+    random_shuffle( v1.begin( ), v1.end( ) );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Make v1 a heap with default less than ordering
-   make_heap ( v1.begin( ), v1.end( ) );
-   cout << "The heaped version of vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with default less than ordering
+    make_heap ( v1.begin( ), v1.end( ) );
+    cout << "The heaped version of vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Add an element to the heap
-   v1.push_back( 10 );
-   cout << "The heap v1 with 10 pushed back is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Add an element to the heap
+    v1.push_back( 10 );
+    cout << "The heap v1 with 10 pushed back is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   push_heap( v1.begin( ), v1.end( ) );
-   cout << "The reheaped v1 with 10 added is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl << endl;
+    push_heap( v1.begin( ), v1.end( ) );
+    cout << "The reheaped v1 with 10 added is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl << endl;
 
-   // Make v1 a heap with greater than ordering
-   make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The greater-than heaped version of v1 is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with greater than ordering
+    make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The greater-than heaped version of v1 is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   v1.push_back(0);
-   cout << "The greater-than heap v1 with 11 pushed back is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    v1.push_back(0);
+    cout << "The greater-than heap v1 with 11 pushed back is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   push_heap( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The greater than reheaped v1 with 11 added is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    push_heap( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The greater than reheaped v1 with 11 added is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="random_shuffle"></a> random_shuffle
+## <a name="random_shuffle"></a>random_shuffle
 
-La funzione random_shuffle è deprecata, sostituito da [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Per un esempio di codice e altre informazioni, vedere [ \<random >](../standard-library/random.md) e il post di Stack Overflow [perché sono i metodi std:: random_shuffle deprecati in c++14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
+La funzione std:: random_shuffle () è deprecata e sostituita da [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Per un esempio di codice e altre informazioni, vedere [ \<> casuale](../standard-library/random.md) e il stack overflow post [perché i metodi std:: random_shuffle sono deprecati in c++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
-## <a name="remove"></a> Rimuovi
+## <a name="remove"></a>rimuovere
 
 Elimina un valore specificato da un intervallo specificato senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo senza il valore specificato.
 
 ```cpp
 template<class ForwardIterator, class Type>
-ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+ForwardIterator remove(
+    ForwardIterator first,
+    ForwardIterator last,
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator, class T>
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 ForwardIterator remove(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    const T& value);
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che indirizza la posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che indirizza la posizione successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*Val*\
+*value*\
 Il valore da rimuovere dall'intervallo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6171,9 +6342,9 @@ L'ordine degli elementi non rimossi rimane stabile.
 
 L'operatore `operator==` usato per determinare l'uguaglianza tra elementi deve imporre una relazione di equivalenza tra i propri operandi.
 
-La complessità è lineare; sono disponibili (`last` - `first`) i confronti di uguaglianza.
+La complessità è lineare; Ci sono confronti (`last` - `first`) per verificarne l'uguaglianza.
 
-Il [classe list](../standard-library/list-class.md) presenta una versione di funzione membro più efficiente di `remove`, che Ricollega anche i puntatori.
+La [classe List](../standard-library/list-class.md) presenta una versione di funzione membro più efficiente `remove`di, che ricollega anche i puntatori.
 
 ### <a name="example"></a>Esempio
 
@@ -6184,73 +6355,80 @@ Il [classe list](../standard-library/list-class.md) presenta una versione di fun
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1, Iter2, new_end;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1, Iter2, new_end;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle ( v1.begin( ), v1.end( ) );
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove elements with a value of 7
-   new_end = remove ( v1.begin( ), v1.end( ), 7 );
+    // Remove elements with a value of 7
+    new_end = remove ( v1.begin( ), v1.end( ), 7 );
 
-   cout << "Vector v1 with value 7 removed is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 with value 7 removed is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To change the sequence size, use erase
-   v1.erase (new_end, v1.end( ) );
+    // To change the sequence size, use erase
+    v1.erase (new_end, v1.end( ) );
 
-   cout << "Vector v1 resized with value 7 removed is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 resized with value 7 removed is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="remove_copy"></a> remove_copy
+## <a name="remove_copy"></a>remove_copy
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione, ad eccezione degli elementi di un determinato valore, senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo di destinazione.
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
-OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+OutputIterator remove_copy(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class T>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
 ForwardIterator2 remove_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
-    ForwardIterator2 result, 
-    const T& value);
+    ForwardIterator2 result,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione da cui rimuovere gli elementi.
 
-*Val*\
+*value*\
 Il valore da rimuovere dall'intervallo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -6267,7 +6445,7 @@ L'ordine degli elementi non rimossi rimane stabile.
 
 L'operatore `operator==` usato per determinare l'uguaglianza tra elementi deve imporre una relazione di equivalenza tra i propri operandi.
 
-La complessità è lineare; sono disponibili (`last` - `first`) i confronti di uguaglianza e al massimo (`last` - `first`) le assegnazioni.
+La complessità è lineare; `last`ci sono confronti ( - `first`) per l'uguaglianza e al`last`massimo ( - `first`) assegnazioni.
 
 ### <a name="example"></a>Esempio
 
@@ -6278,67 +6456,74 @@ La complessità è lineare; sono disponibili (`last` - `first`) i confronti di u
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2(10);
-   vector <int>::iterator Iter1, Iter2, new_end;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2(10);
+    vector<int>::iterator Iter1, Iter2, new_end;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle (v1.begin( ), v1.end( ) );
-   cout << "The original vector v1 is:     ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle (v1.begin( ), v1.end( ) );
+    cout << "The original vector v1 is:     ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove elements with a value of 7
-   new_end = remove_copy ( v1.begin( ), v1.end( ), v2.begin( ), 7 );
+    // Remove elements with a value of 7
+    new_end = remove_copy ( v1.begin( ), v1.end( ), v2.begin( ), 7 );
 
-   cout << "Vector v1 is left unchanged as ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is left unchanged as ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is a copy of v1 with the value 7 removed:\n ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is a copy of v1 with the value 7 removed:\n ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="remove_copy_if"></a> remove_copy_if
+## <a name="remove_copy_if"></a>remove_copy_if
 
-Copia gli elementi di un intervallo di origine in un intervallo di destinazione, ad eccezione degli elementi che soddisfano un predicato, senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo di destinazione.
+Copia gli elementi di un intervallo di origine in un intervallo di destinazione, ad eccezione degli elementi che soddisfano un predicato. Gli elementi vengono copiati senza compromettere l'ordine degli elementi rimanenti. Restituisce la fine di un nuovo intervallo di destinazione.
 
 ```cpp
-template<class InputIterator, class OutputIterator, class Predicate>
-OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIterator result, Predicate pred);
+template<class InputIterator, class OutputIterator, class UnaryPredicate>
+OutputIterator remove_copy_if(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    UnaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Predicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class UnaryPredicate>
 ForwardIterator2 remove_copy_if(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
-    ForwardIterator2 result, 
-    Predicate pred);
+    ForwardIterator2 result,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione da cui rimuovere gli elementi.
 
 *Pred*\
@@ -6358,7 +6543,7 @@ L'ordine degli elementi non rimossi rimane stabile.
 
 L'operatore `operator==` usato per determinare l'uguaglianza tra elementi deve imporre una relazione di equivalenza tra i propri operandi.
 
-La complessità è lineare: vi sono (`last` - `first`) i confronti di uguaglianza e al massimo (`last` - `first`) le assegnazioni.
+La complessità è lineare:`last`vi sono confronti (`first` - `first`) per l'uguaglianza e al`last`massimo assegnazioni ( - ).
 
 Per informazioni sul comportamento di queste funzioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).
 
@@ -6372,71 +6557,75 @@ Per informazioni sul comportamento di queste funzioni, vedere [Iteratori verific
 #include <iostream>
 
 bool greater6 ( int value ) {
-   return value > 6;
+    return value > 6;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2(10);
-   vector <int>::iterator Iter1, Iter2, new_end;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2(10);
+    vector<int>::iterator Iter1, Iter2, new_end;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
-   cout << "The original vector v1 is:      ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle ( v1.begin( ), v1.end( ) );
+    cout << "The original vector v1 is:      ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove elements with a value greater than 6
-   new_end = remove_copy_if ( v1.begin( ), v1.end( ),
-      v2.begin( ), greater6 );
+    // Remove elements with a value greater than 6
+    new_end = remove_copy_if ( v1.begin( ), v1.end( ),
+        v2.begin( ), greater6 );
 
-   cout << "After the appliation of remove_copy_if to v1,\n "
-        << "vector v1 is left unchanged as ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the appliation of remove_copy_if to v1,\n "
+         << "vector v1 is left unchanged as ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is a copy of v1 with values greater "
-        << "than 6 removed:\n ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != new_end ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is a copy of v1 with values greater "
+         << "than 6 removed:\n ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != new_end ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="remove_if"></a> remove_if
+## <a name="remove_if"></a>remove_if
 
 Elimina gli elementi che soddisfano un predicato da un intervallo specificato senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo senza il valore specificato.
 
 ```cpp
-template<class ForwardIterator, class Predicate>
+template<class ForwardIterator, class UnaryPredicate>
 ForwardIterator remove_if(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+    UnaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 ForwardIterator remove_if(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da cui rimuovere gli elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da cui rimuovere gli elementi.
 
 *Pred*\
@@ -6454,7 +6643,7 @@ L'ordine degli elementi non rimossi rimane stabile.
 
 L'operatore `operator==` usato per determinare l'uguaglianza tra elementi deve imporre una relazione di equivalenza tra i propri operandi.
 
-La complessità è lineare: vi sono (`last` - `first`) i confronti di uguaglianza.
+La complessità è lineare: vi sono confronti (`last` - `first`) per l'uguaglianza.
 
 list presenta una versione di funzione membro di remove più efficiente che ricollega i puntatori.
 
@@ -6467,48 +6656,50 @@ list presenta una versione di funzione membro di remove più efficiente che rico
 #include <algorithm>
 #include <iostream>
 
-bool greater6 ( int value ) {
-   return value > 6;
+bool greater6 ( int value )
+{
+    return value > 6;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2, new_end;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2, new_end;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle ( v1.begin( ), v1.end( ) );
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove elements satisfying predicate greater6
-   new_end = remove_if (v1.begin( ), v1.end( ), greater6 );
+    // Remove elements satisfying predicate greater6
+    new_end = remove_if (v1.begin( ), v1.end( ), greater6 );
 
-   cout << "Vector v1 with elements satisfying greater6 removed is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 with elements satisfying greater6 removed is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To change the sequence size, use erase
-   v1.erase (new_end, v1.end( ) );
+    // To change the sequence size, use erase
+    v1.erase (new_end, v1.end( ) );
 
-   cout << "Vector v1 resized elements satisfying greater6 removed is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 resized elements satisfying greater6 removed is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="replace"></a> Sostituire
+## <a name="replace"></a>sostituire
 
 Esamina ogni elemento di un intervallo e lo sostituisce se corrisponde a un valore specificato.
 
@@ -6519,28 +6710,31 @@ void replace(
     ForwardIterator last,
     const Type& oldVal,
     const Type& newVal);
-    
-template<class ExecutionPolicy, class ForwardIterator, class T>
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 void replace(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    const T& old_value, 
-    const T& new_value);
+    const Type& oldVal,
+    const Type& newVal);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo di cui sostituire gli elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di cui sostituire gli elementi.
 
-*_OldVal*\
+*oldVal*\
 Valore precedente dell'elemento associato da sostituire.
 
-*_NewVal*\
+*newVal*\
 Il nuovo valore assegnato agli elementi con il valore precedente.
 
 ### <a name="remarks"></a>Note
@@ -6551,7 +6745,7 @@ L'ordine degli elementi non sostituiti rimane stabile.
 
 L'operatore `operator==` usato per determinare l'uguaglianza tra elementi deve imporre una relazione di equivalenza tra i propri operandi.
 
-La complessità è lineare; sono disponibili (`last` - `first`) i confronti di uguaglianza e al massimo (`last` - `first`) assegnazioni di nuovi valori.
+La complessità è lineare; `last`ci sono confronti ( - `first`) per l'uguaglianza e al`last`massimo ( - `first`) assegnazioni di nuovi valori.
 
 ### <a name="example"></a>Esempio
 
@@ -6562,36 +6756,37 @@ La complessità è lineare; sono disponibili (`last` - `first`) i confronti di u
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle (v1.begin( ), v1.end( ) );
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle (v1.begin( ), v1.end( ) );
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements with a value of 7 with a value of 700
-   replace (v1.begin( ), v1.end( ), 7 , 700);
+    // Replace elements with a value of 7 with a value of 700
+    replace (v1.begin( ), v1.end( ), 7 , 700);
 
-   cout << "The vector v1 with a value 700 replacing that of 7 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The vector v1 with a value 700 replacing that of 7 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="replace_copy"></a> replace_copy
+## <a name="replace_copy"></a>replace_copy
 
 Esamina ogni elemento di un intervallo di origine e lo sostituisce se corrisponde a un valore specificato copiando nel contempo il risultato in un nuovo intervallo di destinazione.
 
@@ -6603,37 +6798,40 @@ OutputIterator replace_copy(
     OutputIterator result,
     const Type& oldVal,
     const Type& newVal);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
 ForwardIterator2 replace_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
     ForwardIterator2 result,
-    const T& old_value, 
-    const T& new_value);
+    const Type& oldVal,
+    const Type& newVal);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui sostituire gli elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta al primo elemento dell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
 
-*_OldVal*\
+*oldVal*\
 Valore precedente dell'elemento associato da sostituire.
 
-*_NewVal*\
+*newVal*\
 Il nuovo valore assegnato agli elementi con il valore precedente.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di output che punta alla posizione successiva all'ultimo elemento dell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
+Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
 
 ### <a name="remarks"></a>Note
 
@@ -6643,7 +6841,7 @@ L'ordine degli elementi non sostituiti rimane stabile.
 
 L'operatore `operator==` usato per determinare l'uguaglianza tra elementi deve imporre una relazione di equivalenza tra i propri operandi.
 
-La complessità è lineare: vi sono (`last` - `first`) i confronti di uguaglianza e al massimo (`last` - `first`) assegnazioni di nuovi valori.
+La complessità è lineare:`last`vi sono confronti (`first` - `first`) per l'uguaglianza e al`last`massimo ( - ) assegnazioni di nuovi valori.
 
 ### <a name="example"></a>Esempio
 
@@ -6655,97 +6853,100 @@ La complessità è lineare: vi sono (`last` - `first`) i confronti di uguaglianz
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   list <int> L1 (15);
-   vector <int>::iterator Iter1;
-   list <int>::iterator L_Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    list<int> L1 (15);
+    vector<int>::iterator Iter1;
+    list<int>::iterator L_Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
+    random_shuffle ( v1.begin( ), v1.end( ) );
 
-   int iii;
-   for ( iii = 0 ; iii <= 15 ; iii++ )
-      v1.push_back( 1 );
+    int iii;
+    for ( iii = 0 ; iii <= 15 ; iii++ )
+        v1.push_back( 1 );
 
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements in one part of a vector with a value of 7
-   // with a value of 70 and copy into another part of the vector
-   replace_copy ( v1.begin( ), v1.begin( ) + 14,v1.end( ) -15, 7 , 70);
+    // Replace elements in one part of a vector with a value of 7
+    // with a value of 70 and copy into another part of the vector
+    replace_copy ( v1.begin( ), v1.begin( ) + 14,v1.end( ) -15, 7 , 70);
 
-   cout << "The vector v1 with a value 70 replacing that of 7 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The vector v1 with a value 70 replacing that of 7 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements in a vector with a value of 70
-   // with a value of 1 and copy into a list
-   replace_copy ( v1.begin( ), v1.begin( ) + 14,L1.begin( ), 7 , 1);
+    // Replace elements in a vector with a value of 70
+    // with a value of 1 and copy into a list
+    replace_copy ( v1.begin( ), v1.begin( ) + 14,L1.begin( ), 7 , 1);
 
-   cout << "The list copy L1 of v1 with the value 0 replacing "
-        << "that of 7 is:\n ( " ;
-   for ( L_Iter1 = L1.begin( ) ; L_Iter1 != L1.end( ) ; L_Iter1++ )
-      cout << *L_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The list copy L1 of v1 with the value 0 replacing "
+            << "that of 7 is:\n ( " ;
+    for ( L_Iter1 = L1.begin( ) ; L_Iter1 != L1.end( ) ; L_Iter1++ )
+        cout << *L_Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="replace_copy_if"></a> replace_copy_if
+## <a name="replace_copy_if"></a>replace_copy_if
 
 Esamina ogni elemento di un intervallo di origine e lo sostituisce se soddisfa un predicato specificato copiando nel contempo il risultato in un nuovo intervallo di destinazione.
 
 ```cpp
-template<class InputIterator, class OutputIterator, class Predicate, class Type>
+template<class InputIterator, class OutputIterator, class UnaryPredicate, class Type>
 OutputIterator replace_copy_if(
     InputIterator first,
     InputIterator last,
     OutputIterator result,
-    Predicate pred,
-    const Type& val);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Predicate, class T>
+    UnaryPredicate pred,
+    const Type& value);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class UnaryPredicate, class Type>
 ForwardIterator2 replace_copy_if(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
     ForwardIterator2 result,
-    Predicate pred, 
-    const T& new_value);
+    UnaryPredicate pred,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore di input che punta alla posizione del primo elemento nell'intervallo da cui sostituire gli elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono copiati gli elementi.
 
 *Pred*\
 Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
-*Val*\
+*value*\
 Nuovo valore da assegnare agli elementi il cui valore precedente soddisfa il predicato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di output che punta alla posizione successiva all'ultimo elemento dell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
+Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
 
 ### <a name="remarks"></a>Note
 
@@ -6755,7 +6956,7 @@ L'ordine degli elementi non sostituiti rimane stabile.
 
 L'operatore `operator==` usato per determinare l'uguaglianza tra elementi deve imporre una relazione di equivalenza tra i propri operandi.
 
-La complessità è lineare; sono disponibili (`last` - `first`) i confronti di uguaglianza e al massimo (`last` - `first`) assegnazioni di nuovi valori.
+La complessità è lineare; `last`ci sono confronti ( - `first`) per l'uguaglianza e al`last`massimo ( - `first`) assegnazioni di nuovi valori.
 
 ### <a name="example"></a>Esempio
 
@@ -6767,93 +6968,98 @@ La complessità è lineare; sono disponibili (`last` - `first`) i confronti di u
 #include <algorithm>
 #include <iostream>
 
-bool greater6 ( int value ) {
-   return value > 6;
+bool greater6 ( int value )
+{
+    return value > 6;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   list <int> L1 (13);
-   vector <int>::iterator Iter1;
-   list <int>::iterator L_Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    list<int> L1 (13);
+    vector<int>::iterator Iter1;
+    list<int>::iterator L_Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
+    random_shuffle ( v1.begin( ), v1.end( ) );
 
-   int iii;
-   for ( iii = 0 ; iii <= 13 ; iii++ )
-      v1.push_back( 1 );
+    int iii;
+    for ( iii = 0 ; iii <= 13 ; iii++ )
+        v1.push_back( 1 );
 
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements with a value of 7 in the 1st half of a vector
-   // with a value of 70 and copy it into the 2nd half of the vector
-   replace_copy_if ( v1.begin( ), v1.begin( ) + 14,v1.end( ) -14,
-      greater6 , 70);
+    // Replace elements with a value of 7 in the 1st half of a vector
+    // with a value of 70 and copy it into the 2nd half of the vector
+    replace_copy_if ( v1.begin( ), v1.begin( ) + 14,v1.end( ) -14,
+        greater6 , 70);
 
-   cout << "The vector v1 with values of 70 replacing those greater"
+    cout << "The vector v1 with values of 70 replacing those greater"
         << "\n than 6 in the 1st half & copied into the 2nd half is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements in a vector with a value of 70
-   // with a value of 1 and copy into a list
-   replace_copy_if ( v1.begin( ), v1.begin( ) + 13,L1.begin( ),
-      greater6 , -1 );
+    // Replace elements in a vector with a value of 70
+    // with a value of 1 and copy into a list
+    replace_copy_if ( v1.begin( ), v1.begin( ) + 13,L1.begin( ),
+        greater6 , -1 );
 
-   cout << "A list copy of vector v1 with the value -1\n replacing "
+    cout << "A list copy of vector v1 with the value -1\n replacing "
         << "those greater than 6 is:\n ( " ;
-   for ( L_Iter1 = L1.begin( ) ; L_Iter1 != L1.end( ) ; L_Iter1++ )
-      cout << *L_Iter1 << " ";
-   cout << ")." << endl;
+    for ( L_Iter1 = L1.begin( ) ; L_Iter1 != L1.end( ) ; L_Iter1++ )
+        cout << *L_Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="replace_if"></a> replace_if
+## <a name="replace_if"></a>replace_if
 
 Esamina ogni elemento di un intervallo e lo sostituisce se soddisfa un predicato specificato.
 
 ```cpp
-template<class ForwardIterator, class Predicate, class Type>
+template<class ForwardIterator, class UnaryPredicate, class Type>
 void replace_if(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred,
-    const Type& val);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Predicate, class T>
+    UnaryPredicate pred,
+    const Type& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate, class Type>
 void replace_if(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Predicate pred, 
-    const T& new_value);
+    UnaryPredicate pred,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo di cui sostituire gli elementi.
 
-*ultimo*\
+*Ultima*\
 Iteratore che punta alla posizione successiva all'ultimo elemento nell'intervallo da cui sostituire gli elementi.
 
 *Pred*\
 Il predicato unario che deve essere soddisfatto corrisponde al valore di un elemento da sostituire.
 
-*Val*\
+*value*\
 Nuovo valore da assegnare agli elementi il cui valore precedente soddisfa il predicato.
 
 ### <a name="remarks"></a>Note
@@ -6862,11 +7068,11 @@ L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori d
 
 L'ordine degli elementi non sostituiti rimane stabile.
 
-L'algoritmo `replace_if` è una generalizzazione dell'algoritmo `replace`, che consente qualsiasi predicato specificato, anziché l'uguaglianza in un valore costante specificato.
+L'algoritmo `replace_if` è una generalizzazione dell'algoritmo `replace`, che consente di specificare un predicato, anziché l'uguaglianza con un valore costante specificato.
 
 L'operatore `operator==` usato per determinare l'uguaglianza tra elementi deve imporre una relazione di equivalenza tra i propri operandi.
 
-La complessità è lineare: vi sono (`last` - `first`) i confronti di uguaglianza e al massimo (`last` - `first`) assegnazioni di nuovi valori.
+La complessità è lineare:`last`vi sono confronti (`first` - `first`) per l'uguaglianza e al`last`massimo ( - ) assegnazioni di nuovi valori.
 
 ### <a name="example"></a>Esempio
 
@@ -6877,62 +7083,69 @@ La complessità è lineare: vi sono (`last` - `first`) i confronti di uguaglianz
 #include <algorithm>
 #include <iostream>
 
-bool greater6 ( int value ) {
-   return value > 6;
+bool greater6 ( int value )
+{
+    return value > 6;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle ( v1.begin( ), v1.end( ) );
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements satisfying the predicate greater6
-   // with a value of 70
-   replace_if ( v1.begin( ), v1.end( ), greater6 , 70);
+    // Replace elements satisfying the predicate greater6
+    // with a value of 70
+    replace_if ( v1.begin( ), v1.end( ), greater6 , 70);
 
-   cout << "The vector v1 with a value 70 replacing those\n "
-        << "elements satisfying the greater6 predicate is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The vector v1 with a value 70 replacing those\n "
+         << "elements satisfying the greater6 predicate is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="reverse"></a> inverso
+## <a name="reverse"></a>inverso
 
 Inverte l'ordine degli elementi all'interno di un intervallo.
 
 ```cpp
 template<class BidirectionalIterator>
-void reverse(BidirectionalIterator first, BidirectionalIterator last);
+void reverse(
+    BidirectionalIterator first,
+    BidirectionalIterator last);
 
 template<class ExecutionPolicy, class BidirectionalIterator>
 void reverse(
     ExecutionPolicy&& exec,
-    BidirectionalIterator first, 
+    BidirectionalIterator first,
     BidirectionalIterator last);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo nel quale gli elementi vengono permutati.
 
-*ultimo*\
+*Ultima*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo nel quale gli elementi vengono permutati.
 
 ### <a name="remarks"></a>Note
@@ -6948,29 +7161,30 @@ L'intervallo di origine cui viene fatto riferimento deve essere valido. Tutti i 
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Reverse the elements in the vector
-   reverse (v1.begin( ), v1.end( ) );
+    // Reverse the elements in the vector
+    reverse (v1.begin( ), v1.end( ) );
 
-   cout << "The modified vector v1 with values reversed is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The modified vector v1 with values reversed is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -6981,7 +7195,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a> reverse_copy
+## <a name="reverse_copy"></a>reverse_copy
 
 Inverte l'ordine degli elementi all'interno di un intervallo di origine copiandoli nel contempo in un intervallo di destinazione
 
@@ -6989,9 +7203,9 @@ Inverte l'ordine degli elementi all'interno di un intervallo di origine copiando
 template<class BidirectionalIterator, class OutputIterator>
 OutputIterator reverse_copy(
     BidirectionalIterator first,
-    BidirectionalIterator Last,
+    BidirectionalIterator last,
     OutputIterator result);
-    
+
 template<class ExecutionPolicy, class BidirectionalIterator, class ForwardIterator>
 ForwardIterator reverse_copy(
     ExecutionPolicy&& exec,
@@ -7002,18 +7216,21 @@ ForwardIterator reverse_copy(
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo di origine nel quale gli elementi vengono permutati.
 
-*ultimo*\
+*Ultima*\
 Iteratore bidirezionale che punta alla posizione successiva all'ultimo elemento nell'intervallo di origine nel quale gli elementi vengono permutati.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui vengono copiati gli elementi.
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di output che punta alla posizione successiva all'ultimo elemento dell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
+Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione in cui viene copiata la sequenza di elementi modificata.
 
 ### <a name="remarks"></a>Note
 
@@ -7028,38 +7245,39 @@ Gli intervalli di origine e destinazione cui viene fatto riferimento devono esse
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2( 10 );
-   vector <int>::iterator Iter1, Iter2;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2( 10 );
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Reverse the elements in the vector
-   reverse_copy (v1.begin( ), v1.end( ), v2.begin( ) );
+    // Reverse the elements in the vector
+    reverse_copy (v1.begin( ), v1.end( ), v2.begin( ) );
 
-   cout << "The copy v2 of the reversed vector v1 is:\n ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "The copy v2 of the reversed vector v1 is:\n ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   cout << "The original vector v1 remains unmodified as:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 remains unmodified as:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="rotate"></a> ruotare
+## <a name="rotate"></a>ruotare
 
 Scambia gli elementi di due intervalli adiacenti.
 
@@ -7069,7 +7287,7 @@ void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
-    
+
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator rotate(
     ExecutionPolicy&& exec,
@@ -7080,20 +7298,23 @@ ForwardIterator rotate(
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da ruotare.
 
 *intermedio*\
 Iteratore in avanti che definisce il limite all'interno dell'intervallo che punta alla posizione del primo elemento nella seconda parte dell'intervallo i cui elementi devono essere sostituiti con gli elementi della prima parte dell'intervallo.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione successiva all'ultimo elemento nell'intervallo da ruotare.
 
 ### <a name="remarks"></a>Note
 
 Gli intervalli cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è lineare con al massimo (`last` - `first`) scambi.
+La complessità è lineare con al massimo scambi`last`( - `first`).
 
 ### <a name="example"></a>Esempio
 
@@ -7106,49 +7327,49 @@ La complessità è lineare con al massimo (`last` - `first`) scambi.
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1;
-   deque <int> d1;
-   vector <int>::iterator v1Iter1;
-   deque<int>::iterator d1Iter1;
+    using namespace std;
+    vector<int> v1;
+    deque<int> d1;
+    vector<int>::iterator v1Iter1;
+    deque<int>::iterator d1Iter1;
 
-   int i;
-   for ( i = -3 ; i <= 5 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = -3 ; i <= 5 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii =0 ; ii <= 5 ; ii++ )
-   {
-      d1.push_back( ii );
-   }
+    int ii;
+    for ( ii =0 ; ii <= 5 ; ii++ )
+    {
+        d1.push_back( ii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
-      cout << *v1Iter1  << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
+        cout << *v1Iter1 << " ";
+    cout << ")." << endl;
 
-   rotate ( v1.begin( ), v1.begin( ) + 3 , v1.end( ) );
-   cout << "After rotating, vector v1 is ( " ;
-   for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
-      cout << *v1Iter1  << " ";
-   cout << ")." << endl;
+    rotate ( v1.begin( ), v1.begin( ) + 3 , v1.end( ) );
+    cout << "After rotating, vector v1 is ( " ;
+    for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
+        cout << *v1Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "The original deque d1 is ( " ;
-   for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
-      cout << *d1Iter1  << " ";
-   cout << ")." << endl;
+    cout << "The original deque d1 is ( " ;
+    for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
+        cout << *d1Iter1 << " ";
+    cout << ")." << endl;
 
-   int iii = 1;
-   while ( iii <= d1.end( ) - d1.begin( ) ) {
-      rotate ( d1.begin( ), d1.begin( ) + 1 , d1.end( ) );
-      cout << "After the rotation of a single deque element to the back,\n d1 is   ( " ;
-      for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
-         cout << *d1Iter1  << " ";
-      cout << ")." << endl;
-      iii++;
-   }
+    int iii = 1;
+    while ( iii <= d1.end( ) - d1.begin( ) ) {
+        rotate ( d1.begin( ), d1.begin( ) + 1 , d1.end( ) );
+        cout << "After the rotation of a single deque element to the back,\n d1 is   ( " ;
+        for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
+            cout << *d1Iter1 << " ";
+        cout << ")." << endl;
+        iii++;
+    }
 }
 ```
 
@@ -7170,7 +7391,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a> rotate_copy
+## <a name="rotate_copy"></a>rotate_copy
 
 Scambia gli elementi di due intervalli adiacenti all'interno di un intervallo di origine e copia il risultato in un intervallo di destinazione.
 
@@ -7181,28 +7402,31 @@ OutputIterator rotate_copy(
     ForwardIterator middle,
     ForwardIterator last,
     OutputIterator result );
-    
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator2 rotate_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 middle,
-    ForwardIterator1 last, 
+    ForwardIterator1 last,
     ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da ruotare.
 
 *intermedio*\
 Iteratore in avanti che definisce il limite all'interno dell'intervallo che punta alla posizione del primo elemento nella seconda parte dell'intervallo i cui elementi devono essere sostituiti con gli elementi della prima parte dell'intervallo.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione successiva all'ultimo elemento nell'intervallo da ruotare.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
@@ -7213,7 +7437,7 @@ Iteratore di output che punta alla posizione successiva all'ultimo elemento dell
 
 Gli intervalli cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è lineare con al massimo (`last` - `first`) scambi.
+La complessità è lineare con al massimo scambi`last`( - `first`).
 
 ### <a name="example"></a>Esempio
 
@@ -7225,66 +7449,69 @@ La complessità è lineare con al massimo (`last` - `first`) scambi.
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1 , v2 ( 9 );
-   deque <int> d1 , d2 ( 6 );
-   vector <int>::iterator v1Iter , v2Iter;
-   deque<int>::iterator d1Iter , d2Iter;
+int main()
+{
+    using namespace std;
+    vector<int> v1 , v2 ( 9 );
+    deque<int> d1 , d2 ( 6 );
+    vector<int>::iterator v1Iter , v2Iter;
+    deque<int>::iterator d1Iter , d2Iter;
 
-   int i;
-   for ( i = -3 ; i <= 5 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = -3 ; i <= 5 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii =0 ; ii <= 5 ; ii++ )
-      d1.push_back( ii );
+    int ii;
+    for ( ii =0 ; ii <= 5 ; ii++ )
+        d1.push_back( ii );
 
-   cout << "Vector v1 is ( " ;
-   for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ;v1Iter ++ )
-      cout << *v1Iter  << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ;v1Iter ++ )
+        cout << *v1Iter << " ";
+    cout << ")." << endl;
 
-   rotate_copy ( v1.begin( ), v1.begin( ) + 3 , v1.end( ), v2.begin( ) );
-   cout << "After rotating, the vector v1 remains unchanged as:\n v1 = ( " ;
-   for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ;v1Iter ++ )
-      cout << *v1Iter  << " ";
-   cout << ")." << endl;
+    rotate_copy ( v1.begin( ), v1.begin( ) + 3 , v1.end( ), v2.begin( ) );
+    cout << "After rotating, the vector v1 remains unchanged as:\n v1 = ( " ;
+    for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ;v1Iter ++ )
+        cout << *v1Iter << " ";
+    cout << ")." << endl;
 
-   cout << "After rotating, the copy of vector v1 in v2 is:\n v2 = ( " ;
-   for ( v2Iter = v2.begin( ) ; v2Iter != v2.end( ) ;v2Iter ++ )
-      cout << *v2Iter  << " ";
-   cout << ")." << endl;
+    cout << "After rotating, the copy of vector v1 in v2 is:\n v2 = ( " ;
+    for ( v2Iter = v2.begin( ) ; v2Iter != v2.end( ) ;v2Iter ++ )
+        cout << *v2Iter << " ";
+    cout << ")." << endl;
 
-   cout << "The original deque d1 is ( " ;
-   for ( d1Iter = d1.begin( ) ; d1Iter != d1.end( ) ;d1Iter ++ )
-      cout << *d1Iter  << " ";
-   cout << ")." << endl;
+    cout << "The original deque d1 is ( " ;
+    for ( d1Iter = d1.begin( ) ; d1Iter != d1.end( ) ;d1Iter ++ )
+        cout << *d1Iter << " ";
+    cout << ")." << endl;
 
-   int iii = 1;
-   while ( iii <= d1.end( ) - d1.begin( ) )
-   {
-      rotate_copy ( d1.begin( ), d1.begin( ) + iii , d1.end( ), d2.begin( ) );
-      cout << "After the rotation of a single deque element to the back,\n d2 is   ( " ;
-      for ( d2Iter = d2.begin( ) ; d2Iter != d2.end( ) ;d2Iter ++ )
-         cout << *d2Iter  << " ";
-      cout << ")." << endl;
-      iii++;
-   }
+    int iii = 1;
+    while ( iii <= d1.end( ) - d1.begin( ) )
+    {
+        rotate_copy ( d1.begin( ), d1.begin( ) + iii , d1.end( ), d2.begin( ) );
+        cout << "After the rotation of a single deque element to the back,\n d2 is   ( " ;
+        for ( d2Iter = d2.begin( ) ; d2Iter != d2.end( ) ;d2Iter ++ )
+            cout << *d2Iter << " ";
+        cout << ")." << endl;
+        iii++;
+    }
 }
 ```
 
-## <a name="sample"></a> Esempio
+## <a name="sample"></a>esempio
 
 ```cpp
-template<class PopulationIterator, class SampleIterator,
-class Distance, class UniformRandomBitGenerator>
-SampleIterator sample(PopulationIterator first, PopulationIterator last,
-SampleIterator out, Distance n,
-UniformRandomBitGenerator&& g);
+template<class PopulationIterator, class SampleIterator, class Distance, class UniformRandomBitGenerator>
+SampleIterator sample(
+    PopulationIterator first,
+    PopulationIterator last,
+    SampleIterator out,
+    Distance n,
+    UniformRandomBitGenerator&& g);
 ```
 
-## <a name="search"></a> Ricerca
+## <a name="search"></a>ricerca
 
 Cerca la prima occorrenza di una sequenza all'interno di un intervallo di destinazione i cui elementi sono uguali a quelli di una sequenza specificata di elementi oppure i cui elementi sono equivalenti nel senso specificato da un predicato binario agli elementi della sequenza specificata.
 
@@ -7296,45 +7523,47 @@ ForwardIterator1 search(
     ForwardIterator2 first2,
     ForwardIterator2 last2);
 
-template<class ForwardIterator1, class ForwardIterator2, class Predicate>
+template<class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1 search(
     ForwardIterator1 first1,
     ForwardIterator1 last1,
     ForwardIterator2 first2,
     ForwardIterator2 last2
-    Predicate comp);
-    
+    BinaryPredicate pred);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1 search(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1 search(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     BinaryPredicate pred);
-    
+
 template <class ForwardIterator, class Searcher>
 ForwardIterator search(
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
     const Searcher& searcher);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*last1*\
+*Last1*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *first2*\
@@ -7343,8 +7572,11 @@ Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo 
 *Last2*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo per cui trovare una corrispondenza.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+
+*ricercatore*\
+Il ricercatore che incapsula il modello da cercare e l'algoritmo di ricerca da usare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -7371,77 +7603,78 @@ La complessità media è lineare relativamente alle dimensioni dell'intervallo i
 // Return whether second element is twice the first
 bool twice (int elem1, int elem2 )
 {
-   return 2 * elem1 == elem2;
+    return 2 * elem1 == elem2;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   list <int> L1;
-   vector <int>::iterator Iter1, Iter2;
-   list <int>::iterator L1_Iter, L1_inIter;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2;
+    list<int> L1;
+    vector<int>::iterator Iter1, Iter2;
+    list<int>::iterator L1_Iter, L1_inIter;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   int ii;
-   for ( ii = 4 ; ii <= 5 ; ii++ )
-   {
-      L1.push_back( 5 * ii );
-   }
+    int ii;
+    for ( ii = 4 ; ii <= 5 ; ii++ )
+    {
+        L1.push_back( 5 * ii );
+    }
 
-   int iii;
-   for ( iii = 2 ; iii <= 4 ; iii++ )
-   {
-      v2.push_back( 10 * iii );
-   }
+    int iii;
+    for ( iii = 2 ; iii <= 4 ; iii++ )
+    {
+        v2.push_back( 10 * iii );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "List L1 = ( " ;
-   for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
-      cout << *L1_Iter << " ";
-   cout << ")" << endl;
+    cout << "List L1 = ( " ;
+    for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
+        cout << *L1_Iter << " ";
+    cout << ")" << endl;
 
-   cout << "Vector v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-      cout << ")" << endl;
+    cout << "Vector v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+        cout << ")" << endl;
 
-   // Searching v1 for first match to L1 under identity
-   vector <int>::iterator result1;
-   result1 = search (v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
+    // Searching v1 for first match to L1 under identity
+    vector<int>::iterator result1;
+    result1 = search (v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
 
-   if ( result1 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is at least one match of L1 in v1"
-           << "\n and the first one begins at "
-           << "position "<< result1 - v1.begin( ) << "." << endl;
+    if ( result1 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is at least one match of L1 in v1"
+            << "\n and the first one begins at "
+            << "position "<< result1 - v1.begin( ) << "." << endl;
 
-   // Searching v1 for a match to L1 under the binary predicate twice
-   vector <int>::iterator result2;
-   result2 = search  (v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
+    // Searching v1 for a match to L1 under the binary predicate twice
+    vector<int>::iterator result2;
+    result2 = search (v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
 
-   if ( result2 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is a sequence of elements in v1 that "
-           << "are equivalent\n to those in v2 under the binary "
-           << "predicate twice\n and the first one begins at position "
-           << result2 - v1.begin( ) << "." << endl;
+    if ( result2 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is a sequence of elements in v1 that "
+            << "are equivalent\n to those in v2 under the binary "
+            << "predicate twice\n and the first one begins at position "
+            << result2 - v1.begin( ) << "." << endl;
 }
 ```
 
@@ -7456,7 +7689,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a> search_n
+## <a name="search_n"></a>search_n
 
 Cerca la prima sottosequenza di un intervallo di un numero specificato di elementi che dispongono di un valore specifico o di una relazione con tale valore come specificato da un predicato binario.
 
@@ -7466,49 +7699,52 @@ ForwardIterator1 search_n(
     ForwardIterator1 first1,
     ForwardIterator1 last1,
     Diff2 count,
-    const Type& val);
+    const Type& value);
 
 template<class ForwardIterator1, class Diff2, class Type, class BinaryPredicate>
 ForwardIterator1 search_n(
     ForwardIterator1 first1,
     ForwardIterator1 last1,
     Diff2 count,
-    const Type& val,
-    BinaryPredicate comp);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Size, class T>
-ForwardIterator search_n(
-    ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last,
-    Size count, const T& value);
+    const Type& value,
+    BinaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator, class Size, class T,
-class BinaryPredicate>
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Type>
 ForwardIterator search_n(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Size count, 
-    const T& value,
+    Size count,
+    const Type& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Type, class BinaryPredicate>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Size count,
+    const Type& value,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*last1*\
+*Last1*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *conteggio*\
 Le dimensioni della sottosequenza cercata.
 
-*Val*\
+*value*\
 Il valore degli elementi nella sequenza cercata.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
@@ -7536,65 +7772,65 @@ La complessità è lineare relativamente alle dimensioni dell'elemento cercato.
 // Return whether second element is 1/2 of the first
 bool one_half ( int elem1, int elem2 )
 {
-   return elem1 == 2 * elem2;
+    return elem1 == 2 * elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   for ( i = 0 ; i <= 2 ; i++ )
-   {
-      v1.push_back( 5  );
-   }
+    for ( i = 0 ; i <= 2 ; i++ )
+    {
+        v1.push_back( 5 );
+    }
 
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   for ( i = 0 ; i <= 2 ; i++ )
-   {
-      v1.push_back( 10  );
-   }
+    for ( i = 0 ; i <= 2 ; i++ )
+    {
+        v1.push_back( 10 );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // Searching v1 for first match to (5 5 5) under identity
-   vector <int>::iterator result1;
-   result1 = search_n ( v1.begin( ), v1.end( ), 3, 5 );
+    // Searching v1 for first match to (5 5 5) under identity
+    vector<int>::iterator result1;
+    result1 = search_n ( v1.begin( ), v1.end( ), 3, 5 );
 
-   if ( result1 == v1.end( ) )
-      cout << "There is no match for a sequence ( 5 5 5 ) in v1."
-           << endl;
-   else
-      cout << "There is at least one match of a sequence ( 5 5 5 )"
-           << "\n in v1 and the first one begins at "
-           << "position "<< result1 - v1.begin( ) << "." << endl;
+    if ( result1 == v1.end( ) )
+        cout << "There is no match for a sequence ( 5 5 5 ) in v1."
+            << endl;
+    else
+        cout << "There is at least one match of a sequence ( 5 5 5 )"
+            << "\n in v1 and the first one begins at "
+            << "position "<< result1 - v1.begin( ) << "." << endl;
 
-   // Searching v1 for first match to (5 5 5) under one_half
-   vector <int>::iterator result2;
-   result2 = search_n (v1.begin( ), v1.end( ), 3, 5, one_half );
+    // Searching v1 for first match to (5 5 5) under one_half
+    vector<int>::iterator result2;
+    result2 = search_n (v1.begin( ), v1.end( ), 3, 5, one_half );
 
-   if ( result2 == v1.end( ) )
-      cout << "There is no match for a sequence ( 5 5 5 ) in v1"
-           << " under the equivalence predicate one_half." << endl;
-   else
-      cout << "There is a match of a sequence ( 5 5 5 ) "
-           << "under the equivalence\n predicate one_half "
-           << "in v1 and the first one begins at "
-           << "position "<< result2 - v1.begin( ) << "." << endl;
+    if ( result2 == v1.end( ) )
+        cout << "There is no match for a sequence ( 5 5 5 ) in v1"
+            << " under the equivalence predicate one_half." << endl;
+    else
+        cout << "There is a match of a sequence ( 5 5 5 ) "
+            << "under the equivalence\n predicate one_half "
+            << "in v1 and the first one begins at "
+            << "position "<< result2 - v1.begin( ) << "." << endl;
 }
 ```
 
@@ -7606,56 +7842,57 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a> set_difference
+## <a name="set_difference"></a>set_difference
 
 Unisce tutti gli elementi appartenenti a un intervallo di origine ordinato, ma non a un secondo intervallo di origine ordinato, in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class OutputIterator>
 OutputIterator set_difference(
-    InputIterator1  first1,
-    InputIterator1  last1,
-    InputIterator2  first2,
-    InputIterator2  last2,
-    OutputIterator  result );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    OutputIterator result );
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator set_difference(
-    InputIterator1  first1,
-    InputIterator1  last1,
-    InputIterator2  first2,
-    InputIterator2  last2,
-    OutputIterator  result,
-    BinaryPredicate  comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    OutputIterator result,
+    Compare pred );
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator set_difference(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator set_difference(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
 *first2*\
@@ -7664,11 +7901,11 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo dei d
 *Last2*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti e ordinati in un singolo intervallo che rappresenta la differenza dei due intervalli di origine.
 
-*Comp*\
-Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -7686,7 +7923,7 @@ L'operazione è stabile in quanto, nell'intervallo di destinazione, viene manten
 
 Per poter essere ordinati, i tipi di valore degli iteratori di input devono essere confrontabili mediante il tipo di confronto "minore di", in modo che, dati due elementi, sia possibile determinare o che sono equivalenti (nel senso che nessuno è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. Quando sono presenti elementi equivalenti in entrambi gli intervalli di origine, nell'intervallo di destinazione gli elementi del primo intervallo di origine precedono quelli del secondo intervallo di origine. Se gli intervalli di origine contengono duplicati di un elemento in modo tale che quelli nel primo intervallo di origine superano quelli nel secondo, l'intervallo di destinazione conterrà il numero di occorrenze di tali elementi che nel primo degli intervalli di origine superano le occorrenze di tali elementi nel secondo intervallo di origine.
 
-La complessità dell'algoritmo è lineare con al massimo 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 confronti per gli intervalli di origine non vuoti.
+La complessità dell'algoritmo è lineare con al massimo `2 * ((last1 - first1) - (last2 - first2)) - 1` i confronti per gli intervalli di origine non vuoti.
 
 ### <a name="example"></a>Esempio
 
@@ -7701,113 +7938,113 @@ La complessità dell'algoritmo è lineare con al massimo 2 \* (( *last1 - first1
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser (int elem1, int elem2 )
 {
-   if (elem1 < 0)
-      elem1 = - elem1;
-   if (elem2 < 0)
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if (elem1 < 0)
+        elem1 = - elem1;
+    if (elem2 < 0)
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a,  Iter1b, Iter1, Result1;
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1, Result1;
 
-   // Constructing vectors v1a & v1b with default less-than ordering
-   int i;
-   for ( i = -1 ; i <= 4 ; i++ )
-   {
-      v1a.push_back(  i );
-   }
+    // Constructing vectors v1a & v1b with default less-than ordering
+    int i;
+    for ( i = -1 ; i <= 4 ; i++ )
+    {
+        v1a.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-3 ; ii <= 0 ; ii++ )
-   {
-      v1b.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-3 ; ii <= 0 ; ii++ )
+    {
+        v1b.push_back( ii );
+    }
 
-   cout << "Original vector v1a with range sorted by the\n "
-        <<  "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+         << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+         << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) ,  v2 ( v1 );
-   vector <int>::iterator Iter2a, Iter2b, Iter2, Result2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2, Result2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+         << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+         << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ,  v3 ( v1 );
-   vector <int>::iterator Iter3a,  Iter3b, Iter3, Result3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser  );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3, Result3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To combine into a difference in asscending
-   // order with the default binary predicate less <int>( )
-   Result1 = set_difference ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Set_difference of source ranges with default order,"
-        << "\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To combine into a difference in asscending
+    // order with the default binary predicate less<int>( )
+    Result1 = set_difference ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Set_difference of source ranges with default order,"
+         << "\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To combine into a difference in descending
-   // order specify binary predicate greater<int>( )
-   Result2 = set_difference ( v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ),v2.begin( ), greater <int>( ) );
-   cout << "Set_difference of source ranges with binary"
-        << "predicate greater specified,\n vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To combine into a difference in descending
+    // order specify binary predicate greater<int>( )
+    Result2 = set_difference ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ),v2.begin( ), greater<int>( ) );
+    cout << "Set_difference of source ranges with binary"
+         << "predicate greater specified,\n vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // To combine into a difference applying a user
-   // defined binary predicate mod_lesser
-   Result3 = set_difference (  v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
-   cout << "Set_difference of source ranges with binary "
-        << "predicate mod_lesser specified,\n vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // To combine into a difference applying a user
+    // defined binary predicate mod_lesser
+    Result3 = set_difference ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
+    cout << "Set_difference of source ranges with binary "
+         << "predicate mod_lesser specified,\n vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="set_intersection"></a> set_intersection
+## <a name="set_intersection"></a>set_intersection
 
 Unisce tutti gli elementi appartenenti a entrambi gli intervalli di origine ordinati in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -7818,45 +8055,46 @@ OutputIterator set_intersection(
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
-    OutputIterator result );
+    OutputIterator result);
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator set_intersection(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
     OutputIterator result,
-    BinaryPredicate comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    Compare pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator set_intersection(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator set_intersection(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo di due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione successiva a quella dell'ultimo elemento nel primo di due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
 
 *first2*\
@@ -7865,10 +8103,11 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo di du
 *Last2*\
 Iteratore di input che punta alla posizione successiva a quella dell'ultimo elemento nel secondo di due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta l'intersezione dei due intervalli di origine.
 
-**_** *Risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un singolo intervallo ordinato che rappresenta l'intersezione di due origine intervalli.
+*risultato*\
+Iteratore di input che punta alla posizione del primo elemento nell'intervallo di destinazione dove i due intervalli di origine devono essere uniti in un singolo intervallo ordinato che rappresenta l'intersezione dei due intervalli di origine.
 
-*Comp*\
-Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -7886,7 +8125,7 @@ L'operazione è stabile in quanto, nell'intervallo di destinazione, viene manten
 
 Per poter essere ordinati, i tipi di valore degli iteratori di input devono essere confrontabili mediante il tipo di confronto "minore di", in modo che, dati due elementi, sia possibile determinare o che sono equivalenti (nel senso che nessuno è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. Quando sono presenti elementi equivalenti in entrambi gli intervalli di origine, nell'intervallo di destinazione gli elementi del primo intervallo di origine precedono quelli del secondo intervallo di origine. Se gli intervalli di origine contengono duplicati di un elemento, l'intervallo di destinazione conterrà il numero massimo di questi elementi presenti in entrambi gli intervalli di origine.
 
-La complessità dell'algoritmo è lineare con al massimo 2 \* (( *last1 - first1*) + ( *last2 - first2*)) - 1 confronti per gli intervalli di origine non vuoti.
+La complessità dell'algoritmo è lineare con al massimo `2 * ((last1 - first1) + (last2 - first2)) - 1` i confronti per gli intervalli di origine non vuoti.
 
 ### <a name="example"></a>Esempio
 
@@ -7899,109 +8138,111 @@ La complessità dell'algoritmo è lineare con al massimo 2 \* (( *last1 - first1
 #include <iostream>
 
 // Return whether modulus of elem1 is less than modulus of elem2
-bool mod_lesser (int elem1, int elem2 ) {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+bool mod_lesser (int elem1, int elem2 )
+{
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a,  Iter1b, Iter1, Result1;
+int main()
+{
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1, Result1;
 
-   // Constructing vectors v1a & v1b with default less than ordering
-   int i;
-   for ( i = -1 ; i <= 3 ; i++ )
-      v1a.push_back( i );
+    // Constructing vectors v1a & v1b with default less than ordering
+    int i;
+    for ( i = -1 ; i <= 3 ; i++ )
+        v1a.push_back( i );
 
-   int ii;
-   for ( ii =-3 ; ii <= 1 ; ii++ )
-      v1b.push_back( ii );
+    int ii;
+    for ( ii =-3 ; ii <= 1 ; ii++ )
+        v1b.push_back( ii );
 
-   cout << "Original vector v1a with range sorted by the\n "
-        <<  "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+         << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+         << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
-   vector <int>::iterator Iter2a, Iter2b, Iter2, Result2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2, Result2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        << "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+         << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        << "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+         << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
-   vector <int>::iterator Iter3a,  Iter3b, Iter3, Result3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3, Result3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-           <<  "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To combine into an intersection in asscending order with the
-   // default binary predicate less <int>( )
-   Result1 = set_intersection ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Intersection of source ranges with default order,"
-        << "\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; ++Iter1 )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To combine into an intersection in asscending order with the
+    // default binary predicate less<int>( )
+    Result1 = set_intersection ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Intersection of source ranges with default order,"
+         << "\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; ++Iter1 )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To combine into an intersection in descending order, specify
-   // binary predicate greater<int>( )
-   Result2 = set_intersection ( v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ),v2.begin( ), greater <int>( ) );
-   cout << "Intersection of source ranges with binary predicate"
-        << " greater specified,\n vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; ++Iter2 )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To combine into an intersection in descending order, specify
+    // binary predicate greater<int>( )
+    Result2 = set_intersection ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ),v2.begin( ), greater<int>( ) );
+    cout << "Intersection of source ranges with binary predicate"
+            << " greater specified,\n vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; ++Iter2 )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // To combine into an intersection applying a user-defined
-   // binary predicate mod_lesser
-   Result3 = set_intersection ( v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
-   cout << "Intersection of source ranges with binary predicate "
-        << "mod_lesser specified,\n vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; ++Iter3 )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // To combine into an intersection applying a user-defined
+    // binary predicate mod_lesser
+    Result3 = set_intersection ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
+    cout << "Intersection of source ranges with binary predicate "
+            << "mod_lesser specified,\n vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; ++Iter3 )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="set_symmetric_difference"></a> set_symmetric_difference
+## <a name="set_symmetric_difference"></a>set_symmetric_difference
 
 Unisce tutti gli elementi appartenenti a uno degli intervalli di origine ordinati, ma non ad entrambi, in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -8014,43 +8255,44 @@ OutputIterator set_symmetric_difference(
     InputIterator2 last2,
     OutputIterator result );
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator set_symmetric_difference(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
     OutputIterator result,
-    BinaryPredicate comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    Compare pred );
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator set_symmetric_difference(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator set_symmetric_difference(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
 *first2*\
@@ -8059,10 +8301,11 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo dei d
 *Last2*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine consecutivi ordinati da unire e ordinare in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
-**_** *Risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un unico intervallo ordinato che rappresenta la differenza simmetrica dei due intervalli di origine.
+*risultato*\
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti e ordinati in un singolo intervallo che rappresenta la differenza simmetrica dei due intervalli di origine.
 
-*comp*<br/>
-Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8080,7 +8323,7 @@ L'operazione è stabile in quanto, nell'intervallo di destinazione, viene manten
 
 Per poter essere ordinati, i tipi di valore degli iteratori di input devono essere confrontabili mediante il tipo di confronto "minore di", in modo che, dati due elementi, sia possibile determinare o che sono equivalenti (nel senso che nessuno è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. Quando sono presenti elementi equivalenti in entrambi gli intervalli di origine, nell'intervallo di destinazione gli elementi del primo intervallo di origine precedono quelli del secondo intervallo di origine. Se gli intervalli di origine contengono duplicati di un elemento, l'intervallo di destinazione conterrà il valore assoluto del numero per il quale le occorrenze di tali elementi in uno degli intervalli di origine superano le occorrenze di tali elementi nel secondo intervallo di origine.
 
-La complessità dell'algoritmo è lineare con al massimo 2 \* ((*last1 - first1*)-(*last2 - first2*)) - 1 confronti per gli intervalli di origine non vuoti.
+La complessità dell'algoritmo è lineare con al massimo `2 * ((last1 - first1) - (last2 - first2)) - 1` i confronti per gli intervalli di origine non vuoti.
 
 ### <a name="example"></a>Esempio
 
@@ -8095,113 +8338,113 @@ La complessità dell'algoritmo è lineare con al massimo 2 \* ((*last1 - first1*
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser (int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a,  Iter1b, Iter1, Result1;
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1, Result1;
 
-   // Constructing vectors v1a & v1b with default less-than ordering
-   int i;
-   for ( i = -1 ; i <= 4 ; i++ )
-   {
-      v1a.push_back(  i );
-   }
+    // Constructing vectors v1a & v1b with default less-than ordering
+    int i;
+    for ( i = -1 ; i <= 4 ; i++ )
+    {
+        v1a.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-3 ; ii <= 0 ; ii++ )
-   {
-      v1b.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-3 ; ii <= 0 ; ii++ )
+    {
+        v1b.push_back( ii );
+    }
 
-   cout << "Original vector v1a with range sorted by the\n "
-        <<  "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+         << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+         << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) ,  v2 ( v1 );
-   vector <int>::iterator Iter2a, Iter2b, Iter2, Result2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2, Result2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+         << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+         << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ,  v3 ( v1 );
-   vector <int>::iterator Iter3a, Iter3b, Iter3, Result3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser  );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3, Result3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To combine into a symmetric difference in ascending
-   // order with the default binary predicate less <int>( )
-   Result1 = set_symmetric_difference ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Set_symmetric_difference of source ranges with default order,"
-        << "\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To combine into a symmetric difference in ascending
+    // order with the default binary predicate less<int>( )
+    Result1 = set_symmetric_difference ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Set_symmetric_difference of source ranges with default order,"
+         << "\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To combine into a symmetric difference in descending
-   // order, specify binary predicate greater<int>( )
-   Result2 = set_symmetric_difference ( v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ),v2.begin( ), greater <int>( ) );
-   cout << "Set_symmetric_difference of source ranges with binary"
-        << "predicate greater specified,\n vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To combine into a symmetric difference in descending
+    // order, specify binary predicate greater<int>( )
+    Result2 = set_symmetric_difference ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ),v2.begin( ), greater<int>( ) );
+    cout << "Set_symmetric_difference of source ranges with binary"
+         << "predicate greater specified,\n vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // To combine into a symmetric difference applying a user
-   // defined binary predicate mod_lesser
-   Result3 = set_symmetric_difference ( v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
-   cout << "Set_symmetric_difference of source ranges with binary "
-        << "predicate mod_lesser specified,\n vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // To combine into a symmetric difference applying a user
+    // defined binary predicate mod_lesser
+    Result3 = set_symmetric_difference ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
+    cout << "Set_symmetric_difference of source ranges with binary "
+         << "predicate mod_lesser specified,\n vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="set_union"></a> set_union
+## <a name="set_union"></a>set_union
 
 Unisce tutti gli elementi appartenenti almeno a uno dei due intervalli di origine ordinati in un unico intervallo di destinazione ordinato in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
@@ -8214,43 +8457,44 @@ OutputIterator set_union(
     InputIterator2 last2,
     OutputIterator result );
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator set_union(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
     OutputIterator result,
-    BinaryPredicate comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    Compare pred );
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator set_union(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator set_union(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo dei due intervalli di origine ordinati devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel primo dei due intervalli di origine ordinati devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
 *first2*\
@@ -8259,10 +8503,11 @@ Iteratore di input che punta alla posizione del primo elemento nel secondo dei d
 *Last2*\
 Iteratore di input che punta alla posizione successiva all'ultimo elemento nel secondo dei due intervalli di origine consecutivi ordinati devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
-**_** *Risultato* un iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti in un unico intervallo ordinato che rappresenta l'unione di due intervalli di origine.
+*risultato*\
+Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione in cui i due intervalli di origine devono essere uniti e ordinati in un singolo intervallo che rappresenta l'unione dei due intervalli di origine.
 
-*comp*<br/>
-Oggetto funzione predicativa definita dall'utente che stabilisce il modo in cui un elemento è maggiore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Il predicato binario accetta due argomenti e restituisce **true** quando il primo elemento è minore del secondo elemento e **false** in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8280,7 +8525,7 @@ L'operazione è stabile in quanto, nell'intervallo di destinazione, viene manten
 
 Per poter essere ordinati, i tipi di valore degli iteratori di input devono essere confrontabili mediante il tipo di confronto "minore di", in modo che, dati due elementi, sia possibile determinare o che sono equivalenti (nel senso che nessuno è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. Quando sono presenti elementi equivalenti in entrambi gli intervalli di origine, nell'intervallo di destinazione gli elementi del primo intervallo di origine precedono quelli del secondo intervallo di origine. Se gli intervalli di origine contengono duplicati di un elemento, l'intervallo di destinazione conterrà il numero massimo di questi elementi presenti in entrambi gli intervalli di origine.
 
-La complessità dell'algoritmo è lineare con al massimo 2 \* (( *last1 - first1*)-( *last2 - first2*)) - 1 i confronti.
+La complessità dell'algoritmo è lineare con al massimo `2 * ((last1 - first1) - (last2 - first2)) - 1` i confronti.
 
 ### <a name="example"></a>Esempio
 
@@ -8295,178 +8540,182 @@ La complessità dell'algoritmo è lineare con al massimo 2 \* (( *last1 - first1
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a, Iter1b, Iter1, Result1;
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1, Result1;
 
-   // Constructing vectors v1a & v1b with default less than ordering
-   int i;
-   for ( i = -1 ; i <= 3 ; i++ )
-   {
-      v1a.push_back(  i );
-   }
+    // Constructing vectors v1a & v1b with default less than ordering
+    int i;
+    for ( i = -1 ; i <= 3 ; i++ )
+    {
+        v1a.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-3 ; ii <= 1 ; ii++ )
-   {
-      v1b.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-3 ; ii <= 1 ; ii++ )
+    {
+        v1b.push_back( ii );
+    }
 
-   cout << "Original vector v1a with range sorted by the\n "
-        <<  "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+         << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+         << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
-   vector <int>::iterator Iter2a,  Iter2b, Iter2, Result2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2, Result2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+         << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+         << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ,  v3 ( v1 );
-   vector <int>::iterator Iter3a, Iter3b, Iter3, Result3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser  );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3, Result3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To combine into a union in ascending order with the default
-    // binary predicate less <int>( )
-   Result1 = set_union ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Union of source ranges with default order,"
-        << "\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To combine into a union in ascending order with the default
+        // binary predicate less<int>( )
+    Result1 = set_union ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Union of source ranges with default order,"
+         << "\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To combine into a union in descending order, specify binary
-   // predicate greater<int>( )
-   Result2 = set_union (  v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ),v2.begin( ), greater <int>( ) );
-   cout << "Union of source ranges with binary predicate greater "
-        << "specified,\n vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To combine into a union in descending order, specify binary
+    // predicate greater<int>( )
+    Result2 = set_union ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ),v2.begin( ), greater<int>( ) );
+    cout << "Union of source ranges with binary predicate greater "
+         << "specified,\n vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // To combine into a union applying a user-defined
-   // binary predicate mod_lesser
-   Result3 = set_union ( v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
-   cout << "Union of source ranges with binary predicate "
-        << "mod_lesser specified,\n vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // To combine into a union applying a user-defined
+    // binary predicate mod_lesser
+    Result3 = set_union ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
+    cout << "Union of source ranges with binary predicate "
+         << "mod_lesser specified,\n vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="shuffle"></a> riproduzione casuale
+## <a name="shuffle"></a>sequenza casuale
 
 Riproduce con sequenza casuale (ridispone) gli elementi di un intervallo specifico usando un generatore di numeri casuali.
 
 ```cpp
 template<class RandomAccessIterator, class UniformRandomNumberGenerator>
-void shuffle(RandomAccessIterator first,
+void shuffle(
+    RandomAccessIterator first,
     RandomAccessIterator last,
     UniformRandomNumberGenerator&& gen);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore del primo elemento dell'intervallo da riprodurre con sequenza casuale, inclusivo. Deve soddisfare i requisiti di `RandomAccessIterator` e `ValueSwappable`.
 
-*ultimo*\
+*Ultima*\
 Iteratore dell'ultimo elemento dell'intervallo da riprodurre con sequenza casuale, esclusivo. Deve soddisfare i requisiti di `RandomAccessIterator` e `ValueSwappable`.
 
-*Generazione*\
+*generazione*\
 Generatore di numeri casuali usato dalla funzione `shuffle()` per l'operazione. Deve soddisfare i requisiti di `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Note
 
 Per altre informazioni e un esempio di codice che usa `shuffle()`, vedere [\<random>](../standard-library/random.md).
 
-## <a name="sort"></a> Ordinamento
+## <a name="sort"></a>ordinamento
 
 Dispone gli elementi di un intervallo specificato in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.
 
 ```cpp
 template<class RandomAccessIterator>
-   void sort(
-      RandomAccessIterator first,
-      RandomAccessIterator last);
+void sort(
+    RandomAccessIterator first,
+    RandomAccessIterator last);
 
-template<class RandomAccessIterator, class Predicate>
-   void sort(
-      RandomAccessIterator first,
-      RandomAccessIterator last,
-      Predicate comp);
-      
+template<class RandomAccessIterator, class Compare>
+void sort(
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    Compare pred);
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 void sort(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 void sort(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'intervallo da ordinare.
 
-*ultimo*\
+*Ultima*\
 Iteratore ad accesso casuale che punta alla prima posizione oltre l'elemento finale nell'intervallo da ordinare.
 
-*Comp*\
-Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Il predicato binario accetta due argomenti e restituisce **true** se i due argomenti sono in ordine e **false** in caso contrario. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza. Per altre informazioni, vedere [Algoritmi](../standard-library/algorithms.md).
+*Pred*\
+Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Questo predicato binario accetta due argomenti e restituisce **true** se i due argomenti sono ordinati e **false** in caso contrario. Tramite questa funzione di confronto deve essere imposto un ordinamento di tipo "strict weak" alle coppie di elementi della sequenza. Per altre informazioni, vedere [Algoritmi](../standard-library/algorithms.md).
 
 ### <a name="remarks"></a>Note
 
@@ -8474,7 +8723,7 @@ L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori d
 
 Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi è minore di un altro. L'algoritmo `sort` non è stabile e non garantisce che l'ordinamento relativo degli elementi equivalenti venga preservato. L'algoritmo `stable_sort` non preserva l'ordinamento originale.
 
-È la media di una complessità di ordinamento *O*( *N* log *N*), dove *N* =  *last - first*.
+La media di una complessità di ordinamento `O( N log N )`è, dove *N* = *l'ultima* - *volta*.
 
 ### <a name="example"></a>Esempio
 
@@ -8489,51 +8738,51 @@ Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi
 // Return whether first element is greater than the second
 bool UDgreater ( int elem1, int elem2 )
 {
-   return elem1 > elem2;
+    return elem1 > elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 2 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 2 * i );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 5 ; ii++ )
-   {
-      v1.push_back( 2 * ii + 1 );
-   }
+    int ii;
+    for ( ii = 0 ; ii <= 5 ; ii++ )
+    {
+        v1.push_back( 2 * ii + 1 );
+    }
 
-   cout << "Original vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   sort( v1.begin( ), v1.end( ) );
-   cout << "Sorted vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    sort( v1.begin( ), v1.end( ) );
+    cout << "Sorted vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To sort in descending order. specify binary predicate
-   sort( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "Resorted (greater) vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // To sort in descending order. specify binary predicate
+    sort( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "Resorted (greater) vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // A user-defined (UD) binary predicate can also be used
-   sort( v1.begin( ), v1.end( ), UDgreater );
-   cout << "Resorted (UDgreater) vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // A user-defined (UD) binary predicate can also be used
+    sort( v1.begin( ), v1.end( ), UDgreater );
+    cout << "Resorted (UDgreater) vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -8544,33 +8793,33 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a> sort_heap
+## <a name="sort_heap"></a>sort_heap
 
 Converte un heap in un intervallo ordinato.
 
 ```cpp
 template<class RandomAccessIterator>
-   void sort_heap(
-      RandomAccessIterator first,
-      RandomAccessIterator last);
+void sort_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last);
 
-template<class RandomAccessIterator, class Predicate>
-   void sort_heap(
-      RandomAccessIterator first,
-      RandomAccessIterator last,
-      Predicate comp);
+template<class RandomAccessIterator, class Compare>
+void sort_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Iteratore ad accesso casuale che punta alla posizione del primo elemento nell'heap di destinazione.
 
-*ultimo*\
+*Ultima*\
 Iteratore ad accesso casuale che punta alla posizione immediatamente successiva all'ultimo elemento nell'heap di destinazione.
 
-*Comp*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*Pred*\
+Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
 
 ### <a name="remarks"></a>Note
 
@@ -8588,7 +8837,7 @@ Gli heap sono un modo ideale per implementare le code di priorità e vengono usa
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è al massimo *N* registro *N*, dove *N* = ( *cognome - nome*).
+La complessità è al massimo `N log N`, dove *N* = l'*Ultima* - *volta*.
 
 ### <a name="example"></a>Esempio
 
@@ -8603,19 +8852,23 @@ La complessità è al massimo *N* registro *N*, dove *N* = ( *cognome - nome*).
 #include <vector>
 using namespace std;
 
-void print(const string& s, const vector<int>& v) {
+void print(const string& s, const vector<int>& v)
+{
     cout << s << ": ( ";
 
-    for (auto i = v.begin(); i != v.end(); ++i) {
+    for (auto i = v.begin(); i != v.end(); ++i)
+    {
         cout << *i << " ";
     }
 
     cout << ")" << endl;
 }
 
-int main() {
+int main()
+{
     vector<int> v;
-    for (int i = 1; i <= 9; ++i) {
+    for (int i = 1; i <= 9; ++i)
+    {
         v.push_back(i);
     }
     print("Initially", v);
@@ -8640,35 +8893,38 @@ int main() {
 }
 ```
 
-## <a name="stable_partition"></a> stable_partition
+## <a name="stable_partition"></a>stable_partition
 
 Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano un predicato unario che precedono quelli che non lo soddisfano, mantenendo l'ordine relativo degli elementi equivalenti.
 
 ```cpp
-template<class BidirectionalIterator, class Predicate>
+template<class BidirectionalIterator, class UnaryPredicate>
 BidirectionalIterator stable_partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
-    Predicate pred );
-    
-template<class ExecutionPolicy, class BidirectionalIterator, class Predicate>
+    UnaryPredicate pred );
+
+template<class ExecutionPolicy, class BidirectionalIterator, class UnaryPredicate>
 BidirectionalIterator stable_partition(
     ExecutionPolicy&& exec,
     BidirectionalIterator first,
     BidirectionalIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da partizionare.
 
-*ultimo*\
+*Ultima*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da partizionare.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato accetta un solo argomento e restituisce **true** o **false**.
+Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta dagli elementi da classificare. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -8678,7 +8934,7 @@ Iteratore bidirezionale che punta alla posizione del primo elemento nell'interva
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-Gli elementi *a* e *b* sono equivalenti, ma non necessariamente uguali, se *Pr* ( *a*,  *b*) è false e *Pr* ( *b*,  *a*) è false, dove *Pr* è il predicato specificato dal parametro. Il `stable_ partition` algoritmo è stabile e garantisce che l'ordinamento relativo degli elementi equivalenti venga preservato. L'algoritmo `partition` non preserva necessariamente l'ordinamento originale.
+Gli elementi *a* e *b* sono equivalenti, ma non necessariamente uguali, `pred( a, b )` se both è `pred( b, a )` false e è false, dove *prede* è il predicato specificato dal parametro. L' `stable_partition` algoritmo è stabile e garantisce che l'ordinamento relativo degli elementi equivalenti venga mantenuto. L'algoritmo `partition` non mantiene necessariamente questo ordinamento originale.
 
 ### <a name="example"></a>Esempio
 
@@ -8689,88 +8945,95 @@ Gli elementi *a* e *b* sono equivalenti, ma non necessariamente uguali, se *Pr* 
 #include <algorithm>
 #include <iostream>
 
-bool greater5 ( int value ) {
-   return value > 5;
+bool greater5 ( int value )
+{
+    return value > 5;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2, result;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2, result;
 
-   int i;
-   for ( i = 0 ; i <= 10 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 10 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 4 ; ii++ )
-      v1.push_back( 5 );
+    int ii;
+    for ( ii = 0 ; ii <= 4 ; ii++ )
+        v1.push_back( 5 );
 
-   random_shuffle(v1.begin( ), v1.end( ) );
+    random_shuffle(v1.begin( ), v1.end( ) );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Partition the range with predicate greater10
-   result = stable_partition (v1.begin( ), v1.end( ), greater5 );
-   cout << "The partitioned set of elements in v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Partition the range with predicate greater10
+    result = stable_partition (v1.begin( ), v1.end( ), greater5 );
+    cout << "The partitioned set of elements in v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "The first element in v1 to fail to satisfy the"
-        << "\n predicate greater5 is: " << *result << "." << endl;
+    cout << "The first element in v1 to fail to satisfy the"
+         << "\n predicate greater5 is: " << *result << "." << endl;
 }
 ```
 
-## <a name="stable_sort"></a> stable_sort
+## <a name="stable_sort"></a>stable_sort
 
 Dispone gli elementi di un intervallo specificato in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario e mantiene l'ordinamento relativo degli elementi equivalenti.
 
 ```cpp
 template<class BidirectionalIterator>
-void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
+void stable_sort(
+    BidirectionalIterator first,
+    BidirectionalIterator last );
 
-template<class BidirectionalIterator, class BinaryPredicate>
+template<class BidirectionalIterator, class Compare>
 void stable_sort(
     BidirectionalIterator first,
     BidirectionalIterator last,
-    BinaryPredicate comp );
-    
+    Compare pred );
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 void stable_sort(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 void stable_sort(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore bidirezionale che punta alla posizione del primo elemento nell'intervallo da ordinare.
 
-*ultimo*\
+*Ultima*\
 Iteratore bidirezionale che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da ordinare.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente tramite cui vengono definiti i criteri di confronto che devono essere soddisfatti dagli elementi successivi nell'ordinamento. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="remarks"></a>Note
 
 L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi è minore di un altro. Il `sort` algoritmo è stabile e garantisce che l'ordinamento relativo degli elementi equivalenti venga preservato.
+Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi è minore di un altro. L' `sort` algoritmo è stabile e garantisce che l'ordinamento relativo degli elementi equivalenti venga mantenuto.
 
-La complessità di runtime del `stable_sort` dipende dalla quantità di memoria disponibile, ma il caso migliore (disponibile memoria sufficiente) è *O*( *N* log *N*) e il peggiore dei casi viene *O*( *N* (log *N* ) 2), dove *N* =  *last - First.* In genere, il `sort` algoritmo è notevolmente più veloce `stable_sort`.
+La complessità della fase di esecuzione `stable_sort` di dipende dalla quantità di memoria disponibile, ma il caso migliore (data memoria sufficiente) è `O(N log N)` e il caso peggiore è `O(N (log N)^2)`, dove *N* = *Last*  -   *prima di tutto*. In genere, `sort` l'algoritmo è notevolmente più `stable_sort`veloce rispetto a.
 
 ### <a name="example"></a>Esempio
 
@@ -8785,50 +9048,50 @@ La complessità di runtime del `stable_sort` dipende dalla quantità di memoria 
 // Return whether first element is greater than the second
 bool UDgreater (int elem1, int elem2 )
 {
-   return elem1 > elem2;
+    return elem1 > elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 2 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 2 * i );
+    }
 
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 2 * i  );
-   }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 2 * i );
+    }
 
-   cout << "Original vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   stable_sort(v1.begin( ), v1.end( ) );
-   cout << "Sorted vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    stable_sort(v1.begin( ), v1.end( ) );
+    cout << "Sorted vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To sort in descending order, specify binary predicate
-   stable_sort(v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "Resorted (greater) vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // To sort in descending order, specify binary predicate
+    stable_sort(v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "Resorted (greater) vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // A user-defined (UD) binary predicate can also be used
-   stable_sort(v1.begin( ), v1.end( ), UDgreater );
-   cout << "Resorted (UDgreater) vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // A user-defined (UD) binary predicate can also be used
+    stable_sort(v1.begin( ), v1.end( ), UDgreater );
+    cout << "Resorted (UDgreater) vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -8845,18 +9108,18 @@ Il primo override scambia i valori dei due oggetti. Il secondo override scambia 
 
 ```cpp
 template<class Type>
-   void swap(
-      Type& left,
-      Type& right);
+void swap(
+    Type& left,
+    Type& right);
 template<class Type, size_t N>
-   void swap(
-      Type (& left)[N],
-      Type (& right)[N]);\r
+void swap(
+    Type (& left)[N],
+    Type (& right)[N]);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Per il primo override, il primo oggetto di cui viene scambiato il contenuto. Per il secondo override, la prima matrice di oggetti di cui viene scambiato il contenuto.
 
 *Ok*\
@@ -8877,41 +9140,41 @@ Il primo overload è progettato per operare su singoli oggetti. Il secondo overl
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2, result;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2, result;
 
-   for ( int i = 0 ; i <= 10 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    for ( int i = 0 ; i <= 10 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   for ( int ii = 0 ; ii <= 4 ; ii++ )
-   {
-      v2.push_back( 5 );
-   }
+    for ( int ii = 0 ; ii <= 4 ; ii++ )
+    {
+        v2.push_back( 5 );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   swap( v1, v2 );
+    swap( v1, v2 );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -8922,7 +9185,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a> swap_ranges
+## <a name="swap_ranges"></a>swap_ranges
 
 Scambia gli elementi di un intervallo con gli elementi di un altro intervallo di uguali dimensioni.
 
@@ -8932,21 +9195,24 @@ ForwardIterator2 swap_ranges(
    ForwardIterator1 first1,
    ForwardIterator1 last1,
    ForwardIterator2 first2 );
-   
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator2 swap_ranges(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
     ForwardIterator2 first2);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore in avanti che punta alla prima posizione del primo intervallo i cui elementi sono da scambiare.
 
-*last1*\
+*Last1*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultima posizione del primo intervallo i cui elementi sono da scambiare.
 
 *first2*\
@@ -8960,7 +9226,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 
 Gli intervalli a cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e all'interno di ciascuna sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento. Il secondo intervallo deve essere grande quanto il primo intervallo.
 
-La complessità è lineare con *last1* - *first1* scambi eseguite. Se vengono scambiati gli elementi di contenitori dello stesso tipo, è consigliabile usare la funzione membro `swap` del contenitore poiché la funzione membro ha in genere una complessità costante.
+La complessità è lineare con gli scambi *Last1* - *First1* eseguiti. Se vengono scambiati gli elementi di contenitori dello stesso tipo, è consigliabile usare la funzione membro `swap` del contenitore poiché la funzione membro ha in genere una complessità costante.
 
 ### <a name="example"></a>Esempio
 
@@ -8974,45 +9240,45 @@ La complessità è lineare con *last1* - *first1* scambi eseguite. Se vengono sc
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   deque <int> d1;
-   vector <int>::iterator v1Iter1;
-   deque<int>::iterator d1Iter1;
+    using namespace std;
+    vector<int> v1;
+    deque<int> d1;
+    vector<int>::iterator v1Iter1;
+    deque<int>::iterator d1Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii =4 ; ii <= 9 ; ii++ )
-   {
-      d1.push_back( 6 );
-   }
+    int ii;
+    for ( ii =4 ; ii <= 9 ; ii++ )
+    {
+        d1.push_back( 6 );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
-      cout << *v1Iter1  << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
+        cout << *v1Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Deque d1 is  ( " ;
-   for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
-      cout << *d1Iter1  << " ";
-   cout << ")." << endl;
+    cout << "Deque d1 is  ( " ;
+    for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
+        cout << *d1Iter1 << " ";
+    cout << ")." << endl;
 
-   swap_ranges ( v1.begin( ), v1.end( ), d1.begin( ) );
+    swap_ranges ( v1.begin( ), v1.end( ), d1.begin( ) );
 
-   cout << "After the swap_range, vector v1 is ( " ;
-   for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
-      cout << *v1Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the swap_range, vector v1 is ( " ;
+    for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
+        cout << *v1Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "After the swap_range deque d1 is   ( " ;
-   for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
-      cout << *d1Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the swap_range deque d1 is   ( " ;
+    for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
+        cout << *d1Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -9023,7 +9289,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a> Trasformazione
+## <a name="transform"></a>trasformazione
 
 Applica un oggetto funzione ad ogni elemento di un intervallo di origine o a una coppia di elementi di due intervalli di origine e copia i valori restituiti dell'oggetto funzione in un intervallo di destinazione.
 
@@ -9042,39 +9308,40 @@ OutputIterator transform(
     InputIterator2 first2,
     OutputIterator result,
     BinaryFunction func );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class UnaryOperation>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class UnaryOperation>
 ForwardIterator2 transform(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
-    ForwardIterator2 result, 
+    ForwardIterator2 result,
     UnaryOperation op);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class BinaryOperation>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class BinaryOperation>
 ForwardIterator transform(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator result,
     BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*first1*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*First1*\
 Iteratore di input che punta alla posizione del primo elemento nel primo intervallo di origine da usare.
 
-*last1*\
+*Last1*\
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nel primo intervallo di origine da usare.
 
 *first2*\
 Iteratore di input che punta alla posizione del primo elemento nel secondo intervallo di origine da utilizzare.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione.
 
 *Func*\
@@ -9088,9 +9355,9 @@ Iteratore di output che punta alla prima posizione dopo l'elemento finale nell'i
 
 Gli intervalli a cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e all'interno di ciascuna sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento. L'intervallo di destinazione deve essere abbastanza grande per contenere l'intervallo di origine modificato.
 
-Se *risultato* è uguale a *first1* nella prima versione dell'algoritmo, quindi gli intervalli di origine e di destinazione sarà lo stesso e la sequenza verrà modificata sul posto. Ma il *risultato* potrebbero non affrontare una posizione all'interno dell'intervallo [`first1` + 1, `last1`).
+Se il *risultato* è impostato su *First1* nella prima versione dell'algoritmo, gli intervalli di origine e di destinazione saranno uguali e la sequenza verrà modificata sul posto. Tuttavia, il *risultato* potrebbe non essere indirizzato a una posizione`first1` compresa nell'intervallo `last1`[+ 1,).
 
-La complessità è lineare con al massimo (`last1` - `first1`) confronti.
+La complessità è lineare con al massimo i`last1`confronti ( - `first1`).
 
 ### <a name="example"></a>Esempio
 
@@ -9106,70 +9373,69 @@ La complessità è lineare con al massimo (`last1` - `first1`) confronti.
 template <class Type>
 class MultValue
 {
-   private:
-      Type Factor;   // The value to multiply by
-   public:
-      // Constructor initializes the value to multiply by
-      MultValue ( const Type& val ) : Factor ( val ) {
-      }
+private:
+    Type Factor;   // The value to multiply by
+public:
+    // Constructor initializes the value to multiply by
+    MultValue ( const Type& value ) : Factor ( value ) { }
 
-      // The function call for the element to be multiplied
-      Type operator( ) ( Type& elem ) const
-      {
-         return elem * Factor;
-      }
+    // The function call for the element to be multiplied
+    Type operator( ) ( Type& elem ) const
+    {
+        return elem * Factor;
+    }
 };
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2 ( 7 ), v3 ( 7 );
-   vector <int>::iterator Iter1, Iter2 , Iter3;
+    using namespace std;
+    vector<int> v1, v2 ( 7 ), v3 ( 7 );
+    vector<int>::iterator Iter1, Iter2 , Iter3;
 
-   // Constructing vector v1
-   int i;
-   for ( i = -4 ; i <= 2 ; i++ )
-   {
-      v1.push_back(  i );
-   }
+    // Constructing vector v1
+    int i;
+    for ( i = -4 ; i <= 2 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "Original vector  v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Modifying the vector v1 in place
-   transform (v1.begin( ), v1.end( ), v1.begin( ), MultValue<int> ( 2 ) );
-   cout << "The elements of the vector v1 multiplied by 2 in place gives:"
-        << "\n v1mod = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Modifying the vector v1 in place
+    transform (v1.begin( ), v1.end( ), v1.begin( ), MultValue<int> ( 2 ) );
+    cout << "The elements of the vector v1 multiplied by 2 in place gives:"
+            << "\n v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Using transform to multiply each element by a factor of 5
-   transform ( v1.begin( ), v1.end( ), v2.begin( ), MultValue<int> ( 5 ) );
+    // Using transform to multiply each element by a factor of 5
+    transform ( v1.begin( ), v1.end( ), v2.begin( ), MultValue<int> ( 5 ) );
 
-   cout << "Multiplying the elements of the vector v1mod\n "
-        <<  "by the factor 5 & copying to v2 gives:\n v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Multiplying the elements of the vector v1mod\n "
+            << "by the factor 5 & copying to v2 gives:\n v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // The second version of transform used to multiply the
-   // elements of the vectors v1mod & v2 pairwise
-   transform ( v1.begin( ), v1.end( ),  v2.begin( ), v3.begin( ),
-      multiplies <int>( ) );
+    // The second version of transform used to multiply the
+    // elements of the vectors v1mod & v2 pairwise
+    transform ( v1.begin( ), v1.end( ), v2.begin( ), v3.begin( ),
+        multiplies<int>( ) );
 
-   cout << "Multiplying elements of the vectors v1mod and v2 pairwise "
-        <<  "gives:\n v3 = ( " ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    cout << "Multiplying elements of the vectors v1mod and v2 pairwise "
+            << "gives:\n v3 = ( " ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
 ```Output
-Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
+Original vector v1 = ( -4 -3 -2 -1 0 1 2 ).
 The elements of the vector v1 multiplied by 2 in place gives:
 v1mod = ( -8 -6 -4 -2 0 2 4 ).
 Multiplying the elements of the vector v1mod
@@ -9179,45 +9445,48 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a> univoco
+## <a name="unique"></a>unico
 
 Rimuove gli elementi duplicati adiacenti l'uno rispetto all'altro in un intervallo specificato.
 
 ```cpp
 template<class ForwardIterator>
-   ForwardIterator unique(
-      ForwardIterator first,
-      ForwardIterator last);
+ForwardIterator unique(
+    ForwardIterator first,
+    ForwardIterator last);
 
-template<class ForwardIterator, class Predicate>
-   ForwardIterator unique(
-      ForwardIterator first,
-      ForwardIterator last,
-      Predicate comp);
-      
+template<class ForwardIterator, class BinaryPredicate>
+ForwardIterator unique(
+    ForwardIterator first,
+    ForwardIterator last,
+    BinaryPredicate pred);
+
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator unique(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
 ForwardIterator unique(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo da analizzare per la rimozione di duplicati.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo da analizzare per la rimozione di duplicati.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
@@ -9230,9 +9499,9 @@ Entrambe le forme dell'algoritmo rimuovono il secondo duplicato di una coppia co
 
 L'operazione dell'algoritmo è stabile e, di conseguenza, l'ordine relativo degli elementi non eliminati non viene alterato.
 
-L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento. numero di elementi nella sequenza non viene modificato dall'algoritmo `unique` e gli elementi oltre la fine della sequenza modificata sono dereferenziabili ma non viene specificato.
+L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento. il numero di elementi nella sequenza non viene modificato dall'algoritmo `unique` e gli elementi oltre la fine della sequenza modificata sono dereferenziabili ma non specificati.
 
-La complessità è lineare, con richiesta (`last` - `first`) - 1 i confronti.
+La complessità è lineare e richiede `(last - first) - 1` confronti.
 
 list include una funzione membro di "unique" più efficiente che potrebbe offrire migliori prestazioni.
 
@@ -9254,63 +9523,63 @@ using namespace std;
 // Return whether modulus of elem1 is equal to modulus of elem2
 bool mod_equal ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 == elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 == elem2;
 };
 
 int main()
 {
-   vector <int> v1;
-   vector <int>::iterator v1_Iter1, v1_Iter2, v1_Iter3,
-         v1_NewEnd1, v1_NewEnd2, v1_NewEnd3;
+    vector<int> v1;
+    vector<int>::iterator v1_Iter1, v1_Iter2, v1_Iter3,
+            v1_NewEnd1, v1_NewEnd2, v1_NewEnd3;
 
-   int i;
-   for ( i = 0 ; i <= 3 ; i++ )
-   {
-      v1.push_back( 5 );
-      v1.push_back( -5 );
-   }
+    int i;
+    for ( i = 0 ; i <= 3 ; i++ )
+    {
+        v1.push_back( 5 );
+        v1.push_back( -5 );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-   {
-      v1.push_back( 4 );
-   }
-   v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+    {
+        v1.push_back( 4 );
+    }
+    v1.push_back( 7 );
 
-   cout << "Vector v1 is ( " ;
-   for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1.end( ) ; v1_Iter1++ )
-      cout << *v1_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1.end( ) ; v1_Iter1++ )
+        cout << *v1_Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove consecutive duplicates
-   v1_NewEnd1 = unique ( v1.begin( ), v1.end( ) );
+    // Remove consecutive duplicates
+    v1_NewEnd1 = unique ( v1.begin( ), v1.end( ) );
 
-   cout << "Removing adjacent duplicates from vector v1 gives\n ( " ;
-   for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1_NewEnd1 ; v1_Iter1++ )
-      cout << *v1_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Removing adjacent duplicates from vector v1 gives\n ( " ;
+    for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1_NewEnd1 ; v1_Iter1++ )
+        cout << *v1_Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove consecutive duplicates under the binary prediate mod_equals
-   v1_NewEnd2 = unique ( v1.begin( ), v1_NewEnd1 , mod_equal );
+    // Remove consecutive duplicates under the binary prediate mod_equals
+    v1_NewEnd2 = unique ( v1.begin( ), v1_NewEnd1 , mod_equal );
 
-   cout << "Removing adjacent duplicates from vector v1 under the\n "
-        << " binary predicate mod_equal gives\n ( " ;
-   for ( v1_Iter2 = v1.begin( ) ; v1_Iter2 != v1_NewEnd2 ; v1_Iter2++ )
-      cout << *v1_Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Removing adjacent duplicates from vector v1 under the\n "
+            << " binary predicate mod_equal gives\n ( " ;
+    for ( v1_Iter2 = v1.begin( ) ; v1_Iter2 != v1_NewEnd2 ; v1_Iter2++ )
+        cout << *v1_Iter2 << " ";
+    cout << ")." << endl;
 
-   // Remove elements if preceded by an element that was greater
-   v1_NewEnd3 = unique ( v1.begin( ), v1_NewEnd2, greater<int>( ) );
+    // Remove elements if preceded by an element that was greater
+    v1_NewEnd3 = unique ( v1.begin( ), v1_NewEnd2, greater<int>( ) );
 
-   cout << "Removing adjacent elements satisfying the binary\n "
-        << " predicate mod_equal from vector v1 gives ( " ;
-   for ( v1_Iter3 = v1.begin( ) ; v1_Iter3 != v1_NewEnd3 ; v1_Iter3++ )
-      cout << *v1_Iter3 << " ";
-   cout << ")." << endl;
+    cout << "Removing adjacent elements satisfying the binary\n "
+            << " predicate mod_equal from vector v1 gives ( " ;
+    for ( v1_Iter3 = v1.begin( ) ; v1_Iter3 != v1_NewEnd3 ; v1_Iter3++ )
+        cout << *v1_Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -9325,49 +9594,55 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a> unique_copy
+## <a name="unique_copy"></a>unique_copy
 
 Copia gli elementi di un intervallo di origine in un intervallo di destinazione ad eccezione degli elementi duplicati adiacenti l'uno rispetto all'altro.
 
 ```cpp
 template<class InputIterator, class OutputIterator>
-OutputIterator unique_copy( InputIterator first,
+OutputIterator unique_copy(
+    InputIterator first,
     InputIterator last,
     OutputIterator result );
 
 template<class InputIterator, class OutputIterator, class BinaryPredicate>
-OutputIterator unique_copy( InputIterator first,
+OutputIterator unique_copy(
+    InputIterator first,
     InputIterator last,
     OutputIterator result,
-    BinaryPredicate comp );
-    
+    BinaryPredicate pred );
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
-ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+ForwardIterator2 unique_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
     ForwardIterator1 last,
     ForwardIterator2 result);
 
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
 class BinaryPredicate>
 ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
-    ForwardIterator2 result, 
+    ForwardIterator2 result,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*Exec*\
+Criteri di esecuzione da utilizzare.
+
+*prima*\
 Iteratore in avanti che punta alla posizione del primo elemento nell'intervallo di origine da copiare.
 
-*ultimo*\
+*Ultima*\
 Iteratore in avanti che punta alla posizione successiva all'ultimo elemento nell'intervallo di origine da copiare.
 
-*Risultato*\
+*risultato*\
 Iteratore di output che punta alla posizione del primo elemento nell'intervallo di destinazione che riceve la copia con duplicati consecutivi rimossi.
 
-*Comp*\
+*Pred*\
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 ### <a name="return-value"></a>Valore restituito
@@ -9382,7 +9657,7 @@ L'operazione dell'algoritmo è stabile e, di conseguenza, l'ordine relativo degl
 
 Gli intervalli a cui viene fatto riferimento devono essere validi. Tutti i puntatori devono essere dereferenziabili e, all'interno di una sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-La complessità è lineare, con richiesta (`last` - `first`) confronti.
+La complessità è lineare, con richiesta di`last`confronti ( - `first`).
 
 ### <a name="example"></a>Esempio
 
@@ -9399,95 +9674,95 @@ using namespace std;
 
 // Return whether modulus of elem1 is equal to modulus of elem2
 bool mod_equal ( int elem1, int elem2 ) {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 == elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 == elem2;
 };
 
 int main() {
-   vector <int> v1;
-   vector <int>::iterator v1_Iter1, v1_Iter2,
-         v1_NewEnd1, v1_NewEnd2;
+    vector<int> v1;
+    vector<int>::iterator v1_Iter1, v1_Iter2,
+            v1_NewEnd1, v1_NewEnd2;
 
-   int i;
-   for ( i = 0 ; i <= 1 ; i++ ) {
-      v1.push_back( 5 );
-      v1.push_back( -5 );
-   }
+    int i;
+    for ( i = 0 ; i <= 1 ; i++ ) {
+        v1.push_back( 5 );
+        v1.push_back( -5 );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 2 ; ii++ )
-      v1.push_back( 4 );
-   v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 2 ; ii++ )
+        v1.push_back( 4 );
+    v1.push_back( 7 );
 
-   int iii;
-   for ( iii = 0 ; iii <= 5 ; iii++ )
-      v1.push_back( 10 );
+    int iii;
+    for ( iii = 0 ; iii <= 5 ; iii++ )
+        v1.push_back( 10 );
 
-   cout << "Vector v1 is\n ( " ;
-   for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1.end( ) ; v1_Iter1++ )
-      cout << *v1_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is\n ( " ;
+    for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1.end( ) ; v1_Iter1++ )
+        cout << *v1_Iter1 << " ";
+    cout << ")." << endl;
 
-   // Copy first half to second, removing consecutive duplicates
-   v1_NewEnd1 = unique_copy ( v1.begin( ), v1.begin( ) + 8, v1.begin( ) + 8 );
+    // Copy first half to second, removing consecutive duplicates
+    v1_NewEnd1 = unique_copy ( v1.begin( ), v1.begin( ) + 8, v1.begin( ) + 8 );
 
-   cout << "Copying the first half of the vector to the second half\n "
-        << "while removing adjacent duplicates gives\n ( " ;
-   for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1_NewEnd1 ; v1_Iter1++ )
-      cout << *v1_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Copying the first half of the vector to the second half\n "
+            << "while removing adjacent duplicates gives\n ( " ;
+    for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1_NewEnd1 ; v1_Iter1++ )
+        cout << *v1_Iter1 << " ";
+    cout << ")." << endl;
 
-   int iv;
-   for ( iv = 0 ; iv <= 7 ; iv++ )
-      v1.push_back( 10 );
+    int iv;
+    for ( iv = 0 ; iv <= 7 ; iv++ )
+        v1.push_back( 10 );
 
-   // Remove consecutive duplicates under the binary prediate mod_equals
-   v1_NewEnd2 = unique_copy ( v1.begin( ), v1.begin( ) + 14,
-      v1.begin( ) + 14 , mod_equal );
+    // Remove consecutive duplicates under the binary prediate mod_equals
+    v1_NewEnd2 = unique_copy ( v1.begin( ), v1.begin( ) + 14,
+        v1.begin( ) + 14 , mod_equal );
 
-   cout << "Copying the first half of the vector to the second half\n "
-        << " removing adjacent duplicates under mod_equals gives\n ( " ;
-   for ( v1_Iter2 = v1.begin( ) ; v1_Iter2 != v1_NewEnd2 ; v1_Iter2++ )
-      cout << *v1_Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Copying the first half of the vector to the second half\n "
+            << " removing adjacent duplicates under mod_equals gives\n ( " ;
+    for ( v1_Iter2 = v1.begin( ) ; v1_Iter2 != v1_NewEnd2 ; v1_Iter2++ )
+        cout << *v1_Iter2 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="upper_bound"></a> upper_bound
+## <a name="upper_bound"></a>upper_bound
 
 Trova la posizione del primo elemento in un intervallo ordinato con un valore maggiore di un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.
 
 ```cpp
 template<class ForwardIterator, class Type>
-   ForwardIterator upper_bound(
-      ForwardIterator first,
-      ForwardIterator last,
-      const Type& value);
+ForwardIterator upper_bound(
+    ForwardIterator first,
+    ForwardIterator last,
+    const Type& value);
 
-template<class ForwardIterator, class Type, class Predicate>
-   ForwardIterator upper_bound(
-      ForwardIterator first,
-      ForwardIterator last,
-      const Type& value,
-      Predicate comp);
+template<class ForwardIterator, class Type, class Compare>
+ForwardIterator upper_bound(
+    ForwardIterator first,
+    ForwardIterator last,
+    const Type& value,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>Parametri
 
-*Primo*\
+*prima*\
 Posizione del primo elemento nell'intervallo in cui eseguire la ricerca.
 
-*ultimo*\
+*Ultima*\
 Posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *value*\
 Valore nell'intervallo ordinato che deve essere superato dal valore dell'elemento a cui punta l'iteratore restituito.
 
-*Comp*\
-Oggetto funzione predicato definito dall'utente che stabilisce il modo in cui un elemento è minore di un altro. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
+*Pred*\
+Oggetto funzione predicato di confronto definito dall'utente che definisce il senso in cui un elemento è minore di un altro. Un predicato di confronto accetta due argomenti e restituisce **true** se è soddisfatto e **false** quando non è soddisfatto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -9497,13 +9772,13 @@ Iteratore in avanti alla posizione del primo elemento che ha un valore maggiore 
 
 L'intervallo di origine ordinato a cui si fa riferimento deve essere valido. Tutti gli iteratori devono essere dereferenziabili e all'interno della sequenza l'ultima posizione deve essere raggiungibile dalla prima per incremento.
 
-Un intervallo ordinato è una precondizione dell'utilizzo di `upper_bound` dove il criterio di ordinamento è identico a quello specificato dal predicato binario.
+Un intervallo ordinato è una precondizione dell'utilizzo di `upper_bound` e in cui il criterio di ordinamento corrisponde a quello specificato dal predicato di confronto.
 
 L'intervallo non è modificato da `upper_bound`.
 
 Per poter essere ordinati, i tipi di valore degli iteratori in avanti devono essere confrontabili mediante il tipo di confronto "minore di", in modo che, dati due elementi, sia possibile determinare o che sono equivalenti (nel senso che nessuno è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti.
 
-La complessità dell'algoritmo è logaritmica per gli iteratori ad accesso casuale e lineare in caso contrario, con il numero di passaggi proporzionali a (`last - first`).
+La complessità dell'algoritmo è logaritmica per gli iteratori ad accesso casuale e lineare in caso contrario, con il numero di passaggi proporzionali`last - first`a ().
 
 ### <a name="example"></a>Esempio
 
@@ -9533,12 +9808,12 @@ int main()
     // Constructing vector v1 with default less-than ordering
     for ( auto i = -1 ; i <= 4 ; ++i )
     {
-        v1.push_back(  i );
+        v1.push_back( i );
     }
 
     for ( auto ii =-3 ; ii <= 0 ; ++ii )
     {
-        v1.push_back(  ii  );
+        v1.push_back( ii );
     }
 
     cout << "Starting vector v1 = ( " ;
@@ -9569,7 +9844,7 @@ int main()
     sort(v3.begin(), v3.end(), mod_lesser);
 
     cout << "Original vector v3 with range sorted by the\n "
-        <<  "binary predicate mod_lesser is v3 = ( " ;
+        << "binary predicate mod_lesser is v3 = ( " ;
     for (const auto &Iter : v3)
         cout << Iter << " ";
     cout << ")." << endl;
@@ -9588,8 +9863,8 @@ int main()
     cout << "The upper_bound in v2 for the element with a value of 3 is: "
         << *Result << "." << endl;
 
-    // upper_bound of 3 in v3 with the binary predicate  mod_lesser
-    Result = upper_bound(v3.begin(), v3.end(), 3,  mod_lesser);
+    // upper_bound of 3 in v3 with the binary predicate mod_lesser
+    Result = upper_bound(v3.begin(), v3.end(), 3, mod_lesser);
     cout << "The upper_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }

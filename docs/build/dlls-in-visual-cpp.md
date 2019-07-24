@@ -1,6 +1,6 @@
 ---
-title: Creare DLL C/C++ in Visual Studio
-ms.date: 05/06/2019
+title: Creare C/C++ dll in Visual Studio
+ms.date: 07/18/2019
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,58 +8,58 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 7f1c2b71a58c59bf0662aa4ffec53344ce657df0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220754"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341079"
 ---
-# <a name="create-cc-dlls-in-visual-studio"></a>Creare DLL C/C++ in Visual Studio
+# <a name="create-cc-dlls-in-visual-studio"></a>Creare C/C++ dll in Visual Studio
 
-In Windows, una libreria di collegamento dinamico (DLL) è un tipo di file eseguibile che funziona come una libreria condivisa di funzioni e risorse. Il collegamento dinamico è una funzionalità del sistema operativo che consente a un file eseguibile chiamare funzioni o usare risorse archiviate in un file separato. Queste funzioni e risorse possono essere compilate e distribuite separatamente dagli eseguibili che le usano. Una DLL non è un file eseguibile autonomo. viene eseguito nel contesto di un'applicazione che lo chiama. Il sistema operativo può caricare la DLL nello spazio di memoria di un'applicazione quando l'applicazione è caricata (*collegamento implicito*), o su richiesta in fase di esecuzione (*collegamento esplicito*). Le DLL semplificano anche la condivisione di funzioni e risorse tra eseguibili. Più applicazioni possono accedere contemporaneamente al contenuto di un'unica copia di una DLL in memoria.
+In Windows una libreria a collegamento dinamico (DLL) è un tipo di file eseguibile che funge da libreria condivisa di funzioni e risorse. Il collegamento dinamico è una funzionalità del sistema operativo che consente a un eseguibile di chiamare funzioni o utilizzare risorse archiviate in un file separato. Queste funzioni e risorse possono essere compilate e distribuite separatamente dagli eseguibili che le usano. Una DLL non è un file eseguibile autonomo. viene eseguito nel contesto di un'applicazione che lo chiama. Il sistema operativo può caricare la DLL nello spazio di memoria di un'applicazione quando l'applicazione viene caricata (*collegamento implicito*) o su richiesta in fase di esecuzione (*collegamento esplicito*). Le DLL semplificano anche la condivisione di funzioni e risorse tra eseguibili. Più applicazioni possono accedere contemporaneamente al contenuto di un'unica copia di una DLL in memoria.
 
-## <a name="differences-between-dynamic-linking-and-static-linking"></a>Differenze tra il collegamento dinamico e collegamento statico
+## <a name="differences-between-dynamic-linking-and-static-linking"></a>Differenze tra il collegamento dinamico e il collegamento statico
 
-Collegamento statico copia tutto il codice oggetto in una libreria statica nei file eseguibili che lo usano quando vengono compilati. Il collegamento dinamico include solo le informazioni necessarie per Windows in fase di esecuzione per individuare e caricare la DLL che contiene un elemento di dati o una funzione. Quando si crea una DLL, è anche possibile creare una libreria di importazione che contiene queste informazioni. Quando si compila un eseguibile che chiama la DLL, il linker Usa i simboli esportati nella libreria di importazione per archiviare queste informazioni per il caricatore di Windows. Quando il caricatore carica una DLL, questa viene mappata nello spazio di memoria dell'applicazione. Se presente, una speciale funzione nella DLL, `DllMain`, viene chiamato per eseguire qualsiasi inizializzazione richiesta dalla DLL.
+Il collegamento statico copia tutto il codice oggetto in una libreria statica nei file eseguibili che la utilizzano quando vengono compilati. Il collegamento dinamico include solo le informazioni necessarie a Windows in fase di esecuzione per individuare e caricare la DLL che contiene un elemento di dati o una funzione. Quando si crea una DLL, si crea anche una libreria di importazione che contiene queste informazioni. Quando si compila un file eseguibile che chiama la DLL, il linker usa i simboli esportati nella libreria di importazione per archiviare queste informazioni per il caricatore di Windows. Quando il caricatore carica una DLL, la DLL viene mappata allo spazio di memoria dell'applicazione. Se presente, viene chiamata una speciale funzione nella dll `DllMain`,, per eseguire qualsiasi inizializzazione richiesta dalla dll.
 
 <a name="differences-between-applications-and-dlls"></a>
 
-## <a name="differences-between-applications-and-dlls"></a>Differenze tra applicazioni e DLL
+## <a name="differences-between-applications-and-dlls"></a>Differenze tra applicazioni e dll
 
-Anche se le DLL e le applicazioni sono entrambi i moduli eseguibili, si differenziano in diversi modi. Per l'utente finale, la differenza più ovvia è che le DLL non sono applicazioni che possono essere eseguite direttamente. Dal punto di vista del sistema, vi sono due differenze fondamentali tra applicazioni e DLL:
+Anche se le dll e le applicazioni sono entrambi moduli eseguibili, si differenziano in diversi modi. Per l'utente finale, la differenza più ovvia è che le dll non sono applicazioni che possono essere eseguite direttamente. Dal punto di vista del sistema, esistono due differenze fondamentali tra le applicazioni e le dll:
 
-- Un'applicazione può avere più istanze di se stesso è in esecuzione nel sistema contemporaneamente, mentre una DLL può avere una sola istanza.
+- Un'applicazione può avere contemporaneamente più istanze di in esecuzione nel sistema, mentre una DLL può avere una sola istanza.
 
-- Un'applicazione può essere caricata come un processo che può essere proprietario di operazioni, ad esempio uno stack, i thread di esecuzione, la memoria globale, gli handle di file e una coda di messaggi, ma non è una DLL.
+- Un'applicazione può essere caricata come processo che può essere proprietaria di elementi quali uno stack, thread di esecuzione, memoria globale, handle di file e una coda di messaggi, ma una DLL non può.
 
 <a name="advantages-of-using-dlls"></a>
 
-## <a name="advantages-of-using-dlls"></a>Vantaggi dell'utilizzo delle DLL
+## <a name="advantages-of-using-dlls"></a>Vantaggi dell'utilizzo delle dll
 
-Collegamento dinamico anziché il collegamento statico al codice e risorse offre numerosi vantaggi. Quando si usano DLL, è possibile risparmiare spazio di memoria e ridurre lo swapping. Quando più applicazioni possono usare un'unica copia di una DLL, è possibile risparmiare spazio su disco e larghezza di banda di download. Le DLL possono essere distribuite e aggiornate separatamente, in modo da poter fornire supporto postvendita e aggiornamenti software senza dover ricompilare e distribuire tutto il codice. Le DLL costituiscono un metodo pratico per fornire risorse specifiche delle impostazioni locali, in modo da supportare programmi in più lingue e semplificare la creazione di versioni internazionali delle applicazioni. Collegamento esplicito, è possibile consentire l'applicazione per individuare e caricare le DLL in fase di esecuzione, ad esempio le estensioni che forniscono nuove funzionalità.
+Il collegamento dinamico al codice e alle risorse offre diversi vantaggi rispetto al collegamento statico:
 
-Il collegamento dinamico offre i vantaggi seguenti:
+- Il collegamento dinamico consente di risparmiare memoria e di ridurre lo scambio. Molti processi possono utilizzare una DLL simultaneamente, condividendo una sola copia delle parti di sola lettura di una DLL in memoria. Al contrario, ogni applicazione compilata utilizzando una libreria collegata in modo statico dispone di una copia completa del codice di libreria che Windows deve caricare in memoria.
 
-- Il collegamento dinamico potrai risparmiare memoria e ridurre lo swapping. Molti processi è possono utilizzare una DLL contemporaneamente, la condivisione di una singola copia di sola lettura parti di una DLL in memoria. Al contrario, ogni applicazione che viene compilato con una libreria collegata staticamente ha una copia completa del codice della libreria che Windows deve caricare in memoria.
+- Il collegamento dinamico consente di risparmiare spazio su disco e larghezza di banda. Molte applicazioni possono condividere una singola copia della DLL sul disco. Al contrario, ogni applicazione compilata utilizzando una libreria a collegamento statico presenta il codice di libreria collegato alla relativa immagine eseguibile, che utilizza più spazio su disco e impiega una maggiore larghezza di banda per il trasferimento.
 
-- Collegamento dinamico consente di risparmiare larghezza di banda e spazio su disco. Molte applicazioni possono condividere una singola copia della DLL sul disco. Al contrario, ogni applicazione creata usando una libreria statica ha collegato all'immagine dell'eseguibile, che usa più spazio su disco e richiede maggiore larghezza di banda per trasferire il codice della libreria.
+- La manutenzione, le correzioni rapide e gli aggiornamenti della sicurezza possono essere più semplici. Quando le applicazioni usano funzioni comuni in una DLL, fino a quando gli argomenti della funzione e i valori restituiti non cambiano, è possibile implementare correzioni di bug e distribuire gli aggiornamenti alla DLL. Quando le dll vengono aggiornate, le applicazioni che le utilizzano non devono essere ricompilate o ricollegate e utilizzano la nuova DLL non appena viene distribuita. Al contrario, le correzioni apportate nel codice oggetto collegato in modo statico richiedono il ricollegamento e la ridistribuzione di tutte le applicazioni che lo usano.
 
-- La manutenzione, le patch di protezione e gli aggiornamenti possono essere più semplice. Quando le applicazioni usano le funzioni comuni in una DLL, quindi, purché gli argomenti della funzione e i valori restituiti non viene modificata, è possibile implementare correzioni di bug e distribuire gli aggiornamenti alla DLL. Quando le DLL vengono aggiornate, le applicazioni che li usano non sono necessario essere ricompilato o ricollegare e utilizzano della nuova DLL, non appena viene distribuita. Al contrario, le correzioni apportate nel codice dell'oggetto collegato in modo statico è necessario ricollegare e ridistribuire tutte le applicazioni che lo utilizza.
+- È possibile utilizzare le dll per fornire supporto After-Market. Ad esempio, è possibile modificare una DLL del driver di visualizzazione per supportare una visualizzazione che non era disponibile quando l'applicazione è stata spedita.
 
-- È possibile usare le DLL per fornire supporto postvendita. Ad esempio, un driver video di DLL può essere modificato per supportare una visualizzazione che non era disponibile durante l'applicazione è stata spedita. È possibile usare il collegamento esplicito per caricare le estensioni dell'applicazione sotto forma di DLL e aggiungere nuove funzionalità all'App senza ricompilare o ridistribuire lo.
+- È possibile usare il collegamento esplicito per individuare e caricare le dll in fase di esecuzione, ad esempio le estensioni dell'applicazione che aggiungono nuove funzionalità all'app senza ricompilarla o ridistribuirla.
 
-- Il collegamento dinamico rende più semplice supportare le applicazioni scritte in linguaggi di programmazione diversi. I programmi scritti in diversi linguaggi di programmazione possono chiamare la stessa funzione DLL, purché i programmi seguano la convenzione di chiamata. I programmi e la funzione DLL devono essere compatibili nei modi seguenti: l'ordine in cui la funzione prevede che gli argomenti devono essere inseriti nello stack, se la funzione o l'applicazione è responsabile della pulizia dello stack e indica se tutti gli argomenti sono passati nei registri.
+- Il collegamento dinamico rende più semplice supportare le applicazioni scritte in linguaggi di programmazione diversi. I programmi scritti in diversi linguaggi di programmazione possono chiamare la stessa funzione di DLL, purché i programmi seguano la convenzione di chiamata della funzione. I programmi e la funzione DLL devono essere compatibili nei modi seguenti: l'ordine in cui la funzione prevede il push degli argomenti nello stack, se la funzione o l'applicazione è responsabile della pulizia dello stack e se gli argomenti sono registri passati.
 
-- Il collegamento dinamico fornisce un meccanismo per estendere le classi della libreria MFC. È possibile derivare classi dalle classi MFC esistenti e inserirli in una DLL di estensione MFC per l'utilizzo da applicazioni MFC.
+- Il collegamento dinamico fornisce un meccanismo per estendere le classi della libreria MFC. È possibile derivare classi dalle classi MFC esistenti e inserirle in una DLL di estensione MFC per l'utilizzo da parte delle applicazioni MFC.
 
-- Il collegamento dinamico semplifica la creazione delle versioni internazionali dell'applicazione. La collocazione delle risorse specifiche delle impostazioni locali in una DLL, è molto più semplice creare versioni internazionali di un'applicazione. Invece di spedizione molte versioni localizzate dell'applicazione, è possibile inserire le stringhe e immagini per ogni lingua in una DLL di risorse separato e quindi l'applicazione possa caricare le risorse appropriate per tali impostazioni locali in fase di esecuzione.
+- Il collegamento dinamico rende più semplice la creazione di versioni internazionali dell'applicazione. Le dll sono un modo pratico per fornire risorse specifiche delle impostazioni locali, che semplificano la creazione di versioni internazionali di un'applicazione. Anziché spedire molte versioni localizzate dell'applicazione, è possibile inserire le stringhe e le immagini per ogni lingua in una DLL di risorse separata e quindi l'applicazione può caricare le risorse appropriate per le impostazioni locali in fase di esecuzione.
 
-Un potenziale svantaggio di utilizzo delle DLL è che l'applicazione non indipendente. dipende l'esistenza di un modulo DLL separato che è necessario distribuire o verificare se stessi come parte dell'installazione.
+Un potenziale svantaggio nell'uso delle dll è che l'applicazione non è indipendente. dipende dall'esistenza di un modulo DLL separato che è necessario distribuire o verificare come parte dell'installazione.
 
-## <a name="more-information-on-how-to-create-and-use-dlls"></a>Altre informazioni su come creare e usare le DLL
+## <a name="more-information-on-how-to-create-and-use-dlls"></a>Ulteriori informazioni su come creare e utilizzare le dll
 
-Gli argomenti seguenti forniscono informazioni dettagliate sulla creazione di C /C++ DLL in Visual Studio.
+Negli argomenti seguenti vengono fornite informazioni dettagliate su come creare C/C++ dll in Visual Studio.
 
 [Procedura dettagliata: Creare e usare la propria libreria a collegamento dinamico (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 Viene illustrato come creare e utilizzare una DLL in Visual Studio.
@@ -67,32 +67,32 @@ Viene illustrato come creare e utilizzare una DLL in Visual Studio.
 [Tipi di DLL](kinds-of-dlls.md)<br/>
 Vengono fornite informazioni sui diversi tipi di DLL che è possibile compilare.
 
-[Domande frequenti su DLL](dll-frequently-asked-questions.md)<br/>
+[Domande frequenti sulle DLL](dll-frequently-asked-questions.md)<br/>
 Vengono fornite risposte alle domande frequenti relative alle DLL.
 
 [Collegare un eseguibile a una DLL](linking-an-executable-to-a-dll.md)<br/>
 Viene descritto il collegamento esplicito e implicito a una DLL.
 
 [Inizializzare una DLL](run-time-library-behavior.md#initializing-a-dll)<br/>
-Illustra codice di inizializzazione di DLL che deve essere eseguite al caricamento della DLL.
+Viene illustrato il codice di inizializzazione DLL che deve essere eseguito quando la DLL viene caricata.
 
 [DLL e comportamento delle librerie di runtime Visual C++](run-time-library-behavior.md)<br/>
 Viene illustrata la sequenza di avvio della DLL eseguita dalla libreria runtime.
 
 [LoadLibrary e AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
-Viene illustrato l'utilizzo **LoadLibrary** e `AfxLoadLibrary` per il collegamento esplicito a una DLL in fase di esecuzione.
+Viene illustrato  l'utilizzo `AfxLoadLibrary` di LoadLibrary e per il collegamento esplicito a una dll in fase di esecuzione.
 
 [GetProcAddress](getprocaddress.md)<br/>
-Viene illustrato l'utilizzo **GetProcAddress** per ottenere l'indirizzo di una funzione esportata nella DLL.
+Viene illustrato l'utilizzo di **GetProcAddress** per ottenere l'indirizzo di una funzione esportata nella dll.
 
 [FreeLibrary e AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
-Viene illustrato l'utilizzo **FreeLibrary** e `AfxFreeLibrary` quando il modulo di DLL non è più necessario.
+Viene illustrato  l'utilizzo `AfxFreeLibrary` di FreeLibrary e quando il modulo dll non è più necessario.
 
-[Ordine di ricerca di libreria a collegamento dinamico](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+[Ordine di ricerca della libreria a collegamento dinamico](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
 Descrive il percorso di ricerca usato dal sistema operativo Windows per individuare una DLL nel sistema.
 
 [Stato dei moduli di una DLL MFC regolare collegata a MFC in modo dinamico](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
-Vengono descritti gli stati di modulo di una normale che DLL MFC collegate in modo dinamico a MFC.
+Descrive gli Stati dei moduli di una DLL MFC normale collegata a MFC in modo dinamico.
 
 [MFC (DLL di estensione)](extension-dlls-overview.md)<br/>
 Vengono illustrate le DLL che implementano generalmente classi riutilizzabili derivate dalle classi esistenti della libreria MFC.
@@ -115,13 +115,13 @@ Viene illustrata l'opzione di automazione nella Creazione guidata DLL MFC.
 [Convenzioni di denominazione per le DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
 Viene illustrato come le DLL e le librerie incluse in MFC seguono una convenzione di denominazione strutturata.
 
-[Chiamata di funzioni DLL dalle applicazioni Visual Basic](calling-dll-functions-from-visual-basic-applications.md)<br/>
+[Chiamata di funzioni DLL da applicazioni Visual Basic](calling-dll-functions-from-visual-basic-applications.md)<br/>
 Viene descritto come chiamare funzioni nelle DLL dalle applicazioni Visual Basic.
 
 ## <a name="related-sections"></a>Sezioni correlate
 
 [Utilizzo di MFC come parte di una DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)<br/>
-Descrive le DLL MFC regolari, che consentono di usare la libreria MFC come parte di una libreria di collegamento dinamico di Windows.
+Descrive le normali DLL MFC, che consentono di utilizzare la libreria MFC come parte di una libreria a collegamento dinamico di Windows.
 
 [Versione DLL di MFC](../mfc/tn033-dll-version-of-mfc.md)<br/>
-Viene descritto come è possibile usare il MFCxx. dll e MFCxxD. dll (dove x è il numero di versione MFC) condividere librerie a collegamento dinamico con le applicazioni MFC e DLL estensione MFC.
+Viene descritto come utilizzare MFCxx. dll e MFCxxD. dll, dove x è il numero di versione MFC, le librerie a collegamento dinamico condivise con applicazioni MFC e dll di estensione MFC.
