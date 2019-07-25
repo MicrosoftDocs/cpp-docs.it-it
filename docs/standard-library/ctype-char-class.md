@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: adaad8f76de5b712aea13794ef2d7b9a096fb8ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394156"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455462"
 ---
 # <a name="ctypeltchargt-class"></a>Classe ctype&lt;char&gt;
 
-La classe è una specializzazione esplicita della classe modello `ctype\<CharType>` al tipo **char**, che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo **char**.
+La classe è una specializzazione esplicita della `ctype\<CharType>` classe modello per il tipo **char**, che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo **char**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -108,15 +108,15 @@ protected:
 
 La specializzazione esplicita è diversa dalla classe di modello in vari modi:
 
-- Un oggetto della classe ctype < `char`> Archivia un puntatore al primo elemento di una tabella di maschera ctype, una matrice di UCHAR_MAX + 1 elementi di tipo `ctype_base::mask`. Archivia anche un oggetto booleano che indica se la matrice deve essere eliminata (tramite `operator delete[]`) quando l'oggetto di ctype\< **Elem**> viene eliminato.
+- Un oggetto della classe CType < `char`> Archivia un puntatore al primo elemento di una tabella della maschera CType, una matrice di UCHAR_MAX + 1 elementi di tipo `ctype_base::mask`. Archivia anche un oggetto booleano che indica se la matrice deve essere eliminata (tramite `operator delete[]`) quando l'oggetto di ctype\< **Elem**> viene eliminato.
 
-- Il costruttore pubblico unico consente di specificare `tab`, la tabella di maschera ctype, e `del`, l'oggetto booleano che restituisce true se la matrice deve essere eliminato quando l'oggetto di ctype < `char`> oggetto viene eliminato definitivamente, nonché il conteggio dei riferimenti riferimenti al parametro.
+- Il suo unico costruttore pubblico consente di `tab`specificare, la tabella della maschera CType `del`, e, l'oggetto booleano che è true se la matrice deve essere eliminata `char`quando il CType < > oggetto viene eliminato definitivamente, nonché il conteggio dei riferimenti parametro refs.
 
-- La funzione membro protetto `table` restituisce la tabella di maschera ctype archiviata.
+- La funzione `table` membro protetto restituisce la tabella della maschera CType archiviata.
 
-- L'oggetto membro statico `table_size` specifica il numero minimo di elementi in una tabella di maschera ctype.
+- L'oggetto `table_size` membro statico specifica il numero minimo di elementi in una tabella della maschera CType.
 
-- La funzione membro protetto statica `classic_table`(restituisce la tabella maschera ctype appropriata per le impostazioni locali "C".
+- La funzione `classic_table`membro statica protetta (restituisce la tabella della maschera CType appropriata per le impostazioni locali "C".
 
 - Non ci sono funzioni membro virtuale protetto [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) o [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Le funzioni membro pubblico corrispondenti eseguono direttamente le operazioni equivalenti.
 
@@ -130,6 +130,6 @@ Le funzioni membro [do_narrow](../standard-library/ctype-class.md#do_narrow) e [
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe facet](locale-class.md#facet_class)<br/>
-[Classe ctype_base](../standard-library/ctype-base-class.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Classe facet](locale-class.md#facet_class)\
+[ctype_base Class](../standard-library/ctype-base-class.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

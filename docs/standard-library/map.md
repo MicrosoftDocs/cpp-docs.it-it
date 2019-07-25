@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 96ca19b2562c3f145555c3c1b1d8db4fc700ed91
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243317"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456296"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
@@ -24,13 +24,13 @@ Definisce le classi del modello del contenitore map e multimap e i relativi mode
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Il \<map > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+> Anche \<la libreria > della mappa USA `#include <initializer_list>` l'istruzione.
 
 ## <a name="members"></a>Members
 
 ### <a name="operators"></a>Operatori
 
-|Versione map|Versione multimap|DESCRIZIONE|
+|Versione map|Versione multimap|Descrizione|
 |-----------------|----------------------|-----------------|
 |[operator!= (map)](../standard-library/map-operators.md#op_neq)|[operator!= (multimap)](../standard-library/map-operators.md#op_neq)|Verifica se l'oggetto map o multimap a sinistra dell'operatore non è uguale all'oggetto map o multimap a destra.|
 |[operator< (map)](../standard-library/map-operators.md#op_eq_eq)|[operator< (multimap)](../standard-library/map-operators.md#op_eq_eq)|Verifica se l'oggetto map o multimap a sinistra dell'operatore è minore dell'oggetto map o multimap a destra.|
@@ -55,6 +55,6 @@ Definisce le classi del modello del contenitore map e multimap e i relativi mode
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

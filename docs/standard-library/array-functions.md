@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 719377be2ac130100e3f9e9ea608c5c27be3101f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377270"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456778"
 ---
 # <a name="ltarraygt-functions"></a>Funzioni &lt;array&gt;
 
-Il \<array > intestazione include due funzioni non membro, `get` e `swap`, che operano sul **matrice** oggetti.
+L' \<intestazione > della matrice include due funzioni non membro, `get` e `swap`, che operano su oggetti **Array** .
 
 |||
 |-|-|
@@ -42,16 +42,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Index*<br/>
+*Indice*\
 Offset di un elemento.
 
-*T*<br/>
+*T*\
 Tipo di un elemento.
 
-*N*<br/>
+*N*\
 Numero di elementi nella matrice.
 
-*arr*<br/>
+*arr*\
 Matrice da selezionare.
 
 ### <a name="example"></a>Esempio
@@ -88,7 +88,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Una specializzazione di modello non membro di `std::swap` che scambia due **matrice** oggetti.
+Una specializzazione di modello non membro `std::swap` di che scambia due oggetti **Array** .
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,16 +97,16 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo di un elemento.
 
-*N*<br/>
+*N*\
 Dimensione della matrice.
 
-*left*<br/>
+*sinistra*\
 La prima matrice da scambiare.
 
-*right*<br/>
+*Ok*\
 La seconda matrice da scambiare.
 
 ### <a name="remarks"></a>Note
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

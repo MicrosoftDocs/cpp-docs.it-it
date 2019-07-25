@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245398"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459194"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -32,14 +32,14 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 - Matrici di caratteri con terminazione Null spesso definite stringhe C.
 
-- Oggetti della classe modello, di tipo `basic_string`, che gestiscono tutti **char**-gli argomenti di modello.
+- Oggetti della classe modello, di `basic_string`tipo, che gestiscono tutti gli argomenti di modello di tipo **char**.
 
 ### <a name="typedefs"></a>Definizioni typedef
 
 |Nome del tipo|Descrizione|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Tipo che descrive una specializzazione della classe modello `basic_string` con elementi di tipo **char** come un `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo che descrive una specializzazione della classe modello `basic_string` con elementi di tipo **wchar_t** come un `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Tipo che descrive una specializzazione della classe `basic_string` modello con elementi di tipo  `string`char come.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo che descrive una specializzazione della classe `basic_string` modello con elementi di tipo  `wstring`wchar_t come.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Tipo che descrive una specializzazione della classe modello `basic_string` basata su elementi di tipo `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Tipo che descrive una specializzazione della classe modello `basic_string` basata su elementi di tipo `char32_t`.|
 
@@ -63,21 +63,21 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 |-|-|
 |[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Scambia le matrici di caratteri di due stringhe.|
-|[stod](../standard-library/string-functions.md#stod)|Converte una sequenza di caratteri in una **doppie**.|
-|[stof](../standard-library/string-functions.md#stof)|Converte una sequenza di caratteri in una **float**.|
+|[stod](../standard-library/string-functions.md#stod)|Converte una sequenza di caratteri in un **valore Double**.|
+|[stof](../standard-library/string-functions.md#stof)|Converte una sequenza di caratteri in un valore **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Converte una sequenza di caratteri in un Integer.|
-|[stold](../standard-library/string-functions.md#stold)|Converte una sequenza di caratteri in una **long double**.|
-|[stoll](../standard-library/string-functions.md#stoll)|Converte una sequenza di caratteri in una **long long**.|
-|[stoul](../standard-library/string-functions.md#stoul)|Converte una sequenza di caratteri a un **long senza segno**.|
-|[stoull](../standard-library/string-functions.md#stoull)|Converte una sequenza di caratteri a un **long long senza segno**.|
+|[stold](../standard-library/string-functions.md#stold)|Converte una sequenza di caratteri in un **valore long double**.|
+|[stoll](../standard-library/string-functions.md#stoll)|Converte una sequenza di caratteri in un **Long Long**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Converte una sequenza di caratteri in un oggetto **Long senza segno**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Converte una sequenza di caratteri in un **Long Long senza segno**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Converte un valore in un valore `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Converte un valore in un valore `string` di tipo wide.|
 
 ### <a name="functions"></a>Funzioni
 
-|Funzione|Descrizione|
+|Funzione|DESCRIZIONE|
 |-|-|
-|[Modello getLine](../standard-library/string-functions.md#getline)|Estrarre stringhe dal flusso di input riga per riga.|
+|[Modello getline](../standard-library/string-functions.md#getline)|Estrarre stringhe dal flusso di input riga per riga.|
 
 ### <a name="classes"></a>Classi
 
@@ -103,5 +103,5 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

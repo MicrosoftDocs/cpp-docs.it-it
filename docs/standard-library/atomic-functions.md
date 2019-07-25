@@ -62,12 +62,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: 6ec4ff879b70e4d2cc16a3328217660db695e859
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5314db43bed913e801846341309513c239216887
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377139"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459605"
 ---
 # <a name="ltatomicgt-functions"></a>Funzioni &lt;atomic&gt;
 
@@ -104,13 +104,13 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
-Un puntatore a un *atomico* oggetto che archivia un valore di tipo `Ty`.
+*Atom*\
+Puntatore a un oggetto *atomico* che archivia un valore di tipo `Ty`.
 
-*Exp*<br/>
+*Exp*\
 Puntatore a un valore di tipo `Ty`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `Ty`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -145,20 +145,20 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `Ty`.
 
-*Exp*<br/>
+*Exp*\
 Puntatore a un valore di tipo `Ty`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `Ty`.
 
-*Order1*<br/>
+*Order1*\
 Primo argomento [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Order2*<br/>
-Secondo argomento `memory_order`. Il valore di *Order2* non può essere `memory_order_release` oppure `memory_order_acq_rel`, non può essere maggiore del valore di *diffgr:ID="Order1*.
+*Order2*\
+Secondo argomento `memory_order`. Il valore di *Order2* non può `memory_order_release` essere `memory_order_acq_rel`o, non può essere maggiore del valore di *Order1*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -166,7 +166,7 @@ Secondo argomento `memory_order`. Il valore di *Order2* non può essere `memory_
 
 ### <a name="remarks"></a>Note
 
-Un' *operazione di confronto e scambio atomico* confronta il valore archiviato nell'oggetto a cui punta *Atom* con il valore a cui fa riferimento *Exp*. Se i valori sono uguali, il valore archiviato nell'oggetto a cui punta *atom* viene sostituito con *valore* utilizzando un `read-modify-write` operazione e applicando i vincoli di ordinamento della memoria che sono specificato da *diffgr:ID="Order1*. Se i valori non sono uguali, l'operazione sostituisce il valore a cui punta *Exp* con il valore archiviato nell'oggetto a cui punta *Atom* e applica i vincoli di ordinamento della memoria che sono specificato da *Order2*.
+Un' *operazione di confronto e scambio atomico* confronta il valore archiviato nell'oggetto a cui punta *Atom* rispetto al valore a cui punta *Exp*. Se i valori sono uguali, il valore archiviato nell'oggetto a cui punta *Atom* viene sostituito con *value* usando un' `read-modify-write` operazione e applicando i vincoli dell'ordine di memoria specificati da *Order1*. Se i valori non sono uguali, l'operazione sostituisce il valore a cui fa riferimento *Exp* con il valore archiviato nell'oggetto a cui punta *Atom* e applica i vincoli dell'ordine di memoria specificati da *Order2*.
 
 ## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
 
@@ -188,13 +188,13 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `Ty`.
 
-*Exp*<br/>
+*Exp*\
 Puntatore a un valore di tipo `Ty`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `Ty`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -229,20 +229,20 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `Ty`.
 
-*Exp*<br/>
+*Exp*\
 Puntatore a un valore di tipo `Ty`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `Ty`.
 
-*Order1*<br/>
+*Order1*\
 Primo argomento [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Order2*<br/>
-Secondo argomento `memory_order`. Il valore di *Order2* non può essere `memory_order_release` oppure `memory_order_acq_rel`, né può essere maggiore del valore di *diffgr:ID="Order1*.
+*Order2*\
+Secondo argomento `memory_order`. Il valore di *Order2* non può `memory_order_release` essere `memory_order_acq_rel`o, né può essere più complesso del valore di *Order1*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -250,11 +250,11 @@ Secondo argomento `memory_order`. Il valore di *Order2* non può essere `memory_
 
 ### <a name="remarks"></a>Note
 
-Entrambe le versioni forte e vulnerabile di un' *operazione di confronto e scambio atomico* garanzia che il nuovo valore non memorizzano se i valori correnti e previsti non sono uguali. La versione sicura garantisce che archivierà il nuovo valore se i valori previsti e correnti sono uguali. La versione vulnerabile a volte può restituire **false** e archivia il nuovo valore anche se la corrente e i valori previsti sono uguali. In altre parole, la funzione restituirà **false**, ma un'analisi successiva del valore previsto potrebbe rivelare che non è stato modificato e pertanto deve avere confrontato come uguali.
+Sia le versioni solide che quelle deboli di un' *operazione di confronto e scambio atomiche* garantiscono che non archivino il nuovo valore se i valori previsti e correnti non sono uguali. Il sapore forte garantisce che il nuovo valore venga archiviato se i valori previsti e correnti sono uguali. La caratteristica debole può talvolta restituire **false** e non archiviare il nuovo valore anche se i valori correnti e previsti sono uguali. In altre parole, la funzione restituirà **false**, ma un esame successivo del valore previsto potrebbe rivelare che non è stato modificato e pertanto deve essere confrontato come uguale.
 
 ## <a name="atomic_exchange"></a>  atomic_exchange
 
-Viene utilizzato *valore* sostituire il valore archiviato di *Atom*.
+USA *value* per sostituire il valore archiviato di *Atom*.
 
 ```cpp
 template <class T>
@@ -266,23 +266,23 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `Ty`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `Ty`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore archiviato di *Atom* prima dello scambio.
+Valore archiviato di *Atom* prima di Exchange.
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_exchange` la funzione esegue un `read-modify-write` operazione per scambiare il valore archiviato in *Atom* con *valore*usando il `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+La `atomic_exchange` `memory_order_seq_cst`funzione esegue un' `read-modify-write` operazione per scambiare il valore archiviato in *Atom* con *value*, usando [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_exchange_explicit"></a>  atomic_exchange_explicit
 
-Sostituisce il valore archiviato di *Atom* con *valore*.
+Sostituisce il valore archiviato di *Atom* con *value*.
 
 ```cpp
 template <class Ty>
@@ -300,22 +300,22 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `Ty`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `Ty`.
 
-*Order*<br/>
+*Ordine*\
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore archiviato di *Atom* prima dello scambio.
+Valore archiviato di *Atom* prima di Exchange.
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_exchange_explicit` la funzione esegue un `read-modify-write` operazione per scambiare il valore archiviato in *Atom* con *valore*, nei vincoli di memoria specificati da  *Ordine*.
+La `atomic_exchange_explicit` funzione esegue un' `read-modify-write` operazione per scambiare il valore archiviato in *Atom* con *value*, all'interno dei vincoli di memoria specificati dall' *ordine*.
 
 ## <a name="atomic_fetch_add"></a>  atomic_fetch_add
 
@@ -330,10 +330,10 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un puntatore nel tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -342,9 +342,9 @@ Il valore del puntatore contenuto nell'oggetto atomico immediatamente prima di e
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_add` la funzione esegue un `read-modify-write` operazione per aggiungere in modo atomico *valore* al valore archiviato nella *Atom*, usando il `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum)vincolo.
+La `atomic_fetch_add` funzione esegue un' `read-modify-write` operazione per aggiungere in modo atomico un *valore* al valore archiviato in *Atom*, usando `memory_order_seq_cst`il vincolo [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
-Quando è il tipo atomic `atomic_address`, *valore* ha tipo `ptrdiff_t` e l'operazione considera il puntatore archiviato come un `char *`.
+Quando il tipo atomico è `atomic_address`, il *valore* è `ptrdiff_t` di tipo e l' `char *`operazione considera il puntatore archiviato come.
 
 Questa operazione è anche sottoposta a overload per i tipi integrali:
 
@@ -374,10 +374,10 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un puntatore nel tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -386,7 +386,7 @@ Il valore del puntatore contenuto nell'oggetto atomico immediatamente prima di e
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_add_explicit` funzione esegue un `read-modify-write` operazione per aggiungere in modo atomico *valore* al valore archiviato in *Atom*, entro il [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vincoli specificati dal `Order`.
+La `atomic_fetch_add_explicit` funzione esegue un' `read-modify-write` operazione per aggiungere in modo atomico un *valore* al valore archiviato in *Atom*, all'interno dei vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati da `Order`.
 
 Quando il tipo atomico è `atomic_address`, `Value` è di tipo `ptrdiff_t` e l'operazione considera il puntatore archiviato come `char *`.
 
@@ -417,10 +417,10 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `T`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -429,7 +429,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_and` la funzione esegue un `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un bit per bit `and` dei *valore* e il valore corrente archiviato in *Atom*, usando i `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vincolo.
+La `atomic_fetch_and` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un `and` *valore* bit per bit di `memory_order_seq_cst`e il valore corrente archiviato in *Atom*, usando [memory_order ](../standard-library/atomic-enums.md#memory_order_enum)vincolo.
 
 ## <a name="atomic_fetch_and_explicit"></a>  atomic_fetch_and_explicit
 
@@ -451,13 +451,13 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `T`.
 
-*Order*<br/>
+*Ordine*\
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
@@ -466,7 +466,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_and_explicit` la funzione esegue un `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un bit per bit `and` dei *valore* e il valore corrente archiviato in *Atom*, nell'ambito dei vincoli di memoria specificati da *ordine*.
+La `atomic_fetch_and_explicit` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un `and` *valore* bit per bit di e il valore corrente archiviato in *Atom*, all'interno dei vincoli di memoria specificati. in base all' *ordine*.
 
 ## <a name="atomic_fetch_or"></a>  atomic_fetch_or
 
@@ -481,10 +481,10 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `T`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -493,7 +493,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_or` la funzione esegue un `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un bit per bit `or` dei *valore* e il valore corrente archiviato in *Atom*, usando i `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+La `atomic_fetch_or` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un `or` *valore* bit per bit di `memory_order_seq_cst`e il valore corrente archiviato in *Atom*, usando [memory_order ](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_or_explicit"></a>  atomic_fetch_or_explicit
 
@@ -515,13 +515,13 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `T`.
 
-*Order*<br/>
+*Ordine*\
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
@@ -530,7 +530,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_or_explicit` la funzione esegue un `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un bit per bit `or` dei *valore* e il valore corrente archiviato in *Atom*, all'interno di [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vincoli specificati da *ordine*.
+La `atomic_fetch_or_explicit` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un `or` *valore* bit per bit di e il valore corrente archiviato in *Atom*, entro i vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificato dall' *ordine*.
 
 ## <a name="atomic_fetch_sub"></a>  atomic_fetch_sub
 
@@ -550,10 +550,10 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un puntatore nel tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -562,9 +562,9 @@ Il valore del puntatore contenuto nell'oggetto atomico immediatamente prima di e
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_sub` la funzione esegue un `read-modify-write` operazione per sottrarre in modo atomico *valore* dal valore archiviato nella *Atom*, usando il `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vincolo.
+La `atomic_fetch_sub` funzione esegue un' `read-modify-write` operazione per sottrarre in modo atomico il *valore* dal valore archiviato in *Atom*, `memory_order_seq_cst`usando il vincolo [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
-Quando è il tipo atomic `atomic_address`, *valore* ha tipo `ptrdiff_t` e l'operazione considera il puntatore archiviato come un `char *`.
+Quando il tipo atomico è `atomic_address`, il *valore* è `ptrdiff_t` di tipo e l' `char *`operazione considera il puntatore archiviato come.
 
 Questa operazione è anche sottoposta a overload per i tipi integrali:
 
@@ -592,10 +592,10 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un puntatore nel tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -604,9 +604,9 @@ Il valore del puntatore contenuto nell'oggetto atomico immediatamente prima di e
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_sub_explicit` funzione esegue un `read-modify-write` operazione per sottrarre in modo atomico *valore* dal valore archiviato nella *Atom*, entro il [memory_order](../standard-library/atomic-enums.md#memory_order_enum) i vincoli specificati da `Order`.
+La `atomic_fetch_sub_explicit` funzione esegue un' `read-modify-write` operazione per sottrarre in modo atomico il *valore* dal valore archiviato in *Atom*, all'interno dei vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati `Order`da.
 
-Quando è il tipo atomic `atomic_address`, *valore* ha tipo `ptrdiff_t` e l'operazione considera il puntatore archiviato come un `char *`.
+Quando il tipo atomico è `atomic_address`, il *valore* è `ptrdiff_t` di tipo e l' `char *`operazione considera il puntatore archiviato come.
 
 Questa operazione è anche sottoposta a overload per i tipi integrali:
 
@@ -636,10 +636,10 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `T`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -648,7 +648,7 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_xor` la funzione esegue un `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un bit per bit `exclusive or` dei *valore* e il valore corrente archiviato in *Atom*, usando i `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+La `atomic_fetch_xor` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un `exclusive or` *valore* bit per bit di `memory_order_seq_cst`e il valore corrente archiviato in *Atom*, usando [memory_order ](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_fetch_xor_explicit"></a>  atomic_fetch_xor_explicit
 
@@ -670,13 +670,13 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `T`.
 
-*Order*<br/>
+*Ordine*\
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
@@ -685,11 +685,11 @@ Il valore contenuto nell'oggetto atomico immediatamente prima di eseguire l'oper
 
 ### <a name="remarks"></a>Note
 
-Il `atomic_fetch_xor_explicit` la funzione esegue un `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un bit per bit `exclusive or` dei *valore* e il valore corrente archiviato in *Atom*, all'interno di [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vincoli specificati da *ordine*.
+La `atomic_fetch_xor_explicit` funzione esegue un' `read-modify-write` operazione per sostituire il valore archiviato di *Atom* con un `exclusive or` *valore* bit per bit di e il valore corrente archiviato in *Atom*, entro i vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati dall' *ordine*.
 
 ## <a name="atomic_flag_clear"></a>  atomic_flag_clear
 
-Set il **bool** flag in un [atomic_flag](../standard-library/atomic-flag-structure.md) oggetto **false**, entro il `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Imposta il flag **bool** in un [oggetto atomic_flag](../standard-library/atomic-flag-structure.md) su  `memory_order_seq_cst`false, all'interno di [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
@@ -698,12 +698,12 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Flag*<br/>
+*Bandiera*\
 Puntatore a un oggetto `atomic_flag` .
 
 ## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
 
-Imposta il **bool** flag in un [atomic_flag](../standard-library/atomic-flag-structure.md) dell'oggetto a **false**, specificata [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vincoli.
+Imposta il flag **bool** in un oggetto [atomic_flag](../standard-library/atomic-flag-structure.md) su **false**, entro i vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati.
 
 ```cpp
 inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -712,15 +712,15 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Parametri
 
-*Flag*<br/>
+*Bandiera*\
 Puntatore a un oggetto `atomic_flag` .
 
-*Order*<br/>
+*Ordine*\
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
 
-Set il **bool** flag in un [atomic_flag](../standard-library/atomic-flag-structure.md) oggetto **true**, entro i limiti del `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Imposta il flag **bool** in un oggetto [atomic_flag](../standard-library/atomic-flag-structure.md) su **true**, `memory_order_seq_cst`entro i vincoli di [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ```cpp
 inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
@@ -729,16 +729,16 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Flag*<br/>
+*Bandiera*\
 Puntatore a un oggetto `atomic_flag` .
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore iniziale della *Flag*.
+Valore iniziale del *flag*.
 
 ## <a name="atomic_flag_test_and_set_explicit"></a>  atomic_flag_test_and_set_explicit
 
-Imposta il **bool** flag in un [atomic_flag](../standard-library/atomic-flag-structure.md) dell'oggetto a **true**, specificata [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vincoli.
+Imposta il flag **bool** in un oggetto [atomic_flag](../standard-library/atomic-flag-structure.md) su **true**, entro i vincoli [memory_order](../standard-library/atomic-enums.md#memory_order_enum) specificati.
 
 ```cpp
 inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -747,15 +747,15 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Parametri
 
-*Flag*<br/>
+*Bandiera*\
 Puntatore a un oggetto `atomic_flag` .
 
-*Order*<br/>
+*Ordine*\
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore iniziale della *Flag*.
+Valore iniziale del *flag*.
 
 ## <a name="atomic_init"></a>  atomic_init
 
@@ -770,10 +770,10 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `Ty`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `Ty`.
 
 ### <a name="remarks"></a>Note
@@ -793,12 +793,12 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che archivia un valore di tipo `T`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se le operazioni atomiche sui *Atom* sono senza blocco; in caso contrario, **false**.
+**true** se le operazioni atomiche su *Atom* sono senza blocco; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -817,7 +817,7 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che contiene un valore di tipo `Ty`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -841,10 +841,10 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che contiene un valore di tipo `Ty`.
 
-*Order*<br/>
+*Ordine*\
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Non usare `memory_order_release` o `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -861,12 +861,12 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Order*<br/>
+*Ordine*\
 Un vincolo di ordinamento della memoria che determina il tipo di limite.
 
 ### <a name="remarks"></a>Note
 
-Il *ordine* argomento determina il tipo di limite.
+L'argomento *Order* determina il tipo di recinzione.
 
 |||
 |-|-|
@@ -890,15 +890,15 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto atomico che contiene un valore di tipo `Ty`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `Ty`.
 
 ### <a name="remarks"></a>Note
 
-`atomic_store` Archivia *valore* nell'oggetto a cui punta *Atom*, entro i `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) vincolo.
+`atomic_store`Archivia il *valore* nell'oggetto a cui punta *Atom*, all'interno del `memory_order_seq_cst`vincolo [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
 
 ## <a name="atomic_store_explicit"></a>  atomic_store_explicit
 
@@ -920,18 +920,18 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>Parametri
 
-*Formato Atom*<br/>
+*Atom*\
 Puntatore a un oggetto `atomic` che contiene un valore di tipo `Ty`.
 
-*Valore*<br/>
+*Valore*\
 Valore di tipo `Ty`.
 
-*Order*<br/>
+*Ordine*\
 Un [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Non usare `memory_order_consume`, `memory_order_acquire` o `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Note
 
-`atomic_store` Archivia *valore* nell'oggetto a cui punta *Atom*, entro il `memory_order` specificato da *Order*.
+`atomic_store`Archivia il *valore* nell'oggetto a cui punta *Atom* `memory_order` , all'interno di specificato dall' *ordine*.
 
 ## <a name="atomic_thread_fence"></a>  atomic_thread_fence
 
@@ -943,12 +943,12 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Order*<br/>
+*Ordine*\
 Un vincolo di ordinamento della memoria che determina il tipo di limite.
 
 ### <a name="remarks"></a>Note
 
-Il *ordine* argomento determina il tipo di limite.
+L'argomento *Order* determina il tipo di recinzione.
 
 |||
 |-|-|
@@ -970,13 +970,13 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Arg*<br/>
+*ARG*\
 Valore di tipo `Ty`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore restituito sarà *Arg*. La valutazione del *Arg* non mantiene una dipendenza per la chiamata di funzione. Interrompendo una possibile catena di dipendenze, la funzione potrebbe consentire al compilatore di generare codice più efficiente.
+Il valore restituito è *arg*. La valutazione di *arg* non porta una dipendenza dalla chiamata di funzione. Interrompendo una possibile catena di dipendenze, la funzione potrebbe consentire al compilatore di generare codice più efficiente.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<atomic>](../standard-library/atomic.md)<br/>
+[\<atomic>](../standard-library/atomic.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-ms.openlocfilehash: 1036a3756a736ee3916ed9fca84aa935bb0ba2cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80592a6fca274533a798b2f5a2459d336ee2c301
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336829"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452728"
 ---
 # <a name="isdestructible-class"></a>Classe is_destructible
 
@@ -26,12 +26,12 @@ struct is_destructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo distruttibile, in caso contrario, contiene false. I tipi destructible sono tipi di riferimento, tipi di oggetto e tipi in cui per un tipo `U` equivalente a `remove_all_extents_t<T>` , l'operando non valutato `std::declval<U&>.~U()` risulta ben formato. Altri tipi, inclusi i tipi incompleti, **void**e tipi di funzione, non sono destructible.
+Un'istanza del predicato di tipo include true se il tipo *T* è un tipo distruttibile; in caso contrario, include false. I tipi destructible sono tipi di riferimento, tipi di oggetto e tipi in cui per un tipo `U` equivalente a `remove_all_extents_t<T>` , l'operando non valutato `std::declval<U&>.~U()` risulta ben formato. Altri tipi, inclusi i tipi incompleti, **void**e i tipi di funzione, non sono tipi distruttibili.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,4 +41,4 @@ Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo distruttib
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

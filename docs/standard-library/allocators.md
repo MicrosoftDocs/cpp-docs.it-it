@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: 1f11d1b007a728b32d27afd733df271f361864e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252727"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457538"
 ---
 # <a name="allocators"></a>Allocatori
 
@@ -28,7 +28,7 @@ La libreria standard C++ offre un'implementazione predefinita per un allocatore.
 
 ## <a name="writing-your-own-allocator-c11"></a>Scrittura di un codificatore personalizzato (C++11)
 
-L'allocatore predefinito Usa **nuove** e **eliminare** per allocare e deallocare la memoria. Se si vuole usare un altro metodo di allocazione della memoria, ad esempio l'uso di memoria condivisa, è necessario creare un allocatore personale. Se si usa C++ 11 ed è necessario scrivere un nuovo allocatore personalizzato, renderlo un allocatore minimo se possibile. Anche se è già stato implementato un allocatore obsoleto, provare a modificarlo in modo che diventi un *allocatore minimo* per sfruttare il più efficiente metodo `construct()` che verrà visualizzato automaticamente.
+L'allocatore predefinito usa **New** e **Delete** per allocare e deallocare memoria. Se si vuole usare un altro metodo di allocazione della memoria, ad esempio l'uso di memoria condivisa, è necessario creare un allocatore personale. Se si usa C++ 11 ed è necessario scrivere un nuovo allocatore personalizzato, renderlo un allocatore minimo se possibile. Anche se è già stato implementato un allocatore obsoleto, provare a modificarlo in modo che diventi un *allocatore minimo* per sfruttare il più efficiente metodo `construct()` che verrà visualizzato automaticamente.
 
 Un allocatore minimo richiede molto meno boilerplate e consente di concentrarsi sulle funzioni membro `allocate` e `deallocate` che eseguono tutto il lavoro. Durante la creazione di un allocatore minimo, non implementare i membri tranne quelli illustrati nell'esempio riportato di seguito:
 
@@ -123,4 +123,4 @@ Per altre informazioni sulle definizioni dei tipi e sui metodi, vedere [Classe a
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

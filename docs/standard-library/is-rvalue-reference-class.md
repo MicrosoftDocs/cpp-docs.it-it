@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_rvalue_reference class
 - is_rvalue_reference
 ms.assetid: 40a97072-7b5c-4274-9154-298d3dcf064a
-ms.openlocfilehash: ea3be02db2a4a840ed8f8b8a253d7409c26cf759
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58cbf5709eda4f41d2edab7ddac1e0a04a9c74cf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413593"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455676"
 ---
 # <a name="isrvaluereference-class"></a>Classe is_rvalue_reference
 
@@ -27,12 +27,12 @@ struct is_rvalue_reference;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un [riferimento rvalue](../cpp/rvalue-reference-declarator-amp-amp.md).
+Un'istanza di questo predicato di tipo include true se il tipo *Ty* è un [riferimento rvalue](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -42,5 +42,5 @@ Un'istanza del tipo predicato contiene true se il tipo *Ty* è un [riferimento r
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Elementi Lvalue e Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Elementi Lvalue e Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)

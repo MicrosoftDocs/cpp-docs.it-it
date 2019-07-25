@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_function_pointer class
 - is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
-ms.openlocfilehash: 0eb758977abf889a7d5ec8cdec9213980493ba2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f51c389e86f2d0550a6418d04080f40f4bf4204
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351930"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456173"
 ---
 # <a name="ismemberfunctionpointer-class"></a>Classe is_member_function_pointer
 
@@ -27,12 +27,12 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un puntatore a funzione membro o un `cv-qualified` puntatore a funzione membro, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un puntatore a una funzione `cv-qualified` membro o un puntatore a una funzione membro; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -85,5 +85,5 @@ is_member_function_pointer<int (functional::*)()> == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_member_pointer](../standard-library/is-member-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_member_pointer](../standard-library/is-member-pointer-class.md)

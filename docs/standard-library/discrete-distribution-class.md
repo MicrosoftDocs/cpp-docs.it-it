@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce668ebfdafc4a53bfc71ecf1f2fa76abb1c7532
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413853"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454378"
 ---
 # <a name="discretedistribution-class"></a>Classe discrete_distribution
 
@@ -72,8 +72,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*IntType*<br/>
-Il tipo di risultato integer, valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*IntType*\
+Il tipo di risultato Integer, il valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -200,28 +200,28 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*firstW*<br/>
+*firstW*\
 Primo iteratore nell'elenco da cui costruire la distribuzione.
 
-*lastW*<br/>
+*lastW*\
 Ultimo iteratore nell'elenco da cui costruire la distribuzione (non comprensivo, perché gli iteratori usano un elemento vuoto per la fine).
 
-*weightlist*<br/>
+*spessore*\
 Oggetto [initializer_list](../cpp/initializers.md) dal quale costruire la distribuzione.
 
-*count*<br/>
+*conteggio*\
 Numero di elementi nell'intervallo di distribuzioni. Se `count==0`, equivale al costruttore predefinito (genera sempre zero).
 
-*low*<br/>
+*basso*\
 Valore minimo dell'intervallo di distribuzioni.
 
-*high*<br/>
+*alta*\
 Valore massimo dell'intervallo di distribuzioni.
 
-*weightfunc*<br/>
-Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il valore restituito sia il parametro deve essere convertibile in **doppie**.
+*weightfunc*\
+Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il parametro e il valore restituito devono essere convertibili in **Double**.
 
-*parm*<br/>
+*parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -230,12 +230,12 @@ Il costruttore predefinito costruisce un oggetto il cui valore di probabilità a
 
 Il costruttore di intervalli dell'iteratore con i parametri *firstW* e *lastW* costruisce un oggetto di distribuzione usando i valori di peso presi dagli iteratori nella sequenza dell'intervallo [*firstW*, *lastW*).
 
-Il costruttore di elenchi di inizializzatori con un *weightlist* parametro crea un oggetto di distribuzione con i pesi dall'elenco di inizializzatori *weightlist*.
+Il costruttore dell'elenco di inizializzatori che dispone di un parametro *Weight* list costruisce un oggetto di distribuzione con i pesi dedotti dall'elenco degli inizializzatori *.*
 
 Il costruttore con i parametri *count*, *low*, *high* e *weightfunc* costruisce un oggetto di distribuzione inizializzato in base alle regole seguenti:
 
 - Se *count* < 1, **n** = 1 e come tale è equivalente al costruttore predefinito, viene sempre generato zero.
-- Se *count* > 0, **n** = *count*. Fornito **1!d** = (*elevata* - *bassa*) / **n** è maggiore di zero, mediante **1!d** uniform intervalli secondari, ogni peso viene assegnato come segue: `weight[k] = weightfunc(x)`, dove **x** = *bassa* + **k**  *  **1!d** + **1!d** / 2, per **k** = 0,..., **n** - 1.
+- Se *count* > 0, **n** = *count*. Fornito **d** = (*High* - *low*)/ **n** è maggiore di zero **, usando le** unità secondarie uniformi, ogni peso viene assegnato come `weight[k] = weightfunc(x)`segue:, dove **x** = *low*  +  **k**    d/2, per k = 0,..., n-1. +  * 
 
 Il costruttore con un parametro `param_type` *parm* costruisce un oggetto di distribuzione usando *parm* come struttura del parametro archiviato.
 
@@ -268,28 +268,28 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*firstW*<br/>
+*firstW*\
 Primo iteratore nell'elenco da cui costruire la distribuzione.
 
-*lastW*<br/>
+*lastW*\
 Ultimo iteratore nell'elenco da cui costruire la distribuzione (non comprensivo, perché gli iteratori usano un elemento vuoto per la fine).
 
-*weightlist*<br/>
+*spessore*\
 Oggetto [initializer_list](../cpp/initializers.md) dal quale costruire la distribuzione.
 
-*count*<br/>
+*conteggio*\
 Numero di elementi nell'intervallo di distribuzioni. Se *count* è uguale a 0, equivale al costruttore predefinito, vale a dire che genera sempre zero.
 
-*low*<br/>
+*basso*\
 Valore minimo dell'intervallo di distribuzioni.
 
-*high*<br/>
+*alta*\
 Valore massimo dell'intervallo di distribuzioni.
 
-*weightfunc*<br/>
-Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il valore restituito sia il parametro deve essere convertibile in **doppie**.
+*weightfunc*\
+Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il parametro e il valore restituito devono essere convertibili in **Double**.
 
-*right*<br/>
+*Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
@@ -298,4 +298,4 @@ Questo pacchetto di parametri può essere passato a `operator()` per generare il
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

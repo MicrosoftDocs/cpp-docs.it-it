@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d33b67ed17a95b6717878aaca2f61682b1807c15
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159860"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454011"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -26,7 +26,7 @@ Questa intestazione usa il runtime di concorrenza (ConcRT) in modo che sia utili
 ## <a name="remarks"></a>Note
 
 > [!NOTE]
-> Nel codice compilato usando **/clr**, questa intestazione è bloccata.
+> Nel codice compilato utilizzando **/CLR**, questa intestazione è bloccata.
 
 Un *provider asincrono* archivia il risultato di una chiamata di funzione. Un *oggetto restituito asincrono* viene usato per recuperare il risultato di una chiamata di funzione. Uno *stato asincrono associato* consente la comunicazione tra un provider asincrono e uno o più oggetti restituiti asincroni.
 
@@ -38,15 +38,15 @@ Lo stato asincrono associato è *ready* solo se il relativo provider asincrono h
 
 La funzione modello `async` e le classi modello `promise` e `packaged_task` sono provider asincroni. Le classi modello `future` e `shared_future` descrivono gli oggetti restituiti asincroni.
 
-Ognuna delle classi modello `promise`, `future`, e `shared_future` ha una specializzazione per il tipo **void** e una specializzazione parziale per l'archiviazione e recupero di un valore per riferimento. Queste specializzazioni si differenziano dal modello principale solo nelle firme e nella semantica delle funzioni che archiviano e recuperano il valore restituito.
+Ognuna delle classi `promise`modello, `future`, e `shared_future` ha una specializzazione per il tipo **void** e una specializzazione parziale per l'archiviazione e il recupero di un valore per riferimento. Queste specializzazioni si differenziano dal modello principale solo nelle firme e nella semantica delle funzioni che archiviano e recuperano il valore restituito.
 
-Le classi modello `future` e `shared_future` non bloccano mai nei relativi distruttori, eccetto in un caso che viene mantenuto per compatibilità con le versioni precedenti: A differenza di tutti gli altri dei "future", per un `future`, o l'ultima `shared_future`, che è collegato a un'attività avviata con `std::async`, il distruttore si blocca se l'attività non è stata completata; vale a dire, si blocca se il thread non ha ancora chiamato `.get()` o `.wait()`e l'attività è ancora in esecuzione. La seguente nota di usabilità è stato aggiunto alla descrizione di `std::async` nella bozza di standard: "[Nota: Se una future ottenuta da std::async viene spostata all'esterno dell'ambito locale, altro codice che usa il futuro deve tenere presente che il distruttore della prossima può bloccarsi per lo stato condiviso di diventare ready. — nota finale] "In tutti gli altri casi `future` e `shared_future` i distruttori sono necessari e vengono garantiti si blocca mai.
+Le classi `future` modello e `shared_future` non si bloccano mai nei relativi distruttori, tranne che in un caso che viene mantenuto per compatibilità con le versioni precedenti: A differenza di tutti gli altri futuri, per `future`un, o l' `shared_future`ultimo, associato a un'attività avviata con `std::async`, il distruttore si blocca se l'attività non è stata completata, ovvero si blocca se il thread non ha ancora chiamato `.get()` o `.wait()`e l'attività è ancora in esecuzione. La seguente nota di usabilità è stata aggiunta alla descrizione di `std::async` nello standard bozza: "[Nota: Se un futuro ottenuto da std:: async viene spostato al di fuori dell'ambito locale, altro codice che usa il futuro deve tenere presente che il distruttore futuro potrebbe bloccarsi affinché lo stato condiviso diventi pronto.-end note] "in tutti gli altri casi `future` e `shared_future` i distruttori sono obbligatori e non vengono mai bloccati.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>Classi
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Classe future](../standard-library/future-class.md)|Descrive un oggetto restituito asincrono.|
 |[Classe future_error](../standard-library/future-error-class.md)|Descrive un oggetto eccezione che può essere generato dai metodi dei tipi che gestiscono gli oggetti `future`.|
@@ -56,14 +56,14 @@ Le classi modello `future` e `shared_future` non bloccano mai nei relativi distr
 
 ### <a name="structures"></a>Strutture
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Struttura is_error_code_enum](../standard-library/is-error-code-enum-structure.md)|Specializzazione che indica che `future_errc` è adatto per l'archiviazione di un oggetto `error_code`.|
 |[Struttura uses_allocator](../standard-library/uses-allocator-structure.md)|Specializzazione che restituisce sempre true.|
 
 ### <a name="functions"></a>Funzioni
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|Rappresenta un provider asincrono.|
 |[future_category](../standard-library/future-functions.md#future_category)|Restituisce un riferimento all'oggetto `error_category` che caratterizza gli errori associati agli oggetti `future`.|
@@ -73,7 +73,7 @@ Le classi modello `future` e `shared_future` non bloccano mai nei relativi distr
 
 ### <a name="enumerations"></a>Enumerazioni
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Fornisce i nomi simbolici per tutti gli errori segnalati dalla classe `future_error`.|
 |[future_status](../standard-library/future-enums.md#future_status)|Fornisce i nomi simbolici per i motivi che una funzione di attesa temporizzata può restituire.|
@@ -81,4 +81,4 @@ Le classi modello `future` e `shared_future` non bloccano mai nei relativi distr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

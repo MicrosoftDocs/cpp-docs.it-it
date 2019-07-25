@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_constructible
 ms.assetid: 8be3f927-283e-4d67-95a5-8bf5dc4e7a3d
-ms.openlocfilehash: 9ea11d54d49bf8f6ae6416f9663c2593cc66ea3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ec4fc3ef5d9a799d5d77124870fbb337061c94c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383607"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456001"
 ---
 # <a name="isnothrowconstructible-class"></a>Classe is_nothrow_constructible
 
@@ -26,15 +26,15 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
-*Args*<br/>
-I tipi di argomento in modo che corrispondano in un costruttore di *T*.
+*Args*\
+Tipi di argomento per cui trovare una corrispondenza in un costruttore di *T*.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* è costruibile mediante i tipi di argomento in *Args*e il costruttore è nota come dal compilatore non genera eccezioni; in caso contrario, contiene false. Tipo di *T* è costruibile se la definizione di variabile `T t(std::declval<Args>()...);` sia ben formato. Entrambe *T* e tutti i tipi negli *Args* devono essere tipi completi, **void**, o matrici di valori associati sconosciuti.
+Un'istanza del predicato di tipo include true se il tipo *T* è costruibile usando i tipi di argomento in *args*e il costruttore è noto dal compilatore per non generare; in caso contrario, il valore è false. Il tipo *T* è costruibile se la definizione `T t(std::declval<Args>()...);` della variabile è ben formata. Sia *T* che tutti i tipi in *args* devono essere tipi completi, **void**o matrici di associazione sconosciuta.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -44,4 +44,4 @@ Un'istanza del tipo predicato contiene true se il tipo *T* è costruibile median
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

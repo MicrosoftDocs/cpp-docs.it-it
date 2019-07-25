@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411955"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459915"
 ---
 # <a name="timedmutex-class"></a>Classe timed_mutex
 
@@ -35,7 +35,7 @@ Rappresenta un *tipo mutex programmato*. Gli oggetti di questo tipo vengono usat
 class timed_mutex;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -46,7 +46,7 @@ class timed_mutex;
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[lock](#lock)|Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.|
 |[try_lock](#try_lock)|Tenta di ottenere proprietà di `mutex` senza bloccare.|
@@ -56,7 +56,7 @@ class timed_mutex;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<mutex >
+**Intestazione:** \<> mutex
 
 **Spazio dei nomi:** std
 
@@ -102,7 +102,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene correttamente la proprietà del `mutex`; in caso contrario, **false**.
+**true** se il metodo ottiene correttamente la proprietà di `mutex`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -119,12 +119,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parametri
 
-*Rel_time*<br/>
+*Rel_time*\
 Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica il periodo di tempo massimo per cui il metodo può tentare di ottenere la proprietà del `mutex`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene correttamente la proprietà del `mutex`; in caso contrario, **false**.
+**true** se il metodo ottiene correttamente la proprietà di `mutex`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -143,12 +143,12 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parametri
 
-*Abs_time*<br/>
+*Abs_time*\
 Momento specifico che indica la soglia oltre la quale il metodo non tenta più di ottenere la proprietà di `mutex`.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il metodo ottiene correttamente la proprietà del `mutex`; in caso contrario, **false**.
+**true** se il metodo ottiene correttamente la proprietà di `mutex`; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -168,5 +168,5 @@ Se il thread chiamante non è proprietario di `mutex`, il comportamento non è d
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

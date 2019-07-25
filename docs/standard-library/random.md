@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5738a1ea5ab950466f347090649e72471edf5608
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240410"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458298"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,12 +19,12 @@ Definisce strutture per la generazione casuale di numeri, permettendo la creazio
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione**: \<casuale >
+**Intestazione**: \<> casuale
 
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Il \<casuale > Usa libreria di ' #include < initializer_list >' istruzione.
+> La \<libreria > casuale utilizza l'istruzione ' #include < initializer_list >'.
 
 ## <a name="summary"></a>Riepilogo
 
@@ -42,7 +42,7 @@ Questi collegamenti permettono di passare alle sezioni principali dell'articolo:
 
 ### <a name="quick-tips"></a>Suggerimenti rapidi
 
-Di seguito sono riportati alcuni suggerimenti da tenere presenti quando si usa \<random >:
+Ecco alcuni suggerimenti da tenere presenti quando si usa \<> casuale:
 
 - Nella maggior parte dei casi, i generatori URNG producono bit non elaborati che devono essere modellati da distribuzioni. Un'eccezione è costituita da [std::shuffle()](../standard-library/algorithm-functions.md#shuffle), poiché usa direttamente un generatore URNG.
 
@@ -52,7 +52,7 @@ Di seguito sono riportati alcuni suggerimenti da tenere presenti quando si usa \
 
 - L'associazione più utile per la maggior parte delle applicazioni è costituita dal motore `mt19937` con `uniform_int_distribution`, come mostrato nell'[esempio di codice](#code) più avanti in questo articolo.
 
-Esistono diverse opzioni disponibili dal \<random > intestazione e uno di essi è preferibile alla funzione Runtime C obsoleta `rand()`. Per informazioni sui problemi con relativi `rand()` e in che modo \<random > li gestisce, vedere [questo video](https://go.microsoft.com/fwlink/p/?linkid=397615).
+È possibile scegliere tra molte opzioni nell' \<intestazione > casuale ed è preferibile la funzione `rand()`di runtime C obsoleta. Per informazioni sui problemi relativi a e `rand()` sul modo \<in cui Random > risolve questi difetti, vedere [questo video](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
 ## <a name="code"></a> Esempi
 
@@ -215,13 +215,13 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
 
 I generatori URNG sono spesso descritti tramite e proprietà seguenti:
 
-1. **Durata periodo**: Numero di iterazioni necessarie per la ripetizione della sequenza di numeri generati. È preferibile specificare un periodo lungo.
+1. **Lunghezza periodo**: Il numero di iterazioni necessarie per la ripetizione della sequenza di numeri generati. È preferibile specificare un periodo lungo.
 
-2. **Prestazioni**: Rapidità con cui è possibile generare i numeri e quantità di memoria necessaria. È preferibile che il valore sia basso.
+2. **Prestazioni**: La velocità con cui è possibile generare i numeri e la quantità di memoria necessaria. È preferibile che il valore sia basso.
 
-3. **Qualità**: Casualità true della sequenza generata. Questa proprietà è definita spesso "*casualità*".
+3. **Qualità**: Quanto si avvicina ai numeri casuali reali la sequenza generata è. Questa proprietà è definita spesso "*casualità*".
 
-Le sezioni seguenti elencano i generatori di numeri casuali (generatori Urng) forniti nel \<random > dell'intestazione.
+Le sezioni seguenti elencano i generatori di numeri casuali uniformi ( \<generatori URNG) forniti nell'intestazione > casuale.
 
 ####  <a name="rd"></a> Generatore non deterministico
 
@@ -281,7 +281,7 @@ Per la creazione di istanze di motori e adattatori del motore. Per altre informa
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24` motore RANLUX 24 bit (Martin Lüscher e Fred James, 1994).
+- `ranlux24`motore RANLUX a 24 bit (Martin Lüscher e Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
@@ -293,7 +293,7 @@ Per la creazione di istanze di motori e adattatori del motore. Per altre informa
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48` motore RANLUX 48 bit (Martin Lüscher e Fred James, 1994).
+- `ranlux48`motore RANLUX a 48 bit (Martin Lüscher e Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
@@ -329,7 +329,7 @@ Gli adattatori del motore sono modelli che adattano altri motori (di base). In g
 
 ###  <a name="distributions"></a> Distribuzioni di numeri casuali
 
-Le sezioni seguenti elencano le distribuzioni disponibili nel \<random > dell'intestazione. Le distribuzioni sono un meccanismo post-elaborazione che usano in genere l'output del generatore URNG come input e distribuiscono l'output in base a una funzione di densità di probabilità statistica definita. Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).
+Nelle sezioni seguenti sono elencate le distribuzioni disponibili nell' \<intestazione > casuale. Le distribuzioni sono un meccanismo post-elaborazione che usano in genere l'output del generatore URNG come input e distribuiscono l'output in base a una funzione di densità di probabilità statistica definita. Per altre informazioni, vedere la sezione [Motori e distribuzioni](#engdist).
 
 #### <a name="uniform-distributions"></a>Distribuzioni uniformi
 
@@ -345,7 +345,7 @@ Le sezioni seguenti elencano le distribuzioni disponibili nel \<random > dell'in
 
 |||
 |-|-|
-|[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produce una distribuzione di Bernoulli **bool** valori.|
+|[Classe bernoulli_distribution](../standard-library/bernoulli-distribution-class.md)|Produce una distribuzione di Bernoulli di valori **bool** .|
 |[Classe binomial_distribution](../standard-library/binomial-distribution-class.md)|Produce una distribuzione binomiale di valori di tipo Integer.|
 |[Classe geometric_distribution](../standard-library/geometric-distribution-class.md)|Produce una distribuzione geometrica di valori di tipo Integer.|
 |[Classe negative_binomial_distribution](../standard-library/negative-binomial-distribution-class.md)|Produce una distribuzione binomiale negativa di valori di tipo Integer.|
@@ -389,7 +389,7 @@ Le sezioni seguenti elencano le distribuzioni disponibili nel \<random > dell'in
 
 ### <a name="utility-functions"></a>Funzioni di utilità
 
-In questa sezione elenca le funzioni di utilità generali disponibili nel \<random > dell'intestazione.
+In questa sezione sono elencate le funzioni di utilità generali \<disponibili nell'intestazione > casuale.
 
 |||
 |-|-|
@@ -397,7 +397,7 @@ In questa sezione elenca le funzioni di utilità generali disponibili nel \<rand
 
 ### <a name="operators"></a>Operatori
 
-In questa sezione vengono elencati gli operatori forniti nel \<casuale > dell'intestazione.
+In questa sezione sono elencati gli operatori disponibili \<nell'intestazione > casuale.
 
 |||
 |-|-|
@@ -408,13 +408,13 @@ In questa sezione vengono elencati gli operatori forniti nel \<casuale > dell'in
 
 ## <a name="engdist"></a> Motori e distribuzioni
 
-Vedere le sezioni seguenti per informazioni su ognuna di queste categorie di classe modello definite in \<random >. Entrambe le categorie di classi di modelli accettano un tipo come argomento e usano i nomi di parametri di modello condivisi per descrivere le proprietà del tipo consentite come tipo di argomento effettivo, come indicato di seguito:
+Per informazioni su ognuna di queste categorie di classi di modelli definite in \<> casuale, vedere le sezioni seguenti. Entrambe le categorie di classi di modelli accettano un tipo come argomento e usano i nomi di parametri di modello condivisi per descrivere le proprietà del tipo consentite come tipo di argomento effettivo, come indicato di seguito:
 
-- `IntType` indica un **brevi**, **int**, **long**, **long long**, **short senza segno**,  **int senza segno**, **long senza segno**, o **long long senza segno**.
+- `IntType`indica una **short**, **int**, **Long**, **Long Long**, **unsigned short**, **unsigned int**, unsigned **Long**o unsigned long long.
 
-- `UIntType` indica **short senza segno**, **unsigned int**, **long senza segno**, oppure **long long senza segno**.
+- `UIntType`indica unsigned **short**, **unsigned int**, unsigned **Long**o unsigned long long.
 
-- `RealType` indica un **float**, **double**, o **long double**.
+- `RealType`indica un valore **float**, **Double**o **long double**.
 
 ### <a name="engines"></a>Motori
 
@@ -498,7 +498,7 @@ In Visual Studio sono disponibili due generatori URNG molto utili, ovvero `mt199
 
 |URNG|Fast|Sicuro a livello di crittografia|Compatibile con seeding|Deterministico|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|Yes|No|Sì|Sì<sup>*</sup>|
+|`mt19937`|Sì|No|Sì|Sì<sup>*</sup>|
 |`random_device`|No|Sì|No|No|
 
 <sup>* Se è fornito un seeding noto.</sup>
@@ -509,4 +509,4 @@ Per definizione, i risultati di `random_device` non sono riproducibili e, come e
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

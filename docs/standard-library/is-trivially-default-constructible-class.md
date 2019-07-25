@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_default_constructible
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
-ms.openlocfilehash: b35458ca280285eb699c9b12b15b705660299ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a5e8afedf3e59d5dafa937af4f7d35343eb7d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413411"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459646"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>Classe is_trivially_default_constructible
 
@@ -26,14 +26,14 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un costruttore semplice, in caso contrario, contiene false.
+Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un costruttore semplice; in caso contrario, contiene false.
 
-Un costruttore predefinito per una classe *Ty* è piuttosto semplice se:
+Un costruttore predefinito per una classe *Ty* è semplice se:
 
 - è un costruttore predefinito dichiarato in modo implicito
 
@@ -55,4 +55,4 @@ Un costruttore predefinito per una classe *Ty* è piuttosto semplice se:
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

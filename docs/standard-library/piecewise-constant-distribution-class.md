@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 0c990953f0cda81366ff2645d3cdf1065850abbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370398"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455236"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>Classe piecewise_constant_distribution
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*<br/>
-Tipo di risultato, il valore predefinito è a virgola mobile **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*\
+Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -248,31 +248,31 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*firstI*<br/>
+*primi*\
 Iteratore di input del primo elemento dell'intervallo di distribuzioni.
 
-*lastI*<br/>
+*ultimi*\
 Iteratore di input dell'ultimo elemento dell'intervallo di distribuzioni.
 
-*firstW*<br/>
+*firstW*\
 Iteratore di input del primo elemento dell'intervallo di pesi.
 
-*intervals*<br/>
+*intervalli*\
 Oggetto [initializer_list](../cpp/initializers.md) con gli intervalli della distribuzione.
 
-*count*<br/>
+*conteggio*\
 Numero di elementi nell'intervallo di distribuzioni.
 
-*xmin*<br/>
+*xmin*\
 Valore minimo dell'intervallo di distribuzioni.
 
-*xmax*<br/>
+*Xmax*\
 Valore massimo dell'intervallo di distribuzioni. Deve essere maggiore di *xmin*.
 
-*weightfunc*<br/>
-Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il valore restituito sia il parametro deve essere convertibile in **doppie**.
+*weightfunc*\
+Oggetto che rappresenta la funzione di probabilità per la distribuzione. Il parametro e il valore restituito devono essere convertibili in **Double**.
 
-*parm*<br/>
+*parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -296,7 +296,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-Costruisce un oggetto di distribuzione con intervalli dall'elenco di inizializzatori *intervalli* e pesi generati dalla funzione *weightfunc*.
+costruisce un oggetto di distribuzione con intervalli dall'elenco di inizializzatori gli *intervalli* e i pesi generati dalla funzione *weightfunc*.
 
 Il costruttore definito come
 ```cpp
@@ -305,14 +305,14 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-Costruisce un oggetto di distribuzione con *conteggio* intervalli distribuiti in modo uniforme in [ `xmin,xmax`], assegnazione di ogni intervallo di pesi in base alla funzione *weightfunc*, e  *weightfunc* deve accettare un parametro e avere un valore restituito, entrambi convertibili in `double`. **Precondizione:** `xmin < xmax`
+costruisce un oggetto di distribuzione con intervalli di *conteggio* distribuiti in modo uniforme `xmin,xmax`su [], assegnando i pesi di ogni intervallo in base alla funzione *weightfunc*e *weightfunc* deve accettare un parametro e avere un valore restituito valore, entrambi convertibili in `double`. **Precondizione:** `xmin < xmax`
 
 Il costruttore definito come
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-Costruisce un oggetto di distribuzione usando *parm* come struttura del parametro archiviato.
+costruisce un oggetto di distribuzione *utilizzando la* struttura di parametri archiviata.
 
 ## <a name="param_type"></a>  piecewise_constant_distribution::param_type
 
@@ -346,5 +346,5 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
-[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)<br/>
+[\<random>](../standard-library/random.md)\
+[piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

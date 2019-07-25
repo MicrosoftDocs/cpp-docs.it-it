@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_floating_point class
 - is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
-ms.openlocfilehash: 242c55cfa6b62e49aa5b73de0aa1a353c16827f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46b74cc9c1d3c6f3a93925d6df46f46d0151e2d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366602"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452584"
 ---
 # <a name="isfloatingpoint-class"></a>Classe is_floating_point
 
@@ -27,14 +27,14 @@ struct is_floating_point;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* mobile tipo di punto o un `cv-qualified` digitare formato a virgola mobile, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo a virgola mobile o un form di un tipo a virgola mobile; in caso contrario, il `cv-qualified` valore è false.
 
-Un tipo a virgola mobile è uno dei **float**, **double**, o **long double**.
+Un tipo a virgola mobile è uno tra **float**, **Double**o **long double**.
 
 ## <a name="example"></a>Esempio
 
@@ -76,5 +76,5 @@ is_floating_point<float> == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_integral](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_integral](../standard-library/is-integral-class.md)

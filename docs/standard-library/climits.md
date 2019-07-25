@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - climits header
 ms.assetid: 7ca8a539-aa45-4ac3-86e8-74513be3f07e
-ms.openlocfilehash: 67cddab4f42d10c4d1c78762c32ed1e4fd1e6175
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6cff0975fb61e30bc96390f345cd67d7b1fbec41
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244795"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459333"
 ---
 # <a name="ltclimitsgt"></a>&lt;climits&gt;
 
-Include l'intestazione della libreria standard C \<Limits. h > e aggiunge i nomi associati al `std` dello spazio dei nomi. Includendo questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria standard C vengono dichiarati nel `std` dello spazio dei nomi.
+Include l'intestazione \<della libreria standard C limits. h > e aggiunge i nomi associati `std` allo spazio dei nomi. L'inclusione di questa intestazione garantisce che i nomi dichiarati utilizzando il collegamento esterno nell'intestazione della libreria `std` standard C vengano dichiarati nello spazio dei nomi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,6 +49,6 @@ Include l'intestazione della libreria standard C \<Limits. h > e aggiunge i nomi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

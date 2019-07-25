@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369633"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458171"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -48,7 +48,7 @@ Includere l'intestazione standard \<ratio> per definire le costanti e i modelli 
 #include <ratio>
 ```
 
-### <a name="ratio-template"></a>Modello di rapporto
+### <a name="ratio-template"></a>Modello rapporto
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Il modello `ratio` definisce le costanti statiche `num` e `den` tale `num`  /  `den` = = numeratore / denominatore e `num` e `den` non abbiano fattori comuni. `num` / `den` è il valore rappresentato dalla classe di modello. Pertanto `type` designa la creazione di istanze `ratio<num, den>`.
+Il modello `ratio` definisce le `num` costanti statiche e `den` in questo modo `num`  /  `den` = = numeratore/denominatore `den` e `num` e non hanno fattori comuni. `num` / `den`valore rappresentato dalla classe modello. Indica pertanto la `ratio<num, den>`creazione dell'istanza. `type`
 
 ### <a name="specializations"></a>Specializzazioni
 
@@ -70,7 +70,7 @@ Il modello `ratio` definisce le costanti statiche `num` e `den` tale `num`  /  `
 
 Ciascuna specializzazione accetta due parametri di modello che devono anche essere specializzazioni di `ratio`. Il valore di `type` è determinato da un'operazione logica associata.
 
-|Nome|Valore di `type`|
+|Name|Valore di `type`|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|
@@ -85,7 +85,7 @@ Ciascuna specializzazione accetta due parametri di modello che devono anche esse
 
 ### <a name="typedefs"></a>typedef
 
-Per praticità, l'intestazione definisce rapporti per i prefissi di sistema internazionale di misura standard:
+Per praticità, l'intestazione definisce i rapporti per i prefissi standard SI:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

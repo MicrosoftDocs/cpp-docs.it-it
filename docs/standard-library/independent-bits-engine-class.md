@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159223"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456351"
 ---
 # <a name="independentbitsengine-class"></a>Classe independent_bits_engine
 
@@ -26,16 +26,16 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*Motore*<br/>
+*Motore*\
 Tipo del motore di base.
 
-*W*<br/>
+*W*\
 **Dimensione parola**. Dimensione, in bit, di ogni numero generato. **Precondizione:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*<br/>
+*UIntType*\
 Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -46,7 +46,7 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello descrive un *adattatore del motore* che produce valori mediante la creazione di nuovi pacchetti bit dai valori restituiti dal rispettivo motore di base, causando *W*-valori di bit.
+Questa classe modello descrive un *adattatore del motore* che produce valori riimballando i bit dai valori restituiti dal motore di base, ottenendo i valori *W*-bit.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -56,4 +56,4 @@ Questa classe modello descrive un *adattatore del motore* che produce valori med
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

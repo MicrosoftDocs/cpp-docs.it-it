@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 495e82d54a2d3b010e40403271713cd799b9b8ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245414"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453543"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -140,7 +140,7 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-|-|
 |[locale](#locale)|Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali.|
 
@@ -152,7 +152,7 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[combine](#combine)|Inserisce un facet delle impostazioni locali specificate nelle impostazioni locali di destinazione.|
 |[name](#name)|Restituisce il nome delle impostazioni locali archiviate.|
@@ -168,7 +168,7 @@ Le regole di formattazione numerica per gli inserimenti successivi a `cout` rima
 
 |Operator|Descrizione|
 |-|-|
-|[operator=](#op_eq)|Assegna le impostazioni locali.|
+|[operator=](#op_eq)|Assegna impostazioni locali.|
 |[operator!=](#op_neq)|Verifica l'ineguaglianza di due impostazioni locali.|
 |[operator( )](#op_call)|Confronta due oggetti `basic_string`.|
 |[operator==](#op_eq_eq)|Verifica l'uguaglianza di due impostazioni locali.|
@@ -204,7 +204,7 @@ static const int none = 0;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo di un **int** tipo che può rappresentare un gruppo di elementi distinti di una maschera di bit tipo locale alle impostazioni locali di classe o può essere utilizzato per rappresentare qualsiasi corrispondente categoria delle impostazioni locali C. Gli elementi sono i seguenti:
+Il tipo è un sinonimo di un tipo **int** che può rappresentare un gruppo di elementi distinti di un tipo di maschera di maschera locale per le impostazioni locali della classe oppure può essere usato per rappresentare qualsiasi categoria di impostazioni locali C corrispondenti. Gli elementi sono i seguenti:
 
 - `collate`, corrispondente alla categoria C LC_COLLATE
 
@@ -216,15 +216,15 @@ Il tipo è un sinonimo di un **int** tipo che può rappresentare un gruppo di el
 
 - `time`, corrispondente alla categoria C LC_TIME
 
-- `messages`, corrispondente alla categoria Posix LC_MESSAGES
+- `messages`, corrispondente alla categoria POSIX LC_MESSAGES
 
 Sono inoltre utili i due valori seguenti:
 
 - `none`, corrispondente a nessuna delle categorie C
 
-- `all`, corrispondente all'unione C di tutte le categorie LC_ALL
+- `all`, corrispondente all'Unione C di tutte le categorie LC_ALL
 
-È possibile rappresentare un gruppo arbitrario di categorie usando `OR` con queste constanti, come in `monetary` &#124; `time`.
+È possibile rappresentare un gruppo arbitrario di categorie usando `OR` con queste costanti, come in. &#124; `time` `monetary`
 
 ## <a name="classic"></a>  locale::classic
 
@@ -292,12 +292,12 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Loc*<br/>
+*Loc*\
 Impostazioni locali contenenti il facet da inserire nelle impostazioni locali di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro restituisce un oggetto locale che sostituisce o aggiunge al  **\*ciò** facet `Facet` elencati nella *Loc*.
+La funzione membro restituisce un  **\*oggetto delle impostazioni** locali che sostituisce o aggiunge al facet `Facet` elencato in *loc*.
 
 ### <a name="example"></a>Esempio
 
@@ -361,7 +361,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parametri
 
-*Loc*<br/>
+*Loc*\
 Impostazioni locali che devono essere usate come predefinite dal programma.
 
 ### <a name="return-value"></a>Valore restituito
@@ -414,11 +414,11 @@ class id
 ```
 ### <a name="remarks"></a>Note
 
-La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Si noti che non è possibile copiare o assegnare un oggetto della classe `id`.
+La classe membro descrive l'oggetto membro statico richiesto da ciascun facet delle impostazioni locali univoco. Si noti che non è possibile copiare o assegnare un oggetto `id`della classe.
 
 ## <a name="locale"></a>  locale::locale
 
-Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali. Include inoltre un distruttore.
+Crea le impostazioni locali o una copia delle impostazioni locali oppure una copia delle impostazioni locali in cui un facet o una categoria è stata sostituita da un facet o da una categoria di altre impostazioni locali. Include anche un distruttore.
 
 ```cpp
 locale();
@@ -437,40 +437,40 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parametri
 
-*Locname*<br/>
+*Locname*\
 Nome delle impostazioni locali.
 
-*Loc*<br/>
+*Loc*\
 Impostazioni locali che devono essere copiate per la costruzione delle nuove impostazioni locali.
 
-*Altro*<br/>
+*Altri*\
 Impostazioni locali da cui selezionare una categoria.
 
-*Cat*<br/>
+*Gatto*\
 Categoria da sostituire nelle impostazioni locali costruite.
 
-*Fac*<br/>
+*Fac*\
 Facet da sostituire nelle impostazioni locali costruite.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza l'oggetto in modo che corrisponda alle impostazioni locali globali. Il secondo e terzo costruttore inizializzano tutte le categorie di impostazioni locali per hanno un comportamento coerenza con il nome delle impostazioni locali *Locname*. I costruttori rimanenti copiano *Loc*, con le eccezioni riportate:
+Il primo costruttore inizializza l'oggetto in modo che corrisponda alle impostazioni locali globali. Il secondo e il terzo costruttore inizializzano tutte le categorie delle impostazioni locali affinché il comportamento sia coerente con il nome delle impostazioni locali *Locname*. I costruttori rimanenti copiano *loc*, con le eccezioni indicate:
 
 `locale(const locale& Loc, const locale& Other, category Cat);`
 
-sostituisce *altri* i facet corrispondenti a un a categoria C per cui C & *Cat* è diverso da zero.
+sostituisce gli *altri* facet corrispondenti a una categoria c per cui c & *Cat* è diverso da zero.
 
 `locale(const locale& Loc, const char* Locname, category Cat);`
 
 `locale(const locale& Loc, const string& Locname, category Cat);`
 
-sostituisce `locale(Locname, _All)` i facet corrispondenti a un a categoria C per cui C & *Cat* è diverso da zero.
+sostituisce i facet corrispondenti a una categoria c per cui c & cat è diverso da zero.  `locale(Locname, _All)`
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-sostituisce (o aggiunge a) *Loc* facet *Fac*, se *Fac* non è un puntatore null.
+sostituisce in (o aggiunge a) *loc* il *fac*facet, se *fac* non è un puntatore null.
 
-Se un nome delle impostazioni locali *Locname* è un puntatore null o comunque non validi, la funzione genera [runtime_error](../standard-library/runtime-error-class.md).
+Se un nome di impostazioni locali *Locname* è un puntatore null o altrimenti non valido, la funzione genera [runtime_error](../standard-library/runtime-error-class.md).
 
 ### <a name="example"></a>Esempio
 
@@ -551,9 +551,9 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="op_eq"></a>  locale:: operator =
+## <a name="op_eq"></a>locale:: operator =
 
-Assegna le impostazioni locali.
+Assegna impostazioni locali.
 
 ```cpp
 const locale& operator=(const locale& other) noexcept;
@@ -569,7 +569,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Una delle impostazioni locali di cui verificare la disuguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
@@ -633,10 +633,10 @@ bool operator()(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Stringa sinistra.
 
-*right*<br/>
+*Ok*\
 Stringa destra.
 
 ### <a name="return-value"></a>Valore restituito
@@ -702,7 +702,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Una delle impostazioni locali di cui verificare l'uguaglianza.
 
 ### <a name="return-value"></a>Valore restituito
@@ -759,7 +759,7 @@ and loc3 (English_United States.1252) are not equal.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Tabelle codici](../c-runtime-library/code-pages.md)<br/>
-[Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Tabelle codici](../c-runtime-library/code-pages.md)\
+[Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

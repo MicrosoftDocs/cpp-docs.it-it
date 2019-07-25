@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: be81a1bc32f2f86f1d79970868933bddb8dc3620
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212105"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457315"
 ---
 # <a name="conditional-class"></a>Classe conditional
 
@@ -30,18 +30,18 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*B*<br/>
+*B*\
 Valore che determina il tipo selezionato.
 
-*T1*<br/>
+*T1*\
 Il risultato di tipo quando B è true.
 
-*T2*<br/>
+*T2*\
 Il risultato di tipo quando B è false.
 
 ## <a name="remarks"></a>Note
 
-Il typedef del membro di modello `conditional<B, T1, T2>::type` restituisca *T1* quando *B* restituisce **true**e viene restituito *T2* quando  *B* restituisca **false**.
+Il `conditional<B, T1, T2>::type` typedef del membro del modello restituisce *T1* quando *b* restituisce **true**e restituisce *T2* quando *b* restituisce **false**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -51,4 +51,4 @@ Il typedef del membro di modello `conditional<B, T1, T2>::type` restituisca *T1*
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159301"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455355"
 ---
 # <a name="initializerlist-class"></a>Classe initializer_list
 
@@ -34,7 +34,7 @@ class initializer_list
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Type*|Tipo di dati degli elementi da archiviare in `initializer_list`.|
+|*Tipo*|Tipo di dati degli elementi da archiviare in `initializer_list`.|
 
 ## <a name="remarks"></a>Note
 
@@ -48,7 +48,7 @@ Il compilatore trasforma gli elenchi di inizializzatori tra parentesi graffe con
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-|-|
 |[initializer_list](../standard-library/forward-list-class.md#forward_list)|Costruisce un oggetto di tipo `initializer_list`.|
 
@@ -114,10 +114,10 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
-|*Primo*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
-|*ultimo*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
+|*Prima*|Posizione del primo elemento nell'intervallo di elementi da copiare.|
+|*Ultima*|Posizione del primo elemento oltre l'intervallo di elementi da copiare.|
 
 ### <a name="remarks"></a>Note
 
@@ -202,4 +202,4 @@ Numero di elementi contenuti nell'elenco.
 
 ## <a name="see-also"></a>Vedere anche
 
-[<forward_list>](../standard-library/forward-list.md)<br/>
+[<forward_list>](../standard-library/forward-list.md)

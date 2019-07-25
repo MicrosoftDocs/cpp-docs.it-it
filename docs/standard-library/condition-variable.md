@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244572"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457388"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -19,12 +19,12 @@ Questa intestazione usa il runtime di concorrenza (ConcRT) in modo da essere uti
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<condition_variable >
+**Intestazione:** \<> condition_variable
 
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Nel codice compilato usando **/clr**, questa intestazione è bloccata.
+> Nel codice compilato utilizzando **/CLR**, questa intestazione è bloccata.
 
 ### <a name="remarks"></a>Note
 
@@ -49,15 +49,15 @@ Le classi `condition_variable_any` e `condition_variable` hanno tre metodi che a
 
 - `wait_for` attende una condizione `time interval` specifica.
 
-Ognuno di questi metodi ha due versioni di overload. Una si limita ad attendere e può riattivarsi in modo spurio. L'altra accetta un argomento di modello aggiuntivo che definisce un predicato. Il metodo non restituisce fino a quando non è il predicato **true**.
+Ognuno di questi metodi ha due versioni di overload. Una si limita ad attendere e può riattivarsi in modo spurio. L'altra accetta un argomento di modello aggiuntivo che definisce un predicato. Il metodo non restituisce alcun valore finché il predicato non è **true**.
 
-Ogni classe include anche due metodi che consentono di inviare una notifica di una variabile di condizione che la condizione è **true**.
+Ogni classe dispone inoltre di due metodi utilizzati per notificare a una variabile di condizione che la relativa condizione è **true**.
 
 - `notify_one` attiva uno dei thread in attesa della variabile di condizione.
 
 - `notify_all` attiva tutti i thread in attesa della variabile di condizione.
 
-## <a name="functions-and-enums"></a>Funzioni e le enumerazioni
+## <a name="functions-and-enums"></a>Funzioni ed enumerazioni
 
 ```cpp
 void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Classe condition_variable](../standard-library/condition-variable-class.md)<br/>
-[Classe condition_variable_any](../standard-library/condition-variable-any-class.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Classe condition_variable](../standard-library/condition-variable-class.md)\
+[Classe condition_variable_any](../standard-library/condition-variable-any-class.md)

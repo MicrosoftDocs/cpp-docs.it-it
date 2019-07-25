@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411071"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456437"
 ---
 # <a name="allocatorbase-class"></a>Classe allocator_base
 
@@ -60,8 +60,8 @@ class allocator_base
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*Type*|Tipo degli elementi assegnato dall'allocatore.|
-|*Sync*|I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](../standard-library/sync-none-class.md), la [Classe sync_per_container](../standard-library/sync-per-container-class.md), la [Classe sync_per_thread](../standard-library/sync-per-thread-class.md) o la [Classe sync_shared](../standard-library/sync-shared-class.md).|
+|*Tipo*|Tipo degli elementi assegnato dall'allocatore.|
+|*Sincronizzazione*|I criteri di sincronizzazione per l'allocatore, ovvero la [Classe sync_none](../standard-library/sync-none-class.md), la [Classe sync_per_container](../standard-library/sync-per-container-class.md), la [Classe sync_per_thread](../standard-library/sync-per-thread-class.md) o la [Classe sync_shared](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Costruttori
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |Funzione membro|Descrizione|
 |-|-|
-|[_Charalloc](#charalloc)|Alloca memoria per una matrice di tipo **char**.|
-|[_Chardealloc](#chardealloc)|Libera la memoria per la matrice che contiene gli elementi di tipo **char**.|
+|[_Charalloc](#charalloc)|Alloca lo spazio di archiviazione per una matrice di tipo **char**.|
+|[_Chardealloc](#chardealloc)|Libera lo spazio di archiviazione per la matrice contenente gli elementi di tipo **char**.|
 |[address](#address)|Trova l'indirizzo di un oggetto il cui valore è specificato.|
 |[allocate](#allocate)|Alloca un blocco di memoria sufficiente a contenere almeno un numero specificato di elementi.|
 |[construct](#construct)|Costruisce un tipo specifico di oggetto su un indirizzo specificato che viene inizializzato con un valore specificato.|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-Alloca memoria per una matrice di tipo **char**.
+Alloca lo spazio di archiviazione per una matrice di tipo **char**.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -124,7 +124,7 @@ Questa funzione membro viene usata dai contenitori compilati con un compilatore 
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-Libera la memoria per la matrice che contiene gli elementi di tipo **char**.
+Libera lo spazio di archiviazione per la matrice contenente gli elementi di tipo **char**.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parametri
 
-*val*<br/>
+*Val*\
 Valore const o nonconst dell'oggetto di cui viene cercato l'indirizzo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -237,7 +237,7 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*ptr*|Puntatore al percorso in cui deve essere creato l'oggetto.|
 |*val*|Il valore con cui viene inizializzato l'oggetto costruito.|
@@ -275,7 +275,7 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*ptr*|Un puntatore che indica l'indirizzo dell'oggetto da distruggere.|
 
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

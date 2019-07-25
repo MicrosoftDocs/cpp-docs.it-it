@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_const class
 - is_const
 ms.assetid: 55b8e887-9c3f-4a1d-823a-4a257337b205
-ms.openlocfilehash: 25f10d8a8aed8bad6c11663687ace56a0b65afee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92059f43e73c4b76f45ea9aeae61daf573367b43
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336869"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452873"
 ---
 # <a name="isconst-class"></a>Classe is_const
 
@@ -27,12 +27,12 @@ struct is_const;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se *Ty* è `const-qualified`.
+Un'istanza del predicato di tipo include  true se `const-qualified`Ty è.
 
 ## <a name="example"></a>Esempio
 
@@ -77,5 +77,5 @@ is_const<const int> == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_volatile](../standard-library/is-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_volatile](../standard-library/is-volatile-class.md)

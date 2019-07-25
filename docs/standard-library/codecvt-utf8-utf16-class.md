@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf8_utf16 class
 ms.assetid: 4c12c881-5dba-4e39-b338-0b9caff5af29
-ms.openlocfilehash: 42c9c8643edc795748c1f12c5180471f281c4142
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 879ebe6a75d76a84ef4250b95c41e02eccba5517
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405261"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458650"
 ---
 # <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
 
@@ -24,13 +24,13 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Parametri
 
-*Elem*<br/>
+*Elem*\
 Tipo di elemento a caratteri "wide".
 
-*Maxcode*<br/>
+*Maxcode*\
 Numero massimo di caratteri per il facet delle impostazioni locali.
 
-*Modalità*<br/>
+*Modalità*\
 Informazioni di configurazione per il facet delle impostazioni locali.
 
 ## <a name="remarks"></a>Note
@@ -41,4 +41,4 @@ Il flusso di byte può essere scritto in un file binario o un file di testo.
 
 Intestazione: \<codecvt >
 
-Namespace: std
+Spazio dei nomi: STD

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383581"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449934"
 ---
 # <a name="messages-class"></a>Classe messages
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*<br/>
+*CharType*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 ## <a name="remarks"></a>Note
@@ -61,7 +61,7 @@ Questo facet apre fondamentalmente un catalogo di messaggi definiti in messages_
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|Nome del tipo|DESCRIZIONE|
 |-|-|
 |[char_type](#char_type)|Tipo di carattere utilizzato per visualizzare i messaggi.|
 |[string_type](#string_type)|Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo `CharType`.|
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*_Catval*<br/>
+*_Catval*\
 Catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parametri
 
-*_Catval*<br/>
+*_Catval*\
 Catalogo da chiudere.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro protetta chiude il catalogo dei messaggi *catval*, che deve essere stato aperto da una precedente chiamata a [do_open](#do_open).
+La funzione membro protetto chiude il catalogo dei messaggi *_Catval*, che deve essere stato aperto da una precedente chiamata a [do_open](#do_open).
 
 È necessario ottenere *_Catval* da un catalogo aperto in precedenza e non chiuso.
 
@@ -149,25 +149,25 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catval*<br/>
+*_Catval*\
 Valore di identificazione che specifica il catalogo dei messaggi in cui eseguire ricerche.
 
-*_Set*<br/>
+*_Set*\
 Primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*_Message*<br/>
+*Corpo*\
 Secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*_Dfault*<br/>
+*_Dfault*\
 Stringa da restituire in caso di esito negativo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce una copia della *_Dfault* in caso di errore. In caso contrario, viene restituita una copia della sequenza di messaggi specificata.
+Restituisce una copia di *_Dfault* in caso di errore. In caso contrario, viene restituita una copia della sequenza di messaggi specificata.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro protetta tenta di ottenere una sequenza di messaggi dal catalogo dei messaggi *catval*. È possibile che sfrutta *imposta*, *messaggio*, e *_Dfault* a tale scopo.
+La funzione membro protetto tenta di ottenere una sequenza di messaggi dal catalogo dei messaggi *_Catval*. Questa operazione può essere utilizzata da *_Set*, *corpo*e *_Dfault* .
 
 ### <a name="example"></a>Esempio
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catname*<br/>
+*_Catname*\
 Nome del catalogo in cui eseguire ricerche.
 
-*_Loc*<br/>
+*_Loc*\
 Impostazioni locali da ricercare nel catalogo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -197,7 +197,7 @@ In caso di esito negativo, viene restituito un valore minore di zero. In caso co
 
 ### <a name="remarks"></a>Note
 
-La funzione membro protetta tenta di aprire un catalogo dei messaggi il cui nome corrisponde *_Catname*. È possibile che usi le impostazioni locali *_Loc* in questo modo
+La funzione membro protetto tenta di aprire un catalogo dei messaggi il cui nome è *_Catname*. In questo modo è possibile usare le impostazioni locali *_Loc*
 
 Il valore restituito deve essere usato come argomento in una successiva chiamata a [close](#close).
 
@@ -219,21 +219,21 @@ string_type get(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catval*<br/>
+*_Catval*\
 Valore di identificazione che specifica il catalogo dei messaggi in cui eseguire ricerche.
 
-*_Set*<br/>
+*_Set*\
 Primo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*_Message*<br/>
+*Corpo*\
 Secondo valore identificato usato per individuare un messaggio in un catalogo dei messaggi.
 
-*_Dfault*<br/>
+*_Dfault*\
 Stringa da restituire in caso di esito negativo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce una copia della *_Dfault* in caso di errore. In caso contrario, viene restituita una copia della sequenza di messaggi specificata.
+Restituisce una copia di *_Dfault* in caso di errore. In caso contrario, viene restituita una copia della sequenza di messaggi specificata.
 
 ### <a name="remarks"></a>Note
 
@@ -254,25 +254,25 @@ protected: messages(
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*<br/>
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-*_Locname*<br/>
+*_Locname*\
 Nome delle impostazioni locali.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il *_Refs* parametro e i relativi significati sono:
+I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
 - 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
 - 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non definiti.
+- \> 1: Questi valori non sono definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
-Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Il costruttore inizializza l'oggetto di base con **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
 ## <a name="open"></a>  messages::open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Parametri
 
-*_Catname*<br/>
+*_Catname*\
 Nome del catalogo in cui eseguire ricerche.
 
-*_Loc*<br/>
+*_Loc*\
 Impostazioni locali da ricercare nel catalogo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -314,6 +314,6 @@ Il tipo descrive una specializzazione della classe modello [basic_string](../sta
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Classe messages_base](../standard-library/messages-base-class.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Classe messages_base](../standard-library/messages-base-class.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

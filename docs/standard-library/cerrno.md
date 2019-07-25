@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cerrno header
 ms.assetid: c618f95c-ad4b-4a6f-825b-8727322ec77a
-ms.openlocfilehash: 04c8fd66edc8a61c3964241e41ef7ef1b6c88752
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1186a1e3c58c34de53f7a9835eaf9fd188593301
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244973"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455502"
 ---
 # <a name="ltcerrnogt"></a>&lt;cerrno&gt;
 
-Include l'intestazione della libreria C Standard \<errno. h > e aggiunge i nomi associati al `std` dello spazio dei nomi. Includendo questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C Standard vengano dichiarati nel `std` dello spazio dei nomi.
+Include l'intestazione \<della libreria standard C errno. h > e aggiunge i nomi associati `std` allo spazio dei nomi. L'inclusione di questa intestazione garantisce che i nomi dichiarati utilizzando il collegamento esterno nell'intestazione della libreria `std` standard C vengano dichiarati nello spazio dei nomi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -109,10 +109,10 @@ Include l'intestazione della libreria C Standard \<errno. h > e aggiunge i nomi 
 
 ### <a name="remarks"></a>Note
 
-In questo caso le macro sono definite dallo standard POSIX.
+Le macro sono definite dallo standard POSIX.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

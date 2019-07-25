@@ -8,12 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d363dc3f06222121ac5efc79b30516ebd55ff539
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411123"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456493"
 ---
 # <a name="algorithms"></a>Algoritmi
 
@@ -23,35 +23,35 @@ Gli algoritmi rappresentano una parte fondamentale della libreria standard C++. 
 
 Le descrizioni delle funzioni di modello dell'algoritmo utilizzano diverse espressioni abbreviate:
 
-- La frase "nell'intervallo \[ *oggetto*, *B*)" indica la sequenza di zero o più valori discreti a partire *oggetto* fino a ma senza includerlo *B* . Un intervallo è valido solo se *B* sia raggiungibile dal *oggetto;* è possibile archiviare *oggetto* in un oggetto *N* (*N*  =  *Un'*), incrementare l'oggetto zero o più volte (+ +*N*), in modo che l'oggetto risulta uguale a *B* dopo un numero finito di incrementi (*N*   ==  *B*).
+- La frase " \[nell'intervallo *a*, *B*)" indica la sequenza di zero o più valori discreti che iniziano con *un* fino a, ma non incluso *B*. Un intervallo è valido solo se *B* è raggiungibile da *un;* è possibile archiviare *un* oggetto in un oggetto *n* (*n* = *A*), incrementare l'oggetto zero o più volte (+ +*N*) e fare in modo che l'oggetto sia uguale a *B* Dopo un numero finito di incrementi (*N* == *B*).
 
-- La frase "ciascuna *N* compreso nell'intervallo \[ *oggetto*, *B*)" significa che *N* inizia con il valore *un*e viene incrementato zero o più volte fino a quando non è uguale al valore *B*. Il caso *N* == *B* non è compreso nell'intervallo.
+- La frase "ogni *N* nell'intervallo \[ *a*, *B*)" significa che *N* inizia con il valore *a* e viene incrementato zero o più volte fino a quando non è uguale al valore *B*. Il caso *N* == *B* non è compreso nell'intervallo.
 
-- La frase "il valore minimo *N* compreso nell'intervallo \[ *oggetto*, *B*) tale che *X*" significa che la condizione *X* viene determinato per ogni *N* nell'intervallo \[ *oggetto*, *B*) finché la condizione *X*viene soddisfatta.
+- La frase "il valore più basso di *n* nell'intervallo \[ *a*, *b*) tale che *x*" significa che la condizione *x* viene determinata per ogni *n* nell'intervallo \[ *a*, *b*) finché il viene soddisfatta la condizione *X* .
 
-- La frase "il valore massimo *N* compreso nell'intervallo \[ *oggetto*, *B*) tale che *X* significa che *X* viene determinato per ogni *N* compreso nell'intervallo \[ *oggetto*, *B*). La funzione archivia in *K* una copia di *N* ogni volta che la condizione *X* viene soddisfatta. Se si verifica tale archiviazione, la funzione sostituisce il valore finale della *N*, che equivale a *B*, con il valore di *K*. Per un iteratore ad accesso casuale o bidirezionale, tuttavia, può anche significare che *N* inizia con il valore più alto nell'intervallo e viene decrementato nell'intervallo finché non viene soddisfatta la condizione *X*.
+- La frase "il valore più alto di *n* nell'intervallo \[ *a*, *b*) tale che *x* indica che *x* è determinato per ogni *n* nell'intervallo \[ *a*, *b*). La funzione archivia in *K* una copia di *N* ogni volta che viene soddisfatta la condizione *X* . Se si verifica un archivio di questo tipo, la funzione sostituisce il valore finale di *N*, che è uguale a *B*, con il valore *K*. Per un iteratore ad accesso casuale o bidirezionale, tuttavia, può anche significare che *N* inizia con il valore più alto nell'intervallo e viene decrementato nell'intervallo finché non viene soddisfatta la condizione *X*.
 
-- Espressioni come *X* - *Y*, dove *X* e *Y* possono essere iteratori diversi da quelli ad accesso casuale, vengono considerate nel senso matematico. La funzione non valuta necessariamente operator **-** se deve determinare tale valore. Lo stesso vale anche per le espressioni, ad esempio *X* + *N* e *X* - *N*, dove *N* è un tipo integer.
+- Espressioni come *X* - *Y*, dove *X* e *Y* possono essere iteratori diversi da quelli ad accesso casuale, vengono considerate nel senso matematico. La funzione non valuta necessariamente l'operatore **-** se deve determinare tale valore. Lo stesso vale anche per le espressioni, ad esempio *X* + *N* e *X* - *N*, dove *N* è un tipo integer.
 
-Diversi algoritmi usano un predicato che esegue un confronto a coppie, ad esempio con `operator==`, per restituire un **bool** risultato. La funzione predicativa `operator==`, o una funzione sostituiva, non deve modificare gli operandi. Deve restituire lo stesso **bool** risultato ogni volta che viene valutata e deve restituire lo stesso risultato se l'operando viene sostituito con una copia degli operandi.
+Diversi algoritmi usano un predicato che esegue un confronto a coppie, ad esempio con `operator==`, per produrre un risultato **bool** . La funzione predicativa `operator==`, o una funzione sostituiva, non deve modificare gli operandi. Deve restituire lo stesso risultato **bool** ogni volta che viene valutato e deve restituire lo stesso risultato se una copia di uno degli operandi viene sostituita con l'operando.
 
-Diversi algoritmi usano un predicato che deve imporre un ordinamento di tipo "strict weak" alle coppie di elementi di una sequenza. Per il predicato *pred*(*X*, *Y*):
+Diversi algoritmi usano un predicato che deve imporre un ordinamento di tipo "strict weak" alle coppie di elementi di una sequenza. Per il predicato *Predator*(*X*, *Y*):
 
-- Strict significa che *pred*(*X*, *X*) è false.
+- Strict significa che *prede*(*x*, *x*) è false.
 
-- Weak significa che *X* e *Y* hanno un ordinamento equivalente se \! *pred*(*X*, *Y*) & & \! *pred*(*Y*, *X*) (*X* == *Y*non dovrà essere definito).
+- Debole significa che *x* e *y* hanno un ordinamento equivalente se \! *prede*(*x*, *y*) & & \! *prede*(*Y*, *x*) (*x* == *Y* non deve essere definito).
 
-- Ordinamento significa che *pred*(*X*, *Y*) & & *pred*(*Y*, *Z*) implica *pred*(*X*, *Z*).
+- *L'ordinamento*significa che il predicato (*x*, *y*) & & *prede*(*Y*, *z*) implica predazione (*x*, *z*).
 
-Alcuni di questi algoritmi usano in modo implicito il predicato *X* \< *Y*. Altri predicati che in genere soddisfano il "strict Weak" requisito di ordinamento vengono *X* > *Y*, `less`(*X*, *Y*), e `greater`(*X*, *Y*). Si noti, tuttavia, che i predicati come *X* \<= *Y* e *X* >= *Y* non soddisfano questo requisito.
+Alcuni di questi algoritmi usano in modo implicito il predicato *X* \< *Y*. Altri predicati che in genere soddisfano il requisito di ordinamento debole rigoroso sono *x* > *Y*, `less`(*x*, *y*) e `greater`(*x*, *y*). Si noti, tuttavia, che i predicati come *X* \<= *Y* e *X* >= *Y* non soddisfano questo requisito.
 
-Una sequenza di elementi designati dagli iteratori nell'intervallo \[ *primo*, *ultimo*) è una sequenza ordinata dall'operatore **<** se, ad ogni  *N* nell'intervallo \[0 *ultima* - *prima*) e per ogni *M* nell'intervallo (*N*, *Ultima* - *primo*) il predicato \!(\*(*prima*  +  *M*) < \*(*primo* + *N*)) è true. Si noti che gli elementi vengono ordinati in ordine crescente. La funzione predicativa `operator<`, o una funzione sostituiva, non deve modificare gli operandi. Deve restituire lo stesso **bool** risultato ogni volta che viene valutata e deve restituire lo stesso risultato se l'operando viene sostituito con una copia degli operandi. Inoltre, deve imporre un ordinamento di tipo "strict weak" agli operandi che confronta.
+Una sequenza di elementi designati dagli iteratori nell'intervallo \[ *First*, *Last*) è una sequenza ordinata per **<** operatore se, per ogni *N* nell'intervallo \[0, *ultimo* - *primo* ) e per ogni *M* nell'intervallo (*N*, *Last* - *First*) il predicato\* \!((*First* + *M*) \*< (First + *N*)) è true. Si noti che gli elementi vengono ordinati in ordine crescente. La funzione predicativa `operator<`, o una funzione sostituiva, non deve modificare gli operandi. Deve restituire lo stesso risultato **bool** ogni volta che viene valutato e deve restituire lo stesso risultato se una copia di uno degli operandi viene sostituita con l'operando. Inoltre, deve imporre un ordinamento di tipo "strict weak" agli operandi che confronta.
 
-Una sequenza di elementi designati dagli iteratori nell'intervallo \[ `First`, `Last`) è un heap ordinato in base `operator<` se per ogni *N* nell'intervallo \[1, *ultimo*  -  *Primo*) il predicato \!(\*_prima_ < \*(*prima*  +  *N*)) è true. Il primo elemento è il più grande. La struttura interna è altrimenti nota solo alle funzioni di modello [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), e [push_heap](../standard-library/algorithm-functions.md#push_heap). Come con una sequenza ordinata, la funzione di predicato `operator<`, o qualsiasi sostitutiva, non deve modificare gli operandi e deve imporre un rigido ordinamento debole agli operandi Confronta. Deve restituire lo stesso **bool** risultato ogni volta che viene valutata e deve restituire lo stesso risultato se l'operando viene sostituito con una copia degli operandi.
+Una sequenza di elementi designati dagli iteratori nell'intervallo \[ `First`, `Last`) è un heap ordinato in `operator<` base a, per ogni *N* nell'intervallo \[1, *ultimo* - *primo*) il \!predicato\*(_First_ < (\*FirstN + )) è true. Il primo elemento è il più grande. La struttura interna è altrimenti nota solo alle funzioni di modello [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap)e [push_heap](../standard-library/algorithm-functions.md#push_heap). Come con una sequenza ordinata, la funzione `operator<`di predicato, o qualsiasi sostituzione, non deve modificare gli operandi e deve imporre un ordinamento debole rigoroso sugli operandi da confrontare. Deve restituire lo stesso risultato **bool** ogni volta che viene valutato e deve restituire lo stesso risultato se una copia di uno degli operandi viene sostituita con l'operando.
 
 Gli algoritmi della libreria standard C++ si trovano nei file di intestazione [\<algorithm>](../standard-library/algorithm.md) e [\<numeric>](../standard-library/numeric.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

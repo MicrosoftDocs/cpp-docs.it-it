@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - typeindex/std::hash
 ms.assetid: e5a41202-ef3b-45d0-b3a7-4c2dbdc0487a
-ms.openlocfilehash: ef620867a5c31c7bd2030803edd6eaea6bbb5726
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b8484c8987534051c79ea02a1f87f0df1cd1f027
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243718"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456353"
 ---
 # <a name="hash-structure"></a>Struttura hash
 
@@ -27,7 +27,7 @@ template <> struct hash<type_index>
 
 ## <a name="specialized-types"></a>Tipi specializzati
 
-### <a name="system_error"></a> \<system_error >
+### <a name="system_error"></a>\<> system_error
 
 ```cpp
 template <class T> struct hash;
@@ -37,4 +37,4 @@ template <> struct hash<error_condition>;
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<typeindex>](../standard-library/typeindex.md)<br/>
+[\<typeindex>](../standard-library/typeindex.md)

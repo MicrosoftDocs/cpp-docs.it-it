@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wstring header
 ms.assetid: d78b04bb-9ac0-4adb-8ffe-3aefb9b14c2d
-ms.openlocfilehash: d2183d7bfbe0f4f6cd2848e7a032d2f166283361
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b540644d0d1ba0f539688e9d7e30ef7ae631f91
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394117"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455389"
 ---
 # <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
 
@@ -29,4 +29,4 @@ L'intestazione `<cvt/wstring>` nelle versioni precedenti di Visual Studio defini
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copyable
 ms.assetid: 89a53bf8-036c-4108-91e1-fe34adbde8b3
-ms.openlocfilehash: 181152bff1d7c2e4f97678b48310f744080822ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3062ae311b63be76ba07185f4f8173afa4229cc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413450"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459754"
 ---
 # <a name="istriviallycopyable-class"></a>Classe is_trivially_copyable
 
@@ -26,12 +26,12 @@ struct is_trivially_copyable;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo facilmente copiabile in caso contrario, contiene false. I tipi facilmente copiabili non prevedono operazioni di copia o spostamento o distruttori complessi. In genere, un'operazione di copia è considerata semplice se può essere implementata come una copia bit per bit. I tipi incorporati e le matrici di tipi facilmente copiabili sono facilmente copiabili.
+Un'istanza del predicato di tipo include true se il tipo *T* è un tipo facilmente copiabile; in caso contrario, include false. I tipi facilmente copiabili non prevedono operazioni di copia o spostamento o distruttori complessi. In genere, un'operazione di copia è considerata semplice se può essere implementata come una copia bit per bit. I tipi incorporati e le matrici di tipi facilmente copiabili sono facilmente copiabili.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,4 +41,4 @@ Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo facilmente
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

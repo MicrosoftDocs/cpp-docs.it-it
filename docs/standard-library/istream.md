@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 2e39c0de5b11c9aa0a4c69f0142841469ef798c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413281"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458738"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -29,8 +29,8 @@ Definisce la classe modello basic_istream, che media le estrazioni per intestazi
 
 |Nome del tipo|Descrizione|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|Un tipo `basic_iostream` specializzato su **char**.|
-|[istream](../standard-library/istream-typedefs.md#istream)|Un tipo `basic_istream` specializzato su **char**.|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Tipo `basic_iostream` specializzato in **char**.|
+|[istream](../standard-library/istream-typedefs.md#istream)|Tipo `basic_istream` specializzato in **char**.|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|Tipo `basic_iostream` specializzato in **wchar**.|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|Tipo `basic_istream` specializzato in **wchar**.|
 
@@ -43,7 +43,7 @@ Definisce la classe modello basic_istream, che media le estrazioni per intestazi
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|Descrizione|
 |-|-|
 |[operator>> ](../standard-library/istream-operators.md#op_gt_gt)|Estrae caratteri e stringhe dal flusso.|
 
@@ -52,10 +52,10 @@ Definisce la classe modello basic_istream, che media le estrazioni per intestazi
 |Classe|Descrizione|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Classe di flusso che può eseguire operazioni sia di input sia di output.|
-|[basic_istream](../standard-library/basic-istream-class.md)|La classe modello descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso con elementi di tipo `Elem`, noto anche come [char_type](../standard-library/basic-ios-class.md#char_type), cui tratti di carattere sono determinati dalla classe `Tr`, noto anche come [traits_type](../standard-library/basic-ios-class.md#traits_type).|
+|[basic_istream](../standard-library/basic-istream-class.md)|La classe modello descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso con elementi di `Elem`tipo, noti anche come [char_type](../standard-library/basic-ios-class.md#char_type), i cui tratti di carattere sono determinati dalla `Tr`classe. noto come [traits_type](../standard-library/basic-ios-class.md#traits_type).|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programmazione iostream](../standard-library/iostream-programming.md)<br/>
-[Convenzioni di iostream](../standard-library/iostreams-conventions.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Programmazione di iostream](../standard-library/iostream-programming.md)\
+[Convenzioni di iostream](../standard-library/iostreams-conventions.md)

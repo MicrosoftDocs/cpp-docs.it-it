@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_reference class
 - is_reference
 ms.assetid: 3d9e631f-3092-430c-843e-e914ab58c257
-ms.openlocfilehash: 793a84f03dba762ff686627004ffe3830a5d98d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99aae64bcaef1e17956c3b3001627d128f966352
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413567"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455684"
 ---
 # <a name="isreference-class"></a>Classe is_reference
 
@@ -27,12 +27,12 @@ struct is_reference;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un riferimento a un oggetto o a una funzione, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un riferimento a un oggetto o a una funzione; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -77,5 +77,5 @@ is_reference<int(&)()> == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_pointer](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_pointer](../standard-library/is-pointer-class.md)

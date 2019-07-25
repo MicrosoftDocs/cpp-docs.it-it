@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 6f957c39f9c78fd182b7ba2a14bdab7f27db56ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405300"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459383"
 ---
 # <a name="codecvtbase-class"></a>Classe codecvt_base
 
-Una classe base per la classe codecvt utilizzata per definire un tipo di enumerazione definito come `result`, usato come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.
+Classe base per la classe Codecvt utilizzata per definire un tipo di enumerazione indicato come `result`, utilizzato come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,11 +40,11 @@ protected:
 
 La classe descrive un'enumerazione comune a tutte le specializzazioni della classe modello [codecvt](../standard-library/codecvt-class.md). Il risultato dell'enumerazione descrive i possibili valori restituiti da [do_in](../standard-library/codecvt-class.md#do_in) o [do_out](../standard-library/codecvt-class.md#do_out):
 
-- `ok` Se la conversione tra codifiche di caratteri interni ed esterni ha esito positivo.
+- `ok`Se la conversione tra codifiche di caratteri interne ed esterne ha esito positivo.
 
-- `partial` Se la destinazione non è sufficientemente grande per consentire la conversione.
+- `partial`Se la destinazione non è sufficientemente grande da consentire la conversione.
 
-- `error` Se la sequenza di origine non è nel formato corretto.
+- `error`Se la sequenza di origine non è in formato corretto.
 
 - `noconv` se la funzione non esegue alcuna conversione.
 
@@ -56,4 +56,4 @@ La classe descrive un'enumerazione comune a tutte le specializzazioni della clas
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

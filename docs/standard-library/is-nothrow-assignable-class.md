@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: c59c3623f9c9548a7b7e59d0c56a2acd4d3883a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383620"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456026"
 ---
 # <a name="isnothrowassignable-class"></a>Classe is_nothrow_assignable
 
-Verifica se un valore di *dal* tipo può essere assegnato a *a* tipo e l'assegnazione è nota come non genera eccezioni.
+Verifica se un valore di tipo *from* può essere assegnato a *al* tipo e se l'assegnazione è nota come not throw.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*Per*<br/>
+*A*\
 Il tipo di oggetto che riceve l'assegnazione.
 
-*From*<br/>
+*Da*\
 Il tipo di oggetto che fornisce il valore.
 
 ## <a name="remarks"></a>Note
 
-L'espressione `declval<To>() = declval<From>()` deve essere nel formato corretto e deve essere nota al compilatore come espressione che non genera eccezioni. Entrambe *dal* e *al* devono essere tipi completi, **void**, o matrici di valori associati sconosciuti.
+L'espressione `declval<To>() = declval<From>()` deve essere nel formato corretto e deve essere nota al compilatore come espressione che non genera eccezioni. Sia *da* che *da a* devono essere tipi completi, **void**o matrici di associazione sconosciuta.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -44,4 +44,4 @@ L'espressione `declval<To>() = declval<From>()` deve essere nel formato corretto
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

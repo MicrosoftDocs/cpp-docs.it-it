@@ -7,12 +7,12 @@ helpviewer_keywords:
 - add_pointer class
 - add_pointer
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
-ms.openlocfilehash: fda2bcbd3484b9244d69358aac3e9baf5d37a4ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 759867a542aa128755ba31e090984eb5b3fe6963
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411214"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456550"
 ---
 # <a name="addpointer-class"></a>Classe add_pointer
 
@@ -30,12 +30,12 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo da modificare.
 
 ## <a name="remarks"></a>Note
 
-Il membro **typedef** `type` assegna allo stesso tipo come `remove_reference<T>::type*`. L'alias `add_pointer_t` è un collegamento per accedere al membro **typedef** `type`.
+Il membro **typedef** `type` denomina lo stesso tipo di `remove_reference<T>::type*`. L'alias `add_pointer_t` è un collegamento per accedere al **typedef** `type`del membro.
 
 Poiché non è valido creare un puntatore da un riferimento, `add_pointer` rimuove il riferimento, se presente, dal tipo specificato prima di creare un puntatore al tipo. È pertanto possibile utilizzare un tipo con `add_pointer` senza doversi preoccupare che il tipo sia un riferimento.
 
@@ -71,5 +71,5 @@ add_pointer_t<int> == int *
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe remove_pointer](../standard-library/remove-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe remove_pointer](../standard-library/remove-pointer-class.md)

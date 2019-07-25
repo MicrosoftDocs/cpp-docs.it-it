@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: b9c6f8db26cdc67d3a1bc752b9b5eb31f7dc220b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73f4cdd0028164ce5f8215258c517c2e59eb7538
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411929"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459948"
 ---
 # <a name="timeput-class"></a>Classe time_put
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*<br/>
+*CharType*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Tipo di iteratore in cui le funzioni temporali put scrivono il proprio output.
 
 ## <a name="remarks"></a>Note
@@ -60,7 +60,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[do_put](#do_put)|Funzione virtuale che restituisce informazioni sulla data e l'ora come sequenza di `CharType`.|
 |[put](#put)|Restituisce informazioni sulla data e l'ora come sequenza di `CharType`.|
@@ -98,19 +98,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametri
 
-*next*<br/>
+*prossimo*\
 Iteratore di output in cui deve essere inserita la sequenza di caratteri che rappresenta la data e l'ora.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Non usato.
 
-*_Pt*<br/>
+*_Pt*\
 Informazioni di tipo data e ora da visualizzare in output.
 
-*_Fmt*<br/>
+*_Fmt*\
 Formato dell'output. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
-*_Mod*<br/>
+*_Mod*\
 Modificatore del formato. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -119,9 +119,9 @@ Iteratore alla prima posizione dopo l'ultimo elemento inserito.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta genera elementi sequenziali a partire `next` dai valori di ora archiviati nell'oggetto \* `_Pt`, di tipo `tm`. La funzione restituisce un iteratore che designa la posizione in cui inserire un elemento immediatamente successiva all'output generato.
+La funzione membro virtuale protetta genera elementi sequenziali a `next` partire da valori di ora archiviati nell' \* oggetto `_Pt`, di `tm`tipo. La funzione restituisce un iteratore che designa la posizione in cui inserire un elemento immediatamente successiva all'output generato.
 
-L'output viene generato dalle stesse regole utilizzate dal `strftime`, con un ultimo argomento di *pt*, per la generazione di una serie di **char** elementi in una matrice. Ognuno di tali **char** elemento equivale a eseguire il mapping a un elemento equivalente di tipo `CharType` tramite un semplice mapping uno a uno. Se *_Mod* è uguale a zero, il formato effettivo è "%F", dove F è sostituito dal *_Fmt*. In caso contrario, il formato effettivo è "% MF", in cui M è sostituito da *_Mod*.
+L'output viene generato dalle stesse regole usate da `strftime`, con l'ultimo argomento di *_pt*, per la generazione di una serie di elementi **char** in una matrice. Si presuppone che ogni elemento **char** venga mappato a un elemento equivalente di `CharType` tipo mediante un semplice mapping uno-a-uno. Se *_Mod* è uguale a zero, il formato effettivo è "% F", dove F viene sostituito da *_Fmt*. In caso contrario, il formato effettivo è "% MF", dove M viene sostituito da *_Mod*.
 
 ### <a name="example"></a>Esempio
 
@@ -161,28 +161,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Parametri
 
-*next*<br/>
+*prossimo*\
 Iteratore di output in cui deve essere inserita la sequenza di caratteri che rappresenta la data e l'ora.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Non usato.
 
-*_Fill*<br/>
-Il carattere di tipo `CharType` usato per la spaziatura.
+*_Fill*\
+Carattere di tipo `CharType` utilizzato per la spaziatura.
 
-*_Pt*<br/>
+*_Pt*\
 Informazioni di tipo data e ora da visualizzare in output.
 
-*_Fmt*<br/>
+*_Fmt*\
 Formato dell'output. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
-*_Mod*<br/>
+*_Mod*\
 Modificatore del formato. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
-*first*<br/>
+*prima*\
 Inizio della stringa di formattazione per l'output. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
-*last*<br/>
+*Ultima*\
 Fine della stringa di formattazione per l'output. Vedere [strftime, wcsftime, strftime_l, wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) per i valori validi.
 
 ### <a name="return-value"></a>Valore restituito
@@ -191,7 +191,7 @@ Iteratore alla prima posizione dopo l'ultimo elemento inserito.
 
 ### <a name="remarks"></a>Note
 
-Restituisce la prima funzione membro [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). La seconda funzione membro copia in \* `next` ++ qualsiasi elemento compreso nell'intervallo [ `first`, `last`) diverso da una percentuale (%). Per una percentuale seguita da un carattere *C* nell'intervallo [ `first`, `last`), la funzione restituisce invece `next`  =  `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) e ignora quanto segue *C*. Se, tuttavia, *C* è un carattere qualificatore del set EOQ#, seguito da un carattere `C2` nell'intervallo [ `first`, `last`), la funzione restituisce invece `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) e ignora quanto segue `C2`.
+La prima funzione membro restituisce [do_put](#do_put)(`next`, `_Iosbase` `_Fill`,, `_Pt`, `_Fmt`, `_Mod`). La seconda funzione membro copia in \* `next` ++ qualsiasi elemento compreso nell'intervallo [ `first`, `last`) diverso da una percentuale (%). Per una percentuale seguita da un carattere *C* nell'intervallo [ `first`, `last`), la funzione restituisce invece `next`  =  `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) e ignora quanto segue *C*. Se, tuttavia, *C* è un carattere qualificatore del set EOQ#, seguito da un carattere `C2` nell'intervallo [ `first`, `last`), la funzione restituisce invece `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) e ignora quanto segue `C2`.
 
 ### <a name="example"></a>Esempio
 
@@ -247,23 +247,23 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*<br/>
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il *_Refs* parametro e i relativi significati sono:
+I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
 - 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
 - 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non definiti.
+- \> 1: Questi valori non sono definiti.
 
-Il costruttore inizializza l'oggetto di base con [locale:: facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
+Il costruttore inizializza l'oggetto di base con [locale:: facet](../standard-library/locale-class.md#facet_class)( *_Refs*).
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Classe time_base](../standard-library/time-base-class.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Classe time_base](../standard-library/time-base-class.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

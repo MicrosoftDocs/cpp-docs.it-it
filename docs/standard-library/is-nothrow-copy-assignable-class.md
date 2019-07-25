@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_assignable
 ms.assetid: baa8abd6-4f53-489f-abba-8d5d5c53bbbc
-ms.openlocfilehash: bb3aca47b61bdcc5b28eeedc1a6b4edefc303c4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 330c97cd945e161d2bf47deb377dd732bf53b3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383594"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455983"
 ---
 # <a name="isnothrowcopyassignable-class"></a>Classe is_nothrow_copy_assignable
 
@@ -26,12 +26,12 @@ struct is_nothrow_copy_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true per un tipo referenziabile *T* dove `is_nothrow_assignable<T&, const T&>` contiene true; in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true per un tipo  di riferimento `is_nothrow_assignable<T&, const T&>` T, dove è true. in caso contrario, include false.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,5 +41,5 @@ Un'istanza del tipo predicato contiene true per un tipo referenziabile *T* dove 
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78d01ed8606e65e55af7e0c8dc24c02b51c53a39
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369423"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451549"
 ---
 # <a name="regextokeniterator-class"></a>Classe regex_token_iterator
 
@@ -45,13 +45,13 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>Parametri
 
-*BidIt*<br/>
+*BidIt*\
 Tipo di iteratore per le sottocorrispondenze.
 
-*Elem*<br/>
+*Elem*\
 Tipo di elementi di cui trovare una corrispondenza.
 
-*RXtraits*<br/>
+*RXtraits*\
 Classe traits per gli elementi.
 
 ## <a name="remarks"></a>Note
@@ -60,9 +60,9 @@ La classe modello descrive un oggetto iteratore costante in avanti. Concettualme
 
 Un valore di indice di -1 indica la sequenza di caratteri che comincia subito dopo la fine della precedente corrispondenza di espressione regolare o all'inizio della sequenza di caratteri se non esisteva alcuna corrispondenza di espressione regolare precedente e che si estende, senza includerlo, al primo carattere della corrispondenza di espressione regolare corrente o alla fine della sequenza di caratteri se non esiste alcuna corrispondenza corrente. Qualsiasi altro valore di indice `idx` definisce il contenuto del gruppo Capture contenuto in `it.match[idx]`.
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
-|Member|Valore predefinito|
+|Member|Default Value|
 |-|-|
 |`private regex_iterator<BidIt, Elem, RXtraits> it`||
 |`private vector<int> subs`||
@@ -70,7 +70,7 @@ Un valore di indice di -1 indica la sequenza di caratteri che comincia subito do
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-|-|
 |[regex_token_iterator](#regex_token_iterator)|Costruisce l'iteratore.|
 
@@ -87,7 +87,7 @@ Un valore di indice di -1 indica la sequenza di caratteri che comincia subito do
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|Descrizione|
 |-|-|
 |[operator!=](#op_neq)|Confronta gli iteratori per verificarne la disuguaglianza.|
 |[operator*](#op_star)|Accede alla sottocorrispondenza designata.|
@@ -231,7 +231,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Iteratore per il confronto.
 
 ### <a name="remarks"></a>Note
@@ -276,7 +276,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Iteratore per il confronto.
 
 ### <a name="remarks"></a>Note
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parametri
 
-*first*<br/>
+*prima*\
 Inizio della sequenza per cui cercare una corrispondenza.
 
-*last*<br/>
+*Ultima*\
 Fine della sequenza per cui cercare una corrispondenza.
 
-*re*<br/>
+*Re*\
 Espressione regolare per le corrispondenze.
 
-*f*<br/>
+*f*\
 Flag per le corrispondenze.
 
 ### <a name="remarks"></a>Note
@@ -390,11 +390,11 @@ Il tipo è un sinonimo di `sub_match<BidIt>`, dove `BidIt` è il parametro di mo
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<regex>](../standard-library/regex.md)<br/>
-[Classe regex_constants](../standard-library/regex-constants-class.md)<br/>
-[Classe regex_error](../standard-library/regex-error-class.md)<br/>
-[Funzioni \<regex>](../standard-library/regex-functions.md)<br/>
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[Operatori \<regex>](../standard-library/regex-operators.md)<br/>
-[Classe regex_traits](../standard-library/regex-traits-class.md)<br/>
-[Typedef \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Classe regex_constants](../standard-library/regex-constants-class.md)\
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[\<funzioni > Regex](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operatori > Regex](../standard-library/regex-operators.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[Typedef \<regex>](../standard-library/regex-typedefs.md)

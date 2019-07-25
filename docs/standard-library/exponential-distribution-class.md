@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: a8dd8168075a0fff3b61154098c0bee100961f98
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451237"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457875"
 ---
 # <a name="exponentialdistribution-class"></a>Classe exponential_distribution
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*<br/>
-Il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*\
+Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-Motore del generatore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*GENERATORE URNG*\
+Motore generatore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un integrale specificato dall'utente, tipo o tipo **doppie** se ne viene specificato alcuno, distribuiti in base alla distribuzione esponenziale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione esponenziale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*lambda*<br/>
+*lambda*\
 Parametro di distribuzione `lambda`.
 
-*parm*<br/>
+*parm*\
 Pacchetto di parametri usato per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*lambda*<br/>
+*lambda*\
 Parametro di distribuzione `lambda`.
 
-*right*<br/>
+*Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
@@ -227,4 +227,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

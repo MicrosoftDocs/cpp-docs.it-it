@@ -6,12 +6,12 @@ f1_keywords:
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: 0b43c7c148076e96dd0d3f444ffa8b6bad7c8b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405287"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459797"
 ---
 # <a name="ltcodecvtgt-enums"></a>Enumerazioni &lt;codecvt&gt;
 
@@ -41,4 +41,4 @@ Queste costanti possono essere introdotte insieme dall'operatore OR in combinazi
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<codecvt>](../standard-library/codecvt.md)<br/>
+[\<codecvt>](../standard-library/codecvt.md)
