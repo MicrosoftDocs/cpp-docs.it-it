@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_all_extents class
 - remove_all_extents
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
-ms.openlocfilehash: 1c8972889272a4621d6357758cde6d174bb2abd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0909da3f08cec62bcb915a65c353abdd33c96c9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368955"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451411"
 ---
 # <a name="removeallextents-class"></a>Classe remove_all_extents
 
@@ -30,12 +30,12 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo da modificare.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza di `remove_all_extents<T>` contiene un tipo modificato che è il tipo di elemento del tipo di matrice *T* con tutte le dimensioni della matrice rimosse o *T* se *T* non è un tipo di matrice.
+Un'istanza di `remove_all_extents<T>` include un tipo modificato che è il tipo di elemento del tipo di matrice *T* con tutte le dimensioni della matrice rimosse oppure *t* se *t* non è un tipo di matrice.
 
 ## <a name="example"></a>Esempio
 
@@ -67,5 +67,5 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe remove_extent](../standard-library/remove-extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe remove_extent](../standard-library/remove-extent-class.md)

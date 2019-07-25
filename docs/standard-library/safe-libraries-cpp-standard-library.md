@@ -1,5 +1,5 @@
 ---
-title: 'Librerie protette: Libreria standard C++'
+title: 'Librerie sicure: Libreria standard C++'
 ms.date: 11/04/2016
 f1_keywords:
 - _SCL_SECURE_NO_DEPRECATE
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220464"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454554"
 ---
-# <a name="safe-libraries-c-standard-library"></a>Librerie protette: Libreria standard C++
+# <a name="safe-libraries-c-standard-library"></a>Librerie sicure: Libreria standard C++
 
-Sono stati apportati diversi miglioramenti alle librerie fornite con Microsoft C++, tra cui il C++ della libreria Standard, per renderle più sicure.
+Sono stati apportati diversi miglioramenti alle librerie fornite con Microsoft C++, inclusa la C++ libreria standard, per renderle più sicure.
 
 Nella libreria standard C++ vari metodi sono stati identificati come potenzialmente non sicuri perché potrebbero causare un sovraccarico buffer o altri problemi relativi al codice. L'uso di questi metodi è sconsigliato, mentre sono stati creati in sostituzione metodi nuovi e più sicuri. Questi metodi terminano tutti in `_s`.
 
@@ -46,4 +46,4 @@ Se si chiama uno dei metodi potenzialmente non sicuri elencati qui sopra o se si
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::ostream_iterator [C++], ostream_type
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
-ms.openlocfilehash: 6a065a100faf5ea40be161e980de2913add917fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cebe127eb985e564289db100fa56b0b979104819
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370991"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447084"
 ---
 # <a name="ostreamiterator-class"></a>Classe ostream_iterator
 
-La classe modello ostream_iterator descrive un oggetto iteratore di output che consente di scrivere elementi consecutivi nel flusso di output con l'estrazione `operator <<`.
+La classe modello ostream_iterator descrive un oggetto iteratore di output che scrive elementi consecutivi nel flusso di output con `operator <<`l'estrazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -32,13 +32,13 @@ class ostream_iterator
 
 ### <a name="parameters"></a>Parametri
 
-*Type*<br/>
+*Tipo*\
 Il tipo di oggetto da inserire nel flusso di output.
 
-*CharType*<br/>
+*CharType*\
 Tipo che rappresenta il tipo di carattere per `ostream_iterator`. Questo argomento è facoltativo e il valore predefinito è **char**.
 
-*Tratti*<br/>
+*Tratti*\
 Tipo che rappresenta il tipo di carattere per `ostream_iterator`. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*
 
 La classe ostream_iterator deve soddisfare i requisiti per un iteratore di output. Gli algoritmi possono essere scritti direttamente nei flussi di output utilizzando un `ostream_iterator`.
@@ -59,11 +59,11 @@ La classe ostream_iterator deve soddisfare i requisiti per un iteratore di outpu
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|Descrizione|
 |-|-|
-|[operator*](#op_star)|Operatore di dereferenziazione usato per implementare l'espressione dell'iteratore di output \* `i`  =  `x`.|
+|[operator*](#op_star)|Operatore di dereferenziazione utilizzato per implementare l'espressione \* `i`  =  `x`dell'iteratore di output.|
 |[operator++](#op_add_add)|Operatore di incremento non funzionale che restituisce `ostream_iterator` allo stesso oggetto a cui ha puntato prima che venisse chiamata l'operazione.|
-|[operator=](#op_eq)|Operatore di assegnazione usato per implementare l'espressione dell'iteratore di output \* `i`  =  `x` per la scrittura in un flusso di output.|
+|[operator=](#op_eq)|Operatore di assegnazione usato \* per implementare l'espressione `i`  =  `x` dell'iteratore di output per la scrittura in un flusso di output.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -221,7 +221,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator=
 
-Operatore di assegnazione usato per implementare l'espressione di output_iterator \* `i`  =  `x` per la scrittura in un flusso di output.
+Operatore di assegnazione usato per implementare l'espressione \* `i`  =  `x` output_iterator per la scrittura in un flusso di output.
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -229,16 +229,16 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>Parametri
 
-*val*<br/>
+*Val*\
 Valore dell'oggetto di tipo `Type` da inserire nel flusso di output.
 
 ### <a name="return-value"></a>Valore restituito
 
-L'operatore inserisce *val* nel flusso di output associato all'oggetto, seguito dal delimitatore specificato nella [costruttore di ostream_iterator](#ostream_iterator) (se presente) e quindi restituisce un riferimento per le `ostream_iterator`.
+L'operatore inserisce *Val* nel flusso di output associato all'oggetto, seguito dal delimitatore specificato nel [Costruttore ostream_iterator](#ostream_iterator) (se presente), quindi restituisce un `ostream_iterator`riferimento a.
 
 ### <a name="remarks"></a>Note
 
-I requisiti per un iteratore di output che la `ostream_iterator` deve soddisfare richiedono solo che l'espressione \* `ii`  =  `t` sia valida e non riguardano individualmente l'operatore o operatore = in modo indipendente. Questo operatore membro restituisce `*this`.
+I requisiti per un iteratore di output `ostream_iterator` che devono essere soddisfatti da richiedono \* solo che l'espressione `ii`  =  `t` sia valida e non indichi in alcun modo l'operatore o operator =. Questo operatore membro restituisce `*this`.
 
 ### <a name="example"></a>Esempio
 
@@ -288,17 +288,17 @@ ostream_iterator(
 
 ### <a name="parameters"></a>Parametri
 
-*_Ostr*<br/>
+*_Ostr*\
 Flusso di output di tipo [ostream_iterator:: ostream_type](#ostream_type) di cui eseguire l'iterazione.
 
-*_Delimiter*<br/>
+*Delimitazione*\
 Delimitatore inserito nel flusso di output tra i valori.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore inizializza il puntatore del flusso di output con `&_Ostr`. Il puntatore di stringa del delimitatore designa una stringa vuota.
 
-Il secondo costruttore inizializza il puntatore del flusso di output con `&_Ostr` e il puntatore di stringa del delimitatore con *delimitazione*.
+Il secondo costruttore inizializza il puntatore del flusso di `&_Ostr` output con e il puntatore di stringa del delimitatore con *delimitazione*.
 
 ### <a name="example"></a>Esempio
 
@@ -415,6 +415,6 @@ by intOut are:
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

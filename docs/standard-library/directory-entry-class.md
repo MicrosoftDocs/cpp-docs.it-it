@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&lt;=
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
-ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 35b0dc55bf5db2f799d9ade28cd5968ceab3332b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342981"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458965"
 ---
 # <a name="directoryentry-class"></a>Classe directory_entry
 
@@ -61,21 +61,21 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 
 |Costruttore|Descrizione|
 |-|-|
-|[directory_entry](#directory_entry)|I costruttori impostati come predefiniti si comportano come previsto. Il quarto costruttore inizializza `mypath` al *pval*, `mystat` al *stat_arg*, e `mysymstat` a *symstat_arg*.|
+|[directory_entry](#directory_entry)|I costruttori impostati come predefiniti si comportano come previsto. Il quarto costruttore inizializza `mypath` *pval* `mystat` , *stat_arg*e `mysymstat` *symstat_arg*.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
 |Funzione membro|Descrizione|
 |-|-|
-|[assign](#assign)|La funzione membro assegna *pval* al `mypath`, *stat* alla `mystat`, e *symstat* a `mysymstat`.|
+|[assign](#assign)|La funzione membro assegna *pval* a `mypath`, *Stat* a `mystat`e *symstat* a `mysymstat`.|
 |[path](#path)|La funzione membro restituisce `mypath`.|
-|[replace_filename](#replace_filename)|La funzione membro sostituisce `mypath` con `mypath.parent_path()`  /  *pval*, `mystat` con *stat_arg*, e `mysymstat` con *symstat_arg*|
-|[status](#status)|Entrambe le funzioni membro restituiscono `mystat` probabilmente prima modificato.|
-|[symlink_status](#symlink_status)|Entrambe le funzioni membro restituiscono `mysymstat` probabilmente prima modificato.|
+|[replace_filename](#replace_filename)|La funzione membro sostituisce `mypath` con `mypath.parent_path()`  /  *pval* ,`mystat` con *stat_arg* e`mysymstat` con *symstat_arg*|
+|[status](#status)|Entrambe le funzioni membro `mystat` restituiscono probabilmente prima modificate.|
+|[symlink_status](#symlink_status)|Entrambe le funzioni membro `mysymstat` restituiscono probabilmente prima modificate.|
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|DESCRIZIONE|
 |-|-|
 |[operator!=](#op_neq)|Sostituisce gli elementi dell'elenco con una copia di un altro elenco.|
 |[operator=](#op_as)|Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.|
@@ -84,17 +84,17 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 |[operator<=](#op_lteq)|Restituisce `!(right < *this)`.|
 |[operator>](#op_gt)|Restituisce `right < *this`.|
 |[operator>=](#op_gteq)|Restituisce `!(*this < right)`.|
-|[operator const path_type&](#path_type)|Restituisce `mypath`.|
+|[operatore const path_type &](#path_type)|Restituisce `mypath`.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<sperimentale/filesystem&gt;
+**Intestazione:** \<Experimental/filesystem&gt;
 
 **Spazio nomi:** std::experimental::filesystem
 
-## <a name="assign"></a> assegnare
+## <a name="assign"></a>assegnare
 
-La funzione membro assegna *pval* al `mypath`, *stat_arg* alla `mystat`, e *symstat_arg* a `mysymstat`.
+La funzione membro assegna *pval* a `mypath`, *stat_arg* a `mystat`e *symstat_arg* a `mysymstat`.
 
 ```cpp
 void assign(const std::experimental::filesystem::path& pval,
@@ -104,18 +104,18 @@ void assign(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parametri
 
-*pval*<br/>
-Il percorso del nome file archiviato.
+*Pval*\
+Percorso del nome file archiviato.
 
-*stat_arg*<br/>
-Lo stato del nome file archiviato.
+*stat_arg*\
+Stato del nome file archiviato.
 
-*symstat_arg*<br/>
-Lo stato del collegamento simbolico del nome file archiviato.
+*symstat_arg*\
+Stato del collegamento simbolico del nome file archiviato.
 
-## <a name="directory_entry"></a> directory_entry
+## <a name="directory_entry"></a>directory_entry
 
-I costruttori impostati come predefiniti si comportano come previsto. Il quarto costruttore inizializza `mypath` al *pval*, `mystat` al *stat_arg*, e `mysymstat` a *symstat_arg*.
+I costruttori impostati come predefiniti si comportano come previsto. Il quarto costruttore inizializza `mypath` *pval* `mystat` , *stat_arg*e `mysymstat` *symstat_arg*.
 
 ```cpp
 directory_entry() = default;
@@ -128,16 +128,16 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 
 ### <a name="parameters"></a>Parametri
 
-*pval*<br/>
-Il percorso del nome file archiviato.
+*Pval*\
+Percorso del nome file archiviato.
 
-*stat_arg*<br/>
-Lo stato del nome file archiviato.
+*stat_arg*\
+Stato del nome file archiviato.
 
-*symstat_arg*<br/>
-Lo stato del collegamento simbolico del nome file archiviato.
+*symstat_arg*\
+Stato del collegamento simbolico del nome file archiviato.
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operatore! =
 
 La funzione membro restituisce `!(*this == right)`.
 
@@ -147,8 +147,8 @@ bool operator!=(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
+*Ok*\
+[Directory_entry](../standard-library/directory-entry-class.md) da confrontare con `directory_entry`.
 
 ## <a name="op_as"></a> operator=
 
@@ -161,8 +161,8 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) copiata nel `directory_entry`.
+*Ok*\
+[Directory_entry](../standard-library/directory-entry-class.md) copiato nell'oggetto `directory_entry`.
 
 ## <a name="op_eq"></a> operator==
 
@@ -174,8 +174,8 @@ bool operator==(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
+*Ok*\
+[Directory_entry](../standard-library/directory-entry-class.md) da confrontare con `directory_entry`.
 
 ## <a name="op_lt"></a> Operatore&lt;
 
@@ -187,10 +187,10 @@ bool operator<(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
+*Ok*\
+[Directory_entry](../standard-library/directory-entry-class.md) da confrontare con `directory_entry`.
 
-## <a name="op_lteq"></a> operator&lt;=
+## <a name="op_lteq"></a>operatore&lt;=
 
 La funzione membro restituisce `!(right < *this)`.
 
@@ -200,8 +200,8 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
+*Ok*\
+[Directory_entry](../standard-library/directory-entry-class.md) da confrontare con `directory_entry`.
 
 ## <a name="op_gt"></a> Operatore&gt;
 
@@ -213,10 +213,10 @@ bool operator&gt;(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
+*Ok*\
+[Directory_entry](../standard-library/directory-entry-class.md) da confrontare con `directory_entry`.
 
-## <a name="op_gteq"></a> operator&gt;=
+## <a name="op_gteq"></a>operatore&gt;=
 
 La funzione membro restituisce `!(*this < right)`.
 
@@ -226,10 +226,10 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
-Il [directory_entry](../standard-library/directory-entry-class.md) cui è confrontato il `directory_entry`.
+*Ok*\
+[Directory_entry](../standard-library/directory-entry-class.md) da confrontare con `directory_entry`.
 
-## <a name="path_type"></a> operator const path_type &
+## <a name="path_type"></a>operatore const path_type &
 
 L'operatore membro restituisce `mypath`.
 
@@ -237,7 +237,7 @@ L'operatore membro restituisce `mypath`.
 operator const std::experimental::filesystem::path&() const;
 ```
 
-## <a name="path"></a> path
+## <a name="path"></a>percorso
 
 La funzione membro restituisce `mypath`.
 
@@ -245,9 +245,9 @@ La funzione membro restituisce `mypath`.
 const std::experimental::filesystem::path& path() const noexcept;
 ```
 
-## <a name="replace_filename"></a> replace_filename
+## <a name="replace_filename"></a>replace_filename
 
-La funzione membro sostituisce `mypath` con `mypath.parent_path()`  /  *pval*, `mystat` con *stat_arg*, e `mysymstat` con *symstat_arg*
+La funzione membro sostituisce `mypath` con `mypath.parent_path()`  /  *pval* ,`mystat` con *stat_arg* e`mysymstat` con *symstat_arg*
 
 ```cpp
 void replace_filename(
@@ -258,22 +258,22 @@ void replace_filename(
 
 ### <a name="parameters"></a>Parametri
 
-*pval*<br/>
-Il percorso del nome file archiviato.
+*Pval*\
+Percorso del nome file archiviato.
 
-*stat_arg*<br/>
-Lo stato del nome file archiviato.
+*stat_arg*\
+Stato del nome file archiviato.
 
-*symstat_arg*<br/>
-Lo stato del collegamento simbolico del nome file archiviato.
+*symstat_arg*\
+Stato del collegamento simbolico del nome file archiviato.
 
-## <a name="status"></a> Stato
+## <a name="status"></a>stato
 
-Entrambe le funzioni membro restituiscono `mystat` probabilmente prima modificato nel modo seguente:
+Entrambe le funzioni membro `mystat` restituiscono probabilmente prima modificate nel modo seguente:
 
-1. Se `status_known(mystat)` quindi non fare nulla.
+1. Se `status_known(mystat)` non eseguire alcuna operazione.
 
-1. In caso contrario, se `!status_known(mysymstat) && !is_symlink(mysymstat)` quindi `mystat = mysymstat`.
+1. In caso contrario `!status_known(mysymstat) && !is_symlink(mysymstat)` , `mystat = mysymstat`se quindi.
 
 ```cpp
 file_status status() const;
@@ -282,12 +282,12 @@ file_status status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*ec*<br/>
-Il codice di errore di stato.
+*EC*\
+Codice di errore dello stato.
 
-## <a name="symlink_status"></a> symlink_status
+## <a name="symlink_status"></a>symlink_status
 
-Entrambe le funzioni membro restituiscono `mysymstat` probabilmente prima modificato nel modo seguente: Se `status_known(mysymstat)` quindi non fare nulla. In caso contrario, `mysymstat = symlink_status(mypval)`.
+Entrambe le funzioni membro `mysymstat` restituiscono probabilmente prima modificate nel modo seguente: Se `status_known(mysymstat)` non eseguire alcuna operazione. In caso contrario, `mysymstat = symlink_status(mypval)`.
 
 ```cpp
 file_status symlink_status() const;
@@ -296,10 +296,10 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*ec*<br/>
-Il codice di errore di stato.
+*EC*\
+Codice di errore dello stato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem&gt;](../standard-library/filesystem.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem&gt;](../standard-library/filesystem.md)

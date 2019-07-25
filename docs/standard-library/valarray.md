@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246661"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448348"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -24,11 +24,11 @@ Definisce la classe modello valarray e numerose funzioni e classi modello.
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Il \<valarray > Usa libreria di ' #include < initializer_list >' istruzione.
+> La \<libreria > valarray utilizza l'istruzione ' #include < initializer_list >'.
 
 ## <a name="remarks"></a>Note
 
-A queste funzioni e classi modello sono consentiti livelli insoliti di libertà ai fini del miglioramento delle prestazioni. In particolare, qualsiasi funzione che restituisce il tipo `valarray<T1>` può restituire un oggetto di un altro tipo T2. In tal caso, qualsiasi funzione che accetta uno o più argomenti di tipo `valarray<T2>` deve includere overload che accettano combinazioni arbitrarie di questi argomenti, ognuno sostituiti da un argomento di tipo T2.
+A queste funzioni e classi modello sono consentiti livelli insoliti di libertà ai fini del miglioramento delle prestazioni. In particolare, qualsiasi funzione che `valarray<T1>` restituisce il tipo può restituire un oggetto di un altro tipo T2. In tal caso, qualsiasi funzione che accetta uno o più argomenti di tipo `valarray<T2>` deve avere overload che accettano combinazioni arbitrarie di questi argomenti, ognuno sostituito da un argomento di tipo T2.
 
 ## <a name="members"></a>Members
 
@@ -89,15 +89,15 @@ A queste funzioni e classi modello sono consentiti livelli insoliti di libertà 
 |[Classe mask_array](../standard-library/mask-array-class.md)|Classe modello ausiliaria interna che supporta oggetti che sono subset di oggetti valarray padre, specificati con un'espressione booleana, fornendo operazioni tra le matrici di subset.|
 |[Classe slice](../standard-library/slice-class.md)|Classe di utilità per valarray usata per definire subset simili a vettori unidimensionali di un oggetto valarray.|
 |[Classe slice_array](../standard-library/slice-array-class.md)|Classe modello ausiliaria interna che supporta oggetti sezione fornendo operazioni tra matrici di subset definite dalla sezione di un oggetto valarray.|
-|[Classe valarray](../standard-library/valarray-class.md)|La classe modello descrive un oggetto che controlla una sequenza di elementi di tipo `Type` archiviati sotto forma di matrice e progettati per l'esecuzione di operazioni matematiche ad alta velocità, ottimizzate per prestazioni di calcolo.|
+|[Classe valarray](../standard-library/valarray-class.md)|La classe modello descrive un oggetto che controlla una sequenza di elementi di tipo `Type` archiviati come matrice e progettati per l'esecuzione di operazioni matematiche ad alta velocità, ottimizzate per le prestazioni di calcolo.|
 
 ### <a name="specializations"></a>Specializzazioni
 
 |||
 |-|-|
-|[Classe valarray\<bool>](../standard-library/valarray-bool-class.md)|Una versione specializzata della classe modello valarray\<**tipo**> per elementi di tipo **bool**.|
+|[Classe valarray\<bool>](../standard-library/valarray-bool-class.md)|Una versione specializzata della classe modello valarray\<**Type**> agli elementi di tipo **bool**.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

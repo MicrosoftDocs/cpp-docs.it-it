@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 94ae4dfc8f5f9073c0a39f315adfbed3e5c14daf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380171"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449669"
 ---
 # <a name="cachechunklist-class"></a>Classe cache_chunklist
 
@@ -36,9 +36,9 @@ class cache_chunklist
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello viene utilizzato **operatore new** per allocare porzioni di memoria non elaborata, con sottoallocazione dei blocchi per allocare memoria per un blocco di memoria quando necessario; archivia blocchi di memoria deallocati in un elenco di disponibilità separato per ogni porzione e Usa **operatore delete** per deallocare una porzione quando nessuno dei relativi blocchi di memoria è in uso.
+Questa classe modello usa l' **operatore New** per allocare blocchi di memoria non elaborata, i blocchi di sottoallocazione per allocare spazio di archiviazione per un blocco di memoria quando necessario; Archivia i blocchi di memoria deallocati in un elenco libero separato per ogni blocco e USA **operator delete** per deallocare un blocco quando nessuno dei blocchi di memoria è in uso.
 
-Ogni blocco di memoria contiene *Sz* byte di memoria utilizzabile e un puntatore alla porzione a cui appartiene. Ogni porzione contiene `Nelts` blocchi di memoria, tre puntatori, un int e i dati che **operatore new** e **operatore delete** richiedono.
+Ogni blocco di memoria include *SZ* byte di memoria utilizzabile e un puntatore al blocco a cui appartiene. Ogni blocco include `Nelts` blocchi di memoria, tre puntatori, int e i dati necessari per **operator new** e **operator delete** .
 
 ### <a name="constructors"></a>Costruttori
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

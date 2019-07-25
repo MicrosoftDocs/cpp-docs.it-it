@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349121"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460197"
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 
-La classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per descrivere le sequenze di tipo *CharType* utilizzato per rappresentare un campo di input o output monetario. Se il parametro di modello *Intl* viene *true*, vengono rispettate le convenzioni internazionali.
+La classe modello descrive un oggetto che può fungere da facet delle impostazioni locali per descrivere le sequenze di tipo *CharType* utilizzate per rappresentare un campo di input di tipo valuta o un campo di output di tipo valuta. Se il parametro di modello *Intl* è *true*, vengono rispettate le convenzioni internazionali.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*<br/>
+*CharType*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
-*Intl*<br/>
+*Intl*\
 Flag che specifica se devono essere rispettate le convenzioni internazionali.
 
 ## <a name="remarks"></a>Note
@@ -93,7 +93,7 @@ L'oggetto statico const intl archivia il valore del parametro di modello *Intl*.
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[curr_symbol](#curr_symbol)|Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di valuta.|
 |[decimal_point](#decimal_point)|Restituisce una sequenza di elementi specifica delle impostazioni locali da utilizzare come simbolo di separatore decimale.|
@@ -277,7 +277,7 @@ Regola specifica delle impostazioni locali per determinare la modalità di raggr
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata da `grouping`.
+Vedere l'esempio per il [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata `grouping`da.
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo negativo. Ciascuno dei quatto elementi di `pattern::field` può avere i valori:
+La funzione membro virtuale protetta restituisce una regola specifica delle impostazioni locali per determinare la modalità di generazione di un campo di output di tipo valuta per un importo negativo. Ognuno dei quattro elementi di `pattern::field` può avere i valori seguenti:
 
-- `none` in base a zero o più spazi o generare nulla.
+- `none`per trovare la corrispondenza con zero o più spazi oppure non generare alcun elemento.
 
-- `sign` in base a o generare un segno positivo o negativo.
+- `sign`per trovare una corrispondenza o generare un segno positivo o negativo.
 
-- `space` in base a zero o più spazi o generare uno spazio.
+- `space`per trovare la corrispondenza con zero o più spazi o generare uno spazio.
 
-- `symbol` in base a o generare un simbolo di valuta.
+- `symbol`per trovare una corrispondenza o generare un simbolo di valuta.
 
-- `value` in base a o generare un valore monetario.
+- `value`per trovare una corrispondenza o generare un valore monetario.
 
-I componenti di un campo di output di tipo valuta vengono generati e i componenti di un campo di input vengono confrontati nell'ordine in cui questi elementi compaiono in `pattern::field`. Ognuno dei valori `sign`, `symbol`, `value`e il valore `none` o `space` deve comparire solamente una volta. Il valore `none` non deve comparire prima. Il valore **space** non deve comparire come primo o ultimo. Se `Intl` è true, l'ordine viene `symbol`, `sign`, `none`, quindi `value`.
+I componenti di un campo di output di tipo valuta vengono generati e i componenti di un campo di input di tipo valuta corrispondono nell'ordine in `pattern::field`cui questi elementi sono visualizzati in. Ognuno `sign`dei valori, `value` ,e`none` deve essere visualizzato esattamente una volta. `space` `symbol` Il valore `none` non deve essere visualizzato per primo. Il valore **space** non deve comparire come primo o ultimo. Se `Intl` è true, l'ordine è `symbol`, `sign` `none`,, quindi `value`.
 
 La versione del modello di `moneypunct`\< **CharType**, **Intl**> restituisce `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*<br/>
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il *_Refs* parametro e i relativi significati sono:
+I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
 - 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
 - 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non definiti.
+- \> 1: Questi valori non sono definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

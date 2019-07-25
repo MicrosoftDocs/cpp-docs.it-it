@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0b45d5f591c5394ffa861e75169dce70f53b1baf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244491"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448021"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-Include l'intestazione della libreria C Standard \<stdarg. h > e aggiunge i nomi associati al `std` dello spazio dei nomi. Includendo questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C Standard vengano dichiarati nel `std` dello spazio dei nomi.
+Include l'intestazione \<della libreria standard C STDARG. h > e aggiunge i nomi associati `std` allo spazio dei nomi. L'inclusione di questa intestazione garantisce che i nomi dichiarati utilizzando il collegamento esterno nell'intestazione della libreria `std` standard C vengano dichiarati nello spazio dei nomi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -23,7 +23,7 @@ Include l'intestazione della libreria C Standard \<stdarg. h > e aggiunge i nomi
 #include <cstdarg>
 ```
 
-## <a name="namespace-and-macros"></a>Macro e Namespace
+## <a name="namespace-and-macros"></a>Spazio dei nomi e macro
 
 ```cpp
 namespace std {
@@ -38,6 +38,6 @@ namespace std {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

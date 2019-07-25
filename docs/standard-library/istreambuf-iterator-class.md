@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 41298909b53de1c7acf3cb8ae4b999eb6260765d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413268"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448135"
 ---
 # <a name="istreambufiterator-class"></a>Classe istreambuf_iterator
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*<br/>
+*CharType*\
 Tipo che rappresenta il tipo di carattere per istreambuf_iterator.
 
-*Tratti*<br/>
+*Tratti*\
 Tipo che rappresenta il tipo di carattere per istreambuf_iterator. Questo argomento è facoltativo e il valore predefinito è `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Note
@@ -75,7 +75,7 @@ Dopo la costruzione o l'incremento di un oggetto della classe istreambuf_iterato
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|Descrizione|
 |-|-|
 |[operator*](#op_star)|L'operatore di dereferenziazione restituisce il carattere successivo del flusso.|
 |[operator++](#op_add_add)|Restituisce il carattere successivo del flusso di input oppure copia l'oggetto prima di incrementarlo e restituisce la copia.|
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Iteratore per cui verificare l'equivalenza.
 
 ### <a name="return-value"></a>Valore restituito
@@ -151,7 +151,7 @@ Iteratore per cui verificare l'equivalenza.
 
 ### <a name="remarks"></a>Note
 
-Un intervallo viene definito dal `istreambuf_iterator` per la posizione corrente e l'iteratore di fine del flusso. tuttavia, poiché tutti non-fine flusso gli iteratori sono equivalenti nel `equal` funzione membro, non è possibile definire intervalli secondari usando `istreambuf_iterator`s. Gli operatori `==` e `!=` hanno la stessa semantica.
+Un intervallo viene definito dall'oggetto `istreambuf_iterator` alla posizione corrente e all'iteratore di fine flusso, ma poiché tutti gli iteratori non di fine flusso sono equivalenti `equal` nella funzione membro, non è possibile definire intervalli secondari utilizzando `istreambuf_iterator`s. Gli operatori `==` e `!=` hanno la stessa semantica.
 
 ### <a name="example"></a>Esempio
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Parametri
 
-*strbuf*<br/>
+*Strbuf*\
 Buffer del flusso di input a cui viene collegato l'oggetto `istreambuf_iterator`.
 
-*_Istr*<br/>
+*_Istr*\
 Flusso di input a cui viene collegato l'oggetto `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza il puntatore del buffer del flusso di input con *strbuf*. Il secondo costruttore inizializza il puntatore del buffer del flusso di input con *_Istr*. `rdbuf`e quindi tenta di estrarre e archiviare un oggetto di tipo `CharType`.
+Il primo costruttore inizializza il puntatore del buffer del flusso di input con *Strbuf*. Il secondo costruttore inizializza il puntatore del buffer del flusso di input con *_Istr*. `rdbuf`e, infine, tenta di estrarre e archiviare un oggetto di tipo `CharType`.
 
 ### <a name="example"></a>Esempio
 
@@ -336,7 +336,7 @@ Oggetto `istreambuf_iterator` o riferimento a un oggetto `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Note
 
-Il primo operatore prova a estrarre e archiviare un oggetto di tipo `CharType` dal flusso di input associato. Il secondo operatore esegue una copia dell'oggetto, lo incrementa, quindi restituisce la copia.
+Il primo operatore tenta infine di estrarre e archiviare un oggetto di tipo `CharType` dal flusso di input associato. Il secondo operatore esegue una copia dell'oggetto, lo incrementa, quindi restituisce la copia.
 
 ### <a name="example"></a>Esempio
 
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Struct iterator](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Struct iterator](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

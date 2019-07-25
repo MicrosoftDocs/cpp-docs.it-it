@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db04569d3938c673653ac36eeebdabc9cb725c1e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244736"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453169"
 ---
 # <a name="complex-class"></a>Classe complex
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>Note
 
-Un oggetto della classe `Type`:
+Oggetto della classe `Type`:
 
 - Ha un costruttore predefinito pubblico, un distruttore, un costruttore di copia e un operatore di assegnazione con un comportamento convenzionale.
 
@@ -40,7 +40,7 @@ Un oggetto della classe `Type`:
 
 In particolare, non possono esistere sottili differenze tra il costruttore di copia e la costruzione predefinita seguita dall'assegnazione. Nessuna delle operazioni sugli oggetti della classe `Type` può generare eccezioni.
 
-Per i tre tipi a virgola mobile esistono specializzazioni esplicite della classe modello complex. In questa implementazione, un valore di qualsiasi altro tipo `Type` è il cast di tipo a **doppie** per i calcoli effettivi, con il **double** risultato assegnato all'oggetto archiviato di tipo `Type`.
+Per i tre tipi a virgola mobile esistono specializzazioni esplicite della classe modello complex. In questa implementazione, un valore di qualsiasi altro tipo `Type` è typecast a **Double** per i calcoli effettivi, con il **doppio** risultato assegnato nuovamente all'oggetto archiviato di `Type`tipo.
 
 ## <a name="members"></a>Members
 
@@ -75,7 +75,7 @@ Per i tre tipi a virgola mobile esistono specializzazioni esplicite della classe
 
 
 
-## <a name="complex"></a> complesse
+## <a name="complex"></a>complesso
 
 Costruisce un numero complesso con parti reali e immaginarie specificate oppure come copia di un altro numero complesso.
 
@@ -102,7 +102,7 @@ Numero complesso le cui parti reale e immaginaria vengono usate per inizializzar
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza l'oggetto memorizzato parte reale per  *\_RealVal* e la parte immaginaria archiviata in  *\_Imagval*. Il secondo costruttore inizializza l'oggetto memorizzato parte reale per `complexNum.real()` e la parte immaginaria archiviata in `complexNum.imag()`.
+Il primo costruttore inizializza la parte reale archiviata  *\_* in RealVal e la parte immaginaria archiviata in  *\_Imagval*. Il secondo costruttore inizializza la parte reale archiviata `complexNum.real()` in e la parte immaginaria archiviata `complexNum.imag()`in.
 
 In questa implementazione, se un convertitore non supporta le funzioni del modello membro, il modello:
 
@@ -159,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a> imag
+## <a name="imag"></a>imag
 
 Estrae il componente immaginario di un numero complesso.
 
@@ -180,7 +180,7 @@ Parte immaginaria del numero complesso.
 
 ### <a name="remarks"></a>Note
 
-Per un numero complesso *+ bi*, la parte immaginaria o il componente viene *Im(a + BI) = b*.
+Per un numero complesso *a + bi*, la parte o il componente fittizio è *im (a + BI) = b*.
 
 ### <a name="example"></a>Esempio
 
@@ -213,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a> operatore * =
+## <a name="op_star_eq"></a>operatore * =
 
 Moltiplica un numero complesso di destinazione per un fattore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.
 
@@ -298,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a> operator + =
+## <a name="op_add_eq"></a>operatore + =
 
 Aggiunge un numero a un numero complesso di destinazione, in cui il numero aggiunto può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene aggiunto.
 
@@ -401,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a> operatore =
+## <a name="operator-_eq"></a>operatore-=
 
 Sottrae un numero da un numero complesso di destinazione, in cui il numero sottratto può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso a cui viene aggiunto.
 
@@ -509,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a> operatore / =
+## <a name="op_div_eq"></a>operatore/=
 
 Divide un numero complesso di destinazione per un divisore che può essere complesso o dello stesso tipo delle parti reale e immaginaria del numero complesso.
 
@@ -691,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a> Real
+## <a name="real"></a>reale
 
 Ottiene o imposta il componente reale di un numero complesso.
 
@@ -712,7 +712,7 @@ Parte reale del numero complesso.
 
 ### <a name="remarks"></a>Note
 
-Per un numero complesso *+ bi*, la parte reale o il componente è *Re(a + BI) = un*.
+Per un numero complesso *a + bi*, la parte o il componente reale è *re (a + BI) = a*.
 
 ### <a name="example"></a>Esempio
 
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Note
 
-`value_type` è un sinonimo della classe complesso `Type` parametro di modello.
+`value_type`è un sinonimo del parametro di `Type` modello complesso della classe.
 
 ### <a name="example"></a>Esempio
 
@@ -784,4 +784,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

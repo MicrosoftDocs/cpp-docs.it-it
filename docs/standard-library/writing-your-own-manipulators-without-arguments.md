@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-ms.openlocfilehash: 0c3037c007e9388485f9553f9d2b0a69a1980b9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a1f72ae3e6860d8ab532a72a1776b77c7204f48
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410824"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450913"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Scrittura di manipolatori personalizzati senza gli argomenti
 
@@ -44,4 +44,4 @@ _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
 
 ## <a name="see-also"></a>Vedere anche
 
-[Flussi di output](../standard-library/output-streams.md)<br/>
+[Flussi di output](../standard-library/output-streams.md)

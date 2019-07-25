@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - <optional>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: c73ad2ad94a5de29bc2c457fdf6ca8b9c783615c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268483"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447178"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Definisce la classe modello contenitore facoltativa e diversi modelli di supporto.
+Definisce la classe modello del contenitore facoltativa e diversi modelli di supporto.
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<facoltativo >
+**Intestazione:** \<> facoltativo
 
 **Spazio dei nomi:** std
 
@@ -37,13 +37,13 @@ Definisce la classe modello contenitore facoltativa e diversi modelli di support
 |[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è maggiore o uguale all'oggetto `optional` sul lato destro.|
 
 > [!NOTE]
-> Oltre a relazionale confronta quest \<facoltativa > operatori anche supportano il confronto con **nullopt** e `T`.
+> Oltre ai confronti relazionali, \<gli operatori facoltativi > supportano anche il confronto `T`con **nullopt** e.
 
 ### <a name="functions"></a>Funzioni
 
 |||
 |-|-|
-|[make_optional](../standard-library/optional-functions.md#make_optional)|Rende un oggetto facoltativo.|
+|[make_optional](../standard-library/optional-functions.md#make_optional)|Rende facoltativo un oggetto.|
 |[swap](../standard-library/optional-functions.md#swap)||
 
 ### <a name="classes-and-structs"></a>Classi e struct
@@ -51,9 +51,9 @@ Definisce la classe modello contenitore facoltativa e diversi modelli di support
 |||
 |-|-|
 |[hash]()||
-|[Classe facoltativa](../standard-library/optional-class.md)|Descrive un oggetto che può o non può contenere un valore.|
-|[nullopt_t Struct](../standard-library/nullopt-t-structure.md)|Descrive un oggetto non contenente un valore.|
-|[Classe bad_optional_access](../standard-library/bad-optional-access-class.md)|Descrive un oggetto generato come eccezione per segnalare un tentativo di accedere a un valore non esiste.|
+|[Classe facoltativa](../standard-library/optional-class.md)|Descrive un oggetto che può o non può mantenere un valore.|
+|[Struct nullopt_t](../standard-library/nullopt-t-structure.md)|Descrive un oggetto che non contiene un valore.|
+|[Classe bad_optional_access](../standard-library/bad-optional-access-class.md)|Descrive un oggetto generato come eccezione per segnalare un tentativo di accesso a un valore non presente.|
 
 ### <a name="objects"></a>Oggetti
 
@@ -63,4 +63,4 @@ Definisce la classe modello contenitore facoltativa e diversi modelli di support
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

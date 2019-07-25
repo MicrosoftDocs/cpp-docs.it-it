@@ -5,12 +5,12 @@ f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 7c9f2c3a2425bf3ac6e62ce7fcecfe9315c3e04e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 071fc3b73cd3378b110d6d412bb7575e35a77478
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348198"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447334"
 ---
 # <a name="ltscopedallocatorgt-operators"></a>Operatori &lt;scoped_allocator&gt;
 
@@ -31,10 +31,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 L'oggetto `scoped_allocator_adaptor` a sinistra.
 
-*right*<br/>
+*Ok*\
 L'oggetto `scoped_allocator_adaptor` corretto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -54,10 +54,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 L'oggetto `scoped_allocator_adaptor` a sinistra.
 
-*right*<br/>
+*Ok*\
 L'oggetto `scoped_allocator_adaptor` corretto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -66,4 +66,4 @@ L'oggetto `scoped_allocator_adaptor` corretto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[<scoped_allocator>](../standard-library/scoped-allocator.md)<br/>
+[<scoped_allocator>](../standard-library/scoped-allocator.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68ee602c44a8515e1d41f04a4bd0fbb7edc924b7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379194"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452303"
 ---
 # <a name="checkedarrayiterator-class"></a>Classe checked_array_iterator
 
@@ -161,7 +161,7 @@ int main()
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|DESCRIZIONE|
 |-|-|
 |[operator==](#op_eq_eq)|Verifica l'uguaglianza di due `checked_array_iterator`.|
 |[operator!=](#op_neq)|Verifica la disuguaglianza di due `checked_array_iterator`.|
@@ -243,13 +243,13 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parametri
 
-*ptr*<br/>
+*PTR*\
 Puntatore alla matrice.
 
-*size*<br/>
+*dimensioni*\
 Dimensione della matrice.
 
-*index*<br/>
+*Indice*\
 (Facoltativo) Elemento nella matrice, per inizializzare l'iteratore.  Per impostazione predefinita, l'iteratore viene inizializzato al primo elemento nella matrice.
 
 ### <a name="remarks"></a>Note
@@ -318,7 +318,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Oggetto `checked_array_iterator` in base al quale verificare l'uguaglianza.
 
 ### <a name="remarks"></a>Note
@@ -374,7 +374,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Oggetto `checked_array_iterator` in base al quale verificare la disuguaglianza.
 
 ### <a name="remarks"></a>Note
@@ -430,7 +430,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Oggetto `checked_array_iterator` in base al quale verificare la disuguaglianza.
 
 ### <a name="remarks"></a>Note
@@ -486,7 +486,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Oggetto `checked_array_iterator` con cui eseguire il confronto.
 
 ### <a name="remarks"></a>Note
@@ -505,7 +505,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Oggetto `checked_array_iterator` con cui eseguire il confronto.
 
 ### <a name="remarks"></a>Note
@@ -524,7 +524,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Oggetto `checked_array_iterator` con cui eseguire il confronto.
 
 ### <a name="remarks"></a>Note
@@ -755,7 +755,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*_Off*<br/>
+*_Off*\
 Offset di incremento dell'iteratore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -803,7 +803,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*_Off*<br/>
+*_Off*\
 Offset da aggiungere all'oggetto `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -851,7 +851,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parametri
 
-*_Off*<br/>
+*_Off*\
 Offset di incremento dell'iteratore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -902,7 +902,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parametri
 
-*_Off*<br/>
+*_Off*\
 L'offset deve essere diminuito da `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -923,7 +923,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*_Off*<br/>
+*_Off*\
 Offset dall'indirizzo dell'oggetto `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -993,5 +993,5 @@ Per altre informazioni, vedere [Checked Iterators](../standard-library/checked-i
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

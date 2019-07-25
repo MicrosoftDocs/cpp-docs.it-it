@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_assignable
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
-ms.openlocfilehash: b25d16658def4e3cf620ab707d2dabacb2620f33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 324e4a1f1bd3528f09f21c5e485ac814038b7517
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413391"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448373"
 ---
 # <a name="istriviallymoveassignable-class"></a>Classe is_trivially_move_assignable
 
@@ -26,14 +26,14 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un semplice operatore di assegnazione spostamento, in caso contrario, contiene false.
+Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un operatore di assegnazione di spostamento semplice; in caso contrario, contiene false.
 
-Un operatore di assegnazione di spostamento per una classe *Ty* è piuttosto semplice se:
+Un operatore di assegnazione di spostamento per una classe *Ty* è semplice se:
 
 viene fornito in modo implicito
 
@@ -53,4 +53,4 @@ le classi di tutti i membri dati non statici di tipo matrice della classe hanno 
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

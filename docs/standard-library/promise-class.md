@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 991df549168456112afe27bed6f4991a7ccfb88e
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 560339dee5b13ddc13ff2f8af8283ea8615d804a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400863"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458357"
 ---
 # <a name="promise-class"></a>Classe promise
 
@@ -38,7 +38,7 @@ template <class Ty>
 class promise;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -69,7 +69,7 @@ class promise;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<future >
+**Intestazione:** \<> future
 
 **Spazio dei nomi:** std
 
@@ -97,7 +97,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Altro*<br/>
+*Altri*\
 Oggetto `promise`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -106,7 +106,7 @@ Oggetto `promise`.
 
 ### <a name="remarks"></a>Note
 
-Questo operatore trasferisce lo stato asincrono associato da *altri*. Dopo il trasferimento *altri* viene *vuota*.
+Questo operatore trasferisce lo stato asincrono associato da *altro*. Dopo il trasferimento, *other* è *vuoto*.
 
 ## <a name="promise"></a>  Costruttore promise::promise
 
@@ -121,19 +121,19 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Al*<br/>
+*Al*\
 Allocatore di memoria. Per altre informazioni, vedere [\<allocators>](../standard-library/allocators-header.md).
 
-*Altro*<br/>
+*Altri*\
 Oggetto `promise`.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore crea un *vuote* `promise` oggetto.
+Il primo costruttore crea un oggetto *vuoto* `promise` .
 
-Il secondo costruttore crea un oggetto vuoto `promise` oggetto e viene utilizzato *Al* per l'allocazione di memoria.
+Il secondo costruttore crea un oggetto vuoto `promise` e USA *al* per l'allocazione della memoria.
 
-Il terzo costruttore crea un `promise` dell'oggetto e trasferisce lo stato asincrono associato da *altri*e lascia *altri* vuoto.
+Il terzo costruttore costruisce un `promise` oggetto e trasferisce lo stato asincrono associato da *other*e lascia un *altro* oggetto vuoto.
 
 ## <a name="set_exception"></a>  promise::set_exception
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametri
 
-*Exc*<br/>
+*Escl*\
 Oggetto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) archiviato con questo metodo come risultato dell'eccezione.
 
 ### <a name="remarks"></a>Note
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parametri
 
-*Exc*<br/>
+*Escl*\
 Oggetto [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) archiviato con questo metodo come risultato dell'eccezione.
 
 ### <a name="remarks"></a>Note
@@ -190,7 +190,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*Val*\
 Valore da archiviare come risultato.
 
 ### <a name="remarks"></a>Note
@@ -201,11 +201,11 @@ Se [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exceptio
 
 Come risultato di questo metodo, i thread bloccati sullo stato asincrono associato vengono sbloccati.
 
-Il primo metodo genera anche un'eccezione generata quando *Val* viene copiato nello stato asincrono associato. In questo caso lo stato asincrono associato non è impostato su ready.
+Il primo metodo genera anche qualsiasi eccezione generata quando *Val* viene copiato nello stato asincrono associato. In questo caso lo stato asincrono associato non è impostato su ready.
 
-Il secondo metodo genera anche un'eccezione generata quando *Val* viene spostato nello stato asincrono associato. In questo caso lo stato asincrono associato non è impostato su ready.
+Il secondo metodo genera anche qualsiasi eccezione generata quando *Val* viene spostata nello stato asincrono associato. In questo caso lo stato asincrono associato non è impostato su ready.
 
-Per la parziale specializzazione `promise<Ty&>`, il valore archiviato è in effetti un riferimento a *Val*.
+Per la specializzazione `promise<Ty&>`parziale, il valore archiviato è in effetti un riferimento a *Val*.
 
 Per la specializzazione `promise<void>`, non esiste alcun valore archiviato.
 
@@ -222,7 +222,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Parametri
 
-*Val*<br/>
+*Val*\
 Valore da archiviare come risultato.
 
 ### <a name="remarks"></a>Note
@@ -233,11 +233,11 @@ Se [set_exception](#set_exception), [set_exception_at_thread_exit](#set_exceptio
 
 A differenza di `set_value`, lo stato associato asincrono non viene impostato su ready finché tutti gli oggetti locali del thread corrente non sono stati eliminati definitivamente. In genere, i thread bloccati sullo stato associato asincrono non vengono sbloccati finché non si esce dal thread corrente.
 
-Il primo metodo genera anche un'eccezione generata quando *Val* viene copiato nello stato asincrono associato.
+Il primo metodo genera anche qualsiasi eccezione generata quando *Val* viene copiato nello stato asincrono associato.
 
-Il secondo metodo genera anche un'eccezione generata quando *Val* viene spostato nello stato asincrono associato.
+Il secondo metodo genera anche qualsiasi eccezione generata quando *Val* viene spostata nello stato asincrono associato.
 
-Per la parziale specializzazione `promise<Ty&>`, il valore archiviato è in realtà un riferimento a *Val*.
+Per la specializzazione `promise<Ty&>`parziale, il valore archiviato è in effetti un riferimento a *Val*.
 
 Per la specializzazione `promise<void>`, non esiste alcun valore archiviato.
 
@@ -251,9 +251,9 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Altro*<br/>
+*Altri*\
 Oggetto `promise`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

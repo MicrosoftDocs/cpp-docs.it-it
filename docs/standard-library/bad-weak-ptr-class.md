@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bad_weak_ptr
 - bad_weak_ptr class
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
-ms.openlocfilehash: 8ea29f12a8a86bd6b58c5051645182d69ff43389
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e1d536eed6727a5d1e828d358aa6b64521d748b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246193"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454262"
 ---
 # <a name="badweakptr-class"></a>Classe bad_weak_ptr
 
@@ -72,4 +72,4 @@ bad weak pointer
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe weak_ptr](../standard-library/weak-ptr-class.md)<br/>
+[Classe weak_ptr](../standard-library/weak-ptr-class.md)

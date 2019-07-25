@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380117"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449650"
 ---
 # <a name="cachesuballoc-class"></a>Classe cache_suballoc
 
@@ -36,9 +36,9 @@ class cache_suballoc
 
 ## <a name="remarks"></a>Note
 
-La classe di modello cache_suballoc archivia blocchi di memoria deallocati in un elenco di disponibilità con lunghezza non associato, usando `freelist<sizeof(Type), max_unbounded>`e Sottoalloca blocchi di memoria da una porzione più grande allocata con **operatore new** quando è l'elenco di disponibilità vuoto.
+La classe modello cache_suballoc archivia i blocchi di memoria deallocati in un elenco di disponibilità con lunghezza non `freelist<sizeof(Type), max_unbounded>`vincolata, usando e suddivide i blocchi di memoria da un blocco maggiore allocato con **operator new** quando l'elenco di disponibilità è vuoto.
 
-Ogni porzione contiene `Sz * Nelts` byte di memoria utilizzabile e i dati che **operatore new** e **operatore delete** richiedono. Le porzioni allocate non vengono mai liberate.
+Ogni blocco include `Sz * Nelts` byte di memoria utilizzabile e i dati necessari per **operator new** e **operator delete** . Le porzioni allocate non vengono mai liberate.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -69,7 +69,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*count*|Numero di elementi della matrice da allocare.|
 
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

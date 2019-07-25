@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412191"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447420"
 ---
 # <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
 
@@ -36,19 +36,19 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*UIntType*<br/>
+*UIntType*\
 Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*W*\
 **Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
+*S*\
 **Ritardo breve**. Numero di valori Integer. **Precondizione:** `0 < S < R`
 
-*R*<br/>
+*R*\
 **Ritardo lungo**. Determina la ricorrenza nella serie generata.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -62,7 +62,7 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 La classe modello `substract_with_carry_engine` rappresenta un miglioramento di [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Nessuno di questi motori può tuttavia eguagliare la rapidità e la qualità dei risultati offerte da [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Questo motore genera valori di un tipo integrale senza segno specificato dall'utente usando la relazione di ricorrenza (*periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, dove `cy(i)` presenta il valore `1` se `x(i - S) - x(i - R) - cy(i - 1) < 0`, in caso contrario `0` e `M` presenta il valore `2`<sup>W</sup>. Lo stato del motore è un carry indicatore di segno più *R* valori. Questi valori costituiti dagli ultimi *R* valori restituito se `operator()` è stato chiamato almeno *R* volte, altrimenti il `N` valori che sono stati restituiti e dagli ultimi `R - N` valori di seeding.
+Questo motore genera valori di un tipo integrale senza segno specificato dall'utente usando la relazione di ricorrenza (*periodo*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, dove `cy(i)` presenta il valore `1` se `x(i - S) - x(i - R) - cy(i - 1) < 0`, in caso contrario `0` e `M` presenta il valore `2`<sup>W</sup>. Lo stato del motore è un indicatore Carry più valori *R* . Questi valori sono costituiti dagli ultimi valori *r* restituiti `operator()` se è stato chiamato almeno *r* volte, in caso `N` contrario i valori restituiti e gli ultimi `R - N` valori del valore di inizializzazione.
 
 L'argomento del modello `UIntType` deve essere abbastanza grande da contenere valori fino a `M - 1`.
 
@@ -84,4 +84,4 @@ Per informazioni dettagliate sull'algoritmo del motore subract-with-carry, veder
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

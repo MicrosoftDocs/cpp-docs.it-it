@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::operator=
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
-ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ced1f60c811f585928f47c6cfd5e695d0c4085
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160017"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457745"
 ---
 # <a name="filestatus-class"></a>Classe file_status
 
@@ -33,7 +33,7 @@ class file_status;
 
 |Costruttore|Descrizione|
 |-|-|
-|[file_status](#file_status)|Costruisce un wrapper per [file_type](../standard-library/filesystem-enumerations.md#file_type) e il file [perms](../standard-library/filesystem-enumerations.md#perms).|
+|[file_status](#file_status)|Costruisce un wrapper per [file_type](../standard-library/filesystem-enumerations.md#file_type) e [perms](../standard-library/filesystem-enumerations.md#perms)del file.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
@@ -44,19 +44,19 @@ class file_status;
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|DESCRIZIONE|
 |-|-|
 |[operator=](#op_as)|Gli operatori di assegnazione membro impostati come predefiniti si comportano come previsto.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<filesystem >
+**Intestazione:** \<> filesystem
 
-**Namespace:** std::experimental::filesystem, std::experimental::filesystem
+**Spazio dei nomi:** std:: Experimental:: filesystem, std:: Experimental:: filesystem
 
 ## <a name="file_status"></a> file_status::file_status
 
-Costruisce un wrapper per [file_type](../standard-library/filesystem-enumerations.md#file_type) e il file [perms](../standard-library/filesystem-enumerations.md#perms).
+Costruisce un wrapper per [file_type](../standard-library/filesystem-enumerations.md#file_type) e [perms](../standard-library/filesystem-enumerations.md#perms)del file.
 
 ```cpp
 explicit file_status(
@@ -72,14 +72,14 @@ file_status(file_status&&) noexcept = default;
 
 ### <a name="parameters"></a>Parametri
 
-*ftype*<br/>
-Specificato `file_type`, per impostazione predefinita `file_type::none`.
+*FTYPE*\
+Specificata `file_type`, il valore predefinito `file_type::none`è.
 
-*mask*<br/>
-File specificato `perms`, per impostazione predefinita `perms::unknown`.
+*maschera*\
+File `perms`specificato `perms::unknown`. il valore predefinito è.
 
-*file_status*<br/>
-L'oggetto archiviato.
+*file_status*\
+Oggetto archiviato.
 
 ## <a name="op_as"></a> file_status::operator=
 
@@ -92,10 +92,10 @@ file_status& operator=(file_status&&) nexcept = default;
 
 ### <a name="parameters"></a>Parametri
 
-*file_status*<br/>
-Il [file_status](../standard-library/file-status-class.md) copiata nel `file_status`.
+*file_status*\
+[File_status](../standard-library/file-status-class.md) copiato nell'oggetto `file_status`.
 
-## <a name="type"></a> Tipo
+## <a name="type"></a>tipo
 
 Ottiene o imposta `file_type`.
 
@@ -106,14 +106,14 @@ void type(file_type ftype) noexcept
 
 ### <a name="parameters"></a>Parametri
 
-*ftype*<br/>
+*FTYPE*\
 `file_type`specificato.
 
-## <a name="permissions"></a> Autorizzazioni
+## <a name="permissions"></a>autorizzazioni
 
 Ottiene o imposta le autorizzazioni del file.
 
-Usare il metodo di impostazione per rendere un file `readonly` o rimuovere il `readonly` attributo.
+Usare il setter per creare un file `readonly` o rimuovere l' `readonly` attributo.
 
 ```cpp
 perms permissions() const noexcept
@@ -122,11 +122,11 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>Parametri
 
-*mask*<br/>
+*maschera*\
 `perms`specificato.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Classe path](../standard-library/path-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Classe Path](../standard-library/path-class.md)\
+[\<filesystem>](../standard-library/filesystem.md)

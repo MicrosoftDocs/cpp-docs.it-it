@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::basic_ostringstream [C++], rdbuf
 - std::basic_ostringstream [C++], str
 ms.assetid: aea699f7-350f-432a-acca-adbae7b483fb
-ms.openlocfilehash: 45a7eb1384c70b488e057fb9df8ad4c496272316
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa25c379e47bbe22efc78d65b3f6745e98098cbd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414139"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453515"
 ---
 # <a name="basicostringstream-class"></a>Classe basic_ostringstream
 
@@ -32,18 +32,18 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametri
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*Elem*<br/>
+*Elem*\
 Tipo di elemento di base della stringa.
 
-*Tr*<br/>
+*TR*\
 Tratti di carattere specializzati sull'elemento di base della stringa.
 
 ## <a name="remarks"></a>Note
 
-La classe descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso con elementi di tipo `Elem`, cui tratti di carattere sono determinati dalla classe `Tr`, e i cui elementi sono allocati da un allocatore della classe `Alloc`. L'oggetto archivia un oggetto della classe basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+La classe descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer del flusso, con elementi di `Elem`tipo, i cui tratti di carattere sono determinati dalla `Tr`classe e i cui elementi sono allocati da un allocatore di classe `Alloc`. L'oggetto archivia un oggetto della classe basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Costruttori
 
@@ -59,7 +59,7 @@ La classe descrive un oggetto che controlla l'inserimento di elementi e oggetti 
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[rdbuf](#rdbuf)|Restituisce l'indirizzo del buffer di flusso archiviato di tipo `pointer` in [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|
 |[str](#str)|Imposta o recupera il testo in un buffer di stringa senza modificare la posizione di scrittura.|
@@ -90,21 +90,21 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 
 ### <a name="parameters"></a>Parametri
 
-*_Mode*<br/>
+*_Mode*\
 Una delle enumerazioni in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str*<br/>
+*Str*\
 Oggetto di tipo `basic_string`.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore inizializza la classe base chiamando [basic_ostream](../standard-library/basic-ostream-class.md)( **sb**), dove `sb` è l'oggetto archiviato della classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**, **Tr**, `Alloc`>. Inizializza anche **sb** chiamando basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`).
+Il primo costruttore inizializza la classe base chiamando [basic_ostream](../standard-library/basic-ostream-class.md)( **SB**), dove `sb` è l'oggetto archiviato della `Alloc`classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**>. Inizializza anche **sb** chiamando basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`).
 
-Il secondo costruttore inizializza la classe base chiamando basic_ostream( **sb**). Inizializza anche `sb` chiamando basic_stringbuf < **Elem**, **Tr**, `Alloc`> (_ *Str*, `_Mode` &#124; `ios_base::out`).
+Il secondo costruttore inizializza la classe base chiamando basic_ostream( **sb**). Inizializza `sb` anche chiamando basic_stringbuf < **elem**, **TR**, `Alloc`> (_ *Str*, `_Mode` &#124; `ios_base::out`).
 
 ## <a name="rdbuf"></a>  basic_ostringstream::rdbuf
 
-Restituisce l'indirizzo del buffer del flusso archiviato di tipo `pointer` al [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
+Restituisce l'indirizzo del buffer del flusso archiviato di tipo `pointer` in [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR** `Alloc`>.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -112,11 +112,11 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-L'indirizzo del buffer del flusso archiviato di tipo `pointer` in basic_stringbuf < **Elem**, **Tr**, `Alloc`>.
+Indirizzo del buffer del flusso archiviato, `pointer` di tipo in basic_stringbuf < **elem**, **TR**, `Alloc`>.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce l'indirizzo del buffer del flusso archiviato di tipo `pointer` in basic_stringbuf < **Elem**, **Tr**, `Alloc`>.
+La funzione membro restituisce l'indirizzo del buffer del flusso archiviato di tipo `pointer` a basic_stringbuf < **elem**, **TR**, `Alloc`>.
 
 ### <a name="example"></a>Esempio
 
@@ -135,7 +135,7 @@ void str(
 
 ### <a name="parameters"></a>Parametri
 
-*_Newstr*<br/>
+*_Newstr*\
 La nuova stringa.
 
 ### <a name="return-value"></a>Valore restituito
@@ -148,10 +148,10 @@ La prima funzione membro restituisce [rdbuf](#rdbuf) -> [str](../standard-librar
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) per un esempio che usa `str`.
+Vedere [basic_stringbuf:: Str](../standard-library/basic-stringbuf-class.md#str) per un esempio che usa `str`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programmazione iostream](../standard-library/iostream-programming.md)<br/>
-[Convenzioni di iostream](../standard-library/iostreams-conventions.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Programmazione di iostream](../standard-library/iostream-programming.md)\
+[Convenzioni di iostream](../standard-library/iostreams-conventions.md)

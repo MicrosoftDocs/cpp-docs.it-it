@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245948"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456507"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -26,7 +26,7 @@ Definisce le funzioni di modello del contenitore di libreria standard C++ che es
 ```
 
 > [!NOTE]
-> Il \<algoritmo > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+> L' \<algoritmo > libreria usa anche l' `#include <initializer_list>` istruzione.
 
 ## <a name="remarks"></a>Note
 
@@ -40,7 +40,7 @@ Gli algoritmi di libreria standard C++ consentono di estendere le azioni support
 
 - Il suffisso _copy indica che l'algoritmo non solo consente di modificare i valori degli elementi, ma anche di copiare i valori modificati in un intervallo di destinazione. L'algoritmo `reverse` consente di invertire l'ordine degli elementi in un intervallo e l'algoritmo `reverse_copy` consente anche di copiare il risultato in un intervallo di destinazione.
 
-Gli algoritmi di libreria standard C++ vengono spesso classificati in gruppi che forniscono indicazioni sul relativo scopo o sui relativi requisiti. Tali gruppi includono gli algoritmi di modifica in grado di modificare il valore degli elementi in contrapposizione agli algoritmi non di modifica che non consentono tale operazione. Gli algoritmi di modifica consentono di modificare l'ordine degli elementi, ma non i valori dei relativi elementi. La rimozione degli algoritmi può determinare l'eliminazione degli elementi da un intervallo o dalla copia di un intervallo. Algoritmi di ordinamento riordinare gli elementi in un intervallo in vari modi e gli algoritmi degli intervalli ordinati possono agire solo sugli intervalli cui elementi sono stati ordinati in modo particolare.
+Gli algoritmi di libreria standard C++ vengono spesso classificati in gruppi che forniscono indicazioni sul relativo scopo o sui relativi requisiti. Tali gruppi includono gli algoritmi di modifica in grado di modificare il valore degli elementi in contrapposizione agli algoritmi non di modifica che non consentono tale operazione. Gli algoritmi di modifica consentono di modificare l'ordine degli elementi, ma non i valori dei relativi elementi. La rimozione degli algoritmi può determinare l'eliminazione degli elementi da un intervallo o dalla copia di un intervallo. Gli algoritmi di ordinamento riordinano gli elementi in un intervallo in diversi modi e gli algoritmi di intervallo ordinati agiscono solo su intervalli i cui elementi sono stati ordinati in un determinato modo.
 
 Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numerica dispongono del proprio file di intestazione [\<numeric>](../standard-library/numeric.md) e gli oggetti funzione e gli adattatori vengono definiti nell'intestazione [\<functional>](../standard-library/functional.md). Gli oggetti funzione che restituiscono valori booleani vengono definiti predicati. Il predicato binario predefinito è l'operatore di confronto `operator<`. In generale, gli elementi di cui viene eseguito l'ordinamento devono essere confrontabili come "minore di" in modo che, dati qualsiasi due elementi, sia possibile determinare che sono equivalenti (ovvero che uno non è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti.
 
@@ -49,13 +49,13 @@ Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numer
 |||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|Cerca due elementi adiacenti uguali o che soddisfano una condizione specificata.|
-|[all_of](../standard-library/algorithm-functions.md#all_of)|Restituisce **true** quando una condizione è presente in ogni elemento dell'intervallo specificato.|
-|[any_of](../standard-library/algorithm-functions.md#any_of)|Restituisce **true** quando una condizione è presente almeno una volta nell'intervallo specificato di elementi.|
+|[all_of](../standard-library/algorithm-functions.md#all_of)|Restituisce **true** quando una condizione è presente in ogni elemento nell'intervallo specificato.|
+|[any_of](../standard-library/algorithm-functions.md#any_of)|Restituisce **true** quando una condizione è presente almeno una volta nell'intervallo di elementi specificato.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Verifica se in un intervallo ordinato è presente un elemento uguale a un valore specificato o equivalente a tale valore nel senso specificato da un predicato binario.|
 |[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in avanti.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Assegna i valori degli elementi di un intervallo di origine a un intervallo di destinazione, scorrendo la sequenza di origine degli elementi e assegnando loro nuove posizioni in indietro.|
-|[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copia tutti gli elementi in un intervallo specificato che testano **true** per una condizione specificata|
+|[copy_if](../standard-library/algorithm-functions.md#copy_if)|Copia tutti gli elementi di un determinato intervallo che verificano **true** per una condizione specificata|
 |[copy_n](../standard-library/algorithm-functions.md#copy_n)|Copia un numero specificato di elementi.|
 |[count](../standard-library/algorithm-functions.md#count)|Restituisce il numero di elementi di un intervallo i cui valori corrispondono a un valore specificato.|
 |[count_if](../standard-library/algorithm-functions.md#count_if)|Restituisce il numero di elementi di un intervallo i cui valori corrispondono a una condizione specificata.|
@@ -74,9 +74,9 @@ Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numer
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|Assegna i valori generati da un oggetto funzione a un numero specificato di elementi di un intervallo e torna alla posizione immediatamente successiva all'ultimo valore assegnato.|
 |[includes](../standard-library/algorithm-functions.md#includes)|Verifica se un intervallo ordinato contiene tutti gli elementi contenuti in un secondo intervallo ordinato, in cui il criterio di ordinamento o di equivalenza tra gli elementi può essere specificato da un predicato binario.|
 |[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)|Combina gli elementi di due intervalli ordinati consecutivi in un unico intervallo ordinato, in cui il criterio di ordinamento può essere specificato da un predicato binario.|
-|[is_heap](../standard-library/algorithm-functions.md#is_heap)|Restituisce **true** se gli elementi nell'intervallo specificato formano un heap.|
+|[is_heap](../standard-library/algorithm-functions.md#is_heap)|Restituisce **true** se gli elementi dell'intervallo specificato formano un heap.|
 |[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|Restituisce **true** se l'intervallo specificato forma un heap fino all'ultimo elemento.|
-|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|Restituisce **true** se tutti gli elementi dell'intervallo specificato che testano **true** per una condizione precedono gli elementi che testano **false**.|
+|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|Restituisce **true** se tutti gli elementi dell'intervallo specificato che verificano **true** per una condizione precedono gli elementi che testano **false**.|
 |[is_permutation](../standard-library/algorithm-functions.md#is_permutation)|Determina se gli elementi in un determinato intervallo formano una permutazione valida.|
 |[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|Restituisce **true** se gli elementi nell'intervallo specificato sono ordinati.|
 |[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|Restituisce **true** se gli elementi nell'intervallo specificato sono ordinati.|
@@ -95,12 +95,12 @@ Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numer
 |[&lt;alg&gt; move](../standard-library/algorithm-functions.md#alg_move)|Sposta gli elementi associati a un intervallo specificato.|
 |[move_backward](../standard-library/algorithm-functions.md#move_backward)|Sposta gli elementi di un iteratore in un altro. Lo spostamento inizia con l'ultimo elemento in un intervallo specificato e termina con il primo elemento in quell'intervallo.|
 |[next_permutation](../standard-library/algorithm-functions.md#next_permutation)|Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico successiva, se esiste, dove il senso di successivo può essere specificato con un predicato binario.|
-|[none_of](../standard-library/algorithm-functions.md#none_of)|Restituisce **true** quando una condizione non è mai presente tra gli elementi dell'intervallo specificato.|
+|[none_of](../standard-library/algorithm-functions.md#none_of)|Restituisce **true** quando una condizione non è mai presente tra gli elementi nell'intervallo specificato.|
 |[nth_element](../standard-library/algorithm-functions.md#nth_element)|Esegue la partizione di un intervallo di elementi, individuando correttamente l'elemento *ennesimo* della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.|
 |[partial_sort](../standard-library/algorithm-functions.md#partial_sort)|Dispone un numero specificato di elementi più piccoli di un intervallo in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.|
 |[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)|Copia gli elementi di un intervallo di origine in un intervallo di destinazione in cui gli elementi di origine sono ordinati in base al predicato binario relativo al valore inferiore o a un altro predicato binario specificato.|
 |[partition](../standard-library/algorithm-functions.md#partition)|Classifica gli elementi di un intervallo in due set non contigui, con gli elementi che soddisfano il predicato unario che precedono quelli che non lo soddisfano.|
-|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Copia gli elementi per cui è una condizione **true** in una destinazione e per i quali è la condizione **false** a altro. Gli elementi devono provenire da un intervallo specificato.|
+|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|Copia gli elementi per i quali una condizione è **true** in una destinazione e per la quale la condizione è **false** in un'altra. Gli elementi devono provenire da un intervallo specificato.|
 |[partition_point](../standard-library/algorithm-functions.md#partition_point)|Restituisce il primo elemento nell'intervallo specificato che non soddisfa la condizione. Gli elementi vengono ordinati in modo che quelli che soddisfano la condizione precedano quelli che non la soddisfano.|
 |[pop_heap](../standard-library/algorithm-functions.md#pop_heap)|Rimuove l'elemento più grande dall'inizio di un heap alla penultima posizione nell'intervallo e costituisce un nuovo heap con gli elementi rimanenti.|
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|Riordina gli elementi in un intervallo in modo che l'ordine originale venga sostituito dalla maggior permutazione a livello lessicografico successiva, se esiste, dove il senso di successivo può essere specificato con un predicato binario.|
@@ -139,6 +139,6 @@ Gli algoritmi di libreria standard C++ numerici forniti per l'elaborazione numer
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

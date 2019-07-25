@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246815"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451883"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -48,9 +48,9 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Informa un Garbage Collector che i caratteri che iniziano in corrispondenza di un indirizzo specificato e che rientrano nelle dimensioni del blocco indicato non contengono puntatori tracciabili.|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Informa un Garbage Collection che l'indirizzo indicato si riferisce all'archiviazione allocata ed è raggiungibile.|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Elimina gli oggetti allocati con `operator new`. Adatto per l'utilizzo con `unique_ptr`.|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Sintassi abbreviata `destroy` (metodo).|
-|[destroy](../standard-library/memory-functions.md#destroy)|Sintassi abbreviata `destroy` (metodo).|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Sintassi abbreviata `destroy` (metodo).|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Metodo `destroy` abbreviato.|
+|[destroy](../standard-library/memory-functions.md#destroy)|Metodo `destroy` abbreviato.|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Metodo `destroy` abbreviato.|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Esegue il cast dinamico a `shared_ptr`.|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|Ottiene Deleter da `shared_ptr`.|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Restituisce il tipo di sicurezza dei puntatori utilizzata dal Garbage Collector.|
@@ -65,14 +65,14 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|Informa un `garbage_collector` che una posizione di memoria specificata non è raggiungibile.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Copia gli oggetti da un intervallo di input specificato in un intervallo di destinazione non inizializzato.|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Crea una copia di un numero specificato di elementi da un iteratore di input. Le copie vengono inserite in un iteratore in avanti.|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Sintassi abbreviata `uninitialized_default_construct` (metodo).|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Sintassi abbreviata `uninitialized_construct` (metodo).|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Metodo `uninitialized_default_construct` abbreviato.|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Metodo `uninitialized_construct` abbreviato.|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Copia gli oggetti di un valore specificato in un intervallo di destinazione non inizializzato.|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Copia gli oggetti di un valore specificato in un numero specificato di elementi di un intervallo di destinazione non inizializzato.|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Sintassi abbreviata `uninitialized_move` (metodo).|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Sintassi abbreviata `uninitialized_move` (metodo).|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Sintassi abbreviata `uninitialized_value_construct` (metodo).|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Sintassi abbreviata `uninitialized_value_construct` (metodo).|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Metodo `uninitialized_move` abbreviato.|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Metodo `uninitialized_move` abbreviato.|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Metodo `uninitialized_value_construct` abbreviato.|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Metodo `uninitialized_value_construct` abbreviato.|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>Operatori
@@ -93,7 +93,7 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|La classe modello descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per matrici di oggetti di tipo **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Descrive un oggetto che determina tutte le informazioni necessarie per un contenitore abilitato dall'allocatore.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|La classe modello descrive un oggetto che archivia un puntatore a un oggetto allocato di tipo **tipo** <strong>\*</strong> che garantisce che l'oggetto a cui si punta eliminato quando il relativo auto_ptr che lo contiene Ottiene eliminato definitivamente.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|La classe modello descrive un oggetto che archivia un puntatore a un oggetto allocato di tipo **Type** <strong>\*</strong> che garantisce che l'oggetto a cui fa riferimento venga eliminato quando il relativo auto_ptr di inclusione viene eliminato.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Segnala un'eccezione weak_ptr non valida.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Consente di generare un `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Fornisce le informazioni necessarie per un oggetto della classe modello `allocator_traits` per descrivere un allocatore con il tipo di puntatore `Ptr`.|
@@ -120,5 +120,5 @@ Definisce una classe, un operatore e diversi modelli che consentono di allocare 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

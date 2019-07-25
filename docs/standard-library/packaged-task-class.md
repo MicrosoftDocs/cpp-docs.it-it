@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370671"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450086"
 ---
 # <a name="packagedtask-class"></a>Classe packaged_task
 
@@ -38,18 +38,18 @@ template <class>
 class packaged_task;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[packaged_task](#packaged_task)|Costruisce un oggetto `packaged_task`.|
 |[Distruttore packaged_task::~packaged_task](#dtorpackaged_task_destructor)|Elimina un oggetto `packaged_task`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[get_future](#get_future)|Restituisce un oggetto [future](../standard-library/future-class.md) con lo stesso stato asincrono associato.|
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Chiama l'oggetto chiamabile archiviato nello stato asincrono associato e archivia il valore restituito in modo atomico.|
@@ -67,7 +67,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<future >
+**Intestazione:** \<> future
 
 **Spazio dei nomi:** std
 
@@ -113,7 +113,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Parametri
 
-*A destra*<br/>
+*Ok*\
 Oggetto `packaged_task`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -122,7 +122,7 @@ Oggetto `packaged_task`.
 
 ### <a name="remarks"></a>Note
 
-Al termine dell'operazione *destra* non ha più uno stato asincrono associato.
+Dopo l'operazione, *right* non dispone più di uno stato asincrono associato.
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -150,7 +150,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto ha uno stato asincrono associato; in caso contrario, **false**.
+**true** se l'oggetto ha uno stato asincrono associato. in caso contrario, **false**.
 
 ## <a name="packaged_task"></a>  Costruttore packaged_task::packaged_task
 
@@ -169,24 +169,24 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Parametri
 
-*A destra*<br/>
+*Ok*\
 Oggetto `packaged_task`.
 
-*alloc*<br/>
+*Alloc*\
 Allocatore di memoria. Per altre informazioni, vedere [\<allocators>](../standard-library/allocators-header.md).
 
-*fn*<br/>
+*FN*\
 Oggetto funzione.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore crea un oggetto `packaged_task` che non ha *stato asincrono associato*.
 
-Il secondo costruttore crea un `packaged_task` dell'oggetto e trasferisce lo stato asincrono associato da *destra*. Al termine dell'operazione *destra* non ha più uno stato asincrono associato.
+Il secondo costruttore crea un `packaged_task` oggetto e trasferisce lo stato asincrono associato da *destra*. Dopo l'operazione, *right* non dispone più di uno stato asincrono associato.
 
-Il terzo costruttore crea un `packaged_task` che ha una copia dell'oggetto *fn* archiviato nello stato asincrono associato.
+Il terzo costruttore crea un `packaged_task` oggetto con una copia di *FN* archiviata nello stato asincrono associato.
 
-Il quarto costruttore crea un `packaged_task` che ha una copia dell'oggetto *fn* archiviato nello stato asincrono associato e utilizza `alloc` per l'allocazione di memoria.
+Il quarto costruttore crea un `packaged_task` oggetto con una copia di *FN* archiviato nello stato asincrono associato e utilizza `alloc` per l'allocazione di memoria.
 
 ## <a name="dtorpackaged_task_destructor"></a>  Distruttore packaged_task::~packaged_task
 
@@ -222,7 +222,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*A destra*<br/>
+*Ok*\
 Oggetto `packaged_task`.
 
 ## <a name="valid"></a>  packaged_task::valid
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto ha uno stato asincrono associato; in caso contrario, **false**.
+**true** se l'oggetto ha uno stato asincrono associato. in caso contrario, **false**.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

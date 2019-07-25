@@ -14,12 +14,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299734"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492142"
 ---
 # <a name="c-project-property-page-reference"></a>C++riferimento alla pagina delle proprietà del progetto
 
@@ -47,21 +47,7 @@ isolato[, avanzato](advanced-manifest-tool.md)
 
 [Pagina delle proprietà Generale (File)](general-property-page-file.md)
 
-
-
-
-
 [Pagine delle proprietà HLSL](hlsl-property-pages.md)
-
-[Pagine delle proprietà HLSL: Avanzate](hlsl-property-pages-advanced.md)
-
-[Pagine delle proprietà HLSL: Generale](hlsl-property-pages-general.md)
-
-[Pagine delle proprietà HLSL: File di output](hlsl-property-pages-output-files.md)
-
-
-
-
 
 [Pagine delle proprietà Linker](linker-property-pages.md)
 
@@ -71,17 +57,9 @@ isolato[, avanzato](advanced-manifest-tool.md)
 
 [Pagine delle proprietà MIDL](midl-property-pages.md)
 
-[Pagine delle proprietà MIDL: Avanzate](midl-property-pages-advanced.md)
-
-[Pagine delle proprietà MIDL: Generale](midl-property-pages-general.md)
-
-[Pagine delle proprietà MIDL: Output](midl-property-pages-output.md)
-
 [Pagina delle proprietà NMAKE](nmake-property-page.md)
 
 [Pagine delle proprietà Risorse](resources-property-pages.md)
-
-
 
 [Pagina delle proprietà Riferimenti Web](web-references-property-page.md)
 

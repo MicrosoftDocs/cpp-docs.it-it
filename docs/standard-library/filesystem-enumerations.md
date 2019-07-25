@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240751"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457716"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerazioni &lt;filesystem&gt;
 
@@ -86,7 +86,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-Enumerazione di tipi di file. I valori supportati sono regular, directory, not_found e unknown.
+Enumerazione di tipi di file. I valori supportati sono regular, directory, NOT_FOUND e Unknown.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valori
 
-|Nome|Value|Descrizione|
+|Nome|Valore|Descrizione|
 |----------|-----------|-----------------|
 |`not_found`|-1|Rappresenta un file che non esiste.|
 |`none`|0|Rappresenta un file che non ha alcun attributo di tipo. (non supportato).|
@@ -120,9 +120,9 @@ enum class file_type {
 |`socket`|7|Rappresenta un socket nei sistemi basati su UNIX. (non supportato).|
 |`unknown`|8|Rappresenta un file il cui stato non può essere determinato.|
 
-## <a name="perm_options"></a>  perm_options
+## <a name="perm_options"></a>perm_options
 
-Include i valori `replace`, `add`, `remove`, e `nofollow`.
+Include i `replace`valori `add` ,`remove`, e `nofollow`.
 
 ```cpp
 enum class perm_options;
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

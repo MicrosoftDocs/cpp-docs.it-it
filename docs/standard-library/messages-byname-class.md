@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 7b341f3e1dbf76021911c70560b83932b5302191
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404793"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451811"
 ---
 # <a name="messagesbyname-class"></a>Classe messages_byname
 
@@ -39,10 +39,10 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*_Locname*<br/>
+*_Locname*\
 Impostazioni locali denominate.
 
-*_Refs*<br/>
+*_Refs*\
 Conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note
@@ -57,4 +57,4 @@ Il comportamento è determinato dalle impostazioni locali denominate *_Locname*.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

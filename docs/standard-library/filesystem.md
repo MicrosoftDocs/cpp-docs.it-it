@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240704"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457027"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,9 +29,9 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> A partire dalla versione di Visual Studio 2017, il \<filesystem > dell'intestazione non era ancora uno standard di C++. C++in Visual Studio 2017 (v141 MSVC) implementa lo standard della bozza finale, trovato [ISO/IEC JTC 1/SC/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> Al momento del rilascio di Visual Studio 2017, l' \<intestazione filesystem > non era ancora uno C++ standard. C++in Visual Studio 2017 (MSVC V141) implementa lo standard Draft finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Questa intestazione supporta file System per uno dei due ampie classi di sistemi operativi host: Microsoft Windows e Posix.
+Questa intestazione supporta i filesystem per una delle due ampie classi di sistemi operativi host: Microsoft Windows e POSIX.
 
 Mentre la maggior parte delle funzionalità sono comuni a entrambi i sistemi operativi, questo documento ne identifica le differenze. Ad esempio:
 
@@ -129,4 +129,4 @@ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

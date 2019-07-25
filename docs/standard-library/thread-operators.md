@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 5a2fd845598ac9f9c983bf53cbd7665ef66ffb70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412046"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458434"
 ---
 # <a name="ltthreadgt-operators"></a>Operatori &lt;thread&gt;
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*<br/>
+*Sinistra*\
 L'oggetto `thread::id` a sinistra.
 
-*A destra*<br/>
+*Ok*\
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*<br/>
+*Sinistra*\
 L'oggetto `thread::id` a sinistra.
 
-*A destra*<br/>
+*Ok*\
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*<br/>
+*Sinistra*\
 L'oggetto `thread::id` a sinistra.
 
-*A destra*<br/>
+*Ok*\
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*<br/>
+*Sinistra*\
 L'oggetto `thread::id` a sinistra.
 
-*A destra*<br/>
+*Ok*\
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se *a sinistra* precede *a destra* nell'ordinamento totale; in caso contrario **false**.
+**true** se *Left* precede *direttamente* nell'ordine totale; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*<br/>
+*Sinistra*\
 L'oggetto `thread::id` a sinistra.
 
-*A destra*<br/>
+*Ok*\
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
@@ -177,15 +177,15 @@ bool operator== (
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*<br/>
+*Sinistra*\
 L'oggetto `thread::id` a sinistra.
 
-*A destra*<br/>
+*Ok*\
 L'oggetto `thread::id` corretto.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se i due oggetti rappresentano lo stesso thread di esecuzione oppure se nessuno dei due rappresenta un thread di esecuzione; in caso contrario, **false**.
+**true** se i due oggetti rappresentano lo stesso thread di esecuzione oppure se nessun oggetto rappresenta un thread di esecuzione. in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*Ostr*<br/>
+*OSTR*\
 Oggetto [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*Id*<br/>
+*ID*\
 Oggetto `thread::id`.
 
 ### <a name="return-value"></a>Valore restituito
 
-*Ostr*.
+*OSTR*.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione inserisce *Id* nelle *Ostr*.
+Questa funzione inserisce l' *ID* in *OSTR*.
 
 Se due oggetti `thread::id` risultano uguali, le relative rappresentazioni testo inserite sono uguali.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

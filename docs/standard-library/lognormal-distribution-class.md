@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: eb92844ae1af36b9f4f7146e378fed1832c0b4f9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449786"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453815"
 ---
 # <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*<br/>
-Il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*\
+Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un integrale specificato dall'utente, tipo o tipo **doppie** se ne viene specificato alcuno, distribuiti in base alla distribuzione lognormale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione normale dei log. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*m*<br/>
+*m*\
 Parametro di distribuzione `m`.
 
-*s*<br/>
+*s*\
 Parametro di distribuzione `s`.
 
-*parm*<br/>
+*parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*m*<br/>
+*m*\
 Parametro di distribuzione `m`.
 
-*s*<br/>
+*s*\
 Parametro di distribuzione `s`.
 
-*right*<br/>
+*Ok*\
 Struttura `param_type` usata per il confronto.
 
 ### <a name="remarks"></a>Note
@@ -247,4 +247,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

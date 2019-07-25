@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b08a1341ed450dd5d5cee93cdfcbab57f8d6760
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412605"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450499"
 ---
 # <a name="sharedfuture-class"></a>Classe shared_future
 
@@ -42,17 +42,17 @@ Non chiamare alcun metodo diverso da `valid`, `operator=` né il distruttore su 
 
 Gli oggetti `shared_future` non sono sincronizzati. La chiamata di metodi sullo stesso oggetto da più thread introduce una competizione tra dati con risultati imprevisti.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[shared_future](#shared_future)|Costruisce un oggetto `shared_future`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[get](#get)|Recupera il risultato archiviato nello *stato asincrono associato*.|
 |[valid](#valid)|Specifica se l'oggetto non è vuoto.|
@@ -68,7 +68,7 @@ Gli oggetti `shared_future` non sono sincronizzati. La chiamata di metodi sullo 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<future >
+**Intestazione:** \<> future
 
 **Spazio dei nomi:** std
 
@@ -92,7 +92,7 @@ Prima di recuperare il risultato, questo metodo blocca il thread corrente finch�
 
 Per la specializzazione parziale `shared_future<Ty&>`, il valore archiviato è di fatto un riferimento all'oggetto passato al *provider asincrono* come valore restituito.
 
-Poiché non esiste alcun valore archiviato per la specializzazione `shared_future<void>`, il metodo restituisce **void**.
+Poiché non esiste alcun valore archiviato per la `shared_future<void>`specializzazione, il metodo restituisce **void**.
 
 ## <a name="op_eq"></a>  shared_future::operator=
 
@@ -105,7 +105,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametri
 
-*A destra*<br/>
+*Ok*\
 Oggetto `shared_future`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -114,9 +114,9 @@ Oggetto `shared_future`.
 
 ### <a name="remarks"></a>Note
 
-Per il primo operatore *destra* non ha più uno stato asincrono associato al termine dell'operazione.
+Per il primo operatore, *right* non ha più uno stato asincrono associato dopo l'operazione.
 
-Per il secondo metodo, *destra* mantiene lo stato asincrono associato.
+Per il secondo metodo, *right* gestisce lo stato asincrono associato.
 
 ## <a name="shared_future"></a>  Costruttore shared_future::shared_future
 
@@ -131,16 +131,16 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parametri
 
-*A destra*<br/>
+*Ok*\
 Oggetto [future](../standard-library/future-class.md) o `shared_future`.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore crea un oggetto `shared_future` che non ha *stato asincrono associato*.
 
-Il secondo e terzo costruttore creano un `shared_future` dell'oggetto e lo stato asincrono associato da trasferire *destra*. *Destra* non ha più uno stato asincrono associato.
+Il secondo e il terzo costruttore costruiscono `shared_future` un oggetto e trasferiscono lo stato asincrono associato da *destra*. A *right* non è più associato uno stato asincrono.
 
-Il quarto costruttore crea un `shared_future` oggetto con lo stesso stato asincrono associato di *destra*.
+Il quarto costruttore crea un `shared_future` oggetto con lo stesso stato asincrono associato come *diritto*.
 
 ## <a name="valid"></a>  shared_future::valid
 
@@ -152,7 +152,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto ha uno stato asincrono associato; in caso contrario, **false**.
+**true** se l'oggetto ha uno stato asincrono associato. in caso contrario, **false**.
 
 ## <a name="wait"></a>  shared_future::wait
 
@@ -178,7 +178,7 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parametri
 
-*Rel_time*<br/>
+*Rel_time*\
 Oggetto [chrono::duration](../standard-library/duration-class.md) che specifica un intervallo di tempo massimo per il blocco del thread.
 
 ### <a name="return-value"></a>Valore restituito
@@ -201,7 +201,7 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parametri
 
-*Abs_time*<br/>
+*Abs_time*\
 Oggetto [chrono::time_point](../standard-library/time-point-class.md) che specifica un momento dopo il quale il thread può essere sbloccato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -214,5 +214,5 @@ Uno stato asincrono associato è ready solo se il provider asincrono ha archivia
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

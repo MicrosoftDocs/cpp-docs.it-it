@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-ms.openlocfilehash: 7fc1c70a1244688888174b834fe653d5d6d2497b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 451f43435132876fcfbbabe37c613d3c9efef30e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336666"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452778"
 ---
 # <a name="isdefaultconstructible-class"></a>Classe is_default_constructible
 
@@ -26,12 +26,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo di classe che ha un costruttore predefinito, in caso contrario, contiene false. Equivale al predicato `is_constructible<T>`. Tipo di *T* deve essere un tipo completo, **void**, o una matrice di valori associati sconosciuti.
+Un'istanza del predicato di tipo contiene true se il tipo *T* è un tipo di classe con un costruttore predefinito; in caso contrario, contiene false. Equivale al predicato `is_constructible<T>`. Il tipo *T* deve essere un tipo completo, **void**o una matrice di associazione sconosciuta.
 
 ## <a name="example"></a>Esempio
 
@@ -75,4 +75,4 @@ is_default_constructible<Simple2> == false
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

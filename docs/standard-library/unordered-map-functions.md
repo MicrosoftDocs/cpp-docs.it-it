@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: ae00a9204e2bd5dc5220f3b2755e16b895193df3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158547"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454827"
 ---
 # <a name="ltunorderedmapgt-functions"></a>Funzioni &lt;unordered_map&gt;
 
@@ -34,25 +34,25 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-*Key*<br/>
+*Chiave*\
 Tipo di chiave.
 
-*Ty*<br/>
+*Ty*\
 Tipo mappato.
 
-*Hash*<br/>
+*Hash*\
 Tipo di oggetto della funzione hash.
 
-*Pred*<br/>
+*Pred*\
 Tipo di oggetto della funzione di confronto di uguaglianza.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*sinistra*\
 Primo contenitore da scambiare.
 
-*right*<br/>
+*Ok*\
 Secondo contenitore da scambiare.
 
 ### <a name="remarks"></a>Note
@@ -127,25 +127,25 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-*Key*<br/>
+*Chiave*\
 Tipo di chiave.
 
-*Ty*<br/>
+*Ty*\
 Tipo mappato.
 
-*Hash*<br/>
+*Hash*\
 Tipo di oggetto della funzione hash.
 
-*Pred*<br/>
+*Pred*\
 Tipo di oggetto della funzione di confronto di uguaglianza.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*sinistra*\
 Primo contenitore da scambiare.
 
-*right*<br/>
+*Ok*\
 Secondo contenitore da scambiare.
 
 ### <a name="remarks"></a>Note
@@ -209,4 +209,4 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

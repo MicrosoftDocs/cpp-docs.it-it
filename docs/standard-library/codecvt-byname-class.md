@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62aac6abca3dce45ff3cc875823df04c69618b10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405274"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459856"
 ---
 # <a name="codecvtbyname-class"></a>Classe codecvt_byname
 
@@ -43,10 +43,10 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*_Locname*<br/>
+*_Locname*\
 Impostazioni locali denominate.
 
-*_Refs*<br/>
+*_Refs*\
 Conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note
@@ -63,4 +63,4 @@ Il comportamento è determinato dalle impostazioni locali denominate *_Locname*.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

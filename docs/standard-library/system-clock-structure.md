@@ -9,12 +9,12 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a9fd83840883de5172df8b2e1e451984a95ea47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412150"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450185"
 ---
 # <a name="systemclock-structure"></a>Struttura system_clock
 
@@ -34,11 +34,11 @@ Un clock è *monotonico* se il valore restituito da una prima chiamata a `now()`
 
 Un clock è *costante* se è *monotonico* e se il tempo tra i cicli macchina è costante.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
 |`system_clock::duration`|Sinonimo di `duration<rep, period>`.|
 |`system_clock::period`|Un sinonimo del tipo che viene usato per rappresentare il periodo dei cicli macchina nella creazione di un'istanza contenuta di `duration`.|
@@ -47,28 +47,28 @@ Un clock è *costante* se è *monotonico* e se il tempo tra i cicli macchina è 
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[from_time_t](#from_time_t)|Statico. Restituisce un oggetto `time_point` che più si avvicina un'ora specificata.|
-|[now](#now)|Statico. Restituisce l'ora corrente.|
+|[ora](#now)|Statico. Restituisce l'ora corrente.|
 |[to_time_t](#to_time_t)|Statico. Restituisce un oggetto `time_t` che più si avvicina un oggetto `time_point` specificato.|
 
 ### <a name="public-constants"></a>Costanti pubbliche
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Costante system_clock::is_monotonic](#is_monotonic_constant)|Specifica se il tipo di clock è monotonico.|
 |[Costante system_clock::is_steady](#is_steady_constant)|Specifica se il tipo di clock è costante.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<chrono >
+**Intestazione:** \<> Chrono
 
 **Spazio dei nomi:** std::chrono
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-Metodo statico che restituisce un [time_point](../standard-library/time-point-class.md) che più si avvicina l'ora rappresentata dal *Tm*.
+Metodo statico che restituisce un oggetto [time_point](../standard-library/time-point-class.md) che più si avvicina all'ora rappresentata da *TM*.
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -76,7 +76,7 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Tm*<br/>
+*TM*\
 Oggetto [time_t](../c-runtime-library/standard-types.md).
 
 ## <a name="is_monotonic_constant"></a>  Costante system_clock::is_monotonic
@@ -125,7 +125,7 @@ Oggetto [time_point](../standard-library/time-point-class.md) che rappresenta l'
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-Metodo statico che restituisce un [time_t](../c-runtime-library/standard-types.md) che più si avvicina l'ora rappresentata dal *ora*.
+Metodo statico che restituisce un oggetto [time_t](../c-runtime-library/standard-types.md) che più si avvicina all'ora rappresentata da *Time*.
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -133,11 +133,11 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Ora*<br/>
+*Tempo*\
 Oggetto [time_point](../standard-library/time-point-class.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[Struct steady_clock](../standard-library/steady-clock-struct.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[steady_clock struct](../standard-library/steady-clock-struct.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: ee61b79848a5649d44cf02384f32ad8e0226feb0
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 525e448a130f33df478627f7ae7ca682ff4a556d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451117"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448054"
 ---
 # <a name="binomialdistribution-class"></a>Classe binomial_distribution
 
@@ -71,22 +71,22 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*IntType*<br/>
-Il tipo di risultato integer, valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*IntType*\
+Il tipo di risultato Integer, il valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-L'uniform generatore motore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*GENERATORE URNG*\
+Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di un integrale specificato dall'utente, tipo o tipo **int** se ne viene specificato alcuno, distribuiti secondo la funzione di probabilità discreta binomiale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di un tipo integrale specificato dall'utente o di tipo **int** se non ne viene fornito alcuno, distribuiti in base alla funzione di probabilità discreta di distribuzione binomiale. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-I membri di proprietà `t()` e `p()` restituiscono i valori dei parametri di distribuzione attualmente archiviato *t* e *p* rispettivamente.
+I membri `t()` di proprietà `p()` e restituiscono rispettivamente i valori *t* e *p* dei parametri di distribuzione attualmente archiviati.
 
 Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.
 
@@ -242,20 +242,20 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*t*<br/>
+*t*\
 Parametro di distribuzione `t`.
 
-*p*<br/>
+*p*\
 Parametro di distribuzione `p`.
 
-*parm*<br/>
+*parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
 **Precondizione:** `0 ≤ t` e `0.0 ≤ p ≤ 1.0`
 
-Il primo costruttore crea un oggetto il cui stored *p* valore contiene il valore *p* e il cui stored *t* valore contiene il valore *t*.
+Il primo costruttore crea un oggetto il cui valore *p* archiviato include il valore *p* e il cui valore *t* archiviato include il valore *t*.
 
 Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
@@ -277,13 +277,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*t*<br/>
+*t*\
 Parametro di distribuzione `t`.
 
-*p*<br/>
+*p*\
 Parametro di distribuzione `p`.
 
-*right*<br/>
+*Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
@@ -294,4 +294,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

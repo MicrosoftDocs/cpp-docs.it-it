@@ -2,12 +2,12 @@
 title: '&lt;cfenv&gt;'
 ms.date: 11/04/2016
 ms.assetid: 6a17ad51-2182-4e91-8108-65997382acd3
-ms.openlocfilehash: dcaf49d19009ac831776134cf3d5b6cbce7e14d4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b1ae987d49c95b781cb255a4d7e3a9a04ab6043a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244963"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449869"
 ---
 # <a name="ltcfenvgt"></a>&lt;cfenv&gt;
 
@@ -23,7 +23,7 @@ Include l'intestazione della libreria C standard \<fenv.h> e aggiunge i nomi ass
 
 L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il collegamento esterno nell'intestazione della libreria C standard vengano dichiarati nello spazio dei nomi `std`.
 
-## <a name="constants-and-types"></a>Le costanti e tipi
+## <a name="constants-and-types"></a>Costanti e tipi
 
 ```cpp
 #define FE_ALL_EXCEPT see below
@@ -62,6 +62,6 @@ int feupdateenv(const fenv_t* penv);
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

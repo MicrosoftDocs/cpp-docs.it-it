@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 05b10c27d8e0cf4c0300bb307d8b7ceda43ddb2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413307"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447793"
 ---
 # <a name="ltistreamgt-operators"></a>Operatori &lt;istream&gt;
 
@@ -56,16 +56,16 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-*Ch*<br/>
+*Ch*\
 Carattere.
 
-*Istr*<br/>
+*Istr*\
 Flusso.
 
-*str*<br/>
+*Str*\
 Stringa.
 
-*val*<br/>
+*Val*\
 Tipo.
 
 ### <a name="return-value"></a>Valore restituito
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-estrae un massimo di *N* - 1 elementi e li archivia nella matrice a partire da _ *Str*. Se `Istr`. [width](../standard-library/ios-base-class.md#width) è maggiore di zero, *N* è `Istr`. **Larghezza**; in caso contrario, la dimensione della matrice più grande di `Elem` che possono essere dichiarate. La funzione archivia sempre il valore `Elem()` dopo eventuali elementi estratti archiviati. L'estrazione termina prima della fine del file, in corrispondenza di un carattere con valore **Elem**(0) (non estratto) o di qualsiasi elemento (non estratto) che verrebbe rimosso da [ws](../standard-library/istream-functions.md#ws). Se non estrae alcun elemento, la funzione chiama `Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). In tutti i casi, chiama `Istr`. **Larghezza**(0) e restituisce *Istr*.
+estrae un massimo di *N* - 1 elementi e li archivia nella matrice a partire da _ *Str*. Se `Istr`. [width](../standard-library/ios-base-class.md#width) è maggiore di zero, *N* è `Istr`. **larghezza**; in caso contrario, è la dimensione della matrice più grande `Elem` di che può essere dichiarata. La funzione archivia sempre il valore `Elem()` dopo gli elementi estratti archiviati. L'estrazione termina prima della fine del file, in corrispondenza di un carattere con valore **Elem**(0) (non estratto) o di qualsiasi elemento (non estratto) che verrebbe rimosso da [ws](../standard-library/istream-functions.md#ws). Se non estrae alcun elemento, la funzione chiama `Istr`. [sestato](../standard-library/basic-ios-class.md#setstate) (**failbit**). In tutti i casi, chiama `Istr`. **larghezza** (0) e restituisce *istr*.
 
-**Nota sulla sicurezza** la stringa con terminazione null da estrarre dal flusso di input non può superare le dimensioni del buffer di destinazione *str*. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Nota sulla sicurezza** La stringa con terminazione null da estrarre dal flusso di input non deve superare la dimensione dello *Str*del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 La funzione modello:
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-estrae un elemento, se è possibile e lo archivia nel *Ch*. In caso contrario, chiama **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In ogni caso, viene restituito *Istr*.
+estrae un elemento, se possibile, e lo archivia in *ch*. In caso contrario, chiama **is**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In ogni caso, restituisce *istr*.
 
 La funzione modello:
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Restituisce `Istr >> val` (e converte un riferimento rvalue a `Istr` a un elemento lvalue nel processo).
+restituisce `Istr >> val` e converte un `Istr` riferimento rvalue in in un lvalue nel processo.
 
 ### <a name="example"></a>Esempio
 
@@ -170,4 +170,4 @@ int main( )
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

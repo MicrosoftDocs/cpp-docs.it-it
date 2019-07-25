@@ -1,7 +1,7 @@
 ---
-title: Impostare il percorso e le variabili di ambiente per compilazioni da riga di comando
+title: Impostare le variabili di percorso e di ambiente per le compilazioni da riga di comando
 ms.custom: conceptual
-ms.date: 05/06/2019
+ms.date: 07/24/2019
 helpviewer_keywords:
 - environment variables [C++]
 - VCVARS32.bat file
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: 30dadf365186ae74144a3225889c08eedfb89b47
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 6e7882b169805e3c62596341986a83d476ac5ec1
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217612"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492145"
 ---
-# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Impostare il percorso e le variabili di ambiente per compilazioni da riga di comando
+# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Impostare le variabili di percorso e di ambiente per le compilazioni da riga di comando
 
-Microsoft C++ strumenti di compilazione da riga di comando (MSVC) richiedono diverse variabili di ambiente personalizzate per la configurazione di installazione e compilazione. Quando viene installato un carico di lavoro di C++ per il programma di installazione di Visual Studio, crea i file di comando personalizzato o un file batch, che impostano le variabili di ambiente necessarie. Il programma di installazione Usa quindi questi file di comando per creare tasti di scelta rapida per il menu Start di Windows aprire una finestra del prompt dei comandi per gli sviluppatori. Questi tasti di scelta rapida impostare le variabili di ambiente per una specifica configurazione di compilazione. Quando si desidera utilizzare gli strumenti da riga di comando, è possibile eseguire uno di questi collegamenti, oppure è possibile aprire una finestra del prompt dei comandi normale e quindi eseguire uno dei file del comando personalizzato per impostare l'ambiente di configurazione di compilazione se stessi. Per altre informazioni, vedere [un set di strumenti MSVC dalla riga di comando](building-on-the-command-line.md).
+Gli strumenti C++ di compilazione da riga di comando Microsoft (MSVC) richiedono diverse variabili di ambiente personalizzate per l'installazione e la configurazione della build. Quando un C++ carico di lavoro viene installato dal programma di installazione di Visual Studio, crea file di comando personalizzati o file batch che impostano le variabili di ambiente necessarie. Il programma di installazione usa quindi questi file di comando per creare collegamenti per il menu Start di Windows per aprire una finestra del prompt dei comandi per gli sviluppatori. Questi tasti di scelta rapida configurano le variabili di ambiente per una configurazione di compilazione specifica. Quando si desidera utilizzare gli strumenti da riga di comando, è possibile eseguire uno di questi tasti di scelta rapida oppure aprire una finestra del prompt dei comandi normale e quindi eseguire uno dei file di comando personalizzati per impostare manualmente l'ambiente di configurazione della compilazione. Per altre informazioni, vedere [usare il set di strumenti MSVC dalla riga di comando](building-on-the-command-line.md). Per usare i file di comando con un prompt dei comandi normale, vedere la sezione intitolata [percorsi dei file di comando per sviluppatori](building-on-the-command-line.md#developer_command_file_locations).
 
-Gli strumenti da riga di comando di MSVC usano le variabili di ambiente PATH, TMP, INCLUDE, LIB e LIBPATH e anche usano altre variabili di ambiente specifiche agli strumenti installati, piattaforme e gli SDK. Anche una semplice installazione di Visual Studio può impostare venti o più variabili di ambiente. Poiché i valori di queste variabili di ambiente siano per l'installazione e la scelta della configurazione della build e possono essere modificati da aggiornamenti del prodotto, è consigliabile usare un collegamento prompt dei comandi per gli sviluppatori o uno del personalizzare i file di comando come impostarli, invece di configurarli nell'ambiente di Windows a se stessi.
+Gli strumenti da riga di comando MSVC usano le variabili di ambiente PATH, TMP, INCLUDE, LIB e LIBPATH e usano anche altre variabili di ambiente specifiche per gli strumenti, le piattaforme e gli SDK installati. Anche una semplice installazione di Visual Studio può impostare venti o più variabili di ambiente. Poiché i valori di queste variabili di ambiente sono specifici per l'installazione e la scelta della configurazione di compilazione e possono essere modificati da aggiornamenti o aggiornamenti del prodotto, è consigliabile usare un collegamento del prompt dei comandi per gli sviluppatori o uno dei file di comando personalizzati per impostarli, anziché impostarli manualmente nell'ambiente Windows.
 
-Per visualizzare quali variabili di ambiente vengono impostate da un collegamento prompt dei comandi per gli sviluppatori, è possibile usare il comando SET. Aprire una finestra del prompt dei comandi normale e acquisire l'output del comando SET per una linea di base. Aprire una finestra del prompt dei comandi per gli sviluppatori e acquisire l'output del comando SET per il confronto. Uno strumento diff ad esempio quella incorporata in IDE di Visual Studio può essere utile per confrontare le variabili di ambiente e vedere cosa è impostata dal prompt dei comandi per gli sviluppatori. Per informazioni sulle variabili di ambiente specifico utilizzato dal compilatore e linker, vedere [variabili di ambiente CL](reference/cl-environment-variables.md).
+Per visualizzare le variabili di ambiente impostate dal collegamento del prompt dei comandi per gli sviluppatori, è possibile usare il comando SET. Aprire una finestra del prompt dei comandi normale e acquisire l'output del comando SET per una baseline. Aprire una finestra del prompt dei comandi per gli sviluppatori e acquisire l'output del comando SET per il confronto. Uno strumento diff, ad esempio quello incorporato nell'IDE di Visual Studio, può essere utile per confrontare le variabili di ambiente e vedere cosa viene impostato dal prompt dei comandi per gli sviluppatori. Per informazioni sulle variabili di ambiente specifiche usate dal compilatore e dal linker, vedere [variabili di ambiente CL](reference/cl-environment-variables.md).
 
 > [!NOTE]
->  Alcuni strumenti da riga di comando o le opzioni dello strumento possono richiedere le autorizzazioni di amministratore. Se hai problemi di autorizzazione quando vengono usate, è consigliabile che si apre la finestra del prompt dei comandi per gli sviluppatori con il **Esegui come amministratore** opzione. In Windows 10, fare doppio clic per aprire il menu di scelta rapida per la finestra del prompt dei comandi, quindi scegliere **altre**, **Esegui come amministratore**.
+>  Diversi strumenti della riga di comando o opzioni dello strumento possono richiedere l'autorizzazione di amministratore. Se si verificano problemi di autorizzazione quando vengono usati, è consigliabile aprire la finestra del prompt dei comandi per gli sviluppatori usando l'opzione **Esegui come amministratore** . In Windows 10, fare clic con il pulsante destro del mouse per aprire il menu di scelta rapida per la finestra del prompt dei comandi, quindi scegliere **altro**, **Esegui come amministratore**.
 
 ## <a name="see-also"></a>Vedere anche
 

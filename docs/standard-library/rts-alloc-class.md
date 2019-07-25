@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409746"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451129"
 ---
 # <a name="rtsalloc-class"></a>Classe rts_alloc
 
@@ -42,7 +42,7 @@ Questa classe modello contiene più istanze allocator di blocchi e determina qua
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[allocate](#allocate)|Alloca un blocco di memoria.|
 |[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
@@ -64,7 +64,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*count*|Numero di elementi della matrice da allocare.|
 
@@ -74,7 +74,7 @@ Puntatore all'oggetto allocato.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce `caches[_IDX].allocate(count)`, dove l'indice `_IDX` è determinato dalla dimensione del blocco richiesto *conteggio*, o, se *count* è troppo grande, restituisce `operator new(count)`. Oggetto `cache` che rappresenta l'oggetto cache.
+La funzione membro restituisce `caches[_IDX].allocate(count)`, in cui l' `_IDX` indice è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande `operator new(count)`, restituisce. Oggetto `cache` che rappresenta l'oggetto cache.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -93,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>Note
 
-La funzione membro chiama `caches[_IDX].deallocate(ptr, count)`, dove l'indice `_IDX` è determinato dalla dimensione del blocco richiesto *conteggio*, o, se *count* è troppo grande, restituisce `operator delete(ptr)`.
+La funzione membro chiama `caches[_IDX].deallocate(ptr, count)`, dove l'indice `_IDX` è determinato dal *numero*di dimensioni del blocco richiesto, oppure, se il *conteggio* è troppo grande, `operator delete(ptr)`restituisce.
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -112,9 +112,9 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="remarks"></a>Note
 
-**true** se il risultato del `caches[0].equals(other.caches[0])`; in caso contrario, **false**. `caches` rappresenta una matrice di oggetti cache.
+**true** se il risultato di `caches[0].equals(other.caches[0])`; in caso contrario, **false**. `caches` rappresenta una matrice di oggetti cache.
 
 ## <a name="see-also"></a>Vedere anche
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-ms.openlocfilehash: 16248a93b557a92d89e35aac8eba912a8294af76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 708184a6a6a443456f0d70f57b6be17b281ac4f5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413151"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453909"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 
@@ -50,37 +50,37 @@ Definisce le classi modello e le funzioni che possono essere utilizzate dai prog
 |Classe|Descrizione|
 |-|-|
 |[codecvt](../standard-library/codecvt-class.md)|Classe modello che fornisce un facet utilizzato per eseguire la conversione tra codifiche di caratteri interne ed esterne.|
-|[codecvt_base](../standard-library/codecvt-base-class.md)|Una classe base per la classe codecvt utilizzata per definire un tipo di enumerazione definito come `result`, usato come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.|
+|[codecvt_base](../standard-library/codecvt-base-class.md)|Classe base per la classe Codecvt utilizzata per definire un tipo di enumerazione indicato come `result`, utilizzato come tipo restituito per le funzioni membro facet per indicare il risultato di una conversione.|
 |[codecvt_byname](../standard-library/codecvt-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet di ordinamento delle impostazioni locali specificate, consentendo il recupero di informazioni relative alle conversioni specifiche di un'area culturale.|
 |[collate](../standard-library/collate-class.md)|Classe modello di ordinamento che fornisce un facet che gestisce le convenzioni di ordinamento delle stringhe.|
 |[collate_byname](../standard-library/collate-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet di ordinamento delle impostazioni locali specificate, consentendo il recupero di informazioni relative alle convenzioni di ordinamento delle stringhe specifiche di un'area culturale.|
 |[ctype](../standard-library/ctype-class.md)|Classe modello che fornisce un facet utilizzato per classificare i caratteri, eseguire la conversione dalle lettere maiuscole e minuscole e tra il set di caratteri nativi e il set utilizzato dalle impostazioni locali.|
-|[ctype\<char>](../standard-library/ctype-char-class.md)|Una classe che costituisce una specializzazione esplicita della classe modello `ctype<CharType>` al tipo **char**, che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo **char**.|
+|[ctype\<char>](../standard-library/ctype-char-class.md)|Classe che è una specializzazione esplicita della classe `ctype<CharType>` modello per il tipo **char**, che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo **char**.|
 |[ctype_base](../standard-library/ctype-base-class.md)|Classe base della classe ctype utilizzata per definire i tipi di enumerazione utilizzati per classificare o verificare i caratteri singolarmente o all'interno di intervalli completi.|
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet ctype delle impostazioni locali specificate, consentendo la classificazione dei caratteri e la relativa conversione tra maiuscole e minuscole e tra set di caratteri nativi e set specificati dalle impostazioni locali.|
 |[locale](../standard-library/locale-class.md)|Classe che descrive un oggetto delle impostazioni locali che incapsula le informazioni specifiche delle impostazioni locali come set di facet che definiscono collettivamente un ambiente localizzato specifico.|
 |[messages](../standard-library/messages-class.md)|Classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per recuperare i messaggi localizzati da un catalogo di messaggi internazionalizzati per le impostazioni locali specificate.|
-|[messages_base](../standard-library/messages-base-class.md)|Una classe di base che descrive un' **int** tipo per il catalogo dei messaggi.|
+|[messages_base](../standard-library/messages-base-class.md)|Classe di base che descrive un tipo **int** per il catalogo dei messaggi.|
 |[messages_byname](../standard-library/messages-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet dei messaggi delle impostazioni locali specificate, consentendo il recupero dei messaggi localizzati.|
 |[money_base](../standard-library/money-base-class.md)|Classe base della classe ctype utilizzata per definire i tipi di enumerazione utilizzati per classificare o verificare i caratteri singolarmente o all'interno di intervalli completi.|
 |[money_get](../standard-library/money-get-class.md)|Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni delle sequenze di tipo **CharType** in valori monetari.|
 |[money_put](../standard-library/money-put-class.md)|Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni dei valori monetari in sequenze di tipo **CharType**.|
-|[moneypunct](../standard-library/moneypunct-class.md)|Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per descrivere le sequenze di tipo **CharType** utilizzato per rappresentare un campo di input o output monetario.|
+|[moneypunct](../standard-library/moneypunct-class.md)|Classe modello che descrive un oggetto che può fungere da facet delle impostazioni locali per descrivere le sequenze di tipo **CharType** utilizzate per rappresentare un campo di input di tipo valuta o un campo di output di tipo valuta.|
 |[moneypunct_byname](../standard-library/moneypunct-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet moneypunct delle impostazioni locali specificate, consentendo la formattazione dei campi di input o output monetari.|
 |[num_get](../standard-library/num-get-class.md)|Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni delle sequenze di tipo **CharType** in valori numerici.|
 |[num_put](../standard-library/num-put-class.md)|Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni dei valori numerici in sequenze di tipo **CharType**.|
-|[numpunct](../standard-library/numpunct-class.md)|Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per descrivere le sequenze di tipo **CharType** utilizzato per rappresentare le informazioni sulla formattazione e la punteggiatura delle espressioni numeriche e booleane.|
+|[numpunct](../standard-library/numpunct-class.md)|Classe modello che descrive un oggetto che può fungere da facet locale per descrivere le sequenze di tipo **CharType** utilizzate per rappresentare le informazioni sulla formattazione e la punteggiatura delle espressioni numeriche e booleane.|
 |[numpunct_byname](../standard-library/numpunct-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet moneypunct delle impostazioni locali specificate, consentendo la formattazione e la punteggiatura delle espressioni numeriche e booleane.|
 |[time_base](../standard-library/time-base-class.md)|Classe utilizzata come classe base per i facet della classe modello time_get, la quale definisce solo l'ordine della data di tipo enumerato e diverse costanti di questo tipo.|
 |[time_get](../standard-library/time-get-class.md)|Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni delle sequenze di tipo **CharType** in valori temporali.|
-|[time_get_byname](../standard-library/time-get-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali di tipo time_get\<**CharType**, **InputIterator**>.|
+|[time_get_byname](../standard-library/time-get-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali di tipo\<time_get**CharType**, **InputIterator**>.|
 |[time_put](../standard-library/time-put-class.md)|Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni dei valori temporali in sequenze di tipo **CharType**.|
-|[time_put_byname](../standard-library/time-put-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali di tipo `time_put` \< **CharType**, **OutputIterator**>.|
+|[time_put_byname](../standard-library/time-put-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali di `time_put` \<tipo **CharType**, **OutputIterator**>.|
 |[Classe wbuffer_convert](../standard-library/wbuffer-convert-class.md)|Descrive un buffer del flusso che controlla la trasmissione di elementi da e verso un buffer del flusso di byte.|
 |[Classe wstring_convert](../standard-library/wstring-convert-class.md)|Classe modello che esegue le conversioni tra una stringa di caratteri "wide" e una stringa di byte.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Tabelle codici](../c-runtime-library/code-pages.md)<br/>
-[Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Tabelle codici](../c-runtime-library/code-pages.md)\
+[Nomi delle impostazioni locali, lingue e stringhe relative a paesi](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

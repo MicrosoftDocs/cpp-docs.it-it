@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 76b04c3c26f6ec49f1d816feaeec7e21312d79a9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: eaae94bcffcda6e113001dd7070bcc80e7c14d09
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246276"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458071"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
@@ -28,7 +28,7 @@ Definisce i tipi, le funzioni e gli operatori della libreria standard C++ che se
 Le coppie sono ampiamente usate nella libreria standard C++. Sono necessarie sia come argomenti e valori restituiti per diverse funzioni sia come tipi di elemento per contenitori quali la [classe map](../standard-library/map-class.md) e la [classe multimap](../standard-library/multimap-class.md). L'intestazione \<utility> viene inclusa automaticamente da \<map> per semplificare la gestione dei rispettivi elementi di tipi coppia chiave/valore.
 
 > [!NOTE]
-> Il \<utility > intestazione viene utilizzata l'istruzione `#include <initializer_list>`. Si intende anche `class tuple` come definito in \<tuple >.
+> L' \<intestazione dell'utilità > utilizza l' `#include <initializer_list>`istruzione. Si riferisce `class tuple` anche a come \<definito in tuple >.
 
 ## <a name="members"></a>Members
 
@@ -53,9 +53,9 @@ Le coppie sono ampiamente usate nella libreria standard C++. Sono necessarie sia
 
 |||
 |-|-|
-|[as_const](../standard-library/utility-functions.md#asconst)|Restituisce tipi.|
+|[as_const](../standard-library/utility-functions.md#asconst)|Restituisce il tipo.|
 |[declval](../standard-library/utility-functions.md#declval)|Valutazione dell'espressione a sintassi abbreviata.|
-|[exchange](../standard-library/utility-functions.md#exchange)|Assegna un nuovo valore a un oggetto e restituisce il valore precedente.|
+|[exchange](../standard-library/utility-functions.md#exchange)|Assegna un nuovo valore a un oggetto e restituisce il relativo valore precedente.|
 |[forward](../standard-library/utility-functions.md#forward)|Impedisce che il tipo di riferimento (`lvalue` o `rvalue`) dell'argomento venga nascosto dall'inoltro perfetto.|
 |[from_chars](../standard-library/utility-functions.md#from_chars)||
 |[get](../standard-library/utility-functions.md#get)|Funzione che ottiene un elemento da un oggetto `pair`.|
@@ -63,7 +63,7 @@ Le coppie sono ampiamente usate nella libreria standard C++. Sono necessarie sia
 |[move](../standard-library/utility-functions.md#move)|Restituisce l'argomento passato sotto forma di riferimento `rvalue`.|
 |[move_if_noexcept](../standard-library/utility-functions.md#moveif)||
 |[swap](../standard-library/utility-functions.md#swap)|Scambia gli elementi di due oggetti `pair`.|
-|[to_chars](../standard-library/utility-functions.md#to_chars)|Converte una stringa di caratteri di valore.|
+|[to_chars](../standard-library/utility-functions.md#to_chars)|Converte un valore in una stringa di caratteri.|
 
 ### <a name="operators"></a>Operatori
 
@@ -80,15 +80,15 @@ Le coppie sono ampiamente usate nella libreria standard C++. Sono necessarie sia
 
 |||
 |-|-|
-|[from_chars_result](../standard-library/from-chars-result-structure.md)|Uno struct usato per `from_chars`.|
+|[from_chars_result](../standard-library/from-chars-result-structure.md)|Struct utilizzato per `from_chars`.|
 |[identity](../standard-library/identity-structure.md)|Struct che fornisce una definizione di tipo come parametro di modello.|
-|[in_place_t](../standard-library/in-place-t-struct.md)|Include anche le strutture `in_place_type_t` e `in_place_index_t`.|
+|[in_place_t](../standard-library/in-place-t-struct.md)|Include anche struct `in_place_type_t` e `in_place_index_t`.|
 |[integer_sequence](../standard-library/integer-sequence-class.md)|Rappresenta una sequenza di Integer.|
 |[pair](../standard-library/pair-structure.md)|Tipo che permette di considerare due oggetti come un singolo oggetto.|
-|[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|Un tipo usato per mantenere il costruttore separato e overload di funzioni.|
-|[to_chars_result](../standard-library/to-chars-result-structure.md)|Uno struct usato per `to_chars`.|
+|[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|Tipo utilizzato per evitare l'overload di funzioni e costruttori distinti.|
+|[to_chars_result](../standard-library/to-chars-result-structure.md)|Struct utilizzato per `to_chars`.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

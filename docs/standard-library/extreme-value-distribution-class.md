@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 5bc0270cb24fcff93d995e8908daaec62c956371
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451194"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457766"
 ---
 # <a name="extremevaluedistribution-class"></a>Classe extreme_value_distribution
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*RealType*<br/>
-Il tipo di risultato a virgola mobile, per impostazione predefinita **doppie**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*RealType*\
+Il tipo di risultato a virgola mobile, il valore predefinito è **Double**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-Motore del generatore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*GENERATORE URNG*\
+Motore generatore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive una distribuzione che produce valori di specificato dall'utente a virgola mobile a tipo, o tipo **doppie** se ne viene specificato alcuno, distribuiti in base alla distribuzione dei valori estremi. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe modello descrive una distribuzione che produce valori di un tipo a virgola mobile specificato dall'utente o di tipo **Double** se non ne viene fornito alcuno, distribuiti in base alla distribuzione dei valori estremi. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*a_value*<br/>
+*a_value*\
 Parametro di distribuzione `a`.
 
-*b_value*<br/>
+*b_value*\
 Parametro di distribuzione `b`.
 
-*parm*<br/>
+*parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*a_value*<br/>
+*a_value*\
 Parametro di distribuzione `a`.
 
-*b_value*<br/>
+*b_value*\
 Parametro di distribuzione `b`.
 
-*right*<br/>
+*Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
@@ -244,4 +244,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

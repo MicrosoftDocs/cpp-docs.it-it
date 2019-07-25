@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; operatori'
+title: '&lt;operatori&gt; string_view'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::operator!=
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 1fbb7faf7d6fc92a053c0f4d47575c5c53c7968e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: caa6e515428cc0ea767eef20e819753c8f7ff8f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346919"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459224"
 ---
-# <a name="ltstringviewgt-operators"></a>&lt;string_view&gt; operatori
+# <a name="ltstringviewgt-operators"></a>&lt;operatori&gt; string_view
 
-Questi operatori consentono di confrontare due oggetti string_view, o un string_view e un altro oggetto stringa (ad esempio [std:: String](basic-string-class.md), o **char\*** ) per cui viene fornita una conversione implicita. 
+Usare questi operatori per confrontare due oggetti string_view o string_view e un altro oggetto stringa, ad esempio [std:: String](basic-string-class.md)o **char\*** , per cui viene fornita una conversione implicita. 
 
 ||||
 |-|-|-|
@@ -34,7 +34,7 @@ Questi operatori consentono di confrontare due oggetti string_view, o un string_
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|[operator""sv](#op_sv)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operatore! =
 
 Verifica se l'oggetto a sinistra dell'operatore non è uguale all'oggetto a destra.
 
@@ -57,21 +57,21 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*sinistra*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
-*right*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*Ok*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto sul lato sinistro dell'operatore non è a livello lessicografico uguale all'oggetto sul lato destro; in caso contrario **false**.
+**true** se l'oggetto sul lato sinistro dell'operatore non è lessicografico uguale all'oggetto a destra; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Deve esistere una conversione implicita da *convertible_string_type* a di string_view su altro lato. 
+Deve esistere una conversione implicita da *convertible_string_type* a string_view sull'altro lato. 
 
-Il confronto si basa su un pairwise il confronto lessicografico delle sequenze di caratteri. Se hanno lo stesso numero di elementi e gli elementi sono tutti uguali, i due oggetti sono uguali. In caso contrario, non sono uguali.
+Il confronto si basa su un confronto pairwise lessicografico tra le sequenze di caratteri. Se hanno lo stesso numero di elementi e gli elementi sono tutti uguali, i due oggetti sono uguali. In caso contrario, non sono uguali.
 
 ## <a name="op_eq_eq"></a> operator==
 
@@ -96,26 +96,26 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*sinistra*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
-*right*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*Ok*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto sul lato sinistro dell'operatore è uguale all'oggetto sul lato destro a livello lessicografico; in caso contrario **false**.
+**true** se l'oggetto sul lato sinistro dell'operatore è lessicografico uguale all'oggetto a destra; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Deve esistere una conversione implicita da *convertible_string_type* a di string_view su altro lato. 
+Deve esistere una conversione implicita da *convertible_string_type* a string_view sull'altro lato. 
 
-Il confronto si basa su un pairwise il confronto lessicografico delle sequenze di caratteri. Se hanno lo stesso numero di elementi e gli elementi sono tutti uguali, i due oggetti sono uguali.
+Il confronto si basa su un confronto pairwise lessicografico tra le sequenze di caratteri. Se hanno lo stesso numero di elementi e gli elementi sono tutti uguali, i due oggetti sono uguali.
 
 
 ## <a name="op_lt"></a> Operatore&lt;
 
-Verifica se l'oggetto sul lato sinistro dell'operatore è minore dell'oggetto nel sidestring_view a destra
+Verifica se l'oggetto sul lato sinistro dell'operatore è minore dell'oggetto a destra sidestring_view
 ```cpp
 template <class CharType, class Traits>
 bool operator<(
@@ -135,21 +135,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*sinistra*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
-*right*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*Ok*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto sul lato sinistro dell'operatore è minore a livello lessicografico l'oggetto sul lato destro; in caso contrario **false**.
+**true** se l'oggetto sul lato sinistro dell'operatore è lessicografico minore dell'oggetto a destra; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Deve esistere una conversione implicita da *convertible_string_type* a di string_view su altro lato. 
+Deve esistere una conversione implicita da *convertible_string_type* a string_view sull'altro lato. 
 
-Il confronto si basa su un pairwise il confronto lessicografico delle sequenze di caratteri. Quando viene rilevata la prima coppia non equivalente rilevata di caratteri, viene restituito il risultato di tale confronto. Se non vengono trovati caratteri uguali, ma un'unica sequenza è più breve, la sequenza più breve è minore di quella più lunga. In altre parole, "cat" è minore di "cani".
+Il confronto si basa su un confronto pairwise lessicografico tra le sequenze di caratteri. Quando viene rilevata la prima coppia di caratteri non uguale, viene restituito il risultato di tale confronto. Se non vengono trovati caratteri non uguali, ma una sequenza è più breve, la sequenza più breve è minore di quella più lunga. In altre parole, "Cat" è minore di "Cats".
 
 ### <a name="example"></a>Esempio
 
@@ -173,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto a sinistra dell'operatore è minore o uguale all'oggetto a destra.
 
@@ -196,21 +196,21 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*sinistra*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
-*right*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*Ok*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto sul lato sinistro dell'operatore è a livello lessicografico minore o uguale all'oggetto sul lato destro; in caso contrario **false**.
+**true** se l'oggetto a sinistra dell'operatore è lessicografico minore o uguale all'oggetto a destra; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [operator&lt;](#op_lt).
+Vedere [Operator&lt;](#op_lt).
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a>operatore&lt;&lt;
 
 Scrive un string_view in un flusso di output.
 
@@ -222,19 +222,19 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*Ostr*<br/>
-un flusso di output su cui scritto.
+*OSTR*\
+flusso di output in cui viene eseguita la scrittura.
 
-*Str*<br/>
-String_view da immettere nel flusso di output.
+*Str*\
+String_view da immettere in un flusso di output.
 
 ### <a name="return-value"></a>Valore restituito
 
-un flusso di output su cui scritto.
+flusso di output in cui viene eseguita la scrittura.
 
 ### <a name="remarks"></a>Note
 
-Utilizzare questo operatore per inserire il contenuto di un string_view in un flusso di output, ad esempio usando [std:: cout](iostream.md#cout).
+Usare questo operatore per inserire il contenuto di un string_view in un flusso di output, ad esempio usando [std:: cout](iostream.md#cout).
 
 ## <a name="op_gt"></a> Operatore&gt;
 
@@ -259,21 +259,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*sinistra*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
-*right*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*Ok*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto sul lato sinistro dell'operatore è maggiore dell'oggetto string_view sul lato destro a livello lessicografico; in caso contrario **false**.
+**true** se l'oggetto sul lato sinistro dell'operatore è lessicografico maggiore dell'oggetto string_view a destra; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [operator&lt;](#op_lt).
+Vedere [Operator&lt;](#op_lt).
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>operatore&gt;=
 
 Verifica se l'oggetto a sinistra dell'operatore è maggiore o uguale all'oggetto a destra.
 
@@ -296,23 +296,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*sinistra*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
-*right*<br/>
-Qualsiasi tipo stringa convertibili in o un oggetto di tipo `basic_string_view` da confrontare.
+*Ok*\
+Qualsiasi tipo di stringa convertibile o un oggetto `basic_string_view` di tipo da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se l'oggetto sul lato sinistro dell'operatore è maggiore o uguale all'oggetto sul lato destro; in caso contrario, a livello lessicografico **false**.
+**true** se l'oggetto sul lato sinistro dell'operatore è lessicografico maggiore o uguale all'oggetto a destra; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [operator&lt;](#op_lt).
+Vedere [Operator&lt;](#op_lt).
 
-## <a name="op_sv"></a> operatore"" sv (string_view letterale)
+## <a name="op_sv"></a>operatore "" SV (valore letterale string_view)
 
-Costruisce un string_view da valore letterale stringa. Richiede spazio dei nomi `std::literals::string_view_literals`. 
+Costruisce un string_view da un valore letterale stringa. Richiede lo `std::literals::string_view_literals`spazio dei nomi. 
 
 ### <a name="example"></a>Esempio
 
@@ -329,4 +329,4 @@ using namespace literals::string_view_literals;
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<string_view>](../standard-library/string-view.md)<br/>
+[\<> string_view](../standard-library/string-view.md)

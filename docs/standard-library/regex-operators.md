@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369553"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460129"
 ---
 # <a name="ltregexgt-operators"></a>Operatori &lt;regex&gt;
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*<br/>
+*BidIt*\
 Tipo di iteratore.
 
-*IOtraits*<br/>
+*IOtraits*\
 Classe traits della stringa.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*right*<br/>
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*<br/>
+*BidIt*\
 Tipo di iteratore.
 
-*IOtraits*<br/>
+*IOtraits*\
 Classe traits della stringa.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*right*<br/>
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
 
-Ciascun operatore modello converte gli argomenti in un tipo stringa e restituisce true solo se il valore convertito di *a sinistra* confronto risulta minore il valore convertito del *a destra*.
+Ciascun operatore modello converte gli argomenti in un tipo stringa e restituisce true solo se il valore convertito di *Left* è inferiore al valore convertito di *right*.
 
 ### <a name="example"></a>Esempio
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*<br/>
+*Elem*\
 Tipo dell'elemento.
 
-*IOtraits*<br/>
+*IOtraits*\
 Classe traits della stringa.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*BidIt*<br/>
+*BidIt*\
 Tipo di iteratore.
 
-*os*<br/>
+*del sistema operativo*\
 Flusso di output.
 
-*right*<br/>
+*Ok*\
 Oggetto da inserire.
 
 ### <a name="remarks"></a>Note
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*<br/>
+*BidIt*\
 Tipo di iteratore.
 
-*IOtraits*<br/>
+*IOtraits*\
 Classe traits della stringa.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*right*<br/>
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*<br/>
+*BidIt*\
 Tipo di iteratore.
 
-*IOtraits*<br/>
+*IOtraits*\
 Classe traits della stringa.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*right*<br/>
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*<br/>
+*BidIt*\
 Tipo di iteratore.
 
-*IOtraits*<br/>
+*IOtraits*\
 Classe traits della stringa.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*right*<br/>
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametri
 
-*BidIt*<br/>
+*BidIt*\
 Tipo di iteratore.
 
-*IOtraits*<br/>
+*IOtraits*\
 Classe traits della stringa.
 
-*Alloc*<br/>
+*Alloc*\
 Classe Allocator.
 
-*left*<br/>
+*sinistra*\
 Oggetto a sinistra da confrontare.
 
-*right*<br/>
+*Ok*\
 Oggetto a destra da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<regex>](../standard-library/regex.md)<br/>
-[Classe regex_constants](../standard-library/regex-constants-class.md)<br/>
-[Classe regex_error](../standard-library/regex-error-class.md)<br/>
-[Funzioni \<regex>](../standard-library/regex-functions.md)<br/>
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
-[Classe regex_traits](../standard-library/regex-traits-class.md)<br/>
-[Typedef \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Classe regex_constants](../standard-library/regex-constants-class.md)\
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[\<funzioni > Regex](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[Typedef \<regex>](../standard-library/regex-typedefs.md)

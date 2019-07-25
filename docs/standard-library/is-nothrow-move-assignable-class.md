@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_move_assignable
 ms.assetid: 000baa02-cbba-49de-9870-af730033348e
-ms.openlocfilehash: eb1ddcace7a68bf60154a15117a1c16a438d263d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8273be92a9c7e60e446b3c2b561a6020e70fb2f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148457"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455886"
 ---
 # <a name="isnothrowmoveassignable-class"></a>Classe is_nothrow_move_assignable
 
@@ -26,12 +26,12 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* ha un nothrow operatore di assegnazione spostamento, in caso contrario, contiene false.
+Un'istanza del predicato di tipo contiene true se il tipo *Ty* ha un operatore nothrow di assegnazione di spostamento; in caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,4 +41,4 @@ Un'istanza del tipo predicato contiene true se il tipo *Ty* ha un nothrow operat
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
-ms.openlocfilehash: ba7716c1c84e8a74495a67f10a78eeaad2a6c3d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 559bbff00b8e5204dd4f381abaf9987b4752db48
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159277"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452013"
 ---
 # <a name="lthashsetgt"></a>&lt;hash_set&gt;
 
@@ -31,7 +31,7 @@ Definisce le classi modello del contenitore hash_set e hash_multiset e i rispett
 
 ### <a name="operators"></a>Operatori
 
-|Versione di hash_set|Versione di hash_multiset|Descrizione|
+|Versione di hash_set|Versione di hash_multiset|DESCRIZIONE|
 |-----------------------|----------------------------|-----------------|
 |[operator!= (hash_set)](../standard-library/hash-set-operators.md#op_neq)|[operator!= (hash_multiset)](../standard-library/hash-set-operators.md#op_neq)|Verifica se l'oggetto hash_set o hash_multiset a sinistra dell'operatore non è uguale all'oggetto hash_set o hash_multiset a destra.|
 |[operator== (hash_set)](../standard-library/hash-set-operators.md#op_eq_eq)|[operator== (hash_multiset)](../standard-library/hash-set-operators.md#op_eq_eq)|Verifica se l'oggetto hash_set o hash_multiset a sinistra dell'operatore è uguale all'oggetto hash_set o hash_multiset a destra.|
@@ -46,12 +46,12 @@ Definisce le classi modello del contenitore hash_set e hash_multiset e i rispett
 
 |Classe|Descrizione|
 |-|-|
-|[Classe hash_compare](../standard-library/hash-compare-class.md)|Descrive un oggetto che può essere utilizzato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come valore predefinito `Traits` oggetto parametro da ordinamento e l'hashing degli elementi contenuti.|
+|[Classe hash_compare](../standard-library/hash-compare-class.md)|Descrive un oggetto che può essere usato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come oggetto di parametro `Traits` predefinito per ordinare ed eseguire l'hashing degli elementi in essi contenuti.|
 |[Classe hash_set](../standard-library/hash-set-class.md)|Usata per l'archiviazione e il recupero rapido di dati da una raccolta in cui i valori degli elementi contenuti sono univoci e vengono usati come valori delle chiavi.|
 |[Classe hash_multiset](../standard-library/hash-multiset-class.md)|Usata per l'archiviazione e il recupero rapido di dati da una raccolta in cui i valori degli elementi contenuti sono univoci e vengono usati come valori delle chiavi.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

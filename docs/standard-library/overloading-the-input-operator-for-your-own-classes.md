@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operator>>, overloading for your own classes
 - operator >>, overloading for your own classes
 ms.assetid: 40dab4e0-3f97-4745-9cc8-b86e740fa246
-ms.openlocfilehash: 86b8af963345c8eb9b3f44cfb16332bc09420bf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 672dfb7ec40b2f18cbde0adc92522d3194a5e738
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370723"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450129"
 ---
 # <a name="overloading-the-gtgt-operator-for-your-own-classes"></a>Overload dell'operatore &gt;&gt; per classi personalizzate
 
@@ -29,4 +29,4 @@ istream& operator>> (istream& is, Date& dt)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Flussi di input](../standard-library/input-streams.md)<br/>
+[Flussi di input](../standard-library/input-streams.md)

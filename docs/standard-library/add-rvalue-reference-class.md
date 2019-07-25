@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: e5e658f16657c0021b78175e87d122a3accd11eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411174"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456543"
 ---
 # <a name="addrvaluereference-class"></a>Classe add_rvalue_reference
 
@@ -29,14 +29,14 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo da modificare.
 
 ## <a name="remarks"></a>Note
 
-Il `add_rvalue_reference` classe dispone di un membro denominato `type`, che è un alias per il tipo di riferimento rvalue al parametro di modello *T*. La semantica di compressione dei riferimenti implica che, per i tipi non oggetto e non di funzione *T*, `T&&` è un *T*. Ad esempio, quando *T* è un tipo di riferimento lvalue, `add_rvalue_reference<T>::type` è il tipo di riferimento lvalue, non un riferimento rvalue.
+La `add_rvalue_reference` classe dispone di un membro `type`denominato, che è un alias per il tipo di un riferimento rvalue al parametro di modello *T*. La semantica di compressione dei riferimenti implica che, per i tipi non oggetto e non-funzione *t*, `T&&` è un *t*. Se, ad esempio, *T* è un tipo di riferimento `add_rvalue_reference<T>::type` lvalue, è il tipo di riferimento lvalue, non un riferimento rvalue.
 
-Per praticità, \<type_traits > definisce un modello di helper `add_rvalue_reference_t`, tale alias il `type` membro di `add_rvalue_reference`.
+Per praticità \<, type_traits > definisce un modello Helper, `add_rvalue_reference_t`, che alias il `type` membro di `add_rvalue_reference`.
 
 ## <a name="example"></a>Esempio
 
@@ -73,10 +73,10 @@ All static_assert tests of add_rvalue_reference passed.
 
 Intestazione: \<type_traits >
 
-Namespace: std
+Spazio dei nomi: STD
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)<br/>
-[Classe is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)\
+[Classe is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)

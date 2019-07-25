@@ -10,12 +10,12 @@ helpviewer_keywords:
 - = operator, with specific C++ Standard Library objects
 - reference::operator=
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
-ms.openlocfilehash: b829a0b6224ca93192f15b088fcb98155bc3963a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 738f86bd6163a827b43d78f29c6e3a7124400fb7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410928"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452155"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -31,10 +31,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parametri
 
-*A destra*<br/>
+*Ok*\
 Riferimento dell'elemento il cui valore deve essere assegnato al bit.
 
-*Val*<br/>
+*Val*\
 Valore booleano da assegnare al bit.
 
 ## <a name="example"></a>Esempio
@@ -118,5 +118,5 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="see-also"></a>Vedere anche
 
-[vettore\<bool >:: classe di riferimento](../standard-library/vector-bool-reference-class.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Classe vector\<bool>::reference](../standard-library/vector-bool-reference-class.md)\
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: d16dfeebabd5909212425fcc27b355110e891d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348445"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456255"
 ---
 # <a name="isfundamental-class"></a>Classe is_fundamental
 
@@ -27,12 +27,12 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo fondamentale, ovvero **void**, un tipo integrale, un mobile il tipo di punto o un `cv-qualified` forma di uno di essi, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo fondamentale, ovvero **void**, un tipo integrale, un tipo a virgola mobile o `cv-qualified` un form di uno di essi; in caso contrario, il valore è false.
 
 ## <a name="example"></a>Esempio
 
@@ -77,5 +77,5 @@ is_fundamental<void> == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_compound](../standard-library/is-compound-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_compound](../standard-library/is-compound-class.md)

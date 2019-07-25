@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: a0df754f53b52c134b9eb1126f90882ceaaf1e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386200"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454401"
 ---
 # <a name="discardblockengine-class"></a>Classe discard_block_engine
 
@@ -26,16 +26,16 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*Motore*<br/>
+*Motore*\
 Tipo del motore di base.
 
-*P*<br/>
+*P*\
 **Dimensioni del blocco**. Numero di valori in ogni blocco.
 
-*R*<br/>
-**Blocco usato**. Numero di valori usati in ogni blocco. Le rimanenti verranno eliminati (`P` - `R`). **Precondizione:** `0 < R ≤ P`
+*R*\
+**Blocco usato**. Numero di valori usati in ogni blocco. Il resto viene rimosso (`P` - `R`). **Precondizione:** `0 < R ≤ P`
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -56,4 +56,4 @@ Questa classe modello descrive un adattatore del motore che produce valori scart
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

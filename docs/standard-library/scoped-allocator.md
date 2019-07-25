@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
-ms.openlocfilehash: 101edcf31114252911eac90d07f5f44249f98fb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e1a51f1f9f5693b422ec1e680784a199541bb4a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295760"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451790"
 ---
 # <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
 
@@ -25,7 +25,7 @@ Definisce la classe modello contenitore scoped_allocator.
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|Descrizione|
 |-|-|
 |[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore non è uguale all'oggetto a destra.|
 |[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Verifica se l'oggetto scoped_allocator a sinistra dell'operatore è uguale all'oggetto a destra.|
@@ -38,6 +38,6 @@ Definisce la classe modello contenitore scoped_allocator.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

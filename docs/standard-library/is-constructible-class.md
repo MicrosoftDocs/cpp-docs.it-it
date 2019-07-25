@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-ms.openlocfilehash: c921efd5b7e12873ce986952029ae39f118ad763
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0596ac7a3fc2bcbcbe49f5fa4b20a971e5e445
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336855"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452867"
 ---
 # <a name="isconstructible-class"></a>Classe is_constructible
 
@@ -26,15 +26,15 @@ struct is_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
-*Args*<br/>
-I tipi di argomento in modo che corrispondano in un costruttore di *T*.
+*Args*\
+Tipi di argomento per cui trovare una corrispondenza in un costruttore di *T*.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* è costruibile mediante i tipi di argomento in *Args*, in caso contrario, contiene false. Tipo di *T* è costruibile se la definizione di variabile `T t(std::declval<Args>()...);` sia ben formato. Entrambe *T* e tutti i tipi negli *Args* devono essere tipi completi, **void**, o matrici di valori associati sconosciuti.
+Un'istanza del predicato di tipo include true se il tipo *T* è costruibile usando i tipi di argomento negli *argomenti*; in caso contrario, include false. Il tipo *T* è costruibile se la definizione `T t(std::declval<Args>()...);` della variabile è ben formata. Sia *T* che tutti i tipi in *args* devono essere tipi completi, **void**o matrici di associazione sconosciuta.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -44,4 +44,4 @@ Un'istanza del tipo predicato contiene true se il tipo *T* è costruibile median
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

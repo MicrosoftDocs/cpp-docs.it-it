@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: f605b160f6ed71aaafcc7c391e17180e4b243444
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346447"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452659"
 ---
 # <a name="isfinal-class"></a>Classe is_final
 
@@ -26,12 +26,12 @@ struct is_final;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo di classe contrassegnato `final`, in caso contrario, contiene false. Se *T* è un tipo di classe, deve essere un tipo completo.
+Un'istanza del predicato di tipo include true se il tipo *T* è un tipo `final`di classe contrassegnato; in caso contrario, include false. Se *T* è un tipo di classe, deve essere un tipo completo.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,5 +41,5 @@ Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo di classe 
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Identificatore final](../cpp/final-specifier.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Identificatore final](../cpp/final-specifier.md)

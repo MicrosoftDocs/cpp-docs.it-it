@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
-ms.openlocfilehash: 1a26675879c50440a4955989aca178dbe5049fdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9ffb4aff4d4d5667ab8d626ea13a21da94ca0c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411110"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456457"
 ---
 # <a name="alignedunion-class"></a>Classe aligned_union
 
@@ -29,15 +29,15 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*Len*<br/>
+*Len*\
 Valore di allineamento per il tipo più grande dell'unione.
 
-*Tipi*<br/>
+*Tipi*\
 Tipi distinti nell'unione sottostante.
 
 ## <a name="remarks"></a>Note
 
-Usare la classe modello per ottenere l'allineamento e la dimensione necessari per archiviare un'unione nell'archivio non inizializzato. Il typedef del membro `type` i nomi di un POD digitare adatto per l'archiviazione di qualsiasi tipo elencato nella *tipi*; le dimensioni minime *Len*. Il membro statico `alignment_value` typu `std::size_t` contiene l'allineamento più restrittivo richiesto di tutti i tipi elencati in *tipi*.
+Usare la classe modello per ottenere l'allineamento e la dimensione necessari per archiviare un'unione nell'archivio non inizializzato. Il typedef `type` del membro denomina un tipo POD adatto per l'archiviazione di qualsiasi tipo elencato nei *tipi*; la dimensione minima è *Len*. Il membro `alignment_value` statico di tipo `std::size_t` contiene l'allineamento più restrittivo necessario per tutti i tipi elencati nei *tipi*.
 
 ## <a name="example"></a>Esempio
 
@@ -85,5 +85,5 @@ value of u->i is 1065353216
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe alignment_of](../standard-library/alignment-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe alignment_of](../standard-library/alignment-of-class.md)

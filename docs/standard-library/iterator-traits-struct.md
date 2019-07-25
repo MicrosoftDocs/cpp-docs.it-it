@@ -7,12 +7,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224039"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455574"
 ---
 # <a name="iteratortraits-struct"></a>Struct iterator_traits
 
@@ -35,19 +35,19 @@ struct iterator_traits {
 
 La struct modello definisce i tipi di membro:
 
-- `iterator_category`: un sinonimo `Iterator::iterator_category`.
+- `iterator_category`: sinonimo di `Iterator::iterator_category`.
 
-- `value_type`: un sinonimo `Iterator::value_type`.
+- `value_type`: sinonimo di `Iterator::value_type`.
 
-- `difference_type`: un sinonimo `Iterator::difference_type`.
+- `difference_type`: sinonimo di `Iterator::difference_type`.
 
-- `distance_type`: un sinonimo `Iterator::difference_type.`
+- `distance_type`: sinonimo di`Iterator::difference_type.`
 
-- `pointer`: un sinonimo `Iterator::pointer`.
+- `pointer`: sinonimo di `Iterator::pointer`.
 
-- `reference`: un sinonimo `Iterator::reference`.
+- `reference`: sinonimo di `Iterator::reference`.
 
-Le specializzazioni parziali determinano i tipi critici associati a un puntatore all'oggetto di tipo **tipo** <strong>\*</strong> oppure **tipo const**  <strong>\*</strong>.
+Le specializzazioni parziali determinano i tipi critici associati a un puntatore a un oggetto di tipo **Type** <strong>\*</strong> o **const** <strong>\*</strong>.
 
 In questa implementazione è anche possibile usare varie funzioni modello che non fanno uso di specializzazioni parziali:
 
@@ -124,6 +124,6 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

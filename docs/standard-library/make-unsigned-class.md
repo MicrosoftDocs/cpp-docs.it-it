@@ -7,12 +7,12 @@ helpviewer_keywords:
 - make_unsigned class
 - make_unsigned
 ms.assetid: 7a6a3c4f-1a4c-47e8-9ee2-ac1f7b669353
-ms.openlocfilehash: 42c722c5250a4989b930d8f1e6fe52f2eccc614a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c0224bd5fd7dc8c6589ae474bb9acb9a8f09cf6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413047"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456316"
 ---
 # <a name="makeunsigned-class"></a>Classe make_unsigned
 
@@ -36,7 +36,7 @@ using make_unsigned_t = typename make_unsigned<T>::type;
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del modificatore di tipo contiene un tipo modificato che è *T* se `is_unsigned<T>` risulta vera. In caso contrario è il tipo con segno più piccolo `ST` per il quale `sizeof (T) <= sizeof (ST)`.
+Un'istanza del modificatore di tipo include un tipo modificato che è *T* se `is_unsigned<T>` include true. In caso contrario è il tipo con segno più piccolo `ST` per il quale `sizeof (T) <= sizeof (ST)`.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -46,4 +46,4 @@ Un'istanza del modificatore di tipo contiene un tipo modificato che è *T* se `i
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

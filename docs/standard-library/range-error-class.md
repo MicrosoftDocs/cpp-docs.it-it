@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range_error class
 ms.assetid: 8afb3e88-fc49-4213-b096-ed63d7aea37c
-ms.openlocfilehash: a4b7e90e5806713408c6779b288cafe008e2b4ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e741604a3bb23fa8166023d115f79e7a288e2f7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369806"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458239"
 ---
 # <a name="rangeerror-class"></a>Classe range_error
 
@@ -29,7 +29,7 @@ public:
 
 ## <a name="remarks"></a>Note
 
-Il valore restituito da [cosa](../standard-library/exception-class.md) è una copia di `message.data`. Per altre informazioni, vedere [basic_string:: data](../standard-library/basic-string-class.md#data).
+Valore restituito da [che cosa](../standard-library/exception-class.md) è una copia di `message.data`. Per altre informazioni, vedere [basic_string::d ATA](../standard-library/basic-string-class.md#data).
 
 ## <a name="example"></a>Esempio
 
@@ -64,5 +64,5 @@ Type: class std::range_error
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe runtime_error](../standard-library/runtime-error-class.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Classe runtime_error](../standard-library/runtime-error-class.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

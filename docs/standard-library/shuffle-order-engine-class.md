@@ -15,12 +15,12 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399434"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450420"
 ---
 # <a name="shuffleorderengine-class"></a>Classe shuffle_order_engine
 
@@ -35,13 +35,13 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*Motore*<br/>
+*Motore*\
 Tipo del motore di base.
 
-*K*<br/>
+*K*\
 **Dimensioni tabella**. Numero di elementi nel buffer (tabella). **Precondizione:** `0 < K`
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -52,7 +52,7 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 ## <a name="remarks"></a>Note
 
-Questa classe modello descrive un *adattatore del motore* che produce valori riordinando quelli restituiti dal rispettivo motore di base. Ogni costruttore inserisce nella tabella interna con *K* i valori restituiti dal motore di base e un elemento casuale è selezionato dalla tabella quando viene richiesto un valore.
+Questa classe modello descrive un *adattatore del motore* che produce valori riordinando quelli restituiti dal rispettivo motore di base. Ogni costruttore inserisce nella tabella interna i valori *K* restituiti dal motore di base e un elemento casuale è selezionato dalla tabella quando viene richiesto un valore.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -62,4 +62,4 @@ Questa classe modello descrive un *adattatore del motore* che produce valori rio
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

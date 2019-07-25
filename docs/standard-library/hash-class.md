@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: 2f7206e3764df384004b78e6df2127833a784f70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61446ab6b79496024d44a99fcf5f500bb871bb80
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405092"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448825"
 ---
 # <a name="hash-class"></a>Classe hash
 
@@ -45,7 +45,7 @@ struct hash {
 
 ## <a name="remarks"></a>Note
 
-L'oggetto funzione definisce una funzione hash, idonea per il mapping di valori di tipo *Ty* con una distribuzione di valori di indice. Il membro `operator()` restituisce un codice hash per *val*, idoneo per l'uso con classi modello `unordered_map`, `unordered_multimap`, `unordered_set` e `unordered_multiset`. La libreria standard fornisce specializzazioni per i tipi di base: *Ty* può essere qualsiasi tipo scalare, inclusi i tipi di puntatore e tipi di enumerazione. Sono inoltre disponibili specializzazioni per i tipi della libreria `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant` e `vector<bool>`.
+L'oggetto funzione definisce una funzione hash, idonea per il mapping di valori di tipo *Ty* con una distribuzione di valori di indice. Il membro `operator()` restituisce un codice hash per *val*, idoneo per l'uso con classi modello `unordered_map`, `unordered_multimap`, `unordered_set` e `unordered_multiset`. La libreria standard fornisce le specializzazioni per i tipi di base: *Ty* può essere qualsiasi tipo scalare, inclusi tipi di puntatore e tipi di enumerazione. Sono inoltre disponibili specializzazioni per i tipi della libreria `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant` e `vector<bool>`.
 
 ## <a name="example"></a>Esempio
 
@@ -78,7 +78,7 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
-[Classe unordered_multimap](../standard-library/unordered-multimap-class.md)<br/>
-[Classe unordered_multiset](../standard-library/unordered-multiset-class.md)<br/>
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)\
+[Classe unordered_multimap](../standard-library/unordered-multimap-class.md)\
+[Classe unordered_multiset](../standard-library/unordered-multiset-class.md)\
+[<unordered_set>](../standard-library/unordered-set.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383542"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460239"
 ---
 # <a name="moneyput-class"></a>Classe money_put
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*<br/>
+*CharType*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Tipo di iteratore in cui le funzioni Put monetarie scrivono il proprio output.
 
 ## <a name="remarks"></a>Note
@@ -55,7 +55,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|Nome del tipo|DESCRIZIONE|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[iter_type](#iter_type)|Tipo che descrive un iteratore di output.|
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parametri
 
-*next*<br/>
+*prossimo*\
 Iteratore che punta al primo elemento della stringa inserita.
 
-*_Intl*<br/>
+*_Intl*\
 Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
 
-*_Fill*<br/>
+*_Fill*\
 Carattere usato per la spaziatura.
 
-*val*<br/>
+*Val*\
 Oggetto stringa da convertire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -129,9 +129,9 @@ Iteratore di output che punta alla posizione successiva all'ultimo elemento prod
 
 ### <a name="remarks"></a>Note
 
-La prima funzione membro virtuale protetta genera elementi sequenziali a partire *successivo* per produrre un campo di output di tipo valuta dalle [string_type](#string_type) oggetto *val*. La sequenza controllata da *val* deve iniziare con uno o più cifre decimali, preceduti facoltativamente da un segno meno (-), che rappresenta l'importo. La funzione restituisce un iteratore che designa il primo elemento dopo il campo di output di tipo valuta generato.
+La prima funzione membro virtuale protetta genera elementi sequenziali a partire da *Next* per produrre un campo di output di tipo valuta dall'oggetto [string_type](#string_type) *Val*. La sequenza controllata da *Val* deve iniziare con una o più cifre decimali, facoltativamente preceduta da un segno meno (-), che rappresenta la quantità. La funzione restituisce un iteratore che designa il primo elemento dopo il campo di output di tipo valuta generato.
 
-La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione che si converte in modo efficace innanzitutto *val* in una sequenza di cifre decimali, preceduta in modo facoltativo da un segno meno (-), quindi converte tale sequenza come illustrato in precedenza.
+La seconda funzione membro virtuale protetta si comporta come la prima, ad eccezione del fatto che prima converte la *Val* in una sequenza di cifre decimali, facoltativamente preceduta da un segno meno, quindi converte tale sequenza come sopra.
 
 Il formato di un campo di output di tipo valuta è determinato dal valore fac [locale facet](../standard-library/locale-class.md#facet_class) restituito dalla chiamata effettiva [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).
 
@@ -191,22 +191,22 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*<br/>
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il *_Refs* parametro e i relativi significati sono:
+I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
 - 0: la durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
 - 1: la durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: questi valori non definiti.
+- \>1: questi valori non sono definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
-Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
+Il costruttore inizializza l'oggetto di base con **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`).
 
 ## <a name="put"></a>  money_put::put
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>Parametri
 
-*next*<br/>
+*prossimo*\
 Iteratore che punta al primo elemento della stringa inserita.
 
-*_Intl*<br/>
+*_Intl*\
 Valore booleano che indica il tipo del simbolo di valuta previsto nella sequenza: **true** se internazionale, **false** se nazionale.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Flag di formato che, quando impostato, indica che il simbolo di valuta è facoltativo; in caso contrario, indica che è necessario
 
-*_Fill*<br/>
+*_Fill*\
 Carattere usato per la spaziatura.
 
-*val*<br/>
+*Val*\
 Oggetto stringa da convertire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -295,6 +295,6 @@ Il tipo descrive una specializzazione della classe modello [basic_string](../sta
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Classe facet](../standard-library/locale-class.md#facet_class)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Classe facet](../standard-library/locale-class.md#facet_class)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

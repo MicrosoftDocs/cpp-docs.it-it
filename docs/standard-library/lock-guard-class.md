@@ -5,12 +5,12 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: 45a01c5fdd431bcfad1eeb5ab0531c11c89e9767
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413138"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453848"
 ---
 # <a name="lockguard-class"></a>Classe lock_guard
 
@@ -27,24 +27,24 @@ class lock_guard;
 
 L'argomento del modello `Mutex` deve denominare un *tipo mutex*.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |`lock_guard::mutex_type`|Sinonimo dell'argomento di modello `Mutex`.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[lock_guard](#lock_guard)|Costruisce un oggetto `lock_guard`.|
 |[Distruttore lock_guard::~lock_guard](#dtorlock_guard_destructor)|Sblocca il `mutex` passato al costruttore.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<mutex >
+**Intestazione:** \<> mutex
 
 **Spazio dei nomi:** std
 
@@ -60,14 +60,14 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Parametri
 
-*Mtx*<br/>
+*MTX*\
 Oggetto di *tipo mutex*.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore crea un oggetto di tipo `lock_guard` e i blocchi *Mtx*. Se *Mtx* non è un mutex ricorsivo, deve essere sboccato quando viene chiamato questo costruttore.
+Il primo costruttore costruisce un oggetto di tipo `lock_guard` e blocca *MTX*. Se *MTX* non è un mutex ricorsivo, deve essere sbloccato quando viene chiamato questo costruttore.
 
-Il secondo costruttore non blocca *Mtx*. *Mtx* quando viene chiamato questo costruttore deve essere bloccato. Il costruttore non genera eccezioni.
+Il secondo costruttore non blocca *MTX*. *MTX* deve essere bloccato quando viene chiamato questo costruttore. Il costruttore non genera eccezioni.
 
 ## <a name="dtorlock_guard_destructor"></a>  Distruttore lock_guard::~lock_guard
 
@@ -83,5 +83,5 @@ Se al momento dell'esecuzione del distruttore il `mutex` non esiste, il comporta
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

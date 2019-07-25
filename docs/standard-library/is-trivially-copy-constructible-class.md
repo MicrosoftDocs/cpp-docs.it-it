@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-ms.openlocfilehash: aa6d6b19ae2bd5d6967c57db61c5697c0c6153e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8c4026da424e77b57555dd4c342c9ac7a386591
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413437"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447982"
 ---
 # <a name="istriviallycopyconstructible-class"></a>Classe is_trivially_copy_constructible
 
@@ -26,14 +26,14 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* è una classe che ha un costruttore di copia semplice, in caso contrario, contiene false.
+Un'istanza del predicato di tipo contiene true se il tipo *T* è una classe che ha un costruttore di copia semplice; in caso contrario, contiene false.
 
-Un costruttore di copia per una classe *T* è semplice se si è dichiarato in modo implicito, la classe *T* non dispone di funzioni virtuali o basi virtuali, tutte le basi dirette della classe *T* hanno i costruttori di copia semplice, le classi di tutti i membri dati non statici di tipo classe hanno costruttori di copia semplici e le classi di tutti i membri dati non statici di tipo matrice della classe hanno costruttori di copia semplice.
+Un costruttore di copia per una classe *t* è semplice se è dichiarato in modo implicito, la classe *t* non ha funzioni virtuali o basi virtuali, tutte le basi dirette della classe *t* hanno costruttori di copia semplici, le classi di tutti i membri dati non statici del tipo di classe hanno costruttori di copia semplici e le classi di tutti i membri dati non statici di tipo matrice della classe hanno costruttori di copia semplici.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -43,4 +43,4 @@ Un costruttore di copia per una classe *T* è semplice se si è dichiarato in mo
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

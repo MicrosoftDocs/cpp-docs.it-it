@@ -7,12 +7,12 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: dc457fd4efba538e96200f7f42f84a73fc1b5228
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f27a8e4bc0bea3a469d46a56e8885dabe5894df
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411240"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456574"
 ---
 # <a name="addconst-class"></a>Classe add_const
 
@@ -27,12 +27,12 @@ struct add_const;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo da modificare.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del modificatore di tipo contiene un tipo modificato che è *Ty* se *Ty* è un riferimento, una funzione o un tipo qualificato da const, in caso contrario `const Ty`.
+Un'istanza del modificatore di tipo include un tipo modificato che è *Ty* se *Ty* è un riferimento, una funzione o un tipo qualificato da const; in `const Ty`caso contrario,.
 
 ## <a name="example"></a>Esempio
 
@@ -66,5 +66,5 @@ add_const<int> == int
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe remove_const](../standard-library/remove-const-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe remove_const](../standard-library/remove-const-class.md)

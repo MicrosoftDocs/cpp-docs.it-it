@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5862ddd812308c7bf81a5029249caf7e9b4a1168
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246693"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453545"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 
@@ -38,11 +38,11 @@ Gli algoritmi consentono di estendere le azioni supportate dalle operazioni e da
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|Calcola la somma di tutti gli elementi di un intervallo specificato, incluso un valore iniziale, calcolando le somme parziali successive oppure calcola il risultato dei risultati parziali successivi ottenuti utilizzando un'operazione binaria specificata anziché l'operazione di somma.|
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|Calcola le differenze successive tra ogni elemento e il relativo predecessore in un intervallo di input e restituisce i risultati in un intervallo di destinazione oppure calcola il risultato di una procedura generalizzata in cui l'operazione di differenza viene sostituita da un'altra operazione binaria specificata.|
 |[exclusive_scan](../standard-library/numeric-functions.md#exclusive_scan)||
-|[gcd](../standard-library/numeric-functions.md#gcd)||
+|[MCD](../standard-library/numeric-functions.md#gcd)||
 |[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|Calcola la somma del prodotto tra gli elementi di due intervalli e aggiunge tale somma a un valore iniziale specificato oppure calcola il risultato di una procedura generalizzata in cui le operazioni di somma e prodotto vengono sostituite da altre operazioni binarie specificate.|
 |[iota](../standard-library/numeric-functions.md#iota)|Archivia un valore iniziale a partire dal primo elemento e inserendo gli incrementi successivi del valore (`value++`) in ciascun elemento dell'intervallo `[first, last)`.|
-|[Gestione configurazione locale](../standard-library/numeric-functions.md#lcm)||
+|[LCM](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Calcola una serie di somme in un intervallo di input dal primo elemento fino all'elemento *i*th e archivia il risultato di ciascuna somma nell'elemento *i*th di un intervallo di destinazione oppure calcola il risultato di una procedura generalizzata in cui l'operazione di somma viene sostituita da un'altra operazione binaria specificata.|
 |[ridurre](../standard-library/numeric-functions.md#reduce)||
 |[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
@@ -51,6 +51,6 @@ Gli algoritmi consentono di estendere le azioni supportate dalle operazioni e da
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

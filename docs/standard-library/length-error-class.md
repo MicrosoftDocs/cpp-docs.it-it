@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-ms.openlocfilehash: 67de20907dcf13fa54119d8886aabc8d521165cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c88b9e3af5d00a3d2c0b3146783b0babe9d0a01a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223969"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447591"
 ---
 # <a name="lengtherror-class"></a>Classe length_error
 
@@ -83,5 +83,5 @@ Type class std::length_error
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe logic_error](../standard-library/logic-error-class.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[logic_error Class](../standard-library/logic-error-class.md)\ (Classe logic_error)
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412020"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460034"
 ---
 # <a name="timebase-class"></a>Classe time_base
 
-La classe funge da classe base per i facet della classe di modello di time_get, la definizione sufficiente del tipo enumerato `dateorder` e diverse costanti di questo tipo.
+La classe funge da classe base per i facet della classe modello time_get, definendo solo il tipo `dateorder` enumerato e diverse costanti di questo tipo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -38,15 +38,15 @@ public:
 
 Ogni costante caratterizza un modo diverso di ordinare i componenti di una data. Le costanti sono:
 
-- `no_order` non specifica nessun ordine particolare.
+- `no_order`non specifica alcun ordine specifico.
 
-- `dmy` Specifica l'ordine giorno, mese, anno, come in 2 dicembre 1979.
+- `dmy`Specifica il giorno, il mese e l'anno dell'ordine, come nel 2 dicembre 1979.
 
-- `mdy` Specifica l'ordine mese, giorno, anno, come in dicembre 2, 1979.
+- `mdy`Specifica il mese, il giorno e l'anno dell'ordine, come nel 2 dicembre 1979.
 
-- `ymd` Specifica l'ordine anno, mese, giorno, come in 1979/12/2.
+- `ymd`Specifica l'anno, il mese e il giorno dell'ordine, come in 1979/12/2.
 
-- `ydm` Specifica l'ordine anno, giorno, mese, come in 1979: 2 dic.
+- `ydm`Specifica gli ordini anno, giorno e mese, come in 1979: 2 Dec.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -56,4 +56,4 @@ Ogni costante caratterizza un modo diverso di ordinare i componenti di una data.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

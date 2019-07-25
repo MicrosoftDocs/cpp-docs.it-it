@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450665"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453928"
 ---
 # <a name="geometricdistribution-class"></a>Classe geometric_distribution
 
@@ -66,11 +66,11 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*IntType*<br/>
-Il tipo di risultato integer, valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*IntType*\
+Il tipo di risultato Integer, il valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*URNG*<br/>
-L'uniform generatore motore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*GENERATORE URNG*\
+Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*p*<br/>
+*p*\
 Parametro di distribuzione `p`.
 
-*parm*<br/>
+*parm*\
 Struttura di parametri usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*p*<br/>
+*p*\
 Parametro di distribuzione `p`.
 
-*right*<br/>
+*Ok*\
 Istanza `param_type` con cui eseguire il confronto.
 
 ### <a name="remarks"></a>Note
@@ -265,4 +265,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5992e368031b59c9b892167b135fa30a870c73f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240969"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448060"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -20,7 +20,7 @@ Definisce il vettore della classe modello del contenitore e diversi modelli di s
 L'oggetto `vector` è un contenitore che consente di organizzare gli elementi di un determinato tipo in una sequenza lineare. Consente l'accesso casuale veloce a qualsiasi elemento e aggiunte e rimozioni dinamiche nella sequenza. L'oggetto `vector`è il contenitore preferito per una sequenza quando le prestazioni di accesso casuale sono scarse.
 
 > [!NOTE]
-> Il \<vector > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+> Anche \<la libreria Vector > USA l' `#include <initializer_list>` istruzione.
 
 Per altre informazioni sulla classe `vector`, vedere [Classe vector](../standard-library/vector-class.md). Per informazioni sulla specializzazione `vector<bool>`, vedere [Classe vector\<bool>](../standard-library/vector-bool-class.md).
 
@@ -83,7 +83,7 @@ Parametro di modello per il tipo di dati archiviati nel vettore.
 *Allocatore*\
 Parametro di modello per l'oggetto allocatore archiviato responsabile dell'allocazione e disallocazione della memoria.
 
-*A sinistra*\
+*sinistra*\
 Primo vettore (a sinistra) in un'operazione di confronto.
 
 *Ok*\
@@ -123,6 +123,6 @@ Secondo vettore (a destra) in un'operazione di confronto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

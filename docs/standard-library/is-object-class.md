@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_object class
 - is_object
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
-ms.openlocfilehash: 89c554bda1c82fbedda5b027dbb70b12c2c7cec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 521c3fe1053f53e5d30edf39a41cb840522575a2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413652"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455858"
 ---
 # <a name="isobject-class"></a>Classe is_object
 
@@ -27,12 +27,12 @@ struct is_object;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo riferimento, un tipo di funzione o void, o un `cv-qualified` forma di uno di essi, in caso contrario risulta vera.
+Un'istanza del predicato di tipo include false se il tipo *Ty* è un tipo di riferimento, un tipo di funzione, o `cv-qualified` void, o un form di uno di essi; in caso contrario, è true.
 
 ## <a name="example"></a>Esempio
 
@@ -85,5 +85,5 @@ is_object<void> == false
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_function](../standard-library/is-function-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_function](../standard-library/is-function-class.md)

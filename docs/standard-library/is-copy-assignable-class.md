@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_assignable
 ms.assetid: 3ae6bca1-85fb-4829-9ee9-0183b081ff50
-ms.openlocfilehash: 75e0e8d995fbb3c6bfb1af3142a98651d7a29e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fedd32f026828e49ea29cb2975a2529ca28c862
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336751"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452832"
 ---
 # <a name="iscopyassignable-class"></a>Classe is_copy_assignable
 
@@ -26,12 +26,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un copia operatore di assegnazione, in caso contrario, contiene false. Equivalente a is_assignable\<Ty&, const Ty&>.
+Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un operatore di assegnazione di copia; in caso contrario, contiene false. Equivalente a is_assignable\<Ty&, const Ty&>.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,4 +41,4 @@ Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

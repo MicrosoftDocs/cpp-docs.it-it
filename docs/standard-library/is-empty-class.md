@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_empty class
 - is_empty
 ms.assetid: 44a6fc92-7e55-4fbe-9a24-2a0ce2dccba0
-ms.openlocfilehash: f5ab0798e0074547d62a4bcff4db412445346189
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6300107ecf9c4ea1e237a60bf18f26b6416f7fba
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336597"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452702"
 ---
 # <a name="isempty-class"></a>Classe is_empty
 
@@ -27,12 +27,12 @@ struct is_empty;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe vuota, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è una classe vuota; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -78,4 +78,4 @@ is_empty<int> == false
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

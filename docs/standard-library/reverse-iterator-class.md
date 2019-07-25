@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: ae4a3da8f15f838900cb5a4324fbaeda01d918a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7164e72dfc7bef0213a38e2605dee8195747f17
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368792"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451169"
 ---
 # <a name="reverseiterator-class"></a>Classe reverse_iterator
 
@@ -38,15 +38,15 @@ class reverse_iterator
 
 ### <a name="parameters"></a>Parametri
 
-Tipo che rappresenta l'iteratore da adattare perché operi in senso inverso RandomIterator.
+RandomIterator il tipo che rappresenta l'iteratore da adattare per operare in senso inverso.
 
 ## <a name="remarks"></a>Note
 
-I contenitori della libreria standard C++ definiscono anche i tipi `reverse_iterator` e `const_reverse_iterator` e hanno funzioni membro `rbegin` e `rend` che restituiscono iteratori inversi. Tali iteratori dispongono di una semantica di sovrascrittura. Il `reverse_iterator` adattatore integra questa funzionalità, poiché offre semantica di inserimento e può essere usato anche con i flussi.
+I contenitori della libreria standard C++ definiscono anche i tipi `reverse_iterator` e `const_reverse_iterator` e hanno funzioni membro `rbegin` e `rend` che restituiscono iteratori inversi. Tali iteratori dispongono di una semantica di sovrascrittura. L' `reverse_iterator` adattatore integra questa funzionalità in quanto offre semantica di inserimento e può essere usata anche con i flussi.
 
-Il `reverse_iterator` che richiede un iteratore bidirezionale non deve chiamare alcuna del membro le funzioni `operator+=`, `operator+`, `operator-=`, `operator-`, o `operator[]`, che può essere utilizzato solo con gli iteratori ad accesso casuale.
+L' `reverse_iterator` oggetto che richiede un iteratore bidirezionale non deve chiamare alcuna funzione `operator+=`membro, `operator-` `operator+` `operator-=`,, o `operator[]`, che può essere usata solo con gli iteratori ad accesso casuale.
 
-L'intervallo di un iteratore è [*primo*, *ultimo*), dove la parentesi quadra a sinistra indica l'inclusione degli *primo* e la parentesi a destra indica il inclusione degli elementi fino a ma escludendo *ultimo* stesso. Sono inclusi gli stessi elementi della sequenza inversa [ **rev** - *primo*, **rev** - *ultimo*) in modo che, se *ultima* è l'elemento quello-passato-the-end in una sequenza, quindi il primo elemento **rev** - *prima* nei punti di sequenza inversa da \*(*ultimo* - 1). L'identità che collega tutti gli iteratori inversi ai relativi iteratori sottostanti è:
+L'intervallo di un iteratore è [*First*, *Last*), dove la parentesi quadra a sinistra indica l'inclusione di *First* e la parentesi a destra indica l'inclusione degli elementi fino a ma escludendo l' *Ultima* . Gli stessi elementi sono inclusi nella sequenza inversa [ **REV** - *First*, **REV** - *Last*), in modo che se l' *ultimo* è l'elemento One-paste-end in una sequenza, il primo elemento **REV** prima nella sequenza  invertita punta a \*(*Last* -1).  -  L'identità che collega tutti gli iteratori inversi ai relativi iteratori sottostanti è:
 
 &\*( **reverse_iterator** ( *i* ) ) == &\*( *i* - 1 ).
 
@@ -54,7 +54,7 @@ In pratica, questo significa che in tale sequenza inversa reverse_iterator farà
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-|-|
 |[reverse_iterator](#reverse_iterator)|Costruisce un `reverse_iterator` predefinito o un `reverse_iterator` da un iteratore sottostante.|
 
@@ -69,13 +69,13 @@ In pratica, questo significa che in tale sequenza inversa reverse_iterator farà
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[base](#base)|Recupera l'iteratore sottostante dal relativo `reverse_iterator`.|
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|DESCRIZIONE|
 |-|-|
 |[operator_star](#op_star)|Restituisce l'elemento a cui punta un `reverse_iterator`.|
 |[operator+](#op_add)|Aggiunge un offset a un iteratore e restituisce il nuovo `reverse_iterator` che punta all'elemento inserito in corrispondenza della nuova posizione dell'offset.|
@@ -174,7 +174,7 @@ typedef typename iterator_traits<RandomIterator>::difference_type  difference_ty
 
 Il tipo di differenza `reverse_iterator` è uguale al tipo di differenza dell'iteratore.
 
-Il tipo è un sinonimo del nome tipo del tratto dell'iteratore `iterator_traits`\< **RandomIterator**> **::pointer**.
+Il tipo è un sinonimo del nome tipo del tratto dell'iteratore `iterator_traits`\< **RandomIterator**>  **::pointer**.
 
 ### <a name="example"></a>Esempio
 
@@ -210,7 +210,7 @@ Valore degli elementi a cui punta l'oggetto reverse_iterator.
 
 ### <a name="remarks"></a>Note
 
-L'operatore restituirà \*( **corrente** - 1).
+L'operatore restituisce \*( **Current** -1).
 
 ### <a name="example"></a>Esempio
 
@@ -265,7 +265,7 @@ reverse_iterator<RandomIterator> operator+(difference_type Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*Off*\
 Offset da aggiungere all'iteratore inverso.
 
 ### <a name="return-value"></a>Valore restituito
@@ -414,7 +414,7 @@ reverse_iterator<RandomIterator>& operator+=(difference_type Off);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*Off*\
 Offset di incremento dell'iteratore.
 
 ### <a name="return-value"></a>Valore restituito
@@ -487,7 +487,7 @@ reverse_iterator<RandomIterator> operator-(difference_type Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*Off*\
 Offset da sottrarre dall'oggetto reverse_iterator.
 
 ### <a name="return-value"></a>Valore restituito
@@ -637,7 +637,7 @@ reverse_iterator<RandomIterator>& operator-=(difference_type Off);
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*Off*\
 Offset da sottrarre dall'oggetto `reverse_iterator`.
 
 ### <a name="remarks"></a>Note
@@ -791,7 +791,7 @@ reference operator[](difference_type Off) const;
 
 ### <a name="parameters"></a>Parametri
 
-*Off*<br/>
+*Off*\
 Offset dall'indirizzo dell'oggetto `reverse_iterator`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -869,7 +869,7 @@ typedef typename iterator_traits<RandomIterator>::pointer pointer;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del nome tipo del tratto dell'iteratore `iterator_traits`\< *RandomIterator*> **::pointer**.
+Il tipo è un sinonimo del nome tipo del tratto dell'iteratore `iterator_traits`\< *RandomIterator*>  **::pointer**.
 
 ### <a name="example"></a>Esempio
 
@@ -941,11 +941,11 @@ typedef typename iterator_traits<RandomIterator>::reference reference;
 
 ### <a name="remarks"></a>Note
 
-Il tipo è un sinonimo del nome tipo del tratto dell'iteratore `iterator_traits`\< *RandomIterator*> **::reference**.
+Il tipo è un sinonimo del nome tipo del tratto dell'iteratore `iterator_traits`\< *RandomIterator*>  **::reference**.
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [reverse_iterator:: operator&#91; &#93; ](#op_at) oppure [reverse_iterator:: operator *](#op_star) per esempi di come dichiarare e usare `reference`.
+Per esempi di come dichiarare e usare `reference`, vedere [reverse_iterator:: operator&#91; ](#op_at) o [reverse_iterator:: operator *](#op_star) .
 
 ## <a name="reverse_iterator"></a>  reverse_iterator::reverse_iterator
 
@@ -961,7 +961,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Iteratore da adattare a un oggetto `reverse_iterator`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1021,6 +1021,6 @@ int main( )
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

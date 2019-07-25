@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: f60a3ef6528da33fd1117fc940e961e9fe0987df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3265cfe4b2629bf02925ea6e3eeb0c4acb1e0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185906"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451206"
 ---
 # <a name="resultof-class"></a>Classe result_of
 
-Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. Aggiunto in c++14, deprecata in c++17.
+Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. Aggiunto in C++ 14, deprecato in C++ 17.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,15 +37,15 @@ template<class T>
 
 ### <a name="parameters"></a>Parametri
 
-*Fn*<br/>
+*FN*\
 Tipo chiamabile su cui eseguire una query.
 
-*ArgTypes*<br/>
+*ArgTypes*\
 Tipi dell'elenco di argomenti al tipo chiamabile su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Usare questo modello per determinare in fase di compilazione il tipo di risultato `Fn`(`ArgTypes`), dove *Fn* è un tipo chiamabile, un riferimento alla funzione o un riferimento al tipo chiamabile, richiamato tramite un elenco di argomenti dei tipi in  *ArgTypes*. Il membro `type` della classe modello attribuisce un nome al tipo di risultato di `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` se l'espressione non valutata `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` è nel formato corretto. In caso contrario, la classe di modello non ha alcun membro `type`. Il tipo *Fn* e tutti i tipi nel pacchetto di parametri *ArgTypes* devono essere tipi completi, **void**, o matrici di valori associati sconosciuti. Deprecato in favore di [invoke_result](invoke-result-class.md) in c++17.
+Usare questo modello per determinare in fase di compilazione il tipo di `Fn`risultato`ArgTypes`di (), dove *FN* è un tipo chiamabile, un riferimento a una funzione o un riferimento al tipo chiamabile, richiamato usando un elenco di argomenti dei tipi in *argTypes*. Il membro `type` della classe modello attribuisce un nome al tipo di risultato di `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` se l'espressione non valutata `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` è nel formato corretto. In caso contrario, la classe di modello non ha alcun membro `type`. Il tipo *FN* e tutti i tipi nel pacchetto di parametri *argTypes* devono essere tipi completi, **void**o matrici di associazione sconosciuta. Deprecato a favore di [invoke_result](invoke-result-class.md) in c++ 17.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -55,5 +55,5 @@ Usare questo modello per determinare in fase di compilazione il tipo di risultat
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[classe invoke_result](invoke-result-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe invoke_result](invoke-result-class.md)

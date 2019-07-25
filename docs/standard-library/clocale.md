@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - clocale header
 ms.assetid: 5bde3e01-cf67-4f1f-a383-447ec814d00e
-ms.openlocfilehash: 624a1afdbe0e73c81a324273836eff6b89705236
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 60d15795328de567a8ba626f5344b2fb08e57aa7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244763"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459347"
 ---
 # <a name="ltclocalegt"></a>&lt;clocale&gt;
 
@@ -19,7 +19,7 @@ Include l'intestazione della libreria C standard \<locale.h> e aggiunge i nomi a
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<clocale >
+**Intestazione:** \<> clocale
 
 **Spazio dei nomi:** std
 
@@ -54,6 +54,6 @@ lconv* localeconv();
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - cvt/wbuffer header
 ms.assetid: 6e6eb44c-1bc4-4d8c-a4bd-b39c753ce725
-ms.openlocfilehash: 7e344581ca3457616111a65f8a5856e34ac49c93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2ed70eb85a26b5b3e7039b4d430ca85f3131a14
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394104"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455420"
 ---
 # <a name="ltcvtwbuffergt"></a>&lt;cvt/wbuffer&gt;
 
@@ -27,4 +27,4 @@ L'intestazione `<cvt/wstring>` nelle versioni precedenti di Visual Studio defini
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

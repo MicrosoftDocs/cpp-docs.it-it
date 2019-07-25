@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411994"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459983"
 ---
 # <a name="timepoint-class"></a>Classe time_point
 
@@ -29,11 +29,11 @@ template <class Clock,
 class time_point;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
 |`time_point::clock`|Sinonimo del parametro di modello `Clock`.|
 |`time_point::duration`|Sinonimo del parametro di modello `Duration`.|
@@ -42,7 +42,7 @@ class time_point;
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[time_point](#time_point)|Costruisce un oggetto `time_point`.|
 
@@ -63,7 +63,7 @@ class time_point;
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<chrono >
+**Intestazione:** \<> Chrono
 
 **Spazio dei nomi:** std::chrono
 
@@ -101,7 +101,7 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-*Rim*<br/>
+*Durata*\
 Oggetto `duration`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -118,7 +118,7 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parametri
 
-*Rim*<br/>
+*Durata*\
 Oggetto `duration`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -140,17 +140,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Parametri
 
-*Rim*<br/>
+*Durata*\
 Oggetto [duration](../standard-library/duration-class.md).
 
-*Tp*<br/>
+*TP*\
 Oggetto `time_point`.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore crea un oggetto il cui valore `duration` archiviato è uguale a [duration::zero](../standard-library/duration-class.md#zero).
 
-Il secondo costruttore crea un oggetto il cui valore duration archiviato è uguale a *Rim*. A meno che non `is_convertible<Duration2, duration>` contiene true, il secondo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
+Il secondo costruttore crea un oggetto il cui valore Duration archiviato è uguale a *dur*. A meno `is_convertible<Duration2, duration>` che non contenga true, il secondo costruttore non partecipa alla risoluzione dell'overload. Per altre informazioni, vedere [<type_traits>](../standard-library/type-traits.md).
 
 Il terzo costruttore inizializza il suo valore `duration` usando `Tp.time_since_epoch()`.
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

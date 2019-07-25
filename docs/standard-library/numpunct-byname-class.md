@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: 64e8918b052b05088ff48aefb0f0f9ab8c6df586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c9eb565c2dbf54da449411aa11a4c5661debf1d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371492"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452310"
 ---
 # <a name="numpunctbyname-class"></a>Classe numpunct_byname
 
@@ -49,4 +49,4 @@ Il comportamento è determinato dall'impostazione locale [denominata](../standar
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

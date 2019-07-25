@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
-ms.openlocfilehash: a1aef356716fac903b4e44a358602c709572e8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 279da956eaff21c39c6e5ca563f26989105f7e74
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413392"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448366"
 ---
 # <a name="istriviallymoveconstructible-class"></a>Classe is_trivially_move_constructible
 
@@ -26,14 +26,14 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è una classe che ha un costruttore spostamento semplice, in caso contrario, contiene false.
+Un'istanza del predicato di tipo contiene true se il tipo *Ty* è una classe che ha un costruttore di spostamento semplice; in caso contrario, contiene false.
 
-Un costruttore di spostamento per una classe *Ty* è piuttosto semplice se:
+Un costruttore di spostamento per una classe *Ty* è semplice se:
 
 viene dichiarato in modo implicito
 
@@ -59,4 +59,4 @@ le classi di tutti i membri dati non statici di tipo matrice della classe hanno 
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

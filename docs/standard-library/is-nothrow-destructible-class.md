@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_destructible
 ms.assetid: 0bbd8a28-e312-4d72-bd28-aac027f974d3
-ms.openlocfilehash: 366b40af45c57d058d918c4c2f21d1b2ba486d35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44de1f1fae1ea542aa247c0b39f04ee6bbd6308a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217326"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455909"
 ---
 # <a name="isnothrowdestructible-class"></a>Classe is_nothrow_destructible
 
@@ -26,12 +26,12 @@ struct is_nothrow_destructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo distruttibile e il distruttore è nota al compilatore non genera eccezioni. In caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *T* è un tipo distruttibile e il distruttore è noto al compilatore di non generare. In caso contrario, contiene false.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,4 +41,4 @@ Un'istanza del tipo predicato contiene true se il tipo *T* è un tipo distruttib
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

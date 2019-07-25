@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-ms.openlocfilehash: 623bda13a12ac311618e1b9fffdbc3f676013df6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8ac69bacf72cc9a281e239263a14a42f4a0efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336506"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452685"
 ---
 # <a name="isenum-class"></a>Classe is_enum
 
@@ -27,12 +27,12 @@ struct is_enum;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo di enumerazione o un `cv-qualified` forma di un tipo di enumerazione, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo di `cv-qualified` enumerazione o un form di un tipo di enumerazione; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -77,5 +77,5 @@ is_enum<int> == false
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_integral](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_integral](../standard-library/is-integral-class.md)

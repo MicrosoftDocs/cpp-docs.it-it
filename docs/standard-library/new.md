@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243545"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457681"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -33,7 +33,7 @@ Alcune delle funzioni dichiarate in questa intestazione sono sostituibili. L'imp
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Fornisce un oggetto da utilizzare come argomento per il **nothrow** le versioni di **nuove** e **Elimina**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Fornisce un oggetto da usare come argomento per le versioni **nothrow** di **New** e **Delete**.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
@@ -41,7 +41,7 @@ Alcune delle funzioni dichiarate in questa intestazione sono sostituibili. L'imp
 |-|-|
 |[new_handler](../standard-library/new-typedefs.md#new_handler)|Tipo che punta a una funzione appropriata per l'uso come nuovo gestore.|
 |[hardware_constructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
-|[hardware_destructive_interference_size e altre](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
+|[hardware_destructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 
 ### <a name="functions"></a>Funzioni
 
@@ -76,5 +76,5 @@ Alcune delle funzioni dichiarate in questa intestazione sono sostituibili. L'imp
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

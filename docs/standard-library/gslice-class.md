@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: bee6fec3e09f7c5758112ba8b0c171a300797f9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159470"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448892"
 ---
 # <a name="gslice-class"></a>Classe gslice
 
@@ -25,13 +25,13 @@ Classe di utilità per valarray usata per definire subset multidimensionali di v
 
 ## <a name="remarks"></a>Note
 
-La classe archivia i parametri che caratterizzano un oggetto di tipo [gslice_array](../standard-library/gslice-array-class.md). Il subset di un oggetto valarray viene costruito indirettamente quando un oggetto di classe gslice appare come argomento per un oggetto di classe [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. I valori archiviati che specificano il subset selezionato da valarray padre includono:
+La classe archivia i parametri che caratterizzano un oggetto di tipo [gslice_array](../standard-library/gslice-array-class.md). Il subset di un oggetto valarray viene costruito indirettamente quando un oggetto di classe gslice appare come argomento per un oggetto di classe [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . I valori archiviati che specificano il subset selezionato da valarray padre includono:
 
 - Indice iniziale.
 
-- Vettore lunghezza di classe `valarray<size_t>`.
+- Vettore di lunghezza della classe `valarray<size_t>`.
 
-- Vettore stride di classe `valarray<size_t>`.
+- Vettore stride della classe `valarray<size_t>`.
 
 I due vettori devono avere la stessa lunghezza.
 
@@ -41,7 +41,7 @@ Le operazioni sui valarray sono consentite solo se i subset di origine e di dest
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-|-|
 |[gslice](#gslice)|Definisce un subset di un `valarray` formato da più sezioni del `valarray`, che iniziano tutte dall'elemento specificato.|
 
@@ -74,22 +74,22 @@ gslice(
 
 ### <a name="parameters"></a>Parametri
 
-*_StartIndex*<br/>
+*_StartIndex*\
 Indice valarray del primo elemento del subset.
 
-*_LenArray*<br/>
+*_LenArray*\
 Matrice che specifica il numero di elementi in ogni sezione.
 
-*_IncArray*<br/>
+*_IncArray*\
 Matrice che specifica lo stride in ogni sezione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il costruttore predefinito archivia zero per l'indice iniziale e vettori di lunghezza zero per i vettori di lunghezza e stride. Il secondo costruttore Archivia *_StartIndex* per l'indice iniziale *_LenArray* per la matrice di lunghezza, e *_IncArray* per la matrice di stride.
+Il costruttore predefinito archivia zero per l'indice iniziale e vettori di lunghezza zero per i vettori di lunghezza e stride. Il secondo costruttore archivia *_StartIndex* per l'indice iniziale, *_LenArray* per la matrice di lunghezza e *_IncArray* per la matrice stride.
 
 ### <a name="remarks"></a>Note
 
-**gslice** definisce un subset di un oggetto valarray costituito da più sezioni di tale oggetto, ognuna delle quali inizia in corrispondenza dello stesso elemento specificato. La possibilità di usare matrici per definire più sezioni costituisce l'unica differenza tra `gslice` e [slice::slice](../standard-library/slice-class.md#slice). La prima sezione contiene un elemento con un indice *_StartIndex*, un numero di elementi specificato dal primo elemento della *_LenArray*e uno stride fornito dal primo elemento della *_IncArray* . Nel successivo set di sezioni ortogonali i primi elementi vengono forniti dalla prima sezione. Il secondo elemento della *_LenArray* specifica il numero di elementi. Lo stride viene fornito per il secondo elemento della *_IncArray*. Una terza dimensione delle sezioni usa gli elementi della matrice bidimensionale come elementi iniziali e procede in modo analogo.
+**gslice** definisce un subset di un oggetto valarray costituito da più sezioni di tale oggetto, ognuna delle quali inizia in corrispondenza dello stesso elemento specificato. La possibilità di usare matrici per definire più sezioni costituisce l'unica differenza tra `gslice` e [slice::slice](../standard-library/slice-class.md#slice). La prima sezione ha un primo elemento con un indice di *_StartIndex*, un numero di elementi specificato dal primo elemento di *_LenArray*e uno stride fornito dal primo elemento di *_IncArray*. Nel successivo set di sezioni ortogonali i primi elementi vengono forniti dalla prima sezione. Il secondo elemento di *_LenArray* specifica il numero di elementi. Lo stride viene fornito dal secondo elemento di *_IncArray*. Una terza dimensione delle sezioni usa gli elementi della matrice bidimensionale come elementi iniziali e procede in modo analogo.
 
 ### <a name="example"></a>Esempio
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

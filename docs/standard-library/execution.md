@@ -1,19 +1,19 @@
 ---
-title: '&lt;Esecuzione&gt;'
+title: '&lt;esecuzione&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 3bce34019f9ed4880d72a9d16c3c8b78dde0e0e3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3b0ccd540c56500c2f265aa6192a12fc2d5078b0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268423"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457973"
 ---
-# <a name="ltexecutiongt"></a>&lt;Esecuzione&gt;
+# <a name="ltexecutiongt"></a>&lt;esecuzione&gt;
 
 Descrive i criteri di esecuzione per gli algoritmi paralleli.
 
@@ -33,19 +33,19 @@ namespace std::execution {
 
 |||
 |-|-|
-|[is_execution_policy Struct](is-execution-policy-struct.md)|Rileva i criteri di esecuzione allo scopo di esclusione di firme di funzione dalla partecipazione risoluzione in caso contrario ambigua dell'overload.|
-|[Classe parallel_policy](parallel-policy-class.md)|Utilizzato come un tipo univoco per risolvere l'ambiguità di overload di un algoritmo parallelo e indicare che l'esecuzione di un algoritmo parallelo possa essere eseguite in parallelo.|
-|[Classe parallel_unsequenced_policy](parallel-unsequenced-policy-class.md)|Utilizzato come un tipo univoco per risolvere l'ambiguità di overload di un algoritmo parallelo e indicare che l'esecuzione di un algoritmo parallelo può essere eseguite in parallelo e vettorizzato.|
-|[Classe sequenced_policy](sequenced-policy-class.md)|Utilizzato come un tipo univoco per risolvere l'ambiguità di overload di un algoritmo parallelo e richiedono che l'esecuzione di un algoritmo parallelo potrebbe non essere eseguite in parallelo.|
+|[Struct is_execution_policy](is-execution-policy-struct.md)|Rileva i criteri di esecuzione allo scopo di escludere le firme di funzione dalla partecipazione alla risoluzione dell'overload altrimenti ambigua.|
+|[Classe parallel_policy](parallel-policy-class.md)|Utilizzato come tipo univoco per distinguere l'overload dell'algoritmo parallelo e indicare che l'esecuzione di un algoritmo parallelo può essere parallela.|
+|[Classe parallel_unsequenced_policy](parallel-unsequenced-policy-class.md)|Usato come tipo univoco per risolvere l'ambiguità dell'overload degli algoritmi paralleli e indicare che l'esecuzione di un algoritmo parallelo può essere parallela e vettoriale.|
+|[Classe sequenced_policy](sequenced-policy-class.md)|Utilizzato come tipo univoco per risolvere l'ambiguità dell'overload degli algoritmi paralleli e richiedere che l'esecuzione di un algoritmo parallelo non venga parallela.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<esecuzione >
+**Intestazione:** \<> di esecuzione
 
 **Spazio dei nomi:** stdext
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
 [Riferimento per la libreria standard C++](cpp-standard-library-reference.md)

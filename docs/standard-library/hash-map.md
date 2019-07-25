@@ -6,17 +6,17 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: 5a7ea891a314d69b8bc3378edce9fa0de2d89ace
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cca38386892ce4df6bf9863e0cbac3dc16106d35
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159496"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448658"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> Questa intestazione è obsoleta. L'alternativa consiste [ \<unordered_map >](unordered-map.md).
+> Questa intestazione è obsoleta. L'alternativa è [ \<unordered_map >](unordered-map.md).
 
 Definisce le classi del modello del contenitore hash_map e hash_multimap e i relativi modelli di supporto.
 
@@ -41,9 +41,9 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 
 ### <a name="classes"></a>Classi
 
-|Classe|Descrizione|
+|Classe|DESCRIZIONE|
 |-|-|
-|[Classe hash_compare](hash-compare-class.md)|Descrive un oggetto che può essere utilizzato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come valore predefinito `Traits` oggetto parametro da ordinamento e l'hashing degli elementi contenuti.|
+|[Classe hash_compare](hash-compare-class.md)|Descrive un oggetto che può essere usato da uno qualsiasi dei contenitori associativi hash, hash_map, hash_multimap, hash_set o hash_multiset, come oggetto di parametro `Traits` predefinito per ordinare ed eseguire l'hashing degli elementi in essi contenuti.|
 |[Classe value_compare](value-compare-class.md)|Fornisce un oggetto funzione in grado di confrontare gli elementi di un oggetto hash_map comparando i valori delle chiavi per determinarne l'ordine relativo nell'oggetto hash_map.|
 |[Classe hash_map](hash-map-class.md)|Usata per archiviare e recuperare rapidamente i dati da una raccolta in cui ogni elemento è una coppia che ha una chiave di ordinamento con valore univoco e un valore di dati associato.|
 |[Classe hash_multimap](hash-multimap-class.md)|Usata per archiviare e recuperare rapidamente i dati da una raccolta in cui ogni elemento è una coppia con una chiave di ordinamento il cui valore non deve essere univoco e un valore di dati associato.|
@@ -56,6 +56,6 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Riferimento file di intestazione](cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
 [Riferimento per la libreria standard C++](cpp-standard-library-reference.md)

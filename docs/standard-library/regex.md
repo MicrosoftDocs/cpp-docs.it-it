@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 0a4728008130119ed9a01334efb2fea2a4ac0639
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e3f3b49b3672042e0376e7738a8cf8924e1c2a8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368981"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451440"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -27,9 +27,9 @@ Definisce una classe di modello per analizzare [espressioni regolari di C++](../
 
 Per creare un oggetto di espressione regolare, usare la classe modello [classe basic_regex](../standard-library/basic-regex-class.md) o una delle relative specializzazioni, [regex](../standard-library/regex-typedefs.md#regex) e [wregex](../standard-library/regex-typedefs.md#wregex), in combinazione con i contrassegni di sintassi di tipo [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
 
-Per cercare testo corrispondente a un oggetto di espressione regolare, usare le funzioni di modello [regex_match](../standard-library/regex-functions.md#regex_match) e [regex_search](../standard-library/regex-functions.md#regex_search), in combinazione con i contrassegni di corrispondenza di tipo [regex_constants::match_ flag_type](../standard-library/regex-constants-class.md#match_flag_type). Queste funzioni restituiscono risultati usando la classe modello [classe match_results](../standard-library/match-results-class.md) e le relative specializzazioni, [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch) e [wsmatch](../standard-library/regex-typedefs.md#wsmatch), in combinazione con la classe modello [classe sub_match](../standard-library/sub-match-class.md) e alle relative specializzazioni, [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_match](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match) e [wssub_match](../standard-library/regex-typedefs.md#wssub_match).
+Per eseguire la ricerca di corrispondenze a un oggetto di espressione regolare, usare le funzioni modello [regex_match](../standard-library/regex-functions.md#regex_match) e [regex_search](../standard-library/regex-functions.md#regex_search), insieme ai flag di corrispondenza di tipo [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type). Queste funzioni restituiscono risultati usando la classe modello [classe match_results](../standard-library/match-results-class.md) e le relative specializzazioni, [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch) e [wsmatch](../standard-library/regex-typedefs.md#wsmatch), in combinazione con la classe modello [classe sub_match](../standard-library/sub-match-class.md) e alle relative specializzazioni, [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_match](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match) e [wssub_match](../standard-library/regex-typedefs.md#wssub_match).
 
-Per sostituire testo corrispondente a un oggetto di espressione regolare, usare la funzione modello [regex_replace](../standard-library/regex-functions.md#regex_replace), in combinazione con i contrassegni di corrispondenza di tipo [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
+Per sostituire il testo che corrisponde a un oggetto di espressione regolare, usare la funzione di modello [regex_replace](../standard-library/regex-functions.md#regex_replace), insieme ai flag di corrispondenza di tipo [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
 Per eseguire l'iterazione attraverso più corrispondenze di un oggetto espressione regolare, usare le classi modello [classe regex_iterator](../standard-library/regex-iterator-class.md) e [classe regex_token_iterator](../standard-library/regex-token-iterator-class.md) oppure una delle relative specializzazioni, [cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), [wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator), [cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator), [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator) o [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator), in combinazione con i contrassegni di corrispondenza di tipo [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
@@ -54,11 +54,11 @@ Per modificare i dettagli della grammatica delle espressioni regolari, scrivere 
 
 |||
 |-|-|
-|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Definizione dei tipi per **char** `match_results`.|
-|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Definizione dei tipi per **char** `regex_iterator`.|
-|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Definizione dei tipi per **char** `regex_token_iterator`.|
-|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Definizione dei tipi per **char** `sub_match`.|
-|[regex](../standard-library/regex-typedefs.md#regex)|Definizione dei tipi per **char** `basic_regex`.|
+|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Definizione del tipo per **char** `match_results`.|
+|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Definizione del tipo per **char** `regex_iterator`.|
+|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Definizione del tipo per **char** `regex_token_iterator`.|
+|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Definizione del tipo per **char** `sub_match`.|
+|[regex](../standard-library/regex-typedefs.md#regex)|Definizione del tipo per **char** `basic_regex`.|
 |[smatch](../standard-library/regex-typedefs.md#smatch)|Definizione dei tipi per `string``match_results`.|
 |[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|Definizione dei tipi per `string``regex_iterator`.|
 |[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|Definizione dei tipi per `string``regex_token_iterator`.|
@@ -84,7 +84,7 @@ Per modificare i dettagli della grammatica delle espressioni regolari, scrivere 
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|Descrizione|
 |-|-|
 |[operator==](../standard-library/regex-operators.md#op_eq_eq)|Confronto tra vari oggetti, uguali.|
 |[operator!=](../standard-library/regex-operators.md#op_neq)|Confronto tra vari oggetti, non uguali.|
@@ -96,12 +96,12 @@ Per modificare i dettagli della grammatica delle espressioni regolari, scrivere 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Espressioni regolari (C++)](../standard-library/regular-expressions-cpp.md)<br/>
-[Classe regex_constants](../standard-library/regex-constants-class.md)<br/>
-[Classe regex_error](../standard-library/regex-error-class.md)<br/>
-[Funzioni \<regex>](../standard-library/regex-functions.md)<br/>
-[Classe regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[Operatori \<regex>](../standard-library/regex-operators.md)<br/>
-[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
-[Classe regex_traits](../standard-library/regex-traits-class.md)<br/>
-[Typedef \<regex>](../standard-library/regex-typedefs.md)<br/>
+[Espressioni regolari (C++)](../standard-library/regular-expressions-cpp.md)\
+[Classe regex_constants](../standard-library/regex-constants-class.md)\
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[\<funzioni > Regex](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<operatori > Regex](../standard-library/regex-operators.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[Typedef \<regex>](../standard-library/regex-typedefs.md)

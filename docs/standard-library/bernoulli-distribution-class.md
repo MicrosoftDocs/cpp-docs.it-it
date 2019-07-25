@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: faadc99b6351af884331e6658e1e11de8def2195
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450869"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447778"
 ---
 # <a name="bernoullidistribution-class"></a>Classe bernoulli_distribution
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*URNG*<br/>
-L'uniform generatore motore di numeri casuali. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*GENERATORE URNG*\
+Motore di generazione di numeri casuali uniformi. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
-La classe descrive una distribuzione che produce valori di tipo **bool**, distribuiti in base alla funzione di probabilità discreta di Bernoulli. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
+La classe descrive una distribuzione che produce valori di tipo **bool**, distribuiti in base alla funzione di probabilità discreta della distribuzione di Bernoulli. La tabella seguente include collegamenti ad articoli relativi ai singoli membri.
 
 ||||
 |-|-|-|
@@ -169,10 +169,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*p*<br/>
+*p*\
 Parametro di distribuzione `p` archiviato.
 
-*parm*<br/>
+*parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
@@ -187,13 +187,13 @@ Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializ
 
 Contiene i parametri della distribuzione.
 
-struct param_type {typedef bernoulli_distribution distribution_type; param_type (doppio p = 0,5); doppio p() const.
+struct param_type {typedef bernoulli_distribution distribution_type; param_type (Double p = 0,5); Double p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Parametri
 
-*p*<br/>
+*p*\
 Parametro di distribuzione `p` archiviato.
 
 ### <a name="remarks"></a>Note
@@ -204,4 +204,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

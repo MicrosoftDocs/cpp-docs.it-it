@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 43a4211d9841e754cefbe1bdf405001f0f4657d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383646"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456647"
 ---
 # <a name="isclass-class"></a>Classe is_class
 
@@ -27,12 +27,12 @@ struct is_class;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo definito come una **classe** o un **struct**, oppure un `cv-qualified` forma di uno di essi, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo definito come una **classe** o uno **struct**oppure `cv-qualified` un form di uno di essi; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -71,6 +71,6 @@ is_class<int> == false
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_compound](../standard-library/is-compound-class.md)<br/>
-[Classe is_union](../standard-library/is-union-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_compound](../standard-library/is-compound-class.md)\
+[Classe is_union](../standard-library/is-union-class.md)

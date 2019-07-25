@@ -2,12 +2,12 @@
 title: '&lt;cinttypes&gt;'
 ms.date: 11/04/2016
 ms.assetid: 18eb738c-aa74-4ed3-9cdd-049ef4c64b80
-ms.openlocfilehash: ce0da1dd1454c3216d7a4f012f00f3af3cb89daa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be2bb16b21c7ea42211d2e04068cb1a32f5beaf4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279112"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459356"
 ---
 # <a name="ltcinttypesgt"></a>&lt;cinttypes&gt;
 
@@ -25,7 +25,7 @@ L'inclusione di questa intestazione garantisce che i nomi dichiarati usando il c
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<cstdint>](../standard-library/cstdint.md)<br/>
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<cstdint >](../standard-library/cstdint.md)\
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

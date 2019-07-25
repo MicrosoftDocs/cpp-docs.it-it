@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
-ms.openlocfilehash: f22aec854b9a1d9b7b8360cacbb08760413fa22e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 707d35123797b84b2b7cef1d1cfd9005e4becb1c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412514"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447534"
 ---
 # <a name="ltsstreamgt-functions"></a>Funzioni &lt;sstream&gt;
 
@@ -56,4 +56,4 @@ La funzione modello esegue `left.swap(right)`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<sstream>](../standard-library/sstream.md)<br/>
+[\<sstream>](../standard-library/sstream.md)

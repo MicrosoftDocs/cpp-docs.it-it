@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 9994456a1345276af426bddd883fa7c53d7b93d0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 6eb8db25f5f30a978de197d699acf28bf8bea116
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220289"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447969"
 ---
 # <a name="operatorgt"></a>operator&gt;=
 
 > [!NOTE]
-> In questo argomento è in Microsoft C++ come esempio non funzionale dei contenitori usati nella documentazione di C++ della libreria Standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
+> Questo argomento è disponibile nella documentazione C++ di Microsoft come esempio non funzionale dei contenitori usati nella libreria C++ standard. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).
 
 Esegue l'overload di **operator>=** per confrontare due oggetti della classe modello [Container](../standard-library/sample-container-class.md).
 
@@ -42,4 +42,4 @@ Restituisce `!(left < right)`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

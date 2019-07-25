@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - input stream objects
 ms.assetid: ab94866e-6ffe-4f15-b4db-0bd23e636075
-ms.openlocfilehash: 89d681f1a092957bc966d2ec788a0f9aa2261ada
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c000a9e927169ef710554372217ba15089ee11b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211988"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457300"
 ---
 # <a name="constructing-input-stream-objects"></a>Costruzione di oggetti di flusso di input
 
@@ -23,7 +23,7 @@ Se si usa solo l'oggetto `cin`, non è necessario costruire un flusso di input. 
 
 Sono due i metodi disponibili per creare un flusso di file di input:
 
-- Usare la **void** costruttore ad argomento, quindi chiamare il `open` funzione membro:
+- Usare il costruttore di argomento **void** , quindi chiamare `open` la funzione membro:
 
    ```cpp
    ifstream myFile; // On the stack
@@ -55,4 +55,4 @@ myString>> amt; // amt contains 123.45
 
 ## <a name="see-also"></a>Vedere anche
 
-[Flussi di input](../standard-library/input-streams.md)<br/>
+[Flussi di input](../standard-library/input-streams.md)

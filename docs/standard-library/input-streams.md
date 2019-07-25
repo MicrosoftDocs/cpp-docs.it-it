@@ -7,12 +7,12 @@ helpviewer_keywords:
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-ms.openlocfilehash: 0f56f5ffc8e61c0881eddbbd65e1c431b9219674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dc3fa0af76f73897fe1181d944eb34c8d05bc64
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404923"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449332"
 ---
 # <a name="input-streams"></a>Flussi di input
 
@@ -40,4 +40,4 @@ Analogamente alla funzione di libreria `sscanf_s`, la classe `istringstream` sup
 
 ## <a name="see-also"></a>Vedere anche
 
-[Programmazione iostream](../standard-library/iostream-programming.md)<br/>
+[Programmazione iostream](../standard-library/iostream-programming.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352112"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449693"
 ---
 # <a name="cachefreelist-class"></a>Classe cache_freelist
 
@@ -30,16 +30,16 @@ class cache_freelist
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*Sz*|Numero di elementi della matrice da allocare.|
 |*Max*|La classe max che rappresenta la dimensione massima dell'elenco di disponibilità. Può essere [max_none](../standard-library/max-fixed-size-class.md), [max_unbounded](../standard-library/max-none-class.md), [max_fixed_size](../standard-library/max-unbounded-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Note
 
-La classe di modello cache_freelist gestisce un elenco di disponibilità di blocchi di memoria delle dimensioni *Sz*. Quando l'elenco di disponibilità è pieno Usa **operatore delete** per deallocare memoria blocca. Quando l'elenco di disponibilità è vuoto Usa **operatore new** allocare nuovi blocchi di memoria. La dimensione massima dell'elenco di disponibilità è determinata dalla classe max passata nel *Max* parametro.
+La classe modello cache_freelist gestisce un elenco gratuito dei blocchi di memoria di dimensioni *SZ*. Quando l'elenco di disponibilità è pieno, USA **operator delete** per deallocare i blocchi di memoria. Quando l'elenco di disponibilità è vuoto, USA **operator new** per allocare nuovi blocchi di memoria. La dimensione massima dell'elenco di disponibilità è determinata dalla classe max passata nel parametro *Max* .
 
-Ogni blocco di memoria contiene *Sz* byte di memoria utilizzabile e i dati che **operatore new** e **operatore delete** richiedono.
+Ogni blocco di memoria include *SZ* byte di memoria utilizzabile e i dati necessari per **operator new** e **operator delete** .
 
 ### <a name="constructors"></a>Costruttori
 
@@ -109,4 +109,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

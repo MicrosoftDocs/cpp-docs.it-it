@@ -48,12 +48,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c46eb2b9bea30bf37800b33ce0dcf44c0d807f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376601"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456719"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,7 +68,7 @@ Definisce le classi e le classi di modello da usare per creare tipi che supporta
 ## <a name="remarks"></a>Note
 
 > [!NOTE]
-> Nel codice compilato usando **/clr**, questa intestazione è bloccata.
+> Nel codice compilato utilizzando **/CLR**, questa intestazione è bloccata.
 
 Un'operazione atomica ha due proprietà chiave che consentono di usare più thread per gestire correttamente un oggetto senza usare blocchi mutex.
 
@@ -78,9 +78,9 @@ Un'operazione atomica ha due proprietà chiave che consentono di usare più thre
 
 In alcune piattaforme, potrebbe non essere possibile implementare in modo efficiente operazioni atomiche per alcuni tipi senza usare blocchi `mutex`. Un tipo atomico è *senza blocco* se nessuna operazione atomica su tale tipo usa i blocchi.
 
-**C++11**: Nei gestori di segnale è possibile eseguire operazioni atomiche su un oggetto `obj` se `obj.is_lock_free()` o `atomic_is_lock_free(x)` sono true.
+**C++11**: Nei gestori di segnale è possibile eseguire operazioni atomiche su un oggetto `obj` se `obj.is_lock_free()` o `atomic_is_lock_free(x)` è true.
 
-La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornisce un tipo atomico minimo che contiene un **bool** flag. Le operazioni sono sempre senza blocco.
+La classe [atomic_flag](../standard-library/atomic-flag-structure.md) fornisce un tipo atomico minimo che contiene un flag **bool** . Le operazioni sono sempre senza blocco.
 
 La classe di modello `atomic<T>` archivia un oggetto del tipo di argomento `T` e fornisce l'accesso atomico a tale valore archiviato. È possibile crearne un'istanza usando qualsiasi tipo che può essere copiato tramite [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) e testato per verificarne l'uguaglianza tramite [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). In particolare, è possibile usare la classe con tipi definiti dall'utente che soddisfano tali requisiti e, in molti casi, con tipi a virgola mobile.
 
@@ -101,7 +101,7 @@ Per ogni tipo integrale esiste un tipo atomico denominato corrispondente che ges
 |Tipo `atomic_integral`|Tipo integrale|`atomic_is_lock_free` Macro|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**char con segno**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**signed char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
 |`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
@@ -113,7 +113,7 @@ Per ogni tipo integrale esiste un tipo atomico denominato corrispondente che ges
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**long long senza segno**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**Long Long senza segno**|ATOMIC_LLONG_LOCK_FREE|
 
 I nomi di typedef esistono per specializzazioni del modello atomico per alcuni dei tipi definiti nell'intestazione \<inttypes.h>.
 
@@ -152,14 +152,14 @@ I nomi di typedef esistono per specializzazioni del modello atomico per alcuni d
 
 ## <a name="structs"></a>Struct
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[Struttura atomic](../standard-library/atomic-structure.md)|Descrive un oggetto che esegue operazioni atomiche su un valore archiviato.|
-|[Struttura atomic_flag](../standard-library/atomic-flag-structure.md)|Descrive un oggetto che imposta e rimuove atomicamente un **bool** flag.|
+|[Struttura atomic_flag](../standard-library/atomic-flag-structure.md)|Descrive un oggetto che imposta e cancella atomicamente un flag **bool** .|
 
 ## <a name="enums"></a>Enumerazioni
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
 |[Enumerazione memory_order](../standard-library/atomic-enums.md#memory_order_enum)|Fornisce nomi simbolici per le operazioni di sincronizzazione sulle posizioni di memoria. Queste operazioni influiscono sul modo in cui gli assegnamenti in un thread diventano visibili in un altro.|
 
@@ -167,7 +167,7 @@ I nomi di typedef esistono per specializzazioni del modello atomico per alcuni d
 
 Nell'elenco seguente le funzioni che non terminano con `_explicit` hanno la semantica del `_explicit` corrispondente, ad eccezione del fatto che hanno gli argomenti [memory_order](../standard-library/atomic-enums.md#memory_order_enum) impliciti di `memory_order_seq_cst`.
 
-|Nome|Descrizione|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Esegue un'operazione di *confronto e scambio atomico*.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Esegue un'operazione di *confronto e scambio atomico*.|
@@ -185,10 +185,10 @@ Nell'elenco seguente le funzioni che non terminano con `_explicit` hanno la sema
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Sottrae un valore specificato da un valore archiviato esistente.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Esegue un `exclusive or` bit per bit in un valore specificato e un valore archiviato esistente.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Imposta il flag in un' `atomic_flag` obiettare **false**.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Imposta il flag in un' `atomic_flag` obiettare **false**.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Imposta il flag in un' `atomic_flag` obiettare **true**.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Imposta il flag in un' `atomic_flag` obiettare **true**.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Imposta il flag in un `atomic_flag` oggetto su **false**.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Imposta il flag in un `atomic_flag` oggetto su **false**.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Imposta il flag in un `atomic_flag` oggetto su **true**.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Imposta il flag in un `atomic_flag` oggetto su **true**.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Imposta il valore archiviato in un oggetto `atomic`.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Specifica se le operazioni atomiche in un oggetto specificato sono senza blocco.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Recupera un valore in modo atomico.|
@@ -201,5 +201,5 @@ Nell'elenco seguente le funzioni che non terminano con `_explicit` hanno la sema
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

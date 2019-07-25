@@ -5,12 +5,12 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: ba84f476c712f64e7782f0ea476bbb65a35dc14a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405053"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448723"
 ---
 # <a name="lthashmapgt-operators"></a>Operatori &lt;hash_map&gt;
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Oggetto di tipo `hash_map`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `hash_map`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -46,7 +46,7 @@ Oggetto di tipo `hash_map`.
 
 Il confronto tra gli oggetti hash_map si basa su un confronto a coppie dei rispettivi elementi. Due oggetti hash_map sono uguali se hanno lo stesso numero di elementi e se i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.
 
-I membri del [< hash_map >](hash-map.md) e [< hash_set >](hash-set.md) file di intestazione nel [ stdext Namespace](stdext-namespace.md).
+I membri del [< hash_map >](hash-map.md) e [< hash_set >](hash-set.md) file di intestazione nello [spazio dei nomi stdext](stdext-namespace.md).
 
 ### <a name="example"></a>Esempio
 
@@ -101,10 +101,10 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Oggetto di tipo `hash_map`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `hash_map`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -168,10 +168,10 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Oggetto di tipo `hash_multimap`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -235,10 +235,10 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Oggetto di tipo `hash_multimap`.
 
-*right*<br/>
+*Ok*\
 Oggetto di tipo `hash_multimap`.
 
 ### <a name="return-value"></a>Valore restituito
@@ -291,4 +291,4 @@ The hash_multimaps hm1 and hm3 are equal.
 
 ## <a name="see-also"></a>Vedere anche
 
-[<hash_map>](hash-map.md)<br/>
+[<hash_map>](hash-map.md)

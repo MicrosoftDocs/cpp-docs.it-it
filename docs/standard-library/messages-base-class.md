@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_base class
 ms.assetid: 9aad38c6-4c13-445d-b096-364bd0836efb
-ms.openlocfilehash: 750c9f36ce7f96a065e0e29111ea379a48595328
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79b6cb5f0b0c219e959f53fdc667f4c8af273cef
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167764"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451845"
 ---
 # <a name="messagesbase-class"></a>Classe messages_base
 
-La classe base descrive un **int** tipo per il catalogo dei messaggi.
+La classe base descrive un tipo **int** per il catalogo dei messaggi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,7 +28,7 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>Note
 
-Il catalogo di tipo è sinonimo di tipo **int** che descrive i possibili valori restituiti da messages:: [do_open](../standard-library/messages-class.md#do_open).
+Il catalogo dei tipi è un sinonimo del tipo **int** che descrive i possibili valori restituiti da messages:: [do_open](../standard-library/messages-class.md#do_open).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -38,4 +38,4 @@ Il catalogo di tipo è sinonimo di tipo **int** che descrive i possibili valori 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

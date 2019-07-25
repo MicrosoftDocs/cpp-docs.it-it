@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224103"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455616"
 ---
 # <a name="iterator-struct"></a>Struct iterator
 
-Struct di base vuoto utilizzato per garantire che una classe iterator definita dall'utente funziona correttamente con `iterator_trait`s.
+Struttura di base vuota utilizzata per garantire che una classe iteratore definita dall'utente funzioni correttamente `iterator_trait`con i.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,7 +47,7 @@ La struct modello viene usata come tipo di base per tutti gli iteratori. Definis
 
 - `reference` (sinonimo del parametro modello `Reference`)
 
-Si noti che `value_type` non deve essere un tipo costante anche se `pointer` punta a un oggetto del **const** `Type` e definisce come un oggetto di riferimento **const** `Type`.
+Si noti `value_type` che non deve essere un tipo costante anche `pointer` se punta a un oggetto  `Type` di const e riferimento designa un oggetto  `Type`di const.
 
 ## <a name="example"></a>Esempio
 
@@ -61,6 +61,6 @@ Per un esempio di come dichiarare e usare i tipi nella classe iterator di base, 
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

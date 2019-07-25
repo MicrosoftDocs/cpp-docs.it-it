@@ -7,16 +7,16 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243528"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455041"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-Definisce modelli per le costanti in fase di compilazione che offrono informazioni sulle proprietà dei rispettivi argomenti tipo o producono tipi trasformati.
+Definisce i modelli per le costanti in fase di compilazione che forniscono informazioni sulle proprietà dei rispettivi argomenti di tipo o producono tipi trasformati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,22 +26,22 @@ Definisce modelli per le costanti in fase di compilazione che offrono informazio
 
 ## <a name="remarks"></a>Note
 
-Le classi e i modelli in \<type_traits > vengono usate per supportare l'inferenza del tipo, classificazione e la trasformazione in fase di compilazione. Vengono inoltre utilizzati per rilevare gli errori relativi ai tipi e che consentono di ottimizzare il codice generico. Tratti di tipo unario descrivono una proprietà di un tipo, tratti di tipo binario descrivono una relazione tra i tipi e tratti di trasformazione modificano una proprietà di un tipo.
+Le classi e i modelli \<in type_traits > vengono usati per supportare l'inferenza del tipo, la classificazione e la trasformazione in fase di compilazione. Vengono inoltre usati per rilevare gli errori correlati ai tipi e per semplificare l'ottimizzazione del codice generico. I tratti di tipo unario descrivono una proprietà di un tipo, i tratti di tipo binario descrivono una relazione tra tipi e i tratti di trasformazione modificano una proprietà di un tipo.
 
-La classe helper `integral_constant` e relative specializzazioni del modello `true_type` e `false_type` formano le classi di base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo *resti valido*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo *contenga false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type).
+La classe `integral_constant` helper e le `true_type` specializzazioni del modello e `false_type` formano le classi base per i predicati di tipo. Un *predicato di tipo* è un modello che accetta uno o più argomenti di tipo. Quando un predicato di tipo *include true*, è derivato pubblicamente, in modo diretto o indiretto, da [true_type](../standard-library/type-traits-typedefs.md#true_type). Quando un predicato di tipo *include false*, è derivato pubblicamente, in modo diretto o indiretto, da [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Un *modificatore di tipo* o *tratto di trasformazione* è un modello che accetta uno o più argomenti di modello e include un membro, `type`, che è sinonimo di tipo modificato.
 
 ### <a name="alias-templates"></a>Modelli di alias
 
-Per semplificare le espressioni dei tratti, digitare [modelli di alias](../cpp/aliases-and-typedefs-cpp.md) per `typename some_trait<T>::type` vengono fornite, in cui *some_trait* è il nome della classe modello. Ad esempio, [add_const](../standard-library/add-const-class.md) include il modello di alias per il rispettivo tipo `add_const_t`, definito come:
+Per semplificare le espressioni di tratti di tipo, vengono `typename some_trait<T>::type` forniti i [modelli di alias](../cpp/aliases-and-typedefs-cpp.md) per, dove *some_trait* è il nome della classe modello. Ad esempio, [add_const](../standard-library/add-const-class.md) include il modello di alias per il rispettivo tipo `add_const_t`, definito come:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Questi sono gli alias forniti per il `type` membri:
+Questi sono gli alias forniti per i `type` membri:
 
 ||||
 |-|-|-|
@@ -143,10 +143,10 @@ Proprietà dei tipi
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Verifica se il tipo è distruttibile e se il distruttore è noto come elemento che non genera eccezioni.|
 |`has_virtual_destructor`|Verifica se il tipo ha un distruttore virtuale.|
 |`has_unique_object_representations`||
-| [is_invocable](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando tipi di argomenti specificati.<br/> Aggiunta di c++17. |
-| [is_invocable_r](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato mediante i tipi di argomento specificati e il risultato è convertibile nel tipo specificato.<br/> Aggiunta di c++17. |
-| [is_nothrow_invocable](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando l'argomento specificato di tipi ed è noto per non generare eccezioni.<br/> Aggiunta di c++17. |
-| [is_nothrow_invocable_r](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando i tipi di argomento specificato ed è noto per non generare eccezioni e il risultato è convertibile nel tipo specificato.<br/> Aggiunta di c++17. |
+| [is_invocable](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato utilizzando i tipi di argomento specificati.<br/> Aggiunto in C++ 17. |
+| [is_invocable_r](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando i tipi di argomento specificati e il risultato è convertibile nel tipo specificato.<br/> Aggiunto in C++ 17. |
+| [is_nothrow_invocable](is-invocable-classes.md) | Verifica se un tipo richiamabile può essere richiamato utilizzando i tipi di argomento specificati ed è noto come non generare eccezioni.<br/> Aggiunto in C++ 17. |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | Verifica se un tipo chiamabile può essere richiamato usando i tipi di argomento specificati e se è noto che non genera eccezioni e il risultato è convertibile nel tipo specificato.<br/> Aggiunto in C++ 17. |
 
 Query sulle proprietà del tipo
 
@@ -168,9 +168,9 @@ Modifiche costante-volatile
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|Genera una **const** tipo dal tipo.|
-|[add_volatile](../standard-library/add-volatile-class.md)|Genera una **volatile** tipo dal tipo.|
-|[add_cv](../standard-library/add-cv-class.md)|Genera una **const volatile** tipo dal tipo.|
+|[add_const](../standard-library/add-const-class.md)|Produce un  tipo const dal tipo.|
+|[add_volatile](../standard-library/add-volatile-class.md)|Produce un tipo **volatile** dal tipo.|
+|[add_cv](../standard-library/add-cv-class.md)|Produce un tipo **const volatile** dal tipo.|
 |[remove_const](../standard-library/remove-const-class.md)|Genera un tipo non costante dal tipo.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|Genera un tipo non volatile dal tipo.|
 |[remove_cv](../standard-library/remove-cv-class.md)|Genera un tipo non costante non volatile dal tipo.|
@@ -214,18 +214,18 @@ Altre trasformazioni
 |[conditional](../standard-library/conditional-class.md)|Se la condizione è true, genera il primo tipo specificato, altrimenti genera il secondo.|
 |[decay](../standard-library/decay-class.md)|Genera il tipo come passato da valore. Crea un tipo di non riferimento, non constante o non volatile oppure crea un puntatore al tipo.|
 |[enable_if](../standard-library/enable-if-class.md)|Se la condizione è true, genera il primo tipo specificato, altrimenti non genera alcun tipo.|
-|[invoke_result](invoke-result-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. <br/>Aggiunta di c++17. |
-|[result_of](../standard-library/result-of-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. <br/>Aggiunto in c++14, deprecata in c++17. |
+|[invoke_result](invoke-result-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. <br/>Aggiunto in C++ 17. |
+|[result_of](../standard-library/result-of-class.md)|Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati. <br/>Aggiunto in C++ 14, deprecato in C++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Genera il tipo integrale sottostante per un tipo di enumerazione.|
 
-Tratti di operatore logico
+Tratti dell'operatore logico
 
 |||
 |-|-|
-|[combinazione](../standard-library/conjunction-class.md)||
+|[insieme](../standard-library/conjunction-class.md)||
 |[disgiunzione](../standard-library/disjunction-class.md)||
-|[Negazione](../standard-library/negation-class.md)||
+|[negazione](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<functional>](../standard-library/functional.md)<br/>
+[\<functional>](../standard-library/functional.md)

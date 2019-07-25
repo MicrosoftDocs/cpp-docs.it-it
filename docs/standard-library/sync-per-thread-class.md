@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 3cb1946ee68642065488cfd13c146abab818ec60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a08aa13aa46d5181e7c874b132b2bcbd5ec26dee
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412319"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450257"
 ---
 # <a name="syncperthread-class"></a>Classe sync_per_thread
 
@@ -42,7 +42,7 @@ Gli allocatori che usano `sync_per_thread` possono risultare uguali anche se i b
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[allocate](#allocate)|Alloca un blocco di memoria.|
 |[deallocate](#deallocate)|Libera un numero specificato di oggetti dall'archiviazione iniziando da una posizione specificata.|
@@ -82,7 +82,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*ptr*|Puntatore al primo oggetto da deallocare dall'archivio.|
 |*count*|Numero di oggetti da deallocare dall'archivio.|
@@ -108,10 +108,10 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**false** se non è stato allocato alcun oggetto cache per questo oggetto o per *altri* nel thread corrente. In caso contrario, restituisce il risultato dell'applicazione di `operator==` ai due oggetti cache.
+**false** se non è stato allocato alcun oggetto cache per questo oggetto o per un *altro* oggetto nel thread corrente. In caso contrario, restituisce il risultato dell'applicazione di `operator==` ai due oggetti cache.
 
 ### <a name="remarks"></a>Note
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

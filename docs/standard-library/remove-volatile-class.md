@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_volatile class
 - remove_volatile
 ms.assetid: 8b87e2c2-a581-4eb3-8691-c5603910d61d
-ms.openlocfilehash: b327bb8362e1f6523d22950974012747e0de99f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19514d1839fa6e0afcecb690dcb12657a85f3c2e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185932"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451269"
 ---
 # <a name="removevolatile-class"></a>Classe remove_volatile
 
@@ -30,12 +30,12 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo da modificare.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza di `remove_volatile<T>` contiene un tipo modificato che è `T1` quando *T* è nel formato `volatile T1`; in caso contrario *T*.
+Un'istanza di `remove_volatile<T>` include un tipo modificato che è `T1` quando *T* è nel formato `volatile T1`; in caso contrario, *t*.
 
 ## <a name="example"></a>Esempio
 
@@ -67,5 +67,5 @@ remove_volatile_t<volatile int> == int
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe add_volatile](../standard-library/add-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe add_volatile](../standard-library/add-volatile-class.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: c368e99eb9f128963e90cdc1d39bdb9d4569efe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72ed21d3a0fb519bca2e19b7fbface05d5ac64ce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412241"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450255"
 ---
 # <a name="syncshared-class"></a>Classe sync_shared
 
@@ -60,7 +60,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*count*|Numero di elementi della matrice da allocare.|
 
@@ -108,10 +108,10 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il risultato del `cache.equals(Other.cache)`, dove `cache` rappresenta l'oggetto della cache, viene **true**; in caso contrario, **false**.
+**true** se il risultato di `cache.equals(Other.cache)`, dove `cache` rappresenta l'oggetto cache, è **true**. in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

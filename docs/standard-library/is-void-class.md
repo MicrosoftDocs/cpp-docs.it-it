@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_void class
 - is_void
 ms.assetid: 99b0de3b-1b38-4949-b053-080e5363174e
-ms.openlocfilehash: 7ceecfd4751d3c86e26f9a6911776de92c9471f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28c162f6a868c8d6640ba17af875d84fef78c79a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413346"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458865"
 ---
 # <a name="isvoid-class"></a>Classe is_void
 
@@ -27,12 +27,12 @@ struct is_void;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* viene **void** o un form qualificato cv di **void**, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *T* è **void** o un form qualificato CV di **void**; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -74,4 +74,4 @@ is_void<void> == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

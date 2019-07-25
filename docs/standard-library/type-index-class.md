@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - type_index class
 ms.assetid: db366119-74cb-43e8-aacf-9679e561fa2f
-ms.openlocfilehash: 8807a041ab1c6ef47a9c3c12dac2688f121f6cfa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b30c9719957b9ffc5f3ce17692eb90c1b266ae0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278962"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447046"
 ---
 # <a name="typeindex-class"></a>Classe type_index
 
@@ -39,5 +39,5 @@ Il costruttore inizializza un oggetto `ptr` con `&tinfo`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Informazioni sui tipi di runtime](../cpp/run-time-type-information.md)<br/>
-[\<typeindex>](../standard-library/typeindex.md)<br/>
+[Informazioni sui tipi di runtime](../cpp/run-time-type-information.md)\
+[\<typeindex>](../standard-library/typeindex.md)

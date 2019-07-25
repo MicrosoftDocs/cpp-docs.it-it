@@ -45,18 +45,18 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd72550bc8658158b399e88573526269202f8f4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412566"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450431"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
-Il &lt;shared_mutex > intestazione fornisce le primitive di sincronizzazione per la protezione dei dati condivise che sono accessibili da più thread. Oltre a fornire il controllo di accesso esclusivo, le classi mutex consentono anche la proprietà condivisa da più thread per l'accesso non esclusivo. I mutex condivisi consentono di controllare le risorse che possono essere lette da più thread, ma devono essere scritte esclusivamente da un unico thread, senza causare una race condition.
+L' &lt;intestazione shared_mutex > fornisce primitive di sincronizzazione per la protezione dei dati condivisi a cui è possibile accedere da più thread. Oltre a fornire il controllo di accesso esclusivo, le classi mutex consentono anche la proprietà condivisa da più thread per l'accesso non esclusivo. I mutex condivisi consentono di controllare le risorse che possono essere lette da più thread, ma devono essere scritte esclusivamente da un unico thread, senza causare una race condition.
 
-L'intestazione &lt;shared_mutex > definisce le classi `shared_mutex` e `shared_timed_mutex`, la classe modello `shared_lock`e la funzione modello `swap` per supporto dei mutex condivisi.
+L'intestazione &lt;shared_mutex > definisce le classi `shared_mutex` e `shared_timed_mutex`, la classe `shared_lock`modello e la funzione `swap` di modello per il supporto di mutex condivisi.
 
 |Classi|Descrizione|
 |-------------|-----------------|
@@ -64,7 +64,7 @@ L'intestazione &lt;shared_mutex > definisce le classi `shared_mutex` e `shared_t
 |[Classe shared_timed_mutex](#class_shared_timed_mutex)|Tipo mutex condiviso programmato che può essere bloccato in modo esclusivo da un solo agente o condiviso in modo non esclusivo da più agenti.|
 |[Classe shared_lock](#class_shared_lock)|Classe modello che esegue il wrapping di un mutex condiviso per supportare operazioni di blocco programmate e la condivisione non esclusiva da parte di più agenti.|
 
-|Funzioni|Descrizione|
+|Funzioni|DESCRIZIONE|
 |---------------|-----------------|
 |[swap](#function_swap)|Scambia il contenuto degli oggetti mutex condivisi a cui fanno riferimento i parametri della funzione.|
 
@@ -91,20 +91,20 @@ Un tipo mutex condiviso supporta i metodi aggiuntivi `lock_shared`, `unlock_shar
 
 - Il metodo `unlock_shared` rilascia la proprietà condivisa del mutex detenuta dal thread chiamante.
 
-- Il metodo `try_lock_shared` tenta di ottenere la proprietà condivisa del mutex senza blocco. Il tipo restituito è convertibile in **bool** e viene **true** se il metodo ottiene la proprietà, ma è in caso contrario **false**.
+- Il metodo `try_lock_shared` tenta di ottenere la proprietà condivisa del mutex senza blocco. Il tipo restituito è convertibile in **bool** ed è **true** se il metodo ottiene la proprietà; in caso contrario, è **false**.
 
 La classe `shared_timed_mutex` è un *tipo mutex condiviso programmato*, ovvero un tipo che soddisfa i requisiti sia di un tipo mutex condiviso che di un tipo mutex programmato.
 
 Un tipo mutex condiviso programmato supporta i metodi aggiuntivi `try_lock_shared_for` e `try_lock_shared_until`:
 
-- Il metodo `try_lock_shared_for` tenta di ottenere la proprietà condivisa del mutex fino a quando non è trascorso il periodo di tempo specificato dal parametro. Se il periodo di tempo non è positivo, il metodo è equivalente a `try_lock_shared`. Il metodo non restituisce valori entro il periodo di tempo specificato a meno che non ottenga la proprietà condivisa. Il valore restituito è **true** se il metodo ottiene la proprietà, ma è in caso contrario **false**.
+- Il metodo `try_lock_shared_for` tenta di ottenere la proprietà condivisa del mutex fino a quando non è trascorso il periodo di tempo specificato dal parametro. Se il periodo di tempo non è positivo, il metodo è equivalente a `try_lock_shared`. Il metodo non restituisce valori entro il periodo di tempo specificato a meno che non ottenga la proprietà condivisa. Il valore restituito è **true** se il metodo ottiene la proprietà, ma in caso contrario è **false**.
 
-- Il metodo `try_lock_shared_until` tenta di ottenere la proprietà condivisa del mutex fino a quando non è trascorso il tempo assoluto specificato. Se il tempo assoluto specificato è già trascorso, il metodo è equivalente a `try_lock_shared`. Il metodo non restituisce valori prima dell'ora specificata a meno che non ottenga la proprietà condivisa. Il valore restituito è **true** se il metodo ottiene la proprietà, ma è in caso contrario **false**.
+- Il metodo `try_lock_shared_until` tenta di ottenere la proprietà condivisa del mutex fino a quando non è trascorso il tempo assoluto specificato. Se il tempo assoluto specificato è già trascorso, il metodo è equivalente a `try_lock_shared`. Il metodo non restituisce valori prima dell'ora specificata a meno che non ottenga la proprietà condivisa. Il valore restituito è **true** se il metodo ottiene la proprietà, ma in caso contrario è **false**.
 
 La classe modello `shared_lock` estende il supporto per il blocco programmato e il trasferimento della proprietà a un mutex condiviso. La proprietà del mutex può essere ottenuta al momento della costruzione o dopo di essa e può essere trasferita a un altro oggetto `shared_lock`. Gli oggetti di tipo `shared_lock` possono essere spostati ma non copiati.
 
 > [!WARNING]
-> A partire da Visual Studio 2015, i tipi di sincronizzazione della libreria Standard C++ si basano sulle primitive di sincronizzazione di Windows e non usano più ConcRT (tranne quando la piattaforma di destinazione è Windows XP). I tipi definiti in &lt;shared_mutex > non deve essere utilizzato con qualsiasi tipo o funzione ConcRT.
+> A partire da Visual Studio 2015, C++ i tipi di sincronizzazione della libreria standard sono basati sulle primitive di sincronizzazione di Windows e non usano più ConcRT (tranne quando la piattaforma di destinazione è Windows XP). I tipi definiti in &lt;shared_mutex > non devono essere usati con tipi o funzioni concrt.
 
 ## <a name="classes"></a>Classi
 
@@ -234,5 +234,5 @@ Scambia il contenuto di due oggetti `shared_lock`. È effettivamente uguale a `x
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
 [&lt;mutex>](../standard-library/mutex.md)

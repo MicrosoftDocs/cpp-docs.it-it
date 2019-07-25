@@ -7,12 +7,12 @@ f1_keywords:
 - type_traits/std::true_type
 - xtr1common/std::true_type
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
-ms.openlocfilehash: 579d276b7e9f2a7b44b41681b85fffd318ecddbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eff1a99fb95f15c6377e8a74cca36e718cbd6fd9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278995"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455088"
 ---
 # <a name="lttypetraitsgt-typedefs"></a>Typedef &lt;type_traits&gt;
 
@@ -90,4 +90,4 @@ true_type == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

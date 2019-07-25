@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: 7e46d692f76f80302dcd181aa1cee2efd1b189d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8b15f9eb5ef817f5576387b0d8119b86aa86af7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413606"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455740"
 ---
 # <a name="ispointer-class"></a>Classe is_pointer
 
@@ -27,12 +27,12 @@ struct is_pointer;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un puntatore a **void**, un puntatore a un oggetto, o un puntatore a una funzione o `cv-qualified` forma di uno di essi, in caso contrario, contiene false. Si noti che `is_pointer` contiene false se *Ty* è un puntatore a membro o un puntatore a funzione membro.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un puntatore a **void**, un puntatore a un oggetto o un puntatore a una funzione oppure un `cv-qualified` form di uno di essi; in caso contrario, include false. Si noti `is_pointer` che include false se *Ty* è un puntatore a un membro o un puntatore a una funzione membro.
 
 ## <a name="example"></a>Esempio
 
@@ -80,6 +80,6 @@ is_pointer<int *> == true
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_member_pointer](../standard-library/is-member-pointer-class.md)<br/>
-[Classe is_reference](../standard-library/is-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_member_pointer](../standard-library/is-member-pointer-class.md)\
+[Classe is_reference](../standard-library/is-reference-class.md)

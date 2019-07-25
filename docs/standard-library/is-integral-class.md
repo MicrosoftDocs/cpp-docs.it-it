@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: c7d0d8b8572c26bfa75b9fab81900c0ae21fb932
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336495"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456247"
 ---
 # <a name="isintegral-class"></a>Classe is_integral
 
@@ -27,14 +27,14 @@ struct is_integral;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è uno dei tipi integrali o un `cv-qualified` forma di uno dei tipi integrali, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è uno dei tipi integrali o un `cv-qualified` form di uno dei tipi integrali; in caso contrario, include false.
 
-Un tipo integrale è uno dei **bool**, **char**, **unsigned char**, **char con segno**, **wchar_t**, **brevi**, **short senza segno**, **int**, **int senza segno**, **lungo**e **unsigned long**. Inoltre, con i compilatori che li forniscono, un tipo integrale può essere uno dei **long long**, **long long senza segno**, **__int64**, e **unsigned __int64**.
+Un tipo integrale è uno tra **bool**, **char**, **unsigned char**, **signed char**, **wchar_t**, **short**, unsigned **short**, **int**, unsigned **int**, **Long**e unsigned **Long**. Inoltre, con i compilatori che li forniscono, un tipo integrale può essere uno di Long **Long**, unsigned long **Long**, **__int64**e **unsigned __int64**.
 
 ## <a name="example"></a>Esempio
 
@@ -76,6 +76,6 @@ is_integral<float> == false
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_enum](../standard-library/is-enum-class.md)<br/>
-[Classe is_floating_point](../standard-library/is-floating-point-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_enum](../standard-library/is-enum-class.md)\
+[Classe is_floating_point](../standard-library/is-floating-point-class.md)

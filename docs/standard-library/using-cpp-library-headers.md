@@ -10,12 +10,12 @@ helpviewer_keywords:
 - library headers
 - C++ Standard Library, headers
 ms.assetid: a36e889e-1af2-4cd9-a211-bfc7a3fd8e85
-ms.openlocfilehash: b9841d1045a6d2d1126414f1ce4cfc93f9667eef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cc0bb51b159f6668adad05ebd2d386364ae2f81
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362370"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450066"
 ---
 # <a name="using-c-library-headers"></a>Utilizzo delle intestazioni della libreria C++
 
@@ -31,11 +31,11 @@ Un'intestazione della libreria C++ include qualsiasi altra intestazione della li
 
 Ogni funzione nella libreria è dichiarata in un'intestazione standard. Diversamente dalle intestazioni C standard, le intestazioni standard non forniscono mai una macro di mascheramento con lo stesso nome della funzione che maschera la dichiarazione della funzione e produce lo stesso effetto. Per altre informazioni sulle macro di mascheramento, vedere [C++ Library Conventions](../standard-library/cpp-library-conventions.md) (Convenzioni della libreria C++).
 
-Tutti i nomi diverso da **operatore delete** e **operatore new** nella libreria C++ le intestazioni sono definite nel `std` dello spazio dei nomi, o in uno spazio dei nomi annidato all'interno di `std` dello spazio dei nomi. Per fare riferimento al nome `cin`, ad esempio, utilizzare `std::cin`. Si noti tuttavia che i nomi di macro non sono soggetti alla qualificazione dello spazio dei nomi, pertanto è necessario sempre scrivere `__STD_COMPLEX` senza qualificatore dello spazio dei nomi.
+Tutti i nomi diversi da **operator delete** e **operator new** nelle C++ `std` intestazioni della libreria sono definiti nello spazio dei nomi o in uno spazio dei nomi `std` annidato nello spazio dei nomi. Per fare riferimento al nome `cin`, ad esempio, utilizzare `std::cin`. Si noti tuttavia che i nomi di macro non sono soggetti alla qualificazione dello spazio dei nomi, pertanto è necessario sempre scrivere `__STD_COMPLEX` senza qualificatore dello spazio dei nomi.
 
-In alcuni ambienti di conversione, tra cui un'intestazione della libreria C++ potrebbe esegue il lift dei nomi esterni dichiarati nel `std` dello spazio dei nomi nella spazio dei nomi globale, anche con singole **usando** dichiarazioni per ognuno dei nomi. In caso contrario, l'intestazione *non* introduce alcun nome di libreria nello spazio dei nomi corrente.
+In alcuni ambienti di traduzione, inclusa C++ un'intestazione di libreria, può sollevare anche nomi `std` esterni dichiarati nello spazio dei nomi nello spazio dei nomi globale, con singole dichiarazioni **using** per ogni nome. In caso contrario, l'intestazione *non* introduce alcun nome di libreria nello spazio dei nomi corrente.
 
-Lo Standard C++ richiede che le intestazioni Standard C dichiarino tutti i nomi esterni nello spazio dei nomi `std`, quindi ne esegue il lift nello spazio dei nomi globale con singole **usando** dichiarazioni per ognuno dei nomi. In alcuni ambienti di conversione tuttavia le intestazioni C standard non includono dichiarazioni dello spazio dei nomi e tutti i nomi vengono dichiarati direttamente nello spazio dei nomi globale. Pertanto, il modo migliore per gestire gli spazi dei nomi consiste nel seguire due regole:
+Per C++ lo standard è necessario che le intestazioni standard C dichiarino tutti `std`i nomi esterni nello spazio dei nomi, quindi eseguirne il Lift nello spazio dei nomi globale con le singole dichiarazioni **using** per ogni nome. In alcuni ambienti di conversione tuttavia le intestazioni C standard non includono dichiarazioni dello spazio dei nomi e tutti i nomi vengono dichiarati direttamente nello spazio dei nomi globale. Pertanto, il modo migliore per gestire gli spazi dei nomi consiste nel seguire due regole:
 
 - Per dichiarare con certezza nello spazio dei nomi `std` un nome esterno generalmente dichiarato in \<stdlib.h>, ad esempio, includere l'intestazione \<cstdlib>. Considerare che il nome potrebbe essere dichiarato anche nello spazio dei nomi globale.
 
@@ -55,5 +55,5 @@ A meno che non venga espressamente indicato altrimenti, è possibile non definir
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 56ae0da7e86e092cee46d24d1a2a27d9d54709e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159509"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447318"
 ---
 # <a name="ltfuturegt-functions"></a>Funzioni &lt;future&gt;
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parametri
 
-*policy*<br/>
+*politica*\
 Valore [launch](../standard-library/future-enums.md#launch).
 
 ### <a name="remarks"></a>Note
@@ -63,9 +63,9 @@ La seconda funzione restituisce un oggetto `future<Ty>` il cui *stato asincrono 
 
 A meno che `decay<Fn>::type` non sia un tipo diverso da launch, la seconda funzione non fa parte della risoluzione dell'overload.
 
-Gli stati standard C++ se criterio launch::async, la funzione crea un nuovo thread. Tuttavia l'implementazione Microsoft è attualmente non conforme. Ottiene i thread dal pool di thread di Windows, che in alcuni casi può garantire un thread riciclato anziché uno nuovo. Ciò significa che il `launch::async` dei criteri viene effettivamente implementato come `launch::async|launch::deferred`.  Un'altra implicazione dell'implementazione in base al pool di thread è che non vi è alcuna garanzia che le variabili thread-local verranno eliminate al termine il thread. Se il thread viene riciclato e fornito a una nuova chiamata a `async`, le variabili precedenti saranno ancora presenti. È quindi consigliabile non utilizzare le variabili thread-local con `async`.
+Lo C++ standard indica che se il criterio è launch:: async, la funzione crea un nuovo thread. Tuttavia, l'implementazione Microsoft è attualmente non conforme. Ottiene i thread dal pool di thread di Windows, che in alcuni casi può fornire un thread riciclato anziché uno nuovo. Ciò significa che il `launch::async` criterio è effettivamente implementato come `launch::async|launch::deferred`.  Un'altra implicazione dell'implementazione basata su ThreadPool è che non esiste alcuna garanzia che le variabili thread-local vengano distrutte al completamento del thread. Se il thread viene riciclato e fornito a una nuova chiamata `async`a, le variabili obsolete saranno ancora disponibili. Si consiglia pertanto di non utilizzare variabili locali di thread con `async`.
 
-Se *criterio* viene `launch::deferred`, la funzione contrassegna lo stato asincrono associato come contenente una *funzione posticipata* e restituisce. La prima chiamata a qualsiasi funzione non temporizzata che attende che lo stato asincrono associato sia ready in effetti chiama la funzione posticipata valutando `INVOKE(dfn, dargs..., Ty)`.
+Se  il criterio `launch::deferred`è, la funzione contrassegna lo stato asincrono associato come contenente una *funzione posticipata* e restituisce. La prima chiamata a qualsiasi funzione non temporizzata che attende che lo stato asincrono associato sia ready in effetti chiama la funzione posticipata valutando `INVOKE(dfn, dargs..., Ty)`.
 
 In tutti i casi, lo stato asincrono associato dell'oggetto `future` non viene impostato su *ready* fino al completamento della valutazione di `INVOKE(dfn, dargs..., Ty)`, indipendentemente dal fatto che venga generata un'eccezione o che la procedura termini normalmente. Il risultato dello stato asincrono associato è un'eccezione se ne è stata generata una oppure qualsiasi valore restituito dalla valutazione.
 
@@ -92,7 +92,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Errno*<br/>
+*Errno*\
 Valore [future_errc](../standard-library/future-enums.md#future_errc) che identifica l'errore segnalato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -109,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Errno*<br/>
+*Errno*\
 Valore [future_errc](../standard-library/future-enums.md#future_errc) che identifica l'errore segnalato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -130,12 +130,12 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*<br/>
+*Sinistra*\
 L'oggetto `promise` a sinistra.
 
-*A destra*<br/>
+*Ok*\
 L'oggetto `promise` corretto.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<future>](../standard-library/future.md)<br/>
+[\<future>](../standard-library/future.md)

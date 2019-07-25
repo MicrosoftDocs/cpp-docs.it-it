@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c73ab13d3cb2531ff3d741766bc86f8354a0be9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370871"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458067"
 ---
 # <a name="ostrstream-class"></a>Classe ostrstream
 
@@ -38,7 +38,7 @@ L'oggetto archivia un oggetto della classe `strstreambuf`.
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-|-|
 |[ostrstream](#ostrstream)|Costruisce un oggetto di tipo `ostrstream`.|
 
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametri
 
-*_Freezeit*<br/>
-Oggetto **bool** che indica se si desidera che il flusso per essere bloccato.
+*_Freezeit*\
+**Bool** che indica se si desidera che il flusso venga bloccato.
 
 ### <a name="remarks"></a>Note
 
@@ -76,7 +76,7 @@ La funzione membro chiama [rdbuf](#rdbuf) -> [freeze](../standard-library/strstr
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) per un esempio che usa `freeze`.
+Vedere [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) per un esempio che usa `freeze`.
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -92,22 +92,22 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parametri
 
-*ptr*<br/>
+*PTR*\
 Buffer.
 
-*count*<br/>
+*conteggio*\
 Dimensioni del buffer in byte.
 
-*_Mode*<br/>
+*_Mode*\
 Modalità di input e output del buffer. Per altre informazioni, vedere [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="remarks"></a>Note
 
-Entrambi i costruttori inizializzano la classe base chiamando [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), dove `sb` è l'oggetto archiviato della classe [strstreambuf](../standard-library/strstreambuf-class.md). Il primo costruttore inizializza inoltre `sb` chiamando `strstreambuf`. Il secondo costruttore inizializza la classe di base in uno dei due modi seguenti:
+Entrambi i costruttori inizializzano la classe base chiamando [ostream](../standard-library/ostream-typedefs.md#ostream)(**SB**), dove `sb` è l'oggetto archiviato della classe [strstreambuf](../standard-library/strstreambuf-class.md). Il primo costruttore inizializza `sb` `strstreambuf`anche chiamando. Il secondo costruttore inizializza la classe di base in uno dei due modi seguenti:
 
-- Se `_Mode`  &  **ios_base:: app**= = 0, quindi `ptr` deve designare il primo elemento della matrice di `count` elementi e il costruttore chiama `strstreambuf`(`ptr`, `count`, `ptr`).
+- Se `_Mode` **ios_base::** `count` `strstreambuf` `count``ptr`app = = 0, devedesignareilprimoelementodiunamatricedielementieilcostruttorechiama(,,`ptr`  &  `ptr`).
 
-- In caso contrario, `ptr` deve designare il primo elemento della matrice di elementi di conteggio contenente una stringa C il cui primo elemento designato dal `ptr`e il costruttore chiama `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- In caso `ptr` contrario, deve designare il primo elemento di una matrice di elementi count che contiene una stringa C il cui primo elemento `ptr`è designato da e `strstreambuf`il costruttore `count`chiama (`ptr`,, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
@@ -143,7 +143,7 @@ Puntatore all'oggetto strstreambuf associato del flusso.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro restituisce l'indirizzo del buffer del flusso archiviato di tipo `pointer` al [strstreambuf](../standard-library/strstreambuf-class.md).
+La funzione membro restituisce l'indirizzo del buffer del flusso archiviato di tipo `pointer` a [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Esempio
 
@@ -167,11 +167,11 @@ La funzione membro restituisce [rdbuf](#rdbuf) -> [str](../standard-library/strs
 
 ### <a name="example"></a>Esempio
 
-Visualizzare [strstream](../standard-library/strstreambuf-class.md#str) per un esempio che usa `str`.
+Vedere [strstream:: Str](../standard-library/strstreambuf-class.md#str) per un esempio che usa `str`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[ostream](../standard-library/ostream-typedefs.md#ostream)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programmazione iostream](../standard-library/iostream-programming.md)<br/>
-[Convenzioni di iostream](../standard-library/iostreams-conventions.md)<br/>
+[ostream](../standard-library/ostream-typedefs.md#ostream)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Programmazione di iostream](../standard-library/iostream-programming.md)\
+[Convenzioni di iostream](../standard-library/iostreams-conventions.md)

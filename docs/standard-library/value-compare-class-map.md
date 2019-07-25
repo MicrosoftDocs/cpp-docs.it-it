@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-ms.openlocfilehash: 69b484944c9ce30dc28fceacfb082051da31c053
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d098e947aec1ea543f29c168a632d1f4c9412e82
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365015"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448330"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>Classe value_compare (&lt;map&gt;)
 
@@ -35,7 +35,7 @@ protected:
 
 ## <a name="remarks"></a>Note
 
-Il criterio di confronto fornito da `value_compare` tra `value_types` di elementi interi in una mappa viene provocato da un confronto tra le chiavi degli elementi rispettivi mediante la costruzione della classe ausiliaria. L'operatore della funzione membro Usa l'oggetto `comp` typu `key_compare` archiviati nell'oggetto funzione fornito da `value_compare` per confrontare i componenti chiave di ordinamento di due elementi.
+Il criterio di confronto fornito `value_compare` da `value_types` tra gli elementi interi contenuti in una mappa viene indotto da un confronto tra le chiavi dei rispettivi elementi dalla costruzione della classe ausiliaria. L'operatore della funzione membro usa l' `comp` oggetto di `key_compare` tipo archiviato nell'oggetto funzione fornito da `value_compare` per confrontare i componenti della chiave di ordinamento di due elementi.
 
 Per set e multiset, che sono semplici contenitori in cui i valori delle chiavi sono identici ai valori degli elementi, `value_compare` equivale a `key_compare`. Questo non si applica per gli oggetti di tipo map e multimap, poiché il valore degli elementi di tipo `pair` non è identico al valore della chiave dell'elemento.
 
@@ -51,6 +51,6 @@ Vedere l'esempio relativo a [value_comp](../standard-library/map-class.md#value_
 
 ## <a name="see-also"></a>Vedere anche
 
-[Struct binary_function](../standard-library/binary-function-struct.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Struct binary_function](../standard-library/binary-function-struct.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

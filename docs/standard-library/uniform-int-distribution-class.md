@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348172"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454951"
 ---
 # <a name="uniformintdistribution-class"></a>Classe uniform_int_distribution
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>Parametri
 
-*IntType*<br/>
-Il tipo di risultato integer, valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
+*IntType*\
+Il tipo di risultato Integer, il valore predefinito è **int**. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Note
 
@@ -191,20 +191,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametri
 
-*a*<br/>
+*un*\
 Limite inferiore per i valori casuali, inclusivo.
 
-*b*<br/>
+*b*\
 Limite superiore per i valori casuali, inclusivo.
 
-*parm*<br/>
+*parm*\
 Struttura `param_type` usata per costruire la distribuzione.
 
 ### <a name="remarks"></a>Note
 
 **Precondizione:** `a ≤ b`
 
-Il primo costruttore crea un oggetto il cui stored *una* valore contiene il valore *una* e il cui stored *b* valore contiene il valore *b*.
+Il primo costruttore crea un oggetto il cui valore *archiviato include* il valore *a* e il cui valore archiviato *b* include il valore *b*.
 
 Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.
 
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametri
 
-*a*<br/>
+*un*\
 Limite inferiore per i valori casuali, inclusivo.
 
-*b*<br/>
+*b*\
 Limite superiore per i valori casuali, inclusivo.
 
-*right*<br/>
+*Ok*\
 Oggetto `param_type` da confrontare con questo oggetto.
 
 ### <a name="remarks"></a>Note
@@ -244,4 +244,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

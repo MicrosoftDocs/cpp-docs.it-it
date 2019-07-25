@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: fa498f4acbb151eab4321bcddc6af027ee266237
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370992"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447189"
 ---
 # <a name="ltostreamgt-functions"></a>Funzioni &lt;ostream&gt;
 
-Queste sono le funzioni di modello globale definite in &lt;ostream&gt;. Per le funzioni membro, vedere la [classe basic_ostream](basic-ostream-class.md) documentazione.
+Queste sono le funzioni del modello globale definite &lt;in&gt;ostream. Per le funzioni membro, vedere la documentazione relativa alla [classe basic_ostream](basic-ostream-class.md) .
 
 ||||
 |-|-|-|
@@ -40,22 +40,22 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*<br/>
+*Elem*\
 Tipo dell'elemento.
 
-*Ostr*<br/>
-Un oggetto di tipo **basic_ostream**.
+*OSTR*\
+Oggetto di tipo **basic_ostream**.
 
-*Tr*<br/>
+*TR*\
 Tratti di carattere.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un oggetto di tipo **basic_ostream**.
+Oggetto di tipo **basic_ostream**.
 
 ### <a name="remarks"></a>Note
 
-Il manipolatore chiama *Ostr*.[ inserire](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ Widen](../standard-library/basic-ios-class.md#widen)('\n')) e quindi chiama *Ostr*.[ scaricamento](../standard-library/basic-ostream-class.md#flush). Viene restituito *Ostr*.
+Il manipolatore chiama *OSTR*. [Inserisci](../standard-library/basic-ostream-class.md#put) (*OSTR*. [ampliamento](../standard-library/basic-ios-class.md#widen) (' \n ')), quindi chiama *OSTR*. [Scarica](../standard-library/basic-ostream-class.md#flush). Restituisce *OSTR*.
 
 ### <a name="example"></a>Esempio
 
@@ -87,13 +87,13 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*<br/>
+*Elem*\
 Tipo dell'elemento.
 
-*Ostr*<br/>
+*OSTR*\
 Oggetto di tipo `basic_ostream`.
 
-*Tr*<br/>
+*TR*\
 Tratti di carattere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -102,7 +102,7 @@ Oggetto di tipo `basic_ostream`.
 
 ### <a name="remarks"></a>Note
 
-Il manipolatore chiama *Ostr*.[ inserire](../standard-library/basic-ostream-class.md#put)(*Elem*('\0')). Viene restituito *Ostr*.
+Il manipolatore chiama *OSTR*. [Inserisci](../standard-library/basic-ostream-class.md#put) (*Elem*(' \ 0')). Restituisce *OSTR*.
 
 ### <a name="example"></a>Esempio
 
@@ -136,13 +136,13 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*<br/>
+*Elem*\
 Tipo dell'elemento.
 
-*Ostr*<br/>
+*OSTR*\
 Oggetto di tipo `basic_ostream`.
 
-*Tr*<br/>
+*TR*\
 Tratti di carattere.
 
 ### <a name="return-value"></a>Valore restituito
@@ -151,7 +151,7 @@ Oggetto di tipo `basic_ostream`.
 
 ### <a name="remarks"></a>Note
 
-Il manipolatore chiama *Ostr*.[ scaricamento](../standard-library/basic-ostream-class.md#flush). Viene restituito *Ostr*.
+Il manipolatore chiama *OSTR*. [Scarica](../standard-library/basic-ostream-class.md#flush). Restituisce *OSTR*.
 
 ### <a name="example"></a>Esempio
 
@@ -184,16 +184,16 @@ void swap(
 
 ### <a name="parameters"></a>Parametri
 
-*Elem*<br/>
+*Elem*\
 Tipo dell'elemento.
 
-*Tr*<br/>
+*TR*\
 Tratti di carattere.
 
-*left*<br/>
+*sinistra*\
 Riferimento lvalue a un oggetto `basic_ostream`.
 
-*right*<br/>
+*Ok*\
 Riferimento lvalue a un oggetto `basic_ostream`.
 
 ### <a name="remarks"></a>Note

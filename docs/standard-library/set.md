@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 1bf5663d3e6891d45e2139c612d8e16860b6cace
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246388"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450518"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
@@ -24,7 +24,7 @@ Definisce le classi modello del contenitore set e multiset e i rispettivi modell
 **Spazio dei nomi:** std
 
 > [!NOTE]
-> Il \<impostare > libreria Usa inoltre il `#include <initializer_list>` istruzione.
+> Anche \<la libreria set > USA l' `#include <initializer_list>` istruzione.
 
 ## <a name="members"></a>Members
 
@@ -41,7 +41,7 @@ Definisce le classi modello del contenitore set e multiset e i rispettivi modell
 
 ### <a name="specialized-template-functions"></a>Funzioni di modello specializzate
 
-|Versione set|Versione multiset|Descrizione|
+|Versione set|Versione multiset|DESCRIZIONE|
 |-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Scambia gli elementi di due set o multiset.|
 
@@ -54,6 +54,6 @@ Definisce le classi modello del contenitore set e multiset e i rispettivi modell
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

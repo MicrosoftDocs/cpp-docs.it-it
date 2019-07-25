@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-ms.openlocfilehash: 1b1e450338a123c51b80f40f2369207c8b987cd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83ed4365fd0e73a7daa8b9894c5e85f20387a79
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383633"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456113"
 ---
 # <a name="ismoveconstructible-class"></a>Classe is_move_constructible
 
@@ -26,12 +26,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Il tipo da valutare
 
 ## <a name="remarks"></a>Note
 
-Un predicato di tipo che restituisce true se il tipo *T* può essere creato usando un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`.
+Predicato di tipo che restituisce true se il tipo *T* può essere costruito usando un'operazione di spostamento. Questo predicato è equivalente a `is_constructible<T, T&&>`.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,4 +41,4 @@ Un predicato di tipo che restituisce true se il tipo *T* può essere creato usan
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

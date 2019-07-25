@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 9042093bb073807e9bb1476ab514c82010aeab70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394058"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450584"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Con ITERATOR_DEBUG_LEVEL
+## <a name="using-iteratordebuglevel"></a>Uso di _ITERATOR_DEBUG_LEVEL
 
 È possibile usare la macro del preprocessore [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) per disattivare la funzionalità di debug dell'iteratore in una build di debug. Questo programma non esegue asserzioni, ma attiva un comportamento non definito.
 
@@ -87,7 +87,7 @@ int main() {
 -572662307
 ```
 
-## <a name="unitialized-iterators"></a>Iteratori non inizializzati
+## <a name="unitialized-iterators"></a>Iteratori non inizializzate
 
 Un'asserzione si verifica anche se si tenta di usare un iteratore prima che sia inizializzato, come illustrato di seguito:
 
@@ -128,9 +128,9 @@ int main()
 
 Si noti che in questo esempio si usa l'espressione lambda `[] (int& elem) { elem *= 2; }` anziché un funtore. Sebbene questa scelta non influisca sull'errore di asserzione (un funtore simile causerebbe lo stesso errore), le espressioni lambda sono un modo molto utile per eseguire attività degli oggetti funzione Compact. Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="iterators-going-out-of-scope"></a>Iteratori usciti fuori ambito
+## <a name="iterators-going-out-of-scope"></a>Iteratori usciti dall'ambito
 
-Controlli degli iteratori di debug causano anche una variabile di iteratore dichiarata in un **per** ciclo fuori ambito quando il **per** termina l'ambito del ciclo.
+I controlli degli iteratori di debug determinano anche la presenza di una variabile iteratore dichiarata in un ciclo **for** fuori dall'ambito al termine dell'ambito del ciclo **for** .
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Distruttori per gli iteratori di debug
 
-Gli iteratori di debug hanno distruttori non semplici. Se un distruttore non viene eseguito, ma viene liberata la memoria dell'oggetto, potrebbe verificarsi danneggiamento dei dati e le violazioni di accesso. Si consideri l'esempio seguente:
+Gli iteratori di debug hanno distruttori non semplici. Se un distruttore non viene eseguito ma viene liberata la memoria dell'oggetto, potrebbero verificarsi violazioni di accesso e danneggiamento dei dati. Si consideri l'esempio seguente:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -175,4 +175,4 @@ struct derived : base {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)

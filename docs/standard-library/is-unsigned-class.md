@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_unsigned class
 - is_unsigned
 ms.assetid: ba5bec3d-796b-4e54-8595-a3941ec6a8dc
-ms.openlocfilehash: fc27689eb367950daf9dfdf113e1472b0945f9af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3da9f71543815b507307f2cf4969e8f19c79e8c5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413424"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458881"
 ---
 # <a name="isunsigned-class"></a>Classe is_unsigned
 
@@ -27,12 +27,12 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un tipo integrale unsigned o un `cv-qualified` tipo integrale unsigned, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un tipo integrale senza segno o `cv-qualified` un tipo integrale senza segno; in caso contrario, include false.
 
 ## <a name="example"></a>Esempio
 
@@ -77,5 +77,5 @@ is_unsigned<float> == false
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_signed](../standard-library/is-signed-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_signed](../standard-library/is-signed-class.md)

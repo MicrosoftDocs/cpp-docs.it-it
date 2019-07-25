@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: 9949d1cab5a97b30df0b156289dff2dfbe15d851
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449663"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451866"
 ---
 # <a name="mersennetwisterengine-class"></a>Classe mersenne_twister_engine
 
@@ -29,34 +29,34 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parametri
 
-*UIntType*<br/>
+*UIntType*\
 Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*W*\
 **Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N*<br/>
+*N*\
 **Dimensione stato**. Numero di elementi (valori) nella sequenza di stato.
 
-*M*<br/>
+*M*\
 **Dimensione spostamento**. Numero di elementi da ignorare durante ogni twist. **Precondizione:** `0 < M ≤ N`
 
-*R*<br/>
+*R*\
 **Bit di maschera**. **Precondizione:** `R ≤ W`
 
-*A*<br/>
+*UN*\
 **Maschera XOR**. **Precondizione:** `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L*<br/>
+*U*, *S*, *T*, *L*\
 **Parametri di spostamento per la crittografia**. Usati come valori di spostamento durante la crittografia. Precondizione: `U,S,T,L ≤ W`
 
-*D*, *B*, *C*<br/>
+*D*, *B*, *C*\
 **Parametri maschera di bit crittografia**. Usati come valori di maschera di bit durante la crittografia. Precondizione: `D,B,C ≤ (1u<<W) - 1u`
 
-*F*<br/>
+*F*\
 **Moltiplicatore inizializzazione**. Usato per l'inizializzazione della sequenza. Precondizione: `F ≤ (1u<<W) - 1u`
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -69,9 +69,9 @@ Per altre informazioni sui membri del motore, vedere [\<random>](../standard-lib
 
 ## <a name="remarks"></a>Note
 
-Questa classe di modello descrive un motore di numeri casuali che restituisce valori sull'intervallo chiuso [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valore integrale di grandi dimensioni con `W * (N - 1) + R` bit. Estrae *W* bit alla volta da questo valore elevato e quando ha usato tutti i bit intreccia il valore di grandi dimensioni spostando e mescolando i bit in modo che includa un nuovo set di bit per estrarre da. Lo stato del motore è l'ultima `N` `W`-bit usati se i valori `operator()` è stato chiamato almeno *N* volte, altrimenti il `M` `W`-bit di valori che sono stati usati e dagli ultimi `N - M` valori di seeding.
+Questa classe di modello descrive un motore di numeri casuali che restituisce valori sull'intervallo chiuso [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valore integrale di grandi dimensioni con `W * (N - 1) + R` bit. Estrae *W* bit alla volta da questo valore elevato e quando ha usato tutti i bit, esegue il Twist del valore di grandi dimensioni spostando e combinando i bit in modo da avere un nuovo set di bit da estrarre. Lo stato del motore è costituito `N` dagli ultimi `W`valori di bit `operator()` usati se è stato chiamato almeno *N* volte, in `M` caso contrario i `W`valori a-bit che sono stati `N - M` usati e gli ultimi valori del inizializzazione.
 
-Il generatore intreccia il valore elevato che conserva mediante un registro a scorrimento a feedback generalizzato definito dai valori di spostamento *N* e *M*, un valore di twist *R*e un oggetto maschera XOR condizionale *oggetto*. Inoltre, i bit del Registro di spostamento non elaborato sono crittografati in base a una matrice di crittografia dei bit definita dai valori *U*, *1!d*, *S*, *B* , *T*, *C*, e *L*.
+Il generatore torce il valore di grandi dimensioni che possiede usando un registro di spostamento di feedback generalizzato, definito dai valori MAIUSC *N* e *M*, un valore di torsione *R*e una maschera XOR condizionale *a*. Inoltre, i bit del registro di spostamento non elaborato vengono codificati in base a una matrice di distorsione dei bit definita dai valori *U*, *D*, *S*, *B*, *T*, *C*e *L*.
 
 L'argomento del modello `UIntType` deve essere abbastanza grande da contenere valori fino a `2`<sup>W</sup> - `1`. I valori degli altri argomenti del modello devono soddisfare i requisiti seguenti: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
@@ -113,4 +113,4 @@ Per un esempio di codice, vedere [\<random>](../standard-library/random.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

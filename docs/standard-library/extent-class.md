@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extent class
 - extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
-ms.openlocfilehash: 7463b424d15ee86f851b7d81953abf3fe1c98fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd53ba8537e706a68ffdcf08df998108266ad20
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393974"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457784"
 ---
 # <a name="extent-class"></a>Classe extent
 
@@ -27,15 +27,15 @@ struct extent;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
-*I*<br/>
+*I*\
 La matrice associata alla query.
 
 ## <a name="remarks"></a>Note
 
-Se *Ty* è un tipo di matrice con almeno *ho* dimensioni, la query di tipo contiene il numero di elementi nella dimensione specificata da *ho*. Se *Ty* non è un tipo di matrice o la classificazione è minore di *ho*, o se *ho* è uguale a zero e *Ty* è di tipo "matrice sconosciuto associata di `U` ", la query di tipo contiene il valore 0.
+Se *Ty* è un tipo di matrice con almeno dimensioni *i* , la query di tipo contiene il numero di elementi nella dimensione specificata da *i*. Se *Ty* non è un tipo di matrice o la sua classificazione è minore di *I*o se *i* è zero e *Ty* è di tipo "Array of Unknown Bound `U`of", la query di tipo include il valore 0.
 
 ## <a name="example"></a>Esempio
 
@@ -69,6 +69,6 @@ extent 1 == 10
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe remove_all_extents](../standard-library/remove-all-extents-class.md)<br/>
-[Classe remove_extent](../standard-library/remove-extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe remove_all_extents](../standard-library/remove-all-extents-class.md)\
+[Classe remove_extent](../standard-library/remove-extent-class.md)

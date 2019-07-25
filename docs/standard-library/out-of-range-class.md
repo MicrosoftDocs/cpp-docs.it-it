@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 59d1a0dc987ddb0dc538fb02bfe28e0b073d3a7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f965e45e765f0c0cef6bc9cd8a175e2fdc50af7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370816"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453079"
 ---
 # <a name="outofrange-class"></a>Classe out_of_range
 
@@ -71,5 +71,5 @@ Caught: invalid string position
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classe logic_error](../standard-library/logic-error-class.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[logic_error Class](../standard-library/logic-error-class.md)\ (Classe logic_error)
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

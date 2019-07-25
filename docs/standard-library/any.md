@@ -5,16 +5,16 @@ f1_keywords:
 - <any>
 helpviewer_keywords:
 - <any>
-ms.openlocfilehash: 169e44880c98248dc1941ccc8c9adfe05f76f358
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 19e30b1ab0a9b0f30c1a4f3d4b614643cb8b50ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268653"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456276"
 ---
 # <a name="ltanygt"></a>&lt;any&gt;
 
-Definisce la classe che supporta qualsiasi e diverse classi e funzioni.
+Definisce la classe una o più funzioni e classi di supporto.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -28,17 +28,17 @@ Definisce la classe che supporta qualsiasi e diverse classi e funzioni.
 
 |||
 |-|-|
-|[any_cast](../standard-library/any-functions.md#any_cast)|Rende un oggetto in un qualsiasi.|
-|[make_any](../standard-library/any-functions.md#make_any)|Accetta i valori e crea un oggetto qualsiasi.|
-|[swap](../standard-library/any-functions.md#swap)|Scambia gli elementi di due oggetti qualsiasi.|
+|[any_cast](../standard-library/any-functions.md#any_cast)|Trasforma un oggetto in un oggetto.|
+|[make_any](../standard-library/any-functions.md#make_any)|Accetta i valori e crea un oggetto.|
+|[swap](../standard-library/any-functions.md#swap)|Scambia gli elementi di due oggetti.|
 
 ### <a name="classes"></a>Classi
 
 |||
 |-|-|
-|[any](../standard-library/any-class.md)|Archivia qualsiasi tipo che soddisfa i requisiti di costruttore che non ha alcun valore.|
-|[bad_any_cast](../standard-library/bad-any-cast-class.md)|Gli oggetti generati da un tentativo fallito `any_cast`.|
+|[any](../standard-library/any-class.md)|Archivia qualsiasi tipo che soddisfa i requisiti del costruttore o non ha alcun valore.|
+|[bad_any_cast](../standard-library/bad-any-cast-class.md)|Oggetti generati da un oggetto `any_cast`non riuscito.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)

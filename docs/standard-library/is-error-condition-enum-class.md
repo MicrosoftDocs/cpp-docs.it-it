@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_condition_enum class
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
-ms.openlocfilehash: 213970d6260eaf55ac1bd678e6317cf2346ed9bc
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c40f8f6eb93a33098cfbcf8133f08c56285abb43
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245171"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452599"
 ---
 # <a name="iserrorconditionenum-class"></a>Classe is_error_condition_enum
 
@@ -32,4 +32,4 @@ Un'istanza di questo [predicato di tipo](../standard-library/type-traits.md) con
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

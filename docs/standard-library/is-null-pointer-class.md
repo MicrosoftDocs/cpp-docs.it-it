@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_null_pointer
 ms.assetid: f3b3601b-f162-4803-a6e9-dabf5c3876cc
-ms.openlocfilehash: 10979e790cb1f3e1ae3eace4f88a0328cb9a7f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b306753146a51bde842b55e4f36d3c1afa82591d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413749"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455840"
 ---
 # <a name="isnullpointer-class"></a>Classe is_null_pointer
 
@@ -26,12 +26,12 @@ struct is_null_pointer;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *T* è `std::nullptr_t`, in caso contrario, contiene false.
+Un'istanza del predicato di tipo include true se  il tipo `std::nullptr_t`T è; in caso contrario, include false.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,4 +41,4 @@ Un'istanza del tipo predicato contiene true se il tipo *T* è `std::nullptr_t`, 
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

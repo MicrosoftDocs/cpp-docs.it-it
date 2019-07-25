@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
-ms.openlocfilehash: 23e5e9bc5406265f49fca2ed220c597cb32e2a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 465383357e6c0306c24fe8325327327c3a3b64c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399362"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454980"
 ---
 # <a name="underlyingtype-class"></a>Classe underlying_type
 
@@ -26,12 +26,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>Parametri
 
-*T*<br/>
+*T*\
 Tipo da modificare.
 
 ## <a name="remarks"></a>Note
 
-Il `type` typedef del membro della classe modello assegna il tipo di integrale sottostante *T*, quando *T* è un tipo di enumerazione, in caso contrario, non è presente alcun typedef del membro `type`.
+Il `type` typedef del membro della classe modello denomina il tipo integrale sottostante di *t*, quando *t* è un tipo di enumerazione; in caso contrario, non `type`esiste alcun typedef del membro.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -41,4 +41,4 @@ Il `type` typedef del membro della classe modello assegna il tipo di integrale s
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 41ce5590476a8327c9449ece5e3173146a04760f
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449900"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447579"
 ---
 # <a name="linearcongruentialengine-class"></a>Classe linear_congruential_engine
 
@@ -45,19 +45,19 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Parametri
 
-*UIntType*<br/>
+*UIntType*\
 Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).
 
-*A*<br/>
+*UN*\
 **Moltiplicatore**. **Precondizione**: Vedere la sezione Osservazioni.
 
-*C*<br/>
+*C*\
 **Incremento**. **Precondizione**: Vedere la sezione Osservazioni.
 
-*M*<br/>
+*M*\
 **Modulo**. **Precondizione**: Vedere la sezione Osservazioni.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -74,9 +74,9 @@ La classe modello `linear_congruential_engine` è il motore di generazione più 
 
 Il motore produce valori di un tipo integrale senza segno specificato dall'utente usando la relazione di ricorrenza (*period*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Se *M* è uguale a zero, il valore usato per questa operazione di modulo è `numeric_limits<result_type>::max() + 1`. L'ultimo valore restituito è lo stato del motore oppure il valore di seeding se non sono state effettuate chiamate a `operator()`.
+Se *M* è zero, il valore usato per questa operazione di modulo `numeric_limits<result_type>::max() + 1`è. L'ultimo valore restituito è lo stato del motore oppure il valore di seeding se non sono state effettuate chiamate a `operator()`.
 
-Se *M* è diverso da zero, i valori degli argomenti di modello *oggetto* e *C* deve essere minore di *M*.
+Se *M* è diverso da zero, i valori degli argomenti di modello *A* e *C* devono essere minori di *m*.
 
 Sebbene sia possibile costruire un generatore direttamente da questo motore, è anche possibile usare uno dei typedef predefiniti seguenti.
 
@@ -102,4 +102,4 @@ Per altre informazioni sull'algoritmo del motore congruenziale lineare, vedere l
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

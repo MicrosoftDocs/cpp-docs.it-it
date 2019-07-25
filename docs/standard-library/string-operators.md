@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412358"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459264"
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
-*right*<br/>
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da concatenare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -115,7 +115,7 @@ La stringa che rappresenta la concatenazione delle stringhe di input.
 
 ### <a name="remarks"></a>Note
 
-Le funzioni eseguono ciascuna l'overload `operator+` per concatenare due oggetti della classe modello [basic_string](../standard-library/basic-string-class.md). Tutte restituiscono `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Per altre informazioni, vedere [append](../standard-library/basic-string-class.md#append).
+Le funzioni eseguono ciascuna l'overload `operator+` per concatenare due oggetti della classe modello [basic_string](../standard-library/basic-string-class.md). Tutti effettivamente restituiscono `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Per ulteriori informazioni, vedere [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Esempio
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*right*<br/>
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*right*<br/>
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*right*<br/>
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*right*<br/>
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parametri
 
-*_Ostr*<br/>
+*_Ostr*\
 Flusso di output in cui scrivere.
 
-*str*<br/>
+*Str*\
 Stringa da immettere nel flusso di output.
 
 ### <a name="return-value"></a>Valore restituito
@@ -575,7 +575,7 @@ Scrive il valore della stringa specificata nel flusso di output *_Ostr*.
 
 ### <a name="remarks"></a>Note
 
-Gli overload della funzione modello **operatore <<** per inserire un oggetto *str* della classe modello [basic_string](../standard-library/basic-string-class.md) nel flusso  *\_ Ostr*. La funzione restituisce effettivamente `_Ostr.write( str.c_str, str.size )`.
+La funzione di modello consente di eseguire l'overload di **operator < <** per inserire un oggetto *Str* della classe modello [basic_string](../standard-library/basic-string-class.md) nel flusso  *\_OSTR*. La funzione restituisce `_Ostr.write( str.c_str, str.size )`effettivamente.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*right*<br/>
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*left*<br/>
+*sinistra*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
-*right*<br/>
+*Ok*\
 Una stringa di tipo C o un oggetto di tipo `basic_string` da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
@@ -796,21 +796,21 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parametri
 
-*_Istr*<br/>
+*_Istr*\
 Flusso di input usato per estrarre la sequenza
 
-*right*<br/>
+*Ok*\
 Stringa da estrarre dal flusso di input.
 
 ### <a name="return-value"></a>Valore restituito
 
-Legge il valore della stringa specificata da *_Istr* e lo restituisce in *a destra*.
+Legge il valore della stringa specificata da *_Istr* e lo restituisce a *destra*.
 
 ### <a name="remarks"></a>Note
 
 L'operatore ignora gli spazi iniziali a meno che il flag `skipws` non sia impostato. Legge tutti i caratteri successivi fino a quando incontra uno spazio vuoto o arriva alla fine del file.
 
-Gli overload della funzione modello **operatore >>** per sostituire la sequenza controllata da *destro* con una sequenza di elementi estratti dal flusso *_Istr*. L'estrazione termina:
+La funzione di modello consente di eseguire l'overload di **operator > >** per sostituire la sequenza controllata da *right* con una sequenza di elementi estratti dal flusso *_Istr*. L'estrazione termina:
 
 - Alla fine del file.
 
@@ -820,7 +820,7 @@ Dopo che la funzione ha estratto elementi `_Istr`. [max_size](../standard-librar
 
 - Dopo che la funzione ha estratto un elemento *ch* per cui [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) è true, nel qual caso il carattere viene reinserito.
 
-Se la funzione non estrae alcun elemento, chiama il metodo [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). In tutti i casi, chiama **istr**. **width**(0) e restituisce \* **this**.
+Se la funzione non estrae alcun elemento, chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). In tutti i casi, chiama **istr**. **width**(0) e restituisce \* **this**.
 
 ### <a name="example"></a>Esempio
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

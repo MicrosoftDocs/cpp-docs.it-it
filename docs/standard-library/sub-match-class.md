@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412215"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447433"
 ---
 # <a name="submatch-class"></a>Classe sub_match
 
@@ -41,7 +41,7 @@ class sub_match
 
 ## <a name="parameters"></a>Parametri
 
-*BidIt*<br/>
+*BidIt*\
 Tipo di iteratore per le sottocorrispondenze.
 
 ## <a name="remarks"></a>Note
@@ -75,9 +75,9 @@ Una corrispondenza zero si può verificare quando un gruppo Capture è costituit
 
 ### <a name="operators"></a>Operatori
 
-|Operatore|Descrizione|
+|Operator|Descrizione|
 |-|-|
-|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Esegue il cast di una sottocorrispondenza a una stringa.|
+|[operatore basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Esegue il cast di una sottocorrispondenza a una stringa.|
 
 ## <a name="example"></a>Esempio
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parametri
 
-*right*<br/>
+*Ok*\
 Sottocorrispondenza da confrontare.
 
-*str*<br/>
+*Str*\
 Stringa da confrontare.
 
-*ptr*<br/>
+*PTR*\
 Sequenza con terminazione null da confrontare.
 
 ### <a name="remarks"></a>Note
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Note
 
-Contiene il membro **true** solo se il gruppo capture associato `*this` faceva parte della corrispondenza di espressione regolare.
+Il membro è **true** solo se il gruppo Capture associato a `*this` fa parte della corrispondenza di espressione regolare.
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -256,5 +256,5 @@ typedef è sinonimo di `iterator_traits<BidIt>::value_type`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)
