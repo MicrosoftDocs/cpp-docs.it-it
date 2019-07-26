@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f24d8fe99bc211e026172e42669cf5e430ad31e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412280"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459073"
 ---
 # <a name="strstreambuf-class"></a>Classe strstreambuf
 
-Descrive un buffer di flusso che controlla la trasmissione di elementi da e verso una sequenza di elementi archiviati in un **char** oggetto matrice.
+Descrive un buffer del flusso che controlla la trasmissione di elementi da e verso una sequenza di elementi archiviati in un oggetto matrice di **caratteri** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -93,12 +93,12 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parametri
 
-*_Freezeit*<br/>
-Oggetto **bool** che indica se si desidera che il flusso per essere bloccato.
+*_Freezeit*\
+**Bool** che indica se si desidera che il flusso venga bloccato.
 
 ### <a name="remarks"></a>Note
 
-Se *_Freezeit* è true, la funzione modifica archiviato `strstreambuf` modalità per rendere la sequenza controllata bloccata. In caso contrario, la sequenza controllata non viene bloccata.
+Se *_Freezeit* è true, la funzione modifica la modalità archiviata `strstreambuf` per rendere bloccata la sequenza controllata. In caso contrario, la sequenza controllata non viene bloccata.
 
 [str](#str) implica `freeze`.
 
@@ -181,16 +181,16 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametri
 
-*_Meta*<br/>
+*_Meta*\
 Carattere da inserire nel buffer o `EOF`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la funzione non può essere eseguita correttamente, restituisce `EOF`. In caso contrario, se  *\_Meta* == `EOF`, restituisce un valore diverso da `EOF`. In caso contrario, restituisce  *\_Meta*.
+Se la funzione non può essere eseguita correttamente, restituisce `EOF`. In caso contrario, se  *\_meta* == `EOF`, restituisce un valore diverso `EOF`da. In caso contrario, restituisce  *\_meta*.
 
 ### <a name="remarks"></a>Note
 
-Se  *\_Meta* ! = `EOF`, la funzione membro virtuale protetta tenta di inserire l'elemento `(char)_Meta` nel buffer di output. Questa operazione può essere eseguita in vari modi:
+`EOF`Se  *\_meta* ! =, la funzione membro virtuale protetta tenta di inserire l'elemento `(char)_Meta` nel buffer di output. Questa operazione può essere eseguita in vari modi:
 
 - Se è disponibile una posizione di scrittura, può archiviare l'elemento in tale posizione e incrementare il puntatore successivo per il buffer di output.
 
@@ -206,22 +206,22 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parametri
 
-*_Meta*<br/>
+*_Meta*\
 Carattere da inserire nel buffer o `EOF`.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la funzione non può essere eseguita correttamente, restituisce `EOF`. In caso contrario, se  *\_Meta* == `EOF`, restituisce un valore diverso da `EOF`. In caso contrario, restituisce  *\_Meta*.
+Se la funzione non può essere eseguita correttamente, restituisce `EOF`. In caso contrario, se  *\_meta* == `EOF`, restituisce un valore diverso `EOF`da. In caso contrario, restituisce  *\_meta*.
 
 ### <a name="remarks"></a>Note
 
 La funzione membro virtuale protetta tenta di reinserire un elemento nel buffer di input e quindi di renderlo l'elemento corrente a cui punta il puntatore successivo.
 
-Se  *\_Meta* == `EOF`, l'elemento da reinserire è effettivamente quello già nel flusso prima dell'elemento corrente. In caso contrario, l'elemento viene sostituito da `ch = (char)_Meta`. La funzione può reinserire un elemento in vari modi:
+*Se\_meta*,l'elemento`EOF`di cui eseguire il push è effettivamente quello già presente nel flusso prima dell'elemento corrente. ==  In caso contrario, l'elemento viene `ch = (char)_Meta`sostituito da. La funzione può reinserire un elemento in vari modi:
 
-- Se è disponibile una posizione di reinserimento e l'elemento archiviato esiste risulta uguale a `ch`, può decrementare il puntatore successivo per il buffer di input.
+- Se è disponibile una posizione reinserimento e l'elemento archiviato è uguale a `ch`, è possibile decrementare il puntatore successivo per il buffer di input.
 
-- Se è disponibile una posizione di reinserimento, e se la modalità strstreambuf la sequenza controllata è modificabile, la funzione può archiviare `ch` nella posizione di reinserimento e decrementare il puntatore successivo per il buffer di input.
+- Se è disponibile una posizione reinserimento e se la modalità strstreambuf indica che la sequenza controllata è modificabile, la funzione può `ch` archiviare nella posizione reinserimento e decrementare il puntatore successivo per il buffer di input.
 
 ## <a name="pcount"></a>  strstreambuf::pcount
 
@@ -237,7 +237,7 @@ Conteggio del numero di elementi scritti nella sequenza controllata.
 
 ### <a name="remarks"></a>Note
 
-In particolare, se [pptr](../standard-library/basic-streambuf-class.md#pptr) è un puntatore null, la funzione restituisce zero. In caso contrario, restituisce `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase).
+In particolare, se [pptr](../standard-library/basic-streambuf-class.md#pptr) è un puntatore null, la funzione restituisce zero. In caso contrario, `pptr`restituisce  -  [Pbase](../standard-library/basic-streambuf-class.md#pbase).
 
 ### <a name="example"></a>Esempio
 
@@ -270,13 +270,13 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parametri
 
-*_Off*<br/>
-La posizione da cercare relativo alla *Way*.
+*_Off*\
+Posizione da cercare rispetto a *_Way*.
 
-*_Way*<br/>
+*_Way*\
 Punto iniziale per le operazioni di offset. Vedere [seekdir](../standard-library/ios-base-class.md#seekdir) per i valori possibili.
 
-*_Which*<br/>
+*_Which*\
 Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
 
 ### <a name="return-value"></a>Valore restituito
@@ -289,15 +289,15 @@ La funzione membro virtuale protetta tenta di modificare le posizioni correnti p
 
 La nuova posizione è determinata nel modo seguente:
 
-- Se `_Way == ios_base::beg`, la nuova posizione corrisponde all'inizio del flusso più *Off*.
+- Se `_Way == ios_base::beg`, la nuova posizione corrisponde all'inizio del flusso più *_Off*.
 
-- Se `_Way == ios_base::cur`, la nuova posizione corrisponde la posizione corrente del flusso più *Off*.
+- Se `_Way == ios_base::cur`, la nuova posizione corrisponde alla posizione del flusso corrente più *_Off*.
 
-- Se `_Way == ios_base::end`, la nuova posizione corrisponde alla fine del flusso più *Off*.
+- Se `_Way == ios_base::end`, la nuova posizione corrisponde alla fine del flusso più *_Off*.
 
-Se `_Which & ios_base::in` è diverso da zero ed esiste il buffer di input, la funzione modifica la posizione successiva da leggere nel buffer di input. Se `_Which & ios_base::out` anche è diverso da zero, `_Way != ios_base::cur`ed è presente il buffer di output, la funzione imposta anche la posizione successiva da scrivere in modo che corrisponda alla posizione di lettura successiva.
+Se `_Which & ios_base::in` è diverso da zero e il buffer di input esiste, la funzione modifica la posizione successiva da leggere nel buffer di input. Se `_Which & ios_base::out` è anche diverso da zero `_Way != ios_base::cur`, e il buffer di output esiste, la funzione imposta anche la posizione successiva da scrivere in modo che corrisponda alla posizione successiva da leggere.
 
-In caso contrario, se `_Which & ios_base::out` è diverso da zero ed è presente il buffer di output, la funzione modifica la posizione successiva da scrivere nel buffer di output. In caso contrario, l'operazione di posizionamento avrà esito negativo. Affinché un'operazione di posizionamento abbia esito positivo, è necessario che la risultante posizione del flusso si trovi all'interno della sequenza controllata.
+In caso contrario `_Which & ios_base::out` , se è diverso da zero e il buffer di output esiste, la funzione modifica la posizione successiva da scrivere nel buffer di output. In caso contrario, l'operazione di posizionamento avrà esito negativo. Affinché un'operazione di posizionamento abbia esito positivo, è necessario che la risultante posizione del flusso si trovi all'interno della sequenza controllata.
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -309,10 +309,10 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parametri
 
-*_Sp*<br/>
+*_Sp*\
 Posizione da cercare.
 
-*_Which*<br/>
+*_Which*\
 Specifica la modalità per la posizione del puntatore. L'impostazione predefinita consente di modificare le posizioni di lettura e scrittura.
 
 ### <a name="return-value"></a>Valore restituito
@@ -321,7 +321,7 @@ Se la funzione modifica correttamente una o entrambe le posizioni del flusso, re
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta tenta di modificare le posizioni correnti per i flussi controllati. Per un oggetto della classe strstreambuf, una posizione del flusso è costituita essenzialmente da un offset del flusso. L'offset zero designa il primo elemento della sequenza controllata. La nuova posizione è determinata dal *_Sp*.
+La funzione membro virtuale protetta tenta di modificare le posizioni correnti per i flussi controllati. Per un oggetto della classe strstreambuf, una posizione del flusso è costituita essenzialmente da un offset del flusso. L'offset zero designa il primo elemento della sequenza controllata. La nuova posizione è determinata da *_Sp*.
 
 Se `_Which` & **ios_base::in** è diverso da zero ed è presente il buffer di input, la funzione modifica la posizione di lettura successiva nel buffer di input. Se `_Which` & `ios_base::out` è diverso da zero ed è presente il buffer di output, la funzione imposta anche la posizione di scrittura successiva in modo che corrisponda alla posizione di lettura successiva. In caso contrario, se `_Which` & `ios_base::out` è diverso da zero ed è presente il buffer di output, la funzione modifica la posizione successiva per la scrittura nel buffer di output. In caso contrario, l'operazione di posizionamento avrà esito negativo. Affinché un'operazione di posizionamento abbia esito positivo, è necessario che la posizione del flusso risultante si trovi all'interno della sequenza controllata.
 
@@ -379,26 +379,26 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parametri
 
-*_Allocfunc*<br/>
+*_Allocfunc*\
 Funzione usata per allocare memoria del buffer.
 
-*count*<br/>
-Determina la lunghezza del buffer a cui punta *_Getptr*. Se *_Getptr* non è un argomento (primo form del costruttore), dimensione di allocazione suggerita per i buffer.
+*conteggio*\
+Determina la lunghezza del buffer a cui punta *_Getptr*. Se *_Getptr* non è un argomento (primo form del costruttore), dimensione di allocazione consigliata per i buffer.
 
-*_Freefunc*<br/>
+*_Freefunc*\
 Funzione usata per liberare memoria del buffer.
 
-*_Getptr*<br/>
+*_Getptr*\
 Buffer usato per l'input.
 
-*_Putptr*<br/>
+*_Putptr*\
 Buffer usato per l'output.
 
 ### <a name="remarks"></a>Note
 
-Il primo costruttore archivia un puntatore null in tutti i puntatori che controllano il buffer di input, il buffer di output e l'allocazione strstreambuf. Imposta la modalità strstreambuf archiviata in modo da rendere la sequenza controllata modificabile ed estendibile. L'attività accetta inoltre *conteggio* come una dimensione di allocazione iniziale suggerita.
+Il primo costruttore archivia un puntatore null in tutti i puntatori che controllano il buffer di input, il buffer di output e l'allocazione strstreambuf. Imposta la modalità strstreambuf archiviata in modo da rendere la sequenza controllata modificabile ed estendibile. Accetta inoltre il *conteggio* come dimensioni di allocazione iniziali suggerite.
 
-Il secondo costruttore si comporta come la prima, ad eccezione del fatto che archivia  *\_Allocfunc* come puntatore alla funzione da chiamare per allocare spazio di archiviazione e  *\_Freefunc* del puntatore per la funzione da chiamare per liberare tale memoria.
+Il secondo costruttore si comporta come il primo, ad eccezione del fatto che archivia  *\_Allocfunc* come puntatore alla funzione da chiamare per allocare spazio di archiviazione e  *\_Freefunc* come puntatore alla funzione da chiamare per liberare tale spazio di archiviazione.
 
 I tre costruttori seguenti:
 
@@ -418,11 +418,11 @@ strstreambuf(unsigned char *_Getptr,
 
 si comportano come il primo, ad eccezione del fatto che `_Getptr` designa l'oggetto matrice usato per contenere la sequenza controllata. Di conseguenza, non deve essere un puntatore null. Il numero di elementi *N* nella matrice è determinato nel modo seguente:
 
-- Se (`count` > 0), quindi *N* è `count`.
+- Se (`count` > 0), *N* è `count`.
 
-- Se (`count` = = 0), quindi *N* viene `strlen`(( **const** `char` *) `_Getptr` ).
+- Se (`count` = = 0), *N* `strlen`è (( **const** `char` *) `_Getptr` ).
 
-- Se (`count` < 0), quindi *N* viene **INT_MAX**.
+- Se (`count` < 0), *N* è **INT_MAX**.
 
 Se `_Putptr` è un puntatore null, la funzione stabilisce soltanto un buffer di input mediante il codice seguente:
 
@@ -480,11 +480,11 @@ Se la funzione non può essere eseguita correttamente, restituisce `EOF`. In cas
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta tenta di estrarre l'elemento corrente `ch` dal buffer di input, quindi incrementa la posizione del flusso corrente e restituisce l'elemento come (`int`) (`unsigned char`) **ch**. È possibile farlo in un solo modo: se è disponibile una posizione di lettura, accetta `ch` come elemento archiviato nella posizione di lettura e incrementa il puntatore successivo per il buffer di input.
+La funzione membro virtuale protetta tenta di estrarre l' `ch` elemento corrente dal buffer di input, quindi avanza la posizione del flusso corrente e restituisce l'elemento come (`int`) (`unsigned char`) **ch**. Questa operazione può essere eseguita solo in un modo: se è disponibile una posizione di lettura, `ch` accetta come elemento archiviato nella posizione di lettura e sposta in avanti il puntatore successivo per il buffer di input.
 
 ## <a name="see-also"></a>Vedere anche
 
-[streambuf](../standard-library/streambuf-typedefs.md#streambuf)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Programmazione iostream](../standard-library/iostream-programming.md)<br/>
-[Convenzioni di iostream](../standard-library/iostreams-conventions.md)<br/>
+[streambuf](../standard-library/streambuf-typedefs.md#streambuf)\
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Programmazione di iostream](../standard-library/iostream-programming.md)\
+[Convenzioni di iostream](../standard-library/iostreams-conventions.md)
