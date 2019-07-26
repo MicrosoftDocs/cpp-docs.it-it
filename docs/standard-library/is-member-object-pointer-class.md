@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_object_pointer class
 - is_member_object_pointer
 ms.assetid: 64f9cdf3-4621-4310-a076-a7bc986926b9
-ms.openlocfilehash: 401beed2a45be0492ba1a5cbd57cc92153dbaa91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37d836c3626b492750ffa28c378413757119c9d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351079"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456161"
 ---
 # <a name="ismemberobjectpointer-class"></a>Classe is_member_object_pointer
 
@@ -27,12 +27,12 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>Parametri
 
-*Ty*<br/>
+*Ty*\
 Tipo su cui eseguire una query.
 
 ## <a name="remarks"></a>Note
 
-Un'istanza del tipo predicato contiene true se il tipo *Ty* è un puntatore a un oggetto membro o un `cv-qualified` puntatore a un oggetto membro, in caso contrario, contiene false. Si noti che `is_member_object_pointer` contiene false se *Ty* è un puntatore a funzione membro.
+Un'istanza del predicato di tipo include true se il tipo *Ty* è un puntatore a un oggetto `cv-qualified` membro o un puntatore a un oggetto membro; in caso contrario, include false. Si noti `is_member_object_pointer` che include false se *Ty* è un puntatore a una funzione membro.
 
 ## <a name="example"></a>Esempio
 
@@ -85,5 +85,5 @@ is_member_object_pointer<int (functional::*)()> == false
 
 ## <a name="see-also"></a>Vedere anche
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Classe is_member_pointer](../standard-library/is-member-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Classe is_member_pointer](../standard-library/is-member-pointer-class.md)
