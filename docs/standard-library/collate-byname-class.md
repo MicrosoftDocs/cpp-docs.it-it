@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: 46eb139bafcf7368688f32cce37e38362c158c91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405183"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458616"
 ---
 # <a name="collatebyname-class"></a>Classe collate_byname
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Parametri
 
-*_Locname*<br/>
+*_Locname*\
 Impostazioni locali denominate.
 
-*_Refs*<br/>
+*_Refs*\
 Conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note
 
-La classe modello descrive un oggetto che può fungere da [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Il comportamento è determinato dal [denominate](../standard-library/locale-class.md#name) delle impostazioni locali *_Locname*. Ogni costruttore inizializza l'oggetto di base con [collate](../standard-library/collate-class.md#collate)\<CharType> (`_Refs`).
+La classe modello descrive un oggetto che può fungere da [facet delle impostazioni locali](../standard-library/locale-class.md#facet_class) di tipo [collate](../standard-library/collate-class.md#collate)\<CharType>. Il comportamento è determinato dalle impostazioni [](../standard-library/locale-class.md#name) locali denominate *_Locname*. Ogni costruttore inizializza l'oggetto di base con [collate](../standard-library/collate-class.md#collate)\<CharType> (`_Refs`).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -57,4 +57,4 @@ La classe modello descrive un oggetto che può fungere da [facet delle impostazi
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

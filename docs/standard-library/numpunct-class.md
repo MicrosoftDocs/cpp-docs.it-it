@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371477"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454188"
 ---
 # <a name="numpunct-class"></a>Classe numpunct
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*<br/>
+*CharType*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri delle impostazioni locali.
 
 ## <a name="remarks"></a>Note
@@ -59,24 +59,24 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-|-|
 |[numpunct](#numpunct)|Costruttore per oggetti di tipo `numpunct`.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|Nome del tipo|DESCRIZIONE|
 |-|-|
 |[char_type](#char_type)|Tipo utilizzato per descrivere un carattere utilizzato dalle impostazioni locali.|
 |[string_type](#string_type)|Tipo che descrive una stringa contenente caratteri di tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[decimal_point](#decimal_point)|Restituisce un elemento specifico delle impostazioni locali da utilizzare come virgola decimale.|
 |[do_decimal_point](#do_decimal_point)|Funzione membro virtuale protetta chiamata per restituire un elemento specifico delle impostazioni locali da utilizzare come virgola decimale.|
-|[do_falsename](#do_falsename)|Funzione membro virtuale viene chiamata per restituire una stringa da usare come rappresentazione testo del valore protetta **false**.|
+|[do_falsename](#do_falsename)|Funzione membro virtuale protetta chiamata per restituire una stringa da utilizzare come rappresentazione testo del valore **false**.|
 |[do_grouping](#do_grouping)|Funzione membro virtuale protetta chiamata per restituire una regola specifica delle impostazioni locali per determinare la modalità di raggruppamento delle cifre a sinistra di una virgola decimale.|
 |[do_thousands_sep](#do_thousands_sep)|Funzione membro virtuale protetta chiamata per restituire un elemento specifico delle impostazioni locali da utilizzare come separatore delle migliaia.|
 |[do_truename](#do_truename)|Funzione membro virtuale protetta chiamata per restituire una stringa da usare come rappresentazione testo del valore **true**.|
@@ -200,7 +200,7 @@ La funzione membro virtuale protetta restituisce una regola specifica delle impo
 
 ### <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata da `grouping`.
+Vedere l'esempio per il [raggruppamento](#grouping), in cui la funzione membro virtuale viene chiamata `grouping`da.
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ Restituisce un elemento specifico delle impostazioni locali da utilizzare come s
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta restituisce un elemento specifico delle impostazioni locali di tipo `CharType` da usare come separatore dei gruppi a sinistra della virgola decimale.
+La funzione membro virtuale protetta restituisce un elemento specifico delle impostazioni locali di tipo `CharType` da utilizzare come separatore di gruppo a sinistra di un separatore decimale.
 
 ### <a name="example"></a>Esempio
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Stringa che contiene una sequenza di `CharType`per usare come rappresentazione testo del valore **false**.
+Stringa contenente una sequenza di `CharType`oggetti da utilizzare come rappresentazione testuale del valore **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*<br/>
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il *_Refs* parametro e i relativi significati sono:
+I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
 - 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
 - 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non definiti.
+- \> 1: Questi valori non sono definiti.
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
-Il costruttore inizializza l'oggetto di base con **delle impostazioni locali::/**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Il costruttore inizializza l'oggetto di base con **locale::** [](../standard-library/locale-class.md#facet_class)facet`_Refs`().
 
 ## <a name="string_type"></a>  numpunct::string_type
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Classe facet](../standard-library/locale-class.md#facet_class)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Classe facet](../standard-library/locale-class.md#facet_class)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

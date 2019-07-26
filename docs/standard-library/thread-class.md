@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f663034cdc7985dd440a1cdfdd659358c4e250f4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412072"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458579"
 ---
 # <a name="thread-class"></a>Classe thread
 
@@ -42,15 +42,15 @@ class thread;
 
 ## <a name="remarks"></a>Note
 
-È possibile usare una **thread** oggetto da verificare e gestire un thread di esecuzione all'interno di un'applicazione. Un oggetto thread creato mediante il costruttore predefinito non è associato ad alcun thread di esecuzione. Un oggetto thread costruito mediante un oggetto chiamabile crea un nuovo thread di esecuzione e chiama l'oggetto chiamabile in tale thread. Gli oggetti thread possono essere spostati ma non copiati. Di conseguenza, un thread di esecuzione può essere associato a un solo oggetto thread.
+È possibile usare un oggetto **thread** per osservare e gestire un thread di esecuzione all'interno di un'applicazione. Un oggetto thread creato mediante il costruttore predefinito non è associato ad alcun thread di esecuzione. Un oggetto thread costruito mediante un oggetto chiamabile crea un nuovo thread di esecuzione e chiama l'oggetto chiamabile in tale thread. Gli oggetti thread possono essere spostati ma non copiati. Di conseguenza, un thread di esecuzione può essere associato a un solo oggetto thread.
 
 Ogni thread di esecuzione ha un identificatore univoco di tipo `thread::id`. La funzione `this_thread::get_id` restituisce l'identificatore del thread chiamante. La funzione membro `thread::get_id` restituisce l'identificatore del thread gestito da un oggetto thread. Per un oggetto thread costruito in modo predefinito, il metodo `thread::get_id` restituisce un oggetto di valore uguale a quello di tutti gli oggetti thread costruiti in modo predefinito e diverso dal valore restituito da `this_thread::get_id` per qualsiasi thread di esecuzione che è possibile sottoporre a join al momento della chiamata.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-classes"></a>Classi pubbliche
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[Classe thread::id](#id_class)|Identifica in modo univoco il thread associato.|
 
@@ -58,29 +58,29 @@ Ogni thread di esecuzione ha un identificatore univoco di tipo `thread::id`. La 
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[thread](#thread)|Costruisce un **thread** oggetto.|
+|[thread](#thread)|Costruisce un oggetto **thread** .|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[detach](#detach)|Dissocia il thread associato dal **thread** oggetto.|
+|[detach](#detach)|Scollega il thread associato dall'oggetto **thread** .|
 |[get_id](#get_id)|Restituisce l'identificatore univoco del thread associato.|
 |[hardware_concurrency](#hardware_concurrency)|Statico. Restituisce una stima del numero di contesti di thread hardware.|
 |[join](#join)|Si blocca fino al completamento del thread associato.|
 |[joinable](#joinable)|Specifica se il thread associato è sottoponibile a join.|
 |[native_handle](#native_handle)|Restituisce il tipo specifico dell'implementazione che rappresenta l'handle del thread.|
-|[swap](#swap)|Scambia lo stato dell'oggetto con un oggetto specificato **thread** oggetto.|
+|[swap](#swap)|Scambia lo stato dell'oggetto con un oggetto **thread** specificato.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[thread::operator=](#op_eq)|Associa un thread con l'attuale **thread** oggetto.|
+|[thread::operator=](#op_eq)|Associa un thread all'oggetto **thread** corrente.|
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** \<thread >
+**Intestazione:** \<> thread
 
 **Spazio dei nomi:** std
 
@@ -152,7 +152,7 @@ void join();
 
 Se la chiamata ha esito positivo, le chiamate successive a [get_id](#get_id) per l'oggetto chiamante restituiscono un oggetto [thread::id](#id_class) predefinito che non risulta uguale al `thread::id` di alcun thread esistente. Se le chiamata ha esito negativo, il valore restituito da `get_id` rimane invariato.
 
-## <a name="joinable"></a>  thread::joinable
+## <a name="joinable"></a>thread:: joinable
 
 Specifica se il thread associato è *sottoponibile a join*.
 
@@ -162,7 +162,7 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>Valore restituito
 
-**true** se il thread associato *sottoponibile a join*; in caso contrario, **false**.
+**true** se il thread associato è *partecipabile*; in caso contrario, **false**.
 
 ### <a name="remarks"></a>Note
 
@@ -190,8 +190,8 @@ thread& operator=(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Altro*<br/>
-Oggetto **thread** oggetto.
+*Altri*\
+Oggetto **thread** .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -205,7 +205,7 @@ Dopo l'associazione, `Other` viene impostato su uno stato costruito in modo pred
 
 ## <a name="swap"></a>  thread::swap
 
-Scambia lo stato dell'oggetto con quello di un oggetto specificato **thread** oggetto.
+Scambia lo stato dell'oggetto con quello di un oggetto **thread** specificato.
 
 ```cpp
 void swap(thread& Other) noexcept;
@@ -213,12 +213,12 @@ void swap(thread& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*Altro*<br/>
-Oggetto **thread** oggetto.
+*Altri*\
+Oggetto **thread** .
 
 ## <a name="thread"></a>  Costruttore thread::thread
 
-Costruisce un **thread** oggetto.
+Costruisce un oggetto **thread** .
 
 ```cpp
 thread() noexcept;
@@ -230,24 +230,24 @@ thread(thread&& Other) noexcept;
 
 ### <a name="parameters"></a>Parametri
 
-*F*<br/>
+*F*\
 Una funzione definita dall'applicazione che deve essere eseguita dal thread.
 
-*A*<br/>
-Un elenco di argomenti da passare al *F*.
+*UN*\
+Elenco di argomenti da passare a *F*.
 
-*Altro*<br/>
-Un oggetto esistente **thread** oggetto.
+*Altri*\
+Oggetto **thread** esistente.
 
 ### <a name="remarks"></a>Note
 
 Il primo costruttore crea un oggetto non associato a un thread di esecuzione. Il valore restituito da una chiamata a `get_id` per l'oggetto costruito è `thread::id()`.
 
-Il secondo costruttore crea un oggetto associato a un nuovo thread di esecuzione ed esegue la pseudo-funzione `INVOKE` definita in [\<functional>](../standard-library/functional.md). Se non sono disponibili risorse sufficienti per avviare un nuovo thread, la funzione genera un oggetto [system_error](../standard-library/system-error-class.md) con codice di errore `resource_unavailable_try_again`. Se la chiamata a *F* termina con un'eccezione non rilevata, [terminare](../standard-library/exception-functions.md#terminate) viene chiamato.
+Il secondo costruttore crea un oggetto associato a un nuovo thread di esecuzione ed esegue la pseudo-funzione `INVOKE` definita in [\<functional>](../standard-library/functional.md). Se non sono disponibili risorse sufficienti per avviare un nuovo thread, la funzione genera un oggetto [system_error](../standard-library/system-error-class.md) con codice di errore `resource_unavailable_try_again`. Se la chiamata a *F* termina con un'eccezione non rilevata [](../standard-library/exception-functions.md#terminate) , viene chiamato il metodo terminate.
 
 Il terzo costruttore crea un oggetto associato al thread a sua volta associato a `Other`. `Other` viene quindi impostato su uno stato costruito in modo predefinito.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<thread>](../standard-library/thread.md)<br/>
+[Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
+[\<thread>](../standard-library/thread.md)

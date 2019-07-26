@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405170"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458594"
 ---
 # <a name="collate-class"></a>Classe collate
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parametri
 
-*CharType*<br/>
+*CharType*\
 Tipo utilizzato all'interno di un programma per codificare i caratteri.
 
 ## <a name="remarks"></a>Note
@@ -51,20 +51,20 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|Descrizione|
+|Costruttore|DESCRIZIONE|
 |-|-|
 |[collate](#collate)|Costruttore per gli oggetti della classe `collate` utilizzato come facet delle impostazioni locali per gestire le convenzioni di ordinamento delle stringhe.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|Nome del tipo|DESCRIZIONE|
 |-|-|
 |[char_type](#char_type)|Tipo che descrive un carattere di tipo `CharType`.|
 |[string_type](#string_type)|Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[compare](#compare)|Confronta due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.|
 |[do_compare](#do_compare)|Funzione virtuale chiamata per confrontare due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.|
@@ -108,23 +108,23 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Parametri
 
-*_Refs*<br/>
+*_Refs*\
 Valore Integer che consente di specificare il tipo di gestione della memoria per l'oggetto.
 
-*_Locname*<br/>
+*_Locname*\
 Nome delle impostazioni locali.
 
 ### <a name="remarks"></a>Note
 
-I valori possibili per il *_Refs* parametro e i relativi significati sono:
+I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
 - 0: La durata dell'oggetto è gestita dalle impostazioni locali che lo contengono.
 
 - 1: La durata dell'oggetto deve essere gestita manualmente.
 
-- \> 1: Questi valori non definiti.
+- \> 1: Questi valori non sono definiti.
 
-Il costruttore inizializza l'oggetto di base con **delle impostazioni locali::/**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Il costruttore inizializza l'oggetto di base con **locale::** [](../standard-library/locale-class.md#facet_class)facet`_Refs`().
 
 ## <a name="compare"></a> collate::compare
 
@@ -139,25 +139,25 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametri
 
-*first1*<br/>
+*First1*\
 Puntatore al primo elemento nella prima sequenza da confrontare.
 
-*last1*<br/>
+*Last1*\
 Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 
-*first2*<br/>
+*first2*\
 Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-*last2*<br/>
+*Last2*\
 Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
 La funzione membro restituisce:
 
-- - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
+- \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- + 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
@@ -205,31 +205,31 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parametri
 
-*first1*<br/>
+*First1*\
 Puntatore al primo elemento nella prima sequenza da confrontare.
 
-*last1*<br/>
+*Last1*\
 Puntatore all'ultimo elemento nella prima sequenza da confrontare.
 
-*first2*<br/>
+*first2*\
 Puntatore al primo elemento nella seconda sequenza da confrontare.
 
-*last2*<br/>
+*Last2*\
 Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 ### <a name="return-value"></a>Valore restituito
 
 La funzione membro restituisce:
 
-- - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
+- \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- + 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetto confronta la sequenza in [* first1, Last1) * con la sequenza in *[first2, last2*). Confronta i valori applicando `operator<` tra le coppie di elementi corrispondenti di tipo `CharType`. La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
+La funzione membro virtuale protetta confronta la sequenza in [* first1, last1) * con la sequenza in *[first2, last2*). Confronta i valori applicando `operator<` tra coppie di elementi corrispondenti di tipo. `CharType` La prima sequenza ottiene un risultato inferiore se contiene l'elemento più piccolo della prima coppia non equivalente rilevata nel confronto delle sequenze, oppure se non ci sono coppie non equivalenti, ma la prima sequenza è più breve.
 
 ### <a name="example"></a>Esempio
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*first*<br/>
+*prima*\
 Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*last*<br/>
+*Ultima*\
 Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parametri
 
-*first*<br/>
+*prima*\
 Puntatore al primo carattere nella sequenza da convertire.
 
-*last*<br/>
+*Ultima*\
 Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*first*<br/>
+*prima*\
 Un puntatore al primo carattere nella sequenza il cui valore deve essere determinato.
 
-*last*<br/>
+*Ultima*\
 Un puntatore all'ultimo carattere nella sequenza il cui valore deve essere determinato.
 
 ### <a name="return-value"></a>Valore restituito
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parametri
 
-*first*<br/>
+*prima*\
 Puntatore al primo carattere nella sequenza da convertire.
 
-*last*<br/>
+*Ultima*\
 Puntatore all'ultimo carattere nella sequenza da convertire.
 
 ### <a name="return-value"></a>Valore restituito
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Vedere anche
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

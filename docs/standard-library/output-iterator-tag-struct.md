@@ -7,16 +7,16 @@ helpviewer_keywords:
 - output_iterator_tag class
 - output_iterator_tag struct
 ms.assetid: c23a4331-b069-4fa0-9c3a-1c9be7095553
-ms.openlocfilehash: cb2a59d2c81e6d7cc80de2714ba86476c5fa837f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 942e2214f42f97e262d4daf7836e8b6ced0e0ab2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370853"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453013"
 ---
 # <a name="outputiteratortag-struct"></a>Struct output_iterator_tag
 
-Una classe che fornisce un tipo restituito per `iterator_category` funzione che rappresenta un iteratore di output.
+Classe che fornisce un tipo restituito per la `iterator_category` funzione che rappresenta un iteratore di output.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,15 +24,15 @@ struct output_iterator_tag {};
 
 ## <a name="remarks"></a>Note
 
-Le classi di tag di categoria vengono usate come tag di compilazione per la selezione dell'algoritmo. La funzione modello deve trovare la categoria più specifica dell'argomento iteratore in modo da usare l'algoritmo più efficiente in fase di compilazione. Per ciascun iteratore di tipo `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** deve essere definito come il tag di categoria più specifico che descrive il comportamento dell'iteratore.
+Le classi di tag di categoria vengono usate come tag di compilazione per la selezione dell'algoritmo. La funzione modello deve trovare la categoria più specifica dell'argomento iteratore in modo da usare l'algoritmo più efficiente in fase di compilazione. Per ciascun iteratore di tipo `Iterator`, `iterator_traits`< `Iterator`>  **::iterator_category** deve essere definito come il tag di categoria più specifico che descrive il comportamento dell'iteratore.
 
-Il tipo è identico **iteratore** \< **Iter**> **:: iterator_category** quando `Iter` descrive un oggetto che può essere utilizzato come un iteratore di output.
+Il tipo è uguale a **iterator** \< **iter**>  **:: iterator_category** quando `Iter` descrive un oggetto che può essere utilizzato come iteratore di output.
 
 Il tag non è basato sui parametri di `value_type` o `difference_type` per l'iteratore, come accade con altri tag dell'iteratore, in quanto gli iteratori di output non hanno un `value_type` o un `difference_type`.
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [iterator_traits](../standard-library/iterator-traits-struct.md) oppure [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) per un esempio di come usare `iterator_tag`s.
+Per un esempio [](../standard-library/random-access-iterator-tag-struct.md) su come usare `iterator_tag`i, vedere [iterator_traits](../standard-library/iterator-traits-struct.md) o random_access_iterator_tag.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -42,5 +42,5 @@ Visualizzare [iterator_traits](../standard-library/iterator-traits-struct.md) op
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

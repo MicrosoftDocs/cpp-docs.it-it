@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 068e59fdc19821487bc78141d10743363221518e
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323804"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375843"
 ---
 # <a name="cstdiofile-class"></a>Classe CStdioFile
 
-Rappresenta un file di flusso di runtime C come aperto dalla funzione di runtime [fopen](../../c-runtime-library/reference/fopen-wfopen.md).
+Rappresenta un file di flusso della fase di esecuzione del linguaggio C aperto dalla funzione di [](../../c-runtime-library/reference/fopen-wfopen.md)Runtime fopen.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,40 +35,40 @@ Rappresenta un file di flusso di runtime C come aperto dalla funzione di runtime
 class CStdioFile : public CFile
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[CStdioFile::CStdioFile](#cstdiofile)|Costruisce un `CStdioFile` oggetto da un puntatore di file o percorso.|
+|[CStdioFile::CStdioFile](#cstdiofile)|Costruisce un `CStdioFile` oggetto da un puntatore a un percorso o a un file.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CStdioFile::Open](#open)|Di overload. Open è progettato per l'uso con il valore predefinito `CStdioFile` costruttore (esegue l'override [CFile::Open](../../mfc/reference/cfile-class.md#open)).|
+|[CStdioFile::Open](#open)|Di overload. Open è progettato per l'uso con il `CStdioFile` costruttore predefinito (esegue l'override di [CFile:: Open](../../mfc/reference/cfile-class.md#open)).|
 |[CStdioFile::ReadString](#readstring)|Legge una singola riga di testo.|
 |[CStdioFile::Seek](#seek)|Posiziona il puntatore del file corrente.|
 |[CStdioFile::WriteString](#writestring)|Scrive una singola riga di testo.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CStdioFile::m_pStream](#m_pstream)|Contiene un puntatore a un file aperto.|
 
 ## <a name="remarks"></a>Note
 
-Stream file vengono memorizzati nel buffer e possono essere aperti in modalità testo (impostazione predefinita) o in modalità binaria.
+I file di flusso vengono memorizzati nel buffer e possono essere aperti in modalità testo (impostazione predefinita) o in modalità binaria.
 
-La modalità testo offre un'elaborazione speciale per le coppie di ritorno a capo con avanzamento di riga. Quando si scrive una nuova riga (0x0A) di caratteri da una modalità testo `CStdioFile` (oggetto), la coppia di byte (, 0x0D 0x0A) viene inviato al file. Quando si leggono, la coppia di byte (, 0x0D 0x0A) viene convertita in un singolo byte 0x0A.
+La modalità testo fornisce un'elaborazione speciale per le coppie ritorno a capo/avanzamento riga. Quando si scrive un carattere di avanzamento riga (0x0A) in un oggetto in modalità `CStdioFile` testo, la coppia di byte (0x0D, 0x0A) viene inviata al file. Quando si esegue la lettura, la coppia di byte (0x0D, 0x0A) viene convertita in un singolo byte 0x0A.
 
-Il [CFile](../../mfc/reference/cfile-class.md) funzioni [duplicato](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), e [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) non sono supportati per `CStdioFile`.
+Le funzioni [CFile](../../mfc/reference/cfile-class.md) [duplicate](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange)e [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) non sono supportate per `CStdioFile`.
 
 Se si chiamano queste funzioni su un `CStdioFile`, si otterrà un [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-Per altre informazioni sull'uso `CStdioFile`, vedere gli articoli [file in MFC](../../mfc/files-in-mfc.md) e [gestione File](../../c-runtime-library/file-handling.md) nel *Run-Time Library Reference*.
+Per ulteriori informazioni sull'utilizzo `CStdioFile`di, vedere gli articoli [file in MFC](../../mfc/files-in-mfc.md) e [gestione dei file](../../c-runtime-library/file-handling.md) in riferimenti alla libreria di *Runtime*.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -104,30 +104,30 @@ CStdioFile(
 ### <a name="parameters"></a>Parametri
 
 *pOpenStream*<br/>
-Specifica il puntatore del file restituito da una chiamata alla funzione runtime C [fopen](../../c-runtime-library/reference/fopen-wfopen.md).
+Specifica il puntatore del file restituito da una chiamata alla funzione di runtime del linguaggio [](../../c-runtime-library/reference/fopen-wfopen.md)C fopen.
 
 *lpszFileName*<br/>
 Specifica una stringa che rappresenta il percorso del file desiderato. Il percorso può essere relativo o assoluto.
 
 *nOpenFlags*<br/>
-Specifica le opzioni per la creazione di file, la condivisione di file e modalità di accesso ai file. È possibile specificare più opzioni tramite l'operatore OR bit per bit ( **|** ) operatore.
+Specifica le opzioni per la creazione di file, la condivisione di file e le modalità di accesso ai file. È possibile specificare più opzioni usando l'operatore OR bit per **|** bit ().
 
-Un'opzione di modalità accesso file è obbligatoria. altre modalità sono facoltativi. Visualizzare [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) per un elenco di opzioni di modalità e altri flag. In MFC 3.0 e versioni successive, i flag di condivisione sono consentiti.
+È necessaria un'opzione per la modalità di accesso ai file. altre modalità sono facoltative. Per un elenco di opzioni di modalità e altri flag, vedere [CFile:: CFile](../../mfc/reference/cfile-class.md#cfile) . In MFC versione 3,0 e successive, i flag di condivisione sono consentiti.
 
 *pTM*<br/>
-Puntatore all'oggetto CAtlTransactionManager.
+Puntatore all'oggetto all'CAtlTransactionManager.
 
 ### <a name="remarks"></a>Note
 
-Il costruttore predefinito non allega un file per il `CStdioFile` oggetto. Quando si utilizza questo costruttore, è necessario usare il `CStdioFile::Open` metodo per aprire un file e associarlo al `CStdioFile` oggetto.
+Il costruttore predefinito non connette un file all' `CStdioFile` oggetto. Quando si utilizza questo costruttore, è necessario utilizzare `CStdioFile::Open` il metodo per aprire un file e collegarlo `CStdioFile` all'oggetto.
 
-Il costruttore di parametro singolo associa un flusso di file aperti per la `CStdioFile` oggetto. Consentiti i valori di puntatore includono i puntatori di file di input/output predefiniti *stdin*, *stdout*, o *stderr*.
+Il costruttore a parametro singolo connette un flusso di file aperto all' `CStdioFile` oggetto. I valori di puntatore consentiti includono i puntatori del file di input/output predefiniti *stdin*, *stdout*o *stderr*.
 
-Il costruttore due parametri crea una `CStdioFile` dell'oggetto e apre il file corrispondente con il percorso specificato.
+Il costruttore a due parametri crea un `CStdioFile` oggetto e apre il file corrispondente con il percorso specificato.
 
-Se viene passato NULL per uno *pOpenStream* oppure *lpszFileName*, il costruttore genera un `CInvalidArgException*`.
+Se si passa NULL sia per *pOpenStream* che per *lpszFileName*, il costruttore genera `CInvalidArgException*`un'eccezione.
 
-Se il file non può essere aperto o creato, il costruttore genera un `CFileException*`.
+Se il file non può essere aperto o creato, il costruttore genera `CFileException*`un'eccezione.
 
 ### <a name="example"></a>Esempio
 
@@ -135,7 +135,7 @@ Se il file non può essere aperto o creato, il costruttore genera un `CFileExcep
 
 ##  <a name="m_pstream"></a>  CStdioFile::m_pStream
 
-Il `m_pStream` membro dati è il puntatore a un file aperto così come viene restituito dalla funzione di runtime C `fopen`.
+Il `m_pStream` membro dati è il puntatore a un file aperto restituito dalla funzione `fopen`di runtime del linguaggio C.
 
 ```
 FILE* m_pStream;
@@ -143,11 +143,11 @@ FILE* m_pStream;
 
 ### <a name="remarks"></a>Note
 
-È NULL se il file non è mai stato aperto o è stata chiusa.
+È NULL se il file non è mai stato aperto o è stato chiuso.
 
 ##  <a name="open"></a>  CStdioFile::Open
 
-Di overload. Open è progettato per l'uso con il valore predefinito `CStdioFile` costruttore.
+Di overload. Open è progettato per essere utilizzato con il `CStdioFile` costruttore predefinito.
 
 ```
 virtual BOOL Open(
@@ -168,10 +168,10 @@ virtual BOOL Open(
 Stringa che rappresenta il percorso del file desiderato. Il percorso può essere relativo o assoluto.
 
 *nOpenFlags*<br/>
-Modalità di condivisione e l'accesso. Specifica l'azione da intraprendere quando si apre il file. È possibile combinare le opzioni con OR bit per bit (&#124;) operatore. L'autorizzazione di un accesso e una condivisione di opzione sono necessarie; le modalità modeCreate e modeNoInherit sono facoltative.
+Modalità di condivisione e accesso. Specifica l'azione da intraprendere quando si apre il file. È possibile combinare le opzioni usando l'operatore OR bit per&#124;bit (). Sono necessarie un'autorizzazione di accesso e un'opzione di condivisione; le modalità modeCreate e modeNoInherit sono facoltative.
 
 *pError*<br/>
-Un puntatore a un oggetto eccezione di file esistente che verrà visualizzato lo stato di un'operazione non riuscita.
+Puntatore a un oggetto di eccezione del file esistente che riceverà lo stato di un'operazione non riuscita.
 
 *pTM*<br/>
 Puntatore a un oggetto `CAtlTransactionManager`.
@@ -184,7 +184,7 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 ##  <a name="readstring"></a>  CStdioFile::ReadString
 
-Legge i dati di testo in un buffer, fino a un limite di *nMax*-1 caratteri, dal file di cui è associato il `CStdioFile` oggetto.
+Legge i dati di testo in un buffer, fino a un limite di *nmax*-1 caratteri, dal file associato `CStdioFile` all'oggetto.
 
 ```
 virtual LPTSTR ReadString(
@@ -200,23 +200,23 @@ virtual BOOL ReadString(CString& rString);
 Specifica un puntatore a un buffer fornito dall'utente che riceverà una stringa di testo con terminazione null.
 
 *nMax*<br/>
-Specifica il numero massimo di caratteri da leggere, senza contare il carattere di terminazione null.
+Specifica il numero massimo di caratteri da leggere, senza contare il carattere null di terminazione.
 
 *rString*<br/>
-Un riferimento a un `CString` che conterrà la stringa quando la funzione restituisce.
+Riferimento a un oggetto `CString` che conterrà la stringa quando la funzione restituisce un valore.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore al buffer che contiene i dati di testo. NULL se è stata raggiunta la fine del file senza dover leggere tutti i dati; o se è stato raggiunto il valore boolean, FALSE se la fine del file senza dover leggere tutti i dati.
+Puntatore al buffer che contiene i dati di testo. NULL se è stata raggiunta la fine del file senza leggere alcun dato; o se booleano, FALSE se è stata raggiunta la fine del file senza leggere i dati.
 
 ### <a name="remarks"></a>Note
 
-La lettura è stata arrestata dal primo carattere di nuova riga. Se, in tal caso, un numero minore rispetto *nMax*-1 caratteri sono stati letti, un carattere di nuova riga verrà archiviato nel buffer. In entrambi i casi viene aggiunto un carattere null ('\0').
+La lettura viene arrestata dal primo carattere di nuova riga. Se, in questo caso, sono stati letti meno di *nmax*-1, un carattere di nuova riga viene archiviato nel buffer. In entrambi i casi viene aggiunto un carattere null (' \ 0').
 
-[CFile:: Read](../../mfc/reference/cfile-class.md#read) è disponibile anche per l'input in modalità testo, ma non termina con una coppia di ritorno a capo con avanzamento di riga.
+[CFile:: Read](../../mfc/reference/cfile-class.md#read) è disponibile anche per l'input in modalità testo, ma non termina in una coppia di feed di ritorno a capo/avanzamento riga.
 
 > [!NOTE]
->  Il `CString` versione di questa funzione rimuove il `'\n'` se presente; la versione LPTSTR non avviene.
+>  La `CString` versione di questa funzione rimuove l' `'\n'` oggetto se presente. la versione di LPTSTR non è disponibile.
 
 ### <a name="example"></a>Esempio
 
@@ -224,7 +224,7 @@ La lettura è stata arrestata dal primo carattere di nuova riga. Se, in tal caso
 
 ##  <a name="seek"></a>  CStdioFile::Seek
 
-Riposiziona il puntatore del mouse in un file aperto in precedenza.
+Riposiziona il puntatore in un file aperto in precedenza.
 
 ```
 virtual ULONGLONG Seek(
@@ -238,35 +238,35 @@ virtual ULONGLONG Seek(
 Numero di byte per spostare il puntatore.
 
 *nFrom*<br/>
-Modalità di spostamento di puntatore. Deve essere uno dei valori seguenti:
+Modalità di spostamento del puntatore. Deve essere uno dei valori seguenti:
 
-- `CFile::begin`: Spostare il puntatore del file *lOff* inoltrare byte dall'inizio del file.
+- `CFile::begin`: Spostare il puntatore del file *Loff* i byte in avanti dall'inizio del file.
 
-- `CFile::current`: Spostare il puntatore del file *lOff* byte dalla posizione corrente nel file.
+- `CFile::current`: Spostare il puntatore del file *Loff* i byte dalla posizione corrente nel file.
 
-- `CFile::end`: Spostare il puntatore del file *lOff* byte dalla fine del file. Si noti che *lOff* deve essere negativo per eseguire la ricerca esistente del file; positivo valori verranno ricerca oltre la fine del file.
+- `CFile::end`: Spostare il puntatore del file *Loff* i byte dalla fine del file. Si noti che *Loff* deve essere negativo per cercare nel file esistente. i valori positivi cercheranno oltre la fine del file.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la posizione richiesta può essere eseguita, `Seek` restituisce il nuovo offset di byte dall'inizio del file. In caso contrario, il valore restituito è indefinito e un `CFileException` oggetto viene generata un'eccezione.
+Se la posizione richiesta è valida, `Seek` restituisce il nuovo offset di byte a partire dall'inizio del file. In caso contrario, il valore restituito non è definito `CFileException` e viene generato un oggetto.
 
 ### <a name="remarks"></a>Note
 
-Il `Seek` funzione consente ad accesso casuale al contenuto di un file spostando il puntatore una determinata quantità, in modo assoluto o relativo. Durante la ricerca viene effettivamente letto alcun dato. Se la posizione richiesta è maggiore della dimensione del file, verrà estesa la lunghezza del file in tale posizione e non verrà generata alcuna eccezione.
+La `Seek` funzione consente l'accesso casuale al contenuto di un file spostando il puntatore a una quantità specificata, assolutamente o relativamente. Nessun dato è effettivamente letto durante la ricerca. Se la posizione richiesta è maggiore della dimensione del file, la lunghezza del file verrà estesa a tale posizione e non verrà generata alcuna eccezione.
 
-Quando viene aperto un file, il puntatore del file è posizionato in corrispondenza dell'offset 0, l'inizio del file.
+Quando un file viene aperto, il puntatore del file viene posizionato in corrispondenza dell'offset 0, ovvero l'inizio del file.
 
-Questa implementazione di `Seek` si basa sulla funzione della libreria Run-Time (CRT) `fseek`. Sono previsti limiti diversi per l'utilizzo di `Seek` sui flussi aperti in modalità testo. Per altre informazioni, vedere [fseek, fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md).
+Questa implementazione di `Seek` è basata sulla funzione `fseek`della libreria di runtime (CRT). Esistono diversi limiti per l'utilizzo di `Seek` sui flussi aperti in modalità testo. Per ulteriori informazioni, vedere [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md).
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare `Seek` per spostare il puntatore di 1000 byte dall'inizio del `cfile` file. Si noti che `Seek` non legge i dati, è necessario chiamare successivamente [CStdioFile::ReadString](#readstring) per leggere i dati.
+Nell'esempio seguente viene illustrato come utilizzare `Seek` per spostare il puntatore 1000 byte dall'inizio `cfile` del file. Si noti `Seek` che non legge i dati, quindi è necessario chiamare [CStdioFile:: ReadString](#readstring) per leggere i dati.
 
 [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]
 
 ##  <a name="writestring"></a>  CStdioFile::WriteString
 
-Scrive i dati da un buffer per il file associato il `CStdioFile` oggetto.
+Scrive i dati da un buffer nel file associato `CStdioFile` all'oggetto.
 
 ```
 virtual void WriteString(LPCTSTR lpsz);
@@ -279,13 +279,13 @@ Specifica un puntatore a un buffer che contiene una stringa con terminazione nul
 
 ### <a name="remarks"></a>Note
 
-Il carattere null di terminazione ( `\0`) non viene scritta nel file. Questo metodo scrive caratteri di nuova riga *lpsz* al file come una coppia di ritorno a capo/avanzamento riga.
+Il carattere null di terminazione `\0`() non viene scritto nel file. Questo metodo scrive caratteri di nuova riga in *lpsz* nel file come coppia ritorno a capo/avanzamento riga.
 
-Se si desidera scrivere i dati che non sono con terminazione null a un file, usare `CStdioFile::Write` oppure [CFile::Write](../../mfc/reference/cfile-class.md#write).
+Se si desidera scrivere dati con terminazione null in un file, utilizzare `CStdioFile::Write` o [CFile:: Write](../../mfc/reference/cfile-class.md#write).
 
-Questo metodo genera un `CInvalidArgException*` se si specifica NULL per il *lpsz* parametro.
+Questo metodo genera un' `CInvalidArgException*` eccezione se si specifica null per il parametro *lpsz* .
 
-Questo metodo genera un `CFileException*` in risposta a errori del file system.
+Questo metodo genera un' `CFileException*` eccezione in risposta a errori di file System.
 
 ### <a name="example"></a>Esempio
 
@@ -296,7 +296,7 @@ Questo metodo genera un `CFileException*` in risposta a errori del file system.
 [Classe CFile](../../mfc/reference/cfile-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CFile](../../mfc/reference/cfile-class.md)<br/>
-[CFile::Duplicate](../../mfc/reference/cfile-class.md#duplicate)<br/>
-[CFile::LockRange](../../mfc/reference/cfile-class.md#lockrange)<br/>
+[CFile::D uplica](../../mfc/reference/cfile-class.md#duplicate)<br/>
+[CFile:: LockRange](../../mfc/reference/cfile-class.md#lockrange)<br/>
 [CFile::UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)<br/>
 [Classe CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)
