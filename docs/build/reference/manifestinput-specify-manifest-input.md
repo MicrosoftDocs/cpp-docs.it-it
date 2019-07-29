@@ -1,13 +1,13 @@
 ---
 title: /MANIFESTDEPENDENCY (specifica l'input del manifesto)
-ms.date: 11/04/2016
+ms.date: 07/24/2019
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-ms.openlocfilehash: bf192664a7a2402b06621167d91dff67ce0741a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b7bd54f98003d9158276fcf75fd61ffb5348585
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321358"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606469"
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTDEPENDENCY (specifica l'input del manifesto)
 
@@ -22,13 +22,13 @@ Specifica un file di input manifesto da includere nel manifesto incorporato nell
 ### <a name="parameters"></a>Parametri
 
 *filename*<br/>
-Il file manifesto da includere nel manifesto incorporato.
+File manifesto da includere nel manifesto incorporato.
 
 ## <a name="remarks"></a>Note
 
-Il **/MANIFESTINPUT** opzione specifica il percorso di file di input da utilizzare per creare il manifesto incorporato in un'immagine eseguibile. Se si dispone di manifesto più file di input, utilizzare l'opzione più volte, una volta per ogni file di input. I file di input manifesto vengono uniti per creare il manifesto incorporato. Questa opzione richiede la **/manifest: incorporare** opzione.
+L'opzione **/MANIFESTDEPENDENCY** specifica il percorso di un file di input da utilizzare per creare il manifesto incorporato in un'immagine eseguibile. Se si dispone di più file di input manifesto, utilizzare l'opzione più volte, una volta per ogni file di input. I file di input del manifesto vengono uniti per creare il manifesto incorporato. Questa opzione richiede l'opzione **/manifest: embed** .
 
-Questa opzione non può essere impostata direttamente in Visual Studio. Usare invece i **file manifesto aggiuntivi** proprietà del progetto per specificare i file manifesto aggiuntivi da includere. Per altre informazioni, vedere [Input e Output, strumento manifesto, proprietà di configurazione \<NomeProgetto > finestra di dialogo Pagine delle proprietà](input-and-output-manifest-tool.md).
+Questa opzione non può essere impostata direttamente in Visual Studio. Usare invece la proprietà **file manifesto aggiuntivi** del progetto per specificare i file manifesto aggiuntivi da includere. Per altre informazioni, vedere [pagine delle proprietà dello strumento Manifesto](manifest-tool-property-pages.md).
 
 ## <a name="see-also"></a>Vedere anche
 

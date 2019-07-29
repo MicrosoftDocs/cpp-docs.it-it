@@ -1,8 +1,6 @@
 ---
 title: C++Guida di riferimento alle pagine delle proprietà del progetto-Visual Studio
-ms.date: 07/16/2019
-f1_keywords:
-- VC.Project.NotAProp.Edit
+ms.date: 07/24/2019
 helpviewer_keywords:
 - project-file macro
 - project properties [C++], default values
@@ -14,12 +12,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: d425cc6c5c6a2a8934c026174f396cb01bc3a9b7
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492142"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606395"
 ---
 # <a name="c-project-property-page-reference"></a>C++riferimento alla pagina delle proprietà del progetto
 
@@ -29,45 +27,25 @@ Per le pagine delle proprietà nei progetti Linux, vedere informazioni di [rifer
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[Pagina delle proprietà Generale (Progetto)](general-property-page-project.md)
-
-[Pagina delle proprietà Directory di VC++](vcpp-directories-property-page.md)
-
-[Strumento Manifesto,](general-manifest-tool-configuration-properties.md)
-[strumento Manifesto generale, strumento Manifesto di input e output](input-and-output-manifest-tool.md)
-, strumento manifesto[com](isolated-com-manifest-tool.md)
-isolato[, avanzato](advanced-manifest-tool.md)
-
-
-[Pagine delle proprietà Riga di comando](command-line-property-pages.md)
-
-[Pagina delle proprietà Istruzione di compilazione personalizzata: Generale](custom-build-step-property-page-general.md)
-
-[Aggiunta di riferimenti](../adding-references-in-visual-cpp-projects.md)
-
-[Pagina delle proprietà Generale (File)](general-property-page-file.md)
-
-[Pagine delle proprietà HLSL](hlsl-property-pages.md)
-
-[Pagine delle proprietà Linker](linker-property-pages.md)
-
-[Pagina delle proprietà Risorse gestite](managed-resources-property-page.md)
-
-[Pagine delle proprietà Strumento Manifesto](manifest-tool-property-pages.md)
-
-[Pagine delle proprietà MIDL](midl-property-pages.md)
-
-[Pagina delle proprietà NMAKE](nmake-property-page.md)
-
-[Pagine delle proprietà Risorse](resources-property-pages.md)
-
-[Pagina delle proprietà Riferimenti Web](web-references-property-page.md)
-
-[Pagina delle proprietà Strumento generatore di dati XML](xml-data-generator-tool-property-page.md)
-
-[Pagina delle proprietà Strumento generatore di documenti XML](xml-document-generator-tool-property-pages.md)
+- [Pagina delle proprietà Generale (Progetto)](general-property-page-project.md)
+- [Pagina delle proprietà Generale (File)](general-property-page-file.md)
+- [Pagina delle proprietà avanzate](advanced-property-page.md)
+- [Pagina delle proprietà Directory di VC++](vcpp-directories-property-page.md)
+- [Pagine delle proprietà Linker](linker-property-pages.md)
+- [Pagine delle proprietà Strumento Manifesto](manifest-tool-property-pages.md)
+- [Pagine delle proprietà HLSL](hlsl-property-pages.md)
+- [Pagine delle proprietà Riga di comando](command-line-property-pages.md)
+- [Pagina delle proprietà Istruzione di compilazione personalizzata: Generale](custom-build-step-property-page-general.md)
+- [Aggiunta di riferimenti](../adding-references-in-visual-cpp-projects.md)
+- [Pagina delle proprietà Risorse gestite](managed-resources-property-page.md)
+- [Pagine delle proprietà MIDL](midl-property-pages.md)
+- [Pagina delle proprietà NMAKE](nmake-property-page.md)
+- [Pagine delle proprietà Risorse](resources-property-pages.md)
+- [Pagina delle proprietà Riferimenti Web](web-references-property-page.md)
+- [Pagina delle proprietà Strumento generatore di dati XML](xml-data-generator-tool-property-page.md)
+- [Pagina delle proprietà Strumento generatore di documenti XML](xml-document-generator-tool-property-pages.md)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Procedura: Creare e rimuovere dipendenze del progetto](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[Procedura: Creare e rimuovere dipendenze del progetto](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br/>
 [Procedura: Creare e modificare le configurazioni](/visualstudio/ide/how-to-create-and-edit-configurations)

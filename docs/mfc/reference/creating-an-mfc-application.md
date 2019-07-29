@@ -1,28 +1,28 @@
 ---
 title: Creazione di un'applicazione MFC
-ms.date: 11/04/2016
+ms.date: 07/28/2019
 helpviewer_keywords:
 - applications [MFC]
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 0f16fe577f1dc02dc9a2fc0cffb5899b16ad8cca
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 454a994da6db2841317d41ea1cdacfd36b0705e4
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708240"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606477"
 ---
 # <a name="creating-an-mfc-application"></a>Creazione di un'applicazione MFC
 
-Un'applicazione MFC rappresenta un'applicazione eseguibile per Windows basata sulla libreria MFC (Microsoft Foundation Class). Il modo più semplice per creare un'applicazione MFC consiste nell'utilizzo della Creazione guidata applicazione MFC.
+Un'applicazione MFC rappresenta un'applicazione eseguibile per Windows basata sulla libreria MFC (Microsoft Foundation Class). Il modo più semplice per creare un'applicazione MFC consiste nell'usare la creazione guidata applicazione MFC (**progetto di app MFC** in Visual Studio 2019). Per creare un'applicazione console MFC, utilizzare la creazione guidata desktop di Windows e scegliere le opzioni **applicazione console** e **intestazioni MFC** .
 
 > [!IMPORTANT]
 >  I progetti MFC non sono supportati nelle versioni di Visual Studio Express Edition.
 
-File eseguibili MFC in genere rientrano in cinque tipi: applicazioni di Windows standard, finestre di dialogo, applicazioni basate su form, le applicazioni di tipo Esplora risorse e applicazioni di tipo browser Web. Per altre informazioni, vedere:
+Gli eseguibili MFC in genere rientrano in cinque tipi: applicazioni Windows standard, finestre di dialogo, applicazioni basate su form, applicazioni di tipo Esplora risorse e applicazioni di tipo Web browser. Per altre informazioni, vedere:
 
-- [Utilizzo delle classi per la scrittura di applicazioni di Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
+- [Uso delle classi per la scrittura di applicazioni Windows](../../mfc/using-the-classes-to-write-applications-for-windows.md)
 
 - [Creazione e visualizzazione delle finestre di dialogo](../../mfc/creating-and-displaying-dialog-boxes.md)
 
@@ -36,18 +36,18 @@ La Creazione guidata applicazione MFC genera le classi e i file appropriati per 
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Per creare un'applicazione MFC mediante la Creazione guidata applicazione MFC
 
-1. Seguire le istruzioni nell'argomento della Guida [creare un progetto di app console C++](../../get-started/tutorial-console-cpp.md).
+1. Seguire le istruzioni riportate nell'argomento della Guida [creare un progetto di C++ app console](../../get-started/tutorial-console-cpp.md).
 
-1. Nel **nuovo progetto** finestra di dialogo **applicazione MFC** nel riquadro dei modelli per aprire la procedura guidata.
+1. Nella finestra di dialogo **nuovo progetto** selezionare **applicazione MFC** nel riquadro modelli per aprire la procedura guidata.
 
-1. Definire le impostazioni dell'applicazione usando il [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md).
+1. Definire le impostazioni dell'applicazione utilizzando la [creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md).
 
     > [!NOTE]
     >  Saltare questo passaggio per mantenere le impostazioni predefinite della procedura guidata.
 
-1. Fare clic su **fine** per chiudere la procedura guidata e aprire il nuovo progetto nell'ambiente di sviluppo.
+1. Scegliere **Fine** per uscire dalla procedura guidata e aprire il nuovo progetto nell'ambiente di sviluppo.
 
-Dopo aver creato il progetto, è possibile visualizzare i file creati nella **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [tipi di File creati per Visual Studio C++ progetti](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Una volta creato il progetto, è possibile visualizzare i file generati in **Esplora soluzioni**. Per altre informazioni sui file creati per il progetto con la procedura guidata, vedere il file ReadMe.txt generato dal progetto. Per altre informazioni sui tipi di file, vedere [Tipi di file creati per i progetti di Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Vedere anche
 
