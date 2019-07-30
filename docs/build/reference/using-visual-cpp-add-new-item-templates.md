@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
 ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65217756"
@@ -25,7 +25,7 @@ Nella tabella seguente è un elenco alfabetico dei modelli Aggiungi nuovo elemen
 |File di risorse assembly (.resx)|Crea un file contenente risorse CLR.|
 |File bitmap (.bmp)|Crea un file bitmap Win32.|
 |File di C++ (.cpp)|Crea un file di origine C++.|
-|Diagramma classi (*.cd)|Crea un diagramma classi vuoto.|
+|Diagramma classi (.cd)|Crea un diagramma classi vuoto.|
 |Set di regole di analisi del codice (.ruleset)|Crea un file di impostazioni per la configurazione dell'analisi codice.|
 |File di configurazione (app.config)|Crea un file di configurazione vuoto.|
 |Classe Component|Aggiunge una classe Component utilizzando le funzionalità CLR.|

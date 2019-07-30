@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313390"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661534"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
@@ -611,6 +611,14 @@ int main()
 }
 ```
 
+```Output
+List1 = ( 5 10 20 25 30 50 )
+There is an element in list List1 with a value equal to 10.
+There is an element in list List1 with a value greater than 10 under greater than.
+Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
+There is an element with a value equivalent to -3 under mod_lesser.
+```
+
 ## <a name="clamp"></a>morsetto
 
 Confronta un valore con un limite superiore e inferiore e restituisce un riferimento al valore se è compreso tra i limiti o un riferimento al limite superiore o inferiore, se il valore è rispettivamente superiore o inferiore.
@@ -780,7 +788,7 @@ Iteratore bidirezionale che punta alla posizione immediatamente successiva all'u
 
 ### <a name="return-value"></a>Valore restituito
 
-Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione, ovvero l'iteratore punta a  DestEnd-(*ultimo* - *primo*).
+Iteratore di output che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo di destinazione, ovvero l'iteratore punta a DestEnd-(*ultimo* - *primo*).
 
 ### <a name="remarks"></a>Note
 
@@ -845,6 +853,13 @@ int main() {
 }
 ```
 
+```Output
+v1 = ( 0 10 20 30 40 50 )
+v2 = ( 0 3 6 9 12 15 18 21 24 27 30 )
+v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
+v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
+```
+
 ## <a name="copy_if"></a>copy_if
 
 In un intervallo di elementi, copia gli elementi **true** per la condizione specificata.
@@ -894,6 +909,61 @@ La funzione del modello restituisce
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
 una volta per ogni `N` nell'intervallo `[0, last - first)`, esclusivamente per aumentare i valori di `N` iniziando dal valore più basso. Se *dest* e *First* designano le aree di archiviazione, *dest* non deve essere compreso nell' `[ first, last )`intervallo.
+
+### <a name="example"></a>Esempio
+
+```cpp
+// alg_copy_if.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+void listlist(std::list<int> l)
+{
+    std::cout << "( ";
+    for (auto const& el : l)
+        std::cout << el << " ";
+    std::cout << ")" << std::endl;
+}
+
+int main()
+{
+    using namespace std;
+    list<int> li{ 46, 59, 88, 72, 79, 71, 60, 5, 40, 84 };
+    list<int> le(li.size()); // le = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    list<int> lo(li.size()); // lo = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    cout << "li = ";
+    listlist(li);
+
+    // is_even checks if the element is even.
+    auto is_even = [](int const elem) { return !(elem % 2); };
+    // use copy_if to select only even elements from li 
+    // and copy them to le, starting from le's begin position
+    auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
+    le.resize(std::distance(le.begin(), ec));  // shrink le to new size
+
+    cout << "Even numbers are le = ";
+    listlist(le);
+
+    // is_odd checks if the element is odd.
+    auto is_odd = [](int const elem) { return (elem % 2); };
+    // use copy_if to select only odd elements from li
+    // and copy them to lo, starting from lo's begin position
+    auto oc = copy_if(li.begin(), li.end(), lo.begin(), is_odd);
+    lo.resize(std::distance(lo.begin(), oc));  // shrink lo to new size
+
+    cout << "Odd numbers are lo = ";
+    listlist(lo);
+}
+```
+
+```Output
+li = ( 46 59 88 72 79 71 60 5 40 84 )
+Even numbers are le = ( 46 88 72 60 40 84 )
+Odd numbers are lo = ( 59 79 71 5 )
+```
 
 ## <a name="copy_n"></a>copy_n
 
@@ -2000,7 +2070,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo i
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);`in realtà, `T` dove è un tipo in `InputIterator` cui può essere convertito in modo implicito quando viene dereferenziato. La  parola chiave const viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
+Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);`in realtà, `T` dove è un tipo in `InputIterator` cui può essere convertito in modo implicito quando viene dereferenziato. La parola chiave const viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2122,7 +2192,7 @@ Iteratore di input che punta alla posizione del primo elemento nell'intervallo i
 Iteratore di input che punta alla posizione immediatamente successiva all'ultimo elemento nell'intervallo in cui eseguire la ricerca.
 
 *Pred*\
-Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che non deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);`in realtà, `T` dove è un tipo in `InputIterator` cui può essere convertito in modo implicito quando viene dereferenziato. La  parola chiave const viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
+Oggetto funzione predicato definito dall'utente o [espressione lambda](../cpp/lambda-expressions-in-cpp.md) che definisce la condizione che non deve essere soddisfatta dall'elemento cercato. Un predicato unario accetta un solo argomento e restituisce **true** se è soddisfatto oppure **false** se non è soddisfatto. La firma di *prede* deve essere `bool pred(const T& arg);`in realtà, `T` dove è un tipo in `InputIterator` cui può essere convertito in modo implicito quando viene dereferenziato. La parola chiave const viene visualizzata solo per illustrare che l'oggetto funzione o l'espressione lambda non deve modificare l'argomento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2921,7 +2991,7 @@ La prima funzione di modello restituisce [is_heap_until](../standard-library/alg
 
 La seconda funzione di modello restituisce
 
-[https://login.microsoftonline.com/consumers/](`is_heap_until(first, last, pred) == last`).
+`is_heap_until(first, last, pred) == last`.
 
 ## <a name="is_heap_until"></a>is_heap_until
 
@@ -4777,13 +4847,13 @@ Oggetto funzione predicato definito dall'utente che definisce il senso in cui un
 
 Valore restituito
 
-`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
+[https://login.microsoftonline.com/consumers/](`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`).
 
 ### <a name="remarks"></a>Note
 
 La prima funzione di modello restituisce
 
-`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
+[https://login.microsoftonline.com/consumers/](`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`).
 
 La seconda funzione di modello ha lo stesso comportamento, ad eccezione del fatto che sostituisce `operator<(X, Y)` con `pred(X, Y)`.
 
@@ -5106,7 +5176,7 @@ Iteratore bidirezionale che punta alla posizione immediatamente successiva all'u
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello restituisce `*(destEnd - N - 1) = move(*(last - N - 1))` una volta per `N` ogni nell'intervallo `[0, last - first)`, per aumentare in modo rigoroso i valori di `N` iniziando dal valore più basso. Restituisce quindi `destEnd - (last - first)`. Se  DestEnd e *First* designano le aree di archiviazione  , DestEnd non deve essere compreso nell' `[first, last)`intervallo.
+La funzione di modello restituisce `*(destEnd - N - 1) = move(*(last - N - 1))` una volta per `N` ogni nell'intervallo `[0, last - first)`, per aumentare in modo rigoroso i valori di `N` iniziando dal valore più basso. Restituisce quindi `destEnd - (last - first)`. Se DestEnd e *First* designano le aree di archiviazione , DestEnd non deve essere compreso nell' `[first, last)`intervallo.
 
 `move` e `move_backward` sono equivalenti a livello funzionale all'utilizzo di `copy` e `copy_backward` con un iteratore di spostamento.
 
@@ -5853,10 +5923,10 @@ Iteratore di input che indica l'inizio di un intervallo in cui verificare una co
 Iteratore di input che indica la fine di un intervallo.
 
 *dest1*\
-Iteratore di output usato per copiare gli elementi che restituiscono true per una condizione verificata tramite predazione.
+Iteratore di output usato per copiare gli elementi che restituiscono true per una condizioneverificata tramite predazione.
 
 *dest2*\
-Iteratore di output usato per copiare gli elementi che restituiscono false per una condizione verificata tramite predazione.
+Iteratore di output usato per copiare gli elementi che restituiscono false per una condizioneverificata tramite predazione.
 
 *Pred*\
 La condizione da verificare. La condizione è specificata da un oggetto funzione predicato definito dall'utente che definisce la condizione da verificare. Un predicato unario accetta un solo argomento e restituisce **true** o **false**.
@@ -5894,7 +5964,7 @@ Restituisce un `ForwardIterator` oggetto che fa riferimento al primo elemento ch
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello trova il primo `it` iteratore in `pred(*it)` `[first, last)` per il quale è **false**. La sequenza deve essere ordinata in base a predazione.
+La funzione di modello trova il primo `it` iteratore in `pred(*it)` `[first, last)` per il quale è **false**. La sequenza deve essere ordinatain base a predazione.
 
 ## <a name="pop_heap"></a>pop_heap
 

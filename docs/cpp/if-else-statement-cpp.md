@@ -1,29 +1,29 @@
 ---
 title: Istruzione if-else (C++)
-ms.date: 07/17/2017
+ms.date: 07/20/2019
+description: Usare le istruzioni if-else C++ in per controllare la diramazione condizionale.
 f1_keywords:
 - else_cpp
 - if_cpp
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
-- if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183648"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661645"
 ---
 # <a name="if-else-statement-c"></a>Istruzione if-else (C++)
 
-Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco if* vengono eseguiti solo se il *espressione if* restituisce un valore diverso da zero (o TRUE). Se il valore di *espressione* è diverso da zero, *statement1* e vengono eseguite le altre istruzioni nel blocco e l'altro blocco, se presente, viene ignorato. Se il valore di *espressione* è uguale a zero, quindi il blocco se viene ignorato e l'altro blocco, se presente, viene eseguito. Sono espressioni che restituiscono diverso da zero
+Controlla la creazione di un ramo condizionale. Le istruzioni nel *blocco If* vengono eseguite solo se l' *espressione if* restituisce un valore diverso da zero (o true). Se il valore di *Expression* è diverso da zero, *istruzione1* e qualsiasi altra istruzione nel blocco vengono eseguiti e il blocco Else, se presente, viene ignorato. Se il valore di *Expression* è zero, il blocco if viene ignorato e il blocco Else, se presente, viene eseguito. Le espressioni che restituiscono un valore diverso da zero sono
 
 - TRUE
 - un puntatore non null,
-- qualsiasi valore diverso da zero aritmetico, o
-- tipo di un tipo di classe che definisce una conversione non ambigua a un'operazione aritmetica, boolean o puntatore. (Per informazioni sulle conversioni, vedere [conversioni Standard](../cpp/standard-conversions.md).)
+- qualsiasi valore aritmetico diverso da zero, oppure
+- tipo di classe che definisce una conversione non ambigua a un tipo aritmetico, booleano o puntatore. Per informazioni sulle conversioni, vedere conversioni [standard](../cpp/standard-conversions.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,7 +39,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if ( initialization; expression )
 {
    statement1;
@@ -51,7 +51,7 @@ else  // optional
    ...
 }
 
-// Visual Studio 2017 version 15.3 and later:
+// C++17 - Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
 {
     statement1;
@@ -111,9 +111,9 @@ int main()
 }
 ```
 
-## <a name="if_with_init"></a> Se l'istruzione con un inizializzatore
+## <a name="if_with_init"></a>istruzione if con un inizializzatore
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Un' **se** istruzione può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questa forma di istruzione if quando la variabile è necessaria solo all'interno dell'ambito del blocco di if.
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Un'istruzione **if** può inoltre contenere un'espressione che dichiara e Inizializza una variabile denominata. Utilizzare questo formato dell'istruzione If-quando la variabile è necessaria solo nell'ambito del blocco If.
 
 ## <a name="example"></a>Esempio
 
@@ -159,13 +159,13 @@ int main()
 }
 ```
 
-In tutte le forme del **se** istruzione *espressione*, che possono avere qualsiasi valore salvo una struttura, viene valutata, inclusi tutti gli effetti collaterali. Controllo passa dal **se** istruzione all'istruzione successiva nel programma, a meno che uno del *istruzione*s contiene una [interruzione](../cpp/break-statement-cpp.md), [continuare](../cpp/continue-statement-cpp.md), oppure [goto](../cpp/goto-statement-cpp.md).
+In tutte le forme dell'istruzione **if** , l' *espressione*, che può avere qualsiasi valore tranne una struttura, viene valutata, inclusi tutti gli effetti collaterali. Il controllo passa dall'istruzione **if** all'istruzione successiva nel programma, a meno che una delle *istruzioni*s non includa [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)o [goto](../cpp/goto-statement-cpp.md).
 
-Il **else** clausola di un `if...else` istruzione è associata a più vicina precedente **se** istruzione nello stesso ambito che non ha un corrispondente **else** istruzione.
+La clausola **else** di un' `if...else` istruzione viene associata all'istruzione **if** precedente più vicina nello stesso ambito che non dispone di un'istruzione **else** corrispondente.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Se le istruzioni di constexpr
+## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">Se istruzioni constExpr
 
-**Visual Studio 2017 versione 15.3 e versioni successive** (disponibile con [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): Nei modelli di funzione, è possibile usare un **se constexpr** istruzione per prendere decisioni di diramazione in fase di compilazione senza dover ricorrere a più overload di funzione. Ad esempio, è possibile scrivere una singola funzione tale parametro handle decompressione (non è necessario alcun overload di parametro da zero):
+**Visual Studio 2017 versione 15,3 e successive** (disponibile con [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Nei modelli di funzione è possibile usare un'istruzione **if constExpr** per eseguire decisioni di diramazione in fase di compilazione senza dover ricorrere a più overload di funzione. Ad esempio, è possibile scrivere una singola funzione che gestisce la decompressione del parametro (non è necessario alcun overload di parametro zero):
 
 ```cpp
 template <class T, class... Rest>

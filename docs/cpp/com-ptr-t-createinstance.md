@@ -45,10 +45,10 @@ HRESULT CreateInstance(
 Il `CLSID` di un oggetto.
 
 *clsidString*<br/>
-Una stringa Unicode che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.
+Una stringa Unicode che contiene un `CLSID` (a partire da " **{** ") o un `ProgID`.
 
 *clsidStringA*<br/>
-Una stringa multibyte che utilizza la tabella codici ANSI, che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.
+Una stringa multibyte che utilizza la tabella codici ANSI, che contiene un `CLSID` (a partire da " **{** ") o un `ProgID`.
 
 *dwClsContext*<br/>
 Contesto del codice eseguibile in esecuzione.
@@ -60,11 +60,11 @@ Unknown esterno di [aggregazione](../atl/aggregation.md).
 
 Queste funzioni membro chiamano `CoCreateInstance` per creare un nuovo oggetto COM e delle query per questo tipo di interfaccia del puntatore intelligente. Il puntatore risultante viene incapsulato in questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza. Questa routine restituisce il valore HRESULT per indicare esito positivo o negativo.
 
-- **CreateInstance (***rclsid* **,***dwClsContext***)** crea una nuova istanza in esecuzione di un oggetto dato un `CLSID`.
+- **CreateInstance (** *rclsid* **,** *dwClsContext* **)** crea una nuova istanza in esecuzione di un oggetto dato un `CLSID`.
 
-- **CreateInstance (***clsidString* **,***dwClsContext***)** crea una nuova istanza in esecuzione di un oggetto dato un Stringa Unicode che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.
+- **CreateInstance (** *clsidString* **,** *dwClsContext* **)** crea una nuova istanza in esecuzione di un oggetto dato un Stringa Unicode che contiene un `CLSID` (a partire da " **{** ") o un `ProgID`.
 
-- **CreateInstance (***clsidStringA* **,***dwClsContext***)** crea una nuova istanza in esecuzione di un oggetto dato un stringa di caratteri multibyte che contiene un `CLSID` (a partire da "**{**") o un `ProgID`. Le chiamate [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), che presuppone che la stringa sia la tabella codici ANSI anziché una tabella codici OEM.
+- **CreateInstance (** *clsidStringA* **,** *dwClsContext* **)** crea una nuova istanza in esecuzione di un oggetto dato un stringa di caratteri multibyte che contiene un `CLSID` (a partire da " **{** ") o un `ProgID`. Le chiamate [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), che presuppone che la stringa sia la tabella codici ANSI anziché una tabella codici OEM.
 
 **Fine sezione specifica Microsoft**
 

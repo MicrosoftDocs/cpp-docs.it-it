@@ -22,10 +22,10 @@ ms.locfileid: "62250467"
 |**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***NomeFileris* **, UINT** `nID` **, LPCOLESTR** `szType` **);**<br /><br /> Annulla la registrazione lo script contenuto in una risorsa del modulo. *NomeFileris* indica il percorso UNC per il modulo stesso. *nID* e *Tipodm* contengono ID della risorsa e il tipo, rispettivamente.|
 |**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***NomeFileris* **, LPCOLESTR***IDdm* **, LPCOLESTR** `szType` **);**<br /><br /> Registra lo script contenuto in una risorsa del modulo. *NomeFileris* indica il percorso UNC per il modulo stesso. *IDdm* e *Tipodm* contengono rispettivamente l'identificatore di stringa e il tipo, la risorsa.|
 |**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***NomeFileris* **, LPCOLESTR***IDdm* **, LPCOLESTR** `szType` **);**<br /><br /> Annulla la registrazione lo script contenuto in una risorsa del modulo. *NomeFileris* indica il percorso UNC per il modulo stesso. *IDdm* e *Tipodm* contengono rispettivamente l'identificatore di stringa e il tipo, la risorsa.|
-|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName***);**<br /><br /> Registra lo script in un file. *nome del file* è un percorso UNC di un file che contiene uno script di risorsa (o è).|
-|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName***);**<br /><br /> Annulla la registrazione lo script in un file. *nome del file* è un percorso UNC di un file che contiene uno script di risorsa (o è).|
+|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName* **);**<br /><br /> Registra lo script in un file. *nome del file* è un percorso UNC di un file che contiene uno script di risorsa (o è).|
+|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName* **);**<br /><br /> Annulla la registrazione lo script in un file. *nome del file* è un percorso UNC di un file che contiene uno script di risorsa (o è).|
 |**StringRegister**|**HRESULT StringRegister( LPCOLESTR**  *data*  **);**<br /><br /> Registra lo script in una stringa. *dati* contiene lo script stesso.|
-|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***data***);**<br /><br /> Annulla la registrazione lo script in una stringa. *dati* contiene lo script stesso.|
+|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***data* **);**<br /><br /> Annulla la registrazione lo script in una stringa. *dati* contiene lo script stesso.|
 
 **ResourceRegisterSz** e **ResourceUnregisterSz**, sono simili agli **ResourceRegister** e **ResourceUnregister**, ma è possibile specificare una stringa identificatore.
 

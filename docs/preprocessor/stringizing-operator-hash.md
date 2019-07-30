@@ -12,39 +12,29 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: 4f23eea017197ae1f984e097bb3967c1228fef09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 720817b34326d822ef797351655e4ace907e4baf
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179646"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661620"
 ---
 # <a name="stringizing-operator-"></a>Operatore per la creazione di stringhe (#)
 
-Il cancelletto o operatore "per" (**#**) converte i parametri di macro in valori letterali stringa senza espandere la definizione del parametro. Tale operatore viene utilizzato solo con le macro che accetta argomenti. Se questo operatore precede un parametro formale nella definizione della macro, l'argomento effettivo passato alla chiamata della macro viene racchiuso tra virgolette singole e considerato come un valore letterale stringa. Il valore letterale stringa sostituisce quindi ogni occorrenza di una combinazione dell'operatore per la creazione di stringhe e del parametro formale nella definizione di macro.
+Il simbolo di cancelletto o l'operatore "per **#** " () converte i parametri macro in valori letterali stringa senza espandere la definizione del parametro. Tale operatore viene utilizzato solo con le macro che accetta argomenti. Se questo operatore precede un parametro formale nella definizione della macro, l'argomento effettivo passato alla chiamata della macro viene racchiuso tra virgolette singole e considerato come un valore letterale stringa. Il valore letterale stringa sostituisce quindi ogni occorrenza di una combinazione dell'operatore per la creazione di stringhe e del parametro formale nella definizione di macro.
 
 > [!NOTE]
-> L'estensione Microsoft C (versione 6.0 e precedenti) allo standard ANSI C che in precedenza espandeva gli argomenti formali di macro presenti in valori letterali stringa e in costanti carattere non è più supportata. Codice che si basava su questa estensione deve essere riscritto utilizzando la creazione di stringhe (**#**) operatore.
+> L'estensione Microsoft C (versione 6.0 e precedenti) allo standard ANSI C che in precedenza espandeva gli argomenti formali di macro presenti in valori letterali stringa e in costanti carattere non è più supportata. Il codice che si basa su questa estensione deve essere riscritto usando l'operatore **#** per ().
 
 Lo spazio vuoto che precede il primo token dell'argomento effettivo e che segue l'ultimo token dell'argomento effettivo viene ignorato. Tutti gli spazi vuoti tra i token dell'argomento effettivo vengono ridotti a un singolo spazio vuoto nel valore letterale stringa risultante. Di conseguenza, se tra due token nell'argomento effettivo è presente un commento, quest'ultimo viene ridotto a un singolo spazio vuoto. Il valore letterale stringa risultante verrà automaticamente concatenato con tutti i valori letterali stringa adiacenti da cui è separato solo da spazi vuoti.
 
-Inoltre, se un carattere incluso nell'argomento, in genere richiede una sequenza di escape se utilizzato in un valore letterale stringa (ad esempio, le virgolette (**"**) o una barra rovesciata (**\\**) carattere), il barra rovesciata necessaria di escape viene automaticamente inserito prima del carattere.
+Se, inoltre, un carattere contenuto nell'argomento richiede in genere una sequenza di escape se utilizzata in un valore letterale stringa, ad esempio le virgolette ( **"** ) **\\** o il carattere barra rovesciata (), la barra rovesciata di escape necessaria viene inserita automaticamente. prima del carattere.
 
-L'operatore per Visual C++ non funziona correttamente quando viene utilizzato con stringhe contenenti sequenze di escape. In questo caso, il compilatore genera [errore del compilatore C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
+L'operatore C++ Visual per non si comporta correttamente quando viene usato con stringhe che includono sequenze di escape. In questa situazione, il compilatore genera l' [errore del compilatore C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md).
 
 ## <a name="examples"></a>Esempi
 
 Nell'esempio seguente vengono illustrate una definizione di macro che include l'operatore per la creazione di stringhe e una funzione principale che richiama la macro:
-
-Tali chiamate verranno espanse durante la pre-elaborazione, creando il codice seguente:
-
-```cpp
-int main() {
-   printf_s( "In quotes in the printf function call\n" "\n" );
-   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
-   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
-}
-```
 
 ```cpp
 // stringizer.cpp
@@ -54,6 +44,16 @@ int main() {
    stringer( In quotes in the printf function call );
    stringer( "In quotes when printed to the screen" );
    stringer( "This: \"  prints an escaped double quote" );
+}
+```
+
+Tali chiamate verranno espanse durante la pre-elaborazione, creando il codice seguente:
+
+```cpp
+int main() {
+   printf_s( "In quotes in the printf function call\n" "\n" );
+   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
+   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
 }
 ```
 

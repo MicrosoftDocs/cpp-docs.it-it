@@ -45,13 +45,13 @@ Stringa Unicode.
 
 Questi operatori eseguono la concatenazione di stringhe:
 
-- **operator + = (***s1***)** aggiunge i caratteri in incapsulato `BSTR` del *s1* alla fine di incapsulato questooggetto`BSTR`.
+- **operator + = (** *s1* **)** aggiunge i caratteri in incapsulato `BSTR` del *s1* alla fine di incapsulato questooggetto`BSTR`.
 
-- **Operatore operator + (***s1***)** restituisce il nuovo `_bstr_t` che è costituito dalla concatenazione dell'oggetto `BSTR` con quello del *s1*.
+- **Operatore operator + (** *s1* **)** restituisce il nuovo `_bstr_t` che è costituito dalla concatenazione dell'oggetto `BSTR` con quello del *s1*.
 
-- **Operatore operator + (***s2***&#124;***s1***)** restituisce un nuovo `_bstr_t` che viene creato concatenando una stringa multibyte *s2*, convertito in Unicode, con la `BSTR` racchiusa *s1*.
+- **Operatore operator + (** *s2* **&#124;** *s1* **)** restituisce un nuovo `_bstr_t` che viene creato concatenando una stringa multibyte *s2*, convertito in Unicode, con la `BSTR` racchiusa *s1*.
 
-- **Operatore operator + (***s3* **,***s1***)** restituisce un nuovo `_bstr_t` che è costituito dalla concatenazione di una stringa Unicode *s3* con il `BSTR` racchiusa *s1*.
+- **Operatore operator + (** *s3* **,** *s1* **)** restituisce un nuovo `_bstr_t` che è costituito dalla concatenazione di una stringa Unicode *s3* con il `BSTR` racchiusa *s1*.
 
 **Fine sezione specifica Microsoft**
 
