@@ -3,14 +3,12 @@ title: Proprietà CC++ /Project (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342262"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537564"
 ---
 # <a name="cc-property-pages"></a>Pagine delleC++ proprietà C/
 
@@ -436,7 +434,7 @@ Selezionare la convenzione di chiamata predefinita per l'applicazione (può esse
 **Scelte**
 
 - **__cdecl** : specifica la convenzione di chiamata __cdecl per tutte le C++ funzioni ad eccezione delle funzioni membro e delle funzioni contrassegnate come stdcall o __fastcall.
-- **__fastcall** : specifica la convenzione di chiamata __fastcall per tutte le C++ funzioni ad eccezione del membro delle e funzioni contrassegnate come __cdecl o stdcall. Tutte le funzioni __fastcall devono avere prototipi.
+- **__fastcall** : specifica la convenzione di chiamata __fastcall per tutte le C++ funzioni ad eccezione delle funzioni membro e delle funzioni contrassegnate come __cdecl o stdcall. Tutte le funzioni __fastcall devono avere prototipi.
 - **stdcall** : specifica la convenzione di chiamata stdcall per tutte le C++ funzioni ad eccezione delle funzioni membro e delle funzioni contrassegnate come __cdecl o __fastcall. Tutte le funzioni stdcall devono avere prototipi.
 - **__vectorcall** : specifica la convenzione di chiamata __vectorcall per tutte le C++ funzioni ad eccezione delle funzioni membro e delle funzioni contrassegnate come __cdecl, __fastcall o stdcall. Tutte le funzioni __vectorcall devono avere prototipi.
 
@@ -482,7 +480,7 @@ Specifica la modalità di segnalazione degli errori interni degli strumenti a Mi
 
 - Non **inviare report** : i report sugli errori interni del compilatore non verranno raccolti né inviati a Microsoft.
 - **Richiedi immediatamente** : richiede di inviare un report quando si riceve un errore interno del compilatore.
-- **Coda per accesso successivo** : Accoda la segnalazione errori. Quando si esegue l'accesso con privilegi di amministratore, viene visualizzata una finestra popup che consente di segnalare eventuali errori a partire dall'ultimo accesso. non verrà richiesto di inviare i report per gli errori più di una volta ogni tre giorni. Queue è l'impostazione predefinita quando si compila un'applicazione dalla riga di comando.
+- **Coda per accesso successivo** : Accoda la segnalazione errori. Quando si esegue l'accesso con privilegi di amministratore, viene visualizzata una finestra popup che consente di segnalare eventuali errori dall'ultimo accesso. non verrà richiesto di inviare i report per gli errori più di una volta ogni tre giorni. Queue è l'impostazione predefinita quando si compila un'applicazione dalla riga di comando.
 - **Invia automaticamente** : Invia automaticamente i report degli errori interni del compilatore a Microsoft. Per abilitare questa opzione, è prima di tutto necessario accettare i criteri di raccolta dati di Microsoft% 27s. La prima volta che si specifica/errorReport: Send in un computer, un messaggio del compilatore fa riferimento a un sito Web che contiene i criteri di raccolta dati Microsoft% 27s.
 
 ### <a name="treat-specific-warnings-as-errors"></a>Considera gli avvisi specifici come errori
