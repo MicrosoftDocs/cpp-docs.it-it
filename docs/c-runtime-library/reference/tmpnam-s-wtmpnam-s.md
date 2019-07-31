@@ -78,7 +78,7 @@ Entrambe queste funzioni restituiscono 0 in caso di esito positivo o un numero d
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**Valore restituito**|**Contenuto della***str*|
+|*str*|*sizeInChars*|**Valore restituito**|**Contenuto della** *str*|
 |**NULL**|qualsiasi|**EINVAL**|non modificato|
 |Non **NULL** (punta alla memoria valida)|troppo breve|**ERANGE**|non modificato|
 
