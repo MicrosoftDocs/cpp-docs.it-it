@@ -53,7 +53,7 @@ Restituisce 0 in caso di esito positivo e un codice di errore in caso di errore.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*pFilePtr*|**Valore restituito**|**Contenuto della***pFilePtr*|
+|*pFilePtr*|**Valore restituito**|**Contenuto della** *pFilePtr*|
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|non modificato|
 
