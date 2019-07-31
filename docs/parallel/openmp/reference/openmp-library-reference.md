@@ -1,39 +1,39 @@
 ---
 title: Riferimento alla libreria OpenMP
-ms.date: 03/20/2019
+ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: 6f4bbeca54bff1fc44a3576362edca9c30926d5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362517"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682584"
 ---
 # <a name="openmp-library-reference"></a>Riferimento alla libreria OpenMP
 
-Fornisce collegamenti a costrutti usati nell'API OpenMP.
+Fornisce collegamenti a costrutti utilizzati nell'API OpenMP.
 
-L'implementazione di Visual C++ dello standard OpenMP include i seguenti costrutti.
+L'implementazione C++ visiva dello standard OpenMP include i costrutti seguenti.
 
 |Costrutto|Descrizione|
 |---------------|-----------------|
-|[Direttive](openmp-directives.md)|Vengono forniti collegamenti alle direttive usati nell'API OpenMP.|
-|[Clausole](openmp-directives.md)|Fornisce collegamenti alle clausole utilizzate nell'API OpenMP.|
-|[Funzioni](openmp-functions.md)|Fornisce collegamenti a funzioni usate nell'API OpenMP.|
-|[Variabili di ambiente](openmp-environment-variables.md)|Fornisce collegamenti alle variabili di ambiente usate nell'API OpenMP.|
+|[Direttive](openmp-directives.md)|Fornisce collegamenti alle direttive utilizzate nell'API OpenMP.|
+|[Clausole](openmp-clauses.md)|Fornisce collegamenti a clausole utilizzate nell'API OpenMP.|
+|[Funzioni](openmp-functions.md)|Fornisce collegamenti alle funzioni utilizzate nell'API OpenMP.|
+|[Variabili di ambiente](openmp-environment-variables.md)|Fornisce collegamenti alle variabili di ambiente utilizzate nell'API OpenMP.|
 
-L'oggetto visivo C++ funzioni di libreria run-time OpenMP sono contenute nelle librerie seguenti.
+Le funzioni C++ della libreria di runtime di Visual OpenMP sono contenute nelle librerie seguenti.
 
 |Libreria di runtime OpenMP|Caratteristiche|
 |------------------------------|---------------------|
 |VCOMP.LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMP. LIB).|
 |VCOMPD.LIB|Multithreading, collegamento dinamico (libreria di importazione per VCOMPD. COPERCHIO) (debug)|
 
-Se debug viene definito in una compilazione e `#include omp.h` nel codice sorgente, VCOMPD. LIB sarà lib l'impostazione predefinita, in caso contrario, VCOMP. Consentirà di LIB.
+Se _ debug è definito in una compilazione e `#include omp.h` se è nel codice sorgente, VCOMPD. LIB sarà la lib predefinita, in caso contrario, VCOMP. Verrà utilizzato LIB.
 
-È possibile usare [/NODEFAULTLIB (Ignora librerie)](../../../build/reference/nodefaultlib-ignore-libraries.md) rimuovere lib predefinito e il collegamento esplicito con la libreria di propria scelta.
+È possibile utilizzare [/NODEFAULTLIB (Ignora librerie)](../../../build/reference/nodefaultlib-ignore-libraries.md) per rimuovere la lib predefinita e collegarsi in modo esplicito al lib scelto.
 
-Le DLL di OpenMP sono nella directory del pacchetto ridistribuibile Visual C++ e devono essere distribuiti con le applicazioni che usano OpenMP.
+Le dll OpenMP si trovano nella directory C++ Visual Redistributable e devono essere distribuite con applicazioni che utilizzano OpenMP.
 
 ## <a name="see-also"></a>Vedere anche
 
