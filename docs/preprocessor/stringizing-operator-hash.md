@@ -12,12 +12,12 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: 720817b34326d822ef797351655e4ace907e4baf
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: d90d07c8f3cce6c443be0eb994db494746c00fcc
+ms.sourcegitcommit: 40ffe764244784c715b086c79626ac390b855d47
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661620"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68711145"
 ---
 # <a name="stringizing-operator-"></a>Operatore per la creazione di stringhe (#)
 
@@ -47,12 +47,12 @@ int main() {
 }
 ```
 
-Tali chiamate verranno espanse durante la pre-elaborazione, creando il codice seguente:
+Le `stringer` macro vengono espanse durante la pre-elaborazione, producendo il codice seguente:
 
 ```cpp
 int main() {
-   printf_s( "In quotes in the printf function call\n" "\n" );
-   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
+   printf_s( "In quotes in the printf function call" "\n" );
+   printf_s( "\"In quotes when printed to the screen\"" "\n" );
    printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
 }
 ```
