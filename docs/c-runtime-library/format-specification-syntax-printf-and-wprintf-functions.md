@@ -1,6 +1,6 @@
 ---
 title: 'Sintassi per la specifica del formato: funzioni printf wprintf'
-ms.date: 07/02/2019
+ms.date: 07/30/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 95573821ff2b213765184e7c121e693e1eb0ac0a
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552258"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682364"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
-Le diverse funzioni `printf` e `wprintf` accettano una stringa di formato e argomenti facoltativi e producono una sequenza di caratteri formattati per l'output. La stringa di formato contiene zero o più *direttive*, che sono caratteri letterali per l'output o *specifiche di conversione* codificate che descrivono come formattare un argomento nell'output. Questo argomento descrive la sintassi usata per codificare le specifiche di conversione nella stringa di formato. Per l'elenco di queste funzioni, vedere [I/O di flusso](../c-runtime-library/stream-i-o.md).
+Le diverse funzioni `printf` e `wprintf` accettano una stringa di formato e argomenti facoltativi e producono una sequenza di caratteri formattati per l'output. La stringa di formato contiene zero o più *direttive*, che sono caratteri letterali per l'output o *specifiche di conversione* codificate che descrivono come formattare un argomento nell'output. Questo articolo descrive la sintassi usata per codificare le specifiche di conversione nella stringa di formato. Per l'elenco di queste funzioni, vedere [I/O di flusso](../c-runtime-library/stream-i-o.md).
 
 Una specifica di conversione è costituita da campi obbligatori e facoltativi nel seguente formato:
 
@@ -62,7 +62,7 @@ I tipi Integer come `short`, `int`, `long`, `long long` e le loro varianti `unsi
 |**u**|Integer|Intero decimale senza segno.|
 |**x**|Integer|Intero esadecimale senza segno; usa "abcdef".|
 |**X**|Integer|Intero esadecimale senza segno; usa "ABCDEF".|
-|**e**|A virgola mobile|Valore con segno che presenta il formato [-]*d.dddd*__e±__*dd*[*d*] dove *d* corrisponde a una cifra decimale, *dddd* corrisponde a una o più cifre decimali a seconda della precisione specificata oppure a sei cifre per impostazione predefinita e *dd*[*d*] corrisponde a due o tre cifre decimali a seconda del [formato di output](../c-runtime-library/set-output-format.md) e delle dimensioni dell'esponente.|
+|**e**|A virgola mobile|Valore con segno che presenta il formato [-]*d.dddd*__e±__*dd*\[*d*] dove *d* corrisponde a una cifra decimale, *dddd* corrisponde a una o più cifre decimali a seconda della precisione specificata oppure a sei cifre per impostazione predefinita e *dd*\[*d*] corrisponde a due o tre cifre decimali a seconda del [formato di output](../c-runtime-library/set-output-format.md) e delle dimensioni dell'esponente.|
 |**E**|A virgola mobile|Identico al formato **e** con la differenza che l'esponente è introdotto da **E** anziché da **e**.|
 |**f**|A virgola mobile|Valore con segno che ha il formato [-]*dddd* __.__ *dddd*, dove *dddd* corrisponde a una o più cifre decimali. Il numero di cifre prima del separatore decimale dipende dalla grandezza del numero, mentre il numero di cifre dopo il separatore decimale dipende dalla precisione richiesta o corrisponde a sei per impostazione predefinita.|
 |**F**|A virgola mobile|Identico al formato **f** con la differenza che gli output infinity e NaN sono in maiuscolo.|
@@ -82,7 +82,7 @@ A partire da Visual Studio 2015, se l'argomento che corrisponde a un identificat
 |-----------|------------|
 |infinity|`inf`|
 |NaN non interattivo|`nan`|
-|NaN di segnalazione|`nan(snan)`|
+|Segnalazione NaN|`nan(snan)`|
 |NaN indefinito|`nan(ind)`|
 
 Qualsiasi valore tra questi può essere preceduto da un segno. Se un carattere identificatore di conversione *tipo* a virgola mobile è una lettera maiuscola, anche l'output viene formattato in lettere maiuscole. Ad esempio, se l'identificatore di formato è `%F` anziché `%f`, un infinity viene formattato come `INF` anziché come `inf`. Anche le funzioni `scanf` possono analizzare queste stringhe, pertanto questi valori possono completare un round trip tra le funzioni `printf` e `scanf`.
@@ -131,13 +131,13 @@ Il primo campo facoltativo in una specifica di conversione contiene *direttive f
 
 In una specifica di conversione, il campo facoltativo di specifica della larghezza viene visualizzato dopo qualsiasi carattere *flag*. L'argomento *larghezza* è un intero decimale non negativo che controlla il numero minimo di caratteri restituiti. Se il numero di caratteri nel valore di output è inferiore alla larghezza specificata, vengono aggiunti spazi a sinistra o a destra dei valori, a seconda che sia specificato o meno il flag di allineamento a sinistra ( **-** ), fino a raggiungere la larghezza minima. Se *larghezza* è preceduto da 0, vengono aggiunti zeri iniziali alle conversioni intere o a virgola mobile fino a raggiungere la larghezza minima, salvo se la conversione restituisce un valore infinito o non numerico.
 
-La specifica della larghezza non provoca mai il troncamento di un valore. Se il numero di caratteri nel valore di output è maggiore della larghezza specificata o se *larghezza* non viene specificato, vengono restituiti tutti i caratteri del valore in base alla specifica *precisione*.
+La specifica della larghezza non provoca mai il troncamento di un valore. Se il numero di caratteri nel valore di output è maggiore della larghezza specificata o se non viene specificato l'argomento *larghezza*, vengono restituiti tutti i caratteri del valore in base alla specifica *precisione*.
 
 Se la specifica della larghezza è un asterisco (`*`), il valore è fornito da un argomento `int` dall'elenco degli argomenti. L'argomento *larghezza* deve precedere il valore che viene formattato nell'elenco degli argomenti, come illustrato nel seguente esempio:
 
-`printf("%0*f", 5, 3);  /* 00003 is output */`
+`printf("%0*d", 5, 3);  /* 00003 is output */`
 
-Un valore *larghezza* mancante o di piccole dimensioni in una specifica di conversione non provoca il troncamento di un valore di output. Se il risultato di una conversione è più ampio del valore di *larghezza*, il campo viene espanso per contenere il risultato della conversione.
+Un valore *larghezza* mancante o di piccole dimensioni in una specifica di conversione non causa il troncamento di un valore di output. Se il risultato di una conversione è più ampio del valore di *larghezza*, il campo viene espanso per contenere il risultato della conversione.
 
 <a name="precision"></a>
 
@@ -171,7 +171,7 @@ Il carattere *tipo* determina l'interpretazione di *precisione* o la precisione 
 
 ## <a name="argument-size-specification"></a>Specifica delle dimensioni dell'argomento
 
-In una specifica di conversione il campo *dimensione* è un modificatore della lunghezza argomento per l'identificatore di conversione *tipo*. I prefissi del campo *dimensione* per il campo *tipo* (**hh**, **h**, **j**, **l** (L minuscola), **L**, **ll**, **t**, **w**, **z**, **I** (i maiuscola), **I32** e **I64**) specificano le "dimensioni" dell'argomento corrispondente, ovvero lungo o corto, a 32 bit o a 64 bit, carattere a byte singolo o carattere wide, a seconda dell'identificatore di conversione che viene modificato. Questi prefissi di dimensioni vengono usati con i caratteri *tipo* nei gruppi di funzioni `printf` e `wprintf` per specificare l'interpretazione delle lunghezze degli argomenti, come mostrato nella tabella seguente. Il campo *dimensione* è facoltativo per alcuni tipi di argomento. Quando non viene specificato alcun prefisso, il formattatore usa argomenti di tipo Integer, ad esempio `char`, `short`, `int`, `long` firmati o non firmati, e tipi di enumerazione, ad esempio i tipi `int` a 32 bit e gli argomenti a virgola mobile `float`, `double`, e `long double` vengono usati come tipi `double` a 64 bit. Corrisponde alle regole di promozione degli argomenti predefinite per elenchi di argomenti variabili. Per altre informazioni sulla promozione di argomenti, vedere Puntini di sospensione e argomenti predefiniti in [Espressioni in forma suffissa](../cpp/postfix-expressions.md). Nei sistemi a 32 bit e 64 bit la specifica di conversione del formato di un argomento Integer a 64 bit deve includere un prefisso di dimensione **ll** o **I64**. In caso contrario, il comportamento del formattatore non sarà definito.
+In una specifica di conversione il campo *dimensione* è un modificatore della lunghezza argomento per l'identificatore di conversione *tipo*. I prefissi del campo *dimensione* per il campo *tipo* (**hh**, **h**, **j**, **l** (L minuscola), **L**, **ll**, **t**, **w**, **z**, **I** (i maiuscola), **I32** e **I64**) specificano le "dimensioni" dell'argomento corrispondente, ovvero lungo o corto, a 32 bit o a 64 bit, carattere a byte singolo o carattere wide, a seconda dell'identificatore di conversione che viene modificato. Questi prefissi di dimensioni vengono usati con i caratteri *tipo* nei gruppi di funzioni `printf` e `wprintf` per specificare l'interpretazione delle lunghezze degli argomenti, come mostrato nella tabella seguente. Il campo *dimensione* è facoltativo per alcuni tipi di argomento. Quando non viene specificato alcun prefisso, il formattatore usa argomenti di tipo Integer, ad esempio `char`, `short`, `int`, `long` firmati o non firmati, e tipi di enumerazione, ad esempio i tipi `int` a 32 bit e gli argomenti a virgola mobile `float`, `double`, e `long double` vengono usati come tipi `double` a 64 bit. Questo comportamento corrisponde alle regole di promozione degli argomenti predefinite per gli elenchi di argomenti variabili. Per altre informazioni sulla promozione di argomenti, vedere Puntini di sospensione e argomenti predefiniti in [Espressioni in forma suffissa](../cpp/postfix-expressions.md). Nei sistemi a 32 bit e 64 bit la specifica di conversione del formato di un argomento Integer a 64 bit deve includere un prefisso di dimensione **ll** o **I64**. In caso contrario, il comportamento del formattatore non sarà definito.
 
 Alcuni tipi corrispondono a dimensioni diverse le codice a 32 bit e a 64 bit. Ad esempio, `size_t` ha una lunghezza pari a 32 bit nel codice compilato per x86 e a 64 bit nel codice compilato per x64. Per creare codice di formattazione indipendente dalla piattaforma per tipi a larghezza variabile, è possibile usare un modificatore di dimensioni per argomenti a larghezza variabile. In alternativa, usare un modificatore di dimensioni di argomenti a 64 bit e alzare di livello a 64 bit in modo esplicito il tipo di argomento a larghezza variabile. Il modificatore di dimensioni argomento specifico di Microsoft **I** (i maiuscola) gestisce gli argomenti interi con larghezza variabile; tuttavia per la portabilità è consigliato l'uso dei modificatori specifici del tipo **j**, **t** e **z**.
 
