@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3c0af8b608afd4effab710479108f1eb07fdaba
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358211"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821300"
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 
@@ -133,7 +133,7 @@ Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartel
 class CMFCRibbonButton : public CMFCRibbonBaseElement
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -146,31 +146,31 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |Nome|Descrizione|
 |----------|-----------------|
 |[CMFCRibbonButton::AddSubItem](#addsubitem)|Aggiunge una voce al menu a comparsa associato al pulsante.|
-|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Esegue l'override [cmfcribbonbaseelement:: Canbestretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|
-|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(Esegue l'override [cmfcribbonbaseelement:: Cleanupsizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).)|
-|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(Esegue l'override [cmfcribbonbaseelement:: Closepopupmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).)|
+|[CMFCRibbonButton::CanBeStretched](#canbestretched)|Esegue l'override di [CMFCRibbonBaseElement:: CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).|
+|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|Esegue l'override di [CMFCRibbonBaseElement:: CleanUpSizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes).|
+|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|Esegue l'override di [CMFCRibbonBaseElement:: ClosePopupMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu).|
 |[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||
-|[CMFCRibbonButton::DrawImage](#drawimage)|(Esegue l'override [cmfcribbonbaseelement:: DrawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).)|
+|[CMFCRibbonButton::DrawImage](#drawimage)|Esegue l'override di [CMFCRibbonBaseElement::D rawImage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage).|
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
 |[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Restituisce l'indice di una voce di menu a comparsa associata all'ID di comando.|
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
-|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Restituisce la dimensione compatta dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Restituisce la dimensione compatta dell'elemento della barra multifunzione. Esegue l'override di [CMFCRibbonBaseElement:: GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).|
 |[CMFCRibbonButton::GetIcon](#geticon)||
 |[CMFCRibbonButton::GetImageIndex](#getimageindex)|Restituisce l'indice dell'immagine associata al pulsante.|
-|[CMFCRibbonButton::GetImageSize](#getimagesize)|Restituisce la dimensione dell'immagine dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
-|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Restituisce la dimensione dell'elemento della barra multifunzione nello stato intermedio. (Esegue l'override [cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
+|[CMFCRibbonButton::GetImageSize](#getimagesize)|Restituisce la dimensione dell'immagine dell'elemento della barra multifunzione. Esegue l'override di [CMFCRibbonBaseElement:: getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).|
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Restituisce la dimensione dell'elemento della barra multifunzione nello stato intermedio. Esegue l'override di [CMFCRibbonBaseElement:: GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).|
 |[CMFCRibbonButton::GetMenu](#getmenu)|Restituisce un handle a un menu di Windows assegnato al pulsante della barra multifunzione.|
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||
-|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Restituisce la dimensione regolare dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Restituisce la dimensione regolare dell'elemento della barra multifunzione. Esegue l'override di [CMFCRibbonBaseElement:: GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).|
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
-|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Restituisce il testo della descrizione comando dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
-|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Specifica se l'elemento della barra multifunzione dispone di una modalità compatta. (Esegue l'override [cmfcribbonbaseelement:: Hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
-|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Specifica se l'elemento della barra multifunzione dispone di una modalità intermedia. (Esegue l'override [cmfcribbonbaseelement:: Hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
-|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Specifica se l'elemento della barra multifunzione dispone di una modalità di dimensioni elevate. (Esegue l'override [cmfcribbonbaseelement:: Haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
-|[CMFCRibbonButton::HasMenu](#hasmenu)|(Esegue l'override [cmfcribbonbaseelement:: Hasmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).)|
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Restituisce il testo della descrizione comando dell'elemento della barra multifunzione. Esegue l'override di [CMFCRibbonBaseElement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).|
+|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Specifica se l'elemento della barra multifunzione dispone di una modalità compatta. Esegue l'override di [CMFCRibbonBaseElement:: HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).|
+|[CMFCRibbonButton:: HasIntermediateMode](#hasintermediatemode)|Specifica se l'elemento della barra multifunzione dispone di una modalità intermedia. Esegue l'override di [CMFCRibbonBaseElement:: HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).|
+|[CMFCRibbonButton::HasLargeMode](#haslargemode)|Specifica se l'elemento della barra multifunzione dispone di una modalità di dimensioni elevate. Esegue l'override di [CMFCRibbonBaseElement:: HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).|
+|[CMFCRibbonButton::HasMenu](#hasmenu)|Esegue l'override di [CMFCRibbonBaseElement:: HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu).|
 |[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||
-|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(Esegue l'override [cmfcribbonbaseelement:: Isalwayslargeimage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).)|
+|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|Esegue l'override di [CMFCRibbonBaseElement:: IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage).|
 |[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||
 |[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||
 |[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|Determina se è stato abilitato il comando predefinito per un pulsante della barra multifunzione.|
@@ -182,25 +182,25 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::IsPopupDefaultMenuLook](#ispopupdefaultmenulook)||
 |[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|Determina se il menu è allineato a destra.|
 |[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
-|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Esegue l'override [cmfcribbonbaseelement:: Oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
+|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|Esegue l'override di [CMFCRibbonBaseElement:: OnCalcTextSize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).|
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
-|[CMFCRibbonButton::OnDraw](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonButton::OnDraw](#ondraw)|Chiamato dal framework per disegnare l'elemento della barra multifunzione. Esegue l'override di [CMFCRibbonBaseElement:: onpare](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).|
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
 |[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Rimuove tutte le voci di menu dal menu a comparsa.|
 |[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Rimuove una voce di menu dal menu a comparsa.|
-|[CMFCRibbonButton::SetACCData](#setaccdata)|(Esegue l'override [cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
+|[CMFCRibbonButton::SetACCData](#setaccdata)|Esegue l'override di [CMFCRibbonBaseElement:: SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).|
 |[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Specifica se il pulsante visualizza un'immagine di grandi o piccole dimensioni quando l'utente comprime il pulsante.|
 |[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Abilita il comando predefinito per il pulsante della barra multifunzione.|
-|[CMFCRibbonButton::SetDescription](#setdescription)|Imposta la descrizione dell'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: setDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|
+|[CMFCRibbonButton::SetDescription](#setdescription)|Imposta la descrizione dell'elemento della barra multifunzione. Esegue l'override di [CMFCRibbonBaseElement:: FileDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).|
 |[CMFCRibbonButton::SetImageIndex](#setimageindex)|Assegna un indice all'immagine del pulsante.|
 |[CMFCRibbonButton::SetMenu](#setmenu)|Assegna un menu a comparsa al pulsante della barra multifunzione.|
-|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(Esegue l'override [cmfcribbonbaseelement:: Setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
+|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|Esegue l'override di [CMFCRibbonBaseElement:: SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).|
 |[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|Allinea il menu a comparsa a destra del pulsante.|
-|[CMFCRibbonButton::SetText](#settext)|Imposta il testo per l'elemento della barra multifunzione. (Esegue l'override [cmfcribbonbaseelement:: SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).)|
+|[CMFCRibbonButton::SetText](#settext)|Imposta il testo per l'elemento della barra multifunzione. Esegue l'override di [CMFCRibbonBaseElement:: SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext).|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[CMFCRibbonButton::OnClick](#onclick)|Chiamato dal framework quando l'utente fa clic sul pulsante.|
 
@@ -212,9 +212,9 @@ Nell'esempio seguente viene illustrato come usare vari metodi nella classe `CMFC
 
 ## <a name="remarks"></a>Note
 
-Per usare un pulsante della barra multifunzione in un'applicazione, costruire l'oggetto pulsante e aggiungerlo alla barra multifunzione appropriata [pannello](../../mfc/reference/cmfcribbonpanel-class.md).
+Per usare un pulsante della barra multifunzione in un'applicazione, costruire l'oggetto Button e aggiungerlo al [Pannello](../../mfc/reference/cmfcribbonpanel-class.md)della barra multifunzione appropriato.
 
-```
+```cpp
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
     _T("Clipboard"), // Panel name
     m_PanelIcons.ExtractIcon (0)); // Panel icon
@@ -246,7 +246,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 **Intestazione:** afxribbonbutton.h
 
-##  <a name="addsubitem"></a>  CMFCRibbonButton::AddSubItem
+##  <a name="addsubitem"></a>CMFCRibbonButton:: AddSubItem
 
 Aggiunge una voce al menu a comparsa associato al pulsante.
 
@@ -259,12 +259,12 @@ void AddSubItem(
 ### <a name="parameters"></a>Parametri
 
 *pSubItem*<br/>
-[in] Specifica un puntatore al nuovo elemento da aggiungere.
+in Specifica un puntatore al nuovo elemento da aggiungere.
 
 *nIndex*<br/>
-[in] Specifica l'indice in corrispondenza del quale aggiungere l'elemento nella matrice di voci di menu del pulsante; -1 per aggiungere l'elemento alla fine della matrice di voci di menu.
+in Specifica l'indice in corrispondenza del quale aggiungere l'elemento alla matrice di voci di menu del pulsante; -1 per aggiungere l'elemento alla fine della matrice di voci di menu.
 
-##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched
+##  <a name="canbestretched"></a>CMFCRibbonButton:: CanBeStretched
 
 ```
 virtual BOOL CanBeStretched();
@@ -282,7 +282,7 @@ virtual void CleanUpSizes();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="closepopupmenu"></a>  CMFCRibbonButton::ClosePopupMenu
+##  <a name="closepopupmenu"></a>CMFCRibbonButton:: ClosePopupMenu
 
 ```
 virtual void ClosePopupMenu();
@@ -290,7 +290,7 @@ virtual void ClosePopupMenu();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="cmfcribbonbutton"></a>  CMFCRibbonButton::CMFCRibbonButton
+##  <a name="cmfcribbonbutton"></a>CMFCRibbonButton:: CMFCRibbonButton
 
 Costruisce un oggetto pulsante della barra multifunzione.
 
@@ -315,19 +315,19 @@ CMFCRibbonButton(
 ### <a name="parameters"></a>Parametri
 
 *nID*<br/>
-[in] Specifica l'ID di comando del pulsante.
+in Specifica l'ID di comando del pulsante.
 
 *lpszText*<br/>
-[in] Specifica l'etichetta di testo del pulsante.
+in Specifica l'etichetta di testo del pulsante.
 
 *nSmallImageIndex*<br/>
-[in] Specifica un indice in base zero dell'immagine di piccole dimensioni del pulsante dell'elenco di immagini della categoria padre.
+in Specifica un indice in base zero dell'immagine piccola del pulsante nell'elenco immagini della categoria padre.
 
 *nLargeImageIndex*<br/>
-[in] Specifica un indice in base zero dell'immagine del pulsante di grandi dimensioni nell'elenco delle immagini della categoria padre.
+in Specifica un indice in base zero dell'immagine grande del pulsante nell'elenco immagini della categoria padre.
 
 *hIcon*<br/>
-[in] Specifica un handle per l'icona utilizzata dall'applicazione come immagine del pulsante.
+in Specifica un handle per l'icona utilizzata dall'applicazione come immagine del pulsante.
 
 ### <a name="example"></a>Esempio
 
@@ -335,7 +335,7 @@ Nell'esempio seguente viene illustrato come costruire un `CMFCRibbonButton` ogge
 
 [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]
 
-##  <a name="drawbottomtext"></a>  CMFCRibbonButton::DrawBottomText
+##  <a name="drawbottomtext"></a>CMFCRibbonButton::D rawBottomText
 
 ```
 CSize DrawBottomText(
@@ -352,7 +352,7 @@ CSize DrawBottomText(
 
 ### <a name="remarks"></a>Note
 
-##  <a name="drawimage"></a>  CMFCRibbonButton::DrawImage
+##  <a name="drawimage"></a>CMFCRibbonButton::D rawImage
 
 ```
 virtual void DrawImage(
@@ -364,8 +364,8 @@ virtual void DrawImage(
 ### <a name="parameters"></a>Parametri
 
 [in] *pDC*<br/>
-[in] *type*<br/>
-[in] *rectImage*<br/>
+in *tipo* di<br/>
+in *rectImage*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -384,8 +384,8 @@ virtual int DrawRibbonText(
 
 [in] *pDC*<br/>
 [in] *strText*<br/>
-[in] *rectText*<br/>
-[in] *uiDTFlags*<br/>
+in *rectText*<br/>
+in *uiDTFlags*<br/>
 [in] *clrText*<br/>
 
 ### <a name="return-value"></a>Valore restituito
@@ -403,13 +403,13 @@ int FindSubItemIndexByID(UINT uiID) const;
 ### <a name="parameters"></a>Parametri
 
 *uiID*<br/>
-[in] Specifica l'ID di comando della voce di menu a comparsa.
+in Specifica l'ID comando della voce di menu di scelta rapida.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice a base zero dell'elemento secondario associato con il *uiID*. -1 se non sono presenti tali elementi secondari.
+Indice in base zero dell'elemento secondario associato a *uiID*. -1 se non è presente un sottoelemento di questo tipo.
 
-##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect
+##  <a name="getcommandrect"></a>CMFCRibbonButton:: GetCommandRect
 
 ```
 CRect GetCommandRect() const;
@@ -419,7 +419,7 @@ CRect GetCommandRect() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getcompactsize"></a>  CMFCRibbonButton::GetCompactSize
+##  <a name="getcompactsize"></a>CMFCRibbonButton:: GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -433,7 +433,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="geticon"></a>  CMFCRibbonButton::GetIcon
+##  <a name="geticon"></a>CMFCRibbonButton:: GetIcon
 
 ```
 HICON GetIcon(BOOL bLargeIcon = TRUE) const;
@@ -447,7 +447,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getimageindex"></a>  CMFCRibbonButton::GetImageIndex
+##  <a name="getimageindex"></a>CMFCRibbonButton:: GetImageIndex
 
 Restituisce l'indice dell'immagine associata al pulsante.
 
@@ -458,13 +458,13 @@ int GetImageIndex(BOOL bLargeImage) const;
 ### <a name="parameters"></a>Parametri
 
 *bLargeImage*<br/>
-[in] Se TRUE, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di grandi dimensioni. in caso contrario, restituisce l'indice dell'immagine nell'elenco delle immagini che contiene le immagini di piccole dimensioni.
+in Se TRUE, restituisce l'indice dell'immagine nell'elenco di immagini che contiene le immagini di grandi dimensioni; in caso contrario, restituisce l'indice dell'immagine nell'elenco di immagini che contiene le immagini di piccole dimensioni.
 
 ### <a name="return-value"></a>Valore restituito
 
-L'indice dell'immagine del pulsante nell'elenco di immagini associato.
+Indice dell'immagine del pulsante nell'elenco di immagini associato.
 
-##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize
+##  <a name="getimagesize"></a>CMFCRibbonButton:: GetImageSize
 
 ```
 virtual CSize GetImageSize(RibbonImageType type) const;
@@ -472,13 +472,13 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *type*<br/>
+in *tipo* di<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonButton::GetIntermediateSize
+##  <a name="getintermediatesize"></a>CMFCRibbonButton:: GetIntermediateSize
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -492,7 +492,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getmenu"></a>  CMFCRibbonButton::GetMenu
+##  <a name="getmenu"></a>CMFCRibbonButton:: GetMenu
 
 Restituisce un handle a un menu di Windows assegnato al pulsante della barra multifunzione.
 
@@ -502,9 +502,9 @@ HMENU GetMenu() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un handle a un menu di Windows assegnato al pulsante. NULL se non esiste alcun menu di scelta assegnato.
+Handle per un menu di Windows assegnato al pulsante; NULL se non è stato assegnato alcun menu.
 
-##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect
+##  <a name="getmenurect"></a>CMFCRibbonButton:: GetMenuRect
 
 ```
 CRect GetMenuRect() const;
@@ -514,7 +514,7 @@ CRect GetMenuRect() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getregularsize"></a>  CMFCRibbonButton::GetRegularSize
+##  <a name="getregularsize"></a>CMFCRibbonButton:: GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -528,7 +528,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getsubitems"></a>  CMFCRibbonButton::GetSubItems
+##  <a name="getsubitems"></a>CMFCRibbonButton:: GetSubItems
 
 ```
 const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;
@@ -538,7 +538,7 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
 
 ### <a name="remarks"></a>Note
 
-##  <a name="gettextrowheight"></a>  CMFCRibbonButton::GetTextRowHeight
+##  <a name="gettextrowheight"></a>CMFCRibbonButton:: GetTextRowHeight
 
 ```
 int GetTextRowHeight() const;
@@ -548,7 +548,7 @@ int GetTextRowHeight() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText
+##  <a name="gettooltiptext"></a>CMFCRibbonButton:: GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -558,7 +558,7 @@ virtual CString GetToolTipText() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="hascompactmode"></a>  CMFCRibbonButton::HasCompactMode
+##  <a name="hascompactmode"></a>CMFCRibbonButton:: HasCompactMode
 
 ```
 virtual BOOL HasCompactMode() const;
@@ -568,7 +568,7 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="hasintermediatemode"></a>  CMFCRibbonButton::HasIntermediateMode
+##  <a name="hasintermediatemode"></a>CMFCRibbonButton:: HasIntermediateMode
 
 ```
 virtual BOOL HasIntermediateMode() const;
@@ -578,7 +578,7 @@ virtual BOOL HasIntermediateMode() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="haslargemode"></a>  CMFCRibbonButton::HasLargeMode
+##  <a name="haslargemode"></a>CMFCRibbonButton:: HasLargeMode
 
 ```
 virtual BOOL HasLargeMode() const;
@@ -588,7 +588,7 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="hasmenu"></a>  CMFCRibbonButton::HasMenu
+##  <a name="hasmenu"></a>CMFCRibbonButton:: HasMenu
 
 ```
 virtual BOOL HasMenu() const;
@@ -618,7 +618,7 @@ virtual BOOL IsAlwaysLargeImage() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="isapplicationbutton"></a>  CMFCRibbonButton::IsApplicationButton
+##  <a name="isapplicationbutton"></a>CMFCRibbonButton:: IsApplicationButton
 
 ```
 virtual BOOL IsApplicationButton() const;
@@ -628,7 +628,7 @@ virtual BOOL IsApplicationButton() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="iscommandareahighlighted"></a>  CMFCRibbonButton::IsCommandAreaHighlighted
+##  <a name="iscommandareahighlighted"></a>CMFCRibbonButton:: IsCommandAreaHighlighted
 
 ```
 virtual BOOL IsCommandAreaHighlighted() const;
@@ -638,7 +638,7 @@ virtual BOOL IsCommandAreaHighlighted() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand
+##  <a name="isdefaultcommand"></a>CMFCRibbonButton:: IsDefaultCommand
 
 Specifica se il comando predefinito per un pulsante della barra multifunzione è abilitato.
 
@@ -648,7 +648,7 @@ BOOL IsDefaultCommand() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se è stato abilitato il comando predefinito per un pulsante della barra multifunzione. FALSE in caso contrario.
+TRUE se è stato abilitato il comando predefinito per un pulsante della barra multifunzione; In caso contrario, FALSE.
 
 ##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton
 
@@ -660,7 +660,7 @@ virtual BOOL IsDefaultPanelButton() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonButton::IsDrawTooltipImage
+##  <a name="isdrawtooltipimage"></a>CMFCRibbonButton:: IsDrawTooltipImage
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -670,7 +670,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="islargeimage"></a>  CMFCRibbonButton::IsLargeImage
+##  <a name="islargeimage"></a>CMFCRibbonButton:: IsLargeImage
 
 ```
 BOOL IsLargeImage() const;
@@ -680,7 +680,7 @@ BOOL IsLargeImage() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="ismenuareahighlighted"></a>  CMFCRibbonButton::IsMenuAreaHighlighted
+##  <a name="ismenuareahighlighted"></a>CMFCRibbonButton:: IsMenuAreaHighlighted
 
 ```
 virtual BOOL IsMenuAreaHighlighted() const;
@@ -690,7 +690,7 @@ virtual BOOL IsMenuAreaHighlighted() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="ismenuonbottom"></a>  CMFCRibbonButton::IsMenuOnBottom
+##  <a name="ismenuonbottom"></a>CMFCRibbonButton:: IsMenuOnBottom
 
 ```
 BOOL IsMenuOnBottom() const;
@@ -700,7 +700,7 @@ BOOL IsMenuOnBottom() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="ispopupdefaultmenulook"></a>  CMFCRibbonButton::IsPopupDefaultMenuLook
+##  <a name="ispopupdefaultmenulook"></a>CMFCRibbonButton:: IsPopupDefaultMenuLook
 
 ```
 virtual BOOL IsPopupDefaultMenuLook() const;
@@ -710,9 +710,9 @@ virtual BOOL IsPopupDefaultMenuLook() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu
+##  <a name="isrightalignmenu"></a>CMFCRibbonButton:: IsRightAlignMenu
 
-Specifica se il menu di scelta è allineata a destra.
+Specifica se il menu è allineato a destra.
 
 ```
 BOOL IsRightAlignMenu() const;
@@ -720,7 +720,7 @@ BOOL IsRightAlignMenu() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il menu di scelta è allineata a destra; in caso contrario, FALSE.
+TRUE se il menu è allineato a destra; in caso contrario, FALSE.
 
 ##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText
 
@@ -732,7 +732,7 @@ BOOL IsSingleLineText() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="oncalctextsize"></a>  CMFCRibbonButton::OnCalcTextSize
+##  <a name="oncalctextsize"></a>CMFCRibbonButton:: OnCalcTextSize
 
 ```
 virtual void OnCalcTextSize(CDC* pDC);
@@ -744,7 +744,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="onclick"></a>  CMFCRibbonButton::OnClick
+##  <a name="onclick"></a>CMFCRibbonButton:: OnClick
 
 Chiamato dal framework quando l'utente fa clic sul pulsante.
 
@@ -755,13 +755,13 @@ virtual void OnClick(CPoint point);
 ### <a name="parameters"></a>Parametri
 
 *point*<br/>
-[in] Specifica la posizione di clic del mouse.
+in Specifica la posizione del clic del mouse.
 
 ### <a name="remarks"></a>Note
 
-L'override del metodo in una classe derivata se si desidera gestire questo evento.
+Se si desidera gestire questo evento, eseguire l'override di questo metodo in una classe derivata.
 
-##  <a name="ondraw"></a>  Cmfcribbonbutton:: OnDraw
+##  <a name="ondraw"></a>CMFCRibbonButton:: onpare
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -773,7 +773,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="ondrawborder"></a>  CMFCRibbonButton::OnDrawBorder
+##  <a name="ondrawborder"></a>CMFCRibbonButton:: OnDrawBorder
 
 ```
 virtual void OnDrawBorder(CDC* pDC);
@@ -785,7 +785,7 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="onfillbackground"></a>  CMFCRibbonButton::OnFillBackground
+##  <a name="onfillbackground"></a>CMFCRibbonButton:: OnFillBackground
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -807,7 +807,7 @@ Rimuove tutte le voci di menu dal menu a comparsa.
 void RemoveAllSubItems();
 ```
 
-##  <a name="removesubitem"></a>  CMFCRibbonButton::RemoveSubItem
+##  <a name="removesubitem"></a>CMFCRibbonButton:: RemoveSubItem
 
 Rimuove una voce di menu dal menu a comparsa.
 
@@ -818,13 +818,13 @@ BOOL RemoveSubItem(int nIndex);
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-[in] Specifica l'indice in base zero della voce di menu che si desidera rimuovere.
+in Specifica l'indice in base zero della voce di menu che si desidera rimuovere.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se l'elemento specificato è stato rimosso correttamente; in caso contrario, FALSE se *nIndex* è negativo o supera il numero di voci di menu nel menu a comparsa.
+TRUE se l'elemento specificato è stato rimosso correttamente. in caso contrario, FALSE se *nIndex* è negativo o supera il numero di voci di menu nel menu a comparsa.
 
-##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData
+##  <a name="setaccdata"></a>CMFCRibbonButton:: SetACCData
 
 Imposta i dati di accessibilità per il pulsante della barra multifunzione.
 
@@ -844,11 +844,11 @@ Dati di accessibilità per l'elemento della barra multifunzione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se ha esito positivo. in caso contrario, FALSE.
+Restituisce TRUE se l'operazione ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="setalwayslargeimage"></a>  CMFCRibbonButton::SetAlwaysLargeImage
+##  <a name="setalwayslargeimage"></a>CMFCRibbonButton:: SetAlwaysLargeImage
 
 Specifica se il pulsante visualizza un'immagine di grandi o piccole dimensioni quando l'utente comprime il pulsante.
 
@@ -859,9 +859,9 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bSet*<br/>
-[in] Se TRUE, il pulsante Visualizza un'immagine di grandi dimensioni. In caso contrario, il pulsante Visualizza un'immagine piccola.
+in Se TRUE, il pulsante Visualizza un'immagine di grandi dimensioni. In caso contrario, il pulsante Visualizza un'immagine di dimensioni ridotte.
 
-##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand
+##  <a name="setdefaultcommand"></a>CMFCRibbonButton:: SetDefaultCommand
 
 Abilita il comando predefinito per il pulsante della barra multifunzione.
 
@@ -872,13 +872,13 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bSet*<br/>
-[in] Se TRUE, il pulsante può eseguire il comando predefinito. Se FALSE, il pulsante non è possibile eseguire il comando predefinito.
+in Se TRUE, il pulsante può eseguire il comando predefinito. Se FALSE, il pulsante non è in grado di eseguire il comando predefinito.
 
 ### <a name="remarks"></a>Note
 
-*bSet* è rilevante solo quando il pulsante presenta un menu. Se *bSet* è TRUE, il pulsante può eseguire il comando predefinito e menu di scelta rapida assegnato viene visualizzato solo quando un utente fa clic sulla freccia a destra del pulsante. In caso contrario, il pulsante non è possibile eseguire il comando predefinito e viene visualizzato il menu a comparsa indipendentemente dall'area del pulsante l'utente fa clic.
+*bSet* è pertinente solo quando il pulsante dispone di un menu. Se *bSet* è true, il pulsante può eseguire il comando predefinito e il menu popup assegnato viene visualizzato solo quando un utente fa clic sulla freccia sul bordo destro del pulsante. In caso contrario, il pulsante non può eseguire il comando predefinito e il menu popup viene visualizzato indipendentemente dall'area del pulsante su cui l'utente fa clic.
 
-##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription
+##  <a name="setdescription"></a>CMFCRibbonButton:: FileDescription
 
 ```
 virtual void SetDescription(LPCTSTR lpszText);
@@ -890,7 +890,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="setimageindex"></a>  CMFCRibbonButton::SetImageIndex
+##  <a name="setimageindex"></a>CMFCRibbonButton:: seimageindex
 
 Assegna un indice all'immagine del pulsante.
 
@@ -903,12 +903,12 @@ void SetImageIndex(
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-[in] Specifica l'indice dell'immagine.
+in Specifica l'indice dell'immagine.
 
 *bLargeImage*<br/>
-[in] Se TRUE, l'indice specificato si riferisce all'elenco di immagini di grandi dimensioni. In caso contrario, l'indice fa riferimento all'elenco delle immagini di piccole dimensioni.
+in Se TRUE, l'indice specificato si riferisce all'elenco di immagini di grandi dimensioni. In caso contrario, l'indice fa riferimento all'elenco delle immagini di piccole dimensioni.
 
-##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu
+##  <a name="setmenu"></a>CMFCRibbonButton:: semenu
 
 Assegna un menu a comparsa al pulsante della barra multifunzione.
 
@@ -927,22 +927,22 @@ void SetMenu(
 ### <a name="parameters"></a>Parametri
 
 *hMenu*<br/>
-Handle a un menu di Windows.
+Handle per un menu di Windows.
 
 *bIsDefaultCommand*<br/>
-Se TRUE, il pulsante può essere eseguito il comando predefinito; in caso contrario, il pulsante Visualizza un menu a comparsa.
+Se TRUE, il pulsante può eseguire il comando predefinito. in caso contrario, il pulsante Visualizza un menu a comparsa.
 
 *bRightAlign*<br/>
-Se TRUE, il menu di scelta è allineata a destra. In caso contrario, il menu di scelta è allineata a sinistra.
+Se TRUE, il menu è allineato a destra. In caso contrario, il menu è allineato a sinistra.
 
 *uiMenuResID*<br/>
-Un ID di risorsa di menu.
+ID della risorsa di menu.
 
 ### <a name="remarks"></a>Note
 
-Quando l'applicazione assegna il menu di scelta per il pulsante, il pulsante Visualizza una freccia nel lato destro. Se *bIsDefaultCommand* è TRUE, il menu viene visualizzato solo quando l'utente fa clic sulla freccia. Se l'utente fa clic sul pulsante, viene eseguito il comando predefinito. Se *bIsDefaultCommand* è FALSE, facendo clic su un punto qualsiasi del pulsante viene visualizzato il menu.
+Quando l'applicazione assegna il menu al pulsante, il pulsante Visualizza una freccia sul lato destro. Se *bIsDefaultCommand* è true, il menu viene visualizzato solo quando l'utente fa clic sulla freccia. Se l'utente fa clic sul pulsante, viene eseguito il comando predefinito. Se *bIsDefaultCommand* è false, il menu viene visualizzato facendo clic in un punto qualsiasi del pulsante.
 
-##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory
+##  <a name="setparentcategory"></a>CMFCRibbonButton:: SetParentCategory
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
@@ -950,13 +950,13 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pParent*<br/>
+in *pParent*<br/>
 
 ### <a name="remarks"></a>Note
 
-##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu
+##  <a name="setrightalignmenu"></a>CMFCRibbonButton:: SetRightAlignMenu
 
-Consente di allineare il menu a comparsa al bordo del pulsante.
+Allinea il menu a comparsa al bordo del pulsante.
 
 ```
 void SetRightAlignMenu(BOOL bSet=TRUE);
@@ -965,7 +965,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bSet*<br/>
-[in] Se TRUE, il menu di scelta è allineata a destra. In caso contrario, il menu di scelta è allineata a sinistra
+in Se TRUE, il menu è allineato a destra. In caso contrario, il menu è allineato a sinistra
 
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText
 
