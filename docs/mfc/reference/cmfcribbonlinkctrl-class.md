@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: bc13cf29fd9fed9f91221f00d4b605b3d9c3506f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12a83e45176f7fc6020da1f0d0ee5923ef0f466c
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388384"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866152"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Classe CMFCRibbonLinkCtrl
 
@@ -50,11 +50,11 @@ Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartel
 class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl](#cmfcribbonlinkctrl)|Costruisce e inizializza un oggetto `CMFCRibbonLinkCtrl`.|
 
@@ -63,13 +63,13 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 |Nome|Descrizione|
 |----------|-----------------|
 |[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|Esegue l'override di `CMFCRibbonButton::CopyFrom`.|
-|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Esegue l'override [cmfcribbonbutton:: Getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
+|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|Esegue l'override di [CMFCRibbonButton:: GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).|
 |[CMFCRibbonLinkCtrl::GetLink](#getlink)|Restituisce il valore del collegamento ipertestuale.|
-|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(Esegue l'override [cmfcribbonbutton:: Getregularsize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
-|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(Esegue l'override [cmfcribbonbutton:: GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).)|
+|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|Esegue l'override di [CMFCRibbonButton:: GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).|
+|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|Esegue l'override di [CMFCRibbonButton:: GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).|
 |[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|Esegue l'override di `CMFCRibbonButton::IsDrawTooltipImage`.|
-|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|(Esegue l'override [cmfcribbonbutton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
-|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(Esegue l'override [cmfcribbonbaseelement:: Ondrawmenuimage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
+|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|Esegue l'override di [CMFCRibbonButton:: onpare](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).|
+|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|Esegue l'override di [CMFCRibbonBaseElement:: OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).|
 |[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|Esegue l'override di `CMFCRibbonButton::OnMouseMove`.|
 |[CMFCRibbonLinkCtrl::OnSetIcon](#onseticon)||
 |[CMFCRibbonLinkCtrl::OpenLink](#openlink)|Apre la pagina Web specificata nel collegamento ipertestuale.|
@@ -77,21 +77,22 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 
 ## <a name="remarks"></a>Note
 
-Dopo aver creato un collegamento ipertestuale, aggiungerlo a un pannello chiamando [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
+Dopo aver creato un collegamento ipertestuale, aggiungerlo a un pannello chiamando [CMFCRibbonPanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-[CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
-
-[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+&nbsp;[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) └\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) └\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) └
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxribbonlinkctrl. H
+**Intestazione:** afxRibbonLinkCtrl. h
 
 ##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
 
-Costruisce e Inizializza un [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) oggetto.
+Costruisce e Inizializza un oggetto [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) .
 
 ```
 CMFCRibbonLinkCtrl(
@@ -103,17 +104,17 @@ CMFCRibbonLinkCtrl(
 ### <a name="parameters"></a>Parametri
 
 *nID*<br/>
-[in] Specifica l'ID di comando del comando che viene eseguito quando si fa clic sul controllo collegamento.
+in Specifica l'ID del comando eseguito quando si fa clic sul controllo collegamento.
 
 *lpszText*<br/>
-[in] Specifica l'etichetta da visualizzare nel controllo collegamento.
+in Specifica l'etichetta da visualizzare sul controllo collegamento.
 
 *lpszLink*<br/>
-[in] Specifica il collegamento ipertestuale associato al controllo di collegamento.
+in Specifica il collegamento ipertestuale associato al controllo collegamento.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come utilizzare il costruttore del `CMFCRibbonLinkCtrl` classe. Questo frammento di codice fa parte di [esempio di gadget della barra multifunzione](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare il costruttore della `CMFCRibbonLinkCtrl` classe. Questo frammento di codice fa parte dell' [esempio di gadget della barra multifunzione](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]
 
@@ -125,7 +126,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *src*<br/>
+in *src*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -153,7 +154,7 @@ LPCTSTR GetLink() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore corrente del collegamento ipertestuale.
+Valore corrente del collegamento ipertestuale.
 
 ### <a name="remarks"></a>Note
 
@@ -181,7 +182,7 @@ virtual CString GetToolTipText() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="ondrawmenuimage"></a>  CMFCRibbonLinkCtrl::OnDrawMenuImage
+##  <a name="ondrawmenuimage"></a>CMFCRibbonLinkCtrl:: OnDrawMenuImage
 
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -189,8 +190,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *CDC&#42;*<br/>
-[in] *CRect*<br/>
+in *CDC&#42;*<br/>
+in *CRect*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -206,7 +207,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="ondraw"></a>  CMFCRibbonLinkCtrl::OnDraw
+##  <a name="ondraw"></a>CMFCRibbonLinkCtrl:: onpare
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -218,7 +219,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="onmousemove"></a>  CMFCRibbonLinkCtrl::OnMouseMove
+##  <a name="onmousemove"></a>CMFCRibbonLinkCtrl:: OnMouseMove
 
 ```
 virtual void OnMouseMove(CPoint point);
@@ -226,11 +227,11 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *point*<br/>
+in *punto* di<br/>
 
 ### <a name="remarks"></a>Note
 
-##  <a name="onseticon"></a>  CMFCRibbonLinkCtrl::OnSetIcon
+##  <a name="onseticon"></a>CMFCRibbonLinkCtrl:: OnSetIcon
 
 ```
 virtual void OnSetIcon();
@@ -238,7 +239,7 @@ virtual void OnSetIcon();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="openlink"></a>  CMFCRibbonLinkCtrl::OpenLink
+##  <a name="openlink"></a>CMFCRibbonLinkCtrl:: OpenLink
 
 Apre la pagina Web specificata nel collegamento ipertestuale.
 
@@ -248,11 +249,11 @@ BOOL OpenLink();
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la pagina Web associata è stato aperto correttamente; in caso contrario, FALSE.
+TRUE se la pagina Web associata è stata aperta correttamente. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Viene aperta una pagina Web usando il collegamento ipertestuale associato il `CMFCRibbonLinkCtrl` oggetto.
+Apre una pagina Web utilizzando il collegamento ipertestuale associato `CMFCRibbonLinkCtrl` all'oggetto.
 
 ##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink
 
@@ -265,7 +266,7 @@ void SetLink(LPCTSTR lpszLink);
 ### <a name="parameters"></a>Parametri
 
 *lpszLink*<br/>
-[in] Specifica il testo del collegamento ipertestuale.
+in Specifica il testo del collegamento ipertestuale.
 
 ## <a name="see-also"></a>Vedere anche
 

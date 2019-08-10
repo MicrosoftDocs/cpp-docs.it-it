@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-ms.openlocfilehash: 8f184bab564b4867138608b735c67b328e1a21cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88c125c63f9dbfe272f5d543e996366575fc533b
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391244"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866227"
 ---
 # <a name="cdockablepaneadapter-class"></a>Classe CDockablePaneAdapter
 
@@ -31,38 +31,40 @@ Fornisce il supporto di ancoraggio per i riquadri derivati da `CWnd`.
 class CDockablePaneAdapter : public CDockablePane
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|Restituisce la finestra di cui è stato eseguito il wrapping.|
-|[CDockablePaneAdapter::LoadState](#loadstate)|(Esegue l'override [CDockablePane:: LoadState](cdockablepane-class.md#loadstate).)|
-|[CDockablePaneAdapter::SaveState](#savestate)|(Esegue l'override [CDockablePane:: SaveState](cdockablepane-class.md).)|
+|[CDockablePaneAdapter::LoadState](#loadstate)|Esegue l'override di [CDockablePane:: LoadState](cdockablepane-class.md#loadstate).|
+|[CDockablePaneAdapter::SaveState](#savestate)|Esegue l'override di [CDockablePane:: SaveState](cdockablepane-class.md).|
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||
 
 ## <a name="remarks"></a>Note
 
-In genere, il framework crea istanze di oggetti di questa classe quando si usa la [cmfcbasetabctrl:: addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) oppure [cmfcbasetabctrl:: insertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) metodi.
+In genere, il Framework crea un'istanza degli oggetti di questa classe quando si usano i metodi [CMFCBaseTabCtrl:: AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) o [CMFCBaseTabCtrl:: InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) .
 
-Se si desidera personalizzare il `CDockablePaneAdapter` comportamento, è sufficiente derivare una nuova classe da quest'ultimo e impostare le informazioni sulla classe di runtime per una finestra a schede usando [cmfcbasetabctrl:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
+Se si desidera personalizzare il `CDockablePaneAdapter` comportamento, derivare una nuova classe da essa e impostare le informazioni sulla classe di runtime su una finestra a schede utilizzando [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
-[CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)
-
-[CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)
-
-[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md) └\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md) └\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CPane](../../mfc/reference/cpane-class.md) └\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CDockablePane](../../mfc/reference/cdockablepane-class.md) └\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md) └
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxdockablepaneadapter. H
+**Intestazione:** afxDockablePaneAdapter. h
 
-##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd
+##  <a name="getwrappedwnd"></a>CDockablePaneAdapter:: GetWrappedWnd
 
-Restituisce la finestra sottostante per l'adapter di un riquadro ancorabile.
+Restituisce la finestra sottostante per l'adattatore del riquadro ancorabile.
 
 ```
 virtual CWnd* GetWrappedWnd() const;
@@ -70,15 +72,15 @@ virtual CWnd* GetWrappedWnd() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore alla finestra sottoposta a wrapping.
+Puntatore alla finestra di cui è stato eseguito il Wrapped.
 
 ### <a name="remarks"></a>Note
 
-Utilizzare questa funzione per accedere alla finestra sottoposta a wrapping.
+Usare questa funzione per accedere alla finestra di cui è stato eseguito il Wrapped.
 
-##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState
+##  <a name="loadstate"></a>CDockablePaneAdapter:: LoadState
 
-Carica lo stato del riquadro dal Registro di sistema.
+Carica lo stato del riquadro dal registro di sistema.
 
 ```
 virtual BOOL LoadState(
@@ -90,21 +92,21 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parametri
 
 *lpszProfileName*<br/>
-[in] Il nome del profilo.
+in Nome del profilo.
 
 *nIndex*<br/>
-[in] L'indice di profilo.
+in Indice del profilo.
 
 *uiID*<br/>
-[in] L'ID del riquadro.
+in ID del riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState
+##  <a name="savestate"></a>CDockablePaneAdapter:: SaveState
 
-Salva lo stato del riquadro nel Registro di sistema.
+Salva lo stato del riquadro nel registro di sistema.
 
 ```
 virtual BOOL SaveState(
@@ -116,21 +118,21 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parametri
 
 *lpszProfileName*<br/>
-[in] Il nome del profilo.
+in Nome del profilo.
 
 *nIndex*<br/>
-[in] L'indice di profilo (impostazione predefinita è l'ID di controllo della finestra).
+in Indice del profilo (l'impostazione predefinita è l'ID del controllo della finestra).
 
 *uiID*<br/>
-[in] L'ID del riquadro.
+in ID del riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd
+##  <a name="setwrappedwnd"></a>CDockablePaneAdapter:: SetWrappedWnd
 
-Imposta la finestra sottostante per l'adapter di un riquadro ancorabile.
+Imposta la finestra sottostante per l'adattatore del riquadro ancorabile.
 
 ```
 virtual BOOL SetWrappedWnd(CWnd* pWnd);
@@ -139,7 +141,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ### <a name="parameters"></a>Parametri
 
 *pWnd*<br/>
-[in] Puntatore alla finestra per l'adapter di riquadro eseguire il wrapping.
+in Puntatore alla finestra per l'adattatore del riquadro di cui eseguire il wrapping.
 
 ### <a name="return-value"></a>Valore restituito
 

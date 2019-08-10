@@ -16,19 +16,19 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 934d746dafafb39c2ffc3477c59c95914d270196
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e5d06ca01201bf415afedbe6f6e5bca096f68fa
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277357"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915585"
 ---
 # <a name="ctokengroups-class"></a>Classe CTokenGroups
 
-Questa classe è un wrapper per il `TOKEN_GROUPS` struttura.
+Questa classe è un wrapper per la `TOKEN_GROUPS` struttura.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,50 +36,50 @@ Questa classe è un wrapper per il `TOKEN_GROUPS` struttura.
 class CTokenGroups
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CTokenGroups::CTokenGroups](#ctokengroups)|Costruttore.|
+|[CTokenGroups:: CTokenGroups](#ctokengroups)|Costruttore.|
 |[CTokenGroups:: ~ CTokenGroups](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CTokenGroups::Add](#add)|Aggiunge un `CSid` o esistente `TOKEN_GROUPS` struttura per il `CTokenGroups` oggetto.|
-|[CTokenGroups::Delete](#delete)|Elimina una `CSid` e i relativi attributi associati dal `CTokenGroups` oggetto.|
-|[CTokenGroups::DeleteAll](#deleteall)|Elimina tutti `CSid` gli oggetti e i relativi attributi associati dal `CTokenGroups` oggetto.|
-|[CTokenGroups::GetCount](#getcount)|Restituisce il numero di `CSid` gli oggetti e attributi associati contenuti nel `CTokenGroups` oggetto.|
-|[CTokenGroups::GetLength](#getlength)|Restituisce la dimensione del `CTokenGroups` oggetto.|
-|[CTokenGroups::GetPTOKEN_GROUPS](#getptoken_groups)|Recupera un puntatore al `TOKEN_GROUPS` struttura.|
-|[CTokenGroups::GetSidsAndAttributes](#getsidsandattributes)|Recupera le `CSid` gli oggetti e attributi che appartengono al `CTokenGroups` oggetto.|
-|[CTokenGroups::LookupSid](#lookupsid)|Recupera gli attributi associati un `CSid` oggetto.|
+|[CTokenGroups::Add](#add)|Aggiunge una `CSid` struttura o `TOKEN_GROUPS` esistente all' `CTokenGroups` oggetto.|
+|[CTokenGroups::D Elimina](#delete)|Elimina un `CSid` `CTokenGroups` oggetto e i relativi attributi associati dall'oggetto.|
+|[CTokenGroups::DeleteAll](#deleteall)|Elimina tutti `CSid` gli oggetti e i relativi attributi associati `CTokenGroups` dall'oggetto.|
+|[CTokenGroups::GetCount](#getcount)|Restituisce il numero di `CSid` oggetti e gli attributi associati contenuti `CTokenGroups` nell'oggetto.|
+|[CTokenGroups::GetLength](#getlength)|Restituisce la dimensione dell' `CTokenGroups` oggetto.|
+|[CTokenGroups::GetPTOKEN_GROUPS](#getptoken_groups)|Recupera un puntatore alla `TOKEN_GROUPS` struttura.|
+|[CTokenGroups::GetSidsAndAttributes](#getsidsandattributes)|Recupera gli `CTokenGroups` oggetti e gli attributi appartenenti all'oggetto. `CSid`|
+|[CTokenGroups::LookupSid](#lookupsid)|Recupera gli attributi associati a un `CSid` oggetto.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CTokenGroups::operator TOKEN_GROUPS const *](#operator_const_token_groups__star)|Cast di `CTokenGroups` oggetti in un puntatore al `TOKEN_GROUPS` struttura.|
-|[CTokenGroups::operator =](#operator_eq)|Operatore di assegnazione.|
+|[CTokenGroups:: operator const TOKEN_GROUPS *](#operator_const_token_groups__star)|Esegue il cast `CTokenGroups` dell'oggetto a un puntatore `TOKEN_GROUPS` alla struttura.|
+|[CTokenGroups:: operator =](#operator_eq)|Operatore di assegnazione.|
 
 ## <a name="remarks"></a>Note
 
-Un' [token di accesso](/windows/desktop/SecAuthZ/access-tokens) è un oggetto che descrive il contesto di sicurezza di un processo o thread e viene allocato a ogni utente connesso a un sistema di Windows.
+Un [token di accesso](/windows/desktop/SecAuthZ/access-tokens) è un oggetto che descrive il contesto di sicurezza di un processo o di un thread e viene allocato a ciascun utente connesso a un sistema Windows.
 
-Il `CTokenGroups` classe è un wrapper per il [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) struttura, contenente informazioni sul gruppo gli ID di sicurezza (SID) in un token di accesso.
+La `CTokenGroups` classe è un wrapper per la struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) , che contiene informazioni sugli identificatori di sicurezza (SID) del gruppo in un token di accesso.
 
-Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nel SDK di Windows.
+Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nella Windows SDK.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** ATLSecurity. h
 
-##  <a name="add"></a>  CTokenGroups::Add
+##  <a name="add"></a>CTokenGroups:: Add
 
-Aggiunge un `CSid` o esistente `TOKEN_GROUPS` struttura per il `CTokenGroups` oggetto.
+Aggiunge una `CSid` struttura o `TOKEN_GROUPS` esistente all' `CTokenGroups` oggetto.
 
 ```
 void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
@@ -89,19 +89,19 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ### <a name="parameters"></a>Parametri
 
 *rSid*<br/>
-Oggetto [IDSR](../../atl/reference/csid-class.md) oggetto.
+Oggetto [CSid](../../atl/reference/csid-class.md) .
 
 *dwAttributes*<br/>
-Gli attributi da associare il `CSid` oggetto.
+Attributi da associare `CSid` all'oggetto.
 
 *rTokenGroups*<br/>
-Oggetto [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) struttura.
+Struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
 
 ### <a name="remarks"></a>Note
 
-Questi metodi consentono di aggiungere uno o più `CSid` gli oggetti e i relativi attributi associati ai `CTokenGroups` oggetto.
+Questi metodi aggiungono uno o `CSid` più oggetti e i relativi attributi associati `CTokenGroups` all'oggetto.
 
-##  <a name="ctokengroups"></a>  CTokenGroups::CTokenGroups
+##  <a name="ctokengroups"></a>CTokenGroups:: CTokenGroups
 
 Costruttore.
 
@@ -114,13 +114,13 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>Parametri
 
 *rhs*<br/>
-Il `CTokenGroups` oggetto oppure [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) struttura con cui costruire la `CTokenGroups` oggetto.
+Oggetto o struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) con cui costruire l' `CTokenGroups` oggetto. `CTokenGroups`
 
 ### <a name="remarks"></a>Note
 
-Il `CTokenGroups` oggetto può facoltativamente essere creato usando un' `TOKEN_GROUPS` struttura o un oggetto definito in precedenza `CTokenGroups` oggetto.
+È `CTokenGroups` possibile creare facoltativamente l'oggetto utilizzando una `TOKEN_GROUPS` struttura o un oggetto definito `CTokenGroups` in precedenza.
 
-##  <a name="dtor"></a>  CTokenGroups::~CTokenGroups
+##  <a name="dtor"></a>CTokenGroups:: ~ CTokenGroups
 
 Distruttore.
 
@@ -134,7 +134,7 @@ Il distruttore libera tutte le risorse allocate.
 
 ##  <a name="delete"></a>  CTokenGroups::Delete
 
-Elimina una `CSid` e i relativi attributi associati dal `CTokenGroups` oggetto.
+Elimina un `CSid` `CTokenGroups` oggetto e i relativi attributi associati dall'oggetto.
 
 ```
 bool Delete(const CSid& rSid) throw();
@@ -143,15 +143,15 @@ bool Delete(const CSid& rSid) throw();
 ### <a name="parameters"></a>Parametri
 
 *rSid*<br/>
-Il [IDSR](../../atl/reference/csid-class.md) oggetto per cui rimuovere gli ID di sicurezza (SID) e gli attributi.
+Oggetto [CSid](../../atl/reference/csid-class.md) per il quale è necessario rimuovere l'ID di sicurezza (SID) e gli attributi.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se il `CSid` viene rimosso, false in caso contrario.
+Restituisce true se l' `CSid` oggetto è stato rimosso; in caso contrario, false.
 
 ##  <a name="deleteall"></a>  CTokenGroups::DeleteAll
 
-Elimina tutti `CSid` gli oggetti e i relativi attributi associati dal `CTokenGroups` oggetto.
+Elimina tutti `CSid` gli oggetti e i relativi attributi associati `CTokenGroups` dall'oggetto.
 
 ```
 void DeleteAll() throw();
@@ -159,7 +159,7 @@ void DeleteAll() throw();
 
 ##  <a name="getcount"></a>  CTokenGroups::GetCount
 
-Restituisce il numero di `CSid` gli oggetti contenuti `CTokenGroups`.
+Restituisce il numero di `CSid` oggetti contenuti in `CTokenGroups`.
 
 ```
 UINT GetCount() const throw();
@@ -167,11 +167,11 @@ UINT GetCount() const throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il numero di [IDSR](../../atl/reference/csid-class.md) gli oggetti e i relativi attributi associati contenuti nel `CTokenGroups` oggetto.
+Restituisce il numero di oggetti [CSid](../../atl/reference/csid-class.md) e i relativi attributi associati contenuti nell' `CTokenGroups` oggetto.
 
-##  <a name="getlength"></a>  CTokenGroups::GetLength
+##  <a name="getlength"></a>CTokenGroups:: GetLength
 
-Restituisce la dimensione del `CTokenGroup` oggetto.
+Restituisce la dimensione dell' `CTokenGroup` oggetto.
 
 ```
 UINT GetLength() const throw();
@@ -179,11 +179,11 @@ UINT GetLength() const throw();
 
 ### <a name="remarks"></a>Note
 
-Restituisce le dimensioni totali del `CTokenGroup` oggetto, in byte.
+Restituisce la dimensione totale, in `CTokenGroup` byte, dell'oggetto.
 
-##  <a name="getptoken_groups"></a>  CTokenGroups::GetPTOKEN_GROUPS
+##  <a name="getptoken_groups"></a>CTokenGroups:: GetPTOKEN_GROUPS
 
-Recupera un puntatore al `TOKEN_GROUPS` struttura.
+Recupera un puntatore alla `TOKEN_GROUPS` struttura.
 
 ```
 const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
@@ -191,11 +191,11 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>Valore restituito
 
-Recupera un puntatore ai [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) struttura appartenente al `CTokenGroups` oggetto token di accesso.
+Recupera un puntatore alla struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) che appartiene all'oggetto `CTokenGroups` token di accesso.
 
-##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes
+##  <a name="getsidsandattributes"></a>CTokenGroups:: GetSidsAndAttributes
 
-Recupera le `CSid` gli oggetti e, facoltativamente, gli attributi che appartengono al `CTokenGroups` oggetto.
+Recupera gli `CTokenGroups` oggetti e, facoltativamente, gli attributi appartenenti all'oggetto. `CSid`
 
 ```
 void GetSidsAndAttributes(
@@ -206,18 +206,18 @@ void GetSidsAndAttributes(
 ### <a name="parameters"></a>Parametri
 
 *pSids*<br/>
-Puntatore a una matrice di [IDSR](../../atl/reference/csid-class.md) oggetti.
+Puntatore a una matrice di oggetti [CSid](../../atl/reference/csid-class.md) .
 
 *pAttributes*<br/>
-Puntatore a una matrice di valori DWORD. Se questo parametro viene omesso o è NULL, gli attributi non vengono recuperati.
+Puntatore a una matrice di DWORD. Se questo parametro viene omesso o NULL, gli attributi non vengono recuperati.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo enumererà tutti i `CSid` gli oggetti contenuti nel `CTokenGroups` dell'oggetto e inserire tali e, facoltativamente, i flag di attributo in oggetti matrice.
+Questo metodo enumera tutti gli `CSid` oggetti contenuti `CTokenGroups` nell'oggetto e li inserisce e, facoltativamente, i flag di attributo in oggetti Array.
 
 ##  <a name="lookupsid"></a>  CTokenGroups::LookupSid
 
-Recupera gli attributi associati un `CSid` oggetto.
+Recupera gli attributi associati a un `CSid` oggetto.
 
 ```
 bool LookupSid(
@@ -228,20 +228,20 @@ bool LookupSid(
 ### <a name="parameters"></a>Parametri
 
 *rSid*<br/>
-Il [IDSR](../../atl/reference/csid-class.md) oggetto.
+Oggetto [CSid](../../atl/reference/csid-class.md) .
 
 *pdwAttributes*<br/>
-Puntatore a un valore DWORD che accetterà le `CSid` attributo dell'oggetto. Se omesso o è NULL, l'attributo non essere recuperato.
+Puntatore a un valore DWORD che accetterà `CSid` l'attributo dell'oggetto. Se omesso o NULL, l'attributo non verrà recuperato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce true se il `CSid` viene trovato, false in caso contrario.
+Restituisce true se l' `CSid` oggetto viene trovato; in caso contrario, false.
 
 ### <a name="remarks"></a>Note
 
-L'impostazione *pdwAttributes* a NULL fornisce un modo per confermare l'esistenza del `CSid` senza accedere all'attributo. Si noti che questo metodo non deve essere utilizzato per controllare i diritti di accesso. Le applicazioni devono invece usare la [CAccessToken::CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) (metodo).
+L'impostazione di *pdwAttributes* su null fornisce un modo per confermare l'esistenza di `CSid` senza accedere all'attributo. Si noti che questo metodo non deve essere usato per verificare i diritti di accesso. Le applicazioni devono invece usare il metodo [CAccessToken:: CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) .
 
-##  <a name="operator_eq"></a>  CTokenGroups::operator =
+##  <a name="operator_eq"></a>CTokenGroups:: operator =
 
 Operatore di assegnazione.
 
@@ -253,15 +253,15 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>Parametri
 
 *rhs*<br/>
-Il `CTokenGroups` oggetto oppure [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) struttura da assegnare al `CTokenGroups` oggetto.
+Oggetto o struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) `CTokenGroups` da assegnare all'oggetto. `CTokenGroups`
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce l'aggiornato `CTokenGroups` oggetto.
+Restituisce l'oggetto `CTokenGroups` aggiornato.
 
-##  <a name="operator_const_token_groups__star"></a>  CTokenGroups::operator TOKEN_GROUPS const *
+##  <a name="operator_const_token_groups__star"></a>CTokenGroups:: operator const TOKEN_GROUPS *
 
-Esegue il cast a un puntatore a un valore di `TOKEN_GROUPS` struttura.
+Esegue il cast di un valore a un puntatore `TOKEN_GROUPS` alla struttura.
 
 ```
 operator const TOKEN_GROUPS *() const throw(...);
@@ -269,7 +269,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>Note
 
-Esegue il cast a un puntatore a un valore di [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) struttura.
+Esegue il cast di un valore a un puntatore alla struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
 
 ## <a name="see-also"></a>Vedere anche
 

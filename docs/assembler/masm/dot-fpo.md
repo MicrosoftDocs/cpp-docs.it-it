@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 83d6e81ea7dd35038f27f2721f3cc41fe49ef1bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bdb6af98aa71fef3d4af24091dc7463d917ce15
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204058"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915953"
 ---
 # <a name="fpo"></a>.FPO
 
-Il file con estensione Direttiva FPO controlla la creazione di record di debug per il segmento di F $. debug o la sezione.
+Il. La direttiva Polinesia controlla l'emissione di record di debug nel segmento o nella sezione. debug $ F.
 
 ## <a name="syntax"></a>Sintassi
 
-> FPO (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> Polinesia (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
 
 ### <a name="parameters"></a>Parametri
 
 *cdwLocals*<br/>
-Numero di variabili locali, un valore senza segno a 32 bit.
+Numero di variabili locali, un valore a 32 bit senza segno.
 
 *cdwParams*<br/>
-Dimensioni dei parametri in valori DWORD, un valore senza segno a 16 bit.
+Dimensioni dei parametri in DWORD, un valore senza segno a 16 bit.
 
 *cbProlog*<br/>
 Numero di byte nel codice di prologo della funzione, un valore senza segno a 8 bit.
@@ -39,7 +39,7 @@ Numero di registri salvati.
 Indica se il registro EBP è stato allocato. 0 o 1.
 
 *cbFrame*<br/>
-Indica il tipo di frame.  Visualizzare [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) per altre informazioni.
+Indica il tipo di frame.  Per ulteriori informazioni, vedere [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-fpo_data) .
 
 ## <a name="see-also"></a>Vedere anche
 

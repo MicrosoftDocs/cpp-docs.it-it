@@ -7,16 +7,16 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181847"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915254"
 ---
 # <a name="tooltiptext-structure"></a>Struttura TOOLTIPTEXT
 
-Iscritto il [gestore descrizione comando notifica](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), è necessario utilizzare il **TOOLTIPTEXT** struttura. I membri del **TOOLTIPTEXT** struttura sono:
+Per la scrittura del [gestore di notifiche delle descrizioni comandi](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), è necessario utilizzare la struttura **ToolTipText** . I membri della struttura **ToolTipText** sono:
 
 ```cpp
 typedef struct {
@@ -31,24 +31,24 @@ typedef struct {
 ```
 
 *hdr*<br/>
-Identifica lo strumento che richiede il testo. L'unico membro della struttura che potrebbe essere necessario è l'ID del comando. del controllo ID comando del controllo sarà nel *idFrom* membro delle **NMHDR** struttura, l'accesso con la sintassi `hdr.idFrom`. Visualizzare [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) per una descrizione dei membri delle **NMHDR** struttura.
+Identifica lo strumento che necessita di testo. L'unico membro di questa struttura potrebbe essere necessario l'ID comando del controllo. L'ID comando del controllo si troverà nel membro *idFrom* della struttura **NMHDR** , a cui si accede con la `hdr.idFrom`sintassi. Vedere [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) per una descrizione dei membri della struttura **NMHDR** .
 
 *lpszText*<br/>
-Indirizzo di una stringa che riceve il testo per uno strumento.
+Indirizzo di una stringa per ricevere il testo per uno strumento.
 
 *szText*<br/>
-Buffer che riceve il testo della descrizione comando. Un'applicazione può copiare il testo per questo buffer come alternativa alla specifica di un indirizzo di stringa.
+Buffer che riceve il testo della descrizione comando. Un'applicazione può copiare il testo in questo buffer come alternativa alla specifica di un indirizzo di stringa.
 
 *hinst*<br/>
-Handle dell'istanza che contiene una stringa da utilizzare come il testo della descrizione comando. Se *lpszText* è l'indirizzo del testo della descrizione comandi, questo membro è NULL.
+Handle dell'istanza di contenente una stringa da utilizzare come testo della descrizione comando. Se *lpszText* è l'indirizzo del testo della descrizione comando, il membro è null.
 
-Quando si gestisce il `TTN_NEEDTEXT` notifica di messaggio, specificare la stringa da visualizzare in uno dei modi seguenti:
+Quando si gestisce il `TTN_NEEDTEXT` messaggio di notifica, specificare la stringa da visualizzare in uno dei modi seguenti:
 
-- Copiare il testo nel buffer specificato per il *szText* membro.
+- Copiare il testo nel buffer specificato dal membro *szText* .
 
-- Copiare l'indirizzo del buffer che contiene il testo per il *lpszText* membro.
+- Copiare l'indirizzo del buffer che contiene il testo per il membro *lpszText* .
 
-- Copiare l'identificatore della risorsa stringa per il *lpszText* membro e copiare l'handle dell'istanza che contiene la risorsa per il *hinst* membro.
+- Copiare l'identificatore di una risorsa di stringa nel membro *lpszText* e copiare l'handle dell'istanza contenente la risorsa per il membro *hInst* .
 
 ## <a name="see-also"></a>Vedere anche
 

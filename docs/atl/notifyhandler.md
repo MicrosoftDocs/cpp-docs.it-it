@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: 292a1c6606585dc0694ee678ba8bc9b5fbc42681
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d875a039b01b7458a1df46a2539cf5c68aa67e41
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261446"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915938"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
-Il nome della funzione identificato dal terzo parametro della macro NOTIFY_HANDLER nella mappa messaggi.
+Nome della funzione identificata dal terzo parametro della macro NOTIFY_HANDLER nella mappa messaggi.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,21 +28,21 @@ LRESULT NotifyHandler(
 #### <a name="parameters"></a>Parametri
 
 *idCtrl*<br/>
-L'identificatore del controllo che invia il messaggio.
+Identificatore del controllo che invia il messaggio.
 
 *pnmh*<br/>
-Indirizzo di un [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) struttura che contiene il codice di notifica e informazioni aggiuntive. Per alcuni messaggi di notifica, questo parametro punta a una struttura più grande che presenta il `NMHDR` struttura come il primo membro.
+Indirizzo di una struttura [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) che contiene il codice di notifica e informazioni aggiuntive. Per alcuni messaggi di notifica, questo parametro punta a una struttura più ampia con `NMHDR` la struttura come primo membro.
 
 *bHandled*<br/>
-Il set di mapping dei messaggi *bHandled* su TRUE prima *NotifyHandler* viene chiamato. Se *NotifyHandler* non gestisce completamente il messaggio deve essere impostato *bHandled* al **FALSE** per indicare che il messaggio richiede un'ulteriore elaborazione.
+La mappa messaggi imposta *bHandled* su true prima di chiamare *NotifyHandler* . Se *NotifyHandler* non gestisce completamente il messaggio, deve impostare *bHandled* su **false** per indicare che il messaggio deve essere ulteriormente elaborato.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il risultato dell'elaborazione del messaggio. 0 se ha esito positivo.
+Risultato dell'elaborazione del messaggio. 0 se ha esito positivo.
 
 ## <a name="remarks"></a>Note
 
-Per un esempio dell'uso di questo gestore di messaggi in una mappa dei messaggi, vedere [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
+Per un esempio di utilizzo di questo gestore di messaggi in una mappa messaggi, vedere [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-ms.openlocfilehash: 15717c6f2f34836de9b546af203a45dc8099d4d4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222349"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866045"
 ---
 # <a name="namespaces-c"></a>Spazi dei nomi (C++)
 
-Uno spazio dei nomi è un'area dichiarativa che fornisce un ambito per gli identificatori (nomi di tipi, funzioni, variabili e così via) al suo interno. Gli spazi dei nomi vengono usati per organizzare il codice in gruppi logici e per evitare conflitti tra nomi, che si possono verificare in particolare quando la codebase include più librerie. Tutti gli identificatori nell'ambito dello spazio dei nomi sono visibili tra loro senza qualifica. Gli identificatori all'esterno dello spazio dei nomi possono accedere ai membri usando il nome completo di ogni identificatore, ad esempio `std::vector<std::string> vec;`, oppure tramite un [dichiarazioneusing](../cpp/using-declaration.md) per un singolo identificatore (`using std::string`), o un [direttiva using](../cpp/namespaces-cpp.md#using_directives) per tutti gli identificatori dello spazio dei nomi (`using namespace std;`). È consigliabile che il codice nel file di intestazione usi sempre il nome completo dello spazio dei nomi.
+Uno spazio dei nomi è un'area dichiarativa che fornisce un ambito per gli identificatori (nomi di tipi, funzioni, variabili e così via) al suo interno. Gli spazi dei nomi vengono usati per organizzare il codice in gruppi logici e per evitare conflitti tra nomi, che si possono verificare in particolare quando la codebase include più librerie. Tutti gli identificatori nell'ambito dello spazio dei nomi sono visibili tra loro senza qualifica. Gli identificatori esterni allo spazio dei nomi possono accedere ai membri utilizzando il nome completo per ogni identificatore, ad `std::vector<std::string> vec;`esempio, oppure tramite una [dichiarazione using](../cpp/using-declaration.md) per un identificatore singolo (`using std::string`) o una [direttiva using](../cpp/namespaces-cpp.md#using_directives) per All identificatori nello spazio dei nomi (`using namespace std;`). È consigliabile che il codice nel file di intestazione usi sempre il nome completo dello spazio dei nomi.
 
 L'esempio seguente illustra una dichiarazione dello spazio dei nomi e tre modi in cui il codice esterno allo spazio dei nomi può accedere ai rispettivi membri.
 
@@ -58,9 +58,9 @@ mgr.DoSomething();
 Func(mgr);
 ```
 
-## <a id="using_directives"></a> direttive using
+## <a id="using_directives"></a>direttive using
 
-Il **usando** direttiva consente a tutti i nomi in un **dello spazio dei nomi** per essere usato senza il *nome spazio dei nomi* come qualificatore esplicito. Usare una con la direttiva in un file di implementazione (ad esempio *. cpp) se si usano alcuni identificatori diversi in uno spazio dei nomi; Se si usano solo uno o due identificatori, quindi utilizzare una dichiarazione per portare solo tali identificatori nell'ambito e non tutti gli identificatori dello spazio dei nomi. Se una variabile locale ha lo stesso nome di una variabile dello spazio dei nomi, quest'ultima è nascosta. Se una variabile dello spazio dei nomi ha lo stesso nome di una variabile globale, viene generato un errore.
+La direttiva **using** consente a tutti i nomi in uno **spazio dei nomi** di essere utilizzati senza il *nome dello spazio dei* nomi come qualificatore esplicito. Usare una direttiva using in un file di implementazione (ad esempio *. cpp) se si usano più identificatori diversi in uno spazio dei nomi. Se si usano solo uno o due identificatori, prendere in considerazione una dichiarazione using per portare solo gli identificatori nell'ambito e non tutti gli identificatori nello spazio dei nomi. Se una variabile locale ha lo stesso nome di una variabile dello spazio dei nomi, quest'ultima è nascosta. Se una variabile dello spazio dei nomi ha lo stesso nome di una variabile globale, viene generato un errore.
 
 > [!NOTE]
 >  È possibile posizionare una direttiva using all'inizio di un file con estensione cpp (nell'ambito del file) o all'interno di una definizione di classe o di funzione.
@@ -81,7 +81,7 @@ namespace ContosoDataServer
 }
 ```
 
-Le implementazioni delle funzioni in contosodata. cpp devono usare il nome completo, anche se si inserisce un **usando** direttiva all'inizio del file:
+Le implementazioni di funzioni in contosodata. cpp devono usare il nome completo, anche se si inserisce una direttiva **using** all'inizio del file:
 
 ```cpp
 #include "contosodata.h"
@@ -98,21 +98,20 @@ int ContosoDataServer::Bar(){return 0;}
 
 Uno spazio dei nomi può essere dichiarato in più blocchi di un singolo file e in più file. Il compilatore riunisce le parti durante la pre-elaborazione e lo spazio dei nomi risultante include tutti i membri dichiarati in tutte le parti. Un esempio è costituito dallo spazio dei nomi std, dichiarato in ogni file di intestazione della libreria standard.
 
-I membri di uno spazio dei nomi denominato possono essere definiti all'esterno dello spazio dei nomi in cui vengono dichiarati tramite qualificazione esplicita del nome definito. La definizione deve tuttavia apparire dopo la posizione della dichiarazione di uno spazio dei nomi che racchiude lo spazio dei nomi della dichiarazione stessa. Ad esempio:
+I membri di uno spazio dei nomi denominato possono essere definiti all'esterno dello spazio dei nomi in cui sono dichiarati in base alla qualificazione esplicita del nome definito. La definizione deve tuttavia apparire dopo la posizione della dichiarazione di uno spazio dei nomi che racchiude lo spazio dei nomi della dichiarazione stessa. Ad esempio:
 
 ```cpp
 // defining_namespace_members.cpp
 // C2039 expected
 namespace V {
-        void f();
-    }
+    void f();
+}
 
-    void V::f() { }        // ok
-    void V::g() { }        // C2039, g() is not yet a member of V
+void V::f() { }        // ok
+void V::g() { }        // C2039, g() is not yet a member of V
 
-    namespace V {
-        void g();
-    }
+namespace V {
+    void g();
 }
 ```
 
@@ -120,11 +119,11 @@ Questo errore si può verificare quando i membri dello spazio dei nomi vengono d
 
 ## <a name="the-global-namespace"></a>Spazio dei nomi globale
 
-Se un identificatore non viene dichiarato in uno spazio dei nomi esplicito, farà parte dello spazio dei nomi globale implicito. In generale, provare a evitare dichiarazioni in ambito globale, se possibile, ad eccezione di punto di ingresso [funzione main](../c-language/main-function-and-program-execution.md), che deve essere nello spazio dei nomi globale. Per qualificare in modo esplicito un identificatore globale, usare l'operatore di risoluzione dell'ambito senza nome, ad esempio `::SomeFunction(x);`. Ciò permetterà di contraddistinguere l'identificatore da eventuali elementi con lo stesso nome in qualsiasi altro spazio dei nomi e semplificherà anche la comprensione del codice da parte di altri utenti.
+Se un identificatore non viene dichiarato in uno spazio dei nomi esplicito, farà parte dello spazio dei nomi globale implicito. In generale, provare a evitare di creare dichiarazioni in ambito globale, se possibile, ad eccezione della [funzione Main](../c-language/main-function-and-program-execution.md)del punto di ingresso, che deve trovarsi nello spazio dei nomi globale. Per qualificare in modo esplicito un identificatore globale, usare l'operatore di risoluzione dell'ambito senza nome, ad esempio `::SomeFunction(x);`. Ciò permetterà di contraddistinguere l'identificatore da eventuali elementi con lo stesso nome in qualsiasi altro spazio dei nomi e semplificherà anche la comprensione del codice da parte di altri utenti.
 
 ## <a name="the-std-namespace"></a>Spazio dei nomi standard
 
-Tutte le funzioni e tipi della libreria standard C++ vengono dichiarate nel `std` dello spazio dei nomi o gli spazi dei nomi annidato all'interno di `std`.
+Tutti C++ i tipi e le funzioni della `std` libreria standard sono dichiarati nello spazio dei nomi o negli `std`spazi dei nomi annidati in.
 
 ## <a name="nested-namespaces"></a>Spazi dei nomi annidati
 
@@ -242,7 +241,7 @@ namespace Contoso
 }
 ```
 
-## <a id="namespace_aliases"></a> Alias Namespace
+## <a id="namespace_aliases"></a>Alias degli spazi dei nomi
 
 I nomi degli spazi dei nomi devono essere univoci e ciò significa che spesso non sono molto brevi. Se la lunghezza di un nome complica la lettura del codice o lo rende noioso da digitare in un file di intestazione in cui non è possibile usare le direttive using, sarà possibile creare un alias di spazio dei nomi, da usare come abbreviazione per il nome effettivo. Ad esempio:
 
@@ -263,7 +262,7 @@ namespace
 }
 ```
 
-Si tratta di uno spazio dei nomi senza nome o anonimo e risulta utile quando si desidera rendere invisibili al codice in altri file di dichiarazioni di variabile (ad esempio fornire collegamenti interni) senza la necessità di creare uno spazio dei nomi denominato. Tutto il codice nello stesso file può vedere gli identificatori in uno spazio dei nomi senza nome, ma gli identificatori, insieme allo spazio dei nomi stesso, non sono visibili all'esterno di tale file o, più precisamente, all'esterno dell'unità di conversione.
+Si tratta di uno spazio dei nomi senza nome o anonimo ed è utile quando si desidera rendere invisibili le dichiarazioni di variabili al codice in altri file, ad esempio dare loro un collegamento interno, senza dover creare uno spazio dei nomi denominato. Tutto il codice nello stesso file può vedere gli identificatori in uno spazio dei nomi senza nome, ma gli identificatori, insieme allo spazio dei nomi stesso, non sono visibili all'esterno di tale file o, più precisamente, all'esterno dell'unità di conversione.
 
 ## <a name="see-also"></a>Vedere anche
 

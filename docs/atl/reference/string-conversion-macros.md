@@ -11,24 +11,24 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a84424de81eba2e6ab1e1baf60f567ebf2739ee
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197255"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915512"
 ---
 # <a name="string-conversion-macros"></a>Macro di conversione di stringhe
 
-Queste macro forniscono stringa le funzionalità di conversione.
+Queste macro forniscono funzionalità di conversione di stringhe.
 
-##  <a name="atl_and_mfc_string_conversion_macros"></a>  Macro di conversione di stringhe MFC e ATL
+##  <a name="atl_and_mfc_string_conversion_macros"></a>Macro di conversione di stringhe ATL e MFC
 
-Le macro di conversione di stringhe presentate in questo argomento sono valide sia per ATL che per MFC. Per altre informazioni sulla conversione di stringhe MFC, vedere [TN059: Utilizzo di macro di conversione Unicode/MBCS MFC](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) e [macro MFC e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md).
+Le macro di conversione di stringhe presentate in questo argomento sono valide sia per ATL che per MFC. Per ulteriori informazioni sulla conversione di stringhe MFC, [vedere TN059: Utilizzo di macro](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) di conversione MFC MBCS/Unicode e [macro e globali MFC](../../mfc/reference/mfc-macros-and-globals.md).
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  Macro di conversione di stringhe TEXTMETRIC e DEVMODE
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>Macro di conversione di stringhe DEVMODE e TEXTMETRIC
 
-Queste macro creano una copia di un [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) oppure [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) strutturare e convertire le stringhe all'interno della nuova struttura di un nuovo tipo di stringa. Le macro alloca memoria sullo stack per la nuova struttura e restituiscono un puntatore alla struttura di nuovo.
+Queste macro creano una copia di una struttura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) o [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) e convertono le stringhe all'interno della nuova struttura in un nuovo tipo di stringa. Le macro allocano memoria nello stack per la nuova struttura e restituiscono un puntatore alla nuova struttura.
 
 ```cpp
 MACRONAME( address_of_structure )
@@ -44,24 +44,24 @@ e:
 
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]
 
-Nei nomi di macro, il tipo di stringa della struttura di origine è a sinistra (ad esempio, **oggetto**) e il tipo di stringa della struttura di destinazione è a destra (ad esempio **W**). **Oggetto** LPSTR, l'acronimo **OLE** LPOLESTR, l'acronimo **T** è l'acronimo di LPTSTR, e **W** è l'acronimo di LPWSTR.
+Nei nomi delle macro, il tipo di stringa nella struttura di origine si trova a sinistra (ad esempio, **a**) e il tipo di stringa nella struttura di destinazione è a destra (ad esempio, **W**). **Un** sta per LPSTR, **OLE** sta per LPOLESTR, **T** sta per LPTSTR e **W** sta per LPWSTR.
 
-Di conseguenza, DEVMODEA2W copia una `DEVMODE` struttura con LPSTR stringhe in un `DEVMODE` struttura con le stringhe LPWSTR, copie TEXTMETRICOLE2T una `TEXTMETRIC` struttura con LPOLESTR stringhe in un `TEXTMETRIC` struttura con le stringhe LPTSTR e così via.
+Quindi, DEVMODEA2W copia una `DEVMODE` struttura con stringhe LPSTR in una `DEVMODE` struttura con stringhe LPWSTR, TEXTMETRICOLE2T copia una `TEXTMETRIC` struttura con stringhe LPOLESTR in una `TEXTMETRIC` struttura con stringhe LPTSTR e così via.
 
-Le due stringhe convertite nel `DEVMODE` struttura sono il nome del dispositivo (`dmDeviceName`) e il nome del modulo (`dmFormName`). Il `DEVMODE` macro di conversione di stringhe aggiornare anche la dimensione della struttura (`dmSize`).
+Le due stringhe convertite nella `DEVMODE` struttura sono il nome del dispositivo`dmDeviceName`() e il nome del`dmFormName`form (). Le `DEVMODE` macro di conversione di stringhe aggiornano anche le`dmSize`dimensioni della struttura ().
 
-Le quattro stringhe convertite nel `TEXTMETRIC` struttura sono il primo carattere (`tmFirstChar`), l'ultimo carattere (`tmLastChar`), il carattere predefinito (`tmDefaultChar`) e il carattere di interruzione (`tmBreakChar`).
+Le quattro stringhe convertite nella `TEXTMETRIC` struttura sono il primo carattere (`tmFirstChar`), l'ultimo carattere (`tmLastChar`), il carattere predefinito (`tmDefaultChar`) e il carattere di rottura (`tmBreakChar`).
 
-Il comportamento dei `DEVMODE` e `TEXTMETRIC` macro di conversione di stringhe dipende dalla direttiva del compilatore in effetti, se presente. Se i tipi di origine e di destinazione sono uguali, la conversione non viene eseguita. Modificare le direttive del compilatore **T** e **OLE** come indicato di seguito:
+Il comportamento delle macro `DEVMODE` di `TEXTMETRIC` conversione di stringhe e dipende dalla direttiva del compilatore, se disponibile. Se i tipi di origine e di destinazione sono uguali, la conversione non viene eseguita. Le direttive del compilatore cambiano **T** e **OLE** come indicato di seguito:
 
 |Direttiva del compilatore attiva|T diventa|OLE diventa|
 |----------------------------------|---------------|-----------------|
 |none|**A**|**W**|
 |**\_UNICODE**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
-|**\_UNICODE** e **OLE2ANSI**|**W**|**A**|
+|Unicode e **OLE2ANSI**  **\_**|**W**|**A**|
 
-La tabella seguente elenca i `DEVMODE` e `TEXTMETRIC` macro di conversione di stringhe.
+Nella tabella seguente sono elencate `DEVMODE` le `TEXTMETRIC` macro di conversione di stringhe e.
 
 |||
 |-|-|

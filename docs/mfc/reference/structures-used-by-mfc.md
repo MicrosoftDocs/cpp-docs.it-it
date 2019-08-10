@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: cb888c1f3efe3ae0ecf35bc0f14ac0cda66112f9
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 3370736ebea81bdd19350f6236d2716cb9e54844
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611708"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68917013"
 ---
 # <a name="structures-used-by-mfc"></a>Strutture utilizzate da MFC
 
@@ -18,8 +18,8 @@ Nella tabella seguente sono elencate le strutture che vengono chiamate da varie 
 
 |||
 |-|-|
-|[Struttura ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc)|[Struttura HSE_VERSION_INFO](../../mfc/reference/hse-version-info-structure.md)|
-|[Struttura ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat)|[Struttura LINGER](/windows/desktop/api/winsock/ns-winsock-linger)|
+|[Struttura ABC](/windows/desktop/api/wingdi/ns-wingdi-abc)|[Struttura HSE_VERSION_INFO](../../mfc/reference/hse-version-info-structure.md)|
+|[Struttura ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-abcfloat)|[Struttura LINGER](/windows/desktop/api/winsock/ns-winsock-linger)|
 |[Struttura AFX_EXTENSION_MODULE](../../mfc/reference/afx-extension-module-structure.md)|[Struttura LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |[Struttura BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|[Struttura LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |[Struttura BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)|[Struttura MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)|
@@ -29,7 +29,7 @@ Nella tabella seguente sono elencate le strutture che vengono chiamate da varie 
 |[Struttura CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[Struttura PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)|
 |[Struttura CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)|[Struttura POINT](/windows/desktop/api/windef/ns-windef-tagpoint)|
 |[Struttura CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)|[Struttura RECT](/windows/desktop/api/windef/ns-windef-tagrect)|
-|[Struttura CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)|[Struttura RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)|
+|[Struttura CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)|[Struttura RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata)|
 |[Struttura CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[Struttura SOCKADDR](/windows/desktop/winsock/sockaddr-2)|
 |[Struttura CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)|[Struttura SOCKADDR_IN](/windows/desktop/winsock/sockaddr-2)|
 |[Struttura CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)|[Struttura SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)

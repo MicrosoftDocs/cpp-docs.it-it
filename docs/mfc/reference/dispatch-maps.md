@@ -6,32 +6,32 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-ms.openlocfilehash: a1baa5274dbd33bb1e88b57ccfab2b5ed2085f6d
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611300"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916518"
 ---
 # <a name="dispatch-maps"></a>Mappe di invio
 
-Automazione OLE fornisce metodi per chiamare i metodi e accedere alle proprietà di tutte le applicazioni. Il meccanismo fornito dalla libreria Microsoft Foundation Class per l'invio di queste richieste è "mappa di invio," che definisce i nomi interni ed esterni delle funzioni di oggetti e proprietà, nonché i tipi di dati delle proprietà se stessi e di argomenti della funzione.
+L'automazione OLE fornisce modi per chiamare i metodi e per accedere alle proprietà tra le applicazioni. Il meccanismo fornito dal libreria Microsoft Foundation Class per l'invio di queste richieste è la "mappa di invio", che designa i nomi interni ed esterni delle funzioni e delle proprietà dell'oggetto, nonché i tipi di dati delle proprietà stesse e di argomenti della funzione.
 
 |Macro della mappa di invio|Descrizione|
 |-|-|
-|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Dichiara una dispatch map verranno utilizzate per esporre una classe i metodi e proprietà (deve essere usato nella dichiarazione di classe).|
-|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Inizia la definizione di una mappa di invio.|
+|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Dichiara che una mappa di invio verrà utilizzata per esporre i metodi e le proprietà di una classe (è necessario utilizzare nella dichiarazione di classe).|
+|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Avvia la definizione di una mappa di invio.|
 |[END_DISPATCH_MAP](#end_dispatch_map)|Termina la definizione di una mappa di invio.|
 |[DISP_FUNCTION](#disp_function)|Utilizzato in una mappa di invio per definire una funzione di automazione OLE.|
 |[DISP_PROPERTY](#disp_property)|Definisce una proprietà di automazione OLE.|
-|[DISP_PROPERTY_EX](#disp_property_ex)|Definisce una proprietà di automazione OLE e le funzioni Get e Set di nomi.|
-|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Definisce una proprietà di automazione OLE con la notifica.|
-|[DISP_PROPERTY_PARAM](#disp_property_param)|Definisce una proprietà di automazione OLE che accetta parametri e i nomi di funzioni Get e Set.|
+|[DISP_PROPERTY_EX](#disp_property_ex)|Definisce una proprietà di automazione OLE e denomina le funzioni Get e set.|
+|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Definisce una proprietà di automazione OLE con notifica.|
+|[DISP_PROPERTY_PARAM](#disp_property_param)|Definisce una proprietà di automazione OLE che accetta parametri e denomina le funzioni Get e set.|
 |[DISP_DEFVALUE](#disp_defvalue)|Imposta una proprietà esistente come il valore predefinito di un oggetto.|
 
 ## <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP
 
-Se un `CCmdTarget`-classe derivata nel programma supporta l'automazione OLE, che classe deve fornire una dispatch map per esporre i relativi metodi e proprietà.
+Se una `CCmdTarget`classe derivata da nel programma supporta l'automazione OLE, tale classe deve fornire una mappa di invio per esporre i metodi e le proprietà.
 
 ```cpp
 DECLARE_DISPATCH_MAP()
@@ -39,12 +39,12 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Note
 
-Usare declare_dispatch_map (macro) alla fine della dichiarazione di classe. Quindi, nel. File CPP che definisce le funzioni membro per la classe, usare il BEGIN_DISPATCH_MAP (macro). Quindi includere le voci di macro per ognuno dei metodi esposti della classe e proprietà (DISP_FUNCTION, DISP_PROPERTY e così via). Infine, usare l'end_dispatch_map (macro).
+Usare la macro DECLARE_DISPATCH_MAP alla fine della dichiarazione di classe. Quindi, in. File CPP che definisce le funzioni membro per la classe, usare la macro BEGIN_DISPATCH_MAP. Includere quindi le voci della macro per ogni proprietà e metodi esposti della classe (DISP_FUNCTION, DISP_PROPERTY e così via). Usare infine la macro END_DISPATCH_MAP.
 
 > [!NOTE]
-> Se si dichiara alcun membro dopo DECLARE_DISPATCH_MAP, è necessario specificare un nuovo tipo di accesso ( **pubbliche**, **privato**, o **protetti**) per loro.
+> Se si dichiara un membro dopo DECLARE_DISPATCH_MAP, è necessario specificare un nuovo tipo di accesso ( **pubblico**, **privato**o **protetto**).
 
-Le procedure guidate di creazione guidata applicazione e codice di fornire assistenza nella creazione di classi di automazione e gestione delle mappe di invio. Per altre informazioni su mappe di invio, vedere [server di automazione](../../mfc/automation-servers.md).
+La creazione guidata applicazione e le creazioni guidate codice facilitano la creazione di classi di automazione e la gestione delle mappe di invio. Per ulteriori informazioni sulle mappe di invio, vedere [server di automazione](../../mfc/automation-servers.md).
 
 ### <a name="example"></a>Esempio
 
@@ -65,14 +65,14 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="parameters"></a>Parametri
 
 *theClass*<br/>
-Specifica il nome della classe cui appartiene questa mappa di invio.
+Specifica il nome della classe a cui appartiene questa mappa di invio.
 
 *baseClass*<br/>
-Specifica il nome della classe base *theClass*.
+Specifica il nome della classe di base di *theClass*.
 
 ### <a name="remarks"></a>Note
 
-Nel file di implementazione (. cpp) che definisce le funzioni membro per la classe, la mappa di invio per iniziare il BEGIN_DISPATCH_MAP (macro), aggiungere le voci di macro per ognuna delle funzioni di recapito e le proprietà e completare la mappa di invio con l'END_DISPATCH_ Macro della mappa.
+Nel file di implementazione (. cpp) che definisce le funzioni membro per la classe, avviare la mappa di invio con la macro BEGIN_DISPATCH_MAP, aggiungere voci di macro per ciascuna delle funzioni e delle proprietà di invio e completare la mappa di invio con il END_DISPATCH_ Macro mappa.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -88,7 +88,7 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Note
 
-Deve essere utilizzata in combinazione con BEGIN_DISPATCH_MAP.
+Deve essere usato insieme a BEGIN_DISPATCH_MAP.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -100,11 +100,11 @@ Definisce una funzione di automazione OLE in una mappa di invio.
 
 ```cpp
 DISP_FUNCTION(
-  theClass,
-  pszName,
-  pfnMember,
-  vtRetVal,
-  vtsParams)
+    theClass,
+    pszName,
+    pfnMember,
+    vtRetVal,
+    vtsParams)
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -119,14 +119,14 @@ Nome esterno della funzione.
 Nome della funzione membro.
 
 *vtRetVal*<br/>
-Un valore che specifica il tipo restituito della funzione.
+Valore che specifica il tipo restituito della funzione.
 
 *vtsParams*<br/>
-Elenco delimitato da spazi di una o più costanti che specifica l'elenco di parametri funzione.
+Elenco separato da spazi di una o più costanti che specificano l'elenco di parametri della funzione.
 
 ### <a name="remarks"></a>Note
 
-Il *vtRetVal* argomento è di tipo VARTYPE. I seguenti valori possibili per questo argomento vengono forniti dalla `VARENUM` enumerazione:
+L'argomento *vtRetVal* è di tipo VARTYPE. I valori possibili seguenti per questo argomento sono ricavati `VARENUM` dall'enumerazione:
 
 |Simbolo|Tipo restituito|
 |------------|-----------------|
@@ -144,13 +144,13 @@ Il *vtRetVal* argomento è di tipo VARTYPE. I seguenti valori possibili per ques
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Il *vtsParams* argomento è un elenco delimitato da spazi di valori dal `VTS_*` costanti. Uno o più di questi valori separati da spazi (non virgole) specifica l'elenco dei parametri della funzione. Ad esempio,
+L'argomento *vtsParams* è un elenco di valori separati da `VTS_*` spazi delle costanti. Uno o più valori separati da spazi (non virgole) specificano l'elenco di parametri della funzione. Ad esempio,
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
-Specifica un elenco che contiene un valore short integer seguita da un puntatore a un valore short integer.
+Specifica un elenco contenente un valore short integer seguito da un puntatore a un valore short integer.
 
-Il `VTS_` costanti e i relativi significati sono i seguenti:
+Le `VTS_` costanti e i relativi significati sono i seguenti:
 
 |Simbolo|Tipo di parametro|
 |------------|--------------------|
@@ -178,22 +178,22 @@ Il `VTS_` costanti e i relativi significati sono i seguenti:
 |VTS_PBOOL|`BOOL*`|
 |VTS_PVARIANT|`VARIANT*`|
 |VTS_PUNKNOWN|`LPUNKNOWN*`|
-|VTS_NONE|Senza parametri|
+|VTS_NONE|Nessun parametro|
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afxdisp.h
 
-## <a name="disp_property"></a>  DISP_PROPERTY
+## <a name="disp_property"></a>DISP_PROPERTY
 
 Definisce una proprietà di automazione OLE in una mappa di invio.
 
 ```cpp
 DISP_PROPERTY(
-  theClass,
-  pszName,
-  memberName,
-  vtPropType)
+    theClass,
+    pszName,
+    memberName,
+    vtPropType)
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -205,14 +205,14 @@ Nome della classe.
 Nome esterno della proprietà.
 
 *memberName*<br/>
-Nome della variabile membro in cui la proprietà viene archiviata.
+Nome della variabile membro in cui è archiviata la proprietà.
 
 *vtPropType*<br/>
-Un valore che specifica il tipo della proprietà.
+Valore che specifica il tipo della proprietà.
 
 ### <a name="remarks"></a>Note
 
-Il *vtPropType* argomento è di tipo **VARTYPE**. I valori possibili per questo argomento vengono forniti dall'enumerazione VARENUM:
+L'argomento *vtPropType* è di tipo **VarType**. I valori possibili per questo argomento sono tratti dall'enumerazione VARENUM:
 
 |Simbolo|Tipo di proprietà|
 |------------|-----------------------|
@@ -229,7 +229,7 @@ Il *vtPropType* argomento è di tipo **VARTYPE**. I valori possibili per questo 
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Quando un client esterno cambia la proprietà, il valore della variabile membro specificato da *nomemembro* cambia; è presente alcuna notifica della modifica.
+Quando un client esterno modifica la proprietà, il valore della variabile membro specificata da *memberName* cambia; non viene notificata la modifica.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -237,15 +237,15 @@ Quando un client esterno cambia la proprietà, il valore della variabile membro 
 
 ## <a name="disp_property_ex"></a>  DISP_PROPERTY_EX
 
-Definisce le funzioni utilizzate per ottenere e impostare il valore della proprietà in una mappa di invio di una proprietà di automazione OLE e il nome.
+Definisce una proprietà di automazione OLE e denominare le funzioni utilizzate per ottenere e impostare il valore della proprietà in una mappa di invio.
 
 ```cpp
 DISP_PROPERTY_EX(
-  theClass,
-  pszName,
-  memberGet,
-  memberSet,
-  vtPropType)
+    theClass,
+    pszName,
+    memberGet,
+    memberSet,
+    vtPropType)
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -257,19 +257,19 @@ Nome della classe.
 Nome esterno della proprietà.
 
 *memberGet*<br/>
-Nome della funzione membro usata per ottenere la proprietà.
+Nome della funzione membro utilizzata per ottenere la proprietà.
 
 *memberSet*<br/>
 Nome della funzione membro utilizzata per impostare la proprietà.
 
 *vtPropType*<br/>
-Un valore che specifica il tipo della proprietà.
+Valore che specifica il tipo della proprietà.
 
 ### <a name="remarks"></a>Note
 
-Il *memberGet* e *memberSet* funzioni presentano firme determinate dal *vtPropType* argomento. Il *memberGet* funzione non accetta argomenti e restituisce un valore del tipo specificato da *vtPropType*. Il *memberSet* funzione accetta un argomento del tipo specificato da *vtPropType* e non restituisce nulla.
+Le funzioni *memberGet* e *membert* hanno le firme determinate dall'argomento *vtPropType* . La funzione *memberGet* non accetta argomenti e restituisce un valore del tipo specificato da *vtPropType*. La funzione membert accetta un argomento del tipo specificato da *vtPropType* e non restituisce alcun valore.
 
-Il *vtPropType* argomento è di tipo VARTYPE. I valori possibili per questo argomento vengono forniti dall'enumerazione VARENUM. Per un elenco di questi valori, vedere la sezione Osservazioni per il *vtRetVal* nel parametro [DISP_FUNCTION](#disp_function). Si noti che VT_EMPTY, elencati nella sezione Osservazioni DISP_FUNCTION, non è consentito come tipo di dati di proprietà.
+L'argomento *vtPropType* è di tipo VARTYPE. I valori possibili per questo argomento sono tratti dall'enumerazione VARENUM. Per un elenco di questi valori, vedere la sezione Osservazioni per il parametro *vtRetVal* in [DISP_FUNCTION](#disp_function). Si noti che VT_EMPTY, elencato nei commenti DISP_FUNCTION, non è consentito come tipo di dati della proprietà.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -281,11 +281,11 @@ Definisce una proprietà di automazione OLE con notifica in una mappa di invio.
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
-  theClass,
-  szExternalName,
-  memberName,
-  pfnAfterSet,
-  vtPropType)
+    theClass,
+    szExternalName,
+    memberName,
+    pfnAfterSet,
+    vtPropType)
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -297,19 +297,19 @@ Nome della classe.
 Nome esterno della proprietà.
 
 *memberName*<br/>
-Nome della variabile membro in cui la proprietà viene archiviata.
+Nome della variabile membro in cui è archiviata la proprietà.
 
 *pfnAfterSet*<br/>
-Nome della funzione per la notifica *szExternalName*.
+Nome della funzione di notifica per *szExternalName*.
 
 *vtPropType*<br/>
-Un valore che specifica il tipo della proprietà.
+Valore che specifica il tipo della proprietà.
 
 ### <a name="remarks"></a>Note
 
-A differenza delle proprietà definite con DISP_PROPERTY, una proprietà definita con DISP_PROPERTY_NOTIFY chiama automaticamente la funzione specificata da *pfnAfterSet* quando la proprietà viene modificata.
+Diversamente dalle proprietà definite con DISP_PROPERTY, una proprietà definita con DISP_PROPERTY_NOTIFY chiamerà automaticamente la funzione specificata da *pfnAfterSet* quando viene modificata la proprietà.
 
-Il *vtPropType* argomento è di tipo VARTYPE. I valori possibili per questo argomento vengono forniti dall'enumerazione VARENUM:
+L'argomento *vtPropType* è di tipo VARTYPE. I valori possibili per questo argomento sono tratti dall'enumerazione VARENUM:
 
 |Simbolo|Tipo di proprietà|
 |------------|-----------------------|
@@ -332,16 +332,16 @@ Il *vtPropType* argomento è di tipo VARTYPE. I valori possibili per questo argo
 
 ## <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM
 
-Definisce una proprietà accessibile con separato `Get` e `Set` funzioni membro.
+Definisce una proprietà a cui si `Get` accede `Set` con funzioni membro e separate.
 
 ```cpp
 DISP_PROPERTY_PARAM(
-  theClass,
-  pszExternalName,
-  pfnGet,
-  pfnSet,
-  vtPropType,
-  vtsParams)
+    theClass,
+    pszExternalName,
+    pfnGet,
+    pfnSet,
+    vtPropType,
+    vtsParams)
 ```
 
 ### <a name="parameters"></a>Parametri
@@ -353,36 +353,36 @@ Nome della classe.
 Nome esterno della proprietà.
 
 *pfnGet*<br/>
-Nome della funzione membro usata per ottenere la proprietà.
+Nome della funzione membro utilizzata per ottenere la proprietà.
 
 *pfnSet*<br/>
 Nome della funzione membro utilizzata per impostare la proprietà.
 
 *vtPropType*<br/>
-Un valore che specifica il tipo della proprietà.
+Valore che specifica il tipo della proprietà.
 
 *vtsParams*<br/>
-Una stringa di separati da spazi `VTS_*` tipi di parametri varianti, uno per ogni parametro.
+Stringa di tipi di parametro Variant `VTS_*` separati da spazi, uno per ogni parametro.
 
 ### <a name="remarks"></a>Note
 
-A differenza di DISP_PROPERTY_EX (macro), questa macro consente di specificare un elenco di parametri per la proprietà. Ciò è utile per l'implementazione di proprietà che vengono indicizzate o con parametri.
+A differenza della macro DISP_PROPERTY_EX, questa macro consente di specificare un elenco di parametri per la proprietà. Questa operazione è utile per l'implementazione di proprietà indicizzate o con parametri.
 
 ### <a name="example"></a>Esempio
 
-Si consideri la seguente dichiarazione di get e membro del set di funzioni che consentono all'utente di richiedere una riga e colonna specifiche durante l'accesso alla proprietà:
+Si consideri la seguente dichiarazione di funzioni membro get e set che consentono all'utente di richiedere una riga e una colonna specifiche durante l'accesso alla proprietà:
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Questi corrispondono per la seguente DISP_PROPERTY_PARAM (macro) nella mappa di invio del controllo:
+Questi corrispondono alla seguente macro DISP_PROPERTY_PARAM nella mappa di invio del controllo:
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
-Come ulteriore esempio, prendere in considerazione il seguente get e set di funzioni membro:
+Come altro esempio, prendere in considerazione le funzioni membro get e set seguenti:
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Questi corrispondono per la seguente DISP_PROPERTY_PARAM (macro) nella mappa di invio del controllo:
+Questi corrispondono alla seguente macro DISP_PROPERTY_PARAM nella mappa di invio del controllo:
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
@@ -418,4 +418,4 @@ Il "valore predefinito" dell'oggetto è la proprietà che viene recuperata o imp
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+[Macro e globali](../../mfc/reference/mfc-macros-and-globals.md)

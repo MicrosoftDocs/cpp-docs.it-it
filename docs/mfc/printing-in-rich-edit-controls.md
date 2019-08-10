@@ -6,22 +6,22 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-ms.openlocfilehash: 2ddc52e43da2e409117ccc5169442002ac27a315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae7212eaa8eed1088a507973c80311f169c7751
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238395"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916274"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Stampa in controlli Rich Edit
 
-È possibile indicare a un controllo rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) per eseguire il rendering dell'output per un dispositivo specifico, ad esempio una stampante. È anche possibile specificare il dispositivo di output per il quale un controllo rich edit formatta il testo.
+È possibile specificare un controllo Rich Edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) per eseguire il rendering dell'output per un dispositivo specifico, ad esempio una stampante. È anche possibile specificare il dispositivo di output per il quale un controllo Rich Edit formatta il testo.
 
-Per formattare una parte del contenuto di un controllo rich edit per un dispositivo specifico, è possibile usare la [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) funzione membro. Il [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) struttura utilizzata con questa funzione consente di specificare l'intervallo di testo da formattare, nonché il contesto di periferica (DC) per il dispositivo di destinazione.
+Per formattare parte del contenuto di un controllo Rich Edit per un dispositivo specifico, è possibile usare la funzione membro [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange) . La struttura [FormatRange](/windows/desktop/api/richedit/ns-richedit-formatrange) usata con questa funzione specifica l'intervallo di testo da formattare e il contesto di dispositivo (DC) per il dispositivo di destinazione.
 
-Dopo la formattazione del testo per un dispositivo di output, è possibile inviare l'output al dispositivo tramite il [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) funzione membro. Usando ripetutamente `FormatRange` e `DisplayBand`, può implementare un'applicazione che consente di stampare il contenuto di un controllo rich edit rappresentazione per bande. (Rappresentazione per bande è la divisione dell'output in parti più piccole a scopo di stampa).
+Dopo aver formattato il testo per un dispositivo di output, è possibile inviare l'output al dispositivo usando la funzione membro [DisplayBand](../mfc/reference/cricheditctrl-class.md#displayband) . Utilizzando `FormatRange` ripetutamente e `DisplayBand`, un'applicazione che stampa il contenuto di un controllo Rich Edit può implementare il bendaggio. (Il banding è la divisione dell'output in parti più piccole per scopi di stampa).
 
-È possibile usare la [funzione membro SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) funzione membro per specificare il dispositivo di destinazione per il quale un controllo rich edit formatta il testo. Questa funzione è utile per WYSIWYG (come si vede è ciò che si ottiene) la formattazione, in cui un'applicazione posiziona il testo utilizzando le metriche del tipo di carattere della stampante predefinita anziché della schermata.
+È possibile usare la funzione membro [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice) per specificare il dispositivo di destinazione per il quale un controllo Rich Edit formatta il testo. Questa funzione è utile per la formattazione di WYSIWYG (ciò che viene visualizzato), in cui un'applicazione posiziona il testo utilizzando le metriche dei tipi di carattere della stampante predefinita anziché la schermata.
 
 ## <a name="see-also"></a>Vedere anche
 

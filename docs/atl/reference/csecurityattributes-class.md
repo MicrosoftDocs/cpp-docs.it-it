@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: b26de7a2a3426ed2fe86bd7ef50f6c5410fa5364
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503202"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915720"
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
 
-Questa classe è un wrapper sottile per la struttura di attributi di sicurezza.
+Questa classe è un wrapper sottile per la struttura degli attributi di sicurezza.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,25 +29,25 @@ Questa classe è un wrapper sottile per la struttura di attributi di sicurezza.
 class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|Costruttore.|
+|[CSecurityAttributes:: CSecurityAttributes](#csecurityattributes)|Costruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Chiamare questo metodo per impostare gli attributi del `CSecurityAttributes` oggetto.|
+|[CSecurityAttributes:: set](#set)|Chiamare questo metodo per impostare gli attributi dell' `CSecurityAttributes` oggetto.|
 
 ## <a name="remarks"></a>Note
 
-Il `SECURITY_ATTRIBUTES` struttura contiene una [descrittore di sicurezza](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) utilizzata per la creazione di un oggetto e specifica se l'handle recuperato specificando questa struttura è ereditabile.
+La `SECURITY_ATTRIBUTES` struttura contiene un descrittore di [sicurezza](/windows/desktop/api/winnt/ns-winnt-security_descriptor) utilizzato per la creazione di un oggetto e specifica se l'handle recuperato specificando questa struttura è ereditabile.
 
-Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nel SDK di Windows.
+Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nella Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -59,7 +59,7 @@ Per un'introduzione al modello di controllo di accesso in Windows, vedere [contr
 
 **Intestazione:** ATLSecurity. h
 
-##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
+##  <a name="csecurityattributes"></a>CSecurityAttributes:: CSecurityAttributes
 
 Costruttore.
 
@@ -76,9 +76,9 @@ Riferimento a un descrittore di sicurezza.
 *bInheritsHandle*<br/>
 Specifica se l'handle restituito viene ereditato alla creazione di un nuovo progetto. Se questo membro è true, il nuovo processo eredita l'handle.
 
-##  <a name="set"></a>  CSecurityAttributes:: set
+##  <a name="set"></a>CSecurityAttributes:: set
 
-Chiamare questo metodo per impostare gli attributi del `CSecurityAttributes` oggetto.
+Chiamare questo metodo per impostare gli attributi dell' `CSecurityAttributes` oggetto.
 
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -94,12 +94,12 @@ Specifica se l'handle restituito viene ereditato alla creazione di un nuovo prog
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene utilizzato dal costruttore per inizializzare il `CSecurityAttributes` oggetto.
+Questo metodo viene utilizzato dal costruttore per inizializzare l' `CSecurityAttributes` oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Esempio di sicurezza](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[descrittore di sicurezza](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
+[descrittore di sicurezza](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

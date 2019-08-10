@@ -133,16 +133,16 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d6a408b6ed7e7ab6f3dd138a4222b262978fd6c
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373154"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916915"
 ---
 # <a name="cpane-class"></a>CPane Class
 
-Il `CPane` classe rappresenta un miglioramento del [classe CControlBar](../../mfc/reference/ccontrolbar-class.md). Se si esegue l'aggiornamento di un progetto MFC esistente, sostituire tutte le occorrenze di `CControlBar` con `CPane`.
+La `CPane` classe rappresenta un miglioramento della [classe CControlBar](../../mfc/reference/ccontrolbar-class.md). Se si sta aggiornando un progetto MFC esistente, sostituire tutte le occorrenze `CControlBar` di `CPane`con.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -150,7 +150,7 @@ Il `CPane` classe rappresenta un miglioramento del [classe CControlBar](../../mf
 class CPane : public CBasePane
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -162,91 +162,91 @@ class CPane : public CBasePane
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Immediatamente Ricalcola il layout di un riquadro.|
-|[CPane::AllocElements](#allocelements)|Alloca memoria per uso interno.|
-|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Specifica se il riquadro è elencato nell'elenco dei riquadri per l'applicazione generati dal runtime.|
-|[CPane::CalcAvailableSize](#calcavailablesize)|Calcola la differenza nelle dimensioni tra un rettangolo specificato e il rettangolo della finestra corrente.|
-|[CPane::CalcInsideRect](#calcinsiderect)|Calcola l'interno di un riquadro, prendendo in considerazione i bordi e i gripper rettangolo.|
-|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Calcola il rettangolo recentemente ancorato.|
+|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Ricalcola immediatamente il layout di un riquadro.|
+|[CPane:: AllocElements](#allocelements)|Alloca lo spazio di archiviazione per uso interno.|
+|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Specifica se il riquadro è elencato nell'elenco generato dal runtime dei riquadri per l'applicazione.|
+|[CPane::CalcAvailableSize](#calcavailablesize)|Calcola la differenza di dimensione tra un rettangolo specificato e il rettangolo della finestra corrente.|
+|[CPane::CalcInsideRect](#calcinsiderect)|Calcola il rettangolo interno di un riquadro, prendendo in considerazione i bordi e le pinze.|
+|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Calcola il rettangolo ancorato di recente.|
 |[CPane::CalcSize](#calcsize)|Calcola le dimensioni del riquadro.|
-|[CPane::CanBeDocked](#canbedocked)|Determina se il riquadro può essere ancorato al riquadro di base specificato.|
+|[CPane::CanBeDocked](#canbedocked)|Determina se il riquadro può essere ancorato nel riquadro di base specificato.|
 |[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Determina se il riquadro può essere convertito in un documento a schede.|
-|[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Converte un riquadro ancorato in un documento a schede.|
-|[CPane::CopyState](#copystate)|Copia lo stato di un riquadro. (Esegue l'override [CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
-|[Cpane:: Create](#create)|Crea una barra di controllo e lo collega al `CPane` oggetto.|
-|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Crea una finestra con mini-cornice per un riquadro mobile.|
-|[CPane::CreateEx](#createex)|Crea una barra di controllo e lo collega al `CPane` oggetto.|
+|[CPane:: ConvertToTabbedDocument](#converttotabbeddocument)|Converte un riquadro ancorabile in un documento a schede.|
+|[CPane::CopyState](#copystate)|Copia lo stato di un riquadro. Esegue l'override di [CBasePane:: CopyState](../../mfc/reference/cbasepane-class.md#copystate).|
+|[CPane:: create](#create)|Crea una barra di controllo e la `CPane` collega all'oggetto.|
+|[CPane:: CreateDefaultMiniframe](#createdefaultminiframe)|Crea una finestra con mini-cornice per un riquadro a virgola mobile.|
+|[CPane:: CreateEx](#createex)|Crea una barra di controllo e la `CPane` collega all'oggetto.|
 |`CPane::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
-|[CPane::DockByMouse](#dockbymouse)|Ancora un riquadro usando il mouse ancoraggio (metodo).|
-|[CPane::DockPane](#dockpane)|Ancora il riquadro mobile a un riquadro di base.|
-|[CPane::DockPaneStandard](#dockpanestandard)|Ancora un riquadro con contorno di ancoraggio (standard).|
-|[CPane::DockToFrameWindow](#docktoframewindow)|Ancora un riquadro ancorato in un frame. Esegue l'override di `CBasePane::DockToFrameWindow`.|
-|[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Indica se è possibile ancorare un altro riquadro nella stessa riga in cui è ancorato il riquadro corrente.|
-|[CPane::FloatPane](#floatpane)|Si muove il riquadro.|
-|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Restituisce la quantità, in pixel, che è possibile espandere il riquadro.|
-|[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Restituisce la quantità, in pixel, che è possibile ridurre il riquadro.|
-|[CPane::GetBorders](#getborders)|Restituisce lo spessore dei bordi del riquadro.|
-|[CPane::GetClientHotSpot](#getclienthotspot)|Restituisce il *sensibile* per il riquadro.|
-|[CPane::GetDockSiteRow](#getdocksiterow)|Restituisce la riga di ancoraggio in cui il riquadro viene ancorato.|
-|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Determina se il riquadro è in modalità riga esclusivo.|
-|[CPane::GetHotSpot](#gethotspot)|Restituisce l'area sensibile archiviato in un oggetto sottostante `CMFCDragFrameImpl` oggetto.|
-|[CPane::GetMinSize](#getminsize)|Recupera il valore minimo consentito dimensioni per il riquadro.|
-|[CPane::GetPaneName](#getpanename)|Recupera il titolo del riquadro.|
+|[CPane::D ockByMouse](#dockbymouse)|Ancora un riquadro utilizzando il metodo di ancoraggio del mouse.|
+|[CPane::D ockPane](#dockpane)|Ancora il riquadro mobile a un riquadro di base.|
+|[CPane::D ockPaneStandard](#dockpanestandard)|Ancora un riquadro usando l'ancoraggio del contorno (standard).|
+|[CPane::D ockToFrameWindow](#docktoframewindow)|Ancora un riquadro ancorabile a un frame. Esegue l'override di `CBasePane::DockToFrameWindow`.|
+|[CPane::D oesAllowSiblingBars](#doesallowsiblingbars)|Indica se è possibile ancorare un altro riquadro nella stessa riga in cui è ancorato il riquadro corrente.|
+|[CPane:: FloatPane](#floatpane)|Fluttua il riquadro.|
+|[CPane::GetAvailableExpandSize](#getavailableexpandsize)|Restituisce la quantità, in pixel, che può essere espansa dal riquadro.|
+|[CPane::GetAvailableStretchSize](#getavailablestretchsize)|Restituisce la quantità, in pixel, che il riquadro può compattare.|
+|[CPane:: GetBorders](#getborders)|Restituisce la larghezza dei bordi del riquadro.|
+|[CPane::GetClientHotSpot](#getclienthotspot)|Restituisce l' area sensibile per il riquadro.|
+|[CPane::GetDockSiteRow](#getdocksiterow)|Restituisce la riga di ancoraggio in cui il riquadro è ancorato.|
+|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Determina se il riquadro è in modalità di riga esclusiva.|
+|[CPane::GetHotSpot](#gethotspot)|Restituisce l'area sensibile archiviata in un oggetto sottostante `CMFCDragFrameImpl` .|
+|[CPane::GetMinSize](#getminsize)|Recupera la dimensione minima consentita per il riquadro.|
+|[CPane:: getpanename](#getpanename)|Recupera il titolo per il riquadro.|
 |`CPane::GetResizeStep`|Utilizzato internamente.|
-|`CPane::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|
-|[CPane::GetVirtualRect](#getvirtualrect)|Recupera le *rettangolo virtuale* del riquadro.|
-|[CPane::IsChangeState](#ischangestate)|Come il riquadro è da spostare, questo metodo consente di analizzare la posizione del riquadro relativo alla altri riquadri, ancorare le righe e finestre con mini-cornice e restituisce il valore AFX_CS_STATUS appropriato.|
+|`CPane::GetThisClass`|Utilizzato dal Framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
+|[CPane:: GetVirtualRect](#getvirtualrect)|Recupera il *rettangolo virtuale* del riquadro.|
+|[CPane::IsChangeState](#ischangestate)|Durante lo spostamento del riquadro, questo metodo analizza la posizione del riquadro rispetto ad altri riquadri, righe di ancoraggio e finestre con mini-cornice, quindi restituisce il valore AFX_CS_STATUS appropriato.|
 |[CPane::IsDragMode](#isdragmode)|Specifica se il riquadro viene trascinato.|
-|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Specifica se il riquadro è in una finestra cornice a più riquadri. Esegue l'override di `CBasePane::IsInFloatingMultiPaneFrameWnd`.|
-|[CPane::IsLeftOf](#isleftof)|Determina se il riquadro viene lasciato di (o versioni successive) del rettangolo specificato.|
-|[CPane::IsResizable](#isresizable)|Determina se è possibile ridimensionare il riquadro. (Esegue l'override [cbasepane:: isResizable](../../mfc/reference/cbasepane-class.md#isresizable).)|
-|[CPane::IsTabbed](#istabbed)|Determina se il riquadro è stato inserito nel controllo della scheda di una finestra a schede. (Esegue l'override [CBasePane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|
-|[CPane::LoadState](#loadstate)|Carica lo stato del riquadro dal Registro di sistema. (Esegue l'override [CBasePane::LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
-|[CPane::MoveByAlignment](#movebyalignment)|Sposta il riquadro e il rettangolo virtuale la quantità specificata.|
-|[CPane::MovePane](#movepane)|Sposta il riquadro per il rettangolo specificato.|
+|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Specifica se il riquadro si trova in una finestra cornice a più riquadri. Esegue l'override di `CBasePane::IsInFloatingMultiPaneFrameWnd`.|
+|[CPane::IsLeftOf](#isleftof)|Determina se il riquadro è a sinistra (o superiore) del rettangolo specificato.|
+|[CPane::IsResizable](#isresizable)|Determina se è possibile ridimensionare il riquadro. Esegue l'override di [CBasePane:: IsResizable](../../mfc/reference/cbasepane-class.md#isresizable).|
+|[CPane:: Tab](#istabbed)|Determina se il riquadro è stato inserito nel controllo struttura a schede di una finestra a schede. (Esegue l'override di [CBasePane:: tab](../../mfc/reference/cbasepane-class.md#istabbed)).|
+|[CPane:: LoadState](#loadstate)|Carica lo stato del riquadro dal registro di sistema. Esegue l'override di [CBasePane:: LoadState](../../mfc/reference/cbasepane-class.md#loadstate).|
+|[CPane::MoveByAlignment](#movebyalignment)|Sposta il riquadro e il rettangolo virtuale in base al valore specificato.|
+|[CPane:: MovePane](#movepane)|Sposta il riquadro sul rettangolo specificato.|
 |[CPane::OnAfterChangeParent](#onafterchangeparent)|Chiamato dal framework quando l'elemento padre di un riquadro è stato modificato.|
-|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Chiamato dal framework quando sta per modificare l'elemento padre del riquadro.|
-|[CPane::OnPressCloseButton](#onpressclosebutton)|Chiamato dal framework quando l'utente sceglie il pulsante Chiudi sulla barra del titolo del riquadro.|
+|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Chiamata eseguita dal framework quando l'elemento padre del riquadro sta per essere modificato.|
+|[CPane::OnPressCloseButton](#onpressclosebutton)|Chiamata eseguita dal framework quando l'utente sceglie il pulsante Chiudi nella didascalia del riquadro.|
 |`CPane::OnProcessDblClk`|Utilizzato internamente.|
-|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Chiamata eseguita dal framework quando un menu di riquadri speciale sta per essere visualizzato.|
-|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Chiamata eseguita dal framework quando un menu di riquadri speciale sta per essere visualizzato.|
+|[CPane:: OnShowControlBarMenu](#onshowcontrolbarmenu)|Chiamata eseguita dal framework quando un menu di riquadri speciale sta per essere visualizzato.|
+|[CPane:: OnShowControlBarMenu](#onshowcontrolbarmenu)|Chiamata eseguita dal framework quando un menu di riquadri speciale sta per essere visualizzato.|
 |`CPane::PrepareToDock`|Utilizzato internamente.|
-|[CPane::RecalcLayout](#recalclayout)|Ricalcola le informazioni sul layout per il riquadro. (Esegue l'override [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
-|[CPane::SaveState](#savestate)|Salva lo stato del riquadro nel Registro di sistema. (Esegue l'override [CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
-|[CPane::SetActiveInGroup](#setactiveingroup)|Contrassegna un riquadro come attiva.|
+|[CPane::RecalcLayout](#recalclayout)|Ricalcola le informazioni di layout per il riquadro. Esegue l'override di [CBasePane:: RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).|
+|[CPane:: SaveState](#savestate)|Salva lo stato del riquadro nel registro di sistema. Esegue l'override di [CBasePane:: SaveState](../../mfc/reference/cbasepane-class.md#savestate).|
+|[CPane::SetActiveInGroup](#setactiveingroup)|Contrassegna un riquadro come attivo.|
 |[CPane::SetBorders](#setborders)|Imposta i valori del bordo del riquadro.|
-|[CPane::SetClientHotSpot](#setclienthotspot)|Imposta area sensibile del riquadro.|
-|[CPane::SetDockState](#setdockstate)|Ripristina informazioni sullo stato per il riquadro di ancoraggio.|
-|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Abilita o disabilita la modalità di riga esclusivi.|
+|[CPane::SetClientHotSpot](#setclienthotspot)|Imposta l'area sensibile per il riquadro.|
+|[CPane::SetDockState](#setdockstate)|Ripristina le informazioni sullo stato di ancoraggio per il riquadro.|
+|[CPane:: SetExclusiveRowMode](#setexclusiverowmode)|Abilita o Disabilita la modalità di riga esclusiva.|
 |[CPane::SetMiniFrameRTC](#setminiframertc)|Imposta le informazioni sulla classe di runtime per la finestra con mini-cornice predefinita.|
-|[CPane::SetMinSize](#setminsize)|Imposta il valore minimo consentito di dimensioni per il riquadro.|
+|[CPane::SetMinSize](#setminsize)|Imposta la dimensione minima consentita per il riquadro.|
 |[CPane::SetVirtualRect](#setvirtualrect)|Imposta il *rettangolo virtuale* del riquadro.|
-|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Estende il riquadro verticalmente o orizzontalmente in base stile di ancoraggio.|
-|[CPane::ToggleAutoHide](#toggleautohide)|Attiva o disattiva la modalità Nascondi automaticamente.|
-|[CPane::UndockPane](#undockpane)|Rimuove il riquadro dal sito di ancoraggio, dispositivo di scorrimento predefinito o finestra con mini-cornice in cui è attualmente ancorato. (Esegue l'override [CBasePane::UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|
+|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Estende il riquadro verticalmente o orizzontalmente in base allo stile di ancoraggio.|
+|[CPane::ToggleAutoHide](#toggleautohide)|Attiva/disattivare la modalità Nascondi automaticamente.|
+|[CPane:: UndockPane](#undockpane)|Rimuove il riquadro dal sito di ancoraggio, dal dispositivo di scorrimento predefinito o dalla finestra con mini-cornice in cui è attualmente ancorato. Esegue l'override di [CBasePane:: UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).|
 |[CPane::UpdateVirtualRect](#updatevirtualrect)|Aggiorna il rettangolo virtuale.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
-|[CPane::OnAfterDock](#onafterdock)|Chiamato dal framework quando un riquadro è stato ancorato.|
-|[CPane::OnAfterFloat](#onafterfloat)|Chiamato dal framework quando è stata resa un riquadro.|
-|[CPane::OnBeforeDock](#onbeforedock)|Chiamato dal framework quando sta per essere ancorato nel riquadro.|
-|[CPane::OnBeforeFloat](#onbeforefloat)|Chiamato dal framework quando un riquadro sta per essere spostate.|
+|[CPane::OnAfterDock](#onafterdock)|Chiamata eseguita dal framework quando un riquadro è stato ancorato.|
+|[CPane::OnAfterFloat](#onafterfloat)|Chiamata eseguita dal framework quando è stato eseguito il float di un riquadro.|
+|[CPane::OnBeforeDock](#onbeforedock)|Chiamata eseguita dal framework quando il riquadro sta per essere ancorato.|
+|[CPane::OnBeforeFloat](#onbeforefloat)|Chiamata eseguita dal framework quando un riquadro sta per essere sospeso.|
 
 ### <a name="data-members"></a>Membri di dati
 
-|Nome|Descrizione|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Consente una gestione coerente delle dimensioni minime per i riquadri.|
 |[CPane::m_recentDockInfo](#m_recentdockinfo)|Contiene informazioni di ancoraggio recenti.|
 
 ## <a name="remarks"></a>Note
 
-In genere, `CPane` oggetti non vengono create istanze direttamente. Se si richiede un riquadro che include funzionalità di ancoraggio, derivare l'oggetto da [CDockablePane](../../mfc/reference/cdockablepane-class.md). Se sono necessarie funzionalità sulla barra degli strumenti, derivare l'oggetto da [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
+In genere `CPane` , non viene creata un'istanza diretta degli oggetti. Se è necessario un riquadro con funzionalità di ancoraggio, derivare l'oggetto da [CDockablePane](../../mfc/reference/cdockablepane-class.md). Se è necessaria la funzionalità della barra degli strumenti, derivare l'oggetto da [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
 
-Quando si deriva una classe dalla classe `CPane`, può essere ancorata una [CDockSite](../../mfc/reference/cdocksite-class.md) e possono essere spostata un [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+Quando si deriva una classe da `CPane`, può essere ancorata in un [CDockSite](../../mfc/reference/cdocksite-class.md) e può essere fluttuata in un [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -262,11 +262,11 @@ Quando si deriva una classe dalla classe `CPane`, può essere ancorata una [CDoc
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxPane.h
+**Intestazione:** afxPane. h
 
 ##  <a name="adjustsizeimmediate"></a>  CPane::AdjustSizeImmediate
 
-Immediatamente Ricalcola il layout di un riquadro.
+Ricalcola immediatamente il layout di un riquadro.
 
 ```
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
@@ -275,15 +275,15 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bRecalcLayout*<br/>
-[in] TRUE per automaticamente Ricalcola il layout del riquadro. in caso contrario, FALSE.
+in TRUE per ricalcolare automaticamente il layout del riquadro. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Chiamare questo metodo quando si modifica dinamicamente il layout di un riquadro. Ad esempio, è possibile chiamare questo metodo quando si nasconde o mostrano i pulsanti della barra degli strumenti.
+Chiamare questo metodo quando si modifica dinamicamente il layout di un riquadro. Ad esempio, è possibile chiamare questo metodo quando si nascondono o si visualizzano i pulsanti della barra degli strumenti.
 
-##  <a name="allocelements"></a>  CPane::AllocElements
+##  <a name="allocelements"></a>CPane:: AllocElements
 
-Alloca memoria per uso interno.
+Alloca lo spazio di archiviazione per uso interno.
 
 ```
 BOOL AllocElements(
@@ -294,18 +294,18 @@ BOOL AllocElements(
 ### <a name="parameters"></a>Parametri
 
 *nElements*<br/>
-[in] Il numero di elementi per cui si desidera allocare spazio di archiviazione.
+in Numero di elementi per i quali allocare spazio di archiviazione.
 
 *cbElement*<br/>
-[in] Le dimensioni, in byte, di un elemento.
+in Dimensione, in byte, di un elemento.
 
 ### <a name="return-value"></a>Valore restituito
 
 FALSE se l'allocazione di memoria ha esito negativo; in caso contrario, TRUE.
 
-##  <a name="allowshowonpanemenu"></a>  CPane::AllowShowOnPaneMenu
+##  <a name="allowshowonpanemenu"></a>CPane:: AllowShowOnPaneMenu
 
-Specifica se il riquadro è elencato nell'elenco dei riquadri per l'applicazione generati dal runtime.
+Specifica se il riquadro è elencato nell'elenco generato dal runtime dei riquadri per l'applicazione.
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -313,15 +313,15 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro viene visualizzato nell'elenco. in caso contrario, FALSE. L'implementazione base restituisce sempre TRUE.
+TRUE se il riquadro è visualizzato nell'elenco; in caso contrario, FALSE. L'implementazione di base restituisce sempre TRUE.
 
 ### <a name="remarks"></a>Note
 
-L'applicazione generato dalla creazione guidata applicazioni contiene un'opzione di menu in cui sono elencati i riquadri in esso contenuti. Questo metodo determina se il riquadro viene visualizzato nell'elenco.
+L'applicazione generata da Creazione guidata applicazioni contiene un'opzione di menu che elenca i riquadri in esso contenuti. Questo metodo determina se il riquadro è visualizzato nell'elenco.
 
-##  <a name="calcavailablesize"></a>  CPane::CalcAvailableSize
+##  <a name="calcavailablesize"></a>CPane:: CalcAvailableSize
 
-Calcola la differenza nelle dimensioni tra un rettangolo specificato e il rettangolo della finestra corrente.
+Calcola la differenza di dimensione tra un rettangolo specificato e il rettangolo della finestra corrente.
 
 ```
 virtual CSize CalcAvailableSize(CRect rectRequired);
@@ -330,15 +330,15 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 ### <a name="parameters"></a>Parametri
 
 *rectRequired*<br/>
-[in] Il rettangolo obbligatorio.
+in Rettangolo obbligatorio.
 
 ### <a name="return-value"></a>Valore restituito
 
-La differenza tra larghezza e altezza tra *rectRequired* e il rettangolo della finestra corrente.
+Differenza tra larghezza e altezza tra *rectRequired* e il rettangolo della finestra corrente.
 
-##  <a name="calcinsiderect"></a>  CPane::CalcInsideRect
+##  <a name="calcinsiderect"></a>CPane:: CalcInsideRect
 
-Calcola l'interno di un riquadro, tra cui i bordi e i gripper rettangolo.
+Calcola il rettangolo interno di un riquadro, inclusi i bordi e le pinze.
 
 ```
 void CalcInsideRect(
@@ -349,18 +349,18 @@ void CalcInsideRect(
 ### <a name="parameters"></a>Parametri
 
 *rect*<br/>
-[out] Contiene le dimensioni e offset dell'area client del riquadro.
+out Contiene le dimensioni e l'offset dell'area client del riquadro.
 
 *bHorz*<br/>
-[in] TRUE se il riquadro è orientato orizzontalmente. in caso contrario, FALSE.
+in TRUE se il riquadro è orientato orizzontalmente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework quando è necessario ricalcolare il layout per un riquadro. Il *rect* parametro viene riempito con le dimensioni e offset dell'area client del riquadro. Sono inclusi i bordi e i gripper.
+Questo metodo viene chiamato dal framework quando deve ricalcolare il layout per un riquadro. Il parametro *Rect* viene riempito con le dimensioni e l'offset dell'area client del riquadro. Sono inclusi i bordi e le pinze.
 
-##  <a name="calcrecentdockedrect"></a>  CPane::CalcRecentDockedRect
+##  <a name="calcrecentdockedrect"></a>CPane:: CalcRecentDockedRect
 
-Calcola il rettangolo recentemente ancorato.
+Calcola il rettangolo ancorato di recente.
 
 ```
 void CalcRecentDockedRect();
@@ -368,9 +368,9 @@ void CalcRecentDockedRect();
 
 ### <a name="remarks"></a>Note
 
-Questo metodo aggiorna [cpane:: M_recentdockinfo](#m_recentdockinfo).
+Questo metodo aggiorna [CPane:: m_recentDockInfo](#m_recentdockinfo).
 
-##  <a name="calcsize"></a>  CPane::CalcSize
+##  <a name="calcsize"></a>CPane:: CalcSize
 
 Calcola le dimensioni del riquadro.
 
@@ -381,19 +381,19 @@ virtual CSize CalcSize(BOOL bVertDock);
 ### <a name="parameters"></a>Parametri
 
 *bVertDock*<br/>
-[in] TRUE se il riquadro è ancorato in verticale, FALSE in caso contrario.
+in TRUE se il riquadro è ancorato verticalmente, FALSE in caso contrario.
 
 ### <a name="return-value"></a>Valore restituito
 
-L'implementazione predefinita di questo metodo restituisce una dimensione pari a (0, 0).
+L'implementazione predefinita di questo metodo restituisce una dimensione di (0, 0).
 
 ### <a name="remarks"></a>Note
 
-Le classi derivate devono eseguire l'override di questo metodo.
+Le classi derivate devono eseguire l'override del metodo.
 
 ##  <a name="canbedocked"></a>  CPane::CanBeDocked
 
-Determina se il riquadro può essere ancorato al riquadro di base specificato.
+Determina se il riquadro può essere ancorato nel riquadro di base specificato.
 
 ```
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
@@ -402,19 +402,19 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 ### <a name="parameters"></a>Parametri
 
 *pDockBar*<br/>
-[in] Specifica il riquadro in cui deve essere ancorato in questo riquadro.
+in Specifica il riquadro in cui deve essere ancorato il riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo riquadro può essere ancorato al riquadro di ancoraggio specificato. in caso contrario, FALSE.
+TRUE se il riquadro può essere ancorato nel riquadro di ancoraggio specificato; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-In genere, questo metodo viene chiamato dal framework per determinare se un riquadro può essere ancorato al riquadro di ancoraggio specificato. Per determinare che se il riquadro può essere ancorato, il metodo restituisce il riquadro attualmente abilitato allineamento ancoraggio.
+Questo metodo viene in genere chiamato dal Framework per determinare se un riquadro può essere ancorato nel riquadro di ancoraggio specificato. Per determinare se il riquadro può essere ancorato, il metodo valuta l'allineamento di ancoraggio attualmente abilitato per il riquadro.
 
-Si abilita l'ancoraggio ai lati diversi della finestra cornice chiamando [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+È possibile abilitare l'ancoraggio ai vari lati della finestra cornice chiamando [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-##  <a name="canbetabbeddocument"></a>  CPane::CanBeTabbedDocument
+##  <a name="canbetabbeddocument"></a>CPane:: CanBeTabbedDocument
 
 Determina se il riquadro può essere convertito in un documento a schede.
 
@@ -428,11 +428,11 @@ TRUE se il riquadro può essere convertito in un documento a schede. in caso con
 
 ### <a name="remarks"></a>Note
 
-L'override del metodo in una classe derivata e restituisce FALSE se si desidera impedire che un riquadro viene convertito in un documento a schede. Un documento a schede non verrà elencato nel menu di scelta posizione della finestra.
+Eseguire l'override di questo metodo in una classe derivata e restituire FALSE se si desidera impedire la conversione di un riquadro in un documento a schede. Un documento a schede non verrà elencato nel menu Posizione finestra.
 
-##  <a name="converttotabbeddocument"></a>  CPane::ConvertToTabbedDocument
+##  <a name="converttotabbeddocument"></a>CPane:: ConvertToTabbedDocument
 
-Converte un riquadro ancorato in un documento a schede.
+Converte un riquadro ancorabile in un documento a schede.
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -441,13 +441,13 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bActiveTabOnly*<br/>
-[in] Non utilizzato in `CPane::ConvertToTabbedDocument`.
+in Non utilizzato in `CPane::ConvertToTabbedDocument`.
 
 ### <a name="remarks"></a>Note
 
-Possono essere convertiti solo i riquadri ancorabili in documenti a schede. Per informazioni, vedere [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
+Solo i riquadri ancorabili possono essere convertiti in documenti a schede. Per informazioni, vedere [CDockablePane:: ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
 
-##  <a name="copystate"></a>  CPane::CopyState
+##  <a name="copystate"></a>CPane:: CopyState
 
 Copia lo stato di un riquadro.
 
@@ -458,15 +458,15 @@ virtual void CopyState(CPane* pOrgBar);
 ### <a name="parameters"></a>Parametri
 
 *pOrgBar*<br/>
-[in] Un puntatore a un riquadro.
+in Puntatore a un riquadro.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo copia lo stato del *pOrgBar* nel riquadro corrente.
+Questo metodo copia lo stato di *pOrgBar* nel riquadro corrente.
 
-##  <a name="create"></a>  Cpane:: Create
+##  <a name="create"></a>CPane:: create
 
-Crea una barra di controllo e lo collega al [CPane](../../mfc/reference/cpane-class.md) oggetto.
+Crea una barra di controllo e la collega all'oggetto [CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual BOOL Create(
@@ -482,39 +482,39 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametri
 
 *lpszClassName*<br/>
-[in] Specifica il nome della classe Windows.
+in Specifica il nome della classe di Windows.
 
 *dwStyle*<br/>
-[in] Specifica gli attributi di stile di finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+in Specifica gli attributi di stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *rect*<br/>
-[in] Specifica le dimensioni iniziali e la posizione del *pParentWnd* finestra, nelle coordinate del client.
+in Specifica le dimensioni e la posizione iniziali della finestra *pParentWnd* , in coordinate client.
 
 *pParentWnd*<br/>
 [in, out] Specifica la finestra padre di questo riquadro.
 
 *nID*<br/>
-[in] Specifica l'ID del riquadro.
+in Specifica l'ID del riquadro.
 
 *dwControlBarStyle*<br/>
-[in] Specifica lo stile del riquadro. Per altre informazioni, vedere [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+in Specifica lo stile per il riquadro. Per ulteriori informazioni, vedere [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
 [in, out] Specifica il contesto di creazione del riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro è stato creato correttamente. in caso contrario, FALSE.
+TRUE se il riquadro è stato creato correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo crea un riquadro di Windows e lo collega al `CPane` oggetto.
+Questo metodo crea un riquadro di Windows e lo connette all' `CPane` oggetto.
 
-Se non esplicitamente inizializzato [cpane:: M_recentdockinfo](#m_recentdockinfo) prima di chiamare `Create`, il parametro *rect* verrà utilizzato come il rettangolo quando mobile o ancoraggio del riquadro.
+Se [CPane:: m_recentDockInfo](#m_recentdockinfo) non è stato inizializzato in modo esplicito `Create`prima della chiamata a, il parametro *Rect* verrà usato come rettangolo durante il mobile o l'ancoraggio del riquadro.
 
-##  <a name="createdefaultminiframe"></a>  CPane::CreateDefaultMiniframe
+##  <a name="createdefaultminiframe"></a>CPane:: CreateDefaultMiniframe
 
-Crea una finestra con mini-cornice per un riquadro mobile.
+Crea una finestra con mini-cornice per un riquadro a virgola mobile.
 
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -523,21 +523,21 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ### <a name="parameters"></a>Parametri
 
 *rectInitial*<br/>
-[in] Specifica le dimensioni iniziali e la posizione, nelle coordinate dello schermo, della finestra con mini-cornice creare.
+in Specifica le dimensioni e la posizione iniziali, in coordinate dello schermo, della finestra con mini-cornice da creare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Finestra con mini-cornice appena creato.
+Finestra con mini-cornice appena creata.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework per creare una finestra con mini-cornice quando un riquadro è resa mobile. La finestra con mini-cornice può essere di tipo [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) o di tipo [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Una finestra con mini-cornice multi viene creata se il riquadro ha lo stile AFX_CBRS_FLOAT_MULTI.
+Questo metodo viene chiamato dal Framework per creare una finestra con mini-cornice quando viene eseguito il float di un riquadro. La finestra con mini-cornice può essere di tipo [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) o di tipo [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md). Se il riquadro ha lo stile AFX_CBRS_FLOAT_MULTI, viene creata una finestra con mini-cornice.
 
-Le informazioni sulla classe di runtime per la finestra con mini-cornice viene archiviati nel `CPane::m_pMiniFrameRTC` membro. Per impostare il membro se si decide di creare finestre con mini-cornice personalizzato, è possibile utilizzare una classe derivata.
+Le informazioni sulla classe di runtime per la finestra con mini-cornice sono `CPane::m_pMiniFrameRTC` archiviate nel membro. È possibile utilizzare una classe derivata per impostare questo membro se si decide di creare finestre con mini-cornice personalizzate.
 
-##  <a name="createex"></a>  Cpane:: CreateEx
+##  <a name="createex"></a>CPane:: CreateEx
 
-Crea una barra di controllo e lo collega al [CPane](../../mfc/reference/cpane-class.md) oggetto.
+Crea una barra di controllo e la collega all'oggetto [CPane](../../mfc/reference/cpane-class.md) .
 
 ```
 virtual BOOL CreateEx(
@@ -554,40 +554,40 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametri
 
 *dwStyleEx*<br/>
-[in] Specifica gli attributi di stile di finestra esteso. Per altre informazioni, vedere [stili finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
+in Specifica gli attributi di stile della finestra estesa. Per altre informazioni, vedere [stili di finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
 *lpszClassName*<br/>
-[in] Specifica il nome della classe Windows.
+in Specifica il nome della classe di Windows.
 
 *dwStyle*<br/>
-[in] Specifica gli attributi di stile di finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+in Specifica gli attributi di stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *rect*<br/>
-[in] Specifica le dimensioni iniziali e la posizione del *pParentWnd* finestra, nelle coordinate del client.
+in Specifica le dimensioni e la posizione iniziali della finestra *pParentWnd* , in coordinate client.
 
 *pParentWnd*<br/>
 [in, out] Specifica la finestra padre di questo riquadro.
 
 *nID*<br/>
-[in] Specifica l'ID del riquadro.
+in Specifica l'ID del riquadro.
 
 *dwControlBarStyle*<br/>
-[in] Specifica lo stile del riquadro. Per altre informazioni, vedere [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+in Specifica lo stile per il riquadro. Per ulteriori informazioni, vedere [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
 [in, out] Specifica il contesto di creazione per il riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro è stato creato correttamente. in caso contrario, FALSE.
+TRUE se il riquadro è stato creato correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo crea un riquadro di Windows e lo collega al `CPane` oggetto.
+Questo metodo crea un riquadro di Windows e lo connette all' `CPane` oggetto.
 
-Se non esplicitamente inizializzato [cpane:: M_recentdockinfo](#m_recentdockinfo) prima di chiamare `CreateEx`, il parametro *rect* verrà utilizzato come il rettangolo quando mobile o ancoraggio del riquadro.
+Se [CPane:: m_recentDockInfo](#m_recentdockinfo) non è stato inizializzato in modo esplicito `CreateEx`prima della chiamata a, il parametro *Rect* verrà usato come rettangolo durante il mobile o l'ancoraggio del riquadro.
 
-##  <a name="dockbymouse"></a>  CPane::DockByMouse
+##  <a name="dockbymouse"></a>CPane::D ockByMouse
 
 Ancora un riquadro usando il mouse.
 
@@ -598,13 +598,13 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 ### <a name="parameters"></a>Parametri
 
 *pDockBar*<br/>
-[in] Specifica il riquadro di base da cui si desidera ancorare il riquadro.
+in Specifica il riquadro di base in cui ancorare il riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro è stato ancorato correttamente. in caso contrario, FALSE.
+TRUE se il riquadro è stato ancorato correttamente; in caso contrario, FALSE.
 
-##  <a name="dockpane"></a>  CPane::DockPane
+##  <a name="dockpane"></a>CPane::D ockPane
 
 Ancora il riquadro mobile a un riquadro di base.
 
@@ -618,34 +618,34 @@ virtual BOOL DockPane(
 ### <a name="parameters"></a>Parametri
 
 *pDockBar*<br/>
-[in, out] Specifica il riquadro di base per ancorare il riquadro.
+[in, out] Specifica il riquadro di base in cui ancorare il riquadro.
 
 *lpRect*<br/>
-[in] Specifica il rettangolo nel riquadro di base in cui deve essere ancorato in questo riquadro.
+in Specifica il rettangolo nel riquadro di base in cui deve essere ancorato il riquadro.
 
 *dockMethod*<br/>
-[in] Specifica il metodo ancoraggio da usare. Le opzioni disponibili sono i seguenti:
+in Specifica il metodo di ancoraggio da usare. Le opzioni disponibili sono le seguenti:
 
-|Opzione|Descrizione|
+|Opzione|DESCRIZIONE|
 |------------|-----------------|
-|DM_UNKNOWN|Il framework utilizza questa opzione quando il metodo di ancoraggio è sconosciuto. Il riquadro non archivia posizione mobile più recente. È anche possibile usare questa opzione per ancorare a livello di codice un riquadro quando non è necessario archiviare la posizione mobile recenti.|
+|DM_UNKNOWN|Il Framework usa questa opzione quando il metodo di ancoraggio è sconosciuto. Il riquadro non archivia la posizione mobile più recente. È anche possibile usare questa opzione per ancorare a livello di codice un riquadro quando non è necessario archiviare la posizione mobile recente.|
 |DM_MOUSE|Utilizzato internamente.|
-|DM_DBL_CLICK|Questa opzione viene utilizzata quando il punto di trascinamento è fatto doppio clic. Il riquadro viene riposizionato in corrispondenza della posizione di ancoraggio più recente. Se il riquadro non è ancorato facendo doppio clic su, il riquadro viene riposizionato in corrispondenza della posizione a virgola mobile più recente.|
-|DM_SHOW|Questa opzione è utilizzabile per il riquadro viene ancorato a livello di codice. Nel riquadro memorizza posizione mobile più recente.|
-|DM_RECT|Il riquadro viene ancorato nella regione specificata dal *lpRect*.|
-|DM_STANDARD|Quando si usa questa opzione, il framework consente di disegnare il riquadro come un frame di struttura durante lo spostamento.|
+|DM_DBL_CLICK|Questa opzione viene utilizzata quando si fa doppio clic sul pulsante. Il riquadro viene riposizionato nella posizione di ancoraggio più recente. Se il riquadro non è ancorato facendo doppio clic, il riquadro viene riposizionato in corrispondenza della posizione mobile più recente.|
+|DM_SHOW|Questa opzione può essere usata per ancorare il riquadro a livello di codice. Il riquadro Archivia la posizione mobile più recente.|
+|DM_RECT|Il riquadro è ancorato all'area specificata da *lpRect*.|
+|DM_STANDARD|Quando si usa questa opzione, il framework disegna il riquadro come frame della struttura mentre viene spostato.|
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro è stato ancorato correttamente. in caso contrario, FALSE.
+TRUE se il riquadro è stato ancorato correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo, il riquadro viene ancorato al riquadro di base specificato dal *pDockBar* parametro. È necessario abilitare prima l'ancoraggio, chiamando [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
+Questo metodo ancora il riquadro al riquadro di base specificato dal parametro *pDockBar* . Per prima cosa, è necessario abilitare l'ancoraggio chiamando [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-##  <a name="dockpanestandard"></a>  CPane::DockPaneStandard
+##  <a name="dockpanestandard"></a>CPane::D ockPaneStandard
 
-Ancora un riquadro con contorno di ancoraggio (standard).
+Ancora un riquadro usando l'ancoraggio del contorno (standard).
 
 ```
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
@@ -654,19 +654,19 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ### <a name="parameters"></a>Parametri
 
 *bWasDocked*<br/>
-[in] TRUE se il riquadro è stato correttamente ancorato; in caso contrario, FALSE.
+in TRUE se il riquadro è stato ancorato correttamente. in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-Questo metodo restituisce sempre il **ciò** puntatore.
+Questo metodo restituisce sempre il puntatore **this** .
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene utilizzato solo per i riquadri che derivano dal [CDockablePane Class](../../mfc/reference/cdockablepane-class.md). Per altre informazioni, vedere [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
+Questo metodo viene utilizzato solo per i riquadri derivati dalla [classe CDockablePane](../../mfc/reference/cdockablepane-class.md). Per ulteriori informazioni, vedere [CDockablePane::D ockpanestandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
 
-##  <a name="docktoframewindow"></a>  CPane::DockToFrameWindow
+##  <a name="docktoframewindow"></a>CPane::D ockToFrameWindow
 
-Ancora un riquadro ancorato in un frame.
+Ancora un riquadro ancorabile a un frame.
 
 ```
 virtual BOOL DockToFrameWindow(
@@ -681,30 +681,30 @@ virtual BOOL DockToFrameWindow(
 ### <a name="parameters"></a>Parametri
 
 *dwAlignment*<br/>
-[in] Il lato del frame padre che si desidera ancorare il riquadro.
+in Lato del frame padre a cui si desidera ancorare il riquadro.
 
 *lpRect*<br/>
-[in] Le dimensioni specificate.
+in Dimensione specificata.
 
 *dwDockFlags*<br/>
-[in] Ignorato.
+in Ignorato.
 
 *pRelativeBar*<br/>
-[in] Ignorato.
+in Ignorato.
 
 *nRelativeIndex*<br/>
-[in] Ignorato.
+in Ignorato.
 
 *bOuterEdge*<br/>
-[in] Se TRUE e vi sono altri riquadri ancorabili specificati da un lato *dwAlignment*, il riquadro viene ancorato all'esterno di altri riquadri, più da vicino al bordo del frame padre. Se FALSE, il riquadro viene ancorato più vicino al centro dell'area client.
+in Se TRUE e sono presenti altri riquadri ancorabili sul lato specificato da *dwAlignment*, il riquadro è ancorato all'esterno degli altri riquadri, più vicino al bordo del frame padre. Se FALSE, il riquadro è ancorato più vicino al centro dell'area client.
 
 ### <a name="return-value"></a>Valore restituito
 
-FALSE se un divisore di riquadro ( [classe CPaneDivider](../../mfc/reference/cpanedivider-class.md)) non può essere creato; in caso contrario, TRUE.
+FALSE se non è possibile creare un divisore di riquadro ( [classe CPaneDivider](../../mfc/reference/cpanedivider-class.md)); in caso contrario, TRUE.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="doesallowsiblingbars"></a>  CPane::DoesAllowSiblingBars
+##  <a name="doesallowsiblingbars"></a>CPane::D oesAllowSiblingBars
 
 Indica se è possibile ancorare un altro riquadro nella stessa riga in cui è ancorato il riquadro corrente.
 
@@ -714,17 +714,17 @@ virtual BOOL DoesAllowSiblingBars() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se questo riquadro è possibile ancorare a un altro riquadro nella stessa riga stessa. in caso contrario, FALSE.
+TRUE se questo riquadro può essere ancorato a un altro riquadro nella stessa riga di se stesso; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-È possibile abilitare o disabilitare questo comportamento chiamando [CPane::SetExclusiveRowMode](#setexclusiverowmode).
+È possibile abilitare o disabilitare questo comportamento chiamando [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
 
-Per impostazione predefinita, le barre degli strumenti hanno modalità riga esclusivi disabilitata e la barra dei menu è abilitata la modalità riga esclusivo.
+Per impostazione predefinita, le barre degli strumenti hanno la modalità di riga esclusiva disabilitata e la barra dei menu ha la modalità di riga esclusiva abilitata.
 
-##  <a name="floatpane"></a>  CPane::FloatPane
+##  <a name="floatpane"></a>CPane:: FloatPane
 
-Si muove il riquadro.
+Fluttua il riquadro.
 
 ```
 virtual BOOL FloatPane(
@@ -736,25 +736,25 @@ virtual BOOL FloatPane(
 ### <a name="parameters"></a>Parametri
 
 *rectFloat*<br/>
-[in] Specifica la posizione, nelle coordinate dello schermo, per posizionare il riquadro quando resa.
+in Specifica la posizione, nelle coordinate dello schermo, per posizionare il riquadro quando è mobile.
 
 *dockMethod*<br/>
-[in] Specifica il metodo ancoraggio da usare quando il riquadro è resa mobile. Per un elenco di valori possibili, vedere [CPane::DockPane](#dockpane).
+in Specifica il metodo di ancoraggio da usare quando il riquadro è Floated. Per un elenco di valori possibili, vedere [CPane::D ockpane](#dockpane).
 
 *bShow*<br/>
-[in] TRUE per visualizzare il riquadro quando resa; in caso contrario, FALSE.
+in TRUE per visualizzare il riquadro se è stato eseguito il float; in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro è stata resa correttamente o se il riquadro non può essere resa perché [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) restituisce FALSE, in caso contrario, FALSE.
+TRUE se il riquadro è stato spostato correttamente oppure se non è possibile eseguire il float del riquadro perché [CBasePane:: CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) restituisce false; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Chiamare questo metodo per il riquadro in corrispondenza della posizione specificata dal float il *rectFloat* parametro. Questo metodo crea automaticamente una finestra con mini-cornice padre per il riquadro.
+Chiamare questo metodo per eseguire il Floating del riquadro in corrispondenza della posizione specificata dal parametro *rectFloat* . Questo metodo crea automaticamente una finestra con mini-cornice padre per il riquadro.
 
 ##  <a name="getavailableexpandsize"></a>  CPane::GetAvailableExpandSize
 
-Restituisce la quantità, in pixel, che è possibile espandere il riquadro.
+Restituisce la quantità, in pixel, che può essere espansa dal riquadro.
 
 ```
 virtual int GetAvailableExpandSize() const;
@@ -762,13 +762,13 @@ virtual int GetAvailableExpandSize() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se il riquadro viene ancorato in orizzontale, il valore restituito è la larghezza disponibile; in caso contrario, il valore restituito è l'altezza disponibile.
+Se il riquadro è ancorato orizzontalmente, il valore restituito è la larghezza disponibile; in caso contrario, il valore restituito è l'altezza disponibile.
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="getavailablestretchsize"></a>  CPane::GetAvailableStretchSize
 
-Restituisce la quantità, in pixel, che è possibile ridurre il riquadro.
+Restituisce la quantità, in pixel, che il riquadro può compattare.
 
 ```
 virtual int GetAvailableStretchSize() const;
@@ -776,15 +776,15 @@ virtual int GetAvailableStretchSize() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Quantità, in pixel, che è possibile ridurre il riquadro. Se il riquadro viene ancorato in orizzontale, questa quantità corrisponde alla larghezza disponibile; in caso contrario, è l'altezza disponibile.
+Quantità, in pixel, che il riquadro può compattare. Se il riquadro è ancorato orizzontalmente, questa quantità è la larghezza disponibile; in caso contrario, è l'altezza disponibile.
 
 ### <a name="remarks"></a>Note
 
-La dimensione di istanza di stretch disponibile viene calcolata sottraendo il valore minimo consentito dimensioni per il riquadro ( [CPane::GetMinSize](#getminsize)) rispetto alla dimensione corrente ( [CWnd::GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
+Le dimensioni di estensione disponibili vengono calcolate sottraendo le dimensioni minime consentite per il riquadro ( [CPane:: GetMinSize](#getminsize)) dalle dimensioni correnti ( [CWnd:: GetWindowRect](../../mfc/reference/cwnd-class.md#getwindowrect)).
 
-##  <a name="getborders"></a>  CPane::GetBorders
+##  <a name="getborders"></a>CPane:: GetBorders
 
-Restituisce lo spessore dei bordi del riquadro.
+Restituisce la larghezza dei bordi del riquadro.
 
 ```
 CRect GetBorders() const;
@@ -792,15 +792,15 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che contiene la larghezza corrente, in pixel, di ogni lato del riquadro. Ad esempio, il valore della `left` membro del `CRect` oggetto è la larghezza del bordo sinistro.
+Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene la larghezza corrente, in pixel, di ogni lato del riquadro. Il valore del `left` membro `CRect` dell'oggetto, ad esempio, corrisponde alla larghezza del bordo sinistro.
 
 ### <a name="remarks"></a>Note
 
-Per impostare le dimensioni dei bordi, chiamare [CPane::SetBorders](#setborders).
+Per impostare le dimensioni dei bordi, chiamare [CPane::](#setborders)seborders.
 
 ##  <a name="getclienthotspot"></a>  CPane::GetClientHotSpot
 
-Restituisce il *sensibile* per il riquadro.
+Restituisce l' area sensibile per il riquadro.
 
 ```
 CPoint GetClientHotSpot() const;
@@ -810,11 +810,11 @@ CPoint GetClientHotSpot() const;
 
 ### <a name="remarks"></a>Note
 
-Il *sensibile* è il punto del riquadro che l'utente seleziona e contiene per spostare il riquadro. Un'area sensibile viene usata per creare animazioni uniformi quando il riquadro viene spostato da una posizione di ancoraggio.
+L' area sensibile è il punto del riquadro selezionato dall'utente per spostare il riquadro. Un area sensibile viene usato per un'animazione uniforme quando il riquadro viene spostato da una posizione ancorata.
 
 ##  <a name="getdocksiterow"></a>  CPane::GetDockSiteRow
 
-Restituisce la riga di ancoraggio ( [classe CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)) in cui il riquadro viene ancorato.
+Restituisce la riga di ancoraggio ( [classe CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)) in cui il riquadro è ancorato.
 
 ```
 CDockingPanesRow* GetDockSiteRow() const;
@@ -822,11 +822,11 @@ CDockingPanesRow* GetDockSiteRow() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `CDockingPanesRow`* che punta a della riga di ancoraggio in cui il riquadro viene ancorato o NULL se il riquadro non è ancorato.
+Un `CDockingPanesRow`* che punta alla riga di ancoraggio in cui il riquadro è ancorato o null se il riquadro non è ancorato.
 
-##  <a name="getexclusiverowmode"></a>  CPane::GetExclusiveRowMode
+##  <a name="getexclusiverowmode"></a>CPane:: GetExclusiveRowMode
 
-Determina se il riquadro è in modalità riga esclusivo.
+Determina se il riquadro è in modalità di riga esclusiva.
 
 ```
 virtual BOOL GetExclusiveRowMode() const;
@@ -834,15 +834,15 @@ virtual BOOL GetExclusiveRowMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro in modalità riga esclusivo. in caso contrario, FALSE.
+TRUE se il riquadro è in modalità di riga esclusiva; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni sulla modalità di riga esclusivi, vedere [CPane::SetExclusiveRowMode](#setexclusiverowmode).
+Per ulteriori informazioni sulla modalità di riga esclusiva, vedere [CPane:: SetExclusiveRowMode](#setexclusiverowmode).
 
 ##  <a name="gethotspot"></a>  CPane::GetHotSpot
 
-Restituisce l'area sensibile archiviato in un oggetto sottostante `CMFCDragFrameImpl` oggetto.
+Restituisce l'area sensibile archiviata in un oggetto sottostante `CMFCDragFrameImpl` .
 
 ```
 CPoint GetHotSpot() const;
@@ -852,11 +852,11 @@ CPoint GetHotSpot() const;
 
 ### <a name="remarks"></a>Note
 
-Il `CPane` classe contiene una `CMFCDragFrameImpl` oggetto `m_dragFrameImpl`, che è responsabile del disegno il rettangolo che viene visualizzato quando l'utente sposta un riquadro nella modalità di ancoraggio standard. L'area sensibile utilizzato per disegnare il rettangolo rispetto alla posizione corrente del mouse quando l'utente sposta il riquadro.
+La `CPane` classe contiene un `CMFCDragFrameImpl` oggetto, `m_dragFrameImpl`, che è responsabile del disegno del rettangolo visualizzato quando l'utente sposta un riquadro nella modalità di ancoraggio standard. L'area sensibile viene utilizzata per creare il rettangolo rispetto alla posizione corrente del mouse quando l'utente sposta il riquadro.
 
 ##  <a name="getminsize"></a>  CPane::GetMinSize
 
-Recupera il valore minimo consentito dimensioni per il riquadro.
+Recupera la dimensione minima consentita per il riquadro.
 
 ```
 virtual void GetMinSize(CSize& size) const;
@@ -865,13 +865,13 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="parameters"></a>Parametri
 
 *size*<br/>
-[out] Oggetto `CSize` oggetto che viene riempito con il valore minimo le dimensioni massime consentito.
+out `CSize` Oggetto riempito con la dimensione minima consentita.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getpanename"></a>  CPane::GetPaneName
+##  <a name="getpanename"></a>CPane:: getpanename
 
-Recupera il titolo del riquadro.
+Recupera il titolo per il riquadro.
 
 ```
 virtual void GetPaneName(CString& strName) const;
@@ -880,15 +880,15 @@ virtual void GetPaneName(CString& strName) const;
 ### <a name="parameters"></a>Parametri
 
 *strName*<br/>
-[out] Oggetto `CString` oggetto che viene riempito con il nome della didascalia.
+out `CString` Oggetto compilato con il nome della didascalia.
 
 ### <a name="remarks"></a>Note
 
-Quando il riquadro viene ancorato o mobile, il titolo del riquadro viene visualizzato nell'area della didascalia. Se il riquadro è parte di un gruppo a schede, il titolo viene visualizzato nell'area delle schede. Se il riquadro nella modalità Nascondi automaticamente, il titolo viene visualizzato in un `CMFCAutoHideButton`.
+Il titolo del riquadro viene visualizzato nell'area della didascalia quando il riquadro è ancorato o mobile. Se il riquadro fa parte di un gruppo a schede, il titolo viene visualizzato nell'area della scheda. Se il riquadro è in modalità Nascondi automaticamente, il titolo viene visualizzato in un `CMFCAutoHideButton`.
 
-##  <a name="getvirtualrect"></a>  CPane::GetVirtualRect
+##  <a name="getvirtualrect"></a>CPane:: GetVirtualRect
 
-Recupera le *rettangolo virtuale* del riquadro.
+Recupera il *rettangolo virtuale* del riquadro.
 
 ```
 void GetVirtualRect(CRect& rectVirtual) const;
@@ -897,17 +897,17 @@ void GetVirtualRect(CRect& rectVirtual) const;
 ### <a name="parameters"></a>Parametri
 
 *rectVirtual*<br/>
-[out] Oggetto `CRect` oggetto che viene riempito con il rettangolo virtuale.
+out `CRect` Oggetto riempito con il rettangolo virtuale.
 
 ### <a name="remarks"></a>Note
 
-Quando un riquadro di spostamento, il framework memorizza dalla posizione originale del riquadro in un rettangolo virtuale. Il framework può usare il rettangolo virtuale per ripristinare la posizione del riquadro originale.
+Quando si sposta un riquadro, il Framework archivia la posizione originale del riquadro in un rettangolo virtuale. Il Framework può usare il rettangolo virtuale per ripristinare la posizione originale del riquadro.
 
-Non chiamare metodi che sono correlati ai rettangoli virtuali a meno che non si siano spostando i riquadri a livello di codice.
+Non chiamare metodi correlati a rettangoli virtuali a meno che non si spostino i riquadri a livello di codice.
 
-##  <a name="ischangestate"></a>  CPane::IsChangeState
+##  <a name="ischangestate"></a>CPane:: IsChangeState
 
-Come il riquadro è da spostare, questo metodo consente di analizzare la posizione rispetto agli altri riquadri, ancorare le righe e finestre con mini-cornice e restituisce il valore AFX_CS_STATUS appropriato.
+Durante lo spostamento del riquadro, questo metodo analizza la relativa posizione rispetto ad altri riquadri, righe di ancoraggio e finestre con mini-cornice, quindi restituisce il valore AFX_CS_STATUS appropriato.
 
 ```
 virtual AFX_CS_STATUS IsChangeState(
@@ -918,23 +918,23 @@ virtual AFX_CS_STATUS IsChangeState(
 ### <a name="parameters"></a>Parametri
 
 *nOffset*<br/>
-[in] Specifica la sensibilità ancoraggio. Ad esempio, un riquadro in cui viene spostato all'interno *nOffset* sarà ancorato pixel da una riga di ancoraggio.
+in Specifica la riservatezza di ancoraggio. Ad esempio, un riquadro spostato all'interno di *nOffset* pixel da una riga di ancoraggio sarà ancorato.
 
 *ppTargetBar*<br/>
-[in] Quando termina, il metodo *ppTargetBar* contiene un puntatore all'oggetto a cui deve essere ancorato il riquadro corrente oppure NULL se nessun elemento di ancoraggio deve essere eseguita.
+in Quando il metodo restituisce un risultato, *ppTargetBar* contiene un puntatore all'oggetto a cui deve essere ancorato il riquadro corrente o null se non si deve eseguire l'ancoraggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-Uno dei valori AFX_CS_STATUS seguenti:
+Uno dei valori di AFX_CS_STATUS seguenti:
 
 |Value|Descrizione|
 |-----------|-----------------|
-|CS_NOTHING|Il riquadro non è in prossimità di un sito di ancoraggio. Il framework non ancorare il riquadro.|
-|CS_DOCK_IMMEDIATELY|Il riquadro è su un sito di ancoraggio e lo stile DT_IMMEDIATE è abilitato. Il framework ancora il riquadro immediatamente.|
-|CS_DELAY_DOCK|Il riquadro è su un sito di ancoraggio corrispondente a un altro riquadro ancorato o un bordo del frame principale. Il riquadro viene ancorato il framework quando l'utente rilascia lo spostamento.|
-|CS_DELAY_DOCK_TO_TAB|Il riquadro è su un sito di ancoraggio che fa sì che il riquadro per essere ancorata in una finestra a schede. Ciò si verifica quando il riquadro è eccessiva la didascalia del riquadro ancorato di un'altra o sull'area della scheda di un riquadro a schede. Il riquadro viene ancorato il framework quando l'utente rilascia lo spostamento.|
+|CS_NOTHING|Il riquadro non si trova vicino a un sito di ancoraggio. Il Framework non ancora il riquadro.|
+|CS_DOCK_IMMEDIATELY|Il riquadro si trova su un sito di ancoraggio e lo stile DT_IMMEDIATE è abilitato. Il Framework ancora il riquadro.|
+|CS_DELAY_DOCK|Il riquadro si trova su un sito di ancoraggio che è un altro riquadro ancorato o un bordo del frame principale. Il Framework ancora il riquadro quando l'utente rilascia lo spostamento.|
+|CS_DELAY_DOCK_TO_TAB|Il riquadro si trova su un sito di ancoraggio che determina l'ancoraggio del riquadro in una finestra a schede. Questo errore si verifica quando il riquadro si trova sulla didascalia di un altro riquadro ancorato o sull'area di tabulazione di un riquadro a schede. Il Framework ancora il riquadro quando l'utente rilascia lo spostamento.|
 
-##  <a name="isdragmode"></a>  CPane::IsDragMode
+##  <a name="isdragmode"></a>CPane:: IsDragMode
 
 Specifica se il riquadro è stato spostato.
 
@@ -944,7 +944,7 @@ virtual BOOL IsDragMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro di spostamento; in caso contrario, FALSE.
+TRUE se è in corso lo spostamento del riquadro; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
@@ -962,11 +962,11 @@ TRUE se il riquadro si trova in una finestra cornice a più riquadri; in caso co
 
 ### <a name="remarks"></a>Note
 
-Solo i riquadri ancorabili possono spostarsi in una finestra cornice a più riquadri. Pertanto, `CPane::IsInFloatingMultiPaneFrameWnd` restituisce sempre FALSE.
+Solo i riquadri ancorabili possono essere mobili in una finestra cornice a più riquadri. Pertanto, `CPane::IsInFloatingMultiPaneFrameWnd` restituisce sempre false.
 
-##  <a name="isleftof"></a>  CPane::IsLeftOf
+##  <a name="isleftof"></a>CPane:: IsLeftOf
 
-Determina se il riquadro viene lasciato di (o versioni successive) del rettangolo specificato.
+Determina se il riquadro è a sinistra (o superiore) del rettangolo specificato.
 
 ```
 bool IsLeftOf(
@@ -977,16 +977,16 @@ bool IsLeftOf(
 ### <a name="parameters"></a>Parametri
 
 *rect*<br/>
-[in] Oggetto `CRect` oggetto utilizzato per il confronto.
+in Oggetto `CRect` utilizzato per il confronto.
 
 *bWindowRect*<br/>
-[in] Se TRUE, *rect* si presuppone che contenga le coordinate dello schermo; se FALSE, *rect* si presuppone che contenga le coordinate del client.
+in Se TRUE, si presuppone che *Rect* includa le coordinate dello schermo; Se FALSE, si presuppone che *Rect* includa coordinate client.
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-Se il riquadro viene ancorato in orizzontale, questo metodo controlla se il percorso è a sinistra del *rect*. In caso contrario, questo metodo controlla se il percorso è sopra *rect*.
+Se il riquadro è ancorato orizzontalmente, questo metodo controlla se il relativo percorso è a sinistra di *Rect*. In caso contrario, questo metodo controlla se il percorso è sopra *Rect*.
 
 ##  <a name="isresizable"></a>  CPane::IsResizable
 
@@ -1002,15 +1002,15 @@ TRUE se il riquadro è ridimensionabile. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Base `CPane` oggetti non sono ridimensionabili.
+Gli `CPane` oggetti di base non sono ridimensionabili.
 
-Il gestore di ancoraggio Usa il flag ridimensionabile per determinare il layout del riquadro. I riquadri non ridimensionabile sono sempre posizionati in corrispondenza dei bordi esterni del frame padre.
+Il gestore di ancoraggio usa il flag ridimensionabile per determinare il layout del riquadro. I riquadri non ridimensionabili si trovano sempre nei bordi esterni del frame padre.
 
-I riquadri non ridimensionabile non possono trovarsi in contenitori di ancoraggio.
+I riquadri non ridimensionabili non possono risiedere nei contenitori di ancoraggio.
 
-##  <a name="istabbed"></a>  CPane::IsTabbed
+##  <a name="istabbed"></a>CPane:: Tab
 
-Determina se il riquadro è stato inserito il controllo struttura a schede di una finestra a schede.
+Determina se il riquadro è stato inserito nel controllo struttura a schede di una finestra a schede.
 
 ```
 virtual BOOL IsTabbed() const;
@@ -1018,15 +1018,15 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro a schede; in caso contrario, FALSE.
+TRUE se il riquadro è a schede; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Lo stato a schede viene considerato separatamente da Mobile ancorato e Nascondi automaticamente gli stati.
+Lo stato a schede viene considerato separatamente dagli Stati a virgola mobile, ancorato e Nascondi automaticamente.
 
-##  <a name="loadstate"></a>  CPane::LoadState
+##  <a name="loadstate"></a>CPane:: LoadState
 
-Carica lo stato del riquadro dal Registro di sistema.
+Carica lo stato del riquadro dal registro di sistema.
 
 ```
 virtual BOOL LoadState(
@@ -1038,13 +1038,13 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parametri
 
 *lpszProfileName*<br/>
-[in] Nome del profilo.
+in Nome del profilo.
 
 *nIndex*<br/>
-[in] Indice del profilo.
+in Indice del profilo.
 
 *uiID*<br/>
-[in] ID del riquadro.
+in ID del riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1052,13 +1052,13 @@ TRUE se lo stato del riquadro è stato caricato correttamente. in caso contrario
 
 ### <a name="remarks"></a>Note
 
-Il framework chiama questo metodo per caricare lo stato del riquadro dal Registro di sistema. Eseguirne l'override in una classe derivata per caricare le informazioni aggiuntive che viene salvata dal [CPane::SaveState](#savestate).
+Il Framework chiama questo metodo per caricare lo stato del riquadro dal registro di sistema. Eseguirne l'override in una classe derivata per caricare informazioni aggiuntive salvate da [CPane:: SaveState](#savestate).
 
-Quando si esegue l'override di questo metodo, anche chiamare il metodo di base e restituisce FALSE se il metodo di base restituisce FALSE.
+Quando si esegue l'override di questo metodo, chiamare anche il metodo di base e restituire FALSE se il metodo di base restituisce FALSE.
 
-##  <a name="m_bhandleminsize"></a>  CPane::m_bHandleMinSize
+##  <a name="m_bhandleminsize"></a>CPane:: m_bHandleMinSize
 
-Consente una gestione coerente delle dimensioni riquadro minimo.
+Consente una gestione coerente delle dimensioni minime dei riquadri.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
@@ -1066,11 +1066,11 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
 
 ### <a name="remarks"></a>Note
 
-Se uno o più riquadri ancorati all'interno dell'applicazione sostituiscono `GetMinSize`, o se l'applicazione chiama `SetMinSize`, è possibile impostare il membro statico su TRUE per consentire al framework di gestire in modo coerente come vengono ridimensionati i riquadri.
+Se uno o più riquadri ancorati nell'applicazione eseguono l' `GetMinSize`override o se l'applicazione chiama `SetMinSize`, potrebbe essere necessario impostare questo membro statico su true per consentire al Framework di gestire in modo coerente la modalità di ridimensionamento dei riquadri.
 
-Se questo valore è impostato su TRUE, la cui dimensione deve essere ridotta di sotto le dimensioni minime tutti i riquadri vengono troncati, non viene allungato. Poiché il framework utilizza aree della finestra per scopi di ridimensionamento di riquadro, non modificare le dimensioni dell'area della finestra per i riquadri ancorabili se questo valore è impostato su TRUE.
+Se questo valore è impostato su TRUE, tutti i riquadri la cui dimensione deve essere ridotta al di sotto delle dimensioni minime vengono ritagliati, non allungati. Poiché il Framework usa le aree della finestra per il ridimensionamento dei riquadri, non modificare le dimensioni dell'area della finestra per i riquadri ancorati se questo valore è impostato su TRUE.
 
-##  <a name="m_recentdockinfo"></a>  CPane::m_recentDockInfo
+##  <a name="m_recentdockinfo"></a>CPane:: m_recentDockInfo
 
 Contiene informazioni di ancoraggio recenti.
 
@@ -1080,11 +1080,11 @@ CRecentDockSiteInfo m_recentDockInfo;
 
 ### <a name="remarks"></a>Note
 
-Il framework archivia le informazioni sullo stato di ancoraggio più recente per il riquadro in questo membro.
+Il Framework archivia le informazioni più recenti sullo stato di ancoraggio per il riquadro di questo membro.
 
-##  <a name="movebyalignment"></a>  CPane::MoveByAlignment
+##  <a name="movebyalignment"></a>CPane:: MoveByAlignment
 
-Sposta il riquadro e il rettangolo virtuale la quantità specificata.
+Sposta il riquadro e il rettangolo virtuale in base al valore specificato.
 
 ```
 BOOL MoveByAlignment(
@@ -1095,10 +1095,10 @@ BOOL MoveByAlignment(
 ### <a name="parameters"></a>Parametri
 
 *dwAlignment*<br/>
-[in] Specifica l'allineamento di riquadro.
+in Specifica l'allineamento del riquadro.
 
 *nOffset*<br/>
-[in] Quantità, in pixel, da cui spostare il riquadro e il rettangolo virtuale.
+in Quantità, in pixel, in base alla quale spostare il riquadro e il rettangolo virtuale.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1108,17 +1108,17 @@ BOOL MoveByAlignment(
 
 |Value|Descrizione|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|Abilita il riquadro per essere ancorato alla parte superiore dell'area client di una finestra cornice.|
-|CBRS_ALIGN_BOTTOM|Abilita il riquadro per essere ancorato alla parte inferiore dell'area client di una finestra cornice.|
-|CBRS_ALIGN_LEFT|Abilita il riquadro ancorato a sinistra dell'area client di una finestra cornice.|
-|CBRS_ALIGN_RIGHT|Abilita il riquadro ancorato a destra dell'area client di una finestra cornice.|
-|CBRS_ALIGN_ANY|Abilita il riquadro ancorato a qualsiasi lato dell'area client di una finestra cornice.|
+|CBRS_ALIGN_TOP|Consente di ancorare il riquadro alla parte superiore dell'area client di una finestra cornice.|
+|CBRS_ALIGN_BOTTOM|Consente di ancorare il riquadro alla parte inferiore dell'area client di una finestra cornice.|
+|CBRS_ALIGN_LEFT|Consente di ancorare il riquadro al lato sinistro dell'area client di una finestra cornice.|
+|CBRS_ALIGN_RIGHT|Consente di ancorare il riquadro al lato destro dell'area client di una finestra cornice.|
+|CBRS_ALIGN_ANY|Consente di ancorare il riquadro a qualsiasi lato dell'area client di una finestra cornice.|
 
-Se *dwAlignment* contiene il flag CBRS_ALIGN_LEFT o CBRS_ALIGN_RIGHT, il riquadro e il rettangolo virtuale vengono spostati a orizzontalmente; in caso contrario, se *dwAlignment* contenga il CBRS_ALIGN_TOP CBRS_ALIGN Flag inferiori, il riquadro e il rettangolo virtuale vengono spostati in senso verticale.
+Se *dwAlignment* contiene il flag CBRS_ALIGN_LEFT o CBRS_ALIGN_RIGHT, il riquadro e il rettangolo virtuale vengono spostati orizzontalmente; in caso contrario, se *dwAlignment* contiene il flag CBRS_ALIGN_TOP o CBRS_ALIGN_BOTTOM, il riquadro e il rettangolo virtuale vengono spostati verticalmente.
 
-##  <a name="movepane"></a>  CPane::MovePane
+##  <a name="movepane"></a>CPane:: MovePane
 
-Sposta il riquadro per il rettangolo specificato.
+Sposta il riquadro sul rettangolo specificato.
 
 ```
 virtual CSize MovePane(
@@ -1130,17 +1130,17 @@ virtual CSize MovePane(
 ### <a name="parameters"></a>Parametri
 
 *rectNew*<br/>
-[in] Specifica il nuovo rettangolo per il riquadro.
+in Specifica il nuovo rettangolo per il riquadro.
 
 *bForceMove*<br/>
-[in] Se TRUE, questo metodo ignora la dimensione minima del riquadro consentiti ( [CPane::GetMinSize](#getminsize)); in caso contrario, il riquadro viene modificato, se necessario, per assicurarsi che sia disponibile almeno il requisito minimo le dimensioni massime consentito.
+in Se TRUE, questo metodo ignora la dimensione minima consentita del riquadro ( [CPane:: GetMinSize](#getminsize)); in caso contrario, il riquadro viene regolato, se necessario, per assicurarsi che sia almeno la dimensione minima consentita.
 
 *hdwp*<br/>
-[in] Non utilizzato.
+in Non utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto `CSize` oggetto che contiene le differenze di larghezza e altezza tra i rettangoli nuovi e precedenti (vecchio rettangolo - *rectNew*).
+Oggetto che contiene le differenze di larghezza e altezza tra i rettangoli nuovi e precedenti (vecchio rettangolo-RectNew). `CSize`
 
 ### <a name="remarks"></a>Note
 
@@ -1157,15 +1157,15 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Parametri
 
 *pWndOldParent*<br/>
-[in, out] Finestra padre precedente del riquadro.
+[in, out] La finestra padre precedente del riquadro.
 
 ### <a name="remarks"></a>Note
 
 Questo metodo viene chiamato dal framework quando l'elemento padre di un riquadro è stato modificato a causa di un'operazione di ancoraggio o a virgola mobile.
 
-##  <a name="onafterdock"></a>  CPane::OnAfterDock
+##  <a name="onafterdock"></a>CPane:: OnAfterDock
 
-Chiamato dal framework quando un riquadro è stato ancorato.
+Chiamata eseguita dal framework quando un riquadro è stato ancorato.
 
 ```
 virtual void OnAfterDock(
@@ -1177,17 +1177,17 @@ virtual void OnAfterDock(
 ### <a name="parameters"></a>Parametri
 
 *pBar*<br/>
-[in] Questo parametro non viene utilizzato.
+in Questo parametro non viene utilizzato.
 
 *lpRect*<br/>
-[in] Questo parametro non viene utilizzato.
+in Questo parametro non viene utilizzato.
 
 *dockMethod*<br/>
-[in] Questo parametro non viene utilizzato.
+in Questo parametro non viene utilizzato.
 
-##  <a name="onafterfloat"></a>  CPane::OnAfterFloat
+##  <a name="onafterfloat"></a>CPane:: OnAfterFloat
 
-Chiamato dal framework dopo che un riquadro viene spostata.
+Chiamata eseguita dal Framework dopo che è stato eseguito il float di un riquadro.
 
 ```
 virtual void OnAfterFloat();
@@ -1195,11 +1195,11 @@ virtual void OnAfterFloat();
 
 ### <a name="remarks"></a>Note
 
-È possibile eseguire l'override di questo metodo in una classe derivata se si desidera eseguire l'elaborazione dopo che un riquadro viene spostata.
+È possibile eseguire l'override di questo metodo in una classe derivata se si desidera eseguire un'elaborazione dopo che un riquadro è float.
 
-##  <a name="onbeforechangeparent"></a>  CPane::OnBeforeChangeParent
+##  <a name="onbeforechangeparent"></a>CPane:: OnBeforeChangeParent
 
-Chiamato dal framework quando sta per modificare l'elemento padre del riquadro.
+Chiamata eseguita dal framework quando l'elemento padre del riquadro sta per essere modificato.
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1213,17 +1213,17 @@ virtual void OnBeforeChangeParent(
 [in, out] Specifica la nuova finestra padre.
 
 *bDelay*<br/>
-[in] TRUE per ritardare la regolazione del layout ancoraggio globale; in caso contrario, FALSE.
+in TRUE per ritardare la regolazione del layout di ancoraggio globale; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework quando l'elemento padre del riquadro sta per essere modificata perché è in corso il riquadro ancorato o mobile.
+Questo metodo viene chiamato dal framework quando l'elemento padre del riquadro sta per essere modificato perché il riquadro è ancorato o floatato.
 
-Per impostazione predefinita, il riquadro viene annullata la registrazione con il riquadro ancorato chiamando `CDockSite::RemovePane`.
+Per impostazione predefinita, viene annullata la registrazione del riquadro con il riquadro di `CDockSite::RemovePane`ancoraggio chiamando.
 
-##  <a name="onbeforedock"></a>  CPane::OnBeforeDock
+##  <a name="onbeforedock"></a>CPane:: OnBeforeDock
 
-Chiamato dal framework quando sta per ancorare il riquadro.
+Chiamata eseguita dal framework quando il riquadro sta per essere ancorato.
 
 ```
 virtual BOOL OnBeforeDock(
@@ -1235,13 +1235,13 @@ virtual BOOL OnBeforeDock(
 ### <a name="parameters"></a>Parametri
 
 *ppDockBar*<br/>
-[in, out] Specifica il riquadro che in questo riquadro è ancoraggio a.
+[in, out] Specifica il riquadro a cui è ancorato il riquadro.
 
 *lpRect*<br/>
-[in] Specifica il rettangolo di ancoraggio.
+in Specifica il rettangolo di ancoraggio.
 
 *dockMethod*<br/>
-[in] Specifica il metodo di ancoraggio.
+in Specifica il metodo di ancoraggio.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1249,11 +1249,11 @@ TRUE se il riquadro può essere ancorato. Se la funzione restituisce FALSE, l'op
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework quando sta per essere ancorato un riquadro. È possibile eseguire l'override di questo metodo in una classe derivata se si desidera eseguire l'elaborazione prima di un riquadro è infine ancorato.
+Questo metodo viene chiamato dal framework quando un riquadro sta per essere ancorato. È possibile eseguire l'override di questo metodo in una classe derivata se si desidera eseguire un'elaborazione prima che un riquadro venga infine ancorato.
 
-##  <a name="onbeforefloat"></a>  CPane::OnBeforeFloat
+##  <a name="onbeforefloat"></a>CPane:: OnBeforeFloat
 
-Chiamato dal framework quando è su un riquadro in float.
+Chiamata eseguita dal framework quando un riquadro sta per essere float.
 
 ```
 virtual BOOL OnBeforeFloat(
@@ -1264,22 +1264,22 @@ virtual BOOL OnBeforeFloat(
 ### <a name="parameters"></a>Parametri
 
 *rectFloat*<br/>
-[in] Specifica la posizione e dimensioni del riquadro quando è in uno stato a virgola mobile.
+in Specifica la posizione e le dimensioni del riquadro quando si trova in uno stato mobile.
 
 *dockMethod*<br/>
-[in] Specifica il metodo di ancoraggio del riquadro.
+in Specifica il metodo di ancoraggio del riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro può essere resa; in caso contrario, FALSE.
+TRUE se è possibile rendere mobile il riquadro; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework quando è su un riquadro in float. È possibile eseguire l'override di questo metodo in una classe derivata se si desidera eseguire l'elaborazione prima che il riquadro viene infine spostato.
+Questo metodo viene chiamato dal framework quando un riquadro sta per essere float. È possibile eseguire l'override di questo metodo in una classe derivata se si desidera eseguire un'elaborazione prima che il riquadro venga infine float.
 
-##  <a name="onpressclosebutton"></a>  CPane::OnPressCloseButton
+##  <a name="onpressclosebutton"></a>CPane:: OnPressCloseButton
 
-Chiamato dal framework quando l'utente preme il pulsante Chiudi sulla barra del titolo del riquadro.
+Chiamata eseguita dal framework quando l'utente preme il pulsante Chiudi sulla didascalia del riquadro.
 
 ```
 virtual void OnPressCloseButton();
@@ -1287,9 +1287,9 @@ virtual void OnPressCloseButton();
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework quando l'utente preme il **Chiudi** pulsante sulla didascalia del riquadro. Per ricevere notifiche sulle **Chiudi** evento, è possibile eseguire l'override di questo metodo in una classe derivata.
+Questo metodo viene chiamato dal framework quando un utente preme il pulsante **Chiudi** nella didascalia del riquadro. Per ricevere notifiche sull'evento **Close** , è possibile eseguire l'override di questo metodo in una classe derivata.
 
-##  <a name="onshowcontrolbarmenu"></a>  Cpane:: Onshowcontrolbarmenu
+##  <a name="onshowcontrolbarmenu"></a>CPane:: OnShowControlBarMenu
 
 Chiamata eseguita dal framework quando un menu di riquadri speciale sta per essere visualizzato.
 
@@ -1300,19 +1300,19 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 ### <a name="parameters"></a>Parametri
 
 *point*<br/>
-[in] Specifica il percorso dal menu.
+in Specifica la posizione del menu.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se è possibile visualizzare il menu di scelta; in caso contrario, FALSE.
+TRUE se il menu può essere visualizzato; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Il menu contiene più elementi che consentono di specificare il comportamento del riquadro, vale a dire: **Floating**, **ancoraggio**, **Nascondi automaticamente**, e **nascondere**. È possibile abilitare questo menu per tutti i riquadri chiamando [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Il menu contiene diversi elementi che consentono di specificare il comportamento del riquadro, ovvero: **Mobile**, **ancoraggio**, **Nascondi automaticamente**e **Nascondi**. È possibile abilitare questo menu per tutti i riquadri chiamando [CDockingManager:: EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
-##  <a name="recalclayout"></a>  CPane::RecalcLayout
+##  <a name="recalclayout"></a>CPane:: RecalcLayout
 
-Ricalcola le informazioni sul layout per il riquadro.
+Ricalcola le informazioni di layout per il riquadro.
 
 ```
 virtual void RecalcLayout();
@@ -1320,13 +1320,13 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Note
 
-Se il riquadro viene ancorato, questo metodo aggiorna il rettangolo virtuale per il riquadro impostando la dimensione alla dimensione corrente del riquadro.
+Se il riquadro è ancorato, questo metodo aggiorna il rettangolo virtuale per il riquadro impostando le relative dimensioni sulle dimensioni correnti del riquadro.
 
-Se il riquadro è mobile, questo metodo invia una notifica di con mini-cornice padre per modificare le dimensioni del riquadro per le dimensioni dei con mini-cornice. Il framework garantisce che il mini-cornice sia almeno la minima consentita delle dimensioni per il riquadro ( [CPane::GetMinSize](#getminsize)) e, se necessario, ridimensiona i con mini-cornice.
+Se il riquadro è mobile, questo metodo notifica al mini-frame padre di modificare le dimensioni del riquadro fino alla dimensione del mini-cornice. Il Framework garantisce che la mini-cornice sia almeno la dimensione minima consentita per il riquadro ( [CPane:: GetMinSize](#getminsize)) e ridimensiona il mini-frame, se necessario.
 
-##  <a name="savestate"></a>  CPane::SaveState
+##  <a name="savestate"></a>CPane:: SaveState
 
-Salva lo stato del riquadro nel Registro di sistema.
+Salva lo stato del riquadro nel registro di sistema.
 
 ```
 virtual BOOL SaveState(
@@ -1338,27 +1338,27 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parametri
 
 *lpszProfileName*<br/>
-[in] Nome del profilo.
+in Nome del profilo.
 
 *nIndex*<br/>
-[in] Indice del profilo.
+in Indice del profilo.
 
 *uiID*<br/>
-[in] ID del riquadro.
+in ID del riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se lo stato è stato salvato correttamente. in caso contrario, FALSE.
+TRUE se lo stato è stato salvato correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Il framework chiama questo metodo quando salva lo stato del riquadro nel Registro di sistema. Eseguire l'override `SaveState` in una classe derivata per archiviare le informazioni aggiuntive.
+Il Framework chiama questo metodo quando salva lo stato del riquadro nel registro di sistema. Eseguire `SaveState` l'override in una classe derivata per archiviare informazioni aggiuntive.
 
-Quando si esegue l'override di questo metodo, anche chiamare il metodo di base e restituisce FALSE se il metodo di base restituisce FALSE.
+Quando si esegue l'override di questo metodo, chiamare anche il metodo di base e restituire FALSE se il metodo di base restituisce FALSE.
 
-##  <a name="setactiveingroup"></a>  CPane::SetActiveInGroup
+##  <a name="setactiveingroup"></a>CPane:: SetActiveInGroup
 
-Contrassegna un riquadro come attiva.
+Contrassegna un riquadro come attivo.
 
 ```
 virtual void SetActiveInGroup(BOOL bActive);
@@ -1367,17 +1367,17 @@ virtual void SetActiveInGroup(BOOL bActive);
 ### <a name="parameters"></a>Parametri
 
 *bActive*<br/>
-[in] Un valore booleano che specifica se il riquadro è contrassegnato come attiva.
+in Valore BOOLEANo che specifica se il riquadro è contrassegnato come attivo.
 
 ### <a name="remarks"></a>Note
 
-Quando viene visualizzato un riquadro ancorato o viene scelto un pulsante Nascondi automaticamente, il riquadro corrispondente Nascondi automaticamente è contrassegnato come attivo.
+Quando viene visualizzato un riquadro ancorabile o viene scelto un pulsante Nascondi automaticamente, il riquadro Nascondi automaticamente corrispondente è contrassegnato come attivo.
 
-L'aspetto di un pulsante Nascondi automaticamente che è associato il riquadro si basa su due fattori. Se il riquadro è attivo e il `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` è TRUE, verrà visualizzato il framework pulsante Nascondi automaticamente come un'icona e un'etichetta. Per un riquadro inattivo, il framework visualizza solo l'icona Nascondi automaticamente.
+L'aspetto di un pulsante Nascondi automaticamente associato al riquadro si basa su due fattori. Se il riquadro è attivo e il `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` valore è true, nel Framework viene visualizzato il pulsante Nascondi automaticamente come un'icona e un'etichetta. Per un riquadro inattivo, nel Framework viene visualizzata solo l'icona Nascondi automaticamente.
 
-Se `CMFCAutoHideButton::m_bOverlappingTabs` è FALSE, o se non si trova nel riquadro in un gruppo, il framework viene visualizzato il pulsante Nascondi automaticamente associati come un'icona e un'etichetta.
+Se `CMFCAutoHideButton::m_bOverlappingTabs` è false o se il riquadro non si trova in un gruppo, nel Framework viene visualizzato il pulsante Nascondi automaticamente associato come icona e etichetta.
 
-##  <a name="setborders"></a>  CPane::SetBorders
+##  <a name="setborders"></a>CPane:: seborders
 
 Imposta i valori del bordo del riquadro.
 
@@ -1394,19 +1394,19 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametri
 
 *cxLeft*<br/>
-[in] Specifica la larghezza, in pixel, del bordo sinistro del riquadro.
+in Specifica la larghezza, in pixel, del bordo sinistro del riquadro.
 
 *cyTop*<br/>
-[in] Specifica la larghezza, in pixel, del bordo superiore del riquadro.
+in Specifica la larghezza, in pixel, del bordo superiore del riquadro.
 
 *cxRight*<br/>
-[in] Specifica la larghezza, in pixel, del bordo destro del riquadro.
+in Specifica la larghezza, in pixel, del bordo destro del riquadro.
 
 *cyBottom*<br/>
-[in] Specifica la larghezza, in pixel, del bordo inferiore del riquadro.
+in Specifica la larghezza, in pixel, del bordo inferiore del riquadro.
 
 *lpRect*<br/>
-[in] Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) oggetto che contiene la larghezza, in pixel, di ogni bordo del riquadro.
+in Oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene la larghezza, in pixel, di ciascun bordo del riquadro.
 
 ### <a name="remarks"></a>Note
 
@@ -1414,7 +1414,7 @@ Chiamare questa funzione per impostare le dimensioni dei bordi del riquadro.
 
 ##  <a name="setclienthotspot"></a>  CPane::SetClientHotSpot
 
-Imposta il *sensibile* per il riquadro.
+Imposta l' area sensibile per il riquadro.
 
 ```
 void SetClientHotSpot(const CPoint& ptNew);
@@ -1423,15 +1423,15 @@ void SetClientHotSpot(const CPoint& ptNew);
 ### <a name="parameters"></a>Parametri
 
 *ptNew*<br/>
-[in] Oggetto `CPoint` oggetto che specifica la nuova area sensibile.
+in `CPoint` Oggetto che specifica la nuova area sensibile.
 
 ### <a name="remarks"></a>Note
 
-Il *sensibile* è il punto del riquadro che l'utente seleziona e contiene per spostare il riquadro. Un'area sensibile viene usata per creare animazioni uniformi quando il riquadro viene trascinato da una posizione di ancoraggio.
+L' area sensibile è il punto del riquadro selezionato dall'utente per spostare il riquadro. Un area sensibile viene usato per un'animazione uniforme quando il riquadro viene trascinato da una posizione ancorata.
 
-##  <a name="setdockstate"></a>  CPane::SetDockState
+##  <a name="setdockstate"></a>CPane:: SetDockState
 
-Ripristina informazioni sullo stato per il riquadro di ancoraggio.
+Ripristina le informazioni sullo stato di ancoraggio per il riquadro.
 
 ```
 virtual void SetDockState(CDockingManager* pDockManager);
@@ -1440,17 +1440,17 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ### <a name="parameters"></a>Parametri
 
 *pDockManager*<br/>
-[in] Puntatore al gestore di ancoraggio per la finestra cornice principale.
+in Puntatore al gestore di ancoraggio per la finestra cornice principale.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework per ripristinare le informazioni sullo stato ancorato recenti per il riquadro. Un riquadro archivia le informazioni dello stato ancorato recenti nella [cpane:: M_recentdockinfo](#m_recentdockinfo). Per altre informazioni, vedere la [classe CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).
+Questo metodo viene chiamato dal Framework per ripristinare le informazioni recenti sullo stato di ancoraggio per il riquadro. Un riquadro Archivia le informazioni sullo stato di ancoraggio recenti in [CPane:: m_recentDockInfo](#m_recentdockinfo). Per ulteriori informazioni, vedere la [classe CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md).
 
-È anche possibile chiamare questo metodo per impostare lo stato di ancoraggio, quando si caricano informazioni del riquadro da un'origine esterna.
+È anche possibile chiamare questo metodo per impostare lo stato di ancoraggio quando si caricano le informazioni sul riquadro da un'origine esterna.
 
-##  <a name="setexclusiverowmode"></a>  CPane::SetExclusiveRowMode
+##  <a name="setexclusiverowmode"></a>CPane:: SetExclusiveRowMode
 
-Abilita o disabilita la modalità di riga esclusivi.
+Abilita o Disabilita la modalità di riga esclusiva.
 
 ```
 virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
@@ -1459,17 +1459,17 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bExclusive*<br/>
-[in] TRUE per abilitare la modalità di riga esclusivi; in caso contrario, FALSE.
+in TRUE per abilitare la modalità di riga esclusiva; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Chiamare questo metodo per abilitare o disabilitare la modalità di riga esclusivi. Se è un riquadro in modalità riga esclusivo, non è possibile condividere la stessa riga con le barre degli strumenti.
+Chiamare questo metodo per abilitare o disabilitare la modalità di riga esclusiva. Quando un riquadro è in modalità di riga esclusiva, non può condividere la stessa riga con altre barre degli strumenti.
 
-Per impostazione predefinita, tutte le barre degli strumenti hanno modalità riga esclusivi disabilitata e la barra dei menu è abilitata la modalità riga esclusivo.
+Per impostazione predefinita, tutte le barre degli strumenti hanno la modalità di riga esclusiva disabilitata e la barra dei menu ha la modalità di riga esclusiva abilitata.
 
 ##  <a name="setminsize"></a>  CPane::SetMinSize
 
-Imposta il valore minimo consentito di dimensioni per il riquadro.
+Imposta la dimensione minima consentita per il riquadro.
 
 ```
 void SetMinSize(const CSize& size);
@@ -1478,11 +1478,11 @@ void SetMinSize(const CSize& size);
 ### <a name="parameters"></a>Parametri
 
 *size*<br/>
-[in] Oggetto `CSize` oggetto che contiene il valore minimo consentito di dimensioni per il riquadro.
+in `CSize` Oggetto che contiene la dimensione minima consentita per il riquadro.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="setvirtualrect"></a>  CPane::SetVirtualRect
+##  <a name="setvirtualrect"></a>CPane:: SetVirtualRect
 
 Imposta il *rettangolo virtuale* del riquadro.
 
@@ -1495,16 +1495,16 @@ void SetVirtualRect(
 ### <a name="parameters"></a>Parametri
 
 *rect*<br/>
-[in] Oggetto `CRect` oggetto che specifica il rettangolo virtuale da impostare.
+in `CRect` Oggetto che specifica il rettangolo virtuale da impostare.
 
 *bMapToParent*<br/>
-[in] Specificare TRUE se *rect* contiene punti rispetto alla finestra padre.
+in Specificare TRUE se *Rect* contiene punti relativi alla finestra padre.
 
 ### <a name="remarks"></a>Note
 
-Oggetto *rettangolo virtuale* archivia dalla posizione originale di un riquadro quando viene spostato. Il framework può usare il rettangolo virtuale per ripristinare la posizione originale.
+Un *rettangolo virtuale* archivia la posizione originale di un riquadro quando viene spostato. Il Framework può usare il rettangolo virtuale per ripristinare la posizione originale.
 
-Non chiamare metodi che sono correlati ai rettangoli virtuali a meno che non si siano spostando i riquadri a livello di codice.
+Non chiamare metodi correlati a rettangoli virtuali a meno che non si spostino i riquadri a livello di codice.
 
 ##  <a name="setminiframertc"></a>  CPane::SetMiniFrameRTC
 
@@ -1521,11 +1521,11 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="remarks"></a>Note
 
-Quando viene resa un riquadro, viene inserita una [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) finestra (con mini-cornice). È possibile fornire una classe personalizzata `CPaneFrameWnd`-classe derivata che sarà utilizzata quando [cpane:: Createdefaultminiframe](#createdefaultminiframe) viene chiamato.
+Quando viene eseguito il Floating di un riquadro, questo viene inserito in una finestra [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (mini-frame). È possibile fornire una classe `CPaneFrameWnd`derivata personalizzata che verrà usata quando viene chiamato [CPane:: CreateDefaultMiniframe](#createdefaultminiframe) .
 
 ##  <a name="stretchpanedeferwndpos"></a>  CPane::StretchPaneDeferWndPos
 
-Estende il riquadro verticalmente o orizzontalmente in base stile di ancoraggio.
+Estende il riquadro verticalmente o orizzontalmente in base allo stile di ancoraggio.
 
 ```
 virtual int StretchPaneDeferWndPos(
@@ -1536,22 +1536,22 @@ virtual int StretchPaneDeferWndPos(
 ### <a name="parameters"></a>Parametri
 
 *nStretchSize*<br/>
-[in] Quantità, in pixel, per estendere il riquadro. Utilizzare un valore negativo per compattare il riquadro.
+in Quantità, in pixel, per l'allungamento del riquadro. Utilizzare un valore negativo per compattare il riquadro.
 
 *hdwp*<br/>
-[in] Non utilizzato.
+in Non utilizzato.
 
 ### <a name="return-value"></a>Valore restituito
 
-La quantità effettiva, in pixel, che è stato esteso il riquadro.
+Quantità effettiva, in pixel, per cui il riquadro è stato esteso.
 
 ### <a name="remarks"></a>Note
 
-Se necessario, questo metodo consente di modificare *nStretchSize* per garantire che il riquadro non superi i limiti di dimensioni. Questi limiti vengono ottenuti chiamando [CPane::GetAvailableStretchSize](#getavailablestretchsize) e [CPane::GetAvailableExpandSize](#getavailableexpandsize).
+Se necessario, questo metodo modifica *nStretchSize* per garantire che il riquadro non superi i limiti di dimensione. Questi limiti vengono ottenuti chiamando [CPane:: GetAvailableStretchSize](#getavailablestretchsize) e [CPane:: GetAvailableExpandSize](#getavailableexpandsize).
 
-##  <a name="toggleautohide"></a>  CPane::ToggleAutoHide
+##  <a name="toggleautohide"></a>CPane:: ToggleAutoHide
 
-Attiva o disattiva la modalità Nascondi automaticamente.
+Attiva/disattivare la modalità Nascondi automaticamente.
 
 ```
 virtual void ToggleAutoHide();
@@ -1559,11 +1559,11 @@ virtual void ToggleAutoHide();
 
 ### <a name="remarks"></a>Note
 
-Chiamare questo metodo per attivare o disattivare la modalità Nascondi automaticamente. Un riquadro deve essere ancorato a una finestra cornice principale per poter essere passa alla modalità Nascondi automaticamente.
+Chiamare questo metodo per abilitare o disabilitare la modalità Nascondi automaticamente. Un riquadro deve essere ancorato a una finestra cornice principale per passare alla modalità Nascondi automaticamente.
 
-##  <a name="undockpane"></a>  CPane::UndockPane
+##  <a name="undockpane"></a>CPane:: UndockPane
 
-Rimuove il riquadro dal sito di ancoraggio, dispositivo di scorrimento predefinito o finestra con mini-cornice in cui è attualmente ancorato.
+Rimuove il riquadro dal sito di ancoraggio, dal dispositivo di scorrimento predefinito o dalla finestra con mini-cornice in cui è attualmente ancorato.
 
 ```
 virtual void UndockPane(BOOL bDelay = FALSE);
@@ -1572,37 +1572,37 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ### <a name="parameters"></a>Parametri
 
 *bDelay*<br/>
-[in] Se FALSE, il framework chiama [cbasepane:: Adjustdockinglayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) per regolare il layout di ancoraggio.
+in Se FALSE, il Framework chiama [CBasePane:: AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) per modificare il layout di ancoraggio.
 
 ### <a name="remarks"></a>Note
 
-Usare questo metodo per annullare l'ancoraggio a livello di codice un riquadro.
+Utilizzare questo metodo per disancorare a livello di codice un riquadro.
 
-##  <a name="updatevirtualrect"></a>  CPane::UpdateVirtualRect
+##  <a name="updatevirtualrect"></a>CPane:: UpdateVirtualRect
 
 Aggiorna il rettangolo virtuale.
 
 ```
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
-  void UpdateVirtualRect(CSize sizeNew);
+void UpdateVirtualRect(CSize sizeNew);
 ```
 
 ### <a name="parameters"></a>Parametri
 
 *ptOffset*<br/>
-[in] Oggetto `CPoint` oggetto che specifica un offset dal quale spostare il riquadro.
+in `CPoint` Oggetto che specifica un offset in base al quale spostare il riquadro.
 
 *sizeNew*<br/>
-[in] Oggetto `CSize` oggetto che specifica una nuova dimensione per il riquadro.
+in `CSize` Oggetto che specifica una nuova dimensione per il riquadro.
 
 ### <a name="remarks"></a>Note
 
-Il primo overload imposta il rettangolo virtuale utilizzando la posizione corrente e le dimensioni del riquadro.
+Il primo overload imposta il rettangolo virtuale utilizzando la posizione e le dimensioni correnti del riquadro.
 
-Il secondo overload si sposta il rettangolo virtuale in base al valore specificato da *ptOffset*.
+Il secondo overload sposta il rettangolo virtuale in base alla quantità specificata da *ptOffset*.
 
-Il terzo overload imposta il rettangolo virtuale utilizzando la posizione corrente del riquadro e la dimensione specificata dal *sizeNew*.
+Il terzo overload imposta il rettangolo virtuale utilizzando la posizione corrente del riquadro e la dimensione specificata da *sizeNew*.
 
 ## <a name="see-also"></a>Vedere anche
 

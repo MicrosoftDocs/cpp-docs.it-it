@@ -1,5 +1,5 @@
 ---
-title: CImageList (classe)
+title: Classe CImageList
 ms.date: 11/04/2016
 f1_keywords:
 - CImageList
@@ -74,14 +74,14 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c419081a649fddd65120270decb0cb57ee743fa
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346366"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916197"
 ---
-# <a name="cimagelist-class"></a>CImageList (classe)
+# <a name="cimagelist-class"></a>Classe CImageList
 
 Fornisce la funzionalità del controllo elenco immagini comune di Windows.
 
@@ -91,70 +91,70 @@ Fornisce la funzionalità del controllo elenco immagini comune di Windows.
 class CImageList : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CImageList::CImageList](#cimagelist)|Costruisce un oggetto `CImageList`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CImageList::Add](#add)|Aggiunge un'immagine o immagini a un elenco di immagini.|
-|[CImageList::Attach](#attach)|Associa un elenco di immagini da un `CImageList` oggetto.|
-|[CImageList::BeginDrag](#begindrag)|Inizia a trascinare un'immagine.|
-|[CImageList::Copy](#copy)|Copia un'immagine all'interno di un `CImageList` oggetto.|
+|[CImageList::Attach](#attach)|Connette un elenco di immagini a un `CImageList` oggetto.|
+|[CImageList::BeginDrag](#begindrag)|Inizia il trascinamento di un'immagine.|
+|[CImageList::Copy](#copy)|Copia un'immagine all'interno `CImageList` di un oggetto.|
 |[CImageList::Create](#create)|Inizializza un elenco di immagini e lo collega a un `CImageList` oggetto.|
 |[CImageList::DeleteImageList](#deleteimagelist)|Elimina un elenco di immagini.|
-|[CImageList::DeleteTempMap](#deletetempmap)|Chiamato dal [CWinApp](../../mfc/reference/cwinapp-class.md) tempo di inattività gestore eliminare temporanei `CImageList` oggetto creato da `FromHandle`.|
-|[CImageList::Detach](#detach)|Scollega un oggetto elenco immagini da un `CImageList` dell'oggetto e restituisce un handle per un elenco di immagini.|
+|[CImageList::DeleteTempMap](#deletetempmap)|Chiamato dal gestore del tempo di inattività [CWinApp](../../mfc/reference/cwinapp-class.md) per eliminare qualsiasi `CImageList` oggetto temporaneo creato `FromHandle`da.|
+|[CImageList::Detach](#detach)|Scollega un oggetto elenco immagini da un `CImageList` oggetto e restituisce un handle a un elenco di immagini.|
 |[CImageList::DragEnter](#dragenter)|Blocca gli aggiornamenti durante un'operazione di trascinamento e visualizza l'immagine di trascinamento in una posizione specificata.|
-|[CImageList::DragLeave](#dragleave)|Sblocca la finestra e nasconde l'immagine di trascinamento in modo che la finestra può essere aggiornata.|
-|[CImageList::DragMove](#dragmove)|Sposta l'immagine che viene trascinata durante un'operazione di trascinamento e rilascio.|
-|[CImageList::DragShowNolock](#dragshownolock)|Mostra o nasconde l'immagine di trascinamento durante un'operazione di trascinamento, senza bloccare la finestra.|
-|[CImageList::Draw](#draw)|Disegna l'immagine che viene trascinata durante un'operazione di trascinamento e rilascio.|
-|[CImageList::DrawEx](#drawex)|Disegna un elemento di elenco di immagini nel contesto di dispositivo specificato. La funzione utilizza lo stile di disegno specificato e combina l'immagine con il colore specificati.|
-|[CImageList::DrawIndirect](#drawindirect)|Disegna un'immagine da un elenco di immagini.|
+|[CImageList::DragLeave](#dragleave)|Sblocca la finestra e nasconde l'immagine di trascinamento in modo che la finestra possa essere aggiornata.|
+|[CImageList::DragMove](#dragmove)|Sposta l'immagine trascinata durante un'operazione di trascinamento della selezione.|
+|[CImageList::D ragShowNolock](#dragshownolock)|Consente di visualizzare o nascondere l'immagine di trascinamento durante un'operazione di trascinamento senza bloccare la finestra.|
+|[CImageList::D RAW](#draw)|Disegna l'immagine che viene trascinata durante un'operazione di trascinamento della selezione.|
+|[CImageList::DrawEx](#drawex)|Disegna un elemento dell'elenco di immagini nel contesto di dispositivo specificato. La funzione usa lo stile di disegno specificato e combina l'immagine con il colore specificato.|
+|[CImageList::DrawIndirect](#drawindirect)|Disegna un'immagine da un elenco immagini.|
 |[CImageList::EndDrag](#enddrag)|Termina un'operazione di trascinamento.|
 |[CImageList::ExtractIcon](#extracticon)|Crea un'icona basata su un'immagine e una maschera in un elenco di immagini.|
-|[CImageList::FromHandle](#fromhandle)|Restituisce un puntatore a un `CImageList` dell'oggetto quando viene specificato un handle per un elenco di immagini. Se all'handle non è collegato un oggetto `CImageList`, viene creato e collegato un oggetto `CImageList` temporaneo.|
-|[CImageList::FromHandlePermanent](#fromhandlepermanent)|Restituisce un puntatore a un `CImageList` dell'oggetto quando viene specificato un handle per un elenco di immagini. Se un `CImageList` oggetto non è connesso all'handle, viene restituito NULL.|
+|[CImageList::FromHandle](#fromhandle)|Restituisce un puntatore a un `CImageList` oggetto quando viene fornito un handle a un elenco di immagini. Se all'handle non è collegato un oggetto `CImageList`, viene creato e collegato un oggetto `CImageList` temporaneo.|
+|[CImageList::FromHandlePermanent](#fromhandlepermanent)|Restituisce un puntatore a un `CImageList` oggetto quando viene fornito un handle a un elenco di immagini. Se un `CImageList` oggetto non è collegato all'handle, viene restituito null.|
 |[CImageList::GetBkColor](#getbkcolor)|Recupera il colore di sfondo corrente per un elenco di immagini.|
-|[CImageList::GetDragImage](#getdragimage)|Ottiene l'elenco di immagini temporanee che viene usato per il trascinamento.|
+|[CImageList::GetDragImage](#getdragimage)|Ottiene l'elenco di immagini temporanee utilizzato per il trascinamento.|
 |[CImageList::GetImageCount](#getimagecount)|Recupera il numero di immagini in un elenco di immagini.|
-|[CImageList::GetImageInfo](#getimageinfo)|Recupera informazioni su un'immagine.|
+|[CImageList::GetImageInfo](#getimageinfo)|Recupera le informazioni relative a un'immagine.|
 |[CImageList::GetSafeHandle](#getsafehandle)|Recupera `m_hImageList`.|
 |[CImageList::Read](#read)|Legge un elenco di immagini da un archivio.|
-|[CImageList::Remove](#remove)|Rimuove un'immagine da un elenco di immagini.|
+|[CImageList::Remove](#remove)|Rimuove un'immagine da un elenco immagini.|
 |[CImageList::Replace](#replace)|Sostituisce un'immagine in un elenco di immagini con una nuova immagine.|
 |[CImageList::SetBkColor](#setbkcolor)|Imposta il colore di sfondo per un elenco di immagini.|
 |[CImageList::SetDragCursorImage](#setdragcursorimage)|Crea una nuova immagine di trascinamento.|
 |[CImageList::SetImageCount](#setimagecount)|Reimposta il numero di immagini in un elenco di immagini.|
-|[CImageList::SetOverlayImage](#setoverlayimage)|Aggiunge l'indice in base zero di un'immagine all'elenco di immagini da utilizzare come maschere di sovrapposizione.|
+|[CImageList::SetOverlayImage](#setoverlayimage)|Aggiunge l'indice in base zero di un'immagine all'elenco di immagini da utilizzare come maschera di sovrapposizione.|
 |[CImageList::Write](#write)|Scrive un elenco di immagini in un archivio.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[CImageList::operator HIMAGELIST](#operator_himagelist)|Restituisce il HIMAGELIST collegati al `CImageList`.|
+|[CImageList:: operator HIMAGELIST](#operator_himagelist)|Restituisce l'oggetto HIMAGELIST associato a `CImageList`.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
-|[CImageList::m_hImageList](#m_himagelist)|Handle che contiene l'elenco di immagini collegato a questo oggetto.|
+|[CImageList::m_hImageList](#m_himagelist)|Handle contenente l'elenco di immagini associato a questo oggetto.|
 
 ## <a name="remarks"></a>Note
 
-Un "elenco di immagini" è una raccolta di immagini stessa dimensione, ognuno dei quali può essere indicato dal relativo indice in base zero. Elenchi di immagini consentono di gestire in modo efficiente grandi set di icone o bitmap. Tutte le immagini in un elenco di immagini sono contenute in una singola e largo bitmap nel formato di dispositivo dello schermo. Un elenco di immagini può includere anche una bitmap monocromatica che contiene le maschere utilizzate per disegnare immagini in modo trasparente (stile icona). Microsoft Win32 application programming interface (API) fornisce funzioni di elenco immagini che consentono di disegnare immagini, creare e distruggere gli elenchi di immagini, aggiungere e rimuovere immagini, sostituire le immagini, immagini di tipo merge e trascinare le immagini.
+Un "elenco di immagini" è una raccolta di immagini di dimensioni uguali, a ciascuna delle quali è possibile fare riferimento tramite il relativo indice in base zero. Gli elenchi di immagini vengono utilizzati per gestire in modo efficiente grandi set di icone o bitmap. Tutte le immagini in un elenco di immagini sono contenute in un'unica bitmap a caratteri wide nel formato del dispositivo dello schermo. Un elenco di immagini può includere anche una bitmap monocromatica che contiene le maschere usate per creare le immagini in modo trasparente (stile icona). Il Application Programming Interface Microsoft Win32 (API) fornisce funzioni elenco immagini che consentono di creare immagini, creare ed eliminare in modo permanente elenchi di immagini, aggiungere e rimuovere immagini, sostituire immagini, unire immagini e trascinare immagini.
 
-Questo controllo (e pertanto il `CImageList` classe) è disponibile solo per i programmi in esecuzione in Windows 95 o 98 e Windows NT versione 3.51 e successive.
+Questo controllo (e pertanto la `CImageList` classe) è disponibile solo per i programmi in esecuzione in Windows 95/98 e Windows NT versione 3,51 e successive.
 
-Per altre informazioni sull'uso `CImageList`, vedere [controlli](../../mfc/controls-mfc.md) e [utilizzo di CImageList](../../mfc/using-cimagelist.md).
+Per altre informazioni sull'uso `CImageList`di, vedere [controlli](../../mfc/controls-mfc.md) e [uso di CImageList](../../mfc/using-cimagelist.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -166,9 +166,9 @@ Per altre informazioni sull'uso `CImageList`, vedere [controlli](../../mfc/contr
 
 **Intestazione:** afxcmn.h
 
-##  <a name="add"></a>  CImageList::Add
+##  <a name="add"></a>CImageList:: Add
 
-Chiamare questa funzione per aggiungere uno o più immagini o un'icona per un elenco di immagini.
+Chiamare questa funzione per aggiungere una o più immagini o un'icona a un elenco di immagini.
 
 ```
 int Add(
@@ -185,32 +185,32 @@ int Add(HICON hIcon);
 ### <a name="parameters"></a>Parametri
 
 *pbmImage*<br/>
-Puntatore alla mappa di bit contenente le immagini. Il numero di immagini viene dedotto dalla larghezza della bitmap.
+Puntatore alla bitmap che contiene l'immagine o le immagini. Il numero di immagini viene dedotto dalla larghezza della bitmap.
 
 *pbmMask*<br/>
-Puntatore alla mappa di bit contenente la maschera. Se nessun filtro viene usato con l'elenco di immagini, questo parametro viene ignorato.
+Puntatore alla bitmap contenente la maschera. Se non viene usata alcuna maschera con l'elenco di immagini, questo parametro viene ignorato.
 
 *crMask*<br/>
-Colore utilizzato per generare la maschera. Ciascun pixel di questo colore nella bitmap specificata viene impostato sul nero e i bit corrispondenti nella maschera è impostato su uno.
+Colore utilizzato per generare la maschera. Ogni pixel di questo colore nella bitmap specificata viene modificato in nero e il bit corrispondente nella maschera è impostato su uno.
 
 *hIcon*<br/>
-Handle dell'icona che contiene il bitmap e la maschera per la nuova immagine.
+Handle dell'icona che contiene la bitmap e la maschera per la nuova immagine.
 
 ### <a name="return-value"></a>Valore restituito
 
-Indice in base zero della prima immagine nuovo caso di esito positivo; in caso contrario, - 1.
+Indice in base zero della prima nuova immagine, se ha esito positivo; in caso contrario,-1.
 
 ### <a name="remarks"></a>Note
 
-Si è responsabile del rilascio di handle icona dopo aver con esso.
+Al termine dell'operazione, l'utente è responsabile del rilascio dell'handle dell'icona.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#1](../../mfc/reference/codesnippet/cpp/cimagelist-class_1.cpp)]
 
-##  <a name="attach"></a>  CImageList::Attach
+##  <a name="attach"></a>CImageList:: Connetti
 
-Chiamare questa funzione per associare un elenco di immagini a un `CImageList` oggetto.
+Chiamare questa funzione per alleghi un elenco di immagini `CImageList` a un oggetto.
 
 ```
 BOOL Attach(HIMAGELIST hImageList);
@@ -223,15 +223,15 @@ Handle per un oggetto elenco immagini.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha avuto esito positivo; l'allegato in caso contrario 0.
+Diverso da zero se l'allegato ha avuto esito positivo; in caso contrario, 0.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#2](../../mfc/reference/codesnippet/cpp/cimagelist-class_2.cpp)]
 
-##  <a name="begindrag"></a>  CImageList::BeginDrag
+##  <a name="begindrag"></a>CImageList:: BeginDrag
 
-Chiamare questa funzione per iniziare il trascinamento di un'immagine.
+Chiamare questa funzione per avviare il trascinamento di un'immagine.
 
 ```
 BOOL BeginDrag(
@@ -245,7 +245,7 @@ BOOL BeginDrag(
 Indice in base zero dell'immagine da trascinare.
 
 *ptHotSpot*<br/>
-Coordinate della posizione iniziale di trascinamento (in genere, la posizione del cursore). Le coordinate sono relative all'angolo superiore sinistro dell'immagine.
+Coordinate della posizione iniziale del trascinamento, in genere la posizione del cursore. Le coordinate sono relative all'angolo superiore sinistro dell'immagine.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -253,13 +253,13 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione crea un elenco di immagini temporaneo che viene usato per il trascinamento. L'immagine combina l'immagine specificata e la relativa maschera con il cursore corrente. In risposta a messaggi successivi WM_MOUSEMOVE, è possibile spostare l'immagine di trascinamento utilizzando il `DragMove` funzione membro. Per terminare l'operazione di trascinamento, è possibile usare il `EndDrag` funzione membro.
+Questa funzione crea un elenco di immagini temporaneo usato per il trascinamento. L'immagine combina l'immagine specificata e la relativa maschera con il cursore corrente. In risposta ai messaggi WM_MOUSEMOVE successivi, è possibile spostare l'immagine di trascinamento `DragMove` usando la funzione membro. Per terminare l'operazione di trascinamento, è `EndDrag` possibile usare la funzione membro.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#3](../../mfc/reference/codesnippet/cpp/cimagelist-class_3.cpp)]
 
-##  <a name="cimagelist"></a>  CImageList::CImageList
+##  <a name="cimagelist"></a>CImageList:: CImageList
 
 Costruisce un oggetto `CImageList`.
 
@@ -267,9 +267,9 @@ Costruisce un oggetto `CImageList`.
 CImageList();
 ```
 
-##  <a name="copy"></a>  CImageList::Copy
+##  <a name="copy"></a>CImageList:: Copy
 
-Questa funzione membro implementa il comportamento della funzione Win32 [ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy), come descritto nel SDK di Windows.
+Questa funzione membro implementa il comportamento della funzione Win32 [ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy), come descritto nel Windows SDK.
 
 ```
 BOOL Copy(
@@ -287,21 +287,21 @@ BOOL Copy(
 ### <a name="parameters"></a>Parametri
 
 *iDst*<br/>
-Indice a base zero dell'immagine da utilizzare come destinazione dell'operazione di copia.
+Indice in base zero dell'immagine da utilizzare come destinazione dell'operazione di copia.
 
 *iSrc*<br/>
-Indice a base zero dell'immagine da utilizzare come origine dell'operazione di copia.
+Indice in base zero dell'immagine da utilizzare come origine dell'operazione di copia.
 
 *uFlags*<br/>
-Il valore di flag di bit che specifica il tipo di operazione di copia da apportare. Questo parametro può essere uno dei valori seguenti:
+Valore del flag di bit che specifica il tipo di operazione di copia da effettuare. Questo parametro può essere uno dei valori seguenti:
 
 |Value|Significato|
 |-----------|-------------|
-|ILCF_MOVE|L'immagine di origine viene copiata all'indice dell'immagine di destinazione. Questa operazione comporta più istanze di una determinata immagine. ILCF_MOVE è quello predefinito.|
-|ILCF_SWAP|Le immagini di origine e destinazione scambiano le posizioni all'interno dell'elenco immagini.|
+|ILCF_MOVE|L'immagine di origine viene copiata nell'indice dell'immagine di destinazione. Questa operazione comporta più istanze di una determinata immagine. ILCF_MOVE è il valore predefinito.|
+|ILCF_SWAP|Le immagini di origine e di destinazione scambiano le posizioni all'interno dell'elenco di immagini.|
 
 *pSrc*<br/>
-Un puntatore a un `CImageList` oggetto che rappresenta la destinazione dell'operazione di copia.
+Puntatore a un `CImageList` oggetto che rappresenta la destinazione dell'operazione di copia.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -311,9 +311,9 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 [!code-cpp[NVC_MFC_CImageList#6](../../mfc/reference/codesnippet/cpp/cimagelist-class_4.cpp)]
 
-##  <a name="create"></a>  CImageList::Create
+##  <a name="create"></a>CImageList:: create
 
-Inizializza un elenco di immagini e lo collega a un [CImageList](../../mfc/reference/cimagelist-class.md) oggetto.
+Inizializza un elenco di immagini e lo collega a un oggetto [CImageList](../../mfc/reference/cimagelist-class.md) .
 
 ```
 BOOL Create(
@@ -355,33 +355,33 @@ Dimensioni di ogni immagine, in pixel.
 Dimensioni di ogni immagine, in pixel.
 
 *nFlags*<br/>
-Specifica il tipo di elenco immagini da creare. Questo parametro può essere una combinazione dei valori seguenti, ma può includere solo uno del `ILC_COLOR` valori.
+Specifica il tipo di elenco di immagini da creare. Questo parametro può essere una combinazione dei valori seguenti, ma può includere solo uno dei `ILC_COLOR` valori.
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
-|ILC_COLOR|Se nessuno degli altri ILC_COLOR * flag è specificato, usare il comportamento predefinito. In genere, il valore predefinito è ILC_COLOR4; ma per i driver video precedente, il valore predefinito è ILC_COLORDDB.|
-|ILC_COLOR4|Usare una sezione di bitmap indipendente dalla periferica (DIB) 4 bit (16 colori) come le bitmap per l'elenco di immagini.|
-|ILC_COLOR8|Usare una sezione DIB 8 bit. I colori utilizzati per la tabella dei colori sono gli stessi colori come tavolozza dei mezzitoni.|
-|ILC_COLOR16|Usare un a 16 bit (32 o 64 KB colore) sezione DIB.|
-|ILC_COLOR24|Usare una sezione DIB 24 bit.|
-|ILC_COLOR32|Usare una sezione di immagine DIB a 32 bit.|
-|ILC_COLORDDB|Usare un'immagine bitmap dipendente dalla periferica.|
-|ILC_MASK|Utilizza una maschera. L'elenco di immagini contiene due bitmap, uno dei quali è una bitmap monocromatica usata come maschera. Se questo valore non è incluso, l'elenco di immagini contiene solo una singola bitmap. Visualizzare [creazione di immagini da un elenco di immagini](../../mfc/drawing-images-from-an-image-list.md) per altre informazioni sulle immagini mascherate.|
+|ILC_COLOR|Utilizzare il comportamento predefinito se non viene specificato alcun flag ILC_COLOR *. In genere, il valore predefinito è ILC_COLOR4; per i driver di visualizzazione precedenti, il valore predefinito è ILC_COLORDDB.|
+|ILC_COLOR4|Usare una sezione bitmap (DIB) a 4 bit (a 16 colori) come bitmap per l'elenco di immagini.|
+|ILC_COLOR8|Usare una sezione DIB a 8 bit. I colori utilizzati per la tabella dei colori sono uguali a quelli della tavolozza dei mezzitoni.|
+|ILC_COLOR16|Usare una sezione DIB a 16 bit (32/64K).|
+|ILC_COLOR24|Usare una sezione DIB a 24 bit.|
+|ILC_COLOR32|Usare una sezione DIB a 32 bit.|
+|ILC_COLORDDB|Usare una bitmap dipendente dal dispositivo.|
+|ILC_MASK|Usa una maschera. L'elenco di immagini contiene due bitmap, una delle quali è una bitmap monocromatica utilizzata come maschera. Se questo valore non è incluso, l'elenco di immagini contiene una sola bitmap. Per ulteriori informazioni sulle immagini mascherate, vedere Drawing images [from an image list](../../mfc/drawing-images-from-an-image-list.md) .|
 
 *nInitial*<br/>
-Numero di immagini contenente inizialmente l'elenco di immagini.
+Numero di immagini contenute inizialmente nell'elenco immagini.
 
 *nGrow*<br/>
-Numero di immagini mediante il quale l'elenco di immagini può aumentare quando il sistema deve ridimensionare l'elenco per liberare spazio per nuove immagini. Questo parametro rappresenta il numero di nuove immagini che può contenere l'elenco di immagini ridimensionate.
+Numero di immagini in base alle quali l'elenco di immagini può aumentare quando il sistema deve ridimensionare l'elenco per fare spazio alle nuove immagini. Questo parametro rappresenta il numero di nuove immagini che possono essere contenute nell'elenco immagini ridimensionato.
 
 *nBitmapID*<br/>
-ID di risorsa della bitmap da associare l'elenco di immagini.
+ID di risorsa della bitmap da associare all'elenco di immagini.
 
 *crMask*<br/>
-Colore utilizzato per generare una maschera. Ciascun pixel di questo colore nella bitmap specificata viene impostato sul nero e i bit corrispondenti nella maschera è impostato su uno.
+Colore utilizzato per generare una maschera. Ogni pixel di questo colore nella bitmap specificata viene modificato in nero e il bit corrispondente nella maschera è impostato su uno.
 
 *lpszBitmapID*<br/>
-Stringa contenente l'ID risorsa delle immagini.
+Stringa contenente gli ID risorsa delle immagini.
 
 *imagelist1*<br/>
 Riferimento a un oggetto `CImageList`.
@@ -396,10 +396,10 @@ Riferimento a un oggetto `CImageList`.
 Indice della seconda immagine esistente.
 
 *dx*<br/>
-Offset dell'asse x dell'immagine di secondo in relazione alla prima immagine, in pixel.
+Offset dell'asse x della seconda immagine in relazione alla prima immagine, in pixel.
 
 *dy*<br/>
-Offset dell'asse y dell'immagine di secondo in relazione alla prima immagine, in pixel.
+Offset dell'asse y della seconda immagine in relazione alla prima immagine, in pixel.
 
 *pImageList*<br/>
 Puntatore a un oggetto `CImageList` .
@@ -410,7 +410,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Si costruisce un `CImageList` in due passaggi. In primo luogo, chiamare il costruttore e quindi chiamare `Create`, che crea l'elenco di immagini e lo collega al `CImageList` oggetto.
+Si costruisce `CImageList` un in due passaggi. Chiamare innanzitutto il costruttore e quindi chiamare `Create`, che crea l'elenco `CImageList` di immagini e lo collega all'oggetto.
 
 ### <a name="example"></a>Esempio
 
@@ -434,7 +434,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ##  <a name="deletetempmap"></a>  CImageList::DeleteTempMap
 
-Chiamato automaticamente dal `CWinApp` gestore, tempo di inattività `DeleteTempMap` Elimina temporanei `CImageList` degli oggetti creati da [FromHandle](#fromhandle), ma non elimina definitivamente tutti gli handle ( `hImageList`) temporaneamente associati con la `ImageList` oggetti.
+Chiamato automaticamente dal gestore `CWinApp` del tempo di inattività `DeleteTempMap` , Elimina tutti `CImageList` gli oggetti temporanei creati da [FromHandle](#fromhandle), ma non elimina definitivamente `hImageList`gli `ImageList` handle () associati temporaneamente al oggetti.
 
 ```
 static void PASCAL DeleteTempMap();
@@ -458,15 +458,15 @@ Handle per un oggetto elenco immagini.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione restituisce un handle all'oggetto elenco immagini.
+Questa funzione restituisce un handle per l'oggetto elenco immagini.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CImageList::Attach](#attach).
+  Vedere l'esempio per [CImageList:: Connetti](#attach).
 
-##  <a name="dragenter"></a>  CImageList::DragEnter
+##  <a name="dragenter"></a>CImageList::D ragEnter
 
-Durante un'operazione di trascinamento, blocca gli aggiornamenti alla finestra determinata dal *pWndLock* e visualizza l'immagine di trascinamento in corrispondenza della posizione specificata da *puntare*.
+Durante un'operazione di trascinamento, blocca gli aggiornamenti alla finestra specificata da *pWndLock* e visualizza l'immagine di trascinamento nella posizione specificata dal *punto*.
 
 ```
 static BOOL PASCAL DragEnter(
@@ -477,10 +477,10 @@ static BOOL PASCAL DragEnter(
 ### <a name="parameters"></a>Parametri
 
 *pWndLock*<br/>
-Puntatore alla finestra proprietaria dell'immagine di trascinamento.
+Puntatore alla finestra che possiede l'immagine di trascinamento.
 
 *point*<br/>
-Posizione in corrispondenza della quale visualizzare l'immagine di trascinamento. Coordinate sono relative all'angolo superiore sinistro della finestra (area non client).
+Posizione in cui visualizzare l'immagine di trascinamento. Le coordinate sono relative all'angolo superiore sinistro della finestra (non all'area client).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -488,19 +488,19 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Le coordinate sono relative angolo superiore sinistro della finestra del, pertanto è necessario tenere conto della larghezza degli elementi della finestra, ad esempio il bordo, sulla barra del titolo e la barra dei menu, quando si specificano le coordinate.
+Le coordinate sono relative all'angolo superiore sinistro della finestra, pertanto è necessario compensare le larghezze degli elementi della finestra, ad esempio il bordo, la barra del titolo e la barra dei menu, quando si specificano le coordinate.
 
-Se *pWndLock* è NULL, questa funzione consente di disegnare l'immagine nel contesto di visualizzazione associato alla finestra desktop e coordinate sono relative all'angolo superiore sinistro della schermata.
+Se *pWndLock* è null, questa funzione disegna l'immagine nel contesto di visualizzazione associato alla finestra desktop e le coordinate sono relative all'angolo superiore sinistro dello schermo.
 
-Questa funzione Blocca tutti gli aggiornamenti per la finestra specificata durante l'operazione di trascinamento. Se è necessario eseguire operazioni di disegno durante un'operazione di trascinamento, ad esempio l'evidenziazione della destinazione di un'operazione di trascinamento e rilascio, è possibile nascondere temporaneamente l'immagine trascinato tramite il [CImageList::DragLeave](#dragleave) (funzione).
+Questa funzione blocca tutti gli altri aggiornamenti della finestra specificata durante l'operazione di trascinamento. Se è necessario eseguire qualsiasi disegno durante un'operazione di trascinamento, ad esempio evidenziando la destinazione di un'operazione di trascinamento della selezione, è possibile nascondere temporaneamente l'immagine trascinata usando la funzione [CImageList::D ragleave](#dragleave) .
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CImageList::BeginDrag](#begindrag).
+  Vedere l'esempio per [CImageList:: BeginDrag](#begindrag).
 
-##  <a name="dragleave"></a>  CImageList::DragLeave
+##  <a name="dragleave"></a>CImageList::D ragLeave
 
-Sblocca la finestra specificata da *pWndLock* e nasconde l'immagine di trascinamento, consentendo la finestra da aggiornare.
+Sblocca la finestra specificata da *pWndLock* e nasconde l'immagine di trascinamento, consentendo l'aggiornamento della finestra.
 
 ```
 static BOOL PASCAL DragLeave(CWnd* pWndLock);
@@ -509,7 +509,7 @@ static BOOL PASCAL DragLeave(CWnd* pWndLock);
 ### <a name="parameters"></a>Parametri
 
 *pWndLock*<br/>
-Puntatore alla finestra proprietaria dell'immagine di trascinamento.
+Puntatore alla finestra che possiede l'immagine di trascinamento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -517,11 +517,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CImageList::EndDrag](#enddrag).
+  Vedere l'esempio per [CImageList:: EndDrag](#enddrag).
 
-##  <a name="dragmove"></a>  CImageList::DragMove
+##  <a name="dragmove"></a>CImageList::D ragMove
 
-Chiamare questa funzione per spostare l'immagine che viene trascinata durante un'operazione di trascinamento e rilascio.
+Chiamare questa funzione per spostare l'immagine trascinata durante un'operazione di trascinamento della selezione.
 
 ```
 static BOOL PASCAL DragMove(CPoint pt);
@@ -530,7 +530,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 ### <a name="parameters"></a>Parametri
 
 *pt*<br/>
-Nuova posizione del trascinamento.
+Nuova posizione di trascinamento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -538,15 +538,15 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione viene in genere chiamata in risposta a un messaggio di WM_MOUSEMOVE. Per iniziare un'operazione di trascinamento, usare il `BeginDrag` funzione membro.
+Questa funzione viene in genere chiamata in risposta a un messaggio WM_MOUSEMOVE. Per iniziare un'operazione di trascinamento `BeginDrag` , usare la funzione membro.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#4](../../mfc/reference/codesnippet/cpp/cimagelist-class_8.cpp)]
 
-##  <a name="dragshownolock"></a>  CImageList::DragShowNolock
+##  <a name="dragshownolock"></a>CImageList::D ragShowNolock
 
-Mostra o nasconde l'immagine di trascinamento durante un'operazione di trascinamento, senza bloccare la finestra.
+Consente di visualizzare o nascondere l'immagine di trascinamento durante un'operazione di trascinamento senza bloccare la finestra.
 
 ```
 static BOOL PASCAL DragShowNolock(BOOL bShow);
@@ -555,7 +555,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 ### <a name="parameters"></a>Parametri
 
 *bShow*<br/>
-Specifica se l'immagine di trascinamento è da visualizzare.
+Specifica se l'immagine di trascinamento deve essere visualizzata.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -563,11 +563,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Il [CImageList::DragEnter](#dragenter) funzione Blocca tutti gli aggiornamenti per la finestra durante un'operazione di trascinamento. Questa funzione, tuttavia, non blocca le finestra.
+La funzione [CImageList::D ragenter](#dragenter) blocca tutti gli aggiornamenti alla finestra durante un'operazione di trascinamento. Questa funzione, tuttavia, non blocca la finestra.
 
-##  <a name="draw"></a>  CImageList:: Draw
+##  <a name="draw"></a>CImageList::D RAW
 
-Chiamare questa funzione per disegnare l'immagine che viene trascinata durante un'operazione di trascinamento e rilascio.
+Chiamare questa funzione per creare l'immagine che viene trascinata durante un'operazione di trascinamento della selezione.
 
 ```
 BOOL Draw(
@@ -583,21 +583,21 @@ BOOL Draw(
 Puntatore al contesto di dispositivo di destinazione.
 
 *nImage*<br/>
-Indice in base zero dell'immagine da disegnare.
+Indice in base zero dell'immagine da creare.
 
 *pt*<br/>
-Posizione nella quale disegnare all'interno del contesto di dispositivo specificato.
+Posizione in cui eseguire il progetto all'interno del contesto di dispositivo specificato.
 
 *nStyle*<br/>
-Flag che specifica lo stile di disegno. Può trattarsi di uno o più dei valori seguenti:
+Flag che specifica lo stile di disegno. Può essere uno o più di questi valori:
 
 |Value|Significato|
 |-----------|-------------|
-|ILD_BLEND25, ILD_FOCUS|Disegna l'immagine, la fusione del 25% con il colore di sistema. Questo valore non ha alcun effetto se l'elenco di immagini non contiene una maschera.|
-|ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Disegna l'immagine, la fusione del 50% con il colore di sistema. Questo valore non ha alcun effetto se l'elenco di immagini non contiene una maschera.|
+|ILD_BLEND25, ILD_FOCUS|Disegna l'immagine, combinando il 25% con il colore di evidenziazione del sistema. Questo valore non ha alcun effetto se l'elenco di immagini non contiene una maschera.|
+|ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Disegna l'immagine, fondendo il 50% con il colore di evidenziazione del sistema. Questo valore non ha alcun effetto se l'elenco di immagini non contiene una maschera.|
 |ILD_MASK|Disegna la maschera.|
-|ILD_NORMAL|Disegna l'immagine utilizzando il colore di sfondo per l'elenco di immagini. Se il colore di sfondo è il valore CLR_NONE, verrà disegnata l'immagine in modo trasparente, mediante la maschera.|
-|ILD_TRANSPARENT|Disegna l'immagine in modo trasparente mediante la maschera, indipendentemente dal colore di sfondo.|
+|ILD_NORMAL|Disegna l'immagine utilizzando il colore di sfondo per l'elenco di immagini. Se il colore di sfondo è il valore CLR_NONE, l'immagine viene disegnata in modo trasparente utilizzando la maschera.|
+|ILD_TRANSPARENT|Disegna l'immagine in modo trasparente utilizzando la maschera, indipendentemente dal colore di sfondo.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -605,11 +605,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CImageList:: SetOverlayImage](#setoverlayimage).
+  Vedere l'esempio per [CImageList:: SetOverlayImage](#setoverlayimage).
 
-##  <a name="drawex"></a>  CImageList::DrawEx
+##  <a name="drawex"></a>CImageList::D rawEx
 
-Disegna un elemento di elenco di immagini nel contesto di dispositivo specificato.
+Disegna un elemento dell'elenco di immagini nel contesto di dispositivo specificato.
 
 ```
 BOOL DrawEx(
@@ -628,22 +628,22 @@ BOOL DrawEx(
 Puntatore al contesto di dispositivo di destinazione.
 
 *nImage*<br/>
-Indice in base zero dell'immagine da disegnare.
+Indice in base zero dell'immagine da creare.
 
 *pt*<br/>
-Posizione nella quale disegnare all'interno del contesto di dispositivo specificato.
+Posizione in cui eseguire il progetto all'interno del contesto di dispositivo specificato.
 
 *sz*<br/>
-Dimensione della porzione dell'immagine da disegnare rispetto all'angolo superiore sinistro dell'immagine. Visualizzare *dx* e *dy* nelle [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nel SDK di Windows.
+Dimensione della parte dell'immagine da creare rispetto all'angolo superiore sinistro dell'immagine. Vedere *dx* e *dy* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nel Windows SDK.
 
 *clrBk*<br/>
-Colore di sfondo dell'immagine. Visualizzare *rgbBk* nelle [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nel SDK di Windows.
+Colore di sfondo dell'immagine. Vedere *rgbBk* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nella Windows SDK.
 
 *clrFg*<br/>
-Colore di primo piano dell'immagine. Visualizzare *rgbFg* nelle [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nel SDK di Windows.
+Colore di primo piano dell'immagine. Vedere *rgbFg* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nella Windows SDK.
 
 *nStyle*<br/>
-Flag che specifica lo stile di disegno. Visualizzare *fStyle* nelle [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nel SDK di Windows.
+Flag che specifica lo stile di disegno. Vedere *fStyle* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nella Windows SDK.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -651,15 +651,15 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-La funzione utilizza lo stile di disegno specificato e combina l'immagine con il colore specificati.
+La funzione usa lo stile di disegno specificato e combina l'immagine con il colore specificato.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#10](../../mfc/reference/codesnippet/cpp/cimagelist-class_9.cpp)]
 
-##  <a name="drawindirect"></a>  CImageList::DrawIndirect
+##  <a name="drawindirect"></a>CImageList::D rawIndirect
 
-Chiamare questa funzione membro per disegnare un'immagine da un elenco di immagini.
+Chiamare questa funzione membro per creare un'immagine da un elenco immagini.
 
 ```
 BOOL DrawIndirect(IMAGELISTDRAWPARAMS* pimldp);
@@ -682,63 +682,63 @@ BOOL DrawIndirect(
 ### <a name="parameters"></a>Parametri
 
 *pimldp*<br/>
-Un puntatore a un [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) struttura che contiene informazioni sull'operazione di disegno.
+Puntatore a una struttura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) che contiene informazioni sull'operazione di estrazione.
 
 *pDC*<br/>
-Puntatore al contesto di dispositivo di destinazione. È necessario eliminare questo [CDC](../../mfc/reference/cdc-class.md) dell'oggetto al termine con esso.
+Puntatore al contesto di dispositivo di destinazione. Al termine dell'operazione, è necessario eliminare questo oggetto [CDC](../../mfc/reference/cdc-class.md) .
 
 *nImage*<br/>
-Indice a base zero dell'immagine da disegnare.
+Indice in base zero dell'immagine da disegnare.
 
 *pt*<br/>
-Oggetto [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che contiene le coordinate x e y in cui verrà disegnata l'immagine.
+Struttura di [punti](/previous-versions/dd162805\(v=vs.85\)) che contiene le coordinate x e y in cui verrà disegnata l'immagine.
 
 *sz*<br/>
-Oggetto [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) struttura che indica la dimensione dell'immagine da disegnare.
+Struttura di [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) che indica le dimensioni dell'immagine da disegnare.
 
 *ptOrigin*<br/>
-Oggetto [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che contiene le coordinate x e y che specifica l'angolo superiore sinistro dell'operazione di disegno per quanto riguarda l'immagine stessa. Non vengono disegnati i pixel dell'immagine a sinistra della coordinata x e versioni successive la coordinata y.
+Struttura di [punti](/previous-versions/dd162805\(v=vs.85\)) che contiene le coordinate x e y che specificano l'angolo superiore sinistro dell'operazione di disegno rispetto all'immagine stessa. I pixel dell'immagine che si trovano a sinistra della coordinata x e al di sopra della coordinata y non vengono disegnati.
 
 *fStyle*<br/>
-Flag che specifica lo stile di disegno e, facoltativamente, l'immagine sovrapposta. Vedere la sezione Osservazioni per informazioni sull'immagine di sovrapposizione. L'implementazione predefinita MFC, ILD_NORMAL, disegna l'immagine utilizzando il colore di sfondo per l'elenco di immagini. Se il colore di sfondo è il valore CLR_NONE, verrà disegnata l'immagine in modo trasparente con una maschera.
+Flag che specifica lo stile di disegno e, facoltativamente, l'immagine sovrapposta. Per informazioni sull'immagine sovrapposta, vedere la sezione Osservazioni. L'implementazione predefinita di MFC, ILD_NORMAL, disegna l'immagine utilizzando il colore di sfondo per l'elenco di immagini. Se il colore di sfondo è il valore CLR_NONE, l'immagine viene disegnata in modo trasparente utilizzando una maschera.
 
-Altri possibili stili sono descritte sotto il *fStyle* membro del [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) struttura.
+Gli altri stili possibili sono descritti sotto il membro *fStyle* della struttura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *dwRop*<br/>
-Valore che specifica un codice di operazione raster. Questi codici di definiscono come vengono combinate dati relativi al colore per il rettangolo di origine con dati relativi al colore per il rettangolo di destinazione ottenere il colore finale. Implementazione predefinita di MFC, SRCCOPY, copia il rettangolo di origine direttamente il rettangolo di destinazione. Questo parametro viene ignorato se la *fStyle* parametro non include il flag ILD_ROP.
+Valore che specifica un codice di operazione raster. Questi codici definiscono il modo in cui i dati del colore per il rettangolo di origine verranno combinati con i dati del colore per il rettangolo di destinazione per ottenere il colore finale. L'implementazione predefinita di MFC, SRCCOPY, copia il rettangolo di origine direttamente nel rettangolo di destinazione. Questo parametro viene ignorato se il parametro *fStyle* non include il flag ILD_ROP.
 
-Altri valori possibili sono illustrati sotto il *dwRop* membro del [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) struttura.
+Gli altri valori possibili sono descritti sotto il membro *dwRop* della struttura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *rgbBack*<br/>
-Immagine colore di sfondo, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei valori seguenti:
+Il colore di sfondo dell'immagine, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei valori seguenti:
 
 |Value|Significato|
 |-----------|-------------|
-|CLR_DEFAULT|Colore di sfondo predefinito. L'immagine viene disegnata utilizzando il colore di sfondo di elenco immagini.|
-|CLR_NONE|Nessun colore di sfondo. Viene disegnata l'immagine in modo trasparente.|
+|CLR_DEFAULT|Colore di sfondo predefinito. L'immagine viene disegnata utilizzando il colore di sfondo dell'elenco immagini.|
+|CLR_NONE|Nessun colore di sfondo. L'immagine viene disegnata in modo trasparente.|
 
 *rgbFore*<br/>
-Colore di primo piano immagine, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei valori seguenti:
+Colore di primo piano dell'immagine, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei valori seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
-|CLR_DEFAULT|Colore di primo piano predefinito. L'immagine viene disegnata utilizzando il colore di sistema come il colore primo piano.|
-|CLR_NONE|Nessun colore di blend. L'immagine viene sfumato con il colore del contesto di dispositivo di destinazione.|
+|CLR_DEFAULT|Colore di primo piano predefinito. L'immagine viene disegnata utilizzando il colore di evidenziazione del sistema come colore di primo piano.|
+|CLR_NONE|Nessun colore di Blend. L'immagine viene mescolata con il colore del contesto di dispositivo di destinazione.|
 
-Questo parametro viene utilizzato solo se *fStyle* include il flag ILD_BLEND25 o ILD_BLEND50.
+Questo parametro viene usato solo se *fStyle* include il flag ILD_BLEND25 o ILD_BLEND50.
 
 *fState*<br/>
-Flag che specifica lo stato di disegno. Questo membro può contenere uno o più flag di stato di elenco immagini.
+Flag che specifica lo stato del disegno. Questo membro può contenere uno o più flag di stato dell'elenco di immagini.
 
 *Frame*<br/>
-Influisce sul comportamento di effetti saturate e fusione alfa.
+Influisce sul comportamento degli effetti di saturazione e di fusione alfa.
 
-Se usato con ILS_SATURATE, questo membro contiene il valore che viene aggiunto a ogni componente del colore dei tre RGB per ogni pixel selezionando l'icona.
+Se usato con ILS_SATURATE, questo membro include il valore che viene aggiunto a ogni componente colore della tripletta RGB per ogni pixel nell'icona.
 
-Se usato con ILS_APLHA, questo membro contiene il valore per il canale alfa. Questo valore può essere compreso tra 0 e 255, 0 è completamente trasparente, e 255 che è completamente opaco.
+Se usato con ILS_APLHA, questo membro include il valore per il canale alfa. Questo valore può essere compreso tra 0 e 255, mentre 0 è completamente trasparente e 255 è completamente opaco.
 
 *crEffect*<br/>
-Oggetto [COLORREF](/windows/desktop/gdi/colorref) valore usato per gli effetti di ombreggiatura e alone.
+Valore [COLORREF](/windows/desktop/gdi/colorref) usato per gli effetti bagliore e ombreggiatura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -746,15 +746,15 @@ TRUE se l'immagine viene disegnata correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Usare la prima versione, se si vuole compilare manualmente la struttura di Win32. Utilizzare la seconda versione, se si desidera sfruttare i vantaggi di uno o più degli argomenti predefiniti di MFC o evitare la gestione della struttura.
+Usare la prima versione se si vuole riempire la struttura Win32 autonomamente. Utilizzare la seconda versione per sfruttare i vantaggi di uno o più argomenti predefiniti di MFC oppure evitare di gestire la struttura.
 
-Un'immagine sovrapposta è un'immagine che viene disegnata sopra l'immagine primaria, specificato in questa funzione membro per il *immagine* parametro. Disegnare una maschera di sovrimpressione utilizzando il [disegnare](#draw) funzione membro con l'indice in base uno della maschera di sovrapposizione specificata utilizzando il [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) macro.
+Un'immagine sovrapposta è un'immagine disegnata sopra l'immagine primaria, specificata in questa funzione membro dal parametro *nImage* . Creare una maschera di sovrapposizione usando la funzione membro di [disegno](#draw) con l'indice in base uno della maschera di sovrapposizione specificata usando la macro [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) .
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#11](../../mfc/reference/codesnippet/cpp/cimagelist-class_10.cpp)]
 
-##  <a name="enddrag"></a>  CImageList::EndDrag
+##  <a name="enddrag"></a>CImageList:: EndDrag
 
 Chiamare questa funzione per terminare un'operazione di trascinamento.
 
@@ -764,15 +764,15 @@ static void PASCAL EndDrag();
 
 ### <a name="remarks"></a>Note
 
-Per iniziare un'operazione di trascinamento, usare il `BeginDrag` funzione membro.
+Per iniziare un'operazione di trascinamento `BeginDrag` , usare la funzione membro.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#5](../../mfc/reference/codesnippet/cpp/cimagelist-class_11.cpp)]
 
-##  <a name="extracticon"></a>  CImageList::ExtractIcon
+##  <a name="extracticon"></a>CImageList:: ExtractIcon
 
-Chiamare questa funzione per creare un'icona in base a un'immagine e la relativa maschera correlato in un elenco di immagini.
+Chiamare questa funzione per creare un'icona basata su un'immagine e sulla relativa maschera in un elenco di immagini.
 
 ```
 HICON ExtractIcon(int nImage);
@@ -785,19 +785,19 @@ Indice in base zero dell'immagine.
 
 ### <a name="return-value"></a>Valore restituito
 
-Handle dell'icona se ha esito positivo. in caso contrario NULL.
+Handle dell'icona in caso di esito positivo; in caso contrario, NULL.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo si basa sul comportamento dei [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) macro per creare l'icona. Vedere le [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) macro per altre informazioni sulla creazione di icone e pulizia.
+Questo metodo si basa sul comportamento della macro [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) per creare l'icona. Per altre informazioni sulla creazione e la pulizia delle icone, vedere la macro [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) .
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#12](../../mfc/reference/codesnippet/cpp/cimagelist-class_12.cpp)]
 
-##  <a name="fromhandle"></a>  CImageList::FromHandle
+##  <a name="fromhandle"></a>CImageList:: FromHandle
 
-Restituisce un puntatore a un `CImageList` dell'oggetto quando viene specificato un handle per un elenco di immagini.
+Restituisce un puntatore a un `CImageList` oggetto quando viene fornito un handle a un elenco di immagini.
 
 ```
 static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
@@ -810,19 +810,19 @@ Specifica l'elenco di immagini.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CImageList` oggetto se riesce; in caso contrario, NULL.
+Puntatore a un `CImageList` oggetto in caso di esito positivo; in caso contrario null.
 
 ### <a name="remarks"></a>Note
 
-Se un `CImageList` non è ancora connesso per l'handle, una variabile temporanea `CImageList` oggetto viene creato e collegato. Questo temporaneo `CImageList` oggetto è valido solo fino a quando non la volta successiva che l'applicazione ha il tempo di inattività nel relativo ciclo di eventi, momento in cui vengono eliminati tutti gli oggetti temporanei.
+Se un `CImageList` oggetto non è già collegato all'handle, viene creato `CImageList` e collegato un oggetto temporaneo. Questo oggetto `CImageList` temporaneo è valido solo fino alla successiva esecuzione del tempo di inattività dell'applicazione nel ciclo di eventi, quindi vengono eliminati tutti gli oggetti temporanei.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#13](../../mfc/reference/codesnippet/cpp/cimagelist-class_13.cpp)]
 
-##  <a name="fromhandlepermanent"></a>  CImageList::FromHandlePermanent
+##  <a name="fromhandlepermanent"></a>CImageList:: FromHandlePermanent
 
-Restituisce un puntatore a un `CImageList` dell'oggetto quando viene specificato un handle per un elenco di immagini.
+Restituisce un puntatore a un `CImageList` oggetto quando viene fornito un handle a un elenco di immagini.
 
 ```
 static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
@@ -835,11 +835,11 @@ Specifica l'elenco di immagini.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CImageList` oggetto se riesce; in caso contrario, NULL.
+Puntatore a un `CImageList` oggetto in caso di esito positivo; in caso contrario null.
 
 ### <a name="remarks"></a>Note
 
-Se un `CImageList` oggetto non è connesso all'handle, viene restituito NULL.
+Se un `CImageList` oggetto non è collegato all'handle, viene restituito null.
 
 ### <a name="example"></a>Esempio
 
@@ -855,15 +855,15 @@ COLORREF GetBkColor() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore del colore RGB di `CImageList` colore di sfondo dell'oggetto.
+Valore di colore RGB del colore `CImageList` di sfondo dell'oggetto.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CImageList::SetBkColor](#setbkcolor).
+  Vedere l'esempio per [CImageList:: SetBkColor](#setbkcolor).
 
-##  <a name="getdragimage"></a>  CImageList::GetDragImage
+##  <a name="getdragimage"></a>CImageList:: GetDragImage
 
-Ottiene l'elenco di immagini temporanee che viene usato per il trascinamento.
+Ottiene l'elenco di immagini temporanee utilizzato per il trascinamento.
 
 ```
 static CImageList* PASCAL GetDragImage(
@@ -874,16 +874,16 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parametri
 
 *lpPoint*<br/>
-Indirizzo di un [punto](/previous-versions/dd162805\(v=vs.85\)) struttura che riceve l'oggetto corrente trascinare posizione.
+Indirizzo di una struttura di [punti](/previous-versions/dd162805\(v=vs.85\)) che riceve la posizione di trascinamento corrente.
 
 *lpPointHotSpot*<br/>
-Indirizzo di un `POINT` struttura che riceve l'offset dell'immagine di trascinamento rispetto alla posizione di trascinamento.
+Indirizzo di una `POINT` struttura che riceve l'offset dell'immagine di trascinamento rispetto alla posizione di trascinamento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, un puntatore all'immagine temporanea elenco che viene usato per il trascinamento; in caso contrario, NULL.
+In caso di esito positivo, puntatore all'elenco di immagini temporanee utilizzato per il trascinamento; in caso contrario, NULL.
 
-##  <a name="getimagecount"></a>  CImageList::GetImageCount
+##  <a name="getimagecount"></a>CImageList:: GetImageCount
 
 Chiamare questa funzione per recuperare il numero di immagini in un elenco di immagini.
 
@@ -893,15 +893,15 @@ int GetImageCount() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di immagini.
+Numero di immagini.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CImageList::ExtractIcon](#extracticon).
+  Vedere l'esempio per [CImageList:: ExtractIcon](#extracticon).
 
-##  <a name="getimageinfo"></a>  CImageList::GetImageInfo
+##  <a name="getimageinfo"></a>CImageList:: GetImageInfo
 
-Chiamare questa funzione per recuperare informazioni su un'immagine.
+Chiamare questa funzione per recuperare le informazioni relative a un'immagine.
 
 ```
 BOOL GetImageInfo(
@@ -915,7 +915,7 @@ BOOL GetImageInfo(
 Indice in base zero dell'immagine.
 
 *pImageInfo*<br/>
-Puntatore a un [IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-_imageinfo) struttura che riceve informazioni sull'immagine. Le informazioni contenute in questa struttura sono utilizzabile per modificare direttamente le bitmap per l'immagine.
+Puntatore a una struttura [IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-imageinfo) che riceve informazioni sull'immagine. Le informazioni contenute in questa struttura possono essere utilizzate per modificare direttamente le bitmap per l'immagine.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -923,11 +923,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Il `IMAGEINFO` struttura contiene informazioni su un'immagine in un elenco di immagini.
+La `IMAGEINFO` struttura contiene informazioni su un'immagine in un elenco di immagini.
 
-##  <a name="getsafehandle"></a>  CImageList::GetSafeHandle
+##  <a name="getsafehandle"></a>CImageList:: GetSafeHandle
 
-Chiamare questa funzione per recuperare il `m_hImageList` (membro dati).
+Chiamare questa funzione per recuperare il `m_hImageList` membro dati.
 
 ```
 HIMAGELIST GetSafeHandle() const;
@@ -935,7 +935,7 @@ HIMAGELIST GetSafeHandle() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un handle per l'elenco di immagini collegato; in caso contrario, NULL se nessun oggetto associato.
+Handle per l'elenco di immagini associate; in caso contrario, NULL se non è associato alcun oggetto.
 
 ### <a name="example"></a>Esempio
 
@@ -943,7 +943,7 @@ Un handle per l'elenco di immagini collegato; in caso contrario, NULL se nessun 
 
 ##  <a name="m_himagelist"></a>  CImageList::m_hImageList
 
-Handle dell'elenco immagini collegato a questo oggetto.
+Handle dell'elenco immagini collegato all'oggetto.
 
 `HIMAGELIST m_hImageList;`
 
@@ -955,9 +955,9 @@ Il `m_hImageList` membro dati è una variabile pubblica di tipo HIMAGELIST.
 
 [!code-cpp[NVC_MFC_CImageList#23](../../mfc/reference/codesnippet/cpp/cimagelist-class_16.cpp)]
 
-##  <a name="operator_himagelist"></a>  CImageList::operator HIMAGELIST
+##  <a name="operator_himagelist"></a>CImageList:: operator HIMAGELIST
 
-Utilizzare questo operatore per ottenere l'handle associato del `CImageList` oggetto.
+Utilizzare questo operatore per ottenere l'handle associato dell' `CImageList` oggetto.
 
 ```
 operator HIMAGELIST() const;
@@ -965,7 +965,7 @@ operator HIMAGELIST() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, un handle per l'elenco di immagini rappresentato dal `CImageList` oggetto; in caso contrario, NULL.
+Se ha esito positivo, un handle per l'elenco di `CImageList` immagini rappresentato dall'oggetto; in caso contrario, null.
 
 ### <a name="remarks"></a>Note
 
@@ -975,7 +975,7 @@ Questo operatore è un operatore di cast, che supporta l'uso diretto di un ogget
 
 [!code-cpp[NVC_MFC_CImageList#16](../../mfc/reference/codesnippet/cpp/cimagelist-class_17.cpp)]
 
-##  <a name="read"></a>  CImageList::Read
+##  <a name="read"></a>CImageList:: Read
 
 Chiamare questa funzione per leggere un elenco di immagini da un archivio.
 
@@ -986,7 +986,7 @@ BOOL Read(CArchive* pArchive);
 ### <a name="parameters"></a>Parametri
 
 *pArchive*<br/>
-Un puntatore a un `CArchive` oggetto da cui è possibile leggere l'elenco di immagini.
+Puntatore a un `CArchive` oggetto da cui leggere l'elenco di immagini.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -996,7 +996,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 [!code-cpp[NVC_MFC_CImageList#18](../../mfc/reference/codesnippet/cpp/cimagelist-class_18.cpp)]
 
-##  <a name="remove"></a>  CImageList::Remove
+##  <a name="remove"></a>CImageList:: Remove
 
 Chiamare questa funzione per rimuovere un'immagine da un oggetto elenco immagini.
 
@@ -1015,13 +1015,13 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Tutti gli elementi segue *immagine* ora spostare verso il basso di una posizione. Ad esempio, se un elenco di immagini contiene due elementi, l'eliminazione il primo elemento causerà l'elemento rimanente in questo modo la prima posizione. *Immagine*= 0 per l'elemento nella prima posizione.
+Tutti gli elementi che seguono *nImage* ora si spostano verso il basso di una posizione. Se, ad esempio, un elenco di immagini contiene due elementi, l'eliminazione del primo elemento farà sì che l'elemento rimanente si trovi nella prima posizione. *nImage*= 0 per l'elemento nella prima posizione.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#19](../../mfc/reference/codesnippet/cpp/cimagelist-class_19.cpp)]
 
-##  <a name="replace"></a>  CImageList::Replace
+##  <a name="replace"></a>CImageList:: Replace
 
 Chiamare questa funzione per sostituire un'immagine in un elenco di immagini con una nuova immagine.
 
@@ -1042,27 +1042,27 @@ int Replace(
 Indice in base zero dell'immagine da sostituire.
 
 *pbmImage*<br/>
-Puntatore alla mappa di bit contenente l'immagine.
+Puntatore alla bitmap che contiene l'immagine.
 
 *pbmMask*<br/>
-Puntatore alla mappa di bit contenente la maschera. Se nessun filtro viene usato con l'elenco di immagini, questo parametro viene ignorato.
+Puntatore alla bitmap contenente la maschera. Se non viene usata alcuna maschera con l'elenco di immagini, questo parametro viene ignorato.
 
 *hIcon*<br/>
-Handle per l'icona che contiene il bitmap e la maschera per la nuova immagine.
+Handle per l'icona che contiene la bitmap e la maschera per la nuova immagine.
 
 ### <a name="return-value"></a>Valore restituito
 
-La versione restituire BOOL restituisce diverso da zero se ha esito positivo. in caso contrario 0.
+La versione restituita BOOL restituisce un valore diverso da zero se ha esito positivo; in caso contrario, 0.
 
-La versione restituzione **int** restituisce l'indice in base zero dell'immagine se ha esito positivo; in caso contrario - 1.
+La versione restituita **int** restituisce l'indice in base zero dell'immagine, se ha esito positivo; in caso contrario,-1.
 
 ### <a name="remarks"></a>Note
 
-Chiamare questa funzione membro dopo la chiamata [SetImageCount](#setimagecount) per assegnare il nuovo, immagini valide per il segnaposto immagine i numeri di indice.
+Chiamare questa funzione membro dopo aver chiamato [SetImageCount](#setimagecount) per assegnare le nuove immagini valide ai numeri di indice dell'immagine segnaposto.
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CImageList::SetImageCount](#setimagecount).
+  Vedere l'esempio per [CImageList:: SetImageCount](#setimagecount).
 
 ##  <a name="setbkcolor"></a>  CImageList::SetBkColor
 
@@ -1075,19 +1075,19 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="parameters"></a>Parametri
 
 *cr*<br/>
-Colore di sfondo da impostare. Può essere CLR_NONE. In tal caso, le immagini vengono disegnate in modo trasparente, mediante la maschera.
+Colore di sfondo da impostare. Può essere CLR_NONE. In tal caso, le immagini vengono disegnate in modo trasparente utilizzando la maschera.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il colore di sfondo precedente se ha esito positivo. in caso contrario CLR_NONE.
+Il colore di sfondo precedente, se ha esito positivo; in caso contrario, CLR_NONE.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#20](../../mfc/reference/codesnippet/cpp/cimagelist-class_20.cpp)]
 
-##  <a name="setdragcursorimage"></a>  CImageList::SetDragCursorImage
+##  <a name="setdragcursorimage"></a>CImageList:: SetDragCursorImage
 
-Crea una nuova immagine di trascinamento combinando l'immagine specificata (in genere un'immagine del cursore del mouse) con l'immagine di trascinamento corrente.
+Crea una nuova immagine di trascinamento combinando l'immagine specificata, in genere un'immagine del cursore del mouse, con l'immagine di trascinamento corrente.
 
 ```
 BOOL SetDragCursorImage(
@@ -1109,11 +1109,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Poiché le funzioni di trascinamento usano la nuova immagine durante un'operazione di trascinamento, è consigliabile utilizzare il Windows [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) funzione per nascondere il cursore del mouse effettivo dopo la chiamata `CImageList::SetDragCursorImage`. In caso contrario, il sistema potrebbe risultare due puntatori del mouse per la durata dell'operazione di trascinamento.
+Poiché le funzioni di trascinamento utilizzano la nuova immagine durante un'operazione di trascinamento, è necessario utilizzare la funzione [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) di Windows per nascondere `CImageList::SetDragCursorImage`il cursore del mouse effettivo dopo la chiamata a. In caso contrario, è possibile che nel sistema siano presenti due cursori del mouse per la durata dell'operazione di trascinamento.
 
-##  <a name="setimagecount"></a>  CImageList::SetImageCount
+##  <a name="setimagecount"></a>CImageList:: SetImageCount
 
-Chiamare questa funzione membro per reimpostare il numero di immagini in un `CImageList` oggetto.
+Chiamare questa funzione membro per reimpostare il numero di immagini in `CImageList` un oggetto.
 
 ```
 BOOL SetImageCount(UINT uNewCount);
@@ -1122,7 +1122,7 @@ BOOL SetImageCount(UINT uNewCount);
 ### <a name="parameters"></a>Parametri
 
 *uNewCount*<br/>
-Il valore che specifica il nuovo numero totale di immagini nell'elenco di immagini.
+Valore che specifica il nuovo numero totale di immagini nell'elenco immagini.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1130,17 +1130,17 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Se si chiama questa funzione membro per aumentare il numero di immagini nell'elenco di immagini, quindi chiamare [sostituire](#replace) per ogni ulteriore immagine assegnare nuovi indici alle immagini valide. Se non si assegna gli indici per le immagini valide, le operazioni di disegno che creano le immagini nuove potrebbero essere imprevedibili.
+Se si chiama questa funzione membro per aumentare il numero di immagini nell'elenco di immagini, chiamare [Replace](#replace) per ogni immagine aggiuntiva per assegnare i nuovi indici alle immagini valide. Se non si assegnano gli indici a immagini valide, le operazioni di creazione che creano le nuove immagini saranno imprevedibili.
 
-Se si diminuisce la dimensione di un elenco di immagini mediante questa funzione, vengono liberate le immagini troncate.
+Se si riduce la dimensione di un elenco di immagini utilizzando questa funzione, le immagini troncate vengono liberate.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]
 
-##  <a name="setoverlayimage"></a>  CImageList::SetOverlayImage
+##  <a name="setoverlayimage"></a>CImageList:: SetOverlayImage
 
-Chiamare questa funzione per aggiungere l'indice in base zero di un'immagine all'elenco di immagini da utilizzare come maschere di sovrapposizione.
+Chiamare questa funzione per aggiungere l'indice in base zero di un'immagine all'elenco di immagini da utilizzare come maschera di sovrapposizione.
 
 ```
 BOOL SetOverlayImage(
@@ -1151,7 +1151,7 @@ BOOL SetOverlayImage(
 ### <a name="parameters"></a>Parametri
 
 *nImage*<br/>
-Indice in base zero dell'immagine da usare come maschera di sovrapposizione.
+Indice in base zero dell'immagine da utilizzare come maschera di sovrapposizione.
 
 *nOverlay*<br/>
 Indice in base uno della maschera di sovrapposizione.
@@ -1162,17 +1162,17 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Fino a quattro indici possono essere aggiunti all'elenco.
+È possibile aggiungere fino a quattro indici all'elenco.
 
-Maschera di sovrimpressione è un'immagine raffigurata in modo trasparente in un'altra immagine. Disegnare una maschera di sovrimpressione su un'immagine mediante il [CImageList:: Draw](#draw) funzione membro con l'indice in base uno della maschera di sovrapposizione specificata utilizzando la macro INDEXTOOVERLAYMASK.
+Una maschera di sovrapposizione è un'immagine disegnata in modo trasparente su un'altra immagine. Creare una maschera di sovrapposizione su un'immagine usando la funzione membro [CImageList::D RAW](#draw) con l'indice in base uno della maschera di sovrapposizione specificata usando la macro INDEXTOOVERLAYMASK.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFC_CImageList#22](../../mfc/reference/codesnippet/cpp/cimagelist-class_22.cpp)]
 
-##  <a name="write"></a>  CImageList::Write
+##  <a name="write"></a>CImageList:: Write
 
-Chiamare questa funzione per scrivere un oggetto elenco immagini in un archivio.
+Chiamare questa funzione per scrivere un oggetto elenco di immagini in un archivio.
 
 ```
 BOOL Write(CArchive* pArchive);
@@ -1181,7 +1181,7 @@ BOOL Write(CArchive* pArchive);
 ### <a name="parameters"></a>Parametri
 
 *pArchive*<br/>
-Un puntatore a un `CArchive` oggetto in cui deve essere archiviato l'elenco di immagini.
+Puntatore a un `CArchive` oggetto in cui deve essere archiviato l'elenco di immagini.
 
 ### <a name="return-value"></a>Valore restituito
 

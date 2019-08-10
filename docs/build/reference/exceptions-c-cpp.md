@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf38af464f08e143ed9073befe30f6aeb8b913b6
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271632"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915470"
 ---
 # <a name="exceptions-cc"></a>Eccezioni (C/C++)
 
-Due codici di eccezione possono essere generati quando vengono rilevati errori:
+Quando vengono rilevati errori, è possibile generare due codici di eccezione:
 
-- Per un **LoadLibrary** errore
+- Per un errore **LoadLibrary**
 
-- Per un **GetProcAddress** errore
+- Per un errore **GetProcAddress**
 
-Ecco le informazioni sull'eccezione:
+Di seguito sono riportate le informazioni sull'eccezione:
 
 ```
 //
@@ -37,11 +37,11 @@ Ecco le informazioni sull'eccezione:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-I codici di eccezione generati sono gli standard VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) e i valori di VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). L'eccezione passa un puntatore a un **DelayLoadInfo** struttura nel valore LPDWORD che può essere recuperato dalla **GetExceptionInformation** nel [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) struttura, campo ExceptionInformation [0].
+I codici di eccezione generati sono i valori VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) e VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) standard. L'eccezione passa un puntatore a una struttura **DelayLoadInfo** nel valore LPDWORD che può essere recuperato da **GetExceptionInformation** nella struttura [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record) , ExceptionInformation [0] campo.
 
-Inoltre, se il bit corretto vengono impostati nel campo grAttrs, l'eccezione ERROR_INVALID_PARAMETER viene generata. Questa eccezione è, a tutti gli effetti, irreversibile.
+Inoltre, se i bit non corretti sono impostati nel campo grAttrs, viene generata l'eccezione ERROR_INVALID_PARAMETER. Questa eccezione è, per tutte le finalità e, fatale.
 
-Visualizzare [struttura e definizioni costanti](structure-and-constant-definitions.md) per altre informazioni.
+Per ulteriori informazioni, vedere [struttura e definizioni di costanti](structure-and-constant-definitions.md) .
 
 ## <a name="see-also"></a>Vedere anche
 
