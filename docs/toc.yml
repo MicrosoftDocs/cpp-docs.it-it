@@ -10529,22 +10529,8 @@
                   items:
                     - name: Multithreading con C e Win32
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: Programmi multithread
-                      href: parallel/multithread-programs.md
-                    - name: Supporto della libreria per il multithreading
-                      href: parallel/library-support-for-multithreading.md
-                    - name: File di inclusione per il multithreading
-                      href: parallel/include-files-for-multithreading.md
-                    - name: Funzioni della libreria di runtime del linguaggio C per il controllo dei thread
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: Programma multithread di esempio in linguaggio C
                       href: parallel/sample-multithread-c-program.md
-                    - name: Scrittura di un programma multithread Win32
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: Compilazione e collegamento di programmi multithread
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: Suggerimenti per evitare problemi relativi ai programmi multithread
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: Archiviazione thread-local (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: Multithreading con C++ e MFC
