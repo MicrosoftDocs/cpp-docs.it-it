@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: e05aca75f527e1bc78912ab6b4b5a9de6dcd54c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246418"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956950"
 ---
 # <a name="ltmapgt-operators"></a>Operatori &lt;map&gt;
 
@@ -37,7 +37,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `map`.
 
 *Ok*\
@@ -102,7 +102,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `map`.
 
 *Ok*\
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a> Operatore&lt;=
+## <a name="op_lt_eq"></a>operatore&lt;=
 
 Verifica se l'oggetto map a sinistra dell'operatore è minore o uguale all'oggetto map a destra.
 
@@ -167,7 +167,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `map`.
 
 *Ok*\
@@ -235,7 +235,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `map`.
 
 *Ok*\
@@ -300,7 +300,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `map`.
 
 *Ok*\
@@ -364,7 +364,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `map`.
 
 *Ok*\
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a> operatore! = (multimap)
+## <a name="op_neq_multimap"></a>operatore! = (multimap)
 
 Verifica se l'oggetto multimap a sinistra dell'operatore non è uguale all'oggetto multimap a destra.
 
@@ -432,7 +432,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `multimap`.
 
 *Ok*\
@@ -497,7 +497,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `multimap`.
 
 *Ok*\
@@ -550,11 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-<<<<<<< HEAD
-## <a name="eq_multimap"></a> Operatore&lt;=
-=======
 ## <a name="op_lt_eq_multimap"></a>  operator&lt;=
->>>>>>> 009c7ce384664f2a62ffb0bc61d6586b585ed38a
 
 Verifica se l'oggetto multimap a sinistra dell'operatore è minore o uguale all'oggetto multimap a destra.
 
@@ -566,7 +562,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `multimap`.
 
 *Ok*\
@@ -634,7 +630,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `multimap`.
 
 *Ok*\
@@ -699,7 +695,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `multimap`.
 
 *Ok*\
@@ -752,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a> Operatore&gt;=
+## <a name="op_gt_eq_multimap"></a>operatore&gt;=
 
 Verifica se l'oggetto multimap a sinistra dell'operatore è maggiore o uguale all'oggetto multimap a destra.
 
@@ -764,7 +760,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parametri
 
-*A sinistra*\
+*sinistra*\
 Oggetto di tipo `multimap`.
 
 *Ok*\

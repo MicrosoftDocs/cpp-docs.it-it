@@ -1,21 +1,20 @@
 ---
 title: '&lt;optional&gt;'
-ms.date: 11/04/2016
+ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447178"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957182"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Definisce la classe modello del contenitore facoltativa e diversi modelli di supporto.
+Definisce la classe di modello contenitore `optional` e diversi modelli di supporto.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -29,12 +28,12 @@ Definisce la classe modello del contenitore facoltativa e diversi modelli di sup
 
 |||
 |-|-|
-|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è uguale all'oggetto `optional` sul lato destro.|
-|[operator!=](../standard-library/optional-operators.md#op_neq)|Verifica se l'oggetto `optional` sul lato sinistro dell'operatore non è uguale all'oggetto `optional` sul lato destro.|
-|[operator<](../standard-library/optional-operators.md#op_lt)|Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è minore dell'oggetto `optional` sul lato destro.|
-|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è minore o uguale all'oggetto `optional` sul lato destro.|
-|[operator>](../standard-library/optional-operators.md#op_gt)|Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è maggiore dell'oggetto `optional` sul lato destro.|
-|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è maggiore o uguale all'oggetto `optional` sul lato destro.|
+|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Verifica se un oggetto è uguale a un altro oggetto.|
+|[operator!=](../standard-library/optional-operators.md#op_neq)|Verifica se un oggetto non è uguale a un altro oggetto.|
+|[operator<](../standard-library/optional-operators.md#op_lt)|Verifica se l'oggetto a sinistra è minore dell'oggetto a destra.|
+|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|Verifica se l'oggetto a sinistra è minore o uguale all'oggetto a destra.|
+|[operator>](../standard-library/optional-operators.md#op_gt)|Verifica se l'oggetto a sinistra è maggiore dell'oggetto a destra.|
+|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|Verifica se l'oggetto a sinistra è maggiore o uguale all'oggetto a destra.|
 
 > [!NOTE]
 > Oltre ai confronti relazionali, \<gli operatori facoltativi > supportano anche il confronto `T`con **nullopt** e.
@@ -44,22 +43,22 @@ Definisce la classe modello del contenitore facoltativa e diversi modelli di sup
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Rende facoltativo un oggetto.|
-|[swap](../standard-library/optional-functions.md#swap)||
+|[swap](../standard-library/optional-functions.md#swap)|Scambia i valori contenuti di due `optional` oggetti.|
 
 ### <a name="classes-and-structs"></a>Classi e struct
 
 |||
 |-|-|
-|[hash]()||
-|[Classe facoltativa](../standard-library/optional-class.md)|Descrive un oggetto che può o non può mantenere un valore.|
-|[Struct nullopt_t](../standard-library/nullopt-t-structure.md)|Descrive un oggetto che non contiene un valore.|
+|hash|Restituisce un hash dell'oggetto contenuto.|
+|[classe facoltativa](../standard-library/optional-class.md)|Descrive un oggetto che può o non può mantenere un valore.|
+|[struct nullopt_t](../standard-library/nullopt-t-structure.md)|Descrive un oggetto che non contiene un valore.|
 |[Classe bad_optional_access](../standard-library/bad-optional-access-class.md)|Descrive un oggetto generato come eccezione per segnalare un tentativo di accesso a un valore non presente.|
 
 ### <a name="objects"></a>Oggetti
 
 |||
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)||
+|[nullopt](../standard-library/optional-functions.md#nullopt)|Istanza di `nullopt_t` per i confronti.|
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d2b209e29b0690ec2003031e160ce9fd1f749b13
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740465"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915309"
 ---
 # <a name="standard-types"></a>Tipi standard
 
@@ -189,7 +189,7 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 |int_fast64_t, uint_fast64_t|long long, long long senza segno|
 |intmax_t, uintmax_t|long long, long long senza segno|
 
-|Tipo|Description|Dichiarato in|
+|Tipo|DESCRIZIONE|Dichiarato in|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|Archivia valori temporali. Usato da [clock](../c-runtime-library/reference/clock.md).|TIME.H|
 |Struttura `_complex`|Archivia parti reali e immaginarie di numeri complessi. Usato da [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|
@@ -198,11 +198,11 @@ La libreria di runtime Microsoft definisce i tipi standard e typedef seguenti.
 |Struttura `_CrtMemState`|Fornisce informazioni sullo stato corrente dell'heap di debug del runtime C.|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Tipo definito per una funzione di callback che verrà chiamata in [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> I parametri di questa funzione sono: tipo di report, messaggio di output e valore restituito dalla funzione di callback.|CRTDBG.H|
 |`dev_t`, `_dev_t` short o unsigned integer|Rappresenta i gestori di dispositivo.|SYS\TYPES.H|
-|Struttura `_diskfree_t`|Contiene informazioni su un'unità disco. Usato da [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H e DIRECT.H|
+|Struttura `_diskfree_t`|Contiene informazioni su un'unità disco. Usato da [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) **.**|DOS.H e DIRECT.H|
 |Strutture `div_t`, `ldiv_t` e `lldiv_t`|Archiviano i valori restituiti rispettivamente da [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) e [lldiv](../c-runtime-library/reference/ldiv-lldiv.md).|STDLIB.H|
 |Tipo integer `errno_t`|Usato per un parametro o un tipo restituito della funzione che riguarda i codici di errore di `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Struttura `_exception`|Archivia informazioni sugli errori per [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
-|`_EXCEPTION_POINTERS`|Contiene un record di eccezione. Per altre informazioni, vedere [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers).|FPIEEE.H|
+|`_EXCEPTION_POINTERS`|Contiene un record di eccezione. Per altre informazioni, vedere [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
 |Struttura `FILE`|Archivia informazioni sullo stato corrente del flusso. Usato in tutte le operazioni di I/O del flusso.|STDIO.H|
 |Strutture `_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t`, `__wfinddata64i32_t`|Archivia le informazioni sugli attributi di file restituite da [_findfirst, _wfindfirst e funzioni correlate](../c-runtime-library/reference/findfirst-functions.md) e da [_findnext, _wfindnext e funzioni correlate](../c-runtime-library/reference/findnext-functions.md). Per informazioni sui membri di struttura, vedere [Funzioni di ricerca dei nomi file](../c-runtime-library/filename-search-functions.md).|IO.H, WCHAR.H|
 |Struttura `_FPIEEE_RECORD`|Contiene informazioni relative a eccezioni a virgola mobile IEEE. Passata al gestore di trap definito dall'utente da [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md).|FPIEEE.H|

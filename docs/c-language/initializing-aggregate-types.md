@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151494"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62326079"
 ---
 # <a name="initializing-aggregate-types"></a>Inizializzazione di tipi di aggregazione
 
@@ -22,8 +22,8 @@ Un tipo *aggregato* può essere una struttura, un'unione o un tipo di matrice. S
 ## <a name="syntax"></a>Sintassi
 
 *initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **}** /* Per inizializzazione aggregata \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* Per inizializzazione aggregata \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
@@ -35,7 +35,7 @@ Per ogni elenco di inizializzatori, i valori delle espressioni costanti vengono 
 
 Se *initializer-list* dispone di meno valori rispetto al tipo aggregato, gli altri membri o elementi presenti nel tipo aggregato vengono inizializzati su 0. Il valore iniziale di un identificatore automatico non esplicitamente inizializzato non è definito. Se *initializer-list* contiene più valori rispetto al tipo aggregato, viene generato un errore. Queste regole vengono applicate all'aggregazione nel suo complesso e a ogni elenco di inizializzatori incorporato.
 
-Un inizializzatore di struttura è un'espressione dello stesso tipo o un elenco di inizializzatori per i membri della struttura racchiusi tra parentesi graffe (**{ }**). I membri senza nome del campo di bit non vengono inizializzati.
+Un inizializzatore di struttura è un'espressione dello stesso tipo o un elenco di inizializzatori per i membri della struttura racchiusi tra parentesi graffe ( **{ }** ). I membri senza nome del campo di bit non vengono inizializzati.
 
 Quando viene inizializzata un'unione, *initializer-list* deve essere un'espressione costante singola. Il valore dell'espressione costante viene assegnato al primo membro dell'unione.
 

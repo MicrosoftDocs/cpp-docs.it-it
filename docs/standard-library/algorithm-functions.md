@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661534"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956971"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 
@@ -2824,7 +2824,7 @@ Gli intervalli consecutivi ordinati a cui si fa riferimento devono essere validi
 
 Gli intervalli consecutivi ordinati devono essere disposti come condizione preliminare per l'applicazione dell'algoritmo `inplace_merge` nello stesso ordine usato dall'algoritmo per ordinare gli intervalli combinati. L'operazione è stabile in quanto viene mantenuto l'ordine relativo degli elementi all'interno di ciascun intervallo. Quando sono presenti elementi equivalenti in entrambi gli intervalli di origine, l'elemento nel primo intervallo precede l'elemento del secondo nell'intervallo combinato.
 
-La complessità dipende dalla memoria disponibile poiché l'algoritmo alloca memoria in un buffer temporaneo. Se è disponibile memoria sufficiente, il caso migliore è lineare con `(last - first) - 1` i confronti; se non è disponibile memoria ausiliaria, il `N log(N)`caso peggiore è, dove *N* = *ultimo* -  *.*
+La complessità dipende dalla memoria disponibile poiché l'algoritmo alloca memoria in un buffer temporaneo. Se è disponibile memoria sufficiente, il caso migliore è lineare con `(last - first) - 1` i confronti; se non è disponibile memoria ausiliaria, il `N log(N)`caso peggiore è, dove *N* = *ultimo* - .
 
 ### <a name="example"></a>Esempio
 
@@ -3045,7 +3045,7 @@ Restituisce *l'ultimo* se l'intervallo specificato forma un heap o contiene uno 
 
 La prima funzione di modello restituisce l'ultimo `next` iteratore `[first, next)` in `[first, last)` dove è un heap ordinato in base `std::less<>`all'oggetto funzione. Se la distanza `last - first` è minore di 2, la funzione restituisce l' *ultimo*.
 
-La seconda funzione di modello si comporta come la prima, ad eccezione del fatto che usa il *predicato* predicato anziché come condizione di `std::less<>` ordinamento heap.
+La seconda funzione di modello si comporta come la prima, ad eccezione del fatto che usa il predicato predicato anziché come condizione di `std::less<>` ordinamento heap.
 
 ## <a name="is_partitioned"></a>is_partitioned
 
@@ -4853,7 +4853,7 @@ Valore restituito
 
 La prima funzione di modello restituisce
 
-[https://login.microsoftonline.com/consumers/](`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`).
+`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
 
 La seconda funzione di modello ha lo stesso comportamento, ad eccezione del fatto che sostituisce `operator<(X, Y)` con `pred(X, Y)`.
 
@@ -4903,7 +4903,7 @@ Oggetto `initializer_list` contenente i membri da confrontare.
 
 La prima funzione di modello `pair<const Type&, const Type&>( right, left )` restituisce se *right* è minore di *Left*. In caso contrario, restituirà `pair<const Type&, const Type&>( left, right )`.
 
-La seconda funzione membro restituisce una coppia in cui il primo elemento è minore e il secondo è maggiore rispetto al *predicato*predicato.
+La seconda funzione membro restituisce una coppia in cui il primo elemento è minore e il secondo è maggiore rispetto al predicato predicato.
 
 Le funzioni del modello rimanenti hanno lo stesso comportamento, ad eccezione del fatto che sostituiscono i parametri *Left* e *right* con inList.
 
@@ -5176,7 +5176,7 @@ Iteratore bidirezionale che punta alla posizione immediatamente successiva all'u
 
 ### <a name="remarks"></a>Note
 
-La funzione di modello restituisce `*(destEnd - N - 1) = move(*(last - N - 1))` una volta per `N` ogni nell'intervallo `[0, last - first)`, per aumentare in modo rigoroso i valori di `N` iniziando dal valore più basso. Restituisce quindi `destEnd - (last - first)`. Se DestEnd e *First* designano le aree di archiviazione , DestEnd non deve essere compreso nell' `[first, last)`intervallo.
+La funzione di modello restituisce `*(destEnd - N - 1) = move(*(last - N - 1))` una volta per `N` ogni nell'intervallo `[0, last - first)`, per aumentare in modo rigoroso i valori di `N` iniziando dal valore più basso. Restituisce quindi `destEnd - (last - first)`. Se DestEnd e *First* designano le aree di archiviazione, DestEnd non deve essere compreso nell' `[first, last)`intervallo.
 
 `move` e `move_backward` sono equivalenti a livello funzionale all'utilizzo di `copy` e `copy_backward` con un iteratore di spostamento.
 
@@ -7646,7 +7646,7 @@ Iteratore in avanti che punta alla posizione immediatamente successiva all'ultim
 Oggetto funzione predicato definito dall'utente che definisce la condizione che deve essere soddisfatta se due elementi vengono considerati equivalenti. Un predicato binario accetta due argomenti e restituisce **true** se la condizione è soddisfatta e **false** se non lo è.
 
 *ricercatore*\
-Il ricercatore che incapsula il modello da cercare e l'algoritmo di ricerca da usare.
+Il ricercatore che incapsula il modello da cercare e l'algoritmo di ricerca da usare. Per ulteriori informazioni sui cercatori, vedere classe [default_searcher](default-searcher-class.md), [classe boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)e [classe boyer_moore_searcher](boyer-moore-searcher-class.md).
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459194"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957123"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -36,10 +36,10 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|Descrizione|
+|Nome del tipo|DESCRIZIONE|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Tipo che descrive una specializzazione della classe `basic_string` modello con elementi di tipo  `string`char come.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo che descrive una specializzazione della classe `basic_string` modello con elementi di tipo  `wstring`wchar_t come.|
+|[string](../standard-library/string-typedefs.md#string)|Tipo che descrive una specializzazione della classe `basic_string` modello con elementi di tipo `string`char come.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Tipo che descrive una specializzazione della classe `basic_string` modello con elementi di tipo `wstring`wchar_t come.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Tipo che descrive una specializzazione della classe modello `basic_string` basata su elementi di tipo `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Tipo che descrive una specializzazione della classe modello `basic_string` basata su elementi di tipo `char32_t`.|
 
@@ -61,7 +61,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 |||
 |-|-|
-|[hash]()||
+|hash|Genera un hash di una stringa.|
 |[swap](../standard-library/string-functions.md#swap)|Scambia le matrici di caratteri di due stringhe.|
 |[stod](../standard-library/string-functions.md#stod)|Converte una sequenza di caratteri in un **valore Double**.|
 |[stof](../standard-library/string-functions.md#stof)|Converte una sequenza di caratteri in un valore **float**.|
@@ -75,7 +75,7 @@ Il linguaggio C++ e la libreria standard C++ supportano due tipi di stringhe:
 
 ### <a name="functions"></a>Funzioni
 
-|Funzione|DESCRIZIONE|
+|Funzione|Descrizione|
 |-|-|
 |[Modello getline](../standard-library/string-functions.md#getline)|Estrarre stringhe dal flusso di input riga per riga.|
 
