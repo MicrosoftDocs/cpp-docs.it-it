@@ -8,20 +8,20 @@ helpviewer_keywords:
 - item labels, tree controls
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
-ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1f7fb8b558ff4726f7787cbf355a059fbcce8b5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371951"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513373"
 ---
 # <a name="tree-control-item-labels"></a>Etichette degli elementi del controllo Tree
 
-È in genere specificare il testo dell'etichetta di un elemento quando si aggiunge l'elemento al controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Il `InsertItem` funzione membro può passare un [struttura TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) struttura che definisca le proprietà dell'elemento, inclusa una stringa contenente il testo dell'etichetta. `InsertItem` dispone di diversi overload che può essere chiamato con diverse combinazioni di parametri.
+In genere si specifica il testo dell'etichetta di un elemento quando si aggiunge l'elemento al controllo albero ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). La `InsertItem` funzione membro può passare una struttura [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) che definisce le proprietà dell'elemento, inclusa una stringa contenente il testo dell'etichetta. `InsertItem`dispone di diversi overload che possono essere chiamati con diverse combinazioni di parametri.
 
-Un controllo albero alloca memoria per l'archiviazione di ogni elemento. il testo delle etichette degli elementi occupa una parte significativa della memoria. Se l'applicazione mantiene una copia di stringhe nel controllo albero, è possibile ridurre i requisiti di memoria del controllo specificando il **LPSTR_TEXTCALLBACK** valore nel *pszText* appartenente `TV_ITEM` o il *lpszItem* parametro anziché passare stringhe effettive al controllo albero. Usando **LPSTR_TEXTCALLBACK** fa sì che il controllo albero recuperare il testo dell'etichetta di un elemento dall'applicazione ogni volta che l'elemento deve essere ridisegnato. Per recuperare il testo, il controllo albero invia un [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) messaggio di notifica, che include l'indirizzo di un [struttura NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) struttura. È necessario rispondere impostando i membri appropriati della struttura incluso.
+Un controllo struttura ad albero alloca memoria per archiviare ogni elemento. il testo delle etichette degli elementi occupa una parte significativa della memoria. Se l'applicazione gestisce una copia delle stringhe nel controllo struttura ad albero, è possibile ridurre i requisiti di memoria del controllo specificando il valore **LPSTR_TEXTCALLBACK** nel membro *pszText* di `TV_ITEM` o *lpszItem* anziché passare le stringhe effettive al controllo albero. L'utilizzo di **LPSTR_TEXTCALLBACK** fa sì che il controllo albero recuperi il testo dell'etichetta di un elemento dall'applicazione ogni volta che l'elemento deve essere ridisegnato. Per recuperare il testo, il controllo struttura ad albero invia un messaggio di notifica [TVN_GETDISPINFO](/windows/win32/Controls/tvn-getdispinfo) , che include l'indirizzo di una struttura [struttura NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-tvdispinfow) . Per rispondere, è necessario impostare i membri appropriati della struttura inclusa.
 
-Un controllo albero Usa la memoria allocata dall'heap del processo che crea il controllo struttura ad albero. Il numero massimo di elementi in un controllo struttura ad albero si basa sulla quantità di memoria disponibile nell'heap. Ogni elemento richiede 64 byte.
+Un controllo struttura ad albero utilizza la memoria allocata dall'heap del processo che crea il controllo albero. Il numero massimo di elementi in un controllo struttura ad albero è basato sulla quantità di memoria disponibile nell'heap. Ogni elemento richiede 64 byte.
 
 ## <a name="see-also"></a>Vedere anche
 

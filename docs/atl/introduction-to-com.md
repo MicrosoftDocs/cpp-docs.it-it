@@ -5,32 +5,32 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - COM
 ms.assetid: 120735d9-db71-4ad3-a730-ce576ea2354e
-ms.openlocfilehash: 7631ba98b0e2cb00310400206b0b442ab7a23dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29f761e0380357bc999af82cc4bde8bfbaf4d6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262372"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492350"
 ---
 # <a name="introduction-to-com"></a>Introduzione a COM
 
-COM è fondamentale "modello a oggetti" su quali controlli ActiveX e OLE vengono compilati. Consente a un oggetto per esporne la funzionalità agli altri componenti e alle applicazioni host. Definisce come l'oggetto espone sé sia come questa esposizione funziona tra processi e tra reti. COM definisce anche il ciclo di vita dell'oggetto.
+COM è il "modello a oggetti" di base in cui vengono compilati i controlli ActiveX e OLE. COM consente a un oggetto di esporre la funzionalità ad altri componenti e di ospitare le applicazioni. Definisce sia il modo in cui l'oggetto espone se stesso che la modalità di funzionamento di questa esposizione nei processi e nelle reti. COM definisce anche il ciclo di vita dell'oggetto.
 
-Questi concetti sono fondamentali per COM:
+I concetti fondamentali di COM sono i seguenti:
 
-- [Interfacce](../atl/interfaces-atl.md) , ovvero il meccanismo attraverso il quale un oggetto espone le proprie funzionalità.
+- [Interfacce](../atl/interfaces-atl.md) : meccanismo mediante il quale un oggetto espone la relativa funzionalità.
 
-- [IUnknown](../atl/iunknown.md) , ovvero l'interfaccia di base su cui si basano tutti gli altri. Implementa l'interfaccia in esecuzione tramite COM. meccanismi di query e il conteggio dei riferimenti
+- [IUnknown](../atl/iunknown.md) , l'interfaccia di base su cui si basano tutti gli altri. Implementa il conteggio dei riferimenti e i meccanismi di query dell'interfaccia eseguiti tramite COM.
 
-- [Il conteggio dei riferimenti](../atl/reference-counting.md) , ovvero la tecnica mediante il quale un oggetto (o esclusivamente, un'interfaccia) decide quando non è più in uso ed è pertanto possibile rimuovere se stesso.
+- [Conteggio dei riferimenti](../atl/reference-counting.md) : tecnica in base alla quale un oggetto (o, rigorosamente, un'interfaccia) decide quando non è più usato ed è quindi libero di rimuovere se stesso.
 
-- [QueryInterface](../atl/queryinterface.md) , ovvero il metodo utilizzato per eseguire query su oggetto per una determinata interfaccia.
+- [QueryInterface](../atl/queryinterface.md) : il metodo usato per eseguire una query su un oggetto per una data interfaccia.
 
-- [Marshalling](../atl/marshaling.md) , ovvero il meccanismo che consente agli oggetti da utilizzare tra thread, processi e i limiti di rete, consentendo l'indipendenza dalla posizione.
+- [Marshalling](../atl/marshaling.md) : meccanismo che consente di utilizzare gli oggetti tra thread, processi e limiti di rete, consentendo l'indipendenza dalla posizione.
 
-- [Aggregazione](../atl/aggregation.md) , usare un modo in cui è possibile rendere un oggetto di un altro.
+- [Aggregazione](../atl/aggregation.md) : un modo in cui un oggetto può essere usato da un altro oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Introduzione a COM e a ATL](../atl/introduction-to-com-and-atl.md)<br/>
-[Component Object Model (COM)](/windows/desktop/com/the-component-object-model)
+[Component Object Model (COM)](/windows/win32/com/the-component-object-model)

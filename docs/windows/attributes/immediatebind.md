@@ -1,21 +1,21 @@
 ---
-title: immediatebind (attributo COM C++)
+title: immediatebind (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.immediatebind
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: 1844e72ecd1fe7c0f4255426eb48f5c70471e5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c659f23d6828616c4a48522b61330336e994cbb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409473"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514647"
 ---
 # <a name="immediatebind"></a>immediatebind
 
-Indica che il database verrà immediatamente notificato tutte le modifiche apportate a una proprietà di un oggetto con associazione a dati.
+Indica che il database riceverà immediatamente una notifica di tutte le modifiche apportate a una proprietà di un oggetto associato a dati.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Indica che il database verrà immediatamente notificato tutte le modifiche appor
 
 ## <a name="remarks"></a>Note
 
-Il **immediatebind** attributi di C++ ha la stessa funzionalità come la [immediatebind](/windows/desktop/Midl/immediatebind) attributo MIDL.
+L'attributo **immediatebind** C++ ha la stessa funzionalità dell'attributo MIDL di [immediatebind](/windows/win32/Midl/immediatebind) .
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [associabile](bindable.md) per un esempio di come usare **immediatebind**.
+Per un esempio su come usare **immediatebind**, vedere [Bindable](bindable.md) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -40,7 +40,7 @@ Visualizzare [associabile](bindable.md) per un esempio di come usare **immediate
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148178"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491008"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -32,13 +32,13 @@ Definisce i metadati per un oggetto nella libreria dei tipi.
 ID univoco.
 
 *value*<br/>
-Un valore che può essere impostato in una variante.
+Valore che può essere inserito in una variante.
 
 ## <a name="remarks"></a>Note
 
-Il **personalizzato** C++ attributo farà in modo da inserire in libreria dei tipi di informazioni. È necessario uno strumento che legge il valore personalizzato da libreria dei tipi.
+L'attributo **personalizzato** C++ farà sì che le informazioni vengano inserite nella libreria dei tipi. Sarà necessario uno strumento che legga il valore personalizzato dalla libreria dei tipi.
 
-Il **personalizzati** attributo ha la stessa funzionalità di [personalizzato](/windows/desktop/Midl/custom) attributo MIDL.
+L'attributo **personalizzato** ha la stessa funzionalità dell'attributo MIDL [personalizzato](/windows/win32/Midl/custom) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -46,10 +46,10 @@ Il **personalizzati** attributo ha la stessa funzionalità di [personalizzato](/
 
 |||
 |-|-|
-|**Si applica a**|Non COM **interface**, **classe**, **enum**s, `idl_module` metodi, i membri di interfaccia, i parametri dell'interfaccia **typedef**s, **unione**s **struct**s|
-|**Ripetibile**|Yes|
-|**Attributi obbligatori**|**Coclasse** (se usato nella classe)|
-|**Attributi non validi**|nessuno|
+|**Si applica a**|**Interfaccia**non com, **classe**, **enum**s, `idl_module` metodi, membri di interfaccia, parametri di interfaccia, **typedef**s, **Union**s, **struct**s|
+|**Ripetibile**|Sì|
+|**Attributi obbligatori**|**coclasse** (se usato nella classe)|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

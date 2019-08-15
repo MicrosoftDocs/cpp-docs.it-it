@@ -1,17 +1,17 @@
 ---
-title: defaultbind (attributo COM C++)
+title: defaultbind (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultbind
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: f0dd9101966f22253e6c4098c3c64d22d0a0cba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f612c4869a62a84a6a2af99057ced365f875f2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148068"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490984"
 ---
 # <a name="defaultbind"></a>defaultbind
 
@@ -25,11 +25,11 @@ Indica la singola proprietà associabile che meglio rappresenta l'oggetto.
 
 ## <a name="remarks"></a>Note
 
-Il **defaultbind** attributi di C++ ha la stessa funzionalità come la [defaultbind](/windows/desktop/Midl/defaultbind) attributo MIDL.
+L'attributo **defaultbind** C++ ha la stessa funzionalità dell'attributo MIDL di [defaultbind](/windows/win32/Midl/defaultbind) .
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usare **defaultbind**.
+Vedere l'esempio per [associabile](bindable.md) per un esempio di come usare **defaultbind**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -40,7 +40,7 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usar
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

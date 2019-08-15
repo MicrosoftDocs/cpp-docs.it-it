@@ -10,16 +10,16 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: a5eb6a10f3c4833ecc3e9d9c8451894788ebd938
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85efa03a3f3d267580cbb0442839afb18ac6c313
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292315"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492859"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Ottimizza per applicazione Windows)
 
-Genera codice più efficiente per un file .exe per l'accesso alle variabili di archiviazione thread-local (TLS).
+Genera codice più efficiente per un file exe per l'accesso alle variabili di archiviazione locale di thread (TLS).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,13 +29,13 @@ Genera codice più efficiente per un file .exe per l'accesso alle variabili di a
 
 ## <a name="remarks"></a>Note
 
-**/GA** velocizza l'accesso ai dati dichiarato con [declspec](../../cpp/declspec.md) in un programma basato su Windows. Quando questa opzione è impostata, il [tls_index](/windows/desktop/ProcThread/thread-local-storage) macro viene considerato uguale a 0.
+**/GA** consente di velocizzare l'accesso ai dati dichiarati con [_ _ declspec (thread)](../../cpp/declspec.md) in un programma basato su Windows. Quando questa opzione è impostata, si presuppone che la macro [__tls_index](/windows/win32/ProcThread/thread-local-storage) sia uguale a 0.
 
-Usando **/GA** per una DLL può comportare la generazione di codice errato.
+L'uso di **/GA** per una dll può comportare la generazione di codice non valido.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
 1. Fare clic sulla cartella **C/C++** .
 
