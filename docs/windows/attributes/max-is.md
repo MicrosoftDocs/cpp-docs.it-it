@@ -1,21 +1,21 @@
 ---
-title: max_is (C++ attributo COM)
+title: max_is (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409278"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514423"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-Definisce il valore massimo per un indice di matrice valida.
+Definisce il valore massimo per un indice di matrice valido.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,11 +26,11 @@ Definisce il valore massimo per un indice di matrice valida.
 ### <a name="parameters"></a>Parametri
 
 *expression*<br/>
-Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.
+Una o più espressioni del linguaggio C. Sono consentiti slot di argomento vuoti.
 
 ## <a name="remarks"></a>Note
 
-Il **max_is** C++ attributo ha la stessa funzionalità come il [max_is](/windows/desktop/Midl/max-is) attributo MIDL.
+L'attributo **max_is** C++ ha la stessa funzionalità dell'attributo MIDL di [max_is](/windows/win32/Midl/max-is) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -38,7 +38,7 @@ Il **max_is** C++ attributo ha la stessa funzionalità come il [max_is](/windows
 
 |||
 |-|-|
-|**Si applica a**|Nel campo **struct** oppure **union**, parametro di interfaccia, metodo di interfaccia|
+|**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|**size_is**|
@@ -47,7 +47,7 @@ Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [first_is](first-is.md) per un esempio di come specificare una sezione di una matrice.
+Vedere [first_is](first-is.md) per un esempio di come specificare una sezione di una matrice.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -41,14 +41,14 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: 59e601d5cd03d58fe2d1725ba509a9fa3b2f3422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2346237181299b3497fade37827a3abc5e7749
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364885"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499359"
 ---
-# <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
+# <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
 Scrive l'output formattato nella console usando un puntatore a un elenco di argomenti e supporta i parametri posizionali nella stringa di formato.
 
@@ -93,22 +93,22 @@ Per altre informazioni, vedere [Sintassi per la specifica del formato: funzioni 
 
 ## <a name="return-value"></a>Valore restituito
 
-Il numero di caratteri che vengono scritti o un valore negativo se si verifica un errore di output. Se *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e viene restituito -1.
+Il numero di caratteri che vengono scritti o un valore negativo se si verifica un errore di output. Se *Format* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito-1.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti e quindi Usa il **putch** (funzione) per formattare e scrivere i dati specificati nella console. (**vcwprintf_p** Usa **putwch** anziché **putch**. **vcwprintf_p** è la versione a caratteri wide di **vcprintf_p**. Accetta una stringa di caratteri wide come argomento).
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi usa la funzione **_putch** per formattare e scrivere i dati specificati nella console. ( **_vcwprintf_p** utilizza **_putwch** anziché **_putch**. **_vcwprintf_p** è la versione a caratteri wide di **_vcprintf_p**. Accetta una stringa di caratteri wide come argomento).
 
-Le versioni di queste funzioni che hanno le **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché quelle correnti.
+Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
-Ciascuna *argomenti* (se presente) viene convertito ed emessi in base alla specifica di formato corrispondente in *formato*. La specifica del formato supporta i parametri posizionali in modo da poter specificare l'ordine in cui gli argomenti vengono usati nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Ogni *argomento* , se presente, viene convertito e viene restituito in base alla specifica di formato corrispondente nel *formato*. La specifica del formato supporta i parametri posizionali in modo da poter specificare l'ordine in cui gli argomenti vengono usati nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
 Queste funzioni non convertono i caratteri di avanzamento di riga in combinazioni di caratteri di ritorno a capo ed avanzamento di riga (CR e LF) quando vengono restituiti.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Queste funzioni convalidano il puntatore di input e la stringa di formato. Se *formato* oppure *argomento* viene **NULL**, o se la stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto nelle [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
+Queste funzioni convalidano il puntatore di input e la stringa di formato. Se *Format* o *argument* è **null**o se la stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

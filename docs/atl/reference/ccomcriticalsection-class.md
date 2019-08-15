@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: f3a4b50f8dd9bc460a209c47497e720529c40e58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4ce32ed4ae04bc3b390af5cf104b8a0af599f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246644"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497286"
 ---
 # <a name="ccomcriticalsection-class"></a>Classe CComCriticalSection
 
@@ -30,7 +30,7 @@ Questa classe fornisce metodi per ottenere e rilasciare la proprietà di un ogge
 class CComCriticalSection
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -40,32 +40,32 @@ class CComCriticalSection
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CComCriticalSection::Init](#init)|Crea e Inizializza un oggetto sezione critica.|
-|[CComCriticalSection::Lock](#lock)|Ottiene la proprietà dell'oggetto sezione critica.|
+|[CComCriticalSection:: Lock](#lock)|Ottiene la proprietà dell'oggetto sezione critica.|
 |[CComCriticalSection::Term](#term)|Rilascia le risorse di sistema utilizzate dall'oggetto sezione critica.|
-|[CComCriticalSection::Unlock](#unlock)|Rilascia la proprietà dell'oggetto sezione critica.|
+|[CComCriticalSection:: Unlock](#unlock)|Rilascia la proprietà dell'oggetto sezione critica.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
-|[CComCriticalSection::m_sec](#m_sec)|Un oggetto CRITICAL_SECTION.|
+|[CComCriticalSection::m_sec](#m_sec)|Oggetto CRITICAL_SECTION.|
 
 ## <a name="remarks"></a>Note
 
-`CComCriticalSection` è simile alla classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), ad eccezione del fatto che deve esplicitamente inizializzare e rilascerà la sezione critica.
+`CComCriticalSection`è simile alla classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), con la differenza che è necessario inizializzare e rilasciare in modo esplicito la sezione critica.
 
-In genere, si usa `CComCriticalSection` tramite il **typedef** name [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Questo nome fa riferimento a `CComCriticalSection` quando si [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) è in uso.
+In genere si usa `CComCriticalSection` il nome **typedef** [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Questo nome fa `CComCriticalSection` riferimento al momento in cui viene utilizzato [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) .
 
-Visualizzare [classe CComCritSecLock](../../atl/reference/ccomcritseclock-class.md) per utilizzare questa classe anziché in modo più sicuro `Lock` e `Unlock` direttamente.
+Per un modo più sicuro per usare questa classe, vedere la [classe CComCritSecLock](../../atl/reference/ccomcritseclock-class.md) anziché chiamare `Lock` direttamente e `Unlock` .
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** atlcore
+**Intestazione:** atlcore. h
 
-##  <a name="ccomcriticalsection"></a>  CComCriticalSection::CComCriticalSection
+##  <a name="ccomcriticalsection"></a>CComCriticalSection:: CComCriticalSection
 
 Costruttore.
 
@@ -75,11 +75,11 @@ CComCriticalSection() throw();
 
 ### <a name="remarks"></a>Note
 
-Imposta il [m_sec](#m_sec) membro dati su NULL.
+Imposta il membro dati [m_sec](#m_sec) su null.
 
-##  <a name="init"></a>  CComCriticalSection::Init
+##  <a name="init"></a>CComCriticalSection:: init
 
-Chiama la funzione Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), che inizializza l'oggetto sezione critica contenuto nel [m_sec](#m_sec) (membro dati).
+Chiama la funzione Win32 [InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), che Inizializza l'oggetto sezione critico contenuto nel membro dati [m_sec](#m_sec) .
 
 ```
 HRESULT Init() throw();
@@ -87,11 +87,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK se l'operazione riesce, E_OUTOFMEMORY o E_FAIL in caso di errore.
+Restituisce S_OK in caso di esito positivo, E_OUTOFMEMORY o E_FAIL in caso di errore.
 
-##  <a name="lock"></a>  CComCriticalSection::Lock
+##  <a name="lock"></a>CComCriticalSection:: Lock
 
-Chiama la funzione Win32 [EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection), che attende che il thread può assumere la proprietà dell'oggetto sezione critica contenuta nel [m_sec](#m_sec) (membro dati).
+Chiama la funzione Win32 [EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), che attende fino a quando il thread non può assumere la proprietà dell'oggetto sezione critica contenuto nel membro dati [m_sec](#m_sec) .
 
 ```
 HRESULT Lock() throw();
@@ -99,23 +99,23 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce S_OK se l'operazione riesce, E_OUTOFMEMORY o E_FAIL in caso di errore.
+Restituisce S_OK in caso di esito positivo, E_OUTOFMEMORY o E_FAIL in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Prima di tutto necessario inizializzare l'oggetto sezione critica con una chiamata ai [Init](#init) (metodo). Quando il codice protetto ha terminato l'esecuzione, il thread deve chiamare [Unlock](#unlock) per rilasciare la proprietà della sezione critica.
+L'oggetto sezione critica deve prima essere inizializzato con una chiamata al metodo [init](#init) . Al termine dell'esecuzione del codice protetto, il thread deve chiamare [Unlock](#unlock) per rilasciare la proprietà della sezione critica.
 
-##  <a name="m_sec"></a>  CComCriticalSection::m_sec
+##  <a name="m_sec"></a>CComCriticalSection:: m_sec
 
-Contiene un oggetto sezione critica che viene usato da tutti `CComCriticalSection` metodi.
+Contiene un oggetto sezione critico utilizzato da tutti i `CComCriticalSection` metodi.
 
 ```
 CRITICAL_SECTION m_sec;
 ```
 
-##  <a name="term"></a>  CComCriticalSection::Term
+##  <a name="term"></a>CComCriticalSection:: term
 
-Chiama la funzione Win32 [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), che rilascia tutte le risorse usate dall'oggetto contenuto nella sezione critica il [m_sec](#m_sec) (membro dati).
+Chiama la funzione Win32 [DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), che rilascia tutte le risorse usate dall'oggetto sezione critica contenuto nel membro dati [m_sec](#m_sec) .
 
 ```
 HRESULT Term() throw();
@@ -127,11 +127,11 @@ Restituisce S_OK.
 
 ### <a name="remarks"></a>Note
 
-Una volta `Term` è stato chiamato il critici sezione non è più può essere usata per la sincronizzazione.
+Una `Term` volta chiamato, la sezione critica non può più essere utilizzata per la sincronizzazione.
 
-##  <a name="unlock"></a>  CComCriticalSection::Unlock
+##  <a name="unlock"></a>CComCriticalSection:: Unlock
 
-Chiama la funzione Win32 [LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection), che rilascia la proprietà dell'oggetto contenuto nella sezione critica il [m_sec](#m_sec) (membro dati).
+Chiama la funzione Win32 [LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), che rilascia la proprietà dell'oggetto sezione critica contenuto nel membro dati [m_sec](#m_sec) .
 
 ```
 HRESULT Unlock() throw();
@@ -143,7 +143,7 @@ Restituisce S_OK.
 
 ### <a name="remarks"></a>Note
 
-Per ottenere prima la proprietà, il thread deve chiamare il [blocco](#lock) (metodo). Ogni chiamata a `Lock` richiede una chiamata corrispondente al `Unlock` per rilasciare la proprietà della sezione critica.
+Per ottenere prima di tutto la proprietà, il thread deve chiamare il metodo [Lock](#lock) . Ogni chiamata a `Lock` richiede una chiamata corrispondente a `Unlock` per rilasciare la proprietà della sezione critica.
 
 ## <a name="see-also"></a>Vedere anche
 

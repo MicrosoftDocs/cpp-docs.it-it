@@ -1,21 +1,21 @@
 ---
-title: ms_union (C++ attributo COM)
+title: ms_union (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409109"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514375"
 ---
-# <a name="msunion"></a>ms_union
+# <a name="ms_union"></a>ms_union
 
-Controlla l'allineamento di rappresentazione dei dati di rete di unioni nonencapsulated.
+Controlla l'allineamento della rappresentazione dei dati di rete delle unioni non incapsulate.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Controlla l'allineamento di rappresentazione dei dati di rete di unioni nonencap
 
 ## <a name="remarks"></a>Note
 
-Il **ms_union** C++ attributo ha la stessa funzionalità come il [ms_union](/windows/desktop/Midl/ms-union-attrib) attributo MIDL.
+L'attributo **ms_union** C++ ha la stessa funzionalità dell'attributo MIDL di [ms_union](/windows/win32/Midl/ms-union-attrib) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente viene illustrata la posizione di **ms_union**:
+Il codice seguente mostra il posizionamento di **ms_union**:
 
 ```cpp
 // cpp_attr_ref_ms_union.cpp
@@ -60,7 +60,7 @@ __interface IFireTabCtrl {
 
 |||
 |-|-|
-|**Si applica a**|Unioni nonencapsulated|
+|**Si applica a**|Unioni non incapsulate|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|`dispinterface`|

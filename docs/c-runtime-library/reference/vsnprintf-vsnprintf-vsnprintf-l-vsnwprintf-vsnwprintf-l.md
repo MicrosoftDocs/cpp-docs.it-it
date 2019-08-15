@@ -52,14 +52,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 7c3416397d8f43963d3be2ce9bc39707ea7865db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e665562f3dd8ee0be70b4e50068955a91233c60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383464"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499069"
 ---
-# <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
+# <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
 Scrivere l'output formattato mediante un puntatore a un elenco di argomenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md).
 
@@ -158,29 +158,29 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **vsnprintf** funzione restituisce il numero di caratteri scritti, senza contare il carattere di terminazione null. Se le dimensioni del buffer specificato da *conteggio* non è sufficientemente grande da contenere l'output specificato da *formato* e *valore di argptr*, il valore restituito di  **vsnprintf** è il numero di caratteri che verrebbe scritto, senza contare il carattere null, se *conteggio* fosse sufficientemente grande. Se il valore restituito è maggiore *conteggio* - 1, l'output è stato troncato. Un valore restituito -1 indica che si è verificato un errore di codifica.
+La funzione **vsnprintf** restituisce il numero di caratteri scritti, senza contare il carattere null di terminazione. Se le dimensioni del buffer specificate da *count* non sono sufficientemente grandi per contenere l'output specificato da *Format* e *argptr*, il valore restituito di **vsnprintf** è il numero di caratteri che verrebbero scritti, senza contare null carattere, se il *conteggio* è sufficientemente grande. Se il valore restituito è maggiore di *count* -1, l'output è stato troncato. Un valore restituito -1 indica che si è verificato un errore di codifica.
 
-Entrambe **vsnprintf** e **vsnwprintf** funzioni restituiscono il numero di caratteri scritto se il numero di caratteri da scrivere è minore o uguale a *conteggio*; se il numero è maggiore di caratteri da scrivere *conteggio*, queste funzioni restituiscono -1 che indica che l'output è stato troncato.
+Entrambe le funzioni **_vsnprintf** e **_vsnwprintf** restituiscono il numero di caratteri scritti se il numero di caratteri da scrivere è minore o uguale al *conteggio*; Se il numero di caratteri da scrivere è maggiore di *count*, queste funzioni restituiscono-1 che indica che l'output è stato troncato.
 
-Il valore restituito da tutte queste funzioni non include il carattere di Null di terminazione, indipendentemente dal fatto che venga scritto o meno. Quando *conteggio* è uguale a zero, il valore restituito è il numero di caratteri che scriverebbe, non incluso qualsiasi carattere di terminazione null. È possibile usare questo risultato per allocare spazio nel buffer sufficiente per la stringa e il carattere Null di terminazione e quindi chiamare di nuovo la funzione per riempire il buffer.
+Il valore restituito da tutte queste funzioni non include il carattere di Null di terminazione, indipendentemente dal fatto che venga scritto o meno. Quando *count* è zero, il valore restituito è il numero di caratteri che verranno scritti dalle funzioni, escluso il valore null di terminazione. È possibile usare questo risultato per allocare spazio nel buffer sufficiente per la stringa e il carattere Null di terminazione e quindi chiamare di nuovo la funzione per riempire il buffer.
 
-Se *formato* viene **NULL**, o se *buffer* è **NULL** e *conteggio* non è uguale a zero, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
+Se *Format* è **null**o se il *buffer* è **null** e *count* non è uguale a zero, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta i dati e scrive fino a *conteggio* caratteri per la memoria a cui punta *buffer*. Il **vsnprintf** funzione scrive sempre un carattere di terminazione null, anche se Tronca l'output. Quando si usa **vsnprintf** e **vsnwprintf**, il buffer sarà essere con terminazione null solo se c'è spazio alla fine (ovvero, se il numero di caratteri da scrivere è minore di *conteggio*).
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta i dati e scrive fino a *conteggiare* i caratteri nella memoria a cui punta il *buffer*. La funzione **vsnprintf** scrive sempre un carattere di terminazione null, anche se tronca l'output. Quando si usano **_vsnprintf** e **_vsnwprintf**, il buffer avrà una terminazione null solo se è presente spazio alla fine, ovvero se il numero di caratteri da scrivere è minore di *count*.
 
 > [!IMPORTANT]
-> Per evitare alcuni tipi di rischi di sicurezza, assicurarsi che *formato* non è una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Per evitare determinati tipi di rischi per la sicurezza, assicurarsi che *Format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!NOTE]
-> Per garantire che ci sia spazio per la terminazione null quando si chiama **vsnprintf**, **vsnprintf_l**, **vsnwprintf** e **vsnwprintf_l**, verificare che *conteggio* è rigorosamente minore della lunghezza del buffer e inizializzare il buffer su null prima di chiamare la funzione.
+> Per assicurarsi che sia presente spazio per il carattere null di terminazione durante la chiamata a **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l**, assicurarsi che *count* sia rigorosamente minore della lunghezza del buffer e inizializzare il buffer su null prima di chiamare la funzione.
 >
-> In quanto **vsnprintf** scrive sempre il carattere di terminazione null, il *conteggio* parametro può essere uguale alla dimensione del buffer.
+> Poiché **vsnprintf** scrive sempre il valore null di terminazione, il parametro *count* può essere uguale alla dimensione del buffer.
 
-A partire da UCRT in Visual Studio 2015 e Windows 10 **vsnprintf** non è più identico a **vsnprintf**. Il **vsnprintf** funzione conforme allo standard C99. **_vnsprintf** viene mantenuto per garantire la compatibilità con versioni precedenti Visual Studio code.
+A partire da UCRT in Visual Studio 2015 e Windows 10, **vsnprintf** non è più identico a **_vsnprintf**. La funzione **vsnprintf** è conforme allo standard C99; **_vnsprintf** viene mantenuto per compatibilità con le versioni precedenti di Visual Studio Code.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -198,7 +198,7 @@ In C++ queste funzioni presentano overload di modello che richiamano le relative
 |**vsnprintf**, **_vsnprintf**, **_vsnprintf_l**|\<stdio.h>|\<stdio.h> o \<cstdio>|
 |**_vsnwprintf**, **_vsnwprintf_l**|\<stdio.h> o \<wchar.h>|\<stdio.h>, \<wchar.h>, \<cstdio> o \<cwchar>|
 
-Il **vsnprintf**, **vsnprintf_l**, **vsnwprintf** e **vsnwprintf_l** funzioni sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Le funzioni **_vsnprintf**, **_vsnprintf_l**, **_vsnwprintf** e **_vsnwprintf_l** sono specifiche di Microsoft. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 
@@ -240,7 +240,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-Il comportamento cambia se si usa vsnprintf, insieme ai parametri con stringa "narrow". Il *conteggio* parametro può corrispondere alle dimensioni intere del buffer e il valore restituito è il numero di caratteri che verrebbero scritti se *conteggio* sia abbastanza grande:
+Il comportamento cambia se si usa vsnprintf, insieme ai parametri con stringa "narrow". Il parametro *count* può essere l'intera dimensione del buffer e il valore restituito è il numero di caratteri che sarebbero stati scritti se il *conteggio* fosse sufficientemente grande:
 
 ## <a name="example"></a>Esempio
 

@@ -1,21 +1,21 @@
 ---
-title: size_is (C++ attributo COM)
+title: size_is (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407328"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514036"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-Specificare le dimensioni della memoria allocata per i puntatori con dimensioni, ridimensionati i puntatori ai puntatori a dimensioni e unidimensionali o le matrici multidimensionali.
+Specificare le dimensioni della memoria allocata per i puntatori dimensionati, i puntatori dimensionati ai puntatori di dimensioni e le matrici mono o multidimensionali.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ Specificare le dimensioni della memoria allocata per i puntatori con dimensioni,
 ### <a name="parameters"></a>Parametri
 
 *expression*<br/>
-Le dimensioni della memoria allocata per le dimensioni i puntatori.
+Dimensione della memoria allocata per i puntatori di dimensione.
 
 ## <a name="remarks"></a>Note
 
-Il **size_is** C++ attributo ha la stessa funzionalità come il [size_is](/windows/desktop/Midl/size-is) attributo MIDL.
+L'attributo **size_is** C++ ha la stessa funzionalità dell'attributo MIDL di [size_is](/windows/win32/Midl/size-is) .
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [first_is](first-is.md) per un esempio di come specificare una sezione di una matrice.
+Vedere l'esempio relativo a [first_is](first-is.md) per un esempio di come specificare una sezione di una matrice.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -42,7 +42,7 @@ Vedere l'esempio relativo [first_is](first-is.md) per un esempio di come specifi
 
 |||
 |-|-|
-|**Si applica a**|Nel campo **struct** oppure **union**, parametro di interfaccia, metodo di interfaccia|
+|**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
 |**Attributi non validi**|`max_is`|

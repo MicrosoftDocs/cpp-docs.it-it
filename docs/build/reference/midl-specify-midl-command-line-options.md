@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca172428943d2446490eeb10741966f5e8c9ea85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321072"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492714"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Specifica opzioni della riga di comando MIDL)
 
@@ -24,26 +24,26 @@ Specifica un file di risposta per le opzioni della riga di comando MIDL
 
 ## <a name="syntax"></a>Sintassi
 
-> **/MIDL:\@**<em>file</em>
+> **/MIDL:\@** <em>file</em>
 
 ## <a name="arguments"></a>Argomenti
 
 *file*<br/>
-Il nome del file che contiene [opzioni della riga di comando MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
+Nome del file che contiene le [Opzioni della riga di comando MIDL](/windows/win32/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Note
 
-Devono essere specificate tutte le opzioni per la conversione di un file IDL in un file TLB *file*; Opzioni della riga di comando di MIDL non è possibile specificare nella riga di comando del linker. Se /MIDL non viene specificato, il compilatore MIDL verrà richiamato con solo il nome del file IDL e senza altre opzioni.
+Tutte le opzioni per la conversione di un file IDL in un file TLB devono essere specificate nel *file*; Impossibile specificare le opzioni della riga di comando MIDL nella riga di comando del linker. Se/MIDL non è specificato, il compilatore MIDL verrà richiamato solo con il nome del file IDL e senza altre opzioni.
 
 Il file deve contenere un'opzione della riga di comando MIDL per riga.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **Linker** > **IDL incorporato** pagina delle proprietà.
+1. Selezionare la > pagina delle proprietà**IDL Embedded** del**linker** > proprietà di configurazione.
 
-1. Modificare il **comandi MIDL** proprietà.
+1. Modificare la proprietà dei **comandi MIDL** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice
 

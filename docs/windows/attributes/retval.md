@@ -1,21 +1,21 @@
 ---
-title: retval (attributo COM C++)
+title: retval (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407406"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514054"
 ---
 # <a name="retval"></a>retval
 
-Specifica il parametro che riceve il valore restituito del membro.
+Definisce il parametro che riceve il valore restituito del membro.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,13 +25,13 @@ Specifica il parametro che riceve il valore restituito del membro.
 
 ## <a name="remarks"></a>Note
 
-Il **retval** attributi di C++ ha la stessa funzionalità come la [retval](/windows/desktop/Midl/retval) attributo MIDL.
+L'attributo **retval** C++ ha la stessa funzionalità dell'attributo MIDL di [retval](/windows/win32/Midl/retval) .
 
-**retval** devono essere visualizzati nell'ultimo argomento nella dichiarazione della funzione.
+**retval** deve essere visualizzato nell'ultimo argomento della dichiarazione di una funzione.
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [associabile](bindable.md) per un esempio dell'uso dei **retval**.
+Vedere l'esempio per [associabile](bindable.md) per un esempio di uso di **retval**.
 
 ## <a name="requirements"></a>Requisiti
 

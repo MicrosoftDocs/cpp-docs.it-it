@@ -1,21 +1,21 @@
 ---
-title: include (attributo COM C++)
+title: IncludiC++ (attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409447"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514558"
 ---
 # <a name="include-c"></a>include (C++)
 
-Specifica uno o più file di intestazione da includere nel file IDL generato.
+Specifica uno o più file di intestazione da includere nel file con estensione IDL generato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,17 +26,17 @@ Specifica uno o più file di intestazione da includere nel file IDL generato.
 ### <a name="parameters"></a>Parametri
 
 *header_file*<br/>
-Il nome di un file che si desidera incluso nel file con estensione IDL generato.
+Nome di un file che si desidera includere nel file con estensione IDL generato.
 
 ## <a name="remarks"></a>Note
 
-Il **includono** C++ attributo causa una `#include` istruzione inserita sotto il `import "docobj.idl"` istruzione nel file IDL generato.
+L'attributo **include** C++ fa sì `#include` che un'istruzione venga posizionata `import "docobj.idl"` sotto l'istruzione nel file con estensione IDL generato.
 
-Il **includono** attributi di C++ ha la stessa funzionalità come la [includono](/windows/desktop/Midl/include) attributo MIDL.
+L'attributo **include** C++ ha la stessa funzionalità dell'attributo MIDL di [inclusione](/windows/win32/Midl/include) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente viene illustrato un esempio d'uso **includono**. Per questo esempio, il file include.h contiene solo un `#include` istruzione.
+Il codice seguente illustra un esempio di come usare **include**. Per questo esempio, il file include. h contiene solo un' `#include` istruzione.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -54,7 +54,7 @@ Il codice seguente viene illustrato un esempio d'uso **includono**. Per questo e
 |**Si applica a**|Ovunque|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

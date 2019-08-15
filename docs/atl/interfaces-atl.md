@@ -6,25 +6,25 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-ms.openlocfilehash: 5416fb8a99420f0f6c84318753ee3399ccf5db2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2373351330982623ffa602fd81bec61d0bc257b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250314"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492131"
 ---
 # <a name="interfaces-atl"></a>Interfacce (ATL)
 
-Un'interfaccia è il modo in cui un oggetto espone le proprie funzionalità al mondo esterno. In COM, un'interfaccia è una tabella di puntatori (ad esempio, un oggetto vtable C++) alle funzioni implementate dall'oggetto. La tabella rappresenta l'interfaccia e le funzioni a cui fa riferimento sono i metodi di tale interfaccia. Un oggetto può esporre tutte le interfacce che sceglie.
+Un'interfaccia è il modo in cui un oggetto espone le proprie funzionalità al mondo esterno. In COM, un'interfaccia è una tabella di puntatori (come un C++ vtable) alle funzioni implementate dall'oggetto. La tabella rappresenta l'interfaccia e le funzioni alle quali fa riferimento sono i metodi di tale interfaccia. Un oggetto può esporre il numero di interfacce che sceglie.
 
-Ogni interfaccia è basata sull'interfaccia COM fondamentale, [IUnknown](../atl/iunknown.md). I metodi di `IUnknown` consentono di spostarsi su altre interfacce esposte dall'oggetto.
+Ogni interfaccia è basata sull'interfaccia COM fondamentale, [IUnknown](../atl/iunknown.md). I metodi di `IUnknown` consentono la navigazione ad altre interfacce esposte dall'oggetto.
 
-Inoltre, ogni interfaccia viene assegnato una unique ID interfaccia (IID). L'univocità semplifica supportare il controllo delle versioni dell'interfaccia. Una nuova versione di un'interfaccia è semplicemente una nuova interfaccia, con un nuovo IID.
+Inoltre, a ogni interfaccia viene assegnato un ID di interfaccia univoco (IID). Questa unicità rende più semplice supportare il controllo delle versioni dell'interfaccia. Una nuova versione di un'interfaccia è semplicemente una nuova interfaccia con un nuovo IID.
 
 > [!NOTE]
->  IID per le interfacce COM e OLE standard sono predefiniti.
+>  IID per le interfacce COM e OLE standard sono predefinite.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Introduzione a COM](../atl/introduction-to-com.md)<br/>
-[Interfacce e oggetti COM](/windows/desktop/com/com-objects-and-interfaces)
+[Oggetti e interfacce COM](/windows/win32/com/com-objects-and-interfaces)

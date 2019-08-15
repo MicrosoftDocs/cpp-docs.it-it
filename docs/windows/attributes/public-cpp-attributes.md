@@ -1,21 +1,21 @@
 ---
-title: Public (attributi C++) (attributo COM C++)
+title: Public (C++ attributi) (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: a12ab0905064a72057dffac03340b667f07b3ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274af011f2d61521885e93d4ce1eddad149748ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407549"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514168"
 ---
 # <a name="public-c-attributes"></a>public (attributi C++)
 
-Assicura che un typedef entra in libreria dei tipi anche se non è presente all'interno del file con estensione idl.
+Assicura che un typedef entri nella libreria dei tipi anche se non vi viene fatto riferimento dall'interno del file IDL.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Assicura che un typedef entra in libreria dei tipi anche se non è presente all'
 
 ## <a name="remarks"></a>Note
 
-Il **pubblico** attributi di C++ ha la stessa funzionalità come il [pubblico](/windows/desktop/Midl/public) attributo MIDL.
+L'attributo **public** C++ ha la stessa funzionalità dell'attributo MIDL [pubblico](/windows/win32/Midl/public) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente viene illustrato come utilizzare il **pubblica** attributo:
+Il codice seguente illustra come usare l'attributo **public** :
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -54,7 +54,7 @@ __interface IFireTabCtrl : IDispatch
 |**Si applica a**|**typedef**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

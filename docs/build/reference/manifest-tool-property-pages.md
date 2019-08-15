@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606435"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492694"
 ---
 # <a name="manifest-tool-property-pages"></a>Pagine delle proprietà dello strumento Manifesto
 
-Utilizzare queste pagine per specificare le opzioni generali per [mt. exe](https://msdn.microsoft.com/library/aa375649).  > Queste pagine si trovano in proprietà **progetto** > proprietà di**configurazione** > **strumento Manifesto**.
+Utilizzare queste pagine per specificare le opzioni generali per [mt. exe](/windows/win32/sbscs/mt-exe).  > Queste pagine si trovano in proprietà **progetto** > proprietà di**configurazione** > **strumento Manifesto**.
 
 ## <a name="general-property-page"></a>Pagina delle proprietà generale
 
@@ -105,7 +105,7 @@ Specifica se l'applicazione è compatibile con DPI. Per impostazione predefinita
 
 ## <a name="isolated-com-property-page"></a>Pagina delle proprietà COM isolata
 
-Per ulteriori informazioni sui componenti COM isolati, vedere [applicazioni isolate](/windows/desktop/SbsCs/isolated-applications) e [procedura: Consente di compilare applicazioni isolate per](../how-to-build-isolated-applications-to-consume-com-components.md)l'utilizzo di componenti com.
+Per ulteriori informazioni sui componenti COM isolati, vedere [applicazioni isolate](/windows/win32/SbsCs/isolated-applications) e [procedura: Consente di compilare applicazioni isolate per](../how-to-build-isolated-applications-to-consume-com-components.md)l'utilizzo di componenti com.
 
 ###  <a name="type-library-file"></a>File della libreria di tipi
 

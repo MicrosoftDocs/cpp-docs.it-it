@@ -1,17 +1,17 @@
 ---
-title: UIDefault (attributo COM C++)
+title: uidefault (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407094"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513907"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -25,7 +25,7 @@ Indica che il membro delle informazioni sul tipo è il membro predefinito per la
 
 ## <a name="remarks"></a>Note
 
-Il **uidefault** attributi di C++ ha la stessa funzionalità come la [uidefault](/windows/desktop/Midl/uidefault) attributo MIDL.
+L'attributo **uidefault** C++ ha la stessa funzionalità dell'attributo MIDL di [uidefault](/windows/win32/Midl/uidefault) .
 
 ## <a name="example"></a>Esempio
 
@@ -57,7 +57,7 @@ __interface ICustom{
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

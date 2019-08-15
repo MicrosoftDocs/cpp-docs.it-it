@@ -9,18 +9,18 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f68fb62335219ea498163e6124c8e91e49f2938
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168024"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511031"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Descrizioni comandi in Windows non derivate da CFrameWnd
 
-Questa serie di articoli illustra attivare le descrizioni comandi per i controlli contenuti in una finestra che non è derivata da [CFrameWnd](../mfc/reference/cframewnd-class.md). L'articolo [barre degli strumenti descrizioni](../mfc/toolbar-tool-tips.md) fornisce informazioni sulle descrizioni comandi per i controlli in un `CFrameWnd`.
+In questa famiglia di articoli viene illustrata l'abilitazione di descrizioni comandi per i controlli contenuti in una finestra non derivata da [CFrameWnd](../mfc/reference/cframewnd-class.md). Le descrizioni comandi degli articoli sulle [barre degli strumenti](../mfc/toolbar-tool-tips.md) forniscono informazioni sulle descrizioni comandi per `CFrameWnd`i controlli in un.
 
-Gli argomenti trattati in questa serie di articoli includono:
+Gli argomenti trattati in questa famiglia di articoli includono:
 
 - [Abilitazione di descrizioni comandi](../mfc/enabling-tool-tips.md)
 
@@ -28,11 +28,11 @@ Gli argomenti trattati in questa serie di articoli includono:
 
 - [Struttura TOOLTIPTEXT](../mfc/tooltiptext-structure.md)
 
-Descrizioni comandi vengono visualizzate automaticamente per i pulsanti e altri controlli contenuti in una finestra padre derivano da `CFrameWnd`. Infatti `CFrameWnd` dispone di un gestore predefinito per il [notifica TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo) notifica, che gestisce **TTN_NEEDTEXT** notifiche dallo strumento suggerimento controlli associati ai controlli.
+Le descrizioni comandi vengono visualizzate automaticamente per i pulsanti e gli altri controlli contenuti in una finestra `CFrameWnd`padre derivata da. Questo perché `CFrameWnd` ha un gestore predefinito per la notifica [TTN_GETDISPINFO](/windows/win32/Controls/ttn-getdispinfo) , che gestisce le notifiche **TTN_NEEDTEXT** dai controlli descrizione comando associati ai controlli.
 
-Tuttavia, questo gestore predefinito non viene chiamato quando la **TTN_NEEDTEXT** notifica viene inviata da un controllo descrizione comandi associato a un controllo in una finestra che non è un `CFrameWnd`, ad esempio un controllo in una finestra di dialogo o una visualizzazione form. Pertanto, è necessario per poter fornire una funzione del gestore per il **TTN_NEEDTEXT** messaggio di notifica per visualizzare le descrizioni per i controlli figlio.
+Questo gestore predefinito, tuttavia, non viene chiamato quando la notifica **TTN_NEEDTEXT** viene inviata da un controllo descrizione comando associato a un controllo in una finestra che non è `CFrameWnd`un oggetto, ad esempio un controllo in una finestra di dialogo o in una visualizzazione form. Pertanto, è necessario fornire una funzione di gestione per il messaggio di notifica **TTN_NEEDTEXT** per visualizzare le descrizioni comandi per i controlli figlio.
 
-Le descrizioni comandi predefinito fornite per windows da [CWnd:: EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) sono privi di testo associato. Per recuperare il testo del suggerimento da visualizzare, il **TTN_NEEDTEXT** notifica viene inviata alla finestra padre del controllo ToolTip poco prima che viene visualizzata la finestra di descrizione comando. Se non vi è alcun gestore per questo messaggio assegnare un valore per il *pszText* membro delle **TOOLTIPTEXT** strutturare, non vi sarà alcun testo visualizzato per la descrizione comando.
+Alle descrizioni comandi predefinite fornite per Windows da [CWnd:: EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) non è associato testo. Per recuperare il testo per la descrizione comando da visualizzare, la notifica **TTN_NEEDTEXT** viene inviata alla finestra padre del controllo ToolTip immediatamente prima che venga visualizzata la finestra descrizione comando. Se non è disponibile alcun gestore per questo messaggio per assegnare un valore al membro *pszText* della struttura **ToolTipText** , non verrà visualizzato alcun testo per la descrizione comandi.
 
 ## <a name="see-also"></a>Vedere anche
 

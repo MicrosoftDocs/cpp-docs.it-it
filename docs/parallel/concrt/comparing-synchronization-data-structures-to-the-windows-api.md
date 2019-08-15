@@ -5,46 +5,46 @@ helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d58431ae3f9859677302010f15a75b37ebedbf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414035"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510588"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Confronto delle strutture di dati di sincronizzazione con l'API Windows
 
-In questo argomento Confronta il comportamento delle strutture di dati di sincronizzazione forniti dal Runtime di concorrenza a quelle fornite dall'API di Windows.
+In questo argomento viene confrontato il comportamento delle strutture di dati di sincronizzazione fornite dal runtime di concorrenza a quelle fornite dall'API di Windows.
 
-Le strutture di dati di sincronizzazione forniti dal Runtime di concorrenza seguono le *modello di threading cooperativo*. Nel modello di threading cooperativo, le primitive di sincronizzazione restituiscono in modo esplicito le risorse di elaborazione agli altri thread. Questo comportamento è diverso dal *modello di threading preemptive*, in cui le risorse di elaborazione vengono trasferite agli altri thread per il sistema operativo o il controllo dell'utilità di pianificazione.
+Le strutture dei dati di sincronizzazione fornite dal runtime di concorrenza seguono il *modello*di threading cooperativo. Nel modello di threading cooperativo le primitive di sincronizzazione restituiscono in modo esplicito le risorse di elaborazione ad altri thread. Questo comportamento è diverso rispetto al *modello di threading preemptive*, in cui le risorse di elaborazione vengono trasferite ad altri thread dall'utilità di pianificazione di controllo o dal sistema operativo.
 
-## <a name="criticalsection"></a>critical_section
+## <a name="critical_section"></a>critical_section
 
-Il [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) classe è simile al Windows `CRITICAL_SECTION` struttura poiché può essere usato solo dal thread di un processo. Per altre informazioni sulle sezioni critiche nell'API di Windows, vedere [oggetti sezione critica](/windows/desktop/Sync/critical-section-objects).
+La classe [Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) è simile alla struttura di `CRITICAL_SECTION` Windows perché può essere utilizzata solo dai thread di un processo. Per ulteriori informazioni sulle sezioni critiche nell'API Windows, vedere [oggetti sezione critica](/windows/win32/Sync/critical-section-objects).
 
-## <a name="readerwriterlock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a>reader_writer_lock
 
-Il [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) classe è simile a blocchi in lettura/scrittura (SRW) di Windows. Nella tabella seguente vengono illustrate le analogie e differenze.
+La classe [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) è simile ai blocchi SRW (Windows Slim Reader/Writer). Nella tabella seguente vengono illustrate le analogie e le differenze.
 
 |Funzionalità|`reader_writer_lock`|Blocco SRW|
 |-------------|--------------------------|--------------|
-|Non è rientrante|Yes|Yes|
-|Possibile alzare di livello un lettore in un writer (supporto per l'aggiornamento)|No|No|
-|Può abbassare di livello un autore di un lettore (supporto per il downgrade)|No|No|
-|Blocco di scrittura preferenza|Yes|No|
-|Accesso FIFO per i writer|Yes|No|
+|Non rientrante|Sì|Yes|
+|Consente di innalzare di livello un reader a Writer (supporto dell'aggiornamento)|No|No|
+|Può abbassare di valore il writer a un lettore (supporto del downgrade)|No|No|
+|Blocco preferenza scrittura|Sì|No|
+|Accesso FIFO ai writer|Yes|No|
 
-Per altre informazioni sui blocchi SRW, vedere [blocchi Slim Reader/Writer (SRW)](https://msdn.microsoft.com/library/windows/desktop/aa904937) in Platform SDK.
+Per ulteriori informazioni sui blocchi SRW, vedere la pagina relativa ai [blocchi di Reader/Writer (SRW) Slim](/windows/win32/sync/slim-reader-writer--srw--locks) in Platform SDK.
 
 ## <a name="event"></a>event
 
-Il [Concurrency:: event](../../parallel/concrt/reference/event-class.md) classe è simile a un evento di reimpostazione manuale di Windows senza nome. Tuttavia, un `event` oggetto si comporta in modo cooperativo, mentre un evento di Windows si comporta preventivamente. Per altre informazioni sugli eventi di Windows, vedere [oggetti evento](/windows/desktop/Sync/event-objects).
+La classe [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) è simile a un evento di reimpostazione manuale di Windows senza nome. Tuttavia, un `event` oggetto si comporta in modo cooperativo, mentre un evento Windows si comporta in modo preemptive. Per ulteriori informazioni sugli eventi di Windows, vedere [oggetti evento](/windows/win32/Sync/event-objects).
 
 ## <a name="example"></a>Esempio
 
 ### <a name="description"></a>Descrizione
 
-Per comprendere meglio la differenza tra il `event` classe e gli eventi di Windows, si consideri l'esempio seguente. Questo esempio viene abilitato l'utilità di pianificazione creare al massimo due attività simultanee e quindi chiama due funzioni simili che utilizzano il `event` classe e un evento di reimpostazione manuale di Windows. Ogni funzione prima di tutto crea diverse attività in attesa di un evento venga segnalato condiviso. Ogni funzione restituisce quindi per le attività in esecuzione e quindi segnala l'evento. Ogni funzione attende quindi l'evento segnalato.
+Per comprendere meglio la differenza tra la `event` classe e gli eventi di Windows, si consideri l'esempio seguente. Questo esempio consente all'utilità di pianificazione di creare al massimo due attività simultanee e quindi chiama due funzioni simili che `event` usano la classe e un evento di reimpostazione manuale di Windows. Ogni funzione crea innanzitutto diverse attività che attendono che un evento condiviso venga segnalato. Ogni funzione restituisce quindi le attività in esecuzione e quindi segnala l'evento. Ogni funzione attende quindi l'evento segnalato.
 
 ### <a name="code"></a>Codice
 
@@ -81,9 +81,9 @@ Windows event:
     Context 13: received the event.
 ```
 
-Poiché il `event` classe si comporta in modo cooperativo, l'utilità di pianificazione può riassegnare le risorse di elaborazione a un altro contesto quando un evento è in attesa di passare allo stato segnalato. Pertanto, più lavoro avviene tramite la versione che usa il `event` classe. Nella versione che utilizza gli eventi di Windows, ogni attività in attesa deve passare allo stato segnalato prima che venga avviata l'attività successiva.
+Poiché la `event` classe si comporta in modo cooperativo, l'utilità di pianificazione può riallocare le risorse di elaborazione a un altro contesto quando un evento è in attesa di entrare nello stato segnalato. Pertanto, una maggiore quantità di lavoro viene eseguita dalla versione che `event` utilizza la classe. Nella versione che usa gli eventi di Windows, ogni attività in attesa deve entrare nello stato segnalato prima che l'attività successiva venga avviata.
 
-Per altre informazioni sulle attività, vedere [Task Parallelism](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Per ulteriori informazioni sulle attività, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
 ## <a name="see-also"></a>Vedere anche
 

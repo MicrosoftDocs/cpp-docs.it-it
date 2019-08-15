@@ -1,21 +1,21 @@
 ---
-title: length_is (C++ attributo COM)
+title: length_is (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409304"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514535"
 ---
-# <a name="lengthis"></a>length_is
+# <a name="length_is"></a>length_is
 
-Specifica il numero di elementi della matrice deve essere trasmesso.
+Specifica il numero di elementi della matrice da trasmettere.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ Specifica il numero di elementi della matrice deve essere trasmesso.
 ### <a name="parameters"></a>Parametri
 
 *expression*<br/>
-Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.
+Una o più espressioni del linguaggio C. Sono consentiti slot di argomento vuoti.
 
 ## <a name="remarks"></a>Note
 
-Il **length_is** C++ attributo ha la stessa funzionalità come il [length_is](/windows/desktop/Midl/length-is) attributo MIDL.
+L'attributo **length_is** C++ ha la stessa funzionalità dell'attributo MIDL di [length_is](/windows/win32/Midl/length-is) .
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [first_is](first-is.md) per un esempio di come specificare una sezione di una matrice.
+Vedere [first_is](first-is.md) per un esempio di come specificare una sezione di una matrice.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -42,10 +42,10 @@ Visualizzare [first_is](first-is.md) per un esempio di come specificare una sezi
 
 |||
 |-|-|
-|**Si applica a**|Nel campo **struct** oppure **union**, parametro di interfaccia, metodo di interfaccia|
+|**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

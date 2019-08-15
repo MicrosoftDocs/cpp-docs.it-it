@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7c799f3d44428643bccc2869255ffa4e9d194d70
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341073"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493128"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Ricerca di manifesti)
 
@@ -27,23 +27,23 @@ Specifica il comportamento per la ricerca del manifesto.
 
 ## <a name="remarks"></a>Note
 
-**/ALLOWISOLATION:No** indica che le DLL vengono caricate come se esistesse alcun manifesto e fa sì che il linker imposti il `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dell'intestazione facoltativa `DllCharacteristics` campo.
+**/ALLOWISOLATION: No** indica che le dll sono state caricate come se non fosse presente alcun manifesto e fa in `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` modo che il linker imposti il bit nel `DllCharacteristics` campo dell'intestazione facoltativa.
 
-**/ALLOWISOLATION** fa sì che il sistema operativo per le ricerche e caricamenti del manifesto.
+**/ALLOWISOLATION** fa sì che il sistema operativo esegua ricerche e caricamenti del manifesto.
 
 **/ALLOWISOLATION** è il valore predefinito.
 
-Quando l'isolamento è disabilitato per un file eseguibile, il caricatore di Windows non tenterà di trovare un manifesto dell'applicazione per il processo appena creato. Il nuovo processo non avrà un contesto di attivazione predefinito, anche se non esiste un manifesto all'interno dell'eseguibile o nella stessa directory dell'eseguibile con nome <em>nome-eseguibile</em>**. manifest**.
+Quando l'isolamento è disabilitato per un eseguibile, il caricatore di Windows non tenterà di trovare un manifesto dell'applicazione per il processo appena creato. Il nuovo processo non avrà un contesto di attivazione predefinito, anche se è presente un manifesto all'interno del file eseguibile o inserito nella stessa directory del file eseguibile con nome <em>eseguibile-nome</em> **. exe. manifest**.
 
-Per altre informazioni, vedere [Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference).
+Per ulteriori informazioni, vedere [riferimento ai file manifesto](/windows/win32/SbsCs/manifest-files-reference).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Selezionare il **le proprietà di configurazione** > **Linker** > **File manifesto** pagina delle proprietà.
+1. Selezionare la pagina delle proprietà del**file manifesto** del**linker** >  **Proprietà** > di configurazione.
 
-1. Modificare il **consentire isolamento** proprietà.
+1. Modificare la proprietà **Consenti isolamento** .
 
 ## <a name="see-also"></a>Vedere anche
 

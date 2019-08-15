@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: b75dc4110b785f0ab1f55ba5c31df7d3fc6fbd37
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c4bbdfccb2d6d8b167c537b7ae4df57c89438479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915750"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496508"
 ---
 # <a name="csacl-class"></a>Classe CSacl
 
@@ -36,7 +36,7 @@ class CSacl : public CAcl
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CSacl::CSacl](#csacl)|Costruttore.|
 |[CSacl:: ~ CSacl](#dtor)|Distruttore.|
@@ -52,7 +52,7 @@ class CSacl : public CAcl
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CSacl:: operator =](#operator_eq)|Operatore di assegnazione.|
 
@@ -64,7 +64,7 @@ Per impostare o recuperare il SACL nel descrittore di sicurezza di un oggetto, i
 
 Usare i metodi della classe forniti per aggiungere, rimuovere, creare ed eliminare voci ACE dall' `SACL` oggetto. Vedere anche [AtlGetSacl](security-global-functions.md#atlgetsacl) e [AtlSetSacl](security-global-functions.md#atlsetsacl).
 
-Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nella Windows SDK.
+Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/win32/SecAuthZ/access-control) nella Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -129,7 +129,7 @@ Restituisce true se la voce ACE viene aggiunta all' `CSacl` oggetto, false in ca
 
 Un `CSacl` oggetto contiene le voci di controllo di accesso (ACE) che specificano i tipi di tentativi di accesso che generano record di controllo nel registro eventi di sicurezza. Questo metodo aggiunge tale voce ACE all' `CSacl` oggetto.
 
-Per una descrizione dei diversi flag che è possibile impostare nel parametro *AceFlags* , vedere [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Per una descrizione dei diversi flag che è possibile impostare nel parametro *AceFlags* , vedere [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="csacl"></a>  CSacl::CSacl
 
@@ -222,7 +222,7 @@ Rimuove tutte `ACE` le `CSacl` eventuali strutture presenti nell'oggetto.
 ## <a name="see-also"></a>Vedere anche
 
 [Classe CAcl](../../atl/reference/cacl-class.md)<br/>
-[ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Assi](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[ACL](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Assi](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

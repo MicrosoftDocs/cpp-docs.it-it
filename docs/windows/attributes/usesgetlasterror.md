@@ -1,21 +1,21 @@
 ---
-title: usesgetlasterror (attributo COM C++)
+title: usesgetlasterror (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407068"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513888"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Indica al chiamante che se si verifica un errore quando si chiama tale funzione, quindi il chiamante può quindi chiamare `GetLastError` per recuperare il codice di errore.
+Indica al chiamante che se si verifica un errore durante la chiamata a tale funzione, il chiamante può quindi `GetLastError` chiamare per recuperare il codice di errore.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Indica al chiamante che se si verifica un errore quando si chiama tale funzione,
 
 ## <a name="remarks"></a>Note
 
-Il **usesgetlasterror** attributi di C++ ha la stessa funzionalità come la [usesgetlasterror](/windows/desktop/Midl/usesgetlasterror) attributo MIDL.
+L'attributo **usesgetlasterror** C++ ha la stessa funzionalità dell'attributo MIDL di [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) .
 
 ## <a name="example"></a>Esempio
 
-Vedere le [idl_module](idl-module.md) esempio per un esempio di come usare **usesgetlasterror**.
+Vedere l'esempio [idl_module](idl-module.md) per un esempio di come usare **usesgetlasterror**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -37,10 +37,10 @@ Vedere le [idl_module](idl-module.md) esempio per un esempio di come usare **use
 
 |||
 |-|-|
-|**Si applica a**|**modulo** attributo|
+|**Si applica a**|attributo **Module**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

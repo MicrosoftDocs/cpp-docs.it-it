@@ -1,17 +1,17 @@
 ---
-title: facoltativo (attributo COM C++)
+title: facoltativo (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: bc6422ff652cfaba5fa71285294b93c1f0e8990e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407588"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514352"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -25,11 +25,11 @@ Specifica un parametro facoltativo per una funzione membro.
 
 ## <a name="remarks"></a>Note
 
-Il **facoltativo** attributi di C++ ha la stessa funzionalità come la [facoltativo](/windows/desktop/Midl/optional) attributo MIDL.
+L'attributo **facoltativo** C++ ha la stessa funzionalità dell'attributo MIDL [facoltativo](/windows/win32/Midl/optional) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra la modalità **facoltativi** potrebbero essere usate:
+Il codice seguente illustra come può essere usato **facoltativo** :
 
 ```cpp
 // cpp_attr_ref_optional.cpp
@@ -53,7 +53,7 @@ __interface IFireTabCtrl : IDispatch
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

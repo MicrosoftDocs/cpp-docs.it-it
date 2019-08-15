@@ -31,14 +31,14 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 87ac912ab47483929b3afc2357331f8d97264b31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c5760eb5231d17a8b17fe5d21f1459a865c067
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341704"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500024"
 ---
-# <a name="access-waccess"></a>_access, _waccess
+# <a name="_access-_waccess"></a>_access, _waccess
 
 Determina se un file è di sola lettura o meno. Sono disponibili versioni più sicure. Vedere [_access_s, _waccess_s](access-s-waccess-s.md).
 
@@ -65,7 +65,7 @@ Attributo di lettura/scrittura.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ogni funzione restituisce 0 se il file ha la modalità specificata. La funzione restituisce -1 se il file specificato non esiste o non è la modalità specificata. In questo caso, `errno` viene impostato come illustrato nella tabella seguente.
+Ogni funzione restituisce 0 se il file ha la modalità specificata. La funzione restituisce-1 se il file specificato non esiste o non ha la modalità specificata. in questo caso, `errno` viene impostato come illustrato nella tabella seguente.
 
 |||
 |-|-|
@@ -77,20 +77,20 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 ## <a name="remarks"></a>Note
 
-Se usato con i file, il **Access** funzione determina se il file o directory specificata esiste e ha gli attributi specificati dal valore di *modalità*. Se usato con le directory **Access** determina solo se è presente nella directory specificata, in sistemi operativi Windows 2000 e versioni successive tutte le directory di aver letto e accesso in scrittura.
+Quando viene usato con i file, la funzione **_access** determina se il file o la directory specificata esiste e ha gli attributi specificati dal valore di *mode*. Quando viene usato con le directory, **_access** determina solo se la directory specificata esiste; in Windows 2000 e nei sistemi operativi successivi, tutte le directory hanno accesso in lettura e scrittura.
 
-|*modalità* valore|Controllo nel file|
+|valore della *modalità*|Controllo nel file|
 |------------------|---------------------|
 |00|Solo esistenza|
 |02|Sola scrittura|
 |04|Sola lettura|
 |06|Lettura e scrittura|
 
-Questa funzione verifica solo se il file e la directory sono di sola lettura o meno e non controlla le impostazioni di sicurezza del file system. A tale scopo è necessario un token di accesso. Per altre informazioni sula sicurezza del file system, vedere [Access Tokens](/windows/desktop/SecAuthZ/access-tokens) (Token di accesso). È disponibile una classe ATL per offrire questa funzionalità. Vedere [Classe CAccessToken](../../atl/reference/caccesstoken-class.md).
+Questa funzione verifica solo se il file e la directory sono di sola lettura o meno e non controlla le impostazioni di sicurezza del file system. A tale scopo è necessario un token di accesso. Per altre informazioni sula sicurezza del file system, vedere [Access Tokens](/windows/win32/SecAuthZ/access-tokens) (Token di accesso). È disponibile una classe ATL per offrire questa funzionalità. Vedere [Classe CAccessToken](../../atl/reference/caccesstoken-class.md).
 
-**waccess** è una versione a caratteri wide di **Access**; gli *path* argomento **waccess** è una stringa di caratteri "wide". **waccess** e **Access** hanno lo stesso comportamento in caso contrario.
+**_waccess** è una versione a caratteri wide di **_access**; l'argomento *path* per **_waccess** è una stringa di caratteri wide. **_waccess** e **_access** si comportano in modo identico.
 
-Questa funzione convalida i relativi parametri. Se *tracciato* è NULL oppure *modalità* non specifica una modalità valida, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su `EINVAL` e restituisce -1.
+Questa funzione convalida i relativi parametri. Se *path* è null o *mode* non specifica una modalità valida, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su `EINVAL` e restituisce -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -107,7 +107,7 @@ Questa funzione convalida i relativi parametri. Se *tracciato* è NULL oppure *m
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente usa **Access** per controllare il file denominato crt_ACCESS. C per vedere se esiste e se la scrittura è consentita.
+Nell'esempio seguente viene usato **_access** per controllare il file denominato crt_ACCESS. C per verificare se esiste e se la scrittura è consentita.
 
 ```C
 // crt_access.c

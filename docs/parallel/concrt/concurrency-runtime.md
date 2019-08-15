@@ -6,21 +6,21 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: a96c54a01788f03158b9fcdcd0bf72eb2b1ce84d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449689"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510556"
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 
 Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele affidabili, scalabili ed efficienti. Innalza il livello di astrazione in modo da evitare di dover gestire i dettagli dell'infrastruttura correlati alla concorrenza. È anche possibile usarlo per specificare i criteri di pianificazione che soddisfano le richieste di qualità del servizio delle applicazioni. Queste risorse permettono di iniziare a usare il runtime di concorrenza.
 
-Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/reference/reference-concurrency-runtime.md).
+Per la documentazione di riferimento, vedere [Reference](../../parallel/concrt/reference/reference-concurrency-runtime.md).
 
 > [!TIP]
->  Il runtime di concorrenza si basa fortemente sulle funzionalità C++11 e adotta lo stile C++ più moderno. Per altre informazioni, leggere [benvenuto indietro per C++](../../cpp/welcome-back-to-cpp-modern-cpp.md).
+>  Il runtime di concorrenza si basa fortemente sulle funzionalità C++11 e adotta lo stile C++ più moderno. Per altre informazioni, vedere [ C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md).
 
 ## <a name="choosing-concurrency-runtime-features"></a>Scelta delle funzionalità del runtime di concorrenza
 
@@ -61,9 +61,9 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 
 |||
 |-|-|
-|[Creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Vengono descritti alcuni punti chiave da tenere presenti quando si usa il Runtime di concorrenza per produrre operazioni asincrone in un'app UWP.|
-|[Procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Viene illustrato come combinare attività PPL con le `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` interfacce per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.|
-|[Esempi di app di Windows Runtime](https://code.msdn.microsoft.com/windowsapps)|Contiene esempi di codice scaricabile e demo di App per Windows 8. x. Gli esempi in C++ usano le funzionalità del runtime di concorrenza come attività della libreria PPL per elaborare i dati in background per mantenere l'esperienza utente reattiva.|
+|[Creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Vengono descritti alcuni dei punti chiave da tenere presenti quando si usa il runtime di concorrenza per produrre operazioni asincrone in un'app UWP.|
+|[Procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Viene illustrato come combinare le attività PPL con `IXMLHTTPRequest2` le `IXMLHTTPRequest2Callback` interfacce e per inviare richieste HTTP GET e post a un servizio Web in un'app UWP.|
+|[Esempi di app Windows Runtime](https://code.msdn.microsoft.com/windowsapps)|Contiene esempi di codice scaricabili e app demo per Windows 8. x. Gli esempi in C++ usano le funzionalità del runtime di concorrenza come attività della libreria PPL per elaborare i dati in background per mantenere l'esperienza utente reattiva.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programmazione del flusso di dati nella libreria di agenti asincroni
 
@@ -98,10 +98,10 @@ Per documentazione di riferimento, vedere [riferimento](../../parallel/concrt/re
 
 |||
 |-|-|
-|[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni sull'uso del Runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app di Windows Runtime scritte in C++ e XAML.|
+|[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](/previous-versions/windows/apps/jj160321(v=win.10))|Informazioni su come è stato usato il runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app C++ Windows Runtime con e XAML.|
 |[Blog relativo alla programmazione parallela in codice nativo](https://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|
 |[Forum relativo all'elaborazione parallela in C++ e codice nativo](https://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|
-|[Programmazione parallela](/dotnet/standard/parallel-programming/index)|Illustra il modello di programmazione parallelo che è disponibile in .NET Framework.|
+|[Programmazione parallela](/dotnet/standard/parallel-programming/index)|Viene illustrato il modello di programmazione parallela disponibile nel .NET Framework.|
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: ff8d9f214b4fe4d004691c54474dcdabf2c0af85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d5efc5c5f7ce81b4b60269b0c666fd5d24266e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314741"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492518"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Informazioni sulla generazione di manifesti per programmi C/C++
 
-Oggetto [manifesto](/windows/desktop/sbscs/manifests) è un documento XML che può essere un file XML esterno o una risorsa incorporato all'interno di un'applicazione o un assembly. Il manifesto di un' [applicazione isolata](/windows/desktop/SbsCs/isolated-applications) viene usato per gestire i nomi e le versioni di assembly side-by-side condivisi a cui l'applicazione deve essere associato in fase di esecuzione. Il manifesto di un assembly side-by-side consente di specificare le relative dipendenze in nomi, le versioni, le risorse e gli altri assembly.
+Un [manifesto](/windows/win32/sbscs/manifests) è un documento XML che può essere un file XML esterno o una risorsa incorporata all'interno di un'applicazione o di un assembly. Il manifesto di un' [applicazione isolata](/windows/win32/SbsCs/isolated-applications) viene utilizzato per gestire i nomi e le versioni degli assembly side-by-side condivisi a cui l'applicazione deve essere associata in fase di esecuzione. Il manifesto di un assembly side-by-side specifica le relative dipendenze da nomi, versioni, risorse e altri assembly.
 
-Esistono due modi per creare un manifesto per un'applicazione isolata o in un assembly side-by-side. In primo luogo, l'autore dell'assembly è possibile creare manualmente un file manifesto seguendo le regole e requisiti di denominazione. In alternativa, se un programma dipende solo gli assembly di Visual C++, ad esempio CRT, MFC, ATL o ad altri utenti, il manifesto può essere generato automaticamente dal linker.
+Esistono due modi per creare un manifesto per un'applicazione isolata o un assembly affiancato. In primo luogo, l'autore dell'assembly può creare manualmente un file manifesto che segue le regole e i requisiti di denominazione. In alternativa, se un programma dipende solo da assembly visivi C++ , ad esempio CRT, MFC, ATL o altri, un manifesto può essere generato automaticamente dal linker.
 
-Le intestazioni delle librerie Visual C++ contengono informazioni sull'assembly e quando sono incluse le librerie nel codice dell'applicazione, queste informazioni di assembly vengono usate dal linker per creare un manifesto per il file binario finale. Il linker non incorpora il file manifesto nel file binario e può solo generare il manifesto come file esterno. Presenza di un manifesto come file esterno potrebbe non funzionare per tutti gli scenari. Ad esempio, è consigliabile che gli assembly privati sono incorporati i manifesti. Nelle compilazioni della riga di comando, ad esempio quelle che usano nmake per compilare il codice, è possibile incorporare un manifesto usando lo strumento manifesto. per altre informazioni, vedere [Manifest Generation nella riga di comando](manifest-generation-at-the-command-line.md). Durante la compilazione in Visual Studio, è possibile incorporare un manifesto impostando una proprietà per lo strumento manifesto nel **proprietà progetto** finestra di dialogo, vedere [Manifest Generation in Visual Studio](manifest-generation-in-visual-studio.md).
+Le intestazioni delle librerie C++ visive contengono informazioni sull'assembly e, quando le librerie sono incluse nel codice dell'applicazione, le informazioni sull'assembly vengono usate dal linker per formare un manifesto per il file binario finale. Il linker non incorpora il file manifesto all'interno del file binario ed è in grado di generare il manifesto solo come file esterno. La presenza di un manifesto come file esterno potrebbe non funzionare per tutti gli scenari. Si consiglia, ad esempio, che gli assembly privati includano manifesti incorporati. Nelle compilazioni della riga di comando, ad esempio quelle che utilizzano NMAKE per compilare il codice, è possibile incorporare un manifesto mediante lo strumento Manifesto. Per ulteriori informazioni, vedere [generazione di manifesti dalla riga di comando](manifest-generation-at-the-command-line.md). Quando si compila in Visual Studio, è possibile incorporare un manifesto impostando una proprietà per lo strumento Manifesto nella finestra di dialogo delle **proprietà del progetto** . vedere [generazione di manifesti in Visual Studio](manifest-generation-in-visual-studio.md).
 
 ## <a name="see-also"></a>Vedere anche
 

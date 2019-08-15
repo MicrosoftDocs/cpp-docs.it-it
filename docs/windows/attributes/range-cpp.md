@@ -1,21 +1,21 @@
 ---
-title: intervallo (attributo COM C++)
+title: intervallo (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407484"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514150"
 ---
 # <a name="range-c"></a>range (C++)
 
-Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui valori vengono impostati in fase di esecuzione.
+Specifica un intervallo di valori consentiti per argomenti o campi i cui valori sono impostati in fase di esecuzione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,14 +26,14 @@ Specifica un intervallo di valori consentiti per gli argomenti o i campi i cui v
 ### <a name="parameters"></a>Parametri
 
 *low*<br/>
-Il valore minimo dell'intervallo.
+Valore dell'intervallo minimo.
 
 *high*<br/>
-Il valore massimo dell'intervallo.
+Valore di intervallo massimo.
 
 ## <a name="remarks"></a>Note
 
-Il **intervallo** attributi di C++ ha la stessa funzionalità come la [intervallo](/windows/desktop/Midl/range) attributo MIDL.
+L'attributo **Range** C++ ha la stessa funzionalità dell'attributo [Range](/windows/win32/Midl/range) MIDL.
 
 ## <a name="example"></a>Esempio
 
@@ -57,10 +57,10 @@ __interface ICustom {
 
 |||
 |-|-|
-|**Si applica a**|Metodo di interfaccia, parametro di interfaccia|
+|**Si applica a**|Metodo di interfaccia, parametro interface|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

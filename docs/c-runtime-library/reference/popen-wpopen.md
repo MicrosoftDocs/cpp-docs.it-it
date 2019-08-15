@@ -33,14 +33,14 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156161"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499594"
 ---
-# <a name="popen-wpopen"></a>_popen, _wpopen
+# <a name="_popen-_wpopen"></a>_popen, _wpopen
 
 Crea una pipe ed esegue un comando.
 
@@ -70,13 +70,13 @@ Modalità del flusso restituito.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un flusso associato a un'estremità della pipe creata. L'altra estremità della pipe viene associata all'input standard o all'output standard del comando generato. Le funzioni restituiscono **NULL** in caso di errore. Se l'errore è un parametro non valido, ad esempio se *comandi* oppure *modalità* è un puntatore null, o *modalità* non è una modalità valida, **errno** è impostato su **EINVAL**. Per informazioni sulle modalità valide, vedere la sezione Note.
+Restituisce un flusso associato a un'estremità della pipe creata. L'altra estremità della pipe viene associata all'input standard o all'output standard del comando generato. Le funzioni restituiscono **NULL** in caso di errore. Se l'errore è un parametro non valido, ad esempio se il *comando* o la *modalità* è un puntatore null o la *modalità* non è una modalità valida, **errno** viene impostato su **EINVAL**. Per informazioni sulle modalità valide, vedere la sezione Note.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **popen** funzione crea una pipe ed esegue in modo asincrono una copia generata del processore di comando con la stringa specificata *comando*. La stringa di caratteri *mode* specifica il tipo di accesso richiesto, come segue.
+La funzione **_popen** crea una pipe e esegue in modo asincrono una copia generata del processore dei comandi con il *comando*stringa specificato. La stringa di caratteri *mode* specifica il tipo di accesso richiesto, come segue.
 
 |Modalità di accesso|Descrizione|
 |-|-|
@@ -86,9 +86,9 @@ Il **popen** funzione crea una pipe ed esegue in modo asincrono una copia genera
 |**"t"**|Apertura in modalità testo.|
 
 > [!NOTE]
-> Se usato in un programma di Windows, il **popen** funzione restituisce un puntatore di file non valido che fa sì che il programma smette di rispondere indefinitamente. **popen** funziona correttamente in un'applicazione console. Per creare un'applicazione Windows che reindirizza input e output, vedere [creazione di un processo figlio con reindirizzato Input e Output](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) nel SDK di Windows.
+> Se utilizzata in un programma Windows, la funzione **_popen** restituisce un puntatore di file non valido che impedisce la risposta illimitata del programma. **_popen** funziona correttamente in un'applicazione console. Per creare un'applicazione Windows che reindirizza input e output, vedere Creazione di [un processo figlio con input e output](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) reindirizzati nel Windows SDK.
 
-**wpopen** è una versione a caratteri wide di **popen**; gli *percorso* argomento **wpopen** è una stringa di caratteri "wide". **wpopen** e **popen** hanno lo stesso comportamento in caso contrario.
+**_wpopen** è una versione a caratteri wide di **_popen**; l'argomento *path* per **_wpopen** è una stringa di caratteri wide. **_wpopen** e **_popen** si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

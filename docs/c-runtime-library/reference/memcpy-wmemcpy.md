@@ -24,12 +24,12 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-ms.openlocfilehash: afdb854bd28b55735cc6b5e26788307e2db0caa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f687e231060c287e206017dc61fe1d5193d8f0de
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156590"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499631"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy, wmemcpy
 
@@ -63,21 +63,21 @@ Numero di caratteri da copiare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore di *dest*.
+Valore di *dest*.
 
 ## <a name="remarks"></a>Note
 
-**memcpy** copie *conteggio* byte dal *src* alla *dest*; **wmemcpy** copie *conteggio* caratteri "wide" (due byte). Se l'origine e destinazione si sovrappongono, il comportamento delle **memcpy** è definito. Uso **memmove** per gestire le aree di sovrapposizione.
+**memcpy** copia i byte del *conteggio* da *src* a *dest*; **wmemcpy** copia il *numero* di caratteri wide (due byte). Se l'origine e la destinazione si sovrappongono, il comportamento di **memcpy** non è definito. Usare **memmove** per gestire le aree sovrapposte.
 
 > [!IMPORTANT]
-> Verificare che il buffer di destinazione abbia una dimensione maggiore o uguale al buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Verificare che il buffer di destinazione abbia una dimensione maggiore o uguale al buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 > [!IMPORTANT]
-> Perché così tante sovraccarichi del buffer e pertanto potenziali attacchi alla sicurezza, sono stati registrati per un utilizzo non corretto di **memcpy**, questa funzione viene elencata tra le funzioni "bloccate" da Security Development Lifecycle (SDL).  È possibile osservare che alcune classi di libreria VC + + continuano a usare **memcpy**.  Inoltre, è possibile osservare che l'ottimizzatore del compilatore VC + + a volte emette chiamate a **memcpy**.  Il prodotto Visual C++ viene sviluppato in conformità con il processo SDL, quindi l'utilizzo di questa funzione bloccata è stato esaminato attentamente.  In caso di utilizzo della funzione da parte di una libreria, le chiamate sono state analizzate attentamente per assicurare il blocco dei sovraccarichi del buffer attraverso tali chiamate.  Nel caso del compilatore, a volte alcuni modelli di codice vengono riconosciuti come identici rispetto al modello di **memcpy**e vengono quindi sostituiti con una chiamata alla funzione.  In questi casi, l'uso di **memcpy** non è più rischioso rispetto all'originale sarebbero state le istruzioni; sono state ottimizzate semplicemente a una chiamata per le prestazioni ottimizzate **memcpy** (funzione).  Il semplice utilizzo delle funzioni CRT "sicure" non garantisce la protezione (rendono solo il sistema un po' meno insicuro), così come l'utilizzo delle funzioni "bloccate" non espone maggiormente a rischi (richiedono solo un controllo maggiore che ne garantisca la sicurezza).
+> Poiché il numero di sovraccarichi del buffer e di conseguenza potenziali exploit di sicurezza è stato tracciato per un utilizzo non corretto di **memcpy**, questa funzione è elencata tra le funzioni "vietate" dal processo SDL (Security Development Lifecycle).  È possibile osservare che alcune classi di libreria VC + + continuano a usare **memcpy**.  Inoltre, è possibile osservare che l'utilità di ottimizzazione del compilatore VC + + a volte emette chiamate a **memcpy**.  Il prodotto Visual C++ viene sviluppato in conformità con il processo SDL, quindi l'utilizzo di questa funzione bloccata è stato esaminato attentamente.  In caso di utilizzo della funzione da parte di una libreria, le chiamate sono state analizzate attentamente per assicurare il blocco dei sovraccarichi del buffer attraverso tali chiamate.  Nel caso del compilatore, a volte alcuni modelli di codice vengono riconosciuti come identici al modello di **memcpy**e vengono quindi sostituiti con una chiamata alla funzione.  In questi casi, l'uso di **memcpy** non è più sicuro rispetto alle istruzioni originali. sono state semplicemente ottimizzate per una chiamata alla funzione **memcpy** ottimizzata per le prestazioni.  Il semplice utilizzo delle funzioni CRT "sicure" non garantisce la protezione (rendono solo il sistema un po' meno insicuro), così come l'utilizzo delle funzioni "bloccate" non espone maggiormente a rischi (richiedono solo un controllo maggiore che ne garantisca la sicurezza).
 >
-> In quanto **memcpy** utilizzo dalle librerie e compilatore VC + + è stato così scrupolosamente, queste chiamate sono permesse all'interno del codice conforme a SDL.  **memcpy** chiamate introdotte nel codice sorgente dell'applicazione sono conformi a SDL solo quando tale uso è stato esaminato da esperti di sicurezza.
+> Poiché l'utilizzo di **memcpy** da parte del compilatore e delle librerie di VC + + è stato analizzato in modo accurato, queste chiamate sono consentite all'interno del codice che è altrimenti conforme a SDL.  le chiamate **memcpy** introdotte nel codice sorgente dell'applicazione sono conformi al processo SDL solo quando tale utilizzo è stato esaminato da esperti di sicurezza.
 
-Il **memcpy** e **wmemcpy** funzioni verranno deprecate solo se la costante **_CRT_SECURE_DEPRECATE_MEMORY** è definita prima dell'istruzione di inclusione nell'ordine per le funzioni deprecate, ad esempio come illustrato nell'esempio riportato di seguito:
+Le funzioni **memcpy** e **wmemcpy** verranno deprecate solo se la costante **_CRT_SECURE_DEPRECATE_MEMORY** viene definita prima dell'istruzione di inclusione affinché le funzioni vengano deprecate, come nell'esempio seguente:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -102,7 +102,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [memmove](memmove-wmemmove.md) per un esempio d'uso **memcpy**.
+Per un esempio di come usare **memcpy**, vedere [memmove](memmove-wmemmove.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

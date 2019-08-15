@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: bff7f87fbdebbff9a1823ae8718c64be4f47a2ea
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 83b7beafe537f6b271b254d16505b515a41acf27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707441"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496698"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Creazione guidata componente ATL COM+ 1.0
 
@@ -29,10 +29,10 @@ Per altre informazioni sui progetti ATL e le classi ATL COM, vedere [Componenti 
 
    Indica il tipo di interfaccia supportata dall'oggetto. Per impostazione predefinita, l'oggetto supporta un'interfaccia duale.
 
-   |Opzione|Description|
+   |Opzione|Descrizione|
    |------------|-----------------|
    |**Doppia**|Specifica che l'oggetto supporta un'interfaccia duale (la relativa vtable dispone di funzioni di interfaccia personalizzate e metodi `IDispatch` di associazione tardiva). Consente sia ai client COM che ai controller di automazione di accedere all'oggetto.|
-   |**Personalizzato**|Specifica che l'oggetto supporta un'interfaccia personalizzata (la relativa vtable dispone di funzioni dell'interfaccia personalizzata). Un'interfaccia personalizzata può essere più veloce di un'interfaccia duale, in particolare attraverso i limiti dei processi.<br /><br /> - **Compatibile con l'automazione** Aggiunge il supporto per l'automazione all'interfaccia personalizzata. Per i progetti con attributi, imposta l'attributo **oleautomation** nella coclasse.|
+   |**Impostazione personalizzata**|Specifica che l'oggetto supporta un'interfaccia personalizzata (la relativa vtable dispone di funzioni dell'interfaccia personalizzata). Un'interfaccia personalizzata può essere più veloce di un'interfaccia duale, in particolare attraverso i limiti dei processi.<br /><br /> - **Compatibile con l'automazione** Aggiunge il supporto per l'automazione all'interfaccia personalizzata. Per i progetti con attributi, imposta l'attributo **oleautomation** nella coclasse.|
 
 - **Accodabile**
 
@@ -42,17 +42,17 @@ Per altre informazioni sui progetti ATL e le classi ATL COM, vedere [Componenti 
 
    Indica il supporto aggiuntivo per la gestione degli errori e il controllo degli oggetti.
 
-   |Opzione|Description|
+   |Opzione|Descrizione|
    |------------|-----------------|
    |**ISupportErrorInfo**|Crea il supporto per l'interfaccia [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) in modo che l'oggetto possa restituire le informazioni sull'errore al client.|
-   |**IObjectControl**|Fornisce all'oggetto l'accesso ai tre metodi [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol): [Activate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) e [Deactivate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
-   |**IObjectConstruct**|Crea il supporto per l'interfaccia [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) per gestire il passaggio dei parametri da altri metodi o oggetti.|
+   |**IObjectControl**|Fornisce all'oggetto l'accesso ai tre metodi [IObjectControl](/windows/win32/api/comsvcs/nn-comsvcs-iobjectcontrol): [Activate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) e [Deactivate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectConstruct**|Crea il supporto per l'interfaccia [IObjectConstruct](/windows/win32/api/comsvcs/nn-comsvcs-iobjectconstruct) per gestire il passaggio dei parametri da altri metodi o oggetti.|
 
 - **Transazione**
 
    Indica che l'oggetto supporta le transazioni. Include il file mtxattr.h nel file con estensione idl (progetti senza attributi).
 
-   |Opzione|Description|
+   |Opzione|Descrizione|
    |------------|-----------------|
    |**Supportato**|Specifica che l'oggetto non è mai la radice di un flusso di transazioni aggiungendo la macro per gli attributi del componente custom(TLBATTR_TRANS_SUPPORTED,0) al file con estensione h (progetti con attributi) o al file con estensione idl (progetti senza attributi).|
    |**Obbligatorio**|Specifica che l'oggetto può essere o meno la radice di un flusso di transazioni aggiungendo la macro per gli attributi del componente custom(TLBATTR_TRANS_REQUIRED,0) al file con estensione h (progetti con attributi) o al file con estensione idl (progetti senza attributi).|

@@ -1,5 +1,5 @@
 ---
-title: (ATL) nel conteggio dei riferimenti
+title: Conteggio dei riferimenti (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AddRef method [C++], reference counting
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-ms.openlocfilehash: fa160cb40af632321e1b14fd3ca88a4dd578b972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 565b74956280d4e80c41376ead4249e69980a80e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249652"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492227"
 ---
-# <a name="reference-counting"></a>Il conteggio dei riferimenti
+# <a name="reference-counting"></a>Conteggio dei riferimenti
 
-In COM non automaticamente tenta di rimuovere un oggetto dalla memoria quando ritiene che l'oggetto non è più in uso. Al contrario, il compito del programmatore deve rimuovere l'oggetto inutilizzato. Il programmatore determina se un oggetto possa essere rimossi in base a un conteggio dei riferimenti.
+COM non tenta automaticamente di rimuovere un oggetto dalla memoria quando ritiene che l'oggetto non venga più utilizzato. Il programmatore di oggetti deve invece rimuovere l'oggetto non utilizzato. Il programmatore determina se un oggetto può essere rimosso in base a un conteggio dei riferimenti.
 
-COM Usa il `IUnknown` metodi [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) e [versione](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release), per gestire il conteggio dei riferimenti delle interfacce in un oggetto. Le regole generali per la chiamata di questi metodi sono:
+COM utilizza i `IUnknown` metodi, [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) e [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release), per gestire il conteggio dei riferimenti delle interfacce in un oggetto. Le regole generali per la chiamata di questi metodi sono:
 
-- Ogni volta che un client riceve un puntatore a interfaccia `AddRef` deve essere chiamato sull'interfaccia.
+- Ogni volta che un client riceve un puntatore `AddRef` a interfaccia, deve essere chiamato sull'interfaccia.
 
-- Ogni volta che il client ha terminato di utilizzare il puntatore di interfaccia, è necessario chiamare `Release`.
+- Ogni volta che il client ha terminato l'uso del puntatore a interfaccia `Release`, deve chiamare.
 
-In un'implementazione semplice, ciascuna `AddRef` chiamare incrementi e ogni `Release` chiamare decrementa una variabile contatore all'interno dell'oggetto. Quando viene restituito il conteggio su zero, l'interfaccia non è più ha tutti gli utenti ed è possibile rimuovere se stesso dalla memoria.
+In un'implementazione semplice ogni `AddRef` chiamata incrementa e ogni `Release` chiamata decrementa una variabile contatore all'interno dell'oggetto. Quando il conteggio viene restituito a zero, l'interfaccia non ha più utenti ed è libera di rimuoverla dalla memoria.
 
-Il conteggio dei riferimenti può anche essere implementato in modo che ogni riferimento all'oggetto (non a una singola interfaccia) viene conteggiato. In questo caso, ogni `AddRef` e `Release` chiama delegati a un'implementazione centrale per l'oggetto, e `Release` libera l'intero oggetto quando il conteggio dei riferimenti raggiunge zero.
+Il conteggio dei riferimenti può anche essere implementato in modo che ogni riferimento all'oggetto (non a una singola interfaccia) venga conteggiato. In questo caso, ogni `AddRef` e `Release` chiama delegati a un'implementazione centrale sull'oggetto e `Release` libera l'intero oggetto quando il conteggio dei riferimenti raggiunge zero.
 
 > [!NOTE]
->  Quando un `CComObject`-oggetto derivato viene costruito usando il **nuovi** (operatore), il conteggio dei riferimenti è 0. Pertanto, una chiamata a `AddRef` devono essere apportate dopo la corretta creazione la `CComObject`-oggetto derivato.
+>  Quando un `CComObject`oggetto derivato da viene costruito usando l'operatore **New** , il conteggio dei riferimenti è 0. Pertanto, una chiamata a `AddRef` deve essere eseguita dopo la creazione dell' `CComObject`oggetto derivato da.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Introduzione a COM](../atl/introduction-to-com.md)<br/>
-[La gestione della durata degli oggetti tramite il conteggio dei riferimenti](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)
+[Gestione della durata degli oggetti tramite il conteggio dei riferimenti](/windows/win32/com/managing-object-lifetimes-through-reference-counting)

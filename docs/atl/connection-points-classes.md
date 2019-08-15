@@ -6,32 +6,32 @@ helpviewer_keywords:
 - classes [C++], connection points
 - connection points classes
 ms.assetid: 076365fa-299a-4dce-84c3-a5dff0e0da1f
-ms.openlocfilehash: 8e1ee67f75af1fa38693f7ddb487580ab733cc58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dba06b072e1e9ca545ccbea196fcfe371b02157
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250814"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492451"
 ---
-# <a name="connection-points-classes"></a>Classi dei punti di connessione
+# <a name="connection-points-classes"></a>Classi di punti di connessione
 
 Le classi seguenti forniscono supporto per i punti di connessione:
 
-- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) implementa un contenitore del punto di connessione.
+- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) Implementa un contenitore del punto di connessione.
 
-- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) implementa un punto di connessione.
+- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) Implementa un punto di connessione.
 
-- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) implementa un punto di connessione che rappresenta il [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) interfaccia.
+- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) Implementa un punto di connessione che rappresenta l'interfaccia [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) .
 
-- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) gestisce le connessioni senza limite tra un punto di connessione e il sink.
+- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) Gestisce connessioni illimitate tra un punto di connessione e i relativi sink.
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md) gestisce un numero fisso di connessioni tra un punto di connessione e il sink.
+- [CComUnkArray](../atl/reference/ccomunkarray-class.md) Gestisce un numero fisso di connessioni tra un punto di connessione e i relativi sink.
 
-- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) notifica a un sink del client che una proprietà dell'oggetto è stato modificato o sta per essere modificata.
+- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) Notifica al sink di un client che la proprietà di un oggetto è stata modificata o sta per essere modificata.
 
-- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) fornisce il supporto per i punti di connessione per un oggetto ATL COM. Vengono eseguito il mapping di questi punti di connessione con una mappa eventi sink, che viene fornita dall'oggetto COM.
+- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) Fornisce supporto per i punti di connessione per un oggetto COM ATL. A questi punti di connessione viene eseguito il mapping con una mappa di sink di eventi, fornita dall'oggetto COM.
 
-- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) eseguire il mapping funziona in combinazione con il sink di evento nella classe per instradare gli eventi per la funzione del gestore appropriato.
+- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) Funziona insieme alla mappa di sink di evento nella classe per indirizzare gli eventi alla funzione del gestore appropriata.
 
 ## <a name="related-articles"></a>Articoli correlati
 

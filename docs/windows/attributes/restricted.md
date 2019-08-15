@@ -1,21 +1,21 @@
 ---
-title: con restrizioni (attributo COM C++)
+title: Restricted (C++ attributo com)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407354"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514066"
 ---
 # <a name="restricted"></a>restricted
 
-Specifica che un membro di un modulo, interfaccia o interfaccia dispatch non può essere chiamato in modo arbitrario.
+Specifica che un membro di un modulo, di un'interfaccia o di un'interfaccia dispatch non può essere chiamato in modo arbitrario.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,16 +27,16 @@ Specifica che un membro di un modulo, interfaccia o interfaccia dispatch non pu�
 
 ### <a name="parameters"></a>Parametri
 
-*interfaces*<br/>
-Una o più interfacce che non possono essere chiamate in modo arbitrario su un oggetto COM. Questo parametro è valido solo quando viene applicato a una classe.
+*interfacce*<br/>
+Una o più interfacce che non possono essere chiamate arbitrariamente su un oggetto COM. Questo parametro è valido solo se applicato a una classe.
 
 ## <a name="remarks"></a>Note
 
-Il **con restrizioni** attributi di C++ ha la stessa funzionalità come il [limitato](/windows/desktop/Midl/restricted) attributo MIDL.
+L' C++ attributo Restricted ha la stessa funzionalità dell'attributo MIDL [limitato](/windows/win32/Midl/restricted) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente viene illustrato come utilizzare il **limitato** attributo:
+Nel codice seguente viene illustrato come utilizzare l' attributo Restricted:
 
 ```cpp
 // cpp_attr_ref_restricted.cpp
@@ -67,10 +67,10 @@ class c : public a, public b
 
 |||
 |-|-|
-|**Si applica a**|Metodo, dell'interfaccia **interface**, **classe**, **struct**|
+|**Si applica a**|Metodo di interfaccia, **interfaccia**, **classe**, **struct**|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|**Coclasse** (quando applicato a **classe** oppure **struct**)|
-|**Attributi non validi**|nessuno|
+|**Attributi obbligatori**|**coclasse** (quando applicato alla **classe** o allo **struct**)|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

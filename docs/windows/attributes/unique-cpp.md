@@ -1,17 +1,17 @@
 ---
-title: Unique (attributo COM C++)
+title: Unique (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: c5d7a2d60dc295a4390f777a9ff3718f41321ddd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91e563ed121ba09e0c2ca2660f30c75956232ea0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407107"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514910"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -25,11 +25,11 @@ Specifica un puntatore univoco.
 
 ## <a name="remarks"></a>Note
 
-Il **univoco** attributi di C++ ha la stessa funzionalità come la [univoco](/windows/desktop/Midl/unique) attributo MIDL.
+L'attributo **Unique** C++ ha la stessa funzionalità dell'attributo MIDL [univoco](/windows/win32/Midl/unique) .
 
 ## <a name="example"></a>Esempio
 
-Vedere le [ref](ref-cpp.md) per un esempio dell'uso di esempio **univoco**.
+Vedere l'esempio [ref](ref-cpp.md) per un esempio di utilizzo di **Unique**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -37,10 +37,10 @@ Vedere le [ref](ref-cpp.md) per un esempio dell'uso di esempio **univoco**.
 
 |||
 |-|-|
-|**Si applica a**|**typedef**, **struct**, **union**, parametro di interfaccia, metodo di interfaccia|
+|**Si applica a**|**typedef**, **struct**, **Union**, parametro di interfaccia, metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

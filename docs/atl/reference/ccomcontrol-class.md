@@ -19,19 +19,19 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: ffbec7c1a83c0dd829878f4c73340528d32fb852
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf0f64d8c7b8e8a3347e4c0fcad902b9e8a0ecb4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246499"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497524"
 ---
 # <a name="ccomcontrol-class"></a>Classe CComControl
 
-Questa classe fornisce metodi per la creazione e gestione dei controlli ATL.
+Questa classe fornisce metodi per la creazione e la gestione di controlli ATL.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,16 +44,16 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-La classe di implementazione del controllo.
+Classe che implementa il controllo.
 
 *WinBase*<br/>
-Classe di base che implementa le funzioni di windowing. Per impostazione predefinita [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
+Classe base che implementa le funzioni di windowing. Il valore predefinito è [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CComControl::CComControl](#ccomcontrol)|Costruttore.|
 
@@ -62,18 +62,18 @@ Classe di base che implementa le funzioni di windowing. Per impostazione predefi
 |Nome|Descrizione|
 |----------|-----------------|
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|Recupera un puntatore all'interfaccia richiesta.|
-|[CComControl::CreateControlWindow](#createcontrolwindow)|Crea una finestra del controllo.|
-|[CComControl::FireOnChanged](#fireonchanged)|Notifica al sink del contenitore che una proprietà del controllo è stato modificato.|
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Notifica al sink del contenitore che una proprietà del controllo sta per essere modificata e che l'oggetto viene chiesto il sink come procedere.|
-|[CComControl::MessageBox](#messagebox)|Chiamare questo metodo per creare, visualizzare e gestire una finestra di messaggio.|
+|[CComControl::CreateControlWindow](#createcontrolwindow)|Crea una finestra per il controllo.|
+|[CComControl::FireOnChanged](#fireonchanged)|Notifica al sink del contenitore che una proprietà del controllo è stata modificata.|
+|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Notifica al sink del contenitore che una proprietà del controllo sta per essere modificata e che l'oggetto chiede al sink come continuare.|
+|[CComControl::MessageBox](#messagebox)|Chiamare questo metodo per creare, visualizzare e utilizzare una finestra di messaggio.|
 
 ## <a name="remarks"></a>Note
 
-`CComControl` è un set di funzioni di supporto di controllo utile e i membri dati essenziali per i controlli ATL. Quando si crea un controllo standard o un controllo DHTML utilizzando la creazione guidata controllo ATL, la procedura guidata verrà automaticamente derivare la classe da `CComControl`. `CComControl` deriva la maggior parte dei relativi metodi dallo [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).
+`CComControl`è un set di funzioni di supporto del controllo utili e membri dati essenziali per i controlli ATL. Quando si crea un controllo standard o un controllo DHTML mediante la creazione guidata controllo ATL, la procedura guidata deriverà automaticamente la `CComControl`classe da. `CComControl`deriva la maggior parte dei metodi da [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).
 
-Per altre informazioni sulla creazione di un controllo, vedere la [esercitazione di ATL](../../atl/active-template-library-atl-tutorial.md). Per altre informazioni sulla creazione guidata progetto ATL, vedere l'articolo [creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md).
+Per ulteriori informazioni sulla creazione di un controllo, vedere l' [esercitazione di ATL](../../atl/active-template-library-atl-tutorial.md). Per ulteriori informazioni sulla creazione guidata progetto ATL, vedere l'articolo [creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md).
 
-Per una dimostrazione relativa `CComControl` metodi e membri dati, vedere la [CIRC](../../overview/visual-cpp-samples.md) esempio.
+Per una dimostrazione di `CComControl` metodi e membri dati, vedere l'esempio [circ](../../overview/visual-cpp-samples.md) .
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -87,7 +87,7 @@ Per una dimostrazione relativa `CComControl` metodi e membri dati, vedere la [CI
 
 **Intestazione:** atlctl. h
 
-##  <a name="ccomcontrol"></a>  CComControl::CComControl
+##  <a name="ccomcontrol"></a>CComControl:: CComControl
 
 Costruttore.
 
@@ -97,7 +97,7 @@ CComControl();
 
 ### <a name="remarks"></a>Note
 
-Chiama il [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) costruttore, passando il `m_hWnd` membro dati ereditate tramite [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
+Chiama il costruttore [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) , passando il `m_hWnd` membro dati ereditato tramite [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
 ##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface
 
@@ -110,22 +110,22 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="parameters"></a>Parametri
 
 *iid*<br/>
-[in] Il GUID dell'interfaccia richiesto.
+in GUID dell'interfaccia richiesta.
 
 *ppv*<br/>
-[out] Un puntatore al puntatore a interfaccia identificato dal *iid*, oppure NULL se l'interfaccia non viene trovato.
+out Puntatore al puntatore a interfaccia identificato da *IID*oppure null se l'interfaccia non viene trovata.
 
 ### <a name="remarks"></a>Note
 
-gestisce solo le interfacce nella tabella di mappe COM.
+Gestisce solo le interfacce nella tabella della mappa COM.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]
 
-##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow
+##  <a name="createcontrolwindow"></a>CComControl:: CreateControlWindow
 
-Per impostazione predefinita, crea una finestra per il controllo chiamando `CWindowImpl::Create`.
+Per impostazione predefinita, crea una finestra per il controllo `CWindowImpl::Create`chiamando.
 
 ```
 virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
@@ -134,14 +134,14 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="parameters"></a>Parametri
 
 *hWndParent*<br/>
-[in] Handle per la finestra padre o proprietaria. È necessario specificare un handle della finestra valida. La finestra di controllo è limitata all'area della finestra padre.
+in Handle per la finestra padre o proprietario. È necessario specificare un handle di finestra valido. La finestra di controllo è confinata all'area della relativa finestra padre.
 
 *rcPos*<br/>
-[in] Le dimensioni iniziali e la posizione della finestra da creare.
+in Dimensioni e posizione iniziali della finestra da creare.
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override di questo metodo se si desidera eseguire un'operazione diverso da creare una singola finestra, ad esempio, per creare due finestre, uno dei quali diventa una barra degli strumenti per il controllo.
+Eseguire l'override di questo metodo se si desidera eseguire un'operazione diversa da creare una singola finestra, ad esempio per creare due finestre, una delle quali diventa una barra degli strumenti per il controllo.
 
 ### <a name="example"></a>Esempio
 
@@ -149,7 +149,7 @@ Eseguire l'override di questo metodo se si desidera eseguire un'operazione diver
 
 ##  <a name="fireonchanged"></a>  CComControl::FireOnChanged
 
-Notifica al sink del contenitore che una proprietà del controllo è stato modificato.
+Notifica al sink del contenitore che una proprietà del controllo è stata modificata.
 
 ```
 HRESULT FireOnChanged(DISPID dispID);
@@ -158,17 +158,17 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="parameters"></a>Parametri
 
 *dispID*<br/>
-[in] Identificatore della proprietà che è stato modificato.
+in Identificatore della proprietà modificata.
 
 ### <a name="return-value"></a>Valore restituito
 
-Uno dei valori di HRESULT standard.
+Uno dei valori HRESULT standard.
 
 ### <a name="remarks"></a>Note
 
-Se la classe del controllo deriva da [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), questo metodo chiama [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) per notificare tutti connesso `IPropertyNotifySink` interfacce che dovranno essere il controllo specificato proprietà è stata modificata. Se la classe del controllo non deriva da `IPropertyNotifySink`, questo metodo restituisce S_OK.
+Se la classe del controllo deriva da [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink), questo metodo chiama [CFirePropNotifyEvent:: FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) per notificare a `IPropertyNotifySink` tutte le interfacce connesse che la proprietà del controllo specificata è stata modificata. Se la classe del controllo non deriva da `IPropertyNotifySink`, questo metodo restituisce S_OK.
 
-Questo metodo è sicuro chiamare anche se il controllo non supporta i punti di connessione.
+Questo metodo è sicuro da chiamare anche se il controllo non supporta i punti di connessione.
 
 ### <a name="example"></a>Esempio
 
@@ -176,7 +176,7 @@ Questo metodo è sicuro chiamare anche se il controllo non supporta i punti di c
 
 ##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit
 
-Notifica al sink del contenitore che una proprietà del controllo sta per essere modificata e che l'oggetto viene chiesto il sink come procedere.
+Notifica al sink del contenitore che una proprietà del controllo sta per essere modificata e che l'oggetto chiede al sink come continuare.
 
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -185,25 +185,25 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="parameters"></a>Parametri
 
 *dispID*<br/>
-[in] Identificatore della proprietà per essere modificata.
+in Identificatore della proprietà da modificare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Uno dei valori di HRESULT standard.
+Uno dei valori HRESULT standard.
 
 ### <a name="remarks"></a>Note
 
-Se la classe del controllo deriva da [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), questo metodo chiama [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) per notificare tutti connesso `IPropertyNotifySink` interfacce che dovranno essere specificati proprietà di un controllo sta per essere modificata. Se la classe del controllo non deriva da `IPropertyNotifySink`, questo metodo restituisce S_OK.
+Se la classe del controllo deriva da [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink), questo metodo chiama [CFirePropNotifyEvent:: FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) per inviare una notifica `IPropertyNotifySink` a tutte le interfacce connesse che la proprietà del controllo specificata sta per cambiare. Se la classe del controllo non deriva da `IPropertyNotifySink`, questo metodo restituisce S_OK.
 
-Questo metodo è sicuro chiamare anche se il controllo non supporta i punti di connessione.
+Questo metodo è sicuro da chiamare anche se il controllo non supporta i punti di connessione.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]
 
-##  <a name="messagebox"></a>  CComControl::MessageBox
+##  <a name="messagebox"></a>CComControl:: MessageBox
 
-Chiamare questo metodo per creare, visualizzare e gestire una finestra di messaggio.
+Chiamare questo metodo per creare, visualizzare e utilizzare una finestra di messaggio.
 
 ```
 int MessageBox(
@@ -215,21 +215,21 @@ int MessageBox(
 ### <a name="parameters"></a>Parametri
 
 *lpszText*<br/>
-Il testo da visualizzare nella finestra di messaggio.
+Testo da visualizzare nella finestra di messaggio.
 
 *lpszCaption*<br/>
-Il titolo della finestra di dialogo. Se NULL (predefinito), il titolo viene usato "Error".
+Titolo della finestra di dialogo. Se NULL (impostazione predefinita), viene usato il titolo "Error".
 
 *nType*<br/>
-Specifica il contenuto e il comportamento della finestra di dialogo. Vedere le [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) voce nella documentazione di Windows SDK per un elenco delle finestre di messaggio diversi disponibili. L'impostazione predefinita offre un semplice **OK** pulsante.
+Specifica il contenuto e il comportamento della finestra di dialogo. Per un elenco delle diverse finestre di messaggio disponibili, vedere la voce relativa al [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) nella documentazione Windows SDK. Il valore predefinito fornisce un semplice pulsante **OK** .
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un valore intero che specifica uno dei valori di voci di menu elencati sotto [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) nella documentazione di Windows SDK.
+Restituisce un valore intero che specifica uno dei valori delle voci di menu elencate in [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) nella documentazione Windows SDK.
 
 ### <a name="remarks"></a>Note
 
-`MessageBox` è utile durante lo sviluppo e come un modo semplice per visualizzare un messaggio di errore o avviso all'utente.
+`MessageBox`è utile sia durante lo sviluppo sia come metodo semplice per visualizzare un messaggio di errore o di avviso all'utente.
 
 ## <a name="see-also"></a>Vedere anche
 

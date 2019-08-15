@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285149"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501019"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -65,13 +65,13 @@ Numero di caratteri.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore di *dest*.
+Valore di *dest*.
 
 ## <a name="remarks"></a>Note
 
-Imposta i primi *conteggio* caratteri di *dest* al carattere *c*.
+Imposta i primi caratteri di *conteggio* di *dest* sul carattere *c*.
 
-**Nota sulla sicurezza** assicurarsi che il buffer di destinazione abbia spazio sufficiente per almeno *conteggio* caratteri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Nota sulla sicurezza** Verificare che il buffer di destinazione disponga di spazio sufficiente per almeno i caratteri di *conteggio* . Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -19,38 +19,38 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 489db046910cc4b44e381b3f9056cfe8f8b7ccfa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306148"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511111"
 ---
 # <a name="tn006-message-maps"></a>TN006: Mappe messaggi
 
-In questa nota descrive le funzionalità di mappa dei messaggi MFC.
+Questa nota descrive la funzionalità di mapping dei messaggi MFC.
 
 ## <a name="the-problem"></a>Il problema
 
-Microsoft Windows implementa funzioni virtuali nelle classi di finestre che usano la funzionalità di messaggistica. A causa dell'elevato numero dei messaggi coinvolti, fornendo una funzione virtuale separata per ogni messaggio Windows creerebbe un oggetto vtable estremamente grande.
+Microsoft Windows implementa funzioni virtuali nelle classi finestra che usano la relativa funzionalità di messaggistica. A causa dell'elevato numero di messaggi correlati, la fornitura di una funzione virtuale separata per ogni messaggio di Windows creerebbe una vtable eccessivamente grande.
 
-Poiché il numero di messaggi definiti dal sistema di Windows cambia nel corso del tempo, e poiché le applicazioni possono definire i propri messaggi di Windows, esegue il mapping di messaggio forniscono un livello di riferimento indiretto che impedisce modifiche all'interfaccia di danneggiare il codice esistente.
+Poiché il numero di messaggi di Windows definiti dal sistema cambia nel tempo e poiché le applicazioni possono definire i propri messaggi di Windows, le mappe messaggi forniscono un livello di riferimento indiretto che impedisce alle modifiche dell'interfaccia di suddividere il codice esistente.
 
 ## <a name="overview"></a>Panoramica
 
-MFC offre un'alternativa all'istruzione switch che è stato usato per gestire i messaggi inviati a una finestra nei programmi tradizionali basati su Windows. È possibile definire un mapping dai messaggi ai metodi in modo che quando viene ricevuto un messaggio da una finestra, il metodo appropriato viene chiamato automaticamente. Questa funzionalità della mappa messaggi è progettata per essere simile a funzioni virtuali ma presenta vantaggi aggiuntivi non sono disponibili con funzioni virtuali C++.
+MFC fornisce un'alternativa all'istruzione switch utilizzata nei programmi tradizionali basati su Windows per gestire i messaggi inviati a una finestra. Un mapping dai messaggi ai metodi può essere definito in modo che, quando un messaggio viene ricevuto da una finestra, il metodo appropriato venga chiamato automaticamente. Questa funzionalità per la mappa messaggi è progettata per assomigliare alle funzioni virtuali, ma offre vantaggi C++ aggiuntivi non possibili con le funzioni virtuali.
 
-## <a name="defining-a-message-map"></a>La definizione di una mappa messaggi
+## <a name="defining-a-message-map"></a>Definizione di una mappa messaggi
 
-Il [DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) macro dichiara tre membri per una classe.
+La macro [DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map) dichiara tre membri per una classe.
 
-- Chiamata di una matrice privata di voci AFX_MSGMAP_ENTRY *_messageEntries*.
+- Matrice privata di voci AFX_MSGMAP_ENTRY chiamate *_messageEntries*.
 
-- Chiamata di una struttura AFX_MSGMAP protetta *messageMap* che punta al *_messageEntries* matrice.
+- Struttura AFX_MSGMAP protetta denominata *MessageMap* che punta alla matrice *_messageEntries* .
 
-- Una funzione virtuale protetta chiamata `GetMessageMap` che restituisce l'indirizzo del *messageMap*.
+- Funzione virtuale protetta denominata `GetMessageMap` che restituisce l'indirizzo di *MessageMap*.
 
-Questa macro deve essere inserita nella dichiarazione di una classe con le mappe messaggi. Per convenzione, è alla fine della dichiarazione di classe. Ad esempio:
+Questa macro deve essere inserita nella dichiarazione di qualsiasi classe usando le mappe messaggi. Per convenzione, si trova alla fine della dichiarazione di classe. Ad esempio:
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -66,18 +66,18 @@ protected:
 };
 ```
 
-Si tratta del formato generato da AppWizard e ClassWizard durante la creazione di nuove classi. Il / / {{e / o}} parentesi quadre sono necessari per la creazione guidata classe.
+Questo è il formato generato da Creazione guidata applicazioni e ClassWizard quando creano nuove classi. Per ClassWizard sono necessarie parentesi quadre//{{e//}}.
 
-Nella tabella della mappa messaggi viene definita mediante un set di macro che si espandono in voci della mappa messaggi. Inizia una tabella con una [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) chiamata di macro, che definisce la classe che viene gestita da questa mappa dei messaggi e la classe padre a cui vengono passati messaggi non gestiti. La tabella termina con il [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) chiamata della macro.
+La tabella della mappa messaggi viene definita utilizzando un set di macro che si espandono in voci della mappa messaggi. Una tabella inizia con una chiamata di macro [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) , che definisce la classe gestita da questa mappa messaggi e la classe padre a cui vengono passati i messaggi non gestiti. La tabella termina con la chiamata della macro [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) .
 
-Tra queste due macro chiamate è una voce per ogni messaggio gestite da questa mappa messaggi. Tutti i messaggi Windows standard sono una macro del form on_wm*MESSAGE_NAME* che genera una voce per il messaggio.
+Tra queste due chiamate macro è presente una voce per ogni messaggio che deve essere gestito da questa mappa messaggi. Ogni messaggio standard di Windows ha una macro del formato ON_WM_*MESSAGE_NAME* che genera una voce per quel messaggio.
 
-Una firma della funzione standard è stata definita per la decompressione dei parametri di ogni messaggio di Windows e fornire l'indipendenza dai tipi. Queste firme possono trovarsi nel file AFXWIN. h nella dichiarazione di [CWnd](../mfc/reference/cwnd-class.md). Ognuno di essi è contrassegnato con la parola chiave **afx_msg** per facilitare l'identificazione.
+È stata definita una firma di funzione standard per decomprimere i parametri di ogni messaggio di Windows e garantire l'indipendenza dai tipi. Queste firme sono reperibili nel file AFXWIN. h nella dichiarazione di [CWnd](../mfc/reference/cwnd-class.md). Ognuna di esse è contrassegnata con la parola chiave **afx_msg** per facilitarne l'identificazione.
 
 > [!NOTE]
-> ClassWizard richiede l'uso di **afx_msg** parola chiave nelle dichiarazioni del gestore mappa messaggi.
+> Per ClassWizard è necessario usare la parola chiave **afx_msg** nelle dichiarazioni del gestore della mappa messaggi.
 
-Queste firme di funzione sono state derivate mediante una convenzione di semplice. Il nome della funzione inizia sempre con `"On`". Questa è seguita dal nome del messaggio di Windows con il rimosso "WM _" e la prima lettera di ogni parola in maiuscolo. L'ordine dei parametri viene *wParam* aggiungendo `LOWORD`(*lParam*) quindi `HIWORD`(*lParam*). Non vengono passati i parametri inutilizzati. Tutti gli handle sono a wrapping da classi MFC vengono convertiti in puntatori agli oggetti appropriati di MFC. Nell'esempio seguente viene illustrato come gestire il messaggio WM_PAINT e causare la `CMyWnd::OnPaint` funzione da chiamare:
+Queste firme di funzione sono state derivate mediante una convenzione semplice. Il nome della funzione inizia sempre con `"On`". Questa operazione è seguita dal nome del messaggio di Windows con "WM_" rimosso e dalla prima lettera di ogni parola maiuscola. L'ordine dei parametri è *wParam* seguito `LOWORD`da (*lParam*), quindi `HIWORD`(*lParam*). I parametri inutilizzati non vengono passati. Gli handle di cui è stato eseguito il wrapper dalle classi MFC vengono convertiti in puntatori agli oggetti MFC appropriati. Nell'esempio seguente viene illustrato come gestire il messaggio WM_PAINT e causare la `CMyWnd::OnPaint` chiamata della funzione:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -87,14 +87,14 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-La tabella di mappa del messaggio deve essere definita all'esterno dell'ambito di qualsiasi definizione di funzione o classe. Non devono essere inserita in un blocco di extern "C".
+La tabella della mappa messaggi deve essere definita al di fuori dell'ambito di una funzione o di una definizione di classe. Non deve essere inserito in un blocco extern "C".
 
 > [!NOTE]
-> ClassWizard modificherà le voci della mappa messaggi che si verificano tra il / / {{e / o}} parentesi quadra di commento.
+> ClassWizard modificherà le voci della mappa messaggi che si verificano tra la parentesi di commento//{{e//}}.
 
 ## <a name="user-defined-windows-messages"></a>Messaggi di Windows definiti dall'utente
 
-Messaggi definiti dall'utente possono essere inclusi in una mappa messaggi usando la [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) macro. Questa macro accetta un numero di messaggio e un metodo del form:
+I messaggi definiti dall'utente possono essere inclusi in una mappa messaggi utilizzando la macro [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) . Questa macro accetta un numero di messaggio e un metodo nel formato seguente:
 
 ```cpp
     // inside the class declaration
@@ -107,21 +107,21 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-In questo esempio è stabilire un gestore per un messaggio personalizzato che ha un ID di messaggio Windows derivato dalla base WM_USER standard per i messaggi definiti dall'utente. Nell'esempio seguente viene illustrato come chiamare questo gestore:
+In questo esempio viene stabilito un gestore per un messaggio personalizzato con un ID messaggio di Windows derivato dalla base WM_USER standard per i messaggi definiti dall'utente. Nell'esempio seguente viene illustrato come chiamare questo gestore:
 
 ```cpp
 CWnd* pWnd = ...;
 pWnd->SendMessage(WM_MYMESSAGE);
 ```
 
-L'intervallo di messaggi definiti dall'utente che usano questo approccio deve essere compreso nell'intervallo WM_USER a 0x7fff.
+L'intervallo di messaggi definiti dall'utente che usano questo approccio deve essere compreso tra WM_USER e 0x7FFF.
 
 > [!NOTE]
-> ClassWizard non supporta le routine del gestore immettendo ON_MESSAGE dall'interfaccia utente ClassWizard. È necessario immetterli manualmente nell'editor di Visual C++. ClassWizard analizzerà queste voci e consentono di esplorarle esattamente come qualsiasi altra voce della mappa messaggi.
+> ClassWizard non supporta l'immissione di routine del gestore ON_MESSAGE dall'interfaccia utente di ClassWizard. È necessario immetterli manualmente dall'editor C++ visivo. ClassWizard analizzerà queste voci e le esplorerà esattamente come qualsiasi altra voce della mappa messaggi.
 
-## <a name="registered-windows-messages"></a>Messaggi Windows registrati
+## <a name="registered-windows-messages"></a>Messaggi di Windows registrati
 
-Il [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funzione viene utilizzata per definire un nuovo messaggio della finestra che viene garantito l'univocità in tutto il sistema. La macro ON_REGISTERED_MESSAGE viene utilizzata per gestire questi messaggi. Questa macro accetta un nome di un *UINT quasi* variabile che contiene l'ID di messaggio windows registrati. Esempio:
+La funzione [RegisterWindowMessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew) viene usata per definire un nuovo messaggio di finestra che è sicuramente univoco nel sistema. La macro ON_REGISTERED_MESSAGE viene utilizzata per gestire questi messaggi. Questa macro accetta un nome di una variabile *near uint* che contiene l'ID del messaggio di Windows registrato. Esempio:
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -145,32 +145,32 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-La variabile (WM_FIND in questo esempio) ID messaggio registrata di Windows deve essere un *NEAR* variabili a causa della modalità ON_REGISTERED_MESSAGE viene implementato.
+La variabile registrata ID messaggio Windows (WM_FIND in questo esempio) deve essere una variabile *near* a causa della modalità di implementazione di ON_REGISTERED_MESSAGE.
 
-L'intervallo di messaggi definiti dall'utente che usano questo approccio sarà compreso nell'intervallo 0xC000 e 0xFFFF.
+L'intervallo di messaggi definiti dall'utente che usano questo approccio sarà compreso tra 0xC000 e 0xFFFF.
 
 > [!NOTE]
-> ClassWizard non supporta le routine del gestore immettendo ON_REGISTERED_MESSAGE dall'interfaccia utente ClassWizard. È necessario immetterli manualmente dall'editor di testo. ClassWizard analizzerà queste voci e consentono di esplorarle esattamente come qualsiasi altra voce della mappa messaggi.
+> ClassWizard non supporta l'immissione di routine del gestore ON_REGISTERED_MESSAGE dall'interfaccia utente di ClassWizard. È necessario immetterli manualmente dall'editor di testo. ClassWizard analizzerà queste voci e le esplorerà esattamente come qualsiasi altra voce della mappa messaggi.
 
 ## <a name="command-messages"></a>Messaggi di comando
 
-In mappe messaggi con ON_COMMAND (macro), vengono gestiti i messaggi di comando di menu e tasti di scelta rapida. Questa macro accetta un ID di comando e un metodo. Solo il messaggio WM_COMMAND specifico che ha un *wParam* uguale al comando specificato ID viene gestito dal metodo specificato nella voce della mappa messaggi. Funzioni membro non accettano parametri e restituire **void**. La macro ha il formato seguente:
+I messaggi di comando dei menu e dei tasti di scelta rapida vengono gestiti nelle mappe messaggi con la macro ON_COMMAND. Questa macro accetta un ID di comando e un metodo. Solo il messaggio WM_COMMAND specifico con un valore *wParam* uguale all'ID di comando specificato viene gestito dal metodo specificato nella voce della mappa messaggi. Le funzioni membro del gestore comandi non accettano parametri e restituiscono **void**. La macro ha il formato seguente:
 
 ```cpp
 ON_COMMAND(id, memberFxn)
 ```
 
-Comando update messaggi vengono indirizzati attraverso lo stesso meccanismo, ma in alternativa, usare la macro ON_UPDATE_COMMAND_UI. Funzioni membro di gestore aggiornamento comandi accettano un solo parametro, un puntatore a un [CCmdUI](../mfc/reference/ccmdui-class.md) dell'oggetto e restituire **void**. La macro ha il formato
+I messaggi di aggiornamento del comando vengono instradati tramite lo stesso meccanismo, ma usano invece la macro ON_UPDATE_COMMAND_UI. Le funzioni membro del gestore degli aggiornamenti del comando accettano un solo parametro, un puntatore a un oggetto [CCmdUI](../mfc/reference/ccmdui-class.md) e restituiscono **void**. Il form della macro è
 
 ```cpp
 ON_UPDATE_COMMAND_UI(id, memberFxn)
 ```
 
-Gli utenti avanzati possono usare l'ON_COMMAND_EX (macro), che è una forma estesa di gestori di messaggi di comando. La macro fornisce un superset della funzionalità ON_COMMAND. Funzioni membro esteso di gestori di comandi accettano un solo parametro, un **UINT** che contiene l'ID di comando e restituire una **BOOL**. Il valore restituito deve essere **TRUE** per indicare che il comando è stato gestito. In caso contrario, il routing continuerà ad altri oggetti destinazione comando.
+Gli utenti avanzati possono usare la macro ON_COMMAND_EX, che è una forma estesa di gestori di messaggi di comando. La macro fornisce un superset della funzionalità ON_COMMAND. Le funzioni membro del gestore dei comandi estese accettano un solo parametro, un **uint** che contiene l'ID comando e restituisce un **bool**. Il valore restituito deve essere **true** per indicare che il comando è stato gestito. In caso contrario, il routing continuerà ad altri oggetti di destinazione del comando.
 
-Esempi di questi moduli:
+Esempi di questi formati:
 
-- Inside Resource. h (in genere generato da Visual C++)
+- All'interno di Resource. h (in genere C++generato da Visual)
 
     ```cpp
     #define    ID_MYCMD      100
@@ -213,31 +213,31 @@ Esempi di questi moduli:
     }
     ```
 
-Gli utenti avanzati possono gestire una gamma di comandi usando un gestore comando singolo: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) o ON_COMMAND_RANGE_EX. Vedere la documentazione del prodotto per altre informazioni su queste macro.
+Gli utenti avanzati possono gestire un intervallo di comandi utilizzando un singolo gestore comando: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) o ON_COMMAND_RANGE_EX. Per ulteriori informazioni su queste macro, vedere la documentazione del prodotto.
 
 > [!NOTE]
-> ClassWizard supporta la creazione di gestori ON_COMMAND e ON_UPDATE_COMMAND_UI, ma non supporta la creazione ON_COMMAND_EX o ON_COMMAND_RANGE gestori. Tuttavia, creazione guidata classe analizzerà e permettono di esplorare tutte le varianti di gestore comando quattro.
+> ClassWizard supporta la creazione di gestori ON_COMMAND e ON_UPDATE_COMMAND_UI, ma non supporta la creazione di gestori ON_COMMAND_EX o ON_COMMAND_RANGE. Tuttavia, la creazione guidata classe analizzerà e consentirà di esplorare tutte e quattro le varianti del gestore comando.
 
-## <a name="control-notification-messages"></a>Messaggi di notifica di controllo
+## <a name="control-notification-messages"></a>Controllare i messaggi di notifica
 
-I messaggi inviati dai controlli figlio a una finestra di avrà un ulteriore di bit delle informazioni nel messaggio, ma eseguire il mapping voce: ID. del controllo Il gestore di messaggi specificato in una voce della mappa messaggi viene chiamato solo se vengono soddisfatte le condizioni seguenti:
+I messaggi inviati dai controlli figlio a una finestra contengono informazioni aggiuntive nella voce della mappa messaggi, ovvero l'ID del controllo. Il gestore di messaggi specificato in una voce della mappa messaggi viene chiamato solo se vengono soddisfatte le condizioni seguenti:
 
-- Il codice di notifica del controllo (Word più significativa della *lParam*), ad esempio BN_CLICKED, corrisponde al codice di notifica specificato nella voce della mappa messaggi.
+- Il codice di notifica del controllo (High Word di *lParam*), ad esempio BN_CLICKED, corrisponde al codice di notifica specificato nella voce della mappa messaggi.
 
 - L'ID di controllo (*wParam*) corrisponde all'ID di controllo specificato nella voce della mappa messaggi.
 
-I messaggi di notifica di controllo personalizzato è possono usare la [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) macro per definire una voce della mappa messaggi con un codice di notifica personalizzata. Questa macro ha il formato
+I messaggi di notifica del controllo personalizzato possono utilizzare la macro [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) per definire una voce della mappa messaggi con un codice di notifica personalizzato. Questa macro ha il formato
 
 ```cpp
 ON_CONTROL(wNotificationCode, id, memberFxn)
 ```
 
-Per l'utilizzo avanzato [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) possono essere utilizzate per gestire una notifica di controllo specifico da una gamma di controlli con lo stesso gestore.
+Per l'utilizzo avanzato [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) può essere utilizzato per gestire una notifica di controllo specifica da un intervallo di controlli con lo stesso gestore.
 
 > [!NOTE]
-> ClassWizard non supporta la creazione di un gestore ON_CONTROL o ON_CONTROL_RANGE nell'interfaccia utente. È necessario immetterli manualmente con l'editor di testo. ClassWizard analizzerà queste voci e consentono di esplorarle esattamente come qualsiasi altro voci della mappa messaggi.
+> ClassWizard non supporta la creazione di un gestore ON_CONTROL o ON_CONTROL_RANGE nell'interfaccia utente. È necessario immetterli manualmente con l'editor di testo. ClassWizard analizzerà queste voci e le esplorerà esattamente come qualsiasi altra voce della mappa messaggi.
 
-I controlli comuni di Windows usare il più potente [WM_NOTIFY](/windows/desktop/controls/wm-notify) per le notifiche di controllo complessa. Questa versione di MFC con supporto diretto per questo nuovo messaggio usando le macro messaggi ON_NOTIFY e ON_NOTIFY_RANGE. Vedere la documentazione del prodotto per altre informazioni su queste macro.
+I controlli comuni di Windows usano [WM_NOTIFY](/windows/win32/controls/wm-notify) più potenti per le notifiche di controllo complesse. Questa versione di MFC dispone del supporto diretto per questo nuovo messaggio usando le macro ON_NOTIFY e ON_NOTIFY_RANGE. Per ulteriori informazioni su queste macro, vedere la documentazione del prodotto.
 
 ## <a name="see-also"></a>Vedere anche
 

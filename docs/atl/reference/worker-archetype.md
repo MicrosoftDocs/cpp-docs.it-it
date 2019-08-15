@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 3efd77c38508df8302fa4e1dd5c9b51f66cd5e43
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7f28b9e64c88a5be440417dd9d22f129ee7d6edf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915452"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495260"
 ---
 # <a name="worker-archetype"></a>Archetipo del ruolo di lavoro
 
@@ -19,13 +19,13 @@ Le classi conformi all'archetipo del ruolo di lavoro forniscono il codice per l'
 
 Per implementare una classe conforme a questo archetipo, la classe deve fornire le funzionalità seguenti:
 
-|Metodo|DESCRIZIONE|
+|Metodo|Descrizione|
 |------------|-----------------|
 |[Initialize](#initialize)|Chiamato per inizializzare l'oggetto di lavoro prima che vengano passate richieste da [eseguire](#execute).|
 |[Execute](#execute)|Chiamato per elaborare un elemento di lavoro.|
 |[Terminate](#terminate)|Chiamato per annullare l'inizializzazione dell'oggetto di lavoro dopo che tutte le richieste sono state passate per l' [esecuzione](#execute).|
 
-|Typedef|DESCRIZIONE|
+|Typedef|Descrizione|
 |-------------|-----------------|
 |[RequestType](#requesttype)|Typedef per il tipo di elemento di lavoro che può essere elaborato dalla classe Worker.|
 
@@ -74,7 +74,7 @@ Elemento di lavoro da elaborare. L'elemento di lavoro è dello stesso tipo `Requ
 Parametro personalizzato riconosciuto dalla classe Worker. Passato anche a `WorkerArchetype::Initialize` e `Terminate`.
 
 *pOverlapped*<br/>
-Puntatore alla struttura [sovrapposta](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) usata per creare la coda in cui gli elementi di lavoro sono stati accodati.
+Puntatore alla struttura [sovrapposta](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) usata per creare la coda in cui gli elementi di lavoro sono stati accodati.
 
 ## <a name="initialize"></a>WorkerArchetype:: Initialize
 

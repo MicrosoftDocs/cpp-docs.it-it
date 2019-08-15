@@ -31,19 +31,19 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: a3b92e3d2f72ca48238eb22404947d2eafde0378
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69842e77aecaa94be66432e5fbba437a6fa3c5a4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197877"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495571"
 ---
 # <a name="ipropertypageimpl-class"></a>Classe IPropertyPageImpl
 
-Questa classe implementa `IUnknown` e fornisce un'implementazione predefinita del [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfaccia.
+Questa classe implementa `IUnknown` e fornisce un'implementazione predefinita dell'interfaccia [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) .
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,9 +55,9 @@ class IPropertyPageImpl
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-La classe, derivata da `IPropertyPageImpl`.
+Classe derivata da `IPropertyPageImpl`.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -69,38 +69,38 @@ La classe, derivata da `IPropertyPageImpl`.
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[IPropertyPageImpl::Activate](#activate)|Crea la finestra di dialogo per la pagina delle proprietà.|
-|[IPropertyPageImpl::Apply](#apply)|Applica i valori correnti della pagina proprietà agli oggetti sottostanti specificati tramite `SetObjects`. L'implementazione di ATL restituisce S_OK.|
-|[IPropertyPageImpl::Deactivate](#deactivate)|Elimina la finestra creata con `Activate`.|
+|[IPropertyPageImpl::Activate](#activate)|Crea la finestra di dialogo della pagina delle proprietà.|
+|[IPropertyPageImpl::Apply](#apply)|Applica i valori correnti della pagina delle proprietà agli oggetti sottostanti specificati tramite `SetObjects`. L'implementazione ATL restituisce S_OK.|
+|[IPropertyPageImpl::Deactivate](#deactivate)|Elimina definitivamente la finestra creata con `Activate`.|
 |[IPropertyPageImpl::GetPageInfo](#getpageinfo)|Recupera le informazioni sulla pagina delle proprietà.|
 |[IPropertyPageImpl::Help](#help)|Richiama la Guida di Windows per la pagina delle proprietà.|
-|[IPropertyPageImpl::IsPageDirty](#ispagedirty)|Indica se la pagina delle proprietà è stato modificato perché è stata attivata.|
-|[IPropertyPageImpl::Move](#move)|Posiziona e ridimensiona la finestra di dialogo pagina proprietà.|
-|[IPropertyPageImpl::SetDirty](#setdirty)|Flag di stato della pagina delle proprietà come unchanged o modificati.|
-|[IPropertyPageImpl::SetObjects](#setobjects)|Fornisce una matrice di `IUnknown` puntatori per gli oggetti associati alla pagina delle proprietà. Questi oggetti riceveranno valori correnti della pagina proprietà tramite una chiamata a `Apply`.|
-|[IPropertyPageImpl::SetPageSite](#setpagesite)|Fornisce la pagina delle proprietà con un `IPropertyPageSite` puntatore, attraverso il quale la pagina delle proprietà comunica con il frame di proprietà.|
-|[IPropertyPageImpl::Show](#show)|Rende la finestra di dialogo pagina proprietà visibile o invisibile.|
-|[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|Elabora una sequenza di tasti specificato.|
+|[IPropertyPageImpl::IsPageDirty](#ispagedirty)|Indica se la pagina delle proprietà è stata modificata dopo l'attivazione.|
+|[IPropertyPageImpl::Move](#move)|Posiziona e ridimensiona la finestra di dialogo della pagina delle proprietà.|
+|[IPropertyPageImpl::SetDirty](#setdirty)|Contrassegna lo stato della pagina delle proprietà come modificato o non modificato.|
+|[IPropertyPageImpl::SetObjects](#setobjects)|Fornisce una matrice di `IUnknown` puntatori per gli oggetti associati alla pagina delle proprietà. Questi oggetti ricevono i valori correnti della pagina delle proprietà tramite una `Apply`chiamata a.|
+|[IPropertyPageImpl::SetPageSite](#setpagesite)|Fornisce la pagina delle proprietà con `IPropertyPageSite` un puntatore, tramite il quale la pagina delle proprietà comunica con il frame della proprietà.|
+|[IPropertyPageImpl::Show](#show)|Rende visibile o invisibile la finestra di dialogo della pagina delle proprietà.|
+|[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|Elabora una sequenza di tasti specificata.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
-|[IPropertyPageImpl::m_bDirty](#m_bdirty)|Specifica se è stato modificato lo stato della pagina delle proprietà.|
-|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|Archivia l'identificatore di risorsa associata alla stringa di testo che descrive la pagina delle proprietà.|
-|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|Archivia l'identificatore di contesto per l'argomento della Guida associato alla proprietà pagina.|
-|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|Archivia l'identificatore di risorsa associato al nome del file della Guida che descrive la pagina delle proprietà.|
-|[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|Archivia l'identificatore di risorsa associata alla stringa di testo che viene visualizzato nella scheda della pagina delle proprietà.|
+|[IPropertyPageImpl::m_bDirty](#m_bdirty)|Specifica se lo stato della pagina delle proprietà è stato modificato.|
+|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|Archivia l'identificatore di risorsa associato alla stringa di testo che descrive la pagina delle proprietà.|
+|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|Archivia l'identificatore di contesto per l'argomento della Guida associato alla pagina delle proprietà.|
+|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|Archivia l'identificatore di risorsa associato al nome del file della guida che descrive la pagina delle proprietà.|
+|[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|Archivia l'identificatore di risorsa associato alla stringa di testo visualizzata nella scheda della pagina delle proprietà.|
 |[IPropertyPageImpl::m_nObjects](#m_nobjects)|Archivia il numero di oggetti associati alla pagina delle proprietà.|
-|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|Punta al `IPropertyPageSite` interfaccia tramite il quale la pagina delle proprietà comunica con il frame di proprietà.|
-|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|Punta a una matrice di `IUnknown` puntatori a oggetti associati alla proprietà pagina.|
+|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|Punta all' `IPropertyPageSite` interfaccia tramite la quale la pagina delle proprietà comunica con il frame della proprietà.|
+|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|Punta a una matrice di `IUnknown` puntatori agli oggetti associati alla pagina delle proprietà.|
 |[IPropertyPageImpl::m_size](#m_size)|Archivia l'altezza e la larghezza della finestra di dialogo della pagina delle proprietà, in pixel.|
 
 ## <a name="remarks"></a>Note
 
-Il [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfaccia consente a un oggetto gestire una determinata pagina delle proprietà all'interno di una finestra delle proprietà. Classe `IPropertyPageImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.
+L'interfaccia [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) consente a un oggetto di gestire una particolare pagina delle proprietà all'interno di una finestra delle proprietà. La `IPropertyPageImpl` classe fornisce un'implementazione predefinita di questa interfaccia e `IUnknown` implementa inviando informazioni al dispositivo di dump nelle compilazioni di debug.
 
-**Articoli correlati** [esercitazione ATL](../../atl/active-template-library-atl-tutorial.md), [la creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)
+**Articoli correlati** [Esercitazione su ATL](../../atl/active-template-library-atl-tutorial.md), [creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -114,7 +114,7 @@ Il [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfacci
 
 ##  <a name="activate"></a>  IPropertyPageImpl::Activate
 
-Crea la finestra di dialogo per la pagina delle proprietà.
+Crea la finestra di dialogo della pagina delle proprietà.
 
 ```
 HRESULT Activate(
@@ -125,13 +125,13 @@ HRESULT Activate(
 
 ### <a name="remarks"></a>Note
 
-Per impostazione predefinita, la finestra di dialogo è sempre non modale, indipendentemente dal valore della *bModal* parametro.
+Per impostazione predefinita, la finestra di dialogo è sempre non modale, indipendentemente dal valore del parametro *bModal* .
 
-Visualizzare [IPropertyPage::Activate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-activate) in Windows SDK.
+Vedere [IPropertyPage:: Activate](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-activate) nel Windows SDK.
 
 ##  <a name="apply"></a>  IPropertyPageImpl::Apply
 
-Applica i valori correnti della pagina proprietà agli oggetti sottostanti specificati tramite `SetObjects`.
+Applica i valori correnti della pagina delle proprietà agli oggetti sottostanti specificati tramite `SetObjects`.
 
 ```
 HRESULT Apply();
@@ -143,7 +143,7 @@ Restituisce S_OK.
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IPropertyPage::Apply](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-apply) in Windows SDK.
+Vedere [IPropertyPage:: Apply](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-apply) nel Windows SDK.
 
 ##  <a name="deactivate"></a>  IPropertyPageImpl::Deactivate
 
@@ -155,11 +155,11 @@ HRESULT Deactivate();
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IPropertyPage::Deactivate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-deactivate) in Windows SDK.
+Vedere [IPropertyPage::D ttiva](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-deactivate) nel Windows SDK.
 
 ##  <a name="getpageinfo"></a>  IPropertyPageImpl::GetPageInfo
 
-Riempie i *pPageInfo* struttura con le informazioni contenute nei membri di dati.
+Compila la struttura *pPageInfo* con le informazioni contenute nei membri dati.
 
 ```
 HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
@@ -167,9 +167,9 @@ HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
 
 ### <a name="remarks"></a>Note
 
-`GetPageInfo` Carica le risorse stringa associate [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile), e [m_dwTitle](#m_dwtitle).
+`GetPageInfo`carica le risorse di stringa associate a [m_dwDocString](#m_dwdocstring), [m_dwHelpFile](#m_dwhelpfile)e [m_dwTitle](#m_dwtitle).
 
-Visualizzare [IPropertyPage:: GetPageInfo](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) in Windows SDK.
+Vedere [IPropertyPage:: GetPageInfo](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-getpageinfo) nella Windows SDK.
 
 ##  <a name="help"></a>  IPropertyPageImpl::Help
 
@@ -181,7 +181,7 @@ HRESULT Help(PROPPAGEINFO* pPageInfo);
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IPropertyPage::Help](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-help) in Windows SDK.
+Vedere [IPropertyPage:: Help](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-help) nell'Windows SDK.
 
 ##  <a name="ipropertypageimpl"></a>  IPropertyPageImpl::IPropertyPageImpl
 
@@ -197,7 +197,7 @@ Inizializza tutti i membri dati.
 
 ##  <a name="ispagedirty"></a>  IPropertyPageImpl::IsPageDirty
 
-Indica se la pagina delle proprietà è stato modificato perché è stata attivata.
+Indica se la pagina delle proprietà è stata modificata dopo l'attivazione.
 
 ```
 HRESULT IsPageDirty(void);
@@ -205,11 +205,11 @@ HRESULT IsPageDirty(void);
 
 ### <a name="remarks"></a>Note
 
-`IsPageDirty` Restituisce S_OK se la pagina è stato modificato perché è stata attivata.
+`IsPageDirty`Restituisce S_OK se la pagina è stata modificata dopo che è stata attivata.
 
 ##  <a name="m_bdirty"></a>  IPropertyPageImpl::m_bDirty
 
-Specifica se è stato modificato lo stato della pagina delle proprietà.
+Specifica se lo stato della pagina delle proprietà è stato modificato.
 
 ```
 BOOL m_bDirty;
@@ -225,7 +225,7 @@ ULONG m_nObjects;
 
 ##  <a name="m_dwhelpcontext"></a>  IPropertyPageImpl::m_dwHelpContext
 
-Archivia l'identificatore di contesto per l'argomento della Guida associato alla proprietà pagina.
+Archivia l'identificatore di contesto per l'argomento della Guida associato alla pagina delle proprietà.
 
 ```
 DWORD m_dwHelpContext;
@@ -233,7 +233,7 @@ DWORD m_dwHelpContext;
 
 ##  <a name="m_dwdocstring"></a>  IPropertyPageImpl::m_dwDocString
 
-Archivia l'identificatore di risorsa associata alla stringa di testo che descrive la pagina delle proprietà.
+Archivia l'identificatore di risorsa associato alla stringa di testo che descrive la pagina delle proprietà.
 
 ```
 UINT m_dwDocString;
@@ -241,7 +241,7 @@ UINT m_dwDocString;
 
 ##  <a name="m_dwhelpfile"></a>  IPropertyPageImpl::m_dwHelpFile
 
-Archivia l'identificatore di risorsa associato al nome del file della Guida che descrive la pagina delle proprietà.
+Archivia l'identificatore di risorsa associato al nome del file della guida che descrive la pagina delle proprietà.
 
 ```
 UINT m_dwHelpFile;
@@ -249,7 +249,7 @@ UINT m_dwHelpFile;
 
 ##  <a name="m_dwtitle"></a>  IPropertyPageImpl::m_dwTitle
 
-Archivia l'identificatore di risorsa associata alla stringa di testo che viene visualizzato nella scheda della pagina delle proprietà.
+Archivia l'identificatore di risorsa associato alla stringa di testo visualizzata nella scheda della pagina delle proprietà.
 
 ```
 UINT m_dwTitle;
@@ -257,7 +257,7 @@ UINT m_dwTitle;
 
 ##  <a name="m_ppagesite"></a>  IPropertyPageImpl::m_pPageSite
 
-Punta al [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) interfaccia tramite il quale la pagina delle proprietà comunica con il frame di proprietà.
+Punta all'interfaccia [IPropertyPageSite](/windows/win32/api/ocidl/nn-ocidl-ipropertypagesite) tramite la quale la pagina delle proprietà comunica con il frame della proprietà.
 
 ```
 IPropertyPageSite* m_pPageSite;
@@ -265,7 +265,7 @@ IPropertyPageSite* m_pPageSite;
 
 ##  <a name="m_ppunk"></a>  IPropertyPageImpl::m_ppUnk
 
-Punta a una matrice di `IUnknown` puntatori a oggetti associati alla proprietà pagina.
+Punta a una matrice di `IUnknown` puntatori agli oggetti associati alla pagina delle proprietà.
 
 ```
 IUnknown** m_ppUnk;
@@ -281,7 +281,7 @@ SIZE m_size;
 
 ##  <a name="move"></a>  IPropertyPageImpl::Move
 
-Posiziona e ridimensiona la finestra di dialogo pagina proprietà.
+Posiziona e ridimensiona la finestra di dialogo della pagina delle proprietà.
 
 ```
 HRESULT Move(LPCRECT pRect);
@@ -289,11 +289,11 @@ HRESULT Move(LPCRECT pRect);
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IPropertyPage::Move](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-move) in Windows SDK.
+Vedere [IPropertyPage:: Move](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-move) nel Windows SDK.
 
 ##  <a name="setdirty"></a>  IPropertyPageImpl::SetDirty
 
-Flag di stato della pagina delle proprietà come modificata o invariato, a seconda del valore di *bDirty*.
+Contrassegna lo stato della pagina delle proprietà come modificato o non modificato, a seconda del valore di *bDirty*.
 
 ```
 void SetDirty(BOOL bDirty);
@@ -302,11 +302,11 @@ void SetDirty(BOOL bDirty);
 ### <a name="parameters"></a>Parametri
 
 *bDirty*<br/>
-[in] Se TRUE, lo stato della pagina delle proprietà è contrassegnato come modificata. In caso contrario, viene contrassegnato come non modificato.
+in Se TRUE, lo stato della pagina delle proprietà è contrassegnato come modificato. In caso contrario, viene contrassegnato come invariato.
 
 ### <a name="remarks"></a>Note
 
-Se necessario, `SetDirty` informa il frame a cui la pagina delle proprietà è stato modificato.
+Se necessario, `SetDirty` informa il frame che la pagina delle proprietà è stata modificata.
 
 ##  <a name="setobjects"></a>  IPropertyPageImpl::SetObjects
 
@@ -318,11 +318,11 @@ HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IPropertyPage::SetObjects](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setobjects) in Windows SDK.
+Vedere [IPropertyPage::](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setobjects) seobjects nella Windows SDK.
 
 ##  <a name="setpagesite"></a>  IPropertyPageImpl::SetPageSite
 
-Fornisce la pagina delle proprietà con un [IPropertyPageSite](/windows/desktop/api/ocidl/nn-ocidl-ipropertypagesite) puntatore, attraverso il quale la pagina delle proprietà comunica con il frame di proprietà.
+Fornisce la pagina delle proprietà con un puntatore [IPropertyPageSite](/windows/win32/api/ocidl/nn-ocidl-ipropertypagesite) , tramite il quale la pagina delle proprietà comunica con il frame della proprietà.
 
 ```
 HRESULT SetPageSite(IPropertyPageSite* pPageSite);
@@ -330,11 +330,11 @@ HRESULT SetPageSite(IPropertyPageSite* pPageSite);
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IPropertyPage::SetPageSite](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-setpagesite) in Windows SDK.
+Vedere [IPropertyPage:: SetPageSite](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-setpagesite) nella Windows SDK.
 
 ##  <a name="show"></a>  IPropertyPageImpl::Show
 
-Rende la finestra di dialogo pagina proprietà visibile o invisibile.
+Rende visibile o invisibile la finestra di dialogo della pagina delle proprietà.
 
 ```
 HRESULT Show(UINT nCmdShow);
@@ -342,11 +342,11 @@ HRESULT Show(UINT nCmdShow);
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IPropertyPage::Show](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-show) in Windows SDK.
+Vedere [IPropertyPage:: Show](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-show) nel Windows SDK.
 
 ##  <a name="translateaccelerator"></a>  IPropertyPageImpl::TranslateAccelerator
 
-Elabora la sequenza di tasti specificata `pMsg`.
+Elabora la sequenza di tasti specificata `pMsg`in.
 
 ```
 HRESULT TranslateAccelerator(MSG* pMsg);
@@ -354,7 +354,7 @@ HRESULT TranslateAccelerator(MSG* pMsg);
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [IPropertyPage::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) in Windows SDK.
+Vedere [IPropertyPage:: TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-ipropertypage-translateaccelerator) nella Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866087"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498522"
 ---
 # <a name="string-and-character-literals-c"></a>Stringa e valori letterali carattereC++()
 
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 I nomi di caratteri universali non possono codificare i valori nell'intervallo di punti di codice surrogati D800-DFFF. Per le coppie di surrogati Unicode, specificare il nome di carattere universale usando `\UNNNNNNNN`, dove NNNNNNNN è il punto di codice a otto cifre per il carattere. Se necessario, il compilatore genera una coppia di surrogati.
 
-In C++03 il linguaggio consentiva solo la rappresentazione di un subset di caratteri con i rispettivi nomi di caratteri universali e consentiva alcuni nomi di caratteri universali che non rappresentano effettivamente caratteri Unicode validi. Questo errore è stato risolto nello standard C++ 11. In C++11, sia i valori letterali carattere sia i valori letterali stringa possono usare i nomi di caratteri universali.  Per altre informazioni sui nomi di caratteri universali, vedere [Character Sets](../cpp/character-sets.md). Per altre informazioni su Unicode, vedere [Unicode](https://msdn.microsoft.com/library/dd374081). Per altre informazioni sulle coppie di surrogati, vedere la pagina relativa alle [coppie di surrogati e ai caratteri supplementari](/windows/desktop/Intl/surrogates-and-supplementary-characters).
+In C++03 il linguaggio consentiva solo la rappresentazione di un subset di caratteri con i rispettivi nomi di caratteri universali e consentiva alcuni nomi di caratteri universali che non rappresentano effettivamente caratteri Unicode validi. Questo errore è stato risolto nello standard C++ 11. In C++11, sia i valori letterali carattere sia i valori letterali stringa possono usare i nomi di caratteri universali.  Per altre informazioni sui nomi di caratteri universali, vedere [Character Sets](../cpp/character-sets.md). Per altre informazioni su Unicode, vedere [Unicode](/windows/win32/intl/unicode). Per altre informazioni sulle coppie di surrogati, vedere la pagina relativa alle [coppie di surrogati e ai caratteri supplementari](/windows/win32/Intl/surrogates-and-supplementary-characters).
 
 ## <a name="string-literals"></a>Valori letterali stringa
 

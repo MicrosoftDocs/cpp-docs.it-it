@@ -1,5 +1,5 @@
 ---
-title: Classe u_stringorid
+title: Classe _U_STRINGorID
 ms.date: 11/04/2016
 f1_keywords:
 - ATL._U_STRINGorID
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 4e6c086f9d2ff4061c6404444a3b4c61dd91fe1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197116"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495106"
 ---
-# <a name="ustringorid-class"></a>Classe u_stringorid
+# <a name="_u_stringorid-class"></a>Classe _U_STRINGorID
 
-Classe dell'adattatore in questo argomento consente di eseguire i nomi delle risorse (LPCTSTRs) o gli ID delle risorse (UINTs) deve essere passato a una funzione senza la necessità di convertire l'ID in una stringa utilizzando la macro MAKEINTRESOURCE al chiamante.
+Questa classe di adattatori di argomenti consente di passare i nomi di risorsa (LPCTSTRs) o gli ID di risorsa (UINTs) a una funzione senza richiedere al chiamante di convertire l'ID in una stringa utilizzando la macro MAKEINTRESOURCE.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,7 +29,7 @@ Classe dell'adattatore in questo argomento consente di eseguire i nomi delle ris
 class _U_STRINGorID
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -39,15 +39,15 @@ class _U_STRINGorID
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Identificatore della risorsa.|
 
 ## <a name="remarks"></a>Note
 
-Questa classe è progettata per l'implementazione del wrapper per le API di gestione risorse di Windows, ad esempio la [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), e [LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua) funzioni che accettano un argomento LPCTSTR che potrebbe essere il nome di una risorsa o al relativo ID.
+Questa classe è progettata per implementare i wrapper per l'API di gestione delle risorse di Windows, ad esempio le funzioni [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)e [LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , che accettano un argomento LPCTSTR che può essere il nome di una risorsa o il relativo ID.
 
-La classe definisce due overload del costruttore: uno accetta un argomento LPCTSTR e l'altro accetta un argomento UINT. L'argomento UINT viene convertito in un tipo di risorsa compatibile con le funzioni di gestione risorse di Windows usando la macro MAKEINTRESOURCE e il risultato archiviato nel membro dati della classe, [m_lpstr](#_u_stringorid__m_lpstr). L'argomento del costruttore LPCTSTR verrà archiviato direttamente, senza conversione.
+La classe definisce due overload del costruttore: uno accetta un argomento LPCTSTR e l'altro accetta un argomento UINT. L'argomento UINT viene convertito in un tipo di risorsa compatibile con le funzioni di gestione delle risorse di Windows usando la macro MAKEINTRESOURCE e il risultato archiviato nel singolo membro dati della classe, [m_lpstr](#_u_stringorid__m_lpstr). L'argomento del costruttore LPCTSTR viene archiviato direttamente senza conversione.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -55,7 +55,7 @@ La classe definisce due overload del costruttore: uno accetta un argomento LPCTS
 
 ##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr
 
-La classe contiene il valore passato a uno dei relativi costruttori come un membro di dati LPCTSTR pubblico.
+La classe include il valore passato a uno dei relativi costruttori come membro dati LPCTSTR pubblico.
 
 ```
 LPCTSTR m_lpstr;
@@ -63,7 +63,7 @@ LPCTSTR m_lpstr;
 
 ##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID
 
-Il costruttore UINT Converte l'argomento in un tipo di risorsa compatibile con le funzioni di gestione risorse di Windows utilizzando la macro MAKEINTRESOURCE e il risultato viene archiviato nel membro dati della classe, [m_lpstr](#_u_stringorid__m_lpstr).
+Il costruttore UINT converte il relativo argomento in un tipo di risorsa compatibile con le funzioni di gestione delle risorse di Windows utilizzando la macro MAKEINTRESOURCE e il risultato viene archiviato nel singolo membro dati della classe, [m_lpstr](#_u_stringorid__m_lpstr).
 
 ```
 _U_STRINGorID(UINT nID);
@@ -73,14 +73,14 @@ _U_STRINGorID(LPCTSTR lpString);
 ### <a name="parameters"></a>Parametri
 
 *nID*<br/>
-Un ID risorsa.
+ID di risorsa.
 
 *lpString*<br/>
-Un nome di risorsa.
+Nome della risorsa.
 
 ### <a name="remarks"></a>Note
 
-L'argomento del costruttore LPCTSTR verrà archiviato direttamente, senza conversione.
+L'argomento del costruttore LPCTSTR viene archiviato direttamente senza conversione.
 
 ## <a name="see-also"></a>Vedere anche
 

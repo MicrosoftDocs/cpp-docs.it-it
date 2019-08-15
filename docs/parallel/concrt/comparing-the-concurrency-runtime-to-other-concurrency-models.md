@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337713"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512822"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Confronto tra runtime di concorrenza e altri modelli di concorrenza
 
@@ -33,7 +33,7 @@ I modelli di pianificazione di tipo preemptive e cooperativa rappresentano due m
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Pianificazione di tipo preemptive e cooperativa
 
-La*pianificazione di tipo preemptive* è un meccanismo round robin basato sulle priorità che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione per un periodo di tempo specificato, per poi passare a un'altra attività. Pianificazione di tipo preemptive è comune nei sistemi operativi multitasking come Windows. *La pianificazione cooperativa* è un meccanismo che concede a ogni attività l'accesso esclusivo a una risorsa di calcolo fino a quando non al termine dell'attività o fino a quando l'attività restituisce l'accesso alla risorsa. Il runtime di concorrenza usa la pianificazione cooperativa con l'utilità di pianificazione di tipo preemptive del sistema operativo per ottimizzare l'utilizzo delle risorse di elaborazione.
+La*pianificazione di tipo preemptive* è un meccanismo round robin basato sulle priorità che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione per un periodo di tempo specificato, per poi passare a un'altra attività. La pianificazione di tipo preemptive è comune nei sistemi operativi multitasking come Windows. La *pianificazione cooperativa* è un meccanismo che concede a ogni attività l'accesso esclusivo a una risorsa di elaborazione fino al completamento dell'attività o fino a quando l'attività non cede l'accesso alla risorsa. Il runtime di concorrenza usa la pianificazione cooperativa con l'utilità di pianificazione di tipo preemptive del sistema operativo per ottimizzare l'utilizzo delle risorse di elaborazione.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Differenze tra le utilità di pianificazione di tipo preemptive e cooperativa
 
@@ -63,7 +63,7 @@ L'API Windows usa il linguaggio di programmazione C per esporre il modello di pr
 
 ### <a name="threads-and-thread-pools"></a>Thread e pool di thread
 
-Il meccanismo di concorrenza centrale nell'API Windows è il thread. Per la creazione dei thread viene generalmente usata la funzione [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) . Sebbene la creazione e l'uso dei thread siano operazioni relativamente semplici, il sistema operativo alloca una quantità significativa di tempo e di altre risorse per la gestione dei thread. Inoltre, anche se per ogni thread è garantito lo stesso tempo di esecuzione di un altro thread con lo stesso livello di priorità, l'overhead associato richiede anche la creazione di attività sufficientemente grandi. Per le attività più piccole o più dettagliate, l'overhead associato alla concorrenza può risultare più vantaggioso rispetto all'esecuzione delle attività in parallelo.
+Il meccanismo di concorrenza centrale nell'API Windows è il thread. Per la creazione dei thread viene generalmente usata la funzione [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) . Sebbene la creazione e l'uso dei thread siano operazioni relativamente semplici, il sistema operativo alloca una quantità significativa di tempo e di altre risorse per la gestione dei thread. Inoltre, anche se per ogni thread è garantito lo stesso tempo di esecuzione di un altro thread con lo stesso livello di priorità, l'overhead associato richiede anche la creazione di attività sufficientemente grandi. Per le attività più piccole o più dettagliate, l'overhead associato alla concorrenza può risultare più vantaggioso rispetto all'esecuzione delle attività in parallelo.
 
 I pool di thread rappresentano un modo per ridurre il costo di gestione dei thread. I pool di thread personalizzati e l'implementazione di pool di thread fornita dall'API Windows consentono entrambi l'esecuzione efficiente in parallelo di piccoli elementi di lavoro. Il pool di thread di Windows gestisce gli elementi di lavoro in una coda FIFO (First-In, First-Out). Ogni elemento di lavoro viene avviato nell'ordine in cui è stato aggiunto nel pool.
 
@@ -77,7 +77,7 @@ In Windows XP e Windows Vista, le applicazioni che usano il runtime di concorren
 
 In Windows 7 e Windows Server 2008 R2, il sistema operativo supporta anche la concorrenza e la scalabilità. Questi sistemi operativi supportano, ad esempio, computer con oltre 64 thread di hardware. Un'applicazione esistente che usa l'API Windows deve essere modificata in modo da sfruttare i vantaggi di queste nuove funzionalità. Un'applicazione che usa il runtime di concorrenza, tuttavia, implementa automaticamente queste funzionalità e non richiede alcuna modifica.
 
-[base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
+[base.user-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
 [[Torna all'inizio](#top)]
 

@@ -8,27 +8,27 @@ helpviewer_keywords:
 - threading [ATL], free threaded marshaler
 - FTM in ATL
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
-ms.openlocfilehash: ddea5a74dbd40d097398d04c0b2bc274df5ec972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94e4961c69e9441d160d72d9b72afcee3677e25f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252507"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491917"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL e il gestore del marshalling con modello di threading Free
 
-Pagina di attributi ATL semplice oggetto della procedura guidata offre un'opzione che consente la classe deve aggregare il marshalling a thread gratuito (FTM).
+La pagina attributi della creazione guidata oggetto semplice ATL fornisce un'opzione che consente alla classe di aggregare il gestore di marshalling a thread libero (FTM).
 
-La procedura guidata genera codice per creare un'istanza del gestore di marshalling a thread libero nel `FinalConstruct` rilasciare quell'istanza in `FinalRelease`. Una macro COM_INTERFACE_ENTRY_AGGREGATE viene automaticamente aggiunto alla mappa COM per assicurarsi che `QueryInterface` le richieste relative a [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal) vengono gestiti dal gestore di marshalling a thread libero.
+La procedura guidata genera il codice per creare un'istanza del gestore di marshalling a `FinalConstruct` thread libero in e rilascia `FinalRelease`tale istanza in. Una macro COM_INTERFACE_ENTRY_AGGREGATE viene aggiunta automaticamente alla mappa com per garantire che `QueryInterface` le richieste per [IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal) siano gestite dal gestore di marshalling a thread libero.
 
-Il gestore di marshalling a thread libero consente l'accesso diretto alle interfacce dell'oggetto da qualsiasi thread nello stesso processo, velocizzando le chiamate tra apartment. Questa opzione è destinata alle classi che usano il modello di threading entrambe.
+Il gestore di marshalling a thread libero consente l'accesso diretto alle interfacce dell'oggetto da qualsiasi thread nello stesso processo, velocizzando le chiamate tra Apartment. Questa opzione è destinata alle classi che usano entrambi il modello di Threading.
 
-Quando si usa questa opzione, le classi devono assumersi la responsabilità per la thread safety dei propri dati. Inoltre, gli oggetti che il gestore di marshalling a thread libero di aggregazione ed è necessario usare i puntatori di interfaccia ottenuti da altri oggetti devono eseguire passaggi aggiuntivi per garantire che le interfacce in modo corretto vengono effettuato il marshalling. In genere, ciò comporta l'archiviazione dei puntatori a interfaccia nella tabella di interfaccia globale (GIT) e ottenere il puntatore del mouse da GIT ogni volta che viene usata. ATL fornisce la classe [CComGITPtr](../atl/reference/ccomgitptr-class.md) per poter utilizzare puntatori a interfaccia memorizzati in GIT.
+Quando si usa questa opzione, le classi devono assumersi la responsabilità della thread safety dei propri dati. Inoltre, gli oggetti che aggregano il gestore di marshalling a thread libero e che devono usare i puntatori di interfaccia ottenuti da altri oggetti devono eseguire passaggi aggiuntivi per garantire che le interfacce siano sottoposte correttamente a marshalling. In genere, ciò implica l'archiviazione dei puntatori di interfaccia nella tabella di interfaccia globale (GIT) e il recupero del puntatore dal GIT ogni volta che viene usato. ATL fornisce la classe [CComGITPtr](../atl/reference/ccomgitptr-class.md) per consentire l'utilizzo di puntatori di interfaccia archiviati in git.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Concetti](../atl/active-template-library-atl-concepts.md)<br/>
-[CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
-[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)<br/>
-[Quando usare la tabella di interfaccia globale](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
-[Problemi relativi al Threading di Server in-Process](/windows/desktop/com/in-process-server-threading-issues)
+[CoCreateFreeThreadedMarshaler](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
+[IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal)<br/>
+[Quando usare la tabella dell'interfaccia globale](/windows/win32/com/when-to-use-the-global-interface-table)<br/>
+[Problemi di threading del server in-process](/windows/win32/com/in-process-server-threading-issues)

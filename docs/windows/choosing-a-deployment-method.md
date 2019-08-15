@@ -12,12 +12,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: 5ca1f33a809bc81b7dcc090231e507ba66775205
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2281effaa94c32454e88100c8b7020961f748d9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407055"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514836"
 ---
 # <a name="choosing-a-deployment-method"></a>Scelta di un metodo di distribuzione
 
@@ -42,7 +42,7 @@ Nelle distribuzioni è possibile ridistribuire qualsiasi versione di una libreri
 
 Se una distribuzione usa i modelli unione ridistribuibili e un'installazione viene eseguita da un utente che non ha diritti di amministratore, le DLL di Visual C++ non vengono installate e l'applicazione non viene eseguita. Inoltre, i programmi di installazione compilati con modelli unione che consentono l'installazione su base utente, installano le librerie in percorsi condivisi che hanno un impatto su tutti gli utenti del sistema. È possibile usare la distribuzione locale per installare le DLL di Visual C++ necessarie nella directory di un'applicazione di un determinato utente senza influire su altri utenti o richiedere i privilegi di amministratore. Poiché questo può creare problemi di manutenzione, è consigliabile evitare la distribuzione locale delle DLL ridistribuibili di Visual C++.
 
-L'errata distribuzione delle librerie di Visual C++ può causare errori di runtime durante l'esecuzione di un'applicazione che dipende da tali librerie. Quando il sistema operativo carica l'applicazione, Usa l'ordine di ricerca descritto in [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
+L'errata distribuzione delle librerie di Visual C++ può causare errori di runtime durante l'esecuzione di un'applicazione che dipende da tali librerie. Quando il sistema operativo carica l'applicazione, usa l'ordine di ricerca descritto in [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
 ## <a name="dynamic-linking-is-better-than-static-linking"></a>Il collegamento dinamico è preferibile rispetto a quello statico
 

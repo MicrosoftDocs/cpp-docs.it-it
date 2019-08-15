@@ -1,21 +1,21 @@
 ---
-title: ODL (attributo COM C++)
+title: FAD (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.odl
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: 90f9f1df23542138b2fac0dcfe0e122f1993d805
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407640"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514324"
 ---
 # <a name="odl"></a>odl
 
-Identifica un'interfaccia come interfaccia oggetto Description Language (ODL). Il compilatore MIDL non richiede la **odl** ; dell'attributo viene riconosciuto solo per compatibilità con i file. ODL meno recenti.
+Identifica un'interfaccia come interfaccia Object Description Language (FAD). Il compilatore MIDL non richiede l'attributo **FAD** ; viene riconosciuta solo per la compatibilità con i file. FAD precedenti.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,7 +25,7 @@ Identifica un'interfaccia come interfaccia oggetto Description Language (ODL). I
 
 ## <a name="remarks"></a>Note
 
-Il **odl** attributi di C++ ha la stessa funzionalità come la [odl](/windows/desktop/Midl/odl) attributo MIDL.
+L'attributo **FAD** C++ ha la stessa funzionalità dell'attributo di MIDL di [FAD](/windows/win32/Midl/odl) .
 
 ## <a name="example"></a>Esempio
 
@@ -58,7 +58,7 @@ public:
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

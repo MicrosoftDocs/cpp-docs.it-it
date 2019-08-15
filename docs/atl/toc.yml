@@ -175,7 +175,7 @@
           href: catlservicemodulet-run-function.md
         - name: 'Funzione CAtlServiceModuleT::Handler'
           href: catlservicemodulet-handler-function.md
-        - name: 'Voci del Registro di sistema '
+        - name: Voci del Registro di sistema
           href: registry-entries.md
         - name: DCOMCNFG
           href: dcomcnfg.md
@@ -240,7 +240,7 @@
             - name: Creazione di script di registrazione
               href: creating-registrar-scripts.md
             - name: Informazioni sulla sintassi Backus-Naur form (BNF)
-              href: understanding-backus-nauer-form-bnf-syntax.md
+              href: understanding-backus-naur-form-bnf-syntax.md
             - name: Informazioni sugli alberi di analisi
               href: understanding-parse-trees.md
             - name: Esempio di script di registrazione

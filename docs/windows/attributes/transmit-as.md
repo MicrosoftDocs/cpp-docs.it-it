@@ -1,21 +1,21 @@
 ---
-title: transmit_as (C++ attributo COM)
+title: transmit_as (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407172"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513920"
 ---
-# <a name="transmitas"></a>transmit_as
+# <a name="transmit_as"></a>transmit_as
 
-Indica al compilatore di associare un tipo presentato che consentono di modificare le applicazioni client e server, con un tipo trasmesso.
+Indica al compilatore di associare un tipo presentato che le applicazioni client e server modificano con un tipo trasmesso.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ Indica al compilatore di associare un tipo presentato che consentono di modifica
 ### <a name="parameters"></a>Parametri
 
 *type*<br/>
-Specifica il tipo di dati che viene trasmesso tra client e server.
+Specifica il tipo di dati trasmesso tra il client e il server.
 
 ## <a name="remarks"></a>Note
 
-Il **transmit_as** C++ attributo ha la stessa funzionalità come il [transmit_as](/windows/desktop/Midl/transmit-as) attributo MIDL.
+L'attributo **transmit_as** C++ ha la stessa funzionalità dell'attributo MIDL di [transmit_as](/windows/win32/Midl/transmit-as) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra un uso le **transmit_as** attributo:
+Il codice seguente illustra l'uso dell'attributo **transmit_as** :
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -73,7 +73,7 @@ struct _TREE_NODE_TYPE * right;
 |**Si applica a**|**typedef**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

@@ -1,21 +1,21 @@
 ---
-title: DefaultValue (attributo COM C++)
+title: DefaultValue (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147964"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490924"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-Consente di specificare un valore predefinito per un parametro facoltativo tipizzato.
+Consente la specifica di un valore predefinito per un parametro facoltativo tipizzato.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ Consente di specificare un valore predefinito per un parametro facoltativo tipiz
 ### <a name="parameters"></a>Parametri
 
 *value*<br/>
-Il valore predefinito per il parametro.
+Valore predefinito per il parametro.
 
 ## <a name="remarks"></a>Note
 
-Il **defaultvalue** attributi di C++ ha la stessa funzionalità come la [defaultvalue](/windows/desktop/Midl/defaultvalue) attributo MIDL.
+L'attributo **DefaultValue** C++ ha la stessa funzionalità dell'attributo MIDL di [DefaultValue](/windows/win32/Midl/defaultvalue) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra un metodo di interfaccia usando il **defaultvalue** attributo:
+Il codice seguente illustra un metodo di interfaccia con l'attributo **DefaultValue** :
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -63,7 +63,7 @@ __interface IFireTabCtrl : IDispatch {
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

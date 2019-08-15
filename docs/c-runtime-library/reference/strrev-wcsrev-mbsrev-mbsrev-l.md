@@ -47,19 +47,19 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: a8794177f4f92a1928ffeaaa1d7e183aa67cf886
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36cbf78c4645c22209892be77f3bf77e7c93c76b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366654"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499417"
 ---
-# <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
+# <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
 Inverte i caratteri di una stringa.
 
 > [!IMPORTANT]
-> **mbsrev** e **mbsrev_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsrev** e **_mbsrev_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -93,14 +93,14 @@ Restituisce un puntatore alla stringa modificata. Nessun valore restituito è ri
 
 ## <a name="remarks"></a>Note
 
-Il **strrev** funzione inverte l'ordine dei caratteri *str*. Il carattere Null di terminazione rimane nella posizione originale. **wcsrev** e **mbsrev** sono versioni a caratteri wide e caratteri multibyte di **strrev**. Gli argomenti e il valore restituito di **wcsrev** sono caratteri wide, mentre quelli di stringhe **mbsrev** sono stringhe a caratteri multibyte. Per la **mbsrev**, l'ordine dei byte in ogni carattere multibyte nelle *str* non viene modificato. A parte ciò, queste tre funzioni si comportano in modo identico.
+La funzione **_strrev** inverte l'ordine dei caratteri in *Str*. Il carattere Null di terminazione rimane nella posizione originale. **_wcsrev** e **_mbsrev** sono versioni a caratteri wide e a caratteri multibyte di **_strrev**. Gli argomenti e il valore restituito di **_wcsrev** sono stringhe a caratteri wide. quelli di **_mbsrev** sono stringhe di caratteri multibyte. Per **_mbsrev**, l'ordine dei byte in ogni carattere multibyte in *Str* non viene modificato. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-**mbsrev** convalida i propri parametri. Se uno dei due *string1* oppure *string2* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **mbsrev** restituisce **NULL** e imposta **errno** al **EINVAL**. **strrev** e **wcsrev** non convalidano i relativi parametri.
+**_mbsrev** convalida i relativi parametri. Se *String1* o *string2* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **_mbsrev** restituisce **null** e imposta **errno** su **EINVAL**. **_strrev** e **_wcsrev** non convalidano i relativi parametri.
 
-Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali; vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno le **l** suffisso usano le impostazioni locali correnti, mentre quelle che hanno il **l** suffisso usano il parametro delle impostazioni locali di passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è influenzato dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Per ulteriori informazioni [, vedere setlocale, _wsetlocale](setlocale-wsetlocale.md) . Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno il suffisso **suffisso** usano le impostazioni locali correnti e quelle che hanno il suffisso **suffisso** usano invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Queste funzioni potrebbero essere vulnerabili a rischi di sovraccarico del buffer. I sovraccarichi del buffer possono essere utilizzati per gli attacchi di sistema perché possono causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
