@@ -20,16 +20,16 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 66ff3d684dba6b876ae94699209a43aaf4db5f23
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 0676f4896401ab777570666236c4639ad94c3a05
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916943"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503046"
 ---
 # <a name="colevariant-class"></a>Classe COleVariant
 
-Incapsula il tipo di dati [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
+Incapsula il tipo di dati [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -58,7 +58,7 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[COleVariant:: operator LPCVARIANT](#operator_lpcvariant)|Converte un `COleVariant` valore in un `LPCVARIANT`oggetto.|
 |[COleVariant:: operator LPVARIANT](#operator_lpvariant)|Converte un `COleVariant` oggetto in un `LPVARIANT`oggetto.|
@@ -68,14 +68,14 @@ class COleVariant : public tagVARIANT
 
 ## <a name="remarks"></a>Note
 
-Questo tipo di dati viene utilizzato nell'automazione OLE. In particolare, la struttura [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams) contiene un puntatore a una matrice di strutture VARIANT. Per `DISPPARAMS` passare parametri a [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)viene utilizzata una struttura.
+Questo tipo di dati viene utilizzato nell'automazione OLE. In particolare, la struttura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams) contiene un puntatore a una matrice di strutture VARIANT. Per `DISPPARAMS` passare parametri a [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)viene utilizzata una struttura.
 
 > [!NOTE]
 > Questa classe è derivata dalla `VARIANT` struttura. Ciò significa che è possibile passare `COleVariant` un oggetto in un parametro che chiama `VARIANT` per un e che `VARIANT` i membri dati della struttura sono membri dati accessibili `COleVariant`di.
 
 Le due classi MFC correlate [COleCurrency](../../mfc/reference/colecurrency-class.md) e [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) incapsulano i tipi di dati Variant `VT_CY`Currency () e `VT_DATE`date (). La `COleVariant` classe viene ampiamente utilizzata nelle classi DAO. vedere queste classi per l'utilizzo tipico di questa classe, ad esempio [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) e [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [Currency](/windows/desktop/api/wtypes/ns-wtypes-tagcy), [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)e [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)e [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) nel Windows SDK.
 
 Per ulteriori informazioni sulla `COleVariant` classe e sul relativo utilizzo nell'automazione OLE, vedere "passaggio di parametri in automazione OLE" nell'articolo [automazione](../../mfc/automation.md).
 
@@ -91,7 +91,7 @@ Per ulteriori informazioni sulla `COleVariant` classe e sul relativo utilizzo ne
 
 ##  <a name="attach"></a>COleVariant:: Connetti
 
-Chiamare questa funzione per alleghi l'oggetto [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) specificato all'oggetto `COleVariant` corrente.
+Chiamare questa funzione per alleghi l'oggetto [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) specificato all'oggetto `COleVariant` corrente.
 
 ```
 void Attach(VARIANT& varSrc);
@@ -106,7 +106,7 @@ Oggetto esistente `VARIANT` da collegare all'oggetto corrente `COleVariant` .
 
 Questa funzione imposta il VARTYPE di *varSrc* su VT_EMPTY.
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) e [VarEnum](/windows/desktop/api/wtypes/ne-wtypes-varenum) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) e [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum) nel Windows SDK.
 
 ##  <a name="colevariant"></a>COleVariant:: COleVariant
 
@@ -170,7 +170,7 @@ Oggetto [CByteArray](../../mfc/reference/cbytearray-class.md) da copiare nel nuo
 Oggetto [CLongBinary](../../mfc/reference/clongbinary-class.md) da copiare nel nuovo `COleVariant` oggetto.
 
 *pidl*<br/>
-Puntatore a una struttura [ItemId](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) da copiare nel nuovo `COleVariant` oggetto.
+Puntatore a una struttura [ItemId](/windows/win32/api/shtypes/ns-shtypes-itemidlist) da copiare nel nuovo `COleVariant` oggetto.
 
 ### <a name="remarks"></a>Note
 
@@ -206,7 +206,7 @@ Tutti questi costruttori creano nuovi `COleVariant` oggetti inizializzati sul va
 
 - **COleVariant (** *lbSrc* **)** Copia un `CLongBinary` oggetto nel nuovo oggetto, VT_EMPTY.
 
-Per ulteriori informazioni su SCODE, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/desktop/com/structure-of-com-error-codes) nell'Windows SDK.
+Per ulteriori informazioni su SCODE, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes) nell'Windows SDK.
 
 ##  <a name="changetype"></a>COleVariant:: ChangeType
 
@@ -222,11 +222,11 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 VarType per questo `COleVariant` oggetto.
 
 *pSrc*<br/>
-Puntatore all'oggetto [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) da convertire. Se questo valore è null, questo `COleVariant` oggetto viene usato come origine per la conversione.
+Puntatore all'oggetto [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) da convertire. Se questo valore è null, questo `COleVariant` oggetto viene usato come origine per la conversione.
 
 ### <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VarEnum](/windows/desktop/api/wtypes/ne-wtypes-varenum)e [VariantChangeType](/windows/desktop/api/oleauto/nf-oleauto-variantchangetype) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum)e [VariantChangeType](/windows/win32/api/oleauto/nf-oleauto-variantchangetype) nel Windows SDK.
 
 ##  <a name="clear"></a>COleVariant:: Clear
 
@@ -244,7 +244,7 @@ Per ulteriori informazioni, vedere le `VARIANT`voci, VARTYPE e `VariantClear` ne
 
 ##  <a name="detach"></a>COleVariant::D etach
 
-Disconnette l'oggetto [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) sottostante da questo `COleVariant` oggetto.
+Disconnette l'oggetto [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) sottostante da questo `COleVariant` oggetto.
 
 ```
 VARIANT Detach();
@@ -257,7 +257,7 @@ Questa funzione imposta il VarType per questo `COleVariant` oggetto su VT_EMPTY.
 > [!NOTE]
 >  Dopo la `Detach`chiamata a, è responsabilità del chiamante chiamare `VariantClear` sulla struttura risultante `VARIANT` .
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [VarEnum](/windows/desktop/api/wtypes/ne-wtypes-varenum)e [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum)e [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) nel Windows SDK.
 
 ##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray
 
@@ -344,7 +344,7 @@ Di seguito viene riportata una breve descrizione di ogni operatore:
 
 - **operatore = (** *lbSrc* **)** Copia un oggetto [CLongBinary](../../mfc/reference/clongbinary-class.md) in questo `COleVariant` oggetto.
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) e [VarEnum](/windows/desktop/api/wtypes/ne-wtypes-varenum) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) e [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum) nel Windows SDK.
 
 ##  <a name="operator_eq_eq"></a>COleVariant:: operator = =
 

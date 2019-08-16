@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 3cd194d0b6303c6d337d7157a521c825f77fc312
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916228"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507447"
 ---
 # <a name="cbitmap-class"></a>Classe CBitmap
 
@@ -155,7 +155,7 @@ Sebbene non sia possibile selezionare direttamente una bitmap per un dispositivo
 
 Terminate le operazioni sull'oggetto `CBitmap` creato dalla funzione `CreateBitmap` , selezionare la bitmap dal contesto di memoria, quindi eliminare l'oggetto `CBitmap` .
 
-Per ulteriori informazioni, vedere la descrizione del `bmBits` campo `BITMAP` nella struttura. La struttura [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) è descritta nella funzione membro [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
+Per ulteriori informazioni, vedere la descrizione del `bmBits` campo `BITMAP` nella struttura. La struttura [BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap) è descritta nella funzione membro [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
 
 ##  <a name="createbitmapindirect"></a>CBitmap:: CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Parametri
 
 *lpBitmap*<br/>
-Punta a una struttura [bitmap](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) che contiene informazioni sulla bitmap.
+Punta a una struttura [bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) che contiene informazioni sulla bitmap.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -178,7 +178,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Sebbene non sia possibile selezionare direttamente una bitmap per un dispositivo di visualizzazione, è possibile selezionarla come bitmap corrente per un contesto di dispositivo di memoria utilizzando [CDC:: SelezionaOggetto](../../mfc/reference/cdc-class.md#selectobject) e copiata in qualsiasi contesto di dispositivo compatibile utilizzando [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [CDC:: Funzione StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) . La funzione [CDC::P atblt](../../mfc/reference/cdc-class.md#patblt) può copiare la bitmap per il pennello corrente direttamente nel contesto del dispositivo di visualizzazione.
 
-Se la `BITMAP` struttura a cui punta il parametro *lpBitmap* è stata compilata usando la `GetObject` funzione, i bit della bitmap non vengono specificati e la bitmap non è inizializzata. Per inizializzare la bitmap, un'applicazione può utilizzare una funzione come [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) per copiare i bit dalla bitmap identificata dal primo parametro di `CGdiObject::GetObject` alla bitmap creata da. `CreateBitmapIndirect`
+Se la `BITMAP` struttura a cui punta il parametro *lpBitmap* è stata compilata usando la `GetObject` funzione, i bit della bitmap non vengono specificati e la bitmap non è inizializzata. Per inizializzare la bitmap, un'applicazione può utilizzare una funzione come [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) o [SetDIBits](/windows/win32/api/wingdi/nf-wingdi-setdibits) per copiare i bit dalla bitmap identificata dal primo parametro di `CGdiObject::GetObject` alla bitmap creata da. `CreateBitmapIndirect`
 
 Al termine dell'oggetto creato `CBitmap` con `CreateBitmapIndirect` la funzione, selezionare prima di tutto la bitmap dal contesto di dispositivo, quindi eliminare l' `CBitmap` oggetto.
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Parametri
 
 *pBitMap*<br/>
-Puntatore a una struttura [bitmap](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) che riceverà le proprietà dell'immagine. Questo parametro non può essere NULL.
+Puntatore a una struttura [bitmap](/windows/win32/api/wingdi/ns-wingdi-bitmap) che riceverà le proprietà dell'immagine. Questo parametro non può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -408,7 +408,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Per impostazione predefinita `LoadMappedBitmap` , eseguirà il mapping dei colori usati comunemente nei glifi dei pulsanti.
 
-Per informazioni sulla creazione di una mappa di bit mappata, vedere la funzione di Windows [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) e la struttura [mappatura](/windows/desktop/api/commctrl/ns-commctrl-colormap) nella Windows SDK.
+Per informazioni sulla creazione di una mappa di bit mappata, vedere la funzione di Windows [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) e la struttura [mappatura](/windows/win32/api/commctrl/ns-commctrl-colormap) nella Windows SDK.
 
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap
 
@@ -469,7 +469,7 @@ Se ha esito positivo, un handle per l'oggetto GDI Windows `CBitmap` rappresentat
 
 Questo operatore è un operatore di cast che supporta l'uso diretto di `HBITMAP` un oggetto.
 
-Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere [oggetti grafici](/windows/desktop/gdi/graphic-objects) nell'Windows SDK.
+Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere [oggetti grafici](/windows/win32/gdi/graphic-objects) nell'Windows SDK.
 
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits
 

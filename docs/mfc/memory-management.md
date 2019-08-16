@@ -8,34 +8,34 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 1c7f901009d5e1e7f0af20d493bb748b46b18480
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d81bd0a8bdd24059951cba5c8b69751b3d1db86
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219130"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508265"
 ---
 # <a name="memory-management"></a>Gestione della memoria
 
-Questo gruppo di articoli descrive come sfruttare i vantaggi dei servizi per utilizzo generico di Microsoft Foundation classe libreria (MFC) correlate alla gestione della memoria. Allocazione di memoria può essere suddivisi in due categorie principali: frame le allocazioni e le allocazioni di heap.
+In questo gruppo di articoli viene descritto come sfruttare i servizi per utilizzo generico del libreria Microsoft Foundation Class (MFC) correlati alla gestione della memoria. L'allocazione di memoria può essere divisa in due categorie principali: allocazioni di frame e allocazioni di heap.
 
-Una differenza principale tra le due tecniche è che con allocazione di frame che generalmente usate con la memoria effettiva bloccato stesso, mentre con allocazione heap si ottengono sempre un puntatore al blocco di memoria. Un'altra differenza principale tra i due schemi è che gli oggetti nel frame vengono eliminati automaticamente, mentre gli oggetti degli heap devono essere eliminati esplicitamente dal programmatore.
+Una differenza principale tra le due tecniche di allocazione è che, con l'allocazione dei frame, in genere si utilizza il blocco di memoria effettivo, mentre con l'allocazione dell'heap viene sempre assegnato un puntatore al blocco di memoria. Un'altra differenza principale tra i due schemi è che gli oggetti frame vengono eliminati automaticamente, mentre gli oggetti heap devono essere eliminati in modo esplicito dal programmatore.
 
-Per non MFC informazioni sulla gestione della memoria nelle applicazioni per Windows, vedere [gestione della memoria](/windows/desktop/memory/memory-management) nel SDK di Windows.
+Per informazioni non MFC sulla gestione della memoria nei programmi per Windows, vedere [gestione della memoria](/windows/win32/memory/memory-management) nel Windows SDK.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Allocazione di frame](../mfc/memory-management-frame-allocation.md)
+- [Allocazione frame](../mfc/memory-management-frame-allocation.md)
 
-- [Allocazione di heap](../mfc/memory-management-heap-allocation.md)
+- [Allocazione heap](../mfc/memory-management-heap-allocation.md)
 
-- [Allocazione di memoria per una matrice](../mfc/memory-management-examples.md)
+- [Allocazione della memoria per una matrice](../mfc/memory-management-examples.md)
 
-- [Deallocazione di memoria per una matrice dall'heap](../mfc/memory-management-examples.md)
+- [Deallocazione della memoria per una matrice dall'heap](../mfc/memory-management-examples.md)
 
-- [Allocazione di memoria per una struttura di dati](../mfc/memory-management-examples.md)
+- [Allocazione della memoria per una struttura di dati](../mfc/memory-management-examples.md)
 
-- [Allocazione di memoria per un oggetto](../mfc/memory-management-examples.md)
+- [Allocazione della memoria per un oggetto](../mfc/memory-management-examples.md)
 
 - [Blocchi di memoria ridimensionabili](../mfc/memory-management-resizable-memory-blocks.md)
 

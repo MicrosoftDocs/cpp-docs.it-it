@@ -1,21 +1,21 @@
 ---
-title: stringa (attributo COM C++)
+title: String (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407276"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514013"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indica che l'oggetto unidimensionale **char**, **wchar_t**, `byte` (o equivalenti) matrice o del puntatore a una matrice di questo tipo deve essere trattato come una stringa.
+Indica che la matrice unidimensionale **char**, **wchar_t**, `byte` (o equivalente) o il puntatore a una matrice di questo tipo devono essere considerati come una stringa.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Indica che l'oggetto unidimensionale **char**, **wchar_t**, `byte` (o equivalent
 
 ## <a name="remarks"></a>Note
 
-Il **stringa** attributi di C++ ha la stessa funzionalità come la [stringa](/windows/desktop/Midl/string) attributo MIDL.
+L'attributo **stringa** C++ ha la stessa funzionalità dell'attributo MIDL di [stringa](/windows/win32/Midl/string) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente viene illustrato come utilizzare **stringa** su un'interfaccia e in un typedef:
+Nel codice seguente viene illustrato come utilizzare una **stringa** in un'interfaccia e in un typedef:
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -50,10 +50,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Si applica a**|Matrice o puntatore a una matrice, parametro di interfaccia, metodo di interfaccia|
+|**Si applica a**|Matrice o puntatore a una matrice, un parametro di interfaccia, un metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

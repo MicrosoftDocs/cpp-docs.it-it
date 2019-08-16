@@ -32,16 +32,16 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 4c0f053cde32d71e4864c442b761606bb56c8829
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7783ff6519147331ae3943f053efe1bae01aee7d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331285"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499795"
 ---
-# <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
+# <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
-Imposta i primi **n** byte di una stringa di caratteri multibyte in un carattere specificato. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
+Imposta i primi **n** byte di una stringa di caratteri multibyte su un carattere specificato. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -78,19 +78,19 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**mbsnbset** restituisce un puntatore alla stringa modificata.
+**_mbsnbset** restituisce un puntatore alla stringa modificata.
 
 ## <a name="remarks"></a>Note
 
-Il **mbsnbset** e **mbsnbset_l** funzioni impostano al massimo i primi *count* byte del *str* a *c*. Se *conteggio* è maggiore della lunghezza di *str*, la lunghezza del *str* viene usato al posto di *conteggio*. Se *c* è un carattere multibyte e non può essere interamente impostato nell'ultimo byte specificato da *conteggio*, l'ultimo byte viene riempito con un carattere vuoto. **mbsnbset** e **mbsnbset_l** non viene inserita una terminazione null alla fine del *str*.
+Le funzioni **_mbsnbset** e **_mbsnbset_l** impostano al massimo il primo *conteggio* byte di *STR* in *c*. Se *count* è maggiore della lunghezza di *Str*, viene utilizzata la lunghezza di *Str* anziché *count*. Se *c* è un carattere multibyte e non può essere impostato interamente nell'ultimo byte specificato da *count*, l'ultimo byte viene riempito con un carattere vuoto. **_mbsnbset** e **_mbsnbset_l** non inseriscono un null di terminazione alla fine di *Str*.
 
-**mbsnbset** e **mbsnbset_l** è simile a **mbsnset**, ad eccezione del fatto che imposta *conteggio* byte anziché *conteggio* caratteri di *c*.
+**_mbsnbset** e **_mbsnbset_l** sono simili a **_mbsnset**, con la differenza che imposta il *numero* di byte anziché i caratteri di *conteggio* di *c*.
 
-Se *str* viene **NULL** oppure *count* è uguale a zero, questa funzione genera un'eccezione di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**. Inoltre, se *c* non è un carattere multibyte valido, **errno** è impostata su **EINVAL** e viene usato invece uno spazio.
+Se *Str* è **null** o *count* è zero, questa funzione genera un'eccezione di parametro non valido, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**. Inoltre, se *c* non è un carattere multibyte valido, **errno** viene impostato su **EINVAL** e viene invece utilizzato uno spazio.
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Il **mbsnbset** versione di questa funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; le **mbsnbset_l** versione è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione **_mbsnbset** di questa funzione usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione di **_mbsnbset_l** è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-**Nota sulla sicurezza** Questa API è esposta a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Nota sulla sicurezza** Questa API è esposta a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

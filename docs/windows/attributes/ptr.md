@@ -1,21 +1,21 @@
 ---
-title: PTR (attributo COM C++)
+title: PTR (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 2c712a2d9c85e0fe8fd8c4dbad5c7f48812ab1a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5f2d694f3525f27e4a8371f04efa28940f21bba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407393"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514160"
 ---
 # <a name="ptr"></a>ptr
 
-Definisce un puntatore come puntatore completo.
+Designa un puntatore come puntatore completo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Definisce un puntatore come puntatore completo.
 
 ## <a name="remarks"></a>Note
 
-Il **ptr** attributi di C++ ha la stessa funzionalità come la [ptr](/windows/desktop/Midl/ptr) attributo MIDL.
+L'attributo **ptr** C++ ha la stessa funzionalità dell'attributo MIDL [ptr](/windows/win32/Midl/ptr) .
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [defaultvalue](defaultvalue.md) per un esempio dell'uso dei **ptr**.
+Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di utilizzo di **ptr**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -37,10 +37,10 @@ Vedere l'esempio relativo [defaultvalue](defaultvalue.md) per un esempio dell'us
 
 |||
 |-|-|
-|**Si applica a**|Parametro di interfaccia, metodo di interfaccia, **(typedef)**|
+|**Si applica a**|Parametro di interfaccia, metodo di interfaccia, **typedef**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396743"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509397"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchange
+# <a name="_interlockedexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchange
 
 **Sezione specifica Microsoft**
 
@@ -148,7 +148,7 @@ __int64 _InterlockedExchange64_rel(
 [in, out] Puntatore al valore da scambiare. La funzione imposta questa variabile su `Value` e restituisce il valore precedente.
 
 *Valore*<br/>
-[in] Valore da scambiare con il valore a cui punta `Target`.
+in Valore da scambiare con il valore a cui punta `Target`.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -164,7 +164,7 @@ Restituisce il valore iniziale a cui punta `Target`.
 
 ## <a name="remarks"></a>Note
 
-`_InterlockedExchange` fornisce il supporto intrinseco del compilatore per il SDK di Windows Win32 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange) (funzione).
+`_InterlockedExchange`fornisce il supporto intrinseco del compilatore per la funzione Win32 Windows SDK [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange) .
 
 Ci sono diverse varianti di `_InterlockedExchange` che variano in base ai tipi di dati interessati e all'uso della semantica di acquisizione o di rilascio specifica del processore.
 
@@ -178,7 +178,7 @@ Queste routine sono disponibili solo come funzioni intrinseche.
 
 ## <a name="example"></a>Esempio
 
-Per un esempio d'uso `_InterlockedExchange`, vedere [InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Per un esempio di come usare `_InterlockedExchange`, vedere [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **Fine sezione specifica Microsoft**
 

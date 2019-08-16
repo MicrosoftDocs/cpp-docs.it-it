@@ -24,73 +24,73 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387916"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513654"
 ---
 # <a name="resource-files-c"></a>File di risorse (C++)
 
 > [!NOTE]
-> Dal momento che i progetti gestiti non usano i file di script della risorsa, è necessario aprire le risorse da **Esplora soluzioni**. Usare la [editor di immagini](../windows/image-editor-for-icons.md) e il [editor binario](binary-editor.md) per lavorare con i file di risorse nei progetti gestiti.
+> Dal momento che i progetti gestiti non usano i file di script della risorsa, è necessario aprire le risorse da **Esplora soluzioni**. Utilizzare l' [editor di immagini](../windows/image-editor-for-icons.md) e l' [editor binario](binary-editor.md) per utilizzare i file di risorse nei progetti gestiti.
 >
 > Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.
 
-Il termine *file di risorse* possono fare riferimento a un numero di tipi di file, ad esempio:
+Il termine *file di risorse* può fare riferimento a un numero di tipi di file, ad esempio:
 
 - File script di risorse (con estensione rc) di un programma.
 
 - File modello di risorse (con estensione rct)
 
-- Una singola risorsa esistente come file autonomo. Questo tipo include un file bitmap, icona o cursore che fanno riferimento a un file RC.
+- Una singola risorsa esistente come file autonomo. Questo tipo include una bitmap, un'icona o un file di cursore a cui fa riferimento un file RC.
 
-- Un file di intestazione generato dall'ambiente di sviluppo. Questo tipo rientrano `Resource.h`, questa operazione è definita da un file RC.
+- Un file di intestazione generato dall'ambiente di sviluppo. Questo tipo include `Resource.h`, a cui fa riferimento un file RC.
 
-Trovare le risorse in altri tipi di file, ad esempio .exe,. dll e RES sono dette *risorse*.
+Le risorse disponibili in altri tipi di file, ad esempio i file con estensione exe, dll e res, sono definite *risorse*.
 
-È possibile rivolgersi *file di risorse* e *risorse* all'interno del progetto. È anche possibile lavorare con quelli che non fanno parte del progetto corrente o sono stati creati all'esterno dell'ambiente di sviluppo di Visual Studio. Ad esempio, è possibile eseguire queste operazioni:
+È possibile usare *i file di risorse* e *le risorse* all'interno del progetto. È anche possibile usare quelli che non fanno parte del progetto corrente o che sono stati creati all'esterno dell'ambiente di sviluppo di Visual Studio. Ad esempio, è possibile eseguire queste operazioni:
 
 - Usare file di risorse annidati e inclusi in modo condizionale.
 
-- Aggiornare le risorse esistenti o convertirle in Visual C++.
+- Aggiornare le risorse esistenti o convertirle in C++oggetti visivi.
 
 - Importare o esportare risorse grafiche nel o dal file di risorse corrente.
 
 - Includere identificatori (simboli) condivisi o di sola lettura che non è possibile modificare tramite l'ambiente di sviluppo.
 
-- Includere le risorse nel file eseguibile (.exe) che non è necessario modificare o non deve essere modificato, ad esempio le risorse condivise tra più progetti.
+- Includere le risorse nel file eseguibile (con estensione exe) che non necessitano di modifica (o non devono essere modificate), ad esempio le risorse condivise tra diversi progetti.
 
 - Includere tipi di risorse non supportati dall'ambiente di sviluppo.
 
-Per altre informazioni sulle risorse, vedere come [creare le risorse](../windows/how-to-create-a-resource-script-file.md), [gestire le risorse](../windows/how-to-copy-resources.md), e [includono risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).
+Per ulteriori informazioni sulle risorse, vedere come [creare risorse](../windows/how-to-create-a-resource-script-file.md), [gestire risorse](../windows/how-to-copy-resources.md)e [includere risorse in](../windows/how-to-include-resources-at-compile-time.md)fase di compilazione.
 
 ## <a name="editable-resources"></a>Risorse modificabili
 
-I seguenti tipi di file possono essere aperto per modificare le risorse che contengono:
+Per modificare le risorse contenute, è possibile aprire i seguenti tipi di file:
 
-| Nome file | Descrizione |
+| Nome file | DESCRIZIONE |
 |---|---|
 | RC | File script di risorsa |
-| RCT | File modello di risorse |
+| RCT | File modello di risorsa |
 | RES | File di risorse |
 | .resx | File di risorse gestite |
 | EXE | File eseguibili |
 | DLL | File di libreria a collegamento dinamico |
-| .bmp, .ico, .dib, .cur | File bitmap, icona, barra degli strumenti e cursore |
+| .bmp, .ico, .dib, .cur | Bitmap, icona, barra degli strumenti e file di cursore |
 
-Quando si modificano le risorse, l'ambiente di Visual Studio funziona con e interessa i file seguenti:
+Quando si modificano le risorse, l'ambiente di Visual Studio funziona con e influiscono sui file seguenti:
 
 | Nome file | Descrizione |
 |---|---|
-| Resource.h | File di intestazione generato dall'ambiente di sviluppo che contiene le definizioni dei simboli.<br/><br/>Questo file può essere incluso nel controllo del codice sorgente. |
-| Nomefile.aps | Versione binaria del file di script di risorsa corrente utilizzato per il caricamento rapido.<br /><br /> Editor di risorse non leggono direttamente i file con estensione RC o Resource. h. Il compilatore di risorse li compila in file APS utilizzate dagli editor di risorse. Questo file è presente in una fase di compilazione e archivia solo dati simbolici.<br/><br/>Come con un normale processo di compilazione, le informazioni che non sono simboliche, ad esempio commenti, vengono eliminate durante il processo di compilazione.<br/><br/>Ogni volta che il file APS non risulta sincronizzato con il file RC, il file RC viene rigenerato. Ad esempio, quando si **salvare**, l'editor di risorse sovrascrive il file RC e il file Resource h. Tutte le modifiche alle risorse rimangono integrate nel file RC, ma i commenti andranno sempre persi quando il file RC viene sovrascritto. Per informazioni su come mantenere i commenti, vedere [includere le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>È in genere, non deve includere il file APS nel controllo del codice sorgente. |
-| RC | File di script di risorsa che contiene lo script per le risorse nel progetto corrente. Questo file viene sovrascritto dal file APS ogni volta che si salva.<br/><br/>Questo file può essere incluso nel controllo del codice sorgente. |
+| Resource.h | File di intestazione generato dall'ambiente di sviluppo che contiene le definizioni dei simboli.<br/><br/>Includere il file nel controllo del codice sorgente. |
+| Nomefile.aps | Versione binaria del file di script di risorsa corrente usato per il caricamento rapido.<br /><br /> Gli editor di risorse non leggono direttamente i file RC o Resource. h. Il compilatore di risorse li compila in file con estensione APS utilizzati dagli editor di risorse. Questo file è presente in una fase di compilazione e archivia solo dati simbolici.<br/><br/>Come nel caso di un normale processo di compilazione, le informazioni che non sono simbolici, ad esempio i commenti, vengono ignorate durante il processo di compilazione.<br/><br/>Ogni volta che il file. APS non è sincronizzato con il file RC, il file RC viene rigenerato. Ad esempio, quando si **Salva**, l'editor risorse sovrascrive il file RC e il file Resource. h. Tutte le modifiche apportate alle risorse rimangono incorporate nel file RC, ma i commenti andranno sempre perduti dopo la sovrascrittura del file RC. Per informazioni su come mantenere i commenti, vedere [includere le risorse in fase di compilazione](../windows/how-to-include-resources-at-compile-time.md).<br/><br/>In genere, non è necessario includere il file con estensione APS nel controllo del codice sorgente. |
+| RC | File di script di risorsa che contiene lo script per le risorse nel progetto corrente. Questo file viene sovrascritto dal file APS ogni volta che si salva.<br/><br/>Includere il file nel controllo del codice sorgente. |
 
 ## <a name="manifest-resources"></a>Risorse di manifesto
 
-Nei progetti desktop C++, le risorse di manifesto sono file XML che descrivono le dipendenze di che un'applicazione utilizza. Ad esempio, in Visual Studio questo MFC file manifesto generato dalla procedura guidata definisce quale versione della DLL dei controlli comuni di Windows deve usare l'applicazione:
+Nei C++ progetti desktop, le risorse di manifesto sono file XML che descrivono le dipendenze utilizzate da un'applicazione. In Visual Studio, ad esempio, il file manifesto generato dalla procedura guidata MFC definisce la versione delle DLL dei controlli comuni di Windows che l'applicazione deve usare:
 
 ```xml
 <description>Your app description here</description>
@@ -108,22 +108,22 @@ Nei progetti desktop C++, le risorse di manifesto sono file XML che descrivono l
 </dependency>
 ```
 
-Per un'applicazione di Windows XP o Windows Vista, la risorsa del manifesto deve specificare la versione più recente dei controlli comuni di Windows per l'applicazione da usare. Nell'esempio precedente Usa una versione `6.0.0.0`, che supporta il [controllo Syslink](/windows/desktop/Controls/syslink-overview).
+Per un'applicazione Windows XP o Windows Vista, la risorsa del manifesto deve specificare la versione più recente dei controlli comuni di Windows per l'applicazione da utilizzare. Nell'esempio precedente viene usata `6.0.0.0`la versione, che supporta il [controllo Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
 > È possibile avere solo una risorsa di manifesto per modulo.
 
-Per visualizzare la versione e digitare le informazioni contenute in una risorsa di manifesto, aprire il file in un visualizzatore XML o l'editor di testo di Visual Studio. Se si apre una risorsa di manifesto da [Visualizzazione risorse](../windows/resource-view-window.md), la risorsa verrà aperta in formato binario.
+Per visualizzare le informazioni sulla versione e sul tipo contenute in una risorsa di manifesto, aprire il file in un visualizzatore XML o nell'editor di testo di Visual Studio. Se si apre una risorsa di manifesto da [Visualizzazione risorse](../windows/resource-view-window.md), la risorsa verrà aperta in formato binario.
 
 ### <a name="to-open-a-manifest-resource"></a>Per aprire una risorsa di manifesto
 
 1. Aprire il progetto in Visual Studio e passare a **Esplora soluzioni**.
 
-1. Espandere la **file di risorse** cartella, quindi:
+1. Espandere la cartella **file di risorse** , quindi:
 
-   - Per aprire nell'editor di testo, fare doppio clic il *manifest* file.
+   - Per aprirlo nell'editor di testo, fare doppio clic sul file *. manifest* .
 
-   - Per aprire in un altro editor, fare doppio clic il *manifest* del file e selezionare **Apri con**. Specificare l'editor da utilizzare e selezionare **aperto**.
+   - Per aprire un altro editor, fare clic con il pulsante destro del mouse sul file *. manifest* e scegliere **Apri con**. Specificare l'editor da usare e selezionare **Apri**.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,5 +1,5 @@
 ---
-title: CDialogImpl (classe)
+title: Classe CDialogImpl
 ms.date: 11/04/2016
 f1_keywords:
 - CDialogImpl
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 1124630d8ee15dd284893516bef8057f852b4632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc39a5deeb270b0426a4b199fc9ba01917c292bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245755"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496809"
 ---
-# <a name="cdialogimpl-class"></a>CDialogImpl (classe)
+# <a name="cdialogimpl-class"></a>Classe CDialogImpl
 
 Questa classe fornisce metodi per la creazione di una finestra di dialogo modale o non modale.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,18 +42,18 @@ template <class T,
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-La classe, derivata da `CDialogImpl`.
+Classe derivata da `CDialogImpl`.
 
 *TBase*<br/>
 Classe di base della nuova classe. La classe base predefinita è [CWindow](../../atl/reference/cwindow-class.md).
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
 |||
 |-|-|
-|[creare](#create)|Crea una finestra di dialogo non modale.|
+|[Creare](#create)|Crea una finestra di dialogo non modale.|
 |[DestroyWindow](#destroywindow)|Elimina una finestra di dialogo non modale.|
 |[DoModal](#domodal)|Crea una finestra di dialogo modale.|
 |[EndDialog](#enddialog)|Elimina una finestra di dialogo modale.|
@@ -62,8 +62,8 @@ Classe di base della nuova classe. La classe base predefinita è [CWindow](../..
 
 |||
 |-|-|
-|[GetDialogProc](#getdialogproc)|Restituisce la routine di finestra di dialogo corrente.|
-|[MapDialogRect](#mapdialogrect)|Le unità finestra di dialogo del rettangolo specificato viene eseguito il mapping alle unità di schermata (pixel).|
+|[GetDialogProc](#getdialogproc)|Restituisce la routine della finestra di dialogo corrente.|
+|[MapDialogRect](#mapdialogrect)|Esegue il mapping delle unità della finestra di dialogo del rettangolo specificato alle unità dello schermo (pixel).|
 |[OnFinalMessage](#onfinalmessage)|Chiamato dopo la ricezione dell'ultimo messaggio, in genere WM_NCDESTROY.|
 
 ### <a name="static-functions"></a>Funzioni statiche
@@ -71,35 +71,35 @@ Classe di base della nuova classe. La classe base predefinita è [CWindow](../..
 |||
 |-|-|
 |[DialogProc](#dialogproc)|Elabora i messaggi inviati alla finestra di dialogo.|
-|[StartDialogProc](#startdialogproc)|Chiamato quando viene ricevuto il messaggio prima di elaborare i messaggi inviati alla finestra di dialogo.|
+|[StartDialogProc](#startdialogproc)|Chiamato quando viene ricevuto il primo messaggio per elaborare i messaggi inviati alla finestra di dialogo.|
 
 ## <a name="remarks"></a>Note
 
-Con `CDialogImpl` è possibile creare una finestra di dialogo modale o non modale. `CDialogImpl` fornisce la routine di finestra di dialogo, che usa la mappa dei messaggi predefinita per indirizzare i messaggi ai gestori appropriati.
+Con `CDialogImpl` è possibile creare una finestra di dialogo modale o non modale. `CDialogImpl`fornisce la routine della finestra di dialogo che utilizza la mappa messaggi predefinita per indirizzare i messaggi ai gestori appropriati.
 
-Il distruttore della classe base `~CWindowImplRoot` assicura che la finestra è stata eliminata prima dell'eliminazione dell'oggetto.
+Il distruttore `~CWindowImplRoot` della classe base garantisce che la finestra sia stata eliminata prima dell'eliminazione dell'oggetto.
 
-`CDialogImpl` deriva da `CDialogImplBaseT`, che a sua volta deriva da `CWindowImplRoot`.
+`CDialogImpl`deriva da `CDialogImplBaseT`, che a sua volta deriva da `CWindowImplRoot`.
 
 > [!NOTE]
->  La classe deve definire un `IDD` membro che specifica l'ID di risorsa modello di finestra di dialogo. Ad esempio, la creazione guidata progetto ATL aggiunge automaticamente la riga seguente alla classe:
+>  La classe deve definire un `IDD` membro che specifichi l'ID della risorsa del modello di finestra di dialogo. La creazione guidata progetto ATL, ad esempio, aggiunge automaticamente la riga seguente alla classe:
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]
 
-in cui `MyDlg` è il **nome breve** immesso nella finestra della procedura guidata **nomi** pagina.
+dove `MyDlg` è il **nome breve** immesso nella pagina **dei nomi** della procedura guidata.
 
 |Per altre informazioni su|Vedere|
 |--------------------------------|---------|
 |Creazione di controlli|[Esercitazione ATL](../../atl/active-template-library-atl-tutorial.md)|
-|Tramite le finestre di dialogo ATL|[Classi di finestra ATL](../../atl/atl-window-classes.md)|
+|Utilizzo delle finestre di dialogo in ATL|[Classi di finestra ATL](../../atl/atl-window-classes.md)|
 |Creazione guidata progetto ATL|[Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)|
-|Finestre di dialogo|[Finestre di dialogo](/windows/desktop/dlgbox/dialog-boxes) e argomenti successivi nel SDK di Windows|
+|Finestre di dialogo|[Finestre di dialogo](/windows/win32/dlgbox/dialog-boxes) e argomenti successivi nell'Windows SDK|
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="create"></a>  CDialogImpl::Create
+##  <a name="create"></a>CDialogImpl:: create
 
 Crea una finestra di dialogo non modale.
 
@@ -117,22 +117,22 @@ HWND Create(
 ### <a name="parameters"></a>Parametri
 
 *hWndParent*<br/>
-[in] Handle alla finestra proprietaria.
+in Handle per la finestra proprietaria.
 
-**RECT &** *rect* [in] oggetto [RECT](/previous-versions/dd162897\(v=vs.85\)) struttura che specifica le dimensioni e la posizione della finestra di dialogo.
+**& Rect** *Rect* in Struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) che specifica le dimensioni e la posizione della finestra di dialogo.
 
 *dwInitParam*<br/>
-[in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.
+in Specifica il valore da passare alla finestra di dialogo nel parametro *lParam* del messaggio WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valore restituito
 
-Handle alla finestra di dialogo appena creato.
+Handle per la finestra di dialogo appena creata.
 
 ### <a name="remarks"></a>Note
 
-Questa finestra di dialogo viene associata automaticamente al `CDialogImpl` oggetto. Per creare una finestra di dialogo modale, chiamare [DoModal](#domodal). Il secondo override precedente viene usato solo con [CComControl](../../atl/reference/ccomcontrol-class.md).
+Questa finestra di dialogo viene automaticamente collegata all' `CDialogImpl` oggetto. Per creare una finestra di dialogo modale, chiamare [DoModal](#domodal). La seconda sostituzione precedente viene utilizzata solo con [CComControl](../../atl/reference/ccomcontrol-class.md).
 
-##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
+##  <a name="destroywindow"></a>CDialogImpl::D estroyWindow
 
 Elimina una finestra di dialogo non modale.
 
@@ -142,15 +142,15 @@ BOOL DestroyWindow();
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la finestra di dialogo è stata correttamente eliminata; in caso contrario, FALSE.
+TRUE se la finestra di dialogo è stata eliminata correttamente. in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Restituisce TRUE se la finestra di dialogo è stata eliminata correttamente; in caso contrario, FALSE.
+Restituisce TRUE se la finestra di dialogo è stata eliminata correttamente. in caso contrario, FALSE.
 
-##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
+##  <a name="dialogproc"></a>CDialogImpl::D ialogProc
 
-Questa funzione statica implementa la routine di finestra di dialogo.
+Questa funzione statica implementa la routine della finestra di dialogo.
 
 ```
 static LRESULT CALLBACK DialogProc(
@@ -163,16 +163,16 @@ static LRESULT CALLBACK DialogProc(
 ### <a name="parameters"></a>Parametri
 
 *hWnd*<br/>
-[in] Handle alla finestra di dialogo.
+in Handle per la finestra di dialogo.
 
 *uMsg*<br/>
-[in] Il messaggio inviato alla finestra di dialogo.
+in Messaggio inviato alla finestra di dialogo.
 
 *wParam*<br/>
-[in] Informazioni aggiuntive specifiche del messaggio.
+in Informazioni aggiuntive specifiche del messaggio.
 
 *lParam*<br/>
-[in] Informazioni aggiuntive specifiche del messaggio.
+in Informazioni aggiuntive specifiche del messaggio.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -180,11 +180,11 @@ TRUE se il messaggio viene elaborato; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-`DialogProc` Usa la mappa dei messaggi predefinita per indirizzare i messaggi ai gestori appropriati.
+`DialogProc`Usa la mappa messaggi predefinita per indirizzare i messaggi ai gestori appropriati.
 
-È possibile eseguire l'override `DialogProc` per fornire un meccanismo diverso per la gestione dei messaggi.
+È possibile eseguire `DialogProc` l'override di per fornire un meccanismo diverso per la gestione dei messaggi.
 
-##  <a name="domodal"></a>  CDialogImpl::DoModal
+##  <a name="domodal"></a>CDialogImpl::D oModal
 
 Crea una finestra di dialogo modale.
 
@@ -197,22 +197,22 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parametri
 
 *hWndParent*<br/>
-[in] Handle alla finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) funzione Win32.
+in Handle per la finestra proprietaria. Il valore predefinito è il valore restituito della funzione Win32 [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) .
 
 *dwInitParam*<br/>
-[in] Specifica il valore da passare alla finestra di dialogo nel *lParam* parametro del messaggio WM_INITDIALOG.
+in Specifica il valore da passare alla finestra di dialogo nel parametro *lParam* del messaggio WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, il valore della *nRetCode* il parametro specificato nella chiamata a [EndDialog](#enddialog). In caso contrario, -1.
+Se ha esito positivo, il valore del parametro *nRetCode* specificato nella chiamata a [EndDialog](#enddialog). In caso contrario,-1.
 
 ### <a name="remarks"></a>Note
 
-Questa finestra di dialogo viene associata automaticamente al `CDialogImpl` oggetto.
+Questa finestra di dialogo viene automaticamente collegata all' `CDialogImpl` oggetto.
 
-Per creare una finestra di dialogo non modale, chiamare [Create](#create).
+Per creare una finestra di dialogo non modale, chiamare [create](#create).
 
-##  <a name="enddialog"></a>  CDialogImpl::EndDialog
+##  <a name="enddialog"></a>CDialogImpl:: EndDialog
 
 Elimina una finestra di dialogo modale.
 
@@ -223,22 +223,22 @@ BOOL EndDialog(int nRetCode);
 ### <a name="parameters"></a>Parametri
 
 *nRetCode*<br/>
-[in] Il valore deve essere restituito da [CDialogImpl::DoModal](#domodal).
+in Valore che deve essere restituito da [CDialogImpl::D omodal](#domodal).
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la finestra di dialogo viene eliminato definitivamente; in caso contrario, FALSE.
+TRUE se la finestra di dialogo viene distrutta; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-`EndDialog` deve essere chiamato tramite la procedura di finestra di dialogo. Dopo che la finestra di dialogo viene eliminato definitivamente, Windows Usa il valore della *nRetCode* come valore restituito per `DoModal`, che creato la finestra di dialogo.
+`EndDialog`deve essere chiamato tramite la routine della finestra di dialogo. Dopo la distruzione della finestra di dialogo, in Windows viene utilizzato il valore di *nRetCode* come valore `DoModal`restituito per, che ha creato la finestra di dialogo.
 
 > [!NOTE]
->  Non chiamare `EndDialog` eliminare definitivamente una finestra di dialogo non modale. Chiamare [CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow) invece.
+>  Non chiamare `EndDialog` per eliminare definitivamente una finestra di dialogo non modale. Chiamare invece [CWindow::D estroywindow](../../atl/reference/cwindow-class.md#destroywindow) .
 
-##  <a name="getdialogproc"></a>  CDialogImpl::GetDialogProc
+##  <a name="getdialogproc"></a>CDialogImpl:: GetDialogProc
 
-Restituisce `DialogProc`, la routine di finestra di dialogo corrente.
+Restituisce `DialogProc`, la routine della finestra di dialogo corrente.
 
 ```
 virtual WNDPROC GetDialogProc();
@@ -246,15 +246,15 @@ virtual WNDPROC GetDialogProc();
 
 ### <a name="return-value"></a>Valore restituito
 
-La routine di finestra di dialogo corrente.
+Routine della finestra di dialogo corrente.
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override di questo metodo per sostituire la routine di finestra di dialogo con i propri.
+Eseguire l'override di questo metodo per sostituire la routine della finestra di dialogo con una propria.
 
-##  <a name="mapdialogrect"></a>  CDialogImpl::MapDialogRect
+##  <a name="mapdialogrect"></a>CDialogImpl:: MapDialogRect
 
-Converte unità (maps) le unità finestra di dialogo del rettangolo specificato alla schermata (pixel).
+Converte (esegue il mapping) delle unità della finestra di dialogo del rettangolo specificato in unità dello schermo (pixel).
 
 ```
 BOOL MapDialogRect(LPRECT lpRect);
@@ -263,19 +263,19 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta a un `CRect` oggetto oppure [RECT](/windows/desktop/api/windef/ns-windef-tagrect) struttura che riceverà le coordinate del client dell'aggiornamento che racchiude l'area di aggiornamento.
+Punta a un `CRect` oggetto o a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) che deve ricevere le coordinate client dell'aggiornamento che racchiude l'area di aggiornamento.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se l'aggiornamento verrà eseguito. 0 se l'aggiornamento non riesce. Per ottenere informazioni estese sull'errore, chiamare `GetLastError`.
+Diverso da zero se l'aggiornamento ha esito positivo; 0 se l'aggiornamento non riesce. Per ottenere informazioni estese sull'errore, chiamare `GetLastError`.
 
 ### <a name="remarks"></a>Note
 
-La funzione sostituisce le coordinate dell'oggetto `RECT` struttura con le coordinate convertite, che consente la struttura da utilizzare per creare una finestra di dialogo o posizionare un controllo all'interno di una finestra di dialogo.
+La funzione sostituisce le coordinate nella struttura specificata `RECT` con le coordinate convertite, che consentono di utilizzare la struttura per creare una finestra di dialogo o posizionare un controllo all'interno di una finestra di dialogo.
 
-##  <a name="onfinalmessage"></a>  CDialogImpl::OnFinalMessage
+##  <a name="onfinalmessage"></a>CDialogImpl:: OnFinalMessage
 
-Chiamato dopo la ricezione dell'ultimo messaggio (in genere `WM_NCDESTROY`).
+Chiamato dopo la ricezione dell'ultimo messaggio, `WM_NCDESTROY`in genere.
 
 ```
 virtual void OnFinalMessage(HWND hWnd);
@@ -284,15 +284,15 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="parameters"></a>Parametri
 
 *hWnd*<br/>
-[in] Handle alla finestra in corso l'eliminazione.
+in Handle per la finestra da eliminare definitivamente.
 
 ### <a name="remarks"></a>Note
 
-Si noti che se si vuole eliminare automaticamente l'oggetto di distruzione di finestre, è possibile chiamare **elimini;** qui.
+Si noti che se si desidera eliminare automaticamente l'oggetto alla distruzione della finestra, è possibile chiamare **delete this** . qui.
 
-##  <a name="startdialogproc"></a>  CDialogImpl::StartDialogProc
+##  <a name="startdialogproc"></a>CDialogImpl:: StartDialogProc
 
-Chiamato una sola volta, quando viene ricevuto il primo messaggio, per elaborare i messaggi inviati alla finestra di dialogo.
+Viene chiamato una sola volta, quando viene ricevuto il primo messaggio, per elaborare i messaggi inviati alla finestra di dialogo.
 
 ```
 static LRESULT CALLBACK StartDialogProc(
@@ -305,24 +305,24 @@ static LRESULT CALLBACK StartDialogProc(
 ### <a name="parameters"></a>Parametri
 
 *hWnd*<br/>
-[in] Handle alla finestra di dialogo.
+in Handle per la finestra di dialogo.
 
 *uMsg*<br/>
-[in] Il messaggio inviato alla finestra di dialogo.
+in Messaggio inviato alla finestra di dialogo.
 
 *wParam*<br/>
-[in] Informazioni aggiuntive specifiche del messaggio.
+in Informazioni aggiuntive specifiche del messaggio.
 
 *lParam*<br/>
-[in] Informazioni aggiuntive specifiche del messaggio.
+in Informazioni aggiuntive specifiche del messaggio.
 
 ### <a name="return-value"></a>Valore restituito
 
-La procedura della finestra.
+Routine della finestra.
 
 ### <a name="remarks"></a>Note
 
-Dopo la chiamata iniziale alla `StartDialogProc`, `DialogProc` è impostato come una procedura di finestra di dialogo e ulteriormente le chiamate indirizzate.
+Dopo la chiamata iniziale a `StartDialogProc`, `DialogProc` viene impostato come routine della finestra di dialogo e altre chiamate vengono eseguite.
 
 ## <a name="see-also"></a>Vedere anche
 

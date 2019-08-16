@@ -9,41 +9,41 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351800"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510993"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Supporto di interfaccia duale per i server di automazione OLE
 
 > [!NOTE]
 > La seguente nota tecnica non è stata aggiornata da quando è stata inclusa per la prima volta nella documentazione online. Di conseguenza, alcune procedure e argomenti potrebbero essere non aggiornati o errati. Per le informazioni più recenti, è consigliabile cercare l'argomento di interesse nell'indice della documentazione online.
 
-Questa nota descrive come aggiungere il supporto di interfaccia duale a un'applicazione server basata su MFC di automazione OLE. Il [ACDUAL](../overview/visual-cpp-samples.md) esempio viene illustrato il supporto di interfaccia duale e il codice di esempio in questa nota è tratto da ACDUAL. Le macro descritte in questa nota, ad esempio DECLARE_DUAL_ERRORINFO DUAL_ERRORINFO_PART e IMPLEMENT_DUAL_ERRORINFO, fanno parte dell'esempio ACDUAL e sono reperibili in MFCDUAL. H.
+In questa nota viene illustrato come aggiungere il supporto Dual Interface a un'applicazione server di automazione OLE basata su MFC. L'esempio [ACDual](../overview/visual-cpp-samples.md) illustra il supporto dell'interfaccia duale e il codice di esempio in questa nota viene tratto da ACDUAL. Le macro descritte in questa nota, ad esempio DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART e IMPLEMENT_DUAL_ERRORINFO, fanno parte dell'esempio ACDUAL ed è possibile trovarle in MFCDUAL. H.
 
-## <a name="dual-interfaces"></a>Interfacce duali
+## <a name="dual-interfaces"></a>Interfacce doppie
 
-Sebbene l'automazione OLE consentono di implementare un `IDispatch` interfaccia, un'interfaccia VTBL o un'interfaccia duale (che comprende entrambi), Microsoft consiglia di implementare le interfacce duali per tutti gli oggetti di automazione OLE esposti. Interfacce duali presentano vantaggi significativi in `IDispatch`-VTBL-only o sole interfacce:
+Sebbene l'automazione OLE consenta di implementare `IDispatch` un'interfaccia, un'interfaccia VTBL o una doppia interfaccia (che comprende entrambe), Microsoft consiglia di implementare interfacce duali per tutti gli oggetti di automazione OLE esposti. Le interfacce duali offrono vantaggi `IDispatch`significativi rispetto alle interfacce solo VTBL o solo per le interfacce:
 
-- Associazione può avvenire in fase di compilazione tramite l'interfaccia VTBL o in fase di esecuzione tramite `IDispatch`.
+- L'associazione può essere eseguita in fase di compilazione tramite l'interfaccia VTBL oppure in fase di `IDispatch`esecuzione tramite.
 
-- I controller di automazione OLE che possono usare l'interfaccia VTBL possono trarre beneficio dalle prestazioni migliorate.
+- I controller di automazione OLE che possono usare l'interfaccia VTBL possono trarre vantaggio dalle migliori prestazioni.
 
-- Controller di automazione OLE esistenti che usano il `IDispatch` interfaccia continueranno a funzionare.
+- I controller di automazione OLE esistenti che `IDispatch` utilizzano l'interfaccia continueranno a funzionare.
 
-- L'interfaccia VTBL è più semplice chiamare da C++.
+- L'interfaccia VTBL è più semplice da chiamare C++.
 
-- Interfacce duali sono necessari per la compatibilità con le funzionalità di supporto di Visual Basic oggetto.
+- Per la compatibilità con Visual Basic funzionalità di supporto degli oggetti, sono necessarie interfacce doppie.
 
-## <a name="adding-dual-interface-support-to-a-ccmdtarget-based-class"></a>Aggiunta del supporto di interfaccia duale a una classe basata su CCmdTarget
+## <a name="adding-dual-interface-support-to-a-ccmdtarget-based-class"></a>Aggiunta del supporto Dual Interface a una classe basata su CCmdTarget
 
-Un'interfaccia duale è semplicemente un'interfaccia personalizzata derivata da `IDispatch`. Il modo più semplice per implementare il supporto di interfaccia duale in un `CCmdTarget`-classe di base deve prima implementare l'invio della normale interfaccia nella classe dell'utilizzo di MFC e ClassWizard, quindi aggiungere l'interfaccia personalizzata in un secondo momento. Nella maggior parte, l'implementazione dell'interfaccia personalizzata delegano semplicemente tornare a MFC `IDispatch` implementazione.
+Una doppia interfaccia è in realtà solo un'interfaccia personalizzata derivata `IDispatch`da. Il modo più semplice per implementare il supporto Dual Interface in una `CCmdTarget`classe basata su consiste nel implementare prima di tutto la normale interfaccia dispatch sulla classe usando MFC e ClassWizard, quindi aggiungere l'interfaccia personalizzata in un secondo momento. Nella maggior parte dei casi, l'implementazione dell'interfaccia personalizzata delegherà semplicemente all' `IDispatch` implementazione MFC.
 
-In primo luogo, modificare il file ODL per il server per definire le interfacce duali per gli oggetti. Per definire un'interfaccia duale, è necessario utilizzare un'istruzione di interfaccia, anziché il `DISPINTERFACE` istruzione che generano le procedure guidate di Visual C++. Anziché rimuovere esistente `DISPINTERFACE` istruzione, aggiungere una nuova istruzione di interfaccia. Grazie al mantenimento di `DISPINTERFACE` form, è possibile continuare a usare ClassWizard per aggiungere proprietà e metodi per l'oggetto, ma è necessario aggiungere i metodi e proprietà equivalenti per l'istruzione di interfaccia.
+In primo luogo, modificare il file di FAD per il server per definire interfacce doppie per gli oggetti. Per definire un'interfaccia duale, è necessario utilizzare un'istruzione di interfaccia, anziché `DISPINTERFACE` l'istruzione generata dalle C++ creazioni guidate visive. Anziché rimuovere l'istruzione esistente `DISPINTERFACE` , aggiungere una nuova istruzione Interface. Mantenendo il `DISPINTERFACE` modulo, è possibile continuare a usare ClassWizard per aggiungere proprietà e metodi all'oggetto, ma è necessario aggiungere le proprietà e i metodi equivalenti all'istruzione di interfaccia.
 
-Un'istruzione di interfaccia per un'interfaccia duale deve avere il *OLEAUTOMATION* e *DUALE* gli attributi e l'interfaccia deve derivare da `IDispatch`. È possibile usare la [GUIDGEN](../overview/visual-cpp-samples.md) esempio di creare un **IID** per interfaccia duale:
+Un'istruzione di interfaccia per un'interfaccia duale deve avere gli attributi *oleautomation* e *Dual* e l'interfaccia deve essere derivata `IDispatch`da. Per creare un **IID** per l'interfaccia duale, è possibile usare l'esempio [Guidgen](../overview/visual-cpp-samples.md) :
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -55,14 +55,14 @@ interface IDualAClick : IDispatch
     };
 ```
 
-Dopo aver creato l'istruzione interfaccia posto, iniziare ad aggiungere voci per i metodi e proprietà. Per le interfacce duali, è necessario riorganizzare gli elenchi di parametri in modo che i metodi e funzioni di accesso di proprietà nell'interfaccia duale restituiscono un **HRESULT** e passare i valori restituiti come parametri con gli attributi `[retval,out]`. Tenere presente che per le proprietà, è necessario aggiungere sia un'operazione di lettura (`propget`) e la scrittura (`propput`) accedere a una funzione con lo stesso id. Ad esempio:
+Una volta eseguita l'istruzione Interface, iniziare ad aggiungere le voci per i metodi e le proprietà. Per le interfacce duali, è necessario ridisporre gli elenchi di parametri in modo che i metodi e le funzioni di accesso alle proprietà nell'interfaccia doppia restituiscano un **HRESULT** e passino i `[retval,out]`valori restituiti come parametri con gli attributi. Tenere presente che, per le proprietà, sarà necessario aggiungere una funzione di`propget`accesso Read ()`propput`e Write () con lo stesso ID. Ad esempio:
 
 ```IDL
 [propput, id(1)] HRESULT text([in] BSTR newText);
 [propget, id(1)] HRESULT text([out, retval] BSTR* retval);
 ```
 
-Dopo aver definita i metodi e proprietà, è necessario aggiungere un riferimento all'istruzione interfaccia nell'istruzione coclasse. Ad esempio:
+Dopo aver definito i metodi e le proprietà, è necessario aggiungere un riferimento all'istruzione Interface nell'istruzione coclass. Ad esempio:
 
 ```IDL
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]
@@ -73,9 +73,9 @@ coclass Document
 };
 ```
 
-Dopo aver aggiornato il file ODL, usare il meccanismo della mappa dell'interfaccia di MFC per definire una classe di implementazione per l'interfaccia duale nella classe di oggetto e verificare le voci corrispondenti in MFC `QueryInterface` meccanismo. Necessaria una voce nel `INTERFACE_PART` blocco per ogni voce nel rapporto dell'interfaccia del ODL, più le voci per un'interfaccia di dispatch. Ogni voce ODL con il *propput* attributo necessita di una funzione denominata `put_propertyname`. Ogni voce con la *propget* attributo necessita di una funzione denominata `get_propertyname`.
+Al termine dell'aggiornamento del file FAD, utilizzare il meccanismo di mappa dell'interfaccia di MFC per definire una classe di implementazione per l'interfaccia duale nella classe di oggetti e creare le `QueryInterface` voci corrispondenti nel meccanismo di MFC. È necessaria una voce nel `INTERFACE_PART` blocco per ogni voce nell'istruzione di interfaccia di FAD, più le voci per un'interfaccia dispatch. Per ogni voce della funzione con l'attributo *propput* è necessaria `put_propertyname`una funzione denominata. Ogni voce con l'attributo *propget* necessita di una funzione `get_propertyname`denominata.
 
-Per definire una classe di implementazione per l'interfaccia duale, aggiungere un `DUAL_INTERFACE_PART` blocco alla definizione di classe oggetto. Ad esempio:
+Per definire una classe di implementazione per l'interfaccia duale, `DUAL_INTERFACE_PART` aggiungere un blocco alla definizione della classe dell'oggetto. Ad esempio:
 
 ```cpp
 BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
@@ -93,7 +93,7 @@ BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
 END_DUAL_INTERFACE_PART(DualAClick)
 ```
 
-Per connettere l'interfaccia duale di MFC [QueryInterface](/windows/desktop/com/queryinterface--navigating-in-an-object) meccanismo, aggiungere un `INTERFACE_PART` voce alla mappa dell'interfaccia:
+Per connettere l'interfaccia duale al meccanismo [QueryInterface](/windows/win32/com/queryinterface--navigating-in-an-object) di MFC, aggiungere `INTERFACE_PART` una voce alla mappa dell'interfaccia:
 
 ```cpp
 BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
@@ -102,7 +102,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
 END_INTERFACE_MAP()
 ```
 
-Successivamente, è necessario specificare l'implementazione dell'interfaccia. Nella maggior parte, sarà in grado di delegare a MFC esistente `IDispatch` implementazione. Ad esempio:
+Successivamente, è necessario compilare l'implementazione dell'interfaccia. Nella maggior parte dei casi sarà possibile delegare all'implementazione MFC `IDispatch` esistente. Ad esempio:
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()
@@ -179,7 +179,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }
 ```
 
-Per i metodi e le funzioni di accesso di proprietà dell'oggetto, è necessario specificare l'implementazione. Le funzioni di metodi e le proprietà in genere possono delegare ai metodi generati mediante la creazione guidata classe. Tuttavia, se impostano proprietà per accedere alle variabili direttamente, è necessario scrivere il codice per get/put il valore nella variabile. Ad esempio:
+Per i metodi e le funzioni della funzione di accesso alle proprietà dell'oggetto, è necessario compilare l'implementazione. Il metodo e le funzioni di proprietà in genere possono delegare nuovamente ai metodi generati usando ClassWizard. Tuttavia, se si impostano le proprietà per accedere direttamente alle variabili, è necessario scrivere il codice per ottenere/inserire il valore nella variabile. Ad esempio:
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
@@ -201,9 +201,9 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 }
 ```
 
-## <a name="passing-dual-interface-pointers"></a>Passando i puntatori di interfaccia duale
+## <a name="passing-dual-interface-pointers"></a>Passaggio di puntatori a doppia interfaccia
 
-Passando il puntatore di interfaccia duale non è affatto semplice, specialmente se è necessario chiamare `CCmdTarget::FromIDispatch`. `FromIDispatch` funziona solo su MFC `IDispatch` puntatori. È un modo per risolvere questo problema in cui cercare originale `IDispatch` puntatore set up da MFC e passare il puntatore a funzioni che ne hanno necessità. Ad esempio:
+Il passaggio del puntatore a doppia interfaccia non è semplice, specialmente se è necessario `CCmdTarget::FromIDispatch`chiamare. `FromIDispatch`funziona solo sui puntatori `IDispatch` di MFC. Un modo per aggirare questo problema consiste nell'eseguire una query `IDispatch` per il puntatore originale impostato da MFC e passare tale puntatore alle funzioni che lo richiedono. Ad esempio:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -218,7 +218,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
 }
 ```
 
-Prima di passare un puntatore tramite il metodo di interfaccia duale, potrebbe essere necessario convertirlo da MFC `IDispatch` puntatore per il puntatore di interfaccia duale. Ad esempio:
+Prima di passare un puntatore tramite il metodo Dual Interface, potrebbe essere necessario convertirlo dal puntatore MFC `IDispatch` al puntatore a doppia interfaccia. Ad esempio:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
@@ -232,15 +232,15 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
 }
 ```
 
-## <a name="registering-the-applications-type-library"></a>La registrazione libreria dei tipi dell'applicazione
+## <a name="registering-the-applications-type-library"></a>Registrazione della libreria dei tipi dell'applicazione
 
-Creazione guidata applicazioni non genera codice per registrare una libreria dei tipi dell'applicazione di un server OLE Automation con il sistema. Anche se esistono altri modi per registrare la libreria dei tipi, è consigliabile che l'applicazione di registrare la libreria dei tipi quando si effettua l'aggiornamento delle informazioni sul tipo relative OLE, vale a dire, ogni volta che viene eseguita l'applicazione autonoma.
+Creazione guidata applicazioni non genera codice per la registrazione di una libreria dei tipi di applicazione server di automazione OLE con il sistema. Sebbene esistano altri modi per registrare la libreria dei tipi, è opportuno che l'applicazione registri la libreria dei tipi durante l'aggiornamento delle relative informazioni sul tipo OLE, ovvero ogni volta che l'applicazione viene eseguita autonomamente.
 
-Per registrare fungere autonomamente da libreria dei tipi dell'applicazione ogni volta che viene eseguita l'applicazione:
+Per registrare la libreria dei tipi dell'applicazione ogni volta che l'applicazione viene eseguita autonomamente:
 
-- Includere AFXCTL. H di standard include file di intestazione STDAFX. H, per accedere alla definizione del `AfxOleRegisterTypeLib` (funzione).
+- Includi AFXCTL. H nel file di intestazione standard include, STDAFX. H, per accedere alla definizione della `AfxOleRegisterTypeLib` funzione.
 
-- All'interno dell'applicazione `InitInstance` funzionare, individuare la chiamata a `COleObjectFactory::UpdateRegistryAll`. In seguito a questa chiamata, aggiungere una chiamata a `AfxOleRegisterTypeLib`, specificando le **LIBID** corrispondente a libreria dei tipi, insieme al nome della libreria dei tipi:
+- Nella `InitInstance` funzione dell'applicazione individuare la chiamata a `COleObjectFactory::UpdateRegistryAll`. Dopo questa chiamata, aggiungere una chiamata a `AfxOleRegisterTypeLib`, specificando il **LIBID** corrispondente alla libreria dei tipi, insieme al nome della libreria dei tipi:
 
     ```cpp
     // When a server application is launched stand-alone, it is a good idea
@@ -257,19 +257,19 @@ Per registrare fungere autonomamente da libreria dei tipi dell'applicazione ogni
     // DUAL_SUPPORT_END
     ```
 
-## <a name="modifying-project-build-settings-to-accommodate-type-library-changes"></a>Modifica delle impostazioni di compilazione progetto per supportare le modifiche di tipo raccolta
+## <a name="modifying-project-build-settings-to-accommodate-type-library-changes"></a>Modifica delle impostazioni di compilazione del progetto per supportare le modifiche alla libreria di tipi
 
-Per modificare le impostazioni di compilazione di un progetto in modo che un file di intestazione contenente **UUID** definizioni generato da MkTypLib ogni volta che viene ricompilata la libreria dei tipi:
+Per modificare le impostazioni di compilazione di un progetto in modo che un file di intestazione contenente definizioni **UUID** venga generato da MkTypLib ogni volta che la libreria dei tipi viene ricompilata:
 
-1. Nel **compilare** menu, fare clic su **impostazioni**e quindi selezionare il file ODL dall'elenco dei file per ogni configurazione.
+1. Nel menu **Compila** fare clic su **Impostazioni**e quindi selezionare il file con estensione per ogni configurazione.
 
-2. Fare clic sul **i tipi OLE** scheda e specificare un nome di file nei **intestazione Output** campo filename. Utilizzare un nome di file che non è già usato dal progetto, in quanto MkTypLib sovrascriverà tutti i file esistenti. Fare clic su **OK** per chiudere la **Build Settings** nella finestra di dialogo.
+2. Fare clic sulla scheda **tipi OLE** e specificare un nome file nel campo nome file **intestazione output** . Usare un nome di file non già usato dal progetto, perché MkTypLib sovrascriverà qualsiasi file esistente. Fare clic su **OK** per chiudere la finestra di dialogo **impostazioni di compilazione** .
 
-Per aggiungere il **UUID** definizioni dal file di intestazione generato MkTypLib al progetto:
+Per aggiungere le definizioni **UUID** dal file di intestazione generato da MkTypLib al progetto:
 
-1. Includere MkTypLib-generato dal file di intestazione di standard include file di intestazione STDAFX. H.
+1. Includere il file di intestazione generato da MkTypLib nel file di intestazione standard includes, STDAFX. H.
 
-2. Creare un nuovo file, INITIIDS. CPP e aggiungerlo al progetto. In questo file, includere il file di intestazione generato MkTypLib dopo avere incluso OLE2. H e INITGUID. H:
+2. Creare un nuovo file, INITIIDS. CPP e aggiungerlo al progetto. In questo file, includere il file di intestazione generato da MkTypLib dopo aver incluso OLE2. H e INITGUID. H
 
     ```cpp
     // initIIDs.c: defines IIDs for dual interfaces
@@ -279,21 +279,21 @@ Per aggiungere il **UUID** definizioni dal file di intestazione generato MkTypLi
     #include "acdual.h"
     ```
 
-3. Nel **compilare** menu, fare clic su **impostazioni**e quindi selezionare INITIIDS. CPP nell'elenco di file per ogni configurazione.
+3. Scegliere **Impostazioni**dal menu **Compila** e quindi selezionare INITIIDS. CPP dall'elenco di file per ogni configurazione.
 
-4. Scegliere il **C++** scheda, fare clic sulla categoria **intestazioni precompilate**e selezionare il **senza intestazioni precompilate** pulsante di opzione. Fare clic su OK per chiudere la **Build Settings** nella finestra di dialogo.
+4. Fare clic **C++** sulla scheda, fare clic su categoria **intestazioni**precompilate e selezionare il pulsante di opzione **non utilizzare intestazioni** precompilate. Fare clic su OK per chiudere la finestra di dialogo **impostazioni di compilazione** .
 
-## <a name="specifying-the-correct-object-class-name-in-the-type-library"></a>Specifica il nome della classe oggetto appropriato nella libreria dei tipi
+## <a name="specifying-the-correct-object-class-name-in-the-type-library"></a>Specifica del nome della classe di oggetti corretta nella libreria dei tipi
 
-Le procedure guidate fornite con Visual C++ in modo non corretto utilizzano il nome di classe di implementazione per specificare la coclasse nel file ODL del server per le classi OLE generabile. Sebbene funzioni, il nome di classe di implementazione è probabilmente non si desidera che gli utenti dell'oggetto da utilizzare il nome della classe. Per specificare il nome corretto, aprire il file ODL, individuare ogni istruzione (coclasse) e sostituire il nome di classe di implementazione con il nome esterno corretto.
+Le procedure guidate fornite con C++ l'oggetto visivo usano erroneamente il nome della classe di implementazione per specificare la coclasse nel file di FAD del server per classi creabili da OLE. Sebbene questo funzionerà, il nome della classe di implementazione probabilmente non è il nome della classe che si desidera venga utilizzato dagli utenti dell'oggetto. Per specificare il nome corretto, aprire il file FAD, individuare ogni istruzione coclass e sostituire il nome della classe di implementazione con il nome esterno corretto.
 
-Si noti che quando viene modificata l'istruzione (coclasse), i nomi delle variabili di **CLSID**s nel file di intestazione generato MkTypLib cambierà di conseguenza. È necessario aggiornare il codice per usare i nuovi nomi di variabile.
+Si noti che quando viene modificata l'istruzione coclass, i nomi delle variabili di **CLSID**nel file di intestazione generato da MkTypLib vengono modificati di conseguenza. Sarà necessario aggiornare il codice per usare i nuovi nomi di variabile.
 
-## <a name="handling-exceptions-and-the-automation-error-interfaces"></a>Gestione delle eccezioni e le interfacce di errore di automazione
+## <a name="handling-exceptions-and-the-automation-error-interfaces"></a>Gestione delle eccezioni e delle interfacce degli errori di automazione
 
-I metodi e le funzioni di accesso di proprietà dell'oggetto di automazione possono generare eccezioni. Se, pertanto, è necessario gestirle nell'implementazione dell'interfaccia duale e passare le informazioni sull'eccezione al controller tramite l'interfaccia di gestione degli errori di automazione OLE, `IErrorInfo`. Questa interfaccia fornisce per informazioni sugli errori contestuali e dettagliati tramite entrambi `IDispatch` e interfacce VTBL. Per indicare che un gestore degli errori è disponibile, è necessario implementare il `ISupportErrorInfo` interfaccia.
+I metodi e le funzioni di accesso alle proprietà dell'oggetto di automazione possono generare eccezioni. In tal caso, è necessario gestirli nell'implementazione a doppia interfaccia e passare le informazioni sull'eccezione al controller tramite l'interfaccia `IErrorInfo`di gestione degli errori di automazione OLE. Questa interfaccia fornisce informazioni dettagliate sugli errori contestuali tramite `IDispatch` le interfacce e VTBL. Per indicare che è disponibile un gestore errori, è necessario implementare l' `ISupportErrorInfo` interfaccia.
 
-Per illustrare il meccanismo di gestione degli errori, si supponga che le funzioni generate ClassWizard usate per implementare il supporto di invio standard generano eccezioni. Dell'implementazione MFC dei `IDispatch::Invoke` in genere rileva queste eccezioni e li converte in una struttura EXCEPTINFO che viene restituita tramite la `Invoke` chiamare. Tuttavia, quando viene usata l'interfaccia VTBL, si è responsabili per intercettare le eccezioni se stessi. Ad esempio di proteggere i metodi di interfaccia duale:
+Per illustrare il meccanismo di gestione degli errori, si supponga che le funzioni generate da ClassWizard utilizzate per implementare il supporto di invio standard generino eccezioni. L'implementazione di MFC `IDispatch::Invoke` di in genere intercetta queste eccezioni e le converte in una struttura EXCEPTINFO restituita tramite la `Invoke` chiamata. Tuttavia, quando si usa l'interfaccia VTBL, l'utente è responsabile di intercettare le eccezioni. Come esempio di protezione dei metodi di interfaccia duale:
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
@@ -310,31 +310,31 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` si occupa di restituire il codice di errore corretto quando si verifica un'eccezione. `CATCH_ALL_DUAL` Converte un'eccezione di MFC in informazioni di gestione degli errori di automazione OLE utilizzando la `ICreateErrorInfo` interfaccia. (Ad esempio `CATCH_ALL_DUAL` macro è disponibile nel file MFCDUAL. H nel [ACDUAL](../overview/visual-cpp-samples.md) esempio. La funzione chiama per gestire le eccezioni, `DualHandleException`, si trova nel file MFCDUAL. . CPP) `CATCH_ALL_DUAL` determina il codice di errore da restituire in base al tipo di eccezione che si sono verificati:
+`CATCH_ALL_DUAL`si occupa della restituzione del codice di errore corretto quando si verifica un'eccezione. `CATCH_ALL_DUAL`Converte un'eccezione MFC in informazioni sulla gestione degli errori di automazione OLE `ICreateErrorInfo` mediante l'interfaccia. Una macro di `CATCH_ALL_DUAL` esempio si trova nel file MFCDUAL. H nell'esempio [ACDual](../overview/visual-cpp-samples.md) . La funzione che chiama per gestire le eccezioni `DualHandleException`,, si trova nel file MFCDUAL. CPP.) `CATCH_ALL_DUAL` determina il codice di errore da restituire in base al tipo di eccezione che si è verificata:
 
-- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) : In questo caso, `HRESULT` viene costruita usando il codice seguente:
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) : in questo caso, `HRESULT` viene costruito usando il codice seguente:
 
     ```cpp
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-   Verrà creato un `HRESULT` specifiche per l'interfaccia che ha causato l'eccezione. Il codice di errore viene diminuito di 0x200 per evitare eventuali conflitti con definito dal sistema `HRESULT`s per le interfacce OLE standard.
+   In questo modo `HRESULT` viene creato un oggetto specifico per l'interfaccia che ha causato l'eccezione. Il codice di errore viene sfalsato da 0x200 per evitare conflitti con i per `HRESULT`le interfacce OLE standard definite dal sistema.
 
-- [CMemoryException](../mfc/reference/cmemoryexception-class.md) : In questo caso, `E_OUTOFMEMORY` viene restituito.
+- [CMemoryException](../mfc/reference/cmemoryexception-class.md) , in questo caso, `E_OUTOFMEMORY` viene restituito.
 
-- Qualsiasi altra eccezione: In questo caso, `E_UNEXPECTED` viene restituito.
+- Qualsiasi altra eccezione, in questo caso, `E_UNEXPECTED` viene restituito.
 
-Per indicare che il gestore degli errori di automazione OLE è usato, è consigliabile implementare anche il `ISupportErrorInfo` interfaccia.
+Per indicare che viene utilizzato il gestore degli errori di automazione OLE, è necessario implementare `ISupportErrorInfo` anche l'interfaccia.
 
-In primo luogo, aggiungere codice alla definizione della classe di automazione per mostrare che supporta `ISupportErrorInfo`.
+Per prima cosa, aggiungere il codice alla definizione della classe di automazione `ISupportErrorInfo`per mostrarne il supporto.
 
-In secondo luogo, aggiungere codice alla mappa dell'interfaccia della classe dell'automazione per associare il `ISupportErrorInfo` classe di implementazione con MFC `QueryInterface` meccanismo. Il `INTERFACE_PART` istruzione corrisponde alla classe definita per `ISupportErrorInfo`.
+In secondo luogo, aggiungere il codice alla mappa dell'interfaccia della classe di `ISupportErrorInfo` automazione per associare la classe `QueryInterface` di implementazione al meccanismo di MFC. L' `INTERFACE_PART` istruzione corrisponde alla classe definita per `ISupportErrorInfo`.
 
-Infine, implementa la classe definita per supportare `ISupportErrorInfo`.
+Infine, implementare la classe definita per supportare `ISupportErrorInfo`.
 
-(Il [ACDUAL](../overview/visual-cpp-samples.md) esempio contiene tre macro per la gestione di questi tre passaggi `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, e `IMPLEMENT_DUAL_ERRORINFO`tutti i contenuti negli MFCDUAL. H.)
+L'esempio [ACDual](../overview/visual-cpp-samples.md) contiene tre macro che consentono di eseguire questi tre passaggi, `DECLARE_DUAL_ERRORINFO` `DUAL_ERRORINFO_PART`, e `IMPLEMENT_DUAL_ERRORINFO`, tutti contenuti in MFCDUAL. H.)
 
-L'esempio seguente implementa una classe definita per il supporto `ISupportErrorInfo`. `CAutoClickDoc` è il nome della classe di automazione e `IID_IDualAClick` è il **IID** per l'interfaccia che rappresenta l'origine degli errori segnalati tramite l'oggetto errore di automazione OLE:
+Nell'esempio seguente viene implementata una classe definita `ISupportErrorInfo`per supportare. `CAutoClickDoc`è il nome della classe di automazione ed `IID_IDualAClick` è l' **IID** per l'interfaccia che rappresenta l'origine degli errori segnalati tramite l'oggetto errore di automazione OLE:
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: ff050a89a10c68c639c141891dd51b1b2d58e105
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 0c8c401b43361a5e1472e3470f5ea452c91b957f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916002"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505967"
 ---
 # <a name="chttpfile-class"></a>Classe CHttpFile
 
@@ -47,13 +47,13 @@ class CHttpFile : public CInternetFile
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
-|NOME|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CHttpFile::CHttpFile](#chttpfile)|Crea un oggetto `CHttpFile`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CHttpFile::AddRequestHeaders](#addrequestheaders)|Aggiunge le intestazioni alla richiesta inviata a un server HTTP.|
 |[CHttpFile::EndRequest](#endrequest)|Termina una richiesta inviata a un server HTTP con la funzione membro [SendRequestEx](#sendrequestex) .|
@@ -126,7 +126,7 @@ Riferimento a un oggetto [CString](../../atl-mfc-shared/reference/cstringt-class
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -198,10 +198,10 @@ BOOL EndRequest(
 ### <a name="parameters"></a>Parametri
 
 *dwFlags*<br/>
-Flag che descrivono l'operazione. Per un elenco dei flag appropriati, vedere [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) nel Windows SDK.
+Flag che descrivono l'operazione. Per un elenco dei flag appropriati, vedere [HttpEndRequest](/windows/win32/api/wininet/nf-wininet-httpendrequestw) nel Windows SDK.
 
 *lpBuffIn*<br/>
-Puntatore a un [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) inizializzato che descrive il buffer di input utilizzato per l'operazione.
+Puntatore a un [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) inizializzato che descrive il buffer di input utilizzato per l'operazione.
 
 *dwContext*<br/>
 Identificatore di contesto per l'operazione `CHttpFile`. Per ulteriori informazioni su questo parametro, vedere la sezione Osservazioni.
@@ -293,7 +293,7 @@ Combinazione dell'attributo per eseguire una query e i flag seguenti che specifi
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS in genere, l'applicazione esegue una query sulle intestazioni di risposta, ma un'applicazione può anche eseguire query sulle intestazioni di richiesta usando questo flag.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME per le intestazioni il cui valore è una stringa di data/ora, ad esempio "Last-Modified-Time", questo flag restituisce il valore dell'intestazione come struttura standard di Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) che non richiede l'analisi dei dati da parte dell'applicazione. Se si utilizza questo flag, è consigliabile utilizzare l' `SYSTEMTIME` override della funzione.
+- HTTP_QUERY_FLAG_SYSTEMTIME per le intestazioni il cui valore è una stringa di data/ora, ad esempio "Last-Modified-Time", questo flag restituisce il valore dell'intestazione come struttura standard di Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) che non richiede l'analisi dei dati da parte dell'applicazione. Se si utilizza questo flag, è consigliabile utilizzare l' `SYSTEMTIME` override della funzione.
 
 - HTTP_QUERY_FLAG_NUMBER per le intestazioni il cui valore è un numero, ad esempio il codice di stato, questo flag restituisce i dati come numero a 32 bit.
 
@@ -315,11 +315,11 @@ Riferimento all'oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.
 Valore di indice. Vedere *lpdwIndex*.
 
 *pSysTime*<br/>
-Puntatore a una struttura Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) .
+Puntatore a una struttura Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) .
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -398,7 +398,7 @@ Riferimento a un codice di stato. I codici di stato indicano l'esito positivo o 
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
+Diverso da zero se ha esito positivo; in caso contrario 0. Se la chiamata ha esito negativo, è possibile chiamare la funzione Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per determinare la cause dell'errore.
 
 ### <a name="remarks"></a>Note
 
@@ -485,13 +485,13 @@ BOOL SendRequestEx(
 Numero di byte da inviare nella richiesta.
 
 *dwFlags*<br/>
-Flag che descrivono l'operazione. Per un elenco dei flag appropriati, vedere [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) nel Windows SDK.
+Flag che descrivono l'operazione. Per un elenco dei flag appropriati, vedere [HttpSendRequestEx](/windows/win32/api/wininet/nf-wininet-httpsendrequestexw) nel Windows SDK.
 
 *dwContext*<br/>
 Identificatore di contesto per l'operazione `CHttpFile`. Per ulteriori informazioni su questo parametro, vedere la sezione Osservazioni.
 
 *lpBuffIn*<br/>
-Puntatore a un [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) inizializzato che descrive il buffer di input utilizzato per l'operazione.
+Puntatore a un [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) inizializzato che descrive il buffer di input utilizzato per l'operazione.
 
 *lpBuffOut*<br/>
 Puntatore a un INTERNET_BUFFERS inizializzato che descrive il buffer di output utilizzato per l'operazione.

@@ -24,26 +24,26 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-ms.openlocfilehash: dfafe7c3c7c7cd43dd2ac194f5ed96fa8ea265ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37dd9b9d3f3905a923cd9c51856c1c39819cb162
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323203"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502121"
 ---
 # <a name="data-types-mfc"></a>Tipi di dati (MFC)
 
-Questo argomento elenca i tipi di dati più comunemente usati nella libreria di classi Microsoft Foundation. La maggior parte dei tipi di dati sono identici a quelli nella piattaforma Software Development Kit (SDK), mentre altre sono univoche per MFC.
+In questo argomento vengono elencati i tipi di dati utilizzati più di frequente nel libreria Microsoft Foundation Class. La maggior parte dei tipi di dati sono identici a quelli della piattaforma Software Development Kit (SDK), mentre altri sono univoci per MFC.
 
-Per informazioni sui tipi di dati usato in Windows SDK sia MFC, vedere [tipi di dati Windows](/windows/desktop/WinProg/windows-data-types).
+Per informazioni sui tipi di dati utilizzati sia in Windows SDK che in MFC, vedere [tipi di dati di Windows](/windows/win32/WinProg/windows-data-types).
 
-Tipi di dati univoci per la libreria Microsoft Foundation Class includono quanto segue:
+I tipi di dati univoci per il libreria Microsoft Foundation Class includono i seguenti:
 
-- POSIZIONARE un valore utilizzato per indicare la posizione di un elemento in una raccolta. utilizzato da classi collection MFC.
+- Posizionare un valore utilizzato per indicare la posizione di un elemento in una raccolta. utilizzato dalle classi della raccolta MFC.
 
-- Puntatore A 32 bit LPCRECT una costante (modificabile) `RECT` struttura.
+- LPCRECT un puntatore a 32 bit a una struttura costante (non modificabile) `RECT` .
 
 ## <a name="see-also"></a>Vedere anche
 
 [Panoramica della classe](../../mfc/class-library-overview.md)<br/>
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+[Macro e globali](../../mfc/reference/mfc-macros-and-globals.md)

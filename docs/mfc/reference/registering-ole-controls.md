@@ -5,30 +5,30 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: a8ade688b90c99c166073b22a9eed71d1a518dc2
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611736"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502002"
 ---
 # <a name="registering-ole-controls"></a>Registrazione di controlli OLE
 
-Controlli OLE, analogamente ad altri oggetti di server OLE, sono accessibili da altre applicazioni compatibili con OLE. Ciò si ottiene registrando libreria dei tipi e classe del controllo.
+È possibile accedere ai controlli OLE, come ad altri oggetti server OLE, da altre applicazioni compatibili con OLE. Questa operazione viene eseguita registrando la libreria dei tipi e la classe del controllo.
 
-Le funzioni seguenti consentono di aggiungere e rimuovere classi, le pagine delle proprietà e libreria dei tipi del controllo nel database di registrazione Windows:
+Le funzioni seguenti consentono di aggiungere e rimuovere la classe del controllo, le pagine delle proprietà e la libreria dei tipi nel database di registrazione di Windows:
 
 ### <a name="registering-ole-controls"></a>Registrazione di controlli OLE
 
 |||
 |-|-|
 |[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|Aggiunge la classe del controllo al database di registrazione.|
-|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Aggiunge una pagina di proprietà di controllo per il database di registrazione.|
-|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Aggiunge una libreria dei tipi del controllo al database di registrazione.|
-|[AfxOleUnregisterClass](#afxoleunregisterclass)|Rimuove una classe del controllo o una classe di pagina delle proprietà dal database di registrazione.|
-|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Rimuove il database di registrazione della libreria dei tipi del controllo.|
+|[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|Aggiunge una pagina delle proprietà del controllo al database di registrazione.|
+|[AfxOleRegisterTypeLib](#afxoleregistertypelib)|Aggiunge la libreria dei tipi del controllo al database di registrazione.|
+|[AfxOleUnregisterClass](#afxoleunregisterclass)|Rimuove una classe di controlli o una classe di pagine delle proprietà dal database di registrazione.|
+|[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|Rimuove la libreria dei tipi del controllo dal database di registrazione.|
 
-`AfxOleRegisterTypeLib` in genere viene chiamato nell'implementazione di un controllo della DLL di `DllRegisterServer`. Analogamente, `AfxOleUnregisterTypeLib` viene chiamato da `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`, e `AfxOleUnregisterClass` vengono in genere chiamata dal `UpdateRegistry` funzione membro della pagina di factory o delle proprietà di classe del controllo.
+`AfxOleRegisterTypeLib`viene in genere chiamato in un'implementazione della DLL del `DllRegisterServer`controllo di. Analogamente `AfxOleUnregisterTypeLib` , viene chiamato `DllUnregisterServer`da. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`e `AfxOleUnregisterClass` vengonoingenerechiamatedallafunzionemembrodellaclassfactoryodellapaginadelleproprietà`UpdateRegistry` di un controllo.
 
 ##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass
 
@@ -51,7 +51,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 ### <a name="parameters"></a>Parametri
 
 *hInstance*<br/>
-L'handle di istanza del modulo associato con la classe del controllo.
+Handle dell'istanza del modulo associato alla classe del controllo.
 
 *clsid*<br/>
 ID univoco della classe del controllo.
@@ -60,27 +60,27 @@ ID univoco della classe del controllo.
 ID univoco del programma del controllo.
 
 *idTypeName*<br/>
-L'ID risorsa della stringa che contiene un nome tipo leggibile dall'utente per il controllo.
+ID risorsa della stringa che contiene un nome di tipo leggibile dall'utente per il controllo.
 
 *idBitmap*<br/>
-L'ID risorsa della bitmap utilizzata per rappresentare il controllo OLE in una barra degli strumenti o tavolozza.
+ID risorsa della bitmap utilizzata per rappresentare il controllo OLE in una barra degli strumenti o in una tavolozza.
 
 *nRegFlags*<br/>
 Contiene uno o più dei flag seguenti:
 
-- `afxRegInsertable` Consente il controllo venga visualizzato nella finestra di dialogo Inserisci oggetto per gli oggetti OLE.
+- `afxRegInsertable`Consente di visualizzare il controllo nella finestra di dialogo Inserisci oggetto per gli oggetti OLE.
 
-- `afxRegApartmentThreading` Imposta il modello di threading nel Registro di sistema ThreadingModel = Apartment.
+- `afxRegApartmentThreading`Imposta il modello di threading nel registro di sistema su ThreadingModel = Apartment.
 
-- `afxRegFreeThreading` Imposta il modello di threading nel Registro di sistema ThreadingModel = gratuito.
+- `afxRegFreeThreading`Imposta il modello di threading nel registro di sistema su ThreadingModel = Free.
 
-   È possibile combinare i due flag `afxRegApartmentThreading` e `afxRegFreeThreading` impostare ThreadingModel impostato su Both. Visualizzare [InprocServer32](/windows/desktop/com/inprocserver32) nel SDK di Windows per ulteriori informazioni sulla registrazione del modello di threading.
+   È possibile combinare i due flag `afxRegApartmentThreading` e `afxRegFreeThreading` impostare ThreadingModel = both. Per ulteriori informazioni sulla registrazione del modello di threading, vedere [InprocServer32](/windows/win32/com/inprocserver32) nel Windows SDK.
 
 > [!NOTE]
->  Nelle versioni MFC precedenti alla 4.2 MFC, la **int** *nRegFlags* parametro è un parametro, BOOL *bInsertable*, che consentito o meno il controllo deve essere inserito l'inserimento Finestra di dialogo di oggetto.
+>  Nelle versioni MFC precedenti a MFC 4,2, il parametro **int** *intnRegFlags* era un parametro bool, *bInsertable*, che consentiva o non consentiva di inserire il controllo dalla finestra di dialogo Inserisci oggetto.
 
 *dwMiscStatus*<br/>
-Contiene uno o più dei flag di stato seguenti (per una descrizione dei flag, vedere enumerazione OLEMISC nel SDK di Windows):
+Contiene uno o più dei flag di stato seguenti (per una descrizione dei flag, vedere Enumerazione OLEMISC nel Windows SDK):
 
 - OLEMISC_RECOMPOSEONRESIZE
 
@@ -124,28 +124,28 @@ Contiene uno o più dei flag di stato seguenti (per una descrizione dei flag, ve
 ID univoco della classe del controllo.
 
 *wVerMajor*<br/>
-Il numero di versione principale della classe del controllo.
+Numero di versione principale della classe del controllo.
 
 *wVerMinor*<br/>
-Il numero di versione secondaria della classe del controllo.
+Numero della versione secondaria della classe del controllo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la classe del controllo è stata registrata. in caso contrario 0.
+Diverso da zero se la classe del controllo è stata registrata. in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-In questo modo il controllo utilizzabile dai contenitori di controlli OLE consapevoli. `AfxOleRegisterControlClass` Aggiorna il Registro di sistema con il nome e posizione del controllo del sistema e imposta anche il modello di threading che supporta il controllo nel Registro di sistema. Per altre informazioni, vedere [64 Nota tecnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Modello di Apartment del Threading in OLE controlli," e [sui processi e thread](/windows/desktop/ProcThread/about-processes-and-threads) nel SDK di Windows.
+In questo modo il controllo può essere usato dai contenitori che sono compatibili con il controllo OLE. `AfxOleRegisterControlClass`Aggiorna il registro di sistema con il nome e il percorso del controllo nel sistema e imposta anche il modello di threading supportato dal controllo nel registro di sistema. Per ulteriori informazioni, vedere la [Nota tecnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading del modello di Apartment nei controlli OLE" e [informazioni sui processi e sui thread](/windows/win32/ProcThread/about-processes-and-threads) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]
 
-Nell'esempio precedente viene illustrato come `AfxOleRegisterControlClass` viene chiamato con il flag per inseribile e il flag per apartment dall'operatore OR combinati per creare il sesto parametro del modello:
+Nell'esempio precedente viene illustrato `AfxOleRegisterControlClass` come viene chiamato con il flag per Insertable e il flag per il modello di Apartment ORed insieme per creare il sesto parametro:
 
 [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]
 
-Il controllo verrà visualizzato nella finestra di dialogo Inserisci oggetto per i contenitori abilitati e sarà apartment con supporto del modello. I controlli con supporto del modello di apartment è necessario assicurarsi che i dati sono protetti da blocchi, di classe statica in modo che durante un controllo in un apartment è l'accesso ai dati statici, non è disabilitata dall'utilità di pianificazione prima del completamento, e un'altra istanza della classe stessa venga avviato usando gli stessi dati statici. Qualsiasi tipo di accesso ai dati statici verrà racchiusa da codice di sezione critica.
+Il controllo verrà visualizzato nella finestra di dialogo Inserisci oggetto per i contenitori abilitati e sarà compatibile con il modello Apartment. I controlli compatibili con il modello di Apartment devono garantire che i dati della classe statica siano protetti da blocchi, in modo che, mentre un controllo in un Apartment acceda ai dati statici, non viene disabilitato dall'utilità di pianificazione prima del completamento e un'altra istanza della stessa classe inizia con gli stessi dati statici. Tutti gli accessi ai dati statici saranno racchiusi dal codice della sezione critica.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -153,7 +153,7 @@ Il controllo verrà visualizzato nella finestra di dialogo Inserisci oggetto per
 
 ##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass
 
-Registra la classe di pagina delle proprietà con il database di registrazione di Windows.
+Registra la classe della pagina delle proprietà con il database di registrazione di Windows.
 
 ```
 BOOL AFXAPI AfxOleRegisterPropertyPageClass(
@@ -166,29 +166,29 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 ### <a name="parameters"></a>Parametri
 
 *hInstance*<br/>
-L'handle di istanza del modulo associato alla proprietà pagina classe.
+Handle dell'istanza del modulo associato alla classe della pagina delle proprietà.
 
 *clsid*<br/>
-ID univoco di classe della pagina delle proprietà.
+ID di classe univoco della pagina delle proprietà.
 
 *idTypeName*<br/>
-L'ID risorsa della stringa che contiene un nome leggibile dall'utente per la pagina delle proprietà.
+ID risorsa della stringa che contiene un nome leggibile dall'utente per la pagina delle proprietà.
 
 *nRegFlags*<br/>
-Può includere il flag:
+Può contenere il flag:
 
-- `afxRegApartmentThreading` Imposta il modello di threading nel Registro di sistema ThreadingModel = Apartment.
+- `afxRegApartmentThreading`Imposta il modello di threading nel registro di sistema su ThreadingModel = Apartment.
 
 > [!NOTE]
->  Nelle versioni MFC precedenti alla 4.2 MFC, la **int** *nRegFlags* parametro non è disponibile. Si noti inoltre che il `afxRegInsertable` flag non è un'opzione valida per le pagine delle proprietà e causerà un'ASSERZIONE in MFC, se è impostato
+>  Nelle versioni MFC precedenti a MFC 4,2, il parametro **int** *intnRegFlags* non era disponibile. Si noti inoltre che `afxRegInsertable` il flag non è un'opzione valida per le pagine delle proprietà e provocherà un'asserzione in MFC se è impostata
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la classe del controllo è stata registrata. in caso contrario 0.
+Diverso da zero se la classe del controllo è stata registrata. in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-In questo modo la pagina delle proprietà utilizzabile dai contenitori di controlli OLE consapevoli. `AfxOleRegisterPropertyPageClass` Aggiorna il Registro di sistema con il nome della pagina proprietà e il relativo percorso nel sistema e imposta anche il modello di threading che supporta il controllo nel Registro di sistema. Per altre informazioni, vedere [64 Nota tecnica](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Modello di Apartment del Threading in OLE controlli," e [sui processi e thread](/windows/desktop/ProcThread/about-processes-and-threads) nel SDK di Windows.
+Ciò consente di utilizzare la pagina delle proprietà per i contenitori che sono compatibili con il controllo OLE. `AfxOleRegisterPropertyPageClass`Aggiorna il registro di sistema con il nome della pagina delle proprietà e il relativo percorso nel sistema e imposta anche il modello di threading supportato dal controllo nel registro di sistema. Per ulteriori informazioni, vedere la [Nota tecnica 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), "Threading del modello di Apartment nei controlli OLE" e [informazioni sui processi e sui thread](/windows/win32/ProcThread/about-processes-and-threads) nel Windows SDK.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -218,7 +218,7 @@ ID univoco della libreria dei tipi.
 Punta al nome file facoltativo di un file localizzato della libreria dei tipi (.TLB) per il controllo.
 
 *pszHelpDir*<br/>
-Nome della directory in cui è disponibile il file della Guida della libreria dei tipi. Se NULL, il file della guida presuppone di trovarsi nella stessa directory di libreria dei tipi di se stesso.
+Nome della directory in cui è disponibile il file della Guida della libreria dei tipi. Se è NULL, si presuppone che il file della guida si trovi nella stessa directory della libreria dei tipi.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -240,7 +240,7 @@ Questa funzione aggiorna il Registro di sistema con il nome della libreria dei t
 
 ##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass
 
-Rimuove la voce della classe pagina controllo o una proprietà dal database di registrazione di Windows.
+Rimuove la voce della classe del controllo o della pagina delle proprietà dal database di registrazione di Windows.
 
 ```
 BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
@@ -249,14 +249,14 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ### <a name="parameters"></a>Parametri
 
 *clsID*<br/>
-ID univoco di classe della pagina controllo o una proprietà.
+ID univoco della classe del controllo o della pagina delle proprietà.
 
 *pszProgID*<br/>
-L'ID univoco della pagina controllo o una proprietà.
+ID di programma univoco del controllo o della pagina delle proprietà.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la classe delle pagine di controllo o la proprietà è stata annullata. in caso contrario 0.
+Diverso da zero se la registrazione della classe del controllo o della pagina delle proprietà è stata completata. in caso contrario, 0.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -264,7 +264,7 @@ Diverso da zero se la classe delle pagine di controllo o la proprietà è stata 
 
 ##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib
 
-Chiamare questa funzione per rimuovere la voce di tipo raccolta dal database di registrazione di Windows.
+Chiamare questa funzione per rimuovere la voce della libreria dei tipi dal database di registrazione di Windows.
 
 ```
 BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
@@ -277,7 +277,7 @@ ID univoco della libreria dei tipi.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se la libreria dei tipi è stata annullata. in caso contrario 0.
+Diverso da zero se la registrazione della libreria dei tipi è stata completata. in caso contrario, 0.
 
 ### <a name="example"></a>Esempio
 
@@ -289,4 +289,4 @@ Diverso da zero se la libreria dei tipi è stata annullata. in caso contrario 0.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
+[Macro e globali](../../mfc/reference/mfc-macros-and-globals.md)

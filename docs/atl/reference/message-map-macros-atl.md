@@ -37,53 +37,53 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: bedef3a8563e27f72017720530e3b7addb78ec3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42fdc7a3f09568b641229e897a2a493994a7ba8a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197432"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495362"
 ---
 # <a name="message-map-macros-atl"></a>Macro della mappa messaggi (ATL)
 
-Queste macro definiscono le mappe messaggi e le voci.
+Queste macro definiscono le mappe e le voci dei messaggi.
 
 |||
 |-|-|
-|[ALT_MSG_MAP](#alt_msg_map)|Contrassegna l'inizio di una mappa messaggi alternativo.|
-|[BEGIN_MSG_MAP](#begin_msg_map)|Contrassegna l'inizio della mappa del messaggio predefinito.|
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Eseguire il mapping sia concatenato a un messaggio alternativo nella classe di base.|
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Eseguire il mapping sia concatenato a un messaggio alternativo in un membro dati della classe.|
-|[CHAIN_MSG_MAP](#chain_msg_map)|Eseguire il mapping delle catene per il messaggio predefinito nella classe di base.|
-|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|Catene alla mappa dei messaggi in un'altra classe in fase di esecuzione.|
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Eseguire il mapping delle catene per il messaggio predefinito in un membro dati della classe.|
-|[COMMAND_CODE_HANDLER](#command_code_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica.|
-|[COMMAND_HANDLER](#command_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e l'identificatore della voce di menu, controllo o tasto di scelta rapida.|
-|[COMMAND_ID_HANDLER](#command_id_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base all'identificatore della voce di menu, controllo o tasto di scelta rapida.|
-|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e un intervallo contiguo di identificatori di controllo.|
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, basata su un intervallo contiguo di identificatori di controllo.|
-|[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|Implementa una mappa di messaggio vuoto.|
-|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|Fornisce un gestore predefinito per i messaggi riflessi non vengono gestiti in caso contrario.|
+|[ALT_MSG_MAP](#alt_msg_map)|Contrassegna l'inizio di una mappa messaggi alternativa.|
+|[BEGIN_MSG_MAP](#begin_msg_map)|Contrassegna l'inizio della mappa messaggi predefinita.|
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Concatena a una mappa messaggi alternativa nella classe di base.|
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Concatena a una mappa messaggi alternativa in un membro dati della classe.|
+|[CHAIN_MSG_MAP](#chain_msg_map)|Concatena alla mappa messaggi predefinita nella classe di base.|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|Concatena la mappa messaggi in un'altra classe in fase di esecuzione.|
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Concatena la mappa messaggi predefinita in un membro dati della classe.|
+|[COMMAND_CODE_HANDLER](#command_code_handler)|Esegue il mapping di un messaggio WM_COMMAND a una funzione di gestione, in base al codice di notifica.|
+|[COMMAND_HANDLER](#command_handler)|Esegue il mapping di un messaggio WM_COMMAND a una funzione di gestione, in base al codice di notifica e all'identificatore della voce di menu, del controllo o dell'acceleratore.|
+|[COMMAND_ID_HANDLER](#command_id_handler)|Esegue il mapping di un messaggio WM_COMMAND a una funzione di gestione, in base all'identificatore della voce di menu, del controllo o dell'acceleratore.|
+|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|Esegue il mapping di un messaggio WM_COMMAND a una funzione di gestione, in base al codice di notifica e a un intervallo contiguo di identificatori di controllo.|
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|Esegue il mapping di un messaggio WM_COMMAND a una funzione di gestione, in base a un intervallo contiguo di identificatori di controllo.|
+|[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|Implementa una mappa messaggi vuota.|
+|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|Fornisce un gestore predefinito per i messaggi riflessi che non vengono gestiti in altro modo.|
 |[END_MSG_MAP](#end_msg_map)|Contrassegna la fine di una mappa messaggi.|
-|[FORWARD_NOTIFICATIONS](#forward_notifications)|Inoltra i messaggi di notifica alla finestra padre.|
-|[MESSAGE_HANDLER](#message_handler)|Un messaggio di Windows viene eseguito il mapping a una funzione del gestore.|
-|[MESSAGE_RANGE_HANDLER](#message_range_handler)|I messaggi di un intervallo contiguo di Windows viene eseguito il mapping a una funzione del gestore.|
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Un messaggio WM_NOTIFY viene eseguito il mapping a una funzione del gestore, in base al codice di notifica.|
-|[NOTIFY_HANDLER](#notify_handler)|Un messaggio WM_NOTIFY viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e l'identificatore del controllo.|
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|Un messaggio WM_NOTIFY viene eseguito il mapping a una funzione del gestore, in base all'identificatore del controllo.|
-|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|Un messaggio WM_NOTIFY viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e un intervallo contiguo di identificatori di controllo.|
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Un messaggio WM_NOTIFY viene eseguito il mapping a una funzione del gestore, basata su un intervallo contiguo di identificatori di controllo.|
+|[FORWARD_NOTIFICATIONS](#forward_notifications)|Consente di inviare i messaggi di notifica alla finestra padre.|
+|[MESSAGE_HANDLER](#message_handler)|Esegue il mapping di un messaggio di Windows a una funzione del gestore.|
+|[MESSAGE_RANGE_HANDLER](#message_range_handler)|Esegue il mapping di un intervallo contiguo di messaggi di Windows a una funzione del gestore.|
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY a una funzione di gestione, in base al codice di notifica.|
+|[NOTIFY_HANDLER](#notify_handler)|Esegue il mapping di un messaggio WM_NOTIFY a una funzione di gestione, in base al codice di notifica e all'identificatore del controllo.|
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|Esegue il mapping di un messaggio WM_NOTIFY a una funzione di gestione, in base all'identificatore del controllo.|
+|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY a una funzione di gestione, in base al codice di notifica e a un intervallo contiguo di identificatori di controllo.|
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Esegue il mapping di un messaggio WM_NOTIFY a una funzione di gestione, in base a un intervallo contiguo di identificatori di controllo.|
 |[REFLECT_NOTIFICATIONS](#reflect_notifications)|Riflette i messaggi di notifica alla finestra che li ha inviati.|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica.|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e l'identificatore della voce di menu, controllo o tasto di scelta rapida.|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base all'identificatore della voce di menu, controllo o tasto di scelta rapida.|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e un intervallo contiguo di identificatori di controllo.|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, basata su un intervallo contiguo di identificatori di controllo.|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base al codice di notifica.|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base al codice di notifica e l'identificatore del controllo.|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base all'identificatore del controllo.|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base al codice di notifica e un intervallo contiguo di identificatori di controllo.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, basata su un intervallo contiguo di identificatori di controllo.|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base al codice di notifica.|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base al codice di notifica e all'identificatore della voce di menu, del controllo o dell'acceleratore.|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base all'identificatore della voce di menu, del controllo o dell'acceleratore.|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base al codice di notifica e a un intervallo contiguo di identificatori di controllo.|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base a un intervallo contiguo di identificatori di controllo.|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base al codice di notifica.|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base al codice di notifica e all'identificatore del controllo.|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base all'identificatore del controllo.|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base al codice di notifica e a un intervallo contiguo di identificatori di controllo.|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base a un intervallo contiguo di identificatori di controllo.|
 
 ## <a name="requirements"></a>Requisiti
 
@@ -91,7 +91,7 @@ Queste macro definiscono le mappe messaggi e le voci.
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
-Contrassegna l'inizio di una mappa messaggi alternativo.
+Contrassegna l'inizio di una mappa messaggi alternativa.
 
 ```
 ALT_MSG_MAP(msgMapID)
@@ -100,27 +100,27 @@ ALT_MSG_MAP(msgMapID)
 ### <a name="parameters"></a>Parametri
 
 *msgMapID*<br/>
-[in] L'identificatore della mappa del messaggio.
+in Identificatore della mappa messaggi.
 
 ### <a name="remarks"></a>Note
 
-ATL identifica ogni mappa dei messaggi da un numero. La mappa dei messaggi predefinita (dichiarata con la macro BEGIN_MSG_MAP) è identificata da 0. Una mappa messaggi alternativo è identificata da *msgMapID*.
+ATL identifica ogni mappa messaggi in base a un numero. La mappa messaggi predefinita, dichiarata con la macro BEGIN_MSG_MAP, è identificata da 0. Una mappa messaggi alternativa è identificata da *msgMapID*.
 
-Mappe messaggi vengono utilizzate per elaborare i messaggi inviati a una finestra. Ad esempio, [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) consente di specificare l'identificatore di una mappa dei messaggi nell'oggetto che contiene. [CContainedWindow:: WindowProc](ccontainedwindowt-class.md#windowproc) Usa quindi questa mappa messaggi per indirizzare i messaggi della finestra contenuta in funzione del gestore appropriato o in un'altra mappa messaggi. Per un elenco delle macro che dichiarano funzioni di gestione, vedere [BEGIN_MSG_MAP](#begin_msg_map).
+Le mappe messaggi vengono utilizzate per elaborare i messaggi inviati a una finestra. [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) , ad esempio, consente di specificare l'identificatore di una mappa messaggi nell'oggetto che lo contiene. [CContainedWindow:: WindowProc](ccontainedwindowt-class.md#windowproc) usa quindi questa mappa messaggi per indirizzare i messaggi della finestra contenuta alla funzione del gestore appropriata o a un'altra mappa messaggi. Per un elenco di macro che dichiarano le funzioni del gestore, vedere [BEGIN_MSG_MAP](#begin_msg_map).
 
-Iniziano sempre una mappa dei messaggi con BEGIN_MSG_MAP. È possibile dichiarare le mappe dei successivi messaggi alternativo.
+Iniziare sempre una mappa messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe messaggi alternative successive.
 
-Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Si noti che ci sia sempre esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Si noti che esiste sempre esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra il mapping dei messaggi predefinito e mappa di un messaggio alternativo, ognuno dei quali contiene una funzione del gestore:
+Nell'esempio seguente viene illustrata la mappa messaggi predefinita e una mappa messaggi alternativa, ognuno contenente una funzione del gestore:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-L'esempio seguente mostra due mappe di messaggi alternativo. La mappa dei messaggi predefinita è vuota.
+Nell'esempio seguente vengono illustrate due mappe messaggi alternative. La mappa messaggi predefinita è vuota.
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
@@ -130,7 +130,7 @@ L'esempio seguente mostra due mappe di messaggi alternativo. La mappa dei messag
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
-Contrassegna l'inizio della mappa del messaggio predefinito.
+Contrassegna l'inizio della mappa messaggi predefinita.
 
 ```
 BEGIN_MSG_MAP(theClass)
@@ -139,75 +139,75 @@ BEGIN_MSG_MAP(theClass)
 ### <a name="parameters"></a>Parametri
 
 *theClass*<br/>
-[in] Il nome della classe contenente la mappa dei messaggi.
+in Nome della classe che contiene la mappa messaggi.
 
 ### <a name="remarks"></a>Note
 
-[CWindowImpl::](cwindowimpl-class.md#windowproc) Usa la mappa dei messaggi predefinita per elaborare i messaggi inviati alla finestra. La mappa messaggi indirizza i messaggi in funzione del gestore appropriato o in un'altra mappa messaggi.
+[CWindowImpl:: WindowProc](cwindowimpl-class.md#windowproc) usa la mappa messaggi predefinita per elaborare i messaggi inviati alla finestra. La mappa messaggi indirizza i messaggi alla funzione del gestore appropriata o a un'altra mappa messaggi.
 
-Le macro seguenti mapping di un messaggio a una funzione del gestore. Questa funzione deve essere definita in *theClass*.
-
-|Macro|Descrizione|
-|-----------|-----------------|
-|[MESSAGE_HANDLER](#message_handler)|Un messaggio di Windows viene eseguito il mapping a una funzione del gestore.|
-|[MESSAGE_RANGE_HANDLER](#message_range_handler)|I messaggi di un intervallo contiguo di Windows viene eseguito il mapping a una funzione del gestore.|
-|[COMMAND_HANDLER](#command_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e l'identificatore della voce di menu, controllo o tasto di scelta rapida.|
-|[COMMAND_ID_HANDLER](#command_id_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base all'identificatore della voce di menu, controllo o tasto di scelta rapida.|
-|[COMMAND_CODE_HANDLER](#command_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica.|
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|Esegue il mapping di un intervallo contiguo di WM_COMMAND (messaggi) a una funzione del gestore, in base all'identificatore della voce di menu, controllo o tasto di scelta rapida.|
-|[NOTIFY_HANDLER](#notify_handler)|Un messaggio WM_NOTIFY viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e l'identificatore del controllo.|
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|Un messaggio WM_NOTIFY viene eseguito il mapping a una funzione del gestore, in base all'identificatore del controllo.|
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Un messaggio WM_NOTIFY viene eseguito il mapping a una funzione del gestore, in base al codice di notifica.|
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|I messaggi di un intervallo contiguo di WM_NOTIFY viene eseguito il mapping a una funzione del gestore, in base all'identificatore del controllo.|
-
-Le macro seguenti indirizzano messaggi a un'altra mappa messaggi. Questo processo è denominato "concatenamento".
+Le macro seguenti consentono di eseguire il mapping di un messaggio a una funzione del gestore. Questa funzione deve essere definita in *theClass*.
 
 |Macro|Descrizione|
 |-----------|-----------------|
-|[CHAIN_MSG_MAP](#chain_msg_map)|Eseguire il mapping delle catene per il messaggio predefinito nella classe di base.|
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Eseguire il mapping delle catene per il messaggio predefinito in un membro dati della classe.|
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Eseguire il mapping sia concatenato a un messaggio alternativo nella classe di base.|
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Eseguire il mapping sia concatenato a un messaggio alternativo in un membro dati della classe.|
-|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|Eseguire il mapping delle catene per il messaggio predefinito in un'altra classe in fase di esecuzione.|
+|[MESSAGE_HANDLER](#message_handler)|Esegue il mapping di un messaggio di Windows a una funzione del gestore.|
+|[MESSAGE_RANGE_HANDLER](#message_range_handler)|Esegue il mapping di un intervallo contiguo di messaggi di Windows a una funzione del gestore.|
+|[COMMAND_HANDLER](#command_handler)|Esegue il mapping di un messaggio WM_COMMAND a una funzione di gestione, in base al codice di notifica e all'identificatore della voce di menu, del controllo o dell'acceleratore.|
+|[COMMAND_ID_HANDLER](#command_id_handler)|Esegue il mapping di un messaggio WM_COMMAND a una funzione di gestione, in base all'identificatore della voce di menu, del controllo o dell'acceleratore.|
+|[COMMAND_CODE_HANDLER](#command_handler)|Esegue il mapping di un messaggio WM_COMMAND a una funzione di gestione, in base al codice di notifica.|
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|Esegue il mapping di un intervallo contiguo di messaggi WM_COMMAND a una funzione di gestione, in base all'identificatore della voce di menu, del controllo o dell'acceleratore.|
+|[NOTIFY_HANDLER](#notify_handler)|Esegue il mapping di un messaggio WM_NOTIFY a una funzione di gestione, in base al codice di notifica e all'identificatore del controllo.|
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|Esegue il mapping di un messaggio WM_NOTIFY a una funzione di gestione, in base all'identificatore del controllo.|
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY a una funzione di gestione, in base al codice di notifica.|
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|Esegue il mapping di un intervallo contiguo di messaggi WM_NOTIFY a una funzione di gestione, in base all'identificatore del controllo.|
 
-Le seguenti macro indirizzano i messaggi "riflesse" dalla finestra padre. Ad esempio, un controllo in genere invia i messaggi di notifica alla finestra padre per l'elaborazione, ma la finestra padre può riprodurre il messaggio al controllo.
+Le macro seguenti indirizzano i messaggi a un'altra mappa messaggi. Questo processo è denominato "concatenamento".
 
 |Macro|Descrizione|
 |-----------|-----------------|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e l'identificatore della voce di menu, controllo o tasto di scelta rapida.|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base all'identificatore della voce di menu, controllo o tasto di scelta rapida.|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica.|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, basata su un intervallo contiguo di identificatori di controllo.|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Un messaggio WM_COMMAND viene eseguito il mapping a una funzione del gestore, in base al codice di notifica e un intervallo contiguo di identificatori di controllo.|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base al codice di notifica e l'identificatore del controllo.|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base all'identificatore del controllo.|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base al codice di notifica.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, basata su un intervallo contiguo di identificatori di controllo.|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY riprodotto a una funzione del gestore, in base al codice di notifica e un intervallo contiguo di identificatori di controllo.|
+|[CHAIN_MSG_MAP](#chain_msg_map)|Concatena alla mappa messaggi predefinita nella classe di base.|
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Concatena la mappa messaggi predefinita in un membro dati della classe.|
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|Concatena a una mappa messaggi alternativa nella classe di base.|
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|Concatena a una mappa messaggi alternativa in un membro dati della classe.|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|Concatena la mappa messaggi predefinita in un'altra classe in fase di esecuzione.|
+
+Le macro seguenti indirizzano i messaggi "riflessi" dalla finestra padre. Ad esempio, un controllo in genere invia messaggi di notifica alla finestra padre per l'elaborazione, ma la finestra padre può riportare il messaggio al controllo.
+
+|Macro|Descrizione|
+|-----------|-----------------|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base al codice di notifica e all'identificatore della voce di menu, del controllo o dell'acceleratore.|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base all'identificatore della voce di menu, del controllo o dell'acceleratore.|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base al codice di notifica.|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base a un intervallo contiguo di identificatori di controllo.|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|Esegue il mapping di un messaggio WM_COMMAND riflesso a una funzione di gestione, in base al codice di notifica e a un intervallo contiguo di identificatori di controllo.|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base al codice di notifica e all'identificatore del controllo.|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base all'identificatore del controllo.|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base al codice di notifica.|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base a un intervallo contiguo di identificatori di controllo.|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Esegue il mapping di un messaggio WM_NOTIFY riflesso a una funzione di gestione, in base al codice di notifica e a un intervallo contiguo di identificatori di controllo.|
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_ATL_Windowing#102](../../atl/codesnippet/cpp/message-map-macros-atl_3.h)]
 
-Quando un `CMyExtWindow` oggetto riceve un messaggio WM_PAINT, il messaggio viene indirizzato a `CMyExtWindow::OnPaint` per l'elaborazione effettiva. Se `OnPaint` indica il messaggio richiede un'ulteriore elaborazione, il messaggio viene quindi reindirizzati alla mappa messaggi predefinito `CMyBaseWindow`.
+Quando un `CMyExtWindow` oggetto riceve un messaggio WM_PAINT, il messaggio viene indirizzato `CMyExtWindow::OnPaint` a per l'elaborazione effettiva. Se `OnPaint` indica che il messaggio richiede un'ulteriore elaborazione, il messaggio verrà quindi indirizzato alla mappa messaggi predefinita `CMyBaseWindow`in.
 
-Oltre alla mappa messaggi predefinito, è possibile definire una mappa messaggi alternativa con [ALT_MSG_MAP](#alt_msg_map). Iniziano sempre una mappa dei messaggi con BEGIN_MSG_MAP. È possibile dichiarare le mappe dei successivi messaggi alternativo. L'esempio seguente illustra il mapping dei messaggi predefinito e mappa di un messaggio alternativo, ognuno dei quali contiene una funzione del gestore:
+Oltre alla mappa messaggi predefinita, è possibile definire una mappa messaggi alternativa con [ALT_MSG_MAP](#alt_msg_map). Iniziare sempre una mappa messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe messaggi alternative successive. Nell'esempio seguente viene illustrata la mappa messaggi predefinita e una mappa messaggi alternativa, ognuno contenente una funzione del gestore:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-L'esempio seguente mostra due mappe di messaggi alternativo. La mappa dei messaggi predefinita è vuota.
+Nell'esempio seguente vengono illustrate due mappe messaggi alternative. La mappa messaggi predefinita è vuota.
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Si noti che ci sia sempre esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Si noti che esiste sempre esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="chain_msg_map_alt"></a>  CHAIN_MSG_MAP_ALT
+##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT
 
 Definisce una voce in una mappa messaggi.
 
@@ -218,25 +218,25 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ### <a name="parameters"></a>Parametri
 
 *theChainClass*<br/>
-[in] Il nome della classe di base che contiene la mappa dei messaggi.
+in Nome della classe di base che contiene la mappa messaggi.
 
 *msgMapID*<br/>
-[in] L'identificatore della mappa del messaggio.
+in Identificatore della mappa messaggi.
 
 ### <a name="remarks"></a>Note
 
-CHAIN_MSG_MAP_ALT indirizza i messaggi a una mappa messaggi alternative in una classe di base. È necessario aver dichiarato la mappa messaggi alternativo con [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Per indirizzare i messaggi alla mappa messaggi di una classe di base predefinito (dichiarato con [BEGIN_MSG_MAP](#begin_msg_map)), usare CHAIN_MSG_MAP. Per un esempio, vedere [CHAIN_MSG_MAP](#chain_msg_map).
+CHAIN_MSG_MAP_ALT indirizza i messaggi a una mappa messaggi alternativa in una classe base. È necessario che la mappa messaggi alternativa sia stata dichiarata con [ALT_MSG_MAP (msgMapID)](#alt_msg_map). Per indirizzare i messaggi alla mappa messaggi predefinita di una classe di base (dichiarata con [BEGIN_MSG_MAP](#begin_msg_map)), utilizzare CHAIN_MSG_MAP. Per un esempio, vedere [CHAIN_MSG_MAP](#chain_msg_map).
 
 > [!NOTE]
->  Iniziano sempre una mappa dei messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe dei successivi messaggi alternativo con ALT_MSG_MAP. Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Ogni mappa del messaggio deve avere esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+>  Iniziare sempre una mappa messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe dei messaggi alternativi successive con ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Ogni mappa messaggi deve avere esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="chain_msg_map_alt_member"></a>  CHAIN_MSG_MAP_ALT_MEMBER
+##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER
 
 Definisce una voce in una mappa messaggi.
 
@@ -247,25 +247,25 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ### <a name="parameters"></a>Parametri
 
 *theChainMember*<br/>
-[in] Il nome del membro dati che contiene la mappa dei messaggi.
+in Nome del membro dati contenente la mappa messaggi.
 
 *msgMapID*<br/>
-[in] L'identificatore della mappa del messaggio.
+in Identificatore della mappa messaggi.
 
 ### <a name="remarks"></a>Note
 
-CHAIN_MSG_MAP_ALT_MEMBER indirizza i messaggi a una mappa messaggi alternative in un membro dati. È necessario aver dichiarato la mappa messaggi alternativo con [ALT_MSG_MAP(msgMapID)](#alt_msg_map). Per indirizzare i messaggi alla mappa messaggi di un membro dati predefiniti (dichiarato con [BEGIN_MSG_MAP](#begin_msg_map)), usare CHAIN_MSG_MAP_MEMBER. Per un esempio, vedere [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).
+CHAIN_MSG_MAP_ALT_MEMBER indirizza i messaggi a una mappa messaggi alternativa in un membro dati. È necessario che la mappa messaggi alternativa sia stata dichiarata con [ALT_MSG_MAP (msgMapID)](#alt_msg_map). Per indirizzare i messaggi alla mappa messaggi predefinita di un membro dati (dichiarata con [BEGIN_MSG_MAP](#begin_msg_map)), utilizzare CHAIN_MSG_MAP_MEMBER. Per un esempio, vedere [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member).
 
 > [!NOTE]
->  Iniziano sempre una mappa dei messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe dei successivi messaggi alternativo con ALT_MSG_MAP. Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Ogni mappa del messaggio deve avere esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+>  Iniziare sempre una mappa messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe dei messaggi alternativi successive con ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Ogni mappa messaggi deve avere esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="chain_msg_map"></a>  CHAIN_MSG_MAP
+##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP
 
 Definisce una voce in una mappa messaggi.
 
@@ -276,16 +276,16 @@ CHAIN_MSG_MAP(theChainClass)
 ### <a name="parameters"></a>Parametri
 
 *theChainClass*<br/>
-[in] Il nome della classe di base che contiene la mappa dei messaggi.
+in Nome della classe di base che contiene la mappa messaggi.
 
 ### <a name="remarks"></a>Note
 
-CHAIN_MSG_MAP indirizza i messaggi alla mappa messaggi di una classe di base predefinito (dichiarato con [BEGIN_MSG_MAP](#begin_msg_map)). Per indirizzare i messaggi alla mappa messaggi alternativo di una classe di base (dichiarato con [ALT_MSG_MAP](#alt_msg_map)), usare [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).
+CHAIN_MSG_MAP indirizza i messaggi alla mappa messaggi predefinita di una classe di base (dichiarata con [BEGIN_MSG_MAP](#begin_msg_map)). Per indirizzare i messaggi alla mappa messaggi alternativa di una classe di base (dichiarata con [ALT_MSG_MAP](#alt_msg_map)), utilizzare [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt).
 
 > [!NOTE]
->  Iniziano sempre una mappa dei messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe dei successivi messaggi alternativo con ALT_MSG_MAP. Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Ogni mappa del messaggio deve avere esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+>  Iniziare sempre una mappa messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe dei messaggi alternativi successive con ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Ogni mappa messaggi deve avere esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Esempio
 
@@ -293,11 +293,11 @@ Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi
 
 In questo esempio viene illustrato quanto segue:
 
-- Se sta usando una routine della finestra `CMyClass`della mappa messaggi predefinita e `OnPaint` non handle di un messaggio, il messaggio viene indirizzato a `CMyBaseClass`del mappa dei messaggi predefinita per l'elaborazione.
+- Se una procedura della finestra utilizza `CMyClass`la mappa messaggi predefinita e `OnPaint` non gestisce un messaggio, il messaggio viene indirizzato alla `CMyBaseClass`mappa messaggi predefinita per l'elaborazione.
 
-- Se una procedura di finestra è utilizzando la mappa messaggi alternativo prima nella `CMyClass`, tutti i messaggi vengono indirizzati a `CMyBaseClass`della mappa del messaggio predefinito.
+- Se una procedura della finestra utilizza la prima mappa messaggi alternativa in `CMyClass`, tutti i messaggi vengono indirizzati alla `CMyBaseClass`mappa messaggi predefinita.
 
-- Se si usa una routine della finestra `CMyClass`di eseguire il mapping secondo messaggio alternativo e `OnChar` non handle di un messaggio, il messaggio viene indirizzato alla mappa messaggio alternativo specificato `CMyBaseClass`. `CMyBaseClass` deve avere dichiarato la mappa messaggi con ALT_MSG_MAP(1).
+- Se una procedura della finestra utilizza `CMyClass`la seconda mappa messaggi alternativa e `OnChar` non gestisce un messaggio, il messaggio viene indirizzato alla mappa messaggi alternativa specificata in `CMyBaseClass`. `CMyBaseClass`è necessario che la mappa messaggi sia stata dichiarata con ALT_MSG_MAP (1).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -314,22 +314,22 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ### <a name="parameters"></a>Parametri
 
 *dynaChainID*<br/>
-[in] Identificatore univoco per la mappa dei messaggi di un oggetto.
+in Identificatore univoco per la mappa messaggi di un oggetto.
 
 ### <a name="remarks"></a>Note
 
-CHAIN_MSG_MAP_DYNAMIC indirizza i messaggi, in fase di esecuzione alla mappa dei messaggi predefinita in un altro oggetto. L'oggetto e propria mappa messaggi sono associati *dynaChainID*, che viene definita attraverso [CDynamicChain::](cdynamicchain-class.md#setchainentry). È necessario derivare la classe da `CDynamicChain` per poter utilizzare CHAIN_MSG_MAP_DYNAMIC. Per un esempio, vedere la [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Panoramica.
+CHAIN_MSG_MAP_DYNAMIC indirizza i messaggi in fase di esecuzione alla mappa messaggi predefinita in un altro oggetto. L'oggetto e la relativa mappa messaggi sono associati a *dynaChainID*, definito tramite [CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry). È necessario derivare la classe `CDynamicChain` da per poter usare CHAIN_MSG_MAP_DYNAMIC. Per un esempio, vedere Panoramica di [CDynamicChain](../../atl/reference/cdynamicchain-class.md) .
 
 > [!NOTE]
->  Iniziano sempre una mappa dei messaggi con [BEGIN_MSG_MAP](#begin_msg_map). È quindi possibile dichiarare le mappe dei successivi messaggi alternativo con ALT_MSG_MAP. Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Ogni mappa del messaggio deve avere esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+>  Iniziare sempre una mappa messaggi con [BEGIN_MSG_MAP](#begin_msg_map). È quindi possibile dichiarare le mappe dei messaggi alternativi successive con ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Ogni mappa messaggi deve avere esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="chain_msg_map_member"></a>  CHAIN_MSG_MAP_MEMBER
+##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER
 
 Definisce una voce in una mappa messaggi.
 
@@ -340,16 +340,16 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 ### <a name="parameters"></a>Parametri
 
 *theChainMember*<br/>
-[in] Il nome del membro dati che contiene la mappa dei messaggi.
+in Nome del membro dati contenente la mappa messaggi.
 
 ### <a name="remarks"></a>Note
 
-CHAIN_MSG_MAP_MEMBER indirizza i messaggi alla mappa messaggi di un membro dati predefiniti (dichiarato con [BEGIN_MSG_MAP](#begin_msg_map)). Per indirizzare i messaggi alla mappa messaggi alternativo di un membro dati (dichiarato con [ALT_MSG_MAP](#alt_msg_map)), usare [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).
+CHAIN_MSG_MAP_MEMBER indirizza i messaggi alla mappa messaggi predefinita di un membro dati (dichiarata con [BEGIN_MSG_MAP](#begin_msg_map)). Per indirizzare i messaggi alla mappa messaggi alternativa di un membro dati (dichiarata con [ALT_MSG_MAP](#alt_msg_map)), utilizzare [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member).
 
 > [!NOTE]
->  Iniziano sempre una mappa dei messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe dei successivi messaggi alternativo con ALT_MSG_MAP. Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Ogni mappa del messaggio deve avere esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+>  Iniziare sempre una mappa messaggi con BEGIN_MSG_MAP. È quindi possibile dichiarare le mappe dei messaggi alternativi successive con ALT_MSG_MAP. La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Ogni mappa messaggi deve avere esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Esempio
 
@@ -357,19 +357,19 @@ Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi
 
 In questo esempio viene illustrato quanto segue:
 
-- Se sta usando una routine della finestra `CMyClass`della mappa messaggi predefinita e `OnPaint` non handle di un messaggio, il messaggio viene indirizzato a `m_obj`del mappa dei messaggi predefinita per l'elaborazione.
+- Se una procedura della finestra utilizza `CMyClass`la mappa messaggi predefinita e `OnPaint` non gestisce un messaggio, il messaggio viene indirizzato alla `m_obj`mappa messaggi predefinita per l'elaborazione.
 
-- Se una procedura di finestra è utilizzando la mappa messaggi alternativo prima nella `CMyClass`, tutti i messaggi vengono indirizzati a `m_obj`della mappa del messaggio predefinito.
+- Se una procedura della finestra utilizza la prima mappa messaggi alternativa in `CMyClass`, tutti i messaggi vengono indirizzati alla `m_obj`mappa messaggi predefinita.
 
-- Se si usa una routine della finestra `CMyClass`di eseguire il mapping secondo messaggio alternativo e `OnChar` non handle di un messaggio, il messaggio viene indirizzato alla mappa del messaggio alternativo specificato di `m_obj`. Classe `CMyContainedClass` deve avere dichiarato la mappa messaggi con ALT_MSG_MAP(1).
+- Se una procedura della finestra utilizza `CMyClass`la seconda mappa messaggi alternativa e `OnChar` non gestisce un messaggio, il messaggio viene indirizzato alla mappa messaggi alternativa `m_obj`specificata. La `CMyContainedClass` classe deve avere dichiarato la mappa messaggi con ALT_MSG_MAP (1).
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER
+##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER
 
-Simile a [COMMAND_HANDLER](#command_handler), ma esegue il mapping di un [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggi solo in base al codice di notifica.
+Simile a [COMMAND_HANDLER](#command_handler), ma esegue il mapping di un messaggio [WM_COMMAND](/windows/win32/menurc/wm-command) basato solo sul codice di notifica.
 
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -378,16 +378,16 @@ COMMAND_CODE_HANDLER(code, func)
 ### <a name="parameters"></a>Parametri
 
 *codice*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="command_handler"></a>  COMMAND_HANDLER
+##  <a name="command_handler"></a>COMMAND_HANDLER
 
 Definisce una voce in una mappa messaggi.
 
@@ -397,41 +397,41 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
+*id*<br/>
+in Identificatore della voce di menu, del controllo o dell'acceleratore.
 
 *codice*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="remarks"></a>Note
 
-Esegue il mapping COMMAND_HANDLER una [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggio alla funzione del gestore specificato, in base al codice di notifica e l'identificatore del controllo. Ad esempio:
+COMMAND_HANDLER esegue il mapping di un messaggio [WM_COMMAND](/windows/win32/menurc/wm-command) alla funzione del gestore specificata, in base al codice di notifica e all'identificatore del controllo. Ad esempio:
 
 [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]
 
-Qualsiasi funzione specificato in una macro COMMAND_HANDLER deve essere definita come segue:
+Qualsiasi funzione specificata in una macro COMMAND_HANDLER deve essere definita nel modo seguente:
 
 `LRESULT CommandHandler(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL& bHandled);`
 
-Il set di mapping dei messaggi `bHandled` su TRUE prima `CommandHandler` viene chiamato. Se `CommandHandler` non gestisce completamente il messaggio deve essere impostato `bHandled` su FALSE per indicare che il messaggio richiede un'ulteriore elaborazione.
+La mappa messaggi imposta `bHandled` su true prima `CommandHandler` di chiamare il metodo. Se `CommandHandler` non gestisce completamente il messaggio, deve impostare `bHandled` su false per indicare che il messaggio deve essere ulteriormente elaborato.
 
 > [!NOTE]
->  Iniziano sempre una mappa dei messaggi con [BEGIN_MSG_MAP](#begin_msg_map). È quindi possibile dichiarare le mappe dei successivi messaggi alternativo con [ALT_MSG_MAP](#alt_msg_map). Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Ogni mappa del messaggio deve avere esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+>  Iniziare sempre una mappa messaggi con [BEGIN_MSG_MAP](#begin_msg_map). È quindi possibile dichiarare le mappe dei messaggi alternativi successive con [ALT_MSG_MAP](#alt_msg_map). La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Ogni mappa messaggi deve avere esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Oltre a COMMAND_HANDLER, è possibile usare [MESSAGE_HANDLER](#message_handler) per eseguire il mapping di un messaggio WM_COMMAND senza considerare un identificatore o un codice. In questo caso `MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` indirizzerà tutti i messaggi WM_COMMAND `OnHandlerFunction`.
+Oltre a COMMAND_HANDLER, è possibile usare [MESSAGE_HANDLER](#message_handler) per eseguire il mapping di un messaggio WM_COMMAND senza considerare un identificatore o un codice. In questo caso, `MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` tutti i messaggi WM_COMMAND vengono indirizzati a. `OnHandlerFunction`
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER
+##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER
 
-Simile a [COMMAND_HANDLER](#command_handler), ma esegue il mapping di un [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggi solo in base all'identificatore della voce di menu, controllo o tasto di scelta rapida.
+Simile a [COMMAND_HANDLER](#command_handler), ma esegue il mapping di un messaggio [WM_COMMAND](/windows/win32/menurc/wm-command) basato solo sull'identificatore della voce di menu, del controllo o dell'acceleratore.
 
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -439,19 +439,19 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] Identificatore della voce di menu, controllo o l'invio del messaggio di tasti di scelta rapida.
+*id*<br/>
+in Identificatore della voce di menu, del controllo o dell'acceleratore che invia il messaggio.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER
+##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER
 
-Simile a [COMMAND_RANGE_HANDLER](#command_range_handler), ma viene eseguito il mapping [WM_COMMAND](/windows/desktop/menurc/wm-command) messaggi con un codice di notifica specifico da una gamma di controlli a una funzione di gestione singolo.
+Simile a [COMMAND_RANGE_HANDLER](#command_range_handler), ma esegue il mapping dei messaggi [WM_COMMAND](/windows/win32/menurc/wm-command) con un codice di notifica specifico da un intervallo di controlli a una singola funzione del gestore.
 
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -460,28 +460,28 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="parameters"></a>Parametri
 
 *idFirst*<br/>
-[in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
+in Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
 *idLast*<br/>
-[in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
+in Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
 *codice*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="remarks"></a>Note
 
-Questo intervallo si basa sull'identificatore della voce di menu, controllo o l'invio del messaggio di tasti di scelta rapida.
+Questo intervallo è basato sull'identificatore della voce di menu, del controllo o dell'acceleratore che invia il messaggio.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER
+##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER
 
-Simile a [COMMAND_HANDLER](#command_handler), ma viene eseguito il mapping [WM_COMMAND](/windows/desktop/menurc/wm-command) i messaggi da una gamma di controlli a una funzione di gestione singolo.
+Simile a [COMMAND_HANDLER](#command_handler), ma esegue il mapping dei messaggi [WM_COMMAND](/windows/win32/menurc/wm-command) da un intervallo di controlli a una singola funzione del gestore.
 
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -490,17 +490,17 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="parameters"></a>Parametri
 
 *idFirst*<br/>
-[in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
+in Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
 *idLast*<br/>
-[in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
+in Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="remarks"></a>Note
 
-Questo intervallo si basa sull'identificatore della voce di menu, controllo o l'invio del messaggio di tasti di scelta rapida.
+Questo intervallo è basato sull'identificatore della voce di menu, del controllo o dell'acceleratore che invia il messaggio.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -508,7 +508,7 @@ Questo intervallo si basa sull'identificatore della voce di menu, controllo o l'
 
 ##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP
 
-Dichiara un mapping del messaggio vuoto.
+Dichiara una mappa messaggi vuota.
 
 ```
 DECLARE_EMPTY_MSG_MAP()
@@ -520,9 +520,9 @@ DECLARE_EMPTY_MSG_MAP è una macro di praticità che chiama le macro [BEGIN_MSG_
 
 [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]
 
-##  <a name="default_reflection_handler"></a>  DEFAULT_REFLECTION_HANDLER
+##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER
 
-Fornisce un gestore predefinito per la finestra figlio (controllo) che riceverà messaggi; riflessi il gestore passerà correttamente i messaggi non gestiti a `DefWindowProc`.
+Fornisce un gestore predefinito per la finestra figlio (controllo) che riceverà i messaggi riflessi; il gestore passerà correttamente i messaggi non gestiti a `DefWindowProc`.
 
 ```
 DEFAULT_REFLECTION_HANDLER()
@@ -542,19 +542,19 @@ END_MSG_MAP()
 
 ### <a name="remarks"></a>Note
 
-Usare sempre la [BEGIN_MSG_MAP](#begin_msg_map) macro per contrassegnare l'inizio di una mappa messaggi. Uso [ALT_MSG_MAP](#alt_msg_map) per dichiarare le mappe dei successivi messaggi alternativo.
+Utilizzare sempre la macro [BEGIN_MSG_MAP](#begin_msg_map) per contrassegnare l'inizio di una mappa messaggi. Usare [ALT_MSG_MAP](#alt_msg_map) per dichiarare le mappe messaggi alternative successive.
 
-Si noti che ci sia sempre esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+Si noti che esiste sempre esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Esempio
 
-L'esempio seguente illustra il mapping dei messaggi predefinito e mappa di un messaggio alternativo, ognuno dei quali contiene una funzione del gestore:
+Nell'esempio seguente viene illustrata la mappa messaggi predefinita e una mappa messaggi alternativa, ognuno contenente una funzione del gestore:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-L'esempio seguente mostra due mappe di messaggi alternativo. La mappa dei messaggi predefinita è vuota.
+Nell'esempio seguente vengono illustrate due mappe messaggi alternative. La mappa messaggi predefinita è vuota.
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
@@ -562,9 +562,9 @@ L'esempio seguente mostra due mappe di messaggi alternativo. La mappa dei messag
 
 **Intestazione:** atlwin. h
 
-##  <a name="forward_notifications"></a>  FORWARD_NOTIFICATIONS
+##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS
 
-Inoltra i messaggi di notifica alla finestra padre.
+Consente di inviare i messaggi di notifica alla finestra padre.
 
 ```
 FORWARD_NOTIFICATIONS()
@@ -572,13 +572,13 @@ FORWARD_NOTIFICATIONS()
 
 ### <a name="remarks"></a>Note
 
-Specificare questa macro come parte della mappa del messaggio.
+Specificare questa macro come parte della mappa messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="message_handler"></a>  MESSAGE_HANDLER
+##  <a name="message_handler"></a>MESSAGE_HANDLER
 
 Definisce una voce in una mappa messaggi.
 
@@ -589,27 +589,27 @@ MESSAGE_HANDLER( msg, func )
 ### <a name="parameters"></a>Parametri
 
 *msg*<br/>
-[in] Il messaggio di Windows.
+in Messaggio di Windows.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="remarks"></a>Note
 
-MESSAGE_HANDLER esegue il mapping di un messaggio di Windows per la funzione del gestore specificati.
+MESSAGE_HANDLER esegue il mapping di un messaggio di Windows alla funzione del gestore specificata.
 
-Qualsiasi funzione specificato in una macro MESSAGE_HANDLER deve essere definita come segue:
+Qualsiasi funzione specificata in una macro MESSAGE_HANDLER deve essere definita nel modo seguente:
 
 `LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);`
 
-Il set di mapping dei messaggi `bHandled` su TRUE prima `MessageHandler` viene chiamato. Se `MessageHandler` non gestisce completamente il messaggio deve essere impostato `bHandled` su FALSE per indicare che il messaggio richiede un'ulteriore elaborazione.
+La mappa messaggi imposta `bHandled` su true prima `MessageHandler` di chiamare il metodo. Se `MessageHandler` non gestisce completamente il messaggio, deve impostare `bHandled` su false per indicare che il messaggio deve essere ulteriormente elaborato.
 
 > [!NOTE]
->  Iniziano sempre una mappa dei messaggi con [BEGIN_MSG_MAP](#begin_msg_map). È quindi possibile dichiarare le mappe dei successivi messaggi alternativo con [ALT_MSG_MAP](#alt_msg_map). Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Ogni mappa del messaggio deve avere esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+>  Iniziare sempre una mappa messaggi con [BEGIN_MSG_MAP](#begin_msg_map). È quindi possibile dichiarare le mappe dei messaggi alternativi successive con [ALT_MSG_MAP](#alt_msg_map). La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Ogni mappa messaggi deve avere esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Oltre a MESSAGE_HANDLER, è possibile usare [COMMAND_HANDLER](#command_handler) e [NOTIFY_HANDLER](#notify_handler) per eseguire il mapping [WM_COMMAND](/windows/desktop/menurc/wm-command) e [WM_NOTIFY](/windows/desktop/controls/wm-notify) messaggi , rispettivamente.
+Oltre a MESSAGE_HANDLER, è possibile usare [COMMAND_HANDLER](#command_handler) e [NOTIFY_HANDLER](#notify_handler) per eseguire il mapping rispettivamente dei messaggi [WM_COMMAND](/windows/win32/menurc/wm-command) e [WM_NOTIFY](/windows/win32/controls/wm-notify) .
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Esempio
 
@@ -619,9 +619,9 @@ Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi
 
 **Intestazione:** atlwin. h
 
-##  <a name="message_range_handler"></a>  MESSAGE_RANGE_HANDLER
+##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER
 
-Simile a [MESSAGE_HANDLER](#message_handler), ma viene mappato un intervallo di Windows di messaggi a una funzione di gestione singolo.
+Simile a [MESSAGE_HANDLER](#message_handler), ma esegue il mapping di un intervallo di messaggi di Windows a una singola funzione del gestore.
 
 ```
 MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
@@ -630,21 +630,21 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ### <a name="parameters"></a>Parametri
 
 *msgFirst*<br/>
-[in] Contrassegna l'inizio di un intervallo contiguo di messaggi.
+in Contrassegna l'inizio di un intervallo contiguo di messaggi.
 
 *msgLast*<br/>
-[in] Contrassegna la fine di un intervallo contiguo di messaggi.
+in Contrassegna la fine di un intervallo contiguo di messaggi.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER
+##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER
 
-Simile a [NOTIFY_HANDLER](#notify_handler), ma esegue il mapping di un [WM_NOTIFY](/windows/desktop/controls/wm-notify) messaggi solo in base al codice di notifica.
+Simile a [NOTIFY_HANDLER](#notify_handler), ma esegue il mapping di un messaggio [WM_NOTIFY](/windows/win32/controls/wm-notify) basato solo sul codice di notifica.
 
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -653,16 +653,16 @@ NOTIFY_CODE_HANDLER(cd, func)
 ### <a name="parameters"></a>Parametri
 
 *cd*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="notify_handler"></a>  NOTIFY_HANDLER
+##  <a name="notify_handler"></a>NOTIFY_HANDLER
 
 Definisce una voce in una mappa messaggi.
 
@@ -672,31 +672,31 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] L'identificatore del controllo che invia il messaggio.
+*id*<br/>
+in Identificatore del controllo che invia il messaggio.
 
 *cd*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="remarks"></a>Note
 
-Esegue il mapping di NOTIFY_HANDLER una [WM_NOTIFY](/windows/desktop/controls/wm-notify) messaggio alla funzione del gestore specificato, in base al codice di notifica e l'identificatore del controllo.
+NOTIFY_HANDLER esegue il mapping di un messaggio [WM_NOTIFY](/windows/win32/controls/wm-notify) alla funzione del gestore specificata, in base al codice di notifica e all'identificatore del controllo.
 
-Qualsiasi funzione specificato in una macro NOTIFY_HANDLER deve essere definita come segue:
+Qualsiasi funzione specificata in una macro NOTIFY_HANDLER deve essere definita nel modo seguente:
 
 `LRESULT NotifyHandler(int idCtrl, LPNMHDR pnmh, BOOL& bHandled);`
 
-Il set di mapping dei messaggi `bHandled` su TRUE prima `NotifyHandler` viene chiamato. Se `NotifyHandler` non gestisce completamente il messaggio deve essere impostato `bHandled` su FALSE per indicare che il messaggio richiede un'ulteriore elaborazione.
+La mappa messaggi imposta `bHandled` su true prima `NotifyHandler` di chiamare il metodo. Se `NotifyHandler` non gestisce completamente il messaggio, deve impostare `bHandled` su false per indicare che il messaggio deve essere ulteriormente elaborato.
 
 > [!NOTE]
->  Iniziano sempre una mappa dei messaggi con [BEGIN_MSG_MAP](#begin_msg_map). È quindi possibile dichiarare le mappe dei successivi messaggi alternativo con [ALT_MSG_MAP](#alt_msg_map). Il [END_MSG_MAP](#end_msg_map) macro contrassegna la fine della mappa messaggi. Ogni mappa del messaggio deve avere esattamente un'istanza di BEGIN_MSG_MAP ed END_MSG_MAP.
+>  Iniziare sempre una mappa messaggi con [BEGIN_MSG_MAP](#begin_msg_map). È quindi possibile dichiarare le mappe dei messaggi alternativi successive con [ALT_MSG_MAP](#alt_msg_map). La macro [END_MSG_MAP](#end_msg_map) contrassegna la fine della mappa messaggi. Ogni mappa messaggi deve avere esattamente un'istanza di BEGIN_MSG_MAP e END_MSG_MAP.
 
-Oltre a NOTIFY_HANDLER, è possibile usare [MESSAGE_HANDLER](#message_handler) per eseguire il mapping di un messaggio WM_NOTIFY senza considerare un identificatore o un codice. In questo caso `MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` indirizzerà tutti i messaggi WM_NOTIFY `OnHandlerFunction`.
+Oltre a NOTIFY_HANDLER, è possibile usare [MESSAGE_HANDLER](#message_handler) per eseguire il mapping di un messaggio WM_NOTIFY senza considerare un identificatore o un codice. In questo caso, `MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` tutti i messaggi WM_NOTIFY vengono indirizzati a. `OnHandlerFunction`
 
-Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
+Per ulteriori informazioni sull'utilizzo delle mappe messaggi in ATL, vedere [mappe messaggi](../../atl/message-maps-atl.md).
 
 ### <a name="example"></a>Esempio
 
@@ -708,7 +708,7 @@ Per altre informazioni sull'uso di mappe messaggi in ATL, vedere [mappe messaggi
 
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER
 
-Simile a [NOTIFY_HANDLER](#notify_handler), ma esegue il mapping di un [WM_NOTIFY](/windows/desktop/controls/wm-notify) messaggi solo in base l'identificatore del controllo.
+Simile a [NOTIFY_HANDLER](#notify_handler), ma esegue il mapping di un messaggio [WM_NOTIFY](/windows/win32/controls/wm-notify) basato solo sull'identificatore del controllo.
 
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -716,11 +716,11 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] L'identificatore del controllo che invia il messaggio.
+*id*<br/>
+in Identificatore del controllo che invia il messaggio.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -728,7 +728,7 @@ NOTIFY_ID_HANDLER( id, func )
 
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER
 
-Simile a [NOTIFY_RANGE_HANDLER](#notify_range_handler), ma viene eseguito il mapping [WM_NOTIFY](/windows/desktop/controls/wm-notify) messaggi con un codice di notifica specifico da una gamma di controlli a una funzione di gestione singolo.
+Simile a [NOTIFY_RANGE_HANDLER](#notify_range_handler), ma esegue il mapping dei messaggi [WM_NOTIFY](/windows/win32/controls/wm-notify) con un codice di notifica specifico da un intervallo di controlli a una singola funzione del gestore.
 
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -737,28 +737,28 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="parameters"></a>Parametri
 
 *idFirst*<br/>
-[in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
+in Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
 *idLast*<br/>
-[in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
+in Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
 *cd*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="remarks"></a>Note
 
-Questo intervallo si basa sull'identificatore del controllo che invia il messaggio.
+Questo intervallo è basato sull'identificatore del controllo che invia il messaggio.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER
+##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER
 
-Simile a [NOTIFY_HANDLER](#notify_handler), ma viene eseguito il mapping [WM_NOTIFY](/windows/desktop/controls/wm-notify) i messaggi da una gamma di controlli a una funzione di gestione singolo.
+Simile a [NOTIFY_HANDLER](#notify_handler), ma esegue il mapping dei messaggi [WM_NOTIFY](/windows/win32/controls/wm-notify) da un intervallo di controlli a una singola funzione del gestore.
 
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
@@ -767,17 +767,17 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>Parametri
 
 *idFirst*<br/>
-[in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
+in Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
 *idLast*<br/>
-[in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
+in Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="remarks"></a>Note
 
-Questo intervallo si basa sull'identificatore del controllo che invia il messaggio.
+Questo intervallo è basato sull'identificatore del controllo che invia il messaggio.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -801,7 +801,7 @@ Specificare questa macro come parte della mappa messaggi della finestra padre.
 
 ##  <a name="reflected_command_code_handler"></a>  REFLECTED_COMMAND_CODE_HANDLER
 
-Simile a [COMMAND_CODE_HANDLER](#command_code_handler), ma esegue il mapping di comandi riflessi dalla finestra padre.
+Simile a [COMMAND_CODE_HANDLER](#command_code_handler), ma esegue il mapping dei comandi riflessi dalla finestra padre.
 
 ```
 REFLECTED_COMMAND_CODE_HANDLER( code, func )
@@ -810,18 +810,18 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ### <a name="parameters"></a>Parametri
 
 *codice*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="reflected_command_handler"></a>  REFLECTED_COMMAND_HANDLER
+##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER
 
-Simile a [COMMAND_HANDLER](#command_handler), ma esegue il mapping di comandi riflessi dalla finestra padre.
+Simile a [COMMAND_HANDLER](#command_handler), ma esegue il mapping dei comandi riflessi dalla finestra padre.
 
 ```
 REFLECTED_COMMAND_HANDLER( id, code, func )
@@ -829,14 +829,14 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
+*id*<br/>
+in Identificatore della voce di menu, del controllo o dell'acceleratore.
 
 *codice*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -844,7 +844,7 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
-Simile a [COMMAND_ID_HANDLER](#command_id_handler), ma esegue il mapping di comandi riflessi dalla finestra padre.
+Simile a [COMMAND_ID_HANDLER](#command_id_handler), ma esegue il mapping dei comandi riflessi dalla finestra padre.
 
 ```
 REFLECTED_COMMAND_ID_HANDLER( id, func )
@@ -852,11 +852,11 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
+*id*<br/>
+in Identificatore della voce di menu, del controllo o dell'acceleratore.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -864,7 +864,7 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
-Simile a [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), ma esegue il mapping di comandi riflessi dalla finestra padre.
+Simile a [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), ma esegue il mapping dei comandi riflessi dalla finestra padre.
 
 ```
 REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
@@ -873,16 +873,16 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ### <a name="parameters"></a>Parametri
 
 *idFirst*<br/>
-[in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
+in Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
 *idLast*<br/>
-[in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
+in Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
 *codice*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -890,7 +890,7 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
-Simile a [COMMAND_RANGE_HANDLER](#command_range_handler), ma esegue il mapping di comandi riflessi dalla finestra padre.
+Simile a [COMMAND_RANGE_HANDLER](#command_range_handler), ma esegue il mapping dei comandi riflessi dalla finestra padre.
 
 ```
 REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
@@ -899,13 +899,13 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>Parametri
 
 *idFirst*<br/>
-[in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
+in Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
 *idLast*<br/>
-[in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
+in Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -913,7 +913,7 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
-Simile a [NOTIFY_CODE_HANDLER](#notify_code_handler), ma viene eseguito il mapping delle notifiche riflesse dalla finestra padre.
+Simile a [NOTIFY_CODE_HANDLER](#notify_code_handler), ma esegue il mapping delle notifiche riflesse dalla finestra padre.
 
 ```
 REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
@@ -922,18 +922,18 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ### <a name="parameters"></a>Parametri
 
 *cd*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
+##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER
 
-Simile a [NOTIFY_HANDLER](#notify_handler), ma viene eseguito il mapping delle notifiche riflesse dalla finestra padre.
+Simile a [NOTIFY_HANDLER](#notify_handler), ma esegue il mapping delle notifiche riflesse dalla finestra padre.
 
 ```
 REFLECTED_NOTIFY_HANDLER( id, cd, func )
@@ -941,14 +941,14 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
+*id*<br/>
+in Identificatore della voce di menu, del controllo o dell'acceleratore.
 
 *cd*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -956,7 +956,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
-Simile a [NOTIFY_ID_HANDLER](#notify_id_handler), ma viene eseguito il mapping delle notifiche riflesse dalla finestra padre.
+Simile a [NOTIFY_ID_HANDLER](#notify_id_handler), ma esegue il mapping delle notifiche riflesse dalla finestra padre.
 
 ```
 REFLECTED_NOTIFY_ID_HANDLER( id, func )
@@ -964,11 +964,11 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
-[in] Identificatore della voce di menu, controllo o tasto di scelta rapida.
+*id*<br/>
+in Identificatore della voce di menu, del controllo o dell'acceleratore.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -976,7 +976,7 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 
-Simile a [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), ma viene eseguito il mapping delle notifiche riflesse dalla finestra padre.
+Simile a [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), ma esegue il mapping delle notifiche riflesse dalla finestra padre.
 
 ```
 REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -985,24 +985,24 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="parameters"></a>Parametri
 
 *idFirst*<br/>
-[in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
+in Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
 *idLast*<br/>
-[in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
+in Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
 *cd*<br/>
-[in] Il codice di notifica.
+in Codice di notifica.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlwin. h
 
-##  <a name="reflected_notify_range_handler"></a>  REFLECTED_NOTIFY_RANGE_HANDLER
+##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER
 
-Simile a [NOTIFY_RANGE_HANDLER](#notify_range_handler), ma viene eseguito il mapping delle notifiche riflesse dalla finestra padre.
+Simile a [NOTIFY_RANGE_HANDLER](#notify_range_handler), ma esegue il mapping delle notifiche riflesse dalla finestra padre.
 
 ```
 REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
@@ -1011,13 +1011,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>Parametri
 
 *idFirst*<br/>
-[in] Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
+in Contrassegna l'inizio di un intervallo contiguo di identificatori di controllo.
 
 *idLast*<br/>
-[in] Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
+in Contrassegna la fine di un intervallo contiguo di identificatori di controllo.
 
 *func*<br/>
-[in] Il nome della funzione di gestore di messaggi.
+in Nome della funzione del gestore di messaggi.
 
 ## <a name="see-also"></a>Vedere anche
 

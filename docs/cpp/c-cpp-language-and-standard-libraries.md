@@ -1,28 +1,78 @@
 ---
-title: Linguaggio C/C++ e librerie standard
-ms.date: 11/04/2016
+title: Riferimenti alleC++ librerie C/Language e standard
+ms.date: 08/13/2019
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: d425d142b52b7d7a86e84a1dbbd648673223165a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: c8a954702f8624537b110aa7e303fcb610387f57
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708015"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498777"
 ---
-# <a name="cc-language-and-standard-libraries"></a>Linguaggio C/C++ e librerie standard
+# <a name="cc-language-and-standard-libraries-reference"></a>Riferimenti alleC++ librerie C/Language e standard
 
-Questa sezione della documentazione include indicazioni e contenuto di riferimento per l'implementazione Microsoft degli standard ISO per C e C++.
+Questa sezione della documentazione contiene contenuto di riferimento per l'implementazione Microsoft dello standard ISO C e C++ dei linguaggi. Il riferimento al linguaggio include la documentazione per il preprocessore, le funzioni intrinseche del compilatore e i linguaggi degli assembly supportati.
+
+Qui è disponibile anche la documentazione per la libreria di runtime C C++ , la libreria standard e diverse altre librerie disponibili con Microsoft C/C++ Compiler (MSVC).
+
+## <a name="language-reference"></a>Riferimenti per il linguaggio
+
+[Linguaggio C](../c-language/c-language-reference.md)\
+Informazioni di riferimento per l'implementazione Microsoft del linguaggio C.
+
+[C++linguaggio](../cpp/cpp-language-reference.md)\
+Contenuto di riferimento per l'implementazione Microsoft del C++ linguaggio.
+
+[C/C++ preprocessore](../preprocessor/c-cpp-preprocessor-reference.md)\
+Contenuto di riferimento per il preprocessore utilizzato da C C++e.
+
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
+Vengono descritte le funzioni intrinseche disponibili in Microsoft C C++ e per le architetture x86, ARM, arm64 e x64.
+
+[Assembler inline](../assembler/inline/inline-assembler.md)\
+Viene illustrato come usare l'assembler inline di Visual C/C++ con i processori x86.
+
+[Riferimento all'assembler ARM](../assembler/arm/arm-assembler-reference.md)\
+Fornisce materiale di riferimento per l'assembler ARM Microsoft e gli strumenti correlati.
+
+[Guida di riferimento a Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)\
+Fornisce materiale di riferimento per Microsoft Macro Assembler (MASM).
+
+## <a name="libraries-reference"></a>Riferimento alle librerie
+
+### <a name="standard-libraries"></a>Librerie standard
+
+[Libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)\
+Riferimento per l'implementazione Microsoft della libreria di runtime C (CRT), a volte definita CRT universale.
+
+[C++libreria standard](../standard-library/cpp-standard-library-reference.md)\
+Riferimento per l'implementazione Microsoft della libreria C++ standard.
+
+### <a name="libraries-for-windows-applications"></a>Librerie per applicazioni Windows
+
+[MFC/ATL](../mfc/mfc-and-atl.md)\
+Documentazione per le librerie di classi Microsoft Foundation Classes (MFC) e Active Template Library (ATL).
+
+### <a name="additional-libraries"></a>Librerie aggiuntive
+
+[C++AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)\
+Classi che consentono l'utilizzo di processori grafici moderni per la programmazione per utilizzo generico.
+
+[Runtime di concorrenza](../parallel/concrt/concurrency-runtime.md)\
+Classi che semplificano la scrittura di programmi che usano il parallelismo dei dati o il parallelismo delle attività.
+
+[OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)\
+Informazioni di riferimento per l'implementazione Microsoft dell'API OpenMP.
+
+[Libreria SafeInt](../safeint/safeint-library.md)\
+Libreria portabile che può essere usata con MSVC, GCC o Clang per prevenire gli overflow di Integer.
+
+[Librerie di accesso ai dati](../data/data-access-in-cpp.md) Librerie per supportare l'accesso ai dati tramite ATL o MFC e servizi legacy come OLE DB e ODBC.
 
 ## <a name="related-articles"></a>Articoli correlati
 
-|Titolo|Description|
-|-----------|-----------------|
-|[Bentornati a C++](../cpp/welcome-back-to-cpp-modern-cpp.md)|Descrive i linguaggi di programmazione C++ moderni e le procedure consigliate.|
-|[Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)|Informazioni di riferimento relative ai linguaggi C++.|
-|[Libreria standard C++](../standard-library/cpp-standard-library-reference.md)|Informazioni di riferimento per l'implementazione Microsoft della libreria standard di C++.|
-|[Riferimenti per il linguaggio C](../c-language/c-language-reference.md)|Informazioni di riferimento per l'implementazione Microsoft del linguaggio C.|
-|[Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)|Informazioni di riferimento per l'implementazione Microsoft del runtime C (CRT).|
-|[Libreria SafeInt](../safeint/safeint-library.md)|Informazioni di riferimento per una libreria portabile di funzioni che gestiscono i valori integer senza il rischio di overflow.|
-|[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Descrive le funzionalità principali di C++ in Visual Studio e i collegamenti al resto della documentazione di Visual Studio C++.|
-|[Panoramica dello sviluppo con C++ in Visual Studio](../overview/overview-of-cpp-development.md)|Collegamenti ad altri articoli che contengono informazioni su come usare Visual Studio e i relativi strumenti per creare, compilare e distribuire app C++.|
-|[Novità di Visual C++](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Descrive le nuove funzionalità e i miglioramenti in questa versione.|
+[Windows Runtime (WinRT) conC++](/windows/uwp/cpp-and-winrt-apis/index)\
+C++/WinRT è una proiezione del linguaggio C++ 17 completamente standard per le API Windows Runtime (WinRT), implementata come libreria basata su file di intestazione.
+
+[Libreria C++ di modelli Windows Runtime (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)\
+Una libreria di modelli legacy per il Windows Runtime, sostituita da C++/WinRT.

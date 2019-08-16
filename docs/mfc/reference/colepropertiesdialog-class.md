@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: bdae64ff4a7bcfef761eaf3dd70a85a54efc28b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: b819bc430868717a2df01a086b482dfe6d56cc0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916965"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504172"
 ---
 # <a name="colepropertiesdialog-class"></a>Classe COlePropertiesDialog
 
@@ -49,14 +49,14 @@ class COlePropertiesDialog : public COleDialog
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COlePropertiesDialog::D oModal](#domodal)|Visualizza la finestra di dialogo e consente all'utente di effettuare una selezione.|
 |[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Chiamata eseguita dal framework quando il ridimensionamento dell'elemento del documento è stato modificato.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[COlePropertiesDialog:: m_gp](#m_gp)|Struttura utilizzata per inizializzare la pagina "generale" di un `COlePropertiesDialog` oggetto.|
 |[COlePropertiesDialog::m_lp](#m_lp)|Struttura utilizzata per inizializzare la pagina "collegamento" di un `COlePropertiesDialog` oggetto.|
@@ -152,11 +152,11 @@ virtual INT_PTR DoModal();
 
 IDOK o IDCANCEL in caso di esito positivo; in caso contrario, 0. IDOK e IDCANCEL sono costanti che indicano se l'utente ha selezionato il pulsante OK o Annulla.
 
-Se viene restituito IDCANCEL, è possibile chiamare la funzione [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) di Windows per determinare se si è verificato un errore.
+Se viene restituito IDCANCEL, è possibile chiamare la funzione [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) di Windows per determinare se si è verificato un errore.
 
 ##  <a name="m_gp"></a>COlePropertiesDialog:: m_gp
 
-Struttura di tipo [OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa), utilizzata per inizializzare la pagina generale della finestra di dialogo Proprietà oggetto OLE.
+Struttura di tipo [OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw), utilizzata per inizializzare la pagina generale della finestra di dialogo Proprietà oggetto OLE.
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -170,7 +170,7 @@ Per ulteriori informazioni sulla `OLEUIGNRLPROPS` struttura, vedere la Windows S
 
 ##  <a name="m_lp"></a>COlePropertiesDialog:: m_lp
 
-Struttura di tipo [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa), utilizzata per inizializzare la pagina di collegamento della finestra di dialogo Proprietà oggetto OLE.
+Struttura di tipo [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw), utilizzata per inizializzare la pagina di collegamento della finestra di dialogo Proprietà oggetto OLE.
 
 ```
 OLEUILINKPROPS m_lp;
@@ -184,7 +184,7 @@ Per ulteriori informazioni sulla `OLEUILINKPROPS` struttura, vedere la Windows S
 
 ##  <a name="m_op"></a>COlePropertiesDialog:: m_Op
 
-Struttura di tipo [OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa), utilizzata per inizializzare la finestra di dialogo Proprietà oggetto OLE comune.
+Struttura di tipo [OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw), utilizzata per inizializzare la finestra di dialogo Proprietà oggetto OLE comune.
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -194,11 +194,11 @@ OLEUIOBJECTPROPS m_op;
 
 Questa struttura contiene membri utilizzati per inizializzare le pagine generale, collegamento e visualizzazione.
 
-Per ulteriori informazioni, vedere le strutture OLEUIOBJECTPROPS e [OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) nel Windows SDK.
+Per ulteriori informazioni, vedere le strutture OLEUIOBJECTPROPS e [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw) nel Windows SDK.
 
 ##  <a name="m_psh"></a>COlePropertiesDialog:: m_psh
 
-Struttura di tipo [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2), i cui membri archiviano le caratteristiche dell'oggetto finestra di dialogo.
+Struttura di tipo [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2), i cui membri archiviano le caratteristiche dell'oggetto finestra di dialogo.
 
 ```
 PROPSHEETHEADER m_psh;
@@ -214,7 +214,7 @@ Per ulteriori informazioni sulla `PROPSHEETHEADER` struttura, vedere la Windows 
 
 ##  <a name="m_vp"></a>COlePropertiesDialog:: m_vp
 
-Struttura di tipo [OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa), utilizzata per inizializzare la pagina di visualizzazione della finestra di dialogo Proprietà oggetto OLE.
+Struttura di tipo [OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw), utilizzata per inizializzare la pagina di visualizzazione della finestra di dialogo Proprietà oggetto OLE.
 
 ```
 OLEUIVIEWPROPS m_vp;

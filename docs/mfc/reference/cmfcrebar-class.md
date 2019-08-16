@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866183"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505447"
 ---
 # <a name="cmfcrebar-class"></a>Classe CMFCReBar
 
@@ -49,7 +49,7 @@ class CMFCReBar : public CPane
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMFCReBar::AddBar](#addbar)|Aggiunge una banda a un controllo Rebar.|
 |[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|Esegue l'override di [CBasePane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).|
@@ -120,7 +120,7 @@ in Specifica il testo da visualizzare nel controllo Rebar. Il testo non fa parte
 [in, out] Specifica la bitmap da visualizzare sullo sfondo del controllo Rebar.
 
 *dwStyle*<br/>
-in Contiene lo stile da applicare alla banda. Per un elenco completo degli stili delle bande, vedere la descrizione `fStyle` di nella struttura [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) nella documentazione di Windows SDK.
+in Contiene lo stile da applicare alla banda. Per un elenco completo degli stili delle bande, vedere la descrizione `fStyle` di nella struttura [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) nella documentazione di Windows SDK.
 
 *clrFore*<br/>
 in Rappresenta il colore di primo piano del controllo Rebar.
@@ -150,7 +150,7 @@ BOOL Create(
 [in, out] Puntatore alla finestra padre di questo controllo Rebar.
 
 *dwCtrlStyle*<br/>
-in Specifica lo stile per il controllo Rebar. Il valore di stile predefinito è **RBS_BANDBORDERS**, che visualizza le linee strette per separare le bande adiacenti sul controllo Rebar. Per un elenco di stili validi, vedere [stili di controllo Rebar](/windows/desktop/Controls/rebar-control-styles) nella documentazione di Windows SDK.
+in Specifica lo stile per il controllo Rebar. Il valore di stile predefinito è **RBS_BANDBORDERS**, che visualizza le linee strette per separare le bande adiacenti sul controllo Rebar. Per un elenco di stili validi, vedere [stili di controllo Rebar](/windows/win32/Controls/rebar-control-styles) nella documentazione di Windows SDK.
 
 *dwStyle*<br/>
 in Stile della finestra del controllo Rebar. Per un elenco di stili validi, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).

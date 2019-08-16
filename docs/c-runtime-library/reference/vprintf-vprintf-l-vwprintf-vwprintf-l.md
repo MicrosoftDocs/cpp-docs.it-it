@@ -34,14 +34,14 @@ helpviewer_keywords:
 - _vtprintf_l function
 - formatted text [C++]
 ms.assetid: 44549505-00a0-4fa7-9a85-f2e666f55a38
-ms.openlocfilehash: 18684484db33faffc581f30e39ef42e5356b71ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db984b822e8b496d63bf7844882676581562930d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364675"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499123"
 ---
-# <a name="vprintf-vprintfl-vwprintf-vwprintfl"></a>vprintf, _vprintf_l, vwprintf, _vwprintf_l
+# <a name="vprintf-_vprintf_l-vwprintf-_vwprintf_l"></a>vprintf, _vprintf_l, vwprintf, _vwprintf_l
 
 Scrive l'output formattato tramite un puntatore a un elenco di argomenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [vprintf_s, _vprintf_s_l, vwprintf_s, _vwprintf_s_l](vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md).
 
@@ -83,7 +83,7 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 ## <a name="return-value"></a>Valore restituito
 
-**vprintf** e **vwprintf** restituiscono il numero di caratteri scritti, escludendo il carattere null di terminazione o un valore negativo se si verifica un errore di output. Se *formato* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
+**vprintf** e **vwprintf** restituiscono il numero di caratteri scritti, escluso il carattere null di terminazione, o un valore negativo se si verifica un errore di output. Se *Format* è un puntatore null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -91,12 +91,12 @@ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _
 
 Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati in **stdout**.
 
-**vwprintf** è la versione a caratteri wide di **vprintf**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vprintf** attualmente non supporta output in un flusso UNICODE.
+**vwprintf** è la versione a caratteri wide di **vprintf**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vprintf** attualmente non supporta l'output in un flusso Unicode.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns). Si noti che le stringhe di formato non valide vengono rilevate e generano un errore.
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns). Si noti che le stringhe di formato non valide vengono rilevate e generano un errore.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -114,7 +114,7 @@ Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione
 
 \* Richiesto per la compatibilità con UNIX V.
 
-La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

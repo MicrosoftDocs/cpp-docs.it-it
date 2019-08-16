@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 68b4aaef06e40a8ec7b00f9ba744d83ce3388da2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707092"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492376"
 ---
 # <a name="example-implementing-a-property-page"></a>Esempio: Implementazione di una pagina delle proprietà
 
@@ -71,7 +71,7 @@ Ora che è stata generata la pagina delle proprietà, è necessario aggiungere a
 Questi controlli verranno usati per visualizzare il nome file del documento e il relativo stato di sola lettura.
 
 > [!NOTE]
->  La risorsa finestra di dialogo non include un frame o comandi di pulsanti, né ha l'aspetto a schede che ci si potrebbe aspettare. Queste funzionalità vengono fornite da una finestra della pagina delle proprietà, ad esempio quella creata chiamando [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).
+>  La risorsa finestra di dialogo non include un frame o comandi di pulsanti, né ha l'aspetto a schede che ci si potrebbe aspettare. Queste funzionalità vengono fornite da una finestra della pagina delle proprietà, ad esempio quella creata chiamando [OleCreatePropertyFrame](/windows/win32/api/olectl/nf-olectl-olecreatepropertyframe).
 
 ##  <a name="vcconadding_message_handlers"></a> Aggiunta di gestori di messaggi
 

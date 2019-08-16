@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003e5fd88bdfaafff539c5c993a99cd9ecca0b82
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223081"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500813"
 ---
-# <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
+# <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
 Restituisce un puntatore alla prima occorrenza di una stringa di ricerca in una stringa.
 
@@ -127,18 +127,18 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla prima occorrenza di *strSearch* nelle *str*, o NULL se *strSearch* non viene visualizzato nella *str*. Se *strSearch* punta a una stringa di lunghezza zero, la funzione restituisce *str*.
+Restituisce un puntatore alla prima occorrenza di *strSearch* in *Str*oppure null se *strSearch* non viene visualizzato in *STR*. Se *strSearch* punta a una stringa di lunghezza zero, la funzione restituisce *Str*.
 
 ## <a name="remarks"></a>Note
 
-Il `strstr` funzione restituisce un puntatore alla prima occorrenza del *strSearch* nelle *str*. La ricerca non include i caratteri Null di terminazione. `wcsstr` è la versione a caratteri wide di `strstr` e `_mbsstr` è la versione a caratteri multibyte. Gli argomenti e il valore restituito di `wcsstr` sono stringhe con caratteri wide, mentre quelli di `_mbsstr` sono stringhe con caratteri multibyte. `_mbsstr` convalida i propri parametri. Se *str* oppure *strSearch* è NULL, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, `_mbsstr` imposta `errno` EINVAL e viene restituito 0. `strstr` e `wcsstr` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
+La `strstr` funzione restituisce un puntatore alla prima occorrenza di *strSearch* in *STR*. La ricerca non include i caratteri Null di terminazione. `wcsstr` è la versione a caratteri wide di `strstr` e `_mbsstr` è la versione a caratteri multibyte. Gli argomenti e il valore restituito di `wcsstr` sono stringhe con caratteri wide, mentre quelli di `_mbsstr` sono stringhe con caratteri multibyte. `_mbsstr` convalida i propri parametri. Se *Str* o *strSearch* è null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, `_mbsstr` imposta `errno` su EINVAL e restituisce 0. `strstr` e `wcsstr` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 > [!IMPORTANT]
-> Queste funzioni potrebbero causare una minaccia da un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer possono essere utilizzati per attaccare un sistema perché possono consentire l'esecuzione di codice arbitrario che può causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Queste funzioni potrebbero causare una minaccia da un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer possono essere utilizzati per attaccare un sistema perché possono consentire l'esecuzione di codice arbitrario che può causare un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non - **const**. La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi C++ gli overload, definire il simbolo CONST_RETURN.
+In C queste funzioni accettano un puntatore **const** per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **const** restituisce un puntatorea const; la versione che accetta un puntatore a un oggetto non const restituisce un puntatore a un oggetto non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS viene definita se sono disponibili entrambe le versioni const e non**const** di queste funzioni. Se è necessario il comportamento non**const** per entrambi C++ gli overload, definire il simbolo _CONST_RETURN.
 
-Il valore di output è interessato dall'impostazione della categoria di impostazioni locali di LC_CTYPE; per altre informazioni, vedere [setlocale, wsetlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno le **l** suffisso usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; le versioni che hanno il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è interessato dall'impostazione della categoria locale di LC_CTYPE; Per ulteriori informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno il suffisso **suffisso** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; le versioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

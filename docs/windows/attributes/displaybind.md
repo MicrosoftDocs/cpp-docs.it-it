@@ -1,17 +1,17 @@
 ---
-title: displaybind (attributo COM C++)
+title: displaybind (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.displaybind
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: b16e809781170d0c5dfe301e6dd73e6a27046835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 168db224e7b15656308259f9507e1079744f1a73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409694"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490883"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -25,11 +25,11 @@ Indica una proprietà che deve essere visualizzata all'utente come associabile.
 
 ## <a name="remarks"></a>Note
 
-Il **displaybind** attributi di C++ ha la stessa funzionalità come la [displaybind](/windows/desktop/Midl/displaybind) attributo MIDL.
+L'attributo **displaybind** C++ ha la stessa funzionalità dell'attributo MIDL di [displaybind](/windows/win32/Midl/displaybind) .
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usare **displaybind**.
+Vedere l'esempio per [associabile](bindable.md) per un esempio di come usare **displaybind**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -40,7 +40,7 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usar
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

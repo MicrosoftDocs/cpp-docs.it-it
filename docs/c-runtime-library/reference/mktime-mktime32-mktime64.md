@@ -31,14 +31,14 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: 8e9524249d6c90323bdcfc0b92ecf2dad281c79b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c45b69f84a0aec159ed59a480e9358f27c8e85e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156486"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500999"
 ---
-# <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
+# <a name="mktime-_mktime32-_mktime64"></a>mktime, _mktime32, _mktime64
 
 Converte l'ora locale in un valore di calendario.
 
@@ -63,19 +63,19 @@ Puntatore alla struttura temporale. Vedere [asctime](asctime-wasctime.md).
 
 ## <a name="return-value"></a>Valore restituito
 
-**_mktime32** restituisce l'ora di calendario specificata codificata come valore di tipo [time_t](../../c-runtime-library/standard-types.md). Se *timeptr* fa riferimento a una data precedente alla mezzanotte del 1 gennaio 1970, oppure se non è possibile rappresentare l'ora di calendario, **_mktime32** restituisce -1 eseguire il cast al tipo **time_t**. Quando si usa **_mktime32** e, se *timeptr* fa riferimento a una data successiva: 23.59.59 del 18 gennaio 2038, Coordinated Universal Time (UTC), verrà restituito -1 eseguire il cast al tipo **time_t**.
+**_mktime32** restituisce l'ora di calendario specificata codificata come valore di tipo [time_t](../../c-runtime-library/standard-types.md). Se *timeptr* fa riferimento a una data precedente alla mezzanotte del 1 ° gennaio 1970 o se non è possibile rappresentare l'ora del calendario, **_mktime32** restituisce il cast-1 al tipo **time_t**. Quando si usa **_mktime32** e se *timeptr* fa riferimento a una data successiva 23:59:59 del 18 gennaio 2038, ora UTC (Coordinated Universal Time), verrà restituito il cast di-1 al tipo **time_t**.
 
-**_mktime64** restituirà -1 eseguire il cast al tipo **__time64_t** se *timeptr* fa riferimento a una data successiva alle 23:59:59, 31 dicembre 3000, UTC.
+**_mktime64** restituirà-1 con cast al tipo **__time64_t** se *timeptr* fa riferimento a una data successiva 23:59:59, 31 dicembre 3000, UTC.
 
 ## <a name="remarks"></a>Note
 
-Il **mktime**, **_mktime32** e **_mktime64** funzioni convertono la struttura temporale fornita (possibilmente incompleta) a cui punta *timeptr*in una struttura completamente definita con valori normalizzati, quindi la converte in un **time_t** valore ora di calendario. L'ora convertita ha la stessa codifica usata per i valori restituiti dalla funzione [time](time-time32-time64.md). I valori originali del **tm_wday** e **tm_yday** componenti del *timeptr* struttura vengono ignorati e i valori originali degli altri componenti non sono limitati ai relativi intervalli normali.
+Le funzioni **mktime**, **_mktime32** e **_mktime64** convertono la struttura temporale fornita (probabilmente incompleta) a cui punta *timeptr* in una struttura completamente definita con valori normalizzati, quindi la converte in un **time_t** valore dell'ora del calendario. L'ora convertita ha la stessa codifica usata per i valori restituiti dalla funzione [time](time-time32-time64.md). I valori originali dei componenti **tm_wday** e **tm_yday** della struttura *timeptr* vengono ignorati e i valori originali degli altri componenti non sono limitati ai relativi intervalli normali.
 
-**mktime** è una funzione inline equivalente a **_mktime64**, a meno che non **_USE_32BIT_TIME_T** è definito, nel qual caso è equivalente a **_mktime32** .
+**mktime** è una funzione inline equivalente a **_mktime64**, a meno che non sia stato definito **_USE_32BIT_TIME_T** , nel qual caso è equivalente a **_mktime32**.
 
-Dopo una regolazione dell'ora UTC, **_mktime32** gestisce le date dalla mezzanotte del 1 gennaio 1970 alle: 23.59.59 del 18 gennaio 2038, UTC. **_mktime64** gestisce le date dalla mezzanotte del 1 ° gennaio 1970 e 23:59:59, 31 dicembre 3000. Questa regolazione può, queste funzioni restituiscono -1 (eseguire il cast **time_t**, **__time32_t** oppure **__time64_t**) anche se la data specificata si trova nell'intervallo. Ad esempio, se ci si trova a Il Cairo, Egitto, che è due ore avanti rispetto a UTC, verranno innanzitutto sottratte due ore dalla data specificata in *timeptr*. Ciò potrebbe causare l'uscita della data specificata dall'intervallo consentito.
+Dopo la regolazione dell'ora UTC, **_mktime32** gestisce le date dalla mezzanotte del 1 gennaio 1970 al 23:59:59 del 18 gennaio 2038, ora UTC. **_mktime64** gestisce le date dalla mezzanotte del 1 gennaio 1970 al 23:59:59, 31 dicembre 3000. Questa modifica può causare la restituzione di queste funzioni-1 (cast a **time_t**, **__time32_t** o **__time64_t**) anche se la data specificata rientra nell'intervallo. Ad esempio, se ci si trova a Il Cairo, Egitto, che è due ore avanti rispetto a UTC, verranno innanzitutto sottratte due ore dalla data specificata in *timeptr*. Ciò potrebbe causare l'uscita della data specificata dall'intervallo consentito.
 
-Queste funzioni possono essere usate per convalidare e compilare una struttura tm. Se ha esito positivo, queste funzioni impostano i valori della **tm_wday** e **tm_yday** come appropriato e impostano gli altri componenti per rappresentare l'ora di calendario specificata, ma con i relativi valori forzato alla normale intervalli. Il valore finale della **tm_mday** non è impostata fino **tm_mon** e **tm_year** sono determinate. Quando si specifica un **tm** struttura temporale, impostare il **tm_isdst** campo:
+Queste funzioni possono essere usate per convalidare e compilare una struttura tm. In caso di esito positivo, queste funzioni impostano i valori di **tm_wday** e **tm_yday** come appropriato e impostano gli altri componenti in modo da rappresentare la data di calendario specificata, ma con i relativi valori forzati negli intervalli normali. Il valore finale di **tm_mday** non viene impostato fino a quando non vengono determinati **tm_mon** e **tm_year** . Quando si specifica un'ora di struttura **TM** , impostare il campo **tm_isdst** su:
 
 - Zero (0) per indicare che è attiva l'ora solare.
 
@@ -83,11 +83,11 @@ Queste funzioni possono essere usate per convalidare e compilare una struttura t
 
 - Un valore minore di zero per fare in modo che il codice della libreria di runtime del linguaggio C calcoli se è attiva l'ora legale o l'ora solare.
 
-La libreria di runtime C determinerà le impostazioni relative al comportamento dell'ora legale in base alla variabile di ambiente [TZ](tzset.md). Se **TZ** non è impostata, la chiamata API Win32 [GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) viene usato per ottenere informazioni sull'ora dell'ora legale dal sistema operativo. Se anche questo metodo non riesce, la libreria presupporrà l'uso delle regole relative agli Stati Uniti per implementare il calcolo dell'ora legale. **tm_isdst** è un campo obbligatorio. Se non impostato, il relativo valore resta non definito e il valore restituito da queste funzioni è imprevedibile. Se *timeptr* punta a un **tm** struttura restituita da una precedente chiamata a [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), o [localtime](localtime-localtime32-localtime64.md) (o varianti di queste funzioni), il **tm_isdst** campo contiene il valore corretto.
+La libreria di runtime C determinerà le impostazioni relative al comportamento dell'ora legale in base alla variabile di ambiente [TZ](tzset.md). Se **TZ** non è impostato, viene usata la chiamata API Win32 [GetTimeZoneInformation](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) per ottenere le informazioni sull'ora legale dal sistema operativo. Se anche questo metodo non riesce, la libreria presupporrà l'uso delle regole relative agli Stati Uniti per implementare il calcolo dell'ora legale. **tm_isdst** è un campo obbligatorio. Se non impostato, il relativo valore resta non definito e il valore restituito da queste funzioni è imprevedibile. Se *timeptr* punta a una struttura **TM** restituita da una precedente chiamata [a asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)o [localtime](localtime-localtime32-localtime64.md) (o varianti di queste funzioni), il campo **tm_isdst** contiene il valore corretto.
 
-Si noti che **gmtime** e **localtime** (e **_gmtime32**, **_gmtime64**, **_localtime32**, e **_localtime64**) usano un singolo buffer per ogni thread per la conversione. Se si fornisce questo buffer a **mktime**, **_mktime32** oppure **_mktime64**, i contenuti precedenti verranno eliminati.
+Si noti che **gmtime** e **localtime** ( **e _gmtime32**, **_gmtime64**, **_localtime32**e **_localtime64**) usano un singolo buffer per thread per la conversione. Se si fornisce questo buffer a **mktime**, **_mktime32** o **_mktime64**, il contenuto precedente viene eliminato definitivamente.
 
-Queste funzioni convalidano il proprio parametro. Se *timeptr* è un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
+Queste funzioni convalidano il proprio parametro. Se *timeptr* è un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

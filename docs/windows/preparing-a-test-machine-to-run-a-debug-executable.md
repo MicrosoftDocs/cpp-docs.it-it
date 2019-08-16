@@ -4,12 +4,12 @@ ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ae751b1632473fa316c7965bc751e91b782a89ea
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552335"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513671"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparazione di un computer per il test per l'esecuzione di un file eseguibile di debug
 
@@ -25,7 +25,7 @@ Per preparare un computer per il test della versione di debug di un'applicazione
 - Usare la distribuzione locale per installare una versione di debug di una determinata DLL di Visual C++ nella directory di installazione dell'applicazione usando i file inclusi nella directory Programmi o Programmi (x86) in \Microsoft Visual Studio \<versione>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Per il debug remoto dell'applicazione compilata con Visual Studio 2005 o Visual Studio 2008 in un altro computer, è necessario distribuire le versioni di debug dell'oggetto visivo C++ libreria DLL come assembly side-by-side condivisi. È possibile utilizzare un progetto di installazione o Windows Installer per installare i modelli unione corrispondenti.
+    >  Per il debug remoto dell'applicazione compilata con Visual Studio 2005 o Visual Studio 2008 in un altro computer, è necessario distribuire le versioni di C++ debug delle dll della libreria visiva come assembly side-by-side condivisi. È possibile utilizzare un progetto di installazione o Windows Installer per installare i modelli unione corrispondenti.
 
 - Usare l'opzione **Distribuisci** nella finestra di dialogo **Gestione configurazione** in Visual Studio per copiare l'output del progetto e altri file nel computer remoto.
 
@@ -34,6 +34,6 @@ Dopo aver installato le DDL di Visual C++, è possibile eseguire un debugger rem
 ## <a name="see-also"></a>Vedere anche
 
 [Distribuzione in Visual C++](deployment-in-visual-cpp.md)<br>
-[Windows Installer Command line options](/windows/desktop/Msi/command-line-options) (Opzioni della riga di comando di Windows Installer)<br>
+[Windows Installer Command line options](/windows/win32/Msi/command-line-options) (Opzioni della riga di comando di Windows Installer)<br>
 [Esempi di distribuzione](deployment-examples.md)<br>
 [Remote Debugging](/visualstudio/debugger/remote-debugging)

@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365351"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499320"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
 Scrive l'output formattato nella console tramite un puntatore a un elenco di argomenti. Queste versioni di [_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -97,16 +97,16 @@ Per altre informazioni, vedere [Sintassi per la specifica del formato: funzioni 
 
 Numero di caratteri scritti o un valore negativo se si verifica un errore di output.
 
-Come le versioni meno sicure di queste funzioni, se *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Inoltre, a differenza delle versioni meno sicure di queste funzioni, se *formato* non specifica un formato valido, viene generata un'eccezione di parametro non valido. Se l'esecuzione può continuare, queste funzioni restituiscono un codice di errore e impostano **errno** a tale codice di errore. Il codice di errore predefinito è **EINVAL** se non si applica un valore più specifico.
+Analogamente alle versioni meno sicure di queste funzioni, se *Format* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Inoltre, a differenza delle versioni meno sicure di queste funzioni, se *Format* non specifica un formato valido, viene generata un'eccezione di parametro non valido. Se l'esecuzione può continuare, queste funzioni restituiscono un codice di errore e impostano **errno** su tale codice di errore. Il codice di errore predefinito è **EINVAL** se non si applica un valore più specifico.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nella console. **vcwprintf_s** è la versione a caratteri wide di **vcprintf_s**. Accetta una stringa di caratteri wide come argomento.
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nella console. **_vcwprintf_s** è la versione a caratteri wide di **_vcprintf_s**. Accetta una stringa di caratteri wide come argomento.
 
-Le versioni di queste funzioni che hanno le **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passate anziché quelle correnti.
+Le versioni di queste funzioni che hanno il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -2,12 +2,12 @@
 title: Programmazione Web e cloud in Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.openlocfilehash: 3f4786d8b17aed2d7faeddf1e2c32a825fd8d0e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65790366"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498861"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programmazione Web e cloud in Visual C++
 
@@ -48,11 +48,11 @@ In C++, esistono diverse opzioni per la connessione al Web e al cloud.
 
   Classe client HTTP di Windows Runtime modellata sulla classe .NET Framework con lo stesso nome nello spazio dei nomi System.Web. `HttpClient` supporta completamente il caricamento e il download asincrono su HTTP e i filtri pipeline, che permettono l'inserimento di gestori HTTP personalizzati nella pipeline. Windows SDK include filtri di esempio per reti a consumo, autenticazione OAuth e altro ancora. Per le app destinate solo alla piattaforma UWP (Universal Windows Platform) è consigliabile usare la classe `Windows::Web:HttpClient`.
 
-- [Interfaccia IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
+- [Interfaccia IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
   Fornisce un'interfaccia COM nativa che è possibile usare in app di Windows Runtime o app desktop di Windows per connettersi a Internet su HTTP ed eseguire GET, PUT e altri comandi HTTP. Per altre informazioni, vedere [Procedura dettagliata: Connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [Internet di Windows (WinInet)](/windows/desktop/WinInet/portal)
+- [Internet di Windows (WinInet)](/windows/win32/WinInet/portal)
 
   API Windows che è possibile usare in app desktop di Windows per connettersi a Internet.
 

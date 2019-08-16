@@ -35,14 +35,14 @@ helpviewer_keywords:
 - _vfprintf_l function
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
-ms.openlocfilehash: 889fedde263b9815597702f1e9d5b252f3998bdd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18ba244bceb2deaf5ada78ae85aa8cab7058d51b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364896"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499216"
 ---
-# <a name="vfprintf-vfprintfl-vfwprintf-vfwprintfl"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
+# <a name="vfprintf-_vfprintf_l-vfwprintf-_vfwprintf_l"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 
 Scrivere l'output formattato mediante un puntatore a un elenco di argomenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md).
 
@@ -91,20 +91,20 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 ## <a name="return-value"></a>Valore restituito
 
-**vfprintf** e **vfwprintf** restituiscono il numero di caratteri scritti, escludendo il carattere null di terminazione o un valore negativo se si verifica un errore di output. Se uno dei due *stream* oppure *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
+**vfprintf** e **vfwprintf** restituiscono il numero di caratteri scritti, escluso il carattere null di terminazione, o un valore negativo se si verifica un errore di output. Se il *flusso* o il *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati in *flusso*.
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nel *flusso*.
 
-**vfwprintf** è la versione a caratteri wide di **vfprintf**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vfprintf** attualmente non supporta output in un flusso UNICODE.
+**vfwprintf** è la versione a caratteri wide di **vfprintf**; le due funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vfprintf** attualmente non supporta l'output in un flusso Unicode.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

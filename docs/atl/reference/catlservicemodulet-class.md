@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915861"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497729"
 ---
 # <a name="catlservicemodulet-class"></a>Classe funzione CAtlServiceModuleT
 
@@ -74,7 +74,7 @@ Identificatore di risorsa del servizio.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[Funzione CAtlServiceModuleT:: handler](#handler)|Routine del gestore per il servizio.|
 |[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Fornisce le impostazioni di sicurezza predefinite per il servizio.|
@@ -101,7 +101,7 @@ Identificatore di risorsa del servizio.
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|DESCRIZIONE|
+|NOME|Descrizione|
 |----------|-----------------|
 |[Funzione CAtlServiceModuleT:: m_bService](#m_bservice)|Flag che indica che il programma è in esecuzione come servizio.|
 |[Funzione CAtlServiceModuleT:: m_dwThreadID](#m_dwthreadid)|Variabile membro che archivia l'identificatore del thread.|
@@ -244,7 +244,7 @@ Stringhe aggiuntive facoltative da scrivere nel registro eventi.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo scrive i dettagli in un log eventi, usando la funzione [ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa). Se non è in esecuzione alcun servizio, la stringa viene inviata alla console.
+Questo metodo scrive i dettagli in un log eventi, usando la funzione [ReportEvent](/windows/win32/api/winbase/nf-winbase-reporteventw). Se non è in esecuzione alcun servizio, la stringa viene inviata alla console.
 
 ##  <a name="m_bservice"></a>Funzione CAtlServiceModuleT:: m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>Note
 
-La struttura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) contiene informazioni su un servizio.
+La struttura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) contiene informazioni su un servizio.
 
 ##  <a name="m_status"></a>Funzione CAtlServiceModuleT:: m_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>Note
 
-La struttura [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) contiene informazioni su un servizio.
+La struttura [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) contiene informazioni su un servizio.
 
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parametri
 
 *nShowCmd*<br/>
-Specifica come deve essere visualizzata la finestra. Questo parametro può essere uno dei valori descritti nella sezione [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) . Il valore predefinito è SW_HIDE.
+Specifica come deve essere visualizzata la finestra. Questo parametro può essere uno dei valori descritti nella sezione [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . Il valore predefinito è SW_HIDE.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>Parametri
 
 *dwState*<br/>
-Nuovo stato. Per i valori possibili, vedere [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) .
+Nuovo stato. Per i valori possibili, vedere [SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) .
 
 ### <a name="remarks"></a>Note
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametri
 
 *nShowCmd*<br/>
-Specifica come deve essere visualizzata la finestra. Questo parametro può essere uno dei valori descritti nella sezione [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Specifica come deve essere visualizzata la finestra. Questo parametro può essere uno dei valori descritti nella sezione [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parametri
 
 *nShowCmd*<br/>
-Specifica come deve essere visualizzata la finestra. Questo parametro può essere uno dei valori descritti nella sezione [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Specifica come deve essere visualizzata la finestra. Questo parametro può essere uno dei valori descritti nella sezione [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Valore restituito
 

@@ -1,5 +1,5 @@
 ---
-title: CPen (classe)
+title: Classe CPen
 ms.date: 11/04/2016
 f1_keywords:
 - CPen
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-ms.openlocfilehash: 8510c29571e6a370c7948ebe49e53b2c22dbfb9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 952d270acd47b5834a06b731f7875ea2efdd4695
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372920"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502943"
 ---
-# <a name="cpen-class"></a>CPen (classe)
+# <a name="cpen-class"></a>Classe CPen
 
 Incapsula una penna GDI (Graphics Device Interface) di Windows.
 
@@ -35,33 +35,33 @@ Incapsula una penna GDI (Graphics Device Interface) di Windows.
 class CPen : public CGdiObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CPen::CPen](#cpen)|Costruisce un oggetto `CPen`.|
+|[CPen:: CPen](#cpen)|Costruisce un oggetto `CPen`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CPen::CreatePen](#createpen)|Crea una penna cosmetica o geometrica logica con uno stile specificato, larghezza e gli attributi di pennello e lo collega al `CPen` oggetto.|
-|[CPen::CreatePenIndirect](#createpenindirect)|Crea un oggetto pen con stile di visualizzazione, spessore e il colore specificato in un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struttura e lo collega al `CPen` oggetto.|
-|[CPen::FromHandle](#fromhandle)|Restituisce un puntatore a un `CPen` dell'oggetto quando viene specificato un HPEN di Windows.|
-|[CPen::GetExtLogPen](#getextlogpen)|Ottiene un' [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) struttura sottostante.|
-|[CPen::GetLogPen](#getlogpen)|Ottiene un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struttura sottostante.|
+|[CPen::CreatePen](#createpen)|Crea una penna logica o geometrica con lo stile, la larghezza e gli attributi del pennello specificati e la associa all' `CPen` oggetto.|
+|[CPen::CreatePenIndirect](#createpenindirect)|Crea una penna con lo stile, la larghezza e il colore specificati in una struttura [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen) e lo associa all' `CPen` oggetto.|
+|[CPen:: FromHandle](#fromhandle)|Restituisce un puntatore a un `CPen` oggetto quando viene fornito un HPEN Windows.|
+|[CPen::GetExtLogPen](#getextlogpen)|Ottiene una struttura sottostante [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen) .|
+|[CPen::GetLogPen](#getlogpen)|Ottiene una struttura sottostante [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen) .|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CPen::operator HPEN](#operator_hpen)|Restituisce l'handle di Windows associato ai `CPen` oggetto.|
+|[CPen:: operator HPEN](#operator_hpen)|Restituisce l'handle di Windows collegato all' `CPen` oggetto.|
 
 ## <a name="remarks"></a>Note
 
-Per altre informazioni sull'uso `CPen`, vedere [degli oggetti grafici](../../mfc/graphic-objects.md).
+Per ulteriori informazioni sull'utilizzo `CPen`di, vedere [oggetti grafici](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -98,82 +98,82 @@ CPen(
 ### <a name="parameters"></a>Parametri
 
 *nPenStyle*<br/>
-Specifica lo stile di penna. Questo parametro nella prima versione del costruttore può essere uno dei valori seguenti:
+Specifica lo stile della penna. Questo parametro nella prima versione del costruttore può essere uno dei valori seguenti:
 
 - PS_SOLID crea una penna a tinta unita.
 
-- PS_DASH crea un oggetto pen tratteggiato. Valido solo quando la larghezza della penna è l'unità di 1 o meno, nel dispositivo.
+- PS_DASH crea una penna tratteggiata. Valido solo quando la larghezza della penna è almeno 1, in unità dispositivo.
 
-- PS_DOT crea un oggetto pen punteggiato. Valido solo quando la larghezza della penna è l'unità di 1 o meno, nel dispositivo.
+- PS_DOT crea una penna punteggiata. Valido solo quando la larghezza della penna è almeno 1, in unità dispositivo.
 
-- PS_DASHDOT crea un oggetto pen con alternanza di trattini e punti. Valido solo quando la larghezza della penna è l'unità di 1 o meno, nel dispositivo.
+- PS_DASHDOT crea una penna con trattini e puntini alternati. Valido solo quando la larghezza della penna è almeno 1, in unità dispositivo.
 
-- PS_DASHDOTDOT crea una penna con alternanza di trattini e punti double. Valido solo quando la larghezza della penna è l'unità di 1 o meno, nel dispositivo.
+- PS_DASHDOTDOT crea una penna con trattini alternati e punti doppi. Valido solo quando la larghezza della penna è almeno 1, in unità dispositivo.
 
-- PS_NULL crea un oggetto pen null.
+- PS_NULL crea una penna null.
 
-- PS_INSIDEFRAME crea una penna che disegna una linea all'interno del fotogramma di forme chiuse prodotte da GDI di Windows funzioni che specificano un rettangolo di delimitazione di output (ad esempio, il `Ellipse`, `Rectangle`, `RoundRect`, `Pie`e `Chord`le funzioni membro). Quando questo stile viene usato con funzioni di output GDI di Windows che non si specifica un rettangolo di delimitazione (ad esempio, il `LineTo` funzione membro), l'area di disegno della penna non è limitato da un frame.
+- PS_INSIDEFRAME crea una penna che disegna una linea all'interno del frame di forme chiuse generate dalle funzioni di output GDI di Windows che specificano un rettangolo di delimitazione `Ellipse`( `Rectangle`ad `RoundRect`esempio `Pie`,,, e `Chord`funzioni membro). Quando questo stile viene utilizzato con le funzioni di output GDI di Windows che non specificano un rettangolo di delimitazione ( `LineTo` ad esempio, la funzione membro), l'area di disegno della penna non è limitata da un frame.
 
-La seconda versione del `CPen` costruttore specifica una combinazione di tipo, stile, estremità di chiusura e gli attributi di join. I valori di ciascuna categoria devono essere combinati con l'operatore OR bit per bit (&#124;). Il tipo di penna può essere uno dei valori seguenti:
+La seconda versione del `CPen` costruttore specifica una combinazione di attributi di tipo, stile, estremità finale e join. I valori di ogni categoria devono essere combinati utilizzando l'operatore OR bit per&#124;bit (). Il tipo di penna può essere uno dei valori seguenti:
 
-- PS_GEOMETRIC crea un oggetto pen geometrico.
+- PS_GEOMETRIC crea una penna geometrica.
 
-- PS_COSMETIC crea un oggetto pen cosmetico.
+- PS_COSMETIC crea una penna cosmetica.
 
    La seconda versione del `CPen` costruttore aggiunge gli stili di penna seguenti per *nPenStyle*:
 
-- PS_ALTERNATE crea una penna che consente di impostare gli altri pixel. (Questo stile è applicabile solo per penne cosmetiche).
+- PS_ALTERNATE crea una penna che imposta ogni altro pixel. (Questo stile è applicabile solo per le penne cosmetiche).
 
-- PS_USERSTYLE crea una penna che usa una matrice di stile forniti dall'utente.
+- PS_USERSTYLE crea una penna che usa una matrice di stili fornita dall'utente.
 
-   L'estremità di chiusura può essere uno dei valori seguenti:
+   Il limite finale può essere uno dei valori seguenti:
 
-- Delimitatori finali PS_ENDCAP_ROUND sono arrotondati.
+- I tappi di fine PS_ENDCAP_ROUND sono arrotondati.
 
-- Delimitatori finali PS_ENDCAP_SQUARE sono quadrati.
+- I tappi finali PS_ENDCAP_SQUARE sono quadrati.
 
-- Delimitatori finali PS_ENDCAP_FLAT sono fissi.
+- I tappi finali PS_ENDCAP_FLAT sono Flat.
 
    Il join può essere uno dei valori seguenti:
 
-- Crea un join PS_JOIN_BEVEL sono un effetto tridimensionale.
+- I join PS_JOIN_BEVEL sono smussati.
 
-- Unisce PS_JOIN_MITER sono siano quando si trovano entro il limite corrente impostato tramite il [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) (funzione). Se il join supera questo limite, è in rilievo.
+- I join PS_JOIN_MITER sono sgolato quando sono all'interno del limite corrente impostato dalla funzione [SetMiterLimit](/windows/win32/api/wingdi/nf-wingdi-setmiterlimit) . Se il join supera questo limite, viene smussato.
 
-- Unisce PS_JOIN_ROUND sono arrotondati.
+- PS_JOIN_ROUND join sono arrotondati.
 
 *nWidth*<br/>
-Specifica lo spessore della penna.
+Specifica la larghezza della penna.
 
-- Per la prima versione del costruttore, se questo valore è 0, la larghezza in unità di dispositivo è sempre 1 pixel, indipendentemente dalla modalità di mapping.
+- Per la prima versione del costruttore, se questo valore è 0, la larghezza in unità dispositivo è sempre 1 pixel, indipendentemente dalla modalità di mapping.
 
-- Per la seconda versione del costruttore, se *nPenStyle* è PS_GEOMETRIC, la larghezza viene espresso in unità logiche. Se *nPenStyle* è PS_COSMETIC, la larghezza deve essere impostata su 1.
+- Per la seconda versione del costruttore, se *nPenStyle* è PS_GEOMETRIC, la larghezza viene specificata in unità logiche. Se *nPenStyle* è PS_COSMETIC, la larghezza deve essere impostata su 1.
 
 *crColor*<br/>
 Contiene un colore RGB per la penna.
 
 *pLogBrush*<br/>
-Punta a un `LOGBRUSH` struttura. Se *nPenStyle* è PS_COSMETIC, il *lbColor* membro del `LOGBRUSH` struttura specifica il colore della penna e la *lbStyle* membro del `LOGBRUSH` struttura deve essere impostata su BS_SOLID. Se *nPenStyle* è PS_GEOMETRIC, tutti i membri devono essere usati per specificare gli attributi di pennello della penna.
+Punta a una `LOGBRUSH` struttura. Se *nPenStyle* è PS_COSMETIC, il `LOGBRUSH` membro lbColor della struttura specifica il colore della penna `LOGBRUSH` e il membro *lbStyle* della struttura deve essere impostato su BS_SOLID. Se *nPenStyle* è PS_GEOMETRIC, tutti i membri devono essere utilizzati per specificare gli attributi pennello della penna.
 
 *nStyleCount*<br/>
-Specifica la lunghezza, in unità di Double Word del *lpStyle* matrice. Questo valore deve essere zero se *nPenStyle* non PS_USERSTYLE.
+Specifica la lunghezza, in unità parola doppia, della matrice *lpStyle* . Questo valore deve essere zero se *nPenStyle* non è PS_USERSTYLE.
 
 *lpStyle*<br/>
-Punta a una matrice di valori Double Word. Il primo valore specifica la lunghezza del trattino prima in uno stile definito dall'utente, il secondo valore specifica la lunghezza del primo spazio e così via. Puntatore ' this ' deve essere NULL se *nPenStyle* non PS_USERSTYLE.
+Punta a una matrice di valori parola doppia. Il primo valore specifica la lunghezza del primo trattino in uno stile definito dall'utente, il secondo valore specifica la lunghezza del primo spazio e così via. Il puntatore deve essere NULL se *nPenStyle* non è PS_USERSTYLE.
 
 ### <a name="remarks"></a>Note
 
-Se si usa il costruttore senza argomenti, è necessario inizializzare l'oggetto risultante `CPen` dell'oggetto con il `CreatePen`, `CreatePenIndirect`, o `CreateStockObject` funzioni membro.
+Se si usa il costruttore senza argomenti, è necessario inizializzare l'oggetto `CPen` risultante con le `CreatePen`funzioni `CreatePenIndirect`membro, `CreateStockObject` o.
 
-Se si usa il costruttore che accetta argomenti, non sarà necessaria alcuna ulteriore inizializzazione. Il costruttore con gli argomenti possa generare un'eccezione se si verificano errori, mentre il costruttore senza argomenti avrà sempre esito positivo.
+Se si usa il costruttore che accetta argomenti, non sono necessarie altre inizializzazioni. Il costruttore con argomenti può generare un'eccezione se vengono rilevati errori, mentre il costruttore senza argomenti avrà sempre esito positivo.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]
 
-##  <a name="createpen"></a>  CPen::CreatePen
+##  <a name="createpen"></a>CPen:: CreatePen
 
-Crea una penna cosmetica o geometrica logica con uno stile specificato, larghezza e gli attributi di pennello e lo collega al `CPen` oggetto.
+Crea una penna logica o geometrica con lo stile, la larghezza e gli attributi del pennello specificati e la associa all' `CPen` oggetto.
 
 ```
 BOOL CreatePen(
@@ -192,56 +192,56 @@ BOOL CreatePen(
 ### <a name="parameters"></a>Parametri
 
 *nPenStyle*<br/>
-Specifica lo stile per la penna. Per un elenco di valori possibili, vedere la *nPenStyle* parametro le [CPen](#cpen) costruttore.
+Specifica lo stile della penna. Per un elenco di valori possibili, vedere il parametro *nPenStyle* nel costruttore [CPen](#cpen) .
 
 *nWidth*<br/>
-Specifica lo spessore della penna.
+Specifica la larghezza della penna.
 
-- Per la prima versione di `CreatePen`, se questo valore è 0, la larghezza in unità di dispositivo è sempre 1 pixel, indipendentemente dalla modalità di mapping.
+- Per la prima versione di `CreatePen`, se questo valore è 0, la larghezza in unità dispositivo è sempre 1 pixel, indipendentemente dalla modalità di mapping.
 
-- Per la seconda versione del `CreatePen`, se *nPenStyle* è PS_GEOMETRIC, la larghezza viene espresso in unità logiche. Se *nPenStyle* è PS_COSMETIC, la larghezza deve essere impostata su 1.
+- Per la seconda versione di `CreatePen`, se *nPenStyle* è PS_GEOMETRIC, la larghezza viene specificata in unità logiche. Se *nPenStyle* è PS_COSMETIC, la larghezza deve essere impostata su 1.
 
 *crColor*<br/>
 Contiene un colore RGB per la penna.
 
 *pLogBrush*<br/>
-Punta a un [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) struttura. Se *nPenStyle* è PS_COSMETIC, il `lbColor` membro del `LOGBRUSH` struttura specifica il colore della penna e il *lbStyle* membro del `LOGBRUSH` struttura deve essere impostata su BS_ TINTA UNITA. Se nPenStyle è PS_GEOMETRIC, tutti i membri devono essere utilizzati per specificare gli attributi di pennello della penna.
+Punta a una struttura [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) . Se *nPenStyle* è PS_COSMETIC, il `lbColor` membro della `LOGBRUSH` struttura specifica il colore della `LOGBRUSH` penna e il membro *lbStyle* della struttura deve essere impostato su BS_SOLID. Se nPenStyle è PS_GEOMETRIC, tutti i membri devono essere utilizzati per specificare gli attributi pennello della penna.
 
 *nStyleCount*<br/>
-Specifica la lunghezza, in unità di Double Word del *lpStyle* matrice. Questo valore deve essere zero se *nPenStyle* non PS_USERSTYLE.
+Specifica la lunghezza, in unità parola doppia, della matrice *lpStyle* . Questo valore deve essere zero se *nPenStyle* non è PS_USERSTYLE.
 
 *lpStyle*<br/>
-Punta a una matrice di valori Double Word. Il primo valore specifica la lunghezza del trattino prima in uno stile definito dall'utente, il secondo valore specifica la lunghezza del primo spazio e così via. Puntatore ' this ' deve essere NULL se *nPenStyle* non PS_USERSTYLE.
+Punta a una matrice di valori parola doppia. Il primo valore specifica la lunghezza del primo trattino in uno stile definito dall'utente, il secondo valore specifica la lunghezza del primo spazio e così via. Il puntatore deve essere NULL se *nPenStyle* non è PS_USERSTYLE.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero nel caso di esito positivo oppure zero se il metodo ha esito negativo.
+Diverso da zero se ha esito positivo oppure zero se il metodo ha esito negativo.
 
 ### <a name="remarks"></a>Note
 
-La prima versione di `CreatePen` Inizializza un oggetto pen con uno stile specificato, spessore e il colore. È possibile selezionare successivamente la penna della penna corrente per qualsiasi contesto di dispositivo.
+La prima versione di `CreatePen` Inizializza una penna con lo stile, la larghezza e il colore specificati. È possibile selezionare la penna in seguito come penna corrente per qualsiasi contesto di dispositivo.
 
-Penne che hanno una larghezza maggiore di 1 pixel devono contenere sempre PS_NULL, PS_SOLID o PS_INSIDEFRAME stile.
+Le penne con una larghezza maggiore di 1 pixel devono avere sempre lo stile PS_NULL, PS_SOLID o PS_INSIDEFRAME.
 
-Se un oggetto pen dispone di un colore che corrisponde a un colore nella tabella dei colori logico e lo stile PS_INSIDEFRAME, penna viene disegnata con un colore retinato. Lo stile di penna PS_SOLID non può essere utilizzato per creare un oggetto pen con un colore retinato. Lo stile PS_INSIDEFRAME è identico a PS_SOLID se la larghezza della penna è minore o uguale a 1.
+Se una penna ha lo stile PS_INSIDEFRAME e un colore che non corrisponde a un colore nella tabella dei colori logica, la penna viene disegnata con un colore con repliche. Non è possibile usare lo stile di penna PS_SOLID per creare una penna con un colore con repliche. Lo stile PS_INSIDEFRAME è identico a PS_SOLID se la lunghezza della penna è minore o uguale a 1.
 
-La seconda versione di `CreatePen` consente di inizializzare una penna cosmetica o geometrica logica che è stato specificato lo stile, larghezza, quindi gli attributi del pennello. La larghezza di un oggetto pen cosmetico è sempre 1. la larghezza di un oggetto pen geometrica viene sempre specificata in unità internazionali. Dopo che un'applicazione crea un oggetto pen logico, è possibile selezionare la penna in un contesto di dispositivo chiamando il [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) (funzione). Dopo aver selezionata una penna nel contesto di periferica, può essere utilizzato per disegnare linee e curve.
+La seconda versione di `CreatePen` Inizializza una penna logica cosmetica o geometrica con lo stile, la larghezza e gli attributi del pennello specificati. La larghezza di una penna cosmetica è sempre 1; la larghezza di una penna geometrica viene sempre specificata in unità internazionali. Dopo la creazione di una penna logica da parte di un'applicazione, è possibile selezionare tale penna in un contesto di dispositivo chiamando la funzione [CDC:: SelezionaOggetto](../../mfc/reference/cdc-class.md#selectobject) . Dopo aver selezionato una penna in un contesto di dispositivo, è possibile usarla per creare linee e curve.
 
-- Se *nPenStyle* sia PS_COSMETIC PS_USERSTYLE, le voci nella *lpStyle* matrice specificare lunghezze di trattini e spazi in unità di stile. Un'unità di stile viene definita dal dispositivo in cui la penna utilizzata per disegnare una linea.
+- Se *nPenStyle* è PS_COSMETIC e PS_USERSTYLE, le voci della matrice *lpStyle* specificano lunghezze di trattini e spazi nelle unità di stile. Un'unità di stile è definita dal dispositivo in cui viene usata la penna per creare una linea.
 
-- Se *nPenStyle* sia PS_GEOMETRIC PS_USERSTYLE, le voci nella *lpStyle* matrice specificare lunghezze di trattini e spazi in unità logiche.
+- Se *nPenStyle* è PS_GEOMETRIC e PS_USERSTYLE, le voci della matrice *lpStyle* specificano lunghezze di trattini e spazi nelle unità logiche.
 
-- Se *nPenStyle* è PS_ALTERNATE, l'unità di stile viene ignorato e viene impostato ogni altro pixel.
+- Se *nPenStyle* è PS_ALTERNATE, l'unità di stile viene ignorata e viene impostato ogni altro pixel.
 
-Quando un'applicazione non richiede più una penna specificata, questo deve chiamare il [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) membro funzione o distruggere il `CPen` dell'oggetto in modo che la risorsa non è più in uso. Un'applicazione non eliminare una penna quando la penna è selezionata in un contesto di dispositivo.
+Quando un'applicazione non richiede più una determinata penna, deve chiamare la funzione membro [CGdiObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject) o eliminare definitivamente l' `CPen` oggetto, in modo che la risorsa non sia più utilizzata. Un'applicazione non deve eliminare una penna quando la penna è selezionata in un contesto di dispositivo.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]
 
-##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect
+##  <a name="createpenindirect"></a>CPen:: CreatePenIndirect
 
-Inizializza un oggetto pen con stile di visualizzazione, spessore e il colore specificato nella struttura a cui punta *lpLogPen*.
+Inizializza una penna con lo stile, la larghezza e il colore specificati nella struttura a cui punta *lpLogPen*.
 
 ```
 BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
@@ -250,7 +250,7 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
 ### <a name="parameters"></a>Parametri
 
 *lpLogPen*<br/>
-Punta a di Windows [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) struttura che contiene informazioni sulla penna.
+Punta alla struttura [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen) di Windows che contiene informazioni sulla penna.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -258,17 +258,17 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Penne che hanno una larghezza maggiore di 1 pixel devono contenere sempre PS_NULL, PS_SOLID o PS_INSIDEFRAME stile.
+Le penne con una larghezza maggiore di 1 pixel devono avere sempre lo stile PS_NULL, PS_SOLID o PS_INSIDEFRAME.
 
-Se un oggetto pen dispone di un colore che corrisponde a un colore nella tabella dei colori logico e lo stile PS_INSIDEFRAME, penna viene disegnata con un colore retinato. Lo stile PS_INSIDEFRAME è identico a PS_SOLID se la larghezza della penna è minore o uguale a 1.
+Se una penna ha lo stile PS_INSIDEFRAME e un colore che non corrisponde a un colore nella tabella dei colori logica, la penna viene disegnata con un colore con repliche. Lo stile PS_INSIDEFRAME è identico a PS_SOLID se la lunghezza della penna è minore o uguale a 1.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]
 
-##  <a name="fromhandle"></a>  CPen::FromHandle
+##  <a name="fromhandle"></a>CPen:: FromHandle
 
-Restituisce un puntatore a un `CPen` oggetto dato un handle a un oggetto di penna GDI di Windows.
+Restituisce un puntatore a un `CPen` oggetto dato un handle a un oggetto Pen GDI di Windows.
 
 ```
 static CPen* PASCAL FromHandle(HPEN hPen);
@@ -277,23 +277,23 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="parameters"></a>Parametri
 
 *hPen*<br/>
-`HPEN` handle alla penna GDI di Windows.
+`HPEN`handle per la penna GDI di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CPen` oggetto se riesce; in caso contrario, NULL.
+Puntatore a un `CPen` oggetto in caso di esito positivo; in caso contrario null.
 
 ### <a name="remarks"></a>Note
 
-Se all'handle non è collegato un oggetto `CPen`, viene creato e collegato un oggetto `CPen` temporaneo. Questo temporaneo `CPen` oggetto è valido solo fino a quando non la volta successiva che l'applicazione ha il tempo di inattività nel relativo ciclo di eventi, a cui ora l'immagine di tutti i temporanei vengono eliminati gli oggetti. In altre parole, l'oggetto temporaneo è solo valido durante l'elaborazione di una finestra di messaggio.
+Se all'handle non è collegato un oggetto `CPen`, viene creato e collegato un oggetto `CPen` temporaneo. Questo oggetto `CPen` temporaneo è valido solo fino alla successiva esecuzione del tempo di inattività dell'applicazione nel ciclo di eventi, quindi vengono eliminati tutti gli oggetti grafici temporanei. In altre parole, l'oggetto temporaneo è valido solo durante l'elaborazione di un messaggio di finestra.
 
 ### <a name="example"></a>Esempio
 
 [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]
 
-##  <a name="getextlogpen"></a>  CPen::GetExtLogPen
+##  <a name="getextlogpen"></a>CPen:: GetExtLogPen
 
-Ottiene un `EXTLOGPEN` struttura sottostante.
+Ottiene una `EXTLOGPEN` struttura sottostante.
 
 ```
 int GetExtLogPen(EXTLOGPEN* pLogPen);
@@ -302,7 +302,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
 ### <a name="parameters"></a>Parametri
 
 *pLogPen*<br/>
-Punta a un [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) struttura che contiene informazioni sulla penna.
+Punta a una struttura [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen) che contiene informazioni sulla penna.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -310,27 +310,27 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Il `EXTLOGPEN` struttura definisce lo stile, larghezza e gli attributi di pennello di un oggetto pen. Ad esempio, chiamare `GetExtLogPen` per associare lo stile specifico di un oggetto pen.
+La `EXTLOGPEN` struttura definisce lo stile, la larghezza e gli attributi pennello di una penna. Ad esempio, chiamare `GetExtLogPen` per trovare la corrispondenza con lo stile specifico di un oggetto Pen.
 
-Vedere gli argomenti seguenti nel SDK di Windows per informazioni sugli attributi di penna:
+Per informazioni sugli attributi penna, vedere gli argomenti seguenti nella Windows SDK:
 
-- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)
+- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
-- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)
+- [EXTLOGPEN](/windows/win32/api/wingdi/ns-wingdi-extlogpen)
 
-- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)
+- [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
-- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)
+- [ExtCreatePen](/windows/win32/api/wingdi/nf-wingdi-extcreatepen)
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente viene illustrato come chiamare `GetExtLogPen` per recuperare gli attributi della penna e quindi creare una nuova, Cosmetica penna con lo stesso colore.
+Nell'esempio di codice seguente viene `GetExtLogPen` illustrata la chiamata a per recuperare gli attributi di una penna, quindi viene creata una nuova penna cosmetica con lo stesso colore.
 
 [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]
 
-##  <a name="getlogpen"></a>  CPen::GetLogPen
+##  <a name="getlogpen"></a>CPen:: GetLogPen
 
-Ottiene un `LOGPEN` struttura sottostante.
+Ottiene una `LOGPEN` struttura sottostante.
 
 ```
 int GetLogPen(LOGPEN* pLogPen);
@@ -339,7 +339,7 @@ int GetLogPen(LOGPEN* pLogPen);
 ### <a name="parameters"></a>Parametri
 
 *pLogPen*<br/>
-Punta a un [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) struttura per contenere informazioni sulla penna.
+Punta a una struttura [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen) per contenere informazioni sulla penna.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -347,25 +347,25 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Il `LOGPEN` struttura definisce lo stile, colore e modello di un oggetto pen.
+La `LOGPEN` struttura definisce lo stile, il colore e il motivo di una penna.
 
-Ad esempio, chiamare `GetLogPen` per associare lo stile particolare della penna.
+Ad esempio, chiamare `GetLogPen` per trovare la corrispondenza con lo stile di penna specifico.
 
-Vedere gli argomenti seguenti nel SDK di Windows per informazioni sugli attributi di penna:
+Per informazioni sugli attributi penna, vedere gli argomenti seguenti nella Windows SDK:
 
-- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)
+- [GetObject](/windows/win32/api/wingdi/nf-wingdi-getobject)
 
-- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)
+- [LOGPEN](/windows/win32/api/wingdi/ns-wingdi-logpen)
 
 ### <a name="example"></a>Esempio
 
-Esempio di codice seguente viene illustrato come chiamare `GetLogPen` per recuperare un carattere di penna e quindi creare un oggetto pen nuove, a tinta unita con lo stesso colore.
+Nell'esempio di codice riportato di `GetLogPen` seguito viene illustrata la chiamata a per recuperare un carattere Pen, quindi viene creata una nuova penna a tinta unita con lo stesso colore.
 
 [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]
 
-##  <a name="operator_hpen"></a>  CPen::operator HPEN
+##  <a name="operator_hpen"></a>CPen:: operator HPEN
 
-Ottiene l'handle GDI di Windows associata del `CPen` oggetto.
+Ottiene l'handle di Windows GDI associato dell' `CPen` oggetto.
 
 ```
 operator HPEN() const;
@@ -373,13 +373,13 @@ operator HPEN() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, un handle all'oggetto GDI di Windows rappresentato dal `CPen` oggetto; in caso contrario, NULL.
+Se ha esito positivo, un handle per l'oggetto GDI Windows `CPen` rappresentato dall'oggetto; in caso contrario, null.
 
 ### <a name="remarks"></a>Note
 
 Questo operatore è un operatore di cast, che supporta l'uso diretto di un oggetto HPEN.
 
-Per altre informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [gli oggetti di grafica](/windows/desktop/gdi/graphic-objects) in Windows SDK.
+Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [oggetti grafici](/windows/win32/gdi/graphic-objects) in Windows SDK.
 
 ### <a name="example"></a>Esempio
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916969"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504015"
 ---
 # <a name="coledocobjectitem-class"></a>Classe COleDocObjectItem
 
@@ -51,7 +51,7 @@ class COleDocObjectItem : public COleClientItem
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[COleDocObjectItem::D oDefaultPrinting](#dodefaultprinting)|Stampa il documento dell'applicazione contenitore usando le impostazioni predefinite della stampante.|
 |[COleDocObjectItem:: ExecCommand](#execcommand)|Esegue il comando specificato dall'utente.|
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
 Identificatore del comando da eseguire. Deve trovarsi nel gruppo identificato da *pguidCmdGroup*.
 
 *nCmdExecOpt*<br/>
-Specifica le opzioni di esecuzione del comando. Per impostazione predefinita, impostare per eseguire il comando senza richiedere conferma all'utente. Per un elenco di valori, vedere [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) .
+Specifica le opzioni di esecuzione del comando. Per impostazione predefinita, impostare per eseguire il comando senza richiedere conferma all'utente. Per un elenco di valori, vedere [OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) .
 
 *pguidCmdGroup*<br/>
 Identificatore univoco del gruppo di comandi. Per impostazione predefinita, NULL, che specifica il gruppo standard. Il comando passato in *nCmdID* deve appartenere al gruppo.
@@ -151,7 +151,7 @@ Identificatore univoco del gruppo di comandi. Per impostazione predefinita, NULL
 
 Restituisce S_OK se ha esito positivo; in caso contrario, restituisce uno dei codici di errore seguenti.
 
-|Value|Descrizione|
+|Value|DESCRIZIONE|
 |-----------|-----------------|
 |E_UNEXPECTED|Si è verificato un errore imprevisto.|
 |E_FAIL|Si è verificato un errore.|
@@ -176,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Puntatore all'interfaccia [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) della visualizzazione attualmente attiva. Se non è presente alcuna visualizzazione corrente, viene restituito NULL.
+Puntatore all'interfaccia [IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview) della visualizzazione attualmente attiva. Se non è presente alcuna visualizzazione corrente, viene restituito NULL.
 
 ### <a name="remarks"></a>Note
 
@@ -270,21 +270,21 @@ HRESULT QueryCommand(
 identificatore del comando sottoposto a query.
 
 *pdwStatus*<br/>
-Puntatore ai flag restituiti come risultato della query. Per un elenco di valori possibili, vedere [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).
+Puntatore ai flag restituiti come risultato della query. Per un elenco di valori possibili, vedere [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf).
 
 *pCmdText*<br/>
-Puntatore a una struttura [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-olecmdtext) in cui restituire informazioni sul nome e sullo stato per un singolo comando. Può essere NULL per indicare che il chiamante non necessita di queste informazioni.
+Puntatore a una struttura [OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext) in cui restituire informazioni sul nome e sullo stato per un singolo comando. Può essere NULL per indicare che il chiamante non necessita di queste informazioni.
 
 *pguidCmdGroup*<br/>
 Identificatore univoco del gruppo di comandi. può essere NULL per specificare il gruppo standard.
 
 ### <a name="return-value"></a>Valore restituito
 
-Per un elenco completo dei valori restituiti, vedere [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) nel Windows SDK.
+Per un elenco completo dei valori restituiti, vedere [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) nel Windows SDK.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità del metodo [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) , come descritto nel Windows SDK.
+Questa funzione membro emula la funzionalità del metodo [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) , come descritto nel Windows SDK.
 
 ##  <a name="release"></a>COleDocObjectItem:: Release
 

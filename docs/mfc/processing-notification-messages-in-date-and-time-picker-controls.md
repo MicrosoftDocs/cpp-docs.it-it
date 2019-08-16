@@ -14,34 +14,34 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: ce84863744629d30248f94b94448d776177f9841
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fead5643299aee4beace55abde0b6a6c801a324f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339553"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507887"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Elaborazione dei messaggi di notifica nel controlli selezione data e ora
 
-Quando gli utenti interagiscono con la data e controllo di selezione ora, il controllo (`CDateTimeCtrl`) invia i messaggi di notifica alla finestra padre, in genere un oggetto finestra di dialogo o visualizzazione. Se si desidera eseguire un'operazione in risposta, occorre gestire questi messaggi. Ad esempio, quando l'utente apre il selettore data e ora per visualizzare il controllo calendario mensile incorporato, viene inviata il DTN_DROPDOWN (notifica).
+Quando gli utenti interagiscono con il controllo selezione data e ora, il`CDateTimeCtrl`controllo () Invia messaggi di notifica alla finestra padre, in genere un oggetto visualizzazione o finestra di dialogo. Se si desidera eseguire un'operazione in risposta, occorre gestire questi messaggi. Ad esempio, quando l'utente apre la selezione data e ora per visualizzare il controllo calendario mensile incorporato, viene inviata la notifica DTN_DROPDOWN.
 
 Usare la finestra Proprietà per aggiungere la gestione della notifica alla classe padre per i messaggi da implementare.
 
-Nell'elenco seguente descrive le diverse notifiche inviate dal controllo selezione data e ora.
+Nell'elenco seguente vengono descritte le diverse notifiche inviate dal controllo selezione data e ora.
 
-- DTN_DROPDOWN Notifica l'elemento padre che controllo calendario mensile incorporato deve essere visualizzato. Questa notifica viene inviata solo quando lo stile DTS_UPDOWN non è stato impostato. Per altre informazioni su questa notifica, vedere [l'accesso a controllo calendario mensile incorporato](../mfc/accessing-the-embedded-month-calendar-control.md).
+- DTN_DROPDOWN notifica all'elemento padre che il controllo Calendar Month incorporato sta per essere visualizzato. Questa notifica viene inviata solo quando lo stile DTS_UPDOWN non è stato impostato. Per ulteriori informazioni su questa notifica, vedere [accesso al controllo calendario mensile incorporato](../mfc/accessing-the-embedded-month-calendar-control.md).
 
-- DTN_CLOSEUP notifica l'elemento padre che controllo calendario mensile incorporato sta per essere chiuso. Questa notifica viene inviata solo quando lo stile DTS_UPDOWN non è stato impostato.
+- DTN_CLOSEUP Notifica all'elemento padre che il controllo Calendar Month incorporato sta per essere chiuso. Questa notifica viene inviata solo quando lo stile DTS_UPDOWN non è stato impostato.
 
-- DTN_DATETIMECHANGE Notifica all'elemento padre, che si è verificata una modifica nel controllo.
+- DTN_DATETIMECHANGE notifica all'elemento padre che si è verificata una modifica nel controllo.
 
-- DTN_FORMAT notifica l'elemento padre che il testo è necessario visualizzare in un campo callback. Per altre informazioni su questa notifica e campi callback, vedere [utilizzo dei campi Callback in una data e ora controllo di selezione](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+- DTN_FORMAT Notifica all'elemento padre che è necessario che il testo venga visualizzato in un campo di callback. Per ulteriori informazioni su questi campi di notifica e callback, vedere [utilizzo dei campi di callback in un controllo selezione data e ora](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
 
-- DTN_FORMATQUERY richiede l'elemento padre per specificare la dimensione massima consentita della stringa che verrà visualizzata in un campo callback. La gestione di questa notifica consente il controllo per visualizzare correttamente l'output in qualsiasi momento, ridurre lo sfarfallio all'interno della visualizzazione del controllo. Per altre informazioni su questa notifica, vedere [utilizzo dei campi Callback in una data e ora controllo di selezione](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
+- DTN_FORMATQUERY richiede all'elemento padre di fornire la dimensione massima consentita della stringa che verrà visualizzata in un campo di callback. La gestione di questa notifica consente al controllo di visualizzare correttamente l'output in qualsiasi momento, riducendo lo sfarfallio nella visualizzazione del controllo. Per ulteriori informazioni su questa notifica, vedere [utilizzo dei campi di callback in un controllo selezione data e ora](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).
 
-- Notifica al DTN_USERSTRING padre che l'utente ha terminato la modifica del contenuto del controllo selezione data e ora. Questa notifica viene inviata solo quando lo stile DTS_APPCANPARSE è stato impostato.
+- DTN_USERSTRING notifica all'elemento padre che l'utente ha terminato di modificare il contenuto del controllo selezione data e ora. Questa notifica viene inviata solo quando è stato impostato lo stile DTS_APPCANPARSE.
 
-- DTN_WMKEYDOWN Notifica padre quando l'utente digita in un campo callback. Gestire tale notifica emulare le stesse risposte della tastiera è supportata per i campi non callback in un controllo selezione data e ora. Per altre informazioni su questa notifica, vedere [che supportano i campi Callback in un controllo DTP](/windows/desktop/Controls/date-and-time-picker-controls) nel SDK di Windows.
+- DTN_WMKEYDOWN invia una notifica all'elemento padre quando l'utente digita un campo di callback. Gestire questa notifica per emulare la stessa risposta da tastiera supportata per i campi non di callback in un controllo selezione data e ora. Per ulteriori informazioni su questa notifica, vedere [supporto dei campi di callback in un controllo DTP](/windows/win32/Controls/date-and-time-picker-controls) nel Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 

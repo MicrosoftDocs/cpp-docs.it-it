@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f5da7c6805d10e919255ce301dae5618ef58e76d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447793"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501919"
 ---
 # <a name="ltistreamgt-operators"></a>Operatori &lt;istream&gt;
 
@@ -86,7 +86,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 estrae un massimo di *N* - 1 elementi e li archivia nella matrice a partire da _ *Str*. Se `Istr`. [width](../standard-library/ios-base-class.md#width) è maggiore di zero, *N* è `Istr`. **larghezza**; in caso contrario, è la dimensione della matrice più grande `Elem` di che può essere dichiarata. La funzione archivia sempre il valore `Elem()` dopo gli elementi estratti archiviati. L'estrazione termina prima della fine del file, in corrispondenza di un carattere con valore **Elem**(0) (non estratto) o di qualsiasi elemento (non estratto) che verrebbe rimosso da [ws](../standard-library/istream-functions.md#ws). Se non estrae alcun elemento, la funzione chiama `Istr`. [sestato](../standard-library/basic-ios-class.md#setstate) (**failbit**). In tutti i casi, chiama `Istr`. **larghezza** (0) e restituisce *istr*.
 
-**Nota sulla sicurezza** La stringa con terminazione null da estrarre dal flusso di input non deve superare la dimensione dello *Str*del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Nota sulla sicurezza** La stringa con terminazione null da estrarre dal flusso di input non deve superare la dimensione dello *Str*del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 La funzione modello:
 

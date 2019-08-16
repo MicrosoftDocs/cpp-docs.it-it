@@ -2,26 +2,26 @@
 title: Gestione delle eccezioni ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: a3d1a5f3becefc064c5bb38dc566892ae8da8530
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450488"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493371"
 ---
 # <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
-Windows su architetture ARM usa lo stesso meccanismo di gestione strutturata delle eccezioni sia per le eccezioni sincrone generate da hardware che per le eccezioni sincrone generate da software. I gestori di eccezioni specifici del linguaggio sono costruiti sulla base della gestione strutturata delle eccezioni di Windows mediante le funzioni helper del linguaggio. Questo documento descrive gestione delle eccezioni in Windows su ARM e gli helper del linguaggio usati dal codice generato per l'assembler ARM Microsoft e il compilatore MSVC.
+Windows su architetture ARM usa lo stesso meccanismo di gestione strutturata delle eccezioni sia per le eccezioni sincrone generate da hardware che per le eccezioni sincrone generate da software. I gestori di eccezioni specifici del linguaggio sono costruiti sulla base della gestione strutturata delle eccezioni di Windows mediante le funzioni helper del linguaggio. Questo documento descrive la gestione delle eccezioni in Windows su ARM e gli helper del linguaggio usati dal codice generato dall'assembler ARM Microsoft e dal compilatore MSVC.
 
 ## <a name="arm-exception-handling"></a>Gestione delle eccezioni ARM
 
-Windows su ARM Usa *codici di rimozione* per controllare la rimozione dello stack durante [gestione delle eccezioni strutturata](/windows/desktop/debug/structured-exception-handling) (SEH). I codici di rimozione sono sequenze di byte memorizzate nella sezione .xdata dell'immagine eseguibile. Descrivono il funzionamento del codice di prologo ed epilogo della funzione in modo astratto, affinché sia possibile annullare gli effetti del prologo di una funzione in previsione della rimozione fino allo stack frame del chiamante.
+Windows on ARM usa i *codici di rimozione* per controllare la rimozione dello stack durante la [gestione delle eccezioni strutturata](/windows/win32/debug/structured-exception-handling) (SEH). I codici di rimozione sono sequenze di byte memorizzate nella sezione .xdata dell'immagine eseguibile. Descrivono il funzionamento del codice di prologo ed epilogo della funzione in modo astratto, affinché sia possibile annullare gli effetti del prologo di una funzione in previsione della rimozione fino allo stack frame del chiamante.
 
 L'interfaccia EABI (Embedded Application Binary Interface) ARM specifica un modello di rimozione delle eccezioni che usa i codici di rimozione, ma non è sufficiente per la rimozione SEH in Windows, che deve gestire i casi asincroni in cui il processore è al centro del prologo o dell'epilogo di una funzione. Windows suddivide inoltre il controllo della rimozione in rimozione a livello di funzione e rimozione con ambito specifico del linguaggio, unificate nell'interfaccia EABI ARM. Per queste ragioni Windows su ARM specifica maggiori dettagli per i dati e la procedura di rimozione.
 
 ### <a name="assumptions"></a>Presupposti
 
-Le immagini eseguibili per Windows su ARM usano il formato Portable Executable (PE). Per altre informazioni, vedere [specifica Microsoft PE e COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). Le informazioni sulla gestione delle eccezioni sono memorizzate nelle sezioni .pdata e .xdata dell'immagine.
+Le immagini eseguibili per Windows su ARM usano il formato Portable Executable (PE). Per ulteriori informazioni, vedere la [specifica Microsoft PE e COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). Le informazioni sulla gestione delle eccezioni sono memorizzate nelle sezioni .pdata e .xdata dell'immagine.
 
 Il meccanismo di gestione delle eccezioni si basa su alcuni presupposti in relazione al codice che segue l'ABI per Windows su ARM:
 
@@ -59,9 +59,9 @@ Ogni record .pdata per ARM è lungo 8 byte. Il formato generale di un record pos
 
 |Offset parola|BITS|Scopo|
 |-----------------|----------|-------------|
-|0|0-31|*Funzione avviare RVA* è il RVA a 32 bit dell'inizio della funzione. Se la funzione contiene codice Thumb, è necessario impostare il bit inferiore di questo indirizzo.|
-|1|0-1|*Flag* è un campo a 2 bit che indica come interpretare i restanti 30 bit della seconda parola. pdata. Se *Flag* è 0, quindi i bit restanti formano un' *RVA informazioni eccezione* (con i due bit inferiori implicitamente 0). Se *Flag* è diverso da zero, i bit restanti formano una *Data di rimozione compressi* struttura.|
-|1|2-31|*Informazioni sull'eccezione RVA* oppure *compresse dei dati di rimozione*.<br /><br /> *Eccezione informazioni RVA* è l'indirizzo della struttura di informazioni di eccezione a lunghezza variabile, archiviata nella sezione. xdata. Questi dati devono essere allineati a 4 byte.<br /><br /> *Data di rimozione compressi* è una descrizione compressa delle operazioni necessarie per la rimozione da una funzione, supponendo una forma canonica. In questo caso non sono necessari record .xdata.|
+|0|0-31|Il *primo RVA* della funzione è l'rva a 32 bit dell'inizio della funzione. Se la funzione contiene codice Thumb, è necessario impostare il bit inferiore di questo indirizzo.|
+|1|0-1|*Flag* è un campo a 2 bit che indica come interpretare i restanti 30 bit della seconda parola. pdata. Se il *flag* è 0, i bit rimanenti formano un *RVA di informazioni sull'eccezione* (con i due bit bassi implicitamente 0). Se *flag* è diverso da zero, i bit rimanenti formano una struttura di *dati di rimozione compresso* .|
+|1|2-31|*Informazioni sull'eccezione RVA* o *dati di rimozione compressi*.<br /><br /> *Informazioni sull'eccezione RVA* è l'indirizzo della struttura di informazioni sulle eccezioni a lunghezza variabile, archiviata nella sezione. XData. Questi dati devono essere allineati a 4 byte.<br /><br /> I *dati di rimozione* compressi sono una descrizione compressa delle operazioni necessarie per la rimozione da una funzione, presumendo una forma canonica. In questo caso non sono necessari record .xdata.|
 
 ### <a name="packed-unwind-data"></a>Dati di rimozione compressi
 
@@ -71,124 +71,124 @@ Questa tabella mostra il formato di un record .pdata che contiene dati di rimozi
 
 |Offset parola|BITS|Scopo|
 |-----------------|----------|-------------|
-|0|0-31|*Funzione avviare RVA* è il RVA a 32 bit dell'inizio della funzione. Se la funzione contiene codice Thumb, è necessario impostare il bit inferiore di questo indirizzo.|
-|1|0-1|*Flag* è un campo a 2 bit che ha i seguenti significati:<br /><br />-00 = compresso di rimozione dei dati non utilizzati; bit restanti punti al record. xdata.<br />-01 = compresso dei dati di rimozione.<br />-10 = compresso dei dati in cui la funzione si presuppone che non abbia un prologo di rimozione. Si rivela utile per la descrizione dei frammenti di funzione non contigui all'inizio della funzione.<br />-11 = riservato.|
-|1|2-12|*Funzione lunghezza* è un campo a 11 bit che indica la lunghezza dell'intera funzione in byte diviso 2. Se la funzione è superiore a 4000 byte, è invece necessario usare un record .xdata completo.|
-|1|13-14|*RET* è un campo a 2 bit che indica come la funzione restituisce:<br /><br />-00 = restituzione tramite pop {pc} (il *L* bit del flag deve essere impostata su 1 in questo caso).<br />-01 = restituzione tramite un branch a 16 bit.<br />-10 = restituzione tramite un branch a 32 bit.<br />-11 = Nessun epilogo affatto. Si rivela utile per descrivere un frammento di funzione non contiguo che può solo contenere un prologo, ma il cui epilogo si trova altrove.|
-|1|15|*H* è un flag a 1 bit che indica se la funzione "ospita" parametro di tipo integer Registra (r0-r3) eseguendone il push all'inizio della funzione e dealloca i 16 byte di stack prima della restituzione. (0 = non ospita i registri, 1 = ospita i registri.)|
-|1|16-18|*Reg* un campo di 3 bit che indica l'indice dell'ultimo salvataggio registro non volatile. Se il *R* bit è 0, quindi vengono salvati solo i registri integer che rientrano nell'intervallo r4-RN, dove N è pari a 4 + *Reg*. Se il *R* bit è 1, quindi vengono salvati, registri a virgola mobile solo che rientrano nell'intervallo d8-DN, dove N è pari a 8 + *Reg*. La combinazione speciale di *R* = 1 e *Reg* = 7 indica che non viene salvato alcun registro.|
-|1|19|*R* è un flag a 1 bit che indica se i registri non volatili salvati sono registri integer (0) o registri a virgola mobile (1). Se *R* è impostato su 1 e il *Reg* campo è impostato su 7, non è sono inseriti alcun registri non volatili.|
-|1|20|*L* è un flag a 1 bit che indica se la funzione Salva/Ripristina registri LR, oltre agli altri registri indicati dal *Reg* campo. (0 = non salva/ripristina, 1 = salva/ripristina).|
-|1|21|*C* è un flag a 1 bit che indica se la funzione include istruzioni aggiuntive per configurare una catena di frame per rapida dello stack (1) o No (0). Se questo bit è impostato, r11 viene aggiunto implicitamente all'elenco di registri Integer non volatili salvati. (Vedere le restrizioni seguenti se il *C* flag viene utilizzato.)|
-|1|22-31|*Stack Adjust* è un campo a 10 bit che indica il numero di byte di stack allocati per questa funzione, divisa 4. Tuttavia, solo i valori compresi tra 0x000 e 0x3F3 possono essere codificati direttamente. Le funzioni che allocano più di 4044 byte di stack devono usare un record .xdata completo. Se il *Stack regolare* campo è 0x3F4 o maggiore, 4 bit inferiori hanno un significato speciale:<br /><br />-I bit 0-1 indicano il numero di parole di regolazione dello stack (1-4) meno 1.<br />-Bit 2 è impostato su 1 se il prologo ha combinato questa regolazione nella propria operazione push.<br />-Bit 3 è impostato su 1 se l'epilogo ha combinato questa regolazione nella propria operazione pop.|
+|0|0-31|Il *primo RVA* della funzione è l'rva a 32 bit dell'inizio della funzione. Se la funzione contiene codice Thumb, è necessario impostare il bit inferiore di questo indirizzo.|
+|1|0-1|*Flag* è un campo a 2 bit che presenta i significati seguenti:<br /><br />-00 = dati di rimozione compressi non utilizzati; i bit rimanenti puntano al record. XData.<br />-01 = dati di rimozione compressi.<br />-10 = dati di rimozione compressi in cui si presuppone che la funzione non disponga di prologo. Si rivela utile per la descrizione dei frammenti di funzione non contigui all'inizio della funzione.<br />-11 = riservata.|
+|1|2-12|La *lunghezza della funzione* è un campo a 11 bit che fornisce la lunghezza dell'intera funzione, in byte, divisa per 2. Se la funzione è superiore a 4000 byte, è invece necessario usare un record .xdata completo.|
+|1|13-14|*Ret* è un campo a 2 bit che indica il modo in cui la funzione restituisce:<br /><br />-00 = restituzione tramite pop {PC} (il bit del flag *L* deve essere impostato su 1 in questo caso).<br />-01 = restituisce utilizzando un ramo a 16 bit.<br />-10 = restituire utilizzando un ramo a 32 bit.<br />-11 = Nessun epilogo. Si rivela utile per descrivere un frammento di funzione non contiguo che può solo contenere un prologo, ma il cui epilogo si trova altrove.|
+|1|15|*H* è un flag a 1 bit che indica se la funzione "Home" registra il parametro Integer (R0-R3) eseguendone il push all'inizio della funzione e dealloca i 16 byte dello stack prima della restituzione. (0 = non ospita i registri, 1 = ospita i registri.)|
+|1|16-18|*Reg* è un campo a 3 bit che indica l'indice dell'ultimo registro non volatile salvato. Se il bit *R* è 0, vengono salvati solo i registri di tipo integer e si presuppone che siano compresi nell'intervallo R4-RN, dove N è uguale a 4 + *reg*. Se il bit *R* è 1, verranno salvati solo i registri a virgola mobile e si presuppone che siano compresi nell'intervallo D8-DN, dove N è uguale a 8 + *reg*. La combinazione speciale di *R* = 1 e *reg* = 7 indica che non viene salvato alcun registro.|
+|1|19|*R* è un flag a 1 bit che indica se i registri non volatili salvati sono registri di tipo Integer (0) o registri a virgola mobile (1). Se *R* è impostato su 1 e il campo *reg* è impostato su 7, non è stato eseguito il push di registri non volatili.|
+|1|20|*L* è un flag a 1 bit che indica se la funzione Salva/Ripristina LR, insieme ad altri registri indicati dal campo *reg* . (0 = non salva/ripristina, 1 = salva/ripristina).|
+|1|21|*C* è un flag a 1 bit che indica se la funzione include istruzioni aggiuntive per impostare una catena di frame per Fast Stack Walking (1) o meno (0). Se questo bit è impostato, r11 viene aggiunto implicitamente all'elenco di registri Integer non volatili salvati. (Vedere le restrizioni seguenti se viene usato il flag *C* ).|
+|1|22-31|Lo *stack Adjust* è un campo a 10 bit che indica il numero di byte dello stack allocato per la funzione, divisa per 4. Tuttavia, solo i valori compresi tra 0x000 e 0x3F3 possono essere codificati direttamente. Le funzioni che allocano più di 4044 byte di stack devono usare un record .xdata completo. Se il campo di *regolazione dello stack* è 0x3F4 o superiore, i 4 bit inferiori hanno un significato speciale:<br /><br />-BITS 0-1 indica il numero di parole di regolazione dello stack (1-4) meno 1.<br />-Bit 2 è impostato su 1 se il prologo combina questa regolazione nell'operazione push.<br />-Bit 3 è impostato su 1 se l'epilogo combina questa regolazione nell'operazione Pop.|
 
 Date le possibili ridondanze nelle codifiche descritte sopra, si applicano le seguenti limitazioni:
 
-- Se il *C* flag è impostato su 1:
+- Se il flag *C* è impostato su 1:
 
-   - Il *L* flag deve essere impostato su 1, anche perché concatenazione di frame richiesto sia r11 che LR.
+   - Il flag *L* deve anche essere impostato su 1, perché il concatenamento dei frame richiede sia R11 che LR.
 
-   - R11 non deve essere incluso nel set di registri descritti da *Reg*. Vale a dire, se viene effettuato il push di r4-r11, *Reg* deve descrivere solo r4-r10 perché il *C* flag implica r11.
+   - R11 non deve essere incluso nel set di registri descritto da *reg*. Ovvero, se viene eseguito il push di R4-R11, *reg* dovrebbe descrivere solo R4-R10, perché il flag *C* implica R11.
 
-- Se il *Ret* campo è impostato su 0, il *L* flag deve essere impostato su 1.
+- Se il campo *ret* è impostato su 0, il flag *L* deve essere impostato su 1.
 
 La violazione di queste restrizioni determina una sequenza non supportata.
 
-Ai fini della discussione seguente, due pseudo flag vengono ricavati *Stack regolare*:
+Ai fini della discussione riportata di seguito, vengono derivati due pseudo-flag dallo *stack Adjust*:
 
-- *PF* o "riduzione prologo", indica che *Stack regolare* è 0x3F4 o superiore e il bit 2 è impostato.
+- *PF* o "folding prologo" indica che lo *stack Adjust* è 0x3F4 o large e il bit 2 è impostato.
 
-- *EF* o "riduzione epilogo", indica che *Stack regolare* è 0x3F4 o superiore e il bit 3 è impostato.
+- *EF* o "epilogo folding" indica che lo *stack Adjust* è 0x3F4 o large e il bit 3 è impostato.
 
 I prologhi per le funzioni canoniche possono contenere fino a 5 istruzioni (tenere presente che 3a e 3b si escludono a vicenda):
 
 |Istruzione|Il codice operativo è considerato presente se:|Dimensione|Codice operativo|Codici di rimozione|
 |-----------------|-----------------------------------|----------|------------|------------------|
 |1|*H*==1|16|`push {r0-r3}`|04|
-|2|*C*= = 1 o *L*= = 1 o *R*= = 0 o PF==1 = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
-|3a|*C*= = 1 e (*L*= = 0 e *R*= = 1 e PF==0 = = 0)|16|`mov r11,sp`|C0-CF/FB|
-|3b|*C*= = 1 e (*L*= = 1 o *R*= = 0 o PF==1 = = 1)|32|`add r11,sp,#xx`|FC|
-|4|*R*= = 1 e *Reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
-|5|*Stack regolare* ! = 0 e PF==0 = = 0|16/32|`sub sp,sp,#xx`|00-7F/E8-EB|
+|2|*C*= = 1 o *L*= = 1 o *R*= = 0 o PF = = 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
+|3a|*C*= = 1 e (*L*= = 0 e *R*= = 1 e PF = = 0)|16|`mov r11,sp`|C0-CF/FB|
+|3b|*C*= = 1 e (*L*= = 1 o *R*= = 0 o PF = = 1)|32|`add r11,sp,#xx`|FC|
+|4|*R*= = 1 e *reg* ! = 7|32|`vpush {d8-dE}`|E0-E7|
+|5|*Regolazione dello stack* ! = 0 e PF = = 0|16/32|`sub sp,sp,#xx`|00-7F/E8-EB|
 
-Istruzione 1 è sempre presente se la *H* bit viene impostato su 1.
+L'istruzione 1 è sempre presente se il bit *H* è impostato su 1.
 
-Per configurare la concatenazione di frame, è presente l'istruzione 3a o 3b se il *C* bit viene impostato. È un `mov` a 16 bit se non viene eseguito il push di registri diversi da r11 e LR; in caso contrario, è un `add` a 32 bit.
+Per configurare il concatenamento dei frame, è presente l'istruzione 3A o 3B se è impostato il bit *C* . È un `mov` a 16 bit se non viene eseguito il push di registri diversi da r11 e LR; in caso contrario, è un `add` a 32 bit.
 
 Se viene specificata una regolazione non ridotta, l'istruzione 5 è la regolazione dello stack esplicita.
 
-Le istruzioni 2 e 4 sono impostate in base alla necessità o meno di un'operazione push. Questa tabella riepiloga i registri che vengono salvati in base il *C*, *L*, *R*, e *PF* campi. In tutti i casi *N* è uguale a *Reg* + 4 *E* è uguale a *Reg* + 8, e *S* è uguale a (~*Regolazione dello stack*) & 3.
+Le istruzioni 2 e 4 sono impostate in base alla necessità o meno di un'operazione push. Questa tabella riepiloga i registri salvati in base ai campi *C*, *L*, *R*e *PF* . In tutti i casi, *N* è uguale a *reg* + 4, *e* è uguale a *reg* + 8 e *S* è uguale a (~*stack Adjust*) & 3.
 
 |C|L|R|PF|Registri Integer sottoposti a push|Registri VFP sottoposti a push|
 |-------|-------|-------|--------|------------------------------|--------------------------|
 |0|0|0|0|r4-r*N*|none|
 |0|0|0|1|r*S*-r*N*|none|
-|0|0|1|0|none|d8-d*E*|
-|0|0|1|1|r*S*-r3|d8-d*E*|
-|0|1|0|0|r4-r*N*, LR|none|
+|0|0|1|0|none|D8-d*E*|
+|0|0|1|1|r*S*-R3|D8-d*E*|
+|0|1|0|0|R4-r*N*, LR|none|
 |0|1|0|1|r*S*-r*N*, LR|none|
-|0|1|1|0|LR|d8-d*E*|
-|0|1|1|1|r*S*-r3, LR|d8-d*E*|
-|1|0|0|0|r4-r*N*, r11|none|
-|1|0|0|1|r*S*-r*N*, r11|none|
-|1|0|1|0|r11|d8-d*E*|
-|1|0|1|1|r*S*-r3, r11|d8-d*E*|
-|1|1|0|0|R4-r*N*, r11, LR|none|
-|1|1|0|1|r*S*-r*N*, r11, LR|none|
-|1|1|1|0|r11, LR|d8-d*E*|
-|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
+|0|1|1|0|LR|D8-d*E*|
+|0|1|1|1|r*S*-R3, LR|D8-d*E*|
+|1|0|0|0|R4-r*N*, R11|none|
+|1|0|0|1|r*S*-r*N*, R11|none|
+|1|0|1|0|r11|D8-d*E*|
+|1|0|1|1|r*S*-R3, R11|D8-d*E*|
+|1|1|0|0|R4-r*N*, R11, LR|none|
+|1|1|0|1|r*S*-r*N*, R11, LR|none|
+|1|1|1|0|r11, LR|D8-d*E*|
+|1|1|1|1|r*S*-R3, R11, LR|D8-d*E*|
 
 Gli epiloghi per le funzioni canoniche hanno un formato analogo, ma in ordine inverso e con alcune opzioni aggiuntive. L'epilogo può contenere fino a 5 istruzioni e la sua forma dipende strettamente dalla forma del prologo.
 
 |Istruzione|Il codice operativo è considerato presente se:|Dimensione|Codice operativo|
 |-----------------|-----------------------------------|----------|------------|
 |6|*Regolazione dello stack*! = 0 e *EF*= = 0|16/32|`add   sp,sp,#xx`|
-|7|*R*= = 1 e *Reg*! = 7|32|`vpop  {d8-dE}`|
+|7|*R*= = 1 e *reg*! = 7|32|`vpop  {d8-dE}`|
 |8|*C*= = 1 o (*L*= = 1 e *H*= = 0) o *R*= = 0 o *EF*= = 1|16/32|`pop   {registers}`|
 |9a|*H*= = 1 e *L*= = 0|16|`add   sp,sp,#0x10`|
 |9b|*H*= = 1 e *L*= = 1|32|`ldr   pc,[sp],#0x14`|
-|10a|*Ret*==1|16|`bx    reg`|
-|10b|*Ret*==2|32|`b     address`|
+|10a|*Ret*= = 1|16|`bx    reg`|
+|10b|*Ret*= = 2|32|`b     address`|
 
-L'istruzione 6 è la regolazione dello stack esplicita se viene specificata una regolazione non ridotta. In quanto *PF* indipendenti *EF*, è possibile eseguire il presente senza l'istruzione 6 l'istruzione 5 o viceversa.
+L'istruzione 6 è la regolazione dello stack esplicita se viene specificata una regolazione non ridotta. Poiché *PF* è indipendente da *EF*, è possibile che l'istruzione 5 sia presente senza l'istruzione 6 o viceversa.
 
-Le istruzioni 7 e 8 usano la stessa logica del prologo per determinare quali registri vengono ripristinati dallo stack, ma con queste due modifiche: prima di tutto *EF* viene usato al posto di *PF*; in secondo luogo, se *Ret*  = 0, LR viene sostituito da PC nell'elenco di registri e l'epilogo termina immediatamente.
+Nelle istruzioni 7 e 8 viene utilizzata la stessa logica del prologo per determinare quali registri vengono ripristinati dallo stack, ma con queste due modifiche: prima viene utilizzato *EF* al posto di *PF*; in secondo luogo, se *ret* = 0, LR viene sostituito con PC nell'elenco di registrazione e l'epilogo termina immediatamente.
 
-Se *H* è impostato, l'istruzione 9a o 9b è presente. Istruzione 9a viene usata quando *L* è 0, a indicare che LR non nello stack. In questo caso, lo stack viene regolato manualmente e *Ret* deve essere 1 o 2 per specificare una restituzione esplicita. Istruzione 9b viene usata quando *L* è 1, per indicare una fine precoce all'epilogo e per restituire e regolare lo stack contemporaneamente.
+Se è impostata l'opzione *H* , è presente l'istruzione 9a o 9b. L'istruzione 9a viene usata quando *L* è 0, per indicare che la LR non è nello stack. In questo caso, lo stack viene regolato manualmente e *ret* deve essere 1 o 2 per specificare un ritorno esplicito. L'istruzione 9b viene utilizzata quando *L* è 1, per indicare una fine iniziale dell'epilogo e per restituire e regolare lo stack nello stesso momento.
 
-Se l'epilogo non è ancora terminato, istruzione 10a o 10b, verrà utilizzato per indicare un ramo a 16 o 32 bit, in base al valore della *Ret*.
+Se l'epilogo non è ancora terminato, è presente l'istruzione 10A o 10B per indicare un ramo a 16 bit o a 32 bit, in base al valore di *ret*.
 
 ### <a name="xdata-records"></a>Record .xdata
 
 Quando il formato di rimozione compresso non è sufficiente per descrivere la rimozione di una funzione, è necessario creare un record .xdata a lunghezza variabile. L'indirizzo di questo record è archiviato nella seconda parola del record .pdata. Il formato di .xdata è un set di parole compresso di lunghezza variabile, con quattro sezioni:
 
-1. Un'intestazione da 1 o 2 parole che descrive la dimensione complessiva della struttura .xdata e fornisce dati di funzione chiave. La seconda parola è presente solo se il *conteggio di epilogo* e *parole di codice* campi vengono impostati entrambi su 0. I campi sono illustrati in dettaglio in questa tabella:
+1. Un'intestazione da 1 o 2 parole che descrive la dimensione complessiva della struttura .xdata e fornisce dati di funzione chiave. La seconda parola è presente solo se i campi *conteggio epilogo* e *parole codice* sono entrambi impostati su 0. I campi sono illustrati in dettaglio in questa tabella:
 
    |Word|BITS|Scopo|
    |----------|----------|-------------|
-   |0|0-17|*Funzione lunghezza* è un campo a 18 bit che indica la lunghezza totale della funzione in byte diviso 2. Se una funzione è maggiore di 512 KB, è necessario usare più record .pdata e .xdata per descrivere la funzione. Per maggiori dettagli, vedere la sezione Funzioni di grandi dimensioni più avanti in questo documento.|
-   |0|18-19|*Vers=2.1* è un campo a 2 bit che descrive la versione degli xdata rimanenti. Attualmente è definita solo la versione 0; i valori 1-3 sono riservati.|
-   |0|20|*X* è un campo a 1 bit che indica la presenza (1) o l'assenza (0) di dati dell'eccezione.|
-   |0|21|*E* è un campo a 1 bit che indica che le informazioni che descrivono un singolo epilogo sono compresse nell'intestazione (1) invece di richiedere l'ambito aggiuntivo parole successive (0).|
-   |0|22|*F* è un campo a 1 bit che indica che questo record descrive un frammento di funzione (1) o una funzione intera (0). Un frammento implica che non esiste un prologo e che l'elaborazione dei prologhi deve essere ignorata.|
-   |0|23-27|*Conteggio di epilogo* è un campo di bit 5 che ha due significati, a seconda dello stato del *elettronica* bit:<br /><br /> -Se *elettronica* è 0, questo campo è un conteggio del numero totale di ambiti di eccezione descritti nella sezione 3. Se esistono più di 31 ambiti in funzione, quindi questo campo e il *parole codice* campo debba essere impostato entrambi su 0 per indicare che è necessaria una parola di estensione.<br />-Se *elettronica* è 1, questo campo specifica l'indice del primo codice di rimozione che descrive l'unico epilogo.|
-   |0|28-31|*Codice parole* è un campo a 4 bit che specifica il numero di parole a 32 bit necessarie per contenere tutti i codici di rimozione nella sezione 4. Se più di 15 parole per sono necessari più di 63 byte di codice di rimozione, questo campo e il *conteggio di epilogo* campo debba essere impostato entrambi su 0 per indicare che è necessaria una parola di estensione.|
-   |1|0-15|*Il conteggio di epilogo estesa* è un campo a 16 bit che fornisce spazio aggiuntivo per codificare un numero di epiloghi insolitamente ampio. La parola di estensione che contiene questo campo è presente solo se il *conteggio di epilogo* e *parole codice* campi nella prima parola di intestazione sono impostati entrambi su 0.|
-   |1|16-23|*Estesi parole codice* è un campo a 8 bit che fornisce spazio aggiuntivo per codificare un numero di parole di codice di rimozione insolitamente ampio. La parola di estensione che contiene questo campo è presente solo se il *conteggio di epilogo* e *parole codice* campi nella prima parola di intestazione sono impostati entrambi su 0.|
-   |1|24-31|Riservata|
+   |0|0-17|La *lunghezza della funzione* è un campo a 18 bit che indica la lunghezza totale della funzione in byte, divisa per 2. Se una funzione è maggiore di 512 KB, è necessario usare più record .pdata e .xdata per descrivere la funzione. Per maggiori dettagli, vedere la sezione Funzioni di grandi dimensioni più avanti in questo documento.|
+   |0|18-19|*Vers* è un campo a 2 bit che descrive la versione degli XData rimanenti. Attualmente è definita solo la versione 0; i valori 1-3 sono riservati.|
+   |0|20|*X* è un campo a 1 bit che indica la presenza (1) o l'assenza (0) dei dati dell'eccezione.|
+   |0|21|*E* è un campo a 1 bit che indica che le informazioni che descrivono un singolo epilogo vengono compresse nell'intestazione (1) anziché richiedere ulteriori parole di ambito in un secondo momento (0).|
+   |0|22|*F* è un campo a 1 bit che indica che questo record descrive un frammento di funzione (1) o una funzione completa (0). Un frammento implica che non esiste un prologo e che l'elaborazione dei prologhi deve essere ignorata.|
+   |0|23-27|Il *conteggio* degli epiloghi è un campo a 5 bit che ha due significati, a seconda dello stato del bit *E* :<br /><br /> -Se *E* è 0, questo campo è un conteggio del numero totale di ambiti di eccezione descritti nella sezione 3. Se nella funzione sono presenti più di 31 ambiti, questo campo e il campo *parole codice* devono essere entrambi impostati su 0 per indicare che è necessaria una parola di estensione.<br />-Se *E* è 1, questo campo specifica l'indice del primo codice di rimozione che descrive l'unico epilogo.|
+   |0|28-31|*Code Words* è un campo a 4 bit che specifica il numero di parole a 32 bit necessarie per contenere tutti i codici di rimozione nella sezione 4. Se sono necessarie più di 15 parole per più di 63 byte di codice di rimozione, questo campo e il campo di *conteggio epilogo* devono essere entrambi impostati su 0 per indicare che è necessaria una parola di estensione.|
+   |1|0-15|Il *conteggio* degli epiloghi estesi è un campo a 16 bit che fornisce più spazio per la codifica di un numero insolitamente elevato di epiloghi. La parola di estensione che contiene questo campo è presente solo se i campi *conteggio epilogo* e *parole codice* nella prima parola di intestazione sono entrambi impostati su 0.|
+   |1|16-23|*Parole di codice estese* è un campo a 8 bit che fornisce più spazio per la codifica di un numero insolitamente elevato di parole di codice di rimozione. La parola di estensione che contiene questo campo è presente solo se i campi *conteggio epilogo* e *parole codice* nella prima parola di intestazione sono entrambi impostati su 0.|
+   |1|24-31|Riservato|
 
-1. I dati (se il *elettronica* bit nell'intestazione è stato impostato su 0) è un elenco di informazioni sugli ambiti di epilogo, compresse una per una parola e archiviate in ordine di inizio offset crescente. Ogni ambito contiene i campi seguenti:
+1. Dopo i dati dell'eccezione, se il bit *e* nell'intestazione è stato impostato su 0, è un elenco di informazioni sugli ambiti di epilogo, che vengono compressi uno a una parola e archiviati in ordine di incremento dell'offset iniziale. Ogni ambito contiene i campi seguenti:
 
    |BITS|Scopo|
    |----------|-------------|
-   |0-17|*Offset di avviare epilogo* è un campo a 18 bit che descrive l'offset dell'epilogo, in byte diviso 2, rispetto all'inizio della funzione.|
+   |0-17|L' *offset iniziale* dell'epilogo è un campo a 18 bit che descrive l'offset dell'epilogo, in byte diviso per 2, rispetto all'inizio della funzione.|
    |18-19|*Res* è un campo a 2 bit riservato per l'espansione futura. Il suo valore deve essere 0.|
-   |20-23|*Condizione* è un campo a 4 bit che indica la condizione in cui viene eseguito l'epilogo. Per gli epiloghi non condizionali, deve essere impostato su 0xE, che significa "sempre". Si noti che un epilogo deve essere interamente condizionale o interamente non condizionale e, in modalità Thumb-2, l'epilogo inizia con la prima istruzione dopo l'opcode IT.|
-   |24-31|*Indice iniziale di epilogo* è un campo a 8 bit che indica l'indice di byte del primo codice di rimozione che descrive questo epilogo.|
+   |20-23|*Condition* è un campo a 4 bit che fornisce la condizione in cui viene eseguito l'epilogo. Per gli epiloghi non condizionali, deve essere impostato su 0xE, che significa "sempre". Si noti che un epilogo deve essere interamente condizionale o interamente non condizionale e, in modalità Thumb-2, l'epilogo inizia con la prima istruzione dopo l'opcode IT.|
+   |24-31|L' *indice di inizio epilogo* è un campo a 8 bit che indica l'indice di byte del primo codice di rimozione che descrive questo epilogo.|
 
 1. L'elenco di ambiti di epilogo è seguito da una matrice di byte che contiene codici di rimozione, descritti in dettaglio nella sezione Codici di rimozione di questo articolo. Questa matrice viene riempita alla fine fino al più vicino confine di parola completa. I byte sono archiviati in ordine little-endian, in modo da essere direttamente recuperabili in modalità little-endian.
 
-1. Se il *X* campo dell'intestazione è 1, i byte di codice di rimozione sono seguiti dalle informazioni sul gestore dell'eccezione. Si tratta di un *eccezione gestore RVA* che contiene l'indirizzo del gestore di eccezioni, seguito immediatamente dalla quantità di dati richiesti dal gestore di eccezioni (a lunghezza variabile).
+1. Se il campo *X* nell'intestazione è 1, i byte di codice di rimozione sono seguiti dalle informazioni del gestore di eccezioni. È costituito da un *RVA del gestore di eccezioni* che contiene l'indirizzo del gestore di eccezioni, seguito immediatamente dalla quantità di dati (a lunghezza variabile) richiesta dal gestore di eccezioni.
 
 Il record .xdata è progettato in modo da consentire il recupero dei primi 8 byte e il calcolo della dimensione totale del record, esclusa la lunghezza dei dati di eccezione a lunghezza variabile che seguono. Questo frammento di codice calcola la dimensione del record:
 
@@ -220,7 +220,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Anche se il prologo e ogni epilogo è indicizzato nei codici di rimozione, la tabella è condivisa tra di essi. Non è insolito che possano condividere tutti gli stessi codici di rimozione. È consigliabile che i writer dei compilatori siano ottimizzati per questo caso, perché l'indice più grande che si può specificare è 255 e questo limita il numero totale di codici di rimozione possibile per una determinata funzione.
+Sebbene il prologo e ogni epilogo includano un indice nei codici di rimozione, la tabella viene condivisa tra di essi. Non è insolito che possano condividere tutti gli stessi codici di rimozione. È consigliabile che i writer dei compilatori siano ottimizzati per questo caso, perché l'indice più grande che si può specificare è 255 e questo limita il numero totale di codici di rimozione possibile per una determinata funzione.
 
 ### <a name="unwind-codes"></a>Codici di rimozione
 
@@ -236,34 +236,34 @@ Se fosse garantito che le eccezioni possono verificarsi solo nel corpo di una fu
 
 La tabella seguente illustra il mapping dai codici di rimozione ai codici operativi. I codici più comuni includono un solo byte, mentre quelli meno comuni richiedono due, tre o persino quattro byte. Ogni codice è archiviato dal byte più significativo a quello meno significativo. La struttura di codici di rimozione è diversa rispetto alla codifica descritta in nell'interfaccia EABI ARM perché questi codici di rimozione sono progettati per disporre di un mapping uno a uno agli opcode nel prologo e nell'epilogo per consentire la rimozione di prologhi ed epiloghi parzialmente eseguiti.
 
-|Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Descrizione|
+|Byte 1|Byte 2|Byte 3|Byte 4|Opsize|Spiegazione|
 |------------|------------|------------|------------|------------|-----------------|
-|00-7F||||16|`add   sp,sp,#X`<br /><br /> dove X è (Code & 0x7F) \* 4|
-|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> dove LR è estratto se Code & 0x2000 e r0-r12 sono estratti se il bit corrispondente viene impostato in Code & 0x1FFF|
-|C0-CF||||16|`mov   sp,rX`<br /><br /> dove X è Code & 0x0F|
-|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> dove X è (Code & 0x03) + 4 e LR è estratto se Code & 0x04|
-|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> dove X è (Code & 0x03) + 8 e LR è estratto se Code & 0x04|
-|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> dove X è (Code & 0x07) + 8|
-|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> dove X è (Code & 0x03FF) \* 4|
-|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> dove LR è estratto se Code & 0x0100 e r0-r7 sono estratti se il bit corrispondente viene impostato in Code & 0x00FF|
+|00-7F||||16|`add   sp,sp,#X`<br /><br /> dove X è (codice & 0x7F) \* 4|
+|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> dove LR viene estratto se il codice & 0x2000 e R0-R12 vengono estratti se il bit corrispondente è impostato nel codice & 0x1FFF|
+|C0-CF||||16|`mov   sp,rX`<br /><br /> dove X è il codice & 0x0F|
+|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> dove X è (codice & 0x03) + 4 e LR viene estratto se il codice & 0x04|
+|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> dove X è (codice & 0x03) + 8 e LR viene estratto se il codice & 0x04|
+|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> dove X è (codice & 0x07) + 8|
+|E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> dove X è (codice & 0x03FF) \* 4|
+|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> dove LR viene estratto se il codice & 0x0100 e R0-R7 vengono estratti se il bit corrispondente viene impostato nel codice & 0x00FF|
 |EE|00-0F|||16|Specifico di Microsoft|
 |EE|10-FF|||16|Disponibile|
-|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> dove X è (Code & 0x000F) \* 4|
+|EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> dove X è (codice & 0x000F) \* 4|
 |EF|10-FF|||32|Disponibile|
 |F0-F4||||-|Disponibile|
-|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> dove S è (Code & 0x00F0) >> 4 ed E è Code & 0x000F|
-|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> dove S è ((Code & 0x00F0) >> 4) + 16 ed E è (Code & 0x000F) + 16|
-|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> dove X è (Code & 0x00FFFF) \* 4|
-|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> dove X è (Code & 0x00FFFFFF) \* 4|
-|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> dove X è (Code & 0x00FFFF) \* 4|
-|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> dove X è (Code & 0x00FFFFFF) \* 4|
+|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> dove S è (code & 0x00F0) > > 4 ed E è il codice & 0x000F|
+|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> dove S è ((codice & 0x00F0) > > 4) + 16 ed e è (codice & 0x000F) + 16|
+|F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> dove X è (codice & 0x00FFFF) \* 4|
+|F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> dove X è (codice & 0x00FFFFFF) \* 4|
+|F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> dove X è (codice & 0x00FFFF) \* 4|
+|FA|00-FF|00-FF|00-FF|32|`add   sp,sp,#X`<br /><br /> dove X è (codice & 0x00FFFFFF) \* 4|
 |FB||||16|nop (16 bit)|
 |FC||||32|nop (32 bit)|
 |FD||||16|end + nop a 16 bit nell'epilogo|
 |FE||||32|end + nop a 32 bit nell'epilogo|
 |FF||||-|end|
 
-Mostra l'intervallo di valori esadecimali per ogni byte in un codice di rimozione *codice*, insieme alle dimensioni opcode *Opsize* e l'interpretazione dell'istruzione originale corrispondente. Le celle vuote indicano codici di rimozione più brevi. Nelle istruzioni con valori ampi che coprono più byte, i bit più significativi sono archiviati per primi. Il *Opsize* campo Mostra la dimensione del codice operativo implicita associata a ogni operazione Thumb-2. Le voci apparentemente duplicate nella tabella con diverse codifiche consentono di distinguere le varie dimensioni del codice operativo.
+Viene visualizzato l'intervallo di valori esadecimali per ogni byte in un *codice*di codice di rimozione, insieme alle dimensioni opcode *Opsize* e all'interpretazione dell'istruzione originale corrispondente. Le celle vuote indicano codici di rimozione più brevi. Nelle istruzioni con valori ampi che coprono più byte, i bit più significativi sono archiviati per primi. Il campo *Opsize* Mostra le dimensioni del codice operativo implicite associate a ogni operazione Thumb-2. Le voci apparentemente duplicate nella tabella con diverse codifiche consentono di distinguere le varie dimensioni del codice operativo.
 
 I codici di rimozione sono progettati in modo tale che il primo byte del codice indica sia la dimensione totale in byte del codice, sia la dimensione dell'opcode corrispondente nel flusso di istruzioni. Per calcolare la dimensione del prologo o epilogo, scorrere i codici di rimozione dall'inizio della sequenza fino alla fine e usare una tabella di ricerca o un metodo analogo per determinare la lunghezza dell'opcode corrispondente.
 
@@ -298,9 +298,9 @@ Accanto a ogni codice operativo è presente il codice di rimozione appropriato p
 
 Il codice 0xFD è un codice speciale per la fine della sequenza che indica che l'epilogo è più lungo di un'istruzione a 16 bit rispetto al prologo. Questo aumenta notevolmente le possibilità di condivisione dei codici di rimozione.
 
-Nell'esempio, se si verifica un'eccezione durante l'esecuzione del corpo della funzione compreso tra prologo ed epilogo, la rimozione inizia con il caso dell'epilogo, all'offset 0 all'interno del codice dell'epilogo. Questo corrisponde all'offset 0x140 nell'esempio. L'agente di rimozione esegue la sequenza di rimozione completa poiché non è stata eseguita alcuna pulizia. Se invece l'eccezione si verifica un'istruzione dopo l'inizio del codice dell'epilogo, l'agente di rimozione può eseguire la rimozione saltando il primo codice di rimozione. Dato un mapping uno a uno tra codici operativi e codici di rimozione, rimozione dall'istruzione *n* contenute nell'epilogo, l'agente di rimozione deve saltare i primi *n* codici di rimozione.
+Nell'esempio, se si verifica un'eccezione durante l'esecuzione del corpo della funzione compreso tra prologo ed epilogo, la rimozione inizia con il caso dell'epilogo, all'offset 0 all'interno del codice dell'epilogo. Questo corrisponde all'offset 0x140 nell'esempio. L'agente di rimozione esegue la sequenza di rimozione completa poiché non è stata eseguita alcuna pulizia. Se invece l'eccezione si verifica un'istruzione dopo l'inizio del codice dell'epilogo, l'agente di rimozione può eseguire la rimozione saltando il primo codice di rimozione. Dato un mapping uno-a-uno tra i codici operativi e i codici di rimozione, se si rimuove dall'istruzione *n* nell'epilogo, l'oggetto di rimozione deve ignorare i primi *n* codici di rimozione.
 
-Una logica simile è applicabile al contrario per il prologo. In caso di rimozione dall'offset 0 nel prologo, non deve essere eseguito nulla. Per la rimozione da un'istruzione in avanti, la sequenza di rimozione deve iniziare da un codice di rimozione dalla fine perché i codici di rimozione del prologo sono archiviati in ordine inverso. In generale, la rimozione dall'istruzione *n* nel prologo, rimozione deve iniziare l'esecuzione in *n* codici di rimozione dalla fine dell'elenco di codici.
+Una logica simile è applicabile al contrario per il prologo. In caso di rimozione dall'offset 0 nel prologo, non deve essere eseguito nulla. Per la rimozione da un'istruzione in avanti, la sequenza di rimozione deve iniziare da un codice di rimozione dalla fine perché i codici di rimozione del prologo sono archiviati in ordine inverso. In generale, se si esegue la rimozione dall'istruzione *n* nel prologo, la rimozione dovrebbe iniziare l'esecuzione a *n* codici di rimozione dalla fine dell'elenco di codici.
 
 I codici di rimozione di prologo ed epilogo non sempre corrispondono esattamente. In questo caso, può essere necessario che la matrice di codici di rimozione contenga più sequenze di codice. Per determinare l'offset per l'inizio dell'elaborazione dei codici, usare la logica seguente:
 
@@ -326,13 +326,13 @@ Supponendo che il prologo della funzione si trovi all'inizio della funzione e no
 
 - Solo epiloghi; prologo e altri eventuali epiloghi in altri frammenti.
 
-Nel primo caso, deve essere descritto solo il prologo. Questa operazione può essere eseguita in formato. pdata compatto descrivendo normalmente il prologo e specificando una *Ret* valore 3 per non indicare nessun epilogo. Nel formato .xdata completo, è possibile specificare i codici di rimozione del prologo all'indice 0 come di consueto e specificare un numero di epiloghi pari a 0.
+Nel primo caso, deve essere descritto solo il prologo. Questa operazione può essere eseguita nel formato Compact. pData descrivendo normalmente il prologo e specificando un valore *ret* pari a 3 per indicare nessun epilogo. Nel formato .xdata completo, è possibile specificare i codici di rimozione del prologo all'indice 0 come di consueto e specificare un numero di epiloghi pari a 0.
 
 Il secondo caso corrisponde esattamente a una funzione normale. Se c'è solo un epilogo nel frammento e si trova alla fine del frammento, è possibile usare un record .pdata compatto. Altrimenti, è necessario usare un record .xdata completo. Tenere presente che gli offset specificati per l'inizio dell'epilogo sono relativi all'inizio del frammento, non all'inizio originario della funzione.
 
 Il terzo e quarto caso sono varianti del primo e secondo caso rispettivamente, con la differenza che non contengono un prologo. In situazioni di questo tipo, si presume che prima dell'inizio dell'epilogo sia presente codice che è considerato parte del corpo della funzione, che normalmente verrebbe rimosso annullando gli effetti del prologo. Questi casi devono quindi essere codificati con uno pseudo-prologo, che descrive le modalità di rimozione dal corpo, ma che viene considerato di lunghezza 0 quando viene stabilito se eseguire una rimozione parziale all'inizio del frammento. In alternativa, questo pseudo-prologo può essere descritto usando gli stessi codici di rimozione dell'epilogo perché presumibilmente eseguono operazioni equivalenti.
 
-Nel terzo e quarto caso, la presenza di uno pseudo-prologo è specificata impostando il *Flag* campo del record. pdata compatto su 2 oppure impostando il *F* flag nell'intestazione. XData su 1. In entrambi i casi, il controllo della presenza di una rimozione epilogo parziale viene ignorato e tutte le rimozioni non epilogo vengono considerate complete.
+Nel terzo e quarto caso, la presenza di uno pseudo-prologo viene specificata impostando il campo del *flag* del record Compact. pData su 2 oppure impostando il flag *F* nell'intestazione. XData su 1. In entrambi i casi, il controllo della presenza di una rimozione epilogo parziale viene ignorato e tutte le rimozioni non epilogo vengono considerate complete.
 
 #### <a name="large-functions"></a>Funzioni di grandi dimensioni
 
@@ -344,7 +344,7 @@ Se un frammento non include prologo o epiloghi, è comunque necessario che il re
 
 #### <a name="shrink-wrapping"></a>Wrapping di riduzione
 
-È un caso speciale più complesso di frammenti di funzione *wrapping*, una tecnica per posticipare registra salvato dall'inizio della funzione in un secondo momento nella funzione, per ottimizzare per i casi semplici che non richiedono salvataggio dei registri. Può essere descritto come un'area esterna che alloca lo spazio stack ma salva un set minimo di registri e un'area interna che salva e ripristina ulteriori registri.
+Un caso speciale più complesso di frammenti di funzione è la *riduzione del ritorno a capo*, una tecnica per rinviare i salvataggi del registro dall'inizio della funzione a un momento successivo della funzione, per ottimizzare i casi semplici che non richiedono il salvataggio del registro. Può essere descritto come un'area esterna che alloca lo spazio stack ma salva un set minimo di registri e un'area interna che salva e ripristina ulteriori registri.
 
 ```asm
 ShrinkWrappedFunction
@@ -386,7 +386,7 @@ ShrinkWrappedFunction
     pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
-L'elemento chiave in questo scenario è che a ogni limite di istruzione lo stack è pienamente coerente con i codici di rimozione per l'area. Se si verifica una rimozione prima del push interno in questo esempio, è considerata parte dell'area A e verrà rimosso solo il prologo dell'area A. Se la rimozione si verifica dopo il push interno, viene considerata parte dell'area B, che è priva di prologo ma contiene codici di rimozione che descrivono il push interno e il prologo originale dall'area A. simile per la logica mantiene per il pop interno.
+L'elemento chiave in questo scenario è che a ogni limite di istruzione lo stack è pienamente coerente con i codici di rimozione per l'area. Se si verifica una rimozione prima del push interno in questo esempio, è considerata parte dell'area A e verrà rimosso solo il prologo dell'area A. Se la rimozione avviene dopo il push interno, viene considerata parte dell'area B, che non ha un prologo, ma contiene codici di rimozione che descrivono sia il push interno sia il prologo originale dall'area A. la logica analoga contiene il pop interno.
 
 ### <a name="encoding-optimizations"></a>Ottimizzazioni della codifica
 
@@ -410,7 +410,7 @@ Se dopo gli epiloghi a istruzione singola ignorati non restano altri epiloghi, p
 
 In questi esempi, la base dell'immagine è in 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Esempio 1: Funzione foglia, nessuna variabile locale
+### <a name="example-1-leaf-function-no-locals"></a>Esempio 1: Funzione foglia, nessuna variabili locali
 
 ```asm
 Prologue:
@@ -424,27 +424,27 @@ Epilogue:
 
 - Parola 0
 
-   - *Inizio della funzione RVA* = 0x000535F8 (= 0x004535F8 0x00400000)
+   - *Inizio funzione RVA* = 0x000535F8 (= 0x004535F8-0x00400000)
 
 - Parola 1
 
-   - *Flag* = 1, che indica formati canonici di prologo ed epilogo
+   - *Flag* = 1, che indica i formati canonici prologo ed epilogo
 
-   - *Funzione lunghezza* = seguente errore:0x31 (0x62/2 =)
+   - *Lunghezza funzione* = 0x31 (= 0x62/2)
 
-   - *RET* = 1, che indica un ramo a 16 bit restituito
+   - *Ret* = 1, che indica un ritorno a un ramo a 16 bit
 
-   - *H* = 0, che indica i parametri non erano ospitati
+   - *H* = 0, che indica che i parametri non sono stati assegnati
 
-   - *R*= 0 e *Reg* = 1, che indicano il push/pop di r4-r5
+   - *R*= 0 e *reg* = 1, che indica le notifiche push/pop di R4-R5
 
-   - *L* = 0, che indica di non salvare/ripristinare la LR
+   - *L* = 0, che indica nessun salvataggio/ripristino LR
 
-   - *C* = 0, che indica nessun concatenazione di frame
+   - *C* = 0, che indica nessun concatenamento di frame
 
-   - *Stack Adjust* = 0, che indica nessun regolazione dello stack
+   - *Regolazione dello stack* = 0, che indica nessuna regolazione dello stack
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Esempio 2: Funzione annidata con allocazione locale
+### <a name="example-2-nested-function-with-local-allocation"></a>Esempio 2 Funzione nidificata con allocazione locale
 
 ```asm
 Prologue:
@@ -459,27 +459,27 @@ Epilogue:
 
 - Parola 0
 
-   - *Inizio della funzione RVA* = 0x000533AC (= 0x004533AC-0x00400000)
+   - *Inizio funzione RVA* = 0x000533AC (= 0x004533AC-0x00400000)
 
 - Parola 1
 
-   - *Flag* = 1, che indica formati canonici di prologo ed epilogo
+   - *Flag* = 1, che indica i formati canonici prologo ed epilogo
 
-   - *Funzione lunghezza* = 0x35 (0x6A/2 =)
+   - *Lunghezza funzione* = 0x35 (= 0x6A/2)
 
-   - *RET* = 0, che indica un pop {pc} return
+   - *Ret* = 0, che indica un ritorno pop {PC}
 
-   - *H* = 0, che indica i parametri non erano ospitati
+   - *H* = 0, che indica che i parametri non sono stati assegnati
 
-   - *R*= 0 e *Reg* = 3, che indicano il push/pop di r4-r7
+   - *R*= 0 e *reg* = 3, che indica le notifiche push/pop di R4-R7
 
-   - *L* = 1, che indica di LR è stato salvato/ripristinato
+   - *L* = 1, che indica che è stato salvato/ripristinato il valore LR
 
-   - *C* = 0, che indica nessun concatenazione di frame
+   - *C* = 0, che indica nessun concatenamento di frame
 
-   - *Stack regolare* = 3 (0x0C/4 =)
+   - *Regolazione dello stack* = 3 (= 0x0C/4)
 
-### <a name="example-3-nested-variadic-function"></a>Esempio 3: Funzione Variadic annidata
+### <a name="example-3-nested-variadic-function"></a>Esempio 3: Funzione Variadic nidificata
 
 ```asm
 Prologue:
@@ -494,25 +494,25 @@ Epilogue:
 
 - Parola 0
 
-   - *Inizio della funzione RVA* = 0x00053988 (= 0x00453988 0x00400000)
+   - *Inizio funzione RVA* = 0x00053988 (= 0x00453988-0x00400000)
 
 - Parola 1
 
-   - *Flag* = 1, che indica formati canonici di prologo ed epilogo
+   - *Flag* = 1, che indica i formati canonici prologo ed epilogo
 
-   - *Funzione lunghezza* = 0x2A (0x54/2 =)
+   - *Lunghezza funzione* = 0x2A (= 0x54/2)
 
-   - *RET* = 0, che indica un pop {pc}-applicare uno stile di ritorno (in questo caso un pc, chiamati [sp], come risultato 0x14 & return)
+   - *Ret* = 0, che indica un ritorno in stile pop {PC} (in questo caso un computer LDR, [SP], #0x14 Return)
 
-   - *H* = 1, che indica i parametri erano ospitati
+   - *H* = 1, che indica che i parametri sono stati assegnati
 
-   - *R*= 0 e *Reg* = 2, che indicano il push/pop di r4-r6
+   - *R*= 0 e *reg* = 2, che indica push/pop di R4-R6
 
-   - *L* = 1, che indica di LR è stato salvato/ripristinato
+   - *L* = 1, che indica che è stato salvato/ripristinato il valore LR
 
-   - *C* = 0, che indica nessun concatenazione di frame
+   - *C* = 0, che indica nessun concatenamento di frame
 
-   - *Stack Adjust* = 0, che indica nessun regolazione dello stack
+   - *Regolazione dello stack* = 0, che indica nessuna regolazione dello stack
 
 ### <a name="example-4-function-with-multiple-epilogues"></a>Esempio 4: Funzione con più epiloghi
 
@@ -540,43 +540,43 @@ Epilogues:
 
 - Parola 0
 
-   - *Inizio della funzione RVA* = 0x000592F4 (= 0x004592F4 0x00400000)
+   - *Inizio funzione RVA* = 0x000592F4 (= 0x004592F4-0x00400000)
 
 - Parola 1
 
-   - *Flag* = 0, che indica i record. XData (necessario a causa di più epiloghi)
+   - *Flag* = 0, che indica la presenza del record. XData (obbligatorio a causa di più epiloghi)
 
-   - *. XData indirizzo* -0x00400000
+   - *indirizzo. XData* -0x00400000
 
 .xdata (variabile, 6 parole):
 
 - Parola 0
 
-   - *Funzione lunghezza* = 0x0001A3 (0x000346/2 =)
+   - *Lunghezza funzione* = 0x0001A3 (= 0x000346/2)
 
-   - *Vers=2.1* = 0, che indica la prima versione di xdata
+   - *Vers* = 0, che indica la prima versione di XData
 
-   - *X* = 0, che indica nessun dato di eccezione
+   - *X* = 0, che indica l'assenza di dati di eccezione
 
    - *E* = 0, che indica un elenco di ambiti di epilogo
 
-   - *F* = 0, che indica una descrizione della funzione completa, incluso il prologo
+   - *F* = 0, che indica una descrizione completa della funzione, incluso il prologo
 
-   - *Conteggio di epilogo* = 0x04, che indica 4 ambiti di epilogo totale
+   - *Epilogo count* = 0x04, che indica i 4 ambiti di epilogo totali
 
-   - *Codice parole* = 0x01, che indica una parola a 32 bit di codici di rimozione
+   - *Code Words* = 0x01, che indica parole a 1 32 bit di codici di rimozione
 
 - Parole 1-4, che descrivono 4 ambiti di epilogo in 4 posizioni. Ogni ambito ha un set comune di codici di rimozione, condiviso con il prologo, all'offset 0x00, e non è condizionale, specificando la condizione 0x0E (sempre).
 
 - Codici di rimozione, a partire dalla parola 5: (condivisi tra prologo/epilogo)
 
-   - Codice di rimozione 0 = 0x06: sp + = (6 << 2)
+   - Codice di rimozione 0 = 0x06: SP + = (6 < < 2)
 
    - Codice di rimozione 1 = 0xDE: pop {r4-r10, lr}
 
    - Codice di rimozione 2 = 0xFF: end
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Esempio 5: Funzione con Stack dinamico e prologo interno
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Esempio 5: Funzione con stack dinamico ed epilogo interno
 
 ```asm
 Prologue:
@@ -600,33 +600,33 @@ Epilogue:
 
 - Parola 0
 
-   - *Inizio della funzione RVA* = 0x00085A20 (= 0x00485A20 0x00400000)
+   - *Inizio funzione RVA* = 0x00085A20 (= 0x00485A20-0x00400000)
 
 - Parola 1
 
-   - *Flag* = 0, che indica i record. XData (necessario più epiloghi)
+   - *Flag* = 0, che indica la presenza del record. XData (necessario a causa di più epiloghi)
 
-   - *. XData indirizzo* -0x00400000
+   - *indirizzo. XData* -0x00400000
 
 .xdata (variabile, 3 parole):
 
 - Parola 0
 
-   - *Funzione lunghezza* = 0x0001A3 (0x000346/2 =)
+   - *Lunghezza funzione* = 0x0001A3 (= 0x000346/2)
 
-   - *Vers=2.1* = 0, che indica la prima versione di xdata
+   - *Vers* = 0, che indica la prima versione di XData
 
-   - *X* = 0, che indica nessun dato di eccezione
+   - *X* = 0, che indica l'assenza di dati di eccezione
 
    - *E* = 0, che indica un elenco di ambiti di epilogo
 
-   - *F* = 0, che indica una descrizione della funzione completa, incluso il prologo
+   - *F* = 0, che indica una descrizione completa della funzione, incluso il prologo
 
-   - *Conteggio di epilogo* = 0x001, che indica 1 ambito di epilogo totale
+   - *Epilogo count* = 0x001, che indica l'ambito di un epilogo totale
 
-   - *Codice parole* = 0x01, che indica una parola a 32 bit di codici di rimozione
+   - *Code Words* = 0x01, che indica parole a 1 32 bit di codici di rimozione
 
-- Word 1: Ambito di epilogo all'offset 0xC6 (= 0x18c/2), avvio indice codice di rimozione in 0x00 e con la condizione 0x0E (sempre)
+- Parola 1: Ambito dell'epilogo all'offset 0xC6 (= 0x18C/2), avvio dell'indice di codice di rimozione in 0x00 e con una condizione di 0x0E (always)
 
 - Codici di rimozione, a partire dalla parola 2: (condivisi tra prologo/epilogo)
 
@@ -634,7 +634,7 @@ Epilogue:
 
    - Codice di rimozione 1 = 0xDC: pop {r4-r8, lr}
 
-   - Codice di rimozione 2 = 0x04: sp + = (4 << 2)
+   - Codice di rimozione 2 = 0x04: SP + = (4 < < 2)
 
    - Codice di rimozione 3 = 0xFD: end, conta come istruzione a 16 bit per l'epilogo
 
@@ -658,43 +658,43 @@ Epilogue:
 
 - Parola 0
 
-   - *Inizio della funzione RVA* = 0x00088C24 (= 0x00488C24 0x00400000)
+   - *Inizio funzione RVA* = 0x00088C24 (= 0x00488C24-0x00400000)
 
 - Parola 1
 
-   - *Flag* = 0, che indica i record. XData (necessario più epiloghi)
+   - *Flag* = 0, che indica la presenza del record. XData (necessario a causa di più epiloghi)
 
-   - *. XData indirizzo* -0x00400000
+   - *indirizzo. XData* -0x00400000
 
 .xdata (variabile, 5 parole):
 
 - Parola 0
 
-   - *Funzione lunghezza* = 0x000027 (0x00004E/2 =)
+   - *Lunghezza funzione* = 0x000027 (= 0x00004E/2)
 
-   - *Vers=2.1* = 0, che indica la prima versione di xdata
+   - *Vers* = 0, che indica la prima versione di XData
 
-   - *X* = 1, che indica i dati di eccezione presenti
+   - *X* = 1, che indica i dati dell'eccezione presenti
 
-   - *E* = 1, che indica un unico epilogo
+   - *E* = 1, che indica un singolo epilogo
 
-   - *F* = 0, che indica una descrizione della funzione completa, incluso il prologo
+   - *F* = 0, che indica una descrizione completa della funzione, incluso il prologo
 
-   - *Conteggio di epilogo* = 0x00, che indica i codici di rimozione epilogo iniziano all'offset 0x00
+   - *Conteggio* degli epiloghi = 0x00, che indica che i codici di rimozione dell'epilogo iniziano all'offset 0x00
 
-   - *Codice parole* = 0x02, che indica due parole a 32 bit di codici di rimozione
+   - *Code Words* = 0x02, che indica parole a 2 32 bit di codici di rimozione
 
 - Codici di rimozione, a partire dalla parola 1:
 
    - Codice di rimozione 0 = 0xC7: sp = r7
 
-   - Codice di rimozione 1 = 0x05: sp + = (5 << 2).
+   - Codice di rimozione 1 = 0x05: SP + = (5 < < 2)
 
    - Codice di rimozione 2 = 0xED/0x90: pop {r4, r7, lr}
 
    - Codice di rimozione 4 = 0xFF: end
 
-- Parola 3 specifica un gestore di eccezioni = 0x0019A7ED (= 0x0059A7ED - 0x00400000)
+- La parola 3 specifica un gestore di eccezioni = 0x0019A7ED (= 0x0059A7ED-0x00400000)
 
 - La parola 4 e successive sono dati di eccezione inline
 
@@ -717,25 +717,25 @@ Function:
 
 - Parola 0
 
-   - *Inizio della funzione RVA* = 0x00088C72 (= 0x00488C72 0x00400000)
+   - *Inizio funzione RVA* = 0x00088C72 (= 0x00488C72-0x00400000)
 
 - Parola 1
 
-   - *Flag* = 1, che indica formati canonici di prologo ed epilogo
+   - *Flag* = 1, che indica i formati canonici prologo ed epilogo
 
-   - *Funzione lunghezza* 0x0B (0x16/2 =)
+   - *Lunghezza funzione* = 0x0B (= 0x16/2)
 
-   - *RET* = 0, che indica un pop {pc} return
+   - *Ret* = 0, che indica un ritorno pop {PC}
 
-   - *H* = 0, che indica i parametri non erano ospitati
+   - *H* = 0, che indica che i parametri non sono stati assegnati
 
-   - *R*= 0 e *Reg* = 7, che indica nessun registro è stato salvato/ripristinato
+   - *R*= 0 e *reg* = 7, che indica che non è stato salvato/ripristinato alcun registro
 
-   - *L* = 1, che indica di LR è stato salvato/ripristinato
+   - *L* = 1, che indica che è stato salvato/ripristinato il valore LR
 
-   - *C* = 0, che indica nessun concatenazione di frame
+   - *C* = 0, che indica nessun concatenamento di frame
 
-   - *Stack Adjust* = 1, che indica una regolazione dello stack di 1 × 4 byte
+   - Regolazione *dello stack* = 1, che indica una regolazione dello stack di 1 × 4 byte
 
 ## <a name="see-also"></a>Vedere anche
 

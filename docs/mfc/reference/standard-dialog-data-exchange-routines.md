@@ -4,44 +4,44 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 05eaa86133bb55cfbf62ec68f81e7ca7d9ab169b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47586f9cff0fcbe2cd7bad31f3d93fed08190830
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310006"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511578"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Routine DDX (Dialog Data Exchange) standard
 
-Questo argomento elenca le routine di exchange (DDX) finestra di dialogo standard i dati usate per i controlli di finestra di dialogo comuni MFC.
+In questo argomento vengono elencate le routine DDX (Dialog Data Exchange) standard utilizzate per i controlli della finestra di dialogo MFC comuni.
 
 > [!NOTE]
->  Le routine di scambio di dati finestra di dialogo standard sono definite in afxdd_.h di file di intestazione. Tuttavia, le applicazioni devono includere AFXWIN. h.
+>  Le routine di scambio di dati della finestra di dialogo standard vengono definite nel file di intestazione afxdd_. h. Tuttavia, le applicazioni devono includere AFXWIN. h.
 
 ### <a name="ddx-functions"></a>Funzioni DDX
 
 |||
 |-|-|
 |[DDX_CBIndex](#ddx_cbindex)|Inizializza o recupera l'indice della selezione corrente di un controllo casella combinata.|
-|[DDX_CBString](#ddx_cbstring)|Inizializza o recupera il contenuto corrente del campo di modifica di un controllo casella combinata.|
-|[DDX_CBStringExact](#ddx_cbstringexact)|Inizializza o recupera il contenuto corrente del campo di modifica di un controllo casella combinata.|
+|[DDX_CBString](#ddx_cbstring)|Inizializza o Recupera il contenuto corrente del campo di modifica di un controllo casella combinata.|
+|[DDX_CBStringExact](#ddx_cbstringexact)|Inizializza o Recupera il contenuto corrente del campo di modifica di un controllo casella combinata.|
 |[DDX_Check](#ddx_check)|Inizializza o recupera lo stato corrente di un controllo casella di controllo.|
-|[DDX_Control](#ddx_control)|Le sottoclassi un determinato controllo all'interno di una finestra di dialogo.|
-|[DDX_DateTimeCtrl](#ddx_datetimectrl)|Inizializza o recupera i dati di data o ora di un controllo selezione data e ora.|
-|[DDX_IPAddress](#ddx_ipaddress)|Inizializza o recupera il valore corrente di un controllo indirizzo IP.|
+|[DDX_Control](#ddx_control)|Sottoclassi di un controllo specificato all'interno di una finestra di dialogo.|
+|[DDX_DateTimeCtrl](#ddx_datetimectrl)|Inizializza o recupera i dati di data e/o ora di un controllo selezione data e ora.|
+|[DDX_IPAddress](#ddx_ipaddress)|Inizializza o Recupera il valore corrente di un controllo dell'indirizzo IP.|
 |[DDX_LBIndex](#ddx_lbindex)|Inizializza o recupera l'indice della selezione corrente di un controllo casella di riepilogo.|
-|[DDX_LBString](#ddx_lbstring)|Inizializza o recupera la selezione corrente all'interno di un controllo casella di riepilogo.|
-|[DDX_LBStringExact](#ddx_lbstringexact)|Inizializza o recupera la selezione corrente all'interno di un controllo casella di riepilogo.|
-|[DDX_ManagedControl](#ddx_managedcontrol)|Crea un controllo .NET corrispondenti ID di risorsa. del controllo|
-|[DDX_MonthCalCtrl](#ddx_monthcalctrl)|Inizializza o recupera il valore corrente di un controllo calendario mensile.|
-|[DDX_Radio](#ddx_radio)|Inizializza o recupera l'indice in base 0 del controllo di opzione che è attualmente selezionato all'interno di un gruppo di controllo di opzione.|
-|[DDX_Scroll](#ddx_scroll)|Inizializza o recupera la posizione corrente del cursore di un controllo di scorrimento.|
-|[DDX_Slider](#ddx_slider)|Inizializza o recupera la posizione corrente del cursore di un controllo dispositivo di scorrimento.|
-|[DDX_Text](#ddx_text)|Inizializza o recupera il valore corrente di un controllo di modifica.|
+|[DDX_LBString](#ddx_lbstring)|Inizializza o recupera la selezione corrente in un controllo casella di riepilogo.|
+|[DDX_LBStringExact](#ddx_lbstringexact)|Inizializza o recupera la selezione corrente in un controllo casella di riepilogo.|
+|[DDX_ManagedControl](#ddx_managedcontrol)|Crea un controllo .NET che corrisponde all'ID risorsa del controllo.|
+|[DDX_MonthCalCtrl](#ddx_monthcalctrl)|Inizializza o Recupera il valore corrente di un controllo di calendario mensile.|
+|[DDX_Radio](#ddx_radio)|Inizializza o recupera l'indice in base zero del controllo radio attualmente selezionato all'interno di un gruppo di controllo radio.|
+|[DDX_Scroll](#ddx_scroll)|Inizializza o recupera la posizione corrente del cursore del controllo di scorrimento.|
+|[DDX_Slider](#ddx_slider)|Inizializza o recupera la posizione corrente del cursore del controllo Slider.|
+|[DDX_Text](#ddx_text)|Inizializza o Recupera il valore corrente di un controllo di modifica.|
 
 ##  <a name="ddx_cbindex"></a>  DDX_CBIndex
 
-Il `DDX_CBIndex` funzione gestisce il trasferimento del **int** dei dati tra un controllo casella combinata in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **int** membro dati della finestra di dialogo, visualizzazione form o del controllo oggetto visualizzazione.
+La `DDX_CBIndex` funzione gestisce il trasferimento dei dati **int** tra un controllo casella combinata in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione controllo e un membro dati **int** della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_CBIndex(
@@ -56,24 +56,24 @@ void AFXAPI DDX_CBIndex(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo casella combinata associato alla proprietà di controllo.
+ID risorsa del controllo casella combinata associato alla proprietà del controllo.
 
 *index*<br/>
-Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
+Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_CBIndex` viene chiamato *indice* è impostato per l'indice della selezione corrente casella combinata. Se è selezionato alcun elemento, *indice* è impostato su 0.
+Quando `DDX_CBIndex` viene chiamato il metodo, *index* viene impostato sull'indice della selezione della casella combinata corrente. Se non è selezionato alcun elemento, *index* viene impostato su 0.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_cbstring"></a>  DDX_CBString
 
-Il `DDX_CBString` funzione gestisce il trasferimento del `CString` dei dati tra il controllo di modifica di un controllo casella combinata in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un `CString` membro dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.
+La `DDX_CBString` funzione gestisce il trasferimento dei `CString` dati tra il controllo di modifica di un controllo casella combinata in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione `CString` controllo e un membro dati della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_CBString(
@@ -88,27 +88,27 @@ void AFXAPI DDX_CBString(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo casella combinata associato alla proprietà di controllo.
+ID risorsa del controllo casella combinata associato alla proprietà del controllo.
 
 *value*<br/>
-Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
+Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_CBString` viene chiamato *valore* è impostato per la selezione corrente della casella combinata. Se è selezionato alcun elemento, *valore* è impostato su una stringa di lunghezza zero.
+Quando `DDX_CBString` viene chiamato il metodo, il *valore* viene impostato sulla selezione della casella combinata corrente. Se non è selezionato alcun elemento, il *valore* viene impostato su una stringa di lunghezza zero.
 
 > [!NOTE]
->  Se la casella combinata è una casella di riepilogo a discesa, il valore scambiato è limitato a 255 caratteri.
+>  Se la casella combinata è un elenco a discesa, il valore scambiato è limitato a 255 caratteri.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact
 
-Il `DDX_CBStringExact` funzione gestisce il trasferimento del `CString` dei dati tra il controllo di modifica di un controllo casella combinata in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un `CString` membro dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.
+La `DDX_CBStringExact` funzione gestisce il trasferimento dei `CString` dati tra il controllo di modifica di un controllo casella combinata in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione `CString` controllo e un membro dati della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_CBStringExact(
@@ -123,27 +123,27 @@ void AFXAPI DDX_CBStringExact(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo casella combinata associato alla proprietà di controllo.
+ID risorsa del controllo casella combinata associato alla proprietà del controllo.
 
 *value*<br/>
-Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
+Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_CBStringExact` viene chiamato *valore* è impostato per la selezione corrente della casella combinata. Se è selezionato alcun elemento, *valore* è impostato su una stringa di lunghezza zero.
+Quando `DDX_CBStringExact` viene chiamato il metodo, il *valore* viene impostato sulla selezione della casella combinata corrente. Se non è selezionato alcun elemento, il *valore* viene impostato su una stringa di lunghezza zero.
 
 > [!NOTE]
->  Se la casella combinata è una casella di riepilogo a discesa, il valore scambiato è limitato a 255 caratteri.
+>  Se la casella combinata è un elenco a discesa, il valore scambiato è limitato a 255 caratteri.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
-##  <a name="ddx_check"></a>  DDX_Check
+##  <a name="ddx_check"></a>DDX_Check
 
-Il `DDX_Check` funzione gestisce il trasferimento del **int** dei dati tra un controllo casella di controllo in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **int** membro dati della finestra di dialogo, visualizzazione form o del controllo oggetto visualizzazione.
+La `DDX_Check` funzione gestisce il trasferimento dei dati **int** tra un controllo casella di controllo in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione controllo e un membro dati **int** della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_Check(
@@ -158,24 +158,24 @@ void AFXAPI DDX_Check(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo casella di controllo associato con la proprietà del controllo.
+ID risorsa del controllo casella di controllo associato alla proprietà del controllo.
 
 *value*<br/>
-Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
+Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_Check` viene chiamato *valore* viene impostato sullo stato corrente del controllo casella di controllo. Per un elenco dei valori di stato possibili, vedere [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) nel SDK di Windows.
+Quando `DDX_Check` viene chiamato il metodo, il *valore* viene impostato sullo stato corrente del controllo casella di controllo. Per un elenco dei valori di stato possibili, vedere [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) nel Windows SDK.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_control"></a>  DDX_Control
 
-Il `DDX_Control` funzione sottoclassi del controllo, specificato dal *nIDC*, la finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.
+La `DDX_Control` funzione crea una sottoclasse del controllo, specificato da *nIDC*, della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_Control(
@@ -187,27 +187,27 @@ void AFXAPI DDX_Control(
 ### <a name="parameters"></a>Parametri
 
 *pDX*<br/>
-Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto.
+Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.md) .
 
 *nIDC*<br/>
-L'ID risorsa del controllo da sottoclassare.
+ID risorsa del controllo da sottoclassare.
 
 *rControl*<br/>
-Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo correlato al controllo specificato.
+Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo correlato al controllo specificato.
 
 ### <a name="remarks"></a>Note
 
-Il *pDX* oggetto viene fornito dal framework quando il `DoDataExchange` funzione viene chiamata. Pertanto `DDX_Control` deve essere chiamato solo all'interno dell'override di `DoDataExchange`.
+L'oggetto *PDX* viene fornito dal framework quando viene chiamata `DoDataExchange` la funzione. Pertanto, `DDX_Control` deve essere chiamato solo all'interno dell'override `DoDataExchange`di.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl
 
-Il `DDX_DateTimeCtrl` funzione gestisce il trasferimento dei dati di data o ora tra un controllo selezione data e ora ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) in un oggetto di visualizzazione form o finestra di dialogo e una [CTime](../../atl-mfc-shared/reference/ctime-class.md) o un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) membro dei dati dell'oggetto di visualizzazione form o finestra di dialogo.
+La `DDX_DateTimeCtrl` funzione gestisce il trasferimento dei dati di data e/o ora tra un controllo selezione data e ora ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) in una finestra di dialogo o un oggetto visualizzazione form e un membro dati [CTime](../../atl-mfc-shared/reference/ctime-class.md) o [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) della finestra di dialogo o del form oggetto View.
 
 ```
 void AFXAPI DDX_DateTimeCtrl(
@@ -229,29 +229,29 @@ void AFXAPI DDX_DateTimeCtrl(
 ### <a name="parameters"></a>Parametri
 
 *pDX*<br/>
-Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione. Non è necessario eliminare questo oggetto.
+Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione. Non è necessario eliminare questo oggetto.
 
 *nIDC*<br/>
-L'ID risorsa del controllo selezione data e ora associato alla variabile membro.
+ID risorsa del controllo selezione data e ora associato alla variabile membro.
 
 *value*<br/>
-Nelle prime due versioni, un riferimento a un `CTime` o `COleDateTime` variabile membro, la finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati. Nella terza versione, un riferimento a un `CString` oggetto visualizzazione controllo membro di dati.
+Nelle prime due versioni, un riferimento a una variabile `CTime` membro `COleDateTime` o, una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione controllo con cui vengono scambiati i dati. Nella terza versione, un riferimento a un `CString` oggetto visualizzazione controllo del membro dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_DateTimeCtrl` viene chiamato *valore* è impostata su corrente dello stato di data e controllo di selezione di tempo o il controllo è impostato su *valore*, a seconda della direzione dello scambio.
+Quando `DDX_DateTimeCtrl` viene chiamato il metodo, *value* viene impostato sullo stato corrente del controllo selezione data e ora oppure il controllo è impostato su *value*, a seconda della direzione dello scambio.
 
-Nella terza versione precedente, `DDX_DateTimeCtrl` gestisce il trasferimento del `CString` controllo ora i dati tra una data e un [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro dei dati dell'oggetto visualizzazione controllo. La stringa viene formattata utilizzando le regole di impostazioni locali correnti per la formattazione di date e ore.
+Nella terza versione precedente, `DDX_DateTimeCtrl` gestisce il trasferimento dei `CString` dati tra un controllo data e ora e un membro dati [CString](../../atl-mfc-shared/reference/cstringt-class.md) dell'oggetto visualizzazione controlli. La stringa viene formattata usando le regole locali correnti per la formattazione di date e ore.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
 
-Crea un controllo .NET corrispondenti ID di risorsa. del controllo
+Crea un controllo .NET che corrisponde all'ID risorsa del controllo.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -266,19 +266,19 @@ void DDX_ManagedControl(
 ### <a name="parameters"></a>Parametri
 
 *pDX*<br/>
-Un puntatore a un [classe CDataExchange](cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
+Puntatore a un oggetto della [classe CDataExchange](cdataexchange-class.md) . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo associato con la proprietà del controllo.
+ID risorsa del controllo associato alla proprietà del controllo.
 
 *control*<br/>
-Un riferimento a un [classe CWinFormsControl](cwinformscontrol-class.md) oggetto.
+Riferimento a un oggetto della [classe CWinFormsControl](cwinformscontrol-class.md) .
 
 ### <a name="remarks"></a>Note
 
-`DDX_ManagedControl` le chiamate [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) per creare un controllo che corrisponde l'ID di controllo risorsa. Uso `DDX_ManagedControl` per creare i controlli dall'ID di risorsa nella [CDialog](cdialog-class.md#oninitdialog). Per lo scambio di dati, è necessario non utilizzare le funzioni DDX/DDV con i controlli Windows Form.
+`DDX_ManagedControl`chiama [CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) per creare un controllo che corrisponde all'ID di controllo della risorsa. Usare `DDX_ManagedControl` per creare controlli dagli ID risorsa in [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog). Per lo scambio di dati, non è necessario utilizzare le funzioni DDX/DDV con controlli Windows Forms.
 
-Per altre informazioni, vedere [Procedura: Associazione di dati DDX/DDV con Windows Forms](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+Per altre informazioni, vedere [Procedura: Eseguire il data binding DDX/DDV con](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)Windows Forms.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -286,7 +286,7 @@ Per altre informazioni, vedere [Procedura: Associazione di dati DDX/DDV con Wind
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
-Il `DDX_IPAddress` funzione gestisce il trasferimento dei dati tra un controllo indirizzo IP e un membro di dati dell'oggetto visualizzazione controllo.
+La `DDX_IPAddress` funzione gestisce il trasferimento dei dati tra un controllo indirizzo IP e un membro dati dell'oggetto visualizzazione controlli.
 
 ```
 void AFXAPI DDX_IPAddress(
@@ -301,33 +301,33 @@ void AFXAPI DDX_IPAddress(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo indirizzo IP associato alla proprietà di controllo.
+ID risorsa del controllo indirizzo IP associato alla proprietà del controllo.
 
 *value*<br/>
-Riferimento per il valore DWORD contenente il valore del campo di quattro del controllo indirizzo IP. I campi vengono compilati o leggere come indicato di seguito.
+Riferimento a DWORD che contiene il valore a quattro campi del controllo dell'indirizzo IP. I campi vengono riempiti o letti come indicato di seguito.
 
-|Campo|Che contiene il valore del campo di bit|
+|Campo|Bit contenente il valore del campo|
 |-----------|-------------------------------------|
 |3|da 0 a 7|
-|2|8 a 15|
-|1|16 e 23|
-|0|24 a 31|
+|2|da 8 a 15|
+|1|da 16 a 23|
+|0|da 24 a 31|
 
-Utilizzare Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress) per leggere il valore oppure utilizzare [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress) per riempire il valore. Questi messaggi sono descritti nel SDK di Windows.
+Usare il [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress) Win32 per leggere il valore oppure usare [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress) per inserire il valore. Questi messaggi vengono descritti nella Windows SDK.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_IPAddress` viene chiamato *valore* viene letto dal controllo di indirizzo IP, o *valore* viene scritto nel controllo, a seconda della direzione dello scambio.
+Quando `DDX_IPAddress` viene chiamato il metodo, il *valore* viene letto dal controllo degli indirizzi IP oppure il *valore* viene scritto nel controllo, a seconda della direzione dello scambio.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_lbindex"></a>  DDX_LBIndex
 
-Il `DDX_LBIndex` funzione gestisce il trasferimento del **int** dei dati tra un controllo casella di riepilogo in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un' **int** membro dati della finestra di dialogo, visualizzazione form o del controllo oggetto visualizzazione.
+La `DDX_LBIndex` funzione gestisce il trasferimento dei dati **int** tra un controllo casella di riepilogo in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione controllo e un membro dati **int** della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_LBIndex(
@@ -342,24 +342,24 @@ void AFXAPI DDX_LBIndex(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo casella di elenco associato con la proprietà del controllo.
+ID risorsa del controllo casella di riepilogo associato alla proprietà del controllo.
 
 *index*<br/>
-Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
+Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_LBIndex` viene chiamato *indice* è impostato per l'indice della selezione casella elenco corrente. Se è selezionato alcun elemento, *indice* è impostato su -1.
+Quando `DDX_LBIndex` viene chiamato il metodo, *index* viene impostato sull'indice della selezione della casella di riepilogo corrente. Se non è selezionato alcun elemento, *index* viene impostato su-1.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_lbstring"></a>  DDX_LBString
 
-Il `DDX_LBString` funzione gestisce il trasferimento del `CString` dei dati tra un controllo casella di riepilogo in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un `CString` membro dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.
+La `DDX_LBString` funzione gestisce il trasferimento dei `CString` dati tra un controllo casella di riepilogo in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione `CString` controllo e un membro dati della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_LBString(
@@ -374,29 +374,29 @@ void AFXAPI DDX_LBString(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo casella di elenco associato con la proprietà del controllo.
+ID risorsa del controllo casella di riepilogo associato alla proprietà del controllo.
 
 *value*<br/>
-Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
+Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_LBString` viene chiamato per trasferire i dati in un controllo casella di riepilogo, il primo elemento nel controllo di cui inizio corrisponde *valore* sia selezionata. (Per far corrispondere l'intero elemento, piuttosto che solo un prefisso, utilizzare [DDX_LBStringExact](#ddx_lbstringexact).) Se non sono presenti corrispondenze, non sono selezionati elementi. Il viene applicata alcuna distinzione tra maiuscole e minuscole.
+Quando `DDX_LBString` viene chiamato per trasferire i dati a un controllo casella di riepilogo, viene selezionato il primo elemento del controllo il cui *valore* iniziale corrisponde a. Per trovare la corrispondenza con l'intero elemento anziché con un solo prefisso, usare [DDX_LBStringExact](#ddx_lbstringexact). Se non sono presenti corrispondenze, non è selezionato alcun elemento. La corrispondenza non fa distinzione tra maiuscole e minuscole.
 
-Quando `DDX_LBString` viene chiamato per trasferire i dati da un controllo casella di riepilogo, *valore* è impostato per la selezione della casella di elenco corrente. Se è selezionato alcun elemento, *valore* è impostato su una stringa di lunghezza zero.
+Quando `DDX_LBString` viene chiamato per trasferire i dati da un controllo casella di riepilogo, il *valore* viene impostato sulla selezione della casella di riepilogo corrente. Se non è selezionato alcun elemento, il *valore* viene impostato su una stringa di lunghezza zero.
 
 > [!NOTE]
->  Se la casella di riepilogo è una casella di riepilogo a discesa, il valore scambiato è limitato a 255 caratteri.
+>  Se la casella di riepilogo è un elenco a discesa, il valore scambiato è limitato a 255 caratteri.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact
 
-Il `DDX_CBStringExact` funzione gestisce il trasferimento del `CString` dei dati tra il controllo di modifica di un controllo casella di riepilogo in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un `CString` membro dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.
+La `DDX_CBStringExact` funzione gestisce il trasferimento dei `CString` dati tra il controllo di modifica di un controllo casella di riepilogo in una finestra di dialogo, una visualizzazione form o un oggetto `CString` visualizzazione controllo e un membro dati della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_LBStringExact(
@@ -411,29 +411,29 @@ void AFXAPI DDX_LBStringExact(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo casella di elenco associato con la proprietà del controllo.
+ID risorsa del controllo casella di riepilogo associato alla proprietà del controllo.
 
 *value*<br/>
-Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
+Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_LBStringExact` viene chiamato per trasferire i dati in un controllo casella di riepilogo, il primo elemento nel controllo che corrisponde al *valore* sia selezionata. (In modo che corrisponda solo un prefisso anziché l'intero elemento, usare [DDX_LBString](#ddx_lbstring).) Se non sono presenti corrispondenze, non sono selezionati elementi. Il viene applicata alcuna distinzione tra maiuscole e minuscole.
+Quando `DDX_LBStringExact` viene chiamato per trasferire i dati a un controllo casella di riepilogo, viene selezionato il primo elemento nel controllo che corrisponde al *valore* . Per trovare la corrispondenza con un solo prefisso anziché l'intero elemento, usare [DDX_LBString](#ddx_lbstring). Se non sono presenti corrispondenze, non è selezionato alcun elemento. La corrispondenza non fa distinzione tra maiuscole e minuscole.
 
-Quando `DDX_CBStringExact` viene chiamato per trasferire i dati da un controllo casella di riepilogo, *valore* è impostato per la selezione della casella di elenco corrente. Se è selezionato alcun elemento, *valore* è impostato su una stringa di lunghezza zero.
+Quando `DDX_CBStringExact` viene chiamato per trasferire i dati da un controllo casella di riepilogo, il *valore* viene impostato sulla selezione della casella di riepilogo corrente. Se non è selezionato alcun elemento, il *valore* viene impostato su una stringa di lunghezza zero.
 
 > [!NOTE]
->  Se la casella di riepilogo è una casella di riepilogo a discesa, il valore scambiato è limitato a 255 caratteri.
+>  Se la casella di riepilogo è un elenco a discesa, il valore scambiato è limitato a 255 caratteri.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl
 
-Il `DDX_MonthCalCtrl` funzione gestisce il trasferimento di dati date tra un controllo calendario mensile ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) in una finestra di dialogo, visualizzazione di form, o oggetto visualizzazione controllo e un [CTime](../../atl-mfc-shared/reference/ctime-class.md) o un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) membro dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.
+La `DDX_MonthCalCtrl` funzione gestisce il trasferimento dei dati relativi alla data tra un controllo calendario mensile ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione controllo e un membro dati [CTime](../../atl-mfc-shared/reference/ctime-class.md) o [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) della finestra di dialogo, form visualizzazione o oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_MonthCalCtrl(
@@ -450,30 +450,30 @@ void AFXAPI DDX_MonthCalCtrl(
 ### <a name="parameters"></a>Parametri
 
 *pDX*<br/>
-Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione. Non è necessario eliminare questo oggetto.
+Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione. Non è necessario eliminare questo oggetto.
 
 *nIDC*<br/>
-L'ID risorsa del controllo calendario mensile associato alla variabile membro.
+ID risorsa del controllo calendario mensile associato alla variabile membro.
 
 *value*<br/>
-Un riferimento a un `CTime` o `COleDateTime` variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
+Riferimento a una `CTime` variabile membro `COleDateTime` o della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 ### <a name="remarks"></a>Note
 
 > [!NOTE]
->  Il controllo gestisce solo un valore date. I campi dell'ora nell'oggetto ora sono set in modo da riflettere l'ora di creazione della finestra del controllo o tutto il tempo è stato impostato nel controllo con una chiamata a `CMonthCalCtrl::SetCurSel`.
+>  Il controllo gestisce solo un valore di data. I campi di tempo nell'oggetto ora sono impostati in modo da riflettere l'ora di creazione della finestra del controllo o qualsiasi tempo impostato nel controllo con una chiamata a `CMonthCalCtrl::SetCurSel`.
 
-Quando `DDX_MonthCalCtrl` viene chiamato *valore* viene impostato sullo stato corrente del controllo calendario mensile.
+Quando `DDX_MonthCalCtrl` viene chiamato il metodo, il *valore* viene impostato sullo stato corrente del controllo calendario mensile.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_radio"></a>  DDX_Radio
 
-Il `DDX_Radio` funzione gestisce il trasferimento del **int** dei dati tra un gruppo di controllo di opzione in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un **int** membro dati della finestra di dialogo, visualizzazione form o del controllo oggetto visualizzazione. Il valore della **int** membro dati viene determinato in base alla quale opzione è selezionato sul pulsante all'interno del gruppo.
+La `DDX_Radio` funzione gestisce il trasferimento dei dati **int** tra un gruppo di controlli radio in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione controllo e un membro dati **int** della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo. Il valore del membro dati **int** viene determinato in base al pulsante di opzione all'interno del gruppo selezionato.
 
 ```
 void AFXAPI DDX_Radio(
@@ -488,26 +488,26 @@ void AFXAPI DDX_Radio(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del primo controllo radio nel gruppo.
+ID risorsa del primo controllo radio nel gruppo.
 
 *value*<br/>
-Un riferimento a una variabile membro della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo con cui i dati vengono scambiati.
+Riferimento a una variabile membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo con cui vengono scambiati i dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_Radio` viene chiamato *valore* viene impostato sullo stato corrente del gruppo di controllo di opzione. Il valore è impostato su un indice del controllo di opzione che è attualmente selezionato in base 0 o -1 se nessun controllo radio vengono controllati.
+Quando `DDX_Radio` viene chiamato il metodo, il *valore* viene impostato sullo stato corrente del gruppo di controllo radio. Il valore viene impostato come un indice in base 0 del controllo radio che è attualmente selezionato oppure-1 se non è selezionato alcun controllo radio.
 
-Ad esempio, nel caso in cui è il primo pulsante di opzione nel gruppo selezionato (il pulsante con lo stile WS_GROUP) il valore della **int** membro è 0 e così via.
+Se, ad esempio, il primo pulsante di opzione del gruppo è selezionato (il pulsante con stile WS_GROUP), il valore del membro **int** è 0 e così via.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_scroll"></a>  DDX_Scroll
 
-Il `DDX_Scroll` funzione gestisce il trasferimento del **int** dei dati tra un controllo barra di scorrimento in una finestra di dialogo visualizzazione form o un oggetto visualizzazione controllo e un' **int** membro dati della finestra di dialogo, visualizzazione form o del controllo oggetto visualizzazione.
+La `DDX_Scroll` funzione gestisce il trasferimento dei dati **int** tra un controllo barra di scorrimento in una finestra di dialogo, una visualizzazione form o un oggetto visualizzazione controllo e un membro dati **int** della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_Scroll(
@@ -522,24 +522,24 @@ void AFXAPI DDX_Scroll(
 Puntatore a un oggetto `CDataExchange` . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo barra di scorrimento associato la proprietà del controllo.
+ID risorsa del controllo barra di scorrimento associato alla proprietà del controllo.
 
 *value*<br/>
 Riferimento a una variabile membro della finestra di dialogo, alla visualizzazione form o all'oggetto visualizzazione controllo con cui vengono scambiati dati.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_Scroll` viene chiamato *valore* è impostato per la posizione corrente del cursore del controllo. Per altre informazioni sui valori associato alla posizione corrente del cursore del controllo, vedere [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) nel SDK di Windows.
+Quando `DDX_Scroll` viene chiamato il metodo, il *valore* viene impostato sulla posizione corrente del cursore del controllo. Per ulteriori informazioni sui valori associati alla posizione corrente del cursore del controllo, vedere [GetScrollPos](/windows/win32/api/winuser/nf-winuser-getscrollpos) nel Windows SDK.
 
 Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_slider"></a>  DDX_Slider
 
-Il `DDX_Slider` funzione gestisce il trasferimento del **int** dei dati tra un dispositivo di scorrimento in una visualizzazione form o finestra di dialogo e un' **int** membro dei dati dell'oggetto di visualizzazione form o finestra di dialogo.
+La `DDX_Slider` funzione gestisce il trasferimento dei dati **int** tra un controllo dispositivo di scorrimento in una finestra di dialogo o in una visualizzazione form e un membro dati **int** della finestra di dialogo o dell'oggetto visualizzazione del form.
 
 ```
 void AFXAPI DDX_Slider(
@@ -551,27 +551,27 @@ void AFXAPI DDX_Slider(
 ### <a name="parameters"></a>Parametri
 
 *pDX*<br/>
-Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
+Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID risorsa del controllo dispositivo di scorrimento.
+ID risorsa del controllo dispositivo di scorrimento.
 
 *value*<br/>
-Un riferimento al valore da scambiare. Questo parametro contiene o imposta la posizione corrente del controllo dispositivo di scorrimento.
+Riferimento al valore da scambiare. Questo parametro contiene o imposta la posizione corrente del controllo dispositivo di scorrimento.
 
 ### <a name="remarks"></a>Note
 
-Quando `DDX_Slider` viene chiamato *valore* è impostato per la posizione corrente del cursore, del controllo o il valore riceve la posizione, a seconda della direzione dello scambio.
+Quando `DDX_Slider` viene chiamato il metodo, il *valore* viene impostato sulla posizione corrente del cursore del controllo oppure il valore riceve la posizione, a seconda della direzione dello scambio.
 
-Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per informazioni sui controlli dispositivo di scorrimento, vedere [utilizzo di CSliderCtrl](../../mfc/using-csliderctrl.md).
+Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](../../mfc/dialog-data-exchange-and-validation.md). Per informazioni sui controlli dispositivo di scorrimento, vedere [uso di CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ##  <a name="ddx_text"></a>  DDX_Text
 
-Il `DDX_Text` funzione gestisce il trasferimento del **int**, **UINT**, **long**, DWORD, `CString`, **float**, o **doppie** dei dati tra un controllo di modifica in una finestra di dialogo visualizzazione form o controllare la visualizzazione e una [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro dati della finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.
+La `DDX_Text` funzione gestisce il trasferimento dei dati **int**, **uint**, **Long**, DWORD `CString`,, **float**o **Double** tra un controllo di modifica in una finestra di dialogo, una visualizzazione form o una visualizzazione controlli e un dato [CString](../../atl-mfc-shared/reference/cstringt-class.md) membro della finestra di dialogo, della visualizzazione form o dell'oggetto visualizzazione controllo.
 
 ```
 void AFXAPI DDX_Text(
@@ -633,13 +633,13 @@ void AFXAPI DDX_Text(
 ### <a name="parameters"></a>Parametri
 
 *pDX*<br/>
-Un puntatore a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) oggetto. Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
+Puntatore a un oggetto [CDataExchange](../../mfc/reference/cdataexchange-class.md) . Il framework fornisce questo oggetto per stabilire il contesto dello scambio dei dati, inclusa la relativa direzione.
 
 *nIDC*<br/>
-L'ID di un controllo di modifica nella finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo.
+ID di un controllo di modifica nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo.
 
 *value*<br/>
-Un riferimento a un membro dati nella finestra di dialogo, visualizzazione form o oggetto visualizzazione controllo. Il tipo di dati *valore* varia a seconda di quale delle versioni di overload del `DDX_Text` è utilizzare.
+Riferimento a un membro dati nella finestra di dialogo, nella visualizzazione form o nell'oggetto visualizzazione controllo. Il tipo di dati del *valore* dipende da quale delle versioni di overload di `DDX_Text` si utilizza.
 
 ### <a name="remarks"></a>Note
 
@@ -647,11 +647,11 @@ Per altre informazioni su DDX, vedere [Convalida e DDX (Dialog Data Exchange)](.
 
 ### <a name="requirements"></a>Requisiti
 
-  **Intestazione** afxdd_.h
+  **Intestazione** afxdd_. h
 
 ## <a name="see-also"></a>Vedere anche
 
 [Routine di convalida dei dati della finestra di dialogo standard](standard-dialog-data-validation-routines.md)<br/>
-[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
+[Macro e globali](mfc-macros-and-globals.md)<br/>
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)

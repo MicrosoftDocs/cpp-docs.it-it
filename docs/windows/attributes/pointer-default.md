@@ -1,21 +1,21 @@
 ---
-title: pointer_default (C++ attributo COM)
+title: pointer_default (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pointer_default
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407510"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514265"
 ---
-# <a name="pointerdefault"></a>pointer_default
+# <a name="pointer_default"></a>pointer_default
 
-Specifica l'attributo di puntatore predefinite per tutti i puntatori, ad eccezione dei puntatori di primo livello che vengono visualizzati nell'elenco di parametri.
+Specifica l'attributo del puntatore predefinito per tutti i puntatori, ad eccezione dei puntatori di primo livello visualizzati negli elenchi di parametri.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ Specifica l'attributo di puntatore predefinite per tutti i puntatori, ad eccezio
 ### <a name="parameters"></a>Parametri
 
 *value*<br/>
-Un valore che descrive il tipo di puntatore: **ptr**, **ref**, o **univoco**.
+Valore che descrive il tipo di puntatore: **ptr**, **ref**o **Unique**.
 
 ## <a name="remarks"></a>Note
 
-Il **pointer_default** C++ attributo ha la stessa funzionalità come il [pointer_default](/windows/desktop/Midl/pointer-default) attributo MIDL.
+L'attributo **pointer_default** C++ ha la stessa funzionalità dell'attributo MIDL di [pointer_default](/windows/win32/Midl/pointer-default) .
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [defaultvalue](defaultvalue.md) per un esempio dell'uso dei **pointer_default**.
+Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di uso di **pointer_default**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -45,7 +45,7 @@ Vedere l'esempio relativo [defaultvalue](defaultvalue.md) per un esempio dell'us
 |**Si applica a**|**interface**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

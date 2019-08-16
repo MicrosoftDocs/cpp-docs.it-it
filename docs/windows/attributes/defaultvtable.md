@@ -1,21 +1,21 @@
 ---
-title: defaultvtable (attributo COM C++)
+title: defaultvtable (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147951"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501640"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
-Definisce un'interfaccia come interfaccia predefinita vtable per un oggetto COM.
+Definisce un'interfaccia come interfaccia vtable predefinita per un oggetto COM.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ Definisce un'interfaccia come interfaccia predefinita vtable per un oggetto COM.
 ### <a name="parameters"></a>Parametri
 
 *interface*<br/>
-L'interfaccia designato che si desidera avere la vtable predefinito per l'oggetto COM.
+Interfaccia designata per la quale si desidera avere il vtable predefinito per l'oggetto COM.
 
 ## <a name="remarks"></a>Note
 
-Il **defaultvtable** attributi di C++ ha la stessa funzionalità come la [defaultvtable](/windows/desktop/Midl/defaultvtable) attributo MIDL.
+L'attributo **defaultvtable** C++ ha la stessa funzionalità dell'attributo MIDL di [defaultvtable](/windows/win32/Midl/defaultvtable) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra gli attributi in una classe che usano **defaultvtable** per specificare un'interfaccia predefinita:
+Il codice seguente Mostra gli attributi di una classe che usano **defaultvtable** per specificare un'interfaccia predefinita:
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -71,7 +71,7 @@ class CMyC3 : public IMyI3 {};
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|**coclass**|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

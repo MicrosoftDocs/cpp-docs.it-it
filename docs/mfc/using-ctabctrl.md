@@ -7,20 +7,20 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411682"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510778"
 ---
 # <a name="using-ctabctrl"></a>Utilizzo di CTabCtrl
 
-Un "controllo struttura a schede" è analogo ai separatori in un notebook o alle cartelle con etichette in un file CAB. Usare il controllo struttura a schede, rappresentato dalla classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), per mostrare più pagine di informazioni o controlli a un utente, uno alla volta, in un formato che suggerisce un peer o una relazione logica tra ogni pagina.
+Un "controllo struttura a schede" è analogo ai separatori in un notebook o alle cartelle con etichetta in un file CAB. Usare il controllo Tab, rappresentato dalla classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), per visualizzare più pagine di informazioni o controlli a un utente, uno alla volta, in un formato che suggerisce un peer o una relazione logica tra ogni pagina.
 
-Per altre informazioni su controlli struttura a schede, vedere [controlli struttura a schede](/windows/desktop/Controls/tab-controls) nel SDK di Windows.
+Per ulteriori informazioni sui controlli struttura a schede, vedere [Tab Controls](/windows/win32/Controls/tab-controls) in the Windows SDK.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+## <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Controlli Tab e finestre delle proprietà](../mfc/tab-controls-and-property-sheets.md)
 

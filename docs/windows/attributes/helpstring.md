@@ -1,17 +1,17 @@
 ---
-title: helpstring (attributo COM C++)
+title: helpstring (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409590"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490866"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -26,15 +26,15 @@ Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene a
 ### <a name="parameters"></a>Parametri
 
 *string*<br/>
-Il testo della stringa della Guida.
+Testo della stringa della guida.
 
 ## <a name="remarks"></a>Note
 
-Il **helpstring** attributi di C++ ha la stessa funzionalità come la [helpstring](/windows/desktop/Midl/helpstring) attributo MIDL.
+L'attributo **helpstring** C++ ha la stessa funzionalità dell'attributo MIDL di [helpstring](/windows/win32/Midl/helpstring) .
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [defaultvalue](defaultvalue.md) per un esempio di come usare **helpstring**.
+Vedere l'esempio per [DefaultValue](defaultvalue.md) per un esempio di come usare **helpstring**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -42,10 +42,10 @@ Vedere l'esempio relativo [defaultvalue](defaultvalue.md) per un esempio di come
 
 |||
 |-|-|
-|**Si applica a**|**interfaccia**, **typedef**, **classe**, metodo, proprietà|
+|**Si applica a**|**Interface**, **typedef**, **Class**, Method, Property|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

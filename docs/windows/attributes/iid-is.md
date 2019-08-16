@@ -1,21 +1,21 @@
 ---
-title: iid_is (C++ attributo COM)
+title: iid_is (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409525"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514666"
 ---
-# <a name="iidis"></a>iid_is
+# <a name="iid_is"></a>iid_is
 
-Specifica l'IID dell'interfaccia COM a cui punta un puntatore a interfaccia.
+Specifica l'IID dell'interfaccia COM a cui fa riferimento un puntatore a interfaccia.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ Specifica l'IID dell'interfaccia COM a cui punta un puntatore a interfaccia.
 ### <a name="parameters"></a>Parametri
 
 *expression*<br/>
-Un'espressione del linguaggio C che specifica un IID di un'interfaccia COM a cui punta un puntatore a interfaccia.
+Espressione del linguaggio C che specifica un IID di un'interfaccia COM a cui fa riferimento un puntatore a interfaccia.
 
 ## <a name="remarks"></a>Note
 
-Il **iid_is** C++ attributo ha la stessa funzionalità come il [iid_is](/windows/desktop/Midl/iid-is) attributo MIDL.
+L'attributo **iid_is** C++ ha la stessa funzionalità dell'attributo MIDL di [iid_is](/windows/win32/Midl/iid-is) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente viene illustrato come utilizzare **iid_is**:
+Il codice seguente illustra l'uso di **iid_is**:
 
 ```cpp
 // cpp_attr_ref_iid_is.cpp
@@ -60,7 +60,7 @@ __interface IFireTabCtrl : IDispatch
 |**Si applica a**|Parametro di interfaccia, membro dati|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

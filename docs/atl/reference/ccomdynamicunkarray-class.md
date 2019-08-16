@@ -18,12 +18,12 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-ms.openlocfilehash: 39f137f199db1d7519801c19375baea6cd08db93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d55a6d6bfbcc6921fa0633753365f5799388dc27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259482"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497238"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Classe CComDynamicUnkArray
 
@@ -35,39 +35,39 @@ Questa classe archivia una matrice di `IUnknown` puntatori.
 class CComDynamicUnkArray
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Costruttore. Inizializza i valori della raccolta su NULL e le dimensioni dell'insieme di zero.|
+|[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Costruttore. Inizializza i valori della raccolta su NULL e la dimensione della raccolta su zero.|
 |[CComDynamicUnkArray::~CComDynamicUnkArray](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CComDynamicUnkArray::Add](#add)|Chiamare questo metodo per aggiungere un `IUnknown` puntatore alla matrice.|
-|[CComDynamicUnkArray::begin](#begin)|Restituisce un puntatore al primo `IUnknown` puntatore nella raccolta.|
+|[CComDynamicUnkArray::begin](#begin)|Restituisce un puntatore al primo `IUnknown` puntatore della raccolta.|
 |[CComDynamicUnkArray::clear](#clear)|Svuota la matrice.|
-|[CComDynamicUnkArray::end](#end)|Restituisce un puntatore alla prima posizione oltre l'ultimo `IUnknown` puntatore nella raccolta.|
+|[CComDynamicUnkArray::end](#end)|Restituisce un puntatore a un oggetto dopo l' `IUnknown` ultimo puntatore della raccolta.|
 |[CComDynamicUnkArray::GetAt](#getat)|Recupera l'elemento in corrispondenza dell'indice specificato.|
-|[CComDynamicUnkArray::GetCookie](#getcookie)|Chiamare questo metodo per recuperare il cookie associato un determinato `IUnknown` puntatore.|
-|[CComDynamicUnkArray::GetSize](#getsize)|Restituisce la lunghezza della matrice.|
-|[CComDynamicUnkArray::GetUnknown](#getunknown)|Chiamare questo metodo per ottenere il `IUnknown` puntatore associato a un cookie specificato.|
+|[CComDynamicUnkArray::GetCookie](#getcookie)|Chiamare questo metodo per ottenere il cookie associato a un puntatore `IUnknown` specificato.|
+|[CComDynamicUnkArray::GetSize](#getsize)|Restituisce la lunghezza di una matrice.|
+|[CComDynamicUnkArray::GetUnknown](#getunknown)|Chiamare questo metodo per ottenere il `IUnknown` puntatore associato a un determinato cookie.|
 |[CComDynamicUnkArray::Remove](#remove)|Chiamare questo metodo per rimuovere un `IUnknown` puntatore dalla matrice.|
 
 ## <a name="remarks"></a>Note
 
-`CComDynamicUnkArray` contiene una matrice allocata in modo dinamico di `IUnknown` puntatori, ogni punto di un'interfaccia in una connessione. `CComDynamicUnkArray` può essere utilizzato come parametro per il [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) classe modello.
+`CComDynamicUnkArray`include una matrice di puntatori allocata in modo dinamico, ciascuna interfaccia in un punto di `IUnknown` connessione. `CComDynamicUnkArray`può essere utilizzato come parametro per la classe modello [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) .
 
-Il `CComDynamicUnkArray` metodi [begin](#begin) e [end](#end) può essere utilizzato per scorrere tutti i punti di connessione (ad esempio, quando viene generato un evento).
+I `CComDynamicUnkArray` metodi [Begin](#begin) e [end](#end) possono essere usati per scorrere in ciclo tutti i punti di connessione (ad esempio, quando viene generato un evento).
 
-Visualizzare [aggiunta di punti di connessione a un oggetto](../../atl/adding-connection-points-to-an-object.md) punto proxy di per informazioni dettagliate su come automatizzare la creazione della connessione.
+Per informazioni dettagliate sull'automazione della creazione di proxy del punto di connessione, vedere [aggiunta di punti di connessione a un oggetto](../../atl/adding-connection-points-to-an-object.md) .
 
 > [!NOTE]
-> **Nota** della classe `CComDynamicUnkArray` viene usato per il **Aggiungi classe** guidata durante la creazione di un controllo che offre punti di connessione. Se si desidera specificare manualmente il numero di punti di connessione, modificare il riferimento dal `CComDynamicUnkArray` al `CComUnkArray<` *n* `>`, dove *n* è il numero di punti di connessione Obbligatorio.
+> **Nota** La classe `CComDynamicUnkArray` viene utilizzata dalla procedura guidata **Aggiungi classe** quando si crea un controllo con punti di connessione. Se si desidera specificare manualmente il numero di punti di connessione, modificare il riferimento da `CComDynamicUnkArray` a `CComUnkArray<` *n* `>`, dove *n* è il numero di punti di connessione richiesti.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -84,11 +84,11 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="parameters"></a>Parametri
 
 *pUnk*<br/>
-Il `IUnknown` puntatore da aggiungere alla matrice.
+`IUnknown` Puntatore da aggiungere alla matrice.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il cookie associato il puntatore appena aggiunto.
+Restituisce il cookie associato al puntatore appena aggiunto.
 
 ##  <a name="begin"></a>  CComDynamicUnkArray::begin
 
@@ -101,13 +101,13 @@ IUnknown**
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `IUnknown` puntatore a interfaccia.
+Puntatore a un `IUnknown` puntatore di interfaccia.
 
 ### <a name="remarks"></a>Note
 
-La raccolta contiene i puntatori alle interfacce archiviati in locale come `IUnknown`. Si esegue il cast di ogni `IUnknown` interfaccia per il tipo di interfaccia reale e quindi chiamare attraverso di esso. Non è necessaria eseguire una query per l'interfaccia prima di tutto.
+La raccolta contiene i puntatori alle interfacce archiviate `IUnknown`localmente come. È possibile eseguire `IUnknown` il cast di ogni interfaccia al tipo di interfaccia reale e quindi chiamarla. Non è necessario eseguire prima una query per l'interfaccia.
 
-Prima di usare il `IUnknown` interfaccia, è necessario verificare che non è NULL.
+Prima di usare `IUnknown` l'interfaccia, è consigliabile verificare che non sia null.
 
 ##  <a name="clear"></a>  CComDynamicUnkArray::clear
 
@@ -127,7 +127,7 @@ CComDynamicUnkArray();
 
 ### <a name="remarks"></a>Note
 
-Imposta le dimensioni dell'insieme di zero e inizializza i valori null. Il distruttore libera la raccolta, se necessario.
+Imposta la dimensione della raccolta su zero e inizializza i valori su NULL. Se necessario, il distruttore libera la raccolta.
 
 ##  <a name="dtor"></a>  CComDynamicUnkArray::~CComDynamicUnkArray
 
@@ -139,11 +139,11 @@ Distruttore.
 
 ### <a name="remarks"></a>Note
 
-Libera le risorse allocate dal costruttore di classe.
+Libera le risorse allocate dal costruttore della classe.
 
 ##  <a name="end"></a>  CComDynamicUnkArray::end
 
-Restituisce un puntatore alla prima posizione oltre l'ultimo `IUnknown` puntatore nella raccolta.
+Restituisce un puntatore a un oggetto dopo l' `IUnknown` ultimo puntatore della raccolta.
 
 ```
 IUnknown**
@@ -152,7 +152,7 @@ IUnknown**
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `IUnknown` puntatore a interfaccia.
+Puntatore a un `IUnknown` puntatore di interfaccia.
 
 ##  <a name="getat"></a>  CComDynamicUnkArray::GetAt
 
@@ -169,11 +169,11 @@ Indice dell'elemento da recuperare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interfaccia.
+Puntatore a un'interfaccia [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) .
 
 ##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie
 
-Chiamare questo metodo per recuperare il cookie associato un determinato `IUnknown` puntatore.
+Chiamare questo metodo per ottenere il cookie associato a un puntatore `IUnknown` specificato.
 
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
@@ -182,19 +182,19 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="parameters"></a>Parametri
 
 *ppFind*<br/>
-Il `IUnknown` puntatore per cui è richiesto il cookie associato.
+`IUnknown` Puntatore per il quale è richiesto il cookie associato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il cookie associato con il `IUnknown` puntatore, oppure zero se non corrisponde ad alcuna `IUnknown` puntatore viene trovato.
+Restituisce il cookie associato `IUnknown` al puntatore oppure zero se non viene trovato alcun puntatore corrispondente. `IUnknown`
 
 ### <a name="remarks"></a>Note
 
-Se sono presenti più istanze dello stesso `IUnknown` puntatore, questa funzione restituisce il cookie per il primo.
+Se è presente più di un'istanza dello stesso `IUnknown` puntatore, questa funzione restituisce il cookie per la prima.
 
 ##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize
 
-Restituisce la lunghezza della matrice.
+Restituisce la lunghezza di una matrice.
 
 ```
 int GetSize() const;
@@ -206,7 +206,7 @@ Lunghezza della matrice.
 
 ##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown
 
-Chiamare questo metodo per ottenere il `IUnknown` puntatore associato a un cookie specificato.
+Chiamare questo metodo per ottenere il `IUnknown` puntatore associato a un determinato cookie.
 
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
@@ -215,11 +215,11 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="parameters"></a>Parametri
 
 *dwCookie*<br/>
-Per il quale il cookie associato `IUnknown` puntatore è obbligatorio.
+Cookie per il quale è richiesto `IUnknown` il puntatore associato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce il `IUnknown` puntatore, o NULL se nessun cookie corrisponda viene trovato.
+Restituisce il `IUnknown` puntatore o null se non viene trovato alcun cookie corrispondente.
 
 ##  <a name="remove"></a>  CComDynamicUnkArray::Remove
 
@@ -232,11 +232,11 @@ BOOL Remove(DWORD dwCookie);
 ### <a name="parameters"></a>Parametri
 
 *dwCookie*<br/>
-Il cookie che fa riferimento il `IUnknown` puntatore da rimuovere dalla matrice.
+Cookie che fa riferimento `IUnknown` al puntatore da rimuovere dalla matrice.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce TRUE se il puntatore viene rimosso; in caso contrario, FALSE.
+Restituisce TRUE se il puntatore è stato rimosso. in caso contrario, FALSE.
 
 ## <a name="see-also"></a>Vedere anche
 

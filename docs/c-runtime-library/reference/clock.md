@@ -25,12 +25,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 4b58b33b533250447cf964134de9869bddee4498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fabd18fb28cb5ea13dfb156ea21e8743c2afd49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347470"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500285"
 ---
 # <a name="clock"></a>clock
 
@@ -44,13 +44,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Il tempo trascorso dopo l'inizializzazione di CRT all'inizio del processo, espresso come proporzione **CLOCKS_PER_SEC** unità al secondo. Se il tempo trascorso non è disponibile o ha superato il tempo positivo massimo che può essere registrato come un **clock_t** tipo, la funzione restituisce il valore `(clock_t)(-1)`.
+Tempo trascorso dall'inizializzazione CRT all'inizio del processo, misurato in unità **CLOCKS_PER_SEC** al secondo. Se il tempo trascorso non è disponibile o ha superato il tempo massimo positivo che può essere registrato come tipo **clock_t** , la funzione restituisce il valore `(clock_t)(-1)`.
 
 ## <a name="remarks"></a>Note
 
-Il **clock** funzione indica quanto tempo trascorso dall'inizializzazione di CRT durante l'avvio del processo. Si noti che questa funzione non è strettamente conforme a ISO C, che specifica il tempo di CPU net come valore restituito. Per ottenere i tempi di CPU, usare la funzione [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) di Win32. Per determinare il tempo trascorso in secondi, dividere il valore restituito per il **orologio** funzione dalla macro **CLOCKS_PER_SEC**.
+La funzione **Clock** indica la quantità di tempo trascorso dall'inizializzazione CRT durante l'avvio del processo. Si noti che questa funzione non è strettamente conforme a ISO C, che specifica il tempo di CPU net come valore restituito. Per ottenere i tempi di CPU, usare la funzione [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) di Win32. Per determinare il tempo trascorso in secondi, dividere il valore restituito dalla funzione **Clock** dalla macro **CLOCKS_PER_SEC**.
 
-Dato un tempo sufficiente, il valore restituito da **orologio** può superare il massimo valore positivo di **clock_t**. Quando il processo viene eseguito, il valore restituito da **orologio** è sempre `(clock_t)(-1)`, come specificato dalla standard ISO C99 (7.23.2.1) e dallo standard ISO C11 (7.27.2.1). Microsoft implementa **clock_t** come una **long**, un intero con segno a 32 bit e il **CLOCKS_PER_SEC** macro viene definita come 1000. In questo modo un massimo **clock** funzione valore restituito è 2147483,647 secondi o circa 24,8 giorni. Non fare affidamento sul valore restituito da **clock** nei processi che sono stati eseguiti per più di questo periodo di tempo. È possibile usare la a 64 bit [tempo](time-time32-time64.md) funzione o Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) funzione al record di processo tempo trascorso per molti anni.
+Dato un tempo sufficiente, il valore restituito da **Clock** può superare il valore positivo massimo di **clock_t**. Quando il processo viene eseguito più a lungo, il valore restituito da clock `(clock_t)(-1)`è sempre, come specificato dallo standard ISO C99 standard (7.23.2.1) e ISO C11 standard (7.27.2.1). Microsoft implementa **clock_t** come **Long**, un Signed Integer a 32 bit e la macro **CLOCKS_PER_SEC** è definita come 1000. In questo modo si ottiene un valore restituito massimo della funzione di **Clock** di 2147483,647 secondi o circa 24,8 giorni. Non fare affidamento sul valore restituito da **Clock** nei processi eseguiti per un periodo di tempo superiore a quello previsto. È possibile usare la funzione [Time](time-time32-time64.md) a 64 bit o la funzione [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) di Windows per registrare i tempi di esecuzione del processo di molti anni.
 
 ## <a name="requirements"></a>Requisiti
 

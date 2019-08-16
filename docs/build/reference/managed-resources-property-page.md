@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 394aac779fceb4d9d5918e4a5ad36eee8be896ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97cf05f881949444879b0d48e3b3c2703a614985
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321462"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498224"
 ---
 # <a name="managed-resources-property-page"></a>pagina delle proprietà Risorse gestite
 
@@ -33,10 +33,10 @@ La pagina delle proprietà **Risorse gestite** include le proprietà seguenti:
 
    Specifica se il file con estensione resx specificato contribuisce alle risorse predefinite o a una DLL satellite.
 
-Per informazioni su come accedere al **risorse gestite** pagina delle proprietà, vedere [delle proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+Per informazioni su come accedere alla pagina **delle proprietà risorse gestite** , vedere [impostare C++ le proprietà del compilatore e della compilazione in Visual Studio](../working-with-project-properties.md).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Using RC (The RC Command Line)](/windows/desktop/menurc/using-rc-the-rc-command-line-) (Uso di RC - Riga di comando RC)<br>
-[Riferimento alla pagina di proprietà progetto C++](property-pages-visual-cpp.md)<br>
+[Using RC (The RC Command Line)](/windows/win32/menurc/using-rc-the-rc-command-line-) (Uso di RC - Riga di comando RC)<br>
+[C++riferimento alla pagina delle proprietà del progetto](property-pages-visual-cpp.md)<br>
 [/ASSEMBLYRESOURCE (incorpora una risorsa gestita)](assemblyresource-embed-a-managed-resource.md)

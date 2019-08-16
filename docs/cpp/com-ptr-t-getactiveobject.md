@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetActiveObject method [C++]
 ms.assetid: 2fa94853-0410-4620-91f2-136dae923f9f
-ms.openlocfilehash: 84e43de9c40baa3c596c68ed7739471c059cbac7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f13a42878392f63096cdfcb405f3f91cc0efe451
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154851"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498887"
 ---
-# <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
+# <a name="_com_ptr_tgetactiveobject"></a>_com_ptr_t::GetActiveObject
 
 **Sezione specifica Microsoft**
 
-Collega a un'istanza esistente di un oggetto dato un `CLSID` o `ProgID`.
+Si connette a un'istanza esistente di un oggetto dato un `CLSID` oggetto `ProgID`o.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -36,23 +36,23 @@ HRESULT GetActiveObject(
 #### <a name="parameters"></a>Parametri
 
 *rclsid*<br/>
-Il `CLSID` di un oggetto.
+Oggetto `CLSID` di un oggetto.
 
 *clsidString*<br/>
-Una stringa Unicode che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.
+Stringa Unicode che include un oggetto `CLSID` (a partire da " **{** `ProgID`") o.
 
 *clsidStringA*<br/>
-Una stringa multibyte che utilizza la tabella codici ANSI, che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.
+Stringa multibyte, che utilizza la tabella codici ANSI, che include un oggetto `CLSID` (a partire da " **{** `ProgID`") o.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni membro chiamano **GetActiveObject** per recuperare un puntatore a un oggetto in esecuzione che è stato registrato con OLE e quindi le query per questo puntatore intelligente del tipo di interfaccia. Il puntatore risultante viene incapsulato in questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza. Questa routine restituisce il valore HRESULT per indicare esito positivo o negativo.
+Queste funzioni membro chiamano **GetActiveObject** per recuperare un puntatore a un oggetto in esecuzione che è stato registrato con OLE, quindi esegue una query per il tipo di interfaccia del puntatore intelligente. Il puntatore risultante viene incapsulato in questo oggetto `_com_ptr_t`. `Release`viene chiamato per decrementare il conteggio dei riferimenti per il puntatore incapsulato in precedenza. Questa routine restituisce HRESULT per indicare l'esito positivo o negativo.
 
-- **GetActiveObject (**`rclsid`**)** Collega a un'istanza esistente di un oggetto dato un `CLSID`.
+- **GetActiveObject (** `rclsid` **)** si connette a un'istanza esistente di un oggetto dato un `CLSID`oggetto.
 
-- **GetActiveObject (**`clsidString`**)** Collega a un'istanza esistente di un oggetto data una stringa Unicode che contiene una `CLSID` (a partire da "**{**") o un `ProgID`.
+- **GetActiveObject (** `clsidString` **)** si connette a un'istanza esistente di un oggetto data una stringa Unicode che include un `CLSID` oggetto ( `ProgID`a partire da " **{** ") o.
 
-- **GetActiveObject (**`clsidStringA`**)** Collega a un'istanza esistente di un oggetto data una stringa di caratteri multibyte che contiene una `CLSID` (a partire da "**{**") o un oggetto `ProgID`. Le chiamate [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), che presuppone che la stringa sia la tabella codici ANSI anziché una tabella codici OEM.
+- **GetActiveObject (** `clsidStringA` **)** si connette a un'istanza esistente di un oggetto data una stringa di caratteri multibyte che include un `CLSID` oggetto ( `ProgID`a partire da " **{** ") o. Chiama [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), che presuppone che la stringa si trovi nella tabella codici ANSI anziché in una tabella codici OEM.
 
 **Fine sezione specifica Microsoft**
 

@@ -1,21 +1,21 @@
 ---
-title: v1_enum (C++ attributo COM)
+title: v1_enum (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407146"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513864"
 ---
-# <a name="v1enum"></a>v1_enum
+# <a name="v1_enum"></a>v1_enum
 
-Indica che il tipo enumerato specificato verrà trasmesso un'entità 32-bit anziché il valore predefinito di 16 bit.
+Indica che il tipo enumerato specificato deve essere trasmesso come entità a 32 bit anziché come valore predefinito a 16 bit.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Indica che il tipo enumerato specificato verrà trasmesso un'entità 32-bit anzi
 
 ## <a name="remarks"></a>Note
 
-Il **v1_enum** C++ attributo ha la stessa funzionalità come il [v1_enum](/windows/desktop/Midl/v1-enum) attributo MIDL.
+L'attributo **v1_enum** C++ ha la stessa funzionalità dell'attributo MIDL di [v1_enum](/windows/win32/Midl/v1-enum) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra un uso **v1_enum**:
+Il codice seguente illustra l'uso di **v1_enum**:
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -51,7 +51,7 @@ enum eList {
 |**Si applica a**|Tipo enumerato|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

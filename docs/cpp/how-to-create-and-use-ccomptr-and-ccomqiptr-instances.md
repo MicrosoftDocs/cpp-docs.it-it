@@ -4,16 +4,16 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dd7aa903eefd533b1dd2688f3cee46ab3787e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154061"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498598"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procedura: Creare e usare istanze CComPtr e CComQIPtr
 
-Nella programmazione Windows classica le librerie sono spesso implementate come oggetti COM (o, più precisamente, come server COM). Molti componenti del sistema operativo Windows sono implementati come server COM e molti autori forniscono librerie in questa forma. Per informazioni sui fondamenti di COM, vedere [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
+Nella programmazione Windows classica le librerie sono spesso implementate come oggetti COM (o, più precisamente, come server COM). Molti componenti del sistema operativo Windows sono implementati come server COM e molti autori forniscono librerie in questa forma. Per informazioni sui fondamenti di COM, vedere [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
 
 Quando si crea un'istanza di un oggetto COM (Component Object Model), archiviare il puntatore di interfaccia in un puntatore COM intelligente che esegue il conteggio dei riferimenti tramite chiamate a `AddRef` e `Release` nel distruttore. Se si usa la libreria ATL (Active Template Library) o MFC (Microsoft Foundation Class), ricorrere al puntatore intelligente `CComPtr` . Se non si usa ATL o MFC, ricorrere a `_com_ptr_t`. Poiché non esiste un equivalente COM di `std::unique_ptr`, usare questi puntatori intelligenti per entrami gli scenari a proprietario singolo e a più proprietari. Sia `CComPtr` che `ComQIPtr` supportano le operazioni di spostamento con riferimenti rvalue.
 
@@ -23,7 +23,7 @@ L'esempio seguente illustra come usare `CComPtr` per creare un'istanza di un ogg
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` e i relativi elementi fanno parte di ATL e sono definiti \<atlcomcli >. `_com_ptr_t` viene dichiarato in \<comip >. Il compilatore crea specializzazioni di `_com_ptr_t` quando genera classi wrapper per le librerie dei tipi.
+`CComPtr`e i relativi parenti fanno parte di ATL e sono definiti in \<Atlcomcli. h >. `_com_ptr_t`viene dichiarata in \<comip. h >. Il compilatore crea specializzazioni di `_com_ptr_t` quando genera classi wrapper per le librerie dei tipi.
 
 ## <a name="example"></a>Esempio
 

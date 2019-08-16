@@ -1,21 +1,21 @@
 ---
-title: Local (attributo COM C++)
+title: local (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409226"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514406"
 ---
 # <a name="local-c"></a>local (C++)
 
-Quando usato nell'intestazione dell'interfaccia, consente di usare il compilatore MIDL come generatore di intestazione. Se usato in una singola funzione, designa una procedura locale per cui non gli stub vengono generati.
+Quando viene usato nell'intestazione dell'interfaccia, consente di usare il compilatore MIDL come generatore di intestazioni. Se utilizzata in una singola funzione, definisce una procedura locale per la quale non vengono generati stub.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Quando usato nell'intestazione dell'interfaccia, consente di usare il compilator
 
 ## <a name="remarks"></a>Note
 
-Il **locale** attributi di C++ ha la stessa funzionalità come la [locale](/windows/desktop/Midl/local) attributo MIDL.
+L'attributo **local** C++ ha la stessa funzionalità dell'attributo MIDL [locale](/windows/win32/Midl/local) .
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [call_as](call-as.md) per un esempio di come usare **locale**.
+Per un esempio su come usare **local**, vedere [call_as](call-as.md) .
 
 ## <a name="requirements"></a>Requisiti
 

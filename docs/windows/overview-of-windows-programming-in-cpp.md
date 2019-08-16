@@ -2,12 +2,12 @@
 title: Cenni preliminari sulla programmazione Windows in C++
 ms.date: 07/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: f72e6320493027728a85741ba6d87025454c3b9e
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607525"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514801"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Cenni preliminari sulla programmazione Windows in C++
 
@@ -21,9 +21,9 @@ C++le applicazioni console vengono eseguite dalla riga di comando in una finestr
 
 ## <a name="native-desktop-client-applications"></a>Applicazioni client desktop native
 
-Un' *applicazione client desktop nativa* è un'applicazione c C++ o a finestra che usa le API native di [Windows c o Component Object Model (com)](/windows/desktop/apiindex/windows-api-list) originali per accedere al sistema operativo. Queste API vengono scritte principalmente in C. Esistono più modi per creare un'app desktop nativa: È possibile programmare usando direttamente le API Win32, usando un ciclo di messaggi di tipo C che elabora gli eventi del sistema operativo. In alternativa, è possibile programmare utilizzando *Microsoft Foundation Classes* (MFC), una libreria leggermente orientata C++ a oggetti che esegue il wrapping di Win32. Nessuno dei due approcci è considerato "moderno" rispetto al piattaforma UWP (Universal Windows Platform) (UWP), ma entrambi sono ancora completamente supportati e includono milioni di righe di codice in esecuzione nel mondo. Un'applicazione Win32 eseguita in una finestra richiede che lo sviluppatore funzioni in modo esplicito con i messaggi di Windows all'interno di una funzione di routine di Windows. Nonostante il nome, un'applicazione Win32 può essere compilata come un file binario a 32 bit (x86) o a 64 bit (x64). Nell'IDE di Visual Studio i termini x86 e Win32 sono sinonimi.
+Un' *applicazione client desktop nativa* è un'applicazione c C++ o a finestra che usa le API native di [Windows c o Component Object Model (com)](/windows/win32/apiindex/windows-api-list) originali per accedere al sistema operativo. Queste API vengono scritte principalmente in C. Esistono più modi per creare un'app desktop nativa: È possibile programmare usando direttamente le API Win32, usando un ciclo di messaggi di tipo C che elabora gli eventi del sistema operativo. In alternativa, è possibile programmare utilizzando *Microsoft Foundation Classes* (MFC), una libreria leggermente orientata C++ a oggetti che esegue il wrapping di Win32. Nessuno dei due approcci è considerato "moderno" rispetto al piattaforma UWP (Universal Windows Platform) (UWP), ma entrambi sono ancora completamente supportati e includono milioni di righe di codice in esecuzione nel mondo. Un'applicazione Win32 eseguita in una finestra richiede che lo sviluppatore funzioni in modo esplicito con i messaggi di Windows all'interno di una funzione di routine di Windows. Nonostante il nome, un'applicazione Win32 può essere compilata come un file binario a 32 bit (x86) o a 64 bit (x64). Nell'IDE di Visual Studio i termini x86 e Win32 sono sinonimi.
 
-Per iniziare a usare la programmazione C++ tradizionale di Windows, vedere [Introduzione a Win32 C++e ](/windows/desktop/LearnWin32/learn-to-program-for-windows). Una volta acquisite informazioni su Win32, sarà più facile ottenere informazioni sulle [applicazioni desktop MFC](../mfc/mfc-desktop-applications.md). Per un esempio di applicazione desktop C++ tradizionale che usa grafica sofisticata, vedere [Hilo: Sviluppo C++ di applicazioni per](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
+Per iniziare a usare la programmazione C++ tradizionale di Windows, vedere [Introduzione a Win32 C++e ](/windows/win32/LearnWin32/learn-to-program-for-windows). Una volta acquisite informazioni su Win32, sarà più facile ottenere informazioni sulle [applicazioni desktop MFC](../mfc/mfc-desktop-applications.md). Per un esempio di applicazione desktop C++ tradizionale che usa grafica sofisticata, vedere [Hilo: Sviluppo C++ di applicazioni per](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
 
 ### <a name="c-or-net"></a>C++o .NET?
 
@@ -39,7 +39,7 @@ In generale, la programmazione .NET C# in è meno complessa, meno soggetta a err
 
 ## <a name="com-components"></a>Componenti COM
 
-Il [Component Object Model (com)](/windows/desktop/com/the-component-object-model) è una specifica che consente ai programmi scritti in linguaggi diversi di comunicare tra loro. Molti componenti di Windows sono implementati come oggetti COM e seguono regole COM standard per la creazione di oggetti, l'individuazione dell'interfaccia e la distruzione di oggetti.  L'uso di oggetti C++ com da applicazioni desktop è relativamente semplice, ma la scrittura di un oggetto com è più avanzata. Il [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) fornisce le macro e le funzioni di supporto che semplificano lo sviluppo com. Per ulteriori informazioni, vedere [ATL com Desktop Components](../atl/atl-com-desktop-components.md).
+Il [Component Object Model (com)](/windows/win32/com/the-component-object-model) è una specifica che consente ai programmi scritti in linguaggi diversi di comunicare tra loro. Molti componenti di Windows sono implementati come oggetti COM e seguono regole COM standard per la creazione di oggetti, l'individuazione dell'interfaccia e la distruzione di oggetti.  L'uso di oggetti C++ com da applicazioni desktop è relativamente semplice, ma la scrittura di un oggetto com è più avanzata. Il [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) fornisce le macro e le funzioni di supporto che semplificano lo sviluppo com. Per ulteriori informazioni, vedere [ATL com Desktop Components](../atl/atl-com-desktop-components.md).
 
 ## <a name="universal-windows-platform-apps"></a>App della piattaforma UWP (Universal Windows Platform)
 
@@ -55,7 +55,7 @@ Visual Studio 2017 versione 15,4 e successive consente di creare un progetto di 
 
 ## <a name="games"></a>Giochi
 
-I giochi DirectX possono essere eseguiti sul PC o su Xbox. Per altre informazioni, vedere [grafica e giochi DirectX](/windows/desktop/directx).
+I giochi DirectX possono essere eseguiti sul PC o su Xbox. Per altre informazioni, vedere [grafica e giochi DirectX](/windows/win32/directx).
 
 ## <a name="sql-server-database-clients"></a>Client di database SQL Server
 
@@ -67,7 +67,7 @@ I driver sono componenti di basso livello che rendono i dati dai dispositivi har
 
 ## <a name="windows-services"></a>Servizi Windows
 
-Un *servizio* di Windows è un programma che può essere eseguito in background con un'interazione utente minima o nulla. Questi programmi sono detti *daemon* nei sistemi UNIX. Per ulteriori informazioni, vedere [Servizi](/windows/desktop/services/services).
+Un *servizio* di Windows è un programma che può essere eseguito in background con un'interazione utente minima o nulla. Questi programmi sono detti *daemon* nei sistemi UNIX. Per ulteriori informazioni, vedere [Servizi](/windows/win32/services/services).
 
 ## <a name="sdks-libraries-and-header-files"></a>SDK, librerie e file di intestazione
 
@@ -115,7 +115,7 @@ Visual Studio include un potente debugger per codice nativo, strumenti di analis
 
 ## <a name="related-articles"></a>Articoli correlati
 
-|Titolo|Descrizione|
+|Titolo|DESCRIZIONE|
 |-----------|-----------------|
 |[C++ in Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Argomento padre per il C++ contenuto di Visual Developer.|
 [Sviluppo in .NET con C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Creare wrapper per le librerie C++ native che consentono la comunicazione con le applicazioni e i componenti .NET.|

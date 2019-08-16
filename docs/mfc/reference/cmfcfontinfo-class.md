@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a27606b494b13cd7b50f01b38fa95a918bacc7aa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237512"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505268"
 ---
 # <a name="cmfcfontinfo-class"></a>Classe CMFCFontInfo
 
-Il `CMFCFontInfo` classe descrive il nome e altri attributi di un tipo di carattere.
+La `CMFCFontInfo` classe descrive il nome e altri attributi di un tipo di carattere.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,7 +35,7 @@ Il `CMFCFontInfo` classe descrive il nome e altri attributi di un tipo di caratt
 class CMFCFontInfo : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -47,31 +47,31 @@ class CMFCFontInfo : public CObject
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCFontInfo::GetFullName](#getfullname)|Recupera i nomi concatenati di un tipo di carattere e il relativo carattere set (script).|
+|[CMFCFontInfo:: GetFullName](#getfullname)|Recupera i nomi concatenati di un tipo di carattere e del set di caratteri (script).|
 
 ### <a name="data-members"></a>Membri di dati
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CMFCFontInfo::m_nCharSet](#m_ncharset)|Un valore che specifica il set di caratteri (script) associato con il tipo di carattere.|
-|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Un valore che specifica passo e famiglia del tipo di carattere.|
-|[CMFCFontInfo::m_nType](#m_ntype)|Un valore che specifica il tipo del tipo di carattere.|
-|[CMFCFontInfo::m_strName](#m_strname)|Il nome del tipo di carattere; ad esempio, **Arial**.|
-|[CMFCFontInfo::m_strScript](#m_strscript)|Il nome di un set di caratteri (script) associato con il tipo di carattere.|
+|[CMFCFontInfo::m_nCharSet](#m_ncharset)|Valore che specifica il set di caratteri (script) associato al tipo di carattere.|
+|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Valore che specifica il passo e la famiglia del tipo di carattere.|
+|[CMFCFontInfo::m_nType](#m_ntype)|Valore che specifica il tipo del tipo di carattere.|
+|[CMFCFontInfo::m_strName](#m_strname)|Nome del tipo di carattere. ad esempio, **Arial**.|
+|[CMFCFontInfo::m_strScript](#m_strscript)|Nome di un set di caratteri (script) associato al tipo di carattere.|
 
 ## <a name="remarks"></a>Note
 
-È possibile collegare un `CMFCFontInfo` a un elemento dell'oggetto di [classe CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) classe. Chiamare il [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) metodo per recuperare un puntatore a un `CMFCFontInfo` oggetto.
+È possibile aggiungere un `CMFCFontInfo` oggetto a un elemento della classe della [classe CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) . Chiamare il metodo [CMFCToolBarFontComboBox:: GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) per recuperare un puntatore a un `CMFCFontInfo` oggetto.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare diversi membri del `CMFCFontInfo` classe. Nell'esempio viene illustrato come ottenere un `CMFCFontInfo` dell'oggetto da un `CMFCRibbonFontComboBox`e come accedere alle relative variabili locali. In questo esempio fa parte di [esempio dimostrativo di Office 2007](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come utilizzare diversi membri della `CMFCFontInfo` classe. Nell'esempio viene illustrato come ottenere un `CMFCFontInfo` oggetto da un `CMFCRibbonFontComboBox`oggetto e come accedere alle variabili locali. Questo esempio fa parte dell' [esempio MSOffice 2007 demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxtoolbarfontcombobox.h
+**Intestazione:** afxtoolbarfontcombobox. h
 
 ##  <a name="cmfcfontinfo"></a>  CMFCFontInfo::CMFCFontInfo
 
@@ -91,32 +91,32 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="parameters"></a>Parametri
 
 *lpszName*<br/>
-[in] Il nome del tipo di carattere. Per altre informazioni, vedere la `lfFaceName` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.
+in Nome del tipo di carattere. Per ulteriori informazioni, vedere il `lfFaceName` membro della struttura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
 
 *lpszScript*<br/>
-[in] Il nome dello script (set di caratteri) del tipo di carattere.
+in Nome dello script (set di caratteri) del tipo di carattere.
 
 *nCharSet*<br/>
-[in] Un valore che specifica il set di caratteri (script) del tipo di carattere. Per altre informazioni, vedere la `lfCharSet` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.
+in Valore che specifica il set di caratteri (script) del tipo di carattere. Per ulteriori informazioni, vedere il `lfCharSet` membro della struttura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
 
 *nPitchAndFamily*<br/>
-[in] Un valore che specifica passo e famiglia del tipo di carattere. Per altre informazioni, vedere la `lfPitchAndFamily` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura.
+in Valore che specifica il passo e la famiglia del tipo di carattere. Per ulteriori informazioni, vedere il `lfPitchAndFamily` membro della struttura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
 
 *nType*<br/>
-[in] Un valore che specifica il tipo di carattere. Questo parametro può essere una combinazione bit per bit (OR) di DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.
+in Valore che specifica il tipo di carattere. Questo parametro può essere una combinazione bit per bit (o) di DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.
 
 *src*<br/>
-[in] Un oggetto esistente `CMFCFontInfo` i cui membri vengono usati per costruire l'oggetto `CMFCFontInfo` oggetto.
+in Oggetto esistente `CMFCFontInfo` i cui membri vengono utilizzati per costruire l' `CMFCFontInfo` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-Questa documentazione Usa i termini *set di caratteri* e *script* in modo intercambiabile. Oggetto *script*, che è noto anche come un sistema di scrittura, è una raccolta di caratteri e le regole per la scrittura di tali caratteri in una o più lingue. La raccolta di caratteri include l'alfabeto e punteggiatura usato in tale script. Alfabeto latino, ad esempio, viene utilizzato per la lingua inglese quando si è parlato negli Stati Uniti e sul relativo alfabeto include i caratteri dalla alla Z. Il `lfCharSet` membro della [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) struttura specifica un set di caratteri. Ad esempio, il valore ANSI_CHARSET specifica il set di caratteri ANSI, che include la lettera dell'alfabeto latino.
+Questa documentazione usa il *set di caratteri* dei termini e *lo script* in modo interscambiabile. Uno *script*, noto anche come sistema di scrittura, è una raccolta di caratteri e regole per la scrittura di tali caratteri in una o più lingue. La raccolta di caratteri include l'alfabeto e la punteggiatura utilizzati nello script. Ad esempio, lo script latino viene usato per la lingua inglese in quanto viene parlato nell'Stati Uniti e il relativo alfabeto include i caratteri da A A Z. Il `lfCharSet` membro della struttura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) specifica un set di caratteri. Ad esempio, il valore ANSI_CHARSET specifica il set di caratteri ANSI, che include l'alfabeto dello script latino.
 
-##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName
+##  <a name="getfullname"></a>CMFCFontInfo:: GetFullName
 
-Recupera i nomi concatenati di un tipo di carattere e il relativo carattere set (script).
+Recupera i nomi concatenati di un tipo di carattere e del set di caratteri (script).
 
 ```
 CString GetFullName() const;
@@ -128,11 +128,11 @@ Stringa che contiene il nome del tipo di carattere e lo script.
 
 ### <a name="remarks"></a>Note
 
-Usare questo metodo per ottenere il nome completo del tipo di carattere. Ad esempio, se il nome del tipo di carattere **Arial** ed è lo script del tipo di carattere **cirillico**, questo metodo restituisce "Arial (alfabeto cirillico)".
+Utilizzare questo metodo per ottenere il nome completo del tipo di carattere. Ad esempio, se il nome del tipo di carattere è **Arial** e lo script del tipo di carattere è **cirillico**, questo metodo restituisce "Arial (alfabeto cirillico)".
 
 ##  <a name="m_ncharset"></a>  CMFCFontInfo::m_nCharSet
 
-Un valore che specifica il set di caratteri (script) associato con il tipo di carattere.
+Valore che specifica il set di caratteri (script) associato al tipo di carattere.
 
 ```
 const BYTE m_nCharSet;
@@ -140,11 +140,11 @@ const BYTE m_nCharSet;
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere la *nCharSet* parametro delle [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) costruttore.
+Per ulteriori informazioni, vedere il parametro *nCharSet* del costruttore [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily
 
-Un valore che specifica il tono (punto di dimensione) e la famiglia (ad esempio, serif, sans-serif e a spaziatura fissa) del tipo di carattere.
+Valore che specifica il passo (dimensione del punto) e la famiglia (ad esempio, Serif, sans-serif e monospace) del tipo di carattere.
 
 ```
 const BYTE m_nPitchAndFamily;
@@ -152,11 +152,11 @@ const BYTE m_nPitchAndFamily;
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere la *nPitchAndFamily* parametro delle [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) costruttore.
+Per ulteriori informazioni, vedere il parametro *nPitchAndFamily* del costruttore [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
-##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType
+##  <a name="m_ntype"></a>CMFCFontInfo:: m_nType
 
-Un valore che specifica il tipo del tipo di carattere.
+Valore che specifica il tipo del tipo di carattere.
 
 ```
 const int m_nType;
@@ -164,11 +164,11 @@ const int m_nType;
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere la *NLE* parametro delle [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) costruttore.
+Per ulteriori informazioni, vedere il parametro *nType* del costruttore [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName
 
-Il nome del tipo di carattere: ad esempio, **Arial**.
+Nome del tipo di carattere, ad esempio **Arial**.
 
 ```
 const CString m_strName;
@@ -176,11 +176,11 @@ const CString m_strName;
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere la *lpszName* parametro delle [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) costruttore.
+Per ulteriori informazioni, vedere il parametro *lpszName* del costruttore [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript
 
-Il nome di un set di caratteri (script) associato con il tipo di carattere.
+Nome di un set di caratteri (script) associato al tipo di carattere.
 
 ```
 const CString m_strScript;
@@ -188,7 +188,7 @@ const CString m_strScript;
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere la *lpszScript* parametro delle [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) costruttore.
+Per ulteriori informazioni, vedere il parametro *lpszScript* del costruttore [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
 
 ## <a name="see-also"></a>Vedere anche
 

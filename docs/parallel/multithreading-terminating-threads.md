@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Terminazione dei thread in MFC'
+title: 'Multithreading: Terminazione di thread in MFC'
 ms.date: 08/27/2018
 f1_keywords:
 - CREATE_SUSPENDED
@@ -13,52 +13,52 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97a99eb2382c4864f1bd8cc881fab5e32a1e2070
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407731"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511700"
 ---
-# <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Terminazione dei thread in MFC
+# <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Terminazione di thread in MFC
 
-Normalmente in due situazioni causano un thread venga terminato: termina la funzione di controllo o il thread non è consentito per l'esecuzione fino al completamento. Se un elaboratore di testo utilizzato un thread per la stampa in background, la funzione di controllo termina normalmente stampa viene completata correttamente. Se l'utente desidera annullare la stampa, tuttavia, il thread di stampa in background deve essere terminato prematuramente. Questo argomento viene illustrato come implementare ogni situazione sia come ottenere il codice di uscita di un thread dopo la terminazione.
+Due situazioni normali comportano la terminazione di un thread, ovvero la funzione di controllo si chiude oppure il thread non può essere eseguito fino al completamento. Se un elaboratore di testo usava un thread per la stampa in background, la funzione di controllo verrebbe terminata normalmente se la stampa è stata completata correttamente. Se l'utente desidera annullare la stampa, tuttavia, il thread di stampa in background deve terminare in modo anomalo. In questo argomento viene illustrato come implementare ogni situazione e come ottenere il codice di uscita di un thread dopo che è stato terminato.
 
-- [Normale terminazione](#_core_normal_thread_termination)
+- [Terminazione del thread normale](#_core_normal_thread_termination)
 
-- [Chiusura anomala di Thread](#_core_premature_thread_termination)
+- [Terminazione del thread prematura](#_core_premature_thread_termination)
 
-- [Il recupero del codice di uscita di un Thread](#_core_retrieving_the_exit_code_of_a_thread)
+- [Recupero del codice di uscita di un thread](#_core_retrieving_the_exit_code_of_a_thread)
 
-##  <a name="_core_normal_thread_termination"></a> Normale terminazione
+##  <a name="_core_normal_thread_termination"></a>Terminazione del thread normale
 
-Per un thread di lavoro, la terminazione normale di un thread è semplice: Uscire dalla funzione di controllo e restituiscono un valore che indica il motivo della terminazione. È possibile usare la [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funzione o una **restituire** istruzione. In genere, 0 indica il completamento, ma che è responsabilità dell'utente.
+Per un thread di lavoro, la terminazione normale dei thread è semplice: Uscire dalla funzione di controllo e restituire un valore che indica il motivo della terminazione. È possibile usare la funzione [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) o un'istruzione **Return** . In genere, 0 indica il completamento corretto, ma spetta all'utente.
 
-Per un thread dell'interfaccia utente, il processo è semplice: dall'interno del thread dell'interfaccia utente, chiamare [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) nel SDK di Windows. L'unico parametro che `PostQuitMessage` accetta sia il codice di uscita del thread. Come per il thread di lavoro, 0 indica in genere il corretto completamento.
+Per un thread dell'interfaccia utente, il processo è altrettanto semplice: dall'interno del thread dell'interfaccia utente, chiamare [PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) nel Windows SDK. L'unico parametro che `PostQuitMessage` accetta è il codice di uscita del thread. Per quanto riguarda i thread di lavoro, 0 indica in genere il completamento corretto.
 
-##  <a name="_core_premature_thread_termination"></a> Chiusura anomala di Thread
+##  <a name="_core_premature_thread_termination"></a>Terminazione del thread prematura
 
-Terminazione di un thread in modo anomalo è semplice quasi come: Chiamare [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) dall'interno del thread. Passare il codice di uscita desiderato come unico parametro. Questo arresta l'esecuzione del thread, dealloca lo stack del thread, disconnette tutte le DLL associate al thread e consente di eliminare l'oggetto thread dalla memoria.
+La terminazione di un thread in modo anomalo è piuttosto semplice: Chiamare [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) dall'interno del thread. Passare il codice di uscita desiderato come unico parametro. Arresta l'esecuzione del thread, dealloca lo stack del thread, disconnette tutte le DLL collegate al thread ed Elimina l'oggetto thread dalla memoria.
 
-`AfxEndThread` Deve essere chiamato dall'interno del thread da terminare. Se si desidera terminare un thread da un altro thread, è necessario configurare un metodo di comunicazione tra i due thread.
+`AfxEndThread`deve essere chiamato dall'interno del thread da terminare. Se si desidera terminare un thread da un altro thread, è necessario configurare un metodo di comunicazione tra i due thread.
 
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Il recupero del codice di uscita di un Thread
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>Recupero del codice di uscita di un thread
 
-Per ottenere il codice di uscita del ruolo di lavoro o il thread dell'interfaccia utente, chiamare il [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) (funzione). Per informazioni su questa funzione, vedere il SDK di Windows. Questa funzione accetta l'handle nel thread (archiviati nel `m_hThread` membro dati di `CWinThread` oggetti) e l'indirizzo di un valore DWORD.
+Per ottenere il codice di uscita del thread di lavoro o dell'interfaccia utente, chiamare la funzione [GetExitCodeThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodethread) . Per informazioni su questa funzione, vedere la Windows SDK. Questa funzione accetta l'handle per il thread (archiviato nel `m_hThread` membro dati degli `CWinThread` oggetti) e l'indirizzo di un valore DWORD.
 
-Se il thread è ancora attivo, `GetExitCodeThread` inserisce STILL_ACTIVE nell'indirizzo del valore DWORD specificato; in caso contrario, il codice di uscita viene inserito in questo indirizzo.
+Se il thread è ancora attivo, `GetExitCodeThread` inserisce STILL_ACTIVE nell'indirizzo DWORD fornito; in caso contrario, il codice di uscita viene inserito in questo indirizzo.
 
-Il codice di uscita di recupero [CWinThread](../mfc/reference/cwinthread-class.md) oggetti richiede un passaggio aggiuntivo. Per impostazione predefinita, quando un `CWinThread` thread termina, l'oggetto thread viene eliminato. Ciò significa che non è possibile accedere la `m_hThread` membro dati perché il `CWinThread` oggetto non esiste più. Per evitare questa situazione, effettuare una delle operazioni seguenti:
+Il recupero del codice di uscita degli oggetti [CWinThread](../mfc/reference/cwinthread-class.md) richiede un passaggio aggiuntivo. Per impostazione predefinita, quando `CWinThread` un thread termina, l'oggetto thread viene eliminato. Ciò significa che non è possibile `m_hThread` accedere al membro dati `CWinThread` perché l'oggetto non esiste più. Per evitare questa situazione, eseguire una delle operazioni seguenti:
 
-- Impostare il `m_bAutoDelete` membro dati su FALSE. In questo modo il `CWinThread` oggetto dopo che il thread è stato terminato. È quindi possibile accedere la `m_hThread` membro dati dopo che il thread è stato terminato. Se si usa questa tecnica, tuttavia, si è responsabile dell'eliminazione definitiva di `CWinThread` dell'oggetto poiché il framework non lo eliminerà automaticamente. Questo è il metodo preferito.
+- Impostare il `m_bAutoDelete` membro dati su false. Ciò consente `CWinThread` all'oggetto di sopravvivere dopo che il thread è stato terminato. È quindi possibile accedere al `m_hThread` membro dati dopo che il thread è stato terminato. Se si utilizza questa tecnica, tuttavia, si è responsabili dell'eliminazione dell' `CWinThread` oggetto perché il Framework non lo eliminerà automaticamente. Questo è il metodo preferito.
 
-- Store separatamente l'handle del thread. Dopo la creazione del thread, copiare relativi `m_hThread` membro dati (tramite `::DuplicateHandle`) a un'altra variabile e accedervi tramite la variabile. In questo modo l'oggetto viene eliminato automaticamente alla terminazione, è comunque possibile stabilire il motivo della terminazione. Prestare attenzione che il thread non termini prima della duplicazione handle. Il modo più sicuro per eseguire questa operazione consiste nel passare a CREATE_SUSPENDED [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)memorizzare l'handle e quindi riprendere il thread chiamando [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).
+- Archiviare separatamente l'handle del thread. Dopo aver creato il thread, copiarne `m_hThread` il membro dati ( `::DuplicateHandle`usando) in un'altra variabile e accedervi tramite tale variabile. In questo modo l'oggetto viene eliminato automaticamente quando si verifica la terminazione ed è comunque possibile scoprire perché il thread è stato terminato. Assicurarsi che il thread non venga terminato prima che sia possibile duplicare l'handle. Il modo più sicuro per eseguire questa operazione consiste nel passare CREATE_SUSPENDED a [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), archiviare l'handle e quindi riprendere il thread chiamando [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).
 
-Uno dei due metodi consente di determinare il motivo un `CWinThread` terminata dell'oggetto.
+Entrambi i metodi consentono di determinare il motivo `CWinThread` per cui un oggetto è stato terminato.
 
 ## <a name="see-also"></a>Vedere anche
 
 [Multithreading con C++ e MFC](multithreading-with-cpp-and-mfc.md)<br/>
 [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)<br/>
 [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)<br/>
-[ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread)
+[ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread)

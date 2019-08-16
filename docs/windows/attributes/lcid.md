@@ -1,17 +1,17 @@
 ---
-title: LCID (attributo COM C++)
+title: LCID (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: d97ad86e143102c96e87ae0a32245b0c01042501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409265"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514546"
 ---
 # <a name="lcid"></a>lcid
 
@@ -25,7 +25,7 @@ Consente di passare un identificatore delle impostazioni locali a una funzione.
 
 ## <a name="remarks"></a>Note
 
-Il **lcid** attributi di C++ implementa la funzionalità delle [lcid](/windows/desktop/Midl/lcid) attributo MIDL. Se si desidera implementare le impostazioni locali per un blocco di libreria, usare il **lcid =** `lcid` parametro per il [modulo](module-cpp.md) attributo.
+L'attributo **LCID** C++ implementa la funzionalità dell'attributo MIDL di [LCID](/windows/win32/Midl/lcid) . Se si desidera implementare impostazioni locali per un blocco di libreria, utilizzare il parametro **LCID =** `lcid` per l'attributo [Module](module-cpp.md) .
 
 ## <a name="example"></a>Esempio
 
@@ -51,7 +51,7 @@ __interface IStatic {
 |**Si applica a**|Parametro interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

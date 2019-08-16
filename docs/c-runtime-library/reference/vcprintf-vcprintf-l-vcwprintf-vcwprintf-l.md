@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5991f903771408a22722dceec3e0c5d84b878e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364844"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499309"
 ---
-# <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
+# <a name="_vcprintf-_vcprintf_l-_vcwprintf-_vcwprintf_l"></a>_vcprintf, _vcprintf_l, _vcwprintf, _vcwprintf_l
 
 Scrive l'output formattato nella console tramite un puntatore a un elenco di argomenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md).
 
@@ -95,16 +95,16 @@ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-libra
 
 ## <a name="return-value"></a>Valore restituito
 
-Numero di caratteri scritti o un valore negativo se si verifica un errore di output. Se *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e viene restituito -1.
+Numero di caratteri scritti o un valore negativo se si verifica un errore di output. Se *Format* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito-1.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nella console. **vcwprintf** è la versione a caratteri wide di **vcprintf**. Accetta una stringa di caratteri wide come argomento.
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nella console. **_vcwprintf** è la versione a caratteri wide di **_vcprintf**. Accetta una stringa di caratteri wide come argomento.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
 > [!IMPORTANT]
-> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-ms.openlocfilehash: 9641af2f184d2edaa82922363dff75783e79f87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccf08b309e64cd82215acb6032bc2a777f4c809a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182184"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507160"
 ---
 # <a name="cconstanttransition-class"></a>Classe CConstantTransition
 
@@ -29,29 +29,29 @@ Incapsula una transizione costante.
 class CConstantTransition : public CBaseTransition;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CConstantTransition::CConstantTransition](#cconstanttransition)|Costruisce un oggetto di transizione e inizializza la sua durata.|
+|[CConstantTransition::CConstantTransition](#cconstanttransition)|Costruisce un oggetto di transizione e ne inizializza la durata.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CConstantTransition::Create](#create)|Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato. (Esegue l'override [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CConstantTransition::Create](#create)|Chiama la libreria di transizione per creare l'oggetto COM di transizione incapsulato. Esegue l'override di [CBaseTransition:: create](../../mfc/reference/cbasetransition-class.md#create).|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
-|[CConstantTransition::m_duration](#m_duration)|La durata della transizione.|
+|[CConstantTransition::m_duration](#m_duration)|Durata della transizione.|
 
 ## <a name="remarks"></a>Note
 
-Durante una transizione costante, il valore di una variabile di animazione rimane in corrispondenza del valore iniziale per la durata della transizione. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile allocata li utilizzando l'operatore new. L'oggetto incapsulato IUIAnimationTransition COM viene creato da CAnimationController:: AnimateGroup, finché non è NULL. Per modificare le variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.
+Durante una transizione costante, il valore di una variabile di animazione rimane in corrispondenza del valore iniziale per la durata della transizione. Poiché tutte le transizioni vengono cancellate automaticamente, è consigliabile allocarle usando operator new. L'oggetto COM IUIAnimationTransition incapsulato viene creato da CAnimationController:: AnimateGroup, fino a quando non è NULL. La modifica delle variabili membro dopo la creazione di questo oggetto COM non ha alcun effetto.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -65,9 +65,9 @@ Durante una transizione costante, il valore di una variabile di animazione riman
 
 **Intestazione:** afxanimationcontroller.h
 
-##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition
+##  <a name="cconstanttransition"></a>CConstantTransition:: CConstantTransition
 
-Costruisce un oggetto di transizione e inizializza la sua durata.
+Costruisce un oggetto di transizione e ne inizializza la durata.
 
 ```
 CConstantTransition (UI_ANIMATION_SECONDS duration);
@@ -75,12 +75,12 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 
 ### <a name="parameters"></a>Parametri
 
-*duration*<br/>
-La durata della transizione.
+*durata*<br/>
+Durata della transizione.
 
 ##  <a name="create"></a>  CConstantTransition::Create
 
-Chiama la libreria di transizione per creare oggetti COM di transizione incapsulato.
+Chiama la libreria di transizione per creare l'oggetto COM di transizione incapsulato.
 
 ```
 virtual BOOL Create(
@@ -91,15 +91,15 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametri
 
 *pLibrary*<br/>
-Un puntatore a un [IUIAnimationTransitionLibrary interfaccia](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), che definisce una raccolta di transizioni standard.
+Puntatore a un' [interfaccia IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), che definisce una libreria di transizioni standard.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se transizione viene creata correttamente. in caso contrario, FALSE.
+TRUE se la transizione viene creata correttamente; in caso contrario, FALSE.
 
-##  <a name="m_duration"></a>  CConstantTransition::m_duration
+##  <a name="m_duration"></a>CConstantTransition:: m_duration
 
-La durata della transizione.
+Durata della transizione.
 
 ```
 UI_ANIMATION_SECONDS m_duration;

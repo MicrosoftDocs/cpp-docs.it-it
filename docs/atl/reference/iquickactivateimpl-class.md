@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IQuickActivateImpl class
 - IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
-ms.openlocfilehash: 2a2b11746249b6ee4f6ddd578717aacc374d53bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2169686ebbf756c5caf9232f5031532c62ac8265
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198149"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495512"
 ---
 # <a name="iquickactivateimpl-class"></a>Classe IQuickActivateImpl
 
-Questa classe combina l'inizializzazione di controllo dei contenitori in un'unica chiamata.
+Questa classe combina l'inizializzazione del controllo dei contenitori in un'unica chiamata.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,23 +37,23 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 #### <a name="parameters"></a>Parametri
 
 *T*<br/>
-La classe, derivata da `IQuickActivateImpl`.
+Classe derivata da `IQuickActivateImpl`.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|Recupera le dimensioni di visualizzazione corrente per un controllo in esecuzione.|
-|[IQuickActivateImpl::QuickActivate](#quickactivate)|Esegue un'inizializzazione dei controlli in fase di caricamento rapida.|
-|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Informa il controllo di quanto lo spazio di visualizzazione ha assegnato al contenitore.|
+|[IQuickActivateImpl::GetContentExtent](#getcontentextent)|Recupera le dimensioni di visualizzazione correnti per un controllo in esecuzione.|
+|[IQuickActivateImpl::QuickActivate](#quickactivate)|Esegue l'inizializzazione rapida dei controlli caricati.|
+|[IQuickActivateImpl::SetContentExtent](#setcontentextent)|Informa il controllo della quantità di spazio di visualizzazione assegnata al contenitore.|
 
 ## <a name="remarks"></a>Note
 
-Il [IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate) interfaccia aiuta i contenitori di evitare ritardi durante il caricamento dei controlli mediante la combinazione di inizializzazione in un'unica chiamata. Il `QuickActivate` metodo consente al contenitore di passare un puntatore a un [QACONTAINER](/windows/desktop/api/ocidl/ns-ocidl-tagqacontainer) deve struttura che contiene i puntatori a tutte le interfacce al controllo. In fase di restituzione, il controllo passa nuovamente un puntatore a un [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) struttura che contiene i puntatori per le proprie interfacce, che vengono usate dal contenitore. Classe `IQuickActivateImpl` fornisce un'implementazione predefinita di `IQuickActivate` e implementa `IUnknown` per l'invio di informazioni per il dump compila dispositivo in modalità debug.
+L'interfaccia [IQuickActivate](/windows/win32/api/ocidl/nn-ocidl-iquickactivate) consente ai contenitori di evitare ritardi durante il caricamento dei controlli combinando l'inizializzazione in un'unica chiamata. Il `QuickActivate` metodo consente al contenitore di passare un puntatore a una struttura [QACONTAINER](/windows/win32/api/ocidl/ns-ocidl-qacontainer) che include puntatori a tutte le interfacce necessarie per il controllo. Al ritorno, il controllo passa di nuovo un puntatore a una struttura [QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol) che include i puntatori alle relative interfacce, che vengono usate dal contenitore. La `IQuickActivateImpl` classe fornisce un'implementazione predefinita `IQuickActivate` di e `IUnknown` implementa inviando informazioni al dispositivo di dump nelle compilazioni di debug.
 
-**Articoli correlati** [esercitazione ATL](../../atl/active-template-library-atl-tutorial.md), [la creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)
+**Articoli correlati** [Esercitazione su ATL](../../atl/active-template-library-atl-tutorial.md), [creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -67,7 +67,7 @@ Il [IQuickActivate](/windows/desktop/api/ocidl/nn-ocidl-iquickactivate) interfac
 
 ##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent
 
-Recupera le dimensioni di visualizzazione corrente per un controllo in esecuzione.
+Recupera le dimensioni di visualizzazione correnti per un controllo in esecuzione.
 
 ```
 STDMETHOD(GetContentExtent)(LPSIZEL pSize);
@@ -75,13 +75,13 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
 
 ### <a name="remarks"></a>Note
 
-La dimensione è per il rendering del controllo completo e viene specificata in unità HIMETRIC.
+La dimensione è per un rendering completo del controllo e viene specificata in unità HIMETRIC.
 
-Visualizzare [IQuickActivate::GetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) in Windows SDK.
+Vedere [IQuickActivate:: GetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-getcontentextent) nella Windows SDK.
 
 ##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate
 
-Esegue un'inizializzazione dei controlli in fase di caricamento rapida.
+Esegue l'inizializzazione rapida dei controlli caricati.
 
 ```
 STDMETHOD(QuickActivate)(
@@ -91,13 +91,13 @@ STDMETHOD(QuickActivate)(
 
 ### <a name="remarks"></a>Note
 
-La struttura contiene i puntatori alle interfacce necessarie per il controllo e i valori di alcune proprietà di ambiente. Al momento della restituzione, il controllo passa un puntatore a un [QACONTROL](/windows/desktop/api/ocidl/ns-ocidl-tagqacontrol) struttura che contiene i puntatori per le proprie interfacce che richiede il contenitore e informazioni aggiuntive sullo stato.
+La struttura contiene i puntatori alle interfacce necessarie per il controllo e i valori di alcune proprietà di ambiente. Al momento della restituzione, il controllo passa un puntatore a una struttura [QACONTROL](/windows/win32/api/ocidl/ns-ocidl-qacontrol) che contiene puntatori alle proprie interfacce richieste dal contenitore e informazioni aggiuntive sullo stato.
 
-Visualizzare [IQuickActivate::QuickActivate](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-quickactivate) in Windows SDK.
+Vedere [IQuickActivate:: QuickActivate](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-quickactivate) nella Windows SDK.
 
 ##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent
 
-Informa il controllo di quanto lo spazio di visualizzazione ha assegnato al contenitore.
+Informa il controllo della quantità di spazio di visualizzazione assegnata al contenitore.
 
 ```
 STDMETHOD(SetContentExtent)(LPSIZEL pSize);
@@ -107,7 +107,7 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
 
 La dimensione è specificata in unità HIMETRIC.
 
-Visualizzare [IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) in Windows SDK.
+Vedere [IQuickActivate:: SetContentExtent](/windows/win32/api/ocidl/nf-ocidl-iquickactivate-setcontentextent) nella Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 
