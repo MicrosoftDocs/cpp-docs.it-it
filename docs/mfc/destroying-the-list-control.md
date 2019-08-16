@@ -5,20 +5,20 @@ helpviewer_keywords:
 - list controls [MFC], destroying
 - CListCtrl class [MFC], destroying controls
 ms.assetid: 513ec820-3a02-49d2-b073-a6a7a3fc91b3
-ms.openlocfilehash: 963da9e6db2f0fe063dee1ca19ab23f545ed5e76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5004026da6bb309cc2c966384724b7b98e254e1d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392888"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508707"
 ---
 # <a name="destroying-the-list-control"></a>Distruzione del controllo List
 
-Se si incorpora il [CListCtrl](../mfc/reference/clistctrl-class.md) dell'oggetto di un membro dati di una classe di finestra di dialogo o visualizzazione, viene eliminato definitivamente quando viene eliminato il relativo proprietario. Se si usa un' [CListView](../mfc/reference/clistview-class.md), il framework Elimina definitivamente il controllo quando la visualizzazione viene eliminata.
+Se l'oggetto [CListCtrl](../mfc/reference/clistctrl-class.md) viene incorporato come membro dati di una vista o di una classe della finestra di dialogo, viene eliminato definitivamente quando il proprietario viene eliminato definitivamente. Se si usa un [CListView](../mfc/reference/clistview-class.md), il Framework Elimina il controllo quando elimina la visualizzazione.
 
-Se le Disponi per alcuni dati elenco da archiviare nell'applicazione anziché con il controllo elenco, è necessario disporre della relativa deallocazione. Per altre informazioni, vedere [elementi di Callback e maschera di Callback](/windows/desktop/Controls/using-list-view-controls) nel SDK di Windows.
+Se si dispone che alcuni dei dati dell'elenco siano archiviati nell'applicazione anziché nel controllo elenco, sarà necessario disporre la relativa deallocazione. Per altre informazioni, vedere [elementi di callback e maschera di callback](/windows/win32/Controls/using-list-view-controls) nel Windows SDK.
 
-Inoltre, è responsabile per la deallocazione qualsiasi elenchi di immagini è creato e associato all'oggetto di controllo elenco.
+Inoltre, l'utente è responsabile della deallocazione di qualsiasi elenco di immagini creato e associato all'oggetto controllo elenco.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,5 +1,5 @@
 ---
-title: Configurare i progetti C++ a 64 bit x64 destinazioni
+title: Configurare C++ progetti per destinazioni x64 a 64 bit
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - 64-bit programming [C++], about 64-bit programming
 - programming [C++], 64-bit
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: 0e2e4dcd1e7dabc2ffc8ac87b1670245101c16d0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 906591544717ed107c284dfb41bbbf2dfdd3c253
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240869"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493285"
 ---
-# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurare i progetti C++ a 64 bit x64 destinazioni
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurare C++ progetti per destinazioni x64 a 64 bit
 
-Questa sezione contiene argomenti sulla destinazione a 64 bit x64 hardware con Visual C++ gli strumenti di compilazione.
+Questa sezione contiene argomenti relativi all'hardware x64 a 64 bit con gli strumenti di C++ compilazione visivi.
 
 ## <a name="in-this-section"></a>In questa sezione
 
 - [Procedura: Configurare i progetti Visual C++ per piattaforme x64 a 64 bit](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Procedura: Abilitare un set di strumenti di MSVC a 64 bit e x64 ospitato nella riga di comando](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Procedura: Abilitare un set di strumenti MSVC a 64 bit e x64 nella riga di comando](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Problemi comuni relativi alla migrazione di Visual C++ a 64 bit](common-visual-cpp-64-bit-migration-issues.md)
 
@@ -30,7 +30,7 @@ Questa sezione contiene argomenti sulla destinazione a 64 bit x64 hardware con V
 
 ## <a name="related-sections"></a>Sezioni correlate
 
-[Applicazioni a 64 bit di .NET framework](/dotnet/framework/64-bit-apps)
+[.NET Framework applicazioni a 64 bit](/dotnet/framework/64-bit-apps)
 
 [align](../cpp/align-cpp.md)
 
@@ -38,7 +38,7 @@ Questa sezione contiene argomenti sulla destinazione a 64 bit x64 hardware con V
 
 [/favor (ottimizza per le specifiche di architettura)](reference/favor-optimize-for-architecture-specifics.md)
 
-[Guida di programmazione per Windows a 64 bit](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)
+[Guida alla programmazione per Windows a 64 bit](/windows/win32/WinProg64/programming-guide-for-64-bit-windows)
 
 [MASM per x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)
 

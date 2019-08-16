@@ -25,12 +25,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 988af1c2678e20ea40ce4dfe331a3b6c49db0547
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27811f56f1956bcaaea4ec589f7e6c71afaca380
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156564"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499623"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -64,15 +64,15 @@ Numero di byte (**memmove**) o caratteri (**wmemmove**) da copiare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore di *dest*.
+Valore di *dest*.
 
 ## <a name="remarks"></a>Note
 
-Le copie *conteggio* byte (**memmove**) o caratteri (**wmemmove**) da *src* a *dest*. Se alcune parti dell'area di origine e di destinazione si sovrappongono, entrambe le funzioni assicurano che i byte di origine originali nell'area sovrapposta vengono copiati prima di essere sovrascritti.
+Copia il *numero* di byte (**memmove**) o i caratteri (**wmemmove**) da *src* a *dest*. Se alcune parti dell'area di origine e di destinazione si sovrappongono, entrambe le funzioni assicurano che i byte di origine originali nell'area sovrapposta vengono copiati prima di essere sovrascritti.
 
-**Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o più grande del buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o più grande del buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Il **memmove** e **wmemmove** funzioni verranno deprecate solo se la costante **_CRT_SECURE_DEPRECATE_MEMORY** è definita prima dell'istruzione di inclusione nell'ordine per le funzioni deprecate, ad esempio come illustrato nell'esempio riportato di seguito:
+Le funzioni **memmove** e **wmemmove** verranno deprecate solo se la costante **_CRT_SECURE_DEPRECATE_MEMORY** viene definita prima dell'istruzione di inclusione affinché le funzioni vengano deprecate, come nell'esempio seguente:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

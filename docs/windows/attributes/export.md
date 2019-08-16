@@ -1,21 +1,21 @@
 ---
-title: Export (attributo COM C++)
+title: Export (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.export
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 5ffa4283b8a2b265809d06b72be96e217cf8bf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409616"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501613"
 ---
 # <a name="export"></a>esportazione
 
-Fa sì che una struttura di dati da inserire nel file IDL.
+Determina la posizione di una struttura di dati nel file con estensione IDL.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,17 +25,17 @@ Fa sì che una struttura di dati da inserire nel file IDL.
 
 ## <a name="remarks"></a>Note
 
-Il **esportare** C++ attributo causa una struttura di dati da inserire nel file IDL e sia quindi disponibile nella libreria dei tipi in un formato compatibile con file binario che lo rende disponibile per l'utilizzo con qualsiasi linguaggio.
+L'attributo **Export** C++ causa l'inserimento di una struttura di dati nel file con estensione IDL e quindi la disponibilità nella libreria dei tipi in un formato compatibile con binario che lo rende disponibile per l'utilizzo con qualsiasi linguaggio.
 
-Non è possibile applicare il **esportare** anche se la classe contiene solo membri pubblici dell'attributo a una classe (l'equivalente di un **struct**).
+Non è possibile applicare l'attributo **Export** a una classe anche se la classe dispone solo di membri pubblici (l'equivalente di uno **struct**).
 
-Se si esporta un oggetto senza nome **enum** oppure **struct**, viene assegnato un nome che inizia con **unnamed**<em>x</em>, dove *x* è un numero sequenza.
+Se si esporta un' **enumerazione** o uno **struct**senza nome, viene assegnato un nome che inizia con **__unnamed**<em>x</em>, dove *x* è un numero sequenziale.
 
-Il typedef valido per l'esportazione sono tipi di base, le strutture, unioni, enumerazioni, o gli identificatori dei tipi.  Visualizzare [typedef](/windows/desktop/Midl/typedef) per altre informazioni.
+I typedef validi per l'esportazione sono tipi di base, struct, unioni, enumerazioni o identificatori di tipo.  Per ulteriori informazioni, vedere [typedef](/windows/win32/Midl/typedef) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente viene illustrato come utilizzare il **esportare** attributo:
+Nel codice seguente viene illustrato come utilizzare l'attributo **Export** :
 
 ```cpp
 // cpp_attr_ref_export.cpp
@@ -54,10 +54,10 @@ struct MyStruct {
 
 |||
 |-|-|
-|**Si applica a**|**Union**, **typedef**, **enum**, **struct**, o **interfaccia**|
+|**Si applica a**|**Union**, **typedef**, **enum**, **struct**o **Interface**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

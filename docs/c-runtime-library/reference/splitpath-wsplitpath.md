@@ -33,14 +33,14 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5aab68524c0833bff0e09927587c0362c5194f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355003"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500983"
 ---
-# <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
+# <a name="_splitpath-_wsplitpath"></a>_splitpath, _wsplitpath
 
 Suddivide un nome di percorso nei componenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
@@ -69,22 +69,22 @@ void _wsplitpath(
 Percorso completo.
 
 *drive*<br/>
-Lettera di unità, seguita da due punti (**:**). È possibile passare **NULL** per questo parametro se non è necessaria la lettera di unità.
+Lettera di unità, seguita da due punti ( **:** ). È possibile passare **null** per questo parametro se non è necessaria la lettera di unità.
 
 *dir*<br/>
-Percorso di directory, inclusa la barra finale. Barre ( **/** ), barre rovesciate ( **\\** ), o entrambi possono essere usati. È possibile passare **NULL** per questo parametro se non è necessario il percorso della directory.
+Percorso di directory, inclusa la barra finale. È possibile utilizzare le **/** barre (), le barre **\\** rovesciate () o entrambe. È possibile passare **null** per questo parametro se non è necessario il percorso della directory.
 
 *fname*<br/>
-Nome di file di base (senza estensione). È possibile passare **NULL** per questo parametro se non è necessario il nome del file.
+Nome di file di base (senza estensione). È possibile passare **null** per questo parametro se non è necessario il nome file.
 
 *ext*<br/>
-Estensione di file, incluso il punto iniziale (**.**). È possibile passare **NULL** per questo parametro se non è necessaria l'estensione del file.
+Estensione del nome file, incluso il punto principale ( **.** ). È possibile passare **null** per questo parametro se non è necessaria l'estensione del nome file.
 
 ## <a name="remarks"></a>Note
 
-Il **splitpath** funzione suddivide un percorso nei suoi quattro componenti. **splitpath** gestisce automaticamente gli argomenti stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **wsplitpath** è una versione a caratteri wide di **splitpath**; gli argomenti **wsplitpath** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
+La funzione **_splitpath** suddivide un percorso nei quattro componenti. **_splitpath** gestisce automaticamente gli argomenti della stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **_wsplitpath** è una versione a caratteri wide di **_splitpath**; gli argomenti di **_wsplitpath** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
-**Nota sulla sicurezza** Queste funzioni sono esposte a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns). Sono disponibili versioni più sicure di queste funzioni. Vedere [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
+**Nota sulla sicurezza** Queste funzioni sono esposte a una potenziale minaccia dovuta a un problema di sovraccarico del buffer. I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns). Sono disponibili versioni più sicure di queste funzioni. Vedere [_splitpath_s, _wsplitpath_s](splitpath-s-wsplitpath-s.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -92,24 +92,24 @@ Il **splitpath** funzione suddivide un percorso nei suoi quattro componenti. **s
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-Ogni componente del percorso completo è archiviato in un buffer separato; le costanti manifeste **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definito in STDLIB. H) specificare le dimensioni massime per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
+Ogni componente del percorso completo è archiviato in un buffer separato. costanti manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**e **_MAX_EXT** (definite in STDLIB. H) specificare le dimensioni massime per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
 
 Ogni buffer deve essere di dimensioni pari alla costante manifesta corrispondente per evitare potenziali sovraccarichi del buffer.
 
 La tabella seguente elenca i valori delle costanti manifeste.
 
-|Nome|Value|
+|NOME|Value|
 |----------|-----------|
 |**_MAX_DRIVE**|3|
 |**_MAX_DIR**|256|
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-Se il percorso completo non contiene un componente (ad esempio, un nome di file), **splitpath** assegna stringhe vuote ai buffer corrispondenti.
+Se il percorso completo non contiene un componente, ad esempio un nome di file, **_splitpath** assegna stringhe vuote ai buffer corrispondenti.
 
-È possibile passare **NULL** al **splitpath** per qualsiasi parametro diverso da *percorso* che non è necessario.
+È possibile passare **null** a **_splitpath** per qualsiasi parametro diverso da *path* che non è necessario.
 
-Se *tracciato* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EINVAL**.
+Se *path* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

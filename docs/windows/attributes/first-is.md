@@ -1,21 +1,21 @@
 ---
-title: first_is (C++ attributo COM)
+title: first_is (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409603"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501562"
 ---
-# <a name="firstis"></a>first_is
+# <a name="first_is"></a>first_is
 
-Specifica l'indice del primo elemento della matrice deve essere trasmesso.
+Specifica l'indice del primo elemento di matrice da trasmettere.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,11 +26,11 @@ Specifica l'indice del primo elemento della matrice deve essere trasmesso.
 ### <a name="parameters"></a>Parametri
 
 *expression*<br/>
-Una o più espressioni del linguaggio C. Gli slot di argomenti vuoto sono consentiti.
+Una o più espressioni del linguaggio C. Sono consentiti slot di argomento vuoti.
 
 ## <a name="remarks"></a>Note
 
-Il **first_is** C++ attributo ha la stessa funzionalità come il [first_is](/windows/desktop/Midl/first-is) attributo MIDL.
+L'attributo **first_is** C++ ha la stessa funzionalità dell'attributo MIDL di [first_is](/windows/win32/Midl/first-is) .
 
 ## <a name="example"></a>Esempio
 
@@ -62,10 +62,10 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**Si applica a**|Nel campo **struct** oppure **union**, parametro di interfaccia, metodo di interfaccia|
+|**Si applica a**|Campo in **struct** o **Union**, parametro interface, metodo Interface|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

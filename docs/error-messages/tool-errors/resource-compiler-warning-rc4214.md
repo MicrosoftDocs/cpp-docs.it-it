@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC4214
 ms.assetid: 79a8bf0d-8cc7-4159-a6a2-d0e543749069
-ms.openlocfilehash: 925e7268bcf087961fcefb67898e5705a4ec6bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0ae8603d896a77e984ab97a019dd39689b1536
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346908"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509857"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Avviso del compilatore di risorse RC4214
 
-Tabella codici non è valida: ignorato
+Tabella codici non valida: ignorata
 
-Il file RC contiene un argomento di codepage e la tabella codici specificata non è valida. Visualizzare [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) per altre informazioni.
+Il file RC conteneva un argomento codepage e la tabella codici specificata non è valida. Per ulteriori informazioni, vedere [IsValidCodePage](/windows/win32/api/winnls/nf-winnls-isvalidcodepage) .

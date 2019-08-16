@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 6c419081a649fddd65120270decb0cb57ee743fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916197"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505947"
 ---
 # <a name="cimagelist-class"></a>Classe CImageList
 
@@ -101,7 +101,7 @@ class CImageList : public CObject
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CImageList::Add](#add)|Aggiunge un'immagine o immagini a un elenco di immagini.|
 |[CImageList::Attach](#attach)|Connette un elenco di immagini a un `CImageList` oggetto.|
@@ -138,7 +138,7 @@ class CImageList : public CObject
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CImageList:: operator HIMAGELIST](#operator_himagelist)|Restituisce l'oggetto HIMAGELIST associato a `CImageList`.|
 
@@ -269,7 +269,7 @@ CImageList();
 
 ##  <a name="copy"></a>CImageList:: Copy
 
-Questa funzione membro implementa il comportamento della funzione Win32 [ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy), come descritto nel Windows SDK.
+Questa funzione membro implementa il comportamento della funzione Win32 [ImageList_Copy](/windows/win32/api/commctrl/nf-commctrl-imagelist_copy), come descritto nel Windows SDK.
 
 ```
 BOOL Copy(
@@ -295,7 +295,7 @@ Indice in base zero dell'immagine da utilizzare come origine dell'operazione di 
 *uFlags*<br/>
 Valore del flag di bit che specifica il tipo di operazione di copia da effettuare. Questo parametro può essere uno dei valori seguenti:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |ILCF_MOVE|L'immagine di origine viene copiata nell'indice dell'immagine di destinazione. Questa operazione comporta più istanze di una determinata immagine. ILCF_MOVE è il valore predefinito.|
 |ILCF_SWAP|Le immagini di origine e di destinazione scambiano le posizioni all'interno dell'elenco di immagini.|
@@ -357,7 +357,7 @@ Dimensioni di ogni immagine, in pixel.
 *nFlags*<br/>
 Specifica il tipo di elenco di immagini da creare. Questo parametro può essere una combinazione dei valori seguenti, ma può includere solo uno dei `ILC_COLOR` valori.
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |ILC_COLOR|Utilizzare il comportamento predefinito se non viene specificato alcun flag ILC_COLOR *. In genere, il valore predefinito è ILC_COLOR4; per i driver di visualizzazione precedenti, il valore predefinito è ILC_COLORDDB.|
 |ILC_COLOR4|Usare una sezione bitmap (DIB) a 4 bit (a 16 colori) come bitmap per l'elenco di immagini.|
@@ -591,7 +591,7 @@ Posizione in cui eseguire il progetto all'interno del contesto di dispositivo sp
 *nStyle*<br/>
 Flag che specifica lo stile di disegno. Può essere uno o più di questi valori:
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |ILD_BLEND25, ILD_FOCUS|Disegna l'immagine, combinando il 25% con il colore di evidenziazione del sistema. Questo valore non ha alcun effetto se l'elenco di immagini non contiene una maschera.|
 |ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Disegna l'immagine, fondendo il 50% con il colore di evidenziazione del sistema. Questo valore non ha alcun effetto se l'elenco di immagini non contiene una maschera.|
@@ -634,16 +634,16 @@ Indice in base zero dell'immagine da creare.
 Posizione in cui eseguire il progetto all'interno del contesto di dispositivo specificato.
 
 *sz*<br/>
-Dimensione della parte dell'immagine da creare rispetto all'angolo superiore sinistro dell'immagine. Vedere *dx* e *dy* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nel Windows SDK.
+Dimensione della parte dell'immagine da creare rispetto all'angolo superiore sinistro dell'immagine. Vedere *dx* e *dy* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) nel Windows SDK.
 
 *clrBk*<br/>
-Colore di sfondo dell'immagine. Vedere *rgbBk* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nella Windows SDK.
+Colore di sfondo dell'immagine. Vedere *rgbBk* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) nella Windows SDK.
 
 *clrFg*<br/>
-Colore di primo piano dell'immagine. Vedere *rgbFg* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nella Windows SDK.
+Colore di primo piano dell'immagine. Vedere *rgbFg* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) nella Windows SDK.
 
 *nStyle*<br/>
-Flag che specifica lo stile di disegno. Vedere *fStyle* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) nella Windows SDK.
+Flag che specifica lo stile di disegno. Vedere *fStyle* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) nella Windows SDK.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -682,7 +682,7 @@ BOOL DrawIndirect(
 ### <a name="parameters"></a>Parametri
 
 *pimldp*<br/>
-Puntatore a una struttura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) che contiene informazioni sull'operazione di estrazione.
+Puntatore a una struttura [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) che contiene informazioni sull'operazione di estrazione.
 
 *pDC*<br/>
 Puntatore al contesto di dispositivo di destinazione. Al termine dell'operazione, è necessario eliminare questo oggetto [CDC](../../mfc/reference/cdc-class.md) .
@@ -694,7 +694,7 @@ Indice in base zero dell'immagine da disegnare.
 Struttura di [punti](/previous-versions/dd162805\(v=vs.85\)) che contiene le coordinate x e y in cui verrà disegnata l'immagine.
 
 *sz*<br/>
-Struttura di [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) che indica le dimensioni dell'immagine da disegnare.
+Struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) che indica le dimensioni dell'immagine da disegnare.
 
 *ptOrigin*<br/>
 Struttura di [punti](/previous-versions/dd162805\(v=vs.85\)) che contiene le coordinate x e y che specificano l'angolo superiore sinistro dell'operazione di disegno rispetto all'immagine stessa. I pixel dell'immagine che si trovano a sinistra della coordinata x e al di sopra della coordinata y non vengono disegnati.
@@ -702,12 +702,12 @@ Struttura di [punti](/previous-versions/dd162805\(v=vs.85\)) che contiene le coo
 *fStyle*<br/>
 Flag che specifica lo stile di disegno e, facoltativamente, l'immagine sovrapposta. Per informazioni sull'immagine sovrapposta, vedere la sezione Osservazioni. L'implementazione predefinita di MFC, ILD_NORMAL, disegna l'immagine utilizzando il colore di sfondo per l'elenco di immagini. Se il colore di sfondo è il valore CLR_NONE, l'immagine viene disegnata in modo trasparente utilizzando una maschera.
 
-Gli altri stili possibili sono descritti sotto il membro *fStyle* della struttura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) .
+Gli altri stili possibili sono descritti sotto il membro *fStyle* della struttura [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *dwRop*<br/>
 Valore che specifica un codice di operazione raster. Questi codici definiscono il modo in cui i dati del colore per il rettangolo di origine verranno combinati con i dati del colore per il rettangolo di destinazione per ottenere il colore finale. L'implementazione predefinita di MFC, SRCCOPY, copia il rettangolo di origine direttamente nel rettangolo di destinazione. Questo parametro viene ignorato se il parametro *fStyle* non include il flag ILD_ROP.
 
-Gli altri valori possibili sono descritti sotto il membro *dwRop* della struttura [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) .
+Gli altri valori possibili sono descritti sotto il membro *dwRop* della struttura [IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) .
 
 *rgbBack*<br/>
 Il colore di sfondo dell'immagine, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei valori seguenti:
@@ -720,7 +720,7 @@ Il colore di sfondo dell'immagine, per impostazione predefinita CLR_DEFAULT. Que
 *rgbFore*<br/>
 Colore di primo piano dell'immagine, per impostazione predefinita CLR_DEFAULT. Questo parametro può essere un valore RGB definito dall'applicazione o uno dei valori seguenti:
 
-|Valore|Significato|
+|Value|Significato|
 |-----------|-------------|
 |CLR_DEFAULT|Colore di primo piano predefinito. L'immagine viene disegnata utilizzando il colore di evidenziazione del sistema come colore di primo piano.|
 |CLR_NONE|Nessun colore di Blend. L'immagine viene mescolata con il colore del contesto di dispositivo di destinazione.|
@@ -738,7 +738,7 @@ Se usato con ILS_SATURATE, questo membro include il valore che viene aggiunto a 
 Se usato con ILS_APLHA, questo membro include il valore per il canale alfa. Questo valore può essere compreso tra 0 e 255, mentre 0 è completamente trasparente e 255 è completamente opaco.
 
 *crEffect*<br/>
-Valore [COLORREF](/windows/desktop/gdi/colorref) usato per gli effetti bagliore e ombreggiatura.
+Valore [COLORREF](/windows/win32/gdi/colorref) usato per gli effetti bagliore e ombreggiatura.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -748,7 +748,7 @@ TRUE se l'immagine viene disegnata correttamente; in caso contrario, FALSE.
 
 Usare la prima versione se si vuole riempire la struttura Win32 autonomamente. Utilizzare la seconda versione per sfruttare i vantaggi di uno o più argomenti predefiniti di MFC oppure evitare di gestire la struttura.
 
-Un'immagine sovrapposta è un'immagine disegnata sopra l'immagine primaria, specificata in questa funzione membro dal parametro *nImage* . Creare una maschera di sovrapposizione usando la funzione membro di [disegno](#draw) con l'indice in base uno della maschera di sovrapposizione specificata usando la macro [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask) .
+Un'immagine sovrapposta è un'immagine disegnata sopra l'immagine primaria, specificata in questa funzione membro dal parametro *nImage* . Creare una maschera di sovrapposizione usando la funzione membro di [disegno](#draw) con l'indice in base uno della maschera di sovrapposizione specificata usando la macro [INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask) .
 
 ### <a name="example"></a>Esempio
 
@@ -789,7 +789,7 @@ Handle dell'icona in caso di esito positivo; in caso contrario, NULL.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo si basa sul comportamento della macro [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) per creare l'icona. Per altre informazioni sulla creazione e la pulizia delle icone, vedere la macro [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon) .
+Questo metodo si basa sul comportamento della macro [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) per creare l'icona. Per altre informazioni sulla creazione e la pulizia delle icone, vedere la macro [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon) .
 
 ### <a name="example"></a>Esempio
 
@@ -915,7 +915,7 @@ BOOL GetImageInfo(
 Indice in base zero dell'immagine.
 
 *pImageInfo*<br/>
-Puntatore a una struttura [IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-imageinfo) che riceve informazioni sull'immagine. Le informazioni contenute in questa struttura possono essere utilizzate per modificare direttamente le bitmap per l'immagine.
+Puntatore a una struttura [IMAGEINFO](/windows/win32/api/commctrl/ns-commctrl-imageinfo) che riceve informazioni sull'immagine. Le informazioni contenute in questa struttura possono essere utilizzate per modificare direttamente le bitmap per l'immagine.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1109,7 +1109,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Poiché le funzioni di trascinamento utilizzano la nuova immagine durante un'operazione di trascinamento, è necessario utilizzare la funzione [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) di Windows per nascondere `CImageList::SetDragCursorImage`il cursore del mouse effettivo dopo la chiamata a. In caso contrario, è possibile che nel sistema siano presenti due cursori del mouse per la durata dell'operazione di trascinamento.
+Poiché le funzioni di trascinamento utilizzano la nuova immagine durante un'operazione di trascinamento, è necessario utilizzare la funzione [ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor) di Windows per nascondere `CImageList::SetDragCursorImage`il cursore del mouse effettivo dopo la chiamata a. In caso contrario, è possibile che nel sistema siano presenti due cursori del mouse per la durata dell'operazione di trascinamento.
 
 ##  <a name="setimagecount"></a>CImageList:: SetImageCount
 

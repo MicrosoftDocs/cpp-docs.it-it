@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-ms.openlocfilehash: 473e697dfb0203b52713fcfb359ec4f56138f560
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73879a73a48290e19d2a27307884953129826df7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246460"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497482"
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Classe CComClassFactoryAutoThread
 
-Questa classe implementa il [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfaccia e consente di creare in apartment più oggetti.
+Questa classe implementa l'interfaccia [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) e consente la creazione di oggetti in più Apartment.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,20 +31,20 @@ class CComClassFactoryAutoThread
       public CComObjectRootEx<CComGlobalsThreadModel>
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|Crea un oggetto di CLSID specificato.|
-|[CComClassFactoryAutoThread::LockServer](#lockserver)|Blocca la class factory nella memoria.|
+|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|Crea un oggetto del CLSID specificato.|
+|[CComClassFactoryAutoThread::LockServer](#lockserver)|Blocca la class factory in memoria.|
 
 ## <a name="remarks"></a>Note
 
-`CComClassFactoryAutoThread` è simile a [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), ma consente di creare in apartment più oggetti. Per sfruttare i vantaggi di questo supporto, il modulo EXE da derivare [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+`CComClassFactoryAutoThread`è simile a [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), ma consente la creazione di oggetti in più Apartment. Per sfruttare i vantaggi di questo supporto, derivare il modulo EXE da [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
 
-Gli oggetti ATL acquisire normalmente una class factory derivando da [CComCoClass](../../atl/reference/ccomcoclass-class.md). Questa classe include la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), che dichiara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) come la class factory predefinita. Per utilizzare `CComClassFactoryAutoThread`, specificare il [: DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) macro nella definizione di classe dell'oggetto. Ad esempio:
+Gli oggetti ATL in genere acquisiscono un class factory mediante derivazione da [CComCoClass](../../atl/reference/ccomcoclass-class.md). Questa classe include la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), che dichiara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) come class factory predefinito. Per usare `CComClassFactoryAutoThread`, specificare la macro [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) nella definizione della classe dell'oggetto. Ad esempio:
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]
 
@@ -64,7 +64,7 @@ Gli oggetti ATL acquisire normalmente una class factory derivando da [CComCoClas
 
 ##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance
 
-Crea un oggetto di CLSID specificato e recupera un puntatore a interfaccia a questo oggetto.
+Crea un oggetto del CLSID specificato e recupera un puntatore a interfaccia a questo oggetto.
 
 ```
 STDMETHODIMP CreateInstance(
@@ -76,25 +76,25 @@ STDMETHODIMP CreateInstance(
 ### <a name="parameters"></a>Parametri
 
 *pUnkOuter*<br/>
-[in] Se l'oggetto è stata creata come parte di un'aggregazione, quindi *pUnkOuter* deve essere unknown esterno. In caso contrario, *pUnkOuter* deve essere NULL.
+in Se l'oggetto viene creato come parte di un'aggregazione, *pUnkOuter* deve essere il valore sconosciuto esterno. In caso contrario, *pUnkOuter* deve essere null.
 
 *riid*<br/>
-[in] IID dell'interfaccia richiesta. Se *pUnkOuter* è diverso da NULL, *riid* deve essere `IID_IUnknown`.
+in IID dell'interfaccia richiesta. Se *pUnkOuter* è diverso da null, *riid* deve essere `IID_IUnknown`.
 
 *ppvObj*<br/>
-[out] Un puntatore al puntatore a interfaccia identificato dal *riid*. Se l'oggetto non supporta questa interfaccia, *ppvObj* è impostato su NULL.
+out Puntatore al puntatore a interfaccia identificato da *riid*. Se l'oggetto non supporta questa interfaccia, *ppvObj* è impostato su null.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
 ### <a name="remarks"></a>Note
 
-Se il modulo deriva da [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` Seleziona prima un thread per creare l'oggetto nell'apartment associato.
+Se il modulo deriva da [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` prima di tutto seleziona un thread per creare l'oggetto nell'Apartment associato.
 
 ##  <a name="lockserver"></a>  CComClassFactoryAutoThread::LockServer
 
-Incrementa e decrementa il modulo conteggio dei blocchi chiamando `_Module::Lock` e `_Module::Unlock`, rispettivamente.
+Incrementa e decrementa il conteggio dei blocchi del modulo chiamando `_Module::Lock` rispettivamente `_Module::Unlock`e.
 
 ```
 STDMETHODIMP LockServer(BOOL fLock);
@@ -103,21 +103,21 @@ STDMETHODIMP LockServer(BOOL fLock);
 ### <a name="parameters"></a>Parametri
 
 *fLock*<br/>
-[in] Se TRUE, viene incrementato il conteggio dei blocchi; in caso contrario, il conteggio dei blocchi viene decrementato.
+in Se TRUE, il conteggio dei blocchi viene incrementato; in caso contrario, il conteggio dei blocchi viene decrementato.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
 ### <a name="remarks"></a>Note
 
-Quando si usa `CComClassFactoryAutoThread`, `_Module` si riferisce solitamente all'istanza di global [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+Quando si `CComClassFactoryAutoThread`USA `_Module` , in genere fa riferimento all'istanza globale di [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
 
-La chiamata `LockServer` consente a un client di contenere una class factory in modo che più oggetti possono essere creati rapidamente.
+La `LockServer` chiamata a consente a un client di contenere un class factory in modo che sia possibile creare rapidamente più oggetti.
 
 ## <a name="see-also"></a>Vedere anche
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
 [Classe CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)<br/>
 [Classe CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
 [Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Contenitori: File compositi'
+title: 'Contenitori: File composti'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compound files [MFC]
@@ -14,77 +14,77 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc34f5ed32ee48d538b67cab080b0a52b2e00ae8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152618"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508885"
 ---
-# <a name="containers-compound-files"></a>Contenitori: File compositi
+# <a name="containers-compound-files"></a>Contenitori: File composti
 
-Questo articolo illustra i componenti e l'implementazione di file compositi e i vantaggi e svantaggi dell'utilizzo di file composti nelle applicazioni OLE.
+In questo articolo vengono illustrati i componenti e l'implementazione dei file composti e i vantaggi e gli svantaggi dell'utilizzo di file compositi nelle applicazioni OLE.
 
-File compositi sono parte integrante di OLE. Vengono utilizzati per facilitare il trasferimento dei dati e archiviazione di documenti OLE. File compositi sono un'implementazione del modello di archiviazione strutturata attivo. Interfacce coerenti esistono che supportano la serializzazione per una risorsa di archiviazione, un flusso o un oggetto file. File compositi sono supportati nella libreria di classi Microsoft Foundation dalle classi `COleStreamFile` e `COleDocument`.
+I file composti sono parte integrante di OLE. Vengono usati per semplificare il trasferimento dei dati e l'archiviazione di documenti OLE. I file composti sono un'implementazione del modello di archiviazione strutturata attiva. Sono presenti interfacce coerenti che supportano la serializzazione in un archivio, in un flusso o in un oggetto file. I file composti sono supportati nell'libreria Microsoft Foundation Class dalle classi `COleStreamFile` e. `COleDocument`
 
 > [!NOTE]
->  Usando un file composto non implica che le informazioni provengano da un documento composito o un documento OLE. File compositi sono solo uno dei modi per archiviare i documenti composti, i documenti OLE e altri dati.
+>  L'uso di un file composto non implica che le informazioni provengano da un documento OLE o da un documento composto. I file composti sono solo uno dei modi per archiviare documenti composti, documenti OLE e altri dati.
 
-##  <a name="_core_components_of_a_compound_file"></a> Componenti di un File composto
+##  <a name="_core_components_of_a_compound_file"></a>Componenti di un file composto
 
-Per l'implementazione dei file compositi OLE Usa tre tipi di oggetti: gli oggetti di flusso, oggetti di archiviazione, e `ILockBytes` oggetti. Questi oggetti sono simili ai componenti di un file system standard nei modi seguenti:
+L'implementazione OLE dei file composti usa tre tipi di oggetto: oggetti flusso, oggetti di archiviazione `ILockBytes` e oggetti. Questi oggetti sono simili ai componenti di un file system standard nei modi seguenti:
 
-- Gli oggetti di Stream, ad esempio file, archiviano i dati di qualsiasi tipo.
+- Gli oggetti di flusso, ad esempio i file, archiviano dati di qualsiasi tipo.
 
-- Oggetti di archiviazione, ad esempio directory, possono contenere altri oggetti di flusso e di archiviazione.
+- Gli oggetti di archiviazione come le directory possono contenere altri oggetti di archiviazione e di flusso.
 
-- `LockBytes` gli oggetti rappresentano l'interfaccia tra gli oggetti di archiviazione e l'hardware fisico. Determinano la modalità in cui vengono scritti i byte effettivi in qualsiasi dispositivo di archiviazione di `LockBytes` accede a oggetti, ad esempio un disco rigido o di un'area di memoria globale. Per altre informazioni sulle `LockBytes` gli oggetti e i `ILockBytes` l'interfaccia, vedere il *riferimento per programmatori OLE*.
+- `LockBytes`gli oggetti rappresentano l'interfaccia tra gli oggetti di archiviazione e l'hardware fisico. Determinano il modo in cui i byte effettivi vengono scritti in `LockBytes` qualsiasi dispositivo di archiviazione a cui accede l'oggetto, ad esempio un disco rigido o un'area della memoria globale. Per ulteriori informazioni sugli `LockBytes` oggetti e sull' `ILockBytes` interfaccia, vedere la Guida *di riferimento per programmatori OLE*.
 
-##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Vantaggi e svantaggi dei file compositi
+##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a>Vantaggi e svantaggi dei file composti
 
-File compositi offrono vantaggi non disponibili con i metodi precedenti dell'archiviazione file. e comprendono:
+I file composti offrono vantaggi non disponibili con i metodi di archiviazione file precedenti. e comprendono:
 
-- L'accesso ai file incrementale.
+- Accesso ai file incrementale.
 
-- Modalità di accesso del file.
+- Modalità di accesso ai file.
 
 - Standardizzazione della struttura di file.
 
-I potenziali svantaggi dei file compositi, ovvero grandi problemi di dimensioni e prestazioni relativi all'archiviazione su dischi floppy, ovvero devono essere considerate prima di decidere se si desidera usarle nell'applicazione.
+I potenziali svantaggi dei file composti, ovvero problemi di grandi dimensioni e di prestazioni relativi all'archiviazione nei dischi floppy, devono essere considerati quando si decide se utilizzarli nell'applicazione.
 
-###  <a name="_core_incremental_access_to_files"></a> Incrementale accesso ai file
+###  <a name="_core_incremental_access_to_files"></a>Accesso incrementale ai file
 
-Incrementale accesso ai file è un beneficio richiesto in automatico dell'uso di file compositi. Perché un file composto può essere considerato come un "file system all'interno di un file", singoli tipi di oggetto, ad esempio flusso o l'archiviazione, è possibile accedere senza la necessità di caricare l'intero file. Si riduce sensibilmente l'ora di che un'applicazione deve accedere ai nuovi oggetti per la modifica dall'utente. L'aggiornamento incrementale, in base lo stesso concetto, offre vantaggi simili. Anziché salvare il file per salvare le modifiche apportate a un oggetto intero, OLE Salva solo l'oggetto flusso o di archiviazione modificata dall'utente.
+L'accesso incrementale ai file è un vantaggio automatico dell'uso di file composti. Poiché un file composto può essere visualizzato come "file system all'interno di un file", è possibile accedere ai singoli tipi di oggetto, ad esempio flusso o archiviazione, senza dover caricare l'intero file. Questo può ridurre notevolmente il tempo necessario a un'applicazione per accedere ai nuovi oggetti per la modifica da parte dell'utente. L'aggiornamento incrementale, basato sullo stesso concetto, offre vantaggi simili. Anziché salvare l'intero file solo per salvare le modifiche apportate a un oggetto, OLE Salva solo il flusso o l'oggetto di archiviazione modificato dall'utente.
 
-###  <a name="_core_file_access_modes"></a> Modalità di accesso ai file
+###  <a name="_core_file_access_modes"></a>Modalità di accesso ai file
 
-La possibilità di determinare quando le modifiche agli oggetti in un file composto sono eseguito il commit su disco è un altro vantaggio dell'utilizzo di tali file. La modalità in cui si accede ai file, sottoposta a transazione o diretto, determina quando vengono eseguito il commit delle modifiche.
+La possibilità di determinare quando le modifiche apportate agli oggetti in un file composto viene sottoposta a commit su disco è un altro vantaggio dell'uso di file composti. La modalità di accesso ai file, transazionale o diretta, determina quando viene eseguito il commit delle modifiche.
 
-- Modalità di transazione Usa un'operazione di commit in due fasi per apportare modifiche agli oggetti in un file composto, mantenendo la precedente e le nuove copie del documento disponibile fino a quando l'utente sceglie di salvare o annullare le modifiche.
+- La modalità transazionale usa un'operazione di commit in due fasi per apportare modifiche agli oggetti in un file composto, mantenendo al tempo stesso le copie precedenti e nuove del documento disponibili fino a quando l'utente non sceglie di salvare o annullare le modifiche.
 
-- La modalità diretta incorpora le modifiche apportate al documento non appena vengono eseguite, senza la possibilità di annullarle in un secondo momento.
+- La modalità diretta incorpora modifiche al documento Man mano che vengono apportate, senza la possibilità di annullarle successivamente.
 
-Per altre informazioni sulle modalità di accesso, vedere la *riferimento per programmatori OLE*.
+Per ulteriori informazioni sulle modalità di accesso, vedere la Guida *di riferimento per programmatori OLE*.
 
-###  <a name="_core_standardization"></a> Standardization
+###  <a name="_core_standardization"></a>Standardizzazione
 
-La struttura dei file compositi standard consente a diverse applicazioni OLE esplorare i file compositi creati da un'applicazione OLE senza alcuna conoscenza dell'applicazione che effettivamente creato il file.
+La struttura standardizzata dei file composti consente a diverse applicazioni OLE di esplorare i file composti creati dall'applicazione OLE senza conoscere l'applicazione che ha effettivamente creato il file.
 
-###  <a name="_core_size_and_performance_considerations"></a> Le dimensioni e le considerazioni sulle prestazioni
+###  <a name="_core_size_and_performance_considerations"></a>Considerazioni sulle dimensioni e sulle prestazioni
 
-A causa della complessità di struttura di archiviazione file composto e la possibilità di salvare i dati in modo incrementale, i file usando questo formato tendono a essere più grandi rispetto agli altri file con dati non strutturati o "file flat" archiviazione. Se l'applicazione carica frequentemente e Salva i file, usando i file compositi può causare la dimensione del file aumentare molto più rapidamente rispetto a quelli non compositi. Poiché i file compositi possono ottenere grandi dimensioni, il tempo di accesso per i file archiviati in e caricati da dischi floppy possono anche dipendere, causando un accesso più lento ai file.
+A causa della complessità della struttura di archiviazione dei file composti e della possibilità di salvare i dati in modo incrementale, i file che usano questo formato tendono a essere più grandi di altri file che usano l'archiviazione non strutturata o "file flat". Se l'applicazione carica e salva spesso i file, l'uso di file composti può causare un aumento più rapido delle dimensioni del file rispetto ai file non composti. Poiché i file composti possono essere di grandi dimensioni, il tempo di accesso per i file archiviati e caricati da dischi floppy può anche essere influenzato, causando un accesso più lento ai file.
 
-Un altro problema che influisce sulle prestazioni è frammentazione file composito. Le dimensioni di un file composto sono determinata dalla differenza tra i settori del disco e il cognome utilizzata dal file. Un file frammentato può contenere molte aree di spazio che non contengono dati, ma vengono conteggiate durante il calcolo della dimensione. Nel corso della durata di un file composto, queste aree vengono create per l'inserimento o eliminazione di oggetti di archiviazione.
+Un altro problema che influisca sulle prestazioni è la frammentazione del file composto. La dimensione di un file composto è determinata dalla differenza tra il primo e l'ultimo settore del disco utilizzato dal file. Un file frammentato può contenere molte aree di spazio libero che non contengono dati, ma vengono conteggiate durante il calcolo delle dimensioni. Durante il ciclo di vita di un file composto, queste aree vengono create tramite l'inserimento o l'eliminazione di oggetti di archiviazione.
 
-##  <a name="_core_using_compound_files_format_for_your_data"></a> Utilizzando il formato di file compositi per i tuoi dati
+##  <a name="_core_using_compound_files_format_for_your_data"></a>Uso del formato dei file composti per i dati
 
-Dopo aver completato la creazione di un'applicazione che dispone di una classe documento derivata da `COleDocument`, assicurarsi che il costruttore principale del documento chiama `EnableCompoundFile`. Quando la creazione guidata applicazione consente di creare applicazioni contenitore OLE, questa chiamata viene inserita automaticamente.
+Dopo aver creato un'applicazione con una classe documento derivata da `COleDocument`, verificare che il costruttore principale del documento chiami. `EnableCompoundFile` Quando la creazione guidata applicazione crea applicazioni contenitore OLE, questa chiamata viene inserita automaticamente.
 
-Nel *riferimento per programmatori OLE*, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream), [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage), e [ILockBytes](/windows/desktop/api/objidl/nn-objidl-ilockbytes).
+Nella Guida *di riferimento per programmatori OLE*, vedere [IStream](/windows/win32/api/objidl/nn-objidl-istream), [IStorage](/windows/win32/api/objidl/nn-objidl-istorage)e [ILockBytes](/windows/win32/api/objidl/nn-objidl-ilockbytes).
 
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori](../mfc/containers.md)<br/>
-[Contenitori: Problemi dell'interfaccia utente](../mfc/containers-user-interface-issues.md)<br/>
+[Contenitori: problemi dell'interfaccia utente](../mfc/containers-user-interface-issues.md)<br/>
 [Classe COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
 [Classe COleDocument](../mfc/reference/coledocument-class.md)

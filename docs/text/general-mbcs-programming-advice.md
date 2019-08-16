@@ -7,32 +7,32 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 31c17d6d6dee49f75f5cd8f84aa0690e649aa509
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 887387220105614eb3257f008ec601a6fc0adc18
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410681"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491179"
 ---
 # <a name="general-mbcs-programming-advice"></a>Suggerimenti generali sulla programmazione MBCS
 
 Usare i suggerimenti seguenti:
 
-- Per maggiore flessibilità, utilizzare le macro in fase di esecuzione, ad esempio `_tcschr` e `_tcscpy` quando possibile. Per altre informazioni, vedere [mapping testo generico in Tchar. h](../text/generic-text-mappings-in-tchar-h.md).
+- Per flessibilità, utilizzare macro di run-time quali `_tcschr` e `_tcscpy` , quando possibile. Per ulteriori informazioni, vedere [mapping di testo generico in TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).
 
-- Utilizza run-time di C `_getmbcp` funzione per ottenere informazioni su tabella codici corrente.
+- Usare la `_getmbcp` funzione di runtime del linguaggio C per ottenere informazioni sulla tabella codici corrente.
 
-- Non riutilizzare le risorse stringa. A seconda del linguaggio di destinazione, una determinata stringa potrebbe avere un significato diverso quando convertito. Ad esempio, dal menu principale di "File" dell'applicazione può convertire in modo diverso rispetto alla stringa "File" in una finestra di dialogo. Se è necessario usare più di una stringa con lo stesso nome, usare ID di stringa diverso per ognuno.
+- Non riutilizzare le risorse di stringa. A seconda della lingua di destinazione, una determinata stringa può avere un significato diverso quando viene tradotta. Ad esempio, "file" nel menu principale dell'applicazione potrebbe tradursi in modo diverso dalla stringa "file" in una finestra di dialogo. Se è necessario usare più di una stringa con lo stesso nome, usare ID di stringa diversi per ognuno di essi.
 
-- Si potrebbe voler scoprire se l'applicazione è in esecuzione in un sistema operativo basate su MBCS. A tale scopo, impostare un flag all'avvio del programma; non fare affidamento su chiamate API.
+- Potrebbe essere necessario verificare se l'applicazione è in esecuzione in un sistema operativo abilitato per MBCS. A tale scopo, impostare un flag all'avvio del programma; non fare affidamento sulle chiamate API.
 
-- Quando si progettano le finestre di dialogo, lasciare circa il 30% spazio vuoto alla fine dei controlli di testo statico per la conversione MBCS.
+- Durante la progettazione di finestre di dialogo, consentire circa il 30% di spazio aggiuntivo alla fine dei controlli di testo statici per la conversione MBCS.
 
-- Prestare attenzione quando si seleziona tipi di carattere per l'applicazione, perché alcuni tipi di carattere non sono disponibili in tutti i sistemi.
+- Prestare attenzione quando si selezionano i tipi di carattere per l'applicazione, perché alcuni tipi di carattere non sono disponibili in tutti i sistemi.
 
-- Quando si seleziona il tipo di carattere per le finestre di dialogo, utilizzare [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) anziché Helvetica o MS Sans Serif. MS Shell Dlg viene sostituito con il tipo di carattere dal sistema prima di creare la finestra di dialogo. L'utilizzo di MS Shell Dlg assicura che tutte le modifiche nel sistema operativo per affrontare questo tipo di carattere saranno automaticamente disponibili. (MFC sostituito MS Shell Dlg DEFAULT_GUI_FONT o il carattere di sistema in Windows 95, Windows 98 e Windows NT 4 poiché tali sistemi non gestiscono correttamente MS Shell Dlg.)
+- Quando si seleziona il tipo di carattere per le finestre di dialogo, utilizzare [MS Shell Dlg](/windows/win32/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) anziché MS Sans Serif o Helvetica. Prima di creare la finestra di dialogo, MS Shell Dlg viene sostituito con il tipo di carattere corretto dal sistema. L'utilizzo di MS Shell Dlg garantisce che tutte le modifiche apportate al sistema operativo per gestire questo tipo di carattere saranno disponibili automaticamente. MFC sostituisce MS Shell Dlg con DEFAULT_GUI_FONT o il tipo di carattere di sistema in Windows 95, Windows 98 e Windows NT 4, perché tali sistemi non gestiscono correttamente MS Shell Dlg.
 
-- Quando si progetta l'applicazione, decidere quali stringhe possono essere localizzati. In caso di dubbio, si presuppone che qualsiasi stringa specificata verrà localizzato. Di conseguenza, non combinare le stringhe che possono essere localizzate con quelli che non è possibile.
+- Quando si progetta l'applicazione, decidere quali stringhe possono essere localizzate. In caso di dubbi, si supponga che qualsiasi stringa specificata venga localizzata. Di conseguenza, non combinare stringhe che possono essere localizzate con quelle che non possono.
 
 ## <a name="see-also"></a>Vedere anche
 

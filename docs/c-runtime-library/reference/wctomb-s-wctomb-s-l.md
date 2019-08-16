@@ -29,14 +29,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 08e8cb0ddaac342682776600fd0fd8b3d26b8953
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1eaa6f0b81daaa7d8c7626398fe30b45ead979c3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188485"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498921"
 ---
-# <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
+# <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
 Converte un carattere wide nel carattere multibyte corrispondente. Questa è una versione di [wctomb, _wctomb_l](wctomb-wctomb-l.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -67,7 +67,7 @@ Numero di byte o un codice che indica il risultato.
 Indirizzo di un carattere multibyte.
 
 *sizeInBytes*<br/>
-Dimensione del buffer *mbchar*.
+Dimensioni del buffer *mbchar*.
 
 *wchar*<br/>
 Carattere wide.
@@ -87,15 +87,15 @@ Condizioni di errore
 |qualsiasi|>**INT_MAX**|**EINVAL**|non modificato|
 |qualsiasi|troppo piccolo|**EINVAL**|non modificato|
 
-Se si verifica una delle condizioni di errore precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **wctomb** restituisce **EINVAL** e imposta **errno** al **EINVAL**.
+Se si verifica una delle condizioni di errore precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **wctomb** restituisce **EINVAL** e imposta **errno** su **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **wctomb_s** funzione converte relativo *wchar* argomento nel carattere multibyte corrispondente e archivia il risultato alla *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma.
+La funzione **wctomb_s** converte il relativo argomento *WCHAR* nel carattere multibyte corrispondente e archivia il risultato in *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma.
 
-Se **wctomb_s** converte il carattere wide in un carattere multibyte, inserisce il numero di byte (che non è mai maggiore **MB_CUR_MAX**) nel caratteri wide nel valore intero a cui punta *pRetValue*. Se *wchar* è il carattere null di caratteri "wide" (L '\0'), **wctomb_s** riempie *pRetValue* con 1. Se il puntatore di destinazione *mbchar* viene **NULL**, **wctomb_s** inserisce 0 in *pRetValue*. Se la conversione non è possibile nelle impostazioni locali correnti, **wctomb_s** Inserisce -1 in *pRetValue*.
+Se **wctomb_s** converte il carattere wide in un carattere multibyte, inserisce il numero di byte (che non è mai maggiore di **MB_CUR_MAX**) nel carattere wide nell'Integer a cui punta pRetValue. Se *WCHAR* è il carattere null Wide (L'\ 0'), **wctomb_s** riempie pRetValue con 1. Se il puntatore di destinazione *mbchar* è **null**, **Wctomb_s** inserisce 0in pRetValue. Se la conversione non è possibile nelle impostazioni locali correnti, **wctomb_s** inserisce-1 in pRetValue.
 
-**wctomb_s** Usa le impostazioni locali correnti per qualsiasi informazione dipendente; **wctomb_s_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**wctomb_s** usa le impostazioni locali correnti per le informazioni dipendenti dalle impostazioni locali; **_wctomb_s_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -108,7 +108,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Questo programma illustra il comportamento dei **wctomb** (funzione).
+Questo programma illustra il comportamento della funzione **wctomb** .
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -142,4 +142,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

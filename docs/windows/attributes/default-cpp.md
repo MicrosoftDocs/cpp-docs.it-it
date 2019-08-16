@@ -1,5 +1,5 @@
 ---
-title: predefinito (attributo COM C++)
+title: default (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: c6448b00fef50a7654816a2c39af2943db12d314
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148081"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501688"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -33,17 +33,17 @@ L'interfaccia predefinita che sarà resa disponibile per gli ambienti di script 
 Se non si specifica un'interfaccia predefinita, la prima occorrenza di un'interfaccia non di origine viene usata come predefinita.
 
 *interface2*<br/>
-(Facoltativo) L'interfaccia di origine predefinita. È necessario anche specificare questa interfaccia con l'attributo [source](source-cpp.md) .
+Opzionale Interfaccia di origine predefinita. È necessario anche specificare questa interfaccia con l'attributo [source](source-cpp.md) .
 
 Se non si specifica un'interfaccia di origine predefinita, viene usata come predefinita la prima interfaccia di origine.
 
 ## <a name="remarks"></a>Note
 
-L'attributo C++ **default** ha la stessa funzione dell'attributo MIDL [default](/windows/desktop/Midl/default) . L'attributo **default** viene usato anche con l'attributo [case](case-cpp.md) .
+L'attributo C++ **default** ha la stessa funzione dell'attributo MIDL [default](/windows/win32/Midl/default) . L'attributo **default** viene usato anche con l'attributo [case](case-cpp.md) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra la modalità **predefinite** viene utilizzato sulla definizione di una coclasse per specificare `ICustomDispatch` come interfaccia di programmabilità predefinita:
+Il codice seguente illustra come viene usato il **valore predefinito** per la definizione di una coclasse `ICustomDispatch` per specificare come interfaccia di programmabilità predefinita:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -101,8 +101,8 @@ Anche l'attributo [source](source-cpp.md) presenta un esempio di come usare **de
 |-|-|
 |**Si applica a**|**classe**, **struct**, membro dati|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|**Coclasse** (quando applicato a **classe** oppure **struct**)|
-|**Attributi non validi**|nessuno|
+|**Attributi obbligatori**|**coclasse** (quando applicato alla **classe** o allo **struct**)|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

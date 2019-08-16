@@ -1,21 +1,21 @@
 ---
-title: call_as (C++ attributo COM)
+title: call_as (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148354"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501799"
 ---
-# <a name="callas"></a>call_as
+# <a name="call_as"></a>call_as
 
-Consente a un [locale](local-cpp.md) funzione viene mappata a una funzione remota in modo che quando viene chiamata la funzione remota, viene richiamata la funzione locale.
+Consente di eseguire il mapping di una funzione [locale](local-cpp.md) a una funzione remota in modo che, quando viene chiamata la funzione remota, venga richiamata la funzione locale.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ Consente a un [locale](local-cpp.md) funzione viene mappata a una funzione remot
 ### <a name="parameters"></a>Parametri
 
 *function*<br/>
-La funzione locale che si desidera siano chiamati quando viene richiamata una funzione remota.
+Funzione locale che si desidera chiamare quando viene richiamata una funzione remota.
 
 ## <a name="remarks"></a>Note
 
-Il **call_as** C++ attributo ha la stessa funzionalità come il [call_as](/windows/desktop/Midl/call-as) attributo MIDL.
+L'attributo **call_as** C++ ha la stessa funzionalità dell'attributo MIDL di [call_as](/windows/win32/Midl/call-as) .
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra come usare **call_as** eseguire il mapping di una funzione non utilizzabili in remoto (`f1`) a una funzione utilizzabile in remoto (`Remf1`):
+Il codice seguente illustra come è possibile usare **call_as** per eseguire il mapping di una`f1`funzione non () a una`Remf1`funzione utilizzabile in remoto ():
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -57,7 +57,7 @@ __interface IMInterface {
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

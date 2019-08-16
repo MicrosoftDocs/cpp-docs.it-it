@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: 8c90616165a7b47d4251ace998fd49c613f244b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0c8e6a8f8321dccdfd7cee128a4cf06cebda991
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208815"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501125"
 ---
 # <a name="fatal-error-c1084"></a>Errore irreversibile C1084
 
 Impossibile leggere il file tipofile: 'file': messaggio
 
-In genere questo errore è causato da un chiamata API del sistema interno non riuscita effettuata dal compilatore. Il messaggio visualizzato quando si verifica questo errore viene generato spesso in uno dei modi [wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) oppure [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).
+In genere questo errore è causato da un chiamata API del sistema interno non riuscita effettuata dal compilatore. Il messaggio visualizzato quando viene rilevato questo errore viene spesso generato da [_wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) o [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage).
 
 Per tentare di risolvere l'errore C1084, eseguire i passaggi seguenti:
 
@@ -25,9 +25,9 @@ Per tentare di risolvere l'errore C1084, eseguire i passaggi seguenti:
 
 - Assicurarsi che siano impostate le autorizzazioni appropriate per accedere al file specificato.
 
-- Assicurarsi che la sintassi della riga di comando sia conforme alle regole riportate sotto [sintassi della riga di comando del compilatore](../../build/reference/compiler-command-line-syntax.md).
+- Verificare che la sintassi della riga di comando rispetti le regole descritte nella sintassi della [riga di comando del compilatore](../../build/reference/compiler-command-line-syntax.md).
 
-- Assicurarsi che le variabili di ambiente **TMP** e **TEMP** siano correttamente set, nonché le autorizzazioni appropriate per accedere a queste variabili di ambiente fanno riferimento a directory. Assicurarsi inoltre che le unità a cui fanno riferimento le **TMP** e **TEMP** le variabili di ambiente contengono una quantità di spazio libero adeguata.
+- Verificare che le variabili di ambiente **tmp** e **Temp** siano impostate correttamente, nonché le autorizzazioni appropriate per accedere alle directory a cui fanno riferimento le variabili di ambiente. Assicurarsi inoltre che le unità a cui fanno riferimento le variabili di ambiente **tmp** e **Temp** contengano una quantità di spazio disponibile adeguata.
 
 - Se viene visualizzato il messaggio "Numero di file non valido", è possibile che il file specificato sia stato chiuso in primo piano durante la compilazione in background.
 

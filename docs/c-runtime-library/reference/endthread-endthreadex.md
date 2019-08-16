@@ -30,16 +30,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afbc907356d4c5b14b749de5de0c8d36280891e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288823"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499955"
 ---
-# <a name="endthread-endthreadex"></a>_endthread, _endthreadex
+# <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Termina un thread. **endthread** termina un thread creato da **beginthread** e **endthreadex** termina un thread creato da **beginthreadex**.
+Termina un thread. **_endthread** termina un thread creato da **_beginthread** e **_endthreadex** termina un thread creato da **_beginthreadex**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -57,17 +57,17 @@ Codice di uscita del thread
 
 ## <a name="remarks"></a>Note
 
-È possibile chiamare **endthread** oppure **endthreadex** in modo esplicito per terminare un thread; tuttavia **endthread** oppure **endthreadex** viene chiamato automaticamente quando il thread viene restituito dalla routine passata come parametro a **beginthread** oppure **beginthreadex**. Terminazione di un thread con una chiamata a **endthread** oppure **endthreadex** contribuisce a garantire un ripristino corretto delle risorse allocate per il thread.
+È possibile chiamare **_endthread** o **_endthreadex** in modo esplicito per terminare un thread. Tuttavia, **_endthread** o **_endthreadex** viene chiamato automaticamente quando il thread viene restituito dalla routine passata come parametro a **_beginthread** o **_beginthreadex**. La terminazione di un thread con una chiamata a **endthread** o **_endthreadex** contribuisce a garantire il ripristino corretto delle risorse allocate per il thread.
 
 > [!NOTE]
-> Per un file eseguibile collegato a Libcmt.lib, non chiamare l'API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) di Win32 per non impedire al sistema di runtime di recuperare le risorse allocate. **endthread** e **endthreadex** recuperano le risorse del thread allocate, quindi chiamare **ExitThread**.
+> Per un file eseguibile collegato a Libcmt.lib, non chiamare l'API [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) di Win32 per non impedire al sistema di runtime di recuperare le risorse allocate. **_endthread** e **_endthreadex** recuperano le risorse del thread allocate, quindi chiamano **ExitThread**.
 
-**endthread** chiude automaticamente l'handle del thread. (Questo comportamento è diverso da Win32 **ExitThread** API.) Pertanto, quando si usano **beginthread** e **endthread**, non chiudere in modo esplicito l'handle del thread chiamando Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API.
+**_endthread** chiude automaticamente l'handle del thread. Questo comportamento è diverso dall'API Win32 **ExitThread** . Pertanto, quando si usano **_beginthread** e **_endthread**, non chiudere in modo esplicito l'handle del thread chiamando l'API [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) di Win32.
 
-Ad esempio Win32 **ExitThread** API **endthreadex** non chiude l'handle del thread. Pertanto, quando si usano **beginthreadex** e **endthreadex**, è necessario chiudere l'handle del thread chiamando Win32 **CloseHandle** API.
+Analogamente all'API Win32 **ExitThread** , **_endthreadex** non chiude l'handle del thread. Pertanto, quando si usano **_beginthreadex** e **_endthreadex**, è necessario chiudere l'handle del thread chiamando l'API **CloseHandle** di Win32.
 
 > [!NOTE]
-> **endthread** e **endthreadex** causare C++ distruttori in sospeso nel thread non deve essere chiamato.
+> **_endthread** e **_endthreadex** provocano C++ la mancata chiamata dei distruttori in sospeso nel thread.
 
 ## <a name="requirements"></a>Requisiti
 

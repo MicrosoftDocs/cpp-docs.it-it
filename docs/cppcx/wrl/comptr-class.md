@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606496"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498405"
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 
@@ -84,19 +84,19 @@ Classe a cui l'oggetto corrente `ComPtr` è un elemento Friend. (Il modello che 
 
 `ComPtr<>`dichiara un tipo che rappresenta il puntatore di interfaccia sottostante. Utilizzare `ComPtr<>` per dichiarare una variabile e quindi utilizzare l'operatore di accesso ai membri freccia`->`() per accedere a una funzione membro di interfaccia.
 
-Per ulteriori informazioni sui puntatori intelligenti, vedere la sottosezione "puntatori intelligenti COM" dell'argomento [procedure di codifica com](/windows/desktop/LearnWin32/com-coding-practices) in MSDN Library.
+Per ulteriori informazioni sui puntatori intelligenti, vedere la sottosezione "puntatori intelligenti COM" dell'argomento [procedure di codifica com](/windows/win32/LearnWin32/com-coding-practices) in MSDN Library.
 
 ## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-NOME            | DESCRIZIONE
+NOME            | Descrizione
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | Sinonimo del tipo specificato dal parametro di modello *T* .
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-Nome                             | DESCRIZIONE
+Nome                             | Descrizione
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
 [ComPtr::ComPtr](#comptr)        | Inizializza una nuova istanza della classe `ComPtr`. Gli overload forniscono costruttori predefiniti, di copia, di spostamento e di conversione.
 [ComPtr:: ~ ComPtr](#tilde-comptr) | Consente di deinizializzare `ComPtr`un'istanza di.
@@ -119,7 +119,7 @@ Nome                                                      | DESCRIZIONE
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-NOME                                        | Descrizione
+Name                                        | Descrizione
 ------------------------------------------- | --------------------------------------------------------------------------------
 [ComPtr::InternalAddRef](#internaladdref)   | Incrementa il conteggio dei riferimenti dell'interfaccia associata a questo `ComPtr`oggetto.
 [ComPtr:: InternalRelease](#internalrelease) | Esegue un'operazione di rilascio COM sull'interfaccia associata a questo `ComPtr`oggetto.
@@ -137,7 +137,7 @@ Nome                                                                            
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-Name                 | Descrizione
+Name                 | DESCRIZIONE
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr::ptr_](#ptr) | Contiene un puntatore all'interfaccia associata a e gestita da questo `ComPtr`oggetto.
 

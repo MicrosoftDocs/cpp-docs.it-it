@@ -1,17 +1,17 @@
 ---
-title: dispinterface (attributo COM C++)
+title: interfaccia dispatchC++ (attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346294"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501622"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -29,7 +29,7 @@ Quando l'attributo **dispinterface** di C++ precede un'interfaccia, quest'ultima
 
 A meno che non si specifichi una classe di base, un'interfaccia di dispatch deriverà da `IDispatch`. È necessario specificare un [id](id.md) per i membri di un'interfaccia di dispatch.
 
-L'esempio d'uso relativo a [dispinterface](/windows/desktop/Midl/dispinterface) nella documentazione di MIDL:
+L'esempio d'uso relativo a [dispinterface](/windows/win32/Midl/dispinterface) nella documentazione di MIDL:
 
 ```cpp
 dispinterface helloPro

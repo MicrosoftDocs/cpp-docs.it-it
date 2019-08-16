@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: d493a2d4d1c531250abc1cd60d1d3d5b79dea1b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916758"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502842"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 
@@ -35,26 +35,26 @@ class CSplitButton : public CButton
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CSplitButton::CSplitButton](#csplitbutton)|Costruisce un oggetto `CSplitButton`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CSplitButton::Create](#create)|Crea un controllo pulsante di divisione con gli stili specificati e lo associa all'oggetto `CSplitButton` corrente.|
 |[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Imposta il menu a discesa che viene visualizzato quando un utente fa clic sulla freccia a discesa del controllo pulsante di menu combinato corrente.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|NOME|DESCRIZIONE|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |[CSplitButton::OnDropDown](#ondropdown)|Gestisce la notifica BCN_DROPDOWN inviata dal sistema quando un utente fa clic sulla freccia a discesa del controllo pulsante di suddivisione corrente.|
 
 ## <a name="remarks"></a>Note
 
-La `CSplitButton` classe è derivata dalla classe [CButton](../../mfc/reference/cbutton-class.md) . Il controllo pulsante di divisione è un controllo Button il cui stile è BS_SPLITBUTTON. Viene visualizzato un menu personalizzato quando un utente fa clic sulla freccia a discesa. Per altre informazioni, vedere gli stili BS_SPLITBUTTON e BS_DEFSPLITBUTTON negli [stili dei pulsanti](/windows/desktop/Controls/button-styles).
+La `CSplitButton` classe è derivata dalla classe [CButton](../../mfc/reference/cbutton-class.md) . Il controllo pulsante di divisione è un controllo Button il cui stile è BS_SPLITBUTTON. Viene visualizzato un menu personalizzato quando un utente fa clic sulla freccia a discesa. Per altre informazioni, vedere gli stili BS_SPLITBUTTON e BS_DEFSPLITBUTTON negli [stili dei pulsanti](/windows/win32/Controls/button-styles).
 
 Nella figura seguente è illustrata una finestra di dialogo che contiene un controllo pager e un controllo pulsante di divisione (1). È già stato fatto clic sulla freccia a discesa (2) e viene visualizzato il sottomenu (3).
 
@@ -142,10 +142,10 @@ afx_msg void OnDropDown(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
-|*pNMHDR*|in Puntatore a una struttura [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) contenente informazioni sulla notifica [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
-|*pResult*|out (Non usato; non viene restituito alcun valore). Valore restituito della notifica [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
+|*pNMHDR*|in Puntatore a una struttura [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) contenente informazioni sulla notifica [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
+|*pResult*|out (Non usato; non viene restituito alcun valore). Valore restituito della notifica [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
 
 ### <a name="remarks"></a>Note
 

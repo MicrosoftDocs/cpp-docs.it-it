@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-ms.openlocfilehash: ada89b074fd8e0c2bfc75ba833e9c5966a145312
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6733ef1f390f2ff377356dda3f7cd3ebfe10cc2b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359423"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509874"
 ---
 # <a name="project-build-error-prj0016"></a>Errore di compilazione progetto PRJ0016
 
-Impostazioni di sicurezza dell'utente impediscono che il processo di creazione. Queste impostazioni sono necessarie per la compilazione.
+Le impostazioni di sicurezza dell'utente impediscono la creazione del processo. Queste impostazioni sono necessarie per la compilazione.
 
-Si è connessi come utente non dispone di autorizzazioni per creare i processi usando un processo. È necessario modificare i livelli di autorizzazione per l'account utente o contattare l'amministratore account.
+Si è connessi come utente che non dispone delle autorizzazioni per la creazione di processi mediante un processo. È necessario modificare i livelli di autorizzazione per l'account utente o contattare l'amministratore dell'account.
 
-Questo errore può verificarsi anche se è impostata la chiave del Registro di sistema seguente:
+Questo errore può verificarsi anche se è stata impostata la seguente chiave del registro di sistema:
 
 \\\HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\RestrictRun
 
-Per risolvere questo errore, eliminare la chiave di RestrictRun. Se è necessaria questa chiave del Registro di sistema, aggiungere **vcspawn.exe** all'elenco di voci nella chiave.
+Per correggere l'errore, eliminare la chiave RestrictRun. Se questa chiave del registro di sistema è necessaria, aggiungere **vcspawn. exe** all'elenco di voci nella chiave.
 
-Un'altra causa questo errore è che l'impostazione di criteri non sono inclusi VCSpawn.exe sotto la chiave del Registro di sistema HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun come un programma finestra consentito per questo account utente.
+Un'altra causa di questo errore è che l'impostazione dei criteri non include VCSpawn. exe nella chiave del registro di sistema HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun come programma finestra consentita per questo account utente.
 
-Per altre informazioni, vedere [adesione alle impostazioni di criteri di sistema](https://msdn.microsoft.com/library/aa372139), nella sezione "Esecuzione consentite solo le applicazioni di Windows".
+Per ulteriori informazioni, vedere l'argomento relativo [alla conformità alle impostazioni dei criteri di sistema](/previous-versions/windows/desktop/Policy/adhering-to-system-policy-settings)nella sezione "esecuzione solo di applicazioni Windows consentite".

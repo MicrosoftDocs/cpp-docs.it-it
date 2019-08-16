@@ -8,14 +8,14 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 97932dfe0e187a13b72ae5fe70d761224721c3ff
-ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
+ms.openlocfilehash: ed75b94e8bf0aca9369c56f23e8ff00ea6953642
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314250"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509507"
 ---
-# <a name="debugbreak"></a>__debugbreak
+# <a name="__debugbreak"></a>__debugbreak
 
 **Sezione specifica Microsoft**
 
@@ -35,10 +35,10 @@ void __debugbreak();
 
 ## <a name="remarks"></a>Note
 
-Il `__debugbreak` compilatore intrinseche, in modo analogo a [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), è un modo Win32 portabile da un punto di interruzione.
+La `__debugbreak` funzione intrinseca del compilatore, simile a [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak), è una modalità Win32 portabile per generare un punto di interruzione.
 
 > [!NOTE]
->  Durante la compilazione con **/clr**, una funzione contenente `__debugbreak` verrà compilata per MSIL. `asm int 3` determina la compilazione di una funzione per il codice nativo. Per altre informazioni, vedere [ASM](../assembler/inline/asm.md).
+>  Quando si esegue la compilazione con **/CLR**, una `__debugbreak` funzione che contiene verrà compilata in MSIL. `asm int 3` determina la compilazione di una funzione per il codice nativo. Per ulteriori informazioni, vedere [__asm](../assembler/inline/asm.md).
 
 Ad esempio:
 
@@ -60,7 +60,7 @@ main() {
 
 in un computer x86.
 
-In ARM64, il `__debugbreak` intrinseco viene compilato nell'istruzione `brk #0xF000`.
+In ARM64, la `__debugbreak` funzione intrinseca viene compilata nell'istruzione. `brk #0xF000`
 
 Questa routine è disponibile solo come funzione intrinseca.
 

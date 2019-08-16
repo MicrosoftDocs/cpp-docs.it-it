@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 34388e635ba89d732ae3993074a2c8268e2289a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 483998529b83d9b28c6ab1b219c4f5288dbd8ec7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224556"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503826"
 ---
 # <a name="coleipframewnd-class"></a>Classe COleIPFrameWnd
 
@@ -29,7 +29,7 @@ Base per la finestra di modifica sul posto dell'applicazione.
 class COleIPFrameWnd : public CFrameWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -39,16 +39,16 @@ class COleIPFrameWnd : public CFrameWnd
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Chiamato dal framework quando un elemento viene attivato per la modifica sul posto.|
-|[COleIPFrameWnd::RepositionFrame](#repositionframe)|Chiamato dal framework per riposizionare la finestra di modifica sul posto.|
+|[COleIPFrameWnd::OnCreateControlBars](#oncreatecontrolbars)|Chiamata eseguita dal framework quando un elemento viene attivato per la modifica sul posto.|
+|[COleIPFrameWnd::RepositionFrame](#repositionframe)|Chiamato dal Framework per riposizionare la finestra di modifica sul posto.|
 
 ## <a name="remarks"></a>Note
 
-Questa classe crea e le posizioni delle barre nella finestra del documento dell'applicazione contenitore di controllo. Gestisce anche le notifiche generate da un embedded [COleResizeBar](../../mfc/reference/coleresizebar-class.md) quando l'utente ridimensiona la finestra di modifica sul posto dell'oggetto.
+Questa classe crea e posiziona le barre di controllo all'interno della finestra del documento dell'applicazione contenitore. Gestisce inoltre le notifiche generate da un oggetto [COleResizeBar](../../mfc/reference/coleresizebar-class.md) incorporato quando l'utente ridimensiona la finestra di modifica sul posto.
 
-Per altre informazioni sull'uso `COleIPFrameWnd`, vedere l'articolo [attivazione](../../mfc/activation-cpp.md).
+Per ulteriori informazioni sull'utilizzo `COleIPFrameWnd`di, vedere l'articolo [attivazione](../../mfc/activation-cpp.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -66,9 +66,9 @@ Per altre informazioni sull'uso `COleIPFrameWnd`, vedere l'articolo [attivazione
 
 **Intestazione:** AFXOLE. h
 
-##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd
+##  <a name="coleipframewnd"></a>COleIPFrameWnd:: COleIPFrameWnd
 
-Costruisce un `COleIPFrameWnd` dell'oggetto e inizializza le informazioni sullo stato sul posto, che viene archiviate in una struttura oleinplaceframeinfo che typu.
+Costruisce un `COleIPFrameWnd` oggetto e inizializza le informazioni sullo stato sul posto, archiviate in una struttura di tipo OLEINPLACEFRAMEINFO.
 
 ```
 COleIPFrameWnd();
@@ -76,11 +76,11 @@ COleIPFrameWnd();
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere [oleinplaceframeinfo che](/windows/desktop/api/oleidl/ns-oleidl-tagoifi) nel SDK di Windows.
+Per ulteriori informazioni, vedere [OLEINPLACEFRAMEINFO](/windows/win32/api/oleidl/ns-oleidl-oifi) nel Windows SDK.
 
-##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars
+##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd:: OnCreateControlBars
 
-Il framework chiama il `OnCreateControlBars` corretto quando un elemento viene attivato per la modifica sul posto.
+Il Framework chiama la `OnCreateControlBars` funzione quando un elemento viene attivato per la modifica sul posto.
 
 ```
 virtual BOOL OnCreateControlBars(
@@ -98,19 +98,19 @@ virtual BOOL OnCreateControlBars(
 Puntatore alla finestra cornice dell'applicazione contenitore.
 
 *pWndDoc*<br/>
-Puntatore alla finestra del contenitore a livello di documento. Può essere NULL se il contenitore è un'applicazione SDI.
+Puntatore alla finestra a livello di documento del contenitore. Può essere NULL se il contenitore è un'applicazione SDI.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se l'operazione riesce; in caso contrario, 0.
+Diverso da zero in caso di esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per eseguire qualsiasi elaborazione speciale necessario quando vengono create le barre di controllo.
+L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per eseguire qualsiasi elaborazione speciale necessaria quando vengono create le barre di controllo.
 
-##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame
+##  <a name="repositionframe"></a>COleIPFrameWnd:: RepositionFrame
 
-Il framework chiama il `RepositionFrame` funzione membro per definire il layout delle barre di controllo e il riposizionamento la finestra di modifica sul posto in modo che tutto è visibile.
+Il Framework chiama la `RepositionFrame` funzione membro per disporre le barre di controllo e riposizionare la finestra di modifica sul posto in modo che sia visibile.
 
 ```
 virtual void RepositionFrame(
@@ -121,18 +121,18 @@ virtual void RepositionFrame(
 ### <a name="parameters"></a>Parametri
 
 *lpPosRect*<br/>
-Puntatore a un `RECT` struttura o un `CRect` contenente finestra cornice posizione coordinate correnti della finestra, in pixel, relativo all'area client.
+Puntatore a una `RECT` struttura o a `CRect` un oggetto contenente le coordinate della posizione corrente della finestra cornice sul posto, in pixel, rispetto all'area client.
 
 *lpClipRect*<br/>
-Puntatore a un `RECT` struttura o un `CRect` contenente finestra cornice corrente rettangolo di ridimensionamento coordinate della finestra, in pixel, relativo all'area client.
+Puntatore a una `RECT` struttura o a `CRect` un oggetto che contiene le coordinate del rettangolo di ritaglio corrente della finestra cornice sul posto, in pixel, rispetto all'area client.
 
 ### <a name="remarks"></a>Note
 
-Layout delle barre di controllo nella finestra del contenitore è diverso da che eseguita da una finestra cornice non OLE. La finestra cornice non OLE calcola le posizioni delle barre di controllo e altri oggetti da una dimensione determinata frame-window, come in una chiamata a [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). L'area client è ciò che rimane dopo che viene sottratto spazio per le barre di controllo e altri oggetti. Oggetto `COleIPFrameWnd` finestra, d'altra parte, posiziona le barre degli strumenti in conformità con un'area client specificato. In altre parole, `CFrameWnd::RecalcLayout` funziona "dall'esterno," mentre `COleIPFrameWnd::RepositionFrame` funziona "dall'interno verso l'esterno."
+Il layout delle barre di controllo nella finestra del contenitore è diverso da quello eseguito da una finestra cornice non OLE. La finestra cornice non OLE calcola le posizioni delle barre di controllo e di altri oggetti da una determinata dimensione della finestra cornice, come in una chiamata a [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout). L'area client rimane invariata dopo la sottrazione dello spazio per le barre di controllo e altri oggetti. Una `COleIPFrameWnd` finestra, d'altra parte, posiziona le barre degli strumenti in base a una determinata area client. In altre parole, `CFrameWnd::RecalcLayout` funziona "dall'esterno del," mentre `COleIPFrameWnd::RepositionFrame` funziona "dall'interno verso l'esterno".
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[HIERSVR di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)

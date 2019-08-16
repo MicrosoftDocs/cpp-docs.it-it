@@ -33,14 +33,14 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fab53d70df1c5361bc56bc0df16d0d2171f07a94
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285699"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499908"
 ---
-# <a name="makepath-wmakepath"></a>_makepath, _wmakepath
+# <a name="_makepath-_wmakepath"></a>_makepath, _wmakepath
 
 Crea un nome di percorso da componenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [_makepath_s, _wmakepath_s](makepath-s-wmakepath-s.md).
 
@@ -69,22 +69,22 @@ void _wmakepath(
 Buffer del percorso completo.
 
 *drive*<br/>
-Contiene una lettera (A, B e così via) corrispondente all'unità desiderata e i due punti finali opzionali. **makepath** inserisce automaticamente i due punti nel percorso composto se mancante. Se *unità* viene **NULL** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella composita *percorso* stringa.
+Contiene una lettera (A, B e così via) corrispondente all'unità desiderata e i due punti finali opzionali. **_makepath** inserisce i due punti automaticamente nel percorso composito, se mancante. Se l' *unità* è **null** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella stringa del *percorso* composito.
 
 *dir*<br/>
-Contiene il percorso delle directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe possono essere usate in un'unica *dir* argomento. Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* viene **NULL** o punta a una stringa vuota, nessun percorso di directory viene inserito in composita *percorso* stringa.
+Contiene il percorso delle directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe possono essere usate in un unico argomento *dir* . Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* è **null** o punta a una stringa vuota, nessun percorso di directory viene inserito nella stringa del *percorso* composito.
 
 *fname*<br/>
-Contiene il nome del file di base senza alcuna estensione di nome file. Se *fname* viene **NULL** o punta a una stringa vuota, nessun nome file viene inserito in composita *percorso* stringa.
+Contiene il nome del file di base senza alcuna estensione di nome file. Se *fname* è **null** o punta a una stringa vuota, nessun nome file viene inserito nella stringa del *percorso* composito.
 
 *ext*<br/>
-Contiene l'estensione di nome file effettiva, con o senza un punto iniziale (.). **makepath** inserisce il punto automaticamente se non viene visualizzato nella *ext*. Se *ext* viene **NULL** o punta a una stringa vuota, nessuna estensione viene inserito in composita *percorso* stringa.
+Contiene l'estensione di nome file effettiva, con o senza un punto iniziale (.). **_makepath** inserisce il punto automaticamente se non viene visualizzato in *ext*. Se *ext* è **null** o punta a una stringa vuota, nessuna estensione viene inserita nella stringa del *percorso* composito.
 
 ## <a name="remarks"></a>Note
 
-Il **makepath** funzione crea una stringa di percorso composita da singoli componenti, archiviando il risultato in *percorso*. Il *percorso* potrebbe includere una lettera di unità, percorso della directory, filename ed estensione del nome file. **wmakepath** è una versione a caratteri wide di **makepath**; gli argomenti **wmakepath** sono stringhe a caratteri wide. **wmakepath** e **makepath** hanno lo stesso comportamento in caso contrario.
+La funzione **_makepath** crea una stringa di percorso composita da singoli componenti, archiviando il risultato in *path*. Il *percorso* potrebbe includere una lettera di unità, un percorso di directory, un nome file e un'estensione del nome file. **_wmakepath** è una versione a caratteri wide di **_makepath**; gli argomenti di **_wmakepath** sono stringhe a caratteri wide. **_wmakepath** e **_makepath** si comportano in modo identico.
 
-**Nota sulla sicurezza** Usare una stringa con terminazione Null. Per evitare sovraccarichi del buffer, la stringa con terminazione null non può superare le dimensioni dei *percorso* buffer. **makepath** non garantisce che la lunghezza della stringa di percorso composto non superi **MAX_PATH**. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Nota sulla sicurezza** Usare una stringa con terminazione Null. Per evitare il sovraccarico del buffer, la stringa con terminazione null non deve superare la dimensione del buffer del *percorso* . **_makepath** non garantisce che la lunghezza della stringa del percorso composito non superi **_MAX_PATH**. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -92,9 +92,9 @@ Il **makepath** funzione crea una stringa di percorso composita da singoli compo
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-Il *percorso* argomento deve puntare a un buffer vuoto sufficientemente grande da contenere il percorso completo. Composita *tracciato* deve essere superiore al **MAX_PATH** costante, definita in STDLIB. h.
+L'argomento *path* deve puntare a un buffer vuoto sufficientemente grande da mantenere il percorso completo. Il *percorso* composito non deve essere maggiore della costante **_MAX_PATH** , definito in STDLIB. h.
 
-Se il percorso è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). È inoltre **errno** è impostata su **EINVAL**. **NULL** valori consentiti per tutti gli altri parametri.
+Se path è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). **Errno** è inoltre impostato su **EINVAL**. Sono consentiti valori **null** per tutti gli altri parametri.
 
 ## <a name="requirements"></a>Requisiti
 

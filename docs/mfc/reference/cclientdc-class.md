@@ -1,5 +1,5 @@
 ---
-title: CClientDC (classe)
+title: Classe CClientDC
 ms.date: 11/04/2016
 f1_keywords:
 - CClientDC
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-ms.openlocfilehash: a67af5d7d82b8bd7d0490d4ae6f9535bf3283ea2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46428740d052c70218d4443395777428cdf3c3b0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206624"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507330"
 ---
-# <a name="cclientdc-class"></a>CClientDC (classe)
+# <a name="cclientdc-class"></a>Classe CClientDC
 
-Si occupa di chiamare le funzioni di Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) in fase di costruzione e [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) in fase di eliminazione.
+Si occupa della chiamata delle funzioni di Windows [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) in fase di costruzione e [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) in fase di eliminazione.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,25 +27,25 @@ Si occupa di chiamare le funzioni di Windows [GetDC](/windows/desktop/api/winuse
 class CClientDC : public CDC
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CClientDC::CClientDC](#cclientdc)|Costruisce un `CClientDC` oggetto connesso il `CWnd`.|
+|[CClientDC::CClientDC](#cclientdc)|Costruisce un `CClientDC` oggetto connesso `CWnd`a.|
 
 ### <a name="protected-data-members"></a>Membri dati protetti
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CClientDC::m_hWnd](#m_hwnd)|L'oggetto HWND della finestra per il quale il `CClientDC` è valido.|
+|[CClientDC::m_hWnd](#m_hwnd)|HWND della finestra per cui questo `CClientDC` oggetto è valido.|
 
 ## <a name="remarks"></a>Note
 
-Ciò significa che il contesto di dispositivo associato un `CClientDC` oggetto rappresenta l'area client di una finestra.
+Ciò significa che il contesto di dispositivo associato a `CClientDC` un oggetto è l'area client di una finestra.
 
-Per ulteriori informazioni sul `CClientDC`, vedere [contesti di dispositivo](../../mfc/device-contexts.md).
+Per altre informazioni su `CClientDC`, vedere contesti di [dispositivo](../../mfc/device-contexts.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -59,9 +59,9 @@ Per ulteriori informazioni sul `CClientDC`, vedere [contesti di dispositivo](../
 
 **Intestazione:** afxwin.h
 
-##  <a name="cclientdc"></a>  CClientDC::CClientDC
+##  <a name="cclientdc"></a>CClientDC:: CClientDC
 
-Costruisce un `CClientDC` oggetti cui accede l'area client del [CWnd](../../mfc/reference/cwnd-class.md) a cui punta *pWnd*.
+Costruisce un `CClientDC` oggetto che accede all'area client di [CWnd](../../mfc/reference/cwnd-class.md) a cui punta *pWnd*.
 
 ```
 explicit CClientDC(CWnd* pWnd);
@@ -70,13 +70,13 @@ explicit CClientDC(CWnd* pWnd);
 ### <a name="parameters"></a>Parametri
 
 *pWnd*<br/>
-Finestra di cui l'area client accederà l'oggetto di contesto di dispositivo.
+Finestra di cui l'oggetto di contesto del dispositivo accederà all'area client.
 
 ### <a name="remarks"></a>Note
 
-Il costruttore chiama la funzione di Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc).
+Il costruttore chiama la funzione [GetDC](/windows/win32/api/winuser/nf-winuser-getdc)di Windows.
 
-Un'eccezione (di tipo `CResourceException`) viene generata se la Windows `GetDC` chiamata ha esito negativo. Un contesto di dispositivo potrebbe non essere disponibile se Windows è già allocato tutti i relativi contesti di dispositivo disponibili. L'applicazione è in competizione per le cinque comuni contesti di visualizzazione disponibili in qualsiasi momento in Windows.
+Se la chiamata di Windows `CResourceException` `GetDC` ha esito negativo, viene generata un'eccezione (di tipo). Un contesto di dispositivo potrebbe non essere disponibile se Windows ha già allocato tutti i contesti di dispositivo disponibili. L'applicazione compete per i cinque contesti di visualizzazione comuni disponibili in un determinato momento sotto Windows.
 
 ### <a name="example"></a>Esempio
 
@@ -84,7 +84,7 @@ Un'eccezione (di tipo `CResourceException`) viene generata se la Windows `GetDC`
 
 ##  <a name="m_hwnd"></a>  CClientDC::m_hWnd
 
-Il `HWND` del `CWnd` puntatore utilizzato per costruire il `CClientDC` oggetto.
+Del puntatore utilizzato per costruire l' `CClientDC` oggetto. `CWnd` `HWND`
 
 ```
 HWND m_hWnd;
@@ -96,11 +96,11 @@ HWND m_hWnd;
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio relativo [CClientDC::CClientDC](#cclientdc).
+  Vedere l'esempio per [CClientDC:: CClientDC](#cclientdc).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[MDI di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDC](../../mfc/reference/cdc-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CDC](../../mfc/reference/cdc-class.md)

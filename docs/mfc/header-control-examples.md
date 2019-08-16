@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [MFC], header controls
 - controls [MFC], header
 ms.assetid: 30050732-d53e-4eab-88d7-61aac52914c9
-ms.openlocfilehash: 88ecc7c84f9abd397937587323a306da1ea7b7f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df72489ae11ab1567b0d0b2b06ba3c562ec312a9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240244"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508461"
 ---
 # <a name="header-control-examples"></a>Esempi di controllo Header
 
-Per esempi di controlli intestazione, vedere la [controlli intestazione](/windows/desktop/Controls/header-controls) nel SDK di Windows.
+Per esempi di controlli Header, vedere i [controlli Header](/windows/win32/Controls/header-controls) nell'Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 

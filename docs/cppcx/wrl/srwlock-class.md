@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive method
 - Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-ms.openlocfilehash: 6d4a504d9465c858af59a88cf0ef611bf88c3fde
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 079f1abe652d8c1610a084f5e1158cc5798d61c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403087"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498300"
 ---
 # <a name="srwlock-class"></a>SRWLock (classe)
 
-Rappresenta un blocco in lettura/scrittura.
+Rappresenta un blocco di lettura/scrittura sottile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -40,38 +40,38 @@ class SRWLock;
 
 ## <a name="remarks"></a>Note
 
-Un blocco in lettura/scrittura è utilizzato per sincronizzare l'accesso attraverso i thread a un oggetto o una risorsa. Per altre informazioni, vedere [funzioni di sincronizzazione](/windows/desktop/Sync/synchronization-functions).
+Un blocco reader/writer slim viene usato per sincronizzare l'accesso tra thread a un oggetto o a una risorsa. Per altre informazioni, vedere [funzioni di sincronizzazione](/windows/win32/Sync/synchronization-functions).
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-Nome                | Descrizione
+NOME                | DESCRIZIONE
 ------------------- | -------------------------------------------------------------------
-`SyncLockExclusive` | Sinonimo di un `SRWLock` oggetto che viene acquisito in modalità esclusiva.
-`SyncLockShared`    | Sinonimo di un `SRWLock` oggetto che viene acquisito in modalità condivisa.
+`SyncLockExclusive` | Sinonimo di `SRWLock` un oggetto acquisito in modalità esclusiva.
+`SyncLockShared`    | Sinonimo di `SRWLock` un oggetto acquisito in modalità condivisa.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 Nome                                     | Descrizione
 ---------------------------------------- | --------------------------------------------------
-[SRWLock::SRWLock](#srwlock-constructor) | Inizializza una nuova istanza della classe `SRWLock`.
-[SRWLock:: ~ SRWLock](#tilde-srwlock)      | Deinizializza un'istanza del `SRWLock` classe.
+[SRWLock:: SRWLock](#srwlock-constructor) | Inizializza una nuova istanza della classe `SRWLock`.
+[SRWLock:: ~ SRWLock](#tilde-srwlock)      | Consente di deinizializzare un' `SRWLock` istanza della classe.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-Nome                                           | Descrizione
+Nome                                           | DESCRIZIONE
 ---------------------------------------------- | -------------------------------------------------------------------------------------------------------
 [SRWLock::LockExclusive](#lockexclusive)       | Acquisisce un `SRWLock` oggetto in modalità esclusiva.
-[SRWLock::LockShared](#lockshared)             | Acquisisce un `SRWLock` oggetto in modalità condivisa.
-[SRWLock::TryLockExclusive](#trylockexclusive) | Prova ad acquisire un `SRWLock` oggetti in modalità esclusiva per il correnti o specificate `SRWLock` oggetto.
-[SRWLock::TryLockShared](#trylockshared)       | Prova ad acquisire un `SRWLock` oggetti in modalità condivisa per il correnti o specificate `SRWLock` oggetto.
+[SRWLock:: LockShared](#lockshared)             | Acquisisce un `SRWLock` oggetto in modalità condivisa.
+[SRWLock::TryLockExclusive](#trylockexclusive) | Tenta di acquisire un `SRWLock` oggetto in modalità esclusiva per l'oggetto corrente o `SRWLock` specificato.
+[SRWLock::TryLockShared](#trylockshared)       | Tenta di acquisire un `SRWLock` oggetto in modalità condivisa per l'oggetto corrente o `SRWLock` specificato.
 
-### <a name="protected-data-member"></a>Membro dati protetti
+### <a name="protected-data-member"></a>Membro dati protetto
 
-Nome                                      | Descrizione
+NOME                                      | DESCRIZIONE
 ----------------------------------------- | -----------------------------------------------------------------------
-[SRWLock::SRWLock_](#srwlock-data-member) | Contiene la variabile di blocco sottostante per l'oggetto corrente `SRWLock` oggetto.
+[SRWLock:: SRWLock_](#srwlock-data-member) | Contiene la variabile di blocco sottostante per l' `SRWLock` oggetto corrente.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -81,17 +81,17 @@ Nome                                      | Descrizione
 
 **Intestazione:** corewrappers. h
 
-**Spazio dei nomi:** Microsoft::WRL::Wrappers
+**Spazio dei nomi:** Microsoft:: WRL:: Wrappers
 
 ## <a name="tilde-srwlock"></a>SRWLock:: ~ SRWLock
 
-Deinizializza un'istanza del `SRWLock` classe.
+Consente di deinizializzare un' `SRWLock` istanza della classe.
 
 ```cpp
 ~SRWLock();
 ```
 
-## <a name="lockexclusive"></a>SRWLock::LockExclusive
+## <a name="lockexclusive"></a>SRWLock:: LockExclusive
 
 Acquisisce un `SRWLock` oggetto in modalità esclusiva.
 
@@ -110,9 +110,9 @@ Puntatore a un `SRWLock` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un `SRWLock` oggetto in modalità esclusiva.
+`SRWLock` Oggetto in modalità esclusiva.
 
-## <a name="lockshared"></a>SRWLock::LockShared
+## <a name="lockshared"></a>SRWLock:: LockShared
 
 Acquisisce un `SRWLock` oggetto in modalità condivisa.
 
@@ -131,9 +131,9 @@ Puntatore a un `SRWLock` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un `SRWLock` oggetto in modalità condivisa.
+`SRWLock` Oggetto in modalità condivisa.
 
-## <a name="srwlock-constructor"></a>SRWLock::SRWLock
+## <a name="srwlock-constructor"></a>SRWLock:: SRWLock
 
 Inizializza una nuova istanza della classe `SRWLock`.
 
@@ -141,9 +141,9 @@ Inizializza una nuova istanza della classe `SRWLock`.
 SRWLock();
 ```
 
-## <a name="srwlock-data-member"></a>SRWLock::SRWLock_
+## <a name="srwlock-data-member"></a>SRWLock:: SRWLock_
 
-Contiene la variabile di blocco sottostante per l'oggetto corrente `SRWLock` oggetto.
+Contiene la variabile di blocco sottostante per l' `SRWLock` oggetto corrente.
 
 ```cpp
 SRWLOCK SRWLock_;
@@ -151,7 +151,7 @@ SRWLOCK SRWLock_;
 
 ## <a name="trylockexclusive"></a>SRWLock::TryLockExclusive
 
-Prova ad acquisire un `SRWLock` oggetti in modalità esclusiva per il correnti o specificate `SRWLock` oggetto. Se la chiamata ha esito positivo, il thread chiamante ha la proprietà del blocco.
+Tenta di acquisire un `SRWLock` oggetto in modalità esclusiva per l'oggetto corrente o `SRWLock` specificato. Se la chiamata ha esito positivo, il thread chiamante acquisisce la proprietà del blocco.
 
 ```cpp
 SyncLockExclusive TryLockExclusive();
@@ -168,11 +168,11 @@ Puntatore a un `SRWLock` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, un `SRWLock` oggetto in modalità esclusiva e il thread chiamante assume la proprietà del blocco. In caso contrario, un `SRWLock` oggetto il cui stato non è valido.
+In caso di esito positivo, un `SRWLock` oggetto in modalità esclusiva e il thread chiamante acquisisce la proprietà del blocco. In caso contrario `SRWLock` , un oggetto il cui stato non è valido.
 
-## <a name="trylockshared"></a>SRWLock::TryLockShared
+## <a name="trylockshared"></a>SRWLock:: TryLockShared
 
-Prova ad acquisire un `SRWLock` oggetti in modalità condivisa per il correnti o specificate `SRWLock` oggetto.
+Tenta di acquisire un `SRWLock` oggetto in modalità condivisa per l'oggetto corrente o `SRWLock` specificato.
 
 ```cpp
 WRL_NOTHROW SyncLockShared TryLockShared();
@@ -188,4 +188,4 @@ Puntatore a un `SRWLock` oggetto.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, un `SRWLock` oggetto in modalità condivisa e il thread chiamante assume la proprietà del blocco. In caso contrario, un `SRWLock` oggetto il cui stato non è valido.
+In caso di esito positivo, un `SRWLock` oggetto in modalità condivisa e il thread chiamante acquisisce la proprietà del blocco. In caso contrario `SRWLock` , un oggetto il cui stato non è valido.

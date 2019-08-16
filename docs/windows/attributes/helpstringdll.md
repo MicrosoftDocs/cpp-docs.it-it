@@ -1,21 +1,21 @@
 ---
-title: helpstringdll (attributo COM C++)
+title: helpstringdll (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6dddef666f074a57f54b8c9447847ff56d26fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409538"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501473"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
-Specifica il nome della DLL da usare per eseguire la ricerca della stringa di documento (localizzazione).
+Specifica il nome della DLL da usare per eseguire la ricerca di stringhe di documento (localizzazione).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,11 +26,11 @@ Specifica il nome della DLL da usare per eseguire la ricerca della stringa di do
 ### <a name="parameters"></a>Parametri
 
 *string*<br/>
-La DLL da utilizzare per eseguire una ricerca di stringhe di documento.
+DLL da usare per eseguire la ricerca di stringhe di documento.
 
 ## <a name="remarks"></a>Note
 
-Il **helpstringdll** attributi di C++ ha la stessa funzionalità come la [helpstringdll](/windows/desktop/Midl/helpstringdll) attributo MIDL.
+L'attributo **helpstringdll** C++ ha la stessa funzionalità dell'attributo MIDL di [helpstringdll](/windows/win32/Midl/helpstringdll) .
 
 ## <a name="example"></a>Esempio
 
@@ -56,7 +56,7 @@ __interface IMyI
 |**Si applica a**|**classe**, **interfaccia**, metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

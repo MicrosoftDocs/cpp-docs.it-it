@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916689"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502627"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 
@@ -49,7 +49,7 @@ class CShellManager : public CObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CShellManager::CShellManager](#cshellmanager)|Costruisce un oggetto `CShellManager`.|
 
@@ -113,7 +113,7 @@ in Stringa che contiene la cartella selezionata per impostazione predefinita qua
 in Titolo della finestra di dialogo.
 
 *ulFlags*<br/>
-in Flag che specificano le opzioni per la finestra di dialogo. Per una descrizione dettagliata, vedere [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) .
+in Flag che specificano le opzioni per la finestra di dialogo. Per una descrizione dettagliata, vedere [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) .
 
 *piFolderImage*<br/>
 out Puntatore al valore integer in cui il metodo scrive l'indice dell'immagine della cartella selezionata.
@@ -156,7 +156,7 @@ Puntatore al nuovo elenco di elementi se la funzione ha esito positivo; in caso 
 
 ### <a name="remarks"></a>Note
 
-Questo metodo crea un nuovo [ID](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) oggetto di dimensioni sufficienti per contenere sia *pidl1* che *pidl2*. Quindi, copia *pidl1* e *pidl2* nel nuovo elenco.
+Questo metodo crea un nuovo [ID](/windows/win32/api/shtypes/ns-shtypes-itemidlist) oggetto di dimensioni sufficienti per contenere sia *pidl1* che *pidl2*. Quindi, copia *pidl1* e *pidl2* nel nuovo elenco.
 
 ##  <a name="copyitem"></a>  CShellManager::CopyItem
 

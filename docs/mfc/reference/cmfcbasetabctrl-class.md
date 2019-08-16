@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a1637c77c326ddcfcb7f4dcb834ab6f6b2c0cf1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403886"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505461"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -256,7 +256,7 @@ Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartel
 class CMFCBaseTabCtrl : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
@@ -348,7 +348,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Ricalcola il layout interno di una finestra a schede.|
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Rimuove tutte le schede dalla finestra a schede.|
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Rimuove una scheda dalla finestra a schede.|
@@ -378,13 +378,13 @@ class CMFCBaseTabCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Crea un wrapper per un oggetto derivato da [CWnd](../../mfc/reference/cwnd-class.md) che non deriva da `CDockablePane`. Per ancorare un oggetto `CMFCBaseTabCtrl` , ogni controllo incorporato deve includere un wrapper di ancoraggio o essere derivato da `CDockablePane`.<br /><br /> È possibile impostare la classe del wrapper usando `SetDockingBayWrapperRTC`.|
 
 ### <a name="data-members"></a>Membri di dati
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Specifica se le schede vengono selezionate facendo clic con il pulsante sinistro o destro del mouse.|
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Specifica se i riquadri contenuti nelle schede vengono eliminati automaticamente.|
@@ -808,7 +808,7 @@ virtual COLORREF GetActiveTabColor() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore [COLORREF](/windows/desktop/gdi/colorref) che specifica il colore di sfondo della scheda attiva.
+Valore [COLORREF](/windows/win32/gdi/colorref) che specifica il colore di sfondo della scheda attiva.
 
 ### <a name="remarks"></a>Note
 
@@ -824,7 +824,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore [COLORREF](/windows/desktop/gdi/colorref) che specifica il colore del testo della scheda attiva.
+Valore [COLORREF](/windows/win32/gdi/colorref) che specifica il colore del testo della scheda attiva.
 
 ### <a name="remarks"></a>Note
 
@@ -852,7 +852,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Riferimento a una matrice di valori [COLORREF](/windows/desktop/gdi/colorref) usati dall'oggetto [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) per la colorazione automatica delle schede.
+Riferimento a una matrice di valori [COLORREF](/windows/win32/gdi/colorref) usati dall'oggetto [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) per la colorazione automatica delle schede.
 
 ### <a name="remarks"></a>Note
 
@@ -1009,7 +1009,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore [COLORREF](/windows/desktop/gdi/colorref) che indica il colore di sfondo della scheda specificata; -1 se *iTab* non è compreso nell'intervallo.
+Valore [COLORREF](/windows/win32/gdi/colorref) che indica il colore di sfondo della scheda specificata; -1 se *iTab* non è compreso nell'intervallo.
 
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize
 
@@ -1037,7 +1037,7 @@ virtual int GetTabByID(int id) const;
 
 ### <a name="parameters"></a>Parametri
 
-*ID*<br/>
+*id*<br/>
 [in] ID di una scheda.
 
 ### <a name="return-value"></a>Valore restituito
@@ -1260,7 +1260,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Parametro [COLORREF](/windows/desktop/gdi/colorref) che indica il colore del testo della scheda specificata; -1 se *iTab* non è compreso nell'intervallo.
+Parametro [COLORREF](/windows/win32/gdi/colorref) che indica il colore del testo della scheda specificata; -1 se *iTab* non è compreso nell'intervallo.
 
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd
 
@@ -1996,7 +1996,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="remarks"></a>Note
 
-Il framework ottiene il colore di sfondo predefinito delle schede attive dal metodo [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor).
+Il framework ottiene il colore di sfondo predefinito delle schede attive dal metodo [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor).
 
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor
 
@@ -2009,11 +2009,11 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ### <a name="parameters"></a>Parametri
 
 *clr*<br/>
-[in] Parametro [COLORREF](/windows/desktop/gdi/colorref) che specifica il nuovo colore del testo.
+[in] Parametro [COLORREF](/windows/win32/gdi/colorref) che specifica il nuovo colore del testo.
 
 ### <a name="remarks"></a>Note
 
-Per impostazione predefinita, il framework ottiene il colore del testo da [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Eseguire l'override di questo colore predefinito usando il metodo `SetActiveTabTextColor`.
+Per impostazione predefinita, il framework ottiene il colore del testo da [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor). Eseguire l'override di questo colore predefinito usando il metodo `SetActiveTabTextColor`.
 
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors
 
@@ -2095,7 +2095,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 [in] Larghezza di ogni immagine in pixel.
 
 *clrTransp*<br/>
-[in] Parametro [COLORREF](/windows/desktop/gdi/colorref) che indica il colore trasparente dell'immagine.
+[in] Parametro [COLORREF](/windows/win32/gdi/colorref) che indica il colore trasparente dell'immagine.
 
 *hImageList*<br/>
 [in] Handle a un elenco di immagini precaricato.
@@ -2305,7 +2305,7 @@ virtual BOOL SetTabTextColor(
 [in] Indice in base zero della scheda.
 
 *color*<br/>
-[in] Parametro [COLORREF](/windows/desktop/gdi/colorref) che indica il nuovo colore del testo.
+[in] Parametro [COLORREF](/windows/win32/gdi/colorref) che indica il nuovo colore del testo.
 
 ### <a name="return-value"></a>Valore restituito
 

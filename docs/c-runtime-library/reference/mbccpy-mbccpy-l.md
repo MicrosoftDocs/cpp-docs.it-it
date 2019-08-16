@@ -34,14 +34,14 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 852097ebea41ef99b1a53f7bc344eb0c08911a4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d0711a98813565e945dad1d0e998847029668c2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156837"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499902"
 ---
-# <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
+# <a name="_mbccpy-_mbccpy_l"></a>_mbccpy, _mbccpy_l
 
 Copia un carattere multibyte da una stringa in un'altra stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbccpy_s, _mbccpy_s_l](mbccpy-s-mbccpy-s-l.md).
 
@@ -75,20 +75,20 @@ Impostazioni locali da usare.
 
 ## <a name="remarks"></a>Note
 
-Il **mbccpy** funzione copia un carattere multibyte da *src* al *dest*.
+La funzione **_mbccpy** copia un carattere multibyte da *src* a *dest*.
 
-Questa funzione convalida i relativi parametri. Se **mbccpy** viene passato un puntatore null per *dest* oppure *src*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL**.
+Questa funzione convalida i relativi parametri. Se a **_mbccpy** viene passato un puntatore null per *dest* o *src*, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL**.
 
-**mbccpy** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **mbccpy_l** è identica alla **mbccpy** ad eccezione del fatto che **mbccpy_l** Usa le impostazioni locali passate per qualsiasi comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_mbccpy** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **_mbccpy_l** è identico a **_mbccpy** ad eccezione del fatto che **_mbccpy_l** usa le impostazioni locali passate per qualsiasi comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-**Nota sulla sicurezza** Usare una stringa con terminazione Null. Le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns). I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata.
+**Nota sulla sicurezza** Usare una stringa con terminazione Null. Le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns). I problemi di sovraccarico del buffer sono usati spesso come metodo di attacco di sistema e provocano un'elevazione dei privilegi non autorizzata.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
 |Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tccpy**|Mapping a una macro o a una funzione inline|**_mbccpy**|Mapping a una macro o a una funzione inline|
-|**_tccpy_l**|N/D|**_mbccpy_l**|N/D|
+|**_tccpy_l**|n/d|**_mbccpy_l**|n/d|
 
 ## <a name="requirements"></a>Requisiti
 

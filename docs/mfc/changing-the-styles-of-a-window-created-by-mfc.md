@@ -21,65 +21,65 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ef79fc88604d565a942fdb0ae07d5fc5a2e0ebeb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344199"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509004"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Modifica degli stili di una finestra creata da MFC
 
-Nella sua versione del `WinMain` (funzione), MFC registra diverse classi di finestra standard per l'utente. Perché in genere non devono modificati di MFC `WinMain`, che la funzione non offre alcuna possibilità di modificare gli stili di finestra predefiniti MFC. Questo articolo illustra come è possibile modificare gli stili di tali classi preregistrato finestra in un'applicazione esistente.
+Nella versione della `WinMain` funzione MFC registra diverse classi di finestra standard. Poiché in genere non si modificano `WinMain`le classi di MFC, la funzione non consente di modificare gli stili predefiniti della finestra MFC. Questo articolo illustra come è possibile modificare gli stili di una classe di finestra preregistrata in un'applicazione esistente.
 
-##  <a name="_core_changing_styles_in_a_new_mfc_application"></a> Modifica degli stili in una nuova applicazione MFC
+##  <a name="_core_changing_styles_in_a_new_mfc_application"></a>Modifica degli stili in una nuova applicazione MFC
 
-Se si usa Visual C++ versione 2.0 o versioni successive, è possibile modificare gli stili di finestra predefiniti nella procedura guidata dell'applicazione quando si crea l'applicazione. Nella pagina di funzionalità dell'interfaccia utente della procedura guidata dell'applicazione, è possibile modificare gli stili per la finestra cornice principale e le finestre figlio MDI. Per entrambi i tipi finestra, è possibile specificare lo spessore del frame (completa o thin) e uno dei seguenti:
+Se si usa Visual C++ 2,0 o versione successiva, è possibile modificare gli stili predefiniti della finestra nella creazione guidata applicazione quando si crea l'applicazione. Nella pagina funzionalità interfaccia utente della creazione guidata applicazione è possibile modificare gli stili per la finestra cornice principale e le finestre figlio MDI. Per entrambi i tipi di finestra, è possibile specificare lo spessore del fotogramma (thick o thin) e uno degli elementi seguenti:
 
-- Indica se la finestra dispone di controlli di ingrandimento o riduzione a icona.
+- Indica se la finestra dispone di controlli Riduci a icona o Ingrandisci.
 
-- Se viene visualizzata la finestra inizialmente ridotto a icona, ingrandita, o nessuna delle due.
+- Indica se la finestra viene visualizzata inizialmente ridotta a icona, ingrandita o nessuna delle due.
 
-Per le finestre cornice principale, è anche possibile specificare se la finestra dispone di un Menu di sistema. Per le finestre figlio MDI, è possibile specificare se la finestra supporta dei riquadri di divisione.
+Per le finestre cornice principali, è inoltre possibile specificare se la finestra dispone di un menu di sistema. Per le finestre figlio MDI, è possibile specificare se la finestra supporta i riquadri con barra di divisione.
 
-##  <a name="_core_changing_styles_in_an_existing_application"></a> Modifica degli stili in un'applicazione esistente
+##  <a name="_core_changing_styles_in_an_existing_application"></a>Modifica degli stili in un'applicazione esistente
 
-Se si sta modificando gli attributi di finestra in un'applicazione esistente, seguire invece le istruzioni nella parte restante di questo articolo.
+Se si modificano gli attributi di finestra in un'applicazione esistente, seguire invece le istruzioni riportate nella parte restante di questo articolo.
 
-Per modificare gli attributi di finestra predefinito usati da un'applicazione creata con la creazione guidata applicazione, eseguire l'override della finestra [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) funzione membro virtuale. `PreCreateWindow` un'applicazione può accedere il processo di creazione in genere gestito internamente dal [CDocTemplate](../mfc/reference/cdoctemplate-class.md) classe. Il framework chiama `PreCreateWindow` appena prima della creazione della finestra. Modificando la [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) struttura passata al `PreCreateWindow`, l'applicazione può modificare gli attributi utilizzati per creare la finestra. Ad esempio, per garantire una finestra non viene utilizzata una didascalia, utilizzare la seguente operazione bit per bit:
+Per modificare gli attributi predefiniti della finestra utilizzati da un'applicazione Framework creata con la creazione guidata applicazione, eseguire l'override della funzione membro virtuale [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) della finestra. `PreCreateWindow`consente a un'applicazione di accedere al processo di creazione normalmente gestito internamente dalla classe [CDocTemplate](../mfc/reference/cdoctemplate-class.md) . Il Framework chiama `PreCreateWindow` immediatamente prima di creare la finestra. Modificando la struttura [struttura CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) passata a `PreCreateWindow`, l'applicazione può modificare gli attributi utilizzati per creare la finestra. Per assicurarsi, ad esempio, che una finestra non utilizzi una didascalia, utilizzare l'operazione bit per bit seguente:
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 
-Il [viene](../overview/visual-cpp-samples.md) applicazione di esempio illustra questa tecnica per la modifica degli attributi della finestra. A seconda della modifica all'applicazione nel `PreCreateWindow`, potrebbe essere necessario chiamare l'implementazione della classe base della funzione.
+L'applicazione di esempio [CTRLBARS](../overview/visual-cpp-samples.md) illustra questa tecnica per modificare gli attributi di finestra. A seconda delle modifiche apportate all' `PreCreateWindow`applicazione, potrebbe essere necessario chiamare l'implementazione della classe di base della funzione.
 
-La discussione seguente illustra il caso SDI e il [caso MDI](#_core_the_mdi_case).
+Nella discussione seguente vengono descritti i casi SDI e [MDI](#_core_the_mdi_case).
 
-##  <a name="_core_the_sdi_case"></a> Il caso SDI
+##  <a name="_core_the_sdi_case"></a>Il caso SDI
 
-In un'applicazione single document interface (SDI), lo stile di finestra predefinito in framework è una combinazione dei **WS_OVERLAPPEDWINDOW** e **FWS_ADDTOTITLE** stili. **FWS_ADDTOTITLE** è uno stile di MFC specifiche che indica al framework di aggiungere il titolo del documento per la didascalia della finestra. Per modificare gli attributi della finestra in un'applicazione SDI, eseguire l'override di `PreCreateWindow` funzione nella classe derivata da `CFrameWnd` (quali i nomi di creazione guidata applicazione `CMainFrame`). Ad esempio:
+In un'applicazione SDI (Single Document Interface), lo stile predefinito della finestra nel Framework è una combinazione degli stili **WS_OVERLAPPEDWINDOW** e **FWS_ADDTOTITLE** . **FWS_ADDTOTITLE** è uno stile specifico di MFC che indica al Framework di aggiungere il titolo del documento alla didascalia della finestra. Per modificare gli attributi della finestra in un'applicazione SDI, eseguire `PreCreateWindow` l'override della funzione nella classe `CFrameWnd` derivata da, che viene assegnata `CMainFrame`alla creazione guidata applicazione. Ad esempio:
 
 [!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]
 
-Questo codice crea una finestra cornice principale senza i pulsanti Riduci a icona e Ingrandisci né un bordo ridimensionabile. La finestra è centrata inizialmente sullo schermo.
+Questo codice crea una finestra cornice principale senza Riduci a icona e Ingrandisci pulsanti senza un bordo ridimensionabile. La finestra viene inizialmente centrata sullo schermo.
 
-##  <a name="_core_the_mdi_case"></a> Nel caso MDI
+##  <a name="_core_the_mdi_case"></a>Il caso MDI
 
-È necessario più lavoro per modificare lo stile della finestra di una finestra figlio in un'applicazione (MDI) interfaccia a documenti multipli. Per impostazione predefinita, un'applicazione MDI creata con la creazione guidata applicazioni utilizza il valore predefinito [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) classe definita in MFC. Per modificare lo stile della finestra di una finestra figlio MDI, è necessario derivare una nuova classe da `CMDIChildWnd` e sostituire tutti i riferimenti a `CMDIChildWnd` nel progetto con riferimenti alla nuova classe. Molto probabilmente, l'unico riferimento a `CMDIChildWnd` nell'applicazione si trova all'interno dell'applicazione `InitInstance` funzione membro.
+Per modificare lo stile della finestra di una finestra figlio in un'applicazione con interfaccia a documenti multipli (MDI), è necessario un po' di lavoro. Per impostazione predefinita, un'applicazione MDI creata con la creazione guidata applicazione utilizza la classe [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) predefinita definita in MFC. Per modificare lo stile della finestra di una finestra figlio MDI, è necessario derivare una nuova `CMDIChildWnd` classe da e sostituire tutti `CMDIChildWnd` i riferimenti a nel progetto con riferimenti alla nuova classe. Probabilmente, l'unico riferimento a `CMDIChildWnd` nell'applicazione si trova nella funzione `InitInstance` membro dell'applicazione.
 
-Lo stile di finestra predefinito usato in un'applicazione MDI è una combinazione dei **WS_CHILD**, **WS_OVERLAPPEDWINDOW**, e **FWS_ADDTOTITLE** stili. Per modificare gli attributi della finestra di finestre figlio di un'applicazione MDI, eseguire l'override di [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) funzione nella classe derivata da `CMDIChildWnd`. Ad esempio:
+Lo stile predefinito della finestra utilizzato in un'applicazione MDI è costituito da una combinazione degli stili **WS_CHILD**, **WS_OVERLAPPEDWINDOW**e **FWS_ADDTOTITLE** . Per modificare gli attributi delle finestre figlio di un'applicazione MDI, eseguire l'override della funzione [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) nella classe derivata da `CMDIChildWnd`. Ad esempio:
 
 [!code-cpp[NVC_MFCDocView#16](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_3.cpp)]
 
-Questo codice crea figlio MDI windows senza un pulsante di ingrandimento.
+Questo codice crea finestre figlio MDI senza pulsante Ingrandisci.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+### <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Stili di Windows](../mfc/reference/styles-used-by-mfc.md#window-styles)
 
-- [Stili frame-window](../mfc/frame-window-styles-cpp.md)
+- [Stili della finestra cornice](../mfc/frame-window-styles-cpp.md)
 
-- [Stili finestra](/windows/desktop/winmsg/window-styles)
+- [Stili finestra](/windows/win32/winmsg/window-styles)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Stili frame-Window](../mfc/frame-window-styles-cpp.md)
+[Stili della finestra cornice](../mfc/frame-window-styles-cpp.md)

@@ -40,14 +40,14 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 29fa8fc836b1b52bcf66247b3f6aaba47b8c2eaa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e8e11182948e9bccf1c55685cc7c3d55ff697c8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284870"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500772"
 ---
-# <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
+# <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam, _wtempnam, tmpnam, _wtmpnam
 
 Genera i nomi che è possibile usare per creare file temporanei. Sono disponibili versioni più sicure di alcune di queste funzioni. Vedere [tmpnam_s, _wtmpnam_s](tmpnam-s-wtmpnam-s.md).
 
@@ -73,7 +73,7 @@ wchar_t *_wtmpnam(
 ### <a name="parameters"></a>Parametri
 
 *prefix*<br/>
-La stringa che verrà anteposto ai nomi restituiti da **tempnam**.
+Stringa che verrà pre-sospesa ai nomi restituiti da **_tempnam**.
 
 *dir*<br/>
 Percorso usato nel nome del file se non è presente alcuna variabile di ambiente TMP o se TMP non è una directory valida.
@@ -83,30 +83,30 @@ Puntatore che conterrà il nome generato e sarà identico a quello restituito da
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore al nome generato o **NULL** se si verifica un errore. Può verificarsi un errore se si tenta di superare **TMP_MAX** (vedere STDIO. H) chiamate con **tmpnam** oppure se si utilizza **tempnam** ed è presente un nome di directory non valido specificato nella variabile di ambiente TMP e nel *dir* parametro.
+Ognuna di queste funzioni restituisce un puntatore al nome generato o **null** se si verifica un errore. È possibile che si verifichi un errore se si tenta di eseguire più di **TMP_MAX** (vedere STDIO. H) chiama con **tmpnam** o se si usa **_tempnam** ed è stato specificato un nome di directory non valido nella variabile di ambiente TMP e nel parametro *dir* .
 
 > [!NOTE]
-> I puntatori restituiti da **tmpnam** e **wtmpnam** puntare a buffer statici interni. Non chiamare [free](free.md) per deallocare questi puntatori. **libera** deve essere chiamato per puntatori allocati da **tempnam** e **wtempnam**.
+> I puntatori restituiti da **tmpnam** e **_wtmpnam** puntano a buffer statici interni. Non chiamare [free](free.md) per deallocare questi puntatori. è necessario chiamare **Free** per i puntatori allocati da **_tempnam** e **_wtempnam**.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni restituisce il nome di un file che non esiste. **tmpnam** restituisce un nome univoco nella directory temporanea designata di Windows restituita da [GetTempPathW](/windows/desktop/api/fileapi/nf-fileapi-gettemppathw). **\_tempnam** genera un nome univoco in una directory diversa da quella designata. Tenere presente che quando un nome di file è preceduto da una barra rovesciata senza informazioni sul percorso, ad esempio \nomef21, significa che il nome è valido per la directory di lavoro corrente.
+Ognuna di queste funzioni restituisce il nome di un file che non esiste. **tmpnam** restituisce un nome univoco nella directory temporanea di Windows designata restituita da [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). tempnam genera un nome univoco in una directory diversa da quella designata.  **\_** Tenere presente che quando un nome di file è preceduto da una barra rovesciata senza informazioni sul percorso, ad esempio \nomef21, significa che il nome è valido per la directory di lavoro corrente.
 
-Per la **tmpnam**, è possibile archiviare questo nome file generato nella *str*. Se *str* viene **NULL**, quindi **tmpnam** lascia il risultato in un buffer interno statico. Le eventuali chiamate successive eliminano quindi questo valore. Il nome generato da **tmpnam** è costituito da un nome file generato dal programma e, dopo la prima chiamata a **tmpnam**, un'estensione di file di numeri sequenziali in base 32 (.1-. vvu, quando **TMP_MAX**  in STDIO. H è 32.767).
+Per **tmpnam**, è possibile archiviare questo nome file generato in *Str*. Se *Str* è **null**, **tmpnam** lascia il risultato in un buffer statico interno. Le eventuali chiamate successive eliminano quindi questo valore. Il nome generato da **tmpnam** è costituito da un nome di file generato dal programma e, dopo la prima chiamata a **tmpnam**, un'estensione di file di numeri sequenziali in base 32 (. 1-3. vvu, quando **TMP_MAX** in stdio. H è 32.767).
 
-**tempnam** genererà un nome file univoco per una directory scelto in base alle regole seguenti:
+**_tempnam** genererà un nome file univoco per una directory scelta dalle regole seguenti:
 
 - Se la variabile di ambiente TMP è definita e impostata su un nome di directory valido, verranno generati nomi di file univoci per la directory specificata da TMP.
 
-- Se la variabile di ambiente TMP non è definita o se è impostata sul nome di una directory che non esiste, **tempnam** utilizzerà il *dir* parametro come il percorso per il quale genererà i nomi univoci.
+- Se la variabile di ambiente TMP non è definita o se è impostata sul nome di una directory che non esiste, **_tempnam** utilizzerà il parametro *dir* come percorso per il quale genererà nomi univoci.
 
-- Se la variabile di ambiente TMP non è definita o se è impostato sul nome di una directory che non esiste e se *dir* può essere **NULL** o impostato sul nome di una directory che non esiste, **_ tempnam** userà la directory di lavoro corrente per generare nomi univoci. Attualmente, se sia TMP e *dir* specificare i nomi delle directory che non esistono, il **tempnam** chiamata di funzione avrà esito negativo.
+- Se la variabile di ambiente TMP non è definita o se è impostata sul nome di una directory che non esiste e se *dir* è **null** o è impostata sul nome di una directory che non esiste, **_tempnam** utilizzerà la directory di lavoro corrente per il gene valuta nomi univoci. Attualmente, se TMP e *dir* specificano i nomi delle directory che non esistono, la chiamata alla funzione **_tempnam** avrà esito negativo.
 
-Il nome restituito da **tempnam** sarà una concatenazione del *prefisso* e un numero sequenza, che verrà combinati per creare un nome file univoco per la directory specificata. **tempnam** genera nomi di file senza estensione. **tempnam** viene utilizzato [malloc](malloc.md) per allocare spazio per il nome del file; il programma è responsabile della liberazione questo spazio quando non è più necessario.
+Il nome restituito da **_tempnam** sarà una concatenazione di *prefisso* e un numero sequenziale, che verrà combinato per creare un nome file univoco per la directory specificata. **_tempnam** genera nomi di file senza estensione. **_tempnam** USA [malloc](malloc.md) per allocare spazio per il nome file; il programma è responsabile di liberare questo spazio quando non è più necessario.
 
-**tempnam** e **tmpnam** automaticamente handle argomenti stringa di caratteri multibyte come appropriato, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici OEM ottengono dal sistema operativo. **wtempnam** è una versione a caratteri wide di **tempnam**; gli argomenti e il valore restituito **wtempnam** sono stringhe a caratteri wide. **wtempnam** e **tempnam** si comportano in modo identico con la differenza che **wtempnam** non gestisce le stringhe di caratteri multibyte. **wtmpnam** è una versione a caratteri wide di **tmpnam**; l'argomento e il valore restituito **wtmpnam** sono stringhe a caratteri wide. **wtmpnam** e **tmpnam** si comportano in modo identico con la differenza che **wtmpnam** non gestisce le stringhe di caratteri multibyte.
+**_tempnam** e **tmpnam** gestiscono automaticamente gli argomenti stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici OEM ottenuta dal sistema operativo. **_wtempnam** è una versione a caratteri wide di **_tempnam**; gli argomenti e il valore restituito di **_wtempnam** sono stringhe a caratteri wide. **_wtempnam** e **_tempnam** si comportano in modo identico, ad eccezione del fatto che **_wtempnam** non gestisce le stringhe di caratteri multibyte. **_wtmpnam** è una versione a caratteri wide di **tmpnam**; l'argomento e il valore restituito di **_wtmpnam** sono stringhe a caratteri wide. **_wtmpnam** e **tmpnam** si comportano in modo identico, ad eccezione del fatto che **_wtmpnam** non gestisce le stringhe di caratteri multibyte.
 
-Se **debug** e **CRTDBG_MAP_ALLOC** vengono definiti **tempnam** e **wtempnam** vengono sostituite da chiamate agli [tempnam DBG e wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md).
+Se _ **debug** e **_CRTDBG_MAP_ALLOC** sono definiti, **_tempnam** e **_wtempnam** vengono sostituiti dalle chiamate a [_tempnam_dbg e _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

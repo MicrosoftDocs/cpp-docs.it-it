@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182938"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500515"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 
 Rappresenta una matrice unidimensionale usata come parametro di input quando il chiamante passa una matrice che verrà riempita dal metodo.
 
-Questa classe di riferimento viene dichiarata come privata in vccorlib.h, di conseguenza non viene generata nei metadati ed è supportata solo da C++. Questa classe è destinata a essere usata solo come parametro di input che riceve una matrice allocata dal chiamante. Non può essere costruita dal codice utente. Consente al metodo C++ di scrivere direttamente in una matrice, un modello noto come *FillArray* . Per altre informazioni, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Questa classe di riferimento viene dichiarata come privata in vccorlib.h, di conseguenza non viene generata nei metadati ed è supportata solo da C++. Questa classe è destinata a essere usata solo come parametro di input che riceve una matrice allocata dal chiamante. Non può essere costruita dal codice utente. Consente al metodo C++ di scrivere direttamente in una matrice, un modello noto come *FillArray* . Per ulteriori informazioni, vedere [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -31,13 +31,13 @@ Questa classe di riferimento viene dichiarata come privata in vccorlib.h, di con
 private ref class WriteOnlyArray<T, 1>
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 Questi metodi presentano accessibilità interna, ovvero sono accessibili solo all'interno dell'app o del componente C++.
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[WriteOnlyArray::begin](#begin)|Iteratore che punta al primo elemento della matrice|
 |[WriteOnlyArray::Data](#data)|Puntatore al buffer di dati.|
@@ -54,7 +54,7 @@ Questi metodi presentano accessibilità interna, ovvero sono accessibili solo al
 
 Opzione del compilatore: **/ZW**
 
-**Metadata:** Platform.winmd
+**Metadati** Platform.winmd
 
 **Spazio dei nomi:** Piattaforma
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 Valore booleano che indica se la matrice è FastPass.
 
-## <a name="get"></a>  Metodo writeonlyarray:: Get
+## <a name="get"></a>Metodo WriteOnlyArray:: Get
 
 Restituisce l'elemento in corrispondenza dell'indice specificato.
 
@@ -139,7 +139,7 @@ T& get(unsigned int indexArg) const;
 ### <a name="parameters"></a>Parametri
 
 *indexArg*<br/>
-L'indice da utilizzare.
+Indice da utilizzare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -185,9 +185,9 @@ Riferimento all'elemento appena impostato.
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni su come interpretare il valore HRESULT, vedere [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes).
+Per ulteriori informazioni su come interpretare il valore HRESULT, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="see-also"></a>Vedere anche
 
-[Platform Namespace](platform-namespace-c-cx.md)<br/>
+[Spazio dei nomi Platform](platform-namespace-c-cx.md)<br/>
 [Creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

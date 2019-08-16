@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e36867bb8237c549fd250be88a99244766920ba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335477"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500281"
 ---
-# <a name="chdrive"></a>_chdrive
+# <a name="_chdrive"></a>_chdrive
 
 Modifica l'unità di lavoro corrente.
 
@@ -57,9 +57,9 @@ Zero (0) se l'unità di lavoro corrente è stata modificata correttamente, in ca
 
 ## <a name="remarks"></a>Note
 
-Se *unità* è non compresa nell'intervallo da 1a 26, viene richiamato il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la **ChDrive** funzione restituisce -1, **errno** è impostata su **EACCES**, e **doserrno** è impostato su  **ERROR_INVALID_DRIVE**.
+Se l' *unità* non è compresa nell'intervallo da 1 a 26, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione **_chdrive** restituisce-1, **errno** viene impostato su **EACCES**e **doserrno** è impostato su **ERROR_INVALID_DRIVE**.
 
-La funzione **_chdrive** non è thread-safe poiché dipende dalla funzione **SetCurrentDirectory** che non è a sua volta thread-safe. Per usare **_chdrive** in modo sicuro in un'applicazione multithread, è necessario includere la propria sincronizzazione dei thread. Per altre informazioni, vedere [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory).
+La funzione **_chdrive** non è thread-safe poiché dipende dalla funzione **SetCurrentDirectory** che non è a sua volta thread-safe. Per usare **_chdrive** in modo sicuro in un'applicazione multithread, è necessario includere la propria sincronizzazione dei thread. Per ulteriori informazioni, vedere [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
 La funzione **_chdrive** modifica solo l'unità di lavoro corrente. **_chdir** modifica la directory di lavoro corrente.
 

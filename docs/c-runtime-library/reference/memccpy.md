@@ -22,14 +22,14 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 704aab84ea3e39c91def1d4ac8b6d2d9d3650759
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156603"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499694"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
 Copia caratteri da un buffer.
 
@@ -60,13 +60,13 @@ Numero di caratteri.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se il carattere *c* viene copiato **memccpy** restituisce un puntatore al carattere in *dest* che seguono immediatamente il carattere. Se *c* non viene copiato, restituisce **NULL**.
+Se il carattere *c* viene copiato, **_memccpy** restituisce un puntatore a char in *dest* che segue immediatamente il carattere. Se *c* non viene copiato, viene restituito **null**.
 
 ## <a name="remarks"></a>Note
 
-Il **memccpy** funzione Copia 0 o più caratteri della *src* al *dest*, interrompe dopo il carattere *c* è stato copiato o quando *conteggio* caratteri sono stati copiati, a seconda del valore raggiunto per primo.
+La funzione **_memccpy** copia 0 o più caratteri di *src* in *dest*, che si interrompe quando il carattere *c* è stato copiato o quando sono stati copiati i caratteri di *conteggio* , a seconda di quale si verifica per primo.
 
-**Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o più grande del buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Nota sulla sicurezza** Assicurarsi che il buffer di destinazione sia della stessa dimensione o più grande del buffer di origine. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Requisiti
 

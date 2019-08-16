@@ -1,37 +1,37 @@
 ---
-title: Personalizzare l'elemento dell'intestazione&#39;aspetto
+title: Personalizzazione dell'aspetto dell'elemento&#39;di intestazione
 ms.date: 11/04/2016
 helpviewer_keywords:
 - header controls [MFC], customization of items
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-ms.openlocfilehash: 081260bd5c1cf6335d398a4fd773c9590dbc8030
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ce676695d717fcc5d418fe4ed5df91b4f9bca95
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241583"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508714"
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>Personalizzare l'elemento dell'intestazione&#39;aspetto
+# <a name="customizing-the-header-item39s-appearance"></a>Personalizzazione dell'aspetto dell'elemento&#39;di intestazione
 
-Impostando il *dwStyle* parametro quando si crea un controllo header ([CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create)), è possibile definire l'aspetto e comportamento dell'intestazione di elementi o dell'intestazione del controllo stesso.
+Impostando il parametro *dwStyle* quando si crea per la prima volta un controllo Header ([CHeaderCtrl:: create](../mfc/reference/cheaderctrl-class.md#create)), è possibile definire l'aspetto e il comportamento degli elementi di intestazione o del controllo intestazione stesso.
 
-Di seguito sono riportati gli stili che è possibile impostare e il loro scopo:
+Ecco un campionamento degli stili che è possibile impostare e il loro scopo:
 
-- Per rendere un elemento di intestazione l'aspetto di un pulsante di comando, usare il **HDS_BUTTONS** stile.
+- Per creare un elemento di intestazione simile a un pulsante, usare lo stile **HDS_BUTTONS** .
 
-   Usare questo stile se si desidera eseguire azioni in risposta ai clic del mouse su un elemento di intestazione, ad esempio l'ordinamento dei dati da una determinata colonna, come accade in Microsoft Outlook.
+   Utilizzare questo stile se si desidera eseguire azioni in risposta ai clic del mouse su un elemento di intestazione, ad esempio l'ordinamento di dati in base a una determinata colonna, come avviene in Microsoft Outlook.
 
-- Per assegnare agli elementi dell'intestazione di un aspetto "hot track" quando il cursore del mouse passa su di essi, usare il **HDS_HOTTRACK** stile.
+- Per assegnare agli elementi dell'intestazione un aspetto di "rilevamento a caldo" al passaggio del cursore del mouse, utilizzare lo stile **HDS_HOTTRACK** .
 
-   La funzionalità di intercettazione consente di visualizzare un bordo 3D il puntatore è posizionato su un elemento in un semplice in caso contrario, a barre.
+   Il rilevamento a caldo Visualizza un contorno 3D quando il puntatore passa su un elemento in una barra altrimenti piatta.
 
-- Per indicare che il controllo intestazione deve essere nascosto, usare il **HDS_HIDDEN** stile.
+- Per indicare che il controllo intestazione deve essere nascosto, utilizzare lo stile **HDS_HIDDEN** .
 
-   Il **HDS_HIDDEN** stile indica che il controllo intestazione deve essere utilizzato come un contenitore di dati e non un controllo visivo. Questo stile non nasconde automaticamente il controllo ma, invece, influisce sul comportamento di `CHeaderCtrl::Layout`. Il valore restituito nel *cy* membro del `WINDOWPOS` struttura sarà zero che indica che il controllo non deve essere visibile all'utente.
+   Lo stile **HDS_HIDDEN** indica che il controllo intestazione deve essere utilizzato come contenitore di dati e non come controllo visivo. Questo stile non nasconde automaticamente il controllo, ma influiscono sul comportamento di `CHeaderCtrl::Layout`. Il valore restituito nel membro *CY* della `WINDOWPOS` struttura sarà zero che indica che il controllo non deve essere visibile all'utente.
 
-Per altre informazioni su queste proprietà, vedere [elementi](/windows/desktop/Controls/header-controls) nel SDK di Windows. Per informazioni sull'aggiunta di elementi a un controllo intestazione, vedere [aggiunta di elementi al controllo Header](../mfc/adding-items-to-the-header-control.md).
+Per ulteriori informazioni su queste proprietà, vedere [Items](/windows/win32/Controls/header-controls) in the Windows SDK. Per informazioni sull'aggiunta di elementi a un controllo Header, vedere [aggiunta di elementi al controllo intestazione](../mfc/adding-items-to-the-header-control.md).
 
 ## <a name="see-also"></a>Vedere anche
 

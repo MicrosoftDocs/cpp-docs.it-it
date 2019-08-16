@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916694"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502433"
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
 
@@ -53,7 +53,7 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Costruisce un oggetto `CSpinButtonCtrl`.|
 
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametri
 
 *dwStyle*<br/>
-Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili di controllo pulsante di selezione al controllo. Questi stili sono descritti in [stili di controllo di scorrimento](/windows/desktop/Controls/up-down-control-styles) nel Windows SDK.
+Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili di controllo pulsante di selezione al controllo. Questi stili sono descritti in [stili di controllo di scorrimento](/windows/win32/Controls/up-down-control-styles) nel Windows SDK.
 
 *rect*<br/>
 Specifica la posizione e le dimensioni del controllo pulsante di selezione. Può essere un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) o una struttura [Rect](/previous-versions/dd162897\(v=vs.85\))
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametri
 
 *dwExStyle*<br/>
-Specifica lo stile esteso del controllo da creare. Per un elenco degli stili Windows estesi, vedere il parametro *dwExStyle* per [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) nel Windows SDK.
+Specifica lo stile esteso del controllo da creare. Per un elenco degli stili Windows estesi, vedere il parametro *dwExStyle* per [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) nel Windows SDK.
 
 *dwStyle*<br/>
-Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili di controllo pulsante di selezione al controllo. Questi stili sono descritti in [stili di controllo di scorrimento](/windows/desktop/Controls/up-down-control-styles) nel Windows SDK.
+Specifica lo stile del controllo pulsante di selezione. Applicare qualsiasi combinazione di stili di controllo pulsante di selezione al controllo. Questi stili sono descritti in [stili di controllo di scorrimento](/windows/win32/Controls/up-down-control-styles) nel Windows SDK.
 
 *rect*<br/>
 Riferimento a una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) che descrive le dimensioni e la posizione della finestra da creare, nelle coordinate client di *pParentWnd*.
@@ -200,7 +200,7 @@ UINT GetAccel(
 Numero di elementi nella matrice specificata da *pAccel*.
 
 *pAccel*<br/>
-Puntatore a una matrice di strutture [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) che riceve informazioni di accelerazione.
+Puntatore a una matrice di strutture [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) che riceve informazioni di accelerazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>Parametri
 
 *nAccel*<br/>
-Numero di strutture [UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel) specificate da *pAccel*.
+Numero di strutture [UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel) specificate da *pAccel*.
 
 *pAccel*<br/>
 Puntatore a una matrice di strutture UDACCEL, che contengono informazioni sull'accelerazione. Gli elementi devono essere ordinati in ordine crescente in base al `nSec` membro.

@@ -11,22 +11,22 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-ms.openlocfilehash: 67c7ea3e93b3158abc552c552c450c31c109be80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab688022c311f3d20fc092736ee4c7d37232a43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239193"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508088"
 ---
 # <a name="mfc-com"></a>MFC COM
 
-Un sottoinsieme di MFC è progettato per supportare COM, mentre la maggior parte della libreria ATL (Active Template) è progettata per la programmazione COM. Negli argomenti di questa sezione viene descritto il supporto di MFC per COM.
+Un subset di MFC è progettato per supportare COM, mentre la maggior parte dei Active Template Library (ATL) è progettata per la programmazione COM. In questa sezione degli argomenti viene descritto il supporto di MFC per COM.
 
-Tecnologie Active (ad esempio i controlli ActiveX, contenimento dei documenti attivi, OLE e così via) usano il modello COM (Component Object) per abilitare i componenti software interagire tra loro in un ambiente di rete, indipendentemente dal linguaggio con cui fossero creato. Tecnologie Active utilizzabile per creare applicazioni in esecuzione sul desktop o Internet. Per altre informazioni, vedere [Introduzione a COM](../atl/introduction-to-com.md) oppure [The Component Object Model](/windows/desktop/com/the-component-object-model).
+Le tecnologie attive (ad esempio i controlli ActiveX, il contenimento dei documenti attivi, OLE e così via) utilizzano il Component Object Model (COM) per consentire ai componenti software di interagire tra loro in un ambiente di rete, indipendentemente dal linguaggio con cui sono stati creato. È possibile utilizzare le tecnologie attive per creare applicazioni in esecuzione sul desktop o su Internet. Per ulteriori informazioni, vedere [Introduzione a com](../atl/introduction-to-com.md) o [al Component Object Model](/windows/win32/com/the-component-object-model).
 
-Tecnologie Active includono le tecnologie di client e server, incluse le seguenti:
+Le tecnologie attive includono le tecnologie client e server, incluse le seguenti:
 
-- Controlli ActiveX sono interattivi oggetti utilizzabili in contenitori, ad esempio un sito Web. Per altre informazioni sui controlli ActiveX, vedere:
+- I controlli ActiveX sono oggetti interattivi che possono essere utilizzati in contenitori come un sito Web. Per ulteriori informazioni sui controlli ActiveX, vedere:
 
    - [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)
 
@@ -34,19 +34,19 @@ Tecnologie Active includono le tecnologie di client e server, incluse le seguent
 
    - [Panoramica: Internet](../mfc/mfc-internet-programming-basics.md)
 
-   - [Eseguire l'aggiornamento di un controllo ActiveX esistente da utilizzare in Internet](../mfc/upgrading-an-existing-activex-control.md)
+   - [Aggiornare un controllo ActiveX esistente da usare su Internet](../mfc/upgrading-an-existing-activex-control.md)
 
    - [Debug di un controllo ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
 
-- Esecuzione script attivo controlla il comportamento integrato di uno o più controlli ActiveX in un browser o un server. Per altre informazioni sulla creazione di script attivo, vedere [tecnologia Active in Internet](../mfc/active-technology-on-the-internet.md).
+- Lo scripting attivo controlla il comportamento integrato di uno o più controlli ActiveX da un browser o un server. Per ulteriori informazioni sullo scripting attivo, vedere la pagina relativa alla [tecnologia attiva su Internet](../mfc/active-technology-on-the-internet.md).
 
-- [Automazione](../mfc/automation.md) (precedentemente noto come automazione OLE) rende possibile per un'applicazione possa modificare oggetti implementati in un'altra applicazione o "esporli" in modo che possano essere modificati.
+- [Automazione](../mfc/automation.md) di (precedentemente noto come automazione OLE) consente a un'applicazione di modificare gli oggetti implementati in un'altra applicazione o di "esporre" oggetti in modo che possano essere modificati.
 
    L'oggetto automatizzato potrebbe essere locale o remoto (in un altro computer accessibile attraverso una rete). L'automazione è disponibile sia per gli oggetti OLE che per gli oggetti COM.
 
-- Questa sezione vengono fornite informazioni su come scrivere i componenti COM utilizza MFC, ad esempio, nella [punti di connessione](../mfc/connection-points.md).
+- In questa sezione vengono inoltre fornite informazioni su come scrivere componenti COM utilizzando MFC, ad esempio, nei [punti di connessione](../mfc/connection-points.md).
 
-Per una descrizione di ciò che viene chiamato comunque OLE rispetto a ciò che è ora denominata tecnologia active, vedere gli argomenti sul [OLE](../mfc/ole-in-mfc.md).
+Per informazioni su ciò che viene ancora chiamato OLE rispetto a quello che ora è denominato tecnologia Active, vedere gli argomenti su [OLE](../mfc/ole-in-mfc.md).
 
 ## <a name="in-this-section"></a>In questa sezione
 

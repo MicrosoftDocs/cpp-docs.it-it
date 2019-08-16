@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: baa3131a7ca533af30e9ed73cd2698c06011488e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344448"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509452"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedCompareExchange
+# <a name="_interlockedcompareexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedCompareExchange
 
 **Sezione specifica Microsoft**
 
-Un interlocked confronto e scambio.
+Esegue un confronto e uno scambio Interlocked.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -182,10 +182,10 @@ __int64 _InterlockedCompareExchange64_rel(
 [in, out] Puntatore al valore di destinazione. Il segno viene ignorato.
 
 *Exchange*<br/>
-[in] Valore Exchange. Il segno viene ignorato.
+in Valore di Exchange. Il segno viene ignorato.
 
-*Parametro comparand*<br/>
-[in] Valore da confrontare con la destinazione. Il segno viene ignorato.
+*Comparand*<br/>
+in Valore da confrontare con la destinazione. Il segno viene ignorato.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -202,15 +202,15 @@ Il valore restituito è il valore iniziale del puntatore `Destination`.
 
 ## <a name="remarks"></a>Note
 
-`_InterlockedCompareExchange` esegue un confronto atomico del `Destination` valore con il `Comparand` valore. Se il valore `Destination` è uguale al valore `Comparand`, il valore `Exchange` viene archiviato nell'indirizzo specificato da `Destination`. In caso contrario, non esegue alcuna operazione.
+`_InterlockedCompareExchange`esegue un confronto atomico del `Destination` valore con il `Comparand` valore. Se il valore `Destination` è uguale al valore `Comparand`, il valore `Exchange` viene archiviato nell'indirizzo specificato da `Destination`. In caso contrario, non esegue alcuna operazione.
 
-`_InterlockedCompareExchange` fornisce il supporto intrinseco del compilatore per il SDK di Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) (funzione).
+`_InterlockedCompareExchange`fornisce il supporto intrinseco del compilatore per la funzione Win32 Windows SDK [InterlockedCompareExchange](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange) .
 
-Sono disponibili diverse varianti in `_InterlockedCompareExchange` che variano in base a quanto comportano i tipi di dati e indica se acquisire specifico del processore o viene usata la semantica di rilascio.
+Esistono diverse varianti in che `_InterlockedCompareExchange` variano in base ai tipi di dati che coinvolgono e se vengono usate la semantica di acquisizione o di rilascio specifica del processore.
 
-Mentre il `_InterlockedCompareExchange` funzione opera su valori long integer `_InterlockedCompareExchange8` opera su valori integer a 8 bit, `_InterlockedCompareExchange16` opera su valori short integer, e `_InterlockedCompareExchange64` opera su valori integer a 64 bit.
+Mentre la `_InterlockedCompareExchange` funzione opera su valori Long Integer, `_InterlockedCompareExchange8` opera su valori integer a 8 bit, `_InterlockedCompareExchange16` opera su valori integer brevi e `_InterlockedCompareExchange64` opera su valori integer a 64 bit.
 
-Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM con un `_nf` suffisso ("Nessun limite") non fungono da barriera di memoria.
+Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM con `_nf` suffisso ("nessun limite") non fungono da barriera di memoria.
 
 Le funzioni intrinseche con suffisso `_np` ("nessuna prelettura") impediscono l'inserimento di una possibile operazione di prelettura da parte del compilatore.
 
@@ -220,9 +220,9 @@ Queste routine sono disponibili solo come funzioni intrinseche.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente, `_InterlockedCompareExchange` viene usato per la sincronizzazione semplice di thread di basso livello. L'approccio presenta alcune limitazioni come base per la programmazione multithreading; viene presentato per illustrare l'uso tipico delle funzioni intrinseche interlocked. Per ottenere risultati migliori, usare l'API Windows. Per altre informazioni sulla programmazione multithreading, vedere [scrittura di un programma multithread Win32](../parallel/writing-a-multithreaded-win32-program.md).
+Nell'esempio seguente, `_InterlockedCompareExchange` viene usato per la sincronizzazione semplice di thread di basso livello. L'approccio presenta le proprie limitazioni come base per la programmazione multithreading; viene presentato per illustrare l'uso tipico delle funzioni intrinseche Interlocked. Per ottenere risultati migliori, usare l'API Windows. Per ulteriori informazioni sulla programmazione multithreading, vedere [scrittura di un programma multithread Win32](../parallel/multithreading-with-c-and-win32.md#writing-a-multithreaded-win32-program).
 
-```
+```cpp
 // intrinExample.cpp
 // compile with: /EHsc /O2
 // Simple example of using _Interlocked* intrinsics to

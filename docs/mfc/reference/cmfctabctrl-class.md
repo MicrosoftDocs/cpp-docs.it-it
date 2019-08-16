@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821260"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504879"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -125,7 +125,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |`CMFCTabCtrl::CMFCTabCtrl`|Costruttore predefinito.|
 |`CMFCTabCtrl::~CMFCTabCtrl`|Distruttore.|
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|Chiamata eseguita dal framework quando il cursore viene trascinato per la prima volta nella finestra del controllo scheda.|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Chiamata eseguita dal Framework durante un'operazione di trascinamento quando il mouse viene spostato sulla finestra destinazione di rilascio. Esegue l'override di [CMFCBaseTabCtrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Visualizza un menu popup delle finestre a schede, attende fino a quando l'utente seleziona una scheda e rende la scheda selezionata la scheda attiva.|
-|`CMFCTabCtrl::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . Esegue l'override di [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).|
+|`CMFCTabCtrl::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Esegue l'override di [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).|
 |`CMFCTabCtrl::RecalcLayout`|Ricalcola il layout interno del controllo Struttura a schede. Esegue l'override di [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Imposta la scheda corrente di un controllo struttura a schede come scheda attiva in un gruppo di schede di interfaccia a documenti multipli.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Attiva una scheda. Esegue l'override di [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).|
@@ -336,7 +336,7 @@ TRUE se l'operazione ha esito positivo; in caso contrario, FALSE.
 
 Nella tabella seguente vengono descritti i valori che è possibile specificare per il parametro *Style* .
 
-|Style|Descrizione|
+|Style|DESCRIZIONE|
 |-----------|-----------------|
 |STYLE_3D|Crea un controllo struttura a schede con un aspetto tridimensionale.|
 |STYLE_FLAT|Crea un controllo struttura a schede con tabulazioni flat.|
@@ -846,7 +846,7 @@ Sempre TRUE.
 
 Il valore del parametro *Style* può essere una delle seguenti `CMFCTabCtrl::Style` enumerazioni.
 
-|Name|DESCRIZIONE|
+|Name|Descrizione|
 |----------|-----------------|
 |STYLE_3D|Visualizza le schede tridimensionali rettangolari con angoli arrotondati.|
 |STYLE_3D_ONENOTE|Visualizza le schede tridimensionali con un lato verticale e un lato inclinato e con angoli arrotondati.|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 in Punta a un oggetto dati che contiene i dati trascinati dall'utente.
 
 *dwKeyState*<br/>
-in Contiene lo stato dei tasti di modifica. Questo parametro è una combinazione bit per bit (o) dei valori seguenti: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per ulteriori informazioni, vedere la sezione **parametri messaggio** di [informazioni sull'input del mouse](/windows/desktop/inputdev/about-mouse-input).
+in Contiene lo stato dei tasti di modifica. Questo parametro è una combinazione bit per bit (o) dei valori seguenti: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per ulteriori informazioni, vedere la sezione **parametri messaggio** di [informazioni sull'input del mouse](/windows/win32/inputdev/about-mouse-input).
 
 *point*<br/>
 in Contiene la posizione corrente del cursore nelle coordinate del client.
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 in Puntatore a un oggetto [COleDataObject](../../mfc/reference/coledataobject-class.md) trascinato sulla destinazione di rilascio.
 
 *dwKeyState*<br/>
-in Stato dei tasti di modifica, ovvero una combinazione bit per bit (o) di MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per ulteriori informazioni, vedere la sezione relativa ai parametri del messaggio in [informazioni sull'input del mouse](/windows/desktop/inputdev/about-mouse-input).
+in Stato dei tasti di modifica, ovvero una combinazione bit per bit (o) di MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Per ulteriori informazioni, vedere la sezione relativa ai parametri del messaggio in [informazioni sull'input del mouse](/windows/win32/inputdev/about-mouse-input).
 
 *point*<br/>
 in Posizione corrente del mouse.
@@ -1078,7 +1078,7 @@ in Uno dei valori `CMFCTabCtrl::ResizeMode` di enumerazione che specifica il mod
 
 Il parametro *ResizeMode* può essere uno dei seguenti `ResizeMode` valori di enumerazione.
 
-|Name|Descrizione|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |RESIZE_NO|Impossibile ridimensionare il controllo struttura a schede.|
 |RESIZE_VERT|Il controllo struttura a schede può essere ridimensionato verticalmente, ma non orizzontalmente.|

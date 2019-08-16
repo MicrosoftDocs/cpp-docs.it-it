@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-ms.openlocfilehash: 62e33da998f1e5332436d887c38d3fd65526561b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4be584135ef789d7fbe3b1743ac0ad6ce66ac5b1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310489"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505035"
 ---
 # <a name="cmfcpropertypage-class"></a>Classe CMFCPropertyPage
 
-Il `CMFCPropertyPage` classe supporta la visualizzazione del menu di scelta rapida nella pagina delle proprietà.
+La `CMFCPropertyPage` classe supporta la visualizzazione dei menu popup in una pagina delle proprietà.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,7 +25,7 @@ Il `CMFCPropertyPage` classe supporta la visualizzazione del menu di scelta rapi
 class CMFCPropertyPage : public CPropertyPage
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -39,15 +39,15 @@ class CMFCPropertyPage : public CPropertyPage
 |Nome|Descrizione|
 |----------|-----------------|
 |`CMFCPropertyPage::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|
-|`CMFCPropertyPage::GetThisClass`|Utilizzato dal framework per ottenere un puntatore per il [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) oggetto associato a questo tipo di classe.|
-|`CMFCPropertyPage::OnSetActive`|Questa funzione membro viene chiamata dal framework quando la pagina viene scelto dall'utente e diventa la pagina attiva. (Esegue l'override [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|
-|`CMFCPropertyPage::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funzioni di Windows. Per altre informazioni e la sintassi del metodo, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override di `CPropertyPage::PreTranslateMessage`.|
+|`CMFCPropertyPage::GetThisClass`|Utilizzato dal Framework per ottenere un puntatore all'oggetto [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associato a questo tipo di classe.|
+|`CMFCPropertyPage::OnSetActive`|Questa funzione membro viene chiamata dal framework quando la pagina viene scelta dall'utente e diventa la pagina attiva. Esegue l'override di [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).|
+|`CMFCPropertyPage::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Per ulteriori informazioni e la sintassi del metodo, vedere [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override di `CPropertyPage::PreTranslateMessage`.|
 
 ## <a name="remarks"></a>Note
 
-Il `CMFCPropertyPage` classe rappresenta singole pagine della finestra delle proprietà, noto anche come finestra di dialogo a schede.
+La `CMFCPropertyPage` classe rappresenta le singole pagine di una finestra delle proprietà, altrimenti nota come finestra di dialogo di tabulazione.
 
-Usare la `CMFCPropertyPage` classe insieme con il [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) classe. Per usare i menu nella pagina delle proprietà, sostituire tutte le occorrenze del `CPropertyPage` classe con il `CMFCPropertyPage` classe.
+Usare la `CMFCPropertyPage` classe insieme alla classe [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) . Per utilizzare i menu in una pagina delle proprietà, sostituire tutte le occorrenze `CPropertyPage` della classe con `CMFCPropertyPage` la classe.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -65,9 +65,9 @@ Usare la `CMFCPropertyPage` classe insieme con il [CMFCPropertySheet](../../mfc/
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxpropertypage.h
+**Intestazione:** afxpropertypage. h
 
-##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage
+##  <a name="cmfcpropertypage"></a>CMFCPropertyPage:: CMFCPropertyPage
 
 Costruisce un oggetto `CMFCPropertyPage`.
 
@@ -96,7 +96,7 @@ Punta al nome del modello per questa pagina. Non può essere NULL.
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni sui parametri del costruttore, vedere [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
+Per ulteriori informazioni sui parametri del costruttore, vedere [CPropertyPage:: CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
 
 ## <a name="see-also"></a>Vedere anche
 

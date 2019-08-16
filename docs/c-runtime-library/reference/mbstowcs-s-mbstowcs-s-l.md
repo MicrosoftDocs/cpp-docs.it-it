@@ -26,14 +26,14 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 18af20b5722364ea306daebdcb77f5771d8ea2b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a1c29118c48bbbb5358e7d7ea57296f7ec908a8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331157"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499763"
 ---
-# <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
+# <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
 Converte una sequenza di caratteri multibyte in una sequenza di caratteri wide corrispondente. Versioni di [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -81,13 +81,13 @@ Numero di caratteri convertiti.
 Indirizzo del buffer per la stringa di caratteri wide convertita risultante.
 
 *sizeInWords*<br/>
-Le dimensioni dei *wcstr* buffer in parole.
+Dimensioni del buffer *wcstr* in parole.
 
 *mbstr*<br/>
 Indirizzo di una sequenza di caratteri multibyte con terminazione Null.
 
 *count*<br/>
-Il numero massimo di caratteri wide da archiviare nel *wcstr* buffer, escluso il carattere null oppure [truncate](../../c-runtime-library/truncate.md).
+Numero massimo di caratteri wide da archiviare nel buffer *wcstr* , escluso il carattere null di terminazione, o [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 Impostazioni locali da usare.
@@ -98,37 +98,37 @@ Zero in caso di esito positivo, un codice di errore in caso di esito negativo.
 
 |Condizione di errore|Valore restituito e **errno**|
 |---------------------|------------------------------|
-|*wcstr* viene **NULL** e *sizeInWords* > 0|**EINVAL**|
-|*mbstr* è **NULL**|**EINVAL**|
-|Il buffer di destinazione è troppo piccolo per contenere la stringa convertita (a meno che *conteggio* viene **truncate**; vedere la sezione Osservazioni riportata di seguito)|**ERANGE**|
-|*wcstr* non è **NULL** e *sizeInWords* = = 0|**EINVAL**|
+|*wcstr* è **NULL** e *sizeInWords* > 0|**EINVAL**|
+|*mbstr* è **null**|**EINVAL**|
+|Il buffer di destinazione è troppo piccolo per contenere la stringa convertita, a meno che il *numero* non sia **_TRUNCATE**. vedere la sezione Osservazioni di seguito.|**ERANGE**|
+|*wcstr* non è **null** e *sizeInWords* = = 0|**EINVAL**|
 
 Se si verifica una di queste condizioni, viene richiamata l'eccezione di parametro non valido come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce un codice di errore e imposta **errno** come indicato nella tabella.
 
 ## <a name="remarks"></a>Note
 
-Il **mbstowcs_s** funzione converte una stringa di caratteri multibyte a cui punta *mbstr* in caratteri wide archiviati nel buffer a cui fa riferimento *wcstr*. La conversione continuerà per ogni carattere fino a quando non viene soddisfatta una delle seguenti condizioni:
+La funzione **mbstowcs_s** converte una stringa di caratteri multibyte a cui punta *mbstr* in caratteri wide archiviati nel buffer a cui punta *wcstr*. La conversione continuerà per ogni carattere fino a quando non viene soddisfatta una delle seguenti condizioni:
 
 - Viene rilevato un carattere Null multibyte
 
 - Viene rilevato un carattere multibyte non valido
 
-- Il numero di caratteri "wide" archiviati nel *wcstr* uguale a un buffer *conteggio*.
+- Il numero di caratteri wide archiviati nel buffer *wcstr* è uguale a *count*.
 
 La stringa di destinazione termina sempre con Null, anche in caso di errore.
 
-Se *conteggio* è il valore speciale [truncate](../../c-runtime-library/truncate.md), quindi **mbstowcs_s** Converte la porzione di stringa rientrano nel buffer di destinazione, lasciando però spazio per un valore null carattere di terminazione.
+Se *count* è il valore speciale [_TRUNCATE](../../c-runtime-library/truncate.md), **mbstowcs_s** converte la maggior parte della stringa che rientrerà nel buffer di destinazione, lasciando però spazio per un carattere di terminazione null.
 
-Se **mbstowcs_s** converte correttamente la stringa di origine, inserisce la dimensione in caratteri wide della stringa convertita, incluso il carattere di terminazione null, nel  *&#42;pReturnValue* (fornito *pReturnValue* non è **NULL**). Questo errore si verifica anche se il *wcstr* l'argomento è **NULL** e fornisce un modo per determinare le dimensioni del buffer richieste. Si noti che se *wcstr* viene **NULL**, *count* viene ignorato, e *sizeInWords* deve essere 0.
+Se **mbstowcs_s** converte correttamente la stringa di origine, inserisce la dimensione in caratteri wide della stringa convertita, incluso il terminatore null, in  *&#42;pReturnValue* ( *pReturnValue* specificato non è **null**). Ciò si verifica anche se l'argomento *wcstr* è **null** e fornisce un modo per determinare le dimensioni del buffer richieste. Si noti che se *wcstr* è **null**, *count* viene ignorato e *sizeInWords* deve essere 0.
 
-Se **mbstowcs_s** rileva un carattere multibyte non valido, inserisce 0 in  *&#42;pReturnValue*, imposta il buffer di destinazione in una stringa vuota, imposta **errno** a  **EILSEQ**e restituisce **EILSEQ**.
+Se **mbstowcs_s** rileva un carattere multibyte non valido, inserisce 0 in  *&#42;pReturnValue*, imposta il buffer di destinazione su una stringa vuota, imposta **errno** su **EILSEQ**e restituisce **EILSEQ**.
 
-Se le sequenze a cui punta *mbstr* e *wcstr* si sovrappongono, il comportamento delle **mbstowcs_s** è definito.
+Se le sequenze a cui puntano *mbstr* e *wcstr* si sovrappongono, il comportamento di **mbstowcs_s** non è definito.
 
 > [!IMPORTANT]
-> Assicurarsi che *wcstr* e *mbstr* non si sovrappongano e che *conteggio* rispecchi correttamente il numero di caratteri multibyte da convertire.
+> Verificare che *wcstr* e *mbstr* non si sovrappongano e che il *conteggio* rispecchi correttamente il numero di caratteri multibyte da convertire.
 
-**mbstowcs_s** Usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. **mbstowcs_s_l** è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**mbstowcs_s** usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali; **_mbstowcs_s_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -145,7 +145,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 [Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
 [Impostazioni locali](../../c-runtime-library/locale.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

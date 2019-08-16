@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37ab241219f28336e73ea459a4e32ff413de8964
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372907"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502966"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 
@@ -151,11 +151,11 @@ Implementa una finestra con mini-cornice contenente un riquadro. Il riquadro rie
 class CPaneFrameWnd : public CWnd
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CPaneFrameWnd::AddPane](#addpane)|Aggiunge un riquadro.|
 |[CPaneFrameWnd::AddRemovePaneFromGlobalList](#addremovepanefromgloballist)|Aggiunge o rimuove un riquadro dall'elenco globale.|
@@ -201,7 +201,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Chiamata eseguita dal framework quando un riquadro nella finestra con mini-cornice è nascosto o visualizzato.|
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Restituisce un riquadro contenente un punto fornito dall'utente all'interno di una finestra con mini-cornice.|
 |[CPaneFrameWnd::Pin](#pin)||
-|`CPaneFrameWnd::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .|
+|`CPaneFrameWnd::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) .|
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Ridisegna tutte le finestre con mini-cornice.|
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Chiamata eseguita dal framework per rimuovere i riquadri non validi.|
 |[CPaneFrameWnd::RemovePane](#removepane)|Rimuove un riquadro dalla finestra con mini-cornice.|
@@ -222,14 +222,14 @@ class CPaneFrameWnd : public CWnd
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |[CPaneFrameWnd::OnCheckRollState](#oncheckrollstate)|Determina se eseguire il rollup o il rolldown di una finestra con mini-cornice.|
 |[CPaneFrameWnd::OnDrawBorder](#ondrawborder)|Disegna i bordi di una finestra con mini-cornice.|
 
 ### <a name="data-members"></a>Membri di dati
 
-|Nome|Descrizione|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Specifica se registrare la classe della finestra con lo stile della classe CS_SAVEBITS.|
 
@@ -237,11 +237,11 @@ class CPaneFrameWnd : public CWnd
 
 Il framework crea automaticamente un oggetto `CPaneFrameWnd` quando un riquadro passa dallo stato ancorato allo stato mobile.
 
-È possibile spostare una finestra con mini-cornice trascinando il relativo contenuto visibile (ancoraggio immediato) oppure usando un rettangolo di trascinamento (ancoraggio standard). La modalità di ancoraggio del riquadro contenitore della finestra con mini-cornice determina il comportamento del trascinamento della finestra con mini-cornice. Per altre informazioni, vedere [cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode).
+È possibile spostare una finestra con mini-cornice trascinando il relativo contenuto visibile (ancoraggio immediato) oppure usando un rettangolo di trascinamento (ancoraggio standard). La modalità di ancoraggio del riquadro contenitore della finestra con mini-cornice determina il comportamento del trascinamento della finestra con mini-cornice. Per ulteriori informazioni, vedere [CBasePane:: GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
 
-I pulsanti sulla barra del titolo di una finestra con mini-cornice sono visualizzati in modo conforme allo stile del riquadro contenuto. Se il riquadro può essere chiuso ( [cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), viene visualizzato un pulsante Chiudi. Se il riquadro ha lo stile AFX_CBRS_AUTO_ROLLUP, viene visualizzata una puntina.
+I pulsanti sulla barra del titolo di una finestra con mini-cornice sono visualizzati in modo conforme allo stile del riquadro contenuto. Se il riquadro può essere chiuso ( [CBasePane:: CanBeClosed](../../mfc/reference/cbasepane-class.md#canbeclosed)), viene visualizzato un pulsante Chiudi. Se il riquadro ha lo stile AFX_CBRS_AUTO_ROLLUP, viene visualizzato un PIN.
 
-Se si deriva una classe da `CPaneFrameWnd`, è necessario indicare al framework come crearla. Creare la classe eseguendo l'override [cpane:: Createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe), o impostare il `CPane::m_pMiniFrameRTC` membro in modo che punti alle informazioni sulla classe di runtime per la classe.
+Se si deriva una classe da `CPaneFrameWnd`, è necessario indicare al framework come crearla. Creare la classe eseguendo l'override di [CPane:: CreateDefaultMiniframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)o impostare il `CPane::m_pMiniFrameRTC` membro in modo che punti alle informazioni sulla classe di runtime per la classe.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -255,7 +255,7 @@ Se si deriva una classe da `CPaneFrameWnd`, è necessario indicare al framework 
 
 ## <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxpaneframewnd. H
+**Intestazione:** afxPaneFrameWnd. h
 
 ##  <a name="addpane"></a>  CPaneFrameWnd::AddPane
 
@@ -268,9 +268,9 @@ virtual void AddPane(CBasePane* pWnd);
 ### <a name="parameters"></a>Parametri
 
 *pWnd*<br/>
-[in] Il riquadro da aggiungere.
+in Riquadro da aggiungere.
 
-##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList
+##  <a name="addremovepanefromgloballist"></a>CPaneFrameWnd:: AddRemovePaneFromGlobalList
 
 Aggiunge o rimuove un riquadro dall'elenco globale.
 
@@ -283,16 +283,16 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ### <a name="parameters"></a>Parametri
 
 *pWnd*<br/>
-[in] Il riquadro per aggiungere o rimuovere.
+in Riquadro da aggiungere o rimuovere.
 
 *bAdd*<br/>
-[in] Se diverso da zero, aggiungere il riquadro. Se è 0, rimuovere il riquadro.
+in Se diverso da zero, aggiungere il riquadro. Se è 0, rimuovere il riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il metodo ha esito positivo; in caso contrario 0.
+Diverso da zero se il metodo ha avuto esito positivo; in caso contrario, 0.
 
-##  <a name="adjustlayout"></a>  CPaneFrameWnd::AdjustLayout
+##  <a name="adjustlayout"></a>CPaneFrameWnd:: AdjustLayout
 
 Regola il layout della finestra con mini-cornice.
 
@@ -310,7 +310,7 @@ virtual void AdjustPaneFrames();
 
 ##  <a name="calcbordersize"></a>  CPaneFrameWnd::CalcBorderSize
 
-Calcola le dimensioni dei bordi per una finestra con mini-cornice.
+Calcola le dimensioni dei bordi per una finestra sta mobile.
 
 ```
 virtual void CalcBorderSize(CRect& rectBorderSize) const;
@@ -319,11 +319,11 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ### <a name="parameters"></a>Parametri
 
 *rectBorderSize*<br/>
-[out] Contiene la dimensione, in pixel, del bordo della finestra con mini-cornice.
+out Contiene le dimensioni, in pixel, del bordo della finestra sta mobile.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework per calcolare le dimensioni del bordo di una finestra con mini-cornice. Le dimensioni restituite varia a seconda se una finestra con mini-cornice contiene una barra degli strumenti o una [CDockablePane](../../mfc/reference/cdockablepane-class.md).
+Questo metodo viene chiamato dal Framework per calcolare le dimensioni del bordo di una finestra sta mobile. Le dimensioni restituite variano a seconda che una finestra sta mobile contenga una barra degli strumenti o un [CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
 ##  <a name="calcexpecteddockedrect"></a>  CPaneFrameWnd::CalcExpectedDockedRect
 
@@ -341,25 +341,25 @@ virtual void CalcExpectedDockedRect(
 ### <a name="parameters"></a>Parametri
 
 *pWndToDock*<br/>
-[in] Puntatore alla finestra di ancoraggio.
+in Puntatore alla finestra da ancorare.
 
 *ptMouse*<br/>
-[in] Posizione del mouse.
+in Posizione del mouse.
 
 *rectResult*<br/>
-[out] Rettangolo calcolato.
+out Rettangolo calcolato.
 
 *bDrawTab*<br/>
-[out] Se TRUE, disegna una scheda. Se FALSE, non creare una scheda.
+out Se TRUE, creare una tabulazione. Se FALSE, non creare una scheda.
 
 *ppTargetBar*<br/>
-[out] Puntatore al riquadro di destinazione.
+out Puntatore al riquadro di destinazione.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo calcola il rettangolo che una finestra occuperebbe se un utente di trascinata la finestra per il punto specificato da *ptMouse* e ancorata sono.
+Questo metodo calcola il rettangolo che una finestra occupa se un utente ha trascinato la finestra sul punto specificato da *ptMouse* e ancorata.
 
-##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached
+##  <a name="canbeattached"></a>CPaneFrameWnd:: CanBeAttached
 
 Determina se il riquadro corrente può essere ancorato a un altro riquadro o a un'altra finestra cornice.
 
@@ -369,7 +369,7 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il riquadro può essere ancorato a un'altra finestra del riquadro o il frame; in caso contrario, FALSE.
+TRUE se il riquadro può essere ancorato a un altro riquadro o a una finestra cornice; in caso contrario, FALSE.
 
 ##  <a name="canbedockedtopane"></a>  CPaneFrameWnd::CanBeDockedToPane
 
@@ -382,13 +382,13 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ### <a name="parameters"></a>Parametri
 
 *pDockingBar*<br/>
-[in] Un riquadro.
+in Un riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il mini-cornice può essere ancorata a *pDockingBar*; in caso contrario, 0.
+Diverso da zero se la mini-cornice può essere ancorata a *pDockingBar*; in caso contrario, 0.
 
-##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility
+##  <a name="checkgrippervisibility"></a>CPaneFrameWnd:: CheckGripperVisibility
 
 ```
 virtual void CheckGripperVisibility();
@@ -404,9 +404,9 @@ Converte un riquadro in un documento a schede.
 virtual void ConvertToTabbedDocument();
 ```
 
-##  <a name="create"></a>  CPaneFrameWnd::Create
+##  <a name="create"></a>CPaneFrameWnd:: create
 
-Crea una finestra con mini-cornice e lo collega al [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) oggetto.
+Crea una finestra sta mobile e la collega all'oggetto [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) .
 
 ```
 virtual BOOL Create(
@@ -420,31 +420,31 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametri
 
 *lpszWindowName*<br/>
-[in] Specifica il testo da visualizzare nella finestra con mini-cornice.
+in Specifica il testo da visualizzare nella finestra sta mobile.
 
 *dwStyle*<br/>
-[in] Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+in Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *rect*<br/>
-[in] Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.
+in Specifica le dimensioni e la posizione iniziali della finestra sta mobile.
 
 *pParentWnd*<br/>
-[in, out] Specifica il frame padre della finestra con mini-cornice. Questo valore non deve essere NULL.
+[in, out] Specifica il frame padre della finestra sta mobile. Questo valore non può essere NULL.
 
 *pContext*<br/>
 [in, out] Specifica il contesto definito dall'utente.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la finestra è stata creata correttamente. in caso contrario, FALSE.
+TRUE se la finestra è stata creata correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Viene creata una finestra con mini-cornice in due passaggi. In primo luogo, il framework crea un `CPaneFrameWnd` oggetto. In secondo luogo, chiama `Create` per creare la finestra con mini-cornice di Windows e associarlo a per il `CPaneFrameWnd` oggetto.
+Viene creata una finestra sta mobile in due passaggi. In primo luogo, il Framework `CPaneFrameWnd` crea un oggetto. In secondo luogo, `Create` chiama per creare la finestra sta mobile di Windows e collegarla `CPaneFrameWnd` all'oggetto.
 
-##  <a name="createex"></a>  CPaneFrameWnd::CreateEx
+##  <a name="createex"></a>CPaneFrameWnd:: CreateEx
 
-Crea una finestra con mini-cornice e lo collega al [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) oggetto.
+Crea una finestra sta mobile e la collega all'oggetto [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) .
 
 ```
 virtual BOOL CreateEx(
@@ -459,32 +459,32 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametri
 
 *dwStyleEx*<br/>
-[in] Specifica lo stile della finestra estesi. Per altre informazioni, vedere [stili finestra estesi](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
+in Specifica lo stile della finestra estesa. Per altre informazioni, vedere [stili finestra estesa](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 *lpszWindowName*<br/>
-[in] Specifica il testo da visualizzare nella finestra con mini-cornice.
+in Specifica il testo da visualizzare nella finestra sta mobile.
 
 *dwStyle*<br/>
-[in] Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+in Specifica lo stile della finestra. Per altre informazioni, vedere [stili di finestra](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *rect*<br/>
-[in] Specifica le dimensioni iniziali e la posizione della finestra con mini-cornice.
+in Specifica le dimensioni e la posizione iniziali della finestra sta mobile.
 
 *pParentWnd*<br/>
-[in, out] Specifica il frame padre della finestra con mini-cornice. Questo valore non deve essere NULL.
+[in, out] Specifica il frame padre della finestra sta mobile. Questo valore non può essere NULL.
 
 *pContext*<br/>
 [in, out] Specifica il contesto definito dall'utente.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la finestra è stata creata correttamente. in caso contrario, FALSE.
+TRUE se la finestra è stata creata correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Viene creata una finestra con mini-cornice in due passaggi. In primo luogo, il framework crea un `CPaneFrameWnd` oggetto. In secondo luogo, chiama `Create` per creare la finestra con mini-cornice di Windows e associarlo a per il `CPaneFrameWnd` oggetto.
+Viene creata una finestra sta mobile in due passaggi. In primo luogo, il Framework `CPaneFrameWnd` crea un oggetto. In secondo luogo, `Create` chiama per creare la finestra sta mobile di Windows e collegarla `CPaneFrameWnd` all'oggetto.
 
-##  <a name="dockpane"></a>  CPaneFrameWnd::DockPane
+##  <a name="dockpane"></a>CPaneFrameWnd::D ockPane
 
 Ancora il riquadro.
 
@@ -495,11 +495,11 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ### <a name="parameters"></a>Parametri
 
 *bWasDocked*<br/>
-[out] TRUE se il riquadro è stato già ancorato; in caso contrario, FALSE.
+out TRUE se il riquadro è già ancorato; in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-Se l'operazione ha avuto esito positivo, il `CDockablePane` che il riquadro è stata ancorata alla; in caso contrario, NULL.
+Se l'operazione ha esito positivo `CDockablePane` , l'oggetto a cui è stato ancorato il riquadro; in caso contrario, null.
 
 ##  <a name="findfloatingpanebyid"></a>  CPaneFrameWnd::FindFloatingPaneByID
 
@@ -512,11 +512,11 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ### <a name="parameters"></a>Parametri
 
 *nID*<br/>
-[in] Rappresenta l'ID di controllo del riquadro da trovare.
+in Rappresenta l'ID di controllo del riquadro da trovare.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il riquadro con l'ID di controllo specificato. in caso contrario, NULL, se nessun riquadro ha l'ID del controllo specificato.
+Riquadro con l'ID di controllo specificato. in caso contrario, NULL, se nessun riquadro ha l'ID del controllo specificato.
 
 ##  <a name="framefrompoint"></a>  CPaneFrameWnd::FrameFromPoint
 
@@ -533,22 +533,22 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ### <a name="parameters"></a>Parametri
 
 *pt*<br/>
-[in] Il punto, nelle coordinate dello schermo.
+in Punto, in coordinate dello schermo.
 
 *nSensitivity*<br/>
-[in] Aumentare l'area di ricerca della finestra con mini-cornice questa dimensione. Una finestra con mini-cornice soddisfa i criteri di ricerca se il punto specificato cade nell'area di maggiore.
+in Aumentare le dimensioni dell'area di ricerca della finestra con mini-cornice. Una finestra con mini-cornice soddisfa i criteri di ricerca se il punto specificato cade nell'area aumentata.
 
 *pFrameToExclude*<br/>
-[in] Specifica una finestra con mini-cornice da escludere dalla ricerca.
+in Specifica una finestra con mini-cornice da escludere dalla ricerca.
 
 *bFloatMultiOnly*<br/>
-[in] Se TRUE, solo la ricerca finestre con mini-cornice con lo stile CBRS_FLOAT_MULTI. Se FALSE, la ricerca tutte le finestre con mini-cornice.
+in Se TRUE, Cerca solo le finestre con mini-cornice con stile CBRS_FLOAT_MULTI. Se FALSE, eseguire una ricerca in tutte le finestre con mini-cornice.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore alla finestra con mini-cornice contenente *pt*; in caso contrario, NULL.
+Puntatore alla finestra con mini-cornice che contiene *PT*; in caso contrario, NULL.
 
-##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight
+##  <a name="getcaptionheight"></a>CPaneFrameWnd:: GetCaptionHeight
 
 Restituisce l'altezza del titolo della finestra con mini-cornice.
 
@@ -562,7 +562,7 @@ Altezza, in pixel, della finestra con mini-cornice.
 
 ### <a name="remarks"></a>Note
 
-Chiamare questo metodo per determinare l'altezza di una finestra con mini-cornice. Per impostazione predefinita, l'altezza viene impostata su SM_CYSMCAPTION. Per altre informazioni, vedere [funzione GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics).
+Chiamare questo metodo per determinare l'altezza di una finestra con mini-cornice. Per impostazione predefinita, l'altezza è impostata su SM_CYSMCAPTION. Per altre informazioni, vedere [funzione GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics).
 
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect
 
@@ -575,11 +575,11 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ### <a name="parameters"></a>Parametri
 
 *rectCaption*<br/>
-[out] Contiene le dimensioni e posizione del titolo della finestra con mini-cornice, nelle coordinate dello schermo.
+out Contiene le dimensioni e la posizione del titolo della finestra con mini-cornice, in coordinate dello schermo.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework per la quale calcolare il rettangolo di delimitazione di un titolo di finestra con mini-cornice.
+Questo metodo viene chiamato dal Framework per calcolare il rettangolo di delimitazione di una didascalia della finestra con mini-cornice.
 
 ##  <a name="getcaptiontext"></a>  CPaneFrameWnd::GetCaptionText
 
@@ -595,7 +595,7 @@ Testo della didascalia della finestra con mini-cornice.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework quando questo viene visualizzato il testo della didascalia.
+Questo metodo viene chiamato dal framework quando viene visualizzato il testo della didascalia.
 
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager
 
@@ -617,7 +617,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-La modalità di ancoraggio. Uno dei valori seguenti:
+Modalità di ancoraggio. Uno dei valori seguenti:
 
 - DT_STANDARD
 
@@ -625,7 +625,7 @@ La modalità di ancoraggio. Uno dei valori seguenti:
 
 - DT_SMART
 
-##  <a name="getfirstvisiblepane"></a>  CPaneFrameWnd::GetFirstVisiblePane
+##  <a name="getfirstvisiblepane"></a>CPaneFrameWnd:: GetFirstVisiblePane
 
 Restituisce il primo riquadro visibile contenuto in una finestra con mini-cornice.
 
@@ -635,7 +635,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il primo riquadro nella finestra con mini-cornice, o NULL se la finestra con mini-cornice non contiene nessun riquadri.
+Il primo riquadro nella finestra con mini-cornice o NULL se la finestra con mini-cornice non contiene riquadri.
 
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint
 
@@ -657,11 +657,11 @@ virtual CWnd* GetPane() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il riquadro che è contenuto nella con mini-cornice o NULL se la finestra con mini-cornice non contiene nessun riquadri.
+Riquadro contenuto nel mini-frame o NULL se la finestra con mini-cornice non contiene riquadri.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getpanecount"></a>  CPaneFrameWnd::GetPaneCount
+##  <a name="getpanecount"></a>CPaneFrameWnd:: GetPaneCount
 
 Restituisce il numero di riquadri contenuti in una finestra con mini-cornice.
 
@@ -671,11 +671,11 @@ virtual int GetPaneCount() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di riquadri della finestra con mini-cornice. Questo valore può essere zero.
+Il numero di riquadri nella finestra con mini-cornice. Questo valore può essere zero.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getparent"></a>  CPaneFrameWnd::GetParent
+##  <a name="getparent"></a>CPaneFrameWnd:: GetParent
 
 ```
 CWnd* GetParent();
@@ -705,7 +705,7 @@ CRect GetRecentFloatingRect() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getvisiblepanecount"></a>  CPaneFrameWnd::GetVisiblePaneCount
+##  <a name="getvisiblepanecount"></a>CPaneFrameWnd:: GetVisiblePaneCount
 
 Restituisce il numero di riquadri visibili contenuti in una finestra con mini-cornice.
 
@@ -715,7 +715,7 @@ virtual int GetVisiblePaneCount() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di riquadri visibili.
+Numero di riquadri visibili.
 
 ### <a name="remarks"></a>Note
 
@@ -735,7 +735,7 @@ virtual LRESULT HitTest(
 [in] Punto da testare.
 
 *bDetectCaption*<br/>
-[in] Se TRUE, controllare il punto per la didascalia. Se FALSE, ignorare la didascalia.
+in Se TRUE, controllare il punto rispetto alla didascalia. Se FALSE, ignorare la didascalia.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -743,19 +743,19 @@ Uno dei valori seguenti:
 
 |Value|Significato|
 |-----------|-------------|
-|HTNOWHERE|Il punto è all'esterno della finestra con mini-cornice.|
+|HTNOWHERE|Il punto è esterno alla finestra con mini-cornice.|
 |HTCLIENT|Il punto si trova nell'area client.|
-|HTCAPTION|Il punto è sulla barra del titolo.|
-|HTTOP|Il punto è all'inizio.|
-|HTTOPLEFT|Il punto è all'angolo superiore sinistro.|
-|HTTOPRIGHT|Il punto è in alto a destra.|
-|HTLEFT|Il punto si trova sulla sinistra.|
-|HTRIGHT|Il punto è a destra.|
-|HTBOTTOM|Il punto è nella parte inferiore.|
-|HTBOTTOMLEFT|Il punto è in basso a sinistra.|
-|HTBOTTOMRIGHT|Il punto è in basso a destra.|
+|HTCAPTION|Il punto si trova nella didascalia.|
+|HTTOP|Il punto si trova nella parte superiore.|
+|HTTOPLEFT|Il punto si trova in alto a sinistra.|
+|HTTOPRIGHT|Il punto si trova in alto a destra.|
+|HTLEFT|Il punto si trova a sinistra.|
+|HTRIGHT|Il punto si trova a destra.|
+|HTBOTTOM|Il punto si trova nella parte inferiore.|
+|HTBOTTOMLEFT|Il punto si trova in basso a sinistra.|
+|HTBOTTOMRIGHT|Il punto si trova in basso a destra.|
 
-##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured
+##  <a name="iscaptured"></a>CPaneFrameWnd:: Captured
 
 ```
 BOOL IsCaptured() const;
@@ -785,15 +785,15 @@ virtual BOOL IsRollDown() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la finestra con mini-cornice deve eseguire il rolldown; in caso contrario, FALSE.
+TRUE se la finestra con mini-cornice deve essere sottoposta a rollback; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework per determinare se deve essere il rolldown di una finestra con mini-cornice. La funzionalità di rollup/gallone è abilitata per una finestra con mini-cornice se contiene almeno un riquadro con il flag AFX_CBRS_AUTO_ROLLUP. Questo flag viene impostato quando viene creato un riquadro. Per altre informazioni, vedere [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+Questo metodo viene chiamato dal Framework per determinare se è necessario eseguire il rollback di una finestra con mini-cornice. La funzionalità rollup/sull'apposito è abilitata per una finestra con mini-cornice se contiene almeno un riquadro con il flag AFX_CBRS_AUTO_ROLLUP. Questo flag viene impostato quando viene creato un riquadro. Per ulteriori informazioni, vedere [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-Per impostazione predefinita, il framework controlla se il puntatore del mouse è all'interno del rettangolo di delimitazione di finestra con mini-cornice per determinare se la finestra dispone eseguire il rolldown di. È possibile eseguire l'override di questo comportamento in una classe derivata.
+Per impostazione predefinita, il Framework controlla se il puntatore del mouse si trova all'interno del rettangolo di delimitazione della finestra con mini-cornice per determinare se è necessario eseguire il rollback della finestra. È possibile eseguire l'override di questo comportamento in una classe derivata.
 
-##  <a name="isrollup"></a>  CPaneFrameWnd::IsRollUp
+##  <a name="isrollup"></a>CPaneFrameWnd:: RollUp
 
 Determina se eseguire il rollup di una finestra con mini-cornice.
 
@@ -803,13 +803,13 @@ virtual BOOL IsRollUp() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la finestra con mini-cornice è necessario eseguire il backup; in caso contrario, FALSE.
+TRUE se è necessario il rollup della finestra con mini-cornice; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework per determinare se eseguire il backup di una finestra con mini-cornice. La funzionalità di rollup/gallone è abilitata per una finestra con mini-cornice se contiene almeno un riquadro con il flag AFX_CBRS_AUTO_ROLLUP. Questo flag viene impostato quando viene creato un riquadro. Per altre informazioni, vedere [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+Questo metodo viene chiamato dal Framework per determinare se deve essere eseguito il rollup di una finestra con mini-cornice. La funzionalità rollup/sull'apposito è abilitata per una finestra con mini-cornice se contiene almeno un riquadro con il flag AFX_CBRS_AUTO_ROLLUP. Questo flag viene impostato quando viene creato un riquadro. Per ulteriori informazioni, vedere [CBasePane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-Per impostazione predefinita, il framework controlla se il puntatore del mouse è all'interno del rettangolo di delimitazione di finestra con mini-cornice per determinare se la finestra deve essere eseguito il rollup. È possibile eseguire l'override di questo comportamento in una classe derivata.
+Per impostazione predefinita, il Framework controlla se il puntatore del mouse si trova all'interno del rettangolo di delimitazione della finestra con mini-cornice per determinare se è necessario eseguire il rollup della finestra. È possibile eseguire l'override di questo comportamento in una classe derivata.
 
 ##  <a name="killdockingtimer"></a>  CPaneFrameWnd::KillDockingTimer
 
@@ -819,7 +819,7 @@ Arresta il timer di ancoraggio.
 void KillDockingTimer();
 ```
 
-##  <a name="loadstate"></a>  CPaneFrameWnd::LoadState
+##  <a name="loadstate"></a>CPaneFrameWnd:: LoadState
 
 Carica lo stato del riquadro dal Registro di sistema.
 
@@ -832,10 +832,10 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parametri
 
 *lpszProfileName*<br/>
-[in] Il nome del profilo.
+in Nome del profilo.
 
 *uiID*<br/>
-[in] L'ID del riquadro.
+in ID del riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -851,7 +851,7 @@ AFX_IMPORT_DATA static BOOL m_bUseSaveBits;
 
 ### <a name="remarks"></a>Note
 
-Impostare il membro statico a true per registrare la classe di finestra con mini-cornice contenente lo stile CS_SAVEBITS. Questo può contribuire a ridurre lo sfarfallio quando l'utente trascina la finestra con mini-cornice.
+Impostare questo membro statico su TRUE per registrare la classe della finestra con mini-cornice con lo stile CS_SAVEBITS. Questo può aiutare a ridurre lo sfarfallio quando un utente trascina la finestra con mini-cornice.
 
 ##  <a name="onbeforedock"></a>  CPaneFrameWnd::OnBeforeDock
 
@@ -865,7 +865,7 @@ virtual BOOL OnBeforeDock();
 
 TRUE se l'ancoraggio è possibile; in caso contrario, FALSE.
 
-##  <a name="oncheckrollstate"></a>  CPaneFrameWnd::OnCheckRollState
+##  <a name="oncheckrollstate"></a>CPaneFrameWnd:: OnCheckRollState
 
 Determina se eseguire il rollup o il rolldown di una finestra con mini-cornice.
 
@@ -875,9 +875,9 @@ virtual void OnCheckRollState();
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework per determinare se una finestra con mini-cornice deve essere eseguito il rollback verso l'alto o verso il basso.
+Questo metodo viene chiamato dal Framework per determinare se è necessario eseguire il rollup o la riduzione di una finestra con mini-cornice.
 
-Per impostazione predefinita, il framework chiama [CPaneFrameWnd::IsRollUp](#isrollup) e [CPaneFrameWnd::IsRollDown](#isrolldown) appena allunga o Ripristina la finestra con mini-cornice. È possibile eseguire l'override di questo metodo in una classe derivata da usare un effetto visivo diverso.
+Per impostazione predefinita, il Framework chiama [CPaneFrameWnd:: rollup](#isrollup) e [CPaneFrameWnd:: IsRollDown](#isrolldown) e semplicemente estende o Ripristina la finestra con mini-cornice. È possibile eseguire l'override di questo metodo in una classe derivata per usare un effetto visivo diverso.
 
 ##  <a name="ondocktorecentpos"></a>  CPaneFrameWnd::OnDockToRecentPos
 
@@ -898,11 +898,11 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Il contesto di dispositivo utilizzato per disegnare il bordo.
+in Il contesto di dispositivo usato per creare il bordo.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework per disegnare i bordi della finestra con mini-cornice.
+Questo metodo viene chiamato dal Framework per creare i bordi della finestra con mini-cornice.
 
 ##  <a name="onkillrolluptimer"></a>  CPaneFrameWnd::OnKillRollUpTimer
 
@@ -925,10 +925,10 @@ virtual void OnMovePane(
 ### <a name="parameters"></a>Parametri
 
 *pBar*<br/>
-[in] Un puntatore a un riquadro (ignorato).
+in Puntatore a un riquadro (ignorato).
 
 *ptOffset*<br/>
-[in] Offset da cui spostare il riquadro.
+in Offset in base al quale spostare il riquadro.
 
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout
 
@@ -940,9 +940,9 @@ virtual void OnPaneRecalcLayout();
 
 ### <a name="remarks"></a>Note
 
-Il framework chiama questo metodo quando è necessario modificare il layout di un riquadro all'interno della finestra con mini-cornice.
+Il Framework chiama questo metodo quando deve modificare il layout di un riquadro nella finestra con mini-cornice.
 
-Per impostazione predefinita, il riquadro viene posizionato per coprire l'intera area client della finestra con mini-cornice.
+Per impostazione predefinita, il riquadro è posizionato in modo da coprire l'intera area client della finestra con mini-cornice.
 
 ##  <a name="onsetrolluptimer"></a>  CPaneFrameWnd::OnSetRollUpTimer
 
@@ -952,7 +952,7 @@ Imposta il timer di rollup.
 virtual void OnSetRollUpTimer();
 ```
 
-##  <a name="onshowpane"></a>  CPaneFrameWnd::OnShowPane
+##  <a name="onshowpane"></a>CPaneFrameWnd:: OnShowPane
 
 Chiamata eseguita dal framework quando un riquadro nella finestra con mini-cornice è nascosto o visualizzato.
 
@@ -965,16 +965,16 @@ virtual void OnShowPane(
 ### <a name="parameters"></a>Parametri
 
 *pBar*<br/>
-[in] Il riquadro che viene visualizzato o nascosto.
+in Riquadro visualizzato o nascosto.
 
 *bShow*<br/>
-[in] TRUE se viene visualizzato il riquadro; FALSO se il riquadro è nascosto.
+in TRUE se il riquadro è visualizzato; FALSE se il riquadro è nascosto.
 
 ### <a name="remarks"></a>Note
 
-Chiamato dal framework quando viene visualizzato o nascosto un riquadro della finestra con mini-cornice. L'implementazione predefinita non esegue alcuna operazione.
+Chiamata eseguita dal framework quando viene visualizzato o nascosto un riquadro nella finestra con mini-cornice. L'implementazione predefinita non esegue alcuna operazione.
 
-##  <a name="pin"></a>  CPaneFrameWnd::Pin
+##  <a name="pin"></a>CPaneFrameWnd::P
 
 ```
 void Pin(BOOL bPin = TRUE);
@@ -982,11 +982,11 @@ void Pin(BOOL bPin = TRUE);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bPin*<br/>
+in *bPin*<br/>
 
 ### <a name="remarks"></a>Note
 
-##  <a name="panefrompoint"></a>  CPaneFrameWnd::PaneFromPoint
+##  <a name="panefrompoint"></a>CPaneFrameWnd::P aneFromPoint
 
 Restituisce un riquadro contenente un punto fornito dall'utente all'interno di una finestra con mini-cornice.
 
@@ -1000,17 +1000,17 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="parameters"></a>Parametri
 
 *point*<br/>
-[in] Il punto che l'utente ha fatto clic, nelle coordinate dello schermo.
+in Il punto su cui l'utente ha fatto clic, in coordinate dello schermo.
 
 *nSensitivity*<br/>
-[in] Questo parametro non viene utilizzato.
+in Questo parametro non viene utilizzato.
 
 *bCheckVisibility*<br/>
-[in] TRUE per specificare che devono essere restituiti solo i riquadri visibili; in caso contrario, FALSE.
+in TRUE per specificare che devono essere restituiti solo i riquadri visibili; in caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valore restituito
 
-Il riquadro selezionato dall'utente, o NULL se nessun riquadro presente in tale percorso.
+Riquadro su cui l'utente ha fatto clic oppure NULL se non esiste alcun riquadro in tale posizione.
 
 ### <a name="remarks"></a>Note
 
@@ -1026,7 +1026,7 @@ static void RedrawAll();
 
 ### <a name="remarks"></a>Note
 
-Questo metodo aggiorna tutte le finestre con mini-cornice chiamando [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) per ogni finestra.
+Questo metodo aggiorna tutte le finestre con mini-cornice chiamando [CWnd:: RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) per ogni finestra.
 
 ##  <a name="removenonvalidpanes"></a>  CPaneFrameWnd::RemoveNonValidPanes
 
@@ -1050,17 +1050,17 @@ virtual void RemovePane(
 ### <a name="parameters"></a>Parametri
 
 *pWnd*<br/>
-[in] Puntatore al riquadro da rimuovere.
+in Puntatore al riquadro da rimuovere.
 
 *bDestroy*<br/>
-[in] Specifica che cosa accade alla finestra con mini-cornice. Se *bDestroy* è TRUE, questo metodo elimina la finestra con mini-cornice immediatamente. Se è FALSE, questo metodo elimina la finestra con mini-cornice dopo un certo ritardo.
+in Specifica cosa accade alla finestra con mini-cornice. Se *bdistrutto* è true, questo metodo elimina immediatamente la finestra con mini-cornice. Se è FALSE, questo metodo elimina la finestra con mini-cornice dopo un determinato ritardo.
 
 *bNoDelayedDestroy*<br/>
-[in] Se TRUE, la distruzione ritardata è disabilitata. Se FALSE, distruzione posticipata è abilitata.
+in Se TRUE, la distruzione ritardata è disabilitata. Se FALSE, è abilitata la distruzione ritardata.
 
 ### <a name="remarks"></a>Note
 
-Il framework può determinare l'eliminazione di windows con mini-cornice immediatamente o dopo un certo ritardo. Se si desidera ritardare la distruzione di finestre con mini-cornice, passare FALSE nel *bNoDelayedDestroy* parametro. Eliminazione posticipata si verifica quando il framework elabora il messaggio AFX_WM_CHECKEMPTYMINIFRAME.
+Il Framework può distruggere le finestre con mini-cornice immediatamente o dopo un determinato ritardo. Se si vuole ritardare la distruzione delle finestre con mini-cornice, passare FALSE nel parametro *bNoDelayedDestroy* . La distruzione ritardata si verifica quando il Framework elabora il messaggio AFX_WM_CHECKEMPTYMINIFRAME.
 
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane
 
@@ -1075,10 +1075,10 @@ virtual void ReplacePane(
 ### <a name="parameters"></a>Parametri
 
 *pBarOrg*<br/>
-[in] Puntatore al riquadro originale.
+in Puntatore al riquadro originale.
 
 *pBarReplaceWith*<br/>
-[in] Puntatore al riquadro che sostituisce il riquadro originale.
+in Puntatore al riquadro che sostituisce il riquadro originale.
 
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState
 
@@ -1093,14 +1093,14 @@ virtual BOOL SaveState(
 ### <a name="parameters"></a>Parametri
 
 *lpszProfileName*<br/>
-[in] Il nome del profilo.
+in Nome del profilo.
 
 *uiID*<br/>
-[in] L'ID del riquadro.
+in ID del riquadro.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se lo stato del riquadro è stato salvato correttamente. in caso contrario, FALSE.
+TRUE se lo stato del riquadro è stato salvato correttamente; in caso contrario, FALSE.
 
 ##  <a name="setcaptionbuttons"></a>  CPaneFrameWnd::SetCaptionButtons
 
@@ -1113,7 +1113,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ### <a name="parameters"></a>Parametri
 
 *dwButtons*<br/>
-[in] Combinazione OR bit per bit dei valori seguenti:
+in Combinazione OR bit per bit dei valori seguenti:
 
 - AFX_CAPTION_BTN_CLOSE
 
@@ -1131,7 +1131,7 @@ void SetDelayShow(BOOL bDelayShow);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *bDelayShow*<br/>
+in *bDelayShow*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1143,7 +1143,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pManager*<br/>
+in *pManager*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1158,7 +1158,7 @@ void SetDockingTimer(UINT nTimeOut);
 ### <a name="parameters"></a>Parametri
 
 *nTimeOut*<br/>
-[in] Valore di timeout in millisecondi.
+in Valore di timeout in millisecondi.
 
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState
 
@@ -1171,7 +1171,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ### <a name="parameters"></a>Parametri
 
 *pDockManager*<br/>
-[in] Puntatore a un gestore di ancoraggio.
+in Puntatore a un gestore di ancoraggio.
 
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint
 
@@ -1181,7 +1181,7 @@ void SetHotPoint(CPoint& ptNew);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *ptNew*<br/>
+in *ptNew*<br/>
 
 ### <a name="remarks"></a>Note
 
@@ -1199,7 +1199,7 @@ virtual BOOL SetPreDockState(
 ### <a name="parameters"></a>Parametri
 
 *preDockState*<br/>
-[in] Valori possibili:
+in Valori possibili:
 
 - PDS_NOTHING,
 
@@ -1208,18 +1208,18 @@ virtual BOOL SetPreDockState(
 - PDS_DOCK_TO_TAB
 
 *pBarToDock*<br/>
-[in] Puntatore al riquadro per ancorare.
+in Puntatore al riquadro da ancorare.
 
 *dockMethod*<br/>
-[in] Il metodo di ancoraggio. (Questo parametro viene ignorato).
+in Metodo di ancoraggio. Questo parametro viene ignorato.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la finestra con mini-cornice è ancorata; FALSE se è ancorata.
+TRUE se la finestra con mini-cornice non è ancorata; FALSE se è ancorato.
 
 ##  <a name="sizetocontent"></a>  CPaneFrameWnd::SizeToContent
 
-Regola le dimensioni di una finestra con mini-cornice in modo che è equivalente a un riquadro contenuto.
+Regola le dimensioni di una finestra con mini-cornice in modo che sia equivalente a un riquadro contenuto.
 
 ```
 virtual void SizeToContent();
@@ -1227,7 +1227,7 @@ virtual void SizeToContent();
 
 ### <a name="remarks"></a>Note
 
-Chiamare questo metodo per modificare le dimensioni di una finestra con mini-cornice per la dimensione di un riquadro contenuto.
+Chiamare questo metodo per modificare le dimensioni di una finestra con mini-cornice sulla dimensione di un riquadro contenuto.
 
 ##  <a name="starttearoff"></a>  CPaneFrameWnd::StartTearOff
 
@@ -1240,11 +1240,11 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ### <a name="parameters"></a>Parametri
 
 *pMenu*<br/>
-[in] Un puntatore a un menu.
+in Puntatore a un menu.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il metodo ha avuto esito positivo. in caso contrario, FALSE.
+TRUE se il metodo ha avuto esito positivo; in caso contrario, FALSE.
 
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo
 
@@ -1258,7 +1258,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo
+##  <a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd:: StoreRecentTabRelatedInfo
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1268,7 +1268,7 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>Parametri
 
-[in] *pDockingBar*<br/>
+in *pDockingBar*<br/>
 [in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Note

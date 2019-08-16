@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883d6a9242066289f15e58179a03c4f609699141
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218025"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504719"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Classe CMFCToolBarMenuButton
 
@@ -110,80 +110,80 @@ Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartel
 class CMFCToolBarMenuButton : public CMFCToolBarButton
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Costruisce un oggetto `CMFCToolBarMenuButton`.|
+|[CMFCToolBarMenuButton:: CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Costruisce un oggetto `CMFCToolBarMenuButton`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::CompareWith](#comparewith)|Confronta questa istanza con l'oggetto fornito `CMFCToolBarButton` oggetto. (Esegue l'override [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
-|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Copia le proprietà di un altro pulsante della barra degli strumenti per il pulsante corrente. (Esegue l'override [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
+|[CMFCToolBarMenuButton::CompareWith](#comparewith)|Confronta questa istanza con l'oggetto fornito `CMFCToolBarButton` . Esegue l'override di [CMFCToolBarButton:: compareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).|
+|[CMFCToolBarMenuButton:: CopyFrom](#copyfrom)|Copia le proprietà di un altro pulsante della barra degli strumenti nel pulsante corrente. Esegue l'override di [CMFCToolBarButton:: CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).|
 |[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|Inizializza il menu della barra degli strumenti da un handle di menu di Windows.|
-|[CMFCToolBarMenuButton::CreateMenu](#createmenu)|Consente di creare un menu di Windows che include i comandi nel menu della barra degli strumenti. Restituisce un handle per il menu di Windows.|
-|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|Crea un oggetto menu di scelta rapida ( [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)) per visualizzare il menu della barra degli strumenti.|
+|[CMFCToolBarMenuButton::CreateMenu](#createmenu)|Consente di creare un menu di Windows costituito dai comandi del menu della barra degli strumenti. Restituisce un handle per il menu di Windows.|
+|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|Consente di creare un oggetto menu popup ( [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)) per visualizzare il menu della barra degli strumenti.|
 |[CMFCToolBarMenuButton::EnableQuickCustomize](#enablequickcustomize)||
-|[CMFCToolBarMenuButton::GetCommands](#getcommands)|Offre accesso in lettura all'elenco di comandi nel menu della barra degli strumenti.|
+|[CMFCToolBarMenuButton:: GetCommands](#getcommands)|Consente l'accesso in sola lettura all'elenco di comandi nel menu della barra degli strumenti.|
 |[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|Recupera il rettangolo di delimitazione per l'immagine del pulsante.|
-|[CMFCToolBarMenuButton::GetPaletteRows](#getpaletterows)|Restituisce il numero di righe nel menu a comparsa quando il menu di scelta è in modalità tavolozza.|
-|[CMFCToolBarMenuButton::GetPopupMenu](#getpopupmenu)|Restituisce un puntatore all'oggetto menu a comparsa associato con il pulsante.|
+|[CMFCToolBarMenuButton::GetPaletteRows](#getpaletterows)|Restituisce il numero di righe nel menu a comparsa quando il menu è in modalità tavolozza.|
+|[CMFCToolBarMenuButton::GetPopupMenu](#getpopupmenu)|Restituisce un puntatore all'oggetto menu popup associato al pulsante.|
 |[CMFCToolBarMenuButton::HasButton](#hasbutton)||
-|[CMFCToolBarMenuButton::HaveHotBorder](#havehotborder)|Determina se viene visualizzato un bordo del pulsante quando un utente seleziona il pulsante. (Esegue l'override [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|
-|[CMFCToolBarMenuButton::IsBorder](#isborder)||
+|[CMFCToolBarMenuButton::HaveHotBorder](#havehotborder)|Determina se un bordo del pulsante viene visualizzato quando un utente seleziona il pulsante. Esegue l'override di [CMFCToolBarButton:: HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).|
+|[CMFCToolBarMenuButton:: Transborder](#isborder)||
 |[CMFCToolBarMenuButton::IsClickedOnMenu](#isclickedonmenu)||
 |[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|Determina se viene visualizzato il menu di scelta rapida.|
-|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Chiamato dal framework per determinare se un utente può aprire un sottomenu dalla voce di menu selezionata.|
-|[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|Determina se il pulsante è in modalità esclusiva, vale a dire, se il menu a comparsa rimane aperto anche quando l'utente sposta il puntatore su un altro della barra degli strumenti o un pulsante.|
+|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Chiamata eseguita dal Framework per determinare se un utente può aprire un sottomenu dalla voce di menu selezionata.|
+|[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|Determina se il pulsante è in modalità esclusiva, ovvero se il menu di scelta rapida rimane aperto anche quando il puntatore del mouse viene spostato su un'altra barra degli strumenti o un pulsante.|
 |[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|Determina se il menu di scelta rapida è in modalità tavolozza.|
-|[CMFCToolBarMenuButton::IsQuickMode](#isquickmode)||
-|[CMFCToolBarMenuButton::IsTearOffMenu](#istearoffmenu)|Determina se il menu a comparsa possiede una barra a comparsa.|
+|[CMFCToolBarMenuButton:: IsQuickMode](#isquickmode)||
+|[CMFCToolBarMenuButton::IsTearOffMenu](#istearoffmenu)|Determina se nel menu popup è presente una barra di strappo.|
 |[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||
-|[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|Specifica se il pulsante può essere trascinato. (Esegue l'override [CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|
-|[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Chiamato dal framework per calcolare le dimensioni del pulsante per il contesto di dispositivo specificato e lo stato di ancoraggio. (Esegue l'override [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Chiamato dal framework per gestire il [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) messaggio. (Esegue l'override [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|
-|[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Chiamato dal framework quando il pulsante viene inserito in una nuova barra degli strumenti. (Esegue l'override [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|
-|[CMFCToolBarMenuButton::OnClick](#onclick)|Chiamato dal framework quando l'utente fa clic sul pulsante del mouse. (Esegue l'override [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
-|[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Chiamato dal framework quando l'utente seleziona un elemento del menu a comparsa.|
-|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|Chiamato dal framework quando la barra degli strumenti padre gestisce un messaggio WM_HELPHITTEST. (Esegue l'override [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|
-|[CMFCToolBarMenuButton::OnDraw](#ondraw)|Chiamato dal framework per disegnare il pulsante utilizzando gli stili specificati e le opzioni. (Esegue l'override [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
-|[CMFCToolBarMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Chiamato dal framework per disegnare il pulsante di **comandi** riquadro della finestra il **Personalizza** nella finestra di dialogo. (Esegue l'override [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|
-|[CMFCToolBarMenuButton::OpenPopupMenu](#openpopupmenu)|Chiamato dal framework quando l'utente apre il menu di scelta rapida.|
-|[CMFCToolBarMenuButton::ResetImageToDefault](#resetimagetodefault)|Imposta il valore predefinito l'immagine associata al pulsante. (Esegue l'override [CMFCToolBarButton::ResetImageToDefault](../../mfc/reference/cmfctoolbarbutton-class.md#resetimagetodefault).)|
-|[CMFCToolBarMenuButton::SaveBarState](#savebarstate)|Salva lo stato del pulsante della barra degli strumenti. (Esegue l'override [CMFCToolBarButton::SaveBarState](../../mfc/reference/cmfctoolbarbutton-class.md#savebarstate).)|
-|[CMFCToolBarMenuButton::Serialize](#serialize)|Legge l'oggetto da un archivio o lo scrive in un archivio. (Esegue l'override [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|
-|[CMFCToolBarMenuButton::SetACCData](#setaccdata)|Popola l'oggetto specificato `CAccessibilityData` oggetto con dati di accessibilità dal pulsante della barra degli strumenti. (Esegue l'override [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|
+|[CMFCToolBarMenuButton:: OnBeforeDrag](#onbeforedrag)|Specifica se il pulsante può essere trascinato. Esegue l'override di [CMFCToolBarButton:: OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).|
+|[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Chiamata eseguita dal Framework per calcolare le dimensioni del pulsante per il contesto di dispositivo e lo stato di ancoraggio specificati. Esegue l'override di [CMFCToolBarButton:: OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).|
+|[CMFCToolBarMenuButton:: OnCancelMode](#oncancelmode)|Chiamata eseguita dal Framework per gestire il messaggio [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) . Esegue l'override di [CMFCToolBarButton:: OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).|
+|[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Chiamata eseguita dal framework quando il pulsante viene inserito in una nuova barra degli strumenti. Esegue l'override di [CMFCToolBarButton:: OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).|
+|[CMFCToolBarMenuButton:: OnClick](#onclick)|Chiamata eseguita dal framework quando l'utente fa clic con il pulsante del mouse. Esegue l'override di [CMFCToolBarButton:: OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).|
+|[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Chiamata eseguita dal framework quando l'utente seleziona un elemento nel menu a comparsa.|
+|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|Chiamata eseguita dal framework quando la barra degli strumenti padre gestisce un messaggio WM_HELPHITTEST. Esegue l'override di [CMFCToolBarButton:: OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).|
+|[CMFCToolBarMenuButton:: onpare](#ondraw)|Chiamato dal Framework per disegnare il pulsante usando gli stili e le opzioni specificati. Esegue l'override di [CMFCToolBarButton:: onpare](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).|
+|[CMFCToolBarMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Viene chiamato dal Framework per creare il pulsante nel riquadro **comandi** della finestra di dialogo **Personalizza** . Esegue l'override di [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).|
+|[CMFCToolBarMenuButton::OpenPopupMenu](#openpopupmenu)|Chiamata eseguita dal framework quando l'utente apre il menu di scelta rapida.|
+|[CMFCToolBarMenuButton::ResetImageToDefault](#resetimagetodefault)|Imposta sul valore predefinito l'immagine associata al pulsante. Esegue l'override di [CMFCToolBarButton:: ResetImageToDefault](../../mfc/reference/cmfctoolbarbutton-class.md#resetimagetodefault).|
+|[CMFCToolBarMenuButton:: SaveBarState](#savebarstate)|Salva lo stato del pulsante della barra degli strumenti. Esegue l'override di [CMFCToolBarButton:: SaveBarState](../../mfc/reference/cmfctoolbarbutton-class.md#savebarstate).|
+|[CMFCToolBarMenuButton:: Serialize](#serialize)|Legge questo oggetto da un archivio o lo scrive in un archivio. Esegue l'override di [CMFCToolBarButton:: Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).|
+|[CMFCToolBarMenuButton:: SetACCData](#setaccdata)|Popola l'oggetto fornito `CAccessibilityData` con i dati di accessibilità dal pulsante della barra degli strumenti. Esegue l'override di [CMFCToolBarButton:: SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).|
 |[CMFCToolBarMenuButton::SetMenuOnly](#setmenuonly)|Specifica se il pulsante può essere aggiunto a una barra degli strumenti.|
 |[CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)|Specifica se il menu di scelta rapida è in modalità tavolozza.|
 |[CMFCToolBarMenuButton::SetMessageWnd](#setmessagewnd)||
-|[CMFCToolBarMenuButton::SetRadio](#setradio)|Forza il pulsante di menu della barra degli strumenti per visualizzare un'icona che indica che è selezionato.|
-|[CMFCToolBarMenuButton::SetTearOff](#settearoff)|Specifica un tear-off barra ID per il menu di scelta rapida.|
+|[CMFCToolBarMenuButton:: seradio](#setradio)|Forza il pulsante di menu della barra degli strumenti per visualizzare un'icona che indica che è selezionata.|
+|[CMFCToolBarMenuButton::SetTearOff](#settearoff)|Consente di specificare un ID barra di strappo per il menu di scelta rapida.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Disegna un'icona del pulsante di menu.|
+|[CMFCToolBarMenuButton::D rawDocumentIcon](#drawdocumenticon)|Disegna un'icona sul pulsante di menu.|
 
 ### <a name="data-members"></a>Membri di dati
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Se TRUE, il framework chiama sempre [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) quando viene disegnato un pulsante.|
+|[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Se TRUE, il Framework chiama sempre [CFrameWndEx:: OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) quando viene disegnato un pulsante.|
 
 ## <a name="remarks"></a>Note
 
-Oggetto `CMFCToolBarMenuButton` può apparire come un menu, una voce di menu che dispone di un sottomenu, un pulsante che esegue un comando o viene visualizzato un menu o un pulsante che visualizza un menu di scelta. Determinare il comportamento e l'aspetto del pulsante di menu specificando i parametri, ad esempio le immagini, testo, l'handle di menu e ID associato con il pulsante nel costruttore di comando `CMFCToolbarMenuButton::CMFCToolbarMenuButton`.
+Un `CMFCToolBarMenuButton` oggetto può essere visualizzato come menu, una voce di menu che include un sottomenu, un pulsante che esegue un comando o Visualizza un menu o un pulsante che visualizza solo un menu. Per determinare il comportamento e l'aspetto del pulsante di menu, è necessario specificare i parametri, ad esempio l'immagine, il testo, l'handle di menu e l'ID di comando `CMFCToolbarMenuButton::CMFCToolbarMenuButton`associati al pulsante nel costruttore.
 
-Una classe personalizzata derivata dal `CMFCToolbarMenuButton` classe deve usare il [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro. Il [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) macro genera un errore durante la chiusura dell'applicazione.
+Una classe personalizzata derivata dalla `CMFCToolbarMenuButton` classe deve usare la macro [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) . La macro [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) genera un errore quando l'applicazione viene chiusa.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come configurare un `CMFCToolBarMenuButton` oggetto. Il codice viene illustrato come specificare che il menu di scelta rapida è in modalità tavolozza e specificare l'ID per la barra a comparsa che viene creata quando l'utente trascina il pulsante di menu di fuori di una barra dei menu. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come configurare un `CMFCToolBarMenuButton` oggetto. Nel codice viene illustrato come specificare che il menu a discesa è in modalità tavolozza e specificare l'ID per la barra di strappo creata quando l'utente trascina il pulsante di menu da una barra dei menu. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
@@ -199,7 +199,7 @@ L'esempio seguente illustra come configurare un `CMFCToolBarMenuButton` oggetto.
 
 **Intestazione:** afxtoolbarmenubutton.h
 
-##  <a name="cmfctoolbarmenubutton"></a>  CMFCToolBarMenuButton::CMFCToolBarMenuButton
+##  <a name="cmfctoolbarmenubutton"></a>CMFCToolBarMenuButton:: CMFCToolBarMenuButton
 
 Costruisce un oggetto `CMFCToolBarMenuButton`.
 
@@ -218,34 +218,34 @@ CMFCToolBarMenuButton(
 ### <a name="parameters"></a>Parametri
 
 *src*<br/>
-[in] Un oggetto esistente `CMFCToolBarMenuButton` oggetto deve essere copiato `CMFCToolBarMenuButton` oggetto.
+in Oggetto esistente `CMFCToolBarMenuButton` da copiare in questo `CMFCToolBarMenuButton` oggetto.
 
 *uiID*<br/>
-[in] L'ID del comando da eseguire quando un utente fa clic sul pulsante; o (UINT) -1 per un pulsante di menu che non esegue direttamente un comando.
+in ID del comando da eseguire quando un utente fa clic sul pulsante; oppure (UINT)-1 per un pulsante di menu che non esegue direttamente un comando.
 
 *hMenu*<br/>
-[in] Un handle a un menu. o NULL se il pulsante non ha un menu.
+in Handle per un menu; o NULL se il pulsante non dispone di un menu.
 
 *iImage*<br/>
-[in] Indice dell'immagine del pulsante; oppure -1 se questo pulsante non ha un'icona o si usa l'icona per il comando specificato dalla *uiID*. L'indice è la stessa per ogni `CMFCToolBarImages` oggetto nell'applicazione.
+in Indice dell'immagine per il pulsante; oppure-1 se questo pulsante non dispone di un'icona o utilizza l'icona del comando specificato da *uiID*. L'indice è lo stesso per ogni `CMFCToolBarImages` oggetto nell'applicazione.
 
 *lpszText*<br/>
-[in] Il testo del pulsante di menu della barra degli strumenti.
+in Testo del pulsante di menu della barra degli strumenti.
 
 *bUserButton*<br/>
-[in] TRUE se il pulsante Visualizza un'immagine definita dall'utente; FALSE se il pulsante Visualizza un'immagine predefinita associata al comando specificato da *uiID*.
+in TRUE se il pulsante Visualizza un'immagine definita dall'utente; FALSE se il pulsante Visualizza un'immagine predefinita associata al comando specificato da *uiID*.
 
 ### <a name="remarks"></a>Note
 
-Se *uiID* valido ID di comando, il pulsante esegue questo comando quando viene selezionato dall'utente. Se *hMenu* è un handle di menu validi, il pulsante fornisce un menu a discesa quando viene visualizzata una barra degli strumenti o un sottomenu quando viene visualizzato in un menu. Se entrambe *uiID* e *hMenu* validi, il pulsante è un pulsante di menu combinato con una parte che eseguirà il comando quando l'utente fa clic su di esso e una parte con una freccia verso il basso che verrà elenco a discesa un menu quando l'utente clic del mouse su di esso. Tuttavia, se *hMenu* valido, un utente non sarà in grado di fare clic sul pulsante per eseguire un comando quando il pulsante viene inserito in un menu.
+Se *uiID* è un ID di comando valido, il pulsante esegue tale comando quando l'utente fa clic su di esso. Se *HMENU* è un handle di menu valido, il pulsante fornisce un menu a discesa quando viene visualizzato in una barra degli strumenti o in un sottomenu quando viene visualizzato in un menu. Se *uiID* e *HMENU* sono entrambi validi, il pulsante è costituito da un pulsante di menu combinato con una parte che eseguirà il comando quando l'utente fa clic su di esso e una parte con una freccia rivolta verso il basso che a discesa di un menu quando l'utente fa clic su di essa. Tuttavia, se *HMENU* è valido, un utente non sarà in grado di fare clic sul pulsante per eseguire un comando quando il pulsante viene inserito in un menu.
 
 ### <a name="example"></a>Esempio
 
-Nell'esempio seguente viene illustrato come costruire un oggetto del `CMFCToolBarMenuButton` classe. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../overview/visual-cpp-samples.md).
+Nell'esempio seguente viene illustrato come costruire un oggetto della `CMFCToolBarMenuButton` classe. Questo frammento di codice fa parte dell' [esempio di Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 
-##  <a name="comparewith"></a>  CMFCToolBarMenuButton::CompareWith
+##  <a name="comparewith"></a>CMFCToolBarMenuButton:: CompareWith
 
 ```
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
@@ -253,13 +253,13 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="parameters"></a>Parametri
 
-[in] *other*<br/>
+in *altro*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-##  <a name="copyfrom"></a>  Cmfctoolbarmenubutton:: CopyFrom
+##  <a name="copyfrom"></a>CMFCToolBarMenuButton:: CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -267,11 +267,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>Parametri
 
-[in] *src*<br/>
+in *src*<br/>
 
 ### <a name="remarks"></a>Note
 
-##  <a name="createfrommenu"></a>  CMFCToolBarMenuButton::CreateFromMenu
+##  <a name="createfrommenu"></a>CMFCToolBarMenuButton:: CreateFromMenu
 
 Inizializza il menu della barra degli strumenti da un handle di menu di Windows.
 
@@ -282,17 +282,17 @@ virtual void CreateFromMenu(HMENU hMenu);
 ### <a name="parameters"></a>Parametri
 
 *hMenu*<br/>
-[in] Handle a un menu.
+in Handle per un menu.
 
 ### <a name="remarks"></a>Note
 
-Un pulsante di menu della barra degli strumenti è possibile visualizzare un sottomenu elenco a discesa.
+Un pulsante di menu della barra degli strumenti può visualizzare un sottomenu a discesa.
 
-Il framework chiama questo metodo per inizializzare i comandi nel sottomenu da un menu.
+Il Framework chiama questo metodo per inizializzare i comandi nel sottomenu da un menu.
 
-##  <a name="createmenu"></a>  CMFCToolBarMenuButton::CreateMenu
+##  <a name="createmenu"></a>CMFCToolBarMenuButton:: CreateMenu
 
-Consente di creare un menu che include i comandi nel menu della barra degli strumenti. Restituisce un handle per il menu di scelta.
+Consente di creare un menu costituito dai comandi nel menu della barra degli strumenti. Restituisce un handle per il menu.
 
 ```
 virtual HMENU CreateMenu() const;
@@ -300,13 +300,13 @@ virtual HMENU CreateMenu() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Handle al menu se esito positivo. NULL se l'elenco di comandi associati con il pulsante di menu della barra degli strumenti è vuota.
+Handle per il menu se l'operazione ha esito positivo. NULL se l'elenco di comandi associato al pulsante di menu della barra degli strumenti è vuoto.
 
 ### <a name="remarks"></a>Note
 
-È possibile eseguire l'override di questo metodo in una classe derivata per personalizzare il modo in cui che viene generato il menu di scelta.
+È possibile eseguire l'override di questo metodo in una classe derivata per personalizzare la modalità di generazione del menu.
 
-##  <a name="createpopupmenu"></a>  CMFCToolBarMenuButton::CreatePopupMenu
+##  <a name="createpopupmenu"></a>CMFCToolBarMenuButton:: CreatePopupMenu
 
 Crea un `CMFCPopupMenu` oggetto per visualizzare il menu della barra degli strumenti.
 
@@ -316,17 +316,17 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un `CMFCPopupMenu` oggetto che consente di visualizzare il menu di scelta rapida associato al pulsante di menu della barra degli strumenti.
+Puntatore a un `CMFCPopupMenu` oggetto che Visualizza il menu a discesa associato al pulsante di menu della barra degli strumenti.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo viene chiamato dal framework per preparare la visualizzazione del menu elenco a discesa associato al pulsante.
+Questo metodo viene chiamato dal Framework per preparare la visualizzazione del menu a discesa associato al pulsante.
 
-L'implementazione predefinita appena costruisce e restituisce un nuovo `CMFCPopupMenu` oggetto. Eseguire l'override di questo metodo se si desidera utilizzare un tipo derivato del [classe CMFCPopupMenu](cmfcpopupmenu-class.md) o per eseguire un'inizializzazione aggiuntiva.
+L'implementazione predefinita crea e restituisce un nuovo `CMFCPopupMenu` oggetto. Eseguire l'override di questo metodo se si desidera utilizzare un tipo derivato della [classe CMFCPopupMenu](cmfcpopupmenu-class.md) o per eseguire un'inizializzazione aggiuntiva.
 
-##  <a name="drawdocumenticon"></a>  CMFCToolBarMenuButton::DrawDocumentIcon
+##  <a name="drawdocumenticon"></a>CMFCToolBarMenuButton::D rawDocumentIcon
 
-Disegna l'icona del documento sul pulsante di menu.
+Disegna un'icona del documento nel pulsante di menu.
 
 ```
 void DrawDocumentIcon(
@@ -338,19 +338,19 @@ void DrawDocumentIcon(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-[in] Puntatore al contesto di dispositivo.
+in Puntatore al contesto di dispositivo.
 
 *rectImage*<br/>
-[in] Coordinate dell'immagine del rettangolo di delimitazione.
+in Coordinate del rettangolo di delimitazione dell'immagine.
 
 *hIcon*<br/>
-[in] Handle dell'icona.
+in Handle per l'icona.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo accetta l'icona del documento e lo disegna nel pulsante di menu, centrato nell'area specificata da *rectImage*.
+Questo metodo accetta un'icona di documento e la disegna sul pulsante di menu, centrato nell'area specificata da *rectImage*.
 
-##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize
+##  <a name="enablequickcustomize"></a>CMFCToolBarMenuButton:: EnableQuickCustomize
 
 ```
 void EnableQuickCustomize();
@@ -358,7 +358,7 @@ void EnableQuickCustomize();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="hasbutton"></a>  CMFCToolBarMenuButton::HasButton
+##  <a name="hasbutton"></a>CMFCToolBarMenuButton:: HasButton
 
 ```
 virtual BOOL HasButton() const;
@@ -368,7 +368,7 @@ virtual BOOL HasButton() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="havehotborder"></a>  CMFCToolBarMenuButton::HaveHotBorder
+##  <a name="havehotborder"></a>CMFCToolBarMenuButton:: HaveHotBorder
 
 ```
 virtual BOOL HaveHotBorder() const;
@@ -378,7 +378,7 @@ virtual BOOL HaveHotBorder() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="isborder"></a>  CMFCToolBarMenuButton::IsBorder
+##  <a name="isborder"></a>CMFCToolBarMenuButton:: Transborder
 
 ```
 virtual BOOL IsBorder() const;
@@ -388,7 +388,7 @@ virtual BOOL IsBorder() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="isclickedonmenu"></a>  CMFCToolBarMenuButton::IsClickedOnMenu
+##  <a name="isclickedonmenu"></a>CMFCToolBarMenuButton:: IsClickedOnMenu
 
 ```
 BOOL IsClickedOnMenu() const;
@@ -398,7 +398,7 @@ BOOL IsClickedOnMenu() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="isquickmode"></a>  CMFCToolBarMenuButton::IsQuickMode
+##  <a name="isquickmode"></a>CMFCToolBarMenuButton:: IsQuickMode
 
 ```
 BOOL IsQuickMode();
@@ -408,9 +408,9 @@ BOOL IsQuickMode();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="getcommands"></a>  CMFCToolBarMenuButton::GetCommands
+##  <a name="getcommands"></a>CMFCToolBarMenuButton:: GetCommands
 
-Offre accesso in lettura all'elenco di comandi nel menu della barra degli strumenti.
+Consente l'accesso in sola lettura all'elenco di comandi nel menu della barra degli strumenti.
 
 ```
 const CObList& GetCommands() const;
@@ -418,13 +418,13 @@ const CObList& GetCommands() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un riferimento const a un [classe CObList](../../mfc/reference/coblist-class.md) oggetto, che contiene una raccolta di [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) oggetti.
+Un riferimento const a un oggetto di [classe CObList](../../mfc/reference/coblist-class.md) , che contiene una raccolta di oggetti della [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) .
 
 ### <a name="remarks"></a>Note
 
-Un pulsante di menu della barra degli strumenti è possibile visualizzare un sottomenu. È possibile fornire l'elenco di comandi nel sottomenu nel costruttore o in [CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu) come handle di un menu di scelta (HMENU). Il menu viene convertito in un elenco di oggetti derivati da [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) e archiviato nella classe interna `CObList` oggetto. Questo elenco è possibile accedere chiamando questo metodo.
+Un pulsante di menu della barra degli strumenti può visualizzare un sottomenu. È possibile specificare l'elenco di comandi nel sottomenu nel costruttore o in [CMFCToolBarMenuButton:: CreateFromMenu](#createfrommenu) come handle per un menu (HMENU). Il menu viene convertito in un elenco di oggetti derivati dalla [classe CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) e archiviati nell'oggetto interno `CObList` . È possibile accedere a questo elenco chiamando questo metodo.
 
-##  <a name="getimagerect"></a>  CMFCToolBarMenuButton::GetImageRect
+##  <a name="getimagerect"></a>CMFCToolBarMenuButton:: GetImageRect
 
 Recupera il rettangolo di delimitazione per l'immagine del pulsante.
 
@@ -435,11 +435,11 @@ void GetImageRect(CRect& rectImage);
 ### <a name="parameters"></a>Parametri
 
 *rectImage*<br/>
-[out] Un riferimento a un `CRect` oggetto che riceve le coordinate dell'immagine del rettangolo di delimitazione.
+out Riferimento a un `CRect` oggetto che riceve le coordinate del rettangolo di delimitazione dell'immagine.
 
-##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows
+##  <a name="getpaletterows"></a>CMFCToolBarMenuButton:: GetPaletteRows
 
-Restituisce il numero di righe nel menu a discesa quando il menu di scelta è in modalità tavolozza.
+Restituisce il numero di righe nel menu a discesa quando il menu è in modalità tavolozza.
 
 ```
 int GetPaletteRows() const;
@@ -447,15 +447,15 @@ int GetPaletteRows() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il numero di righe nella tavolozza.
+Numero di righe nella tavolozza.
 
 ### <a name="remarks"></a>Note
 
-Quando il pulsante di menu è impostato su modalità tavolozza, voci di menu verranno visualizzato in più colonne con solo un numero limitato di righe. Chiamare questo metodo per ottenere il numero di righe. È possibile abilitare o disabilitare la modalità di tavolozza e specificare il numero di righe utilizzando [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).
+Quando il pulsante di menu è impostato sulla modalità tavolozza, le voci di menu verranno visualizzate in più colonne con solo un numero limitato di righe. Chiamare questo metodo per ottenere il numero di righe. È possibile abilitare o disabilitare la modalità tavolozza e specificare il numero di righe usando [CMFCToolBarMenuButton:: SetMenuPaletteMode](#setmenupalettemode).
 
-##  <a name="getpopupmenu"></a>  CMFCToolBarMenuButton::GetPopupMenu
+##  <a name="getpopupmenu"></a>CMFCToolBarMenuButton:: GetPopupMenu
 
-Restituisce un puntatore per il [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) oggetto che rappresenta il menu a discesa del pulsante.
+Restituisce un puntatore all'oggetto della [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) che rappresenta il menu a discesa del pulsante.
 
 ```
 CMFCPopupMenu* GetPopupMenu() const;
@@ -463,15 +463,15 @@ CMFCPopupMenu* GetPopupMenu() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) oggetto creato quando il framework disegnata del sottomenu del pulsante di menu della barra degli strumenti; NULL se non viene visualizzato alcun sottomenu.
+Puntatore a un oggetto della [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) creato quando il framework disegna il sottomenu del pulsante di menu della barra degli strumenti; NULL se non viene visualizzato alcun sottomenu.
 
 ### <a name="remarks"></a>Note
 
-Quando un pulsante di menu della barra degli strumenti viene visualizzato un menu di scelta rapida, il pulsante Crea una [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) oggetti per rappresentare il menu di scelta. Chiamare questo metodo per ottenere un puntatore al `CMFCPopupMenu` oggetto. È consigliabile non archiviare il puntatore restituito, perché è temporaneo e non è più valido quando l'utente chiude il menu di scelta rapida.
+Quando un pulsante di menu della barra degli strumenti Visualizza un menu a discesa, il pulsante Crea un oggetto della [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) per rappresentare il menu. Chiamare questo metodo per ottenere un puntatore all' `CMFCPopupMenu` oggetto. Non è consigliabile archiviare il puntatore restituito perché è temporaneo e diventa non valido quando l'utente chiude il menu a discesa.
 
-##  <a name="isdroppeddown"></a>  CMFCToolBarMenuButton::IsDroppedDown
+##  <a name="isdroppeddown"></a>CMFCToolBarMenuButton:: IsDroppedDown
 
-Indica se è attualmente visualizzato nel menu a comparsa.
+Indica se il menu popup è attualmente visualizzato.
 
 ```
 virtual BOOL IsDroppedDown() const;
@@ -479,11 +479,11 @@ virtual BOOL IsDroppedDown() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il pulsante di menu della barra degli strumenti viene visualizzato il sottomenu; in caso contrario, FALSE.
+TRUE se il pulsante di menu della barra degli strumenti Visualizza il sottomenu; in caso contrario, FALSE.
 
-##  <a name="isemptymenuallowed"></a>  CMFCToolBarMenuButton::IsEmptyMenuAllowed
+##  <a name="isemptymenuallowed"></a>CMFCToolBarMenuButton:: IsEmptyMenuAllowed
 
-Specifica se le voci di menu viene visualizzata vuoti sottomenu.
+Specifica se le voci di menu visualizzano sottomenu vuoti.
 
 ```
 virtual BOOL IsEmptyMenuAllowed() const;
@@ -491,15 +491,15 @@ virtual BOOL IsEmptyMenuAllowed() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il framework si apre un sottomenu dalla voce di menu attualmente selezionato anche quando il sottomenu è vuoto. in caso contrario, FALSE.
+TRUE se il Framework apre un sottomenu dalla voce di menu attualmente selezionata anche quando il sottomenu è vuoto; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Il framework chiama questo metodo quando un utente prova ad aprire il sottomenu dalla voce di menu attualmente selezionata. Se il sottomenu è vuoto e `IsEmptyMenuAllowed` restituisce FALSE, non si apre il sottomenu.
+Il Framework chiama questo metodo quando un utente tenta di aprire il sottomenu dalla voce di menu attualmente selezionata. Se il sottomenu è vuoto e `IsEmptyMenuAllowed` restituisce false, il sottomenu non verrà aperto.
 
 L'implementazione predefinita restituisce FALSE. Eseguire l'override di questo metodo per personalizzare questo comportamento.
 
-##  <a name="isexclusive"></a>  CMFCToolBarMenuButton::IsExclusive
+##  <a name="isexclusive"></a>CMFCToolBarMenuButton:: unexclusive
 
 Indica se il pulsante è in modalità esclusiva.
 
@@ -513,13 +513,13 @@ TRUE se il pulsante funziona in modalità esclusiva; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Quando un utente apre un menu di scelta rapida per un pulsante e quindi si sposta il puntatore del mouse su un altro pulsante della barra degli strumenti o menu, menu a comparsa si chiude, a meno che il pulsante si trova in modalità esclusiva.
+Quando un utente apre un menu popup per un pulsante e quindi sposta il puntatore del mouse su un'altra barra degli strumenti o sul pulsante di menu, il menu popup si chiude, a meno che il pulsante non sia in modalità esclusiva.
 
-L'implementazione predefinita restituisce sempre FALSE. L'override del metodo in una classe derivata se si desidera attivare la modalità esclusiva.
+L'implementazione predefinita restituisce sempre FALSE. Eseguire l'override di questo metodo in una classe derivata se si desidera attivare la modalità esclusiva.
 
-##  <a name="ismenupalettemode"></a>  CMFCToolBarMenuButton::IsMenuPaletteMode
+##  <a name="ismenupalettemode"></a>CMFCToolBarMenuButton:: IsMenuPaletteMode
 
-Determina se il menu di scelta rapida è in modalità tavolozza.
+Determina se il menu a discesa è in modalità tavolozza.
 
 ```
 BOOL IsMenuPaletteMode() const;
@@ -527,15 +527,15 @@ BOOL IsMenuPaletteMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la modalità di tavolozza è abilitata, in caso contrario, FALSE.
+TRUE se la modalità tavolozza è abilitata, in caso contrario FALSE.
 
 ### <a name="remarks"></a>Note
 
-Quando il pulsante di menu è impostato su modalità tavolozza, voci di menu vengono visualizzate in più colonne con solo un numero limitato di righe. Chiamare questo metodo per ottenere il numero di righe. È possibile abilitare o disabilitare la modalità della tavolozza chiamando [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).
+Quando il pulsante di menu è impostato sulla modalità tavolozza, le voci di menu vengono visualizzate in più colonne con solo un numero limitato di righe. Chiamare questo metodo per ottenere il numero di righe. È possibile abilitare o disabilitare la modalità tavolozza chiamando [CMFCToolBarMenuButton:: SetMenuPaletteMode](#setmenupalettemode).
 
-##  <a name="istearoffmenu"></a>  CMFCToolBarMenuButton::IsTearOffMenu
+##  <a name="istearoffmenu"></a>CMFCToolBarMenuButton:: IsTearOffMenu
 
-Indica se il menu di scelta rapida possiede una barra a comparsa.
+Indica se il menu a discesa dispone di una barra di strappo.
 
 ```
 virtual BOOL IsTearOffMenu() const;
@@ -543,15 +543,15 @@ virtual BOOL IsTearOffMenu() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se il pulsante di menu della barra degli strumenti dispone di una barra a comparsa. in caso contrario, FALSE.
+TRUE se il pulsante del menu della barra degli strumenti ha una barra di strappo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Per abilitare la funzionalità tear-off e impostare il tear-off barra ID, chiamare [CMFCToolBarMenuButton::SetTearOff](#settearoff).
+Per abilitare la funzionalità di strappo e impostare l'ID della barra di strappo, chiamare [CMFCToolBarMenuButton:: SetTearOff](#settearoff).
 
 ##  <a name="m_balwayscallownerdraw"></a>  CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw
 
-Specifica se il framework chiama sempre [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) quando viene disegnato un pulsante.
+Specifica se il Framework chiama sempre [CFrameWndEx:: OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) quando viene disegnato un pulsante.
 
 ```
 static BOOL m_bAlwaysCallOwnerDraw;
@@ -559,9 +559,9 @@ static BOOL m_bAlwaysCallOwnerDraw;
 
 ### <a name="remarks"></a>Note
 
-Quando questa variabile membro è impostata su TRUE, il pulsante chiama sempre [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) metodo per visualizzare l'immagine del pulsante. Quando si `m_bAlwaysCallOwnerDraw` è FALSE, l'immagine viene disegnata sul pulsante stesso se l'immagine è già definito. In caso contrario, chiama `OnDrawMenuImage`.
+Quando questa variabile membro è impostata su TRUE, il pulsante chiama sempre il metodo [CFrameWndEx:: OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) per visualizzare l'immagine sul pulsante. Quando `m_bAlwaysCallOwnerDraw` è false, il pulsante stesso disegna l'immagine se l'immagine è predefinita. In caso contrario, `OnDrawMenuImage`chiama.
 
-##  <a name="onaftercreatepopupmenu"></a>  CMFCToolBarMenuButton::OnAfterCreatePopupMenu
+##  <a name="onaftercreatepopupmenu"></a>CMFCToolBarMenuButton:: OnAfterCreatePopupMenu
 
 ```
 virtual void OnAfterCreatePopupMenu();
@@ -569,7 +569,7 @@ virtual void OnAfterCreatePopupMenu();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="onbeforedrag"></a>  CMFCToolBarMenuButton::OnBeforeDrag
+##  <a name="onbeforedrag"></a>CMFCToolBarMenuButton:: OnBeforeDrag
 
 ```
 virtual BOOL OnBeforeDrag() const;
@@ -579,7 +579,7 @@ virtual BOOL OnBeforeDrag() const;
 
 ### <a name="remarks"></a>Note
 
-##  <a name="oncalculatesize"></a>  CMFCToolBarMenuButton::OnCalculateSize
+##  <a name="oncalculatesize"></a>CMFCToolBarMenuButton:: OnCalculateSize
 
 ```
 virtual SIZE OnCalculateSize(
@@ -598,7 +598,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="remarks"></a>Note
 
-##  <a name="oncancelmode"></a>  CMFCToolBarMenuButton::OnCancelMode
+##  <a name="oncancelmode"></a>CMFCToolBarMenuButton:: OnCancelMode
 
 ```
 virtual void OnCancelMode();
@@ -606,7 +606,7 @@ virtual void OnCancelMode();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="onchangeparentwnd"></a>  CMFCToolBarMenuButton::OnChangeParentWnd
+##  <a name="onchangeparentwnd"></a>CMFCToolBarMenuButton:: OnChangeParentWnd
 
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -618,7 +618,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="onclick"></a>  CMFCToolBarMenuButton::OnClick
+##  <a name="onclick"></a>CMFCToolBarMenuButton:: OnClick
 
 ```
 virtual BOOL OnClick(
@@ -629,15 +629,15 @@ virtual BOOL OnClick(
 ### <a name="parameters"></a>Parametri
 
 [in] *pWnd*<br/>
-[in] *bDelay*<br/>
+in *bDelay*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-##  <a name="onclickmenuitem"></a>  CMFCToolBarMenuButton::OnClickMenuItem
+##  <a name="onclickmenuitem"></a>CMFCToolBarMenuButton:: OnClickMenuItem
 
-Chiamato dal framework quando l'utente seleziona un elemento nel menu a discesa.
+Chiamata eseguita dal framework quando l'utente seleziona un elemento nel menu a discesa.
 
 ```
 virtual BOOL OnClickMenuItem();
@@ -645,15 +645,15 @@ virtual BOOL OnClickMenuItem();
 
 ### <a name="return-value"></a>Valore restituito
 
-FALSE se il framework deve continuare il menu predefiniti di elaborazione elemento; in caso contrario TRUE. L'implementazione predefinita restituisce sempre FALSE.
+FALSE se il Framework deve continuare l'elaborazione della voce di menu predefinita; in caso contrario, TRUE. L'implementazione predefinita restituisce sempre FALSE.
 
 ### <a name="remarks"></a>Note
 
-Quando l'utente fa clic su una voce di menu, il framework esegue un comando che è associato a tale elemento.
+Quando l'utente fa clic su una voce di menu, il Framework esegue un comando associato a tale elemento.
 
-Per personalizzare l'elaborazione di voce di menu, eseguire l'override `OnClickMenuItem` in una classe derivata da `CMFCToolBarMenuButton` classe. È anche necessario eseguire l'override [CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) e sostituire i pulsanti di menu che richiedono un'elaborazione speciale con istanze della classe derivata.
+Per personalizzare l'elaborazione della voce di menu `OnClickMenuItem` , eseguire l'override di `CMFCToolBarMenuButton` in una classe derivata dalla classe. È inoltre necessario eseguire l'override di [CFrameWndEx:: OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) e sostituire i pulsanti di menu che richiedono un'elaborazione speciale con istanze della classe derivata.
 
-##  <a name="oncontexthelp"></a>  CMFCToolBarMenuButton::OnContextHelp
+##  <a name="oncontexthelp"></a>CMFCToolBarMenuButton:: OnContextHelp
 
 ```
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -667,7 +667,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="ondraw"></a>  CMFCToolBarMenuButton::OnDraw
+##  <a name="ondraw"></a>CMFCToolBarMenuButton:: onpare
 
 ```
 virtual void OnDraw(
@@ -685,16 +685,16 @@ virtual void OnDraw(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *pImages*<br/>
+in *pImages*<br/>
 [in] *bHorz*<br/>
-[in] *bCustomizeMode*<br/>
-[in] *bHighlight*<br/>
+in *bCustomizeMode*<br/>
+in *bHighlight*<br/>
 [in] *bDrawBorder*<br/>
 [in] *bGrayDisabledButtons*<br/>
 
 ### <a name="remarks"></a>Note
 
-##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarMenuButton::OnDrawOnCustomizeList
+##  <a name="ondrawoncustomizelist"></a>CMFCToolBarMenuButton:: OnDrawOnCustomizeList
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -707,15 +707,15 @@ virtual int OnDrawOnCustomizeList(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *bSelected*<br/>
+in *bSelected*<br/>
 
 ### <a name="return-value"></a>Valore restituito
 
 ### <a name="remarks"></a>Note
 
-##  <a name="openpopupmenu"></a>  CMFCToolBarMenuButton::OpenPopupMenu
+##  <a name="openpopupmenu"></a>CMFCToolBarMenuButton:: OpenPopupMenu
 
-Chiamato dal framework quando l'utente apre il menu di scelta rapida di un pulsante di menu della barra degli strumenti.
+Chiamata eseguita dal framework quando l'utente apre il menu a discesa di un pulsante di menu della barra degli strumenti.
 
 ```
 virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
@@ -724,17 +724,17 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ### <a name="parameters"></a>Parametri
 
 *pWnd*<br/>
-[in] Specifica la finestra che riceve i comandi di menu a discesa. Può essere NULL solo se il pulsante di menu della barra degli strumenti dispone di una finestra padre.
+in Specifica la finestra che riceve i comandi del menu a discesa. Può essere NULL solo se il pulsante di menu della barra degli strumenti ha una finestra padre.
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE quando un [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) oggetto è stato creato e aperto correttamente; in caso contrario, FALSE.
+TRUE quando un oggetto della [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) è stato creato e aperto correttamente; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione viene chiamata dal framework quando l'utente apre un menu di scelta rapida da un pulsante di menu della barra degli strumenti.
+Questa funzione viene chiamata dal framework quando l'utente apre un menu a discesa da un pulsante del menu della barra degli strumenti.
 
-##  <a name="resetimagetodefault"></a>  CMFCToolBarMenuButton::ResetImageToDefault
+##  <a name="resetimagetodefault"></a>CMFCToolBarMenuButton:: ResetImageToDefault
 
 ```
 virtual void ResetImageToDefault();
@@ -742,7 +742,7 @@ virtual void ResetImageToDefault();
 
 ### <a name="remarks"></a>Note
 
-##  <a name="savebarstate"></a>  CMFCToolBarMenuButton::SaveBarState
+##  <a name="savebarstate"></a>CMFCToolBarMenuButton:: SaveBarState
 
 ```
 virtual void SaveBarState();
@@ -750,9 +750,9 @@ virtual void SaveBarState();
 
 ### <a name="remarks"></a>Note
 
-Il framework chiama questo metodo durante la creazione di un pulsante della barra degli strumenti come risultato di un'operazione di trascinamento e rilascio. Questo metodo chiama il [CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) metodo del menu a comparsa livello superiore, in modo che il pulsante principale del menu a comparsa per ricreare il menu di scelta.
+Il Framework chiama questo metodo quando crea un pulsante della barra degli strumenti come risultato di un'operazione di trascinamento della selezione. Questo metodo chiama il metodo [CMFCPopupMenu:: SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) del menu a comparsa di primo livello, che fa in modo che il pulsante padre del menu popup ricrei il proprio menu.
 
-##  <a name="serialize"></a>  CMFCToolBarMenuButton::Serialize
+##  <a name="serialize"></a>CMFCToolBarMenuButton:: Serialize
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -764,7 +764,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="setaccdata"></a>  CMFCToolBarMenuButton::SetACCData
+##  <a name="setaccdata"></a>CMFCToolBarMenuButton:: SetACCData
 
 Imposta i dati di accessibilità per l'elemento della barra multifunzione.
 
@@ -790,9 +790,9 @@ Restituisce sempre TRUE.
 
 Per impostazione predefinita, questo metodo imposta i dati di accessibilità per l'elemento della barra multifunzione e restituisce sempre TRUE. Eseguire l'override di questo metodo per impostare i dati di accessibilità e restituire un valore che indica l'esito positivo o negativo.
 
-##  <a name="setmenuonly"></a>  CMFCToolBarMenuButton::SetMenuOnly
+##  <a name="setmenuonly"></a>CMFCToolBarMenuButton:: SetMenuOnly
 
-Specifica se il pulsante viene disegnato un pulsante di menu o un pulsante separatore quando ha un ID di comando valido e un sottomenu.
+Specifica se il pulsante viene disegnato come un pulsante di menu o un pulsante di menu combinato quando dispone di un ID comando valido e di un sottomenu.
 
 ```
 void SetMenuOnly(BOOL bMenuOnly);
@@ -801,15 +801,15 @@ void SetMenuOnly(BOOL bMenuOnly);
 ### <a name="parameters"></a>Parametri
 
 *bMenuOnly*<br/>
-[in] TRUE per mostrare questo pulsante come un pulsante di menu quando ha un ID di comando valido e un sottomenu, FALSE per mostrare questo pulsante come un pulsante di menu combinato, quando ha un ID di comando valido e un sottomenu.
+in TRUE per visualizzare questo pulsante come pulsante di menu quando dispone di un ID comando valido e di un sottomenu, FALSE per visualizzare questo pulsante come pulsante di menu combinato quando dispone di un ID comando valido e di un sottomenu.
 
 ### <a name="remarks"></a>Note
 
-In genere, quando un pulsante di menu della barra degli strumenti dispone di un sottomenu sia un ID di comando, il menu di scelta sembra essere un pulsante di menu combinato con un pulsante principale e un oggetto associato pulsante freccia giù. Se si chiama questo metodo e *bMenuOnly* è TRUE, il pulsante viene invece visualizzato come pulsante singolo menu con una freccia verso il basso del pulsante. Quando l'utente fa clic sulla freccia in entrambe le modalità, viene visualizzato il sottomenu e quando l'utente seleziona la parte non freccia del pulsante in entrambe le modalità il framework esegue il comando.
+In genere, quando un pulsante di menu della barra degli strumenti dispone di un sottomenu e di un ID di comando, il menu sembra essere un pulsante combinato con un pulsante principale e un pulsante freccia giù associato. Se si chiama questo metodo e *bMenuOnly* è true, il pulsante viene invece visualizzato come un singolo pulsante di menu con una freccia rivolta verso il basso nel pulsante. Quando l'utente fa clic sulla freccia in una delle due modalità, viene aperto il sottomenu e quando l'utente fa clic sulla parte non freccia del pulsante in una delle due modalità, il Framework esegue il comando.
 
-##  <a name="setmenupalettemode"></a>  CMFCToolBarMenuButton::SetMenuPaletteMode
+##  <a name="setmenupalettemode"></a>CMFCToolBarMenuButton:: SetMenuPaletteMode
 
-Specifica se il menu di scelta rapida è in modalità tavolozza.
+Specifica se il menu a discesa è in modalità tavolozza.
 
 ```
 void SetMenuPaletteMode(
@@ -820,16 +820,16 @@ void SetMenuPaletteMode(
 ### <a name="parameters"></a>Parametri
 
 *bMenuPaletteMode*<br/>
-[in] Specifica se il menu di scelta rapida è in modalità tavolozza.
+in Specifica se il menu a discesa è in modalità tavolozza.
 
 *nPaletteRows*<br/>
-[in] Numero di righe nella tavolozza.
+in Numero di righe nella tavolozza.
 
 ### <a name="remarks"></a>Note
 
-Nella modalità tavolozza, tutte le voci di menu vengono visualizzate come una tavolozza a più colonne. Specificare il numero di righe utilizzando *nPaletteRows*.
+In modalità tavolozza tutte le voci di menu vengono visualizzate come tavolozza a più colonne. Per specificare il numero di righe, usare *nPaletteRows*.
 
-##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd
+##  <a name="setmessagewnd"></a>CMFCToolBarMenuButton:: SetMessageWnd
 
 ```
 void SetMessageWnd(CWnd* pWndMessage);
@@ -841,9 +841,9 @@ void SetMessageWnd(CWnd* pWndMessage);
 
 ### <a name="remarks"></a>Note
 
-##  <a name="setradio"></a>  CMFCToolBarMenuButton::SetRadio
+##  <a name="setradio"></a>CMFCToolBarMenuButton:: seradio
 
-Imposta il pulsante di menu della barra degli strumenti per visualizzare un'icona di stile di pulsante di opzione quando viene selezionato.
+Imposta il pulsante di menu della barra degli strumenti per visualizzare un'icona di stile del pulsante di opzione quando viene selezionata.
 
 ```
 virtual void SetRadio();
@@ -851,13 +851,13 @@ virtual void SetRadio();
 
 ### <a name="remarks"></a>Note
 
-Quando il pulsante di menu verrà disegnato mentre è selezionato, viene chiamato [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck) per disegnare un'icona di segno di spunta. Per impostazione predefinita, `OnDrawMenuCheck` richieste che il gestore visualizzazione corrente disegna una casella di controllo stile segno di spunta sul pulsante di menu. Dopo aver chiamato questo metodo, il gestore visualizzazione corrente invece Disegna un segno di spunta radio style pulsante sul pulsante di menu. Questa modifica non può essere annullata.
+Quando il pulsante di menu viene disegnato mentre è selezionato, viene chiamato [CMFCVisualManager:: OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck) per disegnare un'icona di segno di spunta. Per impostazione predefinita `OnDrawMenuCheck` , richiede che il gestore di visualizzazione corrente disegni un segno di spunta dello stile del CheckBox sul pulsante di menu. Dopo aver chiamato questo metodo, il gestore di visualizzazione corrente disegna invece un segno di spunta dello stile di un pulsante di opzione sul pulsante di menu. Questa modifica non può essere annullata.
 
 Quando si chiama questo metodo e il pulsante di menu è attualmente visualizzato, verrà aggiornato.
 
-##  <a name="settearoff"></a>  CMFCToolBarMenuButton::SetTearOff
+##  <a name="settearoff"></a>CMFCToolBarMenuButton:: SetTearOff
 
-Specifica l'ID della barra a comparsa per il menu a discesa.
+Specifica l'ID della barra di strappo per il menu a discesa.
 
 ```
 virtual void SetTearOff(UINT uiBarID);
@@ -866,13 +866,13 @@ virtual void SetTearOff(UINT uiBarID);
 ### <a name="parameters"></a>Parametri
 
 *uiBarID*<br/>
-[in] Specifica un tear-off nuova barra ID.
+in Specifica un nuovo ID della barra tear-off.
 
 ### <a name="remarks"></a>Note
 
-Chiamare questo metodo per specificare l'ID per la barra a comparsa che viene creata quando l'utente trascina il pulsante di menu di fuori di una barra dei menu. Se il *uiBarID* parametro è 0, l'utente non può far scomparire il pulsante di menu.
+Chiamare questo metodo per specificare l'ID per la barra di strappo creata quando l'utente trascina il pulsante di menu da una barra dei menu. Se il parametro *uiBarID* è 0, l'utente non può eliminare il pulsante di menu.
 
-Chiamare [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) per abilitare la funzionalità dal menu a comparsa nell'applicazione.
+Chiamare [CWinAppEx:: EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) per abilitare la funzionalità del menu di strappo nell'applicazione.
 
 ## <a name="see-also"></a>Vedere anche
 

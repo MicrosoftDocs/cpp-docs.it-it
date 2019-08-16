@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: fb496e3bd58d0fe134c37b240eb2698302c6aa64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ed19ed3cdeb77612e20d826480ab73b9361366e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915694"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496442"
 ---
 # <a name="csid-class"></a>Classe CSid
 
@@ -45,20 +45,20 @@ class CSid
 
 ### <a name="public-typedefs"></a>Typedef pubblici
 
-|Name|DESCRIZIONE|
+|Name|Descrizione|
 |----------|-----------------|
 |[CSid::CSidArray](#csidarray)|Matrice di oggetti `CSid`.|
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CSid::CSid](#csid)|Costruttore.|
 |[CSid::~CSid](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CSid::AccountName](#accountname)|Restituisce il nome dell'account associato `CSid` all'oggetto.|
 |[CSid::Domain](#domain)|Restituisce il nome del dominio associato `CSid` all'oggetto.|
@@ -97,7 +97,7 @@ La `SID` struttura è una struttura a lunghezza variabile utilizzata per identif
 
 Le applicazioni non devono modificare `SID` direttamente la struttura, ma usano invece i metodi forniti in questa classe wrapper. Vedere anche [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)e [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).
 
-Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nella Windows SDK.
+Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/win32/SecAuthZ/access-control) nella Windows SDK.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -117,7 +117,7 @@ Restituisce il LPCTSTR che punta al nome dell'account.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo tenta di trovare un nome per l'identificatore `SID` di sicurezza specificato. Per informazioni dettagliate, vedere [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
+Questo metodo tenta di trovare un nome per l'identificatore `SID` di sicurezza specificato. Per informazioni dettagliate, vedere [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
 
 Se non è possibile trovare il `SID` nome di account per `AccountName` l'oggetto, restituisce una stringa vuota. Questo problema può verificarsi se un timeout di rete impedisce a questo metodo di trovare il nome. Si verifica anche per gli identificatori di sicurezza senza nome account corrispondente, ad esempio `SID` un che identifica una sessione di accesso.
 
@@ -208,7 +208,7 @@ Restituisce l' `LPCTSTR` oggetto che punta al dominio.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo tenta di trovare un nome per l'identificatore `SID` di sicurezza specificato. Per informazioni dettagliate, vedere [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
+Questo metodo tenta di trovare un nome per l'identificatore `SID` di sicurezza specificato. Per informazioni dettagliate, vedere [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw).
 
 Se non è possibile trovare il `SID` nome di account per `Domain` l'oggetto, restituisce il dominio come una stringa vuota. Questo problema può verificarsi se un timeout di rete impedisce a questo metodo di trovare il nome. Si verifica anche per gli identificatori di sicurezza senza nome account corrispondente, ad esempio `SID` un che identifica una sessione di accesso.
 
@@ -232,7 +232,7 @@ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore.
 
 ### <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) nel Windows SDK.
+Per ulteriori informazioni, vedere [EqualPrefixSid](/windows/win32/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) nel Windows SDK.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -360,7 +360,7 @@ Nome dell'account.
 Nome di sistema. Questa stringa può essere il nome di un computer remoto. Se questa stringa è NULL, viene utilizzato il sistema locale.
 
 *pSid*<br/>
-Puntatore a una struttura [SID](/windows/desktop/api/winnt/ns-winnt-sid) .
+Puntatore a una struttura [SID](/windows/win32/api/winnt/ns-winnt-sid) .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -368,7 +368,7 @@ Restituisce TRUE in caso di esito positivo, FALSE in caso di errore. Per ottener
 
 ### <a name="remarks"></a>Note
 
-`LoadAccount`tenta di trovare un ID di sicurezza per il nome specificato. Per ulteriori informazioni, vedere [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) .
+`LoadAccount`tenta di trovare un ID di sicurezza per il nome specificato. Per ulteriori informazioni, vedere [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw) .
 
 ##  <a name="operator_eq"></a>  CSid::operator =
 
@@ -542,7 +542,7 @@ LPCTSTR Sid() const throw(...);
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la `SID` struttura come stringa in un formato appropriato per la visualizzazione, l'archiviazione o la trasmissione. Equivalente a [ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida).
+Restituisce la `SID` struttura come stringa in un formato appropriato per la visualizzazione, l'archiviazione o la trasmissione. Equivalente a [ConvertSidToStringSid](/windows/win32/api/sddl/nf-sddl-convertsidtostringsidw).
 
 ##  <a name="sidnameuse"></a>  CSid::SidNameUse
 
@@ -556,7 +556,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 Restituisce il valore del membro dati che archivia un valore che descrive lo stato dell' `CSid` oggetto.
 
-|Value|DESCRIZIONE|
+|Value|Descrizione|
 |-----------|-----------------|
 |SidTypeUser|Indica un utente `SID` (ID di sicurezza).|
 |SidTypeGroup|Indica un gruppo `SID`.|

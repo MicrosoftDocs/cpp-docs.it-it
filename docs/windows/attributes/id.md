@@ -1,21 +1,21 @@
 ---
-title: ID (attributo COM C++)
+title: ID (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409499"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501413"
 ---
-# <a name="id"></a>ID
+# <a name="id"></a>id
 
-Specifica un *dispid* parametro per una funzione membro (una proprietà o un metodo, in un'interfaccia o interfaccia dispatch).
+Specifica un parametro *DISPID* per una funzione membro, ovvero una proprietà o un metodo, in un'interfaccia o in un'interfaccia dispatch.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -26,15 +26,15 @@ Specifica un *dispid* parametro per una funzione membro (una proprietà o un met
 ### <a name="parameters"></a>Parametri
 
 *dispid*<br/>
-L'ID di invio per il metodo di interfaccia.
+ID dispatch per il metodo di interfaccia.
 
 ## <a name="remarks"></a>Note
 
-Il **id** attributi di C++ ha la stessa funzionalità come la [id](/windows/desktop/Midl/id) attributo MIDL.
+L'attributo **ID** C++ ha la stessa funzionalità dell'attributo MIDL dell' [ID](/windows/win32/Midl/id) .
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usare **id**.
+Per un esempio su come usare l' **ID**, vedere l'esempio relativo a [Bindable](bindable.md) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -45,7 +45,7 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usar
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

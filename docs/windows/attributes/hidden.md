@@ -1,21 +1,21 @@
 ---
-title: Hidden (attributo COM C++)
+title: Hidden (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409512"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501454"
 ---
 # <a name="hidden"></a>hidden
 
-Indica che l'elemento esiste ma non deve essere visualizzato in un browser orientate all'utente.
+Indica che l'elemento esiste ma non deve essere visualizzato in un browser orientato all'utente.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,11 +25,11 @@ Indica che l'elemento esiste ma non deve essere visualizzato in un browser orien
 
 ## <a name="remarks"></a>Note
 
-Il **nascosto** attributi di C++ ha la stessa funzionalità come il [nascosto](/windows/desktop/Midl/hidden) attributo MIDL.
+L'attributo **Hidden** C++ ha la stessa funzionalità dell'attributo MIDL [nascosto](/windows/win32/Midl/hidden) .
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usare **nascosto**.
+Vedere l'esempio per [associabile](bindable.md) per un esempio di come usare **Hidden**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -39,8 +39,8 @@ Vedere l'esempio relativo [associabile](bindable.md) per un esempio di come usar
 |-|-|
 |**Si applica a**|**interfaccia**, **classe**, **struct**, metodo, proprietà|
 |**Ripetibile**|No|
-|**Attributi obbligatori**|**Coclasse** (quando applicato a **classe** oppure **struct**)|
-|**Attributi non validi**|nessuno|
+|**Attributi obbligatori**|**coclasse** (quando applicato alla **classe** o allo **struct**)|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

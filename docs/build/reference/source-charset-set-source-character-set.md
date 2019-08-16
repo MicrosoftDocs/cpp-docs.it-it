@@ -1,5 +1,5 @@
 ---
-title: /Source-CharSet (Imposta origine Set di caratteri)
+title: /source-charset (imposta il set di caratteri di origine)
 ms.date: 02/06/2019
 f1_keywords:
 - source-charset
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: 54f8d4d0edaa310384d19a9c9a188f96ec895eac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd3e4eb3fd305ba6bdd298d18b1edb80f2b98343
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318212"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498251"
 ---
-# <a name="source-charset-set-source-character-set"></a>/Source-CharSet (Imposta origine Set di caratteri)
+# <a name="source-charset-set-source-character-set"></a>/source-charset (imposta il set di caratteri di origine)
 
-Consente di specificare l'origine set di caratteri per il file eseguibile.
+Consente di specificare il set di caratteri di origine per il file eseguibile.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,28 +27,28 @@ Consente di specificare l'origine set di caratteri per il file eseguibile.
 ## <a name="arguments"></a>Argomenti
 
 **IANA_name**<br/>
-Nome del set di caratteri definito dall'autorità IANA.
+Nome del set di caratteri definito da IANA.
 
 **CPID**<br/>
 Identificatore della tabella codici come numero decimale.
 
 ## <a name="remarks"></a>Note
 
-È possibile usare la **/source-charset** opzione per specificare un carattere di origine estesi set da utilizzare quando i file di origine contengono caratteri che non sono rappresentati nel set di caratteri di origine di base. Il set di caratteri di origine è la codifica usata per interpretare il testo di origine di programma nella rappresentazione interna usata come input per le fasi di pre-elaborazione prima della compilazione. Tale rappresentazione viene quindi convertita al set di caratteri di esecuzione per archiviare i valori stringa e carattere nel file eseguibile. È possibile usare entrambi IANA o nome del set di caratteri ISO o un punto (.) seguito da un identificatore della tabella codici decimale da 3 a 5 cifre per specificare il set di caratteri da usare. Per un elenco di identificatori di pagina di codice è supportata e i nomi dei set di caratteri, vedere [identificatori di pagina codice](/windows/desktop/Intl/code-page-identifiers).
+È possibile usare l'opzione **/source-charset** per specificare un set di caratteri di origine esteso da usare quando i file di origine includono caratteri non rappresentati nel set di caratteri di origine di base. Il set di caratteri di origine è la codifica utilizzata per interpretare il testo di origine del programma nella rappresentazione interna utilizzata come input per le fasi di pre-elaborazione prima della compilazione. La rappresentazione interna viene quindi convertita nel set di caratteri di esecuzione per archiviare i valori stringa e carattere nel file eseguibile. È possibile utilizzare il nome del set di caratteri IANA o ISO oppure un punto (.) seguito da un identificatore di tabella codici decimale da 3 a 5 cifre per specificare il set di caratteri da utilizzare. Per un elenco degli identificatori della tabella codici e dei nomi dei set di caratteri supportati, vedere identificatori della [tabella codici](/windows/win32/Intl/code-page-identifiers).
 
-Per impostazione predefinita, Visual Studio rileva un contrassegno di ordine dei byte per determinare se il file di origine è in un formato con codifica Unicode, ad esempio UTF-16 o UTF-8. Se viene individuato alcun indicatore ordine byte, si presuppone che il file di origine viene codificato utilizzando la tabella codici utente corrente, se non si specifica un set di caratteri nome o la tabella codici con il **/source-charset** opzione. Visual Studio consente di salvare il codice sorgente C++, utilizzando una delle diverse codifiche di caratteri. Per altre informazioni sui set di caratteri di origine e di esecuzione, vedere [set di caratteri](../../cpp/character-sets.md) nella documentazione del linguaggio.
+Per impostazione predefinita, Visual Studio rileva un indicatore per l'ordine dei byte per determinare se il file di origine si trova in un formato Unicode codificato, ad esempio UTF-16 o UTF-8. Se non viene trovato alcun indicatore dell'ordine dei byte, si presuppone che il file di origine sia codificato utilizzando la tabella codici utente corrente, a meno che non si specifichi un nome del set di caratteri o una tabella codici utilizzando l'opzione **/source-charset** . Visual Studio consente di salvare il C++ codice sorgente usando una qualsiasi delle diverse codifiche di caratteri. Per ulteriori informazioni sui set di caratteri di origine ed esecuzione, vedere [set di caratteri](../../cpp/character-sets.md) nella documentazione relativa al linguaggio.
 
-Il set di caratteri di origine che è fornire deve eseguire il mapping di caratteri ASCII a 7 bit agli stessi punti di codice nel set di caratteri o molti errori di compilazione sono probabile che seguono. Il set di caratteri di origine deve anche essere disponibile per il mapping a caratteri estesi Unicode impostato codificabili da UTF-8. Caratteri che non sono codificabili in UTF-8 sono rappresentati da un sostituto specifici dell'implementazione. Il compilatore Microsoft Usa un punto interrogativo per questi caratteri.
+Il set di caratteri di origine fornito deve eseguire il mapping tra i caratteri ASCII a 7 bit e gli stessi punti di codice del set di caratteri oppure è probabile che si verifichino molti errori di compilazione. Il set di caratteri di origine deve essere mappabili anche al set di caratteri Unicode esteso codificabile da UTF-8. I caratteri che non sono encodable in UTF-8 sono rappresentati da un sostituto specifico dell'implementazione. Il compilatore Microsoft usa un punto interrogativo per questi caratteri.
 
-Se si desidera impostare il set di caratteri di origine e il set di caratteri di esecuzione su UTF-8, è possibile usare la **/utf-8** l'opzione del compilatore come collegamento. Equivale a specificare **/Source -charset:utf-/execution 8-charset:utf-8** nella riga di comando. Una di queste opzioni anche Abilita il **/Validate/CharSet** opzione per impostazione predefinita.
+Se si desidera impostare il set di caratteri di origine e il set di caratteri di esecuzione su UTF-8, è possibile utilizzare l'opzione del compilatore **/UTF-8** come collegamento. Equivale a specificare **/source-charset: UTF-8/Execution-charset: UTF-8** nella riga di comando. Ognuna di queste opzioni Abilita anche l'opzione **/Validate-charset** per impostazione predefinita.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [le proprietà del compilatore e compilazione impostare C++ in Visual Studio](../working-with-project-properties.md).
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per altre informazioni, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
 
-1. Espandere la **le proprietà di configurazione**, **C/C++**, **riga di comando** cartella.
+1. Espandere la cartella **proprietà di configurazione**, **CC++/** , riga di **comando** .
 
-1. Nelle **opzioni aggiuntive**, aggiungere il **/source-charset** opzione e specificare la codifica preferita.
+1. In **Opzioni aggiuntive**aggiungere l'opzione **/source-charset** e specificare la codifica preferita.
 
 1. Scegliere **OK** per salvare le modifiche.
 
@@ -56,6 +56,6 @@ Se si desidera impostare il set di caratteri di origine e il set di caratteri di
 
 [Opzioni del compilatore MSVC](compiler-options.md)<br/>
 [Sintassi della riga di comando del compilatore MSVC](compiler-command-line-syntax.md)<br/>
-[/Execution-CharSet (set esecuzione Set di caratteri)](execution-charset-set-execution-character-set.md)<br/>
+[/Execution-CharSet (imposta il set di caratteri di esecuzione)](execution-charset-set-execution-character-set.md)<br/>
 [/utf/8 (imposta i set di caratteri eseguibili e di origine su UTF/8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
 [/validate/charset (convalida per i caratteri compatibili)](validate-charset-validate-for-compatible-characters.md)

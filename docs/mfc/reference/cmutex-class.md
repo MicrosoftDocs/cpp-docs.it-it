@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: 9c55da8a7692982fc18589fa69e9e2b0749cb6eb
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 65f7f4db9489de1c9a380d760ed5cab41bfdc2ec
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504184"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504524"
 ---
 # <a name="cmutex-class"></a>Classe CMutex
 
-Rappresenta un mutex di"", ovvero un oggetto di sincronizzazione che consente un accesso che si escludono a vicenda thread a una risorsa.
+Rappresenta un "mutex", un oggetto di sincronizzazione che consente a un thread di accedere a una risorsa in modo reciprocamente esclusivo.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,25 +25,25 @@ Rappresenta un mutex di"", ovvero un oggetto di sincronizzazione che consente un
 class CMutex : public CSyncObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CMutex::CMutex](#cmutex)|Costruisce un oggetto `CMutex`.|
+|[CMutex:: CMutex](#cmutex)|Costruisce un oggetto `CMutex`.|
 
 ## <a name="remarks"></a>Note
 
-I mutex sono utili quando un solo thread alla volta può essere autorizzato a modificare i dati o un'altra risorsa controllata. Ad esempio, l'aggiunta di nodi a un elenco collegato è un processo che deve essere consentito solo da un solo thread alla volta. Usando un `CMutex` oggetto per controllare l'elenco collegato, solo un thread alla volta può accedere all'elenco.
+I mutex sono utili quando è possibile consentire a un solo thread alla volta di modificare i dati o altre risorse controllate. Ad esempio, l'aggiunta di nodi a un elenco collegato è un processo che deve essere consentito solo da un thread alla volta. Utilizzando un `CMutex` oggetto per controllare l'elenco collegato, un solo thread alla volta può ottenere l'accesso all'elenco.
 
-Usare un `CMutex` dell'oggetto, costruire il `CMutex` oggetto quando è necessario. Specificare il nome del mutex di cui si vuole attendere e che l'applicazione deve inizialmente esserne il proprietario. È quindi possibile accedere al mutex quando viene restituito il costruttore. Chiamare [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) al termine l'accesso alla risorsa controllata.
+Per usare un `CMutex` oggetto, costruire l' `CMutex` oggetto quando è necessario. Specificare il nome del mutex che si desidera attendere e che l'applicazione deve essere inizialmente proprietaria. È quindi possibile accedere al mutex quando il costruttore restituisce. Chiamare [CSyncObject:: Unlock](../../mfc/reference/csyncobject-class.md#unlock) dopo aver eseguito l'accesso alla risorsa controllata.
 
-Un metodo alternativo per l'utilizzo `CMutex` oggetti consiste nell'aggiungere una variabile di tipo `CMutex` come membro dei dati per la classe di cui effettuare il controllo. Durante la costruzione dell'oggetto controllato, chiamare il costruttore del `CMutex` (membro dati) che specifica se il mutex è inizialmente di proprietà, il nome del mutex (se che verrà usato nei limiti dei processi) e gli attributi di sicurezza desiderato.
+Un metodo alternativo per l' `CMutex` utilizzo di oggetti consiste nell'aggiungere una variabile `CMutex` di tipo come membro dati alla classe che si desidera controllare. Durante la costruzione dell'oggetto controllato, chiamare il costruttore del membro `CMutex` dati che specifica se il mutex è inizialmente di proprietà, il nome del mutex (se verrà usato tra i limiti del processo) e gli attributi di sicurezza desiderati.
 
-Per accedere alle risorse controllate da `CMutex` oggetti in questo modo, prima di tutto creare una variabile di tipo [CSingleLock](../../mfc/reference/csinglelock-class.md) oppure digitare [CMultiLock](../../mfc/reference/cmultilock-class.md) nella funzione membro di accesso della risorsa. Quindi chiamare l'oggetto di blocco `Lock` funzione membro (ad esempio [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). A questo punto, i thread verranno sia ottenere l'accesso alla risorsa, attendere che la risorsa essere rilasciato e ottenere l'accesso, attendere la risorsa deve essere rilasciato e raggiungere il timeout non riesce ad accedere alla risorsa. In ogni caso, la risorsa è stato eseguito l'accesso in modo thread-safe. Per rilasciare la risorsa, usare l'oggetto di blocco `Unlock` funzione membro (ad esempio [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), o consentire l'oggetto di blocco uscire dall'ambito.
+Per accedere alle risorse controllate `CMutex` dagli oggetti in questo modo, creare prima di tutto una variabile di tipo [CSingleLock](../../mfc/reference/csinglelock-class.md) o [CMultiLock](../../mfc/reference/cmultilock-class.md) nella funzione membro di accesso della risorsa. Chiamare quindi la funzione `Lock` membro dell'oggetto Lock, ad esempio [CSingleLock:: Lock](../../mfc/reference/csinglelock-class.md#lock). A questo punto, il thread otterrà l'accesso alla risorsa, attenderà che la risorsa venga rilasciata e ottenga l'accesso oppure attenda che la risorsa venga rilasciata e si verifichi il timeout, in modo da ottenere l'accesso alla risorsa. In ogni caso, l'accesso alla risorsa è stato eseguito in modo thread-safe. Per rilasciare la risorsa, usare la funzione `Unlock` membro dell'oggetto Lock (ad esempio, [CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock)) o consentire all'oggetto Lock di uscire dall'ambito.
 
-Per altre informazioni sull'uso `CMutex` oggetti, vedere l'articolo [Multithreading: Come usare le classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Per ulteriori informazioni sull'utilizzo `CMutex` degli oggetti, vedere l' [articolo multithreading: Come usare le classi](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)di sincronizzazione.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -57,9 +57,9 @@ Per altre informazioni sull'uso `CMutex` oggetti, vedere l'articolo [Multithread
 
 **Intestazione:** afxmt. h
 
-##  <a name="cmutex"></a>  CMutex::CMutex
+##  <a name="cmutex"></a>CMutex:: CMutex
 
-Costruisce un nome o senza nome `CMutex` oggetto.
+Costruisce un `CMutex` oggetto denominato o senza nome.
 
 ```
 CMutex(
@@ -71,20 +71,20 @@ CMutex(
 ### <a name="parameters"></a>Parametri
 
 *bInitiallyOwn*<br/>
-Specifica se la creazione di thread di `CMutex` oggetto ha inizialmente l'accesso alla risorsa controllata dal mutex.
+Specifica se il thread che crea `CMutex` l'oggetto ha inizialmente accesso alla risorsa controllata dal mutex.
 
 *lpszName*<br/>
-Nome dell'oggetto `CMutex`. Se non esiste un altro mutex con lo stesso nome, *lpszName* è necessario specificare se l'oggetto verrà usato nell'ambito dei processi. Se **NULL**, mutex sarà senza nome. Se il nome corrisponde a un mutex esistente, il costruttore crea un nuovo `CMutex` oggetto cui fa riferimento il mutex di tale nome. Se il nome corrisponde a un oggetto di sincronizzazione esistente che non è un mutex, la creazione avrà esito negativo.
+Nome dell'oggetto `CMutex`. Se esiste un altro mutex con lo stesso nome, è necessario specificare *lpszName* se l'oggetto verrà usato tra i limiti del processo. Se **null**, il mutex verrà senza nome. Se il nome corrisponde a un mutex esistente, il costruttore compila un `CMutex` nuovo oggetto che fa riferimento al mutex di tale nome. Se il nome corrisponde a un oggetto di sincronizzazione esistente che non è un mutex, la costruzione avrà esito negativo.
 
 *lpsaAttribute*<br/>
-Attributi di sicurezza per l'oggetto mutex. Per una descrizione completa di questa struttura, vedere [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) nel SDK di Windows.
+Attributi di sicurezza per l'oggetto mutex. Per una descrizione completa di questa struttura, vedere [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) nel Windows SDK.
 
 ### <a name="remarks"></a>Note
 
-Per accedere o rilasciare un `CMutex` dell'oggetto, creare un [CMultiLock](../../mfc/reference/cmultilock-class.md) o [CSingleLock](../../mfc/reference/csinglelock-class.md) oggetto e chiamare relativo [blocco](../../mfc/reference/csinglelock-class.md#lock) e [Unlock](../../mfc/reference/csinglelock-class.md#unlock) funzioni membro. Se il `CMutex` viene utilizzato l'oggetto autonomo, chiamare il `Unlock` funzione membro per rilasciarlo.
+Per accedere o rilasciare un `CMutex` oggetto, creare un oggetto [CMultiLock](../../mfc/reference/cmultilock-class.md) o [CSingleLock](../../mfc/reference/csinglelock-class.md) e chiamare le funzioni membro [Lock](../../mfc/reference/csinglelock-class.md#lock) e [Unlock](../../mfc/reference/csinglelock-class.md#unlock) . Se l' `CMutex` oggetto viene usato autonomamente, chiamare la relativa `Unlock` funzione membro per rilasciarlo.
 
 > [!IMPORTANT]
->  Dopo aver creato il `CMutex` dell'oggetto, utilizzare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) per garantire che il mutex non esisteva. Se il mutex non erano presenti in modo imprevisto, potrebbe indicare un processo è squatting e potrebbe voler usare mutex da utenti malintenzionati. In questo caso, la procedura di altissimo di sicurezza consigliata è di chiudere l'handle e continuare come se si è verificato un errore nella creazione dell'oggetto.
+>  Dopo aver creato `CMutex` l'oggetto, utilizzare [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) per verificare che il mutex non esista già. Se il mutex esisteva in modo imprevisto, potrebbe indicare che un processo non autorizzato è accovacciato e potrebbe avere intenzione di usare il mutex in modo dannoso. In questo caso, la procedura consigliata per la sicurezza è quella di chiudere l'handle e continuare come se si fosse verificato un errore durante la creazione dell'oggetto.
 
 ## <a name="see-also"></a>Vedere anche
 

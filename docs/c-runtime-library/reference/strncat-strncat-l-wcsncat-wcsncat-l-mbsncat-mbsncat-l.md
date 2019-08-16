@@ -58,19 +58,19 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 477d80ec170463a2315e2e891998ed32d84c75dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209858"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499444"
 ---
-# <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
+# <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
 Aggiunge caratteri di una stringa. Sono disponibili versioni più sicure di queste funzioni; vedere [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md).
 
 > [!IMPORTANT]
-> **mbsncat** e **mbsncat_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsncat** e **_mbsncat_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -143,12 +143,12 @@ Restituisce un puntatore alla stringa di destinazione. Nessun valore restituito 
 
 ## <a name="remarks"></a>Note
 
-Il **strncat** funzione aggiunge al massimo i primi *conteggio* caratteri del *strSource* al *strDest*. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione del *strDest*. Se è presente un carattere null in *strSource* prima *conteggio* i caratteri vengono aggiunti, **strncat** aggiunge tutti i caratteri da *strSource*, fino al carattere null. Se *conteggio* è maggiore della lunghezza di *strSource*, la lunghezza del *strSource* viene usato al posto della *conteggio*. In tutti i casi, la stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+La funzione **strncat** aggiunge al massimo i primi caratteri di *conteggio* di *strSource* a *strDest*. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione di *strDest*. Se viene visualizzato un carattere null in *strSource* prima dell'accodamento dei caratteri di *conteggio* , **strncat** aggiunge tutti i caratteri da *strSource*, fino al carattere null. Se *count* è maggiore della lunghezza di *strSource*, viene utilizzata la lunghezza di *strSource* al posto del *conteggio*. In tutti i casi, la stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> **strncat** verifica la presenza di spazio sufficiente *strDest*; è pertanto una causa possibile dei sovraccarichi del buffer. Tenere presente che *conteggio* limita il numero di caratteri aggiunti; non è un limite alla dimensione dei *strDest*. Vedere l'esempio seguente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> **strncat** non verifica la presenza di spazio sufficiente in *strDest*; è quindi possibile che si verifichino sovraccarichi del buffer. Tenere presente che il *conteggio* limita il numero di caratteri accodati; non è un limite per le dimensioni di *strDest*. Vedere l'esempio seguente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**wcsncat** e **mbsncat** sono versioni a caratteri wide e caratteri multibyte di **strncat**. Gli argomenti stringa e il valore restituito di **wcsncat** sono caratteri wide, mentre quelli di stringhe **mbsncat** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcsncat** e **_mbsncat** sono versioni a caratteri wide e a caratteri multibyte di **strncat**. Gli argomenti di stringa e il valore restituito di **wcsncat** sono stringhe a caratteri wide. quelli di **_mbsncat** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
@@ -162,7 +162,7 @@ In C++ queste funzioni presentano overload dei modelli. Per altre informazioni, 
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **strncat_l** e **wcsncat_l** non dipendono dalle impostazioni locali e non sono progettate per essere chiamate direttamente. Vengono forniti per uso interno da parte **tcsncat_l**.
+> **_strncat_l** e **_wcsncat_l** non hanno alcuna dipendenza dalle impostazioni locali e non sono destinati a essere chiamati direttamente. Sono disponibili per uso interno da **_tcsncat_l**.
 
 ## <a name="requirements"></a>Requisiti
 

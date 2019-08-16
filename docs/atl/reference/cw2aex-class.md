@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-ms.openlocfilehash: 97b398dd80bb38b1579458ae0b8b65f082458e23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dda1cb9e54c44f7940475660bc629192b9ead61
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277165"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496272"
 ---
 # <a name="cw2aex-class"></a>Classe CW2AEX
 
-Questa classe viene utilizzata la macro di conversione di stringhe CT2AEX, CW2TEX, CW2CTEX e CT2CAEX e typedef CW2A.
+Questa classe viene utilizzata dalle macro di conversione di stringhe CT2AEX, CW2TEX, CW2CTEX e CT2CAEX e typedef CW2A.
 
 > [!IMPORTANT]
->  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Runtime di Windows.
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite nel Windows Runtime.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -34,41 +34,41 @@ class CW2AEX
 #### <a name="parameters"></a>Parametri
 
 *t_nBufferLength*<br/>
-Le dimensioni del buffer utilizzato nel processo di traduzione. La lunghezza predefinita è di 128 byte.
+Dimensioni del buffer utilizzato nel processo di conversione. La lunghezza predefinita è 128 byte.
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[CW2AEX::CW2AEX](#cw2aex)|Costruttore.|
-|[CW2AEX::~CW2AEX](#dtor)|Distruttore.|
+|[CW2AEX:: CW2AEX](#cw2aex)|Costruttore.|
+|[CW2AEX:: ~ CW2AEX](#dtor)|Distruttore.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CW2AEX::operator LPSTR](#operator_lpstr)|Operatore di conversione.|
+|[CW2AEX:: operator LPSTR](#operator_lpstr)|Operatore di conversione.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[CW2AEX::m_psz](#m_psz)|Membro dati che archivia la stringa di origine.|
-|[CW2AEX::m_szBuffer](#m_szbuffer)|Il buffer statico, usato per archiviare la stringa convertita.|
+|[CW2AEX::m_szBuffer](#m_szbuffer)|Buffer statico utilizzato per archiviare la stringa convertita.|
 
 ## <a name="remarks"></a>Note
 
-A meno che non è necessaria la funzionalità aggiuntiva, usare CT2AEX, CW2TEX, CW2CTEX, CT2CAEX o CW2A nel codice.
+A meno che non sia necessaria una funzionalità aggiuntiva, usare CT2AEX, CW2TEX, CW2CTEX, CT2CAEX o CW2A nel codice.
 
-Questa classe contiene un buffer statico di dimensione fissa che viene usato per archiviare il risultato della conversione. Se il risultato è troppo grande per il buffer statico, la classe alloca memoria usando **malloc**, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza del testo macro di conversione disponibili nelle versioni precedenti di ATL, questa classe sia sicura per l'uso nei cicli e che non eseguiranno l'overflow dello stack.
+Questa classe contiene un buffer statico di dimensioni fisse usato per archiviare il risultato della conversione. Se il risultato è troppo grande per essere inserito nel buffer statico, la classe alloca memoria utilizzando **malloc**, liberando la memoria quando l'oggetto esce dall'ambito. Ciò garantisce che, a differenza delle macro di conversione del testo disponibili nelle versioni precedenti di ATL, questa classe è sicura per l'utilizzo in cicli e che non si inun overflow dello stack.
 
-Se la classe tenta di allocare memoria sull'heap e ha esito negativo, chiamerà `AtlThrow` con un argomento di E_OUTOFMEMORY.
+Se la classe tenta di allocare memoria nell'heap e ha esito negativo, `AtlThrow` viene chiamato con un argomento di E_OUTOFMEMORY.
 
-Per impostazione predefinita, le classi di conversione ATL e le macro usano la tabella codici ANSI del thread corrente per la conversione. Se si desidera disattivare questo comportamento per una conversione specifica, specificare la tabella codici come secondo parametro del costruttore della classe.
+Per impostazione predefinita, le classi e le macro di conversione ATL utilizzano la tabella codici ANSI del thread corrente per la conversione. Se si desidera eseguire l'override di tale comportamento per una conversione specifica, specificare la tabella codici come secondo parametro per il costruttore della classe.
 
-Le macro seguenti si basano su questa classe:
+Le macro seguenti sono basate su questa classe:
 
 - CT2AEX
 
@@ -82,17 +82,17 @@ Il typedef seguente si basa su questa classe:
 
 - CW2A
 
-Per una descrizione di queste macro di conversione di testo, vedere [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md).
+Per una descrizione di queste macro di conversione del testo, vedere le [macro di conversione di stringhe ATL e MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Esempio
 
-Visualizzare [macro di conversione di stringhe MFC e ATL](string-conversion-macros.md) per un esempio dell'uso di queste macro di conversione di stringhe.
+Vedere [macro di conversione di stringhe ATL e MFC](string-conversion-macros.md) per un esempio di utilizzo di queste macro di conversione di stringhe.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atlconv. h
 
-##  <a name="cw2aex"></a>  CW2AEX::CW2AEX
+##  <a name="cw2aex"></a>CW2AEX:: CW2AEX
 
 Costruttore.
 
@@ -104,16 +104,16 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="parameters"></a>Parametri
 
 *psz*<br/>
-La stringa di testo da convertire.
+Stringa di testo da convertire.
 
 *nCodePage*<br/>
-La tabella codici utilizzata per eseguire la conversione. Vedere la descrizione del parametro pagina codice della funzione di Windows SDK [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) per altri dettagli.
+Tabella codici utilizzata per eseguire la conversione. Per informazioni dettagliate, vedere la descrizione del parametro della tabella codici per la funzione Windows SDK [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) .
 
 ### <a name="remarks"></a>Note
 
-Consente di allocare il buffer utilizzato nel processo di conversione.
+Alloca il buffer utilizzato nel processo di conversione.
 
-##  <a name="dtor"></a>  CW2AEX:: ~ CW2AEX
+##  <a name="dtor"></a>CW2AEX:: ~ CW2AEX
 
 Distruttore.
 
@@ -123,9 +123,9 @@ Distruttore.
 
 ### <a name="remarks"></a>Note
 
-Consente di liberare il buffer allocato.
+Libera il buffer allocato.
 
-##  <a name="m_psz"></a>  CW2AEX::m_psz
+##  <a name="m_psz"></a>CW2AEX:: m_psz
 
 Membro dati che archivia la stringa di origine.
 
@@ -133,15 +133,15 @@ Membro dati che archivia la stringa di origine.
 LPSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CW2AEX::m_szBuffer
+##  <a name="m_szbuffer"></a>CW2AEX:: m_szBuffer
 
-Il buffer statico, usato per archiviare la stringa convertita.
+Buffer statico utilizzato per archiviare la stringa convertita.
 
 ```
 char m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpstr"></a>  CW2AEX::operator LPSTR
+##  <a name="operator_lpstr"></a>CW2AEX:: operator LPSTR
 
 Operatore di conversione.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957494"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502552"
 ---
 # <a name="exception-processing"></a>Elaborazione delle eccezioni
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Note
 
-Chiamare questa funzione se le chiamate agli allocatori di memoria di sistema sottostanti, ad esempio **malloc** e la funzione [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) di Windows, hanno esito negativo. Non è necessario chiamarlo per **nuovo** perché **New** genera automaticamente un'eccezione di memoria se l'allocazione di memoria ha esito negativo.
+Chiamare questa funzione se le chiamate agli allocatori di memoria di sistema sottostanti, ad esempio **malloc** e la funzione [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) di Windows, hanno esito negativo. Non è necessario chiamarlo per **nuovo** perché **New** genera automaticamente un'eccezione di memoria se l'allocazione di memoria ha esito negativo.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -491,7 +491,7 @@ Handle per un codice risultato che indica il motivo dell'eccezione.
 
 ### <a name="remarks"></a>Note
 
-La versione che accetta un HRESULT come argomento converte il codice risultante nell'oggetto SCODE corrispondente. Per ulteriori informazioni su HRESULT e SCODE, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/desktop/com/structure-of-com-error-codes) nell'Windows SDK.
+La versione che accetta un HRESULT come argomento converte il codice risultante nell'oggetto SCODE corrispondente. Per ulteriori informazioni su HRESULT e SCODE, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes) nell'Windows SDK.
 
 ### <a name="requirements"></a>Requisiti
 

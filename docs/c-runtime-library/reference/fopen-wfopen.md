@@ -32,14 +32,14 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 0b1dbc72124188d06da48f47e47c11ae6d06e771
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: b57ed2b26428c48efbe544c2b4802e347b915c29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376188"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499947"
 ---
-# <a name="fopen-wfopen"></a>fopen, _wfopen
+# <a name="fopen-_wfopen"></a>fopen, _wfopen
 
 Apre un file. Sono disponibili versioni più sicure di queste funzioni che eseguono la convalida di parametri aggiuntivi e restituiscono codici di errore. Vedere [fopen_s, _wfopen_s](fopen-s-wfopen-s.md).
 
@@ -72,9 +72,9 @@ Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](.
 
 ## <a name="remarks"></a>Note
 
-La  funzione fopen apre il file specificato da *filename*. Per impostazione predefinita, una stringa di *nome file* Narrow viene interpretata usando la tabella codici ANSI (CP_ACP). Nelle applicazioni per Windows Desktop può essere modificata nella codepage OEM (CP_OEMCP) usando la funzione [SetFileApisToOEM](/windows/desktop/api/fileapi/nf-fileapi-setfileapistooem) . È possibile utilizzare la funzione [AreFileApisANSI](/windows/desktop/api/fileapi/nf-fileapi-arefileapisansi) per determinare se *filename* viene interpretato utilizzando ANSI o la tabella codici OEM predefinita del sistema. **_wfopen** è una versione a caratteri wide di **fopen**; gli argomenti di **_wfopen** sono stringhe a caratteri wide. In caso contrario, **_wfopen** e **fopen** si comportano in modo identico. L'uso di **_wfopen** non influisce sul set di caratteri codificati usato nel flusso di file.
+La funzione fopen apre il file specificato da *filename*. Per impostazione predefinita, una stringa di *nome file* Narrow viene interpretata usando la tabella codici ANSI (CP_ACP). Nelle applicazioni per Windows Desktop può essere modificata nella codepage OEM (CP_OEMCP) usando la funzione [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) . È possibile utilizzare la funzione [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) per determinare se *filename* viene interpretato utilizzando ANSI o la tabella codici OEM predefinita del sistema. **_wfopen** è una versione a caratteri wide di **fopen**; gli argomenti di **_wfopen** sono stringhe a caratteri wide. In caso contrario, **_wfopen** e **fopen** si comportano in modo identico. L'uso di **_wfopen** non influisce sul set di caratteri codificati usato nel flusso di file.
 
-**fopen** accetta percorsi validi nella file System al momento dell'esecuzione. **fopen** accetta percorsi UNC e percorsi che coinvolgono unità di rete mappate purché il sistema che esegue il codice abbia accesso alla condivisione o all'unità mappata al momento dell'esecuzione. Quando si costruiscono i percorsi per fopen, assicurarsi che le unità, i percorsi o le condivisioni di rete saranno disponibili nell'ambiente di esecuzione. È possibile usare barre (/) o barre rovesciate (\\) come separatori di directory in un percorso.
+**fopen** accetta percorsi validi nella file System al momento dell'esecuzione. **fopen** accetta percorsi UNC e percorsi che coinvolgono unità di rete mappate purché il sistema che esegue il codice abbia accesso alla condivisione o all'unità mappata al momento dell'esecuzione. Quando si costruiscono ipercorsi per fopen, assicurarsi che le unità, i percorsi o le condivisioni di rete saranno disponibili nell'ambiente di esecuzione. È possibile usare barre (/) o barre rovesciate (\\) come separatori di directory in un percorso.
 
 Controllare sempre il valore restituito per verificare se il puntatore è NULL prima di eseguire qualsiasi altra operazione sul file. Se si verifica un errore, la variabile globale **errno** viene impostata e può essere usata per ottenere informazioni specifiche sull'errore. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
@@ -105,7 +105,7 @@ Nella tabella seguente sono riepilogate le modalità usate per vari flag **CCS**
 
 I file aperti per la scrittura in modalità Unicode dispongono di un indicatore ordine byte scritto automaticamente in tali file.
 
-Se *mode* è **"a, CCS =** _Encoding_ **"** , **fopen** tenta innanzitutto di aprire il file usando l'accesso sia in lettura che in scrittura. Se questa operazione ha esito positivo, la funzione legge l'indicatore ordine byte per determinare la codifica del file. Se l'operazione non riesce, la funzione usa la codifica predefinita per il file. In entrambi i casi  , fopen riaprirà il file usando l'accesso di sola scrittura. (Si applica solo alla modalità " **a"** , non alla modalità **"a +"** ).
+Se *mode* è **"a, CCS =** _Encoding_ **"** , **fopen** tenta innanzitutto di aprire il file usando l'accesso sia in lettura che in scrittura. Se questa operazione ha esito positivo, la funzione legge l'indicatore ordine byte per determinare la codifica del file. Se l'operazione non riesce, la funzione usa la codifica predefinita per il file. In entrambi i casi , fopen riaprirà il file usando l'accesso di sola scrittura. (Si applica solo alla modalità " **a"** , non alla modalità **"a +"** ).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -117,7 +117,7 @@ La *modalità* stringa di caratteri specifica il tipo di accesso richiesto per i
 
 |*mode*|Accesso|
 |-|-|
-| **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, la chiamata  di fopen ha esito negativo. |
+| **"r"** | Viene aperto per la lettura. Se il file non esiste o non viene trovato, la chiamata di fopen ha esito negativo. |
 | **"w"** | Apre un file vuoto per la scrittura. Se il file specificato esiste, il contenuto viene eliminato in modo permanente. |
 | **"a"** | Viene aperto per la scrittura alla fine del file (aggiunta) senza rimuovere il marcatore di fine file (EOF) prima che nuovi dati vengano scritti sul file. Creare il file se è inesistente. |
 | **"r+"** | Viene aperto per la lettura e la scrittura. Il file deve esistere. |
@@ -137,7 +137,7 @@ Oltre ai valori precedenti, è possibile aggiungere i caratteri seguenti alla *m
 | **t** | Aprire in modalità testo (convertita). |
 | **b** | Apri in modalità binaria (non convertita); le traduzioni che includono caratteri di ritorno a capo e avanzamento riga vengono eliminati. |
 
-In modalità testo, CTRL + Z viene interpretato come carattere EOF nell'input. Nei file aperti per la lettura/scrittura tramite **"a +"** , fopen  verifica la presenza di una combinazione CTRL + Z alla fine del file e la rimuove, se possibile. Questa operazione viene eseguita perché l'uso di [fseek](fseek-fseeki64.md) e **ftell** per spostarsi all'interno di un file che termina con CTRL + Z può causare un comportamento non corretto di [fseek](fseek-fseeki64.md) in prossimità della fine del file.
+In modalità testo, CTRL + Z viene interpretato come carattere EOF nell'input. Nei file aperti per la lettura/scrittura tramite **"a +"** , fopen verifica la presenza di una combinazione CTRL + Z alla fine del file e la rimuove, se possibile. Questa operazione viene eseguita perché l'uso di [fseek](fseek-fseeki64.md) e **ftell** per spostarsi all'interno di un file che termina con CTRL + Z può causare un comportamento non corretto di [fseek](fseek-fseeki64.md) in prossimità della fine del file.
 
 In modalità testo, le combinazioni di ritorno a capo e avanzamento riga vengono convertite in feed a riga singola nell'input e i caratteri di avanzamento riga vengono convertiti in combinazioni di ritorno a capo/avanzamento riga nell'output. Quando una funzione Unicode di I/O flusso viene eseguita in modalità testo (impostazione predefinita), si presuppone che il flusso di origine o di destinazione sia una sequenza di caratteri multibyte. Di conseguenza, le funzioni Unicode di input flusso convertono i caratteri multibyte in caratteri "wide", come se fosse una chiamata alla funzione **mbtowc**. Per lo stesso motivo, le funzioni Unicode di output flusso convertono i caratteri wide in caratteri multibyte, come se fosse stata chiamata la funzione **wctomb**.
 

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383347"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500540"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (classe)
 
@@ -26,7 +26,7 @@ Rappresenta errori COM che si verificano durante l'esecuzione dell'applicazione.
 public ref class COMException : Exception,    IException,    IPrintable,    IEquatable
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 La classe COMException eredita dalla classe Object e dalle interfacce IException, IPrintable e IEquatable.
 
@@ -46,16 +46,16 @@ La classe COMException eredita i metodi Equals(), Finalize(), GetHashCode(), Get
 
 La classe COMException presenta le proprietà seguenti:
 
-|Member|Descrizione|
+|Member|DESCRIZIONE|
 |------------|-----------------|
-|[Exception:: HRESULT](#hresult)|Valore HRESULT corrispondente all'eccezione.|
-|[Exception:: Message](#message)|Messaggio in cui viene descritta l'eccezione.|
+|[Eccezione:: HResult](#hresult)|Valore HRESULT corrispondente all'eccezione.|
+|[Eccezione:: Message](#message)|Messaggio in cui viene descritta l'eccezione.|
 
 ## <a name="derived-exceptions"></a>Eccezioni derivate
 
 Le seguenti eccezioni predefinite sono derivate da COMException. Differiscono da COMException solo nel nome, nel nome del costruttore e nel valore di HRESULT sottostante.
 
-|Nome|HRESULT sottostante|Descrizione|
+|Name|HRESULT sottostante|DESCRIZIONE|
 |----------|------------------------|-----------------|
 |COMException|*HRESULT definito dall'utente*|Generata quando viene restituito un HRESULT non riconosciuto da una chiamata a un metodo COM.|
 |AccessDeniedException|E_ACCESSDENIED|Generata quando viene negato l'accesso a una risorsa o a una funzionalità.|
@@ -81,7 +81,7 @@ Le seguenti eccezioni predefinite sono derivate da COMException. Differiscono da
 
 **Metadati:** platform.winmd
 
-## <a name="ctor"></a> Costruttore COMException:: COMException
+## <a name="ctor"></a>COMException:: COMException (costruttore)
 
 Inizializza una nuova istanza della classe COMException.
 
@@ -96,7 +96,7 @@ COMException( int hresult )
 *hresult*<br/>
 Errore HRESULT rappresentato dall'eccezione.
 
-## <a name="hresult"></a> Proprietà COMException:: HRESULT
+## <a name="hresult"></a>COMException:: HResult (proprietà)
 
 Valore HRESULT corrispondente all'eccezione.
 
@@ -113,9 +113,9 @@ Valore HRESULT che specifica l'errore.
 
 ### <a name="remarks"></a>Note
 
-Per altre informazioni su come interpretare il valore HRESULT, vedere [Structure of COM Error Codes](/windows/desktop/com/structure-of-com-error-codes).
+Per ulteriori informazioni su come interpretare il valore HRESULT, vedere la pagina relativa alla [struttura dei codici di errore com](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="message"></a> Proprietà COMException:: Message
+## <a name="message"></a>COMException:: Message (proprietà)
 
 Messaggio in cui viene descritta l'eccezione.
 
