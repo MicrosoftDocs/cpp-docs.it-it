@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 4e5d06ca01201bf415afedbe6f6e5bca096f68fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 88096747f45d4a81c873837cdd4975da9d8c24e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915585"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496286"
 ---
 # <a name="ctokengroups-class"></a>Classe CTokenGroups
 
@@ -40,7 +40,7 @@ class CTokenGroups
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CTokenGroups:: CTokenGroups](#ctokengroups)|Costruttore.|
 |[CTokenGroups:: ~ CTokenGroups](#dtor)|Distruttore.|
@@ -60,18 +60,18 @@ class CTokenGroups
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CTokenGroups:: operator const TOKEN_GROUPS *](#operator_const_token_groups__star)|Esegue il cast `CTokenGroups` dell'oggetto a un puntatore `TOKEN_GROUPS` alla struttura.|
 |[CTokenGroups:: operator =](#operator_eq)|Operatore di assegnazione.|
 
 ## <a name="remarks"></a>Note
 
-Un [token di accesso](/windows/desktop/SecAuthZ/access-tokens) è un oggetto che descrive il contesto di sicurezza di un processo o di un thread e viene allocato a ciascun utente connesso a un sistema Windows.
+Un [token di accesso](/windows/win32/SecAuthZ/access-tokens) è un oggetto che descrive il contesto di sicurezza di un processo o di un thread e viene allocato a ciascun utente connesso a un sistema Windows.
 
-La `CTokenGroups` classe è un wrapper per la struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) , che contiene informazioni sugli identificatori di sicurezza (SID) del gruppo in un token di accesso.
+La `CTokenGroups` classe è un wrapper per la struttura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) , che contiene informazioni sugli identificatori di sicurezza (SID) del gruppo in un token di accesso.
 
-Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nella Windows SDK.
+Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/win32/SecAuthZ/access-control) nella Windows SDK.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -95,7 +95,7 @@ Oggetto [CSid](../../atl/reference/csid-class.md) .
 Attributi da associare `CSid` all'oggetto.
 
 *rTokenGroups*<br/>
-Struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
+Struttura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) .
 
 ### <a name="remarks"></a>Note
 
@@ -114,7 +114,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>Parametri
 
 *rhs*<br/>
-Oggetto o struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) con cui costruire l' `CTokenGroups` oggetto. `CTokenGroups`
+Oggetto o struttura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) con cui costruire l' `CTokenGroups` oggetto. `CTokenGroups`
 
 ### <a name="remarks"></a>Note
 
@@ -191,7 +191,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>Valore restituito
 
-Recupera un puntatore alla struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) che appartiene all'oggetto `CTokenGroups` token di accesso.
+Recupera un puntatore alla struttura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) che appartiene all'oggetto `CTokenGroups` token di accesso.
 
 ##  <a name="getsidsandattributes"></a>CTokenGroups:: GetSidsAndAttributes
 
@@ -253,7 +253,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>Parametri
 
 *rhs*<br/>
-Oggetto o struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) `CTokenGroups` da assegnare all'oggetto. `CTokenGroups`
+Oggetto o struttura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) `CTokenGroups` da assegnare all'oggetto. `CTokenGroups`
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -269,7 +269,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>Note
 
-Esegue il cast di un valore a un puntatore alla struttura [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
+Esegue il cast di un valore a un puntatore alla struttura [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) .
 
 ## <a name="see-also"></a>Vedere anche
 

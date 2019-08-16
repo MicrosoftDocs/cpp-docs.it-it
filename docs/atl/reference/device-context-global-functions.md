@@ -1,17 +1,17 @@
 ---
-title: Funzioni globali di contesto di dispositivo
+title: Funzioni globali del contesto di dispositivo
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: aeebec65def9364e56156f6bb323815da012e11f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d225bd0cd996fd908479b5a93aad81ea0428900b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276562"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496092"
 ---
-# <a name="device-context-global-functions"></a>Funzioni globali di contesto di dispositivo
+# <a name="device-context-global-functions"></a>Funzioni globali del contesto di dispositivo
 
 Questa funzione crea un contesto di dispositivo per un determinato dispositivo.
 
@@ -21,7 +21,7 @@ Questa funzione crea un contesto di dispositivo per un determinato dispositivo.
 
 ##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC
 
-Crea un contesto di dispositivo per il dispositivo specificato nella [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struttura.
+Crea un contesto di dispositivo per il dispositivo specificato nella struttura [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) .
 
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
@@ -30,20 +30,20 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 ### <a name="parameters"></a>Parametri
 
 *hdc*<br/>
-[in] L'handle esistente di un contesto di dispositivo o NULL.
+in Handle esistente di un contesto di dispositivo o NULL.
 
 *ptd*<br/>
-[in] Un puntatore al `DVTARGETDEVICE` struttura che contiene informazioni sul dispositivo di destinazione.
+in Puntatore alla `DVTARGETDEVICE` struttura che contiene informazioni sul dispositivo di destinazione.
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce l'handle per un contesto di dispositivo per il dispositivo specificato nella `DVTARGETDEVICE`. Se nessuna periferica è specificata, restituisce l'handle per il dispositivo di visualizzazione predefinito.
+Restituisce l'handle per un contesto di dispositivo per il dispositivo specificato in `DVTARGETDEVICE`. Se non viene specificato alcun dispositivo, restituisce l'handle al dispositivo di visualizzazione predefinito.
 
 ### <a name="remarks"></a>Note
 
-Se la struttura è NULL e *hdc* è NULL, crea un contesto di dispositivo per il dispositivo di visualizzazione predefinito.
+Se la struttura è NULL e *HDC* è null, crea un contesto di dispositivo per il dispositivo di visualizzazione predefinito.
 
-Se *hdc* non è NULL e *ptd* è NULL, la funzione restituisce l'oggetto esistente *hdc*.
+Se *HDC* non è null e *PTD* è null, la funzione restituisce l' *HDC*esistente.
 
 ## <a name="requirements"></a>Requisiti
 

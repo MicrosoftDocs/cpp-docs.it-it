@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMFCAcceleratorKeyAssignCtrl [MFC], PreTranslateMessage
 - CMFCAcceleratorKeyAssignCtrl [MFC], ResetKey
 ms.assetid: 89fb8e62-596e-4e71-8c9a-32740347aaab
-ms.openlocfilehash: c6ce8c75b1b764d1d2b66b86147035f069805d25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e57bf149fdbc293692c613afcabcf2d11d32221
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403912"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505462"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>Classe CMFCAcceleratorKeyAssignCtrl
 
-Il `CMFCAcceleratorKeyAssignCtrl` classe estende la [classe CEdit](../../mfc/reference/cedit-class.md) per supportare pulsanti di sistema supplementari come ALT, CTRL e MAIUSC.
+La `CMFCAcceleratorKeyAssignCtrl` classe estende la [classe CEdit](../../mfc/reference/cedit-class.md) per supportare pulsanti di sistema aggiuntivi, ad esempio ALT, CTRL e MAIUSC.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -35,7 +35,7 @@ Il `CMFCAcceleratorKeyAssignCtrl` classe estende la [classe CEdit](../../mfc/ref
 class CMFCAcceleratorKeyAssignCtrl : public CEdit
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -50,14 +50,14 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Richiama la `ACCEL` struttura per una combinazione di testi premuta nell'oggetto `CMFCAcceleratorKeyAssignCtrl`.|
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||
 |[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Determina se è stato definita una combinazione di tasti.|
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Reimposta la combinazione di tasti.|
 
 ## <a name="remarks"></a>Note
 
-Questa classe estende la funzionalità della classe `CEdit` grazie al supporto delle combinazioni di tasti, note anche come tasti di scelta rapida. Il `CMFCAcceleratorKeyAssignCtrl` classe funziona come un [classe CEdit](../../mfc/reference/cedit-class.md) e inoltre in grado di riconoscere i pulsanti di sistema.
+Questa classe estende la funzionalità della classe `CEdit` grazie al supporto delle combinazioni di tasti, note anche come tasti di scelta rapida. La `CMFCAcceleratorKeyAssignCtrl` classe funge da [classe CEdit](../../mfc/reference/cedit-class.md) e può anche riconoscere i pulsanti di sistema.
 
-Questa classe esegue il mapping delle combinazioni di tasti per i valori stringa. Ad esempio, si presupponga che viene eseguito il mapping della combinazione di tasti ALT + B alla stringa "Alt + B". Quando l'utente preme questa combinazione di tasti in un oggetto `CMFCAcceleratorKeyAssignCtrl`, "Alt + B" viene visualizzato all'utente. Per altre informazioni sul mapping tra i tasti di scelta rapida e un formato di stringa, vedere [classe CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md).
+Questa classe esegue il mapping delle combinazioni di tasti per i valori stringa. Ad esempio, si presupponga che viene eseguito il mapping della combinazione di tasti ALT + B alla stringa "Alt + B". Quando l'utente preme questa combinazione di tasti in un oggetto `CMFCAcceleratorKeyAssignCtrl`, "Alt + B" viene visualizzato all'utente. Per ulteriori informazioni sul mapping tra i tasti di scelta rapida e un formato stringa, vedere [classe CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md).
 
 ## <a name="example"></a>Esempio
 
@@ -83,7 +83,7 @@ L'esempio seguente illustra come costruire un oggetto `CMFCAcceleratorKeyAssignC
 
 ##  <a name="cmfcacceleratorkeyassignctrl"></a>  CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl
 
-Costruisce un [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) oggetto.
+Costruisce un oggetto [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) .
 
 ```
 CMFCAcceleratorKeyAssignCtrl();
@@ -91,7 +91,7 @@ CMFCAcceleratorKeyAssignCtrl();
 
 ##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel
 
-Recupera le `ACCEL` struttura per nella quando viene premuto un tasto di scelta rapida di [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) oggetto.
+Recupera la `ACCEL` struttura per un tasto di scelta rapida premuto nell'oggetto [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) .
 
 ```
 ACCEL const* GetAccel() const;
@@ -99,11 +99,11 @@ ACCEL const* GetAccel() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un `ACCEL` struttura che descrive il tasto di scelta rapida.
+`ACCEL` Struttura che descrive il tasto di scelta rapida.
 
 ### <a name="remarks"></a>Note
 
-Utilizzare questa funzione per recuperare il `ACCEL` struttura di un tasto di scelta rapida che l'utente ha immesso nel `CMFCAcceleratorKeyAssignCtrl` oggetto.
+Usare questa funzione per recuperare la `ACCEL` struttura per un tasto di scelta rapida immesso dall'utente `CMFCAcceleratorKeyAssignCtrl` nell'oggetto.
 
 ##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused
 
@@ -119,7 +119,7 @@ BOOL IsFocused() const;
 
 ##  <a name="iskeydefined"></a>  CMFCAcceleratorKeyAssignCtrl::IsKeyDefined
 
-Determina se un tasto di scelta rapida è stato definito nel [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) oggetto.
+Determina se un tasto di scelta rapida è stato definito nell'oggetto [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) .
 
 ```
 BOOL IsKeyDefined() const;
@@ -127,13 +127,13 @@ BOOL IsKeyDefined() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se l'utente ha premuto già una combinazione valida di chiavi che definiscono un tasto di scelta rapida; in caso contrario 0.
+Diverso da zero se l'utente ha già premuto una combinazione valida di chiavi che definiscono un tasto di scelta rapida; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Utilizzare questa funzione per determinare se l'utente ha immesso un tasto di scelta rapida valido nel `CMFCAcceleratorKeyAssignCtrl` oggetto. Se esiste un tasto di scelta rapida, è possibile usare [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) metodo per ottenere il `ACCEL` struttura associata a questo tasto di scelta rapida.
+Usare questa funzione per determinare se l'utente ha immesso un tasto di scelta `CMFCAcceleratorKeyAssignCtrl` rapida valido nell'oggetto. Se è presente un tasto di scelta rapida, è possibile usare il metodo [CMFCAcceleratorKeyAssignCtrl:: GetAccel](#getaccel) per ottenere la `ACCEL` struttura associata a questo tasto di scelta rapida.
 
-##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CMFCAcceleratorKeyAssignCtrl::P reTranslateMessage
 
 Per informazioni dettagliate, vedere il codice sorgente disponibile nella cartella **VC\\atlmfc\\src\\mfc** dell'installazione di Visual Studio.
 
@@ -159,7 +159,7 @@ void ResetKey();
 
 ### <a name="remarks"></a>Note
 
-La funzione Cancella il testo di controllo di modifica. Ciò include qualsiasi tasti premuti dall'utente.
+La funzione Cancella il testo del controllo di modifica. Sono inclusi i tasti di scelta rapida che l'utente ha premuto.
 
 ## <a name="see-also"></a>Vedere anche
 

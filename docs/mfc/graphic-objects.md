@@ -41,19 +41,19 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 3058bc5793a7766b0a6849ba77f0533f0bbbcef6
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 4abc2764abd0f31b83253f37b8cb459be638ae5a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503813"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508544"
 ---
 # <a name="graphic-objects"></a>Oggetti grafici
 
 Windows offre un'ampia gamma di strumenti di disegno da usare in contesti di dispositivo, tra cui penne per tracciare linee, pennelli per riempire le aree interne e tipi di carattere per aggiungere testo. MFC offre classi di oggetti grafici equivalenti agli strumenti di disegno di Windows. La tabella seguente mostra le classi disponibili e i tipi di handle Graphics Device Interface (GDI) di Windows equivalenti.
 
 > [!NOTE]
->  Per altre informazioni, vedere la [documentazione di GDI+ SDK](/windows/desktop/gdiplus/-gdiplus-gdi-start).
+>  Per ulteriori informazioni, vedere la [documentazione di GDI+ SDK](/windows/win32/gdiplus/-gdiplus-gdi-start).
 
 Questo articolo descrive l'uso di queste classi di oggetti grafici:
 
@@ -69,11 +69,11 @@ Questo articolo descrive l'uso di queste classi di oggetti grafici:
 |[CRgn](../mfc/reference/crgn-class.md)|**HRGN**|
 
 > [!NOTE]
->  La classe [CImage](../atl-mfc-shared/reference/cimage-class.md) offre supporto avanzato per le bitmap.
+>  La classe [CImage](../atl-mfc-shared/reference/cimage-class.md) fornisce un supporto ottimizzato per le bitmap.
 
 Ogni classe di oggetti grafici nella libreria di classi ha un costruttore che permette di creare oggetti grafici di tale classe, che è quindi necessario inizializzare con la funzione di creazione appropriata, ad esempio `CreatePen`.
 
-Ogni classe di oggetti grafici nella libreria di classi include un operatore di cast che eseguirà il cast di un oggetto MFC all'handle di Windows associato. L'handle risultante è valido fino a quando l'oggetto associato non lo scollega. Usare l'oggetto `Detach` funzione membro per scollegare l'handle.
+Ogni classe di oggetti grafici nella libreria di classi include un operatore di cast che eseguirà il cast di un oggetto MFC all'handle di Windows associato. L'handle risultante è valido fino a quando l'oggetto associato non lo scollega. Utilizzare la funzione `Detach` membro dell'oggetto per scollegare l'handle.
 
 Il codice seguente esegue il cast di un oggetto `CPen` a un handle di Windows:
 
@@ -81,9 +81,9 @@ Il codice seguente esegue il cast di un oggetto `CPen` a un handle di Windows:
 
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>Per creare un oggetto grafico in un contesto di dispositivo
 
-1. Definire un oggetto grafico sullo stack frame. Inizializzare l'oggetto con la funzione di creazione specifica del tipo, ad esempio `CreatePen`. In alternativa, inizializzare l'oggetto nel costruttore. Vedere la discussione relativa [la creazione di una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md), che fornisce il codice di esempio.
+1. Definire un oggetto grafico sullo stack frame. Inizializzare l'oggetto con la funzione di creazione specifica del tipo, ad esempio `CreatePen`. In alternativa, inizializzare l'oggetto nel costruttore. Vedere la discussione relativa alla [creazione in una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md), che fornisce un esempio di codice.
 
-1. [Selezionare l'oggetto nel contesto di dispositivo corrente](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvando il vecchio oggetto grafico che è stata selezionata prima.
+1. [Selezionare l'oggetto nel contesto di dispositivo corrente](../mfc/selecting-a-graphic-object-into-a-device-context.md), salvando l'oggetto grafico precedente selezionato in precedenza.
 
 1. Al termine delle operazioni sull'oggetto grafico corrente, selezionare di nuovo il vecchio oggetto grafico nel contesto di dispositivo per ripristinarne lo stato.
 
@@ -92,11 +92,11 @@ Il codice seguente esegue il cast di un oggetto `CPen` a un handle di Windows:
 > [!NOTE]
 >  Se si prevede di usare ripetutamente un oggetto grafico, è possibile allocarlo una volta e selezionarlo in un contesto di dispositivo ogni volta che è necessario. Assicurarsi di eliminare l'oggetto quando non è più necessario.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+### <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
 - [Costruzione di oggetti grafici in una fase e in due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
-- [Esempio di costruire una penna in una e due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [Esempio di costruzione di una penna in una e due fasi](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
 - [Selezione di un oggetto grafico in un contesto di dispositivo](../mfc/selecting-a-graphic-object-into-a-device-context.md)
 

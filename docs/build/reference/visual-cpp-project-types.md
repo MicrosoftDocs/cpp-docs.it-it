@@ -1,6 +1,6 @@
 ---
 title: Tipi di progetto Visual C++
-ms.date: 07/02/2019
+ms.date: 08/13/2019
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 98f8ea11cce61ca91fbdc8f8afb900a7ba5b42c9
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: f234f9a05a871fe474b783a68f644cb4f2b1c2e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552220"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498434"
 ---
 # <a name="c-project-templates"></a>Modelli di progetto C++
 
-Modelli di progetto di Visual Studio generano file del codice sorgente, le opzioni del compilatore, menu, barre degli strumenti, le icone, riferimenti, e `#include` le istruzioni appropriate per il tipo di progetto da creare. Visual Studio include diversi tipi di C++ modelli di progetto e sono disponibili procedure guidate per molti di essi in modo che sia possibile personalizzare i progetti durante la creazione. Subito dopo aver creato un progetto, è possibile compilarlo ed eseguire l'applicazione. È consigliabile compilare l'applicazione gradualmente man mano che la si sviluppa.
+I modelli di progetto di Visual Studio generano i file di codice sorgente, le opzioni del compilatore, i menu `#include` , le barre degli strumenti, le icone, i riferimenti e le istruzioni appropriati per il tipo di progetto che si vuole creare. Visual Studio include diversi tipi di C++ modelli di progetto e fornisce procedure guidate per molti di essi, in modo da poter personalizzare i progetti durante la creazione. Subito dopo aver creato un progetto, è possibile compilarlo ed eseguire l'applicazione. È consigliabile compilare l'applicazione gradualmente man mano che la si sviluppa.
 
 > [!NOTE]
 > È possibile creare un progetto in linguaggio C usando i modelli di progetto C++. Nel progetto generato trovare i file con estensione cpp e modificarla con c. Quindi, nella pagina **Proprietà progetto** per il progetto (non per la soluzione) espandere **Proprietà di configurazione**, **C/C++** e selezionare **Avanzate**. Impostare l'opzione **Compila come** su **Compila come codice C (/TC)** .
 
 ## <a name="project-templates"></a>Modelli di progetto
 
-I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prodotto e dai carichi di lavoro installati. Se è stato installato lo sviluppo Desktop con C++ carico di lavoro, Visual Studio include questi C++ modelli di progetto.
+I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prodotto e dai carichi di lavoro installati. Se è stato installato lo sviluppo di applicazioni C++ desktop con carico di lavoro, C++ Visual Studio dispone di questi modelli di progetto.
 
 ### <a name="windows-desktop"></a>Desktop di Windows
 
@@ -36,15 +36,15 @@ I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prod
 |[Applicazione desktop di Windows](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Progetto per la creazione di un'applicazione desktop di Windows (Win32).|
 |[Libreria di collegamento dinamico](../walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Progetto per la creazione di una libreria di collegamento dinamico (DLL).|
 |[Libreria statica](../../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Progetto per la creazione di una libreria statica (LIB).|
-|Creazione guidata applicazione desktop di Windows|Una procedura guidata per la creazione di librerie e applicazioni desktop di Windows con opzioni aggiuntive.|
+|[Creazione guidata applicazione desktop di Windows](../../windows/windows-desktop-wizard.md)|Una procedura guidata per la creazione di librerie e applicazioni desktop di Windows con opzioni aggiuntive.|
 
 ### <a name="general"></a>Generale
 
 |Modello di progetto|Descrizione|
 |----------------------|-----------------------------|
 |Progetto vuoto|Progetto vuoto per la creazione di un'applicazione, libreria o DLL. È necessario aggiungere le risorse o il codice necessari.|
-|[Progetto makefile](creating-a-makefile-project.md)|Un progetto che esegue il wrapping di un makefile di Windows in un progetto di Visual Studio. (Per aprire un makefile come-in Visual Studio, usare [Apri cartella](../open-folder-projects-cpp.md).|
-|Progetto elementi condivisi|Un progetto usato per la condivisione file di codice o file di risorse tra più progetti. Questo tipo di progetto non produce un file eseguibile.|
+|[Progetto makefile](creating-a-makefile-project.md)|Progetto che esegue il wrapping di un makefile di Windows in un progetto di Visual Studio. Per aprire un makefile così com'è in Visual Studio, usare [Apri cartella](../open-folder-projects-cpp.md).|
+|Progetto elementi condivisi|Progetto utilizzato per la condivisione di file di codice o file di risorse tra più progetti. Questo tipo di progetto non produce un file eseguibile.|
 
 ### <a name="atl"></a>ATL
 
