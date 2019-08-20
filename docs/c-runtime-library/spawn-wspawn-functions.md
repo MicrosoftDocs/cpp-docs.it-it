@@ -45,14 +45,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8ab368378775102b708635b551c046a326adfecb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748047"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498900"
 ---
-# <a name="spawn-wspawn-functions"></a>Funzioni _spawn, _wspawn
+# <a name="_spawn-_wspawn-functions"></a>Funzioni _spawn, _wspawn
 
 Ognuna delle funzioni `_spawn` crea ed esegue un nuovo processo:
 
@@ -117,13 +117,13 @@ Per passare argomenti al nuovo processo, specificare uno o più puntatori alle s
 >  La presenza di spazi incorporati nelle stringhe può causare comportamenti imprevisti; ad esempio, passare a `_spawn` la stringa `"hi there"` comporterà la presenza nel nuovo processo di due argomenti, `"hi"` e `"there"`. Se lo scopo è quello di far aprire al nuovo processo un file denominato "hi there", il processo avrà esito negativo. Per evitarlo, racchiudere la stringa tra virgolette doppie: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  Non passare input utente a `_spawn` senza verificarne esplicitamente il contenuto. `_spawn` determinerà una chiamata a [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.
+>  Non passare input utente a `_spawn` senza verificarne esplicitamente il contenuto. `_spawn` determinerà una chiamata a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.
 
 È possibile passare i puntatori dell'argomento come argomenti separati (in `_spawnl`, `_spawnle`, `_spawnlp` e `_spawnlpe`) o come una matrice di puntatori (in `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe`). È necessario passare almeno un argomento, `arg0` o `argv`[0], al processo generato. Per convenzione, questo argomento è il nome del programma che si digiterebbe sulla riga di comando. Un valore diverso non produce un errore.
 
 Le chiamate `_spawnl`, `_spawnle`, `_spawnlp` e `_spawnlpe` in genere vengono utilizzate nei casi in cui il numero di argomenti è noto in anticipo. L'argomento `arg0` è solitamente un puntatore a `cmdname`. Gli argomenti da `arg1` a `argn` sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. Dopo `argn`, ci deve essere un puntatore **NULL** per contrassegnare la fine dell'elenco di argomenti.
 
-Le chiamate `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe` sono utili quando esiste un numero variabile di argomenti al nuovo processo. I puntatori agli argomenti vengono passati come matrice, `argv`*.* L'argomento `argv`[0] è in genere un puntatore a un percorso in modalità reale o al nome del programma in modalità protetta e `argv`[1] con `argv`[`n`] sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. L'argomento `argv`[`n` +1] deve essere un puntatore **NULL** per contrassegnare la fine dell'elenco di argomenti.
+Le chiamate `_spawnv`, `_spawnve`, `_spawnvp` e `_spawnvpe` sono utili quando esiste un numero variabile di argomenti al nuovo processo. I puntatori agli argomenti vengono passati come matrice, `argv` *.* L'argomento `argv`[0] è in genere un puntatore a un percorso in modalità reale o al nome del programma in modalità protetta e `argv`[1] con `argv`[`n`] sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. L'argomento `argv`[`n` +1] deve essere un puntatore **NULL** per contrassegnare la fine dell'elenco di argomenti.
 
 ## <a name="environment-of-the-spawned-process"></a>Ambiente del processo generato
 
@@ -139,7 +139,7 @@ I nuovi processi creati dalle chiamate alle routine `_spawn` non mantengono le i
 
 Se si chiama `_spawn` da un'applicazione DLL o GUI e si desidera reindirizzare l'output a una pipe, sono disponibili due opzioni:
 
-- Usare l'API Win32 per creare una pipe, quindi chiamare [AllocConsole](/windows/console/allocconsole), impostare i valori di handle nella struttura di avvio e chiamare [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
+- Usare l'API Win32 per creare una pipe, quindi chiamare [AllocConsole](/windows/console/allocconsole), impostare i valori di handle nella struttura di avvio e chiamare [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw).
 
 - Chiamare [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md) che creerà una pipe e richiamerà l'app con **cmd.exe /c** (o **command.exe /c**).
 

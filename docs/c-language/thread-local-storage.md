@@ -8,18 +8,18 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: 4b1aa32b384f3a5db5203883c1cc03bd61de7b19
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152131"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500273"
 ---
 # <a name="thread-local-storage"></a>archiviazione thread-local
 
 **Sezione specifica Microsoft**
 
-L'archiviazione thread-local (TLS, Thread-Local Storage) è il meccanismo attraverso il quale ogni thread in un dato processo multithread alloca lo spazio di archiviazione per i dati specifici dei thread. Nei programmi multithread standard, i dati vengono condivisi da tutti i thread di un determinato processo, mentre l'archiviazione thread-local è il meccanismo che consente di allocare i dati per singoli thread. Per una descrizione completa dei thread, vedere [Processes and Threads](/windows/desktop/ProcThread/processes-and-threads) (Processi e thread) in Windows SDK.
+L'archiviazione thread-local (TLS, Thread-Local Storage) è il meccanismo attraverso il quale ogni thread in un dato processo multithread alloca lo spazio di archiviazione per i dati specifici dei thread. Nei programmi multithread standard, i dati vengono condivisi da tutti i thread di un determinato processo, mentre l'archiviazione thread-local è il meccanismo che consente di allocare i dati per singoli thread. Per una descrizione completa dei thread, vedere [Processes and Threads](/windows/win32/ProcThread/processes-and-threads) (Processi e thread) in Windows SDK.
 
 Il linguaggio C Microsoft include l'attributo esteso di classe di archiviazione, thread, che viene usato con la parola chiave __declspec per dichiarare una variabile thread-local. Nel codice seguente, ad esempio, viene dichiarata una variabile locale di thread di tipo integer e quindi inizializzata con un valore:
 

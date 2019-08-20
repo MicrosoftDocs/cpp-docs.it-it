@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 0c3752baba05e18903c32919505d702081d09dca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e79ac5d4072595ef1034a0483b9edc8eada916d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468419"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500221"
 ---
-# <a name="crtlcmapstringw"></a>__crtLCMapStringW
+# <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
 Esegue il mapping di una stringa di caratteri a un'altra, eseguendo una trasformazione specificata dipendente dalle impostazioni locali. Questa funzione può essere anche utilizzata per generare una chiave di ordinamento per la stringa di input.
 
@@ -70,9 +70,9 @@ Se il valore di `cchDest` è zero, la dimensione del buffer in caratteri, o byte
 
 Zero indica un errore. Per ottenere informazioni estese sull'errore, chiamare la funzione `GetLastError` .
 
-## <a name="remarks"></a>Note
+## <a name="remarks"></a>Osservazioni
 
-Se `cchSrc` è maggiore di zero e `lpSrcStr` è una stringa con terminazione null, `__crtLCMapStringW` imposta `cchSrc` sulla lunghezza della stringa. Quindi `__crtLCMapStringW` chiama la versione di stringa a caratteri wide (Unicode) della funzione `LCMapString` con i parametri specificati. Per altre informazioni sui parametri e sul valore restituito di questa funzione, vedere [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa).
+Se `cchSrc` è maggiore di zero e `lpSrcStr` è una stringa con terminazione null, `__crtLCMapStringW` imposta `cchSrc` sulla lunghezza della stringa. Quindi `__crtLCMapStringW` chiama la versione di stringa a caratteri wide (Unicode) della funzione `LCMapString` con i parametri specificati. Per altre informazioni sui parametri e sul valore restituito di questa funzione, vedere [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw).
 
 ## <a name="requirements"></a>Requisiti
 

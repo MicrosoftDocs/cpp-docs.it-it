@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 8174f6382ea2dab4ef2a49f5d30a6e27e8af3f5b
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: 0113fbd68d7687236b91b098ead2ac6b8338fee9
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492169"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787066"
 ---
 # <a name="midl-property-pages"></a>Pagine delle proprietà MIDL
 
@@ -66,7 +66,7 @@ Specifica una o più definizioni, incluse le macro\]MIDL ([/d](/windows/win32/mi
 
 ### <a name="additional-include-directories"></a>Directory di inclusione aggiuntive
 
-Specifica una o più directory da aggiungere al percorso di inclusione[](/windows/win32/midl/-i)\[(/i\]percorso).
+Specifica una o più directory da aggiungere al percorso di inclusione ([/I](/windows/win32/midl/-i)\[percorso\]).
 
 ### <a name="additional-metadata-directories"></a>Directory di metadati aggiuntive
 
@@ -129,15 +129,15 @@ Specifica l'ambiente di destinazione ([/ENV](/windows/win32/midl/-env) ARM32 | W
 
 ### <a name="generate-stubless-proxies"></a>Genera proxy senza stub
 
-Genera stub completamente interpretati con estensioni e proxy senza stub per le interfacce degli oggetti ([/Oicf](/windows/win32/midl/-Oicf), [/OIF](/windows/win32/midl/-Oif) ).
+Genera stub completamente interpretati con estensioni e proxy senza stub per le interfacce degli oggetti ([/Oicf](/windows/win32/midl/-oi), [/OIF](/windows/win32/midl/-oi) ).
 
 ### <a name="suppress-compiler-warnings"></a>Non visualizzare avvisi del compilatore
 
-Non visualizzare i messaggi di avviso del compilatore ([/no_warn](/windows/win32/midl/-no_warn)).
+Non visualizzare i messaggi di avviso del compilatore ([/no_warn](/windows/win32/midl/-no-warn)).
 
 ### <a name="application-configuration-mode"></a>Modalità di configurazione dell'applicazione
 
-Consente gli attributi ACF selezionati nel file IDL ([/app_config](/windows/win32/midl/-app_config)).
+Consente gli attributi ACF selezionati nel file IDL ([/app_config](/windows/win32/midl/-app-config)).
 
 ### <a name="locale-id"></a>ID impostazioni locali
 
@@ -187,7 +187,7 @@ Genera solo file stub client ([/client](/windows/win32/midl/-client) [Stub | nes
 
 **Scelte**
 
-- Stub **-Stub**
+- Stub-Stub
 - **Nessuno** -nessuno
 
 ### <a name="generate-server-stub-files"></a>Genera file stub server
@@ -196,7 +196,7 @@ Genera solo file stub server ([/Server](/windows/win32/midl/-server) [Stub | nes
 
 **Scelte**
 
-- Stub **-Stub**
+- Stub-Stub
 - **Nessuno** -nessuno
 
 ### <a name="client-stub-file"></a>File stub client
@@ -220,7 +220,7 @@ Specifica il formato del file della libreria dei tipi ([/oldtlb |/newtlb]).
 
 ### <a name="c-preprocess-options"></a>Opzioni di pre-elaborazione C
 
-Specifica le opzioni da passare al preprocessore del compilatore C (opzioni[/cpp_opt](/windows/win32/midl/-cpp_opt) ).
+Specifica le opzioni da passare al preprocessore del compilatore C (opzioni[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
 
 ### <a name="undefine-preprocessor-definitions"></a>Rimuovi definizioni per il preprocessore
 
@@ -258,15 +258,15 @@ Genera il controllo aggiuntivo per la validità dei dati dello stub sul lato ser
 
 ### <a name="prepend-with-abi-namespace"></a>Anteporre allo spazio dei nomi ' ABI '
 
-Anteporre lo spazio dei nomi ' ABI ' a tutti i tipi.  ([/ns_prefix](/windows/win32/midl/-ns_prefix)).
+Anteporre lo spazio dei nomi ' ABI ' a tutti i tipi.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
 
 ### <a name="validate-parameters"></a>Convalida parametri
 
-Genera informazioni aggiuntive per la convalida dei parametri ([/robust](/windows/win32/midl/-robust) | [/robust](/windows/win32/midl/-no_robust)).
+Genera informazioni aggiuntive per la convalida dei parametri ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Allineamento membri struct
 
-Specifica il livello di compressione delle strutture nel sistema di destinazione ([/ZpN](/windows/win32/midl/-zpn)).
+Specifica il livello di compressione delle strutture nel sistema di destinazione (/ZpN).
 
 **Scelte**
 

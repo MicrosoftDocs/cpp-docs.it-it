@@ -53,14 +53,14 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d31192a25cce86dad6f8e1e8b0258a457d0a5436
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746201"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500130"
 ---
-# <a name="exec-wexec-functions"></a>Funzioni _exec, _wexec
+# <a name="_exec-_wexec-functions"></a>Funzioni _exec, _wexec
 
 Ogni funzione in questa famiglia carica ed esegue un nuovo processo:
 
@@ -73,7 +73,7 @@ Ogni funzione in questa famiglia carica ed esegue un nuovo processo:
 
 La lettera alla fine del nome della funzione identifica la modifica.
 
-|Suffisso _exec della funzione|Description|
+|Suffisso _exec della funzione|DESCRIZIONE|
 |----------------------------|-----------------|
 |`e`|`envp`, matrice di puntatori alle impostazioni di ambiente, viene passato al nuovo processo.|
 |`l`|Gli argomenti della riga di comando vengono passati singolarmente alla funzione `_exec`. Si usa in genere quando il numero di parametri per il nuovo processo è noto a priori.|
@@ -82,7 +82,7 @@ La lettera alla fine del nome della funzione identifica la modifica.
 
 ## <a name="remarks"></a>Osservazioni
 
-Ogni funzione `_exec` carica ed esegue un nuovo processo. Tutte le funzioni `_exec` usano la stessa funzione di sistema operativo ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). La funzione `_exec` gestisce automaticamente gli argomenti della stringa con caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. Le funzioni `_wexec` sono versioni a caratteri wide delle funzioni `_exec`. Le funzioni `_wexec` si comportano in modo identico alle corrispondenti della famiglia `_exec`, ma non gestiscono le stringhe di caratteri multibyte.
+Ogni funzione `_exec` carica ed esegue un nuovo processo. Tutte le funzioni `_exec` usano la stessa funzione di sistema operativo ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw)). La funzione `_exec` gestisce automaticamente gli argomenti della stringa con caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. Le funzioni `_wexec` sono versioni a caratteri wide delle funzioni `_exec`. Le funzioni `_wexec` si comportano in modo identico alle corrispondenti della famiglia `_exec`, ma non gestiscono le stringhe di caratteri multibyte.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -105,7 +105,7 @@ I parametri vengono passati al nuovo processo specificando uno o più puntatori 
 >  La presenza di spazi incorporati nelle stringhe può causare comportamenti imprevisti; ad esempio, passare a `_exec` la stringa `"hi there"` comporterà la presenza nel nuovo processo di due argomenti, `"hi"` e `"there"`. Se lo scopo è quello di far aprire al nuovo processo un file denominato "hi there", il processo avrà esito negativo. Per evitarlo, racchiudere la stringa tra virgolette doppie: `"\"hi there\""`.
 
 > [!IMPORTANT]
->  Non passare input utente a `_exec` senza verificarne esplicitamente il contenuto. `_exec` determinerà una chiamata a [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.
+>  Non passare input utente a `_exec` senza verificarne esplicitamente il contenuto. `_exec` determinerà una chiamata a [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), per cui è bene tenere presente che i nomi di percorsi non qualificati possono creare vulnerabilità a livello di sicurezza.
 
 Le funzioni `_exec` convalidano i propri parametri. Se i parametri previsti sono puntatori Null, stringhe vuote oppure sono omessi, le funzioni `_exec` richiamano il gestore di parametri non validi come descritto in [Convalida dei parametri](../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono -1. Non viene eseguito alcun nuovo processo.
 

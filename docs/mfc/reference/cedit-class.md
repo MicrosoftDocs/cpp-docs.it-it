@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: a66597f7a43e0730ae8b32369235ac860f51a0f1
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: MT
+ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375850"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916145"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -115,7 +115,7 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Costruisce un `CEdit` oggetto controllo.|
 
@@ -175,7 +175,7 @@ Un controllo di modifica è una finestra figlio rettangolare in cui l'utente pu�
 
 La costruzione può essere un processo in un unico passaggio in una classe `CEdit`derivata da. Scrivere un costruttore per la classe derivata e chiamare `Create` dall'interno del costruttore.
 
-`CEdit`eredita funzionalità significative `CWnd`da. Per impostare e recuperare testo da un `CEdit` oggetto, usare le `CWnd` funzioni membro [SetWindowText](cwnd-class.md#setwindowtext) e [GetWindowText](cwnd-class.md#getwindowtext), che consentono di impostare o ottenere l'intero contenuto di un controllo di modifica, anche se si tratta di un controllo su più righe. Le righe di testo in un controllo su più righe sono separate dalle sequenze di caratteri ' \r\n '. Inoltre, se un controllo di modifica è su più righe, ottenere e impostare parte del testo del controllo chiamando `CEdit` le funzioni membro getline, [SetSel](#setsel), [GetSel](#getsel)e [ReplaceSel](#replacesel). [](#getline)
+`CEdit`eredita funzionalità significative `CWnd`da. Per impostare e recuperare testo da un `CEdit` oggetto, usare le `CWnd` funzioni membro [SetWindowText](cwnd-class.md#setwindowtext) e [GetWindowText](cwnd-class.md#getwindowtext), che consentono di impostare o ottenere l'intero contenuto di un controllo di modifica, anche se si tratta di un controllo su più righe. Le righe di testo in un controllo su più righe sono separate dalle sequenze di caratteri ' \r\n '. Inoltre, se un controllo di modifica è su più righe, ottenere e impostare parte del testo del controllo chiamando le funzioni membro `CEdit` [GetLine](#getline), [SetSel](#setsel), [GetSel](#getsel) e [ReplaceSel](#replacesel).
 
 Se si desidera gestire i messaggi di notifica di Windows inviati da un controllo di modifica al relativo elemento padre (in `CDialog`genere una classe derivata da), aggiungere una voce della mappa messaggi e una funzione membro del gestore del messaggio alla classe padre per ogni messaggio.
 
@@ -367,7 +367,7 @@ Si costruisce `CEdit` un oggetto in due passaggi. Chiamare innanzitutto il `CEdi
 
 Quando `Create` viene eseguito, Windows invia i messaggi [WM_NCCREATE](/windows/desktop/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/desktop/winmsg/wm-nccalcsize), [WM_CREATE](/windows/desktop/winmsg/wm-create)e [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) al controllo di modifica.
 
-Questi messaggi vengono gestiti per impostazione predefinita dalle funzioni membro [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), OnCreate e [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) nella classe `CWnd` di base. [](cwnd-class.md#oncreate) Per estendere la gestione dei messaggi predefinita, derivare una `CEdit`classe da, aggiungere una mappa messaggi alla nuova classe ed eseguire l'override delle funzioni membro del gestore di messaggi sopra indicate. Eseguire `OnCreate`l'override, ad esempio, per eseguire l'inizializzazione necessaria per la nuova classe.
+Questi messaggi vengono gestiti per impostazione predefinita dalle funzioni membro [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate) e [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) nella classe di base `CWnd`. Per estendere la gestione dei messaggi predefinita, derivare una `CEdit`classe da, aggiungere una mappa messaggi alla nuova classe ed eseguire l'override delle funzioni membro del gestore di messaggi sopra indicate. Eseguire `OnCreate`l'override, ad esempio, per eseguire l'inizializzazione necessaria per la nuova classe.
 
 Applicare gli [stili della finestra](styles-used-by-mfc.md#window-styles) seguenti a un controllo di modifica.
 
@@ -417,7 +417,7 @@ void EmptyUndoBuffer();
 
 Il controllo di modifica ora non sarà in grado di annullare l'ultima operazione. Il flag di annullamento viene impostato ogni volta che un'operazione all'interno del controllo di modifica può essere annullata.
 
-Il flag di annullamento viene cancellato automaticamente ogni volta che [](#sethandle) `CWnd` vengono chiamate le funzioni membro [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) o fileHandle.
+Il flag di annullamento viene cancellato automaticamente ogni volta che vengono chiamate le funzioni membro [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) o [SetHandle](#sethandle)`CWnd`.
 
 Per ulteriori informazioni, vedere [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) nel Windows SDK.
 
@@ -448,7 +448,7 @@ Un'interruzione di riga flessibile è costituita da due ritorni a capo e un avan
 
 Windows risponderà solo se l' `CEdit` oggetto è un controllo di modifica a più righe.
 
-`FmtLines`influiscono solo sul buffer restituito [](#gethandle) da GetHandle e sul testo restituito da [WM_GETTEXT](/windows/desktop/winmsg/wm-gettext). Non ha alcun effetto sulla visualizzazione del testo all'interno del controllo di modifica.
+`FmtLines` influiscono solo sul buffer restituito da [GetHandle](#gethandle) e sul testo restituito da [WM_GETTEXT](/windows/desktop/winmsg/wm-gettext). Non ha alcun effetto sulla visualizzazione del testo all'interno del controllo di modifica.
 
 Per ulteriori informazioni, vedere [EM_FMTLINES](/windows/desktop/Controls/em-fmtlines) nel Windows SDK.
 
@@ -686,7 +686,7 @@ Diverso da zero se il contenuto del controllo di modifica è stato modificato. 0
 
 ### <a name="remarks"></a>Note
 
-Windows mantiene un flag interno che indica se il contenuto del controllo di modifica è stato modificato. Questo flag viene cancellato quando il controllo di modifica viene creato per la prima volta e può anche essere [](#setmodify) cancellato chiamando la funzione membro semodify.
+Windows mantiene un flag interno che indica se il contenuto del controllo di modifica è stato modificato. Questo flag viene cancellato quando il controllo di modifica viene creato per la prima volta e può anche essere cancellato chiamando la funzione membro [SetModify](#setmodify).
 
 Per ulteriori informazioni, vedere [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) nel Windows SDK.
 
@@ -733,7 +733,7 @@ Punta alla `RECT` struttura che riceve il rettangolo di formattazione.
 
 Il rettangolo di formattazione è il rettangolo di limitazione del testo, che è indipendente dalle dimensioni della finestra di modifica del controllo.
 
-Il rettangolo di formattazione di un controllo di modifica a più righe può essere modificato [](#setrect) dalle funzioni membro serect e [SetRectNP](#setrectnp) .
+Il rettangolo di formattazione di un controllo di modifica a più righe può essere modificato dalle funzioni membro [SetRect](#setrect) e [SetRectNP](#setrectnp)
 
 Per ulteriori informazioni, vedere [EM_GETRECT](/windows/desktop/Controls/em-getrect) nel Windows SDK.
 
@@ -1071,9 +1071,9 @@ Il controllo di modifica utilizzerà quindi questo buffer per archiviare il test
 
 Questa funzione membro viene elaborata solo da controlli di modifica su più righe.
 
-Prima che un'applicazione imposti un nuovo handle di memoria, deve [](#gethandle) usare la funzione membro GetHandle per ottenere l'handle per il buffer di memoria corrente e liberare tale `LocalFree` memoria usando la funzione di Windows.
+Prima che un'applicazione imposti un nuovo handle di memoria, deve usare la funzione membro [GetHandle](#gethandle) per ottenere l'handle per il buffer di memoria corrente e liberare tale memoria usando la funzione di Windows `LocalFree`.
 
-`SetHandle`Cancella il buffer di annullamento (la funzione membro [CanUndo](#canundo) quindi restituisce 0) e il flag di modifica interno (la funzione membro GetModify restituisce 0). [](#getmodify) La finestra di modifica del controllo viene ridisegnato.
+`SetHandle` cancella il buffer di annullamento (la funzione membro [CanUndo](#canundo) quindi restituisce 0) e il flag di modifica interno (la funzione membro [GetModify](#getmodify) restituisce 0). La finestra di modifica del controllo viene ridisegnato.
 
 È possibile utilizzare questa funzione membro in un controllo di modifica a più righe in una finestra di dialogo solo se è stata creata la finestra di dialogo con il flag di stile DS_LOCALEDIT impostato.
 
@@ -1178,7 +1178,7 @@ Il valore TRUE indica che il testo è stato modificato e il valore FALSE indica 
 
 ### <a name="remarks"></a>Note
 
-Il flag modificato indica se il testo all'interno del controllo di modifica è stato modificato. Viene impostato automaticamente ogni volta che l'utente modifica il testo. Il relativo valore può essere recuperato con [](#getmodify) la funzione membro GetModify.
+Il flag modificato indica se il testo all'interno del controllo di modifica è stato modificato. Viene impostato automaticamente ogni volta che l'utente modifica il testo. Il relativo valore può essere recuperato con la funzione membro [GetModify](#getmodify).
 
 Per ulteriori informazioni, vedere [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) nel Windows SDK.
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*pEditBalloonTip*|in Puntatore a una struttura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) che descrive il fumetto suggerimento.|
+|*pEditBalloonTip*|in Puntatore a una struttura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) che descrive il fumetto suggerimento.|
 |*lpszTitle*|in Puntatore a una stringa Unicode che contiene il titolo del fumetto suggerimento.|
 |*lpszText*|in Puntatore a una stringa Unicode che contiene il testo del fumetto suggerimento.|
-|*ttiIcon*|in Valore **int** che specifica il tipo di icona da associare al fumetto suggerimento. Il valore predefinito è TTI_NONE. Per ulteriori informazioni, vedere il `ttiIcon` membro della struttura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) .|
+|*ttiIcon*|in Valore **int** che specifica il tipo di icona da associare al fumetto suggerimento. Il valore predefinito è TTI_NONE. Per ulteriori informazioni, vedere il `ttiIcon` membro della struttura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) .|
 
 ### <a name="return-value"></a>Valore restituito
 

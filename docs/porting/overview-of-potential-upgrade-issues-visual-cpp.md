@@ -2,12 +2,12 @@
 title: Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 27cfe90f33f71d82af90cf4fa62186c1c0a189ce
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182941"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511550"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 
@@ -86,7 +86,7 @@ Per risolvere gli errori di simbolo non risolto, provare a usare dumpbin.exe per
 dumpbin.exe /LINKERMEMBER somelibrary.lib
 ```
 
-### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (Tipo nativo wchar_t)
+### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (Tipo nativo wchar_t)
 
 In Microsoft Visual C++ 6.0 e versioni precedenti, **wchar_t** non è implementato come tipo incorporato, ma è dichiarato in wchar.h come typedef per unsigned short. Lo standard C++ richiede che **wchar_t** sia un tipo incorporato. L'uso della versione typedef può causare problemi di portabilità. Se si esegue l'aggiornamento da versioni precedenti di Visual Studio e si verifica l'errore del compilatore C2664 perché il codice sta cercando di convertire in modo implicito **wchar_t** in **unsigned short**, è consigliabile modificare il codice per risolvere l'errore anziché impostare `/Zc:wchar_t-`. Per altre informazioni, vedere [/Zc:wchar_t (Tipo nativo wchar_t)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
@@ -168,7 +168,7 @@ Per altre informazioni, vedere [Aggiornamento della versione di Windows di desti
 
 ATL e MFC sono API relativamente stabili, ma anch'esse vengono modificate occasionalmente. Per altre informazioni, vedere [Cronologia delle modifiche di Visual C++ dal 2003 al 2015](visual-cpp-change-history-2003-2015.md), [Novità di Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) e [Miglioramenti della conformità di Visual C++ in Visual Studio](../overview/cpp-conformance-improvements.md).
 
-### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 già definito in MSVCRTD.lib
+### <a name="lnk-2005-_dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 già definito in MSVCRTD.lib
 
 Questo errore può verificarsi nelle applicazioni MFC. Indica un problema di ordinamento tra la libreria CRT e la libreria MFC. La libreria MFC deve essere collegata per prima, in modo che renda disponibili gli operatori new e delete. Per correggere l'errore, usare l'opzione `/NODEFAULTLIB` per ignorare le librerie predefinite: MSVCRTD.lib e mfcs140d.lib. Quindi aggiungere queste librerie come dipendenze aggiuntive.
 
@@ -176,7 +176,7 @@ Questo errore può verificarsi nelle applicazioni MFC. Indica un problema di ord
 
 Se il codice originale viene compilato per sistemi a 32 bit, è possibile scegliere di creare una versione a 64 bit in sostituzione o in aggiunta a una nuova applicazione a 32 bit. In genere è consigliabile completare la compilazione del programma in modalità a 32 bit, quindi provare a eseguire la compilazione a 64 bit. La compilazione in modalità a 64 bit è semplice, ma in alcuni casi evidenzia bug che non apparivano nelle build a 32 bit.
 
-È anche necessario tenere presenti possibili problemi in fase di compilazione e runtime relativi a dimensioni del puntatore, valori di ora e dimensioni e identificatori di formato nelle funzioni printf e scanf. Per altre informazioni, vedere [Configurare Visual C++ per destinazioni x64 a 64 bit](../build/configuring-programs-for-64-bit-visual-cpp.md) e [Problemi comuni relativi alla migrazione di Visual C++ a 64 bit](../build/common-visual-cpp-64-bit-migration-issues.md). Per altri suggerimenti relativi alla migrazione, vedere [Guida alla programmazione per Windows a 64 bit](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows).
+È anche necessario tenere presenti possibili problemi in fase di compilazione e runtime relativi a dimensioni del puntatore, valori di ora e dimensioni e identificatori di formato nelle funzioni printf e scanf. Per altre informazioni, vedere [Configurare Visual C++ per destinazioni x64 a 64 bit](../build/configuring-programs-for-64-bit-visual-cpp.md) e [Problemi comuni relativi alla migrazione di Visual C++ a 64 bit](../build/common-visual-cpp-64-bit-migration-issues.md). Per altri suggerimenti relativi alla migrazione, vedere [Guida alla programmazione per Windows a 64 bit](/windows/win32/WinProg64/programming-guide-for-64-bit-windows).
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode e MBCS/ASCII
 

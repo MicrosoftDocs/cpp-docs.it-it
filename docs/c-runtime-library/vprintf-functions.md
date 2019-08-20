@@ -15,12 +15,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: c45197c9008c2d0b6a0519d947ca75f55a7960fd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: eb8a2829540876936f6c57745fb56e7d19f16394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747846"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498878"
 ---
 # <a name="vprintf-functions"></a>Funzioni vprintf
 
@@ -81,7 +81,7 @@ Le versioni di queste funzioni con il suffisso **_p** consentono di specificare 
 Per **vsprintf**, `vswprintf`, `_vsnprintf` e `_vsnwprintf`, se si verifica una copia tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
->  Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns). Se si usano le versioni sicure di queste funzioni, con il suffisso **_s** o **_p**, e la stringa di formato specificata dall'utente contiene caratteri di formattazione non validi, potrebbe verificarsi un'eccezione di parametro non valido.
+>  Assicurarsi che *format* non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns). Se si usano le versioni sicure di queste funzioni, con il suffisso **_s** o **_p**, e la stringa di formato specificata dall'utente contiene caratteri di formattazione non validi, potrebbe verificarsi un'eccezione di parametro non valido.
 
 ## <a name="see-also"></a>Vedere anche
 

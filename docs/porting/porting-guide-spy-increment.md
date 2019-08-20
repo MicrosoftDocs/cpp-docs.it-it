@@ -2,12 +2,12 @@
 title: 'Guida al porting: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451130"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511669"
 ---
 # <a name="porting-guide-spy"></a>Guida al porting: Spy++
 
@@ -65,7 +65,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 
 Windows XP non è più supportato da Microsoft, quindi anche se in Visual Studio è consentita la selezione di questo sistema operativo come destinazione, il relativo supporto dovrebbe essere gradualmente eliminato nelle applicazioni, incoraggiando gli utenti ad adottare le nuove versioni di Windows.
 
-Per correggere l'errore, definire WINVER aggiornando l'impostazione **Proprietà progetto** alla versione meno recente di Windows che si vuole usare come destinazione. Una tabella di valori per le varie versioni di Windows è disponibile [qui](/windows/desktop/WinProg/using-the-windows-headers).
+Per correggere l'errore, definire WINVER aggiornando l'impostazione **Proprietà progetto** alla versione meno recente di Windows che si vuole usare come destinazione. Una tabella di valori per le varie versioni di Windows è disponibile [qui](/windows/win32/WinProg/using-the-windows-headers).
 
 Il file stdafx.h contiene alcune di queste definizioni di macro.
 
@@ -404,7 +404,7 @@ DWORD dwWindowsVersion = GetVersion();
 
 È seguito da una grande quantità di codice che esamina il valore dwWindowsVersion per determinare se è in esecuzione su Windows 95 e quale versione di Windows NT. Dal momento che sono tutte obsolete, è necessario rimuovere il codice e gestire tutti i riferimenti a tali variabili.
 
-L'articolo [Operating system version changes in Windows 8.1 and Windows Server 2012 R2](https://msdn.microsoft.com/library/windows/desktop/dn302074.aspx) (Modifiche alla versione del sistema operativo in Windows 8.1 e Windows Server 2012 R2) illustra la situazione.
+L'articolo [Operating system version changes in Windows 8.1 and Windows Server 2012 R2](/windows/win32/w8cookbook/operating-system-version-changes-in-windows-8-1) (Modifiche alla versione del sistema operativo in Windows 8.1 e Windows Server 2012 R2) illustra la situazione.
 
 Esistono metodi nella classe `CSpyApp` che eseguono query sulla versione del sistema operativo: `IsWindows9x`, `IsWindows4x` e `IsWindows5x`. Un buon punto di partenza consiste nel presupporre che le versioni di Windows che si intende supportare (Windows 7 e versioni successive) siano tutte simili a Windows NT 5 per quanto riguarda le tecnologie usate da questa applicazione. Questi metodi venivano usati per gestire le limitazioni dei sistemi operativi meno recenti e sono stati quindi modificati in modo da restituire TRUE per `IsWindows5x` e FALSE per gli altri.
 
@@ -520,7 +520,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 Per il porting alla codifica UTF-16 Unicode, è necessario decidere se si vuole ancora che l'opzione compili il set MBCS.  Se si vuole che l'opzione supporti MBCS, è necessario usare la macro TCHAR come tipo di carattere, che si risolve in **char** o **wchar_t**, a seconda se durante la compilazione si sia definito \_MBCS o \_UNICODE. Il passaggio a TCHAR e alle versioni TCHAR delle varie API invece di **wchar_t** e le relative API associate significa che è possibile ripristinare una versione MBCS del codice semplicemente definendo la macro \_MBCS anziché \_UNICODE. Oltre a TCHAR, esiste un'ampia gamma di versioni TCHAR come typedef, macro e funzioni ampiamente usati, ad esempio, LPCTSTR invece LPCSTR e così via. Nella finestra di dialogo Proprietà del progetto, sotto **Proprietà di configurazione**, nella sezione **Generale** modificare la proprietà **Set di caratteri** da **Utilizza set di caratteri multibyte** a **Utilizza set di caratteri Unicode**. Questa impostazione incide su quale macro viene definita durante la compilazione. Esiste sia una macro UNICODE sia una macro \_UNICODE. La proprietà del progetto influisce su entrambe in modo coerente. Le intestazioni di Windows usano il formato UNICODE se le intestazioni di Visual C++ come MFC usano \_UNICODE, ma una è definito, l'altra è sempre definito.
 
-È disponibile un'utile [guida](https://msdn.microsoft.com/library/cc194801.aspx) al porting da MBCS a UTF-16 Unicode mediante TCHAR. È la direzione scelta per questo articolo. In primo luogo si converte la proprietà **Set di caratteri** in **Utilizza set di caratteri Unicode** e il progetto viene ricompilato.
+È disponibile un'utile [guida](/previous-versions/cc194801(v=msdn.10)) al porting da MBCS a UTF-16 Unicode mediante TCHAR. È la direzione scelta per questo articolo. In primo luogo si converte la proprietà **Set di caratteri** in **Utilizza set di caratteri Unicode** e il progetto viene ricompilato.
 
 TCHAR era già usato in alcuni punti del codice, apparentemente in previsione di un eventuale supporto di Unicode, mentre in altri non era presente. È stata eseguita una ricerca delle istanze di CHAR, ovvero un **typedef** per **char**, sostituendo la maggior parte di esse con TCHAR. È stata anche eseguita la ricerca di `sizeof(CHAR)`. Ogni volta che si sostituiva TCHAR a CHAT in genere era necessario passare a `sizeof(TCHAR)` perché spesso era il tipo usato per determinare il numero di caratteri in una stringa. L'uso di un tipo errato in questo caso non produce un errore del compilatore, quindi vale la pena prestare un po' d'attenzione.
 
@@ -544,7 +544,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 
 La macro \_T fa sì che il valore letterale stringa venga compilato come stringa **char** o stringa **wchar_t**, a seconda dell'intestazione di MBCS o UNICODE. Per sostituire tutte le stringhe con \_T in Visual Studio, aprire prima di tutto la casella **Sostituzione veloce** (tastiera: **CTRL**+**F**) o **Sostituisci nei file** (tastiera: **CTRL**+**MAIUSC**+**H**)e quindi selezionare la casella di controllo **Usa espressioni regolari**. Immettere `((\".*?\")|('.+?'))` come testo di ricerca e `_T($1)` come testo di sostituzione. Se la macro \_T è già presente in alcune stringhe, questa procedura l'aggiungerà di nuovo e potrebbe anche trovare alcuni casi in cui \_T non è disponibile, ad esempio quando si usa `#include`; di conseguenza, è preferibile usare **Sostituisci successivo** anziché **Sostituisci tutto**.
 
-Questa funzione particolare, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), viene effettivamente definita nelle intestazioni di Windows e la relativa documentazione consiglia di non usarla, a causa del possibile sovraccarico del buffer. Non è specificata una dimensione per il buffer `szTmp`, quindi non esiste alcun modo per la funzione di verificare che il buffer possa contenere tutti i dati da scrivere. Vedere la sezione successiva sul porting alle funzioni CRT sicure, in cui è possibile risolvere altri problemi simili. Alla fine è stata sostituita da [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
+Questa funzione particolare, [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw), viene effettivamente definita nelle intestazioni di Windows e la relativa documentazione consiglia di non usarla, a causa del possibile sovraccarico del buffer. Non è specificata una dimensione per il buffer `szTmp`, quindi non esiste alcun modo per la funzione di verificare che il buffer possa contenere tutti i dati da scrivere. Vedere la sezione successiva sul porting alle funzioni CRT sicure, in cui è possibile risolvere altri problemi simili. Alla fine è stata sostituita da [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
 Un altro errore comune che si può osservare nella conversione in Unicode è il seguente.
 

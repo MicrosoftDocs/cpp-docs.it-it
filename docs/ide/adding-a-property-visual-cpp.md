@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504478"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509524"
 ---
 # <a name="add-a-property"></a>Aggiungere una proprietà
 
@@ -62,7 +62,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Imposta il nome della proprietà. Per le interfacce dispatch MFC associate ai controlli ActiveX, è possibile specificare il nome oppure selezionare un nome di proprietà predefinito dall'elenco predefinito. Se si specifica il nome di proprietà, il tipo di implementazione **Predefinito** non è disponibile. Vedere [Proprietà predefinite](#stock-properties) per una descrizione delle proprietà dell'elenco.
 
-  |Tipo interfaccia|Description|
+  |Tipo interfaccia|DESCRIZIONE|
   |--------------------|-----------------|
   |Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Specificare un nome di proprietà.|
   |Interfaccia dispatch MFC, interfaccia dispatch del controllo ActiveX MFC|Specificare un nome di proprietà o selezionare una proprietà predefinita dall'elenco. Se si seleziona una proprietà dall'elenco, il valore appropriato viene visualizzato nella casella **Tipo di proprietà**. È possibile modificare il tipo, a seconda dell'opzione selezionata in **Tipo di implementazione**.|
@@ -91,7 +91,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Solo interfacce dispatch MFC. Specifica come implementare la proprietà da aggiungere.
 
-  |Tipo di implementazione|Description|
+  |Tipo di implementazione|DESCRIZIONE|
   |-------------------------|-----------------|
   |**Predefinito**|Specifica un'implementazione predefinita per la proprietà selezionata in **Nome proprietà**. Valore predefinito. Per altre informazioni, vedere [Proprietà predefinite](#stock-properties).<br /><br /> Se si specifica **Predefinito**, **Tipo di proprietà**, **Tipo parametro** e **Nome parametro** appaiono disattivate.|
   |**Variabile membro**|Specifica che la proprietà viene aggiunta come variabile membro. È possibile aggiungere proprietà personalizzate o la maggior parte delle proprietà predefinite come variabili membro. Non è possibile specificare **variabile membro** per le proprietà `Caption`, `hWnd` e `Text`.<br /><br /> Specifica i nomi predefiniti in **Nome variabile** e **Funzione di notifica**. È possibile modificare il nome.|
@@ -105,7 +105,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Solo interfacce ATL. Imposta la proprietà come accessibile in scrittura, ovvero crea il metodo `Put` per l'impostazione o l'inserimento della proprietà dell'oggetto. Selezionare **Get**, **Put** o entrambe. Se si seleziona questa opzione, è possibile scegliere uno dei due modi seguenti per implementare il metodo:
 
-  |Opzione|Description|
+  |Opzione|DESCRIZIONE|
   |------------|-----------------|
   |**PropPut**|La funzione [PropPut](../windows/propput.md) restituisce una copia dell'oggetto. Questo è il valore predefinito e il modo più comune per impostare la proprietà come accessibile in scrittura.|
   |**PropPutRef**|La funzione [PropPutRef](../windows/propputref.md) restituisce un riferimento all'oggetto anziché restituire la copia dell'oggetto. Può essere utile usare questa opzione per gli oggetti, ad esempio struct o matrici di grandi dimensioni, che potrebbero avere un sovraccarico di inizializzazione.|
@@ -114,7 +114,7 @@ Usare questa procedura guidata per aggiungere una proprietà a un'interfaccia.
 
   Solo interfacce ATL. Specifica se il parametro specificato tramite **Nome parametro** è `in`, `out`, entrambi o nessuno.
 
-  |Opzione|Description|
+  |Opzione|DESCRIZIONE|
   |------------|-----------------|
   |`in`|Indica che il parametro viene passato dalla routine chiamante alla routine chiamata.|
   |`out`|Indica che il parametro del puntatore viene restituito dalla routine chiamata alla routine chiamante (dal server al client).|
@@ -149,39 +149,39 @@ Usare questa pagina dell'Aggiunta guidata proprietà per specificare le impostaz
 
 - `id`
 
-  Imposta l'ID numerico che identifica la proprietà. Questa opzione non è disponibile per le proprietà di interfacce personalizzate. Vedere [id](/windows/desktop/Midl/id) in *MIDL Reference* (Riferimento MIDL).
+  Imposta l'ID numerico che identifica la proprietà. Questa opzione non è disponibile per le proprietà di interfacce personalizzate. Vedere [id](/windows/win32/Midl/id) in *MIDL Reference* (Riferimento MIDL).
 
 - `helpcontext`
 
-  Specifica un ID contesto che consente all'utente di visualizzare informazioni sulla proprietà corrente nel file della Guida. Vedere [helpcontext](/windows/desktop/Midl/helpcontext) in *MIDL Reference* (Riferimento MIDL).
+  Specifica un ID contesto che consente all'utente di visualizzare informazioni sulla proprietà corrente nel file della Guida. Vedere [helpcontext](/windows/win32/Midl/helpcontext) in *MIDL Reference* (Riferimento MIDL).
 
 - `helpstring`
 
-  Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata. Per impostazione predefinita, viene impostata su `property`&nbsp;*Property&nbsp;name*. Vedere [helpstring](/windows/desktop/Midl/helpstring) in *MIDL Reference* (Riferimento MIDL).
+  Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata. Per impostazione predefinita, viene impostata su `property`&nbsp;*Property&nbsp;name*. Vedere [helpstring](/windows/win32/Midl/helpstring) in *MIDL Reference* (Riferimento MIDL).
 
 ### <a name="other-options"></a>Altre opzioni
 
 Non tutte le opzioni sono disponibili per tutti i tipi di proprietà.
 
-|Opzione|Description|
+|Opzione|DESCRIZIONE|
 |------------|-----------------|
-|`bindable`|Indica che la proprietà supporta il data binding. Vedere [bindable](/windows/desktop/Midl/bindable) in *MIDL Reference* (Riferimento MIDL). Per l'implementazione predefinita della proprietà, questa opzione è impostata per impostazione predefinita e non può essere modificata.|
-|`defaultbind`|Indica la singola proprietà associabile che meglio rappresenta l'oggetto. Vedere [defaultbind](/windows/desktop/Midl/defaultbind) in *MIDL Reference* (Riferimento MIDL).|
-|`displaybind`|Indica che la proprietà deve essere visualizzata all'utente come associabile. Vedere [displaybind](/windows/desktop/Midl/displaybind) in *MIDL Reference* (Riferimento MIDL).|
-|`immediatebind`|Indica che tutte le modifiche apportate alla proprietà di un oggetto associato a dati verranno immediatamente notificate al database. Vedere [immediatebind](/windows/desktop/Midl/immediatebind) in *MIDL Reference* (Riferimento MIDL).|
-|`defaultcollelem`|Indica che la proprietà è una funzione di accesso per un elemento della raccolta predefinita. Vedere [defaultcollelem](/windows/desktop/Midl/defaultcollelem) in *MIDL Reference* (Riferimento MIDL).|
-|`nonbrowsable`|Assegna un tag a un membro di interfaccia o interfaccia dispatch che non deve essere visualizzato in un visualizzatore di proprietà. Vedere [nonbrowsable](/windows/desktop/Midl/nonbrowsable) in *MIDL Reference* (Riferimento MIDL).|
-|`requestedit`|Indica che la proprietà supporta la notifica `OnRequestEdit`. Vedere [requestedit](/windows/desktop/Midl/requestedit) in *MIDL Reference* (Riferimento MIDL). Per l'implementazione predefinita della proprietà, questa opzione è impostata per impostazione predefinita e non può essere modificata.|
-|`source`|Indica che un membro della proprietà è un'origine di eventi. Vedere [source](/windows/desktop/Midl/source) in *MIDL Reference* (Riferimento MIDL).|
-|`hidden`|Indica che la proprietà esiste ma non deve essere visualizzata in un visualizzatore per utenti. Vedere [hidden](/windows/desktop/Midl/hidden) in *MIDL Reference* (Riferimento MIDL).|
-|`restricted`|Specifica che la proprietà non può essere chiamata in modo arbitrario. Vedere [restricted](/windows/desktop/Midl/restricted) in *MIDL Reference* (Riferimento MIDL).|
-|`local`|Specifica al compilatore MIDL che la proprietà non è remota. Vedere [local](/windows/desktop/Midl/local) in *MIDL Reference* (Riferimento MIDL).|
+|`bindable`|Indica che la proprietà supporta il data binding. Vedere [bindable](/windows/win32/Midl/bindable) in *MIDL Reference* (Riferimento MIDL). Per l'implementazione predefinita della proprietà, questa opzione è impostata per impostazione predefinita e non può essere modificata.|
+|`defaultbind`|Indica la singola proprietà associabile che meglio rappresenta l'oggetto. Vedere [defaultbind](/windows/win32/Midl/defaultbind) in *MIDL Reference* (Riferimento MIDL).|
+|`displaybind`|Indica che la proprietà deve essere visualizzata all'utente come associabile. Vedere [displaybind](/windows/win32/Midl/displaybind) in *MIDL Reference* (Riferimento MIDL).|
+|`immediatebind`|Indica che tutte le modifiche apportate alla proprietà di un oggetto associato a dati verranno immediatamente notificate al database. Vedere [immediatebind](/windows/win32/Midl/immediatebind) in *MIDL Reference* (Riferimento MIDL).|
+|`defaultcollelem`|Indica che la proprietà è una funzione di accesso per un elemento della raccolta predefinita. Vedere [defaultcollelem](/windows/win32/Midl/defaultcollelem) in *MIDL Reference* (Riferimento MIDL).|
+|`nonbrowsable`|Assegna un tag a un membro di interfaccia o interfaccia dispatch che non deve essere visualizzato in un visualizzatore di proprietà. Vedere [nonbrowsable](/windows/win32/Midl/nonbrowsable) in *MIDL Reference* (Riferimento MIDL).|
+|`requestedit`|Indica che la proprietà supporta la notifica `OnRequestEdit`. Vedere [requestedit](/windows/win32/Midl/requestedit) in *MIDL Reference* (Riferimento MIDL). Per l'implementazione predefinita della proprietà, questa opzione è impostata per impostazione predefinita e non può essere modificata.|
+|`source`|Indica che un membro della proprietà è un'origine di eventi. Vedere [source](/windows/win32/Midl/source) in *MIDL Reference* (Riferimento MIDL).|
+|`hidden`|Indica che la proprietà esiste ma non deve essere visualizzata in un visualizzatore per utenti. Vedere [hidden](/windows/win32/Midl/hidden) in *MIDL Reference* (Riferimento MIDL).|
+|`restricted`|Specifica che la proprietà non può essere chiamata in modo arbitrario. Vedere [restricted](/windows/win32/Midl/restricted) in *MIDL Reference* (Riferimento MIDL).|
+|`local`|Specifica al compilatore MIDL che la proprietà non è remota. Vedere [local](/windows/win32/Midl/local) in *MIDL Reference* (Riferimento MIDL).|
 
 ## <a name="stock-properties"></a>Proprietà predefinite
 
 Se si aggiunge una proprietà a un'interfaccia dispatch di MFC usando l'[Aggiunta guidata proprietà](#idl-attributes-add-property-wizard), è possibile scegliere una proprietà predefinita dall'elenco **Nome della proprietà** della pagina [Nomi](../ide/names-add-property-wizard.md) della procedura guidata. Di seguito sono riportate le proprietà:
 
-|Nome della proprietà|Description|
+|Nome della proprietà|DESCRIZIONE|
 |-------------------|-----------------|
 |`Appearance`|Restituisce o imposta un valore che determina l'aspetto del controllo. La proprietà `Appearance` del controllo può includere o omettere effetti di visualizzazione tridimensionale. Questa è una proprietà di lettura/scrittura ambientale.|
 |`BackColor`|Restituisce o imposta la proprietà ambientale `BackColor` del controllo su un colore della tavolozza (RGB) o un colore di sistema predefinito. Per impostazione predefinita, il relativo valore corrisponde al colore di sfondo del contenitore del controllo. Questa è una proprietà di lettura/scrittura ambientale.|

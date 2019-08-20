@@ -2,12 +2,12 @@
 title: "Procedura: Usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)"
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861139"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510378"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedura: Usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)
 
@@ -19,13 +19,13 @@ Le app UWP vengono eseguite in un ambiente protetto e, di conseguenza, molte chi
 
 Se il codice sorgente è disponibile per la libreria, è possibile eliminare le chiamate API non consentite. Per informazioni dettagliate, incluso un elenco delle API consentite o vietate, vedere [Win32 and COM APIs for UWP apps](/uwp/win32-and-com/win32-and-com-for-uwp-apps) (API Win32 e COM per app della piattaforma UWP) e [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (Funzioni CRT non supportate nelle app della piattaforma UWP). Alcune alternative sono disponibili in [Alternatives to Windows APIs in UWP apps](/uwp/win32-and-com/alternatives-to-windows-apis-uwp) (Alternative alle API di Windows nelle app UWP).
 
-Se si tenta di aggiungere un riferimento da un progetto Universal Windows a una libreria desktop classica, viene visualizzato un messaggio di errore che indica che la libreria non è compatibile. Nel caso di una libreria statica, è possibile collegare la libreria semplicemente aggiungendo la libreria (file .lib) all'input del linker, proprio come si farebbe con un'applicazione Win32. Per le librerie in cui è disponibile solo un binario, questa è l'unica opzione. Una libreria statica è collegata al file eseguibile dell'app, ma una DLL Win32 utilizzata in un'app UWP deve essere inserita nel pacchetto dell'app includendola nel progetto e contrassegnandola come Contenuto. Per caricare una DLL Win32 in un'app della piattaforma UWP, è anche necessario chiamare la funzione [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary) anziché `LoadLibrary` o `LoadLibraryEx`.
+Se si tenta di aggiungere un riferimento da un progetto Universal Windows a una libreria desktop classica, viene visualizzato un messaggio di errore che indica che la libreria non è compatibile. Nel caso di una libreria statica, è possibile collegare la libreria semplicemente aggiungendo la libreria (file .lib) all'input del linker, proprio come si farebbe con un'applicazione Win32. Per le librerie in cui è disponibile solo un binario, questa è l'unica opzione. Una libreria statica è collegata al file eseguibile dell'app, ma una DLL Win32 utilizzata in un'app UWP deve essere inserita nel pacchetto dell'app includendola nel progetto e contrassegnandola come Contenuto. Per caricare una DLL Win32 in un'app della piattaforma UWP, è anche necessario chiamare la funzione [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary) anziché `LoadLibrary` o `LoadLibraryEx`.
 
 Se si dispone di codice sorgente della DLL o della libreria statica, è possibile ricompilare con `/ZW` come un progetto della piattaforma UWP. In tal caso, è possibile aggiungere un riferimento usando **Esplora soluzioni** e usarlo nelle app della piattaforma UWP di C++. Nel caso di una DLL, ci si collega alla libreria di esportazione.
 
 Per esporre la funzionalità ai chiamanti in altre lingue, è possibile convertire la libreria in un componente Windows Runtime. I componenti Windows Runtime differiscono dalle normali DLL perché includono metadati sotto forma di file con estensione winmd che descrivono il contenuto nel modo richiesto dai consumer di .NET e JavaScript. Per esporre elementi API in altri linguaggi, è possibile aggiungere costrutti C++/CX, come ad esempio classi di riferimento, e renderli pubblici, oppure usare la [Libreria modelli C++ per Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).  In Windows 10 e versioni successive, è possibile usare la [libreria C++/WinRT](https://github.com/microsoft/cppwinrt) anziché C++/CX.
 
-La discussione precedente non è valida in caso di componenti COM che devono essere gestiti in modo diverso. Se un server COM è disponibile come file eseguibile o DLL, è possibile usarlo in un progetto Windows universale, purché sia compresso come [componente COM senza registrazione](/windows/desktop/sbscs/creating-registration-free-com-objects), aggiungerlo al progetto come file di contenuto e crearne un'istanza tramite la funzione [CoCreateInstanceFromApp](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Per altre informazioni, vedere [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (Uso di DLL senza COM in progetti C++ di Windows Store).
+La discussione precedente non è valida in caso di componenti COM che devono essere gestiti in modo diverso. Se un server COM è disponibile come file eseguibile o DLL, è possibile usarlo in un progetto Windows universale, purché sia compresso come [componente COM senza registrazione](/windows/win32/sbscs/creating-registration-free-com-objects), aggiungerlo al progetto come file di contenuto e crearne un'istanza tramite la funzione [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp). Per altre informazioni, vedere [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (Uso di DLL senza COM in progetti C++ di Windows Store).
 
 Se si vuole convertire una libreria COM esistente in piattaforma UWP (Universal Windows Platform), è necessario convertirla in un componente Windows Runtime usando la [Libreria modelli C++ per Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md). WRL non supporta tutte le funzionalità di ATL e OLE, pertanto la fattibilità di una porta dipende da quanto il codice COM dipende dalle funzionalità COM, ATL e OLE richieste dal componente.
 

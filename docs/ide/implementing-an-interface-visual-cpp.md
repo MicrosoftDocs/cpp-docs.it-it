@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces, implementing
 - implement interface wizard [C++]
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-ms.openlocfilehash: 8e166f806d247cd93ff0f471360d749fa95e430b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bb1db35e269ef884f3ebdf4564d8f0a3e579db50
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692901"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509520"
 ---
 # <a name="implement-an-interface"></a>Implementare un'interfaccia
 
@@ -50,13 +50,13 @@ Se si aggiunge una nuova interfaccia, è necessario aggiungerla manualmente al f
 
 Questa procedura guidata consente di implementare un'interfaccia per un oggetto COM. Nelle librerie COM disponibili con Visual Studio e Windows sono incluse implementazioni di diverse interfacce. L'implementazione dell'interfaccia è associata a un oggetto quando viene creata un'istanza di tale oggetto. L'implementazione rende disponibili anche i servizi offerti dall'oggetto.
 
-Per dettagli su interfacce e implementazioni, vedere [Interfaces and Interface Implementations](/windows/desktop/com/interfaces-and-interface-implementations) (Interfacce e implementazioni di interfacce) in Windows SDK.
+Per dettagli su interfacce e implementazioni, vedere [Interfaces and Interface Implementations](/windows/win32/com/interfaces-and-interface-implementations) (Interfacce e implementazioni di interfacce) in Windows SDK.
 
 - **Implementa interfaccia da**
 
   Specifica il percorso della libreria dei tipi, da cui viene creata l'interfaccia.
 
-  |Opzione|Descrizione|
+  |Opzione|DESCRIZIONE|
   |------------|-----------------|
   |**Progetto**|La libreria dei tipi fa parte del progetto.|
   |**Registry**|La libreria dei tipi è registrata nel sistema. Le librerie dei tipi registrate sono elencate in **Available type libraries** (Librerie dei tipi disponibili).|
@@ -77,7 +77,7 @@ Per dettagli su interfacce e implementazioni, vedere [Interfaces and Interface I
   > [!NOTE]
   > Le interfacce che hanno lo stesso nome di quelle già implementate dall'oggetto selezionato non vengono visualizzate nella casella **Interfacce**.
 
-  |Pulsante Trasferimento|Descrizione|
+  |Pulsante Trasferimento|DESCRIZIONE|
   |---------------------|-----------------|
   |**>**|Aggiunge all'elenco **Implementa interfacce** il nome dell'interfaccia attualmente selezionata nell'elenco **Interfacce**.|
   |**>>**|Aggiunge all'elenco **Implementa interfacce** tutti i nomi delle interfacce disponibili nell'elenco **Interfacce**.|

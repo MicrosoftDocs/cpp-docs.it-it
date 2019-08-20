@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-ms.openlocfilehash: 9bbd64b27a760969635d70ae7689d09afed2d729
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e5e43fe2cfcdfe067833d02bda511e8c9cb944ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740428"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500103"
 ---
 # <a name="file-handling"></a>Gestione di file
 
@@ -78,11 +78,11 @@ Queste routine consentono di modificare la rappresentazione del file tra una str
 
 Le funzioni Win32 seguenti aprono anche file e pipe:
 
-- [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
+- [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew)
 
-- [CreatePipe](https://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)
+- [CreatePipe](/windows/win32/api/namedpipeapi/nf-namedpipeapi-createpipe)
 
-- [CreateNamedPipe](/windows/desktop/api/winbase/nf-winbase-createnamedpipea)
+- [CreateNamedPipe](/windows/win32/api/winbase/nf-winbase-createnamedpipew)
 
 ## <a name="see-also"></a>Vedere anche
 

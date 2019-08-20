@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - robustness [CRT]
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
-ms.openlocfilehash: c70c9a2bf0b95063fa3f679ca6c3053d2a4f2df5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f41fc019c6a1779362644e29c5518d40690fe9db
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744580"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500680"
 ---
 # <a name="robustness"></a>Efficienza
 
@@ -29,4 +29,4 @@ Usare le funzioni della libreria di runtime C seguenti per migliorare l'efficien
 ## <a name="see-also"></a>Vedere anche
 
 [Routine di Universal C Runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[SetUnhandledExceptionFilter](https://msdn.microsoft.com/library/windows/desktop/ms680634.aspx)<br/>
+[SetUnhandledExceptionFilter](/win32/api/errhandlingapi/nf-errhandlingapi-setunhandledexceptionfilter)<br/>
