@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916145"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506796"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -213,7 +213,7 @@ Se si crea un `CEdit` oggetto da una risorsa finestra di dialogo mediante l'edit
 
 Se si crea un `CEdit` oggetto all'interno di una finestra, potrebbe essere necessario eliminarlo. Se si crea l' `CEdit` oggetto nello stack, questo viene eliminato automaticamente. Se si crea l' `CEdit` oggetto nell'heap usando la **nuova** funzione, è necessario chiamare **Delete** nell'oggetto per eliminarlo quando l'utente termina il controllo di modifica di Windows. Se si alloca memoria nell' `CEdit` oggetto, eseguire l'override del `CEdit` distruttore per eliminare le allocazioni.
 
-Per modificare determinati stili in un controllo di modifica, ad esempio ES_READONLY, è necessario inviare messaggi specifici al controllo anziché utilizzare [ModifyStyle](cwnd-class.md#modifystyle). Vedere [modificare gli stili dei controlli](/windows/desktop/Controls/edit-control-styles) nella Windows SDK.
+Per modificare determinati stili in un controllo di modifica, ad esempio ES_READONLY, è necessario inviare messaggi specifici al controllo anziché utilizzare [ModifyStyle](cwnd-class.md#modifystyle). Vedere [modificare gli stili dei controlli](/windows/win32/Controls/edit-control-styles) nella Windows SDK.
 
 Per ulteriori informazioni su `CEdit`, vedere [controlli](../../mfc/controls-mfc.md).
 
@@ -245,7 +245,7 @@ Diverso da zero se l'ultima operazione di modifica può essere annullata da una 
 
 ### <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere [EM_CANUNDO](/windows/desktop/Controls/em-canundo) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_CANUNDO](/windows/win32/Controls/em-canundo) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -289,7 +289,7 @@ Indice dei caratteri nella parola di basso livello e indice di riga nella parola
 > [!NOTE]
 >  Questa funzione membro è disponibile a partire da Windows 95 e Windows NT 4,0.
 
-Per ulteriori informazioni, vedere [EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_CHARFROMPOS](/windows/win32/Controls/em-charfrompos) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -309,7 +309,7 @@ L'eliminazione eseguita da `Clear` può essere annullata chiamando la funzione m
 
 Per eliminare la selezione corrente e inserire il contenuto eliminato negli Appunti, chiamare la funzione membro [Cut](#cut) .
 
-Per ulteriori informazioni, vedere [WM_CLEAR](/windows/desktop/dataxchg/wm-clear) nel Windows SDK.
+Per ulteriori informazioni, vedere [WM_CLEAR](/windows/win32/dataxchg/wm-clear) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -325,7 +325,7 @@ void Copy();
 
 ### <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere [WM_COPY](/windows/desktop/dataxchg/wm-copy) nel Windows SDK.
+Per ulteriori informazioni, vedere [WM_COPY](/windows/win32/dataxchg/wm-copy) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -365,7 +365,7 @@ Diverso da zero se l'inizializzazione ha esito positivo; in caso contrario, 0.
 
 Si costruisce `CEdit` un oggetto in due passaggi. Chiamare innanzitutto il `CEdit` costruttore e quindi chiamare `Create`, che crea il controllo di modifica di Windows e lo `CEdit` collega all'oggetto.
 
-Quando `Create` viene eseguito, Windows invia i messaggi [WM_NCCREATE](/windows/desktop/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/desktop/winmsg/wm-nccalcsize), [WM_CREATE](/windows/desktop/winmsg/wm-create)e [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo) al controllo di modifica.
+Quando `Create` viene eseguito, Windows invia i messaggi [WM_NCCREATE](/windows/win32/winmsg/wm-nccreate), [WM_NCCALCSIZE](/windows/win32/winmsg/wm-nccalcsize), [WM_CREATE](/windows/win32/winmsg/wm-create)e [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) al controllo di modifica.
 
 Questi messaggi vengono gestiti per impostazione predefinita dalle funzioni membro [OnNcCreate](cwnd-class.md#onnccreate), [OnNcCalcSize](cwnd-class.md#onnccalcsize), [OnCreate](cwnd-class.md#oncreate) e [OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo) nella classe di base `CWnd`. Per estendere la gestione dei messaggi predefinita, derivare una `CEdit`classe da, aggiungere una mappa messaggi alla nuova classe ed eseguire l'override delle funzioni membro del gestore di messaggi sopra indicate. Eseguire `OnCreate`l'override, ad esempio, per eseguire l'inizializzazione necessaria per la nuova classe.
 
@@ -399,7 +399,7 @@ L'eliminazione eseguita da `Cut` può essere annullata chiamando la funzione mem
 
 Per eliminare la selezione corrente senza inserire il testo eliminato negli Appunti, chiamare la funzione membro [Clear](#clear) .
 
-Per ulteriori informazioni, vedere [WM_CUT](/windows/desktop/dataxchg/wm-cut) nel Windows SDK.
+Per ulteriori informazioni, vedere [WM_CUT](/windows/win32/dataxchg/wm-cut) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -419,7 +419,7 @@ Il controllo di modifica ora non sarà in grado di annullare l'ultima operazione
 
 Il flag di annullamento viene cancellato automaticamente ogni volta che vengono chiamate le funzioni membro [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) o [SetHandle](#sethandle)`CWnd`.
 
-Per ulteriori informazioni, vedere [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -448,9 +448,9 @@ Un'interruzione di riga flessibile è costituita da due ritorni a capo e un avan
 
 Windows risponderà solo se l' `CEdit` oggetto è un controllo di modifica a più righe.
 
-`FmtLines` influiscono solo sul buffer restituito da [GetHandle](#gethandle) e sul testo restituito da [WM_GETTEXT](/windows/desktop/winmsg/wm-gettext). Non ha alcun effetto sulla visualizzazione del testo all'interno del controllo di modifica.
+`FmtLines` influiscono solo sul buffer restituito da [GetHandle](#gethandle) e sul testo restituito da [WM_GETTEXT](/windows/win32/winmsg/wm-gettext). Non ha alcun effetto sulla visualizzazione del testo all'interno del controllo di modifica.
 
-Per ulteriori informazioni, vedere [EM_FMTLINES](/windows/desktop/Controls/em-fmtlines) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_FMTLINES](/windows/win32/Controls/em-fmtlines) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -484,7 +484,7 @@ Per il secondo overload, [CString](../../atl-mfc-shared/using-cstring.md) che co
 
 ### <a name="remarks"></a>Note
 
-Questo metodo invia il messaggio [EM_GETCUEBANNER](/windows/desktop/Controls/em-getcuebanner) , descritto nella Windows SDK. Per ulteriori informazioni, vedere la macro [Edit_GetCueBannerText](/windows/desktop/api/commctrl/nf-commctrl-edit_getcuebannertext) .
+Questo metodo invia il messaggio [EM_GETCUEBANNER](/windows/win32/Controls/em-getcuebanner) , descritto nella Windows SDK. Per ulteriori informazioni, vedere la macro [Edit_GetCueBannerText](/windows/win32/api/commctrl/nf-commctrl-edit_getcuebannertext) .
 
 ##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine
 
@@ -500,7 +500,7 @@ Indice in base zero della riga visibile in primo piano. Per i controlli di modif
 
 ### <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere [EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -529,7 +529,7 @@ Chiamare `GetHandle` per un controllo di modifica a più righe in una finestra d
 > [!NOTE]
 > `GetHandle`non funzionerà con Windows 95/98. Se si chiama `GetHandle` in Windows 95/98, viene restituito null. `GetHandle`funzionerà come descritto in Windows NT, versioni 3,51 e successive.
 
-Per ulteriori informazioni, vedere [EM_GETHANDLE](/windows/desktop/Controls/em-gethandle) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_GETHANDLE](/windows/win32/Controls/em-gethandle) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -558,7 +558,7 @@ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo invia il messaggio [EM_GETHILITE](/windows/desktop/Controls/em-gethilite) , descritto nella Windows SDK. Sia `SetHighlight` che `GetHighlight` attualmente sono abilitate solo per le compilazioni Unicode.
+Questo metodo invia il messaggio [EM_GETHILITE](/windows/win32/Controls/em-gethilite) , descritto nella Windows SDK. Sia `SetHighlight` che `GetHighlight` attualmente sono abilitate solo per le compilazioni Unicode.
 
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText
 
@@ -579,7 +579,7 @@ Il limite di testo è la quantità massima di testo, in TCHARs, che il controllo
 > [!NOTE]
 >  Questa funzione membro è disponibile a partire da Windows 95 e Windows NT 4,0.
 
-Per ulteriori informazioni, vedere [EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_GETLIMITTEXT](/windows/win32/Controls/em-getlimittext) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -619,7 +619,7 @@ Numero di caratteri attualmente copiati. Il valore restituito è 0 se il numero 
 
 La riga copiata non contiene un carattere di terminazione null.
 
-Per ulteriori informazioni, vedere [EM_GETLINE](/windows/desktop/Controls/em-getline) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_GETLINE](/windows/win32/Controls/em-getline) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -641,7 +641,7 @@ Intero contenente il numero di righe nel controllo di modifica a più righe. Se 
 
 `GetLineCount`viene elaborato solo da controlli di modifica su più righe.
 
-Per ulteriori informazioni, vedere [EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -666,7 +666,7 @@ I margini sono misurati in pixel.
 > [!NOTE]
 >  Questa funzione membro è disponibile a partire da Windows 95 e Windows NT 4,0.
 
-Per ulteriori informazioni, vedere [EM_GETMARGINS](/windows/desktop/Controls/em-getmargins) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_GETMARGINS](/windows/win32/Controls/em-getmargins) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -688,7 +688,7 @@ Diverso da zero se il contenuto del controllo di modifica è stato modificato. 0
 
 Windows mantiene un flag interno che indica se il contenuto del controllo di modifica è stato modificato. Questo flag viene cancellato quando il controllo di modifica viene creato per la prima volta e può anche essere cancellato chiamando la funzione membro [SetModify](#setmodify).
 
-Per ulteriori informazioni, vedere [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_GETMODIFY](/windows/win32/Controls/em-getmodify) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -708,9 +708,9 @@ Specifica il carattere da visualizzare anziché il carattere digitato dall'utent
 
 ### <a name="remarks"></a>Note
 
-Se si crea il controllo di modifica con lo stile ES_PASSWORD, la DLL che supporta il controllo determina il carattere della password predefinito. Il manifesto o il metodo [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) determina quale dll supporta il controllo di modifica. Se user32. dll supporta il controllo di modifica, il carattere della password predefinito è asterisco (' *', U + 002A). Se Comctl32. dll versione 6 supporta il controllo di modifica, il carattere predefinito è il cerchio nero (' ●', U + 25CF). Per ulteriori informazioni su quali DLL e versione supportano i controlli comuni, vedere la pagina relativa alle [versioni dei controlli comuni](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))e della shell.
+Se si crea il controllo di modifica con lo stile ES_PASSWORD, la DLL che supporta il controllo determina il carattere della password predefinito. Il manifesto o il metodo [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) determina quale dll supporta il controllo di modifica. Se user32. dll supporta il controllo di modifica, il carattere della password predefinito è asterisco (' *', U + 002A). Se Comctl32. dll versione 6 supporta il controllo di modifica, il carattere predefinito è il cerchio nero (' ●', U + 25CF). Per ulteriori informazioni su quali DLL e versione supportano i controlli comuni, vedere la pagina relativa alle [versioni dei controlli comuni](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))e della shell.
 
-Questo metodo invia il messaggio [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) , descritto nella Windows SDK.
+Questo metodo invia il messaggio [EM_GETPASSWORDCHAR](/windows/win32/Controls/em-getpasswordchar) , descritto nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -735,7 +735,7 @@ Il rettangolo di formattazione è il rettangolo di limitazione del testo, che è
 
 Il rettangolo di formattazione di un controllo di modifica a più righe può essere modificato dalle funzioni membro [SetRect](#setrect) e [SetRectNP](#setrectnp)
 
-Per ulteriori informazioni, vedere [EM_GETRECT](/windows/desktop/Controls/em-getrect) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_GETRECT](/windows/win32/Controls/em-getrect) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -767,7 +767,7 @@ La versione che restituisce un valore DWORD restituisce un valore che contiene l
 
 ### <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere [EM_GETSEL](/windows/desktop/Controls/em-getsel) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_GETSEL](/windows/win32/Controls/em-getsel) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -787,7 +787,7 @@ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione Invia il messaggio [EM_HIDEBALLOONTIP](/windows/desktop/Controls/em-hideballoontip) , descritto nella Windows SDK.
+Questa funzione Invia il messaggio [EM_HIDEBALLOONTIP](/windows/win32/Controls/em-hideballoontip) , descritto nella Windows SDK.
 
 ##  <a name="limittext"></a>  CEdit::LimitText
 
@@ -809,7 +809,7 @@ La modifica del limite di testo limita solo il testo che l'utente può immettere
 > [!NOTE]
 >  In Win32 (Windows NT e Windows 95/98), [SetLimitText](#setlimittext) sostituisce questa funzione.
 
-Per ulteriori informazioni, vedere [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_LIMITTEXT](/windows/win32/Controls/em-limittext) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -838,7 +838,7 @@ Un indice dei caratteri è il numero di caratteri a partire dall'inizio del cont
 
 Questa funzione membro viene utilizzata solo dai controlli di modifica a più righe.
 
-Per ulteriori informazioni, vedere [EM_LINEFROMCHAR](/windows/desktop/Controls/em-linefromchar) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_LINEFROMCHAR](/windows/win32/Controls/em-linefromchar) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -867,7 +867,7 @@ L'indice dei caratteri è il numero di caratteri dall'inizio del controllo di mo
 
 Questa funzione membro viene elaborata solo da controlli di modifica su più righe.
 
-Per ulteriori informazioni, vedere [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_LINEINDEX](/windows/win32/controls/em-lineindex) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -896,11 +896,11 @@ Se il parametro *nLine* è maggiore del numero di caratteri nel controllo, il va
 
 Se il parametro *nLine* è-1, il valore restituito è il numero di caratteri non selezionati nelle righe che contengono caratteri selezionati. Se, ad esempio, la selezione si estende dal quarto carattere di una riga all'ottavo carattere alla fine della riga successiva, il valore restituito è 10. Ovvero tre caratteri nella prima riga e sette sul successivo.
 
-Per ulteriori informazioni sul tipo TCHAR, vedere la riga TCHAR nella tabella nei tipi di [dati di Windows](/windows/desktop/WinProg/windows-data-types).
+Per ulteriori informazioni sul tipo TCHAR, vedere la riga TCHAR nella tabella nei tipi di [dati di Windows](/windows/win32/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Note
 
-Questo metodo è supportato dal messaggio [EM_LINELENGTH](/windows/desktop/Controls/em-linelength) , descritto nella Windows SDK.
+Questo metodo è supportato dal messaggio [EM_LINELENGTH](/windows/win32/Controls/em-linelength) , descritto nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -932,7 +932,7 @@ Il controllo di modifica non scorre verticalmente oltre l'ultima riga di testo n
 
 `LineScroll`può essere usato per scorrere orizzontalmente oltre l'ultimo carattere di una riga.
 
-Per ulteriori informazioni, vedere [EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_LINESCROLL](/windows/win32/Controls/em-linescroll) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -950,7 +950,7 @@ void Paste();
 
 I dati vengono inseriti solo se gli Appunti contengono dati nel formato CF_TEXT.
 
-Per ulteriori informazioni, vedere [WM_PASTE](/windows/desktop/dataxchg/wm-paste) nel Windows SDK.
+Per ulteriori informazioni, vedere [WM_PASTE](/windows/win32/dataxchg/wm-paste) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -980,7 +980,7 @@ Il carattere viene specificato assegnando il relativo valore di indice in base z
 > [!NOTE]
 >  Questa funzione membro è disponibile a partire da Windows 95 e Windows NT 4,0.
 
-Per ulteriori informazioni, vedere [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1008,7 +1008,7 @@ Sostituisce solo una parte del testo in un controllo di modifica. Se si vuole so
 
 Se non è presente alcuna selezione corrente, il testo di sostituzione viene inserito nella posizione corrente del cursore.
 
-Per ulteriori informazioni, vedere [EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_REPLACESEL](/windows/win32/Controls/em-replacesel) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1044,7 +1044,7 @@ TRUE se il metodo ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo invia il messaggio [EM_SETCUEBANNER](/windows/desktop/Controls/em-setcuebanner) , descritto nella Windows SDK. Per ulteriori informazioni, vedere la macro [Edit_SetCueBannerTextFocused](/windows/desktop/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) .
+Questo metodo invia il messaggio [EM_SETCUEBANNER](/windows/win32/Controls/em-setcuebanner) , descritto nella Windows SDK. Per ulteriori informazioni, vedere la macro [Edit_SetCueBannerTextFocused](/windows/win32/api/commctrl/nf-commctrl-edit_setcuebannertextfocused) .
 
 ### <a name="example"></a>Esempio
 
@@ -1063,7 +1063,7 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="parameters"></a>Parametri
 
 *hBuffer*<br/>
-Contiene un handle per la memoria locale. Questo handle deve essere stato creato da una chiamata precedente alla funzione di Windows [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) usando il flag LMEM_MOVEABLE. Si presuppone che la memoria contenga una stringa con terminazione null. In caso contrario, il primo byte della memoria allocata deve essere impostato su 0.
+Contiene un handle per la memoria locale. Questo handle deve essere stato creato da una chiamata precedente alla funzione di Windows [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) usando il flag LMEM_MOVEABLE. Si presuppone che la memoria contenga una stringa con terminazione null. In caso contrario, il primo byte della memoria allocata deve essere impostato su 0.
 
 ### <a name="remarks"></a>Note
 
@@ -1080,7 +1080,7 @@ Prima che un'applicazione imposti un nuovo handle di memoria, deve usare la funz
 > [!NOTE]
 > `GetHandle`non funzionerà con Windows 95/98. Se si chiama `GetHandle` in Windows 95/98, viene restituito null. `GetHandle`funzionerà come descritto in Windows NT, versioni 3,51 e successive.
 
-Per ulteriori informazioni, vedere [EM_SETHANDLE](/windows/desktop/Controls/em-sethandle), [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)e [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) nella Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETHANDLE](/windows/win32/Controls/em-sethandle), [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)e [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree) nella Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1105,7 +1105,7 @@ void SetHighlight(
 
 ### <a name="remarks"></a>Note
 
-Questo metodo invia il messaggio [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) , descritto nella Windows SDK.  Questo metodo invia il messaggio [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) , descritto nella Windows SDK. E sono `GetHighlight` abilitati solo per le compilazioni Unicode. `SetHighlight`
+Questo metodo invia il messaggio [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , descritto nella Windows SDK.  Questo metodo invia il messaggio [EM_SETHILITE](/windows/win32/Controls/em-sethilite) , descritto nella Windows SDK. E sono `GetHighlight` abilitati solo per le compilazioni Unicode. `SetHighlight`
 
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText
 
@@ -1128,7 +1128,7 @@ La modifica del limite di testo limita solo il testo che l'utente può immettere
 
 Questa funzione sostituisce [LimitText](#limittext) in Win32.
 
-Per ulteriori informazioni, vedere [EM_SETLIMITTEXT](/windows/desktop/Controls/em-setlimittext) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETLIMITTEXT](/windows/win32/Controls/em-setlimittext) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1157,7 +1157,7 @@ Larghezza, in pixel, del nuovo margine destro.
 > [!NOTE]
 >  Questa funzione membro è disponibile a partire da Windows 95 e Windows NT 4,0.
 
-Per ulteriori informazioni, vedere [EM_SETMARGINS](/windows/desktop/Controls/em-setmargins) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETMARGINS](/windows/win32/Controls/em-setmargins) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1180,7 +1180,7 @@ Il valore TRUE indica che il testo è stato modificato e il valore FALSE indica 
 
 Il flag modificato indica se il testo all'interno del controllo di modifica è stato modificato. Viene impostato automaticamente ogni volta che l'utente modifica il testo. Il relativo valore può essere recuperato con la funzione membro [GetModify](#getmodify).
 
-Per ulteriori informazioni, vedere [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETMODIFY](/windows/win32/Controls/em-setmodify) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1209,7 +1209,7 @@ Quando viene `SetPasswordChar` chiamata la funzione membro, `CEdit` in vengono r
 
 Se il controllo di modifica viene creato con lo stile [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) , il carattere predefinito della password viene impostato su un <strong>\*</strong>asterisco (). Questo stile viene rimosso se `SetPasswordChar` viene chiamato con *ch* impostato su 0.
 
-Per ulteriori informazioni, vedere [EM_SETPASSWORDCHAR](/windows/desktop/Controls/em-setpasswordchar) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETPASSWORDCHAR](/windows/win32/Controls/em-setpasswordchar) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1236,7 +1236,7 @@ Diverso da zero se l'operazione ha esito positivo oppure 0 se si verifica un err
 
 È possibile trovare l'impostazione corrente testando il flag [ES_READONLY](styles-used-by-mfc.md#edit-styles) nel valore restituito di [CWnd:: GetStyle](cwnd-class.md#getstyle).
 
-Per ulteriori informazioni, vedere [EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1265,7 +1265,7 @@ Se il controllo di modifica non dispone di una barra di scorrimento, il testo ve
 
 Quando `SetRect` viene chiamato il metodo, anche il testo del controllo di modifica viene riformattato e visualizzato nuovamente.
 
-Per ulteriori informazioni, vedere [EM_SETRECT](/windows/desktop/Controls/em-setrect) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETRECT](/windows/win32/Controls/em-setrect) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1296,7 +1296,7 @@ Se il controllo di modifica non dispone di una barra di scorrimento, il testo ve
 
 Questo membro viene elaborato solo da controlli di modifica su più righe.
 
-Per ulteriori informazioni, vedere [EM_SETRECTNP](/windows/desktop/Controls/em-setrectnp) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETRECTNP](/windows/win32/Controls/em-setrectnp) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1333,7 +1333,7 @@ Specifica la posizione finale.
 
 ### <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere [EM_SETSEL](/windows/desktop/Controls/em-setsel) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETSEL](/windows/win32/Controls/em-setsel) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1377,7 +1377,7 @@ Questa funzione membro viene elaborata solo da controlli di modifica su più rig
 
 `SetTabStops`non ridisegnato automaticamente la finestra di modifica. Se si modifica la tabulazione per il testo già presente nel controllo di modifica, chiamare [CWnd:: InvalidateRect](cwnd-class.md#invalidaterect) per ricreare la finestra di modifica.
 
-Per ulteriori informazioni, vedere [EM_SETTABSTOPS](/windows/desktop/Controls/em-settabstops) e [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_SETTABSTOPS](/windows/win32/Controls/em-settabstops) e [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |Parametro|Descrizione|
 |---------------|-----------------|
-|*pEditBalloonTip*|in Puntatore a una struttura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) che descrive il fumetto suggerimento.|
+|*pEditBalloonTip*|in Puntatore a una struttura [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) che descrive il fumetto suggerimento.|
 |*lpszTitle*|in Puntatore a una stringa Unicode che contiene il titolo del fumetto suggerimento.|
 |*lpszText*|in Puntatore a una stringa Unicode che contiene il testo del fumetto suggerimento.|
-|*ttiIcon*|in Valore **int** che specifica il tipo di icona da associare al fumetto suggerimento. Il valore predefinito è TTI_NONE. Per ulteriori informazioni, vedere il `ttiIcon` membro della struttura [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip) .|
+|*ttiIcon*|in Valore **int** che specifica il tipo di icona da associare al fumetto suggerimento. Il valore predefinito è TTI_NONE. Per ulteriori informazioni, vedere il `ttiIcon` membro della struttura [EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip) .|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1411,7 +1411,7 @@ TRUE se questo metodo ha esito positivo; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione Invia il messaggio [EM_SHOWBALLOONTIP](/windows/desktop/Controls/em-showballoontip) , descritto nella Windows SDK. Per ulteriori informazioni, vedere la macro [Edit_ShowBalloonTip](/windows/desktop/api/commctrl/nf-commctrl-edit_showballoontip) .
+Questa funzione Invia il messaggio [EM_SHOWBALLOONTIP](/windows/win32/Controls/em-showballoontip) , descritto nella Windows SDK. Per ulteriori informazioni, vedere la macro [Edit_ShowBalloonTip](/windows/win32/api/commctrl/nf-commctrl-edit_showballoontip) .
 
 ### <a name="example"></a>Esempio
 
@@ -1441,7 +1441,7 @@ Per un controllo di modifica a riga singola, il valore restituito è sempre dive
 
 Un'operazione di annullamento può anche essere annullata. Ad esempio, è possibile ripristinare il testo eliminato con la prima chiamata `Undo`a. Fino a quando non viene eseguita alcuna operazione di modifica, è possibile rimuovere nuovamente il testo con una seconda chiamata a `Undo`.
 
-Per ulteriori informazioni, vedere [EM_UNDO](/windows/desktop/Controls/em-undo) nel Windows SDK.
+Per ulteriori informazioni, vedere [EM_UNDO](/windows/win32/Controls/em-undo) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 

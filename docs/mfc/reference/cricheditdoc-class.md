@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: d296185fe2ea2216f4abe17b191f71b6fa36e1f9
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: def0c55ff1faf12729226aa445c9614119c546c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916714"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502667"
 ---
 # <a name="cricheditdoc-class"></a>Classe CRichEditDoc
 
@@ -43,7 +43,7 @@ class CRichEditDoc : public COleServerDoc
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
 |[CRichEditDoc::m_bRTF](#m_brtf)|Indica se l'I/O del flusso deve includere la formattazione.|
 
@@ -88,7 +88,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="parameters"></a>Parametri
 
 *preo*<br/>
-Puntatore a una struttura [REOBJECT](/windows/desktop/api/richole/ns-richole-reobject) che descrive un elemento OLE. Il nuovo `CRichEditCntrItem` oggetto viene costruito intorno a questo elemento OLE. Se *Preo* è null, il nuovo elemento client è vuoto.
+Puntatore a una struttura [REOBJECT](/windows/win32/api/richole/ns-richole-reobject) che descrive un elemento OLE. Il nuovo `CRichEditCntrItem` oggetto viene costruito intorno a questo elemento OLE. Se *Preo* è null, il nuovo elemento client è vuoto.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -98,7 +98,7 @@ Puntatore a un nuovo oggetto [CRichEditCntrItem](../../mfc/reference/cricheditcn
 
 Questa funzione non esegue alcuna inizializzazione OLE.
 
-Per ulteriori informazioni, vedere la struttura [REOBJECT](/windows/desktop/api/richole/ns-richole-reobject) nella Windows SDK.
+Per ulteriori informazioni, vedere la struttura [REOBJECT](/windows/win32/api/richole/ns-richole-reobject) nella Windows SDK.
 
 ##  <a name="getstreamformat"></a>CRichEditDoc:: GetStreamFormat
 

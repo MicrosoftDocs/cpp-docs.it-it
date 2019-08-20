@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 2bc962407bac947f475368b43f5039bca3c1da1e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: a37ef47a4ea89d9ec24fac417e5b715bd2602fd7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915821"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496925"
 ---
 # <a name="cdacl-class"></a>Classe CDacl
 
@@ -66,7 +66,7 @@ Per recuperare l'elenco DACL di un oggetto, è necessario essere il proprietario
 
 Usare i metodi della classe forniti per creare, aggiungere, rimuovere ed eliminare voci ACE dall' `CDacl` oggetto. Vedere anche [AtlGetDacl](security-global-functions.md#atlgetdacl) e [AtlSetDacl](security-global-functions.md#atlsetdacl).
 
-Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/desktop/SecAuthZ/access-control) nella Windows SDK.
+Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](/windows/win32/SecAuthZ/access-control) nella Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -121,7 +121,7 @@ Restituisce true se la voce ACE viene aggiunta all' `CDacl` oggetto, false in ca
 
 Un `CDacl` oggetto contiene zero o più voci di controllo di accesso (ACE) che identificano gli utenti e i gruppi che possono accedere all'oggetto. Questo metodo aggiunge una voce ACE che consente l'accesso `CDacl` all'oggetto.
 
-Per una descrizione dei diversi flag che è possibile impostare nel parametro `AceFlags`, vedere [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header).
+Per una descrizione dei diversi flag che è possibile impostare nel parametro `AceFlags`, vedere [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header).
 
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce
 
@@ -166,7 +166,7 @@ Restituisce true se la voce ACE viene aggiunta all' `CDacl` oggetto, false in ca
 
 Un `CDacl` oggetto contiene zero o più voci di controllo di accesso (ACE) che identificano gli utenti e i gruppi che possono accedere all'oggetto. Questo metodo aggiunge una voce ACE che nega l'accesso all' `CDacl` oggetto.
 
-Per una descrizione dei diversi flag che è possibile impostare nel parametro `AceFlags`, vedere [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header).
+Per una descrizione dei diversi flag che è possibile impostare nel parametro `AceFlags`, vedere [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header).
 
 ##  <a name="cdacl"></a>  CDacl::CDacl
 
@@ -264,7 +264,7 @@ Rimuove ogni `ACE` eventuale struttura (voce `CDacl` di controllo di accesso) pr
 
 [Esempio di sicurezza](../../overview/visual-cpp-samples.md)<br/>
 [Classe CAcl](../../atl/reference/cacl-class.md)<br/>
-[ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Assi](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[ACL](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Assi](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)<br/>
 [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 4f9f08ae751ba2482967c1eee4268c6d5f6d4a76
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916240"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507008"
 ---
 # <a name="cdc-class"></a>CDC (classe)
 
@@ -810,7 +810,7 @@ Specifica la larghezza, in unità logiche, del rettangolo di origine.
 Specifica l'altezza, in unità logiche, del rettangolo di origine.
 
 *blend*<br/>
-Specifica una struttura [BlendFunction](/windows/desktop/api/wingdi/ns-wingdi-blendfunction) .
+Specifica una struttura [BlendFunction](/windows/win32/api/wingdi/ns-wingdi-blendfunction) .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -818,7 +818,7 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) nella Windows SDK.
+Per ulteriori informazioni, vedere [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) nella Windows SDK.
 
 ##  <a name="anglearc"></a>  CDC::AngleArc
 
@@ -913,7 +913,7 @@ Specifica la coordinata y del punto che definisce l'endpoint dell'arco (in unit�
 Specifica il rettangolo di delimitazione (in unità logiche). È possibile passare un oggetto LPRECT o un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) per questo parametro.
 
 *ptStart*<br/>
-Specifica le coordinate x e y del punto che definisce il punto iniziale dell'arco (in unità logiche). Questo punto non deve trovarsi esattamente sull'arco. Per questo parametro è possibile passare una struttura [Point](/windows/desktop/api/windef/ns-windef-tagpoint) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Specifica le coordinate x e y del punto che definisce il punto iniziale dell'arco (in unità logiche). Questo punto non deve trovarsi esattamente sull'arco. Per questo parametro è possibile passare una struttura [Point](/windows/win32/api/windef/ns-windef-point) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *ptEnd*<br/>
 Specifica le coordinate x e y del punto che definisce il punto finale dell'arco (in unità logiche). Questo punto non deve trovarsi esattamente sull'arco. È possibile passare una `POINT` struttura o un `CPoint` oggetto per questo parametro.
@@ -980,10 +980,10 @@ Specifica la coordinata x del punto che definisce l'endpoint dell'arco (in unit�
 Specifica la coordinata y del punto che definisce l'endpoint dell'arco (in unità logiche). Questo punto non deve trovarsi esattamente sull'arco.
 
 *lpRect*<br/>
-Specifica il rettangolo di delimitazione (in unità logiche). È possibile passare un puntatore a una struttura di dati [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) per questo parametro.
+Specifica il rettangolo di delimitazione (in unità logiche). È possibile passare un puntatore a una struttura di dati [Rect](/windows/win32/api/windef/ns-windef-rect) o un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) per questo parametro.
 
 *ptStart*<br/>
-Specifica le coordinate x e y del punto che definisce il punto iniziale dell'arco (in unità logiche). Questo punto non deve trovarsi esattamente sull'arco. Per questo parametro è possibile passare una struttura di dati [punto](/windows/desktop/api/windef/ns-windef-tagpoint) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Specifica le coordinate x e y del punto che definisce il punto iniziale dell'arco (in unità logiche). Questo punto non deve trovarsi esattamente sull'arco. Per questo parametro è possibile passare una struttura di dati [punto](/windows/win32/api/windef/ns-windef-point) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *ptEnd*<br/>
 Specifica le coordinate x e y del punto che definisce il punto finale dell'arco (in unità logiche). Questo punto non deve trovarsi esattamente sull'arco. È possibile passare una `POINT` struttura di dati o un `CPoint` oggetto per questo parametro.
@@ -1035,7 +1035,7 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
 Dopo l'apertura di una parentesi quadra da un percorso, un'applicazione può iniziare a chiamare funzioni di disegno GDI per definire i punti che si trovano nel percorso. Un'applicazione può chiudere una parentesi aperta del percorso chiamando la `EndPath` funzione membro. Quando un'applicazione chiama `BeginPath`, tutti i percorsi precedenti vengono eliminati.
 
-Vedere [beginPath](/windows/desktop/api/wingdi/nf-wingdi-beginpath) nell'Windows SDK per un elenco delle funzioni di disegno che definiscono i punti in un percorso.
+Vedere [beginPath](/windows/win32/api/wingdi/nf-wingdi-beginpath) nell'Windows SDK per un elenco delle funzioni di disegno che definiscono i punti in un percorso.
 
 ### <a name="example"></a>Esempio
 
@@ -1081,9 +1081,9 @@ Specifica la coordinata x logica dell'angolo superiore sinistro della bitmap di 
 Specifica la coordinata y logica dell'angolo superiore sinistro della bitmap di origine.
 
 *dwRop*<br/>
-Specifica l'operazione raster da eseguire. I codici di operazioni raster definiscono il modo in cui GDI combina i colori nelle operazioni di output che coinvolgono un pennello corrente, una possibile bitmap di origine e una bitmap di destinazione. Vedere [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) nel Windows SDK per un elenco dei codici delle operazioni raster per *dwRop* e le relative descrizioni
+Specifica l'operazione raster da eseguire. I codici di operazioni raster definiscono il modo in cui GDI combina i colori nelle operazioni di output che coinvolgono un pennello corrente, una possibile bitmap di origine e una bitmap di destinazione. Vedere [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) nel Windows SDK per un elenco dei codici delle operazioni raster per *dwRop* e le relative descrizioni
 
-Per un elenco completo dei codici operativi raster, vedere [informazioni sui codici operativi raster](/windows/desktop/gdi/raster-operation-codes) nel Windows SDK.
+Per un elenco completo dei codici operativi raster, vedere [informazioni sui codici operativi raster](/windows/win32/gdi/raster-operation-codes) nel Windows SDK.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1169,7 +1169,7 @@ Specifica il rettangolo di delimitazione (in unità logiche). È possibile passa
 Specifica le coordinate x e y del punto che definisce il punto iniziale della corda (in unità logiche). Non è necessario che questo punto si trovi esattamente nella corda. È possibile passare una `POINT` struttura o un `CPoint` oggetto per questo parametro.
 
 *ptEnd*<br/>
-Specifica le coordinate x e y del punto che definisce il punto finale della corda (in unità logiche). Non è necessario che questo punto si trovi esattamente nella corda. Per questo parametro è possibile passare una struttura [Point](/windows/desktop/api/windef/ns-windef-tagpoint) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Specifica le coordinate x e y del punto che definisce il punto finale della corda (in unità logiche). Non è necessario che questo punto si trovi esattamente nella corda. Per questo parametro è possibile passare una struttura [Point](/windows/win32/api/windef/ns-windef-point) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1361,7 +1361,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametri
 
 *lpSize*<br/>
-Punta a una struttura di [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Punta a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Note
 
@@ -1383,16 +1383,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametri
 
 *lpPoints*<br/>
-Punta a una matrice di strutture [Point](/windows/desktop/api/windef/ns-windef-tagpoint) o di oggetti [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Punta a una matrice di strutture [Point](/windows/win32/api/windef/ns-windef-point) o di oggetti [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *nCount*<br/>
 Numero di punti nella matrice.
 
 *lpRect*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) . Questo parametro viene usato per il semplice caso di conversione di un rettangolo da punti di dispositivo a punti logici.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) . Questo parametro viene usato per il semplice caso di conversione di un rettangolo da punti di dispositivo a punti logici.
 
 *lpSize*<br/>
-Punta a una struttura di [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Punta a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Note
 
@@ -1420,7 +1420,7 @@ void Draw3dRect(
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Specifica il rettangolo di delimitazione (in unità logiche). È possibile passare un puntatore a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) per questo parametro.
+Specifica il rettangolo di delimitazione (in unità logiche). È possibile passare un puntatore a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) per questo parametro.
 
 *clrTopLeft*<br/>
 Specifica il colore dei lati superiore e sinistro del rettangolo tridimensionale.
@@ -1465,13 +1465,13 @@ void DrawDragRect(
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che specifica le coordinate logiche di un rettangolo, in questo caso la posizione finale del rettangolo da ricreare.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che specifica le coordinate logiche di un rettangolo, in questo caso la posizione finale del rettangolo da ricreare.
 
 *size*<br/>
 Consente di specificare lo spostamento dall'angolo superiore sinistro del bordo esterno all'angolo superiore sinistro del bordo interno (ovvero lo spessore del bordo) di un rettangolo.
 
 *lpRectLast*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che specifica le coordinate logiche della posizione di un rettangolo, in questo caso la posizione originale del rettangolo da ricreare.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che specifica le coordinate logiche della posizione di un rettangolo, in questo caso la posizione originale del rettangolo da ricreare.
 
 *sizeLast*<br/>
 Specifica lo spostamento dall'angolo superiore sinistro del bordo esterno all'angolo superiore sinistro del bordo interno (ovvero lo spessore del bordo) del rettangolo originale di cui è in corso il ridisegnato.
@@ -1505,7 +1505,7 @@ BOOL DrawEdge(
 Puntatore a una `RECT` struttura che contiene le coordinate logiche del rettangolo.
 
 *nEdge*<br/>
-Specifica il tipo di bordo interno ed esterno da creare. Questo parametro deve essere una combinazione di un flag di bordo interno e un flag di bordo esterno. Vedere [DrawEdge](/windows/desktop/api/winuser/nf-winuser-drawedge) nel Windows SDK per una tabella dei tipi di parametro.
+Specifica il tipo di bordo interno ed esterno da creare. Questo parametro deve essere una combinazione di un flag di bordo interno e un flag di bordo esterno. Vedere [DrawEdge](/windows/win32/api/winuser/nf-winuser-drawedge) nel Windows SDK per una tabella dei tipi di parametro.
 
 *nFlags*<br/>
 Flag che specificano il tipo di bordo da disegnare. Vedere `DrawEdge` nel Windows SDK per una tabella dei valori del parametro. Per le linee diagonali, i flag BF_RECT specificano il punto finale del vettore associato al parametro Rectangle.
@@ -1555,7 +1555,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che specifica le coordinate logiche del rettangolo da disegnare.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che specifica le coordinate logiche del rettangolo da disegnare.
 
 ### <a name="remarks"></a>Note
 
@@ -1581,7 +1581,7 @@ BOOL DrawFrameControl(
 Puntatore a una `RECT` struttura che contiene le coordinate logiche del rettangolo.
 
 *nType*<br/>
-Specifica il tipo di controllo frame da creare. Per un elenco dei valori possibili di questo parametro, vedere il parametro *uType* in [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) nella Windows SDK.
+Specifica il tipo di controllo frame da creare. Per un elenco dei valori possibili di questo parametro, vedere il parametro *uType* in [DrawFrameControl](/windows/win32/api/winuser/nf-winuser-drawframecontrol) nella Windows SDK.
 
 *nState*<br/>
 Specifica lo stato iniziale del controllo frame. Può essere uno o più valori descritti per il parametro *uState* in `DrawFrameControl` nell'Windows SDK. Usare il valore *nState* DFCS_ADJUSTRECT per modificare il rettangolo di delimitazione in modo da escludere il bordo circostante del pulsante di push.
@@ -1675,7 +1675,7 @@ Specifica la coordinata y logica dell'angolo superiore sinistro dell'icona.
 Identifica l'handle dell'icona da disegnare.
 
 *point*<br/>
-Specifica le coordinate x e y logiche dell'angolo superiore sinistro dell'icona. Per questo parametro è possibile passare una struttura [Point](/windows/desktop/api/windef/ns-windef-tagpoint) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Specifica le coordinate x e y logiche dell'angolo superiore sinistro dell'icona. Per questo parametro è possibile passare una struttura [Point](/windows/win32/api/windef/ns-windef-point) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1774,7 +1774,7 @@ Specifica la dimensione dell'immagine.
 Handle per una bitmap.
 
 *nFlags*<br/>
-Flag che specificano il tipo di immagine e lo stato. Vedere [DrawState](/windows/desktop/api/winuser/nf-winuser-drawstatea) nel Windows SDK per i tipi e gli stati *nFlags* possibili.
+Flag che specificano il tipo di immagine e lo stato. Vedere [DrawState](/windows/win32/api/winuser/nf-winuser-drawstatew) nel Windows SDK per i tipi e gli stati *nFlags* possibili.
 
 *hBrush*<br/>
 Handle per un pennello.
@@ -1798,7 +1798,7 @@ Testo che può contenere un tasto di scelta rapida. Il parametro *lData* specifi
 Lunghezza della stringa di testo a cui punta *lpszText*. Se *nTextLen* è 0, si presuppone che la stringa sia con terminazione null.
 
 *lpDrawProc*<br/>
-Puntatore a una funzione di callback utilizzata per eseguire il rendering di un'immagine. Questo parametro è obbligatorio se il tipo di immagine in *nFlags* è DST_COMPLEX. È facoltativo e può essere NULL se il tipo di immagine è DST_TEXT. Per tutti gli altri tipi di immagine, questo parametro viene ignorato. Per ulteriori informazioni sulla funzione di callback, vedere la funzione [DrawStateProc](/windows/desktop/api/winuser/nc-winuser-drawstateproc) nella Windows SDK.
+Puntatore a una funzione di callback utilizzata per eseguire il rendering di un'immagine. Questo parametro è obbligatorio se il tipo di immagine in *nFlags* è DST_COMPLEX. È facoltativo e può essere NULL se il tipo di immagine è DST_TEXT. Per tutti gli altri tipi di immagine, questo parametro viene ignorato. Per ulteriori informazioni sulla funzione di callback, vedere la funzione [DrawStateProc](/windows/win32/api/winuser/nc-winuser-drawstateproc) nella Windows SDK.
 
 *lData*<br/>
 Specifica le informazioni sull'immagine. Il significato di questo parametro dipende dal tipo di immagine.
@@ -1833,13 +1833,13 @@ Punta alla stringa da disegnare. Se *nCount* è-1, la stringa deve essere con te
 Specifica il numero di caratteri nella stringa. Se *nCount* è-1, si presuppone che *lpszString* sia un puntatore lungo a una stringa con terminazione null e `DrawText` calcola automaticamente il numero di caratteri.
 
 *lpRect*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene il rettangolo (in coordinate logiche) in cui deve essere formattato il testo.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene il rettangolo (in coordinate logiche) in cui deve essere formattato il testo.
 
 *str*<br/>
 Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenente i caratteri specificati da disegnare.
 
 *nFormat*<br/>
-Specifica il metodo di formattazione del testo. Può essere qualsiasi combinazione dei valori descritti per il parametro *UFormat* in [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) nel Windows SDK. (combinare utilizzando l'operatore OR bit per bit):
+Specifica il metodo di formattazione del testo. Può essere qualsiasi combinazione dei valori descritti per il parametro *UFormat* in [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) nel Windows SDK. (combinare utilizzando l'operatore OR bit per bit):
 
 > [!NOTE]
 >  Alcune combinazioni di flag *UFormat* possono causare la modifica della stringa passata. L'uso di DT_MODIFYSTRING con DT_END_ELLIPSIS o DT_PATH_ELLIPSIS può causare la modifica della stringa, causando un'asserzione `CString` nell'override. Non è possibile usare i valori DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP e DT_NOPREFIX con il valore DT_TABSTOP.
@@ -1890,23 +1890,23 @@ Punta alla stringa da disegnare. Se *nCount* è-1, la stringa deve essere con te
 Specifica il numero di caratteri nella stringa. Se *nCount* è-1, si presuppone che *lpszString* sia un puntatore lungo a una stringa con terminazione null e `DrawText` calcola automaticamente il numero di caratteri.
 
 *lpRect*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene il rettangolo (in coordinate logiche) in cui deve essere formattato il testo.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene il rettangolo (in coordinate logiche) in cui deve essere formattato il testo.
 
 *str*<br/>
 Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenente i caratteri specificati da disegnare.
 
 *nFormat*<br/>
-Specifica il metodo di formattazione del testo. Può essere qualsiasi combinazione dei valori descritti per il parametro *UFormat* in [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) nel Windows SDK. (Combinare utilizzando l'operatore or bit per bit):
+Specifica il metodo di formattazione del testo. Può essere qualsiasi combinazione dei valori descritti per il parametro *UFormat* in [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) nel Windows SDK. (Combinare utilizzando l'operatore or bit per bit):
 
 > [!NOTE]
 >  Alcune combinazioni di flag *UFormat* possono causare la modifica della stringa passata. L'uso di DT_MODIFYSTRING con DT_END_ELLIPSIS o DT_PATH_ELLIPSIS può causare la modifica della stringa, causando un'asserzione `CString` nell'override. Non è possibile usare i valori DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP e DT_NOPREFIX con il valore DT_TABSTOP.
 
 *lpDTParams*<br/>
-Puntatore a una struttura [DRAWTEXTPARAMS](/windows/desktop/api/winuser/ns-winuser-tagdrawtextparams) che specifica le opzioni di formattazione aggiuntive. Questo parametro può essere NULL.
+Puntatore a una struttura [DRAWTEXTPARAMS](/windows/win32/api/winuser/ns-winuser-drawtextparams) che specifica le opzioni di formattazione aggiuntive. Questo parametro può essere NULL.
 
 ### <a name="remarks"></a>Note
 
-Formatta il testo espandendo le tabulazioni in spazi appropriati, allineando il testo a sinistra, a destra o al centro del rettangolo specificato e suddividendo il testo in linee che rientrano nel rettangolo specificato. Il tipo di formattazione è specificato da *nFormat* e *lpDTParams*. Per ulteriori informazioni, vedere [CDC::D rawtext](#drawtext) e [DrawTextEx](/windows/desktop/api/winuser/nf-winuser-drawtextexa) nel Windows SDK.
+Formatta il testo espandendo le tabulazioni in spazi appropriati, allineando il testo a sinistra, a destra o al centro del rettangolo specificato e suddividendo il testo in linee che rientrano nel rettangolo specificato. Il tipo di formattazione è specificato da *nFormat* e *lpDTParams*. Per ulteriori informazioni, vedere [CDC::D rawtext](#drawtext) e [DrawTextEx](/windows/win32/api/winuser/nf-winuser-drawtextexw) nel Windows SDK.
 
 Il colore del testo può essere impostato da [CDC:: SetTextColor](#settextcolor).
 
@@ -2087,7 +2087,7 @@ int Escape(
 *nEscape*<br/>
 Specifica la funzione di escape da eseguire.
 
-Per un elenco completo delle funzioni di escape, vedere [escape](/windows/desktop/api/wingdi/nf-wingdi-escape) nell'Windows SDK.
+Per un elenco completo delle funzioni di escape, vedere [escape](/windows/win32/api/wingdi/nf-wingdi-escape) nell'Windows SDK.
 
 *nCount*<br/>
 Specifica il numero di byte di dati a cui punta *lpszInData*.
@@ -2140,11 +2140,11 @@ Per la programmazione Win32 `CDC` , ora fornisce sei funzioni membro che sostitu
 
 - [CDC::StartPage](#startpage)
 
-Inoltre, [CDC:: GetDeviceCaps](#getdevicecaps) supporta gli indici Win32 che sostituiscono altri caratteri di escape della stampante. Per ulteriori informazioni, vedere [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) nella Windows SDK.
+Inoltre, [CDC:: GetDeviceCaps](#getdevicecaps) supporta gli indici Win32 che sostituiscono altri caratteri di escape della stampante. Per ulteriori informazioni, vedere [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) nella Windows SDK.
 
 Questa funzione membro consente alle applicazioni di accedere alle funzionalità di un dispositivo specifico che non sono direttamente disponibili tramite GDI.
 
-Usare la prima versione se l'applicazione usa valori di escape predefiniti. Utilizzare la seconda versione se l'applicazione definisce i valori di escape privati. Per ulteriori informazioni sulla seconda versione, vedere [ExtEscape](/windows/desktop/api/wingdi/nf-wingdi-extescape) nella Windows SDK.
+Usare la prima versione se l'applicazione usa valori di escape predefiniti. Utilizzare la seconda versione se l'applicazione definisce i valori di escape privati. Per ulteriori informazioni sulla seconda versione, vedere [ExtEscape](/windows/win32/api/wingdi/nf-wingdi-extescape) nella Windows SDK.
 
 ##  <a name="excludecliprect"></a>  CDC::ExcludeClipRect
 
@@ -2301,7 +2301,7 @@ Specifica il tipo di rettangolo. Questo parametro può essere uno, entrambi o ne
 - ETO_OPAQUE specifica che il colore di sfondo corrente riempie il rettangolo. È possibile impostare ed eseguire una query sul colore di sfondo corrente con le funzioni membro [SetBkColor](#setbkcolor) e [GetBkColor](#getbkcolor) .
 
 *lpRect*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) che determina le dimensioni del rettangolo. Questo parametro può essere NULL. È anche possibile passare un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) per questo parametro.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) che determina le dimensioni del rettangolo. Questo parametro può essere NULL. È anche possibile passare un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) per questo parametro.
 
 *lpszString*<br/>
 Punta alla stringa di caratteri specificata da disegnare. È anche possibile passare un oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) per questo parametro.
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) che contiene le coordinate logiche del rettangolo da riempire. È anche possibile passare un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) per questo parametro.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) che contiene le coordinate logiche del rettangolo da riempire. È anche possibile passare un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) per questo parametro.
 
 *pBrush*<br/>
 Identifica il pennello utilizzato per riempire il rettangolo.
@@ -2419,7 +2419,7 @@ void FillSolidRect(
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Specifica il rettangolo di delimitazione (in unità logiche). È possibile passare un puntatore a una struttura di dati [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a `CRect` un oggetto per questo parametro.
+Specifica il rettangolo di delimitazione (in unità logiche). È possibile passare un puntatore a una struttura di dati [Rect](/windows/win32/api/windef/ns-windef-rect) o a `CRect` un oggetto per questo parametro.
 
 *CLR* Specifica il colore da utilizzare per riempire il rettangolo.
 
@@ -2501,7 +2501,7 @@ void FrameRect(
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene le coordinate logiche degli angoli superiore sinistro e inferiore destro del rettangolo. È anche possibile passare un `CRect` oggetto per questo parametro.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che contiene le coordinate logiche degli angoli superiore sinistro e inferiore destro del rettangolo. È anche possibile passare un `CRect` oggetto per questo parametro.
 
 *pBrush*<br/>
 Identifica il pennello da utilizzare per incorniciare il rettangolo.
@@ -2718,16 +2718,16 @@ DWORD GetCharacterPlacement(
 Puntatore alla stringa di caratteri da elaborare.
 
 *nCount*<br/>
-Specifica la lunghezza della stringa. Per la versione ANSI, è un conteggio di BYTE e per la funzione Unicode è un conteggio di parole. Per ulteriori informazioni, vedere [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa).
+Specifica la lunghezza della stringa. Per la versione ANSI, è un conteggio di BYTE e per la funzione Unicode è un conteggio di parole. Per ulteriori informazioni, vedere [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw).
 
 *nMaxExtent*<br/>
 Specifica l'extent massimo (in unità logiche) in cui viene elaborata la stringa. I caratteri che, se elaborati, superano questo extent vengono ignorati. I calcoli per gli ordini o le matrici di glifi richiesti si applicano solo ai caratteri inclusi. Questo parametro viene utilizzato solo se il valore GCP_MAXEXTENT è specificato nel parametro *dwFlags* . Quando la funzione elabora la stringa di input, ogni carattere e l'extent vengono aggiunti all'output, all'extent e ad altre matrici solo se l'extent totale non ha ancora superato il limite massimo. Una volta raggiunto il limite, l'elaborazione verrà arrestata.
 
 *lpResults*<br/>
-Puntatore a una struttura [GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa) che riceve i risultati della funzione.
+Puntatore a una struttura [GCP_Results](/windows/win32/api/wingdi/ns-wingdi-gcp_resultsw) che riceve i risultati della funzione.
 
 *dwFlags*<br/>
-Specifica come elaborare la stringa nelle matrici obbligatorie. Il parametro può essere costituito da uno o più valori elencati nella sezione *dwFlags* dell'argomento [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa) .
+Specifica come elaborare la stringa nelle matrici obbligatorie. Il parametro può essere costituito da uno o più valori elencati nella sezione *dwFlags* dell'argomento [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw) .
 
 *str*<br/>
 Puntatore a un oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) da elaborare.
@@ -2740,7 +2740,7 @@ Se la funzione ha esito negativo, il valore restituito è zero.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità della funzione [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa), come descritto nella Windows SDK.
+Questa funzione membro emula la funzionalità della funzione [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw), come descritto nella Windows SDK.
 
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths
 
@@ -2767,10 +2767,10 @@ Specifica il primo carattere nell'intervallo di caratteri del tipo di carattere 
 Specifica l'ultimo carattere nell'intervallo di caratteri del tipo di carattere corrente per il quale vengono restituite le larghezze dei caratteri.
 
 *lpabc*<br/>
-Punta a una matrice di strutture [ABC](/windows/desktop/api/wingdi/ns-wingdi-abc) che ricevono la larghezza dei caratteri quando la funzione restituisce. Questa matrice deve contenere almeno il numero `ABC` di strutture in cui sono presenti caratteri nell'intervallo specificato dai parametri *nFirstChar* e *nLastChar* .
+Punta a una matrice di strutture [ABC](/windows/win32/api/wingdi/ns-wingdi-abc) che ricevono la larghezza dei caratteri quando la funzione restituisce. Questa matrice deve contenere almeno il numero `ABC` di strutture in cui sono presenti caratteri nell'intervallo specificato dai parametri *nFirstChar* e *nLastChar* .
 
 *lpABCF*<br/>
-Punta a un buffer fornito dall'applicazione con una matrice di strutture [ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-abcfloat) per ricevere la larghezza dei caratteri quando la funzione restituisce un valore. Le larghezze restituite da questa funzione sono nel formato a virgola mobile IEEE.
+Punta a un buffer fornito dall'applicazione con una matrice di strutture [ABCFLOAT](/windows/win32/api/wingdi/ns-wingdi-abcfloat) per ricevere la larghezza dei caratteri quando la funzione restituisce un valore. Le larghezze restituite da questa funzione sono nel formato a virgola mobile IEEE.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2784,11 +2784,11 @@ Il rasterizzatore TrueType fornisce la spaziatura dei caratteri "ABC" dopo la se
 
 Quando la `GetCharABCWidths` funzione membro recupera le larghezze negative "A" o "C" per un carattere, tale carattere include le sottoblocchi o i blocchi.
 
-Per convertire le larghezze ABC in unità di progettazione dei tipi di carattere, un'applicazione deve creare un tipo di carattere la `lfHeight` cui altezza (come specificato nel membro della struttura [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) ) è uguale al `ntmSizeEM` valore archiviato nel membro di [NEWTEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagnewtextmetrica) struttura. Il valore del `ntmSizeEM` membro può essere recuperato chiamando la funzione [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) di Windows.
+Per convertire le larghezze ABC in unità di progettazione dei tipi di carattere, un'applicazione deve creare un tipo di carattere la `lfHeight` cui altezza (come specificato nel membro della struttura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) ) è uguale al `ntmSizeEM` valore archiviato nel membro di [NEWTEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-newtextmetricw) struttura. Il valore del `ntmSizeEM` membro può essere recuperato chiamando la funzione [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) di Windows.
 
 Le larghezze ABC del carattere predefinito vengono utilizzate per i caratteri che non rientrano nell'intervallo del tipo di carattere attualmente selezionato.
 
-Per recuperare le larghezze dei caratteri nei tipi di carattere non TrueType, le applicazioni devono utilizzare la funzione [GetCharWidth](/windows/desktop/api/wingdi/nf-wingdi-getcharwidtha) di Windows.
+Per recuperare le larghezze dei caratteri nei tipi di carattere non TrueType, le applicazioni devono utilizzare la funzione [GetCharWidth](/windows/win32/api/wingdi/nf-wingdi-getcharwidthw) di Windows.
 
 ##  <a name="getcharabcwidthsi"></a>  CDC::GetCharABCWidthsI
 
@@ -2814,7 +2814,7 @@ Specifica il numero di indici di glifi.
 Puntatore a una matrice che contiene gli indici di glifi. Se il valore è NULL, viene utilizzato il parametro *giFirst* . Il parametro *CGI* specifica il numero di indici di glifi in questa matrice.
 
 *lpabc*<br/>
-Puntatore a una matrice di strutture [ABC](/windows/desktop/api/wingdi/ns-wingdi-abc) che riceve la larghezza dei caratteri. Questa matrice deve contenere almeno il numero `ABC` di strutture in cui sono presenti indici di glifi specificati dal parametro *CGI* .
+Puntatore a una matrice di strutture [ABC](/windows/win32/api/wingdi/ns-wingdi-abc) che riceve la larghezza dei caratteri. Questa matrice deve contenere almeno il numero `ABC` di strutture in cui sono presenti indici di glifi specificati dal parametro *CGI* .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2822,7 +2822,7 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità della funzione [GetCharABCWidthsI](/windows/desktop/api/wingdi/nf-wingdi-getcharabcwidthsi), come descritto nella Windows SDK.
+Questa funzione membro emula la funzionalità della funzione [GetCharABCWidthsI](/windows/win32/api/wingdi/nf-wingdi-getcharabcwidthsi), come descritto nella Windows SDK.
 
 ##  <a name="getcharwidth"></a>  CDC::GetCharWidth
 
@@ -2898,7 +2898,7 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità della funzione [GetCharWidthI](/windows/desktop/api/wingdi/nf-wingdi-getcharwidthi), come descritto nella Windows SDK.
+Questa funzione membro emula la funzionalità della funzione [GetCharWidthI](/windows/win32/api/wingdi/nf-wingdi-getcharwidthi), come descritto nella Windows SDK.
 
 ##  <a name="getclipbox"></a>  CDC::GetClipBox
 
@@ -2911,7 +2911,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametri
 
 *lpRect*<br/>
-Punta alla struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o all'oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che deve ricevere le dimensioni del rettangolo.
+Punta alla struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o all'oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) che deve ricevere le dimensioni del rettangolo.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2940,7 +2940,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>Parametri
 
 *lpColorAdjust*<br/>
-Punta a una struttura di dati [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) per ricevere i valori di regolazione del colore.
+Punta a una struttura di dati [COLORADJUSTMENT](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) per ricevere i valori di regolazione del colore.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3052,13 +3052,13 @@ COLORREF GetDCBrushColor() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore restituito è il valore [COLORREF](/windows/desktop/gdi/colorref) per il colore corrente del pennello.
+Se la funzione ha esito positivo, il valore restituito è il valore [COLORREF](/windows/win32/gdi/colorref) per il colore corrente del pennello.
 
 Se la funzione ha esito negativo, il valore restituito è CLR_INVALID.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità della funzione [GetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-getdcbrushcolor), come descritto nella Windows SDK.
+Questa funzione membro emula la funzionalità della funzione [GetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-getdcbrushcolor), come descritto nella Windows SDK.
 
 ##  <a name="getdcpencolor"></a>  CDC::GetDCPenColor
 
@@ -3070,13 +3070,13 @@ COLORREF GetDCPenColor() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se la funzione ha esito positivo, il valore restituito è il valore [COLORREF](/windows/desktop/gdi/colorref) per il colore corrente della penna.
+Se la funzione ha esito positivo, il valore restituito è il valore [COLORREF](/windows/win32/gdi/colorref) per il colore corrente della penna.
 
 Se la funzione ha esito negativo, il valore restituito è CLR_INVALID.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro utilizza la funzione Win32 [GetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-getdcpencolor), come descritto nel Windows SDK.
+Questa funzione membro utilizza la funzione Win32 [GetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-getdcpencolor), come descritto nel Windows SDK.
 
 ##  <a name="getdevicecaps"></a>  CDC::GetDeviceCaps
 
@@ -3089,7 +3089,7 @@ int GetDeviceCaps(int nIndex) const;
 ### <a name="parameters"></a>Parametri
 
 *nIndex*<br/>
-Specifica il tipo di informazioni da restituire. Per un elenco di valori, vedere [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) nel Windows SDK.
+Specifica il tipo di informazioni da restituire. Per un elenco di valori, vedere [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) nel Windows SDK.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3135,7 +3135,7 @@ Le informazioni da recuperare vengono identificate specificando un offset nel fi
 
 Un'applicazione può talvolta utilizzare la `GetFontData` funzione membro per salvare un tipo di carattere TrueType con un documento. A tale scopo, l'applicazione determina se il tipo di carattere può essere incorporato, quindi recupera l'intero file del tipo di carattere, specificando 0 per i parametri *dwTable*, *dwOffset*e *cbData* .
 
-Le applicazioni possono determinare se un tipo di carattere può essere incorporato `otmfsType` controllando il membro della struttura [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica) . Se viene impostato il `otmfsType` bit 1 di, l'incorporamento non è consentito per il tipo di carattere. Se il bit 1 è chiaro, il tipo di carattere può essere incorporato. Se è impostato il bit 2, l'incorporamento è di sola lettura.
+Le applicazioni possono determinare se un tipo di carattere può essere incorporato `otmfsType` controllando il membro della struttura [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) . Se viene impostato il `otmfsType` bit 1 di, l'incorporamento non è consentito per il tipo di carattere. Se il bit 1 è chiaro, il tipo di carattere può essere incorporato. Se è impostato il bit 2, l'incorporamento è di sola lettura.
 
 Se un'applicazione tenta di utilizzare questa funzione per recuperare informazioni per un tipo di carattere non TrueType, `GetFontData` la funzione membro restituisce-1.
 
@@ -3149,11 +3149,11 @@ DWORD GetFontLanguageInfo() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Il valore restituito identifica le caratteristiche del tipo di carattere attualmente selezionato. Per un elenco completo dei valori possibili, vedere [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo).
+Il valore restituito identifica le caratteristiche del tipo di carattere attualmente selezionato. Per un elenco completo dei valori possibili, vedere [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo).
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità della funzione [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo), come descritto nella Windows SDK.
+Questa funzione membro emula la funzionalità della funzione [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo), come descritto nella Windows SDK.
 
 ##  <a name="getglyphoutline"></a>CDC:: GetGlyphOutline
 
@@ -3182,7 +3182,7 @@ Specifica il formato in cui la funzione deve restituire le informazioni. Può es
 |GGO_BITMAP|Restituisce la bitmap del glifo. Quando la funzione restituisce, il buffer a cui punta *lpBuffer* contiene una bitmap a 1 bit per pixel le cui righe iniziano con i limiti di parola doppia.|
 |GGO_NATIVE|Restituisce i punti dati della curva nel formato nativo del rasterizzatore usando le unità del dispositivo. Quando si specifica questo valore, qualsiasi trasformazione specificata in *lpmat2* viene ignorata.|
 
-Quando il valore di *nFormat* è 0, la funzione compila una struttura [GlyphMetrics](/windows/desktop/api/wingdi/ns-wingdi-glyphmetrics) ma non restituisce dati del contorno di glifi.
+Quando il valore di *nFormat* è 0, la funzione compila una struttura [GlyphMetrics](/windows/win32/api/wingdi/ns-wingdi-glyphmetrics) ma non restituisce dati del contorno di glifi.
 
 *lpgm*<br/>
 Punta a una struttura GLYPHMETRICS che descrive la posizione del glifo nella cella del carattere.
@@ -3194,7 +3194,7 @@ Specifica la dimensione del buffer in cui la funzione copia le informazioni sul 
 Punta a un buffer in cui la funzione copia le informazioni sul carattere del contorno. Se *nFormat* specifica il valore GGO_NATIVE, le informazioni vengono copiate sotto forma di strutture TTPOLYGONHEADER e TTPOLYCURVE. Se questo valore è NULL e *nFormat* è il valore GGO_BITMAP o GGO_NATIVE, la funzione restituisce la dimensione richiesta del buffer.
 
 *lpmat2*<br/>
-Punta a una struttura [MAT2](/windows/desktop/api/wingdi/ns-wingdi-mat2) che contiene una matrice di trasformazione per il carattere. Questo parametro non può essere NULL, anche quando viene specificato il valore GGO_NATIVE per *nFormat*.
+Punta a una struttura [MAT2](/windows/win32/api/wingdi/ns-wingdi-mat2) che contiene una matrice di trasformazione per il carattere. Questo parametro non può essere NULL, anche quando viene specificato il valore GGO_NATIVE per *nFormat*.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3204,7 +3204,7 @@ Dimensione, in byte, del buffer necessario per le informazioni recuperate se *cb
 
 Un'applicazione può ruotare i caratteri recuperati in formato bitmap specificando una matrice di trasformazione 2 per 2 nella struttura a cui punta *lpmat2*.
 
-Un contorno di glifo viene restituito come una serie di contorni. Ogni contorno è definito da una struttura [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) seguita dal numero `TTPOLYCURVE` di strutture necessarie per la relativa descrizione. Tutti i punti vengono restituiti come strutture [POINTFX](/windows/desktop/api/wingdi/ns-wingdi-tagpointfx) e rappresentano posizioni assolute, non spostamenti relativi. Il punto iniziale dato dal `pfxStart` membro della struttura [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader) è il punto in cui inizia il contorno di un contorno. Le strutture [TTPOLYCURVE](/windows/desktop/api/wingdi/ns-wingdi-tagttpolycurve) che seguono possono essere record polilinea o record spline. I record di polilinea sono una serie di punti; le linee tracciate tra i punti descrivono il contorno del carattere. I record spline rappresentano le curve quadratiche utilizzate da TrueType, ovvero le spline b quadratiche.
+Un contorno di glifo viene restituito come una serie di contorni. Ogni contorno è definito da una struttura [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader) seguita dal numero `TTPOLYCURVE` di strutture necessarie per la relativa descrizione. Tutti i punti vengono restituiti come strutture [POINTFX](/windows/win32/api/wingdi/ns-wingdi-pointfx) e rappresentano posizioni assolute, non spostamenti relativi. Il punto iniziale dato dal `pfxStart` membro della struttura [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader) è il punto in cui inizia il contorno di un contorno. Le strutture [TTPOLYCURVE](/windows/win32/api/wingdi/ns-wingdi-ttpolycurve) che seguono possono essere record polilinea o record spline. I record di polilinea sono una serie di punti; le linee tracciate tra i punti descrivono il contorno del carattere. I record spline rappresentano le curve quadratiche utilizzate da TrueType, ovvero le spline b quadratiche.
 
 ##  <a name="getgraphicsmode"></a>  CDC::GetGraphicsMode
 
@@ -3216,15 +3216,15 @@ int GetGraphicsMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce la modalità grafica corrente in seguito all'esito positivo. Per un elenco dei valori che questo metodo può restituire, vedere [GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode).
+Restituisce la modalità grafica corrente in seguito all'esito positivo. Per un elenco dei valori che questo metodo può restituire, vedere [GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
 
 Restituisce 0 in caso di errore.
 
-Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
-Questo metodo esegue il wrapping della funzione GDI [GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode)di Windows.
+Questo metodo esegue il wrapping della funzione GDI [GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode)di Windows.
 
 ##  <a name="gethalftonebrush"></a>  CDC::GetHalftoneBrush
 
@@ -3257,7 +3257,7 @@ int GetKerningPairs(
 ### <a name="parameters"></a>Parametri
 
 *nPairs*<br/>
-Specifica il numero di strutture [KERNINGPAIR](/windows/desktop/api/wingdi/ns-wingdi-tagkerningpair) a cui punta *lpkrnpair*. La funzione non copierà più coppie di crenatura rispetto a quanto specificato da *nPairs*.
+Specifica il numero di strutture [KERNINGPAIR](/windows/win32/api/wingdi/ns-wingdi-kerningpair) a cui punta *lpkrnpair*. La funzione non copierà più coppie di crenatura rispetto a quanto specificato da *nPairs*.
 
 *lpkrnpair*<br/>
 Punta a una matrice di `KERNINGPAIR` strutture che ricevono le coppie di crenatura quando la funzione restituisce. Questa matrice deve contenere almeno il numero di strutture specificato da *nPairs*. Se questo parametro è NULL, la funzione restituisce il numero totale di coppie di crenatura per il tipo di carattere.
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, i flag di layout per il contesto di dispositivo corrente. In caso contrario, GDI_ERROR. Per informazioni estese sugli errori, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Per un elenco dei flag di layout, vedere [CDC:: selayout](#setlayout).
+Se ha esito positivo, i flag di layout per il contesto di dispositivo corrente. In caso contrario, GDI_ERROR. Per informazioni estese sugli errori, chiamare [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror). Per un elenco dei flag di layout, vedere [CDC:: selayout](#setlayout).
 
 ### <a name="remarks"></a>Note
 
@@ -3351,7 +3351,7 @@ UINT GetOutlineTextMetrics(
 ### <a name="parameters"></a>Parametri
 
 *lpotm*<br/>
-Punta a una matrice di strutture [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica) . Se questo parametro è NULL, la funzione restituisce la dimensione del buffer necessaria per i dati della metrica recuperata.
+Punta a una matrice di strutture [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) . Se questo parametro è NULL, la funzione restituisce la dimensione del buffer necessaria per i dati della metrica recuperata.
 
 *cbData*<br/>
 Specifica la dimensione, in byte, del buffer in cui vengono restituite le informazioni.
@@ -3365,7 +3365,7 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-La struttura [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica) contiene la maggior parte delle informazioni sulla metrica del tipo di carattere fornite con il formato TrueType, inclusa una struttura [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) . Gli ultimi quattro membri della `OUTLINETEXTMETRIC` struttura sono puntatori alle stringhe. Le applicazioni devono allocare spazio per queste stringhe oltre allo spazio necessario per gli altri membri. Poiché non esiste un limite imposto dal sistema alle dimensioni delle stringhe, il metodo più semplice per l'allocazione della memoria consiste nel recuperare le dimensioni richieste specificando null per *lpotm* nella prima chiamata alla `GetOutlineTextMetrics` funzione.
+La struttura [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) contiene la maggior parte delle informazioni sulla metrica del tipo di carattere fornite con il formato TrueType, inclusa una struttura [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) . Gli ultimi quattro membri della `OUTLINETEXTMETRIC` struttura sono puntatori alle stringhe. Le applicazioni devono allocare spazio per queste stringhe oltre allo spazio necessario per gli altri membri. Poiché non esiste un limite imposto dal sistema alle dimensioni delle stringhe, il metodo più semplice per l'allocazione della memoria consiste nel recuperare le dimensioni richieste specificando null per *lpotm* nella prima chiamata alla `GetOutlineTextMetrics` funzione.
 
 ##  <a name="getoutputcharwidth"></a>  CDC::GetOutputCharWidth
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 Punta a una stringa di caratteri da misurare. È anche possibile passare un oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) per questo parametro.
 
 *nCount*<br/>
-Specifica la [lunghezza della stringa](/windows/desktop/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
+Specifica la [lunghezza della stringa](/windows/win32/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
 
 *nTabPositions*<br/>
 Specifica il numero di posizioni di interruzione di tabulazione nella matrice a cui punta *lpnTabStopPositions*.
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 Punta a una stringa di caratteri. È anche possibile passare un oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) per questo parametro.
 
 *nCount*<br/>
-Specifica la [lunghezza della stringa](/windows/desktop/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
+Specifica la [lunghezza della stringa](/windows/win32/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
 
 *str*<br/>
 `CString` Oggetto contenente i caratteri specificati da misurare.
@@ -3493,7 +3493,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>Parametri
 
 *lpMetrics*<br/>
-Punta alla struttura [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) che riceve la metrica.
+Punta alla struttura [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) che riceve la metrica.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3513,7 +3513,7 @@ int GetPath(
 ### <a name="parameters"></a>Parametri
 
 *lpPoints*<br/>
-Punta a una matrice di strutture di dati [POINT](/windows/desktop/api/windef/ns-windef-tagpoint) o oggetti `CPoint` in cui vengono posizionati gli endpoint di riga e i punti di controllo della curva.
+Punta a una matrice di strutture di dati [POINT](/windows/win32/api/windef/ns-windef-point) o oggetti `CPoint` in cui vengono posizionati gli endpoint di riga e i punti di controllo della curva.
 
 *lpTypes*<br/>
 Punta a una matrice di byte in cui vengono inseriti i tipi di vertici. I valori sono uno dei seguenti:
@@ -3531,7 +3531,7 @@ I tipi PT_BEZIERTO vengono sempre eseguiti in set di tre. Il punto nel percorso 
 - PT_CLOSEFIGURE specifica che la figura viene chiusa automaticamente dopo che è stata disegnata la linea o la curva corrispondente. La figura viene chiusa disegnando una linea dall'endpoint linea o curva al punto corrispondente all'ultimo PT_MOVETO.
 
 *nCount*<br/>
-Specifica il numero totale di strutture di dati [punto](/windows/desktop/api/windef/ns-windef-tagpoint) che possono essere inserite nella matrice *lpPoints* . Questo valore deve corrispondere al numero di byte che può essere inserito nella matrice *lpTypes* .
+Specifica il numero totale di strutture di dati [punto](/windows/win32/api/windef/ns-windef-point) che possono essere inserite nella matrice *lpPoints* . Questo valore deve corrispondere al numero di byte che può essere inserito nella matrice *lpTypes* .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3578,7 +3578,7 @@ Il punto deve trovarsi nell'area di ridimensionamento. Se il punto non si trova 
 
 Non tutti i dispositivi supportano la funzione `GetPixel`. Per altre informazioni, vedere la funzionalità raster RC_BITBLT sotto la funzione membro [GetDeviceCaps](#getdevicecaps) .
 
-La `GetPixel` funzione membro ha due formati. Il primo accetta due valori delle coordinate. il secondo accetta una struttura [Point](/windows/desktop/api/windef/ns-windef-tagpoint) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+La `GetPixel` funzione membro ha due formati. Il primo accetta due valori delle coordinate. il secondo accetta una struttura [Point](/windows/win32/api/windef/ns-windef-point) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ##  <a name="getpolyfillmode"></a>CDC:: GetPolyFillMode
 
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 Punta a una stringa di caratteri. È anche possibile passare un oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) per questo parametro.
 
 *nCount*<br/>
-Specifica la [lunghezza della stringa](/windows/desktop/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
+Specifica la [lunghezza della stringa](/windows/win32/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
 
 *nTabPositions*<br/>
 Specifica il numero di posizioni di interruzione di tabulazione nella matrice a cui punta *lpnTabStopPositions*.
@@ -3841,7 +3841,7 @@ Puntatore a un intero che riceve un conteggio del numero massimo di caratteri ch
 Puntatore a una matrice di numeri interi che riceve extent di glifi parziali. Ogni elemento nella matrice fornisce la distanza, in unità logiche, tra l'inizio della matrice di indici di glifi e uno dei glifi che si riferiscono allo spazio specificato da *nMaxExtent*. Anche se questa matrice deve contenere almeno il numero di elementi degli indici di glifi specificati da *CGI*, la funzione riempie la matrice con extent solo per il numero di indici di glifi specificato da *lpnFit*. Se *lpnDx* è null, la funzione non calcola le larghezze delle stringhe parziali.
 
 *lpSize*<br/>
-Puntatore a una struttura di [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) che riceve le dimensioni della matrice di indici di glifi, in unità logiche. Questo valore non può essere NULL.
+Puntatore a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) che riceve le dimensioni della matrice di indici di glifi, in unità logiche. Questo valore non può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3849,7 +3849,7 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità della funzione [GetTextExtentExPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentexpointi), come descritto nella Windows SDK.
+Questa funzione membro emula la funzionalità della funzione [GetTextExtentExPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentexpointi), come descritto nella Windows SDK.
 
 ##  <a name="gettextextentpointi"></a>  CDC::GetTextExtentPointI
 
@@ -3871,7 +3871,7 @@ Puntatore a una matrice di indici di glifi per cui devono essere recuperati gli 
 Specifica il numero di glifi nella matrice a cui punta *pgiIn*.
 
 *lpSize*<br/>
-Puntatore a una struttura di [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) che riceve le dimensioni della matrice di indici di glifi, in unità logiche. Questo valore non può essere NULL.
+Puntatore a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) che riceve le dimensioni della matrice di indici di glifi, in unità logiche. Questo valore non può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -3879,7 +3879,7 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro emula la funzionalità della funzione [GetTextExtentPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpointi), come descritto nella Windows SDK.
+Questa funzione membro emula la funzionalità della funzione [GetTextExtentPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentpointi), come descritto nella Windows SDK.
 
 ##  <a name="gettextface"></a>  CDC::GetTextFace
 
@@ -3923,7 +3923,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>Parametri
 
 *lpMetrics*<br/>
-Punta alla struttura [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) che riceve la metrica.
+Punta alla struttura [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) che riceve la metrica.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4004,7 +4004,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ### <a name="parameters"></a>Parametri
 
 *rXform*<br/>
-Riferimento a una struttura [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) che riceve lo spazio globale corrente nella trasformazione dello spazio pagina.
+Riferimento a una struttura [XFORM](/windows/win32/api/wingdi/ns-wingdi-xform) che riceve lo spazio globale corrente nella trasformazione dello spazio pagina.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4012,11 +4012,11 @@ Restituisce un valore diverso da zero in seguito all'esito positivo.
 
 Restituisce 0 in caso di errore.
 
-Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
-Questo metodo esegue il wrapping della funzione GDI [GetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-getworldtransform)di Windows.
+Questo metodo esegue il wrapping della funzione GDI [GetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-getworldtransform)di Windows.
 
 ##  <a name="gradientfill"></a>CDC:: GradientFill
 
@@ -4034,19 +4034,19 @@ BOOL GradientFill(
 ### <a name="parameters"></a>Parametri
 
 *pVertices*<br/>
-Puntatore a una matrice di strutture [TRIVERTEX](/windows/desktop/api/wingdi/ns-wingdi-trivertex) che definiscono ogni vertice di un triangolo.
+Puntatore a una matrice di strutture [TRIVERTEX](/windows/win32/api/wingdi/ns-wingdi-trivertex) che definiscono ogni vertice di un triangolo.
 
 *nVertices*<br/>
 Numero di vertici.
 
 *pMesh*<br/>
-Matrice di strutture [GRADIENT_TRIANGLE](/windows/desktop/api/wingdi/ns-wingdi-gradient_triangle) in modalità triangolo o matrice di strutture [GRADIENT_RECT](/windows/desktop/api/wingdi/ns-wingdi-gradient_rect) in modalità rettangolo.
+Matrice di strutture [GRADIENT_TRIANGLE](/windows/win32/api/wingdi/ns-wingdi-gradient_triangle) in modalità triangolo o matrice di strutture [GRADIENT_RECT](/windows/win32/api/wingdi/ns-wingdi-gradient_rect) in modalità rettangolo.
 
 *nMeshElements*<br/>
 Numero di elementi (triangoli o rettangoli) in *pMesh*.
 
 *dwMode*<br/>
-Specifica la modalità di riempimento sfumatura. Per un elenco di valori possibili, vedere [GradientFill](/windows/desktop/api/wingdi/nf-wingdi-gradientfill) nel Windows SDK.
+Specifica la modalità di riempimento sfumatura. Per un elenco di valori possibili, vedere [GradientFill](/windows/win32/api/wingdi/nf-wingdi-gradientfill) nel Windows SDK.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4111,7 +4111,7 @@ La funzione offusca il testo indipendentemente dal pennello e dallo sfondo selez
 
 Un'applicazione può creare stringhe visualizzate in grigio in dispositivi che supportano un colore grigio a tinta unita senza chiamare la `GrayString` funzione membro. Il colore di sistema COLOR_GRAYTEXT è il colore di sistema solido-grigio usato per creare il testo disabilitato. L'applicazione può chiamare la `GetSysColor` funzione Windows per recuperare il valore di colore di COLOR_GRAYTEXT. Se il colore è diverso da 0 (nero), l'applicazione può chiamare la `SetTextColor` funzione membro per impostare il colore del testo sul valore di colore, quindi creare direttamente la stringa. Se il colore recuperato è nero, l'applicazione deve chiamare `GrayString` per Dim (grigio) il testo.
 
-Se *lpfnOutput* è null, GDI utilizza la funzione di output di [testo](/windows/desktop/api/wingdi/nf-wingdi-textouta) di Windows e si presuppone che *lpData* sia un puntatore lontano al carattere da restituire. Se i caratteri da restituire non possono essere gestiti dalla `TextOut` funzione membro (ad esempio, la stringa viene archiviata come bitmap), l'applicazione deve fornire la propria funzione di output.
+Se *lpfnOutput* è null, GDI utilizza la funzione di output di [testo](/windows/win32/api/wingdi/nf-wingdi-textoutw) di Windows e si presuppone che *lpData* sia un puntatore lontano al carattere da restituire. Se i caratteri da restituire non possono essere gestiti dalla `TextOut` funzione membro (ad esempio, la stringa viene archiviata come bitmap), l'applicazione deve fornire la propria funzione di output.
 
 Si noti inoltre che tutte le funzioni di callback devono intercettare le eccezioni di Microsoft Foundation prima di tornare a Windows, perché non è possibile generare eccezioni tra i limiti di callback. Per ulteriori informazioni sulle eccezioni, vedere l'articolo [eccezioni](../../mfc/exception-handling-in-mfc.md).
 
@@ -4130,7 +4130,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametri
 
 *lpSize*<br/>
-Punta a una struttura di [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Punta a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Note
 
@@ -4147,7 +4147,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametri
 
 *lpSize*<br/>
-Punta a una struttura di [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Punta a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Note
 
@@ -4309,16 +4309,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametri
 
 *lpPoints*<br/>
-Punta a una matrice di punti. Ogni punto della matrice è una struttura di [punti](/windows/desktop/api/windef/ns-windef-tagpoint) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Punta a una matrice di punti. Ogni punto della matrice è una struttura di [punti](/windows/win32/api/windef/ns-windef-point) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *nCount*<br/>
 Numero di punti nella matrice.
 
 *lpRect*<br/>
-Punta a una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) . Questo parametro viene usato per il caso comune di mapping di un rettangolo da unità logiche a unità di dispositivo.
+Punta a una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) o a un oggetto [CRect](../../atl-mfc-shared/reference/crect-class.md) . Questo parametro viene usato per il caso comune di mapping di un rettangolo da unità logiche a unità di dispositivo.
 
 *lpSize*<br/>
-Punta a una struttura di [dimensioni](/windows/desktop/api/windef/ns-windef-tagsize) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Punta a una struttura di [dimensioni](/windows/win32/api/windef/ns-windef-size) o a un oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) .
 
 ### <a name="remarks"></a>Note
 
@@ -4448,10 +4448,10 @@ BOOL ModifyWorldTransform(
 ### <a name="parameters"></a>Parametri
 
 *rXform*<br/>
-Riferimento a una struttura [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) che consente di modificare la trasformazione globale per il contesto di dispositivo specificato.
+Riferimento a una struttura [XFORM](/windows/win32/api/wingdi/ns-wingdi-xform) che consente di modificare la trasformazione globale per il contesto di dispositivo specificato.
 
 *iMode*<br/>
-Specifica il modo in cui i dati della trasformazione modificano la trasformazione globale corrente. Per un elenco dei valori che questo parametro può assumere, vedere [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform).
+Specifica il modo in cui i dati della trasformazione modificano la trasformazione globale corrente. Per un elenco dei valori che questo parametro può assumere, vedere [ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform).
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -4459,11 +4459,11 @@ Restituisce un valore diverso da zero in seguito all'esito positivo.
 
 Restituisce 0 in caso di errore.
 
-Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
-Questo metodo esegue il wrapping della funzione GDI [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform)di Windows.
+Questo metodo esegue il wrapping della funzione GDI [ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform)di Windows.
 
 ##  <a name="moveto"></a>  CDC::MoveTo
 
@@ -4713,7 +4713,7 @@ Specifica la coordinata y dell'endpoint dell'arco (in unità logiche). Questo pu
 Specifica il rettangolo di delimitazione. È possibile passare un `CRect` oggetto o un puntatore a una `RECT` struttura per questo parametro.
 
 *ptStart*<br/>
-Specifica il punto iniziale dell'arco. Questo punto non deve trovarsi esattamente sull'arco. Per questo parametro è possibile passare una struttura [Point](/windows/desktop/api/windef/ns-windef-tagpoint) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Specifica il punto iniziale dell'arco. Questo punto non deve trovarsi esattamente sull'arco. Per questo parametro è possibile passare una struttura [Point](/windows/win32/api/windef/ns-windef-point) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *ptEnd*<br/>
 Specifica l'endpoint dell'arco. Questo punto non deve trovarsi esattamente sull'arco. È possibile passare una `POINT` struttura o un `CPoint` oggetto per questo parametro.
@@ -4850,7 +4850,7 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>Parametri
 
 *lpPoints*<br/>
-Punta a una matrice di strutture di dati [punto](/windows/desktop/api/windef/ns-windef-tagpoint) che contengono gli endpoint e i punti di controllo delle spline.
+Punta a una matrice di strutture di dati [punto](/windows/win32/api/windef/ns-windef-point) che contengono gli endpoint e i punti di controllo delle spline.
 
 *nCount*<br/>
 Specifica il numero di punti nella matrice *lpPoints* . Questo valore deve essere superiore a tre volte il numero di spline da disegnare, perché ogni spline Bzier richiede due punti di controllo e un endpoint e la spline iniziale richiede un punto di partenza aggiuntivo.
@@ -4878,7 +4878,7 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>Parametri
 
 *lpPoints*<br/>
-Punta a una matrice di strutture di dati [punto](/windows/desktop/api/windef/ns-windef-tagpoint) che contiene gli endpoint e i punti di controllo.
+Punta a una matrice di strutture di dati [punto](/windows/win32/api/windef/ns-windef-point) che contiene gli endpoint e i punti di controllo.
 
 *nCount*<br/>
 Specifica il numero di punti nella matrice *lpPoints* . Questo valore deve essere tre volte il numero di spline da disegnare, perché ogni spline Bzier richiede due punti di controllo e un punto finale.
@@ -4909,7 +4909,7 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>Parametri
 
 *lpPoints*<br/>
-Punta a una matrice di strutture di dati [punto](/windows/desktop/api/windef/ns-windef-tagpoint) che contiene gli endpoint per ogni segmento di linea e gli endpoint e i punti di controllo per ogni spline Bzier.
+Punta a una matrice di strutture di dati [punto](/windows/win32/api/windef/ns-windef-point) che contiene gli endpoint per ogni segmento di linea e gli endpoint e i punti di controllo per ogni spline Bzier.
 
 *lpTypes*<br/>
 Punta a una matrice che specifica la modalità di utilizzo di ogni punto della matrice *lpPoints* . I valori possibili sono i seguenti:
@@ -5001,7 +5001,7 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
 Le linee vengono tracciate dal primo punto fino ai punti successivi usando la penna corrente. A differenza della `LineTo` funzione membro, la `Polyline` funzione non utilizza né aggiorna la posizione corrente.
 
-Per ulteriori informazioni, vedere [polilinea](/windows/desktop/api/wingdi/nf-wingdi-polyline) nel Windows SDK.
+Per ulteriori informazioni, vedere [polilinea](/windows/win32/api/wingdi/nf-wingdi-polyline) nel Windows SDK.
 
 ##  <a name="polylineto"></a>  CDC::PolylineTo
 
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>Parametri
 
 *lpPoints*<br/>
-Punta a una matrice di strutture di dati [punto](/windows/desktop/api/windef/ns-windef-tagpoint) che contiene i vertici della linea.
+Punta a una matrice di strutture di dati [punto](/windows/win32/api/windef/ns-windef-point) che contiene i vertici della linea.
 
 *nCount*<br/>
 Specifica il numero di punti nella matrice.
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>Parametri
 
 *lpColorAdjust*<br/>
-Punta a una struttura di dati [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) contenente i valori di regolazione del colore.
+Punta a una struttura di dati [COLORADJUSTMENT](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) contenente i valori di regolazione del colore.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -5963,7 +5963,7 @@ Se la funzione ha esito negativo, il valore restituito è CLR_INVALID.
 
 ### <a name="remarks"></a>Note
 
-Questo metodo emula la funzionalità della funzione [SetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-setdcbrushcolor), come descritto nella Windows SDK.
+Questo metodo emula la funzionalità della funzione [SetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-setdcbrushcolor), come descritto nella Windows SDK.
 
 ##  <a name="setdcpencolor"></a>  CDC::SetDCPenColor
 
@@ -5984,7 +5984,7 @@ Diverso da zero se la funzione ha esito positivo; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro utilizza la funzione Win32 [SetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-setdcpencolor), come descritto nel Windows SDK.
+Questa funzione membro utilizza la funzione Win32 [SetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-setdcpencolor), come descritto nel Windows SDK.
 
 ##  <a name="setgraphicsmode"></a>  CDC::SetGraphicsMode
 
@@ -5997,17 +5997,17 @@ int SetGraphicsMode(int iMode);
 ### <a name="parameters"></a>Parametri
 
 *iMode*<br/>
-Specifica la modalità grafica. Per un elenco dei valori che questo parametro può assumere, vedere [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode).
+Specifica la modalità grafica. Per un elenco dei valori che questo parametro può assumere, vedere [SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
 
 ### <a name="return-value"></a>Valore restituito
 
 Restituisce la modalità grafica precedente in seguito all'esito positivo.
 
-Restituisce 0 in caso di errore. Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Restituisce 0 in caso di errore. Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
-Questo metodo esegue il wrapping della funzione GDI [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode)di Windows.
+Questo metodo esegue il wrapping della funzione GDI [SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode)di Windows.
 
 ##  <a name="setlayout"></a>  CDC::SetLayout
 
@@ -6032,7 +6032,7 @@ Layout del contesto del dispositivo e flag di controllo bitmap. Può essere una 
 
 In caso di esito positivo, il layout precedente del contesto di dispositivo.
 
-Se ha esito negativo, GDI_ERROR. Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Se ha esito negativo, GDI_ERROR. Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
@@ -6042,7 +6042,7 @@ Se si chiama il metodo selayout **(LAYOUT_RTL** ), `SetLayout` la modalità di m
 
 In alcuni casi, ad esempio con molte bitmap, potrebbe essere necessario mantenere il layout da sinistra a destra. In questi casi, eseguire il rendering dell'immagine `BitBlt` chiamando `StretchBlt`o, quindi impostare il flag di controllo bitmap per *dwLayout* su LAYOUT_BITMAPORIENTATIONPRESERVED.
 
-Una volta modificato il layout con il flag LAYOUT_RTL, i flag che in genere specificano Right o Left vengono invertiti. Per evitare confusione, è consigliabile definire nomi alternativi per i flag standard. Per un elenco di nomi di flag alternativi suggeriti, vedere [SetLayout](/windows/desktop/api/wingdi/nf-wingdi-setlayout) nell'Windows SDK.
+Una volta modificato il layout con il flag LAYOUT_RTL, i flag che in genere specificano Right o Left vengono invertiti. Per evitare confusione, è consigliabile definire nomi alternativi per i flag standard. Per un elenco di nomi di flag alternativi suggeriti, vedere [SetLayout](/windows/win32/api/wingdi/nf-wingdi-setlayout) nell'Windows SDK.
 
 ##  <a name="setmapmode"></a>  CDC::SetMapMode
 
@@ -6177,7 +6177,7 @@ Specifica la coordinata x logica del punto da impostare.
 Specifica la coordinata y logica del punto da impostare.
 
 *crColor*<br/>
-Valore RGB COLORREF che specifica il colore utilizzato per disegnare il punto. Per una descrizione di questo valore, vedere [COLORREF](/windows/desktop/gdi/colorref) nel Windows SDK.
+Valore RGB COLORREF che specifica il colore utilizzato per disegnare il punto. Per una descrizione di questo valore, vedere [COLORREF](/windows/win32/gdi/colorref) nel Windows SDK.
 
 *point*<br/>
 Specifica le coordinate x e y logiche del punto da impostare. È possibile passare una `POINT` struttura o un `CPoint` oggetto per questo parametro.
@@ -6219,7 +6219,7 @@ Specifica la coordinata y, in unità logiche, del punto da impostare.
 Specifica il colore da utilizzare per disegnare il punto.
 
 *point*<br/>
-Specifica le coordinate x e y logiche del punto da impostare. Per questo parametro è possibile passare una struttura di dati [punto](/windows/desktop/api/windef/ns-windef-tagpoint) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Specifica le coordinate x e y logiche del punto da impostare. Per questo parametro è possibile passare una struttura di dati [punto](/windows/win32/api/windef/ns-windef-point) o un oggetto [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -6327,7 +6327,7 @@ Specifica la modalità di adattamento. Può essere uno dei valori seguenti:
 |BLACKONWHITE|Esegue un'operazione booleana e usando i valori dei colori per i pixel eliminati ed esistenti. Se la bitmap è una bitmap monocromatica, questa modalità conserva i pixel neri a scapito dei pixel bianchi.|
 |COLORONCOLOR|Elimina i pixel. Questa modalità Elimina tutte le righe di pixel eliminate senza provare a conservare le informazioni.|
 |MEZZITONI|Esegue il mapping dei pixel dal rettangolo di origine in blocchi di pixel nel rettangolo di destinazione. Il colore medio sul blocco di destinazione di pixel si avvicina al colore dei pixel di origine.|
-||Dopo aver impostato la modalità di estensione del mezzitoni, un'applicazione deve chiamare la funzione Win32 [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) per impostare l'origine del pennello. In caso contrario, si verifica un errore di allineamento del pennello.|
+||Dopo aver impostato la modalità di estensione del mezzitoni, un'applicazione deve chiamare la funzione Win32 [SetBrushOrgEx](/windows/win32/api/wingdi/nf-wingdi-setbrushorgex) per impostare l'origine del pennello. In caso contrario, si verifica un errore di allineamento del pennello.|
 |STRETCH_ANDSCANS|**Windows 95/98**: Uguale a BLACKONWHITE|
 |STRETCH_DELETESCANS|**Windows 95/98**: Uguale a COLORONCOLOR|
 |STRETCH_HALFTONE|**Windows 95/98**: Uguale a mezzitoni.|
@@ -6649,7 +6649,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ### <a name="parameters"></a>Parametri
 
 *rXform*<br/>
-Riferimento a una struttura [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) che contiene i dati della trasformazione.
+Riferimento a una struttura [XFORM](/windows/win32/api/wingdi/ns-wingdi-xform) che contiene i dati della trasformazione.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -6657,11 +6657,11 @@ Restituisce un valore diverso da zero in seguito all'esito positivo.
 
 Restituisce 0 in caso di errore.
 
-Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Per ottenere informazioni estese sull'errore, chiamare [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Note
 
-Questo metodo esegue il wrapping della funzione GDI [SetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-setworldtransform)di Windows.
+Questo metodo esegue il wrapping della funzione GDI [SetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-setworldtransform)di Windows.
 
 ##  <a name="startdoc"></a>  CDC::StartDoc
 
@@ -6675,7 +6675,7 @@ int StartDoc(LPCTSTR lpszDocName);
 ### <a name="parameters"></a>Parametri
 
 *lpDocInfo*<br/>
-Punta a una struttura [DOCINFO](/windows/desktop/api/wingdi/ns-wingdi-docinfoa) contenente il nome del file di documento e il nome del file di output.
+Punta a una struttura [DOCINFO](/windows/win32/api/wingdi/ns-wingdi-docinfow) contenente il nome del file di documento e il nome del file di output.
 
 *lpszDocName*<br/>
 Puntatore a una stringa che contiene il nome del file di documento.
@@ -6891,7 +6891,7 @@ Specifica la coordinata y logica del punto iniziale della stringa.
 Punta alla stringa di caratteri da creare. È possibile passare un puntatore a una matrice di caratteri o un oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) per questo parametro.
 
 *nCount*<br/>
-Specifica la [lunghezza della stringa](/windows/desktop/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
+Specifica la [lunghezza della stringa](/windows/win32/gdi/specifying-length-of-text-output-string) a cui punta *lpszString*.
 
 *nTabPositions*<br/>
 Specifica il numero di valori nella matrice di posizioni di interruzione di tabulazione.
@@ -7023,7 +7023,7 @@ TRUE se l'operazione riesce; in caso contrario, FALSE.
 
 `TransparentBlt`consente la trasparenza; ovvero, il colore RGB indicato da *clrTransparent* viene sottoposto a rendering trasparente per il trasferimento.
 
-Per ulteriori informazioni, vedere [TransparentBlt](/windows/desktop/api/wingdi/nf-wingdi-transparentblt) nel Windows SDK.
+Per ulteriori informazioni, vedere [TransparentBlt](/windows/win32/api/wingdi/nf-wingdi-transparentblt) nel Windows SDK.
 
 ##  <a name="updatecolors"></a>  CDC::UpdateColors
 
@@ -7037,7 +7037,7 @@ void UpdateColors();
 
 Una finestra inattiva con una tavolozza logica realizzata può `UpdateColors` chiamare come alternativa al ridisegno dell'area client quando viene modificata la tavolozza di sistema.
 
-Per ulteriori informazioni sull'utilizzo delle tavolozze dei colori, vedere [UpdateColors](/windows/desktop/api/wingdi/nf-wingdi-updatecolors) nel Windows SDK.
+Per ulteriori informazioni sull'utilizzo delle tavolozze dei colori, vedere [UpdateColors](/windows/win32/api/wingdi/nf-wingdi-updatecolors) nel Windows SDK.
 
 La `UpdateColors` funzione membro in genere aggiorna un'area client più velocemente rispetto al ridisegno dell'area. Tuttavia, poiché la funzione esegue la conversione dei colori in base al colore di ogni pixel prima che la tavolozza di sistema venga modificata, ogni chiamata a questa funzione comporta la perdita di una certa accuratezza del colore.
 

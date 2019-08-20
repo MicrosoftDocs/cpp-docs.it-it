@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 066494f4ba0119f4576e0c8e3c06d87ff736aea3
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 732bdf980240b1f496c1aca56c8a89b6a7f52d27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916724"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502174"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -260,7 +260,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Eseguire l'override di per eseguire l'elaborazione del tempo di inattività specifico dell'applicazione.|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Chiamata eseguita dal Framework per aprire un documento da un file.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analizza i singoli parametri e flag nella riga di comando.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtra i messaggi prima che vengano inviati alle funzioni di Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtra i messaggi prima che vengano inviati alle funzioni di Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Intercetta alcuni messaggi prima che raggiungano l'applicazione.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Gestisce gli argomenti e i flag della riga di comando.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Intercetta tutte le eccezioni non gestite generate dai gestori di messaggi e comandi dell'applicazione.|
@@ -287,7 +287,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|NOME|DESCRIZIONE|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |[CWinApp::EnableShellOpen](#enableshellopen)|Consente all'utente di aprire i file di dati da Gestione file di Windows.|
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Carica standard. Le impostazioni del file INI e abilitano la funzionalità elenco di file MRU.|
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Parametri
 
 *pPrintDlg*<br/>
-Puntatore a una struttura [PrintDlg](/windows/desktop/api/commdlg/ns-commdlg-tagpda) .
+Puntatore a una struttura [PrintDlg](/windows/win32/api/commdlg/ns-commdlg-pdw) .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -902,7 +902,7 @@ Questa funzione membro non fa distinzione tra maiuscole e minuscole, pertanto le
 > `GetProfileBinary`alloca un buffer e ne restituisce l'indirizzo in \* *ppData*. Il chiamante è responsabile della liberazione del buffer mediante **Delete []** .
 
 > [!IMPORTANT]
-> I dati restituiti dalla funzione non sono necessariamente con terminazione null e il chiamante deve eseguire la convalida. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> I dati restituiti dalla funzione non sono necessariamente con terminazione null e il chiamante deve eseguire la convalida. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Esempio
 
@@ -943,7 +943,7 @@ Questa funzione supporta la notazione esadecimale per il valore nel file INI. Qu
 Questa funzione membro non fa distinzione tra maiuscole e minuscole, pertanto le stringhe nei parametri *lpszSection* e *lpszEntry* possono variare in maiuscolo e minuscolo.
 
 > [!IMPORTANT]
-> I dati restituiti dalla funzione non sono necessariamente con terminazione null e il chiamante deve eseguire la convalida. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> I dati restituiti dalla funzione non sono necessariamente con terminazione null e il chiamante deve eseguire la convalida. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Esempio
 
@@ -980,7 +980,7 @@ Il valore restituito è la stringa dall'oggetto dell'applicazione. File INI o *l
 ### <a name="remarks"></a>Note
 
 > [!IMPORTANT]
-> I dati restituiti dalla funzione non sono necessariamente con terminazione null e il chiamante deve eseguire la convalida. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> I dati restituiti dalla funzione non sono necessariamente con terminazione null e il chiamante deve eseguire la convalida. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Esempio
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 Specifica dati aggiuntivi. Il valore utilizzato dipende dal valore del parametro *nCmd* . Il valore predefinito è `0x000F`, ovvero [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command).
 
 *nCmd*<br/>
-Specifica il tipo di Guida richiesto. Per un elenco dei valori possibili e il modo in cui influiscono sul parametro *dwData* , vedere il parametro *uCommand* descritto nelle funzioni API [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) o [HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) nel Windows SDK.  
+Specifica il tipo di Guida richiesto. Per un elenco dei valori possibili e il modo in cui influiscono sul parametro *dwData* , vedere il parametro *uCommand* descritto nelle funzioni API [HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) o [HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) nel Windows SDK.  
 
 ### <a name="remarks"></a>Note
 
@@ -1063,7 +1063,7 @@ L'inizializzazione dell'applicazione è suddivisa concettualmente in due sezioni
 Eseguire `InitInstance` l'override di per inizializzare ogni nuova istanza dell'applicazione in esecuzione in Windows. In genere, è `InitInstance` necessario eseguire l'override di per costruire l'oggetto `CWinThread::m_pMainWnd` finestra principale e impostare il membro dati in modo che punti a tale finestra. Per ulteriori informazioni sull'override di questa funzione membro, vedere [CWinApp: Classe](../../mfc/cwinapp-the-application-class.md)dell'applicazione.
 
 > [!NOTE]
-> Le applicazioni MFC devono essere inizializzate come Apartment a thread singolo (STA). Se si chiama [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) nell' `InitInstance` override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED).
+> Le applicazioni MFC devono essere inizializzate come Apartment a thread singolo (STA). Se si chiama [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) nell' `InitInstance` override, specificare COINIT_APARTMENTTHREADED (anziché COINIT_MULTITHREADED).
 
 ### <a name="example"></a>Esempio
 
@@ -1099,7 +1099,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 Punta a una stringa con terminazione null che contiene il nome della risorsa del cursore. Per questo argomento è `CString` possibile usare un oggetto.
 
 *nIDResource*<br/>
-ID della risorsa del cursore. Per un elenco di risorse, vedere [LoadCursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) nel Windows SDK.
+ID della risorsa del cursore. Per un elenco di risorse, vedere [LoadCursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) nel Windows SDK.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1142,7 +1142,7 @@ Handle per un'icona in caso di esito positivo; in caso contrario, NULL.
 Per accedere alle icone Windows predefinite, è possibile usare la funzione membro [LoadStandardIcon](#loadstandardicon) o [LoadOEMIcon](#loadoemicon) .
 
 > [!NOTE]
-> Questa funzione membro chiama la funzione API Win32 [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona), che può caricare solo un'icona le cui dimensioni sono conformi ai valori della metrica di sistema SM_CXICON e SM_CYICON.
+> Questa funzione membro chiama la funzione API Win32 [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw), che può caricare solo un'icona le cui dimensioni sono conformi ai valori della metrica di sistema SM_CXICON e SM_CYICON.
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1252,7 +1252,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Parametri
 
 *lpszIconName*<br/>
-Identificatore di costante manifesto che specifica un'icona di Windows predefinita. Questi identificatori sono definiti in WINDOWS. H. Per un elenco dei valori predefiniti possibili e delle relative descrizioni, vedere il parametro *lpIconName* in [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) nella Windows SDK.
+Identificatore di costante manifesto che specifica un'icona di Windows predefinita. Questi identificatori sono definiti in WINDOWS. H. Per un elenco dei valori predefiniti possibili e delle relative descrizioni, vedere il parametro *lpIconName* in [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw) nella Windows SDK.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1784,7 +1784,7 @@ Per una descrizione dei flag della riga di comando, vedere [CCommandLineInfo:: m
 
 ##  <a name="pretranslatemessage"></a>CWinApp::P reTranslateMessage
 
-Eseguire l'override di questa funzione per filtrare i messaggi della finestra prima che vengano inviati alle funzioni di Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) l'implementazione predefinita esegue la conversione del tasto di scelta rapida, quindi è necessario chiamare il `CWinApp::PreTranslateMessage`Metodofunzione membro nella versione sottoposta a override.
+Eseguire l'override di questa funzione per filtrare i messaggi della finestra prima che vengano inviati alle funzioni di Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) l'implementazione predefinita esegue la conversione del tasto di scelta rapida, quindi è necessario chiamare il `CWinApp::PreTranslateMessage`Metodofunzione membro nella versione sottoposta a override.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parametri
 
 *pMsg*<br/>
-Puntatore a una struttura [msg](/windows/desktop/api/winuser/ns-winuser-tagmsg) che contiene il messaggio da elaborare.
+Puntatore a una struttura [msg](/windows/win32/api/winuser/ns-winuser-tagmsg) che contiene il messaggio da elaborare.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 Specifica un codice hook. Questa funzione membro usa il codice per determinare come elaborare *lpMsg.*
 
 *lpMsg*<br/>
-Puntatore a una struttura di [messaggi](/windows/desktop/api/winuser/ns-winuser-tagmsg) di Windows.
+Puntatore a un truttura di [messaggi](/windows/win32/api/winuser/ns-winuser-msg)di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Puntatore a un'eccezione non rilevata.
 
 *pMsg*<br/>
-Struttura [msg](/windows/desktop/api/winuser/ns-winuser-tagmsg) che contiene informazioni sul messaggio di Windows che ha causato la generazione di un'eccezione da parte del Framework.
+Truttura [msg](/windows/win32/api/winuser/ns-winuser-msg)che contiene informazioni sul messaggio di Windows che ha causato la generazione di un'eccezione da parte del Framework.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>Parametri
 
 *hDevNames*<br/>
-Handle per una struttura [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) che identifica i nomi di driver, dispositivo e porta di output di una stampante specifica.
+Handle per un truttura [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)che identifica i nomi di driver, dispositivo e porta di output di una stampante specifica.
 
 *hDevMode*<br/>
 Handle per una struttura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) che specifica le informazioni sull'inizializzazione del dispositivo e sull'ambiente di una stampante.
@@ -2260,7 +2260,7 @@ virtual void WinHelp(
 Specifica dati aggiuntivi. Il valore utilizzato dipende dal valore del parametro *nCmd* .
 
 *nCmd*<br/>
-Specifica il tipo di Guida richiesto. Per un elenco dei valori possibili e il modo in cui influiscono sul parametro *dwData* , vedere la funzione di Windows [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) .
+Specifica il tipo di Guida richiesto. Per un elenco dei valori possibili e il modo in cui influiscono sul parametro *dwData* , vedere la funzione di Windows [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) .
 
 ### <a name="remarks"></a>Note
 

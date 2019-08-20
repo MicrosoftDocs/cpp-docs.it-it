@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915679"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496300"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 
@@ -78,7 +78,7 @@ I thread nel pool vengono creati ed eliminati definitivamente quando il pool vie
 
 Subito dopo la creazione di un thread, Worker`Initialize` :: verrà chiamato sull'oggetto associato a tale thread. Immediatamente prima dell'eliminazione di un thread, viene chiamato`Terminate` Worker::. Entrambi i metodi devono accettare un argomento **void** <strong>\*</strong> . Il valore di questo argomento viene passato al pool di thread tramite il parametro *pvWorkerParam* di [CThreadPool:: Initialize](#initialize).
 
-Quando sono presenti elementi di lavoro nella coda e i thread di lavoro sono disponibili per il lavoro, un thread di lavoro estrae un elemento dalla `Execute` coda e chiama il metodo dell'oggetto di lavoro per quel thread. Vengono quindi passati tre elementi al metodo: l'elemento dalla coda, `pvWorkerParam` lo stesso passato a *Worker*:: `Initialize` e *Worker*:: `Terminate`, e un puntatore alla struttura [sovrapposta](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) usata per la coda della porta di completamento io .
+Quando sono presenti elementi di lavoro nella coda e i thread di lavoro sono disponibili per il lavoro, un thread di lavoro estrae un elemento dalla `Execute` coda e chiama il metodo dell'oggetto di lavoro per quel thread. Vengono quindi passati tre elementi al metodo: l'elemento dalla coda, `pvWorkerParam` lo stesso passato a *Worker*:: `Initialize` e *Worker*:: `Terminate`, e un puntatore alla struttura [sovrapposta](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) usata per la coda della porta di completamento io .
 
 La classe Worker dichiara il tipo degli elementi che verranno accodati nel pool di thread fornendo un typedef, Worker:: `RequestType`. Questo tipo deve essere in grado di eseguire il cast a e da un ULONG_PTR.
 
@@ -344,7 +344,7 @@ Tempo massimo richiesto, in millisecondi, durante il quale il pool di thread res
 
 ### <a name="remarks"></a>Note
 
-Questo metodo invia una richiesta di arresto a tutti i thread nel pool. Se il timeout scade, questo metodo chiamerà [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) su un thread che non è stato chiuso. Questo metodo viene chiamato automaticamente dal distruttore della classe.
+Questo metodo invia una richiesta di arresto a tutti i thread nel pool. Se il timeout scade, questo metodo chiamerà [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) su un thread che non è stato chiuso. Questo metodo viene chiamato automaticamente dal distruttore della classe.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: ebef892e174525c0b907818c02b7d34b1b41f850
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916888"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502876"
 ---
 # <a name="cprintdialogex-class"></a>Classe CPrintDialogEx
 
@@ -84,7 +84,7 @@ class CPrintDialogEx : public CCommonDialog
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|DESCRIZIONE|
+|NOME|DESCRIZIONE|
 |----------|-----------------|
 |[CPrintDialogEx::m_pdex](#m_pdex)|Struttura utilizzata per personalizzare un `CPrintDialogEx` oggetto.|
 
@@ -94,7 +94,7 @@ class CPrintDialogEx : public CCommonDialog
 
 Se si vuole che l'applicazione gestisca la stampa senza il coinvolgimento del Framework, è possibile `CPrintDialogEx` usare la classe "così com'è" con il costruttore fornito oppure è possibile derivare la propria `CPrintDialogEx` classe di finestra di dialogo da e scrivere un costruttore in base alle esigenze. In entrambi i casi, queste finestre di dialogo si comporteranno come le finestre di dialogo MFC standard `CCommonDialog`perché derivano dalla classe.
 
-Per utilizzare un `CPrintDialogEx` oggetto, creare innanzitutto l'oggetto utilizzando il `CPrintDialogEx` costruttore. Una volta creata la finestra di dialogo, è possibile impostare o modificare i valori nella struttura [m_pdex](#m_pdex) per inizializzare i valori dei controlli della finestra di dialogo. La `m_pdex` struttura è di tipo [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa). Per ulteriori informazioni su questa struttura, vedere la Windows SDK.
+Per utilizzare un `CPrintDialogEx` oggetto, creare innanzitutto l'oggetto utilizzando il `CPrintDialogEx` costruttore. Una volta creata la finestra di dialogo, è possibile impostare o modificare i valori nella struttura [m_pdex](#m_pdex) per inizializzare i valori dei controlli della finestra di dialogo. La `m_pdex` struttura è di tipo [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw). Per ulteriori informazioni su questa struttura, vedere la Windows SDK.
 
 Se non si forniscono `m_pdex` handle personalizzati in per i `hDevMode` membri e `hDevNames` , assicurarsi di chiamare la funzione `GlobalFree` Windows per questi handle al termine della finestra di dialogo.
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>Parametri
 
 *dwFlags*<br/>
-Uno o più flag che è possibile utilizzare per personalizzare le impostazioni della finestra di dialogo, combinate tramite l'operatore OR bit per bit. Il flag PD_ALLPAGES, ad esempio, imposta l'intervallo di stampa predefinito su tutte le pagine del documento. Per ulteriori informazioni su questi flag, vedere la struttura [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) nel Windows SDK.
+Uno o più flag che è possibile utilizzare per personalizzare le impostazioni della finestra di dialogo, combinate tramite l'operatore OR bit per bit. Il flag PD_ALLPAGES, ad esempio, imposta l'intervallo di stampa predefinito su tutte le pagine del documento. Per ulteriori informazioni su questi flag, vedere la struttura [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) nel Windows SDK.
 
 *pParentWnd*<br/>
 Puntatore alla finestra padre o proprietaria della finestra di dialogo.
@@ -154,7 +154,7 @@ Questa funzione membro costruisce solo l'oggetto. Utilizzare la `DoModal` funzio
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-Crea un contesto di dispositivo stampante (DC) dalle strutture [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Crea un contesto di dispositivo stampante (DC) dalle strutture [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) e [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -188,7 +188,7 @@ Se si desidera inizializzare le varie opzioni della finestra di dialogo di stamp
 
 Dopo aver `DoModal`chiamato, è possibile chiamare altre funzioni membro per recuperare le impostazioni o l'input di informazioni da parte dell'utente nella finestra di dialogo.
 
-Se viene usato il flag PD_RETURNDC quando si `DoModal`chiama, viene restituito un controller di dominio della `hDC` stampante nel membro di [m_pdex](#m_pdex). Il controller di dominio deve essere liberato con una chiamata a [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) da `CPrintDialogEx`parte del chiamante di.
+Se viene usato il flag PD_RETURNDC quando si `DoModal`chiama, viene restituito un controller di dominio della `hDC` stampante nel membro di [m_pdex](#m_pdex). Il controller di dominio deve essere liberato con una chiamata a [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) da `CPrintDialogEx`parte del chiamante di.
 
 ##  <a name="getcopies"></a>  CPrintDialogEx::GetCopies
 
@@ -216,11 +216,11 @@ TRUE se ha esito positivo, in caso contrario FALSE.
 
 ### <a name="remarks"></a>Note
 
-Crea un contesto di dispositivo stampante (DC) dalle strutture [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Crea un contesto di dispositivo stampante (DC) dalle strutture [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) e [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
-`GetDefaults`non Visualizza la finestra delle proprietà di stampa. Al contrario, imposta i `hDevNames` membri `hDevMode` e di [m_pdex](#m_pdex) su handle per le strutture [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) e [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) inizializzate per la stampante predefinita del sistema. Sia `hDevNames` `GetDefaults` che `hDevMode` devono essere null o non riuscire.
+`GetDefaults`non Visualizza la finestra delle proprietà di stampa. Al contrario, imposta i `hDevNames` membri `hDevMode` e di [m_pdex](#m_pdex) su handle per le strutture [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) e [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) inizializzate per la stampante predefinita del sistema. Sia `hDevNames` `GetDefaults` che `hDevMode` devono essere null o non riuscire.
 
-Se il flag PD_RETURNDC è impostato, questa funzione non solo restituirà `hDevNames` e `hDevMode` (che si `m_pdex.hDevNames` trova `m_pdex.hDevMode`in e) al chiamante, ma restituirà anche un controller di `m_pdex.hDC`dominio della stampante in. Al termine `CPrintDialogEx` dell'oggetto, è responsabilità del chiamante eliminare il controller di dominio della stampante e chiamare la funzione [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) di Windows sugli handle.
+Se il flag PD_RETURNDC è impostato, questa funzione non solo restituirà `hDevNames` e `hDevMode` (che si `m_pdex.hDevNames` trova `m_pdex.hDevMode`in e) al chiamante, ma restituirà anche un controller di `m_pdex.hDC`dominio della stampante in. Al termine `CPrintDialogEx` dell'oggetto, è responsabilità del chiamante eliminare il controller di dominio della stampante e chiamare la funzione [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) di Windows sugli handle.
 
 ##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName
 
@@ -248,7 +248,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Struttura dei dati [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , che contiene informazioni sull'inizializzazione del dispositivo e sull'ambiente di un driver di stampa. È necessario sbloccare la memoria utilizzata da questa struttura con la funzione [funzione GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) di Windows, descritta nella Windows SDK.
+Struttura dei dati [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , che contiene informazioni sull'inizializzazione del dispositivo e sull'ambiente di un driver di stampa. È necessario sbloccare la memoria utilizzata da questa struttura con la funzione [funzione GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) di Windows, descritta nella Windows SDK.
 
 ##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName
 
@@ -292,7 +292,7 @@ Handle per il contesto di dispositivo stampante.
 
 ### <a name="remarks"></a>Note
 
-È necessario chiamare la funzione [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc) di Windows per eliminare il contesto di dispositivo al termine dell'utilizzo.
+È necessario chiamare la funzione [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc) di Windows per eliminare il contesto di dispositivo al termine dell'utilizzo.
 
 ##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex
 
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>Note
 
-Dopo la costruzione di `CPrintDialogEx` un oggetto, è possibile `m_pdex` utilizzare per impostare vari aspetti della finestra di dialogo prima di chiamare la funzione membro [DoModal](#domodal) . Per ulteriori informazioni sulla `m_pdex` struttura, vedere [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) nel Windows SDK.
+Dopo la costruzione di `CPrintDialogEx` un oggetto, è possibile `m_pdex` utilizzare per impostare vari aspetti della finestra di dialogo prima di chiamare la funzione membro [DoModal](#domodal) . Per ulteriori informazioni sulla `m_pdex` struttura, vedere [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) nel Windows SDK.
 
 Se si modifica direttamente `m_pdex` il membro dati, si eseguirà l'override di qualsiasi comportamento predefinito.
 
@@ -358,7 +358,7 @@ TRUE se deve essere stampato solo un intervallo di pagine nel documento; in caso
 
 ### <a name="remarks"></a>Note
 
-Gli intervalli di pagine specificati possono essere determinati da [m_pdex](#m_pdex) ( `nPageRanges`vedere `nMaxPageRanges`, e `lpPageRanges` nella struttura [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) nel Windows SDK).
+Gli intervalli di pagine specificati possono essere determinati da [m_pdex](#m_pdex) ( `nPageRanges`vedere `nMaxPageRanges`, e `lpPageRanges` nella struttura [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) nel Windows SDK).
 
 ##  <a name="printselection"></a>  CPrintDialogEx::PrintSelection
 
