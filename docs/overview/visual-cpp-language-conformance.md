@@ -1,16 +1,16 @@
 ---
 title: Tabella di conformità al linguaggio C++ di Microsoft
-ms.date: 07/02/2019
+ms.date: 08/12/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 2b5d7774734eae992935af9bd4abd408dd387d7d
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552365"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980533"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabella di conformità al linguaggio C++ di Microsoft
 
@@ -23,7 +23,7 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 
 ## <a name="compiler-features"></a>Funzionalità del compilatore
 
-|Area funzionalità| |
+| | |
 |----|---|
 |__Funzionalità del linguaggio di base C++03/11__|__Supportato__|
 |&nbsp;&nbsp;Tutti gli altri elementi|VS 2015 <sup>[A](#note_A)</sup>|
@@ -83,11 +83,7 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 |&nbsp;&nbsp;[P0145R3 Ridefinizione ordine di valutazione di espressioni](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br/>&nbsp;&nbsp;[P0400R0 Ordine di valutazione degli argomenti della funzione](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 Espansioni pack nelle dichiarazioni using](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 Attributi non riconosciuti ignorati](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-
-
-|Area funzionalità| |
-|----|---|
-|__Funzionalità del linguaggio di base ++17 (report sui difetti)__|__Supportato__|
+|__Funzionalità del linguaggio di base C++17 (report sui difetti)__|__Supportato__|
 |&nbsp;&nbsp;[P0702R1 Correzione della deduzione di argomenti del modello di classe per i costruttori di elenchi di inizializzatori](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0961R1: rilasciare regole di individuazione del punto di personalizzazione per binding strutturati](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0969R0: consentire binding strutturati a membri accessibili](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
@@ -96,15 +92,11 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 |&nbsp;&nbsp;[P0929R2: controllo di tipi di classi astratte](https://wg21.link/P0929R2)|No|
 |&nbsp;&nbsp;[P1009R2: deduzione di dimensione delle matrici nelle espressioni new](https://wg21.link/P1009R2)|No|
 |&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|No|
-|Area funzionalità| |
-|----|---|
 |__Funzionalità del linguaggio di base C++20__|__Supportato__|
 |&nbsp;&nbsp;[P0704R1 Correzione lvalue const per puntatori a membri con qualificatore ref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1041R4 Impostazione di valori letterali stringa char16_t/char32_t su UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 Modifica del membro attivo di un'unione all'interno di constexpr](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0972R0 noexcept per \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0515R3 Operatore di confronto a tre livelli (Spaceship) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1008R1 Come vietare gli aggregati con i costruttori dichiarati dall'utente](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 Inizializzazione designata](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2 Acquisizione consentita di espressioni lambda \[=, this\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0515R3 Operatore di confronto a tre livelli (Spaceship) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
@@ -114,7 +106,6 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 |&nbsp;&nbsp;[P0641R2 Mancata corrispondenza tra costruttori con il costruttore di copia predefinito](https://wg21.link/P0641R2)|Partial|
 |&nbsp;&nbsp;[P0306R4 Aggiunta di \_\_VA_OPT\_\_ per omissione della virgola ed eliminazione della virgola](https://wg21.link/P0306R4)|No|
 |&nbsp;&nbsp;[P0315R4 Espressioni lambda consentite in contesti non valutati](https://wg21.link/P0315R4)|No|
-|&nbsp;&nbsp;[P0409R2 Acquisizione consentita di espressioni lambda \[=, this\]](https://wg21.link/P0409R2)|No|
 |&nbsp;&nbsp;[P0428R2 Sintassi modello familiare per espressioni lambda generiche](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|No|
 |&nbsp;&nbsp;[P0479R5 Attributi \[\[likely\]\] e \[\[unlikely\]\]](https://wg21.link/P0479R5)|No|
 |&nbsp;&nbsp;[P0542R5 Contratti](https://wg21.link/P0542R5)|No|
@@ -153,7 +144,7 @@ Per informazioni sui miglioramenti della conformità e su altre modifiche in Vis
 
 ## <a name="standard-library-features"></a>Funzionalità della libreria standard
 
-|Area funzionalità| |
+| | |
 |---|---|
 |__Funzionalità della libreria standard C++20__|__Supportato__|
 |&nbsp;&nbsp;[P0809R0: confrontare contenitori non ordinati](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|

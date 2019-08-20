@@ -10,12 +10,12 @@ helpviewer_keywords:
 - methods [C++], adding using wizards
 - IDL attributes, add method wizard
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-ms.openlocfilehash: 23fb05e633713016b1f6289f73a916502736af10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: b0c8ddabc4ed08fd217545bad269f0b2e48dd49e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692697"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509545"
 ---
 # <a name="add-a-method"></a>Aggiungere un metodo
 
@@ -53,7 +53,7 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
 
   Tipo di dati restituito dal metodo. `HRESULT` è consigliato per tutti i tipi di interfaccia poiché offre un modo standard per restituire errori.
 
-  |Tipo interfaccia|Descrizione|
+  |Tipo interfaccia|DESCRIZIONE|
   |--------------------|-----------------|
   |Interfaccia duale|`HRESULT`. Non modificabile.|
   |Interfaccia personalizzata|`HRESULT`. Non modificabile.|
@@ -65,7 +65,7 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
 
   Imposta il nome per il metodo.
 
-  |Tipo interfaccia|Descrizione|
+  |Tipo interfaccia|DESCRIZIONE|
   |--------------------|-----------------|
   |Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Specificare il nome del metodo.|
   |Interfaccia dispatch MFC|Specificare il nome del metodo o selezionare un nome di metodo suggerito dall'elenco. Se si seleziona un nome dall'elenco, il valore appropriato viene visualizzato nella casella **Tipo restituito** e non è modificabile.|
@@ -77,7 +77,7 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
 
   Se si seleziona uno dei metodi dell'elenco **Nome metodo**, selezionare l'implementazione predefinita o un'implementazione personalizzata.
 
-  |Tipo di metodo|Descrizione|
+  |Tipo di metodo|DESCRIZIONE|
   |-----------------|-----------------|
   |**Predefinito**|Valore predefinito. Inserisce l'implementazione predefinita del metodo selezionato nell'elenco **Nome metodo**. **Tipo restituito** non può essere modificato se si seleziona **Predefinito**.|
   |**Personalizzato**|Inserisce un'implementazione stub del metodo selezionato nell'elenco **Nome metodo**. Per i tipi di metodo personalizzati, è possibile specificare il tipo restituito o selezionarne uno dall'elenco **Tipo restituito**.|
@@ -86,7 +86,7 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
 
   Disponibile solo per i metodi personalizzati aggiunti a un'interfaccia dispatch MFC. Imposta il nome usato nella mappa di invio, il file di intestazione (con estensione h) e il file di implementazione (con estensione cpp). Per impostazione predefinita, il nome corrisponde a **Nome metodo**. È possibile modificare il nome del metodo se si usa un'interfaccia dispatch MFC o se si aggiunge un metodo personalizzato a un'interfaccia dispatch del controllo ActiveX MFC.
 
-  |Tipo interfaccia|Descrizione|
+  |Tipo interfaccia|DESCRIZIONE|
   |--------------------|-----------------|
   |Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Non disponibile.|
   |Interfaccia dispatch MFC|Impostare il nome del metodo per impostazione predefinita. È possibile modificare il nome interno.|
@@ -96,7 +96,7 @@ Usare questa procedura guidata per aggiungere un metodo a un'interfaccia. La pro
 
   Imposta attributi aggiuntivi per il parametro specificato in **Nome parametro**.
 
-  |Attributo del parametro|Descrizione|Combinazioni consentite|
+  |Attributo del parametro|DESCRIZIONE|Combinazioni consentite|
   |-------------------------|-----------------|--------------------------|
   |**In**|Indica che il parametro viene passato dalla routine chiamante alla routine chiamata.|Solo `in`<br /><br /> `in` e `out`|
   |**Out**|Indica che il parametro del puntatore viene restituito dalla routine chiamata alla routine chiamante (dal server al client).|Solo `out`<br /><br /> `in` e `out`<br /><br /> `out` e `retval`|
@@ -133,25 +133,25 @@ Usare questa pagina dell'Aggiunta guidata metodo per specificare le impostazioni
 
 - `id`
 
-  Imposta l'ID numerico che identifica il metodo. Per altre informazioni, vedere [id](/windows/desktop/Midl/id) in *MIDL Reference* (Riferimento MIDL).
+  Imposta l'ID numerico che identifica il metodo. Per altre informazioni, vedere [id](/windows/win32/Midl/id) in *MIDL Reference* (Riferimento MIDL).
 
   Questa casella non è disponibile per le interfacce personalizzate e per le interfacce dispatch MFC.
 
 - `call_as`
 
-  Specifica il nome di un metodo remoto a cui è possibile associare il metodo locale. Per altre informazioni, vedere [call_as](/windows/desktop/Midl/call-as) in *MIDL Reference* (Riferimento MIDL).
+  Specifica il nome di un metodo remoto a cui è possibile associare il metodo locale. Per altre informazioni, vedere [call_as](/windows/win32/Midl/call-as) in *MIDL Reference* (Riferimento MIDL).
 
   Non disponibile per le interfacce dispatch MFC.
 
 - `helpcontext`
 
-  Specifica un ID contesto che consente all'utente di visualizzare informazioni sul metodo nel file della Guida. Per altre informazioni, vedere [helpcontext](/windows/desktop/Midl/helpcontext) in *MIDL Reference* (Riferimento MIDL).
+  Specifica un ID contesto che consente all'utente di visualizzare informazioni sul metodo nel file della Guida. Per altre informazioni, vedere [helpcontext](/windows/win32/Midl/helpcontext) in *MIDL Reference* (Riferimento MIDL).
 
   Non disponibile per le interfacce dispatch MFC.
 
 - `helpstring`
 
-  Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata. Per impostazione predefinita è impostata su "method *Nome metodo*". Per altre informazioni, vedere [helpstring](/windows/desktop/Midl/helpstring) in *MIDL Reference* (Riferimento MIDL).
+  Specifica una stringa di caratteri usata per descrivere l'elemento a cui viene applicata. Per impostazione predefinita è impostata su "method *Nome metodo*". Per altre informazioni, vedere [helpstring](/windows/win32/Midl/helpstring) in *MIDL Reference* (Riferimento MIDL).
 
   Non disponibile per le interfacce dispatch MFC.
 
@@ -159,10 +159,10 @@ Usare questa pagina dell'Aggiunta guidata metodo per specificare le impostazioni
 
   Non disponibile per le interfacce dispatch MFC.
 
-  |Attributo|Descrizione|
+  |Attributo|DESCRIZIONE|
   |---------------|-----------------|
-  |`hidden`|Indica che il metodo esiste ma non deve essere visualizzato in un visualizzatore per utenti. Per altre informazioni, vedere [hidden](/windows/desktop/Midl/hidden) in *MIDL Reference* (Riferimento MIDL).|
-  |`source`|Indica che un membro del metodo è un'origine di eventi. Per altre informazioni, vedere [source](/windows/desktop/Midl/source) in *MIDL Reference* (Riferimento MIDL).|
-  |`local`|Specifica al compilatore MIDL che il metodo non è remoto. Per altre informazioni, vedere [local](/windows/desktop/Midl/local) in *MIDL Reference* (Riferimento MIDL).|
-  |`restricted`|Specifica che il metodo non può essere chiamato in modo arbitrario. Per altre informazioni, vedere [restricted](/windows/desktop/Midl/restricted) in *MIDL Reference* (Riferimento MIDL).|
-  |`vararg`|Specifica che il metodo accetta un numero variabile di argomenti. Per ottenere questo risultato, l'ultimo argomento deve essere una matrice protetta di tipo `VARIANT` che contiene tutti gli argomenti rimanenti. Per altre informazioni, vedere [vararg](/windows/desktop/Midl/vararg) in *MIDL Reference* (Riferimento MIDL).|
+  |`hidden`|Indica che il metodo esiste ma non deve essere visualizzato in un visualizzatore per utenti. Per altre informazioni, vedere [hidden](/windows/win32/Midl/hidden) in *MIDL Reference* (Riferimento MIDL).|
+  |`source`|Indica che un membro del metodo è un'origine di eventi. Per altre informazioni, vedere [source](/windows/win32/Midl/source) in *MIDL Reference* (Riferimento MIDL).|
+  |`local`|Specifica al compilatore MIDL che il metodo non è remoto. Per altre informazioni, vedere [local](/windows/win32/Midl/local) in *MIDL Reference* (Riferimento MIDL).|
+  |`restricted`|Specifica che il metodo non può essere chiamato in modo arbitrario. Per altre informazioni, vedere [restricted](/windows/win32/Midl/restricted) in *MIDL Reference* (Riferimento MIDL).|
+  |`vararg`|Specifica che il metodo accetta un numero variabile di argomenti. Per ottenere questo risultato, l'ultimo argomento deve essere una matrice protetta di tipo `VARIANT` che contiene tutti gli argomenti rimanenti. Per altre informazioni, vedere [vararg](/windows/win32/Midl/vararg) in *MIDL Reference* (Riferimento MIDL).|

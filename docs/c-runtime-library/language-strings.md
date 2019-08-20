@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620285"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500067"
 ---
 # <a name="language-strings"></a>Language Strings
 
-Le funzioni [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) possono usare le lingue supportate dall'API NLS di Windows nei sistemi operativi che non usano la tabella codici Unicode. Per un elenco delle lingue supportate in base alla versione del sistema operativo, vedere [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Appendice A: comportamento del prodotto) in "[MS-LCID]: Windows Language Code Identifier (LCID) Reference" (Informazioni di riferimento sugli identificatori di lingua (LCID) di Windows). La stringa di lingua può essere uno dei valori nelle colonne **Language** (Lingua) e **Language tag** (Tag lingua) dell'elenco delle lingue supportate. Per un esempio di codice che enumera i nomi delle impostazioni locali disponibili e i valori correlati, vedere [NLS: Name-based APIs Sample](/windows/desktop/intl/nls--name-based-apis-sample) (NLS: esempio di API basate sui nomi).
+Le funzioni [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) possono usare le lingue supportate dall'API NLS di Windows nei sistemi operativi che non usano la tabella codici Unicode. Per l'elenco delle lingue supportate dalle singole versioni del sistema operativo, vedere [Appendice A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) (Appendice A: Comportamento del prodotto) in [MS-LCID]: Windows Language Code Identifier (LCID) Reference (Informazioni di riferimento sugli identificatori LCID di Windows). La stringa di lingua può essere uno dei valori nelle colonne **Language** (Lingua) e **Language tag** (Tag lingua) dell'elenco delle lingue supportate. Per un esempio di codice che enumera i nomi delle impostazioni locali disponibili e i valori correlati, vedere [NLS: esempio di API basate sui nomi](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Stringhe di lingua aggiuntive supportate
 
