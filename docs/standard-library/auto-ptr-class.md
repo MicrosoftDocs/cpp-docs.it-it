@@ -21,7 +21,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68456704"
 ---
-# <a name="autoptr-class"></a>Classe auto_ptr
+# <a name="auto_ptr-class"></a>Classe auto_ptr
 
 Esegue il wrapping di un puntatore di tipo smart intorno a una risorsa, in modo da assicurare che la risorsa venga eliminata definitivamente in modo automatico quando il controllo lascia un blocco.
 
@@ -126,7 +126,7 @@ L'oggetto `auto_ptr` che deve essere copiato dal costruttore.
 
 Il primo costruttore archivia *ptr* in `myptr`, il puntatore archiviato all'oggetto allocato. Il secondo costruttore trasferisce la proprietà del puntatore archiviato a *destra*, archiviando *right*. [rilasciare](#release) in `myptr`.
 
-Il terzo costruttore si comporta come il secondo, ad eccezione del fatto che archivia `right`. [https://login.microsoftonline.com/common/](`ref`). `release`in `myptr`, dove `ref` è il riferimento archiviato in `right`.
+Il terzo costruttore si comporta come il secondo, ad eccezione del fatto che archivia `right`. `ref`. `release`in `myptr`, dove `ref` è il riferimento archiviato in `right`.
 
 Il costruttore di modello si comporta come il secondo costruttore, a condizione che un puntatore a `Other` possa essere convertito in modo implicito in un puntatore a. `Type`
 
