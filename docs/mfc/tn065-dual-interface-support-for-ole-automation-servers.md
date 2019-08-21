@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1508b5219f7bb7fd2e9c9a56c42c30bb99686804
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510993"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630397"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Supporto di interfaccia duale per i server di automazione OLE
 
@@ -267,7 +267,7 @@ Per modificare le impostazioni di compilazione di un progetto in modo che un fil
 
 Per aggiungere le definizioni **UUID** dal file di intestazione generato da MkTypLib al progetto:
 
-1. Includere il file di intestazione generato da MkTypLib nel file di intestazione standard includes, STDAFX. H.
+1. Includere il file di intestazione generato da MkTypLib nel file di intestazione standard includes, *stdafx. h*.
 
 2. Creare un nuovo file, INITIIDS. CPP e aggiungerlo al progetto. In questo file, includere il file di intestazione generato da MkTypLib dopo aver incluso OLE2. H e INITGUID. H
 

@@ -1,6 +1,6 @@
 ---
 title: Classe CImage
-ms.date: 02/01/2018
+ms.date: 08/19/2019
 f1_keywords:
 - CImage
 - ATLIMAGE/ATL::CImage
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6c651f160fdab582b769cf1764add2cc482745bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3b278f37bbcbe2ee879d9c3d2837267fe31e57e2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491322"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630722"
 ---
 # <a name="cimage-class"></a>Classe CImage
 
@@ -84,7 +84,7 @@ class CImage
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CImage:: AlphaBlend](#alphablend)|Visualizza le bitmap con pixel trasparenti o semitrasparenti.|
 |[CImage:: Connetti](#attach)|Connette un HBITMAP a un `CImage` oggetto. Può essere usato con bitmap di sezione non DIB o bitmap di sezione DIB.|
@@ -128,7 +128,7 @@ class CImage
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CImage:: operator HBITMAP](#operator_hbitmap)|Restituisce l'handle di Windows collegato all' `CImage` oggetto.|
 
@@ -193,9 +193,9 @@ Tramite `CImage`, è possibile accedere ai bit effettivi di una sezione DIB. È 
 È possibile utilizzare `CImage` da MFC o ATL.
 
 > [!NOTE]
-> Quando si crea un progetto utilizzando `CImage`, è necessario definire `CString` prima di includere `atlimage.h`. Se il progetto usa ATL senza MFC, includere `atlstr.h` prima di includere `atlimage.h`. Se il progetto Usa MFC (o se è un progetto ATL con supporto MFC), includere `afxstr.h` prima di includere. `atlimage.h`<br/>
+> Quando si crea un progetto utilizzando `CImage`, è necessario definire `CString` prima di includere *atlimage. h*. Se il progetto usa ATL senza MFC, includere *atlstr. h* prima di includere *atlimage. h*. Se il progetto Usa MFC (o se è un progetto ATL con supporto MFC), includere *afxstr. h* prima di includere *atlimage. h*.<br/>
 > <br/>
-> Analogamente, è necessario `atlimage.h` includere prima di `atlimpl.cpp`includere. Per eseguire questa operazione `atlimage.h` `stdafx.h`in modo semplice, includere nel.
+> Analogamente, è necessario includere *atlimage. h* prima di includere *Atlimpl. cpp*. Per eseguire questa operazione in modo semplice, includere *atlimage. h* in *PCH.* h (*stdafx. h* in Visual Studio 2017 e versioni precedenti).
 
 ## <a name="requirements"></a>Requisiti
 

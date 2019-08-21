@@ -1,35 +1,55 @@
 ---
 title: Avviso del compilatore (livello 1) C4727
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - C4727
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: be1a248fc2709706e137b543344966735c19064e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bcc029536d2602d50178d7148332b8371db3c7f
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386434"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630823"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Avviso del compilatore (livello 1) C4727
 
-"PCH denominato file_pch con lo stesso timestamp trovato in file_obj_1 e file_obj_2.  Tramite il primo PCH.
+"PCH denominato pch_file con lo stesso timestamp trovato in obj_file_1 e obj_file_2.  Uso del primo PCH.
 
-Durante la compilazione di più moduli con avviso C4727 **/Yc**, e in cui il compilatore non è in grado di contrassegnare tutti i file con estensione obj con lo stesso timestamp di PCH.
+> [!NOTE]
+> In Visual Studio 2017 e versioni precedenti, l'intestazione precompilata è denominata *stdafx. h* per impostazione predefinita e in visual studio 2019 e versioni successive viene chiamato *PCH. h* per impostazione predefinita.
 
-Per risolvere, compilare un file di origine con **/c /Yc** (Crea file pch), e compilare gli altri separatamente con **/Yu/c** (Usa pch), quindi collegarli tra loro.
+C4727 si verifica quando si compila più moduli con **/YC**e dove il compilatore è stato in grado di contrassegnare tutti i file con estensione obj con lo stesso timestamp. pch.
 
-Pertanto, se è stato eseguito quanto segue e genera C4727:
+Per risolvere, compilare un file di origine con **/Yc/c** (crea PCH) e gli altri vengono compilati separatamente con **/Yu/c** (USA PCH), quindi collegarli insieme.
 
-**cl /clr /GL a.cpp b.cpp c.cpp /Ycstdafx.h**
+Quindi, se sono state effettuate le operazioni seguenti e viene generato C4727:
 
-È necessario effettuare le seguenti invece:
+::: moniker range="<=vs-2017"
 
-**cl /clr /GL a.cpp /Ycstdafx.h /c**
+**CL/CLR/GL a. cpp b. cpp c. cpp/Ycstdafx.h**
 
-**cl /clr /GL cpp b. cpp c.cpp /Yustdafx.h /link. obj**
+Verranno invece eseguite le operazioni seguenti:
+
+**CL/CLR/GL a. cpp/Ycstdafx.h/c**
+
+**CL/CLR/GL b. cpp c. cpp/Yustdafx.h/link a. obj**
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+**CL/CLR/GL a. cpp b. cpp c. cpp/YC%s**
+
+Verranno invece eseguite le operazioni seguenti:
+
+**CL/CLR/GL a. cpp/YC%s/c**
+
+**CL/CLR/GL b. cpp c. cpp/Yupch.h/link a. obj**
+
+::: moniker-end
+
 
 Per altre informazioni, vedere
 

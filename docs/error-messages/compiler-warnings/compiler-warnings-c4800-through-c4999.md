@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 518efdd74a90198818538c1548adb2b7ff37290c
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821110"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631543"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Avvisi del compilatore da C4800 a C5999
 
@@ -266,7 +266,8 @@ Negli articoli di questa sezione della documentazione viene illustrato un subset
 |Avviso del compilatore (livello 1) C4973|'*Symbol*': contrassegnato come deprecato|
 |Avviso del compilatore (livello 1) C4974|'*Symbol*': contrassegnato come deprecato|
 |Avviso del compilatore (livello 3) C4981|Warbird: funzione '*Function*' contrassegnata come __forceinline non impostata come inline perché contiene la semantica delle eccezioni|
-|Avviso del compilatore (livello 3) C4985|nome simbolo ': attributi non presenti nella dichiarazione precedente.|
+|[Avviso del compilatore C4984](compiler-warning-c4984.md)|' If constExpr ' è un'estensione del linguaggio C++ 17|
+|Avviso del compilatore (livello 3) C4985|'*symbol_name*': attributi non presenti nella dichiarazione precedente.|
 |[Avviso del compilatore C4986](compiler-warning-c4986.md)|'*Declaration*': la specifica di eccezione non corrisponde alla dichiarazione precedente|
 |Avviso del compilatore (livello 4) C4987|utilizzata estensione non standard: 'throw (...)'|
 |Avviso del compilatore (livello 4) C4988|'*Variable*': variabile dichiarata al di fuori dell'ambito di classe/funzione|

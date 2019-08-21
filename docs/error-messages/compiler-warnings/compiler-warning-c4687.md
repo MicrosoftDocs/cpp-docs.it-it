@@ -6,28 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83f5c535f9cf252783110838c181c88c8b0096ee
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311327"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631601"
 ---
 # <a name="compiler-warning-c4687"></a>Avviso del compilatore C4687
 
-'class': una classe astratta sealed non può implementare un'interfaccia 'interface'
+> '*Class*': una classe astratta sealed non può implementare un'interfaccia '*Interface*'
 
-Un tipo sealed e astratto è in genere utile solo per contenere le funzioni membro statiche.
+## <a name="remarks"></a>Note
 
-Per altre informazioni, vedere [astratto](../../extensions/abstract-cpp-component-extensions.md)e [sealed](../../extensions/sealed-cpp-component-extensions.md).
+Un tipo astratto sealed è in genere utile solo per mantenere funzioni membro statiche.
 
-Per impostazione predefinita, C4687 viene generato come errore. È possibile eliminare C4687 con il [avviso](../../preprocessor/warning.md) pragma. Se si è certi che si desidera implementare un'interfaccia in un tipo sealed e astratto, è possibile eliminare C4687.
+Per ulteriori informazioni, vedere [abstract](../../extensions/abstract-cpp-component-extensions.md) e [sealed](../../extensions/sealed-cpp-component-extensions.md).
+
+Per impostazione predefinita, C4687 viene generato come errore. È possibile disattivare C4687 con il pragma [warning](../../preprocessor/warning.md) . Se si è certi di voler implementare un'interfaccia in un tipo astratto sealed, è possibile disattivare C4687.
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente genera l'errore C4687.
+L'esempio seguente genera l'C4687.
 
-```
+```cpp
 // C4687.cpp
 // compile with: /clr /c
 interface class A {};

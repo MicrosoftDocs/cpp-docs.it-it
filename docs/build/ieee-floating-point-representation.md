@@ -11,126 +11,126 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: de132dcf28747cd866229cff8972e2aed271a047
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220630"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630348"
 ---
 # <a name="ieee-floating-point-representation"></a>Formato a virgola mobile IEEE
 
-Microsoft C++ (MSVC) è coerente con gli standard di numerici IEEE. Lo standard IEEE 754 descrive formati a virgola mobile, un modo per rappresentare numeri reali in hardware. Sono presenti almeno cinque formati interni per i numeri a virgola mobile rappresentabili nell'hardware di destinazione per il compilatore MSVC, ma il compilatore Usa solo due di essi. Il *precisione singola* (4 byte) e *precisione doppia* formati (8 byte) vengono utilizzati in MSVC. Precisione singola viene dichiarata utilizzando la parola chiave **float**. Precisione doppia è dichiarata mediante la parola chiave **doppie**. Specifica inoltre lo standard IEEE *mezza precisione* (a 2 byte) e *quattro volte precisione* formati (16 byte), nonché un *esteso a precisione doppia* (10 byte) formato, che alcuni compilatori C e C++ implementano come le **long double** tipo di dati. Nel compilatore MSVC, il **long double** tipo di dati viene considerato come un tipo distinto, ma il tipo di archiviazione è mappato al **doppie**. C'è, tuttavia, intrinseco e supporto del linguaggio assembly per i calcoli usano altri formati, tra cui il formato esteso a precisione doppia (10 byte), in cui è supportata dall'hardware.
+Microsoft C++ (MSVC) è coerente con gli standard numerici IEEE. Lo standard IEEE-754 descrive i formati a virgola mobile, un modo per rappresentare i numeri reali nell'hardware. Esistono almeno cinque formati interni per i numeri a virgola mobile che possono essere rappresentati nell'hardware di destinazione del compilatore MSVC, ma il compilatore ne utilizza solo due. I formati con *precisione singola* (4 byte) e *precisione doppia* (8 byte) vengono usati in MSVC. La precisione singola viene dichiarata con la parola chiave **float**. La precisione doppia viene dichiarata con la parola chiave **Double**. Lo standard IEEE specifica anche formati a *metà precisione* (a 2 byte) e a *quadrupla precisione* (16 byte), oltre a un formato a *precisione doppia (a* 10 byte), che alcuni C e C++ compilatori implementano come **Long** tipo di dati Double. Nel compilatore MSVC, il tipo di dati **long double** viene considerato come un tipo distinto, ma il tipo di archiviazione viene mappato a **Double**. Esistono, tuttavia, il supporto del linguaggio intrinseco e dell'assembly per i calcoli che usano gli altri formati, incluso il formato a precisione doppia (a 10 byte), dove supportato dall'hardware.
 
 I valori vengono archiviati come indicato di seguito:
 
 |Value|Archiviato come|
 |-----------|---------------|
-|precisione singola|il segno, 8 bit esponente, significando a 23 bit|
-|precisione doppia|il segno, esponente a 11 bit, significando a 52 bit|
-|esteso a precisione doppia|il segno, 15 bit esponente, significando a 64 bit|
+|precisione singola|bit di segno, esponente a 8 bit, separatore a 23 bit|
+|precisione doppia|bit di segno, esponente a 11 bit, separatore a 52 bit|
+|precisione doppia-estesa|bit di segno, esponente a 15 bit, separatore a 64 bit|
 
-Nei formati con precisione singola e precisione doppia, viene utilizzato un 1 iniziale nella parte frazionaria, denominata il *significando* (e talvolta come il *mantissa*), vale a dire non archiviati in memoria, in modo che i significandi siano effettivamente 24 o 53 bit, anche se vengono archiviati solo 23 o 52 bit. Il formato esteso a precisione doppia non archivia effettivamente tale bit.
+Nei formati a precisione singola e precisione doppia, nella parte frazionaria è presente un primo presupposto, denominato *separatore* (e talvolta definito *mantissa*), che non viene archiviato in memoria, quindi i significandi sono in realtà 24 o 53 bit, anche se vengono archiviati solo 23 o 52 bit. Il formato con precisione doppia viene archiviato in questo bit.
 
-Gli esponenti vengono influenzati dalla metà del loro valore possibile. Ciò significa che si sottrae questo distorsione dall'esponente archiviato per ottenere l'esponente effettivo. Se l'esponente archiviato è minore di deviazione, è effettivamente un esponente negativo.
+Gli esponenti sono distorti dalla metà del valore possibile. Ciò significa che si sottrae questa distorsione dall'esponente archiviato per ottenere l'esponente effettivo. Se l'esponente archiviato è minore della distorsione, si tratta in realtà di un esponente negativo.
 
-Gli esponenti sono influenzati come segue:
+Gli esponenti sono distorti come segue:
 
-|Esponente|Valore di distorsione|
+|Esponente|Polarizzato da|
 |--------------|---------------|
-|8 bit (precisione singola)|127|
-|11-bit (precisione doppia)|1023|
-|15 bit (esteso a precisione doppia)|16383|
+|a 8 bit (precisione singola)|127|
+|a 11 bit (precisione doppia)|1023|
+|15 bit (doppia precisione estesa)|16383|
 
-Gli esponenti questi non sono potenze di 10; sono potenze di due. Vale a dire, gli esponenti a 8 bit archiviati possono variare da -127 a 127, archiviato come 0 a 254. Il valore 2<sup>127</sup> equivale approssimativamente a 10<sup>38</sup>, ovvero il limite effettivo di precisione singola.
+Questi esponenti non sono potenze di dieci. sono potenze di due. Ovvero, gli esponenti archiviati a 8 bit possono variare da-127 a 127, archiviati come 0 a 254. Il valore 2<sup>127</sup> è approssimativamente equivalente a 10<sup>38</sup>, che corrisponde al limite effettivo di precisione singola.
 
-Il significando viene archiviato come frazione binaria del modulo... 1, xxx. Questa frazione ha un valore maggiore o uguale a 1 e minore di 2. Si noti che i numeri reali sono sempre archiviati nel *normalizzato form*; vale a dire il significando viene spostato a sinistra i bit più significativo del significando sia sempre 1. Poiché questo bit è sempre 1, si presuppone (non archiviato) nei formati con precisione singola e precisione doppia. Il punto (non decimale) binario è considerato come immediatamente a destra di 1 iniziale.
+Separatore viene archiviato come frazione binaria nel formato 1.XXX.... Questa frazione ha un valore maggiore o uguale a 1 e minore di 2. Si noti che i numeri reali vengono sempre archiviati in *forma normalizzata*; ovvero, la separatore viene spostata a sinistra in modo tale che il bit più significativo di separatore sia sempre 1. Poiché questo bit è sempre 1, viene presupposto (non archiviato) nei formati con precisione singola e precisione doppia. Si presuppone che il punto binario (non decimale) si trovi solo a destra dell'1 di primo livello.
 
-Il formato, quindi, per le diverse dimensioni è come segue:
+Il formato, quindi, per le varie dimensioni è il seguente:
 
-|Formato|Byte 1|Byte 2|Byte 3|4 byte|...|n byte|
+|Formato|byte 1|byte 2|byte 3|byte 4|...|byte n|
 |------------|------------|------------|------------|------------|---------|------------|
 |precisione singola| `SXXXXXXX`|`XMMMMMMM`|`MMMMMMMM`|`MMMMMMMM`|||
 |precisione doppia|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
-|esteso a precisione doppia|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
+|precisione doppia-estesa|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S` rappresenta i bit di segno, il `X`del sono i bit esponente distorto e il `M`del sono i bit significando. Si noti che il bit più a sinistra si presuppone che in formati con precisione singola e precisione doppia, ma è presente come "1" in byte 3 del formato esteso a precisione doppia.
+`S`rappresenta il bit del segno, `X`il sono i bit dell'esponente distorta `M`e i separatore sono i bit. Si noti che il bit più a sinistra si presuppone nei formati a precisione singola e precisione doppia, ma è presente come "1" in byte 3 del formato a precisione doppia.
 
-Per spostare correttamente il punto binario, prima di tutto distorsione l'esponente e quindi spostare il punto binario a destra o sinistra del numero di bit appropriato.
+Per spostare correttamente il punto binario, è necessario innanzitutto depolarizzare l'esponente, quindi spostare il punto binario a destra o a sinistra del numero di bit appropriato.
 
 ## <a name="special-values"></a>Valori speciali
 
-I formati a virgola mobile e includono alcuni valori sono trattati in modo speciale.
+I formati a virgola mobile includono alcuni valori trattati in modo specifico.
 
 ### <a name="zero"></a>Zero
 
-Zero non può essere normalizzato, che rende non rappresentabile in forma normalizzata del valore a precisione singola o doppia precisione. Uno schema di bit speciali di tutti zero rappresenta 0. È anche possibile per rappresentare - impostato un bit 0 come zero con segno, ma - 0 e 0 sempre considerati uguali.
+Non è possibile normalizzare zero, rendendolo non rappresentabile nel formato normalizzato di un valore a precisione singola o a precisione doppia. Uno schema di bit speciale di tutti gli zeri rappresenta 0. È anche possibile rappresentare-0 come zero con il bit del segno impostato, ma-0 e 0 si confrontano sempre come uguali.
 
-### <a name="infinities"></a>Valori infiniti
+### <a name="infinities"></a>Infiniti
 
-Il + ∞ e −∞ valori sono rappresentati da un esponente di tutti i costruttori e un significando del tutti zero. Valori infiniti positive e negative possono essere rappresentati usando il bit di segno.
+I valori + ∞ e − ∞ sono rappresentati da un esponente di tutti e da un separatore di tutti gli zeri. Sia gli infiniti positivi che quelli negativi possono essere rappresentati usando il bit di segno.
 
-### <a name="subnormals"></a>Subnormals
+### <a name="subnormals"></a>Subnormali
 
-È possibile rappresentare i numeri di ordine di grandezza minore rispetto al numero più piccolo normalizzato. Questi numeri sono dette *subnormal* oppure *denormalizzato* numeri. Se l'esponente è tutti zero e il significando è diverso da zero, implicito bit iniziali del significando viene considerato uguale a zero, non uno. La precisione dei numeri subnormal si arresta perché aumenta il numero di zeri iniziali nel significando.
+È possibile rappresentare numeri di grandezza inferiore rispetto al numero normalizzato più piccolo. Questi numeri sono noti come numeri subnormali o denormali. Se l'esponente è costituito da tutti zeri e separatore è diverso da zero, il bit principale implicito di separatore viene considerato zero, non uno. La precisione dei numeri subnormali diventa inattiva con l'aumentare del numero di zeri iniziali nella separatore.
 
-### <a name="nan---not-a-number"></a>NaN - non è un numero
+### <a name="nan---not-a-number"></a>NaN-non è un numero
 
-È possibile rappresentare i valori che non sono un numero reale, ad esempio 0 0, nel formato a virgola mobile IEEE. Un valore di questo tipo viene chiamato un *NaN*. Un valore NaN da un esponente di tutti i valori uno e un significando a diverso da zero. Esistono due tipi di NaN, *quiet* NaN o QNaNs, e *segnalazione* NaN o SNaNs. Quiet, NaN hanno uno iniziale nel significando e vengono propagati a livello generale tramite un'espressione. Rappresentano un valore indeterminato, ad esempio il risultato della divisione per un numero infinito o un numero infinito di moltiplicazione per zero. Segnalazione NaN hanno uno zero iniziale nel significando. Questi vengono usati per le operazioni che non sono valide, per segnalare un'eccezione a virgola mobile hardware.
+È possibile rappresentare valori non un numero reale, ad esempio 0/0, nel formato a virgola mobile IEEE. Un valore di questo tipo è denominato *NaN*. NaN è rappresentato da un esponente di tutti i valori e da un separatore diverso da zero. Esistono due tipi di NaNs, *quiet* Nans o QNaNs, signaling Nans o SNaNs. I NaNs tranquilli hanno un primo separatore e vengono in genere propagati tramite un'espressione. Rappresentano un valore indeterminato, ad esempio il risultato della divisione per infinito o la moltiplicazione di un infinito per zero. i NaNs di segnalazione hanno uno zero principale in separatore. Questi vengono usati per le operazioni non valide, per segnalare un'eccezione hardware a virgola mobile.
 
 ## <a name="examples"></a>Esempi
 
-Di seguito sono riportati alcuni esempi in formato a precisione singola:
+Di seguito sono riportati alcuni esempi di formato a precisione singola:
 
-- Per il valore 2, il bit di segno è pari a zero e l'esponente stored è 128 o 1000 0000 in formato binario, ovvero 127 più 1. Il significando binario archiviato è (1). punto 000 0000 0000 0000 0000 0000, che ha un leader implicita 1 e binario, in modo che il significando effettivo è uno.
+- Per il valore 2, il bit di segno è zero e l'esponente archiviato è 128 o 1000 0000 in formato binario, ovvero 127 più 1. Il separatore binario archiviato è (1). 000 0000 0000 0000 0000 0000, che include un punto binario e 1 di primo livello implicito, quindi il separatore effettivo è uno.
 
-   |Value|Formula|Rappresentazione binaria|Esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
    |2|1 * 2<sup>1</sup>|0100 0000 0000 0000 0000 0000 0000 0000|0x40000000|
 
-- Il valore -2. Uguale a + 2, ad eccezione del fatto che sia stato impostato il bit di segno. Questo vale per il corrispondente negativo di tutti i numeri a virgola mobile formato IEEE.
+- Valore-2. Uguale a + 2 ad eccezione del fatto che il bit di segno è impostato. Questo vale per il negativo di tutti i numeri a virgola mobile del formato IEEE.
 
    |Value|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
    |-2|-1 * 2<sup>1</sup>|1100 0000 0000 0000 0000 0000 0000 0000|0xC0000000|
 
-- Il valore 4. Stesso significando, esponente aumenta di uno (valore distorto è 129 o 100 0000 1 nel file binario.
+- Valore 4. Lo stesso separatore, l'esponente aumenta di uno (il valore distorto è 129 o 100 0000 1 in formato binario.
 
-   |Value|Formula|Rappresentazione binaria|Esadecimale|
+   |Valore|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
    |4|1 * 2<sup>2</sup>|0100 0000 1000 0000 0000 0000 0000 0000|0x40800000|
 
-- Il valore 6. Esponente stesso, significando è maggiore della metà, ovvero che (1). 100 0000 ... 0000 0000, poiché si tratta di una frazione binaria, ovvero 1 1/2 perché i valori delle cifre frazionarie sono 1 o 2, 1 e 4, 1 o 8 e così via.
+- Valore 6. Lo stesso esponente, separatore è maggiore di metà, ovvero (1). 100 0000 ... 0000 0000, che, poiché si tratta di una frazione binaria, è 1 1/2 perché i valori delle cifre frazionarie sono 1/2, 1/4, 1/8 e così via.
 
    |Value|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
-   |6|1.5 * 2<sup>2</sup>|0100 0000 1100 0000 0000 0000 0000 0000|0x40C00000|
+   |6|1,5 * 2<sup>2</sup>|0100 0000 1100 0000 0000 0000 0000 0000|0x40C00000|
 
-- Il valore 1. Significando stesso come altra potenze di due, l'esponente distorta è una minore di due 127 o 011 1111 1 nel file binario.
+- Il valore 1. Lo stesso separatore di altre potenze di due, l'esponente distorta è uno minore di due a 127 o 011 1111 1 in formato binario.
 
    |Value|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
    |1|1 * 2<sup>0</sup>|0011 1111 1000 0000 0000 0000 0000 0000|0x3F800000|
 
-- Il valore 0,75. L'esponente distorta è 126 011 1111 0 in formato binario e il significando è (1). 100 0000 ... 0000 0000, ovvero 1 1/2.
+- Valore 0,75. L'esponente distorta è 126, 011 1111 0 in formato binario e separatore è (1). 100 0000 ... 0000 0000, che è 1 1/2.
 
    |Value|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
-   |0.75|1.5 * 2<sup>-1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
+   |0.75|1,5 * 2<sup>-1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
 
-- Il valore 2.5. Esattamente come due meno che il bit che rappresenta 1 e 4 viene impostato nel significando.
+- Valore 2,5. Esattamente uguale a due, tranne per il fatto che il bit che rappresenta 1/4 è impostato in separatore.
+
+   |Valore|Formula|Rappresentazione binaria|Esadecimale|
+   |-|-|-|-|
+   |2.5|1,25 * 2<sup>1</sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
+
+- 1/10 è una frazione ripetuta in formato binario. Il valore di separatore è solo timido di 1,6 e l'esponente distorta indica che 1,6 deve essere diviso per 16 (è 011 1101 1 in formato binario, ovvero 123 in decimale). Il vero esponente è 123-127 =-4, il che significa che il fattore in base al quale moltiplicare è 2<sup>-4</sup> = 1/16. Si noti che il separatore archiviato viene arrotondato per eccesso nell'ultimo bit, ovvero un tentativo di rappresentare il numero non rappresentabile nel modo più accurato possibile. Il motivo per cui 1/10 e 1/100 non sono esattamente rappresentabili nel file binario è simile al motivo per cui 1/3 non è esattamente rappresentabile in decimale.
 
    |Value|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|
-   |2.5|1.25 * 2<sup>1</sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
+   |0,1|1,6 * 2<sup>-4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
 
-- 1/10 è una frazione ripetuta in formato binario. Il significando è appena inferiore a 1,6 e l'esponente distorta afferma che deve essere diviso per 16 1.6 (è 011 1101 1 nel file binario, che corrisponde a 123 in formato decimale). L'esponente true è 123 e 127 = - 4, il che significa che il fattore per cui moltiplicare è 2<sup>-4</sup> = 1/16. Si noti che il significando archiviato viene arrotondato per eccesso nell'ultimo bit, ovvero un tentativo per rappresentare il numero non rappresentabile nel modo più accurato possibile. (Il motivo tale 1/10 e 1/100 sono non esattamente rappresentabili nel file binario è simile al motivo che è non esattamente rappresentabili in formato decimale 1 o 3.)
-
-   |Value|Formula|Rappresentazione binaria|Esadecimale|
-   |-|-|-|-|
-   |0.1|1.6 * 2<sup>-4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
-
-- Zero è un caso speciale che utilizza la formula per il valore minimo possibile rappresentabile positiva, ovvero tutti zero.
+- Zero è un caso speciale che usa la formula per il valore positivo minimo rappresentabile, che è costituito da tutti zeri.
 
    |Value|Formula|Rappresentazione binaria|Esadecimale|
    |-|-|-|-|

@@ -1,6 +1,6 @@
 ---
-title: itoa, itow funzioni
-ms.date: 03/21/2018
+title: funzioni _itoa, _itow
+ms.date: 08/19/2019
 apiname:
 - itoa
 - _itoa
@@ -99,16 +99,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afe7a190fe6630e3fbcb42d0d782e050952f56fc
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157370"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630400"
 ---
-# <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
+# <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-Converte un intero in una stringa. Versioni più sicure di queste funzioni sono disponibili. visualizzare [itoa_s, itow_s funzioni](itoa-s-itow-s.md).
+Converte un intero in una stringa. Sono disponibili versioni più sicure di queste funzioni. vedere [_itoa_s, funzioni _itow_s](itoa-s-itow-s.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -169,39 +169,39 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 Numero da convertire.
 
 *buffer*<br/>
-Buffer che contiene il risultato della conversione.
+Buffer che include il risultato della conversione.
 
 *radix*<br/>
-La base da utilizzare per la conversione del *valore*, che deve essere compreso nell'intervallo da 2 a 36.
+Base da utilizzare per la conversione del *valore*, che deve essere compreso nell'intervallo 2-36.
 
 *size*<br/>
-Lunghezza del buffer nell'unità del tipo di carattere. Questo parametro viene dedotto dal *buffer* argomento in C++.
+Lunghezza del buffer in unità del tipo di carattere. Questo parametro viene dedotto dall'argomento del *buffer* in C++.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore a *buffer*. Non vi è restituzione di errori.
+Ognuna di queste funzioni restituisce un puntatore al *buffer*. Non vi è restituzione di errori.
 
 ## <a name="remarks"></a>Note
 
-Il **itoa**, **ltoa**, **ultoa**, **_i64toa**, e **_ui64toa** funzioni consentono di convertire le cifre del il dato *valore* argomento di una stringa di caratteri con terminazione null e archiviano il risultato (fino a 33 caratteri per **itoa**, **ltoa**, e  **ultoa**e 65 per **_i64toa** e **_ui64toa**) in *buffer*. Se *radix* è uguale a 10 e *valore* è negativo, il primo carattere della stringa archiviata è il segno di sottrazione (**-**). Il **itow**, **ltow**, **ultow**, **_i64tow**, e **_ui64tow** funzioni sono caratteri "wide" le versioni di **itoa**, **ltoa**, **ultoa**, **_i64toa**, e **_ui64toa**, rispettivamente.
+Le funzioni **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa** convertono le cifre dell'argomento *valore* specificato in una stringa di caratteri con terminazione null e archiviano il risultato (fino a 33 caratteri per **_itoa** , **_ltoa**e **_ultoa**e 65 per **_i64toa** e **_ui64toa**) nel *buffer*. Se la *radice* è uguale a 10 e il *valore* è negativo, il primo carattere della stringa archiviata è il **-** segno meno (). Le funzioni **_itow**, **_ltow**, **_ultow**, **_i64tow**e **_ui64tow** sono rispettivamente versioni a caratteri wide di **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**e **_ui64toa**.
 
 > [!IMPORTANT]
-> Queste funzioni possono scrivere oltre la fine di un buffer troppo piccolo. Per evitare i sovraccarichi del buffer, verificare che *buffer* è sufficientemente grande da contenere le cifre convertite oltre al carattere null finale e un carattere di segno. Un uso improprio di queste funzioni possa causare seri problemi di protezione nel codice.
+> Queste funzioni possono scrivere oltre la fine di un buffer troppo piccolo. Per evitare sovraccarichi del buffer, verificare che il *buffer* sia sufficientemente grande da mantenere le cifre convertite più il carattere null finale e un carattere di segno. L'utilizzo improprio di queste funzioni può causare gravi problemi di sicurezza nel codice.
 
-A causa del loro potenziale per i problemi di sicurezza, per impostazione predefinita, queste funzioni che l'avviso di deprecazione [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Questa funzione o variabile potrebbe non essere sicuro. È consigliabile usare** *safe_function* **invece. Per disabilitare la deprecazione, usare CRT_SECURE_NO_WARNINGS.** Si consiglia di modificare il codice sorgente usare il *safe_function* suggerito nel messaggio di avviso. Le funzioni più sicure non scrivono più caratteri rispetto alla dimensione del buffer specificati. Per altre informazioni, vedere [itoa_s, itow_s funzioni](itoa-s-itow-s.md).
+Per impostazione predefinita, a causa del potenziale problema di sicurezza, queste funzioni causano l'avviso di deprecazione [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Questa funzione o variabile potrebbe non essere sicura. In alternativa** , è consigliabile usare *safe_function* **. Per disabilitare la deprecazione, usare _CRT_SECURE_NO_WARNINGS.** Si consiglia di modificare il codice sorgente per usare il *safe_function* suggerito dal messaggio di avviso. Le funzioni più sicure non scrivono più caratteri della dimensione del buffer specificata. Per ulteriori informazioni, vedere [_itoa_s, funzioni _itow_s](itoa-s-itow-s.md).
 
-Per usare queste funzioni senza l'avviso di deprecazione, definire le **CRT_SECURE_NO_WARNINGS** macro del preprocessore prima di includere le intestazioni CRT. È possibile farlo nella riga di comando in un prompt dei comandi per gli sviluppatori aggiungendo il **/D_CRT_SECURE_NO_WARNINGS** opzione del compilatore per il **cl** comando. In caso contrario, definire la macro nei file di origine. Se si usano intestazioni precompilate, definire la macro nella parte superiore dell'intestazione precompilata includere file, in genere stdafx. h. Per definire la macro nel codice sorgente, usare una **#define** direttiva prima di includere qualsiasi intestazione CRT, come nel seguente esempio:
+Per usare queste funzioni senza l'avviso di deprecazione, definire la macro del preprocessore **_CRT_SECURE_NO_WARNINGS** prima di includere le intestazioni CRT. Per eseguire questa operazione, è possibile usare la riga di comando in un prompt dei comandi per gli sviluppatori aggiungendo l'opzione del compilatore **/D_CRT_SECURE_NO_WARNINGS** al comando **CL** . In caso contrario, definire la macro nei file di origine. Se si usano le intestazioni precompilate, definire la macro nella parte superiore del file di inclusione dell'intestazione precompilata, *PCH. h* (*stdafx. h* in Visual Studio 2017 e versioni precedenti). Per definire la macro nel codice sorgente, usare una direttiva **#define** prima di includere qualsiasi intestazione CRT, come nell'esempio seguente:
 
 ```C
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdlib.h>
 ```
 
-In C++, queste funzioni presentano overload di modello che richiamano le relative controparti più sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+In C++queste funzioni presentano overload di modello che richiamano le relative controparti più sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-I nomi Posix **itoa**, **ltoa**, e **ultoa** esiste come alias per il **itoa**, **ltoa**, e **ultoa** funzioni. I nomi Posix sono deprecati perché non seguono le convenzioni di nome funzione specifici dell'implementazione di ISO C. Per impostazione predefinita, queste funzioni che l'avviso di deprecazione [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Il nome POSIX per questo elemento è deprecato. Usare invece il ISO C e C++ nome conforme:** *new_name*. Si consiglia di modificare il codice sorgente per le versioni più sicure di queste funzioni, usare **itoa_s**, **ltoa_s**, o **ultoa_s**. Per altre informazioni, vedere [itoa_s, itow_s funzioni](itoa-s-itow-s.md).
+I nomi POSIX **ITOA**, **ltoa**e **ultoa** esistono come alias per le funzioni **_itoa**, **_ltoa**e **_ultoa** . I nomi POSIX sono deprecati perché non seguono le convenzioni del nome di funzione specifiche dell'implementazione di ISO C. Per impostazione predefinita, queste funzioni generano un avviso di deprecazione [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Il nome POSIX per questo elemento è deprecato. Usare invece ISO C e C++ il nome conforme:** *new_name*. Si consiglia di modificare il codice sorgente per usare le versioni più sicure di queste funzioni, **_itoa_s**, **_ltoa_s**o **_ultoa_s**. Per ulteriori informazioni, vedere [_itoa_s, funzioni _itow_s](itoa-s-itow-s.md).
 
-Per la portabilità del codice sorgente, è preferibile mantenere i nomi Posix nel codice. Per usare queste funzioni senza l'avviso di deprecazione, definire entrambi i **crt_nonstdc_no_warnings** e **CRT_SECURE_NO_WARNINGS** le macro del preprocessore prima di includere le intestazioni CRT. È possibile farlo nella riga di comando in un prompt dei comandi per gli sviluppatori aggiungendo il **/D_CRT_SECURE_NO_WARNINGS** e **/D_CRT_NONSTDC_NO_WARNINGS** le opzioni del compilatore per il **cl**comando. In caso contrario, definire la macro nei file di origine. Se si usano intestazioni precompilate, definire la macro nella parte superiore dell'intestazione precompilata includono file, in genere stdafx. h. Per definire le macro nel codice sorgente, usare **#define** direttive prima di includere qualsiasi intestazione CRT, come nel seguente esempio:
+Per la portabilità del codice sorgente, può essere preferibile mantenere i nomi POSIX nel codice. Per usare queste funzioni senza l'avviso di deprecazione, definire entrambe le macro del preprocessore **_CRT_NONSTDC_NO_WARNINGS** e **_CRT_SECURE_NO_WARNINGS** prima di includere le intestazioni CRT. Per eseguire questa operazione, è possibile usare la riga di comando in un prompt dei comandi per gli sviluppatori aggiungendo le opzioni del compilatore **/D_CRT_SECURE_NO_WARNINGS** e **/D_CRT_NONSTDC_NO_WARNINGS** al comando **CL** . In caso contrario, definire le macro nei file di origine. Se si usano le intestazioni precompilate, definire le macro nella parte superiore del file di inclusione dell'intestazione precompilata. Per definire le macro nel codice sorgente, usare **#define** direttive prima di includere qualsiasi intestazione CRT, come nell'esempio seguente:
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -209,11 +209,11 @@ Per la portabilità del codice sorgente, è preferibile mantenere i nomi Posix n
 #include <stdlib.h>
 ```
 
-### <a name="maximum-conversion-count-macros"></a>Macro di conversione massima di conteggio
+### <a name="maximum-conversion-count-macros"></a>Numero massimo di macro di conversione
 
-Per la creazione di un buffer sicuro per le conversioni, la libreria CRT include alcune macro pratico. Questi definiscono le dimensioni del buffer richiesto per convertire il valore più lungo possibile di ogni tipo di integer, incluso il carattere di terminazione null e firmare carattere per svariate basi comuni. Per assicurarsi che il buffer di conversione sia sufficiente per la ricezione di qualsiasi conversione nella base specificata da *radice*, usare uno di questi definito macro quando si alloca i buffer. Questo contribuisce a evitare sovraccarichi del buffer quando si convertono tipi integrali a stringhe. Queste macro sono definite quando si include STDLIB. h o WCHAR. h nell'origine.
+Per semplificare la creazione di buffer protetti per le conversioni, CRT include alcune utili macro. Definiscono le dimensioni del buffer necessarie per convertire il valore più lungo possibile di ogni tipo Integer, inclusi il carattere di terminazione null e il carattere di segno, per diverse basi comuni. Per assicurarsi che il buffer di conversione sia sufficientemente grande da ricevere qualsiasi conversione nella base specificata dalla *radice*, utilizzare una di queste macro definite quando si alloca il buffer. Ciò consente di evitare errori di sovraccarico del buffer quando si convertono i tipi integrali in stringhe. Queste macro sono definite quando si include stdlib. h o WCHAR. h nell'origine.
 
-Per usare una di queste macro in una funzione di conversione di stringhe, dichiarare il buffer di conversione del tipo di carattere appropriato e usare il valore della macro per il tipo integer e base come la dimensione del buffer. Questa tabella elenca le macro che sono appropriate per ogni funzione per le basi elencate:
+Per usare una di queste macro in una funzione di conversione di stringhe, dichiarare il buffer di conversione del tipo di carattere appropriato e usare il valore della macro per il tipo integer e la base come dimensione del buffer. Questa tabella elenca le macro appropriate per ogni funzione per le basi elencate:
 
 ||||
 |-|-|-|
@@ -224,7 +224,7 @@ Per usare una di queste macro in una funzione di conversione di stringhe, dichia
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-In questo esempio Usa una macro di conversione di conteggio per definire un buffer sufficiente per contenere un **long long senza segno** in base 2:
+In questo esempio viene utilizzata una macro del conteggio delle conversioni per definire un buffer sufficientemente grande da contenere un Long Long **senza segno** in base 2:
 
 ```cpp
 #include <wchar.h>
@@ -258,7 +258,7 @@ Queste funzioni e macro sono specifiche di Microsoft. Per altre informazioni sul
 
 ## <a name="example"></a>Esempio
 
-In questo esempio illustra l'uso di alcune delle funzioni di conversione di integer. Si noti l'uso del **CRT_SECURE_NO_WARNINGS** macro per ignorare l'avviso C4996.
+In questo esempio viene illustrato l'utilizzo di alcune funzioni di conversione di tipo Integer. Si noti l'uso della macro **_CRT_SECURE_NO_WARNINGS** per silenziare C4996 di avviso.
 
 ```C
 // crt_itoa.c
@@ -336,4 +336,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s, _itow_s functions](itoa-s-itow-s.md)<br/>
+[funzioni _itoa_s, _itow_s](itoa-s-itow-s.md)<br/>
