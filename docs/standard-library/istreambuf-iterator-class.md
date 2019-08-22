@@ -25,7 +25,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448135"
 ---
-# <a name="istreambufiterator-class"></a>Classe istreambuf_iterator
+# <a name="istreambuf_iterator-class"></a>Classe istreambuf_iterator
 
 La classe modello istreambuf_iterator descrive un oggetto iteratore di input che estrae gli elementi dei caratteri da un buffer del flusso di input, a cui accede tramite un oggetto archiviato di tipo puntatore a `basic_streambuf`\< **CharType**, **Traits**>.
 
@@ -443,5 +443,5 @@ int main( )
 
 [Struct iterator](../standard-library/iterator-struct.md)\
 [\<iterator>](../standard-library/iterator.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

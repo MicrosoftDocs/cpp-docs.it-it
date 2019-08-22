@@ -22,7 +22,7 @@ Per altre informazioni sulle librerie di runtime di Visual C++, vedere [CRT Libr
 
 ## <a name="in-this-section"></a>In questa sezione
 
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
 Contiene una panoramica sull'implementazione Microsoft della libreria standard di C++.
 
 [Programmazione di iostream](../standard-library/iostream-programming.md)\

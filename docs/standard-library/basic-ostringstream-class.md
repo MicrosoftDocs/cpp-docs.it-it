@@ -19,7 +19,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453515"
 ---
-# <a name="basicostringstream-class"></a>Classe basic_ostringstream
+# <a name="basic_ostringstream-class"></a>Classe basic_ostringstream
 
 Descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso della classe [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
 
@@ -152,6 +152,6 @@ Vedere [basic_stringbuf:: Str](../standard-library/basic-stringbuf-class.md#str)
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

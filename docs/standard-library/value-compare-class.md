@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452363"
 ---
-# <a name="valuecompare-class"></a>Classe value_compare
+# <a name="value_compare-class"></a>Classe value_compare
 
 Fornisce un oggetto funzione in grado di confrontare gli elementi di un oggetto hash_map comparando i valori delle chiavi per determinarne l'ordine relativo nell'oggetto hash_map.
 
@@ -56,5 +56,5 @@ Vedere l'esempio relativo ad [hash_map::value_comp](../standard-library/hash-map
 ## <a name="see-also"></a>Vedere anche
 
 [Struct binary_function](../standard-library/binary-function-struct.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

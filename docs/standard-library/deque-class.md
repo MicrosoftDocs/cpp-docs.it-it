@@ -460,7 +460,7 @@ The first element of c1 is now 20
 
 ## <a name="cbegin"></a>cbegin
 
-Restituisce un  iteratore const che punta al primo elemento nell'intervallo.
+Restituisce un iteratore const che punta al primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -486,7 +486,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>cend
 
-Restituisce un  iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
+Restituisce un iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
 ```cpp
 const_iterator cend() const;
@@ -566,7 +566,7 @@ Vedere l'esempio per [back](#back).
 
 ## <a name="const_pointer"></a>const_pointer
 
-Fornisce un puntatore a un  elemento const in una deque.
+Fornisce un puntatore a un elemento const in una deque.
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -2373,5 +2373,5 @@ int main( )
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

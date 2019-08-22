@@ -23,7 +23,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452511"
 ---
-# <a name="basicofstream-class"></a>Classe basic_ofstream
+# <a name="basic_ofstream-class"></a>Classe basic_ofstream
 
 Descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso della classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, con elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`.
 
@@ -44,7 +44,7 @@ I tratti dell'elemento di base del buffer di file (in genere `char_traits`< `Ele
 
 ## <a name="remarks"></a>Note
 
-Quando la  specializzazione wchar_t `basic_ofstream` di scrive nel file, se il file viene aperto in modalità testo, viene scritta una sequenza MBCS. La rappresentazione interna userà un buffer di caratteri `wchar_t`.
+Quando la specializzazione wchar_t `basic_ofstream` di scrive nel file, se il file viene aperto in modalità testo, viene scritta una sequenza MBCS. La rappresentazione interna userà un buffer di caratteri `wchar_t`.
 
 L'oggetto archivia un oggetto della classe `basic_filebuf`< `Elem`, `Tr`>.
 
@@ -317,6 +317,6 @@ La funzione membro scambia il contenuto di questo oggetto con il contenuto di *r
 ## <a name="see-also"></a>Vedere anche
 
 [Classe basic_ostream](../standard-library/basic-ostream-class.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

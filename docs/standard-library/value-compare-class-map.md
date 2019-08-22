@@ -16,7 +16,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448330"
 ---
-# <a name="valuecompare-class-ltmapgt"></a>Classe value_compare (&lt;map&gt;)
+# <a name="value_compare-class-ltmapgt"></a>Classe value_compare (&lt;map&gt;)
 
 Fornisce un oggetto funzione in grado di confrontare gli elementi di un oggetto map confrontando i valori delle chiavi per determinarne l'ordine relativo nell'oggetto map.
 
@@ -52,5 +52,5 @@ Vedere l'esempio relativo a [value_comp](../standard-library/map-class.md#value_
 ## <a name="see-also"></a>Vedere anche
 
 [Struct binary_function](../standard-library/binary-function-struct.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68447591"
 ---
-# <a name="lengtherror-class"></a>Classe length_error
+# <a name="length_error-class"></a>Classe length_error
 
 La classe funge da classe di base per tutte le eccezioni generate per segnalare un tentativo di generare un oggetto troppo lungo da specificare.
 

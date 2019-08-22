@@ -32,6 +32,6 @@ Le intestazioni rimanenti forniscono servizi di supporto, in genere di interesse
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

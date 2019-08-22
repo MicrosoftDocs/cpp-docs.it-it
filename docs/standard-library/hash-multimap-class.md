@@ -93,7 +93,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448680"
 ---
-# <a name="hashmultimap-class"></a>Classe hash_multimap
+# <a name="hash_multimap-class"></a>Classe hash_multimap
 
 > [!NOTE]
 > Questa API è obsoleta. L'alternativa è la [classe unordered_multimap](../standard-library/unordered-multimap-class.md).
@@ -168,7 +168,7 @@ L'iteratore fornito dalla classe hash_multimap è un iteratore bidirezionale, ma
 |[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento `const` nel `hash_multimap`.|
 |[const_pointer](#const_pointer)|Tipo che fornisce un puntatore a un elemento **const** in un `hash_multimap`oggetto.|
 |[const_reference](#const_reference)|Tipo che fornisce un riferimento a un elemento **const** archiviato in un `hash_multimap` oggetto per la lettura e l'esecuzione di operazioni **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi  elemento const in `hash_multimap`.|
+|[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento const in `hash_multimap`.|
 |[difference_type](#difference_type)|Tipo Signed Integer che può essere utilizzato per rappresentare il numero di elementi di un `hash_multimap` in un intervallo compreso tra gli elementi a cui puntano gli iteratori.|
 |[iterator](#iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare qualsiasi elemento di un `hash_multimap`.|
 |[key_compare](#key_compare)|Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordinamento per determinare l'ordine relativo di due elementi nel `hash_multimap`.|
@@ -1611,7 +1611,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 Il `iterator` tipo definito da hash_multimap punta a oggetti di [value_type](#value_type), che sono di `pair` tipo \< **const Key, Type**>, il cui primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato gestito da elemento.
 
-Per dereferenziare  `Iter` un iteratore che punta a un elemento in un oggetto `->` hash_multimap, usare l'operatore.
+Per dereferenziare `Iter` un iteratore che punta a un elemento in un oggetto `->` hash_multimap, usare l'operatore.
 
 Per accedere al valore della chiave per l'elemento, usare `Iter` -> **first**, che equivale a (\* `Iter`). **first**. Per accedere al valore del punto di riferimento mappato per l'elemento, usare `Iter` -> **second**, che equivale a (\* `Iter`). **first**.
 
@@ -1910,7 +1910,7 @@ hash_multimap& operator=(hash_multimap&& right);
 
 ### <a name="remarks"></a>Note
 
-Dopo la cancellazione di tutti gli elementi esistenti `hash_multimap`in `operator=` un oggetto, copia o sposta il  `hash_multimap`contenuto di direttamente in.
+Dopo la cancellazione di tutti gli elementi esistenti `hash_multimap`in `operator=` un oggetto, copia o sposta il `hash_multimap`contenuto di direttamente in.
 
 ### <a name="example"></a>Esempio
 
@@ -2595,5 +2595,5 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

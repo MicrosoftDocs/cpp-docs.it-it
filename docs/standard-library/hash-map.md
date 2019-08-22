@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448658"
 ---
-# <a name="lthashmapgt"></a>&lt;hash_map&gt;
+# <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
 > Questa intestazione è obsoleta. L'alternativa è [ \<unordered_map >](unordered-map.md).
@@ -57,5 +57,5 @@ Definisce le classi del modello del contenitore hash_map e hash_multimap e i rel
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](cpp-standard-library-header-files.md)\
-[Thread Safety in the C++ Standard Library](thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](cpp-standard-library-reference.md)

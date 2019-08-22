@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455574"
 ---
-# <a name="iteratortraits-struct"></a>Struct iterator_traits
+# <a name="iterator_traits-struct"></a>Struct iterator_traits
 
 Struct helper modello usata per specificare tutte le definizioni di tipi critici che deve avere un iteratore.
 
@@ -125,5 +125,5 @@ struct std::bidirectional_iterator_tag
 ## <a name="see-also"></a>Vedere anche
 
 [\<iterator>](../standard-library/iterator.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

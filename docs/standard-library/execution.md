@@ -47,5 +47,5 @@ namespace std::execution {
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](cpp-standard-library-header-files.md)\
-[Thread Safety in the C++ Standard Library](thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](cpp-standard-library-reference.md)

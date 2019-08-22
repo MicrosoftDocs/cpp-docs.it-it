@@ -19,7 +19,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68447749"
 ---
-# <a name="istreamiterator-class"></a>Classe istream_iterator
+# <a name="istream_iterator-class"></a>Classe istream_iterator
 
 Descrive un oggetto iteratore di input. Estrae gli oggetti della classe `Type` da un flusso di input, a cui accede tramite un oggetto archiviato di tipo `pointer` a `basic_istream`< `CharType`, `Traits`>.
 
@@ -389,5 +389,5 @@ int main( )
 [Struct input_iterator_tag](../standard-library/input-iterator-tag-struct.md)\
 [Struct iterator](../standard-library/iterator-struct.md)\
 [\<iterator>](../standard-library/iterator.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

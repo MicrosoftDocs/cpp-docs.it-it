@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457130"
 ---
-# <a name="forwarditeratortag-struct"></a>Struct forward_iterator_tag
+# <a name="forward_iterator_tag-struct"></a>Struct forward_iterator_tag
 
 Classe che fornisce un tipo restituito per la funzione **iterator_category** che rappresenta un iteratore in avanti.
 
@@ -43,5 +43,5 @@ Per un esempio di come usare i tag **iterator_tag**, vedere [iterator_traits](..
 ## <a name="see-also"></a>Vedere anche
 
 [Struct input_iterator_tag](../standard-library/input-iterator-tag-struct.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

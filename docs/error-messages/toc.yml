@@ -4228,6 +4228,8 @@
           href: compiler-warnings/compiler-warning-level-1-c4965.md
         - name: Avviso del compilatore C4972
           href: compiler-warnings/compiler-warning-c4972.md
+        - name: Avviso del compilatore C4984
+          href: compiler-warnings/compiler-warning-c4984.md
         - name: Avviso del compilatore (livello 4) C4985
           href: compiler-warnings/compiler-warning-level-4-c4985.md
         - name: Avviso del compilatore C4986

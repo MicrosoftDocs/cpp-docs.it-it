@@ -154,10 +154,10 @@ In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato
 |Nome del tipo|Descrizione|
 |-|-|
 |[allocator_type](#allocator_type)|typedef per la classe `allocator` dell'oggetto `multiset`.|
-|[const_iterator](#const_iterator)|Typedef per un iteratore bidirezionale in grado di leggere un  elemento const in `multiset`.|
+|[const_iterator](#const_iterator)|Typedef per un iteratore bidirezionale in grado di leggere un elemento const in `multiset`.|
 |[const_pointer](#const_pointer)|Typedef per un puntatore a un elemento **const** in un `multiset`oggetto.|
 |[const_reference](#const_reference)|Typedef per un riferimento a un elemento **const** archiviato in un `multiset` oggetto per la lettura e l'esecuzione di operazioni **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Typedef per un iteratore bidirezionale in grado di leggere qualsiasi  elemento const in `multiset`.|
+|[const_reverse_iterator](#const_reverse_iterator)|Typedef per un iteratore bidirezionale in grado di leggere qualsiasi elemento const in `multiset`.|
 |[difference_type](#difference_type)|typedef Signed Integer per il numero di elementi di un `multiset` in un intervallo compreso tra gli elementi a cui puntano gli iteratori.|
 |[iterator](#iterator)|typedef per un iteratore bidirezionale in grado di leggere o di modificare qualsiasi elemento di un `multiset`.|
 |[key_compare](#key_compare)|typedef per un oggetto funzione in grado di confrontare due chiavi per determinare l'ordine relativo di due elementi nel `multiset`.|
@@ -284,7 +284,7 @@ The first element of ms1 is now 2
 
 ## <a name="cbegin"></a>  multiset::cbegin
 
-Restituisce un  iteratore const che punta al primo elemento nell'intervallo.
+Restituisce un iteratore const che punta al primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -310,7 +310,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  multiset::cend
 
-Restituisce un  iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
+Restituisce un iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
 ```cpp
 const_iterator cend() const;
@@ -2301,5 +2301,5 @@ The multiset has elements: 10 20.
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori](../cpp/containers-modern-cpp.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453079"
 ---
-# <a name="outofrange-class"></a>Classe out_of_range
+# <a name="out_of_range-class"></a>Classe out_of_range
 
 La classe funge da classe di base per tutte le eccezioni generate per segnalare un argomento che è esterno all'intervallo valido.
 

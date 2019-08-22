@@ -19,7 +19,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68447084"
 ---
-# <a name="ostreamiterator-class"></a>Classe ostream_iterator
+# <a name="ostream_iterator-class"></a>Classe ostream_iterator
 
 La classe modello ostream_iterator descrive un oggetto iteratore di output che scrive elementi consecutivi nel flusso di output con `operator <<`l'estrazione.
 
@@ -416,5 +416,5 @@ by intOut are:
 ## <a name="see-also"></a>Vedere anche
 
 [\<iterator>](../standard-library/iterator.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

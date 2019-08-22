@@ -162,10 +162,10 @@ In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato
 |Nome del tipo|DESCRIZIONE|
 |-|-|
 |[allocator_type](#allocator_type)|Tipo che rappresenta la classe `allocator` per l'oggetto `multimap`.|
-|[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere un  elemento const in `multimap`.|
+|[const_iterator](#const_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere un elemento const in `multimap`.|
 |[const_pointer](#const_pointer)|Tipo che fornisce un puntatore a un elemento **const** in un `multimap`oggetto.|
 |[const_reference](#const_reference)|Tipo che fornisce un riferimento a un elemento **const** archiviato in un `multimap` oggetto per la lettura e l'esecuzione di operazioni **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi  elemento const in `multimap`.|
+|[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento const in `multimap`.|
 |[difference_type](#difference_type)|Tipo Signed Integer che può essere utilizzato per rappresentare il numero di elementi di un `multimap` in un intervallo compreso tra gli elementi a cui puntano gli iteratori.|
 |[iterator](#iterator)|Tipo che fornisce la differenza tra due iteratori che fanno riferimento agli elementi all'interno dello stesso `multimap`.|
 |[key_compare](#key_compare)|Tipo che fornisce un oggetto funzione in grado di confrontare due chiavi di ordinamento per determinare l'ordine relativo di due elementi nel `multimap`.|
@@ -174,7 +174,7 @@ In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato
 |[pointer](#pointer)|Tipo che fornisce un puntatore a un elemento **const** in un `multimap`oggetto.|
 |[reference](#reference)|Tipo che fornisce un riferimento a un elemento archiviato in un `multimap`.|
 |[reverse_iterator](#reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere o modificare un elemento di un `multimap` invertito.|
-|[size_type](#size_type)|Tipo di Unsigned Integer che fornisce un puntatore a un  elemento const in `multimap`un oggetto.|
+|[size_type](#size_type)|Tipo di Unsigned Integer che fornisce un puntatore a un elemento const in `multimap`un oggetto.|
 |[value_type](#value_type)|Tipo che fornisce un oggetto funzione in grado di confrontare due elementi come chiavi di ordinamento per determinarne l'ordine relativo nel `multimap`.|
 
 ### <a name="member-functions"></a>Funzioni membro
@@ -290,7 +290,7 @@ First element of m1 is now 1
 
 ## <a name="cbegin"></a>  multimap::cbegin
 
-Restituisce un  iteratore const che punta al primo elemento nell'intervallo.
+Restituisce un iteratore const che punta al primo elemento nell'intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -316,7 +316,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  multimap::cend
 
-Restituisce un  iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
+Restituisce un iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
 ```cpp
 const_iterator cend() const;
@@ -676,7 +676,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Note
 
-`difference_type` è il tipo restituito quando si sottrae o si incrementa tramite gli iteratori del contenitore. `first` `last` `first` Viene in genere usato per rappresentare il numero di elementi nell'intervallo [First, Last) tra gli iteratori e, include l'elemento a cui punta e l'intervallo di elementi fino a, ma `difference_type` escluso, l'elemento a `last`cui punta.
+`difference_type` è il tipo restituito quando si sottrae o si incrementa tramite gli iteratori del contenitore. `first` `last` `first`Viene in genere usato per rappresentare il numero di elementi nell'intervallo [First, Last) tra gli iteratori e, include l'elemento a cui punta e l'intervallo di elementi fino a, ma `difference_type` escluso, l'elemento a `last`cui punta.
 
 Si noti che, sebbene `difference_type` sia disponibile per tutti gli iteratori che soddisfano i requisiti di un iteratore di input, inclusa la classe degli iteratori bidirezionali supportati da contenitori reversibili come set, la sottrazione tra gli iteratori è supportata solo da iteratori ad accesso casuale forniti da un contenitore ad accesso casuale, ad esempio vector.
 
@@ -1804,7 +1804,7 @@ multimap& operator=(multimap&& right);
 
 ### <a name="remarks"></a>Note
 
-Dopo la cancellazione di tutti gli elementi esistenti `multimap`in `operator=` un oggetto, copia o sposta il  `multimap`contenuto di direttamente in.
+Dopo la cancellazione di tutti gli elementi esistenti `multimap`in `operator=` un oggetto, copia o sposta il `multimap`contenuto di direttamente in.
 
 ### <a name="example"></a>Esempio
 
@@ -2439,5 +2439,5 @@ The values of the mapped elements are: 10 20.
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori](../cpp/containers-modern-cpp.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

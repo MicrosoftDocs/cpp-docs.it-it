@@ -169,7 +169,7 @@ L'oggetto map ordina gli elementi che controlla chiamando un oggetto funzione ar
 |||
 |-|-|
 |[allocator_type](#allocator_type)|typedef per la classe `allocator` dell'oggetto mappa.|
-|[const_iterator](#const_iterator)|Typedef per un iteratore bidirezionale in grado di leggere un  elemento const nella mappa.|
+|[const_iterator](#const_iterator)|Typedef per un iteratore bidirezionale in grado di leggere un elemento const nella mappa.|
 |[const_pointer](#const_pointer)|Typedef per un puntatore a un elemento **const** in una mappa.|
 |[const_reference](#const_reference)|Typedef per un riferimento a un elemento **const** archiviato in una mappa per la lettura e l'esecuzione di operazioni **const** .|
 |[const_reverse_iterator](#const_reverse_iterator)|Tipo che fornisce un iteratore bidirezionale in grado di leggere qualsiasi elemento **const** dell'oggetto map.|
@@ -340,7 +340,7 @@ The first element of m1 is now 1
 
 ## <a name="cbegin"></a>cbegin
 
-Restituisce un  iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
+Restituisce un iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
 ```cpp
 const_iterator cbegin() const;
@@ -366,7 +366,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>cend
 
-Restituisce un  iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
+Restituisce un iteratore const che punta alla posizione immediatamente successiva all'ultimo elemento di un intervallo.
 
 ```cpp
 const_iterator cend() const;
@@ -2731,5 +2731,5 @@ int main( )
 ## <a name="see-also"></a>Vedere anche
 
 [Contenitori](../cpp/containers-modern-cpp.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

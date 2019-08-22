@@ -125,6 +125,6 @@ Vedere [strstream:: Str](../standard-library/strstreambuf-class.md#str) per un e
 ## <a name="see-also"></a>Vedere anche
 
 [istream](../standard-library/istream-typedefs.md#istream)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

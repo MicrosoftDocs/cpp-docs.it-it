@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460092"
 ---
-# <a name="basiciostream-class"></a>Classe basic_iostream
+# <a name="basic_iostream-class"></a>Classe basic_iostream
 
 Classe di flusso che può eseguire operazioni sia di input sia di output.
 
@@ -123,6 +123,6 @@ La funzione membro chiama `swap(right)`.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

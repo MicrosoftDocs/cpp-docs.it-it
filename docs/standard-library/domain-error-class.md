@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68454314"
 ---
-# <a name="domainerror-class"></a>Classe domain_error
+# <a name="domain_error-class"></a>Classe domain_error
 
 La classe funge da classe di base per tutte le eccezioni generate per segnalare un errore del dominio.
 

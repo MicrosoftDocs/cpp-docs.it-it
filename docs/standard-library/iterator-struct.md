@@ -47,7 +47,7 @@ La struct modello viene usata come tipo di base per tutti gli iteratori. Definis
 
 - `reference` (sinonimo del parametro modello `Reference`)
 
-Si noti `value_type` che non deve essere un tipo costante anche `pointer` se punta a un oggetto  `Type` di const e riferimento designa un oggetto  `Type`di const.
+Si noti `value_type` che non deve essere un tipo costante anche `pointer` se punta a un oggetto `Type` di const e riferimento designa un oggetto `Type`di const.
 
 ## <a name="example"></a>Esempio
 
@@ -62,5 +62,5 @@ Per un esempio di come dichiarare e usare i tipi nella classe iterator di base, 
 ## <a name="see-also"></a>Vedere anche
 
 [\<iterator>](../standard-library/iterator.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

@@ -114,5 +114,5 @@ Le macro sono definite dallo standard POSIX.
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

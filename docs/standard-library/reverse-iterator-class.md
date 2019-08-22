@@ -25,7 +25,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68451169"
 ---
-# <a name="reverseiterator-class"></a>Classe reverse_iterator
+# <a name="reverse_iterator-class"></a>Classe reverse_iterator
 
 La classe modello è un adattatore di iteratore che descrive un oggetto iteratore inverso che si comporta come un iteratore ad accesso casuale o bidirezionale solo in senso inverso. Consente l'attraversamento all'indietro di un intervallo.
 
@@ -46,7 +46,7 @@ I contenitori della libreria standard C++ definiscono anche i tipi `reverse_iter
 
 L' `reverse_iterator` oggetto che richiede un iteratore bidirezionale non deve chiamare alcuna funzione `operator+=`membro, `operator-` `operator+` `operator-=`,, o `operator[]`, che può essere usata solo con gli iteratori ad accesso casuale.
 
-L'intervallo di un iteratore è [*First*, *Last*), dove la parentesi quadra a sinistra indica l'inclusione di *First* e la parentesi a destra indica l'inclusione degli elementi fino a ma escludendo l' *Ultima* . Gli stessi elementi sono inclusi nella sequenza inversa [ **REV** - *First*, **REV** - *Last*), in modo che se l' *ultimo* è l'elemento One-paste-end in una sequenza, il primo elemento **REV** prima nella sequenza  invertita punta a \*(*Last* -1).  -  L'identità che collega tutti gli iteratori inversi ai relativi iteratori sottostanti è:
+L'intervallo di un iteratore è [*First*, *Last*), dove la parentesi quadra a sinistra indica l'inclusione di *First* e la parentesi a destra indica l'inclusione degli elementi fino a ma escludendo l' *Ultima* . Gli stessi elementi sono inclusi nella sequenza inversa [ **REV** - *First*, **REV** - *Last*), in modo che se l' *ultimo* è l'elemento One-paste-end in una sequenza, il primo elemento **REV** prima nella sequenza invertita punta a \*(*Last* -1).  -  L'identità che collega tutti gli iteratori inversi ai relativi iteratori sottostanti è:
 
 &\*( **reverse_iterator** ( *i* ) ) == &\*( *i* - 1 ).
 
@@ -1022,5 +1022,5 @@ int main( )
 ## <a name="see-also"></a>Vedere anche
 
 [\<iterator>](../standard-library/iterator.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

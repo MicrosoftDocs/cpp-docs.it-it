@@ -26,7 +26,7 @@ Includere l' `iostreams` intestazione \<standard iomanip > per definire diversi 
 
 ## <a name="remarks"></a>Note
 
-Ognuno di questi manipolatori restituisce un tipo non specificato, chiamato `T1` tramite `T10`, che sovraccarica sia `basic_istream` \< **elem**, **TR**>`::`[operator > >](../standard-library/istream-operators.md#op_gt_gt) `basic_ostream` **Elem**, TROperator`::`<[<](../standard-library/ostream-operators.md#op_lt_lt). \<>
+Ognuno di questi manipolatori restituisce un tipo non specificato, chiamato `T1` tramite `T10`, che sovraccarica sia `basic_istream` \< **elem**, **TR**>`::`[operator > >](../standard-library/istream-operators.md#op_gt_gt) `basic_ostream` **Elem**,TROperator`::`<[<](../standard-library/ostream-operators.md#op_lt_lt). \<>
 
 ### <a name="manipulators"></a>Manipolatori
 
@@ -47,6 +47,6 @@ Ognuno di questi manipolatori restituisce un tipo non specificato, chiamato `T1`
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

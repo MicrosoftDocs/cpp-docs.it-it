@@ -50,5 +50,5 @@ Esistono d'alta parte alcune restrizioni:
 
 ## <a name="see-also"></a>Vedere anche
 
-[C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)\ (Panoramica sulla libreria standard C++)
+[Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)\
 [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

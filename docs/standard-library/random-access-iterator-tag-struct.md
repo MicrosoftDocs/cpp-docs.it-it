@@ -14,7 +14,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68458311"
 ---
-# <a name="randomaccessiteratortag-struct"></a>Struct random_access_iterator_tag
+# <a name="random_access_iterator_tag-struct"></a>Struct random_access_iterator_tag
 
 Classe che fornisce un tipo restituito per `iterator_category` la funzione che rappresenta un iteratore ad accesso casuale.
 
@@ -105,5 +105,5 @@ The iterators are not the same.
 ## <a name="see-also"></a>Vedere anche
 
 [Struct bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

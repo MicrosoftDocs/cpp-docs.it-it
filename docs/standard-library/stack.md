@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
 ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
 ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453769"
@@ -55,5 +55,5 @@ Definisce lo stack della classe modello e due modelli di supporto.
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

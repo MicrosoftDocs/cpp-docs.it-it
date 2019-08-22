@@ -165,13 +165,13 @@ Buffer.
 
 Entrambi i costruttori inizializzano la classe base chiamando [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **SB**), dove `sb` è l'oggetto archiviato della classe [strstreambuf](../standard-library/strstreambuf-class.md). Il primo costruttore inizializza `sb` anche chiamando [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). Il secondo costruttore inizializza la classe di base in uno dei due modi seguenti:
 
-- Se `_Mode` `strstreambuf` `ptr` `count` `count` `ptr`  ios_base:: app = = 0, ptr deve designare il primo elemento di una matrice di elementi e il costruttore chiama (,,)  &  .
+- Se `_Mode` `strstreambuf` `ptr` `count` `count` `ptr`ios_base:: app = = 0, ptr deve designare il primo elemento di una matrice di elementi e il costruttore chiama (,,)  &  .
 
 - In caso contrario, *ptr* deve designare il primo elemento di una matrice di elementi count che contiene una stringa C il cui primo elemento è designato da *ptr*e `strstreambuf`il `ptr`costruttore chiama `ptr` (, `count`,  +  `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>Vedere anche
 
 [iostream](../standard-library/istream-typedefs.md#iostream)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

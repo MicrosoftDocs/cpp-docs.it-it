@@ -23,7 +23,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448183"
 ---
-# <a name="ostreambufiterator-class"></a>Classe ostreambuf_iterator
+# <a name="ostreambuf_iterator-class"></a>Classe ostreambuf_iterator
 
 La classe modello ostreambuf_iterator descrive un oggetto iteratore di output che consente di scrivere gli elementi dei caratteri consecutivi nel flusso di output con l'estrazione **operator>>** . Gli oggetti `ostreambuf_iterator` differiscono da quelli della [classe ostream_iterator](../standard-library/ostream-iterator-class.md) per il fatto che hanno caratteri anziché un tipo generico in corrispondenza del tipo di oggetto inserito nel flusso di output.
 
@@ -469,5 +469,5 @@ by charOutBuf are: OUT.
 ## <a name="see-also"></a>Vedere anche
 
 [\<iterator>](../standard-library/iterator.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)

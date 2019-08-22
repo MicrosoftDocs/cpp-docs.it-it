@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68449257"
 ---
-# <a name="invalidargument-class"></a>Classe invalid_argument
+# <a name="invalid_argument-class"></a>Classe invalid_argument
 
 La classe funge da classe di base per tutte le eccezioni generate per segnalare un argomento non valido.
 

@@ -53,6 +53,6 @@ int pcount();
 
 [\<strstream>](../standard-library/strstream.md)\
 [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)\
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)
