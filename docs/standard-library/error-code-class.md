@@ -26,7 +26,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68245829"
 ---
-# <a name="errorcode-class"></a>Classe error_code
+# <a name="error_code-class"></a>Classe error_code
 
 Rappresenta gli errori di sistema di basso livello che sono specifici dell'implementazione.
 
@@ -224,7 +224,7 @@ Oggetto di cui verificare la disuguaglianza.
 
 L'operatore membro restituisce `!(*this == right)`.
 
-### <a name="op_lt">Operatore </a>&lt;
+### <a name="op_lt"></a> Operatore&lt;
 
 Verifica se l'oggetto `error_code` è più piccolo dell'oggetto `error_code` passato per il confronto.
 
