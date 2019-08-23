@@ -23,7 +23,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68240655"
 ---
-# <a name="ltforwardlistgt-operators"></a>Operatori &lt;forward_list&gt;
+# <a name="ltforward_listgt-operators"></a>Operatori &lt;forward_list&gt;
 
 ## <a name="op_eq_eq"></a> operator==
 
@@ -73,7 +73,7 @@ Oggetto di tipo `forward_list`.
 
 Questa funzione modello restituisce `!(left == right)`.
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a> Operatore&lt;
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è minore dell'oggetto elenco di inoltro a destra.
 
@@ -125,7 +125,7 @@ Oggetto di tipo `forward_list`.
 
 Questa funzione modello restituisce `!(right < left)`.
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="op_gt"></a> Operatore&gt;
 
 Verifica se l'oggetto elenco di inoltro a sinistra dell'operatore è maggiore dell'oggetto elenco di inoltro a destra.
 

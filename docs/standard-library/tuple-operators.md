@@ -83,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a> Operatore&lt;
 
 Confronta oggetti `tuple` per verificare se sono minori di un certo valore.
 
@@ -278,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="op_gt"></a> Operatore&gt;
 
 Confronta oggetti `tuple` per verificare qual è il maggiore.
 

@@ -69,7 +69,7 @@ Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
 
 Questa funzione modello restituisce `!(left == right)`.
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a> Operatore&lt;
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è minore dell'oggetto `optional` sul lato destro.
 
@@ -121,7 +121,7 @@ Un oggetto di tipo `optional`, `nullopt_t`, o `T`.
 
 Questa funzione modello restituisce `!(right < left)`.
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="op_gt"></a> Operatore&gt;
 
 Verifica se l'oggetto `optional` sul lato sinistro dell'operatore è maggiore dell'oggetto `optional` sul lato destro.
 

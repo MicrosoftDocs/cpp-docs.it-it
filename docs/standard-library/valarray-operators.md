@@ -221,7 +221,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="op_amp">Operatore </a>&amp;
+## <a name="op_amp"></a> Operatore&amp;
 
 Ottiene l'operatore **AND** bit per bit tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato del tipo di elemento.
 
@@ -401,7 +401,7 @@ The element-by-element result of the logical AND operator&& is the
 valarray: ( 0 0 0 1 0 1 0 1 0 1 ).
 ```
 
-## <a name="op_gt">Operatore </a>&gt;
+## <a name="op_gt"></a> Operatore&gt;
 
 Verifica se gli elementi di un oggetto valarray sono maggiori degli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o minori di un valore specificato.
 
@@ -676,7 +676,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="op_lt">Operatore </a>&lt;
+## <a name="op_lt"></a> Operatore&lt;
 
 Verifica se gli elementi di un oggetto valarray sono minori degli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o minori di un valore specificato.
 
