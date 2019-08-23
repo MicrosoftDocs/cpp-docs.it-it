@@ -4,12 +4,12 @@ ms.date: 01/12/2018
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: c314b554abb6c10e62b143f554777af50267e4e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf53aca918e36d18ab7f8aa14b01caaf0e55627c
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245361"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975891"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
@@ -22,17 +22,17 @@ ms.locfileid: "62245361"
 ### <a name="parameters"></a>Parametri
 
 *constant-expression*<br/>
-Un'espressione costante di tipo **bool** che indica se il set di possibili tipi di eccezione è vuoto. La versione non condizionale è equivalente a `noexcept(true)`.
+Espressione costante di tipo **bool** che indica se il set di tipi di eccezioni potenziali è vuoto. La versione non condizionale è equivalente a `noexcept(true)`.
 
 ## <a name="remarks"></a>Note
 
-Oggetto *espressione noexcept* è un tipo di *specifica di eccezione*, un suffisso a una dichiarazione di funzione che rappresenta un set di tipi che potrebbe essere trovati da un gestore di eccezioni per qualsiasi eccezione che viene chiuso un funzione. Operatore condizionale unario `noexcept(` *constant_expression* `)` in cui *constant_expression* yeilds **true**e il relativo sinonimo non condizionale **noexcept**, specificare che il set di possibili tipi di eccezione che è possibile uscire da una funzione è vuoto. Vale a dire, la funzione non genera mai un'eccezione e non consente mai un'eccezione a essere propagati all'esterno del relativo ambito. L'operatore `noexcept(` *constant_expression* `)` in cui *constant_expression* yeilds **false**, o l'assenza di una specifica di eccezione (un valore diverso per una funzione distruttore o deallocazione), indica che il set di possibili eccezioni che è possibile uscire dalla funzione è il set di tutti i tipi.
+Un' *espressione noexcept* è un tipo di *specifica di eccezione*, un suffisso di una dichiarazione di funzione che rappresenta un set di tipi che potrebbero essere corrispondenti da un gestore di eccezioni per qualsiasi eccezione che esce da una funzione. Operatore `noexcept(`condizionale unario *constant_expression* `)` dove *constant_expression* restituisce **true**e il relativo sinonimo **non**condizionale noexcept, specificano che il set di potenziali tipi di eccezione che è possibile uscire da una funzione vuota. Ovvero, la funzione non genera mai un'eccezione e non consente mai la propagazione di un'eccezione all'esterno del relativo ambito. L'operatore `noexcept(` *constant_expression* `)` in cui *constant_expression* restituisce **false**o l'assenza di una specifica di eccezione (diversa da per un distruttore o una funzione di deallocazione) indica che il il set di potenziali eccezioni che possono uscire dalla funzione è il set di tutti i tipi.
 
-Contrassegnare una funzione come **noexcept** solo se tutte le funzioni che chiama, direttamente o indirettamente, sono anche **noexcept** oppure **const**. Il compilatore non necessariamente controlla ogni percorso di codice per le eccezioni che potrebbero essere propagate fino a un **noexcept** (funzione). Se un'eccezione uscire dall'ambito esterno di una funzione contrassegnata `noexcept`, [std:: Terminate](../standard-library/exception-functions.md#terminate) viene richiamata immediatamente e non c'è garanzia che i distruttori di tutti gli oggetti nell'ambito verranno richiamati. Uso **noexcept** anziché l'identificatore di eccezione dinamiche `throw()`, ora deprecato nello standard. È consigliabile applicare `noexcept` a qualsiasi funzione che non consente mai un'eccezione di propagarsi fino allo stack di chiamate. Quando una funzione viene dichiarata **noexcept**, consente al compilatore di generare codice più efficiente in più contesti diversi. Per altre informazioni, vedere [specifiche di eccezione](exception-specifications-throw-cpp.md).
+Contrassegnare una funzione come noexcept solo se tutte le funzioni chiamate, direttamente o indirettamente, sono anche noexcept o const. Il compilatore non controlla necessariamente ogni percorso di codice per le eccezioni che potrebbero propagarsi a una funzione noexcept. Se un'eccezione esce dall'ambito esterno di una funzione contrassegnata `noexcept`come, [std:: terminate](../standard-library/exception-functions.md#terminate) viene richiamato immediatamente e non vi è alcuna garanzia che vengano richiamati i distruttori di tutti gli oggetti inclusi nell'ambito. Usare **noexcept** anziché l'identificatore `throw()`di eccezione dinamica, che è ora deprecato nello standard. Si consiglia di applicare `noexcept` a qualsiasi funzione che non consenta mai un'eccezione di propagare lo stack di chiamate. Quando una funzione viene dichiarata **noexcept**, consente al compilatore di generare codice più efficiente in diversi contesti diversi. Per ulteriori informazioni, vedere [specifiche di eccezione](exception-specifications-throw-cpp.md).
 
 ## <a name="example"></a>Esempio
 
-Una funzione di modello che copia il relativo argomento può essere dichiarata **noexcept** a condizione che l'oggetto da copiare è un normale tipo di dati precedente (POD). Tale funzione potrebbe essere dichiarata come segue:
+Una funzione di modello che copia il relativo argomento potrebbe essere dichiarata noexcept sulla condizione che l'oggetto copiato sia un tipo di dati Plain Old (POD). Tale funzione potrebbe essere dichiarata come segue:
 
 ```cpp
 #include <type_traits>
