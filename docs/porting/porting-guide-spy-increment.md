@@ -2,12 +2,12 @@
 title: 'Guida al porting: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511669"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630452"
 ---
 # <a name="porting-guide-spy"></a>Guida al porting: Spy++
 
@@ -67,7 +67,7 @@ Windows XP non è più supportato da Microsoft, quindi anche se in Visual Studio
 
 Per correggere l'errore, definire WINVER aggiornando l'impostazione **Proprietà progetto** alla versione meno recente di Windows che si vuole usare come destinazione. Una tabella di valori per le varie versioni di Windows è disponibile [qui](/windows/win32/WinProg/using-the-windows-headers).
 
-Il file stdafx.h contiene alcune di queste definizioni di macro.
+Il file *stdafx.h* contiene alcune di queste definizioni di macro.
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -373,7 +373,7 @@ Un uso intensivo di macro come in questo codice tende a rendere il codice più d
 #define PARM(var, type, src)type var = (type)src
 ```
 
-Di conseguenza, la variabile `lpszBuffer` viene dichiarata due volte nella stessa funzione. Non è così lineare risolvere questo avviso come lo sarebbe se il codice non stesse usando le macro; ad ogni modo, basta semplicemente rimuovere la seconda dichiarazione del tipo. Allo stato dei fatti, si ha l'ingrato compito di dover decidere se riscrivere il codice della macro come codice ordinario (un'attività tediosa e soggetta a errori) oppure disabilitare l'avviso.
+Di conseguenza, la variabile `lpszBuffer` viene dichiarata due volte nella stessa funzione. Non è così lineare risolvere questo avviso come lo sarebbe se il codice non stesse usando le macro. In ogni modo, basta semplicemente rimuovere la seconda dichiarazione di tipo. Allo stato dei fatti, si ha l'ingrato compito di dover decidere se riscrivere il codice della macro come codice ordinario (un'attività tediosa e soggetta a errori) oppure disabilitare l'avviso.
 
 In questo caso, si è scelto di disabilitare l'avviso. A tale scopo, aggiungere un pragma come segue:
 
@@ -502,7 +502,7 @@ Il problema si verifica quando una variabile è stata inizialmente dichiarata **
 
 ##  <a name="porting_to_unicode"></a> Passaggio 11. Porting da MBCS a Unicode
 
-Quando ci si riferisce a Unicode in ambito Windows in genere si intende UTF-16. Altri sistemi operativi, ad esempio Linux, usano UTF-8, ma Windows in genere non lo usa. La versione MBCS di MFC è stata deprecata in Visual Studio 2013 e 2015, ma non in Visual Studio 2017. Se si usa Visual Studio 2013 o 2015, prima di convertire effettivamente il codice MBCS in UTF-16 Unicode, potrebbe essere opportuno eliminare temporaneamente gli avvisi che informano che il formato MBCS è deprecato, per poter eseguire altre operazioni o posticipare la conversione a un momento appropriato. Il codice corrente usa il formato MBCS e per continuare è necessario installare la versione ANSI/MBCS di MFC. La libreria MFC è di dimensioni piuttosto elevate e non fa parte dell'installazione predefinita **Sviluppo di applicazioni desktop con C++** di Visual Studio. Deve essere selezionata dai componenti facoltativi nel programma di installazione. Vedere [Componente aggiuntivo DLL MBCS MFC](../mfc/mfc-mbcs-dll-add-on.md). Dopo averla scaricata e aver riavviato Visual Studio, è possibile compilarla e collegarla alla versione MBCS di MFC, ma per eliminare gli avvisi relativi a MBCS è necessario, se si usa Visual Studio 2013 o 2015, aggiungere anche NO_WARN_MBCS_MFC_DEPRECATION all'elenco di macro predefinite nella sezione **Preprocessore** delle proprietà del progetto oppure all'inizio del file di intestazione stdafx.h o di un altro file di intestazione comune.
+Quando ci si riferisce a Unicode in ambito Windows in genere si intende UTF-16. Altri sistemi operativi, ad esempio Linux, usano UTF-8, ma Windows in genere non lo usa. La versione MBCS di MFC è stata deprecata in Visual Studio 2013 e 2015, ma non in Visual Studio 2017. Se si usa Visual Studio 2013 o 2015, prima di convertire effettivamente il codice MBCS in UTF-16 Unicode, potrebbe essere opportuno eliminare temporaneamente gli avvisi che informano che il formato MBCS è deprecato, per poter eseguire altre operazioni o posticipare la conversione a un momento appropriato. Il codice corrente usa il formato MBCS e per continuare è necessario installare la versione ANSI/MBCS di MFC. La libreria MFC è di dimensioni piuttosto elevate e non fa parte dell'installazione predefinita **Sviluppo di applicazioni desktop con C++** di Visual Studio. Deve essere selezionata dai componenti facoltativi nel programma di installazione. Vedere [Componente aggiuntivo DLL MBCS MFC](../mfc/mfc-mbcs-dll-add-on.md). Dopo averla scaricata e aver riavviato Visual Studio, è possibile compilarla e collegarla alla versione MBCS di MFC, ma, per eliminare gli avvisi relativi a MBCS, è necessario, se si usa Visual Studio 2013 o 2015, aggiungere anche NO_WARN_MBCS_MFC_DEPRECATION all'elenco di macro predefinite nella sezione **Preprocessore** delle proprietà del progetto oppure all'inizio del file di intestazione *stdafx.h* o di un altro file di intestazione comune.
 
 Verranno ora presi in esame alcuni errori del linker.
 

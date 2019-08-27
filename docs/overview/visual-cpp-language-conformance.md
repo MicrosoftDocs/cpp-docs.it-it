@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980533"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631638"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabella di conformità al linguaggio C++ di Microsoft
 
@@ -348,7 +348,7 @@ L'opzione del compilatore [/Zc:noexceptTypes](../build/reference/zc-noexcepttype
 
 <a name="note_C"></a>__C__ Il supporto del compilatore per le regole del preprocessore C99 è incompleto in Visual Studio 2017. Le macro variadic sono supportate, ma sono presenti molti bug nel comportamento del preprocessore. Il preprocessore è in fase di revisione. In via sperimentale, le modifiche saranno inserite presto nella modalità [/permissive-](../build/reference/permissive-standards-conformance.md).
 
-<a name="note_D"></a>__D__ Supporto disponibile in [/std:c++14](../build/reference/std-specify-language-standard-version.md) con un messaggio di avviso che può essere rimosso, C4984.
+<a name="note_D"></a>__D__ Supporto disponibile in [/std:c++14](../build/reference/std-specify-language-standard-version.md) con un messaggio di avviso che può essere rimosso, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 
 <a name="note_E"></a>__E__ Si tratta di un'implementazione completamente nuova, non compatibile con la versione precedente di `std::experimental`, che richiedeva supporto per symlink, correzioni di bug e modifiche nel comportamento richiesto dallo standard. Attualmente, con \<filesystem > sono inclusi il nuovo `std::experimental::filesystem` e il precedente \<. Con `std::filesystem`experimental/filesystem> è inclusa solo la precedente implementazione sperimentale. L'implementazione sperimentale sarà RIMOSSA nella prossima versione delle librerie con modifiche di rilievo per l'ABI.
 

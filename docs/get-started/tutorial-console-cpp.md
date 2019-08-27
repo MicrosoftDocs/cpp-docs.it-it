@@ -2,16 +2,16 @@
 title: Creare un progetto di app console C++
 description: Creare un'app console Hello World e un'app calcolatrice in Visual C++
 ms.custom: mvc
-ms.date: 05/28/2019
+ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 9fc5508b68c8e206e76ead08ddb8015dd5133256
-ms.sourcegitcommit: 18f535a6c4cfe58362ed56599b1a875ee71ff6aa
+ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66410763"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630982"
 ---
 # <a name="create-a-c-console-app-project"></a>Creare un progetto di app console C++
 
@@ -486,7 +486,7 @@ Ora è possibile trasformare il codice contenuto in questo modello in un'app cal
    > Informazioni sul codice:
    >
    > - Le istruzioni `#include` consentono di fare riferimento al codice che si trova in altri file. In alcuni casi viene visualizzato un nome file racchiuso tra parentesi quadre ( **\<\>** ), in altri casi il nome è racchiuso tra virgolette ( **" "** ). In generale, le parentesi quadre vengono usate quando si fa riferimento alla libreria standard C++, mentre le virgolette vengono usate per gli altri file.
-   > - La riga `#include "pch.h"` (o nelle versioni precedenti di Visual Studio, `#include "stdafx.h"`) fa riferimento a un elemento noto come intestazione precompilata. Questi oggetti vengono spesso usati dai programmatori professionisti per migliorare i tempi di compilazione, ma esulano dall'ambito di questa esercitazione.
+   > - La riga `#include "pch.h"` (o in Visual Studio 2017 e versioni precedenti, `#include "stdafx.h"`) fa riferimento a un elemento noto come intestazione precompilata. Questi oggetti vengono spesso usati dai programmatori professionisti per migliorare i tempi di compilazione, ma esulano dall'ambito di questa esercitazione.
    > - La riga `using namespace std;` indica al compilatore che è previsto materiale in arrivo dalla libreria standard C++ da usare in questo file. Senza questa riga, ogni parola chiave proveniente dalla libreria dovrà essere preceduta da `std::`, per indicarne l'ambito. Ad esempio, senza tale riga, ogni riferimento a `cout` deve essere scritto come `std::cout`. L'istruzione `using` viene aggiunta per rendere il codice più pulito.
    > - La parola chiave `cout` viene usata per stampare in un output standard di C++. L'operatore **\<\<** indica al compilatore di inviare tutto ciò che si trova alla sua destra all'output standard.
    > - La parola chiave **endl** è simile al tasto INVIO, termina la riga e sposta il cursore nella riga successiva. È opportuno inserire un elemento `\n` all'interno della stringa (racchiuso tra "") per eseguire la stessa operazione, poiché `endl` svuota sempre il buffer e può influire negativamente sulle prestazioni del programma, ma dal momento che si tratta di un'app di dimensioni molto ridotte, si usa `endl` per migliorare la leggibilità.

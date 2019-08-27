@@ -2,12 +2,12 @@
 title: "Procedura: Usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)"
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510378"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630431"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedura: Usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)
 
@@ -151,7 +151,7 @@ La procedura seguente riguarda il caso in cui è presente una DLL nativa che esp
 
    **Esplora soluzioni** ora identifica il progetto come progetto Windows universale.
 
-5. Assicurarsi che il nome del file di intestazione precompilato sia corretto. Nella sezione **Intestazioni precompilate** modificare il **File di intestazione precompilato** da pch.h a stdafx.h. In caso contrario, visualizzato il seguente errore.
+5. Assicurarsi che il nome del file di intestazione precompilato sia corretto. Nella sezione **Intestazioni precompilate** modificare il **File di intestazione precompilato** da *pch.h* a *stdafx.h*. In caso contrario, visualizzato il seguente errore.
 
    > Errore C2857: istruzione '#include' specificata con l'opzione della riga di comando /Yc%s non trovata nel file di origine
 
@@ -165,7 +165,7 @@ La procedura seguente riguarda il caso in cui è presente una DLL nativa che esp
 
    In **Progetti** > **Soluzione** selezionare la casella di controllo accanto al progetto DLL e scegliere il pulsante **OK**.
 
-8. Includere i file di intestazione della libreria nel file pch.h dell'app UWP.
+8. Includere i file di intestazione della libreria nel file *pch.h* dell'app UWP.
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ Tuttavia, è possibile usare una libreria statica in una piattaforma UWP senza r
 
 1. Nelle proprietà di progetto per il progetto UWP, scegliere **Proprietà di configurazione** > **Linker** > **Input** nel riquadro di sinistra. Nel riquadro di destra aggiungere il percorso della libreria nella proprietà **Dipendenze aggiuntive**. Ad esempio, per una libreria del progetto che salva l'output in *SolutionFolder*\Debug\MyNativeLibrary\MyNativeLibrary.lib, aggiungere il relativo percorso`Debug\MyNativeLibrary\MyNativeLibrary.lib`.
 
-2. Aggiungere un'istruzione di inclusione per fare riferimento al file di intestazione nel file pch.h (se disponibile) o in un file con estensione cpp e iniziare ad aggiungere codice che usa la libreria.
+2. Aggiungere un'istruzione di inclusione per fare riferimento al file di intestazione nel file *pch.h* (se disponibile) o in un file con estensione cpp e iniziare ad aggiungere codice che usa la libreria.
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ Se si desidera utilizzare le API native in una libreria statica da un'app UWP e 
 
 5. Selezionare tutti i file da aggiungere dal progetto originale e scegliere **OK**. Se necessario, ripetere la procedura per le sottocartelle.
 
-6. È possibile ora avere codice duplicato. Se si dispone di più intestazioni precompilate (ad esempio, stdafx.h e pch.h), sceglierne una da mantenere. Copiare il codice necessario, ad esempio le istruzioni include, in quella che si sta mantenendo. Eliminare l'altra e in **Intestazioni precompilate** nelle proprietà del progetto assicurarsi che il nome del file di intestazione sia corretto.
+6. È possibile ora avere codice duplicato. Se si hanno più intestazioni precompilate (ad esempio, *stdafx.h* e *pch.h*), sceglierne una da mantenere. Copiare il codice necessario, ad esempio le istruzioni include, in quella che si sta mantenendo. Eliminare l'altra e in **Intestazioni precompilate** nelle proprietà del progetto assicurarsi che il nome del file di intestazione sia corretto.
 
    Se è stato modificato il file da utilizzare come intestazione precompilata, assicurarsi che le opzioni di intestazione precompilata siano corrette per ogni file. Selezionare, a turno, ogni file con estensione cpp, aprire la finestra delle proprietà e assicurarsi che tutte siano impostate su **Usa (/Yu)** , fatta eccezione per l'intestazione precompilata desiderata, che deve essere impostata su **Crea (/Yc)** .
 

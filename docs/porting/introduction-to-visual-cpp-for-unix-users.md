@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7f73e51e02eafe46c279a8f828803912d8cd190a
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448971"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631701"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introduzione a Visual C++ per utenti UNIX
 
@@ -57,7 +57,7 @@ Per disabilitare tutte le estensioni specifiche di Microsoft in C++, usare l'opz
 
 I compilatori Microsoft C e C++ includono opzioni per la precompilazione di codice C o C++ di qualsiasi tipo, incluso quello inline. Questa funzionalità avanzata consente di compilare un corpo di codice stabile, archiviare lo stato del codice compilato in un file e, durante le successive compilazioni, combinare il codice precompilato con quello ancora in fase di sviluppo. Le compilazioni successive risultano più veloci perché il codice stabile non deve essere ricompilato.
 
-Per impostazione predefinita, tutto il codice precompilato viene specificato nei file stdafx.h e stdafx.cpp. Questi file vengono creati automaticamente durante l'esecuzione della procedura guidata **Nuovo progetto** a meno che l'opzione **Intestazione precompilata** non venga deselezionata. Per altre informazioni sulle intestazioni precompilate, vedere [Creazione di file di intestazione precompilati](../build/creating-precompiled-header-files.md).
+Per impostazione predefinita, tutto il codice precompilato viene specificato nei file *pch.h* e *pch.cpp* (*stdafx.h* e *stdafx.cpp* in Visual Studio 2017 e versioni precedenti). Questi file vengono creati automaticamente durante l'esecuzione della procedura guidata **Nuovo progetto** a meno che l'opzione **Intestazione precompilata** non venga deselezionata. Per altre informazioni sulle intestazioni precompilate, vedere [Creazione di file di intestazione precompilati](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Sezioni correlate
 
