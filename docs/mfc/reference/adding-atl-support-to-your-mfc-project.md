@@ -7,37 +7,43 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: fba79db013cd9f4cc62ba5826b53e5fa9b15c83a
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741732"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108408"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Aggiunta del supporto ATL a un progetto MFC
 
-Se è già stato creato un'applicazione basata su MFC, quindi è possibile aggiungere il supporto per la libreria ATL (Active Template) facilmente tramite l'esecuzione di Aggiungi supporto ATL per la creazione guidata progetto MFC.
+Se è già stata creata un'applicazione basata su MFC, è possibile aggiungere facilmente il supporto per il Active Template Library (ATL) usando l'IDE.
 
 > [!NOTE]
->  ATL e MFC sono generalmente non è supportata nelle edizioni Express di Visual Studio.
+>  Questo supporto si applica solo a oggetti COM semplici aggiunti a un progetto DLL o un file eseguibile MFC. È possibile aggiungere altri oggetti COM (inclusi i controlli ActiveX) ai progetti MFC, ma gli oggetti potrebbero non funzionare come previsto.
 
-> [!NOTE]
->  Questo supporto si applica solo a oggetti COM semplici aggiunti a un progetto DLL o un file eseguibile MFC. È possibile aggiungere altri oggetti COM (inclusi i controlli ActiveX) per i progetti MFC, ma gli oggetti potrebbero non funzionare come previsto.
+::: moniker range=">=vs-2019"
 
-### <a name="to-add-atl-support-to-your-mfc-project"></a>Per aggiungere il supporto ATL a un progetto MFC
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse sul nodo del progetto.
 
-1. In Esplora soluzioni fare doppio clic su progetto a cui si desidera aggiungere supporto per ATL.
+1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Nuovo elemento**.
+
+1. Scegliere **ATL** nel riquadro sinistro, quindi scegliere **supporto ATL** nel riquadro centrale.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-add-atl-support-to-your-mfc-project"></a>Per aggiungere il supporto ATL al progetto MFC
+
+1. In Esplora soluzioni fare clic con il pulsante destro del mouse sul nodo del progetto.
 
 1. Scegliere **Aggiungi** dal menu di scelta rapida e quindi fare clic su **Aggiungi classe**.
 
-1. Selezionare il **Aggiungi supporto ATL a MFC** icona.
+1. Selezionare **ATL** nel riquadro sinistro, quindi scegliere **Aggiungi supporto ATL al progetto MFC** nel riquadro centrale.
 
-    > [!NOTE]
-    >  Questa icona si trova nella cartella ATL il **categorie** riquadro.
+::: moniker-end
 
-1. Quando richiesto, fare clic su **Sì** per aggiungere il supporto ATL.
-
-Per altre informazioni su come l'aggiunta del supporto ATL Cambia codice del progetto MFC, vedere [dettagli sul supporto ATL aggiunto dalla procedura guidata ATL](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
+Per ulteriori informazioni sull'aggiunta del supporto ATL alla modifica del codice del progetto MFC, vedere la pagina relativa ai [Dettagli del supporto ATL aggiunto dalla procedura guidata ATL](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
 
 ## <a name="see-also"></a>Vedere anche
 

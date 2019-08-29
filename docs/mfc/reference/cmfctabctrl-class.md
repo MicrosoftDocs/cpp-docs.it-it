@@ -1,6 +1,6 @@
 ---
 title: CMFCTabCtrl Class
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504879"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108494"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -336,7 +336,7 @@ TRUE se l'operazione ha esito positivo; in caso contrario, FALSE.
 
 Nella tabella seguente vengono descritti i valori che è possibile specificare per il parametro *Style* .
 
-|Style|DESCRIZIONE|
+|Style|Descrizione|
 |-----------|-----------------|
 |STYLE_3D|Crea un controllo struttura a schede con un aspetto tridimensionale.|
 |STYLE_FLAT|Crea un controllo struttura a schede con tabulazioni flat.|
@@ -348,7 +348,7 @@ Nella tabella seguente vengono descritti i valori che è possibile specificare p
 
 Nella tabella seguente sono elencati i valori che è possibile specificare per il parametro *location* .
 
-|Location|DESCRIZIONE|
+|Location|Descrizione|
 |--------------|-----------------|
 |LOCATION_BOTTOM|Le schede si trovano nella parte inferiore del controllo struttura a schede.|
 |LOCATION_TOP|Le schede si trovano nella parte superiore del controllo struttura a schede.|
@@ -846,7 +846,7 @@ Sempre TRUE.
 
 Il valore del parametro *Style* può essere una delle seguenti `CMFCTabCtrl::Style` enumerazioni.
 
-|Name|Descrizione|
+|Name|DESCRIZIONE|
 |----------|-----------------|
 |STYLE_3D|Visualizza le schede tridimensionali rettangolari con angoli arrotondati.|
 |STYLE_3D_ONENOTE|Visualizza le schede tridimensionali con un lato verticale e un lato inclinato e con angoli arrotondati.|
@@ -970,7 +970,7 @@ TRUE se la scheda specificata è stata resa attiva. FALSE se il valore del param
 
 ### <a name="remarks"></a>Note
 
-Questo metodo non invia la notifica AFX_WM_CHANGE_ACTIVE_TAB alla finestra padre del controllo struttura a schede.
+In questo modo `AFX_WM_CHANGE_ACTIVE_TAB` la notifica viene inviata alla finestra padre e al frame padre del controllo scheda.
 
 Il `SetActiveTab` metodo chiama automaticamente il metodo [CMFCTabCtrl:: HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) per impedire che lo schermo venga intermittente.
 
@@ -1078,7 +1078,7 @@ in Uno dei valori `CMFCTabCtrl::ResizeMode` di enumerazione che specifica il mod
 
 Il parametro *ResizeMode* può essere uno dei seguenti `ResizeMode` valori di enumerazione.
 
-|Name|DESCRIZIONE|
+|Name|Descrizione|
 |----------|-----------------|
 |RESIZE_NO|Impossibile ridimensionare il controllo struttura a schede.|
 |RESIZE_VERT|Il controllo struttura a schede può essere ridimensionato verticalmente, ma non orizzontalmente.|

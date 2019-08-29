@@ -3,19 +3,16 @@ title: Creazione del progetto (Esercitazione di ATL, parte 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 5bb4c6edffd13e13a451b203feea9a03461a9318
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630696"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108375"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Creazione del progetto (Esercitazione di ATL, parte 1)
 
 Questa esercitazione illustra in modo dettagliato un progetto ATL senza attributi che consente di creare un oggetto ActiveX che visualizza un poligono. L'oggetto include opzioni per consentire all'utente di modificare il numero di lati che compongono il poligono e il codice per aggiornare la visualizzazione.
-
-> [!NOTE]
-> ATL e MFC non sono in genere supportati nelle edizioni Express di Visual Studio.
 
 > [!NOTE]
 > Questa esercitazione crea lo stesso codice sorgente dell'esempio Polygon. Se si vuole evitare di immettere manualmente il codice sorgente, è possibile scaricarlo dall' [abstract di esempio Polygon](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). È quindi possibile fare riferimento al codice sorgente del poligono durante l'esercitazione oppure usarlo per verificare la presenza di errori nel progetto.
@@ -67,7 +64,7 @@ Visual Studio creerà il progetto generando diversi file. È possibile visualizz
 
 ::: moniker range=">=vs-2019"
 
-|File|DESCRIZIONE|
+|File|Descrizione|
 |----------|-----------------|
 |Polygon. cpp|Contiene l'implementazione di `DllMain`, `DllCanUnloadNow`, `DllGetClassObject` `DllRegisterServer`, e `DllUnregisterServer`. Contiene anche la mappa degli oggetti, ovvero un elenco degli oggetti ATL nel progetto. Inizialmente vuoto.|
 |Poligono. def|Questo file di definizione del modulo fornisce al linker le informazioni sulle esportazioni richieste dalla DLL.|
