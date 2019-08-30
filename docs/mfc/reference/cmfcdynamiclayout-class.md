@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCDynamicLayout
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CMFCDynamicLayout
 - AFXLAYOUT/CMFCDynamicLayout
@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1ddf35b514d9b89f53d5f1307a6ecb7132d2854
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237589"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177519"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Classe CMFCDynamicLayout
 
@@ -32,7 +32,7 @@ Specifica come i controlli in una finestra vengono spostati e ridimensionati qua
 class CMFCDynamicLayout : public CObject
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -54,22 +54,22 @@ class CMFCDynamicLayout : public CObject
 |[CMFCDynamicLayout::HasItem](#hasitem)|Controlla se al layout dinamico è stato aggiunto un controllo figlio.|
 |[CMFCDynamicLayout::IsEmpty](#isempty)|Controlla se un layout dinamico non dispone di finestre figlio aggiuntive.|
 |[CMFCDynamicLayout::LoadResource](#loadresource)|Legge il layout dinamico dalla risorsa AFX_DIALOG_LAYOUT e quindi applica il layout alla finestra host.|
-|static [CMFCDynamicLayout::MoveHorizontal](#movehorizontal)|Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|
-|static [CMFCDynamicLayout::MoveHorizontalAndVertical](#movehorizontalandvertical)|Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|
-|static [CMFCDynamicLayout::MoveNone](#movenone)|Ottiene un [MoveSettings](#movesettings_structure) valore che non rappresenta alcun movimento, orizzontale o verticale, per un controllo figlio.|
-|static [CMFCDynamicLayout::MoveVertical](#movevertical)|Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso verticale quando l'utente ridimensiona la finestra di hosting.|
+|[CMFCDynamicLayout statico:: MoveHorizontal](#movehorizontal)|Ottiene un valore [MoveSettings](#movesettings_structure) che definisce il numero di spostamenti in orizzontale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.|
+|[CMFCDynamicLayout statico:: MoveHorizontalAndVertical](#movehorizontalandvertical)|Ottiene un valore [MoveSettings](#movesettings_structure) che definisce il numero di spostamenti in orizzontale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.|
+|[CMFCDynamicLayout statico:: MoveNone](#movenone)|Ottiene un valore [MoveSettings](#movesettings_structure) che rappresenta nessun movimento, verticale o orizzontale, per un controllo figlio.|
+|[CMFCDynamicLayout statico:: MoveVertical](#movevertical)|Ottiene un valore [MoveSettings](#movesettings_structure) che definisce la quantità di spostamento in verticale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.|
 |[CMFCDynamicLayout::SetMinSize](#setminsize)|Imposta le dimensioni finestra al di sotto delle quali il layout non verrà regolato.|
-|static [CMFCDynamicLayout::SizeHorizontal](#sizehorizontal)|Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|
-|static [CMFCDynamicLayout::SizeHorizontalAndVertical](#sizehorizontalandvertical)|Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.|
-|static [CMFCDynamicLayout::SizeNone](#sizenone)|Ottiene un [SizeSettings](#sizesettings_structure) valore che non rappresenta alcuna modifica nelle dimensioni di un controllo figlio.|
-|static [CMFCDynamicLayout::SizeVertical](#sizevertical)|Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso verticale quando l'utente ridimensiona la finestra di hosting.|
+|[CMFCDynamicLayout statico:: SizeHorizontal](#sizehorizontal)|Ottiene un valore [SizeSettings](#sizesettings_structure) che definisce la quantità di ridimensionamento orizzontale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.|
+|static [CMFCDynamicLayout::SizeHorizontalAndVertical](#sizehorizontalandvertical)|Ottiene un valore [SizeSettings](#sizesettings_structure) che definisce la quantità di ridimensionamento orizzontale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.|
+|static [CMFCDynamicLayout::SizeNone](#sizenone)|Ottiene un valore [SizeSettings](#sizesettings_structure) che non rappresenta alcuna modifica delle dimensioni per un controllo figlio.|
+|static [CMFCDynamicLayout::SizeVertical](#sizevertical)|Ottiene un valore [SizeSettings](#sizesettings_structure) che definisce la quantità di ridimensionamento verticale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.|
 
 ## <a name="nested-types"></a>Tipi annidati
 
-|Nome|Descrizione|
+|Name|DESCRIZIONE|
 |----------|-----------------|
-|[CMFCDynamicLayout::MoveSettings Structure](#movesettings_structure)|Incapsula i dati di spostamento per i controlli in un layout dinamico.|
-|[CMFCDynamicLayout::SizeSettings Structure](#sizesettings_structure)|Incapsula i dati di modifica delle dimensioni per i controlli in un layout dinamico.|
+|[Struttura CMFCDynamicLayout:: MoveSettings](#movesettings_structure)|Incapsula i dati di spostamento per i controlli in un layout dinamico.|
+|[Struttura CMFCDynamicLayout:: SizeSettings](#sizesettings_structure)|Incapsula i dati di modifica delle dimensioni per i controlli in un layout dinamico.|
 
 ## <a name="remarks"></a>Note
 
@@ -259,7 +259,7 @@ TRUE se la risorsa è caricata e applicata alla finestra host. In caso contrario
 
 ##  <a name="movehorizontal"></a>  CMFCDynamicLayout::MoveHorizontal
 
-Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.
+Ottiene un valore [MoveSettings](#movesettings_structure) che definisce il numero di spostamenti in orizzontale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.
 
 ```
 static MoveSettings MoveHorizontal(int nRatio);
@@ -272,13 +272,13 @@ Definisce come percentuale la distanza di spostamento in orizzontale di un contr
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [MoveSettings](#movesettings_structure) rapporto di spostamento di valore che incapsula l'oggetto richiesto.
+Valore [MoveSettings](#movesettings_structure) che incapsula il rapporto di spostamento richiesto.
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="movehorizontalandvertical"></a>  CMFCDynamicLayout::MoveHorizontalAndVertical
 
-Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.
+Ottiene un valore [MoveSettings](#movesettings_structure) che definisce il numero di spostamenti in orizzontale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.
 
 ```
 static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
@@ -294,13 +294,13 @@ Definisce come percentuale la distanza di spostamento in verticale di un control
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [MoveSettings](#movesettings_structure) rapporto di spostamento di valore che incapsula l'oggetto richiesto.
+Valore [MoveSettings](#movesettings_structure) che incapsula il rapporto di spostamento richiesto.
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="movenone"></a>  CMFCDynamicLayout::MoveNone
 
-Ottiene un [MoveSettings](#movesettings_structure) valore che non rappresenta alcun movimento, orizzontale o verticale, per un controllo figlio.
+Ottiene un valore [MoveSettings](#movesettings_structure) che rappresenta nessun movimento, verticale o orizzontale, per un controllo figlio.
 
 ```
 static MoveSettings MoveNone();
@@ -308,11 +308,11 @@ static MoveSettings MoveNone();
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [MoveSettings](#movesettings_structure) valore che corregge il controllo sul posto, in modo che non si sposti quando l'utente ridimensiona la finestra host.
+Valore [MoveSettings](#movesettings_structure) che corregge il controllo sul posto, in modo che non venga spostato quando l'utente ridimensiona la finestra host.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="movesettings_structure"></a>  CMFCDynamicLayout::MoveSettings Structure
+##  <a name="movesettings_structure"></a>Struttura CMFCDynamicLayout:: MoveSettings
 
 Incapsula i dati di spostamento per i controlli in un layout dinamico.
 
@@ -350,7 +350,7 @@ TRUE se l'oggetto `MoveSettings` specifica l'assenza di spostamento.
 
 ## <a name="cmfcdynamiclayoutmovesettingsisvertical"></a>CMFCDynamicLayout::MoveSettings::IsVertical
 
-  Controlla se i dati di spostamento specificano uno spostamento verticale diverso da zero.
+Controlla se i dati di spostamento specificano uno spostamento verticale diverso da zero.
 
 ```
 BOOL IsVertical() const
@@ -362,7 +362,7 @@ TRUE se l'oggetto `MoveSettings` specifica uno spostamento verticale diverso da 
 
 ##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical
 
-Ottiene un [MoveSettings](#movesettings_structure) valore che definisce come un controllo figlio viene spostato in senso verticale quando l'utente ridimensiona la finestra di hosting.
+Ottiene un valore [MoveSettings](#movesettings_structure) che definisce la quantità di spostamento in verticale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.
 
 ```
 static MoveSettings MoveVertical(int nRatio);
@@ -375,7 +375,7 @@ Definisce come percentuale la distanza di spostamento in verticale di un control
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [MoveSettings](#movesettings_structure) rapporto di spostamento di valore che incapsula l'oggetto richiesto.
+Valore [MoveSettings](#movesettings_structure) che incapsula il rapporto di spostamento richiesto.
 
 ### <a name="remarks"></a>Note
 
@@ -398,7 +398,7 @@ Posizione e dimensioni di un controllo figlio quando viene modificato in modo di
 
 ##  <a name="sizehorizontal"></a>  CMFCDynamicLayout::SizeHorizontal
 
-Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.
+Ottiene un valore [SizeSettings](#sizesettings_structure) che definisce la quantità di ridimensionamento orizzontale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.
 
 ```
 static SizeSettings SizeHorizontal(int nRatio);
@@ -411,13 +411,13 @@ Definisce come percentuale l'estensione del ridimensionamento in orizzontale di 
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [SizeSettings](#sizesettings_structure) valore che incapsula il rapporto di dimensionamento richiesto.
+Valore [SizeSettings](#sizesettings_structure) che incapsula il rapporto delle dimensioni richiesto.
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="sizehorizontalandvertical"></a>  CMFCDynamicLayout::SizeHorizontalAndVertical
 
-Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso orizzontale quando l'utente ridimensiona la finestra di hosting.
+Ottiene un valore [SizeSettings](#sizesettings_structure) che definisce la quantità di ridimensionamento orizzontale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.
 
 ```
 static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
@@ -433,13 +433,13 @@ Definisce come percentuale l'estensione del ridimensionamento in verticale di un
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [SizeSettings](#sizesettings_structure) valore che incapsula il rapporto di dimensionamento richiesto.
+Valore [SizeSettings](#sizesettings_structure) che incapsula il rapporto delle dimensioni richiesto.
 
 ### <a name="remarks"></a>Note
 
 ##  <a name="sizenone"></a>  CMFCDynamicLayout::SizeNone
 
-Ottiene un [SizeSettings](#sizesettings_structure) valore che non rappresenta alcuna modifica nelle dimensioni di un controllo figlio.
+Ottiene un valore [SizeSettings](#sizesettings_structure) che non rappresenta alcuna modifica delle dimensioni per un controllo figlio.
 
 ```
 static SizeSettings SizeNone();
@@ -447,11 +447,11 @@ static SizeSettings SizeNone();
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [SizeSettings](#sizesettings_structure) valore che corregge il controllo a una determinata dimensione, in modo che non modifica le dimensioni quando l'utente ridimensiona la finestra host.
+Valore [SizeSettings](#sizesettings_structure) che corregge il controllo a una determinata dimensione, in modo che non modifichi le dimensioni quando l'utente ridimensiona la finestra host.
 
 ### <a name="remarks"></a>Note
 
-##  <a name="sizesettings_structure"></a>  CMFCDynamicLayout::SizeSettings Structure
+##  <a name="sizesettings_structure"></a>Struttura CMFCDynamicLayout:: SizeSettings
 
 Incapsula i dati di modifica delle dimensioni per i controlli in un layout dinamico.
 
@@ -501,7 +501,7 @@ TRUE se l'oggetto `SizeSettings` specifica un ridimensionamento verticale divers
 
 ##  <a name="sizevertical"></a>  CMFCDynamicLayout::SizeVertical
 
-Ottiene un [SizeSettings](#sizesettings_structure) valore che definisce come un controllo figlio viene ridimensionato in senso verticale quando l'utente ridimensiona la finestra di hosting.
+Ottiene un valore [SizeSettings](#sizesettings_structure) che definisce la quantità di ridimensionamento verticale di un controllo figlio quando l'utente ridimensiona la finestra di hosting.
 
 ```
 static SizeSettings SizeVertical(int nRatio);
@@ -514,7 +514,7 @@ Definisce come percentuale l'estensione del ridimensionamento in verticale di un
 
 ### <a name="return-value"></a>Valore restituito
 
-Oggetto [SizeSettings](#sizesettings_structure) valore che incapsula il rapporto di dimensionamento richiesto.
+Valore [SizeSettings](#sizesettings_structure) che incapsula il rapporto delle dimensioni richiesto.
 
 ### <a name="remarks"></a>Note
 

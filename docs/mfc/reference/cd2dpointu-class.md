@@ -1,6 +1,6 @@
 ---
 title: Classe CD2DPointF
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DPointU
 - AFXRENDERTARGET/CD2DPointU
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointU [MFC], CD2DPointU
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
-ms.openlocfilehash: d66793abbb83015891df348eef8384e5c97baf2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6289d33aa0672d1ee423d91b11527dccfc868da7
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396314"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177173"
 ---
 # <a name="cd2dpointu-class"></a>Classe CD2DPointF
 
@@ -25,19 +25,19 @@ Wrapper per `D2D1_POINT_2U`.
 class CD2DPointU : public D2D1_POINT_2U;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DPointU::CD2DPointU](#cd2dpointu)|Di overload. Costruisce un `CD2DPointU` dall'oggetto `D2D1_POINT_2U` oggetto.|
+|[CD2DPointU::CD2DPointU](#cd2dpointu)|Di overload. Costruisce un `CD2DPointU` `D2D1_POINT_2U` oggetto da un oggetto.|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[CPoint CD2DPointU::operator](#operator_cpoint)|Consente di convertire `CD2DPointU` a `CPoint` oggetto.|
+|[CD2DPointU:: operator CPoint](#operator_cpoint)|Converte `CD2DPointU` in`CPoint` Object.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -56,7 +56,7 @@ Costruisce un oggetto CD2DPointU dall'oggetto CPoint.
 ```
 CD2DPointU(const CPoint& pt);
 CD2DPointU(const D2D1_POINT_2U& pt);
-  CD2DPointU(const D2D1_POINT_2U* pt);
+CD2DPointU(const D2D1_POINT_2U* pt);
 CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 ```
 
@@ -71,9 +71,9 @@ origine X
 *uY*<br/>
 origine Y
 
-##  <a name="operator_cpoint"></a>  CPoint CD2DPointU::operator
+##  <a name="operator_cpoint"></a>CD2DPointU:: operator CPoint
 
-Converte un oggetto CPoint CD2DPointU.
+Converte CD2DPointU in un oggetto CPoint.
 
 ```
 operator CPoint();

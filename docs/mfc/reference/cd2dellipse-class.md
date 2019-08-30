@@ -1,6 +1,6 @@
 ---
 title: Classe CD2DEllipse
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DEllipse
 - AFXRENDERTARGET/CD2DEllipse
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 3abf0736884840be7bdcfcd55cb18a0bc8e69195
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391270"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177216"
 ---
 # <a name="cd2dellipse-class"></a>Classe CD2DEllipse
 
@@ -25,13 +25,13 @@ Wrapper per `D2D1_ELLIPSE`.
 class CD2DEllipse : public D2D1_ELLIPSE;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Di overload. Costruisce un `CD2DEllipse` dall'oggetto `D2D1_ELLIPSE` oggetto.|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Di overload. Costruisce un `CD2DEllipse` oggetto da `D2D1_ELLIPSE` un oggetto.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -43,14 +43,14 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 **Intestazione:** afxrendertarget. h
 
-##  <a name="cd2dellipse"></a>  CD2DEllipse::CD2DEllipse
+##  <a name="cd2dellipse"></a>CD2DEllipse:: CD2DEllipse
 
 Costruisce un oggetto CD2DEllipse dall'oggetto CD2DRectF.
 
 ```
 CD2DEllipse(const CD2DRectF& rect);
 CD2DEllipse(const D2D1_ELLIPSE& ellipse);
-  CD2DEllipse(const D2D1_ELLIPSE* ellipse);
+CD2DEllipse(const D2D1_ELLIPSE* ellipse);
 
 CD2DEllipse(
     const CD2DPointF& ptCenter,
@@ -66,10 +66,10 @@ rettangolo di origine
 ellisse di origine
 
 *ptCenter*<br/>
-Il punto centrale dell'ellisse.
+Punto centrale dell'ellisse.
 
 *sizeRadius*<br/>
-Il raggio X e raggio Y dell'ellisse.
+Raggio X e raggio Y dell'ellisse.
 
 ## <a name="see-also"></a>Vedere anche
 

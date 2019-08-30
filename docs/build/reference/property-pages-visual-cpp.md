@@ -1,6 +1,6 @@
 ---
-title: C++Guida di riferimento alle pagine delle proprietà del progetto-Visual Studio
-ms.date: 07/24/2019
+title: Informazioni C++ di riferimento sulle pagine delle proprietà del progetto Windows-Visual Studio
+ms.date: 08/28/2019
 helpviewer_keywords:
 - project-file macro
 - project properties [C++], default values
@@ -12,16 +12,20 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: d425cc6c5c6a2a8934c026174f396cb01bc3a9b7
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c9fd4fc00e86e0660972fc0bd37b66b2fea02ee0
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606395"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177457"
 ---
-# <a name="c-project-property-page-reference"></a>C++riferimento alla pagina delle proprietà del progetto
+# <a name="windows-c-project-property-page-reference"></a>Riferimento C++ alla pagina delle proprietà del progetto Windows
 
-In Visual Studio è possibile specificare le opzioni del compilatore e del linker, i percorsi di file e altre impostazioni di compilazione tramite le pagine delle proprietà per il progetto. Per aprire le **pagine delle proprietà**, scegliere**Proprietà** **progetto** > dal menu principale oppure fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**. Per altre informazioni sulle proprietà del progetto, [vedere C++ impostare le proprietà del compilatore e della compilazione in Visual Studio](../working-with-project-properties.md).
+In Visual Studio è possibile specificare le opzioni del compilatore e del linker, i percorsi di file e altre impostazioni di compilazione tramite le pagine delle proprietà per il progetto. Le proprietà e le pagine delle proprietà disponibili dipendono dal tipo di progetto. Un progetto makefile, ad esempio, include una pagina delle proprietà NMake, che non è presente in un progetto console MFC o Win32. Per aprire le **pagine delle proprietà**, scegliere**Proprietà** **progetto** > dal menu principale oppure fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**. I singoli file dispongono anche di pagine delle proprietà che consentono di impostare le opzioni di compilazione e compilazione solo per quel file. Nella figura seguente vengono illustrate le pagine delle proprietà per un progetto MFC.
+
+![Pagine delle proprietà C++ per il progetto](media/example-prop-page.png)
+
+In questa sezione viene fornito un riferimento rapido per le pagine delle proprietà. Le opzioni e le impostazioni esposte nelle pagine delle proprietà sono documentate più completamente nei propri argomenti e sono collegate dagli argomenti della pagina delle proprietà. Per altre informazioni sulle proprietà del progetto, [vedere C++ impostare le proprietà del compilatore e della compilazione in Visual Studio](../working-with-project-properties.md).
 
 Per le pagine delle proprietà nei progetti Linux, vedere informazioni di [riferimento sulla pagina delle proprietà di Linux C++ ](../../linux/prop-pages-linux.md).
 
@@ -48,4 +52,5 @@ Per le pagine delle proprietà nei progetti Linux, vedere informazioni di [rifer
 ## <a name="see-also"></a>Vedere anche
 
 [Procedura: Creare e rimuovere dipendenze del progetto](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br/>
-[Procedura: Creare e modificare le configurazioni](/visualstudio/ide/how-to-create-and-edit-configurations)
+[Procedura: Creare e modificare le configurazioni](/visualstudio/ide/how-to-create-and-edit-configurations)<br/>
+[Riferimento C++ alla pagina delle proprietà di Linux](../../linux/prop-pages-linux.md)

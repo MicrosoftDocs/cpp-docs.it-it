@@ -1,6 +1,6 @@
 ---
 title: Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - builds [C++], events
 - custom build steps [C++], customizing builds
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 93a1c787a863c2c52986a00fdeabbc4d44b0fcce
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400455"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177321"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione
 
@@ -38,7 +38,7 @@ Nell'ambiente di sviluppo Visual C++ esistono tre modi principali per personaliz
 
 Anche il formato di output di un'istruzione o un evento di compilazione personalizzato può migliorare l'usabilità dello strumento. Per altre informazioni, vedere [Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione](formatting-the-output-of-a-custom-build-step-or-build-event.md).
 
-Gli eventi di compilazione e le istruzioni di compilazione personalizzate vengono eseguiti nell'ordine seguente insieme ad altre operazioni di compilazione:
+Per ogni progetto in una soluzione, gli eventi di compilazione e le istruzioni di compilazione personalizzate vengono eseguiti nell'ordine seguente insieme ad altri passaggi di compilazione:
 
 1. Evento di pre-compilazione
 

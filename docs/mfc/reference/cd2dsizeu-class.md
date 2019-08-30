@@ -1,6 +1,6 @@
 ---
 title: Classe CD2DSizeU
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DSizeU
 - AFXRENDERTARGET/CD2DSizeU
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-ms.openlocfilehash: f6b0bc12933100c6f2401f4f4cb9e1fae52dda65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45625331d0c1be8ca7c663d12c53516dc7bd77c7
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396249"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177194"
 ---
 # <a name="cd2dsizeu-class"></a>Classe CD2DSizeU
 
-Un wrapper per D2D1_SIZE_U.
+Wrapper per D2D1_SIZE_U.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -27,25 +27,25 @@ Un wrapper per D2D1_SIZE_U.
 class CD2DSizeU : public D2D1_SIZE_U;
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Di overload. Costruisce un `CD2DSizeU` dall'oggetto `D2D1_SIZE_U` oggetto.|
+|[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Di overload. Costruisce un `CD2DSizeU` oggetto da `D2D1_SIZE_U` un oggetto.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DSizeU::IsNull](#isnull)|Restituisce un **booleana** valore che indica se un'espressione non contiene dati validi (NULL).|
+|[CD2DSizeU::IsNull](#isnull)|Restituisce un valore booleano che indica se un'espressione non contiene dati validi (null).|
 
 ### <a name="public-operators"></a>Operatori pubblici
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[CD2DSizeU::operator CSize](#operator_csize)|Consente di convertire `CD2DSizeU` a `CSize` oggetto.|
+|[CD2DSizeU:: operator CSize](#operator_csize)|Converte `CD2DSizeU` in`CSize` Object.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -64,7 +64,7 @@ Costruisce un oggetto CD2DSizeU dall'oggetto CSize.
 ```
 CD2DSizeU(const CSize& size);
 CD2DSizeU(const D2D1_SIZE_U& size);
-  CD2DSizeU(const D2D1_SIZE_U* size);
+CD2DSizeU(const D2D1_SIZE_U* size);
 
 CD2DSizeU(
     UINT32 cx = 0,
@@ -74,17 +74,17 @@ CD2DSizeU(
 ### <a name="parameters"></a>Parametri
 
 *size*<br/>
-dimensioni di origine
+dimensioni origine
 
 *cx*<br/>
-larghezza di origine
+Larghezza origine
 
 *cy*<br/>
 altezza di origine
 
 ##  <a name="isnull"></a>  CD2DSizeU::IsNull
 
-Restituisce un valore booleano che indica se un'espressione non contiene dati validi (Null).
+Restituisce un valore booleano che indica se un'espressione non contiene dati validi (null).
 
 ```
 BOOL IsNull() const;
@@ -92,11 +92,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-TRUE se la larghezza e altezza sono vuote; in caso contrario, FALSE.
+TRUE se la larghezza e l'altezza sono vuote. in caso contrario, FALSE.
 
-##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize
+##  <a name="operator_csize"></a>CD2DSizeU:: operator CSize
 
-Converte un oggetto CSize CD2DSizeU.
+Converte CD2DSizeU in un oggetto CSize.
 
 ```
 operator CSize();
