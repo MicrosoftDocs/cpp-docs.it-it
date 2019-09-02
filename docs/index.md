@@ -4,12 +4,13 @@ title: Documentazione di Visual C++
 description: Informazioni su come usare C++ per lo sviluppo di applicazioni, servizi e strumenti per piattaforme e dispositivi.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.topic: hub-page
+ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65789009"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177494"
 ---
 <div id="main" class="v2">
     <div class="container">
