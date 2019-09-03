@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: ae2830d58bb992a4ff065aa0e53085a490eb90d7
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 6d9ee71e2608c2ed4935e7a5a3c54af45921e5d2
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400945"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108403"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Procedura dettagliata: Uso di progetti e soluzioni (C++)
 
@@ -36,7 +36,7 @@ Per creare un progetto, è innanzitutto necessario scegliere un modello del tipo
 
 1. Dal menu principale scegliere **File** > **Nuovo** > **Progetto** per aprire la finestra di dialogo **Crea nuovo progetto**.
 
-1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**. 
+1. Nella parte superiore della finestra di dialogo impostare **Linguaggio** su **C++** , impostare **Piattaforma** su **Windows** e impostare **Tipo di progetto** su **Console**.
 
 1. Nell'elenco filtrato dei tipi di progetto scegliere **App console** e quindi scegliere **Avanti**. Nella pagina successiva, immettere *Game* come nome per il progetto.
 
