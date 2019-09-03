@@ -1,6 +1,6 @@
 ---
 title: __incgsbyte, __incgsword, __incgsdword, __incgsqword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __incgsdword
 - __incgsqword_cpp
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: 3b96fbdb343fa40b6615ac7f91f83099a294624c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b4e88b4ccd2cf1d2a3130e3a535de1c9a434320
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264023"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217802"
 ---
-# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
+# <a name="__incgsbyte-__incgsword-__incgsdword-__incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 
 **Sezione specifica Microsoft**
 
-Aggiungerne uno per il valore in una posizione di memoria specificata da un offset rispetto all'inizio del `GS` segmento.
+Aggiungerne uno al valore in una posizione di memoria specificata da un offset relativo all'inizio del `GS` segmento.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __incgsbyte(
    unsigned long Offset
 );
@@ -46,10 +46,10 @@ void __incgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Offset*<br/>
-[in] L'offset dall'inizio del `GS`.
+*Offset*\
+in Offset dall'inizio di `GS`.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -60,15 +60,17 @@ void __incgsqword(
 |`__incgsdword`|X64|
 |`__incgsqword`|X64|
 
+**File di intestazione** \<> intrin. h
+
 ## <a name="remarks"></a>Note
 
-Queste routine sono disponibili solo come funzione intrinseca.
+Queste routine sono disponibili solo come intrinseci.
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)<br/>
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
+[\__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)\
+[\__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[\__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __movsw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263204"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221717"
 ---
-# <a name="movsw"></a>__movsw
+# <a name="__movsw"></a>__movsw
 
 **Sezione specifica Microsoft**
 
-Genera una stringa di spostare (`rep movsw`) (istruzione).
+Genera un'istruzione Move String`rep movsw`().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __movsw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
-[out] La destinazione dell'operazione.
+*Destinazione*\
+out Destinazione dell'operazione.
 
-*Origine*<br/>
-[in] L'origine dell'operazione.
+*Source*\
+in Origine dell'operazione.
 
-*Conteggio*<br/>
-[in] Il numero di parole da copiare.
+*Conteggio*\
+in Numero di parole da copiare.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,17 +48,17 @@ void __movsw(
 |---------------|------------------|
 |`__movsw`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Il risultato è che il primo `Count` parole a cui punta `Source` vengono copiati il `Dest` stringa.
+Il risultato è che le prime parole di *conteggio* a cui punta l' *origine* vengono copiate nella stringa di *destinazione* .
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // movsw.cpp
 // processor: x86, x64
 #include <stdio.h>

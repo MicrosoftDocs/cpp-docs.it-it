@@ -1,41 +1,41 @@
 ---
 title: _mm_stream_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_stream_si64x
 helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: d7f7a75be1602fbb70a230b0dd3a791be99d092a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396639"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221752"
 ---
-# <a name="mmstreamsi64x"></a>_mm_stream_si64x
+# <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
 **Sezione specifica Microsoft**
 
-Genera il MOVNTI (istruzione). Scrive i dati `Source` in una posizione di memoria specificata da `Dest`, senza inquinare le cache.
+Genera l'istruzione MOVNTI. Scrive i dati nell' *origine* in una posizione di memoria specificata dalla *destinazione*, senza inquinare le cache.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void _mm_stream_si64x(
-   __int64 * Dest,
+   __int64 * Destination,
    __int64 Source
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
-[out] Puntatore alla posizione in cui scrivere i dati di origine.
+*Destinazione*\
+out Puntatore alla posizione in cui scrivere i dati di origine.
 
-*Origine*<br/>
-[in] I dati da scrivere.
+*Source*\
+in Dati da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -43,7 +43,7 @@ void _mm_stream_si64x(
 |---------------|------------------|
 |`_mm_stream_si64x`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 

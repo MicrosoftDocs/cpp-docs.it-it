@@ -1,36 +1,35 @@
 ---
 title: __sidt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __sidt
 helpviewer_keywords:
 - sidt instruction
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-ms.openlocfilehash: 88dbb4713577fcf224e1c5646bf4c38b2a1dfafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b685da0e02373307a3149c5b7b28213f37ad40
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390321"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222329"
 ---
-# <a name="sidt"></a>__sidt
+# <a name="__sidt"></a>__sidt
 
 **Sezione specifica Microsoft**
 
-Archivia il valore del Registro di tabella del descrittore di interrupt (IDTR) nella posizione di memoria specificata.
+Archivia il valore del registro della tabella del descrittore di interrupt (IDTR) nella posizione di memoria specificata.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __sidt(void * Destination);
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*Destinazione*|[in] Puntatore alla posizione di memoria in cui è archiviato il IDTR.|
+*Destinazione*\
+in Puntatore alla posizione di memoria in cui è archiviato il IDTR.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -38,15 +37,15 @@ void __sidt(void * Destination);
 |---------------|------------------|
 |`__sidt`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-La funzione `__sidt` è equivalente alle `SIDT` istruzioni in linguaggio macchina. Per altre informazioni, cercare il documento, "architettura Intel Software Developer Manual, il Volume 2: Istruzione Set Reference,"al [Intel Corporation](https://software.intel.com/articles/intel-sdm) sito.
+La funzione `__sidt` è equivalente alle `SIDT` istruzioni in linguaggio macchina. Per ulteriori informazioni, cercare il documento "Intel Architecture Software Developer ' s Manual, volume 2: Riferimento al set di istruzioni "nel sito [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [__lidt](../intrinsics/lidt.md)

@@ -1,6 +1,6 @@
 ---
-title: optimize
-ms.date: 11/04/2016
+title: Pragma optimize
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.optimize
 - optimize_CPP
@@ -8,57 +8,53 @@ helpviewer_keywords:
 - pragmas, optimize
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
-ms.openlocfilehash: 9f5240fc59f59a71ddb3d18b67fadf3463a0d1ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7b99b7a72c133d56a209cf42fa9ef670a4a7f9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328172"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220510"
 ---
-# <a name="optimize"></a>optimize
+# <a name="optimize-pragma"></a>Pragma optimize
 
-Specifica le ottimizzazioni da eseguire in base a ogni singola funzione.
+Specifica le ottimizzazioni in base alla funzione.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-#pragma optimize( "[optimization-list]", {on | off} )
-```
+> **#pragma optimize ("** [ *Optimization-list* ] **",** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Note
 
-Il **ottimizzare** pragma deve trovarsi all'esterno di una funzione e viene applicato alla prima funzione definita dopo che viene individuato il pragma. Il *sul* e *off* argomenti attivare le opzioni specificate nel *optimization-list* attiva o disattiva.
+Il pragma optimize deve trovarsi all'esterno di una funzione. Viene applicata alla prima funzione definita dopo che il pragma è stato individuato. Gli argomenti **on** e **off** attivano o disattivano le opzioni specificate nell' *elenco di ottimizzazione* .
 
-Il *optimization-list* può essere zero o più parametri riportati nella tabella seguente.
+L' *elenco di ottimizzazione* può essere costituito da zero o più parametri indicati nella tabella seguente.
 
 ### <a name="parameters-of-the-optimize-pragma"></a>Parametri di Pragma optimize
 
-|Parametro/i|Tipo di ottimizzazione|
+| Parametro/i | Tipo di ottimizzazione |
 |--------------------|--------------------------|
-|*g*|Abilita le ottimizzazioni globali.|
-|*s* o *t*|Specificare sequenze brevi o veloci di codice macchina.|
-|*y*|Generare i puntatori ai frame nello stack del programma.|
+| **g** | Abilita le ottimizzazioni globali. |
+| **s** o **t** | Specificare sequenze brevi o veloci di codice macchina. |
+| **y** | Generare i puntatori ai frame nello stack del programma. |
 
-Queste sono le stesse lettere utilizzate con il [/O](../build/reference/o-options-optimize-code.md) opzioni del compilatore. Ad esempio, il pragma seguente rappresenta l'equivalente dell'opzione del compilatore `/Os`:
+Questi parametri sono le stesse lettere utilizzate con le opzioni [/o](../build/reference/o-options-optimize-code.md) del compilatore. Ad esempio, il pragma seguente rappresenta l'equivalente dell'opzione del compilatore `/Os`:
 
+```cpp
+#pragma optimize( "s", on )
 ```
-#pragma optimize( "ts", on )
-```
 
-Usando il **ottimizzare** pragma con una stringa vuota (**""**) è un formato speciale della direttiva:
+L'utilizzo del pragma optimize con la stringa vuota ( **""** ) è un formato speciale della direttiva:
 
-Quando si usa la *off* parametro, viene trasformato tutte le ottimizzazioni *g*, *s*, *t*, e *y*, impostata su off.
+Quando si usa il parametro **off** , vengono attivate tutte le ottimizzazioni **, g**, **s**, **t**e **y**, off.
 
-Quando si usa la *sul* parametro, vengono ripristinati le ottimizzazioni che è stato specificato con il [/O](../build/reference/o-options-optimize-code.md) opzione del compilatore.
+Quando si usa il parametro **on** , vengono reimpostate le ottimizzazioni per quelle specificate tramite l'opzione del compilatore [/o](../build/reference/o-options-optimize-code.md) .
 
-```
+```cpp
 #pragma optimize( "", off )
-.
-.
-.
+/* unoptimized code section */
 #pragma optimize( "", on )
 ```
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

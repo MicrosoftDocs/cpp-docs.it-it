@@ -1,48 +1,46 @@
 ---
-title: high_property_prefixes
-ms.date: 10/18/2018
+title: attributo di importazione high_property_prefixes
+ms.date: 08/29/2019
 f1_keywords:
 - high_property_prefixes
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44f6f1afae479f803f4c6d866ef3ee38744561
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409838"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219010"
 ---
-# <a name="highpropertyprefixes"></a>high_property_prefixes
+# <a name="high_property_prefixes-import-attribute"></a>attributo di importazione high_property_prefixes
 
-**Sezione specifica C++**
+**C++Specifico**
 
 Specifica i prefissi alternativi per tre metodi della proprietà.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import** *libreria di tipi* **high_property_prefixes (** "*getPrefix*" **,** "*PutPrefix*" **,** "*PutRefPrefix*" **)**
 
 ### <a name="parameters"></a>Parametri
 
-*GetPrefix*<br/>
-Prefisso da utilizzare per il `propget` metodi.
+*GetPrefix*\
+Prefisso da utilizzare per i `propget` metodi.
 
-*PutPrefix*<br/>
-Prefisso da utilizzare per il `propput` metodi.
+*PutPrefix*\
+Prefisso da utilizzare per i `propput` metodi.
 
-*PutRefPrefix*<br/>
-Prefisso da utilizzare per il `propputref` metodi.
+*PutRefPrefix*\
+Prefisso da utilizzare per i `propputref` metodi.
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita, gestione degli errori di alto livello `propget`, `propput`, e `propputref` metodi vengono esposti dalle funzioni membro denominate con i prefissi `Get`, `Put`, e `PutRef`, rispettivamente.
+Per impostazione predefinita, i metodi, e `propget` `propputref` per la `propput`gestione degli errori di alto livello vengono esposti dalle funzioni membro denominate rispettivamente `PutRef`con i prefissi `Get`, `Put`e.
 
-**Fine sezione specifica C++**
+**Specifico C++ finale**
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

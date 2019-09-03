@@ -1,41 +1,41 @@
 ---
 title: _mm_cvtss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtss_si64x
 helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6079ed7846a35ff16355f0341d63430f9846057f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263334"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217427"
 ---
-# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+# <a name="_mm_cvtss_si64x"></a>_mm_cvtss_si64x
 
 **Sezione specifica Microsoft**
 
-Genera l'errore x64 estesi versione del convertire valore scalare singolo precisione numero a virgola mobile a valore Integer a 64 bit (`cvtss2si`) (istruzione).
+Genera la versione estesa x64 del numero a virgola mobile con precisione singola scalare convertito nell'istruzione integer`cvtss2si`a 64 bit ().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 __int64 _mm_cvtss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*value*<br/>
-[in] Un `__m128` struttura che contiene i valori a virgola mobile.
+*value*\
+in `__m128` Struttura che contiene i valori a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Un intero a 64 bit, il risultato della conversione del primo valore a virgola mobile a un integer.
+Intero a 64 bit, il risultato della conversione del primo valore a virgola mobile in un numero intero.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -43,17 +43,17 @@ Un intero a 64 bit, il risultato della conversione del primo valore a virgola mo
 |---------------|------------------|
 |`_mm_cvtss_si64x`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Il primo elemento del valore della struttura viene convertito in un numero intero e restituito. I bit del controllo arrotondamento nel registro MXCSR vengono utilizzati per determinare la modalità di arrotondamento. Il valore predefinito modalità di arrotondamento è arrotondamento al più vicino, arrotondamento al numero pari se la parte decimale è 0,5. Poiché il `__m128` struttura rappresenta un registro XMM, questa funzione intrinseca accetta un valore dal registro XMM e lo scrive in memoria di sistema.
+Il primo elemento del valore della struttura viene convertito in un Integer e restituito. I bit di controllo di arrotondamento in MXCSR vengono utilizzati per determinare il comportamento di arrotondamento. La modalità di arrotondamento predefinita è arrotondata al più vicino, arrotondando al numero pari se la parte decimale è 0,5. Poiché la `__m128` struttura rappresenta un registro XMM, il valore intrinseco accetta un valore dal registro XMM e lo scrive nella memoria di sistema.
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // _mm_cvtss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -89,5 +89,5 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[__m128d](../cpp/m128d.md)<br/>
+[__m128d](../cpp/m128d.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

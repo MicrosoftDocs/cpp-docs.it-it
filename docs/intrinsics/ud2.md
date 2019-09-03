@@ -1,20 +1,20 @@
 ---
 title: __ud2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ud2
 helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390178"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219765"
 ---
-# <a name="ud2"></a>__ud2
+# <a name="__ud2"></a>__ud2
 
 **Sezione specifica Microsoft**
 
@@ -22,15 +22,15 @@ Genera un'istruzione non definita.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __ud2();
 ```
 
 ## <a name="remarks"></a>Note
 
-L'elaboratore genera un'eccezione opcode non è valido se si esegue un'istruzione non definita.
+Quando si esegue un'istruzione non definita, il processore genera un'eccezione opcode non valida.
 
-Il `__ud2` è equivalente alla funzione il `UD2` istruzioni in linguaggio macchina ed è disponibile solo in modalità kernel. Per altre informazioni, cercare il documento, "architettura Intel Software Developer Manual, il Volume 2: Istruzione Set Reference,"al [Intel Corporation](https://software.intel.com/articles/intel-sdm) sito.
+La `__ud2` funzione è equivalente all'istruzione `UD2` del computer ed è disponibile solo in modalità kernel. Per ulteriori informazioni, cercare il documento "Intel Architecture Software Developer ' s Manual, volume 2: Riferimento al set di istruzioni "nel sito [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -38,15 +38,15 @@ Il `__ud2` è equivalente alla funzione il `UD2` istruzioni in linguaggio macchi
 |---------------|------------------|
 |`__ud2`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente viene eseguita un'istruzione non definita, che genera un'eccezione. Il gestore di eccezioni modifica quindi il codice restituito compreso tra zero e uno.
+Nell'esempio seguente viene eseguita un'istruzione non definita, che genera un'eccezione. Il gestore di eccezioni modifica quindi il codice restituito da zero a uno.
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>

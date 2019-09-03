@@ -1,6 +1,6 @@
 ---
 title: Funzioni intrinseche _InterlockedXor
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedXor_nf
 - _InterlockedXor_np
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-ms.openlocfilehash: c86a743df84df37ffe3234d82d79abd987a4dcda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22cb9edd5fa4ffd8ffae7363ab07dc48f519fff0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396691"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221911"
 ---
-# <a name="interlockedxor-intrinsic-functions"></a>Funzioni intrinseche _InterlockedXor
+# <a name="_interlockedxor-intrinsic-functions"></a>Funzioni intrinseche _InterlockedXor
 
 **Sezione specifica Microsoft**
 
@@ -49,7 +49,7 @@ Eseguire un'operazione atomica esclusiva bit per bit o (XOR) su una variabile co
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 long _InterlockedXor(
    long volatile * Value,
    long Mask
@@ -148,13 +148,13 @@ __int64 _InterlockedXor64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Valore*<br/>
-[in, out] Puntatore al primo operando, da sostituire con il risultato.
+*Valore*\
+[in, out] Puntatore al primo operando, che deve essere sostituito dal risultato.
 
-*Maschera*<br/>
-[in] Il secondo operando.
+*Maschera*\
+in Secondo operando.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -164,16 +164,18 @@ Valore originale del primo operando.
 
 |Funzione intrinseca|Architettura|Intestazione|
 |---------------|------------------|------------|
-|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM|\<intrin.h>|
+|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedXor64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM, ARM64|\<intrin.h>|
 |`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|
-|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Note
 
 Il numero nel nome di ogni funzione specifica la dimensione in bit degli argomenti.
 
-Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.
+Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM con `_nf` suffisso ("nessun limite") non fungono da barriera di memoria.
 
 Le funzioni intrinseche con suffisso `_np` ("nessuna prelettura") impediscono l'inserimento di una possibile operazione di prelettura da parte del compilatore.
 
@@ -181,7 +183,7 @@ Sulle piattaforme Intel che supportano le istruzioni HLE (Hardware Lock Elision)
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // _InterLockedXor.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -206,5 +208,5 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

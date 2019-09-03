@@ -1,6 +1,6 @@
 ---
-title: function (C/C++)
-ms.date: 11/04/2016
+title: function (pragma)
+ms.date: 08/29/2019
 f1_keywords:
 - function_CPP
 - vc-pragma.function
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: c57ff2053b3c1fd52474c7eb0dd598641632f789
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f99f3c878789a6c47fdb0d48e0a8690d65fa8062
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409928"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220134"
 ---
-# <a name="function-cc"></a>function (C/C++)
-Specifica la generazione delle chiamate alle funzioni specificate nell'elenco di argomenti del pragma.
+# <a name="function-pragma"></a>function (pragma)
+
+Indica al compilatore di generare le chiamate alle funzioni specificate nell'elenco di argomenti del pragma, anziché incorporarli.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-#pragma function( function1 [, function2, ...] )
-```
+> **funzione #pragma (** *funzione1* [ **,** *funzione2* ...] **)**
 
 ## <a name="remarks"></a>Note
 
-Se si usa la `intrinsic` pragma (o /Oi) per indicare al compilatore di generare funzioni intrinseche (funzioni intrinseche vengono generare come codice inline, non come chiamate di funzione), è possibile usare il **funzione** pragma per forzare in modo esplicito un chiamata di funzione. Una volta che viene rilevato un pragma funzione, verrà applicato alla prima definizione di funzione che contiene una funzione intrinseca specificata. L'effetto continua fino alla fine del file di origine o alla rilevazione di un `intrinsic` pragma specificando la stessa funzione intrinseca. Il **funzione** pragma può essere usato solo all'esterno di una funzione, ovvero a livello globale.
+Le funzioni intrinseche vengono normalmente generate come codice inline, non come chiamate di funzione. Se si usa il [pragma intrinseco](intrinsic.md) o l'opzione del compilatore [/OI](../build/reference/oi-generate-intrinsic-functions.md) per indicare al compilatore di generare funzioni intrinseche, è possibile usare la **funzione** pragma per forzare in modo esplicito una chiamata di funzione. Quando viene visualizzato un pragma di **funzione** , questo viene applicato alla prima definizione di funzione che contiene una funzione intrinseca specificata. L'effetto continua fino alla fine del file di origine o all'aspetto di un `intrinsic` pragma che specifica la stessa funzione intrinseca. È possibile utilizzare solo il pragma **Function** all'esterno di una funzione, a livello globale.
 
-Per gli elenchi delle funzioni che hanno formati intrinseci, vedere [#pragma intrinseco](../preprocessor/intrinsic.md).
+Per gli elenchi delle funzioni con form intrinseci, vedere [pragma intrinseco](intrinsic.md).
 
 ## <a name="example"></a>Esempio
 
@@ -84,4 +83,4 @@ str is '!!!!!!!!!!!!!!!'
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

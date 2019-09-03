@@ -1,6 +1,6 @@
 ---
-title: setlocale
-ms.date: 11/04/2016
+title: Pragma setlocale
+ms.date: 08/29/2019
 f1_keywords:
 - setlocale_CPP
 - vc-pragma.setlocale
@@ -8,37 +8,35 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-ms.openlocfilehash: b2f28a14b4d4585575a39dd9a936a56a84eeddc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 219354595e5c63b2f13211d43bfa517d97413251
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179620"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218169"
 ---
-# <a name="setlocale"></a>setlocale
+# <a name="setlocale-pragma"></a>Pragma setlocale
 
-Definisce le impostazioni locali (paese/area geografica e la lingua) da utilizzare quando si traducono le costanti a caratteri "wide" e valori letterali stringa.
+Definisce le *impostazioni locali*, il paese, l'area geografica e la lingua da usare per la conversione di costanti a caratteri "wide" e valori letterali stringa.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-#pragma setlocale( "[locale-string]" )
-```
+> **#pragma setlocale ("** [locale *-String* ] **")**
 
 ## <a name="remarks"></a>Note
 
-Poiché l'algoritmo per la conversione dei caratteri multibyte in caratteri "wide" può variare dalle impostazioni locali o la compilazione può aver luogo in impostazioni locali diverse da dove un file eseguibile verrà eseguito, questo pragma consente di specificare le impostazioni locali di destinazione in fase di compilazione. In questo modo si garantisce che le stringhe di caratteri "wide" saranno memorizzate nel formato corretto.
+Poiché l'algoritmo per la conversione di caratteri multibyte in caratteri wide può variare in base alle impostazioni locali, oppure la compilazione può essere eseguita in impostazioni locali diverse da cui verrà eseguito un file eseguibile, questo pragma fornisce un modo per specificare le impostazioni locali di destinazione in fase di compilazione. Garantisce che le stringhe a caratteri wide vengano archiviate nel formato corretto.
 
-Il valore predefinito *stringa delle impostazioni locali* è "".
+La *stringa delle impostazioni locali* predefinita è "".
 
-Le impostazioni locali "C" esegue il mapping di ogni carattere nella stringa al relativo valore come un **wchar_t** (short senza segno). Altri valori validi per `setlocale` sono quelle voci disponibili nel [stringhe relative a lingue](../c-runtime-library/language-strings.md) elenco. Ad esempio, generare:
+Le impostazioni locali "C" esegue il mapping di ogni carattere nella stringa al relativo valore come **wchar_t**. Gli altri valori validi `setlocale` per sono le voci presenti nell'elenco delle [stringhe della lingua](../c-runtime-library/language-strings.md) . Ad esempio, è possibile specificare:
 
 ```cpp
 #pragma setlocale("dutch")
 ```
 
-La possibilità di generare una stringa di linguaggio dipende dal supporto di ID lingua e dalla tabella codici nel computer.
+La possibilità di specificare una stringa di lingua dipende dalla tabella codici e dal supporto dell'ID lingua nel computer.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

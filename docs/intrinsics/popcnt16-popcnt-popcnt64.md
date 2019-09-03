@@ -1,6 +1,6 @@
 ---
 title: __popcnt16, __popcnt, __popcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __popcnt64
 - __popcnt
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263217"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221353"
 ---
-# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+# <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Sezione specifica Microsoft**
 
-Conta il numero di un bit (Conteggio popolamento) in 16, 32 o intero senza segno a 64 bit.
+Conta il numero di `1` bit (conteggio popolazione) in un Unsigned Integer a 16, 32 o 64 bit.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned short __popcnt16(
    unsigned short value
 );
@@ -38,34 +38,34 @@ unsigned __int64 __popcnt64(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*value*<br/>
-[in] Il 16, 32 o intero senza segno a 64 bit per il quale si desidera il conteggio di popolamento.
+*value*\
+in Unsigned Integer a 16, 32 o 64 bit per cui si desidera il conteggio della popolazione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il numero di bit di uno il `value` parametro.
+Numero di `1` bit nel parametro *value* .
 
 ## <a name="requirements"></a>Requisiti
 
 |Funzione intrinseca|Architettura|
 |---------------|------------------|
-|`__popcnt16`|Manipolazione dei Bit avanzate|
-|`__popcnt`|Manipolazione dei Bit avanzate|
-|`__popcnt64`|Manipolazione avanzati dei Bit in modalità a 64 bit.|
+|`__popcnt16`|Manipolazione avanzata di bit|
+|`__popcnt`|Manipolazione avanzata di bit|
+|`__popcnt64`|Manipolazione di bit avanzata in modalità a 64 bit.|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni intrinseche genera il `popcnt` (istruzione). In modalità a 32 bit non è nessun a 64 bit per utilizzo generico registri, pertanto non 64-bit `popcnt`.
+Ognuna delle funzioni intrinseche genera l' `popcnt` istruzione. In modalità a 32 bit non sono disponibili registri per utilizzo generico a 64 bit, pertanto 64 bit `popcnt` non è supportato.
 
-Per determinare il supporto hardware per il `popcnt` (istruzione), chiamare il `__cpuid` intrinseco con `InfoType=0x00000001` e controllare bit 23 di `CPUInfo[2] (ECX)`. Questo bit è 1 se l'istruzione è supportata e 0 in caso contrario. Se si esegue codice che usa questa funzione intrinseca in hardware che non supporta il `popcnt` (istruzione), i risultati sono imprevedibili.
+Per determinare il supporto hardware per `popcnt` l'istruzione, chiamare `__cpuid` l'oggetto `InfoType=0x00000001` intrinseco con e selezionare `CPUInfo[2] (ECX)`il bit 23 di. Questo bit è 1 se l'istruzione è supportata; in caso contrario, 0. Se si esegue codice che usa queste funzioni intrinseche su hardware che non supporta `popcnt` l'istruzione, i risultati sono imprevedibili.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 #include <iostream>
 #include <intrin.h>
 using namespace std;
@@ -101,7 +101,7 @@ __popcnt(0xffffffff) = 32
 
 **Fine sezione specifica Microsoft**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.
+Parti Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione da Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Vedere anche
 

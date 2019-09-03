@@ -1,6 +1,6 @@
 ---
 title: __emul, __emulu
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __emulu_cpp
 - __emul
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-ms.openlocfilehash: 8657c0fb034ac6bbcfbebb946e059ad08d9e7046
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16b2b38f6f44b99c9f5b9370ba586342a860684e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264049"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216738"
 ---
-# <a name="emul-emulu"></a>__emul, __emulu
+# <a name="__emul-__emulu"></a>__emul, __emulu
 
 **Sezione specifica Microsoft**
 
-Consente di eseguire moltiplicazioni di overflow ciò che può contenere un numero intero a 32 bit.
+Esegue le moltiplicazioni che possono essere rilevate da un intero a 32 bit.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 __int64 __emul(
    int a,
    int b
@@ -36,17 +36,17 @@ unsigned __int64 __emulu(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*a*<br/>
-[in] Il primo operando integer della moltiplicazione.
+*un*\
+in Primo operando Integer della moltiplicazione.
 
-*b*<br/>
-[in] Il secondo operando integer della moltiplicazione.
+*b*\
+in Secondo operando Integer della moltiplicazione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il risultato della moltiplicazione.
+Risultato della moltiplicazione.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -55,17 +55,17 @@ Il risultato della moltiplicazione.
 |`__emul`|x86, x64|
 |`__emulu`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-`__emul` accetta due valori con segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero con segno a 64 bit.
+`__emul`accetta valori con segno a 2 32 bit e restituisce il risultato della moltiplicazione come valore intero con segno a 64 bit.
 
-`__emulu` accetta due valori interi senza segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero senza segno a 64 bit.
+`__emulu`accetta valori Unsigned Integer a 2 32 bit e restituisce il risultato della moltiplicazione come valore Unsigned Integer a 64 bit.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // emul.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -97,7 +97,7 @@ int main()
 
 ## <a name="output"></a>Output
 
-```
+```Output
 -268435456 * 2 = -536870912
 4294967295 * 251658240 = 1080863910317260800
 ```

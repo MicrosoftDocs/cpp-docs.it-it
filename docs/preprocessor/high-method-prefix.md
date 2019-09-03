@@ -1,42 +1,40 @@
 ---
-title: high_method_prefix
-ms.date: 10/18/2018
+title: attributo di importazione high_method_prefix
+ms.date: 08/29/2019
 f1_keywords:
 - high_method_prefix
 helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
-ms.openlocfilehash: 1575b2e3fee461ee0e3987aaf1e770d0611e31ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 357ac528a921a9f864f0f7e30252281a4d10e33c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383756"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219015"
 ---
-# <a name="highmethodprefix"></a>high_method_prefix
+# <a name="high_method_prefix-import-attribute"></a>attributo di importazione high_method_prefix
 
-**Sezione specifica C++**
+**C++Specifico**
 
 Specifica un prefisso da utilizzare quando si assegna un nome alle proprietà e ai metodi di alto livello.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-high_method_prefix("Prefix")
-```
+> **#import** *libreria di tipi* **high_method_prefix (** "*Prefix*" **)**
 
 ### <a name="parameters"></a>Parametri
 
-*Prefix*<br/>
+*Prefisso*\
 Prefisso da utilizzare.
 
 ## <a name="remarks"></a>Note
 
 Per impostazione predefinita, le proprietà e i metodi di gestione degli errori di alto livello vengono esposti dalle funzioni membro denominate senza un prefisso. I nomi provengono dalla libreria dei tipi.
 
-**Fine sezione specifica C++**
+**Specifico C++ finale**
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

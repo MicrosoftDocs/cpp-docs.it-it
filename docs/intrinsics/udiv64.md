@@ -1,20 +1,20 @@
 ---
 title: _udiv64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _udiv64
 helpviewer_keywords:
 - _udiv64 intrinsic
-ms.openlocfilehash: 73a29b180eeda49a9a25e9e568d25c7563234fad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6dabbc94260ef578eb1a58a1b289b4a4654decdd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390152"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219684"
 ---
-# <a name="udiv64"></a>_udiv64
+# <a name="_udiv64"></a>_udiv64
 
-Il `_udiv64` intrinseco divide un intero senza segno a 64 bit da un intero senza segno a 32 bit. Il valore restituito contiene il quoziente e la funzione intrinseca restituisce il resto tramite un parametro del puntatore. `_udiv64` viene **specifico di Microsoft**.
+La `_udiv64` funzione intrinseca divide un Unsigned Integer a 64 bit da un Unsigned Integer a 32 bit. Il valore restituito include il quoziente e la funzione intrinseca restituisce il resto tramite un parametro del puntatore. `_udiv64`è **specifico di Microsoft**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -28,24 +28,24 @@ unsigned int _udiv64(
 
 ### <a name="parameters"></a>Parametri
 
-*dividend*<br/>
-[in] Intero senza segno a 64 bit da dividere.
+*dividend*\
+in Unsigned Integer a 64 bit da dividere.
 
-*divisor*<br/>
-[in] Intero senza segno a 32 bit per cui dividere.
+*divisore*\
+in Unsigned Integer a 32 bit per cui dividere.
 
-*remainder*<br/>
-[out] Il resto intero senza segno a 32 bit.
+*remainder*\
+out Il resto Unsigned Integer a 32 bit.
 
 ## <a name="return-value"></a>Valore restituito
 
-32 bit del quoziente.
+Bit 32 del quoziente.
 
 ## <a name="remarks"></a>Note
 
-Il `_udiv64` divide intrinseci *dividendo* da *divisore*. Archivia il resto nell'intero senza segno a 32 bit a cui punta *resto*e restituisce i 32 bit del quoziente.
+La `_udiv64` funzione intrinseca divide il dividendo per divisore. Archivia il resto nel Unsigned Integer a 32 bit a cui punta il *resto*e restituisce i 32 bit del quoziente.
 
-Il `_udiv64` intrinseco è stato introdotto nella versione RTM di Visual Studio 2019.
+La `_udiv64` funzione intrinseca è disponibile a partire da Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Requisiti
 

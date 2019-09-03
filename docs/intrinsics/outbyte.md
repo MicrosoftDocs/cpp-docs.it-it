@@ -1,41 +1,41 @@
 ---
 title: __outbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbyte
 helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: 234892369572a2ee315687f5d70533a0c8cf4b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18792010c45ffb648e9555ccb73f8614c3e3e6ea
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262970"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217204"
 ---
-# <a name="outbyte"></a>__outbyte
+# <a name="__outbyte"></a>__outbyte
 
 **Sezione specifica Microsoft**
 
-Genera il `out` istruzione, che invia 1 byte specificato da `Data` attraverso la porta dei / o specificata da `Port`.
+Genera l' `out` istruzione, che invia 1 byte specificato dalla `Data` porta di i/O specificata da `Port`.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __outbyte(
    unsigned short Port,
    unsigned char Data
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Porta*<br/>
-[in] La porta per inviare i dati.
+*Porta*\
+in Porta a cui inviare i dati.
 
-*Dati*<br/>
-[in] Byte da inviare attraverso la porta specificata.
+*Dati*\
+in Byte da inviare alla porta specificata.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -43,7 +43,7 @@ void __outbyte(
 |---------------|------------------|
 |`__outbyte`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 

@@ -1,38 +1,35 @@
 ---
-title: embedded_idl
-ms.date: 10/18/2018
+title: attributo di importazione embedded_idl
+ms.date: 08/29/2019
 f1_keywords:
 - embedded_idl
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01948b171b20ad0a3bf3e7a41047f1fe3df185b0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389346"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216321"
 ---
-# <a name="embeddedidl"></a>embedded_idl
+# <a name="embedded_idl-import-attribute"></a>attributo di importazione embedded_idl
 
-**Sezione specifica C++**
+**C++Specifico**
 
-Specifica che la libreria dei tipi è scritta nel file con estensione tlh con il codice generato dall'attributo mantenuto.
+Specifica se la libreria dei tipi viene scritta `.tlh` nel file con il codice generato dall'attributo mantenuto.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-embedded_idl[("param")]
-```
+> **#import** *libreria di tipi* **embedded_idl** [ **(** { **"emitidl"**  |  **"no_emitidl"** } **)** ]
 
 ### <a name="parameters"></a>Parametri
 
-*param*<br/>
-Può essere uno dei due valori:
+**emitidl**\
+Le informazioni sui tipi importate dalla *libreria* dei tipi sono presenti nell'IDL generato per il progetto con attributi. Questo comportamento è quello predefinito ed è attivo se non si specifica un parametro per `embedded_idl`.
 
-- **emitidl**: Informazioni sui tipi importate dalla libreria dei tipi saranno presenti nel file IDL generato per il progetto con attributi.  Questa è l'impostazione predefinita e avrà effetto se non si specifica un parametro su `embedded_idl`.
-
-- **no_emitidl**: Informazioni sui tipi importate dalla libreria dei tipi non saranno presenti nel file IDL generato per il progetto con attributo.
+**"no_emitidl"** \
+Le informazioni sui tipi importate dalla *libreria* dei tipi non sono presenti nell'IDL generato per il progetto con attributi.
 
 ## <a name="example"></a>Esempio
 
@@ -44,11 +41,9 @@ Può essere uno dei due valori:
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
 ```
 
-## <a name="remarks"></a>Note
-
-**Fine sezione specifica C++**
+**Specifico C++ finale**
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

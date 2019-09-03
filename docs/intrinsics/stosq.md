@@ -1,6 +1,6 @@
 ---
 title: __stosq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390347"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219960"
 ---
-# <a name="stosq"></a>__stosq
+# <a name="__stosq"></a>__stosq
 
 **Sezione specifica Microsoft**
 
-Genera un'istruzione di archivio stringa (`rep stosq`).
+Genera un'istruzione di stringa di`rep stosq`archiviazione ().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __stosb(
-   unsigned __int64* Dest,
+   unsigned __int64* Destination,
    unsigned __int64 Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
-[out] La destinazione dell'operazione.
+*Destinazione*\
+out Destinazione dell'operazione.
 
-*Dati*<br/>
-[in] I dati da archiviare.
+*Dati*\
+in Dati da archiviare.
 
-*Conteggio*<br/>
-[in] La lunghezza del blocco di parole quadruple da scrivere.
+*Conteggio*\
+in Lunghezza del blocco di parole quadruple da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,17 +48,17 @@ void __stosb(
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Il risultato è che la parola quadrupla `Data` viene scritto in un blocco di `Count` parole quadruple nel `Dest` stringa.
+Il risultato è che i *dati* quadrupla vengono scritti in un blocco di *count* parole quadruple nella stringa di *destinazione* .
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```C
 // stosq.c
 // processor: x64
 #include <stdio.h>
@@ -76,9 +76,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
-
-```
+```Output
 0 ffffffffffff ffffffffffff 0
 ```
 

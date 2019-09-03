@@ -1,6 +1,6 @@
 ---
-title: data_seg
-ms.date: 10/22/2018
+title: Pragma data_seg
+ms.date: 08/29/2019
 f1_keywords:
 - data_seg_CPP
 - vc-pragma.data_seg
@@ -8,49 +8,56 @@ helpviewer_keywords:
 - data_seg pragma
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
-ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f67a9f39695adf5067c61288cf09ea7eb481c7dd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389307"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220389"
 ---
-# <a name="dataseg"></a>data_seg
+# <a name="data_seg-pragma"></a>Pragma data_seg
 
-Specifica il segmento di dati in cui le variabili inizializzate vengono archiviate nel file .obj.
+Specifica la sezione di dati (segmento) in cui le variabili inizializzate vengono archiviate nel file oggetto (. obj).
 
 ## <a name="syntax"></a>Sintassi
 
-```
-#pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
-```
+> **#pragma data_seg (** ["*Section-name*" [ **,** "*section-class*"]] **)** \
+> **#pragma data_seg (** { **push** | **pop** } [ **,** *Identifier* ] [ **,** "*Section-name*" [ **,** "*section-class*"]] **)**
 
 ### <a name="parameters"></a>Parametri
 
-**push**<br/>
-(Facoltativo) Inserisce un record nello stack del compilatore interno. Oggetto **push** può avere un *identifier* e *nome segmento*.
+**spingere**\
+Opzionale Inserisce un record nello stack interno del compilatore. Un **push** può avere un *identificatore* e un *nome di sezione*.
 
-**pop**<br/>
-(Facoltativo) Rimuove un record dall'inizio dello stack del compilatore interno.
+**popup**\
+Opzionale Rimuove un record dall'inizio dello stack interno del compilatore. Un **pop** può avere un *identificatore* e un *nome di sezione*. È possibile estrarre più record usando un solo comando **pop** usando l' *identificatore*. Il nome della sezione diventa il nome della sezione dati attiva dopo il pop.
 
-*identifier*<br/>
-(Facoltativo) Quando abbinata **push**, assegna un nome al record nello stack del compilatore interno. Quando abbinata **pop**, estrae record dallo stack interno finché *identificatore* viene rimosso; se *identificatore* non viene trovato nello stack interno, nulla viene estratto.
+*identificatore*\
+Opzionale Se usato con **push**, assegna un nome al record nello stack interno del compilatore. Quando viene usato con **pop**, estrae i record dallo stack interno finché non viene rimosso l' *identificatore* . Se l' *identificatore* non viene trovato nello stack interno, non viene estratto alcun elemento.
 
-*Identificatore* consente di più record da estrarre con un'unica **pop** comando.
+*identificatore* consente di estrarre più record con un unico comando **pop** .
 
-*"segment-name"*<br/>
-(Facoltativo) Il nome di un segmento. Quando abbinata **pop**, viene visualizzato lo stack e *-nome del segmento* diventa il nome del segmento attivo.
+*"nome-sezione"* \
+Opzionale Nome di una sezione. Quando viene usato con il **pop**, lo stack viene estratto e il *nome* della sezione diventa il nome della sezione dati attiva.
 
-*"segment-class"*<br/>
-(Facoltativo) Opzione inclusa per compatibilità con C++ precedenti alla versione 2.0. Ignorato.
+*"section-class"* \
+Opzionale Ignorato, ma incluso per la compatibilità con le versioni C++ di Microsoft precedenti alla versione 2,0.
 
 ## <a name="remarks"></a>Note
 
-Il significato dei termini *segmento* e *sezione* sono intercambiabili in questo argomento.
+Una *sezione* in un file oggetto è un blocco denominato di dati che viene caricato in memoria come unità. Una *sezione di dati* è una sezione che contiene dati inizializzati. In questo articolo i termini *Segment* e *Section* hanno lo stesso significato.
 
-I file OBJ possono essere visualizzati con il [dumpbin](../build/reference/dumpbin-command-line.md) dell'applicazione. Il segmento predefinito nel file .obj per le variabili inizializzate è .data. Le variabili che non sono inizializzate sono considerate inizializzate sul valore zero e vengono archiviate nel segmento .bss.
+La sezione predefinita nel file con estensione obj per le variabili inizializzate è `.data`. Le variabili non inizializzate vengono considerate inizializzate su zero e vengono archiviate in `.bss`.
 
-**data_seg** senza parametri Reimposta il segmento su. Data.
+La direttiva **data_seg** pragma indica al compilatore di inserire tutti gli elementi di dati inizializzati dall'unità di conversione in una sezione di dati denominata *Section-name*. Per impostazione predefinita, la sezione dei dati utilizzata per i dati inizializzati in un `.data`file oggetto è denominata. Le variabili non inizializzate vengono considerate inizializzate su zero e vengono archiviate in `.bss`. Una direttiva pragma **data_seg** senza un parametro *Section-name* Reimposta il nome della sezione dati per i successivi elementi di dati inizializzati su `.data`.
+
+I dati allocati con **data_seg** non conservano alcuna informazione sulla relativa posizione.
+
+Per un elenco di nomi che non devono essere usati per creare una sezione, vedere [/Section](../build/reference/section-specify-section-attributes.md).
+
+È inoltre possibile specificare le sezioni per le variabili const ([const_seg](../preprocessor/const-seg.md)), i dati non inizializzati ([bss_seg](../preprocessor/bss-seg.md)) e le funzioni ([code_seg](../preprocessor/code-seg.md)).
+
+È possibile utilizzare [dumpbin. Applicazione EXE](../build/reference/dumpbin-command-line.md) per la visualizzazione dei file oggetto. Le versioni di DUMPBIN per ogni architettura di destinazione supportata sono incluse in Visual Studio.
 
 ## <a name="example"></a>Esempio
 
@@ -71,12 +78,6 @@ int main() {
 }
 ```
 
-I dati allocati mediante **data_seg** non mantengono le informazioni sulla relativa posizione.
-
-Visualizzare [/Section](../build/reference/section-specify-section-attributes.md) per un elenco dei nomi non è consigliabile usare durante la creazione di una sezione.
-
-È anche possibile specificare le sezioni per le variabili const ([const_seg](../preprocessor/const-seg.md)), dati non inizializzati ([bss_seg](../preprocessor/bss-seg.md)) e funzioni ([code_seg](../preprocessor/code-seg.md)).
-
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

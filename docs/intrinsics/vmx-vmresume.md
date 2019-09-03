@@ -1,20 +1,20 @@
 ---
 title: __vmx_vmresume
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmresume
 helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-ms.openlocfilehash: d2bfe9a8f98b8a03a82768177217d70674708c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34d0e6814dd00da07076e644513400bd5be36bd3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390009"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219448"
 ---
-# <a name="vmxvmresume"></a>__vmx_vmresume
+# <a name="__vmx_vmresume"></a>__vmx_vmresume
 
 **Sezione specifica Microsoft**
 
@@ -22,14 +22,14 @@ Riprende l'operazione non radice VMX usando la struttura di controllo della macc
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned char __vmx_vmresume(
    void);
 ```
 
 ## <a name="return-value"></a>Valore restituito
 
-|Value|Significato|
+|Valore|Significato|
 |-----------|-------------|
 |0|Operazione completata.|
 |1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|
@@ -47,12 +47,12 @@ La funzione `__vmx_vmresume` è equivalente alle `VMRESUME` istruzioni in lingua
 |---------------|------------------|
 |`__vmx_vmresume`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
-[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
+[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)\
 [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

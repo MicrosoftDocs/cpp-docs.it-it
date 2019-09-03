@@ -1,20 +1,20 @@
 ---
 title: __svm_clgi
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_clgi
 helpviewer_keywords:
 - CLGI instruction
 - __svm_clgi intrinsic
 ms.assetid: 6640f5ab-9472-46f9-a042-e15c4f1ff858
-ms.openlocfilehash: fe25141499a19a265e2ac3ec746664ecd6cc9a2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 740c76e5dcc8f94b9257272624a6ad3c1f9726c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390308"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219965"
 ---
-# <a name="svmclgi"></a>__svm_clgi
+# <a name="__svm_clgi"></a>__svm_clgi
 
 **Sezione specifica Microsoft**
 
@@ -22,15 +22,15 @@ Cancella il flag di interrupt globale.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __svm_clgi( void );
 ```
 
 ## <a name="remarks"></a>Note
 
-La funzione `__svm_clgi` è equivalente alle `CLGI` istruzioni in linguaggio macchina. Il flag di interrupt global determina se il microprocessore Ignora, vengono posticipati o gestione degli interrupt a causa di eventi, ad esempio un completamento i/o, un avviso di temperatura hardware o un'eccezione di debug.
+La funzione `__svm_clgi` è equivalente alle `CLGI` istruzioni in linguaggio macchina. Il flag di interrupt globale determina se il microprocessore ignora, posticipa o gestisce gli interrupt, a causa di eventi quali il completamento di un I/O, un avviso di temperatura hardware o un'eccezione di debug.
 
-Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: Sistema di programmazione,"documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.
+Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare "AMD64 Architecture Programmer ' s Manual volume 2: Programmazione di sistema "nel sito di [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -38,11 +38,11 @@ Questa funzione supporta l'interazione di monitoraggio della macchina virtuale d
 |---------------|------------------|
 |`__svm_clgi`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [__svm_stgi](../intrinsics/svm-stgi.md)

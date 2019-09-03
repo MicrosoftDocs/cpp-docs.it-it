@@ -1,6 +1,6 @@
 ---
-title: make_public
-ms.date: 11/04/2016
+title: Pragma make_public
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.make_public
 - make_public_CPP
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: d569758f90b9e55f65ad13517f86dea41d151ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d12fab685e0088993cb43073c3603bda12edd2f3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371763"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218828"
 ---
-# <a name="makepublic"></a>make_public
+# <a name="make_public-pragma"></a>Pragma make_public
+
 Indica che un tipo nativo deve avere accessibilità pubblica dell'assembly.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-#pragma make_public(type)
-```
+> **#pragma make_public (** *tipo* **)**
 
 ### <a name="parameters"></a>Parametri
 
-*tipo* è il nome del tipo di cui si desidera avere accessibilità pubblica dell'assembly.
+*type*\
+Nome del tipo per cui si vuole avere accessibilità pubblica dell'assembly.
 
 ## <a name="remarks"></a>Note
 
-**make_public** è utile per l'utilizzo da un file con estensione h che non è possibile modificare il tipo nativo cui fare riferimento. Se si desidera utilizzare il tipo nativo nella firma di una funzione pubblica in un tipo con visibilità pubblica dell'assembly, il tipo nativo deve disporre anche di accessibilità pubblica dell'assembly o il compilatore genererà un avviso.
+**make_public** è utile quando il tipo nativo a cui si vuole fare riferimento è da un file di intestazione che non è possibile modificare. Se si desidera utilizzare il tipo nativo nella firma di una funzione pubblica in un tipo con visibilità dell'assembly pubblico, anche il tipo nativo deve avere accessibilità pubblica dell'assembly o il compilatore emetterà un avviso.
 
-**make_public** deve essere specificato in ambito globale ed è attivo solo dal punto in cui viene dichiarato fino alla fine del file del codice sorgente.
+**make_public** deve essere specificato nell'ambito globale. Questa operazione è valida solo dal punto in cui viene dichiarata fino alla fine del file di codice sorgente.
 
-Il tipo nativo può essere implicitamente o esplicitamente privato. visualizzare [visibilità del tipo](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) per altre informazioni.
+Il tipo nativo può essere privato in modo implicito o esplicito. Per ulteriori informazioni, vedere [visibilità dei tipi](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).
 
 ## <a name="examples"></a>Esempi
 
-Nell'esempio seguente viene illustrato il contenuto di un file h contenente le definizioni per due struct nativi.
+L'esempio seguente è il contenuto di un file di intestazione che contiene le definizioni per due struct nativi.
 
 ```cpp
 // make_public_pragma.h
@@ -46,7 +46,7 @@ struct Native_Struct_1 { int i; };
 struct Native_Struct_2 { int i; };
 ```
 
-L'esempio di codice seguente usa il file di intestazione e viene mostrato che, a meno che non si contrassegnare in modo esplicito come pubblici, degli struct nativi usando **make_public**, il compilatore genererà un avviso quando si prova a usare gli struct nativi di firma della funzione pubblica di un tipo gestito pubblico.
+Nell'esempio di codice seguente viene utilizzato il file di intestazione. Indica che, a meno che non si contrassegni esplicitamente gli struct nativi come Public usando **make_public**, il compilatore genererà un avviso quando si tenta di usare gli struct nativi nella firma della funzione pubblica in un tipo gestito pubblico.
 
 ```cpp
 // make_public_pragma.cpp
@@ -63,4 +63,4 @@ public ref struct A {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

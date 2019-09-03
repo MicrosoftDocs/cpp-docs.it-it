@@ -1,45 +1,45 @@
 ---
 title: _mm_cvtsi64x_ss
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtsi64x_ss
 helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: 3ba9dc56cbb027e8cf9f31d293b3f96908aff5e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e9bacc56f212e804467d1c6e0159a1749235976
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264413"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217463"
 ---
-# <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
+# <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
 **Sezione specifica Microsoft**
 
-Genera l'errore x64 estesi versione dell'intero convertire 64 Bit di valore a virgola mobile e precisione singola scalare (`cvtsi2ss`) (istruzione).
+Genera la versione estesa x64 dell'istruzione Convert Integer a 64 bit in un valore a virgola mobile a precisione singola`cvtsi2ss`scalare ().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 __m128 _mm_cvtsi64x_ss(
    __m128 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*a*<br/>
-[in] Un `__m128` struttura che contiene quattro valori a virgola mobile a precisione singola.
+*un*\
+in `__m128` Struttura che contiene quattro valori a virgola mobile a precisione singola.
 
-*b*<br/>
-[in] Un intero a 64 bit da convertire in valore a virgola mobile.
+*b*\
+in Intero a 64 bit da convertire in un valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Un `__m128` struttura il cui primo valore a virgola mobile è il risultato della conversione. I tre valori vengono copiati senza modifiche da `a`.
+`__m128` Struttura il cui primo valore a virgola mobile è il risultato della conversione. Gli altri tre valori vengono copiati senza modifiche da.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -47,17 +47,17 @@ Un `__m128` struttura il cui primo valore a virgola mobile è il risultato della
 |---------------|------------------|
 |`_mm_cvtsi64x_ss`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Il `__m128` struttura rappresenta un registro XMM, pertanto, questa funzione intrinseca consente un valore `b` dalla memoria di sistema da spostare in un registri XMM registrare.
+La `__m128` struttura rappresenta un registro XMM, pertanto la funzione intrinseca consente lo spostamento del valore *b* dalla memoria di sistema in un registro XMM.
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // _mm_cvtsi64x_ss.cpp
 // processor: x64
 
@@ -91,5 +91,5 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[__m128](../cpp/m128.md)<br/>
+[__m128](../cpp/m128.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

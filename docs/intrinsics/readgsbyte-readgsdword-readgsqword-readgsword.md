@@ -1,6 +1,6 @@
 ---
 title: __readgsbyte, __readgsdword, __readgsqword, __readgsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readgsbyte
 - __readgsdword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: a677b96975e0d2adcc7e548992a12bd597bea6a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278f1de33a7e01c5893217ddd8aaa22e68cf0c94
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396470"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222358"
 ---
-# <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
+# <a name="__readgsbyte-__readgsdword-__readgsqword-__readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
 **Sezione specifica Microsoft**
 
-Leggere la memoria da una posizione specificata da un offset rispetto all'inizio del segmento GS.
+Consente di leggere la memoria da una posizione specificata da un offset relativo all'inizio del segmento GS.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned char __readgsbyte(
    unsigned long Offset
 );
@@ -42,14 +42,14 @@ unsigned __int64 __readgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Offset*<br/>
-[in] L'offset dall'inizio del `GS` da cui leggere.
+*Offset*\
+in Offset dall'inizio di `GS` da cui leggere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il contenuto della memoria del byte, word, parola doppia oppure parola quadrupla (come indicato dal nome della funzione chiamata) in corrispondenza della posizione `GS:[Offset]`.
+Contenuto della memoria di byte, Word, Double Word o quadrupla (come indicato dal nome della funzione chiamata) nella posizione `GS:[Offset]`.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -60,15 +60,15 @@ Il contenuto della memoria del byte, word, parola doppia oppure parola quadrupla
 |`__readgsqword`|X64|
 |`__readgsword`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Queste routine sono disponibili solo come funzione intrinseca.
+Queste routine sono disponibili solo come intrinseci.
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

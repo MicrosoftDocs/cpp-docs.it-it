@@ -1,6 +1,6 @@
 ---
-title: comment (C/C++)
-ms.date: 11/04/2016
+title: comment (pragma)
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.comment
 - comment_CPP
@@ -10,52 +10,44 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3175ad5318bcc6fd9aa6233258ccec9033c89be8
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403477"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219091"
 ---
-# <a name="comment-cc"></a>comment (C/C++)
+# <a name="comment-pragma"></a>comment (pragma)
 
 Inserisce un record di commento in un file oggetto o in un file eseguibile.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-#pragma comment( comment-type [,"commentstring"] )
-```
+> **commento #pragma (** *Comment-Type* [ **,** "*Comment-String*"] **)**
 
 ## <a name="remarks"></a>Note
 
-Il *comment-type* è uno degli identificatori predefiniti, descritti di seguito, che specifica il tipo di record di commento. L'opzione facoltativa *commentstring* è una valore letterale stringa che fornisce informazioni aggiuntive per alcuni tipi di commento. In quanto *commentstring* è una stringa letterale, rispetta tutte le regole per i valori letterali stringa caratteri di escape, virgolette incorporate (`"`) e concatenazione.
+Il *tipo di commento* è uno degli identificatori predefiniti, descritti di seguito, che specifica il tipo di record di commento. La *stringa di commento* facoltativa è un valore letterale stringa che fornisce informazioni aggiuntive per alcuni tipi di commento. Poiché *Comment-String* è un valore letterale stringa, rispetta tutte le regole per i valori letterali stringa in relazione ai caratteri di escape, alle`"`virgolette incorporate () e alla concatenazione.
 
 ### <a name="compiler"></a>compilatore
 
-Inserisce il nome e il numero di versione del compilatore nel file oggetto. Questo record di commento viene ignorato dal linker. Se si specifica un *commentstring* parametro per questo tipo di record, il compilatore genera un avviso.
-
-### <a name="exestr"></a>exestr
-
-Posizioni *commentstring* nel file oggetto. In fase di collegamento questa stringa viene inserita nel file eseguibile. La stringa non viene caricata in memoria quando viene caricato il file eseguibile, ma è disponibile con un programma che cerca le stringhe stampabili nei file. Un utilizzo di questo tipo di record di commento prevede l'inclusione di un numero di versione o di informazioni simili in un file eseguibile.
-
-`exestr` è deprecato e verrà rimosso nelle versioni future. Il linker non elabora il record di commento.
+Inserisce il nome e il numero di versione del compilatore nel file oggetto. Questo record di commento viene ignorato dal linker. Se si specifica un parametro di *stringa di commento* per questo tipo di record, il compilatore genera un avviso.
 
 ### <a name="lib"></a>lib
 
-Inserisce un record di ricerca nella libreria nel file oggetto. Questo tipo di commento deve essere accompagnato da una *commentstring* parametro contenente il nome (ed eventualmente il percorso) della libreria che si vuole che il linker per la ricerca. Il nome della libreria segue i record di ricerca libreria predefiniti nel file di oggetto. il linker cerca questa libreria come se si fosse stata denominata nella riga di comando purché la libreria non è specificata con [/nodefaultlib](../build/reference/nodefaultlib-ignore-libraries.md). È possibile inserire più record di ricerca nella libreria nello stesso file di origine. Ogni record viene visualizzato nel file oggetto nello stesso ordine in cui è stato individuato nel file di origine.
+Inserisce un record di ricerca nella libreria nel file oggetto. Questo tipo di commento deve essere accompagnato da un parametro di *stringa di commento* contenente il nome (e possibilmente il percorso) della libreria in cui si vuole che il linker cerchi. Il nome della libreria segue i record di ricerca della libreria predefiniti nel file oggetto; il linker cerca questa libreria come se fosse stata denominata nella riga di comando, a condizione che la libreria non sia specificata con [/NODEFAULTLIB](../build/reference/nodefaultlib-ignore-libraries.md). È possibile inserire più record di ricerca nella libreria nello stesso file di origine. Ogni record viene visualizzato nel file oggetto nello stesso ordine in cui è stato individuato nel file di origine.
 
-Se l'ordine di libreria predefinita e una libreria aggiunta è importante, la compilazione con il [/Zl](../build/reference/zl-omit-default-library-name.md) commutatore impedirà il nome della libreria predefinita viene inserito nel modulo di oggetto. Un secondo pragma di commento può quindi essere utilizzato per inserire il nome della libreria predefinita dopo la libreria aggiunta. Le librerie elencate con tali pragma verranno visualizzate nel modulo di oggetto nello stesso ordine in cui vengono trovate nel codice sorgente.
+Se l'ordine della libreria predefinita e di una libreria aggiunta è importante, la compilazione con l'opzione [/ZL](../build/reference/zl-omit-default-library-name.md) impedisce che il nome della libreria predefinita venga inserito nel modulo Object. Un secondo pragma di commento può quindi essere utilizzato per inserire il nome della libreria predefinita dopo la libreria aggiunta. Le librerie elencate con tali pragma verranno visualizzate nel modulo di oggetto nello stesso ordine in cui vengono trovate nel codice sorgente.
 
 ### <a name="linker"></a>linker
 
-Posizioni una [l'opzione del linker](../build/reference/linker-options.md) nel file oggetto. È possibile utilizzare questo tipo di commento per specificare un'opzione del linker anziché passarla alla riga di comando o specificarla nell'ambiente di sviluppo. È possibile ad esempio specificare l'opzione /include per imporre l'inclusione di un simbolo:
+Inserisce un' [opzione](../build/reference/linker-options.md) del linker nel file oggetto. È possibile utilizzare questo tipo di commento per specificare un'opzione del linker anziché passarla alla riga di comando o specificarla nell'ambiente di sviluppo. È possibile ad esempio specificare l'opzione /include per imporre l'inclusione di un simbolo:
 
-```
+```C
 #pragma comment(linker, "/include:__mySymbol")
 ```
 
-Solo gli elementi seguenti (*comment-type*) le opzioni del linker sono disponibili per essere passate all'identificatore del linker:
+Per passare all'identificatore del linker sono disponibili solo le opzioni del linker seguenti (*tipo di commento*):
 
 - [/DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)
 
@@ -69,29 +61,30 @@ Solo gli elementi seguenti (*comment-type*) le opzioni del linker sono disponibi
 
 - [/SECTION](../build/reference/section-specify-section-attributes.md)
 
-### <a name="user"></a>utente
+### <a name="user"></a>user
 
-Inserisce un commento generale nel file oggetto. Il *commentstring* parametro contiene il testo del commento. Questo record di commento viene ignorato dal linker.
+Inserisce un commento generale nel file oggetto. Il parametro della *stringa di commento* contiene il testo del commento. Questo record di commento viene ignorato dal linker.
+
+## <a name="examples"></a>Esempi
 
 Il pragma seguente indica al linker di eseguire la ricerca della libreria EMAPI.LIB durante il collegamento. Il linker esegue la ricerca prima nella directory di lavoro, quindi nel percorso specificato nella variabile di ambiente LIB.
 
-```
+```C
 #pragma comment( lib, "emapi" )
 ```
 
 Il pragma seguente indica al compilatore di inserire il nome e il numero di versione del compilatore nel file oggetto:
 
-```
+```C
 #pragma comment( compiler )
 ```
 
-> [!NOTE]
-> Per i commenti che accettano un *commentstring* parametro, è possibile usare una macro in qualsiasi punto in cui si utilizzerebbe una valore letterale stringa, a condizione che la macro si espande in un valore letterale stringa. È inoltre possibile concatenare qualsiasi combinazione di valori letterali stringa e di macro che si espandono a valori letterali stringa. L'istruzione seguente è ad esempio accettabile:
+Per i commenti che accettano un parametro di *stringa di commento* , è possibile usare una macro in qualsiasi punto in cui si userà un valore letterale stringa, a condizione che la macro si espande in un valore letterale stringa. È inoltre possibile concatenare qualsiasi combinazione di valori letterali stringa e di macro che si espandono a valori letterali stringa. L'istruzione seguente è ad esempio accettabile:
 
-```
+```C
 #pragma comment( user, "Compiled on " __DATE__ " at " __TIME__ )
 ```
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

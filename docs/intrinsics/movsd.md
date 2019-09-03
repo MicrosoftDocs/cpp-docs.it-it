@@ -1,6 +1,6 @@
 ---
 title: __movsd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: 950e83f2cd03e92bb5a9f953affe8e7ff479a408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c43f6bdb731abc281d60fe4bc6ecaec1331b9945
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263179"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221765"
 ---
-# <a name="movsd"></a>__movsd
+# <a name="__movsd"></a>__movsd
 
 **Sezione specifica Microsoft**
 
-Genera una stringa di spostare (`rep movsd`) (istruzione).
+Genera un'istruzione Move String`rep movsd`().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __movsd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
-[out] La destinazione dell'operazione.
+*Destinazione*\
+out Destinazione dell'operazione.
 
-*Origine*<br/>
-[in] L'origine dell'operazione.
+*Source*\
+in Origine dell'operazione.
 
-*Conteggio*<br/>
-[in] Il numero di parole doppie da copiare.
+*Conteggio*\
+in Numero di parole doppie da copiare.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,17 +48,17 @@ void __movsd(
 |---------------|------------------|
 |`__movsd`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Il risultato è che il primo `Count` Double Word a cui punta `Source` vengono copiati il `Dest` stringa.
+Il risultato è che il primo *conteggio* parole doppie a cui punta l' *origine* viene copiato nella stringa di *destinazione* .
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // movsd.cpp
 // processor: x86, x64
 #include <stdio.h>

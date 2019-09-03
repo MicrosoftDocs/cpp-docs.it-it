@@ -1,40 +1,40 @@
 ---
 title: __mulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __mulh
 helpviewer_keywords:
 - __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-ms.openlocfilehash: 122d7ff28a01c0b95c16c6a0f4cd20e883744d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a421cdda1c62620d4c933436fd0b5bab589c0e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263074"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221686"
 ---
-# <a name="mulh"></a>__mulh
+# <a name="__mulh"></a>__mulh
 
 **Sezione specifica Microsoft**
 
-Restituisce i 64 bit alti del prodotto di due interi con segno a 64 bit.
+Restituisce gli alti 64 bit del prodotto di interi con segno a 2 64 bit.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 __int64 __mulh(
    __int64 a,
    __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*a*<br/>
-[in] Il primo numero da moltiplicare.
+*un*\
+[in] Primo numero da moltiplicare.
 
-*b*<br/>
-[in] Il secondo numero da moltiplicare.
+*b*\
+[in] Secondo numero da moltiplicare.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -46,7 +46,7 @@ __int64 __mulh(
 |---------------|------------------|
 |`__mulh`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
@@ -54,7 +54,7 @@ Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // mulh.cpp
 // processor: x64
 #include <stdio.h>

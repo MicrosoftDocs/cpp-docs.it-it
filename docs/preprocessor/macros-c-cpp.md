@@ -1,30 +1,31 @@
 ---
 title: Macro (C/C++)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba2c0f012974a528876219d00c61c0f31a6cd820
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371777"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218866"
 ---
 # <a name="macros-cc"></a>Macro (C/C++)
-Pre-elaborazione espande le macro in tutte le righe che non sono direttive del preprocessore (righe che non è un **#** come primo carattere diverso da spazi vuoti) e nelle parti di alcune direttive che non vengono ignorate come parte di un compilazione condizionale. Le direttive di "compilazione condizionale" consentono di evitare la compilazione di porzioni del file di origine grazie alla possibilità di eseguire un test di un'espressione costante o di un identificatore, in modo da determinare quali blocchi di testo vengono passati al compilatore e quali blocchi di testo vengono rimossi dal file di origine durante la pre-elaborazione.
 
-La direttiva `#define` viene generalmente utilizzata per associare identificatori significativi a costanti, parole chiave e istruzioni o espressioni di uso comune. Gli identificatori che rappresentano costanti sono talvolta denominati "costanti simboliche" o "costanti di manifesto". Gli identificatori che rappresentano istruzioni o espressioni sono denominati "macro". In questa documentazione relativa al preprocessore, viene utilizzato esclusivamente il termine "macro".
+Il preprocessore espande le macro in tutte le righeeccetto le direttive per il preprocessore, **#** le linee che hanno come primo carattere diverso da uno spazio vuoto. Espande le macro in parti di alcune direttive che non vengono ignorate come parte di una compilazione condizionale. Le direttive di *compilazione condizionale* consentono di evitare la compilazione di parti di un file di origine. Testano un'espressione costante o un identificatore per determinare quali blocchi di testo passare al compilatore e quali devono essere rimossi dal file di origine durante la pre-elaborazione.
 
-Quando il nome della macro viene riconosciuto nel testo di origine del programma o negli argomenti di alcuni altri comandi del preprocessore, viene considerato come una chiamata alla macro. Il nome della macro viene sostituito con una copia del corpo della macro. Se la macro accetta argomenti, gli argomenti effettivi che seguono il nome della macro vengono sostituiti dai parametri formali nel corpo della macro. Il processo con il quale si sostituisce la chiamata di macro con la copia elaborata del corpo viene chiamato "espansione" di una chiamata di macro.
+La direttiva `#define` viene generalmente utilizzata per associare identificatori significativi a costanti, parole chiave e istruzioni o espressioni di uso comune. Gli identificatori che rappresentano costanti sono talvolta denominati *costanti simboliche* o *costanti manifesto*. Gli identificatori che rappresentano istruzioni o espressioni sono denominati *macro*. In questa documentazione relativa al preprocessore, viene utilizzato esclusivamente il termine "macro".
 
-In pratica, esistono due tipi di macro. Le macro di tipo "oggetto" non accettano argomenti, mentre le macro di tipo "funzione" possono essere impostate per accettare argomenti, in modo che assomiglino e agiscano come delle chiamate di funzione. Poiché le macro non generano vere chiamate di funzione, è talvolta possibile fare in modo che i programmi vengano eseguiti più velocemente sostituendo le chiamate di funzione con le macro. In C++, le funzioni inline sono spesso un metodo consigliato. È necessario, però, definire ed utilizzare le macro con attenzione, affinché non creino problemi. Per le definizioni di macro con argomenti, potrebbe essere necessario utilizzare le parentesi, in modo da mantenere la precedenza appropriata all'interno delle espressioni. Le macro, inoltre, potrebbero non essere in grado di gestire correttamente le espressioni con effetti collaterali. Vedere le `getrandom` riportato nella [il #define (direttiva)](../preprocessor/hash-define-directive-c-cpp.md) per altre informazioni.
+Quando il nome di una macro viene riconosciuto nel testo di origine del programma o negli argomenti di determinati altri comandi del preprocessore, viene considerato come una chiamata a tale macro. Il nome della macro viene sostituito con una copia del corpo della macro. Se la macro accetta argomenti, gli argomenti effettivi che seguono il nome della macro vengono sostituiti dai parametri formali nel corpo della macro. Il processo di sostituzione di una chiamata macro con la copia elaborata del corpo viene chiamato *espansione* della chiamata macro.
 
-Una volta definita una macro, se si desidera ridefinirla su un valore differente, è necessario rimuovere prima la definizione originale. È, tuttavia, possibile ridefinire la macro con la stessa definizione. Pertanto, è possibile che la stessa definizione compaia più volte in uno stesso programma.
+In pratica, esistono due tipi di macro. Le macro *simili a oggetti* non accettano argomenti. Le macro di *tipo funzione* possono essere definite per accettare argomenti, in modo che sembrino e agiscano come chiamate di funzione. Poiché le macro non generano chiamate di funzione effettive, è talvolta possibile velocizzare l'esecuzione dei programmi sostituendo le chiamate di funzione con le macro. In C++, le funzioni inline sono spesso un metodo consigliato. Tuttavia, le macro possono creare problemi se non vengono definiti e usati con cautela. Per le definizioni di macro con argomenti, potrebbe essere necessario utilizzare le parentesi, in modo da mantenere la precedenza appropriata all'interno delle espressioni. Le macro, inoltre, potrebbero non essere in grado di gestire correttamente le espressioni con effetti collaterali. Per ulteriori informazioni, vedere l' `getrandom` esempio nella [direttiva #define](../preprocessor/hash-define-directive-c-cpp.md).
 
-Il `#undef` direttiva rimuove la definizione di una macro. Dopo aver rimosso la definizione, è possibile ridefinire la macro su un valore diverso. [Il #define (direttiva)](../preprocessor/hash-define-directive-c-cpp.md) e [#undef direttiva](../preprocessor/hash-undef-directive-c-cpp.md) illustrano il `#define` e `#undef` direttive, rispettivamente.
+Una volta definita una macro, non è possibile ridefinirla con un valore diverso senza prima rimuovere la definizione originale. È, tuttavia, possibile ridefinire la macro con la stessa definizione. Pertanto, la stessa definizione può apparire più di una volta in un programma.
+
+La `#undef` direttiva rimuove la definizione di una macro. Una volta rimossa la definizione, è possibile ridefinire la macro con un valore diverso. [La direttiva #define](../preprocessor/hash-define-directive-c-cpp.md) e [la direttiva #undef](../preprocessor/hash-undef-directive-c-cpp.md) discutono `#define` rispettivamente `#undef` le direttive e.
 
 Per ulteriori informazioni, vedere,
 
@@ -36,4 +37,4 @@ Per ulteriori informazioni, vedere,
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al preprocessore C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Riferimenti perC++ il preprocessore C/](../preprocessor/c-cpp-preprocessor-reference.md)

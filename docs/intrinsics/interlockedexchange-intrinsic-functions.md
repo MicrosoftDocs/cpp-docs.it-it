@@ -1,6 +1,6 @@
 ---
 title: Funzioni intrinseche _InterlockedExchange
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 53c3545be5e74d802fe63f8e7c03d2a7a2b26110
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509397"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222002"
 ---
 # <a name="_interlockedexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchange
 
@@ -59,7 +59,7 @@ Genera un'istruzione atomica per impostare un valore specificato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 long _InterlockedExchange(
    long volatile * Target,
    long Value
@@ -142,12 +142,12 @@ __int64 _InterlockedExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Destinazione*<br/>
+*Destinazione*\
 [in, out] Puntatore al valore da scambiare. La funzione imposta questa variabile su `Value` e restituisce il valore precedente.
 
-*Valore*<br/>
+*Valore*\
 in Valore da scambiare con il valore a cui punta `Target`.
 
 ## <a name="return-value"></a>Valore restituito
@@ -158,9 +158,11 @@ Restituisce il valore iniziale a cui punta `Target`.
 
 |Funzione intrinseca|Architettura|Intestazione|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedExchange64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM, ARM64|\<intrin.h>|
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Note
 
@@ -170,7 +172,7 @@ Ci sono diverse varianti di `_InterlockedExchange` che variano in base ai tipi d
 
 Mentre la funzione `_InterlockedExchange` opera su valori integer a 32 bit, `_InterlockedExchange8` opera su valori integer a 8 bit, `_InterlockedExchange16` opera su valori integer a 16 bit e `_InterlockedExchange64` opera su valori integer a 64 bit.
 
-Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.
+Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche con `_nf` suffisso ("nessun limite") non fungono da barriera di memoria.
 
 Sulle piattaforme Intel che supportano le istruzioni HLE (Hardware Lock Elision), le funzioni intrinseche con suffissi `_HLEAcquire` e `_HLERelease` includono un hint per il processore che consente di accelerare le prestazioni eliminando un passaggio di blocco scrittura nell'hardware. Se queste funzioni intrinseche vengono chiamate su piattaforme che non supportano HLE, l'hint viene ignorato.
 
@@ -184,6 +186,6 @@ Per un esempio di come usare `_InterlockedExchange`, vedere [_InterlockedDecreme
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
-[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
+[Parole chiave](../cpp/keywords-cpp.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

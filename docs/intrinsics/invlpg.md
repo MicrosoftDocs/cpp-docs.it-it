@@ -1,6 +1,6 @@
 ---
 title: __invlpg
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __invlpg
 - __invlpg_cpp
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-ms.openlocfilehash: b4f941baae9f03ed288a99d59e2b06262962e339
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba8bd81498f805992336b0dc4163fe18fa157a2c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348744"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221892"
 ---
-# <a name="invlpg"></a>__invlpg
+# <a name="__invlpg"></a>__invlpg
 
 **Sezione specifica Microsoft**
 
-Genera l'errore x86 `invlpg` istruzione, che invalida il buffer di translation lookaside (TLB) per la pagina associata alla memoria a cui punta `Address`.
+Genera l'istruzione `invlpg` x86, che invalida translation lookaside buffer (tlb) per la pagina associata alla memoria a cui punta l' *Indirizzo*.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __invlpg(
    void* Address
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Address*<br/>
-[in] Un indirizzo a 64 bit.
+*Indirizzo*\
+in Indirizzo a 64 bit.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -40,11 +40,11 @@ void __invlpg(
 |---------------|------------------|
 |`__invlpg`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-La funzione intrinseca `__invlpg` genera un'istruzione privilegiata ed è disponibile solo in modalità kernel con un livello di privilegio (CPL) pari a 0.
+Il intrinseco `__invlpg` emette un'istruzione con privilegi ed è disponibile solo in modalità kernel con un livello di privilegio (CPL) pari a 0.
 
 Questa routine è disponibile solo come funzione intrinseca.
 

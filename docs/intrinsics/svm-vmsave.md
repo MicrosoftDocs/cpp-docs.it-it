@@ -1,42 +1,41 @@
 ---
 title: __svm_vmsave
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_vmsave
 helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f91efa7116a8a8e9ebe27c7e5e4e64c4f1533e9d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390191"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219789"
 ---
-# <a name="svmvmsave"></a>__svm_vmsave
+# <a name="__svm_vmsave"></a>__svm_vmsave
 
 **Sezione specifica Microsoft**
 
-Archivia un subset di stato del processore in blocco di controllo (VMCB) della macchina virtuale specificata.
+Archivia un subset dello stato del processore nel blocco di controllo della macchina virtuale (VMCB) specificato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __svm_vmsave(
    size_t VmcbPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*VmcbPhysicalAddress*|[in] L'indirizzo fisico del VMCB.|
+*VmcbPhysicalAddress*\
+in Indirizzo fisico del VMCB.
 
 ## <a name="remarks"></a>Note
 
-La funzione `__svm_vmsave` è equivalente alle `VMSAVE` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: Sistema di programmazione,"numero 24593, revisione 3.11 o versione successiva, al documento il [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) sito.
+La funzione `__svm_vmsave` è equivalente alle `VMSAVE` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento "volume 2 Manual Programmer Architecture AMD64: Programmazione di sistema, "numero di documento 24593, revisione 3,11 o successiva, nel sito di [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -44,12 +43,12 @@ La funzione `__svm_vmsave` è equivalente alle `VMSAVE` istruzioni in linguaggio
 |---------------|------------------|
 |`__svm_vmsave`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
-[__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
+[__svm_vmrun](../intrinsics/svm-vmrun.md)\
 [__svm_vmload](../intrinsics/svm-vmload.md)

@@ -1,42 +1,41 @@
 ---
 title: __svm_vmload
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_vmload
 helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-ms.openlocfilehash: 282f1c005c7eb59b2c590c70b38233c88c664e07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da6ca9786b9c7e5041b9a8ca908d567b16176436
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390230"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219805"
 ---
-# <a name="svmvmload"></a>__svm_vmload
+# <a name="__svm_vmload"></a>__svm_vmload
 
 **Sezione specifica Microsoft**
 
-Carica un subset di stato del processore dal blocco di controllo (VMCB) della macchina virtuale specificata.
+Carica un subset dello stato del processore dal blocco di controllo della macchina virtuale (VMCB) specificato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __svm_vmload(
    size_t VmcbPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*VmcbPhysicalAddress*|[in] L'indirizzo fisico del VMCB.|
+*VmcbPhysicalAddress*\
+in Indirizzo fisico del VMCB.
 
 ## <a name="remarks"></a>Note
 
-La funzione `__svm_vmload` è equivalente alle `VMLOAD` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Volume manuale per programmatori dell'architettura AMD64 2: Sistema di programmazione,"documento numero 24593, revisione 3.11, la [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sito.
+La funzione `__svm_vmload` è equivalente alle `VMLOAD` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento "volume 2 Manual Programmer Architecture AMD64: Programmazione del sistema, "numero di documento 24593, revisione 3,11, nel sito di [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -44,12 +43,12 @@ La funzione `__svm_vmload` è equivalente alle `VMLOAD` istruzioni in linguaggio
 |---------------|------------------|
 |`__svm_vmload`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
-[__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
+[__svm_vmrun](../intrinsics/svm-vmrun.md)\
 [__svm_vmsave](../intrinsics/svm-vmsave.md)

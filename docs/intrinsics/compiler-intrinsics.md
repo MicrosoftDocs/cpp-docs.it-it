@@ -1,18 +1,18 @@
 ---
 title: Intrinseci del compilatore
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 helpviewer_keywords:
 - intrinsics, compiler
 - compiler intrinsics
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c101de6d74a4f2d3073bd220a29f2a0328d2959
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349108"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216877"
 ---
 # <a name="compiler-intrinsics"></a>Intrinseci del compilatore
 
@@ -26,27 +26,27 @@ L'uso degli intrinseci influisce sulla portabilità del codice, poiché gli intr
 
 Alcune funzioni intrinseche, ad esempio `__assume` e `__ReadWriteBarrier`, forniscono informazioni al compilatore che influiscono sul comportamento dell'utilità di ottimizzazione.
 
-Alcune funzioni intrinseche sono disponibili solo come intrinseci e alcune sono disponibili nelle implementazioni sia di intrinseci che di funzione. È possibile indicare al compilatore di usare l'implementazione di intrinseci in due modi, a seconda che si voglia abilitare solo funzioni specifiche o abilitare tutte le funzioni intrinseche. Il primo modo consiste nell'usare `#pragma intrinsic(` *intrinseco-funzione-name-list*`)`. Il pragma può essere usato per specificare uno o più intrinseci separati da virgole. Il secondo consiste nell'usare la [/Oi (genera funzioni intrinseche)](../build/reference/oi-generate-intrinsic-functions.md) opzione del compilatore, che rende disponibili tutte le funzioni intrinseche su una determinata piattaforma. Sotto **/Oi**, usare `#pragma function(` *intrinseco-funzione-name-list* `)` per forzare una chiamata di funzione da utilizzare anziché una funzione intrinseca. Se la documentazione per un intrinseco specifico nota che la routine è disponibile solo come un intrinseco, allora l'implementazione intrinseca viene usata indipendentemente dal fatto che **/Oi** o `#pragma intrinsic` è specificato. In tutti i casi **/Oi** o `#pragma intrinsic` consente, ma senza imposizione, query optimizer di usare la funzione intrinseca. L'utilità di ottimizzazione potrà ancora chiamare la funzione.
+Alcune funzioni intrinseche sono disponibili solo come intrinseci e alcune sono disponibili nelle implementazioni sia di intrinseci che di funzione. È possibile indicare al compilatore di usare l'implementazione di intrinseci in due modi, a seconda che si voglia abilitare solo funzioni specifiche o abilitare tutte le funzioni intrinseche. Il primo modo consiste nell'usare `#pragma intrinsic(` *intrinsic-function-name-list*`)`. Il pragma può essere usato per specificare uno o più intrinseci separati da virgole. Il secondo consiste nell'usare l'opzione del compilatore [/OI (genera funzioni intrinseche)](../build/reference/oi-generate-intrinsic-functions.md) , che rende disponibili tutte le funzioni intrinseche su una determinata piattaforma. In **/OI**usare `#pragma function(` *intrinsic-function-name-list* `)` per forzare l'uso di una chiamata di funzione al posto di un intrinseco. Se la documentazione per un intrinseco specifico rileva che la routine è disponibile solo come funzione intrinseca, l'implementazione intrinseca viene utilizzata indipendentemente dal fatto `#pragma intrinsic` che sia specificato/Oi o. In tutti i casi ,/OI `#pragma intrinsic` o consente, ma non forza, a Query Optimizer di usare l'oggetto intrinseco. L'utilità di ottimizzazione potrà ancora chiamare la funzione.
 
-Alcune funzioni di libreria standard C/C++ sono disponibili nelle implementazioni intrinseche in alcune architetture. Quando si chiama una funzione CRT, viene usata l'implementazione intrinseca se **/Oi** viene specificato nella riga di comando.
+Alcune funzioni di libreria standard C/C++ sono disponibili nelle implementazioni intrinseche in alcune architetture. Quando si chiama una funzione CRT, viene utilizzata l'implementazione intrinseca se nella riga di comando viene specificato **/OI** .
 
-Un file di intestazione \<intrin. h >, è disponibile che dichiara i prototipi per le funzioni intrinseche. Sono disponibili in funzioni intrinseche specifiche del produttore il \<immintrin. h > e \<ammintrin. h > file di intestazione. Inoltre, alcune intestazioni di Windows dichiarano funzioni che eseguono il mapping su un intrinseco del compilatore.
+È disponibile un file \<di intestazione, intrin. h >, che dichiara i prototipi per le funzioni intrinseche comuni. Le funzioni intrinseche specifiche del \<produttore sono disponibili nei file di intestazione > immintrin. h > e \<ammintrin. h. Inoltre, alcune intestazioni di Windows dichiarano funzioni che eseguono il mapping su un intrinseco del compilatore.
 
 Le sezioni seguenti elencano tutti gli intrinseci disponibili in varie architetture. Per altre informazioni sull'uso degli intrinseci su un particolare processore di destinazione, fare riferimento alla documentazione di riferimento del produttore.
 
-- [Intrinseci ARM](../intrinsics/arm-intrinsics.md)
+- [Oggetti intrinseci ARM](../intrinsics/arm-intrinsics.md)
 
 - [Elenco intrinseci x86](../intrinsics/x86-intrinsics-list.md)
 
 - [Elenco intrinseci x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [Intrinseci disponibili in tutte le architetture](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [Funzioni intrinseche disponibili in tutte le architetture](../intrinsics/intrinsics-available-on-all-architectures.md)
 
-- [Elenco alfabetico delle funzioni intrinseche](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
+- [Elenco alfabetico di funzioni intrinseche](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 
 ## <a name="see-also"></a>Vedere anche
 
 [Riferimento all'assembler ARM](../assembler/arm/arm-assembler-reference.md)<br/>
-[Riferimento a Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Guida di riferimento a Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
 [Parole chiave](../cpp/keywords-cpp.md)<br/>
-[Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)
+[Riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)

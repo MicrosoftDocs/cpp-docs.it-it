@@ -1,6 +1,6 @@
 ---
 title: _BitScanForward, _BitScanForward64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 8b09aeee485611ddd20d51b4c1e36ec98c03c26e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91f43d19259419b78d1910a00a154d2d4f0adfc7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264218"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222224"
 ---
-# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
+# <a name="_bitscanforward-_bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
 **Sezione specifica Microsoft**
 
@@ -26,7 +26,7 @@ Cercare un bit impostato (1) nei dati di maschera dal bit meno significativo (LS
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned char _BitScanForward(
    unsigned long * Index,
    unsigned long Mask
@@ -37,13 +37,13 @@ unsigned char _BitScanForward64(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Index*<br/>
-[out] Caricato con la posizione del bit del primo bit impostato (1) trovata.
+*Indice*\
+out Caricato con la posizione di bit del primo bit impostato (1) trovato.
 
-*Maschera*<br/>
-[in] Il valore a 32 o 64 bit da cercare.
+*Maschera*\
+in Valore a 32 bit o 64 bit in cui eseguire la ricerca.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -57,14 +57,14 @@ Se viene trovato un bit impostato, viene restituita la posizione di bit del prim
 
 |Funzione intrinseca|Architettura|
 |---------------|------------------|
-|`_BitScanForward`|x86, ARM, x64|
-|`_BitScanForward64`|ARM, x64|
+|`_BitScanForward`|x86, ARM, x64, ARM64|
+|`_BitScanForward64`|ARM64, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // BitScanForward.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -93,15 +93,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>Input
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Esempio di output
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```

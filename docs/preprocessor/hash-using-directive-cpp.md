@@ -1,6 +1,6 @@
 ---
-title: '#Direttiva using (C++/CLI)'
-ms.date: 10/18/2018
+title: '#direttiva using (C++/CLI)'
+ms.date: 08/29/2019
 f1_keywords:
 - friend_as_cpp
 - '#using'
@@ -12,71 +12,69 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dae5c277055157aef5451c19ee020fbbd2aaccb
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383894"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220207"
 ---
-# <a name="using-directive-ccli"></a>#using (direttiva) (C++/CLI)
+# <a name="using-directive-ccli"></a>direttiva #using (C++/CLI)
 
-Importa i metadati in un programma compilato con [/clr](../build/reference/clr-common-language-runtime-compilation.md).
+Importa i metadati in un programma compilato con [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="syntax"></a>Sintassi
 
-```
-#using file [as_friend]
-```
+> **#using** *file* [**as_friend**]
 
 ### <a name="parameters"></a>Parametri
 
-*file*<br/>
+*file*\
 File MSIL con estensione dll, exe, netmodule oppure obj. Ad esempio,
 
 `#using <MyComponent.dll>`
 
-*as_friend*<br/>
-Specifica che tutti i tipi nella *file* sono accessibili. Per altre informazioni, vedere [gli assembly Friend (C++)](../dotnet/friend-assemblies-cpp.md).
+**as_friend**\
+Specifica che tutti i tipi nel *file* sono accessibili. Per ulteriori informazioni, vedere [assembly Friend (C++)](../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="remarks"></a>Note
 
-*file* può essere un file Microsoft intermediate language (MSIL) importato per dati e costrutti gestiti. Se un file con estensione dll contiene un manifesto dell'assembly, quindi vengono importati tutti i file con estensione DLL a cui fa riferimento il manifesto e l'assembly a cui si sta compilando elencherà *file* nei metadati come un riferimento all'assembly.
+il *file* può essere un file Microsoft Intermediate Language (MSIL) che viene importato per i suoi dati gestiti e i costrutti gestiti. Se un file con estensione dll contiene un manifesto dell'assembly, verranno importati tutti i file con estensione dll a cui viene fatto riferimento nel manifesto e l'assembly in cui si sta creando elenca i *file* nei metadati come riferimento a un assembly.
 
-Se *file* non contiene un assembly (se *file* è un modulo) e se non si intende usare le informazioni sul tipo dal modulo nell'applicazione corrente (assembly), è possibile semplicemente indicare che il modulo è parte dell'assembly; usare [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). I tipi nel modulo sono quindi disponibili per qualsiasi applicazione con riferimento nell'assembly.
+Se il *file* non contiene un assembly, se il *file* è un modulo, e se non si intende usare le informazioni sui tipi del modulo nell'applicazione (assembly) corrente, è possibile indicare semplicemente che il modulo è parte dell'assembly. usare [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md). I tipi nel modulo sono quindi disponibili per qualsiasi applicazione con riferimento nell'assembly.
 
-Un'alternativa all'utilizzo **#using** è la [/FU](../build/reference/fu-name-forced-hash-using-file.md) opzione del compilatore.
+Un'alternativa all'uso di **#using** è l'opzione del compilatore [/fu](../build/reference/fu-name-forced-hash-using-file.md) .
 
-gli assembly .exe passato a **#using** deve essere compilato usando uno dei compilatori Visual Studio .NET (Visual Basic o Visual c#, ad esempio).  Se si prova a importare i metadati di un assembly con estensione exe compilato con `/clr`, verrò generata un'eccezione di caricamento del file.
+gli assembly con estensione exe passati a **#using** devono essere compilati usando uno dei compilatori di Visual Studio .NET C#(ad esempio Visual Basic o Visual).  Se si prova a importare i metadati di un assembly con estensione exe compilato con `/clr`, verrò generata un'eccezione di caricamento del file.
 
 > [!NOTE]
-> Un componente di cui viene fatto riferimento con **#using** può essere eseguito con una versione diversa del file importato in fase di compilazione, causando un'applicazione client per produrre risultati imprevisti.
+> Un componente a cui si fa riferimento con **#using** può essere eseguito con una versione diversa del file importato in fase di compilazione, facendo in modo che un'applicazione client fornisca risultati imprevisti.
 
-Affinché il compilatore possa riconoscere un tipo in un assembly (non un modulo), deve essere forzata la risoluzione del tipo, è possibile ripetere l'operazione, ad esempio, con la definizione di un'istanza del tipo. Esistono altri modi per risolvere i nomi dei tipi in un assembly per il compilatore, ad esempio, se si eredita da un tipo in un assembly, il nome del tipo verrà quindi diventare noto al compilatore.
+Per consentire al compilatore di riconoscere un tipo in un assembly (non un modulo), è necessario forzare la risoluzione del tipo. È possibile forzarlo, ad esempio, definendo un'istanza del tipo. Esistono altri modi per risolvere i nomi dei tipi in un assembly per il compilatore. Se, ad esempio, si eredita da un tipo in un assembly, il nome del tipo diventa noto al compilatore.
 
-Quando si importano metadati compilati dal codice sorgente che utilizza [declspec](../cpp/thread.md), la semantica del thread non viene mantenuta nei metadati. Ad esempio, una variabile dichiarata con **declspec**, compilata in un programma che si intende la compilazione per .NET Framework common language runtime e quindi importate tramite **#using**, non sarà più possibile **declspec** semantica sulla variabile.
+Quando si importano metadati compilati dal codice sorgente che utilizza [_ _ declspec (thread)](../cpp/thread.md), la semantica del thread non viene mantenute nei metadati. Ad esempio, una variabile dichiarata con **_ _ declspec (thread)** , compilata in un programma compilato per la .NET Framework Common Language Runtime e quindi importata tramite **#using**, non avrà la semantica **_ _ declspec (thread)** sulla variabile.
 
-Tutti i tipi (gestiti e nativi) in un file a cui fanno riferimento importati **#using** sono disponibili, ma il compilatore considera i tipi nativi come dichiarazioni e non le definizioni.
+Sono disponibili tutti i tipi importati (sia gestiti che nativi) in un file a cui viene fatto riferimento da **#using** , ma il compilatore considera i tipi nativi come dichiarazioni, non come definizioni.
 
 Il file mscorlib.dll viene automaticamente referenziato se si esegue la compilazione con `/clr`.
 
-La variabile di ambiente LIBPATH specifica le directory in cui verranno cercate quando il compilatore tenta di risolvere i nomi di file passati alla **#using**.
+La variabile di ambiente LIBPATH specifica le directory in cui eseguire la ricerca quando il compilatore risolve i nomi di file passati a **#using**.
 
-Il compilatore eseguirà la ricerca dei riferimenti nel percorso seguente:
+Il compilatore cerca i riferimenti lungo il percorso seguente:
 
-- Un percorso specificato nella **#using** istruzione.
+- Percorso specificato nell'istruzione **#using** .
 
-- La directory corrente.
+- Directory corrente.
 
 - Directory di sistema di .NET Framework.
 
-- Directiry aggiunte con il [/AI](../build/reference/ai-specify-metadata-directories.md) opzione del compilatore.
+- Directory aggiunte con l'opzione del compilatore [/ai](../build/reference/ai-specify-metadata-directories.md) .
 
 - Directory nella variabile di ambiente LIBPATH.
 
 ## <a name="example"></a>Esempio
 
-Se si compila un assembly (C) e si fa riferimento a un assembly (B) che fa riferimento a un altro assembly (A), non sarà necessario fare riferimento esplicitamente all'assembly A a meno che non vengano utilizzati esplicitamente i tipi di A in C.
+Se si compila un assembly (C) e si fa riferimento a un assembly (B) che a sua volta fa riferimento a un altro assembly (A), non è necessario fare riferimento in modo esplicito all'assembly A a meno che non si usi in modo esplicito uno dei tipi di a in C.
 
 ```cpp
 // using_assembly_A.cpp
@@ -99,7 +97,7 @@ public:
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente non viene generato alcun errore del compilatore perché non si fa riferimento a using_assembly_A.dll perché il programma non utilizza alcun tipo definito in using_assembly_A.cpp.
+Nell'esempio seguente non è presente alcun errore del compilatore per non fare riferimento a *using_assembly_A. dll*, perché il programma non usa alcuno dei tipi definiti in *using_assembly_A. cpp*.
 
 ```cpp
 // using_assembly_C.cpp

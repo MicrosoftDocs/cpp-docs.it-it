@@ -1,6 +1,6 @@
 ---
 title: Funzioni intrinseche _InterlockedCompareExchangePointer
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509432"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222042"
 ---
 # <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Funzioni intrinseche _InterlockedCompareExchangePointer
 
@@ -39,7 +39,7 @@ Esegue un'operazione atomica che archivia l'indirizzo `Exchange` nell'indirizzo 
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void * _InterlockedCompareExchangePointer (
    void * volatile * Destination,
    void * Exchange,
@@ -77,15 +77,15 @@ long _InterlockedCompareExchangePointer_rel (
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Destinazione*<br/>
+*Destinazione*\
 [in, out] Puntatore a un puntatore al valore di destinazione. Il segno viene ignorato.
 
-*Exchange*<br/>
+*Exchange*\
 in Puntatore di Exchange. Il segno viene ignorato.
 
-*Comparand*<br/>
+*Comparand*\
 in Puntatore da confrontare con la destinazione. Il segno viene ignorato.
 
 ## <a name="return-value"></a>Valore restituito
@@ -96,8 +96,8 @@ Il valore restituito è il valore iniziale della destinazione.
 
 |Funzione intrinseca|Architettura|Intestazione|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM, ARM64|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Note
@@ -108,7 +108,7 @@ Il valore restituito è il valore iniziale della destinazione.
 
 Per un esempio di come usare `_InterlockedCompareExchangePointer`, vedere [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
-Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.
+Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM `_nf` con suffisso ("nessun limite") non fungono da barriera di memoria.
 
 Le funzioni intrinseche con suffisso `_np` ("nessuna prelettura") impediscono l'inserimento di una possibile operazione di prelettura da parte del compilatore.
 
@@ -120,5 +120,5 @@ Queste routine sono disponibili solo come funzioni intrinseche.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [Parole chiave](../cpp/keywords-cpp.md)

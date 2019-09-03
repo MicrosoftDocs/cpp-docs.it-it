@@ -1,33 +1,34 @@
 ---
 title: Macro e C++
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - macros, C++
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
-ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a86fb81544af91d4e844fb08b7948a589976e04
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371789"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220795"
 ---
 # <a name="macros-and-c"></a>Macro e C++
-C++ offre nuove funzionalità, alcune delle quali soppiantano quelle offerte dal preprocessore ANSI C. Queste nuove funzionalità migliorano l'indipendenza dai tipi e la prevedibilità del linguaggio:
 
-- In C++, gli oggetti dichiarati come **const** può essere usato nelle espressioni costanti. Ciò consente ai programmi di dichiarare le costanti contenenti informazioni sui tipi e i valori e le enumerazioni che possono essere visualizzate simbolicamente con il debugger. L'utilizzo della direttiva `#define` del preprocessore per definire le costanti non è altrettanto preciso. Nessun tipo di archiviazione allocato per un **const** dell'oggetto a meno che non viene trovata un'espressione che accetta l'indirizzo del programma.
+C++offre nuove funzionalità, alcune delle quali soppiantano quelle offerte dal preprocessore ANSI C. Queste nuove funzionalità migliorano l'indipendenza dai tipi e la prevedibilità del linguaggio:
+
+- In C++gli oggetti dichiarati come **const** possono essere utilizzati nelle espressioni costanti. Consente ai programmi di dichiarare costanti con informazioni sul tipo e sul valore. Possono dichiarare enumerazioni che possono essere visualizzate simbolicamente con il debugger. Quando si usa la `#define` direttiva per il preprocessore per definire le costanti, non è così precisa e non indipendente dai tipi. Non viene allocata alcuna risorsa di archiviazione per un oggetto const, a meno che il programma non contenga un'espressione che accetta l'indirizzo.
 
 - La funzionalità della funzione inline C++ soppianta le macro di tipo funzione. I vantaggi dell'utilizzo delle funzioni inline rispetto alle macro sono:
 
-    - Indipendenza dai tipi. Le funzioni inline sono soggette allo stesso controllo dei tipi delle funzioni normali. Le macro non sono indipendenti dai tipi.
+  - Indipendenza dai tipi. Le funzioni inline sono soggette allo stesso controllo dei tipi delle funzioni normali. Le macro non sono indipendenti dai tipi.
 
-    - Gestione corretta degli argomenti con effetti collaterali. Le funzioni inline valutano le espressioni fornite come argomenti prima di inserire il corpo della funzione. Pertanto, non c'è nessuna possibilità che un'espressione con effetti collaterali sia non sicura.
+  - Gestione corretta degli argomenti con effetti collaterali. Le funzioni inline valutano le espressioni fornite come argomenti prima che il corpo della funzione venga immesso. Non è pertanto possibile che un'espressione con effetti collaterali non sia sicura.
 
-Per altre informazioni sulle funzioni inline, vedere [inline, inline, \__forceinline](../cpp/inline-functions-cpp.md).
+Per ulteriori informazioni sulle funzioni inline, vedere [inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md).
 
 Per la compatibilità con le versioni precedenti, tutte le funzionalità del preprocessore presenti in ANSI C e nelle specifiche C++ precedenti vengono mantenute per Microsoft C++.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro predefinite](../preprocessor/predefined-macros.md)<br/>
+[Macro predefinite](../preprocessor/predefined-macros.md)\
 [Macro (C/C++)](../preprocessor/macros-c-cpp.md)

@@ -1,37 +1,37 @@
 ---
 title: __readdr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readdr
 helpviewer_keywords:
 - __readdr intrinsic
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
-ms.openlocfilehash: 9d265fe75abaa7ad3cfd508613766cc3b600ee14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 646330ca92af08903485fd4583eb2c217fe3e023
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263283"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216682"
 ---
-# <a name="readdr"></a>__readdr
+# <a name="__readdr"></a>__readdr
 
-Legge il valore del Registro di debug specificato.
+Legge il valore del registro di debug specificato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-unsigned         __readdr(unsigned int DebugRegister);
-unsigned __int64 __readdr(unsigned int DebugRegister);
+```C
+unsigned         __readdr(unsigned int DebugRegister); /* x86 */
+unsigned __int64 __readdr(unsigned int DebugRegister); /* x64 */
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*DebugRegister*<br/>
-[in] Registrare una costante compreso tra 0 e 7 che identifica il debug.
+*DebugRegister*\
+in Costante compreso tra 0 e 7 che identifica il registro di debug.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore del Registro di debug specificato.
+Valore del registro di debug specificato.
 
 ## <a name="remarks"></a>Note
 
@@ -43,11 +43,11 @@ Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routi
 |---------------|------------------|
 |`__readdr`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

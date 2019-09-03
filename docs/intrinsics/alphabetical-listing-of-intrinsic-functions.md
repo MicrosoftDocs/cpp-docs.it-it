@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264315"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220089"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Elenco alfabetico delle funzioni intrinseche
 
-Le sezioni seguenti descrivono le funzioni intrinseche specifiche di Microsoft disponibili in alcune o in tutte le architetture. Sono disponibili altre funzioni intrinseche supportate dai produttori di processori, nei file di intestazione o sui relativi siti Web. Vedere le [intrinseci ARM](../intrinsics/arm-intrinsics.md), [x86 le funzioni intrinseche](../intrinsics/x86-intrinsics-list.md), e [x64 intrinseci](../intrinsics/x64-amd64-intrinsics-list.md) sezioni per i collegamenti alla documentazione del produttore. Funzioni di libreria di runtime (CRT) C che dispongono di funzioni intrinseche implementate non sono documentate in questa sede. Queste funzioni sono documentate nel [C Run-Time Library Reference](../c-runtime-library/c-run-time-library-reference.md).
+Le sezioni seguenti descrivono le funzioni intrinseche specifiche di Microsoft disponibili in alcune o in tutte le architetture. Sono disponibili altre funzioni intrinseche supportate dai produttori di processori, nei file di intestazione o sui relativi siti Web. Per i collegamenti alla documentazione del produttore, vedere le sezioni [funzioni intrinseche ARM](../intrinsics/arm-intrinsics.md), [intrinseci x86](../intrinsics/x86-intrinsics-list.md)e [funzioni intrinseche x64](../intrinsics/x64-amd64-intrinsics-list.md) . Le funzioni della libreria di runtime C (CRT) che dispongono di funzioni intrinseche implementate non sono documentate qui. Queste funzioni sono documentate in [riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md).
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
@@ -69,15 +69,15 @@ Le sezioni seguenti descrivono le funzioni intrinseche specifiche di Microsoft d
 
 [__int2c](../intrinsics/int2c.md)
 
-[Funzioni intrinseche_InterlockedAdd](../intrinsics/interlockedadd-intrinsic-functions.md)
+[Funzioni intrinseche _InterlockedAdd](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
 [Funzioni intrinseche _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[Funzioni intrinseche _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[funzioni intrinseche _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Funzioni intrinseche _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[funzioni intrinseche _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
 [Funzioni intrinseche _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
@@ -95,7 +95,7 @@ Le sezioni seguenti descrivono le funzioni intrinseche specifiche di Microsoft d
 
 [Funzioni intrinseche _InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)
 
-[Funzioni intrinseche InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)
+[Funzioni intrinseche _InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)
 
 [Funzioni intrinseche _InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)
 

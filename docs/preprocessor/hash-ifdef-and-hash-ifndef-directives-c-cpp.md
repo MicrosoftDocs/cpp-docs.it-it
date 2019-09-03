@@ -1,6 +1,6 @@
 ---
-title: '#Direttive # ifdef e #ifndef (C/C++)'
-ms.date: 11/04/2016
+title: '#Direttive ifdef e #ifndef (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#ifndef'
 - '#ifdef'
@@ -11,40 +11,40 @@ helpviewer_keywords:
 - ifndef directive (#ifndef)
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-ms.openlocfilehash: d7a6a1604df03f0607f33e42880270cbdcd62e8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 433076388f3646b19d75a907c6b2254098096688
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409876"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220109"
 ---
-# <a name="ifdef-and-ifndef-directives-cc"></a>Direttive #ifdef e #ifndef (C/C++)
-Il **#ifdef** e **#ifndef** direttive eseguono la stessa attività come il `#if` direttiva quando viene usato con **definito**( *identificatore* ).
+# <a name="ifdef-and-ifndef-directives-cc"></a>direttive #ifdef e #ifndef (C/C++)
+
+Le direttive **#ifdef** e **#ifndef** hanno lo stesso effetto della direttiva [#if](hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md) quando viene usata con l'operatore **definito** .
 
 ## <a name="syntax"></a>Sintassi
 
-```
-#ifdef identifier
-#ifndef identifier
+> **#ifdef** *identificatore* di\
+> **#ifndef** *identificatore* di
 
-// equivalent to
-#if defined identifier
-#if !defined identifier
-```
+Queste direttive sono equivalenti a:
+
+> **#if definito** *identificatore* di\
+> **#if! definito** *identificatore* di
 
 ## <a name="remarks"></a>Note
 
-È possibile usare la **#ifdef** e **#ifndef** direttive ovunque `#if` può essere utilizzato. Il **#ifdef** *identifier* equivale all'istruzione `#if 1` quando *identificatore* è stata definita, ed è equivalente a `#if 0` quando *identifier* non è stato definito o è stato definito con la `#undef` direttiva. Queste direttive controllano solo la presenza o l'assenza di identificatori definiti con `#define`, non di identificatori dichiarati nel codice sorgente in C o C++.
+È possibile usare le direttive **#ifdef** e **#ifndef** ovunque `#if` sia possibile usare. L'istruzione **#ifdef** *Identifier* è equivalente a `#if 1` quando è stato definito *identificatore* . Equivale a `#if 0` quando l' `#undef` *identificatore* non è stato definito o non è stato definito dalla direttiva. Queste direttive controllano solo la presenza o l'assenza di identificatori definiti con `#define`, non di identificatori dichiarati nel codice sorgente in C o C++.
 
-Queste direttive sono fornite solo per compatibilità con le versioni precedenti del linguaggio. Il **definito (** *identifier* **)** espressione costante usata con il `#if` direttiva è preferita.
+Queste direttive sono fornite solo per compatibilità con le versioni precedenti del linguaggio. È preferibile l'espressione costante **definita (** *identificatore* **)** utilizzata con la `#if` direttiva.
 
-Il **#ifndef** direttiva controlla l'opposto della condizione controllata da **#ifdef**. Se l'identificatore non è stato definito (o la relativa definizione è stata rimossa con `#undef`), la condizione è true (diverso da zero). In caso contrario, la condizione è false (0).
+La direttiva **#ifndef** controlla l'opposto della condizione controllata da **#ifdef**. Se l'identificatore non è stato definito o se la relativa definizione è stata rimossa `#undef`con, la condizione è true (diverso da zero). In caso contrario, la condizione è false (0).
 
 **Sezione specifica Microsoft**
 
-Il *identifier* può essere passato dalla riga di comando usando il `/D` opzione. È possibile specificare fino a 30 macro con `/D`.
+L' *identificatore* può essere passato dalla riga di comando usando l'opzione [/d](../build/reference/d-preprocessor-definitions.md) . Con `/D`è possibile specificare fino a 30 macro.
 
-Ciò è utile per controllare l'esistenza di una definizione poiché una definizione può essere passata dalla riga di comando. Ad esempio:
+La direttiva **#ifdef** è utile per verificare se esiste una definizione, perché una definizione può essere passata dalla riga di comando. Ad esempio:
 
 ```cpp
 // ifdef_ifndef.CPP

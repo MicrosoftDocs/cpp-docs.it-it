@@ -1,6 +1,6 @@
 ---
 title: _bittestandset, _bittestandset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandset_cpp
 - _bittestandset64_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d54be5688acfb1e3cfc9d79514c39f665efdd9fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264179"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216892"
 ---
-# <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
+# <a name="_bittestandset-_bittestandset64"></a>_bittestandset, _bittestandset64
 
 **Sezione specifica Microsoft**
 
-Generare un'istruzione che esamina il bit `b` dell'indirizzo `a`, ne restituisce il valore corrente e imposta il bit su 1.
+Generare un'istruzione per esaminare il `b` bit dell'indirizzo `a`, restituire il valore corrente e impostare il bit su 1.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned char _bittestandset(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandset64(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*a*<br/>
+*un*\
 [in, out] Puntatore alla memoria da esaminare.
 
-*b*<br/>
-[in] Posizione del bit da testare.
+*b*\
+in Posizione del bit da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -53,10 +53,10 @@ Bit nella posizione specificata.
 
 |Funzione intrinseca|Architettura|
 |---------------|------------------|
-|`_bittestandset`|x86, ARM, x64|
-|`_bittestandset64`|X64|
+|`_bittestandset`|x86, ARM, x64, ARM64|
+|`_bittestandset64`|x64, ARM64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
@@ -64,7 +64,7 @@ Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // bittestandset.cpp
 // processor: x86, ARM, x64
 // This example uses several of the _bittest family of intrinsics

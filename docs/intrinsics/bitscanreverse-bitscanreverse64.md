@@ -1,6 +1,6 @@
 ---
 title: _BitScanReverse, _BitScanReverse64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanReverse64
 - _BitScanReverse_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 3639aac38f4c7df82cbbdb23ed9038ac86ba2cc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264283"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216949"
 ---
-# <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
+# <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse, _BitScanReverse64
 
 **Sezione specifica Microsoft**
 
@@ -26,7 +26,7 @@ Cercare un bit impostato (1) nei dati di maschera dal bit più significativo (MS
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned char _BitScanReverse(
    unsigned long * Index,
    unsigned long Mask
@@ -37,13 +37,13 @@ unsigned char _BitScanReverse64(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Index*<br/>
-[out] Caricato con la posizione del bit del primo bit impostato (1) trovata.
+*Indice*\
+out Caricato con la posizione di bit del primo bit impostato (1) trovato.
 
-*Maschera*<br/>
-[in] Il valore a 32 o 64 bit da cercare.
+*Maschera*\
+in Valore a 32 bit o 64 bit in cui eseguire la ricerca.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -53,12 +53,12 @@ Diverso da zero se `Index` è stato impostato oppure 0 se non vengono trovati bi
 
 |Funzione intrinseca|Architettura|Intestazione|
 |---------------|------------------|------------|
-|`_BitScanReverse`|x86, ARM, x64|\<intrin.h>|
-|`_BitScanReverse64`|ARM, x64||
+|`_BitScanReverse`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_BitScanReverse64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // BitScanReverse.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -87,15 +87,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>Input
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Esempio di output
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```

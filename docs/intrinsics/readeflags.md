@@ -1,32 +1,32 @@
 ---
 title: __readeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readeflags
 helpviewer_keywords:
 - __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-ms.openlocfilehash: 9913fb4287e673faf79b2c352bb42eda7f590fdd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe2365c2837b6c583810bb9fc908fe98486a2d38
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396483"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221223"
 ---
-# <a name="readeflags"></a>__readeflags
+# <a name="__readeflags"></a>__readeflags
 
-Legge che lo stato di programma e controllo (contenuto) registrare.
+Legge il registro dello stato del programma e del controllo (EFLAGS).
 
 ## <a name="syntax"></a>Sintassi
 
-```
-unsigned     int __readeflags(void);
-unsigned __int64 __readeflags(void);
+```C
+unsigned     int __readeflags(void); /* x86 */
+unsigned __int64 __readeflags(void); /* x64 */
 ```
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore del Registro di contenuto. Il valore restituito è a 32 bit a lungo in una piattaforma a 32 bit e a 64 bit a lungo in una piattaforma a 64 bit.
+Valore del registro EFLAGS. Il valore restituito è di 32 bit su una piattaforma a 32 bit e 64 bit a lungo su una piattaforma a 64 bit.
 
 ## <a name="remarks"></a>Note
 
@@ -38,11 +38,11 @@ Queste routine sono disponibili solo come intrinseci.
 |---------------|------------------|
 |`__readeflags`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [__writeeflags](../intrinsics/writeeflags.md)

@@ -1,44 +1,41 @@
 ---
-title: strict_gs_check
-ms.date: 11/04/2016
+title: Pragma strict_gs_check
+ms.date: 08/29/2019
 f1_keywords:
 - strict_gs_check
 - strict_gs_check_CPP
 helpviewer_keywords:
 - strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-ms.openlocfilehash: b62e1be466e65c0de6fb4eaa33ac6e99915529e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b66e87f2280c923d05103fccfcbbc8d32daf3fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179945"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216592"
 ---
-# <a name="strictgscheck"></a>strict_gs_check
+# <a name="strict_gs_check-pragma"></a>Pragma strict_gs_check
 
 Questo pragma fornisce controllo di sicurezza avanzato.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-#pragma strict_gs_check([push,] on )
-#pragma strict_gs_check([push,] off )
-#pragma strict_gs_check(pop)
-```
+> **#pragma strict_gs_check (** [ **push,** ] { **on** | **off** } **)** \
+> **#pragma strict_gs_check (pop)**
 
 ## <a name="remarks"></a>Note
 
-Indica al compilatore di inserire un cookie casuale nello stack di funzione per il rilevamento di alcune categorie di sovraccarico del buffer basato su stack. Per impostazione predefinita, il `/GS` (controllo sicurezza Buffer) l'opzione del compilatore non comporta l'inserimento di un cookie per tutte le funzioni. Per altre informazioni, vedere [/GS (Controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md).
+Indica al compilatore di inserire un cookie casuale nello stack di funzione per il rilevamento di alcune categorie di sovraccarico del buffer basato su stack. Per impostazione predefinita, `/GS` l'opzione del compilatore (controllo di sicurezza del buffer) non inserisce un cookie per tutte le funzioni. Per altre informazioni, vedere [/GS (Controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md).
 
-È necessario compilare con `/GS` (controllo sicurezza Buffer) per abilitare **lo strict_gs_check**.
+Compilare utilizzando per abilitare **strict_gs_check.** `/GS`
 
-Utilizzare questo pragma in moduli di codice esposti a dati potenzialmente dannosi. Questo pragma è particolarmente aggressivo e si applica alle funzioni che potrebbero non necessitare di questa difesa, ma è ottimizzato per ridurre l'effetto sulle prestazioni dell'applicazione risultante.
+Utilizzare questo pragma in moduli di codice esposti a dati potenzialmente dannosi. **strict_gs_check** è un pragma aggressivo e viene applicato a funzioni che potrebbero non richiedere questa difesa, ma è ottimizzato per ridurre al minimo l'effetto sulle prestazioni dell'applicazione risultante.
 
-Anche se si utilizza questo pragma, si deve cercare di scrivere un codice sicuro. Vale a dire, assicurarsi che sia il codice non sovraccarichi del buffer. **strict_gs_check** potrebbe proteggere l'applicazione dai sovraccarichi del buffer che rimangono nel codice.
+Anche se si utilizza questo pragma, si deve cercare di scrivere un codice sicuro. Ovvero, verificare che il codice non disponga di sovraccarichi del buffer. **strict_gs_check** potrebbe proteggere l'applicazione da sovraccarichi del buffer che rimangono nel codice.
 
 ## <a name="example"></a>Esempio
 
-Nel codice seguente si verifica un sovraccarico del buffer quando copiamo una matrice in una matrice locale. Quando si compila questo codice con `/GS`, viene inserito nessun cookie nello stack, perché il tipo di dati della matrice è un puntatore. Aggiungere il **strict_gs_check** pragma forza il cookie stack nello stack di funzione.
+In questo esempio, si verifica un sovraccarico del buffer quando si copia una matrice in una matrice locale. Quando si compila questo codice con `/GS`, non viene inserito alcun cookie nello stack, perché il tipo di dati della matrice è un puntatore. L'aggiunta del pragma **strict_gs_check** forza il cookie dello stack nello stack di funzioni.
 
 ```cpp
 // pragma_strict_gs_check.cpp
@@ -67,5 +64,5 @@ void ** ReverseArray(void **pData,
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [/GS (controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md)

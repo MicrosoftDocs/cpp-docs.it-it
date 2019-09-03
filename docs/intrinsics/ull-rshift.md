@@ -1,20 +1,20 @@
 ---
 title: __ull_rshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ull_rshift
 helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: 5d62ec1526aff595c14a53e9eca43a7a3118c8fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e914a019877482058c6b2842d3138cda02f1e228
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390126"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219702"
 ---
-# <a name="ullrshift"></a>__ull_rshift
+# <a name="__ull_rshift"></a>__ull_rshift
 
 **Sezione specifica Microsoft**
 
@@ -22,24 +22,24 @@ in x64, sposta un valore a 64 bit specificato dal primo parametro a destra di un
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned __int64 __ull_rshift(
    unsigned __int64 mask, 
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*mask*<br/>
-[in] Valore intero a 64 bit da spostare a destra.
+*maschera*\
+in Valore intero a 64 bit da spostare a destra.
 
-*nBit*<br/>
-[in] Il numero di bit da spostare, modulo 32 su x86 e modulo 64 in x64.
+*nBit*\
+in Numero di bit da spostare, modulo 32 su x86 e modulo 64 su x64.
 
 ## <a name="return-value"></a>Valore restituito
 
-La maschera spostato `nBit` bits.
+Maschera spostata da `nBit` bit.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -47,15 +47,15 @@ La maschera spostato `nBit` bits.
 |---------------|------------------|
 |`__ull_rshift`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Se il secondo parametro è maggiore di 31 su x86 (63 su x64), tale numero viene acquisito modulo 32 (64 su x64) per determinare il numero di bit da spostare. Il `ull` nel nome indica `unsigned long long (unsigned __int64)`.
+Se il secondo parametro è maggiore di 31 su x86 (63 su x64), il numero viene usato come modulo 32 (64 su x64) per determinare il numero di bit da spostare. Il `ull` nome indica `unsigned long long (unsigned __int64)`.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // ull_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -74,9 +74,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
-
-```
+```Output
 1
 ```
 
@@ -84,6 +82,6 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
-[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
+[__ll_lshift](../intrinsics/ll-lshift.md)\
+[__ll_rshift](../intrinsics/ll-rshift.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

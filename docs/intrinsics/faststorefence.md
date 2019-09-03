@@ -1,6 +1,6 @@
 ---
 title: __faststorefence
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __faststorefence_cpp
 - __faststorefence
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __faststorefence intrinsic
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
-ms.openlocfilehash: a0c8027f443a475b03521920e2e036e7ed4eaafb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11a20666612fe1bca22f5d46b93e898dae375f6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349004"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222185"
 ---
-# <a name="faststorefence"></a>__faststorefence
+# <a name="__faststorefence"></a>__faststorefence
 
 **Sezione specifica Microsoft**
 
@@ -23,7 +23,7 @@ Assicura che ogni riferimento precedente alla memoria, inclusi i riferimenti all
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __faststorefence();
 ```
 
@@ -33,11 +33,11 @@ void __faststorefence();
 |---------------|------------------|
 |`__faststorefence`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Genera una sequenza di istruzioni per la barriera di memoria completa che assicura che le operazioni di caricamento e archiviazione rilasciate prima di questa funzione intrinseca siano visibili globalmente prima della continuazione dell'esecuzione. L'effetto è simile, ma più veloce, a quello della funzione intrinseca `_mm_mfence` su tutte le piattaforme x64.
+Genera una sequenza di istruzioni della barriera di memoria completa che garantisce che le operazioni di caricamento e archiviazione rilasciate prima che la funzione intrinseca sia visibile a livello globale prima di continuare L'effetto è simile, ma più veloce, a quello della funzione intrinseca `_mm_mfence` su tutte le piattaforme x64.
 
 Nella piattaforma AMD64 questa routine genera un'istruzione che costituisce un recinto virtuale di archiviazione più rapido rispetto a quello dell'istruzione `sfence`. Per il codice critico usare questa funzione intrinseca invece di usare `_mm_sfence` solo su piattaforme AMD64. Su piattaforme Intel x64 l'istruzione `_mm_sfence` risulta più veloce.
 

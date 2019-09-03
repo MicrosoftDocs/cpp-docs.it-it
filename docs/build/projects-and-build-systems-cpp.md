@@ -9,12 +9,13 @@ helpviewer_keywords:
 - builds [C++], options
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 672dea77c4165ddcd84d3253525dc8c2d8be3e7c
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.topic: landing-page
+ms.openlocfilehash: b0ca5f28aea30ccf1e66ecd354ab15aae3e2d38a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313179"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216437"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ progetti e sistemi di compilazione in Visual Studio
 
@@ -22,7 +23,7 @@ ms.locfileid: "68313179"
 
 ## <a name="c-compilation"></a>C++compilazione
 
-Per *compilare* un C++ programma si intende compilare il codice sorgente da uno o più file e quindi collegare tali file in un file eseguibile (con estensione exe), in una libreria con caricamento dinamico (. dll) o in una libreria statica (. lib). 
+Per compilare un C++ programma si intende compilare il codice sorgente da uno o più file e quindi collegare tali file in un file eseguibile (con estensione exe), in una libreria con caricamento dinamico (. dll) o in una libreria statica (. lib). 
 
 La C++ compilazione di base prevede tre passaggi principali:
 

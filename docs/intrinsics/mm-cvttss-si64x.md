@@ -1,41 +1,41 @@
 ---
 title: _mm_cvttss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvttss_si64x
 helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396652"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217424"
 ---
-# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
+# <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Sezione specifica Microsoft**
 
-Genera x64 estesi versione di Convert con numero a virgola mobile a precisione singola troncamento in numero intero a 64 bit (`cvttss2si`) (istruzione).
+Genera la versione estesa x64 della conversione con numero a virgola mobile a precisione singola di troncamento nell'istruzione Integer a 64`cvttss2si`bit ().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 __int64 _mm_cvttss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*value*<br/>
-[in] Un `__m128` struttura che contiene i valori a virgola mobile a precisione singola.
+*value*\
+in `__m128` Struttura che contiene i valori a virgola mobile a precisione singola.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il risultato della conversione del primo valore a virgola mobile a un integer a 64 bit.
+Risultato della conversione del primo valore a virgola mobile in un intero a 64 bit.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -43,17 +43,17 @@ Il risultato della conversione del primo valore a virgola mobile a un integer a 
 |---------------|------------------|
 |`_mm_cvttss_si64x`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-La funzione intrinseca è diverso da `_mm_cvtss_si64x` solo in quanto le conversioni inesatte vengano troncate verso lo zero. Poiché il `__m128` struttura rappresenta un registro XMM, l'istruzione generata Sposta i dati da un registro XMM nella memoria di sistema.
+La funzione intrinseca differisce da `_mm_cvtss_si64x` solo in quanto le conversioni inesatte vengono troncate verso lo zero. Poiché la `__m128` struttura rappresenta un registro XMM, l'istruzione generata sposta i dati da un registro XMM nella memoria di sistema.
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // _mm_cvttss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -89,5 +89,5 @@ int main()
 
 ## <a name="see-also"></a>Vedere anche
 
-[__m128](../cpp/m128.md)<br/>
+[__m128](../cpp/m128.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

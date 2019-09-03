@@ -1,41 +1,41 @@
 ---
 title: __outword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outword
 helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 766f6adff5ea0212f48ff8727024ac7a5729c944
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262957"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221395"
 ---
-# <a name="outword"></a>__outword
+# <a name="__outword"></a>__outword
 
 **Sezione specifica Microsoft**
 
-Genera il `out` istruzione, che invia la parola `Data` attraverso la porta dei / o specificata da `Port`.
+Genera l' `out` istruzione, che invia i *dati* di Word alla porta di i/O specificata dalla *porta*.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __outword(
    unsigned short Port,
    unsigned short Data
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Porta*<br/>
-[in] La porta per inviare i dati.
+*Porta*\
+in Porta a cui inviare i dati.
 
-*Dati*<br/>
-[in] I dati da inviare.
+*Dati*\
+in Dati da inviare.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -43,7 +43,7 @@ void __outword(
 |---------------|------------------|
 |`__outword`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 

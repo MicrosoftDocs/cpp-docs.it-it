@@ -1,28 +1,28 @@
 ---
 title: __wbinvd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __wbinvd
 helpviewer_keywords:
 - __wbinvd intrinsic
 - wbinvd instruction
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
-ms.openlocfilehash: 99c7a452e063dea328e4aa1362aae8783929deb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe888ef578f0c2e077911537d401890b63372a0b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390022"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219380"
 ---
-# <a name="wbinvd"></a>__wbinvd
+# <a name="__wbinvd"></a>__wbinvd
 
 **Sezione specifica Microsoft**
 
-Genera il writeback e invalidare la Cache (`wbinvd`) (istruzione).
+Genera l'istruzione Write back e Invalidate cache`wbinvd`().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __wbinvd(void);
 ```
 
@@ -32,11 +32,11 @@ void __wbinvd(void);
 |---------------|------------------|
 |`__wbinvd`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Questa funzione di disponibile solo in modalità kernel con un livello di privilegio (CPL) pari a 0 e la routine è disponibile solo come funzione intrinseca.
+Questa funzione è disponibile solo in modalità kernel con un livello di privilegio (CPL) pari a 0 e la routine è disponibile solo come funzione intrinseca.
 
 **Fine sezione specifica Microsoft**
 

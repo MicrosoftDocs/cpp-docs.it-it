@@ -1,6 +1,6 @@
 ---
 title: __ll_rshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ll_rshift_cpp
 - __ll_rshift
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad17991d84acb7e531baf9435610ebd566197a22
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263360"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217495"
 ---
-# <a name="llrshift"></a>__ll_rshift
+# <a name="__ll_rshift"></a>__ll_rshift
 
 **Sezione specifica Microsoft**
 
-Sposta un valore a 64 bit specificato dal primo parametro a destra di un numero di bit specificato dal secondo parametro.
+Sposta un valore a 64 bit specificato dal primo parametro a destra, in base a un numero di bit specificato dal secondo parametro.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 __int64 __ll_rshift(
    __int64 Mask,
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Maschera*<br/>
-[in] Valore intero a 64 bit da spostare a destra.
+*Maschera*\
+in Valore intero a 64 bit da spostare a destra.
 
-*nBit*<br/>
-[in] Il numero di bit da spostare, modulo 64 in x64 e modulo 32 x86.
+*nBit*\
+in Numero di bit da spostare, modulo 64 su x64 e modulo 32 su x86.
 
 ## <a name="return-value"></a>Valore restituito
 
-La maschera spostato `nBit` bits.
+Maschera spostata da `nBit` bit.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,15 +48,15 @@ La maschera spostato `nBit` bits.
 |---------------|------------------|
 |`__ll_rshift`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Se il secondo parametro è maggiore di 64 su x64 (32 su x86), tale numero viene acquisito modulo 64 (32 su x86) per determinare il numero di bit da spostare. Il `ll` prefisso indica che si tratta di un'operazione sul `long long`, in un altro nome per `__int64`, il tipo integrale con segno a 64 bit.
+Se il secondo parametro è maggiore di 64 su x64 (32 su x86), il numero viene considerato modulo 64 (32 su x86) per determinare il numero di bit da spostare. Il `ll` prefisso indica che si tratta di un'operazione `long long`su, un altro `__int64`nome per il tipo integrale con segno a 64 bit.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // ll_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -80,19 +80,20 @@ int main()
 
 ## <a name="output"></a>Output
 
-```
+```Output
 ffffffffffffff00
 - 100
 fffffffffffffff0
 - 10
 ```
 
-**Nota** se `_ull_rshift` è stata usata, il byte più significativo del valore spostato a destra sarebbe stato uguale a zero, in modo che il risultato desiderato non sarebbe stato ottenuto nel caso di un valore negativo.
+> [!NOTE]
+> Se `_ull_rshift` è stato usato, il MSB del valore spostato a destra sarebbe stato zero, quindi il risultato desiderato non sarebbe stato ottenuto nel caso di un valore negativo.
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
+[__ll_lshift](../intrinsics/ll-lshift.md)\
 [__ull_rshift](../intrinsics/ull-rshift.md)

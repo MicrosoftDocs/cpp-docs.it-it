@@ -1,6 +1,6 @@
 ---
 title: __stosb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosb
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-ms.openlocfilehash: 679f1a892a6ee5b458a05d1577ecf766bed385dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf74da4c8b5aa97e542d89f55b3ed8411db9bac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390282"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221217"
 ---
-# <a name="stosb"></a>__stosb
+# <a name="__stosb"></a>__stosb
 
 **Sezione specifica Microsoft**
 
-Genera un'istruzione di archivio stringa (`rep stosb`).
+Genera un'istruzione di stringa di`rep stosb`archiviazione ().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __stosb(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
-[out] La destinazione dell'operazione.
+*Destinazione*\
+out Destinazione dell'operazione.
 
-*Dati*<br/>
-[in] I dati da archiviare.
+*Dati*\
+in Dati da archiviare.
 
-*Conteggio*<br/>
-[in] La lunghezza del blocco di byte da scrivere.
+*Conteggio*\
+in Lunghezza del blocco di byte da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,11 +48,11 @@ void __stosb(
 |---------------|------------------|
 |`__stosb`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Il risultato è che il carattere `Data` viene scritto in un blocco di `Count` byte nel `Dest` stringa.
+Il risultato è che i *dati* di tipo carattere vengono scritti in un blocco di byte di *conteggio* nella stringa di *destinazione* .
 
 Questa routine è disponibile solo come funzione intrinseca.
 

@@ -1,37 +1,35 @@
 ---
-title: auto_rename
-ms.date: 11/04/2016
+title: attributo di importazione auto_rename
+ms.date: 08/29/2019
 f1_keywords:
 - auto_rename
 helpviewer_keywords:
 - auto_rename attribute
 ms.assetid: 1075f3ab-f6fc-4e04-8e22-ebe02695a567
-ms.openlocfilehash: ba07b8532ba64c99f835e59d7c71aac8e3f2b03d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43773741701997b48c321cb01ebeba3fed1fb7b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336686"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215956"
 ---
-# <a name="autorename"></a>auto_rename
+# <a name="auto_rename-import-attribute"></a>attributo di importazione auto_rename
 
-**Sezione specifica C++**
+**C++Specifico**
 
 Rinomina parole riservate C++ aggiungendo due caratteri di sottolineatura (__) al nome della variabile per risolvere potenziali conflitti di nomi.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-auto_rename
-```
+> **#import** *libreria di tipi* **auto_rename**
 
 ## <a name="remarks"></a>Note
 
 Questo attributo viene utilizzato quando si importa una libreria dei tipi che utilizza una o più parole riservate C++ (parole chiave o macro) come nomi di variabile.
 
-**Fine sezione specifica C++**
+**Specifico C++ finale**
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

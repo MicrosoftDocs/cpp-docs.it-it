@@ -1,40 +1,38 @@
 ---
-title: rename_search_namespace
-ms.date: 10/18/2018
+title: attributo di importazione rename_search_namespace
+ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179776"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216630"
 ---
-# <a name="renamesearchnamespace"></a>rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>attributo di importazione rename_search_namespace
 
-**Sezione specifica C++**
+**C++Specifico**
 
-Ha la stessa funzionalità come la [rename_namespace](../preprocessor/rename-namespace.md) dell'attributo, ma viene usato su librerie dei tipi che usano il `#import` direttiva con il [auto_search](../preprocessor/auto-search.md) attributo.
+Ha la stessa funzionalità dell'attributo [rename_namespace](../preprocessor/rename-namespace.md) , ma viene usata nelle librerie dei tipi in cui si usa `#import` la direttiva insieme all'attributo [auto_search](../preprocessor/auto-search.md) .
 
 ## <a name="syntax"></a>Sintassi
 
-```
-rename_search_namespace("NewName")
-```
+> **#import** *libreria di tipi* **rename_search_namespace (** "*newname*" **)**
 
 ### <a name="parameters"></a>Parametri
 
-*NewName*<br/>
+*NewName*\
 Nuovo nome dello spazio dei nomi.
 
 ## <a name="remarks"></a>Note
 
-**Fine sezione specifica C++**
+**Specifico C++ finale**
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

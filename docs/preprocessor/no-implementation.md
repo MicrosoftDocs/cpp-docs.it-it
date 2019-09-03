@@ -1,38 +1,37 @@
 ---
-title: no_implementation
-ms.date: 11/04/2016
+title: attributo di importazione no_implementation
+ms.date: 08/29/2019
 f1_keywords:
 - no_implementation
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: 26527ca69c66c73f5d41084dc42df5faa34481d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f0a7454fdbedc1959b665ccb2a23748d21c342d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409811"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220779"
 ---
-# <a name="noimplementation"></a>no_implementation
-**Sezione specifica C++**
+# <a name="no_implementation-import-attribute"></a>attributo di importazione no_implementation
 
-Elimina la generazione dell'intestazione con estensione tli, contenente implementazioni delle funzioni membro wrapper.
+**C++Specifico**
+
+Evita la generazione dell' `.tli` intestazione, che contiene le implementazioni delle funzioni membro wrapper.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-no_implementation
-```
+> **#import** *libreria di tipi* **no_implementation**
 
 ## <a name="remarks"></a>Note
 
-Se viene specificato questo attributo, l'intestazione con estensione tlh, con le dichiarazioni per esporre gli elementi libreria-tipo, verrà generata senza un'istruzione `#include` per includere il file di intestazione con estensione tli.
+Se viene specificato questo attributo, l' `.tlh` intestazione, con le dichiarazioni per esporre gli elementi della libreria dei tipi, verrà generata senza un' `#include` istruzione per includere il `.tli` file di intestazione.
 
-Questo attributo viene usato in combinazione con [implementation_only](../preprocessor/implementation-only.md).
+Questo attributo viene usato insieme a [implementation_only](../preprocessor/implementation-only.md).
 
-**Fine sezione specifica C++**
+**Specifico C++ finale**
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

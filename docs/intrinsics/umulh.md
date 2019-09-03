@@ -1,19 +1,19 @@
 ---
 title: __umulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umulh
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-ms.openlocfilehash: 3a42de276b483f98e2eaf9d0c8505d7f1d5b5bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf098657d1bd5b7ef8a4ffc21f487d2ce619a04e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390113"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219674"
 ---
-# <a name="umulh"></a>__umulh
+# <a name="__umulh"></a>__umulh
 
 **Sezione specifica Microsoft**
 
@@ -21,20 +21,20 @@ Restituire i 64 bit alti del prodotto di due valori Unsigned Integer a 64 bit.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned __int64 __umulh(
    unsigned __int64 a,
    unsigned __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*a*<br/>
-[in] Il primo numero da moltiplicare.
+*un*\
+[in] Primo numero da moltiplicare.
 
-*b*<br/>
-[in] Il secondo numero da moltiplicare.
+*b*\
+[in] Secondo numero da moltiplicare.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -46,7 +46,7 @@ unsigned __int64 __umulh(
 |---------------|------------------|
 |`__umulh`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
@@ -54,7 +54,7 @@ Queste routine sono disponibili solo come funzioni intrinseche.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // umulh.cpp
 // processor: X64
 #include <cstdio>

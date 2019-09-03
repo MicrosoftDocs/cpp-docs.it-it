@@ -1,36 +1,36 @@
 ---
 title: __writecr4
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr4
 helpviewer_keywords:
 - _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
-ms.openlocfilehash: bbeb282e0e2c386d95009bef277546a260057334
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1afdadcdfdbf1060c87e3865dd5597b0b9a2ea6b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389957"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219263"
 ---
-# <a name="writecr4"></a>__writecr4
+# <a name="__writecr4"></a>__writecr4
 
 **Sezione specifica Microsoft**
 
-Scrive il valore `Data` al registro CR4.
+Scrive il valore `Data` nel registro CR4.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void writecr4(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Dati*<br/>
-[in] Valore da scrivere nel registro CR4.
+*Dati*\
+in Valore da scrivere nel registro CR4.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -38,7 +38,7 @@ void writecr4(
 |---------------|------------------|
 |`__writecr4`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 

@@ -1,41 +1,41 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390386"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217989"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
 **Sezione specifica Microsoft**
 
-Genera il `lsl` istruzione (limite di carico segmento).
+Genera l' `lsl` istruzione (limite del segmento di carico).
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*a*<br/>
-[in] Costante che specifica il selettore di segmento.
+*un*\
+in Costante che specifica il selettore di segmenti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il limite di segmento del selettore di segmenti specificato da `a`, a condizione che il selettore sia valido e visibile a livello di autorizzazione corrente.
+Limite del segmento del selettore del segmento specificato da *un oggetto*, se il selettore è valido e visibile al livello di autorizzazione corrente.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -43,17 +43,17 @@ Il limite di segmento del selettore di segmenti specificato da `a`, a condizione
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Se il limite di segmento non può essere recuperato, questa istruzione ha esito negativo. In caso di errore, questa istruzione consente di cancellare il flag ZF e il valore restituito è indefinito.
+Se non è possibile recuperare il limite del segmento, questa istruzione ha esito negativo. In caso di errore, questa istruzione Cancella il flag ZF e il valore restituito non è definito.
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86

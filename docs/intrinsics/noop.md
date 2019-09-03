@@ -1,32 +1,32 @@
 ---
 title: __noop
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __noop_cpp
 - __noop
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-ms.openlocfilehash: 674b5170dd2bba7038dfe11af906e31540acd993
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24ba85b1fbbba4491c03d5a81afae345228db3bd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262983"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217188"
 ---
-# <a name="noop"></a>__noop
+# <a name="__noop"></a>__noop
 
 **Sezione specifica Microsoft**
 
-Il `__noop` intrinseco specifica che una funzione deve essere ignorata e analizzare l'elenco di argomenti, ma nessun codice generato per gli argomenti. Si tratta per l'uso nelle funzioni globali di debug che accettano un numero variabile di argomenti.
+La `__noop` funzione intrinseca specifica che una funzione deve essere ignorata. L'elenco di argomenti viene analizzato, ma non viene generato alcun codice per gli argomenti. È destinata all'uso in funzioni di debug globali che accettano un numero variabile di argomenti.
 
-Il compilatore converte il `__noop` intrinseci su 0 in fase di compilazione.
+Il compilatore converte l' `__noop` oggetto intrinseco in 0 in fase di compilazione.
 
 ## <a name="example"></a>Esempio
 
-Il codice seguente illustra come è possibile usare `__noop`.
+Il codice seguente illustra come usare `__noop`.
 
-```
+```cpp
 // compiler_intrinsics__noop.cpp
 // compile with or without /DDEBUG
 #include <stdio.h>
@@ -44,5 +44,5 @@ int main() {
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [Parole chiave](../cpp/keywords-cpp.md)

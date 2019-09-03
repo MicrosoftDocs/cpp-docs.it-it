@@ -1,38 +1,37 @@
 ---
-title: raw_interfaces_only
-ms.date: 11/04/2016
+title: attributo di importazione raw_interfaces_only
+ms.date: 08/29/2019
 f1_keywords:
 - raw_interfaces_only
 helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
-ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b79aa4dbafa204d84f4d6ed7ec78fdec1b81fa7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179789"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216214"
 ---
-# <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Sezione specifica C++**
+# <a name="raw_interfaces_only-import-attribute"></a>attributo di importazione raw_interfaces_only
 
-Elimina la generazione di funzioni wrapper di gestione degli errori e [proprietà](../cpp/property-cpp.md) dichiarazioni che utilizzano tali funzioni.
+**C++Specifico**
+
+Evita la generazione di funzioni wrapper di gestione degli errori e delle dichiarazioni di [Proprietà](../cpp/property-cpp.md) che utilizzano tali funzioni wrapper.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-raw_interfaces_only
-```
+> **#import** *libreria di tipi* **raw_interfaces_only**
 
 ## <a name="remarks"></a>Note
 
-Il **raw_interfaces_only** attributo determina anche il prefisso predefinito usato nei nomi di funzioni non di proprietà da rimuovere. È in genere il prefisso **raw _**. Se viene specificato questo attributo, i nomi delle funzioni vengono derivati direttamente dalla libreria dei tipi.
+L'attributo **raw_interfaces_only** causa inoltre il prefisso predefinito utilizzato per la denominazione delle funzioni non di proprietà da rimuovere. Il prefisso è `raw_`in genere. Se viene specificato questo attributo, i nomi delle funzioni vengono presi direttamente dalla libreria dei tipi.
 
 Questo attributo consente di esporre solo i contenuti di basso livello della libreria dei tipi.
 
-**Fine sezione specifica C++**
+**Specifico C++ finale**
 
 ## <a name="see-also"></a>Vedere anche
 
-[attributi #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[attributi di #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

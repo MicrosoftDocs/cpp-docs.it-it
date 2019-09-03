@@ -1,6 +1,6 @@
 ---
 title: __stosw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390295"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219923"
 ---
-# <a name="stosw"></a>__stosw
+# <a name="__stosw"></a>__stosw
 
 **Sezione specifica Microsoft**
 
-Genera un'istruzione di archivio stringa (`rep stosw`).
+Genera un'istruzione di stringa di`rep stosw`archiviazione ().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __stosw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
-[out] La destinazione dell'operazione.
+*Destinazione*\
+out Destinazione dell'operazione.
 
-*Dati*<br/>
-[in] I dati da archiviare.
+*Dati*\
+in Dati da archiviare.
 
-*Conteggio*<br/>
-[in] La lunghezza del blocco di parole da scrivere.
+*Conteggio*\
+in Lunghezza del blocco di parole da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,17 +48,17 @@ void __stosw(
 |---------------|------------------|
 |`__stosw`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Il risultato è che la parola `Data` viene scritto in un blocco di `Count` parole nel `Dest` stringa.
+Il risultato è che i *dati* di Word vengono scritti in un blocco di parole contabili nella stringa di *destinazione* .
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```C
 // stosw.c
 // processor: x86, x64
 #include <stdio.h>

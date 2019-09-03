@@ -1,6 +1,6 @@
 ---
 title: __readfsbyte, __readfsdword, __readfsqword, __readfsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readfsword
 - __readfsdword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262736"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222369"
 ---
-# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
+# <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 
 **Sezione specifica Microsoft**
 
-Leggere la memoria da una posizione specificata da un offset rispetto all'inizio del segmento di ADFS.
+Consente di leggere la memoria da una posizione specificata da un offset relativo all'inizio del segmento FS.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned char __readfsbyte(
    unsigned long Offset
 );
@@ -46,14 +46,14 @@ unsigned __int64 __readfsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Offset*<br/>
-[in] L'offset dall'inizio del `FS` da cui leggere.
+*Offset*\
+in Offset dall'inizio di `FS` da cui leggere.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il contenuto della memoria del byte, word, parola doppia o parola quadrupla (come indicato dal nome della funzione chiamata) in corrispondenza della posizione `FS:[Offset]`.
+Contenuto della memoria di byte, Word, parola doppia o quadrupla (come indicato dal nome della funzione chiamata) nella posizione `FS:[Offset]`.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -64,7 +64,7 @@ Il contenuto della memoria del byte, word, parola doppia o parola quadrupla (com
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
@@ -74,5 +74,5 @@ Queste routine sono disponibili solo come intrinseci.
 
 ## <a name="see-also"></a>Vedere anche
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

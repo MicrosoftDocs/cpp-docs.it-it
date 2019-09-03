@@ -2,12 +2,13 @@
 title: Applicazioni desktop (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 355102d9d58a8d93d7fb6935528f8fb8c4b534b1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.topic: landing-page
+ms.openlocfilehash: 1d0e725cce42785357232312d21ce37e18d9c73d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514762"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217008"
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 
@@ -35,7 +36,7 @@ Qualsiasi applicazione desktop in C++ può usare le classi e le funzioni di runt
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-|Titolo|Descrizione|
+|Titolo|DESCRIZIONE|
 |-----------|-----------------|
 |[Applicazioni console di Windows in C++](console-applications-in-visual-cpp.md)|Contiene informazioni sulle applicazioni console. Un'applicazione console Win32 (o Win64) non ha una finestra specifica e non può attivare un ciclo di messaggi. Viene eseguita nella finestra della console e l'input e l'output vengono gestiti tramite la riga di comando.|
 |[Procedura dettagliata: Creazione di applicazioni desktop di Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Creare una semplice applicazione desktop di Windows.|

@@ -1,6 +1,6 @@
 ---
 title: __stosd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390256"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219975"
 ---
-# <a name="stosd"></a>__stosd
+# <a name="__stosd"></a>__stosd
 
 **Sezione specifica Microsoft**
 
-Genera un'istruzione di archivio stringa (`rep stosd`).
+Genera un'istruzione di stringa di`rep stosd`archiviazione ().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __stosd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
-[out] La destinazione dell'operazione.
+*Destinazione*\
+out Destinazione dell'operazione.
 
-*Dati*<br/>
-[in] I dati da archiviare.
+*Dati*\
+in Dati da archiviare.
 
-*Conteggio*<br/>
-[in] La lunghezza del blocco di Double Word da scrivere.
+*Conteggio*\
+in Lunghezza del blocco di parole doppie da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,17 +48,17 @@ void __stosd(
 |---------------|------------------|
 |`__stosd`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Il risultato è che la parola doppia `Data` viene scritto in un blocco di `Count` Double Word in corrispondenza della posizione di memoria a cui punta `Dest`.
+Il risultato è che i *dati* parola doppia vengono scritti in un blocco di *count* parole doppie in corrispondenza della posizione di memoria indicata dalla *destinazione*.
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```C
 // stosd.c
 // processor: x86, x64
 

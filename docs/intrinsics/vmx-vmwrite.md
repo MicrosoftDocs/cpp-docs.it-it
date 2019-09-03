@@ -1,52 +1,56 @@
 ---
 title: __vmx_vmwrite
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmwrite
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-ms.openlocfilehash: e52b1f181f00ce013a111d1a5a62abeff544e20a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdc5590858f160db24bf75ef11c8f20b204a3152
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389983"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219400"
 ---
-# <a name="vmxvmwrite"></a>__vmx_vmwrite
+# <a name="__vmx_vmwrite"></a>__vmx_vmwrite
 
 **Sezione specifica Microsoft**
 
-Scrive il valore specificato per il campo specificato nella struttura di controllo macchina virtuale corrente (VMCS).
+Scrive il valore specificato nel campo specificato nella struttura di controllo della macchina virtuale corrente (VMCS).
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned char __vmx_vmwrite(
    size_t Field,
    size_t FieldValue
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
-|---------------|-----------------|
-|*Campo*|[in] Il campo VMCS da scrivere.|
-|*FieldValue*|[in] Valore da scrivere nel campo VMCS.|
+*Campo*\
+in Campo VMCS da scrivere.
+
+*FieldValue*\
+in Valore da scrivere nel campo VMCS.
 
 ## <a name="return-value"></a>Valore restituito
 
-0 ha avuto esito positivo dell'operazione.
+0
+Operazione completata.
 
-1. l'operazione non riuscita con stato esteso disponibile nel `VM-instruction error field` della VMCS corrente.
+1
+Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.
 
-2. l'operazione non riuscita senza stato disponibile.
+2
+Operazione non riuscita senza stato disponibile.
 
 ## <a name="remarks"></a>Note
 
-La funzione `__vmx_vmwrite` è equivalente alle `VMWRITE` istruzioni in linguaggio macchina. Il valore della `Field` parametro è un indice del campo codificato che è descritti nella documentazione di Intel. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/articles/intel-sdm) del sito e quindi vedere Appendice C di tale documento.
+La funzione `__vmx_vmwrite` è equivalente alle `VMWRITE` istruzioni in linguaggio macchina. Il valore del `Field` parametro è un indice di campo codificato descritto nella documentazione di Intel. Per ulteriori informazioni, cercare l'Appendice C della "specifica tecnica di virtualizzazione Intel per l'architettura Intel IA-32" nel sito di [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -54,11 +58,11 @@ La funzione `__vmx_vmwrite` è equivalente alle `VMWRITE` istruzioni in linguagg
 |---------------|------------------|
 |`__vmx_vmwrite`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 **Fine sezione specifica Microsoft**
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmread](../intrinsics/vmx-vmread.md)

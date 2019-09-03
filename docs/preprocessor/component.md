@@ -1,6 +1,6 @@
 ---
-title: component
-ms.date: 04/08/2019
+title: Pragma component
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.component
 - component_CPP
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 4870860650a39d27639ad18100ba37ba14aa15c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578c590bdb4223f173e0249c18d0eea4e78a18db
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366914"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220474"
 ---
-# <a name="component"></a>component
+# <a name="component-pragma"></a>Pragma component
 
-Controllare la raccolta delle informazioni di visualizzazione o informazioni sulla dipendenza dal file di origine.
+Controlla la raccolta di informazioni di visualizzazione o di informazioni sulle dipendenze dall'interno dei file di origine.
 
 ## <a name="syntax"></a>Sintassi
 
-> **#pragma component( browser,** { **on** | **off** }[**,** **references** [**,** *name* ]] **)** \
-> **#pragma component( minrebuild, on** | **off )** \
-> **#pragma component( mintypeinfo, on** | **off )**
+> **componente #pragma (browser,** { **on** | **off** } [ **,** **riferimenti** [ **,** *nome* ]] **)**  \
+> **componente #pragma (minrebuild,** { **on** | **off** } **)**  \
+> **componente #pragma (mintypeinfo,** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Note
 
@@ -40,9 +40,9 @@ L'utilizzo di On o Off consente di controllare la raccolta di informazioni di vi
 arresta la raccolta di informazioni di visualizzazione da parte del compilatore.
 
 > [!NOTE]
-> Per abilitare la raccolta delle informazioni di visualizzazione con questo pragma [le informazioni di visualizzazione devono essere prima abilitate](../build/reference/building-browse-information-files-overview.md).
+> Per attivare la raccolta di informazioni di visualizzazione con questo pragma, [è necessario abilitare prima le informazioni di visualizzazione](../build/reference/building-browse-information-files-overview.md).
 
-Il `references` opzione può essere utilizzata con o senza il *nome* argomento. Usando `references` senza *nome* attiva o disattiva la raccolta di riferimenti (altre informazioni di visualizzazione continuano a essere raccolte). Ad esempio:
+L' opzione References può essere utilizzata con o senza l'argomento *Name* . L'uso di **riferimenti** senza *nome* consente di attivare o disattivare la raccolta di riferimenti (altre informazioni di visualizzazione continuano a essere raccolte, tuttavia). Ad esempio:
 
 ```cpp
 #pragma component(browser, off, references)
@@ -50,21 +50,21 @@ Il `references` opzione può essere utilizzata con o senza il *nome* argomento. 
 
 arresta la raccolta di informazioni di riferimento da parte del compilatore.
 
-Usando `references` con *name* e `off` impedisce i riferimenti a *nome* che venga visualizzato nella finestra di informazioni di esplorazione. Utilizzare questa sintassi per ignorare i nomi e i tipi non desiderati e per ridurre le dimensioni dei file di informazioni di visualizzazione. Ad esempio:
+L'utilizzo di **riferimenti** con *Name* e **off** impedisce la visualizzazione dei riferimenti al *nome* nella finestra informazioni di visualizzazione. Utilizzare questa sintassi per ignorare i nomi e i tipi non desiderati e per ridurre le dimensioni dei file di informazioni di visualizzazione. Ad esempio:
 
 ```cpp
 #pragma component(browser, off, references, DWORD)
 ```
 
-Ignora i riferimenti a DWORD da quel punto in poi. È possibile attivare la raccolta di riferimenti a DWORD riaccenderle tramite `on`:
+Ignora i riferimenti a DWORD da quel punto in poi. È possibile riattivare la raccolta di riferimenti a DWORD utilizzando **on**:
 
 ```cpp
 #pragma component(browser, on, references, DWORD)
 ```
 
-Questo è l'unico modo per riprendere la raccolta dei riferimenti a *name*; è necessario attivare in modo esplicito su qualsiasi *nome* che è stata disattivata.
+Questo è l'unico modo per riprendere la raccolta dei riferimenti al *nome*; è necessario attivare in modo esplicito qualsiasi *nome* disattivato.
 
-Per impedire al preprocessore di espansione *nome* (ad esempio l'espansione NULL a 0), racchiuderlo tra virgolette:
+Per impedire al preprocessore di espandere il *nome* (ad esempio, espandendo null a 0), racchiuderlo tra virgolette:
 
 ```cpp
 #pragma component(browser, off, references, "NULL")
@@ -72,18 +72,18 @@ Per impedire al preprocessore di espansione *nome* (ad esempio l'espansione NULL
 
 ### <a name="minimal-rebuild"></a>Ricompilazione minima
 
-Deprecate [/Gm (Abilita ricompilazione minima)](../build/reference/gm-enable-minimal-rebuild.md) funzionalità richiede al compilatore di creare e archiviare C++ classe informazioni sulle dipendenze, che richiede spazio su disco. Per risparmiare spazio su disco, è possibile usare `#pragma component( minrebuild, off )` ogni volta che non è necessario raccogliere informazioni sulle dipendenze, ad esempio, nei file di intestazione non modificabili. Inserisci `#pragma component(minrebuild, on)` dopo le classi non modificabili per attivare la raccolta delle dipendenze si riconnettano.
+La funzionalità deprecata [/GM (Abilita ricompilazione minima)](../build/reference/gm-enable-minimal-rebuild.md) richiede al compilatore di creare e C++ archiviare le informazioni sulle dipendenze della classe, che occupa spazio su disco. Per risparmiare spazio su disco, è possibile `#pragma component( minrebuild, off )` usare ogni volta che non è necessario raccogliere informazioni sulle dipendenze, ad esempio, in file di intestazione che non cambiano. Inserisci `#pragma component( minrebuild, on )` dopo le classi non modificabili per attivare di nuovo la raccolta delle dipendenze.
 
-### <a name="reduce-type-information"></a>Ridurre le informazioni sui tipi
+### <a name="reduce-type-information"></a>Ridurre le informazioni sul tipo
 
-Il `mintypeinfo` opzione riduce le informazioni di debug per l'area specificata. Il volume di queste informazioni è notevole e incide sui file pdb e obj. Non è possibile eseguire il debug delle classi e delle strutture nell'area mintypeinfo. L'utilizzo dell'opzione mintypeinfo può essere utile per evitare il seguente avviso:
+L' `mintypeinfo` opzione consente di ridurre le informazioni di debug per l'area specificata. Il volume di queste informazioni è notevole e incide sui file pdb e obj. Non è possibile eseguire il debug delle classi e delle strutture nell'area mintypeinfo. L'utilizzo dell'opzione mintypeinfo può essere utile per evitare il seguente avviso:
 
 ```cmd
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information
 ```
 
-Per altre informazioni, vedere la [/Gm (Abilita ricompilazione minima)](../build/reference/gm-enable-minimal-rebuild.md) opzione del compilatore.
+Per altre informazioni, vedere l'opzione del compilatore [/GM (Abilita ricompilazione minima)](../build/reference/gm-enable-minimal-rebuild.md) .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

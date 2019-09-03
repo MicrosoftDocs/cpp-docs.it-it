@@ -1,6 +1,6 @@
 ---
 title: Funzioni intrinseche _InterlockedIncrement
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509350"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221979"
 ---
 # <a name="_interlockedincrement-intrinsic-functions"></a>Funzioni intrinseche _InterlockedIncrement
 
@@ -59,7 +59,7 @@ Fornire il supporto intrinseco del compilatore per la funzione Win32 Windows SDK
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 long _InterlockedIncrement(
    long * lpAddend
 );
@@ -98,9 +98,9 @@ __int64 _InterlockedIncrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*lpAddend*<br/>
+*lpAddend*\
 [in, out] Puntatore alla variabile da incrementare.
 
 ## <a name="return-value"></a>Valore restituito
@@ -111,8 +111,9 @@ Il valore restituito è il valore incrementato risultante.
 
 |Funzione intrinseca|Architettura|Intestazione|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86, ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement64`|ARM, x64, ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM, ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Note
 
@@ -120,7 +121,7 @@ Ci sono diverse varianti di `_InterlockedIncrement` che variano in base ai tipi 
 
 Mentre la funzione `_InterlockedIncrement` opera su valori integer a 32 bit, `_InterlockedIncrement16` opera su valori integer a 16 bit e `_InterlockedIncrement64` opera su valori integer a 64 bit.
 
-Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.
+Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. La funzione intrinseca `_nf` con suffisso ("nessun limite") non funge da barriera di memoria.
 
 La variabile a cui punta il parametro `lpAddend` deve essere allineata a un limite a 32 bit; in caso contrario, questa funzione non andrà a buon fine su sistemi x86 multiprocessore e su qualsiasi sistema non x86. Per ulteriori informazioni, vedere [align](../cpp/align-cpp.md).
 
@@ -136,6 +137,6 @@ Per un esempio di come usare `_InterlockedIncrement`, vedere [_InterlockedDecrem
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
-[Parole chiave](../cpp/keywords-cpp.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
+[Parole chiave](../cpp/keywords-cpp.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

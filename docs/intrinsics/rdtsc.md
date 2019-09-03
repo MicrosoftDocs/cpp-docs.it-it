@@ -1,6 +1,6 @@
 ---
 title: __rdtsc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtsc
 helpviewer_keywords:
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 6f30be3340ae1be237bb2f8a008a8cb60c7351f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396574"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217141"
 ---
-# <a name="rdtsc"></a>__rdtsc
+# <a name="__rdtsc"></a>__rdtsc
 
 **Sezione specifica Microsoft**
 
-Genera il `rdtsc` istruzione, che restituisce il timestamp del processore. Il timestamp del processore registrato il numero di cicli di clock dall'ultimo ripristino.
+Genera l' `rdtsc` istruzione, che restituisce l'indicatore di tempo del processore. Il timestamp del processore registra il numero di cicli di clock dall'ultima reimpostazione.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned __int64 __rdtsc();
 ```
 
 ## <a name="return-value"></a>Valore restituito
 
-Un intero senza segno a 64 bit che rappresenta un conteggio dei tick.
+Unsigned Integer a 64 bit che rappresenta un conteggio.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -37,17 +37,17 @@ Un intero senza segno a 64 bit che rappresenta un conteggio dei tick.
 |---------------|------------------|
 |`__rdtsc`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
 Questa routine è disponibile solo come funzione intrinseca.
 
-L'interpretazione del valore del contatore TSC in questa generazione di hardware è diverso da quello nelle versioni precedenti di x64. Manuali dell'hardware per altre informazioni, vedere.
+L'interpretazione del valore TSC in generazioni successive di hardware è diversa da quella delle versioni precedenti di x64. Per ulteriori informazioni, vedere la pagina relativa ai manuali hardware.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // rdtsc.cpp
 // processor: x86, x64
 #include <stdio.h>

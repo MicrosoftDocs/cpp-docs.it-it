@@ -1,6 +1,6 @@
 ---
 title: __outwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3cc5b0ae2101c86e3dc899b7924ec2524f0ea6e7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396600"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217114"
 ---
-# <a name="outwordstring"></a>__outwordstring
+# <a name="__outwordstring"></a>__outwordstring
 
 **Sezione specifica Microsoft**
 
-Genera il `rep outsw` (istruzione), che consente di inviare `Count` iniziando in corrispondenza di parole `Buffer` attraverso la porta dei / o specificata da `Port`.
+Genera l' `rep outsw` istruzione, che invia le parole di *conteggio* a partire dal *buffer* nella porta di i/O specificata dalla *porta*.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __outwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __outwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Porta*<br/>
-[in] La porta per inviare i dati.
+*Porta*\
+in Porta a cui inviare i dati.
 
-*Buffer*<br/>
-[in] Puntatore ai dati da inviare attraverso la porta specificata.
+*Buffer*\
+in Puntatore ai dati da inviare alla porta specificata.
 
-*Conteggio*<br/>
-[in] Il numero di parole da inviare.
+*Conteggio*\
+in Numero di parole da inviare.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,7 +48,7 @@ void __outwordstring(
 |---------------|------------------|
 |`__outwordstring`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 

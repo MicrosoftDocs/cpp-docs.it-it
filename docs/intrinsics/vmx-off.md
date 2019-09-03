@@ -1,34 +1,34 @@
 ---
 title: __vmx_off
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_off
 helpviewer_keywords:
 - VMXOFF instruction
 - __vmx_off intrinsic
 ms.assetid: 78a32d46-9291-406c-b982-a550855aff18
-ms.openlocfilehash: 4a01752bd510f9aa8cb159c23e691c9d244145e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226b5111c2f4f6771ac75d165c80c3e8ae2336af
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390074"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219588"
 ---
-# <a name="vmxoff"></a>__vmx_off
+# <a name="__vmx_off"></a>__vmx_off
 
 **Sezione specifica Microsoft**
 
-Disattiva l'operazione della macchina virtuale (VMX) le estensioni del processore.
+Disattiva l'operazione delle estensioni di macchina virtuale (VMX) nel processore.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __vmx_off();
 ```
 
 ## <a name="remarks"></a>Note
 
-La funzione `__vmx_off` è equivalente alle `VMXOFF` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per altre informazioni, cercare il documento, "Intel Virtualization Technical Specification per l'IA-32 architettura Intel," documento numero C97063-002, il [Intel Corporation](https://software.intel.com/articles/intel-sdm) sito.
+La funzione `__vmx_off` è equivalente alle `VMXOFF` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento "specifica tecnica di virtualizzazione Intel per l'architettura Intel IA-32", numero documento C97063-002, nel sito [Intel Corporation](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -36,7 +36,7 @@ La funzione `__vmx_off` è equivalente alle `VMXOFF` istruzioni in linguaggio ma
 |---------------|------------------|
 |`__vmx_off`|x86, x64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 **Fine sezione specifica Microsoft**
 

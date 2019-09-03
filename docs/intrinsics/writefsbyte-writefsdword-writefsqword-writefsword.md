@@ -1,6 +1,6 @@
 ---
 title: __writefsbyte, __writefsdword, __writefsqword, __writefsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writefsword
 - __writefsbyte
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __writefsbyte intrinsic
 - writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
-ms.openlocfilehash: 6461ef730760298e3159e4ac70dbbdf7bd827092
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0cb70986fc75d14f23fb70efe89f48e10fb047e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389788"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219121"
 ---
-# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
+# <a name="__writefsbyte-__writefsdword-__writefsqword-__writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 
 **Sezione specifica Microsoft**
 
-Scrittura della memoria in un percorso specificato da un offset rispetto all'inizio del segmento di ADFS.
+Scrivere memoria in un percorso specificato da un offset relativo all'inizio del segmento FS.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __writefsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -50,13 +50,13 @@ void __writefsqword(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Offset*<br/>
-[in] L'offset dall'inizio di ADFS in cui scrivere.
+*Offset*\
+in Offset dall'inizio di FS in cui scrivere.
 
-*Dati*<br/>
-[in] Valore da scrivere.
+*Dati*\
+in Valore da scrivere.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -67,7 +67,7 @@ void __writefsqword(
 |`__writefsdword`|x86|
 |`__writefsqword`|x86|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
@@ -77,5 +77,5 @@ Queste routine sono disponibili solo come intrinseci.
 
 ## <a name="see-also"></a>Vedere anche
 
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
 [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

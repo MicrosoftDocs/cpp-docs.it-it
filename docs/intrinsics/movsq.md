@@ -1,6 +1,6 @@
 ---
 title: __movsq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66de1971c48f6697fd06579fac635cce31545e92
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263167"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217266"
 ---
-# <a name="movsq"></a>__movsq
+# <a name="__movsq"></a>__movsq
 
 **Sezione specifica Microsoft**
 
-Genera una stringa di spostare ripetute (`rep movsq`) (istruzione).
+Genera un'istruzione ripetuta per`rep movsq`la stringa di spostamento ().
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 void __movsq(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Dest*<br/>
-[out] La destinazione dell'operazione.
+*Destinazione*\
+out Destinazione dell'operazione.
 
-*Origine*<br/>
-[in] L'origine dell'operazione.
+*Source*\
+in Origine dell'operazione.
 
-*Conteggio*<br/>
-[in] Il numero di parole quadruple da copiare.
+*Conteggio*\
+in Numero di parole quadruple da copiare.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -48,17 +48,17 @@ void __movsq(
 |---------------|------------------|
 |`__movsq`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Il risultato è che il primo `Count` parole quadruple a cui punta `Source` vengono copiati il `Dest` stringa.
+Il risultato è che il primo *conteggio* parole quadruple a cui punta l' *origine* viene copiato nella stringa di *destinazione* .
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-```
+```cpp
 // movsq.cpp
 // processor: x64
 #include <stdio.h>

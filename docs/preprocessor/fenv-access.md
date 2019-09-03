@@ -1,6 +1,6 @@
 ---
-title: fenv_access
-ms.date: 03/12/2018
+title: Pragma fenv_access
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
@@ -8,15 +8,16 @@ helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8e66881bde12df28bf24e18230471cb4caca792
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389255"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218602"
 ---
-# <a name="fenvaccess"></a>fenv_access
-Disabilita (**sul**) o Abilita (**off**) le ottimizzazioni che è stato possibile modificare l'ambiente a virgola mobile e contrassegno i test e cambia la modalità.
+# <a name="fenv_access-pragma"></a>Pragma fenv_access
+
+Disabilita (attivato)o Abilita (**disattivato**) le ottimizzazioni che potrebbero modificare i test di flag dell'ambiente a virgola mobile e le modifiche alla modalità.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -24,11 +25,11 @@ Disabilita (**sul**) o Abilita (**off**) le ottimizzazioni che è stato possibil
 
 ## <a name="remarks"></a>Note
 
-Per impostazione predefinita **fenv_access** viene **off**. Se il compilatore non può presupporre che il codice non accedere o modificare l'ambiente a virgola mobile, quindi può eseguire numerose ottimizzazioni di codice a virgola mobile. Impostare **fenv_access** al **su** per informare il compilatore che il codice accede l'ambiente a virgola mobile per verificare i flag di stato, eccezioni, o per impostare il flag della modalità di controllo. Il compilatore disabilita le ottimizzazioni in modo che il codice possa accedere l'ambiente a virgola mobile in modo coerente.
+Per impostazione predefinita, **fenv_access** è **disattivato**. Se il compilatore può presupporre che il codice non acceda o modifichi l'ambiente a virgola mobile, può eseguire molte ottimizzazioni del codice a virgola mobile. Impostare **fenv_access** **su on** per indicare al compilatore che il codice accede all'ambiente a virgola mobile per testare i flag di stato, le eccezioni o per impostare i flag della modalità di controllo. Il compilatore Disabilita queste ottimizzazioni in modo che il codice possa accedere in modo coerente all'ambiente a virgola mobile.
 
-Per altre informazioni sul comportamento della virgola mobile, vedere [/fp (specifica il comportamento della virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md).
+Per ulteriori informazioni sul comportamento della virgola mobile, vedere [/FP (specifica il comportamento](../build/reference/fp-specify-floating-point-behavior.md)della virgola mobile).
 
-I tipi di ottimizzazioni soggette a **fenv_access** sono:
+I tipi di ottimizzazioni soggette a **fenv_access** sono i seguenti:
 
 - Eliminazione di sottoespressioni comuni globali
 
@@ -44,11 +45,11 @@ Altri pragma a virgola mobile sono i seguenti:
 
 ## <a name="examples"></a>Esempi
 
-Questo esempio viene impostato **fenv_access** al **su** per impostare il Registro di controllo a virgola mobile e per la precisione di 24 bit:
+Questo esempio imposta **fenv_access** **su on** per impostare il registro di controllo a virgola mobile per la precisione a 24 bit:
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
-// compile with: /O2
+// compile with: /O2 /arch:IA32
 // processor: x86
 #include <stdio.h>
 #include <float.h>
@@ -71,14 +72,14 @@ int main() {
 ```
 
 ```Output
-out=9.999999776482582e-003
+out=9.999999776482582e-03
 ```
 
-Commento `#pragma fenv_access (on)` rispetto all'esempio precedente, si noti che l'output è diverso perché il compilatore non di valutazione in fase di compilazione, che non usa la modalità di controllo.
+Se si imposta come `#pragma fenv_access (on)` commento l'esempio precedente, si noti che l'output è diverso perché il compilatore esegue la valutazione in fase di compilazione, che non utilizza la modalità di controllo.
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp
-// compile with: /O2
+// compile with: /O2 /arch:IA32
 #include <stdio.h>
 #include <float.h>
 
@@ -98,9 +99,9 @@ int main() {
 ```
 
 ```Output
-out=1.000000000000000e-002
+out=1.000000000000000e-02
 ```
 
 ## <a name="see-also"></a>Vedere anche
 
-[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Direttive pragma e parola chiave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

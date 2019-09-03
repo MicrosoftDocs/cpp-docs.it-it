@@ -1,20 +1,20 @@
 ---
 title: _div64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: a221cc7cf0655a41873c6777aecd8a9b27131b74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264114"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216769"
 ---
-# <a name="div64"></a>_div64
+# <a name="_div64"></a>_div64
 
-Il `_div64` intrinseco divide un numero intero a 64 bit da un numero intero a 32 bit. Il valore restituito contiene il quoziente e la funzione intrinseca restituisce il resto tramite un parametro del puntatore. `_div64` viene **specifico di Microsoft**.
+La `_div64` funzione intrinseca divide un intero a 64 bit da un Integer a 32 bit. Il valore restituito include il quoziente e la funzione intrinseca restituisce il resto tramite un parametro del puntatore. `_div64`è **specifico di Microsoft**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -29,23 +29,23 @@ int _div64(
 ### <a name="parameters"></a>Parametri
 
 *dividend* \
-[in] Integer a 64 bit da dividere.
+in Intero a 64 bit da dividere.
 
-*divisor* \
-[in] Integer a 32 bit per cui dividere.
+*divisore* \
+in Intero a 32 bit per cui dividere.
 
 *remainder* \
-[out] I bit di integer a 32 bit del resto.
+out Bit Integer a 32 bit del resto.
 
 ## <a name="return-value"></a>Valore restituito
 
-32 bit del quoziente.
+Bit 32 del quoziente.
 
 ## <a name="remarks"></a>Note
 
-Il `_div64` divide intrinseci *dividendo* da *divisore*. Archivia la parte restante nel valore integer a 32 bit a cui punta *resto*e restituisce i 32 bit del quoziente.
+La `_div64` funzione intrinseca divide il dividendo per divisore. Archivia il resto nell'intero a 32 bit a cui punta il *resto*e restituisce i 32 bit del quoziente.
 
-Il `_div64` intrinseco è stato introdotto nella versione RTM di Visual Studio 2019.
+La `_div64` funzione intrinseca è disponibile a partire da Visual Studio 2019 RTM.
 
 ## <a name="requirements"></a>Requisiti
 

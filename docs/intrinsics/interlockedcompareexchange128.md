@@ -1,30 +1,58 @@
 ---
-title: _InterlockedCompareExchange128
-ms.date: 11/04/2016
+title: Funzioni intrinseche _InterlockedCompareExchange128
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
 - _InterlockedCompareExchange128
+- _InterlockedCompareExchange128_acq
+- _InterlockedCompareExchange128_nf
+- _InterlockedCompareExchange128_np
+- _InterlockedCompareExchange128_rel
 helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 525b0fd77323789eed05c47c944794ff389bfac5
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348770"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217697"
 ---
-# <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+# <a name="_interlockedcompareexchange128-intrinsic-functions"></a>Funzioni intrinseche _InterlockedCompareExchange128
 
 **Sezione specifica Microsoft**
 
-Esegue un confronto con interlock 128 bit ed exchange.
+Esegue un confronto e uno scambio Interlocked a 128 bit.
 
 ## <a name="syntax"></a>Sintassi
 
-```
+```C
 unsigned char _InterlockedCompareExchange128(
+   __int64 volatile * Destination,
+   __int64 ExchangeHigh,
+   __int64 ExchangeLow,
+   __int64 * ComparandResult
+);
+unsigned char _InterlockedCompareExchange128_acq(
+   __int64 volatile * Destination,
+   __int64 ExchangeHigh,
+   __int64 ExchangeLow,
+   __int64 * ComparandResult
+);
+unsigned char _InterlockedCompareExchange128_nf(
+   __int64 volatile * Destination,
+   __int64 ExchangeHigh,
+   __int64 ExchangeLow,
+   __int64 * ComparandResult
+);
+unsigned char _InterlockedCompareExchange128_np(
+   __int64 volatile * Destination,
+   __int64 ExchangeHigh,
+   __int64 ExchangeLow,
+   __int64 * ComparandResult
+);
+unsigned char _InterlockedCompareExchange128_rel(
    __int64 volatile * Destination,
    __int64 ExchangeHigh,
    __int64 ExchangeLow,
@@ -32,52 +60,58 @@ unsigned char _InterlockedCompareExchange128(
 );
 ```
 
-#### <a name="parameters"></a>Parametri
+### <a name="parameters"></a>Parametri
 
-*Destinazione*<br/>
-[in, out] Puntatore alla destinazione, ovvero una matrice di due interi a 64 bit è considerato come un campo di 128 bit. I dati di destinazione devono essere 16 byte allineate in modo da evitare un errore di protezione generale.
+*Destinazione*\
+[in, out] Puntatore alla destinazione, ovvero una matrice di interi a 2 64 bit considerata come un campo a 128 bit. Per evitare un errore di protezione generale, i dati di destinazione devono essere allineati a 16 byte.
 
-*ExchangeHigh*<br/>
-[in] Un valore integer a 64 bit che possono essere scambiati con la parte alta della destinazione.
+*ExchangeHigh*\
+in Intero a 64 bit che può essere scambiato con la parte superiore della destinazione.
 
-*ExchangeLow*<br/>
-[in] Un valore integer a 64 bit che possono essere scambiati con la parte inferiore della matrice di destinazione.
+*ExchangeLow*\
+in Intero a 64 bit che può essere scambiato con la parte bassa della destinazione.
 
-*ComparandResult*<br/>
-[in, out] Puntatore a una matrice di due interi a 64 bit (considerata come un campo di 128 bit) da confrontare con la destinazione.  Nell'output viene sovrascritto con il valore originale dell'oggetto di destinazione.
+*ComparandResult*\
+[in, out] Puntatore a una matrice di interi a 2 64 bit (considerato come campo a 128 bit) da confrontare con la destinazione.  Nell'output questa matrice viene sovrascritta con il valore originale della destinazione.
 
 ## <a name="return-value"></a>Valore restituito
 
-1 se il parametro comparand 128 bit uguale al valore originale dell'oggetto di destinazione. `ExchangeHigh` e `ExchangeLow` sovrascrivere la destinazione di 128 bit.
+1 se il comparand a 128 bit corrisponde al valore originale della destinazione. `ExchangeHigh`e `ExchangeLow` sovrascrivono la destinazione a 128 bit.
 
-0 se il parametro comparand non uguale al valore originale dell'oggetto di destinazione. Il valore dell'oggetto di destinazione viene modificato e il valore del parametro comparand viene sovrascritto con il valore dell'oggetto di destinazione.
+0 se comparand non è uguale al valore originale della destinazione. Il valore della destinazione è invariato e il valore di comparand viene sovrascritto con il valore della destinazione.
 
 ## <a name="requirements"></a>Requisiti
 
 |Funzione intrinseca|Architettura|
 |---------------|------------------|
-|`_InterlockedCompareExchange128`|X64|
+|`_InterlockedCompareExchange128`|x64, ARM64|
+|`_InterlockedCompareExchange128_acq`, `_InterlockedCompareExchange128_nf`, `_InterlockedCompareExchange128_rel`|ARM64|
+|`_InterlockedCompareExchange128_np`|X64|
 
-**File di intestazione** \<intrin. h >
+**File di intestazione** \<> intrin. h
 
 ## <a name="remarks"></a>Note
 
-Questa funzione intrinseca genera il `cmpxchg16b` istruzione (con il `lock` prefisso) per eseguire un confronto bloccato a 128 bit ed exchange. Nelle versioni precedenti di hardware AMD a 64 bit non supportano questa istruzione. Per verificare il supporto hardware per il `cmpxchg16b` (istruzione), chiamare il `__cpuid` intrinseco con `InfoType=0x00000001 (standard function 1)`. Bit 13 del `CPUInfo[2]` (ECX) è 1 se l'istruzione è supportata.
+La `_InterlockedCompareExchange128` funzione intrinseca `cmpxchg16b` genera l'istruzione ( `lock` con il prefisso) per eseguire un confronto e uno scambio bloccati a 128 bit. Le prime versioni dell'hardware AMD a 64 bit non supportano questa istruzione. Per verificare il supporto hardware per l' `cmpxchg16b` istruzione, chiamare l' `__cpuid` oggetto intrinseco con `InfoType=0x00000001 (standard function 1)`. Il bit 13 `CPUInfo[2]` di (ECX) è 1 se l'istruzione è supportata.
 
 > [!NOTE]
->  Il valore di `ComparandResult` viene sempre sovrascritto. Dopo il `lock` (istruzione), questa funzione intrinseca copia immediatamente il valore iniziale della `Destination` a `ComparandResult`. Per questo motivo `ComparandResult` e `Destination` deve fare riferimento alle posizioni di memoria separato per evitare un comportamento imprevisto.
+> Il valore di `ComparandResult` viene sempre sovrascritto. Dopo l' `lock` istruzione, questa funzione intrinseca copia immediatamente il valore `Destination` iniziale `ComparandResult`di in. Per questo motivo, `ComparandResult` e `Destination` devono puntare a posizioni di memoria separate per evitare comportamenti imprevisti.
 
-Sebbene sia possibile usare `_InterlockedCompareExchange128` per la sincronizzazione di thread di basso livello, è necessario sincronizzare più di 128 bit se è possibile usare funzioni di sincronizzazione più piccole (ad esempio l'altro `_InterlockedCompareExchange` funzioni intrinseche) invece. Usare `_InterlockedCompareExchange128` se si vuole accedere atomiche su un valore di 128 bit in memoria.
+Sebbene sia possibile utilizzare `_InterlockedCompareExchange128` per la sincronizzazione dei thread di basso livello, non è necessario eseguire la sincronizzazione su 128 bit se è invece possibile utilizzare funzioni di sincronizzazione più `_InterlockedCompareExchange` piccole, ad esempio gli altri oggetti intrinseci. Usare `_InterlockedCompareExchange128` se si desidera l'accesso atomico a un valore a 128 bit in memoria.
 
-Se si esegue codice che usa questa funzione intrinseca in hardware che non supporta il `cmpxchg16b` (istruzione), i risultati sono imprevedibili.
+Se si esegue codice che usa la funzione intrinseca su hardware che non `cmpxchg16b` supporta l'istruzione, i risultati sono imprevedibili.
+
+Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche ARM con `_nf` suffisso ("nessun limite") non fungono da barriera di memoria.
+
+Le funzioni intrinseche con suffisso `_np` ("nessuna prelettura") impediscono l'inserimento di una possibile operazione di prelettura da parte del compilatore.
 
 Questa routine è disponibile solo come funzione intrinseca.
 
 ## <a name="example"></a>Esempio
 
-Questo esempio Usa `_InterlockedCompareExchange128` per sostituire la Word più significativa di una matrice di due interi a 64 bit con la somma dei relativi parole minimo e massimo e incrementare la Word meno significativa. L'accesso all'array di BigInt.Int è atomico, ma in questo esempio Usa un singolo thread e ignora il blocco per motivi di semplicità.
+In questo esempio `_InterlockedCompareExchange128` viene usato per sostituire la parola alta di una matrice di interi a 2 64 bit con la somma delle parole alta e bassa e per incrementare la parola bassa. L'accesso alla `BigInt.Int` matrice è atomico, ma in questo esempio viene usato un thread singolo e il blocco viene ignorato per semplicità.
 
-```
+```cpp
 // cmpxchg16b.c
 // processor: x64
 // compile with: /EHsc /O2
@@ -125,10 +159,9 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 
 **Fine sezione specifica Microsoft**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)<br/>
-[Funzioni intrinseche _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
+[Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)\
+[Funzioni intrinseche _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)\
 [Conflitti con il compilatore x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
