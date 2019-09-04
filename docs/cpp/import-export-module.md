@@ -1,5 +1,5 @@
 ---
-title: modulo, importazione ed esportazione
+title: modulo, importare, esportare
 ms.date: 07/15/2019
 f1_keywords:
 - module_cpp
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: Usare l'istruzione Import per accedere ai tipi e alle funzioni definiti nel modulo specificato.
-ms.openlocfilehash: fbb9c45ec816c859edb4df38ad67dc7778247e87
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537787"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273618"
 ---
-# <a name="module-import-export"></a>modulo, importazione ed esportazione
+# <a name="module-import-export"></a>modulo, importare, esportare
 
-Le parole chiave **Module**, **Import**ed **Export** sono disponibili in c++ 20 e richiedono l' `/experimental:modules` opzione del compilatore insieme `/std:c++latest`a. Per ulteriori informazioni, vedere [Cenni preliminari sui C++moduli in ](modules-cpp.md).
+Le parole chiave **Module**, **Import**ed **Export** sono disponibili in c++ 20 e richiedono l'opzione del compilatore [/Experimental: module](../build/reference/experimental-module.md) insieme a [/std: C + + Latest](../build/reference/std-specify-language-standard-version.md). Per ulteriori informazioni, vedere [Cenni preliminari sui C++moduli in ](modules-cpp.md).
 
 ## <a name="module"></a>module
 
@@ -87,4 +87,5 @@ class Baz
 ```
 
 ## <a name="see-also"></a>Vedere anche
+
 [Panoramica dei moduli inC++](modules-cpp.md)

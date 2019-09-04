@@ -1,18 +1,18 @@
 ---
-title: Panoramica dei moduli inC++
+title: Panoramica dei moduli in C++
 ms.date: 07/23/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: I moduli in C++ 20 forniscono un'alternativa moderna ai file di intestazione.
-ms.openlocfilehash: 84683d9c4b0e1a514b17883b89c58488b9879edb
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537807"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273677"
 ---
-# <a name="overview-of-modules-in-c"></a>Panoramica dei moduli inC++
+# <a name="overview-of-modules-in-c"></a>Panoramica dei moduli in C++
 
 C++ 20 introduce *moduli*, una soluzione moderna per la componentizzazione C++ di librerie e programmi. Un modulo è un set di file di codice sorgente compilati in modo indipendente dalle [unità di conversione](https://wikipedia.org/wiki/Translation_unit_(programming)) che li importano. I moduli eliminano o riducono significativamente molti dei problemi associati all'utilizzo dei file di intestazione e potenzialmente riducono anche i tempi di compilazione. Le macro, le direttive per il preprocessore e i nomi non esportati dichiarati in un modulo non sono visibili e pertanto non hanno alcun effetto sulla compilazione dell'unità di conversione che importa il modulo. È possibile importare i moduli in qualsiasi ordine senza preoccuparsi delle ridefinizioni delle macro. Le dichiarazioni nell'unità di conversione di importazione non partecipano alla risoluzione dell'overload o alla ricerca del nome nel modulo importato. Dopo la compilazione di un modulo una volta, i risultati vengono archiviati in un file binario che descrive tutti i tipi, le funzioni e i modelli esportati. Il file può essere elaborato molto più velocemente rispetto a un file di intestazione e può essere riutilizzato dal compilatore ogni punto in cui il modulo viene importato in un progetto.
 
@@ -20,7 +20,7 @@ I moduli possono essere usati affiancati con i file di intestazione. Un C++ file
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Abilitare i moduli nel compilatore C++ Microsoft
 
-A partire da Visual Studio 2019 versione 16,2, i moduli non sono completamente implementati C++ nel compilatore Microsoft. È possibile utilizzare la funzionalità moduli per creare moduli a partizione singola e per importare i moduli di libreria standard forniti da Microsoft. Per abilitare il supporto per i moduli, `/experimental:modules` compilare `/std:c++latest`con e. In un progetto di Visual Studio fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**. Impostare l'elenco a discesa **configurazione** su **tutte le configurazioni**, quindi scegliere **proprietà** > di configurazione > **C/C++** **lingua** >  **C++ Abilita moduli ( sperimentale)** .
+A partire da Visual Studio 2019 versione 16,2, i moduli non sono completamente implementati C++ nel compilatore Microsoft. È possibile utilizzare la funzionalità moduli per creare moduli a partizione singola e per importare i moduli di libreria standard forniti da Microsoft. Per abilitare il supporto per i moduli, compilare con [/Experimental: module](../build/reference/experimental-module.md) e [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md). In un progetto di Visual Studio fare clic con il pulsante destro del mouse sul nodo del progetto in **Esplora soluzioni** e scegliere **Proprietà**. Impostare l'elenco a discesa **configurazione** su **tutte le configurazioni**, quindi scegliere **proprietà** > di configurazione > **C/C++** **lingua** >  **C++ Abilita moduli ( sperimentale)** .
 
 Un modulo e il codice che lo utilizza devono essere compilati con le stesse opzioni del compilatore.
 
@@ -45,7 +45,7 @@ Per utilizzare il modulo della libreria standard Microsoft, è necessario compil
 
 ## <a name="basic-example"></a>Esempio di base
 
-Nell'esempio seguente viene illustrata una semplice definizione di modulo in un file di origine denominato **foo. IXX**. L'estensione **IXX** è necessaria per i file dell'interfaccia del modulo in Visual Studio. In questo esempio il file di interfaccia contiene la definizione della funzione e la dichiarazione. Tuttavia, le definizioni possono essere inserite anche in uno o più file distinti, come illustrato in un esempio successivo. L'istruzione **Export Module foo** indica che questo file è l'interfaccia principale per un modulo chiamato `Foo`. Il  modificatore di `f()` esportazione su indica che questa funzione sarà visibile `Foo` quando viene importato da un altro programma o modulo. Si noti che il modulo fa riferimento `Bar`a uno spazio dei nomi.
+Nell'esempio seguente viene illustrata una semplice definizione di modulo in un file di origine denominato **foo. IXX**. L'estensione **IXX** è necessaria per i file dell'interfaccia del modulo in Visual Studio. In questo esempio il file di interfaccia contiene la definizione della funzione e la dichiarazione. Tuttavia, le definizioni possono essere inserite anche in uno o più file distinti, come illustrato in un esempio successivo. L'istruzione **Export Module foo** indica che questo file è l'interfaccia principale per un modulo chiamato `Foo`. Il modificatore di `f()` esportazione su indica che questa funzione sarà visibile `Foo` quando viene importato da un altro programma o modulo. Si noti che il modulo fa riferimento `Bar`a uno spazio dei nomi.
 
 ```cpp
 export module Foo;
@@ -132,7 +132,7 @@ L'unità di interfaccia primaria può importare i file di implementazione della 
 
 ## <a name="modules-and-header-files"></a>Moduli e file di intestazione
 
-È possibile includere i file di intestazione in un file di origine del `#include` modulo inserendo la direttiva prima della dichiarazione del modulo. Questi file sono considerati nel frammento di *modulo globale*. Un modulo può visualizzare solo i nomi del frammento di *modulo globale* presenti nelle intestazioni che include in modo esplicito. Il frammento di modulo globale contiene solo i simboli effettivamente utilizzati.
+È possibile includere i file di intestazione in un file di origine del `#include` modulo inserendo la direttiva prima della dichiarazione del modulo. Questi file sono considerati nel *frammento di modulo globale*. Un modulo può visualizzare solo i nomi del *frammento di modulo globale* presenti nelle intestazioni che include in modo esplicito. Il frammento di modulo globale contiene solo i simboli effettivamente utilizzati.
 
 ```cpp
 // MyModuleA.cpp

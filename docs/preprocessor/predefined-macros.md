@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: ab478cd8ac51b5cb88cec38f80541df8a7be2789
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222291"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273825"
 ---
 # <a name="predefined-macros"></a>Macro predefinite
 
@@ -402,6 +402,16 @@ MSVC supporta queste macro predefinite aggiuntive.
 - **&#95;MSVC&#95;lang** definito come valore letterale integer che specifica C++ lo standard del linguaggio di destinazione del compilatore. Viene impostato solo nel codice compilato come C++. La macro è il valore letterale integer 201402L per impostazione predefinita o quando viene specificata l'opzione del compilatore [/std: c++ 14](../build/reference/std-specify-language-standard-version.md) . La macro è impostata su 201703L se è specificata l'opzione del compilatore [/std: c++ 17](../build/reference/std-specify-language-standard-version.md) . Viene impostato su un valore superiore e non specificato quando si specifica l'opzione [/std: c + + Latest più recente](../build/reference/std-specify-language-standard-version.md) . In caso contrario, la macro non è definita. Le  **&#95;opzioni&#95;del compilatore MSVC lang** e [/STD (specifica la versione standard del linguaggio)](../build/reference/std-specify-language-standard-version.md) sono disponibili a partire da Visual Studio 2015 Update 3.
 
 - **&#95;&#95;I&#95;controlli&#95;di runtime MSVC** definiti come 1 quando viene impostata una delle opzioni del compilatore [/RTC](../build/reference/rtc-run-time-error-checks.md) . In caso contrario, non definito.
+
+- **&#95;MSVC&#95;tradizionale** definito come 0 quando viene impostata l'opzione del compilatore [/Experimental:](../build/reference/rtc-run-time-error-checks.md) preprocessore in modalità di conformità del preprocessore. Definito come 1 per impostazione predefinita o quando è impostata l'opzione [/Experimental: Preprocessor-](../build/reference/rtc-run-time-error-checks.md) Compiler, per indicare che il preprocessore tradizionale è in uso. L'  **&#95;opzione&#95;** del compilatore macro tradizionale MSVC e [/Experimental: preprocessore (Abilita modalità di conformità del preprocessore)](../build/reference/experimental-preprocessor.md) è disponibile a partire da Visual Studio 2017 versione 15,8.
+
+   ```cpp
+   #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
+   // Logic using the traditional preprocessor
+   #else
+   // Logic using cross-platform compatible preprocessor
+   #endif
+   ```
 
 - **&#95;Mt** Definito come 1 quando viene specificato [/MD o/MDD](../build/reference/md-mt-ld-use-run-time-library.md) (DLL multithread) o [/mt o/MTD](../build/reference/md-mt-ld-use-run-time-library.md) (multithreading). In caso contrario, non definito.
 
