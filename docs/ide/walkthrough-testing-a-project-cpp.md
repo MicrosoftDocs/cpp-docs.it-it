@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: c170deef8bf76bdd223bde01794f8996dc77922d
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.openlocfilehash: e0422b4f862b5438a313e25dac421d591bbbb9a5
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400943"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273708"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Procedura dettagliata: Test di un progetto (C++)
 
@@ -31,7 +31,7 @@ In questa procedura dettagliata si verifica il valore di una variabile mentre il
 
 1. Selezionare la riga di codice seguente:
 
-   `Cardgame.solitaire(1);`
+   `Cardgame solitaire(1);`
 
 1. Per impostare un punto di interruzione su questa riga, sulla barra dei menu scegliere **Debug** > **Imposta/Rimuovi punto di interruzione** oppure premere **F9**. A sinistra della riga viene visualizzato un cerchio rosso, che indica che è impostato un punto di interruzione. Per rimuovere un punto di interruzione, scegliere nuovamente il comando di menu o premere **F9**.
 
@@ -55,7 +55,7 @@ In questa procedura dettagliata si verifica il valore di una variabile mentre il
 
 1. Per arrestare il programma, sulla barra dei menu scegliere **Debug** > **Arresta debug** oppure scegliere **MAIUSC**+**F5**.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
 **Precedente:** [Procedura dettagliata: Compilazione di un progetto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 **Successivo:** [Procedura dettagliata: Debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)

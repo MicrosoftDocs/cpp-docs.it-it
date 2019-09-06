@@ -9,30 +9,30 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], object interfaces
 - OLE DB [C++], interfaces
 ms.assetid: 929e100c-c08c-4b64-8437-d8d1357226f6
-ms.openlocfilehash: fc8d2f5edf854766dcb5dcc8ed6d57a849b8f2a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a615694a9db75cdaf3b187cf6d29248bd26ef978
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176018"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311837"
 ---
 # <a name="data-source-object-interfaces"></a>Interfacce dell'oggetto origine dati
 
-Nella tabella seguente mostra le interfacce obbligatorie e facoltative definite da OLE DB per un oggetto origine dati.
+Nella tabella seguente vengono illustrate le interfacce obbligatorie e facoltative definite da OLE DB per un oggetto origine dati.
 
-|Interfaccia|Obbligatorio?|Implementata da modelli OLE DB?|
+|Interfaccia|Obbligatorio?|Implementato da modelli di OLE DB?|
 |---------------|---------------|--------------------------------------|
-|`IDBCreateSession`|Obbligatorio|Yes|
-|`IDBInitialize`|Obbligatorio|Yes|
-|`IDBProperties`|Obbligatorio|Yes|
-|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|Obbligatorio|Yes|
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Facoltativo|No|
+|`IDBCreateSession`|Mandatory|Sì|
+|`IDBInitialize`|Mandatory|Yes|
+|`IDBProperties`|Mandatory|Yes|
+|[IPersist](/windows/win32/api/objidl/nn-objidl-ipersist)|Mandatory|Sì|
+|[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Facoltativo|No|
 |`IDBDataSourceAdmin`|Facoltativo|No|
 |`IDBInfo`|Facoltativo|No|
-|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Facoltativo|No|
+|[IPersistFile](/windows/win32/api/objidl/nn-objidl-ipersistfile)|Facoltativo|No|
 |`ISupportErrorInfo`|Facoltativo|No|
 
-L'origine dati oggetto implementa la `IDBProperties`, `IDBInitialize`, e `IDBCreateSession` interfacce attraverso l'ereditarietà. È possibile scegliere di supportare funzionalità aggiuntive grazie all'eredità o che non eredita da una di queste classi di implementazione. Se si desidera supportare le `IDBDataSourceAdmin` interfaccia, è necessario ereditare dal `IDBDataSourceAdminImpl` classe.
+L'oggetto origine dati implementa le `IDBProperties`interfacce `IDBInitialize`, e `IDBCreateSession` tramite l'ereditarietà. È possibile scegliere di supportare funzionalità aggiuntive ereditando o non ereditando da una di queste classi di implementazione. Se si desidera supportare l' `IDBDataSourceAdmin` interfaccia, è necessario ereditare `IDBDataSourceAdminImpl` dalla classe.
 
 ## <a name="see-also"></a>Vedere anche
 

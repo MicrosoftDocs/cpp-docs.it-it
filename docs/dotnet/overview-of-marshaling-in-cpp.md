@@ -1,6 +1,6 @@
 ---
 title: Panoramica del marshalling in C++
-ms.date: 06/28/2018
+ms.date: 07/12/2019
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 937fbdf4b3ed09344e69a8f1eb731565c36794ae
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384738"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "70311731"
 ---
-# <a name="overview-of-marshaling-in-c"></a>Panoramica del marshalling in C++
+# <a name="overview-of-marshaling-in-ccli"></a>Panoramica del marshalling in C++/CLI
 
-In modalità mista, è talvolta necessario effettuare il marshalling dei dati tra i tipi gestiti e nativi. Visual Studio 2008 introdotti il *libreria di marshalling* per consentire effettuare il marshalling e convertire i dati in un modo semplice.  La libreria del marshalling è costituito da un set di funzioni e una `marshal_context` classi che eseguono il marshalling dei tipi più comuni. La libreria è definita in queste intestazioni nel **msclrincludono/** directory per l'edizione di Visual Studio:
+In modalità mista è talvolta necessario effettuare il marshalling dei dati tra tipi nativi e gestiti. La *libreria di marshalling* consente di effettuare il marshalling e la conversione dei dati in modo semplice.  La libreria di marshalling è costituita da un set di `marshal_context` funzioni e da una classe che eseguono il marshalling per i tipi comuni. La libreria viene definita in queste intestazioni nella directory **include/msclr** per l'edizione di Visual Studio:
 
-|Intestazione|Descrizione|
+|Intestazione|DESCRIZIONE|
 |---------------|-----------------|
-|marshal.h|`marshal_context` classi e funzioni di marshalling privi di contesto|
-|marshal_atl.h| Funzioni per il marshalling dei tipi di ATL|
-|marshal_cppstd.h|Funzioni per il marshalling dei tipi C++ standard|
-|marshal_windows.h|Funzioni per il marshalling dei tipi di Windows|
+|Marshal. h|`marshal_context`funzioni di marshalling senza contesto e classe|
+|marshal_atl.h| Funzioni per il marshalling di tipi ATL|
+|marshal_cppstd.h|Funzioni per il marshalling C++ dei tipi standard|
+|marshal_windows. h|Funzioni per il marshalling dei tipi di Windows|
 
-Il percorso predefinito per **msclr** cartelle sono simile al seguente a seconda di quale edizione è necessario e il numero di build:
+Il percorso predefinito per la cartella **msclr** è simile al seguente, a seconda dell'edizione e del numero di build:
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
-È possibile usare la libreria del marshalling con o senza un [marshal_context Class](../dotnet/marshal-context-class.md). Alcune conversioni richiedono un contesto. Le altre conversioni possono essere implementate usando il [marshal_as](../dotnet/marshal-as.md) (funzione). La tabella seguente elenca le conversioni corrente è supportate se richiedono un contesto e quali file di marshalling è necessario includere:
+È possibile utilizzare la libreria di marshalling con o senza una [Classe marshal_context](../dotnet/marshal-context-class.md). Alcune conversioni richiedono un contesto. Altre conversioni possono essere implementate tramite la funzione [marshal_as](../dotnet/marshal-as.md) . Nella tabella seguente sono elencate le conversioni correnti supportate, se richiedono un contesto e il file di marshalling da includere:
 
-|Da tipo|Al tipo|Effettuare il marshalling (metodo)|File di inclusione|
+|Tipo da|Al tipo|Marshal (metodo)|File di inclusione|
 |---------------|-------------|--------------------|------------------|
-|System:: String ^|char const \*|marshal_context|marshal.h|
-|char const \*|System:: String ^|marshal_as|marshal.h|
-|Char \*|System:: String ^|marshal_as|marshal.h|
-|System:: String ^|wchar_t const\*|marshal_context|marshal.h|
-|wchar_t const \*|System:: String ^|marshal_as|marshal.h|
-|wchar_t \*|System:: String ^|marshal_as|marshal.h|
-|System::IntPtr|HANDLE|marshal_as|marshal_windows.h|
-|HANDLE|System::IntPtr|marshal_as|marshal_windows.h|
-|System:: String ^|BSTR|marshal_context|marshal_windows.h|
-|BSTR|System:: String ^|marshal_as|marshal.h|
-|System:: String ^|bstr_t|marshal_as|marshal_windows.h|
-|bstr_t|System:: String ^|marshal_as|marshal_windows.h|
-|System:: String ^|std::string|marshal_as|marshal_cppstd.h|
-|std::string|System:: String ^|marshal_as|marshal_cppstd.h|
-|System:: String ^|std::wstring|marshal_as|marshal_cppstd.h|
-|std::wstring|System:: String ^|marshal_as|marshal_cppstd.h|
+|System:: String ^|carattere const\*|marshal_context|Marshal. h|
+|carattere const\*|System:: String ^|marshal_as|Marshal. h|
+|char\*|System:: String ^|marshal_as|Marshal. h|
+|System:: String ^|wchar_t const\*|marshal_context|Marshal. h|
+|wchar_t const\*|System:: String ^|marshal_as|Marshal. h|
+|wchar_t\*|System:: String ^|marshal_as|Marshal. h|
+|System::IntPtr|HANDLE|marshal_as|marshal_windows. h|
+|HANDLE|System::IntPtr|marshal_as|marshal_windows. h|
+|System:: String ^|BSTR|marshal_context|marshal_windows. h|
+|BSTR|System:: String ^|marshal_as|Marshal. h|
+|System:: String ^|bstr_t|marshal_as|marshal_windows. h|
+|bstr_t|System:: String ^|marshal_as|marshal_windows. h|
+|System:: String ^|STD:: String|marshal_as|marshal_cppstd.h|
+|STD:: String|System:: String ^|marshal_as|marshal_cppstd.h|
+|System:: String ^|STD:: wstring|marshal_as|marshal_cppstd.h|
+|STD:: wstring|System:: String ^|marshal_as|marshal_cppstd.h|
 |System:: String ^|CStringT\<char>|marshal_as|marshal_atl.h|
 |CStringT\<char>|System:: String ^|marshal_as|marshal_atl.h|
 |System:: String ^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
@@ -61,18 +61,16 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 |System:: String ^|CComBSTR|marshal_as|marshal_atl.h|
 |CComBSTR|System:: String ^|marshal_as|marshal_atl.h|
 
-Marshalling richiede un contesto solo quando si effettua il marshalling di dati gestito a nativo tipi e il tipo nativo che si sta convertendo ha un distruttore per automatico di pulizia. Il contesto di marshalling elimina definitivamente il tipo di dati nativo allocati nel relativo distruttore. Di conseguenza, le conversioni che richiedono un contesto sarà valide solo fino a quando non viene eliminato il contesto. Per salvare i valori per il marshalling, è necessario copiare i valori a variabili personalizzate.
+Il marshalling richiede un contesto solo quando si effettua il marshalling da tipi di dati gestiti a nativi e il tipo nativo in cui si esegue la conversione non dispone di un distruttore per la pulizia automatica. Il contesto di marshalling elimina il tipo di dati nativo allocato nel relativo distruttore. Pertanto, le conversioni che richiedono un contesto saranno valide solo fino a quando non viene eliminato il contesto. Per salvare i valori di cui è stato effettuato il marshalling, è necessario copiare i valori nelle variabili personalizzate.
 
 > [!NOTE]
->  Se non è stato incorporato `NULL`s nella stringa, il risultato del marshalling della stringa non è garantito. L'oggetto incorporato `NULL`s può causare la stringa da troncare o potrebbero essere mantenute.
+>  Se nella stringa sono `NULL`incorporati, non è garantito il risultato del marshalling della stringa. Gli oggetti `NULL`incorporati possono causare il troncamento della stringa o la loro conservazione.
 
-In questo esempio mostra come includere la directory msclr in una dichiarazione di intestazione include:
+Questo esempio illustra come includere la directory msclr in una dichiarazione di intestazione di inclusione:
 
 `#include "msclr\marshal_cppstd.h"`
 
-La libreria del marshalling è estensibile, in modo che sia possibile aggiungere i tipi di marshalling. Per altre informazioni sull'estensione della libreria del marshalling, vedere [come: Estendere la libreria del marshalling](../dotnet/how-to-extend-the-marshaling-library.md).
-
-Nelle versioni precedenti, è possibile il marshalling dei dati mediante [Platform Invoke](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Per altre informazioni sulle `PInvoke`, vedere [chiamata a funzioni Native da codice gestito](../dotnet/calling-native-functions-from-managed-code.md).
+La libreria di marshalling è estendibile in modo da poter aggiungere i propri tipi di marshalling. Per ulteriori informazioni sull'estensione della libreria di marshalling, [vedere Procedura: Estendere la libreria](../dotnet/how-to-extend-the-marshaling-library.md)di marshalling.
 
 ## <a name="see-also"></a>Vedere anche
 

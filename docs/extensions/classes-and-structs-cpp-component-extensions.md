@@ -1,21 +1,24 @@
 ---
 title: ref class e ref struct (C++/CLI e C++/CX)
-ms.date: 05/16/2019
+ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
 - ref class
+- value class
+- ref struct
+- value struct
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 9c993b134d6d359d0bc756f5e79d2f9cc137c9cf
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
-ms.translationtype: HT
+ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65788780"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311840"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class e ref struct (C++/CLI e C++/CX)
 
@@ -54,7 +57,7 @@ Nome della classe o dello struct.
 
 Per altre informazioni, vedere le descrizioni specifiche del linguaggio di questo parametro nelle sezioni Windows Runtime e Common Language Runtime.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 L'accessibilità del membro predefinita di un oggetto dichiarato con **ref class** o **value class** è **private**. L'accessibilità del membro predefinita di un oggetto dichiarato con **ref struct** o **value struct** è **public**.
 
@@ -82,9 +85,9 @@ Per altre informazioni sulle classi e gli struct, vedere
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
-Vedere [Classi e struct di riferimento](../cppcx/ref-classes-and-structs-c-cx.md) e [Classi e struct di valore](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx).
+Vedere [Classi e struct di riferimento](../cppcx/ref-classes-and-structs-c-cx.md) e [Classi e struct di valore](../cppcx/value-classes-and-structs-c-cx.md).
 
 ### <a name="parameters"></a>Parametri
 
@@ -101,7 +104,7 @@ Opzione del compilatore: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 La tabella seguente elenca le differenze dalla sintassi mostrata nella sezione **Tutti i runtime** specifiche per C++/CLI.
 

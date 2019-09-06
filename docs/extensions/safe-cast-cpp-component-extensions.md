@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516636"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311851"
 ---
-# <a name="safecast-ccli-and-ccx"></a>safe_cast (C++/CLI e C++/CX)
+# <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI e C++/CX)
 
 In caso di esito positivo, l'operazione **safe_cast** restituisce l'espressione specificata come tipo specificato. In caso contrario, genera un'eccezione `InvalidCastException`.
 
@@ -32,7 +32,7 @@ Non esistono note per questa funzionalità del linguaggio che si applichino a tu
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-**safe_cast** consente di modificare il tipo di un'espressione specificata. In situazioni in cui si prevede che una variabile o un parametro sia convertibile in un determinato tipo, è possibile usare **safe_cast** senza un blocco **try-catch** per rilevare errori di programmazione durante lo sviluppo. Per altre informazioni, vedere [Cast (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
+**safe_cast** consente di modificare il tipo di un'espressione specificata. In situazioni in cui si prevede che una variabile o un parametro sia convertibile in un determinato tipo, è possibile usare **safe_cast** senza un blocco **try-catch** per rilevare errori di programmazione durante lo sviluppo. Per altre informazioni, vedere [Cast (C++/CX)](../cppcx/casting-c-cx.md).
 
 ### <a name="syntax"></a>Sintassi
 
@@ -48,7 +48,7 @@ Tipo in cui convertire *expression*. Handle a un tipo riferimento o valore, un t
 *expression*<br/>
 Espressione che restituisce un handle a tipo riferimento o valore oppure un riferimento di rilevamento a un tipo riferimento o valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 **safe_cast** genera un'eccezione `InvalidCastException` se non può convertire *expression* nel tipo specificato da *type-id*. Per intercettare `InvalidCastException`, specificare l'opzione del compilatore [/EH (modello di gestione delle eccezioni)](../build/reference/eh-exception-handling-model.md) e usare un'istruzione **try/catch**.
 
@@ -108,7 +108,7 @@ Handle a un tipo riferimento o valore, un tipo valore oppure un riferimento di r
 *expression*<br/>
 Espressione che restituisce un handle a tipo riferimento o valore oppure un riferimento di rilevamento a un tipo riferimento o valore.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 L'espressione `safe_cast<`*type-id*`>(`*expression*`)` converte l'operando *expression* in un oggetto di tipo *type-id*.
 

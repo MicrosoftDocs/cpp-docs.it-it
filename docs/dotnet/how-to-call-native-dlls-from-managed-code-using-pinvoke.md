@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Chiamare DLL Native da codice gestito tramite PInvoke'
+title: 'Procedura: Chiamare DLL native da codice gestito tramite PInvoke'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-ms.openlocfilehash: e51e094cc013250fc254a09e279745f1f9c108ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b36496690c4d83837a6dff1752f3f0db514869eb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222811"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311711"
 ---
-# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Procedura: Chiamare DLL Native da codice gestito tramite PInvoke
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Procedura: Chiamare DLL native da codice gestito tramite PInvoke
 
-Funzioni che sono implementate nella DLL non gestite possono essere chiamate da codice gestito tramite la funzionalità Platform Invoke (P/Invoke). Se il codice sorgente per la DLL non è disponibile, P/Invoke è l'unica opzione per l'interoperabilità. Tuttavia, a differenza di altri linguaggi .NET, Visual C++ offre un'alternativa al P/Invoke. Per altre informazioni, vedere [con funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
+Le funzioni implementate nelle dll non gestite possono essere chiamate dal codice gestito utilizzando la funzionalità Platform Invoke (P/Invoke). Se il codice sorgente per la DLL non è disponibile, P/Invoke è l'unica opzione per l'interoperabilità. Tuttavia, a differenza di altri linguaggi .NET, C++ Visual rappresenta un'alternativa a P/Invoke. Per ulteriori informazioni, vedere [utilizzo C++ dell'interoperabilità (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio di codice seguente usa Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) funzione per recuperare la risoluzione corrente dello schermo in pixel.
+Nell'esempio di codice seguente viene usata la funzione Win32 [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) per recuperare la risoluzione corrente dello schermo in pixel.
 
-Per le funzioni che usano solo tipi intrinseci come argomenti e valori restituiscono, non è necessario alcun lavoro aggiuntivo. Altri tipi di dati, ad esempio i puntatori a funzione, matrici e strutture, richiedono attributi aggiuntivi per assicurarsi che il marshalling dei dati appropriati.
+Per le funzioni che usano solo tipi intrinseci come argomenti e valori restituiti, non sono necessarie operazioni aggiuntive. Altri tipi di dati, ad esempio i puntatori a funzione, le matrici e le strutture, richiedono attributi aggiuntivi per garantire il marshalling dei dati appropriato.
 
-Sebbene non sia obbligatorio, è buona norma apportare membri statici di dichiarazioni P/Invoke di una classe di valori in modo che non sono presenti nello spazio dei nomi globale, come illustrato in questo esempio.
+Sebbene non sia obbligatorio, è consigliabile fare in modo che le dichiarazioni P/Invoke siano membri statici di una classe di valori in modo che non esistano nello spazio dei nomi globale, come illustrato in questo esempio.
 
 ```
 // pinvoke_basic.cpp

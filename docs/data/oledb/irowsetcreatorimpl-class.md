@@ -19,16 +19,16 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 3dc5cb06b3eb7f01667e4e1ec09dd60f9befae77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c4253d469c510f5e6eb996ed510ef836844899d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390789"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311962"
 ---
 # <a name="irowsetcreatorimpl-class"></a>Classe IRowsetCreatorImpl
 
-Esegue le stesse funzioni `IObjectWithSite` ma consente anche le proprietà OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.
+Esegue le stesse funzioni di `IObjectWithSite` ma Abilita anche le proprietà `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`OLE DB.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -41,13 +41,13 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 ### <a name="parameters"></a>Parametri
 
 *T*<br/>
-Una classe derivata da `IRowsetCreator`.
+Classe derivata da `IRowsetCreator`.
 
 ## <a name="requirements"></a>Requisiti
 
 **Intestazione:** atldb.h
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="methods"></a>Metodi
 
@@ -57,11 +57,11 @@ Una classe derivata da `IRowsetCreator`.
 
 ## <a name="remarks"></a>Note
 
-Questa classe eredita da [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) ed esegue l'override [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Quando un oggetto provider di sessione o comando crea un set di righe, viene chiamato `QueryInterface` sull'oggetto set di righe cercando `IObjectWithSite` e chiama `SetSite` passando l'oggetto set di righe `IUnkown` interfaccia come interfaccia di sito.
+Questa classe eredita da [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) ed esegue l'override di [IObjectWithSite:: SESITE](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Quando un comando del provider o un oggetto Session crea un set di `QueryInterface` righe, chiama sull'oggetto set `IObjectWithSite` di righe `SetSite` che cerca e chiama il `IUnkown` passaggio dell'interfaccia dell'oggetto set di righe come interfaccia del sito.
 
 ## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
 
-Imposta il sito che contiene l'oggetto set di righe. Per altre informazioni, vedere [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).
+Imposta il sito che contiene l'oggetto set di righe. Per ulteriori informazioni, vedere [IObjectWithSite:: SESITE](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite).
 
 ### <a name="syntax"></a>Sintassi
 
@@ -72,17 +72,17 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 #### <a name="parameters"></a>Parametri
 
 *pCreator*<br/>
-[in] Puntatore al `IUnknown` puntatore all'interfaccia del sito di gestione di oggetto set di righe.
+in Puntatore al puntatore `IUnknown` a interfaccia del sito che gestisce l'oggetto set di righe.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un valore HRESULT standard.
+Valore HRESULT standard.
 
 ### <a name="remarks"></a>Note
 
-È inoltre `IRowsetCreatorImpl::SetSite` consente di OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` proprietà.
+Inoltre, `IRowsetCreatorImpl::SetSite` Abilita le proprietà OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` .
 
 ## <a name="see-also"></a>Vedere anche
 
-[Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modelli di provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

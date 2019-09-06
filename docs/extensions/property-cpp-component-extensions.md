@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516506"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311680"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI e C++/CX)
 
@@ -86,7 +86,7 @@ Il corpo del metodo di proprietà della funzione di accesso set o get. *property
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-Per altre informazioni, vedere [Proprietà (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Per altre informazioni, vedere [Proprietà (C++/CX)](../cppcx/properties-c-cx.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -125,7 +125,7 @@ Parametri per il metodo raise; devono corrispondere alla firma del delegato.
 *index_list*<br/>
 Un elenco delimitato da virgole di uno o più indici, specificati tra parentesi quadrate (l'operatore di indice, ([])). Per ogni indice, specificare un tipo e, facoltativamente, un identificatore che può essere usato nel corpo del metodo di proprietà.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Il primo esempio di sintassi mostra una *proprietà semplice*, che dichiara in modo esplicito entrambi i metodi `set` e `get`. Il compilatore crea automaticamente un campo privato per archiviare il valore della proprietà.
 

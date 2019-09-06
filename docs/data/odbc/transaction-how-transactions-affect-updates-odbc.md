@@ -8,53 +8,52 @@ helpviewer_keywords:
 - CommitTrans method
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
-ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d03ec3f71c38f7790d66fbf6f800b7647e080147
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329907"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "70311709"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transazione: Effetti delle transazioni sugli aggiornamenti (ODBC)
 
-Aggiorna il [zdroj dat](../../data/odbc/data-source-odbc.md) gestiti durante le transazioni tramite l'uso di un buffer di modifica (lo stesso metodo usato all'esterno di transazioni). Membri dati del campo di un recordset collettivamente fungono da buffer di modifica che contiene il record corrente, ovvero un set di record backup temporaneamente durante un' `AddNew` o `Edit`. Durante un `Delete` operazione, il record corrente non viene eseguito il in una transazione. Per altre informazioni sui buffer di modifica e come gli aggiornamenti memorizzare il record corrente, vedere [Recordset: Aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Gli aggiornamenti all' [origine dati](../../data/odbc/data-source-odbc.md) vengono gestiti durante le transazioni tramite l'utilizzo di un buffer di modifica (lo stesso metodo utilizzato al di fuori delle transazioni). I membri dati del campo di un recordset vengono collettivamente usati come buffer di modifica che contiene il record corrente, di cui il recordset esegue temporaneamente il `AddNew` backup `Edit`durante un o. Durante un' `Delete` operazione, non viene eseguito il backup del record corrente all'interno di una transazione. Per ulteriori informazioni sul buffer di modifica e sulla modalità di archiviazione del record corrente da [parte degli aggiornamenti, vedere Recordset: Modalità di aggiornamento di record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)per i recordset.
 
 > [!NOTE]
->  Se è stato implementato il recupero di righe bulk, è possibile chiamare `AddNew`, `Edit`, o `Delete`. È invece necessario scrivere funzioni personalizzate per effettuare gli aggiornamenti all'origine dati. Per altre informazioni sul recupero di righe bulk, vedere [Recordset: Recupero di record nel blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Se è stato implementato il recupero di righe bulk, non è `AddNew`possibile `Edit`chiamare, `Delete`o. È invece necessario scrivere funzioni personalizzate per eseguire gli aggiornamenti all'origine dati. Per altre informazioni sul recupero di massa di righe, vedere [Recordset: recupero di record in blocco (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Durante le transazioni `AddNew`, `Edit`, e `Delete` operazioni possono eseguire il commit o rollback. Gli effetti delle `CommitTrans` e `Rollback` potrebbe causare il record corrente non venga ripristinato nel buffer di modifica. Per assicurarsi che il record corrente viene ripristinato correttamente, è importante comprendere come il `CommitTrans` e `Rollback` le funzioni membro della `CDatabase` funzionano con le funzioni di aggiornamento di `CRecordset`.
+Durante le transazioni `AddNew`, `Edit`è possibile `Delete` eseguire il commit o il rollback delle operazioni, e. Gli effetti di `CommitTrans` e `Rollback` potrebbero causare il ripristino del record corrente nel buffer di modifica. Per assicurarsi che il record corrente sia correttamente ripristinato, è importante comprendere il modo in cui `CommitTrans` le `Rollback` funzioni membro e `CDatabase` di funzionano con le funzioni di `CRecordset`aggiornamento di.
 
-##  <a name="_core_how_committrans_affects_updates"></a> Come CommitTrans sugli aggiornamenti
+##  <a name="_core_how_committrans_affects_updates"></a>Effetti di CommitTrans sugli aggiornamenti
 
-Nella tabella seguente illustra gli effetti di `CommitTrans` sulle transazioni.
+Nella tabella seguente vengono illustrati gli `CommitTrans` effetti di sulle transazioni.
 
-### <a name="how-committrans-affects-updates"></a>Come CommitTrans sugli aggiornamenti
+### <a name="how-committrans-affects-updates"></a>Effetti di CommitTrans sugli aggiornamenti
 
 |Operazione|Stato dell'origine dati|
 |---------------|---------------------------|
-|`AddNew` e `Update`e quindi `CommitTrans`|Nuovo record vengono aggiunti all'origine dati.|
-|`AddNew` (senza `Update`) e quindi `CommitTrans`|Nuovo record viene perso. Record non è stato aggiunto all'origine dati.|
-|`Edit` e `Update`e quindi `CommitTrans`|Modifiche vengono applicate all'origine dati.|
-|`Edit` (senza `Update`) e quindi `CommitTrans`|Modifiche al record vengono perse. Record rimane invariato nell'origine dati.|
-|`Delete` Quindi `CommitTrans`|Record eliminati dall'origine dati.|
+|`AddNew`e `Update`quindi`CommitTrans`|Viene aggiunto un nuovo record all'origine dati.|
+|`AddNew`(senza `Update`), quindi`CommitTrans`|Il nuovo record viene perso. Il record non è stato aggiunto all'origine dati.|
+|`Edit`e `Update`quindi`CommitTrans`|Modifica di cui è stato eseguito il commit nell'origine dati.|
+|`Edit`(senza `Update`), quindi`CommitTrans`|Le modifiche apportate al record vengono perse. Il record rimane invariato nell'origine dati.|
+|`Delete`quindi`CommitTrans`|Record eliminati dall'origine dati.|
 
-##  <a name="_core_how_rollback_affects_updates"></a> Effetti delle transazioni di Rollback
+##  <a name="_core_how_rollback_affects_updates"></a>Effetti del rollback sulle transazioni
 
-Nella tabella seguente illustra gli effetti di `Rollback` sulle transazioni.
+Nella tabella seguente vengono illustrati gli `Rollback` effetti di sulle transazioni.
 
-### <a name="how-rollback-affects-transactions"></a>Effetti delle transazioni di Rollback
+### <a name="how-rollback-affects-transactions"></a>Effetti del rollback sulle transazioni
 
 |Operazione|Stato del record corrente|È inoltre necessario|Stato dell'origine dati|
 |---------------|------------------------------|-------------------|---------------------------|
-|`AddNew` e `Update`, quindi `Rollback`|Contenuto del record corrente viene archiviato temporaneamente per liberare spazio per nuovi record. Nuovo record viene inserito nel buffer di modifica. Dopo aver `Update` viene chiamato, corrente record viene ripristinato nel buffer di modifica.||L'aggiunta all'origine dei dati apportate da `Update` è invertito.|
-|`AddNew` (senza `Update`), quindi `Rollback`|Contenuto del record corrente viene archiviato temporaneamente per liberare spazio per nuovi record. Modificare il buffer contiene il nuovo record.|Chiamare `AddNew` nuovo per ripristinare il buffer di modifica per un nuovo record vuoto. O chiamare `Move`(0) per ripristinare i valori precedenti per il buffer di modifica.|Poiché `Update` non è stato chiamato, non sono presenti modifiche apportate all'origine dati.|
-|`Edit` e `Update`, quindi `Rollback`|Una versione non modificata del record corrente verrà archiviata temporaneamente. Le modifiche vengono apportate al contenuto del buffer di modifica. Dopo aver `Update` viene chiamato, il non modificato del record versione viene archiviata ancora temporaneamente.|*Dynaset*: Scorrere oltre il record corrente, quindi tornare indietro per ripristinare la versione non modificata del record di buffer di modifica.<br /><br /> *Snapshot*: Chiamare `Requery` per aggiornare il recordset dall'origine dati.|Modifiche all'origine dei dati apportate da `Update` vengono invertiti.|
-|`Edit` (senza `Update`), quindi `Rollback`|Una versione non modificata del record corrente verrà archiviata temporaneamente. Le modifiche vengono apportate al contenuto del buffer di modifica.|Chiamare `Edit` nuovamente per ripristinare la versione non modificata del record del buffer di modifica.|Poiché `Update` non è stato chiamato, non sono presenti modifiche apportate all'origine dati.|
-|`Delete` Quindi `Rollback`|Il contenuto del record corrente viene eliminato.|Chiamare `Requery` per ripristinare il contenuto del record corrente dall'origine dati.|L'eliminazione dei dati dall'origine dati viene invertito.|
+|`AddNew`e `Update`quindi`Rollback`|Il contenuto del record corrente viene archiviato temporaneamente per fare spazio al nuovo record. Il nuovo record viene immesso nel buffer di modifica. Dopo `Update` la chiamata a, il record corrente viene ripristinato nel buffer di modifica.||L'aggiunta dell'origine dati effettuata `Update` da è invertita.|
+|`AddNew`(senza `Update`), quindi`Rollback`|Il contenuto del record corrente viene archiviato temporaneamente per fare spazio al nuovo record. Il buffer di modifica contiene un nuovo record.|Chiamare `AddNew` di nuovo per ripristinare il buffer di modifica in un nuovo record vuoto. In alternativa `Move`, chiamare (0) per ripristinare i valori precedenti nel buffer di modifica.|Poiché `Update` non è stato chiamato, non sono state apportate modifiche all'origine dati.|
+|`Edit`e `Update`quindi`Rollback`|Una versione non modificata del record corrente viene archiviata temporaneamente. Le modifiche vengono apportate al contenuto del buffer di modifica. Una `Update` volta chiamato il metodo, la versione non modificata del record viene ancora archiviata temporaneamente.|*Dynaset*: Scorrere il record corrente e tornare indietro per ripristinare la versione non modificata del record nel buffer di modifica.<br /><br /> *Snapshot*: Chiamare `Requery` per aggiornare il recordset dall'origine dati.|Le modifiche apportate all' `Update` origine dati da sono invertite.|
+|`Edit`(senza `Update`), quindi`Rollback`|Una versione non modificata del record corrente viene archiviata temporaneamente. Le modifiche vengono apportate al contenuto del buffer di modifica.|Chiamare `Edit` di nuovo per ripristinare la versione non modificata del record nel buffer di modifica.|Poiché `Update` non è stato chiamato, non sono state apportate modifiche all'origine dati.|
+|`Delete`quindi`Rollback`|Il contenuto del record corrente viene eliminato.|Chiamare `Requery` per ripristinare il contenuto del record corrente dall'origine dati.|L'eliminazione dei dati dall'origine dati è invertita.|
 
 ## <a name="see-also"></a>Vedere anche
 
-[Transazione (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transazione (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transazione: esecuzione di una transazione in un recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
 [Classe CDatabase](../../mfc/reference/cdatabase-class.md)<br/>

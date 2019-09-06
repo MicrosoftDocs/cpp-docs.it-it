@@ -6,54 +6,54 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 4c4ee8c8b4570b598ba20b3bd5e1cf4c706ee885
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96730cb3902674373e3e2429b7bc51cbbe257ff3
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222949"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "70311888"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Hosting di un controllo utente Windows Form come finestra di dialogo MFC
 
-MFC fornisce la classe modello [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) in modo che è possibile ospitare un controllo utente Windows Form (<xref:System.Windows.Forms.UserControl>) in una finestra di dialogo MFC modale o non modale. `CWinFormsDialog` è derivato dalla classe MFC [CDialog](../mfc/reference/cdialog-class.md), pertanto può essere avviata la finestra di dialogo come modale o non modale.
+MFC fornisce la classe modello [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) in modo che sia possibile ospitare un controllo utente Windows Forms<xref:System.Windows.Forms.UserControl>() in una finestra di dialogo MFC modale o non modale. `CWinFormsDialog`viene derivato dalla classe MFC [CDialog](../mfc/reference/cdialog-class.md), quindi la finestra di dialogo può essere avviata come modale o non modale.
 
-Il processo che `CWinFormsDialog` viene utilizzata per ospitare il controllo utente è simile a quello descritto in [che ospita un controllo utente di Windows Form in una finestra di dialogo MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Tuttavia, `CWinFormsDialog` gestisce l'inizializzazione e l'hosting del controllo utente in modo che non dovrà essere programmate manualmente.
+Il processo `CWinFormsDialog` utilizzato da per ospitare il controllo utente è simile a quello descritto in [hosting di un controllo utente Windows Form in una finestra di dialogo MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md). Tuttavia, `CWinFormsDialog` gestisce l'inizializzazione e l'hosting del controllo utente in modo che non debba essere programmato manualmente.
 
-Per un'applicazione di esempio che illustra Windows Form utilizzato con MFC, vedere [MFC e Windows Forms Integration](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
+Per un'applicazione di esempio che Mostra Windows Forms utilizzata con MFC, vedere [MFC and Windows Forms Integration](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).
 
 ### <a name="to-create-the-mfc-host-application"></a>Per creare l'applicazione host MFC
 
 1. Creare un progetto di applicazione MFC.
 
-   Nel **File** dal menu **New**, quindi fare clic su **progetto**. Nel **Visual C++** cartella e selezionare **applicazione MFC**.
+   Scegliere **nuovo**dal menu **file** , quindi fare clic su **progetto**. Nella cartella **visuale C++**  Selezionare **applicazione MFC**.
 
-   Nel **Name** casella, immettere `MFC03` e modificare l'impostazione relativa alla soluzione **aggiungere alla soluzione**. Fare clic su **OK**.
+   Nella casella **nome** immettere `MFC03` e modificare l'impostazione della soluzione in **Aggiungi a soluzione**. Fare clic su **OK**.
 
-   Nel **Creazione guidata applicazione MFC**, accettare tutte le impostazioni predefinite e quindi fare clic su **fine**. Ciò consente di creare un'applicazione MFC con interfaccia a documenti multipli.
+   Nella **creazione guidata applicazione MFC**accettare tutte le impostazioni predefinite, quindi fare clic su **fine**. In questo modo viene creata un'applicazione MFC con un'interfaccia a documenti multipli.
 
 1. Configurare il progetto.
 
-   Nelle **Esplora soluzioni**, fare doppio clic il **MFC03** nodo del progetto e scegliere **proprietà**. Il **pagine delle proprietà** verrà visualizzata la finestra di dialogo.
+   In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nodo del progetto **MFC03** e scegliere **proprietà**. Verrà visualizzata la finestra di dialogo **pagine delle proprietà** .
 
-   Nel **pagine delle proprietà** nella finestra di dialogo il **le proprietà di configurazione** controllo albero, seleziona **generali**, quindi nella **impostazionipredefiniteprogetto**sezione, impostare **supporto Common Language Runtime** al **supporto Common Language Runtime (/ Common Language Runtime)**. Fare clic su **OK**.
+   Nel controllo albero **proprietà di configurazione** della finestra di dialogo **pagine delle proprietà** selezionare **generale**, quindi nella sezione **impostazioni predefinite progetto** impostare **supporto Common Language Runtime** su **supporto Common Language Runtime ( /CLR)** . Fare clic su **OK**.
 
 1. Aggiungere un riferimento al controllo .NET.
 
-   Nella **Esplora soluzioni**, fare doppio clic il **MFC03** nodo del progetto e scegliere **Add**, **riferimenti**. Nel **pagina delle proprietà**, fare clic su **Aggiungi nuovo riferimento**, selezionare WindowsControlLibrary1 (sotto la **progetti** scheda), fare clic su **OK**. Verrà aggiunto un riferimento sotto forma di una [/FU](../build/reference/fu-name-forced-hash-using-file.md) opzione del compilatore in modo che la compilazione del programma e viene copiato WindowsControlLibrary1.dll nella `MFC03` directory del progetto in modo che il programma verrà eseguito.
+   In **Esplora soluzioni**fare clic con il pulsante destro del mouse sul nodo del progetto **MFC03** e scegliere **Aggiungi**, **riferimenti**. Nella **pagina delle proprietà**fare clic su **Aggiungi nuovo riferimento**, selezionare WindowsControlLibrary1 (nella scheda **progetti** ) e fare clic su **OK**. Viene aggiunto un riferimento sotto forma di opzione del compilatore [/fu](../build/reference/fu-name-forced-hash-using-file.md) in modo che il programma venga compilato. copia inoltre WindowsControlLibrary1. dll nella directory del `MFC03` progetto, in modo che il programma venga eseguito.
 
-1. Aggiungere `#include <afxwinforms.h>` a stdafx. h, alla fine dell'oggetto esistente `#include` istruzioni.
+1. Aggiungere `#include <afxwinforms.h>` a *PCH. h* (*stdafx. h* in Visual Studio 2017 e versioni precedenti) alla fine delle istruzioni esistenti `#include` .
 
-1. Aggiungere una nuova classe che rappresenti le sottoclassi `CDialog`.
+1. Aggiungere una nuova classe che sottoclasse `CDialog`.
 
-   Fare clic con il pulsante destro sul nome del progetto e aggiungere una classe MFC, denominata CHostForWinForm, che rappresenta una sottoclasse `CDialog`. Poiché non necessaria la risorsa finestra di dialogo, è possibile eliminare l'ID di risorsa (selezionare **visualizzazione di risorse**, espandere il **finestra di dialogo** cartella ed eliminare `IDD_HOSTFORWINFORM` risorsa.  Quindi, rimuovere tutti i riferimenti all'ID nel codice.).
+   Fare clic con il pulsante destro del mouse sul nome del progetto e aggiungere una classe MFC ( `CDialog`denominata CHostForWinForm) sottoclassi. Poiché la risorsa della finestra di dialogo non è necessaria, è possibile eliminare l'ID risorsa (selezionare **visualizzazione risorse**, espandere la cartella della finestra `IDD_HOSTFORWINFORM` di **dialogo** ed eliminare la risorsa.  Rimuovere quindi tutti i riferimenti all'ID nel codice.
 
-1. Sostituire `CDialog` nei file CHostForWinForm. H e CHostForWinForm. cpp con `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
+1. Sostituire `CDialog` nei file CHostForWinForm. h e CHostForWinForm. cpp con `CWinFormsDialog<WindowsControlLibrary1::UserControl1>`.
 
-1. Chiamare DoModal nella classe CHostForWinForm.
+1. Chiamare DoModal sulla classe CHostForWinForm.
 
-   In MFC03.cpp, aggiungere `#include "HostForWinForm.h"`.
+   In MFC03. cpp aggiungere `#include "HostForWinForm.h"`.
 
-   Prima dell'istruzione return nella definizione di CMFC03App::InitInstance, aggiungere:
+   Prima dell'istruzione return nella definizione di CMFC03App:: InitInstance, aggiungere:
 
     ```cpp
     CHostForWinForm m_HostForWinForm;
@@ -64,19 +64,19 @@ Per un'applicazione di esempio che illustra Windows Form utilizzato con MFC, ved
 
    Scegliere **Compila soluzione** dal menu **Compila**.
 
-   Nel **Debug** menu, fare clic su **Avvia senza eseguire debug**.
+   Scegliere **Avvia senza eseguire debug**dal menu **debug** .
 
-   Successivamente si aggiungerà codice per monitorare lo stato di un controllo per i moduli di Windows dall'applicazione MFC.
+   Successivamente, verrà aggiunto il codice per monitorare lo stato di un controllo nel Windows Forms dall'applicazione MFC.
 
 1. Aggiungere un gestore per OnInitDialog.
 
-   Visualizzare il **proprietà** finestra (F4). Nelle **Visualizzazione classi**, selezionare CHostForWinForm. Nel **delle proprietà** finestra, selezionare sostituzioni e nella riga relativa a OnInitDialog, fare clic su nella colonna a sinistra e selezionare \< Aggiungi >. Questo comando aggiunge la seguente riga a CHostForWinForm. H:
+   Visualizzare la finestra **Proprietà** (F4). In **Visualizzazione classi**selezionare CHostForWinForm. Nella finestra **Proprietà** selezionare sostituzioni e nella riga per OnInitDialog, fare clic nella colonna a sinistra e selezionare \< Aggiungi >. In questo modo viene aggiunta la riga seguente a CHostForWinForm. h:
 
     ```cpp
     virtual BOOL OnInitDialog();
     ```
 
-1. Definire OnInitDialog (in CHostForWinForm. cpp) come segue:
+1. Definire OnInitDialog (in CHostForWinForm. cpp) come indicato di seguito:
 
     ```cpp
     BOOL CHostForWinForm::OnInitDialog() {
@@ -86,7 +86,7 @@ Per un'applicazione di esempio che illustra Windows Form utilizzato con MFC, ved
     }
     ```
 
-1. Successivamente, aggiungere il gestore OnButton1. Aggiungere le righe seguenti nella sezione pubblica della classe CHostForWinForm in CHostForWinForm. H:
+1. Aggiungere quindi il gestore OnButton1. Aggiungere le righe seguenti alla sezione public della classe CHostForWinForm in CHostForWinForm. h:
 
     ```cpp
     virtual void OnButton1( System::Object^ sender, System::EventArgs^ e );
@@ -96,7 +96,7 @@ Per un'applicazione di esempio che illustra Windows Form utilizzato con MFC, ved
     END_DELEGATE_MAP()
     ```
 
-   In CHostForWinForm. cpp, aggiungere la seguente definizione:
+   In CHostForWinForm. cpp aggiungere questa definizione:
 
     ```cpp
     void CHostForWinForm::OnButton1( System::Object^ sender, System::EventArgs^ e )
@@ -105,11 +105,11 @@ Per un'applicazione di esempio che illustra Windows Form utilizzato con MFC, ved
     }
     ```
 
-1. Compilare ed eseguire il progetto. Quando si fa clic sul pulsante che si trova in Windows Form, verrà eseguito codice nell'applicazione MFC.
+1. Compilare ed eseguire il progetto. Quando si fa clic sul pulsante, che è in Windows Form, verrà eseguito il codice nell'applicazione MFC.
 
-    Successivamente si aggiungerà codice per la visualizzazione dal codice MFC il valore nella casella di testo nel Form di Windows.
+    Successivamente, verrà aggiunto il codice per visualizzare dal codice MFC il valore nella casella di testo del Windows Form.
 
-1. Nella sezione pubblica della classe CHostForWinForm in CHostForWinForm. H, aggiungere la dichiarazione seguente:
+1. Nella sezione public della classe CHostForWinForm in CHostForWinForm. h aggiungere la dichiarazione seguente:
 
     ```cpp
     CString m_sEditBoxOnWinForm;
@@ -137,4 +137,4 @@ Per un'applicazione di esempio che illustra Windows Form utilizzato con MFC, ved
 ## <a name="see-also"></a>Vedere anche
 
 <xref:System.Windows.Forms.UserControl?displayProperty=fullName>
-[Utilizzo di un controllo utente di Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)
+[Uso di un controllo utente Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516586"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311649"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI e C++/CX)
 
@@ -55,7 +55,7 @@ Il valore restituito del metodo della funzione di accesso all'evento.  Per esser
 *parameters*<br/>
 (Facoltativo) Parametri per il metodo `raise` che corrispondono alla firma del parametro *delegate*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Un evento è un'associazione tra un delegato e una funzione membro (gestore eventi) che risponde all'attivazione dell'evento e consente ai client da qualsiasi classe di registrare metodi conformi alla firma e al tipo restituito del delegato sottostante.
 
@@ -73,9 +73,9 @@ Un blocco eventi consente di dichiarare in modo esplicito e personalizzare il co
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
-Per altre informazioni, vedere [Eventi (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Per altre informazioni, vedere [Eventi (C++/CX)](../cppcx/events-c-cx.md).
 
 Se si desidera aggiungere e rimuovere un gestore eventi, è necessario salvare la struttura EventRegistrationToken restituita dall'operazione di aggiunta. Quindi, nell'operazione di rimozione è necessario usare la struttura EventRegistrationToken salvata per identificare il gestore eventi da rimuovere.
 
@@ -119,7 +119,7 @@ Il valore restituito del metodo della funzione di accesso all'evento.  Per esser
 *parameters*<br/>
 (Facoltativo) Parametri per il metodo `raise` che corrispondono alla firma del parametro *delegate*.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Un evento è un'associazione tra un delegato e una funzione membro (gestore eventi) che risponde all'attivazione dell'evento e consente ai client da qualsiasi classe di registrare metodi conformi alla firma e al tipo restituito del delegato sottostante.
 

@@ -1,7 +1,7 @@
 ---
 title: Estensioni componenti per .NET e UWP
 ms.date: 10/12/2018
-ms.topic: reference
+ms.topic: landing-page
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: cf123e54c633539c8e5bf8204344c842a21183ef
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 76cbb20d108745984490e67b53db39f58e34d327
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516716"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70311650"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Estensioni componenti per .NET e UWP
 
@@ -44,7 +44,7 @@ Nella tabella seguente sono elencate le parole chiave nell'estensione del lingua
 |**interface class**<br /><br /> **interface struct**|No|Dichiara un'interfaccia.|[interface class](interface-class-cpp-component-extensions.md)|
 |**enum class**<br /><br /> **enum struct**|No|Dichiara un'enumerazione.|[enum class](enum-class-cpp-component-extensions.md)|
 |**proprietà**|Sì|Dichiara una proprietà.|[proprietà](property-cpp-component-extensions.md)|
-|**delegate**|Sì|Dichiara un delegato.|[delegate (C++/CLI e C++/CX)](delegate-cpp-component-extensions.md)|
+|**delegate**|Yes|Dichiara un delegato.|[delegate (C++/CLI e C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|Sì|Dichiara un evento.|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Identificatori di override
@@ -53,10 +53,10 @@ Nella tabella seguente sono elencate le parole chiave nell'estensione del lingua
 
 |Parola chiave|Sensibile al contesto|Scopo|Riferimenti|
 |-------------|-----------------------|-------------|---------------|
-|**abstract**|Sì|Indica che le funzioni o classi sono astratte.|[abstract](abstract-cpp-component-extensions.md)|
+|**abstract**|Yes|Indica che le funzioni o classi sono astratte.|[abstract](abstract-cpp-component-extensions.md)|
 |**new**|No|Indica che una funzione non è un override di una versione della classe di base.|[new (nuovo slot in vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
-|**override**|Sì|Indica che un metodo deve essere un override di una versione della classe base.|[override](override-cpp-component-extensions.md)|
-|**sealed**|Sì|Impedisce l'uso delle classi come classi base.|[sealed](sealed-cpp-component-extensions.md)|
+|**override**|Yes|Indica che un metodo deve essere un override di una versione della classe base.|[override](override-cpp-component-extensions.md)|
+|**sealed**|Yes|Impedisce l'uso delle classi come classi base.|[sealed](sealed-cpp-component-extensions.md)|
 
 ## <a name="keywords-for-generics"></a>Parole chiave per i generics
 
@@ -97,7 +97,7 @@ I seguenti costrutti di linguaggio vengono implementati come modelli, anziché c
 
 I dichiaratori di tipo seguenti indicano al runtime di gestire automaticamente la durata e l'eliminazione degli oggetti allocati.
 
-|Operatore|Scopo|Riferimenti|
+|Operator|Scopo|Riferimenti|
 |--------------|-------------|---------------|
 |`^`|Dichiara un handle a un oggetto, ovvero un puntatore a un oggetto Windows Runtime o CLR che viene automaticamente eliminato quando non è più utilizzabile.|[Operatore handle a oggetto (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Dichiara un riferimento di rilevamento, ovvero un riferimento a un oggetto Windows Runtime o CLR che viene automaticamente eliminato quando non è più utilizzabile.|[Operatore di riferimento di rilevamento](tracking-reference-operator-cpp-component-extensions.md)|
@@ -106,7 +106,7 @@ I dichiaratori di tipo seguenti indicano al runtime di gestire automaticamente l
 
 In questa sezione vengono elencati i costrutti di programmazione aggiuntivi e gli argomenti relativi a CLR.
 
-|Argomento|Description|
+|Argomento|Descrizione|
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows Runtime e CLR) Permette di usare parole chiave come identificatori.|
 |[Elenchi di argomenti variabili (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime e CLR) Permette ad alcune funzioni di accettare un numero variabile di argomenti.|

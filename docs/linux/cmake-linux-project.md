@@ -3,12 +3,12 @@ title: Creare e configurare un progetto CMake per Linux in Visual Studio
 description: Come creare, configurare, modificare e compilare un progetto CMake per Linux in Visual Studio
 ms.date: 06/12/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: d70ffe593cc014bca40a447a9cdb1c1c96a40e3f
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
-ms.translationtype: HT
+ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042648"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383420"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Creare e configurare un progetto CMake per Linux
 
@@ -112,7 +112,18 @@ Per rendere disponibile il supporto IntelliSense per le intestazioni nei sistemi
 
 Per eseguire il debug del codice nel sistema di destinazione di debug specificato, impostare un punto di interruzione, selezionare la destinazione CMake come elemento di avvio dal menu della barra degli strumenti accanto all'impostazione del progetto e scegliere **&#x23f5; Avvia** sulla barra degli strumenti o premere F5.
 
-Per personalizzare gli argomenti della riga di comando del programma, scegliere il pulsante **Switch Targets** (Cambia destinazioni) nella parte superiore di **Esplora soluzioni** e quindi scegliere **Visualizzazione destinazioni**. Fare quindi clic con il pulsante destro del mouse sulla destinazione e scegliere **Impostazioni per debug e avvio**. Verrà aperto o creato un file di configurazione launch.vs.json che contiene informazioni sul programma. Per specificare argomenti aggiuntivi, aggiungerli nella matrice JSON `args`. Per altre informazioni, vedere [Progetti Apri cartella per C++](../build/open-folder-projects-cpp.md) e [Configurare le sessioni di debug di CMake](../build/configure-cmake-debugging-sessions.md).
+Per personalizzare gli argomenti della riga di comando del programma, scegliere il pulsante **Switch Targets** (Cambia destinazioni) nella parte superiore di **Esplora soluzioni** e quindi scegliere **Visualizzazione destinazioni**. Fare quindi clic con il pulsante destro del mouse sulla destinazione e scegliere **Impostazioni per debug e avvio**. Verrà aperto o creato un file di configurazione launch.vs.json che contiene informazioni sul programma. Per specificare il percorso dei file di origine, aggiungere una proprietà **sourceFileMap** al file, come illustrato nell'esempio seguente:
+
+```json
+"MIMode": "gdb",
+"externalConsole": true,
+"sourceFileMap": {
+"c/Users/USER/source/repos/CMAKEPROJECTNAME": "C:\\Users\\USER\\source\\repos\\CMAKEPROJECTNAME"
+},
+"remoteMachineName": "${debugInfo.remoteMachineName}",
+```
+
+Per specificare argomenti aggiuntivi, aggiungerli nella matrice JSON `args`. Per altre informazioni, vedere [Progetti Apri cartella per C++](../build/open-folder-projects-cpp.md) e [Configurare le sessioni di debug di CMake](../build/configure-cmake-debugging-sessions.md).
 
 ## <a name="configure_cmake_linux"></a> Configurare le impostazioni di CMake per Linux
 

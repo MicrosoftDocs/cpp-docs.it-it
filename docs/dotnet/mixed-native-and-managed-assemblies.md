@@ -12,53 +12,53 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 11bdfc98c64b2612129e10c002c68ee243bec7da
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447262"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311808"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assembly misti (nativi e gestiti)
 
-Assembly misti sono in grado di contenere istruzioni del computer non gestiti sia istruzioni MSIL. Ciò consente loro di e chiamate dai componenti di .NET, mantenendo la compatibilità con le librerie C++ native. Uso di assembly misti, gli sviluppatori potranno creare applicazioni usando una combinazione di codice C++ nativo e .NET.
+Gli assembly misti sono in grado di contenere sia istruzioni per computer non gestite che istruzioni MSIL. Ciò consente di chiamare e essere chiamati dai componenti .NET, mantenendo la compatibilità con le librerie native C++ . Utilizzando assembly misti, gli sviluppatori possono creare applicazioni utilizzando una combinazione di codice .NET C++ e codice nativo.
 
-Ad esempio, una libreria esistente costituite interamente da codice C++ nativo possibile la migrazione alla piattaforma .NET ricompilando semplicemente un modulo con il **/clr** opzione del compilatore. Questo modulo è quindi possibile utilizzare le funzionalità di .NET, ma resta compatibile con il resto dell'applicazione. È anche possibile scegliere tra la compilazione nativa e gestita in modo da funzione all'interno dello stesso file (vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md)).
+Ad esempio, una libreria esistente costituita interamente da codice C++ nativo può essere portata alla piattaforma .NET ricompilando solo un modulo con l'opzione **/CLR** del compilatore. Questo modulo è quindi in grado di usare le funzionalità di .NET, ma rimane compatibile con il resto dell'applicazione. È anche possibile decidere tra la compilazione gestita e nativa in base a una funzione all'interno dello stesso file (vedere [gestito, non gestito](../preprocessor/managed-unmanaged.md)).
 
-Visual C++ supporta solo la generazione di assembly misti gestiti usando il **/clr** opzione del compilatore. Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono state deprecate in Visual Studio 2015 e non sono supportate in Visual Studio 2017. Se è necessario puro o verificabile assembly gestiti, è consigliabile che crearle usando c#.
+L' C++ oggetto visivo supporta solo la generazione di assembly gestiti misti utilizzando l'opzione del compilatore **/CLR** . Le opzioni del compilatore **/CLR: pure** e **/CLR: safe** sono deprecate in Visual Studio 2015 e non supportate in Visual Studio 2017. Se sono necessari assembly gestiti puri o verificabili, è consigliabile crearli usando C#.
 
-Le versioni precedenti di Microsoft C++ set di strumenti del compilatore è supportata la generazione di tre tipi distinti di assembly gestiti: mista, pura e verificabile. Quest'ultimo sono illustrati nella [codice Pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Le versioni precedenti del set C++ di strumenti del compilatore Microsoft supportano la generazione di tre tipi distinti di assembly gestiti, ovvero mista, pura e verificabile. Gli ultimi due sono descritti in [codice pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>Contenuto della sezione
 
-[Procedura: Eseguire la migrazione a /clr](../dotnet/how-to-migrate-to-clr.md)<br/>
-Descrive le procedure consigliate per l'introduzione o l'aggiornamento delle funzionalità .NET nell'applicazione.
+[Procedura: Esegui la migrazione a/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
+Vengono descritti i passaggi consigliati per l'introduzione o l'aggiornamento della funzionalità .NET nell'applicazione.
 
-[Procedura: Compilazione /clr MFC e ATL codice tramite l'utilizzo](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
-Viene illustrato come compilare programmi esistenti di MFC e ATL per Common Language Runtime di destinazione.
+[Procedura: Compilare codice MFC e ATL utilizzando/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+Viene illustrato come compilare programmi MFC e ATL esistenti per la destinazione di Common Language Runtime.
 
 [Inizializzazione di assembly misti](../dotnet/initialization-of-mixed-assemblies.md)<br/>
-Descrive il problema di "blocco del caricatore" e soluzioni.
+Descrive le soluzioni e il problema "blocco del caricatore".
 
 [Supporto delle librerie per assembly misti](../dotnet/library-support-for-mixed-assemblies.md)<br/>
-Viene descritto come utilizzare le librerie native nel **/clr** compilazioni.
+Viene illustrato come utilizzare le librerie native nelle compilazioni **/CLR** .
 
 [Considerazioni sulle prestazioni](../dotnet/performance-considerations-for-interop-cpp.md)<br/>
-Descrive le implicazioni sulle prestazioni di assembly misti e marshalling dei dati.
+Descrive le implicazioni relative alle prestazioni di assembly misti e di marshalling dei dati.
 
 [Domini applicazione e Visual C++](../dotnet/application-domains-and-visual-cpp.md)<br/>
-Viene descritto il supporto di Visual C++ per i domini applicazione.
+Viene illustrato C++ il supporto visivo per i domini applicazione.
 
 [Doppio thunk](../dotnet/double-thunking-cpp.md)<br/>
-Vengono illustrate le implicazioni sulle prestazioni di un punto di ingresso nativo per una funzione gestita.
+Vengono illustrate le implicazioni relative alle prestazioni di un punto di ingresso nativo per una funzione gestita.
 
-[Evitare eccezioni all'arresto di CLR quando si utilizzano oggetti COM compilati con /clr](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
-Viene illustrato come garantire corretta chiusura di un'applicazione gestita che utilizza un oggetto COM compilato con **/clr**.
+[Evitare eccezioni all'arresto di CLR quando si utilizzano oggetti COM compilati con/CLR](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
+Viene descritto come garantire l'arresto corretto di un'applicazione gestita che utilizza un oggetto COM compilato con **/CLR**.
 
 [Procedura: Creare un'applicazione parzialmente attendibile rimuovendo la dipendenza dalla DLL della libreria CRT](../dotnet/create-a-partially-trusted-application.md)<br/>
-Viene illustrato come creare un'applicazione parzialmente attendibile di Common Language Runtime con Visual C++ rimuovendo la dipendenza msvcm90.
+Viene illustrato come creare un'applicazione Common Language Runtime parzialmente attendibile usando C++ visuale rimuovendo la dipendenza da msvcm90. dll.
 
-Per altre informazioni sulle linee guida sulla codifica per assembly misti, vedere l'articolo MSDN [An Overview of gestito e codice Interoperability](https://msdn.microsoft.com/library/ms973872.aspx).
+Per ulteriori informazioni sulle linee guida per la codifica per gli assembly misti, vedere l'articolo MSDN [Panoramica sull'interoperabilità del codice gestito/non gestito](/previous-versions/dotnet/articles/ms973872(v=msdn.10)).
 
 ## <a name="see-also"></a>Vedere anche
 

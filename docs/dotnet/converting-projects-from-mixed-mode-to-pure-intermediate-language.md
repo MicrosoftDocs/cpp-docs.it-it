@@ -1,44 +1,44 @@
 ---
 title: Conversione di progetti da modalità mista a linguaggio intermedio (IL) puro
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 helpviewer_keywords:
 - intermediate language, mixed-mode applications
 - mixed-mode applications
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448048"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "70311647"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Conversione di progetti da modalità mista a linguaggio intermedio puro
 
-Per impostazione predefinita, tutti i progetti Visual C++ CLR collegano alle librerie di runtime C. Di conseguenza, questi progetti sono classificati come applicazioni in modalità mista, in quanto queste foreste combinano codice nativo con codice destinato a common language runtime (codice gestito). In fase di compilazione, vengono compilate nel linguaggio intermedio (IL), noto anche come Microsoft intermediate language (MSIL).
+Per impostazione C++ predefinita, tutti i progetti Visual CLR sono collegati alle librerie di runtime C. Questi progetti sono quindi classificati come applicazioni in modalità mista, in quanto combinano codice nativo con codice destinato al Common Language Runtime (codice gestito). Quando vengono compilati, vengono compilati in linguaggio intermedio (IL), noto anche come MSIL (Microsoft Intermediate Language).
 
 > [!IMPORTANT]
-> Deprecato di Visual Studio 2015 e Visual Studio 2017 non supporta più la creazione di **/clr: pure** oppure **/CLR: safe** codice per applicazioni CLR. Se sono necessari gli assembly puri o safe, è consigliabile che si traduce l'applicazione in c#.
+> Visual Studio 2015 deprecato e Visual Studio 2017 non supporta più la creazione di codice **/CLR: pure** o **/CLR: safe** per le applicazioni CLR. Se sono necessari assembly puri o sicuri, è consigliabile convertire l'applicazione in C#.
 
-Se si usa una versione precedente di Microsoft C++ set di strumenti del compilatore che supporta **/clr: pure** oppure **/CLR: safe**, è possibile utilizzare questa procedura per convertire il codice in MSIL pure:
+Se si usa una versione precedente del set di strumenti C++ del compilatore Microsoft che supporta **/CLR: pure** o **/CLR: safe**, è possibile usare questa procedura per convertire il codice in codice MSIL puro:
 
 ### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Per convertire l'applicazione in modalità mista in linguaggio intermedio puro
 
-1. Rimuovere i collegamenti per il [librerie di runtime C](../c-runtime-library/crt-library-features.md) (CRT):
+1. Rimuovere i collegamenti alle [librerie di runtime C](../c-runtime-library/crt-library-features.md) (CRT):
 
-   1. Nel file con estensione cpp che definisce il punto di ingresso dell'applicazione, modificare il punto di ingresso `Main()`. Usando `Main()` indica che il progetto non viene collegato alla libreria CRT.
+   1. Nel file con estensione cpp che definisce il punto di ingresso dell'applicazione, modificare il punto di `Main()`ingresso in. L' `Main()` utilizzo di indica che il progetto non è collegato a CRT.
 
-   2. In Esplora soluzioni fare clic sul progetto e selezionare **proprietà** menu di scelta rapida per aprire le pagine delle proprietà per l'applicazione.
+   2. In Esplora soluzioni fare clic con il pulsante destro del mouse sul progetto e scegliere **Proprietà** dal menu di scelta rapida per aprire le pagine delle proprietà dell'applicazione.
 
-   3. Nel **avanzate** pagina delle proprietà di progetto per il **Linker**, selezionare il **punto di ingresso** e quindi immettere **Main** in questo campo.
+   3. Nella pagina delle proprietà **Avanzate** del progetto per il **linker**, selezionare il **punto di ingresso** e quindi immettere **Main** in questo campo.
 
-   4. Per le applicazioni console, nelle **System** pagina delle proprietà di progetto per il **Linker**, selezionare il **sottosistema** campo e impostare questa opzione su **Console (/ SUBSYSTEM:Console)**.
+   4. Per le applicazioni console, nella pagina delle proprietà del progetto di **sistema** per il **linker**Selezionare il campo **sottosistema** e modificarlo in **Console (/Subsystem: console)** .
 
       > [!NOTE]
-      > Non è necessario impostare questa proprietà per le applicazioni Windows Forms, poiché il **sottosistema** campo è impostato su **Windows (/ /SUBSYSTEM: WINDOWS)** per impostazione predefinita.
+      > Non è necessario impostare questa proprietà per Windows Forms applicazioni perché il campo **sottosistema** è impostato su **Windows (/Subsystem: Windows)** per impostazione predefinita.
 
-   5. In stdafx. h, impostare come commento tutti i `#include` istruzioni. Ad esempio, nelle applicazioni console:
+   5. In *stdafx. h*, impostare come commento tutte `#include` le istruzioni. Ad esempio, nelle applicazioni console:
 
       ```cpp
       // #include <iostream>
@@ -56,13 +56,13 @@ Se si usa una versione precedente di Microsoft C++ set di strumenti del compilat
       // #include <tchar.h>
       ```
 
-   6. Per le applicazioni Windows Forms, in Form1. cpp, impostare come commento il `#include` istruzione che fa riferimento a Windows. h. Ad esempio:
+   6. Per Windows Forms applicazioni, in Form1. cpp, impostare come commento `#include` l'istruzione che fa riferimento a Windows. h. Ad esempio:
 
       ```cpp
       // #include <windows.h>
       ```
 
-2. Aggiungere il codice seguente al file stdafx. h:
+2. Aggiungere il codice seguente a *stdafx. h*:
 
    ```cpp
    #ifndef __FLTUSED__
@@ -71,9 +71,9 @@ Se si usa una versione precedente di Microsoft C++ set di strumenti del compilat
    #endif
    ```
 
-3. Rimuovere tutti i tipi non gestiti:
+3. Rimuovi tutti i tipi non gestiti:
 
-   Dove appropriato, sostituire i tipi non gestiti con i riferimenti alle strutture dal [sistema](/dotnet/api/system) dello spazio dei nomi. Nella tabella seguente sono elencati i tipi gestiti più comuni:
+   Laddove appropriato, sostituire i tipi non gestiti con riferimenti a strutture dello spazio dei nomi [System](/dotnet/api/system) . I tipi gestiti comuni sono elencati nella tabella seguente:
 
    |Struttura|Descrizione|
    |---------------|-----------------|
@@ -95,4 +95,4 @@ Se si usa una versione precedente di Microsoft C++ set di strumenti del compilat
    |[UInt32](/dotnet/api/system.uint32)|Rappresenta un intero senza segno a 32 bit.|
    |[UInt64](/dotnet/api/system.uint64)|Rappresenta un intero senza segno a 64 bit.|
    |[UIntPtr](/dotnet/api/system.uintptr)|Tipo specifico per la piattaforma usato per rappresentare un puntatore o un handle.|
-   |[Void](/dotnet/api/system.void)|Indica un metodo che non restituisce un valore. vale a dire, il metodo ha il tipo restituito void.|
+   |[Void](/dotnet/api/system.void)|Indica un metodo che non restituisce un valore. ovvero il tipo restituito del metodo è void.|

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: eb9b3907008147cb21f04aec5f42e4896fa35b3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516476"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "70311682"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial (C++/CLI e C++/CX)
 
@@ -49,7 +49,7 @@ Parola chiave che dichiara una classe o uno struct supportato da Windows Runtime
 *identifier*<br/>
 Nome del tipo definito.
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 Una classe parziale supporta scenari in cui si modifica una parte di una definizione di classe in un file e il software che genera codice automaticamente, ad esempio la finestra di progettazione XAML, modifica il codice nella stessa classe in un altro file. Usando una classe parziale, è possibile impedire al generatore di codice automatico di sovrascrivere il codice. In un progetto di Visual Studio il modificatore **partial** viene applicato automaticamente al file generato.
 
@@ -67,7 +67,7 @@ Modelli: una classe parziale non può essere un modello.
 
 Generics: una classe parziale può essere un tipo generico se la definizione completa può essere generica. Ogni classe parziale e completa deve tuttavia avere esattamente gli stessi parametri generici, compresi i nomi di parametri formali.
 
-Per altre informazioni su come usare la parola chiave **partial**, vedere [Classi parziali (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023).
+Per altre informazioni su come usare la parola chiave **partial**, vedere [Classi parziali (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -79,4 +79,4 @@ Questa funzionalità del linguaggio non si applica a Common Language Runtime.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Classi parziali (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)
+[Classi parziali (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516516"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311763"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Spazi dei nomi Platform, default e cli (C++/CLI e C++/CX)
 
@@ -26,7 +26,7 @@ Quando si crea un progetto, Visual Studio fornisce uno spazio dei nomi default p
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-Per altre informazioni, vedere [Spazi dei nomi e visibilità del tipo (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx).
+Per altre informazioni, vedere [Spazi dei nomi e visibilità del tipo (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -40,7 +40,7 @@ Opzione del compilatore: `/ZW`
 using namespace cli;
 ```
 
-### <a name="remarks"></a>Osservazioni
+### <a name="remarks"></a>Note
 
 C++/CLI supporta lo spazio dei nomi **cli**. Quando si esegue la compilazione con `/clr`, l'istruzione **using** nella sezione relativa alla sintassi è implicita.
 

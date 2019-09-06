@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525311"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311846"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemi di progettazione dell'architettura OLE DB
 
@@ -38,7 +38,7 @@ Considerate tutte le possibili combinazioni di tecnologie (ad esempio l'uso di c
 
 - [Guida e supporto tecnico Microsoft](https://support.microsoft.com/)
 
-- [Microsoft Data Access Technical Articles Overview](https://msdn.microsoft.com/library/ms810811.aspx) (Panoramica di articoli tecnici su Microsoft Data Access Components)
+- [Microsoft Data Access Technical Articles Overview](/previous-versions/ms810811(v=msdn.10)) (Panoramica di articoli tecnici su Microsoft Data Access Components)
 
 ## <a name="see-also"></a>Vedere anche
 

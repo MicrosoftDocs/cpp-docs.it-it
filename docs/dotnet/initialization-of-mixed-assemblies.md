@@ -10,38 +10,38 @@ helpviewer_keywords:
 - custom locales [C++]
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
-ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35dd47bd87c278d60fc616dca854bf843acc7c57
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339039"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311950"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inizializzazione di assembly misti
 
-Gli sviluppatori di Windows devono essere sempre diffidenti nei confronti del blocco del caricatore durante l'esecuzione di codice durante `DllMain`. Tuttavia, esistono alcune considerazioni aggiuntive che entrano in gioco quando si lavora con C++/clr assembly in modalità mista.
+Quando si esegue il codice durante `DllMain`, gli sviluppatori Windows devono sempre prestare attenzione al blocco del caricatore. Tuttavia, esistono alcuni aspetti aggiuntivi da considerare quando si gestiscono gli C++assembly in modalità mista/CLR.
 
-Il codice all'interno di [DllMain](/windows/desktop/Dlls/dllmain) non deve accedere a CLR. Questo significa che `DllMain` non deve chiamare direttamente o indirettamente funzioni gestite, che nessun codice gestito deve essere dichiarato o implementato in `DllMain`e che all'interno di `DllMain`non deve avere luogo nessuna procedura di Garbage Collection o caricamento automatico di libreria.
+Il codice all'interno di [DllMain](/windows/win32/Dlls/dllmain) non deve accedere a .NET Common Language Runtime (CLR). Ciò significa che `DllMain` non deve effettuare chiamate a funzioni gestite, direttamente o indirettamente. nessun codice gestito deve essere dichiarato o implementato in `DllMain`e non deve essere eseguito alcun Garbage Collection o il caricamento automatico della `DllMain` libreria all'interno di .
 
 ## <a name="causes-of-loader-lock"></a>Cause del blocco del caricatore
 
-Con l'introduzione della piattaforma .NET sono stati resi disponibili due distinti meccanismi per il caricamento di un modulo di esecuzione (EXE o DLL): uno per Windows, usaro per i moduli non gestiti, e uno per Common Language Runtime (CLR) di .NET che consente il caricamento di assembly .NET. Il problema del caricamento delle DLL miste verte intorno al caricatore del sistema operativo Microsoft Windows.
+Con l'introduzione della piattaforma .NET, sono disponibili due meccanismi distinti per il caricamento di un modulo di esecuzione (EXE o DLL): uno per Windows, che viene usato per i moduli non gestiti e uno per CLR, che carica gli assembly .NET. Il problema del caricamento delle DLL miste verte intorno al caricatore del sistema operativo Microsoft Windows.
 
 Quando in un processo viene caricato un assembly contenente solo costrutti .NET, il caricatore CLR stesso può eseguire tutte le necessarie attività di inizializzazione e caricamento. Tuttavia, per assembly misti è necessario usare anche il caricatore di Windows, dal momento che gli assembly possono contenere codice e dati nativi.
 
-Il caricatore di Windows garantisce che nessun codice possa accedere a codice o dati quella DLL prima che sia inizializzata e che nessun codice possa caricare in modo ridondante la DLL se parzialmente inizializzata. Per ottenere questo risultato, il caricatore di Windows usa una sezione di importanza globale sul processo, spesso definita "blocco del caricatore", che impedisce accessi non sicuri durante l'inizializzazione del modulo. Ne deriva che il processo di caricamento è vulnerabile a molti classici scenari di deadlock. Per gli assembly misti, i due scenari seguenti aumentano il rischio di deadlock:
+Il caricatore di Windows garantisce che nessun codice possa accedere al codice o ai dati nella DLL prima che sia stato inizializzato e che nessun codice possa caricare in modo ridondante la DLL mentre è parzialmente inizializzata. A tale scopo, il caricatore di Windows usa una sezione processo-globale critica (spesso chiamata "blocco del caricatore") che impedisce l'accesso non sicuro durante l'inizializzazione del modulo. Ne deriva che il processo di caricamento è vulnerabile a molti classici scenari di deadlock. Per gli assembly misti, i due scenari seguenti aumentano il rischio di deadlock:
 
-- Primo scenario: il deadlock può verificarsi se gli utenti tentano di eseguire funzioni compilate in codice MSIL (Microsoft Intermediate Language) quando il blocco del caricatore è attivo, ad esempio tramite `DllMain` oppure in inizializzatori statici. Si consideri il caso in cui la funzione MSIL fa riferimento a un tipo di assembly non caricato. CLR tenterà di caricare automaticamente l'assembly, il quale potrebbe richiedere al caricatore di Windows di attivare il blocco sul blocco del caricatore. Poiché il blocco del caricatore è già stato attivato dal codice in una precedente fase della sequenza di chiamate, si verifica un deadlock. L'esecuzione di codice MSIL con il blocco del caricatore attivo non implica necessariamente il verificarsi di un deadlock. Per questo motivo, questo scenario è difficile da diagnosticare e correggere. In alcune circostanze, ad esempio laddove la DLL del tipo a cui si fa riferimento non contiene alcun costrutto nativo e tutte le relative dipendenze non contengono costrutti nativi, non è necessario usare il caricatore di Windows per caricare l'assembly .NET del tipo a cui si fa riferimento. Inoltre, l'assembly richiesto o le relative dipendenze .NET/native miste possono essere già state caricate da altro codice. Di conseguenza, il verificarsi di un deadlock può essere difficile da prevedere e può variare a seconda della configurazione della macchina di destinazione.
+- Prima di tutto, se gli utenti tentano di eseguire funzioni compilate in Microsoft Intermediate Language (MSIL) `DllMain` quando il blocco del caricatore viene mantenuto (ad esempio, da o in inizializzatori statici) può causare un deadlock. Si consideri il caso in cui la funzione MSIL fa riferimento a un tipo in un assembly che non è stato caricato. CLR tenterà di caricare automaticamente l'assembly, il quale potrebbe richiedere al caricatore di Windows di attivare il blocco sul blocco del caricatore. Si verifica un deadlock, perché il blocco del caricatore è già stato utilizzato dal codice in precedenza nella sequenza di chiamate. Tuttavia, l'esecuzione di codice MSIL con il blocco del caricatore non garantisce che si verifichi un deadlock, rendendo difficile la diagnosi e la correzione di questo scenario. In alcune circostanze, ad esempio quando la DLL del tipo a cui si fa riferimento non contiene costrutti nativi e tutte le relative dipendenze non contengono costrutti nativi, il caricatore di Windows non è necessario per caricare l'assembly .NET del tipo a cui si fa riferimento. Inoltre, l'assembly richiesto o le relative dipendenze .NET/native miste possono essere già state caricate da altro codice. Di conseguenza, il verificarsi di un deadlock può essere difficile da prevedere e può variare a seconda della configurazione della macchina di destinazione.
 
-- Secondo scenario: quando si caricavano DLL nelle versioni 1.0 e 1.1 di .NET Framework, CLR presupponeva che il blocco del caricatore non fosse attivo ed eseguiva numerose operazioni che non erano valide con il blocco del caricatore attivo. La mancata attivazione del blocco del caricatore è un presupposto valido per le DLL puramente .NET, tuttavia poiché le DLL miste eseguono routine di inizializzazione native, esse richiedono il caricatore di Windows nativo e quindi il blocco del caricatore. Di conseguenza, anche se lo sviluppatore non tentava di eseguire funzioni MSIL durante l'inizializzazione delle DLL, esisteva comunque una piccola possibilità che si verificasse un deadlock non deterministico con le versioni 1.0 e 1.1 di .NET Framework.
+- In secondo luogo, quando si caricano le dll nelle versioni 1,0 e 1,1 del .NET Framework, CLR presuppone che il blocco del caricatore non sia stato mantenuto e che siano state eseguite diverse azioni che non sono valide con il blocco del caricatore. Supponendo che il blocco del caricatore non venga mantenuto è un presupposto valido per le DLL puramente .NET, ma, poiché le DLL miste eseguono routine di inizializzazione native, richiedono il caricatore di Windows nativo e quindi il blocco del caricatore. Di conseguenza, anche se lo sviluppatore non tentava di eseguire funzioni MSIL durante l'inizializzazione delle DLL, esisteva comunque una piccola possibilità che si verificasse un deadlock non deterministico con le versioni 1.0 e 1.1 di .NET Framework.
 
-Questo comportamento non deterministico è stato quasi totalmente rimosso dal processo di caricamento delle DLL miste. Questo risultato è stato raggiunto apportando le seguenti modifiche:
+Questo comportamento non deterministico è stato quasi totalmente rimosso dal processo di caricamento delle DLL miste. Questa operazione è stata eseguita con queste modifiche:
 
 - CLR non si basa più su falsi presupposti durante il caricamento di DLL miste.
 
-- L'inizializzazione gestita e non gestita viene eseguita in due fasi separate e distinte. Ha luogo prima l'inizializzazione non gestita (tramite DllMain), quindi viene eseguita l'inizializzazione gestita, tramite un costrutto supportato da .NET denominato *. cctor*. L'inizializzazione gestita è completamente trasparente all'utente, a meno che non si usi **/Zl** o **/NODEFAULTLIB** . Per altre informazioni, vedere[/NODEFAULTLIB (Ignore Libraries)](../build/reference/nodefaultlib-ignore-libraries.md) e [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) .
+- L'inizializzazione gestita e non gestita viene eseguita in due fasi separate e distinte. L'inizializzazione non gestita viene eseguita prima (tramite DllMain) e l'inizializzazione gestita viene eseguita in un secondo momento, tramite un. Costrutto supportato `.cctor` da NET. L'inizializzazione gestita è completamente trasparente all'utente, a meno che non si usi **/Zl** o **/NODEFAULTLIB** . Per altre informazioni, vedere[/NODEFAULTLIB (Ignore Libraries)](../build/reference/nodefaultlib-ignore-libraries.md) e [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) .
 
-Il blocco del caricatore può comunque ancora verificarsi, ma avviene in modo riproducibile e pertanto è individuabile. Se `DllMain` contiene istruzioni MSIL, il compilatore genera l'avviso [avviso del compilatore (livello 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md). Inoltre, CRT o CLR tenteranno di rilevare e segnalare gli eventuali tentativi di eseguire codice MSIL con il blocco del caricatore attivo. Il rilevamento di CRT genererà l'errore R6033 di runtime del linguaggio C.
+Il blocco del caricatore può comunque ancora verificarsi, ma avviene in modo riproducibile e pertanto è individuabile. Se `DllMain` contiene istruzioni MSIL, il compilatore genera un avviso di avviso [del compilatore (livello 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md). Inoltre, CRT o CLR tenteranno di rilevare e segnalare gli eventuali tentativi di eseguire codice MSIL con il blocco del caricatore attivo. Il rilevamento di CRT genererà l'errore R6033 di runtime del linguaggio C.
 
 Di seguito vengono descritti altri scenari nei quali il codice MSIL può essere eseguito con il blocco del caricatore attivo. Vengono anche fornite le soluzioni possibili per ciascun scenario e le tecniche di debug.
 
@@ -51,7 +51,7 @@ Ci sono diverse situazioni in cui il codice utente può eseguire codice MSIL con
 
 ### <a name="dllmain"></a>DllMain
 
-La funzione `DllMain` è un punto di ingresso definito dall'utente per una DLL. Salvo diversamente specificato dall'utente, la funzione `DllMain` viene richiamata ogni volta che un processo o un thread si connette o si disconnette dalla DLL che lo contiene. Poiché questa chiamata può verificarsi mentre il blocco del caricatore è attivo, in MSIL non deve essere compilata nessuna funzione `DllMain` fornita dall'utente. Inoltre, nessuna funzione nella struttura ad albero delle chiamate che ha origine nella funzione `DllMain` può essere compilata in MSIL. Per risolvere questi problemi, il blocco di codice che definisce `DllMain` deve essere modificato con un blocco #pragma `unmanaged`. Lo stesso vale per ciascuna funzione chiamata da `DllMain` .
+La `DllMain` funzione è un punto di ingresso definito dall'utente per una dll. Salvo diversamente specificato dall'utente, la funzione `DllMain` viene richiamata ogni volta che un processo o un thread si connette o si disconnette dalla DLL che lo contiene. Poiché questa chiamata può verificarsi mentre il blocco del caricatore è attivo, in MSIL non deve essere compilata nessuna funzione `DllMain` fornita dall'utente. Inoltre, nessuna funzione nella struttura ad albero delle chiamate che ha origine nella funzione `DllMain` può essere compilata in MSIL. Per risolvere questi problemi, il blocco di codice che definisce `DllMain` deve essere modificato con un blocco #pragma `unmanaged`. Lo stesso vale per ciascuna funzione chiamata da `DllMain` .
 
 Nei casi in cui queste funzioni devono chiamare una funzione che richiede un'implementazione MSIL per altri contesti di chiamata, è possibile usare una strategia di duplicazione in cui vengono create sia una versione .NET che una versione nativa della stessa funzione.
 
@@ -59,13 +59,13 @@ In alternativa, se la funzione `DllMain` non è necessaria o non richiede l'esec
 
 Se la funzione DllMain tenta di eseguire codice MSIL direttamente, verrà restituito un [Compiler Warning (level 1) C4747](../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md) . Il compilatore, tuttavia, non rileva i casi in cui DllMain chiama una funzione in un altro modulo che a sua volta tenta di eseguire codice MSIL.
 
-Per ulteriori informazioni su questo scenario, vedere "Limiti alla diagnosi".
+Per ulteriori informazioni su questo scenario, vedere la pagina relativa [agli ostacoli alla diagnosi](#impediments-to-diagnosis).
 
 ### <a name="initializing-static-objects"></a>Inizializzazione di oggetti statici
 
-L'inizializzazione di oggetti statici può determinare un deadlock se è richiesto un inizializzatore dinamico. Nei casi semplici, ad esempio quando una variabile statica viene semplicemente assegnata a un valore noto in fase di compilazione, non è necessaria alcuna inizializzazione dinamica, quindi non vi è rischio di deadlock. Per le variabili statiche inizializzate da chiamate di funzioni, chiamate di costruttore o espressioni che non possono essere calcolate in fase di compilazione è tuttavia necessario disporre del codice da eseguire durante l'inizializzazione del modulo.
+L'inizializzazione di oggetti statici può determinare un deadlock se è richiesto un inizializzatore dinamico. Per i casi più semplici, ad esempio quando una variabile statica viene assegnata a un valore noto in fase di compilazione, non è necessaria alcuna inizializzazione dinamica, quindi non esiste alcun rischio di deadlock. Per le variabili statiche inizializzate da chiamate di funzioni, chiamate di costruttore o espressioni che non possono essere calcolate in fase di compilazione è tuttavia necessario disporre del codice da eseguire durante l'inizializzazione del modulo.
 
-Nel codice riportato di seguito vengono illustrati esempi di inizializzatori statici che richiedono l'inizializzazione dinamica: una chiamata di funzione, una costruzione di oggetto e l'inizializzazione di un puntatore. Questi esempi non sono statici, ma si presuppone che siano definiti in ambito globale, situazione che produce lo stesso effetto.
+Nel codice riportato di seguito vengono illustrati esempi di inizializzatori statici che richiedono l'inizializzazione dinamica: una chiamata di funzione, una costruzione di oggetto e l'inizializzazione di un puntatore. (Questi esempi non sono statici, ma si presuppone che siano definiti nell'ambito globale, che ha lo stesso effetto).
 
 ```cpp
 // dynamic initializer function generated
@@ -74,7 +74,7 @@ CObject o(arg1, arg2);
 CObject* op = new CObject(arg1, arg2);
 ```
 
-Un deadlock si verifica con maggiori probabilità se il modulo contenente viene compilato con **/clr** e se verrà eseguito codice MSIL. In particolare, se la variabile statica viene compilata senza **/clr** (o risiede in un blocco #pragma `unmanaged` ) e l'inizializzatore dinamico richiesto per inizializzarla determina l'esecuzione di istruzioni MSIL, è possibile che si verifichi il deadlock. Questo avviene perché, per i moduli compilati senza **/clr**, l'inizializzazione di variabili statiche viene eseguita da DllMain. Le variabili statiche compilate con **/clr** , al contrario, vengono inizializzate dal costrutto. cctor dopo il completamento della fase di inizializzazione non gestita e il rilascio del blocco del caricatore.
+Un deadlock si verifica con maggiori probabilità se il modulo contenente viene compilato con **/clr** e se verrà eseguito codice MSIL. In particolare, se la variabile statica viene compilata senza **/clr** (o risiede in un blocco #pragma `unmanaged` ) e l'inizializzatore dinamico richiesto per inizializzarla determina l'esecuzione di istruzioni MSIL, è possibile che si verifichi il deadlock. Questo perché, per i moduli compilati senza **/CLR**, l'inizializzazione di variabili statiche viene eseguita da DllMain. Al contrario, le `.cctor`variabili statiche compilate con **/CLR** vengono inizializzate da, dopo il completamento della fase di inizializzazione non gestita e il rilascio del blocco del caricatore.
 
 Esistono numerose soluzioni per il deadlock causato dall'inizializzazione dinamica di variabili statiche (elencate indicativamente in ordine di tempo richiesto per correggere il problema):
 
@@ -86,19 +86,19 @@ Esistono numerose soluzioni per il deadlock causato dall'inizializzazione dinami
 
 ### <a name="user-supplied-functions-affecting-startup"></a>Funzioni fornite dall'utente che influiscono sull'avvio
 
-Esistono numerose funzioni fornite dall'utente da cui dipendono le librerie per l'inizializzazione durante l'avvio. Ad esempio, quando l'overload globale di operatori in C++, ad esempio la `new` e `delete` operatori, le versioni fornite dall'utente vengono usati ovunque, tra cui l'inizializzazione della libreria Standard C++ e distruzione. Di conseguenza, gli inizializzatori statici forniti dall'utente e della libreria Standard C++ richiamerà qualsiasi versioni fornite dall'utente di questi operatori.
+Esistono numerose funzioni fornite dall'utente da cui dipendono le librerie per l'inizializzazione durante l'avvio. Ad esempio, quando gli operatori di overload globali C++ in, ad esempio gli `new` operatori e `delete` , le versioni fornite dall'utente vengono usate ovunque, incluso nell' C++ inizializzazione e nell'eliminazione della libreria standard. Di conseguenza, C++ gli inizializzatori statici forniti dall'utente e dalla libreria standard richiameranno qualsiasi versione fornita dall'utente di questi operatori.
 
-Se le versioni fornite dall'utente sono compilate in MSIL, questi inizializzatori tenteranno di eseguire le istruzioni MSIL mentre il blocco del caricatore è attivo. Una fornita dall'utente `malloc` ha le stesse conseguenze. Per risolvere il problema, tutti questi overload o tutte queste definizioni fornite dall'utente devono essere implementate come codice nativo usando la direttiva il #pragma `unmanaged` .
+Se le versioni fornite dall'utente sono compilate in MSIL, questi inizializzatori tenteranno di eseguire le istruzioni MSIL mentre il blocco del caricatore è attivo. Un oggetto fornito `malloc` dall'utente ha le stesse conseguenze. Per risolvere il problema, tutti questi overload o tutte queste definizioni fornite dall'utente devono essere implementate come codice nativo usando la direttiva il #pragma `unmanaged` .
 
-Per ulteriori informazioni su questo scenario, vedere "Limiti alla diagnosi".
+Per ulteriori informazioni su questo scenario, vedere la pagina relativa [agli ostacoli alla diagnosi](#impediments-to-diagnosis).
 
 ### <a name="custom-locales"></a>Impostazioni locali personalizzate
 
-Le eventuali impostazioni locali globali personalizzate fornite dall'utente saranno usate per l'inizializzazione di tutti i flussi I/O futuri, inclusi quelli inizializzati in modo statico. Se l'oggetto impostazioni locali globali viene compilato in codice MSIL, è possibile che le funzioni membro dell'oggetto impostazioni locali compilate in MSIL siano richiamate mentre il blocco del caricatore è attivo.
+Se l'utente fornisce impostazioni locali globali personalizzate, queste impostazioni locali verranno usate per l'inizializzazione di tutti i flussi I/O futuri, inclusi i flussi che vengono inizializzati in modo statico. Se l'oggetto impostazioni locali globali viene compilato in codice MSIL, è possibile che le funzioni membro dell'oggetto impostazioni locali compilate in MSIL siano richiamate mentre il blocco del caricatore è attivo.
 
 Esistono tre soluzioni a questo problema:
 
-I file di origine contenenti tutte le definizioni globali di flusso I/O possono essere compilati usando l'opzione **/clr** . In questo modo verrà impedita l'esecuzione degli inizializzatori statici con il blocco del caricatore attivo.
+I file di origine contenenti tutte le definizioni globali di flusso I/O possono essere compilati usando l'opzione **/clr** . Impedisce l'esecuzione degli inizializzatori statici con il blocco del caricatore.
 
 Le definizioni di funzione impostazioni locali personalizzate possono essere compilate in codice nativo usando la direttiva il #pragma `unmanaged` .
 
@@ -106,19 +106,19 @@ Si consiglia di non impostare le impostazioni locali personalizzate come imposta
 
 ## <a name="impediments-to-diagnosis"></a>Limiti alla diagnosi
 
-In alcuni casi è difficile individuare l'origine dei deadlock. Nelle sottosezioni riportate di seguito vengono descritti questi scenari e i modi per ovviare ai problemi.
+In alcuni casi, è difficile rilevare l'origine dei deadlock. Nelle sottosezioni riportate di seguito vengono descritti questi scenari e i modi per ovviare ai problemi.
 
 ### <a name="implementation-in-headers"></a>Implementazione nei file di intestazione
 
 In certi casi, le implementazioni delle funzioni all'interno dei file di intestazione possono complicare la diagnostica. Le funzioni inline e il codice di modello richiedono entrambi la specifica di funzioni in un file di intestazione.  Il linguaggio C++ specifica la regola di definizione unica, in base alla quale tutte le implementazioni di funzioni con lo stesso nome si equivalgono a livello semantico. Di conseguenza, per il linker di C++ non sono necessarie considerazioni speciali quando si esegue l'unione di file oggetto per i quali sono disponibili implementazioni duplicate di una data funzione.
 
-Prima di Visual Studio 2005, il linker sceglie semplicemente la più grande di queste definizioni semanticamente equivalenti, per supportare gli scenari e dichiarazioni con prototipo quando vengono utilizzate opzioni di ottimizzazione diversi per file di origine diversi. Tale situazione implica un problema con le DLL miste .NET e native.
+Prima di Visual Studio 2005, il linker sceglie semplicemente la più grande tra le definizioni semanticamente equivalenti, per gestire le dichiarazioni e gli scenari in cui vengono usate opzioni di ottimizzazione differenti per file di origine diversi. Viene creato un problema per le DLL miste native/. NET.
 
-Poiché la stessa intestazione può essere inclusa da file di C++ con **/clr** abilitati e disabilitati, o un #include può essere incapsulato all'interno di # #pragma `unmanaged` blocco, è possibile avere sia versioni MSIL che native di funzioni che forniscono implementazioni nelle intestazioni. Le implementazioni MSIL e native hanno una semantica differente in relazione all'inizializzazione con il blocco del caricatore attivo. Questo viola effettivamente la regola di definizione unica. Di conseguenza, quando il linker sceglie l'implementazione più lunga, è possibile che adotti la versione MSIL di una funzione, anche se è stata compilata in modo esplicito in codice nativo in un altro punto usando la direttiva #pragma non gestita. Per assicurarsi che una versione MSIL di una funzione modello o inline non sia mai chiamata con il blocco del caricatore attivo, ciascuna definizione di questo tipo di funzione chiamata con il blocco del caricatore attivo deve essere modificata usando la direttiva #pragma `unmanaged` . Se il file di intestazione è di altri produttori, il metodo più semplice per ottenere questo risultato consiste spesso nell'inserire e visualizzare la direttiva #pragma non gestita accanto alla direttiva #include per il file di intestazione che crea il problema. (Vedere [managed, unmanaged](../preprocessor/managed-unmanaged.md) per un esempio.) Questa strategia non è tuttavia valida nel caso di intestazioni contenenti altro codice che deve chiamare direttamente le API .NET.
+Poiché la stessa intestazione può essere inclusa sia da C++ file con **/CLR** abilitato che disabilitato, oppure è possibile eseguire il wrapper di `#pragma unmanaged` un #include all'interno di un blocco, è possibile che siano presenti sia le versioni MSIL che native di funzioni che forniscono implementazioni in intestazioni. Le implementazioni MSIL e native hanno una semantica differente in relazione all'inizializzazione con il blocco del caricatore attivo. Questo viola effettivamente la regola di definizione unica. Di conseguenza, quando il linker sceglie l'implementazione più lunga, è possibile che adotti la versione MSIL di una funzione, anche se è stata compilata in modo esplicito in codice nativo in un altro punto usando la direttiva #pragma non gestita. Per assicurarsi che una versione MSIL di una funzione modello o inline non sia mai chiamata con il blocco del caricatore, ogni definizione di tale funzione chiamata con il blocco del caricatore deve `#pragma unmanaged` essere modificata con la direttiva. Se il file di intestazione è di terze parti, il modo più semplice per apportare questa modifica consiste nel push e `#pragma unmanaged` nella pop della direttiva intorno alla direttiva #include per il file di intestazione che causa il problema. (Per un esempio [, vedere Managed, unmanaged](../preprocessor/managed-unmanaged.md) ). Questa strategia non è tuttavia valida nel caso di intestazioni contenenti altro codice che deve chiamare direttamente le API .NET.
 
-Per facilitare la gestione del blocco del caricatore da parte degli utenti, il linker sceglierà l'implementazione nativa invece dell'implementazione gestita, se presenti entrambe. In questo modo si evitano i problemi riportati sopra. In questa versione ci sono tuttavia due eccezioni a questa regola a causa di due problemi irrisolti con il compilatore:
+Per facilitare la gestione del blocco del caricatore da parte degli utenti, il linker sceglierà l'implementazione nativa invece dell'implementazione gestita, se presenti entrambe. Questa impostazione predefinita evita i problemi precedenti. In questa versione ci sono tuttavia due eccezioni a questa regola a causa di due problemi irrisolti con il compilatore:
 
-- La chiamata di una funzione inline avviene tramite un puntatore a funzione statico globale. Questo scenario è particolarmente rilevante perché le funzioni virtuali vengono chiamate tramite puntatori a funzione globali. Ad esempio,
+- La chiamata a una funzione inline avviene tramite un puntatore a funzione statico globale. Questo scenario è rilevante perché le funzioni virtuali vengono chiamate tramite puntatori a funzione globali. Ad esempio,
 
 ```cpp
 #include "definesmyObject.h"
@@ -142,45 +142,45 @@ void DuringLoaderlock(C & c)
 
 Tutte le diagnosi di problemi di blocco del caricatore devono essere eseguite con build di debug. È possibile che le build di rilascio non producano informazioni utili per la diagnostica e che le ottimizzazioni eseguite in modalità di rilascio mascherino codice MSIL in presenza di scenari di blocco del caricatore.
 
-## <a name="how-to-debug-loader-lock-issues"></a>Debug dei problemi di blocco del caricatore
+## <a name="how-to-debug-loader-lock-issues"></a>Come eseguire il debug dei problemi di blocco del caricatore
 
-La diagnostica generata da CLR quando viene richiamata una funzione MSIL causa la sospensione dell'esecuzione di CLR. Questo causa a sua volta la sospensione del debugger in modalità mista di Visual C++ quando l'oggetto del debug viene eseguito all'interno del processo. Tuttavia, nella connessione al processo, non è possibile ottenere uno stack di chiamate gestito per l'oggetto del debug usando il debugger in modalità mista.
+La diagnostica generata da CLR quando viene richiamata una funzione MSIL causa la sospensione dell'esecuzione di CLR. A sua volta, il debugger in C++ modalità mista visuale viene sospeso anche durante l'esecuzione dell'oggetto del debug in-process. Tuttavia, quando ci si connette al processo, non è possibile ottenere un stack gestito per l'oggetto del debug usando il debugger misto.
 
 Per identificare la funzione MSIL specifica chiamata con il blocco del caricatore attivato, gli sviluppatori devono effettuare quanto riportato di seguito:
 
 1. Assicurarsi che siano disponibili simboli per mscoree.dll e mscorwks.dll.
 
-   Questa operazione può essere eseguita in due modi. È innanzitutto possibile aggiungere i PDB per mscoree.dll e mscorwks.dll al percorso di ricerca dei simboli. A tale scopo, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. (Dal **degli strumenti** menu, scegliere **opzioni**. Nel riquadro sinistro della finestra il **le opzioni** finestra di dialogo, aprire il **debug** nodo e scegliere **simboli**.) Aggiungere il percorso dei file PDB mscoree.dll e mscorwks.dll all'elenco di ricerca. Questi file PDB sono installati in %VSINSTALLDIR%\SDK\v2.0\symbols. Scegliere **OK**.
+   È possibile rendere i simboli disponibili in due modi. È innanzitutto possibile aggiungere i PDB per mscoree.dll e mscorwks.dll al percorso di ricerca dei simboli. Per aggiungerli, aprire la finestra di dialogo Opzioni percorso di ricerca simboli. Scegliere **Opzioni**dal menu **strumenti** . Nel riquadro sinistro della finestra di dialogo **Opzioni** aprire il nodo **debug** e scegliere **simboli**. Aggiungere il percorso dei file PDB mscoree.dll e mscorwks.dll all'elenco di ricerca. Questi file PDB sono installati in %VSINSTALLDIR%\SDK\v2.0\symbols. Scegliere **OK**.
 
-   È anche possibile scaricare i file PDB per mscoree.dll e mscorwks.dll da Microsoft Symbol Server. Per configurare Microsoft Symbol Server, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. (Dal **degli strumenti** menu, scegliere **opzioni**. Nel riquadro sinistro della finestra il **le opzioni** finestra di dialogo, aprire il **debug** nodo e scegliere **simboli**.) Aggiungere il seguente percorso di ricerca all'elenco di ricerca: http://msdl.microsoft.com/download/symbols. Aggiungere una directory cache per i simboli nella casella di testo relativa alla cache del server di simboli. Scegliere **OK**.
+   È anche possibile scaricare i file PDB per mscoree.dll e mscorwks.dll da Microsoft Symbol Server. Per configurare Microsoft Symbol Server, aprire la finestra di dialogo contenente le opzioni del percorso di ricerca dei simboli. Scegliere **Opzioni**dal menu **strumenti** . Nel riquadro sinistro della finestra di dialogo **Opzioni** aprire il nodo **debug** e scegliere **simboli**. Aggiungere questo percorso di ricerca all'elenco di ricerca `https://msdl.microsoft.com/download/symbols`:. Aggiungere una directory cache per i simboli nella casella di testo relativa alla cache del server di simboli. Scegliere **OK**.
 
 1. Impostare la modalità del debugger sulla modalità solo nativa.
 
-   A tale scopo, aprire il **proprietà** griglia per il progetto di avvio nella soluzione. Selezionare **le proprietà di configurazione** > **debug**. Impostare il **tipo di Debugger** al **solo nativo**.
+   Aprire la griglia delle **Proprietà** per il progetto di avvio nella soluzione. Selezionare **Proprietà** > di configurazione**debug**. Impostare il **tipo di debugger** su **solo nativo**.
 
 1. Avviare il debugger (F5).
 
-1. Quando la **/clr** diagnostica viene generata, scegliere **ripetere** e quindi scegliere **Interrompi**.
+1. Quando viene generata la diagnostica **/CLR** , scegliere **Riprova** , quindi scegliere **Interrompi**.
 
-1. Aprire la finestra dello stack di chiamate (Nella barra dei menu, scegliere **Debug** > **Windows** > **Stack di chiamate**.) La funzione `DllMain` o inizializzatore statico viene identificato con una freccia verde. Se la funzione che crea il problema non viene identificata, è necessario eseguire la procedura riportata di seguito per trovarla.
+1. Aprire la finestra dello stack di chiamate Sulla barra dei menu scegliere **debug** > **stack di chiamate** **Windows** > . L'inizializzatore `DllMain` statico o offensivo viene identificato con una freccia verde. Se la funzione che crea il problema non viene identificata, è necessario eseguire la procedura riportata di seguito per trovarla.
 
-1. Aprire il **controllo immediato** finestra (sulla barra dei menu, scegliere **Debug** > **Windows** > **immediato**.)
+1. Aprire la finestra di **controllo immediato** (sulla barra dei menu scegliere **debug** > **Windows** > **immediate**).
 
-1. Digitare. Load SOS. dll nel **Immediate** finestra per caricare il servizio del debugger SOS.
+1. Immettere `.load sos.dll` nella finestra di **controllo immediato** per caricare il servizio di debug SOS.
 
-1. Digitare! dumpstack nella **controllo immediato** finestra per visualizzare un elenco completo dell'interno **/clr** dello stack.
+1. Immettere `!dumpstack` nella finestra di **controllo immediato** per ottenere un elenco completo dello stack **/CLR** interno.
 
-1. Cercare la prima istanza (il più vicino alla parte inferiore dello stack) di CorDllMain (se `DllMain` causa il problema) o creare o GetTargetForVTableEntry (se un inizializzatore static causa il problema). La voce riportata sotto questa chiamata corrisponde alla chiamata della funzione implementata MSIL che ha tentato l'esecuzione con il blocco del caricatore attivo.
+1. Cercare la prima istanza (più vicina alla fine dello stack) di _CorDllMain (se `DllMain` causa il problema) o è o GetTargetForVTableEntry (se un inizializzatore statico causa il problema). La voce riportata sotto questa chiamata corrisponde alla chiamata della funzione implementata MSIL che ha tentato l'esecuzione con il blocco del caricatore attivo.
 
-1. Passare al file di origine e riga numero identificato nel passaggio precedente e quello corretto il problema usando gli scenari e soluzioni descritte nella sezione scenari.
+1. Passare al file di origine e al numero di riga identificato nel passaggio precedente e correggere il problema usando gli scenari e le soluzioni descritti nella sezione scenari.
 
 ## <a name="example"></a>Esempio
 
 ### <a name="description"></a>Descrizione
 
-L'esempio seguente viene illustrato come evitare il blocco del caricatore spostando il codice da `DllMain` nel costruttore di un oggetto globale.
+Nell'esempio seguente viene illustrato come evitare il blocco del caricatore spostando `DllMain` il codice da nel costruttore di un oggetto globale.
 
-In questo esempio, è un oggetto gestito globale il cui costruttore contiene l'oggetto gestito che era originariamente in `DllMain`. La seconda parte di questo esempio fa riferimento all'assembly, creando un'istanza dell'oggetto gestito per richiamare il costruttore del modulo che esegue l'inizializzazione.
+In questo esempio è presente un oggetto gestito globale il cui costruttore contiene l'oggetto gestito originariamente in `DllMain`. La seconda parte di questo esempio fa riferimento all'assembly, creando un'istanza dell'oggetto gestito per richiamare il costruttore del modulo che esegue l'inizializzazione.
 
 ### <a name="code"></a>Codice
 
@@ -211,7 +211,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved) {
 }
 ```
 
-Questo esempio illustra i problemi di inizializzazione di assembly misti:
+In questo esempio vengono illustrati i problemi di inizializzazione degli assembly misti:
 
 ```cpp
 // initializing_mixed_assemblies_2.cpp

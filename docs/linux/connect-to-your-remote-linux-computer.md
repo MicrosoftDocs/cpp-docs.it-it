@@ -1,14 +1,14 @@
 ---
 title: Connettersi al sistema Linux di destinazione in Visual Studio
 description: Come connettersi a un computer Linux remoto o a WSL dall'interno di un progetto di Visual Studio C++.
-ms.date: 06/19/2019
+ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: cd107f096e4395f93775ee80b889cc0efd627166
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
-ms.translationtype: HT
+ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313424"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383396"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Connettersi al sistema Linux di destinazione in Visual Studio
 
@@ -38,7 +38,7 @@ Per configurare la connessione remota:
 
 1. Immettere le informazioni seguenti:
 
-   | Voce | DESCRIZIONE
+   | Voce | Descrizione
    | ----- | ---
    | **Nome host**           | Nome o indirizzo IP del dispositivo di destinazione
    | **Porta**                | Porta sui cui è in esecuzione il servizio SSH, solitamente 22
@@ -109,7 +109,4 @@ Per configurare il progetto per WSL, vedere [Configurare un progetto Linux](conf
 [Configurare un progetto Linux](configure-a-linux-project.md)<br />
 [Configurare un progetto CMake per Linux](cmake-linux-project.md)<br />
 [Distribuire, eseguire ed eseguire il debug del progetto Linux](deploy-run-and-debug-your-linux-project.md)<br />
-
-
-
-
+[Configurare le sessioni di debug di CMake](../build/configure-cmake-debugging-sessions.md)
