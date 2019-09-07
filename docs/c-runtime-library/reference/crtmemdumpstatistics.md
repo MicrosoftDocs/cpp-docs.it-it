@@ -23,13 +23,13 @@ helpviewer_keywords:
 - CrtMemDumpStatistics function
 ms.assetid: 27b9d731-3184-4a2d-b9a7-6566ab28a9fe
 ms.openlocfilehash: 66eb58b65f3fa20e01ad16d68f3fe1baafd8cd04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605127"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739802"
 ---
-# <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
+# <a name="_crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
 Esegue il dump delle informazioni di intestazione di debug per uno stato dell'heap specificato in un form leggibile dall'utente (solo versione di debug).
 
@@ -48,11 +48,11 @@ Puntatore allo stato dell'heap per eseguire il dump.
 
 ## <a name="remarks"></a>Note
 
-Il **CrtMemDumpStatistics** funzione trasferisce le informazioni di intestazione di debug per uno stato specificato dell'heap in un form leggibile dall'utente. Le statistiche di dump possono essere usate dall'applicazione per tenere traccia delle allocazioni e per rilevare problemi di memoria. Lo stato della memoria può contenere uno stato dell'heap specifico o la differenza tra i due stati. Quando [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtMemDumpStatistics** vengono rimosse durante la pre-elaborazione.
+La funzione **_CrtMemDumpStatistics** esegue il dump delle informazioni di intestazione di debug per uno stato specificato dell'heap in un form leggibile dall'utente. Le statistiche di dump possono essere usate dall'applicazione per tenere traccia delle allocazioni e per rilevare problemi di memoria. Lo stato della memoria può contenere uno stato dell'heap specifico o la differenza tra i due stati. Quando _ [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtMemDumpStatistics** vengono rimosse durante la pre-elaborazione.
 
-Il *lo stato* parametro deve essere un puntatore a un **CrtMemState** struttura che è stato compilato da [CrtMemCheckpoint](crtmemcheckpoint.md) o restituiti da [_ CrtMemDifference](crtmemdifference.md) prima **CrtMemDumpStatistics** viene chiamato. Se *lo stato* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e viene eseguita alcuna azione. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
+Il parametro *state* deve essere un puntatore a una struttura **_CrtMemState** che è stata compilata da [CrtMemCheckpoint](crtmemcheckpoint.md) o restituita da [_CrtMemDifference](crtmemdifference.md) prima della chiamata a **_CrtMemDumpStatistics** . Se *lo stato* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e non viene eseguita alcuna azione. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
-Per altre informazioni sulle funzioni dello stato dell'heap e la **CrtMemState** struttura, vedere [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Per ulteriori informazioni sulle funzioni dello stato dell'heap e sulla struttura **_CrtMemState** , vedere [funzioni di creazione di report sullo stato dell'heap](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -62,7 +62,7 @@ Per altre informazioni sulle funzioni dello stato dell'heap e la **CrtMemState**
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-**Librerie:** solo le versioni di debug delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+**Librerie** Solo versioni di debug delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505528"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741588"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (classe)
 
@@ -177,7 +177,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Ricalcola il layout dell'elemento attivo.|
 |`CMDIFrameWndEx::AddDockSite`|Questo metodo non viene utilizzato.|
@@ -259,7 +259,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="data-members"></a>Membri di dati
 
-|NOME|DESCRIZIONE|
+|NOME|Descrizione|
 |----------|-----------------|
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Determina se i riquadri di ancoraggio possono essere convertiti in finestre figlio MDI.|
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Abilita o Disabilita l'ottimizzazione di riestrazione per le finestre figlio MDI.|
@@ -838,7 +838,7 @@ in Specifica l'ID risorsa di un menu.
 in Specifica il testo dell'elemento.
 
 *bShowHelpButton*<br/>
-in Consente di specificare se visualizzare un pulsante? nella finestra di dialogo Gestione di Windows.
+in Consente di specificare se visualizzare **un pulsante** ? nella finestra di dialogo Gestione di Windows.
 
 *uiMenuTextResId*<br/>
 in Identificatore della risorsa di stringa che contiene la stringa di testo dell'elemento.
@@ -1218,7 +1218,7 @@ Per caricare o salvare lo stato di schede e gruppi MDI e l'elenco dei documenti 
 
 - Chiamare [CMDIFrameWndEx:: LoadMDIState](#loadmdistate) quando viene creato il frame principale. La posizione consigliata per questa chiamata è prima che il fotogramma principale venga visualizzato per la prima volta. Aggiungere `CWinAppEx::EnableLoadWindowPlacement` primadi`pMainFrame->LoadFrame (IDR_MAINFRAME);.` Aggiungi dopola`(pMainFrame);` chiamata a`LoadMDIState` per visualizzare il fotogramma principale in corrispondenza della posizione archiviata nel registro di sistema. `CBCGPWorkspace::ReloadWindowPlacement` `(FALSE);`
 
-- Eseguire `GetDocumentName` l'override `CMDIChildWndEx`nella classe derivata da se l'applicazione Visualizza documenti non archiviati come file. La stringa restituita verrà salvata nel registro di sistema come identificatore del documento. L'implementazione di base di [CMDIChildWndEx::](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) GetDocumentName restituisce un valore ottenuto da [CDocument::](../../mfc/reference/cdocument-class.md#getpathname)GetPathName.
+- Eseguire `GetDocumentName` l'override `CMDIChildWndEx`nella classe derivata da se l'applicazione Visualizza documenti non archiviati come file. La stringa restituita verrà salvata nel registro di sistema come identificatore del documento. L'implementazione di base di [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) restituisce un valore ottenuto da [CDocument:: GetPathName](../../mfc/reference/cdocument-class.md#getpathname).
 
 - Eseguire l'override di [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) per creare correttamente i documenti quando vengono caricati dal registro di sistema. Il primo parametro è la stringa restituita da `GetDocumentName` .
 
@@ -1502,7 +1502,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 in Pulsante della barra degli strumenti.
 
 *pTI*<br/>
-out Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) .
+out Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) .
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -1850,7 +1850,7 @@ Per caricare o salvare lo stato di schede e gruppi MDI e l'elenco dei documenti 
 
 - Chiamare `CWinAppEx::ReloadWindowPlacement(pMainFrame)` after`LoadMDIState` per visualizzare il frame principale in corrispondenza della posizione archiviata nel registro di sistema.
 
-- Eseguire `GetDocumentName` l'override `CMDIChildWndEx`nella classe derivata da se l'applicazione Visualizza documenti non archiviati come file. La stringa restituita verrà salvata nel registro di sistema come identificatore del documento. Per ulteriori informazioni, vedere [CMDIChildWndEx::](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)GetDocumentName.
+- Eseguire `GetDocumentName` l'override `CMDIChildWndEx`nella classe derivata da se l'applicazione Visualizza documenti non archiviati come file. La stringa restituita verrà salvata nel registro di sistema come identificatore del documento. Per ulteriori informazioni, vedere [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
 
 - Eseguire l'override di [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow) per creare correttamente i documenti quando vengono caricati dal registro di sistema. Il parametro in `CreateDocumentWindow` è la `GetDocumentName` stringa restituita in precedenza.
 

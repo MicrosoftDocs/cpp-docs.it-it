@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 66721f34a8ac2b6dac6addcfa04a88b46a37ee60
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 97266ac9e4f1885149ce521f554ad2f22daee6e0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916834"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741506"
 ---
 # <a name="crgn-class"></a>Classe CRgn
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Imposta un `CRgn` oggetto in modo che sia equivalente all'Unione di due oggetti specificati `CRgn` .|
 |[CRgn::CopyRgn](#copyrgn)|Imposta un `CRgn` oggetto in modo che sia una copia di un oggetto `CRgn` specificato.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Inizializza un `CRgn` oggetto con un'area ellittica.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inizializza un `CRgn` oggetto con un'area ellittica definita da una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) .|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inizializza un `CRgn` oggetto con un'area ellittica definita da una struttura [Rect](/windows/win32/api/windef/ns-windef-rect) .|
 |[CRgn::CreateFromData](#createfromdata)|Crea un'area dall'area e dai dati di trasformazione specificati.|
 |[CRgn::CreateFromPath](#createfrompath)|Crea un'area dal percorso selezionato nel contesto di dispositivo specificato.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inizializza un `CRgn` oggetto con un'area poligonale. Il sistema chiude automaticamente il poligono, se necessario, disegnando una linea dall'ultimo vertice alla prima.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inizializza un `CRgn` oggetto con un'area costituita da una serie di poligoni chiusi. I poligoni possono essere non contigui oppure possono sovrapporsi.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Inizializza un `CRgn` oggetto con un'area rettangolare.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inizializza un `CRgn` oggetto con un'area rettangolare definita da una struttura [Rect](/windows/desktop/api/windef/ns-windef-tagrect) .|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inizializza un `CRgn` oggetto con un'area rettangolare definita da un truttura [Rect](/windows/win32/api/windef/ns-windef-rect).|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Inizializza un `CRgn` oggetto con un'area rettangolare con angoli arrotondati.|
 |[CRgn::EqualRgn](#equalrgn)|Controlla due `CRgn` oggetti per determinare se sono equivalenti.|
 |[CRgn:: FromHandle](#fromhandle)|Restituisce un puntatore a un `CRgn` oggetto quando viene fornito un handle a un'area di Windows.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Parametri
 
 *lpXForm*<br/>
-Punta a una struttura di dati [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) che definisce la trasformazione da eseguire sull'area. Se questo puntatore è NULL, viene utilizzata la trasformazione di identità.
+Punta [a una struttura](/windows/win32/api/wingdi/ns-wingdi-xform)di l'ATA che definisce la trasformazione da eseguire nell'area. Se questo puntatore è NULL, viene utilizzata la trasformazione di identità.
 
 *nCount*<br/>
 Specifica il numero di byte a cui punta *pRgnData*.
 
 *pRgnData*<br/>
-Punta a una struttura di dati [rgnData](/windows/desktop/api/wingdi/ns-wingdi-rgndata) che contiene i dati dell'area.
+Punta a una struttura di dati [rgnData](/windows/win32/api/wingdi/ns-wingdi-rgndata) che contiene i dati dell'area.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Parametri
 
 *lpRgnData*<br/>
-Punta a una struttura di dati [rgnData](/windows/desktop/api/wingdi/ns-wingdi-rgndata) che riceve le informazioni. Se questo parametro è NULL, il valore restituito contiene il numero di byte necessari per i dati dell'area.
+Punta a una struttura di dati [rgnData](/windows/win32/api/wingdi/ns-wingdi-rgndata) che riceve le informazioni. Se questo parametro è NULL, il valore restituito contiene il numero di byte necessari per i dati dell'area.
 
 *nCount*<br/>
 Specifica la dimensione, in byte, del buffer *lpRgnData* .
@@ -746,7 +746,7 @@ Se ha esito positivo, un handle per l'oggetto GDI Windows `CRgn` rappresentato d
 
 Questo operatore è un operatore di cast, che supporta l'uso diretto di un oggetto HRGN.
 
-Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [oggetti grafici](/windows/desktop/gdi/graphic-objects) nell'Windows SDK.
+Per ulteriori informazioni sull'utilizzo di oggetti grafici, vedere l'articolo [oggetti grafici](/windows/win32/gdi/graphic-objects) nell'Windows SDK.
 
 ##  <a name="ptinregion"></a>CRgn::P tInRegion
 

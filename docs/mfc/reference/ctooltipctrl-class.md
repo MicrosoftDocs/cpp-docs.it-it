@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502260"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741414"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -93,7 +93,7 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|Costruisce un oggetto `CToolTipCtrl`.|
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Parametri
 
 *lpToolInfo*<br/>
-Puntatore alla struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) della descrizione comando.
+Puntatore alla struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) della descrizione comando.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -397,9 +397,9 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
-|*lpToolInfo*|out Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) che riceve informazioni sulla finestra della descrizione comando corrente.|
+|*lpToolInfo*|out Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) che riceve informazioni sulla finestra della descrizione comando corrente.|
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -550,7 +550,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*pttgt*|out Puntatore a una struttura [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) che contiene informazioni sul controllo ToolTip. Quando questo metodo viene restituito, il membro *pszTitle* della struttura [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) punta al testo del titolo.|
 
@@ -598,7 +598,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-I `hwnd` membri `uId` e della struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) a cui fa riferimento *CToolInfo* identificano lo strumento. Se lo strumento è stato registrato con il controllo descrizione comando tramite una precedente chiamata a `AddTool`, la `TOOLINFO` struttura viene riempita con informazioni sullo strumento.
+I `hwnd` membri `uId` e della struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) a cui fa riferimento *CToolInfo* identificano lo strumento. Se lo strumento è stato registrato con il controllo descrizione comando tramite una precedente chiamata a `AddTool`, la `TOOLINFO` struttura viene riempita con informazioni sullo strumento.
 
 ##  <a name="hittest"></a>CToolTipCtrl:: HitTest
 
@@ -620,7 +620,7 @@ Puntatore alla finestra che contiene lo strumento.
 Puntatore a un `CPoint` oggetto contenente le coordinate del punto da testare.
 
 *lpToolInfo*<br/>
-Puntatore alla struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) che contiene informazioni sullo strumento.
+Puntatore alla struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) che contiene informazioni sullo strumento.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Parametri
 
 *lpToolInfo*<br/>
-Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) che specifica le informazioni da impostare.
+Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) che specifica le informazioni da impostare.
 
 ##  <a name="settoolrect"></a>CToolTipCtrl:: SetToolRect
 

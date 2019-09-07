@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
 ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445669"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739856"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 
@@ -68,11 +68,11 @@ Numero complesso.
 
 ## <a name="return-value"></a>Valore restituito
 
-La proiezione *z* sulla sfera di Reimann.
+Proiezione della *z* sulla sfera Reimann.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cproj** che accettano e restituiscono **fcomplex** e **_Lcomplex** valori. In un programma C **cproj** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **cproj** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **cproj** accetta e restituisce sempre un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

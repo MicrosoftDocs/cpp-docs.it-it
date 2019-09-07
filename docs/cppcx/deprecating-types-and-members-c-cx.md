@@ -2,19 +2,19 @@
 title: Deprecazione di tipi e membri (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301500"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740506"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Deprecazione di tipi e membri (C++/CX)
 
-In C++/CX, deprecazione dei tipi Windows Runtime e i membri per i producer e consumer tramite la [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) attributo è supportato. Se usi un'API a cui è stato applicato questo attributo, compare un messaggio di avviso in fase di compilazione che indica che l'API è deprecata e inoltre consiglia l'uso di un'API alternativa. Nei tuoi tipi e metodi pubblici puoi applicare questo attributo e fornire il tuo messaggio personalizzato.
+In C++/CX è supportata la deprecazione di Windows Runtime tipi e membri per i producer e i consumer utilizzando l'attributo [deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) . Se usi un'API a cui è stato applicato questo attributo, compare un messaggio di avviso in fase di compilazione che indica che l'API è deprecata e inoltre consiglia l'uso di un'API alternativa. Nei tuoi tipi e metodi pubblici puoi applicare questo attributo e fornire il tuo messaggio personalizzato.
 
 > [!CAUTION]
-> Il [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute) attributo deve essere utilizzato solo con tipi Windows Runtime. Per le classi standard e i membri C++, usare [__declspec(deprecated)](../cpp/deprecated-cpp.md).
+> L'attributo [deprecato](/uwp/api/windows.foundation.metadata.deprecatedattribute) viene utilizzato solo con i tipi di Windows Runtime. Per le classi standard e i membri C++, usare [__declspec(deprecated)](../cpp/deprecated-cpp.md).
 
 ### <a name="example"></a>Esempio
 
@@ -47,7 +47,7 @@ Nella seguente tabella sono elencati i costrutti a cui può essere applicato l'a
 |campo di enumerazione|
 |enum|
 |struct|
-|metodo|
+|statico|
 |classe|
 |interfaccia|
 |proprietà|
@@ -57,5 +57,5 @@ Nella seguente tabella sono elencati i costrutti a cui può essere applicato l'a
 ## <a name="see-also"></a>Vedere anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
-[Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

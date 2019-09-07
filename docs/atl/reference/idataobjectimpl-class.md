@@ -20,12 +20,12 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: 8e3369edd0731ede0892a405ef3de4e7b4cfdef1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 80b5dfacd5f0c8b0deb8455a59d3f71b73a35ba0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495936"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739563"
 ---
 # <a name="idataobjectimpl-class"></a>Classe IDataObjectImpl
 
@@ -50,7 +50,7 @@ Classe derivata da `IDataObjectImpl`.
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[IDataObjectImpl::DAdvise](#dadvise)|Stabilisce una connessione tra l'oggetto dati e un sink di notifica. Ciò consente al sink di notifica di ricevere le notifiche delle modifiche nell'oggetto.|
 |[IDataObjectImpl::DUnadvise](#dunadvise)|Termina una connessione stabilita in precedenza `DAdvise`tramite.|
@@ -65,7 +65,7 @@ Classe derivata da `IDataObjectImpl`.
 
 ## <a name="remarks"></a>Note
 
-L'interfaccia [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) fornisce metodi per supportare Uniform Data Transfer. `IDataObject`Usa le strutture di formato standard [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) e [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) per recuperare e archiviare i dati.
+L'interfaccia [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) fornisce metodi per supportare Uniform Data Transfer. `IDataObject`Usa le strutture di formato standard [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) e [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) per recuperare e archiviare i dati.
 
 `IDataObject`gestisce anche le connessioni ai sink di notifica per gestire le notifiche di modifica dei dati. Affinché il client riceva le notifiche di modifica dei dati dall'oggetto dati, il client deve implementare l'interfaccia [IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink) su un oggetto denominato sink di notifica. Quando il client chiama `IDataObject::DAdvise`, viene stabilita una connessione tra l'oggetto dati e il sink di notifica.
 

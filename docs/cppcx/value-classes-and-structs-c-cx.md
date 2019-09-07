@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384985"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740938"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classi e struct di valore (C++/CX)
 
-Oggetto *struct di valore* oppure *classe di valore* è un Windows Runtime compatibile con struttura POD "(plain old data"). con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.
+Uno *struct di valore* o una *classe di valore* è un pod compatibile con Windows Runtime ("struttura di dati Plain Old"). con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.
 
 Gli esempi seguenti mostrano come dichiarare e inizializzare struct di valore.
 
@@ -52,7 +52,7 @@ Quando una variabile di un tipo di valore viene assegnata a un'altra variabile, 
 
 Una *classe di valore* è analoga a uno `value struct` , eccetto per il fatto che ai relativi campi deve essere concessa esplicitamente l'accessibilità pubblica. La classe viene dichiarata utilizzando la parola chiave `value class` .
 
-Uno struct di valore o una classe di valore può contenere come campi solo tipi numerici fondamentali, classi di enumerazione `Platform::String^`, oppure [platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md) dove T è una classe numerica di tipo o un'enumerazione o classe o struct. Un campo `IBox<T>^` può contenere un valore `nullptr`. Ecco come C++ implementa il concetto di *tipi di valore nullable*.
+Uno struct di valore o una classe di valore può contenere come campi solo tipi numerici fondamentali `Platform::String^`, classi di enumerazione, o [Platform:: iBox \<T > ^](../cppcx/platform-ibox-interface.md) , dove t è un tipo numerico o una classe di enumerazione o una classe di valore o uno struct. Un campo `IBox<T>^` può contenere un valore `nullptr`. Ecco come C++ implementa il concetto di *tipi di valore nullable*.
 
 Uno struct o una classe di valori che contiene un tipo `Platform::String^` o `IBox<T>^` come membro non supporta `memcpy`.
 
@@ -90,7 +90,7 @@ Per passare un tipo valore per riferimento è possibile usare anche un simbolo p
 
 ## <a name="nullable-value-types"></a>Tipi valore nullable
 
-Come accennato in precedenza, una classe o struct di valore può contenere un campo di tipo [platform:: ibox\<T > ^](../cppcx/platform-ibox-interface.md), ad esempio, `IBox<int>^`. A tale campo può essere assegnato qualsiasi valore numerico valido per il tipo `int` o un valore `nullptr`. È possibile passare un campo nullable come argomento a un metodo il cui parametro è dichiarato come facoltativo o qualsiasi altra posizione in cui un tipo di valore non deve necessariamente avere un valore.
+Come indicato in precedenza, una classe valore o uno struct di valore può avere un campo di tipo [Platform\<:: iBox T > ^](../cppcx/platform-ibox-interface.md), `IBox<int>^`ad esempio. A tale campo può essere assegnato qualsiasi valore numerico valido per il tipo `int` o un valore `nullptr`. È possibile passare un campo nullable come argomento a un metodo il cui parametro è dichiarato come facoltativo o qualsiasi altra posizione in cui un tipo di valore non deve necessariamente avere un valore.
 
 L'esempio seguente mostra come inizializzare uno struct con un campo nullable.
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>Vedere anche
 
 [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Classi e struct di riferimento (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

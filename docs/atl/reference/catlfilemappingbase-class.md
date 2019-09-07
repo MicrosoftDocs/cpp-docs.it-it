@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497775"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739554"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 
@@ -40,14 +40,14 @@ class CAtlFileMappingBase
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CAtlFileMappingBase:: CAtlFileMappingBase](#catlfilemappingbase)|Costruttore.|
 |[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|Distruttore.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CAtlFileMappingBase::CopyFrom](#copyfrom)|Chiamare questo metodo per copiare da un oggetto mapping di file.|
 |[CAtlFileMappingBase:: GetData](#getdata)|Chiamare questo metodo per ottenere i dati da un oggetto di mapping di file.|
@@ -190,7 +190,7 @@ Dimensioni del mapping. Se è 0, la dimensione massima dell'oggetto mapping di f
 Offset del file da cui iniziare il mapping. Il valore di offset deve essere un multiplo della granularità di allocazione di memoria del sistema.
 
 *dwMappingProtection*<br/>
-Protezione desiderata per la visualizzazione file quando viene eseguito il mapping del file. Vedere *flProtect* in [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) nella Windows SDK.
+Protezione desiderata per la visualizzazione file quando viene eseguito il mapping del file. Vedere *flProtect* in [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) nella Windows SDK.
 
 *dwViewDesiredAccess*<br/>
 Specifica il tipo di accesso alla visualizzazione file e, di conseguenza, la protezione delle pagine mappate dal file. Vedere *dwDesiredAccess* in [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) nella Windows SDK.
@@ -201,7 +201,7 @@ Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito 
 
 ### <a name="remarks"></a>Note
 
-Dopo la creazione di un oggetto di mapping dei file, le dimensioni del file non devono superare le dimensioni dell'oggetto mapping dei file; in caso contrario, non tutto il contenuto del file sarà disponibile per la condivisione. Per ulteriori informazioni, vedere [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) e [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) nel Windows SDK.
+Dopo la creazione di un oggetto di mapping dei file, le dimensioni del file non devono superare le dimensioni dell'oggetto mapping dei file; in caso contrario, non tutto il contenuto del file sarà disponibile per la condivisione. Per ulteriori informazioni, vedere [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) nel Windows SDK.
 
 ### <a name="example"></a>Esempio
 
@@ -233,7 +233,7 @@ Nome dell'oggetto di mapping.
 Punta a un valore BOOL che è impostato su TRUE se l'oggetto di mapping esiste già.
 
 *lpsa*<br/>
-Puntatore a una `SECURITY_ATTRIBUTES` struttura che determina se l'handle restituito può essere ereditato dai processi figlio. Vedere *lpAttributes* in [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) nella Windows SDK.
+Puntatore a una `SECURITY_ATTRIBUTES` struttura che determina se l'handle restituito può essere ereditato dai processi figlio. Vedere *lpAttributes* in [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) nella Windows SDK.
 
 *dwMappingProtection*<br/>
 Protezione desiderata per la visualizzazione file quando viene eseguito il mapping del file. Vedere *flProtect* in `CreateFileMapping` in Windows SDK.
@@ -247,7 +247,7 @@ Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito 
 
 ### <a name="remarks"></a>Note
 
-`MapShareMem`consente a un oggetto di mapping di file esistente, creato da [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw), di essere condiviso tra i processi.
+`MapShareMem`consente a un oggetto di mapping di file esistente, creato da [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), di essere condiviso tra i processi.
 
 ##  <a name="openmapping"></a>CAtlFileMappingBase:: OpenMapping
 

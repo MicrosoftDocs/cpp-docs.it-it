@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 11463b7113876abdf0743b9f8c7df373fadd99ef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d6eb67e04ebb2b9084874a586eafc744df2d3f40
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497299"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739775"
 ---
 # <a name="ccomcurrency-class"></a>Classe CComCurrency
 
@@ -36,13 +36,13 @@ class CComCurrency
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CComCurrency:: CComCurrency](#ccomcurrency)|Costruttore per un oggetto `CComCurrency`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|Restituisce l'indirizzo di un membro dati `m_currency`.|
 |[CComCurrency::GetFraction](#getfraction)|Chiamare questo metodo per restituire il componente frazionario di un oggetto `CComCurrency`.|
@@ -53,7 +53,7 @@ class CComCurrency
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[Operatore CComCurrency:: operator-](#operator_-)|Questo operatore viene usato per eseguire la sottrazione su un oggetto `CComCurrency`.|
 |[CComCurrency:: operator! =](#operator_neq)|Confronta due oggetti `CComCurrency` per stabilirne la disuguaglianza.|
@@ -88,7 +88,7 @@ L'oggetto `CComCurrency` fornisce accesso ai numeri su entrambi i lati del separ
 
 Quando si specificano i componenti Integer e frazionari di `CComCurrency` un oggetto, tenere presente che il componente frazionario è un numero compreso tra 0 e 9999. Questo è importante quando si opera con valute come il dollaro americano, che indica gli importi usando solo due cifre significative dopo il separatore decimale. Anche se le ultime due cifre non vengono visualizzate, devono essere tenute in considerazione.
 
-|Valore|Valori possibili di CComCurrency|
+|Value|Valori possibili di CComCurrency|
 |-----------|---------------------------------------|
 |$10.50|CComCurrency (10, 5000) *o* CComCurrency (10.50)|
 |$10.05|CComCurrency (10500) *o* CComCurrency (10.05)|
@@ -642,5 +642,5 @@ Restituisce S_OK in caso di esito positivo o un errore HRESULT in caso di esito 
 ## <a name="see-also"></a>Vedere anche
 
 [Classe COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
-[VALUTA](/windows/win32/api/wtypes/ns-wtypes-cy)<br/>
+[VALUTA](/windows/win32/api/wtypes/ns-wtypes-cy~r1)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

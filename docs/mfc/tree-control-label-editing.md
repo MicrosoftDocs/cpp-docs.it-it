@@ -7,12 +7,12 @@ helpviewer_keywords:
 - label editing in CTreeCtrl class [MFC]
 - tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
-ms.openlocfilehash: 10148ef0dd8ccb2cf82c14c1c80ade6e8e5aa2b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4b53d2c8e5a26a4dc37dfd7ae0710748bcd27bf6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513320"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741225"
 ---
 # <a name="tree-control-label-editing"></a>Modifica dell'etichetta del controllo Tree
 
@@ -20,7 +20,7 @@ L'utente può modificare direttamente le etichette degli elementi in un controll
 
 Quando viene avviata la modifica dell'etichetta, un controllo albero invia un messaggio di notifica [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) . Elaborando questa notifica, è possibile consentire la modifica di alcune etichette e impedire la modifica di altre. Con la restituzione di 0 è possibile modificare e restituire un valore diverso da zero.
 
-Quando la modifica delle etichette viene annullata o completata, un controllo albero invia un messaggio di notifica [TVN_ENDLABELEDIT](/windows/win32/Controls/tvn-endlabeledit) . Il parametro *lParam* è l'indirizzo di una struttura [struttura NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-tvdispinfow) . Il membro dell' **elemento** è una struttura [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) che identifica l'elemento e include il testo modificato. L'utente è responsabile dell'aggiornamento dell'etichetta dell'elemento, se appropriato, forse dopo la convalida della stringa modificata. Il membro *pszText* di `TV_ITEM` è 0 se la modifica viene annullata.
+Quando la modifica delle etichette viene annullata o completata, un controllo albero invia un messaggio di notifica [TVN_ENDLABELEDIT](/windows/win32/Controls/tvn-endlabeledit) . Il parametro *lParam* è l'indirizzo di una struttura [struttura NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-nmtvdispinfow) . Il membro dell' **elemento** è una struttura [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) che identifica l'elemento e include il testo modificato. L'utente è responsabile dell'aggiornamento dell'etichetta dell'elemento, se appropriato, forse dopo la convalida della stringa modificata. Il membro *pszText* di `TV_ITEM` è 0 se la modifica viene annullata.
 
 Durante la modifica delle etichette, in genere in risposta al messaggio di notifica [TVN_BEGINLABELEDIT](/windows/win32/Controls/tvn-beginlabeledit) , è possibile ottenere un puntatore al controllo di modifica usato per la modifica dell'etichetta usando la funzione membro [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) . È possibile chiamare la funzione membro [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) del controllo di modifica per limitare la quantità di testo che un utente può immettere o sottoscrivere in una sottoclasse del controllo di modifica per intercettare e rimuovere i caratteri non validi. Si noti, tuttavia, che il controllo di modifica viene visualizzato solo *dopo* l'invio di **TVN_BEGINLABELEDIT** .
 

@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 36750990dc62d5b24cf1107ac8a2724df787a47d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79b1dc844f53f739dc48eb6177e57810ff0c8412
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496989"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739586"
 ---
 # <a name="ccomsafearray-class"></a>Classe CComSafeArray
 
@@ -55,7 +55,7 @@ Tipo di dati da memorizzare nella matrice.
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|Costruttore.|
 |[CComSafeArray:: ~ CComSafeArray](#dtor)|Distruttore.|
@@ -86,7 +86,7 @@ Tipo di dati da memorizzare nella matrice.
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CComSafeArray:: operator LPSAFEARRAY](#operator_lpsafearray)|Esegue il cast di un valore `SAFEARRAY` a un puntatore.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Recupera un elemento da una matrice.|
@@ -100,7 +100,7 @@ Tipo di dati da memorizzare nella matrice.
 
 ## <a name="remarks"></a>Note
 
-`CComSafeArray` fornisce un wrapper per la classe [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) , semplificando la creazione e la gestione di matrici unidimensionali e multidimensionali di quasi ogni tipo supportato da VARIANT.
+`CComSafeArray` fornisce un wrapper per la classe [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-safearray) , semplificando la creazione e la gestione di matrici unidimensionali e multidimensionali di quasi ogni tipo supportato da VARIANT.
 
 `CComSafeArray` semplifica il passaggio delle matrici tra processi e fornisce anche protezione aggiuntiva poiché controlla i valori degli indici della matrice rispetto ai limiti superiore e inferiore.
 
@@ -110,7 +110,7 @@ Usare [CComSafeArray::Create](#create) per creare un oggetto `CComSafeArray` e [
 
 Una classe `CComSafeArray` può contenere i subset di tipi di dati VARIANT seguenti:
 
-|VARTYPE|DESCRIZIONE|
+|VARTYPE|Descrizione|
 |-------------|-----------------|
 |VT_I1|char|
 |VT_I2|short|
@@ -447,7 +447,7 @@ VARTYPE GetType() const;
 
 Restituisce il tipo di dati archiviati nella matrice, che può essere uno dei tipi seguenti:
 
-|VARTYPE|Descrizione|
+|VARTYPE|DESCRIZIONE|
 |-------------|-----------------|
 |VT_I1|char|
 |VT_I2|short|
@@ -662,7 +662,7 @@ Il flag *bcopy* viene tenuto in considerazione quando gli elementi di tipo BSTR 
 
 ## <a name="see-also"></a>Vedere anche
 
-[SAFEARRAY-tipo di dati](/windows/win32/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[SAFEARRAY-tipo di dati](/windows/win32/api/oaidl/ns-oaidl-safearray)<br/>
 [CComSafeArray::Create](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
 [Panoramica della classe](../../atl/atl-class-overview.md)

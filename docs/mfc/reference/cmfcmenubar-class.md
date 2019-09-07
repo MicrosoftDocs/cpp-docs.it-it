@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 61a5f83e31b4793ca6467287c99f3b9708659402
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505237"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739470"
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 
@@ -916,7 +916,7 @@ Diverso da zero se il metodo ha esito positivo; in caso contrario, 0.
 
 Questo metodo viene chiamato quando l'utente seleziona **Reimposta** dal menu di personalizzazione. È anche possibile chiamare manualmente questo metodo per reimpostare a livello di codice lo stato della barra dei menu. Questo metodo carica lo stato originale dal file di risorse.
 
-Eseguire l'override di questo metodo se si desidera eseguire un'elaborazione quando l'utente seleziona l'opzione di reimpostazione.
+Eseguire l'override di questo metodo se si desidera eseguire un'elaborazione quando l'utente seleziona l'opzione di **reimpostazione** .
 
 ##  <a name="savestate"></a>CMFCMenuBar:: SaveState
 
@@ -1005,7 +1005,7 @@ in Valore booleano che specifica se il layout della barra dei menu deve essere r
 
 ### <a name="remarks"></a>Note
 
-Quando una finestra figlio MDI viene ingrandita, una barra dei menu collegata alla finestra cornice principale MDI Visualizza il menu di sistema e i pulsanti Riduci a **icona**, **Ingrandisci** e **Chiudi** . Se *Bmax* è true e *pWnd* non è null, la finestra figlio MDI viene ingrandita e la barra dei menu deve incorporare i controlli aggiuntivi. In caso contrario, la barra dei menu torna allo stato normale.
+Quando una finestra figlio MDI viene ingrandita, una barra dei menu collegata alla finestra cornice principale MDI Visualizza il menu di sistema e i pulsanti **Riduci a icona**, **Ingrandisci** e **Chiudi** . Se *Bmax* è true e *pWnd* non è null, la finestra figlio MDI viene ingrandita e la barra dei menu deve incorporare i controlli aggiuntivi. In caso contrario, la barra dei menu torna allo stato normale.
 
 ##  <a name="setmenubuttonrtc"></a>CMFCMenuBar:: SetMenuButtonRTC
 
@@ -1037,7 +1037,7 @@ static BOOL SetMenuFont(
 ### <a name="parameters"></a>Parametri
 
 *lpLogFont*<br/>
-in Puntatore a una struttura [LOGFONT](/windows/win32/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003) che definisce il tipo di carattere da impostare.
+in Puntatore a una struttura [LOGFONT](/windows/win32/api/dimm/ns-dimm-logfonta) che definisce il tipo di carattere da impostare.
 
 *bHorz*<br/>
 in TRUE se si desidera utilizzare il parametro *LPLOGFONT* per il tipo di carattere verticale, false se si desidera che venga utilizzato per il tipo di carattere orizzontale.

@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b3c02c8c2754ce7edb40cff5e44efb74a16353fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503159"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741535"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -326,7 +326,7 @@ Diverso da zero se la coda di rollforward contiene azioni; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Per individuare il nome dell'operazione nella coda di rollforward, chiamare [CRichEditCtrl::](#getredoname)GetRedoName. Per ripetere l'operazione di annullamento più recente, chiamare [rollforward](#redo).
+Per individuare il nome dell'operazione nella coda di rollforward, chiamare [CRichEditCtrl:: GetRedoName](#getredoname). Per ripetere l'operazione di annullamento più recente, chiamare [rollforward](#redo).
 
 Per ulteriori informazioni, vedere [EM_CANREDO](/windows/win32/Controls/em-canredo) nel Windows SDK.
 
@@ -1051,7 +1051,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>Parametri
 
 *cf*<br/>
-Nella prima versione, un puntatore a una struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) per ricevere gli attributi di formattazione dei caratteri della selezione corrente.
+Nella prima versione, un puntatore a una struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) per ricevere gli attributi di formattazione dei caratteri della selezione corrente.
 
 Nella seconda versione, un puntatore a una struttura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , che è un'estensione Rich Edit 2,0 alla `CHARFORMAT` struttura per ricevere gli attributi di formattazione dei caratteri della selezione corrente.
 
@@ -1618,7 +1618,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parametri
 
 *cf*<br/>
-Nella prima versione, un puntatore a una struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) contenente i nuovi attributi di formattazione dei caratteri predefiniti.
+Nella prima versione, un puntatore a una struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) contenente i nuovi attributi di formattazione dei caratteri predefiniti.
 
 Nella seconda versione, un puntatore a una struttura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , che è un'estensione Rich Edit 2,0 alla `CHARFORMAT` struttura, contenente gli attributi predefiniti per la formattazione dei caratteri.
 
@@ -1920,7 +1920,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parametri
 
 *cf*<br/>
-Nella prima versione, un puntatore a una struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) contenente i nuovi attributi di formattazione dei caratteri per la selezione corrente.
+Nella prima versione, un puntatore a una struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) contenente i nuovi attributi di formattazione dei caratteri per la selezione corrente.
 
 Nella seconda versione, un puntatore a una struttura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , che è un'estensione Rich Edit 2,0 alla `CHARFORMAT` struttura, contenente i nuovi attributi di formattazione dei caratteri per la selezione corrente.
 
@@ -2033,7 +2033,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Parametri
 
 *cf*<br/>
-Nella prima versione, un puntatore a una struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) contenente i nuovi attributi di formattazione dei caratteri per la parola attualmente selezionata.
+Nella prima versione, un puntatore a una struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) contenente i nuovi attributi di formattazione dei caratteri per la parola attualmente selezionata.
 
 Nella seconda versione, un puntatore a una struttura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , che è un'estensione Rich Edit 2,0 alla `CHARFORMAT` struttura, contenente i nuovi attributi di formattazione dei caratteri per la parola attualmente selezionata.
 

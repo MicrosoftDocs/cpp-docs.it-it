@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224233"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741351"
 ---
 # <a name="coleserveritem-class"></a>Classe COleServerItem
 
@@ -91,71 +91,71 @@ Fornisce l'interfaccia server agli elementi OLE.
 class COleServerItem : public CDocItem
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="protected-constructors"></a>Costruttori protetti
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[COleServerItem::COleServerItem](#coleserveritem)|Costruisce un oggetto `COleServerItem`.|
+|[COleServerItem:: COleServerItem](#coleserveritem)|Costruisce un oggetto `COleServerItem`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Inserisce i formati di presentazione e la conversione in un `COleDataSource` oggetto.|
-|[COleServerItem::CopyToClipboard](#copytoclipboard)|Copia l'elemento negli Appunti.|
-|[COleServerItem::DoDragDrop](#dodragdrop)|Esegue un'operazione di trascinamento e rilascio.|
-|[COleServerItem::GetClipboardData](#getclipboarddata)|Ottiene l'origine dati per l'uso nel trasferimento dei dati (operazione di trascinamento o negli Appunti).|
-|[COleServerItem::GetDocument](#getdocument)|Restituisce il documento server contenente l'elemento.|
-|[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|Ottiene i dati CF_OBJECTDESCRIPTOR per un elemento OLE.|
-|[COleServerItem::GetItemName](#getitemname)|Restituisce il nome dell'elemento. Usato per solo gli elementi collegati.|
+|[COleServerItem:: AddOtherClipboardData](#addotherclipboarddata)|Inserisce i formati di presentazione e conversione `COleDataSource` in un oggetto.|
+|[COleServerItem:: CopyToClipboard](#copytoclipboard)|Copia l'elemento negli Appunti.|
+|[COleServerItem::D oDragDrop](#dodragdrop)|Esegue un'operazione di trascinamento della selezione.|
+|[COleServerItem::GetClipboardData](#getclipboarddata)|Ottiene l'origine dati da utilizzare per il trasferimento dei dati (trascinamento della selezione o appunti).|
+|[COleServerItem:: GetDocument](#getdocument)|Restituisce il documento del server che contiene l'elemento.|
+|[COleServerItem:: GetEmbedSourceData](#getembedsourcedata)|Ottiene i dati CF_EMBEDSOURCE per un elemento OLE.|
+|[COleServerItem:: GetItemName](#getitemname)|Restituisce il nome dell'elemento. Utilizzato solo per gli elementi collegati.|
 |[COleServerItem::GetLinkSourceData](#getlinksourcedata)|Ottiene i dati CF_LINKSOURCE per un elemento OLE.|
-|[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|Ottiene i dati inseriti per un elemento OLE.|
-|[COleServerItem::IsConnected](#isconnected)|Indica se l'elemento è attualmente associato a un contenitore attivo.|
+|[COleServerItem:: GetObjectDescriptorData](#getobjectdescriptordata)|Ottiene i dati CF_OBJECTDESCRIPTOR per un elemento OLE.|
+|[COleServerItem:: disconnected](#isconnected)|Indica se l'elemento è attualmente collegato a un contenitore attivo.|
 |[COleServerItem::IsLinkedItem](#islinkeditem)|Indica se l'elemento rappresenta un elemento OLE collegato.|
-|[COleServerItem::NotifyChanged](#notifychanged)|Aggiorna tutti i contenitori con aggiornamento automatico di collegamento.|
+|[COleServerItem:: NotifyChanged](#notifychanged)|Aggiorna tutti i contenitori con aggiornamento automatico dei collegamenti.|
 |[COleServerItem::OnDoVerb](#ondoverb)|Chiamato per eseguire un verbo.|
-|[COleServerItem::OnDraw](#ondraw)|Chiamato quando il contenitore richiede per disegnare l'elemento; implementazione necessaria.|
-|[COleServerItem::OnDrawEx](#ondrawex)|Chiamata eseguita per il disegno elemento specializzato.|
-|[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|Chiamato dal framework per ottenere i dati che possono essere copiati negli Appunti.|
-|[COleServerItem::OnGetExtent](#ongetextent)|Chiamato dal framework per recuperare la dimensione dell'elemento OLE.|
-|[COleServerItem::OnInitFromData](#oninitfromdata)|Chiamata eseguita dal framework per inizializzare un elemento OLE usando il contenuto dell'oggetto di trasferimento dati specificato.|
-|[COleServerItem::OnQueryUpdateItems](#onqueryupdateitems)|Chiamato per determinare se eventuali elementi collegati devono essere aggiornati.|
-|[COleServerItem::OnRenderData](#onrenderdata)|Recupera i dati come parte del rendering ritardato.|
-|[COleServerItem::OnRenderFileData](#onrenderfiledata)|Recupera i dati in un `CFile` oggetto come parte del rendering ritardato.|
-|[COleServerItem::OnRenderGlobalData](#onrenderglobaldata)|Recupera i dati in un HGLOBAL come parte del rendering ritardato.|
-|[COleServerItem::OnSetColorScheme](#onsetcolorscheme)|Chiamata eseguita per impostare la combinazione di colori dell'elemento.|
-|[COleServerItem::OnSetData](#onsetdata)|Chiamata eseguita per impostare i dati dell'elemento.|
-|[COleServerItem::OnSetExtent](#onsetextent)|Chiamato dal framework per impostare le dimensioni dell'elemento OLE.|
-|[COleServerItem::OnUpdate](#onupdate)|Chiamato quando appartiene a una parte del documento l'elemento viene modificato.|
-|[COleServerItem::OnUpdateItems](#onupdateitems)|Chiamato per aggiornare la cache di presentazione di tutti gli elementi nel documento server.|
-|[COleServerItem::SetItemName](#setitemname)|Imposta il nome dell'elemento. Usato per solo gli elementi collegati.|
+|[COleServerItem:: onpare](#ondraw)|Chiamato quando il contenitore richiede la traccia dell'elemento; implementazione richiesta.|
+|[COleServerItem:: OnDrawEx](#ondrawex)|Chiamato per il disegno di elementi specializzati.|
+|[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|Chiamato dal Framework per ottenere i dati che verrebbero copiati negli Appunti.|
+|[COleServerItem:: OnGetExtent](#ongetextent)|Chiamata eseguita dal Framework per recuperare la dimensione dell'elemento OLE.|
+|[COleServerItem::OnInitFromData](#oninitfromdata)|Chiamata eseguita dal Framework per inizializzare un elemento OLE utilizzando il contenuto dell'oggetto di trasferimento dati specificato.|
+|[COleServerItem::OnQueryUpdateItems](#onqueryupdateitems)|Chiamata eseguita per determinare se gli elementi collegati richiedono l'aggiornamento.|
+|[COleServerItem:: OnRenderData](#onrenderdata)|Recupera i dati come parte del rendering ritardato.|
+|[COleServerItem::OnRenderFileData](#onrenderfiledata)|Recupera i dati in `CFile` un oggetto come parte del rendering ritardato.|
+|[COleServerItem:: OnRenderGlobalData](#onrenderglobaldata)|Recupera i dati in un HGLOBAL come parte del rendering ritardato.|
+|[COleServerItem:: OnSetColorScheme](#onsetcolorscheme)|Chiamato per impostare la combinazione di colori dell'elemento.|
+|[COleServerItem:: OnSetData](#onsetdata)|Chiamato per impostare i dati dell'elemento.|
+|[COleServerItem:: OnSetExtent](#onsetextent)|Chiamata eseguita dal Framework per impostare la dimensione dell'elemento OLE.|
+|[COleServerItem:: OnUpdate](#onupdate)|Chiamato quando viene modificata una parte del documento a cui appartiene l'elemento.|
+|[COleServerItem:: OnUpdateItems](#onupdateitems)|Chiamato per aggiornare la cache di presentazione di tutti gli elementi nel documento del server.|
+|[COleServerItem:: SetItemName](#setitemname)|Imposta il nome dell'elemento. Utilizzato solo per gli elementi collegati.|
 
 ### <a name="protected-methods"></a>Metodi protetti
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
-|[COleServerItem::GetDataSource](#getdatasource)|Ottiene l'oggetto utilizzato per archiviare i formati di conversione.|
-|[COleServerItem::OnHide](#onhide)|Chiamato dal framework per nascondere l'elemento OLE.|
-|[COleServerItem::OnOpen](#onopen)|Chiamata eseguita dal framework per visualizzare l'elemento OLE in una finestra di primo livello.|
-|[COleServerItem::OnShow](#onshow)|Chiamato quando il contenitore richiede di visualizzare l'elemento.|
+|[COleServerItem:: GetDataSource](#getdatasource)|Ottiene l'oggetto utilizzato per archiviare i formati di conversione.|
+|[COleServerItem:: OnHide](#onhide)|Chiamata eseguita dal Framework per nascondere l'elemento OLE.|
+|[COleServerItem:: OnOpen](#onopen)|Chiamata eseguita dal Framework per visualizzare l'elemento OLE nella relativa finestra di primo livello.|
+|[COleServerItem:: OnShow](#onshow)|Chiamato quando il contenitore richiede di visualizzare l'elemento.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
-|[COleServerItem::m_sizeExtent](#m_sizeextent)|Indica il server le quantità dell'elemento OLE è visibile.|
+|[COleServerItem::m_sizeExtent](#m_sizeextent)|Informa il server della quantità di elemento OLE visibile.|
 
 ## <a name="remarks"></a>Note
 
-Alcune o tutte di un documento del server, può rappresentare un elemento collegato. Un elemento incorporato rappresenta sempre un intero documento server.
+Un elemento collegato può rappresentare solo alcuni o tutti i documenti server. Un elemento incorporato rappresenta sempre un intero documento del server.
 
-Il `COleServerItem` classe definisce diverse funzioni membro sottoponibile a override che vengono chiamate dalle librerie di collegamento dinamico (DLL), system OLE in genere in risposta alle richieste dall'applicazione contenitore. Queste funzioni membro consentono all'applicazione contenitore modificare l'elemento indirettamente in vari modi, ad esempio visualizzarla, eseguire i relativi verbi o recuperando i dati in vari formati.
+La `COleServerItem` classe definisce diverse funzioni membro sottoponibili a override chiamate dalle librerie di collegamento dinamico (dll) di sistema OLE, in genere in risposta alle richieste provenienti dall'applicazione contenitore. Queste funzioni membro consentono all'applicazione contenitore di manipolare l'elemento indirettamente in diversi modi, ad esempio visualizzandola, eseguendo i relativi verbi o recuperando i dati in vari formati.
 
-Per utilizzare `COleServerItem`, una classe derivata da esso e implementare le [OnDraw](#ondraw) e [Serialize](../../mfc/reference/cobject-class.md#serialize) funzioni membro. Il `OnDraw` funzione fornisce la rappresentazione del metafile di un elemento, in modo che possa essere visualizzato quando un'applicazione contenitore viene aperto un documento composito. Il `Serialize` funzione di `CObject` fornisce la rappresentazione nativa di un elemento, che consente un elemento incorporato da trasferire tra le applicazioni server e il contenitore. [OnGetExtent](#ongetextent) fornisce la dimensione standard dell'elemento nel contenitore, l'abilitazione di contenitori ridimensionare l'elemento.
+Per usare `COleServerItem`, derivare una classe e implementare le funzioni membro [onpare](#ondraw) e [Serialize](../../mfc/reference/cobject-class.md#serialize) . La `OnDraw` funzione fornisce la rappresentazione metafile di un elemento, consentendo la visualizzazione quando un'applicazione contenitore apre un documento composto. La `Serialize` funzione di `CObject` fornisce la rappresentazione nativa di un elemento, consentendo il trasferimento di un elemento incorporato tra le applicazioni server e contenitore. [OnGetExtent](#ongetextent) fornisce la dimensione naturale dell'elemento al contenitore, consentendo al contenitore di ridimensionare l'elemento.
 
-Per altre informazioni sui server e argomenti correlati, vedere l'articolo [server: Implementazione di un Server](../../mfc/servers-implementing-a-server.md) e "Creazione di un'applicazione di contenitore/Server" nell'articolo [contenitori: Funzionalità avanzate](../../mfc/containers-advanced-features.md).
+Per ulteriori informazioni sui server e gli argomenti correlati, vedere l' [articolo server: Implementazione di un](../../mfc/servers-implementing-a-server.md) server e "creazione di un'applicazione contenitore/server" nei [contenitori degli articoli: Funzionalità](../../mfc/containers-advanced-features.md)avanzate.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -171,9 +171,9 @@ Per altre informazioni sui server e argomenti correlati, vedere l'articolo [serv
 
 **Intestazione:** AFXOLE. h
 
-##  <a name="addotherclipboarddata"></a>  COleServerItem::AddOtherClipboardData
+##  <a name="addotherclipboarddata"></a>COleServerItem:: AddOtherClipboardData
 
-Chiamare questa funzione per inserire i formati di presentazione e conversione per l'elemento OLE specificato `COleDataSource` oggetto.
+Chiamare questa funzione per inserire i formati di presentazione e conversione per l'elemento OLE nell'oggetto `COleDataSource` specificato.
 
 ```
 void AddOtherClipboardData(COleDataSource* pDataSource);
@@ -182,15 +182,15 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ### <a name="parameters"></a>Parametri
 
 *pDataSource*<br/>
-Puntatore al `COleDataSource` dell'oggetto in cui i dati devono essere inseriti.
+Puntatore all' `COleDataSource` oggetto in cui devono essere inseriti i dati.
 
 ### <a name="remarks"></a>Note
 
-Deve avere implementato il [OnDraw](#ondraw) funzione membro per fornire il formato di presentazione (un'immagine del metafile) per l'elemento. Per supportare altri formati di conversione, registrarli usando il [COleDataSource](../../mfc/reference/coledatasource-class.md) oggetto restituito da [GetDataSource](#getdatasource) ed eseguire l'override di [routine OnRenderData](#onrenderdata) funzione membro fornire i dati nei formati di cui che si vuole supportare.
+È necessario avere implementato la funzione membro [Ondisegno](#ondraw) per fornire il formato di presentazione (un'immagine di metafile) per l'elemento. Per supportare altri formati di conversione, registrarli usando l'oggetto [COleDataSource](../../mfc/reference/coledatasource-class.md) restituito da [GetDataSource](#getdatasource) ed eseguire l'override della funzione membro [OnRenderData](#onrenderdata) per fornire i dati nei formati che si desidera supportare.
 
-##  <a name="coleserveritem"></a>  COleServerItem::COleServerItem
+##  <a name="coleserveritem"></a>COleServerItem:: COleServerItem
 
-Costruisce un `COleServerItem` dell'oggetto e lo aggiunge alla raccolta del documento server elementi del documento.
+Costruisce un `COleServerItem` oggetto e lo aggiunge alla raccolta di elementi del documento del server.
 
 ```
 COleServerItem(
@@ -204,11 +204,11 @@ COleServerItem(
 Puntatore al documento che conterrà il nuovo elemento.
 
 *bAutoDelete*<br/>
-Flag che indica se l'oggetto può essere eliminato quando viene rilasciato un collegamento a essa. Impostare questa proprietà su FALSE se il `COleServerItem` oggetto è parte integrante di dati del documento che è necessario eliminare. Impostare questa opzione su TRUE se l'oggetto è una struttura secondaria usata per identificare un intervallo di dati del documento che possono essere eliminati dal framework.
+Flag che indica se l'oggetto può essere eliminato quando viene rilasciato un collegamento ad esso. Impostare su false se l' `COleServerItem` oggetto è parte integrante dei dati del documento che è necessario eliminare. Impostare su TRUE se l'oggetto è una struttura secondaria utilizzata per identificare un intervallo nei dati del documento che può essere eliminato dal Framework.
 
-##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard
+##  <a name="copytoclipboard"></a>COleServerItem:: CopyToClipboard
 
-Chiamare questa funzione per copiare negli Appunti l'elemento OLE.
+Chiamare questa funzione per copiare l'elemento OLE negli Appunti.
 
 ```
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
@@ -217,15 +217,15 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ### <a name="parameters"></a>Parametri
 
 *bIncludeLink*<br/>
-Impostare questa proprietà su TRUE se i dati di collegamento devono essere copiati negli Appunti. Impostare questa proprietà su FALSE se il server dell'applicazione non supporta i collegamenti.
+Impostare su TRUE se i dati di collegamento devono essere copiati negli Appunti. Impostare su FALSE se l'applicazione server non supporta i collegamenti.
 
 ### <a name="remarks"></a>Note
 
-La funzione Usa il [OnGetClipboardData](#ongetclipboarddata) funzione di membro per creare un [COleDataSource](../../mfc/reference/coledatasource-class.md) oggetto contenente i dati nei formati supportati dell'elemento OLE. La funzione inserisce quindi il `COleDataSource` oggetti negli Appunti utilizzando i [SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) (funzione). Il `COleDataSource` oggetto include dati nativi dell'elemento e la relativa rappresentazione in formato CF_EMBEDSOURCE, nonché i dati in qualsiasi formato di conversione si sceglie di supportare. Deve avere implementato [Serialize](../../mfc/reference/cobject-class.md#serialize) e [OnDraw](#ondraw) per questa funzione membro da usare.
+La funzione usa la funzione membro [OnGetClipboardData](#ongetclipboarddata) per creare un oggetto [COleDataSource](../../mfc/reference/coledatasource-class.md) contenente i dati dell'elemento OLE nei formati supportati. La funzione quindi posiziona l' `COleDataSource` oggetto negli appunti usando la funzione [COleDataSource::](../../mfc/reference/coledatasource-class.md#setclipboard) selettore. L' `COleDataSource` oggetto include i dati nativi dell'elemento e la relativa rappresentazione nel formato CF_METAFILEPICT, nonché i dati in qualsiasi formato di conversione che si sceglie di supportare. Per il corretto funzionamento di questa funzione membro è necessario avere implementato [Serialize](../../mfc/reference/cobject-class.md#serialize) e [onpare](#ondraw) .
 
-##  <a name="dodragdrop"></a>  COleServerItem:: DoDragDrop
+##  <a name="dodragdrop"></a>COleServerItem::D oDragDrop
 
-Chiamare il `DoDragDrop` funzione membro per eseguire un'operazione di trascinamento e rilascio.
+Chiamare la `DoDragDrop` funzione membro per eseguire un'operazione di trascinamento della selezione.
 
 ```
 DROPEFFECT DoDragDrop(
@@ -242,38 +242,38 @@ DROPEFFECT DoDragDrop(
 Rettangolo dell'elemento sullo schermo, in pixel, relativo all'area client.
 
 *ptOffset*<br/>
-L'offset dal *lpItemRect* in cui è stata la posizione del mouse al momento dell'operazione di trascinamento.
+Offset da *lpItemRect in* in cui si trovava la posizione del mouse al momento del trascinamento.
 
 *bIncludeLink*<br/>
-Impostare questa proprietà su TRUE se i dati di collegamento devono essere copiati negli Appunti. Impostarla su FALSE se l'applicazione non supporta i collegamenti.
+Impostare su TRUE se i dati di collegamento devono essere copiati negli Appunti. Impostarla su FALSE se l'applicazione non supporta i collegamenti.
 
 *dwEffects*<br/>
-Determina gli effetti che verranno consentiti dall'origine di trascinamento nell'operazione di trascinamento (una combinazione di copia, spostamento e collegamento).
+Determina gli effetti che l'origine di trascinamento consentirà nell'operazione di trascinamento, ovvero una combinazione di copia, spostamento e collegamento.
 
 *lpRectStartDrag*<br/>
-Puntatore al rettangolo che definisce dove viene avviato effettivamente il trascinamento. Per ulteriori informazioni, vedere la sezione Osservazioni successiva.
+Puntatore al rettangolo che definisce la posizione in cui inizia effettivamente il trascinamento. Per ulteriori informazioni, vedere la sezione Osservazioni successiva.
 
 ### <a name="return-value"></a>Valore restituito
 
-Valore ricavato dall'enumerazione DROPEFFECT. Se è DROPEFFECT_MOVE, i dati originali devono essere rimossi.
+Valore dell'enumerazione DROPEFFECT. Se è DROPEFFECT_MOVE, i dati originali devono essere rimossi.
 
 ### <a name="remarks"></a>Note
 
-L'operazione di trascinamento e rilascio non verrà avviato immediatamente. È in attesa fino a quando il cursore del mouse lascia il rettangolo specificato da *lpRectStartDrag* o fino a quando un numero specificato di millisecondi trascorsi. Se *lpRectStartDrag* è NULL, un rettangolo predefinito viene usato in modo che l'operazione di trascinamento viene avviato quando il cursore del mouse si sposta un pixel.
+L'operazione di trascinamento della selezione non viene avviata immediatamente. Attende fino a quando il cursore del mouse lascia il rettangolo specificato da *lpRectStartDrag* o fino a quando non viene superato il numero di millisecondi specificato. Se *lpRectStartDrag* è null, viene utilizzato un rettangolo predefinito in modo che il trascinamento venga avviato quando il cursore del mouse viene spostato di un pixel.
 
-L'intervallo di tempo viene specificato dall'impostazione della chiave del Registro di sistema. È possibile modificare l'intervallo di tempo chiamando [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) oppure [CWinApp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint). Se non si specifica l'intervallo di tempo, viene utilizzato un valore predefinito di 200 millisecondi. Ritarda ora di trascinamento viene archiviato come indicato di seguito:
+Il tempo di ritardo viene specificato da un'impostazione della chiave del registro di sistema. È possibile modificare l'ora di ritardo chiamando [CWinApp:: WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) o [CWinApp:: WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). Se non si specifica il tempo di ritardo, viene usato un valore predefinito di 200 millisecondi. Il tempo di trascinamento del ritardo viene archiviato come segue:
 
-- Ritarda ora di Windows NT trascinamento viene archiviato in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.
+- Il tempo di ritardi di trascinamento di Windows NT è archiviato in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.
 
-- Ritarda ora di Windows 3.x trascinamento viene archiviato nel file WIN. File INI, la sezione [Windows}.
+- Il tempo di ritardo di trascinamento di Windows 3. x viene archiviato nella vittoria. File INI, nella sezione [Windows}.
 
-- Ritarda ora di Windows 95 o 98 trascinamento viene archiviato in una versione memorizzata nella cache di WIN. INI.
+- Il ritardo di trascinamento di Windows 95/98 è archiviato in una versione memorizzata nella cache di WIN. INI.
 
-Per altre informazioni su come trascinare ritardo informazioni vengono archiviate nel Registro di sistema o di. File con estensione INI, vedere [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) nel SDK di Windows.
+Per ulteriori informazioni sul modo in cui le informazioni sul ritardo di trascinamento vengono archiviate nel registro di sistema o. File INI, vedere [WriteProfileString](/windows/win32/api/winbase/nf-winbase-writeprofilestringw) nel Windows SDK.
 
-##  <a name="getclipboarddata"></a>  COleServerItem::GetClipboardData
+##  <a name="getclipboarddata"></a>COleServerItem:: GetClipboardData
 
-Chiamare questa funzione per riempire l'oggetto specificato [COleDataSource](../../mfc/reference/coledatasource-class.md) oggetto con tutti i dati che possono essere copiati negli Appunti, se è stato chiamato [CopyToClipboard](#copytoclipboard) (gli stessi dati potrebbero essere trasferiti anche se si chiamato [DoDragDrop](#dodragdrop)).
+Chiamare questa funzione per riempire l'oggetto [COleDataSource](../../mfc/reference/coledatasource-class.md) specificato con tutti i dati che verrebbero copiati negli Appunti se si chiama [CopyToClipboard](#copytoclipboard) (gli stessi dati verrebbero trasferiti anche se è stato chiamato [DoDragDrop](#dodragdrop)).
 
 ```
 void GetClipboardData(
@@ -286,26 +286,26 @@ void GetClipboardData(
 ### <a name="parameters"></a>Parametri
 
 *pDataSource*<br/>
-Puntatore al `COleDataSource` oggetto che riceverà i dati dell'elemento OLE in tutti i formati supportati.
+Puntatore all' `COleDataSource` oggetto che riceverà i dati dell'elemento OLE in tutti i formati supportati.
 
 *bIncludeLink*<br/>
-TRUE se i dati di collegamento devono essere copiati negli Appunti. FALSO se l'applicazione server non supporta i collegamenti.
+TRUE se i dati del collegamento devono essere copiati negli Appunti. FALSE se l'applicazione server non supporta i collegamenti.
 
 *lpOffset*<br/>
-Offset, in pixel, del cursore del mouse rispetto all'origine dell'oggetto.
+Offset, in pixel, del cursore del mouse dall'origine dell'oggetto.
 
 *lpSize*<br/>
-Le dimensioni dell'oggetto in pixel.
+Dimensioni dell'oggetto in pixel.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione chiama il [GetEmbedSourceData](#getembedsourcedata) funzione di membro per ottenere i dati nativi per l'elemento OLE e chiama il [AddOtherClipboardData](#addotherclipboarddata) funzione membro per ottenere il formato di presentazione e qualsiasi conversione formati supportati. Se *bIncludeLink* è TRUE, la funzione anche le chiamate [GetLinkSourceData](#getlinksourcedata) per ottenere i dati di collegamento per l'elemento.
+Questa funzione chiama la funzione membro [GetEmbedSourceData](#getembedsourcedata) per ottenere i dati nativi per l'elemento OLE e chiama la funzione membro [AddOtherClipboardData](#addotherclipboarddata) per ottenere il formato di presentazione ed eventuali formati di conversione supportati. Se *bIncludeLink* è true, la funzione chiama anche [GetLinkSourceData](#getlinksourcedata) per ottenere i dati del collegamento per l'elemento.
 
-Eseguire l'override di questa funzione se si desidera inserire i formati una `COleDataSource` oggetto prima o dopo i formati forniti da `CopyToClipboard`.
+Eseguire l'override di questa funzione se si desidera inserire formati `COleDataSource` in un oggetto prima o dopo quei formati `CopyToClipboard`forniti da.
 
-##  <a name="getdatasource"></a>  COleServerItem::GetDataSource
+##  <a name="getdatasource"></a>COleServerItem:: GetDataSource
 
-Chiamare questa funzione per ottenere il [COleDataSource](../../mfc/reference/coledatasource-class.md) oggetto usato per archiviare i formati di conversione supportate dall'applicazione server.
+Chiamare questa funzione per ottenere l'oggetto [COleDataSource](../../mfc/reference/coledatasource-class.md) utilizzato per archiviare i formati di conversione supportati dall'applicazione server.
 
 ```
 COleDataSource* GetDataSource();
@@ -313,13 +313,13 @@ COleDataSource* GetDataSource();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore al `COleDataSource` oggetto usato per archiviare i formati di conversione.
+Puntatore all' `COleDataSource` oggetto utilizzato per archiviare i formati di conversione.
 
 ### <a name="remarks"></a>Note
 
-Se si vuole che l'applicazione server offrono un'ampia gamma di formati dati durante il trasferimento dati operazioni, registrare tali formati con la `COleDataSource` oggetto restituito da questa funzione. Ad esempio, se si desidera fornire una rappresentazione CF_TEXT dell'elemento OLE per operazioni di trascinamento e rilascio o negli Appunti, registrare il formato con il `COleDataSource` oggetto questa funzione restituisce e quindi eseguire l'override di `OnRenderXxxData` funzione membro fornire i dati.
+Se si desidera che l'applicazione server offra dati in una varietà di formati durante le operazioni di trasferimento dei dati, registrare tali `COleDataSource` formati con l'oggetto restituito da questa funzione. Se ad esempio si desidera fornire una rappresentazione CF_TEXT dell'elemento OLE per gli Appunti o le operazioni di trascinamento della selezione, è necessario registrare il formato con l' `COleDataSource` oggetto restituito da questa funzione, quindi eseguire l' `OnRenderXxxData` override della funzione membro per fornire i dati.
 
-##  <a name="getdocument"></a>  COleServerItem::GetDocument
+##  <a name="getdocument"></a>COleServerItem:: GetDocument
 
 Chiamare questa funzione per ottenere un puntatore al documento che contiene l'elemento.
 
@@ -329,15 +329,15 @@ COleServerDoc* GetDocument() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore al documento che contiene l'elemento; NULL se l'elemento non fa parte di un documento.
+Puntatore al documento che contiene l'elemento; NULL se l'elemento non fa parte di un documento.
 
 ### <a name="remarks"></a>Note
 
-Ciò consente l'accesso al documento server che è stato passato come argomento per il `COleServerItem` costruttore.
+In questo modo è possibile accedere al documento del server passato come argomento al `COleServerItem` costruttore.
 
-##  <a name="getembedsourcedata"></a>  COleServerItem::GetEmbedSourceData
+##  <a name="getembedsourcedata"></a>COleServerItem:: GetEmbedSourceData
 
-Chiamare questa funzione per ottenere i dati CF_OBJECTDESCRIPTOR per un elemento OLE.
+Chiamare questa funzione per ottenere i dati CF_EMBEDSOURCE per un elemento OLE.
 
 ```
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
@@ -346,17 +346,17 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>Parametri
 
 *lpStgMedium*<br/>
-Puntatore per il [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura che riceverà i dati CF_OBJECTDESCRIPTOR per l'elemento OLE.
+Puntatore alla struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) che riceverà i dati CF_EMBEDSOURCE per l'elemento OLE.
 
 ### <a name="remarks"></a>Note
 
-Questo formato include dati nativi dell'elemento. Deve avere implementato il `Serialize` funzione membro per questa funzione per il corretto funzionamento.
+Questo formato include i dati nativi dell'elemento. Per il corretto funzionamento di `Serialize` questa funzione, è necessario avere implementato la funzione membro.
 
-Il risultato può quindi essere aggiunto a un'origine dati mediante [CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Questa funzione viene chiamata automaticamente da [COleServerItem::OnGetClipboardData](#ongetclipboarddata).
+Il risultato può quindi essere aggiunto a un'origine dati tramite [COleDataSource:: CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Questa funzione viene chiamata automaticamente da [COleServerItem:: OnGetClipboardData](#ongetclipboarddata).
 
-Per altre informazioni, vedere [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) nel SDK di Windows.
+Per ulteriori informazioni, vedere [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) nel Windows SDK.
 
-##  <a name="getitemname"></a>  COleServerItem::GetItemName
+##  <a name="getitemname"></a>COleServerItem:: GetItemName
 
 Chiamare questa funzione per ottenere il nome dell'elemento.
 
@@ -370,9 +370,9 @@ Nome dell'elemento.
 
 ### <a name="remarks"></a>Note
 
-In genere chiamato questa funzione solo per gli elementi collegati.
+Questa funzione viene in genere chiamata solo per gli elementi collegati.
 
-##  <a name="getlinksourcedata"></a>  COleServerItem::GetLinkSourceData
+##  <a name="getlinksourcedata"></a>COleServerItem:: GetLinkSourceData
 
 Chiamare questa funzione per ottenere i dati CF_LINKSOURCE per un elemento OLE.
 
@@ -383,7 +383,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>Parametri
 
 *lpStgMedium*<br/>
-Puntatore per il [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura che riceverà i dati CF_LINKSOURCE per l'elemento OLE.
+Puntatore alla struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) che riceverà i dati CF_LINKSOURCE per l'elemento OLE.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -393,13 +393,13 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 Questo formato include il CLSID che descrive il tipo dell'elemento OLE e le informazioni necessarie per individuare il documento contenente l'elemento OLE.
 
-Il risultato può quindi essere aggiunte a un'origine dati con [CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Questa funzione viene chiamata automaticamente da [OnGetClipboardData](#ongetclipboarddata).
+Il risultato può quindi essere aggiunto a un'origine dati con [COleDataSource:: CacheData](../../mfc/reference/coledatasource-class.md#cachedata). Questa funzione viene chiamata automaticamente da [OnGetClipboardData](#ongetclipboarddata).
 
-Per altre informazioni, vedere [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) nel SDK di Windows.
+Per ulteriori informazioni, vedere [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) nel Windows SDK.
 
-##  <a name="getobjectdescriptordata"></a>  COleServerItem::GetObjectDescriptorData
+##  <a name="getobjectdescriptordata"></a>COleServerItem:: GetObjectDescriptorData
 
-Chiamare questa funzione per ottenere i dati inseriti per un elemento OLE.
+Chiamare questa funzione per ottenere i dati CF_OBJECTDESCRIPTOR per un elemento OLE.
 
 ```
 void GetObjectDescriptorData(
@@ -411,21 +411,21 @@ void GetObjectDescriptorData(
 ### <a name="parameters"></a>Parametri
 
 *lpOffset*<br/>
-Offset del clic del mouse nell'angolo in alto a sinistra dell'elemento OLE. Può essere NULL.
+Offset del clic del mouse dall'angolo superiore sinistro dell'elemento OLE. Può essere NULL.
 
 *lpSize*<br/>
-Dimensione dell'elemento OLE. Può essere NULL.
+Dimensioni dell'elemento OLE. Può essere NULL.
 
 *lpStgMedium*<br/>
-Puntatore per il [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura che riceverà i dati inseriti per l'elemento OLE.
+Puntatore alla struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) che riceverà i dati CF_OBJECTDESCRIPTOR per l'elemento OLE.
 
 ### <a name="remarks"></a>Note
 
-Le informazioni vengano copiate nel `STGMEDIUM` struttura a cui punta *lpStgMedium*. Questo formato include le informazioni necessarie per la finestra di dialogo Incolla speciale.
+Le informazioni vengono copiate nella `STGMEDIUM` struttura a cui punta *lpStgMedium*. Questo formato include le informazioni necessarie per la finestra di dialogo Incolla speciale.
 
-Per altre informazioni, vedere [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) nel SDK di Windows.
+Per ulteriori informazioni, vedere [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) nel Windows SDK.
 
-##  <a name="isconnected"></a>  COleServerItem::IsConnected
+##  <a name="isconnected"></a>COleServerItem:: disconnected
 
 Chiamare questa funzione per verificare se l'elemento OLE è connesso.
 
@@ -435,11 +435,11 @@ BOOL IsConnected() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se è connesso l'elemento; in caso contrario 0.
+Diverso da zero se l'elemento è connesso; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Un elemento OLE viene considerato una connessione attiva se uno o più contenitori contengano riferimenti all'elemento. Se il conteggio dei riferimenti è maggiore di 0 o se è un elemento incorporato, un elemento è connesso.
+Un elemento OLE viene considerato connesso se uno o più contenitori contengono riferimenti all'elemento. Un elemento è connesso se il conteggio dei riferimenti è maggiore di 0 o se è un elemento incorporato.
 
 ##  <a name="islinkeditem"></a>  COleServerItem::IsLinkedItem
 
@@ -451,17 +451,17 @@ BOOL IsLinkedItem() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se l'elemento è un elemento collegato; in caso contrario 0.
+Diverso da zero se l'elemento è un elemento collegato; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Se l'elemento è valido e non viene restituito nell'elenco del documento di elementi incorporati è collegato un elemento. Un elemento collegato potrebbe o potrebbe non essere connesso a un contenitore.
+Un elemento viene collegato se l'elemento è valido e non viene restituito nell'elenco di elementi incorporati del documento. Un elemento collegato potrebbe o non essere connesso a un contenitore.
 
-Accade spesso di usare la stessa classe per gli elementi incorporati sia collegati. `IsLinkedItem` Consente di verificare gli elementi collegati si comportano in modo diverso rispetto agli elementi incorporati, anche se molte volte il codice è comune.
+È comune usare la stessa classe per gli elementi collegati e incorporati. `IsLinkedItem`consente di rendere gli elementi collegati comportarsi in modo diverso dagli elementi incorporati, sebbene molte volte il codice sia comune.
 
 ##  <a name="m_sizeextent"></a>  COleServerItem::m_sizeExtent
 
-Questo membro indica al server la quantità dell'oggetto è visibile nel documento contenitore.
+Questo membro indica al server la quantità dell'oggetto visibile nel documento contenitore.
 
 ```
 CSize m_sizeExtent;
@@ -469,9 +469,9 @@ CSize m_sizeExtent;
 
 ### <a name="remarks"></a>Note
 
-L'implementazione predefinita di [OnSetExtent](#onsetextent) imposta questo membro.
+Il membro viene impostato dall'implementazione predefinita di [OnSetExtent](#onsetextent) .
 
-##  <a name="notifychanged"></a>  COleServerItem::NotifyChanged
+##  <a name="notifychanged"></a>COleServerItem:: NotifyChanged
 
 Chiamare questa funzione dopo che l'elemento collegato è stato modificato.
 
@@ -482,23 +482,23 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ### <a name="parameters"></a>Parametri
 
 *nDrawAspect*<br/>
-Un valore ricavato dall'enumerazione DVASPECT che indica quale aspetto dell'elemento OLE è stato modificato. Questo parametro può avere uno dei valori seguenti:
+Valore dell'enumerazione DVASPECT che indica quale aspetto dell'elemento OLE è stato modificato. Questo parametro può avere uno dei valori seguenti:
 
-- Elemento DVASPECT_CONTENT è rappresentato in modo tale che possono essere visualizzato come un oggetto incorporato all'interno del relativo contenitore.
+- L'elemento DVASPECT_CONTENT è rappresentato in modo tale che possa essere visualizzato come oggetto incorporato all'interno del relativo contenitore.
 
-- DVASPECT_THUMBNAIL rendering viene eseguito in una rappresentazione di "anteprima" in modo che possa essere visualizzata in uno strumento di esplorazione.
+- Viene eseguito il rendering dell'elemento DVASPECT_THUMBNAIL in una rappresentazione "thumbnail" in modo che possa essere visualizzato in uno strumento di esplorazione.
 
-- Elemento DVASPECT_ICON è rappresentato da un'icona.
+- L'elemento DVASPECT_ICON è rappresentato da un'icona.
 
-- Elemento DVASPECT_DOCPRINT viene rappresentata come se fosse stampato utilizzando il comando Stampa dal menu File.
+- L'elemento DVASPECT_DOCPRINT è rappresentato come se fosse stato stampato usando il comando stampa del menu file.
 
 ### <a name="remarks"></a>Note
 
-Se un elemento contenitore è collegato al documento con un collegamento automatico, l'elemento viene aggiornato per riflettere le modifiche. Nelle applicazioni contenitore scritte usando la libreria Microsoft Foundation Class [COleClientItem:: OnChange](../../mfc/reference/coleclientitem-class.md#onchange) viene chiamato in risposta.
+Se un elemento contenitore è collegato al documento con un collegamento automatico, l'elemento viene aggiornato per riflettere le modifiche. Nelle applicazioni contenitore scritte usando il libreria Microsoft Foundation Class, [COleClientItem:: OnChange](../../mfc/reference/coleclientitem-class.md#onchange) viene chiamato in risposta.
 
-##  <a name="ondoverb"></a>  COleServerItem::OnDoVerb
+##  <a name="ondoverb"></a>COleServerItem:: OnDoVerb
 
-Chiamato dal framework per eseguire il verbo specificato.
+Chiamato dal Framework per eseguire il verbo specificato.
 
 ```
 virtual void OnDoVerb(LONG iVerb);
@@ -514,22 +514,22 @@ Specifica il verbo da eseguire. Può essere uno dei seguenti:
 |0|verbo primario|OLEIVERB_PRIMARY|
 |1|Verbo secondario|(Nessuno)|
 |- 1|Elemento visualizzato per la modifica|OLEIVERB_SHOW|
-|- 2|Modifica elemento nella finestra separata|OLEIVERB_OPEN|
-|- 3|Nascondere elementi|OLEIVERB_HIDE|
+|- 2|Modifica elemento in una finestra separata|OLEIVERB_OPEN|
+|- 3|Nascondi elemento|OLEIVERB_HIDE|
 
-Il valore-1 è in genere un alias per un altro verbo. Se Apri modifica non è supportata, -2 ha lo stesso effetto di -1. Per i valori aggiuntivi, vedere [IOleObject:: DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) nel SDK di Windows.
+Il valore-1 è in genere un alias per un altro verbo. Se la modifica aperta non è supportata,-2 ha lo stesso effetto di-1. Per ulteriori valori, vedere [IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) nella Windows SDK.
 
 ### <a name="remarks"></a>Note
 
-Se l'applicazione del contenitore è stato scritto con la libreria Microsoft Foundation Class, questa funzione viene chiamata quando il [COleClientItem::Activate](../../mfc/reference/coleclientitem-class.md#activate) funzione di membro del corrispondente `COleClientItem` viene chiamato l'oggetto. L'implementazione predefinita chiama il [OnShow](#onshow) funzione di membro se viene specificato il verbo primario o OLEIVERB_SHOW, [OnOpen](#onopen) se il verbo secondario o OLEIVERB_OPEN è specificato, e [OnHide ](#onhide) se OLEIVERB_HIDE è specificato. L'implementazione predefinita chiama `OnShow` se *iVerb* non è uno dei verbi elencati in precedenza.
+Se l'applicazione contenitore è stata scritta con il libreria Microsoft Foundation Class, questa funzione viene chiamata quando viene chiamata la funzione membro [COleClientItem:: Activate](../../mfc/reference/coleclientitem-class.md#activate) dell'oggetto corrispondente `COleClientItem` . L'implementazione predefinita chiama la funzione membro [OnShow](#onshow) se viene specificato il verbo primario o OLEIVERB_SHOW, [OnOpen](#onopen) se viene specificato il verbo o OLEIVERB_OPEN secondario e [OnHide](#onhide) se viene specificato OLEIVERB_HIDE. L'implementazione predefinita chiama `OnShow` se *iVerb* non è uno dei verbi elencati in precedenza.
 
-Eseguire l'override di questa funzione se il verbo primario non viene visualizzato l'elemento. Ad esempio, se l'elemento è una registrazione audio e il verbo primario è Play, non dovrà visualizzare l'applicazione server per riprodurre l'elemento.
+Eseguire l'override di questa funzione se il verbo principale non Visualizza l'elemento. Se, ad esempio, l'elemento è una registrazione audio e il verbo principale è Play, non sarà necessario visualizzare l'applicazione server per riprodurre l'elemento.
 
-Per altre informazioni, vedere [IOleObject:: DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) nella Windows SDK.
 
-##  <a name="ondraw"></a>  COleServerItem:: OnDraw
+##  <a name="ondraw"></a>COleServerItem:: onpare
 
-Chiamato dal framework per eseguire il rendering dell'elemento OLE in un metafile.
+Chiamato dal Framework per eseguire il rendering dell'elemento OLE in un metafile.
 
 ```
 virtual BOOL OnDraw(
@@ -540,22 +540,22 @@ virtual BOOL OnDraw(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-Un puntatore per il [CDC](../../mfc/reference/cdc-class.md) oggetto su cui disegnare l'elemento. Contesto di visualizzazione viene connesso automaticamente al contesto di visualizzazione dell'attributo in modo che è possibile chiamare funzioni di attributo, anche se potrebbe rendere il metafile specifici del dispositivo.
+Puntatore all'oggetto [CDC](../../mfc/reference/cdc-class.md) sul quale creare l'elemento. Il contesto di visualizzazione viene automaticamente connesso al contesto di visualizzazione dell'attributo, in modo che sia possibile chiamare le funzioni di attributo, anche se in questo modo si rende il Metafile specifico del dispositivo.
 
 *rSize*<br/>
-Dimensione in unità HIMETRIC, in cui disegnare metafile.
+Dimensioni, in unità HIMETRIC, in cui creare il metafile.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se è stato creato correttamente l'elemento; in caso contrario 0.
+Diverso da zero se l'elemento è stato disegnato correttamente; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-La rappresentazione del metafile dell'elemento OLE viene utilizzata per visualizzare l'elemento in un'applicazione contenitore. Se l'applicazione del contenitore è stato scritto con la libreria Microsoft Foundation Class, metafile viene usato per il [disegnare](../../mfc/reference/coleclientitem-class.md#draw) funzione di membro del corrispondente [COleClientItem](../../mfc/reference/coleclientitem-class.md) oggetto. Non vi è nessuna implementazione predefinita. È necessario eseguire l'override di questa funzione per disegnare l'elemento nel contesto di dispositivo specificato.
+La rappresentazione del metafile dell'elemento OLE viene utilizzata per visualizzare l'elemento nell'applicazione contenitore. Se l'applicazione contenitore è stata scritta con il libreria Microsoft Foundation Class, il metafile viene usato dalla funzione membro di [estrazione](../../mfc/reference/coleclientitem-class.md#draw) dell'oggetto [COleClientItem](../../mfc/reference/coleclientitem-class.md) corrispondente. Non vi è nessuna implementazione predefinita. È necessario eseguire l'override di questa funzione per creare l'elemento nel contesto di dispositivo specificato.
 
-##  <a name="ondrawex"></a>  COleServerItem::OnDrawEx
+##  <a name="ondrawex"></a>COleServerItem:: OnDrawEx
 
-Chiamato dal framework per tutti i disegni.
+Chiamato dal Framework per tutto il disegno.
 
 ```
 virtual BOOL OnDrawEx(
@@ -567,35 +567,35 @@ virtual BOOL OnDrawEx(
 ### <a name="parameters"></a>Parametri
 
 *pDC*<br/>
-Un puntatore per il [CDC](../../mfc/reference/cdc-class.md) oggetto su cui disegnare l'elemento. Il controller di dominio viene connesso automaticamente al controller di dominio dell'attributo in modo che è possibile chiamare funzioni di attributo, anche se potrebbe rendere il metafile specifici del dispositivo.
+Puntatore all'oggetto [CDC](../../mfc/reference/cdc-class.md) sul quale creare l'elemento. Il controller di dominio viene automaticamente connesso al controller di dominio dell'attributo, in modo da poter chiamare le funzioni di attributo, anche se in questo modo il metafile è specifico del dispositivo.
 
 *nDrawAspect*<br/>
-Valore ricavato dall'enumerazione DVASPECT. Questo parametro può avere uno dei valori seguenti:
+Valore dell'enumerazione DVASPECT. Questo parametro può avere uno dei valori seguenti:
 
-- Elemento DVASPECT_CONTENT è rappresentato in modo tale che possono essere visualizzato come un oggetto incorporato all'interno del relativo contenitore.
+- L'elemento DVASPECT_CONTENT è rappresentato in modo tale che possa essere visualizzato come oggetto incorporato all'interno del relativo contenitore.
 
-- DVASPECT_THUMBNAIL rendering viene eseguito in una rappresentazione di "anteprima" in modo che possa essere visualizzata in uno strumento di esplorazione.
+- Viene eseguito il rendering dell'elemento DVASPECT_THUMBNAIL in una rappresentazione "thumbnail" in modo che possa essere visualizzato in uno strumento di esplorazione.
 
-- Elemento DVASPECT_ICON è rappresentato da un'icona.
+- L'elemento DVASPECT_ICON è rappresentato da un'icona.
 
-- Elemento DVASPECT_DOCPRINT viene rappresentata come se fosse stampato utilizzando il comando Stampa dal menu File.
+- L'elemento DVASPECT_DOCPRINT è rappresentato come se fosse stato stampato usando il comando stampa del menu file.
 
 *rSize*<br/>
 Dimensione dell'elemento in unità HIMETRIC.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se è stato creato correttamente l'elemento; in caso contrario 0.
+Diverso da zero se l'elemento è stato disegnato correttamente; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-L'implementazione predefinita chiama `OnDraw` quando DVASPECT è uguale a DVASPECT_CONTENT; in caso contrario, si verifica un errore.
+L'implementazione predefinita chiama `OnDraw` quando DVASPECT è uguale a DVASPECT_CONTENT; in caso contrario, ha esito negativo.
 
-Eseguire l'override di questa funzione per fornire i dati di presentazione per gli aspetti diversi da DVASPECT_CONTENT, ad esempio DVASPECT_ICON o DVASPECT_THUMBNAIL.
+Eseguire l'override di questa funzione per fornire i dati di presentazione per aspetti diversi da DVASPECT_CONTENT, ad esempio DVASPECT_ICON o DVASPECT_THUMBNAIL.
 
-##  <a name="ongetclipboarddata"></a>  COleServerItem::OnGetClipboardData
+##  <a name="ongetclipboarddata"></a>COleServerItem:: OnGetClipboardData
 
-Chiamato dal framework per ottenere un `COleDataSource` oggetto che contiene tutti i dati verranno inseriti negli Appunti da una chiamata per il [CopyToClipboard](#copytoclipboard) funzione membro.
+Chiamata eseguita dal Framework per ottenere un `COleDataSource` oggetto contenente tutti i dati che verrebbero inseriti negli Appunti da una chiamata alla funzione membro [CopyToClipboard](#copytoclipboard) .
 
 ```
 virtual COleDataSource* OnGetClipboardData(
@@ -607,25 +607,25 @@ virtual COleDataSource* OnGetClipboardData(
 ### <a name="parameters"></a>Parametri
 
 *bIncludeLink*<br/>
-Impostare questa proprietà su TRUE se i dati di collegamento devono essere copiati negli Appunti. Impostare questa proprietà su FALSE se il server dell'applicazione non supporta i collegamenti.
+Impostare su TRUE se i dati di collegamento devono essere copiati negli Appunti. Impostare su FALSE se l'applicazione server non supporta i collegamenti.
 
 *lpOffset*<br/>
-L'offset del cursore del mouse rispetto all'origine dell'oggetto in pixel.
+Offset del cursore del mouse dall'origine dell'oggetto in pixel.
 
 *lpSize*<br/>
-Le dimensioni dell'oggetto in pixel.
+Dimensioni dell'oggetto in pixel.
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore a un [COleDataSource](../../mfc/reference/coledatasource-class.md) oggetto che contiene i dati negli Appunti.
+Puntatore a un oggetto [COleDataSource](../../mfc/reference/coledatasource-class.md) che contiene i dati degli Appunti.
 
 ### <a name="remarks"></a>Note
 
 L'implementazione predefinita di questa funzione chiama [GetClipboardData](#getclipboarddata).
 
-##  <a name="ongetextent"></a>  COleServerItem::OnGetExtent
+##  <a name="ongetextent"></a>COleServerItem:: OnGetExtent
 
-Chiamata eseguita dal framework per recuperare le dimensioni, in unità HIMETRIC dell'elemento OLE.
+Chiamata eseguita dal Framework per recuperare le dimensioni, in unità HIMETRIC, dell'elemento OLE.
 
 ```
 virtual BOOL OnGetExtent(
@@ -636,18 +636,18 @@ virtual BOOL OnGetExtent(
 ### <a name="parameters"></a>Parametri
 
 *nDrawAspect*<br/>
-Specifica l'aspetto dell'elemento OLE cui limiti devono essere recuperate. Questo parametro può avere uno dei valori seguenti:
+Specifica l'aspetto dell'elemento OLE di cui devono essere recuperati i limiti. Questo parametro può avere uno dei valori seguenti:
 
-- Elemento DVASPECT_CONTENT è rappresentato in modo tale che possono essere visualizzato come un oggetto incorporato all'interno del relativo contenitore.
+- L'elemento DVASPECT_CONTENT è rappresentato in modo tale che possa essere visualizzato come oggetto incorporato all'interno del relativo contenitore.
 
-- DVASPECT_THUMBNAIL rendering viene eseguito in una rappresentazione di "anteprima" in modo che possa essere visualizzata in uno strumento di esplorazione.
+- Viene eseguito il rendering dell'elemento DVASPECT_THUMBNAIL in una rappresentazione "thumbnail" in modo che possa essere visualizzato in uno strumento di esplorazione.
 
-- Elemento DVASPECT_ICON è rappresentato da un'icona.
+- L'elemento DVASPECT_ICON è rappresentato da un'icona.
 
-- Elemento DVASPECT_DOCPRINT viene rappresentata come se fosse stampato utilizzando il comando Stampa dal menu File.
+- L'elemento DVASPECT_DOCPRINT è rappresentato come se fosse stato stampato usando il comando stampa del menu file.
 
 *rSize*<br/>
-Fare riferimento a un `CSize` oggetto che riceverà le dimensioni dell'elemento OLE.
+Riferimento a un `CSize` oggetto che riceverà le dimensioni dell'elemento OLE.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -655,11 +655,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Se l'applicazione del contenitore è stato scritto con la libreria Microsoft Foundation Class, questa funzione viene chiamata quando il [GetExtent](../../mfc/reference/coleclientitem-class.md#getextent) funzione di membro del corrispondente `COleClientItem` viene chiamato l'oggetto. L'implementazione predefinita non esegue alcuna operazione. È necessario implementarla se stessi. Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando si gestisce una richiesta per le dimensioni dell'elemento OLE.
+Se l'applicazione contenitore è stata scritta con il libreria Microsoft Foundation Class, questa funzione viene chiamata quando viene chiamata la funzione membro [GetExtent](../../mfc/reference/coleclientitem-class.md#getextent) dell'oggetto corrispondente `COleClientItem` . L'implementazione predefinita non esegue alcuna operazione. È necessario implementarlo autonomamente. Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando si gestisce una richiesta per la dimensione dell'elemento OLE.
 
-##  <a name="onhide"></a>  COleServerItem::OnHide
+##  <a name="onhide"></a>COleServerItem:: OnHide
 
-Chiamato dal framework per nascondere l'elemento OLE.
+Chiamata eseguita dal Framework per nascondere l'elemento OLE.
 
 ```
 virtual void OnHide();
@@ -667,11 +667,11 @@ virtual void OnHide();
 
 ### <a name="remarks"></a>Note
 
-Le chiamate predefinita `COleServerDoc::OnShowDocument( FALSE )`. La funzione invii una notifica anche il contenitore che l'elemento OLE è stata nascosta. Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando si nasconde un elemento OLE.
+Chiamate `COleServerDoc::OnShowDocument( FALSE )`predefinite. La funzione notifica inoltre al contenitore che l'elemento OLE è stato nascosto. Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando si nasconde un elemento OLE.
 
-##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData
+##  <a name="oninitfromdata"></a>COleServerItem:: OnInitFromData
 
-Chiamato dal framework per inizializzare un elemento OLE usando il contenuto del *pDataObject*.
+Chiamata eseguita dal Framework per inizializzare un elemento OLE utilizzando il contenuto di *pDataObject*.
 
 ```
 virtual BOOL OnInitFromData(
@@ -682,10 +682,10 @@ virtual BOOL OnInitFromData(
 ### <a name="parameters"></a>Parametri
 
 *pDataObject*<br/>
-Puntatore a un oggetto data OLE che contiene i dati in vari formati per l'inizializzazione dell'elemento OLE.
+Puntatore a un oggetto dati OLE contenente i dati in vari formati per l'inizializzazione dell'elemento OLE.
 
 *bCreation*<br/>
-TRUE se la funzione viene chiamata per inizializzare un elemento OLE appena vengono creato da un'applicazione contenitore. FALSE se la funzione viene chiamata per sostituire il contenuto di un elemento OLE già esistente.
+TRUE se la funzione viene chiamata per inizializzare un elemento OLE appena creato da un'applicazione contenitore. FALSE se la funzione viene chiamata per sostituire il contenuto di un elemento OLE già esistente.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -693,13 +693,13 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Se *bCreation* è TRUE, questa funzione viene chiamata se un contenitore implementa Inserisci nuovo oggetto basato sulla selezione corrente. I dati selezionati vengono usati quando si crea il nuovo elemento OLE. Ad esempio, quando la selezione di un intervallo di celle in un foglio di calcolo e quindi usare il nuovo oggetto Insert per creare un grafico in base ai valori nell'intervallo selezionato. L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per scegliere quella offerta da un formato accettabile *pDataObject* e inizializzare l'elemento OLE in base ai dati forniti. Si tratta di un'avanzata sottoponibile a override.
+Se *bCreation* è true, questa funzione viene chiamata se un contenitore implementa l'inserimento di un nuovo oggetto in base alla selezione corrente. I dati selezionati vengono utilizzati durante la creazione del nuovo elemento OLE. Ad esempio, quando si seleziona un intervallo di celle in un programma di foglio di calcolo e quindi si utilizza l'oggetto Inserisci nuovo per creare un grafico in base ai valori nell'intervallo selezionato. L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per scegliere un formato accettabile da quelli offerti da *pDataObject* e inizializzare l'elemento OLE in base ai dati forniti. Si tratta di un oggetto avanzato sottoponibile a override.
 
-Per altre informazioni, vedere [IOleObject:: InitFromData](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-initfromdata) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IOleObject:: InitFromData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) nel Windows SDK.
 
-##  <a name="onopen"></a>  COleServerItem::OnOpen
+##  <a name="onopen"></a>COleServerItem:: OnOpen
 
-Chiamata eseguita dal framework per visualizzare l'elemento OLE in un'istanza separata dell'applicazione server, anziché in posizione.
+Viene chiamato dal Framework per visualizzare l'elemento OLE in un'istanza separata dell'applicazione server, anziché sul posto.
 
 ```
 virtual void OnOpen();
@@ -707,15 +707,15 @@ virtual void OnOpen();
 
 ### <a name="remarks"></a>Note
 
-L'implementazione predefinita attiva la prima finestra cornice Visualizza il documento che contiene l'elemento OLE; Se l'applicazione è un server ridotto, l'implementazione predefinita mostra la finestra principale. La funzione invii una notifica anche il contenitore che l'elemento OLE è stato aperto.
+L'implementazione predefinita attiva la prima finestra cornice che Visualizza il documento che contiene l'elemento OLE; Se l'applicazione è un mini Server, l'implementazione predefinita Mostra la finestra principale. La funzione notifica inoltre al contenitore che l'elemento OLE è stato aperto.
 
-Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando si apre un elemento OLE. Questo è particolarmente comune con gli elementi collegati in cui si desidera impostare l'opzione per il collegamento quando viene aperto.
+Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando si apre un elemento OLE. Questo è particolarmente comune con gli elementi collegati in cui si desidera impostare la selezione sul collegamento quando viene aperto.
 
-Per altre informazioni, vedere [IOleClientSite::OnShowWindow](/windows/desktop/api/oleidl/nf-oleidl-ioleclientsite-onshowwindow) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IOleClientSite:: OnShowWindow](/windows/win32/api/oleidl/nf-oleidl-ioleclientsite-onshowwindow) nella Windows SDK.
 
 ##  <a name="onqueryupdateitems"></a>  COleServerItem::OnQueryUpdateItems
 
-Chiamato dal framework per determinare se eventuali elementi collegati nel documento server corrente non sono aggiornati.
+Chiamata eseguita dal Framework per determinare se gli elementi collegati nel documento del server corrente non sono aggiornati.
 
 ```
 virtual BOOL OnQueryUpdateItems();
@@ -723,15 +723,15 @@ virtual BOOL OnQueryUpdateItems();
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il documento presenta gli elementi che gli aggiornamenti. 0 se tutti gli elementi sono aggiornati.
+Diverso da zero se il documento contiene elementi che richiedono aggiornamenti; 0 se tutti gli elementi sono aggiornati.
 
 ### <a name="remarks"></a>Note
 
-Un elemento non è aggiornato se il documento di origine è stato modificato, ma l'elemento collegato non è stato aggiornato per riflettere le modifiche nel documento.
+Un elemento non è aggiornato se il documento di origine è stato modificato ma l'elemento collegato non è stato aggiornato per riflettere le modifiche apportate al documento.
 
-##  <a name="onrenderdata"></a>  COleServerItem::OnRenderData
+##  <a name="onrenderdata"></a>COleServerItem:: OnRenderData
 
-Chiamato dal framework per recuperare i dati nel formato specificato.
+Chiamato dal Framework per recuperare i dati nel formato specificato.
 
 ```
 virtual BOOL OnRenderData(
@@ -742,10 +742,10 @@ virtual BOOL OnRenderData(
 ### <a name="parameters"></a>Parametri
 
 *lpFormatEtc*<br/>
-Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui vengono richieste informazioni.
+Punta alla struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che specifica il formato in cui vengono richieste le informazioni.
 
 *lpStgMedium*<br/>
-Punta a un [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura in cui i dati sono da restituire.
+Punta a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) in cui devono essere restituiti i dati.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -753,17 +753,17 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Il formato specificato è uno precedentemente spostata nel `COleDataSource` utilizzando il [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) o [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) funzione membro per il rendering ritardato. L'implementazione predefinita di questa funzione chiama [OnRenderFileData](#onrenderfiledata) oppure [OnRenderGlobalData](#onrenderglobaldata), rispettivamente, se il supporto di archiviazione fornito è un file o della memoria. Se nessuno di questi formati viene fornito, l'implementazione predefinita restituisce 0 e non esegue alcuna operazione.
+Il formato specificato viene inserito in precedenza nell' `COleDataSource` oggetto utilizzando la funzione membro [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) o [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) per il rendering ritardato. L'implementazione predefinita di questa funzione chiama [OnRenderFileData](#onrenderfiledata) o [OnRenderGlobalData](#onrenderglobaldata), rispettivamente, se il supporto di archiviazione fornito è un file o una memoria. Se nessuno di questi formati viene specificato, l'implementazione predefinita restituisce 0 e non esegue alcuna operazione.
 
-Se *lpStgMedium*-> *tymed* TYMED_NULL, è il STGMEDIUM deve allocato e compilato come specificato da *lpFormatEtc -> tymed*. In caso contrario TYMED_NULL, il STGMEDIUM devono essere compilate con i dati.
+Se *lpStgMedium*-> *TYMED* è TYMED_NULL, STGMEDIUM deve essere allocato e compilato come specificato da *lpformatetc-> tymed*. Se non TYMED_NULL, il STGMEDIUM deve essere compilato con i dati.
 
-Si tratta di un'avanzata sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato richiesto delle medie. A seconda dei dati, è possibile eseguire l'override in una delle altre versioni di questa funzione invece. Se i dati sono piccole e ha dimensione fissa, eseguire l'override `OnRenderGlobalData`. Se i dati in un file o sono di dimensioni variabili, eseguire l'override `OnRenderFileData`.
+Si tratta di un oggetto avanzato sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato e nel supporto richiesti. A seconda dei dati, potrebbe essere necessario eseguire l'override di una delle altre versioni di questa funzione. Se i dati sono di dimensioni ridotte e di dimensioni `OnRenderGlobalData`fisse, eseguire l'override di. Se i dati sono in un file o sono di dimensioni variabili, eseguire l' `OnRenderFileData`override di.
 
-Per altre informazioni, vedere [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium), [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc), e [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)e [TYMED](/windows/win32/api/objidl/ne-objidl-tymed) nel Windows SDK.
 
-##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData
+##  <a name="onrenderfiledata"></a>COleServerItem:: OnRenderFileData
 
-Chiamato dal framework per recuperare i dati nel formato specificato quando il supporto di archiviazione è un file.
+Chiamata eseguita dal Framework per recuperare i dati nel formato specificato quando il supporto di archiviazione è un file.
 
 ```
 virtual BOOL OnRenderFileData(
@@ -774,10 +774,10 @@ virtual BOOL OnRenderFileData(
 ### <a name="parameters"></a>Parametri
 
 *lpFormatEtc*<br/>
-Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui vengono richieste informazioni.
+Punta alla struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che specifica il formato in cui vengono richieste le informazioni.
 
 *pFile*<br/>
-Punta a un `CFile` oggetto in cui i dati da sottoporre a rendering.
+Punta a un `CFile` oggetto in cui deve essere eseguito il rendering dei dati.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -785,15 +785,15 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Il formato specificato è uno precedentemente spostata nel `COleDataSource` utilizzando il [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) funzione membro per il rendering ritardato. L'implementazione predefinita di questa funzione restituisce FALSE.
+Il formato specificato viene inserito in precedenza nell' `COleDataSource` oggetto utilizzando la funzione membro [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) per il rendering ritardato. L'implementazione predefinita di questa funzione restituisce semplicemente FALSE.
 
-Si tratta di un'avanzata sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato richiesto delle medie. A seconda dei dati, si potrebbe voler eseguire l'override in una delle altre versioni di questa funzione invece. Se si desidera gestire più supporti di archiviazione, eseguire l'override [routine OnRenderData](#onrenderdata). Se i dati in un file o sono di dimensioni variabili, eseguire l'override [OnRenderFileData](#onrenderfiledata).
+Si tratta di un oggetto avanzato sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato e nel supporto richiesti. A seconda dei dati, potrebbe essere necessario eseguire l'override di una delle altre versioni di questa funzione. Se si desidera gestire più supporti di archiviazione, eseguire l'override di [OnRenderData](#onrenderdata). Se i dati sono in un file o sono di dimensioni variabili, eseguire l'override di [OnRenderFileData](#onrenderfiledata).
 
-Per altre informazioni, vedere [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) e [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) e [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) nel Windows SDK.
 
-##  <a name="onrenderglobaldata"></a>  COleServerItem::OnRenderGlobalData
+##  <a name="onrenderglobaldata"></a>COleServerItem:: OnRenderGlobalData
 
-Chiamato dal framework per recuperare i dati nel formato specificato quando il supporto di archiviazione specificato è la memoria globale.
+Chiamata eseguita dal Framework per recuperare i dati nel formato specificato quando il supporto di archiviazione specificato è memoria globale.
 
 ```
 virtual BOOL OnRenderGlobalData(
@@ -804,10 +804,10 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="parameters"></a>Parametri
 
 *lpFormatEtc*<br/>
-Punta al [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato in cui vengono richieste informazioni.
+Punta alla struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che specifica il formato in cui vengono richieste le informazioni.
 
 *phGlobal*<br/>
-Punta a un handle per la memoria globale in cui i dati sono da restituire. Se non è stata allocata alcuna memoria, questo parametro può essere NULL.
+Punta a un handle per la memoria globale in cui devono essere restituiti i dati. Se non è stata allocata alcuna memoria, questo parametro può essere NULL.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -815,17 +815,17 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Il formato specificato è uno precedentemente spostata nel `COleDataSource` utilizzando il [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) funzione membro per il rendering ritardato. L'implementazione predefinita di questa funzione restituisce FALSE.
+Il formato specificato viene inserito in precedenza nell' `COleDataSource` oggetto utilizzando la funzione membro [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) per il rendering ritardato. L'implementazione predefinita di questa funzione restituisce semplicemente FALSE.
 
-Se *phGlobal* è NULL, un nuovo HGLOBAL deve essere allocato e restituito nella *phGlobal*. In caso contrario, il HGLOBAL specificato da *phGlobal* deve essere riempito con i dati. La quantità di dati inseriti nel HGLOBAL non deve superare la dimensione corrente del blocco di memoria. Inoltre, il blocco non può essere riallocato a una dimensione maggiore.
+Se *phGlobal* è null, è necessario allocare e restituire un nuovo HGLOBAL in *phGlobal*. In caso contrario, il HGLOBAL specificato da *phGlobal* deve essere riempito con i dati. La quantità di dati inseriti in HGLOBAL non deve superare la dimensione corrente del blocco di memoria. Inoltre, il blocco non può essere riallocato a dimensioni maggiori.
 
-Si tratta di un'avanzata sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato richiesto delle medie. A seconda dei dati, è possibile eseguire l'override in una delle altre versioni di questa funzione invece. Se si desidera gestire più supporti di archiviazione, eseguire l'override [routine OnRenderData](#onrenderdata). Se i dati in un file o sono di dimensioni variabili, eseguire l'override [OnRenderFileData](#onrenderfiledata).
+Si tratta di un oggetto avanzato sottoponibile a override. Eseguire l'override di questa funzione per fornire i dati nel formato e nel supporto richiesti. A seconda dei dati, potrebbe essere necessario eseguire l'override di una delle altre versioni di questa funzione. Se si desidera gestire più supporti di archiviazione, eseguire l'override di [OnRenderData](#onrenderdata). Se i dati sono in un file o sono di dimensioni variabili, eseguire l'override di [OnRenderFileData](#onrenderfiledata).
 
-Per altre informazioni, vedere [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) e [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) e [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) nel Windows SDK.
 
-##  <a name="onsetcolorscheme"></a>  COleServerItem::OnSetColorScheme
+##  <a name="onsetcolorscheme"></a>COleServerItem:: OnSetColorScheme
 
-Chiamato dal framework per specificare una tavolozza dei colori da utilizzare quando si modifica l'elemento OLE.
+Chiamato dal Framework per specificare una tavolozza dei colori da utilizzare per la modifica dell'elemento OLE.
 
 ```
 virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
@@ -834,21 +834,21 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 ### <a name="parameters"></a>Parametri
 
 *lpLogPalette*<br/>
-Puntatore a un Windows [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) struttura.
+Puntatore a una struttura [LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette) di Windows.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se viene utilizzata la tavolozza dei colori. in caso contrario 0.
+Diverso da zero se viene utilizzata la tavolozza dei colori; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Se l'applicazione contenitore è stata scritta usando la libreria Microsoft Foundation Class, questa funzione viene chiamata quando il [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) funzione corrispondente `COleClientItem` viene chiamato l'oggetto. L'implementazione predefinita restituisce FALSE. Eseguire l'override di questa funzione se si desidera utilizzare la tavolozza consigliata. Non è necessario che l'applicazione server utilizza la tavolozza suggerita.
+Se l'applicazione contenitore è stata scritta usando il libreria Microsoft Foundation Class, questa funzione viene chiamata quando viene chiamata la funzione [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) dell'oggetto corrispondente `COleClientItem` . L'implementazione predefinita restituisce FALSE. Eseguire l'override di questa funzione se si desidera utilizzare la tavolozza consigliata. Non è necessario che l'applicazione server usi la tavolozza consigliata.
 
-Per altre informazioni, vedere [IOleObject::SetColorScheme](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) nel Windows SDK.
 
-##  <a name="onsetdata"></a>  COleServerItem::OnSetData
+##  <a name="onsetdata"></a>COleServerItem:: OnSetData
 
-Chiamato dal framework per sostituire i dati dell'elemento OLE con i dati specificati.
+Chiamata eseguita dal Framework per sostituire i dati dell'elemento OLE con i dati specificati.
 
 ```
 virtual BOOL OnSetData(
@@ -860,13 +860,13 @@ virtual BOOL OnSetData(
 ### <a name="parameters"></a>Parametri
 
 *lpFormatEtc*<br/>
-Puntatore a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) struttura che specifica il formato dei dati.
+Puntatore a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che specifica il formato dei dati.
 
 *lpStgMedium*<br/>
-Puntatore a un [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) struttura in cui si trovano i dati.
+Puntatore a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) in cui risiedono i dati.
 
 *bRelease*<br/>
-Indica chi ha la proprietà del supporto di archiviazione dopo il completamento della chiamata di funzione. Il chiamante decide chi è responsabile del rilascio delle risorse allocate per conto del supporto di archiviazione. Il chiamante esegue questa operazione impostando *bRelease*. Se *bRelease* è diverso da zero, l'elemento server acquisisce la proprietà, il rilascio del supporto quando ha finito di usarlo. Quando *bRelease* è 0, il chiamante mantiene la proprietà e l'elemento server può usare il supporto di archiviazione solo per la durata della chiamata.
+Indica chi ha la proprietà del supporto di archiviazione dopo aver completato la chiamata di funzione. Il chiamante decide chi è responsabile del rilascio delle risorse allocate per conto del supporto di archiviazione. Il chiamante esegue questa operazione impostando *bRelease*. Se *bRelease* è diverso da zero, l'elemento server diventa proprietario, liberando il supporto al termine dell'utilizzo. Quando *bRelease* è 0, il chiamante mantiene la proprietà e l'elemento server può usare il supporto di archiviazione solo per la durata della chiamata.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -874,15 +874,15 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-L'elemento server non accetta la proprietà dei dati fino a quando non lo ha ha ottenuto. Vale a dire, non viene preso la proprietà se viene restituito 0. Se l'origine dei dati acquisisce la proprietà, consente di liberare il supporto di archiviazione chiamando il [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) (funzione).
+L'elemento server non assume la proprietà dei dati fino a quando non viene ottenuto correttamente. Ovvero, non assume la proprietà se restituisce 0. Se l'origine dati acquisisce la proprietà, il supporto di archiviazione viene liberato chiamando la funzione [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) .
 
-L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per sostituire i dati dell'elemento OLE con i dati specificati. Si tratta di un'avanzata sottoponibile a override.
+L'implementazione predefinita non esegue alcuna operazione. Eseguire l'override di questa funzione per sostituire i dati dell'elemento OLE con i dati specificati. Si tratta di un oggetto avanzato sottoponibile a override.
 
-Per altre informazioni, vedere [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium), [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc), e [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) nel SDK di Windows.
+Per ulteriori informazioni, vedere [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1), [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)e [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) nel Windows SDK.
 
-##  <a name="onsetextent"></a>  COleServerItem::OnSetExtent
+##  <a name="onsetextent"></a>COleServerItem:: OnSetExtent
 
-Chiamato dal framework per indicare l'elemento OLE quantità di spazio sono disponibili nel documento contenitore.
+Chiamata eseguita dal Framework per indicare all'elemento OLE la quantità di spazio disponibile nel documento contenitore.
 
 ```
 virtual BOOL OnSetExtent(
@@ -893,18 +893,18 @@ virtual BOOL OnSetExtent(
 ### <a name="parameters"></a>Parametri
 
 *nDrawAspect*<br/>
-Specifica l'aspetto dell'elemento OLE cui limiti vengono specificati. Questo parametro può avere uno dei valori seguenti:
+Specifica l'aspetto dell'elemento OLE i cui limiti vengono specificati. Questo parametro può avere uno dei valori seguenti:
 
-- Elemento DVASPECT_CONTENT è rappresentato in modo tale che possono essere visualizzato come un oggetto incorporato all'interno del relativo contenitore.
+- L'elemento DVASPECT_CONTENT è rappresentato in modo tale che possa essere visualizzato come oggetto incorporato all'interno del relativo contenitore.
 
-- DVASPECT_THUMBNAIL rendering viene eseguito in una rappresentazione di "anteprima" in modo che possa essere visualizzata in uno strumento di esplorazione.
+- Viene eseguito il rendering dell'elemento DVASPECT_THUMBNAIL in una rappresentazione "thumbnail" in modo che possa essere visualizzato in uno strumento di esplorazione.
 
-- Elemento DVASPECT_ICON è rappresentato da un'icona.
+- L'elemento DVASPECT_ICON è rappresentato da un'icona.
 
-- Elemento DVASPECT_DOCPRINT viene rappresentata come se fosse stampato utilizzando il comando Stampa dal menu File.
+- L'elemento DVASPECT_DOCPRINT è rappresentato come se fosse stato stampato usando il comando stampa del menu file.
 
 *size*<br/>
-Oggetto [CSize](../../atl-mfc-shared/reference/csize-class.md) struttura specificando la nuova dimensione dell'elemento OLE.
+Struttura [CSize](../../atl-mfc-shared/reference/csize-class.md) che specifica la nuova dimensione dell'elemento OLE.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -912,11 +912,11 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Se l'applicazione del contenitore è stato scritto con la libreria Microsoft Foundation Class, questa funzione viene chiamata quando il [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) funzione di membro del corrispondente `COleClientItem` viene chiamato l'oggetto. L'implementazione predefinita imposta il [m_sizeExtent](#m_sizeextent) membro alle dimensioni specificate se *nDrawAspect* è DVASPECT_CONTENT; in caso contrario, restituisce 0. Eseguire l'override di questa funzione per eseguire un'elaborazione speciale quando si modificano le dimensioni dell'elemento.
+Se l'applicazione contenitore è stata scritta con il libreria Microsoft Foundation Class, questa funzione viene chiamata quando viene chiamata la funzione membro di [dismisura](../../mfc/reference/coleclientitem-class.md#setextent) dell'oggetto corrispondente `COleClientItem` . L'implementazione predefinita imposta il membro [m_sizeExtent](#m_sizeextent) sulla dimensione specificata se *nDrawAspect* è DVASPECT_CONTENT; in caso contrario, restituisce 0. Eseguire l'override di questa funzione per eseguire un'elaborazione speciale quando si modificano le dimensioni dell'elemento.
 
-##  <a name="onshow"></a>  COleServerItem::OnShow
+##  <a name="onshow"></a>COleServerItem:: OnShow
 
-Chiamato dal framework per indicare all'applicazione server per visualizzare l'elemento OLE in posizione.
+Chiamata eseguita dal Framework per indicare all'applicazione server di visualizzare l'elemento OLE sul posto.
 
 ```
 virtual void OnShow();
@@ -924,13 +924,13 @@ virtual void OnShow();
 
 ### <a name="remarks"></a>Note
 
-Questa funzione viene in genere chiamata quando l'utente dell'applicazione contenitore crea un elemento o esegue un verbo, quali la modifica, che richiede che l'elemento da visualizzare. L'implementazione predefinita tenta l'attivazione sul posto. Se l'operazione non riesce, la funzione chiama la `OnOpen` funzione membro per visualizzare l'elemento OLE in una finestra separata.
+Questa funzione viene in genere chiamata quando l'utente dell'applicazione contenitore crea un elemento o esegue un verbo, ad esempio Edit, che richiede che l'elemento venga visualizzato. L'implementazione predefinita tenta l'attivazione sul posto. Se l'operazione ha esito negativo, `OnOpen` la funzione chiama la funzione membro per visualizzare l'elemento OLE in una finestra separata.
 
 Eseguire l'override di questa funzione se si desidera eseguire un'elaborazione speciale quando viene visualizzato un elemento OLE.
 
-##  <a name="onupdate"></a>  COleServerItem::OnUpdate
+##  <a name="onupdate"></a>COleServerItem:: OnUpdate
 
-Chiamato dal framework quando un elemento è stato modificato.
+Chiamata eseguita dal framework quando un elemento è stato modificato.
 
 ```
 virtual void OnUpdate(
@@ -943,32 +943,32 @@ virtual void OnUpdate(
 ### <a name="parameters"></a>Parametri
 
 *pSender*<br/>
-Puntatore all'elemento che il documento modificato. Può essere NULL.
+Puntatore all'elemento che ha modificato il documento. Può essere NULL.
 
 *lHint*<br/>
 Contiene informazioni sulla modifica.
 
 *pHint*<br/>
-Puntatore a un oggetto di archiviazione delle informazioni sulla modifica.
+Puntatore a un oggetto che archivia informazioni sulla modifica.
 
 *nDrawAspect*<br/>
-Valore ricavato dall'enumerazione DVASPECT. Questo parametro può avere uno dei valori seguenti:
+Valore dell'enumerazione DVASPECT. Questo parametro può avere uno dei valori seguenti:
 
-- Elemento DVASPECT_CONTENT è rappresentato in modo tale che possono essere visualizzato come un oggetto incorporato all'interno del relativo contenitore.
+- L'elemento DVASPECT_CONTENT è rappresentato in modo tale che possa essere visualizzato come oggetto incorporato all'interno del relativo contenitore.
 
-- DVASPECT_THUMBNAIL rendering viene eseguito in una rappresentazione di "anteprima" in modo che possa essere visualizzata in uno strumento di esplorazione.
+- Viene eseguito il rendering dell'elemento DVASPECT_THUMBNAIL in una rappresentazione "thumbnail" in modo che possa essere visualizzato in uno strumento di esplorazione.
 
-- Elemento DVASPECT_ICON è rappresentato da un'icona.
+- L'elemento DVASPECT_ICON è rappresentato da un'icona.
 
-- Elemento DVASPECT_DOCPRINT viene rappresentata come se fosse stampato utilizzando il comando Stampa dal menu File.
+- L'elemento DVASPECT_DOCPRINT è rappresentato come se fosse stato stampato usando il comando stampa del menu file.
 
 ### <a name="remarks"></a>Note
 
-L'implementazione predefinita chiama [NotifyChanged](#notifychanged), indipendentemente dall'hint o mittente.
+L'implementazione predefinita chiama [NotifyChanged](#notifychanged), indipendentemente dall'hint o dal mittente.
 
-##  <a name="onupdateitems"></a>  COleServerItem::OnUpdateItems
+##  <a name="onupdateitems"></a>COleServerItem:: OnUpdateItems
 
-Chiamato dal framework per aggiornare tutti gli elementi nel documento server.
+Chiamata eseguita dal Framework per aggiornare tutti gli elementi nel documento del server.
 
 ```
 virtual void OnUpdateItems();
@@ -976,11 +976,11 @@ virtual void OnUpdateItems();
 
 ### <a name="remarks"></a>Note
 
-L'implementazione predefinita chiama [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) per tutti i `COleClientItem` gli oggetti del documento.
+L'implementazione predefinita chiama [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) per tutti `COleClientItem` gli oggetti nel documento.
 
-##  <a name="setitemname"></a>  COleServerItem::SetItemName
+##  <a name="setitemname"></a>COleServerItem:: SetItemName
 
-Chiamare questa funzione quando si crea un elemento collegato per impostare il relativo nome.
+Chiamare questa funzione quando si crea un elemento collegato per impostarne il nome.
 
 ```
 void SetItemName(LPCTSTR lpszItemName);
@@ -993,11 +993,11 @@ Puntatore al nuovo nome dell'elemento.
 
 ### <a name="remarks"></a>Note
 
-Il nome deve essere univoco all'interno del documento. Quando un'applicazione server viene chiamata per modificare un elemento collegato, l'applicazione usa il nome specificato per trovare l'elemento. Non è necessario chiamare questa funzione per gli elementi incorporati.
+Il nome deve essere univoco all'interno del documento. Quando viene chiamata un'applicazione server per modificare un elemento collegato, l'applicazione usa questo nome per trovare l'elemento. Non è necessario chiamare questa funzione per gli elementi incorporati.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[HIERSVR di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Classe CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

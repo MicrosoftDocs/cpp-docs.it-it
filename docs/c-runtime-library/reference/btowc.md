@@ -22,11 +22,11 @@ helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
 ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514676"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740009"
 ---
 # <a name="btowc"></a>btowc
 
@@ -47,7 +47,7 @@ Valore Integer da testare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce la rappresentazione a caratteri wide del carattere se l'Integer rappresenta un carattere a byte singolo valido nello stato iniziale di spostamento. Restituisce WEOF se l'Integer è EOF o non è un carattere a byte singolo valido nello stato iniziale di spostamento. L'output di questa funzione è interessato dall'oggetto corrente **LC_TYPE** delle impostazioni locali.
+Restituisce la rappresentazione a caratteri wide del carattere se l'Integer rappresenta un carattere a byte singolo valido nello stato iniziale di spostamento. Restituisce WEOF se l'Integer è EOF o non è un carattere a byte singolo valido nello stato iniziale di spostamento. L'output di questa funzione è influenzato dalle impostazioni locali correnti di **LC_TYPE** .
 
 ## <a name="requirements"></a>Requisiti
 

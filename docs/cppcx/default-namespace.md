@@ -2,16 +2,16 @@
 title: spazio dei nomi predefinito
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389463"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740507"
 ---
 # <a name="default-namespace"></a>spazio dei nomi predefinito
 
-Il `default` dello spazio dei nomi fornisce l'ambito di tipi incorporati supportati da C++/CX.
+Lo `default` spazio dei nomi include i tipi incorporati supportati da C++/CX.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -19,7 +19,7 @@ Il `default` dello spazio dei nomi fornisce l'ambito di tipi incorporati support
 namespace default;
 ```
 
-### <a name="members"></a>Membri
+### <a name="members"></a>Members
 
 Tutti i tipi incorporati ereditano i membri seguenti.
 
@@ -32,7 +32,7 @@ Tutti i tipi incorporati ereditano i membri seguenti.
 
 ### <a name="built-in-types"></a>Tipi incorporati
 
-|Nome|Descrizione|
+|Name|Descrizione|
 |----------|-----------------|
 |`char16`|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|
 |`float32`|Numero a virgola mobile IEEE 754 a 32 bit.|
@@ -52,4 +52,4 @@ Tutti i tipi incorporati ereditano i membri seguenti.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)
+[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)

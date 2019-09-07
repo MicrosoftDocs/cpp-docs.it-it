@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: b538acd564402459a05cc96303b63a35a99ba243
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0d0c37d055d9b337f7b709b4ee3d299daae7658
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506475"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741549"
 ---
 # <a name="cfontdialog-class"></a>Classe CFontDialog
 
@@ -55,13 +55,13 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CFontDialog::CFontDialog](#cfontdialog)|Costruisce un oggetto `CFontDialog`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CFontDialog::D oModal](#domodal)|Visualizza la finestra di dialogo e consente all'utente di effettuare una selezione.|
 |[CFontDialog:: GetCharFormat](#getcharformat)|Recupera la formattazione dei caratteri del tipo di carattere selezionato.|
@@ -78,7 +78,7 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|NOME|DESCRIZIONE|
+|NOME|Descrizione|
 |----------|-----------------|
 |[CFontDialog::m_cf](#m_cf)|Struttura utilizzata per personalizzare un `CFontDialog` oggetto.|
 
@@ -146,7 +146,7 @@ CFontDialog(
 Puntatore a una struttura di dati [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) che consente di impostare alcune delle caratteristiche del tipo di carattere.
 
 *charFormat*<br/>
-Puntatore a una struttura di dati [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) che consente di impostare alcune delle caratteristiche del tipo di carattere in un controllo Rich Edit.
+Puntatore a una struttura di dati [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) che consente di impostare alcune delle caratteristiche del tipo di carattere in un controllo Rich Edit.
 
 *dwFlags*<br/>
 Specifica uno o più flag di scelta del tipo di carattere. È possibile combinare valori preimpostati usando l'operatore OR bit per bit. Se si modifica il membro della struttura `m_cf.Flag`s, verificare di usare un operatore OR bit per bit nelle modifiche per mantenere l'integrità del comportamento predefinito. Per informazioni dettagliate su ognuno di questi flag, vedere la descrizione della struttura [ChooseFont](/windows/win32/api/commdlg/ns-commdlg-choosefontw) nel Windows SDK.
@@ -203,7 +203,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ### <a name="parameters"></a>Parametri
 
 *cf*<br/>
-Struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat) contenente informazioni sulla formattazione dei caratteri del tipo di carattere selezionato.
+Struttura [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) contenente informazioni sulla formattazione dei caratteri del tipo di carattere selezionato.
 
 ##  <a name="getcolor"></a>CFontDialog:: GetColor
 

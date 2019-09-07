@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c57d983e9680ce6d2cab375e427b80f4d3b6c2d6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495106"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739572"
 ---
 # <a name="_u_stringorid-class"></a>Classe _U_STRINGorID
 
@@ -39,13 +39,13 @@ class _U_STRINGorID
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|NOME|DESCRIZIONE|
+|NOME|Descrizione|
 |----------|-----------------|
 |[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|Identificatore della risorsa.|
 
 ## <a name="remarks"></a>Note
 
-Questa classe è progettata per implementare i wrapper per l'API di gestione delle risorse di Windows, ad esempio le funzioni [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)e [LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , che accettano un argomento LPCTSTR che può essere il nome di una risorsa o il relativo ID.
+Questa classe è progettata per implementare i wrapper per l'API di gestione delle risorse di Windows, ad esempio le funzioni [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea), [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)e [LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw) , che accettano un argomento LPCTSTR che può essere il nome di una risorsa o il relativo ID.
 
 La classe definisce due overload del costruttore: uno accetta un argomento LPCTSTR e l'altro accetta un argomento UINT. L'argomento UINT viene convertito in un tipo di risorsa compatibile con le funzioni di gestione delle risorse di Windows usando la macro MAKEINTRESOURCE e il risultato archiviato nel singolo membro dati della classe, [m_lpstr](#_u_stringorid__m_lpstr). L'argomento del costruttore LPCTSTR viene archiviato direttamente senza conversione.
 

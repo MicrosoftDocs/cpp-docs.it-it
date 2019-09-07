@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514749"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740656"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedura: Gestisci risorseC++()
 
@@ -76,7 +76,7 @@ Non è possibile trascinare, copiare, tagliare o incollare tra i file di risorse
 
 Durante la copia in una risorsa, è possibile modificarne la proprietà relativa alla lingua o alla condizione oppure entrambe.
 
-- La lingua di una risorsa specifica la lingua usata da [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew) per identificare la risorsa per cui si sta cercando. Le risorse possono presentare differenze per ogni lingua che non è correlata al testo, ad esempio acceleratori che possono funzionare solo su una tastiera giapponese o su una bitmap appropriata solo per le compilazioni localizzate in cinese.
+- La lingua di una risorsa specifica la lingua usata da [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea) per identificare la risorsa per cui si sta cercando. Le risorse possono presentare differenze per ogni lingua che non è correlata al testo, ad esempio acceleratori che possono funzionare solo su una tastiera giapponese o su una bitmap appropriata solo per le compilazioni localizzate in cinese.
 
 - La condizione di una risorsa è un simbolo definito che identifica una condizione in cui è necessario usare questa particolare copia della risorsa.
 

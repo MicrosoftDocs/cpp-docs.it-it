@@ -3,12 +3,12 @@ title: App di Windows universale (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: landing-page
-ms.openlocfilehash: 6c2bf7e44e3f1cb2c73ccaaed4363e34cbd7f0c9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 68952e93e4f91ac3653a9991802ad42854d9d25a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218372"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741024"
 ---
 # <a name="universal-windows-apps-c"></a>App di Windows universale (C++)
 
@@ -24,7 +24,7 @@ Per le nuove app e i componenti di UWP, è consigliabile usare [ C++/WinRT](/win
 
 |||
 |-|-|
-|[Documentazione di riferimento del linguaggio Visual C++ (C++/CX)](visual-c-language-reference-c-cx.md)|Descrive il set di estensioni che semplificano C++ l'utilizzo delle API Windows Runtime e abilitano la gestione degli errori basata sulle eccezioni.|
+|[C++Informazioni di riferimento sul linguaggio/CX](visual-c-language-reference-c-cx.md)|Descrive il set di estensioni che semplificano C++ l'utilizzo delle API Windows Runtime e abilitano la gestione degli errori basata sulle eccezioni.|
 |[Compilazione di applicazioni e librerie (C++/CX)](building-apps-and-libraries-c-cx.md)|Descrive come creare DLL e librerie statiche a cui è possibile accedere da un componente o un'app C++/CX.|
 |[Esercitazione: Creare un'app "Hello, World" di C++UWP in/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Procedura dettagliata che introduce i concetti di base dello sviluppo di app C++UWP in/CX. |
 |[Creazione di componenti Windows Runtime C++in/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Viene descritto come creare DLL che possono essere utilizzate da altri componenti e app UWP.|

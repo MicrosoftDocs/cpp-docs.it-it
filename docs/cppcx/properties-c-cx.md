@@ -2,16 +2,16 @@
 title: Proprietà (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375223"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741101"
 ---
 # <a name="properties-ccx"></a>Proprietà (C++/CX)
 
-Tipi Windows Runtime espongono i dati pubblici come proprietà. Il codice client accede alla proprietà come un membro dati pubblico. Internamente, la proprietà viene implementata come blocco contenente un metodo di funzione di accesso get, un metodo di funzione di accesso set, o entrambi. L'utilizzo dei metodi di funzione di accesso ti consente di eseguire azioni aggiuntive prima o dopo aver recuperato il valore. Puoi, ad esempio, generare un evento o eseguire controlli di convalida.
+I tipi di Windows Runtime espongono i dati pubblici come proprietà. Il codice client accede alla proprietà come un membro dati pubblico. Internamente, la proprietà viene implementata come blocco contenente un metodo di funzione di accesso get, un metodo di funzione di accesso set, o entrambi. L'utilizzo dei metodi di funzione di accesso ti consente di eseguire azioni aggiuntive prima o dopo aver recuperato il valore. Puoi, ad esempio, generare un evento o eseguire controlli di convalida.
 
 ### <a name="remarks"></a>Note
 
@@ -38,5 +38,5 @@ Notare che è impossibile inizializzare una proprietà in un elenco di membri. P
 ## <a name="see-also"></a>Vedere anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
-[Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

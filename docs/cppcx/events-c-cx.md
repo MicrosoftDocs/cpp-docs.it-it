@@ -2,20 +2,20 @@
 title: Eventi (C++/CX)
 ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894460"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740532"
 ---
 # <a name="events-ccx"></a>Eventi (C++/CX)
 
-Un Runtime di Windows può dichiarare tipo (che è, pubblicare) gli eventi e il codice client nello stesso componente o in altri componenti può sottoscrivere tali eventi associando i metodi chiamati *gestori eventi* con l'evento. A un singolo evento possono essere associati più gestori eventi. Quando l'oggetto di pubblicazione genera l'evento, vengono richiamati tutti i gestori eventi. In questo modo, una classe di sottoscrizione può eseguire qualsiasi azione personalizzata appropriata quando l'editore genera l'evento . Un evento è un tipo delegato che specifica la firma che tutti i gestori eventi devono avere per sottoscrivere l'evento.
+Un tipo di Windows Runtime può dichiarare (ovvero pubblicare) gli eventi e il codice client nello stesso componente o in altri componenti può sottoscrivere tali eventi associando i metodi denominati *gestori eventi* all'evento. A un singolo evento possono essere associati più gestori eventi. Quando l'oggetto di pubblicazione genera l'evento, vengono richiamati tutti i gestori eventi. In questo modo, una classe di sottoscrizione può eseguire qualsiasi azione personalizzata appropriata quando l'editore genera l'evento . Un evento è un tipo delegato che specifica la firma che tutti i gestori eventi devono avere per sottoscrivere l'evento.
 
 ## <a name="consuming-events-in-windows-components"></a>Utilizzo di eventi nei componenti di Windows
 
-Molti componenti di Windows Runtime espongono gli eventi. Ad esempio, un oggetto LightSensor genera un evento ReadingChanged quando il sensore segnala un nuovo valore di luminescenza. Quando usi un oggetto LightSensor nel programma, puoi definire un metodo che sarà chiamato quando viene generato l'evento ReadingChanged. Il metodo può eseguire qualsiasi desiderato da eseguire. l'unico requisito è che la firma deve corrispondere alla firma del delegato che viene richiamato. Per altre informazioni su come creare un gestore eventi del delegato e sottoscrivere un evento, vedere [delegati](../cppcx/delegates-c-cx.md).
+Molti componenti della Windows Runtime espongono eventi. Ad esempio, un oggetto LightSensor genera un evento ReadingChanged quando il sensore segnala un nuovo valore di luminescenza. Quando usi un oggetto LightSensor nel programma, puoi definire un metodo che sarà chiamato quando viene generato l'evento ReadingChanged. Il metodo può eseguire tutte le operazioni desiderate. l'unico requisito è che la firma deve corrispondere alla firma del delegato richiamato. Per ulteriori informazioni su come creare un gestore eventi delegato e sottoscrivere un evento, vedere [delegati](../cppcx/delegates-c-cx.md).
 
 ## <a name="creating-custom-events"></a>Creazione di eventi personalizzati
 
@@ -62,5 +62,5 @@ L'ordine in cui l'origine evento richiama i gestori eventi sui ricevitori di eve
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
 [Delegati](../cppcx/delegates-c-cx.md)<br/>
-[Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

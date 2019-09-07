@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 0676f4896401ab777570666236c4639ad94c3a05
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49cd4a8d3db436d5e3c4d29efbb4d80b4741a270
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503046"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739786"
 ---
 # <a name="colevariant-class"></a>Classe COleVariant
 
@@ -47,7 +47,7 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[COleVariant:: Connetti](#attach)|Connette un oggetto VARIANT a un `COleVariant`oggetto.|
 |[COleVariant::ChangeType](#changetype)|Modifica il tipo Variant di questo `COleVariant` oggetto.|
@@ -58,7 +58,7 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleVariant:: operator LPCVARIANT](#operator_lpcvariant)|Converte un `COleVariant` valore in un `LPCVARIANT`oggetto.|
 |[COleVariant:: operator LPVARIANT](#operator_lpvariant)|Converte un `COleVariant` oggetto in un `LPVARIANT`oggetto.|
@@ -68,14 +68,14 @@ class COleVariant : public tagVARIANT
 
 ## <a name="remarks"></a>Note
 
-Questo tipo di dati viene utilizzato nell'automazione OLE. In particolare, la struttura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams) contiene un puntatore a una matrice di strutture VARIANT. Per `DISPPARAMS` passare parametri a [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)viene utilizzata una struttura.
+Questo tipo di dati viene utilizzato nell'automazione OLE. In particolare, la struttura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) contiene un puntatore a una matrice di strutture VARIANT. Per `DISPPARAMS` passare parametri a [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)viene utilizzata una struttura.
 
 > [!NOTE]
 > Questa classe è derivata dalla `VARIANT` struttura. Ciò significa che è possibile passare `COleVariant` un oggetto in un parametro che chiama `VARIANT` per un e che `VARIANT` i membri dati della struttura sono membri dati accessibili `COleVariant`di.
 
 Le due classi MFC correlate [COleCurrency](../../mfc/reference/colecurrency-class.md) e [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) incapsulano i tipi di dati Variant `VT_CY`Currency () e `VT_DATE`date (). La `COleVariant` classe viene ampiamente utilizzata nelle classi DAO. vedere queste classi per l'utilizzo tipico di questa classe, ad esempio [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) e [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)e [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) nel Windows SDK.
+Per ulteriori informazioni, vedere le voci [Variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy~r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams)e [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) nel Windows SDK.
 
 Per ulteriori informazioni sulla `COleVariant` classe e sul relativo utilizzo nell'automazione OLE, vedere "passaggio di parametri in automazione OLE" nell'articolo [automazione](../../mfc/automation.md).
 

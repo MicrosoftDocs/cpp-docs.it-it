@@ -2,12 +2,12 @@
 title: Boxing (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90c5af31efc6523683227dbf54c85390bc98510a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257965"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740672"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 
@@ -19,9 +19,9 @@ Sebbene non sia necessario eseguire la conversione boxing di una variabile per p
 
 [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]
 
-### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Tramite platform:: ibox\<T > per supportare i tipi di valore nullable
+### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Uso di Platform::\<iBox T > per supportare i tipi di valore Nullable
 
-C# e Visual Basic supportano il concetto dei tipi di valore nullable. In C++//CX, è possibile usare il `Platform::IBox<T>` tipo di esporre metodi pubblici che supportano i parametri di tipo valore nullable. L'esempio seguente mostra una C++/CX metodo pubblico che restituisce null quando un C# chiamante passa null per uno degli argomenti.
+C# e Visual Basic supportano il concetto dei tipi di valore nullable. In C++/CX è possibile usare il tipo `Platform::IBox<T>` per esporre metodi pubblici che supportano i parametri di tipo valore Nullable. Nell'esempio seguente viene illustrato C++un metodo pubblico/CX che restituisce null quando C# un chiamante passa null per uno degli argomenti.
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 
@@ -40,5 +40,5 @@ In un client XAML C# puoi utilizzarlo nel modo seguente:
 
 [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [Cast (C++/CX)](../cppcx/casting-c-cx.md)<br/>
-[Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

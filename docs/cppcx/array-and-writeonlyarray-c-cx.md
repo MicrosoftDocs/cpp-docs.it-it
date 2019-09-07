@@ -2,16 +2,16 @@
 title: Array e WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ade7981d391288edd78f622b4753d546c5eaa04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209416"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740686"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array e WriteOnlyArray (C++/CX)
 
-È possibile usare liberamente matrici di tipo C regolari o [std:: Array](../standard-library/array-class-stl.md) in C + c++ /CX program (sebbene [std:: Vector](../standard-library/vector-class.md) è spesso una scelta migliore), ma in qualsiasi API pubblicata nei metadati, è necessario convertire una matrice di tipo C o vettoriale per una [platform:: Array](../cppcx/platform-array-class.md) oppure [platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo in base alla modalità di utilizzo. Il tipo [Platform::Array](../cppcx/platform-array-class.md) non è altrettanto efficace o potente di [std::vector](../standard-library/vector-class.md). Pertanto, come regola generale, se ne sconsiglia l'utilizzo in codice interno che esegue una grande quantità di operazioni sugli elementi di matrice.
+È possibile usare liberamente matrici di tipo C regolari o [std:: Array](../standard-library/array-class-stl.md) in un C++programma/CX (sebbene [std:: Vector](../standard-library/vector-class.md) sia spesso una scelta migliore), ma in qualsiasi API pubblicata nei metadati è necessario convertire un vettore o una matrice di tipo c in un oggetto [Platform:: Array ](../cppcx/platform-array-class.md)o tipo [Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) a seconda del modo in cui viene usato. Il tipo [Platform::Array](../cppcx/platform-array-class.md) non è altrettanto efficace o potente di [std::vector](../standard-library/vector-class.md). Pertanto, come regola generale, se ne sconsiglia l'utilizzo in codice interno che esegue una grande quantità di operazioni sugli elementi di matrice.
 
 I seguenti tipi di matrice possono essere passati attraverso l'ABI:
 
@@ -23,17 +23,17 @@ I seguenti tipi di matrice possono essere passati attraverso l'ABI:
 
 1. valore restituito di Platform::Array^
 
-Questi tipi di matrice consentono di implementare i tre tipi di modelli di matrice definiti da Windows Runtime.
+Questi tipi di matrici vengono usati per implementare i tre tipi di modelli di matrice definiti dal Windows Runtime.
 
-PassArray utilizzato quando il chiamante passa una matrice a un metodo. Il tipo di parametro di input C++ è `const` [platform:: Array](../cppcx/platform-array-class.md)\<T >.
+PassArray utilizzato quando il chiamante passa una matrice a un metodo. Il C++ tipo di parametro di `const`input è [Platform:: Array](../cppcx/platform-array-class.md)\<T >.
 
-FillArray usato quando il chiamante passa una matrice per il metodo da riempire. Il tipo di parametro di input C++ è [platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >.
+FillArray utilizzato quando il chiamante passa una matrice per il metodo da riempire. Il C++ tipo di parametro di input è [Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)\<T >.
 
-ReceiveArray utilizzato quando il chiamante riceve una matrice che il metodo alloca. In C++/CX è possibile restituire la matrice nel valore restituito come Array^ oppure come parametro out come tipo Array^*.
+ReceiveArray utilizzato quando il chiamante riceve una matrice allocata dal metodo. In C++/CX è possibile restituire la matrice nel valore restituito come Array^ oppure come parametro out come tipo Array^*.
 
 ## <a name="passarray-pattern"></a>Modello PassArray
 
-Quando il codice client passa una matrice a un metodo C++ e il metodo non la modifica, la matrice viene accettata come const Array^. A livello di interfaccia binaria (ABI) applicazione di Windows Runtime, questo è noto come PassArray. Nell'esempio riportato di seguito viene illustrato come passare una matrice allocata in JavaScript a una funzione di C++ che la legge.
+Quando il codice client passa una matrice a un metodo C++ e il metodo non la modifica, la matrice viene accettata come const Array^. Al livello Windows Runtime dell'interfaccia ABI (Application Binary Interface), questo è noto come PassArray. Nell'esempio riportato di seguito viene illustrato come passare una matrice allocata in JavaScript a una funzione di C++ che la legge.
 
 [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]
 
@@ -43,7 +43,7 @@ Nel frammento riportato di seguito viene mostrato il metodo C++.
 
 ## <a name="receivearray-pattern"></a>Modello ReceiveArray
 
-Nel modello ReceiveArray, il codice client dichiara una matrice e la passa a un metodo che ne alloca la memoria e la inizializza. Il tipo di parametro di input C++ è un puntatore a handle: `Array<T>^*`. Nell'esempio riportato di seguito viene illustrato come dichiarare un oggetto matrice in JavaScript e passarlo a una funzione di C++ che alloca la memoria, inizializza gli elementi e lo restituisce al linguaggio JavaScript. JavaScript tratta la matrice allocata come un valore restituito, mentre la funzione di C++ la tratta come un parametro out.
+Nel modello ReceiveArray, il codice client dichiara una matrice e la passa a un metodo che ne alloca la memoria e la inizializza. Il C++ tipo di parametro di input è un puntatore a Hat: `Array<T>^*`. Nell'esempio riportato di seguito viene illustrato come dichiarare un oggetto matrice in JavaScript e passarlo a una funzione di C++ che alloca la memoria, inizializza gli elementi e lo restituisce al linguaggio JavaScript. JavaScript tratta la matrice allocata come un valore restituito, mentre la funzione di C++ la tratta come un parametro out.
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
@@ -90,5 +90,5 @@ In generale, evita di esporre un tipo `Platform::Array` come proprietà in una c
 ## <a name="see-also"></a>Vedere anche
 
 [Sistema di tipi](../cppcx/type-system-c-cx.md)<br/>
-[Riferimenti al linguaggio Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Riferimenti al linguaggio C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

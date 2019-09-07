@@ -7,19 +7,19 @@ helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
 ms.openlocfilehash: ceaa5cd647dfb527713613b9ce3b5cd81a780fd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657730"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741382"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>Avviso del compilatore (livello 4) C4673
 
-generare i tipi seguenti di 'identifier' non verrà considerata sito di rilevamento
+generando ' Identifier ' i tipi seguenti non verranno considerati nel sito catch
 
-Un oggetto gettare non può essere gestito nel **catch** blocco. Ogni tipo che non può essere gestito è elencato nell'output degli errori immediatamente dopo la riga contenente l'avviso. Ogni tipo non gestito ha un proprio avviso. Leggere l'avviso per ogni tipo specifico per altre informazioni.
+Non è possibile gestire un oggetto Throw nel blocco **catch** . Ogni tipo che non può essere gestito viene elencato nell'output degli errori immediatamente dopo la riga contenente questo avviso. Ogni tipo non gestito presenta un proprio avviso. Per ulteriori informazioni, leggere l'avviso per ogni tipo specifico.
 
-L'esempio seguente genera l'errore C4673:
+L'esempio seguente genera l'C4673:
 
 ```
 // C4673.cpp

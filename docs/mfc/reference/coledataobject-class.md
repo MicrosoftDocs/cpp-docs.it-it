@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: c25fd7e91c59d7bea06325fbb27471d8f90f589d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504243"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741634"
 ---
 # <a name="coledataobject-class"></a>Classe COleDataObject
 
@@ -49,13 +49,13 @@ class COleDataObject
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[COleDataObject:: COleDataObject](#coledataobject)|Costruisce un oggetto `COleDataObject`.|
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[COleDataObject:: Connetti](#attach)|Connette l'oggetto dati OLE specificato a `COleDataObject`.|
 |[COleDataObject:: AttachClipboard](#attachclipboard)|Connette l'oggetto dati presente negli Appunti.|
@@ -76,7 +76,7 @@ Questi tipi di trasferimenti di dati includono un'origine e una destinazione. L'
 
 Questa classe consente di determinare se i dati esistono in un formato specificato. È anche possibile enumerare i formati di dati disponibili o controllare se è disponibile un determinato formato, quindi recuperare i dati nel formato preferito. Il recupero di oggetti può essere eseguito in diversi modi, tra cui l'uso di un [CFile](../../mfc/reference/cfile-class.md), di un HGLOBAL o `STGMEDIUM` di una struttura.
 
-Per ulteriori informazioni, vedere la struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) nella Windows SDK.
+Per ulteriori informazioni, vedere la struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) nella Windows SDK.
 
 Per ulteriori informazioni sull'utilizzo di oggetti dati nell'applicazione, vedere l'articolo [oggetti dati e origini dati (OLE)](../../mfc/data-objects-and-data-sources-ole.md).
 
@@ -189,7 +189,7 @@ BOOL GetData(
 Formato in cui devono essere restituiti i dati. Questo parametro può essere uno dei formati degli appunti predefiniti oppure il valore restituito dalla funzione nativa [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) di Windows.
 
 *lpStgMedium*<br/>
-Punta a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium) che riceverà i dati.
+Punta a una struttura [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) che riceverà i dati.
 
 *lpFormatEtc*<br/>
 Punta a una struttura [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) che descrive il formato in cui devono essere restituiti i dati. Fornire un valore per questo parametro se si desidera specificare informazioni aggiuntive sul formato oltre il formato degli Appunti specificato da *cfFormat*. Se è null, vengono usati i valori predefiniti per gli altri campi nella `FORMATETC` struttura.
@@ -200,7 +200,7 @@ Diverso da zero se ha esito positivo; in caso contrario 0.
 
 ### <a name="remarks"></a>Note
 
-Per ulteriori informazioni, vedere [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium)e [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) nel Windows SDK.
+Per ulteriori informazioni, vedere [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata), [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)e [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) nel Windows SDK.
 
 Per ulteriori informazioni, vedere [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) nel Windows SDK.
 

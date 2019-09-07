@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 5e7a0b0d7f5c41c60fc10784518c4c075c13f778
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bbd1f60c3628d5fcd103e220362004ec34ab2c41
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502138"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740999"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1093,7 +1093,7 @@ class CWnd : public CCmdTarget
 |[CWnd::D predefinito](#default)|Chiama la routine predefinita per la finestra, che fornisce l'elaborazione predefinita per gli eventuali messaggi della finestra non elaborati da un'applicazione.|
 |[CWnd::DefWindowProc](#defwindowproc)|Chiama la routine predefinita per la finestra, che fornisce l'elaborazione predefinita per gli eventuali messaggi della finestra non elaborati da un'applicazione.|
 |[CWnd::DoDataExchange](#dodataexchange)|Per inviare, ricevere e convalidare i dati della finestra di dialogo. Chiamato da `UpdateData`.|
-|[CWnd::GetCurrentMessage](#getcurrentmessage)|Restituisce un puntatore al messaggio che questa finestra sta elaborando. Deve essere chiamato solo quando in una `On`funzione membro del gestore messaggi Message.|
+|[CWnd::GetCurrentMessage](#getcurrentmessage)|Restituisce un puntatore al messaggio che questa finestra sta elaborando. Deve essere chiamato solo quando in una `On`funzione membro del gestore *messaggi Message.*|
 |[CWnd::InitDynamicLayout](#initdynamiclayout)|Chiamata eseguita dal framework per inizializzare il layout dinamico per la finestra.|
 |[CWnd::LoadDynamicLayoutResource](#loaddynamiclayoutresource)|Carica le informazioni di layout dinamico dal file di risorse.|
 |[CWnd::OnActivate](#onactivate)|Chiamata eseguita quando è in corso l'attivazione o la disattivazione di `CWnd`.|
@@ -1275,7 +1275,7 @@ class CWnd : public CCmdTarget
 
 Un oggetto `CWnd` è diverso da una finestra di Windows, ma i due oggetti sono strettamente collegati. Un oggetto `CWnd` viene creato o eliminato definitivamente dal costruttore e distruttore `CWnd`. La finestra di Windows, d'altra parte, è una struttura di dati interna di Windows creata da una `Create` funzione membro ed eliminata definitivamente `CWnd` dal distruttore virtuale. La funzione [DestroyWindow](#destroywindow) Elimina la finestra di Windows senza eliminare definitivamente l'oggetto.
 
-La `CWnd` classe e il meccanismo della mappa messaggi nascondono `WndProc` la funzione. I messaggi di notifica di Windows in arrivo vengono instradati automaticamente tramite la mappamessaggi alle funzioni membro del<em>messaggio</em> `CWnd` appropriate. Si esegue l'override di una funzione membro di<em>messaggio</em> per gestire un messaggio specifico di un membro nelle classi derivate.
+La `CWnd` classe e il meccanismo della mappa messaggi nascondono `WndProc` la funzione. I messaggi di notifica di Windows in arrivo vengono instradati automaticamente tramite la mappa messaggi alle funzioni **membro del**<em>messaggio</em> `CWnd` appropriate. Si esegue l'override **di una funzione membro di**<em>messaggio</em> per gestire un messaggio specifico di un membro nelle classi derivate.
 
 La classe `CWnd` consente inoltre di creare una finestra figlio di Windows per l'applicazione. Derivare una classe da `CWnd` e quindi aggiungere le variabili membro alla classe derivata per archiviare i dati specifici dell'applicazione. Implementare funzioni membro di gestione dei messaggi e una mappa messaggi nella classe derivata per specificare cosa succede quando i messaggi vengono indirizzati alla finestra.
 
@@ -1944,7 +1944,7 @@ TRUE se il metodo ha avuto esito positivo; in caso contrario, FALSE.
 
 Utilizzare la funzione [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) per registrare le classi della finestra. Le classi finestra definite dall'utente sono disponibili nel modulo in cui sono registrate.
 
-Il metodo [CWnd::](#oncreate) OnCreate viene chiamato prima `Create` che il metodo venga restituito e prima che la finestra diventi visibile.
+Il metodo [CWnd:: OnCreate](#oncreate) viene chiamato prima `Create` che il metodo venga restituito e prima che la finestra diventi visibile.
 
 ### <a name="example"></a>Esempio
 
@@ -2169,7 +2169,7 @@ Per una finestra figlio, l'handle per la finestra padre; in caso contrario, l'ha
 Per una finestra figlio, l'ID della finestra; in caso contrario, l'ID di un menu per la finestra.
 
 *lpParam*<br/>
-Puntatore ai dati utente passati al metodo [CWnd::](#oncreate) OnCreate nel campo *lpCreateParams* .
+Puntatore ai dati utente passati al metodo [CWnd:: OnCreate](#oncreate) nel campo *lpCreateParams* .
 
 *rect*<br/>
 Dimensioni e posizione della finestra rispetto alla schermata o alla finestra padre.
@@ -2197,7 +2197,7 @@ Utilizzare la funzione [AfxRegisterWndClass](../../mfc/reference/application-inf
 
 Le dimensioni delle finestre figlio sono relative all'angolo superiore sinistro dell'area client della finestra padre. Le dimensioni delle finestre di primo livello sono relative all'angolo superiore sinistro dello schermo.
 
-Il metodo [CWnd::](#oncreate) OnCreate viene chiamato prima `CreateEx` che il metodo venga restituito e prima che la finestra diventi visibile.
+Il metodo [CWnd:: OnCreate](#oncreate) viene chiamato prima `CreateEx` che il metodo venga restituito e prima che la finestra diventi visibile.
 
 ### <a name="example"></a>Esempio
 
@@ -2864,12 +2864,12 @@ TRUE se le descrizioni comandi sono abilitate; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Eseguire l'override di [OnToolHitTest](#ontoolhittest) per fornire lo struct o gli struct [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) per la finestra.
+Eseguire l'override di [OnToolHitTest](#ontoolhittest) per fornire lo struct o gli struct [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) per la finestra.
 
 > [!NOTE]
 > Alcune finestre, ad esempio [CToolBar](../../mfc/reference/ctoolbar-class.md), forniscono un'implementazione incorporata di [OnToolHitTest](#ontoolhittest).
 
-Per ulteriori informazioni su questa struttura, vedere [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) nel Windows SDK.
+Per ulteriori informazioni su questa struttura, vedere [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) nel Windows SDK.
 
 Semplicemente chiamare `EnableToolTips` non è sufficiente per visualizzare le descrizioni comandi per i controlli figlio, a meno che la finestra padre `CFrameWnd`non derivi da. Questo perché `CFrameWnd` fornisce un gestore predefinito per la notifica TTN_NEEDTEXT. Se la finestra padre non deriva da `CFrameWnd`, ovvero se si tratta di una finestra di dialogo o di una visualizzazione form, le descrizioni comandi per i controlli figlio non vengono visualizzate correttamente a meno che non si fornisca un gestore per la notifica della descrizione comando TTN_NEEDTEXT. Vedere le [descrizioni comandi](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
@@ -3780,7 +3780,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla struttura [msg](/windows/win32/api/winuser/ns-winuser-msg) che contiene il messaggio attualmente elaborato dalla finestra. Deve essere chiamato solo quando si trovain un gestore di<em>messaggi</em> in.
+Restituisce un puntatore alla struttura [msg](/windows/win32/api/winuser/ns-winuser-msg) che contiene il messaggio attualmente elaborato dalla finestra. Deve essere chiamato solo quando si trova **in un gestore**di<em>messaggi</em> in.
 
 ### <a name="example"></a>Esempio
 
@@ -5562,7 +5562,7 @@ I messaggi [WM_TIMER](#ontimer) in sospeso associati al timer non vengono rimoss
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio per [CWnd::](#settimer)setimer.
+  Vedere l'esempio per [CWnd:: setimer](#settimer).
 
 ##  <a name="loaddynamiclayoutresource"></a>  CWnd::LoadDynamicLayoutResource
 
@@ -5683,7 +5683,7 @@ Di seguito vengono illustrate le varie icone di sistema che possono essere utili
 |||
 |-|-|
 |![Icona Arresta&#41; x icona Arresta x &#40;](../../mfc/reference/media/vc364f1.gif " &#40;&#41; ")|MB_ICONHAND, MB_ICONSTOP e MB_ICONERROR|
-|![Assistenza &#40;? &#41; ](../../mfc/reference/media/vc364f2.gif "icona &#40;? icona&#41; ?")|MB_ICONQUESTION|
+|![Assistenza &#40;? icona &#41; ](../../mfc/reference/media/vc364f2.gif "&#41; ? icona? &#40;")|MB_ICONQUESTION|
 |![Icona &#40; &#33; &#41; ](../../mfc/reference/media/vc364f3.gif " &#40; &#33; &#41; ")|MB_ICONEXCLAMATION e MB_ICONWARNING|
 |![Icona informazioni&#41; &#40;](../../mfc/reference/media/vc364f4.gif " &#40;&#41; ")|MB_ICONASTERISK e MB_ICONINFORMATION|
 
@@ -5850,7 +5850,7 @@ void NotifyWinEvent(
 Specifica l'evento che si è verificato. Questo valore deve essere una delle [costanti dell'evento](/windows/win32/WinAuto/event-constants).
 
 *idObjectType*<br/>
-Identifica il tipo di oggetto che ha generato l'evento. Questo valore è uno degli identificatori di [oggetto](/windows/win32/WinAuto/object-identifiers) predefiniti o un valore ID oggetto personalizzato.
+Identifica il tipo di oggetto che ha generato l'evento. Questo valore è uno degli [identificatori di oggetto](/windows/win32/WinAuto/object-identifiers) predefiniti o un valore ID oggetto personalizzato.
 
 *idObject*<br/>
 Indica se l'evento è stato generato da un oggetto o da un elemento figlio dell'oggetto. Se questo valore è CHILDID_SELF, l'evento è stato generato dall'oggetto stesso. In caso contrario, questo valore è l'ID figlio dell'elemento che ha generato l'evento.
@@ -6809,7 +6809,7 @@ Specifica se la sessione è stata terminata. È TRUE se la sessione è stata ter
 
 La `OnEndSession` chiamata informa l' `CWnd` oggetto se la sessione sta effettivamente terminando.
 
-Se la curvatura è true, Windows può terminare in qualsiasi momento dopo che tutte le applicazioni sono state restituite dall'elaborazione della chiamata. Quindi, fare in modo che un'applicazione esegua tutte le attività `OnEndSession`necessarie per la terminazione all'interno di.
+Se la *curvatura* è true, Windows può terminare in qualsiasi momento dopo che tutte le applicazioni sono state restituite dall'elaborazione della chiamata. Quindi, fare in modo che un'applicazione esegua tutte le attività `OnEndSession`necessarie per la terminazione all'interno di.
 
 Non è necessario chiamare la funzione membro [DestroyWindow](#destroywindow) o la funzione [PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) di Windows al termine della sessione.
 
@@ -7325,7 +7325,7 @@ afx_msg void OnInputLangChange(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nCharSet*|in Set di caratteri delle nuove impostazioni locali. Per ulteriori informazioni, vedere il parametro *lfCharSet* della struttura [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .|
-|*nLocaleId*|in Identificatore delle impostazioni locali di input. Per altre informazioni, vedere [costanti e stringhe](/windows/win32/Intl/language-identifier-constants-and-strings)degli identificatori di lingua.|
+|*nLocaleId*|in Identificatore delle impostazioni locali di input. Per altre informazioni, vedere [costanti e stringhe degli identificatori di lingua](/windows/win32/Intl/language-identifier-constants-and-strings).|
 
 ### <a name="remarks"></a>Note
 
@@ -7349,7 +7349,7 @@ afx_msg void OnInputLangChangeRequest(
 |Parametro|Descrizione|
 |---------------|-----------------|
 |*nFlags*|in Una combinazione OR bit per bit di flag che indicano che le nuove impostazioni locali sono state selezionate dalle impostazioni locali precedenti o successive nell'elenco di impostazioni locali installate oppure che è possibile utilizzare il nuovo layout della tastiera delle impostazioni locali di input con il set di caratteri di sistema.<br /><br /> I valori possibili sono INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD e INPUTLANGCHANGE_SYSCHARSET.|
-|*nLocaleId*|in Identificatore delle impostazioni locali di input. Per altre informazioni, vedere [costanti e stringhe](/windows/win32/Intl/language-identifier-constants-and-strings)degli identificatori di lingua.|
+|*nLocaleId*|in Identificatore delle impostazioni locali di input. Per altre informazioni, vedere [costanti e stringhe degli identificatori di lingua](/windows/win32/Intl/language-identifier-constants-and-strings).|
 
 ### <a name="remarks"></a>Note
 
@@ -9840,7 +9840,7 @@ La funzione [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmess
 
 ### <a name="example"></a>Esempio
 
-  Vedere l'esempio in [CWnd::](#settimer)setimer.
+  Vedere l'esempio in [CWnd:: setimer](#settimer).
 
 ##  <a name="ontoolhittest"></a>  CWnd::OnToolHitTest
 
@@ -9858,7 +9858,7 @@ virtual INT_PTR OnToolHitTest(
 Specifica la coordinata x e y del cursore. Queste coordinate sono sempre relative all'angolo superiore sinistro della finestra
 
 *pTI*<br/>
-Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) . Per impostazione predefinita, vengono impostati i valori di struttura seguenti:
+Puntatore a una struttura [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) . Per impostazione predefinita, vengono impostati i valori di struttura seguenti:
 
 - *Handle HWND*  =  aunafinestra`m_hWnd`
 
@@ -9880,7 +9880,7 @@ Se l'area a cui è associata la descrizione comandi non è un pulsante `OnToolHi
 
 Eseguire `OnToolHitTest` l'override di per fornire informazioni diverse da quelle predefinite.
 
-Per ulteriori informazioni sulla struttura, vedere [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)nel Windows SDK.
+Per ulteriori informazioni sulla struttura, vedere [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)nel Windows SDK.
 
 ##  <a name="ontouchinput"></a>  CWnd::OnTouchInput
 
@@ -10220,7 +10220,7 @@ Punta a una `WINDOWPOS` struttura di dati che contiene informazioni sulle nuove 
 
 ### <a name="remarks"></a>Note
 
-Un'applicazione può impedire modifiche alla finestra impostando o deselezionando i bit appropriati nel membro Flags della struttura [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) .
+Un'applicazione può impedire modifiche alla finestra impostando o deselezionando i bit appropriati nel membro **Flags** della struttura [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos) .
 
 Per una finestra con lo stile [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) o [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) , l'implementazione predefinita Invia un messaggio [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo) alla finestra. Questa operazione viene eseguita per convalidare le nuove dimensioni e la nuova posizione della finestra e per applicare gli stili client CS_BYTEALIGNCLIENT e CS_BYTEALIGN. Un'applicazione può eseguire l'override di questa funzionalità non chiamando la relativa classe di base.
 
