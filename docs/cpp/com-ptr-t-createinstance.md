@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - CreateInstance method [C++]
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
-ms.openlocfilehash: c4f6cd54b90ab5fab69f91df67a8bf60b0b658f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b180b3f40683495ed2cfa284bdae8e1afaef9e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399365"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498655"
 ---
-# <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
+# <a name="_com_ptr_tcreateinstance"></a>_com_ptr_t::CreateInstance
 
 **Sezione specifica Microsoft**
 
-Crea una nuova istanza di un oggetto dato un `CLSID` o `ProgID`.
+Crea una nuova istanza di un oggetto in base `CLSID` a `ProgID`un oggetto o.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -42,29 +42,29 @@ HRESULT CreateInstance(
 #### <a name="parameters"></a>Parametri
 
 *rclsid*<br/>
-Il `CLSID` di un oggetto.
+Oggetto `CLSID` di un oggetto.
 
 *clsidString*<br/>
-Una stringa Unicode che contiene un `CLSID` (a partire da " **{** ") o un `ProgID`.
+Stringa Unicode che include un oggetto `CLSID` (a partire da " **{** `ProgID`") o.
 
 *clsidStringA*<br/>
-Una stringa multibyte che utilizza la tabella codici ANSI, che contiene un `CLSID` (a partire da " **{** ") o un `ProgID`.
+Stringa multibyte, che utilizza la tabella codici ANSI, che include un oggetto `CLSID` (a partire da " **{** `ProgID`") o.
 
 *dwClsContext*<br/>
 Contesto del codice eseguibile in esecuzione.
 
 *pOuter*<br/>
-Unknown esterno di [aggregazione](../atl/aggregation.md).
+Oggetto sconosciuto esterno per l' [aggregazione](../atl/aggregation.md).
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni membro chiamano `CoCreateInstance` per creare un nuovo oggetto COM e delle query per questo tipo di interfaccia del puntatore intelligente. Il puntatore risultante viene incapsulato in questo oggetto `_com_ptr_t`. `Release` viene chiamato per diminuire il conteggio dei riferimenti del puntatore incapsulato in precedenza. Questa routine restituisce il valore HRESULT per indicare esito positivo o negativo.
+Queste funzioni membro chiamano `CoCreateInstance` per creare un nuovo oggetto COM e delle query per questo tipo di interfaccia del puntatore intelligente. Il puntatore risultante viene incapsulato in questo oggetto `_com_ptr_t`. `Release`viene chiamato per decrementare il conteggio dei riferimenti per il puntatore incapsulato in precedenza. Questa routine restituisce HRESULT per indicare l'esito positivo o negativo.
 
 - **CreateInstance (** *rclsid* **,** *dwClsContext* **)** crea una nuova istanza in esecuzione di un oggetto dato un `CLSID`.
 
 - **CreateInstance (** *clsidString* **,** *dwClsContext* **)** crea una nuova istanza in esecuzione di un oggetto dato un Stringa Unicode che contiene un `CLSID` (a partire da " **{** ") o un `ProgID`.
 
-- **CreateInstance (** *clsidStringA* **,** *dwClsContext* **)** crea una nuova istanza in esecuzione di un oggetto dato un stringa di caratteri multibyte che contiene un `CLSID` (a partire da " **{** ") o un `ProgID`. Le chiamate [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar), che presuppone che la stringa sia la tabella codici ANSI anziché una tabella codici OEM.
+- **CreateInstance (** *clsidStringA* **,** *dwClsContext* **)** crea una nuova istanza in esecuzione di un oggetto dato un stringa di caratteri multibyte che contiene un `CLSID` (a partire da " **{** ") o un `ProgID`. Chiama [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), che presuppone che la stringa si trovi nella tabella codici ANSI anziché in una tabella codici OEM.
 
 **Fine sezione specifica Microsoft**
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154877"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498704"
 ---
-# <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
+# <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Sezione specifica Microsoft**
 
-Costruisce un **com_ptr_t** oggetto.
+Costruisce un oggetto **_com_ptr_t** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -139,28 +139,28 @@ explicit _com_ptr_t(
 Puntatore a interfaccia raw.
 
 *fAddRef*<br/>
-Se TRUE, `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.
+Se true, `AddRef` viene chiamato per incrementare il conteggio dei riferimenti del puntatore a interfaccia incapsulato.
 
 *cp*<br/>
-Oggetto **com_ptr_t** oggetto.
+Oggetto **_com_ptr_t** .
 
 *p*<br/>
-Un puntatore a interfaccia raw, tipo relativo diverso dal tipo di puntatore intelligente di questo **com_ptr_t** oggetto.
+Puntatore a interfaccia raw, il cui tipo è diverso dal tipo di puntatore intelligente di questo oggetto **_com_ptr_t** .
 
 *varSrc*<br/>
 Oggetto `_variant_t`.
 
 *clsid*<br/>
-Il `CLSID` di una coclasse.
+`CLSID` Di una coclasse.
 
 *dwClsContext*<br/>
 Contesto del codice eseguibile in esecuzione.
 
 *lpcStr*<br/>
-Stringa multibyte che contiene un `CLSID` (a partire da "**{**") o un `ProgID`.
+Stringa multibyte che include un oggetto `CLSID` (a partire da " **{** `ProgID`") o.
 
 *pOuter*<br/>
-Unknown esterno di [aggregazione](/windows/desktop/com/aggregation).
+Oggetto sconosciuto esterno per l' [aggregazione](/windows/win32/com/aggregation).
 
 ## <a name="see-also"></a>Vedere anche
 

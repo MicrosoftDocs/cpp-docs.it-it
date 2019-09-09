@@ -51,20 +51,20 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|DESCRIZIONE|
+|Costruttore|Descrizione|
 |-|-|
 |[collate](#collate)|Costruttore per gli oggetti della classe `collate` utilizzato come facet delle impostazioni locali per gestire le convenzioni di ordinamento delle stringhe.|
 
 ### <a name="typedefs"></a>Definizioni typedef
 
-|Nome del tipo|DESCRIZIONE|
+|Nome del tipo|Descrizione|
 |-|-|
 |[char_type](#char_type)|Tipo che descrive un carattere di tipo `CharType`.|
 |[string_type](#string_type)|Tipo che descrive una stringa di tipo `basic_string` contenente caratteri di tipo `CharType`.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[compare](#compare)|Confronta due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.|
 |[do_compare](#do_compare)|Funzione virtuale chiamata per confrontare due sequenze di caratteri in base alle regole specifiche del relativo facet per verificarne l'uguaglianza o la disuguaglianza.|
@@ -124,7 +124,7 @@ I valori possibili per il parametro *_Refs* e il relativo significato sono:
 
 - \> 1: Questi valori non sono definiti.
 
-Il costruttore inizializza l'oggetto di base con **locale::** [](../standard-library/locale-class.md#facet_class)facet`_Refs`().
+Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
 ## <a name="compare"></a> collate::compare
 
@@ -155,9 +155,9 @@ Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 La funzione membro restituisce:
 
-- \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
+- - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- + 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 
@@ -221,9 +221,9 @@ Puntatore all'ultimo elemento nella seconda sequenza da confrontare.
 
 La funzione membro restituisce:
 
-- \- 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
+- - 1 se la prima sequenza ottiene un risultato inferiore nel confronto con la seconda sequenza.
 
-- \+ 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
+- + 1 se la seconda sequenza ottiene un risultato inferiore nel confronto con la prima sequenza.
 
 - 0 se le sequenze sono equivalenti.
 

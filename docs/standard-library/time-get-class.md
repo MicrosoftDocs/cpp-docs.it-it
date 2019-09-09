@@ -45,7 +45,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460018"
 ---
-# <a name="timeget-class"></a>Classe time_get
+# <a name="time_get-class"></a>Classe time_get
 
 La classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni delle sequenze di tipo `CharType` in valori temporali.
 
@@ -84,7 +84,7 @@ Come in qualsiasi facet delle impostazioni locali, l'ID dell'oggetto statico ha 
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|Descrizione|
+|Funzione membro|DESCRIZIONE|
 |-|-|
 |[date_order](#date_order)|Restituisce l'ordine della data utilizzato da un facet.|
 |[do_date_order](#do_date_order)|Funzione membro virtuale protetta chiamata per restituire l'ordine della data utilizzato da un facet.|
@@ -476,7 +476,7 @@ Iteratore di input che punta al primo elemento oltre il campo di input.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta tenta di trovare la corrispondenza con elementi  sequenziali a partire da `first`First `last`nella sequenza [,) fino a quando non viene riconosciuto un campo di input giorno della settimana completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: TM\_wDay**e archivia il risultato in. `ptm->tm_wday` Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo giorno della settimana. In caso contrario, la `ios_base::failbit` funzione imposta *lo stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo giorno della settimana valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la `ios_base::eofbit` funzione imposta in *state*.
+La funzione membro virtuale protetta tenta di trovare la corrispondenza con elementi sequenziali a partire da `first`First `last`nella sequenza [,) fino a quando non viene riconosciuto un campo di input giorno della settimana completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: TM\_wDay**e archivia il risultato in. `ptm->tm_wday` Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo giorno della settimana. In caso contrario, la `ios_base::failbit` funzione imposta *lo stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo giorno della settimana valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la `ios_base::eofbit` funzione imposta in *state*.
 
 Il campo di input di tipo giorno della settimana è una sequenza corrispondente alla sequenza più lunga di un set di sequenze specifiche delle impostazioni locali, ad esempio Dom, Domenica, Lun, Lunedì e così via. Il valore convertito è il numero di giorni a partire da Domenica.
 
@@ -519,7 +519,7 @@ Iteratore di input che punta al primo elemento oltre il campo di input.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro virtuale protetta tenta di trovare la corrispondenza con elementi  sequenziali a partire da `first`First `last`nella sequenza [,) fino a quando non viene riconosciuto un campo di input anno completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: TM\_Year**e archivia il risultato in. `ptm->tm_year` Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo anno. In caso contrario, la `ios_base::failbit` funzione imposta *lo stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo anno valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la `ios_base::eofbit` funzione imposta in *state*.
+La funzione membro virtuale protetta tenta di trovare la corrispondenza con elementi sequenziali a partire da `first`First `last`nella sequenza [,) fino a quando non viene riconosciuto un campo di input anno completo e non vuoto. Se ha esito positivo, converte questo campo nel valore equivalente come componente **TM:: TM\_Year**e archivia il risultato in. `ptm->tm_year` Restituisce un iteratore che designa il primo elemento successivo al campo di input di tipo anno. In caso contrario, la `ios_base::failbit` funzione imposta *lo stato*. Restituisce un iteratore che designa il primo elemento successivo a qualsiasi prefisso di un campo di input di tipo anno valido. In entrambi i casi, se il valore restituito è uguale a *Last*, la `ios_base::eofbit` funzione imposta in *state*.
 
 Il campo di input di tipo anno è una sequenza di cifre decimali il cui valore numerico corrispondente deve essere compreso nell'intervallo [1900, 2036). Il valore archiviato è questo valore meno 1900. In questa implementazione i valori compresi nell'intervallo [69, 136) rappresentano l'intervallo di anni [1969, 2036). Sono consentiti anche i valori compresi nell'intervallo [0, 69). Tali valori, tuttavia, possono rappresentare l'intervallo di anni [1900, 1969) o l'intervallo di anni [2000, 2069), a seconda dell'ambiente di conversione specifico.
 
@@ -1055,7 +1055,7 @@ I valori possibili per il parametro *refs* e il relativo significato sono:
 
 Non è possibile fornire esempi diretti, poiché il distruttore è protetto.
 
-Il costruttore inizializza l'oggetto di base con **locale::** [](../standard-library/locale-class.md#facet_class)facet`refs`().
+Il costruttore inizializza l'oggetto di base con **locale::** [facet](../standard-library/locale-class.md#facet_class)(`refs`).
 
 ## <a name="see-also"></a>Vedere anche
 

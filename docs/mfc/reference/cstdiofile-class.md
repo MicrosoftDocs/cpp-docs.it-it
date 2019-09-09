@@ -1,6 +1,6 @@
 ---
 title: Classe CStdioFile
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CStdioFile
 - AFX/CStdioFile
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: 068e59fdc19821487bc78141d10743363221518e
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 4b667f4121d92863335befda3a7beef74f29ad1a
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375843"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177485"
 ---
 # <a name="cstdiofile-class"></a>Classe CStdioFile
 
-Rappresenta un file di flusso della fase di esecuzione del linguaggio C aperto dalla funzione di [](../../c-runtime-library/reference/fopen-wfopen.md)Runtime fopen.
+Rappresenta un file di flusso della fase di esecuzione del linguaggio C aperto dalla funzione di runtime [fopen](../../c-runtime-library/reference/fopen-wfopen.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,7 +39,7 @@ class CStdioFile : public CFile
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|DESCRIZIONE|
+|Nome|Descrizione|
 |----------|-----------------|
 |[CStdioFile::CStdioFile](#cstdiofile)|Costruisce un `CStdioFile` oggetto da un puntatore a un percorso o a un file.|
 
@@ -54,7 +54,7 @@ class CStdioFile : public CFile
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Name|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
 |[CStdioFile::m_pStream](#m_pstream)|Contiene un puntatore a un file aperto.|
 
@@ -89,7 +89,7 @@ Costruisce e inizializza un oggetto `CStdioFile`.
 ```
 CStdioFile();
 CStdioFile(CAtlTransactionManager* pTM);
-  CStdioFile(FILE* pOpenStream);
+CStdioFile(FILE* pOpenStream);
 
 CStdioFile(
     LPCTSTR lpszFileName,
@@ -104,7 +104,7 @@ CStdioFile(
 ### <a name="parameters"></a>Parametri
 
 *pOpenStream*<br/>
-Specifica il puntatore del file restituito da una chiamata alla funzione di runtime del linguaggio [](../../c-runtime-library/reference/fopen-wfopen.md)C fopen.
+Specifica il puntatore del file restituito da una chiamata alla funzione di runtime del linguaggio C [fopen](../../c-runtime-library/reference/fopen-wfopen.md).
 
 *lpszFileName*<br/>
 Specifica una stringa che rappresenta il percorso del file desiderato. Il percorso può essere relativo o assoluto.

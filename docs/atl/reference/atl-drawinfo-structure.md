@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 728a7eed418a6600c9247b91ff7b777dd458e621
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503425"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498014"
 ---
-# <a name="atldrawinfo-structure"></a>Struttura ATL_DRAWINFO
+# <a name="atl_drawinfo-structure"></a>Struttura ATL_DRAWINFO
 
-Contiene informazioni utilizzate per il rendering a destinazioni diverse, ad esempio una stampante, metafile o controllo ActiveX.
+Contiene informazioni utilizzate per il rendering in varie destinazioni, ad esempio una stampante, un metafile o un controllo ActiveX.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,52 +39,52 @@ struct ATL_DRAWINFO {
 };
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 `cbSize`<br/>
-Le dimensioni della struttura, in byte.
+Dimensioni, in byte, della struttura.
 
 `dwDrawAspect`<br/>
-Specifica come destinazione deve essere rappresentato. Rappresentazioni possono includere contenuto, un'icona, un'immagine di anteprima o un documento stampato. Per un elenco di valori possibili, vedere [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect) e [DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2).
+Specifica la modalità di rappresentazione della destinazione. Le rappresentazioni possono includere contenuto, un'icona, un'anteprima o un documento stampato. Per un elenco di valori possibili, vedere [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) e [DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2).
 
 `lindex`<br/>
-Parte della destinazione di interesse per l'operazione di disegno. L'interpretazione dipende dal valore nel `dwDrawAspect` membro.
+Parte della destinazione di interesse per l'operazione di estrazione. L'interpretazione varia a seconda del valore nel `dwDrawAspect` membro.
 
 `ptd`<br/>
-Puntatore a un [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) struttura che consente alle ottimizzazioni di disegnare in base all'aspetto specificato. Si noti che più recente di oggetti e contenitori che supportano le interfacce di disegnare ottimizzate supportano anche questo membro. Gli oggetti e contenitori che non supportano le interfacce di disegnare ottimizzate sempre meno recenti specificano NULL per questo membro.
+Puntatore a una struttura [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) che Abilita le ottimizzazioni del disegno a seconda dell'aspetto specificato. Si noti che gli oggetti e i contenitori più recenti che supportano interfacce di disegno ottimizzate supportano anche questo membro. Gli oggetti e i contenitori meno recenti che non supportano interfacce di disegno ottimizzate specificano sempre NULL per il membro.
 
 `hicTargetDev`<br/>
-Contesto delle informazioni per il dispositivo di destinazione a cui punta `ptd` da cui l'oggetto può estrarre la metrica del dispositivo e testare le funzionalità del dispositivo. Se `ptd` è NULL, l'oggetto deve ignorare il valore di `hicTargetDev` membro.
+Contesto delle informazioni per il dispositivo di `ptd` destinazione a cui fa riferimento l'oggetto da cui l'oggetto può estrarre le metriche del dispositivo e testare le funzionalità del dispositivo. Se `ptd` è null, l'oggetto deve ignorare il valore `hicTargetDev` nel membro.
 
 `hdcDraw`<br/>
-Il contesto di dispositivo su cui disegnare. Per un oggetto senza finestra, il `hdcDraw` membro fa parte il `MM_TEXT` modalità di mapping con le sue coordinate logiche corrispondente alle coordinate client della finestra contenitore. Inoltre, il contesto di dispositivo deve essere lo stesso stato come quello normalmente passato per un `WM_PAINT` messaggio.
+Contesto di dispositivo su cui creare. Per un oggetto senza finestra, il `hdcDraw` membro è `MM_TEXT` in modalità di mapping con le coordinate logiche corrispondenti alle coordinate client della finestra che lo contiene. Inoltre, il contesto di dispositivo deve trovarsi nello stesso stato di quello normalmente passato da un `WM_PAINT` messaggio.
 
 `prcBounds`<br/>
-Puntatore a un [RECTL](/previous-versions//dd162907\(v=vs.85\)) che specifica il rettangolo nella struttura `hdcDraw` e in cui deve essere disegnato l'oggetto. Questo membro controlla il posizionamento e l'adattamento dell'oggetto. Questo membro deve essere NULL per disegnare un oggetto attivo sul posto senza. In ogni altra situazione, NULL, non è un valore valido e dovrebbe restituire un `E_INVALIDARG` codice di errore. Se il contenitore passa un valore diverso da NULL a un oggetto senza finestra, l'oggetto deve eseguire il rendering l'aspetto richiesto nel contesto di dispositivo specificato e il rettangolo. Un contenitore può richiedere questo da un oggetto senza eseguire il rendering di una vista in secondo luogo, non attivo dell'oggetto o per stampare l'oggetto.
+Puntatore a una struttura [RECTL](/previous-versions//dd162907\(v=vs.85\)) che specifica il rettangolo `hdcDraw` in e in cui l'oggetto deve essere disegnato. Questo membro controlla il posizionamento e l'allungamento dell'oggetto. Questo membro deve essere NULL per creare un oggetto attivo sul posto senza finestra. In ogni altra situazione, null non è un valore valido e deve generare un `E_INVALIDARG` codice di errore. Se il contenitore passa un valore non NULL a un oggetto senza finestra, l'oggetto deve eseguire il rendering dell'aspetto richiesto nel contesto di dispositivo e nel rettangolo specificati. Un contenitore può richiedere questa operazione da un oggetto senza finestra per eseguire il rendering di una seconda visualizzazione non attiva dell'oggetto o per la stampa dell'oggetto.
 
 `prcWBounds`<br/>
-Se `hdcDraw` è un contesto di dispositivo metafile (vedere [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) in Windows SDK), questo è un puntatore a un `RECTL` struttura che specifica il rettangolo delimitatore nel metafile sottostante. La struttura rettangolo contiene le dimensioni della finestra e l'origine di finestra. Questi valori sono utili per il disegno metafile. Il rettangolo indicato dal `prcBounds` è annidato all'interno di questa `prcWBounds` rettangolo; sono nello stesso spazio delle coordinate.
+Se `hdcDraw` è un contesto di dispositivo metafile (vedere [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) nel Windows SDK), si tratta di un puntatore a `RECTL` una struttura che specifica il rettangolo di delimitazione nel metafile sottostante. La struttura Rectangle contiene l'extent della finestra e l'origine della finestra. Questi valori sono utili per la creazione di metafile. Il rettangolo indicato da `prcBounds` è annidato all' `prcWBounds` interno di questo rettangolo. si trovano nello stesso spazio delle coordinate.
 
 `bOptimize`<br/>
-Diverso da zero se il disegno del controllo sia ottimizzato, in caso contrario 0. Se è ottimizzato il disegno, lo stato del contesto di dispositivo vengono ripristinato automaticamente dopo aver terminato il rendering.
+Diverso da zero se il disegno del controllo deve essere ottimizzato; in caso contrario, 0. Se il disegno è ottimizzato, lo stato del contesto di dispositivo viene ripristinato automaticamente al termine del rendering.
 
 `bZoomed`<br/>
-Diverso da zero se la destinazione è un fattore di zoom, altrimenti 0. Il fattore di zoom viene archiviato in `ZoomNum`.
+Diverso da zero se la destinazione ha un fattore di zoom; in caso contrario, 0. Il fattore di zoom viene archiviato `ZoomNum`in.
 
 `bRectInHimetric`<br/>
-Diverso da zero se le dimensioni di `prcBounds` in HIMETRIC, in caso contrario 0.
+Diverso da zero se le dimensioni `prcBounds` di sono in HIMETRIC; in caso contrario, 0.
 
 `ZoomNum`<br/>
-La larghezza e altezza del rettangolo in cui viene eseguito il rendering dell'oggetto. Il fattore di zoom lungo l'asse x (la proporzione tra le dimensioni dell'oggetto naturale alle dimensioni correnti) della destinazione è il valore della `ZoomNum.cx` diviso per il valore di `ZoomDen.cx`. Il fattore di zoom lungo l'asse y è realizzato in modo simile.
+Larghezza e altezza del rettangolo in cui viene eseguito il rendering dell'oggetto. Il fattore di zoom lungo l'asse x (la proporzione della dimensione naturale dell'oggetto fino all'extent corrente) della destinazione è il valore di `ZoomNum.cx` diviso per il valore di. `ZoomDen.cx` Il fattore di zoom lungo l'asse y viene effettuato in modo analogo.
 
 `ZoomDen`<br/>
-La larghezza effettiva e l'altezza della destinazione.
+Larghezza e altezza effettive della destinazione.
 
 ## <a name="remarks"></a>Note
 
-Utilizzo tipici di questa struttura sarebbe il recupero di informazioni durante il rendering dell'oggetto di destinazione. Ad esempio, è possibile recuperare valori da ATL_DRAWINFO all'interno di overload della funzione [CComControlBase::OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).
+L'utilizzo tipico di questa struttura è il recupero delle informazioni durante il rendering dell'oggetto di destinazione. Ad esempio, è possibile recuperare i valori da ATL_DRAWINFO all'interno dell'overload di [CComControlBase:: OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced).
 
-Questa struttura consente di archiviare informazioni pertinenti usate per visualizzare l'aspetto di un oggetto per il dispositivo di destinazione. Le informazioni fornite sono utilizzabile nel disegno per la schermata, una stampante o persino un metafile.
+Questa struttura archivia le informazioni pertinenti usate per eseguire il rendering dell'aspetto di un oggetto per il dispositivo di destinazione. Le informazioni fornite possono essere utilizzate per disegnare sullo schermo, una stampante o persino un metafile.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -93,5 +93,5 @@ Questa struttura consente di archiviare informazioni pertinenti usate per visual
 ## <a name="see-also"></a>Vedere anche
 
 [Classi e struct](../../atl/reference/atl-classes.md)<br/>
-[IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
+[IViewObject::D RAW](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
 [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

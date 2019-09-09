@@ -35,7 +35,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/22/2019
 ms.locfileid: "68376091"
 ---
-# <a name="fseek-fseeki64"></a>fseek, _fseeki64
+# <a name="fseek-_fseeki64"></a>fseek, _fseeki64
 
 Sposta il puntatore del file in una posizione specificata.
 
@@ -89,7 +89,7 @@ Per i flussi aperti in modalità testo, **fseek** e **_fseeki64** hanno un uso l
 
 - Ricerca dall'inizio del file con un valore di offset restituito da una chiamata a [ftell](ftell-ftelli64.md) quando si usa **fseek** o [_ftelli64](ftell-ftelli64.md) quando si usa **_fseeki64**.
 
-In modalità testo, inoltre, CTRL+Z viene interpretato nell'input come un carattere di fine file. Nei file aperti per la lettura/scrittura [](fopen-wfopen.md) , fopen e tutte le routine correlate verificano la presenza di una combinazione di tasti CTRL + Z alla fine del file e la rimuove, se possibile. Questa operazione viene eseguita perché l'uso della combinazione di **fseek** e [ftell](ftell-ftelli64.md) o **_fseeki64** e [_ftelli64](ftell-ftelli64.md)per spostarsi all'interno di un file che termina con CTRL + Z può causare un comportamento non corretto di **fseek** o **_fseeki64** in prossimità della fine del file.
+In modalità testo, inoltre, CTRL+Z viene interpretato nell'input come un carattere di fine file. Nei file aperti per la lettura/scrittura, [fopen](fopen-wfopen.md) e tutte le routine correlate verificano la presenza di una combinazione di tasti CTRL + Z alla fine del file e la rimuove, se possibile. Questa operazione viene eseguita perché l'uso della combinazione di **fseek** e [ftell](ftell-ftelli64.md) o **_fseeki64** e [_ftelli64](ftell-ftelli64.md)per spostarsi all'interno di un file che termina con CTRL + Z può causare un comportamento non corretto di **fseek** o **_fseeki64** in prossimità della fine del file.
 
 Quando CRT apre un file che inizia con un BOM (Byte Order Mark), il puntatore del file viene posizionato dopo il BOM, ovvero all'inizio del contenuto effettivo del file. Se è necessario **fseek** all'inizio del file, utilizzare [ftell](ftell-ftelli64.md) per ottenere la posizione iniziale e **fseek** al suo posto anziché alla posizione 0.
 

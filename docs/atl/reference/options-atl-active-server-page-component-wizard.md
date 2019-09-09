@@ -6,52 +6,52 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-ms.openlocfilehash: 7e9740a67f265484c349a4df644be882dba30c13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c76ab7730256b007b66d54ca6753409926f7ae89
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197367"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495308"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opzioni, Creazione guidata componente ASP ATL
 
-Utilizzare questa pagina della finestra attiva Server pagina Creazione guidata componente ATL per progettare per aumentare l'efficienza e supporto per gli errori per l'oggetto.
+Utilizzare questa pagina della creazione guidata componente della pagina Active Server ATL per progettare per migliorare l'efficienza e il supporto degli errori per l'oggetto.
 
-Per altre informazioni sulle classi ATL COM e progetti ATL, vedere [ATL COM Desktop Components](../../atl/atl-com-desktop-components.md).
+Per altre informazioni sui progetti ATL e le classi ATL COM, vedere [Componenti desktop ATL COM](../../atl/atl-com-desktop-components.md).
 
 - **Modello di threading**
 
-   Indica il metodo per la gestione dei thread. Per impostazione predefinita, il progetto usa **Apartment** threading.
+   Indica il metodo per la gestione dei thread. Per impostazione predefinita, il progetto usa il threading dell' **Apartment** .
 
-   Visualizzare [specifica di un modello di Threading del progetto](../../atl/specifying-the-threading-model-for-a-project-atl.md) per altre informazioni.
+   Per informazioni, vedere [Specifying the Project's Threading Model](../../atl/specifying-the-threading-model-for-a-project-atl.md) (Specifica di un modello di threading per un progetto).
 
-   |Opzione|Descrizione|
+   |Opzione|DESCRIZIONE|
    |------------|-----------------|
-   |**Single**|Specifica che l'oggetto Usa il modello di threading singolo. Nel modello di threading singolo, un oggetto viene sempre eseguito nel thread COM primario. Visualizzare [apartment a thread singolo](/windows/desktop/com/single-threaded-apartments) e [InprocServer32](/windows/desktop/com/inprocserver32) per altre informazioni.|
-   |**Apartment**|Specifica che l'oggetto Usa il threading apartment. Apartment di thread equivalente al singolo. Ogni oggetto di un componente di apartment a thread viene assegnato un apartment per il relativo thread per tutta la durata dell'oggetto. Tuttavia, più thread possono essere utilizzati per più oggetti. Ogni tipo di apartment è associato a un thread specifico e ha un message pump Windows (impostazione predefinita).<br /><br /> Visualizzare [apartment a thread singolo](/windows/desktop/com/single-threaded-apartments) per altre informazioni.|
-   |**Both**|Specifica che l'oggetto può utilizzare apartment o modello di threading free, a seconda dal tipo di un thread viene creato.|
-   |**gratuito**|Specifica che l'oggetto utilizza il modello di threading free. Modello di threading Free è equivalente a un modello di apartment con multithreading. Visualizzare [apartment a thread multipli](/windows/desktop/com/multithreaded-apartments) per altre informazioni.|
-   |**Neutral**|Specifica che l'oggetto segue le linee guida per apartment a thread multipli, ma può essere eseguito su qualsiasi tipo di thread.|
+   |**Single**|Specifica che l'oggetto utilizza il modello a thread singolo. Nel modello a thread singolo, un oggetto viene sempre eseguito nel thread COM primario. Per ulteriori informazioni, vedere [Apartment a thread singolo](/windows/win32/com/single-threaded-apartments) e [InprocServer32](/windows/win32/com/inprocserver32) .|
+   |**Apartment**|Specifica che l'oggetto utilizza il threading dell'Apartment. Equivalente a Apartment a thread singolo. A ogni oggetto di un componente a thread di Apartment viene assegnato un Apartment per il relativo thread, per la durata dell'oggetto; è tuttavia possibile usare più thread per più oggetti. Ogni Apartment è associato a un thread specifico ed è dotato di un message pump di Windows (impostazione predefinita).<br /><br /> Per ulteriori informazioni, vedere [Apartment a thread singolo](/windows/win32/com/single-threaded-apartments) .|
+   |**Sia**|Specifica che l'oggetto può utilizzare l'Apartment o il threading libero, a seconda del tipo di thread che viene creato.|
+   |**Libero**|Specifica che l'oggetto usa il threading libero. Il threading libero è equivalente a un modello di Apartment multithread. Per ulteriori informazioni, vedere [apartment multithreading](/windows/win32/com/multithreaded-apartments) .|
+   |**Neutral**|Specifica che l'oggetto segue le linee guida per gli apartment multithreading, ma può essere eseguito su qualsiasi tipo di thread.|
 
 - **Aggregazione**
 
-   Indica se l'oggetto utilizza [aggregazione](/windows/desktop/com/aggregation). Oggetto di aggregazione sceglie interfacce da esporre ai client e le interfacce vengono esposte come se l'oggetto aggregato state implementate. I client dell'oggetto di aggregazione comunicare solo con l'oggetto aggregato.
+   Indica se l'oggetto utilizza l' [aggregazione](/windows/win32/com/aggregation). L'oggetto aggregato sceglie le interfacce da esporre ai client e le interfacce vengono esposte come se l'oggetto aggregato le avesse implementate. I client dell'oggetto aggregato comunicano solo con l'oggetto aggregato.
 
    |Opzione|Descrizione|
    |------------|-----------------|
-   |**Sì**|Specifica che è possibile aggregare l'oggetto. Valore predefinito.|
+   |**Sì**|Specifica che l'oggetto può essere aggregato. Valore predefinito.|
    |**No**|Specifica che l'oggetto non è aggregato.|
-   |**Only**|Specifica che l'oggetto deve essere aggregato.|
+   |**Solo**|Specifica che l'oggetto deve essere aggregato.|
 
 - **Supporto**
 
-   Altre opzioni di supporto:
+   Opzioni di supporto aggiuntive:
 
    |Opzione|Descrizione|
    |------------|-----------------|
-   |**ISupportErrorInfo**|Per creare il supporto per la [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) interfaccia in modo che l'oggetto può restituire le informazioni sull'errore al client.|
-   |**Punti di connessione**|Abilita i punti di connessione per l'oggetto mediante derivazione dalla classe dell'oggetto [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
-   |**Gestore del marshalling a thread libero**|Crea un oggetto gestore del marshalling a thread libero per effettuare il marshalling di puntatori di interfaccia in modo efficiente tra thread nello stesso processo. È disponibile per l'oggetto che specifica la **entrambe** oppure **gratuito** come il modello di threading.|
+   |**ISupportErrorInfo**|Crea il supporto per l'interfaccia [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) in modo che l'oggetto possa restituire le informazioni sull'errore al client.|
+   |**Punti di connessione**|Abilita i punti di connessione per l'oggetto facendo derivare la classe dell'oggetto da [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
+   |**Gestore di marshalling a thread libero**|Crea un oggetto gestore di marshalling a thread libero per effettuare il marshalling dei puntatori di interfaccia in modo efficiente tra thread nello stesso processo. Disponibile per l'oggetto che specifica **sia** o **Free** come modello di Threading.|
 
 ## <a name="see-also"></a>Vedere anche
 

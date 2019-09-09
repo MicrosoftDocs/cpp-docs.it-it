@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bd0d7638a8e7f2e3c671229e1f8d118d681e6f4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314988"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492581"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Risoluzione dei problemi relativi alle applicazioni isolate C/C++ e agli assembly side-by-side
 
@@ -27,28 +27,28 @@ Se il caricamento di un'applicazione non riesce perché il manifesto specifica u
 
 Se l'applicazione non dispone di alcun manifesto e dipende da una DLL che Windows non riesce a trovare nei normali percorsi di ricerca, può essere visualizzato un messaggio di errore simile al seguente:
 
-- Questa applicazione non è riuscito ad avviare perché *una DLL obbligatoria* non è stato trovato. Una nuova installazione dell'applicazione potrebbe risolvere il problema.
+- Non è stato possibile avviare l'applicazione perché non è stata trovata *una DLL obbligatoria* . Una nuova installazione dell'applicazione potrebbe risolvere il problema.
 
 Se l'applicazione viene distribuita in un computer che non dispone di Visual Studio e si arresta in modo anomalo con messaggi di errore simili a quelli precedenti, verificare quanto segue:
 
-1. Seguire i passaggi descritti in [informazioni sulle dipendenze di un'applicazione Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Dependency Walker può indicare la maggior parte delle dipendenze per un'applicazione o DLL. Se si nota che mancano alcune DLL, installarle nel computer in cui si sta cercando di eseguire l'applicazione.
+1. Seguire i passaggi descritti in [informazioni sulle dipendenze di un'applicazione visuale C++ ](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Dependency Walker può indicare la maggior parte delle dipendenze per un'applicazione o DLL. Se si nota che mancano alcune DLL, installarle nel computer in cui si sta cercando di eseguire l'applicazione.
 
-1. Il caricatore del sistema operativo usa il manifesto dell'applicazione per caricare gli assembly da cui dipende l'applicazione. Il manifesto può essere incorporato nel file binario come risorsa o installato come file separato nella cartella dell'applicazione. Per verificare se il manifesto è incorporato nel file binario, aprire il file binario in Visual Studio e cercare RT_MANIFEST nell'elenco di risorse. Se non è possibile trovare un manifesto incorporato, cercare nella cartella dell'applicazione per un file con nome simile a < nome_binario >. \<estensione >. manifest.
+1. Il caricatore del sistema operativo usa il manifesto dell'applicazione per caricare gli assembly da cui dipende l'applicazione. Il manifesto può essere incorporato nel file binario come risorsa o installato come file separato nella cartella dell'applicazione. Per verificare se il manifesto è incorporato nel file binario, aprire il file binario in Visual Studio e cercare RT_MANIFEST nell'elenco di risorse. Se non si riesce a trovare un manifesto incorporato, cercare nella cartella dell'applicazione un file denominato simile < binary_name >. \<estensione >. manifest.
 
-1. Se l'applicazione dipende da assembly side-by-side e non è presente un manifesto, è necessario assicurarsi che il linker generi un manifesto per il progetto. Selezionare l'opzione del linker **Genera manifesto** nel **proprietà progetto** finestra di dialogo per il progetto.
+1. Se l'applicazione dipende da assembly side-by-side e non è presente un manifesto, è necessario assicurarsi che il linker generi un manifesto per il progetto. Selezionare l'opzione del linker **Genera manifesto** nella finestra di dialogo **Proprietà progetto** per il progetto.
 
-1. Se il manifesto è incorporato nel file binario, assicurarsi che l'ID di RT_MANIFEST sia corretto per questo tipo di file binario. Per altre informazioni sull'ID risorsa da usare, vedere [Using Side-by-Side Assemblies come risorsa (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Se il manifesto è in un file separato, aprirlo in un editor XML o in un editor di testo. Per altre informazioni sui manifesti e sulle regole di distribuzione, vedere [manifesti](/windows/desktop/sbscs/manifests).
+1. Se il manifesto è incorporato nel file binario, assicurarsi che l'ID di RT_MANIFEST sia corretto per questo tipo di file binario. Per altre informazioni sull'ID risorsa da usare, vedere [uso di assembly affiancati come risorsa (Windows)](/windows/win32/SbsCs/using-side-by-side-assemblies-as-a-resource). Se il manifesto è in un file separato, aprirlo in un editor XML o in un editor di testo. Per ulteriori informazioni sui manifesti e le regole per la distribuzione, vedere [manifesti](/windows/win32/sbscs/manifests).
 
    > [!NOTE]
    > Se sono presenti sia un manifesto incorporato che un file manifesto separato, il caricatore del sistema operativo usa il manifesto incorporato e ignora il file separato. Tuttavia, in Windows XP accade il contrario: viene usato il file manifesto separato e viene ignorato il manifesto incorporato.
 
-1. È consigliabile incorporare un manifesto in ogni DLL perché i manifesti esterni vengono ignorati quando una DLL viene caricata tramite una chiamata a `LoadLibrary`. Per altre informazioni, vedere [manifesti dell'Assembly](/windows/desktop/SbsCs/assembly-manifests).
+1. È consigliabile incorporare un manifesto in ogni DLL perché i manifesti esterni vengono ignorati quando una DLL viene caricata tramite una chiamata a `LoadLibrary`. Per altre informazioni, vedere [manifesti dell'assembly](/windows/win32/SbsCs/assembly-manifests).
 
-1. Verificare che tutti gli assembly enumerati nel manifesto siano installati correttamente nel computer. Ogni assembly viene specificato nel manifesto con il nome, il numero di versione e l'architettura del processore. Se l'applicazione dipende da assembly side-by-side, verificare che questi assembly siano installati correttamente nel computer in modo che il caricatore del sistema operativo possa trovarli, come descritto in [Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence). Tenere presente che gli assembly a 64 bit non possono essere caricati in processi a 32 bit né essere eseguiti in sistemi operativi a 32 bit.
+1. Verificare che tutti gli assembly enumerati nel manifesto siano installati correttamente nel computer. Ogni assembly viene specificato nel manifesto con il nome, il numero di versione e l'architettura del processore. Se l'applicazione dipende da assembly affiancati, verificare che questi assembly siano installati correttamente nel computer in modo che il caricatore del sistema operativo possa trovarli, come descritto in [sequenza di ricerca degli assembly](/windows/win32/SbsCs/assembly-searching-sequence). Tenere presente che gli assembly a 64 bit non possono essere caricati in processi a 32 bit né essere eseguiti in sistemi operativi a 32 bit.
 
 ## <a name="example"></a>Esempio
 
-Si supponga che un'applicazione, appl.exe, che viene compilato con Visual C++. Il manifesto dell'applicazione viene incorporato in appl.exe come risorsa binaria RT_MANIFEST, il cui ID è 1, o archiviato come file separato appl.exe.manifest. Il contenuto di questo manifesto è analogo al seguente:
+Si supponga di avere un'applicazione, appl. exe, compilata usando Visual C++. Il manifesto dell'applicazione viene incorporato in appl.exe come risorsa binaria RT_MANIFEST, il cui ID è 1, o archiviato come file separato appl.exe.manifest. Il contenuto di questo manifesto è analogo al seguente:
 
 ```
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
@@ -74,7 +74,7 @@ Il manifesto di un assembly condiviso viene installato nella cartella %WINDIR%\W
 </assembly>
 ```
 
-Inoltre è possono utilizzare gli assembly side-by-side [i file di configurazione server di pubblicazione](/windows/desktop/SbsCs/publisher-configuration-files), noto anche come file di criteri, ovvero per reindirizzare a livello globale le applicazioni e gli assembly a una versione di un assembly side-by-side invece di un'altra versione dello stesso assembly. È possibile controllare i criteri per un assembly condiviso nella cartella %WINDIR%\WinSxS\Policies\. Di seguito è riportato un esempio di file dei criteri.
+Gli assembly affiancati possono anche usare [i file di configurazione del server di pubblicazione](/windows/win32/SbsCs/publisher-configuration-files), noti anche come file dei criteri, per reindirizzare a livello globale le applicazioni e gli assembly in modo da usare una versione di un assembly affiancato anziché un'altra versione dello stesso assembly. È possibile controllare i criteri per un assembly condiviso nella cartella %WINDIR%\WinSxS\Policies\. Di seguito è riportato un esempio di file dei criteri.
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -94,11 +94,11 @@ Questo file dei criteri specifica che le applicazione o gli assembly che richied
 
 Tuttavia, l'assembly può anche essere installato come assembly side-by-side privato nella cartella dell'applicazione installata. Se il sistema operativo non riesce a trovare l'assembly come assembly condiviso, lo cerca come assembly privato, nell'ordine seguente:
 
-1. Controllare la cartella dell'applicazione per un file manifesto con il nome \<assemblyName >. manifest. In questo esempio, il caricatore cerca di trovare Fabrikam.SxS.Library.manifest nella cartella che contiene appl.exe. Il caricatore, se trova il manifesto, carica l'assembly dalla cartella dell'applicazione. Se l'assembly non viene trovato, il caricamento non riesce.
+1. Controllare la cartella dell'applicazione per un file manifesto con il nome \<AssemblyName >. manifest. In questo esempio, il caricatore cerca di trovare Fabrikam.SxS.Library.manifest nella cartella che contiene appl.exe. Il caricatore, se trova il manifesto, carica l'assembly dalla cartella dell'applicazione. Se l'assembly non viene trovato, il caricamento non riesce.
 
-1. Provare ad aprire il \\< nomeassembly\>\ della cartella che contiene appl.exe, e, se \\< nomeassembly\>\ esiste, tenta di caricare un file manifesto con il nome \<assemblyName >. da questa cartella del manifesto. Se il manifesto viene trovato, il caricatore carica l'assembly dal \\< nomeassembly\>\ cartella. Se l'assembly non viene trovato, il caricamento non riesce.
+1. Provare ad aprire la \\cartella <\>AssemblyName \ nella cartella che contiene appl. exe e, se \\< AssemblyName\>\ exists, provare a caricare un file manifesto con il nome \<AssemblyName >. manifesto da questa cartella. Se il manifesto viene trovato, il caricatore carica l'assembly dalla \\cartella < AssemblyName\>\. Se l'assembly non viene trovato, il caricamento non riesce.
 
-Per altre informazioni sul modo in cui il caricatore Cerca gli assembly dipendenti, vedere [Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence). Se il caricatore non riesce a trovare un assembly dipendente come assembly privato, il caricamento ha esito negativo e viene visualizzato il messaggio "Impossibile eseguire il programma specificato". Per risolvere questo errore, assicurarsi che gli assembly dipendenti e le DLL che ne fanno parte vengano installati nel computer come assembly privati o condivisi.
+Per altre informazioni sul modo in cui il caricatore cerca gli assembly dipendenti, vedere [sequenza di ricerca degli assembly](/windows/win32/SbsCs/assembly-searching-sequence). Se il caricatore non riesce a trovare un assembly dipendente come assembly privato, il caricamento ha esito negativo e viene visualizzato il messaggio "Impossibile eseguire il programma specificato". Per risolvere questo errore, assicurarsi che gli assembly dipendenti e le DLL che ne fanno parte vengano installati nel computer come assembly privati o condivisi.
 
 ## <a name="see-also"></a>Vedere anche
 

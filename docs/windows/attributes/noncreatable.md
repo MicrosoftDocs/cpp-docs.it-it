@@ -1,21 +1,21 @@
 ---
-title: noncreatable (attributo COM C++)
+title: non creabile (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: a10d93650c0ae564019a09b34c3a604d12327998
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305320"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514572"
 ---
 # <a name="noncreatable"></a>noncreatable
 
-Definisce un oggetto che non è possibile creare istanze di se stesso.
+Definisce un oggetto di cui non è possibile creare un'istanza.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -25,9 +25,9 @@ Definisce un oggetto che non è possibile creare istanze di se stesso.
 
 ## <a name="remarks"></a>Note
 
-Il **noncreatable** attributi di C++ ha la stessa funzionalità come il [non creabile](/windows/desktop/Midl/noncreatable) attributo MIDL e viene automaticamente passato all'oggetto generato. File IDL dal compilatore.
+L' C++ attributo non generabile ha la stessa funzionalità dell'attributo MIDL non [creabile](/windows/win32/Midl/noncreatable) e viene passato automaticamente all'oggetto generato. File IDL del compilatore.
 
-Quando questo attributo viene usato all'interno di un progetto che usa ATL, il comportamento dell'attributo cambia. Oltre al comportamento precedente, l'attributo inserisce anche il [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) macro. Questa macro indica che l'oggetto non è possibile creare esternamente ad ATL.
+Quando questo attributo viene usato in un progetto che usa ATL, il comportamento dell'attributo viene modificato. Oltre al comportamento precedente, l'attributo inserisce anche la macro [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . Questa macro indica a ATL che l'oggetto non può essere creato esternamente.
 
 ## <a name="example"></a>Esempio
 
@@ -58,7 +58,7 @@ class CMyClass : public A
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|**coclass**|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

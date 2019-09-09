@@ -13,9 +13,9 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68456394"
 ---
-# <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
+# <a name="_iterator_debug_level"></a>_ITERATOR_DEBUG_LEVEL
 
-La macro _ITERATOR_DEBUG_LEVEL controlla se [](../standard-library/checked-iterators.md) sono abilitati gli iteratori verificati e il supporto degli iteratori di [debug](../standard-library/debug-iterator-support.md) . Questa macro sostituisce e combina la funzionalità delle macro _SECURE_SCL e _HAS_ITERATOR_DEBUGGING meno recenti.
+La macro _ITERATOR_DEBUG_LEVEL controlla se sono abilitati gli [iteratori verificati](../standard-library/checked-iterators.md) e il [supporto degli iteratori di debug](../standard-library/debug-iterator-support.md) . Questa macro sostituisce e combina la funzionalità delle macro _SECURE_SCL e _HAS_ITERATOR_DEBUGGING meno recenti.
 
 ## <a name="macro-values"></a>Valori della macro
 
@@ -35,7 +35,7 @@ In modalità di rilascio, il compilatore genera un errore se si specifica _ITERA
 
 ## <a name="remarks"></a>Note
 
-La macro _ITERATOR_DEBUG_LEVEL controlla se [](../standard-library/checked-iterators.md) gli iteratori verificati sono abilitati e in modalità debug, se è abilitato il supporto per gli iteratori di [debug](../standard-library/debug-iterator-support.md) . Se _ITERATOR_DEBUG_LEVEL è definito come 1 o 2, gli iteratori controllati assicurano che i limiti dei contenitori non vengano sovrascritti. Se _ITERATOR_DEBUG_LEVEL è 0, gli iteratori non vengono controllati. Quando _ITERATOR_DEBUG_LEVEL è definito come 1, qualsiasi utilizzo dell'iteratore non sicuro causa un errore di runtime e il programma viene terminato. Quando _ITERATOR_DEBUG_LEVEL è definito come 2, l'utilizzo di un iteratore non sicuro causa un'asserzione e una finestra di dialogo di errore di runtime che consente di interrompere l'esecuzione nel debugger.
+La macro _ITERATOR_DEBUG_LEVEL controlla se gli [iteratori verificati](../standard-library/checked-iterators.md) sono abilitati e in modalità debug, se è abilitato il supporto per gli [iteratori di debug](../standard-library/debug-iterator-support.md) . Se _ITERATOR_DEBUG_LEVEL è definito come 1 o 2, gli iteratori controllati assicurano che i limiti dei contenitori non vengano sovrascritti. Se _ITERATOR_DEBUG_LEVEL è 0, gli iteratori non vengono controllati. Quando _ITERATOR_DEBUG_LEVEL è definito come 1, qualsiasi utilizzo dell'iteratore non sicuro causa un errore di runtime e il programma viene terminato. Quando _ITERATOR_DEBUG_LEVEL è definito come 2, l'utilizzo di un iteratore non sicuro causa un'asserzione e una finestra di dialogo di errore di runtime che consente di interrompere l'esecuzione nel debugger.
 
 Poiché la macro _ITERATOR_DEBUG_LEVEL supporta funzionalità simili alle macro _SECURE_SCL e _HAS_ITERATOR_DEBUGGING, è possibile che si sia certi di quale macro e valore macro utilizzare in una determinata situazione. Per evitare confusione, è consigliabile usare solo la macro _ITERATOR_DEBUG_LEVEL. Questa tabella descrive il valore della macro _ITERATOR_DEBUG_LEVEL equivalente da usare per i diversi valori di _SECURE_SCL e _HAS_ITERATOR_DEBUGGING nel codice esistente.
 

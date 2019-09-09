@@ -1,5 +1,5 @@
 ---
-title: versione (attributo COM C++)
+title: Version (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a432267632b1f2a716a833a485b182cd93a27e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407159"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514883"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -27,15 +27,15 @@ Identifica una particolare versione tra più versioni di una classe.
 ### <a name="parameters"></a>Parametri
 
 *version*<br/>
-Il numero di versione il `coclass`. Se non specificato, 1.0 verrà inserita nel file IDL.
+Numero di versione dell'oggetto `coclass`. Se non è specificato, 1,0 verrà inserito nel file con estensione IDL.
 
 ## <a name="remarks"></a>Note
 
-Il **versione** attributi di C++ ha la stessa funzionalità come la [versione](/windows/desktop/Midl/version) attributo MIDL e viene passato al file con estensione IDL generato.
+L'attributo **Version** C++ ha la stessa funzionalità dell'attributo MIDL della [versione](/windows/win32/Midl/version) e viene passato al file IDL generato.
 
 ## <a name="example"></a>Esempio
 
-Vedere le [associabile](bindable.md) per un esempio dell'uso di esempio **versione**.
+Vedere l'esempio [associabile](bindable.md) per un uso di esempio della **versione**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -46,7 +46,7 @@ Vedere le [associabile](bindable.md) per un esempio dell'uso di esempio **versio
 |**Si applica a**|**classe**, **struct**|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|**coclass**|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 

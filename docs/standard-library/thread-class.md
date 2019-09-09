@@ -50,7 +50,7 @@ Ogni thread di esecuzione ha un identificatore univoco di tipo `thread::id`. La 
 
 ### <a name="public-classes"></a>Classi pubbliche
 
-|NOME|DESCRIZIONE|
+|Name|Descrizione|
 |----------|-----------------|
 |[Classe thread::id](#id_class)|Identifica in modo univoco il thread associato.|
 
@@ -74,7 +74,7 @@ Ogni thread di esecuzione ha un identificatore univoco di tipo `thread::id`. La 
 
 ### <a name="public-operators"></a>Operatori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[thread::operator=](#op_eq)|Associa un thread all'oggetto **thread** corrente.|
 
@@ -243,7 +243,7 @@ Oggetto **thread** esistente.
 
 Il primo costruttore crea un oggetto non associato a un thread di esecuzione. Il valore restituito da una chiamata a `get_id` per l'oggetto costruito è `thread::id()`.
 
-Il secondo costruttore crea un oggetto associato a un nuovo thread di esecuzione ed esegue la pseudo-funzione `INVOKE` definita in [\<functional>](../standard-library/functional.md). Se non sono disponibili risorse sufficienti per avviare un nuovo thread, la funzione genera un oggetto [system_error](../standard-library/system-error-class.md) con codice di errore `resource_unavailable_try_again`. Se la chiamata a *F* termina con un'eccezione non rilevata [](../standard-library/exception-functions.md#terminate) , viene chiamato il metodo terminate.
+Il secondo costruttore crea un oggetto associato a un nuovo thread di esecuzione ed esegue la pseudo-funzione `INVOKE` definita in [\<functional>](../standard-library/functional.md). Se non sono disponibili risorse sufficienti per avviare un nuovo thread, la funzione genera un oggetto [system_error](../standard-library/system-error-class.md) con codice di errore `resource_unavailable_try_again`. Se la chiamata a *F* termina con un'eccezione non rilevata, viene chiamato il metodo [Terminate](../standard-library/exception-functions.md#terminate) .
 
 Il terzo costruttore crea un oggetto associato al thread a sua volta associato a `Other`. `Other` viene quindi impostato su uno stato costruito in modo predefinito.
 

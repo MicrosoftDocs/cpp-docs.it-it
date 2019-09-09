@@ -13,7 +13,7 @@ ms.locfileid: "68458018"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilizzo degli operatori di inserimento e controllo del formato
 
-Questo argomento illustra come controllare il formato e creare gli operatori di inserimento per le classi personalizzate. L'operatore di inserimento ( **<<** ), che è preprogrammato per tutti i tipi di dati C++ standard, invia byte a un oggetto del flusso di output. Gli operatori di inserimento funzionano con "manipolatori" predefiniti, cioè elementi che modificano il formato predefinito di argomenti Integer.
+Questo argomento illustra come controllare il formato e creare gli operatori di inserimento per le classi personalizzate. L'operatore di inserimento (**<<**), che è preprogrammato per tutti i tipi di dati C++ standard, invia byte a un oggetto del flusso di output. Gli operatori di inserimento funzionano con "manipolatori" predefiniti, cioè elementi che modificano il formato predefinito di argomenti Integer.
 
 È possibile controllare il formato con le opzioni seguenti:
 
@@ -27,7 +27,7 @@ Questo argomento illustra come controllare il formato e creare gli operatori di 
 
 ## <a name="vclrfoutputwidthanchor3"></a> Larghezza di output
 
-Per allineare l'output, si specifica la larghezza di output per ogni elemento posizionando il `setw` manipolatore nel flusso o chiamando la `width` funzione membro. Questo esempio allinea a destra i valori in una colonna ampia almeno 10 caratteri:
+Per allineare l'output, si specifica la larghezza di output per ogni elemento posizionando il `setw` manipolatore nel flusso o chiamando la `width` funzione membro. Questo esempio allinea a destra i valori in una colonna ampia almeno 10 caratteri: 
 
 ```cpp
 // output_width.cpp
@@ -126,7 +126,7 @@ Al         653.7
 Stan     4358.24
 ```
 
-Il flag di allineamento a sinistra viene impostato usando il manipolatore [setiosflags](../standard-library/iomanip-functions.md#setiosflags) con l'enumeratore `left`. Questo enumeratore viene definito nella classe [ios](../standard-library/basic-ios-class.md), pertanto il relativo riferimento deve includere il prefisso **ios::** . Il manipolatore [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) disattiva il flag di allineamento a sinistra. A differenza `width` di `setw`e, l'effetto `setiosflags` di `resetiosflags` e è permanente.
+Il flag di allineamento a sinistra viene impostato usando il manipolatore [setiosflags](../standard-library/iomanip-functions.md#setiosflags) con l'enumeratore `left`. Questo enumeratore viene definito nella classe [ios](../standard-library/basic-ios-class.md), pertanto il relativo riferimento deve includere il prefisso **ios::**. Il manipolatore [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) disattiva il flag di allineamento a sinistra. A differenza `width` di `setw`e, l'effetto `setiosflags` di `resetiosflags` e è permanente.
 
 ## <a name="vclrfprecisionanchor5"></a> Precisione
 
@@ -207,7 +207,7 @@ I delimitatori sono presenti solo nell'oggetto flusso. non sono presenti nella s
 
 Il comportamento degli spazi vuoti delle operazioni di inserimento e di estrazione è indipendente dal modo in cui una stringa è rappresentata nel codice, dunque l'operatore tra virgolette è utile indipendentemente dal fatto che la stringa di input sia un valore letterale stringa non elaborato o una stringa normale. La stringa di input, qualunque sia il formato, può avere virgolette incorporate, interruzioni di riga, tabulazioni e così via e tutti questi verranno mantenuti dal manipolatore quoted().
 
-Per ulteriori informazioni ed esempi di codice completo, [](../standard-library/iomanip-functions.md#quoted)vedere quoted.
+Per ulteriori informazioni ed esempi di codice completo, vedere [quoted](../standard-library/iomanip-functions.md#quoted).
 
 ## <a name="see-also"></a>Vedere anche
 

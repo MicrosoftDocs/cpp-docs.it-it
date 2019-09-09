@@ -13,7 +13,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459999"
 ---
-# <a name="timeputbyname-class"></a>Classe time_put_byname
+# <a name="time_put_byname-class"></a>Classe time_put_byname
 
 Questa classe modello derivata descrive un oggetto che può essere usato come facet delle impostazioni locali di tipo `time_put`\< CharType, OutputIterator >.
 
@@ -48,7 +48,7 @@ Conteggio di riferimento iniziale.
 
 ## <a name="remarks"></a>Note
 
-Il comportamento è determinato dalle impostazioni [](../standard-library/locale-class.md#name) locali denominate *_Locname*. Ogni costruttore inizializza l'oggetto di base con [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator >`_Refs`().
+Il comportamento è determinato dalle impostazioni locali [denominate](../standard-library/locale-class.md#name) *_Locname*. Ogni costruttore inizializza l'oggetto di base con [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator >`_Refs`().
 
 ## <a name="requirements"></a>Requisiti
 

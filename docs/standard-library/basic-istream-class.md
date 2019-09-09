@@ -41,7 +41,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452544"
 ---
-# <a name="basicistream-class"></a>Classe basic_istream
+# <a name="basic_istream-class"></a>Classe basic_istream
 
 Descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso con elementi di tipo `Elem`, chiamato anche [char_type](../standard-library/basic-ios-class.md#char_type), i cui tratti di carattere sono determinati dalla classe *Tr*, chiamata anche [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
@@ -119,7 +119,7 @@ if (ok)
 setstate(state);
 ```
 
-Entrambi i gruppi di funzioni [](../standard-library/basic-ios-class.md#setstate)chiamano sestate`eofbit`() se incontrano la fine del file durante l'estrazione di elementi.
+Entrambi i gruppi di funzioni chiamano [sestate](../standard-library/basic-ios-class.md#setstate)(`eofbit`) se incontrano la fine del file durante l'estrazione di elementi.
 
 Un oggetto della classe `basic_istream`< `Elem`, *Tr*> archivia:
 
@@ -297,7 +297,7 @@ La quarta funzione estrae fino a elementi *count* -1 e li archivia nella matrice
 
 - Alla fine del file.
 
-- Dopo l'estrazione da parte della funzione di un elemento che viene confrontato con il valore di delit, nel qual caso l'elemento viene riportato alla sequenza controllata.
+- Dopo l'estrazione da parte della funzione di un elemento che viene confrontato con il valore di *Delit*, nel qual caso l'elemento viene riportato alla sequenza controllata.
 
 - Dopo che la funzione estrae gli elementi *count* -1.
 
@@ -374,7 +374,7 @@ La seconda funzione estrae fino a elementi *count* -1 e li archivia nella matric
 
 - Dopo che la funzione estrae gli elementi *count* -1.
 
-Se la funzione non estrae elementi o *count* -1, viene chiamato sestate ( [](../standard-library/basic-ios-class.md#setstate)`failbit`). In tutti i casi, restituisce **\*this**.
+Se la funzione non estrae elementi o *count* -1, viene chiamato [sestate](../standard-library/basic-ios-class.md#setstate)(`failbit`). In tutti i casi, restituisce **\*this**.
 
 ### <a name="example"></a>Esempio
 
@@ -521,7 +521,7 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-estrae un campo e lo converte in un valore numerico chiamando `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). In questo caso, **init** è `istreambuf_iterator` definito come \< **elem**, **TR**> `val` e ha un tipo **Long**, unsigned **Long**o **void** <strong>\*</strong> se necessario.
+estrae un campo e lo converte in un valore numerico chiamando `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). In questo caso, **init** è `istreambuf_iterator` definito come \< **elem**, **TR**> `val` e ha un tipo **Long**, **unsigned long**o **void** <strong>\*</strong> se necessario.
 
 Se il valore convertito non può essere rappresentato come tipo di `val`, la funzione chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`failbit`). In tutti i casi, la funzione restituisce **\*this**.
 
@@ -660,7 +660,7 @@ Il flusso ( **\*this**).
 
 ### <a name="remarks"></a>Note
 
-La [funzione di input](../standard-library/basic-istream-class.md) non formattato inserisce nuovamente *ch*, se possibile, come se si chiamasse [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc). Se rdbuf è un puntatore null o se la chiamata `sputbackc` a restituisce **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof), la funzione chiama sestate ( [](../standard-library/basic-ios-class.md#setstate)`badbit`). In tutti i casi, restituisce **\*this**.
+La [funzione di input non formattato](../standard-library/basic-istream-class.md) inserisce nuovamente *ch*, se possibile, come se si chiamasse [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc). Se rdbuf è `sputbackc` un puntatore null o se la chiamata a restituisce **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof), la funzione chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`badbit`). In tutti i casi, restituisce **\*this**.
 
 ### <a name="example"></a>Esempio
 
@@ -712,7 +712,7 @@ Il flusso ( `*this`).
 
 ### <a name="remarks"></a>Note
 
-La funzione di input non formattato estrae fino a elementi *count* e li archivia nella matrice a partire `Str`da _. L'estrazione si interrompe prima della fine del file, nel qual caso la [](../standard-library/basic-ios-class.md#setstate)funzione chiama sestate (`failbit`). In tutti i casi, restituisce `*this`.
+La funzione di input non formattato estrae fino a elementi *count* e li archivia nella matrice a partire `Str`da _. L'estrazione si interrompe prima della fine del file, nel qual caso la funzione chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`failbit`). In tutti i casi, restituisce `*this`.
 
 ### <a name="example"></a>Esempio
 
@@ -906,7 +906,7 @@ int sync();
 
 ### <a name="return-value"></a>Valore restituito
 
-Se [rdbuf](../standard-library/basic-ios-class.md#rdbuf) è un puntatore null, la funzione restituisce -1. In caso contrario, chiama `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync). Se restituisce-1, la funzione chiama sestate ( [](../standard-library/basic-ios-class.md#setstate)`badbit`) e restituisce-1. In caso contrario, la funzione restituisce zero.
+Se [rdbuf](../standard-library/basic-ios-class.md#rdbuf) è un puntatore null, la funzione restituisce -1. In caso contrario, chiama `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync). Se restituisce-1, la funzione chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`badbit`) e restituisce-1. In caso contrario, la funzione restituisce zero.
 
 ## <a name="tellg"></a>  basic_istream::tellg
 
@@ -964,7 +964,7 @@ Il flusso ( **\*this**).
 
 ### <a name="remarks"></a>Note
 
-Se possibile, la [funzione di input non formattato](../standard-library/basic-istream-class.md) reinserisce l'elemento precedente nel flusso, come se venisse chiamata `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc). Se [rdbuf](../standard-library/basic-ios-class.md#rdbuf) è un puntatore null o se la chiamata `sungetc` a restituisce **traits_type::** [EOF](../standard-library/basic-ios-class.md#eof), la funzione chiama sestate ( [](../standard-library/basic-ios-class.md#setstate)`badbit`). In tutti i casi, restituisce **\*this**.
+Se possibile, la [funzione di input non formattato](../standard-library/basic-istream-class.md) reinserisce l'elemento precedente nel flusso, come se venisse chiamata `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc). Se [rdbuf](../standard-library/basic-ios-class.md#rdbuf) è un puntatore null o se la chiamata a `sungetc` restituisce **traits_type::** [EOF](../standard-library/basic-ios-class.md#eof), la funzione chiama [sestate](../standard-library/basic-ios-class.md#setstate)(`badbit`). In tutti i casi, restituisce **\*this**.
 
 Per informazioni su un possibile esito negativo di `unget`, vedere [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc).
 
@@ -999,6 +999,6 @@ abc
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

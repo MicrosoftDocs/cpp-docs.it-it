@@ -537,7 +537,7 @@ Numero di oggetti da deallocare dall'archivio.
 
 #### <a name="remarks"></a>Note
 
-La funzione membro libera spazio di archiviazione per la matrice di oggetti Count di `Type` tipo a partire da *ptr*, `operator delete(ptr)`chiamando. Il puntatore *ptr* deve essere stato restituito in precedenza da una chiamata [](#allocate) a allocate per un oggetto allocatore che risulta uguale a  **\*questo**, allocando un oggetto matrice con le stesse dimensioni e tipo. `deallocate` non genera mai un'eccezione.
+La funzione membro libera spazio di archiviazione per la matrice di oggetti Count di `Type` tipo a partire da *ptr*, `operator delete(ptr)`chiamando. Il puntatore *ptr* deve essere stato restituito in precedenza da una chiamata a [allocate](#allocate) per un oggetto allocatore che risulta uguale a  **\*questo**, allocando un oggetto matrice con le stesse dimensioni e tipo. `deallocate` non genera mai un'eccezione.
 
 #### <a name="example"></a>Esempio
 

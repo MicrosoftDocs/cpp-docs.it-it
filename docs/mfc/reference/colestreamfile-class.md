@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96e8fee71f02ea750fd8b33f41fd2fd517e9081e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373514"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503681"
 ---
 # <a name="colestreamfile-class"></a>Classe COleStreamFile
 
@@ -37,7 +37,7 @@ Rappresenta un flusso di dati (`IStream`) in un file composito come parte di un 
 class COleStreamFile : public CFile
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
@@ -49,22 +49,22 @@ class COleStreamFile : public CFile
 
 |Nome|Descrizione|
 |----------|-----------------|
-|[COleStreamFile::Attach](#attach)|Associa un flusso con l'oggetto.|
-|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Crea un flusso dalla memoria globale e la associa all'oggetto.|
-|[COleStreamFile::CreateStream](#createstream)|Crea un flusso e associa l'oggetto.|
-|[COleStreamFile::Detach](#detach)|Dissocia il flusso dall'oggetto.|
+|[COleStreamFile:: Connetti](#attach)|Associa un flusso all'oggetto.|
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|Crea un flusso dalla memoria globale e lo associa all'oggetto.|
+|[COleStreamFile::CreateStream](#createstream)|Crea un flusso e lo associa all'oggetto.|
+|[COleStreamFile::Detach](#detach)|Annulla l'associazione del flusso dall'oggetto.|
 |[COleStreamFile::GetStream](#getstream)|Restituisce il flusso corrente.|
-|[COleStreamFile::OpenStream](#openstream)|Apre un flusso e associa l'oggetto in modo sicuro.|
+|[COleStreamFile::OpenStream](#openstream)|Apre in modo sicuro un flusso e lo associa all'oggetto.|
 
 ## <a name="remarks"></a>Note
 
-Un `IStorage` l'oggetto deve esistere prima che il flusso può essere aperto o creato a meno che non è un flusso di memoria.
+Un `IStorage` oggetto deve esistere prima che il flusso possa essere aperto o creato, a meno che non si tratti di un flusso di memoria.
 
-`COleStreamFile` gli oggetti vengono modificati esattamente come [CFile](../../mfc/reference/cfile-class.md) oggetti.
+`COleStreamFile`gli oggetti vengono modificati esattamente come gli oggetti [CFile](../../mfc/reference/cfile-class.md) .
 
-Per altre informazioni sulla modifica dei flussi e archivi, vedere l'articolo [contenitori: File compositi](../../mfc/containers-compound-files.md)...
+Per ulteriori informazioni sulla modifica di flussi e archivi, vedere l'articolo [contenitori: File](../../mfc/containers-compound-files.md)composti..
 
-Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream) e [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IStream](/windows/win32/api/objidl/nn-objidl-istream) e [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) nel Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -78,9 +78,9 @@ Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-i
 
 **Intestazione:** AFXOLE. h
 
-##  <a name="attach"></a>  COleStreamFile::Attach
+##  <a name="attach"></a>COleStreamFile:: Connetti
 
-Associa flusso OLE fornito con il `COleStreamFile` oggetto.
+Associa il flusso `COleStreamFile` OLE fornito all'oggetto.
 
 ```
 void Attach(LPSTREAM lpStream);
@@ -93,11 +93,11 @@ Punta al flusso OLE (`IStream`) da associare all'oggetto. Non può essere NULL.
 
 ### <a name="remarks"></a>Note
 
-L'oggetto non sia già associata a un flusso di OLE.
+L'oggetto non deve essere già associato a un flusso OLE.
 
-Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IStream](/windows/win32/api/objidl/nn-objidl-istream) nel Windows SDK.
 
-##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile
+##  <a name="colestreamfile"></a>COleStreamFile:: COleStreamFile
 
 Crea un oggetto `COleStreamFile`.
 
@@ -108,17 +108,17 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="parameters"></a>Parametri
 
 *lpStream*<br/>
-Puntatore al flusso di OLE da associare all'oggetto.
+Puntatore al flusso OLE da associare all'oggetto.
 
 ### <a name="remarks"></a>Note
 
-Se *lpStream* è NULL, l'oggetto non è associato a un flusso di OLE, in caso contrario, l'oggetto viene associato al flusso fornito OLE.
+Se *lpStream* è null, l'oggetto non è associato a un flusso OLE; in caso contrario, l'oggetto è associato al flusso OLE fornito.
 
-Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IStream](/windows/win32/api/objidl/nn-objidl-istream) nel Windows SDK.
 
-##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream
+##  <a name="creatememorystream"></a>COleStreamFile:: CreateMemoryStream
 
-In modo sicuro crea un nuovo flusso esaurito la memoria globale e condivisa in cui un errore è una condizione normale, prevista.
+Crea in modo sicuro un nuovo flusso fuori dalla memoria globale condivisa in cui un errore è una condizione normale e prevista.
 
 ```
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -127,21 +127,21 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="parameters"></a>Parametri
 
 *pError*<br/>
-Punta a un [CFileException](../../mfc/reference/cfileexception-class.md) oggetto o valore NULL che indica lo stato di completamento dell'operazione di creazione. Specificare questo parametro se si desidera monitorare le eccezioni generate dal tentativo di creare il flusso.
+Punta a un oggetto [CFileException](../../mfc/reference/cfileexception-class.md) o null che indica lo stato di completamento dell'operazione di creazione. Specificare questo parametro se si desidera monitorare le possibili eccezioni generate tentando di creare il flusso.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il flusso viene creato correttamente. in caso contrario 0.
+Diverso da zero se il flusso viene creato correttamente; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
 La memoria viene allocata dal sottosistema OLE.
 
-Per altre informazioni, vedere [CreateStreamOnHGlobal](/windows/desktop/api/combaseapi/nf-combaseapi-createstreamonhglobal) nel SDK di Windows.
+Per ulteriori informazioni, vedere [CreateStreamOnHGlobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) nel Windows SDK.
 
-##  <a name="createstream"></a>  COleStreamFile::CreateStream
+##  <a name="createstream"></a>COleStreamFile:: CreateStream
 
-Crea in modo sicuro un nuovo flusso nell'oggetto di archiviazione fornito quando un errore è una condizione normale, prevista.
+Crea in modo sicuro un nuovo flusso nell'oggetto di archiviazione fornito in cui un errore è una condizione normale e prevista.
 
 ```
 BOOL CreateStream(
@@ -154,30 +154,30 @@ BOOL CreateStream(
 ### <a name="parameters"></a>Parametri
 
 *lpStorage*<br/>
-Punta all'oggetto di archiviazione OLE che contiene il flusso deve essere creato. Non può essere NULL.
+Punta all'oggetto di archiviazione OLE che contiene il flusso da creare. Non può essere NULL.
 
 *lpszStreamName*<br/>
 Nome del flusso da creare. Non può essere NULL.
 
 *nOpenFlags*<br/>
-Modalità di accesso da usare all'apertura nel flusso. Lettura/scrittura esclusivo e creare le modalità usate per impostazione predefinita. Per un elenco completo delle modalità di disponibilità, vedere [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
+Modalità di accesso da utilizzare per l'apertura del flusso. Per impostazione predefinita vengono utilizzate le modalità Exclusive, di lettura/scrittura e di creazione. Per un elenco completo delle modalità disponibili, vedere [CFile:: CFile](../../mfc/reference/cfile-class.md#cfile).
 
 *pError*<br/>
-Punta a un [CFileException](../../mfc/reference/cfileexception-class.md) oggetto o NULL. Specificare questo parametro se si desidera monitorare le eccezioni generate dal tentativo di creare il flusso.
+Punta a un oggetto [CFileException](../../mfc/reference/cfileexception-class.md) o null. Specificare questo parametro se si desidera monitorare le possibili eccezioni generate tentando di creare il flusso.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il flusso viene creato correttamente. in caso contrario 0.
+Diverso da zero se il flusso viene creato correttamente; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Verrà generata un'eccezione di file se l'apertura di ha esito negativo e *pError* non NULL.
+Se l'apertura ha esito negativo e *perror* non è null, verrà generata un'eccezione di file.
 
-Per altre informazioni, vedere [IStorage::CreateStream](/windows/desktop/api/objidl/nf-objidl-istorage-createstream) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IStorage:: CreateStream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) nella Windows SDK.
 
-##  <a name="detach"></a>  COleStreamFile::Detach
+##  <a name="detach"></a>COleStreamFile::D etach
 
-Dissocia il flusso dall'oggetto senza chiudere i flussi.
+Annulla l'associazione del flusso dall'oggetto senza chiudere il flusso.
 
 ```
 LPSTREAM Detach();
@@ -185,15 +185,15 @@ LPSTREAM Detach();
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore al flusso (`IStream`) che è stata associata all'oggetto.
+Puntatore al flusso (`IStream`) associato all'oggetto.
 
 ### <a name="remarks"></a>Note
 
-Il flusso deve essere chiuso in qualche altro modo prima che il programma termina.
+Il flusso deve essere chiuso in altro modo prima della terminazione del programma.
 
-Per altre informazioni, vedere [IStream](/windows/desktop/api/objidl/nn-objidl-istream) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IStream](/windows/win32/api/objidl/nn-objidl-istream) nel Windows SDK.
 
-##  <a name="getstream"></a>  COleStreamFile::GetStream
+##  <a name="getstream"></a>COleStreamFile:: GetStream
 
 Chiamare questa funzione per restituire un puntatore al flusso corrente.
 
@@ -203,9 +203,9 @@ IStream* GetStream() const;
 
 ### <a name="return-value"></a>Valore restituito
 
-Un puntatore all'interfaccia di flusso corrente ( [IStream](/windows/desktop/api/objidl/nn-objidl-istream)).
+Puntatore all'interfaccia di flusso corrente ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)).
 
-##  <a name="openstream"></a>  COleStreamFile::OpenStream
+##  <a name="openstream"></a>COleStreamFile:: OpenStream
 
 Apre un flusso esistente.
 
@@ -226,20 +226,20 @@ Punta all'oggetto di archiviazione OLE che contiene il flusso da aprire. Non pu�
 Nome del flusso da aprire. Non può essere NULL.
 
 *nOpenFlags*<br/>
-Modalità di accesso da usare all'apertura nel flusso. Esclusivo e per impostazione predefinita vengono utilizzate modalità di lettura/scrittura. Per l'elenco completo delle modalità di disponibilità, vedere [CFile::CFile](../../mfc/reference/cfile-class.md#cfile).
+Modalità di accesso da utilizzare per l'apertura del flusso. Per impostazione predefinita vengono usate le modalità esclusiva e lettura/scrittura. Per l'elenco completo delle modalità disponibili, vedere [CFile:: CFile](../../mfc/reference/cfile-class.md#cfile).
 
 *pError*<br/>
-Punta a un [CFileException](../../mfc/reference/cfileexception-class.md) oggetto o NULL. Specificare questo parametro se si desidera monitorare le eccezioni generate dal tentativo di aprire il flusso.
+Punta a un oggetto [CFileException](../../mfc/reference/cfileexception-class.md) o null. Specificare questo parametro se si desidera monitorare le possibili eccezioni generate tentando di aprire il flusso.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il flusso viene aperto correttamente; in caso contrario 0.
+Diverso da zero se il flusso viene aperto correttamente; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Verrà generata un'eccezione di file se l'apertura di ha esito negativo e *pError* non NULL.
+Se l'apertura ha esito negativo e *perror* non è null, verrà generata un'eccezione di file.
 
-Per altre informazioni, vedere [IStorage::OpenStream](/windows/desktop/api/objidl/nf-objidl-istorage-openstream) nel SDK di Windows.
+Per ulteriori informazioni, vedere [IStorage:: OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) nella Windows SDK.
 
 ## <a name="see-also"></a>Vedere anche
 

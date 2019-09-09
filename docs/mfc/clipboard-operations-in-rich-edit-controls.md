@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Clipboard, operations in CRichEditCtrl
 - rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
-ms.openlocfilehash: 882c589d0d25b54650affa7fd41f916ecf6097d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e232010b443ace245844f1c28649477cccc8e9e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327106"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508966"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Operazioni sugli Appunti nei controlli Rich Edit
 
-L'applicazione può incollare il contenuto degli Appunti in un controllo rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) utilizzando il migliore formato degli Appunti disponibile o un formato degli Appunti specifico. È anche possibile determinare se un controllo Rich Edit è in grado di incollare un formato degli Appunti.
+L'applicazione può incollare il contenuto degli Appunti in un controllo Rich Edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) utilizzando il formato degli Appunti disponibile migliore o un formato degli Appunti specifico. È anche possibile determinare se un controllo Rich Edit è in grado di incollare un formato degli Appunti.
 
-È possibile tagliare o copiare il contenuto della selezione corrente usando il [copia](../mfc/reference/cricheditctrl-class.md#copy) oppure [Taglia](../mfc/reference/cricheditctrl-class.md#cut) funzione membro. Analogamente, è possibile incollare il contenuto degli Appunti in un controllo rich edit utilizzando la [incollare](../mfc/reference/cricheditctrl-class.md#paste) funzione membro. Il controllo incolla il primo formato disponibile che riconosce, che presumibilmente è il formato più descrittivo.
+È possibile copiare o tagliare il contenuto della selezione corrente usando la funzione membro [Copy](../mfc/reference/cricheditctrl-class.md#copy) o [Cut](../mfc/reference/cricheditctrl-class.md#cut) . Analogamente, è possibile incollare il contenuto degli Appunti in un controllo Rich Edit usando la funzione membro [paste](../mfc/reference/cricheditctrl-class.md#paste) . Il controllo incolla il primo formato disponibile che riconosce, che presumibilmente è il formato più descrittivo.
 
-Per incollare un formato degli Appunti specifico, è possibile usare la [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) funzione membro. Questa funzione è utile per le applicazioni con un comando Incolla speciale che consente all'utente di selezionare il formato degli Appunti. È possibile usare la [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) funzione membro per determinare se un determinato formato viene riconosciuto dal controllo.
+Per incollare un formato degli Appunti specifico, è possibile usare la funzione membro [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) . Questa funzione è utile per le applicazioni con un comando Incolla speciale che consente all'utente di selezionare il formato degli Appunti. È possibile utilizzare la funzione membro [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) per determinare se un formato specificato è riconosciuto dal controllo.
 
 È inoltre possibile utilizzare `CanPaste` per determinare se un formato degli Appunti disponibile viene riconosciuto da un controllo Rich Edit. Questa funzione è utile nel gestore di `OnInitMenuPopup`. In un'applicazione è possibile abilitare o rendere non disponibile il comando Incolla a che il controllo possa inserire o meno qualsiasi formato disponibile.
 
-I controlli Rich Edit registrano due formati degli Appunti: il formato Rich Text Format e un formato denominato RichEdit testo e oggetti. Un'applicazione può registrare questi formati utilizzando la [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funzionare, specificando la **CF_RETEXTOBJ** e **CF_RTF** valori.
+I controlli Rich Edit registrano due formati degli Appunti: il formato Rich Text Format e un formato denominato RichEdit testo e oggetti. Un'applicazione può registrare questi formati usando la funzione [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) , specificando i valori **CF_RTF** e **CF_RETEXTOBJ** .
 
 ## <a name="see-also"></a>Vedere anche
 

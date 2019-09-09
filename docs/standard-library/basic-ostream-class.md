@@ -27,7 +27,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457874"
 ---
-# <a name="basicostream-class"></a>Classe basic_ostream
+# <a name="basic_ostream-class"></a>Classe basic_ostream
 
 Questa classe modello descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso con elementi di `Elem`tipo, noti anche come [char_type](../standard-library/basic-ios-class.md#char_type), i cui tratti di carattere sono determinati dalla `Tr`classe. noto come [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
@@ -100,7 +100,7 @@ setstate(state);
 return (*this);
 ```
 
-Entrambi i gruppi di funzioni [](../standard-library/basic-ios-class.md#setstate)chiamano sestate (**badbit**) se si verifica un errore durante l'inserimento di elementi.
+Entrambi i gruppi di funzioni chiamano [sestate](../standard-library/basic-ios-class.md#setstate)(**badbit**) se si verifica un errore durante l'inserimento di elementi.
 
 Un oggetto della classe basic_istream\< **Elem**, **Tr**> archivia solo un oggetto di base pubblico virtuale della classe [basic_ios](../standard-library/basic-ios-class.md) **\<Elem**, **Tr>** .
 
@@ -128,7 +128,7 @@ Per altre informazioni sui flussi di output, vedere l'esempio per la [Classe bas
 
 ### <a name="operators"></a>Operatori
 
-|Operator|Descrizione|
+|Operator|DESCRIZIONE|
 |-|-|
 |[operator=](#op_eq)|Assegna il valore del parametro di oggetto `basic_ostream` fornito a questo oggetto.|
 |[operator<<](#basic_ostream_operator_lt_lt)|Scrive nel flusso.|
@@ -537,7 +537,7 @@ Un riferimento all'oggetto basic_ostream.
 
 ### <a name="remarks"></a>Note
 
-La [funzione di output](../standard-library/basic-ostream-class.md) non formattato inserisce la sequenza di elementi *count* a partire da *Str*.
+La [funzione di output non formattato](../standard-library/basic-ostream-class.md) inserisce la sequenza di elementi *count* a partire da *Str*.
 
 ### <a name="example"></a>Esempio
 
@@ -545,6 +545,6 @@ Vedere [streamsize](../standard-library/ios-typedefs.md#streamsize) per un esemp
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

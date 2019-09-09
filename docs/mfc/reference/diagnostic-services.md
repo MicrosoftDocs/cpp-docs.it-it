@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 682644dd84901e0f73a5fd43ca299d965476d759
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611445"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630520"
 ---
 # <a name="diagnostic-services"></a>Servizi diagnostici
 
@@ -35,7 +35,7 @@ La libreria Microsoft Foundation Class fornisce numerosi servizi di diagnostica 
 
 - Funzioni di diagnostica oggetti
 
-Queste macro e funzioni sono disponibili per tutte le classi derivate da `CObject` nelle versioni di debug e rilascio di MFC. Tuttavia, tutte tranne DEBUG_NEW e verificare che non eseguono alcuna operazione nella versione di rilascio.
+Queste macro e funzioni sono disponibili per tutte le classi derivate da `CObject` nelle versioni di debug e rilascio di MFC. Tuttavia, all eccetto DEBUG_NEW e VERIFY non eseguono alcuna operazione nella versione di rilascio.
 
 Nella libreria di debug, tutti i blocchi di memoria allocata sono racchiusi tra parentesi quadre con una serie di "byte guard". Se i byte vengono disturbati da un'operazione di scrittura non corretta della memoria, le routine di diagnostica possono segnalare un problema. Se si include la riga:
 
@@ -49,15 +49,15 @@ Inoltre, la libreria di runtime C supporta anche un set di funzioni di diagnosti
 
 |||
 |-|-|
-|[ASSERT](#assert)|Stampa un messaggio e quindi arresta il programma se l'espressione specificata restituisce FALSE nella versione di Debug della libreria.|
+|[ASSERT](#assert)|Stampa un messaggio e quindi interrompe il programma se l'espressione specificata restituisce FALSE nella versione di debug della libreria.|
 |[ASSERT_KINDOF](#assert_kindof)|Verifica se un oggetto è un oggetto della classe specificata o di una classe derivata dalla classe specificata.|
 |[ASSERT_VALID](#assert_valid)|Verifica la validità interna di un oggetto chiamando la relativa funzione membro `AssertValid` ; in genere sottoposta a override da `CObject`.|
 |[DEBUG_NEW](#debug_new)|Fornisce un nome file e un numero di riga per tutte le allocazioni di oggetti in modalità di debug per trovare perdite di memoria.|
-|[DEBUG_ONLY](#debug_only)|Simile a ASSERT, ma non verifica il valore dell'espressione. utile per il codice che deve essere eseguito solo in modalità di Debug.|
-|[VERIFICARE ed ENSURE_VALID](#ensure)|Utilizzare per convalidare la correttezza dei dati.|
-|[THIS_FILE](#this_file)|Si espande nel nome del file in fase di compilazione.|
+|[DEBUG_ONLY](#debug_only)|Simile a ASSERT ma non verifica il valore dell'espressione; utile per il codice che deve essere eseguito solo in modalità di debug.|
+|[ASSICURARSI e ENSURE_VALID](#ensure)|Usare per convalidare la correttezza dei dati.|
+|[THIS_FILE](#this_file)|Si espande fino al nome del file che si sta compilando.|
 |[TRACE](#trace)|Fornisce una funzionalità simile a `printf`-nella versione di debug della libreria.|
-|[VERIFY](#verify)|Simile a ASSERT ma valuta l'espressione nella versione di rilascio della libreria oltre che la versione di Debug.|
+|[VERIFY](#verify)|Simile a ASSERT ma valuta l'espressione nella versione di rilascio della libreria e nella versione di debug.|
 
 ### <a name="mfc-general-diagnostic-variables-and-functions"></a>Funzioni e variabili di diagnostica generale in MFC
 
@@ -65,9 +65,9 @@ Inoltre, la libreria di runtime C supporta anche un set di funzioni di diagnosti
 |-|-|
 |[afxDump](#afxdump)|Variabile globale che invia informazioni [CDumpContext](../../mfc/reference/cdumpcontext-class.md) alla finestra di output o al terminale di debug.|
 |[afxMemDF](#afxmemdf)|Variabile globale che controlla il comportamento dell'allocatore di memoria di debug.|
-|[AfxCheckError](#afxcheckerror)|Variabile globale usata per testare il SCODE passato per verificare se è corretto e, in caso affermativo, genera l'errore appropriato.|
+|[AfxCheckError](#afxcheckerror)|Variabile globale usata per verificare l'oggetto SCODE passato per verificare se è un errore e, in caso affermativo, genera l'errore appropriato.|
 |[AfxCheckMemory](#afxcheckmemory)|Controlla l'integrità di tutta la memoria attualmente allocata.|
-|[AfxDebugBreak](#afxdebugbreak)|Causa un'interruzione in esecuzione.|
+|[AfxDebugBreak](#afxdebugbreak)|Causa un'interruzioni nell'esecuzione.|
 |[AfxDump](#cdumpcontext_in_mfc)|Se viene chiamato quando nel debugger, esegue il dump dello stato di un oggetto durante il debug.|
 |[AfxDump](#afxdump)|Funzione interna che esegue il dump dello stato di un oggetto durante il debug.|
 |[AfxDumpStack](#afxdumpstack)|Genera un'immagine dello stack corrente. Questa funzione è sempre collegata staticamente.|
@@ -85,15 +85,15 @@ Inoltre, la libreria di runtime C supporta anche un set di funzioni di diagnosti
 |[AfxDoForAllClasses](#afxdoforallclasses)|Esegue una funzione specificata su tutte le classi derivate da `CObject`che supportano il controllo del tipo in fase di esecuzione.|
 |[AfxDoForAllObjects](#afxdoforallobjects)|Esegue una funzione specificata su tutti gli oggetti derivati da `CObject`allocati con **new**.|
 
-### <a name="mfc-compilation-macros"></a>Macro di compilazione di MFC
+### <a name="mfc-compilation-macros"></a>Macro di compilazione MFC
 
 |||
 |-|-|
-|[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Disattiva gli avvisi del compilatore per l'uso di funzioni MFC deprecate.|
+|[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Evita gli avvisi del compilatore per l'utilizzo di funzioni MFC deprecate.|
 
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
-Disattiva gli avvisi del compilatore per l'uso di funzioni MFC deprecate.
+Evita gli avvisi del compilatore per l'utilizzo di funzioni MFC deprecate.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -103,10 +103,10 @@ _AFX_SECURE_NO_WARNINGS
 
 ### <a name="example"></a>Esempio
 
-Questo esempio di codice potrebbe causare un avviso del compilatore se afx_secure_no_warnings non sono state definite.
+Questo esempio di codice genera un avviso del compilatore se _AFX_SECURE_NO_WARNINGS non è stato definito.
 
 ```cpp
-// define this before including any afx files in stdafx.h
+// define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
 ```cpp
@@ -119,7 +119,7 @@ pRichEdit->GetSelText(sz);
 
 ## <a name="afxdebugbreak"></a> AfxDebugBreak
 
-Chiamare questa funzione per causare un'interruzione (in corrispondenza della posizione della chiamata a `AfxDebugBreak`) nell'esecuzione della versione di debug dell'applicazione MFC.
+Chiamare questa funzione per provocare un'operazione Break (nella posizione della chiamata a `AfxDebugBreak`) nell'esecuzione della versione di debug dell'applicazione MFC.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -129,15 +129,15 @@ void AfxDebugBreak( );
 
 ### <a name="remarks"></a>Note
 
-`AfxDebugBreak` nelle versioni di un'applicazione MFC non ha alcun effetto e deve essere rimossa. Questa funzione deve essere usata solo in applicazioni MFC. Usare la versione dell'API Win32, `DebugBreak`, in modo che un'interruzione nelle applicazioni non MFC.
+`AfxDebugBreak`non ha alcun effetto nelle versioni di rilascio di un'applicazione MFC e deve essere rimosso. Questa funzione deve essere utilizzata solo nelle applicazioni MFC. Utilizzare la versione API Win32, `DebugBreak`, per provocare un'interruzioni nelle applicazioni non MFC.
 
 ### <a name="requirements"></a>Requisiti
 
-**Intestazione:** afxver . h
+**Intestazione:** afxver_. h
 
 ##  <a name="assert"></a>  ASSERT
 
-Restituisce il relativo argomento.
+Valuta il relativo argomento.
 
 ```
 ASSERT(booleanExpression)
@@ -146,22 +146,22 @@ ASSERT(booleanExpression)
 ### <a name="parameters"></a>Parametri
 
 *booleanExpression*<br/>
-Specifica un'espressione (inclusi i valori di puntatore) che restituisce zero oppure 0.
+Specifica un'espressione (inclusi i valori puntatore) che restituisce un valore diverso da zero o 0.
 
 ### <a name="remarks"></a>Note
 
-Se il risultato è 0, la macro viene stampato un messaggio di diagnostica e arresta il programma. Se la condizione è diverso da zero, non esegue alcuna operazione.
+Se il risultato è 0, la macro stampa un messaggio di diagnostica e interrompe il programma. Se la condizione è diversa da zero, non esegue alcuna operazione.
 
 Il messaggio di diagnostica presenta la forma seguente:
 
 `assertion failed in file <name> in line <num>`
 
-in cui *name* è il nome del file di origine, e *num* è il numero di riga dell'asserzione non riuscita nel file di origine.
+dove *nome* è il nome del file di origine e *num* è il numero di riga dell'asserzione non riuscita nel file di origine.
 
-Nella versione di rilascio di MFC, ASSERT non valuta l'espressione e pertanto non verrà interrotto il programma. Se l'espressione deve essere valutata indipendentemente dall'ambiente, usare la macro di verifica al posto di ASSERT.
+Nella versione finale di MFC, ASSERT non valuta l'espressione e pertanto non interrompe il programma. Se l'espressione deve essere valutata indipendentemente dall'ambiente, utilizzare la macro VERIFY al posto di ASSERT.
 
 > [!NOTE]
->  Questa funzione è disponibile solo nella versione di Debug di MFC.
+>  Questa funzione è disponibile solo nella versione di debug di MFC.
 
 ### <a name="example"></a>Esempio
 
@@ -173,7 +173,7 @@ Nella versione di rilascio di MFC, ASSERT non valuta l'espressione e pertanto no
 
 ##  <a name="assert_kindof"></a>  ASSERT_KINDOF
 
-Questa macro asserisce che l'oggetto puntato è un oggetto della classe specificata o è un oggetto di una classe derivato dalla classe specificata.
+Questa macro dichiara che l'oggetto a cui fa riferimento è un oggetto della classe specificata o è un oggetto di una classe derivata dalla classe specificata.
 
 ```
 ASSERT_KINDOF(classname, pobject)
@@ -182,25 +182,25 @@ ASSERT_KINDOF(classname, pobject)
 ### <a name="parameters"></a>Parametri
 
 *nomeclasse*<br/>
-Il nome di un `CObject`-classe derivata.
+Nome di una `CObject`classe derivata da.
 
 *pobject*<br/>
-Un puntatore a un oggetto classe.
+Puntatore a un oggetto classe.
 
 ### <a name="remarks"></a>Note
 
-Il *pobject* parametro deve essere un puntatore a un oggetto e può essere **const**. L'oggetto puntato e la classe deve supportare `CObject` informazioni sulle classi in fase di esecuzione. Ad esempio, per garantire che `pDocument` è un puntatore a un oggetto del `CMyDoc` classe o uno qualsiasi dei suoi derivati, è possibile scrivere il codice:
+Il parametro *pObject* deve essere un puntatore a un oggetto e può essere **const**. Oggetto a cui fa riferimento e che la classe `CObject` deve supportare le informazioni sulle classi in fase di esecuzione. Ad esempio, per assicurarsi che `pDocument` sia un puntatore a un oggetto `CMyDoc` della classe o a uno dei relativi derivati, è possibile scrivere codice:
 
 [!code-cpp[NVC_MFCDocView#194](../../mfc/codesnippet/cpp/diagnostic-services_3.cpp)]
 
-Uso di `ASSERT_KINDOF` macro è esattamente uguale alla codifica:
+L'uso `ASSERT_KINDOF` della macro è esattamente uguale alla codifica:
 
 [!code-cpp[NVC_MFCDocView#195](../../mfc/codesnippet/cpp/diagnostic-services_4.cpp)]
 
-Questa funzione funziona solo per le classi dichiarate con la [DECLARE_DYNAMIC] (run-tempo-oggetto-model-services.md & declare_dynamic o [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro.
+Questa funzione funziona solo per le classi dichiarate con la macro [DECLARE_DYNAMIC] (Run-Time-Object-Model-Services. MD # DECLARE_DYNAMIC o [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) ).
 
 > [!NOTE]
->  Questa funzione è disponibile solo nella versione di Debug di MFC.
+>  Questa funzione è disponibile solo nella versione di debug di MFC.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -208,7 +208,7 @@ Questa funzione funziona solo per le classi dichiarate con la [DECLARE_DYNAMIC] 
 
 ##  <a name="assert_valid"></a>  ASSERT_VALID
 
-Consente di verificare supposizioni sulla validità dello stato interno di un oggetto.
+Usare per testare le ipotesi sulla validità dello stato interno di un oggetto.
 
 ```
 ASSERT_VALID(pObject)
@@ -217,18 +217,18 @@ ASSERT_VALID(pObject)
 ### <a name="parameters"></a>Parametri
 
 *pObject*<br/>
-Specifica un oggetto di una classe derivata da `CObject` con una versione di override di `AssertValid` funzione membro.
+Specifica un oggetto di una classe derivata da `CObject` che dispone `AssertValid` di una versione di override della funzione membro.
 
 ### <a name="remarks"></a>Note
 
-ASSERT_VALID chiamate di `AssertValid` funzione membro dell'oggetto passato come argomento.
+ASSERT_VALID chiama la `AssertValid` funzione membro dell'oggetto passato come argomento.
 
-Nella versione di rilascio di MFC, ASSERT_VALID non esegue alcuna operazione. Nella versione di Debug, convalida il puntatore del mouse, controlla rispetto a NULL e chiama l'oggetto `AssertValid` funzioni membro. Se uno di questi test ha esito negativo, viene visualizzato un messaggio di avviso in modo analogo [ASSERT](#assert).
+Nella versione finale di MFC, ASSERT_VALID non esegue alcuna operazione. Nella versione di debug, convalida il puntatore, verifica se è null e chiama le funzioni `AssertValid` membro dell'oggetto. Se uno di questi test ha esito negativo, viene visualizzato un messaggio di avviso in modo analogo a [Assert](#assert).
 
 > [!NOTE]
->  Questa funzione è disponibile solo nella versione di Debug di MFC.
+>  Questa funzione è disponibile solo nella versione di debug di MFC.
 
-Per altre informazioni ed esempi, vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Per ulteriori informazioni ed esempi, vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
 ### <a name="example"></a>Esempio
 
@@ -240,7 +240,7 @@ Per altre informazioni ed esempi, vedere [debug di applicazioni MFC](/visualstud
 
 ##  <a name="debug_new"></a>  DEBUG_NEW
 
-Semplifica l'individuazione di perdite di memoria.
+Aiuta a individuare le perdite di memoria.
 
 ```
 #define  new DEBUG_NEW
@@ -248,18 +248,18 @@ Semplifica l'individuazione di perdite di memoria.
 
 ### <a name="remarks"></a>Note
 
-È possibile usare DEBUG_NEW ovunque nel programma che si userebbe normalmente il **nuovo** operatore per allocare memoria heap.
+Per allocare l'archiviazione heap, è possibile usare DEBUG_NEW ovunque nel programma, in genere si usa il **nuovo** operatore.
 
-In modalità di debug (quando il **debug** simbolo è definito), DEBUG_NEW tiene traccia del numero di riga e nome file per ogni oggetto da esso allocato. Quindi, quando si usa la [CMemoryState:: DumpAllObjectsSince](cmemorystate-structure.md#dumpallobjectssince) funzione membro, ciascun oggetto allocato con DEBUG_NEW viene visualizzato con il numero di riga e nome file in cui è stata allocata.
+In modalità di debug, quando viene definito il simbolo _ **debug** , DEBUG_NEW tiene traccia del nome file e del numero di riga per ogni oggetto allocato. Quindi, quando si usa la funzione membro [CMemoryState::D umpallobjectssince](cmemorystate-structure.md#dumpallobjectssince) , ogni oggetto allocato con DEBUG_NEW viene visualizzato con il nome del file e il numero di riga in cui è stato allocato.
 
-Per usare DEBUG_NEW, inserire la seguente direttiva nel file di origine:
+Per usare DEBUG_NEW, inserire la direttiva seguente nei file di origine:
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]
 
-Dopo aver inserito questa direttiva, ovunque si utilizzi, il preprocessore inserirà DEBUG_NEW **nuovo**, e MFC fa il resto. Quando si compila una versione di rilascio del programma, DEBUG_NEW si traduce in un semplice **nuovo** operazione e informazioni sul numeri di riga e non possono essere generati.
+Quando si inserisce questa direttiva, il preprocessore inserisce DEBUG_NEW ogni volta che si usa **New**e MFC esegue il resto. Quando si compila una versione di rilascio del programma, DEBUG_NEW viene risolto in una **nuova** operazione semplice e le informazioni sul numero di riga e il nome del file non vengono generate.
 
 > [!NOTE]
->  Nelle versioni precedenti di MFC (4.1 e versioni precedenti) è necessario inserire il `#define` istruzione dopo che tutte le istruzioni che ha chiamato la macro IMPLEMENT_DYNCREATE o IMPLEMENT_SERIAL. Ciò non è più necessario.
+>  Nelle versioni precedenti di MFC (4,1 e versioni precedenti) era necessario inserire l' `#define` istruzione dopo tutte le istruzioni che chiamavano le macro IMPLEMENT_DYNCREATE o IMPLEMENT_SERIAL. Ciò non è più necessario.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -267,7 +267,7 @@ Dopo aver inserito questa direttiva, ovunque si utilizzi, il preprocessore inser
 
 ##  <a name="debug_only"></a>  DEBUG_ONLY
 
-In modalità di debug (quando il **debug** simbolo è definito), DEBUG_ONLY restituisce il relativo argomento.
+In modalità di debug, quando viene definito il simbolo _ **debug** , DEBUG_ONLY valuta il relativo argomento.
 
 ```
 DEBUG_ONLY(expression)
@@ -275,9 +275,9 @@ DEBUG_ONLY(expression)
 
 ### <a name="remarks"></a>Note
 
-In una build di rilascio DEBUG_ONLY non valuta il relativo argomento. Ciò è utile quando si dispone di codice che deve essere eseguito solo nelle build di debug.
+In una build di rilascio, DEBUG_ONLY non valuta il relativo argomento. Questa operazione è utile quando si dispone di codice che deve essere eseguito solo nelle compilazioni di debug.
 
-Debug_only (macro) è equivalente a circostanti *espressione* con `#ifdef _DEBUG` e `#endif`.
+La macro DEBUG_ONLY è equivalente all' *espressione* circostante con `#ifdef _DEBUG` e `#endif`.
 
 ### <a name="example"></a>Esempio
 
@@ -287,9 +287,9 @@ Debug_only (macro) è equivalente a circostanti *espressione* con `#ifdef _DEBUG
 
 **Intestazione:** afx.h
 
-### <a name="ensure"></a>  VERIFICARE ed ENSURE_VALID
+### <a name="ensure"></a>ASSICURARSI e ENSURE_VALID
 
-Utilizzare per convalidare la correttezza dei dati.
+Usare per convalidare la correttezza dei dati.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -301,26 +301,26 @@ ENSURE_VALID( booleanExpression  )
 ### <a name="parameters"></a>Parametri
 
 *booleanExpression*<br/>
-Specifica un'espressione booleana da sottoporre a test.
+Specifica un'espressione booleana da testare.
 
 ### <a name="remarks"></a>Note
 
-Lo scopo di queste macro è migliorare la convalida dei parametri. Le macro impediscono l'ulteriore elaborazione di parametri non corretti nel codice. A differenza delle macro ASSERT, le macro di assicurarsi che generano un'eccezione oltre alla generazione di un'asserzione.
+Lo scopo di queste macro è quello di migliorare la convalida dei parametri. Le macro impediscono l'ulteriore elaborazione di parametri non corretti nel codice. Diversamente dalle macro ASSERT, le macro assicurano la generazione di un'eccezione oltre alla generazione di un'asserzione.
 
-La macro si comportano in due modi, in base alla configurazione del progetto. Le macro ASSERT chiamare e quindi generano un'eccezione se l'asserzione non riesce. Di conseguenza, nelle configurazioni di Debug (ovvero dove è definito debug) le macro di produrre un'asserzione e l'eccezione mentre nelle configurazioni di rilascio, il prodotto di macro solo l'eccezione (ASSERT non valuta l'espressione nelle configurazioni di rilascio).
+Le macro si comportano in due modi, in base alla configurazione del progetto. Le macro chiamano ASSERT e generano un'eccezione se l'asserzione ha esito negativo. Pertanto, nelle configurazioni di debug, ovvero in cui è definito _ debug, le macro generano un'asserzione e un'eccezione nelle configurazioni di rilascio, le macro generano solo l'eccezione (ASSERT non valuta l'espressione nelle configurazioni di rilascio).
 
-La macro ENSURE_ARG funziona come la macro verificare.
+La macro ENSURE_ARG funge da assicurazione della macro.
 
-ENSURE_VALID chiama ASSERT_VALID (macro) (che ha effetto solo nelle build di Debug). Inoltre, ENSURE_VALID genera un'eccezione se il puntatore è NULL. Il test NULL viene eseguito nelle configurazioni di Debug e rilascio.
+ENSURE_VALID chiama la macro ASSERT_VALID (che ha effetto solo nelle build di debug). Inoltre, ENSURE_VALID genera un'eccezione se il puntatore è NULL. Il test NULL viene eseguito nelle configurazioni di debug e di rilascio.
 
-Se uno di questi test non riesce, viene visualizzato un messaggio di avviso allo stesso modo come ASSERZIONE. La macro genera un'eccezione di argomento non valido, se necessario.
+Se uno di questi test ha esito negativo, viene visualizzato un messaggio di avviso in modo analogo a ASSERT. Se necessario, la macro genera un'eccezione di argomento non valido.
 ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afx.h
 
-## <a name="this_file"></a> THIS_FILE
+## <a name="this_file"></a>THIS_FILE
 
-Si espande nel nome del file in fase di compilazione.
+Si espande fino al nome del file che si sta compilando.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -330,7 +330,7 @@ THIS_FILE
 
 ### <a name="remarks"></a>Note
 
-Le informazioni vengono utilizzate dalle macro di ASSERZIONE e verifica. Le procedure guidate di creazione guidata applicazione e codice di inserire la macro nei file di codice sorgente che creano.
+Le informazioni vengono utilizzate dalle macro ASSERT e VERIFY. La creazione guidata applicazione e le creazioni guidate codice inseriscono la macro nei file di codice sorgente creati.
 
 ### <a name="example"></a>Esempio
 
@@ -350,7 +350,7 @@ static char THIS_FILE[] = __FILE__;
 
 ##  <a name="trace"></a>  TRACE
 
-Invia la stringa specificata per il debug dell'applicazione corrente.
+Invia la stringa specificata al debugger dell'applicazione corrente.
 
 ```
 TRACE(exp)
@@ -359,11 +359,11 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 
 ### <a name="remarks"></a>Note
 
-Visualizzare [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) per una descrizione della traccia. TRACCIA e ATLTRACE2 hanno lo stesso comportamento.
+Per una descrizione della traccia, vedere [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) . TRACE e ATLTRACE2 hanno lo stesso comportamento.
 
-Nella versione di debug di MFC, questa macro invia la stringa specificata per il debug dell'applicazione corrente. In una build di rilascio, questa macro viene compilato su nothing (viene generato alcun codice affatto).
+Nella versione di debug di MFC questa macro invia la stringa specificata al debugger dell'applicazione corrente. In una build di rilascio questa macro viene compilata in Nothing (non viene generato alcun codice).
 
-Per altre informazioni, vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Per ulteriori informazioni, vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
 ### <a name="requirements"></a>Requisiti
 
@@ -371,7 +371,7 @@ Per altre informazioni, vedere [debug di applicazioni MFC](/visualstudio/debugge
 
 ##  <a name="verify"></a>  VERIFY
 
-Nella versione di Debug di MFC, valuta il relativo argomento.
+Nella versione di debug di MFC valuta il relativo argomento.
 
 ```
 VERIFY(booleanExpression)
@@ -380,19 +380,19 @@ VERIFY(booleanExpression)
 ### <a name="parameters"></a>Parametri
 
 *booleanExpression*<br/>
-Specifica un'espressione (inclusi i valori di puntatore) che restituisce zero oppure 0.
+Specifica un'espressione (inclusi i valori puntatore) che restituisce un valore diverso da zero o 0.
 
 ### <a name="remarks"></a>Note
 
-Se il risultato è 0, la macro viene stampato un messaggio di diagnostica e arresta il programma. Se la condizione è diverso da zero, non esegue alcuna operazione.
+Se il risultato è 0, la macro stampa un messaggio di diagnostica e arresta il programma. Se la condizione è diversa da zero, non esegue alcuna operazione.
 
 Il messaggio di diagnostica presenta la forma seguente:
 
 `assertion failed in file <name> in line <num>`
 
-in cui *name* è il nome del file di origine e *num* è il numero di riga dell'asserzione non riuscita nel file di origine.
+dove *nome* è il nome del file di origine e *num* è il numero di riga dell'asserzione non riuscita nel file di origine.
 
-Nella versione di rilascio di MFC, verificare che valuta l'espressione, ma non stampare o interrompere il programma. Ad esempio, se l'espressione è una chiamata di funzione, verrà effettuata la chiamata.
+Nella versione finale di MFC, VERIFY valuta l'espressione, ma non stampa o interrompe il programma. Se, ad esempio, l'espressione è una chiamata di funzione, la chiamata verrà eseguita.
 
 ### <a name="example"></a>Esempio
 
@@ -402,9 +402,9 @@ Nella versione di rilascio di MFC, verificare che valuta l'espressione, ma non s
 
 **Intestazione:** afx.h
 
-##  <a name="cdumpcontext_in_mfc"></a>  afxDump (CDumpContext in MFC)
+##  <a name="cdumpcontext_in_mfc"></a>afxDump (CDumpContext in MFC)
 
-Fornisce la funzionalità base-il dump degli oggetti nell'applicazione.
+Fornisce funzionalità di base per il dump degli oggetti nell'applicazione.
 
 ```
 CDumpContext  afxDump;
@@ -412,11 +412,11 @@ CDumpContext  afxDump;
 
 ### <a name="remarks"></a>Note
 
-`afxDump` è un oggetto predefinito [CDumpContext](../../mfc/reference/cdumpcontext-class.md) che consente di inviare `CDumpContext` informazioni alla finestra di output o a un terminale di debug. In genere, forniscono `afxDump` come parametro al `CObject::Dump`.
+`afxDump`è un oggetto [CDumpContext](../../mfc/reference/cdumpcontext-class.md) predefinito che consente di inviare `CDumpContext` informazioni alla finestra di output del debugger o a un terminale di debug. In genere, viene `afxDump` fornito come parametro a `CObject::Dump`.
 
-In Windows NT e tutte le versioni di Windows, `afxDump` quando si esegue il debug dell'applicazione, l'output viene inviato alla finestra Output di Debug di Visual C++.
+In Windows NT e in tutte le versioni di `afxDump` Windows, l'output viene inviato alla finestra di debug dell' C++ output di Visual durante il debug dell'applicazione.
 
-Questa variabile viene definita solo nella versione di Debug di MFC. Per ulteriori informazioni sul `afxDump`, vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Questa variabile viene definita solo nella versione di debug di MFC. Per ulteriori informazioni su `afxDump`, vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
 ### <a name="example"></a>Esempio
 
@@ -426,9 +426,9 @@ Questa variabile viene definita solo nella versione di Debug di MFC. Per ulterio
 
 **Intestazione:** afx.h
 
-## <a name="afxdump"></a> AfxDump (interno)
+## <a name="afxdump"></a>AfxDump (interno)
 
-Funzione interna utilizzata per eseguire il dump dello stato di un oggetto durante il debug di MFC.
+Funzione interna utilizzata da MFC per eseguire il dump dello stato di un oggetto durante il debug.
 
 ### <a name="syntax"></a>Sintassi
 
@@ -439,13 +439,13 @@ void AfxDump(const CObject* pOb);
 ### <a name="parameters"></a>Parametri
 
 *pOb*<br/>
-Un puntatore a un oggetto di una classe derivata da `CObject`.
+Puntatore a un oggetto di una classe derivata da `CObject`.
 
 ### <a name="remarks"></a>Note
 
-`AfxDump` chiama un oggetto `Dump` funzione membro e invia le informazioni nel percorso specificate da di `afxDump` variabile. `AfxDump` è disponibile solo nella versione di Debug di MFC.
+`AfxDump`chiama la funzione `Dump` membro di un oggetto e invia le informazioni al percorso specificato `afxDump` dalla variabile. `AfxDump`è disponibile solo nella versione di debug di MFC.
 
-Il codice del programma non deve chiamare `AfxDump`, ma è necessario chiamare invece il `Dump` funzione membro dell'oggetto appropriato.
+Il codice del programma non deve `AfxDump`chiamare, ma deve chiamare invece `Dump` la funzione membro dell'oggetto appropriato.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -453,7 +453,7 @@ Il codice del programma non deve chiamare `AfxDump`, ma è necessario chiamare i
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
-Questa variabile è accessibile da un debugger o il programma e consente di ottimizzare la diagnostica di allocazione.
+Questa variabile è accessibile da un debugger o dal programma e consente di ottimizzare la diagnostica di allocazione.
 
 ```
 int  afxMemDF;
@@ -461,13 +461,13 @@ int  afxMemDF;
 
 ### <a name="remarks"></a>Note
 
-`afxMemDF` può avere i seguenti valori come specificato dall'enumerazione `afxMemDF`:
+`afxMemDF`è possibile specificare i valori seguenti come specificato dall'enumerazione `afxMemDF`:
 
-- `allocMemDF` Attiva debug allocator (impostazione predefinita nella libreria di Debug).
+- `allocMemDF`Attiva l'allocatore di debug (impostazione predefinita nella libreria di debug).
 
-- `delayFreeMemDF` Ritardi di liberare la memoria. Mentre il programma libera un blocco di memoria, l'allocatore non restituisce tale memoria per il sistema operativo sottostante. Questo utilizzo intensivo di memoria massima inserirà nel proprio programma.
+- `delayFreeMemDF`Ritarda la liberazione della memoria. Mentre il programma libera un blocco di memoria, l'allocatore non restituisce tale memoria al sistema operativo sottostante. Questo comporterà il sovraccarico massimo della memoria per il programma.
 
-- `checkAlwaysMemDF` Le chiamate `AfxCheckMemory` ogni volta che viene allocata o liberata memoria. Ciò comporterà il rallentamento in modo significativo le deallocazioni e allocazioni di memoria.
+- `checkAlwaysMemDF`Chiama `AfxCheckMemory` ogni volta che viene allocata o liberata memoria. In questo modo, le allocazioni e le deallocazioni di memoria saranno rallentate.
 
 ### <a name="example"></a>Esempio
 
@@ -479,7 +479,7 @@ int  afxMemDF;
 
 ##  <a name="afxcheckerror"></a>  AfxCheckError
 
-Questa funzione verifica il SCODE passato per verificare se è un errore.
+Questa funzione testa l'oggetto SCODE passato per verificare se è un errore.
 
 ```
 void AFXAPI AfxCheckError(SCODE sc);
@@ -489,12 +489,12 @@ throw COleException*
 
 ### <a name="remarks"></a>Note
 
-Se è corretto, la funzione genera un'eccezione. Se il passato SCODE E_OUTOFMEMORY, la funzione genera un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) chiamando [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). In caso contrario, la funzione genera un [COleException](../../mfc/reference/coleexception-class.md) chiamando [AfxThrowOleException](exception-processing.md#afxthrowoleexception).
+Se si tratta di un errore, la funzione genera un'eccezione. Se l'oggetto SCODE passato è E_OUTOFMEMORY, la funzione genera un'eccezione [CMemoryException](../../mfc/reference/cmemoryexception-class.md) chiamando [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). In caso contrario, la funzione genera un'eccezione [COleException](../../mfc/reference/coleexception-class.md) chiamando [AfxThrowOleException](exception-processing.md#afxthrowoleexception).
 
-Questa funzione è utilizzabile per controllare i valori restituiti delle chiamate a funzioni OLE nell'applicazione. Controllando il valore restituito con questa funzione nell'applicazione, in modo corretto reagire alle condizioni di errore con una quantità minima di codice.
+Questa funzione può essere utilizzata per controllare i valori restituiti delle chiamate alle funzioni OLE nell'applicazione. Testando il valore restituito con questa funzione nell'applicazione, è possibile reagire correttamente alle condizioni di errore con una quantità minima di codice.
 
 > [!NOTE]
->  Questa funzione ha lo stesso effetto in modalità debug e compilazioni non di debug.
+>  Questa funzione ha lo stesso effetto nelle compilazioni di debug e non di debug.
 
 ### <a name="example"></a>Esempio
 
@@ -506,7 +506,7 @@ Questa funzione è utilizzabile per controllare i valori restituiti delle chiama
 
 ##  <a name="afxcheckmemory"></a>  AfxCheckMemory
 
-Questa funzione convalida il pool di memoria libera e stampa i messaggi di errore in base alle esigenze.
+Questa funzione convalida il pool di memoria libero e Visualizza i messaggi di errore in modo obbligatorio.
 
 ```
 BOOL  AfxCheckMemory();
@@ -514,24 +514,24 @@ BOOL  AfxCheckMemory();
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se non gli errori di memoria. in caso contrario 0.
+Diverso da zero se non si verificano errori di memoria; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Se la funzione non rileva alcun danneggiamento della memoria, viene stampato niente.
+Se la funzione non rileva alcun danneggiamento della memoria, non stampa nulla.
 
-Vengono controllati tutti i blocchi di memoria attualmente allocati nell'heap, inclusi quelli allocati dal **nuove** ma non quelle allocato da chiamate dirette per gli allocatori di memoria sottostante, ad esempio le **malloc** (funzione) o il `GlobalAlloc` funzione Windows. Se viene trovato alcun blocco danneggiato, viene stampato un messaggio all'output del debugger.
+Vengono controllati tutti i blocchi di memoria attualmente allocati nell'heap, inclusi quelli allocati da **nuovi** , ma non quelli allocati dalle chiamate dirette agli allocatori di memoria sottostanti, `GlobalAlloc` ad esempio la funzione **malloc** o la funzione di Windows. Se viene rilevato un blocco danneggiato, viene visualizzato un messaggio nell'output del debugger.
 
 Se si include la riga
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]
 
-in un modulo di programma, quindi le successive chiamate a `AfxCheckMemory` Mostra il numero di riga e nome file in cui è stata allocata la memoria.
+in un modulo di programma, le chiamate successive `AfxCheckMemory` per visualizzare il nome file e il numero di riga in cui è stata allocata la memoria.
 
 > [!NOTE]
->  Se il modulo contiene uno o più implementazioni delle classi serializzabili, quindi è necessario inserire il `#define` riga dopo l'ultima chiamata IMPLEMENT_SERIAL (macro).
+>  Se il modulo contiene una o più implementazioni di classi serializzabili, è necessario inserire la `#define` riga dopo l'ultima chiamata a IMPLEMENT_SERIAL macro.
 
-Questa funzione funziona solo nella versione di Debug di MFC.
+Questa funzione funziona solo nella versione di debug di MFC.
 
 ### <a name="example"></a>Esempio
 
@@ -541,9 +541,9 @@ Questa funzione funziona solo nella versione di Debug di MFC.
 
 **Intestazione:** afx.h
 
-##  <a name="afxdump"></a>  AfxDump (MFC)
+##  <a name="afxdump"></a>AfxDump (MFC)
 
-Chiamare questa funzione quando nel debugger per eseguire il dump dello stato di un oggetto durante il debug.
+Chiamare questa funzione nel debugger per eseguire il dump dello stato di un oggetto durante il debug.
 
 ```
 void AfxDump(const CObject* pOb);
@@ -552,13 +552,13 @@ void AfxDump(const CObject* pOb);
 ### <a name="parameters"></a>Parametri
 
 *pOb*<br/>
-Un puntatore a un oggetto di una classe derivata da `CObject`.
+Puntatore a un oggetto di una classe derivata da `CObject`.
 
 ### <a name="remarks"></a>Note
 
-`AfxDump` chiama un oggetto `Dump` funzione membro e invia le informazioni nel percorso specificate da di `afxDump` variabile. `AfxDump` è disponibile solo nella versione di Debug di MFC.
+`AfxDump`chiama la funzione `Dump` membro di un oggetto e invia le informazioni al percorso specificato `afxDump` dalla variabile. `AfxDump`è disponibile solo nella versione di debug di MFC.
 
-Il codice del programma non deve chiamare `AfxDump`, ma è necessario chiamare invece il `Dump` funzione membro dell'oggetto appropriato.
+Il codice del programma non deve `AfxDump`chiamare, ma deve chiamare invece `Dump` la funzione membro dell'oggetto appropriato.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -566,7 +566,7 @@ Il codice del programma non deve chiamare `AfxDump`, ma è necessario chiamare i
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
-Questa funzione globale può essere utilizzata per generare un'immagine dello stack corrente.
+Questa funzione globale può essere usata per generare un'immagine dello stack corrente.
 
 ```
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
@@ -575,21 +575,21 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="parameters"></a>Parametri
 
 *dwTarget*<br/>
-Indica la destinazione dell'output del dump. Valori possibili che possono essere combinati con OR bit per bit ( **&#124;**) (operatore), sono i seguenti:
+Indica la destinazione dell'output del dump. I valori possibili, che possono essere combinati con l'operatore OR **&#124;** bit per bit (), sono i seguenti:
 
-- Output AFX_STACK_DUMP_TARGET_TRACE invia tramite il [traccia](#trace) macro. Utilizzo della macro TRACE genera output nelle build di debug di sola lettura. viene non generato alcun output nelle build di rilascio. Inoltre, traccia può essere reindirizzata ad altre destinazioni oltre il debugger.
+- AFX_STACK_DUMP_TARGET_TRACE invia l'output per mezzo della macro [Trace](#trace) . La macro TRACE genera l'output solo nelle compilazioni di debug; non genera alcun output nelle build di rilascio. Inoltre, è possibile reindirizzare la traccia ad altre destinazioni oltre al debugger.
 
-- Output del dump AFX_STACK_DUMP_TARGET_DEFAULT Invia per la destinazione predefinita. Per una build di debug, l'output viene inviato per l'utilizzo della macro TRACE. In una build di rilascio, l'output viene inviato agli Appunti.
+- AFX_STACK_DUMP_TARGET_DEFAULT invia l'output del dump alla destinazione predefinita. Per una compilazione di debug, l'output passa alla macro TRACE. In una build di rilascio, l'output viene inserito negli Appunti.
 
-- AFX_STACK_DUMP_TARGET_CLIPBOARD invia l'output solo negli Appunti. I dati vengono inseriti negli Appunti come testo normale utilizzando il formato degli Appunti CF_TEXT.
+- AFX_STACK_DUMP_TARGET_CLIPBOARD invia l'output solo agli Appunti. I dati vengono inseriti negli Appunti come testo normale utilizzando il formato degli Appunti di CF_TEXT.
 
-- AFX_STACK_DUMP_TARGET_BOTH invia l'output negli Appunti e di utilizzo della macro TRACE, contemporaneamente.
+- AFX_STACK_DUMP_TARGET_BOTH invia l'output agli Appunti e alla macro di traccia simultaneamente.
 
-- Output AFX_STACK_DUMP_TARGET_ODS Invia direttamente al debugger tramite la funzione Win32 `OutputDebugString()`. Questa opzione consente di generare l'output del debugger in entrambe le modalità di debug e build di rilascio quando è collegato un debugger al processo. AFX_STACK_DUMP_TARGET_ODS raggiunge sempre il debugger (se collegata) e non possono essere reindirizzate.
+- AFX_STACK_DUMP_TARGET_ODS invia l'output direttamente al debugger tramite la funzione `OutputDebugString()`Win32. Questa opzione genererà l'output del debugger nelle compilazioni di debug e di rilascio quando un debugger è collegato al processo. AFX_STACK_DUMP_TARGET_ODS raggiunge sempre il debugger (se è collegato) e non può essere reindirizzato.
 
 ### <a name="remarks"></a>Note
 
-Nell'esempio riportato di seguito riflette una singola riga dell'output generato dalla chiamata `AfxDumpStack` da un gestore del pulsante in un'applicazione di finestra di dialogo MFC:
+Nell'esempio seguente viene illustrata una singola riga dell'output generato dalla `AfxDumpStack` chiamata da un gestore di pulsanti in un'applicazione della finestra di dialogo MFC:
 
 ```Output
 === begin AfxDumpStack output ===
@@ -617,31 +617,31 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 === end AfxDumpStack() output ===
 ```
 
-Ogni riga nell'output precedente indica l'indirizzo dell'ultima chiamata di funzione, nome e percorso completo del modulo che contiene la chiamata di funzione e il prototipo di funzione denominata. Se la chiamata di funzione nello stack non viene eseguito in corrispondenza dell'indirizzo esatto della funzione, viene visualizzato un offset di byte.
+Ogni riga nell'output precedente indica l'indirizzo dell'ultima chiamata di funzione, il nome del percorso completo del modulo che contiene la chiamata di funzione e il prototipo di funzione denominato. Se la chiamata di funzione nello stack non viene eseguita all'indirizzo esatto della funzione, viene visualizzato un offset di byte.
 
-Ad esempio, la tabella seguente descrive la prima riga dell'output precedente:
+La tabella seguente, ad esempio, descrive la prima riga dell'output precedente:
 
 |Output|Descrizione|
 |------------|-----------------|
-|`00427D55:`|L'indirizzo del mittente dell'ultima chiamata di funzione.|
-|`DUMP2\DEBUG\DUMP2.EXE!`|Nome e percorso completo del modulo che contiene la chiamata di funzione.|
-|`void AfxDumpStack(unsigned long)`|Viene chiamato il prototipo di funzione.|
-|`+ 181 bytes`|Offset in byte dall'indirizzo del prototipo di funzione (in questo caso `void AfxDumpStack(unsigned long)`) per l'indirizzo del mittente (in questo caso, `00427D55`).|
+|`00427D55:`|Indirizzo restituito dell'ultima chiamata di funzione.|
+|`DUMP2\DEBUG\DUMP2.EXE!`|Nome del percorso completo del modulo che contiene la chiamata di funzione.|
+|`void AfxDumpStack(unsigned long)`|Il prototipo di funzione denominato.|
+|`+ 181 bytes`|Offset in byte dall'indirizzo del prototipo di funzione, in questo caso, `void AfxDumpStack(unsigned long)`all'indirizzo di restituzione (in questo `00427D55`caso).|
 
-`AfxDumpStack` è disponibile nelle versioni di debug e nondebug delle librerie MFC; Tuttavia, la funzione è sempre collegata staticamente, anche quando il file eseguibile Usa MFC in una DLL condivisa. In implementazioni di libreria condivisa, la funzione è disponibile il MFCS42. Libreria LIB (e relative varianti).
+`AfxDumpStack`è disponibile nelle versioni di debug e non di debug delle librerie MFC; Tuttavia, la funzione è sempre collegata in modo statico, anche quando il file eseguibile Usa MFC in una DLL condivisa. Nelle implementazioni di librerie condivise la funzione si trova in MFCS42. Libreria LIB (e relative varianti).
 
-Per utilizzare correttamente questa funzione:
+Per usare questa funzione correttamente:
 
-- Il file IMAGEHLP. DLL deve trovarsi nel percorso. Se non si dispone di tale DLL, la funzione verrà visualizzato un messaggio di errore. Visualizzare [libreria di immagini di Guida](/windows/desktop/Debug/image-help-library) per informazioni sul set di funzioni fornite da IMAGEHLP.
+- File IMAGEHLP. La DLL deve trovarsi nel percorso. Se non si dispone di questa DLL, verrà visualizzato un messaggio di errore nella funzione. Per informazioni sul set di funzioni fornito da IMAGEHLP, vedere la pagina relativa alla [libreria della Guida](/windows/win32/Debug/image-help-library) .
 
-- I moduli contenenti i frame nello stack devono includere le informazioni di debug. Se non contengono informazioni di debug, la funzione genererà comunque un'analisi dello stack, ma la traccia sarà meno dettagliata.
+- I moduli con frame nello stack devono includere informazioni di debug. Se non contengono informazioni di debug, la funzione genererà comunque una traccia dello stack, ma la traccia sarà meno dettagliata.
   ### <a name="requirements"></a>Requisiti
 
 **Intestazione:** afx.h
 
 ##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump
 
-Abilita e disabilita il dump delle perdite di memoria nel distruttore AFX_DEBUG_STATE.
+Abilita e Disabilita il dump della perdita di memoria nel distruttore AFX_DEBUG_STATE.
 
 ```
 BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
@@ -650,7 +650,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ### <a name="parameters"></a>Parametri
 
 *bDump*<br/>
-[in] TRUE indica che il dump delle perdite di memoria è abilitato. FALSE indica che il dump delle perdite di memoria è disabilitato.
+in TRUE indica che il dump delle perdite di memoria è abilitato. FALSE indica che il dump delle perdite di memoria è disabilitato.
 
 ### <a name="return-value"></a>Valore restituito
 
@@ -658,7 +658,7 @@ Il valore precedente per questo flag.
 
 ### <a name="remarks"></a>Note
 
-Quando un'applicazione scarica la libreria MFC, quest'ultima controlla se si sono verificate perdite di memoria. A questo punto, eventuali perdite di memoria vengono segnalate all'utente tramite il **Debug** finestra di Visual Studio.
+Quando un'applicazione scarica la libreria MFC, quest'ultima controlla se si sono verificate perdite di memoria. A questo punto, tutte le perdite di memoria vengono segnalate all'utente tramite la finestra di **debug** di Visual Studio.
 
 Se l'applicazione carica un'altra libreria prima della libreria MFC, alcune allocazioni di memoria in tale libreria verranno segnalate erroneamente come perdite di memoria. Per effetto di queste segnalazioni errate, è possibile che l'applicazione venga chiusa lentamente a mano a mano che le perdite vengono segnalate dalla libreria MFC. In tal caso, usare `AfxEnableMemoryLeakDump` per disabilitare il dump delle perdite di memoria.
 
@@ -671,7 +671,7 @@ Se l'applicazione carica un'altra libreria prima della libreria MFC, alcune allo
 
 ##  <a name="afxenablememorytracking"></a>  AfxEnableMemoryTracking
 
-Rilevamento diagnostica della memoria è in genere abilitata nella versione di Debug di MFC.
+Il rilevamento della memoria diagnostica è in genere abilitato nella versione di debug di MFC.
 
 ```
 BOOL AfxEnableMemoryTracking(BOOL bTrack);
@@ -680,20 +680,20 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 ### <a name="parameters"></a>Parametri
 
 *bTrack*<br/>
-Impostare questo valore su TRUE, verranno per rilevamento; della memoria FALSE lo disattiva.
+Impostando questo valore su TRUE viene attivato il rilevamento della memoria. FALSE lo disattiva.
 
 ### <a name="return-value"></a>Valore restituito
 
-L'impostazione precedente del flag di abilitazione di rilevamento.
+Impostazione precedente del flag di abilitazione del rilevamento.
 
 ### <a name="remarks"></a>Note
 
-Utilizzare questa funzione per disabilitare il rilevamento in sezioni del codice che già conosci stanno allocando i blocchi in modo corretto.
+Usare questa funzione per disabilitare il rilevamento in sezioni del codice che si sa che allocano blocchi in modo corretto.
 
-Per ulteriori informazioni sul `AfxEnableMemoryTracking`, vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Per ulteriori informazioni su `AfxEnableMemoryTracking`, vedere [debug di applicazioni MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
 > [!NOTE]
->  Questa funzione funziona solo nella versione di Debug di MFC.
+>  Questa funzione funziona solo nella versione di debug di MFC.
 
 ### <a name="example"></a>Esempio
 
@@ -705,7 +705,7 @@ Per ulteriori informazioni sul `AfxEnableMemoryTracking`, vedere [debug di appli
 
 ##  <a name="afxismemoryblock"></a>  AfxIsMemoryBlock
 
-Test di un indirizzo di memoria per assicurarsi che rappresenta un blocco di memoria attiva che è stato allocato dalla versione di diagnostica **nuovo**.
+Verifica un indirizzo di memoria per assicurarsi che rappresenti un blocco di memoria attualmente attivo allocato dalla versione di diagnostica di **New**.
 
 ```
 BOOL AfxIsMemoryBlock(
@@ -717,21 +717,21 @@ BOOL AfxIsMemoryBlock(
 ### <a name="parameters"></a>Parametri
 
 *p*<br/>
-Punta al blocco di memoria da sottoporre a test.
+Punta al blocco di memoria da testare.
 
 *nBytes*<br/>
 Contiene la lunghezza del blocco di memoria in byte.
 
 *plRequestNumber*<br/>
-Punta a un **lungo** integer che verrà compilato con numero di sequenza di allocazione del blocco di memoria oppure zero se non rappresenta un blocco di memoria attualmente attiva.
+Punta a un valore **Long** integer che verrà compilato con il numero di sequenza di allocazione del blocco di memoria oppure zero se non rappresenta un blocco di memoria attualmente attivo.
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se il blocco di memoria è attualmente allocato e la lunghezza è corretta. in caso contrario 0.
+Diverso da zero se il blocco di memoria è attualmente allocato e la lunghezza è corretta; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-Inoltre, controlla le dimensioni specificate con le dimensioni allocate originale. Se la funzione restituisce diverso da zero, viene restituito il numero di sequenza di allocazione nelle *plRequestNumber*. Questo numero rappresenta l'ordine in cui è stato allocato il blocco relativo tutti gli altri **nuovo** allocazioni.
+Consente inoltre di controllare la dimensione specificata rispetto alla dimensione allocata originale. Se la funzione restituisce un valore diverso da zero, il numero di sequenza di allocazione viene restituito in *plRequestNumber*. Questo numero rappresenta l'ordine in cui il blocco è stato allocato rispetto a tutte le altre **nuove** allocazioni.
 
 ### <a name="example"></a>Esempio
 
@@ -743,7 +743,7 @@ Inoltre, controlla le dimensioni specificate con le dimensioni allocate original
 
 ##  <a name="afxisvalidaddress"></a>  AfxIsValidAddress
 
-Verifica qualsiasi indirizzo di memoria per garantire che è contenuto interamente nello spazio di memoria del programma.
+Verifica qualsiasi indirizzo di memoria per assicurarsi che sia contenuto interamente nello spazio di memoria del programma.
 
 ```
 BOOL AfxIsValidAddress(
@@ -755,19 +755,19 @@ BOOL AfxIsValidAddress(
 ### <a name="parameters"></a>Parametri
 
 *lp*<br/>
-Punti all'indirizzo di memoria da sottoporre a test.
+Punta all'indirizzo di memoria da testare.
 
 *nBytes*<br/>
-Contiene il numero di byte di memoria da sottoporre a test.
+Contiene il numero di byte di memoria da testare.
 
 *bReadWrite*<br/>
-Specifica se la memoria sia per la lettura e scrittura (TRUE) o solo la lettura (FALSE).
+Specifica se la memoria è sia per la lettura che per la scrittura (TRUE) o semplicemente per la lettura (FALSE).
 
 ### <a name="return-value"></a>Valore restituito
 
-Nelle build di debug diverso da zero se Blocca la memoria specificata è contenuta interamente all'interno dello spazio di memoria del programma; in caso contrario 0.
+Nelle build di debug, diverso da zero se il blocco di memoria specificato è contenuto interamente nello spazio di memoria del programma; in caso contrario, 0.
 
-Nelle compilazioni non di debug, diverso da zero se *lp* non è NULL; in caso contrario, 0.
+Nelle compilazioni non di debug, diverso da zero se *LP* non è null; in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
@@ -783,7 +783,7 @@ L'indirizzo non è limitato ai blocchi allocati dal **nuovo**.
 
 ##  <a name="afxisvalidstring"></a>  AfxIsValidString
 
-Utilizzare questa funzione per determinare se un puntatore a una stringa è valido.
+Usare questa funzione per determinare se un puntatore a una stringa è valido.
 
 ```
 BOOL  AfxIsValidString(
@@ -794,16 +794,16 @@ BOOL  AfxIsValidString(
 ### <a name="parameters"></a>Parametri
 
 *lpsz*<br/>
-Puntatore da testare.
+Puntatore da verificare.
 
 *nLength*<br/>
-Specifica la lunghezza della stringa da testare, in byte. Il valore -1 indica che la stringa sarà con terminazione null.
+Specifica la lunghezza, in byte, della stringa da testare. Il valore-1 indica che la stringa sarà con terminazione null.
 
 ### <a name="return-value"></a>Valore restituito
 
-Nelle build di debug, diverso da zero se il puntatore punta a una stringa di dimensioni specificate. in caso contrario 0.
+Nelle compilazioni di debug, diverso da zero se il puntatore specificato punta a una stringa con le dimensioni specificate; in caso contrario, 0.
 
-Nelle compilazioni non di debug, diverso da zero se *lpsz* non è NULL; in caso contrario, 0.
+Nelle compilazioni non di debug, diverso da zero se *lpsz* non è null; in caso contrario, 0.
 
 ### <a name="example"></a>Esempio
 
@@ -815,7 +815,7 @@ Nelle compilazioni non di debug, diverso da zero se *lpsz* non è NULL; in caso 
 
 ##  <a name="afxsetallochook"></a>  AfxSetAllocHook
 
-Imposta una funzione di hook che consente di effettuare chiamate della funzione specificata prima di ogni blocco di memoria viene allocata.
+Imposta un hook che consente la chiamata della funzione specificata prima dell'allocazione di ogni blocco di memoria.
 
 ```
 AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
@@ -828,24 +828,24 @@ Specifica il nome della funzione da chiamare. Vedere la sezione Osservazioni per
 
 ### <a name="return-value"></a>Valore restituito
 
-Diverso da zero se si vuole consentire la preallocazione. in caso contrario 0.
+Valore diverso da zero se si desidera consentire l'allocazione. in caso contrario, 0.
 
 ### <a name="remarks"></a>Note
 
-L'allocatore di memoria di debug della libreria Microsoft Foundation Class può chiamare una funzione hook definita dall'utente per consentire all'utente per monitorare un'allocazione di memoria e per controllare se è consentita l'allocazione. Funzioni hook di allocazione vengono creati prototipi con nel modo seguente:
+Il libreria Microsoft Foundation Class allocatore di memoria di debug può chiamare una funzione hook definita dall'utente per consentire all'utente di monitorare un'allocazione di memoria e di controllare se l'allocazione è consentita. Le funzioni hook di allocazione sono con prototipo nel modo seguente:
 
-**BOOL AFXAPI AllocHook (size_t** `nSize` **, BOOL** `bObject` **lungo** `lRequestNumber` **);**
+**Bool AFXAPI AllocHook (size_t** `nSize` **, bool** `bObject` **, Long** `lRequestNumber` **);**
 
 *nSize*<br/>
-Le dimensioni dell'allocazione di memoria proposto.
+Dimensione dell'allocazione di memoria proposta.
 
 *bObject*<br/>
-TRUE se l'allocazione avviene per un `CObject`-oggetto derivato; in caso contrario, FALSE.
+TRUE se l'allocazione è per `CObject`un oggetto derivato da; in caso contrario, false.
 
 *lRequestNumber*<br/>
-Numero di sequenza dell'allocazione di memoria.
+Numero di sequenza dell'allocazione della memoria.
 
-Si noti che la convenzione di chiamata di AFXAPI implica che il chiamato deve rimuovere i parametri dallo stack.
+Si noti che la convenzione di chiamata AFXAPI implica che il chiamato deve rimuovere i parametri dallo stack.
 
 ### <a name="requirements"></a>Requisiti
 
@@ -853,7 +853,7 @@ Si noti che la convenzione di chiamata di AFXAPI implica che il chiamato deve ri
 
 ##  <a name="afxdoforallclasses"></a>  AfxDoForAllClasses
 
-Chiama la funzione di iterazione specificato per tutte le serializzabile `CObject`-classi derivate nello spazio di memoria dell'applicazione.
+Chiama la funzione di iterazione specificata per `CObject`tutte le classi derivate da serializzabili nello spazio di memoria dell'applicazione.
 
 ```
 void
@@ -865,17 +865,17 @@ AFXAPI AfxDoForAllClasses(
 ### <a name="parameters"></a>Parametri
 
 *pfn*<br/>
-Punta a una funzione di iterazione venga chiamato per ogni classe. Gli argomenti di funzione sono un puntatore a un `CRuntimeClass` oggetto e un puntatore void per dati aggiuntivi che il chiamante specifica della funzione.
+Punta a una funzione di iterazione da chiamare per ogni classe. Gli argomenti della funzione sono un puntatore a `CRuntimeClass` un oggetto e un puntatore void ai dati aggiuntivi forniti dal chiamante alla funzione.
 
 *pContext*<br/>
-Punta a dati facoltativi che il chiamante può fornire alla funzione di iterazione. Puntatore ' this ' può essere NULL.
+Punta ai dati facoltativi che il chiamante può fornire alla funzione di iterazione. Questo puntatore può essere NULL.
 
 ### <a name="remarks"></a>Note
 
-Serializzabile `CObject`-le classi derivate sono classi derivate tramite DECLARE_SERIAL (macro). Il puntatore passato a `AfxDoForAllClasses` nelle *pContext* viene passato alla funzione di iterazione specificato ogni volta che viene chiamato.
+Le `CObject`classi derivate da Serializable sono classi derivate mediante la macro DECLARE_SERIAL. Il puntatore passato a `AfxDoForAllClasses` in *pContext* viene passato alla funzione di iterazione specificata ogni volta che viene chiamato.
 
 > [!NOTE]
->  Questa funzione funziona solo nella versione di Debug di MFC.
+>  Questa funzione funziona solo nella versione di debug di MFC.
 
 ### <a name="example"></a>Esempio
 
@@ -889,7 +889,7 @@ Serializzabile `CObject`-le classi derivate sono classi derivate tramite DECLARE
 
 ##  <a name="afxdoforallobjects"></a>  AfxDoForAllObjects
 
-Esegue la funzione di iterazione specificato per tutti gli oggetti derivati da `CObject` che sono stati allocati con **nuovi**.
+Esegue la funzione di iterazione specificata per tutti gli oggetti `CObject` derivati da allocati con **New**.
 
 ```
 void AfxDoForAllObjects(
@@ -900,17 +900,17 @@ void AfxDoForAllObjects(
 ### <a name="parameters"></a>Parametri
 
 *pfn*<br/>
-Punta a una funzione di iterazioni da eseguire per ogni oggetto. Gli argomenti di funzione sono un puntatore a un `CObject` e un puntatore void per dati aggiuntivi che il chiamante specifica della funzione.
+Punta a una funzione di iterazione da eseguire per ogni oggetto. Gli argomenti della funzione sono un puntatore a `CObject` un oggetto e un puntatore void ai dati aggiuntivi forniti dal chiamante alla funzione.
 
 *pContext*<br/>
-Punta a dati facoltativi che il chiamante può fornire alla funzione di iterazione. Puntatore ' this ' può essere NULL.
+Punta ai dati facoltativi che il chiamante può fornire alla funzione di iterazione. Questo puntatore può essere NULL.
 
 ### <a name="remarks"></a>Note
 
-Oggetti incorporati o stack globale, non vengono enumerate. Il puntatore passato a `AfxDoForAllObjects` nelle *pContext* viene passato alla funzione di iterazione specificato ogni volta che viene chiamato.
+Gli oggetti stack, globali o incorporati non vengono enumerati. Il puntatore passato a `AfxDoForAllObjects` in *pContext* viene passato alla funzione di iterazione specificata ogni volta che viene chiamato.
 
 > [!NOTE]
->  Questa funzione funziona solo nella versione di Debug di MFC.
+>  Questa funzione funziona solo nella versione di debug di MFC.
 
 ### <a name="example"></a>Esempio
 
@@ -920,5 +920,5 @@ Oggetti incorporati o stack globale, non vengono enumerate. Il puntatore passato
 
 ## <a name="see-also"></a>Vedere anche
 
-[Macro e funzioni globali](mfc-macros-and-globals.md)<br/>
-[CObject::Dump](cobject-class.md#dump)
+[Macro e globali](mfc-macros-and-globals.md)<br/>
+[CObject::D UMP](cobject-class.md#dump)

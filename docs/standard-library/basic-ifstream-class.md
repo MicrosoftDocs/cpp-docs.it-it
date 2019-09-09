@@ -23,7 +23,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455508"
 ---
-# <a name="basicifstream-class"></a>Classe basic_ifstream
+# <a name="basic_ifstream-class"></a>Classe basic_ifstream
 
 Descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso della classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> con elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`.
 
@@ -44,7 +44,7 @@ I tratti dell'elemento di base del buffer di file (in genere `char_traits`< `Ele
 
 ## <a name="remarks"></a>Note
 
-L'oggetto archivia un oggetto della classe `basic_filebuf`< `Elem`, `Tr`>.
+L'oggetto archivia un oggetto di classe `basic_filebuf`< `Elem`, `Tr`>.
 
 ## <a name="example"></a>Esempio
 
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>Input: basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>Input: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -85,13 +85,13 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|DESCRIZIONE|
+|Costruttore|Descrizione|
 |-|-|
 |[basic_ifstream](#basic_ifstream)|Consente di inizializzare una nuova istanza di un oggetto `basic_ifstream`.|
 
 ### <a name="member-functions"></a>Funzioni membro
 
-|Funzione membro|DESCRIZIONE|
+|Funzione membro|Descrizione|
 |-|-|
 |[close](#close)|Chiude un file.|
 |[is_open](#is_open)|Determina se un file è aperto.|
@@ -101,7 +101,7 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="operators"></a>Operatori
 
-|Operator|Descrizione|
+|Operator|DESCRIZIONE|
 |-|-|
 |[operator=](#op_eq)|Assegna il contenuto di questo oggetto flusso. Si tratta di un'assegnazione di spostamento che implica un oggetto `rvalue` che non lascia alcuna copia.|
 
@@ -248,7 +248,7 @@ La protezione di apertura file predefinita che equivale al parametro `shflag` in
 
 ### <a name="remarks"></a>Note
 
-La funzione membro chiama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). Se l'apertura ha esito negativo [](../standard-library/basic-ios-class.md#setstate), la funzione`failbit`chiama sestate (), che può generare un'eccezione ios_base:: Failure.
+La funzione membro chiama [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). Se l'apertura ha esito negativo, la funzione`failbit`chiama [sestate](../standard-library/basic-ios-class.md#setstate)(), che può generare un'eccezione ios_base:: Failure.
 
 ### <a name="example"></a>Esempio
 
@@ -310,6 +310,6 @@ La funzione membro scambia il contenuto di questo oggetto con il contenuto di *r
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

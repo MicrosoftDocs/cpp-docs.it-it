@@ -62,7 +62,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460098"
 ---
-# <a name="basicios-class"></a>Classe basic_ios
+# <a name="basic_ios-class"></a>Classe basic_ios
 
 La classe di modello descrive le funzioni membro e di archiviazione comuni a entrambi i flussi di input (della classe di modello [basic_istream](../standard-library/basic-istream-class.md)) e di output (della classe di modello [basic_ostream](../standard-library/basic-ostream-class.md)) che dipendono dai parametri di modello. La classe [ios_base](../standard-library/ios-base-class.md) descrive gli elementi comuni e non dipendenti dai parametri di modello. Un oggetto della classe **basic_ios\<Class elem, i tratti della classe >** facilita il controllo di un flusso con `Elem`elementi di tipo, i cui tratti di carattere sono `Traits`determinati dalla classe.
 
@@ -98,7 +98,7 @@ Un oggetto della classe **basic_ios\<class Elem, class Traits>** archivia gli el
 
 ### <a name="constructors"></a>Costruttori
 
-|Costruttore|DESCRIZIONE|
+|Costruttore|Descrizione|
 |-|-|
 |[basic_ios](#basic_ios)|Costruisce la classe `basic_ios`.|
 
@@ -238,7 +238,7 @@ Se `state` **&** [exceptions](#exceptions) è diverso da zero, verrà generato u
 
 ### <a name="example"></a>Esempio
 
-Per esempi relativi [](../standard-library/string-functions.md#getline) all'uso `clear`di, vedere [rdstate](#rdstate) e getline.
+Per esempi relativi all'uso `clear`di, vedere [rdstate](#rdstate) e [getline](../standard-library/string-functions.md#getline) .
 
 ## <a name="copyfmt"></a>  basic_ios::copyfmt
 
@@ -581,7 +581,7 @@ L'oggetto `ios_base` da cui spostare i valori.
 
 ### <a name="remarks"></a>Note
 
-La funzione membro protected sposta tutti i valori archiviati  in Right `*this` ad eccezione di `stream buffer pointer`archiviato, che è invariato a *destra* e impostato su un puntatore null `*this`in. L'oggetto `tie pointer` archiviato è impostato su un puntatore null a *destra*.
+La funzione membro protected sposta tutti i valori archiviati in Right `*this` ad eccezione di `stream buffer pointer`archiviato, che è invariato a *destra* e impostato su un puntatore null `*this`in. L'oggetto `tie pointer` archiviato è impostato su un puntatore null a *destra*.
 
 ## <a name="narrow"></a>  basic_ios::narrow
 
@@ -986,6 +986,6 @@ La funzione membro protetto scambia tutti i valori archiviati a *destra* con `*t
 
 ## <a name="see-also"></a>Vedere anche
 
-[Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)\ (Sicurezza dei thread nella libreria standard C++)
+[Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Programmazione di iostream](../standard-library/iostream-programming.md)\
 [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

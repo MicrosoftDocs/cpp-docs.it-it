@@ -1,17 +1,17 @@
 ---
-title: nonbrowsable (attributo COM C++)
+title: nonbrowsable (C++ attributo com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 0a5e01c0fde49c7debb7749f5a1d148acb9cca6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409122"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514381"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -25,7 +25,7 @@ Indica che un membro di interfaccia non deve essere visualizzato in un visualizz
 
 ## <a name="remarks"></a>Note
 
-Il **nonbrowsable** attributi di C++ ha la stessa funzionalità come la [nonbrowsable](/windows/desktop/Midl/nonbrowsable) attributo MIDL.
+L' C++ attributo non esplorabile ha la stessa funzionalità dell'attributo MIDL non [esplorabile](/windows/win32/Midl/nonbrowsable) .
 
 ## <a name="example"></a>Esempio
 
@@ -52,7 +52,7 @@ __interface IMyI
 |**Si applica a**|Metodo di interfaccia|
 |**Ripetibile**|No|
 |**Attributi obbligatori**|Nessuna|
-|**Attributi non validi**|nessuno|
+|**Attributi non validi**|Nessuna|
 
 Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](cpp-attributes-com-net.md#contexts).
 
