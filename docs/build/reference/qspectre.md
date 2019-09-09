@@ -1,16 +1,16 @@
 ---
 title: /Qspectre
-ms.date: 10/12/2018
+ms.date: 09/06/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SpectreMitigation
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: 2b784e464f98ae6a1f9285f799d903ae689bf6d5
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: e8d03075a980a9b9c345ce351413e39a3c3444cb
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340999"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808822"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,9 +28,12 @@ L'opzione **/Qspectre** è disattivata per impostazione predefinita.
 
 Nella versione iniziale l'opzione **/Qspectre** funziona solo nel codice ottimizzato. In Visual Studio 2017 versione 15.7 e successive l'opzione **/Qspectre** è supportata in tutti i livelli di ottimizzazione.
 
-Anche le librerie Microsoft Visual C++ sono disponibili in versioni con mitigazione Spectre. Le librerie con mitigazione Spectre per Visual Studio 2017 e versioni successive possono essere scaricate nel programma di installazione di Visual Studio. Sono disponibili nella scheda **singoli componenti** in compilatori **, strumenti di compilazione e Runtime**e hanno "libs per Spectre" nel nome. Per un sottoinsieme di runtime di Visual C++, sono disponibili librerie di runtime DLL e statiche con la mitigazione abilitata: codice di avvio VC++, vcruntime140, msvcp140, concrt140 e vcamp140. Le dll sono supportate solo per la distribuzione locale dell'applicazione. Il contenuto delle librerie di C++ runtime di Visual 2017 e versioni successive non è stato modificato.
+Anche le librerie Microsoft Visual C++ sono disponibili in versioni con mitigazione Spectre. Le librerie con mitigazione Spectre per Visual Studio 2017 e versioni successive possono essere scaricate nel programma di installazione di Visual Studio. Sono disponibili nella scheda **singoli componenti** in **compilatori, strumenti di compilazione e Runtime**e hanno "libs per Spectre" nel nome. Per un sottoinsieme di runtime di Visual C++, sono disponibili librerie di runtime DLL e statiche con la mitigazione abilitata: codice di avvio VC++, vcruntime140, msvcp140, concrt140 e vcamp140. Le dll sono supportate solo per la distribuzione locale dell'applicazione. Il contenuto delle librerie di C++ runtime di Visual 2017 e versioni successive non è stato modificato.
 
 È anche possibile installare le librerie con attenuazione Spectre per MFC e ATL. Sono disponibili nella scheda **singoli componenti** in **SDK, librerie e Framework**.
+
+> [!NOTE]
+> Non sono disponibili versioni di librerie con attenuazione Spectre per le app o i componenti di Windows universale (UWP). Non è possibile distribuire app-local di tali librerie.
 
 ### <a name="applicability"></a>Applicabilità
 
@@ -68,11 +71,25 @@ Per ulteriori informazioni, vedere l' [avviso ufficiale di sicurezza Microsoft A
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
-1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare le proprietà del compilatore e di compilazione C++ in Visual Studio](../working-with-project-properties.md).
+::: moniker range="vs-2019"
 
-1. Selezionare la pagina delle proprietà **Proprietà di configurazione** > **C/C++**  > **Riga di comando**.
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
+
+1. Selezionare la pagina proprietà di **configurazione** > > **C/C++**  **generazione codice** .
+
+1. Selezionare un nuovo valore per la proprietà **mitigazione Spectre** . Scegliere **OK** per applicare la modifica.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [Impostare il compilatore e le proprietà di compilazione](../working-with-project-properties.md).
+
+1. Selezionare la pagina delle proprietà **configurazione proprietà** > > **C/C++**  **riga di comando** .
 
 1. Immettere l'opzione del compilatore **/Qspectre** nella casella **Opzioni aggiuntive**. Scegliere **OK** per applicare la modifica.
+
+::: moniker-end
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
 
