@@ -2889,7 +2889,7 @@
       href: security/how-user-account-control-uac-affects-your-application.md
     - name: Linee guida per sviluppatori C++ - per attacchi di side-channel di esecuzione speculativa
       href: security/developer-guidance-speculative-execution.md
-- name: Riferimenti
+- name: Riferimento
   expanded: false
   items:
     - name: Linguaggio C/C++ e librerie standard
