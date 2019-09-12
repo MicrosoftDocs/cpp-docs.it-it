@@ -71,7 +71,7 @@ Un *servizio* di Windows è un programma che può essere eseguito in background 
 
 ## <a name="sdks-libraries-and-header-files"></a>SDK, librerie e file di intestazione
 
-Visual Studio include la libreria di runtime C (CRT), C++ la libreria standard e altre librerie specifiche di Microsoft. La maggior parte delle cartelle di inclusione che contengono i file di intestazione per queste librerie si trova nella directory di installazione di Visual Studio nella cartella \VC\ I file di intestazione di Windows e CRT si trovano nella cartella di installazione di Windows SDK.
+Visual Studio include la libreria di runtime C (CRT), C++ la libreria standard e altre librerie specifiche di Microsoft. La maggior parte delle cartelle di inclusione che contengono i file di intestazione per queste librerie si trova nella directory di installazione di Visual Studio nella cartella \VC I file di intestazione di Windows e CRT si trovano nella cartella di installazione di Windows SDK.
 
 [Gestione pacchetti vcpkg](../build/vcpkg.md) consente di installare comodamente centinaia di librerie open source di terze parti per Windows.
 
