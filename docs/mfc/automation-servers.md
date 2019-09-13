@@ -7,45 +7,45 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-ms.openlocfilehash: 39e870db2f5476a630a8ed3bc68944dbb164d469
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 510acfa032ca4303962164a19130ecd1971060fc
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374168"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907967"
 ---
 # <a name="automation-servers"></a>Server di automazione
 
-Automazione rende possibile per l'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati. Un server di automazione è un'applicazione che espone gli oggetti programmabili, denominati oggetti di automazione, ad altre applicazioni (chiamati [i client di automazione](../mfc/automation-clients.md)). Server di automazione sono talvolta denominati componenti di automazione.
+L'automazione consente all'applicazione di modificare gli oggetti implementati in un'altra applicazione o di esporre oggetti in modo che possano essere modificati. Un server di automazione è un'applicazione che espone gli oggetti programmabili (detti oggetti di automazione) ad altre applicazioni, denominate [client di automazione](../mfc/automation-clients.md). I server di automazione sono talvolta denominati componenti di automazione.
 
-Esposizione di oggetti di automazione consente ai client di automazione di alcune procedure accedendo direttamente gli oggetti e funzionalità server rende disponibili. Esposizione di oggetti in questo modo è utile quando le applicazioni forniscono funzionalità utili per le altre applicazioni. Ad esempio, un elaboratore di testo potrebbe esporre la funzionalità di controllo ortografico in modo che altri programmi possono utilizzarlo. In questo modo, l'esposizione degli oggetti consente ai fornitori di migliorare la funzionalità delle proprie applicazioni usando la funzionalità preconfezionate di altre applicazioni.
+L'esposizione di oggetti di automazione consente ai client di automatizzare determinate procedure accedendo direttamente agli oggetti e alle funzionalità resi disponibili dal server. L'esposizione di oggetti in questo modo è utile quando le applicazioni forniscono funzionalità utili per altre applicazioni. Ad esempio, un elaboratore di testo potrebbe esporre la propria funzionalità di controllo ortografico, in modo che possa essere usata da altri programmi. L'esposizione degli oggetti consente ai fornitori di migliorare le funzionalità delle applicazioni utilizzando la funzionalità di altre applicazioni predisposta.
 
-Questi oggetti di automazione hanno proprietà e metodi come interfaccia esterna. Gli attributi dell'oggetto di automazione sono denominate proprietà. Le proprietà sono come i membri dati di una classe C++. I metodi sono funzioni che operano su oggetti di automazione. I metodi sono analoghe alle funzioni membro pubblico di una classe C++.
+Questi oggetti di automazione dispongono di proprietà e metodi come interfaccia esterna. Le proprietà sono attributi denominati dell'oggetto di automazione. Le proprietà sono simili ai membri dati di C++ una classe. I metodi sono funzioni che funzionano sugli oggetti di automazione. I metodi sono simili alle funzioni membro pubbliche di C++ una classe.
 
 > [!NOTE]
->  Anche se le proprietà sono come i membri dati di C++, non sono direttamente accessibili. Per fornire un accesso trasparente, impostare una variabile interna nell'oggetto di automazione con una coppia di funzioni membro get/set per accedervi.
+>  Sebbene le proprietà siano C++ come i membri dati, non sono direttamente accessibili. Per fornire l'accesso trasparente, impostare una variabile interna nell'oggetto di automazione con una coppia di funzioni membro get/set per accedervi.
 
-Esponendo la funzionalità dell'applicazione tramite un'interfaccia comune e ben definita, automazione consente di creare applicazioni in un unico generale linguaggio di programmazione, ad esempio Microsoft Visual Basic, invece di in diversi, specifici dell'applicazione (macro) Lingue.
+Esponendo la funzionalità dell'applicazione tramite un'interfaccia comune e ben definita, l'automazione rende possibile la creazione di applicazioni in un unico linguaggio di programmazione generale, ad esempio Microsoft Visual Basic invece che in macro diversificate specifiche dell'applicazione Lingue.
 
-##  <a name="_core_support_for_automation_servers"></a> Supporto per i server di automazione
+##  <a name="_core_support_for_automation_servers"></a>Supporto per i server di automazione
 
-Visual C++ e il framework MFC fornisce supporto completo per i server di automazione. Di gestione di gran lunga l'overhead coinvolto nella creazione di un server di automazione, pertanto è possibile concentrare l'attenzione sulle funzionalità dell'applicazione.
+Visual C++ e il framework MFC forniscono supporto completo per i server di automazione. Gestiscono gran parte del sovraccarico dovuto alla creazione di un server di automazione, in modo da poter concentrare il lavoro sulle funzionalità dell'applicazione.
 
-Il principale meccanismo di framework per il supporto di automazione è la mappa di invio, un set di macro che si estende le dichiarazioni e le chiamate necessarie per esporre metodi e proprietà per OLE. Una tipica mappa di invio è simile alla seguente:
+Il meccanismo principale del Framework per il supporto dell'automazione è la mappa di invio, un set di macro che si espande nelle dichiarazioni e le chiamate necessarie per esporre metodi e proprietà per OLE. Una mappa di invio tipica è simile alla seguente:
 
 [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]
 
-La finestra proprietà e visualizzazione classi utili per la gestione di mappe di invio. Quando si aggiunge un nuovo metodo o una proprietà a una classe, Visual C++ aggiunge un che corrisponde `DISP_FUNCTION` o `DISP_PROPERTY` macro con parametri che indicano i nomi interni ed esterni dei tipi di metodo o proprietà e i dati, il nome della classe.
+La [creazione guidata classe](reference/mfc-class-wizard.md) e visualizzazione classi assistono alla gestione delle mappe di invio. Quando si aggiunge un nuovo metodo o proprietà a una classe, Visual Studio aggiunge una macro `DISP_FUNCTION` o `DISP_PROPERTY` corrispondente con parametri che indicano il nome della classe, i nomi esterni e interni del metodo o della proprietà e i tipi di dati.
 
-Il **Aggiungi classe** nella finestra di dialogo semplifica anche la dichiarazione di classi di automazione e la gestione delle relative proprietà e operazioni. Quando si utilizza la finestra di dialogo Aggiungi classe per aggiungere una classe al progetto, si specifica la classe di base. Se la classe di base consente l'automazione, la finestra di dialogo Aggiungi classe Visualizza controlli da usare per specificare se la nuova classe deve supportare l'automazione, sia che si tratti di "OLE generabile" (ovvero, se gli oggetti della classe possano essere creati in una richiesta da un client COM) e il nome esterno per il client COM da utilizzare.
+La finestra di dialogo **Aggiungi classe** semplifica anche la dichiarazione delle classi di automazione e la gestione delle relative proprietà e operazioni. Quando si usa la finestra di dialogo Aggiungi classe per aggiungere una classe al progetto, è necessario specificare la relativa classe di base. Se la classe base consente l'automazione, nella finestra di dialogo Aggiungi classe vengono visualizzati i controlli utilizzati per specificare se la nuova classe deve supportare l'automazione, indipendentemente dal fatto che sia "OLE generabile", ovvero se gli oggetti della classe possono essere creati in una richiesta da un client COM. e il nome esterno per il client COM da usare.
 
-Il **Aggiungi classe** nella finestra di dialogo Crea quindi una dichiarazione di classe, incluse le macro appropriate per funzionalità OLE specificato. Aggiunge anche la struttura del codice per l'implementazione di funzioni membro della classe.
+La finestra di dialogo **Aggiungi classe** crea quindi una dichiarazione di classe, incluse le macro appropriate per le funzionalità OLE specificate. Aggiunge anche il codice di scheletro per l'implementazione delle funzioni membro della classe.
 
-La creazione guidata applicazione MFC semplifica i passaggi necessari per far funzionare l'applicazione server di automazione il piede giusto. Se si seleziona il **automazione** casella di controllo dalle **funzionalità avanzate** pagina, la creazione guidata applicazione MFC viene aggiunto all'applicazione `InitInstance` funzionare le chiamate necessarie per registrare l'automazione gli oggetti ed eseguire l'applicazione come un server di automazione.
+La creazione guidata applicazione MFC semplifica i passaggi necessari per l'applicazione del server di automazione. Se si seleziona la casella di controllo **automazione** dalla pagina **funzionalità avanzate** , la creazione guidata applicazione MFC aggiunge alla `InitInstance` funzione dell'applicazione le chiamate necessarie per registrare gli oggetti di automazione ed eseguire l'applicazione come Server di automazione.
 
-### <a name="what-do-you-want-to-do"></a>Ciò che si desidera eseguire
+### <a name="what-do-you-want-to-do"></a>Cosa si vuole fare
 
-- [Informazioni su client di automazione](../mfc/automation-clients.md)
+- [Informazioni sui client di automazione](../mfc/automation-clients.md)
 
 - [Altre informazioni sulla classe CCmdTarget](../mfc/reference/ccmdtarget-class.md)
 

@@ -1,6 +1,6 @@
 ---
 title: Classe CCmdUI
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - CCmdUI
 - AFXWIN/CCmdUI
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206385"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907833"
 ---
 # <a name="ccmdui-class"></a>Classe CCmdUI
 
-Viene usato solo in un' `ON_UPDATE_COMMAND_UI` gestore in un `CCmdTarget`-classe derivata.
+Viene utilizzato solo all'interno `ON_UPDATE_COMMAND_UI` di un gestore `CCmdTarget`in una classe derivata da.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -43,49 +43,49 @@ Viene usato solo in un' `ON_UPDATE_COMMAND_UI` gestore in un `CCmdTarget`-classe
 class CCmdUI
 ```
 
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
-|[CCmdUI::ContinueRouting](#continuerouting)|Indica il meccanismo di routing dei comandi per continuare il routing del messaggio corrente lungo la catena dei gestori.|
-|[CCmdUI::Enable](#enable)|Abilita o disabilita l'elemento dell'interfaccia utente per questo comando.|
+|[CCmdUI::ContinueRouting](#continuerouting)|Indica al meccanismo di routing del comando di continuare a indirizzare il messaggio corrente alla catena di gestori.|
+|[CCmdUI::Enable](#enable)|Abilita o Disabilita l'elemento dell'interfaccia utente per questo comando.|
 |[CCmdUI::SetCheck](#setcheck)|Imposta lo stato di selezione dell'elemento dell'interfaccia utente per questo comando.|
-|[CCmdUI::SetRadio](#setradio)|Ad esempio il `SetCheck` funzione membro, ma opera su gruppi di opzione.|
+|[CCmdUI::SetRadio](#setradio)|Analogamente `SetCheck` alla funzione membro, ma opera sui gruppi di radio.|
 |[CCmdUI::SetText](#settext)|Imposta il testo per l'elemento dell'interfaccia utente per questo comando.|
 
 ### <a name="public-data-members"></a>Membri dati pubblici
 
-|Nome|Descrizione|
+|NOME|Descrizione|
 |----------|-----------------|
-|[CCmdUI::m_nID](#m_nid)|L'ID dell'oggetto dell'interfaccia utente.|
-|[CCmdUI::m_nIndex](#m_nindex)|L'indice dell'oggetto dell'interfaccia utente.|
-|[CCmdUI::m_pMenu](#m_pmenu)|Punta al menu rappresentato dal `CCmdUI` oggetto.|
-|[CCmdUI::m_pOther](#m_pother)|Punta all'oggetto window che riceve la notifica.|
-|[CCmdUI::m_pSubMenu](#m_psubmenu)|Punta al sottomenu indipendente rappresentato dal `CCmdUI` oggetto.|
+|[CCmdUI::m_nID](#m_nid)|ID dell'oggetto dell'interfaccia utente.|
+|[CCmdUI::m_nIndex](#m_nindex)|Indice dell'oggetto dell'interfaccia utente.|
+|[CCmdUI::m_pMenu](#m_pmenu)|Punta al menu rappresentato dall' `CCmdUI` oggetto.|
+|[CCmdUI:: m_pOther](#m_pother)|Punta all'oggetto finestra che ha inviato la notifica.|
+|[CCmdUI::m_pSubMenu](#m_psubmenu)|Punta al sottomenu contenuto rappresentato dall' `CCmdUI` oggetto.|
 
 ## <a name="remarks"></a>Note
 
-`CCmdUI` non è una classe di base.
+`CCmdUI`non dispone di una classe base.
 
-Quando un utente dell'applicazione estrae un menu, ogni elemento menu dovrà sapere se deve essere visualizzato come abilitato o disabilitato. La destinazione di un comando di menu fornisce queste informazioni mediante l'implementazione di un gestore ON_UPDATE_COMMAND_UI. Per ogni oggetto comando dell'interfaccia utente nell'applicazione, usare la finestra proprietà per creare un prototipo di voce e la funzione della mappa messaggi per ogni gestore.
+Quando un utente dell'applicazione estrae un menu, ogni voce di menu deve sapere se deve essere visualizzata come abilitata o disabilitata. La destinazione di un comando di menu fornisce queste informazioni implementando un gestore ON_UPDATE_COMMAND_UI. Per ogni oggetto dell'interfaccia utente del comando nell'applicazione, usare la [creazione guidata classe](mfc-class-wizard.md) o la finestra **proprietà** (in **Visualizzazione classi**) per creare una voce della mappa messaggi e un prototipo di funzione per ogni gestore.
 
-Quando viene effettuato il pull nel menu a discesa, il framework cerca e chiama ogni gestore ON_UPDATE_COMMAND_UI, ogni gestore chiama `CCmdUI` , ad esempio funzioni membro `Enable` e `Check`, e il framework visualizza quindi in modo appropriato ogni voce di menu.
+Quando il menu viene estratto, il Framework cerca e chiama ogni gestore ON_UPDATE_COMMAND_UI, ogni gestore chiama `CCmdUI` funzioni membro `Enable` quali e `Check`e il Framework Visualizza in modo appropriato ogni voce di menu.
 
-Una voce di menu può essere sostituita con un pulsante della barra di controllo o un altro oggetto di interfaccia utente di comando senza modificare il codice all'interno di `ON_UPDATE_COMMAND_UI` gestore.
+Una voce di menu può essere sostituita da un pulsante della barra di controllo o da un altro oggetto dell'interfaccia utente del comando `ON_UPDATE_COMMAND_UI` senza modificare il codice all'interno del gestore.
 
-Nella tabella seguente sono riepilogati gli effetti `CCmdUI`di funzioni membro hanno sui vari elementi dell'interfaccia utente di comando.
+Nella tabella seguente sono riepilogate le `CCmdUI`funzioni membro dell'effetto su diversi elementi dell'interfaccia utente del comando.
 
 |Elemento dell'interfaccia utente|Attiva|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
-|Voce di menu|Abilita o disabilita|Seleziona o deseleziona|Controlla l'uso di un punto|Set di elementi di testo|
-|Pulsante della barra degli strumenti|Abilita o disabilita|Consente di selezionare, viene deselezionata, o indeterminato|Uguale a `SetCheck`|(Non applicabile)|
-|Riquadro barra di stato|Imposta il testo visibile o invisibile|Bordo a comparsa o normale set|Uguale a `SetCheck`|Imposta il testo riquadro|
-|Pulsante normale `CDialogBar`|Abilita o disabilita|Seleziona o deseleziona la casella di controllo|Uguale a `SetCheck`|Set di testo del pulsante|
-|Controllo normale in `CDialogBar`|Abilita o disabilita|(Non applicabile)|(Non applicabile)|Imposta il testo della finestra|
+|Voce di menu|Abilitazione o disabilitazione|Controlla o deseleziona|Controlli con un punto|Imposta il testo dell'elemento|
+|Pulsante della barra degli strumenti|Abilitazione o disabilitazione|Seleziona, deseleziona o indeterminato|Uguale a `SetCheck`|(Non applicabile)|
+|Riquadro Barra di stato|Rende il testo visibile o invisibile|Imposta la finestra popup o il bordo normale|Uguale a `SetCheck`|Imposta il testo del riquadro|
+|Pulsante normale in`CDialogBar`|Abilitazione o disabilitazione|Casella di controllo controlla o deseleziona|Uguale a `SetCheck`|Imposta il testo del pulsante|
+|Controllo normale in`CDialogBar`|Abilitazione o disabilitazione|(Non applicabile)|(Non applicabile)|Imposta il testo della finestra|
 
-Per altre informazioni sull'uso di questa classe, vedere [come oggetti dell'interfaccia utente di aggiornamento](../../mfc/how-to-update-user-interface-objects.md).
+Per ulteriori informazioni sull'utilizzo di questa classe, vedere [come aggiornare gli oggetti dell'interfaccia utente](../../mfc/how-to-update-user-interface-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -95,9 +95,9 @@ Per altre informazioni sull'uso di questa classe, vedere [come oggetti dell'inte
 
 **Intestazione:** afxwin.h
 
-##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting
+##  <a name="continuerouting"></a>CCmdUI:: ContinueRouting
 
-Chiamare questa funzione membro per stabilire il meccanismo di routing dei comandi per continuare il routing del messaggio corrente lungo la catena dei gestori.
+Chiamare questa funzione membro per indicare al meccanismo di routing del comando di continuare a indirizzare il messaggio corrente alla catena di gestori.
 
 ```
 void ContinueRouting();
@@ -105,9 +105,9 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Note
 
-Si tratta di una funzione membro avanzata che deve essere usata in combinazione con un gestore ON_COMMAND_EX che restituisce FALSE. Per altre informazioni, vedere [tecnica nota 6](../../mfc/tn006-message-maps.md).
+Si tratta di una funzione membro avanzata da usare insieme a un gestore ON_COMMAND_EX che restituisce FALSE. Per ulteriori informazioni, vedere la [Nota tecnica 6](../../mfc/tn006-message-maps.md).
 
-##  <a name="enable"></a>  CCmdUI:: Enable
+##  <a name="enable"></a>CCmdUI:: Enable
 
 Chiamare questa funzione membro per abilitare o disabilitare l'elemento dell'interfaccia utente per questo comando.
 
@@ -118,7 +118,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ### <a name="parameters"></a>Parametri
 
 *bOn*<br/>
-True per abilitare l'elemento su FALSE per disabilitarla.
+TRUE per abilitare l'elemento, FALSE per disabilitarlo.
 
 ### <a name="example"></a>Esempio
 
@@ -128,7 +128,7 @@ True per abilitare l'elemento su FALSE per disabilitarla.
 
 ##  <a name="m_nid"></a>  CCmdUI::m_nID
 
-L'ID della voce di menu, pulsante della barra degli strumenti o un altro oggetto di interfaccia utente rappresentato dal `CCmdUI` oggetto.
+ID della voce di menu, pulsante della barra degli strumenti o altro oggetto dell'interfaccia utente rappresentato dall' `CCmdUI` oggetto.
 
 ```
 UINT m_nID;
@@ -136,15 +136,15 @@ UINT m_nID;
 
 ##  <a name="m_nindex"></a>  CCmdUI::m_nIndex
 
-L'indice della voce di menu, pulsante della barra degli strumenti o un altro oggetto di interfaccia utente rappresentato dal `CCmdUI` oggetto.
+Indice della voce di menu, del pulsante della barra degli strumenti o di un altro oggetto dell'interfaccia `CCmdUI` utente rappresentato dall'oggetto.
 
 ```
 UINT m_nIndex;
 ```
 
-##  <a name="m_pmenu"></a>  CCmdUI::m_pMenu
+##  <a name="m_pmenu"></a>CCmdUI:: m_pMenu
 
-Puntatore (del `CMenu` tipo) al menu rappresentato dal `CCmdUI` oggetto.
+Puntatore (di `CMenu` tipo) al menu rappresentato `CCmdUI` dall'oggetto.
 
 ```
 CMenu* m_pMenu;
@@ -154,9 +154,9 @@ CMenu* m_pMenu;
 
 NULL se l'elemento non è un menu.
 
-##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu
+##  <a name="m_psubmenu"></a>CCmdUI:: m_pSubMenu
 
-Puntatore (del `CMenu` tipo) per il sottomenu indipendente rappresentato dal `CCmdUI` oggetto.
+Puntatore (di `CMenu` tipo) al sottomenu contenuto rappresentato `CCmdUI` dall'oggetto.
 
 ```
 CMenu* m_pSubMenu;
@@ -164,11 +164,11 @@ CMenu* m_pSubMenu;
 
 ### <a name="remarks"></a>Note
 
-NULL se l'elemento non è un menu. Se il sottomenu è un finestra popup *m_nID* contiene l'ID del primo elemento nel menu a comparsa. Per altre informazioni, vedere [21 Nota tecnica](../../mfc/tn021-command-and-message-routing.md).
+NULL se l'elemento non è un menu. Se il sottomenu è un popup, *m_nID* contiene l'ID del primo elemento nel menu a comparsa. Per ulteriori informazioni, vedere la [Nota tecnica 21](../../mfc/tn021-command-and-message-routing.md).
 
-##  <a name="m_pother"></a>  CCmdUI::m_pOther
+##  <a name="m_pother"></a>CCmdUI:: m_pOther
 
-Puntatore (di tipo `CWnd`) all'oggetto finestra, ad esempio una barra degli strumenti o allo stato, che ha inviato la notifica.
+Puntatore (di tipo `CWnd`) all'oggetto finestra, ad esempio uno strumento o una barra di stato, che ha inviato la notifica.
 
 ```
 CWnd* m_pOther;
@@ -176,11 +176,11 @@ CWnd* m_pOther;
 
 ### <a name="remarks"></a>Note
 
-NULL se l'elemento è un menu o non `CWnd` oggetto.
+NULL se l'elemento è un menu o un `CWnd` oggetto non.
 
-##  <a name="setcheck"></a>  CCmdUI::SetCheck
+##  <a name="setcheck"></a>CCmdUI:: secheck
 
-Chiamare questa funzione membro per impostare l'elemento dell'interfaccia utente per questo comando per lo stato di selezione appropriata.
+Chiamare questa funzione membro per impostare l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.
 
 ```
 virtual void SetCheck(int nCheck = 1);
@@ -189,15 +189,15 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="parameters"></a>Parametri
 
 *nCheck*<br/>
-Specifica lo stato di controllo da impostare. Se 0, deseleziona; Se i controlli di 1, e se è 2, imposta indeterminato.
+Specifica lo stato di selezione da impostare. Se è 0, deseleziona; Se è 1, controlla; e se 2, imposta indeterminato.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro funziona per le voci di menu e pulsanti della barra degli strumenti. Stato indeterminato si applica solo ai pulsanti della barra degli strumenti.
+Questa funzione membro funziona per le voci di menu e i pulsanti della barra degli strumenti. Lo stato indeterminato si applica solo ai pulsanti della barra degli strumenti.
 
-##  <a name="setradio"></a>  CCmdUI::SetRadio
+##  <a name="setradio"></a>CCmdUI:: seradio
 
-Chiamare questa funzione membro per impostare l'elemento dell'interfaccia utente per questo comando per lo stato di selezione appropriata.
+Chiamare questa funzione membro per impostare l'elemento dell'interfaccia utente per questo comando sullo stato di selezione appropriato.
 
 ```
 virtual void SetRadio(BOOL bOn = TRUE);
@@ -210,7 +210,7 @@ TRUE per abilitare l'elemento; in caso contrario, FALSE.
 
 ### <a name="remarks"></a>Note
 
-Questa funzione membro funziona come `SetCheck`, ad eccezione del fatto che opera sugli elementi dell'interfaccia utente che agisce come parte di un gruppo di opzione. Deselezionare gli altri elementi nel gruppo non è automatica, a meno che gli elementi mantenere il comportamento di radio-group.
+Questa funzione membro funziona come `SetCheck`, ad eccezione del fatto che agisce sugli elementi dell'interfaccia utente che agiscono come parte di un gruppo di radio. La deselezione degli altri elementi del gruppo non è automatica, a meno che gli elementi stessi non gestiscano il comportamento del gruppo di radio.
 
 ##  <a name="settext"></a>  CCmdUI::SetText
 
@@ -231,6 +231,6 @@ Puntatore a una stringa di testo.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Esempio MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[MDI di esempio MFC](../../overview/visual-cpp-samples.md)<br/>
 [Grafico della gerarchia](../../mfc/hierarchy-chart.md)<br/>
 [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)

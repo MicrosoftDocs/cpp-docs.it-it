@@ -1,6 +1,6 @@
 ---
 title: Pagine delle proprietà del compilatore MIDL
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
 f1_keywords:
@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 0113fbd68d7687236b91b098ead2ac6b8338fee9
-ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
+ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68787066"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927700"
 ---
 # <a name="midl-property-pages"></a>Pagine delle proprietà MIDL
 
@@ -110,7 +110,7 @@ Specifica il tipo di carattere predefinito del compilatore C che verrà usato pe
 
 **Scelte**
 
-- Con firma firmata
+- Con firma **firmata**
 - **Senza segno** -senza segno
 - **ASCII** -ASCII
 
@@ -187,7 +187,7 @@ Genera solo file stub client ([/client](/windows/win32/midl/-client) [Stub | nes
 
 **Scelte**
 
-- Stub-Stub
+- **Stub-Stub**
 - **Nessuno** -nessuno
 
 ### <a name="generate-server-stub-files"></a>Genera file stub server
@@ -196,7 +196,7 @@ Genera solo file stub server ([/Server](/windows/win32/midl/-server) [Stub | nes
 
 **Scelte**
 
-- Stub-Stub
+- **Stub-Stub**
 - **Nessuno** -nessuno
 
 ### <a name="client-stub-file"></a>File stub client

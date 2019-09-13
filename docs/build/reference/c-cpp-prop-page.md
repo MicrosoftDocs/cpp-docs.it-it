@@ -1,14 +1,14 @@
 ---
 title: Proprietà CC++ /Project (Visual Studio)
-ms.date: 7/18/2019
+ms.date: 07/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 2f7fe025eb69fc1977713c638eef0742074bd9fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537564"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927740"
 ---
 # <a name="cc-property-pages"></a>Pagine delleC++ proprietà C/
 
@@ -314,7 +314,7 @@ Disabilita o Abilita le estensioni del linguaggio. Imposta [/za](za-ze-disable-l
 
 Abilita o Disabilita la modalità di conformità. Imposta [/permissive-](permissive-standards-conformance.md).
 
-### <a name="treat-wchart-as-built-in-type"></a>Considera WChar_t come tipo incorporato
+### <a name="treat-wchar_t-as-built-in-type"></a>Considera WChar_t come tipo incorporato
 
 Se specificato, il tipo wchar_t diventa un tipo nativo che esegue il mapping a __wchar_t nello stesso modo in cui viene eseguito il mapping a __int16. [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) è on per impostazione predefinita.
 

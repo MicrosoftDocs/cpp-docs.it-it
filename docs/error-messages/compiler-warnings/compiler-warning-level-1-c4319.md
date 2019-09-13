@@ -1,27 +1,27 @@
 ---
 title: Avviso del compilatore (livello 1) C4319
-ms.date: 1/18/2018
+ms.date: 01/18/2018
 f1_keywords:
 - C4319
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-ms.openlocfilehash: 20b268bacd6e7e259e9b4fa1c9e98fa6fd353718
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d5ae8fcf5a527031c3a974b227f713675f31ffa
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385472"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926108"
 ---
 # <a name="compiler-warning-level-1-c4319"></a>Avviso del compilatore (livello 1) C4319
 
-> ' ~': zero estensione '*type1*'a'*type2*' di dimensioni maggiori
+> ' ~': zero che estende '*tipo1*' a'*tipo2*' di dimensioni maggiori
 
-Il risultato del **~** operatore (complemento bit per bit) è senza segno e quindi esteso da zero quando viene convertito in un tipo più grande.
+Il risultato dell' **~** operatore (complemento bit per bit) è senza segno e quindi esteso a zero quando viene convertito in un tipo più grande.
 
 ## <a name="example"></a>Esempio
 
-Nell'esempio seguente, `~(a - 1)` viene valutata come un'espressione lunga senza segno a 32 bit e quindi convertito a 64 bit mediante l'estensione zero. Questo potrebbe causare risultati imprevisti per l'operazione.
+Nell'esempio seguente, `~(a - 1)` viene valutato come un'espressione long senza segno a 32 bit e quindi convertita nell'estensione 64 bit per zero. Questo potrebbe causare risultati imprevisti per l'operazione.
 
 ```cpp
 // C4319.cpp

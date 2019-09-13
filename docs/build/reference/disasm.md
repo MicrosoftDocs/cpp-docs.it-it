@@ -1,42 +1,42 @@
 ---
 title: /DISASM
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - /disasm
 helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb394b2266470e77c50ce5398aea961c37ac34fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272061"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927714"
 ---
 # <a name="disasm"></a>/DISASM
 
-Stampare il disassemblaggio delle sezioni di codice nell'output di DUMPBIN.
+Stampare il disassembly delle sezioni di codice nell'output di DUMPBIN.
 
 ## <a name="syntax"></a>Sintassi
 
-> **/DISASM**{**:**\[**BYTES**|**NOBYTES**]}
+> **/DISASM**{ **:** \[**BYTES**|**NOBYTES**]}
 
 ### <a name="arguments"></a>Argomenti
 
 **BYTES**<br/>
-Include i byte di istruzione con gli argomenti e i codici operativi interpretati nell'output disassembly. Questa è l'opzione predefinita.
+Include i byte di istruzioni insieme ai codici operativi e agli argomenti interpretati nell'output del Disassembly. Questa è l'opzione predefinita.
 
 **NOBYTES**<br/>
-Non include i byte di istruzione nell'output disassembly.
+Non include i byte dell'istruzione nell'output del Disassembly.
 
 ## <a name="remarks"></a>Note
 
-Il **opzione /DISASM** opzione Visualizza disassembly delle sezioni di codice nel file. Usa i simboli di debug se sono presenti nel file.
+L'opzione **/DISASM** Visualizza il disassembly delle sezioni di codice nel file. USA i simboli di debug se sono presenti nel file.
 
-**/DISASM** deve essere usato solo su immagini non gestite e native. Lo strumento equivalente per il codice gestito viene [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
+**/DISASM** deve essere usato solo su immagini native, non gestite. Lo strumento equivalente per il codice gestito è [Ildasm](/dotnet/framework/tools/ildasm-exe-il-disassembler).
 
-Solo le [/HEADERS](headers.md) (opzione dumpbin) è disponibile per l'uso con i file generati dalle [/GL (Ottimizzazione intero programma)](gl-whole-program-optimization.md) opzione del compilatore.
+Solo l'opzione [/headers](headers.md) DUMPBIN è disponibile per l'uso nei file prodotti dall'opzione del compilatore [/GL (intero programma Optimization)](gl-whole-program-optimization.md) .
 
 ## <a name="see-also"></a>Vedere anche
 

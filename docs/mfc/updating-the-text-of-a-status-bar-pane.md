@@ -11,67 +11,67 @@ helpviewer_keywords:
 - panes, status bar
 - status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
-ms.openlocfilehash: baf5013e34f262dd3bfed82941697ab9ca21e637
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20cd519f15fa9b218bca3dd1348659cfd0d5e473
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180785"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907643"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>Aggiornamento del testo di un riquadro barra di stato
 
-Questo articolo illustra come modificare il testo visualizzato in un riquadro barra di stato MFC. Una barra di stato, ovvero un oggetto finestra della classe [CStatusBar](../mfc/reference/cstatusbar-class.md) — contiene vari "riquadri". Ogni riquadro è un'area rettangolare della barra di stato che è possibile usare per visualizzare le informazioni. Molte applicazioni, ad esempio, visualizzare lo stato del BLOC MAIUSC, BLOC NUM e altre chiavi nei riquadri a destra. Le applicazioni spesso visualizzare testo informativo nel riquadro più a sinistra (riquadro 0), talvolta chiamato "messaggio riquadro". Ad esempio, la barra di stato MFC predefinito Usa il riquadro del messaggio per visualizzare una stringa che spiega il menu di scelta attualmente selezionata o il pulsante. La figura nel [barre di stato](../mfc/status-bar-implementation-in-mfc.md) Mostra una barra di stato da un'applicazione di creazione guidata applicazione MFC.
+Questo articolo illustra come modificare il testo visualizzato in un riquadro della barra di stato MFC. Una barra di stato, un oggetto finestra della classe [CStatusBar](../mfc/reference/cstatusbar-class.md) , contiene diversi "riquadri". Ogni riquadro è un'area rettangolare della barra di stato che è possibile utilizzare per visualizzare le informazioni. In molte applicazioni, ad esempio, viene visualizzato lo stato del blocco BLOC MAIUSC, BLOC NUM e altre chiavi nei riquadri più a destra. Le applicazioni spesso visualizzano anche testo informativo nel riquadro a sinistra (riquadro 0), talvolta denominato "riquadro messaggio". La barra di stato MFC predefinita, ad esempio, utilizza il riquadro messaggio per visualizzare una stringa che descrive la voce di menu o il pulsante della barra degli strumenti attualmente selezionato. Nella figura in [barre di stato](../mfc/status-bar-implementation-in-mfc.md) viene visualizzata una barra di stato di un'applicazione MFC creata mediante creazione guidata applicazione.
 
-Per impostazione predefinita, MFC non abilita una `CStatusBar` riquadro quando viene creato il riquadro. Per attivare un riquadro, è necessario usare la macro ON_UPDATE_COMMAND_UI per ogni riquadro sulla barra di stato e aggiornare i riquadri. Poiché i riquadri non inviano i messaggi WM_COMMAND (non sono come i pulsanti della barra degli strumenti), è necessario digitare manualmente il codice.
+Per impostazione predefinita, MFC non Abilita un `CStatusBar` riquadro quando crea il riquadro. Per attivare un riquadro, è necessario utilizzare la macro ON_UPDATE_COMMAND_UI per ogni riquadro sulla barra di stato e aggiornare i riquadri. Poiché i riquadri non inviano messaggi WM_COMMAND (non sono simili ai pulsanti della barra degli strumenti), è necessario digitare il codice manualmente.
 
-Ad esempio, si supponga che dispone di un riquadro `ID_INDICATOR_PAGE` come l'identificatore di comando e che contiene il numero di pagina corrente in un documento. La procedura seguente descrive come creare un nuovo riquadro nella barra di stato.
+Si supponga, ad esempio, che `ID_INDICATOR_PAGE` un riquadro disponga di un identificatore di comando e che contenga il numero di pagina corrente in un documento. Nella procedura riportata di seguito viene descritto come creare un nuovo riquadro nella barra di stato.
 
 ### <a name="to-make-a-new-pane"></a>Per creare un nuovo riquadro
 
-1. Definire l'ID del comando. del riquadro
+1. Definire l'ID comando del riquadro.
 
-   Nel **View** menu, fare clic su **visualizzazione risorse**. Fare doppio clic la risorsa del progetto e fare clic su **simboli risorsa**. Nella finestra di dialogo Simboli risorsa, fare clic su `New`. Digitare un nome di ID comando: ad esempio, `ID_INDICATOR_PAGE`. Specificare un valore per l'ID oppure accettare il valore suggerito dalla finestra di dialogo Simboli risorsa. Ad esempio, per `ID_INDICATOR_PAGE`, accettare il valore predefinito. Chiudere la finestra di dialogo Simboli risorsa.
+   Scegliere **visualizzazione risorse**dal menu **Visualizza** . Fare clic con il pulsante destro del mouse sulla risorsa progetto e scegliere **simboli risorsa**. Nella finestra di dialogo Simboli risorsa fare clic `New`su. Digitare un nome ID comando: ad esempio, `ID_INDICATOR_PAGE`. Specificare un valore per l'ID oppure accettare il valore suggerito dalla finestra di dialogo Simboli risorsa. Ad esempio, per `ID_INDICATOR_PAGE`accettare il valore predefinito. Chiudere la finestra di dialogo Simboli risorsa.
 
-1. Definire una stringa predefinita da visualizzare nel riquadro.
+1. Consente di definire una stringa predefinita da visualizzare nel riquadro.
 
-   Con la visualizzazione di risorse è aperta, fare doppio clic su **tabella di stringhe** nella finestra che elenca i tipi di risorsa per l'applicazione. Con il **tabella di stringhe** editor aperto, scegliere **nuova stringa** dal **Inserisci** menu. Nella finestra proprietà di stringa, selezionare l'ID di comando del riquadro (ad esempio, `ID_INDICATOR_PAGE`) e digitare un valore di stringa predefinito, ad esempio "Page". Chiudere l'editor di stringa. (Necessaria una stringa predefinita per evitare un errore del compilatore.)
+   Con Visualizzazione risorse aperto, fare doppio clic su **tabella di stringhe** nella finestra in cui sono elencati i tipi di risorse per l'applicazione. Con l'editor della **tabella di stringhe** aperto, scegliere **nuova stringa** dal menu **Inserisci** . Selezionare l'ID comando del riquadro (ad esempio, `ID_INDICATOR_PAGE`) e digitare un valore stringa predefinito, ad esempio "pagina". Chiudere l'editor di stringhe. Per evitare un errore del compilatore, è necessaria una stringa predefinita.
 
-1. Aggiungere il riquadro per il *indicatori* matrice.
+1. Aggiungere il riquadro alla matrice degli *indicatori* .
 
-   Nel file MAINFRM. CPP, individuare il *indicatori* matrice. Questa matrice vengono elencati gli ID comando per tutti gli indicatori della barra di stato, in ordine da sinistra a destra. Nel punto appropriato nella matrice, immettere l'ID di comando del riquadro, come illustrato di seguito per `ID_INDICATOR_PAGE`:
+   Nel file MAINFRM. CPP, individuare la matrice degli *indicatori* . Questa matrice elenca gli ID comando per tutti gli indicatori della barra di stato, in ordine da sinistra a destra. Nel punto appropriato della matrice immettere l'ID comando del riquadro, come illustrato di `ID_INDICATOR_PAGE`seguito:
 
    [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
-Il metodo consigliato per visualizzare il testo in un riquadro consiste nel chiamare il `SetText` funzione membro di classe `CCmdUI` in una funzione del gestore di aggiornamento per il riquadro. Potrebbe ad esempio, si desidera impostare una variabile integer *m_nPage* che contiene il numero di pagina corrente e l'uso `SetText` per impostare il testo del riquadro a una versione di stringa di tale numero.
+Il modo consigliato per visualizzare il testo in un riquadro consiste nel chiamare `SetText` la funzione membro della `CCmdUI` classe in una funzione del gestore di aggiornamento per il riquadro. È ad esempio possibile impostare una variabile di tipo integer *m_nPage* contenente il numero di pagina corrente e utilizzare `SetText` per impostare il testo del riquadro su una versione in formato stringa di tale numero.
 
 > [!NOTE]
->  Il `SetText` approccio è consigliato. È possibile eseguire questa attività a un livello leggermente più bassa chiamando il `CStatusBar` funzione membro `SetPaneText`. Anche in questo caso, è comunque necessario un gestore di aggiornamento. Senza un gestore di questo tipo per il riquadro, MFC disabilita automaticamente il riquadro, cancellare il contenuto.
+>  Si `SetText` consiglia di usare l'approccio. È possibile eseguire questa attività a un livello leggermente inferiore chiamando la `CStatusBar` funzione `SetPaneText`membro. Anche in questo caso, è ancora necessario un gestore degli aggiornamenti. Senza questo gestore per il riquadro, MFC Disabilita automaticamente il riquadro, cancellando il relativo contenuto.
 
-La procedura seguente viene illustrato come utilizzare una funzione del gestore di aggiornamento per visualizzare il testo in un riquadro.
+Nella procedura seguente viene illustrato come utilizzare una funzione di gestione degli aggiornamenti per visualizzare il testo in un riquadro.
 
-#### <a name="to-make-a-pane-display-text"></a>Per rendere un riquadro di visualizzazione testo
+#### <a name="to-make-a-pane-display-text"></a>Per fare in modo che il testo venga visualizzato nel riquadro
 
-1. Aggiungere un gestore di aggiornamento di comando per il comando.
+1. Aggiungere un gestore di aggiornamento dei comandi per il comando.
 
-   Aggiungere manualmente un prototipo per il gestore, come illustrato di seguito per `ID_INDICATOR_PAGE` (in MAINFRM. H):
+   Aggiungere manualmente un prototipo per il gestore, come illustrato di `ID_INDICATOR_PAGE` seguito per (in MainFrm. H):
 
    [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
-1. In appropriato. CPP file, aggiungere la definizione del gestore, come illustrato di seguito per `ID_INDICATOR_PAGE` (in MAINFRM. CPP):
+1. Nell'oggetto appropriato. File cpp, aggiungere la definizione del gestore, come illustrato qui per `ID_INDICATOR_PAGE` (in MainFrm. CPP):
 
    [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-   Le ultime tre righe di questo gestore di sono il codice che visualizza il testo.
+   Le ultime tre righe di questo gestore sono il codice che Visualizza il testo.
 
-1. Nella mappa messaggi appropriata, aggiungere la macro ON_UPDATE_COMMAND_UI, come illustrato di seguito per `ID_INDICATOR_PAGE` (in MAINFRM. CPP):
+1. Nella mappa messaggi appropriata aggiungere la macro ON_UPDATE_COMMAND_UI, come illustrato di seguito per `ID_INDICATOR_PAGE` (in MainFrm. CPP):
 
    [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
-Dopo aver definito il valore della *m_nPage* variabile membro (della classe `CMainFrame`), questa tecnica fa sì che il numero di pagina vengano visualizzati nel riquadro durante l'elaborazione inattiva in modo che l'applicazione aggiorna altri indicatori. Se *m_nPage* le modifiche, la visualizzazione viene modificata durante il successivo ciclo inattivo.
+Una volta definito il valore della variabile membro *m_nPage* (of Class `CMainFrame`), questa tecnica fa in modo che il numero di pagina venga visualizzato nel riquadro durante l'elaborazione inattiva nello stesso modo in cui l'applicazione aggiorna altri indicatori. Se la *m_nPage* viene modificata, la visualizzazione cambia durante il ciclo inattivo successivo.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più
+### <a name="what-do-you-want-to-know-more-about"></a>Che cosa si vuole sapere
 
-- [Aggiornamento di oggetti dell'interfaccia utente (come aggiornare i pulsanti della barra degli strumenti e voci di menu come cambiano le condizioni di programma)](../mfc/how-to-update-user-interface-objects.md)
+- [Aggiornamento di oggetti dell'interfaccia utente (come aggiornare i pulsanti della barra degli strumenti e le voci di menu come le condizioni del programma cambiano)](../mfc/how-to-update-user-interface-objects.md)
 
 ## <a name="see-also"></a>Vedere anche
 

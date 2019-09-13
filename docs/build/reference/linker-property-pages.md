@@ -1,18 +1,18 @@
 ---
 title: Linker (pagine delle proprietà)
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 17880d50ae012b640cb83f3766883ab2b1bcbe73
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537594"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927712"
 ---
 # <a name="linker-property-pages"></a>Linker (pagine delle proprietà)
 
-Le proprietà seguenti sono disponibili nel linker proprietà di**configurazione** > **Proprietà** >  **progetto** > . Per ulteriori informazioni sul linker, vedere [CL richiama le opzioni del](cl-invokes-the-linker.md) linker e del [linker](linker-options.md).
+Le proprietà seguenti sono disponibili nel**linker**proprietà di**configurazione** > **Proprietà** >  **progetto** > . Per ulteriori informazioni sul linker, vedere [CL richiama le opzioni del](cl-invokes-the-linker.md) linker e del [linker](linker-options.md).
 
 ## <a name="general-property-page"></a>Pagina delle proprietà generale
 
@@ -34,7 +34,7 @@ Visualizza i messaggi di stato del linker
 - Informazioni **sui moduli incompatibili con SEH** : Visualizza le informazioni sui moduli incompatibili con la gestione sicura delle eccezioni.
 - Informazioni **sull'attività del linker correlata al codice gestito** : visualizzare informazioni sull'attività del linker correlata al codice gestito.
 
-### <a name="version"></a>Version
+### <a name="version"></a>Versione
 
 L'opzione [/Version](version-version-information.md) indica al linker di inserire un numero di versione nell'intestazione del file con estensione exe o dll. Usare DUMPBIN/HEADERS per visualizzare il campo versione immagine dei valori di intestazione FACOLTATIVi per vedere l'effetto di **/Version**.
 
@@ -48,7 +48,7 @@ L'opzione [/nologo](nologo-suppress-startup-banner-linker.md) impedisce la visua
 
 ### <a name="ignore-import-library"></a>Ignora libreria di importazione
 
-Questa proprietà indica al linker di non collegare l'output con estensione lib generato da questa compilazione a qualsiasi progetto dipendente. In questo modo il sistema del progetto può gestire i file con estensione dll che non creano un file con estensione lib durante la compilazione. Se un progetto dipende da un altro progetto che genera una DLL, il sistema del progetto collega automaticamente il file con estensione lib generato dal progetto figlio. Tale operazione può non essere necessaria per i progetti che generano DLL COM o DLL di sole risorse. Questi tipi di librerie non presentano esportazioni significative. Se una DLL non contiene esportazioni, il linker non genera un file con estensione lib. Se su disco non sono presenti file con estensione lib per l'esportazione e il sistema del progetto indica al linker di creare un collegamento con questa DLL (mancante), il collegamento avrà esito negativo. Usare la proprietà **Ignora libreria di importazione** per risolvere il problema. Se la proprietà è impostata su **Sì**, il sistema del progetto ignora la presenza o l'assenza del file con estensione lib e fa sì che qualsiasi progetto dipendente da questo progetto non crei un collegamento con il file con estensione lib inesistente.
+Questa proprietà indica al linker di non collegare l'output con estensione lib generato da questa compilazione a qualsiasi progetto dipendente. Consente al sistema del progetto di gestire i file con estensione dll che non producono un file con estensione LIB quando vengono compilati. Se un progetto dipende da un altro progetto che genera una DLL, il sistema del progetto collega automaticamente il file con estensione lib generato dal progetto figlio. Questa proprietà potrebbe non essere necessaria nei progetti che producono DLL COM o dll di sola risorsa, perché queste dll non hanno esportazioni significative. Se per una DLL non sono presenti esportazioni, il linker non genera un file con estensione LIB. Se non è presente alcun file export. lib e il sistema del progetto indica al linker di collegarsi alla DLL mancante, il collegamento ha esito negativo. Usare la proprietà **Ignora libreria di importazione** per risolvere il problema. Se è impostato su **Sì**, il sistema del progetto ignora la presenza o l'assenza del file con estensione LIB e fa sì che qualsiasi progetto che dipende da questo progetto non venga collegato al file con estensione LIB inesistente.
 
 Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>.
 
@@ -60,7 +60,7 @@ Per accedere a livello di codice a questa proprietà, vedere <xref:Microsoft.Vis
 
 ### <a name="per-user-redirection"></a>Reindirizzamento per utente
 
-La registrazione in Visual Studio viene in genere eseguita in HKEY_CLASSES_ROOT (HKCR). Con Windows Vista e sistemi operativi successivi, è necessario eseguire Visual Studio con privilegi elevati per poter accedere a HKCR. Nonostante molti sviluppatori non sempre vogliano eseguire Visual Studio con privilegi elevati, è comunque necessario registrarsi. Il reindirizzamento per utente consente di registrarsi senza dover eseguire VS con privilegi elevati.
+La registrazione in Visual Studio viene in genere eseguita in HKEY_CLASSES_ROOT (HKCR). Con Windows Vista e sistemi operativi successivi, è necessario eseguire Visual Studio con privilegi elevati per poter accedere a HKCR. Gli sviluppatori non vogliono sempre eseguire in modalità con privilegi elevati, ma devono comunque usare la registrazione. Il reindirizzamento per utente consente di effettuare la registrazione senza che sia necessario eseguire in modalità con privilegi elevati.
 
 Il reindirizzamento per utente forza la scrittura in HKCR ed esegue il reindirizzamento a HKEY\_CURRENT\_USER (HKCU). Se il reindirizzamento per utente è disattivato, è possibile che si generi l'[errore di compilazione del progetto PRJ0050](../../error-messages/tool-errors/project-build-error-prj0050.md) quando il programma tenta di scrivere in HKCR.
 
@@ -70,13 +70,13 @@ Consente all'utente di sostituire il percorso della libreria dell'ambiente. ([/L
 
 ### <a name="link-library-dependencies"></a>Collega dipendenze di libreria
 
-Specifica se collegare i file con estensione lib creati da progetti dipendenti. In genere, i file con estensione lib vengono collegati. È comunque possibile scegliere diversamente per alcuni casi di DLL.
+Specifica se collegare i file con estensione lib creati da progetti dipendenti. In genere, si desidera creare un collegamento nei file con estensione LIB, ma potrebbe non essere il caso di determinate dll.
 
-È anche possibile specificare un file con estensione obj indicando il nome e il percorso relativo del file, ad esempio "..\\..\MyLibProject\MyObjFile.obj". Se il codice sorgente per il file con estensione obj include un'intestazione precompilata, ad esempio pch.h, il file pch.obj si troverà nella stessa cartella di MyObjFile.obj ed è necessario aggiungere pch.obj come dipendenza aggiuntiva.
+È anche possibile specificare un file con estensione obj indicando il nome e il percorso relativo del file, ad esempio "..\\..\MyLibProject\MyObjFile.obj". Se il codice sorgente per il file obj #includes un'intestazione precompilata, ad esempio PCH. h, il file PCH. obj si trova nella stessa cartella di MyObjFile. obj. È inoltre necessario aggiungere PCH. obj come dipendenza aggiuntiva.
 
 ### <a name="use-library-dependency-inputs"></a>Usa input dipendenze di libreria
 
-Specifica se utilizzare o meno gli input per lo strumento Gestione librerie anziché il file di libreria durante il collegamento degli output di libreria delle dipendenze del progetto. In un progetto di grandi dimensioni, quando un progetto dipendente crea un file con estensione lib, il collegamento incrementale è disabilitato. In presenza di numerosi progetti dipendenti che creano file con estensione lib, la compilazione dell'applicazione può richiedere molto tempo. Quando questa proprietà è impostata su **Sì**, il sistema del progetto collega i file con estensione obj ai file con estensione lib creati da progetti dipendenti, abilitando così il collegamento incrementale.
+Specifica se utilizzare gli input per lo strumento Gestione librerie, anziché il file di libreria, quando si esegue il collegamento negli output di libreria delle dipendenze del progetto. In un progetto di grandi dimensioni, quando un progetto dipendente crea un file con estensione lib, il collegamento incrementale è disabilitato. In presenza di numerosi progetti dipendenti che creano file con estensione lib, la compilazione dell'applicazione può richiedere molto tempo. Quando questa proprietà è impostata su **Sì**, il sistema del progetto collega i file con estensione obj per le librerie create dai progetti dipendenti, abilitando il collegamento incrementale.
 
 Per informazioni su come accedere alla pagina delle proprietà **generale** del linker, [vedere C++ impostare le proprietà del compilatore e della compilazione in Visual Studio](../working-with-project-properties.md).
 
@@ -84,7 +84,7 @@ Per informazioni su come accedere alla pagina delle proprietà **generale** del 
 
 Specifica se il linker deve visualizzare un indicatore di stato che mostra la percentuale di completamento del collegamento. Per impostazione predefinita, le informazioni sullo stato non vengono visualizzate. ([/LTCG](ltcg-link-time-code-generation.md): STATO | LTCG: NOSTATUS)
 
-### <a name="prevent-dll-binding"></a>Impedisci associazione dll
+### <a name="prevent-dll-binding"></a>Impedisci associazione DLL
 
 [/ALLOWBIND](allowbind-prevent-dll-binding.md): No imposta un bit nell'intestazione di una dll che indica a bind. exe che l'immagine non può essere associata. Una DLL può non essere associata se include una firma digitale, perché l'associazione rende la firma non valida.
 
@@ -94,12 +94,12 @@ Specifica se il linker deve visualizzare un indicatore di stato che mostra la pe
 
 ### <a name="force-file-output"></a>Forza output file
 
-L'opzione [/Force](force-force-file-output.md) indica al linker di creare un file con estensione exe o dll anche se viene fatto riferimento a un simbolo ma non definito o se è stata definita una moltiplicazione. Potrebbe creare un file con estensione exe non valido.
+L'opzione [/Force](force-force-file-output.md) indica al linker di creare un file con estensione exe o una dll anche se viene fatto riferimento a un simbolo, ma non definito, oppure se è stata definita una moltiplicazione. Potrebbe creare un file con estensione exe non valido.
 
 **Scelte**
 
 - **Enabled** -/Force senza argomenti implica sia il multiplo che non risolto.
-- **Solo simbolo definito** . utilizzare/Force: multiple per creare un file di output indipendentemente dal fatto che il collegamento trovi più di una definizione per un simbolo.
+- **Solo simbolo definito** . utilizzare/Force: multiple per creare un file di output, anche se il collegamento trova più di una definizione per un simbolo.
 - **Solo simbolo non definito** : usare/Force: Unresolved per creare un file di output indipendentemente dal fatto che il collegamento trovi un simbolo non definito. /FORCE: UNRESOLVED viene ignorato se il simbolo del punto di ingresso non è risolto.
 
 ### <a name="create-hot-patchable-image"></a>Creare un'immagine Hot patchable
@@ -129,7 +129,7 @@ L'opzione [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) indica al linker di 
 
 ### <a name="ignore-specific-default-libraries"></a>Ignora librerie predefinite specifiche
 
-Specifica uno o più nomi di librerie predefinite da ignorare. separare più librerie con un punto e virgola. (/NODEFAULTLIB: [nome, nome,...])
+Specifica il nome di una o più librerie predefinite da ignorare. Separare più librerie con un punto e virgola. (/NODEFAULTLIB: [nome, nome,...])
 
 ### <a name="module-definition-file"></a>File di definizione del modulo
 
@@ -276,11 +276,11 @@ L'opzione [/TSAWARE](tsaware-create-terminal-server-aware-application.md) impost
 
 ### <a name="swap-run-from-cd"></a>Eseguire lo swap da CD
 
-L'opzione [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indica al sistema operativo di copiare prima di tutto l'output del linker in un file di scambio e quindi di eseguire l'immagine da questa posizione. Si tratta di una funzionalità di Windows NT 4,0 (e versioni successive). Quando si specifica **CD** , il sistema operativo copia l'immagine su un disco rimovibile in un file di paging e quindi lo carica.
+L'opzione [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indica al sistema operativo di copiare prima di tutto l'output del linker in un file di scambio e quindi di eseguire l'immagine da questa posizione. Questa opzione è una funzionalità di Windows NT 4,0 (e versioni successive). Quando si specifica **CD** , il sistema operativo copia l'immagine su un disco rimovibile in un file di paging e quindi lo carica.
 
 ### <a name="swap-run-from-network"></a>Esegui swapping dalla rete
 
-L'opzione [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indica al sistema operativo di copiare prima di tutto l'output del linker in un file di scambio e quindi di eseguire l'immagine da questa posizione. Si tratta di una funzionalità di Windows NT 4,0 (e versioni successive). Se si specifica **net** , il sistema operativo copia prima di tutto l'immagine binaria dalla rete in un file di scambio e la carica da questa posizione. Questa opzione è utile per l'esecuzione di applicazioni in rete.
+L'opzione [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indica al sistema operativo di copiare prima di tutto l'output del linker in un file di scambio e quindi di eseguire l'immagine da questa posizione. Questa opzione è una funzionalità di Windows NT 4,0 (e versioni successive). Se si specifica **net** , il sistema operativo copia prima di tutto l'immagine binaria dalla rete in un file di scambio e la carica da questa posizione. Questa opzione è utile per l'esecuzione di applicazioni in rete.
 
 ### <a name="driver"></a>Driver
 
@@ -289,7 +289,7 @@ Usare l'opzione del linker [/driver](driver-windows-nt-kernel-mode-driver.md) pe
 **Scelte**
 
 - **Not set** -impostazione predefinita del driver.
-- Driver **-driver**
+- **Driver-driver**
 - **Up only** -/driver: solo se il linker aggiunge il bit IMAGE_FILE_UP_SYSTEM_ONLY alle caratteristiche nell'intestazione di output per specificare che si tratta di un driver uniprocessore (up). Il sistema operativo rifiuterà di caricare un driver in un sistema multiprocessore (MP).
 - **WDM** -/driver: WDM fa in modo che il linker imposti il bit IMAGE_DLLCHARACTERISTICS_WDM_DRIVER nel campo DLLCHARACTERISTICS dell'intestazione facoltativa.
 
@@ -297,11 +297,11 @@ Usare l'opzione del linker [/driver](driver-windows-nt-kernel-mode-driver.md) pe
 
 ### <a name="references"></a>Riferimenti
 
-[/Opt](opt-optimizations.md): Ref Elimina le funzioni e/o i dati a cui non viene mai fatto riferimento mentre/opt: NOREF mantiene le funzioni e/o i dati a cui non viene mai fatto riferimento. 
+[/Opt](opt-optimizations.md): Ref Elimina le funzioni e/o i dati a cui non viene mai fatto riferimento mentre/opt: NOREF mantiene le funzioni e/o i dati a cui non viene mai fatto riferimento.
 
 ### <a name="enable-comdat-folding"></a>Abilita riduzione COMDAT
 
-Usare [/opt](opt-optimizations.md): ICF\[= iterazioni] per eseguire una riduzione COMDAT identica. 
+Usare [/opt](opt-optimizations.md): ICF\[= iterazioni] per eseguire una riduzione COMDAT identica.
 
 ### <a name="function-order"></a>Ordine funzioni
 
@@ -413,7 +413,7 @@ Il qualificatore **unload** indica alla funzione di supporto per il caricamento 
 
 ### <a name="nobind-delay-loaded-dll"></a>DLL a caricamento ritardato NOBIND
 
-Il  qualificatore NOBIND indica al linker di non includere una IAT associabile nell'immagine finale. L'impostazione predefinita prevede la creazione della tabella di indirizzi di importazione associabile per DLL di caricamento ritardato. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
+Il qualificatore **NOBIND** indica al linker di non includere una IAT associabile nell'immagine finale. L'impostazione predefinita prevede la creazione della tabella di indirizzi di importazione associabile per DLL di caricamento ritardato. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
 
 ### <a name="import-library"></a>Libreria di importazione
 

@@ -1,15 +1,15 @@
 ---
 title: Mappe eventi
-ms.date: 06/20/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916460"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907900"
 ---
 # <a name="event-maps"></a>Mappe eventi
 
@@ -21,7 +21,7 @@ La libreria Microsoft Foundation Class offre un modello ottimizzato di programma
 
 La `EVENT_STOCK_CLICK` macro indica che il controllo genererà un evento Click di inventario ogni volta che viene rilevato un clic del mouse. Per un elenco più dettagliato di altri eventi azionari, vedere l'articolo [controlli ActiveX: Eventi](../../mfc/mfc-activex-controls-events.md). Le macro sono inoltre disponibili per indicare eventi personalizzati.
 
-Sebbene le macro di mapping degli eventi siano importanti, in genere non vengono inserite direttamente. Questo perché la finestra Proprietà crea automaticamente nei file sorgente le voci di mapping degli eventi quando la si utilizza per associare funzioni che generano eventi ad eventi. Ogni qualvolta si desidera modificare o aggiungere una voce di mapping degli eventi, è possibile utilizzare la finestra Proprietà.
+Sebbene le macro di mapping degli eventi siano importanti, in genere non vengono inserite direttamente. Ciò è dovuto al fatto che la finestra **Proprietà** (in **Visualizzazione classi**) crea automaticamente voci della mappa eventi nei file di origine quando viene usata per associare funzioni di generazione di eventi agli eventi. Ogni volta che si desidera modificare o aggiungere una voce della mappa eventi, è possibile utilizzare la finestra **Proprietà** .
 
 Per supportare le mappe eventi, MFC fornisce le seguenti macro:
 

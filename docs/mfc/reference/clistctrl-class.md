@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: bd511cf574d0f710134de4768ac27a8be1248e95
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505622"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927924"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -291,7 +291,7 @@ class CListCtrl : public CWnd
 
 ### <a name="public-methods"></a>Metodi pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CListCtrl::ApproximateViewRect](#approximateviewrect)|Determina la larghezza e l'altezza necessarie per visualizzare gli elementi di un controllo di visualizzazione elenco.|
 |[CListCtrl::Arrange](#arrange)|Allinea gli elementi in una griglia.|
@@ -1003,7 +1003,7 @@ Questo metodo implementa il comportamento della macro Win32, [ListView_GetBkImag
         if (m_myListCtrl.GetBkImage(&bki) && (bki.ulFlags == LVBKIF_SOURCE_NONE))
         {
             m_myListCtrl.SetBkImage(
-                _T("http://www.microsoft.com/library/images/gifs/homepage/microsoft.gif"),
+                _T("https://www.microsoft.com/library/images/gifs/homepage/microsoft.gif"),
                 TRUE);
         }
 ```
@@ -1438,7 +1438,7 @@ BOOL GetGroupRect(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*iGroupId*|in Specifica un gruppo.|
 |*lpRect*|[in, out] Puntatore a una struttura [Rect](/previous-versions/dd162897\(v=vs.85\)) . Se questo metodo ha esito positivo, la struttura riceve le coordinate del rettangolo del gruppo specificato da *iGroupId*.|
@@ -1494,7 +1494,7 @@ UINT GetGroupState(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*iGroupId*|in Indice in base zero di un gruppo.|
 |*dwMask*|in Maschera che specifica il valore di stato da recuperare per il gruppo specificato. Per ulteriori informazioni, vedere il `mask` membro della struttura [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) .|
@@ -1952,7 +1952,7 @@ BOOL GetItemSpacing(
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*fSmall*|in Visualizzazione per la quale recuperare la spaziatura dell'elemento. Specificare TRUE per la visualizzazione icona piccola o FALSE per visualizzazione icone.|
 |*pnHorzSpacing*|out Contiene la spaziatura orizzontale tra gli elementi.|
@@ -2872,7 +2872,7 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|DESCRIZIONE|
+|Parametro|Descrizione|
 |---------------|-----------------|
 |*index*|in Indice in base zero di un elemento nel controllo di visualizzazione elenco corrente.|
 
@@ -2920,7 +2920,7 @@ UINT MapIndexToID(UINT index) const;
 
 ### <a name="parameters"></a>Parametri
 
-|Parametro|Descrizione|
+|Parametro|DESCRIZIONE|
 |---------------|-----------------|
 |*index*|in Indice in base zero di un elemento.|
 

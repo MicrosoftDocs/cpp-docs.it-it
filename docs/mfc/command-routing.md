@@ -1,6 +1,6 @@
 ---
 title: comandi (routing)
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165150"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907624"
 ---
 # <a name="command-routing"></a>comandi (routing)
 
-Le responsabilità del programmatore nell'uso dei comandi si limitano alla creazione di connessioni mappa messaggi fra i comandi e le loro funzioni di gestione, un'attività per la quale si usa la finestra Proprietà. È anche necessario scrivere la maggior parte dei gestori di comando.
+La responsabilità dell'utente nell'utilizzo dei comandi è limitata alla creazione di connessioni mappa messaggi tra i comandi e le relative funzioni di gestione, un'attività per la quale si utilizza la [creazione guidata classe MFC](reference/mfc-class-wizard.md). È inoltre necessario scrivere il codice per i gestori di comandi.
 
 I messaggi di Windows in genere sono inviati alla finestra cornice principale, ma i messaggi di comando vengono indirizzati in seguito ad altri oggetti. Il framework indirizza i comandi attraverso una sequenza standard di oggetti destinazione comando, uno dei quali deve disporre di un gestore per il comando. Ogni oggetto destinazione comando controlla la propria mappa messaggi per verificare se può gestire il messaggio in arrivo.
 
@@ -29,7 +29,7 @@ Classi di destinazione comando diverse controllano le proprie mappe messaggi in 
 
 1. Ad altre destinazioni comando.
 
-Come costosi è questo meccanismo di Rounting rispetto a ciò che il gestore fa in risposta a un comando, il costo del routing è basso. Occorre tenere presente che il framework genera comandi solo quando l'utente interagisce con un oggetto dell'interfaccia utente.
+Quanto è costoso questo meccanismo di routing rispetto a ciò che il gestore esegue in risposta a un comando, il costo del routing è basso. Occorre tenere presente che il framework genera comandi solo quando l'utente interagisce con un oggetto dell'interfaccia utente.
 
 ### <a name="_core_standard_command_route"></a> Routing standard dei comandi
 
@@ -38,7 +38,7 @@ Come costosi è questo meccanismo di Rounting rispetto a ciò che il gestore fa 
 |Finestra cornice MDI (`CMDIFrameWnd`)|1.  `CMDIChildWnd` attivo<br />2.  Questa finestra cornice<br />3.  Applicazione (oggetto `CWinApp`)|
 |Finestre cornice del documento (`CFrameWnd`, `CMDIChildWnd`)|1.  Visualizzazione attiva<br />2.  Questa finestra cornice<br />3.  Applicazione (oggetto `CWinApp`)|
 |Visualizza|1.  Questa visualizzazione<br />2.  Documento collegato alla visualizzazione|
-|Document|1.  Documento corrente<br />2.  Modello di documento collegato al documento|
+|Documento|1.  Documento corrente<br />2.  Modello di documento collegato al documento|
 |Finestra di dialogo|1.  Questa finestra di dialogo<br />2.  Finestra proprietaria della finestra di dialogo.<br />3.  Applicazione (oggetto `CWinApp`)|
 
 Nei casi in cui le voci numerate nella seconda colonna della tabella precedente menzionano altri oggetti, come un documento, vedere l'elemento corrispondente nella prima colonna. Ad esempio, quando si legge nella seconda colonna che la visualizzazione inoltra un comando al suo documento, vedere la voce "Documento" nella prima colonna per continuare a seguire il routing.

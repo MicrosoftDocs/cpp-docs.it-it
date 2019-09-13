@@ -1,6 +1,6 @@
 ---
 title: fflush
-ms.date: 11/04/2016
+ms.date: 09/11/2019
 apiname:
 - fflush
 apilocation:
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: d03d20ee5024915d0ca4c5a21db4159e8c4f876a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 73ef97306f573fba89ba3cdb8000de9db4d10bac
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333982"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927440"
 ---
 # <a name="fflush"></a>fflush
 
@@ -49,22 +49,22 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fflush** restituisce 0 se il buffer è stato scaricato correttamente. Il valore 0 viene restituito anche nel caso in cui il flusso specificato non ha nessun buffer o viene aperto in sola lettura. Un valore restituito pari **EOF** indica un errore.
+**fflush** restituisce 0 se il buffer è stato scaricato correttamente. Il valore 0 viene restituito anche nel caso in cui il flusso specificato non ha nessun buffer o viene aperto in sola lettura. Un valore restituito di **EOF** indica un errore.
 
 > [!NOTE]
-> Se **fflush** restituisce **EOF**, i dati potrebbero essere andati persi a causa di un errore di scrittura. Quando si configura un gestore degli errori critici, è consigliabile disattivare il buffering con la **setvbuf** funzione o usare routine i/o a basso livello, ad esempio **Open**, **Close**, e **Write** anziché le funzioni dei / o flusso.
+> Se **fflush** restituisce **EOF**, è possibile che i dati siano andati perduti a causa di un errore di scrittura. Quando si configura un gestore errori critico, è più sicuro disattivare il buffer con la funzione **setvbuf** o usare routine di i/o di basso livello, ad esempio **_open**, **_close**e **_Write** anziché le funzioni di i/o del flusso.
 
 ## <a name="remarks"></a>Note
 
-Il **fflush** funzione Svuota il flusso *stream*. Se il flusso è stato aperto in modalità scrittura o in modalità aggiornamento e l'ultima operazione è stata un'operazione di scrittura, il contenuto del buffer di flusso viene scritto nel file sottostante o nel dispositivo e il buffer viene eliminato. Se il flusso è stato aperto in modalità di lettura o se il flusso non ha buffer, la chiamata a **fflush** non ha alcun effetto e qualsiasi buffer viene mantenuto. Una chiamata a **fflush** Annulla l'effetto di qualsiasi chiamata precedente a **ungetc** per il flusso. Il flusso rimane aperto dopo la chiamata.
+La funzione **fflush** Scarica il *flusso*del flusso. Se il flusso è stato aperto in modalità scrittura o in modalità aggiornamento e l'ultima operazione è stata un'operazione di scrittura, il contenuto del buffer di flusso viene scritto nel file sottostante o nel dispositivo e il buffer viene eliminato. Se il flusso è stato aperto in modalità di lettura o se il flusso non ha buffer, la chiamata a **fflush** non ha alcun effetto e viene mantenuto qualsiasi buffer. Una chiamata a **fflush** nega l'effetto di qualsiasi chiamata precedente a **ungetc** per il flusso. Il flusso rimane aperto dopo la chiamata.
 
-Se *stream* viene **NULL**, il comportamento è lo stesso di una chiamata a **fflush** su ogni flusso aperto. Tutti i flussi aperti in modalità scrittura e in modalità aggiornamento in cui l'ultima operazione è stata un'operazione di scrittura vengono scaricati. La chiamata non ha effetto su altri flussi.
+Se il *flusso* è **null**, il comportamento è lo stesso di una chiamata a **fflush** in ogni flusso aperto. Tutti i flussi aperti in modalità scrittura e in modalità aggiornamento in cui l'ultima operazione è stata un'operazione di scrittura vengono scaricati. La chiamata non ha effetto su altri flussi.
 
-I buffer sono normalmente gestiti dal sistema operativo, il quale determina il momento ottimale per scrivere automaticamente i dati sul disco: quando un buffer è pieno, quando un flusso viene chiuso o quando un programma termina normalmente senza chiudere i flussi. La funzionalità di commit al disco della libreria di runtime consente di assicurare che i dati critici siano scritti direttamente su disco anziché nei buffer del sistema operativo. Senza riscrivere un programma esistente, è possibile abilitare questa funzionalità collegando i file oggetto del programma a COMMODE.OBJ. Nel file eseguibile risultante, le chiamate a **FlushAll** scrivere il contenuto di tutti i buffer su disco. Solo **FlushAll** e **fflush** interessati da commode. obj.
+I buffer sono normalmente gestiti dal sistema operativo, il quale determina il momento ottimale per scrivere automaticamente i dati sul disco: quando un buffer è pieno, quando un flusso viene chiuso o quando un programma termina normalmente senza chiudere i flussi. La funzionalità di commit al disco della libreria di runtime consente di assicurare che i dati critici siano scritti direttamente su disco anziché nei buffer del sistema operativo. Senza riscrivere un programma esistente, è possibile abilitare questa funzionalità collegando i file oggetto del programma a COMMODE.OBJ. Nel file eseguibile risultante, le chiamate a **_flushall** scrivono il contenuto di tutti i buffer su disco. Solo **_flushall** e **fflush** sono interessati da commode. obj.
 
 Per informazioni sul controllo della funzionalità di commit al disco, vedere [I/O del flusso](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) e [_fdopen](fdopen-wfdopen.md).
 
-Questa funzione blocca il thread che chiama e quindi è thread-safe. Per una versione non di blocco, vedere **fflush_nolock**.
+Questa funzione blocca il thread che chiama e quindi è thread-safe. Per una versione non di blocco, vedere **_fflush_nolock**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -78,44 +78,50 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ```C
 // crt_fflush.c
+// Compile with: cl /W4 crt_fflush.c
+// This sample gets a number from the user, then writes it to a file.
+// It ensures the write isn't lost on crash by calling fflush.
 #include <stdio.h>
-#include <conio.h>
 
-int main( void )
+int * crash_the_program = 0;
+
+int main(void)
 {
-   int integer;
-   char string[81];
+    FILE * my_file;
+    errno_t err = fopen_s(&my_file, "myfile.txt", "w");
+    if (my_file && !err)
+    {
+        printf("Write a number: ");
 
-   // Read each word as a string.
-   printf( "Enter a sentence of four words with scanf: " );
-   for( integer = 0; integer < 4; integer++ )
-   {
-      scanf_s( "%s", string, sizeof(string) );
-      printf( "%s\n", string );
-   }
+        int my_number = 0;
+        scanf_s("%d", &my_number);
 
-   // You must flush the input buffer before using gets.
-   // fflush on input stream is an extension to the C standard
-   fflush( stdin );
-   printf( "Enter the same sentence with gets: " );
-   gets_s( string, sizeof(string) );
-   printf( "%s\n", string );
+        fprintf(my_file, "User selected %d\n", my_number);
+
+        // Write data to a file immediately instead of buffering.
+        fflush(my_file);
+    
+        if (my_number == 5)
+        {
+            // Without using fflush, no data was written to the file 
+            // prior to the crash, so the data is lost.
+            *crash_the_program = 5;
+        }
+
+        // Normally, fflush is not needed as closing the file will write the buffer.
+        // Note that files are automatically closed and flushed during normal termination.
+        fclose(my_file);
+    }
+    return 0;
 }
 ```
 
 ```Input
-This is a test
-This is a test
+5
 ```
 
-```Output
-Enter a sentence of four words with scanf: This is a test
-This
-is
-a
-test
-Enter the same sentence with gets: This is a test
-This is a test
+```myfile.txt
+User selected 5
 ```
 
 ## <a name="see-also"></a>Vedere anche

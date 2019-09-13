@@ -1,49 +1,49 @@
 ---
 title: Mappe messaggi (MFC)
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 helpviewer_keywords:
 - message maps [MFC], MFC
 - Windows messages [MFC], message maps
 - messages [MFC], Windows
 - MFC, messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
-ms.openlocfilehash: 14c08a008456160fe817f066e5b22b06b9f9fa14
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 4305d9b1db297eebcb189d2fad98b8c634ed1133
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611823"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908046"
 ---
 # <a name="message-maps-mfc"></a>Mappe messaggi (MFC)
 
-Questa sezione della documentazione sono elencati tutti [macro per il mapping del messaggio](../../mfc/reference/message-map-macros-mfc.md) e tutte le [CWnd](../../mfc/reference/cwnd-class.md) prototipi di funzioni di voci della mappa messaggi con il membro corrispondente:
+Questa sezione del riferimento elenca tutte le [macro di mapping dei messaggi](../../mfc/reference/message-map-macros-mfc.md) e tutte le voci della mappa messaggi [CWnd](../../mfc/reference/cwnd-class.md) insieme ai prototipi di funzione membro corrispondenti:
 
 |Category|Descrizione|
 |--------------|-----------------|
-|ON\_gestore di messaggi di comando|Gestisce `WM_COMMAND` messaggi generati dalla selezioni di menu di scelta dell'utente o i tasti di scelta.|
-|[Gestori di messaggi di notifica finestra figlio](../../mfc/reference/child-window-notification-message-handlers.md)|Gestire i messaggi di notifica da finestre figlio.|
-|[Gestori messaggi WM _](../../mfc/reference/handlers-for-wm-messages.md)|Gestire `WM_` messaggi, ad esempio `WM_PAINT`.|
+|Gestore\_di messaggi del comando|Gestisce `WM_COMMAND` i messaggi generati dalle selezioni dei menu utente o dalle chiavi di accesso ai menu.|
+|[Gestori di messaggi di notifica finestra figlio](../../mfc/reference/child-window-notification-message-handlers.md)|Gestire i messaggi di notifica dalle finestre figlio.|
+|[Gestori di messaggi WM_](../../mfc/reference/handlers-for-wm-messages.md)|Gestire `WM_` i messaggi, `WM_PAINT`ad esempio.|
 |[Gestori di messaggi definiti dall'utente](../../mfc/reference/user-defined-handlers.md)|Gestire i messaggi definiti dall'utente.|
 
-(Per una spiegazione della terminologia e le convenzioni usate in questo riferimento, vedere [come usare il riferimento incrociato alla mappa messaggi](../../mfc/reference/how-to-use-the-message-map-cross-reference.md).)
+Per una spiegazione della terminologia e delle convenzioni usate in questo riferimento, vedere [come usare il riferimento incrociato per la mappa messaggi](../../mfc/reference/how-to-use-the-message-map-cross-reference.md).
 
-Poiché Windows è un sistema operativo orientato ai messaggi, gran parte della programmazione per l'ambiente di Windows prevede la gestione dei messaggi. Si verifica ogni volta che un evento, ad esempio una sequenza di tasti o un mouse fare clic su, viene inviato un messaggio per l'applicazione, che deve gestire l'evento.
+Poiché Windows è un sistema operativo orientato ai messaggi, una grande parte della programmazione per l'ambiente Windows prevede la gestione dei messaggi. Ogni volta che si verifica un evento, ad esempio una sequenza di tasti o un clic del mouse, viene inviato un messaggio all'applicazione, che deve quindi gestire l'evento.
 
-La libreria Microsoft Foundation Class offre un modello di programmazione ottimizzato per la programmazione basata su messaggi. In questo modello, "mappe messaggi" vengono utilizzate per designare le funzioni che gestirà vari messaggi per una determinata classe. Mappe messaggi contengono uno o più macro che specificare quali messaggi devono essere gestiti da quali funzioni. Ad esempio, una mappa di messaggio contenente un `ON_COMMAND` macro potrebbe avere un aspetto simile al seguente:
+Il libreria Microsoft Foundation Class offre un modello di programmazione ottimizzato per la programmazione basata su messaggi. In questo modello le "mappe messaggi" vengono utilizzate per definire quali funzioni gestiranno vari messaggi per una classe specifica. Le mappe messaggi contengono una o più macro che specificano quali messaggi verranno gestiti da quali funzioni. Ad esempio, una mappa messaggi contenente una `ON_COMMAND` macro potrebbe avere un aspetto simile al seguente:
 
 [!code-cpp[NVC_MFCMessageMaps#16](../../mfc/reference/codesnippet/cpp/message-maps-mfc_1.cpp)]
 
-Il `ON_COMMAND` macro viene usata per gestire i messaggi di comando generati dal menu, pulsanti e tasti di scelta rapida. [Macro](../../mfc/reference/message-map-macros-mfc.md) sono disponibili per eseguire il mapping seguente:
+La `ON_COMMAND` macro viene utilizzata per gestire i messaggi di comando generati da menu, pulsanti e tasti di scelta rapida. Le [macro](../../mfc/reference/message-map-macros-mfc.md) sono disponibili per eseguire il mapping degli elementi seguenti:
 
 ## <a name="windows-messages"></a>Messaggi di Windows
 
-- Notifiche dei controlli
+- Notifiche di controllo
 
 - Messaggi definiti dall'utente
 
 ## <a name="command-messages"></a>Messaggi di comando
 
-- Registrazione messaggi definiti dall'utente
+- Messaggi registrati definiti dall'utente
 
 - Messaggi di aggiornamento dell'interfaccia utente
 
@@ -51,16 +51,16 @@ Il `ON_COMMAND` macro viene usata per gestire i messaggi di comando generati dal
 
 - Comandi:
 
-- Aggiornare gestore messaggi
+- Aggiornare i messaggi del gestore
 
-- Notifiche dei controlli
+- Notifiche di controllo
 
-Sebbene le macro della mappa messaggi siano importanti, è in genere non sarà necessario usarli direttamente. Questo avviene perché la finestra proprietà crea automaticamente le voci della mappa messaggi nei file di origine quando si utilizza per associare funzioni di gestione dei messaggi con i messaggi. Ogni volta che si desidera modificare o aggiungere una voce della mappa messaggi, è possibile usare la finestra Proprietà.
+Sebbene le macro della mappa messaggi siano importanti, in genere non è necessario utilizzarle direttamente. Ciò è dovuto al fatto che la [creazione guidata classe](mfc-class-wizard.md) crea automaticamente voci della mappa messaggi nei file di origine quando viene utilizzata per associare le funzioni di gestione dei messaggi ai messaggi. Ogni volta che si desidera modificare o aggiungere una voce della mappa messaggi, è possibile utilizzare la creazione guidata classe.
 
 > [!NOTE]
->  La finestra proprietà non supporta gli intervalli della mappa messaggi. È necessario scrivere queste voci della mappa messaggi.
+>  La creazione guidata classe non supporta gli intervalli della mappa messaggi. È necessario scrivere manualmente queste voci della mappa messaggi.
 
-Tuttavia, le mappe messaggi sono una parte importante della libreria Microsoft Foundation Class. È necessario comprendere le operazioni eseguite e documentazione è disponibile per loro.
+Tuttavia, le mappe messaggi rappresentano una parte importante del libreria Microsoft Foundation Class. È necessario comprenderne le operazioni e la documentazione fornita.
 
 ## <a name="see-also"></a>Vedere anche
 

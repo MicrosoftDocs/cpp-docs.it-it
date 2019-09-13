@@ -1,6 +1,6 @@
 ---
 title: Funzioni membro comunemente sottoposte a override
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - CDialog class [MFC], members
 - OnInitDialog function
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: 26a1527dbdac4b2a9deb57fb13481f8d2f9cb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152030"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907695"
 ---
 # <a name="commonly-overridden-member-functions"></a>Funzioni membro comunemente sottoposte a override
 
-Nella tabella seguente sono elencati più probabile di funzioni membro per eseguire l'override nel `CDialog`-classe derivata.
+La tabella seguente elenca le funzioni membro più probabili per eseguire l'override `CDialog`nella classe derivata da.
 
-### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Comunemente sottoposte a override dalle funzioni membro di classe CDialog
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Funzioni membro comunemente sottoposte a override della classe CDialog
 
-|Funzione membro|Messaggio che risponda alle|Scopo dell'override|
+|Funzione membro|Messaggio a cui risponde|Scopo dell'override|
 |---------------------|----------------------------|-----------------------------|
 |`OnInitDialog`|**WM_INITDIALOG**|Inizializzare i controlli della finestra di dialogo.|
-|`OnOK`|**BN_CLICKED** pulsante **IDOK**|Risponde quando l'utente fa clic sul pulsante OK.|
-|`OnCancel`|**BN_CLICKED** pulsante **IDCANCEL**|Risponde quando l'utente fa clic sul pulsante Annulla.|
+|`OnOK`|**BN_CLICKED** per il pulsante **IDOK**|Rispondere quando l'utente fa clic sul pulsante OK.|
+|`OnCancel`|**BN_CLICKED** per il pulsante **IDCANCEL**|Rispondere quando l'utente fa clic sul pulsante Annulla.|
 
-`OnInitDialog`, `OnOK`, e `OnCancel` sono funzioni virtuali. Per eseguirne l'override, si dichiara una funzione di override nella classe di finestre di dialogo derivata usando il [finestra proprietà](/visualstudio/ide/reference/properties-window).
+`OnInitDialog`, `OnOK` e`OnCancel` sono funzioni virtuali. Per eseguire l'override, dichiarare una funzione di override nella classe della finestra di dialogo derivata utilizzando la [creazione guidata classe MFC](reference/mfc-class-wizard.md).
 
-`OnInitDialog` viene chiamato appena prima che venga visualizzata nella finestra di dialogo. È necessario chiamare il valore predefinito `OnInitDialog` gestore dall'override, in genere come la prima azione nel gestore. Per impostazione predefinita `OnInitDialog` restituisce **TRUE** per indicare che lo stato attivo deve essere impostato sul primo controllo nella finestra di dialogo.
+`OnInitDialog`viene chiamato immediatamente prima della visualizzazione della finestra di dialogo. È necessario chiamare il gestore `OnInitDialog` predefinito dall'override, in genere come prima azione nel gestore. Per impostazione predefinita `OnInitDialog` , restituisce **true** per indicare che lo stato attivo deve essere impostato sul primo controllo nella finestra di dialogo.
 
-`OnOK` in genere l'override per le finestre di dialogo non modale, ma non modale. Se si esegue l'override di questo gestore per una finestra di dialogo modale, chiamare la versione della classe base da override, ovvero per assicurarsi che `EndDialog` viene chiamato, o chiamare `EndDialog` manualmente.
+`OnOK`viene in genere sottoposto a override per le finestre di dialogo non modali e non modali. Se si esegue l'override di questo gestore per una finestra di dialogo modale, chiamare la versione della classe base dall'override `EndDialog` , per assicurarsi che venga `EndDialog` chiamato, o chiamare manualmente.
 
-`OnCancel` in genere viene ignorato per le finestre di dialogo non modale.
+`OnCancel`viene in genere sottoposto a override per le finestre di dialogo non modali.
 
-Per altre informazioni su queste funzioni membro, vedere la classe [CDialog](../mfc/reference/cdialog-class.md) nel *riferimento MFC* e nella discussione sulla [ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md).
+Per ulteriori informazioni su queste funzioni membro, vedere la classe [CDialog](../mfc/reference/cdialog-class.md) nei *riferimenti a MFC* e la descrizione del [ciclo di vita di una finestra di dialogo](../mfc/life-cycle-of-a-dialog-box.md).
 
 ## <a name="see-also"></a>Vedere anche
 

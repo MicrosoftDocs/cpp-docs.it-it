@@ -9,22 +9,22 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-ms.openlocfilehash: 0d3ed6239b638a0e161cd7e3580f4fe6e1b4a7e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25805187f88c5423ea41cd7cbe346e44e7d7d36a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383763"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907466"
 ---
 # <a name="message-handlers"></a>Gestori di messaggi
 
-In MFC, un oggetto dedicato *gestore* funzione elabori ogni messaggio separato. Funzioni gestore messaggi sono funzioni membro di una classe. Questa documentazione Usa i termini *funzione di membro di gestore di messaggi*, *funzione del gestore messaggio*, *gestore di messaggi*, e *gestore*in modo intercambiabile. Alcuni tipi di gestori di messaggi sono detti anche "gestori di comandi".
+In MFC, una funzione *gestore* dedicata elabora ogni messaggio separato. Le funzioni del gestore di messaggi sono funzioni membro di una classe. In questa documentazione vengono utilizzati in modo intercambiabile i termini *funzione membro gestore*messaggi, *funzione gestore*messaggi, *gestore messaggi*e *gestore* . Alcuni tipi di gestori di messaggi sono detti anche "gestori di comandi".
 
-Scrittura degli account di gestori messaggio per gran parte del lavoro svolto nella scrittura di un'applicazione framework. Questa serie di articoli descrive come funziona il meccanismo di elaborazione dei messaggi.
+La scrittura di gestori di messaggi rappresenta una gran parte del lavoro di scrittura di un'applicazione Framework. In questa famiglia di articoli viene descritto il funzionamento del meccanismo di elaborazione dei messaggi.
 
-Funzionamento del gestore per un messaggio di eseguire questa operazione viene qualsiasi elemento da eseguire in risposta al messaggio. È possibile creare i gestori utilizzando la finestra delle proprietà della classe e quindi compilare il codice del gestore usando l'editor del codice sorgente.
+Il gestore di un messaggio esegue le operazioni desiderate in risposta a tale messaggio. È possibile creare i gestori usando la [creazione guidata classe](reference/mfc-class-wizard.md) della classe, quindi compilare il codice del gestore usando l'editor del codice sorgente.
 
-È possibile usare tutte le funzionalità di Microsoft Visual C++ e MFC per scrivere i gestori. Per un elenco di tutte le classi, vedere [Class Library Overview](../mfc/class-library-overview.md) nel *riferimento MFC*.
+È possibile utilizzare tutte le funzionalità di Microsoft Visual C++ e MFC per scrivere i gestori. Per un elenco di tutte le classi, vedere [Cenni preliminari sulle librerie di classi](../mfc/class-library-overview.md) in riferimenti a *MFC*.
 
 ## <a name="see-also"></a>Vedere anche
 

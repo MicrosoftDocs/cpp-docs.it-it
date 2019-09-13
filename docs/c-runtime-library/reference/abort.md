@@ -1,6 +1,6 @@
 ---
 title: abort
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - abort
 apilocation:
@@ -22,19 +22,19 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: d8cb190e36a64e8bd8cfcb75bc9a19c2a394fc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ee07e50504b53e9e363f8b4fc5e9f4414637c449
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342198"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927469"
 ---
 # <a name="abort"></a>abort
 
 Interrompe il processo corrente e restituisce un codice di errore.
 
 > [!NOTE]
-> Non utilizzare questo metodo per arrestare un'app di Microsoft Store o app Universal Windows Platform (UWP), ad eccezione di test o gli scenari di debug. Modalità dell'interfaccia utente o a livello di codice per chiudere un'app di Store non sono consentiti in base al [i criteri di Microsoft Store](/legal/windows/agreements/store-policies). Per altre informazioni, vedere [ciclo di vita app UWP](/windows/uwp/launch-resume/app-lifecycle).
+> Non usare questo metodo per arrestare un'app Microsoft Store o un piattaforma UWP (Universal Windows Platform) (UWP), tranne che negli scenari di test o di debug. I metodi a livello di codice o dell'interfaccia utente per chiudere un'app dello Store non sono consentiti in base ai [criteri Microsoft Store](/legal/windows/agreements/store-policies). Per altre informazioni, vedere ciclo di vita dell' [app UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,27 +44,27 @@ void abort( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-**Interrompi** non restituisce il controllo al processo chiamante. Per impostazione predefinita, cerca un gestore di segnale di interruzione e genera `SIGABRT` se ne è stato impostato uno. Quindi **abort** termina il processo corrente e restituisce un codice di uscita per il processo padre.
+**Abort** non restituisce il controllo al processo chiamante. Per impostazione predefinita, cerca un gestore di segnale di interruzione e genera `SIGABRT` se ne è stato impostato uno. Quindi **Abort** termina il processo corrente e restituisce un codice di uscita al processo padre.
 
 ## <a name="remarks"></a>Note
 
 **Sezione specifica Microsoft**
 
-Per impostazione predefinita, quando si crea un'app con la libreria di runtime di debug, il **abort** routine consente di visualizzare un messaggio di errore prima `SIGABRT` viene generato. Per le app della console eseguite in modalità console, il messaggio viene inviato a `STDERR`. Le app desktop e le app console di Windows eseguite in modalità finestra visualizzano il messaggio in una finestra di messaggio. Per eliminare il messaggio, usare [_set_abort_behavior](set-abort-behavior.md) per cancellare il flag `_WRITE_ABORT_MSG`. Il messaggio visualizzato varia a seconda della versione dell'ambiente di runtime usato. Per le applicazioni compilate usando le versioni più recenti di Visual C++, il messaggio è simile a questo:
+Per impostazione predefinita, quando un'app viene compilata con la libreria di runtime di debug, la routine Abort `SIGABRT` Visualizza un messaggio di errore prima che venga generato. Per le app della console eseguite in modalità console, il messaggio viene inviato a `STDERR`. Le app desktop e le app console di Windows eseguite in modalità finestra visualizzano il messaggio in una finestra di messaggio. Per eliminare il messaggio, usare [_set_abort_behavior](set-abort-behavior.md) per cancellare il flag `_WRITE_ABORT_MSG`. Il messaggio visualizzato varia a seconda della versione dell'ambiente di runtime usato. Per le applicazioni compilate usando le versioni più recenti C++di Visual, il messaggio è simile al seguente:
 
-> R6010 - è stato chiamato Abort)
+> R6010-Abort () è stato chiamato
 
 Nelle versioni precedenti della libreria di runtime C, veniva visualizzato il messaggio seguente:
 
 > Questa applicazione ha richiesto al Runtime di terminarlo in modo anomalo. Per altre informazioni, contattare il team di supporto dell'applicazione.
 
-Quando il programma viene compilato in modalità debug, la finestra di messaggio visualizza le opzioni **Interrompi**, **Riprova** o **Ignora**. Se l'utente sceglie **Interrompi**, il programma viene immediatamente terminato e viene restituito un codice di uscita 3. Se l'utente sceglie **Riprova**, viene richiamato un debugger per il debug JIT, se disponibile. Se l'utente sceglie **Ignore**, **abort** continua l'elaborazione normale.
+Quando il programma viene compilato in modalità debug, la finestra di messaggio visualizza le opzioni **Interrompi**, **Riprova** o **Ignora**. Se l'utente sceglie **Interrompi**, il programma viene immediatamente terminato e viene restituito un codice di uscita 3. Se l'utente sceglie **Riprova**, viene richiamato un debugger per il debug JIT, se disponibile. Se l'utente sceglie **Ignora**, **Interrompi** continua l'elaborazione normale.
 
-Nelle build di distribuzione e di debug **abort** verifica quindi se è impostato un gestore di segnale di interruzione. Se è impostato un gestore del segnale non predefinito, **abort** chiamate `raise(SIGABRT)`. Usare la funzione [signal](signal.md) per associare un gestore di segnale di interruzione al segnale `SIGABRT`. È possibile eseguire azioni personalizzate, ad esempio pulire le risorse o le informazioni di registro, e terminare l'app con il proprio codice di errore nella funzione del gestore. Se non è definito alcun gestore di segnale personalizzato, **abort** non genera il `SIGABRT` segnale.
+Nelle compilazioni finali e di debug, **Interrompi** verifica se è impostato un gestore di segnale di interruzione. Se viene impostato un gestore di segnale non predefinito, **Interrompi** chiama `raise(SIGABRT)`. Usare la funzione [signal](signal.md) per associare un gestore di segnale di interruzione al segnale `SIGABRT`. È possibile eseguire azioni personalizzate, ad esempio pulire le risorse o le informazioni di registro, e terminare l'app con il proprio codice di errore nella funzione del gestore. Se non viene definito alcun gestore di segnale personalizzato, **Abort** non genera `SIGABRT` il segnale.
 
-Per impostazione predefinita, nelle compilazioni non di debug delle App desktop o console, **abort** richiama quindi il meccanismo di servizio di segnalazione errori Windows (precedentemente noto come ripristino di emergenza. Watson) per segnalare gli errori a Microsoft. Questo comportamento può essere abilitato o disabilitato chiamando `_set_abort_behavior` e impostando o eseguendo il mascheramento del flag `_CALL_REPORTFAULT`. Quando il flag è impostato, Windows visualizza una finestra di messaggio contenente un testo simile a "Si è verificato un problema che impedisce il funzionamento corretto del programma". L'utente può scegliere di richiamare un debugger con un pulsante **Debug** oppure scegliere il pulsante **Chiudi programma** per terminare l'app con un codice di errore definito dal sistema operativo.
+Per impostazione predefinita, nelle compilazioni non di debug delle app desktop o console, **Abort** richiama quindi il meccanismo di servizio Segnalazione errori Windows (noto in precedenza come ripristino di emergenza. Watson) per segnalare gli errori a Microsoft. Questo comportamento può essere abilitato o disabilitato chiamando `_set_abort_behavior` e impostando o eseguendo il mascheramento del flag `_CALL_REPORTFAULT`. Quando il flag è impostato, Windows visualizza una finestra di messaggio contenente un testo simile a "Si è verificato un problema che impedisce il funzionamento corretto del programma". L'utente può scegliere di richiamare un debugger con un pulsante **Debug** oppure scegliere il pulsante **Chiudi programma** per terminare l'app con un codice di errore definito dal sistema operativo.
 
-Se il gestore di segnalazione errori di Windows non viene richiamato, quindi **abort** chiamate [Exit](exit-exit-exit.md) per terminare il processo con codice di uscita 3 e restituisce controllo al processo padre o il sistema operativo. `_exit` non scarica i buffer di flusso e non esegue l'elaborazione `atexit`/`_onexit`.
+Se il gestore di segnalazione errori Windows non viene richiamato, **Abort** chiama [_exit](exit-exit-exit.md) per terminare il processo con il codice di uscita 3 e restituisce il controllo al processo padre o al sistema operativo. `_exit` non scarica i buffer di flusso e non esegue l'elaborazione `atexit`/`_onexit`.
 
 Per altre informazioni sul debug CRT, vedere [CRT Debugging Techniques](/visualstudio/debugger/crt-debugging-techniques) (Tecniche di debug CRT).
 

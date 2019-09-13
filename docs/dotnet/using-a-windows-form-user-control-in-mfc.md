@@ -1,6 +1,6 @@
 ---
 title: Utilizzo di un controllo utente Windows Form in MFC
-ms.date: 1/08/2018
+ms.date: 01/08/2018
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - interoperability [C++], Windows Forms in MFC
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efabbf84778d925ec1de03f5f4ea0ca09185bd81
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384491"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926055"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Utilizzo di un controllo utente Windows Form in MFC
 
-Usa le classi di supporto di MFC Windows Form, è possibile ospitare i controlli Windows Form all'interno delle applicazioni MFC come controllo ActiveX in finestre di dialogo MFC o visualizzazioni. Inoltre, Windows Form possono essere ospitati come finestre di dialogo MFC.
+Utilizzando le classi di supporto Windows Forms MFC, è possibile ospitare controlli Windows Forms all'interno delle applicazioni MFC come controllo ActiveX all'interno di finestre di dialogo o viste MFC. Inoltre, Windows Forms moduli possono essere ospitati come finestre di dialogo MFC.
 
 Le sezioni seguenti descrivono come:
 
-- Ospitare un controllo Windows Form in una finestra di dialogo MFC.
+- Ospitare un controllo Windows Forms in una finestra di dialogo MFC.
 
-- Ospitare un controllo utente Windows Form come visualizzazione MFC.
+- Ospitare un controllo utente Windows Forms come vista MFC.
 
-- Ospitare un form di Windows Form come una finestra di dialogo MFC.
-
-> [!NOTE]
-> Integrazione dei moduli di Windows di MFC funziona solo nei progetti che si collegano in modo dinamico con MFC (progetti in cui `_AFXDLL` è definito).
+- Ospitare un modulo di Windows Forms come finestra di dialogo MFC.
 
 > [!NOTE]
-> Quando si compila l'applicazione usando una copia privata (modificata) delle interfacce MFC Windows Forms DLL (mfcmifc80.dll), potrà essere installato nella Global Assembly Cache solo se si sostituisce la chiave di Microsoft con la propria chiave del fornitore. Per altre informazioni sulla firma degli assembly, vedere [programmazione con assembly](/dotnet/framework/app-domains/programming-with-assemblies) e [assembly con nome sicuro (firma degli Assembly) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> L'integrazione di MFC Windows Forms funziona solo nei progetti che si collegano dinamicamente a MFC `_AFXDLL` (progetti in cui è definito).
 
-Se l'applicazione MFC Usa Windows Form, è necessario ridistribuire mfcmifc80.dll con l'applicazione. Per altre informazioni, vedere [ridistribuzione della libreria MFC](../windows/redistributing-the-mfc-library.md).
+> [!NOTE]
+> Quando si compila l'applicazione utilizzando una copia privata (modificata) della DLL delle interfacce di Windows Forms MFC (mfcmifc80. dll), l'installazione non verrà eseguita nella GAC, a meno che non si sostituisca la chiave Microsoft con la propria chiave fornitore. Per ulteriori informazioni sulla firma degli assembly, vedere [programmazione con](/dotnet/framework/app-domains/programming-with-assemblies) assembly e [assembly con nome sicuro (firma degliC++assembly) (/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+
+Se l'applicazione MFC utilizza Windows Forms, è necessario ridistribuire mfcmifc80. dll con l'applicazione. Per ulteriori informazioni, vedere [ridistribuzione della libreria MFC](../windows/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>In questa sezione
 
@@ -75,4 +75,4 @@ Se l'applicazione MFC Usa Windows Form, è necessario ridistribuire mfcmifc80.dl
 ## <a name="see-also"></a>Vedere anche
 
 [Elementi dell'interfaccia utente](../mfc/user-interface-elements-mfc.md)<br/>
-[Visualizzazioni di form](../mfc/form-views-mfc.md)
+[Visualizzazioni form](../mfc/form-views-mfc.md)

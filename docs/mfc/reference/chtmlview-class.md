@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 2d00a7216778f4a9a40b9d503bce7d26982669e0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9643379136398de7ce4d98aaa9ab5f22fa488c0e
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506060"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927929"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (classe)
 
@@ -1194,7 +1194,7 @@ Puntatore a una stringa che restituisce l'URL, il nome del file UNC o un PIDL (u
 
 Non tutti i frame genereranno questo evento, ma ogni frame che genera un evento [OnDownloadBegin](#ondownloadbegin) genererà un `OnDocumentComplete` evento corrispondente.
 
-L'URL indicato da *lpszURL* può essere diverso dall'URL a cui è stato comunicato il browser, perché questo URL è l'URL canonico e qualificato. Se, ad esempio, un'applicazione specifica un URL "www.Microsoft.com" in una chiamata a [Navigate](#navigate) o [Navigate2](#navigate2), l'URL passato `OnNavigateComplete2` da sarà "<http://www.microsoft.com/>". Inoltre, se il server ha reindirizzato il browser a un URL diverso, l'URL reindirizzato verrà riportato qui.
+L'URL indicato da *lpszURL* può essere diverso dall'URL a cui è stato comunicato il browser, perché questo URL è l'URL canonico e qualificato. Se, ad esempio, un'applicazione specifica un URL `"www.microsoft.com"` di in una chiamata a [Navigate](#navigate) o [Navigate2](#navigate2), `"<https://www.microsoft.com/>"`l'URL `OnNavigateComplete2` passato da sarà. Inoltre, se il server ha reindirizzato il browser a un URL diverso, l'URL reindirizzato verrà riportato qui.
 
 ##  <a name="ondocwindowactivate"></a>CHtmlView:: OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ Espressione stringa che restituisce l'URL, il nome file UNC o PIDL (un puntatore
 
 Il parametro URL può essere un PIDL nel caso di un'entità spazio dei nomi della Shell per cui non esiste alcuna rappresentazione URL.
 
-Si noti che l'URL contenuto in *strURL* può essere diverso dall'URL a cui è stato comunicato il browser, perché questo URL è l'URL canonico e qualificato. Se, ad esempio, un'applicazione specifica un URL "www.Microsoft.com" in una chiamata a [Navigate](#navigate) o [Navigate2](#navigate2), l'URL passato `OnNavigateComplete2` da sarà "<http://www.microsoft.com/>". Inoltre, se il server ha reindirizzato il browser a un URL diverso, l'URL reindirizzato verrà riportato qui.
+Si noti che l'URL contenuto in *strURL* può essere diverso dall'URL a cui è stato comunicato il browser, perché questo URL è l'URL canonico e qualificato. Se, ad esempio, un'applicazione specifica un URL `"www.microsoft.com"` di in una chiamata a [Navigate](#navigate) o [Navigate2](#navigate2), `"<https://www.microsoft.com/>"`l'URL `OnNavigateComplete2` passato da sarà. Inoltre, se il server ha reindirizzato il browser a un URL diverso, l'URL reindirizzato verrà riportato qui.
 
 ##  <a name="onnavigateerror"></a>CHtmlView:: OnNavigateError
 

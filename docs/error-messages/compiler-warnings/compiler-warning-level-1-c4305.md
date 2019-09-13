@@ -1,20 +1,20 @@
 ---
 title: Avviso del compilatore (livello 1) C4305
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: 3f9116b0e7bdd9ee13c42b48f44da4b090f41ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc718e5f7ebe9478ed1bf2a7323db940935cb1d6
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327470"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926112"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>Avviso del compilatore (livello 1) C4305
 
-> «*contesto*': troncamento da '*type1*'a'*type2*»
+> '*context*': troncamento da'*tipo1*' a'*tipo2*'
 
 ## <a name="remarks"></a>Note
 
@@ -22,7 +22,7 @@ Questo avviso viene generato quando un valore viene convertito in un tipo più p
 
 ## <a name="example"></a>Esempio
 
-Questo esempio illustra due modi, si potrebbe essere visualizzato questo avviso:
+Questo esempio mostra due modi in cui è possibile visualizzare questo avviso:
 
 ```cpp
 // C4305.cpp
@@ -41,4 +41,4 @@ int main()
 }
 ```
 
-Per risolvere questo problema, inizializzare usando un valore del tipo corretto o usare un cast esplicito al tipo corretto. Ad esempio, usare una **float** letterale, ad esempio 2.71828f invece di un **double** (tipo predefinito per i valori letterali a virgola mobile) per inizializzare un **float** variabile, o per passare a un costruttore che accetta un **float** argomento.
+Per risolvere il problema, inizializzare utilizzando un valore del tipo corretto oppure utilizzare un cast esplicito al tipo corretto. Usare, ad esempio, un valore letterale **float** , ad esempio 2.71828 f anziché un valore **Double** (il tipo predefinito per i valori letterali a virgola mobile) per inizializzare una variabile **float** oppure passare a un costruttore che accetta un argomento **float** .

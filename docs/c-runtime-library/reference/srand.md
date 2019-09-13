@@ -1,6 +1,6 @@
 ---
 title: srand
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - srand
 apilocation:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 6545d4eba6c17fd55bb2b8cf23fb0319d1c96bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d74ae4cbec5a76df48bb2b56acab7329e6cf8aa5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354886"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927411"
 ---
 # <a name="srand"></a>srand
 
-Imposta il valore di inizializzazione iniziale per il generatore di numeri pseudocasuali utilizzato per il **rand** (funzione).
+Imposta il valore di inizializzazione iniziale per il generatore di numeri pseudocasuale usato dalla funzione **Rand** .
 
 ## <a name="syntax"></a>Sintassi
 
@@ -55,7 +55,7 @@ Valore di inizializzazione per la generazione di numeri pseudocasuali
 
 ## <a name="remarks"></a>Note
 
-Il **srand** funzione imposta il punto di partenza per la generazione di una serie di interi pseudocasuali nel thread corrente. Per reinizializzare il generatore per creare la stessa sequenza di risultati, chiamare il **srand** funzione, usare lo stesso *seed* nuovo argomento. Qualsiasi altro valore per *seed* imposta il generatore in un altro punto di partenza nella sequenza di numeri pseudocasuale. **la funzione RAND** recupera i numeri pseudocasuali generati. La chiamata **rand** prima di qualsiasi chiamata a **srand** genera la stessa sequenza della chiamata **srand** con *seed* passato come 1.
+La funzione **srand** imposta il punto di partenza per la generazione di una serie di numeri interi pseudocasuale nel thread corrente. Per reinizializzare il generatore per creare la stessa sequenza di risultati, chiamare la funzione **srand** e usare di nuovo lo stesso argomento di *inizializzazione* . Qualsiasi altro valore per *Seed* imposta il generatore su un punto di partenza diverso nella sequenza pseudocasuale. **Rand** recupera i numeri pseudocasuale generati. La chiamata di **Rand** prima di qualsiasi chiamata a **srand** genera la stessa sequenza della chiamata di **srand** con il valore di *inizializzazione* passato a 1.
 
 ## <a name="requirements"></a>Requisiti
 

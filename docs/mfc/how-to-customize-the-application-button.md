@@ -1,58 +1,58 @@
 ---
 title: "Procedura: Personalizzare il pulsante dell'applicazione"
-ms.date: 11/19/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a1d1625e80e6c6f4440864629a5123bed5744c7
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160358"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907795"
 ---
 # <a name="how-to-customize-the-application-button"></a>Procedura: Personalizzare il pulsante dell'applicazione
 
-Quando si fa clic sul pulsante dell'applicazione, viene visualizzato un menu dei comandi. In genere, il menu contiene i comandi correlati al file, ad esempio **aperto**, **salvare**, **stampa**, e **uscita**.
+Quando si fa clic sul pulsante applicazione, viene visualizzato un menu di comandi. In genere, il menu contiene comandi correlati ai file, ad esempio **apertura**, **salvataggio**, **stampa**e **uscita**.
 
-![Pulsante di applicazione della barra multifunzione MFC](../mfc/media/application_button.png "pulsante applicazione della barra multifunzione MFC")
+![Pulsante applicazione della barra multifunzione MFC](../mfc/media/application_button.png "Pulsante applicazione della barra multifunzione MFC")
 
-Per personalizzare il pulsante dell'applicazione, aprire il file nei **proprietà** finestra, modificarne le proprietà e quindi visualizzare in anteprima il controllo della barra multifunzione.
+Per personalizzare il pulsante dell'applicazione, aprirlo nella finestra **Proprietà** (in **visualizzazione risorse**), modificarne le proprietà e quindi visualizzare l'anteprima del controllo Ribbon.
 
-### <a name="to-open-the-application-button-in-the-properties-window"></a>Per aprire il pulsante dell'applicazione nella finestra proprietà
+### <a name="to-open-the-application-button-in-the-properties-window"></a>Per aprire il pulsante dell'applicazione nella Finestra Proprietà
 
-1. In Visual Studio sul **View** menu, fare clic su **visualizzazione risorse**.
+1. In Visual Studio scegliere **visualizzazione risorse**dal menu **Visualizza** .
 
-1. Nelle **visualizzazione risorse**, fare doppio clic sulla risorsa barra multifunzione per visualizzarla nell'area di progettazione.
+1. In **visualizzazione risorse**fare doppio clic sulla risorsa barra multifunzione per visualizzarla nell'area di progettazione.
 
-1. Nell'area di progettazione, fare clic sul menu del pulsante dell'applicazione e quindi fare clic su **proprietà**.
+1. Nell'area di progettazione fare clic con il pulsante destro del mouse sul menu del pulsante applicazione, quindi scegliere **Proprietà**.
 
-## <a name="application-button-properties"></a>Proprietà dei pulsanti dell'applicazione
+## <a name="application-button-properties"></a>Proprietà del pulsante dell'applicazione
 
-Nella tabella seguente definisce le proprietà del pulsante dell'applicazione.
+La tabella seguente definisce le proprietà del pulsante applicazione.
 
 |Proprietà|Definizione|
 |--------------|----------------|
-|**Pulsanti**|Contiene la raccolta di fino a tre pulsanti visualizzati nell'angolo in basso a destra del menu dell'applicazione.|
-|**Caption**|Specifica il testo del controllo. A differenza di altri elementi della barra multifunzione, il pulsante dell'applicazione non viene visualizzato il testo della didascalia. Al contrario, il testo viene utilizzato per l'accessibilità.|
-|**HDPI Image**|Specifica l'identificatore di elevata punti per pollice icona del pulsante dell'applicazione (HDPI). Quando viene eseguita su un monitor DPI elevato, l'applicazione **HDPI Image** viene usato al posto di **immagine**.|
-|**HDPI Large Images**|Specifica l'identificatore delle immagini di grandi dimensioni DPI elevate. Quando viene eseguita su un monitor DPI elevato, l'applicazione **HDPI Large Images** viene usato al posto di **Large Images**.|
-|**HDPI Small Images**|Specifica l'identificatore delle immagini piccole DPI elevate. Quando viene eseguita su un monitor DPI elevato, l'applicazione **HDPI Small Images** viene usato al posto di **Small Images**.|
+|**Pulsanti**|Contiene la raccolta di un massimo di tre pulsanti visualizzati nell'angolo in basso a destra del menu dell'applicazione.|
+|**Caption**|Specifica il testo del controllo. A differenza di altri elementi della barra multifunzione, il pulsante dell'applicazione non Visualizza il testo della didascalia. Il testo viene invece usato per l'accessibilità.|
+|**Immagine di HDPI**|Specifica l'identificatore dell'icona del pulsante dell'applicazione HDPI (punti per pollice). Quando l'applicazione viene eseguita in un monitor DPI elevato, viene utilizzata l' **immagine HDPI** anziché **Image**.|
+|**HDPI immagini di grandi dimensioni**|Specifica l'identificatore delle immagini large con valori DPI alti. Quando l'applicazione viene eseguita in un monitor con valori DPI alti, vengono utilizzate **Immagini HDPI di grandi dimensioni** anziché **Immagini di grandi dimensioni**.|
+|**HDPI piccole immagini**|Specifica l'identificatore delle immagini con valori DPI alti. Quando l'applicazione viene eseguita in un monitor con valori DPI alti, viene utilizzata la **HDPI di piccole dimensioni** anziché le **Immagini di piccole dimensioni**.|
 |**ID**|Specifica l'identificatore del controllo.|
-|**Immagine**|Specifica l'identificatore dell'icona del pulsante dell'applicazione. L'icona è una bitmap di 26, 26 32 bit con trasparenza alfa. Quando viene selezionato o vi passa sopra il pulsante dell'applicazione, vengono evidenziate le parti trasparenti dell'icona.|
-|**Chiavi**|Specifica la stringa che viene visualizzata quando è abilitato lo spostamento di suggerimento di chiave. Suggerimento di chiave di navigazione è abilitata quando si preme ALT.|
-|**Immagini di grandi dimensioni**|Specifica l'identificatore dell'immagine che contiene una serie di icone di 32 x 32. Le icone vengono usate per i pulsanti nella raccolta elementi principali.|
-|**Elementi principali**|Contiene una raccolta di voci di menu visualizzati nel menu dell'applicazione.|
-|**MRU Caption**|Specifica il testo visualizzato nel pannello dell'elenco dei recenti.|
-|**Immagini di piccole dimensioni**|Specifica l'identificatore dell'immagine che contiene una serie di 16x16 icone. Le icone vengono usate per i pulsanti nella raccolta di pulsanti.|
-|**Usare**|Abilita o disabilita Pannello di elenco dei recenti. Viene visualizzato il pannello di elenco recente nel menu dell'applicazione.|
-|**Width**|Specifica la larghezza in pixel del Pannello di elenco dei recenti.|
+|**Immagine**|Specifica l'identificatore dell'icona del pulsante dell'applicazione. L'icona è una bitmap 26x26 a 32 bit con trasparenza alfa. Le parti trasparenti dell'icona vengono evidenziate quando si fa clic sul pulsante dell'applicazione o si passa il mouse su di esso.|
+|**Chiavi**|Specifica la stringa visualizzata quando è abilitata la navigazione con la descrizione comando. La navigazione con suggerimento chiave è abilitata quando si preme ALT.|
+|**Immagini di grandi dimensioni**|Specifica l'identificatore dell'immagine che contiene una serie di icone 32x32. Le icone vengono usate dai pulsanti nella raccolta Items principale.|
+|**Elementi principali**|Contiene una raccolta di voci di menu visualizzate nel menu dell'applicazione.|
+|**Didascalia MRU**|Specifica il testo visualizzato nel pannello elenco recente.|
+|**Immagini piccole**|Specifica l'identificatore dell'immagine che contiene una serie di icone 16x16. Le icone vengono usate dai pulsanti nella raccolta Buttons.|
+|**Uso**|Abilita o Disabilita il pannello elenco recente. Il pannello elenco recente viene visualizzato nel menu dell'applicazione.|
+|**Width**|Specifica la larghezza in pixel del pannello elenco recente.|
 
-Il menu di applicazione non viene visualizzato nell'area di progettazione. Per visualizzare questo report, è necessario visualizzare l'anteprima della barra multifunzione o eseguire l'applicazione.
+Il menu applicazione non viene visualizzato nell'area di progettazione. Per visualizzarlo, è necessario visualizzare in anteprima la barra multifunzione o eseguire l'applicazione.
 
 #### <a name="to-preview-the-ribbon-control"></a>Per visualizzare in anteprima il controllo Ribbon
 
-- Nel **sulla barra degli strumenti Editor Ribbon**, fare clic su **Test Ribbon**.
+- Sulla **barra degli strumenti Editor della barra multifunzione**fare clic su **test barra multifunzione**.
 
 ## <a name="see-also"></a>Vedere anche
 

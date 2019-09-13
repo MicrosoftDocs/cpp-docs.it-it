@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 1634eee30063a48041d60fc1b7116ca9543c9de2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a39a3a69b43eb06d67fc806e2d4fa9aec323b650
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511468"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907813"
 ---
 # <a name="ribbon-designer-mfc"></a>Finestra di progettazione della barra multifunzione (MFC)
 
@@ -77,7 +77,7 @@ La figura seguente mostra i diversi componenti presenti nella finestra di proget
 
 - **Area di progettazione:** Contiene la rappresentazione visiva della risorsa della barra multifunzione.
 
-- **Finestra Proprietà:** Elenca gli attributi dell'elemento selezionato nell'area di progettazione.
+- **[Creazione guidata classe](reference/mfc-class-wizard.md):** Elenca gli attributi dell'elemento selezionato nell'area di progettazione.
 
 - **Finestra Visualizzazione risorse:** Visualizza le risorse che includono le risorse della barra multifunzione nel progetto.
 

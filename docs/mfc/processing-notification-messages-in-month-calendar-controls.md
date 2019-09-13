@@ -8,26 +8,26 @@ helpviewer_keywords:
 - notifications [MFC], for CMonthCalCtrl
 - notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
-ms.openlocfilehash: fc0bb475a95450c281c92b500083c9502df50931
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 452d24bf1ffd157366f357a510e8c8cfaad28d91
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346139"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908086"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>Elaborazione dei messaggi di notifica nel controlli calendario mensile
 
-Quando gli utenti interagiscono con il controllo calendario mensile (selezionare le date e/o visualizzare un mese diverso), il controllo (`CMonthCalCtrl`) invia i messaggi di notifica alla finestra padre, in genere un oggetto finestra di dialogo o visualizzazione. Se si desidera eseguire un'operazione in risposta, occorre gestire questi messaggi. Quando l'utente seleziona un nuovo mese da visualizzare, ad esempio, è possibile fornire un set di date che dovrebbe essere evidenziata.
+Quando gli utenti interagiscono con il controllo calendario mensile (selezionando date e/o visualizzando un mese diverso),`CMonthCalCtrl`il controllo () Invia messaggi di notifica alla finestra padre, in genere un oggetto visualizzazione o finestra di dialogo. Se si desidera eseguire un'operazione in risposta, occorre gestire questi messaggi. Ad esempio, quando l'utente seleziona un nuovo mese da visualizzare, è possibile fornire un set di date da evidenziare.
 
-Usare la finestra Proprietà per aggiungere la gestione della notifica alla classe padre per i messaggi da implementare.
+Utilizzare la [creazione guidata classe](reference/mfc-class-wizard.md) per aggiungere gestori di notifiche alla classe padre per i messaggi che si desidera implementare.
 
-Nell'elenco seguente descrive le diverse notifiche inviate dal controllo calendario mensile.
+Nell'elenco seguente vengono descritte le diverse notifiche inviate dal controllo di calendario mensile.
 
-- MCN_GETDAYSTATE richiede informazioni su quali giorni dovrebbero essere visualizzati in grassetto. Per informazioni sulla gestione di questa notifica, vedere [impostazione dello stato giorno di un controllo calendario mensile](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
+- MCN_GETDAYSTATE richiede informazioni sui giorni da visualizzare in grassetto. Per informazioni sulla gestione di questa notifica, vedere [impostazione dello stato giorno di un controllo calendario mensile](../mfc/setting-the-day-state-of-a-month-calendar-control.md).
 
-- MCN_SELCHANGE notifica all'elemento padre, che è cambiata la data selezionata o un intervallo di date.
+- MCN_SELCHANGE notifica all'elemento padre che la data o l'intervallo selezionato della data è stato modificato.
 
-- MCN_SELECT Notifica all'elemento padre, che è stata effettuata una selezione data esplicita.
+- MCN_SELECT notifica all'elemento padre che è stata effettuata una selezione esplicita della data.
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -14,18 +14,18 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: fead5643299aee4beace55abde0b6a6c801a324f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 500c31d494c53f34febb0f22c82f13b08a1d33cd
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507887"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908123"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>Elaborazione dei messaggi di notifica nel controlli selezione data e ora
 
 Quando gli utenti interagiscono con il controllo selezione data e ora, il`CDateTimeCtrl`controllo () Invia messaggi di notifica alla finestra padre, in genere un oggetto visualizzazione o finestra di dialogo. Se si desidera eseguire un'operazione in risposta, occorre gestire questi messaggi. Ad esempio, quando l'utente apre la selezione data e ora per visualizzare il controllo calendario mensile incorporato, viene inviata la notifica DTN_DROPDOWN.
 
-Usare la finestra Proprietà per aggiungere la gestione della notifica alla classe padre per i messaggi da implementare.
+Utilizzare la [creazione guidata classe](reference/mfc-class-wizard.md) per aggiungere gestori di notifiche alla classe padre per i messaggi che si desidera implementare.
 
 Nell'elenco seguente vengono descritte le diverse notifiche inviate dal controllo selezione data e ora.
 

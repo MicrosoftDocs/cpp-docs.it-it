@@ -3,12 +3,12 @@ title: 'Procedura: Attivare e usare un componente Windows Runtime usando WRL'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 9e15886e9045f15adb929678ba45023ce80fb084
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 59a031968933ab151dc97a8089aff629026f5ea5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498399"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926069"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Procedura: Attivare e usare un componente Windows Runtime usando WRL
 
@@ -48,7 +48,7 @@ Nei passaggi seguenti viene utilizzata `Windows::Foundation::IUriRuntimeClass` l
 
    Il Windows Runtime utilizza nomi completi per identificare i tipi. Il `RuntimeClass_Windows_Foundation_Uri` parametro è una stringa fornita dal Windows Runtime e contiene il nome della classe runtime richiesta.
 
-4. Inizializza una variabile [Microsoft:: WRL:: Wrappers:: HString](hstring-class.md) che rappresenta l'URI `"http://www.microsoft.com"`.
+4. Inizializza una variabile [Microsoft:: WRL:: Wrappers:: HString](hstring-class.md) che rappresenta l'URI `"https://www.microsoft.com"`.
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 

@@ -5,12 +5,12 @@ description: Microsoft C++ in Visual Studio si avvicina alla conformità complet
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 8eae104d21de271f11c727262939121c20050092
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222311"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927943"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Miglioramenti della conformità di C++ in Visual Studio 2017
 
@@ -268,7 +268,7 @@ int main() {
 
 ### <a name="binary-expressions-with-different-enum-types"></a>Espressioni binarie con tipi enum diversi
 
-La possibilità di applicare le conversioni aritmetiche consuete su operandi in cui uno è di tipo enumerazione e l'altro è un tipo di enumerazione diverso o un tipo a virgola mobile è deprecato in C++ 20 ([P1120R0](http://wg21.link/p1120r0)). In Visual Studio 2019 versione 16,2 e successive, il codice seguente genera un avviso di livello 4 quando è abilitata l'opzione del compilatore [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) :
+La possibilità di applicare le conversioni aritmetiche consuete su operandi in cui uno è di tipo enumerazione e l'altro è un tipo di enumerazione diverso o un tipo a virgola mobile è deprecato in C++ 20 ([P1120R0](https://wg21.link/p1120r0)). In Visual Studio 2019 versione 16,2 e successive, il codice seguente genera un avviso di livello 4 quando è abilitata l'opzione del compilatore [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) :
 
 ```cpp
 enum E1 { a };
@@ -290,7 +290,7 @@ int main() {
 
 ### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>Espressioni binarie con tipi di enumerazione e a virgola mobile
 
-La possibilità di applicare le conversioni aritmetiche consuete su operandi in cui uno è di tipo enumerazione e l'altro è un tipo di enumerazione diverso o un tipo a virgola mobile è deprecato in C++ 20 ([P1120R0](http://wg21.link/p1120r0)). In altre parole, l'uso di un'operazione binaria tra un'enumerazione e un tipo a virgola mobile è ora un avviso quando è abilitata l'opzione del compilatore [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) :
+La possibilità di applicare le conversioni aritmetiche consuete su operandi in cui uno è di tipo enumerazione e l'altro è un tipo di enumerazione diverso o un tipo a virgola mobile è deprecato in C++ 20 ([P1120R0](https://wg21.link/p1120r0)). In altre parole, l'uso di un'operazione binaria tra un'enumerazione e un tipo a virgola mobile è ora un avviso quando è abilitata l'opzione del compilatore [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) :
 
 ```cpp
 enum E1 { a };
@@ -310,7 +310,7 @@ int main() {
 
 ### <a name="equality-and-relational-comparisons-of-arrays"></a>Uguaglianza e confronti relazionali di matrici
 
-I confronti di uguaglianza e relazionali tra due operandi di tipo matrice sono deprecati in C++ 20 ([P1120R0](http://wg21.link/p1120r0)). In altre parole, un'operazione di confronto tra due matrici (indipendentemente dalle analogie di rango e extent) è ora un avviso. A partire da Visual Studio 2019 versione 16,2, il codice seguente produce *C5056: operator ' = =': deprecato per i tipi di matrice* quando è abilitata l'opzione del compilatore [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) :
+I confronti di uguaglianza e relazionali tra due operandi di tipo matrice sono deprecati in C++ 20 ([P1120R0](https://wg21.link/p1120r0)). In altre parole, un'operazione di confronto tra due matrici (indipendentemente dalle analogie di rango e extent) è ora un avviso. A partire da Visual Studio 2019 versione 16,2, il codice seguente produce *C5056: operator ' = =': deprecato per i tipi di matrice* quando è abilitata l'opzione del compilatore [/std: c + + Latest](../build/reference/std-specify-language-standard-version.md) :
 
 ```cpp
 int main() {

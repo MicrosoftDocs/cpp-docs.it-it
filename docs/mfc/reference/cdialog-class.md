@@ -1,6 +1,6 @@
 ---
 title: Classe CDialog
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 f1_keywords:
 - CDialog
 - AFXWIN/CDialog
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d9969b7dd41dc7a67e21bb2735b1d716bd988d07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b07190c70fb11950b25aff45fb10e850c0e81b24
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506881"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907616"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -61,7 +61,7 @@ class CDialog : public CWnd
 
 ### <a name="public-constructors"></a>Costruttori pubblici
 
-|Nome|Descrizione|
+|Nome|DESCRIZIONE|
 |----------|-----------------|
 |[CDialog:: CDialog](#cdialog)|Costruisce un oggetto `CDialog`.|
 
@@ -97,7 +97,7 @@ Le finestre di dialogo sono di due tipi: modale e non modale. Una finestra di di
 
 Un `CDialog` oggetto è una combinazione di un modello di finestra di `CDialog`dialogo e di una classe derivata da. Utilizzare l'editor finestre per creare il modello di finestra di dialogo e archiviarlo in una risorsa, quindi utilizzare la procedura guidata Aggiungi classe per creare `CDialog`una classe derivata da.
 
-Una finestra di dialogo, come qualsiasi altra finestra, riceve messaggi da Windows. In una finestra di dialogo è particolarmente interessante gestire i messaggi di notifica dai controlli della finestra di dialogo, poiché questo è il modo in cui l'utente interagisce con la finestra di dialogo. Utilizzare il Finestra Proprietà per selezionare i messaggi che si desidera gestire e aggiungere le voci della mappa messaggi e le funzioni membro del gestore messaggi appropriati alla classe. È sufficiente scrivere codice specifico dell'applicazione nelle funzioni membro del gestore.
+Una finestra di dialogo, come qualsiasi altra finestra, riceve messaggi da Windows. In una finestra di dialogo è particolarmente interessante gestire i messaggi di notifica dai controlli della finestra di dialogo, poiché questo è il modo in cui l'utente interagisce con la finestra di dialogo. Utilizzare la [creazione guidata classe](mfc-class-wizard.md) per selezionare i messaggi che si desidera gestire e aggiungere le voci della mappa messaggi e le funzioni membro del gestore messaggi appropriati alla classe. È sufficiente scrivere codice specifico dell'applicazione nelle funzioni membro del gestore.
 
 Se si preferisce, è sempre possibile scrivere manualmente le voci della mappa messaggi e le funzioni membro.
 

@@ -1,18 +1,18 @@
 ---
 title: Creazione di un'applicazione MFC basata su form
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 f1_keywords:
 - vc.appwiz.mfcforms.project
 helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: 95c7f6061933245b2eb2b796e7a678e1e6b010a6
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 1dbbc5c29f85ced846cb3e07a02a5d6a55c94b20
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108467"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908048"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Creazione di un'applicazione MFC basata su form
 
@@ -30,7 +30,7 @@ Qualsiasi applicazione basata su finestre di dialogo, per definizione, è basata
 
 La classe base per le applicazioni basate su form è [CFormView](cformview-class.md). Se l'applicazione dispone del supporto per i database, è anche possibile selezionare qualsiasi classe che derivi `CFormView`da. Un modulo è qualsiasi finestra derivata da `CFormView` o da qualsiasi classe che eredita da `CFormView`.
 
-Anche se si usa una classe di base, ad esempio [CView](cview-class.md), in un secondo momento è possibile rendere le applicazioni basate su moduli [aggiungendo una classe MFC](adding-an-mfc-class.md) derivata da `CFormView` e selezionando la casella di controllo **genera risorse DocTemplate** nella [creazione guidata classe MFC](document-template-strings-mfc-add-class-wizard.md).
+Anche se si usa una classe di base come [CView](cview-class.md), in un secondo momento è possibile rendere le applicazioni basate su moduli [aggiungendo una classe MFC](adding-an-mfc-class.md) derivata da `CFormView`.
 
 Una volta completata la procedura guidata, il progetto viene aperto e, se è `CFormView` stata selezionata (o una classe che `CFormView`eredita da) come classe di base o se è stata creata un'applicazione basata su C++ finestre di dialogo, l'oggetto visivo apre l'editor finestre. A questo punto, è possibile progettare il primo form.
 

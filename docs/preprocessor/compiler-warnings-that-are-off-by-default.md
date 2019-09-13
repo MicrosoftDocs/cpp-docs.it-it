@@ -6,10 +6,10 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "70220481"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avvisi del compilatore disattivati per impostazione predefinita
@@ -90,19 +90,19 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |C4588 (livello 1)|'*anonymous_structure*': modifica del comportamento: il distruttore non viene più chiamato in modo implicito|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (livello 4)|'*Identifier*': nome completo non valido nella dichiarazione del membro <sup>14,3</sup> <sup>Perm</sup>|
 |C4598 (livello 1 e livello 3)|' #include '*intestazione*"': il *numero* di numero di intestazione nell'intestazione precompilata non corrisponde alla compilazione corrente nella posizione <sup>14,3</sup>|
-|C4599 (livello 3)|'*Option* *path*': il numero di argomenti della riga di comando non corrisponde all'intestazione precompilata <sup>14,3</sup>|
+|C4599 (livello 3)|'*Option* *path*': il numero di argomenti della riga di *comando non corrisponde* all'intestazione precompilata <sup>14,3</sup>|
 |C4605 (livello 1)|'/D*macro*' specificato nella riga di comando corrente, ma non è stato specificato quando è stata compilata l'intestazione precompilata|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (livello 3)|'*union_member*' è già stato inizializzato da un altro membro dell'Unione nell'elenco degli inizializzatori, <sup>Perm</sup> '*union_member*'|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (livello 3)|avviso #pragma: nessun numero di avviso '*Number*'|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (livello 4)|'classe derivata': impossibile generare il costruttore predefinito poiché un costruttore predefinito della classe base è inaccessibile|
 |[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (livello 4)|'classe derivata': impossibile generare il costruttore di copia poiché un costruttore di copia della classe base è inaccessibile|
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (livello 4)|'classe derivata': impossibile generare l'operatore di assegnazione poiché un operatore di assegnazione della classe base è inaccessibile|
-|[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (livello 1)|digraph non supportati con -Ze. La sequenza dicaratteri ' digraph ' non è stata interpretata come token alternativo per '*char*'|
+|[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (livello 1)|digraph non supportati con -Ze. La sequenza di caratteri '*digraph*' non è stata interpretata come token alternativo per '*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (livello 3)|'*instance*': la costruzione di oggetti statici locali non è thread-safe|
 | C4643 (livello 4) | La C++ dichiarazione di "*Identifier*" in base allo spazio dei nomi STD non è consentita dallo standard. <sup>15.8</sup> |
 |C4647 (livello 3)|modifica del comportamento: il valore di __is_pod (*Type*) è diverso nelle versioni precedenti|
 |C4654 (livello 4)|Il codice inserito prima dell'inclusione della riga di intestazione precompilata verrà ignorato. Aggiungere codice all'intestazione precompilata. <sup>14.1</sup>|
-|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (livello 4)|'*Symbol*' non è definito come macro del preprocessore, sostituendo con ' 0' per' directives '|
+|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (livello 4)|'*Symbol*' non è definito come macro del preprocessore, sostituendo con ' 0' per '*Directives*'|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (livello 4)|'*Symbol*': nessun attributo di parametro direzionale specificato. il valore predefinito è [in]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (livello 3)|'*tipo definito dall'utente*': possibile modifica del comportamento. modifica nella convenzione di chiamata return UDT|
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (livello 1)|'*Function*': la firma del membro non privato contiene il tipo nativo privato '*NATIVE_TYPE*' dell'assembly|
@@ -116,7 +116,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |C4777 (livello 4)|'*Function*': la stringa di formato '*String*' richiede un argomento di tipo '*tipo1*', ma il *numero* dell'argomento Variadic è di tipo '*tipo2*'|
 |C4786 (livello 3)|'*Symbol*': il nome dell'oggetto è stato troncato a'*Number*' caratteri nelle informazioni di debug|
 | [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (livello 4) | Conversione implicita da'*Type*' a bool. Possibile perdita di informazioni <sup>16,0</sup> |
-|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (livello 4)|riempimentobyte ' bytes ' aggiunto dopo il costrutto '*MEMBER_NAME*'|
+|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (livello 4)|riempimento byte '*bytes*' aggiunto dopo il costrutto '*MEMBER_NAME*'|
 | [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (livello 1) | '*member*': la funzione membro della classe locale non dispone di un corpo |
 |C4826 (livello 2)|La conversione da'*tipo1*' a'*tipo2*' ha un segno esteso. Questo potrebbe causare un comportamento imprevisto in fase di esecuzione.|
 |C4837 (livello 4)|è stato rilevato un trigramma:'?? *carattere*' sostituito da'*carattere*'|
@@ -125,7 +125,7 @@ Gli avvisi seguenti sono disattivati per impostazione predefinita in Visual Stud
 |[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md) (livello 4)|il compilatore '_file_(*Line_number*)' non può applicare l'ordine di valutazione da sinistra a destra nell'elenco di inizializzazione tra parentesi graffe|
 |[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) (livello 1)|cast di stringa letterale wide su "LPSTR"|
 |[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) (livello 1)|cast di stringa letterale su "LPWSTR"|
-|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (livello 1)|'dichiaratore ': un GUID può essere associato solo a una classe, un'interfaccia o uno spazio dei nomi|
+|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) (livello 1)|'*dichiaratore*': un GUID può essere associato solo a una classe, un'interfaccia o uno spazio dei nomi|
 |[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) (livello 1)|inizializzazione di copia non valida; sono state implicitamente applicate più conversioni definite dall'utente|
 |[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) (livello 4)|si suppone che la libreria dei tipi sia stata compilata per puntatori a numero bit|
 |[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) (livello 1)|reinterpret_cast utilizzato tra le classi correlate:'*Class1*' è*Class2*'|

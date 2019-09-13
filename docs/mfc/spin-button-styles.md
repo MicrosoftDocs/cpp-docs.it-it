@@ -1,39 +1,39 @@
 ---
 title: Stili dei pulsanti di selezione
-ms.date: 11/04/2016
+ms.date: 09/09/2019
 helpviewer_keywords:
 - styles [MFC], CSpinButtonCtrl
 - CSpinButtonCtrl class [MFC], styles
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-ms.openlocfilehash: d955ba1d76ee4d5648613ddaf6c5f6a652f3d3af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1aae4b7e4c63929ebe03c97d50f05754bc13ec26
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307172"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907864"
 ---
 # <a name="spin-button-styles"></a>Stili dei pulsanti di selezione
 
-Molte delle impostazioni per un pulsante di selezione ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) sono controllate dagli stili. È possibile impostare gli stili seguenti usando il **proprietà** finestra nell'editor finestre.
+Molte impostazioni per un pulsante di selezione ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) sono controllate dagli stili. È possibile impostare gli stili seguenti utilizzando la [creazione guidata classe](reference/mfc-class-wizard.md).
 
-- **Orientamento** verticale o orizzontale. Controlla l'orientamento dei pulsanti freccia. Associato allo stile UDS_HORZ.
+- **Orientamento** Verticale o orizzontale. Controlla l'orientamento dei pulsanti freccia. Associato allo stile UDS_HORZ.
 
-- **Allineamento** scollegate, a sinistra o destra. Controlla il percorso del pulsante di selezione. Left e Right posizionare il pulsante di selezione accanto alla finestra buddy. La larghezza della finestra buddy viene ridotto per adattare il pulsante di selezione. Associati con gli stili UDS_ALIGNLEFT e UDS_ALIGNRIGHT.
+- **Allineamento** Uno di Unattached, Left o right. Controlla la posizione del pulsante di selezione. Posizionare il pulsante di selezione accanto alla finestra buddy. La larghezza della finestra di Buddy viene ridotta per contenere il pulsante di selezione. Associato agli stili UDS_ALIGNLEFT e UDS_ALIGNRIGHT.
 
-- **Auto Buddy** seleziona automaticamente la finestra precedente nell'ordine Z come finestra buddy del pulsante di selezione. In un modello di finestra di dialogo, si tratta del controllo che precede il pulsante di selezione in ordine di tabulazione. Associato allo stile UDS_AUTOBUDDY.
+- **Buddy automatico** Seleziona automaticamente la finestra precedente nella finestra dell'ordine Z come finestra di contatto per il pulsante di selezione. In un modello di finestra di dialogo, si tratta del controllo che precede il pulsante di selezione nell'ordine di tabulazione. Associato allo stile UDS_AUTOBUDDY.
 
-- **Set Buddy Integer** fa sì che il controllo di selezione aumentare e diminuire la didascalia della finestra buddy come le modifiche della posizione corrente. Associato allo stile UDS_SETBUDDYINT.
+- **Imposta Integer Buddy** Fa in modo che il controllo di selezione incrementi e decrementa la didascalia della finestra di Buddy Man mano che cambia la posizione corrente. Associato allo stile UDS_SETBUDDYINT.
 
-- **No Thousands** non inserisce le migliaia separatore nel valore nella barra del titolo della finestra buddy. Associato allo stile UDS_NOTHOUSANDS.
+- **Nessuna migliaia** Non inserisce il separatore delle migliaia nel valore nella didascalia della finestra di Buddy. Associato allo stile UDS_NOTHOUSANDS.
 
     > [!NOTE]
-    >  Impostare questo stile se si desidera utilizzare dialog data exchange (DDX) per ottenere il valore integer dal controllo degli utenti. `DDX_Text` non accetta i separatori delle migliaia incorporati.
+    >  Impostare questo stile se si desidera utilizzare Dialog Data Exchange (DDX) per ottenere il valore integer dal controllo buddy. `DDX_Text`non accetta separatori di migliaia incorporati.
 
-- **Eseguire il wrapping** determina la posizione a "wrap" come il valore viene incrementato o decrementato oltre l'intervallo del controllo. Associato allo stile UDS_WRAP.
+- A **capo automatico** Fa in modo che la posizione venga sottoposta a wrapping quando il valore viene incrementato o decrementato oltre l'intervallo del controllo. Associato allo stile UDS_WRAP.
 
-- **Tasti di direzione** incrementare o diminuire la posizione quando vengono premuti i tasti freccia su e freccia giù del pulsante di selezione. Associato allo stile UDS_ARROWKEYS.
+- **Tasti** di direzione Fa in modo che il pulsante di selezione incrementi o decresca la posizione quando vengono premuti i tasti freccia su e freccia giù. Associato allo stile UDS_ARROWKEYS.
 
 ## <a name="see-also"></a>Vedere anche
 
