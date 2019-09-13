@@ -6395,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: File e flussi
-                      href: c-runtime-library/files-and-streams.md
-                    - name: Flussi di testo e binari
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Flussi di byte e "wide"
                       href: c-runtime-library/byte-and-wide-streams.md
