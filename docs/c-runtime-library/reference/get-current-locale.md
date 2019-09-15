@@ -1,9 +1,9 @@
 ---
 title: _get_current_locale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_current_locale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_current_locale
 - __get_current_locale
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-ms.openlocfilehash: 87c30ee701d8f7d3a89a0aa61ba18a7f854bc9b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17e730b350eaf88cf1c51502fda3df5ae30f611
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332294"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956085"
 ---
-# <a name="getcurrentlocale"></a>_get_current_locale
+# <a name="_get_current_locale"></a>_get_current_locale
 
 Ottiene un oggetto locale che rappresenta le impostazioni locali correnti.
 
@@ -49,9 +52,9 @@ Oggetto locale che rappresenta le impostazioni locali correnti.
 
 ## <a name="remarks"></a>Note
 
-Il **get_current_locale** funzione ottiene correnti delle impostazioni locali del thread e restituisce un oggetto locale che rappresenta tali impostazioni locali.
+La funzione **_get_current_locale** ottiene le impostazioni locali attualmente impostate per il thread e restituisce un oggetto delle impostazioni locali che rappresenta le impostazioni locali.
 
-Il nome precedente di questa funzione, **get_current_locale** (con due caratteri di sottolineatura iniziali) è stato deprecato.
+Il nome precedente di questa funzione, **__get_current_locale** (con due caratteri di sottolineatura iniziali), è stato deprecato.
 
 ## <a name="requirements"></a>Requisiti
 

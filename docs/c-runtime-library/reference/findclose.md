@@ -1,9 +1,9 @@
 ---
 title: _findclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _findclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _findclose
 - findclose
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67336cc12bcdee754edd40b91078faa83a17984
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333755"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957327"
 ---
-# <a name="findclose"></a>_findclose
+# <a name="_findclose"></a>_findclose
 
 Chiude l'handle di ricerca specificato e rilascia le risorse associate.
 
@@ -44,12 +47,12 @@ int _findclose(
 
 ### <a name="parameters"></a>Parametri
 
-*handle*<br/>
+*gestire*<br/>
 Handle di ricerca restituito da una chiamata precedente a **FindFirst**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **FindClose** restituisce 0. In caso contrario, restituisce -1 e imposta **errno** al **ENOENT**, che indica che non altri file corrispondenti è stata trovata.
+Se ha esito positivo, **_findclose** restituisce 0. In caso contrario, viene restituito-1 e **errno** viene impostato su **ENOENT**, a indicare che non sono stati trovati altri file corrispondenti.
 
 ## <a name="requirements"></a>Requisiti
 

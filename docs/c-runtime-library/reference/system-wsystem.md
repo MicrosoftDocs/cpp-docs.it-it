@@ -1,10 +1,10 @@
 ---
 title: system, _wsystem
 ms.date: 11/04/2016
-apiname:
+api_name:
 - system
 - _wsystem
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tsystem
 - _wsystem
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259092"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957669"
 ---
-# <a name="system-wsystem"></a>system, _wsystem
+# <a name="system-_wsystem"></a>system, _wsystem
 
 Esegue un comando.
 
@@ -61,7 +64,7 @@ Comando da eseguire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se *comandi* viene **NULL** e viene trovato l'interprete dei comandi, restituisce un valore diverso da zero. Se l'interprete dei comandi non viene trovato, restituisce 0 e imposta **errno** al **ENOENT**. Se *comandi* non è **NULL**, **sistema** restituisce il valore restituito dall'interprete dei comandi. Restituisce il valore 0 solo se l'interprete dei comandi restituisce il valore 0. Valore restituito di - 1 indica un errore, e **errno** è impostato su uno dei valori seguenti:
+Se *Command* è **null** e viene trovato l'interprete dei comandi, restituisce un valore diverso da zero. Se l'interprete dei comandi non viene trovato, restituisce 0 e **errno** viene impostato su **ENOENT**. Se *Command* non è **null**, **System** restituisce il valore restituito dall'interprete dei comandi. Restituisce il valore 0 solo se l'interprete dei comandi restituisce il valore 0. Il valore restituito-1 indica un errore e **errno** viene impostato su uno dei valori seguenti:
 
 |||
 |-|-|
@@ -74,11 +77,11 @@ Per altre informazioni su questi codici restituiti, vedere [_doserrno, errno, _s
 
 ## <a name="remarks"></a>Note
 
-Il **system** funzione passa *comando* all'interprete dei comandi, che esegue la stringa come un comando del sistema operativo. **System** utilizza le **COMSPEC** e **percorso** CMD.exe di file di variabili di ambiente per individuare l'interprete dei comandi. Se *comandi* viene **NULL**, la funzione verifica solo se è presente l'interprete dei comandi.
+La funzione di **sistema** passa il *comando* all'interprete dei comandi che esegue la stringa come comando del sistema operativo. il **sistema** usa le variabili di ambiente **COMSPEC** e **path** per individuare il file cmd. exe dell'interprete dei comandi. Se *Command* è **null**, la funzione verifica solo se l'interprete dei comandi esiste.
 
-È necessario scaricare in modo esplicito, tramite [fflush](fflush.md) oppure [FlushAll](flushall.md), o si chiude qualsiasi flusso prima di chiamare **sistema**.
+È necessario svuotare in modo esplicito, tramite [fflush](fflush.md) o [_flushall](flushall.md), o chiudere qualsiasi flusso prima di chiamare **System**.
 
-**wsystem** è una versione a caratteri wide di **system**; gli *comando* argomento **wsystem** è una stringa di caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+**_wsystem** è una versione a caratteri wide del **sistema**; l'argomento *Command* per **_wsystem** è una stringa di caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -97,7 +100,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Questo esempio viene usato **sistema** al tipo di un file di testo.
+Questo esempio usa **System** per digitare un file di testo.
 
 ```C
 // crt_system.c
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtsystemtxt"></a>Input: crt_system.txt
+### <a name="input-crt_systemtxt"></a>Input: crt_system.txt
 
 ```Input
 Line one.

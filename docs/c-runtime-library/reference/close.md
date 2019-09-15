@@ -1,9 +1,9 @@
 ---
 title: _close
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _close
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _close
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340014"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942939"
 ---
-# <a name="close"></a>_close
+# <a name="_close"></a>_close
 
 Chiude un file.
 
@@ -49,15 +52,15 @@ Il descrittore del file che fa riferimento al file aperto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**Chiudi** restituisce 0 se il file è stato chiuso. Valore restituito di -1 indica un errore.
+**_close** restituisce 0 se il file è stato chiuso correttamente. Un valore restituito di-1 indica un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **Close** funzione chiude il file associato *fd*.
+La funzione **_close** chiude il file associato a *FD*.
 
-Il descrittore di file e il punto di controllo file del sistema operativo sottostante vengono chiusi. Non è pertanto necessario chiamare **CloseHandle** se il file è stato originariamente aperto usando la funzione Win32 **CreateFile** e convertito in un descrittore di file usando **open_osfhandle**.
+Il descrittore di file e il punto di controllo file del sistema operativo sottostante vengono chiusi. Non è quindi necessario chiamare **CloseHandle** se il file è stato originariamente aperto usando la funzione Win32 **CreateFile** e convertito in un descrittore di file usando **_open_osfhandle**.
 
-Questa funzione convalida i relativi parametri. Se *fd* è un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e **errno** è impostata su **EBADF**.
+Questa funzione convalida i relativi parametri. Se *FD* è un descrittore di file errato, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono-1 e **errno** viene impostato su **EBADF**.
 
 ## <a name="requirements"></a>Requisiti
 

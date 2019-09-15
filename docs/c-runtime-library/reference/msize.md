@@ -1,9 +1,9 @@
 ---
 title: _msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - msize
 - _msize
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156291"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951441"
 ---
-# <a name="msize"></a>_msize
+# <a name="_msize"></a>_msize
 
 Restituisce le dimensioni di un blocco di memoria allocato nell'heap.
 
@@ -50,15 +53,15 @@ Puntatore al blocco di memoria.
 
 ## <a name="return-value"></a>Valore restituito
 
-**msize** restituisce le dimensioni (in byte) come intero senza segno.
+**_msize** restituisce le dimensioni (in byte) come Unsigned Integer.
 
 ## <a name="remarks"></a>Note
 
-Il **msize** funzione restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a **calloc**, **malloc**, oppure **realloc**.
+La funzione **_msize** restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a **calloc**, **malloc**o **realloc**.
 
-Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **msize** viene risolto [msize_dbg](msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
+Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, **_msize** si risolve in [_msize_dbg](msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).
 
-Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null **msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** al **EINVAL** e restituisce -1.
+Questa funzione convalida il relativo parametro. Se *memblock* è un puntatore null, **_msize** richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta **errno** su **EINVAL** e restituisce-1.
 
 ## <a name="requirements"></a>Requisiti
 

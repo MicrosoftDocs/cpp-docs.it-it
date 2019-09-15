@@ -1,11 +1,11 @@
 ---
 title: pow, powf, powl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - powl
 - pow
 - powf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - powl
 - pow
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232234"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950295"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Calcola *x* elevato alla potenza del *y*.
+Calcola *x* elevato alla potenza di *y*.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -70,7 +73,7 @@ Esponente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce il valore del *x*<sup>*y*</sup>. In caso di overflow o di underflow non viene stampato alcun messaggio di errore.
+Restituisce il valore di *x*<sup>*y*</sup>. In caso di overflow o di underflow non viene stampato alcun messaggio di errore.
 
 |Valori di x e y|Valore restituito di pow|
 |-----------------------|-------------------------|
@@ -80,13 +83,13 @@ Restituisce il valore del *x*<sup>*y*</sup>. In caso di overflow o di underflow 
 
 ## <a name="remarks"></a>Note
 
-**pow** non riconosce i valori a virgola mobile integrali maggiori di 2<sup>64</sup> (ad esempio, 1.0E100).
+**POW** non riconosce i valori a virgola mobile integrali maggiori di 2<sup>64</sup> (ad esempio, 1.0 E100).
 
-**pow** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
+**POW** ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-Dato che C++ consente l'overload, è possibile chiamare tutte i vari overload di **pow**. In un programma C **pow** accetta sempre due **double** valori e restituisce un **double** valore.
+Poiché C++ consente l'overload, è possibile chiamare uno dei diversi overload di **POW**. In un programma C, **POW** accetta sempre due valori **Double** e restituisce un valore **Double** .
 
-L'overload `pow(int, int)` non è più disponibile. Se si utilizza questo overload, il compilatore può generare [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Per evitare questo problema, eseguire il cast il primo parametro per **doppie**, **float**, o **long** **doppie**.
+L'overload `pow(int, int)` non è più disponibile. Se si usa questo overload, il compilatore può generare [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Per evitare questo problema, eseguire il cast del primo parametro a **Double**, **float**o **Long** **Double**.
 
 ## <a name="requirements"></a>Requisiti
 

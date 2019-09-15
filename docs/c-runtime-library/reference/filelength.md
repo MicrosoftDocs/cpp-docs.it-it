@@ -1,9 +1,9 @@
 ---
 title: filelength
 ms.date: 11/04/2016
-apiname:
+api_name:
 - filelength
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - filelength
 helpviewer_keywords:
 - filelength function
 ms.assetid: 5fbc1912-7822-498d-bbf4-8bada87cf9b9
-ms.openlocfilehash: 273b0c5e43245352c0a71319084f347cb01955fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e74e42badb89d53e7c5b785762d02fa436bc1c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333781"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957298"
 ---
 # <a name="filelength"></a>filelength
 

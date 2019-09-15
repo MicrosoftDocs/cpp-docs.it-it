@@ -1,9 +1,9 @@
 ---
 title: unexpected (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - unexpected
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - unexpected
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 796f5ddbf8467656b5430de1d504f162d891864d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155485"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957814"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
-Le chiamate **terminare** o una funzione specificata utilizzando **set_unexpected**.
+Chiama **Terminate** o la funzione specificata usando **set_unexpected**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -39,7 +42,7 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Note
 
-Il **imprevisto** routine non viene usata con l'implementazione corrente di gestione delle eccezioni C++. **imprevista** chiamate **terminare** per impostazione predefinita. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come relativo argomento. **imprevista** chiama l'ultima funzione fornita come argomento al **set_unexpected**.
+La routine **imprevista** non viene utilizzata con l'implementazione corrente C++ della gestione delle eccezioni. chiamate **impreviste** **terminano** per impostazione predefinita. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come argomento. **imprevisto** chiama l'ultima funzione fornita come argomento a **set_unexpected**.
 
 ## <a name="requirements"></a>Requisiti
 

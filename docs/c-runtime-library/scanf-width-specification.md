@@ -1,25 +1,28 @@
 ---
 title: Specifica della larghezza per scanf
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 3b00996f3a17ab9298b1edba5a8e60826e19fdcc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743267"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957354"
 ---
 # <a name="scanf-width-specification"></a>Specifica della larghezza per scanf
 
@@ -79,13 +82,13 @@ Se si utilizza una funzione non protetta nella famiglia `scanf`, omettere il par
 
 ## <a name="reading-undelimited-strings"></a>Lettura di stringhe non delimitate
 
-Per leggere le stringhe non delimitate da spazi vuoti, un set di caratteri tra parentesi quadre (**[ ]**) può essere sostituito per il carattere di tipo **s** (stringa). Il set di caratteri tra parentesi quadre è considerato una stringa di controllo. Il campo di input corrispondente viene letto fino al primo carattere che non viene visualizzato nella stringa di controllo. Se il primo carattere nel set è un accento circonflesso (**^**), l'effetto è invertito: il campo di input viene letto fino al primo carattere che viene visualizzato nel resto del set di caratteri.
+Per leggere le stringhe non delimitate da spazi vuoti, un set di caratteri tra parentesi quadre ( **[ ]** ) può essere sostituito per il carattere di tipo **s** (stringa). Il set di caratteri tra parentesi quadre è considerato una stringa di controllo. Il campo di input corrispondente viene letto fino al primo carattere che non viene visualizzato nella stringa di controllo. Se il primo carattere nel set è un accento circonflesso ( **^** ), l'effetto è invertito: il campo di input viene letto fino al primo carattere che viene visualizzato nel resto del set di caratteri.
 
-Si noti che **%[a-z]** e **%[z-a]** vengono interpretati come equivalenti a **%[abcde...z]**. Si tratta di un comune estensione di funzione `scanf`, ma si noti che lo standard ANSI non lo richiede.
+Si noti che **%[a-z]** e **%[z-a]** vengono interpretati come equivalenti a **%[abcde...z]** . Si tratta di un comune estensione di funzione `scanf`, ma si noti che lo standard ANSI non lo richiede.
 
 ## <a name="reading-unterminated-strings"></a>Lettura di stringhe senza terminazione
 
-Per archiviare una stringa senza archiviare un carattere di terminazione Null ('\0'), usare la specifica **%**<em>n</em>**c** dove *n* è un intero decimale. In questo caso, il carattere di tipo **c** indica che l'argomento è un puntatore a una matrice di caratteri. I successivi *n* caratteri vengono letti dal flusso di input nel percorso specificato e non viene accodato nessun carattere Null ('\0'). Se *n* non viene specificato, il valore predefinito è 1.
+Per archiviare una stringa senza archiviare un carattere di terminazione Null ('\0'), usare la specifica **%** <em>n</em>**c** dove *n* è un intero decimale. In questo caso, il carattere di tipo **c** indica che l'argomento è un puntatore a una matrice di caratteri. I successivi *n* caratteri vengono letti dal flusso di input nel percorso specificato e non viene accodato nessun carattere Null ('\0'). Se *n* non viene specificato, il valore predefinito è 1.
 
 ## <a name="when-scanf-stops-reading-a-field"></a>Quando scanf interrompe la lettura di un campo
 

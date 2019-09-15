@@ -1,12 +1,12 @@
 ---
 title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cscanf_l
 - _cscanf
 - _cwscanf
 - _cwscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwscanf
 - cwscanf_l
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4c380d3e470fa6e3d12066d3bf34918acf1bea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335257"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938494"
 ---
-# <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
+# <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Legge i dati formattati dalla console. Sono disponibili versioni più sicure di queste funzioni. Vedere [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
@@ -95,15 +98,15 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Numero di campi che sono stati convertiti ed assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Il valore restituito sarà **EOF** tenta di leggere alla fine del file. Ciò può verificarsi quando viene reindirizzato l'input da tastiera al livello di riga di comando del sistema operativo. Un valore restituito pari a 0 indica che nessun campo è stato assegnato.
+Numero di campi che sono stati convertiti ed assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Il valore restituito è **EOF** per un tentativo di lettura alla fine del file. Ciò può verificarsi quando viene reindirizzato l'input da tastiera al livello di riga di comando del sistema operativo. Un valore restituito pari a 0 indica che nessun campo è stato assegnato.
 
 ## <a name="remarks"></a>Note
 
-Il **cscanf** funzione legge i dati direttamente dalla console nei percorsi specificati dalla *argomento*. La funzione [_getche](getch-getwch.md) viene usata per leggere i caratteri. Ogni parametro facoltativo deve essere un puntatore a una variabile con un tipo che corrisponde all'identificatore di tipo in *formato*. Il formato controlla l'interpretazione dell'input campi e ha lo stesso formato e funzione il *formato* parametro per il [scanf](scanf-scanf-l-wscanf-wscanf-l.md) (funzione). Sebbene **cscanf** restituisce in genere il carattere di input, non venga eseguita se l'ultima chiamata era **ungetch**.
+La funzione **_cscanf** legge i dati direttamente dalla console nei percorsi specificati dall' *argomento*. La funzione [_getche](getch-getwch.md) viene usata per leggere i caratteri. Ogni parametro facoltativo deve essere un puntatore a una variabile con un tipo che corrisponde a un identificatore di tipo nel *formato*. Il formato controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione del parametro *Format* per la funzione [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Mentre **_cscanf** generalmente restituisce il carattere di input, non esegue questa operazione se l'ultima chiamata a **_ungetch**.
 
-Questa funzione convalida i relativi parametri. Se in formato **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EOF**.
+Questa funzione convalida i relativi parametri. Se format è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **EOF**.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -1,9 +1,9 @@
 ---
 title: _query_new_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - query_new_mode
 - _query_new_mode
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59724dafdc6488596478d0b44b254c4f498fce99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358073"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950107"
 ---
-# <a name="querynewmode"></a>_query_new_mode
+# <a name="_query_new_mode"></a>_query_new_mode
 
-Restituisce un intero che indica la nuova modalità del gestore impostata da **set_new_mode** per **malloc**.
+Restituisce un Integer che indica la nuova modalità del gestore impostata da **_set_new_mode** per **malloc**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -45,11 +48,11 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce la modalità del gestore nuovo corrente, ovvero 0 o 1, per **malloc**. Valore restituito pari a 1 indica che, in caso di errore di allocazione della memoria, **malloc** chiama la routine del nuovo gestore; un valore restituito pari a 0 indica che non lo è.
+Restituisce la nuova modalità del gestore corrente, ovvero 0 o 1, per **malloc**. Il valore restituito 1 indica che, in caso di errore di allocazione della memoria, **malloc** chiama la routine del nuovo gestore; il valore restituito 0 indica che non lo è.
 
 ## <a name="remarks"></a>Note
 
-Il C++ **query_new_mode** funzione restituisce un intero che indica la nuova modalità del gestore impostata dal C++ [set_new_mode](set-new-mode.md) funzionare per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore di allocazione della memoria, **malloc** consiste nel chiamare la routine del nuovo gestore come impostato da [set_new_handler](set-new-handler.md). Per impostazione predefinita **malloc** non chiama la routine del nuovo gestore in caso di errore. È possibile usare **set_new_mode** per eseguire l'override di questo comportamento in modo che in caso di errore **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando non riesce a allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
+La C++ funzione **_query_new_mode** restituisce un Integer che indica la nuova modalità del gestore impostata C++ dalla funzione [_set_new_mode](set-new-mode.md) per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore di allocazione della memoria, **malloc** chiama la routine del nuovo gestore come impostato da [_set_new_handler](set-new-handler.md). Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore. È possibile usare **_set_new_mode** per eseguire l'override di questo comportamento in modo che in caso di errore **malloc** chiami la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando non riesce ad allocare memoria. Per altre informazioni, vedere la discussione relativa agli [operatori new e delete](../../cpp/new-and-delete-operators.md) nelle informazioni di riferimento sul linguaggio C++.
 
 ## <a name="requirements"></a>Requisiti
 

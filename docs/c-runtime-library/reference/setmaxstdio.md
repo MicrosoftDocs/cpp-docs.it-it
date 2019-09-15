@@ -1,9 +1,9 @@
 ---
 title: _setmaxstdio
 ms.date: 05/21/2019
-apiname:
+api_name:
 - _setmaxstdio
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setmaxstdio
 - _setmaxstdio
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 94b768d920ffd86a5bd762f8994244dda67fb15f
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 620213b4df9ea555189a1403b3c9e83b55cad6c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174829"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948230"
 ---
-# <a name="setmaxstdio"></a>_setmaxstdio
+# <a name="_setmaxstdio"></a>_setmaxstdio
 
 Imposta un massimo per il numero di file aperti contemporaneamente al livello del flusso I/O.
 
@@ -57,7 +60,7 @@ Se *new_max* è minore di **_IOB_ENTRIES** o maggiore del numero massimo di hand
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 La funzione **_setmaxstdio** modifica il valore massimo per il numero di file che possono essere aperti contemporaneamente al livello del flusso I/O.
 

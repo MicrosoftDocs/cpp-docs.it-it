@@ -1,9 +1,9 @@
 ---
 title: _get_terminate
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_terminate
 - _get_terminate
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: 438bd287738f121efb436857c54c5a68427d9fb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a9bfb6f8be1c990b349f14055eb2fe5c409e0d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331909"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955687"
 ---
-# <a name="getterminate"></a>_get_terminate
+# <a name="_get_terminate"></a>_get_terminate
 
-Restituisce la routine di terminazione da chiamare **terminare**.
+Restituisce la routine di terminazione da chiamare da **Terminate**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -44,7 +47,7 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla funzione registrata da [set_terminate](set-terminate-crt.md). Se è stata impostata alcuna funzione, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **NULL**.
+Restituisce un puntatore alla funzione registrata da [set_terminate](set-terminate-crt.md). Se nessuna funzione è stata impostata, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **null**.
 
 ## <a name="requirements"></a>Requisiti
 

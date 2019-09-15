@@ -1,10 +1,10 @@
 ---
 title: _ismbbkprint, _ismbbkprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkprint
 - _ismbbkprint_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkprint_l
 - ismbbkprint
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2417718d7cb90e8032cfe9dad903d6610dc6ae7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157526"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954119"
 ---
-# <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
+# <a name="_ismbbkprint-_ismbbkprint_l"></a>_ismbbkprint, _ismbbkprint_l
 
 Determina se un carattere multibyte particolare è un simbolo di punteggiatura.
 
@@ -61,7 +64,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**ismbbkprint** restituisce un valore diverso da zero se il numero intero *c* è un testo non ASCII o simbolo di punteggiatura non ASCII oppure 0 in caso contrario. Ad esempio, nella tabella codici 932, solo **ismbbkprint** test per i caratteri alfanumerici o la punteggiatura katakana (intervallo: 0xA1 - 0xDF). **ismbbkprint** Usa le impostazioni locali correnti per impostazioni del carattere dipendenti dalle impostazioni locali. **ismbbkprint_l** è identica, ma usa le impostazioni locali passata. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_ismbbkprint** restituisce un valore diverso da zero se l'integer *c* è un testo non ASCII o un simbolo di punteggiatura non ASCII oppure 0 in caso contrario. Ad esempio, solo nella tabella codici 932, **_ismbbkprint** test per la punteggiatura Katakana o alfanumerica katakana (intervallo: 0xA1 - 0xDF). **_ismbbkprint** utilizza le impostazioni locali correnti per le impostazioni del carattere dipendenti dalle impostazioni locali. **_ismbbkprint_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 

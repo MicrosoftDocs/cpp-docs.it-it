@@ -1,12 +1,12 @@
 ---
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncmp
 - _mbsncmp
 - wcsncmp
 - _mbsncmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcsnccmp
 - _ftcsncmp
@@ -49,19 +52,19 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 8f022dec6c161814ade5c6be5aaccfcd239a4af4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 597db3825d1d6165fb6bd4b98b8d469ea8947b59
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209857"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947337"
 ---
-# <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
+# <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
 Esegue il confronto del numero specificato di caratteri delle due stringhe.
 
 > [!IMPORTANT]
-> **mbsncmp** e **mbsncmp_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsncmp** e **_mbsncmp_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -106,25 +109,25 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore restituito indica la relazione delle sottostringhe di *string1* e *string2* come indicato di seguito.
+Il valore restituito indica la relazione delle sottostringhe di *String1* e *string2* come indicato di seguito.
 
 |Valore restituito|Descrizione|
 |------------------|-----------------|
-|< 0|*String1* sottostringa minore *string2* sottostringa|
-|0|*String1* identica alla sottostringa *string2* sottostringa|
-|> 0|*String1* sottostringa maggiore *string2* sottostringa|
+|< 0|sottostringa *String1* minore della sottostringa *string2*|
+|0|sottostringa *String1* identica alla sottostringa *string2*|
+|> 0|sottostringa *String1* maggiore della sottostringa *string2*|
 
-Errore di convalida dei parametri, **mbsncmp** e **mbsncmp_l** restituiscono **_NLSCMPERROR**, che è definito nel \<String. h > e \< Mbstring. h >.
+In un errore di convalida dei parametri, **_mbsncmp** e **_mbsncmp_l** restituiscono **_NLSCMPERROR**, definito \<in String. h > \<e mbstring. h >.
 
 ## <a name="remarks"></a>Note
 
-Il **strncmp** funzione esegue un confronto ordinale al massimo i primi *conteggio* caratteri *string1* e *string2* e Restituisce un valore che indica la relazione tra le sottostringhe. **strncmp** è una versione di distinzione maiuscole/minuscole **strnicmp**. **wcsncmp** e **mbsncmp** sono le versioni maiuscole/minuscole **wcsnicmp** e **mbsnicmp**.
+La funzione **strncmp** esegue un confronto ordinale al massimo dei primi caratteri di *conteggio* in *String1* e *string2* e restituisce un valore che indica la relazione tra le sottostringhe. **strncmp** è una versione con distinzione tra maiuscole e minuscole di **_strnicmp**. **wcsncmp** e **_mbsncmp** sono versioni con distinzione tra maiuscole e minuscole di **_wcsnicmp** e **_mbsnicmp**.
 
-**wcsncmp** e **mbsncmp** sono versioni a caratteri wide e caratteri multibyte di **strncmp**. Gli argomenti di **wcsncmp** sono caratteri wide, mentre quelli di stringhe **mbsncmp** sono stringhe a caratteri multibyte. **mbsncmp** riconosce le sequenze di caratteri multibyte in base a una tabella codici multibyte e restituisce **_NLSCMPERROR** in caso di errore.
+**wcsncmp** e **_mbsncmp** sono versioni a caratteri wide e a caratteri multibyte di **strncmp**. Gli argomenti di **wcsncmp** sono stringhe a caratteri wide. quelli di **_mbsncmp** sono stringhe di caratteri multibyte. **_mbsncmp** riconosce le sequenze di caratteri multibyte in base a una tabella codici multibyte e restituisce **_NLSCMPERROR** su un errore.
 
-È inoltre **mbsncmp** e **mbsncmp_l** convalidare i parametri. Se *string1* oppure *string2* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **mbsncmp** e **mbsncmp_l** restituiscono **_NLSCMPERROR** e impostare **errno** a  **EINVAL**. **strncmp** e **wcsncmp** non convalidano i relativi parametri. A parte ciò, queste funzioni si comportano in modo identico.
+Inoltre, **_mbsncmp** e **_mbsncmp_l** convalidano i parametri. Se *String1* o *string2* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **_mbsncmp** e **_Mbsncmp_l** restituiscono **_NLSCMPERROR** e impostano **errno** su **EINVAL**. **strncmp** e **wcsncmp** non convalidano i relativi parametri. A parte ciò, queste funzioni si comportano in modo identico.
 
-Il comportamento del confronto di **mbsncmp** e **mbsncmp_l** è influenzata dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali. Controlla il rilevamento dei byte iniziali e finali dei caratteri multibyte. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Il **mbsncmp** funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Il **mbsncmp_l** funzione è identica, ma usa le *delle impostazioni locali* parametro invece. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md). Se le impostazioni locali sono delle impostazioni locali a un byte, il comportamento di queste funzioni è identico a **strncmp**.
+Il comportamento di confronto di **_mbsncmp** e **_mbsncmp_l** è influenzato dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Controlla il rilevamento dei byte iniziali e finali dei caratteri multibyte. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La funzione **_mbsncmp** usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. La funzione **_mbsncmp_l** è identica, con la differenza che usa invece il parametro delle *impostazioni locali* . Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md). Se le impostazioni locali sono impostazioni locali a byte singolo, il comportamento di queste funzioni è identico a **strncmp**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

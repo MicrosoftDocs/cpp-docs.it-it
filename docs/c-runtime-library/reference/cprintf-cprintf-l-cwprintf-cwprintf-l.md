@@ -1,12 +1,12 @@
 ---
 title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwprintf_l
 - _cprintf_l
 - _cwprintf
 - _cprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwprintf
 - cwprintf
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942655"
 ---
-# <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
+# <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
 Formatta e stampa nella console. Sono disponibili versioni più sicure, vedere [cprintf_s, _cprintf_s_l, cwprintf_s, _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).
 
@@ -95,13 +98,13 @@ Numero di caratteri stampati.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni formattano e stampano una serie di caratteri e valori direttamente sulla console, utilizzando il **putch** funzione (**putwch** per **cwprintf**) e caratteri di output . Ogni argomento nel *argument_list* (se presente) viene convertita e restituita in base alla specifica di formato corrispondente in *formato*. Il *formato* argomento utilizza le [sintassi specifica per le funzioni printf e wprintf formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). A differenza di **fprintf**, **printf**, e **sprintf** funzioni, né **cprintf** né **cwprintf**converte i caratteri di avanzamento di riga in combinazioni di ritorno a capo e avanzamento riga (CR-LF) durante l'output.
+Queste funzioni formattano e stampano una serie di caratteri e valori direttamente nella console, usando la funzione **_putch** ( **_putwch** per **_cwprintf**) per restituire i caratteri. Ogni argomento in *argument_list* (se presente) viene convertito e viene restituito in base alla specifica di formato corrispondente nel *formato*. L'argomento *Format* usa la [sintassi per la specifica del formato per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Diversamente dalle funzioni **fprintf**, **printf**e **sprintf** , né **_cprintf** né **_cwprintf** convertono i caratteri di avanzamento riga in combinazioni di ritorno a capo/avanzamento riga (CR-LF) durante l'output.
 
-Una differenza importante è che **cwprintf** consente di visualizzare caratteri Unicode se usato in Windows. A differenza **cprintf**, **cwprintf** utilizza le impostazioni locali di console corrente.
+Una differenza importante è che **_cwprintf** Visualizza i caratteri Unicode quando viene usato in Windows. A differenza di **_cprintf**, **_cwprintf** usa le impostazioni locali della console correnti.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti.
 
-**cprintf** convalida il *formato* parametro. Se *formato* è un puntatore null, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta **errno** al **EINVAL**.
+**_cprintf** convalida il parametro *Format* . Se *Format* è un puntatore null, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce-1 e **errno** viene impostato su **EINVAL**.
 
 > [!IMPORTANT]
 > Assicurarsi che *format* non sia una stringa definita dall'utente.

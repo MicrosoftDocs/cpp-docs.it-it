@@ -1,12 +1,12 @@
 ---
 title: isupper, _isupper_l, iswupper, _iswupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - isupper
 - iswupper
 - _iswupper_l
 - _isupper_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isupper
 - _istupper
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-ms.openlocfilehash: 4c7ae7016428f966e8191d9d40c1769152d679c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 558373d845b88d8959651d0a76e24af80cb6fa5e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286349"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953613"
 ---
-# <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
+# <a name="isupper-_isupper_l-iswupper-_iswupper_l"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
 Determina se un intero rappresenta un carattere maiuscolo.
 
@@ -74,11 +77,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di una lettera maiuscola. **IsUpper** restituisce un valore diverso da zero se *c* è un carattere maiuscolo (A - Z). **iswupper** restituisce un valore diverso da zero se *c* è un carattere wide che corrisponde a una lettera maiuscola, oppure se *c* fa parte di un set definito dall'implementazione di caratteri wide per cui nessuno dei **iswcntrl**, **iswdigit**, **iswpunct**, oppure **iswspace** è diverso da zero. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce un valore diverso da zero se *c* è una rappresentazione particolare di una lettera maiuscola. Se *c* è un carattere maiuscolo (a-Z), **viene restituito un** valore diverso da zero. **iswupper** restituisce un valore diverso da zero se *c* è un carattere wide che corrisponde a una lettera maiuscola o se *c* è uno di un set definito dall'implementazione di caratteri wide per cui nessuna di **iswcntrl**, **iswdigit**,  **iswpunct**o **iswspace** è diverso da zero. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni che hanno le **l** suffisso usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno il suffisso **suffisso** usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento delle **isupper** e **isupper_l** non è definito se *c* non è EOF o nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* è non uno di questi valori, le funzioni generano un'asserzione.
+Il comportamento di e di **_isupper_l** non è definito se *c* non è EOF o nell'intervallo **compreso tra 0** e 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -1,12 +1,12 @@
 ---
 title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - wcstold
 - strtold
 - _strtold_l
 - _wcstold_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstold_l
 - _wcstold_l
@@ -27,14 +30,14 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: dcf1eca5b163c8553b43d747d53537ec424a793c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1a8bc385072f110832788447bfa248bc12b3663
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269189"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957706"
 ---
-# <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
+# <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
 Converte le stringhe in un valore a virgola mobile e precisione long double.
 
@@ -74,15 +77,15 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strtold** restituisce il valore del numero a virgola mobile come una **lungo** **double**, tranne quando la rappresentazione potrebbe causare un overflow, in tal caso, la funzione restituisce + /-**HUGE_VALL**. Il segno di **HUGE_VALL** corrisponde al segno del valore non può essere rappresentato. **strtold** restituisce 0 se si verifica un underflow o può essere eseguita alcuna conversione.
+**strtold** restituisce il valore del numero a virgola mobile come **Long** **Double**, tranne nel caso in cui la rappresentazione provochi un overflow, in questo caso la funzione restituisce +/-**HUGE_VALL**. Il segno di **HUGE_VALL** corrisponde al segno del valore che non può essere rappresentato. **strtold** restituisce 0 se non è possibile eseguire alcuna conversione o si verifica un underflow.
 
-**wcstold** restituisce i valori in modo analogo a **strtold**. Per entrambe le funzioni **errno** è impostata su **ERANGE** se overflow o underflow e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+**wcstold** restituisce i valori in modo analogo a **strtold**. Per entrambe le funzioni, **errno** viene impostato su **ERANGE** se si verifica un overflow o un underflow e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Ogni funzione converte la stringa di input *strSource* a un **long** **double**. Il **strtold** funzione interrompe la lettura della stringa *strSource* in corrispondenza del primo carattere non riconosciuti come parte di un numero. Questo può essere il carattere Null di terminazione. La versione a caratteri wide di **strtold** viene **wcstold**; relativo *strSource* argomento è una stringa di caratteri "wide". In caso contrario, il comportamento di queste funzioni è identico.
+Ogni funzione converte la stringa di input *strSource* in un valore **Long** **Double**. La funzione **strtold** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Questo può essere il carattere Null di terminazione. La versione a caratteri wide di **strtold** è **wcstold**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -91,15 +94,15 @@ Ogni funzione converte la stringa di input *strSource* a un **long** **double**.
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-Il **LC_NUMERIC** impostazione di categoria di impostazioni locali correnti determina il riconoscimento del carattere di base *strSource*. Per altre informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). Le funzioni senza il **l** suffisso usare le impostazioni locali correnti. **_strtold_l** e **_wcstold_l** sono identiche alle **_strtold** e **_wcstold** ad eccezione del fatto che usano le impostazioni locali di passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali correnti determina il riconoscimento del carattere radice in *strSource*. Per altre informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). Le funzioni senza il suffisso **suffisso** usano le impostazioni locali correnti; **_strtold_l** e **_wcstold_l** sono identici a **_strtold** e **_wcstold** , tranne per il fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui fa riferimento *endptr*. Se è non possibile eseguire alcuna conversione (non trovate cifre valide sono stati o è stata specificata una base non valida), il valore di *strSource* viene archiviato in corrispondenza della posizione a cui punta *endptr*.
+Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'analisi viene archiviato nella posizione a cui punta *endptr*. Se non è possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore di *strSource* viene archiviato nella posizione a cui punta *endptr*.
 
-**strtold** prevede *strSource* in modo che punti a una stringa nel formato seguente:
+**strtold** prevede che *strSource* faccia riferimento a una stringa nel formato seguente:
 
-[*whitespace*] [*sign*] [*digits*] [.*digits*] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]*digits*]
+[*spazi vuoti*] [*segno*] [*cifre*] [. *cifre*] [{**d** &#124; **d** &#124; **e** &#124; **} [** *Sign*]*digits*]
 
-Oggetto *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. *sign* può essere plus (**+**) o di sottrazione (**-**); e *cifre* sono uno o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**d**, **D**, **e** o **E**) e facoltativamente da un intero con segno. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
+Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati; il *segno* è più ( **+** ) o meno ( **-** ) e le *cifre* sono costituite da una o più cifre decimali. Se non viene visualizzata alcuna cifra prima del carattere di base, deve essercene almeno una dopo il carattere di base. Le cifre decimali possono essere seguite da un esponente, costituito da una lettera introduttiva (**d**, **D**, **e** o **E**) e facoltativamente da un intero con segno. Se non viene visualizzata una parte esponente né un carattere di base, si presuppone che l'ultima cifra nella stringa sia seguita da un carattere di base. Il primo carattere che non corrisponde a questo formato interrompe la lettura.
 
 ## <a name="requirements"></a>Requisiti
 

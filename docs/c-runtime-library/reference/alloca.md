@@ -1,9 +1,9 @@
 ---
 title: _alloca
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _alloca
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _alloca
 - alloca
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2212f9e40c78932b63eebfc221ad2f07fa3d3f9d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341600"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943703"
 ---
-# <a name="alloca"></a>_alloca
+# <a name="_alloca"></a>_alloca
 
-Alloca memoria nello stack. Questa funzione è deprecata perché una versione più sicura è disponibile. visualizzare [malloca](malloca.md).
+Alloca memoria nello stack. Questa funzione è deprecata perché è disponibile una versione più sicura. vedere [_malloca](malloca.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -49,28 +52,28 @@ Byte da allocare dallo stack.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **alloca** routine restituisce un **void** puntatore allo spazio allocato, che è assolutamente corretto allineamento per l'archiviazione di qualsiasi tipo di oggetto. Se *dimensioni* è 0, **alloca** alloca un elemento di lunghezza zero e restituisce un puntatore valido a tale elemento.
+La routine **alloca** restituisce un puntatore **void** allo spazio allocato, che è sicuramente allineato per l'archiviazione di qualsiasi tipo di oggetto. Se *size* è 0, **alloca** alloca un elemento di lunghezza zero e restituisce un puntatore valido a tale elemento.
 
 Se lo spazio non può essere allocato viene generata un'eccezione di overflow dello stack. L'eccezione di overflow dello stack non è un'eccezione C++; si tratta di un'eccezione strutturata. Invece di usare la gestione delle eccezioni C++, è necessario usare la [gestione delle eccezioni strutturata](../../cpp/structured-exception-handling-c-cpp.md).
 
 ## <a name="remarks"></a>Note
 
-**alloca** alloca *dimensioni* byte dallo stack di programma. Lo spazio allocato automaticamente viene liberato quando la funzione chiamante viene chiuso (non durante l'allocazione si limita a passare fuori ambito). Pertanto, non passare il valore del puntatore restituito da **alloca** come argomento al [gratuita](free.md).
+**alloca** alloca i byte di *dimensioni* dallo stack del programma. Lo spazio allocato viene liberato automaticamente al termine della funzione chiamante, non quando l'allocazione passa semplicemente fuori dall'ambito. Non passare quindi il valore del puntatore restituito da **alloca** come argomento a [Free](free.md).
 
-Esistono alcune restrizioni per chiamare in modo esplicito **alloca** in un gestore di eccezioni (EH, Exception HANDLING). Routine EH in esecuzione su processori x86 operano nel relativo frame di memoria: Eseguono le attività nello spazio di memoria che non si basa sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, chiamare in modo esplicito **alloca** in uno dei seguenti scenari genera un errore di programma durante la restituzione alla routine EH chiamante:
+Esistono restrizioni per chiamare in modo esplicito **alloca** in un gestore di eccezioni (eh). Le routine EH eseguite su processori x86 operano nel relativo frame di memoria: Eseguono le attività nello spazio di memoria che non è basato sulla posizione corrente del puntatore dello stack della funzione contenitore. Le implementazioni più comuni includono la gestione delle eccezioni strutturata di Windows NT e le espressioni con clausola catch C++. Pertanto, chiamando in modo esplicito **alloca** in uno degli scenari seguenti, si verifica un errore di programma durante la restituzione alla routine eh chiamante:
 
-- Espressione di filtro eccezioni di Windows NT SEH: `__except ( _alloca() )`
+- Espressione di filtro eccezioni Windows NT SEH:`__except ( _alloca() )`
 
-- Gestore di eccezioni finale di Windows NT SEH: `__finally { _alloca() }`
+- Gestore eccezioni finale SEH Windows NT:`__finally { _alloca() }`
 
 - Espressione della clausola catch EH C++
 
-Tuttavia **alloca** può essere chiamato direttamente dall'interno di una routine EH o da un callback fornito dall'applicazione che viene richiamato da uno degli scenari EH elencati in precedenza.
+Tuttavia, **alloca** può essere chiamato direttamente dall'interno di una routine eh o da un callback fornito dall'applicazione che viene richiamato da uno degli scenari eh elencati in precedenza.
 
 > [!IMPORTANT]
 > In Windows XP, se **alloca** viene chiamato all'interno di un blocco try/catch, è necessario chiamare [resetstkoflw](resetstkoflw.md) nel blocco catch.
 
-Oltre alle restrizioni menzionate sopra, quando si usa la[/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opzione **alloca** non può essere utilizzato nella **except** blocchi. Per altre informazioni, vedere [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Oltre alle restrizioni precedenti, quando si usa l'opzione[/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) , non è possibile usare **alloca** nei blocchi **__except** . Per altre informazioni, vedere [/clr Restrictions](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Requisiti
 

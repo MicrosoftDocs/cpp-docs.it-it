@@ -1,9 +1,9 @@
 ---
 title: _get_tzname
 ms.date: 10/22/2018
-apiname:
+api_name:
 - _get_tzname
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_tzname
 - get_tzname
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: c173832efb866eed133a908b5f2b72266fd3798a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f86a4997c328e86597e3bad8a7f7a3a5f5f50b6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332040"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955617"
 ---
-# <a name="gettzname"></a>_get_tzname
+# <a name="_get_tzname"></a>_get_tzname
 
 Recupera la rappresentazione in forma di stringa di caratteri del nome del fuso orario o del nome del fuso orario dell'ora legale.
 
@@ -49,18 +52,18 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>Parametri
 
 *pReturnValue*<br/>
-La lunghezza della stringa *timeZoneName* incluso un carattere di terminazione null.
+Lunghezza della stringa di *timeZoneName* che include un carattere di terminazione null.
 
 *timeZoneName*<br/>
-L'indirizzo di una stringa di caratteri per la rappresentazione del nome del fuso orario o il nome del fuso orario ora legale (DST), a seconda *indice*.
+Indirizzo di una stringa di caratteri per la rappresentazione del nome del fuso orario o del nome del fuso orario dell'ora legale (DST), a seconda dell' *Indice*.
 
 *sizeInBytes*<br/>
-Le dimensioni dei *timeZoneName* stringa in byte di caratteri.
+Dimensioni in byte della stringa di caratteri *timeZoneName* .
 
 *index*<br/>
 Indice di uno dei due nomi di fuso orario da recuperare.
 
-|*index*|Contenuto di *timeZoneName*|*timeZoneName* il valore predefinito|
+|*index*|Contenuto di *timeZoneName*|*timeZoneName* (valore predefinito)|
 |-|-|-|
 |0|Nome del fuso orario|"PST"|
 |1|Nome del fuso orario dell'ora legale|"PDT"|
@@ -70,9 +73,9 @@ A meno che i valori non vengano modificati in modo esplicito in fase di esecuzio
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero in caso di esito positivo, in caso contrario, un **errno** tipo valore.
+Zero in caso di esito positivo, in caso contrario un valore di tipo **errno** .
 
-Se uno dei due *timeZoneName* viene **NULL**, o *sizeInBytes* è uguale a zero o minore di zero (ma non entrambi), viene richiamato un gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EINVAL**.
+Se *timeZoneName* è **null**o *sizeInBytes* è zero o minore di zero (ma non entrambi), viene richiamato un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
@@ -86,11 +89,11 @@ Se uno dei due *timeZoneName* viene **NULL**, o *sizeInBytes* è uguale a zero o
 
 ## <a name="remarks"></a>Note
 
-Il **get_tzname** funzione recupera la rappresentazione di stringa di caratteri del nome del fuso orario corrente o il nome del fuso orario ora legale (DST) nell'indirizzo di *timeZoneName* a seconda di valore, insieme alle dimensioni della stringa nell'indice *pReturnValue*. Se *timeZoneName* viene **NULL** e *sizeInBytes* è zero, le dimensioni della stringa deve contenere il fuso orario specificato e un carattere di terminazione null in byte viene restituito nel *pReturnValue*. I valori di indice devono essere 0 per il fuso orario standard o 1 per l'ora legale fuso orario ora solare; qualsiasi altro valore di *indice* hanno risultati saranno indeterminati.
+La funzione **_get_tzname** recupera la rappresentazione in forma di stringa di caratteri del nome del fuso orario corrente o del nome del fuso orario dell'ora legale (DST) nell'indirizzo di *timeZoneName* , a seconda del valore di indice, insieme alle dimensioni della stringa in *pReturnValue*. Se *timeZoneName* è **null** e *sizeInBytes* è zero, la dimensione della stringa necessaria per conservare il fuso orario specificato e un null di terminazione in byte viene restituita in *pReturnValue*. I valori di indice devono essere 0 per il fuso orario standard o 1 per il fuso orario dell'ora legale; tutti gli altri valori dell' *Indice* hanno risultati indeterminati.
 
 ## <a name="example"></a>Esempio
 
-Questo esempio viene chiamato **get_tzname** per ottenere la dimensione del buffer necessarie per visualizzare il nome del fuso orario ora legale corrente, alloca un buffer della dimensione, le chiamate **get_tzname** nuovamente a caricare il nome di nel buffer e lo stampa nella console.
+Questo esempio chiama **_get_tzname** per ottenere la dimensione del buffer richiesta per visualizzare il nome del fuso orario dell'ora legale corrente, alloca un buffer di tale dimensione, chiama **_get_tzname** per caricare il nome nel buffer e lo stampa nella console.
 
 ```C
 // crt_get_tzname.c

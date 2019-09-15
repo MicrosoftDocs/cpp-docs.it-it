@@ -1,9 +1,9 @@
 ---
 title: qsort_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort_s
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: f3b8bbfeb8079322a174233f3d8048a6d1b51804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa911dbf2990bb976341a19cdb1eb88707c90e79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358112"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949742"
 ---
-# <a name="qsorts"></a>qsort_s
+# <a name="qsort_s"></a>qsort_s
 
 Esegue un ordinamento rapido. Questa è una versione di [qsort](qsort.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -53,21 +56,21 @@ void qsort_s(
 *base*<br/>
 Inizio della matrice di destinazione.
 
-*number*<br/>
+*numero*<br/>
 Dimensione della matrice in elementi.
 
 *width*<br/>
 Dimensione dell'elemento in byte.
 
 *compare*<br/>
-Funzione di confronto. Il primo argomento è il *contesto* puntatore. Il secondo argomento è un puntatore per il *chiave* per la ricerca. Il terzo argomento è un puntatore all'elemento della matrice da confrontare con *chiave*.
+Funzione di confronto. Il primo argomento è il puntatore di *contesto* . Il secondo argomento è un puntatore alla *chiave* per la ricerca. Il terzo argomento è un puntatore all'elemento della matrice da confrontare con la *chiave*.
 
 *context*<br/>
-Un puntatore a un contesto, che può essere qualsiasi oggetto a cui il *confrontare* routine deve accedere.
+Puntatore a un contesto, che può essere qualsiasi oggetto a cui deve accedere la routine di *confronto* .
 
 ## <a name="remarks"></a>Note
 
-Il **qsort_s** funzione implementa un algoritmo di ordinamento rapido per ordinare una matrice di *numero* elementi, ognuno dei *larghezza* byte. L'argomento *base* è un puntatore alla base della matrice da ordinare. **qsort_s** sovrascrive questa matrice con gli elementi ordinati. L'argomento *confrontare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che specifica la relazione. **qsort_s** chiama il *confrontare* routine una o più volte durante l'ordinamento, passando i puntatori a due elementi della matrice per ogni chiamata:
+La funzione **qsort_s** implementa un algoritmo di ordinamento rapido per ordinare una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . La *base* degli argomenti è un puntatore alla base della matrice da ordinare. **qsort_s** sovrascrive questa matrice con gli elementi ordinati. L'argomento *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e restituisce un valore che ne specifica la relazione. **qsort_s** chiama la routine di *confronto* una o più volte durante l'ordinamento, passando i puntatori a due elementi di matrice per ogni chiamata:
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
@@ -75,15 +78,15 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 La routine deve confrontare gli elementi e quindi restituire uno dei seguenti valori:
 
-|Valore restituito|Descrizione|
+|Valore restituito|DESCRIZIONE|
 |------------------|-----------------|
 |< 0|**elem1** minore di **elem2**|
 |0|**elem1** equivalente a **elem2**|
-|> 0|**elem1** maggiore **elem2**|
+|> 0|**elem1** maggiore di **elem2**|
 
 La matrice viene ordinata in ordine crescente, come definito dalla funzione di confronto. Per ordinare una matrice in ordine decrescente, invertire il senso di "maggiore di" e "minore di" nella funzione di confronto.
 
-Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, allora la funzione restituisce e **errno** è impostata su **EINVAL**. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
+Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce e **errno** viene impostato su **EINVAL**. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
@@ -94,7 +97,7 @@ Se alla funzione vengono passati parametri non validi, viene richiamato il gesto
 |qualsiasi|qualsiasi|qualsiasi|qualsiasi|<= 0|**EINVAL**|
 |qualsiasi|qualsiasi|**NULL**|qualsiasi|qualsiasi|**EINVAL**|
 
-**qsort_s** ha lo stesso comportamento **qsort** ma ha il *contesto* parametro e imposta **errno**. Passando un *contesto* parametro, le funzioni di confronto possono usare un puntatore all'oggetto per l'accesso alle funzionalità dell'oggetto o altri non è accessibile tramite un puntatore di elemento. L'aggiunta del *contesto* parametro rende **qsort_s** più sicuro perché *contesto* può essere utilizzato per evitare i bug di reentrancy introdotti usando variabili statiche per rendere condividere le informazioni disponibili per il *confrontare* (funzione).
+**qsort_s** ha lo stesso comportamento di **qsort** ma dispone del parametro *context* e imposta **errno**. Passando un parametro di *contesto* , le funzioni di confronto possono utilizzare un puntatore a un oggetto per accedere alla funzionalità dell'oggetto o ad altre informazioni non accessibili tramite un puntatore di elemento. L'aggiunta del parametro di *contesto* rende **qsort_s** più sicuro perché il *contesto* può essere usato per evitare i bug rientranti introdotti usando variabili statiche per rendere disponibili le informazioni condivise alla funzione di *confronto* .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -104,11 +107,11 @@ Se alla funzione vengono passati parametri non validi, viene richiamato il gesto
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-**Librerie:** Tutte le versioni del [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
+**Librerie** Tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Esempio
 
-L'esempio seguente illustra come usare il *contesto* parametro nel **qsort_s** (funzione). Il *contesto* parametro rende più facile eseguire ordinamenti thread-safe. Invece di usare le variabili statiche che devono essere sincronizzate per garantire la thread safety, passare a una seconda *contesto* parametro in ogni ordinamento. In questo esempio viene utilizzato un oggetto delle impostazioni locali come le *contesto* parametro.
+Nell'esempio seguente viene illustrato come utilizzare il parametro *context* nella funzione **qsort_s** . Il parametro *context* rende più semplice l'esecuzione di ordinamenti thread-safe. Anziché utilizzare variabili statiche che devono essere sincronizzate per garantire thread safety, passare un parametro di *contesto* diverso in ogni ordinamento. In questo esempio viene usato un oggetto delle impostazioni locali come parametro di *contesto* .
 
 ```cpp
 // crt_qsort_s.cpp

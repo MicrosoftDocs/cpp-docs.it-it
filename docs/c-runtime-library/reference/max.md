@@ -1,9 +1,9 @@
 ---
 title: __max
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __max
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - max
 - __max
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156866"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952743"
 ---
-# <a name="max"></a>__max
+# <a name="__max"></a>__max
 
-Una macro del preprocessore che restituisce il più elevato tra due valori.
+Una macro del preprocessore che restituisce il maggiore di due valori.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,13 +50,13 @@ Valori di qualsiasi tipo numerico da confrontare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**max** restituisce il più elevato dei relativi argomenti.
+**__max** restituisce il più grande degli argomenti.
 
 ## <a name="remarks"></a>Note
 
-Il **max** macro Confronta due valori e restituisce il valore di quello maggiore. Gli argomenti possono essere di qualsiasi tipo di dati numerico, con o senza segno. Il tipo di dati deve essere lo stesso per entrambi gli argomenti e il valore restituito.
+La macro **__max** Confronta due valori e restituisce il valore di quello più grande. Gli argomenti possono essere di qualsiasi tipo di dati numerico, con o senza segno. Il tipo di dati deve essere lo stesso per entrambi gli argomenti e il valore restituito.
 
-L'argomento restituito viene valutata due volte tramite la macro. Questo può causare risultati imprevisti se l'argomento è un'espressione che modifica il valore quando viene valutata, ad esempio `*p++`.
+L'argomento restituito viene valutato due volte dalla macro. Questo può causare risultati imprevisti se l'argomento è un'espressione che modifica il valore quando viene valutato, ad esempio `*p++`.
 
 ## <a name="requirements"></a>Requisiti
 

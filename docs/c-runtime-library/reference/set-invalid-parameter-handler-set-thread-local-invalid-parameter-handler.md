@@ -1,10 +1,10 @@
 ---
 title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_invalid_parameter_handler
 - _set_invalid_parameter_handler
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 1df876d6df9327e817d5d2c401e0abe97ad7a548
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 090eb43289313f12b900e671df61f74e7b464872
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356511"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948502"
 ---
-# <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
+# <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
 Imposta una funzione da chiamare quando CRT rileva un argomento non valido.
 
@@ -60,7 +63,7 @@ Un puntatore al gestore di parametro non valido prima della chiamata.
 
 ## <a name="remarks"></a>Note
 
-Molte funzioni di runtime C verificano la validità degli argomenti passati. Se viene passato un argomento non valido, la funzione può impostare il **errno** restituito un codice di errore o numero di errore. In tali casi, viene chiamato anche il gestore di parametro non valido. Il runtime C include un gestore di parametri non validi globale predefinito che termina il programma e visualizza un messaggio di errore di runtime. È possibile usare la **set_invalid_parameter_handler** per impostare una funzione come gestore di parametri non validi globale. Il runtime C supporta anche un gestore di parametri non validi thread-local. Se è impostato un gestore di parametri thread-local in un thread usando **set_thread_local_invalid_parameter_handler**, le funzioni di runtime C chiamate dal thread usano tale gestore invece del gestore globale. Solo una funzione per volta può essere specificata come gestore di argomenti non validi globale. È possibile specificare una sola funzione come gestore di argomenti non validi thread-local per ogni thread, ma thread diversi possono avere gestori thread-local differenti. In questo modo è possibile modificare il gestore usato in una parte del codice senza effetti sul comportamento di altri thread.
+Molte funzioni di runtime C verificano la validità degli argomenti passati. Se viene passato un argomento non valido, la funzione può impostare il numero di errore di **errno** o restituire un codice di errore. In tali casi, viene chiamato anche il gestore di parametro non valido. Il runtime C include un gestore di parametri non validi globale predefinito che termina il programma e visualizza un messaggio di errore di runtime. È possibile usare **_set_invalid_parameter_handler** per impostare la propria funzione come gestore di parametri non validi globale. Il runtime C supporta anche un gestore di parametri non validi thread-local. Se un gestore di parametri thread-local viene impostato in un thread utilizzando **_set_thread_local_invalid_parameter_handler**, le funzioni di runtime C chiamate dal thread utilizzano tale gestore anziché il gestore globale. Solo una funzione per volta può essere specificata come gestore di argomenti non validi globale. È possibile specificare una sola funzione come gestore di argomenti non validi thread-local per ogni thread, ma thread diversi possono avere gestori thread-local differenti. In questo modo è possibile modificare il gestore usato in una parte del codice senza effetti sul comportamento di altri thread.
 
 Quando il runtime chiama la funzione di gestione dei parametri non validi, in genere significa che si è verificato un errore irreversibile. La funzione di gestione dei parametri non validi specificata deve salvare tutti i dati possibili e quindi verrà interrotta. Non deve restituire il controllo alla funzione principale a meno che non si sia certi che l'errore è reversibile.
 
@@ -76,7 +79,7 @@ void _invalid_parameter(
 );
 ```
 
-Il *espressione* argomento è una rappresentazione di stringa a caratteri wide dell'espressione argomento che ha generato l'errore. Il *funzione* argomento è il nome della funzione CRT che ha ricevuto l'argomento non valido. Il *file* argomento è il nome del file di origine CRT che contiene la funzione. Il *riga* argomento è il numero di riga in tale file. L'ultimo argomento è riservato. I parametri hanno tutti il valore **NULL** a meno che non viene utilizzata una versione di debug della libreria CRT.
+L'argomento *Expression* è un'ampia rappresentazione di stringa dell'espressione dell'argomento che ha generato l'errore. L'argomento *Function* è il nome della funzione CRT che ha ricevuto l'argomento non valido. L'argomento *file* è il nome del file di origine CRT che contiene la funzione. L'argomento della *riga* è il numero di riga nel file. L'ultimo argomento è riservato. Tutti i parametri hanno il valore **null** a meno che non venga usata una versione di debug della libreria CRT.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -84,7 +87,7 @@ Il *espressione* argomento è una rappresentazione di stringa a caratteri wide d
 |-------------|---------------------|
 |**_set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib > o \<STDLIB. h >|
 
-Il **set_invalid_parameter_handler** e **set_thread_local_invalid_parameter_handler** funzioni sono specifiche di Microsoft. Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Le funzioni **_set_invalid_parameter_handler** e **_set_thread_local_invalid_parameter_handler** sono specifiche di Microsoft. Per informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

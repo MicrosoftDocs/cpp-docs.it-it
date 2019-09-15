@@ -1,10 +1,10 @@
 ---
 title: outp, outpw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - outpw
 - outp
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcrt.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcr120.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - outp
 - outpw
@@ -20,12 +23,12 @@ helpviewer_keywords:
 - outpw function
 - outp function
 ms.assetid: ab29dc04-e440-4c3f-83b1-420e65b5df75
-ms.openlocfilehash: 8c4d6ecf60086e1d5ff58e3271f446cba4cff079
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 646e882d4ead9ea52a17b4fe483f49bf94ccf9b7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463713"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940018"
 ---
 # <a name="outp-outpw"></a>outp, outpw
 

@@ -1,10 +1,10 @@
 ---
 title: gets_s, _getws_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getws_s
 - gets_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getws_s
 - gets_s
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-ms.openlocfilehash: f71fafceaf1974bc5ff736ff175a67cf6c924ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f282b4e8de12185a19e07374cf565788dc549136
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157656"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954965"
 ---
-# <a name="getss-getwss"></a>gets_s, _getws_s
+# <a name="gets_s-_getws_s"></a>gets_s, _getws_s
 
-Ottiene una linea tra i **stdin** flusso. Queste versioni di [gets, _getws](../../c-runtime-library/gets-getws.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Ottiene una riga dal flusso **stdin** . Queste versioni di [gets, _getws](../../c-runtime-library/gets-getws.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -73,17 +76,17 @@ Dimensione del buffer.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce *buffer* se ha esito positivo. Un puntatore **NULL** indica una condizione di errore o di fine file. Usare [ferror](ferror.md) o [feof](feof.md) per determinare quella che si è verificata.
+Restituisce il *buffer* in caso di esito positivo. Un puntatore **NULL** indica una condizione di errore o di fine file. Usare [ferror](ferror.md) o [feof](feof.md) per determinare quella che si è verificata.
 
 ## <a name="remarks"></a>Note
 
-Il **gets_s** funzione legge una riga dal flusso di input standard **stdin** e lo archivia nel *buffer*. La riga è costituita da tutti i caratteri, incluso il primo carattere di nuova riga ('\n'). **gets_s** sostituisce quindi il carattere di nuova riga con un carattere null ('\0') prima di restituire la riga. Al contrario, il **fgets_s** carattere di nuova riga vengono mantenuti.
+La funzione **gets_s** legge una riga dal flusso di input standard **stdin** e la archivia nel *buffer*. La riga è costituita da tutti i caratteri, incluso il primo carattere di nuova riga ('\n'). **gets_s** sostituisce quindi il carattere di nuova riga con un carattere null (' \ 0') prima di restituire la riga. Al contrario, la funzione **fgets_s** mantiene il carattere di nuova riga.
 
-Se il primo carattere letto è il carattere di fine del file, un carattere null viene archiviato all'inizio di *buffer* e **NULL** viene restituito.
+Se il primo carattere letto è il carattere di fine del file, viene archiviato un carattere null all'inizio del *buffer* e viene restituito **null** .
 
-**getws_s** è una versione a caratteri wide di **gets_s**; relativo argomento e il valore restituito sono stringhe a caratteri wide.
+**_getws_s** è una versione a caratteri wide di **gets_s**; il relativo argomento e il valore restituito sono stringhe a caratteri wide.
 
-Se *buffer* viene **NULL** oppure *sizeInCharacters* è minore o uguale a zero o se il buffer è troppo piccolo per contenere la riga di input e un carattere di terminazione null, queste funzioni richiamano un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **NULL** e impostare errno **ERANGE**.
+Se il *buffer* è **null** o *sizeInCharacters* è minore o uguale a zero oppure se il buffer è troppo piccolo per contenere la riga di input e il carattere di terminazione null, queste funzioni richiamano un gestore di parametri non validi, come descritto in [Parameter Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **null** e impostano errno su **ERANGE**.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -100,7 +103,7 @@ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli.
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

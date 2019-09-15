@@ -1,9 +1,9 @@
 ---
 title: imaxdiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxdiv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxdiv
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157331"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954638"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -51,11 +54,11 @@ Denominatore.
 
 ## <a name="return-value"></a>Valore restituito
 
-**imaxdiv** chiamati con argomenti di tipo [intmax_t](../../c-runtime-library/standard-types.md) restituisce una struttura di tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) che include il quoziente e il resto.
+**imaxdiv** chiamato con argomenti di tipo [intmax_t](../../c-runtime-library/standard-types.md) restituisce una struttura di tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) che comprende il quoziente e il resto.
 
 ## <a name="remarks"></a>Note
 
-Il **imaxdiv** funzione divide *numero* dal *denom* e quindi calcola il quoziente e il resto. Il **imaxdiv_t** struttura contiene il quoziente **intmax_t** **quot**e il resto **intmax_t** **rem**. Il segno del quoziente è uguale a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.
+La funzione **imaxdiv** divide i *numeri* per *Denom* e quindi calcola il quoziente e il resto. La **struttura imaxdiv_t** contiene il quoziente **, intmax_t** **quot**e il resto, **intmax_t** **REM**. Il segno del quoziente è uguale a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.
 
 ## <a name="requirements"></a>Requisiti
 

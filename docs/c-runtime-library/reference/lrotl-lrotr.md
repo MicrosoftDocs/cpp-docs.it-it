@@ -1,10 +1,10 @@
 ---
 title: _lrotl, _lrotr
 ms.date: 04/04/2018
-apiname:
+api_name:
 - _lrotl
 - _lrotr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrotr
 - lrotl
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156967"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953037"
 ---
-# <a name="lrotl-lrotr"></a>_lrotl, _lrotr
+# <a name="_lrotl-_lrotr"></a>_lrotl, _lrotr
 
-Ruota i bit a sinistra (**lrotl**) o a destra (**lrotr**).
+Ruota i bit a sinistra ( **_lrotl**) o a destra ( **_lrotr**).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -63,7 +66,7 @@ Entrambe le funzioni restituiscono il valore ruotato. Non vi è restituzione di 
 
 ## <a name="remarks"></a>Note
 
-Il **lrotl** e **lrotr** funzioni ruotate *valore* da *MAIUSC* bits. **lrotl** ruota il valore a sinistra, verso il bit più significativi. **lrotr** ruota il valore a destra, verso il bit meno significativi. Entrambe le funzioni ruotano i bit da una estremità all'altra di *value*.
+Le funzioni **_lrotl** e **_lrotr** ruotano il *valore* in base a *Turn* bit. **_lrotl** ruota il valore a sinistra, verso un bit più significativo. **_lrotr** ruota il valore a destra, verso i bit meno significativi. Entrambe le funzioni ruotano i bit da una estremità all'altra di *value*.
 
 ## <a name="requirements"></a>Requisiti
 

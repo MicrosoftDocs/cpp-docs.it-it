@@ -1,14 +1,14 @@
 ---
 title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnset_s_l
 - _strnset_s
 - _mbsnset_s
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnset_s_l
 - wcsnset_s
@@ -55,19 +58,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 9fc8149bcabb2708f644c80837a93cee72658b8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3542d2272282a9c3f6b2aed8cc443bef85dfe883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209623"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946983"
 ---
-# <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
+# <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
 Inizializza i caratteri di una stringa sul carattere specificato. Queste versioni di [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbsnset_s** e **mbsnset_s_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsnset_s** e **_mbsnset_s_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -119,7 +122,7 @@ errno_t _mbsnset_s_l(
 Stringa da modificare.
 
 *numberOfElements*<br/>
-Le dimensioni dei *str* buffer.
+Dimensioni del buffer *Str* .
 
 *c*<br/>
 Impostazione del carattere.
@@ -134,13 +137,13 @@ Impostazioni locali da usare.
 
 Zero in caso di esito positivo e un codice di errore in caso contrario.
 
-Queste funzioni convalidano i rispettivi argomenti. Se *str* non è una stringa con terminazione null valida o l'argomento di dimensione è minore o uguale a 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono un codice di errore e impostano **errno** a tale codice di errore. Il codice di errore predefinito è **EINVAL** se non si applica un valore più specifico.
+Queste funzioni convalidano i rispettivi argomenti. Se *Str* non è una stringa con terminazione null valida o se l'argomento di dimensione è minore o uguale a 0, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono un codice di errore e impostano **errno** su tale codice di errore. Il codice di errore predefinito è **EINVAL** se non si applica un valore più specifico.
 
 ## <a name="remarks"></a>Note
 
-Queste funzioni impostano al massimo i primi *conteggio* caratteri di *str* al *c*. Se *conteggio* è maggiore della dimensione di *str*, alle dimensioni dei *str* viene usato al posto di *conteggio*. Se si verifica un errore *conteggio* è maggiore di quella *numberOfElements* ed entrambi questi parametri sono superiori alle dimensioni del *str*.
+Queste funzioni impostano, al massimo, i primi caratteri di *conteggio* da *Str* a *c*. Se *count* è maggiore della dimensione di *Str*, viene usata la dimensione di *Str* anziché *count*. Si verifica un errore se *count* è maggiore di *NumberOfElements* ed entrambi i parametri sono maggiori della dimensione di *Str*.
 
-**wcsnset_s** e **mbsnset_s** sono versioni a caratteri wide e caratteri multibyte di **strnset_s**. L'argomento della stringa di **wcsnset_s** è un carattere wide-string, cioè di **mbsnset_s** è una stringa di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**_wcsnset_s** e **_mbsnset_s** sono versioni a caratteri wide e a caratteri multibyte di **_strnset_s**. L'argomento di stringa di **_wcsnset_s** è una stringa di caratteri wide. quello di **_mbsnset_s** è una stringa di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

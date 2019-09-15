@@ -1,9 +1,9 @@
 ---
 title: feclearexcept1
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feclearexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334736"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941264"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -48,11 +51,11 @@ Flag di stato delle eccezioni da cancellare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce zero se *eccetto* è uguale a zero, oppure se sono state cancellate tutte le eccezioni specificate. In caso contrario, viene restituito un valore diverso da zero.
+Restituisce zero se *excepts* è zero o se tutte le eccezioni specificate sono state cancellate correttamente. In caso contrario, viene restituito un valore diverso da zero.
 
 ## <a name="remarks"></a>Note
 
-Il **feclearexcept** funzione tenta di deselezionare mobile punto specificato dal flag di stato delle eccezioni *tranne che ai*. La funzione supporta queste macro di eccezioni, definite in fenv.h:
+La funzione **feclearexcept** tenta di cancellare i flag di stato delle eccezioni a virgola mobile specificati da *excepts*. La funzione supporta queste macro di eccezioni, definite in fenv.h:
 
 |Macro di eccezioni|Descrizione|
 |---------------------|-----------------|
@@ -63,7 +66,7 @@ Il **feclearexcept** funzione tenta di deselezionare mobile punto specificato da
 |FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|
 |FE_ALL_EXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|
 
-Il *eccetto* argomento può essere zero o l'operatore OR bit per bit di uno o più macro di eccezioni supportate. Il risultato di qualsiasi altro valore di argomento non è definito.
+L'argomento *excepts* può essere zero o l'operatore OR bit per bit di una o più delle macro di eccezioni supportate. Il risultato di qualsiasi altro valore di argomento non è definito.
 
 ## <a name="requirements"></a>Requisiti
 

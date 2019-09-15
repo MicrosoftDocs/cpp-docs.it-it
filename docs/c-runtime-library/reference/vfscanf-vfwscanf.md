@@ -1,10 +1,10 @@
 ---
 title: vfscanf, vfwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfwscanf
 - vfscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 3076f63e05e156a479372adfca9dc707255f9e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364779"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945517"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf, vfwscanf
 
@@ -62,13 +65,13 @@ Elenco di argomenti variabili.
 
 Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Se si verifica un errore o se viene raggiunta la fine del flusso di file prima della prima conversione, il valore restituito è **EOF** per **vfscanf** e **vfwscanf**.
 
-Queste funzioni convalidano i relativi parametri. Se *stream* oppure *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostare **errno** al **EINVAL**.
+Queste funzioni convalidano i relativi parametri. Se il *flusso* o il *formato* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostano **errno** su **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **vfscanf** funzione legge i dati dalla posizione corrente del *stream* nelle posizioni specificate dal *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde all'identificatore di tipo in *formato*. *formato* controlla l'interpretazione dell'input campi e ha lo stesso formato e funzione come i *formato* argomento per **scanf**; vedere [scanf](scanf-scanf-l-wscanf-wscanf-l.md) per un Descrizione della *formato*.
+La funzione **vfscanf** legge i dati dalla posizione corrente del *flusso* nelle posizioni fornite dall'elenco di argomenti *arglist* . Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo nel *formato*. *Format* controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento *Format* per **scanf**; vedere [scanf](scanf-scanf-l-wscanf-wscanf-l.md) per una descrizione del *formato*.
 
-**vfwscanf** è una versione a caratteri wide di **vfscanf**; l'argomento format per **vfwscanf** è una stringa di caratteri "wide". Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vfscanf** non supporta l'input da un flusso UNICODE.
+**vfwscanf** è una versione a caratteri wide di **vfscanf**; l'argomento format per **vfwscanf** è una stringa di caratteri wide. Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vfscanf** non supporta l'input da un flusso Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

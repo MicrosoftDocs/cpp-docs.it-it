@@ -1,10 +1,10 @@
 ---
 title: wctomb_s, _wctomb_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wctomb_s_l
 - wctomb_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctomb_s
 - _wctomb_s_l
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 1eaa6f0b81daaa7d8c7626398fe30b45ead979c3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 329724ca0196e07397d4f0337a2bf0aa2db05c84
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498921"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957901"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
@@ -93,7 +96,7 @@ Se si verifica una delle condizioni di errore precedenti, viene richiamato il ge
 
 La funzione **wctomb_s** converte il relativo argomento *WCHAR* nel carattere multibyte corrispondente e archivia il risultato in *mbchar*. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma.
 
-Se **wctomb_s** converte il carattere wide in un carattere multibyte, inserisce il numero di byte (che non è mai maggiore di **MB_CUR_MAX**) nel carattere wide nell'Integer a cui punta pRetValue. Se *WCHAR* è il carattere null Wide (L'\ 0'), **wctomb_s** riempie pRetValue con 1. Se il puntatore di destinazione *mbchar* è **null**, **Wctomb_s** inserisce 0in pRetValue. Se la conversione non è possibile nelle impostazioni locali correnti, **wctomb_s** inserisce-1 in pRetValue.
+Se **wctomb_s** converte il carattere wide in un carattere multibyte, inserisce il numero di byte (che non è mai maggiore di **MB_CUR_MAX**) nel carattere wide nell'Integer a cui punta *pRetValue*. Se *WCHAR* è il carattere null Wide (L'\ 0'), **wctomb_s** riempie *pRetValue* con 1. Se il puntatore di destinazione *mbchar* è **null**, **Wctomb_s** inserisce 0 in *pRetValue*. Se la conversione non è possibile nelle impostazioni locali correnti, **wctomb_s** inserisce-1 in *pRetValue*.
 
 **wctomb_s** usa le impostazioni locali correnti per le informazioni dipendenti dalle impostazioni locali; **_wctomb_s_l** è identico, ad eccezione del fatto che usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 

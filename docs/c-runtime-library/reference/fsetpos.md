@@ -1,9 +1,9 @@
 ---
 title: fsetpos
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fsetpos
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fsetpos
 helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f44ab1b35c9e598f82dbc0af96979476ee353541
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287573"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956513"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -47,18 +50,18 @@ int fsetpos(
 *stream*<br/>
 Puntatore alla struttura **FILE**.
 
-*pos*<br/>
+*POS*<br/>
 Archiviazione dell'indicatore di posizione.
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **fsetpos** restituisce 0. In caso di errore, la funzione restituisce un valore diverso da zero e imposta **errno** a uno dei seguenti (definite in ERRNO di costanti di manifesto. H): **EBADF**, ovvero il file non è accessibile oppure l'oggetto che *flusso* punta a non è una struttura di file valido, o **EINVAL**, ovvero un valore valido per *flusso*  oppure *pos* è stato passato. Se viene passato un parametro non valido, queste funzioni chiamano il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri).
+Se ha esito positivo, **fsetpos** restituisce 0. In caso di errore, la funzione restituisce un valore diverso da zero e imposta **errno** su una delle costanti manifeste seguenti, definite in errno. H): **EBADF**, il che significa che il file non è accessibile o che l'oggetto a cui punta il *flusso* non è una struttura di file valida. o **EINVAL**, che indica che è stato passato un valore non valido per *Stream* o *pos* . Se viene passato un parametro non valido, queste funzioni chiamano il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri).
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **fsetpos** funzione imposta l'indicatore di posizione del file relativo *stream* al valore di *pos*, ottenuto in una chiamata precedente a **fgetpos**contro *stream*. La funzione Cancella l'indicatore di fine del file e Annulla eventuali effetti di [ungetc](ungetc-ungetwc.md) sul *stream*. Dopo avere chiamato **fsetpos**, l'operazione successiva nel *stream* può essere di input o output.
+La funzione **fsetpos** imposta l'indicatore di posizione del file per il *flusso* sul valore di *pos*, ottenuto in una chiamata precedente a **fgetpos** in base al *flusso*. La funzione Cancella l'indicatore di fine del file e Annulla gli effetti di [ungetc](ungetc-ungetwc.md) nel *flusso*. Dopo la chiamata a **fsetpos**, l'operazione successiva nel *flusso* può essere di input o di output.
 
 ## <a name="requirements"></a>Requisiti
 

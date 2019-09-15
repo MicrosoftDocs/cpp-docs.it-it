@@ -1,9 +1,9 @@
 ---
 title: _lfind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind
 - _lfind
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fd2141caf8311844a90a6d12226bb7797ac4734
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286492"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953390"
 ---
-# <a name="lfind"></a>_lfind
+# <a name="_lfind"></a>_lfind
 
 Esegue una ricerca lineare della chiave specificata. È disponibile una versione più sicura di questa funzione. Vedere [_lfind_s](lfind-s.md).
 
@@ -58,7 +61,7 @@ Oggetto da cercare.
 *base*<br/>
 Puntatore alla base dei dati di ricerca.
 
-*number*<br/>
+*numero*<br/>
 Numero degli elementi della matrice.
 
 *width*<br/>
@@ -69,13 +72,13 @@ Puntatore alla routine di confronto. Il primo parametro è un puntatore alla chi
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la chiave viene trovata, **lfind** restituisce un puntatore all'elemento della matrice in corrispondenza *base* che corrisponde a *chiave*. Se la chiave non viene trovata, **lfind** restituisce **NULL**.
+Se la chiave viene trovata, **_lfind** restituisce un puntatore all'elemento della matrice in *base* che corrisponde alla *chiave*. Se la chiave non viene trovata, **_lfind** restituisce **null**.
 
 ## <a name="remarks"></a>Note
 
-Il **lfind** funzione esegue una ricerca lineare per il valore *chiave* in una matrice di *numero* elementi, ognuno dei *larghezza* byte. A differenza **bsearch**, **lfind** richiede che la matrice da ordinare. Il *base* argomento è un puntatore alla base della matrice da cercare. Il *confrontare* argomento è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che specifica la relazione. **lfind** chiama il *confrontare* routine una o più volte durante la ricerca, passando i puntatori a due elementi della matrice per ogni chiamata. Il *confrontare* routine deve confrontare gli elementi e quindi restituire diverso da zero (vale a dire gli elementi sono diversi) o 0 (ovvero gli elementi sono identici).
+La funzione **_lfind** esegue una ricerca lineare per la *chiave* del valore in una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . A differenza di **bCerca**, **_lfind** non richiede che la matrice sia ordinata. L'argomento di *base* è un puntatore alla base della matrice in cui eseguire la ricerca. L'argomento *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che ne specifica la relazione. **_lfind** chiama la routine di *confronto* una o più volte durante la ricerca, passando i puntatori a due elementi di matrice per ogni chiamata. La routine di *confronto* deve confrontare gli elementi e quindi restituire un valore diverso da zero (ovvero gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).
 
-Questa funzione convalida i relativi parametri. Se *confrontare*, *chiave* oppure *numero* è **NULL**, o se *base* è **NULL**e *numero* è diverso da zero, oppure se *larghezza* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**.
+Questa funzione convalida i relativi parametri. Se *compare*, *Key* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [Parameter Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**.
 
 ## <a name="requirements"></a>Requisiti
 

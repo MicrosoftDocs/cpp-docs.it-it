@@ -1,12 +1,12 @@
 ---
 title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswalnum_l
 - _isalnum_l
 - iswalnum
 - isalnum
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalnum_l
 - _iswalnum_l
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: 3aa9adada9ad904221b91e41ac2d843b174677ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 636e43a921c2b859db3a31b3dd658112f4e8e9f4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331649"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954595"
 ---
-# <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
+# <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
 Determina se un Integer rappresenta un carattere alfanumerico.
 
@@ -67,11 +70,11 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce diverso da zero se *c* è una rappresentazione particolare di un carattere alfanumerico. **isalnum** restituisce un valore diverso da zero se **isalpha** oppure **isdigit** è diverso da zero per *c*, vale a dire, se *c* si trova all'interno di gli intervalli A - Z, a - z o 0 - 9. **iswalnum** restituisce un valore diverso da zero se **iswalpha** oppure **iswdigit** è diverso da zero per *c*. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
+Ognuna di queste routine restituisce un valore diverso da zero se *c* è una rappresentazione particolare di un carattere alfanumerico. **isalnum** restituisce un valore diverso da zero se l'oggetto di tipo o è diverso da zero *per c*, ovvero se *c* **è compreso** negli intervalli a-z, a- **z o 0-9** . **iswalnum** restituisce un valore diverso da zero se **iswalpha** o **iswdigit** è diverso da zero per *c*. Ognuna di queste routine restituisce 0 se *c* non soddisfa la condizione di test.
 
-Le versioni di queste funzioni che hanno le **l** suffisso Usa il parametro delle impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni che hanno il suffisso **suffisso** usano il parametro delle impostazioni locali passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Il comportamento delle **isalnum** e **isalnum_l** non è definito se *c* non è EOF o nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* è non uno di questi valori, le funzioni generano un'asserzione.
+Il comportamento di **isalnum** e **_isalnum_l** non è definito se *c* non è EOF o nell'intervallo compreso tra 0 e 0xFF, inclusi. Quando si usa una libreria CRT di debug e *c* non è uno di questi valori, le funzioni generano un'asserzione.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

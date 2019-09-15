@@ -1,12 +1,12 @@
 ---
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbctoupper_l
 - mbctolower_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156798"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952546"
 ---
-# <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
+# <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
 Testa e converte il caso di un carattere multibyte.
 
@@ -85,7 +88,7 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il carattere convertito *c*, se possibile. In caso contrario, restituisce il carattere *c* invariato.
+Ognuna di queste funzioni restituisce il carattere convertito *c*, se possibile. In caso contrario, restituisce il carattere *c* non modificato.
 
 ## <a name="remarks"></a>Note
 
@@ -96,9 +99,9 @@ Le funzioni testano un carattere *c* e, se possibile, applicano una delle seguen
 |**_mbctolower**, **_mbctolower_l**|Carattere maiuscolo in carattere minuscolo.|
 |**_mbctoupper**, **_mbctoupper_l**|Carattere minuscolo in carattere maiuscolo.|
 
-La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione di questa funzione senza il **l** suffisso Usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con la **l** suffisso è identico, ma usa il parametro delle impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La versione di questa funzione senza il suffisso **suffisso** usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con il suffisso **suffisso** è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Nelle versioni precedenti **mbctolower** è stato chiamato **jtolower**, e **mbctoupper** è stato chiamato **jtoupper**. Per il nuovo codice, utilizzare invece i nuovi nomi.
+Nelle versioni precedenti **_mbctolower** era denominato **jtolower**e **_mbctoupper** è stato denominato **jtoupper**. Per il nuovo codice, utilizzare invece i nuovi nomi.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -1,12 +1,12 @@
 ---
 title: va_arg, va_copy, va_end, va_start
 ms.date: 11/04/2016
-apiname:
+api_name:
 - va_arg
 - va_end
 - va_copy
 - va_start
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - va_arg
 - va_start
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47bd9e3913c6664a52c970dd8a190636683d214e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353573"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957358"
 ---
-# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
+# <a name="va_arg-va_copy-va_end-va_start"></a>va_arg, va_copy, va_end, va_start
 
 Accede a elenchi di argomenti variabili.
 
@@ -83,7 +86,7 @@ Puntatore all'elenco di argomenti.
 Puntatore all'elenco di argomenti da inizializzare da *src*
 
 *src*<br/>
-Puntatore all'elenco inizializzato di argomenti da copiare *dest*.
+Puntatore all'elenco inizializzato di argomenti da copiare in *dest*.
 
 *prev_param*<br/>
 Parametro che precede il primo argomento facoltativo.
@@ -94,19 +97,19 @@ Parametro che precede il primo argomento facoltativo.
 
 ## <a name="remarks"></a>Note
 
-Il **va_arg**, **va_copy**, **va_end**, e **va_start** macro forniscono un modo portabile per accedere agli argomenti a una funzione quando la funzione accetta un numero variabile di argomenti. Sono disponibili due versioni delle macro: Le macro definite in STDARG. H conformi a ISO C99 standard; le macro definite in VARARGS. H sono deprecate, ma vengono mantenuti per garantire la compatibilità con il codice scritto prima il standard ANSI C89.
+Le macro **va_arg**, **va_copy**, **va_end**e **va_start** offrono un modo portatile per accedere agli argomenti a una funzione quando la funzione accetta un numero variabile di argomenti. Sono disponibili due versioni delle macro: Macro definite in STDARG. H conforme allo standard ISO C99; macro definite in VARARGS. Le H sono deprecate, ma vengono mantenute per compatibilità con le versioni precedenti del codice scritto prima dello standard ANSI C89.
 
 Queste macro presuppongono che la funzione accetti un numero fisso di argomenti obbligatori, seguito da un numero variabile di argomenti facoltativi. Gli argomenti obbligatori vengono dichiarati come parametri comuni per la funzione e sono accessibili tramite i nomi dei parametri. Gli argomenti facoltativi sono accessibili tramite le macro in STDARG.H (o VARARGS.H per il codice scritto prima dello standard ANSI C89), che impostano un puntatore al primo argomento facoltativo nell'elenco di argomenti, recuperano gli argomenti dall'elenco e reimpostano il puntatore al termine dell'elaborazione degli argomenti.
 
 Le macro standard C, definite in STDARG. H, vengono usate come segue:
 
-- **va_start** imposta *arg_ptr* sul primo argomento facoltativo nell'elenco di argomenti passato alla funzione. L'argomento *arg_ptr* deve avere il **va_list** tipo. L'argomento *prev_param* è il nome del parametro obbligatorio che precede immediatamente il primo argomento facoltativo nell'elenco di argomenti. Se *prev_param* è dichiarato con la classe di archiviazione, il comportamento della macro non è definito. **va_start** devono essere usati prima **va_arg** viene usato per la prima volta.
+- **va_start** imposta *arg_ptr* sul primo argomento facoltativo nell'elenco di argomenti passati alla funzione. L'argomento *arg_ptr* deve avere il tipo **va_list** . L'argomento *prev_param* è il nome del parametro obbligatorio che precede immediatamente il primo argomento facoltativo nell'elenco di argomenti. Se *prev_param* viene dichiarata con la classe di archiviazione register, il comportamento della macro non è definito. **va_start** deve essere usato prima di usare **va_arg** per la prima volta.
 
-- **va_arg** recupera un valore di *tipo* dal percorso di cui viene assegnato dal *arg_ptr*e incrementa *arg_ptr* in modo che punti all'argomento successivo nell'elenco da utilizzando le dimensioni dei *tipo* per determinare dove inizia l'argomento successivo. **va_arg** può essere usato qualsiasi numero di volte nella funzione per recuperare gli argomenti dall'elenco.
+- **va_arg** recupera un valore di *tipo* dalla posizione fornita da *arg_ptr*e incrementa *arg_ptr* in modo che punti all'argomento successivo nell'elenco usando le dimensioni del *tipo* per determinare dove inizia l'argomento successivo. **va_arg** può essere usato per un numero qualsiasi di volte nella funzione per recuperare gli argomenti dall'elenco.
 
-- **va_copy** crea una copia di un elenco di argomenti nello stato corrente. Il *src* parametro deve essere già stato inizializzato con **va_start**; potrebbe essere stata aggiornata con **va_arg** viene chiamato, ma è necessario non sono stati ripristinati con **va_end** . L'argomento successivo recuperato dal **va_arg** dalla *dest* equivale all'argomento successivo recuperato da *src*.
+- **va_copy** crea una copia di un elenco di argomenti nello stato corrente. Il parametro *src* deve essere già inizializzato con **va_start**; potrebbe essere stato aggiornato con le chiamate a **va_arg** , ma non deve essere stato reimpostato con **va_end**. L'argomento successivo recuperato da **va_arg** da *dest* è uguale all'argomento successivo recuperato da *src*.
 
-- Dopo aver recuperati, tutti gli argomenti **va_end** Reimposta il puntatore su **NULL**. **va_end** deve essere chiamato su ogni elenco di argomenti inizializzato con **va_start** oppure **va_copy** prima che la funzione restituisce.
+- Dopo che sono stati recuperati tutti gli argomenti, **va_end** Reimposta il puntatore su **null**. **va_end** deve essere chiamato su ogni elenco di argomenti inizializzato con **va_start** o **va_copy** prima che la funzione restituisca.
 
 > [!NOTE]
 > Le macro in VARARGS.H sono deprecate e vengono mantenute solo per garantire la compatibilità con il codice scritto prima dello standard ANSI C89. In tutti gli altri casi, usare le macro in STDARGS.H.
@@ -143,7 +146,7 @@ int main()
 }
 ```
 
-Si noti che **testit** prevede che il secondo parametro sia un **int** o un **char**<strong>\*</strong>. Gli argomenti passati sono 0xffffffff (un **unsigned** **int**, non un **int**) e **NULL** (effettivamente un **int**, non una **char**<strong>\*</strong>). Quando il programma viene compilato per il codice nativo, produce il seguente output:
+Si noti che **TestIt** prevede che il secondo parametro sia di **tipo int** o **char**<strong>\*</strong>. Gli argomenti passati sono 0xFFFFFFFF ( **unsigned** **int**, not an **int**) e **null** (actually an **int**, not a **char**<strong>\*</strong>). Quando il programma viene compilato per il codice nativo, produce il seguente output:
 
 ```Output
 -1

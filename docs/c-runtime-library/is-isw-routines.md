@@ -1,14 +1,17 @@
 ---
 title: is, isw Routines
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isw
 - is
@@ -16,12 +19,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 1550f8f012802e03e9228e67c381915b1b4e1d64
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 4dad7ff74112da7fc7d0d01714b0cf0dd4e4495c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376040"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940183"
 ---
 # <a name="is-isw-routines"></a>is, isw Routines
 
@@ -36,7 +39,7 @@ ms.locfileid: "68376040"
 |[_isctype, iswctype, _isctype_l, _iswctype_l](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|[isupper, _isupper_l, iswupper, _iswupper_l](../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md)|
 |[isdigit, iswdigit, _isdigit_l, _iswdigit_l](../c-runtime-library/reference/isdigit-iswdigit-isdigit-l-iswdigit-l.md)|[isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Queste routine verificano che i caratteri soddisfino le condizioni specificate.
 

@@ -1,9 +1,9 @@
 ---
 title: set_unexpected (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - set_unexpected
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_unexpected
 helpviewer_keywords:
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-ms.openlocfilehash: 6c38421e447ca7b3f263148f51f0ade5c59e2804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77c8f0ae8c64423a656a2ebbe1fe3ef6dbe1b794
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356396"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948296"
 ---
-# <a name="setunexpected-crt"></a>set_unexpected (CRT)
+# <a name="set_unexpected-crt"></a>set_unexpected (CRT)
 
 Installa la funzione di terminazione personalizzata che verrà chiamata da **unexpected**.
 
@@ -42,29 +45,29 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 ### <a name="parameters"></a>Parametri
 
 *unexpFunction*<br/>
-Puntatore a una funzione personalizzata per sostituire il **imprevisto** (funzione).
+Puntatore a una funzione che si scrive per sostituire la funzione **imprevista** .
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla funzione di terminazione precedente registrato da **_set_unexpected** in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **NULL**.
+Restituisce un puntatore alla funzione di terminazione precedente registrata da **_set_unexpected** in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **null**.
 
 ## <a name="remarks"></a>Note
 
-Il **set_unexpected** funzione installazioni *unexpFunction* come nome della funzione chiamata dalla **imprevisto**. **imprevisto** non viene utilizzato nell'implementazione di gestione delle eccezioni C++ corrente. Il **unexpected_function** tipo è definito in EH. H come puntatore a una funzione unexpected definita dall'utente *unexpFunction* che restituisce **void**. Personalizzata *unexpFunction* funzione non deve restituire al chiamante.
+La funzione **set_unexpected** installa *unexpFunction* come funzione chiamata da **Unexpected**. non **è utilizzato** nell'implementazione corrente C++ di gestione delle eccezioni. Il tipo **unexpected_function** è definito in eh. H come puntatore a una funzione imprevista definita dall'utente, *unexpFunction* che restituisce **void**. La funzione *unexpFunction* personalizzata non deve tornare al chiamante.
 
 ```cpp
 typedef void ( *unexpected_function )( );
 ```
 
-Per impostazione predefinita **imprevisto** chiamate **terminare**. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come relativo argomento. **imprevista** chiama l'ultima funzione fornita come argomento al **set_unexpected**.
+Per impostazione predefinita, le chiamate **impreviste** **terminano**. È possibile modificare questo comportamento predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_unexpected** con il nome della funzione come argomento. **imprevisto** chiama l'ultima funzione fornita come argomento a **set_unexpected**.
 
-A differenza della funzione di terminazione personalizzata installata da una chiamata a **set_terminate**, può essere generata un'eccezione dall'interno *unexpFunction*.
+A differenza della funzione di terminazione personalizzata installata da una chiamata a **set_terminate**, un'eccezione può essere generata dall'interno di *unexpFunction*.
 
 In un ambiente multithreading, le funzioni unexpected vengono mantenute separatamente per ogni thread. Ogni nuovo thread richiede l'installazione della propria funzione unexpected. Quindi, ogni thread è responsabile della propria gestione degli eventi imprevisti.
 
-Nell'implementazione corrente di Microsoft di gestione delle eccezioni C++ **imprevisto** chiamate **terminare** per impostazione predefinita e non viene mai chiamato dalla libreria di runtime di gestione delle eccezioni. Non offre alcun vantaggio particolare alla chiamata **imprevisto** invece **terminare**.
+Nell'implementazione Microsoft corrente della gestione C++ delle eccezioni, le chiamate **impreviste** **terminano** per impostazione predefinita e non vengono mai chiamate dalla libreria di runtime per la gestione delle eccezioni. Non vi è alcun vantaggio particolare derivante dalla chiamata di **Unexpected** anziché **terminare**.
 
-È presente una sola **set_unexpected** gestore per tutto in modo dinamico le DLL o exe collegati; anche se si chiama **set_unexpected** il gestore può essere sostituito da un altro o che si stia sostituendo un gestore impostato da un altro file DLL o EXE.
+È disponibile un singolo gestore **set_unexpected** per tutte le dll o i exe collegati in modo dinamico; anche se si chiama **set_unexpected** , il gestore può essere sostituito da un altro o che si sta sostituendo un gestore impostato da un altro file dll o exe.
 
 ## <a name="requirements"></a>Requisiti
 

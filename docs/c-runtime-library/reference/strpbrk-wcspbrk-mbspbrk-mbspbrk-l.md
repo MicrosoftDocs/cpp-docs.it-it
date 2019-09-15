@@ -1,12 +1,12 @@
 ---
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrpbrk
 - _mbspbrk
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209567"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947155"
 ---
-# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
+# <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
 Cerca nelle stringhe caratteri dei set di caratteri specificati.
 
@@ -127,21 +130,21 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla prima occorrenza di qualsiasi carattere da *strCharSet* nelle *str*, o un puntatore NULL se i due argomenti di stringa non includono caratteri in comune.
+Restituisce un puntatore alla prima occorrenza di qualsiasi carattere da *strCharSet* in *Str*o un puntatore null se i due argomenti di stringa non hanno caratteri in comune.
 
 ## <a name="remarks"></a>Note
 
-Il `strpbrk` funzione restituisce un puntatore alla prima occorrenza di un carattere in *str* che appartiene al set di caratteri *strCharSet*. La ricerca non include il carattere Null di terminazione.
+La `strpbrk` funzione restituisce un puntatore alla prima occorrenza di un carattere in *Str* che appartiene al set di caratteri in *strCharSet*. La ricerca non include il carattere Null di terminazione.
 
 `wcspbrk` e `_mbspbrk` sono le versioni a caratteri wide e a caratteri multibyte di `strpbrk`. Gli argomenti e il valore restituito di `wcspbrk` sono stringhe con caratteri wide, mentre quelli di `_mbspbrk` sono stringhe con caratteri multibyte.
 
-`_mbspbrk` convalida i propri parametri. Se *str* oppure *strCharSet* è NULL, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `_mbspbrk` restituisce NULL e imposta `errno` su EINVAL. `strpbrk` e `wcspbrk` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
+`_mbspbrk` convalida i propri parametri. Se *Str* o *strCharSet* è null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `_mbspbrk` restituisce null e imposta `errno` su EINVAL. `strpbrk` e `wcspbrk` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 `_mbspbrk` è simile a `_mbscspn` ad eccezione del fatto che `_mbspbrk` restituisce un puntatore anziché un valore di tipo [size_t](../../c-runtime-library/standard-types.md).
 
-In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi C++ gli overload, definire il simbolo CONST_RETURN.
+In C queste funzioni accettano un puntatore **const** per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a un oggetto non**const** restituisce un puntatore a un oggetto non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS viene definita se sono disponibili entrambe le versioni **const** e non**const** di queste funzioni. Se è necessario il comportamento non**const** per entrambi C++ gli overload, definire il simbolo _CONST_RETURN.
 
-Il valore di output è interessato dall'impostazione dell'impostazione della categoria LC_CTYPE delle impostazioni locali; per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il **l** suffisso usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con la **l** suffisso è identico, ma usa il parametro delle impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è influenzato dall'impostazione della categoria LC_CTYPE delle impostazioni locali. Per ulteriori informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **suffisso** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione con il suffisso **suffisso** è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

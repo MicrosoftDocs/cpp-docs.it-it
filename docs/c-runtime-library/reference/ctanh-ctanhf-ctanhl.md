@@ -1,11 +1,11 @@
 ---
 title: ctanh, ctanhf, ctanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctanh
 - ctanhf
 - ctanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctanh
 - ctanhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288940"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941955"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -68,16 +71,16 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-La tangente iperbolica complessa di *z*.
+Tangente iperbolica complessa di *z*.
 
-|Input|Eccezione SEH|**matherr** eccezione|
+|Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|none|_DOMAIN|
 |± ∞ (tan, tanf)|NON VALIDO|_DOMAIN|
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **ctanh** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **ctanh** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **ctanh** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **ctanh** accetta e restituisce sempre un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

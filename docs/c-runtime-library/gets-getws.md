@@ -1,10 +1,10 @@
 ---
 title: gets, _getws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getws
 - gets
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr90.dll
 - msvcr120.dll
@@ -13,7 +13,10 @@ apilocation:
 - msvcrt.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getts
 - gets
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: bd5f4e885c0291be963320610942415fc7b61172
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 722d67336e11250f6a5459078dcea173f69bc2af
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738537"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944335"
 ---
-# <a name="gets-getws"></a>gets, _getws
+# <a name="gets-_getws"></a>gets, _getws
 
 Ottiene una riga dal flusso `stdin` . Sono disponibili versioni più sicure di queste funzioni. Vedere [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
@@ -73,7 +76,7 @@ Percorso di archiviazione per la stringa di input.
 
 Restituisce il relativo argomento se l'operazione ha esito positivo. Un puntatore **NULL** indica una condizione di errore o di fine file. Usare [ferror](../c-runtime-library/reference/ferror.md) o [feof](../c-runtime-library/reference/feof.md) per determinare quella che si è verificata. Se `buffer` è **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **NULL** e impostano errno su `EINVAL`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 La funzione `gets` legge una riga dal flusso di input standard `stdin` e la archivia in `buffer`. La riga è costituita da tutti i caratteri, incluso il primo carattere di nuova riga ('\n'). `gets` sostituisce quindi il carattere di nuova riga con un carattere Null ('\0') prima di restituire la riga. Al contrario, la funzione `fgets` mantiene il carattere di nuova riga. `_getws` è una versione a caratteri wide di `gets`il cui argomento e il cui valore restituito sono stringhe a caratteri wide.
 

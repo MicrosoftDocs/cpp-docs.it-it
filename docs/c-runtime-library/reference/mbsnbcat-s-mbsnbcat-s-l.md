@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcat_s, _mbsnbcat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnbcat_s
 - mbsnbcat_s
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a3f66f8fc8d4fd659880e8793fdaae635f9f7ba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331525"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952265"
 ---
-# <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
+# <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
-Aggiunge una stringa di caratteri multibyte, al massimo i primi **n** byte di due stringhe di caratteri multibyte. Queste sono versioni di [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Aggiunge a una stringa di caratteri multibyte, al massimo, i primi **n** byte di un'altra stringa di caratteri multibyte. Queste sono versioni di [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -83,13 +86,13 @@ errno_t _mbsnbcat_s_l(
 Stringa di destinazione di caratteri multibyte con terminazione Null.
 
 *sizeInBytes*<br/>
-Dimensioni dei *dest* buffer in byte.
+Dimensione del buffer di *destinazione* in byte.
 
 *src*<br/>
 Stringa di origine di caratteri multibyte con terminazione Null.
 
 *count*<br/>
-Numero di byte dal *src* da aggiungere alla *dest*.
+Numero di byte da *src* da accodare a *dest*.
 
 *locale*<br/>
 Impostazioni locali da usare.
@@ -103,16 +106,16 @@ Zero in caso di esito positivo; in caso contrario un codice di errore.
 |**Dest**|*sizeInBytes*|*src*|Valore restituito|
 |------------|-------------------|-----------|------------------|
 |**NULL**|qualsiasi|qualsiasi|**EINVAL**|
-|Qualsiasi|<= 0|qualsiasi|**EINVAL**|
-|Qualsiasi|qualsiasi|**NULL**|**EINVAL**|
+|Any|<= 0|qualsiasi|**EINVAL**|
+|Any|qualsiasi|**NULL**|**EINVAL**|
 
-Se si verifica una qualsiasi condizione di errore, la funzione genera un errore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione restituisce **EINVAL** e imposta **errno** al **EINVAL**.
+Se si verifica una qualsiasi condizione di errore, la funzione genera un errore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione restituisce **EINVAL** e imposta **errno** su **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **mbsnbcat_s** funzione Accoda alla *dest*, al massimo, il primo *count* byte del *src*. Se il byte immediatamente prima del carattere null in *dest* è un byte iniziale, viene sovrascritto dal byte iniziale di *src*. In caso contrario, il byte iniziale di *src* sovrascrive il carattere null di terminazione del *dest*. Se un byte null viene visualizzato nella *src* prima *conteggio* byte vengano aggiunti, **mbsnbcat_s** aggiunge tutti i byte da *src*, fino al carattere null carattere. Se *conteggio* è maggiore della lunghezza di *src*, la lunghezza del *src* viene usato al posto della *conteggio*. La stringa risultante termina con un carattere null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+La funzione **_mbsnbcat_s** aggiunge a *dest*, al massimo, il primo *conteggio* byte di *src*. Se il byte che precede immediatamente il carattere null in *dest* è un byte di apertura, viene sovrascritto dal byte iniziale di *src*. In caso contrario, il byte iniziale di *src* sovrascrive il carattere null di terminazione di *dest*. Se un byte null viene visualizzato in *src* prima che vengano aggiunti i byte *count* , **_mbsnbcat_s** aggiunge tutti i byte da *src*, fino al carattere null. Se *count* è maggiore della lunghezza di *src*, viene utilizzata la lunghezza di *src* al posto del *conteggio*. La stringa risultante termina con un carattere null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali; vedere [setlocale, wsetlocale](setlocale-wsetlocale.md) per altre informazioni. Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno le **l** suffisso usano le impostazioni locali correnti, mentre quelle che hanno il **l** suffisso usano il parametro delle impostazioni locali di passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è influenzato dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Per ulteriori informazioni [, vedere setlocale, _wsetlocale](setlocale-wsetlocale.md) . Le versioni di queste funzioni sono identiche, ad eccezione del fatto che quelle che non hanno il suffisso **suffisso** usano le impostazioni locali correnti e quelle che hanno il suffisso **suffisso** usano invece il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente eliminando quindi la necessità di specificare un argomento di dimensione e possono usare automaticamente le funzioni più recenti e sicure che sostituiscono quelle precedenti, meno sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

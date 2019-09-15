@@ -1,10 +1,10 @@
 ---
 title: _spawnvpe, _wspawnvpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _spawnvpe
 - _wspawnvpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _spawnvpe
 - wspawnvpe
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: a98cc3c441261a92876b94e1231e66bb71e9d3d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65a3eaa9fb88ccd1d674f1ebf1bccea01f684b7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355081"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957839"
 ---
-# <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
+# <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
 Crea ed esegue un nuovo processo.
 
@@ -71,19 +74,19 @@ Modalità di esecuzione per il processo chiamante.
 Percorso del file da eseguire.
 
 *argv*<br/>
-Matrice di puntatori agli argomenti. L'argomento *argv*[0] è in genere un puntatore a un percorso in modalità reale o al nome del programma in modalità protetta, e *argv*[1] tramite *argv*[**n**] sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. L'argomento *argv*[**n** + 1] deve essere un **NULL** puntatore per contrassegnare la fine dell'elenco di argomenti.
+Matrice di puntatori agli argomenti. L'argomento *argv*[0] è in genere un puntatore a un percorso in modalità reale o al nome del programma in modalità protetta e *argv*[1] tramite *argv*[**n**] sono puntatori alle stringhe di caratteri che costituiscono il nuovo elenco di argomenti. L'argomento *argv*[**n** + 1] deve essere un puntatore **null** per contrassegnare la fine dell'elenco di argomenti.
 
 *envp*<br/>
 Matrice di puntatori alle impostazioni d'ambiente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore restituito da un oggetto sincrono **spawnvpe** oppure **wspawnvpe** (**P_WAIT** specificata per *modalità*) è lo stato di uscita del nuovo processo. Il valore restituito da asincrono **spawnvpe** oppure **wspawnvpe** (**P_NOWAIT** oppure **P_NOWAITO** specificato per  *modalità*) è l'handle del processo. Lo stato di uscita è 0 se il processo è terminato normalmente. È possibile impostare lo stato di uscita su un valore diverso da zero se il processo generato chiama specificatamente la **uscire** routine con un argomento diverso da zero. Se il nuovo processo non ha impostato in modo esplicito uno stato di uscita positivo, uno stato di uscita positivo indica l'uscita anomala con interruzione. Valore restituito di -1 indica un errore (non viene avviato il nuovo processo). In questo caso **errno** è impostato su uno dei valori seguenti:
+Il valore restituito da un oggetto sincrono **_spawnvpe** o **wspawnvpe** ( **_P_WAIT** specificato per la *modalità*) è lo stato di uscita del nuovo processo. Il valore restituito da un **_spawnvpe** asincrono o **wspawnvpe** ( **_P_NOWAIT** o **_P_NOWAITO** specificato per la *modalità*) è l'handle del processo. Lo stato di uscita è 0 se il processo è terminato normalmente. È possibile impostare lo stato di uscita su un valore diverso da zero se il processo generato chiama in modo specifico la routine di **uscita** con un argomento diverso da zero. Se il nuovo processo non ha impostato in modo esplicito uno stato di uscita positivo, uno stato di uscita positivo indica l'uscita anomala con interruzione. Un valore restituito-1 indica un errore (il nuovo processo non è stato avviato). In questo caso **errno** viene impostato su uno dei valori seguenti:
 
 |||
 |-|-|
 | **E2BIG** | L'elenco di argomenti supera i 1024 byte. |
-| **EINVAL** | *modalità* argomento non è valido. |
+| **EINVAL** | argomento *mode* non valido. |
 | **ENOENT** | Il file o il percorso non è stato trovato. |
 | **ENOEXEC** | Il file specificato non è eseguibile o il formato del file eseguibile non è valido. |
 | **ENOMEM** | Memoria insufficiente per eseguire il nuovo processo. |
@@ -92,9 +95,9 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni crea ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando e una matrice di puntatori alle impostazioni di ambiente. Queste funzioni usano la **percorso** variabile di ambiente per individuare il file da eseguire.
+Ognuna di queste funzioni crea ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando e una matrice di puntatori alle impostazioni di ambiente. Queste funzioni usano la variabile di ambiente **path** per trovare il file da eseguire.
 
-Queste funzioni convalidano i relativi parametri. Se uno dei due *cmdname* oppure *argv* è un puntatore null, o se *argv* punta a un puntatore null oppure *argv*[0] è una stringa vuota, non valido viene richiamato il gestore di parametro, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL**e restituiscono -1. Nessun nuovo processo viene generato.
+Queste funzioni convalidano i relativi parametri. Se *CmdName* o *argv* è un puntatore null o se *argv* punta a un puntatore null o *argv*[0] è una stringa vuota, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL**e restituiscono-1. Nessun nuovo processo viene generato.
 
 ## <a name="requirements"></a>Requisiti
 

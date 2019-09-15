@@ -1,7 +1,7 @@
 ---
 title: Macro offsetof
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,19 +12,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - offsetof
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 278fca89046fcfc98e8c3ff726918cb4319e4ab0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156066"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951253"
 ---
 # <a name="offsetof-macro"></a>Macro offsetof
 
@@ -49,14 +52,14 @@ Nome del membro nella struttura di dati padre per il quale determinare l'offset.
 
 ## <a name="return-value"></a>Valore restituito
 
-**OffsetOf** restituisce l'offset in byte del membro specificato dall'inizio della struttura di dati padre. Viene definito per i campi di bit.
+**offsetof** restituisce l'offset in byte del membro specificato dall'inizio della struttura di dati padre. Viene definito per i campi di bit.
 
 ## <a name="remarks"></a>Note
 
-Il **offsetof** macro restituisce l'offset in byte del *memberName* dall'inizio della struttura specificata da *structName* come valore di tipo **size_ t**. È possibile specificare tipi con il **struct** (parola chiave).
+La macro **offsetof** restituisce l'offset in byte di *memberName* dall'inizio della struttura specificata da *structName* come valore di tipo **size_t**. È possibile specificare i tipi con la parola chiave **struct** .
 
 > [!NOTE]
-> **OffsetOf** non è una funzione e non può essere descritta utilizzando un prototipo C.
+> **offsetof** non è una funzione e non può essere descritta usando un prototipo C.
 
 ## <a name="requirements"></a>Requisiti
 

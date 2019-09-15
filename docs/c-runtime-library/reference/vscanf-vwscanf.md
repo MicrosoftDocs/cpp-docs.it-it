@@ -1,10 +1,10 @@
 ---
 title: vscanf, vwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vscanf
 - vwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-ms.openlocfilehash: 936dcc34fb0d2ed73919ca59c7419f2090c54e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86e6588f6309989317c4cee7ec398cfa809afe9b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383503"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945438"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf, vwscanf
 
@@ -57,18 +60,18 @@ Elenco di argomenti variabili.
 
 Restituisce il numero di campi che vengono convertiti ed assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato.
 
-Se *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostare **errno** al **EINVAL**.
+Se *Format* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **EOF** e impostano **errno** su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **vscanf** funzione legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni specificate dal *arglist* elenco di argomenti. Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde all'identificatore di tipo in *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+La funzione **vscanf** legge i dati dal flusso di input standard **stdin** e scrive i dati nelle posizioni fornite dall'elenco di argomenti di *arglist* . Ogni argomento nell'elenco deve essere un puntatore a una variabile di un tipo che corrisponde a un identificatore di tipo nel *formato*. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
 > [!IMPORTANT]
-> Quando si usa **vscanf** per leggere una stringa, specificare sempre una larghezza per il **%s** formato (ad esempio **"% 32s"** anziché **"%s"**); in caso contrario, input formattato in modo non corretto può causare un sovraccarico del buffer. In alternativa, è possibile usare [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) o [fgets](fgets-fgetws.md).
+> Quando si utilizza **vscanf** per leggere una stringa, specificare sempre una larghezza per il formato **% s** (ad esempio, **"% 32s"** anziché **"% s"** ); in caso contrario, l'input formattato in modo errato può causare un sovraccarico del buffer. In alternativa, è possibile usare [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) o [fgets](fgets-fgetws.md).
 
-**vwscanf** è una versione a caratteri wide di **vscanf**; gli *formato* argomento **vwscanf** è una stringa di caratteri "wide". **vwscanf** e **vscanf** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vscanf** non supporta l'input da un flusso UNICODE.
+**vwscanf** è una versione a caratteri wide di **vscanf**; l'argomento *Format* per **vwscanf** è una stringa di caratteri wide. **vwscanf** e **vscanf** si comportano in modo identico se il flusso viene aperto in modalità ANSI. **vscanf** non supporta l'input da un flusso Unicode.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -85,7 +88,7 @@ Per altre informazioni, vedere [Campi di specifica di formato: funzioni scanf e 
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

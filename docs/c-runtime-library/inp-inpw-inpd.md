@@ -1,11 +1,11 @@
 ---
 title: _inp, _inpw, _inpd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _inp
 - _inpw
 - _inpd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -13,7 +13,10 @@ apilocation:
 - msvcr80.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - inpd
 - _inp
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 4668002fdf709e3e425ac379f136e228250896d4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748346"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944989"
 ---
-# <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
+# <a name="_inp-_inpw-_inpd"></a>_inp, _inpw, _inpd
 
 Restituisce, da una porta, un byte (`_inp`), una parola (`_inpw`) o una parola doppia (`_inpd`).
 
@@ -69,7 +72,7 @@ Numero porta di I/O.
 
 Le funzioni restituiscono il byte, la parola o la parola doppia letti da `port`. Non vi è restituzione di errori.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Le funzioni `_inp`, `_inpw`e `_inpd` leggono un byte, una parola e una doppia parola, rispettivamente, dalla porta di input specificata. Il valore di input può essere qualsiasi Unsigned Short Integer nell'intervallo compreso tra 0 e 65.535.
 

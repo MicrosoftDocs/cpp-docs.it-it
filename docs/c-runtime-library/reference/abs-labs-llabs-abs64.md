@@ -1,12 +1,12 @@
 ---
 title: abs, labs, llabs, _abs64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - abs
 - _abs64
 - labs
 - llabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stdlib/_abs64
 - math/abs
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341990"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939924"
 ---
-# <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
+# <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
 Calcola il valore assoluto dell'argomento.
 
@@ -71,13 +74,13 @@ Valore numerico.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **abs**, **labs**, **llabs** e **_abs64** funzioni restituiscono il valore assoluto del parametro *n*. Non vi è restituzione di errori.
+Le funzioni **ABS**, **Labs**, **llabs** e **_abs64** restituiscono il valore assoluto del parametro *n*. Non vi è restituzione di errori.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **abs** che accettano e restituiscono **long**, **long** **lungo**,  **float**, **doppie**, e **long** **double** valori. Questi overload sono definiti nell'intestazione \<cmath>. In un programma C **abs** accetta e restituisce sempre un **int**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **ABS** che accettano e restituiscono valori **Long** **, Long** **Long**, **float**, **Double**e **Long** **Double** . Questi overload sono definiti nell'intestazione \<cmath>. In un programma C, **ABS** accetta e restituisce sempre un valore **int**.
 
-**Sezione specifica Microsoft**: Poiché l'intervallo di interi negativi che possono essere rappresentati usando qualsiasi tipo integrale è maggiore dell'intervallo di interi positivi che possono essere rappresentati usando lo stesso tipo, è possibile fornire a queste funzioni un argomento che non può essere convertito. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, il **abs** funzioni restituiscono il valore dell'argomento non modificato. In particolare, `abs(INT_MIN)` restituisce `INT_MIN`, `labs(LONG_MIN)` restituisce `LONG_MIN`, `llabs(LLONG_MIN)` restituisce `LLONG_MIN` e `_abs64(_I64_MIN)` restituisce `_I64_MIN`. Ciò significa che il **abs** funzioni non possono essere utilizzate per garantire un valore positivo.
+**Specifico di Microsoft**: Poiché l'intervallo di interi negativi che possono essere rappresentati usando qualsiasi tipo integrale è maggiore dell'intervallo di interi positivi che possono essere rappresentati usando lo stesso tipo, è possibile fornire a queste funzioni un argomento che non può essere convertito. Se il valore assoluto dell'argomento non può essere rappresentato dal tipo restituito, le funzioni **ABS** restituiscono il valore dell'argomento invariato. In particolare, `abs(INT_MIN)` restituisce `INT_MIN`, `labs(LONG_MIN)` restituisce `LONG_MIN`, `llabs(LLONG_MIN)` restituisce `LLONG_MIN` e `_abs64(_I64_MIN)` restituisce `_I64_MIN`. Ciò significa che non è possibile usare le funzioni **ABS** per garantire un valore positivo.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -86,7 +89,7 @@ Dato che C++ consente l'overload, è possibile chiamare overload di **abs** che 
 |**abs**, **labs**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> o \<stdlib.h>|
 
-Per usare le versioni di overload **abs** in C++, è necessario includere il \<cmath > dell'intestazione.
+Per usare le versioni di overload di **ABS** in C++, è necessario includere l' \<intestazione cmath >.
 
 ## <a name="example"></a>Esempio
 

@@ -1,9 +1,9 @@
 ---
 title: fpclassify
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fpclassify
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,8 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - fpclassify
 - math/fpclassify
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: a25897a110d96923a45695d61f923dc7818c7e3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9b5aa1f7dc20cc920a51c2c36371eb907469875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287941"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957070"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -60,9 +61,9 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fpclassify** restituisce un valore integer che indica la classe a virgola mobile dell'argomento *x*. Questa tabella mostra i valori possibili restituiti da **fpclassify**, definito nel \<Math. h >.
+**fpclassify** restituisce un valore intero che indica la classe a virgola mobile dell'argomento *x*. Questa tabella mostra i valori possibili restituiti da **fpclassify**, definiti in \<Math. h >.
 
-|Value|Descrizione|
+|Value|DESCRIZIONE|
 |-----------|-----------------|
 |**FP_NAN**|NaN silenzioso, segnalatore o indeterminato|
 |**FP_INFINITE**|Infinito positivo o negativo|
@@ -72,7 +73,7 @@ Valore a virgola mobile da verificare.
 
 ## <a name="remarks"></a>Note
 
-In C **fpclassify** è una macro; in C++ **fpclassify** è una funzione di overload che usa i tipi di argomento **float**, **double**, o **lungo** **doppie**. In entrambi i casi, il valore restituito dipende dal tipo effettivo dell'espressione argomento e non da qualsiasi rappresentazione intermedia. Ad esempio, una normale **doppie** o **long** **double** valore possa diventare un numero infinito, denormalizzato o zero valore quando convertito in un **float**.
+In C, **fpclassify** è una macro. in C++ **fpclassify** è una funzione in overload usando i tipi di argomento **float**, **Double**o **Long** **Double**. In entrambi i casi, il valore restituito dipende dal tipo effettivo dell'espressione argomento e non da qualsiasi rappresentazione intermedia. Ad esempio, **un normale valore Double o** **Long** **Double** può diventare un valore infinito, denormalizzato o zero quando viene convertito in un valore **float**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -80,7 +81,7 @@ In C **fpclassify** è una macro; in C++ **fpclassify** è una funzione di overl
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> o \<cmath>|
 
-Il **fpclassify** macro e **fpclassify** funzioni è conforme a ISO C99 e C++11 11 specifiche. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+Le funzioni macro e **fpclassify** di **fpclassify** sono conformi alle specifiche ISO C99 e c++ 11. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

@@ -1,9 +1,9 @@
 ---
 title: setvbuf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - setvbuf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setvbuf
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38b6474f550107a8edd941c7112ba98891ab3c12
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356316"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948188"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -57,27 +60,27 @@ Buffer allocato dall'utente.
 Modalità di buffering.
 
 *size*<br/>
-Dimensioni del buffer in byte. Intervallo consentito: 2 <= *size* <= INT_MAX (2147483647). Internamente, il valore specificato per *dimensioni* viene arrotondato per difetto al multiplo più vicino di 2.
+Dimensioni del buffer in byte. Intervallo consentito: 2 <= *size* <= INT_MAX (2147483647). Internamente, il valore specificato per *size* viene arrotondato per difetto al multiplo più vicino di 2.
 
 ## <a name="return-value"></a>Valore restituito
 
 Restituisce 0 in caso di esito positivo.
 
-Se *flusso* viene **NULL**, o se *modalità* oppure *dimensione* è non all'interno di una modifica valida, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** al **EINVAL**.
+Se il *flusso* è **null**o se la *modalità* o la *dimensione* non rientra in una modifica valida, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **setvbuf** funzione consente al programma di controllare sia il buffering e per la dimensione del buffer *stream*. *flusso* deve fare riferimento a un file aperto che non è stata eseguita un'operazione dei / o dopo l'apertura. La matrice a cui punta *buffer* viene usato come buffer, a meno che non è **NULL**, nel qual caso **setvbuf** Usa un buffer allocato automaticamente della lunghezza  *le dimensioni*/2 \* 2 byte.
+La funzione **setvbuf** consente al programma di controllare il buffering e le dimensioni del buffer per il *flusso*. il *flusso* deve fare riferimento a un file aperto che non è stato sottoposto a un'operazione di I/O dal momento in cui è stato aperto. La matrice a cui fa riferimento il *buffer* viene utilizzata come buffer, a meno che non sia **null**, nel qual caso **setvbuf** utilizza un buffer allocato automaticamente con *dimensioni*di lunghezza/2 \* 2 byte.
 
-La modalità deve essere **iofbf**, **iolbf**, o **ionbf**. Se *modalità* viene **iofbf** oppure **iolbf**, quindi *dimensione* viene usato come le dimensioni del buffer. Se *modalità* viene **ionbf**, il flusso è non memorizzato nel buffer e *dimensioni* e *buffer* vengono ignorati. I valori per *modalità* e i relativi significati sono:
+La modalità deve essere **_IOFBF**, **_IOLBF**o **_IONBF**. Se la *modalità* è **_IOFBF** o **_IOLBF**, la *dimensione* viene utilizzata come dimensione del buffer. Se la *modalità* è **_IONBF**, il flusso non viene memorizzato nel buffer e le *dimensioni* e il *buffer* vengono ignorati. I valori per la *modalità* e i relativi significati sono:
 
-|*modalità* valore|Significato|
+|valore della *modalità*|Significato|
 |-|-|
-| **_IOFBF** | Buffering completo vale a dire *buffer* viene usato come buffer e *dimensioni* viene usato come le dimensioni del buffer. Se *buffer* viene **NULL**, un buffer allocato automaticamente *dimensioni* byte viene utilizzato. |
-| **_IOLBF** | Per alcuni sistemi, viene così fornito il buffering di riga. Tuttavia, per Win32, il comportamento è identico **iofbf** -Buffering completo. |
-| **_IONBF** | Nessun buffer viene usato, indipendentemente dalla *buffer* oppure *dimensioni*. |
+| **_IOFBF** | Buffering completo; ovvero, il *buffer* viene utilizzato come buffer e le *dimensioni* vengono utilizzate come dimensioni del buffer. Se *buffer* è **null**, viene utilizzata una lunghezza del buffer allocata automaticamente *in byte.* |
+| **_IOLBF** | Per alcuni sistemi, viene così fornito il buffering di riga. Tuttavia, per Win32, il comportamento è lo stesso di **_IOFBF** -Full buffering. |
+| **_IONBF** | Nessun buffer viene utilizzato, indipendentemente dal *buffer* o dalle *dimensioni*. |
 
 ## <a name="requirements"></a>Requisiti
 

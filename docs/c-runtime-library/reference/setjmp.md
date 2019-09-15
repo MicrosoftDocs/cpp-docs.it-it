@@ -1,9 +1,9 @@
 ---
 title: setjmp
 ms.date: 08/14/2018
-apiname:
+api_name:
 - setjmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setjmp
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - current state
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
-ms.openlocfilehash: 9f1a2b71a7b8fc7603c36938879348dca16288e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a88467f5b94ceae4281a35f1486380a877be2e5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948252"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -49,24 +52,24 @@ Variabile in cui è archiviato l'ambiente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce 0 dopo aver salvato l'ambiente dello stack. Se **setjmp** restituisce come risultato di una `longjmp` chiamare, viene restituito il *valore* argomento del `longjmp`, oppure se il *valore* argomento di `longjmp` è 0, **setjmp** restituisce 1. Non vi è restituzione di errori.
+Restituisce 0 dopo aver salvato l'ambiente dello stack. Se **setjmp** restituisce come risultato di una `longjmp` chiamata, restituisce l'argomento *value* di `longjmp`o se l'argomento *value* di `longjmp` è 0, **setjmp** restituisce 1. Non vi è restituzione di errori.
 
 ## <a name="remarks"></a>Note
 
-Il **setjmp** funzione Salva un ambiente dello stack che successivamente è possibile ripristinare, usando `longjmp`. Se usati insieme, **setjmp** e `longjmp` consentono di eseguire non in locale **goto**. In genere vengono utilizzate per passare il controllo di esecuzione alla gestione degli errori o al codice di ripristino in una routine chiamata in precedenza senza utilizzare le convenzioni normali di chiamata o restituzione.
+La funzione **setjmp** salva un ambiente dello stack, che può essere successivamente ripristinato `longjmp`utilizzando. Se usati insieme, **setjmp** e `longjmp` forniscono un modo per eseguire un'istruzione **goto**non locale. In genere vengono utilizzate per passare il controllo di esecuzione alla gestione degli errori o al codice di ripristino in una routine chiamata in precedenza senza utilizzare le convenzioni normali di chiamata o restituzione.
 
-Una chiamata a **setjmp** Salva l'ambiente dello stack corrente in *env*. Una chiamata successiva al `longjmp` Ripristina l'ambiente salvato e restituisce il controllo al punto immediatamente successivo alla corrispondente **setjmp** chiamare. Tutte le variabili (eccetto le variabili di registro) accessibili al controllo di ricezione di routine contengono i valori che avevano quando `longjmp` è stato chiamato.
+Una chiamata a **setjmp** Salva l'ambiente dello stack corrente in *ENV*. Una chiamata successiva a `longjmp` ripristina l'ambiente salvato e restituisce il controllo al punto immediatamente successivo alla chiamata **setjmp** corrispondente. Tutte le variabili (eccetto le variabili di registro) accessibili al controllo di ricezione di routine contengono i valori che avevano quando `longjmp` è stato chiamato.
 
-Non è possibile usare **setjmp** per passare dal codice nativo a codice gestito.
+Non è possibile usare **setjmp** per passare dal codice nativo al codice gestito.
 
 **Sezione specifica Microsoft**
 
-Nel codice C++ di Microsoft su Windows, **longjmp** utilizza la stessa semantica di rimozione dello stack come codice di gestione delle eccezioni. È possibile usare esattamente negli stessi scenari che possono essere generate le eccezioni C++. Tuttavia, questo uso non è portabile e viene fornito con alcuni avvertimenti importanti relativi. Per informazioni dettagliate, vedere [longjmp](longjmp.md).
+In Microsoft C++ code in Windows, **longjmp** usa la stessa semantica di rimozione dello stack del codice di gestione delle eccezioni. È possibile usare in modo sicuro nelle stesse posizioni in C++ cui è possibile generare eccezioni. Tuttavia, questo utilizzo non è portabile e presenta alcune avvertenze importanti. Per informazioni dettagliate, vedere [longjmp](longjmp.md).
 
 **Fine sezione specifica Microsoft**
 
 > [!NOTE]
-> Nel codice C++ portabile, è possibile presupporre `setjmp` e `longjmp` supportano la semantica degli oggetti C++. In particolare, un `setjmp` / `longjmp` chiamata coppia produce un comportamento indefinito se sostituendo il `setjmp` e `longjmp` da **catch** e **throw** invocherebbe eventuali distruttori non semplici per gli oggetti automatici. Nei programmi C++, è consigliabile che usare il meccanismo di gestione delle eccezioni C++.
+> Nel codice C++ portatile non è possibile `setjmp` presupporre `longjmp` e C++ supportare la semantica degli oggetti. In particolare, `setjmp` una coppia di chiamate presenta un / `longjmp` comportamento non definito `setjmp` se `longjmp` la sostituzione di e di **catch** e **throw** richiama qualsiasi distruttore non semplice per gli oggetti automatici. Nei C++ programmi, si consiglia di utilizzare il C++ meccanismo di gestione delle eccezioni.
 
 Per altre informazioni, vedere [Uso di setjmp e longjmp](../../cpp/using-setjmp-longjmp.md).
 

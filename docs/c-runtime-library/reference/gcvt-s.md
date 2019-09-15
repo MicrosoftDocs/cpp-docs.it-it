@@ -1,9 +1,9 @@
 ---
 title: _gcvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt_s
 - gcvt_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332302"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956116"
 ---
-# <a name="gcvts"></a>_gcvt_s
+# <a name="_gcvt_s"></a>_gcvt_s
 
 Converte un valore a virgola mobile in stringa. Questa è una versione di [_gcvt](gcvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -77,19 +80,19 @@ Zero in caso di esito positivo. Se si verifica un errore a causa di un parametro
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*buffer*|*sizeInBytes*|*value*|*cifre*|INVIO|Valore in *buffer*|
+|*buffer*|*sizeInBytes*|*value*|*cifre*|INVIO|Valore nel *buffer*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|qualsiasi|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
-|Non **NULL** (punta alla memoria valida)|zero|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
-|Non **NULL** (punta alla memoria valida)|qualsiasi|qualsiasi|>= *sizeInBytes*|**EINVAL**|Non modificato.|
+|Not **null** (punta alla memoria valida)|zero|qualsiasi|qualsiasi|**EINVAL**|Non modificato.|
+|Not **null** (punta alla memoria valida)|qualsiasi|qualsiasi|>= *sizeInBytes*|**EINVAL**|Non modificato.|
 
 **Problemi di sicurezza**
 
-**gcvt_s** può generare una violazione di accesso se *buffer* punta alla memoria valida e non è **NULL**.
+**_gcvt_s** può generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**.
 
 ## <a name="remarks"></a>Note
 
-Il **gcvt_s** funzione converte a virgola mobile *valore* in una stringa di caratteri (che include un separatore decimale e un possibile byte del segno) e archivia la stringa nella *buffer* . *buffer* deve essere sufficientemente grande da contenere il valore convertito oltre a un carattere di terminazione null, che viene aggiunto automaticamente. Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per Mobile valore del punto. Se una dimensione del buffer *cifre* + 1 viene usato, la funzione non sovrascriverà la fine del buffer, pertanto assicurarsi di specificare un buffer sufficiente per questa operazione. **gcvt_s** tenta di produrre *cifre* cifre nel formato decimale. Se non è possibile, produce *cifre* cifre nel formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
+La funzione **_gcvt_s** converte un *valore* a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte di segno) e archivia la stringa nel *buffer*. il *buffer* deve essere sufficientemente grande da contenere il valore convertito e un carattere null di terminazione, che viene aggiunto automaticamente. Un buffer di lunghezza **_CVTBUFSIZE** è sufficiente per qualsiasi valore a virgola mobile. Se viene utilizzata una dimensione del buffer di *cifre* + 1, la funzione non sovrascriverà la fine del buffer, pertanto assicurarsi di specificare un buffer sufficiente per questa operazione. **_gcvt_s** tenta *di produrre cifre cifrate* in formato decimale. In caso contrario, *le cifre vengono generate* in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.
 
 In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

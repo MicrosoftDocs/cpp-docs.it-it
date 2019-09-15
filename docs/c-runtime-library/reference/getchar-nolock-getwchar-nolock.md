@@ -1,10 +1,10 @@
 ---
 title: _getchar_nolock, _getwchar_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getchar_nolock
 - _getwchar_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwchar_nolock
 - _getwchar_nolock
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-ms.openlocfilehash: feeda65d06dbcfecb6ea5adc60934abf3d0df415
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df7d07d4478d8feee1d5a0b35c40e4158a93be82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331807"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955401"
 ---
-# <a name="getcharnolock-getwcharnolock"></a>_getchar_nolock, _getwchar_nolock
+# <a name="_getchar_nolock-_getwchar_nolock"></a>_getchar_nolock, _getwchar_nolock
 
 Legge un carattere dall'input standard.
 
@@ -53,7 +56,7 @@ Vedere [getchar, getwchar](getchar-getwchar.md).
 
 ## <a name="remarks"></a>Note
 
-**getchar_nolock** e **getwchar_nolock** sono identiche alle **getchar** e **getwchar** ad eccezione del fatto che non sono protette da interferenze da altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+**_getchar_nolock** e **_getwchar_nolock** sono identici a **GetChar** e **getwchar** ad eccezione del fatto che non sono protetti da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -68,7 +71,7 @@ Vedere [getchar, getwchar](getchar-getwchar.md).
 |**_getchar_nolock**|\<stdio.h>|
 |**_getwchar_nolock**|\<stdio.h> o \<wchar.h>|
 
-La console non è supportata nelle App Universal Windows Platform (UWP). L'handle del flusso standard associati con la console **stdin**, **stdout**, e **stderr**, devono essere reindirizzati prima di poter usare le funzioni di runtime C nelle App UWP . Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+La console non è supportata nelle app piattaforma UWP (Universal Windows Platform) (UWP). Gli handle del flusso standard associati alla console, **stdin**, **stdout**e **stderr**devono essere reindirizzati prima che le funzioni di runtime del linguaggio C possano usarle nelle app UWP. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

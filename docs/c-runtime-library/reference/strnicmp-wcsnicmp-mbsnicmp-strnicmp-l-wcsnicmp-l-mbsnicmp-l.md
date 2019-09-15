@@ -1,14 +1,14 @@
 ---
 title: _strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsnicmp
 - _strnicmp_l
 - _wcsnicmp_l
 - _strnicmp
 - _mbsnicmp
 - _mbsnicmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsnicmp_l
 - _strnicmp
@@ -66,19 +69,19 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: 38f5697e0c7fe147a481249888595b7d51cfe93c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d1645c33684f5a0fbabc2119592c39a7df97ca3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209690"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947127"
 ---
-# <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
+# <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
 Confronta il numero specificato di caratteri di due stringhe senza fare distinzione tra maiuscole e minuscole.
 
 > [!IMPORTANT]
-> **mbsnicmp** e **mbsnicmp_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsnicmp** e **_mbsnicmp_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -135,21 +138,21 @@ Indica la relazione tra le sottostringhe, come indicato di seguito.
 
 |Valore restituito|Descrizione|
 |------------------|-----------------|
-|< 0|*String1* sottostringa è minore di *string2* sottostringa.|
-|0|*String1* è identica alla sottostringa *string2* sottostringa.|
-|> 0|*String1* è maggiore di sottostringa *string2* sottostringa.|
+|< 0|la sottostringa *String1* è minore di *string2* substring.|
+|0|la sottostringa *String1* è identica alla sottostringa *string2* .|
+|> 0|la sottostringa *String1* è maggiore di *string2* substring.|
 
-Errore di convalida dei parametri, queste funzioni restituiscono **_NLSCMPERROR**, che è definito nel \<String. h > e \<Mbstring. h >.
+In un errore di convalida del parametro, queste funzioni restituiscono **_NLSCMPERROR**, che \<è definito in String. \<h > e mbstring. h >.
 
 ## <a name="remarks"></a>Note
 
-Il **strnicmp** funzione esegue un confronto ordinale al massimo i primi *conteggio* caratteri del *string1* e *string2*. Il confronto viene eseguito senza fare distinzione tra maiuscole e minuscole convertendo ogni carattere in minuscolo. **strnicmp** è una versione di maiuscole e minuscole **strncmp**. Il confronto termina se viene raggiunto un carattere di terminazione null in entrambe le stringhe prima *conteggio* i caratteri vengono confrontati. Se le stringhe sono uguali quando un carattere di terminazione null viene raggiunta in entrambe le stringhe prima *conteggio* i caratteri vengono confrontati, la stringa più corta sarà minore.
+La funzione **_strnicmp** consente di confrontare ordinali, al massimo, i primi caratteri di *conteggio* di *String1* e *string2*. Il confronto viene eseguito senza fare distinzione tra maiuscole e minuscole convertendo ogni carattere in minuscolo. **_strnicmp** è una versione senza distinzione tra maiuscole e minuscole di **strncmp**. Il confronto termina se viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* . Se le stringhe sono uguali quando viene raggiunto un carattere di terminazione null in entrambe le stringhe prima che vengano confrontati i caratteri di *conteggio* , la stringa più corta è minore.
 
-I caratteri da 91 a 96 nella tabella ASCII ('[', '\\', ']', '^', '_' e '\`') sono considerati minori rispetto a qualsiasi carattere alfabetico. Questo ordinamento è identico a quello del **stricmp**.
+I caratteri da 91 a 96 nella tabella ASCII ('[', '\\', ']', '^', '_' e '\`') sono considerati minori rispetto a qualsiasi carattere alfabetico. Questo ordinamento è identico a quello di **stricmp**.
 
-**wcsnicmp** e **mbsnicmp** sono versioni a caratteri wide e caratteri multibyte di **strnicmp**. Gli argomenti di **wcsnicmp** sono caratteri wide, mentre quelli di stringhe **mbsnicmp** sono stringhe a caratteri multibyte. **mbsnicmp** riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte corrente e restituisce **_NLSCMPERROR** in caso di errore. Per altre informazioni, vedere [Tabelle codici](../../c-runtime-library/code-pages.md). A parte ciò, queste tre funzioni si comportano in modo identico. Queste funzioni vengono influenzate dalle impostazioni locali, ovvero le versioni che non hanno le **l** suffisso usano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni che hanno il **l** suffisso Usare invece i *delle impostazioni locali* che viene passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**_wcsnicmp** e **_mbsnicmp** sono versioni a caratteri wide e a caratteri multibyte di **_strnicmp**. Gli argomenti di **_wcsnicmp** sono stringhe a caratteri wide. quelli di **_mbsnicmp** sono stringhe di caratteri multibyte. **_mbsnicmp** riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte corrente e restituisce **_NLSCMPERROR** su un errore. Per altre informazioni, vedere [Tabelle codici](../../c-runtime-library/code-pages.md). A parte ciò, queste tre funzioni si comportano in modo identico. Queste funzioni sono interessate dalle impostazioni locali: le versioni che non hanno il suffisso **suffisso** usano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. le versioni che hanno il suffisso **suffisso** usano invece le *impostazioni locali* passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1* oppure *string2* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostare **errno** al **EINVAL**.
+Tutte queste funzioni convalidano i relativi parametri. Se *String1* o *string2* è un puntatore null, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostano **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

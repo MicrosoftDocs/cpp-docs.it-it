@@ -1,9 +1,9 @@
 ---
 title: _aligned_free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_free_dbg
 - aligned_free_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-ms.openlocfilehash: f51b9b9573ab2e23a0a60979c55a33d2e5cff747
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b510d16b6e784202094bb05e6364f7af1b1fff97
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341899"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939912"
 ---
-# <a name="alignedfreedbg"></a>_aligned_free_dbg
+# <a name="_aligned_free_dbg"></a>_aligned_free_dbg
 
 Libera un blocco di memoria che è stato allocato con [_aligned_malloc](aligned-malloc.md) o [_aligned_offset_malloc](aligned-offset-malloc.md) (solo versione di debug).
 
@@ -44,13 +47,13 @@ void _aligned_free_dbg(
 ### <a name="parameters"></a>Parametri
 
 *memblock*<br/>
-Un puntatore al blocco di memoria che è stato restituito per il [aligned_malloc](aligned-malloc.md) oppure [aligned_offset_malloc](aligned-offset-malloc.md) (funzione).
+Puntatore al blocco di memoria che è stato restituito alla funzione [_aligned_malloc](aligned-malloc.md) o [_aligned_offset_malloc](aligned-offset-malloc.md) .
 
 ## <a name="remarks"></a>Note
 
-Il **aligned_free_dbg** funzione è una versione di debug di [aligned_free](aligned-free.md) (funzione). Quando [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **aligned_free_dbg** viene ridotta a una chiamata a `_aligned_free`. Entrambe `_aligned_free` e **aligned_free_dbg** liberano un blocco di memoria nell'heap di base, ma **aligned_free_dbg** include una funzionalità di debug: la possibilità di mantenere liberati i blocchi nell'elenco collegato dell'heap per simulare condizioni di memoria insufficiente.
+La funzione **_aligned_free_dbg** è una versione di debug della funzione [_aligned_free](aligned-free.md) . Quando _ [debug](../../c-runtime-library/debug.md) non è definito, ogni chiamata a **_aligned_free_dbg** viene ridotta a una chiamata `_aligned_free`a. Sia `_aligned_free` che **_aligned_free_dbg** liberano un blocco di memoria nell'heap di base, ma **_aligned_free_dbg** supporta una funzionalità di debug: la possibilità di tenere i blocchi liberati nell'elenco collegato dell'heap per simulare condizioni di memoria insufficiente.
 
-**aligned_free_dbg** esegue un controllo di validità su tutti i file specificati e i percorsi di blocco prima di eseguire l'operazione gratuito. Non è previsto che l'applicazione fornisca queste informazioni. Quando un blocco di memoria viene liberato, il gestore dell'heap di debug controlla automaticamente l'integrità dei buffer a ogni lato della porzione utente e genera un rapporto errori se si sono verificate sovrascritture. Se la CRTDBG_DELAY_FREE_MEM_DF bit del campo la [crtDbgFlag](../../c-runtime-library/crtdbgflag.md) flag è impostato, il blocco liberato viene riempito con il valore 0xDD, assegnato al tipo di blocco FREE_BLOCK e mantenuto nell'elenco collegato dell'heap di blocchi di memoria.
+**_aligned_free_dbg** esegue un controllo di validità su tutti i file e i percorsi dei blocchi specificati prima di eseguire l'operazione gratuita. Non è previsto che l'applicazione fornisca queste informazioni. Quando un blocco di memoria viene liberato, il gestore dell'heap di debug controlla automaticamente l'integrità dei buffer a ogni lato della porzione utente e genera un rapporto errori se si sono verificate sovrascritture. Se il campo di bit _CRTDBG_DELAY_FREE_MEM_DF del flag [crtDbgFlag](../../c-runtime-library/crtdbgflag.md) è impostato, il blocco liberato viene riempito con il valore 0xDD, viene assegnato il tipo di blocco _FREE_BLOCK e viene mantenuto nell'elenco collegato dell'heap dei blocchi di memoria.
 
 Se si verifica un errore nel liberare la memoria, `errno` viene impostato con informazioni dal sistema operativo sulla natura dell'errore. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

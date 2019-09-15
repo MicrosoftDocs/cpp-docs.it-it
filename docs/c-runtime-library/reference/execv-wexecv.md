@@ -1,10 +1,10 @@
 ---
 title: _execv, _wexecv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wexecv
 - _execv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execv
 - _wexecv
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb18603c618342f67bad28ebf0b99bd173ee5293
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339247"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941851"
 ---
-# <a name="execv-wexecv"></a>_execv, _wexecv
+# <a name="_execv-_wexecv"></a>_execv, _wexecv
 
 Carica ed esegue nuovi processi figlio.
 
@@ -64,9 +67,9 @@ Matrice di puntatori ai parametri.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Valore restituito di -1 indica un errore, nel qual caso il **errno** (variabile globale) è impostata.
+Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valore restituito-1 indica un errore, nel qual caso è impostata la variabile globale **errno** .
 
-|**errno** valore|Descrizione|
+|**errno** (valore)|Descrizione|
 |-------------------|-----------------|
 |**E2BIG**|Lo spazio necessario per gli argomenti e le impostazioni di ambiente supera 32 KB.|
 |**EACCES**|Il file specificato dispone di una violazione di blocco o di condivisione.|
@@ -82,7 +85,7 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando.
 
-Il **execv** funzioni convalidano i propri parametri. Se *cmdname* è un puntatore null, o se *argv* è un puntatore null, un puntatore a una matrice vuota, o se la matrice contiene una stringa vuota come primo argomento, il **execv** funzioni richiamano il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1. Nessun processo viene avviato.
+Le funzioni **_execv** convalidano i relativi parametri. Se *CmdName* è un puntatore null o se *argv* è un puntatore null, un puntatore a una matrice vuota o se la matrice contiene una stringa vuota come primo argomento, le funzioni **_execv** richiamano il gestore di parametri non validi come descritto in [Parameter Convalida](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1. Nessun processo viene avviato.
 
 ## <a name="requirements"></a>Requisiti
 

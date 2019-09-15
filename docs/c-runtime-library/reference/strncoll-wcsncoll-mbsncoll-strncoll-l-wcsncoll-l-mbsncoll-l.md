@@ -1,14 +1,14 @@
 ---
 title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strncoll
 - _mbsncoll_l
 - _wcsncoll
 - _wcsncoll_l
 - _mbsncoll
 - _strncoll_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsncoll_l
 - strncoll
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5120b37cd06266752194ec826a173474f6902fd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209776"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947256"
 ---
-# <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
+# <a name="_strncoll-_wcsncoll-_mbsncoll-_strncoll_l-_wcsncoll_l-_mbsncoll_l"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
 Le stringhe vengono confrontate usando informazioni specifiche delle impostazioni locali.
 
 > [!IMPORTANT]
-> **mbsncoll** e **mbsncoll_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsncoll** e **_mbsncoll_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -125,21 +128,21 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un valore che indica la relazione delle sottostringhe di *string1* e *string2*, come indicato di seguito.
+Ognuna di queste funzioni restituisce un valore che indica la relazione delle sottostringhe di *String1* e *string2*, come indicato di seguito.
 
 |Valore restituito|Relazione di stringa1 e stringa2|
 |------------------|----------------------------------------|
 |< 0|*String1* è minore di *string2*.|
-|0|*String1* è identica alla *string2*.|
-|> 0|*String1* è maggiore di quella *string2*.|
+|0|*String1* è identico a *string2*.|
+|> 0|*String1* è maggiore di *string2*.|
 
-Ognuna di queste funzioni restituisce **_NLSCMPERROR**. Per utilizzare **_NLSCMPERROR**, includere String. h o Mbstring. h. **wcsncoll** può non riuscire se *string1* oppure *string2* contiene codici di caratteri wide che sono all'esterno del dominio della sequenza di ordinamento. Quando si verifica un errore, **wcsncoll** potrebbe impostare **errno** al **EINVAL**. Per verificare la presenza di un errore in una chiamata a **wcsncoll**, impostare **errno** su 0 e quindi selezionare **errno** dopo aver chiamato **wcsncoll**.
+Ognuna di queste funzioni restituisce **_NLSCMPERROR**. Per usare **_NLSCMPERROR**, includere String. h o mbstring. h. **_wcsncoll** può avere esito negativo se *String1* o *string2* contiene codici a caratteri wide che si trovano al di fuori del dominio della sequenza di ordinamento. Quando si verifica un errore, **_wcsncoll** può impostare **errno** su **EINVAL**. Per verificare la presenza di un errore in una chiamata a **_wcsncoll**, impostare **errno** su 0, quindi controllare **errno** dopo aver chiamato **_wcsncoll**.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni esegue un confronto tra maiuscole e minuscole dei primi *conteggio* caratteri *string1* e *string2*, in base alla tabella codici che è attualmente in usare. Usare queste funzioni solo quando esiste una differenza nella tabella codici tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe. L'ordine del set di caratteri è dipendente dalle impostazioni locali. Le versioni di queste funzioni che non hanno le **l** suffisso usano le impostazioni locali correnti, ma le versioni che hanno il **l** suffisso usano le impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Ognuna di queste funzioni esegue un confronto con distinzione tra maiuscole e minuscole dei primi caratteri di *conteggio* in *String1* e *string2*, in base alla tabella codici attualmente in uso. Usare queste funzioni solo quando esiste una differenza nella tabella codici tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe. L'ordine del set di caratteri è dipendente dalle impostazioni locali. Le versioni di queste funzioni che non hanno il suffisso **suffisso** usano le impostazioni locali correnti, ma le versioni con il suffisso **suffisso** usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1* oppure *string2* è un puntatore null, o *conteggio* è maggiore di quella **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostare **errno** al **EINVAL**.
+Tutte queste funzioni convalidano i relativi parametri. Se *String1* o *string2* è un puntatore null o *count* è maggiore di **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostano **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

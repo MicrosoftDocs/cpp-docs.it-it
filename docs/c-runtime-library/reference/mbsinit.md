@@ -1,9 +1,9 @@
 ---
 title: mbsinit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsinit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsinit
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331545"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952373"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -46,11 +49,11 @@ Un puntatore a una variabile [mbstate_t](../../c-runtime-library/standard-types.
 
 ## <a name="return-value"></a>Valore restituito
 
-Diverso da zero se *ps* viene **NULL** o se non all'interno di una conversione.
+Diverso da zero se *PS* è **null** o se non si trova nel mezzo di una conversione.
 
 ## <a name="remarks"></a>Note
 
-Quando si utilizza una delle funzioni ANSI che accetta un **mbstate_t** passando l'indirizzo del puntatore le **mbstate_t** restituirà informazioni sull'eventuale l'ultimo byte nel buffer.
+Quando si usa una delle funzioni ANSI che accetta un puntatore **mbstate_t** , il passaggio dell'indirizzo di **mbstate_t** restituirà informazioni sull'eventuale conversione dell'ultimo byte nel buffer.
 
 La tabella codici appropriata deve essere installata per supportare i caratteri multibyte.
 

@@ -1,9 +1,9 @@
 ---
 title: _umask
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _umask
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _umask
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957488"
 ---
-# <a name="umask"></a>_umask
+# <a name="_umask"></a>_umask
 
 Imposta la maschera di autorizzazione file predefinita. È disponibile una versione più sicura di questa funzione; vedere [_umask_s](umask-s.md).
 
@@ -50,13 +53,13 @@ Impostazione di autorizzazione predefinita.
 
 ## <a name="return-value"></a>Valore restituito
 
-**umask** restituisce il valore precedente della *pmode*. Non vi è restituzione di errori.
+**_umask** restituisce il valore precedente di *pmode*. Non vi è restituzione di errori.
 
 ## <a name="remarks"></a>Note
 
-Il **umask** funzione imposta la maschera di autorizzazione file del processo corrente sulla modalità specificata da *pmode*. La maschera di autorizzazione file modifica l'impostazione di autorizzazione dei nuovi file creati da **creat**, **Open**, o **sopen**. Se un bit nella maschera è impostato su 1, il bit corrispondente nel valore di autorizzazione richiesto del file è impostato su 0 (non consentito). Se un bit nella maschera è 0, il bit corrispondente viene lasciato invariato. L'impostazione di autorizzazione per un nuovo file non viene impostata fino a quando il file non viene chiuso per la prima volta.
+La funzione **_umask** imposta la maschera di autorizzazione file del processo corrente sulla modalità specificata da *pmode*. La maschera di autorizzazione file modifica l'impostazione di autorizzazione dei nuovi file creati da **_creat**, **_open**o **_sopen**. Se un bit nella maschera è impostato su 1, il bit corrispondente nel valore di autorizzazione richiesto del file è impostato su 0 (non consentito). Se un bit nella maschera è 0, il bit corrispondente viene lasciato invariato. L'impostazione di autorizzazione per un nuovo file non viene impostata fino a quando il file non viene chiuso per la prima volta.
 
-L'espressione integer *pmode* contiene una o entrambe le costanti manifesto seguenti, definite in SYS\STAT. H:
+L'espressione integer *pmode* contiene una o entrambe le costanti manifeste seguenti, definite in SYS\STAT. H
 
 |*pmode*| |
 |-|-|
@@ -64,9 +67,9 @@ L'espressione integer *pmode* contiene una o entrambe le costanti manifesto segu
 | **_S_IREAD** | Lettura consentita. |
 | **_S_IREAD** &#124; **_S_IWRITE** | Lettura e scrittura consentite. |
 
-Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per bit ( **&#124;** ). Se il *pmode* l'argomento è **s_iread**, non è consentita la lettura (il file è di sola scrittura). Se il *pmode* l'argomento è **s_iwrite**, non è consentita la scrittura (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, il bit di lettura con l'impostazione **umask** non ha alcun effetto sulle modalità del file.
+Quando vengono specificate entrambe le costanti, queste vengono unite con l'operatore OR bit per **&#124;** bit (). Se l'argomento *pmode* è **_S_IREAD**, la lettura non è consentita (il file è di sola scrittura). Se l'argomento *pmode* è **_S_IWRITE**, la scrittura non è consentita (il file è di sola lettura). Ad esempio, se il bit di scrittura è impostato nella maschera, tutti i nuovi file saranno di sola lettura. Si noti che con MS-DOS e i sistemi operativi Windows, tutti i file sono leggibili; non è possibile fornire l'autorizzazione di sola scrittura. Pertanto, l'impostazione del bit di lettura con **_umask** non ha alcun effetto sulle modalità del file.
 
-Se *pmode* non è una combinazione di una delle costanti manifesto o non include un set alternativo di costanti, la funzione semplicemente li ignorerà.
+Se *pmode* non è una combinazione di una delle costanti manifeste o incorpora un set alternativo di costanti, la funzione li ignorerà semplicemente.
 
 ## <a name="requirements"></a>Requisiti
 

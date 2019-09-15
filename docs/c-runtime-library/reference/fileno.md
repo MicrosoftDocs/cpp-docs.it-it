@@ -1,9 +1,9 @@
 ---
 title: _fileno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fileno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fileno
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 682ab4b01a663bd9a6314138aa692b1c05b7437a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 586e390e100f5dc46a49b99c007016cf23ac68f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957210"
 ---
-# <a name="fileno"></a>_fileno
+# <a name="_fileno"></a>_fileno
 
 Ottenere il descrittore di file associato al flusso.
 
@@ -50,16 +53,16 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**fileno** restituisce il descrittore del file. Non vi è restituzione di errori. Il risultato è indefinito se *flusso* non specifica un file aperto. Se il flusso è **NULL**, **fileno** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** al **EINVAL**.
+**_fileno** restituisce il descrittore del file. Non vi è restituzione di errori. Il risultato non è definito se il *flusso* non specifica un file aperto. Se il flusso è **null**, **_fileno** richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce -1 e imposta **errno** su **EINVAL**.
 
 Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
-> Se **stdout** oppure **stderr** non è associato a un flusso di output (ad esempio, in un'applicazione di Windows senza una finestra della console), il descrittore del file restituito è -2. Nelle versioni precedenti, il descrittore del file restituito era -1. Questa modifica consente alle applicazioni di distinguere questa condizione da un errore.
+> Se **stdout** o **stderr** non è associato a un flusso di output (ad esempio, in un'applicazione Windows senza una finestra della console), il descrittore del file restituito è-2. Nelle versioni precedenti, il descrittore del file restituito era -1. Questa modifica consente alle applicazioni di distinguere questa condizione da un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **fileno** routine restituisce il descrittore del file attualmente associato *stream*. Questa routine viene implementata come funzione e come macro. Per informazioni sulla scelta di un'implementazione, vedere [Suggerimenti per la scelta tra funzioni e macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+La routine **_fileno** restituisce il descrittore di file attualmente associato al *flusso*. Questa routine viene implementata come funzione e come macro. Per informazioni sulla scelta di un'implementazione, vedere [Suggerimenti per la scelta tra funzioni e macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
 ## <a name="requirements"></a>Requisiti
 

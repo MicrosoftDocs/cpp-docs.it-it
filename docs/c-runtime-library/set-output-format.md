@@ -1,9 +1,9 @@
 ---
 title: _set_output_format
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_output_format
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr100.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr90.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_output_format
 - _set_output_format
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: 173c1bbae3009ffb4ee10b7b32ec7751f47c56c8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749230"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957317"
 ---
-# <a name="setoutputformat"></a>_set_output_format
+# <a name="_set_output_format"></a>_set_output_format
 
 Consente di personalizzare i formati di output usati dalle funzioni di I/O formattate.
 
@@ -53,7 +56,7 @@ unsigned int _set_output_format(
 
 Formato di output precedente.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 `_set_output_format` viene usato per configurare l'output delle funzioni di I/O formattate, come [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Attualmente, l'unica convenzione di formattazione che può essere modificata da questa funzione è il numero di cifre visualizzate negli esponenti dell'output di numeri a virgola mobile.
 

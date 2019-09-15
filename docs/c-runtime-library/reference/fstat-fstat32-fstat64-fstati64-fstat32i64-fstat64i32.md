@@ -1,14 +1,14 @@
 ---
 title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fstat32
 - _fstat64
 - _fstati64
 - _fstat
 - _fstat64i32
 - _fstat32i64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstat32i64
 - fstat
@@ -49,14 +52,14 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ab71071fdf5578295cfcd72f79930787e634d5f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332795"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956469"
 ---
-# <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
+# <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
 Ottiene informazioni su un file aperto.
 
@@ -99,34 +102,34 @@ Puntatore alla struttura per l'archiviazione dei risultati.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce 0 se si ottengono le informazioni sullo stato dei file. Valore restituito di -1 indica un errore. Se il descrittore del file non è valido o *buffer* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EBADF**, nel caso di un descrittore di file non valido o al **EINVAL**, se *buffer* viene **NULL**.
+Restituisce 0 se si ottengono le informazioni sullo stato dei file. Un valore restituito di-1 indica un errore. Se il descrittore del file non è valido o il *buffer* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EBADF**, nel caso di un descrittore di file non valido o di **EINVAL**, se il *buffer* è **null**.
 
 ## <a name="remarks"></a>Note
 
-Il **fstat** funzione di acquisizione di informazioni sul file aperto associato *fd* e la archivia nella struttura a cui fa riferimento *buffer*. Il **Stat** struttura, definita in SYS\Stat.h, contiene i campi seguenti.
+La funzione **_fstat** ottiene informazioni sul file aperto associato a *FD* e lo archivia nella struttura a cui punta il *buffer*. La struttura **_stat** , definita in SYS\Stat.h, contiene i campi seguenti.
 
 |Campo|Significato|
 |-|-|
 | **st_atime** | Ora dell'ultimo accesso al file. |
 | **st_ctime** | Ora di creazione del file. |
-| **st_dev** | Se un dispositivo *fd*; in caso contrario, 0. |
-| **st_mode** | Maschera di bit per informazioni sulla modalità di file. Il **s_ifchr** bit viene impostato se *fd* fa riferimento a un dispositivo. Il **s_ifreg** bit viene impostato se *fd* fa riferimento a un file ordinario. I bit di lettura/scrittura vengono impostati in base alla modalità di autorizzazione del file. **S_ifchr** e altre costanti sono definite in sys\stat.h. |
+| **st_dev** | Se un dispositivo, *FD*; in caso contrario, 0. |
+| **st_mode** | Maschera di bit per informazioni sulla modalità di file. Il bit **_S_IFCHR** viene impostato se *FD* fa riferimento a un dispositivo. Il bit **_S_IFREG** viene impostato se *FD* fa riferimento a un file normale. I bit di lettura/scrittura vengono impostati in base alla modalità di autorizzazione del file. **_S_IFCHR** e altre costanti sono definite in SYS\Stat.h. |
 | **st_mtime** | Ora dell'ultima modifica del file. |
 | **st_nlink** | Sempre 1 nel file system non NTFS. |
-| **st_rdev** | Se un dispositivo *fd*; in caso contrario, 0. |
+| **st_rdev** | Se un dispositivo, *FD*; in caso contrario, 0. |
 | **st_size** | Dimensioni del file, in byte. |
 
-Se *fd* fa riferimento a un dispositivo, il **st_atime**, **st_ctime**, **st_mtime**, e **st_size** campi sono non significativo.
+Se *FD* fa riferimento a un dispositivo, i campi **st_atime**, **st_ctime**, **st_mtime**e **st_size** non sono significativi.
 
 Dato che Stat.h usa il tipo [dev_t](../../c-runtime-library/standard-types.md) definito in Types.h, è necessario includere Types.h prima di Stat.h nel codice.
 
-**_fstat64**, che usa la **__stat64** struttura, consente le date di creazione di file può essere espresso backup tramite 23:59:59, 31 dicembre 3000 UTC, mentre le altre funzioni rappresentano solo le date e 23:59:59 18 gennaio, 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
+**_fstat64**, che usa la struttura **__stat64** , consente di esprimere le date di creazione dei file fino a 23:59:59, 31 dicembre 3000, UTC; mentre le altre funzioni rappresentano solo le date fino 23:59:59 del 18 gennaio 2038, UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per tutte queste funzioni.
 
-Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** oppure **64**) indica la dimensione del tempo di usare il tipo; il secondo suffisso è **i32** oppure **i64**, che indica se le dimensioni del file sono rappresentata come intero a 32 bit o 64 bit.
+Le variazioni di queste funzioni supportano tipi time a 32 o 64 bit e lunghezze di file a 32 o a 64 bit. Il primo suffisso numerico (**32** o **64**) indica le dimensioni del tipo di tempo usato; il secondo suffisso è **i32** o **I64**, che indica se le dimensioni del file sono rappresentate come Integer a 32 bit o a 64 bit.
 
-**fstat** equivale a **_fstat64i32**, e **struct** **Stat** contiene un'ora a 64 bit. Ciò è vero, a meno che **_USE_32BIT_TIME_T** è definito, nel qual caso il comportamento precedente è in vigore. **fstat** Usa un'ora a 32 bit, e **struct** **Stat** contiene un'ora a 32 bit. Lo stesso vale per **_fstati64**.
+**_fstat** è equivalente a **_fstat64i32**e **struct** **_stat** contiene un'ora a 64 bit. Questo vale a meno che non sia definito **_USE_32BIT_TIME_T** , nel qual caso è attivo il comportamento precedente; **_fstat** usa un'ora a 32 bit e **struct** **_stat** contiene un'ora a 32 bit. Lo stesso vale per **_fstati64**.
 
-### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variazioni tipo time e tipo lunghezza file di _stat
+### <a name="time-type-and-file-length-type-variations-of-_stat"></a>Variazioni tipo time e tipo lunghezza file di _stat
 
 |Funzioni|_USE_32BIT_TIME_T definito?|Tipo Time|Tipo lunghezza file|
 |---------------|------------------------------------|---------------|----------------------|

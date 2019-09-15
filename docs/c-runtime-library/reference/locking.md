@@ -1,9 +1,9 @@
 ---
 title: _locking
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _locking
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _locking
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157463"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953262"
 ---
-# <a name="locking"></a>_locking
+# <a name="_locking"></a>_locking
 
 Blocca o sblocca i byte di un file.
 
@@ -59,32 +62,32 @@ Numero di byte da bloccare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**Locking** restituisce 0 se ha esito positivo. Valore restituito di -1 indica un errore, nel qual caso [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) è impostato su uno dei valori seguenti.
+Se ha esito positivo, **_locking** restituisce 0. Il valore restituito-1 indica un errore, nel qual caso [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene impostato su uno dei valori seguenti.
 
 |Valore errno|Condizione|
 |-|-|
 | **EACCES** | Violazione del blocco (file già bloccato o sbloccato). |
 | **EBADF** | Descrittore di file non valido. |
-| **EDEADLOCK** | Violazione di blocco. Restituito quando la **lk_lock** oppure **lk_rlck** flag è specificato e il file non può essere bloccato dopo 10 tentativi. |
-| **EINVAL** | È stato assegnato un argomento non valido **Locking**. |
+| **EDEADLOCK** | Violazione di blocco. Restituito quando viene specificato il flag **_LK_LOCK** o **_LK_RLCK** e il file non può essere bloccato dopo 10 tentativi. |
+| **EINVAL** | È stato assegnato un argomento non valido a **_locking**. |
 
 Se l'errore è causato da un parametro non corretto, ad esempio un descrittore di file non valido, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Note
 
-Il **Locking** funzione blocca o Sblocca *nbytes* byte del file specificato dal *fd*. Il blocco di byte in un file impedisce l'accesso a tali byte da altri processi. Tutte le operazioni di blocco o sblocco iniziano dalla posizione corrente del puntatore del file e procedono per i successivi *nbytes* byte. È possibile bloccare byte oltre la fine del file.
+La funzione **_locking** blocca o Sblocca *nBytes* byte del file specificato da *FD*. Il blocco di byte in un file impedisce l'accesso a tali byte da altri processi. Tutte le operazioni di blocco o sblocco iniziano dalla posizione corrente del puntatore del file e procedono per i successivi *nbytes* byte. È possibile bloccare byte oltre la fine del file.
 
 L'argomento *mode* deve essere una delle seguenti costanti manifeste, definite in Locking.h.
 
-|*modalità* valore|Effetto|
+|valore della *modalità*|Effetto|
 |-|-|
 | **_LK_LOCK** | Blocca i byte specificati. Se i byte non possono essere bloccati, il programma ripeterà immediatamente il tentativo dopo 1 secondo. Se, dopo 10 tentativi, i byte non possono essere bloccati, la costante restituisce un errore. |
 | **_LK_NBLCK** | Blocca i byte specificati. Se i byte non possono essere bloccati, la costante restituisce un errore. |
-| **_LK_NBRLCK** | Uguale allo **lk_nblck**. |
-| **_LK_RLCK** | Uguale allo **lk_lock**. |
+| **_LK_NBRLCK** | Uguale a **_LK_NBLCK**. |
+| **_LK_RLCK** | Uguale a **_LK_LOCK**. |
 | **_LK_UNLCK** | Sblocca i byte specificati, che devono essere stati bloccati in precedenza. |
 
-È possibile bloccare più aree di un file che non si sovrappongano. Un'area da sbloccare deve essere stata bloccata in precedenza. **Locking** unisce aree adiacenti; se due aree bloccate sono adiacenti, ogni area deve essere sbloccata separatamente. Le aree devono essere bloccate solo brevemente e devono essere sbloccate prima di chiudere un file o di uscire dal programma.
+È possibile bloccare più aree di un file che non si sovrappongano. Un'area da sbloccare deve essere stata bloccata in precedenza. **_locking** non unisce aree adiacenti; Se due aree bloccate sono adiacenti, ogni area deve essere sbloccata separatamente. Le aree devono essere bloccate solo brevemente e devono essere sbloccate prima di chiudere un file o di uscire dal programma.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlockingtxt"></a>Input: crt_locking.txt
+### <a name="input-crt_lockingtxt"></a>Input: crt_locking.txt
 
 ```Input
 The first thirty bytes of this file will be locked.

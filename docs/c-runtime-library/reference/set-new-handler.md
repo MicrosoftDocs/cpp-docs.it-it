@@ -1,9 +1,9 @@
 ---
 title: _set_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_new_handler
 - set_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1f340887efd657dd9ff9bf219534d77fdd90aa3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356499"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948476"
 ---
-# <a name="setnewhandler"></a>_set_new_handler
+# <a name="_set_new_handler"></a>_set_new_handler
 
 Trasferisce il controllo al meccanismo di gestione degli errori se l'operatore **new** non riesce ad allocare la memoria.
 
@@ -49,17 +52,17 @@ Puntatore alla funzione di gestione della memoria fornita dall'applicazione. Un 
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla funzione registrata da di gestione delle eccezioni precedenti **set_new_handler**, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **NULL**.
+Restituisce un puntatore alla funzione di gestione delle eccezioni precedente registrata da **_set_new_handler**, in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito. Questo valore può essere **null**.
 
 ## <a name="remarks"></a>Note
 
-Il C++ **set_new_handler** funzione specifica una funzione di gestione delle eccezioni che deve assumere il controllo se il **nuovo** operatore non riesce ad allocare memoria. Se **nuove** ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni che è stata passata come argomento al **set_new_handler**. **Pnh**, definite in New. h, è un puntatore a una funzione che restituisce il tipo **int** e accetta un argomento di tipo **size_t**. Uso **size_t** per specificare la quantità di spazio da allocare.
+La C++ funzione **_set_new_handler** specifica una funzione di gestione delle eccezioni che ottiene il controllo se l'operatore **New** non riesce ad allocare memoria. Se **New** ha esito negativo, il sistema di runtime chiama automaticamente la funzione di gestione delle eccezioni passata come argomento a **_set_new_handler**. **_PNH**, definito in New. h, è un puntatore a una funzione che restituisce il tipo **int** e accetta un argomento di tipo **size_t**. Utilizzare **size_t** per specificare la quantità di spazio da allocare.
 
 Non è previsto alcun gestore predefinito.
 
-**set_new_handler** è essenzialmente uno schema di garbage collection. Il sistema di runtime ritenta l'allocazione ogni volta che la funzione restituisce un valore diverso da zero e non riesce se la funzione restituisce 0.
+**_set_new_handler** è essenzialmente uno schema di Garbage Collection. Il sistema di runtime ritenta l'allocazione ogni volta che la funzione restituisce un valore diverso da zero e non riesce se la funzione restituisce 0.
 
-Un'occorrenza del **set_new_handler** funzione in un programma registra la funzione di gestione delle eccezioni specificata nell'elenco di argomenti con il sistema di runtime:
+Un'occorrenza della funzione **_set_new_handler** in un programma registra la funzione di gestione delle eccezioni specificata nell'elenco di argomenti con il sistema di runtime:
 
 ```cpp
 // set_new_handler1.cpp
@@ -77,7 +80,7 @@ int main( void )
 }
 ```
 
-È possibile salvare l'indirizzo della funzione ultimo passato per il **set_new_handler** funzionare e ripristinarlo in un secondo momento:
+È possibile salvare l'indirizzo della funzione che è stato passato alla funzione **_set_new_handler** e ripristinarlo in un secondo momento:
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -88,7 +91,7 @@ int main( void )
    // . . .
 ```
 
-La funzione C++ [_set_new_mode](set-new-mode.md) imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore **malloc** consiste nel chiamare la routine del nuovo gestore come impostato da **set_new_handler**. Per impostazione predefinita **malloc** non chiama la routine del nuovo gestore in caso di errore per allocare memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore Quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare:
+La funzione C++ [_set_new_mode](set-new-mode.md) imposta la nuova modalità del gestore per [malloc](malloc.md). La nuova modalità del gestore indica se, in caso di errore, **malloc** deve chiamare la routine del nuovo gestore come impostato da **_set_new_handler**. Per impostazione predefinita, **malloc** non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando **malloc** non riesce ad allocare memoria, **malloc** chiama la routine del nuovo gestore nello stesso modo in cui il **nuovo** operatore esegue quando si verifica un errore per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare:
 
 ```cpp
 _set_new_mode(1);
@@ -96,11 +99,11 @@ _set_new_mode(1);
 
 all'inizio del programma o collegare con Newmode.obj.
 
-Se definito dall'utente `operator new` è specificato, le nuove funzioni del gestore non vengono chiamate automaticamente in caso di errore.
+Se viene specificato un oggetto `operator new` definito dall'utente, le nuove funzioni del gestore non vengono chiamate automaticamente in caso di errore.
 
-Per altre informazioni, vedere [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++*.
+Per altre informazioni, vedere [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) in *Riferimenti al linguaggio C++* .
 
-È presente una sola **set_new_handler** gestore per tutto in modo dinamico le DLL o eseguibili collegati; anche se si chiama **set_new_handler** il gestore può essere sostituito da un altro o che si stia sostituendo un gestore impostato da un altro file DLL o eseguibile.
+È disponibile un singolo gestore **_set_new_handler** per tutte le dll o i file eseguibili collegati in modo dinamico; anche se si chiama **_set_new_handler** , il gestore potrebbe essere sostituito da un altro o che si sta sostituendo un gestore impostato da un altro file dll o eseguibile.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,12 +1,12 @@
 ---
 title: strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcstoumax_l
 - _strtoumax_l
 - wcstoumax
 - strtoumax
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcstoumax
 - _tcstoumax
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wcstoumax_l function
 - strtoumax function
 ms.assetid: 566769f9-495b-4508-b9c6-02217a578897
-ms.openlocfilehash: c9c8ca79ed68b23586d9fef979bc8d47b72ca846
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ed09ad51e538f3964fea87fa55e410c79d3a5d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379168"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957684"
 ---
-# <a name="strtoumax-strtoumaxl-wcstoumax-wcstoumaxl"></a>strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
+# <a name="strtoumax-_strtoumax_l-wcstoumax-_wcstoumax_l"></a>strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 
 Converte le stringhe in un valore intero con il tipo Integer senza segno supportato più grande.
 
@@ -87,19 +90,19 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**strtoumax** restituisce il valore convertito, se presente, oppure **UINTMAX_MAX** in caso di overflow. **strtoumax** restituisce 0 se è non possibile eseguire alcuna conversione. **wcstoumax** restituisce i valori in modo analogo a **strtoumax**. Per entrambe le funzioni **errno** è impostata su **ERANGE** in caso di overflow o underflow.
+**strtoumax** restituisce il valore convertito, se presente, o **UINTMAX_MAX** in caso di overflow. **strtoumax** restituisce 0 se non è possibile eseguire alcuna conversione. **wcstoumax** restituisce i valori in modo analogo a **strtoumax**. Per entrambe le funzioni, **errno** viene impostato su **ERANGE** se si verifica un overflow o un underflow.
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni converte la stringa di input *strSource* a un **uintmax_t** valore intero.
+Ognuna di queste funzioni converte la stringa di input *strSource* in un valore integer **uintmax_t** .
 
-**strtoumax** interrompe la lettura della stringa *strSource* in corrispondenza del primo carattere non riconosciuti come parte di un numero. Ciò potrebbe essere il carattere null di terminazione, o potrebbe essere il primo carattere numerico maggiore o uguale a *base*. Il **LC_NUMERIC** impostazione di categoria delle impostazioni locali determina il riconoscimento del carattere di base *strSource*. Per altre informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoumax** e **wcstoumax** usare le impostazioni locali correnti. **strtoumax_l** e **wcstoumax_l** sono identiche ma usano le impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+**strtoumax** interrompe la lettura della stringa *strSource* al primo carattere che non riconosce come parte di un numero. Può trattarsi del carattere null di terminazione o del primo carattere numerico maggiore o uguale a *base*. L'impostazione della categoria **LC_NUMERIC** delle impostazioni locali determina il riconoscimento del carattere radice in *strSource*. Per altre informazioni, vedere [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoumax** e **wcstoumax** usano le impostazioni locali correnti; **_strtoumax_l** e **_wcstoumax_l** sono identici, ad eccezione del fatto che usano invece le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se *endptr* non è **NULL**, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui fa riferimento *endptr*. Se è non possibile eseguire alcuna conversione (non trovate cifre valide sono stati o è stata specificata una base non valida), il valore di *strSource* viene archiviato in corrispondenza della posizione a cui punta *endptr*.
+Se *endptr* non è **null**, un puntatore al carattere che ha interrotto l'analisi viene archiviato nella posizione a cui punta *endptr*. Se non è possibile eseguire alcuna conversione (non sono state trovate cifre valide o è stata specificata una base non valida), il valore di *strSource* viene archiviato nella posizione a cui punta *endptr*.
 
-La versione a caratteri wide di **strtoumax** viene **wcstoumax**; relativo *strSource* argomento è una stringa di caratteri "wide". In caso contrario, il comportamento di queste funzioni è identico.
+La versione a caratteri wide di **strtoumax** è **wcstoumax**; il relativo argomento *strSource* è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -108,11 +111,11 @@ La versione a caratteri wide di **strtoumax** viene **wcstoumax**; relativo *str
 |**_tcstoumax**|**strtoumax**|**strtoumax**|**wcstoumax**|
 |**_tcstoumax_l**|**strtoumax_l**|**_strtoumax_l**|**_wcstoumax_l**|
 
-**strtoumax** prevede *strSource* in modo che punti a una stringa nel formato seguente:
+**strtoumax** prevede che *strSource* faccia riferimento a una stringa nel formato seguente:
 
-> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
+> [*spazi vuoti*] [{ **+** &#124; &#124; &#124; }] [0 [{x x}]] [cifre lettere] **-**
 
-Oggetto *whitespace* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. *cifre* sono uno o più cifre decimali. *lettere* sono uno o più lettere 'a' a 'z' (o 'A' a 'Z'). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, i caratteri iniziali della stringa a cui punta *strSource* vengono usate per determinare la base. Se il primo carattere è '0' e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Ad esempio, se *base* è 0 e il primo carattere letto è '0', si presuppone un intero ottale e un carattere '8' o '9' interromperà la lettura. **strtoumax** consente a un segno più (**+**) o meno (-) (**-**) prefisso; una barra iniziale meno (-) indica che il valore restituito è il complemento a due del valore assoluto della stringa convertita.
+Uno spazio *vuoto* può essere costituito da caratteri di spazio e tabulazione, che vengono ignorati. le *cifre* corrispondono a una o più cifre decimali. le *lettere* sono una o più lettere da' a' a' z ' (o da' A ' a' z '). Il primo carattere che non corrisponde a questo formato interrompe la lettura. Se *base* è compreso tra 2 e 36, viene usato come base del numero. Se *base* è 0, per determinare la base vengono usati i caratteri iniziali della stringa a cui punta *strSource* . Se il primo carattere è '0' e il secondo carattere non è 'x' né 'X', la stringa viene interpretata come un intero ottale. Se il primo carattere è '0' e il secondo carattere è 'x' o 'X', la stringa viene interpretata come integer esadecimale. Se il primo carattere è compreso tra '1' e '9', la stringa viene interpretata come integer decimale. Alle lettere da 'a' a 'z' (o da 'A' a 'Z') vengono assegnati i valori da 10 a 35. Sono consentite solo le lettere con valori assegnati minori di *base*. Il primo carattere non compreso nell'intervallo della base interrompe la lettura. Se ad esempio *base* è 0 e il primo carattere analizzato è' 0', si presuppone un Integer ottale e il carattere ' 8' o ' 9' arresterà l'analisi. **strtoumax** consente un prefisso con segno **+** più () o meno **-** (); un segno meno iniziale indica che il valore restituito è il complemento a due del valore assoluto della stringa convertita.
 
 ## <a name="requirements"></a>Requisiti
 

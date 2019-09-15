@@ -1,7 +1,7 @@
 ---
-title: _itoa_s, _itow_s functions
+title: funzioni _itoa_s, _itow_s
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _itoa_s
 - _ltoa_s
 - _ultoa_s
@@ -12,7 +12,7 @@ apiname:
 - _ultow_s
 - _i64tow_s
 - _ui64tow_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -25,7 +25,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _itoa_s
 - _ltoa_s
@@ -76,16 +79,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: e534a9010f3f39c517b7b0f2bf50041190caf7d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204abd65981371a970623879ec94ff77db6728b2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157552"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953549"
 ---
-# <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
-Converte un intero in una stringa. Queste sono versioni del [itoa, le funzioni itow](itoa-itow.md) a livello di sicurezza come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Converte un intero in una stringa. Queste sono versioni di [_itoa, _itow funzioni](itoa-itow.md) con miglioramenti per la sicurezza, come descritto in [funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -136,13 +139,13 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 Numero da convertire.
 
 *buffer*<br/>
-Buffer di output che contiene il risultato della conversione.
+Buffer di output che include il risultato della conversione.
 
 *size*<br/>
-Dimensioni del *buffer* in caratteri o i caratteri "wide".
+Dimensioni del *buffer* in caratteri o caratteri wide.
 
 *radix*<br/>
-La radice o base numerica da usare per convertire *valore*, che deve essere compreso nell'intervallo da 2 a 36.
+Base radice o numerica da usare per convertire il *valore*, che deve essere compreso nell'intervallo 2-36.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -150,26 +153,26 @@ Zero se con esito positivo; un codice di errore in caso di errore. Se si applica
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|predefinito|buffer|size|radix|INVIO|
+|value|buffer|size|radix|INVIO|
 |-----------|------------|----------------------|-----------|------------|
 |qualsiasi|**NULL**|qualsiasi|qualsiasi|**EINVAL**|
 |qualsiasi|qualsiasi|<=0|qualsiasi|**EINVAL**|
 |qualsiasi|qualsiasi|<= lunghezza della stringa di risultato richiesta|qualsiasi|**EINVAL**|
-|qualsiasi|qualsiasi|qualsiasi|*radix* < 2 oppure *radice* 36 >|**EINVAL**|
+|qualsiasi|qualsiasi|qualsiasi|*radice* < 2 o *radice* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemi di sicurezza
 
-Queste funzioni possono generare una violazione di accesso se *buffer* punta alla memoria valida e non **NULL**, o se la lunghezza del buffer non è sufficiente per contenere la stringa di risultato.
+Queste funzioni possono generare una violazione di accesso se il *buffer* non punta alla memoria valida e non è **null**o se la lunghezza del buffer non è sufficiente per conservare la stringa di risultato.
 
 ## <a name="remarks"></a>Note
 
-Fatta eccezione per i parametri e valore restituito, il **itoa_s** e **itow_s** famiglie di funzioni hanno lo stesso comportamento meno sicure corrispondenti **itoa** e**itow** versioni.
+Ad eccezione dei parametri e del valore restituito, le famiglie di funzioni **_itoa_s** e **_itow_s** hanno lo stesso comportamento delle versioni **_itoa** e **_itow** meno sicure corrispondenti.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Le versioni della libreria di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-CRT include macro pratiche per definire le dimensioni del buffer richiesto per convertire il valore più lungo possibile di ogni tipo di integer, incluso il carattere di terminazione null e firmare carattere per svariate basi comuni. Per informazioni, vedere [macro di conteggio di conversione di massimo](itoa-itow.md#maximum-conversion-count-macros).
+CRT include pratici macro per definire le dimensioni del buffer necessarie per convertire il valore più lungo possibile di ogni tipo Integer, inclusi il carattere di terminazione null e il carattere di segno, per diverse basi comuni. Per informazioni, vedere le [macro numero massimo di conversioni](itoa-itow.md#maximum-conversion-count-macros).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -192,7 +195,7 @@ Queste funzioni sono specifiche di Microsoft. Per altre informazioni sulla compa
 
 ## <a name="example"></a>Esempio
 
-In questo esempio illustra l'uso di alcune delle funzioni di conversione di integer. Si noti che il [countof](countof-macro.md) macro funziona solo per determinare le dimensioni del buffer quando la dichiarazione di matrice è visibile al compilatore e non per i parametri che hanno cariati ai puntatori.
+In questo esempio viene illustrato l'utilizzo di alcune funzioni di conversione di tipo Integer. Si noti che la macro [_countof](countof-macro.md) funziona solo per determinare le dimensioni del buffer quando la dichiarazione di matrice è visibile al compilatore e non per i parametri che sono caduti in puntatori.
 
 ```C
 // crt_itoa_s.c
@@ -263,4 +266,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Vedere anche
 
 [Conversione dei dati](../../c-runtime-library/data-conversion.md)<br/>
-[itoa, itow funzioni](itoa-itow.md)<br/>
+[funzioni _itoa, _itow](itoa-itow.md)<br/>

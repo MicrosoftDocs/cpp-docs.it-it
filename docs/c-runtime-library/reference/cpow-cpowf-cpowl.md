@@ -1,11 +1,11 @@
 ---
 title: cpow, cpowf, cpowl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cpow
 - cpowf
 - cpowl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cpow
 - cpowf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005bafd4b19164f5c85be839a90fc7d5259d61bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339845"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942696"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
 
@@ -71,11 +74,11 @@ L'esponente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore di *x* elevato alla potenza del *y* con un ramo tagliato *x* lungo l'asse reale negativo.
+Il valore di *x* elevato alla potenza di *y* con un ramo tagliato per *x* lungo l'asse reale negativo.
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **cpow** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **cpow** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **cpow** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **cpow** accetta e restituisce sempre un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

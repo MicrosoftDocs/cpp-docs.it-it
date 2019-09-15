@@ -1,9 +1,9 @@
 ---
 title: mktemp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mktemp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mktemp
 helpviewer_keywords:
 - mktemp function
 ms.assetid: b58cba60-034f-4e63-b312-ccbcd489d0a7
-ms.openlocfilehash: 1d3d74f5c505281ca76b4d711624be6b7e11d65b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93301a42ce70c0a688d244ba17c5c369402cbcd3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285514"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951568"
 ---
 # <a name="mktemp"></a>mktemp
 

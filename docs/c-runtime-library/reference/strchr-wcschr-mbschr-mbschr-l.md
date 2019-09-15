@@ -1,12 +1,12 @@
 ---
 title: strchr, wcschr, _mbschr, _mbschr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strchr
 - wcschr
 - _mbschr_l
 - _mbschr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcschr
 - strchr
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: 8668c186a16dc3f3dc2c7223eb10c100fa6d72fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb0b170473ae48b8d339f5e3db8350087997bfeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354263"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940823"
 ---
-# <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr, wcschr, _mbschr, _mbschr_l
+# <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
 Trova un carattere in una stringa usando le impostazioni locali correnti o una categoria di stato di conversione LC_CTYPE specificata.
 
@@ -124,17 +127,17 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un puntatore alla prima occorrenza di *c* nelle *str*, o NULL se *c* non viene trovato.
+Ognuna di queste funzioni restituisce un puntatore alla prima occorrenza di *c* in *Str*oppure null se *c* non viene trovato.
 
 ## <a name="remarks"></a>Note
 
-Il `strchr` funzione Trova la prima occorrenza del *c* nelle *str*, o restituisce NULL se *c* non viene trovato. Il carattere di terminazione Null è incluso nella ricerca.
+La `strchr` funzione trova la prima occorrenza di *c* in *STR*oppure restituisce null se *c* non viene trovato. Il carattere di terminazione Null è incluso nella ricerca.
 
-`wcschr`, `_mbschr` e `_mbschr_l` sono le versioni a caratteri wide e a caratteri multibyte di `strchr`. Gli argomenti e il valore restituito di `wcschr` sono stringhe con caratteri wide, mentre quelli di `_mbschr` sono stringhe con caratteri multibyte. `_mbschr` riconosce sequenze di caratteri multibyte. Inoltre, se la stringa è un puntatore Null, `_mbschr` richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `_mbschr` restituisce NULL e imposta `errno` su EINVAL. `strchr` e `wcschr` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
+`wcschr`, `_mbschr` e `_mbschr_l` sono le versioni a caratteri wide e a caratteri multibyte di `strchr`. Gli argomenti e il valore restituito di `wcschr` sono stringhe con caratteri wide, mentre quelli di `_mbschr` sono stringhe con caratteri multibyte. `_mbschr` riconosce sequenze di caratteri multibyte. Inoltre, se la stringa è un puntatore Null, `_mbschr` richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `_mbschr` restituisce null e imposta `errno` su EINVAL. `strchr` e `wcschr` non convalidano i parametri. A parte ciò, queste tre funzioni si comportano in modo identico.
 
-Il valore di output è interessato dall'impostazione dell'impostazione della categoria LC_CTYPE delle impostazioni locali; per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è influenzato dall'impostazione della categoria LC_CTYPE delle impostazioni locali. Per ulteriori informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro _CRT_CONST_CORRECT_OVERLOADS è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi C++ gli overload, definire il simbolo CONST_RETURN.
+In C queste funzioni accettano un puntatore **const** per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a un oggetto non**const** restituisce un puntatore a un oggetto non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS viene definita se sono disponibili entrambe le versioni **const** e non**const** di queste funzioni. Se è necessario il comportamento non**const** per entrambi C++ gli overload, definire il simbolo _CONST_RETURN.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

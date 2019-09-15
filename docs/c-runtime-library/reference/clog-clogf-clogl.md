@@ -1,11 +1,11 @@
 ---
 title: clog, clogf, clogl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog
 - clogf
 - clogl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog
 - clogf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340638"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942914"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
@@ -68,7 +71,7 @@ Base del logaritmo.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il logaritmo naturale del *z*. Il risultato è unbounded lungo l'asse reale e nell'intervallo [-iπ, + iπ] lungo l'asse immaginario.
+Logaritmo naturale della *z*. Il risultato è unbounded lungo l'asse reale e nell'intervallo [-Iπ, + Iπ] lungo l'asse immaginario.
 
 I possibili valori restituiti sono:
 
@@ -82,7 +85,7 @@ I possibili valori restituiti sono:
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **clog** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **clog** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **intasamento** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C, lo **zoccolo** accetta sempre e restituisce un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

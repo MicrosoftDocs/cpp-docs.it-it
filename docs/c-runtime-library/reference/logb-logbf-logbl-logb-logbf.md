@@ -1,13 +1,13 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - logb
 - _logb
 - _logbl
 - logbf
 - logbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logb
 - logbl
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953156"
 ---
-# <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
+# <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
 Estrae il valore dell'esponente di un argomento a virgola mobile.
 
@@ -82,17 +85,17 @@ Un valore a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-**logb** restituisce il valore dell'esponente non distorto del *x* come un intero con segno rappresentato come un valore a virgola mobile.
+**logb** restituisce il valore dell'esponente non distorta di *x* come intero con segno rappresentato come valore a virgola mobile.
 
 ## <a name="remarks"></a>Note
 
-Il **logb** funzioni estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se *x* fosse rappresentato con un intervallo infinito. Se l'argomento *x* è denormalizzato, viene considerato come se fosse normalizzato.
+Le funzioni **logb** estraggono il valore esponenziale dell'argomento a virgola mobile *x*, come se le *x* fossero rappresentate con un intervallo infinito. Se l'argomento *x* viene denormalizzato, viene considerato come se fosse normalizzato.
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **logb** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **logb** che accettano e restituiscono valori di tipo **float** o **Long** **Double** . In un programma C **logb** accetta e restituisce sempre un **valore Double**.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|None|_DOMAIN|
+|± QNAN, IND|None|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 
 ## <a name="requirements"></a>Requisiti

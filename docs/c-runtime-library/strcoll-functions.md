@@ -1,14 +1,17 @@
 ---
 title: Funzioni strcoll
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcoll
 helpviewer_keywords:
@@ -17,12 +20,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-ms.openlocfilehash: 2acfaafbe15f065dbac924ce72a5ca3a5275537b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: c63a130cee6913006fff2ed5568c41cc4fdeac3c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751388"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944891"
 ---
 # <a name="strcoll-functions"></a>Funzioni strcoll
 
@@ -30,14 +33,14 @@ Ognuna delle funzioni `strcoll` e `wcscoll`confronta due stringhe in base all'im
 
 ### <a name="strcoll-functions"></a>Funzioni strcoll
 
-|SBCS|Unicode|MBCS|Description|
+|SBCS|Unicode|MBCS|Descrizione|
 |----------|-------------|----------|-----------------|
 |[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|Collaziona due stringhe|
 |[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|Collaziona due stringhe senza distinzione tra maiuscole e minuscole|
 |[_strncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_wcsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|[_mbsncoll](../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|Collaziona i primi `count` caratteri di due stringhe|
 |[_strnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_wcsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|[_mbsnicoll](../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|Collaziona i primi `count` caratteri di due stringhe senza distinzione tra maiuscole e minuscole|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Le versioni a caratteri a un byte (SBCS) di queste funzioni (`strcoll`, `stricoll`, `_strncoll` e `_strnicoll`) confrontano `string1` e `string2` in base all'impostazione della categoria `LC_COLLATE` delle impostazioni locali correnti. Queste funzioni sono diverse dalle corrispondenti funzioni `strcmp`, in quanto le funzioni `strcoll` usano le informazioni della tabella codici delle impostazioni locali che forniscono sequenze di collazione. Per i confronti di stringhe nelle impostazioni locali in cui l'ordine del set di caratteri e l'ordine lessicografico dei caratteri differiscono, devono essere usate le funzioni `strcoll` anziché le funzioni `strcmp` corrispondenti. Per altre informazioni su `LC_COLLATE`, vedere [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 

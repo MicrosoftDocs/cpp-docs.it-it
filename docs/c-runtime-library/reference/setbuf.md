@@ -1,9 +1,9 @@
 ---
 title: setbuf
 ms.date: 04/08/2019
-apiname:
+api_name:
 - setbuf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setbuf
 helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356393"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948271"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -52,9 +55,9 @@ Buffer allocato dall'utente.
 
 ## <a name="remarks"></a>Note
 
-Il **setbuf** controlla il buffering per funzionare *stream*. Il *flusso* argomento deve fare riferimento a un file aperto che non è ancora stato letto o scritto. Se il *buffer* l'argomento è **NULL**, il flusso è non memorizzato nel buffer. Se non, il buffer deve puntare a una matrice di caratteri di lunghezza **BUFSIZ**, dove **BUFSIZ** è la dimensione del buffer come definita in STDIO. H. Per il buffering di I/O viene usato il buffer specificato dall'utente, invece del buffer allocato dal sistema predefinito per il flusso specificato. Il **stderr** flusso è senza buffer per impostazione predefinita, ma è possibile usare **setbuf** per assegnare buffer a **stderr**.
+La funzione **setbuf** controlla il buffering per il *flusso*. L'argomento del *flusso* deve fare riferimento a un file aperto che non è stato letto o scritto. Se l'argomento del *buffer* è **null**, il flusso non viene memorizzato nel buffer. In caso contrario, il buffer deve puntare a una matrice di caratteri di lunghezza **BUFSIZ**, dove **BUFSIZ** è la dimensione del buffer definita in stdio. H. Per il buffering di I/O viene usato il buffer specificato dall'utente, invece del buffer allocato dal sistema predefinito per il flusso specificato. Per impostazione predefinita, il flusso **stderr** non viene memorizzato nel buffer, ma è possibile usare **setbuf** per assegnare i buffer a **stderr**.
 
-**setbuf** è stato sostituito da [setvbuf](setvbuf.md), ovvero la routine preferita per il nuovo codice. A differenza **setvbuf**, **setbuf** non ha modo di segnalazione degli errori. **setvbuf** consente inoltre di controllare la modalità di buffer e le dimensioni del buffer. **setbuf** esiste per la compatibilità con il codice esistente.
+**setbuf** è stato sostituito da [setvbuf](setvbuf.md), che è la routine preferita per il nuovo codice. A differenza di **setvbuf**, **setbuf** non è in grado di segnalare gli errori. **setvbuf** consente inoltre di controllare la modalità di buffering e le dimensioni del buffer. **setbuf** esiste per la compatibilità con il codice esistente.
 
 ## <a name="requirements"></a>Requisiti
 

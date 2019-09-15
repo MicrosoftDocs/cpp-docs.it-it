@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d00307f079ac72db93654f789c970b7f6a6e7dbe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331493"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952201"
 ---
-# <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
+# <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
-Le copie **n** byte di una stringa in una stringa di destinazione. Queste versioni di [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Copia **n** byte di una stringa in una stringa di destinazione. Queste versioni di [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
 > Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -96,16 +99,16 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero in caso di esito positivo. **EINVAL** se è stato passato un parametro non valido.
+Zero in caso di esito positivo; **EINVAL** se è stato passato un parametro non valido.
 
 ## <a name="remarks"></a>Note
 
-Il **mbsnbcpy_s** funzione copie *conteggio* byte dal *strSource* al *strDest*. Se *conteggio* supera le dimensioni della *strDest*, ad esempio delle stringhe di input è un puntatore null, o *sizeInBytes* oppure *conteggio* è 0, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione restituisce **EINVAL**. Se le stringhe di origine e destinazione si sovrappongono, il comportamento delle **mbsnbcpy_s** è definito.
+La funzione **_mbsnbcpy_s** copia i byte del *conteggio* da *strSource* a *strDest*. Se *count* supera la dimensione di *strDest*, una delle stringhe di input è un puntatore null o *sizeInBytes* o *count* è 0, la funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, la funzione restituisce **EINVAL**. Se le stringhe di origine e di destinazione si sovrappongono, il comportamento di **_mbsnbcpy_s** non è definito.
 
 La configurazione dell'impostazione della categoria **LC_CTYPE** delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso **_l** usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **_l** sono identiche, ma usano il parametro passato alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> A differenza della versione di questa funzione, non sicure **mbsnbcpy_s** non eseguire alcun riempimento con null e non è sempre null termina la stringa.
+> A differenza della versione non sicura di questa funzione, **_mbsnbcpy_s** non esegue la spaziatura tra valori null e sempre null termina la stringa.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

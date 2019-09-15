@@ -1,9 +1,9 @@
 ---
 title: wctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctrans
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188455"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944880"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -50,7 +53,7 @@ Una stringa che specifica una delle trasformazioni valide.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se il **LC_CTYPE** categoria delle impostazioni locali correnti non definisce un mapping il cui nome corrisponde alla stringa di proprietà *proprietà*, la funzione restituisce zero. In caso contrario, restituisce un valore diverso da zero adatto per l'uso come secondo argomento per una chiamata successiva a [towctrans](towctrans.md).
+Se la categoria **LC_CTYPE** delle impostazioni locali correnti non definisce un mapping il cui nome corrisponde alla *Proprietà*della stringa di proprietà, la funzione restituisce zero. In caso contrario, restituisce un valore diverso da zero adatto per l'uso come secondo argomento per una chiamata successiva a [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Note
 
@@ -60,8 +63,8 @@ Le seguenti coppie di chiamate hanno lo stesso comportamento in tutte le imposta
 
 |Funzione|Uguale a|
 |--------------|-------------|
-|tolower(c)|towctrans (c, wctrans("towlower"))|
-|towupper(c)|towctrans (c, wctrans("toupper"))|
+|ToLower (c)|towctrans (c, wctrans ("towlower"))|
+|towupper (c)|towctrans (c, wctrans ("ToUpper"))|
 
 ## <a name="requirements"></a>Requisiti
 

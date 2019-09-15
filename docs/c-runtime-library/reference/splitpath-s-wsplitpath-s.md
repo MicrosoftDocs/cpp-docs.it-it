@@ -1,10 +1,10 @@
 ---
 title: _splitpath_s, _wsplitpath_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsplitpath_s
 - _splitpath_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsplitpath_s
 - splitpath_s
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355029"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958046"
 ---
-# <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
+# <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s, _wsplitpath_s
 
 Suddivide un nome di percorso nei componenti. Queste sono versioni di [_splitpath, _wsplitpath](splitpath-wsplitpath.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -91,28 +94,28 @@ errno_t _wsplitpath_s(
 Percorso completo.
 
 *drive*<br/>
-Lettera di unità, seguita da due punti (**:**). È possibile passare **NULL** per questo parametro se non è necessaria la lettera di unità.
+Lettera di unità, seguita da due punti ( **:** ). È possibile passare **null** per questo parametro se non è necessaria la lettera di unità.
 
 *driveNumberOfElements*<br/>
-Le dimensioni dei *unità* buffer in caratteri a byte singolo o wide. Se *unità* viene **NULL**, questo valore deve essere 0.
+Dimensioni del buffer dell' *unità* in caratteri a byte singolo o Wide. Se l' *unità* è **null**, questo valore deve essere 0.
 
 *dir*<br/>
-Percorso di directory, inclusa la barra finale. Barre ( **/** ), barre rovesciate ( **\\** ), o entrambi possono essere usati. È possibile passare **NULL** per questo parametro se non è necessario il percorso della directory.
+Percorso di directory, inclusa la barra finale. È possibile utilizzare le **/** barre (), le barre **\\** rovesciate () o entrambe. È possibile passare **null** per questo parametro se non è necessario il percorso della directory.
 
 *dirNumberOfElements*<br/>
-Le dimensioni dei *dir* buffer in caratteri a byte singolo o wide. Se *dir* viene **NULL**, questo valore deve essere 0.
+Dimensioni del buffer *dir* in caratteri a byte singolo o Wide. Se *dir* è **null**, questo valore deve essere 0.
 
 *fname*<br/>
-Nome di file di base (senza estensione). È possibile passare **NULL** per questo parametro se non è necessario il nome del file.
+Nome di file di base (senza estensione). È possibile passare **null** per questo parametro se non è necessario il nome file.
 
 *nameNumberOfElements*<br/>
-Le dimensioni dei *fname* buffer in caratteri a byte singolo o wide. Se *fname* viene **NULL**, questo valore deve essere 0.
+Dimensioni del buffer *fname* in caratteri a byte singolo o Wide. Se *fname* è **null**, questo valore deve essere 0.
 
 *ext*<br/>
-Estensione di file, incluso il punto iniziale (**.**). È possibile passare **NULL** per questo parametro se non è necessaria l'estensione del file.
+Estensione del nome file, incluso il punto principale ( **.** ). È possibile passare **null** per questo parametro se non è necessaria l'estensione del nome file.
 
 *extNumberOfElements*<br/>
-Il valore pari *ext* buffer in caratteri a byte singolo o wide. Se *ext* viene **NULL**, questo valore deve essere 0.
+Dimensioni del buffer *ext* in caratteri a byte singolo o Wide. Se *ext* è **null**, questo valore deve essere 0.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -122,23 +125,23 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 
 |Condizione|Valore restituito|
 |---------------|------------------|
-|*percorso* è **NULL**|**EINVAL**|
-|*unità* viene **NULL**, *driveNumberOfElements* è diverso da zero|**EINVAL**|
-|*unità* non viene impostata**NULL**, *driveNumberOfElements* è uguale a zero|**EINVAL**|
-|*dir* viene **NULL**, *dirNumberOfElements* è diverso da zero|**EINVAL**|
-|*dir* non viene impostata**NULL**, *dirNumberOfElements* è uguale a zero|**EINVAL**|
-|*fname* viene **NULL**, *nameNumberOfElements* è diverso da zero|**EINVAL**|
-|*fname* non viene impostata**NULL**, *nameNumberOfElements* è uguale a zero|**EINVAL**|
-|*ext* viene **NULL**, *extNumberOfElements* è diverso da zero|**EINVAL**|
-|*ext* non viene impostata**NULL**, *extNumberOfElements* è uguale a zero|**EINVAL**|
+|il *percorso* è **null**|**EINVAL**|
+|l' *unità* è **null**, *driveNumberOfElements* è diverso da zero|**EINVAL**|
+|l' *unità* non è**null**, *driveNumberOfElements* è zero|**EINVAL**|
+|*dir* è **null**, *dirNumberOfElements* è diverso da zero|**EINVAL**|
+|*dir* è diverso da**null**, *dirNumberOfElements* è zero|**EINVAL**|
+|*fname* è **null**, *nameNumberOfElements* è diverso da zero|**EINVAL**|
+|*fname* è diverso da**null**, *nameNumberOfElements* è zero|**EINVAL**|
+|*ext* è **null**, *extNumberOfElements* è diverso da zero|**EINVAL**|
+|*ext* è diverso da**null**, *extNumberOfElements* è zero|**EINVAL**|
 
-Se si verifica una delle condizioni precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **EINVAL**.
+Se si verifica una delle condizioni precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **EINVAL**.
 
-Se uno qualsiasi dei buffer è troppo breve per contenere il risultato, queste funzioni cancellano tutti i buffer per stringhe vuote, impostare **errno** al **ERANGE**e restituire **ERANGE**.
+Se uno dei buffer è troppo breve per conservare il risultato, queste funzioni cancellano tutti i buffer in stringhe vuote, imposta **errno** su **ERANGE**e restituisce **ERANGE**.
 
 ## <a name="remarks"></a>Note
 
-Il **splitpath_s** funzione suddivide un percorso nei suoi quattro componenti. **splitpath_s** gestisce automaticamente gli argomenti stringa di caratteri multibyte esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **wsplitpath_s** è una versione a caratteri wide di **splitpath_s**; gli argomenti **wsplitpath_s** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
+La funzione **_splitpath_s** suddivide un percorso nei quattro componenti. **_splitpath_s** gestisce automaticamente gli argomenti della stringa di caratteri multibyte in base alle esigenze, riconoscendo le sequenze di caratteri multibyte in base alla tabella codici multibyte attualmente in uso. **_wsplitpath_s** è una versione a caratteri wide di **_splitpath_s**; gli argomenti di **_wsplitpath_s** sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -146,18 +149,18 @@ Il **splitpath_s** funzione suddivide un percorso nei suoi quattro componenti. *
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath_s**|**_splitpath_s**|**_splitpath_s**|**_wsplitpath_s**|
 
-Ogni componente del percorso completo è archiviato in un buffer separato; le costanti manifeste **max_drive**, **max_dir**, **max_fname**, e **max_ext** (definito in STDLIB. H) specificare le dimensioni massime consentite per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
+Ogni componente del percorso completo è archiviato in un buffer separato. costanti manifeste **_MAX_DRIVE**, **_MAX_DIR**, **_MAX_FNAME**e **_MAX_EXT** (definite in STDLIB. H) specificare la dimensione massima consentita per ogni componente del file. I componenti del file più grandi delle costanti manifeste corrispondenti causano il danneggiamento dell'heap.
 
 La tabella seguente elenca i valori delle costanti manifeste.
 
-|Nome|Value|
+|Name|Value|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-Se il percorso completo non contiene un componente (ad esempio, un nome di file), **splitpath_s** assegna una stringa vuota al buffer corrispondente.
+Se il percorso completo non contiene un componente, ad esempio un nome di file, **_splitpath_s** assegna una stringa vuota al buffer corrispondente.
 
 In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,9 +1,9 @@
 ---
 title: _eof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _eof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _eof
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288136"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941976"
 ---
-# <a name="eof"></a>_eof
+# <a name="_eof"></a>_eof
 
 Test per la fine del file (EOF).
 
@@ -52,11 +55,11 @@ Il descrittore del file che fa riferimento al file aperto.
 
 ## <a name="return-value"></a>Valore restituito
 
-**EOF** restituisce 1 se la posizione corrente è di fine del file oppure 0 in caso contrario. Valore restituito di -1 indica un errore. In questo caso, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EBADF**, che indica un descrittore di file non valido.
+**_eof** restituisce 1 se la posizione corrente è la fine del file o 0 in caso contrario. Un valore restituito di-1 indica un errore. in questo caso, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EBADF**, che indica un descrittore di file non valido.
 
 ## <a name="remarks"></a>Note
 
-Il **EOF** funzione determina se la fine del file associato *fd* è stato raggiunto.
+La funzione **_eof** determina se è stata raggiunta la fine del file associato a *FD* .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -106,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crteoftxt"></a>Input: crt_eof.txt
+### <a name="input-crt_eoftxt"></a>Input: crt_eof.txt
 
 ```Input
 This file contains some text.

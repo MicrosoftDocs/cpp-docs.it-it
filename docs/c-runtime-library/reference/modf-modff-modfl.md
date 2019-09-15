@@ -1,11 +1,11 @@
 ---
 title: modf, modff, modfl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - modff
 - modf
 - modfl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - modff
 - _modfl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156330"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951533"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -69,11 +72,11 @@ Questa funzione restituisce la parte frazionaria con segno di *x*. Non vi è res
 
 ## <a name="remarks"></a>Note
 
-Il **modf** funzioni suddividono il valore a virgola mobile *x* in parte frazionaria e parte intera, ognuno dei quali ha lo stesso segno *x*. La parte frazionaria con segno di *x* viene restituito. La parte intera viene archiviata come un valore a virgola mobile in corrispondenza *intptr*.
+Le funzioni **modf** suddividono il valore a virgola mobile *x* in parti frazionarie e intere, ognuna delle quali ha lo stesso segno di *x*. Viene restituita la parte frazionaria con segno di *x* . La parte intera viene archiviata come valore a virgola mobile in *IntPtr*.
 
 **modf** dispone di un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ consente l'overload, quindi è possibile chiamare overload di **modf** che accettano e restituiscono **float** oppure **long** **double** parametri. In un programma C **modf** sempre accetta due valori double e restituisce un valore double.
+C++consente l'overload, quindi è possibile chiamare overload di **modf** che accettano e restituiscono parametri **float** o **Long** **Double** . In un programma C **modf** accetta sempre due valori Double e restituisce un valore Double.
 
 ## <a name="requirements"></a>Requisiti
 

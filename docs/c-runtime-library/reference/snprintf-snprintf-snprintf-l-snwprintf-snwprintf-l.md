@@ -1,13 +1,13 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwprintf
 - _snprintf
 - _snprintf_l
 - _snwprintf_l
 - snprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snprintf
 - snprintf_l
@@ -48,12 +51,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 8f7ce565467321c8e2ea5c80cae9ef41297ccaed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a1d11efebad57bdcf44ca959384f449640dad701
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499522"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948000"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 

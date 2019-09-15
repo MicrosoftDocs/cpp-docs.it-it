@@ -1,12 +1,12 @@
 ---
 title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsprintf_p
 - _vswprintf_p
 - _vsprintf_p_l
 - _vswprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vsprintf_p
 - _vswprintf_p
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e684bebc0a997e25963366b64fbab6d4f958e8eb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383438"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945249"
 ---
-# <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
+# <a name="_vsprintf_p-_vsprintf_p_l-_vswprintf_p-_vswprintf_p_l"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
 Scrive l'output formattato usando un puntatore a un elenco di argomenti, con la possibilità di specificare l'ordine in cui sono usati gli argomenti.
 
@@ -88,7 +91,7 @@ int _vswprintf_p_l(
 Percorso di archiviazione per l'output.
 
 *sizeInBytes*<br/>
-Dimensioni del *buffer* in caratteri.
+Dimensione del *buffer* in caratteri.
 
 *count*<br/>
 Numero massimo di caratteri da archiviare nella versione Unicode di questa funzione.
@@ -104,17 +107,17 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-**vsprintf_p** e **vswprintf_p** restituiscono il numero di caratteri scritti, escludendo il carattere null di terminazione o un valore negativo se si verifica un errore di output.
+**_vsprintf_p** e **_vswprintf_p** restituiscono il numero di caratteri scritti, escluso il carattere null di terminazione, o un valore negativo se si verifica un errore di output.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati per la memoria a cui punta *buffer*.
+Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specificati nella memoria a cui punta il *buffer*.
 
-Queste funzioni differiscono dalle **vsprintf_s** e **vswprintf_s** solo per il fatto che supportano parametri posizionali. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
+Queste funzioni differiscono da **vsprintf_s** e **vswprintf_s** solo perché supportano parametri posizionali. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ad eccezione del fatto che usano il parametro delle impostazioni locali passato anziché le impostazioni locali del thread corrente.
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali del thread corrente.
 
-Se il *buffer* oppure *formato* sono parametri **NULL** puntatori, se il conteggio è zero, caratteri o se la stringa di formato contiene formattazione non validi, il parametro non valido gestore viene richiamato, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
+Se il *buffer* o i parametri di *formato* sono puntatori **null** , se count è zero o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

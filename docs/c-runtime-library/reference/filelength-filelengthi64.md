@@ -1,10 +1,10 @@
 ---
 title: _filelength, _filelengthi64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _filelengthi64
 - _filelength
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _filelength
 - _filelengthi64
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 00d755138b9293145865b832994a25062edd883e
-ms.sourcegitcommit: fc6bdffcf7d5521609da629621cc8459b200b004
+ms.openlocfilehash: d7cf7f5bea5ed8964ec1a714a2a70d289daf085f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351766"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957215"
 ---
-# <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
+# <a name="_filelength-_filelengthi64"></a>_filelength, _filelengthi64
 
 Ottiene la lunghezza di un file.
 
@@ -58,7 +61,7 @@ Destinare il descrittore del file.
 
 ## <a name="return-value"></a>Valore restituito
 
-Entrambe **filelength** e **_filelengthi64** restituiscono la lunghezza del file, in byte, del file di destinazione associato *fd*. Se *fd* è un descrittore di file non valido, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, entrambe le funzioni restituiscono-1L per indicare un errore e impostare **errno** al **EBADF**.
+Sia **_filelength** che **_filelengthi64** restituiscono la lunghezza del file, in byte, del file di destinazione associato a *FD*. Se *FD* è un descrittore di file non valido, questa funzione richiama il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, entrambe le funzioni restituiscono-1L per indicare un errore e impostano **errno** su **EBADF**.
 
 ## <a name="requirements"></a>Requisiti
 

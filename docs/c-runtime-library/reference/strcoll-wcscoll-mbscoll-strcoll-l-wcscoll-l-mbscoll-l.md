@@ -1,14 +1,14 @@
 ---
 title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcscoll
 - _mbscoll
 - _mbscoll_l
 - strcoll
 - _strcoll_l
 - _wcscoll_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcscoll
 - _mbscoll
@@ -43,19 +46,19 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7519b8f41d77ed668bb7da1e8ced18ee13c0a5bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354210"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957883"
 ---
-# <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
+# <a name="strcoll-wcscoll-_mbscoll-_strcoll_l-_wcscoll_l-_mbscoll_l"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
 Esegue il confronto di stringhe usando le impostazioni locali correnti o una categoria di stato di conversione LC_COLLATE specificata.
 
 > [!IMPORTANT]
-> **mbscoll** e **_mbscoll_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbscoll** e **_mbscoll_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -99,23 +102,23 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un valore che indica la relazione fra *string1* al *string2*, come indicato di seguito.
+Ognuna di queste funzioni restituisce un valore che indica la relazione tra *String1* e *string2*, come indicato di seguito.
 
 |Valore restituito|Relazione di stringa1 e stringa2|
 |------------------|----------------------------------------|
-|< 0|*String1* minore di *stringa2*|
-|0|*String1* identica alla *stringa2*|
-|> 0|*String1* maggiore *stringa2*|
+|< 0|*String1* minore di *string2*|
+|0|*String1* identico a *string2*|
+|> 0|*String1* maggiore di *string2*|
 
-Ognuna di queste funzioni restituisce **_NLSCMPERROR** in caso di errore. Per utilizzare **_NLSCMPERROR**, includere entrambe le stringhe. La H o MBSTRING. H. **wcscoll** può non riuscire se *string1* oppure *string2* viene **NULL** o contiene i codici di caratteri "wide" all'esterno del dominio della sequenza di ordinamento. Quando si verifica un errore, **wcscoll** potrebbe impostare **errno** al **EINVAL**. Per verificare la presenza di un errore in una chiamata a **wcscoll**, impostare **errno** su 0 e quindi selezionare **errno** dopo la chiamata **wcscoll**.
+Ognuna di queste funzioni restituisce **_NLSCMPERROR** su un errore. Per usare **_NLSCMPERROR**, includere una delle due stringhe. H o MBSTRING. H. **wcscoll** può avere esito negativo se *String1* o *string2* è **null** o contiene codici a caratteri wide al di fuori del dominio della sequenza di ordinamento. Quando si verifica un errore, **wcscoll** può impostare **errno** su **EINVAL**. Per verificare la presenza di un errore in una chiamata a **wcscoll**, impostare **errno** su 0, quindi controllare **errno** dopo aver chiamato **wcscoll**.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni esegue un confronto tra maiuscole e minuscole tra *string1* e *string2* in base alla tabella codici correntemente in uso. Usare queste funzioni solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe.
+Ognuna di queste funzioni esegue un confronto con distinzione tra maiuscole e minuscole di *String1* e *string2* in base alla tabella codici attualmente in uso. Usare queste funzioni solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe.
 
-Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1* oppure *string2* è un puntatore null, o se *count* è maggiore **INT_MAX**, viene richiamato il gestore di parametri non validi , come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostare **errno** al **EINVAL**.
+Tutte queste funzioni convalidano i relativi parametri. Se *String1* o *string2* è un puntatore null o se *count* è maggiore di **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostano **errno** su **EINVAL**.
 
-Il confronto delle due stringhe è un'operazione che dipende dalle impostazioni locali, dato che ogni set di impostazioni locali prevede regole diverse per l'ordinamento dei caratteri. Le versioni di queste funzioni senza il **l** suffisso utilizzare impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali; le versioni con il **l** suffisso sono identiche alla funzione corrispondente senza il suffisso con la differenza che usano le impostazioni locali passata come parametro anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il confronto delle due stringhe è un'operazione che dipende dalle impostazioni locali, dato che ogni set di impostazioni locali prevede regole diverse per l'ordinamento dei caratteri. Le versioni di queste funzioni senza il suffisso **suffisso** usano le impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali; le versioni con il suffisso **suffisso** sono identiche alla funzione corrispondente senza il suffisso, ad eccezione del fatto che usano le impostazioni locali passate come parametro anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

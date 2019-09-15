@@ -1,10 +1,10 @@
 ---
 title: _get_daylight
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __daylight
 - _get_daylight
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_daylight
 - _get_daylight
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f63d3baa1e9411039d1482b4cbfbf4bce4e9872
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332314"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956056"
 ---
-# <a name="getdaylight"></a>_get_daylight
+# <a name="_get_daylight"></a>_get_daylight
 
 Recupera l'offset ora legale in ore.
 
@@ -44,20 +47,20 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>Parametri
 
-*hours*<br/>
+*ore*<br/>
 Offset ora legale in ore.
 
 ## <a name="return-value"></a>Valore restituito
 
-Zero se ha esito positivo oppure un **errno** valore se si verifica un errore.
+Zero se ha esito positivo o un valore **errno** se si verifica un errore.
 
 ## <a name="remarks"></a>Note
 
-Il **get_daylight** funzione recupera il numero di ore nell'ora legale come numero intero. Se è attiva l'ora legale, l'offset predefinito è pari a un'ora (alcune regioni usano un offset di due ore).
+La funzione **_get_daylight** Recupera il numero di ore nell'ora legale come numero intero. Se è attiva l'ora legale, l'offset predefinito è pari a un'ora (alcune regioni usano un offset di due ore).
 
-Se *ore* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta **errno** al **EINVAL** e restituisce **EINVAL**.
+Se *hours* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione imposta **errno** su **EINVAL** e restituisce **EINVAL**.
 
-È consigliabile usare questa funzione anziché la macro **Daylight** o della funzione deprecata **__daylight**.
+Si consiglia di usare questa funzione invece della macro **_daylight** o della funzione deprecata **__daylight**.
 
 ## <a name="requirements"></a>Requisiti
 

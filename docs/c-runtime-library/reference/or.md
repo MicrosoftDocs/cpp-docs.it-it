@@ -1,7 +1,7 @@
 ---
 title: oppure
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - std::or
 - std.or
@@ -20,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - or function
 ms.assetid: 6523b3ac-0a18-44ec-9e9a-b9bab8525ead
-ms.openlocfilehash: 9973533e0c871048c2bd586a4503dec3942fc14c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d1d36f3147b746602be03b21867cefde2e32495
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155993"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951067"
 ---
 # <a name="or"></a>oppure
 

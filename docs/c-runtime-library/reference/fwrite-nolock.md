@@ -1,9 +1,9 @@
 ---
 title: _fwrite_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fwrite_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fwrite_nolock
 - fwrite_nolock
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 1c899e34e19547b30a42135f3f818f220f1bc5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 035ee1d958c6ea6a13481d92311733ded9ed5f2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332663"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956208"
 ---
-# <a name="fwritenolock"></a>_fwrite_nolock
+# <a name="_fwrite_nolock"></a>_fwrite_nolock
 
 Scrive i dati in un flusso senza bloccare il thread.
 
@@ -66,7 +69,7 @@ Uguale a [fwrite](fwrite.md).
 
 ## <a name="remarks"></a>Note
 
-Questa funzione è una versione non blocca il thread del **fwrite**. È identico a **fwrite** ad eccezione del fatto che non è protetta da interferenze da altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Questa funzione è una versione non di blocco di **fwrite**. È identica a **fwrite** , con la differenza che non è protetta da interferenze da parte di altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ## <a name="requirements"></a>Requisiti
 

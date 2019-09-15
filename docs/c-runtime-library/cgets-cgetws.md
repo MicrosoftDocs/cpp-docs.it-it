@@ -1,10 +1,10 @@
 ---
 title: _cgets, _cgetws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws
 - _cgets
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cgetws
 - _cgetws
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: ea4d7be7631f22eecbea7c6727295c17d86dba06
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: aa258eaba34feec8ea25d780ea6392f195e37508
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750337"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944682"
 ---
-# <a name="cgets-cgetws"></a>_cgets, _cgetws
+# <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
 Ottiene una stringa di caratteri dalla console. Sono disponibili versioni più sicure di queste funzioni. Vedere [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).
 
@@ -72,7 +75,7 @@ Percorso di archiviazione per i dati.
 
 `_cgets` e `_cgetws` restituiscono un puntatore all'inizio della stringa, in corrispondenza di `buffer[2]`. Se `buffer` è **NULL**, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, restituiscono **NULL** e impostano `errno` su `EINVAL`.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Queste funzioni leggono una stringa di caratteri dalla console e archiviano la stringa e la relativa lunghezza nella posizione indicata da `buffer`. Il parametro `buffer` deve essere un puntatore a una matrice di caratteri. Il primo elemento della matrice, `buffer[0]`, deve contenere la lunghezza massima in caratteri della stringa da leggere. La matrice deve contenere un numero tale di elementi per contenere la stringa, un carattere Null di terminazione ('\0') e due byte aggiuntivi. La funzione legge i caratteri finché non viene letta una combinazione di ritorno a capo con avanzamento riga (CR-LF) oppure il numero specificato di caratteri. La stringa viene archiviata a partire da `buffer[2]`. Se la funzione legge una combinazione CR-LF, archivia il carattere Null ('\0'). La funzione archivia quindi la lunghezza effettiva della stringa nel secondo elemento della matrice, `buffer[1]`.
 

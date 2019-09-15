@@ -1,11 +1,11 @@
 ---
 title: csin, csinf, csinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csin
 - csinf
 - csinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csin
 - csinf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0e0c57596ac36dbe3c0b72f79177b8df7b15af0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288849"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941953"
 ---
 # <a name="csin-csinf-csinl"></a>csin, csinf, csinl
 
@@ -68,11 +71,11 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il seno *z*, espresso in radianti.
+Seno di *z*, in radianti.
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **csin** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **csin** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **csin** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **csin** accetta e restituisce sempre un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

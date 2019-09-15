@@ -1,10 +1,10 @@
 ---
 title: fopen_s, _wfopen_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfopen_s
 - fopen_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fopen_s
 - _tfopen_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: e4ccce3c4a4fe1e327b7830ef03f6ab69f2d7814
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 2a400918a171c0009e40be8a20b814e8ded336ce
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376212"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957130"
 ---
-# <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
+# <a name="fopen_s-_wfopen_s"></a>fopen_s, _wfopen_s
 
 Apre un file. Queste versioni di [fopen, wfopen](fopen-wfopen.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 

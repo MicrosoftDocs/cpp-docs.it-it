@@ -1,9 +1,9 @@
 ---
 title: _abnormal_termination
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _abnormal_termination
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _abnormal_termination
 helpviewer_keywords:
 - _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
-ms.openlocfilehash: 213938fa830f0a924fa954d4a36a39b544473dd4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b66cf0df998b4e33a9f3425fdf0f260d163f423b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741282"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944718"
 ---
-# <a name="abnormaltermination"></a>_abnormal_termination
+# <a name="_abnormal_termination"></a>_abnormal_termination
 
 Indica se il blocco `__finally` di un'[istruzione try-finally](../cpp/try-finally-statement.md) viene inserito mentre il sistema esegue un elenco interno di gestori di terminazione.
 
@@ -39,7 +42,7 @@ int   _abnormal_termination(
 
 **true** se il sistema sta eseguendo la *rimozione* dello stack; in caso contrario, **false**.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Si tratta di una funzione interna utilizzata per gestire eccezioni di rimozione e non deve essere chiamata dal codice utente.
 

@@ -1,9 +1,9 @@
 ---
 title: _get_fmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_fmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_fmode
 - _get_fmode
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: dc4740b20ab7283dd8b9f73f458eaba34e582832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03e07ea44aadec7c15352bb63fd25aa777ee9bfb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287562"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955876"
 ---
-# <a name="getfmode"></a>_get_fmode
+# <a name="_get_fmode"></a>_get_fmode
 
 Ottiene la modalità di conversione file predefinita per le operazioni di I/O dei file.
 
@@ -46,15 +49,15 @@ errno_t _get_fmode(
 ### <a name="parameters"></a>Parametri
 
 *pmode*<br/>
-Un puntatore a un numero intero deve essere compilato con la modalità predefinita corrente: **o_text** oppure **O_BINARY**.
+Puntatore a un Integer da riempire con la modalità predefinita corrente: **_O_TEXT** o **_O_BINARY**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pmode* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EINVAL**.
+Restituisce zero se ha esito positivo; un codice di errore se ha esito negativo. Se *pmode* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-La funzione ottiene il valore della variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione file predefinita per quelle a basso livello e flusso di operazioni dei / o file, ad esempio **Open**, **pipe**, **fopen**, e [ freopen](freopen-wfreopen.md).
+La funzione ottiene il valore della variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione file predefinita per le operazioni di I/O di file di flusso e di basso livello, ad esempio **_open**, **_pipe**, **fopen**e [freopen](freopen-wfreopen.md).
 
 ## <a name="requirements"></a>Requisiti
 
