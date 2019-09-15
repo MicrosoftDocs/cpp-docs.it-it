@@ -1,12 +1,12 @@
 ---
 title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbclower
 - _ismbclower_l
 - _ismbcupper_l
 - _ismbcupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcupper
 - _ismbclower
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a64a0d9be83733fa5482eee84ce6576dd32c221
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157286"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953790"
 ---
-# <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
+# <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
 Verifica se un carattere multibyte è minuscolo o maiuscolo.
 
@@ -75,20 +78,20 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c*< = 255 ed è presente un corrispondente **ismbb** routine (ad esempio, **ismbcalnum** corrisponde al **ismbbalnum**), il il risultato è il valore restituito dell'oggetto corrispondente **ismbb** routine.
+Ognuna di queste routine restituisce un valore diverso da zero se il carattere soddisfa la condizione di test oppure 0 in caso contrario. Se *c*< = 255 ed è presente una routine **_ismbb** corrispondente (ad esempio, **_ismbcalnum** corrisponde a **_ismbbalnum**), il risultato è il valore restituito della routine **_ismbb** corrispondente.
 
 ## <a name="remarks"></a>Note
 
 Ognuna di queste funzioni testa una particolare condizione su un determinato carattere multibyte.
 
-Le versioni di queste funzioni con il **l** suffisso sono identiche ma usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condizione di test|Esempio della tabella codici 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Carattere alfabetico minuscolo|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera in inglese minuscola ASCII: 0x61<=*c*<=0x7A.|
-|**_ismbclower_l**|Carattere alfabetico minuscolo|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera in inglese minuscola ASCII: 0x61<=*c*<=0x7A.|
-|**_ismbcupper**|Carattere alfabetico maiuscolo|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera in inglese maiuscola ASCII: 0x41<=*c*<=0x5A.|
-|**_ismbcupper_l**|Carattere alfabetico maiuscolo|Restituisce diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera in inglese maiuscola ASCII: 0x41<=*c*<=0x5A.|
+|**_ismbclower**|Carattere alfabetico minuscolo|Restituisce un valore diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera in inglese minuscolo ASCII: 0x61 < =*c*< = 0x7A.|
+|**_ismbclower_l**|Carattere alfabetico minuscolo|Restituisce un valore diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera in inglese minuscolo ASCII: 0x61 < =*c*< = 0x7A.|
+|**_ismbcupper**|Carattere alfabetico maiuscolo|Restituisce un valore diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera inglese in maiuscolo ASCII: 0x41 < =*c*< = 0x5A.|
+|**_ismbcupper_l**|Carattere alfabetico maiuscolo|Restituisce un valore diverso da zero se e solo se *c* è una rappresentazione a byte singolo di una lettera inglese in maiuscolo ASCII: 0x41 < =*c*< = 0x5A.|
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,9 +1,9 @@
 ---
 title: _lfind_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind_s
 - _lfind_s
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69db97dc24b567714bda3e02f5f53ff381ae4911
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286427"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953445"
 ---
-# <a name="lfinds"></a>_lfind_s
+# <a name="_lfind_s"></a>_lfind_s
 
 Esegue una ricerca lineare della chiave specificata. Questa è una versione di [_lfind](lfind.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -59,23 +62,23 @@ Oggetto da cercare.
 *base*<br/>
 Puntatore alla base dei dati di ricerca.
 
-*number*<br/>
+*numero*<br/>
 Numero degli elementi della matrice.
 
 *size*<br/>
 Dimensione degli elementi della matrice in byte.
 
 *compare*<br/>
-Puntatore alla routine di confronto. Il primo parametro è il *contesto* puntatore. Il secondo parametro è un puntatore alla chiave per la ricerca. Il terzo parametro è un puntatore all'elemento della matrice da confrontare con la chiave.
+Puntatore alla routine di confronto. Il primo parametro è il puntatore di *contesto* . Il secondo parametro è un puntatore alla chiave per la ricerca. Il terzo parametro è un puntatore all'elemento della matrice da confrontare con la chiave.
 
 *context*<br/>
 Puntatore a un oggetto che potrebbe essere accessibile nella funzione di confronto.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se la chiave viene trovata, **lfind_s** restituisce un puntatore all'elemento della matrice in corrispondenza *base* che corrisponde a *chiave*. Se la chiave non viene trovata, **lfind_s** restituisce **NULL**.
+Se la chiave viene trovata, **_lfind_s** restituisce un puntatore all'elemento della matrice in *base* che corrisponde alla *chiave*. Se la chiave non viene trovata, **_lfind_s** restituisce **null**.
 
-Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **NULL**.
+Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **null**.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
@@ -88,9 +91,9 @@ Se alla funzione vengono passati parametri non validi, viene richiamato il gesto
 
 ## <a name="remarks"></a>Note
 
-Il **lfind_s** funzione esegue una ricerca lineare per il valore *chiave* in una matrice di *numero* elementi, ognuno dei *larghezza* byte. A differenza **bsearch_s**, **lfind_s** richiede che la matrice da ordinare. Il *base* argomento è un puntatore alla base della matrice da cercare. Il *confrontare* argomento è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che specifica la relazione. **lfind_s** chiama il *confrontare* routine una o più volte durante la ricerca, passando il *contesto* puntatore e i puntatori a due elementi della matrice per ogni chiamata. Il *confrontare* routine deve confrontare gli elementi quindi restituire diverso da zero (ovvero che gli elementi sono diversi) o 0 (ovvero gli elementi sono identici).
+La funzione **_lfind_s** esegue una ricerca lineare per la *chiave* del valore in una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . A differenza di **bsearch_s**, **_lfind_s** non richiede che la matrice sia ordinata. L'argomento di *base* è un puntatore alla base della matrice in cui eseguire la ricerca. L'argomento *compare* è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che ne specifica la relazione. **_lfind_s** chiama la routine di *confronto* una o più volte durante la ricerca, passando il puntatore di *contesto* e i puntatori a due elementi di matrice per ogni chiamata. La routine di *confronto* deve confrontare gli elementi, quindi restituire un valore diverso da zero (ovvero gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).
 
-**lfind_s** è simile a **lfind** tranne l'aggiunta del *contesto* puntatore all'elenco di parametri della funzione e gli argomenti della funzione di confronto. Il *contesto* puntatore può essere utile se la struttura dei dati cercati fa parte di un oggetto e il *confrontare* deve accedere ai membri dell'oggetto funzione. Il *confrontare* funzione può eseguire il cast del puntatore void nei membri di accesso e tipo di oggetto appropriato di quell'oggetto. L'aggiunta del *contesto* parametro rende **lfind_s** più sicuro perché può essere usato un contesto aggiuntivo per evitare i bug di reentrancy associati all'uso di variabili statiche per rendere disponibili per i dati di *confrontare* (funzione).
+**_lfind_s** è simile a **_lfind** , tranne per l'aggiunta del puntatore di *contesto* agli argomenti della funzione di confronto e all'elenco di parametri della funzione. Il puntatore di *contesto* può essere utile se la struttura dei dati cercati fa parte di un oggetto e la funzione di *confronto* deve accedere ai membri dell'oggetto. La funzione *compare* può eseguire il cast del puntatore void nel tipo di oggetto appropriato e accedere ai membri di tale oggetto. L'aggiunta del parametro di *contesto* rende **_lfind_s** più sicuro perché può essere usato un contesto aggiuntivo per evitare i bug rientranti associati all'uso di variabili statiche per rendere disponibili i dati alla funzione di *confronto* .
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,10 +1,10 @@
 ---
 title: strcmpi
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strcmpi
 - strcmpi
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcmpi
 helpviewer_keywords:
 - strcmpi function
 ms.assetid: 74206b2f-9bca-4d32-9cdc-93cb94c2aaa1
-ms.openlocfilehash: 4c87c67b0102272a78690c39ac3065b0b2904ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a73d1ed1273358af26c5e33e3346bdf15c2b6f93
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354236"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957865"
 ---
 # <a name="strcmpi"></a>strcmpi
 
