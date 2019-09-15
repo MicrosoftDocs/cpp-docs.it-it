@@ -1,9 +1,9 @@
 ---
 title: _kbhit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _kbhit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _kbhit
 - kbhit
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286479"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953520"
 ---
-# <a name="kbhit"></a>_kbhit
+# <a name="_kbhit"></a>_kbhit
 
 Controlla la console per l'input da tastiera.
 
@@ -53,11 +56,11 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-**isatty** restituisce un valore diverso da zero se è stato premuto un tasto. In caso contrario restituirà 0.
+**_kbhit** restituisce un valore diverso da zero se è stato premuto un tasto. In caso contrario restituirà 0.
 
 ## <a name="remarks"></a>Note
 
-Il **kbhit** funzione controlla la console per una sequenza di tasti recente. Se la funzione restituisce un valore diverso da zero, una sequenza di tasti è in attesa nel buffer. Il programma può quindi chiamare **getch** oppure **getche** per ottenere la sequenza di tasti.
+La funzione **_kbhit** controlla la console per una sequenza di tasti recente. Se la funzione restituisce un valore diverso da zero, una sequenza di tasti è in attesa nel buffer. Il programma può quindi chiamare **_getch** o **_getche** per ottenere la sequenza di tasti.
 
 ## <a name="requirements"></a>Requisiti
 

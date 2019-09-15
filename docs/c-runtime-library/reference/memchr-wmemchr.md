@@ -1,10 +1,10 @@
 ---
 title: memchr, wmemchr
 ms.date: 03/31/2019
-apiname:
+api_name:
 - wmemchr
 - memchr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memchr
 - wmemchr
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285261"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951936"
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 
@@ -83,13 +86,13 @@ Numero di caratteri da controllare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, restituisce un puntatore alla posizione del primo *c* nelle *buffer*. In caso contrario, restituisce NULL.
+Se ha esito positivo, restituisce un puntatore alla prima posizione di *c* nel *buffer*. In caso contrario, restituisce NULL.
 
 ## <a name="remarks"></a>Note
 
-`memchr` e `wmemchr` cercano la prima occorrenza *c* nel primo *conteggio* caratteri del *buffer*. Arresta quando trova *c* o quando ha controllato i primi *conteggio* caratteri.
+`memchr`e `wmemchr` cercano la prima occorrenza di *c* nei primi caratteri di *conteggio* del *buffer*. Si interrompe quando viene trovato *c* o quando sono stati controllati i primi caratteri di *conteggio* .
 
-In C, queste funzioni accettano un **const** puntatore per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore alla **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a non -**const** restituisce un puntatore a non -**const** . La macro \_CRT\_CONST\_correggere\_OVERLOAD è definito se entrambi i **const** e non-**const** sono disponibili versioni di queste funzioni. Se non occorre**const** comportamento per entrambi gli overload di C++ in C++, definire il simbolo \_CONST\_restituire.
+In C queste funzioni accettano un puntatore **const** per il primo argomento. In C++ sono disponibili due overload. L'overload che accetta un puntatore a **const** restituisce un puntatore a **const**; la versione che accetta un puntatore a un oggetto non**const** restituisce un puntatore a un oggetto non**const**. Gli overload \_della\_macro\_CRT\_const corretti vengono definiti se sono disponibili entrambe le versioni **const** e non**const** di queste funzioni. Se è necessario il comportamento non**const** per entrambi C++ gli overload in C++, definire il simbolo \_const\_return.
 
 ## <a name="requirements"></a>Requisiti
 

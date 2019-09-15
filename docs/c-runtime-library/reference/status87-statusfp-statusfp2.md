@@ -1,11 +1,11 @@
 ---
 title: _status87, _statusfp, _statusfp2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _statusfp2
 - _statusfp
 - _status87
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _statusfp2
 - _statusfp
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-ms.openlocfilehash: 271c28dd4e267e5b3b702858cc398689e3e35d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54faf70296ef41f2682f88a8edaa82ee0d2071d4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354431"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958085"
 ---
-# <a name="status87-statusfp-statusfp2"></a>_status87, _statusfp, _statusfp2
+# <a name="_status87-_statusfp-_statusfp2"></a>_status87, _statusfp, _statusfp2
 
 Ottiene la parola di stato nelle operazioni a virgola mobile.
 
@@ -67,17 +70,17 @@ Questo indirizzo viene compilato con la parola di stato per l'unità di calcolo 
 
 ## <a name="return-value"></a>Valore restituito
 
-Per la **_status87** e **statusfp**, i bit nel valore restituito indicano lo stato a virgola mobile. Vedere FLOAT. H Includi file per una definizione dei bit restituiti da **statusfp**. Molte funzioni della libreria matematica modificano la parola di stato nelle operazioni a virgola mobile, con risultati imprevisti. Ottimizzazione possa riordinare, combinare ed eliminare operazioni a virgola mobile per le chiamate a **_status87**, **statusfp**e le funzioni correlate. Usare l'opzione del compilatore [/Od (Disabilita (Debug))](../../build/reference/od-disable-debug.md) o la direttiva pragma [fenv_access](../../preprocessor/fenv-access.md) per impedire alle ottimizzazioni di riordinare le operazioni a virgola mobile. I valori restituiti da **clearfp** e **statusfp**e anche i parametri restituiti **_statusfp2**, sono più affidabili se vengono eseguite meno operazioni a virgola mobile tra gli stati noti della parola di stato a virgola mobile.
+Per **_status87** e **_statusfp**, i bit nel valore restituito indicano lo stato a virgola mobile. Vedere FLOAT. File di inclusione H per una definizione dei bit restituiti da **_statusfp**. Molte funzioni della libreria matematica modificano la parola di stato nelle operazioni a virgola mobile, con risultati imprevisti. L'ottimizzazione consente di riordinare, combinare ed eliminare operazioni a virgola mobile in base alle chiamate a **_status87**, **_statusfp**e alle funzioni correlate. Usare l'opzione del compilatore [/Od (Disabilita (Debug))](../../build/reference/od-disable-debug.md) o la direttiva pragma [fenv_access](../../preprocessor/fenv-access.md) per impedire alle ottimizzazioni di riordinare le operazioni a virgola mobile. I valori restituiti da **_clearfp** e **_statusfp**e anche i parametri restituiti di **_statusfp2**sono più affidabili se vengono eseguite meno operazioni a virgola mobile tra gli stati noti della parola di stato a virgola mobile.
 
 ## <a name="remarks"></a>Note
 
-Il **statusfp** funzione Ottiene la parola di stato a virgola mobile. La parola di stato è una combinazione dello stato del processore a virgola mobile e di altre condizioni rilevate dal gestore delle eccezioni a virgola mobile, come ad esempio l'overflow e underflow di stack a virgola mobile. Le eccezioni non mascherate vengono controllate prima della restituzione del contenuto della parola di stato. Questo significa che il chiamante è informato delle eccezioni in sospeso. Su x86, piattaforme **statusfp** restituisce una combinazione di x87 e SSE2 stato a virgola mobile. Nelle piattaforme x64 lo stato restituito si basa sullo stato MXCSR di SSE. Sulle piattaforme ARM **statusfp** restituisce lo stato dal registro fpscr.
+La funzione **_statusfp** ottiene la parola di stato a virgola mobile. La parola di stato è una combinazione dello stato del processore a virgola mobile e di altre condizioni rilevate dal gestore delle eccezioni a virgola mobile, come ad esempio l'overflow e underflow di stack a virgola mobile. Le eccezioni non mascherate vengono controllate prima della restituzione del contenuto della parola di stato. Questo significa che il chiamante è informato delle eccezioni in sospeso. Sulle piattaforme x86, **_statusfp** restituisce una combinazione dello stato della virgola mobile x87 e SSE2. Nelle piattaforme x64 lo stato restituito si basa sullo stato MXCSR di SSE. Sulle piattaforme ARM, **_statusfp** restituisce lo stato dal registro di registro FPSCR.
 
-**statusfp** è una versione indipendente dalla piattaforma e portabile della **_status87**. È identico a **_status87** sulle piattaforme Intel (x86) e viene supportata anche dalle piattaforme ARM e x64. Per assicurarsi che il codice a virgola mobile sia portabile su tutte le architetture, usare **statusfp**. Se la destinazione è x86 solo le piattaforme, è possibile usare **_status87** oppure **statusfp**.
+**_statusfp** è una versione portatile e indipendente dalla piattaforma di **_status87**. È identica a **_status87** sulle piattaforme Intel (x86) ed è supportata anche dalle piattaforme x64 e ARM. Per assicurarsi che il codice a virgola mobile sia portabile in tutte le architetture, usare **_statusfp**. Se si fa riferimento solo a piattaforme x86, è possibile usare **_status87** o **_statusfp**.
 
-È consigliabile **_statusfp2** per chip (ad esempio Pentium IV) che dispone di un x87 e un processore a virgola mobile SSE2. Per la **_statusfp2**, gli indirizzi vengono compilati usando la parola di stato a virgola mobile sia x87 o il processore a virgola mobile SSE2. Per un chip che supporta x87 e processori a virgola mobile SSE2, EM_AMBIGUOUS viene impostato su 1 se **statusfp** oppure **controlfp** viene usata e l'azione è ambiguo poiché potrebbe fare riferimento a x87 o SSE2 parola di stato a virgola mobile. Il **_statusfp2** funzione è supportata solo su x86 piattaforme.
+Si consiglia di usare **_statusfp2** per i chip (ad esempio Pentium IV) che dispongono sia di un processore x87 che di un processore SSE2 a virgola mobile. Per **_statusfp2**, gli indirizzi vengono compilati usando la parola di stato a virgola mobile per il processore a virgola mobile x87 o SSE2. Per un chip che supporta i processori a virgola mobile x87 e SSE2, EM_AMBIGUOUS è impostato su 1 se viene usato **_statusfp** o **_controlfp** e l'azione è ambigua perché può fare riferimento alla parola di stato a virgola mobile SSE2 e x87. La funzione **_statusfp2** è supportata solo su piattaforme x86.
 
-Queste funzioni non sono utili per [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Poiché common language runtime (CLR) supporta solamente la precisione a virgola mobile predefinita.
+Queste funzioni non sono utili per [/CLR (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) perché il Common Language Runtime (CLR) supporta solo la precisione a virgola mobile predefinita.
 
 ## <a name="requirements"></a>Requisiti
 

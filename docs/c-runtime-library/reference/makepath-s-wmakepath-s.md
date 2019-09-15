@@ -1,10 +1,10 @@
 ---
 title: _makepath_s, _wmakepath_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmakepath_s
 - _makepath_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wmakepath_s
 - makepath_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 3536569fd3e77a353003e1372d5dc4ee6e4ee3fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7efd7c8e5ce7314e6fe719073685377f4b325fbd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156928"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952938"
 ---
-# <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
+# <a name="_makepath_s-_wmakepath_s"></a>_makepath_s, _wmakepath_s
 
 Crea un nome di percorso da componenti. Queste sono versioni di [_makepath, _wmakepath](makepath-wmakepath.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -90,16 +93,16 @@ Dimensione del buffer in forma di testo.
 Dimensione del buffer in byte.
 
 *drive*<br/>
-Contiene una lettera (A, B e così via) corrispondente all'unità desiderata e i due punti finali opzionali. **makepath_s** inserisce automaticamente i due punti nel percorso composto se mancante. Se *unità* viene **NULL** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella composita *percorso* stringa.
+Contiene una lettera (A, B e così via) corrispondente all'unità desiderata e i due punti finali opzionali. **_makepath_s** inserisce i due punti automaticamente nel percorso composito, se mancante. Se l' *unità* è **null** o punta a una stringa vuota, nessuna lettera di unità viene visualizzata nella stringa del *percorso* composito.
 
 *dir*<br/>
-Contiene il percorso delle directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe possono essere usate in un'unica *dir* argomento. Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* viene **NULL** o punta a una stringa vuota, nessun percorso di directory viene inserito in composita *percorso* stringa.
+Contiene il percorso delle directory, escluso il designatore di unità o il nome del file effettivo. La barra finale è facoltativa e una barra (/) o una barra rovesciata (\\) o entrambe possono essere usate in un unico argomento *dir* . Se non viene specificata una barra finale (/o \\), viene inserita automaticamente. Se *dir* è **null** o punta a una stringa vuota, nessun percorso di directory viene inserito nella stringa del *percorso* composito.
 
 *fname*<br/>
-Contiene il nome del file di base senza alcuna estensione di nome file. Se *fname* viene **NULL** o punta a una stringa vuota, nessun nome file viene inserito in composita *percorso* stringa.
+Contiene il nome del file di base senza alcuna estensione di nome file. Se *fname* è **null** o punta a una stringa vuota, nessun nome file viene inserito nella stringa del *percorso* composito.
 
 *ext*<br/>
-Contiene l'estensione di nome file effettiva, con o senza un punto iniziale (.). **makepath_s** inserisce il punto automaticamente se non viene visualizzato nella *ext*. Se *ext* viene **NULL** o punta a una stringa vuota, nessuna estensione viene inserito in composita *percorso* stringa.
+Contiene l'estensione di nome file effettiva, con o senza un punto iniziale (.). **_makepath_s** inserisce il punto automaticamente se non viene visualizzato in *ext*. Se *ext* è **null** o punta a una stringa vuota, nessuna estensione viene inserita nella stringa del *percorso* composito.
 
 ## <a name="return-value"></a>Valore restituito
 
@@ -107,16 +110,16 @@ Zero se con esito positivo; un codice di errore in caso di errore.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*path*|*sizeInWords* / *sizeInBytes*|INVIO|Contenuto di *percorso*|
+|*path*|*sizeInWords* / *sizeInBytes*|INVIO|Contenuto del *percorso*|
 |------------|------------------------------------|------------|------------------------|
 |**NULL**|qualsiasi|**EINVAL**|non modificato|
 |qualsiasi|<= 0|**EINVAL**|non modificato|
 
-Se si verifica una delle condizioni di errore sopra indicate, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e le funzioni restituiscono **EINVAL**. **NULL** è consentito per i parametri *unità*, *fname*, e *ext*. Per informazioni sul comportamento di questi parametri quando sono puntatori null o stringhe vuote, vedere la sezione Osservazioni.
+Se si verifica una delle condizioni di errore sopra indicate, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e le funzioni restituiscono **EINVAL**. Il **valore null** è consentito per i parametri *Drive*, *fname*e *ext*. Per informazioni sul comportamento di questi parametri quando sono puntatori null o stringhe vuote, vedere la sezione Osservazioni.
 
 ## <a name="remarks"></a>Note
 
-Il **makepath_s** funzione crea una stringa di percorso composita da singoli componenti, archiviando il risultato in *percorso*. Il *percorso* potrebbe includere una lettera di unità, percorso della directory, nome file ed estensione del nome file. **wmakepath_s** è una versione a caratteri wide di **makepath_s**; gli argomenti **wmakepath_s** sono stringhe a caratteri wide. **wmakepath_s** e **makepath_s** hanno lo stesso comportamento in caso contrario.
+La funzione **_makepath_s** crea una stringa di percorso composita da singoli componenti, archiviando il risultato in *path*. Il *percorso* potrebbe includere una lettera di unità, un percorso di directory, un nome file e un'estensione del nome file. **_wmakepath_s** è una versione a caratteri wide di **_makepath_s**; gli argomenti di **_wmakepath_s** sono stringhe a caratteri wide. **_wmakepath_s** e **_makepath_s** si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -124,9 +127,9 @@ Il **makepath_s** funzione crea una stringa di percorso composita da singoli com
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-Il *percorso* argomento deve puntare a un buffer vuoto sufficientemente grande da contenere il percorso completo. Composita *tracciato* deve essere superiore al **MAX_PATH** costante, definita in STDLIB. h.
+L'argomento *path* deve puntare a un buffer vuoto sufficientemente grande da mantenere il percorso completo. Il *percorso* composito non deve essere maggiore della costante **_MAX_PATH** , definito in STDLIB. h.
 
-Se il percorso è **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). È inoltre **errno** è impostata su **EINVAL**. **NULL** valori consentiti per tutti gli altri parametri.
+Se path è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). **Errno** è inoltre impostato su **EINVAL**. Sono consentiti valori **null** per tutti gli altri parametri.
 
 In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

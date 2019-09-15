@@ -1,9 +1,9 @@
 ---
 title: _getpid
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getpid
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getpid
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-ms.openlocfilehash: c110fb7b6d64be281fb3779c7e03f2c4145f4ce8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0848e5eb01f39c009fcdc650ea551f18e23c6fb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331701"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954991"
 ---
-# <a name="getpid"></a>_getpid
+# <a name="_getpid"></a>_getpid
 
 Ottiene l'identificazione del processo.
 
@@ -49,7 +52,7 @@ Restituisce l'ID processo ottenuto dal sistema. Non vi è restituzione di errori
 
 ## <a name="remarks"></a>Note
 
-Il **getpid** funzione Ottiene l'ID del processo dal sistema. L'ID processo identifica in modo univoco il processo chiamante.
+La funzione **_getpid** Ottiene l'ID del processo dal sistema. L'ID processo identifica in modo univoco il processo chiamante.
 
 ## <a name="requirements"></a>Requisiti
 

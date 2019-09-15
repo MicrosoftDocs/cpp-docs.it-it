@@ -1,9 +1,9 @@
 ---
 title: scrivere
 ms.date: 11/04/2016
-apiname:
+api_name:
 - write
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - write
 helpviewer_keywords:
 - write function
 ms.assetid: 1cbf112e-b9ef-4df6-993a-83abd4213acd
-ms.openlocfilehash: c9093670d075e75b5f98b8cd4a87e0fb56025374
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 509c973fd999fb041838c2ca7908387fc687a665
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304683"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950310"
 ---
 # <a name="write"></a>scrivere
 

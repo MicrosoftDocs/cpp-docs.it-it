@@ -1,9 +1,9 @@
 ---
 title: _getw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getw
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157630"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954882"
 ---
-# <a name="getw"></a>_getw
+# <a name="_getw"></a>_getw
 
 Ottiene un Integer da un flusso.
 
@@ -49,11 +52,11 @@ Puntatore alla struttura **FILE**.
 
 ## <a name="return-value"></a>Valore restituito
 
-**getw** restituisce l'integer letto. Un valore restituito pari **EOF** indica un errore o fine del file. Tuttavia, poiché il **EOF** valore è anche un integer legittimo, utilizzare **feof** oppure **ferror** per verificare una condizione di errore o fine del file. Se *stream* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e la funzione restituisce **EOF**.
+**_getw** restituisce il valore intero letto. Un valore restituito di **EOF** indica un errore o la fine del file. Tuttavia, poiché il valore **EOF** è anche un valore Integer legittimo, utilizzare **feof** o **ferrator** per verificare una condizione di fine del file o di errore. Se il *flusso* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e la funzione restituisce **EOF**.
 
 ## <a name="remarks"></a>Note
 
-Il **getw** funzione legge il seguente valore binario di tipo **int** dal file associato *flusso* e incrementa il puntatore del file associato (se presente) in modo da puntare il carattere successivo da leggere. **getw** non presuppone alcun allineamento speciale degli elementi nel flusso. Possono verificarsi problemi con la portabilità con **getw** perché le dimensioni del **int** tipo e l'ordine dei byte all'interno di **int** tipo differiscono fra sistemi.
+La funzione **_getw** legge il successivo valore binario di tipo **int** dal file associato a *Stream* e incrementa il puntatore del file associato (se presente) per puntare al carattere non letto successivo. **_getw** non presuppone alcun allineamento speciale degli elementi nel flusso. I problemi di portabilità possono verificarsi con **_getw** perché le dimensioni del tipo **int** e l'ordine dei byte all'interno del tipo **int** sono diverse tra i sistemi.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -98,7 +101,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtgetwtxt"></a>Input: crt_getw.txt
+### <a name="input-crt_getwtxt"></a>Input: crt_getw.txt
 
 ```Input
 Line one.

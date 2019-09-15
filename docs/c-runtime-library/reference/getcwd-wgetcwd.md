@@ -1,10 +1,10 @@
 ---
 title: _getcwd, _wgetcwd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetcwd
 - _getcwd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getcwd
 - wgetcwd
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331792"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955239"
 ---
-# <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
+# <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
 Ottiene la directory di lavoro corrente.
 
@@ -63,23 +66,23 @@ wchar_t *_wgetcwd(
 Posizione di archiviazione per il percorso.
 
 *maxlen*<br/>
-Lunghezza massima del percorso in caratteri: **char** per **getcwd** e **wchar_t** per **wgetcwd**.
+Lunghezza massima del percorso in caratteri: **char** per **_getcwd** e **wchar_t** per **_wgetcwd**.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore a *buffer*. Oggetto **NULL** restituire il valore indica un errore, e **errno** viene impostato su **ENOMEM**, che indica che vi sia memoria sufficiente per allocare *maxlen* byte (quando un **NULL** viene fornito come argomento *buffer*), oppure a **ERANGE**, che indica che il percorso è più lungo rispetto a *maxlen*  caratteri. Se *maxlen* è minore o uguale a zero, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+Restituisce un puntatore al *buffer*. Un valore restituito **null** indica un errore e **errno** viene impostato su **ENOMEM**, a indicare che la memoria disponibile non è sufficiente per allocare i byte *maxlen* (quando un argomento **null** viene assegnato come *buffer*) o a **ERANGE** , che indica che il percorso è più lungo di *maxlen* caratteri. Se *maxlen* è minore o uguale a zero, questa funzione richiama un gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **getcwd** funzione Ottiene il percorso completo della directory di lavoro corrente per l'unità predefinita e lo archivia in *buffer*. L'argomento integer *maxlen* specifica la lunghezza massima per il percorso. Si verifica un errore se la lunghezza del percorso (incluso il carattere di terminazione null) supera *maxlen*. Il *buffer* l'argomento può essere **NULL**; un buffer con dimensione di almeno *maxlen* (più grande solo se necessario) viene allocato automaticamente, usando **malloc**, per archiviare il percorso. Questo buffer può essere successivamente liberato chiamando **gratuito** e passando il **getcwd** restituito (un puntatore al buffer allocato).
+La funzione **_getcwd** ottiene il percorso completo della directory di lavoro corrente per l'unità predefinita e lo archivia nel *buffer*. L'argomento integer *maxlen* specifica la lunghezza massima per il percorso. Si verifica un errore se la lunghezza del percorso, incluso il carattere null di terminazione, supera *maxlen*. L'argomento *buffer* può essere **null**. un buffer di almeno dimensioni *maxlen* (solo se necessario) viene allocato automaticamente, usando **malloc**, per archiviare il percorso. Questo buffer può essere successivamente liberato chiamando **Free** e passandogli il valore restituito **_getcwd** (un puntatore al buffer allocato).
 
-**getcwd** restituisce una stringa che rappresenta il percorso della directory di lavoro corrente. Se la directory di lavoro corrente è la radice, la stringa termina con una barra rovesciata ( **\\** ). Se la directory di lavoro corrente è impostata su una directory diversa dalla quella radice, la stringa termina con il nome della directory e non con una barra rovesciata.
+**_getcwd** restituisce una stringa che rappresenta il percorso della directory di lavoro corrente. Se la directory di lavoro corrente è la radice, la stringa termina con una barra **\\** rovesciata (). Se la directory di lavoro corrente è impostata su una directory diversa dalla quella radice, la stringa termina con il nome della directory e non con una barra rovesciata.
 
-**wgetcwd** è una versione a caratteri wide di **getcwd**; gli *buffer* argomento e il valore restituito **wgetcwd** sono stringhe a caratteri wide. **wgetcwd** e **getcwd** hanno lo stesso comportamento in caso contrario.
+**_wgetcwd** è una versione a caratteri wide di **_getcwd**; l'argomento del *buffer* e il valore restituito di **_wgetcwd** sono stringhe a caratteri wide. **_wgetcwd** e **_getcwd** si comportano in modo identico.
 
-Quando **debug** e **CRTDBG_MAP_ALLOC** definiti, le chiamate a **getcwd** e **wgetcwd** vengono sostituite da chiamate agli **_ getcwd_dbg** e **wgetcwd_dbg** per consentire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
+Quando _ **debug** e **_CRTDBG_MAP_ALLOC** sono definiti, le chiamate a **_getcwd** e **_wgetcwd** vengono sostituite dalle chiamate a **_getcwd_dbg** e **_wgetcwd_dbg** per consentire il debug delle allocazioni di memoria. Per altre informazioni, vedere [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

@@ -1,11 +1,11 @@
 ---
 title: cos, cosf, cosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cos
 - cosf
 - cosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cos
 - cosf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335360"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942827"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -62,16 +65,16 @@ Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il coseno *x*. Se *x* è maggiore o uguale a 263 o inferiore o uguale a -263, si verifica una perdita di significato nel risultato.
+Coseno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si verifica una perdita di significato nel risultato.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN, IND|none|**_DOMAIN**|
-|+ INF|**INVALID**|**_DOMAIN**|
+|± INF|**INVALID**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **cos** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **cos** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **cos** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **cos** accetta e restituisce sempre un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -83,7 +86,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ## <a name="example"></a>Esempio
 
-Vedere l'esempio nella [sin, sinf, sinl](sin-sinf-sinl.md).
+Vedere l'esempio in [sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Vedere anche
 

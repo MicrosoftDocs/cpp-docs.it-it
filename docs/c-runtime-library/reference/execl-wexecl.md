@@ -1,10 +1,10 @@
 ---
 title: _execl, _wexecl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execl
 - _wexecl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execl
 - _wexecl
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 714ef80c4909e92100c4fa869b7544239f8edeb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339273"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941944"
 ---
-# <a name="execl-wexecl"></a>_execl, _wexecl
+# <a name="_execl-_wexecl"></a>_execl, _wexecl
 
 Carica ed esegue nuovi processi figlio.
 
@@ -68,7 +71,7 @@ Elenco di puntatori ai parametri.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Valore restituito di -1 indica un errore, nel qual caso il **errno** (variabile globale) è impostata.
+Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valore restituito-1 indica un errore, nel qual caso è impostata la variabile globale **errno** .
 
 |Valore errno|Descrizione|
 |-----------------|-----------------|
@@ -84,7 +87,7 @@ Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Valore 
 
 Ognuna di queste funzioni carica ed esegue un nuovo processo, passando ogni argomento della riga di comando come parametro separato. Il primo argomento è il comando o il nome del file eseguibile e il secondo argomento deve essere uguale al primo. Diventa `argv[0]` nel processo eseguito. Il terzo argomento è il primo argomento, `argv[1]`, del processo in esecuzione.
 
-Il **execl** funzioni convalidano i propri parametri. Se uno dei due *cmdname* oppure *arg0* è un puntatore null o stringhe vuote, queste funzioni richiamano il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1. Non viene eseguito alcun nuovo processo.
+Le funzioni **_execl** convalidano i relativi parametri. Se *CmdName* o *arg0* è un puntatore null o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) se l'esecuzione può continuare, queste funzioni impostano **errno** su  **EINVAL** e return-1. Non viene eseguito alcun nuovo processo.
 
 ## <a name="requirements"></a>Requisiti
 

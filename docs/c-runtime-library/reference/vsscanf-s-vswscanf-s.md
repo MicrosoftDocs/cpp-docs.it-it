@@ -1,10 +1,10 @@
 ---
 title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vswscanf_s
 - vsscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,20 +15,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-ms.openlocfilehash: 3106e3533f5bb65334f8a4f3d38f55d886faef4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bacda4288a6745ea57c31e68e515ae7b37418096
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946031"
 ---
-# <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
+# <a name="vsscanf_s-vswscanf_s"></a>vsscanf_s, vswscanf_s
 
 Legge i dati formattati da una stringa. Queste versioni di [vsscanf, vswscanf](vsscanf-vswscanf.md) includono miglioramenti per sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -60,26 +63,26 @@ Elenco di argomenti variabili.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito sarà **EOF** per un errore o se viene raggiunta la fine della stringa prima della prima conversione.
+Ognuna di queste funzioni restituisce il numero di campi che vengono convertiti e assegnati correttamente. Il valore restituito non include i campi che sono stati letti ma non assegnati. Un valore restituito pari a 0 indica che nessun campo è stato assegnato. Il valore restituito è **EOF** per un errore o se viene raggiunta la fine della stringa prima della prima conversione.
 
-Se *buffer* oppure *formato* è un **NULL** puntatore, il gestore di parametri non validi viene richiamato, come descritto nella [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostare **errno** al **EINVAL**.
+Se il *buffer* o il *formato* è un puntatore **null** , viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono-1 e impostano **errno** su **EINVAL**.
 
 Per informazioni su questi e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **vsscanf_s** funzione legge i dati dal *buffer* nelle posizioni specificate da ciascun argomento in di *arglist* elenco di argomenti. Gli argomenti nell'elenco di argomenti specificano i puntatori alle variabili che hanno un tipo che corrisponde all'identificatore di tipo in *formato*. A differenza delle versioni meno sicure **vsscanf**, è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **C**, **s**, **S**, o set di controllo stringa racchiusi tra **[]**. Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede.
+La funzione **vsscanf_s** legge i dati dal *buffer* nei percorsi specificati da ogni argomento nell'elenco di argomenti di *arglist* . Gli argomenti nell'elenco di argomenti specificano i puntatori alle variabili che hanno un tipo corrispondente a un identificatore di tipo nel *formato*. A differenza della versione meno sicura **vsscanf**, è necessario un parametro di dimensione del buffer quando si usano i caratteri di campo di tipo **c**, **c**, **s**, **s**o set di controlli stringa racchiusi tra **[]** . Le dimensioni del buffer in caratteri vengono passate come parametro aggiuntivo subito dopo ogni parametro del buffer che le richiede.
 
 La dimensione del buffer include il carattere di terminazione null. Potrebbe essere usato un campo di specifica della larghezza per assicurarsi che il token letto possa essere inserito nel buffer. Se non viene utilizzato alcun campo di specifica di larghezza e il token letto è troppo grande per entrare nel buffer, non vengono scritti dati nel buffer.
 
 Per altre informazioni, vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [Caratteri di campo di tipo per scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Il parametro di dimensione è di tipo **unsigned**, non **size_t**.
+> Il parametro size è di tipo **unsigned**, non **size_t**.
 
-Il *formato* argomento controlla l'interpretazione dell'input campi e ha lo stesso formato e funzione come il *formato* argomento per il **scanf_s** (funzione). Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
+L'argomento *Format* controlla l'interpretazione dei campi di input e ha lo stesso formato e la stessa funzione dell'argomento *Format* per la funzione **scanf_s** . Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.
 
-**vswscanf_s** è una versione a caratteri wide di **vsscanf_s**; gli argomenti **vswscanf_s** sono stringhe a caratteri wide. **vsscanf_s** non gestisce caratteri esadecimali multibyte. **vswscanf_s** non gestisce esadecimali a larghezza intera Unicode o caratteri "area di compatibilità". In caso contrario, **vswscanf_s** e **vsscanf_s** si comportano in modo identico.
+**vswscanf_s** è una versione a caratteri wide di **vsscanf_s**; gli argomenti di **vswscanf_s** sono stringhe a caratteri wide. **vsscanf_s** non gestisce i caratteri esadecimali multibyte. **vswscanf_s** non gestisce i caratteri esadecimali a larghezza intera Unicode o "zona di compatibilità". In caso contrario, **vswscanf_s** e **vsscanf_s** si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

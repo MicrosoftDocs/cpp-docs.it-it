@@ -1,9 +1,9 @@
 ---
 title: _unlock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _unlock_file
 - unlock_file
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: e3d11cbd59ef5846b33908ae6b6c40d7ea6125e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2983408f066ea00c0b7ab111d9a6349700ecaece
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353547"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957483"
 ---
-# <a name="unlockfile"></a>_unlock_file
+# <a name="_unlock_file"></a>_unlock_file
 
 Sblocca un file, consentendo ad altri processi di accedere al file.
 
@@ -51,7 +54,7 @@ Handle di file.
 
 ## <a name="remarks"></a>Note
 
-Il **unlock_file** funzione Sblocca il file specificato da *file*. Lo sblocco di un file consente l'accesso al file da altri processi. Questa funzione non deve essere chiamata solo se **lock_file** in precedenza è stato chiamato sulle *file* puntatore. La chiamata **unlock_file** su un file che non sia bloccato può causare un deadlock. Per un esempio, vedere [_lock_file](lock-file.md).
+La funzione **_unlock_file** Sblocca il file specificato dal *file*. Lo sblocco di un file consente l'accesso al file da altri processi. Questa funzione non deve essere chiamata a meno che **_lock_file** non sia stato precedentemente chiamato sul puntatore del *file* . La chiamata di **_unlock_file** su un file che non è bloccato può causare un deadlock. Per un esempio, vedere [_lock_file](lock-file.md).
 
 ## <a name="requirements"></a>Requisiti
 

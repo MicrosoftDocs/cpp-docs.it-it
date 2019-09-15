@@ -1,9 +1,9 @@
 ---
 title: _set_se_translator
 ms.date: 02/21/2018
-apiname:
+api_name:
 - _set_se_translator
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_se_translator
 - set_se_translator
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 23eb4e9016666567771832cefed686cb9197b02f
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 781deaad091b6aed72350100f7575c566bbae793
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299700"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948388"
 ---
-# <a name="setsetranslator"></a>_set_se_translator
+# <a name="_set_se_translator"></a>_set_se_translator
 
 Impostare una funzione di callback per thread per tradurre le eccezioni Win32 (eccezioni strutturate C C++ ) in eccezioni tipizzate.
 
@@ -71,7 +74,7 @@ typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_
 
 Per **_set_se_translator**, esistono implicazioni quando si esegue il collegamento dinamico a CRT; un'altra DLL nel processo potrebbe chiamare **_set_se_translator** e sostituire il gestore con il proprio.
 
-Quando si usa **_set_se_translator** da codice gestito (codice compilato con/CLR) o codice misto nativo e gestito, tenere presente che il traduttore influiscono sulle eccezioni generate solo nel codice nativo. Le eccezioni gestite generate nel codice gestito (ad esempio, quando viene generata `System::Exception`) non vengono indirizzate attraverso la funzione di conversione. Le eccezioni generate nel codice gestito utilizzando la  funzione Win32 RaiseException o causate da un'eccezione di sistema come un'eccezione di divisione per zero vengono indirizzate attraverso il convertitore.
+Quando si usa **_set_se_translator** da codice gestito (codice compilato con/CLR) o codice misto nativo e gestito, tenere presente che il traduttore influiscono sulle eccezioni generate solo nel codice nativo. Le eccezioni gestite generate nel codice gestito (ad esempio, quando viene generata `System::Exception`) non vengono indirizzate attraverso la funzione di conversione. Le eccezioni generate nel codice gestito utilizzando la funzione Win32 RaiseException o causate da un'eccezione di sistema come un'eccezione di divisione per zero vengono indirizzate attraverso il convertitore.
 
 ## <a name="requirements"></a>Requisiti
 

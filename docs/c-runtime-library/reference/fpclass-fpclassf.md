@@ -1,10 +1,10 @@
 ---
 title: _fpclass, _fpclassf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpclass
 - _fpclassf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fpclass
 - _fpclass
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 987c87cc7a03f4a24e47654ae52e8a2416a15184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333222"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957035"
 ---
-# <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
+# <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
 Restituisce un valore che indica la classificazione a virgola mobile dell'argomento.
 
@@ -60,7 +63,7 @@ Valore a virgola mobile da verificare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **fpclass** e **_fpclassf** funzioni di restituiranno un valore intero che indica la classificazione a virgola mobile dell'argomento *x*. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.
+Le funzioni **_fpclass** e **_fpclassf** restituiscono un valore intero che indica la classificazione a virgola mobile dell'argomento *x*. La classificazione può avere uno dei valori seguenti, definiti in \<float.h>.
 
 |Value|Descrizione|
 |-----------|-----------------|
@@ -69,7 +72,7 @@ Il **fpclass** e **_fpclassf** funzioni di restituiranno un valore intero che in
 |**_FPCLASS_NINF**|Infinito negativo (-INF)|
 |**_FPCLASS_NN**|Valore diverso da zero normalizzato negativo|
 |**_FPCLASS_ND**|Denormalizzato negativo|
-|**_FPCLASS_NZ**|Zero negativo (- 0)|
+|**_FPCLASS_NZ**|Zero negativo (-0)|
 |**_FPCLASS_PZ**|0 positivo (+0)|
 |**_FPCLASS_PD**|Denormalizzato positivo|
 |**_FPCLASS_PN**|Diverso da zero normalizzato positivo|
@@ -77,7 +80,7 @@ Il **fpclass** e **_fpclassf** funzioni di restituiranno un valore intero che in
 
 ## <a name="remarks"></a>Note
 
-Il **fpclass** e **_fpclassf** funzioni sono specifiche di Microsoft. Sono simili a [fpclassify](fpclassify.md), ma restituiscono informazioni più dettagliate sull'argomento. Il **_fpclassf** funzione di disponibile solo quando viene compilato per x64 piattaforma.
+Le funzioni **_fpclass** e **_fpclassf** sono specifiche di Microsoft. Sono simili a [fpclassify](fpclassify.md), ma restituiscono informazioni più dettagliate sull'argomento. La funzione **_fpclassf** è disponibile solo quando viene compilata per la piattaforma x64.
 
 ## <a name="requirements"></a>Requisiti
 

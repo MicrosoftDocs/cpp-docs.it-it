@@ -1,9 +1,9 @@
 ---
 title: unlink
 ms.date: 11/04/2016
-apiname:
+api_name:
 - unlink
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - unlink
 helpviewer_keywords:
 - unlink function
 ms.assetid: 2cd82055-5770-48be-88ee-4b2c70541c46
-ms.openlocfilehash: 21a424824778724b64c5108a4168e1cd90b8f629
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c2bf5638132af4743dcd37bceb228730749cce3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268739"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945750"
 ---
 # <a name="unlink"></a>unlink
 

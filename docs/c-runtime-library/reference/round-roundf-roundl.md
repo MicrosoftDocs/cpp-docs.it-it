@@ -1,11 +1,11 @@
 ---
 title: round, roundf, roundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - round
 - roundl
 - roundf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - roundf
 - roundl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357447"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949110"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -65,7 +68,7 @@ Valore a virgola mobile da arrotondare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **arrotondare** funzioni restituiscono un valore a virgola mobile che rappresenta l'intero più vicino al *x*. Ai valori a metà viene applicato l'arrotondamento lontano da zero, indipendentemente dall'impostazione della modalità di arrotondamento a virgola mobile. Non vi è restituzione di errori.
+Le funzioni **round** restituiscono un valore a virgola mobile che rappresenta l'intero più vicino a *x*. Ai valori a metà viene applicato l'arrotondamento lontano da zero, indipendentemente dall'impostazione della modalità di arrotondamento a virgola mobile. Non vi è restituzione di errori.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
@@ -73,7 +76,7 @@ Il **arrotondare** funzioni restituiscono un valore a virgola mobile che rappres
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **arrotondare** che accettano e restituiscono **float** e **long** **double** valori. In un programma C **arrotondare** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **round** che accettano e restituiscono valori **float** e **Long** **Double** . In un programma C, **round** accetta sempre e restituisce un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

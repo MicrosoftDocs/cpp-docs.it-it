@@ -1,10 +1,10 @@
 ---
 title: _execlpe, _wexeclpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execlpe
 - _wexeclpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wexeclpe
 - execlpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960d148963aa9c6410fec03b5a6f265a6e4ab9d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339364"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941903"
 ---
-# <a name="execlpe-wexeclpe"></a>_execlpe, _wexeclpe
+# <a name="_execlpe-_wexeclpe"></a>_execlpe, _wexeclpe
 
 Carica ed esegue nuovi processi figlio.
 
@@ -74,9 +77,9 @@ Matrice di puntatori alle impostazioni d'ambiente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Valore restituito di -1 indica un errore, nel qual caso il **errno** (variabile globale) è impostata.
+Se l'operazione riesce, le funzioni non ritornano al processo chiamante. Il valore restituito-1 indica un errore, nel qual caso è impostata la variabile globale **errno** .
 
-|**errno** valore|Descrizione|
+|**errno** (valore)|Descrizione|
 |-------------------|-----------------|
 |**E2BIG**|Lo spazio necessario per gli argomenti e le impostazioni di ambiente supera 32 KB.|
 |**EACCES**|Il file specificato dispone di una violazione di blocco o di condivisione.|
@@ -90,9 +93,9 @@ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, e
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni carica ed esegue un nuovo processo, passando ogni argomento della riga di comando come parametro separato e passando una matrice di puntatori alle impostazioni di ambiente. Queste funzioni usano la **percorso** variabile di ambiente per individuare il file da eseguire.
+Ognuna di queste funzioni carica ed esegue un nuovo processo, passando ogni argomento della riga di comando come parametro separato e passando una matrice di puntatori alle impostazioni di ambiente. Queste funzioni usano la variabile di ambiente **path** per trovare il file da eseguire.
 
-Il **execlpe** funzioni convalidano i propri parametri. Se uno dei due *cmdname* oppure *arg0* è un valore null puntatori o stringhe vuote, queste funzioni richiamano il gestore di parametri non validi come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1. Non viene avviato alcun nuovo processo.
+Le funzioni **_execlpe** convalidano i relativi parametri. Se *CmdName* o *arg0* è un puntatore null o una stringa vuota, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1. Non viene avviato alcun nuovo processo.
 
 ## <a name="requirements"></a>Requisiti
 

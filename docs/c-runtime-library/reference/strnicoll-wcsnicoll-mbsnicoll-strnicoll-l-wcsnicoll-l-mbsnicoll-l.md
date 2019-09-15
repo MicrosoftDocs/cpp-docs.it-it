@@ -1,14 +1,14 @@
 ---
 title: _strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnicoll_l
 - _mbsnicoll
 - _wcsnicoll_l
 - _strnicoll
 - _strnicoll_l
 - _wcsnicoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcshicoll_l
 - _ftcsncicoll
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: 6b3562dd077b9aa80b9d188e9b2c43282e797af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1a26690f4913cb35486886f6548927fc09efc89
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209689"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947085"
 ---
-# <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
+# <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll, _wcsnicoll, _mbsnicoll, _strnicoll_l, _wcsnicoll_l, _mbsnicoll_l
 
 Le stringhe vengono confrontate usando informazioni specifiche delle impostazioni locali.
 
 > [!IMPORTANT]
-> **mbsnicoll** e **mbsnicoll_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbsnicoll** e **_mbsnicoll_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -125,21 +128,21 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Ognuna di queste funzioni restituisce un valore che indica la relazione delle sottostringhe di *string1* e *string2*, come indicato di seguito.
+Ognuna di queste funzioni restituisce un valore che indica la relazione delle sottostringhe di *String1* e *string2*, come indicato di seguito.
 
 |Valore restituito|Relazione di stringa1 e stringa2|
 |------------------|----------------------------------------|
-|< 0|*String1* minore di *stringa2*|
-|0|*String1* identica alla *stringa2*|
-|> 0|*String1* maggiore *stringa2*|
+|< 0|*String1* minore di *string2*|
+|0|*String1* identico a *string2*|
+|> 0|*String1* maggiore di *string2*|
 
-Ognuna di queste funzioni restituisce **_NLSCMPERROR**. Per utilizzare **_NLSCMPERROR**, includere entrambe le stringhe. La H o MBSTRING. H. **wcsnicoll** può non riuscire se *string1* oppure *string2* contiene codici di caratteri "wide" all'esterno del dominio della sequenza di ordinamento. Quando si verifica un errore, **wcsnicoll** potrebbe impostare **errno** al **EINVAL**. Per verificare la presenza di un errore in una chiamata a **wcsnicoll**, impostare **errno** su 0 e quindi selezionare **errno** dopo la chiamata **wcsnicoll**.
+Ognuna di queste funzioni restituisce **_NLSCMPERROR**. Per usare **_NLSCMPERROR**, includere una delle due stringhe. H o MBSTRING. H. **_wcsnicoll** può avere esito negativo se *String1* o *string2* contiene codici a caratteri "wide" al di fuori del dominio della sequenza di ordinamento. Quando si verifica un errore, **_wcsnicoll** può impostare **errno** su **EINVAL**. Per verificare la presenza di un errore in una chiamata a **_wcsnicoll**, impostare **errno** su 0, quindi controllare **errno** dopo aver chiamato **_wcsnicoll**.
 
 ## <a name="remarks"></a>Note
 
-Ognuna di queste funzioni esegue un confronto tra maiuscole e minuscole dei primi *conteggio* caratteri *string1* e *string2* in base alla tabella codici. Usare queste funzioni solo quando esiste una differenza nella tabella codici tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe. Le versioni di queste funzioni senza il **l** suffisso utilizzare la pagina delle impostazioni locali e il codice corrente. Le versioni con il **l** suffisso sono identiche ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Ognuna di queste funzioni esegue un confronto senza distinzione tra maiuscole e minuscole dei primi caratteri di *conteggio* in *String1* e *string2* in base alla tabella codici. Usare queste funzioni solo quando esiste una differenza nella tabella codici tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe. Le versioni di queste funzioni senza il suffisso **suffisso** usano le impostazioni locali e la tabella codici correnti. Le versioni con il suffisso **suffisso** sono identiche, ad eccezione del fatto che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Tutte queste funzioni convalidano i relativi parametri. Se uno dei due *string1* oppure *string2* è un puntatore null, o se count è maggiore di **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [ Convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostare **errno** al **EINVAL**.
+Tutte queste funzioni convalidano i relativi parametri. Se *String1* o *string2* è un puntatore null o se count è maggiore di **INT_MAX**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md) . Se l'esecuzione può continuare, queste funzioni restituiscono **_NLSCMPERROR** e impostano **errno** su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

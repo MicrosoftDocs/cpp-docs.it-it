@@ -1,9 +1,9 @@
 ---
 title: _tzset
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _tzset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tzset
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9ea454ede370a20779b5852b426b418db81757c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385193"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957553"
 ---
-# <a name="tzset"></a>_tzset
+# <a name="_tzset"></a>_tzset
 
 Impostare le variabili di ambiente di tempo.
 
@@ -45,39 +48,39 @@ void _tzset( void );
 
 ## <a name="remarks"></a>Note
 
-Il **tzset** funzione Usa l'impostazione corrente della variabile di ambiente **TZ** per assegnare valori alle tre variabili globali: **Daylight**, **TimeZone** , e **tzname**. Queste variabili vengono usate per la [ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) funzioni per apportare correzioni dall'ora UTC (coordinated universal time) all'ora locale e dal [ora](time-time32-time64.md) funzione calcolare l'ora UTC dall'ora di sistema. Usare la sintassi seguente per impostare il **TZ** variabile di ambiente:
+La funzione **_tzset** usa l'impostazione corrente della variabile di ambiente **TZ** per assegnare valori a tre variabili globali: **_daylight**, **_timezone**e **tzname**. Queste variabili vengono usate dalle funzioni [_ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) per apportare correzioni dall'ora UTC (Coordinated Universal Time) all'ora locale e dalla funzione [Time](time-time32-time64.md) per calcolare l'ora UTC dall'ora di sistema. Usare la sintassi seguente per impostare la variabile di ambiente **TZ** :
 
-> **set TZ=**_tzn_ \[**+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
+> **imposta TZ =** _tzn_ &#124;]HH\[:mm\[: ss]] [DZN] \[ **+** **-**
 
 |Parametro|Descrizione|
 |-|-|
 | *tzn* | Nome del fuso orario di tre lettere, ad esempio PST. È necessario specificare l'offset corretto dall'ora locale all'ora UTC. |
 | *hh* | La differenza in ore tra l'ora UTC e l'ora locale. Segno più (+) facoltativo per i valori positivi. |
-| *mm* | Minuti. Separate dalle *hh* da due punti (**:**). |
-| *ss* | Secondi. Separate dalle *mm* da due punti (**:**). |
-| *dzn* | Fuso orario con l'ora legale di tre lettere, ad esempio PDT. Se l'ora legale è mai attiva nella località, impostare **TZ** senza un valore per *dzn*. La libreria di runtime C presupporrà le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST). |
+| *mm* | Minuti. Separato da *HH* con i due punti ( **:** ). |
+| *ss* | Secondi. Separato da *mm* di due punti ( **:** ). |
+| *dzn* | Fuso orario con l'ora legale di tre lettere, ad esempio PDT. Se l'ora legale non è mai attiva nella località, impostare **TZ** senza un valore per *DZN*. La libreria di runtime C presupporrà le regole relative agli Stati Uniti per implementare il calcolo dell'ora legale (DST). |
 
 > [!NOTE]
 > Prestare attenzione nel calcolare il segno della differenza di tempo. Dal momento che la differenza di tempo è l'offset dall'ora locale all'ora UTC (anziché viceversa), il relativo segno potrebbe essere l'opposto di quanto ci si potrebbe intuitivamente aspettare. Per i fusi orari avanti rispetto all'ora UTC, la differenza di tempo è negativa; per quelli che sono indietro rispetto all'ora UTC, la differenza è positiva.
 
-Ad esempio, per impostare il **TZ** variabile di ambiente in modo che corrisponda al fuso orario corrente in Germania, immettere quanto segue nella riga di comando:
+Ad esempio, per impostare la variabile di ambiente **TZ** in modo che corrisponda al fuso orario corrente in Germania, immettere quanto segue nella riga di comando:
 
-> **impostato TZ = codice GST 1GDT**
+> **set TZ = GST-1GDT**
 
 Questo comando usa GST per indicare l'ora solare tedesca, presuppone che l'ora UTC sia un'ora indietro rispetto alla Germania (o, in altre parole, che la Germania sia un'ora avanti rispetto all'ora UTC) e presuppone che la Germania osservi l'ora legale.
 
-Se il **TZ** valore non è impostato, **tzset** tenta di usare le informazioni del fuso orario specificate dal sistema operativo. Nel sistema operativo Windows, queste informazioni vengono specificate nell'applicazione Data/Ora nel Pannello di controllo. Se **tzset** non è possibile ottenere queste informazioni, Usa PST8PDT per impostazione predefinita, che indica il fuso orario del Pacifico.
+Se il valore **TZ** non è impostato, **_tzset** tenta di usare le informazioni sul fuso orario specificate dal sistema operativo. Nel sistema operativo Windows, queste informazioni vengono specificate nell'applicazione Data/Ora nel Pannello di controllo. Se **_tzset** non è in grado di ottenere queste informazioni, USA PST8PDT per impostazione predefinita, che indica il fuso orario del Pacifico.
 
-In base il **TZ** valore variabile di ambiente, i valori seguenti vengono assegnati alle variabili globali **Daylight**, **TimeZone**, e **tzname** quando si **tzset** viene chiamato:
+In base al valore della variabile di ambiente **TZ** , i valori seguenti vengono assegnati alle variabili globali **_daylight**, **_timezone**e **tzname** quando viene chiamato **_tzset** :
 
-|Variabile globale|Descrizione|Valore predefinito|
+|Variabile globale|DESCRIZIONE|Valore predefinito|
 |---------------------|-----------------|-------------------|
-|**_daylight**|Valore diverso da zero se è specificato un orario di--l'ora legale **TZ** configurazione; in caso contrario, 0.|1|
+|**_daylight**|Valore diverso da zero se è specificato un fuso orario per l'ora legale nell'impostazione **TZ** ; in caso contrario, 0.|1|
 |**_timezone**|La differenza in secondi tra l'ora locale e l'ora UTC.|28800 (28800 secondi equivale a 8 ore)|
-|**_tzname**[0]|Valore del nome del fuso orario dalla stringa **TZ** variabile di ambiente; vuoto se **TZ** non è stata impostata.|PST|
-|**_tzname**[1]|Valore stringa del fuso orario ora legale; vuoto se viene specificato--l'ora legale fuso **TZ** variabile di ambiente.|PDT|
+|**_tzname**[0]|Valore stringa del nome del fuso orario dalla variabile di ambiente **TZ** . Empty se **TZ** non è stato impostato.|PST|
+|**_tzname**[1]|Valore stringa del fuso orario dell'ora legale; vuoto se il fuso orario dell'ora legale viene omesso dalla variabile di ambiente **TZ** .|PDT|
 
-I valori predefiniti illustrati nella tabella precedente per **Daylight** e il **tzname** matrice corrispondono a "PST8PDT". Se la zona DST viene omessa dal **TZ** variabile di ambiente, il valore di **Daylight** è uguale a 0 e il [ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)e [localtime](localtime-localtime32-localtime64.md) funzioni restituiscono 0 per i flag DST.
+I valori predefiniti indicati nella tabella precedente per **_daylight** e la matrice **tzname** corrispondono a "PST8PDT". Se la zona DST viene omessa dalla variabile di ambiente **TZ** , il valore di **_daylight** è 0 e le funzioni [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)e [localtime](localtime-localtime32-localtime64.md) restituiscono 0 per i flag DST.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -85,7 +88,7 @@ I valori predefiniti illustrati nella tabella precedente per **Daylight** e il *
 |-------------|---------------------|
 |**_tzset**|\<time.h>|
 
-Il **tzset** funzione è specifico di Microsoft. Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).
+La funzione **_tzset** è specifica di Microsoft. Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Esempio
 

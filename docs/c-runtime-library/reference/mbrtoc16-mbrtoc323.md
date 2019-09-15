@@ -1,10 +1,10 @@
 ---
 title: mbrtoc16, mbrtoc323
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbrtoc16
 - mbrtoc32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbrtoc16
 - mbrtoc32
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: f8573ac321772d19141be0228891b290ba48b217
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52bcec5911fdc2ecbb073ae0042777aa4eb2b963
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331584"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952455"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
@@ -57,37 +60,37 @@ size_t mbrtoc32(
 
 ### <a name="parameters"></a>Parametri
 
-*destination*<br/>
-Puntatore per il **char16_t** oppure **char32_t** equivalente del carattere multibyte da convertire. Se Null, la funzione non archivia un valore.
+*destinazione*<br/>
+Puntatore all'equivalente **char16_t** o **char32_t** del carattere multibyte da convertire. Se Null, la funzione non archivia un valore.
 
 *source*<br/>
 Puntatore alla stringa di caratteri multibyte da convertire.
 
 *max_bytes*<br/>
-Il numero massimo di byte in *origine* da esaminare per un carattere da convertire. Deve trattarsi di un valore compreso tra uno e il numero di byte, incluso qualsiasi carattere di terminazione null, rimanente *origine*.
+Numero massimo di byte nell' *origine* da esaminare per un carattere da convertire. Deve essere un valore compreso tra uno e il numero di byte, incluso qualsiasi carattere di terminazione null, rimanente nell' *origine*.
 
 *state*<br/>
-Puntatore a un **mbstate_t** oggetto di stato di conversione utilizzato per interpretare la stringa multibyte da uno o più caratteri di output.
+Puntatore a un oggetto stato di conversione **mbstate_t** utilizzato per interpretare la stringa multibyte in uno o più caratteri di output.
 
 ## <a name="return-value"></a>Valore restituito
 
-In caso di esito positivo restituisce il valore del primo di tali condizioni che si applica, dato il corrente *stato* valore:
+In caso di esito positivo, restituisce il valore della prima di queste condizioni che si applica, dato il valore *dello stato* corrente:
 
 |Value|Condizione|
 |-----------|---------------|
-|0|Alla successiva *max_bytes* o un minor numero di caratteri convertiti dal *origine* corrispondono al carattere wide null, corrisponde al valore archiviato se *destinazione* non null.<br /><br /> *stato* contiene lo stato iniziale di spostamento.|
-|Tra 1 e *max_bytes*, inclusi,|Il valore restituito è il numero di byte di *origine* che completa un carattere multibyte valido. Il carattere wide convertito viene archiviato se *destinazione* non null.|
-|-3|Il successivo carattere wide risultante da una precedente chiamata alla funzione è stato archiviato nel *destinazione* se *destinazione* non null. Nessun byte da *origine* vengono utilizzati da questa chiamata alla funzione.<br /><br /> Quando *origine* punta a un carattere multibyte che richiede più di un carattere wide da rappresentare (ad esempio, una coppia di surrogati), il *stato* valore viene aggiornato in modo che la successiva chiamata di funzione scrive  il carattere aggiuntivo.|
-|-2|La prossima *max_bytes* byte rappresentano un incompleto ma potenzialmente valido carattere multibyte. Nessun valore viene archiviato *destinazione*. Questo risultato può verificarsi se *max_bytes* è uguale a zero.|
-|-1|Si è verificato un errore di codifica. La prossima *max_bytes* o un numero di byte non contribuisce a un carattere multibyte valido e completo. Nessun valore viene archiviato *destinazione*.<br /><br /> **EILSEQ** viene archiviato in **errno** e lo stato di conversione *stato* non è specificato.|
+|0|Il *max_bytes* successivo o un minor numero di caratteri convertiti dall' *origine* corrisponde al carattere wide null, che corrisponde al valore archiviato se la *destinazione* non è null.<br /><br /> *lo stato contiene lo* stato iniziale di spostamento.|
+|Compreso tra 1 e *max_bytes*inclusi|Il valore restituito è il numero di byte dell' *origine* che completa un carattere multibyte valido. Il carattere wide convertito viene archiviato se la *destinazione* non è null.|
+|-3|Il successivo carattere wide risultante da una precedente chiamata alla funzione è stato archiviato nella *destinazione* se la *destinazione* non è null. La chiamata alla funzione non consente l'utilizzo di byte dall' *origine* .<br /><br /> Quando l' *origine* punta a un carattere multibyte che richiede più di un carattere wide da rappresentare (ad esempio, una coppia di surrogati), il valore di *stato* viene aggiornato in modo che la chiamata di funzione successiva scriva il carattere aggiuntivo.|
+|-2|I successivi *max_bytes* byte rappresentano un carattere multibyte incompleto, ma potenzialmente valido. Nessun valore viene archiviato nella *destinazione*. Questo risultato può verificarsi se *max_bytes* è zero.|
+|-1|Si è verificato un errore di codifica. I successivi *max_bytes* o un minor numero di byte non contribuiscono a un carattere multibyte completo e valido. Nessun valore viene archiviato nella *destinazione*.<br /><br /> **EILSEQ** viene archiviato in **errno** e lo *stato* della conversione non è specificato.|
 
 ## <a name="remarks"></a>Note
 
-Il **mbrtoc16** funzione legge fino a *max_bytes* byte dal *origine* per trovare il primo carattere multibyte valido, completo e archivi di UTF-16 equivalente carattere in *destinazione*. I byte di origine vengono interpretati in base alle impostazioni locali multibyte del thread corrente. Se il carattere multibyte richiede più di un carattere di output UTF-16, ad esempio una coppia di surrogati, il *lo stato* è impostato per archiviare il successivo carattere UTF-16 in *destinazione* alla chiamata successiva a **mbrtoc16**. Il **mbrtoc32** funzione è identica, ma l'output viene archiviato come un carattere UTF-32.
+La funzione **mbrtoc16** legge fino a *max_bytes* byte dall' *origine* per trovare il primo carattere multibyte valido completo e quindi archivia il carattere UTF-16 equivalente nella *destinazione*. I byte di origine vengono interpretati in base alle impostazioni locali multibyte del thread corrente. Se il carattere multibyte richiede più di un carattere di output UTF-16, ad esempio una coppia di surrogati, il valore di *stato* viene impostato in modo da archiviare il successivo carattere UTF-16 nella *destinazione* alla chiamata successiva a **mbrtoc16**. La funzione **mbrtoc32** è identica, ma l'output viene archiviato come carattere UTF-32.
 
-Se *origine* è null, queste funzioni restituiscono l'equivalente di una chiamata effettuata usando gli argomenti di **NULL** per *destinazione*, **""** per *origine*e 1 per *max_bytes*. I valori passati dei *destinazione* e *max_bytes* vengono ignorati.
+Se *source* è null, queste funzioni restituiscono l'equivalente di una chiamata effettuata usando gli argomenti di **null** per la *destinazione*, **""** per l' *origine*e 1 per *max_bytes*. I valori passati di *Destination* e *max_bytes* vengono ignorati.
 
-Se *origine* è non null, la funzione inizia all'inizio della stringa e controlla fino a *max_bytes* byte per determinare il numero di byte necessari per completare il carattere multibyte successivo, tra cui tutte le sequenze di spostamento. Se i byte esaminati contengono un carattere multibyte valido e completo, la funzione converte il carattere nel carattere o nei caratteri wide a 16 bit o 32 bit equivalenti. Se *destinazione* è non null, la funzione archivia il risultato primo (e probabilmente l'unico) carattere nell'istanza di destinazione. Se sono necessari caratteri di output aggiuntivi, viene impostato un valore *stato*, in modo che le successive chiamate alla funzione i caratteri aggiuntivi e restituiscono il valore -3. Se non sono necessari, quindi più caratteri di output *stato* viene impostato sullo stato iniziale di spostamento.
+Se l' *origine* non è null, la funzione inizia all'inizio della stringa e controlla fino a *max_bytes* byte per determinare il numero di byte necessari per completare il carattere multibyte successivo, incluse le sequenze di spostamento. Se i byte esaminati contengono un carattere multibyte valido e completo, la funzione converte il carattere nel carattere o nei caratteri wide a 16 bit o 32 bit equivalenti. Se la *destinazione* non è null, la funzione archivia il primo (ed eventualmente solo) carattere di risultato nella destinazione. Se sono necessari caratteri di output aggiuntivi, un valore viene impostato in *stato*, in modo che le chiamate successive alla funzione restituiscono i caratteri aggiuntivi e restituiscano il valore-3. Se non sono necessari altri caratteri di output, *lo* stato viene impostato sullo stato iniziale di spostamento.
 
 ## <a name="requirements"></a>Requisiti
 

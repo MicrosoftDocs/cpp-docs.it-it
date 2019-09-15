@@ -1,9 +1,9 @@
 ---
 title: eof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - eof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - eof
 helpviewer_keywords:
 - eof function
 ms.assetid: 2e8fb55b-b736-46a6-be5e-15f8876a714f
-ms.openlocfilehash: d596949a2d8b251c6b4ceec552871ad29737eecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8dd9b9e86b9e0c4204462467ebc6db8be4b5336
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155886"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950816"
 ---
 # <a name="eof"></a>eof
 

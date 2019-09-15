@@ -1,9 +1,9 @@
 ---
 title: spawnvp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - spawnvp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - spawnvp
 helpviewer_keywords:
 - spawnvp function
 ms.assetid: 25d3896d-1934-4453-ae8b-4fb5480a2657
-ms.openlocfilehash: 028f7d878fc0445103f34223cc75a882b491163d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3963d7b4a8a7bc4f9af88af94497a57b25e7061d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355055"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957730"
 ---
 # <a name="spawnvp"></a>spawnvp
 

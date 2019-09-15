@@ -1,9 +1,9 @@
 ---
 title: ungetch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ungetch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ungetch
 helpviewer_keywords:
 - ungetch function
 ms.assetid: 6921232f-6317-41cd-948b-91d56a11bc0e
-ms.openlocfilehash: ede8c8c8a939b79132e41c2f4fd5713570c147df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89262517cefa677d3611ba80bd3c92579f6ca9e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155459"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945804"
 ---
 # <a name="ungetch"></a>ungetch
 

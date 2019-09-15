@@ -1,11 +1,14 @@
 ---
 title: _iob
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iob
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iob
 - iob
@@ -13,14 +16,14 @@ helpviewer_keywords:
 - _iob global variable
 - iob global variable
 ms.assetid: 008ed376-8078-4bbd-bc6c-0677c63d0ff1
-ms.openlocfilehash: 4e0b859e87f272871c99cbd208a2e3090a860c87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: e33ad12035dc6aadace35581c7555ab85cc0445a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750767"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944292"
 ---
-# <a name="iob"></a>_iob
+# <a name="_iob"></a>_iob
 
 Matrice delle strutture di controllo stdio.
 
@@ -30,7 +33,7 @@ Matrice delle strutture di controllo stdio.
 FILE _iob[_IOB_ENTRIES];
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 `IOB_ENTRIES` è definito come 20 in stdio.h.
 

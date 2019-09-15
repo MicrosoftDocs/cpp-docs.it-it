@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcmp, _mbsnbcmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcmp
 - _mbsnbcmp_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcmp
 - tcsnbmp
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 512fd2dae54afa4a37b2b3d3103ab090d81909fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285306"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952309"
 ---
-# <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
+# <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
 Confronta i primi **n** byte di due stringhe di caratteri multibyte.
 
@@ -74,25 +77,25 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore restituito indica la relazione ordinale tra le sottostringhe della *string1* e *string2*.
+Il valore restituito indica la relazione ordinale tra le sottostringhe di *String1* e *string2*.
 
-|Valore restituito|Descrizione|
+|Valore restituito|DESCRIZIONE|
 |------------------|-----------------|
-|< 0|*String1* sottostringa è minore di *string2* sottostringa.|
-|0|*String1* è identica alla sottostringa *string2* sottostringa.|
-|> 0|*String1* è maggiore di sottostringa *string2* sottostringa.|
+|< 0|la sottostringa *String1* è minore di *string2* substring.|
+|0|la sottostringa *String1* è identica alla sottostringa *string2* .|
+|> 0|la sottostringa *String1* è maggiore di *string2* substring.|
 
-Errore di convalida dei parametri, **mbsnbcmp** e **mbsnbcmp_l** restituiscono **_NLSCMPERROR**, che è definito nel \<String. h > e \< Mbstring. h >.
+In un errore di convalida dei parametri, **_mbsnbcmp** e **_mbsnbcmp_l** restituiscono **_NLSCMPERROR**, definito \<in String. h > \<e mbstring. h >.
 
 ## <a name="remarks"></a>Note
 
-Il **mbsnbcmp** funzioni confrontano al massimo i primi *conteggio* byte nella *string1* e *string2* e restituire un valore che indica il relazione tra le sottostringhe. **mbsnbcmp** è una versione di distinzione maiuscole/minuscole **mbsnbicmp**. A differenza **mbsnbcoll**, **mbsnbcmp** non è influenzato dall'ordine delle regole di confronto delle impostazioni locali. **mbsnbcmp** riconosce le sequenze di caratteri multibyte in base a multibyte corrente [tabella codici](../../c-runtime-library/code-pages.md).
+Le funzioni **_mbsnbcmp** confrontano al massimo i primi byte di *conteggio* in *String1* e *string2* e restituiscono un valore che indica la relazione tra le sottostringhe. **_mbsnbcmp** è una versione con distinzione tra maiuscole e minuscole di **_mbsnbicmp**. A differenza di **_mbsnbcoll**, **_mbsnbcmp** non è influenzato dall'ordine delle regole di confronto delle impostazioni locali. **_mbsnbcmp** riconosce le sequenze di caratteri multibyte in base alla tabella [codici](../../c-runtime-library/code-pages.md)multibyte corrente.
 
-**mbsnbcmp** è simile **mbsncmp**, ad eccezione del fatto che **mbsncmp** confronta le stringhe per caratteri anziché per byte.
+**_mbsnbcmp** è simile a **_mbsncmp**, ad eccezione del fatto che **_mbsncmp** Confronta le stringhe per caratteri anziché per byte.
 
-Il valore di output è interessato dal **LC_CTYPE** categoria impostazione delle impostazioni locali, che specifica i byte iniziali e finali dei caratteri multibyte. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). Il **mbsnbcmp** funzione utilizza le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Il **mbsnbcmp_l** funzione è identica, ma usa le *delle impostazioni locali* parametro invece. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Il valore di output è influenzato dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali, che specifica i byte iniziali e finali dei caratteri multibyte. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md). La funzione **_mbsnbcmp** usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. La funzione **_mbsnbcmp_l** è identica, con la differenza che usa invece il parametro delle *impostazioni locali* . Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
-Se uno dei due *string1* oppure *string2* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **_NLSCMPERROR** e **errno** è impostata su **EINVAL**.
+Se *String1* o *string2* è un puntatore null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiscono **_NLSCMPERROR** e **errno** viene impostato su **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

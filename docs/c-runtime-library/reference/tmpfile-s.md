@@ -1,9 +1,9 @@
 ---
 title: tmpfile_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64107f26fa651739f4d5bdd7521b15d9d458df65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155576"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946047"
 ---
-# <a name="tmpfiles"></a>tmpfile_s
+# <a name="tmpfile_s"></a>tmpfile_s
 
 Crea un file temporaneo. Questa è una versione di [tmpfile](tmpfile.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -57,15 +60,15 @@ Restituisce 0 in caso di esito positivo e un codice di errore in caso di errore.
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|non modificato|
 
-Se si verifica l'errore di convalida dei parametri precedente, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e il valore restituito sarà **EINVAL**.
+Se si verifica l'errore di convalida dei parametri precedente, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e il valore restituito è **EINVAL**.
 
 ## <a name="remarks"></a>Note
 
-Il **tmpfile_s** funzione crea un file temporaneo e inserisce un puntatore a tale flusso nel *pFilePtr* argomento. Il file temporaneo viene creato nella directory radice. Per creare un file temporaneo in una directory diversa dalla radice, usare [tmpnam_s](tmpnam-s-wtmpnam-s.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in combinazione con [fopen](fopen-wfopen.md).
+La funzione **tmpfile_s** crea un file temporaneo e inserisce un puntatore a tale flusso nell'argomento *pFilePtr* . Il file temporaneo viene creato nella directory radice. Per creare un file temporaneo in una directory diversa dalla radice, usare [tmpnam_s](tmpnam-s-wtmpnam-s.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) in combinazione con [fopen](fopen-wfopen.md).
 
-Se non è possibile aprire il file, **tmpfile_s** scrive **NULL** per il *pFilePtr* parametro. Questo file temporaneo viene eliminato automaticamente quando il file viene chiuso quando il programma termina normalmente oppure **rmtmp** viene chiamato, presupponendo che la directory di lavoro corrente rimane invariato. Il file temporaneo viene aperto in **w + b** modalità (lettura/scrittura binaria).
+Se il file non può essere aperto, **tmpfile_s** scrive **null** nel parametro *pFilePtr* . Il file temporaneo viene eliminato automaticamente quando il file viene chiuso, quando il programma termina normalmente o quando viene chiamato **_rmtmp** , supponendo che la directory di lavoro corrente non venga modificata. Il file temporaneo viene aperto in modalità **w + b** (lettura/scrittura binaria).
 
-Può verificarsi un errore se si tenta di superare **TMP_MAX_S** (vedere STDIO. H) le chiamate con **tmpfile_s**.
+È possibile che si verifichi un errore se si tenta di eseguire più di **TMP_MAX_S** (vedere STDIO. H) chiama con **tmpfile_s**.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -78,7 +81,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 ## <a name="example"></a>Esempio
 
 > [!NOTE]
-> In questo esempio può richiedere privilegi amministrativi per l'esecuzione su Windows.
+> Questo esempio può richiedere privilegi amministrativi per l'esecuzione in Windows.
 
 ```C
 // crt_tmpfile_s.c

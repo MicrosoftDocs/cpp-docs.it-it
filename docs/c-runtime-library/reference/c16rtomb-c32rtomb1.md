@@ -1,10 +1,10 @@
 ---
 title: c16rtomb, c32rtomb
 ms.date: 01/22/2018
-apiname:
+api_name:
 - c16rtomb
 - c32rtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c16rtomb
 - c32rtomb
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16effe48442ccbb5144b57ead2fb15c908fe898
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341756"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943423"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -61,19 +64,19 @@ Puntatore a una matrice per archiviare il carattere multibyte convertito.
 Carattere wide da convertire.
 
 *state*<br/>
-Un puntatore a un **mbstate_t** oggetto.
+Puntatore a un oggetto **mbstate_t** .
 
 ## <a name="return-value"></a>Valore restituito
 
-Il numero di byte archiviati nell'oggetto matrice *mbchar*, comprese tutte le sequenze di spostamento. Se *wchar* non è un carattere wide valido, il valore (**size_t**)(-1) viene restituito **errno** è impostata su **EILSEQ**e il valore di *stato* non è specificato.
+Numero di byte archiviati nell'oggetto matrice *mbchar*, incluse tutte le sequenze di spostamento. Se *WCHAR* non è un carattere wide valido, viene restituito il valore (**size_t**) (-1), **errno** viene impostato su **EILSEQ**e il valore di *state* non è specificato.
 
 ## <a name="remarks"></a>Note
 
-Il **c16rtomb** funzione converte il carattere UTF-16 *wchar* alla sequenza di caratteri narrow multibyte equivalente nelle impostazioni locali correnti. Se *mbchar* non è un puntatore null, la funzione archivia la sequenza convertita nell'oggetto matrice a cui punta *mbchar*. Fino a **MB_CUR_MAX** byte da archiviare in *mbchar*, e *stato* viene impostato sullo stato di spostamento multibyte risultante.    Se *wchar* è un carattere wide null, una sequenza richiesta per il ripristino è archiviato lo stato iniziale di spostamento, se necessario, seguita dal carattere null, e *stato* viene impostato sullo stato di conversione iniziale. Il **c32rtomb** funzione è identica, ma converte un carattere UTF-32.
+La funzione **c16rtomb** converte il carattere *WCHAR* UTF-16 in una sequenza di caratteri narrow multibyte equivalente nelle impostazioni locali correnti. Se *mbchar* non è un puntatore null, la funzione Archivia la sequenza convertita nell'oggetto matrice a cui punta *mbchar*. Fino a **MB_CUR_MAX** byte vengono archiviati in *mbchar*e *lo stato* viene impostato sullo stato di spostamento multibyte risultante.    Se *WCHAR* è un carattere wide null, viene archiviata una sequenza necessaria per ripristinare lo stato di spostamento iniziale, se necessario, seguita dal carattere null e *lo stato viene impostato* sullo stato di conversione iniziale. La funzione **c32rtomb** è identica, ma converte un carattere UTF-32.
 
-Se *mbchar* è un puntatore null, il comportamento è equivalente a una chiamata alla funzione che sostituisce un buffer interno per *mbchar* e un carattere null wide per il *wchar*.
+Se *mbchar* è un puntatore null, il comportamento è equivalente a una chiamata alla funzione che sostituisce un buffer interno per *mbchar* e un carattere null Wide per *WCHAR*.
 
-Il *stato* oggetto stato di conversione consente di eseguire chiamate successive a questa funzione e altre funzioni riavviabili che mantengono lo stato di spostamento di caratteri multibyte di output. I risultati sono indefiniti quando si combinazione l'uso di funzioni riavviabili e non riavviabili insieme o se una chiamata a **setlocale** viene eseguito tra chiamate di funzioni riavviabili.
+L'oggetto stato di conversione *dello stato* consente di effettuare chiamate successive a questa funzione e ad altre funzioni riavviabili che mantengono lo stato di spostamento dei caratteri di output multibyte. I risultati non sono definiti quando si combina l'uso di funzioni riavviabili e non riavviabili oppure se viene eseguita una chiamata a **setlocale** tra le chiamate di funzione riavviabili.
 
 ## <a name="requirements"></a>Requisiti
 

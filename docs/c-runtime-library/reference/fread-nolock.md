@@ -1,9 +1,9 @@
 ---
 title: _fread_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fread_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fread_nolock
 - fread_nolock
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-ms.openlocfilehash: 81827363d670c7cdeeddcb86390323bf431c6f98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d896e3809d22c0f2752ef67c89233652bdade19
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287915"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956863"
 ---
-# <a name="freadnolock"></a>_fread_nolock
+# <a name="_fread_nolock"></a>_fread_nolock
 
 Legge i dati da un flusso senza bloccare altri thread.
 
@@ -68,7 +71,7 @@ Vedere [fread](fread.md).
 
 ## <a name="remarks"></a>Note
 
-Questa funzione è una versione non blocca il thread del **fread**. È identico a **fread** ad eccezione del fatto che non è protetta da interferenze da altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+Questa funzione è una versione non di blocco di **fread**. È identica a **fread** con la differenza che non è protetta da interferenze da parte di altri thread. Potrebbe essere più veloce perché non comporta un sovraccarico che blocca altri thread. Utilizzare questa funzione solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ## <a name="requirements"></a>Requisiti
 

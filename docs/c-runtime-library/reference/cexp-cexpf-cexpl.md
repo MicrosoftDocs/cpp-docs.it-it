@@ -1,11 +1,11 @@
 ---
 title: cexp, cexpf, cexpl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cexp
 - cexpf
 - cexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cexp
 - cexpf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dd6c9deddfe93cf044985f93b2129695d0770f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335464"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943162"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
@@ -61,11 +64,11 @@ Numero complesso che rappresenta l'esponente.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il valore di **elettronica** elevato alla potenza del *z*.
+Valore di **e** elevato alla potenza della *z*.
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **cexp** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **cexp** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **cexp** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **cexp** accetta e restituisce sempre un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

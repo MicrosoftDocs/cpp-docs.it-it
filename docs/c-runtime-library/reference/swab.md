@@ -1,10 +1,10 @@
 ---
 title: _swab
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swab
 - stdlib/_swab
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _swab
 - stdlib/_swab
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: 64753383bcb94947e6b413b5f55ac6e2d9c7dbca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245506"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946282"
 ---
-# <a name="swab"></a>_swab
+# <a name="_swab"></a>_swab
 
 Inverte i byte.
 
@@ -60,13 +63,13 @@ Numero di byte da copiare e invertire.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **swab** funzione non restituisce un valore. La funzione imposterà **errno** per **EINVAL** se la *src* o *dest* puntatore è null o *n* è minore rispetto a zero e il parametro non valido viene richiamato gestore, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
+La funzione del **tampone** non restituisce un valore. La funzione imposta **errno** su **EINVAL** se il puntatore *src* o *dest* è null o *n* è minore di zero e viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md).
 
 Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Se *n* è pari, il **swab** funzione copie *n* byte da *src*, inverte ogni coppia di byte adiacenti e archivia il risultato in *dest*. Se *n* è dispari, **swab** copia e inverte i primi *n*-1 byte di *src*, e il byte finale non viene copiato. Il **swab** funzione viene in genere utilizzata per preparare i dati binari per il trasferimento in un computer che utilizza un ordine dei byte diverso.
+Se *n* è pari, la funzione **_swab** copia *n* byte da *src*, scambia ogni coppia di byte adiacenti e archivia il risultato in *dest*. Se *n* è dispari, **_swab** copia e scambia i primi *n*-1 byte di *src*e il byte finale non viene copiato. La funzione **_swab** viene in genere usata per preparare i dati binari per il trasferimento in un computer che usa un ordine dei byte diverso.
 
 ## <a name="requirements"></a>Requisiti
 

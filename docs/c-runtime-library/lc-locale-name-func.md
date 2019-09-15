@@ -1,9 +1,9 @@
 ---
 title: ___lc_locale_name_func
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ___lc_locale_name_func
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr110.dll
 - msvcr100.dll
@@ -11,20 +11,23 @@ apilocation:
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ___lc_locale_name_func
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: 88ce07ca3fece558c23f4fcd9a12949f184b7532
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: abc1ade393538586ad07f57e6838591833c9948b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741051"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944236"
 ---
-# <a name="lclocalenamefunc"></a>___lc_locale_name_func
+# <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
 Funzione CRT interna. Recupera l'attuale nome delle impostazioni locali del thread.
 
@@ -38,7 +41,7 @@ wchar_t** ___lc_locale_name_func(void);
 
 Puntatore a una stringa che contiene l'attuale nome delle impostazioni locali del thread.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 `___lc_locale_name_func` è una funzione CRT interna che viene usata da altre funzioni CRT per ottenere l'attuale nome delle impostazioni locali dall'archiviazione locale di thread per i dati CRT. Queste informazioni sono disponibili anche usando la funzione [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) o le funzioni [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 

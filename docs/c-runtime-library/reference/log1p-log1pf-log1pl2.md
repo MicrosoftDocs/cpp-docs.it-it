@@ -1,11 +1,11 @@
 ---
 title: log1p, log1pf, log1pl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log1p
 - log1pf
 - log1pl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - log1p
 - log1pf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285986"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953214"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -72,7 +75,7 @@ Argomento a virgola mobile.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce la naturale (base -*elettronica*) di log della (*x* + 1).
+Se ha esito positivo, restituisce il log naturale (base*e*) di (*x* + 1).
 
 In caso contrario può restituire uno dei valori seguenti:
 
@@ -87,15 +90,15 @@ In caso contrario può restituire uno dei valori seguenti:
 |±SNaN|Come input|INVALID||
 |±QNaN, indefinite|Come input|||
 
-Il **errno** è impostato su ERANGE se *x* = -1. Il **errno** è impostato su **EDOM** se *x* < -1.
+Il valore **errno** è impostato su ERANGE se *x* =-1. Il valore **errno** viene impostato su **EDOM** se *x* <-1.
 
 ## <a name="remarks"></a>Note
 
-Il **log1p** le funzioni possono essere più accurate rispetto all'uso `log(x + 1)` quando *x* è prossimo allo 0.
+Le funzioni **log1p** possono essere più accurate rispetto all' `log(x + 1)` uso di quando *x* è vicino a 0.
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **log1p** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **log1p** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **log1p** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **log1p** accetta e restituisce sempre un **valore Double**.
 
-Se *x* è un numero naturale, questa funzione restituisce il logaritmo del fattoriale di (*x* - 1).
+Se *x* è un numero naturale, questa funzione restituisce il logaritmo del fattoriale di (*x* -1).
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,12 +1,12 @@
 ---
 title: ldexp, ldexpf, ldexpl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ldexp
 - ldexpf
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286293"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953498"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -80,13 +83,13 @@ Esponente dell'intero.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **ldexp** le funzioni restituiscono il valore di *x* \* 2<sup>*exp* </sup> se ha esito positivo. In caso di overflow e in base al segno del *x*, **ldexp** restituisce + /- **HUGE_VAL**; il **errno** valore è impostato su **ERANGE** .
+Le funzioni **ldexp** restituiscono il valore di *x* \* 2<sup>*Exp*</sup> in caso di esito positivo. In caso di overflow e a seconda del segno di *x*, **ldexp** restituisce +/- **HUGE_VAL**; il valore **errno** è impostato su **ERANGE**.
 
-Per altre informazioni sulle **errno** e di errore possibili valori restituiti, vedere [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Per ulteriori informazioni su **errno** e sui possibili valori restituiti degli errori, vedere [errno, doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **ldexp** che accettano **float** oppure **long** **double** tipi. In un programma C **ldexp** accetta sempre un **double** e un **int** e restituisce un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare overload di **ldexp** che accettano tipi **float** o **Long** **Double** . In un programma C **ldexp** accetta sempre un **valore Double** e un valore **Integer** e restituisce un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,10 +1,10 @@
 ---
 title: _getch_nolock, _getwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getwch_nolock
 - _getch_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getch_nolock
 - getwch_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c8f27b468d0471f44211efa12dcee6453b3fac1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287534"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955459"
 ---
-# <a name="getchnolock-getwchnolock"></a>_getch_nolock, _getwch_nolock
+# <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock, _getwch_nolock
 
 Ottiene un carattere dalla console senza visualizzarlo (echo) e senza bloccare il thread.
 
@@ -61,7 +64,7 @@ Restituisce il carattere letto. Non vi è restituzione di errori.
 
 ## <a name="remarks"></a>Note
 
-**getch_nolock** e **getwch_nolock** sono identiche alle **getch** e **_getchw** ad eccezione del fatto che non sono protette da interferenze da altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
+**_getch_nolock** e **_getwch_nolock** sono identici a **_getch** e **_getchw** , ad eccezione del fatto che non sono protetti da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano un sovraccarico che blocca altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

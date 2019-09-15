@@ -1,11 +1,14 @@
 ---
 title: errno, _doserrno, _sys_errlist, and _sys_nerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _errno
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sys_errlist
 - errno
@@ -21,14 +24,14 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750780"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944561"
 ---
-# <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
+# <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 
 Macro globali che contengono i codici di errore impostati durante l'esecuzione del programma e stringhe equivalenti dei codici di errore per la visualizzazione.
 
@@ -41,7 +44,7 @@ Macro globali che contengono i codici di errore impostati durante l'esecuzione d
 #define _sys_nerr (*__sys_nerr())
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Entrambe le parole chiave `errno` e `_doserrno` vengono impostate su 0 dal runtime durante l'avvio del programma. `errno` è impostato su un errore in una chiamata a livello di sistema. Poiché `errno` contiene il valore dell'ultima chiamata che l'ha impostata, questo valore può essere modificato dalle chiamate successive. Le chiamate della libreria di runtime che impostano `errno` su un errore non cancellano `errno` in caso di operazione riuscita. Cancellare sempre `errno` chiamando `_set_errno(0)` immediatamente prima di una chiamata che potrebbe impostarla e verificarla immediatamente dopo la chiamata.
 

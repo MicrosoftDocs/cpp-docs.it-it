@@ -1,9 +1,9 @@
 ---
 title: _heapmin
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapmin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapmin
 - heapmin
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157224"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954798"
 ---
-# <a name="heapmin"></a>_heapmin
+# <a name="_heapmin"></a>_heapmin
 
 Rilascia la memoria heap inutilizzata al sistema operativo.
 
@@ -46,13 +49,13 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **heapmin** restituisce 0; in caso contrario, la funzione restituisce -1 e imposta **errno** al **ENOSYS**.
+Se ha esito positivo, **_heapmin** restituisce 0. in caso contrario, la funzione restituisce-1 e **errno** viene impostato su **ENOSYS**.
 
 Per altre informazioni su questi e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **heapmin** funzione riduce al minimo l'heap per il rilascio di memoria heap inutilizzata al sistema operativo. Se il sistema operativo non supporta **heapmin**(ad esempio, Windows 98), la funzione restituisce -1 e imposta **errno** al **ENOSYS**.
+La funzione **_heapmin** riduce al minimo l'heap rilasciando la memoria heap inutilizzata al sistema operativo. Se il sistema operativo non supporta **_heapmin**(ad esempio, Windows 98), la funzione restituisce-1 e **errno** viene impostato su **ENOSYS**.
 
 ## <a name="requirements"></a>Requisiti
 

@@ -1,11 +1,11 @@
 ---
 title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ilogb
 - ilogbf
 - ilogbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ilogb
 - ilogbf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331677"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954758"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -72,22 +75,22 @@ Valore specificato.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se l'operazione riesce, restituisce l'esponente in base 2 del *x* come signed **int** valore.
+Se ha esito positivo, restituisce l'esponente in base 2 di *x* come valore **int** con segno.
 
 In caso contrario, restituisce uno dei valori seguenti definiti in \<math.h>:
 
 |Input|Risultato|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±INF, ±nan, indefinito|FP_ILOGBNAN|
+|± INF, ± Nan, non definito|FP_ILOGBNAN|
 
 Gli errori vengono segnalati come specificato in [matherr](matherr.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **ilogb** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **ilogb** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **ilogb** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **ilogb** accetta e restituisce sempre un **valore Double**.
 
-Chiamare questa funzione è simile alla chiamata l'equivalente **logb** (funzione), quindi eseguire il cast del valore restituito **int**.
+La chiamata a questa funzione è simile alla chiamata della funzione **logb** equivalente, quindi il cast del valore restituito a **int**.
 
 ## <a name="requirements"></a>Requisiti
 

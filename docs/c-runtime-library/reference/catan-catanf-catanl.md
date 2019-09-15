@@ -1,11 +1,11 @@
 ---
 title: catan, catanf, catanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catan
 - catanf
 - catanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catan
 - catanf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204a05b4293fefa4378e54ce93a625bf890cf4d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335516"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943356"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
-Recupera l'arcotangente di un numero complesso con raggi compreso nell'intervallo [-1; + 1] lungo l'asse immaginario.
+Recupera l'arcotangente di un numero complesso con tagli di rami non compresi nell'intervallo [-1; + 1] lungo l'asse immaginario.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -61,11 +64,11 @@ Numero complesso che rappresenta un angolo, espresso in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-L'arcotangente del *z*, espresso in radianti. Il risultato è unbounded lungo l'asse immaginario e nell'intervallo [-π/2 + 2 π;] lungo l'asse reale.
+Arcotangente di *z*, in radianti. Il risultato è unbounded lungo l'asse immaginario e nell'intervallo [-π/2; + π/2] lungo l'asse reale.
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **catan** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **catan** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Catan** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C, **Catan** accetta sempre e restituisce un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

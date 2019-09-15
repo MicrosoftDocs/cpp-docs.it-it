@@ -1,11 +1,11 @@
 ---
 title: asin, asinf, asinl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinf
 - asinl
 - asin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asin
 - asinl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347964"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943642"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -60,9 +63,9 @@ Valore di cui deve essere calcolato l'arcoseno.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **asin** funzione restituisce l'arcoseno (la funzione inversa del seno) della *x* nell'intervallo - π/2 in π/2 radianti.
+La funzione **Asin** restituisce arcoseno (funzione inversa del seno) di *x* nell'intervallo compreso tra-π/2 e π/2 radianti.
 
-Per impostazione predefinita, se *x* è minore di -1 o maggiore di 1 **asin** restituisce un valore indefinito.
+Per impostazione predefinita, se *x* è minore di-1 o maggiore di 1, **Asin** restituisce un valore indefinito.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
@@ -72,7 +75,7 @@ Per impostazione predefinita, se *x* è minore di -1 o maggiore di 1 **asin** re
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **asin** con **float** e **long** **double** valori. In un programma C **asin** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **Asin** con valori **float** e **Long** **Double** . In un programma C, **Asin** accetta sempre e restituisce un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

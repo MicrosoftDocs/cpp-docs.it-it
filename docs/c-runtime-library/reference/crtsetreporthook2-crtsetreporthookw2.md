@@ -1,10 +1,10 @@
 ---
 title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetReportHookW2
 - CrtSetReportHook2
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335323"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942223"
 ---
-# <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
+# <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
 Installa o disinstalla la funzione per la creazione di report definita dal client per eseguire l'hook nel processo di creazione di report sul debug del runtime di C (solo versione di debug).
 
@@ -54,22 +57,22 @@ int _CrtSetReportHookW2(
 ### <a name="parameters"></a>Parametri
 
 *mode*<br/>
-L'azione da intraprendere: **_CRT_RPTHOOK_INSTALL** oppure **_CRT_RPTHOOK_REMOVE**.
+Azione da eseguire: **_CRT_RPTHOOK_INSTALL** o **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Per installare o rimuovere la versione a caratteri narrow o caratteri wide di questa funzione hook di report.
+Hook del report per installare o rimuovere la versione a caratteri "narrow" o "wide" di questa funzione.
 
 ## <a name="return-value"></a>Valore restituito
 
--1 se si è verificato un errore, con **EINVAL** oppure **ENOMEM** impostata; in caso contrario, restituisce il conteggio dei riferimenti *pfnNewHook* dopo la chiamata.
+-1 se si è verificato un errore con l'impostazione **EINVAL** o **ENOMEM** . in caso contrario, restituisce il conteggio dei riferimenti di *pfnNewHook* dopo la chiamata.
 
 ## <a name="remarks"></a>Note
 
-**_CrtSetReportHook2** e **_CrtSetReportHookW2** consentono di associare o annullare l'esecuzione di una funzione, mentre [CrtSetReportHook](crtsetreporthook.md) consente solo di una funzione hook.
+**_CrtSetReportHook2** e **_CrtSetReportHookW2** consentono di associare o disassociare una funzione, mentre [_CrtSetReportHook](crtsetreporthook.md) consente solo di associare una funzione.
 
-**_CrtSetReportHook2** oppure **_CrtSetReportHookW2** deve essere usato al posto della **CrtSetReportHook** quando viene effettuata la chiamata di hook in una DLL e quando più DLL vengono caricate e impostano le loro funzioni di hook. In questo caso, le DLL possono essere scaricate in un ordine diverso rispetto all'ordine di caricamento e la funzione di hook può sempre puntare a una DLL scaricata. Qualsiasi output di debug Arresta il processo se le funzioni di hook aggiunte con **CrtSetReportHook**.
+È consigliabile usare **_CrtSetReportHook2** o **_CrtSetReportHookW2** anziché **_CrtSetReportHook** quando viene effettuata la chiamata all'hook in una dll e quando è possibile caricare più dll e impostare le proprie funzioni hook. In questo caso, le DLL possono essere scaricate in un ordine diverso rispetto all'ordine di caricamento e la funzione di hook può sempre puntare a una DLL scaricata. Eventuali output di debug arrestano in modo anomalo il processo se le funzioni hook sono state aggiunte con **_CrtSetReportHook**.
 
-Ogni funzione di hook aggiunte con **CrtSetReportHook** vengono chiamati se sono presenti funzioni di hook aggiunte con **_CrtSetReportHook2** oppure **_CrtSetReportHookW2** o se tutti collegata le funzioni aggiunte con **_CrtSetReportHook2** e **_CrtSetReportHookW2** restituiscono **FALSE**.
+Qualsiasi funzione hook aggiunta con **_CrtSetReportHook** viene chiamata se non sono presenti funzioni hook aggiunte con **_CrtSetReportHook2** o **_CrtSetReportHookW2** o se tutte le funzioni hook sono state aggiunte con **_CrtSetReportHook2** e **_ CrtSetReportHookW2** restituisce **false**.
 
 La versione a caratteri wide di questa funzione è disponibile. Le funzioni di hook per i report accettano una stringa il cui tipo (caratteri wide o narrow) deve corrispondere alla versione di questa funzione usata. Usare il prototipo seguente di funzione di hook per i report usati con la versione a caratteri wide di questa funzione:
 
@@ -83,10 +86,10 @@ Usare il prototipo seguente per gli hook di report a caratteri narrow:
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Queste funzioni convalidano i relativi parametri. Se *modalità* oppure **pfnNewNook** è valido, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiscono -1.
+Queste funzioni convalidano i relativi parametri. Se *mode* o **pfnNewNook** non è valido, queste funzioni richiamano il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono-1.
 
 > [!NOTE]
-> Se l'applicazione viene compilata con **/clr** e creazione di report viene chiamata la funzione dopo che è stato chiuso l'applicazione principale, CLR genererà un'eccezione se la funzione di creazione di report chiama le funzioni CRT.
+> Se l'applicazione viene compilata con **/CLR** e la funzione di creazione report viene chiamata dopo che l'applicazione è stata chiusa, il CLR genererà un'eccezione se la funzione di creazione report chiama qualsiasi funzione CRT.
 
 ## <a name="requirements"></a>Requisiti
 

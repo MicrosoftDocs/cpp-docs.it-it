@@ -1,11 +1,11 @@
 ---
 title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscat
 - wcscat
 - strcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscat
 - _ftcscat
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 629b66a5c9dded3a910919f5e302a97c4f731240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354340"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958268"
 ---
-# <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
+# <a name="strcat-wcscat-_mbscat"></a>strcat, wcscat, _mbscat
 
 Aggiunge una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **mbscat_s** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **questa API** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -100,12 +103,12 @@ Ognuna di queste funzioni restituisce la stringa di destinazione (*strDestinatio
 
 ## <a name="remarks"></a>Note
 
-Il **strcat** funzione Accoda *strSource* al *strDestination* e termina la stringa risultante con un carattere null. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione del *strDestination*. Il comportamento delle **strcat** è definito se le stringhe di origine e destinazione si sovrappongono.
+La funzione **strcat** aggiunge *strSource* a *strDestination* e termina la stringa risultante con un carattere null. Il carattere iniziale di *strSource* sovrascrive il carattere null di terminazione di *strDestination*. Il comportamento di **strcat** non è definito se le stringhe di origine e di destinazione si sovrappongono.
 
 > [!IMPORTANT]
-> In quanto **strcat** non verifica la presenza di spazio sufficiente nella *strDestination* prima di accodare *strSource*, è una causa possibile dei sovraccarichi del buffer. In alternativa, considerare l'uso di [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
+> Poiché **strcat** non verifica la presenza di spazio sufficiente in *strDestination* prima di aggiungere *strSource*, è possibile che si verifichino sovraccarichi del buffer. In alternativa, considerare l'uso di [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
 
-**wcscat** e **mbscat** sono versioni a caratteri wide e caratteri multibyte di **strcat**. Gli argomenti e il valore restituito di **wcscat** sono caratteri wide, mentre quelli di stringhe **mbscat** sono stringhe a caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
+**wcscat** e **_mbscat** sono versioni a caratteri wide e a caratteri multibyte di **strcat**. Gli argomenti e il valore restituito di **wcscat** sono stringhe a caratteri wide. quelli di **_mbscat** sono stringhe di caratteri multibyte. A parte ciò, queste tre funzioni si comportano in modo identico.
 
 In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

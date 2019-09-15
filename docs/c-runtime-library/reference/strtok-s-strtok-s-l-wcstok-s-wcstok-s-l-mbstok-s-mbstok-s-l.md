@@ -1,14 +1,14 @@
 ---
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 ms.date: 03/25/2019
-apiname:
+api_name:
 - _wcstok_s_l
 - _mbstok_s_l
 - _mbstok_s
 - strtok_s
 - wcstok_s
 - _strtok_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstok_s_l
 - _wcstok_s_l
@@ -48,19 +51,19 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: e2c237927aa133d33085be40b88789c1024d6b34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bbc5910e6242a0df262cc43b58815ea80ff9681
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176200"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946451"
 ---
-# <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
+# <a name="strtok_s-_strtok_s_l-wcstok_s-_wcstok_s_l-_mbstok_s-_mbstok_s_l"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
 Trova il token successivo in una stringa, usando le impostazioni locali correnti o le impostazioni locali passate. Queste versioni di [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbstok_s** e **mbstok_s_l** non può essere utilizzato nelle applicazioni eseguite nel Runtime di Windows. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> non è possibile usare **_mbstok_s** e **_mbstok_s_l** nelle applicazioni eseguite nel Windows Runtime. Per altre informazioni, vedere [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -108,44 +111,44 @@ unsigned char* _mbstok_s_l(
 ### <a name="parameters"></a>Parametri
 
 *str*<br/>
-Stringa contenente il token o un token da trovare.
+Stringa contenente il token o i token da trovare.
 
-*delimiters*<br/>
-Il set di caratteri delimitatori da usare.
+*delimitatori*<br/>
+Set di caratteri delimitatori da utilizzare.
 
 *context*<br/>
-Usato per archiviare le informazioni sulla posizione tra le chiamate alla funzione.
+Utilizzato per archiviare le informazioni sulla posizione tra le chiamate alla funzione.
 
 *locale*<br/>
 Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore al successivo token trovato *str*. Restituisce **NULL** quando non vengono trovati più alcun token. Ogni chiamata Modifica *str* sostituendo un carattere null per il primo delimitatore che si verifica dopo che il token restituito.
+Restituisce un puntatore al token successivo trovato in *Str*. Restituisce **null** quando non vengono trovati altri token. Ogni chiamata modifica *Str* sostituendo un carattere null per il primo delimitatore che si verifica dopo il token restituito.
 
 ### <a name="error-conditions"></a>Condizioni di errore
 
-|*str*|*delimiters*|*context*|Valore restituito|**errno**|
+|*str*|*delimitatori*|*context*|Valore restituito|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
 |**NULL**|qualsiasi|puntatore a un puntatore Null|**NULL**|**EINVAL**|
 |qualsiasi|**NULL**|qualsiasi|**NULL**|**EINVAL**|
 |qualsiasi|qualsiasi|**NULL**|**NULL**|**EINVAL**|
 
-Se *str* viene **NULL** ma *contesto* è un puntatore a un puntatore di contesto valido, non sono presenti errori.
+Se *Str* è **null** ma *context* è un puntatore a un puntatore di contesto valido, non si verifica alcun errore.
 
 ## <a name="remarks"></a>Note
 
-Il **strtok_s** famiglia di funzioni consente di trovare il token successivo nella *str*. Il set di caratteri in *delimitatori* specifica i possibili delimitatori del token da trovare nel *str* per la chiamata corrente. **wcstok_s** e **mbstok_s** sono versioni a caratteri wide e caratteri multibyte di **strtok_s**. Gli argomenti e valori restituiti dei **wcstok_s** e **wcstok_s_l** sono caratteri "wide", mentre quelli di stringhe **mbstok_s** e **mbstok_s_l**sono stringhe a caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico.
+La famiglia di funzioni **strtok_s** trova il token successivo in *Str*. Il set di caratteri nei *delimitatori* specifica i possibili delimitatori del token da trovare in *Str* sulla chiamata corrente. **wcstok_s** e **_mbstok_s** sono versioni a caratteri wide e a caratteri multibyte di **strtok_s**. Gli argomenti e i valori restituiti di **wcstok_s** e **_wcstok_s_l** sono stringhe a caratteri wide. gli **_mbstok_s** e **_mbstok_s_l** sono stringhe di caratteri multibyte. A parte ciò, queste funzioni si comportano in modo identico.
 
-Questa funzione convalida i relativi parametri. Quando si verifica una condizione di errore, come indicato nella tabella di condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** al **EINVAL** e restituiti **NULL**.
+Questa funzione convalida i relativi parametri. Quando si verifica una condizione di errore, come nella tabella delle condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano **errno** su **EINVAL** e restituiscono **null**.
 
-La prima chiamata a **strtok_s**, la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token nel *str*, il token con un carattere null di terminazione. Ulteriori token può essere interrotta dal resto di *str* da una serie di chiamate a **strtok_s**. Ogni chiamata a **strtok_s** modificato *str* inserendo un carattere null dopo il token restituito dalla chiamata. Il *contesto* puntatore tiene traccia di quali stringa letta e in cui nella stringa di token successivo deve essere letto. Il token successivo da leggere *str*, chiamare **strtok_s** con un **NULL** value per il *str* argomento e passare lo stesso  *contesto* parametro. Il **NULL** *str* argomento cause **strtok_s** per cercare il token successivo nella versione modificata *str*. Il *delimitatori* argomento può accettare qualsiasi valore da una chiamata a quella successiva in modo che il set di delimitatori può variare.
+Alla prima chiamata a **strtok_s**, la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token in *Str*, terminando il token con un carattere null. Più token possono essere suddivisi dal resto di *Str* da una serie di chiamate a **strtok_s**. Ogni chiamata a **strtok_s** modifica *Str* inserendo un carattere null dopo il token restituito dalla chiamata. Il puntatore di *contesto* tiene traccia della stringa da leggere e della posizione della stringa in cui deve essere letto il token successivo. Per leggere il token successivo da *Str*, chiamare **strtok_s** con un valore **null** per l'argomento *STR* e passare lo stesso parametro di *contesto* . L'argomento *Str* **null** fa in modo che **strtok_s** cerchi il token successivo nello *STR*modificato. L'argomento *Delimiters* può assumere qualsiasi valore da una chiamata al successivo, in modo che il set di delimitatori possa variare.
 
-Poiché il *contesto* parametro sostituisce i buffer statici usati nelle **strtok** e **strtok_l**, è possibile analizzare due stringhe contemporaneamente nello stesso thread.
+Poiché il parametro di *contesto* sostituisce i buffer statici usati in **strtok** e **_strtok_l**, è possibile analizzare due stringhe contemporaneamente nello stesso thread.
 
-Il valore di output è interessato dall'impostazione della **LC_CTYPE** impostazione di categoria delle impostazioni locali. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md).
+Il valore di output è influenzato dall'impostazione della categoria **LC_CTYPE** delle impostazioni locali. Per altre informazioni, vedere [setlocale](setlocale-wsetlocale.md).
 
-Le versioni di queste funzioni senza il **l** suffisso utilizzare impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali. Le versioni con il **l** suffisso sono identiche ma usano le impostazioni locali specificate per il *delle impostazioni locali* parametro. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
+Le versioni di queste funzioni senza il suffisso **suffisso** usano le impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso **suffisso** sono identiche, ma usano invece le impostazioni locali specificate dal parametro delle *impostazioni locali* . Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisiti
 
@@ -160,7 +163,7 @@ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-run
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|_UNICODE definito|
+|Routine TCHAR.H|\_Unicode & \_MBCS non definito|\_MBCS definito|_UNICODE definito|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|

@@ -1,14 +1,17 @@
 ---
 title: Funzioni to
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - To
 helpviewer_keywords:
@@ -20,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742539"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944818"
 ---
 # <a name="to-functions"></a>Funzioni to
 
@@ -40,15 +43,15 @@ Ognuna delle funzioni **to** e le relative macro associate, se presenti, convert
 
 Le conversioni delle funzioni **to** e delle macro sono le seguenti.
 
-|Routine|Macro|Description|
+|Routine|Macro|DESCRIZIONE|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|Converte `c` in un carattere ASCII|
 |`tolower`|`tolower`|Converte `c` in minuscolo se appropriato|
 |`_tolower`|`_tolower`|Converte `c` in minuscolo|
-|`towlower`|nessuno|Converte `c` nella lettera minuscola con carattere wide corrispondente|
+|`towlower`|Nessuna|Converte `c` nella lettera minuscola con carattere wide corrispondente|
 |`toupper`|`toupper`|Converte `c` in maiuscolo se appropriato|
 |`_toupper`|`_toupper`|Converte `c` in maiuscolo|
-|`towupper`|nessuno|Converte c nella lettera maiuscola con carattere wide corrispondente|
+|`towupper`|Nessuna|Converte c nella lettera maiuscola con carattere wide corrispondente|
 
 Per usare le versioni funzione delle routine **to** definite anche come macro, rimuovere le definizioni di macro con le direttive `#undef` o non includere CTYPE.H. Se si usa l'opzione del compilatore /Za, il compilatore usa la versione funzione di `toupper` o `tolower`. Le dichiarazioni delle funzioni `toupper` e `tolower` sono in STDLIB.H.
 
@@ -64,7 +67,7 @@ Le routine `_tolower` e `_toupper`:
 
 - Sono versioni indipendenti dalle impostazioni locali e molto più veloci di `tolower` e **toupper**.
 
-- Possono essere usate solo quando **isascii(**`c`**)** e rispettivamente **isupper(**`c`**)** o **islower(**`c`**)** sono diversi da zero.
+- Possono essere usate solo quando **isascii(** `c` **)** e rispettivamente **isupper(** `c` **)** o **islower(** `c` **)** sono diversi da zero.
 
 - Hanno risultati indefiniti se `c` non è una lettera ASCII con la combinazione di maiuscole/minuscole appropriata per la conversione.
 

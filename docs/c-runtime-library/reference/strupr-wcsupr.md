@@ -1,10 +1,10 @@
 ---
 title: strupr, wcsupr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strupr
 - wcsupr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strupr
 - wcsupr
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - strupr function
 - wcsupr function
 ms.assetid: 17dfe1cd-3b09-4702-9f89-2207f44953e6
-ms.openlocfilehash: 8f263ed98dbbc56065f2ca4d1b8b5f234132b7e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78e18a6860fc95a0b6cb635dc4f0d1a661c8e939
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258663"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946296"
 ---
 # <a name="strupr-wcsupr"></a>strupr, wcsupr
 

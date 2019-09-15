@@ -1,11 +1,11 @@
 ---
 title: sin, sinf, sinl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356252"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948070"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -62,18 +65,18 @@ Angolo in radianti.
 
 ## <a name="return-value"></a>Valore restituito
 
-Il **sin** le funzioni restituiscono il seno *x*. Se *x* è maggiore o uguale a 263 o inferiore o uguale a -263, si verifica una perdita di significato nel risultato.
+Le funzioni **sin** restituiscono il seno di *x*. Se *x* è maggiore o uguale a 263 o minore o uguale a-263, si verifica una perdita di significato nel risultato.
 
 |Input|Eccezione SEH|Eccezione Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|None|_DOMAIN|
+|± QNAN, IND|None|_DOMAIN|
 |± ∞ (sin, sinf, sinl)|NON VALIDO|_DOMAIN|
 
 Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **sin** che accettano e restituiscono **float** oppure **long** **double** valori. In un programma C **sin** accetta e restituisce sempre **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **sin** che accettano e restituiscono valori **float** o **Long** **Double** . In un programma C, **sin** accetta e restituisce sempre **Double**.
 
 ## <a name="requirements"></a>Requisiti
 

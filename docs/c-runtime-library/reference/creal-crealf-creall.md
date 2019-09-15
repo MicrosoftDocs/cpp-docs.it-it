@@ -1,11 +1,11 @@
 ---
 title: creal, crealf, creall
 ms.date: 03/30/2018
-apiname:
+api_name:
 - creal
 - crealf
 - creall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - creal
 - crealf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebd52a23765177d74f2bff5660f806ee5c4a9573
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339752"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942589"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -61,11 +64,11 @@ Numero complesso.
 
 ## <a name="return-value"></a>Valore restituito
 
-La parte reale del *z*.
+Parte reale della *z*.
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **creal** che accettano **fcomplex** oppure **_Lcomplex** e restituiscono valori **float**oppure **long double** valori. In un programma C **creal** accetta sempre un **_Dcomplex** valore e restituisce un **double** valore.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **CREAL** che accettano valori **_Fcomplex** o **_Lcomplex** e restituiscono valori **float** o **long double** . In un programma C, **CREAL** accetta sempre un valore **_Dcomplex** e restituisce un valore **Double** .
 
 ## <a name="requirements"></a>Requisiti
 
@@ -73,7 +76,7 @@ Poiché C++ consente l'overload, è possibile chiamare overload di **creal** che
 |-------------|--------------|------------------|
 |**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
 
-Il **fcomplex**, **_Dcomplex**, e **_Lcomplex** tipi sono equivalenti Microsoft specifici dei tipi nativi non implementati C99 **float Complex** , **double Complex**, e **long double Complex**, rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
+I tipi **_Fcomplex**, **_Dcomplex**e **_Lcomplex** sono equivalenti specifici di Microsoft dei tipi nativi C99 non implementati **float _Complex**, **Double _Complex**e **long double _Complex**, rispettivamente. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vedere anche
 

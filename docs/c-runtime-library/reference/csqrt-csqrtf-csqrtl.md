@@ -1,11 +1,11 @@
 ---
 title: csqrt, csqrtf, csqrtl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csqrt
 - csqrtf
 - csqrtl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csqrt
 - csqrtf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1afc79f0fba9663ec5fbb0a556da52c3a1c55ca6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288836"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942001"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 
@@ -68,16 +71,16 @@ Numero complesso.
 
 ## <a name="return-value"></a>Valore restituito
 
-La radice quadrata della *z*. Il risultato si trova nel mezzo pannello di destra.
+Radice quadrata della *z*. Il risultato si trova nel mezzo pannello di destra.
 
-|Input|Eccezione SEH|**matherr** eccezione|
+|Input|Eccezione SEH|**_matherr** Eccezione|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND|none|_DOMAIN|
 |- ∞|none|_DOMAIN|
 
 ## <a name="remarks"></a>Note
 
-Poiché C++ consente l'overload, è possibile chiamare overload di **csqrt** che accettino e restituiscano **fcomplex** e **_Lcomplex** valori. In un programma C **csqrt** accetta e restituisce sempre un **_Dcomplex** valore.
+Poiché C++ consente l'overload, è possibile chiamare overload di **csqrt** che accettano e restituiscono valori **_Fcomplex** e **_Lcomplex** . In un programma C **csqrt** accetta e restituisce sempre un valore **_Dcomplex** .
 
 ## <a name="requirements"></a>Requisiti
 

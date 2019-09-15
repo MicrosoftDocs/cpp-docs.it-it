@@ -1,10 +1,10 @@
 ---
 title: _cputs, _cputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cputws
 - _cputs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cputws
 - _cputs
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340241"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942637"
 ---
-# <a name="cputs-cputws"></a>_cputs, _cputws
+# <a name="_cputs-_cputws"></a>_cputs, _cputws
 
 Inserisce una stringa nella console.
 
@@ -62,13 +65,13 @@ Stringa di output.
 
 ## <a name="return-value"></a>Valore restituito
 
-Caso di esito positivo **cputs** restituisce 0. In caso contrario, restituisce un valore diverso da zero.
+Se ha esito positivo, **_cputs** restituisce 0. In caso contrario, restituisce un valore diverso da zero.
 
 ## <a name="remarks"></a>Note
 
-Il **cputs** funzione scrive la stringa con terminazione null che a cui punta *str* direttamente alla console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.
+La funzione **_cputs** scrive la stringa con terminazione null a cui punta *Str* direttamente nella console. Una combinazione di ritorno a capo e avanzamento riga (CR-LF) non verrà aggiunto automaticamente alla stringa.
 
-Questa funzione convalida il relativo parametro. Se *str* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** è impostata su **EINVAL** e viene restituito -1.
+Questa funzione convalida il relativo parametro. Se *Str* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, **errno** viene impostato su **EINVAL** e viene restituito-1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 

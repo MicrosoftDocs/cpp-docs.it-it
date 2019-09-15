@@ -1,11 +1,11 @@
 ---
 title: fmin, fminf, fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333378"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957086"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -80,19 +83,19 @@ Secondo valore da confrontare.
 
 ## <a name="return-value"></a>Valore restituito
 
-Se ha esito positivo, restituisce il meno elevato tra *x* oppure *y*.
+Se ha esito positivo, restituisce il più piccolo di *x* o *y*.
 
 |Input|Risultato|
 |-----------|------------|
 |*x* è NaN|*y*|
 |*y* è NaN|*x*|
-|*x* e *y* sono NaN|NaN|
+|*x* e *y* sono Nan|NaN|
 
-La funzione non provoca [matherr](matherr.md) per essere richiamati, provocare eventuali eccezioni a virgola mobile o modificare il valore di **errno**.
+La funzione non fa in modo che [_matherr](matherr.md) venga richiamato, causi eccezioni a virgola mobile o modifica il valore di **errno**.
 
 ## <a name="remarks"></a>Note
 
-Dato che C++ consente l'overload, è possibile chiamare overload di **fmin** che accettano e restituiscono **float** e **long** **double** tipi. In un programma C **fmin** accetta e restituisce sempre un **doppie**.
+Poiché C++ consente l'overload, è possibile chiamare gli overload di **FMIN** che accettano e restituiscono i tipi **float** e **Long** **Double** . In un programma C **FMIN** accetta e restituisce sempre un **valore Double**.
 
 ## <a name="requirements"></a>Requisiti
 

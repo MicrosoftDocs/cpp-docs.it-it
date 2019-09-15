@@ -1,9 +1,9 @@
 ---
 title: set_terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - set_terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_terminate
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860789a3f2fda5ef13cadffa2a00dba4fbd2090a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356446"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948360"
 ---
-# <a name="setterminate-crt"></a>set_terminate (CRT)
+# <a name="set_terminate-crt"></a>set_terminate (CRT)
 
-Installa una propria routine di terminazione che verrà chiamata da **terminare**.
+Installa la routine di terminazione personalizzata che verrà chiamata da **Terminate**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -47,24 +50,24 @@ Puntatore a una funzione di terminazione personalizzata.
 
 ## <a name="return-value"></a>Valore restituito
 
-Restituisce un puntatore alla funzione precedente registrata da **set_terminate** in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **NULL**.
+Restituisce un puntatore alla funzione precedente registrata da **set_terminate** in modo che la funzione precedente possa essere ripristinata in un secondo momento. Se non è stata impostata alcuna funzione precedente, il valore restituito può essere utilizzato per ripristinare il comportamento predefinito; Questo valore può essere **null**.
 
 ## <a name="remarks"></a>Note
 
-Il **set_terminate** funzione installazioni *termFunction* come nome della funzione chiamata dalla **terminare**. **set_terminate** viene usato con C++ gestione delle eccezioni e può essere chiamato in qualsiasi punto del programma prima che venga generata l'eccezione. **terminare** chiamate [abort](abort.md) per impostazione predefinita. È possibile modificare questo valore predefinito scrivendo una funzione di terminazione personalizzata e chiamando **set_terminate** con il nome della funzione come relativo argomento. **terminare** chiama l'ultima funzione fornita come argomento al **set_terminate**. Dopo l'esecuzione di qualsiasi desiderato attività di pulizia *termFunction* deve uscire dal programma. Se non viene chiuso (se viene restituito al chiamante), [abort](abort.md) viene chiamato.
+La funzione **set_terminate** installa *termFunction* come funzione chiamata da **Terminate**. **set_terminate** viene utilizzata con C++ la gestione delle eccezioni e può essere chiamata in qualsiasi punto del programma prima che venga generata l'eccezione. **terminare** le chiamate [Abort](abort.md) per impostazione predefinita. È possibile modificare questa impostazione predefinita scrivendo una funzione di terminazione personalizzata e chiamando **set_terminate** con il nome della funzione come argomento. **Terminate** chiama l'ultima funzione fornita come argomento a **set_terminate**. Dopo aver eseguito le attività di pulizia desiderate, *termFunction* deve uscire dal programma. Se non termina (se restituisce al chiamante), viene chiamato [Abort](abort.md) .
 
 In un ambiente multithreading, le funzioni di terminazione vengono mantenute separatamente per ogni thread. Ogni nuovo thread richiede l'installazione della propria funzione di terminazione. Quindi, ogni thread è responsabile della propria gestione della terminazione.
 
-Il **terminate_function** tipo è definito in EH. H come puntatore a una funzione di terminazione definita dall'utente, *termFunction* che restituisce **void**. La funzione personalizzata *termFunction* non può accettare argomenti e non deve restituire al chiamante. In caso affermativo [abort](abort.md) viene chiamato. Non può essere generata un'eccezione dall'interno *termFunction*.
+Il tipo **terminate_function** è definito in eh. H come puntatore a una funzione di terminazione definita dall'utente, *termFunction* che restituisce **void**. La funzione personalizzata *termFunction* non può assumere argomenti e non deve tornare al chiamante. In caso contrario, viene chiamato [Abort](abort.md) . Un'eccezione non può essere generata dall'interno di *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> Il **set_terminate** funzione funziona solo all'esterno del debugger.
+> La funzione **set_terminate** funziona solo all'esterno del debugger.
 
-È presente una sola **set_terminate** gestore per tutto in modo dinamico le DLL o exe collegati; anche se si chiama **set_terminate** il gestore può essere sostituito da un altro oppure si potrebbe essere sostituendo un gestore impostato da un altro File DLL o EXE.
+È disponibile un singolo gestore **set_terminate** per tutte le dll o i exe collegati in modo dinamico; anche se si chiama **set_terminate** , il gestore può essere sostituito da un altro oppure è possibile che si stia sostituendo un gestore impostato da un altro file dll o exe.
 
 ## <a name="requirements"></a>Requisiti
 

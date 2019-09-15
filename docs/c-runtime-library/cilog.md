@@ -1,9 +1,9 @@
 ---
 title: _CIlog
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIlog
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr80.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr100.dll
 - msvcrt.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIlog
 - CIlog
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: 29b35e5807ca3bd1fbb994118314952a9a1760c4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: edc096680522da50910eb42a95a481b83be8791d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737716"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944802"
 ---
-# <a name="cilog"></a>_CIlog
+# <a name="_cilog"></a>_CIlog
 
 Calcola il logaritmo naturale del primo valore dello stack.
 
@@ -37,7 +40,7 @@ Calcola il logaritmo naturale del primo valore dello stack.
 void __cdecl _CIlog();
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Questa versione della funzione `log` usa una convenzione di chiamata specializzata che viene riconosciuta dal compilatore. Ciò accelera l'esecuzione in quanto impedisce la generazione di copie e aiuta l'allocazione dei registri.
 

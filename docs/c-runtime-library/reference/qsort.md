@@ -1,9 +1,9 @@
 ---
 title: qsort
 ms.date: 11/04/2016
-apiname:
+api_name:
 - qsort
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - qsort
 helpviewer_keywords:
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 8a770965a03e43227b99f122924c723691f79c61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f445158bb72c50507af913986aff2d225ee50928
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358099"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949707"
 ---
 # <a name="qsort"></a>qsort
 
@@ -53,7 +56,7 @@ void qsort(
 *base*<br/>
 Inizio della matrice di destinazione.
 
-*number*<br/>
+*numero*<br/>
 Dimensione della matrice in elementi.
 
 *width*<br/>
@@ -64,9 +67,9 @@ Puntatore a una routine fornita dall'utente che confronta due elementi di matric
 
 ## <a name="remarks"></a>Note
 
-Il **qsort** funzione implementa un algoritmo di ordinamento rapido per ordinare una matrice di *numero* elementi, ognuno dei *larghezza* byte. L'argomento *base* è un puntatore alla base della matrice da ordinare. **qsort** sovrascrive questa matrice con gli elementi ordinati.
+La funzione **qsort** implementa un algoritmo di ordinamento rapido per ordinare una matrice di elementi *numerici* , ciascuno di byte di *larghezza* . La *base* degli argomenti è un puntatore alla base della matrice da ordinare. **qsort** sovrascrive questa matrice usando gli elementi ordinati.
 
-**qsort** chiama il *confrontare* routine uno o più volte durante l'ordinamento e passa i puntatori a due elementi di matrice per ogni chiamata.
+**qsort** chiama la routine di *confronto* una o più volte durante l'ordinamento e passa i puntatori a due elementi di matrice per ogni chiamata.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -74,15 +77,15 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 La routine confronta gli elementi e restituisce uno dei valori seguenti.
 
-|Valore restituito dalla funzione compare|Descrizione|
+|Valore restituito dalla funzione compare|DESCRIZIONE|
 |-----------------------------------|-----------------|
 |< 0|**elem1** minore di **elem2**|
 |0|**elem1** equivalente a **elem2**|
-|> 0|**elem1** maggiore **elem2**|
+|> 0|**elem1** maggiore di **elem2**|
 
 La matrice viene ordinata in ordine crescente, come definito dalla funzione di confronto. Per ordinare una matrice in ordine decrescente, invertire il senso di "maggiore di" e "minore di" nella funzione di confronto.
 
-Questa funzione convalida i relativi parametri. Se *confrontare* oppure *numero* viene **NULL**, oppure se *base* è **NULL** e *numero* è diverso da zero, oppure se *larghezza* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce e **errno** è impostata su **EINVAL**.
+Questa funzione convalida i relativi parametri. Se *compare* o *Number* è **null**o se *base* è **null** e *Number* è diverso da zero oppure se *Width* è minore di zero, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce e **errno** viene impostato su **EINVAL**.
 
 ## <a name="requirements"></a>Requisiti
 

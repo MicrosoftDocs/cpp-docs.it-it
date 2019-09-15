@@ -1,9 +1,9 @@
 ---
 title: _cabs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabsl
 - _cabs
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341067"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943417"
 ---
-# <a name="cabs"></a>_cabs
+# <a name="_cabs"></a>_cabs
 
 Calcola il valore assoluto di un numero complesso.
 
@@ -54,11 +57,11 @@ Numero complesso.
 
 ## <a name="return-value"></a>Valore restituito
 
-**cabs** restituisce il valore assoluto del relativo argomento se ha esito positivo. In caso di overflow **cabs** restituisce **HUGE_VAL** e imposta **errno** al **ERANGE**. È possibile modificare la gestione degli errori con [_matherr](matherr.md).
+Se ha esito positivo, **_cabs** restituisce il valore assoluto dell'argomento. In overflow, **_cabs** restituisce **HUGE_VAL** e imposta **errno** su **ERANGE**. È possibile modificare la gestione degli errori con [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Note
 
-Il **cabs** funzione calcola il valore assoluto di un numero complesso, che deve essere una struttura di tipo [Complex](../../c-runtime-library/standard-types.md). La struttura *z* è composto da un componente reale *x* e un componente immaginario *y*. Una chiamata a **cabs** produce un valore equivalente a quello dell'espressione `sqrt( z.x * z.x + z.y * z.y )`.
+La funzione **_cabs** calcola il valore assoluto di un numero complesso che deve essere una struttura di tipo [_complex](../../c-runtime-library/standard-types.md). La struttura *z* è costituita da un componente reale *x* e da un componente immaginario *y*. Una chiamata a **_cabs** produce un valore equivalente a quello dell'espressione `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Requisiti
 

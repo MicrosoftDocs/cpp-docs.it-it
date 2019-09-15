@@ -1,10 +1,10 @@
 ---
 title: _putch_nolock, _putwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch_nolock
 - _putch_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch_nolock
 - _puttch_nolock
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-ms.openlocfilehash: 3b3ce1bb36e8a6d938ad620af21e8c1d3bc768db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74f1ba5fe43fb8d29a441fd7e024fa195c1c9082
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358209"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950085"
 ---
-# <a name="putchnolock-putwchnolock"></a>_putch_nolock, _putwch_nolock
+# <a name="_putch_nolock-_putwch_nolock"></a>_putch_nolock, _putwch_nolock
 
 Scrive un carattere nella console senza bloccare il thread.
 

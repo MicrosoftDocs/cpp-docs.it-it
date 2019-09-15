@@ -1,9 +1,9 @@
 ---
 title: _CrtDoForAllClientObjects
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDoForAllClientObjects
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtDoForAllClientObjects
 - CrtDoForAllClientObjects
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _CrtDoForAllClientObjects function
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
-ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4626df0db1956efd26ee267cb8cacf8ea4a4570c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339718"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942525"
 ---
-# <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
+# <a name="_crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
-Chiama una funzione fornita dall'applicazione per tutti i **CLIENT_BLOCK** tipi nell'heap (solo versione di debug).
+Chiama una funzione fornita dall'applicazione per tutti i tipi **_CLIENT_BLOCK** nell'heap (solo versione di debug).
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,20 +49,20 @@ void _CrtDoForAllClientObjects(
 ### <a name="parameters"></a>Parametri
 
 *pfn*<br/>
-Puntatore alla funzione di callback della funzione fornita dall'applicazione. Il primo parametro a questa funzione punta ai dati. Il secondo parametro è il puntatore di contesto che viene passato alla chiamata a **CrtDoForAllClientObjects**.
+Puntatore alla funzione di callback della funzione fornita dall'applicazione. Il primo parametro a questa funzione punta ai dati. Il secondo parametro è il puntatore di contesto che viene passato alla chiamata a **_CrtDoForAllClientObjects**.
 
 *context*<br/>
 Puntatore al contesto fornito dall'applicazione da passare alla funzione fornita dall'applicazione.
 
 ## <a name="remarks"></a>Note
 
-Il **CrtDoForAllClientObjects** funzione Cerca a elenco collegato dell'heap i blocchi di memoria con il **CLIENT_BLOCK** tipo e chiama la funzione fornita dall'applicazione quando un blocco di questo tipo è stata trovata. Il blocco individuato e il *contesto* parametri vengono passati come argomenti alla funzione fornita dall'applicazione. Durante il debug, un'applicazione può rilevare un gruppo specifico di allocazioni chiamando in modo esplicito il debug funzioni degli heap allocare la memoria e specificando che i blocchi vengano assegnate le **CLIENT_BLOCK** tipo di blocco. Questi blocchi possono quindi essere controllati separatamente ed essere segnalati in modo diverso durante la creazione dello stato della memoria e del rilevamento di perdite.
+La funzione **_CrtDoForAllClientObjects** Cerca nell'elenco collegato dell'heap i blocchi di memoria con il tipo **_CLIENT_BLOCK** e chiama la funzione fornita dall'applicazione quando viene trovato un blocco di questo tipo. Il blocco trovato e il parametro di *contesto* vengono passati come argomenti alla funzione fornita dall'applicazione. Durante il debug, un'applicazione può tenere traccia di un gruppo specifico di allocazioni chiamando in modo esplicito le funzioni heap di debug per allocare la memoria e specificando che ai blocchi viene assegnato il tipo di blocco **_CLIENT_BLOCK** . Questi blocchi possono quindi essere controllati separatamente ed essere segnalati in modo diverso durante la creazione dello stato della memoria e del rilevamento di perdite.
 
-Se il **CRTDBG_ALLOC_MEM_DF** campo di bit delle [crtDbgFlag](../../c-runtime-library/crtdbgflag.md) flag non è attivato, **CrtDoForAllClientObjects** restituisce immediatamente. Quando [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **CrtDoForAllClientObjects** vengono rimosse durante la pre-elaborazione.
+Se il campo di bit **_CRTDBG_ALLOC_MEM_DF** del flag [crtDbgFlag](../../c-runtime-library/crtdbgflag.md) non è attivato, **_CrtDoForAllClientObjects** restituisce immediatamente. Quando _ [debug](../../c-runtime-library/debug.md) non è definito, le chiamate a **_CrtDoForAllClientObjects** vengono rimosse durante la pre-elaborazione.
 
-Per altre informazioni sul **CLIENT_BLOCK** digitare e come può essere usato da altre funzioni di debug, vedere [tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Per altre informazioni sul tipo di **_CLIENT_BLOCK** e su come può essere usato da altre funzioni di debug, vedere [tipi di blocchi sull'heap di debug](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Se *pfn* viene **NULL**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) è impostata su **EINVAL** e restituisce la funzione.
+Se *PFN* è **null**, viene richiamato il gestore di parametri non validi, come descritto in [convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene impostato su **EINVAL** e la funzione restituisce.
 
 ## <a name="requirements"></a>Requisiti
 
@@ -69,7 +72,7 @@ Se *pfn* viene **NULL**, viene richiamato il gestore di parametri non validi, co
 
 Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).
 
-**Librerie:** Versioni di debug di universal C Runtime solo per le librerie.
+**Librerie** Solo versioni di debug delle librerie di runtime C universali.
 
 ## <a name="see-also"></a>Vedere anche
 

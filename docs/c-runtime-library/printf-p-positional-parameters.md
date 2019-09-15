@@ -1,26 +1,29 @@
 ---
 title: Parametri posizionali printf_p
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-ms.openlocfilehash: f6ee84a68b2f40e535ed1dc76e4617a21bb29a6e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 156baa1a91931199ebca5f6200e239aa944fee1e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751466"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944054"
 ---
-# <a name="printfp-positional-parameters"></a>Parametri posizionali printf_p
+# <a name="printf_p-positional-parameters"></a>Parametri posizionali printf_p
 
 I parametri posizionali consentono di specificare in modo numerico gli argomenti da sostituire in un campo in una stringa di formato. Sono disponibili le seguenti funzioni `printf` di parametro posizionale:
 

@@ -1,9 +1,9 @@
 ---
 title: _CrtGetAllocHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetAllocHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 769621e92bf5f99f76f71b368a3b9a5cd0f79fd0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339910"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942415"
 ---
-# <a name="crtgetallochook"></a>_CrtGetAllocHook
+# <a name="_crtgetallochook"></a>_CrtGetAllocHook
 
 Recupera la funzione di allocazione corrente definita dal client per eseguire l'hook nel processo di allocazione della memoria di debug del runtime del linguaggio C (solo versione di debug).
 
@@ -45,7 +48,7 @@ Restituisce la funzione di hook di allocazione attualmente definita.
 
 ## <a name="remarks"></a>Note
 
-**Crtgetallochook** recupera la funzione di hook definite dal client dell'applicazione corrente per il processo di allocazione della memoria libreria debug del runtime di C.
+**_CrtGetAllocHook** recupera la funzione di hook dell'applicazione definita dal client corrente per il processo di allocazione della memoria della libreria di debug del runtime C.
 
 Per informazioni sull'uso di altre funzioni di runtime capaci di eseguire l'hook e sulla scrittura delle funzioni di hook definite dal client, vedere [Writing Your Own Debug Hook Functions](/visualstudio/debugger/debug-hook-function-writing) (Scrittura di funzioni hook di debug).
 
